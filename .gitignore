@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+__pycache__/
+automation.py
+pdfautomation.py
+extract_english_text_from_pdf.py
