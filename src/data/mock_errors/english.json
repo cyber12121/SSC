@@ -36,6 +36,30 @@
         },
         "answer": "b",
         "solution": "In direct speech, 'had been' in the indirect speech indicates that the tense in the direct speech was 'has been' (Present Perfect). Therefore, option (b) is the correct direct form."
+      },
+      {
+        "q_num": 12,
+        "question": "Select the option that expresses the given sentence in direct speech. Elisa ordered her brother to play outside and let her work in peace.",
+        "options": {
+          "a": "Elisa said to her brother, \u201cPlay outside that let me do my work in peace.\u201d",
+          "b": "Elisa said to her brother, \u201cPlay outside and let me work in peace.\u201d",
+          "c": "Elisa said to her brother, \u201cPlay outside to let me do my work in peace.\u201d",
+          "d": "Elisa said to her brother, \u201cPlay outside and let me do my work in peace.\u201d"
+        },
+        "answer": "b",
+        "solution": "The correct answer is \"Elisa said to her brother, \u201cplay outside and let me work in peace.\u201d\""
+      },
+      {
+        "q_num": 17,
+        "question": "Direction: Change the sentence from direct speech to indirect speech. Tarun says to the manager, \"Representatives of the member states will be meeting next week.\"",
+        "options": {
+          "a": "Tarun tells the manager that representatives of the member states will be meeting next week.",
+          "b": "Tarun tells the manager that representatives of the member states would be meeting next week.",
+          "c": "Tarun tells the manager that representatives of the member states are going to meet next week.",
+          "d": "Tarun tells the manager that representatives of the member states meet next week."
+        },
+        "answer": "a",
+        "solution": "Since the reporting verb 'says' is in the present tense, the tense of the reported speech does not change when converting to indirect speech."
       }
     ]
   },
@@ -56,6 +80,18 @@
         },
         "answer": "c",
         "solution": "The subject 'IIT Bombay' refers to an institution, and the plural of 'alumnus' is 'alumni', which is required here to agree with the plural verb 'occupy'."
+      },
+      {
+        "q_num": 15,
+        "question": "Select the most appropriate option to substitute the bracket segment in the given sentence. If no substitution is required, select No substitution required. Giraffe deaths have also increased because human populations (has grow and expand into) what used to be wild lands.",
+        "options": {
+          "a": "has grown and expand into",
+          "b": "have grow and expanded",
+          "c": "have grown and expanded into",
+          "d": "No substitution required"
+        },
+        "answer": "c",
+        "solution": "The subject 'human populations' is plural, so it requires the plural verb 'have'. Also, the verb should be in the past participle form 'grown' and 'expanded' to maintain parallel structure and correct tense."
       }
     ]
   },
@@ -96,6 +132,106 @@
         },
         "answer": "b",
         "solution": "The error is in part (B). The verb 'persist' is followed by the preposition 'in' and a gerund (-ing form). Therefore, 'persisted to suggest' should be replaced with 'persisted in suggesting'."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "One Word Substitution",
+    "subject": "English",
+    "subject_id": "ENG01",
+    "questions": [
+      {
+        "q_num": 4,
+        "question": "Choose the correct one-word substitute for: 'A style of speech or writing that is roundabout, indirect, or full of wordiness'.",
+        "options": {
+          "a": "Ambagious",
+          "b": "Ambidextrous",
+          "c": "Ambiguous",
+          "d": "Amicable"
+        },
+        "answer": "a",
+        "solution": "The correct answer is: Ambagious."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Vocabulary - Synonyms",
+    "subject": "English",
+    "subject_id": "ENG_001",
+    "questions": [
+      {
+        "q_num": 13,
+        "question": "Select the most appropriate synonym of the underlined word. The bawdy humour of the play wasn't to everyone's taste.",
+        "options": {
+          "a": "piecemeal",
+          "b": "ludicrous",
+          "c": "rowdy",
+          "d": "indecorous"
+        },
+        "answer": "d",
+        "solution": "The correct answer is \"indecorous\""
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "One-word substitution",
+    "subject": "English",
+    "subject_id": "ENG",
+    "questions": [
+      {
+        "q_num": 14,
+        "question": "Choose the correct one-word substitute for: 'To bribe or otherwise induce someone to commit an unlawful act, such as perjury'.",
+        "options": {
+          "a": "Subpoena",
+          "b": "Subjugate",
+          "c": "Suborn",
+          "d": "Substantiate"
+        },
+        "answer": "c",
+        "solution": "The correct answer is: Suborn."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Vocabulary (Antonyms)",
+    "subject": "English",
+    "subject_id": "ENG_001",
+    "questions": [
+      {
+        "q_num": 20,
+        "question": "Select the most appropriate ANTONYM of the given word. Cynical",
+        "options": {
+          "a": "Negligent",
+          "b": "Silent",
+          "c": "Optimistic",
+          "d": "Usurper"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'Optimistic'."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Spelling Correction",
+    "subject": "English",
+    "subject_id": "eng_01",
+    "questions": [
+      {
+        "q_num": 6,
+        "question": "Select the sentence with no spelling errors.",
+        "options": {
+          "a": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
+          "b": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
+          "c": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
+          "d": "Police who did not understand the orthodox methods of the Black Hood suspected him of numerous crimes."
+        },
+        "answer": "d",
+        "solution": "The correct answer is: Option 4."
       }
     ]
   }

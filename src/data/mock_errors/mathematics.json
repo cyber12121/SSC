@@ -56,6 +56,30 @@
         },
         "answer": "b",
         "solution": "Volume of toy = Volume of cone + Volume of hemisphere. Radius (r) = 5.6 cm. Height of hemisphere = 5.6 cm. Height of cone = 11.6 - 5.6 = 6 cm. Volume = (1/3 * 22/7 * 5.6 * 5.6 * 6) + (2/3 * 22/7 * 5.6 * 5.6 * 5.6) = 197.12 + 367.92 = 565.04 cm\u00b3."
+      },
+      {
+        "q_num": 21,
+        "question": "The ratio of the outer and the inner circumference of a circular path is 17 : 15. If path is 40 metres wide, then what is the radius of the inner circle?",
+        "options": {
+          "a": "280 metres",
+          "b": "340 metres",
+          "c": "360 metres",
+          "d": "300 metres"
+        },
+        "answer": "d",
+        "solution": "Let the radius of outer circle be R and inner circle be r. Given ratio of circumference = 2\u03c0R / 2\u03c0r = 17/15. So, R/r = 17/15. Given width (R - r) = 40m. Let R = 17x, r = 15x. Then 17x - 15x = 40 => 2x = 40 => x = 20. Inner radius r = 15 * 20 = 300 metres."
+      },
+      {
+        "q_num": 13,
+        "question": "The whole surface area of a pyramid whose base is a regular polygon is 260 cm\u00b2 and the area of its base is 120 cm\u00b2. The area of each lateral face is 20 cm\u00b2. Then the number of lateral faces is:",
+        "options": {
+          "a": "7",
+          "b": "8",
+          "c": "6",
+          "d": "5"
+        },
+        "answer": "a",
+        "solution": "Total surface area = Lateral surface area + Area of Base. 260 = Lateral surface area + 120 => Lateral surface area = 140. Number of faces = 140 / 20 = 7."
       }
     ]
   },
@@ -76,6 +100,86 @@
         },
         "answer": "b",
         "solution": "In a right-angled triangle, if BD is the altitude to the hypotenuse AC, then BD\u00b2 = AD \u00d7 DC. Given AC = 9 and AD = 3, then DC = 6. BD\u00b2 = 3 \u00d7 6 = 18. BD = \u221a18 = 3\u221a2 cm. (Note: Based on standard geometric properties for this problem, 3\u221a2 cm is the correct derived value)."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Mensuration (3D)",
+    "subject": "Mathematics",
+    "subject_id": "math_001",
+    "questions": [
+      {
+        "q_num": 8,
+        "question": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm\u00b2) of the cube with the hole. [Use \u03c0 = 22/7]",
+        "options": {
+          "a": "1484",
+          "b": "1407",
+          "c": "791",
+          "d": "945"
+        },
+        "answer": "b",
+        "solution": "Total surface area of the cube = 6 * side\u00b2 = 6 * 14 * 14 = 1176. Area of circular hole = \u03c0r\u00b2 = 22/7 * 3.5 * 3.5 = 38.5. Surface area of the cylinder = 2\u03c0rh = 2 * 22/7 * 3.5 * 14 = 308. Total Surface Area = (Surface Area of Cube - 2 * Area of Circle) + Lateral Surface Area of Cylinder = (1176 - 2 * 38.5) + 308 = (1176 - 77) + 308 = 1099 + 308 = 1407 cm\u00b2."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Time, Speed and Distance",
+    "subject": "Mathematics",
+    "subject_id": "QA",
+    "questions": [
+      {
+        "q_num": 9,
+        "question": "A thief was spotted by a policeman from a distance of 225 metres. When the policeman started the chase, the thief also started running. If the speed of the thief was 11 km/h and that of the policeman was 13 km/h, how far would the thief have run, before the policeman caught up with him ?",
+        "options": {
+          "a": "1237.5 metres",
+          "b": "1137.5 metres",
+          "c": "1357.5 metres",
+          "d": "1256.5 metres"
+        },
+        "answer": "a",
+        "solution": "Relative speed = 13 - 11 = 2 km/h = 2 * (5/18) m/s = 5/9 m/s. Time to catch the thief = Distance / Relative speed = 225 / (5/9) = 225 * 9 / 5 = 405 seconds. Distance covered by thief = Speed of thief * Time = 11 * (5/18) * 405 = 11 * 5 * 22.5 = 1237.5 metres."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Profit and Loss",
+    "subject": "Mathematics",
+    "subject_id": "math_001",
+    "questions": [
+      {
+        "q_num": 10,
+        "question": "Ramesh purchases 75 articles for \u20b9 10800 and sells them at a loss equal to the selling price of 5 articles. What will be the selling price of one article?",
+        "options": {
+          "a": "Rs. 156",
+          "b": "Rs. 135",
+          "c": "Rs. 144",
+          "d": "Rs. 132"
+        },
+        "answer": "b",
+        "solution": "Cost price of 75 articles = 10800. Selling price of 75 articles = SP_75. Loss = CP - SP = 10800 - SP_75. Given loss = 5 * SP_1. So, 5 * SP_1 = 10800 - 75 * SP_1. 80 * SP_1 = 10800. SP_1 = 10800 / 80 = 135."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Partnership",
+    "subject": "Mathematics",
+    "subject_id": "Quant",
+    "questions": [
+      {
+        "q_num": 11,
+        "question": "Three friends A, B, C invested in a business in the ratio of 3 : 2 : 6. After 6 months C withdraw half his capital. If the total profit earned for the year is Rs.53010 (in Rs.). Then Profit made by A is",
+        "options": {
+          "a": "16740",
+          "b": "19740",
+          "c": "17740",
+          "d": "18740"
+        },
+        "answer": "a",
+        "solution": "Ratio of investment: A=3, B=2, C=6. For 1 year: A invests 3 units for 12 months = 36. B invests 2 units for 12 months = 24. C invests 6 units for 6 months + 3 units for 6 months = 36 + 18 = 54. Profit ratio = 36:24:54 = 6:4:9. Total units = 6+4+9 = 19. Total profit = 53010. Profit of A = (6/19) * 53010 = 6 * 2790 = 16740."
       }
     ]
   }
