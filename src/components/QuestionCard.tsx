@@ -59,7 +59,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         )}
       </div>
 
-      <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">
+      <h2 className="text-lg md:text-xl font-medium text-gray-800 mb-8 leading-tight">
         {question.question}
       </h2>
 
