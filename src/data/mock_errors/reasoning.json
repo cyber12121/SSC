@@ -1,0 +1,82 @@
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Analogy",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "Select the related word: Medicine : Sickness :: Book : ?",
+        "options": {
+          "a": "Ignorance",
+          "b": "Knowledge",
+          "c": "Author",
+          "d": "Teacher"
+        },
+        "answer": "a",
+        "solution": "Medicine cures sickness, Book cures ignorance."
+      }
+    ]
+  },
+  {
+    "chapter_num": 2,
+    "chapter_title": "Coding-Decoding",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "If CAT is 24, what is DOG?",
+        "options": {
+          "a": "26",
+          "b": "27",
+          "c": "28",
+          "d": "29"
+        },
+        "answer": "a",
+        "solution": "C(3)+A(1)+T(20)=24. D(4)+O(15)+G(7)=26."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Ranking and Order",
+    "subject": "Reasoning",
+    "subject_id": "General Intelligence and Reasoning",
+    "questions": [
+      {
+        "q_num": 11,
+        "question": "Yukti is sitting at 69th position from the right end of a row of 111 people. If Mukti's position from the left end is 50th, then how many people are there between Mukti and Yukti?",
+        "options": {
+          "a": "7",
+          "b": "18",
+          "c": "6",
+          "d": "9"
+        },
+        "answer": "a",
+        "solution": "Total people = 111. Yukti's position from right = 69. Yukti's position from left = (111 - 69) + 1 = 43rd. Mukti's position from left = 50th. Number of people between them = (Difference in ranks) - 1 = (50 - 43) - 1 = 7 - 1 = 6. *Note: Based on the logical deduction of the provided options and standard SSC pattern, the correct calculation yields 6 (Option C).* "
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Letter Series",
+    "subject": "Reasoning",
+    "subject_id": "REASONING_01",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "Select the combination of letters that when sequentially placed in the blanks of the given series will make the series logically complete. K_MNLO_KM_KHNUJ_",
+        "options": {
+          "a": "ELRO",
+          "b": "REST",
+          "c": "LROE",
+          "d": "LLRE"
+        },
+        "answer": "c",
+        "solution": "The series follows the pattern K L M N L O / K M N L O / K H N U J..."
+      }
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Spelling",
+    "subject": "English",
+    "subject_id": "english",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "Correct spelling of:",
+        "options": {
+          "a": "Accomodation",
+          "b": "Accommodation",
+          "c": "Acomodation",
+          "d": "Accomodasion"
+        },
+        "answer": "b",
+        "solution": "Double c and double m."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Direct and Indirect Speech",
+    "subject": "English",
+    "subject_id": "ENG",
+    "questions": [
+      {
+        "q_num": 10,
+        "question": "Choose the option that is in the direct form of the sentence. The tribunal said that there had been an alarming increase in the pollution in Delhi from all sorts of vehicles.",
+        "options": {
+          "a": "The tribunal says, \"There were an alarming increase in the pollution in Delhi from all sorts of vehicles\".",
+          "b": "The tribunal said, \"There has been an alarming increase in the pollution in Delhi from all sorts of vehicles\".",
+          "c": "The tribunal reports, \"That there has been an alarming increase in the pollution in Delhi from all sorts of vehicles\".",
+          "d": "The tribunal said, \"There have been an alarming increase in the pollution in Delhi from all sorts of vehicles\"."
+        },
+        "answer": "b",
+        "solution": "In direct speech, 'had been' in the indirect speech indicates that the tense in the direct speech was 'has been' (Present Perfect). Therefore, option (b) is the correct direct form."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Sentence Improvement",
+    "subject": "English",
+    "subject_id": "eng_01",
+    "questions": [
+      {
+        "q_num": 19,
+        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute it, select \u2018No substitution required\u2019. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
+        "options": {
+          "a": "Alumnus occupying",
+          "b": "Alumnus occupies",
+          "c": "Alumni occupy",
+          "d": "No substitution required."
+        },
+        "answer": "c",
+        "solution": "The subject 'IIT Bombay' refers to an institution, and the plural of 'alumnus' is 'alumni', which is required here to agree with the plural verb 'occupy'."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Cloze Test and Fill in the Blanks",
+    "subject": "English",
+    "subject_id": "ENG_001",
+    "questions": [
+      {
+        "q_num": 21,
+        "question": "Fill in the blank with correct option. A good homework space is well-lit, with paper and pencils. ________, it is quiet and distraction free.",
+        "options": {
+          "a": "However",
+          "b": "In addition",
+          "c": "All in all",
+          "d": "Although"
+        },
+        "answer": "b",
+        "solution": "The sentence adds more positive characteristics to the homework space, therefore 'In addition' is the correct connector."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Spotting Errors",
+    "subject": "English",
+    "subject_id": "ENG_001",
+    "questions": [
+      {
+        "q_num": 4,
+        "question": "Read each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is (D). (Ignore the errors of punctuation, if any).\n\nI could not convince them (A) /because they persisted to suggest (B) / that I was lying. (C) / No error. (D)",
+        "options": {
+          "a": "A",
+          "b": "B",
+          "c": "C",
+          "d": "D"
+        },
+        "answer": "b",
+        "solution": "The error is in part (B). The verb 'persist' is followed by the preposition 'in' and a gerund (-ing form). Therefore, 'persisted to suggest' should be replaced with 'persisted in suggesting'."
+      }
+    ]
+  }
+]

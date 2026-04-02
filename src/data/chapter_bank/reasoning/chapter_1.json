@@ -1,0 +1,15 @@
+{
+  "chapter_num": 1,
+  "chapter_title": "Logical Reasoning",
+  "subject": "Reasoning",
+  "subject_id": "reasoning",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Sample Reasoning Chapter Question?",
+      "options": { "a": "Opt 1", "b": "Opt 2", "c": "Opt 3", "d": "Opt 4" },
+      "answer": "a",
+      "solution": "Sample solution."
+    }
+  ]
+}

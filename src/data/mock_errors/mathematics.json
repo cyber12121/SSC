@@ -1,0 +1,82 @@
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Arithmetic Mock",
+    "subject": "Mathematics",
+    "subject_id": "math",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "Sample Math Mock Question?",
+        "options": {
+          "a": "Opt 1",
+          "b": "Opt 2",
+          "c": "Opt 3",
+          "d": "Opt 4"
+        },
+        "answer": "a",
+        "solution": "Sample solution."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Coordinate Geometry",
+    "subject": "Mathematics",
+    "subject_id": "math_001",
+    "questions": [
+      {
+        "q_num": 5,
+        "question": "What is the area (in square units) of the triangle formed by the graphs of the equations: 2x - y + 8 = 0 and 8x + 3y - 24 = 0, and y = 0?",
+        "options": {
+          "a": "28",
+          "b": "24",
+          "c": "36",
+          "d": "32"
+        },
+        "answer": null,
+        "solution": "The problem asks for the area of the triangle bounded by the lines 2x - y + 8 = 0, 8x + 3y - 24 = 0, and y = 0 (the x-axis)."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Mensuration",
+    "subject": "Mathematics",
+    "subject_id": "math_01",
+    "questions": [
+      {
+        "q_num": 13,
+        "question": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm3) (rounded off to the closest integral value)?",
+        "options": {
+          "a": "461",
+          "b": "565",
+          "c": "368",
+          "d": "197"
+        },
+        "answer": "b",
+        "solution": "Volume of toy = Volume of cone + Volume of hemisphere. Radius (r) = 5.6 cm. Height of hemisphere = 5.6 cm. Height of cone = 11.6 - 5.6 = 6 cm. Volume = (1/3 * 22/7 * 5.6 * 5.6 * 6) + (2/3 * 22/7 * 5.6 * 5.6 * 5.6) = 197.12 + 367.92 = 565.04 cm\u00b3."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Geometry",
+    "subject": "Mathematics",
+    "subject_id": "math_001",
+    "questions": [
+      {
+        "q_num": 10,
+        "question": "In \u25b3ABC, \u2220B = 90\u00b0 and BD \u22a5 AC. If AC = 9 cm and AD = 3 cm, then BD is equal to:",
+        "options": {
+          "a": "2\u221a3 cm",
+          "b": "3\u221a3 cm",
+          "c": "2\u221a2 cm",
+          "d": "3\u221a2 cm"
+        },
+        "answer": "b",
+        "solution": "In a right-angled triangle, if BD is the altitude to the hypotenuse AC, then BD\u00b2 = AD \u00d7 DC. Given AC = 9 and AD = 3, then DC = 6. BD\u00b2 = 3 \u00d7 6 = 18. BD = \u221a18 = 3\u221a2 cm. (Note: Based on standard geometric properties for this problem, 3\u221a2 cm is the correct derived value)."
+      }
+    ]
+  }
+]

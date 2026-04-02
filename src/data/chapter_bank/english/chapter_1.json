@@ -1,0 +1,15 @@
+{
+  "chapter_num": 1,
+  "chapter_title": "Grammar Basics",
+  "subject": "English",
+  "subject_id": "english",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Sample English Chapter Question?",
+      "options": { "a": "Opt 1", "b": "Opt 2", "c": "Opt 3", "d": "Opt 4" },
+      "answer": "a",
+      "solution": "Sample solution."
+    }
+  ]
+}

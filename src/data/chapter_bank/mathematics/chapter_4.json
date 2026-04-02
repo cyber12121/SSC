@@ -1,0 +1,80 @@
+{
+  "chapter_num": 4,
+  "chapter_title": "GEOMETRY",
+  "subject": "Mathematics",
+  "subject_id": "math_geo_001",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Two parallel chords are on the one side of the center of a circle. The length of the two chords is 24cm and 32 cm. If the distance between the two chords is 8cm, then what is the area (in cm\u00b2) of the circle?",
+      "options": {
+        "a": "724.14",
+        "b": "832.86",
+        "c": "924.12",
+        "d": "988.32"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 2,
+      "question": "AB and CD are two parallel chords of a circle of lengths 10 cm and 4 cm respectively. If the chords are on the same side of the centre and the distance between them is 3 cm, then the diameter of the circle is",
+      "options": {
+        "a": "2\u221a21 cm",
+        "b": "\u221a21 cm",
+        "c": "2\u221a29 cm",
+        "d": "\u221a29 cm"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 3,
+      "question": "PQ and RS are two parallel chords of a circle of length 10cm and 24cm, respectively, and lie on the same side of the centre O. If the distance between the chords is 7cm, what is the radius (in cm) of the circle?",
+      "options": {
+        "a": "11",
+        "b": "7",
+        "c": "9",
+        "d": "13"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 4,
+      "question": "In a circle with center O, AB and CD are parallel chords on the opposite sides of a diameter. If AB = 12 cm, CD = 18 cm and the distance between the chords AB and CD is 15 cm, then find the radius of the circle (in cm).",
+      "options": {
+        "a": "3\u221a13",
+        "b": "12",
+        "c": "9",
+        "d": "9\u221a13"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 5,
+      "question": "In a circle, a diameter AB and a chord PQ (which is not a diameter) intersect each other at X perpendicularly. If AX : BX = 3 : 2 and the radius of the circle is 5 cm, then the length of chord PQ is",
+      "options": {
+        "a": "2\u221a6 cm",
+        "b": "5\u221a3cm",
+        "c": "4\u221a6cm",
+        "d": "6\u221a5cm"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 6,
+      "question": "If two concentric circles are of radii 106 cm and 90 cm, then the length of chord of the larger circle which touches the smaller circle is",
+      "options": {
+        "a": "56 cm",
+        "b": "28 cm",
+        "c": "112 cm",
+        "d": "100 cm"
+      },
+      "answer": "c",
+      "solution": ""
+    }
+  ]
+}
