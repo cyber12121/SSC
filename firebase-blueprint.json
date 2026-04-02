@@ -1,0 +1,94 @@
+{
+  "entities": {
+    "Chapter": {
+      "title": "Chapter",
+      "description": "A collection of questions for a specific chapter",
+      "type": "object",
+      "properties": {
+        "chapter_num": { "type": "number" },
+        "chapter_title": { "type": "string" },
+        "subject": { "type": "string" },
+        "subject_id": { "type": "string" },
+        "questions": {
+          "type": "array",
+          "items": { "$ref": "Question" }
+        },
+        "createdBy": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["chapter_num", "chapter_title", "subject", "questions", "createdBy"]
+    },
+    "Question": {
+      "title": "Question",
+      "description": "A single MCQ question",
+      "type": "object",
+      "properties": {
+        "q_num": { "type": "number" },
+        "question": { "type": "string" },
+        "options": {
+          "type": "object",
+          "properties": {
+            "a": { "type": "string" },
+            "b": { "type": "string" },
+            "c": { "type": "string" },
+            "d": { "type": "string" }
+          }
+        },
+        "answer": { "type": "string", "enum": ["a", "b", "c", "d"] },
+        "solution": { "type": "string" }
+      }
+    },
+    "QuizResult": {
+      "title": "QuizResult",
+      "description": "Detailed results of a completed quiz",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "chapter_title": { "type": "string" },
+        "subject": { "type": "string" },
+        "category": { "type": "string", "enum": ["mockErrors", "chapterBank"] },
+        "score": { "type": "number" },
+        "totalQuestions": { "type": "number" },
+        "totalTime": { "type": "number" },
+        "completedAt": { "type": "string", "format": "date-time" },
+        "questionDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "q_num": { "type": "number" },
+              "timeSpent": { "type": "number" },
+              "isCorrect": { "type": "boolean" },
+              "selectedAnswer": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["userId", "chapter_title", "score", "totalQuestions", "completedAt"]
+    },
+    "Bookmark": {
+      "title": "Bookmark",
+      "description": "A bookmarked question",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "question": { "$ref": "Question" },
+        "subject": { "type": "string" },
+        "chapter_title": { "type": "string" },
+        "category": { "type": "string", "enum": ["mockErrors", "chapterBank"] },
+        "bookmarkedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "question", "subject", "chapter_title", "category", "bookmarkedAt"]
+    }
+  },
+  "firestore": {
+    "/results/{resultId}": {
+      "schema": "QuizResult",
+      "description": "User specific quiz results"
+    },
+    "/bookmarks/{bookmarkId}": {
+      "schema": "Bookmark",
+      "description": "User bookmarked questions"
+    }
+  }
+}

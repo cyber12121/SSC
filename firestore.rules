@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidChapter(data) {
+      return data.chapter_title is string && data.chapter_title.size() > 0 && data.chapter_title.size() < 200 &&
+             data.subject is string && data.subject.size() > 0 &&
+             data.questions is list && data.questions.size() > 0 && data.questions.size() <= 200;
+    }
+
+    function isValidResult(data) {
+      return data.userId == request.auth.uid &&
+             data.score is number && data.score >= 0 &&
+             data.totalQuestions is number && data.totalQuestions > 0 &&
+             data.totalTime is number && data.totalTime >= 0 &&
+             data.completedAt is string &&
+             data.questionDetails is list && data.questionDetails.size() > 0;
+    }
+
+    // Chapters Collection
+    match /chapters/{chapterId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && isValidChapter(request.resource.data) && request.resource.data.createdBy == request.auth.uid;
+      allow update, delete: if isAuthenticated() && resource.data.createdBy == request.auth.uid;
+    }
+
+    // Results Collection
+    match /results/{resultId} {
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && isValidResult(request.resource.data);
+    }
+
+    // Bookmarks Collection
+    match /bookmarks/{bookmarkId} {
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+  }
+}

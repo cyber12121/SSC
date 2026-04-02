@@ -1,0 +1,51 @@
+{
+  "Mathematics": [
+    {
+      "chapter_num": 1,
+      "chapter_title": "Number Systems",
+      "subject": "Mathematics",
+      "subject_id": "math",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "Smallest prime number?",
+          "options": { "a": "0", "b": "1", "c": "2", "d": "3" },
+          "answer": "c",
+          "solution": "2 is the smallest prime."
+        }
+      ]
+    },
+    {
+      "chapter_num": 2,
+      "chapter_title": "Algebra",
+      "subject": "Mathematics",
+      "subject_id": "math",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "Value of x if 2x+5=15?",
+          "options": { "a": "5", "b": "10", "c": "15", "d": "20" },
+          "answer": "a",
+          "solution": "2x = 10 => x = 5."
+        }
+      ]
+    }
+  ],
+  "General Awareness": [
+    {
+      "chapter_num": 1,
+      "chapter_title": "Ancient History",
+      "subject": "General Awareness",
+      "subject_id": "gk",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "Founder of Maurya Empire?",
+          "options": { "a": "Ashoka", "b": "Chandragupta Maurya", "c": "Bindusara", "d": "Chanakya" },
+          "answer": "b",
+          "solution": "Chandragupta Maurya founded it in 322 BCE."
+        }
+      ]
+    }
+  ]
+}
