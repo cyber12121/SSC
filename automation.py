@@ -148,23 +148,62 @@ def move_to_done(file_path):
 
 
 def process_all_images():
-    files = os.listdir(INPUT_FOLDER)
+    # Only images
+    files_to_process = [f for f in os.listdir(INPUT_FOLDER) 
+                        if f.lower().endswith((".png", ".jpg", ".jpeg"))]
+    
+    if not files_to_process:
+        print("📭 No images found in Screenshots folder.")
+        return
 
-    for file in files:
-        file_path = os.path.join(INPUT_FOLDER, file)
+    MAX_RETRIES = 3
+    # Initial Pass + 3 Retries = 4 attempts in the main loop
+    for attempt in range(1, MAX_RETRIES + 2):
+        if not files_to_process:
+            break
+            
+        status_msg = "🚀 Initial Pass" if attempt == 1 else f"🔄 Retry {attempt-1}"
+        print(f"\n{status_msg} (Total Attempts Permitted: {MAX_RETRIES + 1})")
+        print(f"Files to process: {len(files_to_process)}")
 
-        if not file.lower().endswith((".png", ".jpg", ".jpeg")):
-            continue
+        failed_files = []
+        for file in files_to_process:
+            file_path = os.path.join(INPUT_FOLDER, file)
+            print(f"📸 Processing: {file}")
 
-        print(f"\n📸 Processing: {file}")
+            data = process_image(file_path)
 
-        data = process_image(file_path)
+            if data:
+                save_to_file(data)
+                move_to_done(file_path)
+            else:
+                failed_files.append(file)
+                print(f"⚠️ Failed/Skipped: {file}")
 
-        if data:
-            save_to_file(data)
-            move_to_done(file_path)
+        files_to_process = failed_files
+
+    # Final "Leftover" processing pass
+    if files_to_process:
+        print(f"\n🏁 Final Leftover Processing Pass (The 'One Last Try')...")
+        final_failed = []
+        for file in files_to_process:
+            file_path = os.path.join(INPUT_FOLDER, file)
+            print(f"📸 Final Attempt: {file}")
+            data = process_image(file_path)
+            if data:
+                save_to_file(data)
+                move_to_done(file_path)
+            else:
+                final_failed.append(file)
+
+        if final_failed:
+            print(f"\n❌ Final Status: {len(final_failed)} files could not be processed after all attempts.")
+            for f in final_failed:
+                print(f"   - {f}")
         else:
-            print(f"⚠️ Skipped: {file}")
+            print("\n✨ All files processed successfully in the final pass!")
+    else:
+        print("\n✨ All files processed successfully!")
 
 
 # ================= RUN =================

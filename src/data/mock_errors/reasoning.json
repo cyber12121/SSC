@@ -56,6 +56,18 @@
         },
         "answer": "a",
         "solution": "Total people = 111. Yukti's position from right = 69. Yukti's position from left = (111 - 69) + 1 = 43rd. Mukti's position from left = 50th. Number of people between them = (Difference in ranks) - 1 = (50 - 43) - 1 = 7 - 1 = 6. *Note: Based on the logical deduction of the provided options and standard SSC pattern, the correct calculation yields 6 (Option C).* "
+      },
+      {
+        "q_num": 14,
+        "question": "In a class of 37 students, Ramesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh. How many students were ranked below Dinesh?",
+        "options": {
+          "a": "22",
+          "b": "23",
+          "c": "21",
+          "d": "24"
+        },
+        "answer": "a",
+        "solution": "According to the given conditions, there are total 37 students. Ramesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh. That means Dinesh's position from the top will be (9 + 6 = 15). Students below Dinesh = Total students - Dinesh's rank = 37 - 15 = 22."
       }
     ]
   },
@@ -76,6 +88,66 @@
         },
         "answer": "c",
         "solution": "The series follows the pattern K L M N L O / K M N L O / K H N U J..."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Mathematical Operations",
+    "subject": "Reasoning",
+    "subject_id": "General Intelligence and Reasoning",
+    "questions": [
+      {
+        "q_num": 8,
+        "question": "If 22 + 4 = 24 and 18 + 5 = 15, then 16 + 9 is equal to",
+        "options": {
+          "a": "36",
+          "b": "60",
+          "c": "9",
+          "d": "21"
+        },
+        "answer": "d",
+        "solution": "Here the logic is: 22 + 4 = 26; 2 + 6 = 8, 8 * 3 = 24. 18 + 5 = 23; 2 + 3 = 5, 5 * 3 = 15. Applying the same logic: 16 + 9 = 25; 2 + 5 = 7, 7 * 3 = 21."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Number Analogy",
+    "subject": "Reasoning",
+    "subject_id": "REAS",
+    "questions": [
+      {
+        "q_num": 16,
+        "question": "Select the option in which the numbers shares the same relationship in set as that shared by the numbers in the given set. (NOTE: Operations should be performed on the whole numbers, without breaking down the numbers into its constituent digits. E.g. 13 - Operations on 13 such as adding /subtracting /multiplying etc. to 13 can be performed. Breaking down 13 into 1 and 3 and then performing mathematical operations on 1 and 3 is not allowed) (36, 99, 106) (72, 207, 214)",
+        "options": {
+          "a": "(64, 193, 200)",
+          "b": "(48, 125, 132)",
+          "c": "(24, 63, 70)",
+          "d": "(52, 157, 164)"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is: 1st number \u00d7 3 - 9 = 2nd number, 2nd number + 7 = 3rd number."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Odd One Out",
+    "subject": "Reasoning",
+    "subject_id": "reasoning_001",
+    "questions": [
+      {
+        "q_num": 23,
+        "question": "In the following question, select the odd word pair from the given alternatives.",
+        "options": {
+          "a": "Question - Answer",
+          "b": "Pencil - Rub",
+          "c": "Cup - Saucer",
+          "d": "Chair - Table"
+        },
+        "answer": "b",
+        "solution": "In all other pairs, the two items are related as complementary or furniture/utility pairs, whereas 'Pencil - Rub' (or Pencil - Eraser) describes an action-object relationship rather than a pair of related objects."
       }
     ]
   }

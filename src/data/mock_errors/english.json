@@ -92,6 +92,42 @@
         },
         "answer": "c",
         "solution": "The subject 'human populations' is plural, so it requires the plural verb 'have'. Also, the verb should be in the past participle form 'grown' and 'expanded' to maintain parallel structure and correct tense."
+      },
+      {
+        "q_num": 1,
+        "question": "They built a wall to avoid soil being washed away.",
+        "options": {
+          "a": "to be washed away",
+          "b": "been washed away",
+          "c": "be washed away",
+          "d": "No improvement"
+        },
+        "answer": "d",
+        "solution": "The verb 'avoid' is followed by a gerund (-ing form). Therefore, 'avoid soil being washed away' is grammatically correct."
+      },
+      {
+        "q_num": 1,
+        "question": "The fundamental rights granted to us by our Constitution cannot be (encroached by) any person or group of persons.",
+        "options": {
+          "a": "encroached into by",
+          "b": "encroached with",
+          "c": "encroached upon by",
+          "d": "No Improvement"
+        },
+        "answer": "c",
+        "solution": "The correct phrasal verb is 'encroach upon', which means to intrude on a person's territory or rights."
+      },
+      {
+        "q_num": 1,
+        "question": "Choose the correct sentence from the following:",
+        "options": {
+          "a": "I'm going of some breakfast.",
+          "b": "She leaves on Friday for a 15-day cruise.",
+          "c": "This gift is of you.",
+          "d": "I wear these old trousers of painting."
+        },
+        "answer": "b",
+        "solution": "The sentence 'She leaves on Friday for a 15-day cruise' is grammatically correct as it correctly uses the preposition 'for' and appropriate tense structure."
       }
     ]
   },
@@ -232,6 +268,46 @@
         },
         "answer": "d",
         "solution": "The correct answer is: Option 4."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Vocabulary",
+    "subject": "English",
+    "subject_id": "ENG01",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "Identify the word from the given options.",
+        "options": {
+          "a": "Plethora",
+          "b": "Vicissitudes",
+          "c": "Panacea",
+          "d": "Shibboleth"
+        },
+        "answer": "b",
+        "solution": "The word 'Vicissitudes' is highlighted in the options list."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Cloze Test",
+    "subject": "English",
+    "subject_id": "ENG01",
+    "questions": [
+      {
+        "q_num": 25,
+        "question": "Should India (5) ________ to ignore the imperative of underwater domain awareness and the modernization of its aging submarine fleet, the resulting vulnerability in the \"silent service\" could prove to be a cataclysm for its energy security and regional status.",
+        "options": {
+          "a": "were",
+          "b": "was",
+          "c": "had",
+          "d": "is"
+        },
+        "answer": "a",
+        "solution": "The sentence structure represents a conditional inversion 'Should + subject + base form of verb' (Should India were to ignore), which is a formal way of expressing a conditional 'If India were to ignore'."
       }
     ]
   }
