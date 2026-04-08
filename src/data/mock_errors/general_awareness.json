@@ -3,7 +3,7 @@
     "chapter_num": 1,
     "chapter_title": "Ancient History Mock",
     "subject": "General Awareness",
-    "subject_id": "gk",
+    "subject_id": "general_awareness",
     "questions": [
       {
         "q_num": 1,
@@ -23,7 +23,7 @@
     "chapter_num": 1,
     "chapter_title": "Indian Agriculture",
     "subject": "General Awareness",
-    "subject_id": "GA_001",
+    "subject_id": "general_awareness",
     "questions": [
       {
         "q_num": 1,
@@ -43,7 +43,7 @@
     "chapter_num": 1,
     "chapter_title": "Indian National Movement",
     "subject": "General Awareness",
-    "subject_id": "GA_01",
+    "subject_id": "general_awareness",
     "questions": [
       {
         "q_num": 1,
@@ -63,7 +63,7 @@
     "chapter_num": 1,
     "chapter_title": "Indian Polity - Centre-State Relations",
     "subject": "General Awareness",
-    "subject_id": "GA_001",
+    "subject_id": "general_awareness",
     "questions": [
       {
         "q_num": 1,
@@ -83,7 +83,7 @@
     "chapter_num": 1,
     "chapter_title": "Indian Polity - Judiciary",
     "subject": "General Awareness",
-    "subject_id": "GA_001",
+    "subject_id": "general_awareness",
     "questions": [
       {
         "q_num": 1,

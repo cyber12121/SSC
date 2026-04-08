@@ -3,7 +3,7 @@
     "chapter_num": 1,
     "chapter_title": "Arithmetic",
     "subject": "Mathematics",
-    "subject_id": "math",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -47,7 +47,7 @@
     "chapter_num": 1,
     "chapter_title": "Coordinate Geometry",
     "subject": "Mathematics",
-    "subject_id": "math_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 5,
@@ -79,7 +79,7 @@
     "chapter_num": 1,
     "chapter_title": "Mensuration 2D and 3D",
     "subject": "Mathematics",
-    "subject_id": "math_01",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 13,
@@ -291,7 +291,7 @@
     "chapter_num": 1,
     "chapter_title": "Geometry",
     "subject": "Mathematics",
-    "subject_id": "math_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 10,
@@ -335,7 +335,7 @@
     "chapter_num": 1,
     "chapter_title": "Time, Speed and Distance",
     "subject": "Mathematics",
-    "subject_id": "QA",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 9,
@@ -391,7 +391,7 @@
     "chapter_num": 1,
     "chapter_title": "Profit, Loss and Discount",
     "subject": "Mathematics",
-    "subject_id": "math_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 10,
@@ -495,7 +495,7 @@
     "chapter_num": 1,
     "chapter_title": "Partnership",
     "subject": "Mathematics",
-    "subject_id": "Quant",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 11,
@@ -551,7 +551,7 @@
     "chapter_num": 1,
     "chapter_title": "Simple and Compound Interest",
     "subject": "Mathematics",
-    "subject_id": "MATH_CI_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -607,7 +607,7 @@
     "chapter_num": 1,
     "chapter_title": "HCF and LCM",
     "subject": "Mathematics",
-    "subject_id": "MATH-01",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -639,7 +639,7 @@
     "chapter_num": 1,
     "chapter_title": "Mixture and Alligation",
     "subject": "Mathematics",
-    "subject_id": "MATH_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -683,7 +683,7 @@
     "chapter_num": 1,
     "chapter_title": "Number System",
     "subject": "Mathematics",
-    "subject_id": "math_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -751,7 +751,7 @@
     "chapter_num": 1,
     "chapter_title": "Percentage",
     "subject": "Mathematics",
-    "subject_id": "MATH01",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -795,7 +795,7 @@
     "chapter_num": 1,
     "chapter_title": "Average",
     "subject": "Mathematics",
-    "subject_id": "MATH-001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -851,7 +851,7 @@
     "chapter_num": 1,
     "chapter_title": "Ratio and Proportion",
     "subject": "Mathematics",
-    "subject_id": "MATH01",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -895,7 +895,7 @@
     "chapter_num": 1,
     "chapter_title": "Boat and Streams",
     "subject": "Mathematics",
-    "subject_id": "MATH_01",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -927,7 +927,7 @@
     "chapter_num": 1,
     "chapter_title": "Trigonometry",
     "subject": "Mathematics",
-    "subject_id": "MATH_TRIG_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -959,7 +959,7 @@
     "chapter_num": 1,
     "chapter_title": "Time and Work",
     "subject": "Mathematics",
-    "subject_id": "MATH_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -1003,7 +1003,7 @@
     "chapter_num": 1,
     "chapter_title": "Algebra",
     "subject": "Mathematics",
-    "subject_id": "MATH_001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,
@@ -1059,7 +1059,7 @@
     "chapter_num": 1,
     "chapter_title": "Statistics",
     "subject": "Mathematics",
-    "subject_id": "MATH-SSC-001",
+    "subject_id": "mathematics",
     "questions": [
       {
         "q_num": 1,

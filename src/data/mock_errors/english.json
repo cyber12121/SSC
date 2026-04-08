@@ -47,7 +47,7 @@
     "chapter_num": 1,
     "chapter_title": "Direct and Indirect Speech",
     "subject": "English",
-    "subject_id": "ENG",
+    "subject_id": "english",
     "questions": [
       {
         "q_num": 10,
@@ -139,7 +139,7 @@
     "chapter_num": 1,
     "chapter_title": "Error Spotting & Sentence Improvement",
     "subject": "English",
-    "subject_id": "eng_01",
+    "subject_id": "english",
     "questions": [
       {
         "q_num": 19,
@@ -303,7 +303,7 @@
     "chapter_num": 1,
     "chapter_title": "Reading Comprehension & Ability",
     "subject": "English",
-    "subject_id": "ENG_001",
+    "subject_id": "english",
     "questions": [
       {
         "q_num": 21,
@@ -455,7 +455,7 @@
     "chapter_num": 1,
     "chapter_title": "One Word Substitution",
     "subject": "English",
-    "subject_id": "ENG01",
+    "subject_id": "english",
     "questions": [
       {
         "q_num": 4,
@@ -523,7 +523,7 @@
     "chapter_num": 1,
     "chapter_title": "Vocabulary",
     "subject": "English",
-    "subject_id": "ENG_001",
+    "subject_id": "english",
     "questions": [
       {
         "q_num": 13,
@@ -626,8 +626,8 @@
   {
     "chapter_num": 1,
     "chapter_title": "Active and Passive Voice",
-    "subject": "English Language",
-    "subject_id": "eng_01",
+    "subject": "English",
+    "subject_id": "english",
     "questions": [
       {
         "q_num": 1,

@@ -163,7 +163,7 @@
     "chapter_num": 1,
     "chapter_title": "Order and Ranking",
     "subject": "Reasoning",
-    "subject_id": "General Intelligence and Reasoning",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 11,
@@ -231,7 +231,7 @@
     "chapter_num": 1,
     "chapter_title": "Alphabet Series",
     "subject": "Reasoning",
-    "subject_id": "REASONING_01",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 1,
@@ -299,7 +299,7 @@
     "chapter_num": 1,
     "chapter_title": "Mathematical Operations",
     "subject": "Reasoning",
-    "subject_id": "General Intelligence and Reasoning",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 8,
@@ -331,7 +331,7 @@
     "chapter_num": 1,
     "chapter_title": "Classification",
     "subject": "Reasoning",
-    "subject_id": "reasoning_001",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 23,
@@ -363,7 +363,7 @@
     "chapter_num": 1,
     "chapter_title": "Number Series",
     "subject": "Reasoning",
-    "subject_id": "REAS-01",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 1,
@@ -431,7 +431,7 @@
     "chapter_num": 1,
     "chapter_title": "Critical Thinking",
     "subject": "Reasoning",
-    "subject_id": "REASONING_01",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 1,
@@ -487,7 +487,7 @@
     "chapter_num": 1,
     "chapter_title": "Seating Arrangement",
     "subject": "Reasoning",
-    "subject_id": "REAS_001",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 1,
@@ -507,7 +507,7 @@
     "chapter_num": 1,
     "chapter_title": "Blood Relations",
     "subject": "Reasoning",
-    "subject_id": "REASONING_01",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 1,
@@ -538,8 +538,8 @@
   {
     "chapter_num": 1,
     "chapter_title": "Syllogism",
-    "subject": "General Intelligence & Reasoning",
-    "subject_id": "GIR001",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
     "questions": [
       {
         "q_num": 1,

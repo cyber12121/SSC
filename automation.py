@@ -78,9 +78,9 @@ PROMPT = """
 You are an AI that extracts structured data from exam screenshots.
 
 Rules:
-- Identify subject (Quantitive Aptitude, General Awareness, English, Reasoning)
+- Identify subject (Mathematics, General Awareness, English, Reasoning)
 - Infer chapter name form below list
-Quantitative Aptitude
+Mathematics
 Arithmetic:
 Number System & Decimals and Fractions
 Percentage
@@ -104,7 +104,7 @@ Data Interpretation
 Statistics and Probability
 
 --------------------
-General Intelligence & Reasoning
+Reasoning
 
 Analogy
 Classification
@@ -128,7 +128,7 @@ Figural Series
 Dice and Cubes
 Critical Thinking
 ---------------------
-English Language
+English
 Synonyms and Antonyms
 One Word Substitution
 Idioms and Phrases
