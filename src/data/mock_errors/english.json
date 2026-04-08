@@ -1,7 +1,7 @@
 [
   {
     "chapter_num": 1,
-    "chapter_title": "Spelling",
+    "chapter_title": "Spelling Correction",
     "subject": "English",
     "subject_id": "english",
     "questions": [
@@ -16,6 +16,30 @@
         },
         "answer": "b",
         "solution": "Double c and double m."
+      },
+      {
+        "q_num": 6,
+        "question": "Select the sentence with no spelling errors.",
+        "options": {
+          "a": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
+          "b": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
+          "c": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
+          "d": "Police who did not understand the orthodox methods of the Black Hood suspected him of numerous crimes."
+        },
+        "answer": "d",
+        "solution": "The correct answer is: Option 4."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the incorrectly spelt word from the given sentence. Some people regard a fear of new things as an unmistakable sign of a provincial atitude.",
+        "options": {
+          "a": "provincial",
+          "b": "atitude",
+          "c": "Some",
+          "d": "unmistakable"
+        },
+        "answer": "b",
+        "solution": "The correct spelling is 'attitude'. 'Atitude' is incorrectly spelt."
       }
     ]
   },
@@ -113,7 +137,7 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Sentence Improvement",
+    "chapter_title": "Error Spotting & Sentence Improvement",
     "subject": "English",
     "subject_id": "eng_01",
     "questions": [
@@ -188,12 +212,96 @@
         },
         "answer": "a",
         "solution": "When an object undergoes a chemical change during the process of manufacturing, we use 'made from'. Since milk changes chemically to become butter, 'made from' is the correct usage."
+      },
+      {
+        "q_num": 4,
+        "question": "Read each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is (D). (Ignore the errors of punctuation, if any).\n\nI could not convince them (A) /because they persisted to suggest (B) / that I was lying. (C) / No error. (D)",
+        "options": {
+          "a": "A",
+          "b": "B",
+          "c": "C",
+          "d": "D"
+        },
+        "answer": "b",
+        "solution": "The error is in part (B). The verb 'persist' is followed by the preposition 'in' and a gerund (-ing form). Therefore, 'persisted to suggest' should be replaced with 'persisted in suggesting'."
+      },
+      {
+        "q_num": 1,
+        "question": "Fill in the blank with the appropriate preposition. She walked ___ the room without speaking to anyone.",
+        "options": {
+          "a": "over",
+          "b": "through",
+          "c": "across",
+          "d": "along"
+        },
+        "answer": "b",
+        "solution": "The correct preposition to indicate movement from one side of an enclosed space to another is 'through'."
+      },
+      {
+        "q_num": 1,
+        "question": "From the given four options choose the correct sentence:",
+        "options": {
+          "a": "We was trying to complete that task on time.",
+          "b": "His pants was torn during the match.",
+          "c": "Rakesh, together with his wife greet the guests of the party.",
+          "d": "Amol, together with Raghav welcomes the new member of the family."
+        },
+        "answer": "d",
+        "solution": "When two subjects are joined by 'together with', the verb agrees with the first subject. In option (d), 'Amol' is singular, so 'welcomes' (singular verb) is correct."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the correct superlative degree of comparison for the given sentence. The money arrived when I (little) expected it.",
+        "options": {
+          "a": "The money arrived when I least expected it.",
+          "b": "The money arrived when I less expected it.",
+          "c": "The money arrived when I little expected it.",
+          "d": "The money arrived when I expected it."
+        },
+        "answer": "a",
+        "solution": "The superlative form of 'little' is 'least'."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the most appropriate option that can substitute the underlined word in the given sentence. Give the cake to which asks for it first.",
+        "options": {
+          "a": "whomever",
+          "b": "whoever",
+          "c": "whom so ever",
+          "d": "whichever"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'whoever' because it functions as the subject of the verb 'asks'. 'Whoever' is used when referring to the person who performs an action. 'Whomever' is the object form (used when receiving the action). 'Whom so ever' is an archaic or non-standard variation of whomever. 'Whichever' is used to refer to one or more of a set of things or people when there is a limited number. Here, 'whoever' is the nominative case pronoun required to act as the subject for the clause 'asks for it first'."
+      },
+      {
+        "q_num": 4,
+        "question": "Read each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is (D). (Ignore the errors of punctuation, if any). I could not convince them (A) /because they persisted to suggest (B) / that I was lying. (C) / No error. (D)",
+        "options": {
+          "a": "A",
+          "b": "B",
+          "c": "C",
+          "d": "D"
+        },
+        "answer": "b",
+        "solution": "The error is in part (B). The correct prepositional usage after 'persisted' is 'in' followed by a gerund (-ing form). Therefore, 'persisted to suggest' should be corrected to 'persisted in suggesting'. Option A is grammatically correct as it correctly expresses the past ability. Option C is correct as it properly uses the past continuous tense to describe the state of lying. Option D (No error) is incorrect because an error exists in part B."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute, select 'No substitution required'. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
+        "options": {
+          "a": "Alumnus occupying",
+          "b": "Alumnus occupies",
+          "c": "Alumni occupy",
+          "d": "No substitution required"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'Alumni occupy'. 'Alumnus' is the singular form of a graduate, while 'Alumni' is the plural form. Since the verb 'occupy' is in the plural form (they occupy), the subject must also be plural. Therefore, 'Alumni occupy' is grammatically correct. Explanation of options: (a) 'Alumnus occupying' is incorrect because it lacks a finite verb to form a complete predicate; (b) 'Alumnus occupies' is incorrect because the singular subject 'alumnus' does not agree with the plural context implied by the sentence structure; (c) 'Alumni occupy' is correct as it matches the plural subject with the plural verb; (d) 'No substitution required' is incorrect because the original sentence has a subject-verb disagreement."
       }
     ]
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Cloze Test and Fill in the Blanks",
+    "chapter_title": "Reading Comprehension & Ability",
     "subject": "English",
     "subject_id": "ENG_001",
     "questions": [
@@ -208,215 +316,7 @@
         },
         "answer": "b",
         "solution": "The sentence adds more positive characteristics to the homework space, therefore 'In addition' is the correct connector."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Spotting Errors",
-    "subject": "English",
-    "subject_id": "ENG_001",
-    "questions": [
-      {
-        "q_num": 4,
-        "question": "Read each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is (D). (Ignore the errors of punctuation, if any).\n\nI could not convince them (A) /because they persisted to suggest (B) / that I was lying. (C) / No error. (D)",
-        "options": {
-          "a": "A",
-          "b": "B",
-          "c": "C",
-          "d": "D"
-        },
-        "answer": "b",
-        "solution": "The error is in part (B). The verb 'persist' is followed by the preposition 'in' and a gerund (-ing form). Therefore, 'persisted to suggest' should be replaced with 'persisted in suggesting'."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "One Word Substitution",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 4,
-        "question": "Choose the correct one-word substitute for: 'A style of speech or writing that is roundabout, indirect, or full of wordiness'.",
-        "options": {
-          "a": "Ambagious",
-          "b": "Ambidextrous",
-          "c": "Ambiguous",
-          "d": "Amicable"
-        },
-        "answer": "a",
-        "solution": "The correct answer is: Ambagious."
       },
-      {
-        "q_num": 1,
-        "question": "\u2018A style of speech or writing that is roundabout, indirect, or full of wordiness\u2019.",
-        "options": {
-          "a": "Ambagious",
-          "b": "Ambidextrous",
-          "c": "Ambiguous",
-          "d": "Amicable"
-        },
-        "answer": "a",
-        "solution": "Ambagious means something that is roundabout or indirect in speech or writing."
-      },
-      {
-        "q_num": 1,
-        "question": "A set of facts or a fixed limit that establishes or limits how something can or must happen or be done.",
-        "options": {
-          "a": "Parameter",
-          "b": "Scope",
-          "c": "Minimum",
-          "d": "Policy"
-        },
-        "answer": "a",
-        "solution": "A parameter is a limit or boundary that defines the scope of a particular process or system."
-      },
-      {
-        "q_num": 1,
-        "question": "Choose the correct one-word substitute for: 'A less distinguished follower or imitator of an influential person, philosopher, or artist'.",
-        "options": {
-          "a": "Epitome",
-          "b": "Paragon",
-          "c": "Mentor",
-          "d": "Epigone"
-        },
-        "answer": "d",
-        "solution": "An 'epigone' is a less distinguished follower or imitator of someone, especially an artist or philosopher."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Vocabulary - Synonyms",
-    "subject": "English",
-    "subject_id": "ENG_001",
-    "questions": [
-      {
-        "q_num": 13,
-        "question": "Select the most appropriate synonym of the underlined word. The bawdy humour of the play wasn't to everyone's taste.",
-        "options": {
-          "a": "piecemeal",
-          "b": "ludicrous",
-          "c": "rowdy",
-          "d": "indecorous"
-        },
-        "answer": "d",
-        "solution": "The correct answer is \"indecorous\""
-      },
-      {
-        "q_num": 1,
-        "question": "She had a child's inchoate awareness of language.",
-        "options": {
-          "a": "mercurial",
-          "b": "decree",
-          "c": "confused",
-          "d": "deprave"
-        },
-        "answer": "c",
-        "solution": "Inchoate means just begun and so not fully formed or developed; rudimentary. Among the given options, 'confused' is the nearest in meaning in the context of lack of clarity or development."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "One-word substitution",
-    "subject": "English",
-    "subject_id": "ENG",
-    "questions": [
-      {
-        "q_num": 14,
-        "question": "Choose the correct one-word substitute for: 'To bribe or otherwise induce someone to commit an unlawful act, such as perjury'.",
-        "options": {
-          "a": "Subpoena",
-          "b": "Subjugate",
-          "c": "Suborn",
-          "d": "Substantiate"
-        },
-        "answer": "c",
-        "solution": "The correct answer is: Suborn."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Vocabulary (Antonyms)",
-    "subject": "English",
-    "subject_id": "ENG_001",
-    "questions": [
-      {
-        "q_num": 20,
-        "question": "Select the most appropriate ANTONYM of the given word. Cynical",
-        "options": {
-          "a": "Negligent",
-          "b": "Silent",
-          "c": "Optimistic",
-          "d": "Usurper"
-        },
-        "answer": "c",
-        "solution": "The correct answer is 'Optimistic'."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Spelling Correction",
-    "subject": "English",
-    "subject_id": "eng_01",
-    "questions": [
-      {
-        "q_num": 6,
-        "question": "Select the sentence with no spelling errors.",
-        "options": {
-          "a": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
-          "b": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
-          "c": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
-          "d": "Police who did not understand the orthodox methods of the Black Hood suspected him of numerous crimes."
-        },
-        "answer": "d",
-        "solution": "The correct answer is: Option 4."
-      },
-      {
-        "q_num": 1,
-        "question": "Select the incorrectly spelt word from the given sentence. Some people regard a fear of new things as an unmistakable sign of a provincial atitude.",
-        "options": {
-          "a": "provincial",
-          "b": "atitude",
-          "c": "Some",
-          "d": "unmistakable"
-        },
-        "answer": "b",
-        "solution": "The correct spelling is 'attitude'. 'Atitude' is incorrectly spelt."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Vocabulary",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Identify the word from the given options.",
-        "options": {
-          "a": "Plethora",
-          "b": "Vicissitudes",
-          "c": "Panacea",
-          "d": "Shibboleth"
-        },
-        "answer": "b",
-        "solution": "The word 'Vicissitudes' is highlighted in the options list."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Cloze Test",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
       {
         "q_num": 25,
         "question": "Should India (5) ________ to ignore the imperative of underwater domain awareness and the modernization of its aging submarine fleet, the resulting vulnerability in the \"silent service\" could prove to be a cataclysm for its energy security and regional status.",
@@ -464,271 +364,7 @@
         },
         "answer": "a",
         "solution": "The sentence begins with the negative/restrictive word 'not only'. In formal English, when a sentence opens with such a phrase, Grammatical Inversion must occur. The auxiliary verb is placed before the subject 'the territorial disputes,' which is plural, so 'are' is required."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Prepositions",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Fill in the blank with the appropriate preposition. She walked ___ the room without speaking to anyone.",
-        "options": {
-          "a": "over",
-          "b": "through",
-          "c": "across",
-          "d": "along"
-        },
-        "answer": "b",
-        "solution": "The correct preposition to indicate movement from one side of an enclosed space to another is 'through'."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Vocabulary - Antonyms",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Select the most appropriate ANTONYM of the given word. Cynical",
-        "options": {
-          "a": "Negligent",
-          "b": "Silent",
-          "c": "Optimistic",
-          "d": "Usurper"
-        },
-        "answer": "c",
-        "solution": "Cynical means believing that people are motivated by self-interest; distrustful of human sincerity or integrity. Optimistic is the most appropriate antonym as it implies being hopeful and confident about the future."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Para Jumbles",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. But in my search for a safer car over the last year, I have developed a deeper appreciation for all that this machine can do.\nB. The woman who changed the car game for good - Bertha Benz.\nC. While I enjoy road journeys, I've not been very interested in cars beyond their practical use, which is to drive me from point A to B.\nD. And the appreciation grew when I learned about the first person ever to take a long road trip.",
-        "options": {
-          "a": "ACDB",
-          "b": "CBAD",
-          "c": "CADB",
-          "d": "BDCA"
-        },
-        "answer": "c",
-        "solution": "The correct sequence is CADB. (C) introduces the speaker's initial lack of interest, (A) introduces the shift in interest, (D) connects the appreciation to the 'first person', and (B) names that person."
       },
-      {
-        "q_num": 1,
-        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the right order to form a meaningful and coherent paragraph.\n\nA. By contrast, in musical theatre an actor's dramatic performance is primary, and the music plays a lesser role.\nB. Opera refers to a dramatic art form, originating in Europe, in which the emotional content is conveyed to the audience as much through music, both vocal and instrumental, as it is through the lyrics.\nC. The drama in opera is presented using the primary elements of theatre such as scenery, costumes, and acting.\nD. However, the words of the opera, or libretto, are sung rather than spoken.",
-        "options": {
-          "a": "ADCB",
-          "b": "CADB",
-          "c": "CABD",
-          "d": "BADC"
-        },
-        "answer": "d",
-        "solution": "The paragraph begins with B (introducing Opera), followed by A (linking the difference), then D (explaining the nature of the words), and C (concluding with the theatrical elements)."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Subject-Verb Agreement",
-    "subject": "English",
-    "subject_id": "SSC_CGL_ENG_001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "From the given four options choose the correct sentence:",
-        "options": {
-          "a": "We was trying to complete that task on time.",
-          "b": "His pants was torn during the match.",
-          "c": "Rakesh, together with his wife greet the guests of the party.",
-          "d": "Amol, together with Raghav welcomes the new member of the family."
-        },
-        "answer": "d",
-        "solution": "When two subjects are joined by 'together with', the verb agrees with the first subject. In option (d), 'Amol' is singular, so 'welcomes' (singular verb) is correct."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Adjective",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Select the correct superlative degree of comparison for the given sentence. The money arrived when I (little) expected it.",
-        "options": {
-          "a": "The money arrived when I least expected it.",
-          "b": "The money arrived when I less expected it.",
-          "c": "The money arrived when I little expected it.",
-          "d": "The money arrived when I expected it."
-        },
-        "answer": "a",
-        "solution": "The superlative form of 'little' is 'least'."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Phrasal Verbs",
-    "subject": "English",
-    "subject_id": "ENG01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "She ______ her mother in looks but not in behavior.",
-        "options": {
-          "a": "takes off",
-          "b": "takes over",
-          "c": "takes down",
-          "d": "takes after"
-        },
-        "answer": "d",
-        "solution": "The correct phrasal verb is 'takes after', which means to resemble someone in appearance or character."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Antonyms",
-    "subject": "English",
-    "subject_id": "ENG_001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Choose the word that is opposite in meaning to the given word. Successful",
-        "options": {
-          "a": "Vile",
-          "b": "Vestige",
-          "c": "Vagary",
-          "d": "Hopeless"
-        },
-        "answer": "d",
-        "solution": "The word 'Successful' means achieving a desired aim or result. 'Hopeless' means having no expectation of success or improvement, making it the most appropriate antonym among the given choices."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Idioms and Phrases",
-    "subject": "English",
-    "subject_id": "ENG_001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Choose the correct meaning of the phrase. Go down the pan.",
-        "options": {
-          "a": "Reach a stage of abject failure.",
-          "b": "To be unpredictable.",
-          "c": "Reaching heights of success.",
-          "d": "Make someone scared."
-        },
-        "answer": "a",
-        "solution": "The idiom 'go down the pan' means to fail completely or to be ruined."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Active and Passive Voice",
-    "subject": "English Language",
-    "subject_id": "eng_01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "I remember them taking me to the Zoo.",
-        "options": {
-          "a": "I remember having being taken to the Zoo.",
-          "b": "I remember to be taken to the Zoo.",
-          "c": "I remember being taken to the Zoo.",
-          "d": "I remember I was taken to the Zoo."
-        },
-        "answer": "c",
-        "solution": "The correct answer is (c). Explanation: In sentences involving gerunds like 'remember them taking me', the passive form is constructed using 'being + past participle'. Option (a) is grammatically incorrect due to the double usage of 'having being'. Option (b) uses an infinitive, which does not correctly capture the meaning of the original gerund phrase. Option (d) changes the structure into a clause that doesn't accurately mirror the original sentence structure. Option (c) 'being taken' correctly converts the gerund phrase 'them taking me' into the passive voice."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Error Spotting & Sentence Improvement",
-    "subject": "English Language",
-    "subject_id": "eng_01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Select the most appropriate option that can substitute the underlined word in the given sentence. Give the cake to which asks for it first.",
-        "options": {
-          "a": "whomever",
-          "b": "whoever",
-          "c": "whom so ever",
-          "d": "whichever"
-        },
-        "answer": "b",
-        "solution": "The correct answer is 'whoever' because it functions as the subject of the verb 'asks'. 'Whoever' is used when referring to the person who performs an action. 'Whomever' is the object form (used when receiving the action). 'Whom so ever' is an archaic or non-standard variation of whomever. 'Whichever' is used to refer to one or more of a set of things or people when there is a limited number. Here, 'whoever' is the nominative case pronoun required to act as the subject for the clause 'asks for it first'."
-      },
-      {
-        "q_num": 4,
-        "question": "Read each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is (D). (Ignore the errors of punctuation, if any). I could not convince them (A) /because they persisted to suggest (B) / that I was lying. (C) / No error. (D)",
-        "options": {
-          "a": "A",
-          "b": "B",
-          "c": "C",
-          "d": "D"
-        },
-        "answer": "b",
-        "solution": "The error is in part (B). The correct prepositional usage after 'persisted' is 'in' followed by a gerund (-ing form). Therefore, 'persisted to suggest' should be corrected to 'persisted in suggesting'. Option A is grammatically correct as it correctly expresses the past ability. Option C is correct as it properly uses the past continuous tense to describe the state of lying. Option D (No error) is incorrect because an error exists in part B."
-      },
-      {
-        "q_num": 1,
-        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute, select 'No substitution required'. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
-        "options": {
-          "a": "Alumnus occupying",
-          "b": "Alumnus occupies",
-          "c": "Alumni occupy",
-          "d": "No substitution required"
-        },
-        "answer": "c",
-        "solution": "The correct answer is 'Alumni occupy'. 'Alumnus' is the singular form of a graduate, while 'Alumni' is the plural form. Since the verb 'occupy' is in the plural form (they occupy), the subject must also be plural. Therefore, 'Alumni occupy' is grammatically correct. Explanation of options: (a) 'Alumnus occupying' is incorrect because it lacks a finite verb to form a complete predicate; (b) 'Alumnus occupies' is incorrect because the singular subject 'alumnus' does not agree with the plural context implied by the sentence structure; (c) 'Alumni occupy' is correct as it matches the plural subject with the plural verb; (d) 'No substitution required' is incorrect because the original sentence has a subject-verb disagreement."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Synonyms and Antonyms",
-    "subject": "English Language",
-    "subject_id": "EL",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Select the most appropriate ANTONYM of the given word: Terse",
-        "options": {
-          "a": "Authoritative",
-          "b": "Polite",
-          "c": "Timid",
-          "d": "Excited"
-        },
-        "answer": "b",
-        "solution": "The word 'Terse' means sparing in the use of words; abrupt or brusque. 'Polite' is the best antonym here as it implies a more courteous and elaborate social interaction compared to being curt. Explanation of options: (a) Authoritative: Commanding and self-confident; likely to command and control others. (b) Polite: Having or showing behavior that is respectful and considerate of other people. (c) Timid: Showing a lack of courage or confidence; easily frightened. (d) Excited: Very enthusiastic and eager."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Cloze Test and fill in the blank",
-    "subject": "English Language",
-    "subject_id": "ENG_01",
-    "questions": [
       {
         "q_num": 1,
         "question": "But if you ______ to spare before you do catch the bus, be sure to pop in.",
@@ -788,6 +424,222 @@
         },
         "answer": "c",
         "solution": "The correct answer is 'incentivize'. This is because the sentence uses the structure 'It is imperative that...', which triggers the 'subjunctive mood'. In the subjunctive mood, the base form of the verb (without 's', 'es', or 'ed') must be used regardless of the subject (the government). Option (a) 'incentivizes' is the present simple form. Option (b) 'incentivizing' is the gerund/participle form. Option (d) 'to incentivize' is the infinitive form, which is grammatically incorrect after 'that' in this specific subjunctive structure."
+      },
+      {
+        "q_num": 1,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. But in my search for a safer car over the last year, I have developed a deeper appreciation for all that this machine can do.\nB. The woman who changed the car game for good - Bertha Benz.\nC. While I enjoy road journeys, I've not been very interested in cars beyond their practical use, which is to drive me from point A to B.\nD. And the appreciation grew when I learned about the first person ever to take a long road trip.",
+        "options": {
+          "a": "ACDB",
+          "b": "CBAD",
+          "c": "CADB",
+          "d": "BDCA"
+        },
+        "answer": "c",
+        "solution": "The correct sequence is CADB. (C) introduces the speaker's initial lack of interest, (A) introduces the shift in interest, (D) connects the appreciation to the 'first person', and (B) names that person."
+      },
+      {
+        "q_num": 1,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the right order to form a meaningful and coherent paragraph.\n\nA. By contrast, in musical theatre an actor's dramatic performance is primary, and the music plays a lesser role.\nB. Opera refers to a dramatic art form, originating in Europe, in which the emotional content is conveyed to the audience as much through music, both vocal and instrumental, as it is through the lyrics.\nC. The drama in opera is presented using the primary elements of theatre such as scenery, costumes, and acting.\nD. However, the words of the opera, or libretto, are sung rather than spoken.",
+        "options": {
+          "a": "ADCB",
+          "b": "CADB",
+          "c": "CABD",
+          "d": "BADC"
+        },
+        "answer": "d",
+        "solution": "The paragraph begins with B (introducing Opera), followed by A (linking the difference), then D (explaining the nature of the words), and C (concluding with the theatrical elements)."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "One Word Substitution",
+    "subject": "English",
+    "subject_id": "ENG01",
+    "questions": [
+      {
+        "q_num": 4,
+        "question": "Choose the correct one-word substitute for: 'A style of speech or writing that is roundabout, indirect, or full of wordiness'.",
+        "options": {
+          "a": "Ambagious",
+          "b": "Ambidextrous",
+          "c": "Ambiguous",
+          "d": "Amicable"
+        },
+        "answer": "a",
+        "solution": "The correct answer is: Ambagious."
+      },
+      {
+        "q_num": 1,
+        "question": "\u2018A style of speech or writing that is roundabout, indirect, or full of wordiness\u2019.",
+        "options": {
+          "a": "Ambagious",
+          "b": "Ambidextrous",
+          "c": "Ambiguous",
+          "d": "Amicable"
+        },
+        "answer": "a",
+        "solution": "Ambagious means something that is roundabout or indirect in speech or writing."
+      },
+      {
+        "q_num": 1,
+        "question": "A set of facts or a fixed limit that establishes or limits how something can or must happen or be done.",
+        "options": {
+          "a": "Parameter",
+          "b": "Scope",
+          "c": "Minimum",
+          "d": "Policy"
+        },
+        "answer": "a",
+        "solution": "A parameter is a limit or boundary that defines the scope of a particular process or system."
+      },
+      {
+        "q_num": 1,
+        "question": "Choose the correct one-word substitute for: 'A less distinguished follower or imitator of an influential person, philosopher, or artist'.",
+        "options": {
+          "a": "Epitome",
+          "b": "Paragon",
+          "c": "Mentor",
+          "d": "Epigone"
+        },
+        "answer": "d",
+        "solution": "An 'epigone' is a less distinguished follower or imitator of someone, especially an artist or philosopher."
+      },
+      {
+        "q_num": 14,
+        "question": "Choose the correct one-word substitute for: 'To bribe or otherwise induce someone to commit an unlawful act, such as perjury'.",
+        "options": {
+          "a": "Subpoena",
+          "b": "Subjugate",
+          "c": "Suborn",
+          "d": "Substantiate"
+        },
+        "answer": "c",
+        "solution": "The correct answer is: Suborn."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Vocabulary",
+    "subject": "English",
+    "subject_id": "ENG_001",
+    "questions": [
+      {
+        "q_num": 13,
+        "question": "Select the most appropriate synonym of the underlined word. The bawdy humour of the play wasn't to everyone's taste.",
+        "options": {
+          "a": "piecemeal",
+          "b": "ludicrous",
+          "c": "rowdy",
+          "d": "indecorous"
+        },
+        "answer": "d",
+        "solution": "The correct answer is \"indecorous\""
+      },
+      {
+        "q_num": 1,
+        "question": "She had a child's inchoate awareness of language.",
+        "options": {
+          "a": "mercurial",
+          "b": "decree",
+          "c": "confused",
+          "d": "deprave"
+        },
+        "answer": "c",
+        "solution": "Inchoate means just begun and so not fully formed or developed; rudimentary. Among the given options, 'confused' is the nearest in meaning in the context of lack of clarity or development."
+      },
+      {
+        "q_num": 20,
+        "question": "Select the most appropriate ANTONYM of the given word. Cynical",
+        "options": {
+          "a": "Negligent",
+          "b": "Silent",
+          "c": "Optimistic",
+          "d": "Usurper"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'Optimistic'."
+      },
+      {
+        "q_num": 1,
+        "question": "Identify the word from the given options.",
+        "options": {
+          "a": "Plethora",
+          "b": "Vicissitudes",
+          "c": "Panacea",
+          "d": "Shibboleth"
+        },
+        "answer": "b",
+        "solution": "The word 'Vicissitudes' is highlighted in the options list."
+      },
+      {
+        "q_num": 1,
+        "question": "Choose the word that is opposite in meaning to the given word. Successful",
+        "options": {
+          "a": "Vile",
+          "b": "Vestige",
+          "c": "Vagary",
+          "d": "Hopeless"
+        },
+        "answer": "d",
+        "solution": "The word 'Successful' means achieving a desired aim or result. 'Hopeless' means having no expectation of success or improvement, making it the most appropriate antonym among the given choices."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the most appropriate ANTONYM of the given word: Terse",
+        "options": {
+          "a": "Authoritative",
+          "b": "Polite",
+          "c": "Timid",
+          "d": "Excited"
+        },
+        "answer": "b",
+        "solution": "The word 'Terse' means sparing in the use of words; abrupt or brusque. 'Polite' is the best antonym here as it implies a more courteous and elaborate social interaction compared to being curt. Explanation of options: (a) Authoritative: Commanding and self-confident; likely to command and control others. (b) Polite: Having or showing behavior that is respectful and considerate of other people. (c) Timid: Showing a lack of courage or confidence; easily frightened. (d) Excited: Very enthusiastic and eager."
+      },
+      {
+        "q_num": 1,
+        "question": "She ______ her mother in looks but not in behavior.",
+        "options": {
+          "a": "takes off",
+          "b": "takes over",
+          "c": "takes down",
+          "d": "takes after"
+        },
+        "answer": "d",
+        "solution": "The correct phrasal verb is 'takes after', which means to resemble someone in appearance or character."
+      },
+      {
+        "q_num": 1,
+        "question": "Choose the correct meaning of the phrase. Go down the pan.",
+        "options": {
+          "a": "Reach a stage of abject failure.",
+          "b": "To be unpredictable.",
+          "c": "Reaching heights of success.",
+          "d": "Make someone scared."
+        },
+        "answer": "a",
+        "solution": "The idiom 'go down the pan' means to fail completely or to be ruined."
+      }
+    ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Active and Passive Voice",
+    "subject": "English Language",
+    "subject_id": "eng_01",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "I remember them taking me to the Zoo.",
+        "options": {
+          "a": "I remember having being taken to the Zoo.",
+          "b": "I remember to be taken to the Zoo.",
+          "c": "I remember being taken to the Zoo.",
+          "d": "I remember I was taken to the Zoo."
+        },
+        "answer": "c",
+        "solution": "The correct answer is (c). Explanation: In sentences involving gerunds like 'remember them taking me', the passive form is constructed using 'being + past participle'. Option (a) is grammatically incorrect due to the double usage of 'having being'. Option (b) uses an infinitive, which does not correctly capture the meaning of the original gerund phrase. Option (d) changes the structure into a clause that doesn't accurately mirror the original sentence structure. Option (c) 'being taken' correctly converts the gerund phrase 'them taking me' into the passive voice."
       }
     ]
   }

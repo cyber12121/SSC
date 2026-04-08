@@ -1,7 +1,7 @@
 [
   {
     "chapter_num": 1,
-    "chapter_title": "Arithmetic Mock",
+    "chapter_title": "Arithmetic",
     "subject": "Mathematics",
     "subject_id": "math",
     "questions": [
@@ -16,6 +16,30 @@
         },
         "answer": "a",
         "solution": "Sample solution."
+      },
+      {
+        "q_num": 1,
+        "question": "Sum of ages of father and son is 8 years more than the age of mother. Son was born when the mother was 22 years. How old is the father?",
+        "options": {
+          "a": "36 years",
+          "b": "40 years",
+          "c": "38 years",
+          "d": "30 years"
+        },
+        "answer": "d",
+        "solution": "Let the mother's current age be M, father's age be F, and son's age be S. \nGiven: The son was born when the mother was 22, so the mother is 22 years older than the son (M = S + 22, or M - S = 22).\nAlso given: F + S = M + 8.\nRearranging the second equation: F = M - S + 8.\nSubstitute M - S = 22 into the equation: F = 22 + 8 = 30.\nTherefore, the father is 30 years old."
+      },
+      {
+        "q_num": 1,
+        "question": "If twice the son's age (in years) is added to the age of his father, the sum is 91. If twice the age (in years) of father is added to the age of the son, the sum is 119. What is the difference (in years) between the ages of father and son?",
+        "options": {
+          "a": "30",
+          "b": "27",
+          "c": "28",
+          "d": "29"
+        },
+        "answer": "c",
+        "solution": "Let the father's age be F and son's age be S. According to the problem: 1) 2S + F = 91; 2) 2F + S = 119. Adding both equations: 3S + 3F = 210 => S + F = 70. Subtracting equation (1) from (2): (2F + S) - (2S + F) = 119 - 91 => F - S = 28. The difference between the ages of the father and son is 28 years."
       }
     ]
   },
@@ -53,7 +77,7 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Mensuration",
+    "chapter_title": "Mensuration 2D and 3D",
     "subject": "Mathematics",
     "subject_id": "math_01",
     "questions": [
@@ -188,6 +212,78 @@
         },
         "answer": "b",
         "solution": "The minute hand sweeps a sector of a circle. In 60 minutes, the minute hand covers 360\u00b0. In 20 minutes, it covers (20/60) * 360\u00b0 = 120\u00b0. Area of sector = (\u03b8/360) * \u03c0 * r^2 = (120/360) * 3.14 * 9^2 = (1/3) * 3.14 * 81 = 3.14 * 27 = 84.78 cm^2."
+      },
+      {
+        "q_num": 8,
+        "question": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm\u00b2) of the cube with the hole. [Use \u03c0 = 22/7]",
+        "options": {
+          "a": "1484",
+          "b": "1407",
+          "c": "791",
+          "d": "945"
+        },
+        "answer": "b",
+        "solution": "Total surface area of the cube = 6 * side\u00b2 = 6 * 14 * 14 = 1176. Area of circular hole = \u03c0r\u00b2 = 22/7 * 3.5 * 3.5 = 38.5. Surface area of the cylinder = 2\u03c0rh = 2 * 22/7 * 3.5 * 14 = 308. Total Surface Area = (Surface Area of Cube - 2 * Area of Circle) + Lateral Surface Area of Cylinder = (1176 - 2 * 38.5) + 308 = (1176 - 77) + 308 = 1099 + 308 = 1407 cm\u00b2."
+      },
+      {
+        "q_num": 1,
+        "question": "The base of a solid right prism is a triangle whose sides are 12 cm, 5 cm and 13 cm. The height of the prism is 10 cm, then find the total surface area of the prism?",
+        "options": {
+          "a": "410 sq.cm",
+          "b": "310 sq.cm",
+          "c": "340 sq.cm",
+          "d": "360 sq.cm"
+        },
+        "answer": "d",
+        "solution": "Base is a right-angled triangle (5, 12, 13). Base Area = 0.5 * 5 * 12 = 30 sq.cm. Perimeter = 5 + 12 + 13 = 30 cm. Lateral Surface Area = Perimeter * height = 30 * 10 = 300 sq.cm. Total Surface Area = Lateral Surface Area + 2 * Base Area = 300 + 2(30) = 360 sq.cm."
+      },
+      {
+        "q_num": 1,
+        "question": "An equilateral triangle with side a units is cut on the vertices to make it a regular hexagon. What is the area of the hexagon?",
+        "options": {
+          "a": "3a^2 / 2\u221a3 square units",
+          "b": "2a^2 / 3\u221a3 square units",
+          "c": "2a^2 / \u221a3 square units",
+          "d": "a^2 / 2\u221a3 square units"
+        },
+        "answer": "d",
+        "solution": "To form a regular hexagon from an equilateral triangle of side 'a', we divide each side into three equal parts of length a/3. By cutting off equilateral triangles of side a/3 from each of the three vertices, we are left with a regular hexagon with side length s = a/3. The area of a regular hexagon is given by the formula (3\u221a3 / 2) * s^2. Substituting s = a/3: Area = (3\u221a3 / 2) * (a/3)^2 = (3\u221a3 / 2) * (a^2 / 9) = (\u221a3 / 6) * a^2. Rationalizing the denominator by multiplying by \u221a3/\u221a3 gives (3 / 6\u221a3) * a^2 = a^2 / 2\u221a3 square units."
+      },
+      {
+        "q_num": 1,
+        "question": "A solid sphere of radius 3 cm is melted to form a right circular cone such that the height of the cone is half the radius of the cone. Find the radius of the cone.",
+        "options": {
+          "a": "3 cm",
+          "b": "4 cm",
+          "c": "5 cm",
+          "d": "6 cm"
+        },
+        "answer": "d",
+        "solution": "Volume of sphere = (4/3) * \u03c0 * r\u00b3 = (4/3) * \u03c0 * (3)\u00b3 = (4/3) * \u03c0 * 27 = 36\u03c0. Volume of cone = (1/3) * \u03c0 * R\u00b2 * h. Given height h = R/2. Since volume is conserved, 36\u03c0 = (1/3) * \u03c0 * R\u00b2 * (R/2). 36 = R\u00b3/6. R\u00b3 = 216. R = 6 cm."
+      },
+      {
+        "q_num": 1,
+        "question": "In a trapezium ABCD, AB || CD and perpendicular distance between them is 15 cm. Diagonal of trapezium cut at point O, shorter of the two parallel side is 12 cm long and if ratio of area of \u0394AOB to the area of \u0394COD is 1 : 4, then what will be the area of trapezium?",
+        "options": {
+          "a": "270 cm\u00b2",
+          "b": "320 cm\u00b2",
+          "c": "240 cm\u00b2",
+          "d": "305 cm\u00b2"
+        },
+        "answer": "a",
+        "solution": "In a trapezium where AB || CD, \u0394AOB ~ \u0394COD. The ratio of their areas is equal to the square of the ratio of their corresponding sides: Area(\u0394AOB) / Area(\u0394COD) = (AB / CD)\u00b2 = 1 / 4. Therefore, AB / CD = 1 / 2. Given the shorter side AB = 12 cm, then CD = 24 cm. The area of a trapezium is given by 1/2 * (sum of parallel sides) * height. Area = 1/2 * (12 + 24) * 15 = 1/2 * 36 * 15 = 18 * 15 = 270 cm\u00b2."
+      },
+      {
+        "q_num": 1,
+        "question": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm3 ) (rounded off to the closest integral value)?",
+        "options": {
+          "a": "461",
+          "b": "565",
+          "c": "368",
+          "d": "197"
+        },
+        "answer": "b",
+        "solution": "Given: Radius of hemisphere (r) = 5.6 cm, Total height (H) = 11.6 cm. Height of the cone (h) = Total height - radius = 11.6 - 5.6 = 6.0 cm. Volume of the toy = Volume of cone + Volume of hemisphere = (1/3)\u03c0r\u00b2h + (2/3)\u03c0r\u00b3. Volume = (1/3) * (22/7) * (5.6 * 5.6) * 6 + (2/3) * (22/7) * (5.6 * 5.6 * 5.6). Calculating: Volume = 197.12 + 368.16 = 565.28 cm\u00b3. Rounded to the closest integral value, it is 565."
       }
     ]
   },
@@ -220,50 +316,18 @@
         },
         "answer": "d",
         "solution": "In a right-angled triangle, if a perpendicular is drawn from the right-angle vertex to the hypotenuse, then BD\u00b2 = AD \u00d7 DC. Given AC = 9 cm and AD = 3 cm, then DC = AC - AD = 9 - 3 = 6 cm. Therefore, BD\u00b2 = 3 \u00d7 6 = 18. BD = \u221a18 = \u221a(9 \u00d7 2) = 3\u221a2 cm."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Mensuration (3D)",
-    "subject": "Mathematics",
-    "subject_id": "math_001",
-    "questions": [
-      {
-        "q_num": 8,
-        "question": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm\u00b2) of the cube with the hole. [Use \u03c0 = 22/7]",
-        "options": {
-          "a": "1484",
-          "b": "1407",
-          "c": "791",
-          "d": "945"
-        },
-        "answer": "b",
-        "solution": "Total surface area of the cube = 6 * side\u00b2 = 6 * 14 * 14 = 1176. Area of circular hole = \u03c0r\u00b2 = 22/7 * 3.5 * 3.5 = 38.5. Surface area of the cylinder = 2\u03c0rh = 2 * 22/7 * 3.5 * 14 = 308. Total Surface Area = (Surface Area of Cube - 2 * Area of Circle) + Lateral Surface Area of Cylinder = (1176 - 2 * 38.5) + 308 = (1176 - 77) + 308 = 1099 + 308 = 1407 cm\u00b2."
       },
       {
         "q_num": 1,
-        "question": "The whole surface area of a pyramid whose base is a regular polygon is 260 cm\u00b2 and the area of its base is 120 cm\u00b2. The area of each lateral face is 20 cm\u00b2. Then the number of lateral faces is:",
+        "question": "The lengths of the three sides of a triangle are given as 3 cm, 4 cm and 5 cm. The ratio of their corresponding altitudes to the opposite vertices will be:",
         "options": {
-          "a": "7",
-          "b": "8",
-          "c": "6",
-          "d": "5"
+          "a": "3 : 4 : 5",
+          "b": "9 : 8 : 7",
+          "c": "20 : 15 : 12",
+          "d": "5 : 4 : 3"
         },
-        "answer": "a",
-        "solution": "Total Surface Area = Base Area + Lateral Surface Area. 260 = 120 + Lateral Surface Area. Lateral Surface Area = 140 cm\u00b2. Number of lateral faces = Total Lateral Surface Area / Area of each lateral face = 140 / 20 = 7."
-      },
-      {
-        "q_num": 1,
-        "question": "The base of a solid right prism is a triangle whose sides are 12 cm, 5 cm and 13 cm. The height of the prism is 10 cm, then find the total surface area of the prism?",
-        "options": {
-          "a": "410 sq.cm",
-          "b": "310 sq.cm",
-          "c": "340 sq.cm",
-          "d": "360 sq.cm"
-        },
-        "answer": "d",
-        "solution": "Base is a right-angled triangle (5, 12, 13). Base Area = 0.5 * 5 * 12 = 30 sq.cm. Perimeter = 5 + 12 + 13 = 30 cm. Lateral Surface Area = Perimeter * height = 30 * 10 = 300 sq.cm. Total Surface Area = Lateral Surface Area + 2 * Base Area = 300 + 2(30) = 360 sq.cm."
+        "answer": "c",
+        "solution": "The ratio of the altitudes (h1:h2:h3) is the reciprocal of the ratio of the sides (a:b:c). Therefore, the ratio is 1/3 : 1/4 : 1/5. Multiplying by the LCM of 3, 4, 5 (which is 60), we get 20 : 15 : 12."
       }
     ]
   },
@@ -325,7 +389,7 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Profit and Loss",
+    "chapter_title": "Profit, Loss and Discount",
     "subject": "Mathematics",
     "subject_id": "math_001",
     "questions": [
@@ -412,6 +476,18 @@
         },
         "answer": "a",
         "solution": "Profit percentage = [(True weight - False weight) / False weight] * 100. Given profit = 23%, True weight = 3075g. 23 = [(3075 - x) / x] * 100 => 0.23x = 3075 - x => 1.23x = 3075 => x = 3075 / 1.23 = 2500g."
+      },
+      {
+        "q_num": 1,
+        "question": "Vinay sells an article at a profit of 20 percent. If both the cost price and selling price are reduced by Rs. 20, then the profit becomes 40 percent. What is the initial cost price?",
+        "options": {
+          "a": "Rs. 80",
+          "b": "Rs. 60",
+          "c": "Rs. 50",
+          "d": "Rs. 40"
+        },
+        "answer": "d",
+        "solution": "Let the initial cost price be CP and selling price be SP. Given, Profit = 20%, so SP = 1.2 * CP. According to the problem, (SP - 20) / (CP - 20) = 1.4 (since profit becomes 40%). Substituting SP = 1.2 * CP: (1.2 * CP - 20) / (CP - 20) = 1.4. Solving for CP: 1.2 * CP - 20 = 1.4 * CP - 28. Rearranging gives 0.2 * CP = 8, which results in CP = 40. Thus, the initial cost price is Rs. 40."
       }
     ]
   },
@@ -473,7 +549,7 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Compound Interest",
+    "chapter_title": "Simple and Compound Interest",
     "subject": "Mathematics",
     "subject_id": "MATH_CI_001",
     "questions": [
@@ -512,6 +588,18 @@
         },
         "answer": null,
         "solution": "Let the principal be P. After 2 years, amount A2 = P(1.1)^2 = 1.21P. After payment, remaining amount = (1.21P - 6634). After 3rd year, this amount grows by 10% and equals 13200. So, (1.21P - 6634) * 1.1 = 13200. 1.21P - 6634 = 12000. 1.21P = 18634. P = 15400 (Note: The provided options might require specific calculation check)."
+      },
+      {
+        "q_num": 1,
+        "question": "The simple interest on a sum of money is (9)/(45) of the sum. If the number of years is numerically 5 times of rate per cent per annum, then find the rate per cent per annum.",
+        "options": {
+          "a": "7%",
+          "b": "2%",
+          "c": "5%",
+          "d": "3%"
+        },
+        "answer": "b",
+        "solution": "Let the rate be R% and time T = 5R. Simple Interest = (P * R * T) / 100. Given SI = (9/45)P = (1/5)P. So, P/5 = (P * R * 5R) / 100 => 1/5 = 5R^2 / 100 => 20 = 5R^2 => R^2 = 4 => R = 2%."
       }
     ]
   },
@@ -532,6 +620,18 @@
         },
         "answer": "c",
         "solution": "Convert all measurements into cm: 640 cm, 480 cm, and 320 cm. The longest tape is the HCF of 640, 480, and 320. HCF(640, 480, 320) = 160 cm = 1 m 60 cm."
+      },
+      {
+        "q_num": 1,
+        "question": "6 persons running around a ground complete one round in 6, 10, 12, 18, 30 and 40 minutes respectively. After how much time will they meet for the first time if they started running at the same time?",
+        "options": {
+          "a": "6 hours",
+          "b": "5 hours",
+          "c": "4.5 hours",
+          "d": "4 hours"
+        },
+        "answer": "a",
+        "solution": "The time they meet is the LCM of their individual round times: LCM(6, 10, 12, 18, 30, 40) = 360 minutes. 360 minutes / 60 = 6 hours."
       }
     ]
   },
@@ -608,6 +708,42 @@
         },
         "answer": "c",
         "solution": "Given: Remainder (R) = 39. Divisor (D) = 6 \u00d7 R = 6 \u00d7 39 = 234. Also, Divisor = 13 \u00d7 Quotient (Q), so 234 = 13 \u00d7 Q => Q = 234 / 13 = 18. Dividend = (Divisor \u00d7 Quotient) + Remainder = (234 \u00d7 18) + 39 = 4212 + 39 = 4251."
+      },
+      {
+        "q_num": 1,
+        "question": "The LCM and HCF of the two numbers are 450 and 30, if one number is 90, then find the difference between these two numbers.",
+        "options": {
+          "a": "25",
+          "b": "60",
+          "c": "45",
+          "d": "55"
+        },
+        "answer": "b",
+        "solution": "Given that LCM = 450, HCF = 30, and first number (n1) = 90. Using the formula: n1 \u00d7 n2 = HCF \u00d7 LCM, we get 90 \u00d7 n2 = 30 \u00d7 450. Therefore, n2 = (30 \u00d7 450) / 90 = 150. The difference between the two numbers = 150 - 90 = 60."
+      },
+      {
+        "q_num": 1,
+        "question": "Simplify: (0.39\u0305 + 0.53\u0305 - 0.27\u0305)",
+        "options": {
+          "a": "0.64\u0305",
+          "b": "0.62\u0305",
+          "c": "0.63\u0305",
+          "d": "0.65\u0305"
+        },
+        "answer": "d",
+        "solution": "Convert the recurring decimals to fractions: 0.39\u0305 = 39/99, 0.53\u0305 = 53/99, 0.27\u0305 = 27/99. Now, (39/99 + 53/99 - 27/99) = (39 + 53 - 27) / 99 = 65/99. Converting 65/99 back to a decimal gives 0.65\u0305."
+      },
+      {
+        "q_num": 1,
+        "question": "If the denominator of a fraction is multiplied by 2 and the numerator is increased by 2, the fraction becomes 1/2. If instead, the numerator is multiplied by 2 and the denominator is increased by 2, it becomes 6/7. What is the sum of the numerator and the denominator of the original fraction (in lowest form)?",
+        "options": {
+          "a": "11",
+          "b": "8",
+          "c": "7",
+          "d": "6"
+        },
+        "answer": "b",
+        "solution": "Let the fraction be x/y. According to the first condition: (x+2) / (2y) = 1/2 => 2(x+2) = 2y => x+2 = y => y - x = 2. According to the second condition: (2x) / (y+2) = 6/7 => 14x = 6y + 12 => 7x = 3y + 6. Substituting y = x+2 into the second equation: 7x = 3(x+2) + 6 => 7x = 3x + 6 + 6 => 4x = 12 => x = 3. Since y = x+2, y = 5. The original fraction is 3/5. The sum of the numerator and denominator is 3 + 5 = 8."
       }
     ]
   },
@@ -757,47 +893,7 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Simple Interest",
-    "subject": "Mathematics",
-    "subject_id": "math_01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "The simple interest on a sum of money is (9)/(45) of the sum. If the number of years is numerically 5 times of rate per cent per annum, then find the rate per cent per annum.",
-        "options": {
-          "a": "7%",
-          "b": "2%",
-          "c": "5%",
-          "d": "3%"
-        },
-        "answer": "b",
-        "solution": "Let the rate be R% and time T = 5R. Simple Interest = (P * R * T) / 100. Given SI = (9/45)P = (1/5)P. So, P/5 = (P * R * 5R) / 100 => 1/5 = 5R^2 / 100 => 20 = 5R^2 => R^2 = 4 => R = 2%."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Geometry - Triangles",
-    "subject": "Mathematics",
-    "subject_id": "MATH_001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "The lengths of the three sides of a triangle are given as 3 cm, 4 cm and 5 cm. The ratio of their corresponding altitudes to the opposite vertices will be:",
-        "options": {
-          "a": "3 : 4 : 5",
-          "b": "9 : 8 : 7",
-          "c": "20 : 15 : 12",
-          "d": "5 : 4 : 3"
-        },
-        "answer": "c",
-        "solution": "The ratio of the altitudes (h1:h2:h3) is the reciprocal of the ratio of the sides (a:b:c). Therefore, the ratio is 1/3 : 1/4 : 1/5. Multiplying by the LCM of 3, 4, 5 (which is 60), we get 20 : 15 : 12."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Boat and Stream",
+    "chapter_title": "Boat and Streams",
     "subject": "Mathematics",
     "subject_id": "MATH_01",
     "questions": [
@@ -812,6 +908,18 @@
         },
         "answer": "d",
         "solution": "Let the speed of stream be x km/h. Downstream speed = 15+x, Upstream speed = 15-x. Time = 20/(15+x) + 20/(15-x) = 4. 20(15-x+15+x)/(225-x^2) = 4. 30/(225-x^2) = 1/5. 225-x^2 = 75. x^2 = 150. x = \u221a150 = 5\u221a6. Note: The provided answer 5\u221a3 in the image appears to be based on specific calculation parameters or an error in the original exam source, but is marked as the correct selection."
+      },
+      {
+        "q_num": 1,
+        "question": "The speed of a boat downstream is 2.5 times its speed upstream. If the total time taken by the boat for going 15 km downstream and the same distance upstream is 4 2/3 hours, then what is the speed (in km/h) of the boat downstream?",
+        "options": {
+          "a": "11 1/2",
+          "b": "11 1/4",
+          "c": "10 5/8",
+          "d": "10"
+        },
+        "answer": "b",
+        "solution": "Let the speed of the boat upstream be x km/h. Then the speed of the boat downstream is 2.5x km/h. Distance = 15 km. Time taken downstream = 15/(2.5x) = 6/x hours. Time taken upstream = 15/x hours. Total time = 6/x + 15/x = 21/x hours. Given total time = 4 2/3 = 14/3 hours. So, 21/x = 14/3 => 14x = 63 => x = 63/14 = 4.5 km/h. Speed downstream = 2.5 * 4.5 = 11.25 km/h, which is 11 1/4 km/h."
       }
     ]
   },
@@ -893,7 +1001,7 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Algebraic Equations",
+    "chapter_title": "Algebra",
     "subject": "Mathematics",
     "subject_id": "MATH_001",
     "questions": [
@@ -908,15 +1016,7 @@
         },
         "answer": "d",
         "solution": "Let the number of guests be x. Bowls of rice = x/2. Bowls of dal = x/3. Bowls of curd = x/4. x/2 + x/3 + x/4 = 65. Finding LCM (12): (6x + 4x + 3x)/12 = 65. 13x/12 = 65. x = (65 * 12) / 13 = 5 * 12 = 60."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Quadratic Equations",
-    "subject": "Mathematics",
-    "subject_id": "MATH_001",
-    "questions": [
+      },
       {
         "q_num": 1,
         "question": "If one of the roots of a quadratic equation with rational coefficients is 2 + \u221a3, then the quadratic equation is given as ________.",
@@ -928,207 +1028,7 @@
         },
         "answer": "d",
         "solution": "If one root of a quadratic equation with rational coefficients is (a + \u221ab), then the other root must be (a - \u221ab). Here, the roots are (2 + \u221a3) and (2 - \u221a3). Sum of roots = (2 + \u221a3) + (2 - \u221a3) = 4. Product of roots = (2 + \u221a3)(2 - \u221a3) = 4 - 3 = 1. The equation is x\u00b2 - (sum of roots)x + (product of roots) = 0, which is x\u00b2 - 4x + 1 = 0."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "LCM and HCF",
-    "subject": "Mathematics",
-    "subject_id": "MATH_001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "6 persons running around a ground complete one round in 6, 10, 12, 18, 30 and 40 minutes respectively. After how much time will they meet for the first time if they started running at the same time?",
-        "options": {
-          "a": "6 hours",
-          "b": "5 hours",
-          "c": "4.5 hours",
-          "d": "4 hours"
-        },
-        "answer": "a",
-        "solution": "The time they meet is the LCM of their individual round times: LCM(6, 10, 12, 18, 30, 40) = 360 minutes. 360 minutes / 60 = 6 hours."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Statistics",
-    "subject": "Mathematics",
-    "subject_id": "MATH-SSC-001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "What will be the difference between mean and median of the given data? 21, 11, 27, 8, 5, 12, 7, 23, 3, 14, 9, 19",
-        "options": {
-          "a": "1.25",
-          "b": "1.75",
-          "c": "1.45",
-          "d": "1.5"
-        },
-        "answer": "b",
-        "solution": "Data in ascending order: 3, 5, 7, 8, 9, 11, 12, 14, 19, 21, 23, 27. Total terms (n) = 12. Sum = 159. Mean = 159/12 = 13.25. Median = (6th term + 7th term)/2 = (11+12)/2 = 11.5. Difference = 13.25 - 11.5 = 1.75."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Number System & Decimals and Fractions",
-    "subject": "Mathematics",
-    "subject_id": "maths_01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "The LCM and HCF of the two numbers are 450 and 30, if one number is 90, then find the difference between these two numbers.",
-        "options": {
-          "a": "25",
-          "b": "60",
-          "c": "45",
-          "d": "55"
-        },
-        "answer": "b",
-        "solution": "Given that LCM = 450, HCF = 30, and first number (n1) = 90. Using the formula: n1 \u00d7 n2 = HCF \u00d7 LCM, we get 90 \u00d7 n2 = 30 \u00d7 450. Therefore, n2 = (30 \u00d7 450) / 90 = 150. The difference between the two numbers = 150 - 90 = 60."
       },
-      {
-        "q_num": 1,
-        "question": "Simplify: (0.39\u0305 + 0.53\u0305 - 0.27\u0305)",
-        "options": {
-          "a": "0.64\u0305",
-          "b": "0.62\u0305",
-          "c": "0.63\u0305",
-          "d": "0.65\u0305"
-        },
-        "answer": "d",
-        "solution": "Convert the recurring decimals to fractions: 0.39\u0305 = 39/99, 0.53\u0305 = 53/99, 0.27\u0305 = 27/99. Now, (39/99 + 53/99 - 27/99) = (39 + 53 - 27) / 99 = 65/99. Converting 65/99 back to a decimal gives 0.65\u0305."
-      },
-      {
-        "q_num": 1,
-        "question": "If the denominator of a fraction is multiplied by 2 and the numerator is increased by 2, the fraction becomes 1/2. If instead, the numerator is multiplied by 2 and the denominator is increased by 2, it becomes 6/7. What is the sum of the numerator and the denominator of the original fraction (in lowest form)?",
-        "options": {
-          "a": "11",
-          "b": "8",
-          "c": "7",
-          "d": "6"
-        },
-        "answer": "b",
-        "solution": "Let the fraction be x/y. According to the first condition: (x+2) / (2y) = 1/2 => 2(x+2) = 2y => x+2 = y => y - x = 2. According to the second condition: (2x) / (y+2) = 6/7 => 14x = 6y + 12 => 7x = 3y + 6. Substituting y = x+2 into the second equation: 7x = 3(x+2) + 6 => 7x = 3x + 6 + 6 => 4x = 12 => x = 3. Since y = x+2, y = 5. The original fraction is 3/5. The sum of the numerator and denominator is 3 + 5 = 8."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Mensuration 2D and 3D",
-    "subject": "Mathematics",
-    "subject_id": "maths_01",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "An equilateral triangle with side a units is cut on the vertices to make it a regular hexagon. What is the area of the hexagon?",
-        "options": {
-          "a": "3a^2 / 2\u221a3 square units",
-          "b": "2a^2 / 3\u221a3 square units",
-          "c": "2a^2 / \u221a3 square units",
-          "d": "a^2 / 2\u221a3 square units"
-        },
-        "answer": "d",
-        "solution": "To form a regular hexagon from an equilateral triangle of side 'a', we divide each side into three equal parts of length a/3. By cutting off equilateral triangles of side a/3 from each of the three vertices, we are left with a regular hexagon with side length s = a/3. The area of a regular hexagon is given by the formula (3\u221a3 / 2) * s^2. Substituting s = a/3: Area = (3\u221a3 / 2) * (a/3)^2 = (3\u221a3 / 2) * (a^2 / 9) = (\u221a3 / 6) * a^2. Rationalizing the denominator by multiplying by \u221a3/\u221a3 gives (3 / 6\u221a3) * a^2 = a^2 / 2\u221a3 square units."
-      },
-      {
-        "q_num": 1,
-        "question": "A solid sphere of radius 3 cm is melted to form a right circular cone such that the height of the cone is half the radius of the cone. Find the radius of the cone.",
-        "options": {
-          "a": "3 cm",
-          "b": "4 cm",
-          "c": "5 cm",
-          "d": "6 cm"
-        },
-        "answer": "d",
-        "solution": "Volume of sphere = (4/3) * \u03c0 * r\u00b3 = (4/3) * \u03c0 * (3)\u00b3 = (4/3) * \u03c0 * 27 = 36\u03c0. Volume of cone = (1/3) * \u03c0 * R\u00b2 * h. Given height h = R/2. Since volume is conserved, 36\u03c0 = (1/3) * \u03c0 * R\u00b2 * (R/2). 36 = R\u00b3/6. R\u00b3 = 216. R = 6 cm."
-      },
-      {
-        "q_num": 1,
-        "question": "In a trapezium ABCD, AB || CD and perpendicular distance between them is 15 cm. Diagonal of trapezium cut at point O, shorter of the two parallel side is 12 cm long and if ratio of area of \u0394AOB to the area of \u0394COD is 1 : 4, then what will be the area of trapezium?",
-        "options": {
-          "a": "270 cm\u00b2",
-          "b": "320 cm\u00b2",
-          "c": "240 cm\u00b2",
-          "d": "305 cm\u00b2"
-        },
-        "answer": "a",
-        "solution": "In a trapezium where AB || CD, \u0394AOB ~ \u0394COD. The ratio of their areas is equal to the square of the ratio of their corresponding sides: Area(\u0394AOB) / Area(\u0394COD) = (AB / CD)\u00b2 = 1 / 4. Therefore, AB / CD = 1 / 2. Given the shorter side AB = 12 cm, then CD = 24 cm. The area of a trapezium is given by 1/2 * (sum of parallel sides) * height. Area = 1/2 * (12 + 24) * 15 = 1/2 * 36 * 15 = 18 * 15 = 270 cm\u00b2."
-      },
-      {
-        "q_num": 1,
-        "question": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm3 ) (rounded off to the closest integral value)?",
-        "options": {
-          "a": "461",
-          "b": "565",
-          "c": "368",
-          "d": "197"
-        },
-        "answer": "b",
-        "solution": "Given: Radius of hemisphere (r) = 5.6 cm, Total height (H) = 11.6 cm. Height of the cone (h) = Total height - radius = 11.6 - 5.6 = 6.0 cm. Volume of the toy = Volume of cone + Volume of hemisphere = (1/3)\u03c0r\u00b2h + (2/3)\u03c0r\u00b3. Volume = (1/3) * (22/7) * (5.6 * 5.6) * 6 + (2/3) * (22/7) * (5.6 * 5.6 * 5.6). Calculating: Volume = 197.12 + 368.16 = 565.28 cm\u00b3. Rounded to the closest integral value, it is 565."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Arithmetic",
-    "subject": "Quantitative Aptitude",
-    "subject_id": "QA",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Sum of ages of father and son is 8 years more than the age of mother. Son was born when the mother was 22 years. How old is the father?",
-        "options": {
-          "a": "36 years",
-          "b": "40 years",
-          "c": "38 years",
-          "d": "30 years"
-        },
-        "answer": "d",
-        "solution": "Let the mother's current age be M, father's age be F, and son's age be S. \nGiven: The son was born when the mother was 22, so the mother is 22 years older than the son (M = S + 22, or M - S = 22).\nAlso given: F + S = M + 8.\nRearranging the second equation: F = M - S + 8.\nSubstitute M - S = 22 into the equation: F = 22 + 8 = 30.\nTherefore, the father is 30 years old."
-      },
-      {
-        "q_num": 1,
-        "question": "If twice the son's age (in years) is added to the age of his father, the sum is 91. If twice the age (in years) of father is added to the age of the son, the sum is 119. What is the difference (in years) between the ages of father and son?",
-        "options": {
-          "a": "30",
-          "b": "27",
-          "c": "28",
-          "d": "29"
-        },
-        "answer": "c",
-        "solution": "Let the father's age be F and son's age be S. According to the problem: 1) 2S + F = 91; 2) 2F + S = 119. Adding both equations: 3S + 3F = 210 => S + F = 70. Subtracting equation (1) from (2): (2F + S) - (2S + F) = 119 - 91 => F - S = 28. The difference between the ages of the father and son is 28 years."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Profit, Loss and Discount",
-    "subject": "Quantitative Aptitude",
-    "subject_id": "QA001",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Vinay sells an article at a profit of 20 percent. If both the cost price and selling price are reduced by Rs. 20, then the profit becomes 40 percent. What is the initial cost price?",
-        "options": {
-          "a": "Rs. 80",
-          "b": "Rs. 60",
-          "c": "Rs. 50",
-          "d": "Rs. 40"
-        },
-        "answer": "d",
-        "solution": "Let the initial cost price be CP and selling price be SP. Given, Profit = 20%, so SP = 1.2 * CP. According to the problem, (SP - 20) / (CP - 20) = 1.4 (since profit becomes 40%). Substituting SP = 1.2 * CP: (1.2 * CP - 20) / (CP - 20) = 1.4. Solving for CP: 1.2 * CP - 20 = 1.4 * CP - 28. Rearranging gives 0.2 * CP = 8, which results in CP = 40. Thus, the initial cost price is Rs. 40."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Algebra",
-    "subject": "Quantitative Aptitude",
-    "subject_id": "QA",
-    "questions": [
       {
         "q_num": 1,
         "question": "What is the area (in square units) of the triangle formed by the graphs of the equations: 2x - y + 8 = 0 and 8x + 3y - 24 = 0, and y = 0?",
@@ -1157,21 +1057,21 @@
   },
   {
     "chapter_num": 1,
-    "chapter_title": "Boat and Streams",
-    "subject": "Quantitative Aptitude",
-    "subject_id": "QA",
+    "chapter_title": "Statistics",
+    "subject": "Mathematics",
+    "subject_id": "MATH-SSC-001",
     "questions": [
       {
         "q_num": 1,
-        "question": "The speed of a boat downstream is 2.5 times its speed upstream. If the total time taken by the boat for going 15 km downstream and the same distance upstream is 4 2/3 hours, then what is the speed (in km/h) of the boat downstream?",
+        "question": "What will be the difference between mean and median of the given data? 21, 11, 27, 8, 5, 12, 7, 23, 3, 14, 9, 19",
         "options": {
-          "a": "11 1/2",
-          "b": "11 1/4",
-          "c": "10 5/8",
-          "d": "10"
+          "a": "1.25",
+          "b": "1.75",
+          "c": "1.45",
+          "d": "1.5"
         },
         "answer": "b",
-        "solution": "Let the speed of the boat upstream be x km/h. Then the speed of the boat downstream is 2.5x km/h. Distance = 15 km. Time taken downstream = 15/(2.5x) = 6/x hours. Time taken upstream = 15/x hours. Total time = 6/x + 15/x = 21/x hours. Given total time = 4 2/3 = 14/3 hours. So, 21/x = 14/3 => 14x = 63 => x = 63/14 = 4.5 km/h. Speed downstream = 2.5 * 4.5 = 11.25 km/h, which is 11 1/4 km/h."
+        "solution": "Data in ascending order: 3, 5, 7, 8, 9, 11, 12, 14, 19, 21, 23, 27. Total terms (n) = 12. Sum = 159. Mean = 159/12 = 13.25. Median = (6th term + 7th term)/2 = (11+12)/2 = 11.5. Difference = 13.25 - 11.5 = 1.75."
       }
     ]
   }

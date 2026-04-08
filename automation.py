@@ -26,6 +26,54 @@ FILE_MAP = {
     "General Intelligence & Reasoning": "reasoning.json"
 }
 
+CHAPTER_MAP = {
+    "vocabulary": "Synonyms and Antonyms",
+    "vocabulary (antonyms)": "Synonyms and Antonyms",
+    "vocabulary - antonyms": "Synonyms and Antonyms",
+    "vocabulary - synonyms": "Synonyms and Antonyms",
+    "antonyms": "Synonyms and Antonyms",
+    "one-word substitution": "One Word Substitution",
+    "cloze test": "Cloze Test and fill in the blank",
+    "cloze test and fill in the blanks": "Cloze Test and fill in the blank",
+    "fill in the blank": "Cloze Test and fill in the blank",
+    "fill in the blanks": "Cloze Test and fill in the blank",
+    "fill in the balnck": "Cloze Test and fill in the blank",
+    "spelling": "Spelling Correction",
+    "adjective": "Error Spotting & Sentence Improvement",
+    "sentence improvement": "Error Spotting & Sentence Improvement",
+    "prepositions": "Error Spotting & Sentence Improvement",
+    "subject-verb agreement": "Error Spotting & Sentence Improvement",
+    "spotting errors": "Error Spotting & Sentence Improvement",
+    "algebraic equations": "Algebra",
+    "quadratic equations": "Algebra",
+    "arithmetic mock": "Arithmetic",
+    "boat and stream": "Boat and Streams",
+    "geometry - triangles": "Geometry",
+    "lcm and hcf": "HCF and LCM",
+    "mensuration (3d)": "Mensuration 2D and 3D",
+    "number system & decimals and fractions": "Number System",
+    "profit and loss": "Profit, Loss and Discount",
+    "alphabet test": "Alphabet Series",
+    "letter series": "Alphabet Series",
+    "word formation / alphabet test": "Alphabet Series",
+    "letter analogy": "Analogy",
+    "number analogy": "Analogy",
+    "number analogy/classification": "Analogy",
+    "odd one out": "Classification",
+    "circular arrangement": "Seating Arrangement",
+    "ranking and order": "Order and Ranking",
+    "statement and assumptions": "Critical Thinking",
+    "statement and conclusion": "Critical Thinking",
+    "mensuration": "Mensuration 2D and 3D",
+    "simple interest": "Simple and Compound Interest",
+    "compound interest": "Simple and Compound Interest",
+    "para jumbles": "Reading Comprehension & Ability",
+    "cloze test and fill in the blank": "Reading Comprehension & Ability",
+    "synonyms and antonyms": "Vocabulary",
+    "idioms and phrases": "Vocabulary",
+    "phrasal verbs": "Vocabulary"
+}
+
 PROMPT = """
 You are an AI that extracts structured data from exam screenshots.
 
@@ -89,9 +137,6 @@ Spelling Correction
 Error Spotting & Sentence Improvement
 Active and Passive Voice
 Direct and Indirect Speech
-Parts of Speech
-Subject-Verb Agreement
-Articles
 Reading & Ability:
 Reading Comprehension
 Cloze Test and fill in the blank
@@ -182,6 +227,10 @@ def save_to_file(data):
             existing_chapters = []
 
         for new_ch in chapters:
+            t_lower = new_ch["chapter_title"].strip().lower()
+            if t_lower in CHAPTER_MAP:
+                new_ch["chapter_title"] = CHAPTER_MAP[t_lower]
+
             found = False
 
             for ex_ch in existing_chapters:
