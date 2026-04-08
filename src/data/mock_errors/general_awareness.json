@@ -78,5 +78,25 @@
         "solution": "Article 256 of the Indian Constitution provides that the executive power of every State shall be so exercised as to ensure compliance with the laws made by Parliament, and the Union Government can give such directions to a State as may appear to the Government of India to be necessary for that purpose."
       }
     ]
+  },
+  {
+    "chapter_num": 1,
+    "chapter_title": "Indian Polity - Judiciary",
+    "subject": "General Awareness",
+    "subject_id": "GA_001",
+    "questions": [
+      {
+        "q_num": 1,
+        "question": "Rearrange the following stages in the process of judicial decision-making in a court of law in the correct order:\n\nP. Pronouncement of the final judgment.\nQ. Filing of the case and submission of pleadings.\nR. Examination of evidence and arguments by both sides.\nS. Interpretation of law and application to the facts of the case.",
+        "options": {
+          "a": "Q \u2192 R \u2192 P \u2192 S",
+          "b": "R \u2192 Q \u2192 S \u2192 P",
+          "c": "Q \u2192 S \u2192 R \u2192 P",
+          "d": "Q \u2192 R \u2192 S \u2192 P"
+        },
+        "answer": "d",
+        "solution": "The correct sequence of judicial decision-making starts with filing a case (Q), followed by the examination of evidence (R), interpretation of law (S), and finally pronouncement of judgment (P)."
+      }
+    ]
   }
 ]

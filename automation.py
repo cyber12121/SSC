@@ -17,21 +17,92 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 FILE_MAP = {
     "Mathematics": "mathematics.json",
+    "Quantitative Aptitude": "mathematics.json",
+    "Quantitative Aptitude (Maths)": "mathematics.json",
     "General Awareness": "general_awareness.json",
     "English": "english.json",
-    "Reasoning": "reasoning.json"
+    "English Language": "english.json",
+    "Reasoning": "reasoning.json",
+    "General Intelligence & Reasoning": "reasoning.json"
 }
 
 PROMPT = """
 You are an AI that extracts structured data from exam screenshots.
 
 Rules:
-- Identify subject (Mathematics, General Awareness, English, Reasoning)
-- Infer chapter name logically reffrence ssc cgl exam 
+- Identify subject (Quantitive Aptitude, General Awareness, English, Reasoning)
+- Infer chapter name form below list
+Quantitative Aptitude
+Arithmetic:
+Number System & Decimals and Fractions
+Percentage
+Ratio and Proportion
+Average
+Simple and Compound Interest
+Profit, Loss and Discount
+Time and Work
+Pipe and Cistern
+Time, Speed and Distance
+Boat and Streams
+Races and Games
+Mixture and Alligation
+Partnership
+Algebra 
+geometry
+Mensuration 2D and 3D
+Trigonometry
+Heights and Distances
+Data Interpretation
+Statistics and Probability
+
+--------------------
+General Intelligence & Reasoning
+
+Analogy
+Classification
+Number Series
+Alphabet Series
+Coding-Decoding
+Blood Relations
+Direction Sense
+Syllogism
+Venn Diagrams
+Order and Ranking
+Seating Arrangement
+Mathematical Operations
+Puzzles
+Clock and Calendar
+Mirror and Water Images
+Paper Folding and Unfolding
+Pattern Completion
+Embedded Figures
+Figural Series
+Dice and Cubes
+Critical Thinking
+---------------------
+English Language
+Synonyms and Antonyms
+One Word Substitution
+Idioms and Phrases
+Homonyms
+Spelling Correction
+Error Spotting & Sentence Improvement
+Active and Passive Voice
+Direct and Indirect Speech
+Parts of Speech
+Subject-Verb Agreement
+Articles
+Reading & Ability:
+Reading Comprehension
+Cloze Test and fill in the blank
+Para Jumbles
+
+
 - Extract question and options
 - The GREEN highlighted option OR ✓ mark is the correct answer
 - Return ONLY valid JSON (no explanation)
-
+- if it is form englsih in solution explain all the option 
+- for english explain all the option in solution
 Format:
 {
   "<Subject Name>": [
