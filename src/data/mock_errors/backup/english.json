@@ -65,13 +65,13 @@
         "q_num": 12,
         "question": "Select the option that expresses the given sentence in direct speech. Elisa ordered her brother to play outside and let her work in peace.",
         "options": {
-          "a": "Elisa said to her brother, “Play outside that let me do my work in peace.”",
-          "b": "Elisa said to her brother, “Play outside and let me work in peace.”",
-          "c": "Elisa said to her brother, “Play outside to let me do my work in peace.”",
-          "d": "Elisa said to her brother, “Play outside and let me do my work in peace.”"
+          "a": "Elisa said to her brother, \u201cPlay outside that let me do my work in peace.\u201d",
+          "b": "Elisa said to her brother, \u201cPlay outside and let me work in peace.\u201d",
+          "c": "Elisa said to her brother, \u201cPlay outside to let me do my work in peace.\u201d",
+          "d": "Elisa said to her brother, \u201cPlay outside and let me do my work in peace.\u201d"
         },
         "answer": "b",
-        "solution": "The correct answer is \"Elisa said to her brother, “play outside and let me work in peace.”\""
+        "solution": "The correct answer is \"Elisa said to her brother, \u201cplay outside and let me work in peace.\u201d\""
       },
       {
         "q_num": 17,
@@ -99,6 +99,18 @@
       },
       {
         "q_num": 1,
+        "question": "Change the sentence from direct speech to indirect speech: Tarun says to the manager, \"Representatives of the member states will be meeting next week.\"",
+        "options": {
+          "a": "Tarun tells the manager that representatives of the member states will be meeting next week.",
+          "b": "Tarun tells the manager that representatives of the member states would be meeting next week.",
+          "c": "Tarun tells the manager that representatives of the member states are going to meet next week.",
+          "d": "Tarun tells the manager that representatives of the member states meet next week."
+        },
+        "answer": "a",
+        "solution": "Since the reporting verb 'says' is in the present tense, the tense of the reported speech does not change in indirect speech."
+      },
+      {
+        "q_num": 1,
         "question": "\"Don't go there,\" He said. (Change into Indirect)",
         "options": {
           "a": "He said don't go there.",
@@ -108,6 +120,18 @@
         },
         "answer": "b",
         "solution": "In imperative sentences, the reporting verb 'said' is changed to 'told' or 'ordered/requested' etc., and the conjunction 'to' is used to connect the reporting clause to the reported speech. For negative commands, 'not to' is used."
+      },
+      {
+        "q_num": 1,
+        "question": "The tribunal said that there had been an alarming increase in the pollution in Delhi from all sorts of vehicles.",
+        "options": {
+          "a": "The tribunal says, \"There were an alarming increase in the pollution in Delhi from all sorts of vehicles\".",
+          "b": "The tribunal said, \"There has been an alarming increase in the pollution in Delhi from all sorts of vehicles\".",
+          "c": "The tribunal reports, \"That there has been an alarming increase in the pollution in Delhi from all sorts of vehicles\".",
+          "d": "The tribunal said, \"There have been an alarming increase in the pollution in Delhi from all sorts of vehicles\"."
+        },
+        "answer": "b",
+        "solution": "The correct answer is (b). Explanation of options: (a) Incorrect because the reporting verb 'said' (past tense) does not align with 'says' (present tense), and 'were' is grammatically incorrect for the singular subject 'increase'. (b) Correct; 'had been' in indirect speech changes to 'has been' in direct speech when the reporting verb is in the past, and it maintains correct singular subject-verb agreement. (c) Incorrect because the word 'that' is redundant after the comma in direct speech, and the reporting verb 'reports' does not match the original past tense. (d) Incorrect because 'have' is plural, which does not agree with the singular subject 'increase'."
       }
     ]
   },
@@ -119,7 +143,7 @@
     "questions": [
       {
         "q_num": 19,
-        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute it, select ‘No substitution required’. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
+        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute it, select \u2018No substitution required\u2019. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
         "options": {
           "a": "Alumnus occupying",
           "b": "Alumnus occupies",
@@ -248,6 +272,18 @@
         },
         "answer": "b",
         "solution": "The correct answer is 'whoever' because it functions as the subject of the verb 'asks'. 'Whoever' is used when referring to the person who performs an action. 'Whomever' is the object form (used when receiving the action). 'Whom so ever' is an archaic or non-standard variation of whomever. 'Whichever' is used to refer to one or more of a set of things or people when there is a limited number. Here, 'whoever' is the nominative case pronoun required to act as the subject for the clause 'asks for it first'."
+      },
+      {
+        "q_num": 4,
+        "question": "Read each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is (D). (Ignore the errors of punctuation, if any). I could not convince them (A) /because they persisted to suggest (B) / that I was lying. (C) / No error. (D)",
+        "options": {
+          "a": "A",
+          "b": "B",
+          "c": "C",
+          "d": "D"
+        },
+        "answer": "b",
+        "solution": "The error is in part (B). The correct prepositional usage after 'persisted' is 'in' followed by a gerund (-ing form). Therefore, 'persisted to suggest' should be corrected to 'persisted in suggesting'. Option A is grammatically correct as it correctly expresses the past ability. Option C is correct as it properly uses the past continuous tense to describe the state of lying. Option D (No error) is incorrect because an error exists in part B."
       },
       {
         "q_num": 1,
@@ -432,6 +468,18 @@
         },
         "answer": "a",
         "solution": "The correct answer is: Ambagious."
+      },
+      {
+        "q_num": 1,
+        "question": "\u2018A style of speech or writing that is roundabout, indirect, or full of wordiness\u2019.",
+        "options": {
+          "a": "Ambagious",
+          "b": "Ambidextrous",
+          "c": "Ambiguous",
+          "d": "Amicable"
+        },
+        "answer": "a",
+        "solution": "Ambagious means something that is roundabout or indirect in speech or writing."
       },
       {
         "q_num": 1,
