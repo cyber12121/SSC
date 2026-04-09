@@ -44,5 +44,12 @@ service cloud.firestore {
       allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
       allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
     }
+
+    // Deleted Questions Collection
+    match /deleted_questions/{id} {
+      allow read: if isAuthenticated();
+      allow create, delete: if isAuthenticated() && request.auth.token.email == 'cyberdevil0101@gmail.com';
+    }
+
   }
 }
