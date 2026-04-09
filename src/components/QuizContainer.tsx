@@ -50,6 +50,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     setShowSolution(true);
   };
 
+  const handleSkip = () => {
+    const endTime = Date.now();
+    const duration = Math.round((endTime - startTimeRef.current) / 1000);
+    
+    setTimeSpent(prev => ({ ...prev, [currentIdx]: (prev[currentIdx] || 0) + duration }));
+    nextQuestion();
+  };
+
+
   const nextQuestion = () => {
     if (currentIdx < totalQuestions - 1) {
       setCurrentIdx(currentIdx + 1);
@@ -192,18 +201,30 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           Previous
         </button>
 
-        <button
-          onClick={nextQuestion}
-          disabled={!answers[currentIdx]}
-          className={`flex items-center px-8 py-4 rounded-2xl font-bold transition-all shadow-lg ${
-            !answers[currentIdx]
-              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-              : 'bg-blue-600 text-white hover:bg-blue-700 shadow-blue-200'
-          }`}
-        >
-          {currentIdx === totalQuestions - 1 ? 'Finish Quiz' : 'Next Question'}
-          <ChevronRight className="w-5 h-5 ml-2" />
-        </button>
+        <div className="flex items-center space-x-4">
+          {!answers[currentIdx] && (
+            <button
+              onClick={handleSkip}
+              className="flex items-center px-6 py-3 text-amber-600 hover:bg-amber-50 rounded-xl font-bold transition-all border border-amber-200"
+            >
+              Skip Question
+            </button>
+          )}
+
+          <button
+            onClick={nextQuestion}
+            disabled={!answers[currentIdx]}
+            className={`flex items-center px-8 py-4 rounded-2xl font-bold transition-all shadow-lg ${
+              !answers[currentIdx]
+                ? 'bg-gray-100 text-gray-400 cursor-not-allowed hidden'
+                : 'bg-blue-600 text-white hover:bg-blue-700 shadow-blue-200'
+            }`}
+          >
+            {currentIdx === totalQuestions - 1 ? 'Finish Quiz' : 'Next Question'}
+            <ChevronRight className="w-5 h-5 ml-2" />
+          </button>
+        </div>
+
       </div>
     </div>
   );
