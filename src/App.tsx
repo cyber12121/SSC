@@ -9,8 +9,8 @@ import { collection, addDoc, query, where, orderBy, getDocs, deleteDoc, doc } fr
 // Dynamic import of all subject JSON files (recursive)
 const subjectModules = import.meta.glob('./data/**/*.json', { eager: true });
 
-const mockData: SubjectData = {};
-const bankData: SubjectData = {};
+const rawMockData: SubjectData = {};
+const rawBankData: SubjectData = {};
 
 Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
   const data = module.default;
@@ -28,14 +28,18 @@ Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
   chapters.forEach((chapter: any) => {
     const subject = chapter.subject;
     if (isMock || (path.includes('mockErrors') && !isBank)) {
-      if (!mockData[subject]) mockData[subject] = [];
-      mockData[subject].push(chapter);
+      if (!rawMockData[subject]) rawMockData[subject] = [];
+      rawMockData[subject].push(chapter);
     } else {
-      if (!bankData[subject]) bankData[subject] = [];
-      bankData[subject].push(chapter);
+      if (!rawBankData[subject]) rawBankData[subject] = [];
+      rawBankData[subject].push(chapter);
     }
   });
 });
+
+const getQuestionId = (chapter: Chapter, question: Question) => {
+  return `${chapter.subject}|${chapter.chapter_title}|${question.question}`.replace(/\s+/g, '_');
+};
 
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks'>('home');
@@ -44,6 +48,24 @@ export default function App() {
   const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [deletedQuestionIds, setDeletedQuestionIds] = useState<Set<string>>(new Set());
+
+  const processData = (data: SubjectData, deletedIds: Set<string>) => {
+    const filteredData: SubjectData = {};
+    Object.entries(data).forEach(([subject, chapters]) => {
+      filteredData[subject] = chapters.map(chapter => {
+        const filteredQuestions = chapter.questions.filter(q => !deletedIds.has(getQuestionId(chapter, q)));
+        return {
+          ...chapter,
+          questions: filteredQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+        };
+      }).filter(chapter => chapter.questions.length > 0);
+    });
+    return filteredData;
+  };
+
+  const mockData = React.useMemo(() => processData(rawMockData, deletedQuestionIds), [deletedQuestionIds]);
+  const bankData = React.useMemo(() => processData(rawBankData, deletedQuestionIds), [deletedQuestionIds]);
 
   const currentData = category === 'mockErrors' ? mockData : bankData;
 
@@ -59,6 +81,20 @@ export default function App() {
       setLoading(false);
     });
     return () => unsubscribe();
+  }, []);
+
+  // Fetch Deleted Questions
+  useEffect(() => {
+    const fetchDeleted = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'deleted_questions'));
+        const ids = new Set(querySnapshot.docs.map(doc => doc.data().questionId as string));
+        setDeletedQuestionIds(ids);
+      } catch (error) {
+        console.error('Error fetching deleted questions:', error);
+      }
+    };
+    fetchDeleted();
   }, []);
 
   // Fetch Results
@@ -141,6 +177,37 @@ export default function App() {
       } catch (error) {
         console.error('Error adding bookmark:', error);
       }
+    }
+  };
+
+  const handleDeleteQuestion = async (question: Question) => {
+    if (!user || user.email !== 'cyberdevil0101@gmail.com') return;
+    if (!activeChapter) return;
+
+    const qId = getQuestionId(activeChapter, question);
+    try {
+      await addDoc(collection(db, 'deleted_questions'), {
+        questionId: qId,
+        deletedBy: user.uid,
+        deletedAt: new Date().toISOString()
+      });
+      setDeletedQuestionIds(prev => {
+        const next = new Set(prev);
+        next.add(qId);
+        return next;
+      });
+
+      // Update activeChapter immediately for UI reactivity
+      if (activeChapter) {
+        const updatedQuestions = activeChapter.questions.filter(q => getQuestionId(activeChapter, q) !== qId);
+        setActiveChapter({
+          ...activeChapter,
+          questions: updatedQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+        });
+      }
+    } catch (error) {
+      console.error('Error deleting question:', error);
+      alert('Failed to delete question. Check console for details.');
     }
   };
 
@@ -474,6 +541,8 @@ export default function App() {
                 onComplete={handleQuizComplete} 
                 bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
                 onBookmarkToggle={toggleBookmark}
+                isAdmin={isAuthorized}
+                onDeleteQuestion={handleDeleteQuestion}
               />
             </motion.div>
           )}

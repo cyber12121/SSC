@@ -10,6 +10,8 @@ interface QuizContainerProps {
   onComplete: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => void;
   bookmarkedIds?: Set<number>;
   onBookmarkToggle?: (question: Question) => void;
+  onDeleteQuestion?: (question: Question) => void;
+  isAdmin?: boolean;
 }
 
 export const QuizContainer: React.FC<QuizContainerProps> = ({ 
@@ -17,7 +19,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   category, 
   onComplete,
   bookmarkedIds = new Set(),
-  onBookmarkToggle
+  onBookmarkToggle,
+  onDeleteQuestion,
+  isAdmin = false
 }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
@@ -83,8 +87,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     return correct;
   };
 
-  const currentQuestion = chapter.questions[currentIdx];
   const totalQuestions = chapter.questions.length;
+  // Safety check: if questions were deleted, adjust currentIdx if it's out of bounds
+  if (currentIdx >= totalQuestions && totalQuestions > 0) {
+    setCurrentIdx(totalQuestions - 1);
+  }
+  const currentQuestion = chapter.questions[currentIdx];
 
   if (isFinished) {
     const score = calculateScore();
@@ -184,6 +192,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           showSolution={showSolution || !!answers[currentIdx]}
           isBookmarked={bookmarkedIds.has(currentQuestion.q_num)}
           onBookmark={() => onBookmarkToggle?.(currentQuestion)}
+          isAdmin={isAdmin}
+          onDelete={() => onDeleteQuestion?.(currentQuestion)}
         />
       </AnimatePresence>
 

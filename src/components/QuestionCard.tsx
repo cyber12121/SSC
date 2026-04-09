@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, X, ChevronRight, ChevronLeft, Bookmark, BookmarkCheck } from 'lucide-react';
+import { Check, X, ChevronRight, ChevronLeft, Bookmark, BookmarkCheck, Trash2 } from 'lucide-react';
 import { Question } from '../types';
 
 interface QuestionCardProps {
@@ -10,6 +10,8 @@ interface QuestionCardProps {
   showSolution: boolean;
   isBookmarked?: boolean;
   onBookmark?: () => void;
+  onDelete?: () => void;
+  isAdmin?: boolean;
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({
@@ -19,6 +21,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   showSolution,
   isBookmarked = false,
   onBookmark,
+  onDelete,
+  isAdmin = false,
 }) => {
   return (
     <motion.div
@@ -41,22 +45,38 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             </span>
           )}
         </div>
-        {onBookmark && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onBookmark();
-            }}
-            className={`p-2 rounded-xl transition-all ${
-              isBookmarked 
-                ? 'bg-blue-100 text-blue-600' 
-                : 'bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-slate-600'
-            }`}
-            title={isBookmarked ? "Remove Bookmark" : "Bookmark Question"}
-          >
-            {isBookmarked ? <BookmarkCheck className="w-5 h-5 fill-current" /> : <Bookmark className="w-5 h-5" />}
-          </button>
-        )}
+        <div className="flex items-center space-x-2">
+          {isAdmin && onDelete && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                if (window.confirm("Are you sure you want to delete this question? It will be removed for everyone.")) {
+                  onDelete();
+                }
+              }}
+              className="p-2 bg-red-50 text-red-400 hover:text-red-600 hover:bg-red-100 rounded-xl transition-all"
+              title="Delete Question"
+            >
+              <Trash2 className="w-5 h-5" />
+            </button>
+          )}
+          {onBookmark && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onBookmark();
+              }}
+              className={`p-2 rounded-xl transition-all ${
+                isBookmarked 
+                  ? 'bg-blue-100 text-blue-600' 
+                  : 'bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-slate-600'
+              }`}
+              title={isBookmarked ? "Remove Bookmark" : "Bookmark Question"}
+            >
+              {isBookmarked ? <BookmarkCheck className="w-5 h-5 fill-current" /> : <Bookmark className="w-5 h-5" />}
+            </button>
+          )}
+        </div>
       </div>
 
       <h2 className="text-lg md:text-xl font-medium text-gray-800 mb-8 leading-tight">
