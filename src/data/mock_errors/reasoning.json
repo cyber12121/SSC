@@ -18,7 +18,7 @@
         "solution": "Medicine cures sickness, Book cures ignorance."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "Select the word-pair that best represents a relationship similar to the one expressed in the word-pair given below. (The words should be considered as meaningful words, and the words should not be related to each other on the basis of number of letters/consonants/vowels in the word.) Bear : Boar",
         "options": {
           "a": "Chicken : Rooster",
@@ -30,7 +30,7 @@
         "solution": "The relationship in the given pair 'Bear : Boar' represents a species followed by the specific term for the male of that species (Boar is a male bear). Similarly, 'Chicken : Rooster' follows the same pattern where a Rooster is a male chicken."
       },
       {
-        "q_num": 1,
+        "q_num": 3,
         "question": "Umbrage : Offense :: Elation : ?",
         "options": {
           "a": "Decoration",
@@ -42,7 +42,7 @@
         "solution": "The relationship is synonymic. 'Umbrage' means offense or annoyance. Similarly, 'Elation' means great happiness or exhilaration, which is synonymous with 'Jubilance'."
       },
       {
-        "q_num": 1,
+        "q_num": 4,
         "question": "Select the option in which the numbers are related in the same way as are the numbers of the following set: (3, 6, 30)",
         "options": {
           "a": "(5, 20, 420)",
@@ -54,7 +54,7 @@
         "solution": "Logic: First number = x, Second number = y, Third number = y^2 + x^2 + 1 OR (First^2 + Second^2 + 1). Let's check the given set (3, 6, 30): 3^2 + 6^2 + 1 = 9 + 36 + 1 = 46 (Incorrect). Alternative logic: 3 * (3+1) = 12, 6 * (6+1) = 42. Another logic: 3^2 + 3 = 12? No. Correct Logic: 3^3 + 3 = 30 and 6 * 0 = ?. Let's look at (4, 12, 132): 12^2 + 4^2 + 4 = 144 + 16 + 4 = 164. Actually, the pattern is: (First number * (First number + 1)) = Second number; (Second number^2 + First number) = Third number is not fitting. Let's try: 3^3 + 3 = 30. Then 4^3 + 4 = 68 (Not 132). Let's try: 3 * (3^2 + 1) = 30. 4 * (4^2 + 1) = 4 * 17 = 68. Let's try: (3 * 3) + 3 = 12? No. The logic is: (3 * 6) + 3^2 + 3 = 30. For (4, 12, 132): (4 * 12) + 4^2 + 12*4 = 48 + 16 + 48 = 112 (Close). Correct relation: (3, 6, 30) -> 3^2 + 3 = 12 (No), 3 * (3+6) + 3 = 30. Pattern: (A * B) + A^2 + A = C. 3*6 + 9 + 3 = 30. 4*12 + 16 + 12 = 48 + 16 + 12 = 76. Actually, the most common pattern here is: Second number * (First number + 1) = 6 * 4 = 24? No. The logic is (3^2 * 3) + 3 = 30. So, (4^2 * 4) + 4 = 64 + 4 = 68. Wait, (4, 12, 132): 12^2 - 12 = 132. 3^2 - 3 = 6 (This fits 3 and 6). Logic: (First number, First^2 - First, (First^2 - First)^2 - First^2). Regardless of the specific complexity, (4, 12, 132) is the marked correct answer."
       },
       {
-        "q_num": 16,
+        "q_num": 5,
         "question": "Select the option in which the numbers shares the same relationship in set as that shared by the numbers in the given set. (NOTE: Operations should be performed on the whole numbers, without breaking down the numbers into its constituent digits. E.g. 13 - Operations on 13 such as adding /subtracting /multiplying etc. to 13 can be performed. Breaking down 13 into 1 and 3 and then performing mathematical operations on 1 and 3 is not allowed) (36, 99, 106) (72, 207, 214)",
         "options": {
           "a": "(64, 193, 200)",
@@ -66,7 +66,7 @@
         "solution": "The logic followed here is: 1st number \u00d7 3 - 9 = 2nd number, 2nd number + 7 = 3rd number."
       },
       {
-        "q_num": 1,
+        "q_num": 6,
         "question": "Select the option that is similar to the given set of numbers: (17, 54, 165) and (15, 48, 147)",
         "options": {
           "a": "(20, 63, 189)",
@@ -78,7 +78,7 @@
         "solution": "The logic followed is: (First number \u00d7 3) + 3 = Second number; (Second number \u00d7 3) + 3 = Third number. Checking option (c): (21 \u00d7 3) + 3 = 63 + 3 = 66, and (66 \u00d7 3) + 3 = 198 + 3 = 201."
       },
       {
-        "q_num": 1,
+        "q_num": 7,
         "question": "Select the option that is related to the third term in the same way as the second term is related to the first term: DART : XGLZ : : SPIN : ?",
         "options": {
           "a": "MVOT",
@@ -90,7 +90,7 @@
         "solution": "Pattern: D(+20/reverse -6) -> X, A(+6) -> G, R(-6) -> L, T(+6) -> Z. Applying same logic to SPIN: S(+4) -> W (Note: Pattern relates to opposite letters or specific shifts). By observing the pattern: D(4)+X(24) = 28, A(1)+G(7) = 8, R(18)+L(12) = 30, T(20)+Z(26) = 46. The correct answer is MVCT."
       },
       {
-        "q_num": 1,
+        "q_num": 8,
         "question": "Three of the following four number-pairs are alike in a certain way and one is different. Find the odd one out.",
         "options": {
           "a": "78 : 13",
@@ -102,7 +102,7 @@
         "solution": "The pattern followed is the sum of the digits of the first number equals the second number. 1) 78: 7+8=15 (not 13), 2) 18: 1+8=9, 3) 34: 3+4=7, 4) 56: 5+6=11. Hence, 78:13 is the odd one."
       },
       {
-        "q_num": 1,
+        "q_num": 9,
         "question": "In the following question, select the odd number pair from the given alternatives.",
         "options": {
           "a": "64 - 576",
@@ -134,7 +134,7 @@
         "solution": "C(3)+A(1)+T(20)=24. D(4)+O(15)+G(7)=26."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "In a certain code language, 'technology improves life' is coded as 'ta@1 mk&8 df=4', 'life needs balance' is coded as 'df=4 lo<7 zx^3', 'technology needs control' is coded as 'lo<7 ta@1 kg$2' and 'control ensures safety' is coded as 'kg$2 pa\u03bb5 qw?6'. Which of the statements is true?",
         "options": {
           "a": "The code for 'Life' is 'zx^3'.",
@@ -146,7 +146,7 @@
         "solution": "From 'technology improves life' (ta@1 mk&8 df=4) and 'life needs balance' (df=4 lo<7 zx^3), 'life' = 'df=4'. From 'technology improves life' (ta@1 mk&8 df=4) and 'technology needs control' (lo<7 ta@1 kg$2), 'technology' = 'ta@1'. Thus, 'improves' must be 'mk&8'."
       },
       {
-        "q_num": 1,
+        "q_num": 3,
         "question": "In a certain code language, \"JOKER\" is written as \"14\" and \"CIRCUS\" is written as \"10\". How is \"JUGGLER\" written in that code language?",
         "options": {
           "a": "8",
@@ -160,13 +160,13 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 3,
     "chapter_title": "Order and Ranking",
     "subject": "Reasoning",
     "subject_id": "reasoning",
     "questions": [
       {
-        "q_num": 11,
+        "q_num": 1,
         "question": "Yukti is sitting at 69th position from the right end of a row of 111 people. If Mukti's position from the left end is 50th, then how many people are there between Mukti and Yukti?",
         "options": {
           "a": "7",
@@ -178,7 +178,7 @@
         "solution": "Total people = 111. Yukti's position from right = 69. Yukti's position from left = (111 - 69) + 1 = 43rd. Mukti's position from left = 50th. Number of people between them = (Difference in ranks) - 1 = (50 - 43) - 1 = 7 - 1 = 6. *Note: Based on the logical deduction of the provided options and standard SSC pattern, the correct calculation yields 6 (Option C).* "
       },
       {
-        "q_num": 14,
+        "q_num": 2,
         "question": "In a class of 37 students, Ramesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh. How many students were ranked below Dinesh?",
         "options": {
           "a": "22",
@@ -190,7 +190,7 @@
         "solution": "According to the given conditions, there are total 37 students. Ramesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh. That means Dinesh's position from the top will be (9 + 6 = 15). Students below Dinesh = Total students - Dinesh's rank = 37 - 15 = 22."
       },
       {
-        "q_num": 1,
+        "q_num": 3,
         "question": "In a class of 54 students, the number of girls is half the number of boys. Anita's rank is 19th from the top and seven girls rank above Anita. Anita's rank is above how many boys?",
         "options": {
           "a": "25",
@@ -202,7 +202,7 @@
         "solution": "Total students = 54. Let boys be B and girls be G. B + G = 54 and G = B/2 => B = 2G. So, 3G = 54, G = 18 and B = 36. Anita is at 19th rank, meaning there are 18 students above her. Given 7 girls are above her, the number of boys above her = 18 - 7 = 11. Total boys = 36. Boys below Anita = 36 - 11 = 25 (excluding Anita as she is a girl)."
       },
       {
-        "q_num": 1,
+        "q_num": 4,
         "question": "In a row of 50 persons Bhadri is 13th from left end and Sarayu is 20th from right end. If Nanda is exactly in between Bhadri and Sarayu then find the number of people between Bhadri and Nanda?",
         "options": {
           "a": "7",
@@ -214,7 +214,7 @@
         "solution": "Total persons = 50. Bhadri position from left = 13. Sarayu position from right = 20. Sarayu position from left = (50 - 20) + 1 = 31. Number of people between Bhadri and Sarayu = (31 - 13) - 1 = 17. Since Nanda is exactly in between, Nanda divides these 17 people. Number of people between Bhadri and Nanda = (17 - 1) / 2 = 8."
       },
       {
-        "q_num": 1,
+        "q_num": 5,
         "question": "In a row of Children facing north, A is 14th from the left end and 6th to the right of B. If B is 15th to the left of C, who is 22nd from the right end, how many children are there in that row?",
         "options": {
           "a": "34",
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 4,
     "chapter_title": "Alphabet Series",
     "subject": "Reasoning",
     "subject_id": "reasoning",
@@ -246,7 +246,7 @@
         "solution": "The series follows the pattern K L M N L O / K M N L O / K H N U J..."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series: GHUT, JKRQ, MNON, PQLK, ?",
         "options": {
           "a": "SUIG",
@@ -258,7 +258,7 @@
         "solution": "The series follows a pattern for each letter position: 1st letter: G(+3), J(+3), M(+3), P(+3), S. 2nd letter: H(+3), K(+3), N(+3), Q(+3), T. 3rd letter: U(-3), R(-3), O(-3), L(-3), I. 4th letter: T(-3), Q(-3), N(-3), K(-3), H. Therefore, the answer is STIH."
       },
       {
-        "q_num": 1,
+        "q_num": 3,
         "question": "The position of how many letters will remain unchanged in each of the letters in the word TAMPLING is arranged in the reverse alphabetical order?",
         "options": {
           "a": "Two",
@@ -270,7 +270,7 @@
         "solution": "Original word: T A M P L I N G (T=20, A=1, M=13, P=16, L=12, I=9, N=14, G=7). Reverse alphabetical order: T, P, N, M, L, I, G, A. Comparing original (T A M P L I N G) with reverse alphabetical (T P N M L I G A), the positions of T (1st), L (5th), and I (6th) remain unchanged."
       },
       {
-        "q_num": 1,
+        "q_num": 4,
         "question": "Which letter will be 10th to the right of the 5th letter from left end in English alphabetical series?",
         "options": {
           "a": "P",
@@ -282,7 +282,7 @@
         "solution": "The 5th letter from the left is E. The 10th letter to the right of E is (5+10) = 15th letter from the left, which is O."
       },
       {
-        "q_num": 1,
+        "q_num": 5,
         "question": "How many such pairs of letters are there in the word REGULATION (in the forward direction) which have as many letters between them in the word as there are in the English alphabetical order?",
         "options": {
           "a": "3",
@@ -296,13 +296,13 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 5,
     "chapter_title": "Mathematical Operations",
     "subject": "Reasoning",
     "subject_id": "reasoning",
     "questions": [
       {
-        "q_num": 8,
+        "q_num": 1,
         "question": "If 22 + 4 = 24 and 18 + 5 = 15, then 16 + 9 is equal to",
         "options": {
           "a": "36",
@@ -314,7 +314,7 @@
         "solution": "Here the logic is: 22 + 4 = 26; 2 + 6 = 8, 8 * 3 = 24. 18 + 5 = 23; 2 + 3 = 5, 5 * 3 = 15. Applying the same logic: 16 + 9 = 25; 2 + 5 = 7, 7 * 3 = 21."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "If 12 R 23 S 32 = 3, 13 S 34 R 56 = 35 then what is the value of 23 R 65 S 45 = ?",
         "options": {
           "a": "42",
@@ -328,13 +328,13 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 6,
     "chapter_title": "Classification",
     "subject": "Reasoning",
     "subject_id": "reasoning",
     "questions": [
       {
-        "q_num": 23,
+        "q_num": 1,
         "question": "In the following question, select the odd word pair from the given alternatives.",
         "options": {
           "a": "Question - Answer",
@@ -346,7 +346,7 @@
         "solution": "In all other pairs, the two items are related as complementary or furniture/utility pairs, whereas 'Pencil - Rub' (or Pencil - Eraser) describes an action-object relationship rather than a pair of related objects."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "Four pair of numbers have been given, out of which three are alike in some manner, while one is different. Pick the odd one out.",
         "options": {
           "a": "16 : 82",
@@ -360,7 +360,7 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 7,
     "chapter_title": "Number Series",
     "subject": "Reasoning",
     "subject_id": "reasoning",
@@ -378,7 +378,7 @@
         "solution": "Pattern differences: 50-19=31, 87-50=37, 128-87=41, 175-128=47. The differences are consecutive prime numbers starting from 31 (31, 37, 41, 43...). The expected difference after 41 should be 43. 128+43=171. Thus, 175 breaks the pattern."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "How many such pairs of numbers are there in '0751693842', each of which has as many digits between them as in number series (both forward and backward direction)?",
         "options": {
           "a": "None",
@@ -390,7 +390,7 @@
         "solution": "By checking the sequence '0751693842' forward and backward against the standard number series, we find no such pairs where the number of intervening digits matches the natural number system."
       },
       {
-        "q_num": 1,
+        "q_num": 3,
         "question": "Which number will replace the question mark (?) in the following number series? 3, 7, 22, 45, 136, ?, 820",
         "options": {
           "a": "273",
@@ -402,7 +402,7 @@
         "solution": "The pattern followed is alternating operations: (3*2)+1 = 7, (7*3)+1 = 22, (22*2)+1 = 45, (45*3)+1 = 136, (136*2)+1 = 273, (273*3)+1 = 820."
       },
       {
-        "q_num": 1,
+        "q_num": 4,
         "question": "Find the wrong term in the following series. 5, 10, 9, 14, 11, 16, 15, 20, 16, 22",
         "options": {
           "a": "16",
@@ -414,7 +414,7 @@
         "solution": "The series follows two alternating patterns: 5, 9, 11, 15, 16 (increasing by 4, 2, 4, 1...) and 10, 14, 16, 20, 22 (increasing by 4, 2, 4, 2). Alternatively, the pairs are (5,10), (9,14), (11,16), (15,20), (16,21). The last pair (16, 22) should be (16, 21) to maintain the +5 difference pattern. Thus, 16 is identified as the anomaly in the context of this specific sequence logic."
       },
       {
-        "q_num": 1,
+        "q_num": 5,
         "question": "How many such '7' are there in the following number series which are immediately preceded by '6' but not immediately followed by 5?\n7 5 2 7 6 5 3 6 7 4 3 4 7 8 5 3 7 6 7 2 5 0 6 7 5 3",
         "options": {
           "a": "5",
@@ -428,7 +428,7 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 8,
     "chapter_title": "Critical Thinking",
     "subject": "Reasoning",
     "subject_id": "reasoning",
@@ -446,7 +446,7 @@
         "solution": "Conclusion I states 'less than 6%', but the statement says 'no more than 6%' (which includes exactly 6%), so it does not necessarily follow. Conclusion II follows directly from the observation that transfers increased after the changes. Conclusion III is an assumption not supported by the text as other factors might have contributed."
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "Directions: In each of the following question, statement is given followed by two conclusions numbered I and II. You have to consider the statement to be true, even if it seems to be at variance from commonly known facts. You are to decide which of the given conclusions can be drawn definitely from the given statement.\n\nStatement: The richer we are the more self-centered we become and neglect other's needs.\n\nConclusions:\nI. All rich are self-centered.\nII. Those who neglect other's needs are rich.",
         "options": {
           "a": "Only conclusion I is true.",
@@ -458,7 +458,7 @@
         "solution": "The statement implies a correlation but does not establish absolute universal rules. 'The richer we are' is a relative comparative statement and does not imply 'All rich people'. Similarly, it does not state that the only cause for neglecting others' needs is being rich. Therefore, neither conclusion can be definitively drawn."
       },
       {
-        "q_num": 1,
+        "q_num": 3,
         "question": "This question has a statement followed by two assumptions numbered I and II. Assuming that all information given in the statement is true, consider the given conclusions and determine which of them logically and definitely follows from the given statement.\n\nStatement:\nNashit wore his uniform, loaded his gun and left for work in his chauffeur - driven official car.\n\nAssumptions:\nI. Nashit is an officer in the armed forces.\nII. Nashit is a military commando posted at Raj Bhavan, Jaipur.",
         "options": {
           "a": "Only assumption I is implicit",
@@ -470,7 +470,7 @@
         "solution": "The statement mentions uniform, gun, and an official car, which strongly supports the assumption that Nashit is an armed forces officer. Assumption II is too specific regarding the location and role, which cannot be derived from the statement."
       },
       {
-        "q_num": 1,
+        "q_num": 4,
         "question": "Study the statement and the two assumptions given below and select the appropriate alternatives that indicate: Statement: \u201cA software engineer changes more jobs than any other professional.\u201d Assumption: I. Software engineers are more greedy. II. The job requirements of a software engineer are more challenging.",
         "options": {
           "a": "Only assumption I is implicit.",
@@ -484,7 +484,7 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 9,
     "chapter_title": "Seating Arrangement",
     "subject": "Reasoning",
     "subject_id": "reasoning",
@@ -504,7 +504,7 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 10,
     "chapter_title": "Blood Relations",
     "subject": "Reasoning",
     "subject_id": "reasoning",
@@ -522,7 +522,7 @@
         "solution": "Not provided"
       },
       {
-        "q_num": 1,
+        "q_num": 2,
         "question": "Pointing to a girl, a man said to a boy, \"She is the daughter of sister of your paternal grandmother's only son.\" How is the girl related to the boy?",
         "options": {
           "a": "Niece",
@@ -536,7 +536,7 @@
     ]
   },
   {
-    "chapter_num": 1,
+    "chapter_num": 11,
     "chapter_title": "Syllogism",
     "subject": "Reasoning",
     "subject_id": "reasoning",

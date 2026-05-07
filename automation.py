@@ -27,51 +27,53 @@ FILE_MAP = {
 }
 
 CHAPTER_MAP = {
-    "vocabulary": "Synonyms and Antonyms",
-    "vocabulary (antonyms)": "Synonyms and Antonyms",
-    "vocabulary - antonyms": "Synonyms and Antonyms",
-    "vocabulary - synonyms": "Synonyms and Antonyms",
-    "antonyms": "Synonyms and Antonyms",
-    "one-word substitution": "One Word Substitution",
-    "cloze test": "Cloze Test and fill in the blank",
-    "cloze test and fill in the blanks": "Cloze Test and fill in the blank",
-    "fill in the blank": "Cloze Test and fill in the blank",
-    "fill in the blanks": "Cloze Test and fill in the blank",
-    "fill in the balnck": "Cloze Test and fill in the blank",
-    "spelling": "Spelling Correction",
+    # Mathematics
+    "hcf and lcm": "Number System",
+    "decimals and fractions": "Number System",
+    "number system & decimals and fractions": "Number System",
+    "pipe and cistern": "Time and Work",
+    "boat and streams": "Time, Speed and Distance",
+    "boat and stream": "Time, Speed and Distance",
+    "races and games": "Time, Speed and Distance",
+    "heights and distances": "Trigonometry",
+    "statistics": "Statistics and Probability",
+    "algebraic equations": "Algebra",
+    "quadratic equations": "Algebra",
+    "arithmetic": "Number System",
+    "arithmetic mock": "Number System",
+    
+    # English
+    "synonyms and antonyms": "Vocabulary",
+    "vocabulary (antonyms)": "Vocabulary",
+    "vocabulary - antonyms": "Vocabulary",
+    "vocabulary - synonyms": "Vocabulary",
+    "antonyms": "Vocabulary",
+    "one-word substitution": "Vocabulary",
+    "spelling": "Vocabulary",
+    "spelling correction": "Vocabulary",
+    "idioms and phrases": "Vocabulary",
+    "phrasal verbs": "Vocabulary",
+    "homonyms": "Vocabulary",
     "adjective": "Error Spotting & Sentence Improvement",
     "sentence improvement": "Error Spotting & Sentence Improvement",
     "prepositions": "Error Spotting & Sentence Improvement",
     "subject-verb agreement": "Error Spotting & Sentence Improvement",
     "spotting errors": "Error Spotting & Sentence Improvement",
-    "algebraic equations": "Algebra",
-    "quadratic equations": "Algebra",
-    "arithmetic mock": "Arithmetic",
-    "boat and stream": "Boat and Streams",
-    "geometry - triangles": "Geometry",
-    "lcm and hcf": "HCF and LCM",
-    "mensuration (3d)": "Mensuration 2D and 3D",
-    "number system & decimals and fractions": "Number System",
-    "profit and loss": "Profit, Loss and Discount",
-    "alphabet test": "Alphabet Series",
-    "letter series": "Alphabet Series",
-    "word formation / alphabet test": "Alphabet Series",
-    "letter analogy": "Analogy",
-    "number analogy": "Analogy",
-    "number analogy/classification": "Analogy",
-    "odd one out": "Classification",
-    "circular arrangement": "Seating Arrangement",
-    "ranking and order": "Order and Ranking",
-    "statement and assumptions": "Critical Thinking",
-    "statement and conclusion": "Critical Thinking",
-    "mensuration": "Mensuration 2D and 3D",
-    "simple interest": "Simple and Compound Interest",
-    "compound interest": "Simple and Compound Interest",
+    "grammar": "Error Spotting & Sentence Improvement",
+    "cloze test": "Reading Comprehension & Ability",
+    "fill in the blank": "Reading Comprehension & Ability",
+    "fill in the blanks": "Reading Comprehension & Ability",
     "para jumbles": "Reading Comprehension & Ability",
-    "cloze test and fill in the blank": "Reading Comprehension & Ability",
-    "synonyms and antonyms": "Vocabulary",
-    "idioms and phrases": "Vocabulary",
-    "phrasal verbs": "Vocabulary"
+
+    # Reasoning
+    "mirror and water images": "Non-Verbal Reasoning",
+    "paper folding and unfolding": "Non-Verbal Reasoning",
+    "pattern completion": "Non-Verbal Reasoning",
+    "embedded figures": "Non-Verbal Reasoning",
+    "figural series": "Non-Verbal Reasoning",
+    "dice and cubes": "Non-Verbal Reasoning",
+    "statement and assumptions": "Critical Thinking",
+    "statement and conclusion": "Critical Thinking"
 }
 
 PROMPT = """
@@ -79,68 +81,52 @@ You are an AI that extracts structured data from exam screenshots.
 
 Rules:
 - Identify subject (Mathematics, General Awareness, English, Reasoning)
-- Infer chapter name form below list
+- Infer chapter name from the standardized list below
 Mathematics
-Arithmetic:
-Number System & Decimals and Fractions
-Percentage
-Ratio and Proportion
-Average
-Simple and Compound Interest
-Profit, Loss and Discount
-Time and Work
-Pipe and Cistern
-Time, Speed and Distance
-Boat and Streams
-Races and Games
-Mixture and Alligation
-Partnership
-Algebra 
-geometry
-Mensuration 2D and 3D
-Trigonometry
-Heights and Distances
-Data Interpretation
-Statistics and Probability
+- Number System (Includes HCF, LCM, Fractions)
+- Percentage
+- Ratio and Proportion
+- Average
+- Simple and Compound Interest
+- Profit, Loss and Discount
+- Time and Work (Includes Pipe and Cistern)
+- Time, Speed and Distance (Includes Boat, Stream, Races)
+- Mixture and Alligation
+- Partnership
+- Algebra
+- Geometry
+- Coordinate Geometry
+- Mensuration 2D and 3D
+- Trigonometry (Includes Heights and Distances)
+- Data Interpretation
+- Statistics and Probability
 
 --------------------
 Reasoning
+- Analogy
+- Classification
+- Number Series
+- Alphabet Series
+- Coding-Decoding
+- Blood Relations
+- Direction Sense
+- Syllogism
+- Venn Diagrams
+- Order and Ranking
+- Seating Arrangement
+- Mathematical Operations
+- Puzzles
+- Clock and Calendar
+- Non-Verbal Reasoning (Includes Images, Paper Folding, Pattern, Embedded Figures)
+- Critical Thinking (Includes Statement & Assumptions/Conclusion)
 
-Analogy
-Classification
-Number Series
-Alphabet Series
-Coding-Decoding
-Blood Relations
-Direction Sense
-Syllogism
-Venn Diagrams
-Order and Ranking
-Seating Arrangement
-Mathematical Operations
-Puzzles
-Clock and Calendar
-Mirror and Water Images
-Paper Folding and Unfolding
-Pattern Completion
-Embedded Figures
-Figural Series
-Dice and Cubes
-Critical Thinking
 ---------------------
 English
-Synonyms and Antonyms
-One Word Substitution
-Idioms and Phrases
-Homonyms
-Spelling Correction
-Error Spotting & Sentence Improvement
-Active and Passive Voice
-Direct and Indirect Speech
-Reading & Ability:
-Reading Comprehension
-Cloze Test and fill in the blank
-Para Jumbles
+- Vocabulary (Includes Synonyms, Antonyms, One Word, Idioms, Spelling, Homonyms)
+- Error Spotting & Sentence Improvement
+- Active and Passive Voice
+- Direct and Indirect Speech
+- Reading Comprehension & Ability (Includes Cloze Test, Para Jumbles)
 
 
 - Extract question and options
