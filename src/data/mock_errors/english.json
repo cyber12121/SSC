@@ -292,6 +292,30 @@
         },
         "answer": "b",
         "solution": "The correct answer is 'devolved'. 'Devolved' means to degenerate or transition into a lower or worse state, which fits the context of a discussion turning into a negative 'acrimonious stalemate'. Explanations of other options: (a) 'Evolved' means to develop gradually, usually into something better or more complex, which contradicts the negative outcome. (c) 'Emerged' means to become apparent or come into view, which does not fit the grammatical structure or context of descending into a state. (d) 'Absorbed' means to take in or soak up, which makes no sense in the context of a discussion changing its nature into a stalemate."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the most appropriate meaning for the idiom: Achilles' Heel",
+        "options": {
+          "a": "Irrelevant thing",
+          "b": "Vulnerable point",
+          "c": "Fast runner",
+          "d": "Costly item"
+        },
+        "answer": "b",
+        "solution": "The idiom 'Achilles' heel' refers to a weakness in spite of overall strength, which can lead to downfall. Therefore, 'Vulnerable point' is the correct meaning. Explanations: a) Irrelevant thing: Something not connected or pertinent to the matter at hand. b) Vulnerable point: A weak spot where someone or something is open to attack or failure (Correct). c) Fast runner: Unrelated to the speed of a person. d) Costly item: Something expensive; this has no relation to the figurative meaning of the idiom."
+      },
+      {
+        "q_num": 1,
+        "question": "Fill in the blank with the correctly spelled word: The chef's __________ of spices added a unique flavour to the dish.",
+        "options": {
+          "a": "concockshun",
+          "b": "concocktion",
+          "c": "concotion",
+          "d": "concoction"
+        },
+        "answer": "d",
+        "solution": "The correct spelling is 'concoction', which means a mixture of various ingredients or elements. Option (a) 'concockshun' is phonetically incorrect. Option (b) 'concocktion' uses incorrect letters. Option (c) 'concotion' is missing the 'c' after the 'o'. Therefore, (d) 'concoction' is the only correctly spelled word."
       }
     ]
   },
@@ -372,6 +396,18 @@
         },
         "answer": "d",
         "solution": "The correct direct speech is: 'I warned Rita, \u201cDon\u2019t be late tomorrow\u201d.' Explanation of options: (a) Incorrect because 'warn' is a transitive verb and does not require the preposition 'to' before the direct object 'Rita'. (b) Incorrect because the verb form 'warning' is grammatically incorrect in this context as it lacks an auxiliary verb. (c) Incorrect as it uses an imperative structure 'Not be late' which is not the standard way to express a warning in direct speech compared to 'Don't be'. (d) Correct because it follows the rules of direct speech conversion: the reporting verb 'warned' is followed by the object 'Rita' and the reported speech uses the imperative 'Don't be' correctly with 'tomorrow' as the direct speech equivalent of 'the next day'."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the option that expresses the given sentence in direct: The student said that he had to work hard.",
+        "options": {
+          "a": "The student told, \"I must work harder.\"",
+          "b": "The student said, \"I must work hard.\"",
+          "c": "The student said, \"I shall work hard.\"",
+          "d": "The student said, \"I had to work more hard.\""
+        },
+        "answer": "b",
+        "solution": "The correct answer is (b) The student said, \"I must work hard.\" Explanation: In direct-indirect speech, 'had to' is the past form of 'must' or 'have to'. Therefore, when converting the indirect sentence 'he had to work hard' back to direct speech, 'had to' changes to 'must'. Option (a) is incorrect because it uses 'told' without an object and includes 'harder' which changes the meaning. Option (c) is incorrect because 'shall' would typically change to 'should' or 'would' in indirect speech, not 'had to'. Option (d) is incorrect because 'had to' is already the past form and 'more hard' is grammatically incorrect."
       }
     ]
   },
@@ -584,6 +620,42 @@
         },
         "answer": "c",
         "solution": "The error is in part (3). The sentence uses the phrase 'attributed partly to... and partly due to'. The correct construction requires parallelism: 'attributed partly to... and partly to...'. Therefore, 'due to' should be replaced with 'to'. \n\nExplanation of options:\n(1) 'The regulator's decision to postpone the implementation' is grammatically correct.\n(2) 'was attributed partly to industry pressure' is grammatically correct.\n(3) 'and partly due to legal ambiguity' is incorrect because it breaks the parallel structure required by the verb 'attributed', which is followed by the preposition 'to'.\n(4) 'surrounding the recent amendments' is grammatically correct as a participle phrase modifying the noun 'ambiguity'."
+      },
+      {
+        "q_num": 1,
+        "question": "The regulator's decision to postpone the implementation (1)/ was attributed partly to industry pressure (2)/ and partly due to legal ambiguity (3)/ surrounding the recent amendments. (4)",
+        "options": {
+          "a": "(1)",
+          "b": "(2)",
+          "c": "(3)",
+          "d": "(4)"
+        },
+        "answer": "c",
+        "solution": "The error lies in part (3). The sentence uses the structure 'attributed partly to... and partly...'. Since 'attributed to' is the correct prepositional combination, the phrase should be 'attributed partly to industry pressure and partly to legal ambiguity'. Therefore, 'due to' in part (3) is incorrect and should be replaced with 'to'. \n\nExplanation of options:\n(1) 'The regulator's decision to postpone the implementation' is grammatically correct.\n(2) 'was attributed partly to industry pressure' is correct as 'attribute to' is the standard usage.\n(3) 'and partly due to legal ambiguity' is incorrect because it breaks the parallelism of the prepositional phrase; it should be 'partly to'.\n(4) 'surrounding the recent amendments' is grammatically correct as a participial phrase modifying 'legal ambiguity'."
+      },
+      {
+        "q_num": 1,
+        "question": "The immense talent / we having at our disposal is / impressive to say the least.",
+        "options": {
+          "a": "we having at our disposal is",
+          "b": "impressive to say the least",
+          "c": "No error",
+          "d": "The immense talent"
+        },
+        "answer": "a",
+        "solution": "The error lies in the phrase 'we having at our disposal'. The correct usage should be 'we have at our disposal' to maintain proper tense and grammatical structure. Here is the analysis of options: a) Incorrect: 'having' is a participle and cannot stand as a main verb here; it should be 'have'. b) Correct: This part of the sentence is grammatically sound. c) Incorrect: There is a clear error in the second segment. d) Correct: This is the subject of the sentence and is grammatically correct."
+      },
+      {
+        "q_num": 1,
+        "question": "Choose the appropriate word to complete the given sentence: I suggest _______ a search party.",
+        "options": {
+          "a": "to form",
+          "b": "forming",
+          "c": "form",
+          "d": "to forming"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'forming'. The verb 'suggest' is followed by a gerund (-ing form) when proposing an action. Explanation of options: 'a) to form' is incorrect because 'suggest' does not take the infinitive form. 'b) forming' is the correct gerund form used after 'suggest'. 'c) form' is incorrect as it lacks the necessary grammatical structure to follow 'suggest' in this context. 'd) to forming' is grammatically incorrect as 'to' is redundant and inappropriate here."
       }
     ]
   },
