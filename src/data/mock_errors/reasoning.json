@@ -424,6 +424,18 @@
         },
         "answer": "d",
         "solution": "We need to find the pattern '67' that is NOT followed by '5' (i.e., '67x' where x is not 5).\nIn the series: 7 5 2 7 6 5 3 6 7 4 3 4 7 8 5 3 7 6 7 2 5 0 6 7 5 3\n1. 6 7 4 (Matches criteria)\n2. 6 7 2 (Matches criteria)\n3. 6 7 5 (Does not match as it is followed by 5)\nThere are 2 such occurrences."
+      },
+      {
+        "q_num": 1,
+        "question": "Find the missing term in the following series. 10 15 35 65 ? 265",
+        "options": {
+          "a": "115",
+          "b": "155",
+          "c": "135",
+          "d": "145"
+        },
+        "answer": "c",
+        "solution": "The pattern is based on the difference between consecutive terms: 15-10 = 5; 35-15 = 20; 65-35 = 30. The differences are 5, 20, 30. Let's look at the second difference: 20-5 = 15; 30-20 = 10. This doesn't seem uniform. Alternatively, looking at the pattern of adding multiples of 5 or 10: 10 + 5 = 15, 15 + 20 = 35, 35 + 30 = 65, 65 + 70 = 135, 135 + 130 = 265. The added values are 5, 20, 30, 70, 130. A more precise pattern is: 10+(5*1)=15, 15+(5*4)=35, 35+(5*6)=65, 65+(5*14)=135, 135+(5*26)=265."
       }
     ]
   },

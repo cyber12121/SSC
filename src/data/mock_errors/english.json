@@ -184,6 +184,114 @@
         },
         "answer": "a",
         "solution": "The idiom 'go down the pan' means to fail completely or to be ruined."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the option that can be used as a one-word substitute for the given group of words: A clear explanation",
+        "options": {
+          "a": "Incessant",
+          "b": "Palatable",
+          "c": "Analgesic",
+          "d": "Exposition"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Exposition. Explanation of options: \n- Exposition: A comprehensive description and explanation of an idea or theory.\n- Incessant: Continuing without pause or interruption (usually regarding something unpleasant).\n- Palatable: (of food or drink) pleasant to taste; or (of an idea/suggestion) acceptable or satisfactory.\n- Analgesic: Acting to relieve pain."
+      },
+      {
+        "q_num": 1,
+        "question": "Plausible",
+        "options": {
+          "a": "Humble",
+          "b": "Quiet",
+          "c": "Absurd",
+          "d": "Distant"
+        },
+        "answer": "c",
+        "solution": "The word 'Plausible' means something that is reasonable or probable. In the context of synonyms/antonyms questions, 'Absurd' (meaning illogical or unreasonable) is being identified as the antonym here. Explanation of options: A) Humble: having or showing a modest estimate of one's own importance. B) Quiet: making very little or no noise. C) Absurd: wildly unreasonable, illogical, or inappropriate (Antonym of Plausible). D) Distant: far away in space or time."
+      },
+      {
+        "q_num": 1,
+        "question": "Spot the correct spelling of an alignment of three celestial bodies.",
+        "options": {
+          "a": "Sizygy",
+          "b": "Syzygy",
+          "c": "Syzyjy",
+          "d": "Sysygy"
+        },
+        "answer": "b",
+        "solution": "The correct spelling is 'Syzygy'. Explanation of options: A) 'Sizygy' is an incorrect spelling. B) 'Syzygy' is the correct English word for a straight-line configuration of three celestial bodies in a gravitational system. C) 'Syzyjy' is an incorrect spelling. D) 'Sysygy' is an incorrect spelling."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the INCORRECTLY spelt word.",
+        "options": {
+          "a": "Abhorrent",
+          "b": "Abseil",
+          "c": "Acede",
+          "d": "Abscess"
+        },
+        "answer": "c",
+        "solution": "The incorrectly spelt word is 'Acede'. The correct spelling is 'Accede' (meaning to agree to a demand, request, or treaty). Explanation of options: 1. Abhorrent: Correctly spelt, means inspiring disgust and loathing. 2. Abseil: Correctly spelt, means to descend a rock face using a rope. 3. Acede: Incorrectly spelt, should be 'Accede'. 4. Abscess: Correctly spelt, means a swollen area within body tissue containing an accumulation of pus."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the most appropriate meaning of: Achilles' Heel",
+        "options": {
+          "a": "Irrelevant thing",
+          "b": "Vulnerable point",
+          "c": "Fast runner",
+          "d": "Costly item"
+        },
+        "answer": "b",
+        "solution": "The idiom 'Achilles' Heel' refers to a weakness or a vulnerable point in an otherwise strong entity. Explanation of options: (a) Irrelevant thing refers to something not connected to the matter at hand. (b) Vulnerable point correctly matches the meaning of Achilles' heel. (c) Fast runner is a literal misinterpretation based on the mythological character's speed, not the idiomatic meaning. (d) Costly item refers to something expensive, which is unrelated."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the most appropriate antonym of the given word. Lachrymose",
+        "options": {
+          "a": "Tearful",
+          "b": "Mournful",
+          "c": "Weepy",
+          "d": "Jovial"
+        },
+        "answer": "d",
+        "solution": "Lachrymose means tearful or given to weeping. Therefore, its antonym is something happy or cheerful. Option (a) Tearful is a synonym. Option (b) Mournful means feeling or expressing sorrow, making it a synonym. Option (c) Weepy means tending to cry, another synonym. Option (d) Jovial means cheerful and friendly, which is the correct antonym."
+      },
+      {
+        "q_num": 1,
+        "question": "Choose the correct meaning of idiom: Has two strings to his bow",
+        "options": {
+          "a": "He is indecisive in crucial matters.",
+          "b": "He has two romantic interests simultaneously.",
+          "c": "He has an additional skill or option to rely on.",
+          "d": "He uses deception to achieve goals."
+        },
+        "answer": "c",
+        "solution": "The idiom 'to have two strings to one's bow' means to have more than one way of achieving something, or to have a backup plan or alternative skill if the first one fails. Option (a) describes indecisiveness, which is incorrect. Option (b) is a literal misinterpretation. Option (c) is the correct meaning. Option (d) describes dishonesty, which does not relate to the meaning of this idiom."
+      },
+      {
+        "q_num": 1,
+        "question": "Identify the misspelt word",
+        "options": {
+          "a": "Acquiescence",
+          "b": "Bourgeoisie",
+          "c": "Consciencious",
+          "d": "Epitome"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'Consciencious' because it is misspelled. The correct spelling is 'Conscientious'.\n\nExplanation of options:\n- Acquiescence: Correctly spelled. It means the reluctant acceptance of something without protest.\n- Bourgeoisie: Correctly spelled. It refers to the middle class, typically with reference to its perceived materialistic values.\n- Consciencious: Misspelled. The correct spelling is 'Conscientious', which means wishing to do one's work or duty well and thoroughly.\n- Epitome: Correctly spelled. It means a person or thing that is a perfect example of a particular quality or type."
+      },
+      {
+        "q_num": 1,
+        "question": "Had it not been for her timely intervention, the discussion might well have ____ into an acrimonious stalemate.",
+        "options": {
+          "a": "evolved",
+          "b": "devolved",
+          "c": "emerged",
+          "d": "absorbed"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'devolved'. 'Devolved' means to degenerate or transition into a lower or worse state, which fits the context of a discussion turning into a negative 'acrimonious stalemate'. Explanations of other options: (a) 'Evolved' means to develop gradually, usually into something better or more complex, which contradicts the negative outcome. (c) 'Emerged' means to become apparent or come into view, which does not fit the grammatical structure or context of descending into a state. (d) 'Absorbed' means to take in or soak up, which makes no sense in the context of a discussion changing its nature into a stalemate."
       }
     ]
   },
@@ -252,6 +360,18 @@
         },
         "answer": "b",
         "solution": "In imperative sentences, the reporting verb 'said' is changed to 'told' or 'ordered/requested' etc., and the conjunction 'to' is used to connect the reporting clause to the reported speech. For negative commands, 'not to' is used."
+      },
+      {
+        "q_num": 1,
+        "question": "Select the option that expresses the given sentence in direct speech. I warned Rita not to be late the next day.",
+        "options": {
+          "a": "I warned to Rita, \u201cDon\u2019t be late tomorrow\u201d.",
+          "b": "I warning Rita, \u201cNot be late tomorrow\u201d.",
+          "c": "I warned Rita, \u201cNot be late tomorrow\u201d.",
+          "d": "I warned Rita, \u201cDon\u2019t be late tomorrow\u201d."
+        },
+        "answer": "d",
+        "solution": "The correct direct speech is: 'I warned Rita, \u201cDon\u2019t be late tomorrow\u201d.' Explanation of options: (a) Incorrect because 'warn' is a transitive verb and does not require the preposition 'to' before the direct object 'Rita'. (b) Incorrect because the verb form 'warning' is grammatically incorrect in this context as it lacks an auxiliary verb. (c) Incorrect as it uses an imperative structure 'Not be late' which is not the standard way to express a warning in direct speech compared to 'Don't be'. (d) Correct because it follows the rules of direct speech conversion: the reporting verb 'warned' is followed by the object 'Rita' and the reported speech uses the imperative 'Don't be' correctly with 'tomorrow' as the direct speech equivalent of 'the next day'."
       }
     ]
   },
@@ -404,6 +524,66 @@
         },
         "answer": "c",
         "solution": "The correct answer is 'Alumni occupy'. 'Alumnus' is the singular form of a graduate, while 'Alumni' is the plural form. Since the verb 'occupy' is in the plural form (they occupy), the subject must also be plural. Therefore, 'Alumni occupy' is grammatically correct. Explanation of options: (a) 'Alumnus occupying' is incorrect because it lacks a finite verb to form a complete predicate; (b) 'Alumnus occupies' is incorrect because the singular subject 'alumnus' does not agree with the plural context implied by the sentence structure; (c) 'Alumni occupy' is correct as it matches the plural subject with the plural verb; (d) 'No substitution required' is incorrect because the original sentence has a subject-verb disagreement."
+      },
+      {
+        "q_num": 1,
+        "question": "Improve the sentence by selecting the appropriate tense of the underlined word. She cook dinner when the guests arrived.",
+        "options": {
+          "a": "had cooked",
+          "b": "has cooked",
+          "c": "was cooking",
+          "d": "will have cooked"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'was cooking'. The sentence describes an action that was in progress (past continuous) when another action (past simple 'arrived') occurred. Explanation of options: (a) 'had cooked' is past perfect, used for an action completed before another past action. (b) 'has cooked' is present perfect, which does not fit with the past tense verb 'arrived'. (c) 'was cooking' is the past continuous, which correctly indicates an ongoing action interrupted by the arrival of guests. (d) 'will have cooked' is future perfect, which is grammatically incorrect for a past timeline."
+      },
+      {
+        "q_num": 1,
+        "question": "All member of this / old age home actively / participates in the marathons / conducted by the state.",
+        "options": {
+          "a": "conducted by the state",
+          "b": "All member of this",
+          "c": "participates in the marathons",
+          "d": "old age home actively"
+        },
+        "answer": "b",
+        "solution": "The error is in the segment 'All member of this'. In English, 'All' must be followed by a plural noun. Therefore, 'member' should be replaced with 'members'.\n\n- Option A ('conducted by the state'): This part is grammatically correct as it correctly describes the marathons.\n- Option B ('All member of this'): This is the incorrect part. It should be 'All members of this' to maintain plural agreement.\n- Option C ('participates in the marathons'): This is grammatically correct as it agrees with the subject 'All members' (though in the original sentence, 'participates' matches the singular 'member', the structural error lies in the quantifier noun agreement).\n- Option D ('old age home actively'): This part is grammatically correct in its usage."
+      },
+      {
+        "q_num": 1,
+        "question": "\"Why don't you take a break?\" he said. He recommended that I _________ a break.",
+        "options": {
+          "a": "took",
+          "b": "take",
+          "c": "taking",
+          "d": "to take"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'take'. This is a grammar rule concerning the 'Subjunctive Mood'. After verbs like 'recommend', 'suggest', 'insist', or 'demand', followed by the conjunction 'that', we use the base form of the verb (the infinitive without 'to'). Therefore, 'I take' is grammatically correct. Option A ('took') is incorrect because it uses the past tense. Option C ('taking') is incorrect as it uses the gerund form. Option D ('to take') is incorrect because the subjunctive construction does not use the infinitive with 'to'."
+      },
+      {
+        "q_num": 1,
+        "question": "Only after a decade of fieldwork ____ fully grasp the dialect's nuances.",
+        "options": {
+          "a": "she had",
+          "b": "did she",
+          "c": "had she",
+          "d": "she did"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'did she'. This is an example of 'inversion' in English grammar. When a sentence begins with a negative or restrictive adverbial phrase like 'Only after...', the subject and auxiliary verb must be inverted. Here, 'did' is the auxiliary verb required for the past tense verb 'grasp'. Explanation of options: (a) 'she had' - incorrect because it does not follow the inversion rule required after 'Only after'. (b) 'did she' - correct, follows the inversion rule (Auxiliary + Subject). (c) 'had she' - incorrect because 'had' would require the main verb to be in the past participle form ('grasped'), not 'grasp'. (d) 'she did' - incorrect as it is a standard statement form and lacks the necessary inversion."
+      },
+      {
+        "q_num": 1,
+        "question": "Find the part of the sentence that contains an error: The regulator's decision to postpone the implementation (1)/ was attributed partly to industry pressure (2)/ and partly due to legal ambiguity (3)/ surrounding the recent amendments. (4)",
+        "options": {
+          "a": "(1)",
+          "b": "(2)",
+          "c": "(3)",
+          "d": "(4)"
+        },
+        "answer": "c",
+        "solution": "The error is in part (3). The sentence uses the phrase 'attributed partly to... and partly due to'. The correct construction requires parallelism: 'attributed partly to... and partly to...'. Therefore, 'due to' should be replaced with 'to'. \n\nExplanation of options:\n(1) 'The regulator's decision to postpone the implementation' is grammatically correct.\n(2) 'was attributed partly to industry pressure' is grammatically correct.\n(3) 'and partly due to legal ambiguity' is incorrect because it breaks the parallel structure required by the verb 'attributed', which is followed by the preposition 'to'.\n(4) 'surrounding the recent amendments' is grammatically correct as a participle phrase modifying the noun 'ambiguity'."
       }
     ]
   },

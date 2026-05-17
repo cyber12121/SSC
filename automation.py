@@ -99,7 +99,8 @@ Mathematics
 - Mensuration 2D and 3D
 - Trigonometry (Includes Heights and Distances)
 - Data Interpretation
-- Statistics and Probability
+- Statistics
+- Probability
 
 --------------------
 Reasoning
@@ -122,7 +123,7 @@ Reasoning
 
 ---------------------
 English
-- Vocabulary (Includes Synonyms, Antonyms, One Word, Idioms, Spelling, Homonyms)
+- Vocabulary (Includes Synonyms, Antonyms, One Word,Idioms, Spelling, Homonyms)
 - Error Spotting & Sentence Improvement
 - Active and Passive Voice
 - Direct and Indirect Speech
