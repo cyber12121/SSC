@@ -14,7 +14,7 @@ interface QuizContainerProps {
   isAdmin?: boolean;
 }
 
-type QuestionStatus = 'not-visited' | 'not-answered' | 'answered' | 'marked' | 'answered-marked';
+type QuestionStatus = 'not-visited' | 'correct' | 'wrong' | 'marked' | 'answered-marked';
 
 export const QuizContainer: React.FC<QuizContainerProps> = ({ 
   chapter, 
@@ -120,13 +120,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const getStatus = (idx: number): QuestionStatus => {
     const isAnswered = !!answers[idx];
     const isMarked = markedForReview.has(idx);
-    const isVis = visited.has(idx);
 
     if (isMarked && isAnswered) return 'answered-marked';
     if (isMarked) return 'marked';
-    if (isAnswered) return 'answered';
-    if (isVis) return 'not-answered';
-    return 'not-visited';
+    if (isAnswered) {
+      const isCorrect = answers[idx] === chapter.questions[idx].answer;
+      return isCorrect ? 'correct' : 'wrong';
+    }
+    
+    return 'not-visited'; // Gray for both not visited and skipped
   };
 
   const calculateScore = () => {
@@ -203,11 +205,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const isShowSolution = !!answers[currentIdx]; // Show solution if answered (Instant Solution mode)
 
   const stats = {
-    answered: Object.keys(answers).length,
-    notAnswered: Array.from(visited).filter(idx => !answers[idx] && !markedForReview.has(idx)).length,
-    marked: Array.from(markedForReview).filter(idx => !answers[idx]).length,
-    answeredMarked: Array.from(markedForReview).filter(idx => !!answers[idx]).length,
-    notVisited: totalQuestions - visited.size,
+    correct: Object.keys(answers).filter(idx => answers[parseInt(idx)] === chapter.questions[parseInt(idx)].answer).length,
+    wrong: Object.keys(answers).filter(idx => answers[parseInt(idx)] !== chapter.questions[parseInt(idx)].answer).length,
+    marked: markedForReview.size,
+    notAttempted: totalQuestions - Object.keys(answers).length - markedForReview.size,
   };
 
   return (
@@ -295,29 +296,20 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         {/* Legend */}
         <div className="p-4 grid grid-cols-2 gap-y-3 gap-x-2 border-b border-gray-200 bg-white text-xs font-medium text-gray-700">
           <div className="flex items-center">
-            <span className="w-6 h-6 rounded-tl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-green-500 text-white mr-2 text-[10px]">{stats.answered}</span>
-            Answered
+            <span className="w-6 h-6 rounded-tl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-green-500 text-white mr-2 text-[10px]">{stats.correct}</span>
+            Correct
           </div>
           <div className="flex items-center">
-            <span className="w-6 h-6 rounded-bl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-red-500 text-white mr-2 text-[10px]">{stats.notAnswered}</span>
-            Not Answered
+            <span className="w-6 h-6 rounded-bl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-red-500 text-white mr-2 text-[10px]">{stats.wrong}</span>
+            Wrong
           </div>
           <div className="flex items-center">
-            <span className="w-6 h-6 rounded-md flex items-center justify-center bg-gray-200 text-gray-700 mr-2 text-[10px]">{stats.notVisited}</span>
-            Not Visited
+            <span className="w-6 h-6 rounded-md flex items-center justify-center bg-gray-200 text-gray-700 mr-2 text-[10px]">{stats.notAttempted}</span>
+            Not Attempted
           </div>
           <div className="flex items-center">
             <span className="w-6 h-6 rounded-full flex items-center justify-center bg-purple-600 text-white mr-2 text-[10px]">{stats.marked}</span>
             Marked
-          </div>
-          <div className="flex items-center col-span-2">
-            <span className="w-6 h-6 rounded-full flex items-center justify-center bg-purple-600 text-white mr-2 text-[10px] relative">
-              {stats.answeredMarked}
-              <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full flex items-center justify-center border border-white">
-                <CheckCircle2 className="w-2 h-2 text-white" />
-              </div>
-            </span>
-            Answered & Marked for Review (will be considered for evaluation)
           </div>
         </div>
 
@@ -337,10 +329,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               let bgClass = "bg-gray-200 text-gray-700 hover:bg-gray-300"; // not-visited
               let shapeClass = "rounded-md";
 
-              if (status === 'answered') {
+              if (status === 'correct') {
                 bgClass = "bg-green-500 text-white hover:bg-green-600";
                 shapeClass = "rounded-tl-full rounded-tr-full rounded-br-full";
-              } else if (status === 'not-answered') {
+              } else if (status === 'wrong') {
                 bgClass = "bg-red-500 text-white hover:bg-red-600";
                 shapeClass = "rounded-bl-full rounded-tr-full rounded-br-full";
               } else if (status === 'marked' || status === 'answered-marked') {
