@@ -224,6 +224,37 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
         </div>
 
+        {/* 4 Action Buttons (Moved to Top) */}
+        <div className="flex items-center justify-center space-x-2 py-3 border-b border-gray-200 bg-white">
+          <button 
+            onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)} 
+            disabled={currentIdx === 0}
+            className={`px-5 py-1.5 rounded text-sm font-medium transition-colors ${
+              currentIdx === 0 ? 'bg-blue-400 text-white/70 cursor-not-allowed' : 'bg-[#3366cc] text-white hover:bg-blue-700'
+            }`}
+          >
+            Previous
+          </button>
+          <button 
+            onClick={handleMarkAndNext} 
+            className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Mark for Review
+          </button>
+          <button 
+            onClick={handleSaveAndNext} 
+            className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Save & Next
+          </button>
+          <button 
+            onClick={() => setIsFinished(true)} 
+            className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Submit Test
+          </button>
+        </div>
+
         {/* Scrollable Question Content */}
         <div className="flex-1 overflow-hidden relative">
           <AnimatePresence mode="wait">
@@ -243,33 +274,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </AnimatePresence>
         </div>
 
-        {/* Action Buttons Footer */}
-        <div className="bg-gray-50 border-t border-gray-200 p-4 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={handleMarkAndNext}
-              className="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 font-semibold rounded hover:bg-gray-100 transition-colors shadow-sm text-sm"
-            >
-              Mark for Review & Next
-            </button>
-            <button
-              onClick={handleClearResponse}
-              disabled={!answers[currentIdx]}
-              className={`px-5 py-2.5 bg-white border border-gray-300 text-gray-700 font-semibold rounded transition-colors shadow-sm text-sm ${
-                !answers[currentIdx] ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'
-              }`}
-            >
-              Clear Response
-            </button>
-          </div>
-          <button
-            onClick={handleSaveAndNext}
-            className="px-8 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded shadow-sm text-sm transition-colors flex items-center"
-          >
-            Save & Next
-            <ChevronRight className="w-4 h-4 ml-1" />
-          </button>
-        </div>
       </div>
 
       {/* RIGHT COLUMN: Question Palette */}
@@ -364,15 +368,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
         </div>
 
-        {/* Submit Button */}
-        <div className="p-4 bg-white border-t border-gray-200">
-          <button
-            onClick={() => setIsFinished(true)}
-            className="w-full py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg shadow-sm transition-colors uppercase tracking-wider text-sm"
-          >
-            Submit Test
-          </button>
-        </div>
       </div>
     </div>
   );
