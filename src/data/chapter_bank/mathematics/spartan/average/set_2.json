@@ -1,0 +1,438 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average",
+  "questions": [
+    {
+      "q_num": 19,
+      "question": "The average of 19 numbers is 48. The average of the first 7 numbers is 50.6 and that of the last 13 numbers is 47.6. If the seventh number is excluded, then what is the average of remaining numbers (correct to 1 decimal place)?",
+      "options": {
+        "a": "49.5",
+        "b": "47.3",
+        "c": "39.6",
+        "d": "42.4"
+      },
+      "answer": "b",
+      "solution": "Let the 19 numbers be $x_1, x_2, \\dots, x_{19}$.\nSum of all 19 numbers ($S_{19}$) = $19 \\times 48 = 912$.\nSum of the first 7 numbers ($S_7$) = $7 \\times 50.6 = 354.2$.\nSum of the last 13 numbers ($S_{13}$) = $13 \\times 47.6 = 618.8$.\nSince the 7th number ($x_7$) is common to both groups, we have:\n$S_7 + S_{13} = S_{19} + x_7$\n$354.2 + 618.8 = 912 + x_7 \\Rightarrow 973 = 912 + x_7 \\Rightarrow x_7 = 61$.\nIf the 7th number is excluded, the sum of the remaining 18 numbers is:\n$S_{18} = 912 - 61 = 851$.\nAverage of the remaining 18 numbers = $\\frac{851}{18} \\approx 47.27 \\approx 47.3$."
+    },
+    {
+      "q_num": 20,
+      "question": "The average of 22 numbers is 37.5, the average of the first 12 numbers is 40.6 and that of the last 12 numbers is 35.4. If 11th and 12th numbers are excluded, then what is the average of the remaining numbers?",
+      "options": {
+        "a": "37.8",
+        "b": "36.9",
+        "c": "37.4",
+        "d": "36.4"
+      },
+      "answer": "b",
+      "solution": "Sum of all 22 numbers ($S_{22}$) = $22 \\times 37.5 = 825$.\nSum of the first 12 numbers = $12 \\times 40.6 = 487.2$.\nSum of the last 12 numbers = $12 \\times 35.4 = 424.8$.\nSince the 11th and 12th numbers are included in both groups:\n(Sum of first 12) + (Sum of last 12) = $S_{22} + (x_{11} + x_{12})$\n$487.2 + 424.8 = 825 + (x_{11} + x_{12}) \\Rightarrow 912 = 825 + (x_{11} + x_{12}) \\Rightarrow x_{11} + x_{12} = 87$.\nIf the 11th and 12th numbers are excluded, the sum of the remaining 20 numbers is:\n$S_{20} = 825 - 87 = 738$.\nAverage of the remaining 20 numbers = $\\frac{738}{20} = 36.9$."
+    },
+    {
+      "q_num": 21,
+      "question": "The average of 42 numbers is 37. The average of the first 26 numbers is 32, and the average of the last 17 numbers is 44. The 26th number is:",
+      "options": {
+        "a": "25",
+        "b": "26",
+        "c": "27",
+        "d": "28"
+      },
+      "answer": "b",
+      "solution": "Sum of all 42 numbers ($S_{42}$) = $42 \\times 37 = 1554$.\nSum of the first 26 numbers ($S_{26}$) = $26 \\times 32 = 832$.\nSum of the last 17 numbers ($S_{17}$) = $17 \\times 44 = 748$.\nSince the 26th number is included in both groups ($26 + 17 = 43$ numbers, overlapping at 26):\n$x_{26} = S_{26} + S_{17} - S_{42}$\n$x_{26} = 832 + 748 - 1554 = 1580 - 1554 = 26$."
+    },
+    {
+      "q_num": 22,
+      "question": "The average of 28 numbers is 77. The average of first 14 numbers is 74 and the average of last 15 numbers is 84. If the 14th number is excluded, then what is the average of remaining numbers? (correct to one decimal places)",
+      "options": {
+        "a": "73.1",
+        "b": "74.7",
+        "c": "77",
+        "d": "76.9"
+      },
+      "answer": "b",
+      "solution": "Sum of all 28 numbers ($S_{28}$) = $28 \\times 77 = 2156$.\nSum of the first 14 numbers ($S_{14}$) = $14 \\times 74 = 1036$.\nSum of the last 15 numbers ($S_{15}$) = $15 \\times 84 = 1260$.\nSince the 14th number is counted in both groups:\n$x_{14} = 1036 + 1260 - 2156 = 2296 - 2156 = 140$.\nIf the 14th number is excluded, the sum of the remaining 27 numbers is:\n$S_{27} = 2156 - 140 = 2016$.\nAverage of the remaining 27 numbers = $\\frac{2016}{27} = 74.66... \\approx 74.7$."
+    },
+    {
+      "q_num": 23,
+      "question": "The average of 23 numbers is 51. The average of first 12 number is 49 and the average of last 12 numbers is 54. If the twelfth number is removed, then the average of the remaining numbers (correct to two decimal places) is:",
+      "options": {
+        "a": "51.75",
+        "b": "53.25",
+        "c": "50.45",
+        "d": "52.65"
+      },
+      "answer": "c",
+      "solution": "Sum of all 23 numbers ($S_{23}$) = $23 \\times 51 = 1173$.\nSum of the first 12 numbers ($S_{12,\\text{first}}$) = $12 \\times 49 = 588$.\nSum of the last 12 numbers ($S_{12,\\text{last}}$) = $12 \\times 54 = 648$.\nSince the 12th number is counted twice in both groups:\n$x_{12} = 588 + 648 - 1173 = 1236 - 1173 = 63$.\nIf the 12th number is removed, the sum of the remaining 22 numbers is:\n$S_{22} = 1173 - 63 = 1110$.\nAverage of the remaining 22 numbers = $\\frac{1110}{22} \\approx 50.45$."
+    },
+    {
+      "q_num": 24,
+      "question": "If the average of s numbers is $r^4$ and the average of r numbers is $s^4$, then find the average of all r+s Numbers?",
+      "options": {
+        "a": "rs(r² + s² - rs)",
+        "b": "rs",
+        "c": "r²+s²",
+        "d": "None"
+      },
+      "answer": "a",
+      "solution": "Sum of $s$ numbers = $s \\times r^4 = s r^4$.\nSum of $r$ numbers = $r \\times s^4 = r s^4$.\nTotal sum of all $r+s$ numbers = $s r^4 + r s^4 = r s (r^3 + s^3)$.\nAverage of all $r+s$ numbers = $\\frac{r s (r^3 + s^3)}{r+s} = \\frac{r s (r+s)(r^2 - rs + s^2)}{r+s} = rs(r^2 + s^2 - rs)$."
+    },
+    {
+      "q_num": 25,
+      "question": "Ram, Shyam, Rohan, Reeta and Mukesh are five members of a family who are weighed consecutively and their average weight is calculated after each member is weighed. If the average weight increases by 2 kg each time, how much heavier is Mukesh than Ram?",
+      "options": {
+        "a": "14 kg",
+        "b": "18 kg",
+        "c": "16 kg",
+        "d": "12 kg"
+      },
+      "answer": "c",
+      "solution": "Let the people in consecutive order of weighing be $X_1$ (Ram), $X_2$, $X_3$, $X_4$, $X_5$ (Mukesh).\nLet $A_n$ be the average weight after $n$ members are weighed. We are given $A_n = A_{n-1} + 2$.\n$X_1 = A_1$.\nFor $n \\ge 2$:\n$X_n = n A_n - (n-1) A_{n-1} = n (A_{n-1} + 2) - (n-1) A_{n-1} = A_{n-1} + 2n$.\nUsing $A_{n-1} = A_1 + 2(n-2) = X_1 + 2n - 4$:\n$X_n = (X_1 + 2n - 4) + 2n = X_1 + 4n - 4$.\nFor Mukesh ($n=5$):\n$X_5 = X_1 + 4(5) - 4 = X_1 + 16$.\nThus, Mukesh is 16 kg heavier than Ram."
+    },
+    {
+      "q_num": 26,
+      "question": "The average daily income of Shyamlal during the month of February 2020 was ₹560. The average income for the first 16 days was ₹590 and for the last 16 days it was ₹500. What was his average income for 14th, 15th and 16th February?",
+      "options": {
+        "a": "400",
+        "b": "587",
+        "c": "590",
+        "d": "545"
+      },
+      "answer": "a",
+      "solution": "February 2020 was a leap year, containing 29 days.\nTotal income for 29 days = $29 \\times 560 = 16240$.\nSum of first 16 days (1st to 16th Feb) = $16 \\times 590 = 9440$.\nSum of last 16 days (14th to 29th Feb) = $16 \\times 500 = 8000$.\nSince the sum of these two parts includes 14th, 15th, and 16th Feb twice:\nSum of income for 14th, 15th, and 16th Feb = (Sum of first 16 days) + (Sum of last 16 days) - (Total 29 days income)\n$= 9440 + 8000 - 16240 = 17440 - 16240 = 1200$.\nAverage income for these 3 days = $\\frac{1200}{3} = 400$."
+    },
+    {
+      "q_num": 27,
+      "question": "In a class of 80 students (boys and girls) there are 60% girls. The average weight of the boys is 58 kg and that of the girls is 52 kg. What is the average weight (in kg) of the whole class?",
+      "options": {
+        "a": "55",
+        "b": "53.6",
+        "c": "54.4",
+        "d": "56.2"
+      },
+      "answer": "c",
+      "solution": "The ratio of Girls to Boys in the class = 60% : 40% = 3 : 2.\nAverage weight of the whole class = $\\frac{3 \\times 52 + 2 \\times 58}{3 + 2} = \\frac{156 + 116}{5} = \\frac{272}{5} = 54.4$ kg."
+    },
+    {
+      "q_num": 28,
+      "question": "The average age of 35 persons is 40 years. 5 new persons with an average age of 35 years joined them. The average age of all the persons is:",
+      "options": {
+        "a": "39(5/8) years",
+        "b": "39(1/8) years",
+        "c": "39(7/8) years",
+        "d": "39(3/8) years"
+      },
+      "answer": "d",
+      "solution": "Total age of 35 persons = $35 \\times 40 = 1400$ years.\nTotal age of 5 new persons = $5 \\times 35 = 175$ years.\nTotal sum of ages = $1400 + 175 = 1575$ years.\nTotal number of persons = $35 + 5 = 40$.\nNew average age = $\\frac{1575}{40} = 39.375 = 39 \\frac{3}{8}$ years."
+    },
+    {
+      "q_num": 29,
+      "question": "A batsman in his 13th inning makes a score of 97 runs, thereby increasing his average score by 5. What is his average score after the 13th inning?",
+      "options": {
+        "a": "37",
+        "b": "57",
+        "c": "77",
+        "d": "67"
+      },
+      "answer": "a",
+      "solution": "Let the average score after 12 innings be $A$.\nTotal runs in 12 innings = $12A$.\nIn the 13th inning, he scores 97. Total runs in 13 innings = $12A + 97$.\nWe are given that the new average is $A + 5$:\n$\\frac{12A + 97}{13} = A + 5 \\Rightarrow 12A + 97 = 13A + 65 \\Rightarrow A = 32$.\nAverage score after the 13th inning = $A + 5 = 32 + 5 = 37$."
+    },
+    {
+      "q_num": 30,
+      "question": "The average age of 125 students in a group is 16.2 years. 40% of the students are boys and the rest are girls. The average age of the boys is 20% more than the average age of the girls. What is the average age (in years) of the boys?",
+      "options": {
+        "a": "18.5",
+        "b": "18",
+        "c": "17.5",
+        "d": "17"
+      },
+      "answer": "b",
+      "solution": "The ratio of Boys to Girls = 40% : 60% = 2 : 3.\nLet the average age of girls be $5x$ years. Then the average age of boys is $5x \\times 1.20 = 6x$ years.\nOverall average age = $\\frac{2 \\times 6x + 3 \\times 5x}{2 + 3} = 16.2$\n$\\frac{12x + 15x}{5} = 16.2 \\Rightarrow 27x = 81 \\Rightarrow x = 3$.\nAverage age of the boys = $6x = 6 \\times 3 = 18$ years."
+    },
+    {
+      "q_num": 31,
+      "question": "The average score of 84 students (boys and girls) in a test is 95. The ratio of the numbers of boys to that of girls is 10:11. The average score of the boys is 20% less than that of the girls. What is the average score of the boys in the test?",
+      "options": {
+        "a": "105",
+        "b": "84",
+        "c": "120",
+        "d": "95"
+      },
+      "answer": "b",
+      "solution": "Ratio of boys to girls = 10 : 11.\nLet the average score of girls be $5x$. Then the average score of boys is $5x \\times 0.8 = 4x$.\nOverall average score = $\\frac{10 \\times 4x + 11 \\times 5x}{10 + 11} = 95$\n$\\frac{40x + 55x}{21} = 95 \\Rightarrow 95x = 95 \\times 21 \\Rightarrow x = 21$.\nAverage score of boys = $4x = 4 \\times 21 = 84$."
+    },
+    {
+      "q_num": 32,
+      "question": "The average marks obtained by 150 students in a certain examination is 50. If the average marks of the passed students are 54 and that of the students who failed are 30, then what will be the number of students who failed ?",
+      "options": {
+        "a": "28",
+        "b": "25",
+        "c": "24",
+        "d": "20"
+      },
+      "answer": "b",
+      "solution": "Let the number of failed students be $F$. Then the number of passed students is $150 - F$.\nTotal marks of all students = $150 \\times 50 = 7500$.\nTotal marks equation:\n$54(150 - F) + 30F = 7500$\n$8100 - 54F + 30F = 7500 \\Rightarrow 24F = 600 \\Rightarrow F = 25$."
+    },
+    {
+      "q_num": 33,
+      "question": "In a class of 90 students, 60% of the students are girls and remaining are boys. The average marks of the boys are 63 and that of girls are 70. What are the average marks of the whole class?",
+      "options": {
+        "a": "65.3",
+        "b": "66.7",
+        "c": "67.2",
+        "d": "58.9"
+      },
+      "answer": "c",
+      "solution": "Ratio of Girls to Boys = 60% : 40% = 3 : 2.\nAverage marks of girls = 70, average marks of boys = 63.\nAverage marks of the whole class = $\\frac{3 \\times 70 + 2 \\times 63}{3 + 2} = \\frac{210 + 126}{5} = \\frac{336}{5} = 67.2$."
+    },
+    {
+      "q_num": 34,
+      "question": "The average height of some students in a group is 156 cm. If 5 students of average height 160 cm join the group, then the average height of all the students in the group increases by 0.8 cm. What is the number of students in the group initially?",
+      "options": {
+        "a": "10",
+        "b": "15",
+        "c": "20",
+        "d": "25"
+      },
+      "answer": "c",
+      "solution": "Let initial number of students be $n$.\nTotal initial height = $156n$.\nHeight of 5 new students = $5 \\times 160 = 800$ cm.\nNew total height = $156n + 800$.\nNew average height = $156 + 0.8 = 156.8$ cm.\n$156n + 800 = 156.8(n + 5) \\Rightarrow 156n + 800 = 156.8n + 784 \\Rightarrow 0.8n = 16 \\Rightarrow n = 20$."
+    },
+    {
+      "q_num": 35,
+      "question": "The average weight of a certain number of students in a class is 55.5 kg. If 4 students with average weight 60 kg join the class, then the average weight of all students in the class increases by 360 g. The number of students in the class initially is:",
+      "options": {
+        "a": "46",
+        "b": "31",
+        "c": "41",
+        "d": "36"
+      },
+      "answer": "a",
+      "solution": "Let initial number of students be $n$.\nInitial average = 55.5 kg.\nWeight of 4 new students = $4 \\times 60 = 240$ kg.\nIncrease in average = 360 g = 0.36 kg.\nNew average weight = $55.5 + 0.36 = 55.86$ kg.\n$55.5n + 240 = 55.86(n + 4) \\Rightarrow 55.5n + 240 = 55.86n + 223.44 \\Rightarrow 0.36n = 16.56 \\Rightarrow n = 46$."
+    },
+    {
+      "q_num": 36,
+      "question": "In a cricket team, the average age of 11 players is 22 years. When the age of team coach is included to it, the average age increases by 1. The age of coach of the team is:",
+      "options": {
+        "a": "33 years",
+        "b": "34 years",
+        "c": "43 years",
+        "d": "53 years"
+      },
+      "answer": "b",
+      "solution": "Total age of 11 players = $11 \\times 22 = 242$ years.\nTotal count including coach = 12 people.\nNew average age = $22 + 1 = 23$ years.\nTotal age of 12 people = $12 \\times 23 = 276$ years.\nAge of the coach = $276 - 242 = 34$ years."
+    },
+    {
+      "q_num": 37,
+      "question": "A cricketer has an average of 56 after playing 22 innings. How many runs should he score in the next inning so as the new average is 54?",
+      "options": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "5"
+      },
+      "answer": "b",
+      "solution": "Total runs in 22 innings = $22 \\times 56 = 1232$.\nLet runs required in 23rd inning be $R$.\nNew average is 54:\n$\\frac{1232 + R}{23} = 54 \\Rightarrow 1232 + R = 1242 \\Rightarrow R = 10$."
+    },
+    {
+      "q_num": 38,
+      "question": "24 students collected money for donation. The average contribution was Rs. 50. Later on, their teacher also contributed some money. Now the average contribution is Rs. 56. The teacher’s contribution is:",
+      "options": {
+        "a": "Rs. 56",
+        "b": "Rs. 200",
+        "c": "Rs. 106",
+        "d": "Rs. 194"
+      },
+      "answer": "b",
+      "solution": "Total sum collected by 24 students = $24 \\times 50 = 1200$ Rs.\nIncluding teacher, count is 25 people.\nNew average contribution = 56 Rs.\nTotal sum including teacher = $25 \\times 56 = 1400$ Rs.\nTeacher's contribution = $1400 - 1200 = 200$ Rs."
+    },
+    {
+      "q_num": 39,
+      "question": "Average runs scored by a batsman in his first 89 innings is 45 runs. In the next 6 innings he scored 32, 43, 12, 58, 0 and 30 respectively, then what will be his average runs after 95 innings?",
+      "options": {
+        "a": "44",
+        "b": "46",
+        "c": "45",
+        "d": "44.5"
+      },
+      "answer": "a",
+      "solution": "Total runs in first 89 innings = $89 \\times 45 = 4005$.\nRuns in next 6 innings = $32 + 43 + 12 + 58 + 0 + 30 = 175$.\nTotal runs in 95 innings = $4005 + 175 = 4180$.\nNew average runs = $\\frac{4180}{95} = 44$."
+    },
+    {
+      "q_num": 40,
+      "question": "A batsman has a certain average of runs for 12 innings. In the 13th inning he scores 96 runs thereby increasing his average by 5 runs. What will be his average after 13th inning?",
+      "options": {
+        "a": "28",
+        "b": "32",
+        "c": "36",
+        "d": "42"
+      },
+      "answer": "c",
+      "solution": "Let the average of 12 innings be $A$.\nTotal runs in 12 innings = $12A$.\nIn the 13th inning, total runs = $12A + 96$.\nNew average = $A + 5$:\n$\\frac{12A + 96}{13} = A + 5 \\Rightarrow 12A + 96 = 13A + 65 \\Rightarrow A = 31$.\nAverage after 13th inning = $A + 5 = 31 + 5 = 36$."
+    },
+    {
+      "q_num": 41,
+      "question": "Average weight of luggage of 45 passengers in the flight is 12 kg and 15 new passengers with average weight of their luggage 18 kg boarded the flight, then by what amount the average weight of the luggage is increased in the flight?",
+      "options": {
+        "a": "1.5 kg",
+        "b": "2.5 kg",
+        "c": "1 kg",
+        "d": "2 kg"
+      },
+      "answer": "a",
+      "solution": "Original total weight of luggage = $45 \\times 12 = 540$ kg.\nWeight of 15 new luggage = $15 \\times 18 = 270$ kg.\nTotal weight of luggage = $540 + 270 = 810$ kg.\nTotal passengers = $45 + 15 = 60$.\nNew average weight of luggage = $\\frac{810}{60} = 13.5$ kg.\nIncrease in average weight = $13.5 - 12 = 1.5$ kg."
+    },
+    {
+      "q_num": 42,
+      "question": "In a class, the number of girls is 60% more than the number of boys. Boys have an average weight of 2.6 kg more than girls. If the average weight of all boys and girls is 50 kg, then what is the average weight (in kg) of girls?",
+      "options": {
+        "a": "48.8",
+        "b": "49.2",
+        "c": "49",
+        "d": "48"
+      },
+      "answer": "c",
+      "solution": "Let the number of boys be $5x$. Then number of girls is $5x \\times 1.6 = 8x$.\nRatio of Girls to Boys = 8 : 5.\nLet the average weight of girls be $W$ kg. Then average weight of boys is $W + 2.6$ kg.\nWeighted average weight = $\\frac{8W + 5(W + 2.6)}{13} = 50$\n$8W + 5W + 13 = 650 \\Rightarrow 13W = 637 \\Rightarrow W = 49$ kg."
+    },
+    {
+      "q_num": 43,
+      "question": "If the Average marks of the three batches of 55, 60 and 45 students are 50,55 and 60 respectively, find the average marks of all the students.",
+      "options": {
+        "a": "54.7",
+        "b": "55.8",
+        "c": "54",
+        "d": "54.5"
+      },
+      "answer": "a",
+      "solution": "Total sum of marks of all students = $55 \\times 50 + 60 \\times 55 + 45 \\times 60 = 2750 + 3300 + 2700 = 8750$.\nTotal number of students = $55 + 60 + 45 = 160$.\nAverage marks of all students = $\\frac{8750}{160} \\approx 54.6875 \\approx 54.7$."
+    },
+    {
+      "q_num": 44,
+      "question": "A bowler whose bowling average is 24.85 runs per wicket, takes 5 wickets for 52 runs in next inning and thereby decreases his average by 0.85. Find the number of wickets before last match.",
+      "options": {
+        "a": "80",
+        "b": "85",
+        "c": "72",
+        "d": "68"
+      },
+      "answer": "a",
+      "solution": "Let the number of wickets before the last match be $W$.\nTotal runs before the last match = $24.85W$.\nIn the last match, he takes 5 wickets for 52 runs.\nNew bowling average decreases (improves) by 0.85, so new average = $24.85 - 0.85 = 24.00$:\n$\\frac{24.85W + 52}{W + 5} = 24 \\Rightarrow 24.85W + 52 = 24W + 120 \\Rightarrow 0.85W = 68 \\Rightarrow W = 80$."
+    },
+    {
+      "q_num": 45,
+      "question": "The bowling average of a bowler is 12.4. He took 5 wickets for 26 runs in his last match then his average improves by 0.4. Find the number of wickets before last match.",
+      "options": {
+        "a": "80",
+        "b": "85",
+        "c": "72",
+        "d": "68"
+      },
+      "answer": "b",
+      "solution": "Let the number of wickets before the last match be $W$.\nTotal runs before the last match = $12.4W$.\nIn the last match, he takes 5 wickets for 26 runs.\nAn improvement in bowling average means it decreases by 0.4, so new average = $12.4 - 0.4 = 12.0$:\n$\\frac{12.4W + 26}{W + 5} = 12 \\Rightarrow 12.4W + 26 = 12W + 60 \\Rightarrow 0.4W = 34 \\Rightarrow W = 85$."
+    },
+    {
+      "q_num": 46,
+      "question": "A librarian purchased 60 Story books for his library. But he found that he could get 4 extra books by spending Rs.336 more and then the overall average price per book would be reduced by Rupees 1. Find the previous average price of each book?",
+      "options": {
+        "a": "103",
+        "b": "105",
+        "c": "102",
+        "d": "100"
+      },
+      "answer": "d",
+      "solution": "Let previous average price of each book be $A$.\nTotal cost of 60 books = $60A$.\nWith 4 extra books (total 64 books), the total cost is $60A + 336$.\nNew average price is $A - 1$:\n$\\frac{60A + 336}{64} = A - 1 \\Rightarrow 60A + 336 = 64A - 64 \\Rightarrow 4A = 400 \\Rightarrow A = 100$."
+    },
+    {
+      "q_num": 47,
+      "question": "There are 35 students in a hostel. If the number of students increases by 7, the expenses of the mess increased by Rs. 42 per day while the average expenditure per head diminishes by Rs. 1 (corrected typo in question). Find the original expenditure of the mess.",
+      "options": {
+        "a": "400",
+        "b": "420",
+        "c": "350",
+        "d": "490"
+      },
+      "answer": "b",
+      "solution": "Let the original average expenditure per head be $A$.\nOriginal total daily expenditure = $35A$.\nIf students increase by 7 (total 42 students), total daily expenditure increases by 42, making it $35A + 42$.\nNew average expenditure is $A - 1$:\n$\\frac{35A + 42}{42} = A - 1 \\Rightarrow 35A + 42 = 42A - 42 \\Rightarrow 7A = 84 \\Rightarrow A = 12$.\nOriginal expenditure of the mess = $35 \\times 12 = 420$ Rs."
+    },
+    {
+      "q_num": 48,
+      "question": "There were 40 students in a hostel. If the number increases by 8, the expenses of the mess increase by Rs.48 per day while the average expenditure per head diminishes by Rs.1 (corrected typo in options/values). Find the original expenditure of the mess.",
+      "options": {
+        "a": "200",
+        "b": "220",
+        "c": "240",
+        "d": "480"
+      },
+      "answer": "d",
+      "solution": "Let the original average expenditure per head be $A$.\nOriginal daily expenditure = $40A$.\nIf students increase by 8 (total 48 students), total expenditure is $40A + 48$.\nNew average expenditure per head decreases by 1, so it is $A - 1$:\n$\\frac{40A + 48}{48} = A - 1 \\Rightarrow 40A + 48 = 48A - 48 \\Rightarrow 8A = 96 \\Rightarrow A = 12$.\nOriginal expenditure of the mess = $40 \\times 12 = 480$ Rs."
+    },
+    {
+      "q_num": 49,
+      "question": "11 people went on a lunch together to a hotel. The expenses for 10 of them is 400 each..the expense of 11th person is 100 more than the average of 11 people. what is the expense of the 11th person?",
+      "options": {
+        "a": "510",
+        "b": "490",
+        "c": "410",
+        "d": "500"
+      },
+      "answer": "a",
+      "solution": "Let the average expense of all 11 people be $A$.\nTotal expense = $11A$.\nExpense of 11th person = $A + 100$.\nTotal expense of other 10 people = $10 \\times 400 = 4000$.\n$11A = 4000 + (A + 100) \\Rightarrow 10A = 4100 \\Rightarrow A = 410$.\nExpense of 11th person = $A + 100 = 410 + 100 = 510$."
+    },
+    {
+      "q_num": 50,
+      "question": "10 people went on a lunch together to a hotel. The expenses for 9 of them is 30 each..the expense of 10th person is 72000 more than the average of 10 people. what is the expense of the 10th person?",
+      "options": {
+        "a": "80000",
+        "b": "80030",
+        "c": "78000",
+        "d": "81000"
+      },
+      "answer": "b",
+      "solution": "Let the average expense of all 10 people be $A$.\nTotal expense = $10A$.\nExpense of 10th person = $A + 72000$.\nTotal expense of other 9 people = $9 \\times 30 = 270$.\n$10A = 270 + (A + 72000) \\Rightarrow 9A = 72270 \\Rightarrow A = 8030$.\nExpense of 10th person = $A + 72000 = 8030 + 72000 = 80030$."
+    },
+    {
+      "q_num": 51,
+      "question": "The average weight of some persons in a group is 72 kg. When 5 persons with average weight 66.6 kg join and 13 persons with average weight 75 kg leave the group, the average weight of the person in the group decreases by 1.65 kg. How many persons were there in the group initially?",
+      "options": {
+        "a": "44",
+        "b": "40",
+        "c": "48",
+        "d": "38"
+      },
+      "answer": "c",
+      "solution": "Let the initial number of persons be $n$.\nInitial total weight = $72n$.\nWeight of 5 persons joining = $5 \\times 66.6 = 333$ kg.\nWeight of 13 persons leaving = $13 \\times 75 = 975$ kg.\nNew number of persons = $n + 5 - 13 = n - 8$.\nNew average weight = $72 - 1.65 = 70.35$ kg.\nNew total weight = $72n + 333 - 975 = 72n - 642$.\n$72n - 642 = 70.35(n - 8) \\Rightarrow 72n - 642 = 70.35n - 562.8 \\Rightarrow 1.65n = 79.2 \\Rightarrow n = 48$."
+    },
+    {
+      "q_num": 52,
+      "question": "The average weight of some students in a class was 69.5 kg. When 10 students of average weight 68 kg join the class, and 6 students of average weight 60 kg left the class, it was noted that the average weight of the new group of students increased by 2 kg. How many students are there in the class now?",
+      "options": {
+        "a": "17",
+        "b": "21",
+        "c": "23",
+        "d": "19"
+      },
+      "answer": "b",
+      "solution": "Let the initial number of students be $n$.\nInitial total weight = $69.5n$.\nWeight of 10 students joining = $10 \\times 68 = 680$ kg.\nWeight of 6 students leaving = $6 \\times 60 = 360$ kg.\nNew number of students = $n + 10 - 6 = n + 4$.\nNew average weight = $69.5 + 2 = 71.5$ kg.\nNew total weight = $69.5n + 680 - 360 = 69.5n + 320$.\n$69.5n + 320 = 71.5(n + 4) \\Rightarrow 69.5n + 320 = 71.5n + 286 \\Rightarrow 2n = 34 \\Rightarrow n = 17$.\nNumber of students in the class now = $n + 4 = 17 + 4 = 21$."
+    },
+    {
+      "q_num": 53,
+      "question": "The average weight of some students in a group is 58 kg. If 8 students of average weight 54 kg leave the group, and three students weighing 53.6 kg, 54 kg and 57.4 kg join the group, then the average weight of the remaining students in the group will increase by 575 gm. The number of students, initially, in the group is:",
+      "options": {
+        "a": "40",
+        "b": "45",
+        "c": "35",
+        "d": "50"
+      },
+      "answer": "b",
+      "solution": "Let the initial number of students be $n$.\nInitial total weight = $58n$.\nWeight of 8 students leaving = $8 \\times 54 = 432$ kg.\nWeight of 3 students joining = $53.6 + 54 + 57.4 = 165$ kg.\nNew number of students = $n - 8 + 3 = n - 5$.\nIncrease in average weight = 575 g = 0.575 kg.\nNew average weight = $58 + 0.575 = 58.575$ kg.\nNew total weight = $58n - 432 + 165 = 58n - 267$.\n$58n - 267 = 58.575(n - 5) \\Rightarrow 58n - 267 = 58.575n - 292.875 \\Rightarrow 0.575n = 25.875 \\Rightarrow n = 45$."
+    },
+    {
+      "q_num": 54,
+      "question": "There are some children in a camp and their average weight is 40 kg. If 5 children with average weight 36 kg join the camp or if 5 children with average weight 43.2 kg leave the camp, the average weight of children in both cases is equal. How many children are there in the camp, initially?",
+      "options": {
+        "a": "45",
+        "b": "50",
+        "c": "40",
+        "d": "35"
+      },
+      "answer": "a",
+      "solution": "Let initial number of children be $n$.\nCase 1 (5 children joining with avg weight 36 kg):\nNew average $A_1 = \\frac{40n + 5 \\times 36}{n + 5} = \\frac{40n + 180}{n + 5}$.\nCase 2 (5 children leaving with avg weight 43.2 kg):\nNew average $A_2 = \\frac{40n - 5 \\times 43.2}{n - 5} = \\frac{40n - 216}{n - 5}$.\nSince $A_1 = A_2$:\n$\\frac{40n + 180}{n + 5} = \\frac{40n - 216}{n - 5}$\n$(40n + 180)(n - 5) = (40n - 216)(n + 5)$\n$40n^2 - 200n + 180n - 900 = 40n^2 + 200n - 216n - 1080$\n$-20n - 900 = -16n - 1080 \\Rightarrow 4n = 180 \\Rightarrow n = 45$."
+    }
+  ]
+}

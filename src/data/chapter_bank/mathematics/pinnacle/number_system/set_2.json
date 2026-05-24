@@ -1,0 +1,606 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Number System",
+  "questions": [
+    {
+      "q_num": 51,
+      "question": "If the six digit number 479xyz is\nexactly divisible by 7, 11 and 13, then {(y + z) + x} is equal to:",
+      "options": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "7"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 52,
+      "question": "Which among the following is the\nsmallest ?\n(a) sqrt401 - v399\n(c) sqrt301 - sqrt299\n(b) 101 - sqrt99\n(d) 201 - sqrt199",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 53,
+      "question": "Two positive numbers differ by\n2001. When the larger number is divided\nby the smaller number, the quotient is 9\nand the remainder is 41. The sum of the\ndigits of the larger number is :",
+      "options": {
+        "a": "15",
+        "b": "11",
+        "c": "10",
+        "d": "14"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 54,
+      "question": "When a two - digit number is\nmultiplied by the sum of its digits, the\nproduct is 424. When the number\nobtained by interchanging its digits is\nmultiplied by the sum of the digits, the\nresult is 280. The sum of the digits of the\ngiven number is :",
+      "options": {
+        "a": "6",
+        "b": "9",
+        "c": "8",
+        "d": "7"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 55,
+      "question": "Let x = (633)(277) +\n(266) What is the unit digit of x ?\n(a)7 (b)6 = (c)4s +8",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 56,
+      "question": "The sum of the digits of a two-digit\n1\nnumber is 7 of the number. The unit\ndigit is 4 less than the tens digit. If the\nnumber obtained on reversing its digit is\ndivided by 7, the remainder will be :",
+      "options": {
+        "a": "4",
+        "b": "5",
+        "c": "1",
+        "d": "6"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 57,
+      "question": "A gardener planted 1936 saplings\nin a garden such that there were as many\nrows of saplings as the columns. The\nnumber of rows planted is :\nlargest and smallest numbers of the four\ndigits created using numbers 2, 9, 6, 5 ?\n(Each number can be used only once)",
+      "options": {
+        "a": "6993",
+        "b": "7056",
+        "c": "6606",
+        "d": "7083"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 59,
+      "question": "The square root of which of the\nfollowing is a rational number ?",
+      "options": {
+        "a": "1250.49",
+        "b": "6250.49",
+        "c": "1354.24",
+        "d": "5768.28"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 60,
+      "question": "The value of 22.4 + 11.567 - 33.59 is",
+      "options": {
+        "a": "0.32",
+        "b": "0.412",
+        "c": "0.31",
+        "d": "0.412\n\n========================================================================\n  SSC CGL 2025 TIER - 1 (Q.61 - Q.95)\n========================================================================"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 61,
+      "question": "Arrange the fractions 3/4, 5/6, 4/7 and 5/8 in ascending order.\nSSC CGL 12/09/2025 (Shift 1)",
+      "options": {
+        "a": "4/7 < 5/8 < 3/4 < 5/6",
+        "b": "3/4 < 4/7 < 5/6 < 5/8",
+        "c": "5/6 < 3/4 < 4/7 < 5/8",
+        "d": "4/7 < 3/4 < 5/8 < 5/6"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 62,
+      "question": "Let x = 3 + /5 and y = /8 + 13.\nWhich is greater ?\nSSC CGL 12/09/2025 (Shift 2)",
+      "options": {
+        "a": "x=y",
+        "b": "x>y",
+        "c": "x<y",
+        "d": "Cannot be determined"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 63,
+      "question": "Suppose x = /2 + 3, y= 6 + 1,\nand z = 3/2 + 1, then which of the\nfollowing is true ?\nSSC CGL 13/09/2025 (Shift 1)\n(a)x<y<z (b) z<y<x\n(c)y<x<z (d)x<z<y\n0.64. If (~+ 1.\n-64. Clie Cis Jia^2\n1 1 1\neee ae\nCa To\" oy 3)\nThen find the value of (x + 1) =?\nSSC CGL 13/09/2025 (Shift 2)",
+      "options": {
+        "a": "8",
+        "b": "7",
+        "c": "2",
+        "d": "0"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 65,
+      "question": "If a = /5 -/3, and b = 3 - 2, then\nwhich of the following is true?\nSSC CGL 14/09/2025 (Shift 3)",
+      "options": {
+        "a": "a=b",
+        "b": "a<b",
+        "c": "a>b",
+        "d": "Cannot be determined"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 66,
+      "question": "Which of the following is equal to\n14^2\nSSC CGL 15/09/2025 (Shift 2)\n(a) (11 + 5)? 2/55\n(d) (sqrt8 + 6)? - 2/48",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 67,
+      "question": "Solve system:\ny=4x+2andy=-2x+8\nSSC CGL 15/09/2025 (Shift 2)",
+      "options": {
+        "a": "(1,6)",
+        "b": "(2,5)",
+        "c": "(3,7)",
+        "d": "(0,1)"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 68,
+      "question": "Express 0.232323... as a fraction.\nSSC CGL 15/09/2025 (Shift 2)",
+      "options": {
+        "a": "23/99",
+        "b": "23/999",
+        "c": "23/100",
+        "d": "23/900"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 69,
+      "question": "Multiply 0.48 by 0.7 and express\nthe result as a decimal.\nSSC CGL 17/09/2025 (Shift 3)",
+      "options": {
+        "a": "0.386",
+        "b": "0.336",
+        "c": "0.236",
+        "d": "0.254"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 70,
+      "question": "Identify the incorrect\nrelationship(s) from the list below:\n(i) sqrt5 + o = 7 + 4\n(il) {5 + 6 <7 + sqrt4\n(ii) 5 + 6 > sqrt7 + sqrt4\nSSC CGL 18/09/2025 (Shift 2)",
+      "options": {
+        "a": "(ii",
+        "b": "(i",
+        "c": "(i) and (ii) ~",
+        "d": "(ii) and (iii)"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 71,
+      "question": "Which of the following is correct?\n(i) 11 + /3 > 12 +/2\n(ii) 11 + 3 < 12 ++/2\n(iii) 11 + 3 =-/12 + /2\nSSC CGL 19/09/2025 (Shift 1)\n(a) (i) (b) (ii), () Gil), d), Gi) and (iii)",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 72,
+      "question": "Which of the following is the least\n6-digit number, which is not a perfect\nsquare ?\nSSC CGL 19/09/2025 (Shift 2)",
+      "options": {
+        "a": "100489",
+        "b": "100000",
+        "c": "101124",
+        "d": "100788"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 73,
+      "question": "If you subtract the square of a\nnumber from 2796 and then multiply the\nresult by 13, you get 35711. What is that\nnumber ?\nSSC CGL 19/09/2025 (Shift 3)",
+      "options": {
+        "a": "+8",
+        "b": "+6",
+        "c": "+9",
+        "d": "+7"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 74,
+      "question": "Choose the correct relation:\n(i) 9 <3.1\n(ii) 15 < 17\n(iii) 8 <sqrt11\nSSC CGL 19/09/2025 (Shift 3)",
+      "options": {
+        "a": "(i) only",
+        "b": "(i), (ii) and (iii)",
+        "c": "(ii) and (iii)",
+        "d": "(i) and (ii)"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 75,
+      "question": "What type of number is obtained\nwhen a rational number is added to an\nirrational number ?\nSSC CGL 20/09/2025 (Shift 1)",
+      "options": {
+        "a": "Always Rational",
+        "b": "Always Irrational",
+        "c": "Always Integer",
+        "d": "Sometimes Rational, Sometimes\nIrrational"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 76,
+      "question": "Find the solution to the system:\ny=7x-4and y =-2x + 14.\nSSC CGL 20/09/2025 (Shift 1)",
+      "options": {
+        "a": "(2, 10)",
+        "b": "(17, 2)",
+        "c": "(1.5, 3.5)",
+        "d": "(1.5, -4.5)"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 77,
+      "question": "Which of these is both an Integer\nand a Whole number?\nSSC CGL 20/09/2025 (Shift 2)\n(a)-6 (b)1 ()45 (>",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 78,
+      "question": "Find the value of x in the given equation:\n(sqrt(8+x) + sqrt(8-x) / (sqrt(8+x) - sqrt(8-x) = 5\nSSC CGL 20/09/2025 (Shift 3)",
+      "options": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "9"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 79,
+      "question": "Which of the following numbers is\nan integer but not a natural number ?\nSSC CGL 20/09/2025 (Shift 3)",
+      "options": {
+        "a": "2",
+        "b": "0",
+        "c": "7",
+        "d": "9"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 80,
+      "question": "Which of the following is a perfect\nsquare and an Integer ?\nSSC CGL 21/09/2025 (Shift 1)",
+      "options": {
+        "a": "Square root of 7",
+        "b": "Square root of 16",
+        "c": "4.3",
+        "d": "5.4"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 81,
+      "question": "What is the smallest number that\nmust be added to 5600 to make it a\nperfect square ?\nSSC CGL 21/09/2025 (Shift 1)",
+      "options": {
+        "a": "23",
+        "b": "24",
+        "c": "25",
+        "d": "26"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 82,
+      "question": "Which of the following numbers belongs to the set of Integers but NOT to the set of Whole Numbers?\nSSC CGL 21/09/2025 (Shift 2)",
+      "options": {
+        "a": "0",
+        "b": "1",
+        "c": "-5",
+        "d": "+5"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 83,
+      "question": "Which of these is a number that is\nreal but NOT rational?\nSSC CGL 21/09/2025 (Shift 3)",
+      "options": {
+        "a": ">",
+        "b": "7",
+        "c": "Square root of 5",
+        "d": "-3"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 84,
+      "question": "A water tub can hold 12.5 liters of\nwater. How many such water tubs are\nneeded to fill a 1 cubic meter tank ?\nSSC CGL 22/09/2025 (Shift 1)",
+      "options": {
+        "a": "80",
+        "b": "70",
+        "c": "65",
+        "d": "90"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 85,
+      "question": "The decimal 0.785 is best\nclassified as:\nSSC CGL 22/09/2025 (Shift 2)",
+      "options": {
+        "a": "Whole Number",
+        "b": "Irrational Number",
+        "c": "Integer",
+        "d": "Rational Number"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 86,
+      "question": "Which of the following numbers is both a Rational Number and a Terminating Decimal ?\nSSC CGL 22/09/2025 (Shift 3)",
+      "options": {
+        "a": "1/3",
+        "b": "1/5",
+        "c": "1/7",
+        "d": "1/9"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 87,
+      "question": "A recipe requires 0.85 liters of milk\nfor 15 servings. How many servings can\nbe made with 4.25 liters of milk ?\nSSC CGL 22/09/2025 (Shift 3)",
+      "options": {
+        "a": "78",
+        "b": "70",
+        "c": "72",
+        "d": "75"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 88,
+      "question": "A number is such that if you square\nit and then subtract Fifth time the\nnumber, the result is 150. What is the\nnumber ?\nSSC CGL 22/09/2025 (Shift 3)",
+      "options": {
+        "a": "10",
+        "b": "15",
+        "c": "20",
+        "d": "25"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 89,
+      "question": "The set of integers includes which\nof the following?\nSSC CGL 23/09/2025 (Shift 1)",
+      "options": {
+        "a": "Only Positive Numbers",
+        "b": "Both Positive and Negative Numbers",
+        "c": "Only Whole Numbers",
+        "d": "Only Natural Numbers"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 90,
+      "question": "Which of these numbers is neither\nRational nor Integer ?\nSSC CGL 23/09/2025 (Shift 3)",
+      "options": {
+        "a": "sqrt3",
+        "b": "-5",
+        "c": "O",
+        "d": "4.5"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 91,
+      "question": "Which of the following statements\nis CORRECT about Whole Numbers?\nSSC CGL 24/09/2025 (Shift 2)",
+      "options": {
+        "a": "Whole numbers are the same as\nnatural numbers.",
+        "b": "Whole numbers include all positive\nintegers and zero.",
+        "c": "Whole numbers include both positive\nand negative integers.",
+        "d": "Whole numbers include all fractions\nand decimals."
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 92,
+      "question": "Which set includes numbers like -7,\n4,and0^2\nSSC CGL 25/09/2025 (Shift 1)",
+      "options": {
+        "a": "Natural Numbers",
+        "b": "Whole Numbers",
+        "c": "Irrational Numbers",
+        "d": "Integers"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 93,
+      "question": "Which set does contain non zero\npositive numbers ?\nSSC CGL 25/09/2025 (Shift 3)",
+      "options": {
+        "a": "Integers",
+        "b": "Real Numbers",
+        "c": "Rational Numbers",
+        "d": "Natural Numbers"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 94,
+      "question": "A number is increased by 100, and\nthe result becomes a perfect square. The\noriginal number lies between two\nconsecutive square numbers, 729 and\n784. Find the original number.\nSSC CGL 14/10/2025 (Shift 2)",
+      "options": {
+        "a": "700",
+        "b": "732",
+        "c": "741",
+        "d": "745"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 95,
+      "question": "Which of the following numbers is\nan integer but not a natural number ?\nSSC CGL 14/10/2025 (Shift 3)",
+      "options": {
+        "a": "3",
+        "b": "0",
+        "c": "6",
+        "d": "9\n\n========================================================================\n  SSC SELECTION POST & MATRICULATION LEVEL (Q.96 - Q.123)\n========================================================================"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 96,
+      "question": "Which number set includes all\nrational and irrational numbers?\nMatriculation Level 24/07/2025 (Shift - 1)",
+      "options": {
+        "a": "Natural numbers",
+        "b": "Whole numbers",
+        "c": "Realnumbers =",
+        "d": "Integer numbers\n147"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 97,
+      "question": "What is asa mixed number ?\nMatriculation Level 24/07/2025 (Shift - 1)\n15 17\n(6) (bE\n17 15\n(c) (>>) (d) 75",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 98,
+      "question": "How many natural numbers are\nthere between 13^2 and 15^2 ?\nMatriculation Level 24/07/2025 (Shift - 1)",
+      "options": {
+        "a": "30",
+        "b": "45",
+        "c": "55",
+        "d": "50"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 99,
+      "question": "Simplify the following expression\nand identify its nature:\n(7/5 x (20)\n4\nMatriculation Level 25/07/2025 (Shift - 1)",
+      "options": {
+        "a": "145, irrational number",
+        "b": "35, rational number",
+        "c": "10,/2, irrational number",
+        "d": "28,5, irrational number"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 100,
+      "question": "Irrational numbers are a subset\nof:\nMatriculation Level 25/07/2025 (Shift - 1)",
+      "options": {
+        "a": "Integers",
+        "b": "Whole numbers",
+        "c": "Realnumbers",
+        "d": "Natural numbers"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 101,
+      "question": "The square root of 196 is:\nMatriculation Level 25/07/2025 (Shift - 1)",
+      "options": {
+        "a": "12",
+        "b": "14",
+        "c": "13",
+        "d": "15"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 102,
+      "question": "Which of the following is true?\nMatriculation Level 26/07/2025 (Shift - 1)",
+      "options": {
+        "a": "All natural numbers are integers.",
+        "b": "All irrational numbers are rational.",
+        "c": "All real numbers are integers.",
+        "d": "No integer is rational."
+      },
+      "answer": "a",
+      "solution": ""
+    }
+  ]
+}

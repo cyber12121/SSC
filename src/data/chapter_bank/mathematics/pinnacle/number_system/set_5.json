@@ -1,0 +1,606 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Number System",
+  "questions": [
+    {
+      "q_num": 203,
+      "question": "The sum of two consecutive even\nnumbers is 174. Find the smaller\nnumber.",
+      "options": {
+        "a": "84",
+        "b": "90",
+        "c": "86 =",
+        "d": "88"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 204,
+      "question": "7^5 + 7^3 + 7^2 is divisible by which of the following given numbers?",
+      "options": {
+        "a": "3",
+        "b": "5",
+        "c": "2",
+        "d": "7"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 205,
+      "question": "Find the number when\nsuccessively divided by 3, 5 and 7 leaves\nremainder 2, 1 and 3, respectively, and\nthe last quotient is 3.",
+      "options": {
+        "a": "367",
+        "b": "365",
+        "c": "362",
+        "d": "360"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 206,
+      "question": "How many numbers lie between\n2000 and 2020 that are divisible by 8 ?\n(a)4 (b)3 (C)2 (5",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 207,
+      "question": "On dividing a certain number by\n304, we get 43 as the remainder. If the\nsame number is divided by 16, what will\nbe the remainder?",
+      "options": {
+        "a": "8",
+        "b": "11",
+        "c": "15",
+        "d": "12"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 208,
+      "question": "The sum of the five consecutive\neven numbers is 2720. The sum of the\nthird and fifth numbers is :",
+      "options": {
+        "a": "1392",
+        "b": "1192",
+        "c": "1092",
+        "d": "1292"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 209,
+      "question": "What is the number of digits\nrequired for numbering a book with 428\npages ?",
+      "options": {
+        "a": "1500",
+        "b": "2000",
+        "c": "988",
+        "d": "1176"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 210,
+      "question": "An 8 digit number is divisible by\n99. If the digits are shuffled, then the\nnumber is always divisible by",
+      "options": {
+        "a": "9",
+        "b": "11",
+        "c": "6",
+        "d": "5"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 211,
+      "question": "When a number is divided by 512\nit leaves a remainder 67. If the same\nnumber is divided by 32, then what will\nbe the remainder?",
+      "options": {
+        "a": "5",
+        "b": "0",
+        "c": "4",
+        "d": "3"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 212,
+      "question": "Find the remainder when 179 x 172 x 173 is divided by 17.",
+      "options": {
+        "a": "2",
+        "b": "9",
+        "c": "3",
+        "d": "6"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 213,
+      "question": "A seven-digit number 489y5z6 is\ndivisible by 72. Which of the options\ngives the highest possible product of y\nandz?",
+      "options": {
+        "a": "3",
+        "b": "42",
+        "c": "30.",
+        "d": "21"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 214,
+      "question": "When the integer n is divided by\n18, the quotient is x and the remainder is\n6, When the integer n is divided by 25, the\nquotient is y and the remainder is 15.\nWhich of the following is true?",
+      "options": {
+        "a": "18x - 25y =9",
+        "b": "18x + 25y =9",
+        "c": "25y - 18x = 9",
+        "d": "25y +18x =9"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 215,
+      "question": "Which of the following numbers is\ndivisible by 22 ?\n(a) 654320\n(c) 602351\n(b) 893002\n(d) 645372",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 216,
+      "question": "The number nearest to 7658 and\nexactly divisible by 45 is :",
+      "options": {
+        "a": "7645",
+        "b": "7660",
+        "c": "7640",
+        "d": "7650"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 217,
+      "question": "The sum of two-digit number and\nthe number obtained by interchanging\nthe digit is 77. If the difference of digits\nis 1, then the number is:",
+      "options": {
+        "a": "67",
+        "b": "34",
+        "c": "12",
+        "d": "45"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 218,
+      "question": "Write the smallest digit in the blank space of a number 7__7624, so that the number formed is divisible by 3.",
+      "options": {
+        "a": "2",
+        "b": "1",
+        "c": "3",
+        "d": "0"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 219,
+      "question": "K being any odd number greater\nthan 1, k** -k is always divisible by:",
+      "options": {
+        "a": "5",
+        "b": "13",
+        "c": "24",
+        "d": "15"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 220,
+      "question": "How many numbers between 10\nand 65 are divisible by 2, 3 and 4^2",
+      "options": {
+        "a": "5",
+        "b": "7",
+        "c": "9 =",
+        "d": "3"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 221,
+      "question": "A's marks in Mathematics are\ndirectly proportional to practice time. In 6\nhours of practice, A gets 70 marks. What\nshould be the practice time\n(approximately) to get 90 Marks ?",
+      "options": {
+        "a": "7.7 hours",
+        "b": "7 hours",
+        "c": "8.3 hours",
+        "d": "8 hours"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 222,
+      "question": "A two - digit number is 12 more\nthan five times the sum of its digits. The\nnumber formed by reversing the digits is\n9 less than the original number. The\nnumber is:",
+      "options": {
+        "a": "96",
+        "b": "78",
+        "c": "87",
+        "d": "69"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 223,
+      "question": "When the integer n is divided by 5,\nthe remainder is 3. What is the remainder\nif 6n is divided by 5 ?\n(a)O0 (b)2 (c)3 (1",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 224,
+      "question": "Identify a single-digit number\nother than 1, which may exactly divide\nthe number 17 + 18 - 16% - 15",
+      "options": {
+        "a": "3",
+        "b": "5",
+        "c": "7",
+        "d": "2"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 225,
+      "question": "A natural number n divides 732\nand leaves 12 as a remainder. How many\nvalues of n are possible?\n(a) 20 (b)16 (c)18 (dd) 22",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 226,
+      "question": "The age of a tree depends on the\nnumber of rings in the trunk. The value of\na such tree is proportional to its age. If a\ntree with 40 rings and 50 years of age\nhas a value of 750,000, then a tree with\n30 rings is years of age and its\nvalue is",
+      "options": {
+        "a": "37.5, 57500",
+        "b": "37.5, 37500",
+        "c": "57.5, 37500",
+        "d": "57.5, 57500"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 227,
+      "question": "(8^n + 1) when divided by 7, would\nleave a remainder of:",
+      "options": {
+        "a": "1",
+        "b": "4",
+        "c": "2",
+        "d": "6"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 228,
+      "question": "The sum of the digits of a\ntwo-digit number is 9. If the digits are\nreversed, then the number is increased\nby 27. Find the number.",
+      "options": {
+        "a": "63",
+        "b": "36",
+        "c": "54",
+        "d": "45"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 229,
+      "question": "A number is divisible by 11 if and\nonly if the difference of the sum of the\ndigits in the even and odd positions in\nthe number is:",
+      "options": {
+        "a": "0 or multiple of 11",
+        "b": "11",
+        "c": "0",
+        "d": "1"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 230,
+      "question": "When 27 is divided by 17, the\nremainder would be:\n(a)2 (b)O = (ce) (NS",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 231,
+      "question": "The sum of two numbers is 76.\nThree times the larger number is 46 more\nthan four times the smaller one. Find the\ntwo numbers.\n(a) 44 and 32\n(c) 40 and 36\n(b) 50 and 26\n(d) 35 and 41",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 232,
+      "question": "If the number 6p5157q is divisible\nby 88, then p x q = where p andq\nare single digit numbers.",
+      "options": {
+        "a": "12",
+        "b": "18",
+        "c": "20",
+        "d": "15"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 233,
+      "question": "On dividing a certain number by\n459, we get 19 as remainder. What will\nbe the remainder, when the same number\nis divided by 17 ?",
+      "options": {
+        "a": "11",
+        "b": "1",
+        "c": "13",
+        "d": "2"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 234,
+      "question": "The sum of the digits of a\ntwo-digit number is 9. The number\nobtained by interchanging its digits\nexceeds the given number by 45, then the\noriginal number is :",
+      "options": {
+        "a": "18",
+        "b": "36",
+        "c": "27",
+        "d": "54"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 235,
+      "question": "Divide 25 into two parts such\nthat 6 times of the larger part added to 4\ntimes of the smaller part is equal to 130.\nFind the larger part.",
+      "options": {
+        "a": "13",
+        "b": "20",
+        "c": "15",
+        "d": "14"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 236,
+      "question": "The number 6116116116111 is:\n(A) divisible by both 6 and 11\n(B) neither divisible by 6 nor by 11\n(C) divisible by 6 only\n(D) divisible by 11 only\n(a)(B) (b)(D) (e)(A) (d) (C)",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 237,
+      "question": "Arrange the following ratios in\nascending order.\n3:4,3:5,2:11,7:2",
+      "options": {
+        "a": "3:5<2:11<3:4<7:2",
+        "b": "7:2<3:4<3:5<2:11",
+        "c": "2:11<3:5<3:4<7:2",
+        "d": "3:4<3:5<2:11<7:2"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 238,
+      "question": "18 students of a class took part\nin a quiz. If the number of girls is 8 more\nthan the number of boys, find the product\nof the number of boys and girls.",
+      "options": {
+        "a": "56",
+        "b": "36",
+        "c": "63",
+        "d": "65"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 239,
+      "question": "Which of the following numbers is\ndivisible by 11^2\n(a) 908781\n(c) 701611\n(b) 969331\n(d) 611571",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 240,
+      "question": "The number 10000 is exactly\ndivisible by which of the following\nnumbers ?",
+      "options": {
+        "a": "18",
+        "b": "17",
+        "c": "25",
+        "d": "14"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 241,
+      "question": "If the number 3727x4 is\ncompletely divisible by 8, then the\nsmallest integer in place of x will be",
+      "options": {
+        "a": "6",
+        "b": "8",
+        "c": "2",
+        "d": "0"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 242,
+      "question": "Which of the following is a\ncondition of divisibility of a number by\nsix?",
+      "options": {
+        "a": "Sum of digits is divisible by 6",
+        "b": "Last digit is 3 or 6",
+        "c": "Sum of digits is divisible by 3 and\nlast digit is even",
+        "d": "Sum of digits is divisible by 3 and first\ndigit is even"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 243,
+      "question": "The largest 4 - digit number that\nis exactly divisible by 88 is:",
+      "options": {
+        "a": "9848",
+        "b": "9988",
+        "c": "8888",
+        "d": "9768"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 244,
+      "question": "Find the least value digit which is\nassigned to x so that the number\n1972x471 is divisible by 9.",
+      "options": {
+        "a": "3",
+        "b": "5",
+        "c": "4",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 245,
+      "question": "If a number is divisible by both 11\nand 13, then it must be :",
+      "options": {
+        "a": "divisible by (11 x 13)",
+        "b": "divisible by 42",
+        "c": "divisible by (11 + 13)",
+        "d": "divisible by (13 - 11)"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 246,
+      "question": "If a 9-digit number 937X728Y6 is\ndivisible by 72, then one of the possible\nvalues of X+ Y is:",
+      "options": {
+        "a": "12",
+        "b": "8",
+        "c": "9",
+        "d": "5"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 247,
+      "question": "A number when divided by a\ndivisor leaves a remainder of 24. When\ntwice the original number is divided by\nthe same divisor, the remainder is 13.\nWhat is the value of the divisor ?\n(a)35 (b)37.s (c)25.Ss (d+) 30",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 248,
+      "question": "If (5) is divisible by 4, then the\nremainder is :",
+      "options": {
+        "a": "5",
+        "b": "1",
+        "c": "3",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 249,
+      "question": "How many numbers less than\n1,000 are multiples of both 7 and 11 ?",
+      "options": {
+        "a": "13",
+        "b": "11",
+        "c": "12",
+        "d": "10"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 250,
+      "question": "Which of the following numbers is divisible by 4.\n(i) 67920598 (ii) 618703592\n(iii) 618703594 (iv) 67920590",
+      "options": {
+        "a": "(i)",
+        "b": "(ii)",
+        "c": "(iii)",
+        "d": "(iv)"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 251,
+      "question": "In a division sum, the divisor is 13\ntimes the quotient and 6 times the\nremainder. If the remainder is 39, then\nthe dividend is:",
+      "options": {
+        "a": "4,800",
+        "b": "4,576",
+        "c": "4,251",
+        "d": "4,240"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 252,
+      "question": "Which of the following numbers is\ndivisible by 36 ?",
+      "options": {
+        "a": "1542",
+        "b": "96272",
+        "c": "55512",
+        "d": "8840"
+      },
+      "answer": "c",
+      "solution": ""
+    }
+  ]
+}

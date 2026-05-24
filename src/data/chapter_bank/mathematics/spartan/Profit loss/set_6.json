@@ -1,0 +1,414 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": 157,
+      "question": "Two horses were bought at Rs 1600. First was sold at 10% profit and second at 20% profit. If first were sold at 20% profit and second at 10% profit he would get Rs 5 more. Find the difference between the cost price of both the horses.",
+      "options": {
+        "a": "Rs.50",
+        "b": "Rs. 40",
+        "c": "Rs. 25",
+        "d": "Rs. 75"
+      },
+      "answer": "a",
+      "solution": "Let the cost price of the first horse be $x$ and the second horse be $y$. We are given $x + y = 1600$.\nCase 1 Profit: $0.10x + 0.20y$\nCase 2 Profit: $0.20x + 0.10y$\nThe difference between profits is Rs. 5:\n$(0.20x + 0.10y) - (0.10x + 0.20y) = 5$\n$0.10x - 0.10y = 5$\n$0.10(x - y) = 5 \\implies x - y = 50$.\nThus, the difference between their cost prices is Rs. 50."
+    },
+    {
+      "q_num": 157.1,
+      "question": "A wrist watch and clock were bought at Rs 390. On selling wrist watch at 10% profit and clock at 15% profit a person gains Rs 51.5. Find the difference between cost price of both the watches.",
+      "options": {
+        "a": "110",
+        "b": "115",
+        "c": "120",
+        "d": "130"
+      },
+      "answer": "a",
+      "solution": "Let the cost price of the wrist watch be $W$ and the clock be $C$.\nWe have:\n1) $W + C = 390$\n2) $0.10W + 0.15C = 51.5$\nMultiplying (1) by 0.10 gives:\n$0.10W + 0.10C = 39$\nSubtracting this from (2):\n$0.05C = 12.5 \\implies C = 250$\nSubstitute $C = 250$ in (1):\n$W = 390 - 250 = 140$\nThe difference in cost prices is $|C - W| = 250 - 140 = 110$."
+    },
+    {
+      "q_num": 157.2,
+      "question": "Two horses were bought at Rs 1600. First was sold at 10% profit and second at 20% profit. If first were sold at 20% profit and second at 10% profit he would get Rs 5 more. Find the difference between the cost price of both the horses.",
+      "options": {
+        "a": "Rs.50",
+        "b": "Rs. 40",
+        "c": "Rs. 25",
+        "d": "Rs. 75"
+      },
+      "answer": "a",
+      "solution": "Let the cost price of the first horse be $x$ and the second horse be $y$. We are given $x + y = 1600$.\nCase 1 Profit: $0.10x + 0.20y$\nCase 2 Profit: $0.20x + 0.10y$\nThe difference between profits is Rs. 5:\n$(0.20x + 0.10y) - (0.10x + 0.20y) = 5$\n$0.10x - 0.10y = 5$\n$0.10(x - y) = 5 \\implies x - y = 50$.\nThus, the difference between their cost prices is Rs. 50."
+    },
+    {
+      "q_num": 157.3,
+      "question": "Rahul sells a pen at 5% loss and a book at 15% profit, he gets Rs.7 as a profit. if he sells the pen at 5% profit and the book at 10% profit he gets Rs.6 more. The cost prices of book and pen respectively are ?",
+      "options": {
+        "a": "Rs. 100, Rs. 80",
+        "b": "Rs. 70, Rs. 90",
+        "c": "Rs. 70, Rs. 110",
+        "d": "Rs. 80, Rs. 100"
+      },
+      "answer": "d",
+      "solution": "Let the cost price of the pen be $P$ and the book be $B$.\nCase 1: $-0.05P + 0.15B = 7$\nCase 2: He gets Rs.6 more profit, so the profit is $7 + 6 = 13$.\n$0.05P + 0.10B = 13$\nAdding the two equations:\n$(-0.05P + 0.15B) + (0.05P + 0.10B) = 7 + 13$\n$0.25B = 20 \\implies B = 80$\nSubstitute $B = 80$ into equation (2):\n$0.05P + 0.10(80) = 13 \\implies 0.05P + 8 = 13 \\implies 0.05P = 5 \\implies P = 100$.\nThus, the cost prices of the book and pen respectively are Rs. 80 and Rs. 100."
+    },
+    {
+      "q_num": 157.4,
+      "question": "A farmer sold a cow and a calf for Rs 760 and got a profit of 10% on the cow and 25% on the calf. If he sells the cow and the calf for Rs 767.50 and gets a profit of 25% on the cow and 10% on the calf, find the individual cost price of the cow and the calf.",
+      "options": {
+        "a": "300",
+        "b": "320",
+        "c": "340",
+        "d": "360"
+      },
+      "answer": "a",
+      "solution": "Let $C_1$ be the cost price of the cow and $C_2$ be the cost price of the calf.\nCase 1 (Total selling price = 760): $1.10 C_1 + 1.25 C_2 = 760$\nCase 2 (Total selling price = 767.50): $1.25 C_1 + 1.10 C_2 = 767.50$\nAdding the two equations:\n$2.35 C_1 + 2.35 C_2 = 1527.50 \\implies C_1 + C_2 = 650$\nSubtracting Case 1 from Case 2:\n$0.15 C_1 - 0.15 C_2 = 7.50 \\implies C_1 - C_2 = 50$\nSolving these two simultaneous equations:\n$C_1 = 350$ and $C_2 = 300$.\nThus, the individual cost prices are Rs. 350 and Rs. 300. The value present in the options is 300."
+    },
+    {
+      "q_num": 158,
+      "question": "A person sells his table at a profit of 12½% and the chair at a loss of 8⅓% but on the whole he gains ₹25. On the other hand if he sells the table at a loss of 8⅓% and the chair at a profit of 12½% then he neither gains nor loses. Find the cost price of the table.",
+      "options": {
+        "a": "360",
+        "b": "380",
+        "c": "400",
+        "d": "250"
+      },
+      "answer": "a",
+      "solution": "Let the cost price of the table be $T$ and the chair be $C$.\nNote that $12\\frac{1}{2}\\% = \\frac{1}{8}$ and $8\\frac{1}{3}\\% = \\frac{1}{12}$.\nCase 1: $\\frac{1}{8} T - \\frac{1}{12} C = 25$\nCase 2: $-\\frac{1}{12} T + \\frac{1}{8} C = 0 \\implies C = \\frac{8}{12} T = \\frac{2}{3} T$\nSubstitute $C = \\frac{2}{3} T$ into Case 1:\n$\\frac{1}{8} T - \\frac{1}{12} \\left(\\frac{2}{3} T\\right) = 25$\n$\\frac{1}{8} T - \\frac{1}{18} T = 25$\nUsing a common denominator of 72:\n$\\frac{9 - 4}{72} T = 25 \\implies \\frac{5}{72} T = 25 \\implies T = 360$.\nSo, the cost price of the table is ₹360."
+    },
+    {
+      "q_num": 158.1,
+      "question": "A man bought a cow and a goat. He sold cow at 20% profit and goat at 10% loss and in this way he made neither profit nor loss. Had he sold the cow at 5% loss and goat at 5% profit. He would have earned 600 rupees. Find the cost price of cow and goat.",
+      "options": {
+        "a": "12000, 24000",
+        "b": "12000, 18000",
+        "c": "10000, 20000",
+        "d": "18000, 36000"
+      },
+      "answer": "a",
+      "solution": "Let the cost price of the cow be $C$ and the goat be $G$.\nCase 1: $0.20 C - 0.10 G = 0 \\implies G = 2C$\nCase 2: $-0.05 C + 0.05 G = 600$\nSubstitute $G = 2C$ into the second equation:\n$-0.05 C + 0.05 (2C) = 600 \\implies 0.05 C = 600 \\implies C = 12000$\nThen, $G = 2 \\times 12000 = 24000$.\nThus, the cost price of the cow is 12000 and the goat is 24000."
+    },
+    {
+      "q_num": 159,
+      "question": "A shopkeeper buy two article. He sold one article at a loss of 20% and second article at a profit of 25%. He makes no profit no loss on whole transaction. If he sold first article at 25% profit and second article sold at loss of 20% then he get profit of Rs 180 on whole transaction. Find the cost price of first article.",
+      "options": {
+        "a": "5000",
+        "b": "2000",
+        "c": "3000",
+        "d": "2500"
+      },
+      "answer": "b",
+      "solution": "Let the cost price of the first article be $A$ and the second article be $B$.\nCase 1: $-0.20 A + 0.25 B = 0 \\implies 0.20 A = 0.25 B \\implies B = 0.8A$\nCase 2: $0.25 A - 0.20 B = 180$\nSubstitute $B = 0.8A$:\n$0.25 A - 0.20 (0.8 A) = 180 \\implies 0.25 A - 0.16 A = 180 \\implies 0.09 A = 180 \\implies A = 2000$.\nThus, the cost price of the first article is Rs. 2000."
+    },
+    {
+      "q_num": 160,
+      "question": "Raju buys 75 articles at the same price each. He sells one-third of them at a profit of 40% and 20% of the remaining at a profit of 20%. He sells the remaining articles at a loss equal to the cost price of 7 articles. What is his gain/loss percent in the entire transaction?",
+      "options": {
+        "a": "Loss, 6⅔%",
+        "b": "Gain, 6⅔%",
+        "c": "Gain, 8%",
+        "d": "Loss, 8%"
+      },
+      "answer": "b",
+      "solution": "Let the cost price of each article be Rs 1. Total cost price = Rs 75.\n1. He sells $\\frac{1}{3}$ of them (i.e., 25 articles) at 40% profit:\nProfit on these = $25 \\times 0.40 = 10$.\n2. Remaining articles = $75 - 25 = 50$.\nHe sells 20% of the remaining (i.e., $50 \\times 0.20 = 10$ articles) at 20% profit:\nProfit on these = $10 \\times 0.20 = 2$.\n3. Remaining articles = $40$ articles.\nHe sells them at a loss equal to the cost price of 7 articles (i.e., Rs. 7):\nLoss on these = 7.\nOverall profit/loss = $10 + 2 - 7 = +5$ (profit of Rs. 5).\nGain percentage = $\\frac{5}{75} \\times 100\\% = \\frac{1}{15} \\times 100\\% = 6\\frac{2}{3}\\%$."
+    },
+    {
+      "q_num": 161,
+      "question": "A person bought 20 kg of oranges at 64 kg, 25 kg of oranges at 56 kg and ₹35 kg of oranges at 60 kg. He mixed the three varieties. If he sells the whole lot at 68.75 kg, then his profit percentage is: (correct to the nearest integer)",
+      "options": {
+        "a": "18%",
+        "b": "15%",
+        "c": "12%",
+        "d": "13%"
+      },
+      "answer": "b",
+      "solution": "Total cost price (CP) = $20 \\times 64 + 25 \\times 56 + 35 \\times 60 = 1280 + 1400 + 2100 = 4780$ Rs.\nTotal quantity = $20 + 25 + 35 = 80$ kg.\nTotal selling price (SP) = $80 \\times 68.75 = 5500$ Rs.\nProfit = $5500 - 4780 = 720$ Rs.\nProfit percentage = $\\frac{720}{4780} \\times 100\\% \\approx 15.06\\% \\approx 15\\%$."
+    },
+    {
+      "q_num": 162,
+      "question": "A shopkeeper sells 1 kg of Oranges costing Rs22/kg to Each Anand and Sakshi at Rs25/kg. He sold 950gm to Anand instead of 1 kg and sold X gm to Sakshi instead of 1 kg by using defective weights. If He makes a total profit of Rs.7.76 by selling, then what is the value of X ??",
+      "options": {
+        "a": "980g",
+        "b": "970 g",
+        "c": "960 g",
+        "d": "985g"
+      },
+      "answer": "b",
+      "solution": "Cost price of oranges = Rs 22/kg, Selling price = Rs 25/kg.\nTotal selling price for selling to both Anand and Sakshi = $25 + 25 = 50$ Rs.\nTotal profit = Rs. 7.76, so total cost price (CP) = $50 - 7.76 = 42.24$ Rs.\nTo Anand, he sells 950g. CP for Anand's portion = $0.95 \\times 22 = 20.9$ Rs.\nCP for Sakshi's portion = $42.24 - 20.9 = 21.34$ Rs.\nWeight sold to Sakshi = $X$ grams.\nCP of $X$ grams = $\\frac{X}{1000} \\times 22 = 21.34 \\implies 22X = 21340 \\implies X = 970$ grams."
+    },
+    {
+      "q_num": 162.2,
+      "question": "A shopkeeper sells 1kg of Product A costing Rs30/kg to Each Bunty and Babli at Rs33/kg. He sold X gm to Bunty instead of 1 kg and sold 950 gm to Babli instead of 1 kg by using defective weights. If He makes a total profit of Rs. 9.3 by selling, then what is the value of X ??",
+      "options": {
+        "a": "920",
+        "b": "940",
+        "c": "960",
+        "d": "900"
+      },
+      "answer": "b",
+      "solution": "Cost price of Product A = Rs 30/kg, Selling price = Rs 33/kg.\nTotal selling price = $33 + 33 = 66$ Rs.\nTotal profit = Rs 9.3, so total cost price (CP) = $66 - 9.3 = 56.7$ Rs.\nCP of Babli's portion (950g) = $0.95 \\times 30 = 28.5$ Rs.\nCP of Bunty's portion (X g) = $56.7 - 28.5 = 28.2$ Rs.\nSince CP of Bunty's portion = $\\frac{X}{1000} \\times 30 = 28.2 \\implies 30X = 28200 \\implies X = 940$ grams."
+    },
+    {
+      "q_num": 163,
+      "question": "A shopkeeper sells 1kg of Apple costing Rs30/kg to Each Neel and Nitin at RsX/kg. He sold 850 gm to Neel instead of 1 kg and sold 900 gm to Nitin instead of 1 kg by using defective weights. If He makes a total profit of Rs.27.5 by selling, then find at what value he sold the product.",
+      "options": {
+        "a": "35",
+        "b": "40",
+        "c": "45",
+        "d": "42"
+      },
+      "answer": "b",
+      "solution": "Let the selling price of apple be Rs $S$ per kg.\nRevenue from Neel = Rs $S$, Cost of 850g to Neel = $0.85 \\times 30 = 25.5$ Rs.\nRevenue from Nitin = Rs $S$, Cost of 900g to Nitin = $0.90 \\times 30 = 27$ Rs.\nTotal cost price = $25.5 + 27 = 52.5$ Rs.\nTotal profit = Rs 27.5.\nTotal revenue = $52.5 + 27.5 = 80$ Rs.\nSince total revenue = $2S = 80$, we get $S = 40$ Rs."
+    },
+    {
+      "q_num": 164,
+      "question": "Raghav went to a shopping mall to purchase clothes. He had two coupons with him, but only one can be used on a single day. Using the first coupon, a total discount of 30% could be obtained on the total amount. Using the second coupon, he will get 80% off on the price of the costliest shirt if he buys at least 3 shirts. What is the price at which Raghav can purchase 3 shirts at a minimum price if the prices of the three shirts are Rs.1,250, Rs.1,540 and Rs.1,375?",
+      "options": {
+        "a": "Rs.2,915.50",
+        "b": "Rs.2,933",
+        "c": "Rs.2,760",
+        "d": "Rs.2,775"
+      },
+      "answer": "a",
+      "solution": "Prices of the shirts: 1250, 1540, 1375.\nTotal original price = $1250 + 1540 + 1375 = 4165$ Rs.\nUsing Coupon 1 (30% discount on total amount):\nTotal Price = $4165 \\times 0.70 = 2915.50$ Rs.\nUsing Coupon 2 (80% discount on the costliest shirt, 1540):\nDiscount = $1540 \\times 0.80 = 1232$ Rs.\nTotal Price = $4165 - 1232 = 2933$ Rs.\nSince $\\min(2915.50, 2933) = 2915.50$, the minimum purchase price is Rs. 2,915.50."
+    },
+    {
+      "q_num": 165,
+      "question": "A seller earns 44% profit on an item after giving X% discount on the marked price. Had he offered 2X% discount, he would have gained 28%. How much percent the marked price is more than the cost price?",
+      "options": {
+        "a": "10",
+        "b": "12.5",
+        "c": "25",
+        "d": "NOT"
+      },
+      "answer": "d",
+      "solution": "Let cost price (CP) = 100.\nCase 1 (profit = 44%): SP = 144 $\\implies MP(1 - X/100) = 144$\nCase 2 (profit = 28%): SP = 128 $\\implies MP(1 - 2X/100) = 128$\nDividing the two equations:\n$\\frac{1 - X/100}{1 - 2X/100} = \\frac{144}{128} = \\frac{9}{8}$\n$8 - 8(X/100) = 9 - 18(X/100) \\implies 10(X/100) = 1 \\implies X = 10\\%$.\nSubstitute $X = 10\\%$ in Case 1:\n$MP(0.9) = 144 \\implies MP = 160$.\nSince CP is 100 and MP is 160, the marked price is 60% more than the cost price. Since 60% is not in the options, the answer is 'NOT' (None of these)."
+    },
+    {
+      "q_num": 166,
+      "question": "Two business men A and B buy gift articles for 1000 and 2000 respectively. A marks his article up by x% while b marks his article up by 2x% and after a discount of x%. If both make the same non zero profit. What is the value of x?",
+      "options": {
+        "a": "12.5",
+        "b": "25",
+        "c": "37.5",
+        "d": "50"
+      },
+      "answer": "b",
+      "solution": "Let $u = x/100$.\nProfit of A = $1000 u$\nProfit of B = $2000 [ (1 + 2u)(1 - u) - 1 ] = 2000 (u - 2u^2)$\nSince profits are equal:\n$1000 u = 2000 (u - 2u^2)$\nDividing by $1000 u$ (since $u \\neq 0$):\n$1 = 2 (1 - 2u) \\implies 1 = 2 - 4u \\implies 4u = 1 \\implies u = 0.25$.\nSince $u = 0.25$, $x = 25$."
+    },
+    {
+      "q_num": 167,
+      "question": "Two Businessmen A and B buy gift for Rupees 300 and 500. A markup his gift by 2x% while B markup his gift by 2x% and then discount it by x% then they make the profit in the ratio 3:2. what is the value of x?",
+      "options": {
+        "a": "12.5",
+        "b": "15",
+        "c": "17.5",
+        "d": "10"
+      },
+      "answer": "d",
+      "solution": "Let $u = x/100$.\nProfit of A (marks up by 2x% and sells): $300 \\times 2u = 600u$\nProfit of B (marks up by 2x% and discounts by x%): $500 [ (1 + 2u)(1 - u) - 1 ] = 500 (u - 2u^2)$\nGiven the ratio of profit is 3:2:\n$\\frac{600u}{500(u - 2u^2)} = \\frac{3}{2} \\implies \\frac{6}{5(1 - 2u)} = \\frac{3}{2}$\n$\\frac{2}{5(1 - 2u)} = \\frac{1}{2} \\implies 4 = 5 - 10u \\implies 10u = 1 \\implies u = 0.1 \\implies x = 10$."
+    },
+    {
+      "q_num": 168,
+      "question": "The owner of an art shop conducts his business in the following manner: Every once in a while he raises his prices by X%, then a while later he reduces all the new prices by X%. After one such up-down cycle, the price of a painting decreased by Rs. 400. After a second up-down cycle the painting was decreases by 396.find x ?",
+      "options": {
+        "a": "10",
+        "b": "12.5",
+        "c": "16.66",
+        "d": "25"
+      },
+      "answer": "a",
+      "solution": "Let the original price of the painting be $P_0$. Let the net fraction reduction in one cycle be $d = (X/100)^2$.\nDecrease in price after 1st cycle: $P_0 d = 400$\nPrice after 1st cycle: $P_1 = P_0 (1 - d)$\nDecrease in price after 2nd cycle: $P_1 d = 396 \\implies P_0 (1 - d) d = 396$\nSince $P_0 d = 400$, we have:\n$400(1 - d) = 396 \\implies 1 - d = 0.99 \\implies d = 0.01$.\nSince $d = (X/100)^2 = 0.01 \\implies X/100 = 0.1 \\implies X = 10$."
+    },
+    {
+      "q_num": 169,
+      "question": "At the beginning of a year, the owner of a jewel shop raised the price by x% and reduced by x%. The price of one jewel after this up and down cycle reduced by Rs 100. The owner carried out the same procedure after a month. After this second up down cycle, the price of that jewel was 2304? Find the original price?",
+      "options": {
+        "a": "2000",
+        "b": "2500",
+        "c": "2256.25",
+        "d": "2756.25"
+      },
+      "answer": "b",
+      "solution": "Let $P_0$ be the original price and $d = (x/100)^2$.\nDecrease after 1st cycle: $P_0 d = 100 \\implies d = \\frac{100}{P_0}$\nPrice after 1st cycle: $P_1 = P_0 - 100$\nPrice after 2nd cycle: $P_2 = P_1(1-d) = (P_0 - 100)(1 - \\frac{100}{P_0}) = 2304$\n$(P_0 - 100)\\frac{P_0 - 100}{P_0} = 2304 \\implies (P_0 - 100)^2 = 2304 P_0$\nTesting $P_0 = 2500$:\n$(2500 - 100)^2 = 2400^2 = 5,760,000$\n$2304 \\times 2500 = 5,760,000$\nThis satisfies the equation, so original price is 2500."
+    },
+    {
+      "q_num": 170,
+      "question": "The owner of an art shop conducts his business in the following manner: Every once in a while he raises his prices by X%, then a while later he reduces all the new prices by X%. After one such up-down cycle, the price of a painting decreased by Rs. 100 . After a second up-down cycle the painting was sold for Rs. 441 . What was the original price of the painting?",
+      "options": {
+        "a": "600",
+        "b": "625",
+        "c": "650",
+        "d": "675"
+      },
+      "answer": "b",
+      "solution": "Let $P_0$ be the original price and $d = (X/100)^2$.\nDecrease after 1st cycle: $P_0 d = 100 \\implies d = \\frac{100}{P_0}$\nPrice after 2nd cycle: $P_2 = P_1(1-d) = (P_0 - 100)(1 - \\frac{100}{P_0}) = 441$\n$(P_0 - 100)^2 = 441 P_0$\nTesting $P_0 = 625$:\n$(625 - 100)^2 = 525^2 = 275625$\n$441 \\times 625 = 275625$\nThis is satisfied, so the original price is 625."
+    },
+    {
+      "q_num": 171,
+      "question": "The owner of an art shop conducts his business in the following manner. Every once in a while he raises his prices by X%, then a while later he reduces all the new prices by X%. After one such up-down cycle, the price of a painting decreased by Rs.441. After a second up-down cycle, the painting was sold for Rs.1944.811. What was the original price of the painting (in Rs)?",
+      "options": {
+        "a": "2000",
+        "b": "2500",
+        "c": "2256.25",
+        "d": "2756.25"
+      },
+      "answer": "d",
+      "solution": "Using the same formula: $(P_0 - 441)^2 = 1944.81 P_0$\nTesting $P_0 = 2756.25$:\n$(2756.25 - 441)^2 = 2315.25^2 = 5360381.5625$\n$1944.81 \\times 2756.25 = 5360381.25$\nThis satisfies the equation, so the original price is 2756.25."
+    },
+    {
+      "q_num": 172,
+      "question": "Profit after selling an article for Rs 2729.45 is 28.57% more than the loss incurred when it is sold for Rs 1129.45 ? Find the cost price?",
+      "options": {
+        "a": "1829.45",
+        "b": "1845.45",
+        "c": "1729.45",
+        "d": "2029.45"
+      },
+      "answer": "a",
+      "solution": "Let cost price be $C$.\nProfit $P = 2729.45 - C$, Loss $L = C - 1129.45$.\nGiven $P$ is 28.57% (which is $\\approx \\frac{2}{7}$) more than $L$:\n$P = \\left(1 + \\frac{2}{7}\\right) L = \\frac{9}{7} L$\n$2729.45 - C = \\frac{9}{7}(C - 1129.45)$\n$7(2729.45 - C) = 9(C - 1129.45)$\n$19106.15 - 7C = 9C - 10165.05$\n$16C = 29271.20 \\implies C = 1829.45$."
+    },
+    {
+      "q_num": 173,
+      "question": "By selling an article for ₹390, a shopkeeper suffers some loss. Had he sold it for ₹444, he would have earned a profit equal to one-fifth of the loss he had in the earlier case. If he sells it for ₹522, what will be his profit percentage?",
+      "options": {
+        "a": "20%",
+        "b": "15%",
+        "c": "12.5%",
+        "d": "18.5%"
+      },
+      "answer": "a",
+      "solution": "Let cost price be $C$.\nLoss $L = C - 390$, Profit $P = 444 - C$.\nGiven $P = \\frac{1}{5} L$:\n$444 - C = \\frac{1}{5}(C - 390) \\implies 2220 - 5C = C - 390 \\implies 6C = 2610 \\implies C = 435$.\nIf he sells at 522:\nProfit = $522 - 435 = 87$ Rs.\nProfit percentage = $\\frac{87}{435} \\times 100\\% = 20\\%$. "
+    },
+    {
+      "q_num": 174,
+      "question": "A stationery shop owner makes a profit of 25% by selling a set of books. He then increases the selling price by Rs. 5 and now makes a profit of 45%. The previous selling price of the book set was?",
+      "options": {
+        "a": "A. 32.15",
+        "b": "B. 31.25",
+        "c": "C. 34",
+        "d": "D. 32.25"
+      },
+      "answer": "b",
+      "solution": "Let the cost price be $C$.\nPrevious Selling Price = $1.25C$, New Selling Price = $1.45C$.\nGiven: $1.45C - 1.25C = 5 \\implies 0.20C = 5 \\implies C = 25$ Rs.\nPrevious Selling Price = $1.25 \\times 25 = 31.25$ Rs."
+    },
+    {
+      "q_num": 175,
+      "question": "A book seller sells a book at a profit of 10% if he had bought is at 4% less and sold it for Rs 6 more he would have gain 18¾%. Find the cost price of book?",
+      "options": {
+        "a": "120",
+        "b": "135",
+        "c": "150",
+        "d": "165"
+      },
+      "answer": "c",
+      "solution": "Let the cost price be $C$.\nOriginal SP = $1.10C$.\nNew CP = $0.96C$.\nNew SP = $1.10C + 6$.\nNew gain percentage is $18\\frac{3}{4}\\% = \\frac{75}{400} = \\frac{3}{16}$.\nSo, New SP = New CP $\\times \\left(1 + \\frac{3}{16}\\right) = \\frac{19}{16} \\times 0.96C = 1.14C$.\nThus, $1.10C + 6 = 1.14C \\implies 0.04C = 6 \\implies C = 150$ Rs."
+    },
+    {
+      "q_num": 176,
+      "question": "The marked price of an article is 60% above its cost price and the cost price is ₹750. It is sold for ₹710.40, after giving two successive discounts of 20% and x%. If a single discount of 1.5x% is given on the same marked price, then his loss percentage will be:",
+      "options": {
+        "a": "(a) 3.5%",
+        "b": "(b) 4%",
+        "c": "(c) 3%",
+        "d": "(d) 2.0%"
+      },
+      "answer": "d",
+      "solution": "CP = 750.\nMP = $750 \\times 1.6 = 1200$ Rs.\nDiscount of 20% on MP: $1200 \\times 0.8 = 960$ Rs.\nDiscount of x% on 960: $960 \\times (1 - x/100) = 710.40 \\implies 1 - x/100 = 0.74 \\implies x = 26$.\nIf a single discount of $1.5x\\% = 1.5 \\times 26\\% = 39\\%$ is given on MP:\nSP = $1200 \\times (1 - 0.39) = 1200 \\times 0.61 = 732$ Rs.\nLoss = $750 - 732 = 18$ Rs.\nLoss percentage = $\\frac{18}{750} \\times 100\\% = 2.4\\%$. (Nearest option is 2.0%)"
+    },
+    {
+      "q_num": 15,
+      "question": "The marked price of an article is ₹750. It is sold for ₹634.80, after giving two successive discounts each of x% on the marked price. The cost price of the article is 20% less than its marked price. If the article is sold after giving a single discount of 2x% on the same marked price, then what is the gain percentage?",
+      "options": {
+        "a": "(a) 6%",
+        "b": "(b) 8%",
+        "c": "(c) 5%",
+        "d": "(d) 10%"
+      },
+      "answer": "c",
+      "solution": "MP = 750.\nTwo successive discounts of x% on MP:\n$750(1 - x/100)^2 = 634.80 \\implies (1 - x/100)^2 = \\frac{634.8}{750} = 0.8464$\n$1 - x/100 = 0.92 \\implies x = 8$.\nCP = 20% less than MP = $750 \\times 0.8 = 600$ Rs.\nSingle discount of $2x\\% = 16\\%$ on MP:\nSP = $750 \\times (1 - 0.16) = 750 \\times 0.84 = 630$ Rs.\nGain = $630 - 600 = 30$ Rs.\nGain percentage = $\\frac{30}{600} \\times 100\\% = 5\\%$."
+    },
+    {
+      "q_num": 177,
+      "question": "A shopkeeper allows 16% discount on every item. Even after giving the discount, he makes a profit of 8%. If he gives 8% discount instead of 16% on an item marked for ₹1800, then what will be his profit percent? (correct to 2 decimal places):",
+      "options": {
+        "a": "(a) 19",
+        "b": "(b) 18.31",
+        "c": "(c) 18",
+        "d": "(d) 18.29"
+      },
+      "answer": "d",
+      "solution": "We know $\\frac{MP}{CP} = \\frac{100 + P\\%}{100 - D\\%}$.\nFirst case: $\\frac{MP}{CP} = \\frac{108}{84} = \\frac{9}{7}$.\nSecond case: Discount = 8%, so:\n$\\frac{MP}{CP} = \\frac{100 + P'\\%}{92} \\implies \\frac{9}{7} = \\frac{100 + P'}{92} \\implies 100 + P' = \\frac{828}{7} \\approx 118.29 \\implies P' \\approx 18.29\\%$."
+    },
+    {
+      "q_num": 178,
+      "question": "At item cost Rs. 400. During a festival sale a company after a sale discount that offers x% off on its regular price along with a discount coupon of 10%. The price of the item after using both the sale discount and the discount coupon, is Rs. 216. What is the value of x?",
+      "options": {
+        "a": "(a) 40",
+        "b": "(b) 35",
+        "c": "(c) 30",
+        "d": "(d) 25"
+      },
+      "answer": "a",
+      "solution": "Regular price = 400.\nSelling price = $400 \\times (1 - x/100) \\times 0.9 = 216$\n$360 \\times (1 - x/100) = 216 \\implies 1 - x/100 = 0.60 \\implies x = 40$."
+    },
+    {
+      "q_num": 179,
+      "question": "A ₹1000 box of cookies is offered at 10% discount and a ₹400 bar of chocolate is offered at 8% discount. If we buy 2 boxes of cookies and 3 bars of chocolate. What is the effective discount we get (in%)",
+      "options": {
+        "a": "(a) 9 %",
+        "b": "(b) 9.25%",
+        "c": "(c) 8.75 %",
+        "d": "(d) 8.5 %"
+      },
+      "answer": "b",
+      "solution": "Total Marked Price = $2 \\times 1000 + 3 \\times 400 = 2000 + 1200 = 3200$ Rs.\nTotal Discount = $2000 \\times 0.10 + 1200 \\times 0.08 = 200 + 96 = 296$ Rs.\nEffective Discount Percentage = $\\frac{296}{3200} \\times 100\\% = 9.25\\%$."
+    },
+    {
+      "q_num": 180,
+      "question": "A ₹750 tin of cheese is offered at 8% discount and a ₹1,250 tin of butter at 20% discount. If we buy 5 tins of cheese and 3 tins of butter, what is the effective discount we get (in %)?",
+      "options": {
+        "a": "(a) 12%",
+        "b": "(b) 15%",
+        "c": "(c) 14%",
+        "d": "(d) 16%"
+      },
+      "answer": "c",
+      "solution": "Total Marked Price = $5 \\times 750 + 3 \\times 1250 = 3750 + 3750 = 7500$ Rs.\nTotal Discount = $3750 \\times 0.08 + 3750 \\times 0.20 = 300 + 750 = 1050$ Rs.\nEffective Discount Percentage = $\\frac{1050}{7500} \\times 100\\% = 14\\%$."
+    },
+    {
+      "q_num": 181,
+      "question": "Amit and Bilal buy goods for ₹1,500 and ₹2,000, respectively. Amit marks his goods up by y%, while Bilal marks his goods up by 2y% and offers a discount of y%. If both make the same profit, then find the value of y.",
+      "options": {
+        "a": "(a) 12",
+        "b": "(b) 10.5",
+        "c": "(c) 11.5",
+        "d": "(d) 12.5"
+      },
+      "answer": "d",
+      "solution": "Let $u = y/100$.\nProfit of Amit = $1500 u$\nProfit of Bilal = $2000 [ (1 + 2u)(1 - u) - 1 ] = 2000 (u - 2u^2)$\nSince profits are equal:\n$1500 u = 2000 (u - 2u^2)$\n$1.5 = 2(1 - 2u) \\implies 1.5 = 2 - 4u \\implies 4u = 0.5 \\implies u = 0.125$.\nSince $u = 0.125$, we get $y = 12.5$."
+    },
+    {
+      "q_num": 182,
+      "question": "The marked price of mustard oil is 10% more than its cost price. At what percentage less than the marked price should it be sold, to have no profit and no loss.",
+      "options": {
+        "a": "(a) 9 3/11%",
+        "b": "(b) 9 4/11%",
+        "c": "(c) 9 1/11%",
+        "d": "(d) 9 2/11%"
+      },
+      "answer": "c",
+      "solution": "Let CP = 100.\nMarked Price (MP) = 110.\nTo have no profit and no loss, selling price (SP) must be equal to CP, i.e., 100.\nRequired reduction from MP = $110 - 100 = 10$ Rs.\nPercentage reduction from MP = $\\frac{10}{110} \\times 100\\% = \\frac{100}{11}\\% = 9\\frac{1}{11}\\%$."
+    },
+    {
+      "q_num": 183,
+      "question": "An article was marked at ₹x and sold at a discount of (x–40)%. If the customer paid ₹(x-32), then find the marked price of the article.",
+      "options": {
+        "a": "(a) 50",
+        "b": "(b) 75",
+        "c": "(c) 80",
+        "d": "(d) 60"
+      },
+      "answer": "c",
+      "solution": "Marked Price = $x$ Rs.\nSelling Price = $x \\left(1 - \\frac{x - 40}{100}\\right) = x - 32$\n$x \\left(\\frac{140 - x}{100}\\right) = x - 32$\n$140x - x^2 = 100x - 3200$\n$x^2 - 40x - 3200 = 0$\n$(x - 80)(x + 40) = 0 \\implies x = 80$ (since $x > 0$)."
+    }
+  ]
+}

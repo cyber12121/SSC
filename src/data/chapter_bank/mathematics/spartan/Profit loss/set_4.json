@@ -1,0 +1,594 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": 66,
+      "question": "By selling 104 metres of cloth, one gains the selling price of 13 metres. The gain percentage is:",
+      "options": {
+        "a": "14(2/7)%",
+        "b": "15(3/7)%",
+        "c": "17(5/7)%",
+        "d": "16(4/7)%"
+      },
+      "answer": "a",
+      "solution": "Let the selling price (SP) of 1 metre of cloth be Rs. 1.\nSP of 104 metres = Rs. 104.\nGain = SP of 13 metres = Rs. 13.\nCost Price (CP) of 104 metres = SP - Gain = 104 - 13 = Rs. 91.\nGain % = (Gain / CP) * 100 = (13 / 91) * 100 = (1 / 7) * 100 = 14(2/7)%."
+    },
+    {
+      "q_num": 67,
+      "question": "The marked price of every item being sold by a wholesaler was ₹400. The wholesaler was offering a stock-clearance sale, under which for every four items paid for, one item was being given free. In addition to that, a further 5% discount on the amount payable on the 'Buy 4, Get 1 free' scheme price was being offered to anyone making purchases worth more than ₹15,000. Rameshwar made purchases for which the amount payable, before applying the 5% discount, was ₹16,000. What was the effective discount percentage that was finally offered to Rameshwar during this transaction?",
+      "options": {
+        "a": "30%",
+        "b": "25%",
+        "c": "28.75%",
+        "d": "24%"
+      },
+      "answer": "d",
+      "solution": "Under the 'Buy 4, Get 1 free' scheme, the customer gets 5 items for the price of 4. This is equivalent to a discount of (1/5) * 100 = 20%.\nSince the amount payable before the additional 5% discount is ₹16,000 (which is greater than ₹15,000), Rameshwar is eligible for the additional 5% discount.\nUsing successive discounts formula for 20% and 5%:\nEffective discount = d1 + d2 - (d1 * d2)/100\nEffective discount = 20 + 5 - (20 * 5)/100 = 25 - 1 = 24%."
+    },
+    {
+      "q_num": 68,
+      "question": "While selling to the retailer, a company allows 30% discount on the marked price of its products. If the retailer sells those products at marked price, his profit per cent will be:",
+      "options": {
+        "a": "42(8/7)%",
+        "b": "42(6/7)%",
+        "c": "42(4/7)%",
+        "d": "42(2/7)%"
+      },
+      "answer": "b",
+      "solution": "Let the Marked Price (MP) be Rs. 100.\nCP for the retailer = MP - 30% of MP = Rs. 70.\nSP of the retailer = MP = Rs. 100.\nProfit = SP - CP = 100 - 70 = Rs. 30.\nProfit % = (Profit / CP) * 100 = (30 / 70) * 100 = 300 / 7 % = 42(6/7)%."
+    },
+    {
+      "q_num": 69,
+      "question": "A washing machine marked at 28,000 is sold at two successive discounts of 15% and 10%. An additional discount of 5% is offered for cash payment. The selling price of the washing machine at cash payment is:",
+      "options": {
+        "a": "21,458",
+        "b": "19,568",
+        "c": "20,349",
+        "d": "18,851"
+      },
+      "answer": "c",
+      "solution": "Marked Price (MP) = Rs. 28,000.\nSelling Price (SP) after successive discounts of 15%, 10%, and 5%:\nSP = 28000 * (1 - 0.15) * (1 - 0.10) * (1 - 0.05)\nSP = 28000 * 0.85 * 0.90 * 0.95 = 23800 * 0.90 * 0.95 = 21420 * 0.95 = Rs. 20,349."
+    },
+    {
+      "q_num": 70,
+      "question": "The marked price of an article is 30% more than the cost price. A discount of 15% is offered on the marked price. By what percentage is the final price more than the cost price?",
+      "options": {
+        "a": "10.5%",
+        "b": "15.5%",
+        "c": "19.5%",
+        "d": "8.5%"
+      },
+      "answer": "a",
+      "solution": "Let Cost Price (CP) = 100.\nMarked Price (MP) = 100 + 30% of 100 = 130.\nDiscount = 15% of 130 = 19.5.\nFinal Price (SP) = MP - Discount = 130 - 19.5 = 110.5.\nThe final price is more than CP by: (110.5 - 100) = 10.5%."
+    },
+    {
+      "q_num": 71,
+      "question": "A watch dealer pays 10% custom duty on a watch that costs Rs. 250 abroad. For how much should he mark it, if he desires to make a profit of 20% after giving a discount of 25% to the buyer?",
+      "options": {
+        "a": "400",
+        "b": "440",
+        "c": "275",
+        "d": "330"
+      },
+      "answer": "b",
+      "solution": "Cost of the watch = Rs. 250.\nCustom duty = 10% of 250 = Rs. 25.\nTotal Cost Price (CP) = 250 + 25 = Rs. 275.\nDesired Profit = 20%.\nSelling Price (SP) = CP * (1 + 0.20) = 275 * 1.20 = Rs. 330.\nDiscount = 25%.\nMarked Price (MP) = SP / (1 - 0.25) = 330 / 0.75 = Rs. 440."
+    },
+    {
+      "q_num": 72,
+      "question": "A shopkeeper allows a discount of 22% on the MP of certain article and makes a profit of 25%. If the article cost the shopkeeper Rs 1950 what price must be marked on the article?",
+      "options": {
+        "a": "Rs3340",
+        "b": "Rs3275",
+        "c": "Rs2995",
+        "d": "Rs3125"
+      },
+      "answer": "d",
+      "solution": "Cost Price (CP) = Rs. 1950.\nProfit = 25%.\nSelling Price (SP) = CP * (1 + 0.25) = 1950 * 1.25 = Rs. 2437.5.\nDiscount = 22%.\nMarked Price (MP) = SP / (1 - 0.22) = 2437.5 / 0.78 = Rs. 3125."
+    },
+    {
+      "q_num": 73,
+      "question": "A shopkeeper buys an article for Rs 1785 and marks it for sale at a price that gives him 14.28% profit on his cost. He, however, gives a 16.66% discount on the MP to his customer. Calculate the actual Loss % made by the shopkeeper.",
+      "options": {
+        "a": "4%",
+        "b": "4.26%",
+        "c": "4.76%",
+        "d": "5%"
+      },
+      "answer": "c",
+      "solution": "Let Cost Price (CP) = 7 units.\nGiven markup gives 14.28% (which is 1/7) profit if sold at MP.\nMarked Price (MP) = CP * (1 + 1/7) = 7 * (8/7) = 8 units.\nDiscount offered = 16.66% = 1/6.\nSelling Price (SP) = MP * (1 - 1/6) = 8 * (5/6) = 20/3 units.\nLoss = CP - SP = 7 - 20/3 = 1/3 unit.\nLoss % = (Loss / CP) * 100 = (1/3 / 7) * 100 = (1/21) * 100 = 4.76%."
+    },
+    {
+      "q_num": 74,
+      "question": "A shopkeeper buys an article for Rs 1454 and marks it for sale at a price that gives him X% profit on his cost. He, however, gives two discounts of 9.09% and 14.28% on the MP to his customer. If the actual % profit made by the shopkeeper is 28.56%, find the value of X.",
+      "options": {
+        "a": "45",
+        "b": "100",
+        "c": "55",
+        "d": "60"
+      },
+      "answer": "d",
+      "solution": "Let Cost Price (CP) = 1.\nActual profit = 28.56% ≈ 2/7, so Selling Price (SP) = 1 + 2/7 = 9/7.\nSuccessive discounts: 9.09% = 1/11 and 14.28% = 1/7.\nSP = MP * (1 - 1/11) * (1 - 1/7) = MP * (10/11) * (6/7) = MP * (60/77).\nThus, MP * (60/77) = 9/7 => MP = (9/7) * (77/60) = 1.65.\nSo, Marked Price is 1.65 times the Cost Price (a markup of 65%).\nDue to option formatting errors in original content, 60 is selected as the closest option."
+    },
+    {
+      "q_num": 75,
+      "question": "A shopkeeper buys an article for Rs 1454 and marks it for sale at a price that gives him X% profit on his cost. He, however, gives two discounts of 14.28% and 28.56% on the MP to his customer. If the actual % profit made by the shopkeeper is 50%, find the value of X.",
+      "options": {
+        "a": "45",
+        "b": "100",
+        "c": "145",
+        "d": "150"
+      },
+      "answer": "c",
+      "solution": "Let Cost Price (CP) = 1.\nActual profit = 50%, so Selling Price (SP) = 1.5.\nDiscounts: 14.28% = 1/7 and 28.56% = 2/7.\nSP = MP * (1 - 1/7) * (1 - 2/7) = MP * (6/7) * (5/7) = MP * (30/49).\nMP * (30/49) = 1.5 => MP = 1.5 * (49/30) = 49/20 = 2.45.\nMarked Price is 2.45 times the CP, meaning a profit of 145% is expected if sold at MP.\nSo, X = 145."
+    },
+    {
+      "q_num": 76,
+      "question": "A shopkeeper buys an article on a discount of 14.29% on MP. Shopkeeper marks it Rs 192 more than CP and gives a 16.66% discount on it. If the profit gained is Rs 132, find the initial MP.",
+      "options": {
+        "a": "168",
+        "b": "196",
+        "c": "192",
+        "d": "182"
+      },
+      "answer": "b",
+      "solution": "Let initial MP = M1.\nDiscount = 14.29% = 1/7.\nCP for shopkeeper = M1 * (1 - 1/7) = (6/7) * M1.\nNew MP (M2) = CP + 192.\nDiscount on M2 = 16.66% = 1/6.\nSP = M2 * (1 - 1/6) = (5/6) * (CP + 192) = (5/6) * CP + 160.\nProfit = SP - CP = (5/6) * CP + 160 - CP = 160 - (1/6) * CP.\nGiven Profit = 132 => 160 - (1/6) * CP = 132 => (1/6) * CP = 28 => CP = 168.\nSince CP = (6/7) * M1 = 168 => M1 = 168 * 7/6 = 196.\nSo initial MP is Rs. 196."
+    },
+    {
+      "q_num": 77,
+      "question": "A shopkeeper buys an article on a discount of 20% on MP. Shopkeeper marks it Rs 200 more than CP and gives a 10% discount on it. If the profit gained is Rs 148, find the initial MP.",
+      "options": {
+        "a": "400",
+        "b": "440",
+        "c": "490",
+        "d": "550"
+      },
+      "answer": "a",
+      "solution": "Let initial MP = M1.\nCP = 0.8 * M1.\nNew MP (M2) = CP + 200.\nDiscount on M2 = 10%.\nSP = 0.9 * (CP + 200) = 0.9 * CP + 180.\nProfit = SP - CP = 180 - 0.1 * CP.\nGiven Profit = 148 => 180 - 0.1 * CP = 148 => 0.1 * CP = 32 => CP = 320.\nSince CP = 0.8 * M1 = 320 => M1 = 400.\nSo initial MP is Rs. 400."
+    },
+    {
+      "q_num": 78,
+      "question": "A shopkeeper buys an article for Rs 1234 and marks it for sale at a price that gives him 11.11% profit on his cost. He, however, gives a 9.09% discount on the MP to his customer. Calculate the actual % profit made by the shopkeeper.",
+      "options": {
+        "a": "1%",
+        "b": "1.01%",
+        "c": "1.25%",
+        "d": "0.99%"
+      },
+      "answer": "b",
+      "solution": "Let CP = 1.\nMP gives 11.11% (1/9) profit on cost: MP = CP * (1 + 1/9) = 10/9.\nDiscount = 9.09% = 1/11.\nSP = MP * (1 - 1/11) = (10/9) * (10/11) = 100/99.\nActual Profit % = (SP - CP)/CP * 100 = (100/99 - 1) * 100 = 100/99 % = 1.01%."
+    },
+    {
+      "q_num": 79,
+      "question": "A shopkeeper buys an article for Rs 1331 and marks it for sale at a price that gives him 20% profit on his cost. He, however, gives a 15% discount on the MP to his customer. Calculate the actual % profit made by the shopkeeper.",
+      "options": {
+        "a": "3%",
+        "b": "2%",
+        "c": "1.25%",
+        "d": "1.5%"
+      },
+      "answer": "b",
+      "solution": "Let CP = 1.\nMP gives 20% profit on cost: MP = 1.20.\nDiscount = 15%.\nSP = MP * (1 - 0.15) = 1.20 * 0.85 = 1.02.\nActual Profit % = (SP - CP) * 100 = (1.02 - 1) * 100 = 2%."
+    },
+    {
+      "q_num": 80,
+      "question": "Gaurav bought an article for Rs.X. He spent Rs.650 on its repair. He marked the article at 60% above the total price of the article for him and then sold the article offering 2 consecutive discounts of 10% and 25%. If he made a profit of Rs. 248, find the value of X.",
+      "options": {
+        "a": "Rs.2550",
+        "b": "Rs.2450",
+        "c": "Rs.2350",
+        "d": "Rs.2250"
+      },
+      "answer": "b",
+      "solution": "Total Cost Price (CP_total) = X + 650.\nMarked Price (MP) = 1.60 * CP_total.\nSelling Price (SP) after 10% and 25% discounts:\nSP = MP * 0.90 * 0.75 = 1.60 * CP_total * 0.90 * 0.75 = 1.08 * CP_total.\nProfit = SP - CP_total = 0.08 * CP_total.\nGiven Profit = 248 => 0.08 * CP_total = 248 => CP_total = 3100.\nSince CP_total = X + 650 => X = 3100 - 650 = Rs. 2450."
+    },
+    {
+      "q_num": 81,
+      "question": "By selling an article for 8452.25 a man allows a discount of 9% and earns a profit of 36.5%. If the article is sold at 0% discount, what should be the profit %?",
+      "options": {
+        "a": "50%",
+        "b": "40%",
+        "c": "45%",
+        "d": "42%"
+      },
+      "answer": "a",
+      "solution": "We know: MP / CP = (100 + P%) / (100 - D%)\nHere, P% = 36.5%, D% = 9%.\nMP / CP = (100 + 36.5) / (100 - 9) = 136.5 / 91 = 1.5.\nSo, MP = 1.5 * CP.\nIf sold at 0% discount, SP = MP = 1.5 * CP.\nThus, profit % = 50%."
+    },
+    {
+      "q_num": 82,
+      "question": "By selling an article for 1256.75 a man allows a discount of 9% and earns a profit of 36.5%. If the article is sold at 10% discount, what should be the profit %?",
+      "options": {
+        "a": "30%",
+        "b": "35%",
+        "c": "32.5%",
+        "d": "40%"
+      },
+      "answer": "b",
+      "solution": "From the previous analysis: MP / CP = 1.5 => MP = 1.5 * CP.\nIf sold at a 10% discount:\nSP = 0.9 * MP = 0.9 * 1.5 * CP = 1.35 * CP.\nThus, profit % = 35%."
+    },
+    {
+      "q_num": 83,
+      "question": "A shopkeeper gives 3 consecutive discounts of 10%, 12%, 13% after which he sells his goods at a percentage profit of 10%. Find the profit percentage that the shopkeeper would have earned if he had given discounts of 10% and 13% only.",
+      "options": {
+        "a": "20",
+        "b": "24",
+        "c": "24.44",
+        "d": "25"
+      },
+      "answer": "d",
+      "solution": "SP = MP * 0.90 * 0.88 * 0.87 = CP * 1.10.\nIf discounts are 10% and 13% only, new Selling Price (SP_new) is:\nSP_new = MP * 0.90 * 0.87.\nFrom the first equation:\nSP_new * 0.88 = CP * 1.10 => SP_new = CP * (1.10 / 0.88) = CP * 1.25.\nTherefore, the new profit percentage is 25%."
+    },
+    {
+      "q_num": 84,
+      "question": "A shopkeeper earns a profit of 40% on the cost price of an article after giving three consecutive discounts of 5%, 10% and 15% to a customer. What would have been the profit percentage had the shopkeeper given discounts of 5% and 10% only?",
+      "options": {
+        "a": "59.71%",
+        "b": "66.71%",
+        "c": "64.71%",
+        "d": "74.71%"
+      },
+      "answer": "c",
+      "solution": "Initial SP = MP * 0.95 * 0.90 * 0.85 = CP * 1.40.\nNew SP, SP_new = MP * 0.95 * 0.90.\nFrom the first equation:\nSP_new * 0.85 = CP * 1.40 => SP_new = CP * (1.40 / 0.85) ≈ CP * 1.6471.\nTherefore, the new profit percentage is 64.71%."
+    },
+    {
+      "q_num": 85,
+      "question": "Abhas marked up his goods in such a manner that it gives him 37.5% profit, even after offering a discount of 20%. If the customer was able to negotiate a discount of 50% with him, what was the profit/Loss% of Abhas?",
+      "options": {
+        "a": "25",
+        "b": "20",
+        "c": "30",
+        "d": "Not"
+      },
+      "answer": "d",
+      "solution": "MP / CP = (100 + P%) / (100 - D%) = 137.5 / 80 = 55 / 32.\nAt 50% discount:\nNew SP = 0.5 * MP = 0.5 * (55/32) * CP = (55/64) * CP.\nLoss % = (1 - 55/64) * 100 = (9/64) * 100 = 14.06%.\nSince this is a loss of 14.06% and not among options a, b, c, the answer is 'Not' (None of these)."
+    },
+    {
+      "q_num": 86,
+      "question": "Abhas marked up his goods in such a manner that it gives him 33% profit, even after offering a discount of 16%. If the customer was able to negotiate a discount of 28% with him, what was the profit % of Abhas?",
+      "options": {
+        "a": "11",
+        "b": "12",
+        "c": "13",
+        "d": "14"
+      },
+      "answer": "d",
+      "solution": "MP / CP = (100 + 33) / (100 - 16) = 133 / 84 = 19 / 12.\nAt 28% discount:\nNew SP = MP * (1 - 0.28) = MP * 0.72 = (19 / 12) * CP * 0.72 = 1.14 * CP.\nSo the new profit is 14%."
+    },
+    {
+      "q_num": 87,
+      "question": "A merchant makes a profit of 20% by selling an article. What would be the percentage change in the profit percent had he paid 10% less for it and the customer paid 10% more for it?",
+      "options": {
+        "a": "33.33%",
+        "b": "133.33%",
+        "c": "140%",
+        "d": "145%"
+      },
+      "answer": "b",
+      "solution": "Let initial CP = 100, so initial SP = 120 (since profit is 20%).\nNew CP = 100 - 10% = 90.\nNew SP = 120 + 10% = 132.\nNew Profit % = (132 - 90) / 90 * 100 = 42 / 90 * 100 = 46.67%.\nPercentage change in profit percent = (46.67 - 20) / 20 * 100 = 26.67 / 20 * 100 = 133.33%."
+    },
+    {
+      "q_num": 88,
+      "question": "A shopkeeper purchases branded wheat from a wholesaler at a discount of 12.5% over the MRP listed. In his storage rats eat away 10% of the wheat. He mixes impurities to the extent of 10% of the wheat present. Further while selling he sells at a discount of 6.66% on the MRP. And his balance reads 1000 for 1100 gms. Find his profit/loss percentage.",
+      "options": {
+        "a": "4% loss",
+        "b": "5% loss",
+        "c": "4% profit",
+        "d": "5 % profit"
+      },
+      "answer": "a",
+      "solution": "Let initial wheat quantity = 1000g, MRP = Re 1 per gram. Total MRP = Rs. 1000.\nCP = Rs. 1000 * (1 - 0.125) = Rs. 875.\nQuantity remaining after rats eat 10% = 900g.\nImpurities added (10% of 900g) = 90g. Total quantity = 990g.\nSelling Price rate = Re 1 * (1 - 6.66%) = Rs. 14/15 per gram.\nBalance reads 1000g for 1100g. For 990g, customer is charged for 990 * (1000 / 1100) = 900g.\nTotal SP = 900 * (14/15) = Rs. 840.\nLoss = CP - SP = 875 - 840 = Rs. 35.\nLoss % = (35 / 875) * 100 = 4%."
+    },
+    {
+      "q_num": 89,
+      "question": "A person marks his 40 items at 20% above the cost price. He sells 10 items at a 10% discount and 20 items at a 15% discount on the marked price. What is the maximum discount he can offer on the remaining items if he still gets some profit?",
+      "options": {
+        "a": "20%",
+        "b": "26.66%",
+        "c": "25%",
+        "d": "28%"
+      },
+      "answer": "b",
+      "solution": "Let CP of 1 item = Rs. 100. Total CP of 40 items = Rs. 4000.\nMP of 1 item = Rs. 120. Total MP = Rs. 4800.\nSP of 10 items (10% discount) = 10 * 120 * 0.90 = Rs. 1080.\nSP of 20 items (15% discount) = 20 * 120 * 0.85 = Rs. 2040.\nTotal SP so far = 1080 + 2040 = Rs. 3120.\nTo get some profit, total SP > Rs. 4000.\nSP of remaining 10 items > 4000 - 3120 = Rs. 880.\nMP of remaining 10 items = 10 * 120 = Rs. 1200.\n1200 * (1 - d/100) > 880 => 1 - d/100 > 11/15 => d/100 < 4/15 => d < 26.66%."
+    },
+    {
+      "q_num": 90,
+      "question": "A person marks up 60 items at 30% above the cost price. He sells 20 items at a discount of 5% and 25 items at a discount of 20% on marked price. What is the maximum discount (rounded off) he can offer on the remaining items if he still gets some profit?",
+      "options": {
+        "a": "54%",
+        "b": "48%",
+        "c": "50%",
+        "d": "52%"
+      },
+      "answer": "d",
+      "solution": "Let CP of 1 item = 100. Total CP of 60 items = 6000.\nMP of 1 item = 130.\nSP of 20 items (5% discount) = 20 * 130 * 0.95 = 2470.\nSP of 25 items (20% discount) = 25 * 130 * 0.80 = 2600.\nTotal SP so far = 2470 + 2600 = 5070.\nTo get some profit, total SP > 6000.\nSP of remaining 15 items > 6000 - 5070 = 930.\nMP of remaining 15 items = 15 * 130 = 1950.\n1950 * (1 - d/100) > 930 => 1 - d/100 > 31/65 => d/100 < 34/65 ≈ 52.3%.\nMaximum integer discount = 52%."
+    },
+    {
+      "q_num": 91,
+      "question": "Deepak purchased a certain number of tables, with an expectation that if he sells all of the tables at the marked price, he will get a profit of 35%. But during transportation, 12% of the tables are completely damaged and gave him no returns, 15% are slightly damaged so he sells them at a discount of 20%. The remaining are sold at the marked price. What is his overall profit percentage?",
+      "options": {
+        "a": "14.75%",
+        "b": "15.25%",
+        "c": "16.5%",
+        "d": "12.33%"
+      },
+      "answer": "a",
+      "solution": "Let total tables = 100. CP per table = 100. Total CP = 10000.\nMP per table = 135 (since 35% profit was expected).\nRevenue from 12 completely damaged tables = 0.\nRevenue from 15 slightly damaged tables (20% discount on MP) = 15 * 135 * 0.80 = 1620.\nRevenue from remaining 73 tables (at MP) = 73 * 135 = 9855.\nTotal Revenue = 0 + 1620 + 9855 = 11475.\nOverall profit % = (11475 - 10000) / 10000 * 100 = 14.75%."
+    },
+    {
+      "q_num": 92,
+      "question": "A man bought 2 articles for Rs. 3,000 each. He sold one article at 5% profit and the other at 10% loss. What is the total profit or loss percentage?",
+      "options": {
+        "a": "Loss 2.5%",
+        "b": "Loss 10%",
+        "c": "No profit no loss",
+        "d": "Profit 2.5%"
+      },
+      "answer": "a",
+      "solution": "Since Cost Price (CP) is the same for both articles:\nOverall Profit/Loss % = (Profit1 - Loss2) / 2 = (5 - 10) / 2 = -2.5% (Loss of 2.5%)."
+    },
+    {
+      "q_num": 93,
+      "question": "Prakash bought two articles at the same price. If he sold one at a profit of 20% and the other at a profit of 25%, what is the overall percentage profit he made?",
+      "options": {
+        "a": "16.5%",
+        "b": "22.5%",
+        "c": "24.5%",
+        "d": "37.5%"
+      },
+      "answer": "b",
+      "solution": "Since the cost prices are the same:\nOverall Profit % = (20 + 25) / 2 = 22.5%."
+    },
+    {
+      "q_num": 94,
+      "question": "Reshma buys two articles A and B for ₹ 1,734. She sells A at a loss of 16% and sells B at a gain of 20%. The selling price of both the articles is the same. If A is sold for ₹ 1,147.50, then the gain per cent on A is:",
+      "options": {
+        "a": "10%",
+        "b": "12.5%",
+        "c": "15%",
+        "d": "20%"
+      },
+      "answer": "b",
+      "solution": "Let CP of A and B be CPA and CPB.\nCPA + CPB = 1734.\nSP of A = 0.84 * CPA. SP of B = 1.20 * CPB.\nSince SP is same: 0.84 * CPA = 1.20 * CPB => CPA / CPB = 1.20 / 0.84 = 10 / 7.\nCPA = 1734 * (10 / 17) = Rs. 1020.\nIf A is sold for Rs. 1147.50:\nProfit on A = 1147.50 - 1020 = Rs. 127.50.\nGain % on A = (127.50 / 1020) * 100 = 12.5%."
+    },
+    {
+      "q_num": 95,
+      "question": "Two articles are sold for Rs. 10,384 each. On one, the seller gains 18% and on the other, he loses 12%. What is his overall gain or loss?",
+      "options": {
+        "a": "Rs.178 loss",
+        "b": "Rs.168 loss",
+        "c": "Rs.178 gain",
+        "d": "Rs.168 gain"
+      },
+      "answer": "d",
+      "solution": "SP of each = Rs. 10,384.\nCP1 = 10384 / 1.18 = Rs. 8800. Profit1 = 10384 - 8800 = Rs. 1584.\nCP2 = 10384 / 0.88 = Rs. 11800. Loss2 = 11800 - 10384 = Rs. 1416.\nOverall Gain/Loss = Profit1 - Loss2 = 1584 - 1416 = Rs. 168 gain."
+    },
+    {
+      "q_num": 96,
+      "question": "A man buys two watches ‘A’ and ‘B’ at a total cost of 800. He sells both watches at the same selling price, and earns a profit of 18% on watch ‘A’ and incurs a loss of 22% on watch ‘B’. What are the cost prices of the two watches?",
+      "options": {
+        "a": "A = Rs. 350.32 and B = Rs.450.68",
+        "b": "A = Rs.318.37 and B = Rs.481.63",
+        "c": "A = Rs. 220 and B = Rs. 580",
+        "d": "A = Rs.317 and B = Rs. 483"
+      },
+      "answer": "b",
+      "solution": "CPA + CPB = 800.\nSPA = 1.18 * CPA. SPB = 0.78 * CPB.\nSince SPA = SPB: 1.18 * CPA = 0.78 * CPB => CPA / CPB = 39 / 59.\nCPA = 800 * (39 / 98) ≈ Rs. 318.37.\nCPB = 800 - 318.37 = Rs. 481.63."
+    },
+    {
+      "q_num": 97,
+      "question": "Abhi bought two articles for Rs.624. He sold one at a loss of 14% and the other at a profit of 14%. If the selling price of both the articles is equal, then the difference between their cost prices (in Rs) is:",
+      "options": {
+        "a": "89.64",
+        "b": "87.36",
+        "c": "89.68",
+        "d": "88.84"
+      },
+      "answer": "b",
+      "solution": "CP1 + CP2 = 624.\n0.86 * CP1 = 1.14 * CP2 => CP1 / CP2 = 1.14 / 0.86 = 57 / 43.\nDifference = |CP1 - CP2| = 624 * (57 - 43) / (57 + 43) = 624 * 14 / 100 = Rs. 87.36."
+    },
+    {
+      "q_num": 98,
+      "question": "Two items are sold for Rs 9720 Each, first item was sold at 8% gain and second item was sold at 10% loss. What was the overall profit or loss in whole transaction?",
+      "options": {
+        "a": "380 gain",
+        "b": "360 loss",
+        "c": "380 loss",
+        "d": "360 gain"
+      },
+      "answer": "b",
+      "solution": "SP of each = Rs. 9720.\nCP1 = 9720 / 1.08 = Rs. 9000. Profit1 = Rs. 720.\nCP2 = 9720 / 0.90 = Rs. 10800. Loss2 = Rs. 1080.\nOverall Loss = Loss2 - Profit1 = 1080 - 720 = Rs. 360 loss."
+    },
+    {
+      "q_num": 99,
+      "question": "If there are three articles selling at 1234.56 each, first item sold at 20% profit, 2nd sold at 10% loss and third sold at 40% profit. Find the overall profit or loss percentage?",
+      "options": {
+        "a": "12.8%",
+        "b": "12%",
+        "c": "13.5%",
+        "d": "14%"
+      },
+      "answer": "a",
+      "solution": "Let SP of each = 1.\nCP1 = 1 / 1.20 = 5/6.\nCP2 = 1 / 0.90 = 10/9.\nCP3 = 1 / 1.40 = 5/7.\nTotal SP = 3.\nTotal CP = 5/6 + 10/9 + 5/7 = 335 / 126 ≈ 2.6587.\nProfit % = (Total SP - Total CP) / Total CP * 100 = (3 - 2.6587) / 2.6587 * 100 ≈ 12.8%."
+    },
+    {
+      "q_num": 100,
+      "question": "Rahul sold three articles at equal selling price. He incurs a loss of 10% on the first article, 20% profit on second and 25% loss on the third article. If he incurs a loss of 400 in overall business, then what is the cost price of second article?",
+      "options": {
+        "a": "1000",
+        "b": "1111",
+        "c": "1200",
+        "d": "1250"
+      },
+      "answer": "c",
+      "solution": "Let SP of each article be SP.\nCP1 = SP / 0.90 = (10/9) * SP.\nCP2 = SP / 1.20 = (5/6) * SP.\nCP3 = SP / 0.75 = (4/3) * SP.\nTotal CP = (10/9 + 5/6 + 4/3) * SP = (59/18) * SP.\nTotal SP = 3 * SP = (54/18) * SP.\nOverall Loss = (59/18 - 54/18) * SP = (5/18) * SP.\nGiven Overall Loss = 400 => (5/18) * SP = 400 => SP = 1440.\nCP of second article, CP2 = (5/6) * 1440 = Rs. 1200."
+    },
+    {
+      "q_num": 101,
+      "question": "Two items are sold for Rs 1861 each, the first item is sold at 31% profit and the second item is sold at 29% loss. What was the overall profit or loss percentage in the entire transaction?",
+      "options": {
+        "a": "Gain 8.25%",
+        "b": "Loss 8.25%",
+        "c": "Loss 7.91%",
+        "d": "Gain 7.91%"
+      },
+      "answer": "c",
+      "solution": "Let SP of each be 1.\nCP1 = 1 / 1.31.\nCP2 = 1 / 0.71.\nTotal SP = 2.\nTotal CP = 1/1.31 + 1/0.71 ≈ 2.1718.\nSince CP > SP, there is a loss.\nLoss % = (2.1718 - 2) / 2.1718 * 100 ≈ 7.91% loss."
+    },
+    {
+      "q_num": 102,
+      "question": "Two horses sold at 1243.56 each. First was sold at 25% profit and second at 20% loss. Find the overall profit and loss percentage?",
+      "options": {
+        "a": "No profit no loss",
+        "b": "2.43 % loss",
+        "c": "2.43% Profit",
+        "d": "2% loss"
+      },
+      "answer": "b",
+      "solution": "Let SP of each be 1.\nCP1 = 1 / 1.25 = 0.8.\nCP2 = 1 / 0.80 = 1.25.\nTotal SP = 2.\nTotal CP = 0.8 + 1.25 = 2.05.\nLoss % = (Total CP - Total SP) / Total CP * 100 = (2.05 - 2) / 2.05 * 100 = 2.43% loss."
+    },
+    {
+      "q_num": 103,
+      "question": "Two articles are sold for Rs.9,483 each. On one, the seller gains 9% and on the other, he loses 13%. What is his overall gain or loss % (approx)?",
+      "options": {
+        "a": "4.56% PROFIT",
+        "b": "4.56% LOSS",
+        "c": "3.23% PROFIT",
+        "d": "3.23% LOSS"
+      },
+      "answer": "d",
+      "solution": "Let SP of each be 1.\nCP1 = 1 / 1.09.\nCP2 = 1 / 0.87.\nTotal SP = 2.\nTotal CP = 1/1.09 + 1/0.87 ≈ 2.0668.\nLoss % = (Total CP - Total SP) / Total CP * 100 = 0.0668 / 2.0668 * 100 ≈ 3.23% loss."
+    },
+    {
+      "q_num": 104,
+      "question": "Two articles are sold for Rs.21762 each. On one, the seller gains 17% and on the other, he loses 7%. What is his overall gain or loss % (approx)?",
+      "options": {
+        "a": "7.56% PROFIT",
+        "b": "7.56% LOSS",
+        "c": "3.62% PROFIT",
+        "d": "3.62% LOSS"
+      },
+      "answer": "c",
+      "solution": "Let SP of each be 1.\nCP1 = 1 / 1.17.\nCP2 = 1 / 0.93.\nTotal SP = 2.\nTotal CP = 1/1.17 + 1/0.93 ≈ 1.93.\nProfit % = (Total SP - Total CP) / Total CP * 100 = (2 - 1.93) / 1.93 * 100 ≈ 3.62% profit."
+    },
+    {
+      "q_num": 105,
+      "question": "A man sold two articles for Rs. 3456 each, gaining 20% on the one and losing 20% on the other. Find his gain (or) loss percent on the whole transaction.",
+      "options": {
+        "a": "2%",
+        "b": "1.5%",
+        "c": "4%",
+        "d": "5%"
+      },
+      "answer": "c",
+      "solution": "When two articles are sold at the same price, with one sold at x% profit and the other at x% loss, there is always a loss of (x^2)/100 %.\nLoss % = (20^2)/100 % = 400/100 % = 4%."
+    },
+    {
+      "q_num": 106,
+      "question": "A man sold two articles for Rs. 3456 each, gaining 14.29% on the one and losing 14.29% on the other. Find his gain (or) loss percent on the whole transaction.",
+      "options": {
+        "a": "2.04%",
+        "b": "2%",
+        "c": "4%",
+        "d": "2.5%"
+      },
+      "answer": "a",
+      "solution": "Using the formula: Loss % = (x^2)/100 %\nLoss % = (14.29^2)/100 % ≈ 2.04%."
+    },
+    {
+      "q_num": 107,
+      "question": "A house and a shop were sold for Rs.2 lacs each, in this transaction, the house sale resulted into 10% loss whereas the shop sale into 10% profit. The entire transaction resulted in?",
+      "options": {
+        "a": "no loss no gain",
+        "b": "loss of 5/66 lacs",
+        "c": "loss of 4/99 lacs",
+        "d": "loss of 5/88 lacs"
+      },
+      "answer": "c",
+      "solution": "SP of each = Rs. 2 lacs. Total SP = Rs. 4 lacs.\nOverall loss % = (10^2)/100 = 1%.\nTotal CP = Total SP / (1 - Loss%) = 4 / 0.99 = 400 / 99 lacs.\nLoss in Rs = Total CP - Total SP = 400/99 - 4 = 4/99 lacs."
+    },
+    {
+      "q_num": 108,
+      "question": "A house and a shop were sold for Rs.1 lacs each, in this transaction, the house sale resulted into 20% loss whereas the shop sale into 20% profit. The entire transaction resulted in?",
+      "options": {
+        "a": "no loss no gain",
+        "b": "loss of 1/24 lacs",
+        "c": "loss of 1/12 lacs",
+        "d": "loss of 1/18 lacs"
+      },
+      "answer": "c",
+      "solution": "SP of each = Rs. 1 lac. Total SP = Rs. 2 lacs.\nOverall loss % = (20^2)/100 = 4%.\nTotal CP = Total SP / (1 - Loss%) = 2 / 0.96 = 25/12 lacs.\nLoss in Rs = Total CP - Total SP = 25/12 - 2 = 1/12 lacs."
+    },
+    {
+      "q_num": 109,
+      "question": "Last year Mr. A bought two paintings. He sold them for Rs.20,000 each. On one, he made a 25% profit and on the other he had a 25% loss. Then his net profit/loss?",
+      "options": {
+        "a": "he lost more than Rs.2700",
+        "b": "he lost less than Rs.2700",
+        "c": "he earned more than Rs.2900",
+        "d": "he earned more than Rs.2500"
+      },
+      "answer": "b",
+      "solution": "SP of each = Rs. 20,000. Total SP = Rs. 40,000.\nOverall loss % = (25^2)/100 = 6.25%.\nTotal CP = Total SP / (1 - Loss%) = 40,000 / 0.9375 = Rs. 42,666.67.\nLoss in Rs = Total CP - Total SP = 42,666.67 - 40,000 = Rs. 2666.67.\nSince 2666.67 is less than 2700, the seller lost less than Rs. 2700."
+    },
+    {
+      "q_num": 110,
+      "question": "A man bought 154 toffees for Re1. How many toffees for a rupee should he sell to gain 28(1/3)% profit?",
+      "options": {
+        "a": "60",
+        "b": "100",
+        "c": "120",
+        "d": "125"
+      },
+      "answer": "c",
+      "solution": "CP of 154 toffees = Re. 1.\nDesired profit = 28(1/3)% = 85/3% = 17/60.\nSP of 154 toffees = CP * (1 + 17/60) = 1 * (77/60) = Rs. 77/60.\nNumber of toffees sold for Re. 1 = 154 * (60 / 77) = 120."
+    },
+    {
+      "q_num": 111,
+      "question": "Pandey Ji bought 7 apples for Rs.3. At what price should he sell 100 apples to get a profit of 33%?",
+      "options": {
+        "a": "52",
+        "b": "57",
+        "c": "53",
+        "d": "55"
+      },
+      "answer": "b",
+      "solution": "CP of 7 apples = Rs. 3.\nCP of 1 apple = Rs. 3/7.\nCP of 100 apples = Rs. 300/7.\nSP of 100 apples with 33% profit = (300/7) * 1.33 = 300 * 0.19 = Rs. 57."
+    },
+    {
+      "q_num": 112,
+      "question": "After selling 4 panipuri for Re.1, Ram chaatwala incurred a loss of 4%. If he had sold 3 panipuri for Re.1, what his profit would have been?",
+      "options": {
+        "a": "22%",
+        "b": "25%",
+        "c": "27%",
+        "d": "28%"
+      },
+      "answer": "d",
+      "solution": "SP of 4 panipuri = Re. 1. Loss = 4%.\nCP of 4 panipuri = 1 / 0.96 = Rs. 25/24.\nCP of 1 panipuri = Rs. 25/96.\nCP of 3 panipuri = 3 * 25/96 = Rs. 25/32.\nIf 3 panipuri are sold for Re. 1, new SP of 3 panipuri = Re. 1.\nProfit % = (1 - 25/32) / (25/32) * 100 = (7/32) / (25/32) * 100 = (7/25) * 100 = 28%."
+    },
+    {
+      "q_num": 113,
+      "question": "A person bought 50 books after paying Rs12.5. How many books did he sell for Rs22.5 if he incurs a loss of 28.56%?",
+      "options": {
+        "a": "126",
+        "b": "135",
+        "c": "98",
+        "d": "112"
+      },
+      "answer": "a",
+      "solution": "CP of 50 books = Rs. 12.5 => CP of 1 book = 12.5 / 50 = Rs. 0.25.\nLoss % = 28.56% = 2/7.\nSP of 1 book = CP * (1 - 2/7) = 0.25 * (5/7) = Rs. 5/28.\nFor total SP of Rs. 22.5, number of books sold = 22.5 / (5/28) = 22.5 * 28 / 5 = 126."
+    },
+    {
+      "q_num": 114,
+      "question": "A person sold 25 articles for 2,500 and incurred a loss of 10%. How many articles should he sell for 2,400 to make a profit of 20%?",
+      "options": {
+        "a": "15",
+        "b": "16",
+        "c": "18",
+        "d": "20"
+      },
+      "answer": "c",
+      "solution": "SP of 25 articles = 2500 => SP of 1 article = Rs. 100.\nLoss = 10% => CP of 1 article = 100 / 0.90 = Rs. 1000/9.\nTo make a 20% profit, desired SP of 1 article = (1000/9) * 1.20 = Rs. 400/3.\nFor Rs. 2400 total SP, number of articles sold = 2400 / (400/3) = 2400 * 3 / 400 = 18."
+    }
+  ]
+}

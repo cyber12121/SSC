@@ -341,13 +341,13 @@
         "q_num": 2,
         "question": "Select the option that expresses the given sentence in direct speech. Elisa ordered her brother to play outside and let her work in peace.",
         "options": {
-          "a": "Elisa said to her brother, \u201cPlay outside that let me do my work in peace.\u201d",
-          "b": "Elisa said to her brother, \u201cPlay outside and let me work in peace.\u201d",
-          "c": "Elisa said to her brother, \u201cPlay outside to let me do my work in peace.\u201d",
-          "d": "Elisa said to her brother, \u201cPlay outside and let me do my work in peace.\u201d"
+          "a": "Elisa said to her brother, “Play outside that let me do my work in peace.”",
+          "b": "Elisa said to her brother, “Play outside and let me work in peace.”",
+          "c": "Elisa said to her brother, “Play outside to let me do my work in peace.”",
+          "d": "Elisa said to her brother, “Play outside and let me do my work in peace.”"
         },
         "answer": "b",
-        "solution": "The correct answer is \"Elisa said to her brother, \u201cplay outside and let me work in peace.\u201d\""
+        "solution": "The correct answer is \"Elisa said to her brother, “play outside and let me work in peace.”\""
       },
       {
         "q_num": 3,
@@ -389,13 +389,13 @@
         "q_num": 1,
         "question": "Select the option that expresses the given sentence in direct speech. I warned Rita not to be late the next day.",
         "options": {
-          "a": "I warned to Rita, \u201cDon\u2019t be late tomorrow\u201d.",
-          "b": "I warning Rita, \u201cNot be late tomorrow\u201d.",
-          "c": "I warned Rita, \u201cNot be late tomorrow\u201d.",
-          "d": "I warned Rita, \u201cDon\u2019t be late tomorrow\u201d."
+          "a": "I warned to Rita, “Don’t be late tomorrow”.",
+          "b": "I warning Rita, “Not be late tomorrow”.",
+          "c": "I warned Rita, “Not be late tomorrow”.",
+          "d": "I warned Rita, “Don’t be late tomorrow”."
         },
         "answer": "d",
-        "solution": "The correct direct speech is: 'I warned Rita, \u201cDon\u2019t be late tomorrow\u201d.' Explanation of options: (a) Incorrect because 'warn' is a transitive verb and does not require the preposition 'to' before the direct object 'Rita'. (b) Incorrect because the verb form 'warning' is grammatically incorrect in this context as it lacks an auxiliary verb. (c) Incorrect as it uses an imperative structure 'Not be late' which is not the standard way to express a warning in direct speech compared to 'Don't be'. (d) Correct because it follows the rules of direct speech conversion: the reporting verb 'warned' is followed by the object 'Rita' and the reported speech uses the imperative 'Don't be' correctly with 'tomorrow' as the direct speech equivalent of 'the next day'."
+        "solution": "The correct direct speech is: 'I warned Rita, “Don’t be late tomorrow”.' Explanation of options: (a) Incorrect because 'warn' is a transitive verb and does not require the preposition 'to' before the direct object 'Rita'. (b) Incorrect because the verb form 'warning' is grammatically incorrect in this context as it lacks an auxiliary verb. (c) Incorrect as it uses an imperative structure 'Not be late' which is not the standard way to express a warning in direct speech compared to 'Don't be'. (d) Correct because it follows the rules of direct speech conversion: the reporting verb 'warned' is followed by the object 'Rita' and the reported speech uses the imperative 'Don't be' correctly with 'tomorrow' as the direct speech equivalent of 'the next day'."
       },
       {
         "q_num": 1,
@@ -419,7 +419,7 @@
     "questions": [
       {
         "q_num": 1,
-        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute it, select \u2018No substitution required\u2019. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
+        "question": "Select the most appropriate option to substitute the underlined segment in the given sentence. If there is no need to substitute it, select ‘No substitution required’. The IIT Bombay alumnus occupy leading positions in different areas of profession and service.",
         "options": {
           "a": "Alumnus occupying",
           "b": "Alumnus occupies",

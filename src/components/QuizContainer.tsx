@@ -159,7 +159,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       }))
     };
 
-    return 
+    return (
       <div className="flex items-center justify-center min-h-[80vh] p-4 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

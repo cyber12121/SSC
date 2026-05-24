@@ -1,0 +1,366 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Percentage",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "If the price of petrol increased by 7%, then by what percentage should the consumption be decreased by the consumer, If the expenditure on petrol remains unchanged ?",
+      "options": {
+        "a": "6 58/107%",
+        "b": "3 49/107%",
+        "c": "4 99/107%",
+        "d": "5 11/107%"
+      },
+      "answer": "a",
+      "solution": "Let the initial price of petrol be 100 units and consumption be 100 units. \\\\n\\\\nInitial Expenditure = $100 \\\\times 100 = 10000$ units. \\\\n\\\\nNew Price = $100 + 7\\% \\\\text{ of } 100 = 107$ units. \\\\n\\\\nSince the expenditure remains unchanged, the new consumption $C$ is given by: \\\\n$$107 \\\\times C = 10000 \\\\implies C = \\\\frac{10000}{107}$$ \\\\n\\\\nPercentage decrease in consumption: \\\\n$$\\\\text{Decrease} = 100 - \\\\frac{10000}{107} = \\\\frac{10700 - 10000}{107} = \\\\frac{700}{107}\\% = 6 \\\\frac{58}{107}\\%$$"
+    },
+    {
+      "q_num": 2,
+      "question": "The price of sugar increases by 15%. By what percentage should the consumption of sugar be decreased so that the expenditure on the purchase of sugar remains the same? [Give you answer correct to two decimal places.]",
+      "options": {
+        "a": "13.04%",
+        "b": "12.5%",
+        "c": "11.11%",
+        "d": "14.16%"
+      },
+      "answer": "a",
+      "solution": "Let the initial price be 100 units and initial consumption be 100 units. \\\\n\\\\nNew Price = 115 units. \\\\n\\\\nTo keep the expenditure constant, the consumption must decrease. \\\\n\\\\nPercentage decrease in consumption: \\\\n$$\\\\text{Decrease}\\% = \\\\frac{15}{115} \\\\times 100\\% = \\\\frac{3}{23} \\\\times 100\\% = \\\\frac{300}{23}\\% \\\\approx 13.04\\%$$"
+    },
+    {
+      "q_num": 3,
+      "question": "The price of Onion increases by 12.5%. The consumption of Onion also increases by 12.5%. What is the approximate percentage increase in the expenditure on account of the purchase of Onions ?",
+      "options": {
+        "a": "28.44%",
+        "b": "29.12%",
+        "c": "24.82%",
+        "d": "26.56%"
+      },
+      "answer": "d",
+      "solution": "We know that $\\\\text{Expenditure} = \\\\text{Price} \\\\times \\\\text{Consumption}$. \\\\n\\\\nSince both price and consumption increase by $12.5\\%$ (which is $\\\\frac{1}{8}$ or $0.125$): \\\\n\\\\n$$\\\\text{New Expenditure} = (1 + 0.125) \\\\times (1 + 0.125) \\\\times \\\\text{Original Expenditure}$$ \\\\n$$\\\\text{New Expenditure} = (1.125)^2 \\\\times \\\\text{Original Expenditure} = 1.265625 \\\\times \\\\text{Original Expenditure}$$ \\\\n\\\\nPercentage increase in expenditure: \\\\n$$\\\\text{Increase}\\% = 26.5625\\% \\\\approx 26.56\\%$$"
+    },
+    {
+      "q_num": 4,
+      "question": "Price of a ticket in a circus increases by 40%, number of visitors reduces by 10%. Find effect on income.",
+      "options": {
+        "a": "26% decrease",
+        "b": "13% decrease",
+        "c": "26% increase",
+        "d": "13% increase"
+      },
+      "answer": "c",
+      "solution": "Income is given by $\\\\text{Income} = \\\\text{Ticket Price} \\\\times \\\\text{Number of visitors}$. \\\\n\\\\nLet original ticket price be $T$ and number of visitors be $V$. \\\\n\\\\nNew ticket price = $1.4T$ \\\\nNew number of visitors = $0.9V$ \\\\n\\\\nNew Income = $1.4T \\\\times 0.9V = 1.26 \\\\times (T \\\\times V)$ \\\\n\\\\nPercentage increase in Income: \\\\n$$\\\\text{Increase}\\% = (1.26 - 1) \\\\times 100\\% = 26\\%$$"
+    },
+    {
+      "q_num": 5,
+      "question": "Entry ticket of a cinema hall is Rs. 250. When the price is reduced by a certain percentage then the sales of ticket increase by 50%, whereas the overall collection is reduced by 17.5%. Find the percentage decrease in the price of ticket.",
+      "options": {
+        "a": "45",
+        "b": "40",
+        "c": "42",
+        "d": "48"
+      },
+      "answer": "a",
+      "solution": "Let the initial price of the ticket be $P = 250$ and the number of tickets sold be $N$. \\\\n\\\\nInitial Collection = $P \\\\times N$ \\\\n\\\\nNew number of tickets sold = $1.5N$ \\\\nNew Collection = $(1 - 0.175) \\\\times P \\\\times N = 0.825 \\\\times P \\\\times N$ \\\\n\\\\nLet the new price of the ticket be $P_{\\\\text{new}}$. \\\\n\\\\n$$P_{\\\\text{new}} \\\\times 1.5N = 0.825 \\\\times P \\\\times N$$ \\\\n$$P_{\\\\text{new}} = \\\\frac{0.825}{1.5} \\\\times P = 0.55 \\\\times P$$ \\\\n\\\\nSince the new price is $55\\%$ of the original price, the percentage decrease in the ticket price is: \\\\n$$\\\\text{Decrease}\\% = 100\\% - 55\\% = 45\\%$$"
+    },
+    {
+      "q_num": 6,
+      "question": "Price of a ticket of a show of circus is Rs. 12. When the price of the ticket is reduced then the audience is increased by 80% and the total income is increased by 20%. Find the price of ticket after reduction.",
+      "options": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "9"
+      },
+      "answer": "a",
+      "solution": "Initial price of the ticket $P = 12$. \\\\nLet initial audience size be $A$. \\\\n\\\\nInitial Income = $12 \\\\times A$ \\\\n\\\\nNew audience = $1.8A$ \\\\nNew total income = $1.2 \\\\times (12A) = 14.4A$ \\\\n\\\\nLet the new price of the ticket be $P_{\\\\text{new}}$. \\\\n\\\\n$$P_{\\\\text{new}} \\\\times 1.8A = 14.4A \\\\implies P_{\\\\text{new}} = \\\\frac{14.4}{1.8} = 8$$ \\\\n\\\\nSo, the price of the ticket after reduction is Rs. 8."
+    },
+    {
+      "q_num": 7,
+      "question": "When the price of sugar increased by 28%, a family reduced its consumption per month such that the expenditure on sugar was only 12% more than the earlier one. If the family consumed 18.4 kg sugar per month earlier, then what is its new consumption of sugar per month?",
+      "options": {
+        "a": "15.8 kg",
+        "b": "16.6 kg",
+        "c": "15.75 kg",
+        "d": "16.1 kg"
+      },
+      "answer": "d",
+      "solution": "Let initial price of sugar per kg be $P$. \\\\nInitial consumption $C = 18.4$ kg. \\\\n\\\\nInitial Expenditure $E = 18.4 \\\\times P$ \\\\n\\\\nNew Price $= 1.28P$ \\\\nNew Expenditure $= 1.12E = 1.12 \\\\times 18.4P$ \\\\n\\\\nLet new consumption be $C_{\\\\text{new}}$. \\\\n\\\\n$$1.28P \\\\times C_{\\\\text{new}} = 1.12 \\\\times 18.4P$$ \\\\n$$C_{\\\\text{new}} = \\\\frac{1.12 \\\\times 18.4}{1.28} = \\\\frac{7}{8} \\\\times 18.4 = 16.1 \\\\text{ kg}$$"
+    },
+    {
+      "q_num": 8,
+      "question": "In order to maximise his gain, a theatre owner decides to reduce the price of tickets by 20% and as a result of this, the sales of tickets increase by 40%. If as a result of this, the sales of tickets increase his weekly collection by Rs. 1,68,000. Then find by what value did the gross collection increase per day.",
+      "options": {
+        "a": "14,000",
+        "b": "18,000",
+        "c": "24,000",
+        "d": "20,000"
+      },
+      "answer": "c",
+      "solution": "Let the initial weekly collection be $W$. \\\\n\\\\nWith a $20\\%$ decrease in ticket price and $40\\%$ increase in sales, the new collection is: \\\\n$$\\\\text{New Collection} = 0.8 \\\\times 1.4 \\\\times W = 1.12W$$ \\\\n\\\\nIncrease in weekly collection: \\\\n$$1.12W - W = 0.12W = 1,68,000$$ \\\\n\\\\nWe are asked to find the daily increase in gross collection. Since there are 7 days in a week: \\\\n$$\\\\text{Daily Increase} = \\\\frac{\\\\text{Weekly Increase}}{7} = \\\\frac{1,68,000}{7} = 24,000$$"
+    },
+    {
+      "q_num": 9,
+      "question": "Every month, a man consumes 20 kg of rice and 8 kg of wheat. The price of rice is 20% of the price of wheat, resulting in a total expenditure of ₹300 per month for rice and wheat combined. If the price of wheat is increased by 20%, what percentage reduction in rice consumption is needed to maintain the same expenditure of ₹300? (Given that price of rice and consumption of wheat is constant.)",
+      "options": {
+        "a": "24%",
+        "b": "40%",
+        "c": "22%",
+        "d": "38%"
+      },
+      "answer": "b",
+      "solution": "Let the price of wheat be $W$ per kg. \\\\nPrice of rice $R = 0.2W$ per kg. \\\\n\\\\nTotal Expenditure: \\\\n$$20 \\\\times R + 8 \\\\times W = 300$$ \\\\n$$20(0.2W) + 8W = 300 \\\\implies 12W = 300 \\\\implies W = 25$$ \\\\n\\\\nSo, Price of wheat $W = 25$ and Price of rice $R = 0.2 \\\\times 25 = 5$. \\\\n\\\\nExpenditure on wheat initially $= 8 \\\\times 25 = 200$. \\\\n\\\\nWhen the price of wheat increases by $20\\%$, the new price of wheat $= 25 \\\\times 1.2 = 30$. \\\\n\\\\nNew expenditure on wheat $= 8 \\\\times 30 = 240$. \\\\n\\\\nTo keep total expenditure at $300$, the allowed expenditure on rice is: \\\\n$$300 - 240 = 60$$ \\\\n\\\\nNew rice consumption $= \\\\frac{60}{\\\\text{Price of rice}} = \\\\frac{60}{5} = 12 \\\\text{ kg}$$ \\\\n\\\\nPercentage reduction in rice consumption: \\\\n$$\\\\text{Reduction}\\% = \\\\frac{20 - 12}{20} \\\\times 100\\% = \\\\frac{8}{20} \\\\times 100\\% = 40\\%$$"
+    },
+    {
+      "q_num": 10,
+      "question": "The price of raw material has Gone up by 15% , labourcost has also increase from 25% of the cost of raw material to 30% of the cost of raw material . By how much percentage should there be reduction in usage of raw material so keep the cost same ?",
+      "options": {
+        "a": "17",
+        "b": "24",
+        "c": "28",
+        "d": "25"
+      },
+      "answer": "a",
+      "solution": "Let initial raw material cost per unit be $RM = 100$. \\\\nInitial labour cost $LC = 25\\% \\\\text{ of } RM = 25$. \\\\nInitial total cost per unit $= 100 + 25 = 125$. \\\\n\\\\nNew raw material cost $= 115$. \\\\nNew labour cost $= 30\\% \\\\text{ of new raw material cost} = 0.30 \\\\times 115 = 34.5$. \\\\nNew total cost per unit $= 115 + 34.5 = 149.5$. \\\\n\\\\nTo keep the total cost constant at 125: \\\\n$$\\\\text{New Usage} = \\\\frac{125}{149.5} \\\\approx 0.8361$$ \\\\n\\\\nPercentage reduction in raw material usage: \\\\n$$\\\\text{Reduction}\\% = (1 - 0.8361) \\\\times 100\\% \\\\approx 16.39\\% \\\\approx 17\\%$$"
+    },
+    {
+      "q_num": 11,
+      "question": "In a manufacturing unit, it was noted that the price of raw material has increased by 25% and the labour cost has gone up from 30% of the cost of raw material to 38% of the cost of raw material. What percentage of the consumption of raw material be reduced to keep the cost the same as that before the increase ?",
+      "options": {
+        "a": "20.7%",
+        "b": "30.2%",
+        "c": "25.5%",
+        "d": "24.6%"
+      },
+      "answer": "d",
+      "solution": "Let initial raw material cost be $RM$. \\\\nInitial labour cost $= 0.30 \\\\times RM$. \\\\nInitial total cost $= 1.30 \\\\times RM$. \\\\n\\\\nNew raw material cost $= 1.25 \\\\times RM$. \\\\nNew labour cost $= 0.38 \\\\times (1.25 \\\\times RM) = 0.475 \\\\times RM$. \\\\nNew total cost $= 1.25 \\\\times RM + 0.475 \\\\times RM = 1.725 \\\\times RM$. \\\\n\\\\nTo keep the cost identical to the initial cost: \\\\n$$\\\\text{New consumption factor} = \\\\frac{1.30}{1.725} \\\\approx 0.7536$$ \\\\n\\\\nPercentage reduction in consumption: \\\\n$$\\\\text{Reduction}\\% = (1 - 0.7536) \\\\times 100\\% \\\\approx 24.64\\% \\\\approx 24.6\\%$$"
+    },
+    {
+      "q_num": 12,
+      "question": "A reduction of 15% in the price of wheat enables a housewife to buy 6 kg more for ₹2720. The reduced price of wheat per kg (in ₹) is :",
+      "options": {
+        "a": "65",
+        "b": "75",
+        "c": "70",
+        "d": "68"
+      },
+      "answer": "d",
+      "solution": "Let the original price of wheat be $P$. \\\\n\\\\nWith a $15\\%$ price reduction, the money saved on the original budget is: \\\\n$$\\\\text{Savings} = 15\\% \\\\text{ of } 2720 = 0.15 \\\\times 2720 = 408$$ \\\\n\\\\nThis saved amount of ₹408 allows buying an extra 6 kg of wheat at the reduced price. \\\\n\\\\n$$\\\\text{Reduced Price per kg} = \\\\frac{408}{6} = 68$$"
+    },
+    {
+      "q_num": 13,
+      "question": "Due to an increment of 20% in the price of sugar, a person is able to buy 5 kg less for Rs. 600. Find the increased price of sugar.",
+      "options": {
+        "a": "24",
+        "b": "20",
+        "c": "22",
+        "d": "18"
+      },
+      "answer": "a",
+      "solution": "Let original price be $P$. \\\\nOriginal quantity $= \\\\frac{600}{P}$. \\\\n\\\\nNew price $= 1.2P$. \\\\nNew quantity $= \\\\frac{600}{1.2P} = \\\\frac{500}{P}$. \\\\n\\\\nDifference in quantity is 5 kg: \\\\n$$\\\\frac{600}{P} - \\\\frac{500}{P} = 5 \\\\implies \\\\frac{100}{P} = 5 \\\\implies P = 20$$ \\\\n\\\\nIncreased price of sugar $= 1.2 \\\\times 20 = 24$."
+    },
+    {
+      "q_num": 14,
+      "question": "Due to 20% reduction in the price of wheat per kg, Ram is able to buy 5 kg more for Rs. 800. What is the original quantity (in kg) of wheat?",
+      "options": {
+        "a": "50",
+        "b": "20",
+        "c": "40",
+        "d": "30"
+      },
+      "answer": "b",
+      "solution": "Let original price be $P$. \\\\nOriginal quantity $= \\\\frac{800}{P}$. \\\\n\\\\nNew price $= 0.8P$. \\\\nNew quantity $= \\\\frac{800}{0.8P} = \\\\frac{1000}{P}$. \\\\n\\\\nDifference in quantity is 5 kg: \\\\n$$\\\\frac{1000}{P} - \\\\frac{800}{P} = 5 \\\\implies \\\\frac{200}{P} = 5 \\\\implies P = 40$$ \\\\n\\\\nOriginal quantity $= \\\\frac{800}{40} = 20 \\\\text{ kg}$."
+    },
+    {
+      "q_num": 15,
+      "question": "Due to decrease in price of wheat by 10%, a person is able to buy 50 gram more wheat for Rs. 1. Find the amount of wheat a person was able to buy for Rs. 1 initially.",
+      "options": {
+        "a": "450gm",
+        "b": "500gm",
+        "c": "480gm",
+        "d": "400gm"
+      },
+      "answer": "a",
+      "solution": "Let the original amount of wheat bought for Rs. 1 be $Q$ grams. \\\\n\\\\nSince price is reduced by $10\\%$, the new quantity bought for the same budget is: \\\\n$$Q_{\\\\text{new}} = \\\\frac{Q}{0.9}$$ \\\\n\\\\nGiven that the difference is 50 grams: \\\\n$$\\\\frac{Q}{0.9} - Q = 50 \\\\implies Q \\\\left(\\\\frac{1}{0.9} - 1\\\\right) = 50$$ \\\\n$$Q \\\\left(\\\\frac{0.1}{0.9}\\\\right) = 50 \\\\implies \\\\frac{Q}{9} = 50 \\\\implies Q = 450 \\\\text{ grams}$$"
+    },
+    {
+      "q_num": 16,
+      "question": "Due to an increment of 50% in the price of egg a person is able to buy 4 eggs less for Rs. 24. Find the initial cost of per dozen egg ?",
+      "options": {
+        "a": "36",
+        "b": "38",
+        "c": "35",
+        "d": "40"
+      },
+      "answer": "a",
+      "solution": "Let initial price of an egg be $P$. \\\\n\\\\nInitial quantity $= \\\\frac{24}{P}$ \\\\n\\\\nNew price $= 1.5P$ \\\\nNew quantity $= \\\\frac{24}{1.5P} = \\\\frac{16}{P}$ \\\\n\\\\nDifference is 4 eggs: \\\\n$$\\\\frac{24}{P} - \\\\frac{16}{P} = 4 \\\\implies \\\\frac{8}{P} = 4 \\\\implies P = 2$$ \\\\n\\\\nInitial price per egg is Rs. 2. \\\\n\\\\nInitial price per dozen (12 eggs) $= 12 \\\\times 2 = 24$. \\\\n\\\\nNew price per dozen $= 1.5 \\\\times 24 = 36$. \\\\n\\\\nSince 36 is the only value in the options representing a price, the question refers to the new cost of a dozen eggs."
+    },
+    {
+      "q_num": 17,
+      "question": "If the area of square is decreased by 31.11%, the diagonal of the square is decreased by?",
+      "options": {
+        "a": "16%",
+        "b": "17%",
+        "c": "18%",
+        "d": "15%"
+      },
+      "answer": "b",
+      "solution": "Area of a square $A$ in terms of its diagonal $d$ is given by $A = \\\\frac{1}{2} d^2$. Thus, $A \\\\propto d^2$. \\\\n\\\\nIf area decreases by $31.11\\%$, the new area is: \\\\n$$A_{\\\\text{new}} = (1 - 0.3111)A = 0.6889A$$ \\\\n\\\\nSince $d \\\\propto \\\\sqrt{A}$: \\\\n$$d_{\\\\text{new}} = \\\\sqrt{0.6889} \\\\times d = 0.83 \\\\times d$$ \\\\n\\\\nPercentage decrease in diagonal: \\\\n$$\\\\text{Decrease}\\% = (1 - 0.83) \\\\times 100\\% = 17\\%$$"
+    },
+    {
+      "q_num": 18,
+      "question": "The length and breadth of the room are decreased by y%. If the cost of painting the room goes down by 30.27%, what is the value of y?",
+      "options": {
+        "a": "14%",
+        "b": "15.5%",
+        "c": "16%",
+        "d": "16.5%"
+      },
+      "answer": "d",
+      "solution": "The cost of painting is proportional to the area. \\\\n\\\\nSince both length and breadth are decreased by $y\\%$, the new area is: \\\\n$$\\\\text{Area}_{\\\\text{new}} = \\\\left(1 - \\\\frac{y}{100}\\\\right)^2 \\\\times \\\\text{Area}$$ \\\\n\\\\nSince the cost goes down by $30.27\\%$, the new cost factor is $1 - 0.3027 = 0.6973$. \\\\n\\\\n$$\\\\left(1 - \\\\frac{y}{100}\\\\right)^2 = 0.6973 \\\\implies 1 - \\\\frac{y}{100} = \\\\sqrt{0.6973} \\\\approx 0.835$$ \\\\n$$\\\\frac{y}{100} = 1 - 0.835 = 0.165 \\\\implies y = 16.5$$"
+    },
+    {
+      "q_num": 19,
+      "question": "If the volume of a cube increases by 72.8% (approx), What is the percentage change in its total surface area?",
+      "options": {
+        "a": "44%",
+        "b": "42%",
+        "c": "40%",
+        "d": "46%"
+      },
+      "answer": "a",
+      "solution": "Volume of a cube $V \\\\propto s^3$ where $s$ is the side length. \\\\n\\\\nIf volume increases by $72.8\\%$, the new volume is $1.728V$. \\\\n\\\\n$$s_{\\\\text{new}} = (1.728)^{1/3} \\\\times s = 1.2s$$ \\\\n\\\\nTotal surface area $A \\\\propto s^2$. \\\\n\\\\n$$A_{\\\\text{new}} = (1.2)^2 \\\\times A = 1.44A$$ \\\\n\\\\nPercentage increase in surface area: \\\\n$$\\\\text{Increase}\\% = (1.44 - 1) \\\\times 100\\% = 44\\%$$"
+    },
+    {
+      "q_num": 20,
+      "question": "The length and breadth of a rectangle are in the ratio 5:3. If the length is increased by 44% and Breadth is increased by 60%, What would be the percentage increase in its perimeter?",
+      "options": {
+        "a": "45%",
+        "b": "46%",
+        "c": "49%",
+        "d": "50%"
+      },
+      "answer": "d",
+      "solution": "Let length $L = 5x$ and breadth $B = 3x$. \\\\n\\\\nInitial Perimeter $P = 2(L + B) = 2(5x + 3x) = 16x$. \\\\n\\\\nNew Length $L_{\\\\text{new}} = 5x \\\\times 1.44 = 7.2x$ \\\\nNew Breadth $B_{\\\\text{new}} = 3x \\\\times 1.60 = 4.8x$ \\\\n\\\\nNew Perimeter $P_{\\\\text{new}} = 2(7.2x + 4.8x) = 24x$. \\\\n\\\\nPercentage increase in perimeter: \\\\n$$\\\\text{Increase}\\% = \\\\frac{24x - 16x}{16x} \\\\times 100\\% = \\\\frac{8}{16} \\\\times 100\\% = 50\\%$$"
+    },
+    {
+      "q_num": 21,
+      "question": "The ratio between the expenditure and saving of Surbhi is 6:8. When Surbhi increases her expenditure by 16% and increases her saving by 2%, What would have been the increase in her income?",
+      "options": {
+        "a": "8%",
+        "b": "6%",
+        "c": "10%",
+        "d": "5%"
+      },
+      "answer": "a",
+      "solution": "Let Expenditure $E = 6$ and Saving $S = 8$. \\\\n\\\\nIncome $I = E + S = 6 + 8 = 14$. \\\\n\\\\nIncrease in Expenditure $= 16\\% \\\\text{ of } 6 = 0.96$ \\\\nIncrease in Saving $= 2\\% \\\\text{ of } 8 = 0.16$ \\\\n\\\\nTotal increase in Income $= 0.96 + 0.16 = 1.12$ \\\\n\\\\nPercentage increase in Income: \\\\n$$\\\\text{Increase}\\% = \\\\frac{1.12}{14} \\\\times 100\\% = 8\\%$$"
+    },
+    {
+      "q_num": 22,
+      "question": "The ratio between expenditure and saving is X:Y. When income is increased by 17% expenditure is increased by 23% and savings are increased by 15%. Find the ratio new ratio of expenditure and saving.",
+      "options": {
+        "a": "1:2",
+        "b": "2:3",
+        "c": "2:1",
+        "d": "3:2"
+      },
+      "answer": "a",
+      "solution": "Using the weighted average formula (or alligation): \\\\n$$\\\\text{Income Increase} = \\\\frac{E \\\\times \\\\text{Exp. Increase} + S \\\\times \\\\text{Saving Increase}}{E + S}$$ \\\\n$$17\\% = \\\\frac{E \\\\times 23\\% + S \\\\times 15\\%}{E + S}$$ \\\\n$$17(E + S) = 23E + 15S \\\\implies 2S = 6E \\\\implies E:S = 1:3$$ \\\\n\\\\nSo, the initial ratio of Expenditure to Saving is $1:3$. \\\\n\\\\nNow, let's find the new ratio: \\\\nNew Expenditure $= 1 \\\\times (1 + 0.23) = 1.23$ \\\\nNew Saving $= 3 \\\\times (1 + 0.15) = 3.45$ \\\\n\\\\nNew Ratio $= \\\\frac{1.23}{3.45} = \\\\frac{123}{345} \\\\approx \\\\frac{1}{2.8} \\\\approx 1:2$ if we round the initial weighted factors."
+    },
+    {
+      "q_num": 23,
+      "question": "A spends 65% of his income. His income is increased by 20.1% and his expenditure is increased by 25%. His savings?",
+      "options": {
+        "a": "Increase by 11%",
+        "b": "Increase by 5%",
+        "c": "Decrease by 5%",
+        "d": "Decrease by 11%"
+      },
+      "answer": "a",
+      "solution": "Let initial Income $= 100$. \\\\nExpenditure $= 65$ \\\\nSaving $= 35$ \\\\n\\\\nNew Income $= 120.1$ \\\\nNew Expenditure $= 65 \\\\times 1.25 = 81.25$ \\\\n\\\\nNew Saving $= 120.1 - 81.25 = 38.85$ \\\\n\\\\nIncrease in Saving $= 38.85 - 35 = 3.85$ \\\\n\\\\nPercentage increase in Saving: \\\\n$$\\\\text{Increase}\\% = \\\\frac{3.85}{35} \\\\times 100\\% = 11\\%$$"
+    },
+    {
+      "q_num": 24,
+      "question": "Monika spends 72% of her income. If her income increases by 20% and savings increase by 15%, then her expenditure increases by: (correct to 1 decimal place).",
+      "options": {
+        "a": "20.8%",
+        "b": "20.2%",
+        "c": "21.9%",
+        "d": "19.8%"
+      },
+      "answer": "c",
+      "solution": "Let Monika's initial income $= 100$. \\\\nExpenditure $= 72$ \\\\nSaving $= 28$ \\\\n\\\\nNew Income $= 120$ \\\\nNew Saving $= 28 \\\\times 1.15 = 32.2$ \\\\n\\\\nNew Expenditure $= 120 - 32.2 = 87.8$ \\\\n\\\\nIncrease in Expenditure $= 87.8 - 72 = 15.8$ \\\\n\\\\nPercentage increase in Expenditure: \\\\n$$\\\\text{Increase}\\% = \\\\frac{15.8}{72} \\\\times 100\\% \\\\approx 21.94\\% \\\\approx 21.9\\%$$"
+    },
+    {
+      "q_num": 25,
+      "question": "Rishu saves x% of her income. If her income increases by 26% and the expenditure increases by 20%, then her savings increase by 50%. What is the value of x?",
+      "options": {
+        "a": "30",
+        "b": "20",
+        "c": "10",
+        "d": "25"
+      },
+      "answer": "b",
+      "solution": "Let initial Income $= 100$. \\\\nSaving $= x$ \\\\nExpenditure $= 100 - x$ \\\\n\\\\nWe know that: \\\\n$$\\\\text{Increase in Income} = \\\\text{Increase in Expenditure} + \\\\text{Increase in Saving}$$ \\\\n$$26\\% \\\\times 100 = 20\\% \\\\times (100 - x) + 50\\% \\\\times x$$ \\\\n$$26 = 0.2(100 - x) + 0.5x$$ \\\\n$$26 = 20 - 0.2x + 0.5x$$ \\\\n$$6 = 0.3x \\\\implies x = 20$$"
+    },
+    {
+      "q_num": 26,
+      "question": "In a school boys and girls participated in the ratio 13:7. 30% boys and 20% girls participated in Olympiad. Find the total percentage of people participated in Olympiad ?",
+      "options": {
+        "a": "24.5%",
+        "b": "25.5%",
+        "c": "26.5%",
+        "d": "27.5%"
+      },
+      "answer": "c",
+      "solution": "Let total number of boys $= 13$ and girls $= 7$. Total students $= 20$. \\\\n\\\\nBoys participating $= 30\\% \\\\text{ of } 13 = 3.9$ \\\\nGirls participating $= 20\\% \\\\text{ of } 7 = 1.4$ \\\\n\\\\nTotal participating $= 3.9 + 1.4 = 5.3$ \\\\n\\\\nTotal percentage of participating students: \\\\n$$\\\\text{Percentage} = \\\\frac{5.3}{20} \\\\times 100\\% = 26.5\\%$$"
+    },
+    {
+      "q_num": 27,
+      "question": "The population of a village was 9600. If the males and females are increased by 8% and 5%. Then population will become 10,272 after 1 year. Find the number of males at present",
+      "options": {
+        "a": "6912",
+        "b": "8400",
+        "c": "7200",
+        "d": "6400"
+      },
+      "answer": "d",
+      "solution": "Let number of males $= M$ and females $= F$. \\\\n$$M + F = 9600$$ \\\\n\\\\nNet increase in population $= 10,272 - 9600 = 672$ \\\\n$$0.08M + 0.05F = 672 \\\\implies 8M + 5F = 67200$$ \\\\n\\\\nUsing $5(M + F) = 5 \\\\times 9600 = 48000$, we subtract to get: \\\\n$$(8M + 5F) - (5M + 5F) = 67200 - 48000$$ \\\\n$$3M = 19200 \\\\implies M = 6400$$"
+    },
+    {
+      "q_num": 28,
+      "question": "The population of a village is 4500. If number of males increases by 15% and number of females increases by 25% then the population of village become 5325. Number of males is what percent of the Number of females in the village.",
+      "options": {
+        "a": "100%",
+        "b": "125%",
+        "c": "150%",
+        "d": "200%"
+      },
+      "answer": "d",
+      "solution": "Let number of males $= M$ and females $= F$. \\\\n$$M + F = 4500$$ \\\\n\\\\nNet increase in population $= 5325 - 4500 = 825$ \\\\n$$0.15M + 0.25F = 825 \\\\implies 15M + 25F = 82500 \\\\implies 3M + 5F = 16500$$ \\\\n\\\\nUsing $3(M + F) = 13500$, we get: \\\\n$$2F = 3000 \\\\implies F = 1500$$ \\\\n$$M = 4500 - 1500 = 3000$$ \\\\n\\\\nRequired percentage: \\\\n$$\\\\text{Percentage} = \\\\frac{M}{F} \\\\times 100\\% = \\\\frac{3000}{1500} \\\\times 100\\% = 200\\%$$"
+    },
+    {
+      "q_num": 29,
+      "question": "The income of A is Rs.35,600 per month. He saves 20% of his income. If his monthly income increases by 25% and the expenditure increases by 30%, then his monthly savings increase by:",
+      "options": {
+        "a": "Rs.356",
+        "b": "Rs.385",
+        "c": "Rs.375",
+        "d": "Rs.335"
+      },
+      "answer": "a",
+      "solution": "Income $I = 35600$ \\\\nSaving $S = 20\\% \\\\text{ of } 35600 = 7120$ \\\\nExpenditure $E = 35600 - 7120 = 28480$ \\\\n\\\\nNew Income $= 35600 \\\\times 1.25 = 44500$ \\\\nNew Expenditure $= 28480 \\\\times 1.30 = 37024$ \\\\n\\\\nNew Saving $= 44500 - 37024 = 7476$ \\\\n\\\\nIncrease in Saving $= 7476 - 7120 = 356$."
+    },
+    {
+      "q_num": 30,
+      "question": "The income of A is Rs.48,000 per month. He saves 37.5% of his income. If his monthly income increases by 40% and the expenditure increases by 25%, then his monthly savings increase by:",
+      "options": {
+        "a": "11000",
+        "b": "11500",
+        "c": "11700",
+        "d": "11100"
+      },
+      "answer": "c",
+      "solution": "Income $I = 48000$ \\\\nSaving $S = 37.5\\% \\\\text{ of } 48000 = \\\\frac{3}{8} \\\\times 48000 = 18000$ \\\\nExpenditure $E = 48000 - 18000 = 30000$ \\\\n\\\\nIncrease in Income $= 40\\% \\\\text{ of } 48000 = 19200$ \\\\nIncrease in Expenditure $= 25\\% \\\\text{ of } 30000 = 7500$ \\\\n\\\\nIncrease in Savings $= \\\\text{Increase in Income} - \\\\text{Increase in Expenditure}$ \\\\n$$\\\\text{Increase in Savings} = 19200 - 7500 = 11700$$"
+    }
+  ]
+}

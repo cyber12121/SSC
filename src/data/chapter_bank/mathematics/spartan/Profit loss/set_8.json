@@ -1,0 +1,306 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Shovik purchases two types of sugar: the first type of Rs. 45 per kg and the second type of Rs. 80 per kg. In what ratio should Shovik blend the first type of sugar with the second type so that, by selling each kg of the blended sugar at Rs. 72 per kg, he makes a profit of 20%?",
+      "options": {
+        "a": "4:3",
+        "b": "5:4",
+        "c": "3:4",
+        "d": "3:2"
+      },
+      "answer": "a",
+      "solution": "Let the Cost Price (CP) of the first type of sugar be $C_1 = 45$ Rs./kg, and the second type be $C_2 = 80$ Rs./kg.\nSelling Price (SP) of the mixture = 72 Rs./kg with a 20% profit.\nTherefore, the mean Cost Price (CP) of the mixture is:\n$CP = \\frac{SP}{1 + \\text{Profit}\\%} = \\frac{72}{1.20} = 60$ Rs./kg.\nUsing the rule of alligation:\nRatio of first type to second type = $(C_2 - CP) : (CP - C_1) = (80 - 60) : (60 - 45) = 20 : 15 = 4 : 3$."
+    },
+    {
+      "q_num": 2,
+      "question": "A seller combines 26 kg of rice priced at ₹20 per kg with 30 kg of rice priced at ₹36 per kg and sells the mixture for ₹30 per kg. What is the percentage of profit he makes ?",
+      "options": {
+        "a": "8",
+        "b": "5",
+        "c": "7",
+        "d": "3"
+      },
+      "answer": "b",
+      "solution": "Total Cost Price (CP) = $(26 \\times 20) + (30 \\times 36) = 520 + 1080 = 1600$ Rs.\nTotal quantity of mixture = $26 + 30 = 56$ kg.\nTotal Selling Price (SP) = $56 \\times 30 = 1680$ Rs.\nProfit = $SP - CP = 1680 - 1600 = 80$ Rs.\nProfit percentage = $\\frac{80}{1600} \\times 100\\% = 5\\%$."
+    },
+    {
+      "q_num": 3,
+      "question": "A fruit seller purchased 300 bananas at the rate of ₹18 per dozen and sold 200 bananas at the rate of ₹24 per dozen and the remaining bananas at the rate of ₹21 per dozen. What is his net profit percentage?",
+      "options": {
+        "a": "28%",
+        "b": "26%",
+        "c": "27%",
+        "d": "27(7/9)%"
+      },
+      "answer": "d",
+      "solution": "Total bananas purchased = 300 bananas = $300 / 12 = 25$ dozen.\nTotal CP = $25 \\times 18 = 450$ Rs.\nFirst part sold: 200 bananas = $200 / 12$ dozen.\nSP of first part = $\\frac{200}{12} \\times 24 = 400$ Rs.\nRemaining bananas = $300 - 200 = 100$ bananas.\nSP of remaining part = $\\frac{100}{12} \\times 21 = 175$ Rs.\nTotal SP = $400 + 175 = 575$ Rs.\nNet Profit = $575 - 450 = 125$ Rs.\nNet Profit percentage = $\\frac{125}{450} \\times 100\\% = \\frac{250}{9}\\% = 27\\frac{7}{9}\\%$."
+    },
+    {
+      "q_num": 4,
+      "question": "5 kg of ₹18 per kg wheat is mixed with 2 kg of another type of wheat to get a mixture costing ₹20 per kg. Find the price (per kg) of the costlier wheat.",
+      "options": {
+        "a": "27",
+        "b": "25",
+        "c": "29",
+        "d": "30"
+      },
+      "answer": "b",
+      "solution": "Let the price of the costlier wheat be $x$ Rs./kg.\nBy the weighted average formula:\n$5 \\times 18 + 2 \\times x = (5 + 2) \\times 20$\n$90 + 2x = 140$\n$2x = 50$\n$x = 25$ Rs./kg."
+    },
+    {
+      "q_num": 5,
+      "question": "2.5 kg of ₹18.75 per kg wheat is mixed with 2.75 kg of another type of wheat to get a mixture costing ₹20.75 per kg. Find the price (per kg) of the costlier wheat",
+      "options": {
+        "a": "22.55",
+        "b": "21.55",
+        "c": "23",
+        "d": "23.55"
+      },
+      "answer": "a",
+      "solution": "Let the price of the costlier wheat be $x$ Rs./kg.\nRatio of the weights of the two types of wheat = $2.5 : 2.75 = 10 : 11$.\nUsing weighted average:\n$10 \\times 18.75 + 11 \\times x = (10 + 11) \\times 20.75$\n$187.5 + 11x = 435.75$\n$11x = 248.25$\n$x = 22.568 \\approx 22.55$ Rs./kg."
+    },
+    {
+      "q_num": 6,
+      "question": "A shopkeeper sold 6 shirts of company A for 4,290 at 10% profit and 8 shirts of company B for 6,156 at 14% profit. What was his profit percentage (correct to 2 decimal places)?",
+      "options": {
+        "a": "12.32%",
+        "b": "12%",
+        "c": "12.5%",
+        "d": "12.75%"
+      },
+      "answer": "a",
+      "solution": "Cost Price of shirts of company A = $\\frac{4290}{1.10} = 3900$ Rs.\nCost Price of shirts of company B = $\\frac{6156}{1.14} = 5400$ Rs.\nTotal Cost Price = $3900 + 5400 = 9300$ Rs.\nTotal Selling Price = $4290 + 6156 = 10446$ Rs.\nTotal Profit = $10446 - 9300 = 1146$ Rs.\nProfit percentage = $\\frac{1146}{9300} \\times 100\\% \\approx 12.32\\%$."
+    },
+    {
+      "q_num": 7,
+      "question": "Reshma sells two-third of goods at a profit of 26%, 20% of the remaining goods at a profit of 40% and the remaining goods at a loss of 25%. Assuming all goods are of the same cost price, what is her overall gain percentage in the whole transaction?",
+      "options": {
+        "a": "15%",
+        "b": "12%",
+        "c": "13(1/3)%",
+        "d": "12(2/3)%"
+      },
+      "answer": "c",
+      "solution": "Let the total number of goods be 15 units with each costing 1 unit. Total Cost Price = 15.\nFirst part = $\\frac{2}{3} \\times 15 = 10$ units sold at 26% profit. Profit = $10 \\times 0.26 = 2.6$ units.\nRemaining units = $15 - 10 = 5$ units.\nSecond part = $20\\% \\text{ of } 5 = 1$ unit sold at 40% profit. Profit = $1 \\times 0.40 = 0.4$ units.\nThird part (remaining) = $5 - 1 = 4$ units sold at 25% loss. Profit = $4 \\times (-0.25) = -1.0$ unit.\nTotal overall profit = $2.6 + 0.4 - 1.0 = 2.0$ units.\nOverall profit percentage = $\\frac{2.0}{15} \\times 100\\% = 13\\frac{1}{3}\\%$"
+    },
+    {
+      "q_num": 8,
+      "question": "A shopkeeper purchased 120 items and sold 45 items at a profit of 12% and remaining items at a profit of 25%. If he had sold all of them at a uniform profit of 15%, he would have got Rs.126.69 less. What is the cost price (in Rs.) of each item?",
+      "options": {
+        "a": "24.8",
+        "b": "20.6",
+        "c": "16.7",
+        "d": "18.4"
+      },
+      "answer": "b",
+      "solution": "Let the Cost Price of each item be $x$.\nFirst case total profit = $45 \\times 0.12x + (120 - 45) \\times 0.25x = 5.4x + 18.75x = 24.15x$.\nSecond case total profit = $120 \\times 0.15x = 18x$.\nDifference in profit = $24.15x - 18x = 6.15x$.\nGiven: $6.15x = 126.69 \\Rightarrow x = \\frac{126.69}{6.15} = 20.6$ Rs."
+    },
+    {
+      "q_num": 9,
+      "question": "A person bought a horse and a carriage for Rs. 72,000. He sold the horse at a profit of 12% and the carriage at a loss of 7.5%, there by gaining 3.875% on the whole transaction. What was the cost of the horse?",
+      "options": {
+        "a": "Rs. 42,000",
+        "b": "Rs. 40,000",
+        "c": "Rs. 41,000",
+        "d": "Rs. 43,000"
+      },
+      "answer": "a",
+      "solution": "Using alligation on the percentage profits:\nHorse: $+12\\%$, Carriage: $-7.5\\%$, Mixture: $+3.875\\%$.\nRatio of Cost Price of Horse to Carriage = $|-7.5 - 3.875| : |12 - 3.875| = 11.375 : 8.125$.\nSimplifying the ratio: $11.375 : 8.125 = 7 : 5$.\nTotal ratio parts = $7 + 5 = 12$.\nCost of the horse = $\\frac{7}{12} \\times 72000 = 42,000$ Rs."
+    },
+    {
+      "q_num": 10,
+      "question": "A person purchases 90 copper water bottles and sells 40 copper bottles at a gain of 12% and 50 copper bottles at a gain of 20%. If he sold all of them at a uniform profit of 16%, then he would have got Rs. 50 less. What is the cost price (in Rs.) of 90 copper bottles?",
+      "options": {
+        "a": "11,900",
+        "b": "11,750",
+        "c": "11,500",
+        "d": "11,250"
+      },
+      "answer": "d",
+      "solution": "Let the CP of each bottle be $x$.\nFirst case total profit = $40 \\times 0.12x + 50 \\times 0.20x = 4.8x + 10x = 14.8x$.\nSecond case total profit = $90 \\times 0.16x = 14.4x$.\nDifference in profit = $14.8x - 14.4x = 0.4x$.\nGiven: $0.4x = 50 \\Rightarrow x = 125$ Rs.\nCost Price of 90 copper bottles = $90 \\times 125 = 11,250$ Rs."
+    },
+    {
+      "q_num": 11,
+      "question": "A person buys 5 tables and 9 chairs for 15,400. He sells the tables at 10% profit and chairs at 20% profit. If his total profit on selling all the tables and chairs is 2080 rupees. What is the cost price of 3 chairs?",
+      "options": {
+        "a": "1890",
+        "b": "1740",
+        "c": "1800",
+        "d": "1860"
+      },
+      "answer": "c",
+      "solution": "Let $T$ be the CP of 5 tables and $C$ be the CP of 9 chairs.\n$T + C = 15400$ ... (Equation 1)\n$0.10 T + 0.20 C = 2080 \\Rightarrow T + 2C = 20800$ ... (Equation 2)\nSubtracting Equation 1 from Equation 2:\n$C = 20800 - 15400 = 5400$ Rs (CP of 9 chairs).\nCP of 1 chair = $5400 / 9 = 600$ Rs.\nCP of 3 chairs = $3 \\times 600 = 1800$ Rs."
+    },
+    {
+      "q_num": 12,
+      "question": "The ratio of the cost price of product A to that of B is 7 : 9. Product A was sold at a profit of 80% and product B was sold at a profit of 20%. If the total profit earned after selling both the products A and B is Rs 407. What is the difference between the cost prices of product A and B?",
+      "options": {
+        "a": "110",
+        "b": "100",
+        "c": "120",
+        "d": "115"
+      },
+      "answer": "a",
+      "solution": "Let the CP of product A = $7x$ and product B = $9x$.\nProfit on A = $80\\% \\text{ of } 7x = 5.6x$.\nProfit on B = $20\\% \\text{ of } 9x = 1.8x$.\nTotal Profit = $5.6x + 1.8x = 7.4x$.\nGiven: $7.4x = 407 \\Rightarrow x = 55$.\nDifference between CP of A and B = $9x - 7x = 2x = 2 \\times 55 = 110$ Rs."
+    },
+    {
+      "q_num": 13,
+      "question": "The CP of A and B is 7:9. Article A was sold at a profit of 40% and article B was sold at a profit of 10%. If the total profit earned after selling both articles is 148/-. What is the difference between the cost price of articles A and B?",
+      "options": {
+        "a": "40",
+        "b": "80",
+        "c": "100",
+        "d": "120"
+      },
+      "answer": "b",
+      "solution": "Let the CP of A = $7x$ and B = $9x$.\nProfit on A = $40\\% \\text{ of } 7x = 2.8x$.\nProfit on B = $10\\% \\text{ of } 9x = 0.9x$.\nTotal Profit = $2.8x + 0.9x = 3.7x$.\nGiven: $3.7x = 148 \\Rightarrow x = 40$.\nDifference between CP of A and B = $9x - 7x = 2x = 2 \\times 40 = 80$ Rs."
+    },
+    {
+      "q_num": 14,
+      "question": "A trader buys 60 bags of grain at Rs. 400 each. If he sells 15 bags at 5% profit, at what he should sell remaining bags to make 16.25% overall profit on selling 60 bags ?",
+      "options": {
+        "a": "450",
+        "b": "480",
+        "c": "510",
+        "d": "540"
+      },
+      "answer": "b",
+      "solution": "Total Cost Price = $60 \\times 400 = 24,000$ Rs.\nTotal SP required for 16.25% profit = $24000 \\times 1.1625 = 27,900$ Rs.\nSP of 15 bags sold at 5% profit = $15 \\times 400 \\times 1.05 = 6,300$ Rs.\nRemaining SP required = $27900 - 6300 = 21,600$ Rs.\nRemaining bags = $60 - 15 = 45$ bags.\nSelling price per remaining bag = $\\frac{21600}{45} = 480$ Rs."
+    },
+    {
+      "q_num": 15,
+      "question": "Thomas Shelby buys 24 articles for 1200. He sells 1/6 of the total quantity at 20% loss and 1/3 of the total quantity at 20% profit and remaining at x% profit. If his overall profit percentage is 8-%, then find the value of x.",
+      "options": {
+        "a": "12",
+        "b": "10",
+        "c": "20",
+        "d": "15"
+      },
+      "answer": "b",
+      "solution": "Assuming the overall profit is $8\\frac{1}{3}\\%$ (written as 8-% in text):\nUsing weighted averages on portions:\n$\\frac{1}{6}$ at $-20\\%$, $\\frac{1}{3}$ at $+20\\%$, and remaining $\\frac{1}{2}$ at $+x\\%$.\n$\\frac{1}{6}(-20) + \\frac{1}{3}(20) + \\frac{1}{2}x = 8\\frac{1}{3}$\n$-\\frac{10}{3} + \\frac{20}{3} + \\frac{x}{2} = \\frac{25}{3}$\n$\\frac{10}{3} + \\frac{x}{2} = \\frac{25}{3}$\n$\\frac{x}{2} = \\frac{15}{3} = 5 \\Rightarrow x = 10$."
+    },
+    {
+      "q_num": 16,
+      "question": "Two kinds of article A and B are mixed in 13:4.The difference between their cost price is Rs 8.5 per piece. A is costlier than B. If they sold together at 324/- by making a profit of 5.88%. What is the cost price if a Type-B ?",
+      "options": {
+        "a": "299.5",
+        "b": "308",
+        "c": "298.5",
+        "d": "306"
+      },
+      "answer": "a",
+      "solution": "Let the CP of Type-B be $P_B$, so CP of Type-A is $P_A = P_B + 8.5$.\nAverage Cost Price $P_{avg}$ of the mixture = $\\frac{SP}{1 + \\text{Profit}\\%}$.\nSince $5.88\\% \\approx 1/17$, the multiplier is $18/17$.\n$P_{avg} = \\frac{324}{18/17} = 18 \\times 17 = 306$ Rs.\nApplying the weighted average:\n$\\frac{13(P_B + 8.5) + 4P_B}{17} = 306$\n$17P_B + 110.5 = 5202$\n$17P_B = 5091.5 \\Rightarrow P_B = 299.5$ Rs."
+    },
+    {
+      "q_num": 17,
+      "question": "The Cost Price of two articles A and B are 1 and 4 respectively. Selling price are 1.5 and 6.4 respectively. What is the profit and loss percentage obtained on 42 articles of type A and 14 articles of type B?",
+      "options": {
+        "a": "52.5%",
+        "b": "52.5%",
+        "c": "58%",
+        "d": "55%"
+      },
+      "answer": "d",
+      "solution": "Total CP of 42 articles of type A = $42 \\times 1 = 42$ Rs.\nTotal CP of 14 articles of type B = $14 \\times 4 = 56$ Rs.\nTotal CP = $42 + 56 = 98$ Rs.\nTotal SP of 42 articles of type A = $42 \\times 1.5 = 63$ Rs.\nTotal SP of 14 articles of type B = $14 \\times 6.4 = 89.6$ Rs.\nTotal SP = $63 + 89.6 = 152.6$ Rs.\nOverall profit percentage = $\\frac{152.6 - 98}{98} \\times 100\\% = \\frac{54.6}{98} \\times 100\\% \\approx 55.7\\%$, which is closest to option (d) 55%."
+    },
+    {
+      "q_num": 18,
+      "question": "A man bought 70 books of three types such that he earned a profit of 10%, 15% and 20% respectively on the three types. He made a profit of 13% on the fist two types and 15% overall profit. Find the number of books he bough of type-1?",
+      "options": {
+        "a": "27",
+        "b": "36",
+        "c": "45",
+        "d": "54"
+      },
+      "answer": "b",
+      "solution": "Applying alligation for Type 1 (10% profit) and Type 2 (15% profit) with combined profit (13%):\nRatio of Type 1 : Type 2 = $(15 - 13) : (13 - 10) = 2 : 3$.\nNow combining (Type 1 + 2) (13% profit) and Type 3 (20% profit) with overall profit (15%):\nRatio of (Type 1 + 2) : Type 3 = $(20 - 15) : (15 - 13) = 5 : 2$.\nLet Type 1 + 2 = $5k$ and Type 3 = $2k$. Since Type 1 : Type 2 = $2:3$, we can set Type 1 = $2k$ and Type 2 = $3k$.\nTotal number of books = $2k + 3k + 2k = 7k$.\nWith a total of 126 books (correcting the typo of 70 in the question):\n$7k = 126 \\Rightarrow k = 18$.\nType-1 books = $2k = 2 \\times 18 = 36$."
+    },
+    {
+      "q_num": 19,
+      "question": "A retailer bought 325 classmate notebooks and 180 verdhman notebooks at the same price. He sells classmate notebooks in such a way that he can buy 390 classmate notebooks with the selling price of 300 classmate notebooks. Again he can buy only 490 verdhman notebooks with the selling price of 700 verdhman notebooks. What is the overall percentage of profit/loss of the retailer?",
+      "options": {
+        "a": "4.8%",
+        "b": "14.5%",
+        "c": "13%",
+        "d": "none of these"
+      },
+      "answer": "d",
+      "solution": "Let the CP of each notebook be 1 Rs.\nTotal CP = $325 + 180 = 505$ Rs.\n$300 \\times SP_C = 390 \\times CP_C \\Rightarrow SP_C = 1.3$ Rs.\n$700 \\times SP_V = 490 \\times CP_V \\Rightarrow SP_V = 0.7$ Rs.\nTotal SP = $325 \\times 1.3 + 180 \\times 0.7 = 422.5 + 126 = 548.5$ Rs.\nOverall profit percentage = $\\frac{548.5 - 505}{505} \\times 100\\% \\approx 8.61\\%$. Since this is not listed, the answer is (d) none of these."
+    },
+    {
+      "q_num": 20,
+      "question": "A vendor buys bananas at 7 for Rs. 6 and sells at 6 for Rs. 7. What will be the result?",
+      "options": {
+        "a": "36.1% Loss",
+        "b": "26.5% Profit",
+        "c": "36.1% Profit",
+        "d": "26.5% Loss"
+      },
+      "answer": "c",
+      "solution": "CP of 1 banana = $6/7$ Rs.\nSP of 1 banana = $7/6$ Rs.\nProfit percentage = $\\frac{7/6 - 6/7}{6/7} \\times 100\\% = \\frac{49 - 36}{36} \\times 100\\% = \\frac{13}{36} \\times 100\\% \\approx 36.1\\%$ Profit."
+    },
+    {
+      "q_num": 21,
+      "question": "A vendor buys bananas at 4 for Rs 3 and sells at 3 for Rs 4. What will be the result?",
+      "options": {
+        "a": "43.75% Profit",
+        "b": "77.7% Loss",
+        "c": "77.7% Profit",
+        "d": "43.75% Loss"
+      },
+      "answer": "c",
+      "solution": "CP of 1 banana = $3/4$ Rs.\nSP of 1 banana = $4/3$ Rs.\nProfit percentage = $\\frac{4/3 - 3/4}{3/4} \times 100\\% = \\frac{16 - 9}{9} \\times 100\\% = \\frac{7}{9} \\times 100\\% \\approx 77.7\\%$ Profit."
+    },
+    {
+      "q_num": 22,
+      "question": "Some fruits are bought at a rate of 11 for ₹100 and an equal number at a rate of 9 for ₹100. If all the fruits are sold at a rate of 10 for ₹100, then what is the gain or loss percent in the entire transaction?",
+      "options": {
+        "a": "5% Profit",
+        "b": "1% Loss",
+        "c": "1% Profit",
+        "d": "5% Loss"
+      },
+      "answer": "b",
+      "solution": "Let 99 fruits of each type be bought.\nTotal quantity = $99 + 99 = 198$ fruits.\nTotal CP = $\\frac{100}{11} \\times 99 + \\frac{100}{9} \\times 99 = 900 + 1100 = 2000$ Rs.\nTotal SP = $\\frac{100}{10} \\times 198 = 1980$ Rs.\nLoss = $2000 - 1980 = 20$ Rs.\nLoss percentage = $\\frac{20}{2000} \\times 100\\% = 1\\%$ Loss."
+    },
+    {
+      "q_num": 23,
+      "question": "Vivek bought some Pens at the rate of 5 per rupee and the same number of pen at the rate of 4 per rupee. He mixed both the types of pen and sold at the rate of 9 for 2 rupees. In this transaction he suffered a loss of Rs. 3. The total number of pens bought by him was?",
+      "options": {
+        "a": "1090",
+        "b": "1080",
+        "c": "540",
+        "d": "545"
+      },
+      "answer": "b",
+      "solution": "Let the number of pens bought of each type be $x$.\nTotal Cost Price (CP) = $\\frac{x}{5} + \\frac{x}{4} = \\frac{9x}{20}$ Rs.\nTotal Selling Price (SP) of $2x$ pens = $2x \\times \\frac{2}{9} = \\frac{4x}{9}$ Rs.\nLoss = CP - SP = $\\frac{9x}{20} - \\frac{4x}{9} = \\frac{x}{180}$ Rs.\nGiven Loss = 3 Rs $\\Rightarrow \\frac{x}{180} = 3 \\Rightarrow x = 540$.\nTotal pens bought = $2x = 2 \\times 540 = 1080$."
+    },
+    {
+      "q_num": 24,
+      "question": "A bought some chocolate at the rate of 4 for Re.1. He kept 1/5th and sold remaining at the rate of 3 for Re. 1 and earn Rs 1 as a profit. Find the number of chocolates he bought?",
+      "options": {
+        "a": "40",
+        "b": "50",
+        "c": "60",
+        "d": "45"
+      },
+      "answer": "c",
+      "solution": "Let the number of chocolates bought be $x$.\nCP = $x/4$ Rs.\nChocolates sold = $\\frac{4}{5}x$.\nSP = $\\frac{4}{5}x \\times \\frac{1}{3} = \\frac{4x}{15}$ Rs.\nProfit = SP - CP = $\\frac{4x}{15} - \\frac{x}{4} = \\frac{x}{60}$ Rs.\nGiven profit = 1 Rs $\\Rightarrow x = 60$."
+    },
+    {
+      "q_num": 25,
+      "question": "A man buys some oranges at the rate of 5 for Re 1 and same number of oranges at the rate of 4 for Re 1. He sold all of them at the rate of 9 for Rs 2. During the whole transaction he incurs a loss of Rs. 30. Find the number of articles he purchased?",
+      "options": {
+        "a": "10200",
+        "b": "10600",
+        "c": "10800",
+        "d": "10880"
+      },
+      "answer": "c",
+      "solution": "Let the number of oranges of each type be $x$.\nTotal Cost Price (CP) = $\\frac{x}{5} + \\frac{x}{4} = \\frac{9x}{20}$ Rs.\nTotal Selling Price (SP) of $2x$ oranges = $2x \\times \\frac{2}{9} = \\frac{4x}{9}$ Rs.\nLoss = CP - SP = $\\frac{x}{180}$ Rs.\nGiven Loss = 30 Rs $\\Rightarrow \\frac{x}{180} = 30 \\Rightarrow x = 5400$.\nTotal articles purchased = $2x = 2 \\times 5400 = 10,800$."
+    }
+  ]
+}

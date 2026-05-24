@@ -63,7 +63,7 @@
           "d": "(52, 157, 164)"
         },
         "answer": "c",
-        "solution": "The logic followed here is: 1st number \u00d7 3 - 9 = 2nd number, 2nd number + 7 = 3rd number."
+        "solution": "The logic followed here is: 1st number × 3 - 9 = 2nd number, 2nd number + 7 = 3rd number."
       },
       {
         "q_num": 6,
@@ -75,7 +75,7 @@
           "d": "(50, 153, 211)"
         },
         "answer": "c",
-        "solution": "The logic followed is: (First number \u00d7 3) + 3 = Second number; (Second number \u00d7 3) + 3 = Third number. Checking option (c): (21 \u00d7 3) + 3 = 63 + 3 = 66, and (66 \u00d7 3) + 3 = 198 + 3 = 201."
+        "solution": "The logic followed is: (First number × 3) + 3 = Second number; (Second number × 3) + 3 = Third number. Checking option (c): (21 × 3) + 3 = 63 + 3 = 66, and (66 × 3) + 3 = 198 + 3 = 201."
       },
       {
         "q_num": 7,
@@ -111,11 +111,11 @@
           "d": "32 - 36"
         },
         "answer": "b",
-        "solution": "1) (6 \u00d7 4) = 24, Square of 24 = 576. 2) (1 \u00d7 7) = 7, Square of 7 = 49 \u2260 343."
+        "solution": "1) (6 × 4) = 24, Square of 24 = 576. 2) (1 × 7) = 7, Square of 7 = 49 ≠ 343."
       },
       {
         "q_num": 10,
-        "question": "Select the option that represents the correct set of numbers based on the following pattern: 1st number \u00d7 3 - 9 = 2nd number; 2nd number + 7 = 3rd number.",
+        "question": "Select the option that represents the correct set of numbers based on the following pattern: 1st number × 3 - 9 = 2nd number; 2nd number + 7 = 3rd number.",
         "options": {
           "a": "(36, 99, 106)",
           "b": "(72, 207, 214)",
@@ -125,7 +125,7 @@
           "f": "(52, 157, 164)"
         },
         "answer": "e",
-        "solution": "The logic provided is: 1st number \u00d7 3 - 9 = 2nd number, and implicitly 2nd number + 7 = 3rd number. Checking option (e): 24 \u00d7 3 = 72; 72 - 9 = 63 (Matches 2nd number). 63 + 7 = 70 (Matches 3rd number)."
+        "solution": "The logic provided is: 1st number × 3 - 9 = 2nd number, and implicitly 2nd number + 7 = 3rd number. Checking option (e): 24 × 3 = 72; 72 - 9 = 63 (Matches 2nd number). 63 + 7 = 70 (Matches 3rd number)."
       }
     ]
   },
@@ -149,10 +149,10 @@
       },
       {
         "q_num": 2,
-        "question": "In a certain code language, 'technology improves life' is coded as 'ta@1 mk&8 df=4', 'life needs balance' is coded as 'df=4 lo<7 zx^3', 'technology needs control' is coded as 'lo<7 ta@1 kg$2' and 'control ensures safety' is coded as 'kg$2 pa\u03bb5 qw?6'. Which of the statements is true?",
+        "question": "In a certain code language, 'technology improves life' is coded as 'ta@1 mk&8 df=4', 'life needs balance' is coded as 'df=4 lo<7 zx^3', 'technology needs control' is coded as 'lo<7 ta@1 kg$2' and 'control ensures safety' is coded as 'kg$2 paλ5 qw?6'. Which of the statements is true?",
         "options": {
           "a": "The code for 'Life' is 'zx^3'.",
-          "b": "The code for 'Safety' is 'pa\u03bb5'.",
+          "b": "The code for 'Safety' is 'paλ5'.",
           "c": "The code for 'Technology' is 'df=4'.",
           "d": "The code for 'Improves' is 'mk&8'."
         },
@@ -341,7 +341,7 @@
       },
       {
         "q_num": 8,
-        "question": "If 92 \u00d7 32 = 10, 73 \u00d7 41 = 7 and 26 \u00d7 78 = 9, then what will be the value of 33 \u00d7 28?",
+        "question": "If 92 × 32 = 10, 73 × 41 = 7 and 26 × 78 = 9, then what will be the value of 33 × 28?",
         "options": {
           "a": "30",
           "b": "4",
@@ -349,7 +349,7 @@
           "d": "60"
         },
         "answer": "c",
-        "solution": "The logic followed is: (Digital sum of 1st number) - (Digital difference of 2nd number) = 3rd number. For 92 \u00d7 32: (9+2) - (3-2) = 11 - 1 = 10. For 73 \u00d7 41: (7+3) - (4-1) = 10 - 3 = 7. For 26 \u00d7 78: (2+6) - (8-7) = 8 - 1 = 7 (Note: The provided example logic in the image contains a slight discrepancy with the 26x78=9 result, but based on the provided correct option 12 for 33x28, the pattern is: 3+3 = 6, 8-2 = 6, 6+6=12 or similar operation derived from the digits)."
+        "solution": "The logic followed is: (Digital sum of 1st number) - (Digital difference of 2nd number) = 3rd number. For 92 × 32: (9+2) - (3-2) = 11 - 1 = 10. For 73 × 41: (7+3) - (4-1) = 10 - 3 = 7. For 26 × 78: (2+6) - (8-7) = 8 - 1 = 7 (Note: The provided example logic in the image contains a slight discrepancy with the 26x78=9 result, but based on the provided correct option 12 for 33x28, the pattern is: 3+3 = 6, 8-2 = 6, 6+6=12 or similar operation derived from the digits)."
       }
     ]
   },
@@ -509,7 +509,7 @@
       },
       {
         "q_num": 4,
-        "question": "Study the statement and the two assumptions given below and select the appropriate alternatives that indicate: Statement: \u201cA software engineer changes more jobs than any other professional.\u201d Assumption: I. Software engineers are more greedy. II. The job requirements of a software engineer are more challenging.",
+        "question": "Study the statement and the two assumptions given below and select the appropriate alternatives that indicate: Statement: “A software engineer changes more jobs than any other professional.” Assumption: I. Software engineers are more greedy. II. The job requirements of a software engineer are more challenging.",
         "options": {
           "a": "Only assumption I is implicit.",
           "b": "Only assumption II is implicit.",
@@ -549,7 +549,7 @@
     "questions": [
       {
         "q_num": 1,
-        "question": "L, M, N, O, P and Q are the members in the family. P is married to N. M is the nephew of O. P\u2019s son is married to L. N is not the grandfather of M. N\u2019s daughter is unmarried. How is L related to O?",
+        "question": "L, M, N, O, P and Q are the members in the family. P is married to N. M is the nephew of O. P’s son is married to L. N is not the grandfather of M. N’s daughter is unmarried. How is L related to O?",
         "options": {
           "a": "Sister",
           "b": "Sister-in-law",

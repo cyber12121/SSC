@@ -1,0 +1,306 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": 184,
+      "question": "A shopkeeper is incurring a loss of cost price of 4 pens while selling 20 pens to Ajay. If the shopkeeper had purchased 20 pens at 10% less price and had sold 20 pens to Ajay at 25% more than the selling price, then how much percentage would he have gained (rounded off to 1 decimal place)?",
+      "options": {
+        "a": "8.0",
+        "b": "11.1",
+        "c": "10.0",
+        "d": "12.5"
+      },
+      "answer": "b",
+      "solution": "Let the cost price (CP) of 1 pen be Rs. 1. For 20 pens, total CP = Rs. 20.\nLoss incurred is the CP of 4 pens = Rs. 4.\nSelling Price (SP) of 20 pens = Total CP - Loss = 20 - 4 = Rs. 16.\n\nNew CP of 20 pens (at 10% less) = 20 * 0.9 = Rs. 18.\nNew SP of 20 pens (at 25% more than original SP) = 16 * 1.25 = Rs. 20.\n\nGain = New SP - New CP = 20 - 18 = Rs. 2.\nGain percentage = (2 / 18) * 100% = 11.1%."
+    },
+    {
+      "q_num": 185,
+      "question": "Sachin purchases a watch from a dealer at some price and sells it at 20% profit. The next day he purchases the same watch and marks up the price by 75% and offers a discount of 30%. What is the change in the percentage in the profit that Sachin receives on day 2?",
+      "options": {
+        "a": "17%",
+        "b": "12.5%",
+        "c": "20%",
+        "d": "22.5%"
+      },
+      "answer": "b",
+      "solution": "Let the cost price (CP) of the watch be Rs. 100.\nDay 1 profit% = 20%.\nDay 2: MP is 75% above CP, so MP = Rs. 175.\nHe offers a 30% discount, so SP on Day 2 = 175 * 0.70 = Rs. 122.5.\nDay 2 profit% = 22.5%.\n\nChange in the percentage of the profit received = ((22.5 - 20) / 20) * 100% = (2.5 / 20) * 100% = 12.5%."
+    },
+    {
+      "q_num": 186,
+      "question": "To clear a stock of items, a seller gives an 8% discount on the marked price. He spends ₹x on the promotion of the discount offer. His total cost of the items is ₹2,50,000 and the marked price is 10% more than the cost price. Finally, he earns no profit or no loss. What is the value of x?",
+      "options": {
+        "a": "3000",
+        "b": "6000",
+        "c": "4500",
+        "d": "7500"
+      },
+      "answer": "a",
+      "solution": "Cost price (CP) of items = ₹2,50,000.\nMarked Price (MP) = 10% more than CP = 1.10 * 2,50,000 = ₹2,75,000.\nDiscount given = 8% of MP = 0.08 * 2,75,000 = ₹22,000.\nSelling Price (SP) = MP - Discount = 2,75,000 - 22,000 = ₹2,53,000.\n\nSince he earns no profit or loss, total costs (including promotion) must equal SP:\nCP + x = SP\n2,50,000 + x = 2,53,000\nx = 3000."
+    },
+    {
+      "q_num": 187,
+      "question": "An article is sold at 25 percent loss. If its cost price is doubled and selling price is increased by Rs. 660, then there is a profit of 20 percent. What is the original cost price of the article?",
+      "options": {
+        "a": "400",
+        "b": "360",
+        "c": "480",
+        "d": "500"
+      },
+      "answer": "a",
+      "solution": "Let original cost price (CP) = 100x.\nSince the article is sold at 25% loss, original selling price (SP) = 75x.\nNew CP = 2 * 100x = 200x.\nNew SP = 75x + 660.\n\nWith a profit of 20%, New SP = 1.20 * New CP:\n75x + 660 = 1.2 * 200x\n75x + 660 = 240x\n165x = 660\nx = 4\nOriginal CP = 100x = 400."
+    },
+    {
+      "q_num": 188,
+      "question": "An article is sold at a profit of 30%. If both cost price and selling price of the article are decreased by ₹100, the profit now would be 45%. The original cost price of the article is:",
+      "options": {
+        "a": "400",
+        "b": "250",
+        "c": "300",
+        "d": "500"
+      },
+      "answer": "c",
+      "solution": "Let original cost price = C. Then original selling price = 1.3C.\nDecreasing both by ₹100:\nNew CP = C - 100\nNew SP = 1.3C - 100\n\nGiven the new profit is 45%:\nNew SP = 1.45 * New CP\n1.3C - 100 = 1.45(C - 100)\n1.3C - 100 = 1.45C - 145\n0.15C = 45\nC = 300."
+    },
+    {
+      "q_num": 189,
+      "question": "The marked price of a washing machine is ₹7,200. If it is sold for ₹5512.50, after two successive discounts of x% each. The value of x is:",
+      "options": {
+        "a": "12",
+        "b": "10.5",
+        "c": "12.5",
+        "d": "15"
+      },
+      "answer": "c",
+      "solution": "Marked Price (MP) = 7200, Selling Price (SP) = 5512.50.\nAfter two successive discounts of x%:\n7200 * (1 - x/100)^2 = 5512.50\n(1 - x/100)^2 = 5512.50 / 7200 = 55125 / 72000 = 441 / 576\nTaking square roots on both sides:\n1 - x/100 = 21 / 24 = 7 / 8\nx/100 = 1 - 7/8 = 1/8\nx = 12.5."
+    },
+    {
+      "q_num": 190,
+      "question": "The marked price of an article is ₹530. After two successive discounts, it is sold for ₹396.44. If the first discount is 15%, and the second discount is x%, then what is the value of x?",
+      "options": {
+        "a": "12.5",
+        "b": "10",
+        "c": "10.5",
+        "d": "12"
+      },
+      "answer": "d",
+      "solution": "Marked Price (MP) = 530.\nPrice after the first discount (15%) = 530 * (1 - 0.15) = 530 * 0.85 = 450.5.\nPrice after the second discount (x%) = 450.5 * (1 - x/100) = 396.44.\n1 - x/100 = 396.44 / 450.5 = 0.88\nx/100 = 0.12\nx = 12."
+    },
+    {
+      "q_num": 191,
+      "question": "The marked price of an article is Rs 800. It is sold for Rs 538.56, after offering three successive discounts of 10%, x% and 12%. If a single discount of 2x% is given on the marked price, then the selling price (in Rs) of the article will be?",
+      "options": {
+        "a": "576",
+        "b": "544",
+        "c": "512",
+        "d": "560"
+      },
+      "answer": "d",
+      "solution": "Marked Price (MP) = 800.\nFirst discount of 10% reduces the price to: 800 * 0.9 = Rs. 720.\nNext, apply the 12% discount (since discount order does not affect the final result): 720 * 0.88 = Rs. 633.6.\nFinally, the x% discount is applied: 633.6 * (1 - x/100) = 538.56.\n1 - x/100 = 538.56 / 633.6 = 0.85\nx = 15.\n\nNow, if a single discount of 2x% = 30% is given on MP:\nSP = 800 * (1 - 0.30) = 800 * 0.70 = Rs. 560."
+    },
+    {
+      "q_num": 192,
+      "question": "A shopkeeper sells, by mistake, an article at 32% less than its original selling price and finds that he gets Rs 67.20 less when compared to the original selling price. If he gets a profit of 40% by selling the article at its original selling price, then what is the cost price of the article?",
+      "options": {
+        "a": "Rs 150",
+        "b": "Rs 125",
+        "c": "Rs 180",
+        "d": "Rs 160"
+      },
+      "answer": "a",
+      "solution": "Let the original selling price (SP) be S.\nBy selling at 32% less, the selling price is 0.68S.\nThe difference in prices = S - 0.68S = 0.32S = Rs. 67.20.\nS = 67.20 / 0.32 = Rs. 210.\n\nSince he gets 40% profit at the original SP:\n1.40 * CP = 210\nCP = 210 / 1.40 = Rs. 150."
+    },
+    {
+      "q_num": 193,
+      "question": "Aditya sold article X at a profit of 23% and article Y at a loss of 13%. He earned a profit of Rs.180 in the entire transaction. If article X costs Rs.90 less than article Y, then what is the price of article Y (in Rs.)?",
+      "options": {
+        "a": "2,007",
+        "b": "2,050",
+        "c": "2,100",
+        "d": "2,020"
+      },
+      "answer": "a",
+      "solution": "Let the cost price of article Y be y. \nThen, cost price of article X = y - 90.\nProfit on X = 23% of (y - 90) = 0.23(y - 90).\nLoss on Y = 13% of y = 0.13y.\n\nNet profit = 180:\n0.23(y - 90) - 0.13y = 180\n0.23y - 20.7 - 0.13y = 180\n0.10y = 200.7\ny = 2007."
+    },
+    {
+      "q_num": 194,
+      "question": "Oil equal to 20% of the weight of groundnut is extracted in a mill. The matter left after extraction is sold as cattle feed at the rate of ₹12.5/kg. The groundnuts are bought at ₹20/kg. The processing cost is ₹5/kg. At what price (₹ per kg) should the oil be sold to earn 20% profit on total costs (Total cost = Cost of groundnuts and Processing costs)?",
+      "options": {
+        "a": "250",
+        "b": "150",
+        "c": "200",
+        "d": "100"
+      },
+      "answer": "d",
+      "solution": "Consider 100 kg of groundnuts purchased.\nTotal Cost = Cost of groundnuts + Processing costs = 100 kg * ₹20/kg + 100 kg * ₹5/kg = ₹2000 + ₹500 = ₹2500.\nTarget Profit = 20% of total cost = 0.20 * ₹2500 = ₹500.\nTotal required revenue = ₹2500 + ₹500 = ₹3000.\n\nFrom 100 kg of groundnuts:\nOil extracted = 20% of 100 kg = 20 kg.\nLeftover matter = 80 kg.\nRevenue from leftover matter (sold as cattle feed) = 80 kg * ₹12.5/kg = ₹1000.\n\nRequired revenue from oil = Total revenue - Leftover revenue = 3000 - 1000 = ₹2000.\nSelling price of oil per kg = ₹2000 / 20 kg = ₹100/kg."
+    },
+    {
+      "q_num": 195,
+      "question": "A trader gives 5% discount on the marked price of an article and gives 4 articles free for buying 14 articles and gains 33% in the entire transaction. Assuming a customer pays for 14 articles, the marked price of an article is what per cent more than its cost price?",
+      "options": {
+        "a": "79",
+        "b": "80",
+        "c": "81",
+        "d": "90"
+      },
+      "answer": "b",
+      "solution": "Let CP of 1 article = C. \nTrader gives 14 + 4 = 18 articles in total.\nTotal CP of 18 articles = 18C.\nOverall profit is 33%, so overall SP of the transaction = 1.33 * 18C = 23.94C.\n\nThe customer pays for 14 articles with a 5% discount on Marked Price (M).\nSP of 1 article paid by customer = 0.95M.\nTotal amount paid by customer for 14 articles = 14 * 0.95M = 13.3M.\n\nEquating both SPs:\n13.3M = 23.94C\nM / C = 23.94 / 13.3 = 1.8.\nThus, Marked Price is 80% more than Cost Price."
+    },
+    {
+      "q_num": 196,
+      "question": "Ramanna purchased raw materials for a certain price to manufacture a product. However, owing to shortage of labour, 22.5% of the raw materials could not be utilised and got wasted. 80% of the cost of raw materials used was added as the cost of manufacturing. If Ramanna could sell his product at a price to earn an overall profit of 20% after offering a discount of 20%, how many times of the total cost of the raw materials purchased was the marked price of the product?",
+      "options": {
+        "a": "2.42 times",
+        "b": "2.44 times",
+        "c": "2.43 times",
+        "d": "2.40 times"
+      },
+      "answer": "c",
+      "solution": "Let the total cost of raw materials purchased = 100.\nWasted raw materials = 22.5% of 100 = 22.5.\nUsed raw materials = 100 - 22.5 = 77.5.\nManufacturing cost = 80% of the cost of used raw materials = 0.80 * 77.5 = 62.\nTotal cost to produce the product = Cost of raw materials purchased + Manufacturing cost = 100 + 62 = 162.\n\nTo make an overall profit of 20%, Selling Price (SP) = 1.20 * 162 = 194.4.\nWith a discount of 20%, SP = 0.80 * Marked Price (MP):\n0.80 * MP = 194.4\nMP = 194.4 / 0.80 = 243.\n\nRatio of Marked Price to cost of raw materials purchased = 243 / 100 = 2.43 times."
+    },
+    {
+      "q_num": 197,
+      "question": "A sells an item at 20% profit to B, B sells the same at 10% profit to C and receives ₹1,32,000.0 Had C purchased the same item from A, he would have spent 5% less than what he spent with B. What profit would A have made then?",
+      "options": {
+        "a": "₹24,540",
+        "b": "₹25, 540",
+        "c": "₹24,450",
+        "d": "₹25,400"
+      },
+      "answer": "d",
+      "solution": "Let A's cost price = 100x.\nA sells to B at 20% profit, so B's CP = 120x.\nB sells to C at 10% profit, so C's CP = 1.10 * 120x = 132x.\nGiven, C paid ₹1,32,000:\n132x = 1,32,000 => x = 1000.\nThus, A's CP = ₹100,000.\n\nIf C purchased directly from A, he would spend 5% less than what he paid to B (C spent ₹1,32,000 with B, but wait, the question says \"spent with B\", which refers to C's purchase price of ₹1,32,000):\nNew SP for A = 1,32,000 * 0.95 = ₹125,400.\nIn this case, A's profit = New SP - A's CP = 125,400 - 100,000 = ₹25,400."
+    },
+    {
+      "q_num": 198,
+      "question": "A sells an article to B at a gain of 16%. B sells it to C at a loss of 15% and C sells it to D at a gain of 20%. If the difference between the profits earned by C and A is Rs. 248, then the loss (in Rs.) incurred by B is:",
+      "options": {
+        "a": "1160",
+        "b": "1025",
+        "c": "1250",
+        "d": "1075"
+      },
+      "answer": "a",
+      "solution": "Let Cost Price of A = 100x.\nA sells to B at 16% profit, so A's SP / B's CP = 116x. Profit of A = 16x.\nB sells to C at 15% loss, so B's SP / C's CP = 116x * 0.85 = 98.6x. Loss of B = 116x - 98.6x = 17.4x.\nC sells to D at 20% profit, so C's SP = 98.6x * 1.2 = 118.32x. Profit of C = 118.32x - 98.6x = 19.72x.\n\nGiven, difference between profits of C and A = 248:\n19.72x - 16x = 248\n3.72x = 248\nx = 248 / 3.72 = 200 / 3.\n\nLoss incurred by B = 17.4x = 17.4 * (200 / 3) = Rs. 1160."
+    },
+    {
+      "q_num": 199,
+      "question": "A sells an article to B at a loss of 20%, B sells it to C at a profit of 12.5% and C sells it to D at a loss of 8%. If D buys it for ₹248.40, then what is the difference between the loss incurred by A and C?",
+      "options": {
+        "a": "36.80",
+        "b": "38.40",
+        "c": "42.60",
+        "d": "39.20"
+      },
+      "answer": "b",
+      "solution": "Let CP of A = 100x.\nA sells to B at 20% loss, so SP of A / CP of B = 80x. Loss of A = 20x.\nB sells to C at 12.5% profit, so SP of B / CP of C = 80x * 1.125 = 90x.\nC sells to D at 8% loss, so SP of C / CP of D = 90x * 0.92 = 82.8x. Loss of C = 90x - 82.8x = 7.2x.\n\nD buys it for ₹248.40:\n82.8x = 248.40 => x = 3.\n\nLoss incurred by A = 20x = 20 * 3 = ₹60.\nLoss incurred by C = 7.2x = 7.2 * 3 = ₹21.6.\nDifference = 60 - 21.6 = ₹38.40."
+    },
+    {
+      "q_num": 200,
+      "question": "Cost of 4 pens, 6 note books and 9 files is ₹305. Cost of 3 pens, 4 notebooks and 2 files is ₹145. What is the cost (in Rs) of 5 pens, 8 notebooks and 16 files?",
+      "options": {
+        "a": "415",
+        "b": "465",
+        "c": "440",
+        "d": "Cannot be determined"
+      },
+      "answer": "b",
+      "solution": "Let the cost of a pen, notebook, and file be p, n, and f respectively.\nWe are given:\n4p + 6n + 9f = 305  --- (Equation 1)\n3p + 4n + 2f = 145  --- (Equation 2)\n\nWe need to find the value of 5p + 8n + 16f.\nLet us find coefficients a and b such that:\na(4p + 6n + 9f) + b(3p + 4n + 2f) = 5p + 8n + 16f\nComparing coefficients:\n4a + 3b = 5\n6a + 4b = 8\n9a + 2b = 16\n\nSolving the first two equations, we find:\nFrom 6a + 4b = 8, we get 3a + 2b = 4 => 2b = 4 - 3a.\nSubstitute into 4a + 3b = 5:\n4a + 1.5(4 - 3a) = 5\n4a + 6 - 4.5a = 5\n-0.5a = -1 => a = 2.\nThen 2b = 4 - 3(2) = -2 => b = -1.\n\nVerify with the third coefficient:\n9a + 2b = 9(2) + 2(-1) = 18 - 2 = 16. This is consistent.\n\nTherefore, the required cost is:\n2 * (305) - 1 * (145) = 610 - 145 = Rs. 465."
+    },
+    {
+      "q_num": 201,
+      "question": "If 3 notebooks and 5 pens together cost ₹155 while 8 pens and 5 pencils together cost ₹188 and 5 notebooks and 3 pencils cost ₹161, then the cost (in ₹) of 1 notebook, 1 pen and 1 pencil is:",
+      "options": {
+        "a": "45",
+        "b": "53",
+        "c": "48",
+        "d": "59"
+      },
+      "answer": "b",
+      "solution": "Let n, p, l represent the cost of one notebook, one pen, and one pencil respectively.\n3n + 5p = 155   --- (1)\n8p + 5l = 188   --- (2)\n5n + 3l = 161   --- (3)\n\nFrom (1): n = (155 - 5p)/3\nFrom (2): l = (188 - 8p)/5\n\nSubstitute into (3):\n5 * ((155 - 5p)/3) + 3 * ((188 - 8p)/5) = 161\nMultiply the entire equation by 15:\n25 * (155 - 5p) + 9 * (188 - 8p) = 2415\n3875 - 125p + 1692 - 72p = 2415\n5567 - 197p = 2415\n197p = 3152 => p = 16.\n\nNow find n and l:\nn = (155 - 5*16)/3 = 75/3 = 25.\nl = (188 - 8*16)/5 = 60/5 = 12.\n\nCost of 1 notebook, 1 pen, and 1 pencil = n + p + l = 25 + 16 + 12 = ₹53."
+    },
+    {
+      "q_num": 202,
+      "question": "B purchased 15 kg apples at the rate of ₹180 per kg from a whole seller who uses a weight of 950 grams for the kg weight. B sold all these apples at ₹180 per kg but used a weight of 750 grams for the kg weight. Fid the percentage profit earned by B in the transaction, Correct to 2 places of decimal)",
+      "options": {
+        "a": "33.33%",
+        "b": "26.67%",
+        "c": "22.55%",
+        "d": "25.75%"
+      },
+      "answer": "b",
+      "solution": "When B buys 15 kg, the seller uses 950g instead of 1 kg.\nSo B receives: 15 * 0.950 = 14.25 kg.\nB's cost = 15 * 180 = ₹2700.\n\nWhen B sells, he sells 14.25 kg but uses a 750g weight.\nTotal equivalent weight billed to customers = 14.25 / 0.750 = 19 kg.\nTotal revenue = 19 * 180 = ₹3420.\n\nProfit = 3420 - 2700 = ₹720.\nProfit percentage = (720 / 2700) * 100% = 26.67%."
+    },
+    {
+      "q_num": 203,
+      "question": "An oil merchant wants to make a minimum profit of ₹2,100 by selling 50 litres of oil he purchased at ₹236 per litre. For this, he adds a few litres of duplicate oil whose cost price is ₹180 per litre and sells at ₹250 per litre. How many litres of duplicate oil is needed for this purpose?",
+      "options": {
+        "a": "16 litres",
+        "b": "18 litres",
+        "c": "22 litres",
+        "d": "20 litres"
+      },
+      "answer": "d",
+      "solution": "Let the merchant add x litres of duplicate oil.\nTotal volume of mixture = 50 + x litres.\nTotal Selling Price (SP) = 250 * (50 + x) = 12500 + 250x.\n\nTotal Cost Price (CP) = CP of original oil + CP of duplicate oil\nTotal CP = 50 * 236 + 180 * x = 11800 + 180x.\n\nProfit = Total SP - Total CP = (12500 + 250x) - (11800 + 180x) = 700 + 70x.\n\nTo make a minimum profit of ₹2100:\n700 + 70x = 2100\n70x = 1400\nx = 20 litres."
+    },
+    {
+      "q_num": 204,
+      "question": "A tailor buys lining clothes from a wholesale merchant and cheats him by using a measurement tape which is 5 cm longer than the normal tape. The tailor offers the customers at cost price while stitching different garments and uses measurements tape which is 5 cm shorter than the normal tape. The gain percent is:",
+      "options": {
+        "a": "10%",
+        "b": "15%",
+        "c": "10 10/25%",
+        "d": "10 10/19%"
+      },
+      "answer": "d",
+      "solution": "Let the normal tape length be 100 cm.\nWhen purchasing, the tailor uses a 105 cm tape, so he gets 105 cm while paying for 100 cm.\nWhen selling, he uses a 95 cm tape, so he delivers 95 cm while charging for 100 cm.\n\nTherefore, his gain ratio on delivering 95 cm of cloth is: (105 - 95) / 95 = 10 / 95.\nGain percentage = (10 / 95) * 100% = 200 / 19% = 10 10/19%."
+    },
+    {
+      "q_num": 205,
+      "question": "During the lockdown, a state government gives 4.5 kg of rice to each person of a family at a cost price of ₹40 per kg. But the distributor uses false weight of 3.75 kg instead of 4.5 kg and distributes the rice. The accumulated rice was sold in the black market at double the price. He showed the government that he distributed 2700 kg of rice. When caught, he was made to pay a fine of 125% of what he earned in the black market. What was his fine amount?",
+      "options": {
+        "a": "₹54,000",
+        "b": "₹45,000",
+        "c": "₹28,000",
+        "d": "₹36,000"
+      },
+      "answer": "b",
+      "solution": "The distributor reported distributing 2700 kg of rice.\nSince each family person receives 4.5 kg, the nominal number of distributions = 2700 / 4.5 = 600 times.\nActual rice distributed = 600 * 3.75 kg = 2250 kg.\nAccumulated rice (withheld) = 2700 - 2250 = 450 kg.\n\nBlack market price = 2 * original cost price = 2 * ₹40 = ₹80 per kg.\nEarnings from the black market = 450 kg * ₹80 = ₹36,000.\nFine amount = 125% of ₹36,000 = 1.25 * 36,000 = ₹45,000."
+    },
+    {
+      "q_num": 206,
+      "question": "A shopkeeper has a fault of 100 g in a 3 kg weight. He sold 3 kg of potatoes to Charu using the same faulty weight for ₹46. The cost price of the potatoes for the seller was ₹12 per kg. How much profit (in ₹) did he earn on the potatoes?",
+      "options": {
+        "a": "10.2",
+        "b": "10",
+        "c": "11.6",
+        "d": "11.2"
+      },
+      "answer": "d",
+      "solution": "A 100 g fault in a 3 kg weight means the weight is actually 2.9 kg (since he is the shopkeeper cheating the customer).\nActual weight of potatoes delivered = 2.9 kg.\nCost Price (CP) of potatoes = ₹12 per kg.\nTotal CP for potatoes delivered = 2.9 * 12 = ₹34.8.\nSelling Price (SP) received = ₹46.\nProfit = SP - CP = 46 - 34.8 = ₹11.2."
+    },
+    {
+      "q_num": 207,
+      "question": "A merchant purchases a cloth at a rate of Rs.100 per meter and receives 5 cm length of cloth free for every 100 cm length of cloth purchased by him. He sells the same cloth at a rate of Rs.110 per meter but cheats his customers by giving 95 cm length of cloth for every 100 cm length of cloth purchased by the customers. If the merchant provides a 5% discount, the resulting profit earned by him is",
+      "options": {
+        "a": "15.5%",
+        "b": "9.7",
+        "c": "4.2",
+        "d": "16"
+      },
+      "answer": "a",
+      "solution": "When purchasing:\nHe gets 105 cm of cloth for Rs. 100.\nSo, CP of 1 cm of cloth = 100 / 105 = 20 / 21 Rs.\n\nWhen selling:\nNominal SP with 5% discount = 110 * 0.95 = Rs. 104.5 per 100 cm.\nSince he only delivers 95 cm for every 100 cm charged:\nSP of 95 cm = Rs. 104.5.\nSP of 1 cm of cloth = 104.5 / 95 = Rs. 1.1.\n\nProfit percentage = ((SP - CP) / CP) * 100% = ((1.1 - 20/21) / (20/21)) * 100% = ((23.1 - 20) / 20) * 100% = 15.5%."
+    },
+    {
+      "q_num": 208,
+      "question": "A faulty weighing machine reads 1 kg when 900 gm is actually weighted on it. The shopkeeper marked the price of his goods by 10%, but unfortunately, he was caught by the metrology department and then they ordered him to repair his weighing machine and gave punishment to sell the goods at a 10% discount on cost price for a month. If each customer is now paying 20 for 1 kg, then before the raid same quantity. (Rounded off to two places of decimal) amount they have paid for the same quantity. (Rounded off to two places of decimal)",
+      "options": {
+        "a": "27.16",
+        "b": "27.04",
+        "c": "28.05",
+        "d": "28.15"
+      },
+      "answer": "a",
+      "solution": "After the raid, the machine is corrected, and SP is at a 10% discount on CP.\nSP per kg now = 20.\nSince SP = 0.9 * CP:\n0.9 * CP = 20 => CP = 20 / 0.9 = 200/9 per kg.\n\nBefore the raid:\nThe machine read 1 kg when actual weight was 900g.\nFor 1 kg of actual weight, the machine would have read 1 / 0.9 = 10/9 kg.\nBefore the raid, the price was marked up by 10%:\nSP per kg on machine reading = 1.1 * CP = 1.1 * 200/9 = 220/9.\n\nAmount paid before the raid for 1 kg of actual quantity:\n= (Machine reading for 1 kg) * (Price per kg on machine) = (10/9) * (220/9) = 2200 / 81 ≈ 27.16."
+    }
+  ]
+}

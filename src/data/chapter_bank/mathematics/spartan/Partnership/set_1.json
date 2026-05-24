@@ -1,0 +1,318 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Partnership",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "P, Q and R are partners and invest in a business. P invests 1/5th of the total investments and Q invests 1/4th of the total investments. What is the ratio of investments of P, Q and R respectively?",
+      "options": {
+        "a": "4:8:11",
+        "b": "4:5:11",
+        "c": "4:7:11",
+        "d": "4:5:9"
+      },
+      "answer": "b",
+      "solution": "Let the total investment be T. \nInvestment of P = T / 5 \nInvestment of Q = T / 4 \nInvestment of R = T - (T/5 + T/4) = T - 9T/20 = 11T/20 \nRatio of their investments P : Q : R = T/5 : T/4 : 11T/20 \nMultiplying by 20 to clear the denominators gives: \nP : Q : R = 4 : 5 : 11."
+    },
+    {
+      "q_num": 2,
+      "question": "A, B and C did certain investments and the ratio of their time periods is 3:2:7 respectively. Ratio of the profits of A, B and C is 4:3:14 respectively. What is the ratio of the investments of A, B and C?",
+      "options": {
+        "a": "1:3:4",
+        "b": "7:9:11",
+        "c": "8:9:12",
+        "d": "2:3:11"
+      },
+      "answer": "c",
+      "solution": "Profit = Investment × Time \nTherefore, Investment = Profit / Time. \nRatio of Time (A : B : C) = 3 : 2 : 7 \nRatio of Profit (A : B : C) = 4 : 3 : 14 \nRatio of Investment (A : B : C) = 4/3 : 3/2 : 14/7 = 4/3 : 3/2 : 2 \nMultiplying by 6 (LCM of 3 and 2) to simplify: \nInvestment Ratio = 8 : 9 : 12."
+    },
+    {
+      "q_num": 3,
+      "question": "Suresh, Dinesh and Ramesh became partners in a business by investing money in the ratio of 3:6:8. If their investments are increased by 5%, 15% and 20%, respectively, then what will be the ratio of their profits for one year?",
+      "options": {
+        "a": "7:46:64",
+        "b": "19:46:64",
+        "c": "21:46:64",
+        "d": "35:46:64"
+      },
+      "answer": "c",
+      "solution": "Let their initial investments be 300, 600, and 800 respectively. \nSuresh's new investment = 300 × 1.05 = 315 \nDinesh's new investment = 600 × 1.15 = 690 \nRamesh's new investment = 800 × 1.20 = 960 \nRatio of their profits (same as investment ratio since time period is equal) = 315 : 690 : 960 \nDividing by 15: \nProfit Ratio = 21 : 46 : 64."
+    },
+    {
+      "q_num": 4,
+      "question": "A and B started a business with Rs.15000 and Rs.30000 respectively. If A and B share profit in the ratio of 1:5 respectively, then what is the ratio of the time period of investment for A and B respectively?",
+      "options": {
+        "a": "1:2",
+        "b": "2:5",
+        "c": "2:3",
+        "d": "2:7"
+      },
+      "answer": "b",
+      "solution": "Ratio of investments of A and B = 15000 : 30000 = 1 : 2 \nRatio of profit of A and B = 1 : 5 \nSince Profit = Investment × Time, we have Time = Profit / Investment. \nRatio of time periods of A and B = 1/1 : 5/2 = 2 : 5."
+    },
+    {
+      "q_num": 5,
+      "question": "Anam and Bikash invest in a business in the ratio 3:2. If in a particular month, Anam gets ₹3,840 as profit, the total profit is?",
+      "options": {
+        "a": "₹ 5,800",
+        "b": "₹6,300",
+        "c": "₹6,550",
+        "d": "₹6,400"
+      },
+      "answer": "d",
+      "solution": "Since no time period is mentioned, profit is shared in the ratio of investments, which is 3 : 2. \nAnam's profit share = 3 units = ₹3,840 \n1 unit = 3840 / 3 = ₹1,280 \nTotal profit = 3 + 2 = 5 units = 5 × 1280 = ₹6,400."
+    },
+    {
+      "q_num": 6,
+      "question": "A, B and C started a business by investing ₹9,000, ₹18,000 and ₹21,000, respectively. If B's share in the profit earned by them is ₹759, then the total profit earned by them together is?",
+      "options": {
+        "a": "₹2,808",
+        "b": "₹2,024",
+        "c": "₹2,504",
+        "d": "₹2,208"
+      },
+      "answer": "b",
+      "solution": "Investment ratio A : B : C = 9000 : 18000 : 21000 = 3 : 6 : 7 \nProfit share ratio = 3 : 6 : 7 \nB's share = 6 units = ₹759 \nTotal profit = 3 + 6 + 7 = 16 units \nTotal profit = (16 / 6) × 759 = (8 / 3) × 759 = 8 × 253 = ₹2,024."
+    },
+    {
+      "q_num": 7,
+      "question": "X, Y and Z invested Rs.4,000, Rs.6,000 and Rs.8,000 respectively in a business. They invested the money for 3, 2 and 4 years respectively. If the total profit is Rs.56,000, then what is the share of Y in the profit?",
+      "options": {
+        "a": "Rs.18,000",
+        "b": "Rs.12,000",
+        "c": "Rs.15,000",
+        "d": "Rs.9,000"
+      },
+      "answer": "b",
+      "solution": "Profit sharing ratio = (Investment × Time) ratio \nProfit ratio X : Y : Z = (4000 × 3) : (6000 × 2) : (8000 × 4) \n= 12000 : 12000 : 32000 = 3 : 3 : 8 \nTotal profit units = 3 + 3 + 8 = 14 units \n14 units = Rs. 56,000 \n1 unit = Rs. 4,000 \nY's share = 3 units = 3 × 4000 = Rs. 12,000."
+    },
+    {
+      "q_num": 8,
+      "question": "Three persons A, B and C invested some money in a business. The share of A is twice the share of B, and the share of B is thrice the share of C. After 1 year, they earned ₹6,000. Find the money A received.",
+      "options": {
+        "a": "₹3,200",
+        "b": "₹3,000",
+        "c": "₹3,600",
+        "d": "₹3,500"
+      },
+      "answer": "c",
+      "solution": "Let C's share be x. \nB's share = 3x \nA's share = 2 × 3x = 6x \nRatio of profit sharing A : B : C = 6 : 3 : 1 \nTotal units = 6 + 3 + 1 = 10 units \n10 units = ₹6,000 \n1 unit = ₹600 \nA's share = 6 units = 6 × 600 = ₹3,600."
+    },
+    {
+      "q_num": 9,
+      "question": "Arvind, Bilal & Carmen invest ₹49,000 towards a business. Arvind invests ₹5,000 more than Bilal and Bilal invests ₹4,000 more than Carmen Out of a total profit of ₹98,000, how much does Bilal receive?",
+      "options": {
+        "a": "₹34,400",
+        "b": "₹33,200",
+        "c": "₹30,500",
+        "d": "₹32,000"
+      },
+      "answer": "d",
+      "solution": "Let Carmen's investment be C. \nBilal's investment B = C + 4000 \nArvind's investment A = B + 5000 = C + 9000 \nTotal investment = A + B + C = 3C + 13000 = 49000 \n3C = 36000 => C = ₹12,000 \nB = 12000 + 4000 = ₹16,000 \nA = 16000 + 5000 = ₹21,000 \nInvestment Ratio A : B : C = 21 : 16 : 12 \nTotal profit units = 21 + 16 + 12 = 49 units \n49 units = ₹98,000 \n1 unit = ₹2,000 \nBilal's profit share = 16 units = 16 × 2000 = ₹32,000."
+    },
+    {
+      "q_num": 10,
+      "question": "Swati starts a business with ₹4,200 and after 5 months, Bani joins Swati as her partner. After a year, the profit is divided among Swati and Bani in the ratio 2:5. What is Bani's contribution?",
+      "options": {
+        "a": "₹18,000",
+        "b": "₹17,050",
+        "c": "₹19,000",
+        "d": "₹16,500"
+      },
+      "answer": "a",
+      "solution": "Swati's investment (Is) = ₹4,200 for 12 months. \nBani's investment (Ib) for 12 - 5 = 7 months. \nProfit ratio Swati : Bani = 2 : 5 \n(Is × Ts) / (Ib × Tb) = 2/5 \n(4200 × 12) / (Ib × 7) = 2/5 \n(600 × 12) / Ib = 2/5 \n7200 / Ib = 2/5 => Ib = (7200 × 5) / 2 = ₹18,000."
+    },
+    {
+      "q_num": 11,
+      "question": "Three partners P, Q and R invested a total of Rs. 52,000 in a business. At the end of the year, P got Rs. 1430, Q got Rs.1870 and R got Rs. 2420 as the share of profit. How much amount did Q invest in the business?",
+      "options": {
+        "a": "₹17000",
+        "b": "₹20400",
+        "c": "₹15300",
+        "d": "₹18700"
+      },
+      "answer": "a",
+      "solution": "Since time is same, profit ratio = investment ratio. \nProfit ratio P : Q : R = 1430 : 1870 : 2420 \nDividing by 110: \nP : Q : R = 13 : 17 : 22 \nTotal units = 13 + 17 + 22 = 52 units \n52 units = Rs. 52,000 \n1 unit = Rs. 1,000 \nQ's investment = 17 units = Rs. 17,000."
+    },
+    {
+      "q_num": 12,
+      "question": "A started a business with a capital of Rs. 54000 and admitted B and C after 4 months and 6 months respectively. At the end of the year, the profit was divided in the ratio 1:4:5. What is the difference between the capitals invested by B and C?",
+      "options": {
+        "a": "Rs. 1,08,000",
+        "b": "Rs. 1,62,000",
+        "c": "Rs. 2,16,000",
+        "d": "Rs. 3,24,000"
+      },
+      "answer": "c",
+      "solution": "A's capital (Ia) = 54,000 for 12 months. \nB's capital (Ib) for 12 - 4 = 8 months. \nC's capital (Ic) for 12 - 6 = 6 months. \nProfit ratio = 1 : 4 : 5 \nProfit A / Profit B = 1 / 4 => (54000 × 12) / (Ib × 8) = 1 / 4 => Ib = Rs. 3,24,000 \nProfit A / Profit C = 1 / 5 => (54000 × 12) / (Ic × 6) = 1 / 5 => Ic = Rs. 5,40,000 \nDifference = Ic - Ib = 5,40,000 - 3,24,000 = Rs. 2,16,000."
+    },
+    {
+      "q_num": 13,
+      "question": "P invested Rs. 4000 for one year. Q joined him with an investment of Rs. 6000 after a few months. If at the end of one year the ratio of profits of P and Q is 4:3, then Q joined after how many months?",
+      "options": {
+        "a": "4 months",
+        "b": "3 months",
+        "c": "8 months",
+        "d": "6 months"
+      },
+      "answer": "d",
+      "solution": "P's investment = 4000 for 12 months. \nQ's investment = 6000 for t months. \nProfit ratio P : Q = 4 : 3 \n(4000 × 12) / (6000 × t) = 4/3 \n48 / 6t = 4/3 => 8 / t = 4/3 => t = 6 months. \nSince Q's money was invested for 6 months, Q joined after 12 - 6 = 6 months."
+    },
+    {
+      "q_num": 14,
+      "question": "A starts a business with ₹45,000 and was joined afterwards by B with ₹30,000. When did B join if the profit at the end of the year was divided in the ratio 2:1?",
+      "options": {
+        "a": "After 6 months",
+        "b": "After 12 months",
+        "c": "After 3 months",
+        "d": "After 9 months"
+      },
+      "answer": "c",
+      "solution": "A's investment = 45000 for 12 months. \nB's investment = 30000 for t months. \nProfit ratio = 2 : 1 \n(45000 × 12) / (30000 × t) = 2/1 \n18 / t = 2 => t = 9 months. \nB's capital was invested for 9 months, meaning B joined after 12 - 9 = 3 months."
+    },
+    {
+      "q_num": 15,
+      "question": "A and B enter into a partnership with ₹25,000 and ₹50,000, respectively, in a company for a year. After 7 months, C gets into a partnership with them with ₹30,000 and A withdraws his contribution after 9 months. What would be C's share in the profit, assuming a total profit of ₹3,900 at the end of the year?",
+      "options": {
+        "a": "₹600",
+        "b": "₹800",
+        "c": "₹1,200",
+        "d": "₹1,000"
+      },
+      "answer": "a",
+      "solution": "A's equivalent capital = 25000 × 9 = 225,000 \nB's equivalent capital = 50000 × 12 = 600,000 \nC's equivalent capital = 30000 × (12 - 7) = 150,000 \nRatio of profit sharing A : B : C = 225000 : 600000 : 150000 = 3 : 8 : 2 \nTotal units = 3 + 8 + 2 = 13 units \n13 units = ₹3,900 => 1 unit = ₹300 \nC's share = 2 units = 2 × 300 = ₹600."
+    },
+    {
+      "q_num": 16,
+      "question": "Mayur and Aham enter into a partnership by making investments in the ratio 2:3. 10% of the total profit goes to charity. If Aham's share is ₹4,860, then what is the total profit (in ₹) earned?",
+      "options": {
+        "a": "7,200",
+        "b": "9,000",
+        "c": "8,500",
+        "d": "11,000"
+      },
+      "answer": "b",
+      "solution": "Let the total profit be P. \nShared profit (90% of total) = 0.9P \nProfit share ratio Mayur : Aham = 2 : 3 \nAham's share = 3/5 × 0.9P = ₹4,860 \n0.54P = 4860 => P = 4860 / 0.54 = ₹9,000."
+    },
+    {
+      "q_num": 17,
+      "question": "A and B invested money in a business in the ratio of 7:5. If 15% of the total profit goes for charity, and A's share in the profit is Rs.5,950, then what is the total profit?",
+      "options": {
+        "a": "Rs.12,500",
+        "b": "Rs.12,000",
+        "c": "Rs.10,500",
+        "d": "Rs.11,750"
+      },
+      "answer": "b",
+      "solution": "Let the total profit be P. \nShared profit (85% of total) = 0.85P \nProfit share ratio A : B = 7 : 5 \nA's share = 7/12 × 0.85P = Rs. 5,950 \n(7 × 0.85P) = 5950 × 12 \n5.95P = 71400 => P = Rs. 12,000."
+    },
+    {
+      "q_num": 18,
+      "question": "Keshav, Surjeet and Thomas started a business with investments in the ratio 2:3:4. The ratio of their period of investments is 5:6:9. 20% of the profit was spent on rent and maintenance of the office. Remaining profit was distributed among themselves. If the difference in the share of profit of Keshav and Surjeet is Rs.7264, then how much is the total profit (in Rs.)?",
+      "options": {
+        "a": "51060",
+        "b": "58112",
+        "c": "46490",
+        "d": "72640"
+      },
+      "answer": "d",
+      "solution": "Investment ratio = 2 : 3 : 4 \nTime ratio = 5 : 6 : 9 \nProfit sharing ratio of Keshav : Surjeet : Thomas = (2 × 5) : (3 × 6) : (4 × 9) = 10 : 18 : 36 = 5 : 9 : 18 \nDifference between Keshav and Surjeet = 9 - 5 = 4 units \n4 units = Rs. 7,264 => 1 unit = Rs. 1,816 \nTotal shared profit (80% of total) = 5 + 9 + 18 = 32 units = 32 × 1816 = Rs. 58,112 \nTotal profit = 58112 / 0.8 = Rs. 72,640."
+    },
+    {
+      "q_num": 19,
+      "question": "A , B and C started a business with the investment of ₹100000, ₹140000, ₹200000 respectively. After 3 months, C left the business, 7 months after C left the business, B also left the business. B and C took their investment with them. At the end of the year, C received his share of profit as ₹1155. What is the total ₹ share of profits of A and B?",
+      "options": {
+        "a": "6150",
+        "b": "5005",
+        "c": "4995",
+        "d": "5555"
+      },
+      "answer": "b",
+      "solution": "A's investment time = 12 months \nC's investment time = 3 months \nB's investment time = 3 + 7 = 10 months \nProfit ratio A : B : C = (100000 × 12) : (140000 × 10) : (200000 × 3) \n= 12 : 14 : 6 = 6 : 7 : 3 \nC's share = 3 units = ₹1,155 => 1 unit = ₹385 \nTotal share of A and B = 6 + 7 = 13 units = 13 × 385 = ₹5,005."
+    },
+    {
+      "q_num": 20,
+      "question": "A and B are partners in a business. A invests Rs 3 lakh more than B. B invests his capital for 7½ months, while A invests his capital for 2½ more months than B. If the share of B in the total profit of Rs 6.25 lakhs is Rs 1.25 lakhs less than the share of A, then what is the capital (in Rs lakhs) invested by B?",
+      "options": {
+        "a": "24",
+        "b": "15",
+        "c": "18",
+        "d": "20"
+      },
+      "answer": "a",
+      "solution": "Let B's investment = x lakhs. A's investment = x + 3 lakhs. \nB's time = 7.5 months. A's time = 7.5 + 2.5 = 10 months. \nLet A's and B's profits be Pa and Pb respectively. \nPa + Pb = 6.25, Pa - Pb = 1.25 => Pa = 3.75 lakhs, Pb = 2.5 lakhs. \nRatio of profits Pa : Pb = 3.75 : 2.5 = 3 : 2. \nTherefore, [(x + 3) × 10] / [x × 7.5] = 3/2 \n(10x + 30) / 7.5x = 3/2 \n20x + 60 = 22.5x => 2.5x = 60 => x = 24 lakhs."
+    },
+    {
+      "q_num": 21,
+      "question": "Two persons A and B invested in a business with ₹115000 and ₹75000 rupees respectively. They agree that 60% of the profit should be divided equally among them and rest is divided between them according to their investment. If A got ₹1144 rupees more than B, then the total profit is?",
+      "options": {
+        "a": "13585",
+        "b": "13855",
+        "c": "17160",
+        "d": "15960"
+      },
+      "answer": "a",
+      "solution": "Investment ratio A : B = 115000 : 75000 = 23 : 15 \nSince 60% of the profit is divided equally, the difference of ₹1,144 is generated entirely from the remaining 40% of the profit. \nLet 40% of the profit be R. \nDifference in sharing of R = (23 - 15)/38 × R = 8/38 × R = 4/19 × R \n4/19 × R = 1144 => R = 1144 × 19 / 4 = 286 × 19 = ₹5,434 \nSince 40% of total profit (P) = 5434, Total Profit P = 5434 / 0.4 = ₹13,585."
+    },
+    {
+      "q_num": 22,
+      "question": "A, B, and C enter into partnership with capitals in the ratio 2/3:3/5:5/6. After 8 months, A increases his share of capital by 25%. If at the end of the year, the total profit earned is Rs 5,820, then the share of C in the profit is?",
+      "options": {
+        "a": "2250",
+        "b": "2350",
+        "c": "2050",
+        "d": "2450"
+      },
+      "answer": "a",
+      "solution": "Initial capitals ratio = 2/3 : 3/5 : 5/6 = 20 : 18 : 25 (multiplying by LCM 30). \nLet initial capitals be 20x, 18x, 25x. \nA's equivalent capital = 20x × 8 + (20x × 1.25) × 4 = 160x + 100x = 260x \nB's equivalent capital = 18x × 12 = 216x \nC's equivalent capital = 25x × 12 = 300x \nProfit ratio A : B : C = 260 : 216 : 300 = 65 : 54 : 75 \nTotal units = 65 + 54 + 75 = 194 units \n194 units = Rs. 5,820 => 1 unit = Rs. 30 \nC's share = 75 units = 75 × 30 = Rs. 2,250."
+    },
+    {
+      "q_num": 23,
+      "question": "X and Y enter into a partnership with capital in ratio 3:5. After 5 months X adds 50% of his capital, while Y withdraws 60% of his capital. What is share (in ₹lakhs) of X in the annual profit of ₹6.84?",
+      "options": {
+        "a": "3.72",
+        "b": "4.2",
+        "c": "3.6",
+        "d": "3.12"
+      },
+      "answer": "a",
+      "solution": "Let X's initial capital be 6 units, Y's initial capital be 10 units. \nFor X: First 5 months capital = 6 units. Remaining 7 months capital = 6 + 50% of 6 = 9 units. \nEquivalent capital of X = 6 × 5 + 9 × 7 = 30 + 63 = 93 units. \nFor Y: First 5 months capital = 10 units. Remaining 7 months capital = 10 - 60% of 10 = 4 units. \nEquivalent capital of Y = 10 × 5 + 4 × 7 = 50 + 28 = 78 units. \nProfit ratio X : Y = 93 : 78 = 31 : 26 \nTotal profit = 31 + 26 = 57 units = ₹6.84 lakhs \n1 unit = 6.84 / 57 = 0.12 lakhs \nX's share = 31 units = 31 × 0.12 = ₹3.72 lakhs."
+    },
+    {
+      "q_num": 24,
+      "question": "Two friends A and B started a business by investing Rs.1,50,000 and Rs.2,50,000 respectively and the profit earned was Rs.6,00,000. Each of them added Rs.50,000 to their respective profits and invested in a different project. If this project gave an yield of Rs.4,20,000, then A’s share in the profit is?",
+      "options": {
+        "a": "1,97,000",
+        "b": "2,35,000",
+        "c": "1,65,000",
+        "d": "1,84,000"
+      },
+      "answer": "c",
+      "solution": "Initial investment ratio A : B = 1,50,000 : 2,50,000 = 3 : 5. \nA's share in the first profit of Rs. 6,00,000 = 3/8 × 6,00,000 = Rs. 2,25,000. \nB's share in the first profit = 5/8 × 6,00,000 = Rs. 3,75,000. \nAfter adding Rs. 50,000 each: \nA's new investment = 2,25,000 + 50,000 = Rs. 2,75,000. \nB's new investment = 3,75,000 + 50,000 = Rs. 4,25,000. \nNew investment ratio A : B = 2,75,000 : 4,25,000 = 11 : 17. \nA's share in the new yield of Rs. 4,20,000 = 11/28 × 4,20,000 = 11 × 15,000 = Rs. 1,65,000."
+    },
+    {
+      "q_num": 25,
+      "question": "A started a business with a capital of ₹1,12,000. After 2 months, B joined the business with a capital ₹80,000, and after another 2 months, C joined the business with a capital of ₹72,000. After 10 months from the start of the business, B withdrew ₹8,000 and C also withdrew ₹8,000. If B received ₹ 9,800 as his share in the profit at the end of a year, then the total profit was?",
+      "options": {
+        "a": "₹ 30,800",
+        "b": "₹ 35,800",
+        "c": "₹ 32,400",
+        "d": "₹ 33,600"
+      },
+      "answer": "d",
+      "solution": "Let's calculate the equivalent capital for 1 month (in thousands): \nA was in business for 12 months: A = 112 × 12 = 1344 \nB joined after 2 months (so in for 10 months). For the first 8 months his capital was 80, for the next 2 months it was 80 - 8 = 72: B = 80 × 8 + 72 × 2 = 640 + 144 = 784 \nC joined after 4 months (so in for 8 months). For the first 6 months capital was 72, for the next 2 months it was 72 - 8 = 64: C = 72 × 6 + 64 × 2 = 432 + 128 = 560 \nProfit ratio A : B : C = 1344 : 784 : 560 = 12 : 7 : 5 \nB's profit share = 7 units = ₹9,800 => 1 unit = ₹1,400 \nTotal profit = 12 + 7 + 5 = 24 units = 24 × 1400 = ₹33,600."
+    },
+    {
+      "q_num": 26,
+      "question": "A, B and C invested capital in the ratio 8:3:9 in a business. At the end of each quarter, A halves his capital, while B doubles his capital and C does not change his capital. At the end of one year, the share of C in the total profit is Rs 960000. What will be B's share (in Rs) in the profit?",
+      "options": {
+        "a": "1440000",
+        "b": "1320000",
+        "c": "1080000",
+        "d": "1200000"
+      },
+      "answer": "d",
+      "solution": "Let initial capitals be 8, 3, 9 respectively. Each quarter consists of 3 months. \nEquivalent monthly capital for A = 3 × 8 + 3 × 4 + 3 × 2 + 3 × 1 = 3 × (8 + 4 + 2 + 1) = 45 \nEquivalent monthly capital for B = 3 × 3 + 3 × 6 + 3 × 12 + 3 × 24 = 3 × (3 + 6 + 12 + 24) = 135 \nEquivalent monthly capital for C = 9 × 12 = 108 \nProfit ratio A : B : C = 45 : 135 : 108 = 5 : 15 : 12 \nC's share = 12 units = Rs. 9,60,000 => 1 unit = Rs. 80,000 \nB's share = 15 units = 15 × 80,000 = Rs. 12,00,000."
+    }
+  ]
+}

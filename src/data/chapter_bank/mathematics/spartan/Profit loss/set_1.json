@@ -1,0 +1,282 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": "1",
+      "question": "Ram bought a TV for 65500 and sold it for 89080. What percentage of profit did he make on TV?",
+      "options": {
+        "a": "36%",
+        "b": "40%",
+        "c": "42%",
+        "d": "34%"
+      },
+      "answer": "a",
+      "solution": "Cost Price (CP) = 65500\nSelling Price (SP) = 89080\nProfit = SP - CP = 89080 - 65500 = 23580\nProfit percentage = (Profit / CP) * 100 = (23580 / 65500) * 100 = 36%"
+    },
+    {
+      "q_num": "2",
+      "question": "If the cost price of a book is 92% of its selling price, then what will be the profit percentage on the sale of the book (Correct to two decimal places)?",
+      "options": {
+        "a": "8.53%",
+        "b": "2.25%",
+        "c": "8.00%",
+        "d": "8.69%"
+      },
+      "answer": "d",
+      "solution": "Let Selling Price (SP) = 100\nCost Price (CP) = 92% of SP = 92\nProfit = SP - CP = 100 - 92 = 8\nProfit percentage = (Profit / CP) * 100 = (8 / 92) * 100 = 8.695% ≈ 8.69%"
+    },
+    {
+      "q_num": "3",
+      "question": "The single discount, which is equal to three successive discounts of 10%, 20% and 35%.",
+      "options": {
+        "a": "42.3%",
+        "b": "65.4%",
+        "c": "53.2%",
+        "d": "48.7%"
+      },
+      "answer": "c",
+      "solution": "Let the initial price be 100.\nPrice after 10% discount = 100 * (1 - 0.10) = 90\nPrice after 20% discount = 90 * (1 - 0.20) = 72\nPrice after 35% discount = 72 * (1 - 0.35) = 46.8\nEquivalent single discount = 100 - 46.8 = 53.2%"
+    },
+    {
+      "q_num": "4",
+      "question": "Find a single discount percentage equivalent to successive discounts of 10%, 20% and 25%.",
+      "options": {
+        "a": "55%",
+        "b": "46%",
+        "c": "20%",
+        "d": "18.3%"
+      },
+      "answer": "b",
+      "solution": "Let the initial price be 100.\nPrice after 10% discount = 90\nPrice after 20% discount = 90 * 0.80 = 72\nPrice after 25% discount = 72 * 0.75 = 54\nEquivalent single discount = 100 - 54 = 46%"
+    },
+    {
+      "q_num": "5",
+      "question": "If the cost price of 28 oranges is equal to the selling price of 24 oranges, then the profit percentage is?",
+      "options": {
+        "a": "16 1/3%",
+        "b": "18 2/3%",
+        "c": "18 1/3%",
+        "d": "16 2/3%"
+      },
+      "answer": "d",
+      "solution": "Given, 28 * CP = 24 * SP\nSP / CP = 28 / 24 = 7 / 6\nProfit % = ((SP - CP) / CP) * 100 = (1 / 6) * 100 = 16 2/3%"
+    },
+    {
+      "q_num": "5.1",
+      "question": "If the selling price of an article is 7/6 of its cost price, then what is the profit percentage in the transaction?",
+      "options": {
+        "a": "19 1/3%",
+        "b": "33 1/3%",
+        "c": "20 2/3%",
+        "d": "16 2/3%"
+      },
+      "answer": "d",
+      "solution": "SP = (7/6) * CP\nSP / CP = 7 / 6\nProfit % = ((SP - CP) / CP) * 100 = (1 / 6) * 100 = 16 2/3%"
+    },
+    {
+      "q_num": "5.2",
+      "question": "The cost price of 30 articles is the same as the selling price of x articles. If the profit is 20%, then the value of x is:",
+      "options": {
+        "a": "26",
+        "b": "25",
+        "c": "28",
+        "d": "27"
+      },
+      "answer": "b",
+      "solution": "Given, 30 * CP = x * SP\nSP / CP = 30 / x\nSince profit is 20%, SP/CP = 1.2\n30 / x = 1.2\nx = 30 / 1.2 = 25"
+    },
+    {
+      "q_num": "5.3",
+      "question": "A fruit vendor recovers the cost of 95 oranges by selling 80 oranges. What is his profit percentage?",
+      "options": {
+        "a": "18.75%",
+        "b": "20.75%",
+        "c": "21.25%",
+        "d": "24.25%"
+      },
+      "answer": "a",
+      "solution": "SP of 80 oranges = CP of 95 oranges\n80 * SP = 95 * CP\nSP / CP = 95 / 80 = 19 / 16\nProfit % = ((19 - 16) / 16) * 100 = (3 / 16) * 100 = 18.75%"
+    },
+    {
+      "q_num": "5.4",
+      "question": "By selling 20 mangoes a person recovers price of 25 mangoes. Then profit percentage is:",
+      "options": {
+        "a": "20%",
+        "b": "25%",
+        "c": "27.5%",
+        "d": "30%"
+      },
+      "answer": "b",
+      "solution": "SP of 20 mangoes = CP of 25 mangoes\n20 * SP = 25 * CP\nSP / CP = 25 / 20 = 5 / 4\nProfit % = ((5 - 4) / 4) * 100 = 25%"
+    },
+    {
+      "q_num": "5.5",
+      "question": "By selling 80 notebooks, Amrita loses an amount equal to the selling price of 10 notebooks. What is her loss per cent (to the nearest integer)?",
+      "options": {
+        "a": "9%",
+        "b": "11%",
+        "c": "10%",
+        "d": "13%"
+      },
+      "answer": "b",
+      "solution": "Loss = 80 * CP - 80 * SP\nGiven, Loss = 10 * SP\n10 * SP = 80 * CP - 80 * SP\n90 * SP = 80 * CP\nSP / CP = 8 / 9\nLoss % = ((CP - SP) / CP) * 100 = (1 / 9) * 100 = 11.11% ≈ 11%"
+    },
+    {
+      "q_num": "5.6",
+      "question": "By selling two articles for Rs 823.75, a person gains the C.P of three articles, find the profit percentage?",
+      "options": {
+        "a": "50%",
+        "b": "100%",
+        "c": "150%",
+        "d": "200%"
+      },
+      "answer": "c",
+      "solution": "Total Gain on 2 articles = CP of 3 articles\nSP of 2 articles - CP of 2 articles = CP of 3 articles\nSP of 2 articles = CP of 5 articles\nSP / CP = 5 / 2\nProfit % = ((5 - 2) / 2) * 100 = (3 / 2) * 100 = 150%"
+    },
+    {
+      "q_num": "5.7",
+      "question": "A person buys 80 kg of rice and sells it at a profit of as much as money he paid for 30 kg find profit percentage?",
+      "options": {
+        "a": "12.5%",
+        "b": "25%",
+        "c": "37.5%",
+        "d": "50%"
+      },
+      "answer": "c",
+      "solution": "Cost Price (CP) = CP of 80 kg\nProfit = CP of 30 kg\nProfit % = (Profit / CP) * 100 = (30 / 80) * 100 = 37.5%"
+    },
+    {
+      "q_num": "5.8",
+      "question": "A person buys 89kgs of rice and sells them at a profit of as much as money he paid for 32kg. Find the profit percent.",
+      "options": {
+        "a": "35%",
+        "b": "35.96%",
+        "c": "36%",
+        "d": "38%"
+      },
+      "answer": "b",
+      "solution": "Profit = CP of 32 kg\nCost Price (CP) = CP of 89 kg\nProfit % = (32 / 89) * 100 ≈ 35.96%"
+    },
+    {
+      "q_num": "5.9",
+      "question": "Kamal purchases 80 articles for ₹11,180 and sells them at a loss equal to the selling price of 6 articles. What will be the selling price of 1 article?",
+      "options": {
+        "a": "₹130",
+        "b": "₹120",
+        "c": "₹135",
+        "d": "₹125"
+      },
+      "answer": "a",
+      "solution": "Loss = 80 * CP - 80 * SP\nGiven, Loss = 6 * SP\n6 * SP = 80 * CP - 80 * SP\n86 * SP = 80 * CP\nSince 80 * CP = 11180,\n86 * SP = 11180\nSP of 1 article = 11180 / 86 = 130"
+    },
+    {
+      "q_num": "5.10",
+      "question": "The selling price of 36 kg rice is Rs.1080. If profit is equal to the selling price of 10 kg rice, find the cost price of 6kg rice.",
+      "options": {
+        "a": "Rs.150",
+        "b": "Rs.180",
+        "c": "Rs.130",
+        "d": "Rs.160"
+      },
+      "answer": "c",
+      "solution": "SP of 36 kg = Rs.1080\nSP of 1 kg = 1080 / 36 = Rs.30\nProfit = SP of 10 kg = 10 * 30 = Rs.300\nCP of 36 kg = SP of 36 kg - Profit = 1080 - 300 = Rs.780\nCP of 6 kg = (780 / 36) * 6 = Rs.130"
+    },
+    {
+      "q_num": "5.11",
+      "question": "A woman sold her earphone for ₹2,000 and got a percentage profit equal to the numerical value of cost price. The cost price of the earphone is:",
+      "options": {
+        "a": "500",
+        "b": "200",
+        "c": "600",
+        "d": "400"
+      },
+      "answer": "d",
+      "solution": "Let CP = x\nProfit % = x%\nSP = x * (1 + x/100) = 2000\nx^2 + 100x - 200000 = 0\n(x + 500)(x - 400) = 0\nx = 400\nCost Price = ₹400"
+    },
+    {
+      "q_num": "5.12",
+      "question": "The numerical value of the profit % is equal to the cost price of a book, on selling it at Rs. 96. So, how much profit is there on selling it?",
+      "options": {
+        "a": "30",
+        "b": "26",
+        "c": "60",
+        "d": "36"
+      },
+      "answer": "d",
+      "solution": "Let CP = x\nProfit % = x%\nSP = x * (1 + x/100) = 96\nx^2 + 100x - 9600 = 0\n(x + 160)(x - 60) = 0 => CP = 60\nProfit % = 60%\nProfit = 60% of 60 = Rs.36"
+    },
+    {
+      "q_num": "5.13",
+      "question": "The numerical value of the profit % is equal to the cost price of a book, on selling it at Rs. 31.25. So, what is the cost price of the book?",
+      "options": {
+        "a": "30",
+        "b": "25",
+        "c": "20",
+        "d": "24"
+      },
+      "answer": "b",
+      "solution": "Let CP = x\nProfit % = x%\nSP = x * (1 + x/100) = 31.25\nx^2 + 100x - 3125 = 0\n(x + 125)(x - 25) = 0\nx = 25\nCost Price = Rs.25"
+    },
+    {
+      "q_num": "5.14",
+      "question": "The numerical value of the profit % is equal to the cost price of a book, on selling it at Rs. 144. So, what is the cost price of the book?",
+      "options": {
+        "a": "70",
+        "b": "75",
+        "c": "80",
+        "d": "85"
+      },
+      "answer": "c",
+      "solution": "Let CP = x\nProfit % = x%\nSP = x * (1 + x/100) = 144\nx^2 + 100x - 14400 = 0\n(x + 180)(x - 80) = 0\nx = 80\nCost Price = Rs.80"
+    },
+    {
+      "q_num": "6",
+      "question": "A shopkeeper earns 10% on an investment but loses 20% on another investment. If the ratio of the two investments is 2:3, then the combined loss percentage is:",
+      "options": {
+        "a": "8% Loss",
+        "b": "8% Profit",
+        "c": "15% Profit",
+        "d": "15% Loss"
+      },
+      "answer": "a",
+      "solution": "Let the investments be 200 and 300 (ratio 2:3).\nEarnings on first investment = 10% of 200 = +20\nLoss on second investment = 20% of 300 = -60\nNet combined result = 20 - 60 = -40 (Loss of 40)\nCombined Loss % = (40 / 500) * 100 = 8% Loss"
+    },
+    {
+      "q_num": "7",
+      "question": "Three fourth of a consignment was sold at a profit of 8% and the rest at a loss of 4%. If there was an overall profit of Rs. 600, then find the values of the consignment.",
+      "options": {
+        "a": "Rs.15,000",
+        "b": "Rs.12,000",
+        "c": "Rs.18,000",
+        "d": "Rs.6,000"
+      },
+      "answer": "b",
+      "solution": "Let total value of consignment be x.\nProfit on three-fourth = (3/4) * x * 8% = 0.06x\nLoss on the rest = (1/4) * x * (-4%) = -0.01x\nNet profit = 0.06x - 0.01x = 0.05x\nGiven, 0.05x = 600\nx = 600 / 0.05 = Rs.12,000"
+    },
+    {
+      "q_num": "8",
+      "question": "A shopkeeper bought a table for ₹4600 and a chair for ₹1800. He sells the table with 10% gain and the chair with 6% gain. Find the overall gain percentage.",
+      "options": {
+        "a": "7 3/4",
+        "b": "8",
+        "c": "8 7/8",
+        "d": "16"
+      },
+      "answer": "c",
+      "solution": "Gain on table = 10% of 4600 = ₹460\nGain on chair = 6% of 1800 = ₹108\nTotal Gain = 460 + 108 = ₹568\nTotal Cost Price = 4600 + 1800 = ₹6400\nOverall Gain % = (568 / 6400) * 100 = 568 / 64 = 71 / 8 = 8 7/8%"
+    },
+    {
+      "q_num": "9",
+      "question": "Suresh purchased a computer table for ₹9,000 and a center table for ₹4,000. He sold the computer table with 8% profit. With what profit percentage should he sell the centre table so has to gain 10% on the whole transaction?",
+      "options": {
+        "a": "15",
+        "b": "12",
+        "c": "14",
+        "d": "14.5"
+      },
+      "answer": "d",
+      "solution": "Total Cost = 9000 + 4000 = ₹13,000\nTotal Profit required = 10% of 13000 = ₹1,300\nProfit from computer table = 8% of 9000 = ₹720\nProfit needed from center table = 1300 - 720 = ₹580\nRequired profit % on center table = (580 / 4000) * 100 = 14.5%"
+    }
+  ]
+}

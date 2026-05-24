@@ -1,0 +1,402 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Number System",
+  "questions": [
+    {
+      "q_num": 253,
+      "question": "The number 1254216 is divisible\nby which of the following numbers?",
+      "options": {
+        "a": "8",
+        "b": "11",
+        "c": "5",
+        "d": "16"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 254,
+      "question": "Find the sum of 3 + 37+3+....\n+3,",
+      "options": {
+        "a": "9840",
+        "b": "6561",
+        "c": "6560",
+        "d": "3280"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 255,
+      "question": "The number 2918245 is divisible\nby which of the following numbers?",
+      "options": {
+        "a": "3",
+        "b": "9",
+        "c": "11",
+        "d": "12"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 256,
+      "question": "67> + 67 + 6 + 6 is divisible by :",
+      "options": {
+        "a": "254",
+        "b": "259",
+        "c": "256",
+        "d": "255"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 257,
+      "question": "If a car covers 90 km using 4\nlitres of petrol, how much distance (in\nkm) will it cover using 32 litres of petrol?",
+      "options": {
+        "a": "720",
+        "b": "710",
+        "c": "680",
+        "d": "650"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 258,
+      "question": "In a division sum, the divisor is 10\ntimes the quotient and 5 times the\nremainder. If the remainder is 12, then\nwhat is the dividend?\n(a) 368 = (b) 372\n(c)386 (d) 352\n\nQ.259.Which of the following numbers\nwill completely divide 41^2 + 413 + 414 + 415",
+      "options": {
+        "a": "17",
+        "b": "11",
+        "c": "3",
+        "d": "7"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 260,
+      "question": "Without actual division, find the remainder when 379843 is divided by 3.",
+      "options": {
+        "a": "4",
+        "b": "1",
+        "c": "3",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 261,
+      "question": "If the six-digit number 15x1y2 is\ndivisible by 44, then the minimum value\nof (x + y) is equal to:",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "8",
+        "d": "7"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 262,
+      "question": "If a 9-digit number 389x6378y is\ndivisible by 72, then the value of 6x + 7y\nis:",
+      "options": {
+        "a": "64",
+        "b": "32",
+        "c": "16 ~",
+        "d": "28"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 263,
+      "question": "Which of the following numbers is\ndivisible by 9^2",
+      "options": {
+        "a": "553986",
+        "b": "350846",
+        "c": "941201",
+        "d": "132490"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 264,
+      "question": "The five-digit number 725yz is\ndivisible by 15. What is the maximum\npossible value of the product of y and z",
+      "options": {
+        "a": "45",
+        "b": "30",
+        "c": "35",
+        "d": "40"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 265,
+      "question": "If the 6 digit number 7002 * 4 is\ncompletely divisible by 8, then the\nsmallest integer in place of * will be:",
+      "options": {
+        "a": "0",
+        "b": "2",
+        "c": "4",
+        "d": "6"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 266,
+      "question": "If 72 * 72 is divisible by 9, the\nmissing * digit will be:",
+      "options": {
+        "a": "50r8",
+        "b": "Oor9",
+        "c": "2o0r4",
+        "d": "3 or6"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 267,
+      "question": "The number 7918378 is divisible by:",
+      "options": {
+        "a": "13",
+        "b": "9",
+        "c": "11",
+        "d": "4"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 268,
+      "question": "What least number must be\nsubtracted from 2001 to get a number\nexactly divisible by 17 ?",
+      "options": {
+        "a": "12",
+        "b": "13",
+        "c": "11",
+        "d": "14"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 269,
+      "question": "If * is a digit such that 7235 * is\ndivisible by 11, then the value of * is:",
+      "options": {
+        "a": "9",
+        "b": "6",
+        "c": "5",
+        "d": "8"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 270,
+      "question": "The average of 25 integers is\nzero. What is the maximum possible\nnumber of positive integers?\n(a)12 (b)20.s (~)138.s (dy 24",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 271,
+      "question": "Find the largest number which\nshould replace P in the 7- digit number\n87893P4 to make the number divisible by\n4.",
+      "options": {
+        "a": "8",
+        "b": "9",
+        "c": "2",
+        "d": "0"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 272,
+      "question": "Find the smallest non-zero value\nof k so that 7-digit number 48397k5 is\ndivisible by 9",
+      "options": {
+        "a": "2",
+        "b": "5",
+        "c": "4",
+        "d": "9"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 273,
+      "question": "What is the least number that\nmust be added to the greatest 6-digit\nnumber so that the sum will be exactly\ndivisible by 294 ?",
+      "options": {
+        "a": "234",
+        "b": "194",
+        "c": "269",
+        "d": "189"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 274,
+      "question": "Which of the following sets is\nsuch that all its elements are divisors of\nthe number 2520 ?\n(a) 12, 49, 18\n(c) 16, 15, 14\n(b) 8,9,7\n(d) 21, 10, 25",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 275,
+      "question": "What will be the greatest number 32a78b, which is divisible by 3 but NOT divisible by 9 ? (Where a and b are single digit numbers).",
+      "options": {
+        "a": "324781",
+        "b": "329787",
+        "c": "326787",
+        "d": "329784"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 276,
+      "question": "The sum of the cubes of two\ngiven numbers is 10234, while the sum\nof the two given numbers is 34. What is\nthe positive difference between the\ncubes of the two given numbers ?",
+      "options": {
+        "a": "3484",
+        "b": "3488",
+        "c": "3356",
+        "d": "8602"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 277,
+      "question": "The six-digit number N = 4a6b9c is divisible by 99, then the maximum sum of the digits of N is:",
+      "options": {
+        "a": "18",
+        "b": "36",
+        "c": "45",
+        "d": "27"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 278,
+      "question": "What will be the remainder when\n(265)*\" + 9 is divided by 266 ?",
+      "options": {
+        "a": "8",
+        "b": "6 =",
+        "c": "1",
+        "d": "9"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 279,
+      "question": "A and B have some toffees. If A\ngives one toffee to B, then they have an\nequal number of toffees. If B gives one\ntoffee to A, then the toffees with A are\ndouble with B. The total number of\ntoffees with A and B are",
+      "options": {
+        "a": "12",
+        "b": "10",
+        "c": "14",
+        "d": "15"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 280,
+      "question": "Find the smallest number that\ncan be subtracted from 148109326 so\nthat it becomes divisible by 8.",
+      "options": {
+        "a": "4",
+        "b": "8",
+        "c": "6",
+        "d": "10"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 281,
+      "question": "The largest 5-digit number exactly\ndivisible by 88 is:",
+      "options": {
+        "a": "99990",
+        "b": "99984",
+        "c": "99978",
+        "d": "99968"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 282,
+      "question": "The average of squares of five\nconsecutive odd natural numbers is 233.\nWhat is the average of the largest\nnumber and the smallest number?",
+      "options": {
+        "a": "11",
+        "b": "17",
+        "c": "13",
+        "d": "15"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 283,
+      "question": "When (274 - 1) is divided by 7, the\nremainder is:\n(a)2 (b)O (c)4s (1",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 284,
+      "question": "When a positive integer n is\ndivided by 12, the remainder is 5. What\nwill be the remainder if 8n+7 is\ndivided by 12 ?\n(a)2 (b)5) (c)3 (dd) 4",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 285,
+      "question": "The remainder when 75 x 73 x\n78 x 76 is divided by 34 is:",
+      "options": {
+        "a": "18",
+        "b": "12",
+        "c": "22",
+        "d": "15"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 286,
+      "question": "What is the least number of\nsoldiers that can be drawn up in troops\nof 10, 12, 15, 18 and 20 soldiers, and also\nin form of a perfect square ?",
+      "options": {
+        "a": "180",
+        "b": "625",
+        "c": "900",
+        "d": "400\n\n========================================================================\n  END OF DOCUMENT\n========================================================================"
+      },
+      "answer": "c",
+      "solution": ""
+    }
+  ]
+}

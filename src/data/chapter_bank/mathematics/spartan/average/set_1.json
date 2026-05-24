@@ -1,0 +1,222 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "The average of odd numbers upto 100 is:",
+      "options": {
+        "a": "50.5",
+        "b": "50",
+        "c": "49.5",
+        "d": "NONE"
+      },
+      "answer": "b",
+      "solution": "The odd numbers up to 100 are: 1, 3, 5, ..., 99.\nThese numbers form an arithmetic progression (AP) with the first term $a = 1$, last term $l = 99$, and number of terms $n = 50$.\nThe average of an AP is given by:\n$$\\text{Average} = \\frac{\\text{First term} + \\text{Last term}}{2} = \\frac{1 + 99}{2} = 50$$"
+    },
+    {
+      "q_num": 2,
+      "question": "The average of square of natural numbers from 1 to 71",
+      "options": {
+        "a": "1616",
+        "b": "1716",
+        "c": "1728",
+        "d": "NONE"
+      },
+      "answer": "b",
+      "solution": "The sum of the squares of the first $n$ natural numbers is given by the formula:\n$$\\text{Sum} = \\frac{n(n+1)(2n+1)}{6}$$\nThus, the average of the squares of the first $n$ natural numbers is:\n$$\\text{Average} = \\frac{(n+1)(2n+1)}{6}$$\nHere, $n = 71$:\n$$\\text{Average} = \\frac{(71 + 1)(2 \\times 71 + 1)}{6} = \\frac{72 \\times 143}{6} = 12 \\times 143 = 1716$$"
+    },
+    {
+      "q_num": 3,
+      "question": "The average of eleven consecutive positive integers in increasing order is 251. If the next four odd numbers are included, then what is the average of all the numbers?",
+      "options": {
+        "a": "253",
+        "b": "253.4",
+        "c": "254",
+        "d": "252.6"
+      },
+      "answer": "b",
+      "solution": "Let the 11 consecutive positive integers be $x, x+1, \\dots, x+10$.\nTheir average is the middle term, which is the 6th term: \n$$x+5 = 251 \\implies x = 246$$\nSo, the 11 integers are 246, 247, ..., 256. Their sum is:\n$$\\text{Sum}_{11} = 11 \\times 251 = 2761$$\nThe largest of these numbers is 256.\nThe next four odd numbers after 256 are 257, 259, 261, and 263. Their sum is:\n$$\\text{Sum}_{\\text{odd}} = 257 + 259 + 261 + 263 = 1040$$\nNow, the total sum of all 15 numbers is:\n$$\\text{Total Sum} = 2761 + 1040 = 3801$$\nAverage of all 15 numbers is:\n$$\\text{Average} = \\frac{3801}{15} = 253.4$$"
+    },
+    {
+      "q_num": 4,
+      "question": "The sum of eight consecutive even numbers of set-A is 376. What is the sum of different set of five consecutive whose lowest number is 15 more than the mean of set-A?",
+      "options": {
+        "a": "296",
+        "b": "320",
+        "c": "324",
+        "d": "284"
+      },
+      "answer": "b",
+      "solution": "The sum of eight consecutive even numbers of set-A is 376.\nThe mean of set-A is:\n$$\\text{Mean} = \\frac{376}{8} = 47$$\nThe lowest number of the new set of five consecutive integers is $15$ more than this mean:\n$$\\text{Lowest number} = 47 + 15 = 62$$\nThe five consecutive integers are 62, 63, 64, 65, and 66.\nTheir sum is:\n$$\\text{Sum} = 62 + 63 + 64 + 65 + 66 = 320$$"
+    },
+    {
+      "q_num": 5,
+      "question": "The average of 8 consecutive even numbers written in ascending order is 17. What is the average of the last 3 numbers, 36 and 53?",
+      "options": {
+        "a": "31",
+        "b": "32.2",
+        "c": "31.6",
+        "d": "29.8"
+      },
+      "answer": "a",
+      "solution": "Let the 8 consecutive even numbers be $x-7, x-5, \\dots, x+7$.\nTheir average is 17, which means the middle value (between the 4th and 5th terms) is 17.\nThus, the 8 consecutive even numbers are: 10, 12, 14, 16, 18, 20, 22, and 24.\nThe last 3 numbers are 20, 22, and 24.\nWe need to find the average of these last 3 numbers along with 36 and 53.\nThe total of these 5 numbers is:\n$$\\text{Sum} = 20 + 22 + 24 + 36 + 53 = 155$$\n$$\\text{Average} = \\frac{155}{5} = 31$$"
+    },
+    {
+      "q_num": 6,
+      "question": "If the average of N consecutive Numbers is 23, find the average of N+4 consecutive numbers ?",
+      "options": {
+        "a": "27",
+        "b": "25",
+        "c": "26",
+        "d": "24"
+      },
+      "answer": "b",
+      "solution": "Let the $N$ consecutive numbers be $x, x+1, \\dots, x+N-1$.\nTheir average is:\n$$\\text{Average}_N = \\frac{x + (x+N-1)}{2} = \\frac{2x+N-1}{2} = 23 \\implies 2x+N = 47$$\nIf we extend the series to $N+4$ consecutive numbers, the new sequence is $x, x+1, \\dots, x+N+3$.\nTheir average is:\n$$\\text{Average}_{N+4} = \\frac{x + (x+N+3)}{2} = \\frac{2x+N+3}{2}$$\nSubstituting $2x+N = 47$ into the equation:\n$$\\text{Average}_{N+4} = \\frac{47+3}{2} = \\frac{50}{2} = 25$$"
+    },
+    {
+      "q_num": 7,
+      "question": "The average of 35 consecutive natural numbers is N. Dropping the first 10 numbers and including the next ten numbers the average is changed to M. If the M²-N² = 600. Then find M and N?",
+      "options": {
+        "a": "15,25",
+        "b": "20,30",
+        "c": "35,45",
+        "d": "35,25"
+      },
+      "answer": "d",
+      "solution": "Let the 35 consecutive natural numbers be $x, x+1, \\dots, x+34$.\nTheir average is:\n$$N = \\frac{x + x+34}{2} = x + 17$$\nIf we drop the first 10 numbers ($x, \\dots, x+9$) and add the next 10 numbers ($x+35, \\dots, x+44$), the new series becomes $x+10, \\dots, x+44$.\nThe new average $M$ is:\n$$M = \\frac{(x+10) + (x+44)}{2} = x + 27$$\nComparing $M$ and $N$:\n$$M - N = (x + 27) - (x + 17) = 10$$\nWe are given $M^2 - N^2 = 600$:\n$$(M-N)(M+N) = 600 \\implies 10(M+N) = 600 \\implies M+N = 60$$\nWe have a system of equations:\n1) $M - N = 10$\n2) $M + N = 60$\nAdding these equations gives:\n$$2M = 70 \\implies M = 35$$\nSubtracting them gives:\n$$2N = 50 \\implies N = 25$$\nSo, $(M, N) = (35, 25)$."
+    },
+    {
+      "q_num": 8,
+      "question": "The average of 7 even consecutive natural numbers is N. Dropping the first 2 even Numbers and including the next 2 even numbers the average is changed to M. If the value of M²-N² = 160. Then Find M and N?",
+      "options": {
+        "a": "41,39",
+        "b": "42,40",
+        "c": "40,42",
+        "d": "40,38"
+      },
+      "answer": "a",
+      "solution": "Note: In the question text, the word \"even\" is a typo and should refer to consecutive natural numbers.\nLet the 7 consecutive natural numbers be $x, x+1, \\dots, x+6$.\nTheir average is:\n$$N = \\frac{x + x+6}{2} = x + 3$$\nDropping the first 2 numbers ($x, x+1$) and including the next 2 numbers ($x+7, x+8$) gives the new sequence $x+2, \\dots, x+8$.\nTheir average $M$ is:\n$$M = \\frac{(x+2) + (x+8)}{2} = x + 5$$\nThus, $M - N = 2$.\nGiven $M^2 - N^2 = 160$:\n$$(M-N)(M+N) = 160 \\implies 2(M+N) = 160 \\implies M+N = 80$$\nWe have a system of linear equations:\n1) $M + N = 80$\n2) $M - N = 2$\nSolving this gives $M = 41$ and $N = 39$."
+    },
+    {
+      "q_num": 9,
+      "question": "The average of eleven consecutive positive integers is d. If the last two numbers are excluded, by how much will the average increase or decrease?",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": "Let the 11 consecutive positive integers be $x, x+1, \\dots, x+10$.\nTheir average is the middle term (6th term):\n$$d = x + 5$$\nIf the last two numbers ($x+9, x+10$) are excluded, we are left with 9 consecutive integers: $x, x+1, \\dots, x+8$.\nTheir average is the middle term (5th term):\n$$\\text{New Average} = x + 4$$\nSubtracting the old average from the new average:\n$$\\text{Change} = (x + 4) - (x + 5) = -1$$\nSo, the average decreases by 1."
+    },
+    {
+      "q_num": 10,
+      "question": "If the sum of eighteen consecutive positive integers is a perfect square then find the smallest possible value of sum?",
+      "options": {
+        "a": "225",
+        "b": "169",
+        "c": "289",
+        "d": "324"
+      },
+      "answer": "a",
+      "solution": "Let the 18 consecutive positive integers be $x, x+1, \\dots, x+17$, where $x \\geq 1$.\nTheir sum $S$ is:\n$$S = 18x + \\frac{17 \\times 18}{2} = 18x + 153 = 9(2x + 17)$$\nFor $S$ to be a perfect square, $9(2x + 17)$ must be a perfect square.\nSince 9 is already a perfect square ($3^2$), $2x + 17$ must be a perfect square.\nSince $x$ is an integer, $2x + 17$ is an odd integer.\nAlso, since $x \\geq 1$:\n$$2x + 17 \\geq 19$$\nThe smallest odd perfect square greater than or equal to 19 is $25$ ($5^2$):\n$$2x + 17 = 25 \\implies 2x = 8 \\implies x = 4$$\nThus, the smallest possible value of the sum is:\n$$S = 9 \\times 25 = 225$$"
+    },
+    {
+      "q_num": 11,
+      "question": "The average of the squares of four consecutive odd natural numbers is 201. The average of 7 times of the largest number and 3 times of the smallest number is:",
+      "options": {
+        "a": "76",
+        "b": "78",
+        "c": "72",
+        "d": "66"
+      },
+      "answer": "a",
+      "solution": "Let the four consecutive odd natural numbers be $n-3, n-1, n+1, n+3$ (where $n$ is an even integer).\nThe average of their squares is:\n$$\\frac{(n-3)^2 + (n-1)^2 + (n+1)^2 + (n+3)^2}{4} = 201$$\n$$\\frac{(n^2 - 6n + 9) + (n^2 - 2n + 1) + (n^2 + 2n + 1) + (n^2 + 6n + 9)}{4} = 201$$\n$$\\frac{4n^2 + 20}{4} = 201 \\implies n^2 + 5 = 201 \\implies n^2 = 196 \\implies n = 14$$\nThe numbers are: $11, 13, 15, 17$.\nSmallest number = 11, Largest number = 17.\nWe need the average of 7 times the largest and 3 times the smallest:\n$$\\text{Average} = \\frac{7 \\times 17 + 3 \\times 11}{2} = \\frac{119 + 33}{2} = \\frac{152}{2} = 76$$"
+    },
+    {
+      "q_num": 12,
+      "question": "The average of the squares of four consecutive even natural numbers is 86. The average of 4 times of smallest Number and 2 times of largest number is ?",
+      "options": {
+        "a": "28",
+        "b": "22",
+        "c": "26",
+        "d": "24"
+      },
+      "answer": "d",
+      "solution": "Let the four consecutive even natural numbers be $n-3, n-1, n+1, n+3$ (where $n$ is an odd integer).\nThe average of their squares is:\n$$\\frac{4n^2 + 20}{4} = n^2 + 5 = 86 \\implies n^2 = 81 \\implies n = 9$$\nThe four numbers are: $6, 8, 10, 12$.\nSmallest number = 6, Largest number = 12.\nWe need the average of 4 times the smallest and 2 times the largest:\n$$\\text{Average} = \\frac{4 \\times 6 + 2 \\times 12}{2} = \\frac{24 + 24}{2} = 24$$"
+    },
+    {
+      "q_num": 13,
+      "question": "The average of the squares of five consecutive even natural numbers is 72. The average of 5 times of smallest number and 3 times of largest number is ?",
+      "options": {
+        "a": "26",
+        "b": "28",
+        "c": "30",
+        "d": "32"
+      },
+      "answer": "b",
+      "solution": "Let the 5 consecutive even natural numbers be $n-4, n-2, n, n+2, n+4$.\nTheir squares are:\n$$(n-4)^2 + (n-2)^2 + n^2 + (n+2)^2 + (n+4)^2 = 5n^2 + 40$$\nTheir average is:\n$$\\frac{5n^2 + 40}{5} = n^2 + 8 = 72 \\implies n^2 = 64 \\implies n = 8$$\nThe numbers are: $4, 6, 8, 10, 12$.\nSmallest number = 4, Largest number = 12.\nWe need the average of 5 times the smallest and 3 times the largest:\n$$\\text{Average} = \\frac{5 \\times 4 + 3 \\times 12}{2} = \\frac{20 + 36}{2} = \\frac{56}{2} = 28$$"
+    },
+    {
+      "q_num": 14,
+      "question": "The average of the cube of five consecutive even natural numbers is 704. The average of 6 times of smallest number and 3 times of largest number is",
+      "options": {
+        "a": "29",
+        "b": "30",
+        "c": "31",
+        "d": "29.5"
+      },
+      "answer": "b",
+      "solution": "Let the 5 consecutive even natural numbers be $n-4, n-2, n, n+2, n+4$.\nThe sum of their cubes is:\n$$(n-4)^3 + (n-2)^3 + n^3 + (n+2)^3 + (n+4)^3 = 5n^3 + 120n$$\nTheir average is:\n$$\\frac{5n^3 + 120n}{5} = n^3 + 24n = 704$$\nTesting integer values for $n$, we find that for $n = 8$:\n$$8^3 + 24(8) = 512 + 192 = 704$$\nSo, the numbers are: $4, 6, 8, 10, 12$.\nSmallest number = 4, Largest number = 12.\nWe need the average of 6 times the smallest and 3 times the largest:\n$$\\text{Average} = \\frac{6 \\times 4 + 3 \\times 12}{2} = \\frac{24 + 36}{2} = 30$$"
+    },
+    {
+      "q_num": 15,
+      "question": "A grocer has a sale of ₹8,425, ₹8,927, ₹8,855, ₹9,230 and ₹8,562 in 5 consecutive weeks. How much sale must he have in the 6th week so that he gets an average sale of ₹8,500?",
+      "options": {
+        "a": "7009",
+        "b": "6997",
+        "c": "6991",
+        "d": "7011"
+      },
+      "answer": "c",
+      "solution": "Based on the Hindi text, the sales for the first 5 weeks are: ₹8,435, ₹8,927, ₹8,855, ₹9,230, and ₹8,562.\nTotal sales for the first 5 weeks:\n$$\\text{Sum}_5 = 8435 + 8927 + 8855 + 9230 + 8562 = 44009$$\nTo get an average sale of ₹8,500 over 6 weeks, the total sales must be:\n$$\\text{Total Sum}_6 = 6 \\times 8500 = 51000$$\nTherefore, the sale in the 6th week must be:\n$$\\text{Sale}_6 = 51000 - 44009 = 6991$$"
+    },
+    {
+      "q_num": 16,
+      "question": "The average of 37 numbers is 57.5.the average of first 18 numbers is 52.5 and average of last 18 numbers is 60.5. Find the 19th number?",
+      "options": {
+        "a": "95.5",
+        "b": "92.5",
+        "c": "93.5",
+        "d": "91.5"
+      },
+      "answer": "c",
+      "solution": "The total sum of all 37 numbers is:\n$$\\text{Total Sum} = 37 \\times 57.5 = 2127.5$$\nThe sum of the first 18 numbers is:\n$$\\text{Sum}_{\\text{first } 18} = 18 \\times 52.5 = 945$$\nThe sum of the last 18 numbers is:\n$$\\text{Sum}_{\\text{last } 18} = 18 \\times 60.5 = 1089$$\nThe 19th number is calculated by:\n$$\\text{19th number} = \\text{Total Sum} - (\\text{Sum}_{\\text{first } 18} + \\text{Sum}_{\\text{last } 18})$$\n$$\\text{19th number} = 2127.5 - (945 + 1089) = 2127.5 - 2034 = 93.5$$"
+    },
+    {
+      "q_num": 17,
+      "question": "The average of 40 numbers is 48.2, the average of the first 15 numbers is 45 and that of the next 22 numbers is 50.5. The 38th number is 1 more than the 39th number, and the 39th number is 3 less than the 40th number. What is the average of the 39th and 40th numbers?",
+      "options": {
+        "a": "49",
+        "b": "48.5",
+        "c": "48",
+        "d": "47.5"
+      },
+      "answer": "d",
+      "solution": "The total sum of 40 numbers is:\n$$\\text{Total Sum} = 40 \\times 48.2 = 1928$$\nSum of the first 15 numbers:\n$$\\text{Sum}_{15} = 15 \\times 45 = 675$$\nSum of the next 22 numbers:\n$$\\text{Sum}_{22} = 22 \\times 50.5 = 1111$$\nSum of these 37 numbers:\n$$\\text{Sum}_{37} = 675 + 1111 = 1786$$\nSum of the remaining 3 numbers (38th, 39th, and 40th):\n$$\\text{Sum}_{3} = 1928 - 1786 = 142$$\nLet the 39th number be $x$.\nThe 38th number is $x + 1$.\nThe 40th number is $x + 3$.\nSo, the sum of these three numbers is:\n$$(x + 1) + x + (x + 3) = 142 \\implies 3x + 4 = 142 \\implies 3x = 138 \\implies x = 46$$\nThus:\n39th number = 46\n40th number = $46 + 3 = 49$\nTheir average is:\n$$\\text{Average} = \\frac{46 + 49}{2} = 47.5$$"
+    },
+    {
+      "q_num": 18,
+      "question": "The average of 10 numbers is 32.5, the average of the first four numbers is 25.6 and that of the last three numbers is 38.2. The 5th number is 50% more than the 6th number and 8 less than the 7th number. What is the average of 5th and 7th numbers?",
+      "options": {
+        "a": "42",
+        "b": "41",
+        "c": "42.4",
+        "d": "41.5"
+      },
+      "answer": "d",
+      "solution": "The total sum of 10 numbers is:\n$$\\text{Total Sum} = 10 \\times 32.5 = 325$$\nSum of the first 4 numbers:\n$$\\text{Sum}_4 = 4 \\times 25.6 = 102.4$$\nSum of the last 3 numbers:\n$$\\text{Sum}_3 = 3 \\times 38.2 = 114.6$$\nSum of the 5th, 6th, and 7th numbers is:\n$$\\text{Sum}_{5,6,7} = 325 - (102.4 + 114.6) = 325 - 217 = 108$$\nLet the 6th number be $x$.\nThe 5th number is $1.5x$.\nThe 7th number is $1.5x + 8$.\nThe sum of these three numbers is:\n$$1.5x + x + (1.5x + 8) = 108 \\implies 4x + 8 = 108 \\implies 4x = 100 \\implies x = 25$$\nThus:\n5th number = $1.5 \\times 25 = 37.5$\n7th number = $37.5 + 8 = 45.5$\nTheir average is:\n$$\\text{Average} = \\frac{37.5 + 45.5}{2} = 41.5$$"
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": 14,
+      "question": "A dealer purchased a food processor for ₹10,000. He offered a discount of 20% on its listed price and still gained a profit of 40%. Find the listed price of the food processor.",
+      "options": {
+        "a": "16,000",
+        "b": "15,200",
+        "c": "17,500",
+        "d": "12,000"
+      },
+      "answer": "c",
+      "solution": "1. Cost Price (CP) of the food processor = ₹10,000\n2. Profit percentage = 40%\n3. Selling Price (SP) = CP * (1 + Profit%) = 10,000 * 1.40 = ₹14,000\n4. Discount percentage = 20% on listed price (MP)\n5. SP = MP * (1 - Discount%) => 14,000 = MP * 0.80\n6. MP = 14,000 / 0.80 = ₹17,500\nTherefore, the listed price of the food processor is ₹17,500."
+    },
+    {
+      "q_num": 15,
+      "question": "A shopkeeper gives 15% and 35% discount on a bottle. If the selling price of the bottle is ₹1,547, then the marked price of the bottle is:",
+      "options": {
+        "a": "2,400",
+        "b": "2,500",
+        "c": "2,700",
+        "d": "2,800"
+      },
+      "answer": "d",
+      "solution": "1. Selling Price (SP) = ₹1,547\n2. Successive discounts are 15% and 35%\n3. SP = MP * (1 - 0.15) * (1 - 0.35)\n4. 1,547 = MP * 0.85 * 0.65\n5. 1,547 = MP * (17/20) * (13/20) = MP * 221/400\n6. MP = (1,547 * 400) / 221\n7. Since 1,547 / 221 = 7, MP = 7 * 400 = ₹2,800\nTherefore, the marked price of the bottle is ₹2,800."
+    },
+    {
+      "q_num": 16,
+      "question": "The marked price of a laptop is 50,000. A shopkeeper gives the following four schemes of discount to his customers. Which one is more beneficial to the customers?",
+      "options": {
+        "a": "i",
+        "b": "iv",
+        "c": "ii",
+        "d": "iii"
+      },
+      "answer": "c",
+      "solution": "Let's calculate the total discount amount for each scheme:\ni) Flat discount of 10,000:\nDiscount value = ₹10,000\n\nii) Flat discount of 25%:\nDiscount value = 25% of 50,000 = ₹12,500\n\niii) Successive discount of 10% and 10%:\nEquivalent single discount = 10 + 10 - (10 * 10)/100 = 19%\nDiscount value = 19% of 50,000 = ₹9,500\n\niv) Successive discount of 15% and 10%:\nEquivalent single discount = 15 + 10 - (15 * 10)/100 = 23.5%\nDiscount value = 23.5% of 50,000 = ₹11,750\n\nComparing all values, scheme (ii) gives the highest discount of ₹12,500, which is the most beneficial. Hence, the correct option is (c)."
+    },
+    {
+      "q_num": 17,
+      "question": "Which scheme among the following is most beneficial to the customer?",
+      "options": {
+        "a": "iii",
+        "b": "ii",
+        "c": "i",
+        "d": "iv"
+      },
+      "answer": "a",
+      "solution": "Let's determine the effective discount percentage for each scheme:\ni) Successive discounts of 25% and 25%:\nEffective discount = 25 + 25 - (25 * 25)/100 = 43.75%\n\nii) Flat discount of 40%:\nEffective discount = 40%\n\niii) Buy one, get one free:\nThis means out of 2 items, 1 is free.\nEffective discount = (1 / 2) * 100 = 50%\n\niv) Successive discounts of 30% and 20%:\nEffective discount = 30 + 20 - (30 * 20)/100 = 44%\n\nComparing the discount percentages: scheme (iii) gives the maximum discount of 50%. Therefore, the correct option is (a)."
+    },
+    {
+      "q_num": 18,
+      "question": "A retailer offers the following discount schemes for an article to his customers.\nA. Two equal successive discounts of 15%\nB. Two successive discounts of 12% and 18%\nC. Buy 7 articles and get 3 free.\nWhich of the schemes is most beneficial to the customer?",
+      "options": {
+        "a": "Only A",
+        "b": "Only C",
+        "c": "Both A and C are the same",
+        "d": "Only B"
+      },
+      "answer": "b",
+      "solution": "Let's calculate the equivalent single discount percentage for each scheme:\nScheme A: Successive discounts of 15% and 15%\nEffective discount = 15 + 15 - (15 * 15)/100 = 27.75%\n\nScheme B: Successive discounts of 12% and 18%\nEffective discount = 12 + 18 - (12 * 18)/100 = 27.84%\n\nScheme C: Buy 7 and get 3 free (3 free out of 10 items in total)\nEffective discount = (3 / 10) * 100 = 30%\n\nComparing the values: Scheme C has the highest discount (30%). Therefore, the correct option is (b)."
+    },
+    {
+      "q_num": 19,
+      "question": "A man offers a 21% discount on an item. He offers a further discount of 40% on the reduced price for the first 100 customers. If the selling price of the item is ₹4,740, and the customer is one of the first 100 then the marked price (in ₹) of the item is",
+      "options": {
+        "a": "₹10,000",
+        "b": "₹8,000",
+        "c": "₹12,000",
+        "d": "₹9,000"
+      },
+      "answer": "a",
+      "solution": "1. Let MP be the marked price.\n2. First discount is 21%, leaving 79% of MP.\n3. Second discount is 40%, leaving 60% of the reduced price.\n4. Selling Price (SP) = MP * 0.79 * 0.60 = 4,740\n5. MP * 0.474 = 4,740\n6. MP = 4,740 / 0.474 = 10,000\nTherefore, the marked price is ₹10,000."
+    },
+    {
+      "q_num": 20,
+      "question": "A shopkeeper offers the following four schemes. Which scheme has the maximum discount percentage?",
+      "options": {
+        "a": "a",
+        "b": "b",
+        "c": "d",
+        "d": "c"
+      },
+      "answer": "d",
+      "solution": "Let's find the discount percentage for each scheme:\na) Two successive discounts of 22% and 25%:\nEffective discount = 22 + 25 - (22 * 25)/100 = 47 - 5.5 = 41.5%\n\nb) Buy 3, get 2 free:\nEffective discount = (2 / 5) * 100 = 40%\n\nc) Buy 5, get 4 free:\nEffective discount = (4 / 9) * 100 = 44.44%\n\nd) Buy 4, get 3 free:\nEffective discount = (3 / 7) * 100 = 42.85%\n\nComparing the percentages: Scheme (c) provides the maximum discount percentage of 44.44%. In the options, scheme (c) corresponds to option (d)."
+    },
+    {
+      "q_num": 21,
+      "question": "A shopkeeper buys a note book for ₹85. He wants a profit of 20% after giving a discount of 15%. At what price should he mark the note book?",
+      "options": {
+        "a": "₹105",
+        "b": "₹110",
+        "c": "₹115",
+        "d": "₹120"
+      },
+      "answer": "d",
+      "solution": "1. Cost Price (CP) = ₹85\n2. Desired Profit = 20%\n3. Selling Price (SP) = CP * (1 + 0.20) = 85 * 1.2 = ₹102\n4. Discount percentage = 15%\n5. SP = MP * (1 - 0.15) => 102 = MP * 0.85\n6. MP = 102 / 0.85 = ₹120\nTherefore, he should mark the notebook at ₹120."
+    },
+    {
+      "q_num": 22,
+      "question": "A dealer allows his customers a discount of 15% and still gains 15%. If an article cost ₹2,500 to the dealer, then its marked price is (correct to nearest integer) :",
+      "options": {
+        "a": "₹3,382",
+        "b": "₹4,382",
+        "c": "₹1,312",
+        "d": "₹3,182"
+      },
+      "answer": "a",
+      "solution": "1. Cost Price (CP) = ₹2,500\n2. Gain % = 15%\n3. Selling Price (SP) = CP * 1.15 = 2,500 * 1.15 = ₹2,875\n4. Discount % = 15%\n5. SP = MP * 0.85 => 2,875 = MP * 0.85\n6. MP = 2,875 / 0.85 ≈ 3382.35\n7. To the nearest integer, MP = ₹3,382. Therefore, the correct option is (a)."
+    },
+    {
+      "q_num": 23,
+      "question": "A seller gives 4 toys free of cost on buying 14 toys. What percent does the customer get as a discount?",
+      "options": {
+        "a": "21(2/9)%",
+        "b": "22 (2/9)%",
+        "c": "24(2/9)%",
+        "d": "25"
+      },
+      "answer": "b",
+      "solution": "1. On buying 14 toys, the customer gets 4 toys free.\n2. Total toys received by the customer = 14 + 4 = 18 toys.\n3. Number of free toys = 4\n4. Discount percentage = (Free toys / Total toys) * 100\n= (4 / 18) * 100 = (2 / 9) * 100 = 200/9% = 22(2/9)%\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 24,
+      "question": "An article is sold at a discount of 10% and an additional discount of 40% is allowed on cash payment. If Anita purchased an article by paying ₹2,700 in cash, the marked price of the article was:",
+      "options": {
+        "a": "5,000",
+        "b": "2,500",
+        "c": "2,000",
+        "d": "5,500"
+      },
+      "answer": "a",
+      "solution": "1. Let the Marked Price be MP.\n2. Discount 1 = 10%, Discount 2 = 40%\n3. Cash Payment (SP) = MP * (1 - 0.10) * (1 - 0.40)\n4. 2,700 = MP * 0.90 * 0.60\n5. 2,700 = MP * 0.54\n6. MP = 2,700 / 0.54 = 5,000\nTherefore, the marked price of the article was ₹5,000."
+    },
+    {
+      "q_num": 25,
+      "question": "The marked price of a mobile phone was ₹35,600. The shop owner offered a 10% trade discount on the marked price but on further request by the customer, he sold the phone for ₹30,000 after giving a cash discount. How much is this cash discount as a percentage of the price after the trade discount? (Give your answer correct to 2 decimal places ).",
+      "options": {
+        "a": "6.37%",
+        "b": "5.75%",
+        "c": "4.95%",
+        "d": "5.25%"
+      },
+      "answer": "a",
+      "solution": "1. Marked Price (MP) = ₹35,600\n2. Price after 10% trade discount = 35,600 * 0.90 = ₹32,040\n3. Final Selling Price (SP) = ₹30,000\n4. Cash discount amount = 32,040 - 30,000 = ₹2,040\n5. Cash discount % = (Cash discount / Price after trade discount) * 100\n= (2,040 / 32,040) * 100 = (204 / 3204) * 100 ≈ 6.37%\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 26,
+      "question": "Namitha gives a 20% discount on all things in her shop and yet makes a profit of 12%. What is the cost price of an item with marked price of 280?",
+      "options": {
+        "a": "215",
+        "b": "210",
+        "c": "212",
+        "d": "200"
+      },
+      "answer": "d",
+      "solution": "1. Marked Price (MP) = 280\n2. Discount % = 20%\n3. Selling Price (SP) = 280 * (1 - 0.20) = 280 * 0.80 = ₹224\n4. Profit % = 12%\n5. SP = CP * 1.12 => 224 = CP * 1.12\n6. CP = 224 / 1.12 = ₹200\nTherefore, the cost price of the item is ₹200."
+    },
+    {
+      "q_num": 27,
+      "question": "A shopkeeper gives a discount of 25% on a purse. If he gives a discount of 37%, he earns ₹120 less in profit. Find the marked price.",
+      "options": {
+        "a": "₹1,200",
+        "b": "₹1,000",
+        "c": "1,220",
+        "d": "₹1,500"
+      },
+      "answer": "b",
+      "solution": "1. Let MP be the marked price.\n2. The difference in discount percentages = 37% - 25% = 12%\n3. This 12% difference in discount reduces the profit by ₹120.\n4. Therefore, 12% of MP = 120\n5. MP * 0.12 = 120 => MP = 120 / 0.12 = ₹1,000\nTherefore, the marked price is ₹1,000."
+    },
+    {
+      "q_num": 28,
+      "question": "The marked price of a mobile phone is 12% more than its cost price. If a discount of 8% is given on the marked price, then the gain per cent is:",
+      "options": {
+        "a": "2.92%",
+        "b": "2.12%",
+        "c": "3.04%",
+        "d": "4.03%"
+      },
+      "answer": "c",
+      "solution": "1. Let Cost Price (CP) = 100\n2. Marked Price (MP) = 100 * 1.12 = 112\n3. Discount % = 8%\n4. Selling Price (SP) = MP * (1 - 0.08) = 112 * 0.92 = 103.04\n5. Gain = SP - CP = 103.04 - 100 = 3.04\n6. Gain % = (3.04 / 100) * 100 = 3.04%\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 29,
+      "question": "When payment is made online, the discount offered is 20%. Additional discount of 8% is given to ABC credit card holders. Sandeep buys a laptop of ₹35,000 by paying online and pays through his ABC credit card. How much does he need to pay?",
+      "options": {
+        "a": "₹25,750",
+        "b": "₹25,760",
+        "c": "₹25,770",
+        "d": "₹25,740"
+      },
+      "answer": "b",
+      "solution": "1. Marked Price (MP) = ₹35,000\n2. Online discount = 20%\n3. Credit card discount = 8%\n4. Net SP = 35,000 * (1 - 0.20) * (1 - 0.08)\n5. Net SP = 35,000 * 0.80 * 0.92\n6. Net SP = 28,000 * 0.92 = ₹25,760\nTherefore, he needs to pay ₹25,760."
+    },
+    {
+      "q_num": 30,
+      "question": "Kuldeep offers his customers a discount of 10% on the marked price of a suitcase and he still makes a profit of 20%. What is the actual cost of the suitcase marked for ₹2,500?",
+      "options": {
+        "a": "₹1,860",
+        "b": "₹ 1,875",
+        "c": "₹ 1,865",
+        "d": "₹1,870"
+      },
+      "answer": "b",
+      "solution": "1. Marked Price (MP) = ₹2,500\n2. Discount % = 10%\n3. Selling Price (SP) = 2,500 * (1 - 0.10) = 2,500 * 0.90 = ₹2,250\n4. Profit % = 20%\n5. SP = CP * 1.20 => 2,250 = CP * 1.20\n6. CP = 2,250 / 1.20 = ₹1,875\nTherefore, the actual cost of the suitcase is ₹1,875."
+    },
+    {
+      "q_num": 31,
+      "question": "The marked price of every item being sold by a wholesaler was Rs. 300. The wholesaler was offering a stock-clearance sale under which, for every three items paid for, one item was being given free. In addition to this, a further 10% discount on the amount payable on the ‘Buy 3, Get 1 free’ scheme price was being offered to anyone making purchases worth more than Rs. 10,000. Ramesh made purchases for which this amount payable was Rs. 18,000. What was the effective percentage discount that was offered to Ramesh during this transaction?",
+      "options": {
+        "a": "32%",
+        "b": "31.5%",
+        "c": "32.5%",
+        "d": "32.75%"
+      },
+      "answer": "c",
+      "solution": "1. Price of each item = ₹300\n2. Under \"Buy 3, Get 1 free\", Ramesh pays for 3 out of every 4 items.\n3. Since his payable amount before the additional discount is ₹18,000, the number of paid items is: 18,000 / 300 = 60 items.\n4. Since he pays for 60 items, the number of free items is: 60 / 3 = 20 items.\n5. Total items received = 60 + 20 = 80 items.\n6. Total marked price of 80 items = 80 * 300 = ₹24,000.\n7. Since ₹18,000 is greater than ₹10,000, he gets an additional 10% discount on ₹18,000.\n8. Final amount paid = 18,000 * 0.90 = ₹16,200.\n9. Total discount = 24,000 - 16,200 = ₹7,800.\n10. Effective discount percentage = (7,800 / 24,000) * 100 = 32.5%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 32,
+      "question": "Under a sale offer, Tanvir was offered a 32% discount on the part of the marked price that was paid in cash, but had to add 1.2% on the part of the marked price paid through a credit card. If Tanvir paid 75% of the marked price in cash and the rest through a credit card, what percentage of the marked price was his total final payment?",
+      "options": {
+        "a": "76.6%",
+        "b": "75.9%",
+        "c": "76.1%",
+        "d": "76.3%"
+      },
+      "answer": "d",
+      "solution": "1. Let Marked Price = 100.\n2. Cash portion = 75% of 100 = 75. Discount is 32%.\n3. Cash paid = 75 * (1 - 0.32) = 75 * 0.68 = 51.\n4. Credit card portion = 25% of 100 = 25. Charge added is 1.2%.\n5. Credit card paid = 25 * (1 + 0.012) = 25 * 1.012 = 25.3.\n6. Total final payment = 51 + 25.3 = 76.3.\n7. As a percentage of the marked price, this is 76.3%.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 33,
+      "question": "Under a sale offer, Suresh was offered 20% discount on the part of the marked price that was paid in cash, but was charged 0.5% on the part of the marked price paid through a credit card. If Suresh paid 40% of the marked price in cash and the rest through a credit card, what percentage of the marked price was his total final payment?",
+      "options": {
+        "a": "93.2%",
+        "b": "92.6%",
+        "c": "92.8%",
+        "d": "92.3%"
+      },
+      "answer": "d",
+      "solution": "1. Let Marked Price = 100.\n2. Cash portion = 40% of 100 = 40. Discount is 20%.\n3. Cash paid = 40 * 0.80 = 32.\n4. Credit card portion = 60% of 100 = 60. Charge added is 0.5%.\n5. Credit card paid = 60 * 1.005 = 60.3.\n6. Total final payment = 32 + 60.3 = 92.3.\n7. As a percentage of the marked price, this is 92.3%.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 34,
+      "question": "A dishonest dealer professes to sell at cost price but uses 900 grams weight instead of 1kg weight. Find the profit percentage to the dealer.",
+      "options": {
+        "a": "10%",
+        "b": "11.11%",
+        "c": "12.5%",
+        "d": "9.09%"
+      },
+      "answer": "b",
+      "solution": "1. Let the Cost Price (CP) of 1 gram = ₹1.\n2. The CP of 900 grams = ₹900.\n3. The dealer sells 900 grams but claims it to be 1000 grams (1 kg) at CP.\n4. Selling Price (SP) of 900 grams = CP of 1000 grams = ₹1000.\n5. Profit = SP - CP = 1000 - 900 = ₹100.\n6. Profit percentage = (Profit / CP) * 100 = (100 / 900) * 100 = 11.11%.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 35,
+      "question": "A dishonest shopkeeper professes to sell potatoes at the cost price, but he weighs 950 g, instead of 1 kg. What is the percentage of profit?",
+      "options": {
+        "a": "5.26%",
+        "b": "6.25%",
+        "c": "6.66%",
+        "d": "5%"
+      },
+      "answer": "a",
+      "solution": "1. Let the Cost Price (CP) of 1 gram = ₹1.\n2. CP of 950 grams = ₹950.\n3. Selling Price (SP) of 950 grams = CP of 1000 grams = ₹1000.\n4. Profit = SP - CP = 1000 - 950 = ₹50.\n5. Profit percentage = (Profit / CP) * 100 = (50 / 950) * 100 = 5.26%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 36,
+      "question": "A dishonest dealer claimed he sells rice at a loss of 5%, but he used faulty weights and weighs 20% less rice. Calculate his overall loss or gain%.",
+      "options": {
+        "a": "18.75%",
+        "b": "20%",
+        "c": "17.5%",
+        "d": "19%"
+      },
+      "answer": "a",
+      "solution": "1. Let CP of 100g rice = ₹100.\n2. He claims to sell at 5% loss => SP of 100g = ₹95.\n3. But he gives 20% less weight, which is 80g.\n4. Cost of 80g rice actually delivered = ₹80.\n5. He charges ₹95 for this 80g.\n6. Profit = SP - CP = 95 - 80 = ₹15.\n7. Profit % = (15 / 80) * 100 = 18.75%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 37,
+      "question": "During the lockdown, a state government gives 2 kg of rice to each people at cost price but uses false weight of 1800 gm instead of 2 kg. Find the government profit percent. ?",
+      "options": {
+        "a": "11.11%",
+        "b": "9.09%",
+        "c": "10%",
+        "d": "9%"
+      },
+      "answer": "a",
+      "solution": "1. Standard weight = 2 kg = 2000 g.\n2. Actual weight delivered = 1800 g.\n3. Since they charge at CP for 2000 g while actually delivering 1800 g, we have:\n   CP of delivered goods = 1800 units\n   SP of delivered goods = 2000 units\n4. Profit = 2000 - 1800 = 200 units\n5. Profit percentage = (200 / 1800) * 100 = 11.11%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 38,
+      "question": "Aman used a false weight of ‘k’ grams instead of 1 kg and sold 40 kg sugar for the cost price of 48 kg sugar. If his overall gain percent is 50%, what is the value of k?",
+      "options": {
+        "a": "750",
+        "b": "800",
+        "c": "850",
+        "d": "900"
+      },
+      "answer": "b",
+      "solution": "1. Let CP of 1 kg sugar = ₹1.\n2. Aman sells 40 kg sugar for the cost price of 48 kg sugar => SP = ₹48.\n3. Since his overall gain is 50%, we have: SP = CP * 1.50\n4. 48 = CP * 1.50 => CP of the sugar actually delivered = 48 / 1.50 = ₹32.\n5. This means the actual weight of the sugar delivered is 32 kg.\n6. Since he used a false weight of 'k' grams instead of 1000 grams for 40 kg, we have:\n   Actual Weight = 40 * (k / 1000) = 32\n7. k = (32 * 1000) / 40 = 800 grams.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 39,
+      "question": "In a defective balance the weight of left edge is 100 gm more than its right edge. A shopkeeper while purchasing keeps weights on left edge and while selling keeps weights on right edge. He only uses weight of 1 kg. If he sells the things on marked price, then his profit is:",
+      "options": {
+        "a": "200/9 %",
+        "b": "100/9 %",
+        "c": "250/9 %",
+        "d": "150/9 %"
+      },
+      "answer": "a",
+      "solution": "1. Let Left Pan = L, Right Pan = R. The balance has a bias: L = R + 100g.\n2. Purchasing (weights on left L, goods on right R):\n   L + 1000 = R + Goods => (R + 100) + 1000 = R + Goods => Goods = 1100g.\n   So, he gets 1100g but pays for 1000g. Cost per gram = ₹1000 / 1100 = ₹10/11.\n3. Selling (goods on left L, weights on right R):\n   L + Goods = R + 1000 => (R + 100) + Goods = R + 1000 => Goods = 900g.\n   So, he sells 900g for the price of 1000g. Selling Price per gram = ₹1000 / 900 = ₹10/9.\n4. Profit % = (SP/gm - CP/gm) / (CP/gm) * 100\n   = (10/9 - 10/11) / (10/11) * 100 = (1/9 - 1/11) / (1/11) * 100 = (2 / 99) * 11 * 100 = 200/9%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 40,
+      "question": "A man markup oranges up 30% and give 1 Orange free for buying 5 oranges. Find the profit% and loss%?",
+      "options": {
+        "a": "8%",
+        "b": "8.33%",
+        "c": "8.5%",
+        "d": "9"
+      },
+      "answer": "b",
+      "solution": "1. Let CP of 1 orange = ₹10.\n2. Markup is 30% => Marked Price (MP) of 1 orange = ₹13.\n3. Scheme: Buy 5, get 1 free. Total oranges in a transaction = 6.\n4. Total CP of 6 oranges = 6 * 10 = ₹60.\n5. Total SP (he only charges for 5) = 5 * MP = 5 * 13 = ₹65.\n6. Profit = SP - CP = 65 - 60 = ₹5.\n7. Profit percentage = (5 / 60) * 100 = 8.33%.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 41,
+      "question": "A man markup oranges up 8.33% and provided scheme 'Buy 3 get 5'. Find the profit% and loss%?",
+      "options": {
+        "a": "25%",
+        "b": "30%",
+        "c": "35%",
+        "d": "40%"
+      },
+      "answer": "c",
+      "solution": "1. Let CP of 1 orange = ₹12 (since 8.33% markup = 1/12).\n2. Marked Price (MP) of 1 orange = 12 * (1 + 1/12) = ₹13.\n3. Scheme is \"Buy 3 get 5\" (get 5 oranges but pay for 3).\n4. Total CP of 5 oranges = 5 * 12 = ₹60.\n5. Total SP = 3 * MP = 3 * 13 = ₹39.\n6. Loss = CP - SP = 60 - 39 = ₹21.\n7. Loss percentage = (21 / 60) * 100 = 35%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 42,
+      "question": "A man markup oranges up X% and provided scheme '7 oranges free on buying 5 oranges' and gets 10% profit ? Find the value of X ?",
+      "options": {
+        "a": "64",
+        "b": "100",
+        "c": "164",
+        "d": "264"
+      },
+      "answer": "c",
+      "solution": "1. Let CP of 1 orange = ₹1.\n2. \"7 oranges free on buying 5\" means the customer gets 12 oranges in total, paying for 5.\n3. Total CP of 12 oranges = ₹12.\n4. Overall profit is 10% => Total SP of the transaction = 12 * 1.10 = ₹13.20.\n5. Since the customer pays for 5 oranges: SP of 5 oranges = 5 * MP = 13.20\n6. MP of 1 orange = 13.20 / 5 = ₹2.64.\n7. Markup = MP - CP = 2.64 - 1 = 1.64 or 164%.\nTherefore, the value of X is 164."
+    },
+    {
+      "q_num": 43,
+      "question": "A shopkeeper mark up 20% on his articles, uses faulty weight 450gm in place of 500gm and give discount of 40%. Find the profit% or loss% ?",
+      "options": {
+        "a": "Loss 20%",
+        "b": "Profit 20%",
+        "c": "Loss 16.66%",
+        "d": "Profit 16.66%"
+      },
+      "answer": "a",
+      "solution": "1. Let Cost Price (CP) of 1g = ₹1.\n2. CP of nominal 500g = ₹500.\n3. Markup of 20% on 500g => Marked Price (MP) of 500g = 500 * 1.20 = ₹600.\n4. Discount of 40% on MP => Nominal SP of 500g = 600 * 0.60 = ₹360.\n5. But he delivers 450g instead of 500g.\n6. Actual CP of 450g delivered = ₹450.\n7. SP of the transaction = ₹360.\n8. Loss = CP - SP = 450 - 360 = ₹90.\n9. Loss % = (90 / 450) * 100 = 20%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 44,
+      "question": "Shambhu buys rice at Rs. 10/kg, and puts a price tag on it so as to earn a profit of 20%. However, his faulty balance shows 1000 grams when it actually is 800 grams. What is his actual gain percentage?",
+      "options": {
+        "a": "50%",
+        "b": "40%",
+        "c": "25%",
+        "d": "20%"
+      },
+      "answer": "a",
+      "solution": "1. Let CP of 1000g (1 kg) = ₹10.\n2. SP of 1000g (with 20% markup/profit) = 10 * 1.20 = ₹12.\n3. Since the balance shows 1000g when it is actually 800g, he charges ₹12 for 800g.\n4. Actual CP of 800g delivered = 800 * (10 / 1000) = ₹8.\n5. Actual SP = ₹12.\n6. Actual profit = 12 - 8 = ₹4.\n7. Gain percentage = (4 / 8) * 100 = 50%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 45,
+      "question": "In summer, meter tape of a merchant expands by 14.29% and merchant markup his articles by 40% ? find profit % or loss% ?",
+      "options": {
+        "a": "22.5%",
+        "b": "25%",
+        "c": "27.5%",
+        "d": "20%"
+      },
+      "answer": "a",
+      "solution": "1. Expansion is 14.29% = 1/7.\n2. This means instead of 1 meter (7 units), the customer actually gets 1 + 1/7 = 8/7 meters (8 units).\n3. Let CP of 1 meter = ₹1.\n4. Actual CP of 8/7 meters delivered = ₹8/7.\n5. Since the articles are marked up by 40%: SP of 1 meter = ₹1.40 = ₹7/5.\n6. Profit = SP - CP = 7/5 - 8/7 = (49 - 40) / 35 = 9/35.\n7. Profit % = (Profit / CP) * 100 = (9/35) / (8/7) * 100 = (9/35) * (7/8) * 100 = 900/40 % = 22.5%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 46,
+      "question": "A merchant uses a 110cm tape instead of 1 m while buying the clothes, while selling the clothes he used 90 cm tape instead of 1m and then he offer a discount of 10%. Find Profit or loss % ?",
+      "options": {
+        "a": "12.5%",
+        "b": "15%",
+        "c": "10%",
+        "d": "20%"
+      },
+      "answer": "c",
+      "solution": "1. When buying, he gets 110cm while paying for 100cm => CP of 110cm = ₹100 => CP per cm = ₹10/11.\n2. When selling, he delivers 90cm while charging for 100cm.\n3. He offers 10% discount on standard price (₹1 per cm) => SP of nominal 100cm = ₹90.\n4. Thus, SP of actual 90cm delivered = ₹90 => SP per cm = ₹1.\n5. Profit % = (SP per cm - CP per cm) / (CP per cm) * 100\n= (1 - 10/11) / (10/11) * 100 = (1/11) / (10/11) * 100 = 10%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 47,
+      "question": "A flat 25% offer is running at a store and above it the Shop Owner is providing 3 articles free for every 7 articles getting sold. If the store is making a profit of 40% in the whole transaction, find the markup percentage.",
+      "options": {
+        "a": "166.66%",
+        "b": "150%",
+        "c": "200%",
+        "d": "133.33%"
+      },
+      "answer": "a",
+      "solution": "1. Let CP of 1 article = ₹1.\n2. For every 7 sold, 3 are free, giving a total of 10 articles. Total CP = ₹10.\n3. Profit is 40% on transaction => Total SP = 10 * 1.40 = ₹14.\n4. Since he only charges for 7 articles: SP of 7 articles = ₹14 => SP of 1 article = 14 / 7 = ₹2.\n5. This SP of ₹2 is obtained after a 25% flat discount on MP:\n   SP = MP * 0.75 => 2 = MP * 0.75 => MP = 2 / 0.75 = ₹8/3.\n6. Markup % = (MP - CP) / CP * 100 = (8/3 - 1) / 1 * 100 = (5/3) * 100 = 166.66%.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 48,
+      "question": "A dishonest dealer is selling sugar at 40 per kg and pretending that he is selling it at a loss of ₹5 per kg but he actually gives 800 g instead of 1 kg, using a faculty weight. What is his actual profit or loss percent?",
+      "options": {
+        "a": "Gain, 11%",
+        "b": "Gain, 100/9%",
+        "c": "Loss, 91/9%",
+        "d": "Loss, 82/9%"
+      },
+      "answer": "b",
+      "solution": "1. SP of 1 kg (claimed weight) = ₹40.\n2. Claimed loss of ₹5 per kg means claimed CP of 1 kg = 40 + 5 = ₹45.\n3. Since he gives 800g instead of 1000g, CP of actual 800g delivered = 45 * 0.80 = ₹36.\n4. SP of the transaction = ₹40.\n5. Profit = SP - CP = 40 - 36 = ₹4.\n6. Profit percentage = (4 / 36) * 100 = 100/9%.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 48,
+      "question": "Sudhir claimed to sell his items at only 8% above the cost of production, but used a weight that had 750 grams written on it, though it actually weighed 720 gram. What was the actual profit percentage earned by Sudhir?",
+      "options": {
+        "a": "12.6%",
+        "b": "12.25%",
+        "c": "12.5%",
+        "d": "12.75%"
+      },
+      "answer": "c",
+      "solution": "1. Let CP of 1g = ₹1.\n2. Claimed selling price is 8% above CP => Nominal SP of 750g = 750 * 1.08 = ₹810.\n3. The item actually weighs 720g => Actual CP of delivered goods = ₹720.\n4. SP of these goods = ₹810.\n5. Profit = 810 - 720 = ₹90.\n6. Profit % = (90 / 720) * 100 = 12.5%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 49,
+      "question": "An authorized rice dealer purchases rice at 32 per kg and sells it at 40 per kg. But while selling, he is giving only 900 grams instead of 1 kg. Find the actual profit percentage of the dealer (correct to one decimal place)",
+      "options": {
+        "a": "37.8%",
+        "b": "39.7%",
+        "c": "39.8%",
+        "d": "38.9%"
+      },
+      "answer": "d",
+      "solution": "1. CP of 1000g = ₹32 => CP of 900g = 32 * 0.90 = ₹28.8.\n2. SP of 1000g (which he actually delivers as 900g) = ₹40.\n3. Profit = 40 - 28.8 = ₹11.2.\n4. Profit % = (11.2 / 28.8) * 100 = (112 / 288) * 100 ≈ 38.9%.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 50,
+      "question": "Subir claimed to sell his items at only 5% above the cost of production, but used a weight that had 1 kg written on it, though it actually weighed 960 grams. What was the actual profit percentage earned by Subir?",
+      "options": {
+        "a": "9.125%",
+        "b": "9.375%",
+        "c": "9.25%",
+        "d": "9.5%"
+      },
+      "answer": "b",
+      "solution": "1. Let CP of 1g = ₹1.\n2. CP of nominal 1000g = ₹1000.\n3. Claimed profit of 5% => Nominal SP = ₹1050.\n4. He delivers 960g instead of 1000g => Actual CP = ₹960.\n5. Profit = 1050 - 960 = ₹90.\n6. Profit % = (90 / 960) * 100 = (3 / 32) * 100 = 9.375%.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 51,
+      "question": "Under a sale offer, Suresh was offered 20% discount on the part of the marked price that was paid in cash, but was charged 0.5% on the part of the marked price paid through a credit card. If Suresh paid 40% of the marked price in cash and the rest through a credit card, what percentage of the marked price was his total final payment?",
+      "options": {
+        "a": "93.2%",
+        "b": "92.6%",
+        "c": "92.8%",
+        "d": "92.3%"
+      },
+      "answer": "d",
+      "solution": "1. Let Marked Price = 100.\n2. Cash portion = 40% of 100 = 40. Discount is 20%.\n3. Cash paid = 40 * 0.80 = 32.\n4. Credit card portion = 60% of 100 = 60. Charge added is 0.5%.\n5. Credit card paid = 60 * 1.005 = 60.3.\n6. Total payment = 32 + 60.3 = 92.3.\n7. As a percentage of the marked price, this is 92.3%.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 52,
+      "question": "A shopkeeper wanted to sell ₹3,000 worth of products. He gave two options-giving three successive discounts of 10% each, or giving a single discount of 30%. If a buyer chooses the former option how much extra/less does he pay as compared to the second option?",
+      "options": {
+        "a": "rs.87 less",
+        "b": "rs.60 extra",
+        "c": "rs.87 extra",
+        "d": "rs.60 less"
+      },
+      "answer": "c",
+      "solution": "1. Option 1: Three successive discounts of 10%:\n   SP1 = 3000 * 0.90 * 0.90 * 0.90 = 3000 * 0.729 = ₹2,187.\n2. Option 2: Single discount of 30%:\n   SP2 = 3000 * 0.70 = ₹2,100.\n3. Comparison: Under Option 1, the buyer pays 2,187 - 2,100 = ₹87 more (extra).\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 53,
+      "question": "The marked price of a shirt is 2,150. Let two successive discounts offered by the store be 10% and 'x%'. If the selling price of the shirt is 1,505, then calculate the value of 'x'. [Give your answer correct to two decimal places.]",
+      "options": {
+        "a": "24.44%",
+        "b": "24.24%",
+        "c": "22.22%",
+        "d": "22.42%"
+      },
+      "answer": "c",
+      "solution": "1. Marked Price (MP) = 2,150.\n2. Price after 10% discount = 2,150 * 0.90 = ₹1,935.\n3. Final Selling Price (SP) = ₹1,505.\n4. Discount amount of 'x%' = 1,935 - 1,505 = ₹430.\n5. x% = (430 / 1,935) * 100 ≈ 22.22%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 54,
+      "question": "The price of an article is raised by 45% and then two successive discounts of 15% each are allowed. Ultimately the price of the article is",
+      "options": {
+        "a": "decreased by 7.7625%",
+        "b": "increased by 4.7625%",
+        "c": "decreased by 4.7625%",
+        "d": "increased by 7.7625%"
+      },
+      "answer": "b",
+      "solution": "1. Let Cost Price = 100.\n2. After raising by 45%, Marked Price = 145.\n3. After first 15% discount: 145 * 0.85 = 123.25.\n4. After second 15% discount: 123.25 * 0.85 = 104.7625.\n5. Ultimately, the price of the article is 104.7625 - 100 = 4.7625% increased.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 55,
+      "question": "A shopkeeper wanted to sell ₹2,700 worth of products. But he had two options_ giving two successive discounts of 10% and 15%, respectively, or giving a single discount of 25%. What was the difference between the two options?",
+      "options": {
+        "a": "40.50",
+        "b": "42.75",
+        "c": "44.00",
+        "d": "47.50"
+      },
+      "answer": "a",
+      "solution": "1. Option 1: Successive discounts of 10% and 15%:\n   SP1 = 2,700 * 0.90 * 0.85 = ₹2065.50.\n2. Option 2: Single discount of 25%:\n   SP2 = 2,700 * 0.75 = ₹2025.00.\n3. Difference = 2065.50 - 2025.00 = ₹40.50.\nTherefore, the correct option is (a)."
+    },
+    {
+      "q_num": 56,
+      "question": "A man sells goods at 4% loss on cost price but he gives 20 g instead of 40 g. What is his profit or loss percentage?",
+      "options": {
+        "a": "84% profit",
+        "b": "92% profit",
+        "c": "82% loss",
+        "d": "92% loss"
+      },
+      "answer": "b",
+      "solution": "1. Let CP of 1g = ₹1.\n2. CP of nominal 40g = ₹40.\n3. Claimed loss of 4% => SP of 40g = 40 * 0.96 = ₹38.4.\n4. But he delivers 20g instead of 40g => Actual CP = ₹20.\n5. He sells this 20g for ₹38.4.\n6. Profit = 38.4 - 20 = ₹18.4.\n7. Profit % = (18.4 / 20) * 100 = 92% profit.\nTherefore, the correct option is (b)."
+    },
+    {
+      "q_num": 57,
+      "question": "A shopkeeper marks up his goods by 30% and then gives a discount of 10% on the marked price. Apart from this, he uses a faulty balance which reads 1 kg for 870g. What is his net profit percentage?",
+      "options": {
+        "a": "38.42%",
+        "b": "34.84%",
+        "c": "34.48%",
+        "d": "38.24%"
+      },
+      "answer": "c",
+      "solution": "1. Let CP of 1g = ₹1.\n2. CP of nominal 1000g (1 kg) = ₹1000.\n3. Markup of 30% => MP of 1000g = ₹1300.\n4. Discount of 10% => SP of 1000g = 1300 * 0.90 = ₹1170.\n5. Because the balance reads 1 kg for 870g, he delivers 870g and charges ₹1170.\n6. Actual CP of 870g delivered = ₹870.\n7. Profit = 1170 - 870 = ₹300.\n8. Profit % = (300 / 870) * 100 ≈ 34.48%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 58,
+      "question": "A new mobile is introduced into the market and is marked at 25% above its original cost price. What discount should be given on the marked price to gain a profit of 20%?",
+      "options": {
+        "a": "2.50%",
+        "b": "5%",
+        "c": "4%",
+        "d": "10%"
+      },
+      "answer": "c",
+      "solution": "1. Let Cost Price = 100.\n2. Marked Price = 100 * 1.25 = 125.\n3. Desired profit of 20% => Desired Selling Price = 120.\n4. Required Discount = 125 - 120 = 5.\n5. Discount % = (5 / 125) * 100 = 4%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 59,
+      "question": "By using faulty weight, a shopkeeper cheats to the extent of 6% while buying and selling rice. Find his gain percentage (rounded to two decimal places).",
+      "options": {
+        "a": "14.66%",
+        "b": "13.65%",
+        "c": "12.77%",
+        "d": "11.25%"
+      },
+      "answer": "c",
+      "solution": "1. When buying, he cheats by 6%, meaning he takes 106% weight for 100% price. Cost of 106g = ₹100 => CP per gram = ₹100/106.\n2. When selling, he cheats by 6%, meaning he delivers 94% weight for 100% price => SP of 94g = ₹100 => SP per gram = ₹100/94.\n3. Profit % = (SP per gram - CP per gram) / (CP per gram) * 100\n= (100/94 - 100/106) / (100/106) * 100\n= (106 - 94) / 94 * 100 = 12 / 94 * 100 ≈ 12.77%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 60,
+      "question": "A shopkeeper uses 940 gm weight in place of one kg weight. He sells it at 4% profit. What will be the actual profit percentage? (Rounded off to two decimal places)",
+      "options": {
+        "a": "9.25%",
+        "b": "10.32%",
+        "c": "10.64%",
+        "d": "10.96%"
+      },
+      "answer": "c",
+      "solution": "1. Let CP of 1g = ₹1.\n2. CP of nominal 1000g = ₹1000.\n3. Selling price (4% profit) = 1000 * 1.04 = ₹1040.\n4. But he actually delivers 940g => Actual CP = ₹940.\n5. Profit = 1040 - 940 = ₹100.\n6. Profit % = (100 / 940) * 100 ≈ 10.64%.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 61,
+      "question": "A shopkeeper sells an item at a profit of 15% and uses a weight which is 20% less. Find his actual profit percentage.",
+      "options": {
+        "a": "42.5%",
+        "b": "50%",
+        "c": "40%",
+        "d": "43.75%"
+      },
+      "answer": "d",
+      "solution": "1. Let CP of nominal 100g = ₹100.\n2. Nominal SP (15% profit) = ₹115.\n3. Actual weight delivered is 20% less = 80g.\n4. Actual CP of 80g = ₹80.\n5. Profit = SP - CP = 115 - 80 = ₹35.\n6. Profit % = (35 / 80) * 100 = 43.75%.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 62,
+      "question": "The cost price and selling price of rice are the same. Due to a faulty weighing machine, the seller earns a 15% profit. If Rs. x is the cost price of 1000 gm rice and the machine is changed which shows 1000 gm instead of 950 gm, what should be the selling price (in) now to get the same percentage of profit?",
+      "options": {
+        "a": "1.0295x",
+        "b": "1.0259x",
+        "c": "1.0925x",
+        "d": "1.0950x"
+      },
+      "answer": "c",
+      "solution": "1. The machine is changed such that it shows 1000 gm instead of 950 gm.\n2. This means when a customer orders 1000 gm, the seller actually delivers 950 gm.\n3. CP of 1000 gm rice = Rs. x => CP of actual 950 gm rice delivered = 0.95x.\n4. To earn the same profit of 15% on the actual delivered amount:\n   SP = CP * 1.15 = 0.95x * 1.15 = 1.0925x.\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 63,
+      "question": "A dishonest shopkeeper sells mangoes at Rs. 30/kg bought at Rs. 20/kg and he is giving 800 g instead of 1 kg. The shopkeeper's actual profit percentage is:",
+      "options": {
+        "a": "75%",
+        "b": "37.5%",
+        "c": "50%",
+        "d": "87.5%"
+      },
+      "answer": "d",
+      "solution": "1. CP of 1000g = ₹20 => CP of 1g = ₹0.02.\n2. He sells 800g and charges the price of 1 kg, which is ₹30.\n3. Actual CP of 800g delivered = 800 * 0.02 = ₹16.\n4. SP = ₹30.\n5. Profit = 30 - 16 = ₹14.\n6. Profit % = (14 / 16) * 100 = 87.5%.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 64,
+      "question": "R's weighing machine shows 400 gm when the actual weight is 350 gm. The cost price of almonds is ₹880 per kg and packets of 200 gm are made using the faulty machine. What should be the selling price (in Rs.) of each packet to get a profit of 25%?",
+      "options": {
+        "a": "197.50",
+        "b": "175.50",
+        "c": "182.50",
+        "d": "192.50"
+      },
+      "answer": "d",
+      "solution": "1. The weighing machine shows 400g for an actual weight of 350g.\n2. Ratio of Actual weight / Displayed weight = 350 / 400 = 7/8.\n3. Packets of 200g displayed weight are made.\n4. Actual weight in each packet = 200 * (7/8) = 175g.\n5. CP of almonds = ₹880 per kg = ₹0.88 per g.\n6. Actual CP of each packet = 175 * 0.88 = ₹154.\n7. Desired profit is 25% => SP = 154 * 1.25 = ₹192.50.\nTherefore, the correct option is (d)."
+    },
+    {
+      "q_num": 65,
+      "question": "A dishonest dealer sells articles at 15% loss on cost price but uses the weight of 20 g instead of 25 g. What is his profit or loss percentage?",
+      "options": {
+        "a": "6.25% Profit",
+        "b": "6.50% Profit",
+        "c": "7.55% Loss",
+        "d": "5.25% Loss"
+      },
+      "answer": "a",
+      "solution": "1. Let CP of 1g = ₹1 => CP of nominal 25g = ₹25.\n2. Claimed loss of 15% => Nominal SP = 25 * 0.85 = ₹21.25.\n3. But he delivers 20g instead of 25g => Actual CP = ₹20.\n4. Profit = 21.25 - 20 = ₹1.25.\n5. Profit % = (1.25 / 20) * 100 = 6.25% profit.\nTherefore, the correct option is (a)."
+    }
+  ]
+}

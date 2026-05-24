@@ -1,0 +1,258 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Percentage",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "If the word PHOTOGRAPH is spelt with 'F' in place of 'PH', then what would be the percentage reduction in the number of letters ?",
+      "options": {
+        "a": "10%",
+        "b": "20%",
+        "c": "25%",
+        "d": "18%"
+      },
+      "answer": "b",
+      "solution": "The original word 'PHOTOGRAPH' has 10 letters.\nIf 'PH' is replaced by 'F', the spelling becomes 'FOTOGRAF', which has 8 letters.\nReduction in letters = 10 - 8 = 2.\nPercentage reduction = \\frac{2}{10} \\times 100\\% = 20\\%."
+    },
+    {
+      "q_num": 2,
+      "question": "The total cost of 3 pens and 4 notebooks is ₹235. If the cost of the pen is decreased by 20% and that of the notebook is increased by 10%, then the total cost of 2 pens and 3 notebooks will be ₹172. What is the total original cost (in) of 7pens and 5 notebooks ?",
+      "options": {
+        "a": "375",
+        "b": "365",
+        "c": "355",
+        "d": "385"
+      },
+      "answer": "a",
+      "solution": "Let $P$ and $N$ be the original costs of a pen and a notebook respectively.\nFrom the first condition:\n$3P + 4N = 235$  --- (1)\nFrom the second condition:\n$2(0.8P) + 3(1.1N) = 172 \\implies 1.6P + 3.3N = 172 \\implies 16P + 33N = 1720$  --- (2)\n\nFrom (1), we get $P = \\frac{235 - 4N}{3}$. Substituting this in (2):\n$16\\left(\\frac{235 - 4N}{3}\\right) + 33N = 1720$\n$3760 - 64N + 99N = 5160$\n$35N = 1400 \\implies N = 40$\n\nSubstituting $N = 40$ in (1):\n$3P + 4(40) = 235 \\implies 3P = 75 \\implies P = 25$\n\nTotal original cost of 7 pens and 5 notebooks:\n$7P + 5N = 7(25) + 5(40) = 175 + 200 = 375$."
+    },
+    {
+      "q_num": 3,
+      "question": "There are y yellow marbles and b blue marbles in a box. 18% of the yellow marbles were added to 24% of the blue marbles, and the total was 30. Three times the number of yellow marbles exceeds two times the number of blue marbles by 200. What is the ratio of y to b ?",
+      "options": {
+        "a": "2:1",
+        "b": "6:5",
+        "c": "4:1",
+        "d": "5:2"
+      },
+      "answer": "a",
+      "solution": "According to the problem:\n$0.18y + 0.24b = 30 \\implies 18y + 24b = 3000 \\implies 3y + 4b = 500$  --- (1)\nAlso, $3y - 2b = 200$  --- (2)\n\nSubtracting (2) from (1):\n$6b = 300 \\implies b = 50$\n\nSubstituting $b = 50$ into (2):\n$3y - 2(50) = 200 \\implies 3y = 300 \\implies y = 100$\n\nThe ratio of $y$ to $b$ is $100 : 50 = 2 : 1$."
+    },
+    {
+      "q_num": 4,
+      "question": "In an examination, there were two papers, A and B, and the maximum mark in each of the two papers was 10. However, the weights assigned to papers A and B were in the ratio 2 : 1, respectively. Jonathan scored 8 out of 10 in Paper A and an overall 70% in the examination. How much did he score in Paper B out of 10 ?",
+      "options": {
+        "a": "5",
+        "b": "5.5",
+        "c": "6",
+        "d": "6.5"
+      },
+      "answer": "a",
+      "solution": "Let Jonathan's score in Paper B be $x$ out of 10.\nThe weighted average percentage score is given by:\n$\\frac{W_A \\cdot \\text{Percentage}_A + W_B \\cdot \\text{Percentage}_B}{W_A + W_B} = \\text{Overall Percentage}$\n\nHere, $\\text{Percentage}_A = \\frac{8}{10} \\times 100\\% = 80\\%$ and $\\text{Percentage}_B = \\frac{x}{10} \\times 100\\% = 10x\\%$\n$\\frac{2 \\cdot 80 + 1 \\cdot 10x}{2 + 1} = 70$\n$160 + 10x = 210$\n$10x = 50 \\implies x = 5$\n\nSo, Jonathan scored 5 out of 10 in Paper B."
+    },
+    {
+      "q_num": 5,
+      "question": "Vikas gave 3 examinations. The respective ratio of marks scored by him in the 3 examinations is 3 : 5 : 6. The respective ratio of maximum marks of the 3 examination is 5 : 7 : 8. If he scored 50 percent marks in total, then in how many examination has he scored marks more than 50 percent ?",
+      "options": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "answer": "c",
+      "solution": "Let the marks scored in the three exams be $3x, 5x, 6x$. Total marks scored = $14x$.\nLet the maximum marks of the three exams be $5y, 7y, 8y$. Total maximum marks = $20y$.\n\nGiven that the total percentage is $50\\%$, we have:\n$\\frac{14x}{20y} = 0.5 \\implies \\frac{x}{y} = \\frac{10}{14} = \\frac{5}{7}$\n\nNow, let's find the percentage scored in each exam:\n- Exam 1: $\\frac{3x}{5y} \\times 100\\% = \\frac{3}{5} \\times \\frac{5}{7} \\times 100\\% = \\frac{3}{7} \\times 100\\% \\approx 42.86\\%$\n- Exam 2: $\\frac{5x}{7y} \\times 100\\% = \\frac{5}{7} \\times \\frac{5}{7} \\times 100\\% = \\frac{25}{49} \\times 100\\% \\approx 51.02\\%$\n- Exam 3: $\\frac{6x}{8y} \\times 100\\% = \\frac{3}{4} \\times \\frac{5}{7} \\times 100\\% = \\frac{15}{28} \\times 100\\% \\approx 53.57\\%$\n\nThus, Vikas scored more than 50% in 2 examinations (Exam 2 and Exam 3)."
+    },
+    {
+      "q_num": 6,
+      "question": "If a student score 36% marks the gets failed by 32 marks but when he score 48% marks he gets passed by 64 marks. Find the passing percentage?",
+      "options": {
+        "a": "30%",
+        "b": "40%",
+        "c": "45%",
+        "d": "50%"
+      },
+      "answer": "b",
+      "solution": "Let the total marks be $T$ and the passing marks be $P$.\nFrom the first condition: $P = 0.36T + 32$\nFrom the second condition: $P = 0.48T - 64$\n\nEquating both expressions:\n$0.48T - 64 = 0.36T + 32$\n$0.12T = 96 \\implies T = 800$\n\nPassing marks $P = 0.36(800) + 32 = 288 + 32 = 320$\nPassing percentage = \\frac{320}{800} \\times 100\\% = 40\\%."
+    },
+    {
+      "q_num": 7,
+      "question": "In a test a student got 30% marks and failed by 25 marks. In the same test another student got 40% marks and secured 25% marks more than the essential minimum pass marks. The maximum pass marks for the test were:",
+      "options": {
+        "a": "350",
+        "b": "400",
+        "c": "420",
+        "d": "450"
+      },
+      "answer": "b",
+      "solution": "Let total marks be $T$ and pass marks be $P$.\nFrom the first student: $0.3T = P - 25 \\implies P = 0.3T + 25$\nFrom the second student:\n$0.4T = 1.25P = 1.25(0.3T + 25)$\n$0.4T = 0.375T + 31.25$\n$0.025T = 31.25 \\implies T = 1250$\n\nPassing marks $P = 0.3(1250) + 25 = 400$."
+    },
+    {
+      "q_num": 8,
+      "question": "If a student scores 42% marks she fails by 10 marks but when she scores 52% marks, she passes by 25 marks. Find the pass marks.",
+      "options": {
+        "a": "157",
+        "b": "147",
+        "c": "350",
+        "d": "152"
+      },
+      "answer": "a",
+      "solution": "Let $T$ be the total marks.\nDifference in percentages = $52\\% - 42\\% = 10\\%$\nDifference in marks = $25 - (-10) = 35$ marks.\n\nSo, $10\\%$ of $T = 35 \\implies T = 350$ marks.\nPassing marks = $42\\%$ of $350 + 10 = 147 + 10 = 157$."
+    },
+    {
+      "q_num": 9,
+      "question": "In a test a student got 39% marks and passed by 12 marks. In the same test another student got 27% of marks and got 25% less than the essential pass marks. What are the maximum pass marks for the test?",
+      "options": {
+        "a": "152",
+        "b": "144",
+        "c": "156",
+        "d": "142"
+      },
+      "answer": "b",
+      "solution": "Let $T$ be total marks and $P$ be pass marks.\nFrom the first student: $0.39T = P + 12 \\implies P = 0.39T - 12$\nFrom the second student: $0.27T = 0.75P \\implies P = 0.36T$\n\nEquating both expressions for $P$:\n$0.36T = 0.39T - 12 \\implies 0.03T = 12 \\implies T = 400$\n\nPass marks $P = 0.36(400) = 144$."
+    },
+    {
+      "q_num": 10,
+      "question": "A has some coins. He gives half of the coins and 2 more to B. B gives half of the coins and 2 more to C. C gives half of the coins and 2 more to D. The number of coins D has now, is the smallest two digit number. How many coins does A have in the beginning?",
+      "options": {
+        "a": "76",
+        "b": "68",
+        "c": "60",
+        "d": "52"
+      },
+      "answer": "d",
+      "solution": "The smallest two digit number is 10, so D has 10 coins.\nLet's work backward:\n1) C gave half of his coins and 2 more to D:\n$\\frac{C}{2} + 2 = 10 \\implies \\frac{C}{2} = 8 \\implies C = 16$\n\n2) B gave half of his coins and 2 more to C:\n$\\frac{B}{2} + 2 = 16 \\implies \\frac{B}{2} = 14 \\implies B = 28$\n\n3) A gave half of his coins and 2 more to B:\n$\\frac{A}{2} + 2 = 28 \\implies \\frac{A}{2} = 26 \\implies A = 52$."
+    },
+    {
+      "q_num": 11,
+      "question": "A fruit seller sells 45% of the oranges that he has along with one more oranges to a customer. He then sells 20% of the remaining oranges and 2 more oranges to a second customer. He then sells 90% of the now remaining oranges to a third customer and is still left with 5 oranges. How many oranges did the fruit seller have initially ?",
+      "options": {
+        "a": "100",
+        "b": "111",
+        "c": "121",
+        "d": "120"
+      },
+      "answer": "d",
+      "solution": "Let's work backward:\n1) After selling 90% of the remaining oranges to the third customer, 10% is left:\n$10\\% \\text{ of remaining} = 5 \\implies \\text{remaining before third customer} = 50$\n\n2) Before selling to the second customer (let the remaining be $R_1$):\n$R_1 - (0.2R_1 + 2) = 50 \\implies 0.8R_1 = 52 \\implies R_1 = 65$\n\n3) Before selling to the first customer (let initial oranges be $N$):\n$N - (0.45N + 1) = 65 \\implies 0.55N = 66 \\implies N = 120$."
+    },
+    {
+      "q_num": 12,
+      "question": "A boy has some chocolates. He gives 28.57% of them and five more to his friends..he then gives 40% of the remaining and one more to another friend. Then he haves 62.5% of the remaining to a new friend and two more. He finally gives 70% of the rest to the fourth friend and is left with three chocolates. How many chocolates did he initially had?",
+      "options": {
+        "a": "80",
+        "b": "84",
+        "c": "90",
+        "d": "96"
+      },
+      "answer": "b",
+      "solution": "Convert percentages to fractions:\n$28.57\\% \\approx \\frac{2}{7}$, $40\\% = \\frac{2}{5}$, $62.5\\% = \\frac{5}{8}$, $70\\% = \\frac{7}{10}$.\n\nWorking backward:\n1) Left with 3 chocolates after giving 70%:\n$\\left(1 - \\frac{7}{10}\\right) R_3 = 3 \\implies \\frac{3}{10} R_3 = 3 \\implies R_3 = 10$\n\n2) Before giving 62.5% and 2 more (let remaining be $R_2$):\n$R_2 - \\left(\\frac{5}{8}R_2 + 2\\right) = 10 \\implies \\frac{3}{8}R_2 = 12 \\implies R_2 = 32$\n\n3) Before giving 40% and 1 more (let remaining be $R_1$):\n$R_1 - \\left(\\frac{2}{5}R_1 + 1\\right) = 32 \\implies \\frac{3}{5}R_1 = 33 \\implies R_1 = 55$\n\n4) Before giving 28.57% and 5 more (let initial chocolates be $N$):\n$N - \\left(\\frac{2}{7}N + 5\\right) = 55 \\implies \\frac{5}{7}N = 60 \\implies N = 84$."
+    },
+    {
+      "q_num": 13,
+      "question": "Abhas had some students in his pre batch of mathematics. 33.33% of students and 4 more got full 200 marks in CGL mains exam, 82% of the remaining students and 10 more got 195 marks. Then 50% of the remaining students and 2 more got 190 marks and 67% of his remaining students got 188 marks and rest 66 students got 185 marks in exam. Find the number of students Abhas had in all.",
+      "options": {
+        "a": "3356",
+        "b": "3456",
+        "c": "3256",
+        "d": "3146"
+      },
+      "answer": "b",
+      "solution": "Let's work backward using the option values to find an integer flow.\nFor $N = 3456$:\n1) $33.33\\%$ (or $\\frac{1}{3}$) of students and 4 more:\n$\\frac{3456}{3} + 4 = 1152 + 4 = 1156$ students.\nRemaining = $3456 - 1156 = 2300$.\n\n2) $82\\% $ of remaining and 10 more:\n$0.82 \\times 2300 + 10 = 1886 + 10 = 1896$.\nRemaining = $2300 - 1896 = 404$.\n\n3) $50\\%$ of remaining and 2 more:\n$0.5 \\times 404 + 2 = 202 + 2 = 204$.\nRemaining = $404 - 204 = 200$.\n\n4) $67\\%$ of remaining got 188 marks, and the rest got 185 marks:\nRest = $200 - (0.67 \\times 200) = 200 - 134 = 66$ students.\nThis matches the given condition perfectly. Hence, total students $= 3456$."
+    },
+    {
+      "q_num": 14,
+      "question": "P,Q and R together have 180 candies among them. P gives Q and R each as many candies as they already have. After this. R gives Q half as many candies as Q already has, and R also gives P twice as many candies as P already has. Now each of them has the same number of candies with them. What is the ratio of the respective number of candies P and R had initially?",
+      "options": {
+        "a": "5:3",
+        "b": "3:5",
+        "c": "1:2",
+        "d": "2:3"
+      },
+      "answer": "a",
+      "solution": "At the end, P, Q, and R each have $\\frac{180}{3} = 60$ candies.\nLet's work backward:\n1) Before the last step (R gives Q half of Q's candies, and P twice of P's candies):\nLet the quantities be $P_1, Q_1, R_1$.\n- Q ends up with $1.5 Q_1 = 60 \\implies Q_1 = 40$.\n- P ends up with $3 P_1 = 60 \\implies P_1 = 20$.\n- Since the total is 180, $R_1 = 180 - 40 - 20 = 120$.\n\n2) Before the first step (P gives Q and R each as many as they already have):\nLet the initial quantities be $P_0, Q_0, R_0$.\n- Q ended up with $2 Q_0 = 40 \\implies Q_0 = 20$.\n- R ended up with $2 R_0 = 120 \\implies R_0 = 60$.\n- Since the total is 180, $P_0 = 180 - 20 - 60 = 100$.\n\nThe initial ratio of P to R is $P_0 : R_0 = 100 : 60 = 5 : 3$."
+    },
+    {
+      "q_num": 15,
+      "question": "A fruit seller had some apples and oranges. he sold 25% apples to a person A, 40% of the remaining to a person B and had 45 apples left. Similarly, he sold 35% oranges to A, 80 oranges to B and had 15% oranges left. What is the total number of apples and oranges that the fruit seller had initially ?",
+      "options": {
+        "a": "270",
+        "b": "280",
+        "c": "240",
+        "d": "260"
+      },
+      "answer": "d",
+      "solution": "For apples:\nLet $x$ be the initial number of apples.\nRemaining apples after selling to A = $0.75x$.\nRemaining apples after B = $0.60 \\times 0.75x = 0.45x$.\nGiven $0.45x = 45 \\implies x = 100$.\n\nFor oranges:\nLet $y$ be the initial number of oranges.\nRemaining after A = $0.65y$.\nRemaining after B = $0.65y - 80$.\nGiven that 15% are left:\n$0.65y - 80 = 0.15y \\implies 0.50y = 80 \\implies y = 160$.\n\nTotal apples and oranges initially = $100 + 160 = 260$."
+    },
+    {
+      "q_num": 16,
+      "question": "At the beginning of day 1 of a month, Rajesh has 500 eggs. He sells 20% of the eggs by the end of the day and added b% of the eggs at the beginning of the next day and sold 20% of the eggs at the end of the next day. This pattern continued up to the end of the third day of the month when he is left with 1024 eggs. The value of b is equal to ?",
+      "options": {
+        "a": "10",
+        "b": "20",
+        "c": "100",
+        "d": "500"
+      },
+      "answer": "c",
+      "solution": "Let $M = 1 + \\frac{b}{100}$ be the multiplier when adding $b\\%$ eggs.\n- Day 1 end: $500 \\times 0.8 = 400$ eggs.\n- Day 2 start: $400 M$.\n- Day 2 end: $400 M \\times 0.8 = 320 M$.\n- Day 3 start: $320 M^2$.\n- Day 3 end: $320 M^2 \\times 0.8 = 256 M^2$.\n\nGiven he is left with 1024 eggs at the end of Day 3:\n$256 M^2 = 1024 \\implies M^2 = 4 \\implies M = 2$\nSince $M = 1 + \\frac{b}{100} = 2 \\implies b = 100$."
+    },
+    {
+      "q_num": 17,
+      "question": "A monkey cover 62.5% of height of a pole in one hour. In the next hour it climbs 12.5% of the remaining height. If height of pole is 192 meter. Then find the distance travelled in second hour ?",
+      "options": {
+        "a": "18 meter",
+        "b": "36 meter",
+        "c": "9 meter",
+        "d": "3 meter"
+      },
+      "answer": "c",
+      "solution": "Total height $= 192\\text{ m}$.\nDistance covered in 1st hour $= 62.5\\%$ of $192 = \\frac{5}{8} \\times 192 = 120\\text{ m}$.\nRemaining height $= 192 - 120 = 72\\text{ m}$.\nDistance covered in 2nd hour $= 12.5\\%$ of $72 = \\frac{1}{8} \\times 72 = 9\\text{ m}$."
+    },
+    {
+      "q_num": 18,
+      "question": "Every day a mango seller sells half of his stock, 10% of the stock overnight gets spoiled, if 1322 mango rotted over three nights then how many did he starts with on the first day?",
+      "options": {
+        "a": "24000",
+        "b": "16000",
+        "c": "21000",
+        "d": "18000"
+      },
+      "answer": "b",
+      "solution": "Let $S$ be the initial stock.\n- Day 1: Sells half $\\implies$ remaining stock $= 0.5S$.\n  Overnight spoilage $= 10\\%$ of $0.5S = 0.05S$.\n  Stock left for Day 2 $= 0.45S$.\n- Day 2: Sells half $\\implies$ remaining stock $= 0.225S$.\n  Overnight spoilage $= 10\\%$ of $0.225S = 0.0225S$.\n  Stock left for Day 3 $= 0.2025S$.\n- Day 3: Sells half $\\implies$ remaining stock $= 0.10125S$.\n  Overnight spoilage $= 10\\%$ of $0.10125S = 0.010125S$.\n\nTotal spoilage $= 0.05S + 0.0225S + 0.010125S = 0.082625S$.\nGiven total rotted $= 1322$:\n$0.082625S = 1322 \\implies S = \\frac{1322}{0.082625} = 16000$."
+    },
+    {
+      "q_num": 19,
+      "question": "A large watermelon weighs 20kg with 96% of its weigh being water. It is allowed to stand in the sun for a while and some of the water evaporates so that now only 95% of it is water. What is its reduced weight now?",
+      "options": {
+        "a": "15",
+        "b": "14",
+        "c": "16",
+        "d": "16.5"
+      },
+      "answer": "c",
+      "solution": "The weight of the solid pulp remains constant.\nInitially:\nWater $= 96\\%$, Pulp $= 4\\%$.\nPulp weight $= 4\\%$ of $20\\text{ kg} = 0.8\\text{ kg}$.\n\nFinally:\nWater $= 95\\%$, Pulp $= 5\\%$.\nLet $W$ be the final weight of the watermelon:\n$5\\%$ of $W = 0.8\\text{ kg} \\implies W = \\frac{0.8}{0.05} = 16\\text{ kg}$."
+    },
+    {
+      "q_num": 20,
+      "question": "A watermelon weighs 17kg with 91% of its weight being water. It was left in sun for a while and some of the water evaporated such that only 85% of it is water. What is the reduced weight of the watermelon now?",
+      "options": {
+        "a": "None",
+        "b": "11.5 kg",
+        "c": "10.5 kg",
+        "d": "10.2 kg"
+      },
+      "answer": "d",
+      "solution": "The weight of the solid pulp remains constant.\nInitially:\nWater $= 91\\%$, Pulp $= 9\\%$.\nPulp weight $= 9\\%$ of $17\\text{ kg} = 1.53\\text{ kg}$.\n\nFinally:\nWater $= 85\\%$, Pulp $= 15\\%$.\nLet $W$ be the reduced weight:\n$15\\%$ of $W = 1.53\\text{ kg} \\implies W = \\frac{1.53}{0.15} = 10.2\\text{ kg}$."
+    },
+    {
+      "q_num": 21,
+      "question": "Fresh fruit contain 68% of water and dry fruit contain 20% of water. Then how much dry fruits have in 75 kilograms fresh fruits?",
+      "options": {
+        "a": "25KG",
+        "b": "28KG",
+        "c": "30KG",
+        "d": "32KG"
+      },
+      "answer": "c",
+      "solution": "The pulp content in fresh fruit and dry fruit remains the same.\nIn fresh fruits:\nWater $= 68\\%$, Pulp $= 32\\%$.\nPulp weight in $75\\text{ kg}$ fresh fruits $= 32\\%$ of $75 = 24\\text{ kg}$.\n\nIn dry fruits:\nWater $= 20\\%$, Pulp $= 80\\%$.\nLet $W$ be the weight of the dry fruits:\n$80\\%$ of $W = 24\\text{ kg} \\implies W = \\frac{24}{0.80} = 30\\text{ kg}$."
+    }
+  ]
+}

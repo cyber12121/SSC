@@ -27,7 +27,7 @@
     "questions": [
       {
         "q_num": 1,
-        "question": "A crop primarily associated with equatorial regions can also be cultivated in tropical and sub-tropical areas. It requires a hot and humid climate, annual rainfall exceeding 200 cm, and temperatures generally above 25\u00b0C. Which one of the following crops fits this description?",
+        "question": "A crop primarily associated with equatorial regions can also be cultivated in tropical and sub-tropical areas. It requires a hot and humid climate, annual rainfall exceeding 200 cm, and temperatures generally above 25°C. Which one of the following crops fits this description?",
         "options": {
           "a": "Paddy",
           "b": "Rubber",
@@ -35,7 +35,7 @@
           "d": "Sugarcane"
         },
         "answer": "b",
-        "solution": "Rubber is an equatorial crop, but under special conditions, it is also grown in tropical and sub-tropical areas. It requires a moist and humid climate with rainfall of more than 200 cm and temperature above 25\u00b0C."
+        "solution": "Rubber is an equatorial crop, but under special conditions, it is also grown in tropical and sub-tropical areas. It requires a moist and humid climate with rainfall of more than 200 cm and temperature above 25°C."
       }
     ]
   },
@@ -89,10 +89,10 @@
         "q_num": 1,
         "question": "Rearrange the following stages in the process of judicial decision-making in a court of law in the correct order:\n\nP. Pronouncement of the final judgment.\nQ. Filing of the case and submission of pleadings.\nR. Examination of evidence and arguments by both sides.\nS. Interpretation of law and application to the facts of the case.",
         "options": {
-          "a": "Q \u2192 R \u2192 P \u2192 S",
-          "b": "R \u2192 Q \u2192 S \u2192 P",
-          "c": "Q \u2192 S \u2192 R \u2192 P",
-          "d": "Q \u2192 R \u2192 S \u2192 P"
+          "a": "Q → R → P → S",
+          "b": "R → Q → S → P",
+          "c": "Q → S → R → P",
+          "d": "Q → R → S → P"
         },
         "answer": "d",
         "solution": "The correct sequence of judicial decision-making starts with filing a case (Q), followed by the examination of evidence (R), interpretation of law (S), and finally pronouncement of judgment (P)."

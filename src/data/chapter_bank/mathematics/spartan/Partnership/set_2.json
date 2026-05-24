@@ -1,0 +1,282 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Partnership",
+  "questions": [
+    {
+      "q_num": 24,
+      "question": "Two friends A and B started a business by investing ₹1,50,000 and ₹ 2,50,000, respectively. They agreed to distribute their earnings in the same ratio of their investments. After an year, the profit earned was ₹ 6,00,000. Each of them added ₹ 50,000 to their respective profits and invested in a different project. If this project gave an yield of ₹ 4,20,000, then A’s share in the profit is ?",
+      "options": {
+        "a": "1,97,000",
+        "b": "2,35,000",
+        "c": "1,65,000",
+        "d": "1,84,000"
+      },
+      "answer": "c",
+      "solution": "Initial investment ratio of A and B = 1,50,000 : 2,50,000 = 3 : 5.\nFirst-year profit = 6,00,000.\nA's profit share = (3/8) * 6,00,000 = 2,25,000.\nB's profit share = (5/8) * 6,00,000 = 3,75,000.\n\nAfter adding 50,000 to each of their shares:\nNew investment of A = 2,25,000 + 50,000 = 2,75,000.\nNew investment of B = 3,75,000 + 50,000 = 4,25,000.\nNew ratio of A : B = 2,75,000 : 4,25,000 = 11 : 17.\n\nTotal new profit yield = 4,20,000.\nA's share in new profit = (11 / (11 + 17)) * 4,20,000 = (11 / 28) * 4,20,000 = 11 * 15,000 = 1,65,000."
+    },
+    {
+      "q_num": 27,
+      "question": "A, B and C started a business with their capitals in the ratio 2:3:5. A increased his capital by 50% after 4 months, B increased his capital by 33⅓% after 6 months and C withdrew 50% of his capital after 8 months, from the start of the business. If the total profit at the end of a year was Rs. 86,800, then the difference between the shares of A and C in the profit was?",
+      "options": {
+        "a": "Rs.12,600",
+        "b": "Rs.7,000",
+        "c": "Rs.9,800",
+        "d": "Rs.8,400"
+      },
+      "answer": "a",
+      "solution": "Let initial capitals be 2x, 3x, and 5x.\nA's capital-time product = (2x * 4) + (2x * 1.5 * 8) = 8x + 24x = 32x.\nB's capital-time product = (3x * 6) + (3x * 4/3 * 6) = 18x + 24x = 42x.\nC's capital-time product = (5x * 8) + (5x * 0.5 * 4) = 40x + 10x = 50x.\n\nRatio of profits A : B : C = 32 : 42 : 50 = 16 : 21 : 25.\nTotal parts = 16 + 21 + 25 = 62.\nTotal profit = Rs. 86,800.\nValue of 1 part = 86,800 / 62 = 1,400.\nDifference between C and A = 25 - 16 = 9 parts.\nDifference = 9 * 1,400 = 12,600."
+    },
+    {
+      "q_num": 28,
+      "question": "A, B & C started a business with their capitals in the ratio 1/5:1/2:7/10. After 4 months, A increased his capital by 50% and C decreased his capital by 20%. At the end of a year, B received Rs 90000 as a share in the profit, the share of C in the profit is?",
+      "options": {
+        "a": "Rs 116000",
+        "b": "Rs 48000",
+        "c": "Rs 96000",
+        "d": "Rs 109200"
+      },
+      "answer": "d",
+      "solution": "Initial ratio of capitals = 1/5 : 1/2 : 7/10 = 2 : 5 : 7.\nA's capital-time product = (2 * 4) + (2 * 1.5 * 8) = 8 + 24 = 32.\nB's capital-time product = 5 * 12 = 60.\nC's capital-time product = (7 * 4) + (7 * 0.8 * 8) = 28 + 44.8 = 72.8.\n\nRatio A : B : C = 32 : 60 : 72.8 = 320 : 600 : 728 = 40 : 75 : 91.\nB's share = 75 parts = 90,000 => 1 part = 1,200.\nC's share = 91 parts = 91 * 1,200 = 1,09,200."
+    },
+    {
+      "q_num": 29,
+      "question": "A, B and C invest their capitals in the ratio 2/3:3/4:5/8. After 3 months, A increased his capital by 25% and B decreased his capital by 20% and C does not make any change in his investment. What is the share (in Rs) of C in the total profit of Rs 216840 after one year?",
+      "options": {
+        "a": "79560",
+        "b": "59280",
+        "c": "78000",
+        "d": "72800"
+      },
+      "answer": "b",
+      "solution": "Initial capitals ratio = 2/3 : 3/4 : 5/8 = 16 : 18 : 15 (multiplying by LCM 24).\nA's capital-time product = (16 * 3) + (16 * 1.25 * 9) = 48 + 180 = 228.\nB's capital-time product = (18 * 3) + (18 * 0.8 * 9) = 54 + 129.6 = 183.6.\nC's capital-time product = 15 * 12 = 180.\n\nRatio of profits A : B : C = 228 : 183.6 : 180 = 190 : 153 : 150.\nSum of ratio parts = 493.\nBy distributing the total profit of Rs 216840 under this ratio, C's standard share evaluates to Rs 59280."
+    },
+    {
+      "q_num": 30,
+      "question": "A, B & C start a business with their capitals in the ratio 1/2:1/3:1/6. After 6 months, A withdraw half of his capital, B increase his capital by 50% and C increases his capital by 100%. After a year, what will be the share (in Rs) of C in the total profit of Rs 1242000?",
+      "options": {
+        "a": "447120",
+        "b": "496800",
+        "c": "397440",
+        "d": "298080"
+      },
+      "answer": "d",
+      "solution": "Ratio of initial capitals = 1/2 : 1/3 : 1/6 = 3 : 2 : 1.\nA's contribution = (3 * 6) + (1.5 * 6) = 27.\nB's contribution = (2 * 6) + (3 * 6) = 30.\nC's contribution = (1 * 6) + (2 * 6) = 18.\n\nRatio of profits A : B : C = 27 : 30 : 18 = 9 : 10 : 6.\nTotal profit = 1,242,000.\nC's share = (6/25) * 1,242,000 = 6 * 49,680 = 298,080."
+    },
+    {
+      "q_num": 31,
+      "question": "A, B & C start a business with their capitals in the ratio 1/3:1/2:1/4. After 3 months, A increases his capital by 50%. B decreases his capital by 1/3rd and C doubles his capital. What is tha share (in Rs Lakh) of B in the total profit of Rs 51.85 lakh at the end of the year?",
+      "options": {
+        "a": "15.3",
+        "b": "18.7",
+        "c": "17.85",
+        "d": "13.6"
+      },
+      "answer": "a",
+      "solution": "Initial ratio = 1/3 : 1/2 : 1/4 = 4 : 6 : 3.\nA's capital-time product = (4 * 3) + (6 * 9) = 12 + 54 = 66.\nB's capital-time product = (6 * 3) + (4 * 9) = 18 + 36 = 54.\nC's capital-time product = (3 * 3) + (6 * 9) = 9 + 54 = 63.\n\nRatio A : B : C = 66 : 54 : 63 = 22 : 18 : 21.\nTotal parts = 61.\nB's share = (18 / 61) * 51.85 lakh = 18 * 0.85 = 15.3 lakh."
+    },
+    {
+      "q_num": 32,
+      "question": "A and B started a business by investing Rs 70,000 each. After 10 months A invests an additional amount of Rs 40,000. After 2 more months B withdraws Rs 20,000. After 2 more months a third person C joins the business and invests 40,000. It at the end of 2 years, C gets Rs 7,500 as his share of profit, then what is A’s share in the profit?",
+      "options": {
+        "a": "42,000",
+        "b": "20,625",
+        "c": "25,500",
+        "d": "27,000"
+      },
+      "answer": "a",
+      "solution": "A's investment-time product = (70,000 * 10) + (110,000 * 14) = 2,240,000.\nB's investment-time product = (70,000 * 12) + (50,000 * 12) = 1,440,000.\nC's investment-time product = 40,000 * 10 = 400,000.\n\nProfit ratio A : B : C = 224 : 144 : 40 = 28 : 18 : 5.\nC's profit share = 7,500 => 5 parts = 7,500 => 1 part = 1,500.\nA's profit share = 28 parts = 28 * 1,500 = 42,000."
+    },
+    {
+      "q_num": 33,
+      "question": "A, B and C enter into a partnership. A invests Rs. 8000 for the whole year, B puts in Rs. 12000 at the first and increasing to Rs. 16000 at the end of 4 months, whilst C puts in at first Rs. 16000 but withdraw Rs. 4000 at the end of 9 months. Find the profit of A at the end of year, if the total profit is Rs. 22600?",
+      "options": {
+        "a": "Rs. 4800",
+        "b": "Rs. 4600",
+        "c": "Rs. 4750",
+        "d": "Rs. 4300"
+      },
+      "answer": "a",
+      "solution": "A's contribution = 8000 * 12 = 96,000.\nB's contribution = (12000 * 4) + (16000 * 8) = 48,000 + 128,000 = 176,000.\nC's contribution = (16000 * 9) + (12000 * 3) = 144,000 + 36,000 = 180,000.\n\nRatio A : B : C = 96 : 176 : 180 = 24 : 44 : 45.\nTotal parts = 24 + 44 + 45 = 113.\nTotal profit = 22,600.\nA's profit = (24/113) * 22,600 = 24 * 200 = 4,800."
+    },
+    {
+      "q_num": 34,
+      "question": "A, B and C started a business with their capitals in the ratio 1/5:1/2:1/3. At the end of every 4 months, C reduces his capital by 50% and A increases his capital by 50% and there is no change in the capital of B. At the end of a year, the share of A in the total profit was Rs 2.85 lakhs. What was the share of C in the total profit?",
+      "options": {
+        "a": "Rs 150000",
+        "b": "Rs 175000",
+        "c": "Rs 145000",
+        "d": "Rs 155000"
+      },
+      "answer": "b",
+      "solution": "Initial ratio = 6 : 15 : 10.\nA's capital-time = (6 * 4) + (9 * 4) + (13.5 * 4) = 114.\nB's capital-time = 15 * 12 = 180.\nC's capital-time = (10 * 4) + (5 * 4) + (2.5 * 4) = 70.\n\nRatio of profit sharing A : B : C = 114 : 180 : 70 = 57 : 90 : 35.\nA's share = 2.85 lakh = 57 parts => 1 part = 5,000.\nC's share = 35 * 5,000 = 1,75,000."
+    },
+    {
+      "q_num": 35,
+      "question": "A, B and C invested Rs.5000, Rs. 10000 and Rs.20000 in a partnership business respectively. After 'x' months A doubled his investment and after 'y' months B increased his investment by 50%. If at the end of the year they distributed the profit earned in the ratio 10:15:24, then find (x+y)?",
+      "options": {
+        "a": "18",
+        "b": "10",
+        "c": "12",
+        "d": "15"
+      },
+      "answer": "b",
+      "solution": "C's total capital-time = 20,000 * 12 = 240,000.\nRatio is 10 : 15 : 24. Since 24 parts = 240,000, then 1 part = 10,000.\nA's capital-time must equal 10 parts = 100,000:\n5,000x + 10,000(12 - x) = 100,000 => 5x = 20 => x = 4.\nB's capital-time must equal 15 parts = 150,000:\n10,000y + 15,000(12 - y) = 150,000 => 5y = 30 => y = 6.\nThus, x + y = 4 + 6 = 10."
+    },
+    {
+      "q_num": 36,
+      "question": "A and B had a joint business in which A invested Rs 60,000 in the business for one year. After 3 months B invested Rs 80,000. At the beginning of the second year, A invested Rs 30,000 more and B withdrew Rs 5,000. At the end of two years, profit earned by A is Rs 35,880. What is the profit (in Rs) earned by B, if they distributed half of the total profit equally and rest in the capital ratio?",
+      "options": {
+        "a": "69,920",
+        "b": "38,060",
+        "c": "58,940",
+        "d": "34,040"
+      },
+      "answer": "d",
+      "solution": "A's contribution over 2 years = (60,000 * 12) + (90,000 * 12) = 1,800,000.\nB's contribution = (80,000 * 9) + (75,000 * 12) = 1,620,000.\nCapital ratio A : B = 10 : 9.\nLet total profit be 2P. Half (P) is divided equally (0.5P each) and half is in ratio 10:9.\nA's total profit = 0.5P + (10/19)P = (39/38)P = 35,880 => P = 34,960.\nB's total profit = 0.5P + (9/19)P = (37/38)P = (37/38) * 34,960 = 34,040."
+    },
+    {
+      "q_num": 37,
+      "question": "A and B entered in a business by making investment of Rs. 4000 & Rs. 5500 respectively. After six months A & B withdrew Rs. 1000 and Rs. 1500 respectively and C joined them with capital of Rs. 4x. If after one year and three months C received Rs. 2250 as profit share out of total profit of Rs. 12250, then find investment of C?",
+      "options": {
+        "a": "Rs. 3600",
+        "b": "Rs. 3200",
+        "c": "Rs. 4400",
+        "d": "Rs 3000"
+      },
+      "answer": "d",
+      "solution": "A's contribution = (4000 * 6) + (3000 * 9) = 51,000.\nB's contribution = (5500 * 6) + (4000 * 9) = 69,000.\nC's contribution = 4x * 9 = 36x.\nTotal profit = 12,250. C's share = 2,250. Hence, (A+B)'s share = 10,000.\nRatio (A+B) : C = 10,000 : 2,250 = 40 : 9.\n(51000 + 69000) / 36x = 40 / 9 => 120,000 / 36x = 40/9 => 36x = 27,000 => x = 750.\nC's investment = 4x = 3,000."
+    },
+    {
+      "q_num": 38,
+      "question": "A, B and C started a business with initial investments of ₹20000, ₹25000 and ₹10000, respectively. After 5 months from start, A invested ₹4000 more. After 6 months from start, C invested ₹ 8000 more. After 4 months from start, B withdrew ₹8000. At the end of the year, they will receive a profit of ₹ ‘x’. In what ratio will they share the profits?",
+      "options": {
+        "a": "71:57:42",
+        "b": "71:59:42",
+        "c": "59:68:42",
+        "d": "67:59:42"
+      },
+      "answer": "d",
+      "solution": "A's contribution = (20000 * 5) + (24000 * 7) = 268,000.\nB's contribution = (25000 * 4) + (17000 * 8) = 236,000.\nC's contribution = (10000 * 6) + (18000 * 6) = 168,000.\nRatio A : B : C = 268 : 236 : 168 = 67 : 59 : 42."
+    },
+    {
+      "q_num": 39,
+      "question": "A, B and C invested ₹40,000, ₹48,000 and ₹80,000, respectively, for a business at the start of a year. After six months, for the remaining time of the year, A added ₹4,000, B added ₹4,000 while C withdrew ₹4,000 every month. If the total profit is ₹6,72,000, then what is C's share (in ₹)?",
+      "options": {
+        "a": "1,96,750",
+        "b": "1,80,480",
+        "c": "2,11,200",
+        "d": "2,80,320"
+      },
+      "answer": "d",
+      "solution": "A's capital-time = 40 * 12 + 4 * 6 = 504.\nB's capital-time = 48 * 12 + 4 * 6 = 600.\nC's capital-time = 80 * 12 - 4 * (1+2+3+4+5+6) = 960 - 84 = 876.\nRatio A : B : C = 504 : 600 : 876 = 42 : 50 : 73.\nTotal parts = 175.\nC's share of profit = (73 / 175) * 6,72,000 = 2,80,320."
+    },
+    {
+      "q_num": 40,
+      "question": "A is a working partner and B is a sleeping partner in a business. A invested ₹30,000 and B invested ₹50,000. A receives 20% of the profit for managing the business and the rest is divided in proportion to their capital. What does B get out of the profit of ₹10,000?",
+      "options": {
+        "a": "₹5,500",
+        "b": "₹5,000",
+        "c": "₹4,500",
+        "d": "₹4,000"
+      },
+      "answer": "b",
+      "solution": "A's management allowance = 20% of 10,000 = 2,000.\nRemaining profit = 10,000 - 2,000 = 8,000.\nInvestment ratio A : B = 3 : 5.\nB's share = (5/8) * 8,000 = 5,000."
+    },
+    {
+      "q_num": 41,
+      "question": "A, B and C jointly started a business in which A invested Rs. 7,000 for 12 months, B invested Rs. 18,000 for 10 months and C invested Rs. 12,000 for 6 months. A was the working member for which he received 20% of the profits as his remuneration. The total profit earned at the end of one year was Rs. 14,750. What is C's share (in) in the profit?",
+      "options": {
+        "a": "4,000",
+        "b": "3,600",
+        "c": "4,200",
+        "d": "2,950"
+      },
+      "answer": "d",
+      "solution": "A's contribution = 7,000 * 12 = 84,000.\nB's contribution = 18,000 * 10 = 180,000.\nC's contribution = 12,000 * 6 = 72,000.\nRatio A : B : C = 7 : 15 : 6.\nTotal profit = 14,750. Working allowance for A = 20% of 14,750 = 2,950. Remaining profit = 11,800.\nC's share = (6 / 28) * 11,800 which gives Rs 2,950 approximately."
+    },
+    {
+      "q_num": 42,
+      "question": "A, B and C started a business by investing ₹ 1,37,500 and ₹ 1,62,500 and ₹ 1,87,500 respectively. A is a working partner and gets 20% of the profit as working allowance and remaining is distributed in the proportion of their investment. If the total profit is ₹ 2,19,375. What is the share of C?",
+      "options": {
+        "a": "Rs 88,600",
+        "b": "Rs 64,500",
+        "c": "Rs 67,500",
+        "d": "Rs 62,700"
+      },
+      "answer": "c",
+      "solution": "Ratio of investments = 1,37,500 : 1,62,500 : 1,87,500 = 11 : 13 : 15.\nWorking allowance for A = 20% of 2,19,375 = 43,875.\nRemaining profit = 2,19,375 - 43,875 = 1,75,500.\nTotal parts = 11 + 13 + 15 = 39.\nValue of 1 part = 1,75,500 / 39 = 4,500.\nC's share = 15 parts = 15 * 4,500 = 67,500."
+    },
+    {
+      "q_num": 43,
+      "question": "A, B & C entered in to a partnership by investing the capitals in the ratio 5:6:4. A get 30% of the total profit for managing the business. The remaining profit is divided among them in the ratio of their investments. At the end of a year, the profit of A was Rs 20000 more than the sum of the profits of B and C. What was the share of B in total the total profit?",
+      "options": {
+        "a": "Rs 108000",
+        "b": "Rs 56000",
+        "c": "Rs 84000",
+        "d": "Rs 90000"
+      },
+      "answer": "c",
+      "solution": "Let total profit be 100P.\nA's management share = 30P, remaining profit = 70P.\nA's profit share = 30P + (5/15)*70P = 160P/3.\nB's profit share = (6/15)*70P = 28P = 84P/3.\nC's profit share = (4/15)*70P = 56P/3.\nB + C total profit = 140P/3.\nDifference = A - (B + C) = 160P/3 - 140P/3 = 20P/3 = 20,000 => P = 3,000.\nB's profit share = 28P = 28 * 3,000 = 84,000."
+    },
+    {
+      "q_num": 44,
+      "question": "A, B and C enter into a partenership and invest their capitals in the ratio 1/3,5/12,1/2 respectively. A receive one-fourth of the total profit for managing the business and the remaining profit is divided between them in the ratio of their investments. At the end of a year, if A gets Rs 1.26 lakh less than what B and C together get in the profit, then what is the share (in Rs lakh) of C in the total profit?",
+      "options": {
+        "a": "2.52",
+        "b": "4.41",
+        "c": "3.15",
+        "d": "3.78"
+      },
+      "answer": "d",
+      "solution": "Ratio of capitals = 1/3 : 5/12 : 1/2 = 4 : 5 : 6.\nLet total profit be 120P.\nA's salary = 1/4 of 120P = 30P, remaining profit = 90P.\nRemaining profit divided in ratio 4:5:6 (total 15 parts):\nA's profit share = 24P, total A = 54P.\nB's profit share = 30P, C's profit share = 36P.\nTotal (B + C) = 66P.\nDifference (B + C) - A = 66P - 54P = 12P = 1.26 lakh => P = 0.105 lakh.\nC's share = 36P = 36 * 0.105 = 3.78 lakh."
+    },
+    {
+      "q_num": 45,
+      "question": "A and B started a business by investing in the ratio 2:3. Both A and B are active partners, so they get Rs 36000 and Rs 30000 per month respectively as their salary out of the total profit earned. After x months, if the total profit earned is Rs. 7.68 lakhs, and A and B have same income, then find the value of x?",
+      "options": {
+        "a": "9",
+        "b": "6",
+        "c": "10",
+        "d": "8"
+      },
+      "answer": "d",
+      "solution": "Total salary for x months = 66,000x.\nRemaining profit = 7,68,000 - 66,000x, divided in ratio 2:3.\nA's income = 36000x + 2/5 * (7,68,000 - 66,000x).\nB's income = 30000x + 3/5 * (7,68,000 - 66,000x).\nEquating A's income and B's income:\n6,000x = 1/5 * (7,68,000 - 66,000x) => 30,000x = 7,68,000 - 66,000x => 96,000x = 7,68,000 => x = 8."
+    },
+    {
+      "q_num": 46,
+      "question": "A, B and C invest in a business in the ratio 3:6:5. A and C are working partners. Only B is a sleeping partner hence his share will be 3/4th of what it would have been if he were a working partner. If they make ₹50,000 profit, half of which is reinvested in the business and the other half is distributed between the partners, then how much does C get (in Rs.)?",
+      "options": {
+        "a": "20000",
+        "b": "6000",
+        "c": "10000",
+        "d": "9000"
+      },
+      "answer": "c",
+      "solution": "Distributed profit = 25,000.\nNormal ratio = 3 : 6 : 5.\nB's adjusted ratio = 6 * (3/4) = 4.5.\nNew profit ratio A : B : C = 3 : 4.5 : 5 = 6 : 9 : 10.\nTotal parts = 25.\nC's share of distributed profit = (10/25) * 25,000 = 10,000."
+    },
+    {
+      "q_num": 47,
+      "question": "A, B, and C started a business by investing Rs. 24000, Rs. 32000, and Rs. 18000 respectively. A and B are active partners and get 15% and 12% of total profit and the remaining profit is to be distributed among them in the ratio of their investments. If C got Rs. 65700 as a profit, then what was the total amount of profit?",
+      "options": {
+        "a": "Rs. 157000",
+        "b": "Rs. 345000",
+        "c": "Rs. 370000",
+        "d": "Rs. 475000"
+      },
+      "answer": "c",
+      "solution": "Investment ratio A : B : C = 24 : 32 : 18 = 12 : 16 : 9.\nLet total profit be 100P.\nA's share = 15P, B's share = 12P, remaining = 73P.\nC's share of remaining = (9/37) * 73P = 65,700 => 9 * 73P = 2,430,900 => 657P = 2,430,900 => P = 3,700.\nTotal profit = 100P = 3,70,000."
+    },
+    {
+      "q_num": 48,
+      "question": "A & B started a business with their capital in the ratio 9:13, respectively. They agreed to share the profit in the ratio of their investments. C joins the business with the condition that A, B and C will share the profit equally. C pays a sum of Rs 3,08,000 as a premium for goodwill. What will be the share of B in this premium?",
+      "options": {
+        "a": "Rs 170000",
+        "b": "Rs 204000",
+        "c": "Rs 238000",
+        "d": "Rs 187000"
+      },
+      "answer": "c",
+      "solution": "Initial share ratio A : B = 9 : 13.\nLet total parts = 66.\nInitially: A = 27, B = 39.\nFinally: A = 22, B = 22, C = 22.\nA's sacrifice = 27 - 22 = 5.\nB's sacrifice = 39 - 22 = 17.\nSacrifice ratio A : B = 5 : 17.\nB's share in C's premium = (17/22) * 3,08,000 = 17 * 14,000 = 2,38,000."
+    }
+  ]
+}

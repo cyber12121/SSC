@@ -1,0 +1,534 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit Loss",
+  "questions": [
+    {
+      "q_num": 115,
+      "question": "Shiva sold his laptop for Rs.25,520 at a loss of 12%. At what price should he have sold it to gain a profit of 10%?",
+      "options": {
+        "a": "Rs. 30,450",
+        "b": "Rs. 28,420",
+        "c": "Rs. 31,900",
+        "d": "Rs. 29,000"
+      },
+      "answer": "c",
+      "solution": "The laptop is sold at a loss of 12%, which means the selling price is 88% of the Cost Price (CP).\n88% of CP = 25,520\nCP = 25,520 / 0.88 = Rs. 29,000\nTo gain a profit of 10%, the new selling price should be 110% of the CP.\nNew Selling Price = 1.10 * 29,000 = Rs. 31,900."
+    },
+    {
+      "q_num": 116,
+      "question": "A person incurs 10% loss by selling a mobile phone for Rs.11,250. At what price (in Rs.) should the mobile phone be sold to earn a 6% profit?",
+      "options": {
+        "a": "13,250",
+        "b": "13,500",
+        "c": "13,300",
+        "d": "13,350"
+      },
+      "answer": "a",
+      "solution": "The mobile phone is sold at a 10% loss, so 90% of the Cost Price (CP) is equal to Rs. 11,250.\n90% of CP = 11,250\nCP = 11,250 / 0.9 = Rs. 12,500\nTo earn a 6% profit, the selling price should be 106% of the CP.\nNew Selling Price = 1.06 * 12,500 = Rs. 13,250."
+    },
+    {
+      "q_num": 117,
+      "question": "By selling an article for 255, there is a loss of 15%. When the article is sold for 357, the net result in the transaction is:",
+      "options": {
+        "a": "19% profit",
+        "b": "17% loss",
+        "c": "19% loss",
+        "d": "17% profit"
+      },
+      "answer": "a",
+      "solution": "A loss of 15% means the article is sold at 85% of its Cost Price (CP).\n85% of CP = 255\nCP = 255 / 0.85 = 300\nIf the article is sold for 357:\nProfit = 357 - 300 = 57\nProfit Percentage = (57 / 300) * 100 = 19% profit."
+    },
+    {
+      "q_num": 118,
+      "question": "A pen was sold for 28.75 at a profit of 15%. If it was sold for 25.75, then what would have been the percentage of profit?",
+      "options": {
+        "a": "2%",
+        "b": "3%",
+        "c": "4%",
+        "d": "1%"
+      },
+      "answer": "b",
+      "solution": "A profit of 15% means the selling price is 115% of the Cost Price (CP).\n115% of CP = 28.75\nCP = 28.75 / 1.15 = 25\nIf the pen is sold for 25.75:\nProfit = 25.75 - 25 = 0.75\nProfit Percentage = (0.75 / 25) * 100 = 3%."
+    },
+    {
+      "q_num": 119,
+      "question": "By selling an article for 425.25, there is a loss of 5.5%. If the same article is sold for 465.75, then what is the profit per cent?",
+      "options": {
+        "a": "3.5%",
+        "b": "3%",
+        "c": "4%",
+        "d": "5.5%"
+      },
+      "answer": "a",
+      "solution": "A loss of 5.5% means the article is sold at 94.5% of its Cost Price (CP).\n94.5% of CP = 425.25\nCP = 425.25 / 0.945 = 450\nIf the same article is sold for 465.75:\nProfit = 465.75 - 450 = 15.75\nProfit Percentage = (15.75 / 450) * 100 = 3.5%."
+    },
+    {
+      "q_num": 120,
+      "question": "By selling an article for ₹4,536, a shopkeeper loses 16%. To gain 11%, he should sell it for (in ₹) :",
+      "options": {
+        "a": "5,499",
+        "b": "4,995",
+        "c": "5,949",
+        "d": "5,994"
+      },
+      "answer": "d",
+      "solution": "A loss of 16% means the article is sold at 84% of its Cost Price (CP).\n84% of CP = 4,536\nCP = 4,536 / 0.84 = 5,400\nTo gain 11%, the new selling price should be 111% of the CP.\nNew Selling Price = 1.11 * 5,400 = 5,994."
+    },
+    {
+      "q_num": 121,
+      "question": "If the selling price of an article is doubled, then the profit becomes four times. What was the original profit percentage?",
+      "options": {
+        "a": "75%",
+        "b": "100%",
+        "c": "50%",
+        "d": "25%"
+      },
+      "answer": "c",
+      "solution": "Let Cost Price be C and Selling Price be S.\nOriginal Profit P = S - C\nIf Selling Price is doubled (2S), the new profit becomes 4 times the original profit:\n2S - C = 4(S - C)\n2S - C = 4S - 4C\n3C = 2S\nS = 1.5C\nOriginal Profit Percentage = ((S - C) / C) * 100 = ((1.5C - C) / C) * 100 = 50%."
+    },
+    {
+      "q_num": 122,
+      "question": "If the selling price is increased to 7/3 of itself, the profit becomes 4 times, find the profit percentage.",
+      "options": {
+        "a": "100%",
+        "b": "80%",
+        "c": "75%",
+        "d": "72%"
+      },
+      "answer": "b",
+      "solution": "Let Cost Price be C and Selling Price be S.\nOriginal Profit P = S - C\nIf Selling Price becomes (7/3)S, the new profit becomes 4 times the original profit:\n(7/3)S - C = 4(S - C)\n7S - 3C = 12S - 12C\n9C = 5S\nS = 1.8C\nOriginal Profit Percentage = ((S - C) / C) * 100 = ((1.8C - C) / C) * 100 = 80%."
+    },
+    {
+      "q_num": 123,
+      "question": "If the selling price is doubled, the profit triples. what is the profit percentage?",
+      "options": {
+        "a": "100 % PROFIT",
+        "b": "150 % PROFIT",
+        "c": "200 % PROFIT",
+        "d": "250 % PROFIT"
+      },
+      "answer": "a",
+      "solution": "Let Cost Price be C and Selling Price be S.\nOriginal Profit P = S - C\nIf Selling Price is doubled, new profit is 3 times the original profit:\n2S - C = 3(S - C)\n2S - C = 3S - 3C\n2C = S\nOriginal Profit Percentage = ((S - C) / C) * 100 = ((2C - C) / C) * 100 = 100%."
+    },
+    {
+      "q_num": 124,
+      "question": "The selling price is tripled and the cost price doubled, the profit would become 65%. What is the present profit (in %)?",
+      "options": {
+        "a": "10",
+        "b": "11",
+        "c": "20",
+        "d": "12.5"
+      },
+      "answer": "a",
+      "solution": "Let the original Selling Price be S and original Cost Price be C.\nNew Selling Price = 3S\nNew Cost Price = 2C\nSince profit is 65%:\n3S = 1.65 * 2C\n3S = 3.3C\nS = 1.1C\nOriginal Profit = S - C = 1.1C - C = 0.1C\nOriginal Profit Percentage = (0.1C / C) * 100 = 10%."
+    },
+    {
+      "q_num": 125,
+      "question": "If the selling price is made 2.25 times and the cost price is made 1.5 times of itself, the profit would become 60%. What is the profit percent?",
+      "options": {
+        "a": "6.65%",
+        "b": "6%",
+        "c": "6.67%",
+        "d": "7.67%"
+      },
+      "answer": "c",
+      "solution": "Let original Selling Price be S and original Cost Price be C.\nNew Selling Price = 2.25S\nNew Cost Price = 1.5C\nGiven that the new profit is 60%:\n2.25S = 1.60 * 1.5C\n2.25S = 2.4C\nS = (2.4 / 2.25) * C = (16/15) * C\nOriginal Profit Percentage = ((S - C) / C) * 100 = ((16/15 - 1) * C / C) * 100 = (1/15) * 100 = 6.67%."
+    },
+    {
+      "q_num": 126,
+      "question": "If the cost price of an article is doubled and the selling price for the article is tripled, then what is the profit percent given that selling price is twice cost price?",
+      "options": {
+        "a": "100",
+        "b": "200",
+        "c": "300",
+        "d": "400"
+      },
+      "answer": "b",
+      "solution": "Given that original Selling Price (S) is twice the Cost Price (C):\nS = 2C\nIf Cost Price is doubled:\nNew Cost Price = 2C\nIf Selling Price is tripled:\nNew Selling Price = 3S = 3 * 2C = 6C\nNew Profit = New Selling Price - New Cost Price = 6C - 2C = 4C\nNew Profit Percentage = (4C / 2C) * 100 = 200%."
+    },
+    {
+      "q_num": 127,
+      "question": "If the cost price of an article is made 2.5 times and the selling price for the article is made 4.5 times. Find the profit percent, given that the selling price is 1.5 times of the cost price.",
+      "options": {
+        "a": "170%",
+        "b": "169%",
+        "c": "270%",
+        "d": "168%"
+      },
+      "answer": "a",
+      "solution": "Given that original Selling Price (S) is 1.5 times the Cost Price (C):\nS = 1.5C\nIf Cost Price is made 2.5 times:\nNew Cost Price = 2.5C\nIf Selling Price is made 4.5 times:\nNew Selling Price = 4.5S = 4.5 * 1.5C = 6.75C\nNew Profit = 6.75C - 2.5C = 4.25C\nNew Profit Percentage = (4.25C / 2.5C) * 100 = 170%."
+    },
+    {
+      "q_num": 128.1,
+      "question": "If an article is sold at 15/16th of the selling price, then there would be a loss 6.25%. Find the relationship between Sp and Cp ?",
+      "options": {
+        "a": "SP= CP",
+        "b": "SP<CP",
+        "c": "SP>CP",
+        "d": "CND"
+      },
+      "answer": "a",
+      "solution": "A loss of 6.25% means selling price is 93.75% of Cost Price (CP), which is 15/16 of CP.\nGiven that selling the article at 15/16 of S yields this 6.25% loss:\n(15/16) * SP = (15/16) * CP\nSP = CP."
+    },
+    {
+      "q_num": 128.2,
+      "question": "if the article is sold at 9/11th of S.p there would be 18.1818% loss. Find the profit percentage if it sold is 7/6th of S.P ?",
+      "options": {
+        "a": "No profit no loss",
+        "b": "18.18% profit",
+        "c": "16.66% profit",
+        "d": "22.22% profit"
+      },
+      "answer": "c",
+      "solution": "18.1818% loss is equal to a fraction of 2/11 loss, so the item is sold at 9/11 of Cost Price (CP).\nGiven that selling at 9/11 of SP results in this loss:\n(9/11) * SP = (9/11) * CP => SP = CP\nIf sold at 7/6 of SP:\nNew SP = (7/6) * CP\nProfit = (7/6) * CP - CP = (1/6) * CP\nProfit Percentage = (1/6) * 100 = 16.66%."
+    },
+    {
+      "q_num": 128.3,
+      "question": "If the article is sold at 13/8th of S.p there would be Profit 62.5%. Find the profit percentage if it sold is 14/13th of S.P?",
+      "options": {
+        "a": "No profit no loss",
+        "b": "7.69% profit",
+        "c": "7.69% loss",
+        "d": "11.11%"
+      },
+      "answer": "b",
+      "solution": "Profit of 62.5% is equal to 5/8 profit, meaning the selling price is (13/8) of CP.\nGiven:\n(13/8) * SP = (13/8) * CP => SP = CP\nIf sold at 14/13 of SP:\nNew SP = (14/13) * CP\nProfit = (14/13) * CP - CP = (1/13) * CP\nProfit Percentage = (1/13) * 100 = 7.69%."
+    },
+    {
+      "q_num": 128,
+      "question": "Find the actual profit or loss percentage if article is sell at a loss of 4.55% on S.P?",
+      "options": {
+        "a": "4.55%",
+        "b": "5%",
+        "c": "4.35%",
+        "d": "4%"
+      },
+      "answer": "c",
+      "solution": "4.55% is approximately 1/22.\nSo, Loss = (1/22) * SP.\nWe know CP = SP + Loss = SP + (1/22)SP = (23/22)SP.\nActual Loss Percentage (on CP) = (Loss / CP) * 100 = ((1/22)SP / (23/22)SP) * 100 = (1 / 23) * 100 ≈ 4.35%."
+    },
+    {
+      "q_num": 129,
+      "question": "If a man gains 8.33% on th selling price find the cost price if Selling price is 1728?",
+      "options": {
+        "a": "1331",
+        "b": "1584",
+        "c": "1721",
+        "d": "1024"
+      },
+      "answer": "b",
+      "solution": "A gain of 8.33% is equal to 1/12 of the Selling Price (SP).\nGain = (1/12) * 1728 = 144\nCost Price = SP - Gain = 1728 - 144 = 1584."
+    },
+    {
+      "q_num": 130,
+      "question": "A man purchased a cell phone for ₹24,500 and sold it at a gain of 12.5% calculated on the selling price. The selling price of the cell phone was:",
+      "options": {
+        "a": "25,000",
+        "b": "28,000",
+        "c": "27,500",
+        "d": "25,500"
+      },
+      "answer": "b",
+      "solution": "Let Selling Price be S.\nGain = 12.5% of S = (1/8) * S.\nCost Price (CP) = S - Gain = S - S/8 = (7/8) * S.\nWe are given CP = 24,500.\n(7/8) * S = 24,500\nS = 24,500 * (8 / 7) = 3,500 * 8 = 28,000."
+    },
+    {
+      "q_num": 131,
+      "question": "An article is sold at a certain price. If it is sold at 80% of this price, then there will be a loss of 10%. What is the profit or loss percentage when article is sold at original S.P?",
+      "options": {
+        "a": "10%",
+        "b": "12.5%",
+        "c": "15%",
+        "d": "8%"
+      },
+      "answer": "b",
+      "solution": "Let the original Selling Price be S.\nIf sold at 80% of S (0.8S), there is a loss of 10%, meaning the selling price is 90% of Cost Price (CP).\n0.8S = 0.9CP\nS = (0.9 / 0.8)CP = 1.125CP\nSince the selling price is 112.5% of CP, the profit percentage when sold at original SP is 12.5%."
+    },
+    {
+      "q_num": 132,
+      "question": "A man sells an article at a certain price. If he sells it at 65% of this selling price (equivalent to a 35% discount on SP), then he has a loss of 22%. If he sells it at its original selling price, then his profit percentage is:",
+      "options": {
+        "a": "20%",
+        "b": "15%",
+        "c": "13%",
+        "d": "25%"
+      },
+      "answer": "a",
+      "solution": "Let the original Selling Price be S.\nIf sold at 65% of S (0.65S), there is a 22% loss, so the price is 78% of CP.\n0.65S = 0.78CP\nS = (0.78 / 0.65) * CP = 1.2CP\nThus, selling at the original selling price yields a profit of 20%."
+    },
+    {
+      "q_num": 133,
+      "question": "An article is sold at certain price. If it is sold at 33.33% of this price there is a loss of 33.33%.What is the profit percentage when it is sold at 60% of the original S.P?",
+      "options": {
+        "a": "10%",
+        "b": "12.5%",
+        "c": "20%",
+        "d": "25%"
+      },
+      "answer": "c",
+      "solution": "Let original Selling Price be S.\n33.33% = 1/3.\nIf sold at (1/3)S, there is a loss of 33.33%, meaning the selling price is 2/3 of CP.\n(1/3)S = (2/3)CP => S = 2CP\nIf sold at 60% of original SP:\nNew Selling Price = 0.6 * 2CP = 1.2CP\nProfit Percentage = 20%."
+    },
+    {
+      "q_num": 134,
+      "question": "By selling an article at 9/11 of its actual selling price, a trader incurs a loss of 10%. What will be the profit percentage, if the article is sold for 8% less than its actual selling price?",
+      "options": {
+        "a": "4/3",
+        "b": "3/2",
+        "c": "6/5",
+        "d": "5/4"
+      },
+      "answer": "c",
+      "solution": "Let actual Selling Price be S.\nSelling at (9/11)S leads to a 10% loss, meaning it is sold at 90% of CP.\n(9/11)S = 0.9CP = (9/10)CP => S = 1.1CP\nIf sold for 8% less than actual Selling Price:\nNew SP = 0.92S = 0.92 * 1.1CP = 1.012CP\nProfit Percentage = 1.2% = 6/5 %."
+    },
+    {
+      "q_num": 135,
+      "question": "An umbrella is sold at a certain price. If it is sold at 73% of this price, there would be a loss of 28%. What is the profit or loss percent when the umbrella is sold at the original price?",
+      "options": {
+        "a": "136% loss",
+        "b": "1.36% loss",
+        "c": "13.6% profit",
+        "d": "0.136% loss"
+      },
+      "answer": "b",
+      "solution": "Let original Selling Price be S.\n0.73S = 0.72CP (since 28% loss means 72% of CP)\nS = (72/73) * CP ≈ 0.9863 * CP\nLoss Percentage = (1 - 72/73) * 100 = (1/73) * 100 ≈ 1.37% loss (approx. 1.36% loss)."
+    },
+    {
+      "q_num": 136,
+      "question": "A TV is sold at a certain price. If it is sold at 86% of this price, there would be a loss of 16%. What is the profit or loss percent when the TV is sold at 7/6th of the original selling price?",
+      "options": {
+        "a": "12.82% profit",
+        "b": "13.95% profit",
+        "c": "13.95% loss",
+        "d": "12.22% loss"
+      },
+      "answer": "b",
+      "solution": "Let original Selling Price be S.\n0.86S = 0.84CP (since 16% loss means 84% of CP)\nS = (84/86) * CP = (42/43) * CP\nIf sold at 7/6 of original Selling Price:\nNew SP = (7/6) * S = (7/6) * (42/43) * CP = (49/43) * CP\nProfit Percentage = ((49/43 - 1) * CP / CP) * 100 = (6/43) * 100 ≈ 13.95% profit."
+    },
+    {
+      "q_num": 137,
+      "question": "A water bottle is sold at a certain price. If it is sold at 42.5% of this price, there would be a loss of 42.5%. What is the profit percent when it is sold at 85% of the original selling price?",
+      "options": {
+        "a": "14.22%",
+        "b": "15.78%",
+        "c": "16.52%",
+        "d": "15%"
+      },
+      "answer": "d",
+      "solution": "Let original Selling Price be S.\n0.425S = (1 - 0.425) * CP = 0.575CP\nS = (0.575 / 0.425) * CP = (23/17) * CP\nIf sold at 85% of original Selling Price:\nNew SP = 0.85S = 0.85 * (23/17) * CP = (17/20) * (23/17) * CP = 1.15CP\nProfit Percentage = 15%."
+    },
+    {
+      "q_num": 138,
+      "question": "By selling an article at 19/24 of its actual selling price, a man loses 5%. If he sells it at 90% of the actual selling price, then what will his gain percentage be?",
+      "options": {
+        "a": "10%",
+        "b": "10.5%",
+        "c": "7.5%",
+        "d": "8%"
+      },
+      "answer": "d",
+      "solution": "Let actual Selling Price be S.\nSelling at (19/24)S yields a 5% loss, so it represents 95% of CP.\n(19/24)S = 0.95CP = (19/20)CP => S = 1.2CP\nIf sold at 90% of actual Selling Price:\nNew SP = 0.90S = 0.90 * 1.2CP = 1.08CP\nGain Percentage = 8%."
+    },
+    {
+      "q_num": 139,
+      "question": "C.p of 12 articles is equal to s.p of 9 articles while discount on 8 articles is equal to profit of 8 articles? Find discount percentage?",
+      "options": {
+        "a": "5%",
+        "b": "10%",
+        "c": "20%",
+        "d": "25%"
+      },
+      "answer": "c",
+      "solution": "12 * CP = 9 * SP => SP / CP = 4 / 3.\nLet CP = 3, SP = 4. Profit per article, P = SP - CP = 1.\nDiscount on 8 articles = Profit on 8 articles => 8 * D = 8 * P => D = P = 1.\nMarked Price (MP) = SP + D = 4 + 1 = 5.\nDiscount Percentage = (D / MP) * 100 = (1 / 5) * 100 = 20%."
+    },
+    {
+      "q_num": 140,
+      "question": "The cost price of 38 articles is equal to the selling price of 26 articles, while the discount on 4 articles is equal to the profit on 7 articles. Find the profit percent and discount percent.",
+      "options": {
+        "a": "47.15%, 34.59%",
+        "b": "46.15%, 35.59%",
+        "c": "45.15%, 33.59%",
+        "d": "46.15%, 34.59%"
+      },
+      "answer": "b",
+      "solution": "38 * CP = 26 * SP => SP / CP = 38 / 26 = 19 / 13.\nLet CP = 13, SP = 19.\nProfit per article, P = 19 - 13 = 6.\nProfit Percentage = (6 / 13) * 100 = 46.15%.\nDiscount on 4 articles = Profit on 7 articles => 4 * D = 7 * P\nD = 1.75 * P = 1.75 * 6 = 10.5.\nMarked Price (MP) = SP + D = 19 + 10.5 = 29.5.\nDiscount Percentage = (D / MP) * 100 = (10.5 / 29.5) * 100 = 35.59%."
+    },
+    {
+      "q_num": 141,
+      "question": "Cost price of an article is 500. Article sold in such a way that profit% is 7/8 times of the discount%. If the mark price of an article is 875. Find the profit(in Rs) after selling the article..",
+      "options": {
+        "a": "100",
+        "b": "125",
+        "c": "150",
+        "d": "175"
+      },
+      "answer": "b",
+      "solution": "Given CP = 500, MP = 875.\nProfit% = (Profit / CP) * 100 = P / 5.\nDiscount% = (Discount / MP) * 100 = D / 8.75 = 4D / 35.\nGiven: Profit% = 7/8 * Discount% => P / 5 = 7/8 * (4D / 35) => P / 5 = D / 10 => D = 2P.\nWe know: Profit + Discount = MP - CP = 875 - 500 = 375.\nP + 2P = 375 => 3P = 375 => P = 125."
+    },
+    {
+      "q_num": 142,
+      "question": "Cost price of an article is 428. Article sold in such a way that profit% equals to discount%. If the mark price of an article is 1284. Find the profit(in Rs) after selling the article..",
+      "options": {
+        "a": "196",
+        "b": "200",
+        "c": "214",
+        "d": "225"
+      },
+      "answer": "c",
+      "solution": "Given CP = 428, MP = 1284.\nProfit% = Discount% => P / 428 * 100 = D / 1284 * 100 => D = 3P.\nWe know: Profit + Discount = MP - CP = 1284 - 428 = 856.\nP + 3P = 856 => 4P = 856 => P = 214."
+    },
+    {
+      "q_num": 143,
+      "question": "The ratio of the marked price and the cost price of a bike is 8:5. If the profit percent and discount percent both are same, find the profit percent.",
+      "options": {
+        "a": "23.07%",
+        "b": "22%",
+        "c": "25%",
+        "d": "27.27%"
+      },
+      "answer": "a",
+      "solution": "Let CP = 5, MP = 8.\nProfit% = Discount% => P / 5 * 100 = D / 8 * 100 => D = 1.6P.\nAlso: P + D = MP - CP = 8 - 5 = 3.\nP + 1.6P = 3 => 2.6P = 3 => P = 1.1538.\nProfit Percentage = (1.1538 / 5) * 100 = 23.07%."
+    },
+    {
+      "q_num": 144,
+      "question": "If Ratio CP to MP of an article is 3:4 and ratio of profit% and discount% is 4:3. Find the discount and profit percentage?",
+      "options": {
+        "a": "16.66% ,12.5%",
+        "b": "10% ,12.5%",
+        "c": "15% ,12.5%",
+        "d": "16.66% ,10%"
+      },
+      "answer": "a",
+      "solution": "Let CP = 3, MP = 4.\nRatio of Profit% to Discount% = 4 : 3.\n(P / 3) / (D / 4) = 4 / 3 => 4P / 3D = 4 / 3 => P = D.\nSince P + D = MP - CP = 4 - 3 = 1 => P = 0.5, D = 0.5.\nProfit Percentage = (0.5 / 3) * 100 = 16.66%.\nDiscount Percentage = (0.5 / 4) * 100 = 12.5%."
+    },
+    {
+      "q_num": 146,
+      "question": "A dealer gains 20% by selling an article at 25% discount on its marked price. If the cost price of the article is decreased by 15%, how much discount percentage should he now give on the same marked price so as to earn the same percentage of profit as before?",
+      "options": {
+        "a": "32.50%",
+        "b": "35%",
+        "c": "36.25%",
+        "d": "37.75%"
+      },
+      "answer": "c",
+      "solution": "Let MP = 100.\nAt a 25% discount, SP = 75.\nGiven 20% gain: CP = 75 / 1.20 = 62.5.\nIf CP is decreased by 15%:\nNew CP = 0.85 * 62.5 = 53.125.\nTo earn the same 20% profit:\nNew SP = 1.20 * 53.125 = 63.75.\nRequired discount on MP of 100 = 100 - 63.75 = 36.25%."
+    },
+    {
+      "q_num": 147,
+      "question": "A trader gains 25% by selling an article with 20% discount on its marked price. If the cost price of the article increases by 30%, then how much discount (in % ) should he offer on the same marked price to gain 15% of profit?",
+      "options": {
+        "a": "5.08%",
+        "b": "5.12%",
+        "c": "4.32%",
+        "d": "4.87%"
+      },
+      "answer": "c",
+      "solution": "Let MP = 100.\nAt a 20% discount, SP = 80.\nWith a 25% gain: CP = 80 / 1.25 = 64.\nIf CP increases by 30%:\nNew CP = 1.30 * 64 = 83.2.\nTo gain 15% profit:\nNew SP = 1.15 * 83.2 = 95.68.\nRequired discount on MP of 100 = 100 - 95.68 = 4.32%."
+    },
+    {
+      "q_num": 148,
+      "question": "A Microwave oven is sold in Hyderabad for Rs.M. A retailer, Elahi from Hyderabad went to Madras and bought it for 25%less (when compared to the price in Hyderabad). He spends Rs. 1,000 on transport to bring it from Madras to Hyderabad. He sold it in Hyderabad for Rs.M making a profit of 10%. Find the value of M (in Rs.).",
+      "options": {
+        "a": "6527.9",
+        "b": "6,305.8",
+        "c": "6,258.8",
+        "d": "6285.7"
+      },
+      "answer": "d",
+      "solution": "Let Hyderabad price be M.\nMadras price = 0.75M.\nTotal Cost Price = 0.75M + 1000.\nSells at M for a 10% profit:\nM = 1.10 * (0.75M + 1000)\nM = 0.825M + 1100\n0.175M = 1100\nM = 1100 / 0.175 ≈ 6285.7."
+    },
+    {
+      "q_num": 149,
+      "question": "Mukesh sells two shirts. The cost price of first shirt is equal to selling price of second one. The first shirt is sold at 30% profit and second one is sold at 30% loss. Find the ratio of selling price of the first shirt to the cost price of the second.",
+      "options": {
+        "a": "91:100",
+        "b": "100:91",
+        "c": "31:50",
+        "d": "50:31"
+      },
+      "answer": "a",
+      "solution": "Let CP1 = SP2.\nSP1 = 1.30 * CP1\nSP2 = 0.70 * CP2\nSince CP1 = SP2 => CP1 = 0.70 * CP2.\nWe need the ratio SP1 : CP2:\nSP1 / CP2 = (1.30 * CP1) / CP2 = (1.30 * 0.70 * CP2) / CP2 = 0.91 = 91 : 100."
+    },
+    {
+      "q_num": 150,
+      "question": "After selling 10 candles a man earn a profit of sp of 3 pens. While selling 10 pens a man losses of sp of 4 candles. Numerically value of P% and L% is equal and the cp of candle is half the cp of pen. Find the ratio of Sp of candle to pen.",
+      "options": {
+        "a": "2:3",
+        "b": "3:2",
+        "c": "2:5",
+        "d": "5:1"
+      },
+      "answer": "b",
+      "solution": "Let SP of candle be Sc, SP of pen be Sp. Let CP of candle be Cc, CP of pen be Cp = 2Cc.\nProfit% for candles = (3Sp / 10Cc) * 100.\nLoss% for pens = (4Sc / 10Cp) * 100 = (4Sc / 20Cc) * 100 = (2Sc / 10Cc) * 100.\nSince Profit% = Loss%:\n3Sp = 2Sc => Sc / Sp = 3 / 2."
+    },
+    {
+      "q_num": 151,
+      "question": "A stationery shop owner makes a profit of 25% by selling a set of books. He then increases the selling price by Rs. 5 and now makes a profit of 45%. The previous selling price of the book set was?",
+      "options": {
+        "a": "32.15",
+        "b": "31.25",
+        "c": "34",
+        "d": "32.25"
+      },
+      "answer": "b",
+      "solution": "Let Cost Price be C.\nInitial SP = 1.25C\nNew SP = 1.45C\nIncrease in SP = 1.45C - 1.25C = 0.20C = 5\nC = 25\nPrevious selling price = 1.25 * 25 = 31.25."
+    },
+    {
+      "q_num": 152,
+      "question": "A book seller sells a book at a profit of 10% if he had bought is at 4% less and sold it for Rs 6 more he would have gain 18¾%. Find the cost price of book?",
+      "options": {
+        "a": "120",
+        "b": "135",
+        "c": "150",
+        "d": "165"
+      },
+      "answer": "c",
+      "solution": "Let original Cost Price be C.\nInitial SP = 1.10C.\nNew CP = 0.96C.\nNew SP = 1.10C + 6.\nGain = 18.75% = 3/16.\nNew SP = (19/16) * 0.96C = 1.14C.\n1.10C + 6 = 1.14C => 0.04C = 6 => C = 150."
+    },
+    {
+      "q_num": 153,
+      "question": "A person purchased 40 items at some price. He sold some items at a profit of 20% which was equal to the cost price of 5 items. The remaining items are sold at 30% profit. Find the total profit percentage.",
+      "options": {
+        "a": "24.16%",
+        "b": "25%",
+        "c": "22.5%",
+        "d": "23.75%"
+      },
+      "answer": "d",
+      "solution": "Let CP of each item be 1. Total CP of 40 items = 40.\nLet x items be sold at 20% profit.\nProfit on x items = 0.20 * x.\nGiven: 0.20x = 5 => x = 25 items.\nRemaining items = 40 - 25 = 15 items.\nProfit on remaining items = 15 * 0.30 = 4.5.\nTotal Profit = 5 + 4.5 = 9.5.\nTotal Profit Percentage = (9.5 / 40) * 100 = 23.75%."
+    },
+    {
+      "q_num": 154,
+      "question": "Ram purchase 60 items at some price. He sold some items at a profit of 20% by selling them at a profit equal to cost price of 7 items. The remaining items are sold at 30% profit. Find the total profit percentage.",
+      "options": {
+        "a": "24.16%",
+        "b": "25%",
+        "c": "22.5%",
+        "d": "23.75%"
+      },
+      "answer": "a",
+      "solution": "Let CP of each item be 1. Total CP = 60.\nLet x items be sold at 20% profit.\nProfit on x items = 0.20 * x = 7 => x = 35 items.\nRemaining items = 60 - 35 = 25 items.\nProfit on remaining items = 25 * 0.30 = 7.5.\nTotal Profit = 7 + 7.5 = 14.5.\nTotal Profit Percentage = (14.5 / 60) * 100 = 24.16%."
+    },
+    {
+      "q_num": 155,
+      "question": "A man sold an LED TV at 8% profit and a fridge at 15% profit. If he sold the LED TV at 15% profit and the fridge at 8% profit, he gain Rs350 less. Find the CP of LED TV and fridge, if he purchase both at Rs30,000?",
+      "options": {
+        "a": "Rs12000 and Rs18000",
+        "b": "Rs12500 and Rs17500",
+        "c": "Rs11500 and Rs18500",
+        "d": "Rs15000 and Rs15000"
+      },
+      "answer": "b",
+      "solution": "Let CP of TV be T, Fridge be F.\nT + F = 30,000.\nFirst profit: 0.08T + 0.15F.\nSecond profit: 0.15T + 0.08F.\nDifference: (0.08T + 0.15F) - (0.15T + 0.08F) = 350 => 0.07F - 0.07T = 350 => F - T = 5,000.\nSolving:\nF + T = 30000\nF - T = 5000\nF = 17,500 and T = 12,500."
+    },
+    {
+      "q_num": 156,
+      "question": "A shopkeeper bought two radios in Rs2375. If he sold 1st radio at 12% profit and 2nd at 24% profit, he earns a certain profit. If he sold 1st at 24% profit and 2nd at 12% profit, he get Rs9 more then the prices of both the radio is?",
+      "options": {
+        "a": "Rs1000 & Rs1375",
+        "b": "Rs1225 & Rs1150",
+        "c": "Rs1300 & Rs1075",
+        "d": "Rs800 & Rs1575"
+      },
+      "answer": "b",
+      "solution": "Let CP of radios be R1 and R2.\nR1 + R2 = 2375.\nSecond case profit difference = 9:\n(0.24R1 + 0.12R2) - (0.12R1 + 0.24R2) = 9 => 0.12R1 - 0.12R2 = 9 => R1 - R2 = 75.\nSolving:\nR1 + R2 = 2375\nR1 - R2 = 75\n2R1 = 2450 => R1 = 1225, R2 = 1150."
+    }
+  ]
+}

@@ -32,6 +32,9 @@ export interface Chapter {
   subject_id: string;
   questions: Question[];
   id?: string;
+  section?: 'spartan' | 'pinnacle' | 'qrb';
+  topic_name?: string;
+  set_name?: string;
 }
 
 export interface QuestionProgress {

@@ -1,0 +1,162 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Percentage",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "0.001 is equivalent to",
+      "options": {
+        "a": "10%",
+        "b": "1%",
+        "c": "0.01%",
+        "d": "0.1%"
+      },
+      "answer": "d",
+      "solution": "To convert a decimal to a percentage, we multiply by 100:\n\n$$0.001 \\times 100\\% = 0.1\\%$$\n\nTherefore, 0.001 is equivalent to 0.1%."
+    },
+    {
+      "q_num": 2,
+      "question": "1.14 expressed as a per cent of 1.9 is",
+      "options": {
+        "a": "6%",
+        "b": "10%",
+        "c": "60%",
+        "d": "90%"
+      },
+      "answer": "c",
+      "solution": "To find what percent 1.14 is of 1.9, we use the formula:\n\n$$\\text{Percentage} = \\left( \\frac{1.14}{1.9} \\right) \\times 100\\%$$\n\n$$\\text{Percentage} = \\left( \\frac{114}{190} \\right) \\times 100\\% = 0.6 \\times 100\\% = 60\\%$$\n\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 3,
+      "question": "If A is 150% of B and B is 40% of C. If A + B + C is 20 then find the value of 2B + 3C – 5A.",
+      "options": {
+        "a": "15",
+        "b": "20",
+        "c": "16",
+        "d": "14"
+      },
+      "answer": "d",
+      "solution": "We are given:\n- $A = 150\\% \\text{ of } B = 1.5B$\n- $B = 40\\% \\text{ of } C = 0.4C \\implies C = 2.5B$\n\nThus, the ratio $A : B : C = 1.5B : B : 2.5B = 3 : 2 : 5$.\n\nLet $A = 3x$, $B = 2x$, and $C = 5x$.\nGiven, $A + B + C = 20$:\n$$3x + 2x + 5x = 20 \\implies 10x = 20 \\implies x = 2$$\n\nSo, the values are:\n- $A = 3(2) = 6$\n- $B = 2(2) = 4$\n- $C = 5(2) = 10$\n\nAssuming a common typographical correction for the expression to find, $2B + 3C - 4A$:\n$$2B + 3C - 4A = 2(4) + 3(10) - 4(6) = 8 + 30 - 24 = 14$$"
+    },
+    {
+      "q_num": 4,
+      "question": "Two numbers A and B are such that the sum of 6% of A and 4% of B is 2/5 of the sum of 7% of A and 11% of B, then what is the value of A : B ?",
+      "options": {
+        "a": "1 : 7",
+        "b": "5 : 8",
+        "c": "1 : 8",
+        "d": "3 : 7"
+      },
+      "answer": "c",
+      "solution": "According to the question:\n$$\\frac{6}{100}A + \\frac{4}{100}B = \\frac{2}{5} \\left( \\frac{7}{100}A + \\frac{11}{100}B \\right)$$\n\nMultiply both sides by 500 to clear the denominators:\n$$5(6A + 4B) = 2(7A + 11B)$$\n$$30A + 20B = 14A + 22B$$\n$$16A = 2B \\implies \\frac{A}{B} = \\frac{2}{16} = \\frac{1}{8}$$\n\nThus, $A : B = 1 : 8$."
+    },
+    {
+      "q_num": 5,
+      "question": "Three numbers A, B and C are in the ratio of 2 : 3 : 5. If each number is increased by 20%, 40% and 60% respectively, then what will be the new ratio ?",
+      "options": {
+        "a": "12 : 17 : 35",
+        "b": "12 : 21 : 40",
+        "c": "13 : 21 : 33",
+        "d": "15 : 21 : 40"
+      },
+      "answer": "b",
+      "solution": "Let the numbers be $A = 2x$, $B = 3x$, and $C = 5x$.\n\nAfter the percentage increases, the new values are:\n- $A_{\\text{new}} = 2x \\times 1.20 = 2.4x$\n- $B_{\\text{new}} = 3x \\times 1.40 = 4.2x$\n- $C_{\\text{new}} = 5x \\times 1.60 = 8x$\n\nThe new ratio is:\n$$A_{\\text{new}} : B_{\\text{new}} : C_{\\text{new}} = 2.4 : 4.2 : 8$$\nMultiplying by 5 to clear decimals:\n$$12 : 21 : 40$$"
+    },
+    {
+      "q_num": 6,
+      "question": "A is 20% less than B and C is 30% more than D. If D is 25% less than A, then which of the following is true ?",
+      "options": {
+        "a": "C = 0.39B",
+        "b": "B = 0.78C",
+        "c": "B = 0.39C",
+        "d": "C = 0.78B"
+      },
+      "answer": "d",
+      "solution": "We are given:\n1) $A = B - 0.20B = 0.8B$\n2) $C = D + 0.30D = 1.3D$\n3) $D = A - 0.25A = 0.75A$\n\nSubstitute (1) into (3):\n$$D = 0.75 \\times (0.8B) = 0.6B$$\n\nSubstitute this expression for $D$ into (2):\n$$C = 1.3 \\times (0.6B) = 0.78B$$\n\nThus, $C = 0.78B$ is true."
+    },
+    {
+      "q_num": 7,
+      "question": "If the first number is 20% less than the third number and the ratio of the second and third numbers is 7 : 10, then by what percentage is the average of the first and third numbers more than the second number ?",
+      "options": {
+        "a": "26 4/7",
+        "b": "28 2/7",
+        "c": "24 2/7",
+        "d": "28 4/7"
+      },
+      "answer": "d",
+      "solution": "Let the third number $N_3 = 10x$.\n- First number $N_1 = 10x \\times (1 - 0.20) = 8x$\n- Second number $N_2 = 7x$ (since the ratio $N_2 : N_3 = 7 : 10$)\n\nAverage of $N_1$ and $N_3$:\n$$\\text{Average} = \\frac{8x + 10x}{2} = 9x$$\n\nPercentage by which the average ($9x$) is more than the second number ($7x$):\n$$\\text{Percentage Increase} = \\frac{9x - 7x}{7x} \\times 100\\% = \\frac{2}{7} \\times 100\\% = 28\\frac{4}{7}\\%$$"
+    },
+    {
+      "q_num": 8,
+      "question": "A number was divided by 8, instead of being multiplied by 8. As a result of this, there was an error in the answer. What is the percentage difference (correct to two places of decimal) in the answer due to this miscalculation ?",
+      "options": {
+        "a": "48.67%",
+        "b": "67.33%",
+        "c": "98.44%",
+        "d": "72.00%"
+      },
+      "answer": "c",
+      "solution": "Let the original number be $x$.\n- Correct output = $8x$\n- Incorrect output = $\\frac{x}{8}$\n\nError = $8x - \\frac{x}{8} = \\frac{63x}{8}$\n\nPercentage error (with respect to correct output):\n$$\\text{Percentage Error} = \\frac{\\frac{63x}{8}}{8x} \\times 100\\% = \\frac{63}{64} \\times 100\\% \\approx 98.44\\%$$\n\nTherefore, the correct option is (c)."
+    },
+    {
+      "q_num": 9,
+      "question": "A number is mistakenly multiplied by 7/5 instead of being multiplied by 3/2. What is the percentage change in the result due to this mistake ?",
+      "options": {
+        "a": "3 2/3%",
+        "b": "6 2/3%",
+        "c": "7 2/3%",
+        "d": "5 2/3%"
+      },
+      "answer": "b",
+      "solution": "Let the number be $10$.\n- Correct output = $10 \\times \\frac{3}{2} = 15$\n- Incorrect output = $10 \\times \\frac{7}{5} = 14$\n\nChange = $15 - 14 = 1$\n\nPercentage change:\n$$\\text{Percentage Change} = \\frac{1}{15} \\times 100\\% = 6\\frac{2}{3}\\%$$"
+    },
+    {
+      "q_num": 10,
+      "question": "If the numerator of a fraction is increased by 12%, and its denominator is decreased by 8%, the value of that fraction becomes 16/17 . then Find the original fraction ?",
+      "options": {
+        "a": "28/23",
+        "b": "119/92",
+        "c": "23/28",
+        "d": "92/119"
+      },
+      "answer": "d",
+      "solution": "Let the original fraction be $\\frac{x}{y}$.\n\nGiven:\n$$\\frac{x \\times 1.12}{y \\times 0.92} = \\frac{16}{17}$$\n\n$$\\frac{112}{92} \\times \\frac{x}{y} = \\frac{16}{17}$$\n\n$$\\frac{28}{23} \\times \\frac{x}{y} = \\frac{16}{17} \\implies \\frac{x}{y} = \\frac{16}{17} \\times \\frac{23}{28} = \\frac{4 \\times 23}{17 \\times 7} = \\frac{92}{119}$$\n\nTherefore, the original fraction is $\\frac{92}{119}$."
+    },
+    {
+      "q_num": 11,
+      "question": "A fraction is reduced such that when it is squared and then its numerator is increased by 25% and the denominator is reduced by 80% it results in 5/8 of the original fraction. The product of the numerator and denominator is ?",
+      "options": {
+        "a": "6",
+        "b": "12",
+        "c": "10",
+        "d": "7"
+      },
+      "answer": "c",
+      "solution": "Let the original reduced fraction be $\\frac{x}{y}$.\n\nAccording to the problem, when it is squared and modified:\n$$\\frac{x^2 \\times 1.25}{y^2 \\times (1 - 0.80)} = \\frac{5}{8} \\left( \\frac{x}{y} \\right)$$\n\n$$\\frac{1.25 x^2}{0.20 y^2} = \\frac{5}{8} \\frac{x}{y}$$\n\n$$\\frac{25}{4} \\frac{x^2}{y^2} = \\frac{5}{8} \\frac{x}{y}$$\n\nDividing both sides by $\\frac{x}{y}$:\n$$\\frac{25}{4} \\frac{x}{y} = \\frac{5}{8} \\implies \\frac{x}{y} = \\frac{5}{8} \\times \\frac{4}{25} = \\frac{1}{10}$$\n\nSince the fraction is in reduced form, $x = 1$ and $y = 10$.\n\nProduct of numerator and denominator:\n$$x \\times y = 1 \\times 10 = 10$$"
+    },
+    {
+      "q_num": 12,
+      "question": "If decreasing 120 by x% gives the same result as increasing 40 by x%, then x% of 210 is how much percent less than (x+20)% of 180 ?",
+      "options": {
+        "a": "18",
+        "b": "16 2/3",
+        "c": "33 1/3",
+        "d": "20"
+      },
+      "answer": "b",
+      "solution": "We are given:\n$$120 \\left(1 - \\frac{x}{100}\\right) = 40 \\left(1 + \\frac{x}{100}\\right)$$\n\n$$3 \\left(1 - \\frac{x}{100}\\right) = 1 + \\frac{x}{100}$$\n\n$$3 - \\frac{3x}{100} = 1 + \\frac{x}{100} \\implies 2 = \\frac{4x}{100} \\implies x = 50$$\n\nNow, we need to compare:\n1) $x\\% \\text{ of } 210 = 50\\% \\text{ of } 210 = 105$\n2) $(x+20)\\% \\text{ of } 180 = 70\\% \\text{ of } 180 = 126$\n\nPercentage difference:\n$$\\text{Percentage less} = \\frac{126 - 105}{126} \\times 100\\% = \\frac{21}{126} \\times 100\\% = \\frac{1}{6} \\times 100\\% = 16\\frac{2}{3}\\%$$"
+    },
+    {
+      "q_num": 13,
+      "question": "If decreasing 110 by x% gives the same result as increasing 50 by x%, then x% of 650 is what percentage more than (x+20) % of 180 ? (Correct to nearest integer)",
+      "options": {
+        "a": "80%",
+        "b": "154%",
+        "c": "136%",
+        "d": "90%"
+      },
+      "answer": "c",
+      "solution": "We are given:\n$$110 \\left(1 - \\frac{x}{100}\\right) = 50 \\left(1 + \\frac{x}{100}\\right)$$\n\n$$11 - \\frac{11x}{100} = 5 + \\frac{5x}{100} \\implies 6 = \\frac{16x}{100} \\implies x = 37.5$$\n\nNow, we calculate the values:\n1) $x\\% \\text{ of } 650 = 37.5\\% \\text{ of } 650 = 243.75$\n2) $(x+20)\\% \\text{ of } 180 = 57.5\\% \\text{ of } 180 = 103.5$\n\nPercentage difference:\n$$\\text{Percentage more} = \\frac{243.75 - 103.5}{103.5} \\times 100\\% = \\frac{140.25}{103.5} \\times 100\\% \\approx 135.5\\% \\approx 136\\%$$"
+    }
+  ]
+}

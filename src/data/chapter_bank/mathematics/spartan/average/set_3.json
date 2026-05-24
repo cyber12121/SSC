@@ -1,0 +1,342 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average",
+  "questions": [
+    {
+      "q_num": 55,
+      "question": "The average weight of students of section A and B having 40 students each is 45.5 kg and 44.2 kg respectively. Two students of section A having average weight 48.75 kg were shifted to section B and two students of section B were shifted to section A, making the average weight of both the sections equal. What is the average weight (in kg) of the students who were shifted from section B to section A?",
+      "options": {
+        "a": "35.75",
+        "b": "34.25",
+        "c": "34.5",
+        "d": "35"
+      },
+      "answer": "a",
+      "solution": "Initial total weight of section A = 40 * 45.5 = 1820 kg.\nInitial total weight of section B = 40 * 44.2 = 1768 kg.\nCombined total weight = 1820 + 1768 = 3588 kg.\nSince both sections still have 40 students each, and their final average weights are equal, the final average weight of each section = 3588 / 80 = 44.85 kg.\nFinal total weight of section A = 40 * 44.85 = 1794 kg.\nTotal weight of 2 students shifted from A to B = 2 * 48.75 = 97.5 kg.\nLet the total weight of the 2 students shifted from B to A be x.\nFor Section A: 1820 - 97.5 + x = 1794 => 1722.5 + x = 1794 => x = 71.5 kg.\nAverage weight of these 2 students = 71.5 / 2 = 35.75 kg."
+    },
+    {
+      "q_num": 56,
+      "question": "The average weight of students of section A and B having 25 students each is 38.4 and 33.6 respectively. Three students of section A having average weight of 90 were shifted to section B and two students of section B were shifted to section A making the average weight of both the sections equal. what is the Average weight of the students who were shifted from section B to A ?",
+      "options": {
+        "a": "87.5",
+        "b": "105",
+        "c": "92.5",
+        "d": "none"
+      },
+      "answer": "d",
+      "solution": "Initial total weight of section A = 25 * 38.4 = 960 kg.\nInitial total weight of section B = 25 * 33.6 = 840 kg.\nTotal weight of 3 students shifted from A to B = 3 * 90 = 270 kg.\nLet the total weight of 2 students shifted from B to A be y.\nNew number of students in A = 25 - 3 + 2 = 24.\nNew number of students in B = 25 - 2 + 3 = 26.\nSince final average weights are equal:\n(960 - 270 + y) / 24 = (840 - y + 270) / 26\n(690 + y) / 24 = (1110 - y) / 26\n13 * (690 + y) = 12 * (1110 - y)\n8970 + 13y = 13320 - 12y => 25y = 4350 => y = 174.\nAverage weight of these 2 students = 174 / 2 = 87 kg.\nSince 87 kg is not in the options, the answer is 'none'."
+    },
+    {
+      "q_num": 57,
+      "question": "The average weight of a class of 20 students is 45 kgs. A new student whose weight is 40 kgs replaces an old student of this class. Hence, the average weight of the whole class decreases by 1kg. The weight of the replaced student is:",
+      "options": {
+        "a": "55 kgs",
+        "b": "50kgs",
+        "c": "60kgs",
+        "d": "None of these"
+      },
+      "answer": "c",
+      "solution": "Since the average weight of 20 students decreases by 1 kg, the total weight decreases by 20 * 1 = 20 kg.\nWeight of replaced student = Weight of new student + decrease in total weight = 40 + 20 = 60 kg."
+    },
+    {
+      "q_num": 58,
+      "question": "The average weight of 8 persons increases by 2.5 kg when a new person comes in place of one of them weighing 56 kg. What might be the weight of the new person?",
+      "options": {
+        "a": "74",
+        "b": "76",
+        "c": "78",
+        "d": "80"
+      },
+      "answer": "b",
+      "solution": "Increase in total weight = 8 * 2.5 = 20 kg.\nWeight of the new person = Weight of replaced person + increase in total weight = 56 + 20 = 76 kg."
+    },
+    {
+      "q_num": 59,
+      "question": "There are 40 students in the class ,the average marks of them is 50. Two new students replaces the two old students, due to which their average become 52. Find the average of the two new students ?",
+      "options": {
+        "a": "80",
+        "b": "85",
+        "c": "90",
+        "d": "95"
+      },
+      "answer": "c",
+      "solution": "Assume that the average of the two replaced old students is equal to the original average of the class (50).\nTotal increase in marks = 40 * (52 - 50) = 80.\nSum of marks of two new students = (2 * 50) + 80 = 180.\nAverage of the two new students = 180 / 2 = 90."
+    },
+    {
+      "q_num": 60,
+      "question": "There are 40 students in the class ,the average marks of them is 52.75. Five new students replace the five Old students, due to which their average become 52. Find the average of the five new students ?",
+      "options": {
+        "a": "46.25",
+        "b": "46.75",
+        "c": "46",
+        "d": "45.75"
+      },
+      "answer": "b",
+      "solution": "Assume that the average of the five replaced old students is equal to the original average of the class (52.75).\nTotal change in marks = 40 * (52 - 52.75) = -30.\nSum of marks of five new students = (5 * 52.75) - 30 = 263.75 - 30 = 233.75.\nAverage of the five new students = 233.75 / 5 = 46.75."
+    },
+    {
+      "q_num": 61,
+      "question": "The average weight of three persons A, B and C is 60 kg. When D joins the group, the average weight becomes 65 kg. When another person E whose weight is 3 kg less than that of D replaces A, the average weight of B, C, D and E becomes 67 kg. What is the weight of A?",
+      "options": {
+        "a": "60 kg",
+        "b": "69 kg",
+        "c": "65 kg",
+        "d": "72 kg"
+      },
+      "answer": "b",
+      "solution": "Sum of weights of A, B, and C = 3 * 60 = 180 kg.\nSum of weights of A, B, C, and D = 4 * 65 = 260 kg.\nWeight of D = 260 - 180 = 80 kg.\nWeight of E = D - 3 = 80 - 3 = 77 kg.\nSum of weights of B, C, D, and E = 4 * 67 = 268 kg.\nB + C + 80 + 77 = 268 => B + C = 111 kg.\nSince A + B + C = 180 kg: A + 111 = 180 => A = 69 kg."
+    },
+    {
+      "q_num": 62,
+      "question": "The average weight of 3 men A, B and C is 84 Kg. Another man D joins the group and the average now becomes 80 Kg. If another man E whose weight is 3 Kg more than that of D, replaces A then the average weight of B, C, D and E becomes 79 Kg. What is the weight of A?",
+      "options": {
+        "a": "70 Kg",
+        "b": "72 Kg",
+        "c": "75 Kg",
+        "d": "80 Kg"
+      },
+      "answer": "c",
+      "solution": "Sum of weights of A, B, and C = 3 * 84 = 252 kg.\nSum of weights of A, B, C, and D = 4 * 80 = 320 kg.\nWeight of D = 320 - 252 = 68 kg.\nWeight of E = D + 3 = 68 + 3 = 71 kg.\nSum of weights of B, C, D, and E = 4 * 79 = 316 kg.\nSince B + C + D + E = (A + B + C + D) - A + E:\n316 = 320 - A + 71 => 316 = 391 - A => A = 75 kg."
+    },
+    {
+      "q_num": 63,
+      "question": "The average monthly expenditure of a man is ₹2400 during the first three months, ₹3500 during the next five months and ₹4800 for the remaining four months. If his total savings is ₹3500 during the entire year, then what is his average monthly income (in ₹)?",
+      "options": {
+        "a": "4100",
+        "b": "3950",
+        "c": "3700",
+        "d": "4550"
+      },
+      "answer": "b",
+      "solution": "Total annual expenditure = 3 * 2400 + 5 * 3500 + 4 * 4800 = 7200 + 17500 + 19200 = ₹43900.\nTotal annual savings = ₹3500.\nTotal annual income = 43900 + 3500 = ₹47400.\nAverage monthly income = 47400 / 12 = ₹3950."
+    },
+    {
+      "q_num": 64,
+      "question": "The average marks of 50 students in an examination were 65. It was later found that the marks of one student had been wrongly entered as 83 instead of 38. The correct average is:",
+      "options": {
+        "a": "63.9",
+        "b": "64.5",
+        "c": "64.7",
+        "d": "64.1"
+      },
+      "answer": "d",
+      "solution": "Difference in sum = Correct value - Incorrect value = 38 - 83 = -45.\nChange in average = -45 / 50 = -0.9.\nCorrect average = 65 - 0.9 = 64.1."
+    },
+    {
+      "q_num": 65,
+      "question": "The average score of 40 students in a class test is 45. Later on, it was found that at two places 25 was read as 35 and at one place 38 was read as 32. What is the actual average score of the class?",
+      "options": {
+        "a": "43.80",
+        "b": "39.69",
+        "c": "45.35",
+        "d": "44.65"
+      },
+      "answer": "d",
+      "solution": "Net change in sum = (2 * 25 - 2 * 35) + (38 - 32) = -20 + 6 = -14.\nChange in average = -14 / 40 = -0.35.\nActual average = 45 - 0.35 = 44.65."
+    },
+    {
+      "q_num": 66,
+      "question": "The average marks of 40 students was found to be 68. if the marks of two students were incorrectly entered as 48 and 64 instead of 84 and 46 respectively then what is the correct average?",
+      "options": {
+        "a": "68",
+        "b": "68.45",
+        "c": "69",
+        "d": "69.45"
+      },
+      "answer": "b",
+      "solution": "Correct sum contribution = 84 + 46 = 130.\nIncorrect sum contribution = 48 + 64 = 112.\nNet change in sum = 130 - 112 = 18.\nChange in average = 18 / 40 = 0.45.\nCorrect average = 68 + 0.45 = 68.45."
+    },
+    {
+      "q_num": 67,
+      "question": "Out of the 3 natural numbers, if the average of 2 numbers is added to the third number then 24,20,18 is obtained, find out all the natural numbers.",
+      "options": {
+        "a": "9, 5, 17",
+        "b": "17, 5, 6",
+        "c": "9, 3, 5",
+        "d": "7, 9, 5"
+      },
+      "answer": "a",
+      "solution": "Let the numbers be a, b, and c.\n(a + b)/2 + c = 24 => a + b + 2c = 48\n(b + c)/2 + a = 20 => 2a + b + c = 40\n(c + a)/2 + b = 18 => a + 2b + c = 36\nAdding the three equations: 4a + 4b + 4c = 124 => a + b + c = 31.\nSince (a + b + c) + c = 48 => 31 + c = 48 => c = 17.\nSince a + (a + b + c) = 40 => a + 31 = 40 => a = 9.\nSince b + (a + b + c) = 36 => b + 31 = 36 => b = 5.\nSo, the numbers are 9, 5, 17."
+    },
+    {
+      "q_num": 68,
+      "question": "There are four natural numbers. The average of any three numbers is added in the fourth number and in this way, the numbers 29,23,21 and 17 are obtained. One of the numbers is:",
+      "options": {
+        "a": "11",
+        "b": "24",
+        "c": "21",
+        "d": "10"
+      },
+      "answer": "c",
+      "solution": "Let the numbers be a, b, c, d.\n(a + b + c)/3 + d = 29 => a + b + c + 3d = 87\n(b + c + d)/3 + a = 23 => 3a + b + c + d = 69\n(c + d + a)/3 + b = 21 => a + 3b + c + d = 63\n(d + a + b)/3 + c = 17 => a + b + 3c + d = 51\nAdding all equations: 6(a + b + c + d) = 270 => a + b + c + d = 45.\nSince (a + b + c + d) + 2d = 87 => 45 + 2d = 87 => d = 21.\nSince (a + b + c + d) + 2a = 69 => 45 + 2a = 69 => a = 12.\nSince (a + b + c + d) + 2b = 63 => 45 + 2b = 63 => b = 9.\nSince (a + b + c + d) + 2c = 51 => 45 + 2c = 51 => c = 3.\nThe numbers are 12, 9, 3, 21. Among options, 21 is present."
+    },
+    {
+      "q_num": 69,
+      "question": "The average age of a father and his two sons is 27 years, five years ago the average age of two sons was 12 years. The present age of the father is?",
+      "options": {
+        "a": "42",
+        "b": "34",
+        "c": "49",
+        "d": "47"
+      },
+      "answer": "d",
+      "solution": "Total present age of Father + 2 Sons = 3 * 27 = 81 years.\n5 years ago, sum of ages of 2 sons = 2 * 12 = 24 years.\nPresent sum of ages of 2 sons = 24 + 2 * 5 = 34 years.\nPresent age of Father = 81 - 34 = 47 years."
+    },
+    {
+      "q_num": 70,
+      "question": "Average age of mother, father and son was 42 at the time of son's marriage. After one year, an infant was born and after 6 years of marriage the average age of family becomes 36. Find the age of bride at the time of marriage.",
+      "options": {
+        "a": "26 years",
+        "b": "25 years",
+        "c": "24 years",
+        "d": "23 years"
+      },
+      "answer": "b",
+      "solution": "Let bride's age at marriage be B.\nAt marriage (year 0), sum of ages of Mother, Father, and Son = 3 * 42 = 126.\nTotal age of family of 4 members = 126 + B.\nAt year 6, family has 5 members (including infant who is now 6 - 1 = 5 years old).\nTotal age at year 6 = 5 * 36 = 180 years.\nAlso, total age = (Mother + 6) + (Father + 6) + (Son + 6) + (Bride + 6) + 5 = 180\n(Mother + Father + Son) + B + 29 = 180 => 126 + B + 29 = 180 => B = 25 years."
+    },
+    {
+      "q_num": 71,
+      "question": "The average age of 7 members of a family is 35 years. If the youngest members are twins and they are 15 years old, then what was the average age (in years) of the family members at the time of the birth of the twins?",
+      "options": {
+        "a": "25",
+        "b": "27",
+        "c": "28",
+        "d": "30"
+      },
+      "answer": "c",
+      "solution": "Sum of present ages of 7 members = 7 * 35 = 245 years.\nAt the birth of the twins (15 years ago), the sum of ages of the family members (excluding the twins) = 245 - 7 * 15 = 140 years.\nAt that time, the family had 5 members.\nAverage age of the 5 family members at that time = 140 / 5 = 28 years."
+    },
+    {
+      "q_num": 72,
+      "question": "A student finds the average of ten 2- digit numbers. While copying numbers, by mistake, he writes one number with its digits interchanged. As a result of that his answer is 3.6 less than the correct answer. The difference of the digits of the number, in which he made mistake, is:",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "9",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": "Let the original number be 10x + y and the interchanged number be 10y + x.\nDifference in sum = (10x + y) - (10y + x) = 9(x - y).\nDifference in average = 9(x - y) / 10 = 3.6 => 9(x - y) = 36 => x - y = 4."
+    },
+    {
+      "q_num": 73,
+      "question": "A student finds the average of fifteen 2- digit numbers. While copying numbers, by mistake, he writes one number with its digits interchanged. As a result of that his answer is 1.8 less than the correct answer. The difference of the digits of the number, in which he made mistake, is:",
+      "options": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "9"
+      },
+      "answer": "a",
+      "solution": "This question is a standard variation where 'fifteen' is a typo for 'ten' (as 1.8 less with 10 numbers yields 9(x-y)/10 = 1.8 => x-y = 2). If we calculate strictly for 15 numbers: 9(x-y)/15 = 1.8 => 9(x-y) = 27 => x-y = 3, which is not in the options. Assuming 10 numbers, the difference is 2."
+    },
+    {
+      "q_num": 74,
+      "question": "The age of 5 cricket players in a team in the years 1995 was x , x + 2, x + 4, X + 6 and X+8. After some years the oldest player among them retired and as a result the average age of the team was reduced by 4 years ,after how many years from his retirement, will the average age become the same as in 1995?",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "answer": "c",
+      "solution": "Average age of the team of 5 players increases by 1 year every year. Since the average age was reduced by 4 years upon the retirement (and replacement) of the oldest player, it will take exactly 4 years for the average age to increase by 4 years and return to the original average age value."
+    },
+    {
+      "q_num": 75,
+      "question": "The average of five numbers is 30. If one number is excluded, the average becomes 31. What is the excluded number?",
+      "options": {
+        "a": "26",
+        "b": "24",
+        "c": "31",
+        "d": "30"
+      },
+      "answer": "a",
+      "solution": "Sum of 5 numbers = 5 * 30 = 150.\nSum of 4 numbers = 4 * 31 = 124.\nExcluded number = 150 - 124 = 26."
+    },
+    {
+      "q_num": 76,
+      "question": "The average age of 29 students of a class and their teacher is 14 years. When the teacher's age is excluded, the average age of the students decreases by 1 year. What is the age (in years) of the teacher?",
+      "options": {
+        "a": "41",
+        "b": "43",
+        "c": "42",
+        "d": "45"
+      },
+      "answer": "b",
+      "solution": "Sum of ages of 30 people (29 students + 1 teacher) = 30 * 14 = 420 years.\nSum of ages of 29 students = 29 * 13 = 377 years.\nAge of teacher = 420 - 377 = 43 years."
+    },
+    {
+      "q_num": 77,
+      "question": "The average of n numbers is 55. If 70% of the numbers are decreased by 3 each and the remaining numbers are increased by 5 each, then what is the average of the resulting numbers?",
+      "options": {
+        "a": "54.1",
+        "b": "53.5",
+        "c": "54.4",
+        "d": "53.8"
+      },
+      "answer": "c",
+      "solution": "Let the number of values be 10.\nChange in sum = (7 * -3) + (3 * 5) = -21 + 15 = -6.\nChange in average = -6 / 10 = -0.6.\nNew average = 55 - 0.6 = 54.4."
+    },
+    {
+      "q_num": 78,
+      "question": "The average of a number is 36. if each of 75% of a number is increased by 6 and each of the remaining number is decreased by 9 then the new average of the number is​?",
+      "options": {
+        "a": "37.125",
+        "b": "33.75",
+        "c": "36.25",
+        "d": "38.25"
+      },
+      "answer": "d",
+      "solution": "Let the count of numbers be 4.\nChange in sum = (3 * 6) + (1 * -9) = 18 - 9 = 9.\nChange in average = 9 / 4 = 2.25.\nNew average = 36 + 2.25 = 38.25."
+    },
+    {
+      "q_num": 79,
+      "question": "The average weight of a group of 12 girls is 48 kg. If 2 girls R and S replace P and Q, the new average weight becomes 46 kg. The weight of P = the weight of Q. The weight of R = the weight of S. Another girl T, is included in the group and the new average weight becomes 46 kg. The weight of T = the weight of R. What is the weight of P (in kg) ?",
+      "options": {
+        "a": "56",
+        "b": "58",
+        "c": "54",
+        "d": "50"
+      },
+      "answer": "b",
+      "solution": "Let the sum of weights of 12 girls containing P and Q be S12 = 12 * 48 = 576 kg.\nWhen R and S replace P and Q: S12 - P - Q + R + S = 12 * 46 = 552 => (P+Q) - (R+S) = 24 kg.\nSince P = Q and R = S, we have 2P - 2R = 24 => P - R = 12 kg.\nWhen T is added to the 12-girl group (with sum 552): Total weight of 13 girls = 13 * 46 = 598 kg.\nWeight of T = 598 - 552 = 46 kg.\nSince T = R, we have R = 46 kg.\nSo, P = R + 12 = 46 + 12 = 58 kg."
+    },
+    {
+      "q_num": 80,
+      "question": "The average marks obtained by Raghav in 12 tests is 24. Zubeida has maintained an average of 23 so far but has taken only 9 of the tests. If each test is out of 30 marks, at least how much must Zubeida score in any one of the remaining three tests to still have a chance to match Raghav's performance?",
+      "options": {
+        "a": "21",
+        "b": "22",
+        "c": "20",
+        "d": "19"
+      },
+      "answer": "a",
+      "solution": "Total marks obtained by Raghav = 12 * 24 = 288.\nTotal marks obtained by Zubeida in 9 tests = 9 * 23 = 207.\nMarks needed in remaining 3 tests = 288 - 207 = 81.\nSince maximum marks in any test is 30, to find the minimum score in any one of the three tests, we maximize the scores in the other two (30 and 30).\nMinimum score in the remaining test = 81 - 30 - 30 = 21."
+    },
+    {
+      "q_num": 81,
+      "question": "The average of three-digit numbers 432, 407, x32, 4x1 and 38x is 508, then find the average of x + 1, x - 2, x + 3 and x + 2 ?",
+      "options": {
+        "a": "9",
+        "b": "4",
+        "c": "3",
+        "d": "5"
+      },
+      "answer": "a",
+      "solution": "Sum of 5 numbers = 5 * 508 = 2540.\n432 + 407 + (100x + 32) + (401 + 10x) + (380 + x) = 2540\n1652 + 111x = 2540 => 111x = 888 => x = 8.\nWe need the average of x+1, x-2, x+3, and x+2:\nValues: 9, 6, 11, 10.\nAverage = (9 + 6 + 11 + 10) / 4 = 36 / 4 = 9."
+    },
+    {
+      "q_num": 82,
+      "question": "If 2 , 3 , 4 and 5 occurring k+1 , 2k-1 , 2k-2 , 3k-2 times respectively having average is 3.7. What will be the average if all 2 replaced by 6.",
+      "options": {
+        "a": "4",
+        "b": "4.2",
+        "c": "4.5",
+        "d": "4.7"
+      },
+      "answer": "c",
+      "solution": "Total frequency N = (k+1) + (2k-1) + (2k-2) + (3k-2) = 8k - 4.\nSum of values S = 2(k+1) + 3(2k-1) + 4(2k-2) + 5(3k-2) = 31k - 19.\nAverage = (31k - 19) / (8k - 4) = 3.7 => 31k - 19 = 29.6k - 14.8 => 1.4k = 4.2 => k = 3.\nThus, N = 8(3) - 4 = 20, and S = 31(3) - 19 = 74.\nFrequency of 2 = k + 1 = 4.\nReplacing all 2s with 6s increases each of the 4 values by (6 - 2) = 4.\nNew Sum = 74 + 4 * 4 = 90.\nNew Average = 90 / 20 = 4.5."
+    }
+  ]
+}

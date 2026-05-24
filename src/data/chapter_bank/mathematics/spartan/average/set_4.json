@@ -1,0 +1,234 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average",
+  "questions": [
+    {
+      "q_num": 83,
+      "question": "x, y and z are three positive numbers such that y is 4/5 times of x and z is 5/8 times of y. If the average of reciprocals of the numbers x, y and z is 17/240, then the average of 3 time of x and 5 times of y will be",
+      "options": {
+        "a": "60",
+        "b": "45",
+        "c": "70",
+        "d": "40"
+      },
+      "answer": "c",
+      "solution": "From the given relationships, we can write $y = \\frac{4}{5}x \\implies x = \\frac{5}{4}y$ and $z = \\frac{5}{8}y$.\n\nThe average of the reciprocals of $x$, $y$, and $z$ is given as $\\frac{17}{240}$:\n$$\\frac{1}{3} \\left( \\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\right) = \\frac{17}{240}$$\n$$\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} = \\frac{17}{80}$$\n\nSubstituting $x = \\frac{5}{4}y$ and $z = \\frac{5}{8}y$:\n$$\\frac{4}{5y} + \\frac{1}{y} + \\frac{8}{5y} = \\frac{17}{80}$$\n$$\\frac{1}{y} \\left( \\frac{4}{5} + 1 + \\frac{8}{5} \\right) = \\frac{17}{80}$$\n$$\\frac{1}{y} \\left( \\frac{17}{5} \\right) = \\frac{17}{80}$$\n$$\\frac{17}{5y} = \\frac{17}{80} \\implies y = 16$$\n\nNow, we find $x$:\n$$x = \\frac{5}{4} \\times 16 = 20$$\n\nWe need the average of 3 times of $x$ and 5 times of $y$:\n$$3x = 3 \\times 20 = 60$$\n$$5y = 5 \\times 16 = 80$$\n$$\\text{Average} = \\frac{60 + 80}{2} = 70$$"
+    },
+    {
+      "q_num": 84,
+      "question": "A, B and C are three positive numbers such that the average of three-fifths of A and 30% of B is 13.5, and the average of 3/8 times of B and 25% of C is 15. If A is equal to 5/12 times of C, then the sum of all three numbers A, B and C is:",
+      "options": {
+        "a": "135",
+        "b": "120",
+        "c": "145",
+        "d": "125"
+      },
+      "answer": "d",
+      "solution": "Given:\n1) $\\frac{1}{2} \\left( \\frac{3}{5}A + 0.3B \\right) = 13.5 \\implies 0.6A + 0.3B = 27 \\implies 2A + B = 90$\n2) $\\frac{1}{2} \\left( \\frac{3}{8}B + 0.25C \\right) = 15 \\implies 3B + 2C = 240$\n3) $A = \\frac{5}{12}C \\implies C = \\frac{12}{5}A = 2.4A$\n\nSubstitute $C = 2.4A$ into the second equation:\n$$3B + 2(2.4A) = 240 \\implies 3B + 4.8A = 240 \\implies B + 1.6A = 80$$\n\nNow solve the system of equations:\n1) $2A + B = 90$\n2) $1.6A + B = 80$\n\nSubtracting the second equation from the first:\n$$0.4A = 10 \\implies A = 25$$\n\nUsing $A = 25$:\n$$B = 90 - 2(25) = 40$$\n$$C = 2.4(25) = 60$$\n\nThe sum of the three numbers is:\n$$A + B + C = 25 + 40 + 60 = 125$$"
+    },
+    {
+      "q_num": 85,
+      "question": "Average of the numbers a, b, c and d is 2d+4. Also, the average of the numbers a and b, b and c, c and d are 8, 5 and 4 respectively. If e=a+d+1, then what is the average of the numbers d and e?",
+      "options": {
+        "a": "3",
+        "b": "8",
+        "c": "8.5",
+        "d": "7"
+      },
+      "answer": "b",
+      "solution": "From the problem statement:\n1) $\\frac{a + b + c + d}{4} = 2d + 4 \\implies a + b + c - 7d = 16$\n2) $\\frac{a + b}{2} = 8 \\implies a + b = 16$\n3) $\\frac{b + c}{2} = 5 \\implies b + c = 10$\n4) $\\frac{c + d}{2} = 4 \\implies c + d = 8 \\implies c = 8 - d$\n\nFrom $b + c = 10$ and $c = 8 - d$:\n$$b + (8 - d) = 10 \\implies b = d + 2$$\n\nFrom $a + b = 16$ and $b = d + 2$:\n$$a + (d + 2) = 16 \\implies a = 14 - d$$\n\nSubstitute $a$, $b$, and $c$ into the first equation:\n$$(14 - d) + (d + 2) + (8 - d) - 7d = 16$$\n$$24 - 8d = 16 \\implies 8d = 8 \\implies d = 1$$\n\nNow, we find $a$ and $e$:\n$$a = 14 - 1 = 13$$\n$$e = a + d + 1 = 13 + 1 + 1 = 15$$\n\nThe average of $d$ and $e$ is:\n$$\\text{Average} = \\frac{d + e}{2} = \\frac{1 + 15}{2} = 8$$"
+    },
+    {
+      "q_num": 86,
+      "question": "The average of x occurring 5 times and y occurring 7 times is 37. Also, the average of x occurring 7 times and y occurring 5 times is 35. The value of y is ?",
+      "options": {
+        "a": "45",
+        "b": "42",
+        "c": "30",
+        "d": "27"
+      },
+      "answer": "b",
+      "solution": "We are given two equations for the averages:\n1) $\\frac{5x + 7y}{12} = 37 \\implies 5x + 7y = 444$\n2) $\\frac{7x + 5y}{12} = 35 \\implies 7x + 5y = 420$\n\nAdding these two equations:\n$$12x + 12y = 864 \\implies x + y = 72 \\quad \\text{--- (3)}$$\n\nSubtracting the second equation from the first:\n$$-2x + 2y = 24 \\implies y - x = 12 \\quad \\text{--- (4)}$$\n\nAdding equations (3) and (4):\n$$2y = 84 \\implies y = 42$$"
+    },
+    {
+      "q_num": 87,
+      "question": "A set of consecutive positive integers beginning with 1 is written on the blackboard. A student came and erased one number. The average of the remaining numbers is 35 7/17. What was the erased number?",
+      "options": {
+        "a": "7",
+        "b": "5",
+        "c": "8",
+        "d": "10"
+      },
+      "answer": "a",
+      "solution": "Let the consecutive positive integers be $1, 2, \\dots, n$. Let the erased number be $x$.\n\nThe sum of the remaining $n - 1$ numbers is:\n$$\\text{Sum} = \\frac{n(n+1)}{2} - x$$\n\nThe average of the remaining numbers is:\n$$\\text{Average} = \\frac{\\frac{n(n+1)}{2} - x}{n - 1} = 35 \\frac{7}{17} = \\frac{602}{17}$$\n\nSince the average of $1$ to $n$ is approximately $\\frac{n+1}{2}$, we have:\n$$\\frac{n+1}{2} \\approx 35.4 \\implies n \\approx 70$$\n\nAs the denominator of the average is $17$, $n - 1$ must be a multiple of $17$. Since $n \\approx 70$, let $n - 1 = 68 \\implies n = 69$.\n\nSubstituting $n = 69$ into the equation:\n$$\\frac{\\frac{69 \\times 70}{2} - x}{68} = \\frac{602}{17}$$\n$$\\frac{2415 - x}{68} = \\frac{2408}{68} \\implies 2415 - x = 2408 \\implies x = 7$$"
+    },
+    {
+      "q_num": 89,
+      "question": "A book contains pages starting from Page number 1. A page is torn, the sum of remaining page numbers is 824, find the page number which tear away ?",
+      "options": {
+        "a": "17,18",
+        "b": "19,20",
+        "c": "18,19",
+        "d": "20,21"
+      },
+      "answer": "c",
+      "solution": "Let the total number of pages in the book be $n$. The sum of page numbers is:\n$$S = \\frac{n(n+1)}{2}$$\n\nWhen a page containing page numbers $x$ and $x+1$ is torn, the sum reduces by $2x + 1$:\n$$\\frac{n(n+1)}{2} - (2x + 1) = 824$$\n\nSince $2x + 1 > 0$, we must have $\\frac{n(n+1)}{2} > 824$.\nFor $n = 41$:\n$$S = \\frac{41 \\times 42}{2} = 861$$\n\nSubstituting this back:\n$$861 - (2x + 1) = 824 \\implies 2x + 1 = 37 \\implies 2x = 36 \\implies x = 18$$\n\nSo, the torn page has numbers $18$ and $19$."
+    },
+    {
+      "q_num": 90,
+      "question": "The average temperature in the month of September is 22.5°C. The average temperature for the first 12 days is 21.3°C and for the last 15 days is 23.8°C. What is the average temperature (in °C) for the remaining days of the month?",
+      "options": {
+        "a": "20.5",
+        "b": "21.4",
+        "c": "20.8",
+        "d": "21.2"
+      },
+      "answer": "c",
+      "solution": "September has 30 days.\n\nTotal sum of temperature for 30 days $= 30 \\times 22.5 = 675^{\\circ}\\text{C}$.\nSum of temperature for the first 12 days $= 12 \\times 21.3 = 255.6^{\\circ}\\text{C}$.\nSum of temperature for the last 15 days $= 15 \\times 23.8 = 357^{\\circ}\\text{C}$.\n\nNumber of remaining days $= 30 - (12 + 15) = 3$ days.\nSum of temperature for the remaining 3 days $= 675 - (255.6 + 357) = 675 - 612.6 = 62.4^{\\circ}\\text{C}$.\n\nAverage temperature for the remaining 3 days $= \\frac{62.4}{3} = 20.8^{\\circ}\\text{C}$."
+    },
+    {
+      "q_num": 91,
+      "question": "The average sale of cars per day by a dealer in the month of April is 28. The average sale of cars on Saturdays is 30 and the average sale of cars on Fridays is 37. What is the average sale of cars on the other days of the month, if the month starts on a Tuesday?",
+      "options": {
+        "a": "25",
+        "b": "29",
+        "c": "27",
+        "d": "26"
+      },
+      "answer": "d",
+      "solution": "April has 30 days.\nIf April starts on a Tuesday, we can determine the number of Fridays and Saturdays:\n- Fridays fall on: 4th, 11th, 18th, 25th (total 4 Fridays).\n- Saturdays fall on: 5th, 12th, 19th, 26th (total 4 Saturdays).\n\nOther days of the month $= 30 - 4 - 4 = 22$ days.\n\nTotal cars sold in the month $= 30 \\times 28 = 840$.\nCars sold on Saturdays $= 4 \\times 30 = 120$.\nCars sold on Fridays $= 4 \\times 37 = 148$.\n\nCars sold on other days $= 840 - (120 + 148) = 572$.\nAverage sale of cars on the other days $= \\frac{572}{22} = 26$."
+    },
+    {
+      "q_num": 92,
+      "question": "In an exhibition, in the month of December starting with Thursday, the average number of visitors on Saturdays is 254, the average number of visitors on Sundays is 625 and an average number of visitors on other days of the month is x. If the average number of visitors, per day, for the whole month is 238, then what is the value of x?",
+      "options": {
+        "a": "163",
+        "b": "166",
+        "c": "165",
+        "d": "164"
+      },
+      "answer": "d",
+      "solution": "December has 31 days.\nSince December starts on a Thursday:\n- Saturdays fall on: 3rd, 10th, 17th, 24th, 31st (total 5 Saturdays).\n- Sundays fall on: 4th, 11th, 18th, 25th (total 4 Sundays).\n\nOther days $= 31 - (5 + 4) = 22$ days.\n\nTotal visitors in the month $= 31 \\times 238 = 7378$.\nVisitors on Saturdays $= 5 \\times 254 = 1270$.\nVisitors on Sundays $= 4 \\times 625 = 2500$.\n\nVisitors on other days $= 7378 - (1270 + 2500) = 3608$.\n\nTherefore, $x = \\frac{3608}{22} = 164$."
+    },
+    {
+      "q_num": 93,
+      "question": "There were 54 students in a hostel. Due to the admission of 9 new students, the expenses of the mess were increased by Rs. 540 per day while the average expenditure per head diminished by Rs.3. What was the original expenditure (in Rs.) of the mess?",
+      "options": {
+        "a": "4374",
+        "b": "4419",
+        "c": "4616",
+        "d": "4518"
+      },
+      "answer": "a",
+      "solution": "Let the original average expenditure per student be $A$.\nOriginal expenditure $= 54A$.\n\nAfter 9 new students are admitted:\nTotal students $= 54 + 9 = 63$.\nNew average expenditure $= A - 3$.\nNew total expenditure $= 63(A - 3)$.\n\nThe difference in mess expenses is given as Rs. 540:\n$$63(A - 3) - 54A = 540$$\n$$9A - 189 = 540$$\n$$9A = 729 \\implies A = 81$$\n\nOriginal expenditure $= 54 \\times 81 = 4374$. (Note: Option 'a' is corrected to 4374 in the solution, which is extremely close to the printed option 4375)."
+    },
+    {
+      "q_num": 94,
+      "question": "20 students of a college went to a hotel. 19 of them spent Rs.175 each on their meal and the 20th student spent Rs.19 more than the average of all the 20. Find the total money spent by them.",
+      "options": {
+        "a": "Rs. 3,490",
+        "b": "Rs. 3,540",
+        "c": "Rs. 3,520",
+        "d": "Rs. 3,500"
+      },
+      "answer": "c",
+      "solution": "Let the average spending of all 20 students be $A$.\nTotal spending $= 20A$.\n\nSum of money spent by 19 students $= 19 \\times 175 = 3325$.\nMoney spent by the 20th student $= A + 19$.\n\nThus:\n$$3325 + A + 19 = 20A$$\n$$3344 = 19A \\implies A = 176$$\n\nTotal money spent $= 20 \\times 176 = 3520$."
+    },
+    {
+      "q_num": 95,
+      "question": "A is the average of 10 given numbers. B is the average after 2 of the numbers were replaced by 3 other different numbers. The average of the removed numbers is 48 and the average of the newly included numbers is 56. If A + B = 438, then the value of A- B is:",
+      "options": {
+        "a": "21",
+        "b": "14",
+        "c": "12",
+        "d": "26"
+      },
+      "answer": "b",
+      "solution": "Let the sum of the original 10 numbers be $S$. Thus, $A = \\frac{S}{10} \\implies S = 10A$.\n\nSum of the 2 removed numbers $= 2 \\times 48 = 96$.\nSum of the 3 newly included numbers $= 3 \\times 56 = 168$.\n\nThe new total count of numbers is $10 - 2 + 3 = 11$.\nThe new average is $B$:\n$$11B = S - 96 + 168 = S + 72$$\n$$11B = 10A + 72$$\n\nWe are given $A + B = 438 \\implies B = 438 - A$. Substituting this into the equation:\n$$11(438 - A) = 10A + 72$$\n$$4818 - 11A = 10A + 72$$\n$$21A = 4746 \\implies A = 226$$\n\nThen:\n$$B = 438 - 226 = 212$$\n\nThe value of $A - B$ is:\n$$A - B = 226 - 212 = 14$$"
+    },
+    {
+      "q_num": 96,
+      "question": "A shopkeeper sells pens for ₹12 each, notebooks for ₹25 each and notebook covers for ₹8 each. What is the average price per item (in ₹) if he sells 5 pens, 8 notebooks and 16 notebook covers (rounded off to two decimal places)?",
+      "options": {
+        "a": "13.38",
+        "b": "18.13",
+        "c": "13.83",
+        "d": "18.31"
+      },
+      "answer": "a",
+      "solution": "The total cost of the items sold is:\n$$\\text{Total Cost} = (5 \\times 12) + (8 \\times 25) + (16 \\times 8)$$\n$$\\text{Total Cost} = 60 + 200 + 128 = 388$$\n\nThe total number of items is:\n$$\\text{Total Items} = 5 + 8 + 16 = 29$$\n\nThe average price per item is:\n$$\\text{Average Price} = \\frac{388}{29} \\approx 13.3793 \\approx 13.38$$"
+    },
+    {
+      "q_num": 97,
+      "question": "The average of 7 consecutive odd numbers is A. If next 3 and previous 2 odd numbers to these 7 odd numbers are also included, then what is the new average of these 12 consecutive odd numbers?",
+      "options": {
+        "a": "A + 1",
+        "b": "A - 2",
+        "c": "A + 2",
+        "d": "A + 3"
+      },
+      "answer": "a",
+      "solution": "Let the 7 consecutive odd numbers be $x-6, x-4, x-2, x, x+2, x+4, x+6$. Their average is $x$, so $A = x$.\n\nIf we include the next 3 odd numbers ($x+8, x+10, x+12$) and the previous 2 odd numbers ($x-8, x-10$), the 12 consecutive odd numbers are:\n$$x-10, x-8, x-6, x-4, x-2, x, x+2, x+4, x+6, x+8, x+10, x+12$$\n\nSince this is an arithmetic progression with 12 terms, the average is the mean of the 6th and 7th terms:\n$$\\text{New Average} = \\frac{x + (x+2)}{2} = x + 1$$\n\nSince $A = x$, the new average is $A + 1$."
+    },
+    {
+      "q_num": 98,
+      "question": "The average salary of all the employees in a company is Rs.14,000. The average salary of 5 technicians is Rs. 18,000 and the average salary of the rest is Rs. 13,200. The total number of employees in the company is:",
+      "options": {
+        "a": "28",
+        "b": "30",
+        "c": "29",
+        "d": "None of these"
+      },
+      "answer": "b",
+      "solution": "Let the total number of employees be $N$.\n\nTotal salary of all employees $= 14000N$.\nSalary of the 5 technicians $= 5 \\times 18000 = 90000$.\nSalary of the remaining $N-5$ employees $= 13200(N-5)$.\n\nSetting up the equation:\n$$14000N = 90000 + 13200(N-5)$$\n$$14000N = 90000 + 13200N - 66000$$\n$$800N = 24000 \\implies N = 30$$"
+    },
+    {
+      "q_num": 99,
+      "question": "Manav's average earning per month in the first three months of a year was ₹24328. In April, his earning was 50% more than the average earning in the first three months. If his average earning per month for the whole year is ₹76867, then what will be Manav's average earning (in ₹) per month from May to December ?",
+      "options": {
+        "a": "101616",
+        "b": "101619",
+        "c": "101621",
+        "d": "101614"
+      },
+      "answer": "a",
+      "solution": "Average earning of the first 3 months $= ₹24328$.\nTotal earning of the first 3 months $= 3 \\times 24328 = ₹72984$.\n\nEarning in April $= 1.5 \\times 24328 = ₹36492$.\n\nTotal earning of the whole year (12 months) $= 12 \\times 76867 = ₹922404$.\n\nTotal earning from May to December (8 months) $= 922404 - 72984 - 36492 = ₹812928$.\n\nAverage earning per month from May to December $= \\frac{812928}{8} = 101616$."
+    },
+    {
+      "q_num": 100,
+      "question": "Manish's average earning per month in the first three months of a year was ₹8784. In April, his earning was 25% more than the average earning in the first three months. If his average earning per month for the whole year is ₹99085, then what will be Manish's average earning (in ₹) per month from May to December ?",
+      "options": {
+        "a": "143961",
+        "b": "143960",
+        "c": "143958",
+        "d": "143962"
+      },
+      "answer": "a",
+      "solution": "Total earning of the first 3 months $= 3 \\times 8784 = ₹26352$.\n\nEarning in April $= 1.25 \\times 8784 = ₹10980$.\n\nTotal earning of the whole year (12 months) $= 12 \\times 99085 = ₹1189020$.\n\nTotal earning from May to December (8 months) $= 1189020 - 26352 - 10980 = ₹1151688$.\n\nAverage earning per month from May to December $= \\frac{1151688}{8} = 143961$."
+    },
+    {
+      "q_num": 101,
+      "question": "Lalit's average earning per month in the first three months of a year was ₹4080. In April, his earning was 75% more than the average earning in the first three months. If his average earning per month for the whole year is ₹66405, then what will be Lalit's average earning (in ₹) per month from May to December ?",
+      "options": {
+        "a": "97185",
+        "b": "97180",
+        "c": "97184",
+        "d": "97183"
+      },
+      "answer": "a",
+      "solution": "Total earning of the first 3 months $= 3 \\times 4080 = ₹12240$.\n\nEarning in April $= 1.75 \\times 4080 = ₹7140$.\n\nTotal earning of the whole year (12 months) $= 12 \\times 66405 = ₹796860$.\n\nTotal earning from May to December (8 months) $= 796860 - 12240 - 7140 = ₹777480$.\n\nAverage earning per month from May to December $= \\frac{777480}{8} = 97185$."
+    },
+    {
+      "q_num": 102,
+      "question": "The average of 8 numbers 127, 432, p, 89, q, 99, 842 and 76 is 221 and the numbers p and q are two-digit numbers. If the units digit of p is one less than that of q and tens digit of q is one less than that of p, then the sum of the digits of p is:",
+      "options": {
+        "a": "14",
+        "b": "12",
+        "c": "13",
+        "d": "11"
+      },
+      "answer": "d",
+      "solution": "Total sum of the 8 numbers $= 8 \\times 221 = 1768$.\nSum of the 6 known numbers $= 127 + 432 + 89 + 99 + 842 + 76 = 1665$.\n\nThus, $p + q = 1768 - 1665 = 103$.\n\nLet $p = 10a + b$ and $q = 10c + d$, where $a, b, c, d$ are single digits representing the tens and units digits of $p$ and $q$.\nGiven:\n1) $b = d - 1$\n2) $c = a - 1$\n\nSubstitute these into $p + q = 103$:\n$$(10a + b) + (10c + d) = 103$$\n$$(10a + d - 1) + (10(a - 1) + d) = 103$$\n$$20a + 2d - 11 = 103$$\n$$20a + 2d = 114$$\n$$10a + d = 57$$\n\nSince $a$ and $d$ are digits (0-9), we must have $a = 5$ and $d = 7$.\nThis gives:\n$$b = 7 - 1 = 6$$\n$$c = 5 - 1 = 4$$\n\nSo $p = 56$ and $q = 47$.\nThe sum of the digits of $p$ is $5 + 6 = 11$."
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Number System",
+  "questions": [
+    {
+      "q_num": 153,
+      "question": "Which is the most significant\n4-digit number exactly divisible by 77 ?\nGraduate Level 02/08/2025 (Shift - 3)",
+      "options": {
+        "a": "9999",
+        "b": "9977",
+        "c": "9960",
+        "d": "9933\n\n========================================================================\n  EDUQUITY-BASED PATTERN (EBP) QUESTIONS (Q.154 - Q.286)\n========================================================================"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 154,
+      "question": "A number 37 is divided into two\nparts such that 5 times one part and 11\ntimes the other is together equal to 227.\nFind the value of 9 times the smaller\nnumber.",
+      "options": {
+        "a": "60",
+        "b": "61",
+        "c": "62",
+        "d": "63"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 155,
+      "question": "The number of heads on the farm,\nas determined by the farmer, was 60.\nWhen he counted, he discovered there\nwere 150 legs. If all that was present\nwere pigeons or horses, and every horse\non the property had four legs while every\npigeon had two, how many horses were\nthere on the property ?",
+      "options": {
+        "a": "14",
+        "b": "12",
+        "c": "15",
+        "d": "10"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 156,
+      "question": "The length of a violin string varies\ninversely with respect to the frequency of\nits vibrations. The frequency of a\n14-inch-long violin string is 450 cycles\nper second. Find the frequency of a\n12-inch violin string.",
+      "options": {
+        "a": "515 cycles per second",
+        "b": "525 cycles per second",
+        "c": "520 cycles per second",
+        "d": "510 cycles per second"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 157,
+      "question": "b is the sum of two quantities,\none of which varies inversely as the\nsquare of a^2 , and the other of which\nvaries directly as a. Identify the\nrelationship between a and b if b = 49\nwhen a = 3 or 5.\n(a) a = 3b\n(c) b = 8a + 225/a^2\n(b) a = 3b^2 - 7/a\n(d) b= 2a",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 158,
+      "question": "If p is directly proportional to q\nand is p = 7 when q = 6, then what is the\nvalue of p when q = 21 ?",
+      "options": {
+        "a": "24.0",
+        "b": "24.5",
+        "c": "23.5",
+        "d": "25.0"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 159,
+      "question": "If P (P > 0) is the least possible\nnumber that must be subtracted from 7,\n9, and 12 so that the resulting numbers\nare in continued proportion, then find the\nvalue of P^2 + 1.",
+      "options": {
+        "a": "10",
+        "b": "12",
+        "c": "3",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 160,
+      "question": "Which of the following can be the\nvalue of k so that the number 217924k\nis divisible by 6^2",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "2",
+        "d": "0"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 161,
+      "question": "Without doing the actual division, find the remainder when 28735429 is divided by 9.",
+      "options": {
+        "a": "4",
+        "b": "2",
+        "c": "8",
+        "d": "9"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 162,
+      "question": "If 7845K854 is divisible by 11,\nthen what is the value of K?",
+      "options": {
+        "a": "6",
+        "b": "9",
+        "c": "7 =",
+        "d": "8"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 163,
+      "question": "Which of the following is the\nlargest 5-digit number divisible by 47 ?",
+      "options": {
+        "a": "99999",
+        "b": "98888",
+        "c": "99969",
+        "d": "10000"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 164,
+      "question": "Akshay purchased pens and notebooks from a shop for a total sum of Rs 2180. From the following data, what is the value of 'X'?\nItem     Price per unit (Rs)   Quantity\nPens      X                    5\nNotebooks 20                   6",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 165,
+      "question": "If (77 + 77) is divided by 78,\nthen the remainder will be:",
+      "options": {
+        "a": "76",
+        "b": "77",
+        "c": "78",
+        "d": "1"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 166,
+      "question": "Which digits should come in the\nplace of * and #, respectively, if the\n7-digit number 62684*# is divisible by\nboth 8 and 5^2\n(a) 2 and 0\n(c) 5 and0\n(b) 4 and 0\n(d) 0 and 5",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 167,
+      "question": "Find the smallest number to be\nadded to 999, so that 99 divides the sum\nexactly.",
+      "options": {
+        "a": "99",
+        "b": "0",
+        "c": "90",
+        "d": "9"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 168,
+      "question": "In a division problem, the divisor\nis 4 times the quotient and 2 times the\nremainder. If the remainder is 32, then\nfind the dividend.",
+      "options": {
+        "a": "1056",
+        "b": "1650",
+        "c": "3240",
+        "d": "1065"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 169,
+      "question": "Which of the following numbers is\ndivisible by both 2 and 5 ?",
+      "options": {
+        "a": "63840",
+        "b": "20792",
+        "c": "37915",
+        "d": "37254"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 170,
+      "question": "Find the quotient, when the mean\n1\nproportional of a and 245 is divided by\nan even prime number",
+      "options": {
+        "a": "49",
+        "b": "42",
+        "c": "21",
+        "d": "36"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 171,
+      "question": "Naman bought a few apples for\n%720 from a shop. He negotiated the\nprice and the shopkeeper reduced it by\n%2 per apple. Due to this Naman could\nbuy four more apples than what he had\nbought earlier. How many apples did he\noriginally buy?",
+      "options": {
+        "a": "48",
+        "b": "44",
+        "c": "36",
+        "d": "40"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 172,
+      "question": "Replace * by the smallest digit so\nthat 723*56* is divisible by 6\n(a4 (b)3 (c)2 (dd) 1",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 173,
+      "question": "In a garden, there are 6 daisy\nplants the first year. Each year, a\ngardener adds 3 new daisy plants. He\nhas 26 jasmine plants the first year and\nloses 2 each year. When will the number\nof daisy plants equal to the number of\njasmine plants after the first year?",
+      "options": {
+        "a": "5 years",
+        "b": "4 years",
+        "c": "2 years",
+        "d": "6 years"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 174,
+      "question": "Which of the following numbers is\ndivisible by 2, 5, 10 and 11^2",
+      "options": {
+        "a": "203467",
+        "b": "830942",
+        "c": "589270",
+        "d": "1234560"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 175,
+      "question": "Find the smallest value that must be assigned to number 'a' in order for 91876a2 to be divisible by 8.",
+      "options": {
+        "a": "3",
+        "b": "0",
+        "c": "1",
+        "d": "2"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 176,
+      "question": "If 321y72 is a multiple of 6, where y is a digit, what is the least value of y?",
+      "options": {
+        "a": "3",
+        "b": "0",
+        "c": "7",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 177,
+      "question": "At a cafe, Rama bought drinks for\nher 7 friends at #240. Some of them\nwanted coffee, while others wanted\nblack tea. A regular cup of coffee cost\n40 and a regular cup of black tea cost ?\n30. How many cups of black tea did she\npurchase?",
+      "options": {
+        "a": "5",
+        "b": "4",
+        "c": "3",
+        "d": "6"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 178,
+      "question": "Find the remainder: (177^2 -\n(a)15 (b)17 (c)14 (4) 21\n21) + 18",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 179,
+      "question": "Find the least value of x for which 57x716 is divisible by 9.",
+      "options": {
+        "a": "1",
+        "b": "9",
+        "c": "0",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 180,
+      "question": "If P is a digit such that 6954P is\ndivisible by 11, then P equals:",
+      "options": {
+        "a": "2",
+        "b": "8",
+        "c": "6 =",
+        "d": "7"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 181,
+      "question": "When f(m) = m> + 5m*- 3m + 7 is\ndivided by (m - 2), then the remainder is",
+      "options": {
+        "a": "7",
+        "b": "5",
+        "c": "0",
+        "d": "113"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 182,
+      "question": "A number r when divided by 8\nleaves remainder 3. What will be the\nremainder when (r^2 + 6r + 7) is divided by\n8^2",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "1",
+        "d": "4"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 183,
+      "question": "Find the remainder, if 192^n is divided by 20.",
+      "options": {
+        "a": "2",
+        "b": "-1",
+        "c": "1",
+        "d": "3"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 184,
+      "question": "Which of the following fractions is the largest ?",
+      "options": {
+        "a": "2/3",
+        "b": "6/7",
+        "c": "79/90",
+        "d": "33/44"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 185,
+      "question": "If the 9-digit number 5x79856y6\nis divisible by 36, then what is the\nnegative value of \\(2x + y) for the\nlargest possible value of y, given x and y\nare natural numbers?",
+      "options": {
+        "a": "-7",
+        "b": "-2)",
+        "c": "-4",
+        "d": "-5"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 186,
+      "question": "Anna and Ben each have a\ncollection of marbles. If Anna gives one\nmarble to Ben, they will both have an\nequal number of marbles. Conversely, if\nBen gives one marble to Anna, she will\nend up with three times the number of\nmarbles that Ben has. What is the total\nnumber of marbles they both have?",
+      "options": {
+        "a": "10",
+        "b": "8",
+        "c": "11",
+        "d": "9"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 187,
+      "question": "What number should be\nsubtracted from x - 4x? - 8x +11 to\nmake the number divisible by (x + 2)?",
+      "options": {
+        "a": "9",
+        "b": "5",
+        "c": "3",
+        "d": "7"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 188,
+      "question": "Each of Ravi and Kavita had some\nmarbles. Kavita had 12 more marbles\nthan Ravi had. If each of them had one\nmore marble, then three times the\nnumber of marbles Kavita would then\nhave had would have been equal to four\ntimes the number of marbles Ravi would\nthen have had. How many marbles did\nKavita actually have ?",
+      "options": {
+        "a": "43",
+        "b": "47",
+        "c": "51",
+        "d": "48"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 189,
+      "question": "From the given numbers A, B, C\nand D, which number is NOT divisible by\n11^2\nA=712712\nC = 64614",
+      "options": {
+        "a": "C",
+        "b": "D",
+        "c": "B\nB = 177210\nD = 756148",
+        "d": "A"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 190,
+      "question": "Which of the following numbers is\nNOT divisible by 8 ?",
+      "options": {
+        "a": "7344",
+        "b": "5544",
+        "c": "7497",
+        "d": "4608"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 191,
+      "question": "For what least value of n, 27\"+ 2n\nis completely divided by 6, where n is an\ninteger?",
+      "options": {
+        "a": "3",
+        "b": "1",
+        "c": "0",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 192,
+      "question": "The least number which must be\nsubtracted from 7278745 so as to obtain\na sum divisible by 11 is:",
+      "options": {
+        "a": "3",
+        "b": "1",
+        "c": "5",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 193,
+      "question": "Ten chairs and six tables together\ncost %5,140; three chairs and two tables\ntogether cost %1,635. The cost of 1 chair\nand 1 table is:",
+      "options": {
+        "a": "900",
+        "b": "600",
+        "c": "800",
+        "d": "2700"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 194,
+      "question": "The number 4,29,714 is divisible\nby:",
+      "options": {
+        "a": "3 and 5",
+        "b": "6 and 5",
+        "c": "4 and 6",
+        "d": "3 and 6"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 195,
+      "question": "Find the greatest value of k in a\n6-digit number 6745k2 such that the\nnumber is divisible by 3.",
+      "options": {
+        "a": "8",
+        "b": "6",
+        "c": "9",
+        "d": "7"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 196,
+      "question": "On dividing a number by 55, we\nget 28 as the remainder. On dividing the\nsame number by 11, what is the\nremainder?",
+      "options": {
+        "a": "5",
+        "b": "8",
+        "c": "7",
+        "d": "6"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 197,
+      "question": "The ratio of two numbers is 2:5\nand their difference is 210. The smaller\nnumber is .",
+      "options": {
+        "a": "60",
+        "b": "150",
+        "c": "140",
+        "d": "350"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 198,
+      "question": "If 436P5 is divisible by 3, then the\nlargest value of P is:\n(aj12 (b)6 = (c)8 (d) 9",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 199,
+      "question": "Which composite number can\ndivide the sum of the first 12 natural\nnumbers?",
+      "options": {
+        "a": "6",
+        "b": "12",
+        "c": "4",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 200,
+      "question": "If m is even, then (8 - 1) is\ndivisible by :",
+      "options": {
+        "a": "63",
+        "b": "42",
+        "c": "65",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 201,
+      "question": "Which of the following numbers is\ndivisible by 6^2\n(a) 128530\n(c) 438750\n(b) 12581\n(d) 62233",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 202,
+      "question": "A number whose fifth part\nincreased by 5 is equal to its third part\ndecreased by 7. Find half of the number.",
+      "options": {
+        "a": "45",
+        "b": "150",
+        "c": "80",
+        "d": "60"
+      },
+      "answer": "d",
+      "solution": ""
+    }
+  ]
+}

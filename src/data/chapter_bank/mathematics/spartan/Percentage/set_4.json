@@ -1,0 +1,246 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Percentage",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Q. Suresh can save 20% of his income. But after 4 years, his income increases by 40% and he still manages to save the same amount as before. What is the percent increase in his expenditure ?",
+      "options": {
+        "a": "50",
+        "b": "22",
+        "c": "45",
+        "d": "23"
+      },
+      "answer": "a",
+      "solution": "Let initial income be Rs. 100.\nInitial savings = 20% of 100 = Rs. 20.\nInitial expenditure = 100 - 20 = Rs. 80.\n\nAfter 4 years, new income = 1.40 * 100 = Rs. 140.\nNew savings = Rs. 20 (same as before).\nNew expenditure = 140 - 20 = Rs. 120.\n\nPercent increase in expenditure = \\frac{120 - 80}{80} \\times 100 = \\frac{40}{80} \\times 100 = 50%."
+    },
+    {
+      "q_num": 2,
+      "question": "Q. 35% of the students in a college are girls and the rest are boys. The total number of students in the college is 2800. 75% of the boys and 85% of the girls passed the final examination. The percentage of total students who passed the final examination is ?",
+      "options": {
+        "a": "80%",
+        "b": "82%",
+        "c": "78%",
+        "d": "78.5%"
+      },
+      "answer": "d",
+      "solution": "Total students = 2800.\nNumber of girls = 35% of 2800 = 980.\nNumber of boys = 65% of 2800 = 1820.\n\nPassed girls = 85% of 980 = 833.\nPassed boys = 75% of 1820 = 1365.\n\nTotal passed students = 833 + 1365 = 2198.\nPercentage of total students who passed = \\frac{2198}{2800} \\times 100 = 78.5%."
+    },
+    {
+      "q_num": 3,
+      "question": "In 2003, the total population of a village was 4800, out of which 40% were females. In 2004, the total population increased by 10% as compared to the previous year. If the number of females remained the same in 2004, what was the percentage increase in the number of males in 2004 as compared to 2003 ?",
+      "options": {
+        "a": "18%",
+        "b": "20%",
+        "c": "15%",
+        "d": "16 (2/3)%"
+      },
+      "answer": "d",
+      "solution": "In 2003:\nTotal population = 4800.\nFemales = 40% of 4800 = 1920.\nMales = 4800 - 1920 = 2880.\n\nIn 2004:\nTotal population = 4800 + 10% of 4800 = 5280.\nFemales remained same = 1920.\nMales = 5280 - 1920 = 3360.\n\nIncrease in number of males = 3360 - 2880 = 480.\nPercentage increase in males = \\frac{480}{2880} \\times 100 = \\frac{1}{6} \\times 100 = 16\\frac{2}{3}%."
+    },
+    {
+      "q_num": 4,
+      "question": "In a city 39% of the men are married and 51% of the women are married. Considering that nobody is married more than once. What percent of population is married?",
+      "options": {
+        "a": "44%",
+        "b": "44.2%",
+        "c": "43%",
+        "d": "44.50%"
+      },
+      "answer": "b",
+      "solution": "Let number of men be M and number of women be W.\nSince each marriage involves one man and one woman:\n0.39 * M = 0.51 * W\n\\frac{M}{W} = \\frac{51}{39} = \\frac{17}{13}\n\nLet M = 1700 and W = 1300. Total population = 3000.\nTotal married population = 2 * (0.39 * 1700) = 2 * 663 = 1326.\nPercent of population married = \\frac{1326}{3000} \\times 100 = 44.2%."
+    },
+    {
+      "q_num": 5,
+      "question": "In a city 45% of the men are married and 25% of women are married. Considering that nobody is married more than once. What percent of population is married ?",
+      "options": {
+        "a": "35%",
+        "b": "35(1/7)%",
+        "c": "32 (1/7)%",
+        "d": "34%"
+      },
+      "answer": "c",
+      "solution": "Let number of men be M and number of women be W.\nSince each marriage involves one man and one woman:\n0.45 * M = 0.25 * W\n\\frac{M}{W} = \\frac{25}{45} = \\frac{5}{9}\n\nLet M = 500 and W = 900. Total population = 1400.\nTotal married population = 2 * (0.45 * 500) = 2 * 225 = 450.\nPercent of population married = \\frac{450}{1400} \\times 100 = \\frac{225}{7}% = 32\\frac{1}{7}%."
+    },
+    {
+      "q_num": 6,
+      "question": "Q. Rita spends 25% of her monthly income on house rent and 30% of the remaining income on food. If she saves ₹5250, what is her monthly income?",
+      "options": {
+        "a": "₹12000",
+        "b": "₹16000",
+        "c": "₹10000",
+        "d": "₹14000"
+      },
+      "answer": "c",
+      "solution": "Let total income be I.\nSpent on house rent = 25% of I.\nRemaining income = 75% of I.\nSpent on food = 30% of 75% of I = 22.5% of I.\nSavings = Remaining - Food = 75% - 22.5% = 52.5% of I.\nGiven Savings = ₹5250.\n0.525 * I = 5250\nI = \\frac{5250}{0.525} = 10000."
+    },
+    {
+      "q_num": 7,
+      "question": "Q. Rajan spent 10% of his salary on rent. He spent 20% of the remaining part of the salary on transport. After which he spent 40% of the balance of the salary on food. Further, he spent 80% of the balance on various bills. He deposits ₹5000 in the bank and kept the remaining ₹1480 for his own petty expenditure. Find his monthly salary (in ₹).",
+      "options": {
+        "a": "75000",
+        "b": "80000",
+        "c": "64800",
+        "d": "82500"
+      },
+      "answer": "a",
+      "solution": "Let monthly salary be S.\nRemaining after rent (10%) = 0.90 * S.\nRemaining after transport (20%) = 0.80 * 0.90 * S = 0.72 * S.\nRemaining after food (40%) = 0.60 * 0.72 * S = 0.432 * S.\nRemaining after bills (80%) = 0.20 * 0.432 * S = 0.0864 * S.\nGiven final balance = 5000 + 1480 = 6480.\n0.0864 * S = 6480\nS = \\frac{6480}{0.0864} = 75000."
+    },
+    {
+      "q_num": 8,
+      "question": "A man started off a business with a certain capital amount. In the first year, he earned 60% profit and donated 50% of the total capital (initial amount+profit). He followed the same procedure with the remaining capital after the second and the third year. If at the end of the three years, he is left with 15,360, what was the initial amount (in) with which the man started his business?",
+      "options": {
+        "a": "20,000",
+        "b": "30,000",
+        "c": "25,000",
+        "d": "32,000"
+      },
+      "answer": "b",
+      "solution": "Let initial capital be C.\nFor each year, the capital becomes 1.6 times (due to 60% profit) and then half of it is remaining (due to 50% donation).\nEffect per year = 1.6 * 0.5 = 0.8.\nAfter 3 years, remaining capital = C * (0.8)^3 = 0.512 * C.\nGiven: 0.512 * C = 15360\nC = \\frac{15360}{0.512} = 30000."
+    },
+    {
+      "q_num": 9,
+      "question": "A man started off a business with a certain capital amount. In the first year, he earned 33.33% profit and donated 20% of the total capital (initial amount+profit). He followed the same procedure with the remaining capital after the second and the third year. If at the end of the three years, he is left with 4096, what was the initial amount (in) with which the man started his business?",
+      "options": {
+        "a": "2785",
+        "b": "3325",
+        "c": "3550",
+        "d": "3375"
+      },
+      "answer": "d",
+      "solution": "Let initial capital be C.\nProfit = 33.33% = 1/3.\nTotal capital after first year profit = C * (4/3).\nRemaining capital after donating 20% = Total * (4/5) = C * (4/3) * (4/5) = C * (16/15).\nAfter 3 years, remaining capital = C * (16/15)^3 = C * (4096 / 3375).\nGiven remaining capital = 4096.\nC * (4096 / 3375) = 4096\nC = 3375."
+    },
+    {
+      "q_num": 10,
+      "question": "Q. Gita purchase an apartment and pays EMI for that. Her monthly income is ₹80,000. She spends 15% on the education of her children 40% on household affairs, sends 10% to GPF, saves 15%. in a savings bank account and pays the rest of the amount as EMI. How much EMI does she pay ?",
+      "options": {
+        "a": "₹16,000",
+        "b": "₹14,000",
+        "c": "₹8,000",
+        "d": "₹20,000"
+      },
+      "answer": "a",
+      "solution": "Total percentage spent on education, household, GPF and savings:\n15% + 40% + 10% + 15% = 80%.\nPercentage remaining for EMI = 100% - 80% = 20%.\nEMI paid = 20% of 80,000 = ₹16,000."
+    },
+    {
+      "q_num": 11,
+      "question": "Q. Sujata spends 18% of her monthly income on house seat, 40% of the income on groceries and 55% of the remaining on her children education and others. If her only savings is Rs. 4,725 then her expenditure on 'education and others' is:",
+      "options": {
+        "a": "Rs. 5,885",
+        "b": "Rs. 5,755",
+        "c": "Rs. 5,875",
+        "d": "Rs. 5,775"
+      },
+      "answer": "d",
+      "solution": "Let monthly income be I.\nSpent on rent and groceries = 18% + 40% = 58%.\nRemaining income = 100% - 58% = 42%.\nSpent on education and others = 55% of 42% = 23.1% of I.\nSavings = 45% of 42% = 18.9% of I.\nGiven: 18.9% of I = 4725\nI = \\frac{4725}{0.189} = 25000.\nExpenditure on education and others = 23.1% of 25000 = Rs. 5775."
+    },
+    {
+      "q_num": 12,
+      "question": "Q. Out of total income a person’s expenditure on food, cloth and other items are in the ratio of 4 : 5 : 3 respectively. If his expenditure is increased by 10% on food and 20% on cloth and decreased by 5% on other items. What percent should his income be increased so that no effect is recorded on the consumption of food, cloth and other items ?",
+      "options": {
+        "a": "6.25%",
+        "b": "10.41%",
+        "c": "10.5%",
+        "d": "12.5%"
+      },
+      "answer": "b",
+      "solution": "Let expenditures be: Food = 400, Cloth = 500, Others = 300.\nTotal initial expenditure = 400 + 500 + 300 = 1200.\nIncrease in Food expenditure = 10% of 400 = +40.\nIncrease in Cloth expenditure = 20% of 500 = +100.\nDecrease in Others expenditure = -5% of 300 = -15.\nNet increase in total expenditure = 40 + 100 - 15 = 125.\nPercent increase in income needed = \\frac{125}{1200} \\times 100 = 10.41%."
+    },
+    {
+      "q_num": 13,
+      "question": "Q. A, B and C spend 80%, 85% and 75% of their incomes, respectively. If their savings are in the ratio 8 : 9 : 20 and the difference between the incomes of A and C is ₹18,000, then the income of B is :",
+      "options": {
+        "a": "₹24,000",
+        "b": "₹36,000",
+        "c": "₹27,000",
+        "d": "₹30,000"
+      },
+      "answer": "c",
+      "solution": "Savings percentage: A = 20%, B = 15%, C = 25%.\nRatio of savings = 8 : 9 : 20.\nLet Savings of A, B, C be 8x, 9x, 20x.\nIncome of A = 8x / 0.20 = 40x.\nIncome of B = 9x / 0.15 = 60x.\nIncome of C = 20x / 0.25 = 80x.\nDifference between incomes of A and C = 80x - 40x = 40x = ₹18,000.\nx = 450.\nIncome of B = 60 * 450 = ₹27,000."
+    },
+    {
+      "q_num": 14,
+      "question": "The monthly salary of a person was Rs. 50,000. He used to spend on Family expenses (E), Taxes (T), Charity (C), and the rest were his savings. E was 60% of the income, T was 20% of E, and C was 15% of T. When his salary got raised by 40%, he maintained the percentage level of E, but T becomes 30% of E and C becomes 20% of T. The difference between the two savings (in Rs.)",
+      "options": {
+        "a": "220",
+        "b": "250",
+        "c": "130",
+        "d": "128"
+      },
+      "answer": "a",
+      "solution": "Initially:\nSalary = 50,000.\nE = 60% of 50,000 = 30,000.\nT = 20% of 30,000 = 6,000.\nC = 15% of 6,000 = 900.\nTotal expenses = 30,000 + 6,000 + 900 = 36,900.\nSavings = 50,000 - 36,900 = 13,100.\n\nAfter 40% raise:\nSalary = 70,000.\nE = 60% of 70,000 = 42,000.\nT = 30% of 42,000 = 12,600.\nC = 20% of 12,600 = 2,520.\nTotal expenses = 42,000 + 12,600 + 2,520 = 57,120.\nSavings = 70,000 - 57,120 = 12,880.\n\nDifference in savings = 13,100 - 12,880 = Rs. 220."
+    },
+    {
+      "q_num": 15,
+      "question": "The monthly salary of a person was Rs. 75,000. He used to spend on Family Expenses (E), Taxes (T), Charity (C) and rest were his savings. E was 60% of the income, T was 20% of E, and C was 15% of T. When his salary got raised by 40% he maintained the percentage level of E, but T became 30% of E and C became 20% of T. The ratio of the savings of his earlier salary to that of his present salary",
+      "options": {
+        "a": "337 : 325",
+        "b": "644 : 655",
+        "c": "655 : 644",
+        "d": "325 : 337"
+      },
+      "answer": "c",
+      "solution": "Initial savings as a % of initial income:\nE = 60%, T = 20% of 60% = 12%, C = 15% of 12% = 1.8%.\nTotal expenses = 60% + 12% + 1.8% = 73.8%.\nSavings % = 100% - 73.8% = 26.2%.\nInitial Savings S1 = 26.2% of 75,000 = 19,650.\n\nNew savings as a % of new income (after 40% raise):\nE = 60%, T = 30% of 60% = 18%, C = 20% of 18% = 3.6%.\nTotal expenses = 60% + 18% + 3.6% = 81.6%.\nSavings % = 18.4%.\nNew Savings S2 = 18.4% of (1.4 * 75,000) = 19,320.\n\nRatio S1 : S2 = 19650 : 19320 = 655 : 644."
+    },
+    {
+      "q_num": 16,
+      "question": "The monthly salary of a person was ₹50,000. He used to spend on three heads personal and family expenses (E), taxes (T), philanthropy (P), and rest were his savings. E was 50% of the income. T was 20% of E and P was 15% of T. When his salary got raised by 40%, he maintained the percentage level of E, but T became 30% of E and P becomes 20% of T. By what percentage is the new savings more or less than the earlier savings? (correct up to one decimal place)",
+      "options": {
+        "a": "16.4% more",
+        "b": "8.2% more",
+        "c": "16.4% less",
+        "d": "8.2% less"
+      },
+      "answer": "a",
+      "solution": "Initially:\nSalary = 50,000.\nE = 50% of 50k = 25,000.\nT = 20% of 25k = 5,000.\nP = 15% of 5k = 750.\nSavings S1 = 50,000 - 30,750 = 19,250.\n\nAfter 40% raise:\nSalary = 70,000.\nE = 50% of 70k = 35,000.\nT = 30% of 35k = 10,500.\nP = 20% of 10.5k = 2,100.\nSavings S2 = 70,000 - 47,600 = 22,400.\n\nChange in savings = (22,400 - 19,250)/19,250 * 100 = 16.36% ≈ 16.4% more."
+    },
+    {
+      "q_num": 17,
+      "question": "P's monthly salary is Rs.50,000. He spends 40% of his monthly salary on Food and 20% of the remaining monthly salary on house rent. Additionally, he spends Rs. X on children's education and spends 20% of his monthly salary on travel. If he saved his remaining salary and his savings is Rs.10000 then find the value of X.",
+      "options": {
+        "a": "9,000",
+        "b": "4,000",
+        "c": "5,000",
+        "d": "6,000"
+      },
+      "answer": "b",
+      "solution": "Total salary = 50,000.\nFood = 40% of 50,000 = 20,000.\nRemaining = 30,000.\nRent = 20% of 30,000 = 6,000.\nTravel = 20% of 50,000 = 10,000.\nSavings = 10,000.\nEducation = X.\nSalary = Food + Rent + Travel + Savings + Education\n50,000 = 20,000 + 6,000 + 10,000 + 10,000 + X\n50,000 = 46,000 + X\nX = 4,000."
+    },
+    {
+      "q_num": 18,
+      "question": "Some students (only boys and girls) from different schools appeared for an Olympiad exam. 20% of the boys and 15% of the girls failed the exam. The number of boys who passed the exam was 70 more than that of the girls who passed the exam'. A total of 90 students failed. Find the number of students that appeared for the exam.",
+      "options": {
+        "a": "350",
+        "b": "420",
+        "c": "500",
+        "d": "400"
+      },
+      "answer": "c",
+      "solution": "Let B and G be the number of boys and girls.\nFailed: 0.20B + 0.15G = 90  => 4B + 3G = 1800  (Eq 1)\nPassed boys - Passed girls = 70 => 0.80B - 0.85G = 70 => 16B - 17G = 1400 (Eq 2)\n\nMultiply Eq 1 by 4:\n16B + 12G = 7200\nSubtract Eq 2:\n29G = 5800 => G = 200.\nSince 4B + 3(200) = 1800 => 4B = 1200 => B = 300.\nTotal students = 300 + 200 = 500."
+    },
+    {
+      "q_num": 19,
+      "question": "Some Boys and Girls from different states appeared for an CGL Exam. 20% of the boys and 16.66% of the girls Failed the exam. The number of boys who passed the exam was 75 more than that of the girls who passed the exam. A total of 75 students failed. Find the number of students that appeared for the exam.",
+      "options": {
+        "a": "350",
+        "b": "420",
+        "c": "500",
+        "d": "400"
+      },
+      "answer": "d",
+      "solution": "Let B and G be the number of boys and girls.\nFailed: 0.20B + (1/6)G = 75  => 6B + 5G = 2250 (Eq 1)\nPassed boys - Passed girls = 75 => 0.80B - (5/6)G = 75 => 24B - 25G = 2250 (Eq 2)\n\nMultiply Eq 1 by 5:\n30B + 25G = 11250\nAdd Eq 2:\n54B = 13500 => B = 250.\nFrom Eq 1:\n6(250) + 5G = 2250 => 1500 + 5G = 2250 => 5G = 750 => G = 150.\nTotal students = 250 + 150 = 400."
+    },
+    {
+      "q_num": 20,
+      "question": "In a picnic organised by a school 2/3rd of total number of boys and 3/5 of the total number of girls got permission to go. If the total number of boys in the school is 200 more than the number of girls and number of girls who went to picnic is 160 less than the number of boys in who went to the picnic. Find the total students in the school?",
+      "options": {
+        "a": "800",
+        "b": "850",
+        "c": "1000",
+        "d": "1200"
+      },
+      "answer": "c",
+      "solution": "Let total boys be B and total girls be G.\nB = G + 200\nBoys who went = (2/3)B, Girls who went = (3/5)G.\n(2/3)B - (3/5)G = 160\nSubstitute B:\n(2/3)(G + 200) - (3/5)G = 160\n(1/15)G + 400/3 = 160\n(1/15)G = 160 - 400/3 = 80/3\nG = (80/3) * 15 = 400.\nB = 400 + 200 = 600.\nTotal students = B + G = 1000."
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Number System",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Find the value of x in given equation:\n(sqrt(5+x) + sqrt(5-x) / (sqrt(5+x) - sqrt(5-x) = 7\nSSC CGL 20/09/2025 (Shift 1)",
+      "options": {
+        "a": "12",
+        "b": "7",
+        "c": "6",
+        "d": "8"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 2,
+      "question": "A gardener organizes trees into\nrows to create a square formation but\ndiscovers that 16 trees are not included.\nIf the total number of trees is 4112 , then\nwhat is the number of trees in each row?\nSSC CGL 17/09/2025 (Shift 3)",
+      "options": {
+        "a": "42",
+        "b": "54",
+        "c": "64",
+        "d": "65"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 3,
+      "question": "The difference between the two\nnumbers is 1370. On dividing the larger\nby the smaller, the quotient is 7, and the\nremainder is 14. Find the smaller\nnumber.\nGraduate Level 28/07/2025 (Shift - 3)",
+      "options": {
+        "a": "240",
+        "b": "226",
+        "c": "285",
+        "d": "295"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 4,
+      "question": "Converting the decimal number 187\nto the binary number system we get:\nHigher Secondary 29/07/2025 (Shift - 2)",
+      "options": {
+        "a": "10111011",
+        "b": "10111010",
+        "c": "11011101",
+        "d": "11011110"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 5,
+      "question": "Which set of numbers includes all\nthe other sets ?\nHigher Secondary 28/07/2025 (Shift - 2)",
+      "options": {
+        "a": "Integers",
+        "b": "Rational numbers",
+        "c": "Realnumbers",
+        "d": "Natural numbers"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 6,
+      "question": "How many non-square natural\nnumbers lie between 30^2 and 317^2\nMatriculation Level 29/08/2025 (Shift - 3)",
+      "options": {
+        "a": "59",
+        "b": "60",
+        "c": "61 =",
+        "d": "62"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 7,
+      "question": "What will be the number of zeros at\nthe end of the square of the following\nnumbers ?\n(i) 90\n(ii) 600\nChoose the correct option:\nMatriculation Level 02/08/2025 (Shift - 1)",
+      "options": {
+        "a": "1 zero in (i), 3 zeros in (ii)",
+        "b": "2 zeros in (i), 4 zeros in (ii)",
+        "c": "2 zeros in (i), 2 zeros in (ii)",
+        "d": "1 zero in both (i) and (ii)\n5"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 8,
+      "question": "If x = 3 is a rational number and y =\nsqrt5, an irrational number, then x + y is:\nMatriculation Level 02/08/2025 (Shift - 1)",
+      "options": {
+        "a": "Rational",
+        "b": "Irrational",
+        "c": "Integer",
+        "d": "Whole Number"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 9,
+      "question": "The five - digit number 45yz0 is\ndivisible by 40. What is the maximum\npossible value of (y + z) ?",
+      "options": {
+        "a": "15",
+        "b": "18",
+        "c": "16",
+        "d": "17"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 10,
+      "question": "In a room, there are some chairs\nand some people. If on each chair, only\none person is seated, then there is no\nchair for exactly one person. If on each\nchair, two persons sit, then there is one\nvacant chair. What is the number of\nchairs in the room?",
+      "options": {
+        "a": "7",
+        "b": "4",
+        "c": "3",
+        "d": "6"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 11,
+      "question": "Cindy bought 15 apples and 12\noranges and paid a sum of 447 for the\npurchase. Which of the statements given\nbelow is inconsistent with the\ninformation given in the previous\nstatement, leading to no possible prices\nof the two fruits?",
+      "options": {
+        "a": "Purchased 25 apples and 20 oranges\nand paid a sum of 2745",
+        "b": "Purchased 10 apples and 13 oranges\nand paid a sum of 7353",
+        "c": "Purchased 12 apples and 8 oranges\nand paid a sum of %340",
+        "d": "Purchased 35 apples and 28 oranges\nand paid a sum of 21,029"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 12,
+      "question": "Aman has certain number of notes\nof denomination #20 and %10 which\namount to 2390. If the numbers of notes\nof each kind are interchanged, then the\nnew amount is 790 less than before. Find\nthe number of notes of #220\ndenomination.",
+      "options": {
+        "a": "16",
+        "b": "12",
+        "c": "15",
+        "d": "14"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 13,
+      "question": "2 biscuits and 1 chocolate cost\n269. 2 chocolates and 3 cups of coffee\ncost 127. 3 biscuits, 4 chocolates and 2\ncups of coffee cost %229. Find the total\ncost (in 2) of 5 biscuits, 5 chocolates and\n5 cups of coffee.",
+      "options": {
+        "a": "304 =",
+        "b": "375",
+        "c": "345",
+        "d": "355"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 14,
+      "question": "8 apples and 10 oranges weigh 5\nkg. 12 apples and 20 oranges weigh 9 kg.\nWhat is the weight (in kg, rounded off to\nthe nearest integer) of 15 apples and 24\noranges ?",
+      "options": {
+        "a": "16",
+        "b": "11",
+        "c": "13",
+        "d": "10"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 15,
+      "question": "In an election, voters have the\noption to vote for one of three\ncandidates. They also have the option to\nselect 'None Of The Above (NOTA) to\nreject all the candidates. All three\ncandidates get 6 times the NOTA votes.\nThe winner gets twice the votes of the\nsecond runner-up. The first runner-up\ngets 900 more votes than NOTA and\ndefeats the second runner-up by 150\nvotes. Find the total number of votes\ncast.",
+      "options": {
+        "a": "15177",
+        "b": "11577",
+        "c": "11025",
+        "d": "17715"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 16,
+      "question": "How many factors of 14,400 are\ndivisible by 18 but not by 36 ?\n(a3 (b)5 (c)4 <2",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 17,
+      "question": "Raju has %11,000 and starts saving\n5,000 each week towards buying a new\nlaptop. At the same time, Ramesh has\n60,000 and begins spending %2,000 per\nweek on supplies for his art class. Will\nthere be a week when they have the\nsame amount of money?",
+      "options": {
+        "a": "Yes, after 5 weeks",
+        "b": "No, they will never have the same\namount",
+        "c": "Yes, after 7 weeks",
+        "d": "Yes, after 6 weeks"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 18,
+      "question": "If 3c2933k is divisible by both 5\nand 11, where c and k are single digit\nnatural numbers, then c + k =",
+      "options": {
+        "a": "6",
+        "b": "8",
+        "c": "5",
+        "d": "7"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 19,
+      "question": "If two numbers are each divided by\nthe same divisor, then the remainders are\n6 and 7, respectively. If the sum of the\ntwo numbers be divided by the same\ndivisor, then the remainder is 5. The\ndivisor is:",
+      "options": {
+        "a": "6",
+        "b": "4",
+        "c": "13s",
+        "d": "8"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 20,
+      "question": "Find the lowest positive value of (c\n- b) such that the 7-digit number\n1738b9c is divisible by 12.",
+      "options": {
+        "a": "4",
+        "b": "7",
+        "c": "1",
+        "d": "2"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 21,
+      "question": "Successive division of a number by\n2, 3, 5 and 7 gives remainders 1, 4, 0 and\n5, respectively. What will be the sum of\nthe remainders if the same number is\ndivided by 7, 5, 3 and 2 successively ?",
+      "options": {
+        "a": "17",
+        "b": "8",
+        "c": "10",
+        "d": "9"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 22,
+      "question": "Ram gives a six-digit number\n468312 to Shyam to check the divisibility.\nShyam tells Ram that the number is\ndivisible by 57. Shyam asks Ram, If we\nrearrange the digits of this number in\ndescending order, then by which number\nwill it be always divisible ?",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "19",
+        "d": "17"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 23,
+      "question": "A 4-digit number '34PQ' divisible by\n3,5 and 7. Find the value of P+Q.",
+      "options": {
+        "a": "11",
+        "b": "12",
+        "c": "10",
+        "d": "13"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 24,
+      "question": "A six-digit number is divisible by\n33. If 21 is added to the number, then the\nnew number which formed is also\ndivisible by:",
+      "options": {
+        "a": "5",
+        "b": "4",
+        "c": "2",
+        "d": "3"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 25,
+      "question": "A six-digit number 11p9q4 is\ndivisible by 24. Then the greatest\npossible value for pq is:",
+      "options": {
+        "a": "56",
+        "b": "68",
+        "c": "42",
+        "d": "32"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 26,
+      "question": "The remainder of the term\na a +92\" + D when divided\n(a) 1 : (b)4 (c)2 3",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 27,
+      "question": "Two numbers, when divided by a\ncertain divisor, leave the remainder 57.\nWhen sum of the two numbers is divided\nby the same divisor, the remainder is 49.\nThe divisor is:",
+      "options": {
+        "a": "56",
+        "b": "57",
+        "c": "49",
+        "d": "65"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 28,
+      "question": "In a division sum, the divisor is 11\ntimes the quotient and 5 times the\nremainder. If the remainder is 44, then\nthe dividend is:",
+      "options": {
+        "a": "8888",
+        "b": "4448",
+        "c": "8444",
+        "d": "4444"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 29,
+      "question": "What is the least value of x + y,, if\n10 digit number 780x533y24 is divisible\nby 88 ?",
+      "options": {
+        "a": "4",
+        "b": "3",
+        "c": "7",
+        "d": "2"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 30,
+      "question": "Suhas mistakenly took as dividend\na number which was 10% less than the\noriginal dividend. He also mistakenly\ntook as divisor a number which was 20%\nless than the original divisor. If the\ncorrect quotient of the original question\nof division was 24 and the remainder\nwas 0, then what quotient did Suhas\nobtain, assuming there was no error in\nhis calculations?",
+      "options": {
+        "a": "27",
+        "b": "21.6",
+        "c": "26.4",
+        "d": "30"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 31,
+      "question": "During a division, Pranjal\nmistakenly took as the dividend a\nnumber that was 10% more than the\noriginal dividend. He also mistakenly\ntook as the divisor a number that was\n25% more than the original divisor. If the\ncorrect quotient of the original division\nproblem was 25 and the remainder was\n0, what was the quotient that Pranjal\nobtained, assuming his calculations had\nno error ?",
+      "options": {
+        "a": "21.75",
+        "b": "21.25",
+        "c": "28.75",
+        "d": "22"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 32,
+      "question": "The six-digit number 7x1yyx is a\nmultiple of 33 for non-zero digits x and y.\nWhich of the following could be a\npossible value of (x + y) ?",
+      "options": {
+        "a": "5",
+        "b": "4 =",
+        "c": "2",
+        "d": "3"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 33,
+      "question": "A girl wants to plant trees in her\ngarden in rows in such a way that the\nnumber of trees in each row to be the\nsame. There are 10 rows and the number\nof trees in each row is 12, what is the\nnumber of trees in each row, if there are\n5 more rows ?",
+      "options": {
+        "a": "10",
+        "b": "8",
+        "c": "6",
+        "d": "12"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 34,
+      "question": "What is the total number of factors\nof the number 720 except 1 and the\nnumber itself?",
+      "options": {
+        "a": "29",
+        "b": "27",
+        "c": "32",
+        "d": "28"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 35,
+      "question": "Which of the following is the\nsmallest among (14)s, avr, (1 6)e &\n(25)2 2\n(a) (14) (b) (25) (6) (16) (a) (12)\n1\n2",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 36,
+      "question": "How many terms of the series - 9, -\n6, - 3, .......... Must be taken so that the sum\nof all the terms is 45 ?",
+      "options": {
+        "a": "11",
+        "b": "8",
+        "c": "10",
+        "d": "9"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 37,
+      "question": "Which of the following statements\nis correct ?\nI. The alue of 100^2 - 99^2 + 98^2 - 97^2 +\n967- 95^2 + 94^2 - 937 + ...... + 22^2 - 217 is\n4840.\n1 1\nIl. The value of (K+ TZ) (K -) (K*\nK K\n1 1 1... 1\n+Z)(K + \\(K* - 7) isK' -]\nK K K K\n(a) Neither | nor II\n(c) Only II\n(b) Both | and II\n(d) Only!",
+      "options": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 38,
+      "question": "If the seven-digit number 52A6B7C\nis divisible by 33, and A, B, C are primes,\nthen the maximum value of 2A + 3B+C is:",
+      "options": {
+        "a": "32",
+        "b": "23",
+        "c": "27",
+        "d": "34"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 39,
+      "question": "In a test (+ 5) marks are given for\nevery correct answer and (-2) marks are\ngiven for every incorrect answer. Jay\nanswered all the questions and scored\n(-12) marks, though he got 4 correct\nanswers. How many of his answers were\nINCORRECT ?",
+      "options": {
+        "a": "8",
+        "b": "32",
+        "c": "16",
+        "d": "20"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 40,
+      "question": "The number 150328 is divisible by\n23. If the digits are rearranged in\ndescending order and five times of 13 is\nsubtracted from the new number thus\nformed, then the resultant number will be\ndivisible by:",
+      "options": {
+        "a": "3",
+        "b": "5 =",
+        "c": "11",
+        "d": "2"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 41,
+      "question": "What is the sum of all the common\nterms between the given series S1 and\n$2^2\nS1 = 2, 9, 16, ......., 632\n$2 = 7,11, 15, ......., 743",
+      "options": {
+        "a": "6974",
+        "b": "6750",
+        "c": "7140",
+        "d": "6860"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 42,
+      "question": "Let p, q, r and s be positive natural\nnumbers having three exact factors\nincluding 1 and the number itself If q > p\nand both are two-digit numbers, andr >s\nand both are one-digit numbers, then the\nvalue of the expression paa-\" is:",
+      "options": {
+        "a": "-s-1",
+        "b": "s-1",
+        "c": "1-s",
+        "d": "s+1"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 43,
+      "question": "Three fractions x, y and z are such\nthat x > y > z. When the smallest of them\nis divided by the greatest, the result is\n9/6 which exceeds y by 0.0625. If x + y + z = 2 3/5,\nthen what is the value of x + z ?",
+      "options": {
+        "a": "5/2",
+        "b": "1",
+        "c": "7/4",
+        "d": "3/5"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 44,
+      "question": "Find the number of prime factors in\nthe product (30) x (24).",
+      "options": {
+        "a": "45",
+        "b": "35",
+        "c": "10",
+        "d": "30"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 45,
+      "question": "Let ab, a # b, is a 2-digit prime\nnumber such that ba is also a prime\nnumber. The sum of all such number is:",
+      "options": {
+        "a": "374",
+        "b": "418",
+        "c": "407",
+        "d": "396"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 46,
+      "question": "Given that 27 + 1 is completely\ndivisible by a whole number. Which of the\nfollowing is completely divisible by the\nsame number ?\n(a) 2'+1 (b) 5 x 2",
+      "options": {
+        "a": "46",
+        "b": "44",
+        "c": "48",
+        "d": "42 (b) (/5 +5)?\nc) 2 +1 d) 2 +1\n) Q.58. What is the difference between the (c) (/2 + /3)? + 26"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 47,
+      "question": "Which of the following numbers\nwill completely divide 78\" + 7 + 7 ?",
+      "options": {
+        "a": "399",
+        "b": "389",
+        "c": "387",
+        "d": "397"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 48,
+      "question": "When a positive integer is divided\nby d, the remainder is 15. When ten times\nof the same number is divided by d, the\nremainder is 6. The least possible value\nof dis:",
+      "options": {
+        "a": "9",
+        "b": "12",
+        "c": "16",
+        "d": "18"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 49,
+      "question": "When 200 is divided by a positive\ninteger x, the remainder is 8. How many\nvalues of x are there?",
+      "options": {
+        "a": "7",
+        "b": "5",
+        "c": "8",
+        "d": "6"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 50,
+      "question": "How many natural numbers less\nthan 1000 are divisible by 5 or 7 but NOT\nby 35^2",
+      "options": {
+        "a": "285",
+        "b": "313",
+        "c": "341",
+        "d": "243"
+      },
+      "answer": "a",
+      "solution": ""
+    }
+  ]
+}
