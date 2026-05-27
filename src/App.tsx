@@ -83,6 +83,16 @@ export default function App() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [deletedQuestionIds, setDeletedQuestionIds] = useState<Set<string>>(new Set());
+  const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
+  const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
+
+  const toggleChapterExpand = (subject: string, chapter: string) => {
+    const key = `${subject}|${chapter}`;
+    setExpandedChapters(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
 
   const processData = (data: SubjectData, deletedIds: Set<string>) => {
     const filteredData: SubjectData = {};
@@ -187,7 +197,10 @@ export default function App() {
   const toggleBookmark = async (question: Question) => {
     if (!user) return;
 
-    const existing = bookmarks.find(b => b.question.q_num === question.q_num && b.chapter_title === activeChapter?.chapter_title);
+    const existing = bookmarks.find(b => 
+      b.question.question === question.question && 
+      b.subject === (activeChapter?.subject || 'Unknown')
+    );
 
     if (existing && existing.id) {
       try {
@@ -198,12 +211,31 @@ export default function App() {
       }
     } else {
       try {
+        let origChapterTitle = activeChapter?.chapter_title || 'Unknown';
+        let origSubject = activeChapter?.subject || 'Unknown';
+        let origCategory = category;
+
+        if (activeChapter?.chapter_title.startsWith('Bookmarked:')) {
+          if (activeChapter.chapter_title.startsWith('Bookmarked: All')) {
+            const foundChapter = currentData[activeChapter.subject]?.find(ch =>
+              ch.questions.some(q => q.question === question.question)
+            );
+            if (foundChapter) {
+              origChapterTitle = foundChapter.chapter_title;
+              origSubject = foundChapter.subject;
+            }
+          } else {
+            origChapterTitle = activeChapter.chapter_title.replace('Bookmarked: ', '');
+            origSubject = activeChapter.subject;
+          }
+        }
+
         const newBookmark: Bookmark = {
           userId: user.uid,
           question,
-          subject: activeChapter?.subject || 'Unknown',
-          chapter_title: activeChapter?.chapter_title || 'Unknown',
-          category,
+          subject: origSubject,
+          chapter_title: origChapterTitle,
+          category: origCategory,
           bookmarkedAt: new Date().toISOString()
         };
         const docRef = await addDoc(collection(db, 'bookmarks'), newBookmark);
@@ -260,6 +292,7 @@ export default function App() {
       setSelectedSubject(null);
       setSelectedMathSection(null);
       setSelectedTopic(null);
+      setSelectedBookmarkSubject(null);
     } catch (error) {
       console.error('Logout failed:', error);
     }
@@ -285,6 +318,36 @@ export default function App() {
     startQuiz(virtualChapter);
   };
 
+  const startSubjectBookmarkQuiz = (subjectName: string, subjectBookmarks: Bookmark[]) => {
+    const questions = subjectBookmarks.map((b, idx) => ({
+      ...b.question,
+      q_num: idx + 1
+    }));
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `Bookmarked: All ${subjectName}`,
+      subject: subjectName,
+      subject_id: subjectName.toLowerCase().replace(/\s+/g, '_'),
+      questions
+    };
+    startQuiz(virtualChapter);
+  };
+
+  const startChapterBookmarkQuiz = (subjectName: string, chapterTitle: string, chapterBookmarks: Bookmark[]) => {
+    const questions = chapterBookmarks.map((b, idx) => ({
+      ...b.question,
+      q_num: idx + 1
+    }));
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `Bookmarked: ${chapterTitle}`,
+      subject: subjectName,
+      subject_id: subjectName.toLowerCase().replace(/\s+/g, '_'),
+      questions
+    };
+    startQuiz(virtualChapter);
+  };
+
   const handleQuizComplete = async (results: Omit<QuizResult, 'userId' | 'completedAt'>) => {
     if (user) {
       try {
@@ -304,12 +367,15 @@ export default function App() {
 
   const isAuthorized = user?.email === 'cyberdevil0101@gmail.com';
 
-  // Group bookmarks by subject
-  const bookmarksBySubject = bookmarks.reduce((acc, b) => {
-    if (!acc[b.subject]) acc[b.subject] = [];
-    acc[b.subject].push(b);
+  // Group bookmarks by subject and then by chapter
+  const bookmarksBySubjectAndChapter = bookmarks.reduce((acc, b) => {
+    const subject = b.subject || 'Unknown Subject';
+    const chapter = b.chapter_title || 'Unknown Chapter';
+    if (!acc[subject]) acc[subject] = {};
+    if (!acc[subject][chapter]) acc[subject][chapter] = [];
+    acc[subject][chapter].push(b);
     return acc;
-  }, {} as Record<string, Bookmark[]>);
+  }, {} as Record<string, Record<string, Bookmark[]>>);
 
   if (!loading && !user) {
     return (
@@ -358,7 +424,7 @@ export default function App() {
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); }}>
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
               <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
                 <GraduationCap className="text-white w-6 h-6" />
               </div>
@@ -367,14 +433,14 @@ export default function App() {
             
             <div className="hidden md:flex items-center space-x-8">
               <button 
-                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); }}
+                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
                 className={`flex items-center font-bold transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Practice
               </button>
               <button 
-                onClick={() => setView('bookmarks')}
+                onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
                 className={`flex items-center font-bold transition-colors ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <BookmarkIcon className="w-5 h-5 mr-2" />
@@ -777,72 +843,211 @@ export default function App() {
                 </div>
               ) : (
                 <div className="space-y-12">
-                  {(Object.entries(bookmarksBySubject) as [string, Bookmark[]][]).map(([subject, subjectBookmarks]) => (
-                    <div key={subject} className="space-y-6">
-                      <div className="flex items-center space-x-4">
-                        <div className="h-px flex-1 bg-slate-200"></div>
-                        <h2 className="text-2xl font-black text-slate-800 px-4">{subject}</h2>
-                        <div className="h-px flex-1 bg-slate-200"></div>
-                      </div>
-                      <div className="grid grid-cols-1 gap-6">
-                        {subjectBookmarks.map((bookmark) => (
+                  {selectedBookmarkSubject === null ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {(Object.entries(bookmarksBySubjectAndChapter) as [string, Record<string, Bookmark[]>][]).map(([subject, chaptersObj]) => {
+                        const allSubjectBookmarks = Object.values(chaptersObj).flat();
+                        const totalChapters = Object.keys(chaptersObj).length;
+                        return (
                           <motion.div
-                            key={bookmark.id}
-                            className="bg-white rounded-3xl p-8 shadow-lg border border-slate-100 relative group"
+                            key={subject}
+                            whileHover={{ y: -8 }}
+                            className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer flex flex-col justify-between min-h-[220px]"
+                            onClick={() => setSelectedBookmarkSubject(subject)}
                           >
-                            <div className="flex justify-between items-start mb-4">
-                              <div className="flex items-center space-x-3">
-                                <span className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full ${
-                                  bookmark.category === 'mockErrors' ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'
-                                }`}>
-                                  {bookmark.category === 'mockErrors' ? 'Mock Error' : 'Chapter Bank'}
+                            <div>
+                              <div className="flex items-start justify-between mb-6">
+                                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                                  <Layers className="w-7 h-7" />
+                                </div>
+                                <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase tracking-wider">
+                                  {totalChapters} {totalChapters === 1 ? 'Chapter' : 'Chapters'}
                                 </span>
-                                <span className="text-slate-400 text-xs font-bold uppercase tracking-widest">
-                                  {bookmark.chapter_title}
-                                </span>
+                              </div>
+                              
+                              <h3 className="text-2xl font-black text-slate-800 mb-2 group-hover:text-blue-600 transition-colors capitalize">
+                                {subject}
+                              </h3>
+                              <p className="text-slate-500 font-medium mb-6">
+                                {allSubjectBookmarks.length} Bookmarked {allSubjectBookmarks.length === 1 ? 'Question' : 'Questions'}
+                              </p>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+                              <div className="flex items-center font-bold text-blue-600 group-hover:translate-x-2 transition-transform">
+                                View Chapters
+                                <ChevronRight className="w-5 h-5 ml-1" />
                               </div>
                               <button
-                                onClick={() => bookmark.id && toggleBookmark(bookmark.question)}
-                                className="p-2 text-slate-300 hover:text-red-600 transition-colors"
-                                title="Remove Bookmark"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  startSubjectBookmarkQuiz(subject, allSubjectBookmarks);
+                                }}
+                                className="p-3 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white rounded-xl font-bold transition-all flex items-center justify-center hover:scale-105"
+                                title={`Practice ${subject} Bookmarks`}
                               >
-                                <Trash2 className="w-5 h-5" />
+                                <Play className="w-4 h-4 fill-current" />
                               </button>
                             </div>
-                            <h3 className="text-xl font-bold text-slate-800 mb-6 leading-relaxed">
-                              {bookmark.question.question}
-                            </h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                              {Object.entries(bookmark.question.options).map(([key, value]) => (
-                                <div
-                                  key={key}
-                                  className={`p-4 rounded-xl border-2 flex items-center ${
-                                    bookmark.question.answer === key
-                                      ? 'border-green-500 bg-green-50'
-                                      : 'border-slate-50 bg-slate-50/50'
-                                  }`}
-                                >
-                                  <span className={`w-8 h-8 flex items-center justify-center rounded-lg mr-4 font-bold ${
-                                    bookmark.question.answer === key ? 'bg-green-500 text-white' : 'bg-slate-200 text-slate-500'
-                                  }`}>
-                                    {key.toUpperCase()}
-                                  </span>
-                                  <span className="text-slate-700 font-medium">{value}</span>
-                                </div>
-                              ))}
-                            </div>
-                            {bookmark.question.solution && (
-                              <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
-                                <p className="text-blue-700 text-sm leading-relaxed">
-                                  <span className="font-bold">Solution:</span> {bookmark.question.solution}
-                                </p>
-                              </div>
-                            )}
                           </motion.div>
-                        ))}
-                      </div>
+                        );
+                      })}
                     </div>
-                  ))}
+                  ) : (
+                    (() => {
+                      const subject = selectedBookmarkSubject as string;
+                      const chaptersObj: Record<string, Bookmark[]> = bookmarksBySubjectAndChapter[subject] || {};
+                      const allSubjectBookmarks: Bookmark[] = Object.values(chaptersObj).flat() as Bookmark[];
+                      return (
+                        <div className="space-y-8">
+                          {/* Back Button */}
+                          <button 
+                            onClick={() => setSelectedBookmarkSubject(null)}
+                            className="flex items-center text-slate-500 font-bold hover:text-slate-800 transition-colors"
+                          >
+                            <ChevronLeft className="w-5 h-5 mr-1" />
+                            Back to Bookmarked Subjects
+                          </button>
+
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                            <div className="flex items-center space-x-4">
+                              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                                <Layers className="w-6 h-6" />
+                              </div>
+                              <div>
+                                <h2 className="text-2xl font-black text-slate-800 capitalize">{subject} Bookmarks</h2>
+                                <p className="text-sm text-slate-500 font-medium">{allSubjectBookmarks.length} bookmarked {allSubjectBookmarks.length === 1 ? 'question' : 'questions'}</p>
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => startSubjectBookmarkQuiz(subject, allSubjectBookmarks)}
+                              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md shadow-blue-100 flex items-center justify-center hover:-translate-y-0.5"
+                            >
+                              <Play className="w-4 h-4 mr-2 fill-current" />
+                              Practice Subject
+                            </button>
+                          </div>
+
+                          {/* Chapters Accordion */}
+                          <div className="space-y-6">
+                            {Object.entries(chaptersObj).map(([chapterTitle, chapterBookmarks]) => {
+                              const key = `${subject}|${chapterTitle}`;
+                              // Collapsed by default: expanded only if in state as true
+                              const isExpanded = expandedChapters[key] === true;
+                              return (
+                                <div key={chapterTitle} className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                                  {/* Accordion Header */}
+                                  <div 
+                                    onClick={() => toggleChapterExpand(subject, chapterTitle)}
+                                    className="p-6 flex items-center justify-between cursor-pointer hover:bg-slate-50/50 transition-colors select-none"
+                                  >
+                                    <div className="flex items-center space-x-4 flex-1">
+                                      <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-600 flex items-center justify-center">
+                                        <BookOpen className="w-5 h-5" />
+                                      </div>
+                                      <div>
+                                        <h3 className="font-extrabold text-slate-800 text-lg leading-snug">{chapterTitle}</h3>
+                                        <span className="inline-flex items-center text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full mt-1">
+                                          {chapterBookmarks.length} saved
+                                        </span>
+                                      </div>
+                                    </div>
+                                    
+                                    <div className="flex items-center space-x-3" onClick={(e) => e.stopPropagation()}>
+                                      {/* Practice Chapter Bookmarks Button */}
+                                      <button
+                                        onClick={() => startChapterBookmarkQuiz(subject, chapterTitle, chapterBookmarks)}
+                                        className="p-3 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-xl font-bold transition-all flex items-center justify-center hover:scale-105"
+                                        title={`Practice ${chapterTitle} Bookmarks`}
+                                      >
+                                        <Play className="w-4 h-4 fill-current" />
+                                      </button>
+                                      
+                                      {/* Toggle Chevron */}
+                                      <button
+                                        onClick={() => toggleChapterExpand(subject, chapterTitle)}
+                                        className="p-2 text-slate-400 hover:text-slate-600 transition-colors"
+                                      >
+                                        <ChevronRight className={`w-6 h-6 transform transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
+                                      </button>
+                                    </div>
+                                  </div>
+
+                                  {/* Accordion Content */}
+                                  <AnimatePresence initial={false}>
+                                    {isExpanded && (
+                                      <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                        className="border-t border-slate-50 p-6 bg-slate-50/20"
+                                      >
+                                        <div className="grid grid-cols-1 gap-6">
+                                          {chapterBookmarks.map((bookmark) => (
+                                            <motion.div
+                                              key={bookmark.id}
+                                              className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 relative group"
+                                            >
+                                              <div className="flex justify-between items-start mb-4">
+                                                <div className="flex items-center space-x-3">
+                                                  <span className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full ${
+                                                    bookmark.category === 'mockErrors' ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'
+                                                  }`}>
+                                                    {bookmark.category === 'mockErrors' ? 'Mock Error' : 'Chapter Bank'}
+                                                  </span>
+                                                </div>
+                                                <button
+                                                  onClick={() => bookmark.id && toggleBookmark(bookmark.question)}
+                                                  className="p-2 text-slate-300 hover:text-red-600 transition-colors"
+                                                  title="Remove Bookmark"
+                                                >
+                                                  <Trash2 className="w-5 h-5" />
+                                                </button>
+                                              </div>
+                                              <h4 className="text-lg font-bold text-slate-800 mb-6 leading-relaxed">
+                                                {bookmark.question.question}
+                                              </h4>
+                                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                {Object.entries(bookmark.question.options).map(([key, value]) => (
+                                                  <div
+                                                    key={key}
+                                                    className={`p-4 rounded-xl border-2 flex items-center ${
+                                                      bookmark.question.answer === key
+                                                        ? 'border-green-500 bg-green-50'
+                                                        : 'border-slate-50 bg-slate-50/50'
+                                                    }`}
+                                                  >
+                                                    <span className={`w-8 h-8 flex items-center justify-center rounded-lg mr-4 font-bold ${
+                                                      bookmark.question.answer === key ? 'bg-green-500 text-white' : 'bg-slate-200 text-slate-500'
+                                                    }`}>
+                                                      {key.toUpperCase()}
+                                                    </span>
+                                                    <span className="text-slate-700 font-medium">{value}</span>
+                                                  </div>
+                                                ))}
+                                              </div>
+                                              {bookmark.question.solution && (
+                                                <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                                                  <p className="text-blue-700 text-sm leading-relaxed">
+                                                    <span className="font-bold">Solution:</span> {bookmark.question.solution}
+                                                  </p>
+                                                </div>
+                                              )}
+                                            </motion.div>
+                                          ))}
+                                        </div>
+                                      </motion.div>
+                                    )}
+                                  </AnimatePresence>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })()
+                  )}
                 </div>
               )}
             </motion.div>

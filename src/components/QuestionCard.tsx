@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, Bookmark, BookmarkCheck, Trash2, AlertTriangle } from 'lucide-react';
+import { Check, X, Bookmark, BookmarkCheck, Trash2, AlertTriangle, Clock } from 'lucide-react';
 import { Question } from '../types';
 
 interface QuestionCardProps {
@@ -11,6 +11,7 @@ interface QuestionCardProps {
   onBookmark?: () => void;
   onDelete?: () => void;
   isAdmin?: boolean;
+  timeSpentSeconds?: number;
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({
@@ -22,6 +23,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   onBookmark,
   onDelete,
   isAdmin = false,
+  timeSpentSeconds,
 }) => {
   return (
     <div className="bg-white h-full flex flex-col px-8 py-6">
@@ -38,6 +40,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               'bg-red-100 text-red-700'
             }`}>
               {question.tags.difficulty}
+            </span>
+          )}
+          {timeSpentSeconds !== undefined && (
+            <span className="flex items-center text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
+              <Clock className="w-3.5 h-3.5 mr-1 text-slate-400" />
+              Time Taken: {Math.floor(timeSpentSeconds / 60)}m {timeSpentSeconds % 60}s
             </span>
           )}
         </div>

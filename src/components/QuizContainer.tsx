@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Trophy, Clock, CheckCircle2, AlertCircle, Bookmark, ChevronRight, CornerDownLeft, RotateCcw } from 'lucide-react';
+import { Trophy, Clock, CheckCircle2, AlertCircle, Bookmark, ChevronRight, CornerDownLeft, RotateCcw, Pause, Play, BookOpen } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
 import { QuestionCard } from './QuestionCard';
 
@@ -34,6 +34,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [markedForReview, setMarkedForReview] = useState<Set<number>>(new Set());
   const [isFinished, setIsFinished] = useState(false);
   const [currentTimer, setCurrentTimer] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isReviewMode, setIsReviewMode] = useState(false);
   
   const startTimeRef = useRef<number>(Date.now());
 
@@ -56,19 +58,30 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     });
     
     const interval = setInterval(() => {
-      if (!answers[currentIdx]) {
+      if (!isPaused && !answers[currentIdx]) {
         setCurrentTimer(prev => prev + 1);
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [currentIdx, answers]);
+  }, [currentIdx, answers, isPaused]);
 
   const recordTime = () => {
+    if (isPaused) return;
     const endTime = Date.now();
     const duration = Math.round((endTime - startTimeRef.current) / 1000);
     setTimeSpent(prev => ({ ...prev, [currentIdx]: (prev[currentIdx] || 0) + duration }));
     startTimeRef.current = Date.now(); // reset timer start
+  };
+
+  const handlePauseToggle = () => {
+    if (!isPaused) {
+      recordTime();
+      setIsPaused(true);
+    } else {
+      startTimeRef.current = Date.now();
+      setIsPaused(false);
+    }
   };
 
   const handleAnswer = (answer: 'a' | 'b' | 'c' | 'd') => {
@@ -139,10 +152,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     return correct;
   };
 
-  if (isFinished) {
+  if (isFinished && !isReviewMode) {
     const score = calculateScore();
     const totalTime = (Object.values(timeSpent) as number[]).reduce((acc, t) => acc + t, 0);
-    const percentage = Math.round((score / totalQuestions) * 100);
+    const attemptedQuestions = Object.keys(answers).length;
+    const percentage = attemptedQuestions > 0 
+      ? Math.round((score / attemptedQuestions) * 100) 
+      : 0;
 
     const results: Omit<QuizResult, 'userId' | 'completedAt'> = {
       chapter_title: chapter.chapter_title,
@@ -189,13 +205,22 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
           </div>
 
-          <button
-            onClick={() => onComplete(results)}
-            className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors flex items-center justify-center"
-          >
-            <CornerDownLeft className="w-5 h-5 mr-2" />
-            Back to Dashboard
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button
+              onClick={() => setIsReviewMode(true)}
+              className="flex-1 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center justify-center shadow-lg"
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              Review Questions
+            </button>
+            <button
+              onClick={() => onComplete(results)}
+              className="flex-1 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors flex items-center justify-center shadow-lg"
+            >
+              <CornerDownLeft className="w-5 h-5 mr-2" />
+              Back to Dashboard
+            </button>
+          </div>
         </motion.div>
       </div>
     );
@@ -217,62 +242,138 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       <div className="flex-1 flex flex-col bg-white">
         
         {/* Top Header */}
-        <div className="bg-blue-600 text-white px-6 py-3 flex items-center justify-between shadow-sm z-10">
-          <div className="font-bold text-lg">{chapter.chapter_title}</div>
-          <div className="flex items-center space-x-2 bg-blue-700 px-3 py-1.5 rounded-md text-sm font-mono tracking-wider font-semibold">
-            <Clock className="w-4 h-4 mr-1" />
-            {Math.floor(currentTimer / 60).toString().padStart(2, '0')}:{(currentTimer % 60).toString().padStart(2, '0')}
+        <div className={`${isReviewMode ? 'bg-slate-700' : 'bg-blue-600'} text-white px-6 py-3 flex items-center justify-between shadow-sm z-10`}>
+          <div className="font-bold text-lg">
+            {isReviewMode ? `Review Mode: ${chapter.chapter_title}` : chapter.chapter_title}
           </div>
+          {isReviewMode ? (
+            <button
+              onClick={() => setIsReviewMode(false)}
+              className="bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors flex items-center"
+            >
+              <Trophy className="w-4 h-4 mr-1.5" />
+              Back to Summary
+            </button>
+          ) : (
+            <div className="flex items-center space-x-3">
+              <button
+                onClick={handlePauseToggle}
+                className="flex items-center bg-blue-700 hover:bg-blue-800 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors"
+                title={isPaused ? "Resume Test" : "Pause Test"}
+              >
+                {isPaused ? <Play className="w-3.5 h-3.5 mr-1.5 fill-current" /> : <Pause className="w-3.5 h-3.5 mr-1.5 fill-current" />}
+                <span>{isPaused ? "Resume" : "Pause"}</span>
+              </button>
+              <div className="flex items-center space-x-2 bg-blue-700 px-3 py-1.5 rounded-md text-sm font-mono tracking-wider font-semibold">
+                <Clock className="w-4 h-4 mr-1" />
+                {Math.floor(currentTimer / 60).toString().padStart(2, '0')}:{(currentTimer % 60).toString().padStart(2, '0')}
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* 4 Action Buttons (Moved to Top) */}
+        {/* 4 Action Buttons */}
         <div className="flex items-center justify-center space-x-2 py-3 border-b border-gray-200 bg-white">
-          <button 
-            onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)} 
-            disabled={currentIdx === 0}
-            className={`px-5 py-1.5 rounded text-sm font-medium transition-colors ${
-              currentIdx === 0 ? 'bg-blue-400 text-white/70 cursor-not-allowed' : 'bg-[#3366cc] text-white hover:bg-blue-700'
-            }`}
-          >
-            Previous
-          </button>
-          <button 
-            onClick={handleMarkAndNext} 
-            className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
-          >
-            Mark for Review
-          </button>
-          <button 
-            onClick={handleSaveAndNext} 
-            className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
-          >
-            Save & Next
-          </button>
-          <button 
-            onClick={() => setIsFinished(true)} 
-            className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
-          >
-            Submit Test
-          </button>
+          {isReviewMode ? (
+            <>
+              <button 
+                onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)} 
+                disabled={currentIdx === 0}
+                className={`px-5 py-1.5 rounded text-sm font-medium transition-colors ${
+                  currentIdx === 0 ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-slate-700 text-white hover:bg-slate-800'
+                }`}
+              >
+                Previous
+              </button>
+              <button 
+                onClick={() => currentIdx < totalQuestions - 1 && setCurrentIdx(currentIdx + 1)} 
+                disabled={currentIdx === totalQuestions - 1}
+                className={`px-5 py-1.5 rounded text-sm font-medium transition-colors ${
+                  currentIdx === totalQuestions - 1 ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-slate-700 text-white hover:bg-slate-800'
+                }`}
+              >
+                Next
+              </button>
+              <button 
+                onClick={() => setIsReviewMode(false)} 
+                className="px-5 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Back to Summary
+              </button>
+            </>
+          ) : (
+            <>
+              <button 
+                onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)} 
+                disabled={currentIdx === 0}
+                className={`px-5 py-1.5 rounded text-sm font-medium transition-colors ${
+                  currentIdx === 0 ? 'bg-blue-400 text-white/70 cursor-not-allowed' : 'bg-[#3366cc] text-white hover:bg-blue-700'
+                }`}
+              >
+                Previous
+              </button>
+              <button 
+                onClick={handleMarkAndNext} 
+                className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Mark for Review
+              </button>
+              <button 
+                onClick={handleSaveAndNext} 
+                className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Save & Next
+              </button>
+              <button 
+                onClick={() => {
+                  recordTime();
+                  setIsFinished(true);
+                }} 
+                className="px-5 py-1.5 bg-[#3366cc] text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Submit Test
+              </button>
+            </>
+          )}
         </div>
 
         {/* Scrollable Question Content */}
         <div className="flex-1 overflow-hidden relative">
-          <AnimatePresence mode="wait">
-            {currentQuestion && (
-              <QuestionCard
-                key={currentQuestion.q_num}
-                question={currentQuestion}
-                onAnswer={handleAnswer}
-                selectedAnswer={answers[currentIdx] || null}
-                showSolution={isShowSolution}
-                isBookmarked={bookmarkedIds.has(currentQuestion.q_num)}
-                onBookmark={() => onBookmarkToggle?.(currentQuestion)}
-                isAdmin={isAdmin}
-                onDelete={() => onDeleteQuestion?.(currentQuestion)}
-              />
-            )}
-          </AnimatePresence>
+          {isPaused ? (
+            <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-md z-30 flex flex-col items-center justify-center p-8 text-center text-white">
+              <div className="w-20 h-20 bg-blue-600/90 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 animate-pulse">
+                <Pause className="w-10 h-10" />
+              </div>
+              <h3 className="text-3xl font-black mb-2">Test Paused</h3>
+              <p className="text-slate-200 max-w-sm mb-8 text-base">
+                Your quiz is paused. The timer has been suspended. Click below to resume when you are ready.
+              </p>
+              <button
+                onClick={handlePauseToggle}
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center text-lg hover:scale-105 active:scale-95"
+              >
+                <Play className="w-5 h-5 mr-2 fill-current" />
+                Resume Practice
+              </button>
+            </div>
+          ) : (
+            <AnimatePresence mode="wait">
+              {currentQuestion && (
+                <QuestionCard
+                  key={currentQuestion.q_num}
+                  question={currentQuestion}
+                  onAnswer={isReviewMode ? () => {} : handleAnswer}
+                  selectedAnswer={answers[currentIdx] || null}
+                  showSolution={isReviewMode ? true : isShowSolution}
+                  isBookmarked={bookmarkedIds.has(currentQuestion.q_num)}
+                  onBookmark={() => onBookmarkToggle?.(currentQuestion)}
+                  isAdmin={isAdmin}
+                  onDelete={() => onDeleteQuestion?.(currentQuestion)}
+                  timeSpentSeconds={isReviewMode ? (timeSpent[currentIdx] || 0) : undefined}
+                />
+              )}
+            </AnimatePresence>
+          )}
         </div>
 
       </div>
