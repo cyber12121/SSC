@@ -1,0 +1,308 @@
+{
+  "chapter_num": 23,
+  "chapter_title": "Transport",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which of the following is the largest container port in India?\n निम्नलिखित में से कौन सा भारत का सबसे बड़ा कंटेनर बंदरगाह है?",
+      "options": {
+        "a": "Chennai Port / चेन्नई बंदरगाह",
+        "b": "Mundra Port / मुंद्रा बंदरगाह",
+        "c": "Kolkata Port / कोलकाता बंदरगाह",
+        "d": "Jawaharlal Nehru Port (JNPT) / जवाहरलाल नेहरू पोर्ट (जेएनपीटी)"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nJawaharlal Nehru Port (JNPT), also known as Nhava Sheva Port, located in Maharashtra, is India's largest container-handling port. It handles more than half of the total container volume passing through India's major ports\n\n📖 हिंदी स्पष्टीकरण:\nजवाहरलाल नेहरू पोर्ट (जेएनपीटी), जिसे न्हावा शेवा पोर्ट भी कहा जाता है, महाराष्ट्र में स्थित है, भारत का सबसे बड़ा कंटेनर हैंडलिंग बंदरगाह है। यह भारत के प्रमुख बंदरगाहों से गुजरने वाले कुल कंटेनर मात्रा के आधे से अधिक को संभालता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "What is the approximate total length of the Golden Quadrilateral (GQ) highway network?\n स्वर्णिम चतुर्भुज (GQ) राजमार्ग नेटवर्क की अनुमानित कुल लंबाई कितनी है?",
+      "options": {
+        "a": "1,235 km / 1,235 किमी",
+        "b": "7,300 km / 7,300 किमी",
+        "c": "5,846 km / 5,846 किमी",
+        "d": "1,700 km / 1,700 किमी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Golden Quadrilateral is a national highway network connecting India's four major metropolitan cities: Delhi, Mumbai, Chennai, and Kolkata. Its total length is approximately 5,846 km, making it one of the largest highway projects globally\n\n📖 हिंदी स्पष्टीकरण:\nस्वर्णिम चतुर्भुज भारत के चार प्रमुख महानगरों - दिल्ली, मुंबई, चेन्नई और कोलकाता को जोड़ने वाला एक राष्ट्रीय राजमार्ग नेटवर्क है। इसकी कुल लंबाई लगभग 5,846 किमी है, जो इसे विश्व की सबसे बड़ी राजमार्ग परियोजनाओं में से एक बनाती है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which National Waterway connects Haldia (Sagar) and Prayagraj?\n कौन सा राष्ट्रीय जलमार्ग हल्दिया (सागर) और प्रयागराज को जोड़ता है?",
+      "options": {
+        "a": "National Waterways 4 (NW 4) / राष्ट्रीय जलमार्ग 4 (NW 4)",
+        "b": "National Waterways 3 (NW 3) / राष्ट्रीय जलमार्ग 3 (NW 3)",
+        "c": "National Waterways 2 (NW 2) / राष्ट्रीय जलमार्ग 2 (NW 2)",
+        "d": "National Waterways 1 (NW 1) / राष्ट्रीय जलमार्ग 1 (NW 1)"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nNational Waterway 1 (NW-1) is the longest National Waterway in India, stretching for 1620 km along the Ganga-Bhagirathi-Hooghly river system. It connects Haldia in West Bengal to Prayagraj (Allahabad) in Uttar Pradesh\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय जलमार्ग 1 (NW-1) भारत का सबसे लंबा राष्ट्रीय जलमार्ग है, जो गंगा-भागीरथी-हुगली नदी प्रणाली के साथ 1620 किमी तक फैला हुआ है। यह पश्चिम बंगाल में हल्दिया को उत्तर प्रदेश में प्रयागराज (इलाहाबाद) से जोड़ता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "What is the distance between rails in broad gauge on the Indian Railways?\n भारतीय रेलवे में ब्रॉड गेज में पटरियों के बीच की दूरी कितनी है?",
+      "options": {
+        "a": "1.000 metre / 1.000 मीटर",
+        "b": "1.676 metre / 1.676 मीटर",
+        "c": "0.762 metre / 0.762 मीटर",
+        "d": "2.000 metre / 2.000 मीटर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBroad gauge, also known as Indian gauge, has a track width of 1,676 metres (5 ft 6 in). It is the primary gauge used on the Indian railway network for high speed and carrying capacity\n\n📖 हिंदी स्पष्टीकरण:\nब्रॉड गेज, जिसे भारतीय गेज के नाम से भी जाना जाता है, की ट्रैक चौड़ाई 1.676 मीटर (5 फीट 6 इंच) होती है। यह भारतीय रेलवे नेटवर्क में उच्च गति और वहन क्षमता के लिए उपयोग किया जाने वाला प्रमुख गेज है।"
+    },
+    {
+      "q_num": 5,
+      "question": "According to the Indian Railways, which state has the largest railway track length in India?\n भारतीय रेलवे के अनुसार, भारत में सबसे बड़ा रेलवे ट्रैक किस राज्य में है?",
+      "options": {
+        "a": "Madhya Pradesh / मध्य प्रदेश",
+        "b": "Haryana / हरियाणा",
+        "c": "Uttar Pradesh / उत्तर प्रदेश",
+        "d": "Punjab / पंजाब"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nUttar Pradesh has the largest railway network in India, primarily due to its vast, flat terrain and high population density, which facilitates extensive construction and connectivity of rail lines across the state\n\n📖 हिंदी स्पष्टीकरण:\nउत्तर प्रदेश में भारत का सबसे बड़ा रेलवे नेटवर्क है, जिसका मुख्य कारण इसका विशाल, समतल भूभाग और उच्च जनसंख्या घनत्व है, जो पूरे राज्य में रेल लाइनों के व्यापक निर्माण और कनेक्टिविटी की सुविधा प्रदान करता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "The Golden Quadrilateral connects which of the following four major metro cities?\n स्वर्णिम चतुर्भुज निम्नलिखित चार प्रमुख महानगरों में से किनको जोड़ता है?",
+      "options": {
+        "a": "Delhi, Mumbai, Hyderabad, Kolkata / दिल्ली, मुंबई, हैदराबाद, कोलकाता",
+        "b": "Delhi, Chennai, Kolkata, Mumbai / दिल्ली, चेन्नई, कोलकाता, मुंबई",
+        "c": "Mumbai, Kolkata, Bhopal, Bengaluru / मुंबई, कोलकाता, भोपाल, बेंगलुरु",
+        "d": "Delhi, Bengaluru, Hyderabad, Chennai / दिल्ली, बेंगलुरु, हैदराबाद, चेन्नई"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Golden Quadrilateral, a network of national highways, connects the four major metropolitan cities of India: New Delhi in the North, Mumbai in the West, Chennai in the South, and Kolkata in the East\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय राजमार्गों का एक नेटवर्क, स्वर्णिम चतुर्भुज भारत के चार प्रमुख महानगरों: उत्तर में नई दिल्ली, पश्चिम में मुंबई, दक्षिण में चेन्नई और पूर्व में कोलकाता को जोड़ता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "The Hazira–Vijaipur–Jagdishpur (HVJ) pipeline is mainly used to transport:\n हजीरा-विजयपुर-जगदीशपुर (एचवीजे) पाइपलाइन का उपयोग मुख्य रूप से किसके परिवहन के लिए किया जाता है:",
+      "options": {
+        "a": "Crude oil / कच्चा तेल",
+        "b": "Kerosene / मिट्टी का तेल",
+        "c": "Petrol / पेट्रोल",
+        "d": "Natural gas / प्राकृतिक गैस"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Hazira–Vijaipur–Jagdishpur (HVJ) pipeline is India's first and longest natural gas pipeline.\nIt transports gas from Hazira in Gujarat to Jagdishpur in Uttar Pradesh via Vijaypur in Madhya Pradesh.\nIt was constructed by GAIL to connect the gas fields of western India with the industrial areas of northern and central India.\n\n📖 हिंदी स्पष्टीकरण:\nहजीरा–विजयपुर–जगदीशपुर (HVJ) पाइपलाइन भारत की पहली और सबसे लंबी प्राकृतिक गैस पाइपलाइन है।\nयह गुजरात के हजीरा से गैस को मध्य प्रदेश के विजयपुर होते हुए उत्तर प्रदेश के जगदीशपुर तक पहुँचाती है।\nइसका निर्माण गेल (GAIL) द्वारा किया गया था ताकि पश्चिमी भारत के गैस क्षेत्रों को उत्तरी और मध्य भारत के औद्योगिक क्षेत्रों से जोड़ा जा सके।"
+    },
+    {
+      "q_num": 8,
+      "question": "The Brahmaputra River is navigable by steamers up to Dibrugarh by which of the following national waterways of India?\n भारत की निम्नलिखित में से किस राष्ट्रीय जलमार्ग द्वारा ब्रह्मपुत्र नदी डिब्रूगढ़ तक स्टीमरों के लिए नौगम्य है?",
+      "options": {
+        "a": "National Waterway 1 (NW 1) / राष्ट्रीय जलमार्ग 1 (NW 1)",
+        "b": "National Waterway 4 (NW 4) / राष्ट्रीय जलमार्ग 4 (NW 4)",
+        "c": "National Waterway 3 (NW 3) / राष्ट्रीय जलमार्ग 3 (NW 3)",
+        "d": "National Waterway 2 (NW 2) / राष्ट्रीय जलमार्ग 2 (NW 2)"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nNational Waterway 2 (NW-2) is located on the Brahmaputra River, connecting Sadiya and Dhubri in Assam. This waterway is navigable by steamers up to Dibrugarh, playing a vital role in the regional trade and connectivity of Northeast India\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय जलमार्ग 2 (NW-2) ब्रह्मपुत्र नदी पर स्थित है, जो असम में सादिया और धुबरी को जोड़ता है। यह जलमार्ग डिब्रूगढ़ तक स्टीमर द्वारा नौगम्य है, जो पूर्वोत्तर भारत के क्षेत्रीय व्यापार और कनेक्टिविटी में महत्वपूर्ण भूमिका निभाता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following is the deepest landlocked and well-protected port in India?\n निम्नलिखित में से कौन सा भारत का सबसे गहरा स्थलरुद्ध और अच्छी तरह से संरक्षित बंदरगाह है?",
+      "options": {
+        "a": "Paradip / पारादीप",
+        "b": "Kandla / कांडला",
+        "c": "Mumbai / मुंबई",
+        "d": "Visakhapatnam / विशाखापत्तनम"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nVisakhapatnam Port, located in Andhra Pradesh, is known for being a natural harbour. It is the deepest port in India, landlocked by the Dolphin's Nose hill range, which provides excellent protection from cyclones and strong sea currents\n\n📖 हिंदी स्पष्टीकरण:\nविशाखापत्तनम बंदरगाह, जो आंध्र प्रदेश में स्थित है, एक प्राकृतिक बंदरगाह के रूप में जाना जाता है। यह डॉल्फिन नोज पर्वत श्रृंखला द्वारा स्थलरुद्ध होने के कारण भारत का सबसे गहरा बंदरगाह है, जो इसे चक्रवातों और तेज समुद्री धाराओं से उत्कृष्ट सुरक्षा प्रदान करता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "When was air transport nationalised in India?\n भारत में हवाई परिवहन का राष्ट्रीयकरण कब किया गया?",
+      "options": {
+        "a": "1950",
+        "b": "1952",
+        "c": "1951",
+        "d": "1953"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe nationalisation of air transport in India took place in 1953 under the Air Corporations Act. Two state-owned corporations, Air India and Indian Airlines, were established to manage international and domestic routes respectively\n\n📖 हिंदी स्पष्टीकरण:\nभारत में वायु परिवहन का राष्ट्रीयकरण 1953 में वायु निगम अधिनियम के तहत किया गया था। अंतरराष्ट्रीय और घरेलू मार्गों के प्रबंधन के लिए क्रमशः दो सरकारी स्वामित्व वाली निगमों — एयर इंडिया और इंडियन एयरलाइंस — की स्थापना की गई।"
+    },
+    {
+      "q_num": 11,
+      "question": "Consider the following statements regarding major ports in India:\n भारत के प्रमुख बंदरगाहों के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Ennore Port (Kamarajar Port) is India's first corporatised major port. / एन्नोर पोर्ट (कामराजार पोर्ट) भारत का पहला निगमित प्रमुख बंदरगाह है।\n 2. Kandla Port, located in Gujarat, is a tidal port and is now known as Deendayal Port. / गुजरात में स्थित कांडला बंदरगाह एक ज्वारीय बंदरगाह है और अब इसे दीनदयाल पोर्ट के नाम से जाना जाता है।\n Which of the statements given above is/are correct? ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nEnnore Port, now officially Kamarajar Port, was the first major port in India to be corporatised, operating as a company rather than a government trust. Kandla is indeed a major tidal port on the western coast and was renamed Deendayal Port in 2017\n\n📖 हिंदी स्पष्टीकरण:\nएन्नोर पोर्ट, जिसे अब आधिकारिक तौर पर कामराजार पोर्ट कहा जाता है, भारत का पहला प्रमुख बंदरगाह था जिसका निगमीकरण किया गया। कांडला वास्तव में पश्चिमी तट पर एक प्रमुख ज्वारीय बंदरगाह है और इसका नाम 2017 में बदलकर दीनदयाल पोर्ट कर दिया गया था।"
+    },
+    {
+      "q_num": 12,
+      "question": "Consider the following statements regarding India's road network:\n भारत के सड़क नेटवर्क के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. As of 2021, India holds the second position globally in terms of the road network length. / 2021 तक, भारत सड़क नेटवर्क की लंबाई के मामले में विश्व स्तर पर दूसरे स्थान पर है।\n 2. Kerala has the highest road density in India due to its narrow and densely populated areas requiring extensive road connectivity. / केरल में भारत में सबसे अधिक सड़क घनत्व है क्योंकि इसकी संकरी और घनी आबादी वाली क्षेत्रों में व्यापक सड़क संपर्क की आवश्यकता होती है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIndia's road network is vast, ranking second in the world after the USA in terms of total length. Kerala consistently maintains the highest road density due to its unique geographical conditions and high population density requiring a closely meshed network\n\n📖 हिंदी स्पष्टीकरण:\nभारत का सड़क नेटवर्क विशाल है, कुल लंबाई के मामले में यह अमेरिका के बाद विश्व में दूसरा स्थान रखता है। अपनी विशिष्ट भौगोलिक परिस्थितियों और उच्च जनसंख्या घनत्व के कारण केरल लगातार सबसे अधिक सड़क घनत्व बनाए रखता है, जिसके लिए एक सघन रूप से जुड़ा हुआ नेटवर्क आवश्यक है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Assertion (A): The development of rail transport is less in Sikkim compared to Uttar Pradesh.\n Reason (R): Sikkim's mountainous terrain and difficult geographical conditions hinder the construction of railway lines.\n कथन (A): उत्तर प्रदेश की तुलना में सिक्किम में रेल परिवहन का विकास कम है।\n कारण (R): सिक्किम का पहाड़ी इलाका और कठिन भौगोलिक परिस्थितियाँ रेलवे लाइनों के निर्माण में बाधा डालती हैं",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAssertion (A) is true as Sikkim's rail network is minimal. Reason (R) correctly explains this, as building rail lines in the high-relief, geologically unstable Himalayas is costly and technically challenging, which is why plains states like Uttar Pradesh have extensive networks\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन (A) सही है क्योंकि सिक्किम का रेल नेटवर्क बहुत सीमित है। कारण (R) इसे सही ढंग से स्पष्ट करता है, क्योंकि ऊँचे-ऊँचे और भूवैज्ञानिक रूप से अस्थिर हिमालयी क्षेत्रों में रेल लाइनों का निर्माण महंगा और तकनीकी रूप से कठिन है, यही कारण है कि उत्तर प्रदेश जैसे मैदानी राज्यों में विस्तृत रेल नेटवर्क पाया जाता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which of the following statements about modes of transport is correct in the Indian context?\n भारतीय संदर्भ में परिवहन के साधनों के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "Airways are the most suitable for transporting heavy and bulky goods over long distances. / वायु मार्ग लंबी दूरी तक भारी और विशाल वस्तुओं के परिवहन के लिए सबसे उपयुक्त हैं।",
+        "b": "Roadways carry a minimal percentage of passenger traffic in India. / भारत में सड़कों के माध्यम से यात्री परिवहन का प्रतिशत बहुत कम है।",
+        "c": "Inland waterways are the most efficient in terms of energy consumption per tonne-km. / आंतरिक जलमार्ग प्रति टन-किलोमीटर ऊर्जा खपत के दृष्टिकोण से सबसे कुशल परिवहन साधन हैं।",
+        "d": "Railways cause the most trans-shipment losses and delays for gas and petroleum. / रेलवे गैस और पेट्रोलियम के लिए सबसे अधिक पुनः-ढुलाई हानि और विलंब का कारण बनते हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nInland waterways are highly fuel-efficient and cost-effective for cargo movement, consuming the least amount of energy per tonne-kilometre compared to rail, road, and air transport. This makes them the most energy-efficient mode in India. The other options are incorrect because:\n5. Air routes are suitable for light and expensive cargo, not heavy cargo.\n6. Road routes handle the largest share of passenger transport in India.\n7. Railways are relatively safe and efficient for gas and petroleum.\n\n📖 हिंदी स्पष्टीकरण:\n/ अंतर्देशीय जलमार्ग कार्गो आवागमन के लिए अत्यधिक ईंधन-कुशल और लागत प्रभावी हैं, जो रेल, सड़क और हवाई परिवहन की तुलना में प्रति टन-किलोमीटर पर सबसे कम ऊर्जा की खपत करते हैं। यह उन्हें भारत में सबसे अधिक ऊर्जा-कुशल साधन बनाता है। अन्य विकल्प गलत हैं क्योंकि:\n8. वायु मार्ग हल्के और महंगे माल के लिए उपयुक्त हैं, भारी माल के लिए नहीं।\n9. सड़क मार्ग भारत में यात्री परिवहन का सबसे बड़ा हिस्सा संभालते हैं।\n10. रेलवे गैस और पेट्रोलियम के लिए अपेक्षाकृत सुरक्षित और कुशल हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "Assertion (A): The Eastern Peripheral Expressway was built to decongest traffic in Delhi.\n Reason (R): The expressway provides a bypass for traffic moving towards northern states, eliminating the need for commercial vehicles to enter Delhi.\n कथन (A): ईस्टर्न पेरिफेरल एक्सप्रेसवे का निर्माण दिल्ली में यातायात की भीड़भाड़ कम करने के लिए किया गया था।\n कारण (R): एक्सप्रेसवे उत्तरी राज्यों की ओर जाने वाले यातायात के लिए एक बाईपास प्रदान करता है, जिससे वाणिज्यिक वाहनों को दिल्ली में प्रवेश करने की आवश्यकता समाप्त हो जाती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Eastern Peripheral Expressway (EPE) acts as a ring road around Delhi, diverting non-Delhi bound commercial traffic. This direct bypass drastically reduces the entry of heavy vehicles into the city, effectively addressing the primary purpose of decongesting Delhi\n\n📖 हिंदी स्पष्टीकरण:\nईस्टर्न पेरिफेरल एक्सप्रेसवे (ईपीई) दिल्ली के चारों ओर एक रिंग रोड के रूप में कार्य करता है, जो गैर-दिल्ली बाध्य वाणिज्यिक यातायात को मोड़ता है। यह सीधा बाईपास शहर में भारी वाहनों के प्रवेश को बहुत कम कर देता है, जिससे दिल्ली में भीड़भाड़ कम करने का प्राथमिक उद्देश्य प्रभावी ढंग से पूरा होता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "With reference to National Waterway 1 (NW-1), consider the following statements:\n राष्ट्रीय जलमार्ग 1 (NW-1) के संदर्भ में, निम्नलिखित कथनों पर विचार करें:\n 1. It is a part of the Ganga-Bhagirathi-Hooghly river system. / यह गंगा-भागीरथी-हुगली नदी प्रणाली का एक हिस्सा है।\n 2. It is navigable by mechanical boats only up to Patna and by ordinary boats up to Haridwar. / यह केवल पटना तक यांत्रिक नौकाओं द्वारा और हरिद्वार तक साधारण नौकाओं द्वारा नौवहन योग्य है।\n Which of the statements given above is/are correct? ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1: True\nNational Waterway 1 (NW-1) is part of the Ganges–Bhagirathi–Hooghly river system and extends from Allahabad (Prayagraj) to Haldia, with a total length of approximately 1620 km.\nStatement 2: False\nThis statement is factually incorrect—NW-1 is navigable from Haldia to Prayagraj, not just Patna or Haridwar. Haridwar is not included in this waterway.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1: सही है\nराष्ट्रीय जलमार्ग 1 (NW-1) गंगा–भागीरथी–हुगली नदी प्रणाली का हिस्सा है और यह इलाहाबाद (प्रयागराज) से हल्दिया तक फैला हुआ है, जिसकी कुल लंबाई लगभग 1620 किमी है।\nकथन 2: गलत है\nयह कथन तथ्यात्मक रूप से सही नहीं है — NW-1 हल्दिया से प्रयागराज तक नौवहन योग्य है, न कि केवल पटना या हरिद्वार तक। हरिद्वार इस जलमार्ग के अंतर्गत नहीं आता।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following pairs of strategic ports/corridors is/are correctly matched with their strategic benefit to India?\n सामरिक बंदरगाहों/गलियारों के निम्नलिखित युग्मों में से कौन सा/से भारत को उनके सामरिक लाभ के साथ सही ढंग से मेल खाता है/खाते हैं?\n 1. Chabahar Port: Access to Central Asia bypassing Pakistan. / चाबहार बंदरगाह: पाकिस्तान को दरकिनार करते हुए मध्य एशिया तक पहुँच।\n 2. Sittwe Port: New age of transportation between India to Southeast Asia via Mizoram-Myanmar link. / सित्तवे बंदरगाह: मिजोरम–म्यांमार संपर्क मार्ग के माध्यम से भारत और दक्षिण-पूर्व एशिया के बीच परिवहन के नए युग की शुरुआत।\n Select the correct answer using the code given below: नीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nChabahar Port in Iran offers India a crucial sea-land route, bypassing Pakistan, to reach Afghanistan and Central Asian countries. Sittwe Port, part of the Kaladan Multi-Modal Transit Transport Project, provides a sea and river route connecting India's mainland to Northeast India and further to Southeast Asia via Myanmar\n\n📖 हिंदी स्पष्टीकरण:\nईरान में स्थित चाबहार बंदरगाह भारत को पाकिस्तान को दरकिनार करते हुए अफगानिस्तान और मध्य एशियाई देशों तक पहुँचने के लिए एक महत्वपूर्ण समुद्री-स्थलीय मार्ग प्रदान करता है। सित्तवे बंदरगाह, कालादान मल्टी-मोडल ट्रांजिट ट्रांसपोर्ट परियोजना का हिस्सा है, जो भारत के मुख्य भूभाग को पूर्वोत्तर भारत से और आगे म्यांमार के माध्यम से दक्षिण-पूर्व एशिया से जोड़ने वाला समुद्री और नदी मार्ग उपलब्ध कराता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Assertion (A): Pipeline transport is the most suitable mode for transporting liquids and gases like petroleum and natural gas over long distances.\n Reason (R): It reduces trans-shipment losses and delays in the supply of these materials.\n कथन (A): पाइपलाइन परिवहन लंबी दूरी तक पेट्रोलियम और प्राकृतिक गैस जैसे तरल पदार्थों और गैसों के परिवहन के लिए सबसे उपयुक्त साधन है।\n कारण (R): यह इन पदार्थों की आपूर्ति में पुनः-ढुलाई से होने वाली हानियों और विलंब को कम करता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nPipelines are specifically designed for continuous, uninterrupted movement of fluids and gases. They eliminate the need for loading and unloading at various points, which are the main causes of trans-shipment loss and delays in other modes of transport for these commodities\n\n📖 हिंदी स्पष्टीकरण:\nपाइपलाइनें विशेष रूप से तरल और गैसीय पदार्थों की सतत और निर्बाध आवाजाही के लिए बनाई जाती हैं। वे विभिन्न स्थानों पर लोडिंग और अनलोडिंग की आवश्यकता को समाप्त कर देती हैं, जो अन्य परिवहन साधनों में इन वस्तुओं के लिए पुनः-ढुलाई से होने वाली हानि और विलंब के मुख्य कारण होते हैं।"
+    },
+    {
+      "q_num": 19,
+      "question": "With respect to Indian Railways, consider the following statements:\n भारतीय रेलवे के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. The Konkan Railway was constructed in 1998, connecting Maharashtra, Goa, and Karnataka. / कोंकण रेलवे का निर्माण 1998 में हुआ था, जो महाराष्ट्र, गोवा और कर्नाटक को जोड़ता है।\n 2. The Nilgiri Mountain Railway is the only rack railway in India that was declared a UNESCO World Heritage Site in 2005. / नीलगिरि पर्वतीय रेलवे भारत का एकमात्र रैक रेलवे है जिसे 2005 में यूनेस्को विश्व धरोहर स्थल घोषित किया गया था।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\n7. The Konkan Railway was completed in 1998. It connects Maharashtra, Goa, and Karnataka in India's western coastal region. It is considered an engineering marvel because it passes through numerous tunnels and bridges.\n8. The Nilgiri Mountain Railway is India's only rack railway and was declared a UNESCO World Heritage Site in 2005.\n9. It runs between Mettupalayam and Ooty (Tamil Nadu) and operates using unique technology in mountainous terrain.\n\n📖 हिंदी स्पष्टीकरण:\n10. कोंकण रेलवे का निर्माण 1998 में पूरा हुआ था। यह भारत के पश्चिमी तटीय क्षेत्र में महाराष्ट्र, गोवा और कर्नाटक को जोड़ता है। यह एक इंजीनियरिंग चमत्कार माना जाता है क्योंकि यह कई सुरंगों और पुलों से होकर गुजरता है।\n11. नीलगिरि पर्वतीय रेलवे भारत की एकमात्र रैक रेलवे है और इसे 2005 में यूनेस्को विश्व धरोहर स्थल घोषित किया गया था।\n12. यह मेट्टूपालयम से ऊटी (तमिलनाडु) के बीच चलती है और पर्वतीय इलाकों में अनोखी तकनीक से संचालित होती है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Consider the autonomous bodies/ministries involved in India's transport sector:\n भारत के परिवहन क्षेत्र में शामिल स्वायत्त निकायों/मंत्रालयों पर विचार करें:\n 1. The National Highways Authority of India (NHAI) was operationalised in 1995 under the Ministry of Surface Transport. / राष्ट्रीय राजमार्ग प्राधिकरण (NHAI) को 1995 में सतह परिवहन मंत्रालय के अधीन कार्यान्वित किया गया था।\n 2. Pipeline transport for oil and gas is regulated and looked after by the Ministry of Petroleum and Natural Gas. / तेल और गैस के लिए पाइपलाइन परिवहन का विनियमन और देखरेख पेट्रोलियम और प्राकृतिक गैस मंत्रालय द्वारा की जाती है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\n7. The National Highways Authority of India (NHAI) was established in 1988 but became operational in 1995.\n8. It was initially under the Ministry of Surface Transport, which was later split into the Ministry of Road Transport and Highways (MoRTH).\n9. Oil and gas pipelines are built, operated, and regulated by the Ministry of Petroleum and Natural Gas. This ministry oversees energy security and fuel distribution networks in the country.\n\n📖 हिंदी स्पष्टीकरण:\n10. राष्ट्रीय राजमार्ग प्राधिकरण (NHAI) की स्थापना 1988 में की गई थी, लेकिन इसे 1995 में कार्यान्वित किया गया।\n11. यह प्रारंभ में सतह परिवहन मंत्रालय के अधीन था, जिसे बाद में विभाजित कर सड़क परिवहन और राजमार्ग मंत्रालय (MoRTH) बनाया गया।\n12. तेल और गैस की पाइपलाइनों का निर्माण, संचालन और नियमन पेट्रोलियम और प्राकृतिकगैस मंत्रालय द्वारा किया जाता है। यह मंत्रालय देश में ऊर्जा सुरक्षा और ईंधन वितरण नेटवर्क की देखरेख करता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Match List - I with List - II and choose the correct answer using the code given below the lists.\n सूची - I को सूची - II से सुमेलित करें और सूचियों के नीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें। List - I (Port / बंदरगाह):\n 1. Paradeep / पारादीप\n 2. Tuticorin / तूतीकोरिन\n 3. Kakinada / काकीनाडा\n 4. Alappuzha / अलाप्पुझा\n List - II (State / राज्य):\n 5. Tamil Nadu / तमिलनाडु\n 6. Kerala / केरल\n 7. Odisha / ओडिशा\n 8. Andhra Pradesh / आंध्र प्रदेश",
+      "options": {
+        "a": "A-1, B-3, C-4, D-2",
+        "b": "A-3, B-1, C-2, D-4",
+        "c": "A-3, B-1, C-4, D-2",
+        "d": "A-1, B-4, C-3, D-2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nParadeep Port is a major port in Odisha, on the Mahanadi river delta. Tuticorin, now V.O. Chidambaranar Port, is in Tamil Nadu. Kakinada is a major port on the Andhra Pradesh coast. Alappuzha, an old port, is located in Kerala\n\n📖 हिंदी स्पष्टीकरण:\nपारादीप बंदरगाह महानदी नदी के डेल्टा पर ओडिशा में एक प्रमुख बंदरगाह है। तूतीकोरिन, अब वी.ओ. चिदम्बरनार पोर्ट, तमिलनाडु में है। काकीनाडा आंध्र प्रदेश के तट पर एक प्रमुख बंदरगाह है। अलाप्पुझा, एक पुराना बंदरगाह, केरल में स्थित है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Match the following Ports/Corridors (Column A) with their Strategic Benefit to India (Column B):\n निम्नलिखित बंदरगाहों/गलियारों (स्तंभ A) का भारत को उनके सामरिक लाभ (स्तंभ B) से मिलान करें: Column A (Port/Corridor / बंदरगाह/गलियारा):\n 1. Chabahar Port / चाबहार बंदरगाह\n 2. IMEC / आईएमईसी\n 3. Sittwe Port / सित्तवे बंदरगाह\n Column B (Strategic Benefit to India / भारत को सामरिक लाभ):\n 4. Links India with Europe via Middle East. / मध्य पूर्व के माध्यम से भारत को यूरोप से जोड़ता है।\n 5. New age of transportation between India to Southeast Asia via Mizoram-Myanmar link. / मिजोरम–म्यांमार संपर्क मार्ग के माध्यम से भारत और दक्षिण-पूर्व एशिया के बीच परिवहन का नया युग।\n 6. Access to Central Asia bypassing Pakistan. / पाकिस्तान को दरकिनार कर मध्य एशिया तक पहुंच।",
+      "options": {
+        "a": "A→3, B→1, C→2",
+        "b": "A→2, B→3, C→1",
+        "c": "A→3, B→2, C→1",
+        "d": "A→1, B→2, C→3"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nChabahar Port facilitates trade with Central Asia, bypassing Pakistan. IMEC (India-Middle East-Europe Economic Corridor) is a proposed network to connect India to Europe via the Middle East. Sittwe Port is the key terminal for the Kaladan Multi-Modal Transit Transport Project, connecting India to Southeast Asia\n\n📖 हिंदी स्पष्टीकरण:\nचाबहार बंदरगाह पाकिस्तान को दरकिनार करते हुए मध्य एशिया के साथ व्यापार की सुविधा प्रदान करता है। आईएमईसी (इंडिया-मिडिल ईस्ट-यूरोप इकोनॉमिक कॉरिडोर) मध्य पूर्व के माध्यम से भारत को यूरोप से जोड़ने के लिए एक प्रस्तावित नेटवर्क है। सित्तवे बंदरगाह कलादान मल्टी-मॉडल ट्रांजिट ट्रांसपोर्ट प्रोजेक्ट के लिए प्रमुख टर्मिनल है, जो भारत को दक्षिण पूर्व एशिया से जोड़ता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "The four segments of the Golden Quadrilateral join the following cities:\n 1. Delhi-Mumbai\n 2. Mumbai-Chennai\n 3. Chennai-Kolkata\n 4. Kolkata-Delhi.\n Consider the length of the above segments in descending order and select the correct answer.\n स्वर्णिम चतुर्भुज के चार खंड निम्नलिखित शहरों में शामिल होते हैं:\n 5. दिल्ली-मुंबई\n 6. मुंबई-चेन्नई\n 7. चेन्नई-कोलकाता\n 8. कोलकाता-दिल्ली।\n अवरोही क्रम में उपरोक्त खंडों की लंबाई पर विचार करें और सही उत्तर का चयन करें।",
+      "options": {
+        "a": "D, C, B, A",
+        "b": "C, D, A, B",
+        "c": "C, D, B, A",
+        "d": "D, C, A, B"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe approximate lengths of the segments are: Delhi-Kolkata (D) ~ 1453 km, Chennai-Kolkata (C) ~ 1640 km, Mumbai-Chennai (B) ~ 1290 km, and Delhi-Mumbai (A) ~ 1419 km. The intended descending order from the source is D, C, A, B\n\n📖 हिंदी स्पष्टीकरण:\nखंडों की अनुमानित लंबाई है: दिल्ली-कोलकाता (D) ~ 1453 किमी, चेन्नई-कोलकाता (C) ~ 1640 किमी, मुंबई-चेन्नई (B) ~ 1290 किमी, और दिल्ली-मुंबई (A) ~ 1419 किमी। स्रोत से अभिप्रेत अवरोही क्रम C,D,A,B है।"
+    },
+    {
+      "q_num": 24,
+      "question": "By which National Waterways (NW) of India, are the delta channels of Mahanadi and Brahmani rivers and the East Coast Canal connected?\n भारत के किस राष्ट्रीय जलमार्ग (NW) द्वारा महानदी और ब्राह्मणी नदियों के डेल्टा धाराएँ और पूर्वी तट नहर जुड़े हुए हैं?",
+      "options": {
+        "a": "NW 1",
+        "b": "NW 2",
+        "c": "NW 3",
+        "d": "NW 5"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nNational Waterway 5 (NW-5) connects the delta channels of the Mahanadi and Brahmani rivers, along with the East Coast Canal, the Matai River, and a portion of the Brahmani River, creating a navigable route in Odisha and West Bengal\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय जलमार्ग 5 (NW-5) महानदी और ब्राह्मणी नदियों के डेल्टा धाराओं को पूर्वी तट नहर, माताई नदी और ब्राह्मणी नदी के एक हिस्से के साथ जोड़ता है, जिससे ओडिशा और पश्चिम बंगाल में एक नौगम्य मार्ग बनता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Match the railway zones in Column A with their headquarters in Column B.\n कॉलम A में दिए गए रेलवे जोन को कॉलम B में दिए गए उनके मुख्यालयों से सुमेलित करें।\n Column A (Railway zones / रेलवे जोन):\n 1. Central / मध्य\n 2. Northern / उत्तरी\n 3. Eastern / पूर्वी\n 4. Southern / दक्षिणी\n Column B (Headquarters / मुख्यालय):\n 5. New Delhi / नई दिल्ली\n 6. Mumbai CST / मुंबई सीएसटी\n 7. Chennai / चेन्नई\n 8. Kolkata / कोलकाता",
+      "options": {
+        "a": "1-b, 2-d, 3-a, 4-c",
+        "b": "1-b, 2-a, 3-d, 4-c",
+        "c": "1-a, 2-b, 3-d, 4-c",
+        "d": "1-b, 2-a, 3-c, 4-d"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Central Railway's headquarters is at Chhatrapati Shivaji Terminus (Mumbai CST). The Northern Railway's headquarters is in New Delhi. The Eastern Railway's headquarters is in Kolkata, and the Southern Railway's headquarters is in Chennai\n\n📖 हिंदी स्पष्टीकरण:\nमध्य रेलवे का मुख्यालय छत्रपति शिवाजी टर्मिनस (मुंबई सीएसटी) में है। उत्तरी रेलवे का मुख्यालय नई दिल्ली में है। पूर्वी रेलवे का मुख्यालय कोलकाता में है, और दक्षिणी रेलवे का मुख्यालय चेन्नई में है।"
+    }
+  ]
+}

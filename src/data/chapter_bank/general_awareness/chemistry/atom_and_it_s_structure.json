@@ -1,0 +1,308 @@
+{
+  "chapter_num": 3,
+  "chapter_title": "Atom And It's Structure",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Who discovered the existence of the neutron in the nucleus of an atom?\nपरमाणु के नाभिक में न्यूट्रॉन के अस्तित्व की खोज किसने की थी?",
+      "options": {
+        "a": "J.J. Thomson / जे.जे. थॉमसन",
+        "b": "Ernest Rutherford / अर्नेस्ट रदरफोर्ड",
+        "c": "James Chadwick / जेम्स चैडविक",
+        "d": "Niels Bohr / नील्स बोर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nJames Chadwick discovered the neutron in 1932. It is a subatomic particle with no net electric charge and a mass slightly greater than that of a proton.\n\n📖 हिंदी स्पष्टीकरण:\nजेम्स चैडविक ने 1932 में न्यूट्रॉन की खोज की थी। यह एक उप‑परमाणु कण है जिसका कोई शुद्ध विद्युत आवेश नहीं होता और जिसका द्रव्यमान प्रोटॉन से थोड़ा अधिक होता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which subatomic particle has a negative charge?\nकिस उप‑परमाणु कण पर ऋणात्मक आवेश होता है?",
+      "options": {
+        "a": "Proton / प्रोटॉन",
+        "b": "Neutron / न्यूट्रॉन",
+        "c": "Electron / इलेक्ट्रॉन",
+        "d": "Alpha particle / अल्फा कण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nElectrons are negatively charged particles that revolve around the nucleus in specific orbits. They were discovered by J.J. Thomson.\n\n📖 हिंदी स्पष्टीकरण:\nइलेक्ट्रॉन ऋणात्मक आवेश वाले कण होते हैं जो विशिष्ट कक्षाओं में नाभिक के चारों ओर घूर्णन करते हैं। इनकी खोज जे.जे. थॉमसन ने की थी।"
+    },
+    {
+      "q_num": 3,
+      "question": "The atomic number of an element is determined by the number of:\nकिसी तत्व की परमाणु संख्या किसके द्वारा निर्धारित की जाती है?",
+      "options": {
+        "a": "Neutrons / न्यूट्रॉन की संख्या",
+        "b": "Protons / प्रोटॉन की संख्या",
+        "c": "Electrons + Neutrons / इलेक्ट्रॉन + न्यूट्रॉन",
+        "d": "Protons + Neutrons / प्रोटॉन + न्यूट्रॉन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe atomic number (Z) is defined as the total number of protons present in the nucleus of an atom. It is unique for every element.\n\n📖 हिंदी स्पष्टीकरण:\nपरमाणु संख्या (Z) को परमाणु के नाभिक में उपस्थित प्रोटॉन की कुल संख्या के रूप में परिभाषित किया जाता है। यह प्रत्येक तत्व के लिए अद्वितीय होती है।"
+    },
+    {
+      "q_num": 4,
+      "question": "What is the mass number of an atom?\nपरमाणु की द्रव्यमान संख्या क्या होती है?",
+      "options": {
+        "a": "Number of electrons / इलेक्ट्रॉनों की संख्या",
+        "b": "Number of protons / प्रोटॉन की संख्या",
+        "c": "Sum of protons and neutrons / प्रोटॉन और न्यूट्रॉन का योग",
+        "d": "Sum of electrons and protons / इलेक्ट्रॉन और प्रोटॉन का योग"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe mass number (A) is the sum of the total number of protons and neutrons located in the nucleus, collectively called nucleons.\n\n📖 हिंदी स्पष्टीकरण:\nद्रव्यमान संख्या (A) नाभिक में स्थित प्रोटॉन और न्यूट्रॉन की कुल संख्या का योग है, जिन्हें सामूहिक रूप से न्यूक्लिऑन कहा जाता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which element is used in the treatment of goitre?\nघेंघा रोग के उपचार में किस तत्व का प्रयोग किया जाता है?",
+      "options": {
+        "a": "Cobalt-60 / कोबाल्ट-60",
+        "b": "Iodine-131 / आयोडीन-131",
+        "c": "Carbon-14 / कार्बन-14",
+        "d": "Uranium-235 / यूरेनियम-235"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAn isotope of iodine, specifically Iodine‑131, is used in the medical treatment of goitre and other thyroid‑related conditions.\n\n📖 हिंदी स्पष्टीकरण:\nआयोडीन का एक समस्थानिक, विशेष रूप से आयोडीन‑131, घेंघा और थायरॉइड से संबंधित रोगों के चिकित्सा उपचार में प्रयुक्त होता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Atoms of the same element having the same atomic number but different mass numbers are called:\nएक ही तत्व के परमाणु जिनकी परमाणु संख्या समान लेकिन द्रव्यमान संख्या भिन्न होती है, कहलाते हैं:",
+      "options": {
+        "a": "Isobars / संभारी (Isobars)",
+        "b": "Isotopes / समस्थानिक (Isotopes)",
+        "c": "Isotones / समन्यूट्रॉनिक (Isotones)",
+        "d": "Isomers / समावयवी (Isomers)"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIsotopes have the same number of protons (same atomic number) but different numbers of neutrons, leading to different mass numbers.\n\n📖 हिंदी स्पष्टीकरण:\nसमस्थानिकों में प्रोटॉन की संख्या समान (परमाणु संख्या समान) होती है, लेकिन न्यूट्रॉन की संख्या भिन्न होने के कारण उनकी द्रव्यमान संख्या अलग‑अलग होती है।"
+    },
+    {
+      "q_num": 7,
+      "question": "What is the maximum number of electrons that can be accommodated in the 'K' shell?\n'K' कोश में अधिकतम कितने इलेक्ट्रॉन आ सकते हैं?",
+      "options": {
+        "a": "8",
+        "b": "18",
+        "c": "2",
+        "d": "32"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAccording to the 2n² rule, the maximum number of electrons in a shell is 2n². For the K shell, n = 1, so maximum electrons = 2 × 1² = 2.\n\n📖 हिंदी स्पष्टीकरण:\n2n² नियम के अनुसार किसी कोश में अधिकतम इलेक्ट्रॉनों की संख्या 2n² होती है। K कोश के लिए n = 1, अतः अधिकतम इलेक्ट्रॉन = 2 × 1² = 2।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which model of the atom is compared to a Christmas pudding or a watermelon?\nपरमाणु के किस मॉडल की तुलना क्रिसमस पुडिंग या तरबूज से की जाती है?",
+      "options": {
+        "a": "Rutherford's Model / रदरफोर्ड मॉडल",
+        "b": "Bohr's Model / बोर मॉडल",
+        "c": "Thomson's Model / थॉमसन मॉडल",
+        "d": "Dalton's Theory / डाल्टन का सिद्धांत"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nJ.J. Thomson proposed that an atom consists of a positively charged sphere with electrons embedded in it like seeds in a watermelon (or dry fruits in a pudding).\n\n📖 हिंदी स्पष्टीकरण:\nजे.जे. थॉमसन ने प्रस्तावित किया कि परमाणु एक धनावेशित गोला है जिसमें इलेक्ट्रॉन तरबूज के बीजों (या पुडिंग में मेवों) की तरह धँसे होते हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "Who proposed the \"Law of Conservation of Mass\"?\n\"द्रव्यमान संरक्षण का नियम\" किसने प्रस्तावित किया था?",
+      "options": {
+        "a": "Antoine Lavoisier / एंटोनी लेवोजियर",
+        "b": "Joseph Proust / जोज़ेफ़ प्राउस्ट",
+        "c": "John Dalton / जॉन डाल्टन",
+        "d": "Niels Bohr / नील्स बोर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAntoine Lavoisier stated that mass can neither be created nor destroyed in a chemical reaction; it only changes form.\n\n📖 हिंदी स्पष्टीकरण:\nएंटोनी लेवोजियर ने कहा था कि किसी रासायनिक अभिक्रिया में द्रव्यमान न तो उत्पन्न किया जा सकता है और न ही नष्ट किया जा सकता है; यह केवल रूप बदलता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Argon gas is an example of a:\nआर्गन गैस किसका उदाहरण है?",
+      "options": {
+        "a": "Diatomic molecule / द्वि‑परमाणुक अणु",
+        "b": "Triatomic molecule / त्रि‑परमाणुक अणु",
+        "c": "Monoatomic molecule / एक‑परमाणुक अणु",
+        "d": "Tetra-atomic molecule / चतुर्‑परमाणुक अणु"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNoble gases like argon exist as single atoms (monoatomic) because they have a complete octet and are chemically inert.\n\n📖 हिंदी स्पष्टीकरण:\nआर्गन जैसी उत्कृष्ट गैसें एक‑एक परमाणु के रूप में (एक‑परमाणुक) पाई जाती हैं क्योंकि इनका संयोजक अष्टक पूर्ण होता है और ये रासायनिक रूप से निष्क्रिय होती हैं।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which experiment led to the discovery of the nucleus of an atom?\nकिस प्रयोग के कारण परमाणु के नाभिक की खोज हुई?",
+      "options": {
+        "a": "Cathode ray experiment / कैथोड किरण प्रयोग",
+        "b": "Alpha-particle scattering experiment / अल्फा‑कण प्रकीर्णन प्रयोग",
+        "c": "Oil drop experiment / तेल की बूंद प्रयोग",
+        "d": "Photoelectric effect / प्रकाश विद्युत प्रभाव"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRutherford used the alpha‑particle scattering (gold‑foil) experiment to show that most of the atom's mass and positive charge is concentrated in a small centre called the nucleus.\n\n📖 हिंदी स्पष्टीकरण:\nरदरफोर्ड ने अल्फा‑कण प्रकीर्णन (स्वर्ण पन्नी) प्रयोग द्वारा यह दिखाया कि परमाणु का अधिकांश द्रव्यमान और धनावेश नाभिक नामक छोटे केंद्र में केंद्रित होता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What are Isobars?\nसंभारी (Isobars) क्या हैं?",
+      "options": {
+        "a": "Atoms with same atomic number but different mass number / समान परमाणु संख्या लेकिन भिन्न द्रव्यमान संख्या वाले परमाणु",
+        "b": "Atoms with same mass number but different atomic number / समान द्रव्यमान संख्या लेकिन भिन्न परमाणु संख्या वाले परमाणु",
+        "c": "Atoms with same number of neutrons / समान न्यूट्रॉन संख्या वाले परमाणु",
+        "d": "Atoms with same number of electrons / समान इलेक्ट्रॉन संख्या वाले परमाणु"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIsobars are atoms of different elements that have the same mass number but different atomic numbers, such as calcium-40 and argon-40.\n\n📖 हिंदी स्पष्टीकरण:\nसंभारी विभिन्न तत्वों के वे परमाणु हैं जिनकी द्रव्यमान संख्या समान होती है, लेकिन परमाणु संख्या भिन्न होती है, जैसे कैल्शियम‑40 और आर्गन‑40।"
+    },
+    {
+      "q_num": 13,
+      "question": "How many neutrons are present in an atom of Carbon-14?\nकार्बन-14 के एक परमाणु में कितने न्यूट्रॉन मौजूद होते हैं?",
+      "options": {
+        "a": "6",
+        "b": "14",
+        "c": "8",
+        "d": "12"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCarbon has an atomic number of 6. So, neutrons = mass number (14) – atomic number (6) = 8.\n\n📖 हिंदी स्पष्टीकरण:\nकार्बन की परमाणु संख्या 6 होती है। अतः न्यूट्रॉन = द्रव्यमान संख्या (14) – परमाणु संख्या (6) = 8।"
+    },
+    {
+      "q_num": 14,
+      "question": "Valence electrons are those electrons which are present in:\nसंयोजी इलेक्ट्रॉन वे इलेक्ट्रॉन होते हैं जो मौजूद होते हैं:",
+      "options": {
+        "a": "The nucleus / नाभिक में",
+        "b": "The innermost shell / सबसे भीतरी कोश में",
+        "c": "The outermost shell / सबसे बाहरी कोश में",
+        "d": "All the shells / सभी कोशों में"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nValence electrons reside in the outermost shell of an atom and determine its chemical reactivity and bonding capacity.\n\n📖 हिंदी स्पष्टीकरण:\nसंयोजी इलेक्ट्रॉन परमाणु की सबसे बाहरी कोश में पाए जाते हैं और वही उसकी रासायनिक प्रतिक्रियाशीलता तथा बंधन क्षमता निर्धारित करते हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "Isotones are the atoms of different elements which have:\nसमन्यूट्रॉनिक (Isotones) विभिन्न तत्वों के वे परमाणु हैं जिनमें होता है:",
+      "options": {
+        "a": "Same number of protons / प्रोटॉन की समान संख्या",
+        "b": "Same number of neutrons / न्यूट्रॉन की समान संख्या",
+        "c": "Same mass number / समान द्रव्यमान संख्या",
+        "d": "Same atomic number / समान परमाणु संख्या"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIsotones are nuclei of different elements that have the same number of neutrons but different atomic numbers and different mass numbers.\n\n📖 हिंदी स्पष्टीकरण:\nसमन्यूट्रॉनिक वे विभिन्न तत्वों के केंद्रक हैं जिनमें न्यूट्रॉन की संख्या समान होती है, लेकिन उनकी परमाणु संख्या और द्रव्यमान संख्या भिन्न होती है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Statement I: Most of the space inside the atom is empty.\nकथन I: परमाणु के अंदर का अधिकांश स्थान खाली है।\nStatement II: Alpha particles passed through the gold foil without any deflection.\nकथन II: अल्फा कण बिना किसी विक्षेपण के स्वर्ण पन्नी से गुजर गए।",
+      "options": {
+        "a": "Both Statements are correct / दोनों कथन सही हैं",
+        "b": "Statement I is correct, II is wrong / कथन I सही है, II गलत है",
+        "c": "Statement II is correct, I is wrong / कथन II सही है, I गलत है",
+        "d": "Both are wrong / दोनों गलत हैं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn Rutherford's experiment, most alpha particles passed straight through the foil, suggesting that most of the atom is empty space. But a few were deflected, so Statement II (no deflection) is incorrect.\n\n📖 हिंदी स्पष्टीकरण:\nरदरफोर्ड के प्रयोग में अधिकांश अल्फा कण सीधे स्वर्ण पन्नी से गुजर गए, जिससे निष्कर्ष निकला कि परमाणु का अधिकांश भाग खाली है। लेकिन कुछ कण विक्षेपित भी हुए, इसलिए कथन II (बिना किसी विक्षेपण के) गलत है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): Isotopes of an element show similar chemical properties.\nअभिकथन (A): किसी तत्व के समस्थानिक समान रासायनिक गुण प्रदर्शित करते हैं।\nReason (R): Isotopes have the same number of valence electrons.\nकारण (R): समस्थानिकों में संयोजी इलेक्ट्रॉनों की संख्या समान होती है।",
+      "options": {
+        "a": "A and R are true, and R is the correct explanation of A / A और R सही हैं, और R, A की सही व्याख्या है",
+        "b": "A and R are true, but R is not the correct explanation of A / A और R सही हैं, लेकिन R, A की सही व्याख्या नहीं है",
+        "c": "A is true, R is false / A सही है, R गलत है",
+        "d": "A is false, R is true / A गलत है, R सही है"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true, and R correctly explains A. Chemical properties depend mainly on the number of valence electrons; isotopes have the same atomic number and the same valence configuration, so their chemical behaviour is similar.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की सही व्याख्या करता है। रासायनिक गुण मुख्य रूप से संयोजी इलेक्ट्रॉनों की संख्या पर निर्भर करते हैं; समस्थानिकों की परमाणु संख्या समान होने से उनका संयोजक विन्यास समान होता है, इसलिए उनकी रासायनिक प्रवृत्तियाँ भी समान होती हैं।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following is correct about the mass of a proton?\nप्रोटॉन के द्रव्यमान के बारे में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "Approx 2000 times that of an electron / इलेक्ट्रॉन का लगभग 2000 गुना",
+        "b": "Equal to the mass of an electron / इलेक्ट्रॉन के द्रव्यमान के बराबर",
+        "c": "Half the mass of a neutron / न्यूट्रॉन के द्रव्यमान का आधा",
+        "d": "Negligible compared to electron / इलेक्ट्रॉन की तुलना में नगण्य"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nA proton is approximately 1836 times heavier than an electron, so it is often said to be about 2000 times heavier. The electron's mass is nearly negligible in comparison.\n\n📖 हिंदी स्पष्टीकरण:\nएक प्रोटॉन इलेक्ट्रॉन की तुलना में लगभग 1836 गुना भारी होता है, इसलिए इसे प्रायः लगभग 2000 गुना भारी माना जाता है। इलेक्ट्रॉन का द्रव्यमान इसके मुकाबले लगभग नगण्य होता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statement I: An atom as a whole is electrically neutral.\nकथन I: समग्र रूप से एक परमाणु विद्युत रूप से तटस्थ होता है।\nStatement II: The number of protons and electrons in a neutral atom are equal.\nकथन II: एक तटस्थ परमाणु में प्रोटॉन और इलेक्ट्रॉनों की संख्या बराबर होती है।",
+      "options": {
+        "a": "Statement I is true, II is false / कथन I सही है, II गलत है",
+        "b": "Both are true / दोनों सही हैं",
+        "c": "Both are false / दोनों गलत हैं",
+        "d": "Statement II is true, I is false / कथन II सही है, I गलत है"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBoth statements are true. The positive charge of protons is exactly balanced by the equal negative charge of electrons, making the atom electrically neutral as a whole.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। प्रोटॉन के धनात्मक आवेश को बराबर संख्या के इलेक्ट्रॉनों के ऋणात्मक आवेश द्वारा संतुलित किया जाता है, जिससे परमाणु समग्र रूप से विद्युत तटस्थ रहता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Noble gases are chemically unreactive.\nअभिकथन (A): उत्कृष्ट गैसें रासायनिक रूप से अप्रतिक्रियाशील होती हैं।\nReason (R): They have a completely filled outermost shell.\nकारण (R): उनका सबसे बाहरी कोश पूरी तरह से भरा होता है।",
+      "options": {
+        "a": "A and R are true, R is the correct explanation / A और R सही हैं, R सही व्याख्या है",
+        "b": "A and R are true, R is not the explanation / A और R सही हैं, R व्याख्या नहीं है",
+        "c": "A is true, R is false / A सही है, R गलत है",
+        "d": "A is false, R is true / A गलत है, R सही है"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true, and R correctly explains A. Atoms react to achieve a stable octet; noble gases already have a complete valence shell (except helium with a stable duet), so they show almost no chemical reactivity.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की सही व्याख्या करता है। परमाणु स्थिर अष्टक पाने के लिए अभिक्रिया करते हैं; उत्कृष्ट गैसों के संयोजक कोश में पहले से ही पूरा अष्टक (हीलियम में स्थिर द्वयक) होता है, इसलिए वे लगभग अप्रतिक्रियाशील होती हैं।"
+    },
+    {
+      "q_num": 21,
+      "question": "The electronic configuration of Phosphorus (Atomic number 15) is:\nफॉस्फोरस (परमाणु संख्या 15) का इलेक्ट्रॉनिक विन्यास है:",
+      "options": {
+        "a": "2, 8, 4",
+        "b": "2, 8, 5",
+        "c": "2, 8, 6",
+        "d": "8, 5, 2"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nFollowing the Bohr–Bury scheme, electrons fill the shells as: K = 2, L = 8, and the remaining 5 electrons go to the M shell, giving 2, 8, 5.\n\n📖 हिंदी स्पष्टीकरण:\nबोर–बरी योजना के अनुसार इलेक्ट्रॉन कोशों को इस प्रकार भरते हैं: K = 2, L = 8 और शेष 5 इलेक्ट्रॉन M कोश में जाते हैं, अतः विन्यास 2, 8, 5 होता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Statement I: Mass of an atom is concentrated in the nucleus.\nकथन I: परमाणु का द्रव्यमान नाभिक में केंद्रित होता है।\nStatement II: Nucleus contains protons and neutrons.\nकथन II: नाभिक में प्रोटॉन और न्यूट्रॉन होते हैं।",
+      "options": {
+        "a": "Both are correct and II explains I / दोनों सही हैं और II, I की व्याख्या करता है",
+        "b": "Both are correct but II does not explain I / दोनों सही हैं लेकिन II, I की व्याख्या नहीं करता है",
+        "c": "Only Statement I is correct / केवल कथन I सही है",
+        "d": "Only Statement II is correct / केवल कथन II सही है"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth statements are correct and II explains I. Since protons and neutrons (nucleons) carry almost all the mass of the atom and reside in the nucleus, the mass of an atom is concentrated in its nucleus.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं और II, I की व्याख्या करता है। क्योंकि प्रोटॉन और न्यूट्रॉन (न्यूक्लिऑन) लगभग पूरा द्रव्यमान वहन करते हैं और नाभिक में ही स्थित होते हैं, इसलिए परमाणु का द्रव्यमान नाभिक में केंद्रित रहता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which isotope is used as fuel in nuclear reactors?\nपरमाणु रिएक्टरों में ईंधन के रूप में किस समस्थानिक का उपयोग किया जाता है?",
+      "options": {
+        "a": "Carbon-14 / कार्बन-14",
+        "b": "Cobalt-60 / कोबाल्ट-60",
+        "c": "Uranium-235 / यूरेनियम-235",
+        "d": "Iodine-131 / आयोडीन-131"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nUranium‑235 is used as a fuel in nuclear power plants because it can undergo fission and sustain a chain reaction to produce large amounts of energy.\n\n📖 हिंदी स्पष्टीकरण:\nयूरेनियम‑235 का उपयोग परमाणु ऊर्जा संयंत्रों में ईंधन के रूप में किया जाता है क्योंकि यह नाभिकीय विखंडन कर सकता है और ऊर्जा उत्पन्न करने के लिए श्रृंखला अभिक्रिया को बनाए रख सकता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Cathode rays travel in a straight line.\nअभिकथन (A): कैथोड किरणें सीधी रेखा में चलती हैं।\nReason (R): Cathode rays consist of positively charged particles.\nकारण (R): कैथोड किरणों में धनावेशित कण होते हैं।",
+      "options": {
+        "a": "A is true, R is false / A सही है, R गलत है",
+        "b": "A is false, R is true / A गलत है, R सही है",
+        "c": "Both are true / दोनों सही हैं",
+        "d": "Both are false / दोनों गलत हैं"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCathode rays do travel in straight lines, but they consist of negatively charged electrons, not positively charged particles. Hence A is true but R is false.\n\n📖 हिंदी स्पष्टीकरण:\nकैथोड किरणें सीधी रेखाओं में चलती हैं, लेकिन वे ऋणावेशित इलेक्ट्रॉनों से बनी होती हैं, धनावेशित कणों से नहीं। इसलिए A सही है, पर R गलत है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which of the following correctly represents the \"Law of Constant Proportions\"?\nनिम्नलिखित में से कौन \"निश्चित अनुपात के नियम\" का सही प्रतिनिधित्व करता है?",
+      "options": {
+        "a": "Elements combine in a fixed ratio by mass / तत्व द्रव्यमान के एक निश्चित अनुपात में जुड़ते हैं",
+        "b": "Atoms are indivisible / परमाणु अविभाज्य हैं",
+        "c": "Mass is conserved / द्रव्यमान संरक्षित है",
+        "d": "Elements can combine in any ratio / तत्व किसी भी अनुपात में जुड़ सकते हैं"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nProposed by Joseph Proust, it states that in a given chemical compound, the elements are always present in definite proportions by mass.\n\n📖 हिंदी स्पष्टीकरण:\nजोसेफ प्राउस्ट द्वारा प्रस्तावित इस नियम के अनुसार किसी भी रासायनिक यौगिक में तत्व सदैव द्रव्यमान के निश्चित अनुपात में ही उपस्थित रहते हैं।"
+    }
+  ]
+}

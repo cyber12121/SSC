@@ -1,0 +1,308 @@
+{
+  "chapter_num": 2,
+  "chapter_title": "Animal Tissue",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which of the following tissues forms a continuous sheet and acts as a protective covering for the animal body? निम्नलिखित में से कौन सा ऊतक एक निरंतर परत बनाता है और जंतु शरीर के लिए सुरक्षात्मक आवरण के रूप में कार्य करता है?",
+      "options": {
+        "a": "Connective Tissue / संयोजी ऊतक",
+        "b": "Epithelial Tissue / उपकला ऊतक",
+        "c": "Muscular Tissue / पेशीय ऊतक",
+        "d": "Nervous Tissue / तंत्रिका ऊतक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEpithelial tissues are tightly packed with no intercellular spaces. They serve as the first line of defense, covering the body and lining internal organs\n\n📖 हिंदी स्पष्टीकरण:\nउपकला ऊतक बिना किसी अंतरकोशिकीय स्थान के कसकर जुड़े होते हैं। वे शरीर को ढंकने और आंतरिक अंगों को अस्तर करने के लिए रक्षा की पहली पंक्ति के रूप में कार्य करते हैं।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which type of epithelial tissue is found in the lining of the mouth and esophagus? मुख और ग्रासनली (oesophagus) के अस्तर में किस प्रकार का उपकला ऊतक पाया जाता है?",
+      "options": {
+        "a": "Simple Squamous / सरल शल्की",
+        "b": "Stratified Squamous / स्तरित शल्की",
+        "c": "Cuboidal / घनाकार",
+        "d": "Columnar / स्तंभकार"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSimple squamous epithelium consists of a single layer of flat, thin cells. It forms a delicate lining where substances move through semi-permeable membranes\n\n📖 हिंदी स्पष्टीकरण:\nसरल शल्की उपकला में चपटी, पतली कोशिकाओं की एक परत होती है। यह एक नाजुक अस्तर बनाती है जहाँ पदार्थ अर्ध-पारगम्य झिल्ली के माध्यम से चलते हैं।"
+    },
+    {
+      "q_num": 3,
+      "question": "The skin is made up of which specific tissue to prevent wear and tear? घिसावट और टूट-फूट को रोकने के लिए त्वचा किस विशिष्ट ऊतक से बनी होती है?",
+      "options": {
+        "a": "Simple Squamous / सरल शल्की",
+        "b": "Stratified Squamous / स्तरित शल्की",
+        "c": "Adipose / वसीय",
+        "d": "Ciliated Columnar / पक्ष्माभी स्तंभकार"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTo prevent wear and tear, cells in the skin are arranged in many layers. This multi-layered arrangement is called stratified squamous epithelium\n\n📖 हिंदी स्पष्टीकरण:\nघिसावट को रोकने के लिए त्वचा की कोशिकाएं कई परतों में व्यवस्थित होती हैं। इस बहु-स्तरीय व्यवस्था को स्तरित शल्की उपकला कहा जाता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which tissue is commonly known as the \"packaging tissue\" of the body? शरीर के \"पैकेजिंग ऊतक\" के रूप में सामान्यतः किस ऊतक को जाना जाता है?",
+      "options": {
+        "a": "Adipose / वसीय",
+        "b": "Areolar / एरिओलर",
+        "c": "Skeletal / कंकाल",
+        "d": "Nervous / तंत्रिका"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAreolar tissue fills the space inside organs and supports internal organs. It is found between skin and muscles and around blood vessels\n\n📖 हिंदी स्पष्टीकरण:\nएरिओलर ऊतक अंगों के अंदर की जगह भरता है और आंतरिक अंगों को सहारा देता है। यह त्वचा और मांसपेशियों के बीच और रक्त वाहिकाओं के आसपास पाया जाता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Red Blood Cells (RBCs) are also known as: लाल रक्त कोशिकाओं (RBCs) को इस नाम से भी जाना जाता है:",
+      "options": {
+        "a": "Leucocytes / ल्यूकोसाइट्स",
+        "b": "Thrombocytes / थ्रोम्बोसाइट्स",
+        "c": "Erythrocytes / एरिथ्रोसाइट्स",
+        "d": "Monocytes / मोनोसाइट्स"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRBCs contain hemoglobin which helps in oxygen transport. Their lifespan is approximately 120 days and they are produced in bone marrow. / RBC\n\n📖 हिंदी स्पष्टीकरण:\nमें हीमोग्लोबिन होता है जो ऑक्सीजन परिवहन में मदद करता है। इनका जीवनकाल लगभग 120 दिन का होता है और ये अस्थि मज्जा में बनते हैं।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following helps in the clotting of blood during an injury? चोट के दौरान रक्त का थक्का जमने में निम्नलिखित में से कौन सहायता करता है?",
+      "options": {
+        "a": "RBCs / लाल रक्त कोशिकाएं",
+        "b": "WBCs / श्वेत रक्त कोशिकाएं",
+        "c": "Platelets / प्लेटलेट्स",
+        "d": "Plasma / प्लाज्मा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPlatelets, also known as thrombocytes, help in blood coagulation. Their number significantly reduces during diseases like Dengue\n\n📖 हिंदी स्पष्टीकरण:\nप्लेटलेट्स, जिन्हें थ्रोम्बोसाइट्स भी कहा जाता है, रक्त के जमने में मदद करते हैं। डेंगू जैसी बीमारियों के दौरान इनकी संख्या काफी कम हो जाती है।"
+    },
+    {
+      "q_num": 7,
+      "question": "The study of blood is known as: रक्त के अध्ययन को क्या कहा जाता है?",
+      "options": {
+        "a": "Osteology / अस्थि विज्ञान",
+        "b": "Myology / पेशी विज्ञान",
+        "c": "Hematology / रुधिर विज्ञान",
+        "d": "Cytology / कोशिका विज्ञान"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nHematology is the branch of medicine concerned with the study of the cause, prognosis, and prevention of diseases related to blood\n\n📖 हिंदी स्पष्टीकरण:\nरुधिर विज्ञान (Hematology) चिकित्सा की वह शाखा है जो रक्त से संबंधित रोगों के कारण और रोकथाम के अध्ययन से संबंधित है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which tissue connects a bone to another bone? कौन सा ऊतक एक हड्डी को दूसरी हड्डी से जोड़ता है?",
+      "options": {
+        "a": "Tendon / कंडरा",
+        "b": "Ligament / स्नायु",
+        "c": "Cartilage / उपास्थि",
+        "d": "Areolar / एरिओलर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLigaments are very elastic and strong connective tissues that join two bones together. They contain very little matrix\n\n📖 हिंदी स्पष्टीकरण:\nस्नायु बहुत लचीले और मजबूत संयोजी ऊतक होते हैं जो दो हड्डियों को एक साथ जोड़ते हैं। इनमें बहुत कम मैट्रिक्स होता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which tissue stores fat in the animal body? जंतु शरीर में कौन सा ऊतक वसा का संचय करता है?",
+      "options": {
+        "a": "Areolar / एरिओलर",
+        "b": "Adipose / वसीय",
+        "c": "Epithelial / उपकला",
+        "d": "Cartilage / उपास्थि"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAdipose tissue is found below the skin and between internal organs. It acts as an insulator due to the storage of fat globules\n\n📖 हिंदी स्पष्टीकरण:\nवसीय ऊतक त्वचा के नीचे और आंतरिक अंगों के बीच पाया जाता है। वसा के संचय के कारण यह ऊष्मारोधी (insulator) के रूप में कार्य करता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "The basic unit of the nervous system is called: तंत्रिका तंत्र की मूल इकाई को क्या कहा जाता है?",
+      "options": {
+        "a": "Nephron / नेफ्रॉन",
+        "b": "Neuron / न्यूरॉन",
+        "c": "Cyton / साइटोन",
+        "d": "Axon / एक्सॉन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA neuron or nerve cell consists of a cell body with a nucleus and cytoplasm, from which long thin hair-like parts arise\n\n📖 हिंदी स्पष्टीकरण:\nएक न्यूरॉन या तंत्रिका कोशिका में केंद्रक और कोशिका द्रव्य के साथ एक कोशिका काय होता है, जिससे लंबे पतले बालों जैसे भाग निकलते हैं।"
+    },
+    {
+      "q_num": 11,
+      "question": "Cuboidal epithelial tissue is found in the lining of which of the following? घनाकार उपकला ऊतक निम्नलिखित में से किसके अस्तर में पाया जाता है?",
+      "options": {
+        "a": "Intestine / आंत",
+        "b": "Kidney tubules / गुर्दे की नलिकाएं",
+        "c": "Stomach / आमाशय",
+        "d": "Lungs / फेफड़े"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCuboidal epithelium cells are cube-like and provide mechanical support. They are found in kidney tubules and salivary gland ducts\n\n📖 हिंदी स्पष्टीकरण:\nघनाकार उपकला कोशिकाएं घन जैसी होती हैं और यांत्रिक सहायता प्रदान करती हैं। ये गुर्दे की नलिकाओं और लार ग्रंथि की नलिकाओं में पाई जाती हैं।"
+    },
+    {
+      "q_num": 12,
+      "question": "What is the main function of Ciliated Columnar epithelium in the respiratory tract? श्वसन मार्ग में पक्ष्माभी स्तंभकार उपकला का मुख्य कार्य क्या है?",
+      "options": {
+        "a": "Absorption of food / भोजन का अवशोषण",
+        "b": "Secretion of sweat / पसीने का स्राव",
+        "c": "Movement of mucus / बलगम की गति",
+        "d": "Storage of fat / वसा का संचय"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThese cells have hair-like projections called cilia that can move. Their movement pushes the mucus forward to clear it\n\n📖 हिंदी स्पष्टीकरण:\nइन कोशिकाओं में पक्ष्माभ (cilia) नामक बालों जैसी संरचनाएं होती हैं जो हिल सकती हैं। इनकी गति बलगम को साफ करने के लिए आगे धकेलती है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Cartilage is NOT found in which of the following body parts? उपास्थि (Cartilage) शरीर के निम्नलिखित में से किस भाग में नहीं पाई जाती है?",
+      "options": {
+        "a": "Nose / नाक",
+        "b": "Ear / कान",
+        "c": "Kidney / वृक्क (गुर्दा)",
+        "d": "Larynx / स्वरयंत्र"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCartilage smoothens bone surfaces at joints and is present in the nose, ear, trachea, and larynx. Kidneys are made of specialized excretory tissues\n\n📖 हिंदी स्पष्टीकरण:\nउपास्थि जोड़ों पर हड्डियों की सतहों को चिकना बनाती है और नाक, कान, श्वासनली और स्वरयंत्र में मौजूद होती है। गुर्दे विशिष्ट उत्सर्जन ऊतकों से बने होते हैं।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which of the following is a characteristic of Cardiac muscles? हृदय की पेशियों की निम्नलिखित में से कौन सी एक विशेषता है?",
+      "options": {
+        "a": "Voluntary / स्वैच्छिक",
+        "b": "Unstriated / अरेखित",
+        "c": "Cylindrical and branched / बेलनाकार और शाखित",
+        "d": "Multinucleated / बहुकेंद्रकीय"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCardiac muscles are involuntary, cylindrical, branched, and uninucleate. They show rhythmic contraction and relaxation throughout life\n\n📖 हिंदी स्पष्टीकरण:\nहृदय की पेशियां अनैच्छिक, बेलनाकार, शाखित और एककेंद्रकीय होती हैं। वे जीवन भर लयबद्ध संकुचन और विश्राम प्रदर्शित करती हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which component of blood lacks RBCs and blood proteins but contains salt and glucose? रक्त के किस घटक में RBC और रक्त प्रोटीन की कमी होती है लेकिन नमक और ग्लूकोज होता है?",
+      "options": {
+        "a": "Plasma / प्लाज्मा",
+        "b": "Lymph / लसीका",
+        "c": "Serum / सीरम",
+        "d": "Platelets / प्लेटलेट्स"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLymph is a colorless fluid similar to plasma but lacks RBCs and large proteins. It provides defense and carries digested fat\n\n📖 हिंदी स्पष्टीकरण:\nलसीका एक रंगहीन तरल पदार्थ है जो प्लाज्मा के समान है लेकिन इसमें RBC और बड़े प्रोटीन की कमी होती है। यह रक्षा प्रदान करता है और वसा का परिवहन करता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements about Muscular Tissue:\n पेशीय ऊतक के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. Skeletal muscles are voluntary in nature. कंकाल पेशियां प्रकृति में स्वैच्छिक होती हैं।\n 2. Smooth muscles are found in the iris of the eye. चिकनी पेशियां आंख की आइरिस में पाई जाती हैं।\n Which of the above statement(s) is/are correct? उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "Only 1 / केवल 1",
+        "b": "Only 2 / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSkeletal muscles move according to our will (voluntary). Smooth muscles control involuntary movements in the iris, ureters, and bronchi\n\n📖 हिंदी स्पष्टीकरण:\nकंकाल की मांसपेशियां हमारी इच्छा (स्वैच्छिक) के अनुसार चलती हैं। चिकनी मांसपेशियां आइरिस, मूत्रवाहिनी और श्वसनी में अनैच्छिक गति को नियंत्रित करती हैं।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): Tendons connect muscles to bones.\n अभिकथन (A): कंडरा (Tendons) मांसपेशियों को हड्डियों से जोड़ते हैं।\n Reason (R): Tendons are fibrous tissues with great strength but limited flexibility.\n कारण (R): कंडरा महान शक्ति वाले रेशेदार ऊतक हैं लेकिन सीमित लचीलेपन वाले होते हैं।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nTendons are tough, inelastic fibrous tissues that transmit the mechanical force of muscle contraction to the bones\n\n📖 हिंदी स्पष्टीकरण:\nकंडरा सख्त, गैर-लचीले रेशेदार ऊतक होते हैं जो मांसपेशियों के संकुचन के यांत्रिक बल को हड्डियों तक पहुँचाते हैं।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following statements regarding White Blood Cells (WBCs) is INCORRECT? श्वेत रक्त कोशिकाओं (WBCs) के संबंध में निम्नलिखित में से कौन सा कथन गलत है?",
+      "options": {
+        "a": "They act as a defense mechanism for the body / वे शरीर के लिए एक रक्षा तंत्र के रूप में कार्य करते हैं",
+        "b": "They are produced in the bone marrow / वे अस्थि मज्जा में उत्पन्न होते हैं",
+        "c": "Monocytes and Lymphocytes are types of WBCs / मोनोसाइट्स और लिम्फोसाइट्स WBC के प्रकार हैं",
+        "d": "They carry oxygen to various parts of the body / वे शरीर के विभिन्न हिस्सों में ऑक्सीजन ले जाते हैं"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nCarrying oxygen is the primary function of RBCs (Erythrocytes), not WBCs. WBCs primarily fight infections and provide immunity\n\n📖 हिंदी स्पष्टीकरण:\nऑक्सीजन ले जाना RBC (एरिथ्रोसाइट्स) का प्राथमिक कार्य है, WBC का नहीं। WBC मुख्य रूप से संक्रमण से लड़ते हैं और प्रतिरक्षा प्रदान करते हैं।"
+    },
+    {
+      "q_num": 19,
+      "question": "Match the following: सही मिलान करें:\n P. Squamous - 1. Secretion/Absorption (Stomach) / P. स्क्वैमस - 1. स्राव/अवशोषण (पेट)\n Q. Columnar - 2. Mechanical Support (Kidney) / Q. स्तंभनुमा - 2. यांत्रिक सहारा (गुर्दा)\n R. Cuboidal - 3. Protection (Skin) / R. घनाकार - 3. सुरक्षा (त्वचा)\n S. Stratified - 4. Delicate lining (Mouth) / S. स्तरीकृत - 4. नाजुक परत (मुंह)",
+      "options": {
+        "a": "P-4, Q-1, R-2, S-3",
+        "b": "P-1, Q-2, R-3, S-4",
+        "c": "P-4, Q-2, R-1, S-3",
+        "d": "P-3, Q-1, R-2, S-4"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSquamous forms delicate linings; Columnar is for absorption/secretion; Cuboidal provides support; Stratified protects against wear\n\n📖 हिंदी स्पष्टीकरण:\nशल्की नाजुक अस्तर बनाता है; स्तंभकार अवशोषण/स्राव के लिए है; घनाकार सहायता प्रदान करता है; स्तरित घिसावट से बचाता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Blood is considered a connective tissue.\n अभिकथन (A): रक्त को एक संयोजी ऊतक माना जाता है।\n Reason (R): It has a fluid matrix called plasma in which cells are suspended.\n कारण (R): इसमें प्लाज्मा नामक एक तरल मैट्रिक्स होता है जिसमें कोशिकाएं निलंबित रहती हैं।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBlood connects different parts of the body by transporting gases and nutrients through its fluid matrix\n\n📖 हिंदी स्पष्टीकरण:\nरक्त अपने तरल मैट्रिक्स के माध्यम से गैसों और पोषक तत्वों का परिवहन करके शरीर के विभिन्न हिस्सों को जोड़ता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which part of the neuron receives signals from other neurons? न्यूरॉन का कौन सा भाग अन्य न्यूरॉन्स से संकेत प्राप्त करता है?",
+      "options": {
+        "a": "Axon / एक्सॉन",
+        "b": "Dendrites / डेंड्राइट्स",
+        "c": "Nerve ending / तंत्रिका सिरा",
+        "d": "Myelin sheath / माइलिन शीथ"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDendrites are short, branched projections that receive impulses. The signal then travels through the Cyton to the Axon\n\n📖 हिंदी स्पष्टीकरण:\nडेंड्राइट्स छोटी, शाखित प्रक्षेप हैं जो आवेग प्राप्त करती हैं। इसके बाद संकेत साइटोन से होते हुए एक्सॉन तक जाता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Bone matrix is rich in which of the following minerals? अस्थि मैट्रिक्स निम्नलिखित में से किस खनिज से समृद्ध है?",
+      "options": {
+        "a": "Sodium and Potassium / सोडियम और पोटेशियम",
+        "b": "Calcium and Phosphorus / कैल्शियम और फास्फोरस",
+        "c": "Iron and Magnesium / लोहा और मैग्नीशियम",
+        "d": "Fluorine and Calcium / फ्लोरीन और कैल्शियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBone is a hard connective tissue. Its non-flexible matrix is composed of calcium and phosphorus compounds\n\n📖 हिंदी स्पष्टीकरण:\nहड्डी एक कठोर संयोजी ऊतक है। इसका लचीलापन रहित मैट्रिक्स कैल्शियम और फास्फोरस यौगिकों से बना होता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Identify the tissue based on these features: इन विशेषताओं के आधार पर ऊतक की पहचान करें:\n 1. Cells are long, cylindrical, and unbranched. कोशिकाएं लंबी, बेलनाकार और अशाखित होती हैं।\n 2. They are multinucleated. वे बहु-केंद्रकीय होती हैं।",
+      "options": {
+        "a": "Smooth Muscle / चिकनी पेशी",
+        "b": "Cardiac Muscle / हृदय पेशी",
+        "c": "Striated/Skeletal Muscle / रेखित/कंकाल पेशी",
+        "d": "Nervous Tissue / तंत्रिका ऊतक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSkeletal muscles are voluntary, striated, and possess multiple nuclei. They are attached to bones and help in movement\n\n📖 हिंदी स्पष्टीकरण:\nकंकाल की मांसपेशियां स्वैच्छिक, रेखित होती हैं और इनमें कई केंद्रक होते हैं। ये हड्डियों से जुड़ी होती हैं और गति में मदद करती हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Areolar tissue is found between the skin and muscles.\n Reason (R): It helps in the repair of tissues.\n अभिकथन (A): एरिओलर ऊतक त्वचा और मांसपेशियों के बीच पाया जाता है।\n कारण (R): यह ऊतकों की मरम्मत में मदद करता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAreolar tissue supports internal organs and fills spaces, playing a vital role in tissue repair and packing. The reason is true, but it does not directly explain why areolar tissue is found between skin and muscles\n\n📖 हिंदी स्पष्टीकरण:\nएरिओलर ऊतक आंतरिक अंगों को सहारा देता है और रिक्त स्थान भरता है, जो ऊतक मरम्मत और पैकिंग में महत्वपूर्ण भूमिका निभाता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which of the following WBCs are specifically involved in the immune response? निम्नलिखित में से कौन सी WBC विशेष रूप से प्रतिरक्षा प्रतिक्रिया में शामिल हैं?",
+      "options": {
+        "a": "Neutrophils / न्यूट्रोफिल",
+        "b": "Basophils / बेसोफिल",
+        "c": "Lymphocytes / लिम्फोसाइट्स",
+        "d": "Monocytes / मोनोसाइट्स"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nLymphocytes are a type of WBC responsible for producing antibodies and managing the body's immune system\n\n📖 हिंदी स्पष्टीकरण:\nलिम्फोसाइट्स एक प्रकार के WBC हैं जो एंटीबॉडी बनाने और शरीर की प्रतिरक्षा प्रणाली के प्रबंधन के लिए जिम्मेदार हैं।"
+    }
+  ]
+}

@@ -2,6 +2,24 @@ import React from 'react';
 import { Check, X, Bookmark, BookmarkCheck, Trash2, AlertTriangle, Clock } from 'lucide-react';
 import { Question } from '../types';
 
+const formatBilingualText = (text: string) => {
+  if (!text) return '';
+  return text
+    .split(/\r?\n/)
+    .map(line => {
+      const parts = line.split(/\s+\/\s+/);
+      return parts[0].trim();
+    })
+    .join('\n')
+    .trim();
+};
+
+const formatSolution = (sol: string) => {
+  if (!sol) return '';
+  const parts = sol.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
+  return parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
+};
+
 interface QuestionCardProps {
   question: Question;
   onAnswer: (answer: 'a' | 'b' | 'c' | 'd') => void;
@@ -95,12 +113,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
       {/* Question Content */}
       <div className="flex-1 overflow-y-auto pr-4 custom-scrollbar">
-        <div className="text-[16px] text-gray-900 mb-8 font-medium leading-relaxed">
-          {question.question}
+        <div className="text-[16px] text-gray-900 mb-1 font-medium leading-relaxed whitespace-pre-line">
+          {formatBilingualText(question.question)}
         </div>
 
         {question.image && (
-          <div className="mb-8 border border-gray-200 p-2 inline-block">
+          <div className="mb-4 border border-gray-200 p-2 inline-block">
             <img
               src={question.image.src}
               alt={question.image.caption || "Question visual"}
@@ -155,8 +173,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                     {showWrong && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                   </div>
                 </div>
-                <div className={`flex-1 text-[15px] ${showCorrect ? 'text-green-800 font-semibold' : ''} ${showWrong ? 'text-red-800 font-semibold' : 'text-gray-800'}`}>
-                  {value}
+                <div className={`flex-1 text-[15px] whitespace-pre-line ${showCorrect ? 'text-green-800 font-semibold' : ''} ${showWrong ? 'text-red-800 font-semibold' : 'text-gray-800'}`}>
+                  {formatBilingualText(value)}
                 </div>
               </label>
             );
@@ -170,8 +188,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               <Check className="w-4 h-4 mr-2" />
               Solution
             </h3>
-            <div className="text-green-900 leading-relaxed text-[15px]">
-              {question.solution}
+            <div className="text-green-900 leading-relaxed text-[15px] whitespace-pre-line">
+              {formatSolution(question.solution)}
             </div>
           </div>
         )}

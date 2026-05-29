@@ -1,0 +1,908 @@
+{
+  "chapter_num": 1,
+  "chapter_title": "Biology Full Test",
+  "subject": "GK Full Tests",
+  "subject_id": "gk_full_tests",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Consider the following statements regarding Cell organelles: \n कोशिकांगों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Lysosomes are known as the 'suicide bags' because of their hydrolytic enzymes. / लाइसोसोम अपने हाइड्रोलाइटिक एंजाइमों के कारण 'आत्मघाती थैली' के रूप में जाने जाते हैं।\n (b) Mitochondria possess their own DNA and ribosomes. / माइटोकॉन्ड्रिया के पास अपना स्वयं का DNA और राइबोसोम होता है।\n (c) Endoplasmic Reticulum is responsible for protein and lipid synthesis. / अंतःप्रद्रव्यी जालिका प्रोटीन और लिपिड संश्लेषण के लिए जिम्मेदार है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll three statements are correct. Lysosomes contain digestive enzymes, Mitochondria are semi-autonomous, and ER (Rough and Smooth) synthesizes proteins and lipids.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन सही हैं। लाइसोसोम में पाचक एंजाइम होते हैं, माइटोकॉन्ड्रिया अर्ध-स्वायत्त होते हैं, और ER (खुरदरी और चिकनी) प्रोटीन और लिपिड का संश्लेषण करती है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which of the following statements is correct regarding Xylem in plants? \n पौधों में जाइलम के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It transports food from leaves to other parts. / यह पत्तियों से अन्य भागों तक भोजन का परिवहन करता है।",
+        "b": "It consists of mostly living cells at maturity. / इसमें परिपक्वता के समय अधिकांशतः जीवित कोशिकाएं होती हैं।",
+        "c": "It conducts water and minerals unidirectionally. / यह जल और खनिजों का एकदिशीय संचालन करता है।",
+        "d": "Sieve tubes are its main conducting elements. / चालनी नलिकाएं इसके मुख्य संवाहक तत्व हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nXylem conducts water and minerals from roots to leaves in a single direction (unidirectional), while food transport is the function of Phloem.\n\n📖 हिंदी स्पष्टीकरण:\nजाइलम जड़ों से पत्तियों तक जल और खनिजों का एक ही दिशा (एकदिशीय) में संचालन करता है, जबकि भोजन परिवहन फ्लोएम का कार्य है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Consider the following statements about Enzymes: \n एंजाइमों के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) All enzymes are proteins, but all proteins are not enzymes. / सभी एंजाइम प्रोटीन होते हैं, लेकिन सभी प्रोटीन एंजाइम नहीं होते हैं। \n (b) Enzymes act as biocatalysts that speed up chemical reactions. / एंजाइम जैव-उत्प्रेरक के रूप में कार्य करते हैं जो रासायनिक प्रतिक्रियाओं को तेज करते हैं। \n (c) They are consumed completely during a chemical reaction. / रासायनिक प्रतिक्रिया के दौरान वे पूरी तरह से खपत हो जाते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEnzymes are biocatalysts (mostly proteins) but they are not consumed in the reaction; they can be reused.\n\n📖 हिंदी स्पष्टीकरण:\nएंजाइम जैव-उत्प्रेरक (ज्यादातर प्रोटीन) होते हैं लेकिन वे प्रतिक्रिया में खपत नहीं होते हैं; उन्हें पुन: उपयोग किया जा सकता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which of the following nitrogenous bases is found in RNA but not in DNA?\n निम्नलिखित में से कौन सा नाइट्रोजनयुक्त क्षार RNA में पाया जाता है लेकिन DNA में नहीं?",
+      "options": {
+        "a": "Cytosine / साइटोसिन",
+        "b": "Guanine / गुआनिन",
+        "c": "Thymine / थायमीन",
+        "d": "Uracil / यूरेसिल"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nDNA contains Adenine, Guanine, Cytosine, and Thymine. In RNA, Thymine is replaced by Uracil.\n\n📖 हिंदी स्पष्टीकरण:\nDNA में एडेनिन, गुआनिन, साइटोसिन और थायमीन होते हैं। RNA में, थायमीन की जगह यूरेसिल ले लेता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Consider the following statements regarding Human Blood: \n मानव रक्त के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Red Blood Cells (RBCs) lack a nucleus at maturity in humans. / मनुष्यों में लाल रक्त कोशिकाएं (RBCs) परिपक्वता पर केंद्रक विहीन होती हैं। \n (b) Monocytes are the most abundant type of White Blood Cells. / मोनोसाइट्स श्वेत रक्त कोशिकाओं का सबसे प्रचुर प्रकार हैं। \n (c) Blood platelets help in the coagulation of blood. / रक्त प्लेटलेट्स रक्त के थक्के जमने में मदद करते हैं।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNeutrophils are the most abundant WBCs (60-65%), not Monocytes. RBCs are enucleated and platelets aid in clotting.\n\n📖 हिंदी स्पष्टीकरण:\nन्यूट्रोफिल सबसे प्रचुर मात्रा में पाए जाने वाले WBCs (60-65%) हैं, मोनोसाइट्स नहीं। RBCs केंद्रक विहीन होते हैं और प्लेटलेट्स थक्के जमने में मदद करते हैं।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following statements is correct about 'Myopia'? \n 'मायोपिया' (निकट दृष्टिदोष) के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "The person cannot see nearby objects clearly. / व्यक्ति पास की वस्तुओं को स्पष्ट रूप से नहीं देख सकता है।",
+        "b": "The image is formed behind the retina. / प्रतिबिंब रेटिना के पीछे बनता है।",
+        "c": "It can be corrected using a concave lens. / इसे अवतल लेंस का उपयोग करके ठीक किया जा सकता है।",
+        "d": "It is also known as far-sightedness. / इसे दूर-दृष्टिदोष के रूप में भी जाना जाता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn Myopia (short-sightedness), the person can see near objects but not distant ones. The image forms in front of the retina and is corrected by a concave lens.\n\n📖 हिंदी स्पष्टीकरण:\nमायोपिया (निकट दृष्टिदोष) में, व्यक्ति पास की वस्तुओं को देख सकता है लेकिन दूर की नहीं। प्रतिबिंब रेटिना के सामने बनता है और इसे अवतल लेंस द्वारा ठीक किया जाता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "Consider the following statements regarding Vitamins: \n विटामिन के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Vitamin B and C are fat-soluble vitamins. / विटामिन B और C वसा में घुलनशील विटामिन हैं। \n (b) Vitamin K is essential for blood clotting. / विटामिन K रक्त के थक्के जमने के लिए आवश्यक है। \n (c) Deficiency of Vitamin D causes Rickets in children. / विटामिन D की कमी से बच्चों में रिकेट्स होता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nVitamin B and C are water-soluble. Vitamins A, D, E, and K are fat-soluble. Statements b and c are factually correct.\n\n📖 हिंदी स्पष्टीकरण:\nविटामिन B और C जल में घुलनशील हैं। विटामिन A, D, E और K वसा में घुलनशील हैं। कथन b और c तथ्यात्मक रूप से सही हैं।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which of the following hormones is known as the 'Emergency Hormone'? \n निम्नलिखित में से किस हार्मोन को 'आपातकालीन हार्मोन' के रूप में जाना जाता है?",
+      "options": {
+        "a": "Insulin / इंसुलिन",
+        "b": "Thyroxine / थायरोक्सिन",
+        "c": "Adrenaline / एड्रेनालिन",
+        "d": "Estrogen / एस्ट्रोजन"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 9,
+      "question": "Consider the following statements regarding Photosynthesis: \n प्रकाश संश्लेषण के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a catabolic process. / यह एक अपचयी (catabolic) प्रक्रिया है। \n (b) Chlorophyll absorbs mainly red and blue light. / क्लोरोफिल मुख्य रूप से लाल और नीले प्रकाश को अवशोषित करता है। \n (c) Oxygen released during photosynthesis comes from water molecules. / प्रकाश संश्लेषण के दौरान निकलने वाली ऑक्सीजन जल के अणुओं से आती है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPhotosynthesis is an anabolic (building) process, not catabolic. Oxygen is derived from the photolysis of water.\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश संश्लेषण एक उपचयी (anabolic) प्रक्रिया है, अपचयी नहीं। ऑक्सीजन जल के प्रकाश-अपघटन (photolysis) से प्राप्त होती है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Which part of the human brain is responsible for maintaining body posture and balance? \n मानव मस्तिष्क का कौन सा भाग शरीर की मुद्रा और संतुलन बनाए रखने के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Cerebrum / प्रमस्तिष्क",
+        "b": "Cerebellum / अनुमस्तिष्क",
+        "c": "Medulla Oblongata / मेडुला ओब्लोंगाटा",
+        "d": "Hypothalamus / हाइपोथैलेमस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Cerebellum (hindbrain) coordinates voluntary movements and maintains posture, balance, and equilibrium.\n\n📖 हिंदी स्पष्टीकरण:\nअनुमस्तिष्क (Cerebellum) स्वैच्छिक गतिविधियों का समन्वय करता है और शरीर की मुद्रा, संतुलन और साम्यावस्था बनाए रखता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Consider the following statements about Human Digestive System: \n मानव पाचन तंत्र के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Digestion of carbohydrates starts in the mouth. / कार्बोहाइड्रेट का पाचन मुख से शुरू होता है। \n (b) Bile juice is secreted by the Gallbladder. / पित्त रस का स्राव पित्ताशय द्वारा होता है। \n (c) The inner lining of the small intestine has villi for absorption. / छोटी आंत की आंतरिक परत में अवशोषण के लिए विली (villi) होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBile is produced/secreted by the Liver and only stored in the Gallbladder. Carbohydrate digestion begins in the mouth via salivary amylase.\n\n📖 हिंदी स्पष्टीकरण:\nपित्त यकृत द्वारा निर्मित/स्रावित होता है और केवल पित्ताशय में जमा होता है। कार्बोहाइड्रेट का पाचन लार एमाइलेज के माध्यम से मुख में शुरू होता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "Match the following Respiratory Organs with the organisms: \n निम्नलिखित श्वसन अंगों का जीवों के साथ मिलान करें:\n (a) Skin / त्वचा - (i) Fish / मछली \n (b) Gills / गलफड़े - (ii) Earthworm / केंचुआ \n (c) Trachea / श्वासनली - (iii) Cockroach / तिलचट्टा\n Choose the correct option: \n सही विकल्प चुनें:",
+      "options": {
+        "a": "a-i, b-ii, c-iii",
+        "b": "a-ii, b-i, c-iii",
+        "c": "a-ii, b-iii, c-i",
+        "d": "a-iii, b-i, c-ii"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEarthworms breathe through moist skin, fish use gills, and insects like cockroaches use a tracheal system.\n\n📖 हिंदी स्पष्टीकरण:\nकेंचुए नम त्वचा के माध्यम से सांस लेते हैं, मछलियां गलफड़ों का उपयोग करती हैं, और तिलचट्टे जैसे कीट श्वासनली तंत्र का उपयोग करते हैं।"
+    },
+    {
+      "q_num": 13,
+      "question": "Consider the following statements about Fungi: \n कवक के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Fungi are autotrophic organisms. / कवक स्वपोषी जीव होते हैं। \n (b) Their cell wall is made of Chitin. / उनकी कोशिका भित्ति काइटिन की बनी होती है। \n (c) Yeast is a multicellular fungus used in baking. / यीस्ट एक बहुकोशिकीय कवक है जिसका उपयोग बेकिंग में किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "b only / केवल b",
+        "c": "a and c / a और c",
+        "d": "b and c / b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nFungi are heterotrophic (not autotrophic). Yeast is a unicellular fungus, not multicellular. Their cell wall is indeed made of chitin.\n\n📖 हिंदी स्पष्टीकरण:\nकवक विषमपोषी (स्वपोषी नहीं) होते हैं। यीस्ट एककोशिकीय कवक है, बहुकोशिकीय नहीं। उनकी कोशिका भित्ति वास्तव में काइटिन की बनी होती है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which of the following is correct regarding the 'Universal Donor' blood group? \n 'सर्वदाता' रक्त समूह के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "AB Positive, as it lacks antibodies. / AB पॉजिटिव, क्योंकि इसमें एंटीबॉडी की कमी होती है।",
+        "b": "O Negative, as it lacks A, B, and Rh antigens. / O नेगेटिव, क्योंकि इसमें A, B और Rh एंटीजन की कमी होती है।",
+        "c": "O Positive, as it can be given to anyone. / O पॉजिटिव, क्योंकि इसे किसी को भी दिया जा सकता है।",
+        "d": "AB Negative, as it lacks Rh antigen. / AB नेगेटिव, क्योंकि इसमें Rh एंटीजन की कमी होती है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nO Negative is the true universal donor because it lacks A and B antigens on RBCs and also lacks the Rh factor, preventing immune reactions.\n\n📖 हिंदी स्पष्टीकरण:\nO नेगेटिव वास्तविक सर्वदाता है क्योंकि इसमें RBCs पर A और B एंटीजन की कमी होती है और Rh कारक भी नहीं होता है, जिससे प्रतिरक्षा प्रतिक्रिया रुक जाती है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Consider the following statements regarding Heart: \n हृदय के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The right side of the heart contains oxygenated blood. / हृदय के दाहिने हिस्से में ऑक्सीजन युक्त रक्त होता है। \n (b) Pulmonary artery carries deoxygenated blood to the lungs. / फुफ्फुस धमनी विऑक्सीजनित रक्त को फेफड़ों तक ले जाती है। \n (c) The pacemaker of the human heart is the SA node. / मानव हृदय का पेसमेकर SA नोड है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe right side of the heart receives deoxygenated blood. Pulmonary artery is an exception as it carries deoxygenated blood. SA node initiates heartbeats.\n\n📖 हिंदी स्पष्टीकरण:\nहृदय के दाहिने हिस्से में विऑक्सीजनित रक्त प्राप्त होता है। फुफ्फुस धमनी एक अपवाद है क्योंकि यह विऑक्सीजनित रक्त ले जाती है। SA नोड दिल की धड़कन शुरू करता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements regarding Plant Hormones: \n पादप हार्मोन के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Auxin is responsible for apical dominance and cell elongation. / ऑक्सिन शीर्ष प्रमुखता (apical dominance) और कोशिका विस्तार के लिए जिम्मेदार है। \n (b) Cytokinins promote cell division and delay leaf senescence. / साइटोकिनिन कोशिका विभाजन को बढ़ावा देते हैं और पत्तियों के बुढ़ापे में देरी करते हैं। \n (c) Abscisic Acid (ABA) is known as the 'growth promoter' hormone. / एब्सिसिक एसिड (ABA) को 'वृद्धि प्रवर्तक' हार्मोन के रूप में जाना जाता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAbscisic Acid (ABA) is a growth inhibitor, not a promoter. It helps in closing stomata during water stress.\n\n📖 हिंदी स्पष्टीकरण:\nएब्सिसिक एसिड (ABA) एक वृद्धि अवरोधक है, प्रवर्तक नहीं। यह जल तनाव के दौरान रंध्रों को बंद करने में मदद करता है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements is correct regarding the 'Nephron'? \n 'नेफ्रॉन' के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It is the structural and functional unit of the Liver. / यह यकृत की संरचनात्मक और कार्यात्मक इकाई है।",
+        "b": "Ultrafiltration occurs in the Bowman's capsule. / बोमन कैप्सूल में अल्ट्राफिल्ट्रेशन (अतिसूक्ष्म निस्यंदन) होता है।",
+        "c": "It reabsorbs 100% of the urea from the filtrate. / यह निस्यंद से 100% यूरिया को पुन: अवशोषित करता है।",
+        "d": "It is located in the thoracic cavity. / यह वक्ष गुहा में स्थित होता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNephron is the unit of the Kidney. Ultrafiltration happens in the Bowman's capsule/Glomerulus. Most urea is excreted, not fully reabsorbed.\n\n📖 हिंदी स्पष्टीकरण:\nनेफ्रॉन गुर्दे (Kidney) की इकाई है। अल्ट्राफिल्ट्रेशन बोमन कैप्सूल/ग्लोमेरुलस में होता है। अधिकांश यूरिया उत्सर्जित होता है, पूरी तरह पुन: अवशोषित नहीं।"
+    },
+    {
+      "q_num": 18,
+      "question": "Consider the following statements about Human Respiration: \n मानव श्वसन के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Diaphragm moves down during inhalation. / श्वास लेने (अंतःश्वसन) के दौरान डायाफ्राम नीचे की ओर चलता है। \n (b) Exchange of gases occurs in the Alveoli. / गैसों का विनिमय वायुकोशिका (Alveoli) में होता है। \n (c) Hemoglobin has a higher affinity for Oxygen than Carbon Monoxide. / हीमोग्लोबिन में कार्बन मोनोऑक्साइड की तुलना में ऑक्सीजन के लिए उच्च बंधुता होती है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHemoglobin has a much higher affinity (about 200-250 times) for Carbon Monoxide than for Oxygen, which is why CO is toxic.\n\n📖 हिंदी स्पष्टीकरण:\nहीमोग्लोबिन में ऑक्सीजन की तुलना में कार्बन मोनोऑक्साइड के लिए बहुत अधिक बंधुता (लगभग 200-250 गुना) होती है, यही कारण है कि CO विषाक्त है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Which of the following is a 'Double Membrane-bound' organelle? \n निम्नलिखित में से कौन सा 'दोहरी झिल्ली-बद्ध' कोशिकांग है?",
+      "options": {
+        "a": "Ribosome / राइबोसोम",
+        "b": "Lysosome / लाइसोसोम",
+        "c": "Chloroplast / क्लोरोप्लास्ट",
+        "d": "Golgi Body / गोल्जी बॉडी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNucleus, Mitochondria, and Chloroplasts are double membrane-bound. Ribosomes have no membrane.\n\n📖 हिंदी स्पष्टीकरण:\nकेंद्रक, माइटोकॉन्ड्रिया और क्लोरोप्लास्ट दोहरी झिल्ली वाले होते हैं। राइबोसोम में कोई झिल्ली नहीं होती है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Consider the following statements regarding Down's Syndrome: \n डाउन सिंड्रोम के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is caused by the trisomy of the 21st chromosome. / यह 21वें गुणसूत्र की ट्राइसोमी के कारण होता है। \n (b) It is a sex-linked genetic disorder. / यह एक लिंग-सहलग्न (sex-linked) आनुवंशिक विकार है। \n (c) Affected individuals often have a short stature and furrowed tongue. / प्रभावित व्यक्तियों का कद अक्सर छोटा होता है और जीभ फटी हुई होती है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDown's Syndrome is an autosomal disorder (chromosome 21), not sex-linked (like Colour Blindness or Hemophilia).\n\n📖 हिंदी स्पष्टीकरण:\nडाउन सिंड्रोम एक ऑटोसोमल विकार (गुणसूत्र 21) है, न कि लिंग-सहलग्न (जैसे वर्णांधता या हीमोफिलिया)।"
+    },
+    {
+      "q_num": 21,
+      "question": "The 'Nodes of Ranvier' are found in which of the following? \n 'रैनवियर के नोड्स' निम्नलिखित में से किसमें पाए जाते हैं?",
+      "options": {
+        "a": "Muscle fibers / मांसपेशी तंतु",
+        "b": "Neurons / न्यूरॉन्स",
+        "c": "Nephrons / नेफ्रॉन्स",
+        "d": "Osteocytes / अस्थि कोशिकाएं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNodes of Ranvier are the gaps in the myelin sheath of an axon in a neuron.\n\n📖 हिंदी स्पष्टीकरण:\nरैनवियर के नोड एक न्यूरॉन में अक्षतंतु (axon) के माइलिन म्यान (myelin sheath) में अंतराल होते हैं।"
+    },
+    {
+      "q_num": 22,
+      "question": "Consider the following pairs of Diseases and their Causes: \n रोगों और उनके कारणों के निम्नलिखित युग्मों पर विचार करें:\n (a) Scurvy / स्कर्वी - Vitamin C / विटामिन C \n (b) Xerophthalmia / ज़ेरोफ़थैल्मिया - Vitamin A / विटामिन A \n (c) Beri-beri / बेरी-बेरी - Vitamin B12 / विटामिन B12\n Which of the above pairs is/are correctly matched?\n उपरोक्त में से कौन सा/से युग्म सही सुमेलित है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBeri-beri is caused by the deficiency of Vitamin B1 (Thiamine), not B12.\n\n📖 हिंदी स्पष्टीकरण:\nबेरी-बेरी विटामिन B1 (थायमिन) की कमी से होता है, न कि B12 से।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which of the following statements is correct about 'Xylem Parenchyma'? \n 'जाइलम पैरेन्काइमा' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It is the only living component of xylem. / यह जाइलम का एकमात्र जीवित घटक है।",
+        "b": "It is responsible for water conduction in tall trees. / यह ऊंचे पेड़ों में जल संचालन के लिए जिम्मेदार है।",
+        "c": "Its cell wall is made of lignin only. / इसकी कोशिका भित्ति केवल लिग्निन से बनी होती है।",
+        "d": "It is a dead tissue. / यह एक मृत ऊतक है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIn Xylem, tracheids, vessels, and xylem fibers are dead, while Xylem Parenchyma is living and stores food.\n\n📖 हिंदी स्पष्टीकरण:\nजाइलम में, ट्रैकईड्स, वाहिकाएं और जाइलम फाइबर मृत होते हैं, जबकि जाइलम पैरेन्काइमा जीवित होता है और भोजन का संचय करता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Consider the following statements regarding the Human Heartbeat: \n मानव हृदय की धड़कन के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The 'Lubb' sound is produced by the closure of AV valves. / 'लब' ध्वनि AV वाल्व के बंद होने से उत्पन्न होती है। \n (b) The 'Dupp' sound is produced by the closure of semilunar valves. / 'डप' ध्वनि अर्धचंद्राकार (semilunar) वाल्व के बंद होने से उत्पन्न होती है।\n (c) An average adult heart beats 100-110 times per minute. / एक औसत वयस्क का दिल प्रति मिनट 100-110 बार धड़कता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe normal resting heart rate for adults is 72 times per minute. Statements (a) and (b) correctly describe heart sounds.\n\n📖 हिंदी स्पष्टीकरण:\nवयस्कों के लिए सामान्य विश्राम हृदय गति 72 बार प्रति मिनट है। कथन (a) और (b) हृदय की ध्वनियों का सही वर्णन करते हैं।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which of the following cell organelles is involved in the formation of Acrosome in human sperm? \n निम्नलिखित में से कौन सा कोशिकांग मानव शुक्राणु में एक्रोसोम के निर्माण में शामिल है?",
+      "options": {
+        "a": "Mitochondria / माइटोकॉन्ड्रिया",
+        "b": "Golgi Apparatus / गोल्जी उपकरण",
+        "c": "Centriole / सेंट्रियोल",
+        "d": "Nucleus / केंद्रक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Acrosome, which helps the sperm penetrate the egg, is derived from the Golgi apparatus.\n\n📖 हिंदी स्पष्टीकरण:\nएक्रोसोम, जो शुक्राणु को अंडे में प्रवेश करने में मदद करता है, गोल्जी उपकरण से प्राप्त होता है।"
+    },
+    {
+      "q_num": 26,
+      "question": "Consider the following statements about DNA Replication: \n DNA प्रतिकृति (Replication) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It occurs during the S-phase of the Cell Cycle. / यह कोशिका चक्र के S-चरण के दौरान होता है। \n (b) DNA polymerase is the main enzyme involved. / DNA पॉलीमरेज़ शामिल मुख्य एंजाइम है। \n (c) It is a conservative process. / यह एक संरक्षी (conservative) प्रक्रिया है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDNA replication is semi-conservative, meaning each new DNA molecule has one old and one new strand.\n\n📖 हिंदी स्पष्टीकरण:\nDNA प्रतिकृति अर्ध-संरक्षी (semi-conservative) है, जिसका अर्थ है कि प्रत्येक नए DNA अणु में एक पुराना और एक नया स्ट्रैंड होता है।"
+    },
+    {
+      "q_num": 27,
+      "question": "Which of the following statements is INCORRECT regarding 'Parenchyma' tissue? \n 'पैरेन्काइमा' ऊतक के संबंध में निम्नलिखित में से कौन सा कथन गलत है?",
+      "options": {
+        "a": "It is a simple permanent tissue. / यह एक सरल स्थायी ऊतक है।",
+        "b": "The cells are thin-walled and living. / कोशिकाएं पतली भित्ति वाली और जीवित होती हैं।",
+        "c": "It provides mechanical strength to the plants like sclerenchyma. / यह स्क्लेरेन्काइमा की तरह पौधों को यांत्रिक शक्ति प्रदान करता है।",
+        "d": "It is involved in food storage and photosynthesis. / यह भोजन संचय और प्रकाश संश्लेषण में शामिल है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSclerenchyma provides mechanical strength; Parenchyma is primarily for storage and basic metabolism.\n\n📖 हिंदी स्पष्टीकरण:\nस्क्लेरेन्काइमा यांत्रिक शक्ति प्रदान करता है; पैरेन्काइमा मुख्य रूप से संचय और बुनियादी चयापचय के लिए है।"
+    },
+    {
+      "q_num": 28,
+      "question": "Consider the following statements regarding the 'Pancreas': \n 'अग्न्याशय' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It acts as both exocrine and endocrine gland. / यह बहिःस्रावी और अंतःस्रावी दोनों ग्रंथियों के रूप में कार्य करता है। \n (b) Insulin is secreted by Alpha cells of Islets of Langerhans. / इंसुलिन का स्राव लैंगरहैंस के द्वीपों की अल्फा कोशिकाओं द्वारा किया जाता है। \n (c) Glucagon increases blood glucose levels. / ग्लूकागन रक्त शर्करा के स्तर को बढ़ाता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nInsulin is secreted by Beta cells, while Alpha cells secrete Glucagon.\n\n📖 हिंदी स्पष्टीकरण:\nइंसुलिन बीटा कोशिकाओं द्वारा स्रावित होता है, जबकि अल्फा कोशिकाएं ग्लूकागन स्रावित करती हैं।"
+    },
+    {
+      "q_num": 29,
+      "question": "'Triple Antigen' (DPT) vaccine is given to protect against which diseases? \n 'ट्रिपल एंटीजन' (DPT) का टीका किन बीमारियों से बचाने के लिए दिया जाता है?",
+      "options": {
+        "a": "Diarrhea, Polio, Typhoid / दस्त, पोलियो, टाइफाइड",
+        "b": "Diphtheria, Pertussis, Tetanus / डिप्थीरिया, पर्टुसिस (काली खांसी), टेटनस",
+        "c": "Diphtheria, Polio, Tetanus / डिप्थीरिया, पोलियो, टेटनस",
+        "d": "Dengue, Pertussis, Typhoid / डेंगू, पर्टुसिस, टाइफाइड"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDPT stands for Diphtheria, Pertussis (Whooping cough), and Tetanus.\n\n📖 हिंदी स्पष्टीकरण:\nDPT का अर्थ डिप्थीरिया, पर्टुसिस (काली खांसी) और टेटनस है।"
+    },
+    {
+      "q_num": 30,
+      "question": "Consider the following statements about 'Blood Pressure': \n 'रक्तचाप' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) The normal blood pressure is 120/80 mm Hg. / सामान्य रक्तचाप 120/80 mm Hg होता है। \n (b) 120 represents the diastolic pressure. / 120 डायस्टोलिक दबाव को दर्शाता है। \n (c) It is measured using an instrument called Sphygmomanometer. / इसे स्फिग्मोमैनोमीटर नामक उपकरण का उपयोग करके मापा जाता है।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and c / a और c",
+        "c": "b and c / b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\n120 is the systolic (pumping) pressure and 80 is the diastolic (resting) pressure.\n\n📖 हिंदी स्पष्टीकरण:\n120 सिस्टोलिक (पंपिंग) दबाव है और 80 डायस्टोलिक (विश्राम) दबाव है।"
+    },
+    {
+      "q_num": 31,
+      "question": "Consider the following statements regarding 'Mendel’s Laws of Inheritance': \n 'मेंडल के वंशानुक्रम के नियमों' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The Law of Segregation states that alleles separate during gamete formation. / पृथक्करण का नियम कहता है कि युग्मक निर्माण के दौरान एलील अलग हो जाते हैं। \n (b) The Law of Independent Assortment is observed in monohybrid crosses. / स्वतंत्र अपव्यूहन का नियम मोनोहाइब्रिड क्रॉस में देखा जाता है। \n (c) Phenotypic ratio of a dihybrid cross is 9:3:3:1. / डाइहाइब्रिड क्रॉस का फेनोटाइपिक अनुपात 9:3:3:1 है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Law of Independent Assortment is observed in dihybrid crosses, not monohybrid.\n\n📖 हिंदी स्पष्टीकरण:\nस्वतंत्र अपव्यूहन का नियम डाइहाइब्रिड क्रॉस में देखा जाता है, मोनोहाइब्रिड में नहीं।"
+    },
+    {
+      "q_num": 32,
+      "question": "Which of the following statements is correct regarding 'Meiosis'? \n 'अर्धसूत्रीविभाजन' (Meiosis) के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It occurs in somatic cells for growth. / यह वृद्धि के लिए दैहिक कोशिकाओं में होता है।",
+        "b": "It results in two daughter cells with the same number of chromosomes. / इसके परिणामस्वरूप समान गुणसूत्र संख्या वाली दो संतति कोशिकाएं बनती हैं।",
+        "c": "Crossing over occurs during Prophase I. / प्रोपेज़ I के दौरान क्रॉसिंग ओवर (जीन विनिमय) होता है।",
+        "d": "It is a single-step division process. / यह एक एकल-चरणीय विभाजन प्रक्रिया है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMeiosis occurs in germ cells, results in four haploid cells, and involves crossing over in Prophase I to increase genetic diversity.\n\n📖 हिंदी स्पष्टीकरण:\nअर्धसूत्रीविभाजन जनन कोशिकाओं में होता है, इसके परिणामस्वरूप चार अगुणित कोशिकाएं बनती हैं, और आनुवंशिक विविधता बढ़ाने के लिए प्रोपेज़ I में क्रॉसिंग ओवर शामिल होता है।"
+    },
+    {
+      "q_num": 33,
+      "question": "Consider the following pairs of Organisms and their Mode of Reproduction: \n जीवों और उनके प्रजनन के तरीकों के निम्नलिखित युग्मों पर विचार करें:\n (a) Hydra / हाइड्रा - Budding / मुकुलन \n (b) Amoeba / अमीबा - Multiple Fission / बहु विखंडन \n (c) Spirogyra / स्पाइरोगाइरा - Fragmentation / विखंडन\n Which of the above pairs is/are correctly matched? \n उपरोक्त में से कौन सा/से युग्म सही सुमेलित है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and c only / केवल a और c",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll are correct. Amoeba shows both binary and multiple fission (under unfavorable conditions).\n\n📖 हिंदी स्पष्टीकरण:\nसभी सही हैं। अमीबा बाइनरी और बहु विखंडन (प्रतिकूल परिस्थितियों में) दोनों दिखाता है।"
+    },
+    {
+      "q_num": 34,
+      "question": "Which of the following statements is correct about 'Antibiotics'? \n 'एंटीबायोटिक्स' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "They are effective against both viruses and bacteria. / वे वायरस और बैक्टीरिया दोनों के खिलाफ प्रभावी हैं।",
+        "b": "Penicillin was the first antibiotic discovered by Alexander Fleming. / पेनिसिलिन अलेक्जेंडर फ्लेमिंग द्वारा खोजा गया पहला एंटीबायोटिक था।",
+        "c": "They work by strengthening the human immune system only. / वे केवल मानव प्रतिरक्षा प्रणाली को मजबूत करके काम करते हैं।",
+        "d": "They can be taken without a doctor's prescription safely. / उन्हें डॉक्टर के पर्चे के बिना सुरक्षित रूप से लिया जा सकता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAntibiotics only work against bacteria, not viruses, by inhibiting bacterial cell wall synthesis or metabolism.\n\n📖 हिंदी स्पष्टीकरण:\nएंटीबायोटिक्स केवल बैक्टीरिया के खिलाफ काम करते हैं, वायरस के खिलाफ नहीं, बैक्टीरिया की कोशिका भित्ति संश्लेषण या चयापचय को रोककर।"
+    },
+    {
+      "q_num": 35,
+      "question": "Consider the following statements regarding the 'Human Skeleton': \n 'मानव कंकाल' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The adult human skeleton consists of 206 bones. / वयस्क मानव कंकाल में 206 हड्डियाँ होती हैं। \n (b) Femur is the longest and strongest bone in the body. / फीमर शरीर की सबसे लंबी और सबसे मजबूत हड्डी है। \n (c) Stapes, the smallest bone, is found in the middle ear. / स्टेप्स, सबसे छोटी हड्डी, मध्य कान में पाई जाती है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are factual. The human skeleton is divided into Axial and Appendicular parts.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन तथ्यात्मक हैं। मानव कंकाल को अक्षीय और उपांगीय भागों में विभाजित किया गया है।"
+    },
+    {
+      "q_num": 36,
+      "question": "Which of the following is correct regarding 'Phototropism' in plants? \n पौधों में 'प्रकाशानुवर्तन' (Phototropism) के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "Shoots show negative phototropism. / प्ररोह (Shoots) नकारात्मक प्रकाशानुवर्तन दिखाते हैं।",
+        "b": "Roots show positive phototropism. / जड़ें सकारात्मक प्रकाशानुवर्तन दिखाती हैं।",
+        "c": "It is caused by the unequal distribution of Auxin. / यह ऑक्सिन के असमान वितरण के कारण होता है।",
+        "d": "Gibberellins are the primary hormone involved. / गिब्बेरेलिन इसमें शामिल प्राथमिक हार्मोन हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nShoots are positively phototropic (bend towards light) due to Auxin accumulating on the shaded side, causing it to grow faster.\n\n📖 हिंदी स्पष्टीकरण:\nऑक्सिन के छायादार पक्ष में जमा होने के कारण प्ररोह सकारात्मक रूप से प्रकाशानुवर्ती (प्रकाश की ओर झुकना) होते हैं, जिससे वह तेजी से बढ़ता है।"
+    },
+    {
+      "q_num": 37,
+      "question": "Consider the following statements regarding 'AIDS': \n 'एड्स' (AIDS) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is caused by a DNA virus called HIV. / यह HIV नामक DNA वायरस के कारण होता है। \n (b) It drastically reduces the number of Helper T-cells. / यह हेल्पर T-कोशिकाओं की संख्या को बहुत कम कर देता है। \n (c) ELISA test is used for the screening of AIDS. / ELISA परीक्षण का उपयोग एड्स की स्क्रीनिंग के लिए किया जाता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHIV is a Retrovirus, meaning its genetic material is RNA, not DNA.\n\n📖 हिंदी स्पष्टीकरण:\nHIV एक रेट्रोवायरस है, जिसका अर्थ है कि इसकी आनुवंशिक सामग्री RNA है, DNA नहीं।"
+    },
+    {
+      "q_num": 38,
+      "question": "Which of the following parts of the plant is involved in 'Vegetative Propagation' in Bryophyllum? \n ब्रायोफिलम में 'वानस्पतिक प्रवर्धन' (Vegetative Propagation) में पौधे का कौन सा भाग शामिल होता है?",
+      "options": {
+        "a": "Stem / तना",
+        "b": "Root / जड़",
+        "c": "Leaves / पत्तियां",
+        "d": "Flower / फूल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBryophyllum propagates through buds produced in the notches along the leaf margins.\n\n📖 हिंदी स्पष्टीकरण:\nब्रायोफिलम पत्ती के किनारों के साथ खांचों में उत्पन्न कलियों के माध्यम से फैलता है।"
+    },
+    {
+      "q_num": 39,
+      "question": "Consider the following statements regarding 'Bile Juice': \n 'पित्त रस' (Bile Juice) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It does not contain any digestive enzymes. / इसमें कोई पाचक एंजाइम नहीं होता है। \n (b) It helps in the emulsification of fats. / यह वसा के पायसीकरण (emulsification) में मदद करता है। \n (c) It makes the medium of food acidic in the small intestine. / यह छोटी आंत में भोजन के माध्यम को अम्लीय बनाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBile is alkaline and neutralizes the acidity of stomach food (chyme) to make it alkaline for pancreatic enzymes.\n\n📖 हिंदी स्पष्टीकरण:\nपित्त क्षारीय होता है और अग्न्याशय के एंजाइमों के लिए इसे क्षारीय बनाने के लिए पेट के भोजन (chyme) की अम्लता को बेअसर करता है।"
+    },
+    {
+      "q_num": 40,
+      "question": "Match the following deficiency diseases with the respective minerals: \n निम्नलिखित कमी वाले रोगों का संबंधित खनिजों के साथ मिलान करें:\n (a) Goitre / घेंघा - (i) Iron / लोहा \n (b) Anemia / एनीमिया - (ii) Calcium / कैल्शियम \n (c) Osteoporosis / ऑस्टियोपोरोसिस - (iii) Iodine / आयोडीन\n Choose the correct option: \n सही विकल्प चुनें:",
+      "options": {
+        "a": "a-iii, b-i, c-ii",
+        "b": "a-i, b-ii, c-iii",
+        "c": "a-iii, b-ii, c-i",
+        "d": "a-ii, b-i, c-iii"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIodine deficiency causes Goitre, Iron deficiency leads to Anemia, and Calcium deficiency causes bone issues like Osteoporosis.\n\n📖 हिंदी स्पष्टीकरण:\nआयोडीन की कमी से घेंघा होता है, लोहे की कमी से एनीमिया होता है, और कैल्शियम की कमी से ऑस्टियोपोरोसिस जैसी हड्डियों की समस्याएं होती हैं।"
+    },
+    {
+      "q_num": 41,
+      "question": "Consider the following statements about 'Double Fertilization' in Angiosperms: \n एंजियोस्पर्म (आवृतबीजी) में 'दोहरे निषेचन' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It involves both Syngamy and Triple Fusion. / इसमें युग्मक संलयन (Syngamy) और त्रिसंलयन (Triple Fusion) दोनों शामिल हैं। \n (b) One male gamete fuses with the egg to form a Zygote. / एक नर युग्मक अंडे के साथ संलयित होकर युग्मनज (Zygote) बनाता है। \n (c) Triple fusion results in the formation of Endosperm. / त्रिसंलयन के परिणामस्वरूप भ्रूणपोष (Endosperm) का निर्माण होता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are correct. Double fertilization is a unique feature of flowering plants.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। दोहरा निषेचन पुष्पीय पौधों की एक अनूठी विशेषता है।"
+    },
+    {
+      "q_num": 42,
+      "question": "Which of the following cell organelles is responsible for the detoxification of drugs and poisons in the liver? \n यकृत में दवाओं और जहरों के विषहरण (detoxification) के लिए निम्नलिखित में से कौन सा कोशिकांग जिम्मेदार है?",
+      "options": {
+        "a": "Rough Endoplasmic Reticulum / खुरदरी अंतःप्रद्रव्यी जालिका",
+        "b": "Smooth Endoplasmic Reticulum / चिकनी अंतःप्रद्रव्यी जालिका",
+        "c": "Mitochondria / माइटोकॉन्ड्रिया",
+        "d": "Vacuoles / रिक्तिकाएं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSmooth ER (SER) plays a crucial role in detoxifying many poisons and drugs in the liver cells of vertebrates.\n\n📖 हिंदी स्पष्टीकरण:\nचिकनी ER (SER) कशेरुकियों की यकृत कोशिकाओं में कई जहरों और दवाओं को विषमुक्त करने में महत्वपूर्ण भूमिका निभाती है।"
+    },
+    {
+      "q_num": 43,
+      "question": "Consider the following statements about 'Reflex Action': \n ‘प्रतिवर्ती क्रिया' (Reflex Action) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is a fast, involuntary response to a stimulus. / यह उद्दीपन के प्रति एक तीव्र, अनैच्छिक प्रतिक्रिया है। \n (b) The pathway is controlled mainly by the Spinal Cord. / यह पथ मुख्य रूप से रीढ़ की हड्डी (Spinal Cord) द्वारा नियंत्रित होता है। \n (c) Sensory neurons carry signals from the spinal cord to muscles. / संवेदी न्यूरॉन्स रीढ़ की हड्डी से मांसपेशियों तक संकेत ले जाते हैं। W\n hich of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSensory neurons carry signals from receptors to the spinal cord; Motor neurons carry signals from the spinal cord to muscles.\n\n📖 हिंदी स्पष्टीकरण:\nसंवेदी न्यूरॉन्स रिसेप्टर्स से रीढ़ की हड्डी तक संकेत ले जाते हैं; मोटर न्यूरॉन्स रीढ़ की हड्डी से मांसपेशियों तक संकेत ले जाते हैं।"
+    },
+    {
+      "q_num": 44,
+      "question": "Which of the following is correct regarding 'Parthenocarpy'? \n 'पार्थेनोकार्पी' (अनिषेकफलन) के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "Formation of fruit without fertilization. / निषेचन के बिना फल का निर्माण।",
+        "b": "Formation of seed without fertilization. / निषेचन के बिना बीज का निर्माण।",
+        "c": "Formation of fruit from parts other than ovary. / अंडाशय के अलावा अन्य भागों से फल का निर्माण।",
+        "d": "Death of the embryo after fertilization. / निषेचन के बाद भ्रूण की मृत्यु।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nParthenocarpy is the production of fruit without fertilization, resulting in seedless fruits like bananas.\n\n📖 हिंदी स्पष्टीकरण:\nपार्थेनोकार्पी निषेचन के बिना फल का उत्पादन है, जिसके परिणामस्वरूप केले जैसे बीज रहित फल प्राप्त होते हैं।"
+    },
+    {
+      "q_num": 45,
+      "question": "Consider the following statements regarding 'Human Sex Determination': \n 'मानव लिंग निर्धारण' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Females have two identical sex chromosomes (XX). / महिलाओं में दो समान लिंग गुणसूत्र (XX) होते हैं। \n (b) Males produce two types of sperms (X and Y). / पुरुष दो प्रकार के शुक्राणु (X और Y) उत्पन्न करते हैं। \n (c) The sex of the child is determined by the mother's egg. / बच्चे का लिंग माँ के अंडे से निर्धारित होता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSince the mother always provides an X chromosome, the sex of the child depends on whether the father's sperm carries an X or a Y chromosome.\n\n📖 हिंदी स्पष्टीकरण:\nचूंकि मां हमेशा X गुणसूत्र प्रदान करती है, इसलिए बच्चे का लिंग इस बात पर निर्भर करता है कि पिता के शुक्राणु में X या Y गुणसूत्र है या नहीं।"
+    },
+    {
+      "q_num": 46,
+      "question": "Consider the following statements regarding 'Phylum Arthropoda':\n 'फाइलम आर्थ्रोपोडा' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is the largest phylum of Animalia which includes insects. / यह एनिमेलिया का सबसे बड़ा संघ है जिसमें कीट शामिल हैं।\n (b) They have an open circulatory system. / इनमें खुला परिसंचरण तंत्र होता है।\n (c) Their body is covered by a calcareous shell. / इनका शरीर चूनेदार (calcareous) खोल से ढका होता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a and c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nArthropods have an exoskeleton made of chitin, not a calcareous shell (which is a feature of Molluscs).\n\n📖 हिंदी स्पष्टीकरण:\nआर्थ्रोपोड्स में काइटिन से बना बाह्य कंकाल होता है, न कि चूनेदार खोल (जो मोलस्क की विशेषता है)।"
+    },
+    {
+      "q_num": 47,
+      "question": "Which of the following statements is correct regarding 'Ecological Pyramids'?\n 'पारिस्थितिक पिरामिड' के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "Pyramid of energy is always upright. / ऊर्जा का पिरामिड हमेशा सीधा होता है।",
+        "b": "Pyramid of biomass in a sea is always upright. / समुद्र में जैवभार का पिरामिड हमेशा सीधा होता है।",
+        "c": "Pyramid of numbers in a forest ecosystem is always inverted. / वन पारिस्थितिकी तंत्र में संख्याओं का पिरामिड हमेशा उल्टा होता है।",
+        "d": "None of the above. / उपरोक्त में से कोई नहीं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nEnergy pyramid is always upright because energy is lost as heat at each trophic level (10% law). Sea biomass pyramid is usually inverted.\n\n📖 हिंदी स्पष्टीकरण:\nऊर्जा का पिरामिड हमेशा सीधा होता है क्योंकि प्रत्येक पोषण स्तर पर ऊर्जा का क्षय ऊष्मा के रूप में होता है (10% नियम)। समुद्र का जैवभार पिरामिड आमतौर पर उल्टा होता है।"
+    },
+    {
+      "q_num": 48,
+      "question": "Consider the following statements about 'Amphibians':\n 'उभयचरों' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They have a three-chambered heart. / इनका हृदय तीन कक्षों वाला होता है।\n (b) They are warm-blooded (Homeothermic) animals. / ये गर्म रक्त वाले (होमियोथर्मिक) जानवर हैं।\n (c) Respiration can occur through gills, lungs, and skin. / श्वसन गलफड़ों, फेफड़ों और त्वचा के माध्यम से हो सकता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAmphibians are cold-blooded (Poikilothermic), meaning their body temperature changes with the environment.\n\n📖 हिंदी स्पष्टीकरण:\nउभयचर ठंडे रक्त वाले (पोइकिलोथर्मिक) होते हैं, जिसका अर्थ है कि उनके शरीर का तापमान पर्यावरण के साथ बदलता रहता है।"
+    },
+    {
+      "q_num": 49,
+      "question": "Which of the following is correct regarding 'Lichen'?\n 'लाइकेन' के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "It is a symbiotic association between a Fungus and an Alga. / यह कवक और शैवाल के बीच एक सहजीवी संबंध है।",
+        "b": "It is a primary indicator of water pollution. / यह जल प्रदूषण का प्राथमिक संकेतक है।",
+        "c": "The fungal part is called Phycobiont. / इसके कवक वाले भाग को फाइकोबियोन्ट कहा जाता है।",
+        "d": "They grow rapidly in areas with high Sulfur dioxide concentration. / ये उच्च सल्फर डाइऑक्साइड सांद्रता वाले क्षेत्रों में तेजी से बढ़ते हैं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLichen is a symbiosis of Algae (Phycobiont) and Fungi (Mycobiont). They are indicators of air pollution (especially $SO_2$) and do not grow in polluted air.\n\n📖 हिंदी स्पष्टीकरण:\nलाइकेन शैवाल (फाइकोबियोन्ट) और कवक (माइकोबियोन्ट) का सहजीवन है। वे वायु प्रदूषण (विशेष रूप से $SO_2$) के संकेतक हैं और प्रदूषित हवा में नहीं उगते हैं।"
+    },
+    {
+      "q_num": 50,
+      "question": "Consider the following statements regarding 'Connective Tissue':\n 'संयोजी ऊतक' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Ligaments connect muscle to bone. / लिगामेंट मांसपेशी को हड्डी से जोड़ते हैं।\n (b) Tendons connect bone to bone. / टेंडन हड्डी को हड्डी से जोड़ते हैं।\n (c) Cartilage and Bone are types of skeletal connective tissue. / उपास्थि (Cartilage) और अस्थि कंकाल संयोजी ऊतक के प्रकार हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "c only / केवल c",
+        "c": "a and b / a और b",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLigaments connect Bone to Bone (B-L-B). Tendons connect Muscle to Bone (M-T-B).\n\n📖 हिंदी स्पष्टीकरण:\nलिगामेंट हड्डी को हड्डी से जोड़ते हैं। टेंडन मांसपेशी को हड्डी से जोड़ते हैं।"
+    },
+    {
+      "q_num": 51,
+      "question": "Which of the following cell organelles is known as the 'Traffic Police' of the cell?\n निम्नलिखित में से किस कोशिकांग को कोशिका का 'ट्रैफिक पुलिस' कहा जाता है?",
+      "options": {
+        "a": "Lysosome / लाइसोसोम",
+        "b": "Golgi Apparatus / गोल्जी उपकरण",
+        "c": "Ribosome / राइबोसोम",
+        "d": "Endoplasmic Reticulum / अंतःप्रद्रव्यी जालिका"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGolgi Apparatus is responsible for packaging and dispatching proteins/lipids to their targets, thus acting as a traffic police.\n\n📖 हिंदी स्पष्टीकरण:\nगोल्जी उपकरण प्रोटीन/लिपिड की पैकेजिंग और उनके लक्ष्यों तक भेजने के लिए जिम्मेदार है, इस प्रकार यह ट्रैफिक पुलिस के रूप में कार्य करता है।"
+    },
+    {
+      "q_num": 52,
+      "question": "Consider the following statements about 'Casparian Strips':\n 'कैस्पेरियन स्ट्रिप्स' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They are found in the endodermis of roots. / ये जड़ों के एंडोडर्मिस में पाए जाते हैं।\n (b) They are made of a water-impermeable waxy material called Suberin. / ये सुबेरिन नामक जल-अभेद्य मोमी पदार्थ से बने होते हैं।\n (c) They facilitate the free flow of water into the vascular cylinder. / ये संवहनी सिलेंडर में जल के मुक्त प्रवाह को सुगम बनाते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCasparian strips block the apoplastic (cell wall) pathway, forcing water to pass through the cell membrane (symplastic) to regulate intake.\n\n📖 हिंदी स्पष्टीकरण:\nकैस्पेरियन स्ट्रिप्स एपोप्लास्टिक (कोशिका भित्ति) मार्ग को रोकती हैं, जिससे जल को सेवन को विनियमित करने के लिए कोशिका झिल्ली (सिम्प्लास्टिक) के माध्यम से गुजरने के लिए मजबूर होना पड़ता है।"
+    },
+    {
+      "q_num": 53,
+      "question": "Which of the following statements is correct regarding 'Platyhelminthes'?\n 'प्लेटिहेल्मिन्थेस' के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "They are commonly called Roundworms. / इन्हें आमतौर पर गोलकृमि कहा जाता है।",
+        "b": "They possess a true coelom (body cavity). / इनमें वास्तविक सीलोम (शरीर गुहा) होती है।",
+        "c": "Flame cells are used for excretion and osmoregulation. / ज्वाला कोशिकाओं (Flame cells) का उपयोग उत्सर्जन और परासरण नियमन के लिए किया जाता है।",
+        "d": "They have a complete digestive system. / इनका पाचन तंत्र पूर्ण होता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPlatyhelminthes (Flatworms) are acoelomates and have an incomplete digestive system. Flame cells are their unique excretory organs.\n\n📖 हिंदी स्पष्टीकरण:\nप्लेटिहेल्मिन्थेस (चपटे कृमि) असीलोमेट्स होते हैं और इनका पाचन तंत्र अधूरा होता है। ज्वाला कोशिकाएं इनके अद्वितीय उत्सर्जन अंग हैं।"
+    },
+    {
+      "q_num": 54,
+      "question": "Consider the following statements regarding 'Xerophytes':\n 'ज़ेरोफाइट्स' (मरुद्भिद) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They have sunken stomata to reduce transpiration. / वाष्पोत्सर्जन को कम करने के लिए इनमें धंसे हुए रंध्र (sunken stomata) होते हैं।\n (b) Leaves are often modified into spines. / पत्तियां अक्सर कांटों में रूपांतरित हो जाती हैं।\n (c) They lack a thick cuticle on their leaf surface. / उनकी पत्ती की सतह पर मोटी क्यूटिकल की कमी होती है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nXerophytes have a very thick waxy cuticle to prevent water loss in arid environments.\n\n📖 हिंदी स्पष्टीकरण:\nमरुद्भिद (Xerophytes) में शुष्क वातावरण में जल की हानि को रोकने के लिए बहुत मोटी मोमी क्यूटिकल होती है।"
+    },
+    {
+      "q_num": 55,
+      "question": "In the context of human blood, what is 'Serum'?\n मानव रक्त के संदर्भ में 'सीरम' क्या है?",
+      "options": {
+        "a": "Plasma without Clotting Factors / क्लॉटिंग कारकों के बिना प्लाज्मा",
+        "b": "Plasma with RBCs / RBCs के साथ प्लाज्मा",
+        "c": "Blood without WBCs / WBCs के बिना रक्त",
+        "d": "Lymph without Proteins / प्रोटीन के बिना लसीका"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSerum is the fluid component of blood that remains after the blood has clotted (Plasma minus Fibrinogen/Clotting factors).\n\n📖 हिंदी स्पष्टीकरण:\nसीरम रक्त का वह तरल घटक है जो रक्त के थक्के जमने के बाद बचता है (प्लाज्मा ऋण फाइब्रिनोजेन/क्लॉटिंग कारक)।"
+    },
+    {
+      "q_num": 56,
+      "question": "Consider the following statements about 'Bryophytes':\n 'ब्रायोफाइट्स' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They are called the 'Amphibians of the Plant Kingdom'. / इन्हें 'पादप जगत का उभयचर' कहा जाता है।\n (b) They lack true roots, stems, and leaves. / इनमें वास्तविक जड़, तना और पत्तियों का अभाव होता है।\n (c) They possess specialized vascular tissues (Xylem/Phloem). / इनमें विशिष्ट संवहनी ऊतक (जाइलम/फ्लोएम) होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBryophytes are non-vascular plants; they do not have xylem or phloem. They need water for fertilization, hence called amphibians.\n\n📖 हिंदी स्पष्टीकरण:\nब्रायोफाइट्स गैर-संवहनी पौधे हैं; उनमें जाइलम या फ्लोएम नहीं होता है। उन्हें निषेचन के लिए जल की आवश्यकता होती है, इसलिए उन्हें उभयचर कहा जाता है।"
+    },
+    {
+      "q_num": 57,
+      "question": "Which of the following hormones is responsible for the 'Milk Ejection' from mammary glands?\n स्तन ग्रंथियों से 'दूध के निष्कासन' के लिए निम्नलिखित में से कौन सा हार्मोन जिम्मेदार है?",
+      "options": {
+        "a": "Prolactin / प्रोलैक्टिन",
+        "b": "Oxytocin / ऑक्सीटोसिन",
+        "c": "Progesterone / प्रोजेस्टेरोन",
+        "d": "Estrogen / एस्ट्रोजन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nProlactin helps in milk production, but Oxytocin (the love hormone) is responsible for milk ejection or let-down.\n\n📖 हिंदी स्पष्टीकरण:\nप्रोलैक्टिन दूध के उत्पादन में मदद करता है, लेकिन ऑक्सीटोसिन दूध के निष्कासन के लिए जिम्मेदार है।"
+    },
+    {
+      "q_num": 58,
+      "question": "Consider the following statements regarding 'Secondary Growth' in plants:\n पौधों में 'द्वितीयक वृद्धि' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is responsible for the increase in the girth (thickness) of the plant. / यह पौधे के घेरे (मोटाई) में वृद्धि के लिए जिम्मेदार है।\n (b) It occurs due to the activity of Lateral Meristems (Vascular Cambium). / यह पार्श्व विभज्योतक (संवहनी कैंबियम) की गतिविधि के कारण होता है।\n (c) It is a characteristic feature of Monocots. / यह एकबीजपत्री (Monocots) की एक विशिष्ट विशेषता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b and c",
+        "c": "a and c only / केवल a and c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSecondary growth is absent in Monocots because they lack cambium; it is found in Dicots and Gymnosperms.\n\n📖 हिंदी स्पष्टीकरण:\nएकबीजपत्री में द्वितीयक वृद्धि अनुपस्थित होती है क्योंकि उनमें कैंबियम की कमी होती है; यह द्विबीजपत्री और जिम्नोस्पर्म में पाई जाती है।"
+    },
+    {
+      "q_num": 59,
+      "question": "'Osteoblasts' and 'Osteoclasts' are cells related to which of the following?\n 'ओस्टियोब्लास्ट' और 'ओस्टियोक्लास्ट' कोशिकाएं निम्नलिखित में से किससे संबंधित हैं?",
+      "options": {
+        "a": "Blood formation / रक्त निर्माण",
+        "b": "Bone remodeling / हड्डी का पुनर्गठन",
+        "c": "Nerve conduction / तंत्रिका संचालन",
+        "d": "Muscle contraction / मांसपेशियों का संकुचन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOsteoblasts are bone-forming cells, and Osteoclasts are bone-resorbing (breaking down) cells. Together they remodel bones.\n\n📖 हिंदी स्पष्टीकरण:\nओस्टियोब्लास्ट हड्डी बनाने वाली कोशिकाएं हैं, और ओस्टियोक्लास्ट हड्डी को तोड़ने वाली कोशिकाएं हैं। साथ में वे हड्डियों का पुनर्गठन करते हैं।"
+    },
+    {
+      "q_num": 60,
+      "question": "Consider the following statements about 'Mitochondria':\n 'माइटोकॉन्ड्रिया' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) The inner membrane is folded into finger-like structures called Cristae. / आंतरिक झिल्ली उंगली जैसी संरचनाओं में मुड़ी होती है जिन्हें क्रिस्टी कहा जाता है।\n (b) It is the site of Anaerobic respiration. / यह अवायवीय श्वसन का स्थल है।\n (c) ATP is known as the energy currency produced here. / यहाँ उत्पादित ATP को ऊर्जा मुद्रा के रूप में जाना जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMitochondria is the site of Aerobic respiration (Krebs cycle). Anaerobic respiration occurs in the Cytoplasm.\n\n📖 हिंदी स्पष्टीकरण:\nमाइटोकॉन्ड्रिया वायवीय श्वसन (क्रेब्स चक्र) का स्थल है। अवायवीय श्वसन कोशिका द्रव्य (Cytoplasm) में होता है।"
+    },
+    {
+      "q_num": 61,
+      "question": "Consider the following statements regarding 'Gymnosperms': \n 'जिम्नोस्पर्म' (अनावृतबीजी) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They bear naked seeds as the ovules are not enclosed by an ovary wall. / इनमें नग्न बीज होते हैं क्योंकि बीजांड अंडाशय की दीवार से घिरे नहीं होते हैं। \n (b) They include the tallest tree species like Sequoia. / इनमें सिकोइया जैसी सबसे ऊंची पेड़ों की प्रजातियां शामिल हैं। \n (c) They produce flowers and fruits just like Angiosperms. / ये एंजियोस्पर्म की तरह ही फूल और फल पैदा करते हैं।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nGymnosperms do not produce flowers or fruits. Their seeds are exposed on cones.\n\n📖 हिंदी स्पष्टीकरण:\nजिम्नोस्पर्म फूल या फल पैदा नहीं करते हैं। उनके बीज शंकु (cones) पर खुले होते हैं।"
+    },
+    {
+      "q_num": 62,
+      "question": "Which of the following statements is correct regarding the 'Thyroid Gland'? \n 'थायरॉयड ग्रंथि' के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It is the largest endocrine gland in the human body. / यह मानव शरीर की सबसे बड़ी अंतःस्रावी ग्रंथि है।",
+        "b": "It secretes Iodine directly into the blood. / यह आयोडीन को सीधे रक्त में स्रावित करती है।",
+        "c": "Deficiency of thyroxine causes Diabetes Insipidus. / थायरोक्सिन की कमी से डायबिटीज इंसिपिडस होता है।",
+        "d": "It is located in the abdominal cavity. / यह उदर गुहा में स्थित होती है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThyroid is the largest endocrine gland. Iodine is required for hormone synthesis, not secreted. Diabetes Insipidus is related to ADH hormone.\n\n📖 हिंदी स्पष्टीकरण:\nथायरॉयड सबसे बड़ी अंतःस्रावी ग्रंथि है। हार्मोन संश्लेषण के लिए आयोडीन आवश्यक है, स्रावित नहीं। डायबिटीज इंसिपिडस ADH हार्मोन से संबंधित है।"
+    },
+    {
+      "q_num": 63,
+      "question": "Consider the following statements about 'Blood Vessels': \n 'रक्त वाहिकाओं' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Arteries have thick elastic walls and no valves. / धमनियों में मोटी लोचदार दीवारें होती हैं और कोई वाल्व नहीं होते हैं। \n (b) Veins carry blood under high pressure. / शिराएं उच्च दबाव में रक्त ले जाती हैं। \n (c) Capillaries are the site of exchange of materials between blood and tissues. / केशिकाएं (Capillaries) रक्त और ऊतकों के बीच पदार्थों के विनिमय का स्थल हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and c only / केवल a और c",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nVeins carry blood under low pressure and have valves to prevent backflow. High pressure is found in arteries.\n\n📖 हिंदी स्पष्टीकरण:\nशिराएं कम दबाव में रक्त ले जाती हैं और उनमें रक्त के पीछे के प्रवाह को रोकने के लिए वाल्व होते हैं। उच्च दबाव धमनियों में पाया जाता है।"
+    },
+    {
+      "q_num": 64,
+      "question": "Which of the following is correct regarding 'Meiosis II'? \n 'अर्धसूत्रीविभाजन II' (Meiosis II) के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "It is a reductional division. / यह एक न्यूनकारी (reductional) विभाजन है।",
+        "b": "It is similar to Mitosis as it separates sister chromatids. / यह समसूत्री विभाजन के समान है क्योंकि यह सिस्टर क्रोमैटिड्स को अलग करता है।",
+        "c": "DNA replication occurs before Meiosis II starts. / अर्धसूत्रीविभाजन II शुरू होने से पहले DNA प्रतिकृति होती है।",
+        "d": "It results in diploid daughter cells. / इसके परिणामस्वरूप द्विगुणित संतति कोशिकाएं बनती हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMeiosis II is an equational division (like mitosis) because the chromosome number remains same; reduction happens in Meiosis I.\n\n📖 हिंदी स्पष्टीकरण:\nअर्धसूत्रीविभाजन II एक समकारी विभाजन (समसूत्री विभाजन की तरह) है क्योंकि गुणसूत्र संख्या समान रहती है; कमी अर्धसूत्रीविभाजन I में होती है।"
+    },
+    {
+      "q_num": 65,
+      "question": "Consider the following statements regarding 'Bacterial Diseases': \n 'जीवाणु रोगों' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Typhoid is caused by Salmonella typhi. / टाइफाइड साल्मोनेला टाइफी के कारण होता है। \n (b) Tuberculosis (TB) primarily affects the lungs and is caused by a virus. / क्षय रोग (टीबी) मुख्य रूप से फेफड़ों को प्रभावित करता है और वायरस के कारण होता है। \n (c) Cholera is spread through contaminated food and water. / हैजा दूषित भोजन और पानी के माध्यम से फैलता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a and c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTB is caused by a bacterium (Mycobacterium tuberculosis), not a virus.\n\n📖 हिंदी स्पष्टीकरण:\nटीबी एक बैक्टीरिया (माइकोबैक्टीरियम ट्यूबरकुलोसिस) के कारण होता है, वायरस के कारण नहीं।"
+    },
+    {
+      "q_num": 66,
+      "question": "The 'Islets of Langerhans' are found in which organ? \n 'लैंगरहैंस के द्वीप' किस अंग में पाए जाते हैं?",
+      "options": {
+        "a": "Liver / यकृत",
+        "b": "Spleen / प्लीहा",
+        "c": "Pancreas / अग्न्याशय",
+        "d": "Pituitary / पीयूष ग्रंथि"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIslets of Langerhans are the endocrine part of the pancreas, containing alpha, beta, and delta cells.\n\n📖 हिंदी स्पष्टीकरण:\nलैंगरहैंस के द्वीप अग्न्याशय के अंतःस्रावी भाग हैं, जिनमें अल्फा, बीटा और डेल्टा कोशिकाएं होती हैं।"
+    },
+    {
+      "q_num": 67,
+      "question": "Consider the following statements about 'Cerebrospinal Fluid' (CSF): \n 'सेरेब्रोस्पाइनल फ्लूइड' (CSF) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It protects the brain from mechanical shocks. / यह मस्तिष्क को यांत्रिक झटकों से बचाता है। \n (b) It is found in the subarachnoid space. / यह सबराचनोइड स्पेस में पाया जाता है। \n (c) It helps in the exchange of nutrients and waste products in the CNS. / यह CNS में पोषक तत्वों और अपशिष्ट उत्पादों के विनिमय में मदद करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "a, b and c / a, b और c",
+        "d": "b and c only / केवल b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCSF acts as a cushion for the brain and spinal cord, providing both protection and nourishment.\n\n📖 हिंदी स्पष्टीकरण:\nCSF मस्तिष्क और रीढ़ की हड्डी के लिए एक कुशन के रूप में कार्य करता है, जो सुरक्षा और पोषण दोनों प्रदान करता है।"
+    },
+    {
+      "q_num": 68,
+      "question": "Which of the following is correct regarding 'Reptiles'? \n 'सरीसृप' के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "They have a four-chambered heart in all species. / सभी प्रजातियों में इनका हृदय चार कक्षों वाला होता है।",
+        "b": "They are uricotelic, meaning they excrete uric acid. / वे यूरिकोटेलिक हैं, जिसका अर्थ है कि वे यूरिक एसिड उत्सर्जित करते हैं।",
+        "c": "They have moist skin without scales. / उनकी त्वचा नम होती है और उस पर शल्क (scales) नहीं होते।",
+        "d": "They are mostly viviparous (give birth to young ones). / वे ज्यादातर जरायुज (बच्चों को जन्म देने वाले) होते हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nReptiles have dry, scaly skin and are oviparous (lay eggs). Crocodile is the only reptile with a 4-chambered heart; others have 3.\n\n📖 हिंदी स्पष्टीकरण:\nसरीसृपों की त्वचा सूखी, शल्कदार होती है और वे अंडज (अंडे देने वाले) होते हैं। मगरमच्छ एकमात्र सरीसृप है जिसका हृदय 4-कक्षीय होता है; अन्यों में 3 होते हैं।"
+    },
+    {
+      "q_num": 69,
+      "question": "Consider the following statements regarding 'Vitamins': \n 'विटामिन' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Vitamin B12 contains Cobalt. / विटामिन B12 में कोबाल्ट होता है। \n (b) Golden Rice is a rich source of Vitamin A. / गोल्डन राइस विटामिन A का एक समृद्ध स्रोत है। \n (c) Humans can synthesize Vitamin C within their bodies. / मनुष्य अपने शरीर के भीतर विटामिन C का संश्लेषण कर सकते हैं।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a and c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHumans cannot synthesize Vitamin C and must obtain it from diet (citrus fruits).\n\n📖 हिंदी स्पष्टीकरण:\nमनुष्य विटामिन C का संश्लेषण नहीं कर सकते हैं और इसे आहार (खट्टे फलों) से प्राप्त करना चाहिए।"
+    },
+    {
+      "q_num": 70,
+      "question": "Which of the following is known as the 'Widow's Mite' or 'Master Gland' of the endocrine system? \n निम्नलिखित में से किसे अंतःस्रावी तंत्र की 'मास्टर ग्रंथि' के रूप में जाना जाता है?",
+      "options": {
+        "a": "Thyroid / थायरॉयड",
+        "b": "Adrenal / अधिवृक्क",
+        "c": "Pituitary / पीयूष ग्रंथि",
+        "d": "Thymus / थाइमस"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Pituitary gland is called the Master Gland because it controls the functioning of many other endocrine glands.\n\n📖 हिंदी स्पष्टीकरण:\nपीयूष ग्रंथि को मास्टर ग्रंथि कहा जाता है क्योंकि यह कई अन्य अंतःस्रावी ग्रंथियों के कामकाज को नियंत्रित करती है।"
+    },
+    {
+      "q_num": 71,
+      "question": "Consider the following statements regarding 'Monocot' and 'Dicot' plants: \n 'एकबीजपत्री' और 'द्विबीजपत्री' पौधों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Monocots have parallel venation in their leaves. / एकबीजपत्री पौधों की पत्तियों में समानांतर शिराविन्यास (parallel venation) होता है। \n (b) Dicots have a taproot system. / द्विबीजपत्री पौधों में मूसला जड़ (taproot) तंत्र होता है। \n (c) Monocots have vascular bundles arranged in a ring. / एकबीजपत्री पौधों में संवहनी बंडल एक छल्ले (ring) में व्यवस्थित होते हैं।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIn Monocots, vascular bundles are scattered, while in Dicots, they are arranged in a ring.\n\n📖 हिंदी स्पष्टीकरण:\nएकबीजपत्री में, संवहनी बंडल बिखरे हुए होते हैं, जबकि द्विबीजपत्री में, वे एक छल्ले में व्यवस्थित होते हैं।"
+    },
+    {
+      "q_num": 72,
+      "question": "Which of the following is correct regarding 'Mollusca'? \n 'मोलस्का' के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "It is the second largest animal phylum. / यह दूसरा सबसे बड़ा जंतु संघ है।",
+        "b": "They have segmented bodies like Annelids. / इनका शरीर एनेलिड्स की तरह खंडित होता है।",
+        "c": "A rasping organ called Radula is present for feeding. / भोजन के लिए रेडुला (Radula) नामक रेती जैसा अंग मौजूद होता है।",
+        "d": "Both 1 and 3 / 1 और 3 दोनों"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nMolluscs are the second largest phylum after Arthropoda. They have unsegmented bodies and use Radula for feeding.\n\n📖 हिंदी स्पष्टीकरण:\nआर्थ्रोपोडा के बाद मोलस्क दूसरा सबसे बड़ा संघ है। उनका शरीर खंडित नहीं होता है और वे भोजन के लिए रेडुला का उपयोग करते हैं।"
+    },
+    {
+      "q_num": 73,
+      "question": "Consider the following statements about 'DNA Fingerprinting': \n 'DNA फिंगरप्रिंटिंग' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It was developed by Alec Jeffreys. / इसे एलेक जेफ्रीस द्वारा विकसित किया गया था। \n (b) It identifies the similarities in the non-coding DNA sequences. / यह गैर-कोडिंग DNA अनुक्रमों में समानता की पहचान करता है। \n (c) It is 100% identical for fraternal twins. / यह भ्रातृ यमजों (fraternal twins) के लिए 100% समान होता है।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and b only / केवल a और b",
+        "c": "b and c only / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDNA fingerprinting is 100% identical only for identical (monozygotic) twins, not fraternal twins.\n\n📖 हिंदी स्पष्टीकरण:\nDNA फिंगरप्रिंटिंग केवल समान (मोनोजाइगोटिक) जुड़वा बच्चों के लिए 100% समान होती है, भ्रातृ यमजों के लिए नहीं।"
+    },
+    {
+      "q_num": 74,
+      "question": "Which part of the eye is responsible for giving it its distinct color? \n आंख का कौन सा भाग उसे विशिष्ट रंग देने के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Pupil / पुतली",
+        "b": "Retina / रेटिना",
+        "c": "Iris / परितारिका (Iris)",
+        "d": "Cornea / कॉर्निया"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Iris is the pigmented part of the eye that controls the diameter and size of the pupil and gives the eye its color.\n\n📖 हिंदी स्पष्टीकरण:\nआइरिस आंख का रंजित (pigmented) हिस्सा है जो पुतली के व्यास और आकार को नियंत्रित करता है और आंख को उसका रंग देता है।"
+    },
+    {
+      "q_num": 75,
+      "question": "Consider the following statements regarding 'Photosynthesis' and 'Respiration': \n 'प्रकाश संश्लेषण' और 'श्वसन' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Photosynthesis occurs only during the day, while respiration occurs 24/7. / प्रकाश संश्लेषण केवल दिन के दौरान होता है, जबकि श्वसन 24/7 होता है। \n (b) Photosynthesis stores energy, while respiration releases energy. / प्रकाश संश्लेषण ऊर्जा का संचय करता है, जबकि श्वसन ऊर्जा मुक्त करता है। \n (c) The end products of photosynthesis are the reactants for respiration. / प्रकाश संश्लेषण के अंतिम उत्पाद श्वसन के लिए अभिकारक (reactants) होते हैं।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are correct. Photosynthesis (Anabolic) and Respiration (Catabolic) are complementary processes.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। प्रकाश संश्लेषण (उपचयी) और श्वसन (अपचयी) पूरक प्रक्रियाएं हैं।"
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "chapter_num": 1,
+  "chapter_title": "Cell",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Who discovered the cell for the first time in 1665? / 1665 में पहली बार कोशिका की खोज किसने की थी?",
+      "options": {
+        "a": "Robert Brown / रॉबर्ट ब्राउन",
+        "b": "Robert Hooke / रॉबर्ट हुक",
+        "c": "Antonie van Leeuwenhoek / एंटोनी वैन ल्यूवेनहुक",
+        "d": "Purkinje / पुरकिंजे"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRobert Hooke discovered the cell in 1665 while observing a thin slice of cork. He called them \"cells\" because they looked like small rooms or honeycombs\n\n📖 हिंदी स्पष्टीकरण:\nरॉबर्ट हुक ने 1665 में कॉर्क के एक पतले टुकड़े का अवलोकन करते समय कोशिका की खोज की थी। उन्होंने इन्हें \"कोशिका\" कहा क्योंकि वे छोटे कमरों या मधुमक्खी के छत्ते की तरह दिखते थे।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which organelle is known as the \"Powerhouse of the Cell\"? / किस कोशिकांग को \"कोशिका का ऊर्जागृह\" कहा जाता है?",
+      "options": {
+        "a": "Lysosome / लाइसोसोम",
+        "b": "Nucleus / केंद्रक",
+        "c": "Mitochondria / सूत्रकणिका",
+        "d": "Golgi Body / गोल्गीकाय"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMitochondria are called powerhouses because they produce energy in the form of ATP through cellular respiration. This energy is used for various chemical activities\n\n📖 हिंदी स्पष्टीकरण:\nसूत्रकणिका को ऊर्जागृह कहा जाता है क्योंकि वे कोशिकीय श्वसन के माध्यम से ATP के रूप में ऊर्जा उत्पन्न करते हैं। इस ऊर्जा का उपयोग विभिन्न रासायनिक गतिविधियों के लिए किया जाता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "The study of cells is known as: / कोशिकाओं के अध्ययन को क्या कहा जाता है?",
+      "options": {
+        "a": "Histology / हिस्टोलॉजी",
+        "b": "Cytology / साइटोलॉजी",
+        "c": "Morphology / मॉर्फोलॉजी",
+        "d": "Ecology / इकोलॉजी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCytology is the branch of biology that deals with the study of the structure and function of plant and animal cells\n\n📖 हिंदी स्पष्टीकरण:\nसाइटोलॉजी जीव विज्ञान की वह शाखा है जो पौधों और जानवरों की कोशिकाओं की संरचना और कार्य के अध्ययन से संबंधित है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which of the following is called the \"Suicide Bag\" of the cell? / निम्नलिखित में से किसे कोशिका की \"आत्मघाती थैली\" कहा जाता है?",
+      "options": {
+        "a": "Ribosome / राइबोसोम",
+        "b": "Vacuole / रिक्तिका",
+        "c": "Lysosome / लाइसोसोम",
+        "d": "Plastid / लवक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nLysosomes contain digestive enzymes. If a cell gets damaged, lysosomes may burst and the enzymes digest their own cell, hence the name\n\n📖 हिंदी स्पष्टीकरण:\nलाइसोसोम में पाचक एंजाइम होते हैं। यदि कोई कोशिका क्षतिग्रस्त हो जाती है, तो लाइसोसोम फट सकते हैं और एंजाइम अपनी ही कोशिका को पचा लेते हैं, इसलिए यह नाम पड़ा।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which of the following is present in plant cells but absent in animal cells? / निम्नलिखित में से क्या पादप कोशिकाओं में मौजूद होता है लेकिन जंतु कोशिकाओं में अनुपस्थित होता है?",
+      "options": {
+        "a": "Nucleus / केंद्रक",
+        "b": "Cell Wall / कोशिका भित्ति",
+        "c": "Cytoplasm / कोशिका द्रव्य",
+        "d": "Cell Membrane / कोशिका झिल्ली"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPlant cells have a rigid outer layer called the cell wall made of cellulose for protection and support, which animal cells lack\n\n📖 हिंदी स्पष्टीकरण:\nपादप कोशिकाओं में सुरक्षा और सहायता के लिए सेलुलोज से बनी कोशिका भित्ति नामक एक कठोर बाहरी परत होती है, जो जंतु कोशिकाओं में नहीं होती है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Who proposed the \"Cell Theory\"? / \"कोशिका सिद्धांत\" किसने प्रतिपादित किया था?",
+      "options": {
+        "a": "Watson and Crick / वाटसन और क्रिक",
+        "b": "Schleiden and Schwann / श्लीडेन और श्वान",
+        "c": "Robert Hooke / रॉबर्ट हुक",
+        "d": "Darwin and Lamarck / डार्विन और लैमार्क"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nM.J. Schleiden and Theodore Schwann formulated the cell theory in 1838-39, stating that all living things are composed of cells\n\n📖 हिंदी स्पष्टीकरण:\nएम.जे. श्लीडेन और थियोडोर श्वान ने 1838-39 में कोशिका सिद्धांत तैयार किया, जिसमें कहा गया कि सभी जीवित चीजें कोशिकाओं से बनी हैं।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which organelle is responsible for protein synthesis? / प्रोटीन संश्लेषण के लिए कौन सा कोशिकांग उत्तरदायी है?",
+      "options": {
+        "a": "Mitochondria / सूत्रकणिका",
+        "b": "Ribosome / राइबोसोम",
+        "c": "Golgi apparatus / गोल्गी उपकरण",
+        "d": "Lysosome / लाइसोसोम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRibosomes are the sites in a cell where protein synthesis takes place. They can be found floating freely or attached to the ER\n\n📖 हिंदी स्पष्टीकरण:\nराइबोसोम कोशिका के वे स्थान हैं जहाँ प्रोटीन संश्लेषण होता है। वे स्वतंत्र रूप से तैरते हुए या ईआर (ER) से जुड़े हुए पाए जा सकते हैं।"
+    },
+    {
+      "q_num": 8,
+      "question": "The jelly-like substance present inside the cell membrane is called: / कोशिका झिल्ली के अंदर मौजूद जेली जैसे पदार्थ को क्या कहा जाता है?",
+      "options": {
+        "a": "Nucleoplasm / केंद्रक द्रव्य",
+        "b": "Cytoplasm / कोशिका द्रव्य",
+        "c": "Ectoplasm /",
+        "d": "Protoplasm / जीवद्रव्य"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCytoplasm is the fluid that fills the cell and surrounds the organelles, containing water, salts, and various organic molecules\n\n📖 हिंदी स्पष्टीकरण:\nकोशिका द्रव्य वह तरल पदार्थ है जो कोशिका को भरता है और कोशिकांगों को घेरे रहता है, जिसमें पानी, लवण और विभिन्न कार्बनिक अणु होते हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following is known as the \"Brain\" or \"Control Center\" of the cell? / निम्नलिखित में से किसे कोशिका का \"मस्तिष्क\" या \"नियंत्रण केंद्र\" कहा जाता है?",
+      "options": {
+        "a": "Mitochondria / सूत्रकणिका",
+        "b": "Chloroplast /",
+        "c": "Nucleus / केंद्रक",
+        "d": "Vacuole / रिक्तिका"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe nucleus contains the genetic material (DNA) and directs all cellular activities, including growth and reproduction\n\n📖 हिंदी स्पष्टीकरण:\nकेंद्रक में आनुवंशिक सामग्री (DNA) होती है और यह वृद्धि और प्रजनन सहित सभी कोशिकीय गतिविधियों को निर्देशित करता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Who discovered the Nucleus in the cell? / कोशिका में केंद्रक की खोज किसने की थी?",
+      "options": {
+        "a": "Robert Brown / रॉबर्ट ब्राउन",
+        "b": "Robert Hooke / रॉबर्ट हुक",
+        "c": "Rudolf Virchow / रुडोल्फ विरचो",
+        "d": "Camillo Golgi / कैमिलो गोल्गी"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nRobert Brown discovered and named the nucleus in plant cells in 1831\n\n📖 हिंदी स्पष्टीकरण:\nरॉबर्ट ब्राउन ने 1831 में पादप कोशिकाओं में केंद्रक की खोज की और उसका नामकरण किया।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which cell organelle is involved in the formation of Lysosomes? / लाइसोसोम के निर्माण में कौन सा कोशिकांग शामिल है?",
+      "options": {
+        "a": "Mitochondria / सूत्रकणिका",
+        "b": "Endoplasmic Reticulum / अंतःप्रद्रव्यी जालिका",
+        "c": "Golgi Apparatus / गोल्गी उपकरण",
+        "d": "Ribosomes / राइबोसोम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Golgi apparatus is responsible for packaging and modifying proteins and lipids, including the enzymes that form lysosomes\n\n📖 हिंदी स्पष्टीकरण:\nगोल्गी उपकरण प्रोटीन और लिपिड को पैक करने और संशोधित करने के लिए जिम्मेदार है, जिसमें लाइसोसोम बनाने वाले एंजाइम भी शामिल हैं।"
+    },
+    {
+      "q_num": 12,
+      "question": "What is the main function of the Smooth Endoplasmic Reticulum (SER)? / चिकनी अंतःप्रद्रव्यी जालिका (SER) का मुख्य कार्य क्या है?",
+      "options": {
+        "a": "Protein synthesis / प्रोटीन संश्लेषण",
+        "b": "Lipid synthesis / लिपिड संश्लेषण",
+        "c": "Energy production / ऊर्जा उत्पादन",
+        "d": "Waste disposal / अपशिष्ट निपटान"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nUnlike Rough ER, Smooth ER lacks ribosomes and is primarily involved in the synthesis of lipids, steroids, and detoxification\n\n📖 हिंदी स्पष्टीकरण:\nखुरदुरी अंतःप्रद्रव्यी जालिका के विपरीत, चिकनी अंतःप्रद्रव्यी जालिका में राइबोसोम की कमी होती है और यह मुख्य रूप से लिपिड, स्टेरॉयड के संश्लेषण और विषहरण में शामिल होता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "\"Omnis cellula-e cellula\" (New cells arise from pre-existing cells) was stated by: / \"\" (नई कोशिकाएं पहले से मौजूद कोशिकाओं से उत्पन्न होती हैं) किसके द्वारा कहा गया था?",
+      "options": {
+        "a": "Robert Hooke / रॉबर्ट हुक",
+        "b": "Rudolf Virchow / रुडोल्फ विरचो",
+        "c": "Louis Pasteur / लुई पाश्चर",
+        "d": "Matthias Schleiden / मथियास श्लीडेन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRudolf Virchow added this third tenet to the cell theory in 1855, explaining that cells multiply through division\n\n📖 हिंदी स्पष्टीकरण:\nरुडोल्फ विरचो ने 1855 में कोशिका सिद्धांत में यह तीसरा सिद्धांत जोड़ा, जिसमें बताया गया कि कोशिकाएं विभाजन के माध्यम से गुणा करती हैं।"
+    },
+    {
+      "q_num": 14,
+      "question": "The cell membrane is primarily composed of: / कोशिका झिल्ली मुख्य रूप से किससे बनी होती है?",
+      "options": {
+        "a": "Cellulose and Hemicellulose / सेलुलोज और हेमीसेलुलोज",
+        "b": "Proteins and Lipids / प्रोटीन और लिपिड",
+        "c": "Chitin and Proteins / काइटिन और प्रोटीन",
+        "d": "Starch and Glycogen / स्टार्च और ग्लाइकोजन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe cell membrane is a phospholipid bilayer with embedded proteins that regulate the movement of substances in and out\n\n📖 हिंदी स्पष्टीकरण:\nकोशिका झिल्ली एक फॉस्फोलिपिड द्विस्तर है जिसमें अंतर्निहित प्रोटीन होते हैं जो पदार्थों के अंदर और बाहर जाने को नियंत्रित करते हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which organelle is often referred to as the \"Kitchen of the cell\" in plants? / पौधों में किस कोशिकांग को अक्सर \"कोशिका की रसोई\" कहा जाता है?",
+      "options": {
+        "a": "Vacuole / रिक्तिका",
+        "b": "Mitochondria / सूत्रकणिका",
+        "c": "Chloroplast / हरितलवक",
+        "d": "Chromoplast / वर्णीलवक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nChloroplasts contain chlorophyll and are the site of photosynthesis, where plants prepare their food (glucose)\n\n📖 हिंदी स्पष्टीकरण:\nहरितलवक में क्लोरोफिल होता है और यह प्रकाश संश्लेषण का स्थल है, जहाँ पौधे अपना भोजन (ग्लूकोज) तैयार करते हैं।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements about Prokaryotic cells: / प्रोकैरियोटिक कोशिकाओं के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. They lack a well-defined nuclear region. / उनमें अच्छी तरह से परिभाषित केंद्रक क्षेत्र की कमी होती है।\n 2. Membrane-bound organelles like mitochondria are present. / सूत्रकणिका जैसे झिल्ली-बद्ध कोशिकांग मौजूद होते हैं।\n Which of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nProkaryotes lack a nuclear membrane and membrane-bound organelles. Statement 2 is incorrect because they do not have mitochondria\n\n📖 हिंदी स्पष्टीकरण:\nप्रोकैरियोट्स में केंद्रक झिल्ली और झिल्ली-बद्ध कोशिकांगों की कमी होती है। कथन 2 गलत है क्योंकि उनमें सूत्रकणिका नहीं होते हैं।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): The cell wall is a non-living part of the plant cell. / अभिकथन (A): कोशिका भित्ति पादप कोशिका का एक निर्जीव भाग है।\n Reason (R): It provides structural strength and protection to the plant. / कारण (R): यह पौधे को संरचनात्मक शक्ति और सुरक्षा प्रदान करती है।",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true, but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
+        "d": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBoth statements are factually correct, but the function of providing strength does not explain why it is classified as non-living\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन तथ्यात्मक रूप से सही हैं, लेकिन शक्ति प्रदान करने का कार्य यह स्पष्ट नहीं करता है कि इसे निर्जीव के रूप में क्यों वर्गीकृत किया गया है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following organelles is called a \"Cell within a cell\"? / निम्नलिखित में से किस कोशिकांग को \"कोशिका के भीतर कोशिका\" कहा जाता है?",
+      "options": {
+        "a": "Lysosome / लाइसोसोम",
+        "b": "Mitochondria / सूत्रकणिका",
+        "c": "Ribosome / राइबोसोम",
+        "d": "Golgi body / गोल्गी निकाय"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMitochondria (and chloroplasts) have their own DNA and ribosomes, allowing them to function somewhat independently, like a cell\n\n📖 हिंदी स्पष्टीकरण:\nसूत्रकणिका (और हरितलवक) के पास अपना DNA और राइबोसोम होते हैं, जिससे वे कोशिका की तरह कुछ हद तक स्वतंत्र रूप से कार्य कर पाते हैं।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statement I: Chromosomes are composed of DNA and Protein. / कथन I: गुणसूत्र DNA और प्रोटीन से बने होते हैं।\n Statement II: Genes are the functional units of inheritance. / कथन II: जीन आनुवंशिकता की कार्यात्मक इकाइयाँ हैं।",
+      "options": {
+        "a": "Statement I is correct, Statement II is incorrect. / कथन I सही है, कथन II गलत है।",
+        "b": "Statement I is incorrect, Statement II is correct. / कथन I गलत है, कथन II सही है।",
+        "c": "Both statements are correct. / दोनों कथन सही हैं।",
+        "d": "Both statements are incorrect. / दोनों कथन ग़लत हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nChromosomes consist of DNA wrapped around histone proteins. Genes are segments of DNA that carry genetic information\n\n📖 हिंदी स्पष्टीकरण:\nगुणसूत्र हिस्टोन प्रोटीन के चारों ओर लिपटे DNA से बने होते हैं। जीन DNA के वे खंड हैं जो आनुवंशिक जानकारी ले जाते हैं।"
+    },
+    {
+      "q_num": 20,
+      "question": "Match the Following: / निम्नलिखित का मिलान करें:\n 1. Suicide Bag — A. Ribosome / 1. आत्महत्या थैली — A. राइबोसोम\n 2. Protein Factory — B. Lysosome / 2. प्रोटीन कारखाना — B. लाइसोसोम\n 3. Powerhouse — C. Nucleus / 3. ऊर्जागृह — C. नाभिक\n 4. Brain of Cell — D. Mitochondria / 4. कोशिका का मस्तिष्क — D. सूत्रकणिका",
+      "options": {
+        "a": "1-B, 2-A, 3-D, 4-C",
+        "b": "1-A, 2-B, 3-C, 4-D",
+        "c": "1-B, 2-A, 3-C, 4-D",
+        "d": "1-D, 2-C, 3-B, 4-A"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLysosomes digest waste, Ribosomes make proteins, Mitochondria produce ATP, and the Nucleus controls cellular activities\n\n📖 हिंदी स्पष्टीकरण:\nलाइसोसोम अपशिष्ट को पचाते हैं, राइबोसोम प्रोटीन बनाते हैं, सूत्रकणिका ATP का उत्पादन करते हैं, और केंद्रक कोशिकीय गतिविधियों को नियंत्रित करता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Assertion (A): Plant cells have large vacuoles. / अभिकथन (A): पादप कोशिकाओं में बड़ी रिक्तिकाएँ होती हैं।\n Reason (R): Vacuoles help maintain turgidity and rigidity of the plant cell. / कारण (R): रिक्तिकाएँ पादप कोशिका की स्फीति और कठोरता बनाए रखने में मदद करती हैं।",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
+        "d": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLarge central vacuoles in plants store cell sap and provide hydrostatic pressure (turgidity) to support the plant structure\n\n📖 हिंदी स्पष्टीकरण:\nपौधों में बड़ी केंद्रीय रिक्तिकाएँ कोशिका रस को संग्रहीत करती हैं और पौधों की संरचना को सहारा देने के लिए जलस्थैतिक दबाव प्रदान करती हैं।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which of the following plastids gives green color to leaves? / निम्नलिखित में से कौन सा लवक पत्तियों को हरा रंग देता है?",
+      "options": {
+        "a": "Chromoplast / वर्णीलवक",
+        "b": "Leucoplast / अवर्णीलवक",
+        "c": "Chloroplast / हरितलवक",
+        "d": "Amyloplast / मंडलवक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nChloroplasts contain the green pigment chlorophyll. Chromoplasts provide other colors (red, yellow), and leucoplasts are colorless\n\n📖 हिंदी स्पष्टीकरण:\nहरितलवक में हरा वर्णक क्लोरोफिल होता है। वर्णीलवक अन्य रंग (लाल, पीला) प्रदान करते हैं, और अवर्णीलवक रंगहीन होते हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Nucleolus is rich in: / न्यूक्लियोलस (केंद्रिका) किसमें समृद्ध होता है?",
+      "options": {
+        "a": "DNA / DNA",
+        "b": "RNA and Proteins / RNA और प्रोटीन",
+        "c": "Lipids / लिपिड",
+        "d": "Carbohydrates / कार्बोहाइड्रेट"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe nucleolus is a dense region inside the nucleus responsible for synthesizing ribosomal RNA (rRNA) and assembling ribosomes\n\n📖 हिंदी स्पष्टीकरण:\nन्यूक्लियोलस केंद्रक के अंदर एक सघन क्षेत्र है जो राइबोसोमल RNA (rRNA) के संश्लेषण और राइबोसोम के संयोजन के लिए उत्तरदायी होता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Diffusion and Osmosis are passive processes. / अभिकथन (A): विसरण और परासरण निष्क्रिय प्रक्रियाएं हैं।\n Reason (R): They do not require energy (ATP) to move molecules. / कारण (R): उन्हें अणुओं को स्थानांतरित करने के लिए ऊर्जा (ATP) की आवश्यकता नहीं होती है।",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
+        "d": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nPassive transport involves the movement of substances moving down their concentration gradient (from high to low concentration) without the expenditure of cellular energy\n\n📖 हिंदी स्पष्टीकरण:\nनिष्क्रिय परिवहन में कोशिकीय ऊर्जा खर्च किए बिना सांद्रता प्रवणता के साथ पदार्थों की गति शामिल होती है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Statement I: Prokaryotic cells have 70S ribosomes. / कथन I: प्रोकैरियोटिक कोशिकाओं में 70S राइबोसोम होते हैं।\n Statement II: Eukaryotic cells have 80S ribosomes in the cytoplasm. / कथन II: यूकेरियोटिक कोशिकाओं के कोशिका द्रव्य में 80S राइबोसोम होते हैं।",
+      "options": {
+        "a": "Statement I is correct, Statement II is incorrect. / कथन I सही है, कथन II गलत है।",
+        "b": "Statement I is incorrect, Statement II is correct. / कथन 1 गलत है, कथन 2 सही है।",
+        "c": "Both statements are correct. / दोनों कथन सही हैं।",
+        "d": "Both statements are incorrect. / दोनों कथन गलत हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nProkaryotes and organelles like mitochondria have 70S ribosomes, while the cytoplasm of eukaryotes contains the larger 80S ribosomes\n\n📖 हिंदी स्पष्टीकरण:\nप्रोकैरियोट्स और सूत्रकणिका जैसे अंगों में 70S राइबोसोम होते हैं, जबकि यूकेरियोट्स के कोशिका द्रव्य में बड़े 80S राइबोसोम होते हैं।"
+    }
+  ]
+}

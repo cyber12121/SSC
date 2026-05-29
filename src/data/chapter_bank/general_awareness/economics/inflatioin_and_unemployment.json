@@ -1,0 +1,308 @@
+{
+  "chapter_num": 4,
+  "chapter_title": "Inflatioin And Unemployment",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which of the following describes a situation where the general level of prices of goods and services increases? वस्तुओं और सेवाओं की कीमतों के सामान्य स्तर में वृद्धि होने वाली स्थिति को क्या कहा जाता है?",
+      "options": {
+        "a": "Deflation / अपस्फीति",
+        "b": "Inflation / मुद्रास्फीति",
+        "c": "Disinflation / विस्फीति",
+        "d": "Stagflation / स्फीतिजनित मंदी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nInflation is defined as the persistent increase in the general price level of goods and services, which leads to a decrease in purchasing power\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रास्फीति को वस्तुओं और सेवाओं के सामान्य मूल्य स्तर में निरंतर वृद्धि के रूप में परिभाषित किया गया है, जिससे क्रय शक्ति में कमी आती है।"
+    },
+    {
+      "q_num": 2,
+      "question": "During a period of inflation, who among the following typically benefits the most? मुद्रास्फीति की अवधि के दौरान, निम्नलिखित में से किसे आमतौर पर सबसे अधिक लाभ होता है?",
+      "options": {
+        "a": "Lender / ऋणदाता",
+        "b": "Debtor/Borrower / ऋणी/उधारकर्ता",
+        "c": "Fixed income group / निश्चित आय समूह",
+        "d": "Savings account holders / बचत खाताधारक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDebtors benefit during inflation because the value of the money they repay is lower than the value of the money they borrowed\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रास्फीति के दौरान ऋणी को लाभ होता है क्योंकि उनके द्वारा चुकाए गए पैसे का मूल्य उनके द्वारा उधार लिए गए पैसे के मूल्य से कम होता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which index is used by the RBI to target inflation for its monetary policies? आरबीआई अपनी मौद्रिक नीतियों के लिए मुद्रास्फीति को लक्षित करने के लिए किस सूचकांक का उपयोग करता है?",
+      "options": {
+        "a": "WPI / डब्ल्यूपीआई",
+        "b": "IIP / आईआईपी",
+        "c": "CPI (Combined) / सीपीआई (संयुक्त)",
+        "d": "GDP Deflator / जीडीपी डिफ्लेटर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Reserve Bank of India (RBI) uses the Consumer Price Index (Combined) as the key measure to manage and target inflation in the economy\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय रिजर्व बैंक (RBI) अर्थव्यवस्था में मुद्रास्फीति के प्रबंधन और लक्ष्य निर्धारण के लिए मुख्य उपाय के रूप में उपभोक्ता मूल्य सूचकांक (संयुक्त) का उपयोग करता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "What is the base year for the current Consumer Price Index (CPI) in India? भारत में वर्तमान उपभोक्ता मूल्य सूचकांक (CPI) के लिए आधार वर्ष क्या है?",
+      "options": {
+        "a": "2004-05",
+        "b": "2011-12",
+        "c": "2016",
+        "d": "2001"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe base year for calculating the Consumer Price Index (CPI) is 2011-12, providing a benchmark to measure price changes. New Base Year (from Feb, 2026): 2024\n\n📖 हिंदी स्पष्टीकरण:\nमूल्य परिवर्तनों को मापने के लिए एक बेंचमार्क प्रदान करने हेतु उपभोक्ता मूल्य सूचकांक (CPI) की गणना के लिए आधार वर्ष 2011-12 है।"
+    },
+    {
+      "q_num": 5,
+      "question": "\"Too many dollars chasing too few goods\" describes which type of inflation? \"बहुत अधिक पैसा बहुत कम वस्तुओं का पीछा कर रहा है\" यह किस प्रकार की मुद्रास्फीति का वर्णन करता है?",
+      "options": {
+        "a": "Cost-Push Inflation / लागत-जन्य मुद्रास्फीति",
+        "b": "Demand-Pull Inflation / मांग-जनित मुद्रास्फीति",
+        "c": "Hyperinflation / अति-मुद्रास्फीति",
+        "d": "Core Inflation / कोर मुद्रास्फीति"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDemand-pull inflation occurs when the demand for goods exceeds the supply, often described as too much money chasing limited goods\n\n📖 हिंदी स्पष्टीकरण:\nमांग-जनित मुद्रास्फीति तब होती है जब वस्तुओं की मांग आपूर्ति से अधिक हो जाती है, जिसे अक्सर सीमित वस्तुओं का पीछा करने वाले बहुत अधिक पैसे के रूप में वर्णित किया जाता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which type of unemployment is characterized by marginal productivity being zero? किस प्रकार की बेरोजगारी की विशेषता शून्य सीमांत उत्पादकता है?",
+      "options": {
+        "a": "Structural Unemployment / संरचनात्मक बेरोजगारी",
+        "b": "Frictional Unemployment / प्रतिरोधात्मक बेरोजगारी",
+        "c": "Disguised Unemployment / प्रच्छन्न बेरोजगारी",
+        "d": "Cyclical Unemployment / चक्रीय बेरोजगारी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDisguised unemployment occurs when more people are working than required, meaning their contribution (marginal productivity) is zero, commonly seen in agriculture\n\n📖 हिंदी स्पष्टीकरण:\nप्रच्छन्न बेरोजगारी तब होती है जब आवश्यकता से अधिक लोग काम कर रहे होते हैं, अर्थात उनका योगदान (सीमांत उत्पादकता) शून्य होता है, जो आमतौर पर कृषि में देखा जाता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "The MGNREGA Act 2005 guarantees how many days of employment to rural households? मनरेगा अधिनियम 2005 ग्रामीण परिवारों को कितने दिनों के रोजगार की गारंटी देता है?",
+      "options": {
+        "a": "150 Days / 150 दिन",
+        "b": "100 Days / 100 दिन",
+        "c": "200 Days / 200 दिन",
+        "d": "50 Days / 50 दिन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Mahatma Gandhi National Rural Employment Guarantee Act provides a legal guarantee for 100 days of unskilled manual work per year\n\n📖 हिंदी स्पष्टीकरण:\nमहात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी अधिनियम प्रति वर्ष 100 दिनों के अकुशल शारीरिक कार्य की कानूनी गारंटी प्रदान करता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which organization publishes the Wholesale Price Index (WPI) in India? भारत में थोक मूल्य सूचकांक (WPI) कौन सा संगठन प्रकाशित करता है?",
+      "options": {
+        "a": "National Statistical Office (NSO) / राष्ट्रीय सांख्यिकी कार्यालय",
+        "b": "Labour Bureau / श्रम ब्यूरो",
+        "c": "Office of Economic Advisor (Ministry of Commerce) / आर्थिक सलाहकार का कार्यालय",
+        "d": "RBI / आरबीआई"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nWPI is published by the Office of Economic Advisor under the Ministry of Commerce and Industry. / WPI\n\n📖 हिंदी स्पष्टीकरण:\nवाणिज्य और उद्योग मंत्रालय के तहत आर्थिक सलाहकार के कार्यालय द्वारा प्रकाशित किया जाता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "What is the base year for the Index of Industrial Production (IIP)? औद्योगिक उत्पादन सूचकांक (IIP) के लिए आधार वर्ष क्या है?",
+      "options": {
+        "a": "2001-02",
+        "b": "2011-12",
+        "c": "2016-17",
+        "d": "1986-87"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Index of Industrial Production (IIP), which tracks industrial output, uses 2011-12 as its base year for calculation\n\n📖 हिंदी स्पष्टीकरण:\nऔद्योगिक उत्पादन सूचकांक (IIP), जो औद्योगिक उत्पादन को ट्रैक करता है, गणना के लिए 2011-12 को आधार वर्ष के रूप में उपयोग करता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "A situation where a person is employed for less than 183 days in a year is called: ऐसी स्थिति जहाँ एक व्यक्ति वर्ष में 183 दिनों से कम समय के लिए नियोजित होता है, कहलाती है:",
+      "options": {
+        "a": "Main Worker / मुख्य श्रमिक",
+        "b": "Marginal Worker / सीमांत श्रमिक",
+        "c": "Seasonal Worker / मौसमी श्रमिक",
+        "d": "Educated Worker / शिक्षित श्रमिक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA marginal worker is defined as someone who has worked for less than 6 months or 183 days in a year\n\n📖 हिंदी स्पष्टीकरण:\nएक सीमांत श्रमिक को उस व्यक्ति के रूप में परिभाषित किया जाता है जिसने एक वर्ष में 6 महीने या 183 दिनों से कम काम किया हो।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which type of inflation refers to a range of 20% to 100% per annum? प्रति वर्ष 20% से 100% की सीमा वाली मुद्रास्फीति को क्या कहा जाता है?",
+      "options": {
+        "a": "Walking Inflation / चलती मुद्रास्फीति",
+        "b": "Running Inflation / भागती मुद्रास्फीति",
+        "c": "Galloping Inflation / द्रुत स्फीति",
+        "d": "Hyperinflation / अति-मुद्रास्फीति"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGalloping inflation is a very high rate of inflation ranging between 20% and 100%, signaling a serious economic crisis\n\n📖 हिंदी स्पष्टीकरण:\nद्रुत स्फीति 20% और 100% के बीच मुद्रास्फीति की एक बहुत ही उच्च दर है, जो एक गंभीर आर्थिक संकट का संकेत देती है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What does the term \"Core Inflation\" represent? \"कोर मुद्रास्फीति\" शब्द क्या दर्शाता है?",
+      "options": {
+        "a": "Total inflation in the economy / अर्थव्यवस्था में कुल मुद्रास्फीति",
+        "b": "Inflation excluding food and fuel items / खाद्य और ईंधन वस्तुओं को छोड़कर मुद्रास्फीति",
+        "c": "Inflation only in the manufacturing sector / केवल विनिर्माण क्षेत्र में मुद्रास्फीति",
+        "d": "Inflation calculated using WPI / डब्ल्यूपीआई का उपयोग करके गणना की गई मुद्रास्फीति"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCore inflation is Headline inflation minus volatile items like food and crude oil/fuel\n\n📖 हिंदी स्पष्टीकरण:\nकोर मुद्रास्फीति हेडलाइन मुद्रास्फीति में से खाद्य और कच्चे तेल/ईंधन जैसी अस्थिर वस्तुओं को घटाकर प्राप्त होती है।"
+    },
+    {
+      "q_num": 13,
+      "question": "In the context of India's economy, which sector is given the highest weightage in the Consumer Price Index (CPI)? भारत की अर्थव्यवस्था के संदर्भ में, उपभोक्ता मूल्य सूचकांक (CPI) में किस क्षेत्र को सर्वाधिक भार दिया गया है?",
+      "options": {
+        "a": "Housing / आवास",
+        "b": "Fuel and Light / ईंधन और प्रकाश",
+        "c": "Food and Beverages / खाद्य और पेय पदार्थ",
+        "d": "Manufactured Products / निर्मित उत्पाद"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFood and beverages hold the highest weightage in the CPI basket, reflecting its impact on retail consumers\n\n📖 हिंदी स्पष्टीकरण:\nखुदरा उपभोक्ताओं पर इसके प्रभाव को दर्शाते हुए, CPI बास्केट में खाद्य और पेय पदार्थों का भार सबसे अधिक है।"
+    },
+    {
+      "q_num": 14,
+      "question": "The \"Money Illusion\" concept was introduced by which economist? \"मनी इल्यूजन\" (मुद्रा भ्रम) की अवधारणा किस अर्थशास्त्री द्वारा दी गई थी?",
+      "options": {
+        "a": "Adam Smith / एडम स्मिथ",
+        "b": "J.M. Keynes / जे.एम. कीन्स",
+        "c": "Irwin Fisher / इरविन फिशर",
+        "d": "Phillips / फिलिप्स"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIrwin Fisher introduced the concept of Money Illusion, which relates to the tendency of people to think of currency in nominal rather than real terms\n\n📖 हिंदी स्पष्टीकरण:\nइरविन फिशर ने मुद्रा भ्रम की अवधारणा पेश की, जो लोगों की मुद्रा को वास्तविक के बजाय नाममात्र के रूप में सोचने की प्रवृत्ति से संबंधित है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which of the following is NOT one of the 8 core industries of India? निम्नलिखित में से कौन भारत के 8 प्रमुख उद्योगों में से एक नहीं है?",
+      "options": {
+        "a": "Steel / इस्पात",
+        "b": "Cement / सीमेंट",
+        "c": "Information Technology / सूचना प्रौद्योगिकी",
+        "d": "Fertilizers / उर्वरक"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): The Phillips Curve shows an inverse relationship between inflation and unemployment.\n Reason (R): High inflation leads to high economic activity, which reduces unemployment.\n अभिकथन (A): फिलिप्स वक्र मुद्रास्फीति और बेरोजगारी के बीच एक व्युत्क्रम संबंध दिखाता है।\n कारण (R): उच्च मुद्रास्फीति से उच्च आर्थिक गतिविधि होती है, जिससे बेरोजगारी कम होती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Phillips Curve illustrates that as inflation increases; unemployment tends to decrease due to increased demand and economic growth\n\n📖 हिंदी स्पष्टीकरण:\nफिलिप्स वक्र दर्शाता है कि जैसे-जैसे मुद्रास्फीति बढ़ती है, बढ़ी हुई मांग और आर्थिक विकास के कारण बेरोजगारी कम होती जाती है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements regarding the Wholesale Price Index (WPI) is correct? थोक मूल्य सूचकांक (WPI) के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It captures the price changes of services. / यह सेवाओं की कीमतों में होने वाले परिवर्तनों को दर्शाता है।",
+        "b": "Manufactured goods have the highest weightage (64.2%). / निर्मित वस्तुओं का भार सबसे अधिक (64.2%) है।",
+        "c": "It is published by the NSO. / यह NSO द्वारा प्रकाशित किया जाता है।",
+        "d": "Its base year is 2016. / इसका आधार वर्ष 2016 है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWPI focuses on goods at the wholesale level, giving 64.2% weight to manufactured items, but it does not include services. / WPI\n\n📖 हिंदी स्पष्टीकरण:\nथोक स्तर पर वस्तुओं पर ध्यान केंद्रित करता है, निर्मित वस्तुओं को 64.2% भार देता है, लेकिन इसमें सेवाएं शामिल नहीं हैं।"
+    },
+    {
+      "q_num": 18,
+      "question": "Consider the following statements about Stagflation:\n मुद्रा स्फीतिजनित मंदी के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. It is a combination of stagnant economic growth and high inflation. /यह स्थिर आर्थिक विकास और उच्च मुद्रास्फीति का संयोजन है।\n 2. In stagflation, the Phillips Curve relationship holds true. / मुद्रा स्फीतिजनित मंदी में, फिलिप्स वक्र संबंध सत्य रहता है।\n Which of the statements given above is/are correct? ऊपर दिए गए कथनों में से कौन सा सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStagflation occurs when high inflation and high unemployment coexist, meaning the inverse relationship of the Phillips Curve fails\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रा स्फीतिजनित मंदी तब होता है जब उच्च मुद्रास्फीति और उच्च बेरोजगारी एक साथ होते हैं, जिसका अर्थ है कि फिलिप्स वक्र का व्युत्क्रम संबंध विफल हो जाता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Assertion (A): Frictional unemployment is commonly seen in the urban parts of India.\n अभिकथन (A): प्रतिरोधात्मक बेरोजगारी आमतौर पर भारत के शहरी हिस्सों में देखी जाती है।\n Reason (R): It occurs when an employee leaves a current job to search for a better one.\n कारण (R): यह तब होता है जब कोई कर्मचारी बेहतर नौकरी की तलाश में वर्तमान नौकरी छोड़ देता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nFrictional unemployment is the short-term period when workers are transitioning between jobs, which is prevalent in urban labor markets\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिरोधात्मक बेरोजगारी वह अल्पकालिक अवधि है जब श्रमिक नौकरियों के बीच संक्रमण कर रहे होते हैं, जो शहरी श्रम बाजारों में प्रचलित है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Which committee submitted a report on unemployment in 1973 in India? भारत में 1973 में बेरोजगारी पर किस समिति ने अपनी रिपोर्ट प्रस्तुत की थी?",
+      "options": {
+        "a": "Bhagwati Committee / भगवती समिति",
+        "b": "Kelkar Committee / केलकर समिति",
+        "c": "Verma Committee / वर्मा समिति",
+        "d": "Sarkaria Commission / सरकारिया आयोग"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Bhagwati Committee (1973) was officially named the Task Force on Employment and Income Distribution\n\n📖 हिंदी स्पष्टीकरण:\nभगवती समिति (1973) को आधिकारिक तौर पर रोजगार और आय वितरण पर कार्य बल का नाम दिया गया था।"
+    },
+    {
+      "q_num": 21,
+      "question": "Statement I: Disinflation refers to a situation where the rate of inflation is decreasing.\n Statement II: Deflation refers to a fall in the general level of prices.\n कथन I: विस्फीति उस स्थिति को संदर्भित करती है जहाँ मुद्रास्फीति की दर घट रही है।\n कथन II: अपस्फीति कीमतों के सामान्य स्तर में गिरावट को संदर्भित करती है।",
+      "options": {
+        "a": "Only Statement I is correct / केवल कथन I सही है।",
+        "b": "Only Statement II is correct / केवल कथन II सही है।",
+        "c": "Both statements are correct / दोनों कथन सही हैं।",
+        "d": "Neither statement is correct / कोई भी कथन सही नहीं है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDisinflation is a slowing in the rate of price increase (e.g., 10% to 8%), while deflation is an actual decrease in prices\n\n📖 हिंदी स्पष्टीकरण:\nविस्फीति मूल्य वृद्धि की दर में कमी (जैसे 10% से 8%) है, जबकि अपस्फीति कीमतों में वास्तविक गिरावट है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which index focuses on measuring the quantity of industrial production rather than price changes? कौन सा सूचकांक मूल्य परिवर्तन के बजाय औद्योगिक उत्पादन की मात्रा को मापने पर केंद्रित है?",
+      "options": {
+        "a": "WPI / WPI",
+        "b": "CPI / CPI",
+        "c": "IIP / IIP",
+        "d": "GDP Deflator / GDP अपस्फीतिकारक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nUnlike WPI and CPI which track price changes, the Index of Industrial Production (IIP) tracks the actual volume of industrial output. / WPI\n\n📖 हिंदी स्पष्टीकरण:\nऔर CPI के विपरीत जो मूल्य परिवर्तनों को ट्रैक करते हैं, औद्योगिक उत्पादन सूचकांक (IIP) औद्योगिक उत्पादन की वास्तविक मात्रा को ट्रैक करता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Assertion (A): Structural unemployment occurs due to a mismatch between skills and available jobs.\n अभिकथन (A): संरचनात्मक बेरोजगारी कौशल और उपलब्ध नौकरियों के बीच बेमेल होने के कारण होती है।\n Reason (R): Rapid technological advancement can lead to structural unemployment.\n कारण (R): तीव्र तकनीकी प्रगति संरचनात्मक बेरोजगारी का कारण बन सकती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStructural unemployment arises from long-term changes in the economy, like machines replacing manual labor due to tech advances\n\n📖 हिंदी स्पष्टीकरण:\nसंरचनात्मक बेरोजगारी अर्थव्यवस्था में दीर्घकालिक परिवर्तनों से उत्पन्न होती है, जैसे तकनीकी प्रगति के कारण मशीनों द्वारा शारीरिक श्रम का स्थान लेना।"
+    },
+    {
+      "q_num": 24,
+      "question": "Match the following categories of CPI with their publishing authority:\n उपभोक्ता मूल्य सूचकांक (CPI) की निम्नलिखित श्रेणियों को उनके प्रकाशन प्राधिकरण के साथ सुमेलित करें:\n 1. CPI (Rural/Urban/Combined) - A. Labour Bureau / 1. CPI (ग्रामीण/शहरी/संयुक्त) - A. श्रम ब्यूरो\n 2. CPI (Agricultural Workers) - B. NSO (MOSPI) / CPI (कृषि श्रमिक) - B. NSO (MOSPI)",
+      "options": {
+        "a": "1-A, 2-B",
+        "b": "1-B, 2-A",
+        "c": "1-B, 2-B",
+        "d": "1-A, 2-A"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCPI (Combined/Rural/Urban) is published by NSO, while CPI for Agricultural, Rural, and Industrial workers is published by the Labour Bureau. / CPI (\n\n📖 हिंदी स्पष्टीकरण:\nसंयुक्त/ग्रामीण/शहरी) NSO द्वारा प्रकाशित किया जाता है, जबकि कृषि, ग्रामीण और औद्योगिक श्रमिकों के लिए CPI श्रम ब्यूरो द्वारा प्रकाशित किया जाता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which type of unemployment is caused by economic downturns such as the Great Recession? मंदी जैसी आर्थिक गिरावट के कारण किस प्रकार की बेरोजगारी होती है?",
+      "options": {
+        "a": "Seasonal Unemployment / मौसमी बेरोजगारी",
+        "b": "Structural Unemployment / संरचनात्मक बेरोजगारी",
+        "c": "Cyclical Unemployment / चक्रीय बेरोजगारी",
+        "d": "Classical Unemployment / शास्त्रीय बेरोजगारी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCyclical unemployment is directly related to the business cycle; it rises during recessions and falls when the economy recovers\n\n📖 हिंदी स्पष्टीकरण:\nचक्रीय बेरोजगारी सीधे व्यापार चक्र से संबंधित है; यह मंदी के दौरान बढ़ती है और अर्थव्यवस्था के सुधरने पर गिरती है।"
+    }
+  ]
+}

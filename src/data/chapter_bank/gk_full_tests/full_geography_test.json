@@ -1,0 +1,908 @@
+{
+  "chapter_num": 5,
+  "chapter_title": "Full Geography Test",
+  "subject": "GK Full Tests",
+  "subject_id": "gk_full_tests",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Consider the following statements about sedimentary rocks:\n आवसादी चट्टानों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They form by compaction and cementation of sediments.\n ये तलछट के संघनन और सीमेंटेशन से बनती हैं।\n (b) They are layered in structure.\n इनकी संरचना परतदार होती है।\n (c) They are crystalline in texture.\n इनकी बनावट क्रिस्टलीय होती है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "1 and 3 / 1 और 3",
+        "b": "2 and 3 / 2 और 3",
+        "c": "1 and 2 / 1 और 2",
+        "d": "1, 2 and 3 / 1, 2 और 3"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSedimentary rocks are formed by compression and are usually layered, not crystalline.\n\n📖 हिंदी स्पष्टीकरण:\nआवसादी चट्टानें तलछट के दाब से बनती हैं और परतदार होती हैं, क्रिस्टलीय नहीं।"
+    },
+    {
+      "q_num": 2,
+      "question": "Consider the following statements about Black Soil:\n काली मिट्टी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is rich in iron and lime. / यह लौह और चूने से समृद्ध होती है।\n (b) It retains moisture for a long time. / यह लंबे समय तक नमी बनाए रखती है।\n (c) It is suitable for rice cultivation. / यह धान की खेती के लिए उपयुक्त है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "a and c / a और c",
+        "c": "b and c / b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBlack soil (Regur) is rich in iron and lime and retains moisture; however, it is ideal for cotton, not rice.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी लौह और चूने से समृद्ध होती है तथा नमी बनाए रखती है, परंतु यह धान नहीं बल्कि कपास के लिए उपयुक्त है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which part of India is most prone to earthquakes?\n भारत का कौन-सा भाग भूकंपों के प्रति सबसे अधिक संवेदनशील है?",
+      "options": {
+        "a": "Indo-Gangetic Plain / इंडो-गंगा मैदान",
+        "b": "Deccan Plateau / दक्कन पठार",
+        "c": "Himalayan Region / हिमालय क्षेत्र",
+        "d": "Western Coastal Plains / पश्चिमी तटीय मैदान"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Himalayan region is the most earthquake-prone due to active tectonic movements along the plate boundaries.\n\n📖 हिंदी स्पष्टीकरण:\nहिमालय क्षेत्र प्लेट सीमाओं के सक्रिय टेक्टोनिक गतियों के कारण भूकंप के प्रति सबसे अधिक संवेदनशील है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which one of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "options": {
+        "a": "Kaveri – Hogenakkal Falls / कावेरी – होगेनक्कल जलप्रपात",
+        "b": "Godavari – Jog Falls / गोदावरी – जोग जलप्रपात",
+        "c": "Mahanadi – Dudhsagar Falls / महानदी – दूधसागर जलप्रपात",
+        "d": "Krishna – Hundru Falls / कृष्णा – हुंद्रू जलप्रपात"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHogenakkal Falls is located on the Kaveri River in Tamil Nadu.\n\n📖 हिंदी स्पष्टीकरण:\nहोगेनक्कल जलप्रपात तमिलनाडु में कावेरी नदी पर स्थित है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Consider the following statements about Black Soil:\n काली मिट्टी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is rich in iron and lime. / यह लौह और चूने से समृद्ध होती है।\n (b) It retains moisture for a long time. / यह लंबे समय तक नमी बनाए रखती है।\n (c) It is suitable for rice cultivation. / यह धान की खेती के लिए उपयुक्त है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "a and c / a और c",
+        "c": "b and c / b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBlack soil (Regur) is rich in iron and lime and retains moisture; however, it is ideal for cotton, not rice.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी लौह और चूने से समृद्ध होती है तथा नमी बनाए रखती है, परंतु यह धान नहीं बल्कि कपास के लिए उपयुक्त है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following statements about volcanic activity is correct?\n ज्वालामुखीय गतिविधि के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "Volcanoes are formed only on land. / ज्वालामुखी केवल भूमि पर बनते हैं।",
+        "b": "Many volcanoes are found under oceans. / अनेक ज्वालामुखी महासागरों के नीचे पाए जाते हैं।",
+        "c": "Volcanoes form due to water erosion. / ज्वालामुखी जल अपक्षय से बनते हैं।",
+        "d": "All volcanoes are extinct. / सभी ज्वालामुखी मृत हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSubmarine volcanoes are common, forming islands like Hawaii.\n\n📖 हिंदी स्पष्टीकरण:\nसमुद्र के नीचे अनेक ज्वालामुखी सक्रिय हैं, जैसे हवाई द्वीप।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which of the following rivers flows northward?\n निम्नलिखित में से कौन-सी नदी उत्तर की ओर बहती है?",
+      "options": {
+        "a": "Congo / कांगो",
+        "b": "Nile / नील",
+        "c": "Mississippi / मिसिसिपी",
+        "d": "Danube / डेन्यूब"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNile flows from south to north into the Mediterranean Sea.\n\n📖 हिंदी स्पष्टीकरण:\nनील दक्षिण से उत्तर की ओर बहती है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which of the following statements about the Narmada River is correct?\n नर्मदा नदी के संबंध में निम्नलिखित में से कौन-सा कथन सही है?\n (a) It flows through a rift valley. / यह भ्रंशन घाटी से होकर बहती है।\n (b) It drains into the Arabian Sea. / यह अरब सागर में गिरती है।\n (c) It forms the Dhuandhar Falls. / यह धुआंधार जलप्रपात का निर्माण करती है।",
+      "options": {
+        "a": "Only (a) and (b) / केवल (a) और (b)",
+        "b": "Only (b) and (c) / केवल (b) और (c)",
+        "c": "All (a), (b), and (c) / सभी (a), (b) और (c)",
+        "d": "Only (a) / केवल (a)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNarmada flows west through a rift valley, forming Dhuandhar Falls and draining into the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा पश्चिम दिशा में भ्रंश घाटी से बहती है, धुआंधार जलप्रपात बनाती है और अरब सागर में गिरती है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "options": {
+        "a": "Moraine – Wind deposition / मोरेन – पवन निक्षेपण",
+        "b": "Yardang – River erosion / यार्डांग – नदी अपरदन",
+        "c": "Mushroom rock – Wind erosion / मशरूम शैल – पवन अपरदन",
+        "d": "Drumlin – Karst region / ड्रमलिन – कार्स्ट क्षेत्र"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMushroom rocks are formed by wind abrasion near the ground.\n\n📖 हिंदी स्पष्टीकरण:\nमशरूम शैल पवन के घर्षण से भूमि के निकट बनती हैं।"
+    },
+    {
+      "q_num": 10,
+      "question": "The country associated with the Great Rift Valley is:\n ‘ग्रेट रिफ्ट वैली’ किस देश से संबंधित है?",
+      "options": {
+        "a": "China / चीन",
+        "b": "Kenya / केन्या",
+        "c": "Peru / पेरू",
+        "d": "France / फ्रांस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Great Rift Valley stretches across East Africa, mainly Kenya.\n\n📖 हिंदी स्पष्टीकरण:\nग्रेट रिफ्ट वैली पूर्वी अफ्रीका में फैली है और मुख्यतः केन्या में स्थित है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which of the following rivers does not flow into the Bay of Bengal?\n निम्नलिखित में से कौन-सी नदी बंगाल की खाड़ी में नहीं गिरती?",
+      "options": {
+        "a": "Mahanadi / महानदी",
+        "b": "Godavari / गोदावरी",
+        "c": "Krishna / कृष्णा",
+        "d": "Narmada / नर्मदा"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Narmada flows westward and drains into the Arabian Sea, while the others flow into the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा पश्चिम की ओर बहती है और अरब सागर में गिरती है, जबकि अन्य नदियाँ बंगाल की खाड़ी में गिरती हैं।"
+    },
+    {
+      "q_num": 12,
+      "question": "El Niño phenomenon is associated with which ocean?\n एल नीनो प्रभाव किस महासागर से संबंधित है?",
+      "options": {
+        "a": "Pacific Ocean / प्रशांत महासागर",
+        "b": "Atlantic Ocean / अटलांटिक महासागर",
+        "c": "Indian Ocean / हिन्द महासागर",
+        "d": "Arctic Ocean / आर्कटिक महासागर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nEl Niño originates in the central and eastern Pacific Ocean and affects global monsoon patterns.\n\n📖 हिंदी स्पष्टीकरण:\nएल नीनो प्रभाव प्रशांत महासागर के केन्द्रीय भाग में उत्पन्न होता है और विश्व भर के मानसूनी पैटर्न को प्रभावित करता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which river valley hosts the Rourkela Steel Plant?\n किस नदी घाटी में राउरकेला इस्पात संयंत्र स्थित है?",
+      "options": {
+        "a": "Mahanadi / महानदी",
+        "b": "Damodar / दामोदर",
+        "c": "Godavari / गोदावरी",
+        "d": "Brahmani / ब्राह्मणी"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nRourkela Steel Plant lies on the banks of Brahmani River in Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nराउरकेला इस्पात संयंत्र ओडिशा की ब्राह्मणी नदी के किनारे स्थित है।"
+    },
+    {
+      "q_num": 14,
+      "question": "The Mid-Atlantic Ridge is associated with which process?\n मध्य अटलांटिक पर्वत श्रृंखला किस प्रक्रिया से जुड़ी है?",
+      "options": {
+        "a": "Subduction / अवगमन",
+        "b": "Sea-floor spreading / समुद्री तल प्रसार",
+        "c": "Folding / मोड़ बनना",
+        "d": "Faulting / भ्रंशन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe ridge marks a divergent boundary where new oceanic crust forms.\n\n📖 हिंदी स्पष्टीकरण:\nयह एक अपसारी सीमा है जहाँ नई महासागरीय पर्पटी बनती है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which region is densely populated?\n निम्नलिखित क्षेत्रों में से कौन-सा क्षेत्र घनी आबादी वाला है?",
+      "options": {
+        "a": "Equatorial forests / भूमध्य रेखीय वन",
+        "b": "River valleys / नदी घाटियाँ",
+        "c": "Hot deserts / गर्म मरुस्थल",
+        "d": "Polar regions / ध्रुवीय क्षेत्र"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRiver valleys provide fertile land and water, supporting dense population.\n\n📖 हिंदी स्पष्टीकरण:\nनदी घाटियाँ उपजाऊ भूमि और जल उपलब्ध कराती हैं, इसलिए जनसंख्या सघन होती है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Which type of vegetation is found in the Himalayan region?\n हिमालयी क्षेत्र में किस प्रकार की वनस्पति पाई जाती है?",
+      "options": {
+        "a": "Alpine forest / अल्पाइन वन",
+        "b": "Tropical evergreen forest / उष्णकटिबंधीय सदाबहार वन",
+        "c": "Thorn forest / कांटेदार वन",
+        "d": "Mangrove forest / मैंग्रोव वन"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAlpine forests are found in the higher altitudes of the Himalayas.\n\n📖 हिंदी स्पष्टीकरण:\nहिमालय के ऊँचे भागों में अल्पाइन वन पाए जाते हैं।"
+    },
+    {
+      "q_num": 17,
+      "question": "The normal lapse rate in the troposphere is approximately:\n क्षोभमंडल में सामान्य ऊष्मा घट दर लगभग कितनी होती है?",
+      "options": {
+        "a": "4°C per km / प्रति किमी 4°C",
+        "b": "6.5°C per km / प्रति किमी 6.5°C",
+        "c": "8°C per km / प्रति किमी 8°C",
+        "d": "10°C per km / प्रति किमी 10°C"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOn average, temperature decreases by 6.5°C per km ascent in the troposphere.\n\n📖 हिंदी स्पष्टीकरण:\nक्षोभमंडल में ऊँचाई बढ़ने पर तापमान औसतन 6.5°C प्रति किमी घटता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following straits connects the Indian Ocean with the Pacific Ocean?\n निम्नलिखित में से कौन-सी जलसन्धि हिंद महासागर को प्रशांत महासागर से जोड़ती है?",
+      "options": {
+        "a": "Palk Strait / पाक जलसन्धि",
+        "b": "Sunda Strait / सुंडा जलसन्धि",
+        "c": "Gibraltar Strait / जिब्राल्टर जलसन्धि",
+        "d": "Bass Strait / बैस जलसन्धि"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Sunda Strait lies between Java and Sumatra and connects the Indian Ocean with the Pacific Ocean.\n\n📖 हिंदी स्पष्टीकरण:\nसुंडा जलसन्धि जावा और सुमात्रा के बीच स्थित है और हिंद महासागर को प्रशांत महासागर से जोड़ती है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Which among the following ranges is also known as the “Himadri”?\n निम्नलिखित में से कौन-सी श्रेणी “हिमाद्रि” के नाम से जानी जाती है?",
+      "options": {
+        "a": "Great Himalaya / महान हिमालय",
+        "b": "Lesser Himalaya / मध्य हिमालय",
+        "c": "Shiwalik Range / शिवालिक श्रेणी",
+        "d": "Trans-Himalaya / पार-हिमालय"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Great Himalaya, the innermost and highest range, is called Himadri.\n\n📖 हिंदी स्पष्टीकरण:\nमहान हिमालय, जो सबसे भीतरी और ऊँची श्रेणी है, “हिमाद्रि” कहलाती है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Which one of the following causes the monsoon in India?\n भारत में मानसून का मुख्य कारण क्या है?",
+      "options": {
+        "a": "Coriolis Effect / कोरिओलिस प्रभाव",
+        "b": "Differential heating of land and sea / भूमि और समुद्र के असमान ताप",
+        "c": "Jet Streams / जेट धाराएँ",
+        "d": "El Niño / एल नीनो"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMonsoon winds arise due to unequal heating of land and sea causing seasonal pressure differences.\n\n📖 हिंदी स्पष्टीकरण:\nभूमि और समुद्र के असमान ताप से दबाव अंतर उत्पन्न होता है जो मानसूनी हवाओं का मुख्य कारण है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which Indian state is the easternmost state of India?\n भारत का सबसे पूर्वी राज्य कौन-सा है?",
+      "options": {
+        "a": "Assam / असम",
+        "b": "Arunachal Pradesh / अरुणाचल प्रदेश",
+        "c": "Manipur / मणिपुर",
+        "d": "Mizoram / मिजोरम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nArunachal Pradesh is India’s easternmost state where the Sun first rises.\n\n📖 हिंदी स्पष्टीकरण:\nअरुणाचल प्रदेश भारत का सबसे पूर्वी राज्य है जहाँ सूर्य सबसे पहले उदित होता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Denudation refers to which of the following processes?\n अभिक्षरण निम्नलिखित में से किस प्रक्रिया को संदर्भित करता है?",
+      "options": {
+        "a": "Wearing down of the Earth’s surface / पृथ्वी की सतह का क्षरण",
+        "b": "Building up of mountains / पर्वत निर्माण",
+        "c": "Volcanic activity / ज्वालामुखीय क्रिया",
+        "d": "Folding of crust / पपड़ी का मोचन"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDenudation is the overall lowering of the Earth’s surface by weathering, erosion, and mass wasting.\n\n📖 हिंदी स्पष्टीकरण:\nअभिक्षरण वह समग्र प्रक्रिया है जिसमें अपक्षय, अपरदन और भू-स्खलन द्वारा पृथ्वी की सतह नीचे जाती है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which of the following rivers forms an estuary?\n निम्नलिखित में से कौन-सी नदी मुहाना (Estuary) बनाती है?",
+      "options": {
+        "a": "Krishna / कृष्णा",
+        "b": "Godavari / गोदावरी",
+        "c": "Narmada / नर्मदा",
+        "d": "Kaveri / कावेरी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNarmada is a west-flowing river draining into the Arabian Sea, forming an estuary.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा पश्चिम की ओर अरब सागर में गिरती है, इसलिए यह मुहाना बनाती है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which of the following plains lies between the Ganga and the Yamuna?\n निम्नलिखित में से कौन-सा मैदान गंगा और यमुना के बीच स्थित है?",
+      "options": {
+        "a": "Doab Plain / दोआब मैदान",
+        "b": "Tarai Region / तराई क्षेत्र",
+        "c": "Delta Region / डेल्टा क्षेत्र",
+        "d": "Punjab Plain / पंजाब मैदान"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Ganga–Yamuna Doab Plain lies between the two rivers and is highly fertile.\n\n📖 हिंदी स्पष्टीकरण:\nगंगा-यमुना दोआब मैदान दोनों नदियों के बीच स्थित है और अत्यंत उपजाऊ है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which of the following is a major push factor of migration?\n निम्नलिखित में से प्रवासन का प्रमुख प्रेरक (धक्का) कारक कौन-सा है?",
+      "options": {
+        "a": "Urban lifestyle / शहरी जीवनशैली",
+        "b": "Better education / बेहतर शिक्षा",
+        "c": "Higher wages / अधिक वेतन",
+        "d": "Unemployment / बेरोज़गारी"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nUnemployment pushes people to move out of their region.\n\n📖 हिंदी स्पष्टीकरण:\nबेरोज़गारी लोगों को अपना क्षेत्र छोड़ने के लिए मजबूर करती है।"
+    },
+    {
+      "q_num": 26,
+      "question": "Which climatic region is best known for permanent ‘Permafrost’?\n स्थायी ‘परमाफ्रॉस्ट’ किस जलवायु क्षेत्र की मुख्य विशेषता है?",
+      "options": {
+        "a": "Taiga / टैगा",
+        "b": "Tundra / टुण्ड्रा",
+        "c": "Mediterranean / भूमध्यसागरीय",
+        "d": "Steppe / स्टेपी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPermafrost—permanently frozen subsoil—is typical of the Tundra climate.\n\n📖 हिंदी स्पष्टीकरण:\nपरमाफ्रॉस्ट यानी स्थायी जमी हुई उपमिट्टी टुण्ड्रा क्षेत्र की विशिष्ट विशेषता है।"
+    },
+    {
+      "q_num": 27,
+      "question": "Consider the following statements regarding Cirrus clouds:\n सिरस बादलों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are high-level clouds made of ice crystals.\n ये उच्च स्तर के बर्फ़ के क्रिस्टल से बने बादल हैं।\n (b) They appear wispy or feather-like.\n ये पतले और रेशेदार दिखाई देते हैं।\n (c) They usually bring heavy rainfall.\n ये आमतौर पर भारी वर्षा लाते हैं।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "1 and 2 / 1 और 2",
+        "b": "2 and 3 / 2 और 3",
+        "c": "1 and 3 / 1 और 3",
+        "d": "1, 2 and 3 / 1, 2 और 3"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCirrus clouds are high, wispy clouds that do not produce heavy rain.\n\n📖 हिंदी स्पष्टीकरण:\nसिरस बादल उच्च और रेशेदार होते हैं, जो भारी वर्षा नहीं करते।"
+    },
+    {
+      "q_num": 28,
+      "question": "Which one of the following is a warm ocean current?\n निम्नलिखित में से कौन-सी समुद्री धारा गर्म है?",
+      "options": {
+        "a": "Labrador Current / लैब्राडोर धारा",
+        "b": "Canary Current / कैनरी धारा",
+        "c": "Kuroshio Current / कुरोशियो धारा",
+        "d": "California Current / कैलिफ़ोर्निया धारा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Kuroshio Current is a major warm current in the North Pacific Ocean.\n\n📖 हिंदी स्पष्टीकरण:\nकुरोशियो उत्तर प्रशांत महासागर की प्रमुख गर्म धारा है।"
+    },
+    {
+      "q_num": 29,
+      "question": "Which of the following is the world’s longest mountain range?\n निम्नलिखित में से विश्व की सबसे लंबी पर्वतमाला कौन-सी है?",
+      "options": {
+        "a": "Alps / ऐल्प्स",
+        "b": "Rockies / रॉकी",
+        "c": "Himalayas / हिमालय",
+        "d": "Andes / एंडीज"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAndes run along western South America for about 7,000 km.\n\n📖 हिंदी स्पष्टीकरण:\nएंडीज पर्वतमाला लगभग 7,000 किमी लंबी है।"
+    },
+    {
+      "q_num": 30,
+      "question": "Which of the following landforms is formed by river erosion?\n निम्नलिखित में से कौन-सा स्थलरूप नदी अपरदन से बनता है?",
+      "options": {
+        "a": "Delta / डेल्टा",
+        "b": "V-shaped valley / V-आकार की घाटी",
+        "c": "Alluvial fan / निक्षेप पंखा",
+        "d": "Floodplain / बाढ़ मैदान"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nV-shaped valleys are carved by rivers through vertical erosion in youthful stages.\n\n📖 हिंदी स्पष्टीकरण:\nV-आकार की घाटियाँ नदियों द्वारा उनके आरंभिक चरण में ऊर्ध्वाधर अपरदन से निर्मित होती हैं।"
+    },
+    {
+      "q_num": 31,
+      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "options": {
+        "a": "Yardang – Glacial erosion / यार्डांग – हिमनदी अपरदन",
+        "b": "Drumlin – Wind deposition / ड्रिम्लिन – पवन निक्षेप",
+        "c": "Karst – Chemical weathering / कार्स्ट – रासायनिक अपरदन",
+        "d": "Moraine – Volcanic activity / मोरेन – ज्वालामुखीय क्रिया"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nKarst topography forms by chemical weathering of limestone.\n\n📖 हिंदी स्पष्टीकरण:\nकार्स्ट स्थलरूप चूना पत्थर के रासायनिक अपरदन से बनते हैं।"
+    },
+    {
+      "q_num": 32,
+      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित युग्मों में से कौन-सा सही सुमेलित है?",
+      "options": {
+        "a": "Indo-Bangladesh Boundary – 1971 Treaty of Peace, Friendship and Cooperation / भारत-बांग्लादेश सीमा – 1971 की शांति, मैत्री और सहयोग संधि",
+        "b": "Indo-China Boundary – McMahon Line (1914) / भारत-चीन सीमा – मैकमहन रेखा (1914)",
+        "c": "Indo-Pakistan Boundary – Radcliffe Line (1935) / भारत-पाकिस्तान सीमा – रैडक्लिफ रेखा (1935)",
+        "d": "Indo-Nepal Boundary – Simla Agreement (1950) / भारत-नेपाल सीमा – शिमला समझौता (1950)"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Indo-China boundary is demarcated by the McMahon Line (1914 Simla Agreement). Other options are mismatched.\n\n📖 हिंदी स्पष्टीकरण:\nभारत-चीन सीमा 1914 के शिमला समझौते द्वारा निर्धारित मैकमहन रेखा से परिभाषित है। अन्य विकल्प गलत हैं।"
+    },
+    {
+      "q_num": 33,
+      "question": "The Pennar River flows through which of the following states?\n पेनार नदी निम्नलिखित में से किन राज्यों से होकर बहती है?",
+      "options": {
+        "a": "Maharashtra and Gujarat / महाराष्ट्र और गुजरात",
+        "b": "Tamil Nadu and Kerala / तमिलनाडु और केरल",
+        "c": "Karnataka and Andhra Pradesh / कर्नाटक और आंध्र प्रदेश",
+        "d": "Odisha and West Bengal / ओडिशा और पश्चिम बंगाल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPennar rises in Karnataka and flows east through Andhra Pradesh to the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nपेनार नदी कर्नाटक में उत्पन्न होकर आंध्र प्रदेश से पूर्व की ओर बंगाल की खाड़ी में गिरती है।"
+    },
+    {
+      "q_num": 34,
+      "question": "Which of the following dams is built across the Krishna River?\n निम्नलिखित में से कौन-सा बाँध कृष्णा नदी पर बना है?",
+      "options": {
+        "a": "Nagarjuna Sagar Dam / नागार्जुन सागर बाँध",
+        "b": "Hirakud Dam / हीराकुंड बाँध",
+        "c": "Bhakra Nangal Dam / भाखड़ा नांगल बाँध",
+        "d": "Sardar Sarovar Dam / सरदार सरोवर बाँध"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nNagarjuna Sagar Dam, one of the largest masonry dams, is on the Krishna River in Telangana.\n\n📖 हिंदी स्पष्टीकरण:\nनागार्जुन सागर बाँध कृष्णा नदी पर तेलंगाना में बना एक विशाल पत्थर का बाँध है।"
+    },
+    {
+      "q_num": 35,
+      "question": "Which of the following lakes is a tectonic lake?\n निम्नलिखित में से कौन-सी झील विवर्तनिक (Tectonic) झील है?",
+      "options": {
+        "a": "Sambhar Lake / सांभर झील",
+        "b": "Wular Lake / वुलर झील",
+        "c": "Chilika Lake / चिलिका झील",
+        "d": "Loktak Lake / लोकटक झील"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWular Lake in Kashmir is formed due to tectonic activity.\n\n📖 हिंदी स्पष्टीकरण:\nवुलर झील कश्मीर में स्थित है और यह विवर्तनिक क्रिया से बनी है।"
+    },
+    {
+      "q_num": 36,
+      "question": "Consider the following statements regarding mechanical weathering:\n यांत्रिक अपक्षय के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It occurs due to chemical alteration of rocks. / यह चट्टानों के रासायनिक परिवर्तन के कारण होता है।\n (b) It involves the disintegration of rocks without any chemical change. / इसमें बिना किसी रासायनिक परिवर्तन के चट्टानों का विखंडन होता है।\n (c) It mainly occurs in humid regions. / यह मुख्यतः आर्द्र क्षेत्रों में होता है।\n Which of the above statements is/are correct? / उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "b only / केवल b",
+        "c": "a and c / a और c",
+        "d": "b and c / b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMechanical weathering breaks rocks physically without altering their chemical composition.\n\n📖 हिंदी स्पष्टीकरण:\nयांत्रिक अपक्षय में चट्टानों का भौतिक रूप से विखंडन होता है, जबकि उनकी रासायनिक संरचना अपरिवर्तित रहती है।"
+    },
+    {
+      "q_num": 37,
+      "question": "The ‘Lapse Rate’ decreases sharply in which atmospheric layer?\n ‘Lapse Rate’ किस वायुमंडलीय परत में अचानक कम हो जाता है?",
+      "options": {
+        "a": "Troposphere / क्षोभमंडल",
+        "b": "Tropopause / क्षोभावरोध",
+        "c": "Stratosphere / समतापमंडल",
+        "d": "Mesosphere / मध्यमंडल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn the stratosphere, temperature increases with height due to ozone absorption; hence lapse rate nearly drops.\n\n📖 हिंदी स्पष्टीकरण:\nसमतापमंडल में ऊँचाई के साथ तापमान बढ़ता है, इसलिए यहाँ lapse rate लगभग समाप्त हो जाता है।"
+    },
+    {
+      "q_num": 38,
+      "question": "Which one of the following is the correct sequence of Himalayan ranges from south to north?\n निम्नलिखित में से हिमालयी श्रेणियों का दक्षिण से उत्तर की ओर सही क्रम कौन-सा है?",
+      "options": {
+        "a": "Himadri – Himachal – Shiwalik",
+        "b": "Shiwalik – Himadri – Himachal",
+        "c": "Shiwalik – Himachal – Himadri",
+        "d": "Himachal – Shiwalik – Himadri"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFrom south to north: Shiwalik → Himachal → Himadri.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण से उत्तर क्रम: शिवालिक → हिमाचल → हिमाद्रि।"
+    },
+    {
+      "q_num": 39,
+      "question": "Consider the following statements about the Coastal Plains of India:\n भारत के तटीय मैदानों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They lie between the Western and Eastern Ghats and the sea.\n ये पश्चिमी और पूर्वी घाट तथा समुद्र के बीच स्थित हैं।\n (b) The Western Coastal Plain is narrower than the Eastern Coastal Plain.\n पश्चिमी तटीय मैदान पूर्वी तटीय मैदान की तुलना में संकीर्ण है।\n (c) The Eastern Coastal Plain is formed mainly by the deltas of rivers like Mahanadi and Godavari.\n पूर्वी तटीय मैदान मुख्य रूप से महानदी और गोदावरी जैसी नदियों के डेल्टा से बना है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": ""
+    },
+    {
+      "q_num": 40,
+      "question": "The process by which ice directly changes into vapour is—\n जिस प्रक्रिया में बर्फ सीधे वाष्प में परिवर्तित हो जाती है, उसे क्या कहते हैं?",
+      "options": {
+        "a": "Condensation / संघनन",
+        "b": "Sublimation / उत्क्रमण",
+        "c": "Deposition / निक्षेपण",
+        "d": "Evaporation / वाष्पीकरण"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSublimation is the direct change of solid ice into vapour without becoming liquid.\n\n📖 हिंदी स्पष्टीकरण:\nउत्क्रमण वह प्रक्रिया है जिसमें ठोस बर्फ तरल बने बिना सीधे वाष्प में बदल जाती है।"
+    },
+    {
+      "q_num": 41,
+      "question": "Which of the following deserts is a “rain-shadow desert”?\n निम्नलिखित में से कौन-सा मरुस्थल वर्षाछाया (Rain-shadow) क्षेत्र में स्थित है?",
+      "options": {
+        "a": "Thar Desert / थार मरुस्थल",
+        "b": "Atacama Desert / अटाकामा मरुस्थल",
+        "c": "Mojave Desert / मोजावे मरुस्थल",
+        "d": "Gobi Desert / गोबी मरुस्थल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAtacama lies in the rain shadow of the Andes Mountains, making it one of the driest regions.\n\n📖 हिंदी स्पष्टीकरण:\nअटाकामा एंडीज़ पर्वत की वर्षाछाया में स्थित है, इसलिए यह विश्व के सबसे शुष्क क्षेत्रों में से एक है।"
+    },
+    {
+      "q_num": 42,
+      "question": "Which of the following statements about the Earth's core is correct?\n पृथ्वी के कोर के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "The outer core is solid and the inner core is liquid. / बाहरी कोर ठोस और आंतरिक कोर द्रव है।",
+        "b": "The outer core is liquid and the inner core is solid. / बाहरी कोर द्रव और आंतरिक कोर ठोस है।",
+        "c": "Both cores are solid. / दोनों कोर ठोस हैं।",
+        "d": "Both cores are liquid. / दोनों कोर द्रव हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe outer core is molten iron and nickel, while the inner core is solid due to immense pressure.\n\n📖 हिंदी स्पष्टीकरण:\nबाहरी कोर लोहा-निकल का द्रव रूप है, जबकि अत्यधिक दाब के कारण आंतरिक कोर ठोस होता है।"
+    },
+    {
+      "q_num": 43,
+      "question": "The ‘Roaring Forties’ are strongest in which hemisphere?\n ‘Roaring Forties’ किस गोलार्ध में सर्वाधिक प्रबल होती हैं?",
+      "options": {
+        "a": "Northern Hemisphere / उत्तरी गोलार्ध",
+        "b": "Southern Hemisphere / दक्षिणी गोलार्ध",
+        "c": "Both equally / दोनों में समान",
+        "d": "None / कोई नहीं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Southern Hemisphere has no major landmasses; thus winds blow freely and strongly.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिणी गोलार्ध में बड़े भूभाग नहीं हैं, इसलिए हवाएँ अत्यंत तेज़ चलती हैं।"
+    },
+    {
+      "q_num": 44,
+      "question": "Consider the following statements regarding Cumulonimbus clouds:\n क्यूम्यूलोनिम्बस बादलों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are vertically developed clouds.\n ये ऊर्ध्वाधर रूप से विकसित बादल हैं।\n (b) They produce lightning, thunder, and heavy rainfall.\n ये बिजली, गर्जन और भारी वर्षा उत्पन्न करते हैं।\n (c) They are uniform grey clouds covering the entire sky.\n ये आकाश को ढकने वाले समान धूसर बादल होते हैं।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "1 and 2 / 1 और 2",
+        "b": "2 and 3 / 2 और 3",
+        "c": "1 and 3 / 1 और 3",
+        "d": "1, 2 and 3 / 1, 2 और 3"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCumulonimbus clouds produce storms and lightning but are not uniform grey clouds.\n\n📖 हिंदी स्पष्टीकरण:\nक्यूम्यूलोनिम्बस बादल तूफ़ान और बिजली उत्पन्न करते हैं लेकिन समान धूसर बादल नहीं होते।"
+    },
+    {
+      "q_num": 45,
+      "question": "Consider the following statements about Earth's crust:\n पृथ्वी की भू-पर्पटी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is composed mainly of iron and nickel. / यह मुख्य रूप से लोहा और निकल से बनी होती है।\n (b) It is the outermost layer of the Earth. / यह पृथ्वी की सबसे बाहरी परत है।\n (c) Oceanic crust is denser than continental crust. / महासागरीय पर्पटी महाद्वीपीय पर्पटी से अधिक घनी होती है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "1 and 2 / 1 और 2",
+        "b": "2 and 3 / 2 और 3",
+        "c": "1 and 3 / 1 और 3",
+        "d": "1, 2 and 3 / 1, 2 और 3"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe crust is the outermost layer, with oceanic crust denser than continental crust; iron and nickel dominate the core, not crust.\n\n📖 हिंदी स्पष्टीकरण:\nभू-पर्पटी पृथ्वी की सबसे बाहरी परत है; महासागरीय पर्पटी महाद्वीपीय से अधिक घनी होती है, जबकि लोहा और निकल कोर में पाए जाते हैं।"
+    },
+    {
+      "q_num": 46,
+      "question": "The “Golden Quadrilateral” project connects—\n “स्वर्ण चतुर्भुज” परियोजना किन शहरों को जोड़ती है?",
+      "options": {
+        "a": "Delhi, Mumbai, Chennai, Kolkata / दिल्ली, मुंबई, चेन्नई, कोलकाता",
+        "b": "Delhi, Ahmedabad, Hyderabad, Kochi / दिल्ली, अहमदाबाद, हैदराबाद, कोच्चि",
+        "c": "Bhopal, Lucknow, Jaipur, Patna / भोपाल, लखनऊ, जयपुर, पटना",
+        "d": "Delhi, Chennai, Pune, Surat / दिल्ली, चेन्नई, पुणे, सूरत"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Golden Quadrilateral connects India’s four major metros — Delhi, Mumbai, Chennai, and Kolkata.\n\n📖 हिंदी स्पष्टीकरण:\nस्वर्ण चतुर्भुज परियोजना भारत के चार प्रमुख महानगरों — दिल्ली, मुंबई, चेन्नई और कोलकाता — को जोड़ती है।"
+    },
+    {
+      "q_num": 47,
+      "question": "Which of the following soil types is formed by the weathering of basalt rock?\n निम्नलिखित में से कौन-सी मिट्टी बेसाल्ट चट्टान के अपक्षय से बनती है?",
+      "options": {
+        "a": "Red soil / लाल मिट्टी",
+        "b": "Black soil / काली मिट्टी",
+        "c": "Laterite soil / लेटराइट मिट्टी",
+        "d": "Alluvial soil / जलोढ़ मिट्टी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBlack soil is derived from basaltic rocks of the Deccan Trap.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी डेक्कन ट्रैप की बेसाल्ट चट्टानों के अपक्षय से बनती है।"
+    },
+    {
+      "q_num": 48,
+      "question": "Which one of the following statements about the troposphere is correct?\n क्षोभमंडल के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "Temperature increases with height. / ऊँचाई के साथ तापमान बढ़ता है।",
+        "b": "Weather phenomena occur here. / मौसम संबंधी घटनाएँ यहाँ घटित होती हैं।",
+        "c": "It lies above the thermosphere. / यह तापमंडल के ऊपर स्थित है।",
+        "d": "It contains auroras. / इसमें ऑरोरा पाए जाते हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAll weather events like rain, storms, and winds occur in the troposphere.\n\n📖 हिंदी स्पष्टीकरण:\nवर्षा, आँधी, बादल जैसी सभी मौसम घटनाएँ क्षोभमंडल में घटित होती हैं।"
+    },
+    {
+      "q_num": 49,
+      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "options": {
+        "a": "Karst Topography — Chemical weathering / कार्स्ट स्थलरूप — रासायनिक अपरदन",
+        "b": "Yardang — Fluvial erosion / यार्डांग — नदी अपरदन",
+        "c": "Moraines — Wind deposition / मोरैन — पवन निक्षेप",
+        "d": "Drumlin — Volcanic activity / ड्रिम्लिन — ज्वालामुखी क्रिया"
+      },
+      "answer": "a",
+      "solution": ""
+    },
+    {
+      "q_num": 50,
+      "question": "Consider the following statements regarding the Brahmaputra River:\n ब्रह्मपुत्र नदी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is known as Tsangpo in Tibet. / इसे तिब्बत में त्सांगपो के नाम से जाना जाता है।\n (b) It joins the Ganga River in Bangladesh. / यह बांग्लादेश में गंगा नदी से मिलती है।\n (c) It forms the world’s largest river island, Majuli. / यह विश्व के सबसे बड़े नदी द्वीप माजुली का निर्माण करती है।",
+      "options": {
+        "a": "b and c only / केवल b और c",
+        "b": "a and c only / केवल a और c",
+        "c": "a and b only / केवल a और b",
+        "d": "a, b, and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nBrahmaputra is Tsangpo in Tibet and forms Majuli Island; it meets the Ganga only after entering Bangladesh as Jamuna, not before.\n\n📖 हिंदी स्पष्टीकरण:\nब्रह्मपुत्र को तिब्बत में सियांग या त्सांगपो कहा जाता है और यह माजुली द्वीप बनाती है; गंगा से यह बांग्लादेश में जाकर मिलती है।"
+    },
+    {
+      "q_num": 51,
+      "question": "The river ‘Teesta’ is a tributary of which major river?\n तीस्ता नदी किस प्रमुख नदी की सहायक है?",
+      "options": {
+        "a": "Ganga / गंगा",
+        "b": "Brahmaputra / ब्रह्मपुत्र",
+        "c": "Mahananda / महानंदा",
+        "d": "Torsa / तोरसा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTeesta flows from Sikkim to join the Brahmaputra in Bangladesh.\n\n📖 हिंदी स्पष्टीकरण:\nतीस्ता सिक्किम से बहकर बांग्लादेश में ब्रह्मपुत्र में मिलती है।"
+    },
+    {
+      "q_num": 52,
+      "question": "Which soil is ideal for tea cultivation?\n चाय की खेती के लिए कौन-सी मिट्टी उपयुक्त है?",
+      "options": {
+        "a": "Desert soil / मरु मिट्टी",
+        "b": "Alluvial soil / जलोढ़ मिट्टी",
+        "c": "Black soil / काली मिट्टी",
+        "d": "Laterite soil / लेटेराइट मिट्टी"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nTea grows best in acidic, well-drained laterite soil.\n\n📖 हिंदी स्पष्टीकरण:\nचाय अम्लीय और जल निकासी वाली लेटेराइट मिट्टी में सबसे अच्छी उगती है।"
+    },
+    {
+      "q_num": 53,
+      "question": "Which line marks the northernmost point where the Sun can be directly overhead?\n कौन-सी रेखा वह उत्तरी बिंदु चिह्नित करती है जहाँ सूर्य सीधे सिर के ऊपर होता है?",
+      "options": {
+        "a": "Tropic of Cancer / कर्क रेखा",
+        "b": "Tropic of Capricorn / मकर रेखा",
+        "c": "Equator / भूमध्य रेखा",
+        "d": "Arctic Circle / उत्तरी ध्रुवीय वृत्त"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Tropic of Cancer (23.5° N) is the northernmost latitude where the Sun can be directly overhead.\n\n📖 हिंदी स्पष्टीकरण:\nकर्क रेखा (23.5° उत्तर) वह उत्तरी अक्षांश है जहाँ सूर्य सीधे ऊपर दिखाई देता है।"
+    },
+    {
+      "q_num": 54,
+      "question": "Which of the following minerals is used in making aluminium?\n निम्नलिखित में से कौन-सा खनिज एल्यूमिनियम बनाने में उपयोग होता है?",
+      "options": {
+        "a": "Hematite / हेमेटाइट",
+        "b": "Mica / अभ्रक",
+        "c": "Bauxite / बॉक्साइट",
+        "d": "Gypsum / जिप्सम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBauxite is the main ore of aluminium.\n\n📖 हिंदी स्पष्टीकरण:\nएल्यूमिनियम का प्रमुख अयस्क बॉक्साइट है।"
+    },
+    {
+      "q_num": 55,
+      "question": "Which of the following statements about hailstones is correct?\n ओलों के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "They form in stratus clouds / ये स्तरीय बादलों में बनते हैं",
+        "b": "They form in cumulonimbus clouds / ये क्यूम्यूलोनिंबस बादलों में बनते हैं",
+        "c": "They form only at sea level / ये केवल समुद्र तल पर बनते हैं",
+        "d": "They are made of dust / ये धूल से बने होते हैं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHailstones form in cumulonimbus clouds where strong updrafts freeze water droplets.\n\n📖 हिंदी स्पष्टीकरण:\nओले क्यूम्यूलोनिंबस बादलों में बनते हैं जहाँ प्रबल ऊर्ध्व प्रवाह जलबिंदुओं को जमाता है।"
+    },
+    {
+      "q_num": 56,
+      "question": "Which crop is known as a cash crop?\n कौन-सी फसल नकदी फसल कहलाती है?",
+      "options": {
+        "a": "Wheat / गेहूं",
+        "b": "Rice / धान",
+        "c": "Cotton / कपास",
+        "d": "Barley / जौ"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCotton is a cash crop as it is grown mainly for sale and industry use.\n\n📖 हिंदी स्पष्टीकरण:\nकपास एक नकदी फसल है क्योंकि इसे मुख्यतः बिक्री और औद्योगिक उपयोग के लिए उगाया जाता है।"
+    },
+    {
+      "q_num": 57,
+      "question": "Which of the following statements about longitude is correct?\n देशांतर के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "Longitude lines converge at the poles. / देशांतर रेखाएँ ध्रुवों पर मिलती हैं।",
+        "b": "Longitude lines are parallel like latitude lines. / देशांतर रेखाएँ अक्षांश की तरह समानांतर होती हैं।",
+        "c": "Longitude does not affect local time. / देशांतर स्थानीय समय को प्रभावित नहीं करता।",
+        "d": "The maximum longitude is 90°. / अधिकतम देशांतर 90° है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLongitude lines converge at the poles, unlike latitude lines which are parallel.\n\n📖 हिंदी स्पष्टीकरण:\nदेशांतर रेखाएँ ध्रुवों पर मिलती हैं, जबकि अक्षांश रेखाएँ समानांतर होती हैं।"
+    },
+    {
+      "q_num": 58,
+      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित युग्मों में से कौन-सा सही सुमेलित है?",
+      "options": {
+        "a": "Sal - Tropical Evergreen Forest / साल – उष्णकटिबंधीय सदाबहार वन",
+        "b": "Teak - Tropical Deciduous Forest / सागौन – उष्णकटिबंधीय पर्णपाती वन",
+        "c": "Silver Fir - Thorn Forest / सिल्वर फ़र – कांटेदार वन",
+        "d": "Sundari - Montane Forest / सुंदरि – पर्वतीय वन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTeak is a characteristic tree of tropical deciduous forests.\n\n📖 हिंदी स्पष्टीकरण:\nसागौन उष्णकटिबंधीय पर्णपाती वनों की प्रमुख प्रजाति है।"
+    },
+    {
+      "q_num": 59,
+      "question": "Which of the following dams is constructed across the Damodar River?\n निम्नलिखित में से कौन-सा बाँध दामोदर नदी पर बनाया गया है?",
+      "options": {
+        "a": "Maithan Dam / मैथान बाँध",
+        "b": "Koyna Dam / कोयना बाँध",
+        "c": "Mettur Dam / मेट्टूर बाँध",
+        "d": "Ukai Dam / उकाई बाँध"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Maithan Dam is constructed on the Damodar River in Jharkhand. It is one of the major dams of the Damodar Valley Corporation (DVC) project along with Panchet and Maithon dams. The Damodar is an important tributary of the Ganges.\n\n📖 हिंदी स्पष्टीकरण:\nमैथान बाँध झारखंड में दामोदर नदी पर बनाया गया है। यह दामोदर घाटी निगम (DVC) परियोजना के प्रमुख बाँधों में से एक है।"
+    },
+    {
+      "q_num": 60,
+      "question": "Which of the following railways has the highest altitude station in India?\n निम्नलिखित में से किस रेलवे में भारत का सबसे ऊँचा स्टेशन है?",
+      "options": {
+        "a": "Kalka-Shimla Railway / कालका-शिमला रेलवे",
+        "b": "Nilgiri Mountain Railway / नीलगिरि पर्वतीय रेलवे",
+        "c": "Kangra Valley Railway / कांगड़ा घाटी रेलवे",
+        "d": "Darjeeling Himalayan Railway / दार्जिलिंग हिमालयन रेलवे"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nGhum station on the Darjeeling Himalayan Railway is India’s highest railway station (2,258 m).\n\n📖 हिंदी स्पष्टीकरण:\n(दार्जिलिंग हिमालयन रेलवे का घूम स्टेशन भारत का सबसे ऊँचा रेलवे स्टेशन है।)"
+    },
+    {
+      "q_num": 61,
+      "question": "Which of the following continents has the longest coastline?\n निम्नलिखित में से किस महाद्वीप की तटरेखा सबसे लंबी है?",
+      "options": {
+        "a": "Asia / एशिया",
+        "b": "Africa / अफ्रीका",
+        "c": "North America / उत्तर अमेरिका",
+        "d": "Europe / यूरोप"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNorth America’s indented coastline is the longest among all continents.\n\n📖 हिंदी स्पष्टीकरण:\nउत्तर अमेरिका की गहराई लिए तटरेखा सबसे लंबी है।"
+    },
+    {
+      "q_num": 62,
+      "question": "The largest producer of coal in India is—\n भारत में कोयले का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "options": {
+        "a": "Jharkhand / झारखंड",
+        "b": "Odisha / ओडिशा",
+        "c": "Chhattisgarh / छत्तीसगढ़",
+        "d": "Madhya Pradesh / मध्य प्रदेश"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nJharkhand produces the maximum coal, followed by Chhattisgarh and Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nझारखंड भारत का सबसे बड़ा कोयला उत्पादक राज्य है, इसके बाद छत्तीसगढ़ और ओडिशा आते हैं।"
+    },
+    {
+      "q_num": 63,
+      "question": "Which one of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "options": {
+        "a": "Earthquake – Exogenic process / भूकंप – बाह्य प्रक्रिया",
+        "b": "Weathering – Endogenic process / अपक्षय – अंतर्जात प्रक्रिया",
+        "c": "Folding – Endogenic process / मोचन – अंतर्जात प्रक्रिया",
+        "d": "River erosion – Endogenic process / नदी अपरदन – अंतर्जात प्रक्रिया"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFolding occurs due to forces within the Earth’s crust, hence it is endogenic.\n\n📖 हिंदी स्पष्टीकरण:\nमोचन पृथ्वी की पपड़ी के भीतर की शक्तियों से होता है, इसलिए यह अंतर्जात प्रक्रिया है।"
+    },
+    {
+      "q_num": 64,
+      "question": "Which of the following statements is true about the Western Ghats?\n पश्चिमी घाट के बारे में निम्नलिखित में से कौन-सा कथन सत्य है?",
+      "options": {
+        "a": "They receive more rainfall than the Eastern Ghats. / इन्हें पूर्वी घाटों की तुलना में अधिक वर्षा प्राप्त होती है।",
+        "b": "They are older than the Himalayas. / ये हिमालय से अधिक प्राचीन हैं।",
+        "c": "They run parallel to the eastern coast. / ये भारत के पूर्वी तट के समानांतर चलती हैं।",
+        "d": "They are formed by volcanic activity. / इनका निर्माण ज्वालामुखीय क्रिया से हुआ है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nWestern Ghats receive heavy rainfall due to southwest monsoon winds striking the windward side.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण-पश्चिम मानसून की हवाओं के कारण पश्चिमी घाट के पवनाभिमुख भाग में अधिक वर्षा होती है।"
+    },
+    {
+      "q_num": 65,
+      "question": "The Pacific Ring of Fire is associated with which phenomenon?\n प्रशांत महासागर की “रिंग ऑफ फायर” किस घटना से संबंधित है?",
+      "options": {
+        "a": "Trade winds / व्यापारिक पवनें",
+        "b": "Ocean currents / महासागरीय धाराएँ",
+        "c": "Glacial movement / हिमनद गति",
+        "d": "Volcanic eruptions and earthquakes / ज्वालामुखी विस्फोट और भूकंप"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Ring of Fire is a tectonically active belt of volcanoes and quakes.\n\n📖 हिंदी स्पष्टीकरण:\nरिंग ऑफ फायर ज्वालामुखी और भूकंप की अत्यधिक सक्रिय क्षेत्रीय पट्टी है।"
+    },
+    {
+      "q_num": 66,
+      "question": "Which of the following grasslands is located in Africa?\n निम्नलिखित में से कौन-सा घास का मैदान अफ्रीका में स्थित है?",
+      "options": {
+        "a": "Pampas / पम्पास",
+        "b": "Prairie / प्रेरी",
+        "c": "Savanna / सवाना",
+        "d": "Steppe / स्तेपी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Savanna grasslands are found in Africa and are characterized by tall grasses and scattered trees.\n\n📖 हिंदी स्पष्टीकरण:\nसवाना घास के मैदान अफ्रीका में पाए जाते हैं, जहाँ ऊँची घास और छिटपुट वृक्ष होते हैं।"
+    },
+    {
+      "q_num": 67,
+      "question": "Which Indian port is known as the “Queen of the Arabian Sea”?\n कौन-सा भारतीय बंदरगाह “अरब सागर की रानी” के नाम से प्रसिद्ध है?",
+      "options": {
+        "a": "Mangalore / मंगलौर",
+        "b": "Kandla / कांडला",
+        "c": "Mumbai / मुंबई",
+        "d": "Cochin / कोचीन"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nCochin Port in Kerala is called the Queen of the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nकेरल का कोचीन बंदरगाह “अरब सागर की रानी” कहलाता है।"
+    },
+    {
+      "q_num": 68,
+      "question": "Which of the following statements regarding the Yamuna River is correct?\n यमुना नदी के संबंध में निम्नलिखित में से कौन-सा कथन सही है?\n (a) It originates from Yamunotri Glacier. / इसका उद्गम यमुनोत्री हिमनद से होता है।\n (b) It is the largest tributary of the Ganga. / यह गंगा की सबसे बड़ी उपनदी है।\n (c) Its water is used in the Indira Gandhi Canal. / इसके जल का उपयोग इंदिरा गांधी नहर में किया जाता है।",
+      "options": {
+        "a": "Only (b) and (c) / केवल (b) और (c)",
+        "b": "Only (a) and (b) / केवल (a) और (b)",
+        "c": "Only (a) and (c) / केवल (a) और (c)",
+        "d": "All (a), (b), and (c) / सभी (a), (b) और (c)"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nYamuna rises from the Yamunotri Glacier and is the main tributary of the Ganga; it doesn’t feed the Indira Gandhi Canal.\n\n📖 हिंदी स्पष्टीकरण:\nयमुना यमुनोत्री हिमनद से निकलती है और गंगा की सबसे बड़ी सहायक है; इसकी जलधारा इंदिरा गांधी नहर में प्रयुक्त नहीं होती।"
+    },
+    {
+      "q_num": 69,
+      "question": "Which of the following statements about the Central Highlands is correct?\n मध्य उच्चभूमियों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "They are located to the south of the Narmada river. वे नर्मदा नदी के दक्षिण में स्थित हैं।",
+        "b": "They extend between the Aravalli and Chotanagpur Plateau. वे अरावली और छोटानागपुर पठार के बीच फैले हैं।",
+        "c": "They include the Malwa Plateau and Bundelkhand region. इनमें मालवा पठार और बुंदेलखंड क्षेत्र शामिल हैं।",
+        "d": "All of the above / उपरोक्त सभी"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Central Highlands stretch between Aravalli and Chotanagpur and comprise Malwa and Bundelkhand plateaus.\n\n📖 हिंदी स्पष्टीकरण:\nमध्य उच्चभूमियाँ अरावली और छोटानागपुर के बीच फैली हैं और मालवा व बुंदेलखंड पठारों को शामिल करती हैं।"
+    },
+    {
+      "q_num": 70,
+      "question": "The National Waterway-1 connects which two cities?\n राष्ट्रीय जलमार्ग-1 किन दो शहरों को जोड़ता है?",
+      "options": {
+        "a": "Prayagraj – Haldia / प्रयागराज – हल्दिया",
+        "b": "Delhi – Kolkata / दिल्ली – कोलकाता",
+        "c": "Mumbai – Kochi / मुंबई – कोच्चि",
+        "d": "Guwahati – Dhubri / गुवाहाटी – धुबरी"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nNW-1 runs along the Ganga River from Prayagraj to Haldia, spanning about 1620 km.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय जलमार्ग-1 गंगा नदी के साथ प्रयागराज से हल्दिया तक लगभग 1620 किमी लंबा है।"
+    },
+    {
+      "q_num": 71,
+      "question": "Which of the following passes is located in Arunachal Pradesh?\n निम्नलिखित में से कौन-सा दर्रा अरुणाचल प्रदेश में स्थित है?",
+      "options": {
+        "a": "Rohtang Pass / रोहतांग दर्रा",
+        "b": "Bomdila Pass / बोंडिला दर्रा",
+        "c": "Nathu La Pass / नाथू ला दर्रा",
+        "d": "Shipki La Pass / शिपकी ला दर्रा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Bomdila Pass connects Arunachal Pradesh with Tibet and lies in the eastern Himalayas.\n\n📖 हिंदी स्पष्टीकरण:\nबोंडिला दर्रा अरुणाचल प्रदेश को तिब्बत से जोड़ता है और यह पूर्वी हिमालय में स्थित है।"
+    },
+    {
+      "q_num": 72,
+      "question": "The Sutlej River enters India from which mountain passes?\n सतलज नदी भारत में किस दर्रे से प्रवेश करती है?",
+      "options": {
+        "a": "Shipki La / शिपकी ला",
+        "b": "Rohtang Pass / रोहतांग दर्रा",
+        "c": "Nathu La / नाथू ला",
+        "d": "Zoji La / ज़ोजी ला"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Sutlej enters India through Shipki La pass in Himachal Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nसतलज नदी हिमाचल प्रदेश में शिपकी ला दर्रे से भारत में प्रवेश करती है।"
+    },
+    {
+      "q_num": 73,
+      "question": "The Ganga River flows eastward because—\n गंगा नदी पूर्व दिशा में बहती है क्योंकि—",
+      "options": {
+        "a": "The Himalayas block northward flow / हिमालय उत्तर दिशा में प्रवाह को रोकते हैं",
+        "b": "The land slope is towards east / भूमि की ढाल पूर्व की ओर है",
+        "c": "Prevailing winds blow eastward / प्रचलित हवाएँ पूर्व की ओर चलती हैं",
+        "d": "Tectonic uplift in west / पश्चिम में भूगर्भीय उत्थान हुआ"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe natural slope of the plains directs the Ganga eastward to the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nमैदानी भाग की प्राकृतिक ढाल पूर्व की ओर है, जिससे गंगा बंगाल की खाड़ी की ओर बहती है।"
+    },
+    {
+      "q_num": 74,
+      "question": "The Mohorovičić discontinuity separates which two layers of the Earth?\n मोहोरोविसिक असंततता पृथ्वी की किन दो परतों को अलग करती है?",
+      "options": {
+        "a": "Crust and Mantle / भू-पर्पटी और मेंटल",
+        "b": "Mantle and Core / मेंटल और कोर",
+        "c": "Inner and Outer Core / आंतरिक और बाहरी कोर",
+        "d": "Lithosphere and Asthenosphere / लिथोस्फीयर और एस्थेनोस्फीयर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Moho discontinuity separates the crust from the mantle.\n\n📖 हिंदी स्पष्टीकरण:\nमोहो असंततता भू-पर्पटी और मेंटल के बीच की सीमा है।"
+    },
+    {
+      "q_num": 75,
+      "question": "Which island group is known for its coral origin?\n कौन-सा द्वीप समूह मूँगे की उत्पत्ति के लिए प्रसिद्ध है?",
+      "options": {
+        "a": "Lakshadweep Islands / लक्षद्वीप द्वीप",
+        "b": "Andaman Islands / अंडमान द्वीप",
+        "c": "Nicobar Islands / निकोबार द्वीप",
+        "d": "Minicoy Islands / मिनिकॉय द्वीप"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLakshadweep Islands are coral atolls formed by the accumulation of coral polyps.\n\n📖 हिंदी स्पष्टीकरण:\nलक्षद्वीप द्वीप मूँगे के पॉलीप्स के संचयन से बने प्रवाल द्वीप (एटोल) हैं।"
+    }
+  ]
+}

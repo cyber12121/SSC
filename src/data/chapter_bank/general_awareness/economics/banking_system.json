@@ -1,0 +1,308 @@
+{
+  "chapter_num": 5,
+  "chapter_title": "Banking System",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "In which year was the Reserve Bank of India (RBI) established? भारतीय रिजर्व बैंक (RBI) की स्थापना किस वर्ष हुई थी?",
+      "options": {
+        "a": "1934",
+        "b": "1935",
+        "c": "1949",
+        "d": "1937"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRBI was established on 1st April 1935 on the basis of the Hilton Young Commission's recommendations. Its first headquarters was in Calcutta before moving to Mumbai in 1937. / RBI\n\n📖 हिंदी स्पष्टीकरण:\nकी स्थापना 1 अप्रैल 1935 को हिल्टन यंग कमीशन की सिफारिशों के आधार पर की गई थी। 1937 में मुंबई जाने से पहले इसका पहला मुख्यालय कलकत्ता में था।"
+    },
+    {
+      "q_num": 2,
+      "question": "Who was the first Governor of the Reserve Bank of India? भारतीय रिजर्व बैंक के प्रथम गवर्नर कौन थे?",
+      "options": {
+        "a": "C.D. Deshmukh / सी.डी. देशमुख",
+        "b": "Osborne Smith / ओसबोर्न स्मिथ",
+        "c": "James Taylor / जेम्स टेलर",
+        "d": "Hilton Young / हिल्टन यंग"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSir Osborne Smith served as the first Governor of RBI from 1935 to 1937. C.D. Deshmukh was the first Indian Governor of the RBI\n\n📖 हिंदी स्पष्टीकरण:\nसर ओसबोर्न स्मिथ ने 1935 से 1937 तक RBI के पहले गवर्नर के रूप में कार्य किया। सी.डी. देशमुख RBI के पहले भारतीय गवर्नर थे।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which animal and tree are featured on the official logo of RBI? RBI के आधिकारिक लोगो में कौन सा जानवर और पेड़ अंकित है?",
+      "options": {
+        "a": "Lion and Banyan Tree / शेर और बरगद का पेड़",
+        "b": "Tiger and Palm Tree / बाघ और ताड़ का पेड़",
+        "c": "Elephant and Lotus / हाथी और कमल",
+        "d": "Horse and Oak / घोड़ा और ओक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe logo of the Reserve Bank of India features a Tiger and a Palm tree. This design was inspired by the East India Company's Double Mohur\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय रिजर्व बैंक के लोगो में एक बाघ और ताड़ का पेड़ है। यह डिज़ाइन ईस्ट इंडिया कंपनी के डबल मोहर से प्रेरित था।"
+    },
+    {
+      "q_num": 4,
+      "question": "Where is the headquarters of SIDBI located? SIDBI का मुख्यालय कहाँ स्थित है?",
+      "options": {
+        "a": "Mumbai / मुंबई",
+        "b": "New Delhi / नई दिल्ली",
+        "c": "Lucknow / लखनऊ",
+        "d": "Bangalore / बैंगलोर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSmall Industries Development Bank of India (SIDBI) was established on 2nd April 1990 and its headquarters is located in Lucknow, Uttar Pradesh\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय लघु उद्योग विकास बैंक (SIDBI) की स्थापना 2 अप्रैल 1990 को हुई थी और इसका मुख्यालय लखनऊ, उत्तर प्रदेश में स्थित है।"
+    },
+    {
+      "q_num": 5,
+      "question": "When was the Reserve Bank of India nationalised? भारतीय रिजर्व बैंक का राष्ट्रीयकरण कब किया गया था?",
+      "options": {
+        "a": "15 August 1947 / 15 अगस्त 1947",
+        "b": "26 January 1950 / 26 जनवरी 1950",
+        "c": "1 January 1949 / 1 जनवरी 1949",
+        "d": "1 April 1935 / 1 अप्रैल 1935"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRBI was nationalised on 1st January 1949 under the RBI (Transfer to Public Ownership) Act, making it a fully government-owned body. / 1\n\n📖 हिंदी स्पष्टीकरण:\nजनवरी 1949 को RBI (सार्वजनिक स्वामित्व में हस्तांतरण) अधिनियम के तहत RBI का राष्ट्रीयकरण किया गया, जिससे यह पूरी तरह से सरकारी स्वामित्व वाली संस्था बन गई।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which institution is known as the \"Bank of Banks\" in India? भारत में किस संस्था को \"बैंकों का बैंक\" कहा जाता है?",
+      "options": {
+        "a": "State Bank of India / भारतीय स्टेट बैंक",
+        "b": "NABARD / नाबार्ड",
+        "c": "Reserve Bank of India / भारतीय रिजर्व बैंक",
+        "d": "SEBI / सेबी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRBI acts as the lender of last resort and the Bank of Banks, meaning it regulates and provides liquidity to commercial banks. / RBI\n\n📖 हिंदी स्पष्टीकरण:\nअंतिम ऋणदाता और बैंकों के बैंक के रूप में कार्य करता है, जिसका अर्थ है कि यह वाणिज्यिक बैंकों को विनियमित करता है और तरलता प्रदान करता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "'Hot Money' refers to which of the following? 'हॉट मनी' का तात्पर्य निम्नलिखित में से किससे है?",
+      "options": {
+        "a": "Currency kept in lockers / लॉकर में रखी मुद्रा",
+        "b": "Assets like stocks and bonds that move quickly between markets / स्टॉक और बॉन्ड जैसी संपत्ति जो बाजारों के बीच तेजी से चलती है",
+        "c": "Counterfeit currency / जाली मुद्रा",
+        "d": "Low-interest loans / कम ब्याज वाले ऋण"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHot money consists of assets such as stocks and deposits that move quickly and regularly between financial markets to seek high returns\n\n📖 हिंदी स्पष्टीकरण:\nहॉट मनी में स्टॉक और डिपॉजिट जैसी संपत्तियां शामिल होती हैं जो उच्च रिटर्न प्राप्त करने के लिए वित्तीय बाजारों के बीच तेजी से और नियमित रूप से चलती हैं।"
+    },
+    {
+      "q_num": 8,
+      "question": "What is the maximum loan limit under the 'Shishu' category of the MUDRA scheme? मुद्रा योजना की 'शिशु' श्रेणी के तहत ऋण की अधिकतम सीमा क्या है?",
+      "options": {
+        "a": "₹50,000 / ₹50,000",
+        "b": "₹5 Lakh /₹5 लाख",
+        "c": "₹10 Lakh / ₹10 लाख",
+        "d": "₹1 Lakh / ₹1 लाख"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nUnder the MUDRA scheme, Shishu loans cover loans up to ₹50,000 for small business startups\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रा योजना के तहत, शिशु ऋण छोटे व्यवसाय स्टार्टअप के लिए ₹50,000 तक के ऋण को कवर करते हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "NABARD was established based on the recommendation of which committee? नाबार्ड (NABARD) की स्थापना किस समिति की सिफारिश पर की गई थी?",
+      "options": {
+        "a": "Narasimhan Committee / नरसिम्हन समिति",
+        "b": "Hilton Young Commission / हिल्टन यंग कमीशन",
+        "c": "B. Sivaramman Committee / बी. शिवरामन समिति",
+        "d": "Malegam Committee / मालेगाम समिति"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNABARD was set up on 12th July 1982 based on the recommendations of the B. Sivaramman Committee (1979)\n\n📖 हिंदी स्पष्टीकरण:\nनाबार्ड की स्थापना 12 जुलाई 1982 को बी. शिवरामन समिति (1979) की सिफारिशों के आधार पर की गई थी।"
+    },
+    {
+      "q_num": 10,
+      "question": "Who is considered the \"Father of Micro Finance system\"? \"सूक्ष्मवित्त प्रणाली का जनक\" किसे माना जाता है?",
+      "options": {
+        "a": "Amartya Sen / अमर्त्य सेन",
+        "b": "Muhammad Yunus / मुहम्मद यूनुस",
+        "c": "C.D. Deshmukh / सी.डी. देशमुख",
+        "d": "Madhabi Puri Buch / माधबी पुरी बुच"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMuhammad Yunus from Bangladesh is the father of Microfinance; he founded the Grameen Bank and received the Nobel Prize in 2006\n\n📖 हिंदी स्पष्टीकरण:\nबांग्लादेश के मुहम्मद यूनुस सूक्ष्मवित्त प्रणाली के जनक हैं; उन्होंने ग्रामीण बैंक की स्थापना की और 2006 में नोबेल पुरस्कार प्राप्त किया।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which of the following is NOT a function of the Reserve Bank of India? निम्नलिखित में से कौन सा भारतीय रिजर्व बैंक का कार्य नहीं है?",
+      "options": {
+        "a": "Currency printing / मुद्रा मुद्रण",
+        "b": "Monetary Policy formulation / मौद्रिक नीति तैयार करना",
+        "c": "Dealing directly with the general public for savings / बचत के लिए सीधे आम जनता के साथ व्यवहार करना",
+        "d": "Acting as the lender of last resort / अंतिम ऋणदाता के रूप में कार्य करना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRBI regulates the banking system and prints currency but does not provide direct banking services like savings accounts to the general public. / RBI\n\n📖 हिंदी स्पष्टीकरण:\nबैंकिंग प्रणाली को नियंत्रित करता है और मुद्रा छापता है लेकिन आम जनता को बचत खाते जैसी प्रत्यक्ष बैंकिंग सेवाएं प्रदान नहीं करता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "The Imperial Bank of India was renamed as State Bank of India in which year? इंपीरियल बैंक ऑफ इंडिया का नाम बदलकर किस वर्ष भारतीय स्टेट बैंक कर दिया गया था?",
+      "options": {
+        "a": "1935",
+        "b": "1949",
+        "c": "1955",
+        "d": "1969"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Imperial Bank of India, formed in 1921, was transformed into the State Bank of India in 1955 as a statutory body. / 1921\n\n📖 हिंदी स्पष्टीकरण:\nमें गठित इंपीरियल बैंक ऑफ इंडिया को 1955 में एक वैधानिक निकाय के रूप में भारतीय स्टेट बैंक में बदल दिया गया था।"
+    },
+    {
+      "q_num": 13,
+      "question": "In which city was India's first Regional Rural Bank, 'Pratham Grameen Bank', established? भारत का पहला क्षेत्रीय ग्रामीण बैंक, 'प्रथम ग्रामीण बैंक', किस शहर में स्थापित किया गया था?",
+      "options": {
+        "a": "Lucknow / लखनऊ",
+        "b": "Moradabad / मुरादाबाद",
+        "c": "Calcutta / कलकत्ता",
+        "d": "Ahmedabad / अहमदाबाद"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPratham Grameen Bank, the first RRB, was established on 2nd October 1975 in Moradabad, Uttar Pradesh\n\n📖 हिंदी स्पष्टीकरण:\nप्रथम ग्रामीण बैंक, पहला RRB, 2 अक्टूबर 1975 को मुरादाबाद, उत्तर प्रदेश में स्थापित किया गया था।"
+    },
+    {
+      "q_num": 14,
+      "question": "What is the main objective of RBI's 'Clean Note Policy' launched in 1999? 1999 में शुरू की गई RBI की 'क्लीन नोट पॉलिसी' का मुख्य उद्देश्य क्या है?",
+      "options": {
+        "a": "To stop money laundering / मनी लॉन्ड्रिंग रोकना",
+        "b": "To provide good quality notes and withdraw soiled notes / अच्छी गुणवत्ता वाले नोट प्रदान करना और गंदे नोटों को वापस लेना",
+        "c": "To promote digital payments / डिजिटल भुगतान को बढ़ावा देना",
+        "d": "To ban old high-value currency / पुरानी उच्च मूल्य वाली मुद्रा पर प्रतिबंध लगाना"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLaunched in 1999, the Clean Note Policy aims to ensure citizens get high-quality notes while dirty or soiled notes are removed from circulation. / 1999\n\n📖 हिंदी स्पष्टीकरण:\nमें शुरू की गई क्लीन नोट पॉलिसी (स्वच्छ नोट नीति) का उद्देश्य यह सुनिश्चित करना है कि नागरिकों को उच्च गुणवत्ता वाले नोट मिलें जबकि गंदे या कटे-फटे नोटों को चलन से हटा दिया जाए।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which committee recommended the establishment of Regional Rural Banks (RRBs)? किस समिति ने क्षेत्रीय ग्रामीण बैंकों (RRBs) की स्थापना की सिफारिश की थी?",
+      "options": {
+        "a": "Hilton Young Commission / हिल्टन यंग कमीशन",
+        "b": "Malegam Committee / मालेगाम समिति",
+        "c": "Narsimhan Committee on Rural Credit / ग्रामीण ऋण पर नरसिम्हन समिति",
+        "d": "Shivaramman Committee / शिवरामन समिति"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRRBs were set up on 2nd October 1975 based on the recommendations of the Narsimhan Committee on Rural Credit\n\n📖 हिंदी स्पष्टीकरण:\nग्रामीण ऋण पर नरसिम्हन समिति की सिफारिशों के आधार पर 2 अक्टूबर 1975 को RRBs की स्थापना की गई थी।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements regarding 'Fiat Money':\n 'फिएट मनी' के संबंध में निम्नलिखित कथनों पर विचार करें:\n Statement 1: It is a currency issued by the government.\n कथन 1: यह सरकार द्वारा जारी मुद्रा है।\n Statement 2: It is backed by physical objects like gold or silver.\n कथन 2: यह सोने या चांदी जैसी भौतिक वस्तुओं द्वारा समर्थित होती है।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "Only 1 / केवल 1",
+        "b": "Only 2 / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nFiat money is issued by the government but is NOT backed by physical commodities like gold or silver\n\n📖 हिंदी स्पष्टीकरण:\nफिएट मनी सरकार द्वारा जारी की जाती है लेकिन यह सोना या चांदी जैसी भौतिक वस्तुओं द्वारा समर्थित नहीं होती है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following is the correct shareholding pattern in Regional Rural Banks (RRBs)? क्षेत्रीय ग्रामीण बैंकों (RRBs) में सही शेयरधारिता पैटर्न निम्नलिखित में से कौन सा है?",
+      "options": {
+        "a": "Centre: 50%, State: 35%, Sponsor Bank: 15% / केंद्र: 50%, राज्य: 35%, प्रायोजक बैंक: 15%",
+        "b": "Centre: 50%, State: 15%, Sponsor Bank: 35% / केंद्र: 50%, राज्य: 15%, प्रायोजक बैंक: 35%",
+        "c": "Centre: 35%, State: 15%, Sponsor Bank: 50% / केंद्र: 35%, राज्य: 15%, प्रायोजक बैंक: 50%",
+        "d": "Centre: 100% / केंद्र: 100%"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRRB capital is shared by the Central Government (50%), the Sponsor Bank (35%), and the State Government (15%). / RRB\n\n📖 हिंदी स्पष्टीकरण:\nपूंजी को केंद्र सरकार (50%), प्रायोजक बैंक (35%) और राज्य सरकार (15%) द्वारा साझा किया जाता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Assertion (A): NABARD does not deal directly with the general public.\n Reason (R): NABARD is a refinancing institution for agriculture and rural development.\n अभिकथन (A): नाबार्ड सीधे तौर पर आम जनता के साथ व्यवहार नहीं करता है।\n कारण (R): नाबार्ड कृषि और ग्रामीण विकास के लिए एक पुनर्वित्त संस्थान है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nNABARD provides finance through other banks (refinancing) rather than lending directly to individuals\n\n📖 हिंदी स्पष्टीकरण:\nनाबार्ड व्यक्तियों को सीधे ऋण देने के बजाय अन्य बैंकों (पुनर्वित्त) के माध्यम से वित्त प्रदान करता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Match the currency/coin printing location with its type: मुद्रा/सिक्का छपाई स्थान को उसके प्रकार से सुमेलित करें:\n 1. Nasik - A. Coins / नासिक - A. सिक्के\n 2. Noida - B. Currency Notes / नोएडा - B. मुद्रा नोट\n 3. Dewas - C. Currency Notes / देवास - C. मुद्रा नोट",
+      "options": {
+        "a": "1-B, 2-A, 3-C",
+        "b": "1-A, 2-B, 3-C",
+        "c": "1-A, 2-C, 3-B",
+        "d": "1-B, 2-C, 3-A"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCurrency notes are printed in Nasik and Dewas, while coins are minted in Mumbai, Hyderabad, Calcutta, and Noida\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रा नोट नासिक और देवास में छापे जाते हैं, जबकि सिक्के मुंबई, हैदराबाद, कलकत्ता और नोएडा में ढाले जाते हैं।"
+    },
+    {
+      "q_num": 20,
+      "question": "Which of the following statements about Non-Banking Financial Companies (NBFCs) is CORRECT?\n गैर-बैंकिंग वित्तीय कंपनियों (NBFCs) के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "They can accept demand deposits / वे मांग जमा स्वीकार कर सकते हैं।",
+        "b": "They are registered under the Banking Regulation Act 1949 / वे बैंकिंग विनियमन अधिनियम 1949 के तहत पंजीकृत हैं।",
+        "c": "They cannot issue cheques drawn on themselves / वे स्वयं पर आहरित चेक जारी नहीं कर सकते।",
+        "d": "They must maintain CRR and SLR / उन्हें CRR और SLR बनाए रखना चाहिए।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNBFCs are registered under the Companies Act 1956, cannot accept demand deposits, and cannot issue cheques. / NBFC\n\n📖 हिंदी स्पष्टीकरण:\nकंपनी अधिनियम 1956 के तहत पंजीकृत हैं, मांग जमा स्वीकार नहीं कर सकते हैं, और चेक जारी नहीं कर सकते हैं।"
+    },
+    {
+      "q_num": 21,
+      "question": "Who is the first woman chairperson of the Securities and Exchange Board of India (SEBI)? भारतीय प्रतिभूति और विनिमय बोर्ड (SEBI) की पहली महिला अध्यक्ष कौन हैं?",
+      "options": {
+        "a": "Nirmala Sitharaman / निर्मला सीतारमण",
+        "b": "Madhabi Puri Buch / माधबी पुरी बुच",
+        "c": "Arundhati Bhattacharya / अरुंधति भट्टाचार्य",
+        "d": "Kiran Mazumdar-Shaw / किरण मजूमदार-शॉ"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMadhabi Puri Buch is the first woman and the first non-IAS officer to become the chairperson of SEBI\n\n📖 हिंदी स्पष्टीकरण:\nमाधबी पुरी बुच सेबी की अध्यक्ष बनने वाली पहली महिला और पहली गैर-आईएएस अधिकारी हैं।"
+    },
+    {
+      "q_num": 22,
+      "question": "Consider the following statements about Micro Finance Loans:\n सूक्ष्म वित्त ऋणों के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. They are collateral-free loans./ ये बिना किसी गिरवी के दिए जाने वाले ऋण हैं।\n 2. They are given to households with annual income up to ₹3 lakhs./ ये उन परिवारों को दिए जाते हैं जिनकी वार्षिक आय 3 लाख रुपये तक होती है।\n Which statement(s) is/are correct? इनमें से कौन सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "Only 1 / केवल 1",
+        "b": "Only 2 / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMicrofinance loans are collateral-free and targeted at households earning up to ₹3 lakhs annually\n\n📖 हिंदी स्पष्टीकरण:\nसूक्ष्म वित्त ऋण संपार्श्विक-मुक्त होते हैं और ₹3 लाख वार्षिक तक कमाने वाले परिवारों को लक्षित करते हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Assertion (A): RRBs are supervised by NABARD.\n अभिकथन (A): RRB का पर्यवेक्षण नाबार्ड द्वारा किया जाता है।\n Reason (R): RBI regulates the Regional Rural Banks.\n कारण (R): RBI क्षेत्रीय ग्रामीण बैंकों को नियंत्रित करता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWhile both facts are true (RBI regulates and NABARD supervises), regulation and supervision are distinct functions\n\n📖 हिंदी स्पष्टीकरण:\nदोनों तथ्य सत्य हैं (RBI विनियमित करता है और नाबार्ड पर्यवेक्षण करता है), विनियमन और पर्यवेक्षण अलग-अलग कार्य हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "In the MUDRA scheme, the 'Tarun plus' category covers loans up to what amount (as per the latest 2024 update)? मुद्रा योजना में, 'तरुण प्लस' श्रेणी (2024 के नवीनतम अपडेट के अनुसार) कितनी राशि तक के ऋण को कवर करती है?",
+      "options": {
+        "a": "₹5 Lakh / ₹5 लाख",
+        "b": "₹10 Lakh / ₹10 लाख",
+        "c": "₹20 Lakh / ₹20 लाख",
+        "d": "₹50,000 / ₹50,000"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nOriginally Tarun loans were up to ₹10 lakhs, but this limit was increased to ₹20 lakhs(Tarun Plus) in 2024\n\n📖 हिंदी स्पष्टीकरण:\nमूल रूप से तरुण ऋण ₹10 लाख तक थे, लेकिन 2024 में इस सीमा को बढ़ाकर ₹20 लाख कर दिया गया था।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which of the following was the first Micro Finance institution in India? भारत में पहली सूक्ष्म वित्त संस्था निम्नलिखित में से कौन सी थी?",
+      "options": {
+        "a": "Bandhan Bank / बंधन बैंक",
+        "b": "SEWA Bank / सेवा बैंक",
+        "c": "Grameen Bank / ग्रामीण बैंक",
+        "d": "Muthoot Finance / मुथूट फाइनेंस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSEWA Bank, established in 1974 in Ahmedabad, was the first Microfinance institution in India\n\n📖 हिंदी स्पष्टीकरण:\nअहमदाबाद में 1974 में स्थापित सेवा (SEWA) बैंक भारत का पहला सूक्ष्म वित्त संस्थान था।"
+    }
+  ]
+}

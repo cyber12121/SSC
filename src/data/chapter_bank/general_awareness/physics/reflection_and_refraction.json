@@ -1,0 +1,308 @@
+{
+  "chapter_num": 5,
+  "chapter_title": "Reflection And Refraction",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which experiment demonstrated the wave nature of light? / किस प्रयोग ने प्रकाश की तरंग प्रकृति को प्रदर्शित किया?",
+      "options": {
+        "a": "Photoelectric Effect / प्रकाश वैद्युत प्रभाव",
+        "b": "Young Double Slit Experiment / यंग का डबल स्लिट प्रयोग",
+        "c": "Reflection Laws / परावर्तन के नियम",
+        "d": "Rectilinear motion / सरल रेखीय गति"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Young Double Slit Experiment demonstrated the wave nature of light through interference patterns. Whereas, the photoelectric effect shows the particle nature\n\n📖 हिंदी स्पष्टीकरण:\nयंग के डबल स्लिट प्रयोग ने व्यतिकरण पैटर्न के माध्यम से प्रकाश की तरंग प्रकृति को प्रदर्शित किया। जबकि, प्रकाश वैद्युत प्रभाव प्रकाश की कण प्रकृति को दर्शाता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "What is the focal length of a concave mirror? / अवतल दर्पण की फोकस दूरी क्या होती है?",
+      "options": {
+        "a": "Always positive / हमेशा धनात्मक",
+        "b": "Always negative / हमेशा ऋणात्मक",
+        "c": "Zero / शून्य",
+        "d": "Infinite / अनंत"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAccording to the sign convention, the focal length of a concave mirror is always negative. For a convex mirror, it is always positive\n\n📖 हिंदी स्पष्टीकरण:\nचिह्न परिपाटी के अनुसार, अवतल दर्पण की फोकस दूरी हमेशा ऋणात्मक होती है। उत्तल दर्पण के लिए, यह हमेशा धनात्मक होती है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which mirror is used as a rear-view mirror in vehicles? / वाहनों में पीछे का दृश्य देखने के लिए किस दर्पण का उपयोग किया जाता है?",
+      "options": {
+        "a": "Concave mirror / अवतल दर्पण",
+        "b": "Plane mirror / समतल दर्पण",
+        "c": "Convex mirror / उत्तल दर्पण",
+        "d": "Cylindrical mirror / बेलनाकार दर्पण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nConvex mirrors provide a wider field of view and form diminished, erect virtual images, making them ideal for rear-view mirrors."
+    },
+    {
+      "q_num": 4,
+      "question": "The speed of light in vacuum is approximately: / निर्वात में प्रकाश की गति लगभग कितनी होती है?",
+      "options": {
+        "a": "3 × 10⁵ m/s",
+        "b": "3 × 10⁸ m/s",
+        "c": "3 × 10¹⁰ m/s",
+        "d": "3 × 10⁷ m/s"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLight travels at its maximum speed in a vacuum, which is approximately 3 × 10⁸ meters per second\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश निर्वात में अपनी अधिकतम गति से यात्रा करता है, जो लगभग 3 × 10⁸ मीटर प्रति सेकंड है।"
+    },
+    {
+      "q_num": 5,
+      "question": "When light travels from air to glass, it bends: / जब प्रकाश हवा से कांच में प्रवेश करता है, तो वह मुड़ता है:",
+      "options": {
+        "a": "Away from the normal / अभिलंब से दूर",
+        "b": "Towards the normal / अभिलंब की ओर",
+        "c": "Does not bend / नहीं मुड़ता",
+        "d": "Reflects back / वापस परावर्तित हो जाता है"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGlass is denser than air. When light moves from a rarer to a denser medium, its speed decreases and it bends towards the normal\n\n📖 हिंदी स्पष्टीकरण:\nकांच हवा की तुलना में सघन है। जब प्रकाश विरल से सघन माध्यम में जाता है, तो उसकी गति कम हो जाती है और वह अभिलंब की ओर झुक जाता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which lens is also known as a 'converging lens'? / किस लेंस को 'अभिसारी लेंस' के रूप में भी जाना जाता है?",
+      "options": {
+        "a": "Concave lens / अवतल लेंस",
+        "b": "Convex lens / उत्तल लेंस",
+        "c": "Plano-concave lens / समतल-अवतल लेंस",
+        "d": "Bifocal lens / द्विफोकसी लेंस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA convex lens is bulged at the center and narrows at the ends; it converges parallel rays of light to a focus\n\n📖 हिंदी स्पष्टीकरण:\nउत्तल लेंस केंद्र में उभरा हुआ और सिरों पर संकीर्ण होता है; यह प्रकाश की समानांतर किरणों को एक फोकस पर एकत्रित (अभिसरित) करता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "The unit of refractive index is: / अपवर्तनांक की इकाई क्या है?",
+      "options": {
+        "a": "Meter / मीटर",
+        "b": "Dioptre / डायोप्टर",
+        "c": "Degree / डिग्री",
+        "d": "No unit / कोई इकाई नहीं"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nRefractive index is the ratio of the speed of light in two different media, making it a dimensionless quantity\n\n📖 हिंदी स्पष्टीकरण:\nअपवर्तनांक दो अलग-अलग माध्यमों में प्रकाश की गति का अनुपात है, जिससे यह एक विमाहीन राशि बन जाती है।"
+    },
+    {
+      "q_num": 8,
+      "question": "The image formed by a plane mirror is always: / समतल दर्पण द्वारा बना प्रतिबिंब सदैव होता है:",
+      "options": {
+        "a": "Real and inverted / वास्तविक और उल्टा",
+        "b": "Virtual and erect / आभासी और सीधा",
+        "c": "Real and erect / वास्तविक और सीधा",
+        "d": "Virtual and inverted / आभासी और उल्टा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPlane mirrors form images that are virtual, erect, and laterally inverted (left appears right)\n\n📖 हिंदी स्पष्टीकरण:\nसमतल दर्पण ऐसे प्रतिबिंब बनाते हैं जो आभासी, सीधे और पार्श्व रूप से उल्टे (बायां हिस्सा दाएं दिखता है) होते हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "Who proposed the photon theory of light in 1905? / 1905 में प्रकाश का फोटॉन सिद्धांत किसने प्रस्तावित किया था?",
+      "options": {
+        "a": "Isaac Newton / आइजैक न्यूटन",
+        "b": "Albert Einstein / अल्बर्ट आइंस्टीन",
+        "c": "Heinrich Hertz / हेनरिक हर्ट्ज़",
+        "d": "Christian Huygens / क्रिश्चियन हाइजेंस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAlbert Einstein proposed that light consists of packets of energy called photons to explain the photoelectric effect\n\n📖 हिंदी स्पष्टीकरण:\nअल्बर्ट आइंस्टीन ने प्रकाश वैद्युत प्रभाव की व्याख्या करने के लिए प्रस्तावित किया कि प्रकाश में ऊर्जा के पैकेट होते हैं जिन्हें फोटॉन कहा जाता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "The relation between radius of curvature (R) and focal length (f) is: / वक्रता त्रिज्या (R) और फोकस दूरी (f) के बीच संबंध क्या है?",
+      "options": {
+        "a": "R = f/2",
+        "b": "f = 2R",
+        "c": "R = 2f",
+        "d": "R = f"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFor spherical mirrors, the radius of curvature is twice the focal length (R = 2f or f = R/2)\n\n📖 हिंदी स्पष्टीकरण:\nगोलीय दर्पणों के लिए, वक्रता त्रिज्या फोकस दूरी की दोगुनी होती है (R = 2f या f = R/2)।"
+    },
+    {
+      "q_num": 11,
+      "question": "A 4 cm tall object is placed 25 cm in front of a concave mirror of focal length 15 cm. The image distance (v) will be: / एक 4 सेमी लंबी वस्तु 15 सेमी फोकस दूरी वाले अवतल दर्पण के सामने 25 सेमी की दूरी पर रखी गई है। प्रतिबिंब की दूरी (v) क्या होगी?",
+      "options": {
+        "a": "-37.5 cm",
+        "b": "+37.5 cm",
+        "c": "-15.0 cm",
+        "d": "-25.0 cm"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nUsing the mirror formula 1/v + 1/u = 1/f, where u = -25 and f = -15, we get v = -37.5 cm\n\n📖 हिंदी स्पष्टीकरण:\nदर्पण सूत्र 1/v + 1/u = 1/f का उपयोग करते हुए, जहाँ u = -25 और f = -15, हमें v = -37.5 सेमी प्राप्त होता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What happens to a ray of light when it falls perpendicular (90°) to a glass slab? / जब प्रकाश की किरण कांच की स्लैब पर लंबवत (90°) गिरती है, तो क्या होता है?",
+      "options": {
+        "a": "It bends towards normal / यह अभिलंब की ओर मुड़ती है।",
+        "b": "It bends away from normal / यह अभिलंब से दूर मुड़ती है।",
+        "c": "No refraction occurs / कोई अपवर्तन नहीं होता है।",
+        "d": "It reflects back / यह वापस परावर्तित हो जाती है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIf a light ray strikes a glass slab at 90°, it passes straight without any deviation or refraction\n\n📖 हिंदी स्पष्टीकरण:\nयदि प्रकाश की किरण कांच की स्लैब से 90° पर टकराती है, तो यह बिना किसी विचलन या अपवर्तन के सीधे गुजर जाती है।"
+    },
+    {
+      "q_num": 13,
+      "question": "In a concave mirror, if an object is placed at the 'Centre of Curvature' (C), the image will be formed at: / अवतल दर्पण में, यदि किसी वस्तु को 'वक्रता केंद्र' (C) पर रखा जाता है, तो प्रतिबिंब कहाँ बनेगा?",
+      "options": {
+        "a": "At Focus (F) / फोकस (F) पर",
+        "b": "At C / वक्रता केंद्र (C) पर",
+        "c": "Beyond C / C से परे",
+        "d": "At Infinity / अनंत पर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWhen an object is at C in a concave mirror, the image is real, inverted, same size, and formed at C\n\n📖 हिंदी स्पष्टीकरण:\nजब अवतल दर्पण में वस्तु C पर होती है, तो प्रतिबिंब वास्तविक, उल्टा, समान आकार का और C पर ही बनता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "The refractive index of Diamond is: / हीरे का अपवर्तनांक कितना है?",
+      "options": {
+        "a": "1.33",
+        "b": "1.50",
+        "c": "2.42",
+        "d": "1.77"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDiamond has one of the highest refractive indices, which is 2.42, contributing to its brilliance\n\n📖 हिंदी स्पष्टीकरण:\nहीरे का अपवर्तनांक सबसे अधिक (2.42) होता है, जो इसकी चमक में योगदान देता है।"
+    },
+    {
+      "q_num": 15,
+      "question": "If the magnification (M) of an image is -2, it indicates that the image is: / यदि किसी प्रतिबिंब का आवर्धन (M) -2 है, तो यह दर्शाता है कि प्रतिबिंब:",
+      "options": {
+        "a": "Virtual and erect / आभासी और सीधा",
+        "b": "Real and inverted / वास्तविक और उल्टा",
+        "c": "Smaller than object / वस्तु से छोटा",
+        "d": "Diminished and real / छोटा और वास्तविक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA negative magnification value (M = -2) signifies that the image is real and inverted\n\n📖 हिंदी स्पष्टीकरण:\nऋणात्मक आवर्धन मान (M = -2) यह दर्शाता है कि प्रतिबिंब वास्तविक और उल्टा है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): The focal length of a convex mirror is taken as positive.\nReason (R): Convex mirrors always form real images behind the mirror.",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation",
+        "b": "Both A and R are true but R is not correct explanation",
+        "c": "A is true, R is false",
+        "d": "A is false, R is true"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFocal length of a convex mirror is indeed positive, but it always forms virtual and erect images, never real\n\n📖 हिंदी स्पष्टीकरण:\nउत्तल दर्पण की फोकस दूरी वास्तव में धनात्मक होती है, लेकिन यह हमेशा आभासी और सीधे प्रतिबिंब बनाता है, वास्तविक नहीं।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements about 'Lateral Displacement' in a glass slab is correct? / कांच की स्लैब में 'पार्श्व विस्थापन' के बारे में कौन सा कथन सही है?",
+      "options": {
+        "a": "Incident ray and emergent ray are parallel / आपतित किरण और निर्गत किरण समानांतर होती हैं।",
+        "b": "Angle of incidence is greater than angle of emergence / आपतन कोण निर्गत कोण से बड़ा होता है।",
+        "c": "No shift in path occurs / पथ में कोई बदलाव नहीं होता है।",
+        "d": "Only reflection occurs / केवल परावर्तन होता है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIn a glass slab, the emergent ray is parallel to the incident ray, but shifted sideways; this is lateral displacement\n\n📖 हिंदी स्पष्टीकरण:\nकांच की स्लैब में, निर्गत किरण आपतित किरण के समानांतर होती है, लेकिन बग़ल में खिसक जाती है; इसे पार्श्व विस्थापन कहते हैं।"
+    },
+    {
+      "q_num": 18,
+      "question": "For a convex lens, if the object is between infinity and 2F, the nature of the image is: / उत्तल लेंस के लिए, यदि वस्तु अनंत और 2F के बीच है, तो प्रतिबिंब की प्रकृति क्या होगी?",
+      "options": {
+        "a": "Real, inverted and enlarged / वास्तविक, उल्टा और बड़ा",
+        "b": "Virtual, erect and diminished / आभासी, सीधा और छोटा",
+        "c": "Real, inverted and diminished / वास्तविक, उल्टा और छोटा",
+        "d": "Real, inverted and same size / वास्तविक, उल्टा और समान आकार"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nWhen the object is beyond 2F (same as beyond C), the image is formed between F and 2F, and it is real, inverted, and diminished\n\n📖 हिंदी स्पष्टीकरण:\nजब वस्तु 2F से परे होती है, तो प्रतिबिंब F और 2F के बीच बनता है, और यह वास्तविक, उल्टा और छोटा होता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statement I: Light is a form of transverse wave.\nStatement II: Light cannot travel in vacuum.",
+      "options": {
+        "a": "Both statements are correct / दोनों कथन सही हैं।",
+        "b": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
+        "c": "Statement I is incorrect, II is correct / कथन I गलत है, II सही है।",
+        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLight is indeed a transverse wave, but it can travel through vacuum, unlike sound waves\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश वास्तव में एक अनुप्रस्थ तरंग है, लेकिन ध्वनि तरंगों के विपरीत, यह निर्वात में यात्रा कर सकता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "When an object is placed between the pole (P) and focus (F) of a concave mirror, the image is: / जब किसी वस्तु को अवतल दर्पण के ध्रुव (P) और फोकस (F) के बीच रखा जाता है, तो प्रतिबिंब होता है:",
+      "options": {
+        "a": "Behind the mirror, virtual, erect / दर्पण के पीछे, आभासी, सीधा",
+        "b": "At infinity, real, inverted / अनंत पर, वास्तविक, उल्टा",
+        "c": "Real, inverted, diminished / वास्तविक, उल्टा, छोटा",
+        "d": "At C, virtual, erect / C पर, आभासी, सीधा"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThis is the only case where a concave mirror forms a virtual, erect, and magnified image behind the mirror\n\n📖 हिंदी स्पष्टीकरण:\nयह एकमात्र मामला है जहाँ अवतल दर्पण दर्पण के पीछे आभासी, सीधा और बड़ा प्रतिबिंब बनाता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Snell's Law of refraction is mathematically expressed as: / अपवर्तन के स्नेल के नियम को गणितीय रूप से कैसे व्यक्त किया जाता है?",
+      "options": {
+        "a": "sin i × sin r = constant",
+        "b": "sin i / sin r = constant",
+        "c": "cos i × cos r = constant",
+        "d": "sin i + sin r = constant"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSnell's law states that the ratio of the sine of the angle of incidence to the sine of the angle of refraction is constant\n\n📖 हिंदी स्पष्टीकरण:\nस्नेल का नियम कहता है कि आपतन कोण की ज्या (sine) और अपवर्तन कोण की ज्या का अनुपात स्थिर होता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which of the following is NOT a property of a virtual image formed by a plane mirror? / समतल दर्पण द्वारा बने आभासी प्रतिबिंब का निम्नलिखित में से कौन सा गुण नहीं है?",
+      "options": {
+        "a": "It can be obtained on a screen / इसे पर्दे पर प्राप्त किया जा सकता है।",
+        "b": "Image size = Object size / प्रतिबिंब का आकार = वस्तु का आकार",
+        "c": "It is laterally inverted / यह पार्श्व रूप से उल्टा होता है।",
+        "d": "Image distance = Object distance / प्रतिबिंब की दूरी = वस्तु की दूरी"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nA virtual image cannot be obtained on a screen; only real images can be projected\n\n📖 हिंदी स्पष्टीकरण:\nआभासी प्रतिबिंब को पर्दे पर प्राप्त नहीं किया जा सकता; केवल वास्तविक प्रतिबिंबों को ही प्रोजेक्ट किया जा सकता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Assertion (A): A concave lens is called a diverging lens.\nReason (R): Light rays parallel to the principal axis spread out after passing through it.",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation",
+        "b": "Both A and R are true but R is not correct explanation",
+        "c": "A is true, R is false",
+        "d": "A is false, R is true"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nA concave lens is thin in the middle and spreads (diverges) light rays, hence the name\n\n📖 हिंदी स्पष्टीकरण:\nअवतल लेंस बीच में पतला होता है और प्रकाश की किरणों को फैलाता (अपसरित करता) है, इसीलिए इसे अपसारी लेंस कहते हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "In the context of light, 'Polarisation' refers to: / प्रकाश के संदर्भ में, 'ध्रुवीकरण' का तात्पर्य है:",
+      "options": {
+        "a": "Splitting into colors / रंगों में विभाजित होना",
+        "b": "Bending around edges / किनारों से मुड़ना",
+        "c": "Restricting vibrations to one plane / कंपन को एक ही तल तक सीमित करना",
+        "d": "Bouncing back from surface / सतह से वापस उछलना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nLight can be polarised, which means its vibrations are restricted to a single plane\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश को ध्रुवित किया जा सकता है, जिसका अर्थ है कि इसके कंपनों को एक ही तल तक सीमित कर दिया जाता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which phenomenon explains why a pencil partially immersed in water appears bent at the interface? / कौन सी घटना बताती है कि पानी में आंशिक रूप से डूबी हुई पेंसिल सतह पर मुड़ी हुई क्यों दिखाई देती है?",
+      "options": {
+        "a": "Reflection / परावर्तन",
+        "b": "Refraction / अपवर्तन",
+        "c": "Dispersion / विक्षेपण",
+        "d": "Total Internal Reflection / पूर्ण आंतरिक परावर्तन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRefraction causes the change in path of light when it moves from water to air, making the pencil look bent\n\n📖 हिंदी स्पष्टीकरण:\nजब प्रकाश पानी से हवा में जाता है, तो अपवर्तन के कारण उसका पथ बदल जाता है, जिससे पेंसिल मुड़ी हुई दिखाई देती है।"
+    }
+  ]
+}

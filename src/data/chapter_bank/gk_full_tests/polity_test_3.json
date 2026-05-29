@@ -1,0 +1,548 @@
+{
+  "chapter_num": 21,
+  "chapter_title": "Polity Test 3",
+  "subject": "GK Full Tests",
+  "subject_id": "gk_full_tests",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Consider the following statements regarding Legislative Councils (Vidhan Parishad):\n विधान परिषद (Vidhan Parishad) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are permanent bodies. / ये स्थायी सदन होते हैं।\n (b) 1/3rd of the members retire every two years. / प्रत्येक दो वर्ष में 1/3 सदस्य सेवानिवृत्त हो जाते हैं।\n (c) Maximum strength = 1/3rd of the Legislative Assembly. / अधिकतम सदस्य संख्या = विधान सभा की 1/3 सदस्य संख्या।\n Which of the above statements are correct?\n विधान परिषद के संबंध में उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (b) / (a) और (b)",
+        "b": "(a) and (c) / (a) और (c)",
+        "c": "(b) and (c) / (b) और (c)",
+        "d": "(a), (b) and (c) / (a), (b) और (c)"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nLegislative Council is a permanent body. Its maximum strength is fixed at 1/3rd of the Assembly. Retirement is 1/3rd every two years, not one.\n\n📖 हिंदी स्पष्टीकरण:\nविधान परिषद स्थायी निकाय है। इसकी अधिकतम शक्ति विधानसभा की 1/3 होती है। 1/3 सदस्य हर दो वर्ष में सेवानिवृत्त होते हैं।"
+    },
+    {
+      "q_num": 2,
+      "question": "Who appoints the Chief Justice of a High Court?\n उच्च न्यायालय के मुख्य न्यायाधीश की नियुक्ति कौन करता है?",
+      "options": {
+        "a": "Governor / राज्यपाल",
+        "b": "President / राष्ट्रपति",
+        "c": "Supreme Court Collegium / सर्वोच्च न्यायालय कोलेजियम",
+        "d": "Prime Minister / प्रधानमंत्री"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe President appoints HC Chief Justices after consultation with the CJI.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति, सीजेआई से परामर्श के बाद उच्च न्यायालय के मुख्य न्यायाधीश की नियुक्ति करते हैं।"
+    },
+    {
+      "q_num": 3,
+      "question": "Consider the following statements about discretionary powers of the Governor:\n राज्यपाल की विवेकाधीन शक्तियों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The Governor can reserve a Bill for the President’s consideration even if the Bill has been passed in the State Assembly with an absolute majority. / (a) राज्यपाल किसी विधेयक को राष्ट्रपति की अनुमति हेतु आरक्षित कर सकते हैं, भले ही वह विधेयक राज्य विधानसभा में पूर्ण बहुमत से पारित हुआ हो।\n (b) The Governor’s discretion in reserving a Bill is justiciable (subject to judicial review). / (b) विधेयक को आरक्षित करने में राज्यपाल का विवेक न्यायालयीय समीक्षा के अंतर्गत आता है।\n (c) In practice, the Governor must always act on the aid and advice of the Council of Ministers except when the Constitution expressly provides discretion. / (c) व्यवहार में, जहाँ संविधान द्वारा स्पष्ट रूप से विवेकाधिकार न दिया गया हो, वहाँ राज्यपाल को मंत्रिपरिषद की सलाह पर ही कार्य करना होता है।\n Which of the above statements are correct?\n गवर्नर के विवेकात्मक अधिकारों के संबंध में उपर्युक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) and (b) / (a) और (b)",
+        "c": "(b) and (c) / (b) और (c)",
+        "d": "All three / तीनों"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Governor can reserve certain Bills even if passed, and ordinarily must act on aid and advice; but the extent of judicial review on reservation is limited—courts generally avoid interfering in discretionary political acts unless constitutional breach.\n\n📖 हिंदी स्पष्टीकरण:\nराज्यपाल कुछ बिलों को राष्ट्रपति के लिए आरक्षित कर सकता है; सामान्यतः उसे मंत्रिमंडल की सलाह पर चलना चाहिए; आरक्षण के विवेक पर न्यायालयिक समीक्षा सीमित है और केवल संवैधानिक उल्लंघन पर हस्तक्षेप करते हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "Money Bills in a State can be introduced only in—\n राज्य में मनी बिल केवल कहाँ प्रस्तुत किया जा सकता है?",
+      "options": {
+        "a": "Legislative Council / विधान परिषद",
+        "b": "Governor’s Recommendation / राज्यपाल की सिफारिश",
+        "c": "Legislative Assembly / विधान सभा",
+        "d": "Joint Sitting / संयुक्त बैठक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMoney Bills originate exclusively in the Legislative Assembly.\n\n📖 हिंदी स्पष्टीकरण:\nमनी बिल केवल और केवल विधान सभा में ही प्रस्तुत किए जा सकते हैं।"
+    },
+    {
+      "q_num": 5,
+      "question": "Consider the following statements relating to Power of Judicial Review of High Courts:\n (a) High Courts can strike down state legislation if it violates fundamental rights. / (a) यदि कोई राज्य कानून मौलिक अधिकारों का उल्लंघन करता है, तो उच्च न्यायालय उसे निरस्त कर सकते हैं।\n (b) High Courts cannot examine the constitutionality of a state subordinate legislation if Parliament has expressly validated it by a law. / (b) यदि संसद ने किसी राज्य की अधीनस्थ विधि को कानून द्वारा स्पष्ट रूप से वैध घोषित किया है, तो उच्च न्यायालय उसकी संवैधानिकता की जांच नहीं कर सकते।\n (c) High Courts’ power under Article 226 is broader than Supreme Court’s power under Article 32. / (c) अनुच्छेद 226 के अंतर्गत उच्च न्यायालय की शक्तियाँ, अनुच्छेद 32 के अंतर्गत सर्वोच्च न्यायालय की शक्तियों से अधिक व्यापक होती हैं।\n Which are correct?\n उच्च न्यायालयों के न्यायालयिक समीक्षा अधिकार के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) only / केवल (a)",
+        "c": "(a), (b) and (c) / (a), (b) और (c)",
+        "d": "(a) and (b) / (a) और (b)"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHigh Courts can strike down state laws violating fundamental rights. Article 226 writ power is broader in locus standi and scope compared to Art. 32; (b) is incorrect because Parliament’s law cannot validate unconstitutional subordinate legislation.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालय मूल अधिकारों का उल्लंघन करने वाले राज्य कानूनों को निरस्त कर सकते हैं। अनु. 226 का दायरा अनु. 32 से व्यापक है; संसद संवैधानिकता के खिलाफ अधीनस्थ विधान को वैध नहीं कर सकती—इसलिए (b) गलत है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following is NOT a function of the High Court?\n निम्न में से कौन-सा उच्च न्यायालय का कार्य नहीं है?",
+      "options": {
+        "a": "Enforcement of Fundamental Rights / मूल अधिकारों का प्रवर्तन",
+        "b": "Hearing election petitions / निर्वाचन याचिकाएँ सुनना",
+        "c": "Giving advisory opinion to President / राष्ट्रपति को सलाह देना",
+        "d": "Control over subordinate courts / अधीनस्थ न्यायालयों पर नियंत्रण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAdvisory opinion to the President is under Article 143—only Supreme Court does it.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 143 के तहत केवल सर्वोच्च न्यायालय ही राष्ट्रपति को परामर्श देता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "Statements about Ordinance-making power of the Governor (State):\n (a) A Governor’s ordinance must be laid before the State Legislature when it meets. / (a) राज्यपाल के अध्यादेश को, जब राज्य विधानमंडल की बैठक हो, उसके समक्ष रखा जाना आवश्यक है।\n (b) An ordinance can be re-promulgated indefinitely to avoid legislative scrutiny. / (b) विधायी समीक्षा से बचने हेतु किसी अध्यादेश को अनिश्चितकाल तक पुनः-प्रख्यापित किया जा सकता है।\n (c) If both Houses do not meet within six weeks, ordinances lapse automatically. / (c) यदि दोनों सदन छह सप्ताह के भीतर न मिलें, तो अध्यादेश स्वतः निरस्त हो जाते हैं।\n Which are correct?\n राज्य में राज्यपाल के अध्यादेश देने के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) only / केवल (a)",
+        "b": "(a) and (b) / (a) और (b)",
+        "c": "(a) and (c) / (a) और (c)",
+        "d": "None / कोई नहीं"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nOrdinances must be placed before the legislature; re-promulgation to avoid scrutiny is constitutionally impermissible (Judicially struck down in cases like D.C. Wadhwa, but Supreme Court later in some cases looked at facts). Ordinances lapse if not approved within six weeks of re-assembly—(c) incorrectly frames timeline.\n\n📖 हिंदी स्पष्टीकरण:\nअध्यादेश को विधानमंडल के समक्ष रखना अनिवार्य है; अनिश्चितकाल तक पुनः-प्रमुल्गेशन कर के समीक्षा से बचना संवैधानिक रूप से स्वीकार्य नहीं है; (c) का कथन समयसीमा को गलत तरीके से संबोधित करता है, इसलिए केवल (a) सही है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Legislative Assembly has a tenure of five years, unless dissolved earlier.\n विधान सभा का कार्यकाल पाँच वर्ष होता है, जब तक कि इसे पहले भंग न कर दिया जाए।\n This statement is—\n यह कथन —",
+      "options": {
+        "a": "False / गलत",
+        "b": "True / सही",
+        "c": "Partly true / आंशिक रूप से सही",
+        "d": "Depends on circumstances / परिस्थिति पर निर्भर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe normal tenure is 5 years; extension only during National Emergency.\n\n📖 हिंदी स्पष्टीकरण:\nसामान्य कार्यकाल 5 वर्ष का होता है; केवल राष्ट्रीय आपातकाल के दौरान बढ़ाया जा सकता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Statements regarding Judicial appointments and collegium:\n (a) The Supreme Court Collegium recommends names for appointment of High Court judges. / (a) उच्च न्यायालय के न्यायाधीशों की नियुक्ति के लिए नामों की अनुशंसा सर्वोच्च न्यायालय का कोलेजियम करता है।\n (b) The President cannot withhold assent to a recommended name indefinitely; the name can be returned once, but if the Collegium reiterates it, the President must approve it.\n / (b) राष्ट्रपति किसी अनुशंसित नाम को अनिश्चितकाल तक रोक नहीं सकते; वे नाम को एक बार लौटाकर पुनर्विचार के लिए भेज सकते हैं, लेकिन यदि कोलेजियम उसे दोबारा भेज दे, तो राष्ट्रपति को उसे मंज़ूरी देनी होती है।\n (c) Parliament cannot simply enact a law to abolish the collegium system; it would require a constitutional amendment, as seen in the NJAC case. / (c) संसद केवल कानून बनाकर कोलेजियम व्यवस्था को समाप्त नहीं कर सकती; इसके लिए संवैधानिक संशोधन आवश्यक है, जैसा कि NJAC मामले में देखा गया।\n Which are correct?\n न्यायिक नियुक्तियों और कोलेजियम के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (b) / (a) और (b)",
+        "b": "(a) only / केवल (a)",
+        "c": "All three / तीनों",
+        "d": "(a) and (c) / (a) और (c)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCollegium recommends names. President cannot withhold indefinitely—there is a consultative process and limited time; Parliament could legislate changes but would face constitutional scrutiny—technically Parliament can attempt to replace collegium (as with NJAC which was struck down), so (c) is conditionally correct as \"can enact\" but subject to judicial review. Best answer: (a) and (c).\n\n📖 हिंदी स्पष्टीकरण:\nकोलेजियम न्यायाधीशों के नाम सिफारिश करता है। राष्ट्रपति सिफारिशों को अनिश्चितकाल तक रोक नहीं सकते; संसद कोलेजियम को बदलने का कानून बना सकती है, पर वह संवैधानिक समीक्षा से गुजरेगा (NJAC मामला स्मरणीय)। इसलिए (a) और (c) सही हैं।"
+    },
+    {
+      "q_num": 10,
+      "question": "Which High Court has jurisdiction over Puducherry?\n किस उच्च न्यायालय का अधिकार क्षेत्र पुडुचेरी पर है?",
+      "options": {
+        "a": "Madras High Court / मद्रास उच्च न्यायालय",
+        "b": "Kerala High Court / केरल उच्च न्यायालय",
+        "c": "Karnataka High Court / कर्नाटक उच्च न्यायालय",
+        "d": "Andhra Pradesh High Court / आंध्र प्रदेश उच्च न्यायालय"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nPuducherry falls under Madras High Court.\n\n📖 हिंदी स्पष्टीकरण:\nपुडुचेरी मद्रास उच्च न्यायालय के अधिकार क्षेत्र में आता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Consider the following statements about Article 226 and preventive detention:\n (a) High Court can entertain writ for enforcement of rights even when detention is under a preventive detention law. / उच्च न्यायालय निवारक निरोध कानून के तहत निरोध होने पर भी अधिकारों के प्रवर्तन हेतु रिट याचिका स्वीकार कर सकता है।\n (b) Preventive detention orders are completely immune from judicial review. / निवारक निरोध आदेश न्यायिक समीक्षा से पूर्णतः मुक्त होते हैं।\n (c) Procedural safeguards under the concerned preventive detention statute can be examined by High Courts under Article 226. / निवारक निरोध संबंधी विधि के प्रक्रिया सुरक्षा प्रावधानों की जांच उच्च न्यायालय अनुच्छेद 226 के अंतर्गत कर सकता है।\n Which are correct?\n अनु. 226 और निवारक हिरासत के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) only / केवल (a)",
+        "b": "(b) only / केवल (b)",
+        "c": "(a) and (c) / (a) और (c)",
+        "d": "All three / तीनों"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nHigh Courts can hear habeas corpus and examine legality even in preventive detention (though scope limited by statutory scheme); detention is not completely immune; procedural safeguards can be examined for conformity.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालय अनु.226 के तहत हिरासत की वैधता देख सकते हैं, निवारक हिरासत पूर्णतः न्यायिक समीक्षा से मुक्त नहीं है, और प्रक्रियात्मक सुरक्षा की परीक्षा की जा सकती है।"
+    },
+    {
+      "q_num": 12,
+      "question": "The Eleventh Schedule relates to—\n ग्यारहवीं अनुसूची संबंधित है—",
+      "options": {
+        "a": "Panchayats / पंचायतें",
+        "b": "Municipalities / नगरपालिकाएँ",
+        "c": "State Legislature / राज्य विधानमंडल",
+        "d": "Finance Commission / वित्त आयोग"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nEleventh Schedule contains subjects for Panchayati Raj Institutions.\n\n📖 हिंदी स्पष्टीकरण:\nग्यारहवीं अनुसूची में पंचायतों से संबंधित विषय सूचीबद्ध हैं।"
+    },
+    {
+      "q_num": 13,
+      "question": "Statements on Finance Bills and Assembly powers:\n (a) A State Money Bill can contain provisions on imposition, abolition, remission, alteration or regulation of any tax. / राज्य वित्त विधेयक में किसी भी कर के आरोपण, समाप्ति, छूट, संशोधन या विनियमन से संबंधित प्रावधान शामिल हो सकते हैं।\n (b) Legislative Council may amend a Money Bill. / विधान परिषद वित्त विधेयक में संशोधन कर सकती है।\n (c) If the Council does not return a Money Bill within 14 days, the Bill is deemed passed by both Houses. / यदि परिषद 14 दिनों के भीतर वित्त विधेयक को वापस नहीं करती, तो इसे दोनों सदनों द्वारा पारित माना जाता है।\n Which are correct?\n वित्त विधेयक और विधानसभा के अधिकारों के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) only / केवल (a)",
+        "c": "(a), (b) and (c) / (a), (b) और (c)",
+        "d": "(a) and (b) / (a) और (b)"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nMoney Bills relate to tax and fiscal matters; Legislative Council cannot amend Money Bills—may only make recommendations. If not returned within 14 days, deemed passed.\n\n📖 हिंदी स्पष्टीकरण:\nमनी बिल कर और वित्त संबंधी प्रावधानों से संबंधित होते हैं; विधान परिषद मनी बिल में संशोधन नहीं कर सकती—सिफारिश कर सकती है; 14 दिनों में न लौटने पर बिल पारित माना जाता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "District Planning Committees are provided under:\n जिला योजना समितियाँ किसके अंतर्गत दी गई हैं?",
+      "options": {
+        "a": "Article 280 / अनु. 280",
+        "b": "Article 243G / अनु. 243G",
+        "c": "Article 323A / अनु. 323A",
+        "d": "Article 243ZD / अनु. 243ZD"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nArticle 243ZD establishes District Planning Committees under Part IX-A.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243ZD के तहत जिला योजना समितियों का गठन किया जाता है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Consider the following statements regarding the removal of High Court judges:\n उच्च न्यायालय के न्यायाधीशों को हटाने के संबंध में निम्नलिखित में से कौन-से कथन सही हैं?\n (a) A High Court judge can be removed only by the President after an address by Parliament. / केवल राष्ट्रपति संसद के पते के बाद न्यायाधीश को हटा सकते हैं।\n (b) The grounds for removal are “proved misbehaviour or incapacity.” / हटाने के आधार “सिद्ध दुराचार या अक्षमता” हैं।\n (c) The procedure for removal of High Court judges is broadly the same as that for Supreme Court judges. / उच्च न्यायालय के न्यायाधीशों को हटाने की प्रक्रिया लगभग वही है जो सर्वोच्च न्यायालय के न्यायाधीशों के लिए है।",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(b) only / केवल (b)",
+        "c": "(a), (b) and (c) / (a), (b) और (c)",
+        "d": "(a) only / केवल (a)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA High Court judge is removed by the President after an address by both Houses of Parliament (Art. 217 read with Art. 124(4)). The only grounds are proved misbehaviour or incapacity. The procedure under the Judges (Inquiry) Act, 1968 applies to both Supreme Court and High Court judges, making the process broadly identical.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालय के न्यायाधीश को राष्ट्रपति संसद के दोनों सदनों के पते के आधार पर हटाते हैं।हटाने के आधार “सिद्ध दुराचार या अक्षमता” हैं। Judges (Inquiry) Act, 1968 के अंतर्गत सुप्रीम कोर्ट और हाई कोर्ट दोनों के लिए समान प्रक्रिया लागू होती है। इसलिए तीनों कथन सही हैं।"
+    },
+    {
+      "q_num": 16,
+      "question": "Administrative control over subordinate courts lies with—\n अधीनस्थ न्यायालयों पर प्रशासनिक नियंत्रण किसके पास होता है?",
+      "options": {
+        "a": "Governor / राज्यपाल",
+        "b": "Supreme Court / सर्वोच्च न्यायालय",
+        "c": "High Court / उच्च न्यायालय",
+        "d": "State Legislature / राज्य विधानमंडल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nHigh Courts supervise district and subordinate courts under Article 235.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 235 के तहत उच्च न्यायालय अधीनस्थ न्यायालयों पर नियंत्रण रखता है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following is NOT an obligatory function of a Municipality?\n निम्न में से कौन-सा नगरपालिका का अनिवार्य कार्य नहीं है?",
+      "options": {
+        "a": "Water supply / जल आपूर्ति",
+        "b": "Street lighting / सड़क प्रकाश व्यवस्था",
+        "c": "Marriage registration / विवाह पंजीकरण",
+        "d": "Foreign trade regulation / विदेशी व्यापार विनियमन"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nMunicipalities handle local civic functions, not foreign trade.\n\n📖 हिंदी स्पष्टीकरण:\nनगरपालिकाएँ स्थानीय नागरिक सेवाओं का कार्य करती हैं, विदेशी व्यापार नहीं।"
+    },
+    {
+      "q_num": 18,
+      "question": "The minimum and maximum strength of a State Legislative Assembly is:\n राज्य की विधान सभा की न्यूनतम और अधिकतम शक्ति क्या है?",
+      "options": {
+        "a": "40–500 / 40–500",
+        "b": "50–400 / 50–400",
+        "c": "60–500 / 60–500",
+        "d": "70–550 / 70–550"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nConstitution fixes Assembly strength between 60 and 500; some exceptions like Goa exist.\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान ने विधान सभा की शक्ति 60 से 500 के बीच निर्धारित की है; गोवा जैसे कुछ अपवाद हैं।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statements on Local Bodies’ Financial Autonomy:\n (a) The 73rd and 74th Amendments provided constitutional status but not a specific guaranteed source of revenue to local bodies. / 73वें और 74वें संशोधनों ने स्थानीय निकायों को संवैधानिक दर्जा तो दिया, लेकिन राजस्व के किसी निश्चित और सुनिश्चित स्रोत की गारंटी नहीं दी।\n (b) The Finance Commission’s recommendations regarding transfers to local bodies are binding on State Governments. / स्थानीय निकायों को धन हस्तांतरण के संबंध में वित्त आयोग की सिफारिशें राज्य सरकारों पर बाध्यकारी होती हैं।\n (c) State legislatures may confer taxation powers on local bodies by law. / राज्य विधानसभाएँ कानून द्वारा स्थानीय निकायों को करारोपण की शक्तियाँ प्रदान कर सकती हैं।\n Which are correct?\n स्थानीय निकायों की वित्तीय स्वायत्तता के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) only / केवल (a)",
+        "c": "(a) and (b) / (a) और (b)",
+        "d": "All three / तीनों"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\n73/74 gave constitutional status but did not guarantee dedicated revenue sources. Finance Commission recommendations (State Finance Commissions) are recommendatory, not strictly binding though politically persuasive. State legislatures can by law confer taxation.\n\n📖 हिंदी स्पष्टीकरण:\n73/74वें संशोधन ने संवैधानिक दर्जा दिया पर स्थानीय निकायों के लिए विशिष्ट राजस्व स्रोत तय नहीं किए। वित्त आयोग के सुझाव बाध्यकारी नहीं होते; राज्य विधानमंडल कानून द्वारा कराधान अधिकार दे सकता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Statements regarding Transfer and Control of Judges:\n (a) Transfer of a High Court judge to another High Court requires consultation with the judge (but the judge’s consent is not mandatory). / उच्च न्यायालय के न्यायाधीश का स्थानांतरण करते समय उनसे परामर्श किया जाता है (लेकिन उनकी सहमति अनिवार्य नहीं है)।\n (b) Transfer of judges is within the executive domain and not justiciable. / न्यायाधीशों का स्थानांतरण कार्यपालिका का क्षेत्राधिकार है और न्यायिक समीक्षा के अंतर्गत नहीं आता।\n (c) Chief Justice of India plays a key recommending role in transfers of High Court judges. / उच्च न्यायालय के न्यायाधीशों के स्थानांतरण में भारत के मुख्य न्यायाधीश की प्रमुख अनुशंसात्मक भूमिका होती है।\n Which are correct?\n न्यायाधीशों के स्थानांतरण और नियंत्रण के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(c) only / केवल (c)",
+        "c": "(b) only / केवल (b)",
+        "d": "All three / तीनों"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCJI and collegium recommend transfers; consultation with the judge is customary but not absolute; transfers have been subject to judicial scrutiny (so not wholly non-justiciable). Thus (c) is strictly correct.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालय न्यायाधीशों के परिवर्तनों की सिफारिशों में CJI का महत्त्वपूर्ण रोल होता है; न्यायालयों ने स्थानांतरणों की समीक्षा की है, इसलिए केवल (c) सही विकल्प है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Consider the following about Constitutional remedies at State level:\n (a) Article 226 empowers High Courts to issue writs for enforcement of fundamental rights within their territories. / अनुच्छेद 226 उच्च न्यायालयों को अपने अधिकार क्षेत्र में मौलिक अधिकारों के प्रवर्तन हेतु रिट जारी करने का अधिकार देता है।\n (b) Article 226 cannot be used to enforce non-fundamental statutory rights. / अनुच्छेद 226 का उपयोग गैर-मौलिक वैधानिक अधिकारों के प्रवर्तन हेतु नहीं किया जा सकता।\n (c) High Courts may issue writs even in matters where alternative efficacious remedy exists. / जहाँ वैकल्पिक प्रभावी उपाय उपलब्ध हो, वहाँ भी उच्च न्यायालय रिट जारी कर सकते हैं।\n Which are correct?\n राज्य स्तरीय संवैधानिक उपायों के बारे में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(b) only / केवल (b)",
+        "b": "(a) only / केवल (a)",
+        "c": "(a) and (c) / (a) और (c)",
+        "d": "All three / तीनों"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArt.226 empowers HC for fundamental rights and other legal rights; HC can refuse writ if alternate efficacious remedy exists—so (c) is nuanced: HCs may issue writs even if alternative exists depending on efficacy; still on high-difficulty, (a) and (c) best.\n\n📖 हिंदी स्पष्टीकरण:\nअनु.226 HC को मूल अधिकार और अन्य कानूनी अधिकारों के लिए रिट जारी करने का अधिकार देता है; वैकल्पिक प्रभावी उपाय होने पर रिट टाला जा सकता है पर HC विवेक से जारी कर सकता है—इसलिए (a) और (c) सही माने जाते हैं।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which House of State Legislature is not subject to dissolution?\n राज्य विधानमंडल का कौन-सा सदन भंग नहीं किया जा सकता?",
+      "options": {
+        "a": "Legislative Assembly / विधान सभा",
+        "b": "Legislative Council / विधान परिषद",
+        "c": "Joint Sitting / संयुक्त बैठक",
+        "d": "None / कोई नहीं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLegislative Council is a permanent body; only members retire periodically.\n\n📖 हिंदी स्पष्टीकरण:\nविधान परिषद स्थायी निकाय है; केवल सदस्य ही समय-समय पर सेवानिवृत्त होते हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which High Court has the largest jurisdiction in terms of state coverage?\n राज्यों की कवरेज के आधार पर किस उच्च न्यायालय का क्षेत्राधिकार सबसे बड़ा है?",
+      "options": {
+        "a": "Guwahati High Court / गुवाहाटी उच्च न्यायालय",
+        "b": "Calcutta High Court / कलकत्ता उच्च न्यायालय",
+        "c": "Bombay High Court / बंबई उच्च न्यायालय",
+        "d": "Allahabad High Court / इलाहाबाद उच्च न्यायालय"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nGuwahati HC originally covered multiple Northeast states.\n\n📖 हिंदी स्पष्टीकरण:\nगुवाहाटी उच्च न्यायालय प्रारंभ में कई पूर्वोत्तर राज्यों पर अधिकार रखता था।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which local body prepares annual district development plans?\n वार्षिक जिला विकास योजनाएँ कौन तैयार करता है?",
+      "options": {
+        "a": "Zila Parishad / जिला परिषद",
+        "b": "Gram Sabha / ग्राम सभा",
+        "c": "Municipality / नगरपालिका",
+        "d": "Panchayat Samiti / पंचायत समिति"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nZila Parishad coordinates district-level planning.\n\n📖 हिंदी स्पष्टीकरण:\nजिला परिषद जिला स्तर की योजना निर्माण का समन्वयन करती है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Consider statements on Local Bodies and Elections:\n (a) Reservation for Scheduled Castes/Scheduled Tribes in local bodies is on the basis of population proportion in the constituency. / स्थानीय निकायों में अनुसूचित जाति/अनुसूचित जनजाति के लिए आरक्षण संबंधित क्षेत्र में उनकी जनसंख्या के अनुपात पर आधारित होता है।\n (b) Rotation of reserved seats is mandatory under the 47th Amendments. / 47वें संशोधनों के तहत आरक्षित सीटों का रोटेशन अनिवार्य है।\n (c) Women reservation in local bodies is statutorily mandatory for at least one-third seats. / स्थानीय निकायों में कम से कम एक-तिहाई सीटों पर महिलाओं के लिए आरक्षण कानूनी रूप से अनिवार्य है।\n Which are correct?\n स्थानीय निकायों और चुनावों के बारे में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (b) / (a) और (b)",
+        "b": "(a) and (c) / (a) और (c)",
+        "c": "All three / तीनों",
+        "d": "(b) only / केवल (b)"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSC/ST reservation is proportionate; rotation is a common practice required to achieve equitable distribution (the Amendments envision adequate reservations but rotation is implemented by state laws); women reservation of at least 1/3 is mandated by 73/74. So (a) and (c).\nSC/ST\n\n📖 हिंदी स्पष्टीकरण:\nआरक्षण निर्वाचन क्षेत्र की जनसंख्या के अनुपात पर आधारित होता है; आरक्षण की रोटेशन को लागू कर के नीति के अनुरूप समान वितरण सुनिश्चित किया जाता है; महिलाओं के लिए कम से कम 1/3 आरक्षण 73/74वें संशोधन द्वारा अनिवार्य है—इसलिए (a) और (c) सही हैं।"
+    },
+    {
+      "q_num": 26,
+      "question": "Which of the following is NOT a writ issued by High Courts?\n इनमें से कौन-सा उच्च न्यायालय द्वारा जारी किया जाने वाला रिट नहीं है?",
+      "options": {
+        "a": "Mandamus / मेंडेमस",
+        "b": "Certiorari / सर्टियोरारी",
+        "c": "Quo Warranto / क्वो वारंटो",
+        "d": "Ordinance / अध्यादेश"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nOrdinance is an executive legislative tool, not a writ.\n\n📖 हिंदी स्पष्टीकरण:\nअध्यादेश कार्यपालिका द्वारा जारी विधायी साधन है, रिट नहीं।"
+    },
+    {
+      "q_num": 27,
+      "question": "Which Article provides constitutional status to Municipalities?\n कौन-सा अनुच्छेद नगरपालिकाओं को संवैधानिक दर्जा देता है?",
+      "options": {
+        "a": "Article 243P / अनु. 243P",
+        "b": "Article 243Q / अनु. 243Q",
+        "c": "Article 243K / अनु. 243K",
+        "d": "Article 243A / अनु. 243A"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nArticle 243Q mandates creation of Municipalities.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243Q नगरपालिकाओं के गठन को अनिवार्य बनाता है।"
+    },
+    {
+      "q_num": 28,
+      "question": "Consider Statements about Contempt of Court and High Courts:\n (a) High Courts have inherent power to punish for contempt of court. / उच्च न्यायालयों के पास अपने न्यायालय की अवमानना के लिए दंडित करने की अंतर्निहित शक्ति होती है।\n (b) Contempt proceedings against a judge of a High Court can only be instituted in the Supreme Court. / उच्च न्यायालय के न्यायाधीश के विरुद्ध अवमानना की कार्यवाही केवल सर्वोच्च न्यायालय में ही प्रारंभ की जा सकती है।\n (c) Legislative criticism of judicial decisions may attract contempt if it scandalizes the court. / न्यायिक निर्णयों की विधायी आलोचना यदि न्यायालय की प्रतिष्ठा को क्षति पहुँचाए, तो यह अवमानना का कारण बन सकती है।\n Which are correct?\n न्यायालय की अवमानना और उच्च न्यायालय के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) only / केवल (a)",
+        "c": "(b) and (c) / (b) और (c)",
+        "d": "All three / तीनों"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHigh Courts have power to punish contempt (inherent and statutory). Contempt against HC judges is not limited to Supreme Court—High Courts can try contempts of their own courts. Legislative criticism may amount to contempt if it scandalizes or obstructs administration of justice.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालयों के पास अवमानना दंडित करने का स्वाभाविक व वैधानिक अधिकार है। उच्च न्यायालयों के विरुद्ध अवमानना की कार्रवाई केवल सुप्रीम कोर्ट में ही सीमित नहीं है; विधायिका की आलोचना यदि न्यायालय को बेइज़्ज़त करे तो अवमानना बन सकती है।"
+    },
+    {
+      "q_num": 29,
+      "question": "Which court deals with serious criminal offences at district level?\n जिला स्तर पर गंभीर आपराधिक मामलों की सुनवाई कौन करता है?",
+      "options": {
+        "a": "Sessions Court / सत्र न्यायालय",
+        "b": "Civil Court / दीवानी न्यायालय",
+        "c": "Family Court / पारिवारिक न्यायालय",
+        "d": "Nyay Panchayat / न्याय पंचायत"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSessions Court handles major criminal cases such as murder and rape.\n\n📖 हिंदी स्पष्टीकरण:\nसत्र न्यायालय हत्या, बलात्कार जैसे गंभीर आपराधिक मामलों की सुनवाई करता है।"
+    },
+    {
+      "q_num": 30,
+      "question": "Who prepares the Gram Panchayat budget?\n ग्राम पंचायत का बजट कौन तैयार करता है?",
+      "options": {
+        "a": "Gram Panchayat / ग्राम पंचायत",
+        "b": "Gram Sabha / ग्राम सभा",
+        "c": "Panchayat Samiti / पंचायत समिति",
+        "d": "Zila Parishad / जिला परिषद"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Gram Panchayat prepares its annual financial budget.\n\n📖 हिंदी स्पष्टीकरण:\nवार्षिक वित्तीय बजट ग्राम पंचायत द्वारा तैयार किया जाता है।"
+    },
+    {
+      "q_num": 31,
+      "question": "Who elects the Chairman of the Legislative Council (Vidhan Parishad)?\n विधान परिषद (विदान परिषद) के सभापति का चुनाव कौन करता है?",
+      "options": {
+        "a": "Members of the Legislative Council / विधान परिषद के सदस्य",
+        "b": "Governor / राज्यपाल",
+        "c": "Legislative Assembly / विधान सभा",
+        "d": "Chief Minister / मुख्यमंत्री"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Chairman is elected internally by the members of the Legislative Council.\n\n📖 हिंदी स्पष्टीकरण:\nसभापति का चुनाव विधान परिषद के सदस्यों द्वारा आंतरिक रूप से किया जाता है।"
+    },
+    {
+      "q_num": 32,
+      "question": "Consider Statements regarding District Courts:\n (a) District Court is the highest civil court in a district. / जिला न्यायालय किसी जिले में सर्वोच्च दीवानी न्यायालय होता है।\n (b) District Judge also functions as Sessions Judge in the same district. / जिला न्यायाधीश उसी जिले में सेशन न्यायाधीश के रूप में भी कार्य करते हैं।\n (c) Appeals from District Court lie only to the Supreme Court. / जिला न्यायालय से अपील केवल सर्वोच्च न्यायालय में ही की जा सकती है।\n Which are correct?\n जिला न्यायालयों के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (b) / (a) और (b)",
+        "b": "(b) only / केवल (b)",
+        "c": "(a), (b) and (c) / तीनों",
+        "d": "(a) only / केवल (a)"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDistrict Judge heads civil court and also acts as Sessions Judge. Appeals lie to High Court, so (c) wrong.\n\n📖 हिंदी स्पष्टीकरण:\nजिला जज दीवानी न्यायालय का प्रमुख है और सत्र न्यायाधीश भी वही होता है। अपील उच्च न्यायालय में जाती है, न कि सीधे सुप्रीम कोर्ट—इसलिए (a) और (b) सही।"
+    },
+    {
+      "q_num": 33,
+      "question": "Consider statements about Constitutional Amendment and State Legislature:\n (a) Ratification by states is needed only when the amendment affects federal provisions. / संघीय प्रावधानों को प्रभावित करने वाले संवैधानिक संशोधनों के लिए ही राज्यों द्वारा अनुमोदन आवश्यक होता है।\n (b) States have no power to propose amendments directly. / राज्यों के पास सीधे संवैधानिक संशोधन प्रस्तावित करने की शक्ति नहीं होती।\n (c) Ratification must be by a simple majority of each ratifying State Legislature. / अनुमोदन प्रत्येक अनुमोदन करने वाली राज्य विधानसभा में साधारण बहुमत से होना चाहिए।\n Which are correct?\n संविधान संशोधन और राज्य विधानमंडल के बारे में सही कथन कौन-से हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) only / केवल (a)",
+        "c": "(a), (b) and (c) / तीनों",
+        "d": "(b) and (c) / (b) और (c)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFederal provisions require state ratification; states cannot propose amendments; ratification requires simple majority.\n\n📖 हिंदी स्पष्टीकरण:\nसंघीय प्रावधानों पर संशोधन के लिए राज्यों की पुष्टि आवश्यक है; राज्य संशोधन प्रस्ताव नहीं भेज सकते; पुष्टि साधारण बहुमत से होती है—तीनों सही।"
+    },
+    {
+      "q_num": 34,
+      "question": "Statements on High Court’s Original Jurisdiction:\n (a) High Courts have original jurisdiction in matters of fundamental rights enforcement. / मौलिक अधिकारों के प्रवर्तन के मामलों में उच्च न्यायालयों का मूल क्षेत्राधिकार होता है।\n (b) High Courts have original jurisdiction in civil matters where valuation exceeds a statutory limit (as provided by respective State laws). / जहाँ संबंधित राज्य कानून द्वारा निर्धारित सीमा से अधिक मूल्य के दीवानी मामले हों, वहाँ उच्च न्यायालय का मूल क्षेत्राधिकार होता है।\n (c) High Courts do not have original jurisdiction in criminal matters. / आपराधिक मामलों में उच्च न्यायालयों का मूल क्षेत्राधिकार नहीं होता।\n Which statements are correct?\n उच्च न्यायालय के मूल क्षेत्राधिकार के बारे में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (c) / (a) और (c)",
+        "b": "(a) and (b) / (a) और (b)",
+        "c": "All three / तीनों",
+        "d": "(b) only / केवल (b)"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHigh Courts have original writ jurisdiction; some have civil original jurisdiction, but not all (depends on chartered HCs). Criminal original jurisdiction is absent except for contempt matters.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालयों के पास रिट क्षेत्राधिकार मूल रूप से होता है; सभी HCs के पास दीवानी मूल क्षेत्राधिकार नहीं होता; आपराधिक मूल क्षेत्राधिकार सामान्यतः नहीं होता—इसलिए (a) और (c) सही हैं।"
+    },
+    {
+      "q_num": 35,
+      "question": "Public Interest Litigations (PILs) can be filed in—\n जनहित याचिका (PIL) कहाँ दायर की जा सकती है?",
+      "options": {
+        "a": "High Court / उच्च न्यायालय",
+        "b": "Supreme Court / सर्वोच्च न्यायालय",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Only District Court / केवल जिला न्यायालय"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPILs can be filed in both High Courts (Art. 226) and Supreme Court (Art. 32).\n\n📖 हिंदी स्पष्टीकरण:\nPIL उच्च न्यायालय (अनु. 226) और सर्वोच्च न्यायालय (अनु. 32) दोनों में दायर की जा सकती है।"
+    },
+    {
+      "q_num": 36,
+      "question": "Who convenes the meeting of the Gram Sabha?\n ग्राम सभा की बैठक कौन बुलाता है?",
+      "options": {
+        "a": "Gram Panchayat / ग्राम पंचायत",
+        "b": "Block Development Officer / खंड विकास अधिकारी",
+        "c": "Zila Parishad / जिला परिषद",
+        "d": "State Government / राज्य सरकार"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nGram Panchayat is responsible for calling Gram Sabha meetings.\n\n📖 हिंदी स्पष्टीकरण:\nग्राम पंचायत ही ग्राम सभा की बैठकें बुलाती है।"
+    },
+    {
+      "q_num": 37,
+      "question": "Minimum age to become a member of Legislative Assembly is—\n विधान सभा का सदस्य बनने की न्यूनतम आयु क्या है?",
+      "options": {
+        "a": "25 years / 25 वर्ष",
+        "b": "30 years / 30 वर्ष",
+        "c": "21 years / 21 वर्ष",
+        "d": "35 years / 35 वर्ष"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nArticle 173 sets 25 years as minimum age for MLA.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 173 के अनुसार MLA बनने की न्यूनतम आयु 25 वर्ष है।"
+    },
+    {
+      "q_num": 38,
+      "question": "Which court hears appeals from subordinate courts?\n अधीनस्थ न्यायालयों से आने वाली अपीलों की सुनवाई कौन करता है?",
+      "options": {
+        "a": "State Tribunal / राज्य अधिकरण",
+        "b": "Sessions Court / सत्र न्यायालय",
+        "c": "Nyay Panchayat / न्याय पंचायत",
+        "d": "High Court / उच्च न्यायालय"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nHigh Courts hear criminal and civil appeals from lower courts.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालय अधीनस्थ न्यायालयों से आने वाली अपीलों की सुनवाई करता है।"
+    },
+    {
+      "q_num": 39,
+      "question": "Which constitutional body conducts local body elections?\n स्थानीय निकाय चुनाव कौन-सा संवैधानिक निकाय कराता है?",
+      "options": {
+        "a": "State Election Commission / राज्य निर्वाचन आयोग",
+        "b": "Election Commission of India / भारत निर्वाचन आयोग",
+        "c": "District Collector / जिला कलेक्टर",
+        "d": "State Legislature / राज्य विधानमंडल"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nArticle 243K establishes SEC for local body elections.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243K स्थानीय निकाय चुनावों के लिए राज्य निर्वाचन आयोग का गठन करता है।"
+    },
+    {
+      "q_num": 40,
+      "question": "Who administers the oath to High Court judges?\n उच्च न्यायालय के न्यायाधीशों को शपथ कौन दिलाता है?",
+      "options": {
+        "a": "Chief Justice of High Court / उच्च न्यायालय के मुख्य न्यायाधीश",
+        "b": "Governor / राज्यपाल",
+        "c": "President / राष्ट्रपति",
+        "d": "Chief Minister / मुख्यमंत्री"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHC judges take oath before the Governor.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च न्यायालय के न्यायाधीश राज्यपाल के समक्ष शपथ लेते हैं।"
+    },
+    {
+      "q_num": 41,
+      "question": "Consider the following statements regarding Privileges of State Legislature:\n (a) State Legislatures enjoy the same privileges as the Parliament of India. / राज्य विधानमंडल को भारत की संसद के समान विशेषाधिकार प्राप्त होते हैं।\n (b) Breach of privilege can be punished by the Legislative Assembly. / विशेषाधिकार के उल्लंघन पर विधान सभा दंड दे सकती है।\n (c) Courts cannot examine whether the legislature’s action amounts to a breach of privilege. / न्यायालय यह जांच नहीं कर सकते कि विधानमंडल की कार्रवाई विशेषाधिकार के उल्लंघन के अंतर्गत आती है या नहीं।\n Which of the above statements are correct?\n राज्य विधानमंडल के विशेषाधिकारों के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (b) / (a) और (b)",
+        "b": "(b) and (c) / (b) और (c)",
+        "c": "(a) only / केवल (a)",
+        "d": "All three / तीनों"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nState legislatures enjoy similar—but not identical—privileges to Parliament. They can punish for breach of privilege. Courts may examine procedural legality, so (c) is incorrect.\n\n📖 हिंदी स्पष्टीकरण:\nराज्य विधानमंडल को संसद के समान (पर बिल्कुल समान नहीं) विशेषाधिकार प्राप्त हैं। यह विशेषाधिकार भंग पर दंडित कर सकता है। न्यायालय कुछ मामलों में समीक्षा कर सकते हैं, इसलिए (c) गलत है।"
+    },
+    {
+      "q_num": 42,
+      "question": "Statements regarding Vote on Account vs. Appropriation Bill:\n (a) Vote on Account allows the government to withdraw money from the Consolidated Fund of the State for a short period. / लेखानुदान सरकार को राज्य की संचित निधि से अल्प अवधि के लिए धन निकालने की अनुमति देता है।\n (b) Appropriation Bill is required for withdrawal of funds from the Consolidated Fund. / संचित निधि से धन निकालने के लिए विनियोजन विधेयक आवश्यक होता है।\n (c) Vote on Account requires approval of both Houses, even if the state has a unicameral legislature. / लेखानुदान के लिए दोनों सदनों की मंज़ूरी आवश्यक होती है, भले ही राज्य में एकसदनीय विधानमंडल हो।\n Which are correct?\n वोट ऑन अकाउंट और विनियोग विधेयक के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) only / केवल (a)",
+        "b": "(b) and (c) / (b) और (c)",
+        "c": "(a) and (b) / (a) और (b)",
+        "d": "All three / तीनों"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nVote on Account allows temporary withdrawal; Appropriation Bill is necessary for final allocation. (c) is wrong—unicameral states require only Assembly approval.\n\n📖 हिंदी स्पष्टीकरण:\nवोट ऑन अकाउंट अस्थायी व्यय की अनुमति देता है; विनियोग विधेयक अंतिम स्वीकृति देता है; एकसदनीय राज्यों में (c) गलत है क्योंकि केवल विधानसभा की मंजूरी चाहिए।"
+    },
+    {
+      "q_num": 43,
+      "question": "Consider the following regarding Judicial Review of Ordinances:\n (a) High Courts can judicially review ordinances on grounds of mala fide or constitutional violation. / उच्च न्यायालय, दुर्भावना या संवैधानिक उल्लंघन के आधार पर अध्यादेश की न्यायिक समीक्षा कर सकते हैं।\n (b) Motivation or subjective satisfaction of the Governor in issuing an ordinance is beyond judicial review. / अध्यादेश जारी करने में राज्यपाल की मंशा या व्यक्तिगत संतोष न्यायिक समीक्षा के दायरे से बाहर होता है।\n (c) An Ordinance cannot be challenged once it is replaced by an Act. / जब किसी अध्यादेश को अधिनियम द्वारा प्रतिस्थापित कर दिया जाता है, तो उसे चुनौती नहीं दी जा सकती।\n Which are correct?\n राज्यपाल के अध्यादेशों की न्यायिक समीक्षा के बारे में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) only / केवल (a)",
+        "b": "(a) and (b) / (a) और (b)",
+        "c": "(b) and (c) / (b) और (c)",
+        "d": "(a), (b) and (c) / सभी तीनों"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHigh Courts may review ordinances for mala-fide or constitutional violations. Subjective satisfaction usually lies outside review except in exceptional cases. (c) is wrong—ordinances can be challenged for their effects even after expiration.\n\n📖 हिंदी स्पष्टीकरण:\nअध्यादेश पर न्यायिक समीक्षा हो सकती है यदि वह दुर्भावना या असंवैधानिकता से ग्रसित हो। राज्यपाल की संतुष्टि पर सामान्यतः समीक्षा नहीं होती। (c) गलत है—समाप्त होने के बाद भी इसके प्रभावों पर चुनौती हो सकती है।"
+    },
+    {
+      "q_num": 44,
+      "question": "Statements about Local Self-Government and Devolution:\n (a) Devolution under 73rd and 74th Amendments is mandatory and absolute. / 73वें और 74वें संशोधनों के तहत शक्तियों का हस्तांतरण अनिवार्य और पूर्णतः सुनिश्चित है।\n (b) States retain discretion on transferring subjects listed in the Eleventh and Twelfth Schedules. / 11वीं और 12वीं अनुसूची में सूचीबद्ध विषयों के हस्तांतरण पर राज्यों का विवेकाधिकार बना रहता है।\n (c) Fiscal devolution to local bodies is largely dependent on State Finance Commissions. / स्थानीय निकायों को वित्तीय हस्तांतरण मुख्यतः राज्य वित्त आयोगों पर निर्भर करता है।\n Which are correct?\n स्थानीय स्वशासन में शक्तियों के विकेन्द्रीकरण के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(b) and (c) / (b) और (c)",
+        "b": "(a) and (c) / (a) और (c)",
+        "c": "All three / तीनों",
+        "d": "(a) only / केवल (a)"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDevolution is not absolute—states decide which subjects to devolve. Fiscal powers depend heavily on SFC recommendations. (a) wrong because devolution is not automatic.\n\n📖 हिंदी स्पष्टीकरण:\nविकेन्द्रीकरण पूर्णतः अनिवार्य नहीं है; राज्य विषयों के हस्तांतरण में विवेक रखते हैं। वित्तीय विकेन्द्रीकरण मुख्यतः राज्य वित्त आयोग पर निर्भर है।"
+    },
+    {
+      "q_num": 45,
+      "question": "Consider statements on Legislative Assembly Speaker’s powers:\n (a) The Speaker’s decision regarding disqualification under the anti-defection law is subject to judicial review. / दल-बदल कानून के अंतर्गत अयोग्यता के संबंध में अध्यक्ष का निर्णय न्यायिक समीक्षा के अंतर्गत आता है।\n (b) The Speaker can adjourn the House sine die. / अध्यक्ष सदन को अनिश्चितकाल के लिए स्थगित कर सकते हैं।\n (c) The Speaker cannot allow a no-confidence motion without the Governor’s prior approval. / अविश्वास प्रस्ताव को अनुमति देने के लिए अध्यक्ष को राज्यपाल की पूर्व स्वीकृति आवश्यक होती है।\n Which are correct?\n विधान सभा अध्यक्ष की शक्तियों के संबंध में कौन-से कथन सही हैं?",
+      "options": {
+        "a": "(a) and (b) / (a) और (b)",
+        "b": "(b) and (c) / (b) और (c)",
+        "c": "(a) and (c) / (a) और (c)",
+        "d": "All three / तीनों"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDisqualification decisions are reviewable (Kihoto Hollohan). Speaker may adjourn the House. No-confidence motions require no Governor approval—so (c) is false.\n\n📖 हिंदी स्पष्टीकरण:\nअयोग्यता पर स्पीकर का निर्णय न्यायिक समीक्षा योग्य है; स्पीकर सदन को स्थगित कर सकता है; अविश्वास प्रस्ताव के लिए राज्यपाल की अनुमति आवश्यक नहीं—इसलिए (a) और (b) सही हैं।"
+    }
+  ]
+}

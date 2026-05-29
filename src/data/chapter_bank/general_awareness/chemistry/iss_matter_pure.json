@@ -1,0 +1,308 @@
+{
+  "chapter_num": 2,
+  "chapter_title": "Iss Matter Pure",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "In which state of matter are the molecules closely packed together and maintain a fixed shape?\nकिस अवस्था में पदार्थ के अणु घने होकर एक निश्चित आकार बनाए रखते हैं?",
+      "options": {
+        "a": "Gas / गैस",
+        "b": "Liquid / द्रव",
+        "c": "Solid / ठोस",
+        "d": "Plasma / प्लाज्मा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn solids, intermolecular forces are very strong, which keeps the particles in a fixed position. This results in a definite shape and volume.\n\n📖 हिंदी स्पष्टीकरण:\nठोस पदार्थों में, अंतर-आणविक बल बहुत मजबूत होते हैं, जो कणों को एक निश्चित स्थिति में रखते हैं। इसके परिणामस्वरूप एक निश्चित आकार और आयतन होता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "What is the fifth state of matter?\nनिम्नलिखित में से कौन पदार्थ की पाँचवीं अवस्था है?",
+      "options": {
+        "a": "Plasma / प्लाज्मा",
+        "b": "Bose-Einstein Condensate / बोस-आइंस्टीन संघनन",
+        "c": "Gas / गैस",
+        "d": "Liquid / द्रव"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBose-Einstein Condensate (BEC) is considered the fifth state of matter, predicted by Einstein based on S.N. Bose's work. It forms at temperatures close to absolute zero.\n\n📖 हिंदी स्पष्टीकरण:\nबोस-आइंस्टीन संघनन (BEC) को पदार्थ की पाँचवीं अवस्था माना जाता है, जिसकी भविष्यवाणी आइंस्टीन ने एस.एन. बोस के कार्य के आधार पर की थी। यह परम शून्य के करीब के तापमान पर बनता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which of the following is an example of a chemical change?\nनिम्नलिखित में से कौन सा रासायनिक परिवर्तन का उदाहरण है?",
+      "options": {
+        "a": "Burning wood / लकड़ी जलाना",
+        "b": "Cutting paper / कागज काटना",
+        "c": "Boiling water / पानी उबालना",
+        "d": "Melting ice / बर्फ पिघलना"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBurning wood is a chemical change because it results in the formation of new substances like ash and smoke. These cannot be converted back to wood by physical means.\n\n📖 हिंदी स्पष्टीकरण:\nलकड़ी का जलना एक रासायनिक परिवर्तन है क्योंकि इसके परिणामस्वरूप राख और धुएँ जैसे नए पदार्थ बनते हैं। इन्हें भौतिक साधनों द्वारा वापस लकड़ी में नहीं बदला जा सकता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "The process of change of state directly from solid to gas without changing into liquid is known as:\nठोस अवस्था से सीधे गैसीय अवस्था में परिवर्तन, बिना द्रव अवस्था में परिवर्तित हुए, क्या कहलाता है?",
+      "options": {
+        "a": "Evaporation / वाष्पीकरण",
+        "b": "Sublimation / ऊर्ध्वपातन",
+        "c": "Solidification / ठोसीकरण",
+        "d": "Freezing / जमना"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSublimation is a phase transition where a substance bypasses the liquid phase entirely. Common examples include camphor and dry ice.\n\n📖 हिंदी स्पष्टीकरण:\nऊर्ध्वपातन एक चरण संक्रमण है जहाँ कोई पदार्थ तरल अवस्था को पूरी तरह छोड़ देता है। सामान्य उदाहरणों में कपूर और सूखी बर्फ शामिल हैं।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which of the following is a homogeneous mixture?\nनिम्नलिखित में से कौन सा समांगी मिश्रण है?",
+      "options": {
+        "a": "Sand and iron / रेत और लोहा",
+        "b": "Oil and water / तेल और पानी",
+        "c": "Air / हवा",
+        "d": "Water and ice / पानी और बर्फ"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAir is a homogeneous mixture of various gases like nitrogen and oxygen because its composition is uniform throughout. Components are not visible separately.\n\n📖 हिंदी स्पष्टीकरण:\nहवा नाइट्रोजन और ऑक्सीजन जैसी विभिन्न गैसों का एक समांगी मिश्रण है क्योंकि इसकी संरचना हर जगह समान होती है। इसके घटक अलग-अलग दिखाई नहीं देते हैं।"
+    },
+    {
+      "q_num": 6,
+      "question": "What is the minimum temperature at which a solid melts to become liquid at atmospheric pressure?\nवायुमंडलीय दाब पर किसी ठोस के द्रव में परिवर्तित होने का न्यूनतम तापमान क्या कहलाता है?",
+      "options": {
+        "a": "Boiling point / क्वथनांक",
+        "b": "Melting point / गलनांक",
+        "c": "Absolute Point / निरपेक्ष बिंदु",
+        "d": "Vaporization Point / वाष्पीकरण बिंदु"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe melting point is the specific temperature at which the solid phase changes to the liquid phase. At this point, both phases exist in equilibrium.\n\n📖 हिंदी स्पष्टीकरण:\nगलनांक वह विशिष्ट तापमान है जिस पर ठोस अवस्था तरल अवस्था में बदल जाती है। इस बिंदु पर दोनों अवस्थाएँ संतुलन में मौजूद होती हैं।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which of the following is NOT a physical change?\nनिम्नलिखित में से कौन सा भौतिक परिवर्तन नहीं है?",
+      "options": {
+        "a": "Sublimation of NH₄Cl / NH₄Cl का ऊर्ध्वपातन",
+        "b": "Evaporation of diesel / डीजल का वाष्पीकरण",
+        "c": "Curdling of milk / दूध का दही बनना",
+        "d": "Heating of iron rod / लोहे की छड़ को गर्म करना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCurdling of milk is a chemical change because it involves a reaction that creates a new substance (lactic acid). It is an irreversible process.\n\n📖 हिंदी स्पष्टीकरण:\nदूध का फटना या दही बनना एक रासायनिक परिवर्तन है क्योंकि इसमें एक अभिक्रिया शामिल होती है जो एक नया पदार्थ (लैक्टिक अम्ल) बनाती है। यह एक अपरिवर्तनीय प्रक्रिया है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Intermixing of particles of two different types of matter on their own is called:\nदो अलग-अलग प्रकार के पदार्थों के कणों का अपने आप मिलना क्या कहलाता है?",
+      "options": {
+        "a": "Effusion / निसरण",
+        "b": "Diffusion / विसरण",
+        "c": "Homogenisation / समरूपीकरण",
+        "d": "Sedimentation / अवसादन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDiffusion occurs due to the random kinetic motion of particles. It is faster in gases compared to liquids and solids.\n\n📖 हिंदी स्पष्टीकरण:\nविसरण कणों की यादृच्छिक गतिज गति के कारण होता है। यह तरल और ठोस पदार्थों की तुलना में गैसों में अधिक तेज़ होता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following will NOT show Tyndall effect?\nनिम्नलिखित में से किसमें टिंडल प्रभाव नहीं दिखेगा?",
+      "options": {
+        "a": "Milk / दूध",
+        "b": "Starch solution / स्टार्च का घोल",
+        "c": "Copper sulphate solution / कॉपर सल्फेट का घोल",
+        "d": "Emulsion / पायसी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCopper sulphate solution is a true solution with very small particle sizes. These particles are too small to scatter light, hence no Tyndall effect.\n\n📖 हिंदी स्पष्टीकरण:\nकॉपर सल्फेट का घोल बहुत छोटे कणों वाला एक वास्तविक विलयन है। ये कण प्रकाश को फैलाने के लिए बहुत छोटे होते हैं, इसलिए इसमें टिंडल प्रभाव नहीं होता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "An example of a 'solid in a liquid' type of solution is:\n'द्रव में ठोस' विलयन का एक उदाहरण है:",
+      "options": {
+        "a": "Brass / पीतल",
+        "b": "Tincture of iodine / आयोडीन टिंचर",
+        "c": "Vinegar / सिरका",
+        "d": "Bronze / काँस्य"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTincture of iodine is prepared by dissolving iodine (solid) in alcohol (liquid). Here, iodine is the solute and alcohol is the solvent.\n\n📖 हिंदी स्पष्टीकरण:\nआयोडीन का टिंचर अल्कोहल (द्रव) में आयोडीन (ठोस) को घोलकर तैयार किया जाता है। यहाँ, आयोडीन विलेय है और अल्कोहल विलायक है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which method is used to separate a mixture of soluble solids by dissolving them in a hot solvent and cooling it slowly?\nघुलनशील ठोस पदार्थों के मिश्रण को गर्म विलायक में घोलकर धीरे-धीरे ठंडा करके अलग करने की विधि क्या है?",
+      "options": {
+        "a": "Sublimation / ऊर्ध्वपातन",
+        "b": "Fractional crystallisation / आंशिक क्रिस्टलीकरण",
+        "c": "Distillation / आसवन",
+        "d": "Filtration / छानना"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThis technique relies on the different solubilities of substances at different temperatures. As the solution cools, the less soluble substance crystallizes first.\n\n📖 हिंदी स्पष्टीकरण:\nयह तकनीक विभिन्न तापमानों पर पदार्थों की अलग-अलग घुलनशीलता पर निर्भर करती है। जैसे ही घोल ठंडा होता है, कम घुलनशील पदार्थ पहले क्रिस्टलीकृत हो जाता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "The solute-like component or the dispersed particles in a colloid form the:\nकोलाइड में विलेय जैसे घटक या बिखरे हुए कण क्या बनाते हैं?",
+      "options": {
+        "a": "Solvent / विलायक",
+        "b": "Dispersed Phase / परिक्षेपित प्रावस्था",
+        "c": "Continuous phase / निरंतर प्रावस्था",
+        "d": "Dispersion Medium / परिक्षेपण माध्यम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn a colloid, the substance distributed is the dispersed phase, while the medium it is in is the dispersion medium. It is similar to the solute in a solution.\n\n📖 हिंदी स्पष्टीकरण:\nकोलाइड में, वितरित पदार्थ परिक्षेपित प्रावस्था कहलाता है, जबकि वह माध्यम जिसमें यह फैला होता है, परिक्षेपण माध्यम कहलाता है। यह विलयन में विलेय के समान है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Solubility of gases in liquids ________ with a decrease in temperature.\nतापमान में कमी के साथ द्रवों में गैसों की घुलनशीलता ________ होती है।",
+      "options": {
+        "a": "Decreases / घटती है",
+        "b": "Remains constant / स्थिर रहती है",
+        "c": "Increases / बढ़ती है",
+        "d": "Becomes zero / शून्य हो जाती है"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nUnlike most solids, gas solubility increases at lower temperatures because lower kinetic energy helps gas molecules stay dissolved in the liquid. This is why aquatic life is more comfortable in cold water.\n\n📖 हिंदी स्पष्टीकरण:\nठोसों के विपरीत, कम तापमान पर गैसों की घुलनशीलता बढ़ जाती है क्योंकि कम गतिज ऊर्जा गैस के अणुओं को द्रव में बने रहने में मदद करती है। यही कारण है कि जलीय जीवन ठंडे पानी में अधिक आरामदायक होता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which property definitively distinguishes a suspension from a colloid?\nकौन सा गुण निलंबन को कोलाइड से सबसे स्पष्ट रूप से अलग करता है?",
+      "options": {
+        "a": "Homogeneity / समरूपता",
+        "b": "Tyndall effect / टिंडल प्रभाव",
+        "c": "Settling of particles / कणों का नीचे बैठना",
+        "d": "Color of the mixture / मिश्रण का रंग"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSuspension particles are large and settle down under gravity when left undisturbed (i.e., they are unstable). Colloid particles are smaller and do not settle.\n\n📖 हिंदी स्पष्टीकरण:\nनिलंबन के कण बड़े होते हैं और बिना हिलाए छोड़ देने पर गुरुत्वाकर्षण के कारण नीचे बैठ जाते हैं (अस्थिर होते हैं)। कोलाइड के कण छोटे होते हैं और नीचे नहीं बैठते।"
+    },
+    {
+      "q_num": 15,
+      "question": "In which year did Robert Brown observe the zigzag movement of colloidal particles?\nरॉबर्ट ब्राउन ने किस वर्ष कोलाइडल कणों की ज़िगज़ैग गति देखी थी?",
+      "options": {
+        "a": "1826",
+        "b": "1827",
+        "c": "1828",
+        "d": "1829"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn 1827, Robert Brown observed the continuous random motion of particles, now known as Brownian motion. This provides evidence for the kinetic nature of particles.\n\n📖 हिंदी स्पष्टीकरण:\n1827 में, रॉबर्ट ब्राउन ने कणों की निरंतर यादृच्छिक गति देखी, जिसे अब ब्राउनियन गति कहा जाता है। यह कणों की गतिज प्रकृति का प्रमाण प्रदान करता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements about mixtures and compounds:\nमिश्रण और यौगिकों के बारे में निम्नलिखित कथनों पर विचार करें:\n1. A mixture has a variable composition. / मिश्रण की संरचना परिवर्तनशील होती है।\n2. A compound shows the properties of its constituent elements. / एक यौगिक अपने घटक तत्वों के गुण प्रदर्शित करता है।\nWhich of the above is/are correct?\nउपरोक्त में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "Only 1 / केवल 1",
+        "b": "Only 2 / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1 is correct as mixtures can be made in any ratio. Statement 2 is wrong because a compound's properties are entirely different from those of its constituent elements (e.g., water is very different from H₂ and O₂).\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है क्योंकि मिश्रण किसी भी अनुपात में बनाए जा सकते हैं। कथन 2 गलत है क्योंकि एक यौगिक के गुण उसके घटक तत्वों से पूरी तरह अलग होते हैं (जैसे पानी H₂ और O₂ से अलग होता है)।"
+    },
+    {
+      "q_num": 17,
+      "question": "Statement I: Boiling is a bulk phenomenon.\nकथन I: क्वथन एक समष्टि (बल्क) घटना है।\nStatement II: Evaporation is a surface phenomenon.\nकथन II: वाष्पीकरण एक सतही घटना है।",
+      "options": {
+        "a": "Both are correct / दोनों सही हैं।",
+        "b": "Both are incorrect / दोनों गलत हैं।",
+        "c": "Only I is correct / केवल I सही है।",
+        "d": "Only II is correct / केवल II सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth statements are correct. Boiling involves the entire volume of the liquid reaching a specific temperature, while evaporation occurs only at the surface of the liquid at any temperature below the boiling point.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। क्वथन में द्रव का पूरा आयतन एक निश्चित तापमान तक पहुँचता है, जबकि वाष्पीकरण केवल सतह पर क्वथनांक से कम किसी भी तापमान पर होता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Select the correct sequence of Element, Compound, and Homogeneous Mixture:\nतत्व, यौगिक और समरूप मिश्रण का सही क्रम चुनें:",
+      "options": {
+        "a": "Iron, Salt, Sea water / लोहा, नमक, समुद्री जल",
+        "b": "Salt, Iron, Air / नमक, लोहा, हवा",
+        "c": "Mercury, Water, Sand / पारा, पानी, रेत",
+        "d": "Methane, Oxygen, Milk / मीथेन, ऑक्सीजन, दूध"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIron is an element; salt (NaCl) is a compound formed chemically; sea water is a homogeneous mixture of salts in water.\n\n📖 हिंदी स्पष्टीकरण:\nलोहा एक तत्व है; नमक (NaCl) रासायनिक रूप से बना एक यौगिक है; समुद्री जल पानी में लवणों का एक समांगी मिश्रण है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Assertion (A): A colloid appears to be homogeneous.\nअभिकथन (A): कोलाइड समांगी प्रतीत होता है।\nReason (R): The size of colloidal particles is very small.\nकारण (R): कोलाइडल कणों का आकार बहुत छोटा होता है।",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation. / A और R दोनों सत्य हैं, और R सही स्पष्टीकरण है।",
+        "b": "Both A and R are true, but R is not the correct explanation. / A और R दोनों सत्य हैं, लेकिन R सही स्पष्टीकरण नहीं है।",
+        "c": "A is true, R is false. / A सत्य है, R असत्य है।",
+        "d": "A is false, R is true. / A असत्य है, R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nColloids look uniform (homogeneous) because their particles are very small (about 10⁻⁹ to 10⁻⁶ m) and cannot be seen individually with the naked eye. However, they are actually heterogeneous mixtures.\n\n📖 हिंदी स्पष्टीकरण:\nकोलाइड एकसमान (समांगी) दिखते हैं क्योंकि उनके कण बहुत छोटे (लगभग 10⁻⁹ से 10⁻⁶ मीटर) होते हैं और नंगी आँख से अलग-अलग दिखाई नहीं देते, लेकिन वे वास्तव में विषमांगी मिश्रण होते हैं।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Camphor disappears without leaving any residue when heated.\nअभिकथन (A): गर्म करने पर कपूर बिना कोई अवशेष छोड़े गायब हो जाता है।\nReason (R): Camphor undergoes sublimation.\nकारण (R): कपूर का ऊर्ध्वपातन होता है।",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation. / A और R दोनों सत्य हैं, और R सही स्पष्टीकरण है।",
+        "b": "Both A and R are true, but R is not the explanation. / A और R दोनों सत्य हैं, लेकिन R स्पष्टीकरण नहीं है।",
+        "c": "A is true, R is false. / A सत्य है, R असत्य है।",
+        "d": "A is false, R is true. / A असत्य है, R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHeating camphor converts it directly from solid to gas without passing through the liquid state. This property is called sublimation, which explains why it disappears without residue.\n\n📖 हिंदी स्पष्टीकरण:\nकपूर को गर्म करने पर यह सीधे ठोस से गैस में बदल जाता है और द्रव अवस्था में नहीं आता। द्रव अवस्था को छोड़ने के इस गुण को ऊर्ध्वपातन कहा जाता है, इसी कारण यह बिना अवशेष छोड़े गायब हो जाता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Regarding the change of state of matter, which is true?\nपदार्थ की अवस्था में परिवर्तन के संबंध में क्या सत्य है?\n1. It is a physical change. / यह एक भौतिक परिवर्तन है।\n2. It is an irreversible change. / यह एक अपरिवर्तनीय परिवर्तन है।",
+      "options": {
+        "a": "Only A / केवल A",
+        "b": "Only B / केवल B",
+        "c": "Both A and B / A और B दोनों",
+        "d": "Neither A nor B / न तो A और न ही B"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nChanging state (like ice to water) is a physical change because the chemical identity remains the same (H₂O). It is usually reversible on changing conditions of temperature or pressure.\n\n📖 हिंदी स्पष्टीकरण:\nअवस्था में परिवर्तन (जैसे बर्फ से पानी) भौतिक परिवर्तन है क्योंकि रासायनिक पहचान वही रहती है (H₂O)। तापमान या दाब बदलने पर यह सामान्यतः पुनः उलटा किया जा सकता है, अर्थात यह अपरिवर्तनीय नहीं है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which of the following can be separated by centrifugation but NOT by filtration?\nनिम्नलिखित में से किसे अपकेंद्रीकरण द्वारा अलग किया जा सकता है लेकिन छानने द्वारा नहीं?",
+      "options": {
+        "a": "Suspension / निलंबन",
+        "b": "Colloid / कोलाइड",
+        "c": "True solution / वास्तविक विलयन",
+        "d": "Sand and water / रेत और पानी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nColloid particles are small enough to pass through filter paper but can be forced to separate using high-speed rotation in a centrifuge.\n\n📖 हिंदी स्पष्टीकरण:\nकोलाइड के कण इतने छोटे होते हैं कि वे फिल्टर पेपर से गुजर जाते हैं, लेकिन उन्हें उच्च गति वाले अपकेंद्रित्र (centrifuge) की मदद से अलग किया जा सकता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "An increase in molecular mass in a homologous series leads to:\nएक समजातीय श्रृंखला में आणविक द्रव्यमान में वृद्धि से क्या होता है?",
+      "options": {
+        "a": "Decrease in boiling point / क्वथनांक में कमी",
+        "b": "Increase in melting and boiling points / गलनांक और क्वथनांक में वृद्धि",
+        "c": "No change in physical properties / भौतिक गुणों में कोई बदलाव नहीं",
+        "d": "Increase in solubility in water / पानी में घुलनशीलता में वृद्धि"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLarger molecules have stronger intermolecular (van der Waals) forces. This requires more energy to overcome, so both melting and boiling points increase with molecular mass.\n\n📖 हिंदी स्पष्टीकरण:\nबड़े अणुओं में अंतर-अणुक (वैन डेर वाल्स) बल अधिक होते हैं। इन्हें पार करने के लिए अधिक ऊर्जा की आवश्यकता होती है, इसलिए आणविक द्रव्यमान बढ़ने पर गलनांक और क्वथनांक दोनों बढ़ते हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Sugar dissolved in water is a stable solution.\nअभिकथन (A): पानी में घुली चीनी एक स्थिर विलयन है।\nReason (R): The solute particles settle down when left undisturbed.\nकारण (R): बिना हिलाए छोड़ देने पर विलेय के कण नीचे बैठ जाते हैं।",
+      "options": {
+        "a": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
+        "b": "Both A and R are true. / A और R दोनों सत्य हैं।",
+        "c": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।",
+        "d": "Both A and R are false. / A और R दोनों असत्य हैं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nA true solution is stable because its particles are extremely small and do not settle on standing. Settling of particles is a characteristic of suspensions, not of true solutions.\n\n📖 हिंदी स्पष्टीकरण:\nएक वास्तविक विलयन स्थिर होता है क्योंकि इसके कण अत्यंत सूक्ष्म होते हैं और बिना हिलाए रखने पर भी नीचे नहीं बैठते। कणों का नीचे बैठना निलंबन (suspension) की विशेषता है, न कि वास्तविक विलयन की।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which statement is NOT true about compounds?\nयौगिकों के बारे में कौन सा कथन सही नहीं है?",
+      "options": {
+        "a": "Elements react to form new compounds. / तत्व अभिक्रिया करके नए यौगिक बनाते हैं।",
+        "b": "The composition is always fixed. / संरचना हमेशा निश्चित होती है।",
+        "c": "They have a variable composition. / उनकी संरचना परिवर्तनशील होती है।",
+        "d": "Constituents can be separated only by chemical reactions. / घटकों को केवल रासायनिक अभिक्रियाओं द्वारा अलग किया जा सकता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCompounds always have a fixed ratio of elements by mass (Law of Constant Proportions). A variable composition is a feature of mixtures, not compounds.\n\n📖 हिंदी स्पष्टीकरण:\nयौगिकों में द्रव्यमान के अनुसार तत्वों का अनुपात हमेशा निश्चित होता है (निश्चित अनुपात का नियम)। परिवर्तनशील संरचना मिश्रणों की विशेषता है, यौगिकों की नहीं।"
+    }
+  ]
+}

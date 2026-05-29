@@ -1,0 +1,308 @@
+{
+  "chapter_num": 4,
+  "chapter_title": "Periodic Table",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Who is known as the 'Father of Periodic Table'?\n'आवर्त सारणी के जनक' के रूप में किसे जाना जाता है?",
+      "options": {
+        "a": "Henry Moseley / हेनरी मोसले",
+        "b": "Dmitri Mendeleev / दमित्री मेंडेलीव",
+        "c": "John Newlands / जॉन न्यूलैंड्स",
+        "d": "Johann Dobereiner / जोहान डोबेरेनर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDmitri Mendeleev created the periodic table in 1869 by arranging elements in order of increasing atomic masses. He is credited as the father because he was the first to organize elements systematically.\n\n📖 हिंदी स्पष्टीकरण:\nदमित्री मेंडेलीव ने 1869 में तत्वों को उनके बढ़ते परमाणु द्रव्यमान के क्रम में व्यवस्थित करके आवर्त सारणी बनाई थी। उन्हें जनक माना जाता है क्योंकि उन्होंने पहली बार तत्वों को व्यवस्थित रूप से संगठित किया।"
+    },
+    {
+      "q_num": 2,
+      "question": "Modern Periodic Table is based on which property of elements?\nआधुनिक आवर्त सारणी तत्वों के किस गुण पर आधारित है?",
+      "options": {
+        "a": "Atomic Mass / परमाणु द्रव्यमान",
+        "b": "Atomic Volume / परमाणु आयतन",
+        "c": "Atomic Number / परमाणु संख्या",
+        "d": "Valency / संयोजकता"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGiven by Henry Moseley in 1913, the Modern Periodic Law states that the properties of elements are periodic functions of their atomic numbers. This replaced Mendeleev's atomic‑mass‑based system.\n\n📖 हिंदी स्पष्टीकरण:\n1913 में हेनरी मोसले द्वारा दिया गया आधुनिक आवर्त नियम कहता है कि तत्वों के गुण उनकी परमाणु संख्या के आवर्त फलन होते हैं। इसने मेंडेलीव की परमाणु द्रव्यमान आधारित प्रणाली की जगह ली।"
+    },
+    {
+      "q_num": 3,
+      "question": "How many groups and periods are there in the Modern Periodic Table?\nआधुनिक आवर्त सारणी में कितने समूह और आवर्त हैं?",
+      "options": {
+        "a": "7 Groups, 18 Periods / 7 समूह, 18 आवर्त",
+        "b": "18 Groups, 7 Periods / 18 समूह, 7 आवर्त",
+        "c": "8 Groups, 7 Periods / 8 समूह, 7 आवर्त",
+        "d": "18 Groups, 10 Periods / 18 समूह, 10 आवर्त"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe modern periodic table contains 18 vertical columns known as 'Groups' and 7 horizontal rows known as 'Periods'. There are a total of 118 elements arranged in this structure.\n\n📖 हिंदी स्पष्टीकरण:\nआधुनिक आवर्त सारणी में 18 ऊर्ध्वाधर स्तंभ 'समूह' और 7 क्षैतिज पंक्तियाँ 'आवर्त' होती हैं। इस संरचना में कुल 118 तत्व व्यवस्थित हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which group of elements is known as 'Noble Gases'?\nतत्वों के किस समूह को 'नोबल गैस' के रूप में जाना जाता है?",
+      "options": {
+        "a": "Group 1 / समूह 1",
+        "b": "Group 17 / समूह 17",
+        "c": "Group 18 / समूह 18",
+        "d": "Group 2 / समूह 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGroup 18 elements like helium, neon and argon are called noble or inert gases. They are stable and rarely react with other elements because they have a complete octet (or stable duet in helium).\n\n📖 हिंदी स्पष्टीकरण:\nहीलियम, नियॉन और आर्गन जैसे समूह 18 के तत्वों को नोबल या अक्रिय गैस कहा जाता है। उनका संयोजी कोश पूर्ण (अष्टक / हीलियम में द्वयक) होने के कारण वे स्थिर होते हैं और अन्य तत्वों के साथ बहुत कम प्रतिक्रिया करते हैं।"
+    },
+    {
+      "q_num": 5,
+      "question": "Newland's Law of Octaves was applicable only up to which element?\nन्यूलैंड का अष्टक नियम केवल किस तत्व तक लागू था?",
+      "options": {
+        "a": "Oxygen / ऑक्सीजन",
+        "b": "Calcium / कैल्शियम",
+        "c": "Thorium / थोरियम",
+        "d": "Potassium / पोटेशियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNewlands' Law of Octaves states that every 8th element has similar properties, but this trend held good only for the lighter elements up to calcium. Beyond calcium the law failed.\n\n📖 हिंदी स्पष्टीकरण:\nन्यूलैंड का अष्टक नियम कहता है कि प्रत्येक 8वें तत्व के गुण समान होते हैं, लेकिन यह प्रवृत्ति केवल हल्के तत्वों, यानि कैल्शियम तक, के लिए ही सही थी। कैल्शियम के बाद यह नियम विफल हो गया।"
+    },
+    {
+      "q_num": 6,
+      "question": "What is the common name for Group 1 elements (excluding Hydrogen)?\nसमूह 1 के तत्वों (हाइड्रोजन को छोड़कर) का सामान्य नाम क्या है?",
+      "options": {
+        "a": "Halogens / हैलोजन",
+        "b": "Alkaline Earth Metals / क्षारीय मृदा धातु",
+        "c": "Alkali Metals / क्षार धातु",
+        "d": "Noble Gases / नोबल गैस"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGroup 1 elements (except hydrogen) are known as alkali metals. They are highly reactive metals that form strong alkaline solutions when they react with water.\n\n📖 हिंदी स्पष्टीकरण:\nसमूह 1 के तत्वों (हाइड्रोजन को छोड़कर) को क्षार धातु कहा जाता है। ये अत्यधिक क्रियाशील धातुएँ हैं जो पानी के साथ अभिक्रिया करके प्रबल क्षारीय विलयन बनाती हैं।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which of the following is the first artificially produced element?\nनिम्नलिखित में से कौन सा पहला कृत्रिम रूप से निर्मित तत्व है?",
+      "options": {
+        "a": "Technetium / टेक्नेटियम",
+        "b": "Plutonium / प्लूटोनियम",
+        "c": "Francium / फ्रांसियम",
+        "d": "Uranium / यूरेनियम"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nTechnetium (atomic number 43) was the first element to be produced artificially. It does not occur naturally on Earth in significant amounts.\n\n📖 हिंदी स्पष्टीकरण:\nपरमाणु संख्या 43 वाला टेक्नेटियम कृत्रिम रूप से निर्मित होने वाला पहला तत्व था। यह पृथ्वी पर प्राकृतिक रूप से उल्लेखनीय मात्रा में नहीं पाया जाता।"
+    },
+    {
+      "q_num": 8,
+      "question": "Elements of Group 17 are collectively known as:\nसमूह 17 के तत्वों को सामूहिक रूप से किस नाम से जाना जाता है?",
+      "options": {
+        "a": "Chalcogens / चाल्कोजन",
+        "b": "Pnictogens / निक्टोजेन",
+        "c": "Halogens / हैलोजन",
+        "d": "Noble gases / नोबल गैस"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGroup 17 contains elements like fluorine, chlorine and bromine, which are called halogens. They are highly reactive non‑metals that form salts with metals.\n\n📖 हिंदी स्पष्टीकरण:\nसमूह 17 में फ्लोरीन, क्लोरीन और ब्रोमीन जैसे तत्व होते हैं, जिन्हें हैलोजन कहा जाता है। ये अत्यधिक क्रियाशील अधातुएँ हैं जो धातुओं के साथ मिलकर लवण बनाती हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "Who proposed the Law of Triads in 1817?\n1817 में 'त्रिक का नियम' किसने प्रस्तावित किया था?",
+      "options": {
+        "a": "Newlands / न्यूलैंड्स",
+        "b": "Dobereiner / डोबेरेनर",
+        "c": "Mendeleev / मेंडेलीव",
+        "d": "Moseley / मोसले"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nJohann Dobereiner proposed the Law of Triads, where elements were arranged in groups of three. The atomic mass of the middle element was approximately the average of the first and the third.\n\n📖 हिंदी स्पष्टीकरण:\nजोहान डोबेरेनर ने त्रिक का नियम प्रस्तावित किया, जिसमें तत्वों को तीन‑तीन के समूहों में रखा गया। मध्य तत्व का परमाणु द्रव्यमान पहले और तीसरे तत्व के औसत के लगभग बराबर पाया गया।"
+    },
+    {
+      "q_num": 10,
+      "question": "What is the total number of elements present in the Modern Periodic Table?\nआधुनिक आवर्त सारणी में उपस्थित तत्वों की कुल संख्या कितनी है?",
+      "options": {
+        "a": "108",
+        "b": "112",
+        "c": "118",
+        "d": "120"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe modern periodic table consists of 118 known chemical elements. Of these, about 94 are naturally occurring, while the others are synthetic (man‑made).\n\n📖 हिंदी स्पष्टीकरण:\nआधुनिक आवर्त सारणी में 118 ज्ञात रासायनिक तत्व शामिल हैं। इनमें से लगभग 94 तत्व प्राकृतिक रूप से पाए जाते हैं, जबकि शेष कृत्रिम (सिंथेटिक) हैं।"
+    },
+    {
+      "q_num": 11,
+      "question": "Eka-Aluminium was the name given by Mendeleev to which modern element?\nमेंडेलीव द्वारा 'एका‑एल्युमिनियम' नाम किस आधुनिक तत्व को दिया गया था?",
+      "options": {
+        "a": "Scandium / स्कैंडियम",
+        "b": "Gallium / गैलियम",
+        "c": "Germanium / जर्मेनियम",
+        "d": "Technetium / टेक्नेटियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMendeleev predicted several unknown elements and named them with the prefix 'eka'. Eka‑aluminium was later discovered and named gallium.\n\n📖 हिंदी स्पष्टीकरण:\nमेंडेलीव ने कई अज्ञात तत्वों की भविष्यवाणी की और उन्हें 'एका' उपसर्ग के साथ नाम दिया। 'एका‑एल्युमिनियम' के रूप में अनुमानित तत्व बाद में खोजा गया और उसे गैलियम नाम दिया गया।"
+    },
+    {
+      "q_num": 12,
+      "question": "What is the trend of 'Atomic Size' as we move down a group in the Periodic Table?\nआवर्त सारणी में किसी समूह में नीचे जाने पर 'परमाणु आकार' की क्या प्रवृत्ति होती है?",
+      "options": {
+        "a": "Decreases / घटता है",
+        "b": "Increases / बढ़ता है",
+        "c": "Remains Same / समान रहता है",
+        "d": "First increases then decreases / पहले बढ़ता है फिर घटता है"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAs we move down a group, the number of electron shells increases. This increase in shells outweighs the increased nuclear charge, resulting in an increase in atomic size.\n\n📖 हिंदी स्पष्टीकरण:\nजैसे‑जैसे हम किसी समूह में नीचे जाते हैं, इलेक्ट्रॉन कोशों की संख्या बढ़ती जाती है। कोशों की यह वृद्धि बढ़ते नाभिकीय आवेश से अधिक प्रभावी होती है, जिससे परमाणु आकार बढ़ जाता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Elements belonging to Group 3 to 12 are called:\nसमूह 3 से 12 तक के तत्वों को क्या कहा जाता है?",
+      "options": {
+        "a": "Representative elements / प्रतिनिधि तत्व",
+        "b": "Alkaline earth metals / क्षारीय मृदा धातु",
+        "c": "Transition metals / संक्रमण धातु",
+        "d": "Inner transition metals / आंतरिक संक्रमण धातु"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nElements in groups 3 through 12 are known as transition metals and belong to the d‑block. They show transition in properties and often exhibit variable oxidation states, coloured compounds and high catalytic activity.\n\n📖 हिंदी स्पष्टीकरण:\nसमूह 3 से 12 के तत्वों को संक्रमण धातु कहा जाता है और ये d‑ब्लॉक के सदस्य हैं। ये गुणों में संक्रमण दर्शाते हैं और प्रायः अनेक ऑक्सीकरण अवस्थाएँ, रंगीन यौगिक तथा उच्च उत्प्रेरक सक्रियता प्रदर्शित करते हैं।"
+    },
+    {
+      "q_num": 14,
+      "question": "The 'Diagonal Relationship' is mostly observed between which periods?\n'विकर्ण संबंध' मुख्य रूप से किन आवर्तों के बीच देखा जाता है?",
+      "options": {
+        "a": "Period 1 and 2 / आवर्त 1 और 2",
+        "b": "Period 2 and 3 / आवर्त 2 और 3",
+        "c": "Period 3 and 4 / आवर्त 3 और 4",
+        "d": "Group 1 and 2 / समूह 1 और 2"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDiagonal relationship occurs between diagonally adjacent elements of the 2nd and 3rd periods, such as lithium and magnesium or beryllium and aluminium, because of similar charge density and properties.\n\n📖 हिंदी स्पष्टीकरण:\nविकर्ण संबंध दूसरे और तीसरे आवर्त के तिरछे सटे तत्वों के बीच पाया जाता है, जैसे लिथियम‑मैग्नीशियम या बेरिलियम‑एल्युमिनियम, क्योंकि इनकी आवेश घनत्व और कई गुण परस्पर मिलते‑जुलते हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "Species that have the same number of electrons are called:\nजिन प्रजातियों में इलेक्ट्रॉनों की संख्या समान होती है, उन्हें क्या कहा जाता है?",
+      "options": {
+        "a": "Isotopes / समस्थानिक",
+        "b": "Isobars / समभारिक",
+        "c": "Isoelectronic / आइसोइलेक्ट्रॉनिक",
+        "d": "Isotones / आइसोटोन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIsoelectronic species are atoms, ions or molecules that possess the same total number of electrons and often similar electronic structures, e.g., O²⁻ and F⁻, or Na⁺ and Ne.\n\n📖 हिंदी स्पष्टीकरण:\nआइसोइलेक्ट्रॉनिक प्रजातियाँ वे परमाणु, आयन या अणु हैं जिनमें इलेक्ट्रॉनों की कुल संख्या समान होती है और उनकी इलेक्ट्रॉनिक संरचना भी प्रायः समान होती है, जैसे O²⁻ और F⁻, या Na⁺ और Ne।"
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): Noble gases have zero valency.\nकथन (A): नोबल गैसों की संयोजकता शून्य होती है।\nReason (R): They have a completely filled outermost shell.\nकारण (R): उनका सबसे बाहरी कोश पूरी तरह से भरा होता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true and R correctly explains A. Noble gases like neon and argon already have a stable octet in their valence shell, so they neither gain nor lose electrons and hence show zero valency.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की सही व्याख्या करता है। नियॉन और आर्गन जैसी नोबल गैसों के संयोजक कोश में पहले से ही स्थिर अष्टक होता है, इसलिए वे न तो इलेक्ट्रॉन ग्रहण करती हैं और न ही त्यागती हैं; परिणामस्वरूप उनकी संयोजकता शून्य होती है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements about 'Electronegativity' is correct?\n'विद्युत ऋणात्मकता' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It increases down a group / यह समूह में नीचे जाने पर बढ़ती है।",
+        "b": "It decreases across a period from left to right / यह आवर्त में बाएं से दाएं जाने पर घटती है।",
+        "c": "It increases across a period from left to right / यह आवर्त में बाएं से दाएं जाने पर बढ़ती है।",
+        "d": "It remains constant throughout the table / यह पूरी तालिका में स्थिर रहती है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nElectronegativity is the tendency of an atom to attract shared electrons. It increases across a period from left to right because nuclear charge increases and atomic size decreases, leading to stronger attraction for bonding electrons.\n\n📖 हिंदी स्पष्टीकरण:\nविद्युत ऋणात्मकता किसी परमाणु की साझा इलेक्ट्रॉनों को आकर्षित करने की प्रवृत्ति है। यह एक आवर्त में बाएं से दाएं बढ़ती है क्योंकि नाभिकीय आवेश बढ़ता है और परमाणु आकार घटता है, जिससे बंधनकारी इलेक्ट्रॉनों पर आकर्षण अधिक हो जाता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Assertion (A): Metals are found in all s, p, d, and f blocks.\nकथन (A): धातु s, p, d और f सभी ब्लॉकों में पाई जाती हैं।\nReason (R): Non-metals are found in all blocks of the periodic table.\nकारण (R): अधातुएँ आवर्त सारणी के सभी ब्लॉकों में पाई जाती हैं।",
+      "options": {
+        "a": "Both A and R are true / A और R दोनों सत्य हैं।",
+        "b": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "c": "A is false but R is true / A असत्य है लेकिन R सत्य है।",
+        "d": "Both A and R are false / A और R दोनों असत्य हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA is true but R is false. Metals are indeed distributed across all four blocks (s, p, d, f), whereas non‑metals occur only in the p‑block (and hydrogen sometimes counted separately), not in all blocks.\n\n📖 हिंदी स्पष्टीकरण:\nA सही है लेकिन R गलत है। धातुएँ वास्तव में s, p, d और f सभी ब्लॉकों में पाई जाती हैं, जबकि अधातुएँ केवल p‑ब्लॉक (और कभी‑कभी हाइड्रोजन को अलग मानते हैं) में पाई जाती हैं, सभी ब्लॉकों में नहीं।"
+    },
+    {
+      "q_num": 19,
+      "question": "Elements with atomic numbers 57 to 71 are known as:\nपरमाणु संख्या 57 से 71 वाले तत्वों को किस रूप में जाना जाता है?",
+      "options": {
+        "a": "Actinides / एक्टिनाइड",
+        "b": "Lanthanides / लैंथेनाइड",
+        "c": "Halogens / हैलोजन",
+        "d": "Chalcogens / चाल्कोजन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLanthanides are a series of elements from atomic number 57 to 71 in period 6. They belong to the f‑block and are called inner transition metals.\n\n📖 हिंदी स्पष्टीकरण:\nलैंथेनाइड आवर्त 6 में परमाणु संख्या 57 से 71 तक के तत्वों की श्रृंखला है। ये f‑ब्लॉक के सदस्य हैं और इन्हें आंतरिक संक्रमण धातु कहा जाता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Atomic mass of Nitrogen is 14 amu.\nकथन (A): नाइट्रोजन का परमाणु द्रव्यमान 14 amu है।\nReason (R): Nitrogen has 7 protons and 7 neutrons.\nकारण (R): नाइट्रोजन में 7 प्रोटॉन और 7 न्यूट्रॉन होते हैं।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true and R explains A. Atomic mass is the sum of protons and neutrons. Since nitrogen has 7 protons and 7 neutrons, its mass is 14 amu (7 + 7 = 14).\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की व्याख्या करता है। परमाणु द्रव्यमान प्रोटॉन और न्यूट्रॉन के योग के बराबर होता है। नाइट्रोजन में 7 प्रोटॉन और 7 न्यूट्रॉन होते हैं, अतः उसका द्रव्यमान 14 amu (7 + 7 = 14) होता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which group is known as 'Chalcogens'?\nकिस समूह को 'चाल्कोजन' के रूप में जाना जाता है?",
+      "options": {
+        "a": "Group 15 / समूह 15",
+        "b": "Group 16 / समूह 16",
+        "c": "Group 17 / समूह 17",
+        "d": "Group 14 / समूह 14"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGroup 16 elements, including oxygen and sulphur, are called chalcogens. They are often found in ores; hence the name 'ore‑formers' (chalcogens).\n\n📖 हिंदी स्पष्टीकरण:\nऑक्सीजन और सल्फर सहित समूह 16 के तत्वों को चाल्कोजन कहा जाता है। ये प्रायः अयस्कों में पाए जाते हैं, इसलिए इन्हें 'अयस्क बनाने वाले' (chalcogens) कहा जाता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Assertion (A): Silicon and Germanium are metalloids.\nकथन (A): सिलिकॉन और जर्मेनियम उपधातु हैं।\nReason (R): They show properties of both metals and non-metals.\nकारण (R): वे धातुओं और अधातुओं दोनों के गुण प्रदर्शित करते हैं।",
+      "options": {
+        "a": "Both A and R are true and R explains A / A और R दोनों सत्य हैं और R, A की व्याख्या करता है।",
+        "b": "Both A and R are true but R does not explain A / A और R दोनों सत्य हैं लेकिन R, A की व्याख्या नहीं करता है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true and R explains A. Metalloids possess properties intermediate between metals and non‑metals; silicon and germanium are classic examples in the p‑block.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की व्याख्या करता है। उपधातुओं में धातुओं तथा अधातुओं के बीच के गुण पाए जाते हैं; सिलिकॉन और जर्मेनियम p‑ब्लॉक में पाए जाने वाले प्रमुख उदाहरण हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which of the following is NOT a diatomic molecule among gases?\nनिम्नलिखित में से कौन सा गैसों के बीच द्विपरमाणुक अणु नहीं है?",
+      "options": {
+        "a": "Oxygen / ऑक्सीजन",
+        "b": "Nitrogen / नाइट्रोजन",
+        "c": "Helium / हीलियम",
+        "d": "Chlorine / क्लोरीन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nHelium is a monoatomic gas because it is a noble gas with a stable electron configuration. Oxygen, nitrogen and chlorine naturally form diatomic molecules (O₂, N₂, Cl₂).\n\n📖 हिंदी स्पष्टीकरण:\nहीलियम एक एक‑परमाणुक गैस है क्योंकि यह स्थिर इलेक्ट्रॉन विन्यास वाली नोबल गैस है। ऑक्सीजन, नाइट्रोजन और क्लोरीन स्वाभाविक रूप से द्विपरमाणुक अणु (O₂, N₂, Cl₂) के रूप में पाए जाते हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Ionization energy increases across a period from left to right.\nकथन (A): एक आवर्त में बाएं से दाएं जाने पर आयनीकरण ऊर्जा बढ़ती है।\nReason (R): Atomic size increases across a period from left to right.\nकारण (R): एक आवर्त में बाएं से दाएं जाने पर परमाणु आकार बढ़ता है।",
+      "options": {
+        "a": "Both A and R are true / A और R दोनों सत्य हैं।",
+        "b": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "c": "A is false but R is true / A असत्य है लेकिन R सत्य है।",
+        "d": "Both A and R are false / A और R दोनों असत्य हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA is true but R is false. Ionization energy increases across a period mainly because atomic size decreases and nuclear charge increases, making it harder to remove an electron, not because size increases.\n\n📖 हिंदी स्पष्टीकरण:\nA सही है लेकिन R गलत है। एक आवर्त में आयनीकरण ऊर्जा इसलिए बढ़ती है क्योंकि परमाणु आकार घटता है और नाभिकीय आवेश बढ़ता है, जिससे इलेक्ट्रॉन को हटाना अधिक कठिन हो जाता है, न कि इसलिए कि परमाणु आकार बढ़ता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "What is the valency of Magnesium (Mg) with atomic number 12?\nपरमाणु संख्या 12 वाले मैग्नीशियम (Mg) की संयोजकता क्या है?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMagnesium has the electronic configuration 2, 8, 2. Since it has 2 valence electrons in its outermost shell, it tends to lose these two electrons and thus has a valency of 2.\n\n📖 हिंदी स्पष्टीकरण:\nमैग्नीशियम का इलेक्ट्रॉनिक विन्यास 2, 8, 2 है। इसके सबसे बाहरी कोश में 2 संयोजी इलेक्ट्रॉन होते हैं, जिन्हें यह सामान्यतः त्याग देता है, इसलिए इसकी संयोजकता 2 होती है।"
+    }
+  ]
+}

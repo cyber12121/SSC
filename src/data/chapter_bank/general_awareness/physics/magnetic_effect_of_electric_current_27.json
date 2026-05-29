@@ -1,0 +1,308 @@
+{
+  "chapter_num": 8,
+  "chapter_title": "Magnetic Effect Of Electric Current 27",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Who discovered the magnetic effect of electric current in 1820?\n 1820 में विद्युत धारा के चुंबकीय प्रभाव की खोज किसने की थी?",
+      "options": {
+        "a": "Michael Faraday / माइकल फैराडे",
+        "b": "Hans Christian Orsted / हंस क्रिश्चियन ऑर्स्टेड",
+        "c": "James Joule / जेम्स जूल",
+        "d": "Maxwell / मैक्सवेल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHans Christian Orsted discovered that a current-carrying wire produces a magnetic field around it when he noticed a compass needle deflect near a live wire."
+    },
+    {
+      "q_num": 2,
+      "question": "Which rule is used to find the direction of magnetic field lines around a straight current-carrying conductor? \n सीधे धारावाही चालक के चारों ओर चुंबकीय क्षेत्र रेखाओं की दिशा ज्ञात करने के लिए किस नियम का उपयोग किया जाता है?",
+      "options": {
+        "a": "Fleming's Left Hand Rule / फ्लेमिंग का वाम हस्त नियम",
+        "b": "Maxwell's Right Hand Thumb Rule / मैक्सवेल का दक्षिण हस्त अंगुष्ठ नियम",
+        "c": "Ampere’s Law / एम्पीयर का नियम",
+        "d": "Fleming's Right Hand Rule / फ्लेमिंग का दक्षिण हस्त नियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAccording to this rule, if the thumb points in the direction of the current, the curled fingers show the direction of magnetic field lines.\n\n📖 हिंदी स्पष्टीकरण:\nइस नियम के अनुसार, यदि अंगूठा धारा की दिशा में हो, तो मुड़ी हुई उंगलियाँ चुंबकीय क्षेत्र रेखाओं की दिशा को दर्शाती हैं।"
+    },
+    {
+      "q_num": 3,
+      "question": "Magnetic field lines originate from which pole outside a magnet?\n चुंबकीय क्षेत्र रेखाएँ चुंबकीय क्षेत्र के बाहर किस ध्रुव से निकलती हैं?",
+      "options": {
+        "a": "South Pole / दक्षिणी ध्रुव",
+        "b": "North Pole / उत्तरी ध्रुव",
+        "c": "Center of the magnet / चुंबक का केंद्र",
+        "d": "Both poles / दोनों ध्रुव"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOutside the magnet, magnetic field lines emerge from the North Pole and terminate at the South Pole, forming closed loops.\n\n📖 हिंदी स्पष्टीकरण:\nचुंबक के बाहर, चुंबकीय क्षेत्र रेखाएँ उत्तरी ध्रुव से निकलती हैं और दक्षिणी ध्रुव पर समाप्त होती हैं, जिससे बंद लूप बनते हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "A solenoid behaves like which type of magnet when electric current passes through it? विद्युत धारा प्रवाहित होने पर एक परिनालिका किस प्रकार के चुंबक की तरह व्यवहार करती है?",
+      "options": {
+        "a": "Horseshoe magnet / नाल चुंबक",
+        "b": "Bar magnet / छड़ चुंबक",
+        "c": "Needle magnet / सुई चुंबक",
+        "d": "Ring magnet / वलय चुंबक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWhen current is passed through a solenoid, it creates a magnetic field pattern similar to that of a bar magnet.\n\n📖 हिंदी स्पष्टीकरण:\nजब एक परिनालिका से धारा प्रवाहित की जाती है, तो यह छड़ चुंबक के समान चुंबकीय क्षेत्र पैटर्न बनाती है।"
+    },
+    {
+      "q_num": 5,
+      "question": "What happens to the magnetic field strength if the number of turns in a circular loop increase? \n यदि एक वृत्ताकार लूप में फेरों की संख्या बढ़ जाती है, तो चुंबकीय क्षेत्र की शक्ति पर क्या प्रभाव पड़ता है?",
+      "options": {
+        "a": "Decreases / घटती है।",
+        "b": "Increases / बढ़ती है।",
+        "c": "Remains same / समान रहती है।",
+        "d": "Becomes zero / शून्य हो जाती है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe magnetic field produced is directly proportional to the number of turns in the loop; more turns mean a stronger magnetic field.\n\n📖 हिंदी स्पष्टीकरण:\nउत्पन्न चुंबकीय क्षेत्र लूप में फेरों की संख्या के सीधे आनुपातिक होता है; अधिक फेरों का अर्थ है अधिक शक्तिशाली चुंबकीय क्षेत्र।"
+    },
+    {
+      "q_num": 6,
+      "question": "What is the color of the insulation on a 'Live wire' in domestic circuits?\n घरेलू सर्किट में 'जीवित तार' (लाइव वायर) पर इंसुलेशन का रंग क्या होता है?",
+      "options": {
+        "a": "Black / काला",
+        "b": "Green / हरा",
+        "c": "Red / लाल",
+        "d": "Blue / नीला"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn domestic wiring, the live wire is usually color-coded red and carries a potential of 220V.\n\n📖 हिंदी स्पष्टीकरण:\nघरेलू वायरिंग में, जीवित तार आमतौर पर लाल रंग का होता है और इसमें 220V का विभव होता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "Magnetic field is a _______ quantity.\n चुंबकीय क्षेत्र एक _______ राशि है।",
+      "options": {
+        "a": "Scalar / अदिश",
+        "b": "Vector / सदिश",
+        "c": "Dimensionless / विमाहीन",
+        "d": "Neutral / उदासीन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMagnetic field has both magnitude and direction, making it a vector quantity.\n\n📖 हिंदी स्पष्टीकरण:\nचुंबकीय क्षेत्र में परिमाण और दिशा दोनों होते हैं, जो इसे एक सदिश राशि बनाता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which device converts mechanical energy into electrical energy? \n कौन सा उपकरण यांत्रिक ऊर्जा को विद्युत ऊर्जा में परिवर्तित करता है?",
+      "options": {
+        "a": "Electric Motor / विद्युत मोटर",
+        "b": "Generator / जनरेटर",
+        "c": "Rectifier / दिष्टकारी",
+        "d": "Solenoid / परिनालिका"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA generator (or dynamo) works on the principle of electromagnetic induction to change mechanical energy into electrical energy.\n\n📖 हिंदी स्पष्टीकरण:\nएक जनरेटर (या डायनेमो) यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलने के लिए विद्युत चुंबकीय प्रेरण के सिद्धांत पर कार्य करता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Like poles of two magnets ________ each other. \n दो चुम्बकों के समान ध्रुव एक दूसरे को ________ करते हैं।",
+      "options": {
+        "a": "Attract / आकर्षित",
+        "b": "Repel / प्रतिकर्षित",
+        "c": "Do nothing / कुछ नहीं करते",
+        "d": "Neutralize / निष्प्रभावित करते हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIt is a basic property of magnets that like poles (N-N or S-S) repel, while unlike poles attract each other.\n\n📖 हिंदी स्पष्टीकरण:\nयह चुम्बकों का एक मूल गुण है कि समान ध्रुव प्रतिकर्षित करते हैं, जबकि असमान ध्रुव एक दूसरे को आकर्षित करते हैं।"
+    },
+    {
+      "q_num": 10,
+      "question": "An electromagnet is a _______ magnet.\n एक विद्युत चुम्बक एक _______ चुम्बक है।",
+      "options": {
+        "a": "Permanent / स्थायी",
+        "b": "Temporary / अस्थायी",
+        "c": "Natural / उदासीन",
+        "d": "Weak / कमजोर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAn electromagnet only shows magnetic properties as long as electric current flows through its coil.\n\n📖 हिंदी स्पष्टीकरण:\nएक विद्युत चुम्बक केवल तब तक चुंबकीय गुण दिखाता है जब तक कि उसकी कुंडली से विद्युत धारा प्रवाहित होती है।"
+    },
+    {
+      "q_num": 11,
+      "question": "According to Fleming's Left Hand Rule, what does the forefinger represent?\n फ्लेमिंग के वाम हस्त नियम के अनुसार, तर्जनी क्या दर्शाती है?",
+      "options": {
+        "a": "Direction of Force / बल की दिशा",
+        "b": "Direction of Magnetic Field / चुंबकीय क्षेत्र की दिशा",
+        "c": "Direction of Current / धारा की दिशा",
+        "d": "Direction of Motion / गति की दिशा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn Fleming's Left Hand Rule, the thumb represents force, the forefinger represents the magnetic field, and the middle finger represents the current.\n\n📖 हिंदी स्पष्टीकरण:\nफ्लेमिंग के वाम हस्त नियम में, अंगूठा बल को, तर्जनी चुंबकीय क्षेत्र को और मध्यमा उंगली धारा को दर्शाती है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What is the frequency of direction change for Alternating Current (AC) as per the common standard in india? \n सामान्य मानक के अनुसार प्रत्यावर्ती धारा (AC) की दिशा बदलने की आवृत्ति क्या है?",
+      "options": {
+        "a": "Every 1 second / हर 1 सेकंड में",
+        "b": "Every 1/50th of a second / हर 1/50 सेकंड में",
+        "c": "Every 1/100th of a second / हर 1/100 सेकंड में",
+        "d": "It never changes / यह कभी नहीं बदलती"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAC current changes its direction periodically, typically every 1/100th of a second in many systems."
+    },
+    {
+      "q_num": 13,
+      "question": "Electromagnetic Induction was discovered by which scientist?\n विद्युत चुंबकीय प्रेरण की खोज किस वैज्ञानिक ने की थी?",
+      "options": {
+        "a": "Hans Christian Orsted / हंस क्रिश्चियन ऑर्स्टेड",
+        "b": "Michael Faraday / माइकल फैराडे",
+        "c": "James Joule / जेम्स जूल",
+        "d": "Maxwell / मैक्सवेल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMichael Faraday discovered electromagnetic induction in 1831, showing that a changing magnetic field can generate electricity.\n\n📖 हिंदी स्पष्टीकरण:\nमाइकल फैराडे ने 1831 में विद्युत चुंबकीय प्रेरण की खोज की, यह दिखाते हुए कि बदलता चुंबकीय क्षेत्र बिजली पैदा कर सकता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "What causes a 'short circuit' in domestic wiring? \n घरेलू वायरिंग में 'शॉर्ट सर्किट' का क्या कारण है?",
+      "options": {
+        "a": "Low voltage / कम वोल्टेज",
+        "b": "Contact between live and neutral wires / जीवित और तटस्थ तारों के बीच संपर्क",
+        "c": "Using a fuse / फ्यूज का उपयोग करना",
+        "d": "High resistance / उच्च प्रतिरोध"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA short circuit occurs when insulation breaks and the live wire come in direct contact with the neutral wire, causing current to increase abruptly.\n\n📖 हिंदी स्पष्टीकरण:\nशॉर्ट सर्किट तब होता है जब इंसुलेशन टूट जाता है और जीवित तार तटस्थ तार के सीधे संपर्क में आता है, जिससे धारा अचानक बढ़ जाती है।"
+    },
+    {
+      "q_num": 15,
+      "question": "The force on a current-carrying conductor in a magnetic field is zero when the angle between them is: \n चुंबकीय क्षेत्र में रखे धारावाही चालक पर लगने वाला बल शून्य होता है जब उनके बीच का कोण होता है:",
+      "options": {
+        "a": "90°",
+        "b": "45°",
+        "c": "0° or 180°",
+        "d": "270°"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe force is minimum (zero) when the conductor is placed parallel (0°) or anti-parallel to the direction of the magnetic field.\n\n📖 हिंदी स्पष्टीकरण:\nजब चालक को चुंबकीय क्षेत्र की दिशा के समानांतर (0°) रखा जाता है, तो बल न्यूनतम (शून्य) होता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Which of the following statements about magnetic field lines is INCORRECT?\n चुंबकीय क्षेत्र रेखाओं के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "options": {
+        "a": "They form closed loops / वे बंद लूप बनाती हैं।",
+        "b": "They originate from the South pole outside the magnet / वे चुंबक के बाहर दक्षिणी ध्रुव से निकलती हैं।",
+        "c": "They never intersect each other / वे कभी एक-दूसरे को नहीं काटती हैं।",
+        "d": "Closer lines indicate a stronger magnetic field / पास की रेखाएँ मजबूत चुंबकीय क्षेत्र का संकेत देती हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThis is incorrect because magnetic field lines originate from the North Pole and terminate at the South Pole outside the magnet.\n\n📖 हिंदी स्पष्टीकरण:\nयह गलत है क्योंकि चुंबकीय क्षेत्र रेखाएँ चुंबक के बाहर उत्तरी ध्रुव से निकलती हैं और दक्षिणी ध्रुव पर समाप्त होती हैं।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): Magnetic field lines never intersect each other.\n कथन (A): चुंबकीय क्षेत्र रेखाएँ कभी एक-दूसरे को नहीं काटती हैं।\n Reason (R): If they intersect, there would be two directions of magnetic field at the point of intersection, which is impossible.\n कारण (R): यदि वे काटती हैं, तो प्रतिच्छेदन बिंदु पर चुंबकीय क्षेत्र की दो दिशाएँ होंगी, जो असंभव है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIf field lines crossed, a compass needle would have to point in two directions at once, which is physically impossible.\n\n📖 हिंदी स्पष्टीकरण:\nयदि क्षेत्र रेखाएँ कटती हैं, तो कंपास की सुई को एक साथ दो दिशाओं में संकेत करना होगा, जो भौतिक रूप से असंभव है।"
+    },
+    {
+      "q_num": 18,
+      "question": "What is the function of a Rectifier? \n दिष्टकारी (रेक्टिफायर) का कार्य क्या है?",
+      "options": {
+        "a": "Converts DC to AC / DC को AC में परिवर्तित करना।",
+        "b": "Converts AC to DC / AC को DC में परिवर्तित करना।",
+        "c": "Measures current / धारा मापना।",
+        "d": "Generates magnetic field / चुंबकीय क्षेत्र उत्पन्न करना।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA rectifier is an electrical device that converts alternating current (AC) to direct current (DC).\n\n📖 हिंदी स्पष्टीकरण:\nदिष्टकारी (रेक्टिफायर) एक विद्युत उपकरण है जो प्रत्यावर्ती धारा (AC) को दिष्ट धारा (DC) में परिवर्तित करता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "The magnetic field inside a long straight solenoid carrying current is: \n धारा प्रवाहित करने वाले एक लंबे सीधे परिनालिका के भीतर चुंबकीय क्षेत्र होता है:",
+      "options": {
+        "a": "Zero / शून्य",
+        "b": "Decreases as we move towards its ends / सिरों की ओर बढ़ने पर घटता है।",
+        "c": "Same at all points / सभी बिंदुओं पर समान।",
+        "d": "Increases as we move towards its ends / सिरों की ओर बढ़ने पर बढ़ता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nInside a solenoid, the magnetic field is uniform and maximum, represented by parallel straight lines.\n\n📖 हिंदी स्पष्टीकरण:\nपरिनालिका के अंदर, चुंबकीय क्षेत्र समान और अधिकतम होता है, जिसे समानांतर सीधी रेखाओं द्वारा दर्शाया जाता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): An electric motor converts mechanical energy into electrical energy.\n Reason (R): It works on the principle of Fleming's Left Hand Rule.\n कथन (A): एक विद्युत मोटर यांत्रिक ऊर्जा को विद्युत ऊर्जा में परिवर्तित करती है।\n कारण (R): यह फ्लेमिंग के वाम हस्त नियम के सिद्धांत पर कार्य करती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is false but R is true / A असत्य है लेकिन R सत्य है।",
+        "d": "A is true but R is false / A सत्य है लेकिन R असत्य है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAssertion is false because a motor converts electrical energy into mechanical energy, but the reason is a true statement about its principle.\n\n📖 हिंदी स्पष्टीकरण:\nकथन असत्य है क्योंकि मोटर विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलती है, लेकिन कारण इसके सिद्धांत के बारे में एक सत्य कथन है।"
+    },
+    {
+      "q_num": 21,
+      "question": "The direction of induced current is given by: \n प्रेरित धारा की दिशा किसके द्वारा दी जाती है?",
+      "options": {
+        "a": "Fleming's Left Hand Rule / फ्लेमिंग का वाम हस्त नियम",
+        "b": "Fleming's Right Hand Rule / फ्लेमिंग का दक्षिण हस्त नियम",
+        "c": "Maxwell's Screw Rule / मैक्सवेल का स्क्रू नियम",
+        "d": "Ampere's Law / एम्पीयर का नियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nFleming's Right Hand Rule is used to determine the direction of induced current when a conductor moves in a magnetic field.\n\n📖 हिंदी स्पष्टीकरण:\nफ्लेमिंग के दक्षिण हस्त नियम का उपयोग प्रेरित धारा की दिशा निर्धारित करने के लिए किया जाता है जब एक चालक चुंबकीय क्षेत्र में गति करता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Statement I: Magnetic field lines are closed loops.\n कथन I: चुंबकीय क्षेत्र रेखाएँ बंद लूप होती हैं।\n Statement II: Magnetic field lines outside the solenoid are practically zero.\n कथन II: परिनालिका के बाहर चुंबकीय क्षेत्र रेखाएँ व्यावहारिक रूप से शून्य होती हैं।",
+      "options": {
+        "a": "Only Statement I is correct / केवल कथन I सही है।",
+        "b": "Only Statement II is correct / केवल कथन II सही है।",
+        "c": "Both Statement I and II are correct / कथन I और II दोनों सही हैं।",
+        "d": "Neither Statement I nor II is correct / न तो कथन I और न ही II सही है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nField lines always form closed paths, and the field outside a tight solenoid is considered negligible or zero.\n\n📖 हिंदी स्पष्टीकरण:\nक्षेत्र रेखाएँ हमेशा बंद पथ बनाती हैं, और एक कसी हुई परिनालिका के बाहर के क्षेत्र को नगण्य या शून्य माना जाता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "If the distance from a current-carrying conductor increases, the strength of the magnetic field: यदि धारावाही चालक से दूरी बढ़ जाती है, तो चुंबकीय क्षेत्र की शक्ति:",
+      "options": {
+        "a": "Increases / बढ़ती है।",
+        "b": "Decreases / घटती है।",
+        "c": "Remains same / समान रहती है।",
+        "d": "First increases then decreases / पहले बढ़ती है फिर घटती है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMagnetic field strength is inversely proportional to the distance from the conductor.\n\n📖 हिंदी स्पष्टीकरण:\nचुंबकीय क्षेत्र की शक्ति चालक से दूरी के व्युत्क्रमानुपाती होती है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Maxwell’s Screw Rule is used to find: \n मैक्सवेल के स्क्रू नियम का उपयोग क्या खोजने के लिए किया जाता है?",
+      "options": {
+        "a": "Direction of force / बल की दिशा",
+        "b": "Direction of magnetic field in a straight conductor / सीधे चालक में चुंबकीय क्षेत्र की दिशा",
+        "c": "Magnitude of current / धारा का परिमाण",
+        "d": "Voltage in a circuit / सर्किट में वोल्टेज"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMaxwell's screw rule relates the rotation of a screw to the direction of magnetic field produced by current moving in the direction of the screw's tip.\n\n📖 हिंदी स्पष्टीकरण:\nमैक्सवेल का स्क्रू नियम स्क्रू के घूमने को उसकी नोक की दिशा में बहने वाली धारा द्वारा उत्पन्न चुंबकीय क्षेत्र की दिशा से जोड़ता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "In a circular loop, the magnetic field lines at the center are: \n एक वृत्ताकार लूप में, केंद्र पर चुंबकीय क्षेत्र रेखाएँ होती हैं:",
+      "options": {
+        "a": "Concentric circles / संकेंद्रित वृत्त",
+        "b": "Parallel and uniform / समानांतर और समान",
+        "c": "Random / यादृच्छिक",
+        "d": "Curved towards the wire / तार की ओर मुड़ी हुई"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAt the center of a circular current-carrying loop, the magnetic field lines appear as straight parallel lines, indicating a uniform field.\n\n📖 हिंदी स्पष्टीकरण:\nएक वृत्ताकार धारावाही लूप के केंद्र में, चुंबकीय क्षेत्र रेखाएँ सीधी समानांतर रेखाओं के रूप में दिखाई देती हैं, जो एक समान क्षेत्र का संकेत देती हैं।"
+    }
+  ]
+}

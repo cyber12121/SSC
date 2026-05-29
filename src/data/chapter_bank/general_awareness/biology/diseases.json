@@ -1,0 +1,308 @@
+{
+  "chapter_num": 11,
+  "chapter_title": "Diseases",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which of the following diseases is caused by a virus? / निम्नलिखित में से कौन सी बीमारी वायरस के कारण होती है?",
+      "options": {
+        "a": "Typhoid / टाइफाइड",
+        "b": "Cholera / हैजा",
+        "c": "Common Cold / सामान्य जुकाम",
+        "d": "Leprosy / कुष्ठ रोग"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe common cold is caused by the Rhinovirus. Unlike bacteria, viruses cannot be treated with antibiotics and require a host cell to replicate\n\n📖 हिंदी स्पष्टीकरण:\nसामान्य जुकाम राइनोवायरस के कारण होता है। बैक्टीरिया के विपरीत, वायरस का इलाज एंटीबायोटिक दवाओं से नहीं किया जा सकता है और उन्हें प्रतिकृति बनाने के लिए एक मेजबान कोशिका की आवश्यकता होती है।"
+    },
+    {
+      "q_num": 2,
+      "question": "In which year was India officially declared free from Polio? / भारत को आधिकारिक तौर पर किस वर्ष पोलियो मुक्त घोषित किया गया था?",
+      "options": {
+        "a": "1995",
+        "b": "2014",
+        "c": "1977",
+        "d": "2000"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIndia was declared totally eradicated from Polio in 2014. The government launched the Pulse Polio Immunization Programme on October 2, 1995, to achieve this milestone\n\n📖 हिंदी स्पष्टीकरण:\nभारत को 2014 में पूरी तरह से पोलियो मुक्त घोषित किया गया था। इस मील के पत्थर को हासिल करने के लिए सरकार ने 2 अक्टूबर 1995 को पल्स पोलियो टीकाकरण कार्यक्रम शुरू किया था।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which organ of the human body is primarily affected by Hepatitis? / मानव शरीर का कौन सा अंग मुख्य रूप से हेपेटाइटिस से प्रभावित होता है?",
+      "options": {
+        "a": "Lungs / फेफड़े",
+        "b": "Kidney / वृक्क",
+        "c": "Liver / यकृत",
+        "d": "Heart / हृदय"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nHepatitis is a viral disease that affects the liver, often leading to symptoms like Jaundice. India's first indigenous Hepatitis-A vaccine is called Havisure\n\n📖 हिंदी स्पष्टीकरण:\nहेपेटाइटिस एक वायरल बीमारी है जो यकृत को प्रभावित करती है, जिससे अक्सर पीलिया जैसे लक्षण दिखाई देते हैं। भारत के पहले स्वदेशी हेपेटाइटिस-ए टीके का नाम 'हैविश्योर' है।"
+    },
+    {
+      "q_num": 4,
+      "question": "The 'Widal Test' is used for the diagnosis of which disease? / 'विडाल टेस्ट' का उपयोग किस बीमारी के निदान के लिए किया जाता है?",
+      "options": {
+        "a": "AIDS / एड्स",
+        "b": "Tuberculosis / तपेदिक",
+        "c": "Typhoid / टाइफाइड",
+        "d": "Malaria / मलेरिया"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTyphoid is caused by the bacterium Salmonella typhi. The Widal test is the standard clinical test used to detect this infection\n\n📖 हिंदी स्पष्टीकरण:\nटाइफाइड साल्मोनेला टाइफी बैक्टीरिया के कारण होता है। विडाल परीक्षण इस संक्रमण का पता लगाने के लिए उपयोग किया जाने वाला मानक नैदानिक परीक्षण है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Who developed the first vaccine for Smallpox in 1796? / 1796 में चेचक के पहले टीके का विकास किसने किया था?",
+      "options": {
+        "a": "Jonas Salk / जोनास साल्क",
+        "b": "Edward Jenner / एडवर्ड जेनर",
+        "c": "Louis Pasteur / लुई पाश्चर",
+        "d": "Ronald Ross / रोनाल्ड रॉस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEdward Jenner created the Smallpox vaccine in 1796. Smallpox was eventually eradicated from India in 1977\n\n📖 हिंदी स्पष्टीकरण:\nएडवर्ड जेनर ने 1796 में चेचक के टीके का निर्माण किया था। चेचक को अंततः 1977 में भारत से समाप्त कर दिया गया था।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following is an example of a Chronic disease? / निम्नलिखित में से कौन सा एक पुरानी (जीर्ण) बीमारी का उदाहरण है?",
+      "options": {
+        "a": "Cough / खांसी",
+        "b": "Common Cold / सामान्य जुकाम",
+        "c": "Diabetes / मधुमेह",
+        "d": "Fever / बुखार"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nChronic diseases are those that last for a long period of time. Examples include Diabetes, Tuberculosis, and Elephantiasis\n\n📖 हिंदी स्पष्टीकरण:\nजीर्ण रोग वे होते हैं जो लंबे समय तक बने रहते हैं। उदाहरणों में मधुमेह, तपेदिक और हाथीपांव शामिल हैं।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which vector is responsible for spreading Dengue? / डेंगू फैलाने के लिए कौन सा वाहक जिम्मेदार है?",
+      "options": {
+        "a": "Tse Tse fly / सीसी मक्खी",
+        "b": "Female Anopheles mosquito / मादा एनोफिलीज मच्छर",
+        "c": "Aedes Aegypti mosquito / एडीज एजिप्टी मच्छर",
+        "d": "Housefly / घरेलू मक्खी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDengue is a viral disease carried by the Aedes Aegypti mosquito, which is also responsible for spreading Chikungunya\n\n📖 हिंदी स्पष्टीकरण:\nडेंगू एक वायरल बीमारी है जो एडीज एजिप्टी मच्छर द्वारा फैलती है, जो चिकनगुनिया फैलाने के लिए भी जिम्मेदार है।"
+    },
+    {
+      "q_num": 8,
+      "question": "BCG vaccine is administered to provide immunity against: / बीसीजी का टीका किसके विरुद्ध रोग प्रतिरोधक क्षमता प्रदान करने के लिए दिया जाता है:",
+      "options": {
+        "a": "Polio / पोलियो",
+        "b": "Tuberculosis / तपेदिक (टीबी)",
+        "c": "Tetanus / टिटनेस",
+        "d": "Diphtheria / डिप्थीरिया"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBCG (Bacillus Calmette-Guerin) is the vaccine used against Tuberculosis. TB is a chronic bacterial disease\n\n📖 हिंदी स्पष्टीकरण:\nबीसीजी (बैसिलस कैलमेट-गुएरिन) तपेदिक के खिलाफ इस्तेमाल किया जाने वाला टीका है। टीबी एक पुरानी बैक्टीरिया जनित बीमारी है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following is a water-borne disease? / निम्नलिखित में से कौन सी जल-जनित बीमारी है?",
+      "options": {
+        "a": "Measles / खसरा",
+        "b": "Influenza / इन्फ्लुएंजा",
+        "c": "Cholera / हैजा",
+        "d": "Covid-19 / कोविड-19"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCholera is caused by the bacterium Vibrio cholera and spreads primarily through contaminated water\n\n📖 हिंदी स्पष्टीकरण:\nहैजा विब्रियो कोलेरी नामक बैक्टीरिया के कारण होता है और मुख्य रूप से दूषित पानी के माध्यम से फैलता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "\"Black Death\" is a term associated with which disease? / \"काली मृत्यु\" शब्द किस बीमारी से जुड़ा है?",
+      "options": {
+        "a": "Cancer / कैंसर",
+        "b": "Plague / प्लेग",
+        "c": "AIDS / एड्स",
+        "d": "Leprosy / कुष्ठ रोग"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPlague is caused by the bacterium Yersinia pestis. Historically, deaths due to plague are famously known as the \"Black Death.\"\n\n📖 हिंदी स्पष्टीकरण:\nप्लेग यर्सिनिया पेस्टिस नामक बैक्टीरिया के कारण होता है। ऐतिहासिक रूप से, प्लेग के कारण होने वाली मौतों को \"काली मृत्यु\" के रूप में जाना जाता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which genetic disorder is characterized by the presence of an extra copy of chromosome 21? / कौन सा अनुवांशिक विकार गुणसूत्र 21 की एक अतिरिक्त प्रति की उपस्थिति की विशेषता है?",
+      "options": {
+        "a": "Turner's syndrome / टर्नर सिंड्रोम",
+        "b": "Down's syndrome / डाउन सिंड्रोम",
+        "c": "Klinefelter syndrome / क्लाइनफेल्टर सिंड्रोम",
+        "d": "Albinism / एल्बिनिज्म"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDown's syndrome, also known as Trisomy 21, occurs when a person has 47 chromosomes instead of the usual 46 due to an extra copy of chromosome 21\n\n📖 हिंदी स्पष्टीकरण:\nडाउन सिंड्रोम, जिसे ट्राइसॉमी 21 के रूप में भी जाना जाता है, तब होता है जब गुणसूत्र 21 की एक अतिरिक्त प्रति के कारण व्यक्ति में सामान्य 46 के बजाय 47 गुणसूत्र होते हैं।"
+    },
+    {
+      "q_num": 12,
+      "question": "The disease 'Kala Azar' is caused by which type of pathogen? / 'काला अजार' रोग किस प्रकार के रोगजनक के कारण होता है?",
+      "options": {
+        "a": "Bacteria / बैक्टीरिया",
+        "b": "Virus / वायरस",
+        "c": "Protozoa / प्रोटोजोआ",
+        "d": "Fungi / कवक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nKala Azar is a protozoan disease. Similarly, Malaria and Sleeping Sickness are also caused by protozoa\n\n📖 हिंदी स्पष्टीकरण:\nकाला अजार एक प्रोटोजोआ जनित रोग है। इसी तरह मलेरिया और निद्रा रोग (स्लीपिंग सिकनेस) भी प्रोटोजोआ के कारण होते हैं।"
+    },
+    {
+      "q_num": 13,
+      "question": "'Mad Hatter Disease' is caused by poisoning from which metal? / 'मैड हैटर रोग' किस धातु की विषाक्तता के कारण होती है?",
+      "options": {
+        "a": "Copper / तांबा",
+        "b": "Iron / लोहा",
+        "c": "Mercury / पारा",
+        "d": "Cadmium / कैडमियम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMercury poisoning causes Mad Hatter Disease and is also responsible for Minimata disease. Cadmium causes Itai-Itai, while Iron inhalation causes Siderosis\n\n📖 हिंदी स्पष्टीकरण:\nपारे की विषाक्तता से मैड हैटर रोग होता है और यह मिनामाता रोग के लिए भी जिम्मेदार है। कैडमियम से इटाई-इटाई होता है, जबकि लोहे के साँस लेने से साइडरोसिस होता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which of the following diseases is NOT a communicable disease? / निम्नलिखित में से कौन सा एक संक्रामक रोग नहीं है?",
+      "options": {
+        "a": "Chickenpox / चेचक",
+        "b": "Glaucoma / ग्लूकोमा",
+        "c": "COVID-19 / कोविड-19",
+        "d": "AIDS / एड्स"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGlaucoma is a non-communicable disease that damages the eye's optic nerve. Communicable diseases like AIDS and COVID-19 spread from person to person\n\n📖 हिंदी स्पष्टीकरण:\nग्लूकोमा एक गैर-संक्रामक रोग है जो आँख की ऑप्टिक तंत्रिका को नुकसान पहुँचाता है। एड्स और कोविड-19 जैसे संक्रामक रोग एक व्यक्ति से दूसरे व्यक्ति में फैलते हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "In viruses, the genetic material is enclosed in a protein envelope known as: / वायरस में, आनुवंशिक सामग्री एक प्रोटीन लिफाफे में बंद होती है जिसे कहा जाता है:",
+      "options": {
+        "a": "Nucleoid / न्यूक्लियॉइड",
+        "b": "Capsid / कैप्सिड",
+        "c": "Plasmid / प्लाज्मिड",
+        "d": "Cell wall / कोशिका भित्ति"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nViruses consist of genetic material (DNA or RNA) surrounded by a protective protein coating called a Capsid. They lack a true cell wall\n\n📖 हिंदी स्पष्टीकरण:\nवायरस में आनुवंशिक सामग्री (डीएनए या आरएनए) होती है जो कैप्सिड नामक सुरक्षात्मक प्रोटीन कोटिंग से घिरी होती है। उनमें वास्तविक कोशिका भित्ति का अभाव होता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): Antibiotics are ineffective against viral infections. / \n अभिकथन (A): एंटीबायोटिक्स वायरल संक्रमण के खिलाफ अप्रभावी हैं।\n Reason (R): Viruses lack a cell wall, which is the primary target of most antibiotics. / \n कारण (R): वायरस में कोशिका भित्ति का अभाव होता है, जो अधिकांश एंटीबायोटिक दवाओं का प्राथमिक लक्ष्य है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAntibiotics work by attacking the formation of bacterial cell walls. Since viruses have a protein capsid instead of a cell wall, antibiotics cannot treat them\n\n📖 हिंदी स्पष्टीकरण:\nएंटीबायोटिक्स बैक्टीरिया की कोशिका भित्ति के निर्माण पर हमला करके काम करते हैं। चूंकि वायरस में कोशिका भित्ति के बजाय प्रोटीन कैप्सिड होता है, इसलिए एंटीबायोटिक्स उनका इलाज नहीं कर सकते।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements regarding AIDS is correct? / एड्स के संबंध में निम्नलिखित में से कौन सा कथन सही है?\n 1. It is caused by the Human Immunodeficiency Virus (HIV). / यह ह्यूमन इम्यूनोडेफिशिएंसी वायरस (HIV) के कारण होता है।\n 2. It is detected through the ELISA test. / इसका पता एलिसा (ELISA) टेस्ट के जरिए लगाया जाता है।\n 3. World AIDS Day is observed on December 1st. / विश्व एड्स दिवस 1 दिसंबर को मनाया जाता है।",
+      "options": {
+        "a": "Only I and II / केवल I और II",
+        "b": "Only II and III / केवल II और III",
+        "c": "Only I and III / केवल I और III",
+        "d": "I, II, and III / I, II और III"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are correct. AIDS is caused by HIV (a retrovirus), diagnosed via ELISA, and its awareness day is December 1st\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। एड्स एचआईवी (एक रेट्रोवायरस) के कारण होता है, इसका निदान एलिसा के माध्यम से किया जाता है, और इसका जागरूकता दिवस 1 दिसंबर है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Match the following plant diseases with their pathogens: / निम्नलिखित पौधों के रोगों को उनके रोगजनकों के साथ सुमेलित करें:\n 1. Citrus Canker — A. Fungus / साइट्रस कैंकर — A. कवक\n 2. Rust of Wheat — B. Bacteria / गेहूं का जंग रोग — B. जीवाणु\n 3. Yellow Vein Mosaic — C. Virus / पीली शिरा मोज़ेक — C. वायरस",
+      "options": {
+        "a": "1-B, 2-A, 3-C",
+        "b": "1-A, 2-B, 3-C",
+        "c": "1-C, 2-A, 3-B",
+        "d": "1-B, 2-C, 3-A"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCitrus canker is caused by bacteria, Rust of wheat is caused by fungi, and Yellow vein mosaic is a viral disease\n\n📖 हिंदी स्पष्टीकरण:\nसिट्रस कैंकर बैक्टीरिया के कारण होता है, गेहूं का रस्ट कवक (फंगस) के कारण होता है, और पीली शिरा मोजेक एक वायरल बीमारी है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statement I: Turner's syndrome occurs in females when one X chromosome is missing (XO). / कथन I: टर्नर सिंड्रोम महिलाओं में तब होता है जब एक एक्स गुणसूत्र गायब होता है (XO)।\n Statement II: Klinefelter syndrome occurs in males when there is an extra X chromosome (XXY). / कथन II: क्लाइनफेल्टर सिंड्रोम पुरुषों में तब होता है जब एक अतिरिक्त एक्स गुणसूत्र (XXY) होता है।",
+      "options": {
+        "a": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
+        "b": "Statement II is correct, I is incorrect / कथन II सही है, I गलत है।",
+        "c": "Both statements are correct / दोनों कथन सही हैं।",
+        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThese are chromosomal sex-linked disorders. Turner's leads to short stature in females, and Klinefelter leads to less muscular bodies in males\n\n📖 हिंदी स्पष्टीकरण:\nये गुणसूत्र संबंधी लिंग-सहलग्न विकार हैं। टर्नर से महिलाओं में छोटा कद होता है, और क्लाइनफेल्टर से पुरुषों में कम मांसपेशियों वाला शरीर होता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Blue Baby Syndrome is caused by the deposition of which substance? / 'ब्लू बेबी सिंड्रोम' किस पदार्थ के जमा होने से होता है?",
+      "options": {
+        "a": "Cadmium / कैडमियम",
+        "b": "Mercury / पारा",
+        "c": "Nitrate / नाइट्रेट",
+        "d": "Copper / तांबा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBlue Baby Syndrome is caused by nitrate deposition. Excessive copper leads to Wilson disease, and cadmium leads to Itai-Itai\n\n📖 हिंदी स्पष्टीकरण:\nब्लू बेबी सिंड्रोम नाइट्रेट जमाव के कारण होता है। अत्यधिक तांबे से विल्सन रोग होता है, और कैडमियम से इटाई-इटाई होता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Identify the incorrect pair of disease and its causative agent: / बीमारी और उसके प्रेरक एजेंट के गलत जोड़े की पहचान करें:",
+      "options": {
+        "a": "Common Cold — Rhinovirus / सामान्य जुकाम — राइनोवायरस",
+        "b": "Anthrax — Bacteria / एंथ्रेक्स — बैक्टीरिया",
+        "c": "Malaria — Virus / मलेरिया — वायरस",
+        "d": "Ring Worm — Fungi / दाद — कवक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMalaria is caused by a protozoa called Plasmodium, not a virus. It is spread by the female Anopheles mosquito\n\n📖 हिंदी स्पष्टीकरण:\nमलेरिया प्लाज्मोडियम नामक प्रोटोजोआ के कारण होता है, वायरस के कारण नहीं। यह मादा एनोफिलीज मच्छर द्वारा फैलता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Assertion (A): Swine Flu is caused by the H5N1 virus. / अभिकथन (A): स्वाइन फ्लू H5N1 वायरस के कारण होता है।\n Reason (R): Bird Flu is caused by the H1N1 virus. / कारण (R): बर्ड फ्लू H1N1 वायरस के कारण होता है।",
+      "options": {
+        "a": "Both A and R are true / A और R दोनों सत्य हैं।",
+        "b": "Both A and R are false / A और R दोनों गलत हैं।",
+        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSwine Flu is caused by H1N1 (in pigs), and Bird Flu is caused by H5N1 (in birds). The codes are swapped in the assertion and reason\n\n📖 हिंदी स्पष्टीकरण:\nस्वाइन फ्लू H1N1 (सूअरों में) के कारण होता है, और बर्ड फ्लू H5N1 (पक्षियों में) के कारण होता है। अभिकथन और कारण में कोड आपस में बदल दिए गए हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which of the following is an 'Air-borne' disease? / निम्नलिखित में से कौन सी 'वायु-जनित' बीमारी है?",
+      "options": {
+        "a": "Typhoid / टाइफाइड",
+        "b": "Cholera / हैजा",
+        "c": "Tuberculosis / तपेदिक",
+        "d": "Hepatitis A / हेपेटाइटिस ए"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTuberculosis and Influenza are air-borne. Typhoid, Cholera, and Hepatitis A are primarily water-borne diseases\n\n📖 हिंदी स्पष्टीकरण:\nतपेदिक और इन्फ्लुएंजा वायु-जनित हैं टाइफाइड, हैजा और हेपेटाइटिस ए मुख्य रूप से जल-जनित बीमारियां हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Statement I: Bacteria are prokaryotes and lack membrane-bound organelles. / कथन I: बैक्टीरिया प्रोकैरियोट्स हैं और उनमें झिल्ली-बद्ध अंगों की कमी होती है।\n Statement II: Bacterial genetic material is called a Genophore. / कथन II: बैक्टीरिया की आनुवंशिक सामग्री को जेनोफोर कहा जाता है।",
+      "options": {
+        "a": "Only I is true / केवल I सत्य है।",
+        "b": "Only II is true / केवल II सत्य है।",
+        "c": "Both I and II are true / I और II दोनों सत्य हैं।",
+        "d": "Neither I nor II is true / न तो I और न ही II सत्य है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBacteria are prokaryotic living entities that lack a true nucleus. Their DNA is organized into a structure called a Genophore or nucleoid\n\n📖 हिंदी स्पष्टीकरण:\nबैक्टीरिया प्रोकैरियोटिक जीवित संस्थाएं हैं जिनमें वास्तविक केंद्रक का अभाव होता है। उनके डीएनए को जेनोफोर या न्यूक्लियॉइड नामक संरचना में व्यवस्थित किया जाता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "\"Sudden increase in cases across several countries or continents\" defines which term? / \"कई देशों या महाद्वीपों में मामलों में अचानक वृद्धि\" किस शब्द को परिभाषित करती है?",
+      "options": {
+        "a": "Endemic / स्थानिक (एंडेमिक)",
+        "b": "Epidemic / महामारी (एपिडेमिक)",
+        "c": "Pandemic / सर्वव्यापी महामारी (पैंडेमिक)",
+        "d": "Chronic / जीर्ण (क्रॉनिक)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA Pandemic is a global outbreak. An Epidemic is a sudden increase in a large population, and Endemic refers to diseases constantly present in a specific region\n\n📖 हिंदी स्पष्टीकरण:\nसर्वव्यापी महामारी (पैंडेमिक) एक वैश्विक प्रकोप है। महामारी एक बड़ी आबादी में अचानक वृद्धि है, और स्थानिक एक विशिष्ट क्षेत्र में लगातार मौजूद बीमारियों को संदर्भित करता है।"
+    }
+  ]
+}

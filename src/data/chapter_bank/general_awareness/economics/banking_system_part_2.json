@@ -1,0 +1,308 @@
+{
+  "chapter_num": 6,
+  "chapter_title": "Banking System PART 2",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Who gave the definition \"Money is what money does\"? \"मुद्रा वह है जो मुद्रा का कार्य करे\" यह परिभाषा किस अर्थशास्त्री ने दी थी?",
+      "options": {
+        "a": "John Maynard Keynes / जॉन मेनार्ड कीन्स",
+        "b": "Professor Walker / प्रोफेसर वॉकर",
+        "c": "Adam Smith / एडम स्मिथ",
+        "d": "Alfred Marshall / अल्फ्रेड मार्शल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThis definition was given by Professor Walker emphasizing the functional aspect of money. It suggests that any object performing the functions of money like medium of exchange is money\n\n📖 हिंदी स्पष्टीकरण:\nयह परिभाषा प्रोफेसर वॉकर द्वारा मुद्रा के कार्यात्मक पहलू पर जोर देते हुए दी गई थी। यह सुझाव देता है कि विनिमय के माध्यम जैसे मुद्रा के कार्यों को करने वाली कोई भी वस्तु मुद्रा है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which of the following is the most liquid asset? निम्नलिखित में से कौन सी संपत्ति सबसे अधिक तरल है?",
+      "options": {
+        "a": "Gold / सोना",
+        "b": "Bond / बॉन्ड",
+        "c": "Cash / नकद",
+        "d": "Cheque / चेक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCash is the most liquid asset as it is universally acceptable and can be exchanged for commodities immediately without any price change. The hierarchy is Cash > Gold > Cheque > Bond\n\n📖 हिंदी स्पष्टीकरण:\nनकद सबसे तरल संपत्ति है क्योंकि यह सार्वभौमिक रूप से स्वीकार्य है और बिना किसी मूल्य परिवर्तन के तुरंत वस्तुओं के लिए विनिमय किया जा सकता है। पदानुक्रम: नकद > सोना > चेक > बॉन्ड है।"
+    },
+    {
+      "q_num": 3,
+      "question": "In the context of Indian economy, what is M1 also known as?\n भारतीय अर्थव्यवस्था के संदर्भ में, M1 को और किस नाम से जाना जाता है?",
+      "options": {
+        "a": "Broad Money / व्यापक मुद्रा",
+        "b": "Narrow Money / संकीर्ण मुद्रा",
+        "c": "Reserve Money / आरक्षित मुद्रा",
+        "d": "High Powered Money / उच्च शक्ति मुद्रा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nM1 is referred to as Narrow Money because it includes the most liquid components of the money supply like currency with the public and demand deposits. / M1\n\n📖 हिंदी स्पष्टीकरण:\nको संकीर्ण मुद्रा कहा जाता है क्योंकि इसमें मुद्रा आपूर्ति के सबसे तरल घटक जैसे जनता के पास मुद्रा और मांग जमा शामिल होते हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "Where is the headquarters of the Bank of International Settlements (BIS) located? अंतर्राष्ट्रीय निपटान बैंक (BIS) का मुख्यालय कहाँ स्थित है?",
+      "options": {
+        "a": "Geneva, Switzerland / जिनेवा, स्विट्जरलैंड",
+        "b": "Basel, Switzerland / बेसल, स्विट्जरलैंड",
+        "c": "New York, USA / न्यूयॉर्क, यूएसए",
+        "d": "London, UK / लंदन, यूके"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe BIS is headquartered in Basel, Switzerland. It was formed in 1930 and the Basel Committee (1974) established the global banking norms. / BIS\n\n📖 हिंदी स्पष्टीकरण:\nका मुख्यालय बेसल, स्विट्जरलैंड में स्थित है। इसका गठन 1930 में हुआ था और बेसल समिति (1974) ने वैश्विक बैंकिंग मानदंड स्थापित किए थे।"
+    },
+    {
+      "q_num": 5,
+      "question": "What is the time limit for a loan to be classified as a Non-Performing Asset (NPA)?\n किसी ऋण को गैर-निष्पादित संपत्ति (NPA) के रूप में वर्गीकृत करने की समय सीमा क्या है?",
+      "options": {
+        "a": "30 days / 30 दिन",
+        "b": "60 days / 60 दिन",
+        "c": "90 days / 90 दिन",
+        "d": "180 days / 180 दिन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAn asset becomes an NPA when the overdue delay or default in interest/principal payment exceeds a period of 90 days\n\n📖 हिंदी स्पष्टीकरण:\nएक संपत्ति तब NPA बन जाती है जब ब्याज/मूलधन भुगतान में देरी या चूक 90 दिनों की अवधि से अधिक हो जाती है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which aggregate is known as \"Reserve Money\" or \"High Powered Money\"?\n किस समुच्चय को \"आरक्षित मुद्रा\" या \"उच्च शक्ति मुद्रा\" के रूप में जाना जाता है?",
+      "options": {
+        "a": "M1",
+        "b": "M2",
+        "c": "M3",
+        "d": "M0"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nM0 is the monetary base or high-powered money, consisting of currency in circulation, bankers' deposits with RBI, and other deposits with RBI. / M0\n\n📖 हिंदी स्पष्टीकरण:\nमौद्रिक आधार या उच्च शक्ति वाली मुद्रा है, जिसमें प्रचलन में मुद्रा, RBI के पास बैंकर्स की जमा राशि और RBI के पास अन्य जमा राशि शामिल है।"
+    },
+    {
+      "q_num": 7,
+      "question": "What is the maturity period for 'Call Money' in the money market?\n मुद्रा बाजार में 'कॉल मनी' की परिपक्वता अवधि क्या है?",
+      "options": {
+        "a": "1 day / 1 दिन",
+        "b": "2-14 days / 2-14 दिन",
+        "c": "15-30 days / 15-30 दिन",
+        "d": "364 days / 364 दिन"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCall Money refers to short-term loans in the money market that are to be repaid within a single day or overnight\n\n📖 हिंदी स्पष्टीकरण:\nकॉल मनी मुद्रा बाजार में अल्पकालिक ऋणों को संदर्भित करती है जिन्हें एक दिन या रात भर के भीतर चुकाया जाना होता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which act provides banks the power to seize the property of a defaulting borrower?\n कौन सा अधिनियम बैंकों को चूककर्ता उधारकर्ता की संपत्ति को जब्त करने की शक्ति प्रदान करता है?",
+      "options": {
+        "a": "RBI Act 1934 / RBI अधिनियम 1934",
+        "b": "Banking Regulation Act 1949 / बैंकिंग विनियमन अधिनियम 1949",
+        "c": "SARFAESI Act 2002 / सरफेसी अधिनियम 2002",
+        "d": "IBC 2016 / आईबीसी 2016"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe SARFAESI Act of 2002 empowers banks and financial institutions to seize the secured assets of a defaulter to recover loans without court intervention. / 2002\n\n📖 हिंदी स्पष्टीकरण:\nका सरफेसी अधिनियम बैंकों और वित्तीय संस्थानों को अदालत के हस्तक्षेप के बिना ऋण की वसूली के लिए चूककर्ता की सुरक्षित संपत्ति को जब्त करने का अधिकार देता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following is an example of Fiduciary Money?\n निम्नलिखित में से कौन सा प्रत्ययी मुद्रा (न्यासी मुद्रा) का उदाहरण है?",
+      "options": {
+        "a": "Currency Notes / मुद्रा नोट",
+        "b": "Coins / सिक्के",
+        "c": "Cheques / चेक",
+        "d": "Gold / सोना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFiduciary money is based on the mutual trust between the payer and the payee, such as cheques or bitcoins, rather than government decree\n\n📖 हिंदी स्पष्टीकरण:\nप्रत्ययी मुद्रा सरकारी आदेश के बजाय भुगतानकर्ता और प्राप्तकर्ता के बीच आपसी विश्वास पर आधारित होती है, जैसे चेक या बिटकॉइन।"
+    },
+    {
+      "q_num": 10,
+      "question": "Asia's oldest stock exchange, the Bombay Stock Exchange, was established in which year?\n एशिया का सबसे पुराना स्टॉक एक्सचेंज, बॉम्बे स्टॉक एक्सचेंज, किस वर्ष स्थापित किया गया था?",
+      "options": {
+        "a": "1850",
+        "b": "1875",
+        "c": "1901",
+        "d": "1920"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Bombay Stock Exchange (BSE) was established in 1875, making it the oldest stock exchange in Asia\n\n📖 हिंदी स्पष्टीकरण:\nबॉम्बे स्टॉक एक्सचेंज (BSE) की स्थापना 1875 में हुई थी, जो इसे एशिया का सबसे पुराना स्टॉक एक्सचेंज बनाता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Treasury Bills (T-Bills) in India are issued for which of the following durations?\n भारत में ट्रेजरी बिल (T-बिल) निम्नलिखित में से किस अवधि के लिए जारी किए जाते हैं?",
+      "options": {
+        "a": "30, 60, 90 days / 30, 60, 90 दिन",
+        "b": "91, 182, 364 days / 91, 182, 364 दिन",
+        "c": "1, 2, 5 years / 1, 2, 5 वर्ष",
+        "d": "Overnight only / केवल रात भर के लिए"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTreasury Bills are short-term instruments issued by the RBI with three specific maturity periods: 91 days, 182 days, and 364 days\n\n📖 हिंदी स्पष्टीकरण:\nट्रेजरी बिल RBI द्वारा जारी किए गए अल्पकालिक साधन हैं जिनकी तीन विशिष्ट परिपक्वता अवधि होती है: 91 दिन, 182 दिन और 364 दिन।"
+    },
+    {
+      "q_num": 12,
+      "question": "What is the formula for calculating Broad Money (M3)?\n व्यापक मुद्रा (M3) की गणना करने का सूत्र क्या है?",
+      "options": {
+        "a": "M1 + Saving deposits with Post Office / M1 + डाकघर के पास बचत जमा",
+        "b": "M1 + Time deposits with Bank / M1 + बैंक के पास सावधि जमा",
+        "c": "M2 + Total Post Office Deposits / M2 + कुल डाकघर जमा",
+        "d": "Currency with public + RBI deposits / जनता के पास मुद्रा + RBI जमा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nM3 or Broad Money is calculated by adding Time Deposits (Fixed/Recurring) of commercial banks to the M1 components. / M3\n\n📖 हिंदी स्पष्टीकरण:\nया व्यापक मुद्रा की गणना वाणिज्यिक बैंकों की सावधि जमा (फिक्स्ड/रिकरिंग) को M1 घटकों में जोड़कर की जाती है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which of the following is the most problematic and primary difficulty of barter exchanges as against money-based exchanges?\n निम्नलिखित में से कौन सी वस्तु विनिमय की सबसे बड़ी समस्या और प्राथमिक कठिनाई है, जो मुद्रा आधारित विनिमय से भिन्न है?",
+      "options": {
+        "a": "Bartered exchanges involve difficulty in preserving value. / वस्तु विनिमय में मूल्य को संरक्षित करना कठिन होता है।",
+        "b": "Barter exchanges may result in an incorrect valuation of the goods transacted. / वस्तु विनिमय के परिणामस्वरूप लेन-देन की गई वस्तुओं का गलत मूल्यांकन हो सकता है।",
+        "c": "Barter exchanges may be imperfectly divisible. / वस्तु विनिमय अपूर्ण रूप से विभाज्य हो सकता है।",
+        "d": "Barter exchanges require a double coincidence of wants. / वस्तु विनिमय के लिए चाहतों का दोहरा संयोग आवश्यक होता है।"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe biggest and fundamental problem of the barter system is that exchange can occur only when both parties want each other’s goods at the same time.\nThis condition is called double coincidence of wants, which makes trade difficult, slow, and inefficient.\n\n📖 हिंदी स्पष्टीकरण:\nवस्तु विनिमय प्रणाली की सबसे बड़ी और मूल समस्या यह है कि लेन-देन तभी संभव होता है जब दोनों पक्ष एक-दूसरे की वस्तु एक साथ चाहें।\nइसे इच्छाओं का दोहरा संयोग कहा जाता है। मुद्रा इस समस्या को समाप्त करती है क्योंकि वह विनिमय का सामान्य माध्यम होती है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which category of NPA is defined as being overdue for more than 12 months?\n NPA की किस श्रेणी को 12 महीने से अधिक समय से अतिदेय के रूप में परिभाषित किया गया है?",
+      "options": {
+        "a": "Sub-standard / उप-मानक",
+        "b": "Doubtful / संदिग्ध",
+        "c": "Loss Asset / हानि संपत्ति",
+        "d": "Stressed Asset / तनावग्रस्त संपत्ति"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNPAs are classified as Sub-standard if overdue for 3-12 months, and as Doubtful if the overdue delay exceeds 12 months\n\n📖 हिंदी स्पष्टीकरण:\nयदि बकाया अवधि 3-12 महीनों के बीच हो, तो गैर-निष्पादित परिसंपत्तियों (NPA) को अधोमानक परिसंपत्तियों के रूप में वर्गीकृत किया जाता है, और यदि बकाया विलंब 12 महीनों से अधिक हो जाता है, तो इसे संदिग्ध परिसंपत्तियों के रूप में वर्गीकृत किया जाता है।"
+    },
+    {
+      "q_num": 15,
+      "question": "According to the 2021 Budget, which institution was established as a \"Bad Bank\" for debt resolution?\n 2021 के बजट के अनुसार, ऋण समाधान के लिए \"बैड बैंक\" के रूप में किस संस्थान की स्थापना की गई थी?",
+      "options": {
+        "a": "RBI",
+        "b": "IDRCL",
+        "c": "SEBI",
+        "d": "NABARD"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe 2021 budget proposed two bad banks: NARCL for acquiring assets and IDRCL (India Debt Resolution Company Ltd.) for debt resolution. / 2021\n\n📖 हिंदी स्पष्टीकरण:\nके बजट में दो बैड बैंकों का प्रस्ताव किया गया था: संपत्ति के अधिग्रहण के लिए NARCL और ऋण समाधान के लिए IDRCL (इंडिया डेट रेजोल्यूशन कंपनी लिमिटेड)।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements regarding Money Demand:\n मुद्रा मांग के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Transaction motive is money held for daily spending on goods. / लेनदेन का उद्देश्य माल पर सुचारू खर्च के लिए रखी गई मुद्रा है।\n 2. Speculative motive is holding money to take advantage of investments. / सट्टा उद्देश्य निवेश का लाभ उठाने के लिए मुद्रा रखना है।",
+      "options": {
+        "a": "Only I is correct / केवल I सही है।",
+        "b": "Only II is correct / केवल II सही है।",
+        "c": "Both I and II are correct / I और II दोनों सही हैं।",
+        "d": "Neither I nor II is correct / न तो I और न ही II सही है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPeople hold money for two primary reasons according to Keynes: Transaction motive for daily spending and Speculative motive for future opportunities\n\n📖 हिंदी स्पष्टीकरण:\nकीन्स के अनुसार लोग दो प्राथमिक कारणों से पैसा रखते हैं: दैनिक खर्च के लिए लेनदेन का उद्देश्य और भविष्य के अवसरों के लिए सट्टा उद्देश्य।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): Modern paper money has value despite having no intrinsic value.\n कथन (A): आधुनिक कागजी मुद्रा का मूल्य होता है जबकि इसका कोई आंतरिक मूल्य नहीं होता है।\n Reason (R): It is backed by government guarantee and authority.\n कारण (R): इसे सरकारी गारंटी और अधिकार का समर्थन प्राप्त है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nUnlike gold, paper money has no intrinsic value but acts as a store of value because of government backing (Fiat money)\n\n📖 हिंदी स्पष्टीकरण:\nसोने के विपरीत, कागजी मुद्रा का कोई आंतरिक मूल्य नहीं होता है, लेकिन सरकारी समर्थन (फिएट मनी) के कारण मूल्य के भंडार के रूप में कार्य करता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "What happens during a \"Liquidity Trap\"?\n \"तरलता जाल\" के दौरान क्या होता है?",
+      "options": {
+        "a": "People invest all money in bonds / लोग सारा पैसा बॉन्ड में निवेश करते हैं।",
+        "b": "Interest rates are very high / ब्याज दरें बहुत अधिक होती हैं।",
+        "c": "Monetary policy becomes ineffective as people prefer holding cash / मौद्रिक नीति अप्रभावी हो जाती है क्योंकि लोग नकद रखना पसंद करते हैं।",
+        "d": "People stop saving money / लोग पैसा बचाना बंद कर देते हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nLiquidity trap occurs when at very low interest rates, speculative demand for money becomes perfectly elastic and people hoard cash instead of investing in bond\n\n📖 हिंदी स्पष्टीकरण:\nतरलता जाल (लिक्विडिटी ट्रैप) तब उत्पन्न होता है जब ब्याज की बहुत कम दरों पर, मुद्रा की सट्टा मांग पूरी तरह से लोचदार हो जाती है और लोग बॉन्ड में निवेश करने के बजाय नकद जमा करने लगते हैं।"
+    },
+    {
+      "q_num": 19,
+      "question": "Which of the following components are included in M1?\n M1 में निम्नलिखित में से कौन से घटक शामिल हैं?\n 1. Currency with Public / जनता के पास मुद्रा\n 2. Demand Deposits with Banks / बैंकों के पास मांग जमा\n 3. Time Deposits with Banks / बैंकों के पास सावधि जमा",
+      "options": {
+        "a": "1 and 2 only / केवल 1 और 2",
+        "b": "2 and 3 only / केवल 2 और 3",
+        "c": "1 and 3 only / केवल 1 और 3",
+        "d": "All 1, 2, and 3 / 1, 2 और 3 सभी"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nM1 includes currency with the public, demand deposits (savings/current accounts), and other deposits with RBI, but excludes time deposits. / M1\n\n📖 हिंदी स्पष्टीकरण:\nमें जनता के पास मुद्रा, मांग जमा (बचत/चालू खाते) और RBI के पास अन्य जमा शामिल हैं, लेकिन सावधि जमा इसमें शामिल नहीं है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Demand deposits are more liquid than term deposits.\n कथन (A): मांग जमा सावधि जमा की तुलना में अधिक तरल होते हैं।\n Reason (R): Term deposits can be withdrawn anytime without penalty.\n कारण (R): सावधि जमा को बिना किसी दंड के किसी भी समय निकाला जा सकता है।",
+      "options": {
+        "a": "A is true, R is false / A सत्य है, R गलत है।",
+        "b": "A is false, R is true / A गलत है, R सत्य है।",
+        "c": "Both A and R are true / A और R दोनों सत्य हैं।",
+        "d": "Both A and R are false / A और R दोनों गलत हैं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDemand deposits are highly liquid as they can be withdrawn on demand, whereas term deposits (Fixed Deposits) have a locked period\n\n📖 हिंदी स्पष्टीकरण:\nमांग जमा अत्यधिक तरल होते हैं क्योंकि उन्हें मांग पर निकाला जा सकता है, जबकि सावधि जमा (FD) की एक निश्चित अवधि होती है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which of the following statements is/are correct regarding liquidity trap?\n तरलता जाल के संबंध में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n i) It is the point where speculative demand for money is infinitely inelastic and the liquidity preference curve becomes perfectly elastic. / यह वह बिंदु है जहां मुद्रा की सट्टा मांग असीम रूप से अनम्य हो जाती है और तरलता वरीयता वक्र पूर्णतः प्रत्यास्थ हो जाता है।\n ii) It is the point where speculative demand for money is infinitely elastic and the liquidity preference curve becomes perfectly inelastic. / यह वह बिंदु है जहां मुद्रा की सट्टा मांग असीमित रूप से लोचदार हो जाती है और तरलता वरीयता वक्र पूरी तरह से बेलोचदार हो जाता है।\n iii) It is the point where speculative demand for money is infinitely elastic and the liquidity preference curve becomes perfectly elastic. / यह वह बिंदु है जहां मुद्रा की सट्टा मांग असीमित रूप से लोचदार हो जाती है और तरलता वरीयता वक्र पूर्णतः लोचदार हो जाता है।\n iv) It is the point where speculative demand for money and the liquidity preference curves are not related. / यह वह बिंदु है जहां मुद्रा की सट्टा मांग और तरलता वरीयता वक्रों के बीच कोई संबंध नहीं होता है।",
+      "options": {
+        "a": "Only statement i is correct / केवल कथन i सही है।",
+        "b": "Only Statement iii is correct / केवल कथन iii सही है।",
+        "c": "Only Statement iv is correct / केवल कथन iv सही है।",
+        "d": "Only Statements i and ii are correct/ केवल कथन i और ii सही हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA situation in which prevailing market interest rates are so low that an increase in money supply has no effect on interest rates. A liquidity preference curve is a demand curve for money because a household's or business's value of liquidity is the same as its demand for cash\n\n📖 हिंदी स्पष्टीकरण:\nएक ऐसी स्थिति जिसमें प्रचलित बाजार ब्याज दरें इतनी कम होती हैं कि मुद्रा आपूर्ति में वृद्धि का ब्याज दरों पर कोई प्रभाव नहीं पड़ता। तरलता वरीयता वक्र मुद्रा की मांग का वक्र होता है क्योंकि किसी परिवार या व्यवसाय की तरलता का मूल्य उसकी नकदी की मांग के बराबर होता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "What is 'Stressed Assets' in banking terminology?\n बैंकिंग शब्दावली में 'तनावग्रस्त संपत्ति' क्या है?",
+      "options": {
+        "a": "Loans that are performing well / ऋण जो अच्छा प्रदर्शन कर रहे हैं।",
+        "b": "Loans where overdue delay is less than 90 days or are NPAs / ऋण जहाँ अतिदेय 90 दिनों से कम है या वे NPA हैं।",
+        "c": "Cash reserves of the bank / बैंक के नकद भंडार",
+        "d": "High-interest government bonds / उच्च ब्याज वाले सरकारी बॉन्ड"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStressed assets include NPAs and restructured loans where the borrower is in danger of defaulting (overdue < 90 days)\n\n📖 हिंदी स्पष्टीकरण:\nतनावग्रस्त संपत्तियों में NPA और पुनर्गठित ऋण शामिल हैं जहाँ उधारकर्ता के चूक करने का खतरा होता है (अतिदेय < 90 दिन)।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which of the following are components of M0?\n निम्नलिखित में से कौन से M0 के घटक हैं?\n 1. Currency in circulation / प्रचलन में मुद्रा\n 2. Bankers' deposits with RBI / आरबीआई के पास बैंकरों की जमा राशि\n 3. Post office savings / डाकघर बचत",
+      "options": {
+        "a": "1 and 3 only / केवल 1 और 3",
+        "b": "2 and 3 only / केवल 2 और 3",
+        "c": "1 and 2 only / केवल 1 और 2",
+        "d": "All 1, 2, and 3 / 1, 2 और 3 सभी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nM0 includes currency in circulation and bankers' deposits with RBI, but Post office savings are part of M2 and M4. / M0\n\n📖 हिंदी स्पष्टीकरण:\nमें प्रचलन में मुद्रा और RBI के पास बैंकर्स की जमा राशि शामिल है, लेकिन डाकघर बचत M2 और M4 का हिस्सा है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): India adopted Basel I norms in 1999.\n कथन (A): भारत ने 1999 में बेसल I मानदंडों को अपनाया।\n Reason (R): Basel I focused primarily on Market Risk.\n कारण (R): बेसल I ने मुख्य रूप से बाजार जोखिम पर ध्यान केंद्रित किया।",
+      "options": {
+        "a": "A is true, R is false / A सत्य है, R गलत है।",
+        "b": "A is false, R is true / A गलत है, R सत्य है।",
+        "c": "Both are true / दोनों सत्य हैं।",
+        "d": "Both are false / दोनों गलत हैं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIndia adopted Basel I in 1999, but those norms focused on Credit Risk, not Market Risk\n\n📖 हिंदी स्पष्टीकरण:\nभारत ने 1999 में बेसल I को अपनाया, लेकिन उन मानदंडों ने क्रेडिट जोखिम पर ध्यान केंद्रित किया, न कि बाजार जोखिम पर।"
+    },
+    {
+      "q_num": 25,
+      "question": "Statement I: M4 is the widest measure of money supply.\n कथन I: M4 मुद्रा आपूर्ति का सबसे विस्तृत माप है।\n Statement II: M4 includes all components of M3 plus all post office deposits.\n कथन II: M4 में M3 के सभी घटक और सभी डाकघर जमा शामिल हैं।",
+      "options": {
+        "a": "Only I is correct / केवल I सही है।",
+        "b": "Only II is correct / केवल II सही है।",
+        "c": "Both I and II are correct / I और II दोनों सही हैं।",
+        "d": "Neither I nor II is correct / न तो I और न ही II सही है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nM4 is the most comprehensive measure, calculated as M3 + Total Post Office Deposits (excluding NSC). / M4\n\n📖 हिंदी स्पष्टीकरण:\nसबसे व्यापक माप है, जिसकी गणना M3 + कुल डाकघर जमा (NSC को छोड़कर) के रूप में की जाती है।"
+    }
+  ]
+}

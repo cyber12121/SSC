@@ -45,6 +45,15 @@ Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
           set_name = subParts[1].replace('.json', ''); // "set_1"
         }
       }
+    } else if (path.includes('/general_awareness/')) {
+      const parts = path.split('/general_awareness/');
+      if (parts.length > 1) {
+        const subPath = parts[1]; // e.g., "chemistry/acid_bases_and_salts_vivid.json"
+        const subParts = subPath.split('/');
+        if (subParts.length >= 2) {
+          topic_name = subParts[0]; // "chemistry"
+        }
+      }
     }
   }
 
@@ -708,11 +717,21 @@ export default function App() {
                           !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
                         );
                         const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
+                        const isGK = selectedSubject === 'General Awareness' && category === 'chapterBank';
 
-                        if (isMathSection && !selectedTopic) {
+                        if ((isMathSection || isGK) && !selectedTopic) {
                           const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
+                          topics.sort((a, b) => a.localeCompare(b));
+
                           return topics.map((topic, idx) => {
                             const topicChapters = relevantChapters.filter(ch => ch.topic_name === topic);
+                            
+                            let displayTitle = topic.replace(/_/g, ' ');
+                            if (topic === 'history_ancient') displayTitle = 'Ancient History';
+                            else if (topic === 'history_medieval') displayTitle = 'Medieval History';
+                            else if (topic === 'history_modern') displayTitle = 'Modern History';
+                            else if (topic === 'static_gk') displayTitle = 'Static GK';
+
                             return (
                               <motion.div
                                 key={idx}
@@ -721,18 +740,24 @@ export default function App() {
                                 onClick={() => setSelectedTopic(topic)}
                               >
                                 <div className="flex items-start justify-between mb-6">
-                                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white">
+                                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 ${
+                                    category === 'mockErrors' 
+                                      ? 'bg-red-50 text-red-600 group-hover:bg-red-600' 
+                                      : 'bg-blue-50 text-blue-600 group-hover:bg-blue-600'
+                                  } group-hover:text-white`}>
                                     <Layers className="w-7 h-7" />
                                   </div>
                                   <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase tracking-wider">
-                                    {topicChapters.length} Sets
+                                    {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
                                   </span>
                                 </div>
                                 <h3 className="text-2xl font-black text-slate-800 mb-2 group-hover:text-blue-600 transition-colors capitalize">
-                                  {topic.replace(/_/g, ' ')}
+                                  {displayTitle}
                                 </h3>
-                                <div className="flex items-center font-bold group-hover:translate-x-2 transition-transform text-blue-600 mt-6">
-                                  View Sets
+                                <div className={`flex items-center font-bold group-hover:translate-x-2 transition-transform mt-6 ${
+                                  category === 'mockErrors' ? 'text-red-600' : 'text-blue-600'
+                                }`}>
+                                  {isMathSection ? 'View Sets' : 'View Chapters'}
                                   <ChevronRight className="w-5 h-5 ml-2" />
                                 </div>
                               </motion.div>
@@ -740,9 +765,13 @@ export default function App() {
                           });
                         }
 
-                        const chaptersToRender = isMathSection && selectedTopic
+                        let chaptersToRender = (isMathSection || isGK) && selectedTopic
                           ? relevantChapters.filter(ch => ch.topic_name === selectedTopic)
                           : relevantChapters;
+
+                        if (selectedSubject === 'General Awareness') {
+                          chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
+                        }
 
                         return chaptersToRender.map((chapter, idx) => (
                           <motion.div

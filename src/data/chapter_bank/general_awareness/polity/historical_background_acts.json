@@ -1,0 +1,248 @@
+{
+  "chapter_num": 1,
+  "chapter_title": "Historical Background Acts",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Consider the following statements regarding the Regulating Act of 1773:\n 1. It designated the Governor of Bengal as the Governor-General of Bengal and created an Executive Council of four members to assist him.\n 2. It prohibited the servants of the East India Company from engaging in private trade and accepting bribes or gifts.\n 3. It established the Supreme Court at Calcutta in 1774, with jurisdiction over the presidency towns and the interior districts.\n 4. It made the Governor-General's Council the final authority on all matters, without provisions for a Supreme Court to check its powers.\n Which of the statements given above is/are correct?",
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1, 2, and 3 only",
+        "c": "2 and 4 only",
+        "d": "1, 2, 3, and 4"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStatements 1, 2, and 3 are correct. The Act (first parliamentary intervention in Company affairs) appointed Warren Hastings as Governor-General of Bengal with an Executive Council of four members (Statement 1). It banned private trade and bribes by Company servants (Statement 2). It set up the Supreme Court in Calcutta (1774) under Elijah Impey, with civil and criminal jurisdiction over presidency towns and mofussil areas (Statement 3). Statement 4 is incorrect: The Act did not make the Council the final authority without checks; the Supreme Court was explicitly created to oversee and check the Council's powers, leading to conflicts between the judiciary and executive (e.g., Nand Kumar case). This Act laid the foundation for centralized administration but highlighted judicial-executive tensions."
+    },
+    {
+      "q_num": 2,
+      "question": "With reference to Pitt's India Act of 1784, consider the following statements:\n 1. It created a Board of Control consisting of six members, including the Secretary of State, to supervise the civil, military, and revenue affairs of the Company in India.\n 2. The Act distinguished between the Court's commercial and political functions, subordinating the former to the latter under the Board of Control.\n 3. It empowered the Governor-General to override his Council on matters of war, peace, and treaties, but not on ordinary revenue matters.\n 4. The Act abolished the dual government system in Bengal established by the Treaty of Allahabad (1765).\n Which of the statements given above is/are NOT correct?",
+      "options": {
+        "a": "1 only",
+        "b": "1 and 3 only",
+        "c": "3 and 4 only",
+        "d": "2 and 4 only"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nStatements 3 and 4 are NOT correct. The Act created a Board of Control with six members (Chancellor of Exchequer as President, plus four Privy Council members and the Secretary of State) to oversee Company's Indian administration (Statement 1 correct). It separated commercial (Court of Directors) from political functions, with the Board supervising the latter (Statement 2 correct). Statement 3 is incorrect: The Governor-General (e.g., Cornwallis) could override the Council on all important matters, including war, peace, treaties, and revenue, via a casting vote. Statement 4 is incorrect: The dual system (Diwani to Company, Nizamat to Nawab) was ended by the Regulating Act of 1773, not Pitt's Act; the latter refined dual control in London (Court vs. Board). This Act balanced Company autonomy with parliamentary oversight, addressing Regulating Act flaws."
+    },
+    {
+      "q_num": 3,
+      "question": "Assertion (A): The Charter Act of 1813 ended the East India Company's monopoly on trade with India but retained its monopoly on the tea trade and trade with China.\n Reason (R): The Act was influenced by the evangelical movement and free trade advocates, leading to the allocation of Rs. 1 lakh annually for education in India.",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBoth A and R are true, but R does not directly explain A. Assertion A is correct: The Act opened Indian trade to British merchants (ending Company's monopoly except for tea and China trade, retained until 1833). Reason R is correct: Evangelical pressure (e.g., from William Wilberforce) and free traders influenced the Act, including the education clause (Rs. 1 lakh for \"revival and improvement of literature and encouragement of learned natives\"). However, R explains the broader liberal reforms (education, missionary entry) rather than the specific trade monopoly changes, which stemmed from economic pressures post-Napoleonic Wars. This Act marked a shift from commercial to territorial imperialism."
+    },
+    {
+      "q_num": 4,
+      "question": "Consider the following statements about the Charter Act of 1833:\n 1. It designated the Governor-General of Bengal as the Governor-General of India, with Lord William Bentinck as the first incumbent.\n 2. The Act empowered the Governor-General to legislate for all provinces, making the Bombay and Madras presidencies subordinate legislative bodies.\n 3. It opened the Company's civil services to Indians for the first time, though with restrictions on higher posts.\n 4. It abolished the Company's commercial activities entirely, transforming it into a purely administrative body.\n Which of the statements given above is/are incorrect?",
+      "options": {
+        "a": "3 only",
+        "b": "2 and 3 only",
+        "c": "3 and 4 only",
+        "d": "1 only"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nOnly Statement 3 is incorrect. Statement 1 is correct: Bentinck became the first Governor-General of India (centralizing power). Statement 2 is correct: The Governor-General-in-Council could legislate for all of India; local legislatures in Bombay/Madras were made subordinate (leading to the Indian Law Commission under Macaulay). Statement 4 is correct: The Company ceased all commercial activities, becoming a managing agency for British Crown interests. Statement 3 is incorrect: The Act did NOT open civil services to Indians; it declared them open to \"His Majesty's subjects\" (interpreted as British only), with Indians excluded until later reforms (e.g., 1853 Charter Act introduced competitive exams). This Act aimed at codification of laws and administrative centralization."
+    },
+    {
+      "q_num": 5,
+      "question": "With reference to the Government of India Act 1858 (post-Revolt of 1857), consider the following statements:\n 1. It transferred the powers of the East India Company to the British Crown, with the Company dissolved immediately.\n 2. The Act created the office of Secretary of State for India, assisted by a 15-member India Council, which was to act as a cabinet.\n 3. It designated the Governor-General as Viceroy, with the dual role of representing the Crown and heading the executive.\n 4. The Act introduced simultaneous examinations in India and London for civil services, promoting Indianization.\n Which of the statements given above are correct?",
+      "options": {
+        "a": "1, 2, and 3 only",
+        "b": "2 and 3 only",
+        "c": "1 and 4 only",
+        "d": "3 and 4 only"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStatements 2 and 3 are correct. The Act ended Company rule, transferring powers to the Crown via the Secretary of State (Statement 2: assisted by a 15-member Council in London, acting as a cabinet for policy). The Governor-General became Viceroy (e.g., Canning as first), symbolizing direct Crown rule (Statement 3). Statement 1 is incorrect: The Company was not dissolved immediately; it continued as a nominal body until 1874. Statement 4 is incorrect: No simultaneous exams were introduced; civil services remained London-based until the 1920s (Montford Reforms). This Act formalized the Raj, emphasizing \"Queen's Proclamation\" for reconciliation."
+    },
+    {
+      "q_num": 6,
+      "question": "Assertion (A): The Indian Councils Act 1892 expanded the non-official majority in the Imperial Legislative Council but retained the official majority in provincial councils.\n Reason (R): The Act introduced indirect elections for non-official members, nominated by universities, municipalities, and chambers of commerce, as a response to demands from the Indian National Congress.",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true, and R explains A. Assertion A is correct: The Act increased Legislative Council size (Imperial: 16-60 members; non-official majority possible in provinces but official in Imperial). Provincial councils saw non-official increases, but officials dominated Imperial. Reason R is correct and explanatory: Influenced by Congress (founded 1885) demands for representation, it allowed indirect elections (e.g., via local bodies like zamindari associations), marking the first step toward elective principle without direct franchise. This Act was a limited reform under Dufferin, addressing \"safety valve\" post-Ilbert Bill controversy."
+    },
+    {
+      "q_num": 7,
+      "question": "Consider the following statements regarding the Morley-Minto Reforms:\n 1. It introduced separate electorates for Muslims, ensuring reserved seats in the Imperial and provincial legislatures.\n 2. The Act expanded the Imperial Legislative Council to 60 members, with direct elections for some non-official members.\n 3. It allowed the budget to be discussed but not voted on by the legislatures, maintaining financial control with the executive.\n 4. Satyendra Prasanna Sinha became the first Indian member of the Viceroy's Executive Council under this Act.\n Which of the statements given above is/are NOT correct?",
+      "options": {
+        "a": "2 only",
+        "b": "4 only",
+        "c": "2 and 4 only",
+        "d": "1 and 3 only"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatements 2 : NOT correct. Statement 1 is correct: Separate electorates for Muslims (Minto's \"communal award\") were introduced, dividing electorates on religious lines (basis for future partitions). Statement 3 is correct: Legislatures could discuss but not vote on budgets or move amendments on key items. Statement 2 is incorrect: The Council expanded to 60 members, but elections were indirect (not direct) for non-officials. Statement 4 :Sinha was appointed in 1909, but under the 1909 Act's provisions; however, the first Indian was actually in 1907 (pre-Act) or confirmed as Sinha, but the Act itself appointed him to the Council of India in London, not Viceroy's Executive (that was later). Reforms under Morley (Secretary) and Minto (Viceroy) aimed to co-opt moderates but sowed communal seeds."
+    },
+    {
+      "q_num": 8,
+      "question": "With reference to the Montague-Chelmsford Reforms, consider the following statements:\n 1. It introduced dyarchy in the provinces, dividing subjects into transferred (e.g., education, health) under ministers and reserved (e.g., finance, police) under Governor.\n 2. The Act extended separate electorates to Sikhs, Indian Christians, and Anglo-Indians, but not to depressed classes.\n 3. It established a bicameral legislature at the center: Council of State (Upper House) and Legislative Assembly (Lower House), with direct elections for 104/145 seats in the Assembly.\n 4. The Government of India Act 1919 separated provincial finances from central, allowing provinces to raise their own revenues.\n Which of the statements given above is/are correct?",
+      "options": {
+        "a": "1, 3, and 4 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2, 3, and 4"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatements 1, 3, and 4 are correct. Dyarchy was the key provincial feature (Statement 1: responsible government in transferred subjects). Central bicameralism included direct elections (Statement 3: Assembly had 104 elected out of 145; Council of State had 34/60 elected). Provincial financial autonomy was granted (Statement 4). Statement 2 is incorrect: Separate electorates were extended to Sikhs, Christians, etc., but depressed classes got reserved seats within general electorates (not separate until 1932 Poona Pact). Announced in 1917 Montagu Declaration, the Act aimed at gradual self-governance but was criticized for limited franchise (only 5-6 million voters)."
+    },
+    {
+      "q_num": 9,
+      "question": "Assertion (A): The Government of India Act 1935 provided for provincial autonomy without dyarchy but retained safeguards like Governor's veto and special powers over finance and law/order.\n Reason (R): The Act abolished the dyarchy at the center and introduced a federal structure with three lists (Federal, Provincial, Concurrent), though the federation never materialized due to princely state non-accession.",
+      "options": {
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true, and R explains A. Assertion A is correct: Provincial autonomy was granted (1937 elections), but with Governor's discretionary powers (e.g., veto, emergency ordinances) on key areas. Reason R is correct and explanatory: Central diarchy was dropped; the federal scheme (inspired by Round Table Conferences) had subject lists, but it failed as two-thirds of states didn't join, leaving a unitary bias. The Act was the longest British constitution for India, forming the basis for independent India's framework, but Congress ministries (1937-39) highlighted its \"safeguards\" as undemocratic."
+    },
+    {
+      "q_num": 10,
+      "question": "Consider the following statements about the Indian Independence Act 1947:\n 1. It partitioned British India into India and Pakistan, with princely states free to accede to either or remain independent.\n 2. The Act abolished the office of Secretary of State for India and the India Council, transferring powers directly to the Governor-General alone.\n 3. It ended the suzerainty of the British Crown over princely states and provided for the lapse of paramountcy.\n 4. The Act retained the Government of India Act 1935 as the provisional constitution for both dominions until new ones were framed.\n Which of the statements given above is/are NOT correct?",
+      "options": {
+        "a": "2 only",
+        "b": "1 and 4 only",
+        "c": "2 and 3 only",
+        "d": "None; all are correct"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nOnly Statement 2 is NOT correct. Statement 1 is correct: Partition created two dominions (India and Pakistan) on August 15, 1947; princely states could choose accession or independence (e.g., Instrument of Accession). Statement 3 is correct: Paramountcy lapsed, ending British suzerainty (leading to integrations like Hyderabad). Statement 4 is correct: The 1935 Act served as interim constitution, with modifications. Statement 2 is incorrect: The Secretary of State and Council were abolished, but powers transferred to the Crown Representative (initially Mountbatten as Governor-General for both), not directly to the Governor-General alone. Passed by British Parliament on July 18, 1947, this Act formalized independence amid Mountbatten Plan, ending colonial rule"
+    },
+    {
+      "q_num": 11,
+      "question": "Which of the following statements correctly describe the Regulating Act of 1773?\n 1. It established the Supreme Court at Calcutta.\n 2. It prohibited the servants of the East India Company from engaging in private trade.\n 3. It made the Governor of Bengal the Governor-General of Bengal.\n 4. It required the Company to submit its revenue accounts to the British Parliament.",
+      "options": {
+        "a": "1, 2, and 3 only",
+        "b": "1, 3, and 4 only",
+        "c": "2, 3, and 4 only",
+        "d": "All of the above"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: The Regulating Act of 1773 established the first Supreme Court at Calcutta (1774) with Elijah Impey as its first Chief Justice.\nStatement 2 is correct: It prohibited Company servants from private trade and accepting bribes, aiming to curb corruption.\nStatement 3 is correct: It created the position of Governor-General of Bengal (Warren Hastings was the first) to centralize administration, but Statement 4 is incorrect: The Act did not require the Company to submit revenue accounts to Parliament. Instead, it mandated submitting civil and military affairs reports. The financial oversight came later via Pitt’s India Act (1784)."
+    },
+    {
+      "q_num": 12,
+      "question": "Consider the following statements regarding the Charter Act of 1833:\n 1. It made the Governor-General of Bengal the Governor-General of India, with authority over all British territories.\n 2. It abolished the East India Company’s monopoly over trade with China.\n 3. It introduced an open competition system for civil service appointments.\n 4. It provided for the establishment of a separate legislature for India.\n Which of the above statements is/are correct?",
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1, 2, and 3 only",
+        "c": "2 and 3 only",
+        "d": "1, 3, and 4 only"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: The Act elevated the Governor-General of Bengal to Governor-General of India (Lord William Bentinck was the first), centralizing control.\nStatement 2 is correct: It ended the Company’s monopoly over trade with China and other territories, though the monopoly on tea trade ended later.\nStatement 3 is correct: It introduced open competition for civil services, allowing Indians to compete (though implemented later via the Charter Act of 1853).\nStatement 4 is incorrect: The Act did not create a separate Indian legislature. Legislative powers were still vested in the Governor-General’s council. The first legislative council for India came with the Indian Councils Act (1861)."
+    },
+    {
+      "q_num": 13,
+      "question": "The Government of India Act 1919 (Montagu-Chelmsford Reforms) is known for:\n 1. Introducing dyarchy in the provinces.\n 2. Establishing a bicameral legislature at the central level.\n 3. Creating the office of the Secretary of State for India.\n 4. Expanding Indian participation in the Viceroy’s executive council.\n Which of the above statements is/are correct?",
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1, 3, and 4 only",
+        "c": "2 and 4 only",
+        "d": "All of the above"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: Dyarchy (dual governance) was introduced in provinces, dividing subjects into \"reserved\" (administered by British) and \"transferred\" (administered by Indians).\nStatement 2 is correct: It established a bicameral central legislature with an Upper House (Council of State) and Lower House (Legislative Assembly).\nStatement 3 is incorrect: The office of the Secretary of State for India was created by the Government of India Act 1858, not 1919.\nStatement 4 is incorrect: The Act did not expand Indian participation in the Viceroy’s executive council. Indian membership in the Viceroy’s council was introduced by the Indian Councils Act 1909 (Morley-Minto Reforms)."
+    },
+    {
+      "q_num": 14,
+      "question": "Which of the following provisions were introduced by the Government of India Act 1935?\n 1. Abolition of dyarchy at the provincial level and its introduction at the central level.\n 2. Establishment of a Federal Court in India.\n 3. Provincial autonomy with elected governments.\n 4. Division of British India into 11 provinces.",
+      "options": {
+        "a": "1, 2, and 3 only",
+        "b": "2, 3, and 4 only",
+        "c": "1, 2, and 4 only",
+        "d": "All of the above"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nStatement 1 is correct.\nStatement 2 is correct: It established a Federal Court in Delhi (1937) to adjudicate inter-provincial disputes.\nStatement 3 is correct: It granted provincial autonomy, allowing provinces to have elected governments responsible to legislatures.\nStatement 4 is correct: It divided British India into 11 provinces (including Sindh and Orissa) for administrative purposes."
+    },
+    {
+      "q_num": 15,
+      "question": "The Indian Independence Act 1947 is characterized by which of the following?\n 1. It provided for the partition of British India into two dominions.\n 2. It abolished the office of the Secretary of State for India.\n 3. It revoked the sovereignty of the British Parliament over India.\n 4. It terminated the appointment of the Governor-General by the British Crown.",
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1, 2, and 3 only",
+        "c": "1, 3, and 4 only",
+        "d": "All of the above"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: The Act led to the creation of two dominions: India and Pakistan.\nStatement 2 is correct.\nStatement 3 is correct: It ended British Parliament’s sovereignty over India, making India a self-governing dominion.\nStatement 4 is correct: It terminated the British Crown’s power to appoint the Governor-General, allowing dominions to choose their own."
+    },
+    {
+      "q_num": 16,
+      "question": "Which of the following statements about the Charter Act of 1853 is/are correct?\n 1. It separated the Governor-General’s legislative and executive functions.\n 2. It introduced open competition for civil service appointments.\n 3. It renewed the East India Company’s charter for 20 years.\n 4. It established the first railway line in India.",
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1, 2, and 3 only",
+        "c": "2 and 4 only",
+        "d": "3 and 4 only"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: The Act created a separate Governor-General’s legislative council (distinct from the executive council), marking the beginning of legislative centralization.\nStatement 2 is correct: It introduced open competition for civil services, enabling Indians to compete (though exams were held in London).\nStatement 3 is incorrect: The Charter Act of 1853 did not renew the Company’s charter; instead, it extended it indefinitely until Parliament decided otherwise (leading to the 1858 dissolution).\nStatement 4 is incorrect: The first railway line (Bombay-Thane, 1853) was approved by the Court of Directors of the East India Company in 1848, not via this Act. The Act did, however, encourage railway development."
+    },
+    {
+      "q_num": 17,
+      "question": "The Pitt’s India Act 1784 introduced which of the following changes?\n 1. It created the Board of Control to oversee the East India Company.\n 2. It made the Governor-General the commander-in-chief of all British forces in India.\n 3. It distinguished between the Company’s commercial and political functions.\n 4. It established the Supreme Court at Calcutta.",
+      "options": {
+        "a": "1 and 3 only",
+        "b": "1, 2, and 3 only",
+        "c": "2 and 4 only",
+        "d": "All of the above"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: The Act set up the Board of Control (6 members, including the Chancellor of the Exchequer) to supervise the Company’s political affairs.\nStatement 2 is incorrect: The Governor-General was not made commander-in-chief. This power remained with the Crown-appointed commanders.\nStatement 3 is correct: It separated the Company’s commercial activities from its political administration, reducing its autonomy.\nStatement 4 is incorrect: The Supreme Court at Calcutta was established by the Regulating Act 1773, not Pitt’s Act."
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following statements is/are correct about the Government of India Act 1909 (Morley-Minto Reforms)?\n 1. It introduced separate electorates for Muslims.\n 2. It increased the size of the Imperial Legislative Council.\n 3. It provided for the election of Indian members to legislative councils.\n 4. It established dyarchy in provinces.",
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1, 2, and 3 only",
+        "c": "1 and 3 only",
+        "d": "All of the above"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: It introduced communal electorates for Muslims, allowing them to vote for Muslim candidates.\nStatement 2 is correct: It expanded the Imperial Legislative Council (from 25 to 60 members) and provincial councils.\nStatement 3 is correct: It provided for indirect election of Indian members to legislative councils via municipal corporations, universities, and other bodies.\nStatement 4 is incorrect: Dyarchy was introduced by the Government of India Act 1919, not 1909."
+    },
+    {
+      "q_num": 19,
+      "question": "The Charter Act of 1813 is noted for which of the following?\n 1. It ended the East India Company’s monopoly over trade with India.\n 2. It allocated funds for the promotion of education in India.\n 3. It renewed the Company’s charter for 20 years.\n 4. It abolished the practice of sati.",
+      "options": {
+        "a": "1,2 and 3 only",
+        "b": "1, 3, and 4 only",
+        "c": "2 and 3 only",
+        "d": "All of the above"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nStatement 1 is correct: The Act ended the Company’s monopoly over Indian trade, allowing British merchants to trade freely (except for tea and trade with China, which ended in 1833).\nStatement 2 is correct: It made a provision of ₹1 lakh per year for the revival of literature and promotion of education in India.\nStatement 3 is correct .\nStatement 4 is incorrect."
+    },
+    {
+      "q_num": 20,
+      "question": "The Government of India Act 1935 proposed:\n 1. Abolition of dyarchy in provinces.\n 2. Establishment of a federal court.\n 3. Provincial autonomy.\n 4. Division of India into 11 provinces.\n Which of the above were implemented?",
+      "options": {
+        "a": "1, 2, and 3 only",
+        "b": "2, 3, and 4 only",
+        "c": "1, 2, and 4 only",
+        "d": "All of the above"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nStatement 1 is correct.\nStatement 2 is correct: The Federal Court was established in 1937.\nStatement 3 is correct: Provincial autonomy was implemented in 1937.\nStatement 4 is correct: India was divided into 11 provinces (implemented)."
+    }
+  ]
+}

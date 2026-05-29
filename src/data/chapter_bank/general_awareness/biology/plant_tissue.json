@@ -1,0 +1,308 @@
+{
+  "chapter_num": 3,
+  "chapter_title": "Plant Tissue",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "The study of tissues is known as: ऊतकों के अध्ययन को क्या कहा जाता है?",
+      "options": {
+        "a": "Cytology / कोशिका विज्ञान",
+        "b": "Histology / ऊतक विज्ञान (हिस्टोलॉजी)",
+        "c": "Ecology / परिस्थिति विज्ञान",
+        "d": "Morphology / आकृति विज्ञान"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nHistology is the branch of biology that studies the microscopic structure of tissues. It was coined to describe the study of similar groups of cells performing specific functions\n\n📖 हिंदी स्पष्टीकरण:\nऊतक विज्ञान जीव विज्ञान की वह शाखा है जो ऊतकों की सूक्ष्म संरचना का अध्ययन करती है। यह शब्द विशिष्ट कार्य करने वाली कोशिकाओं के समान समूहों के अध्ययन के लिए दिया गया है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which plant tissue is responsible for rapid cell division? कौन सा पादप ऊतक तीव्र कोशिका विभाजन के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Permanent tissue / स्थायी ऊतक",
+        "b": "Meristematic tissue / विभाज्योतक ऊतक",
+        "c": "Xylem / जाइलम",
+        "d": "Phloem / फ्लोएम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMeristematic tissues are composed of actively dividing cells found in growing regions of plants. They lead to an increase in the length and girth of the plant\n\n📖 हिंदी स्पष्टीकरण:\nविभाज्योतक ऊतक सक्रिय रूप से विभाजित होने वाली कोशिकाओं से बने होते हैं जो पौधों के बढ़ते क्षेत्रों में पाए जाते हैं। वे पौधे की लंबाई और घेरे में वृद्धि का कारण बनते हैं।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which of the following is an example of dead plant tissue? निम्नलिखित में से कौन सा मृत पादप ऊतक का उदाहरण है?",
+      "options": {
+        "a": "Parenchyma / पैरेन्काइमा",
+        "b": "Collenchyma / कोलेनकाइम",
+        "c": "Cork / कॉर्क",
+        "d": "Chlorenchyma / क्लोरेनकाइमा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCork cells are dead at maturity and have suberin in their walls, making them impervious to gases and water. They provide protection to older roots and stems\n\n📖 हिंदी स्पष्टीकरण:\nकॉर्क कोशिकाएं परिपक्वता पर मृत हो जाती हैं और उनकी दीवारों में सुबेरिन होता है, जो उन्हें गैसों और पानी के लिए अभेद्य बनाता है। वे पुरानी जड़ों और तनों को सुरक्षा प्रदान करते हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "Apical meristem is found at: शीर्षस्थ विभाज्योतक कहाँ पाया जाता है?",
+      "options": {
+        "a": "Base of leaves / पत्तियों के आधार पर",
+        "b": "Beneath the bark / छाल के नीचे",
+        "c": "Tips of roots and shoots / जड़ों और तनों के शीर्ष पर",
+        "d": "Vascular bundles / संवहनी बंडलों में"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nApical meristem is located at the growing tips of stems and roots. Its primary function is to increase the length of the plant body\n\n📖 हिंदी स्पष्टीकरण:\nशीर्षस्थ विभाज्योतक तनों और जड़ों के बढ़ते सिरों पर स्थित होता है। इसका मुख्य कार्य पादप शरीर की लंबाई बढ़ाना है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which tissue provides mechanical strength and flexibility to young dicot stems? कौन सा ऊतक युवा द्विबीजपत्री तनों को यांत्रिक शक्ति और लचीलापन प्रदान करता है?",
+      "options": {
+        "a": "Sclerenchyma / स्क्लेरेनकाइमा",
+        "b": "Parenchyma / पैरेन्काइमा",
+        "c": "Collenchyma / कोलेनकाइमा",
+        "d": "Xylem / जाइलम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCollenchyma is a living mechanical tissue with cells irregularly thickened at corners. It allows easy bending of plant parts like tendrils without breaking\n\n📖 हिंदी स्पष्टीकरण:\nकोलेनकाइमा एक जीवित यांत्रिक ऊतक है जिसकी कोशिकाएं कोनों पर अनियमित रूप से मोटी होती हैं। यह पौधों के हिस्सों जैसे प्रतानों को बिना टूटे आसानी से झुकने की अनुमति देता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "The husk of a coconut is made up of which tissue? नारियल का छिलका किस ऊतक से बना होता है?",
+      "options": {
+        "a": "Parenchyma / पैरेन्काइमा",
+        "b": "Collenchyma / कोलेनकाइमा",
+        "c": "Sclerenchyma / स्क्लेरेनकाइमा",
+        "d": "Aerenchyma / एरेनकाइमा"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 7,
+      "question": "Which of the following is responsible for the upward conduction of water and minerals? निम्नलिखित में से कौन जल और खनिजों के ऊपर की ओर संवहन के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Phloem / फ्लोएम",
+        "b": "Xylem / जाइलम",
+        "c": "Stomata / रंध्र",
+        "d": "Epidermis / बाह्य त्वचा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nXylem is a complex permanent tissue that conducts water and minerals unidirectionally from roots to the upper parts of the plant. It consists of tracheids, vessels, xylem parenchyma, and xylem fibres\n\n📖 हिंदी स्पष्टीकरण:\nजाइलम एक जटिल स्थायी ऊतक है जो जड़ों से पौधे के ऊपरी हिस्सों तक जल और खनिजों का एकदिशीय संवहन करता है। इसमें संवहन कोशिकाएं, वाहिकाएं, जाइलम पैरेन्काइमा और जाइलम फाइबर शामिल हैं।"
+    },
+    {
+      "q_num": 8,
+      "question": "The gaseous exchange in leaves takes place through: पत्तियों में गैसीय विनिमय किसके माध्यम से होता है?",
+      "options": {
+        "a": "Cuticle / उपत्वचा",
+        "b": "Stomata / रंध्र",
+        "c": "Xylem / जाइलम",
+        "d": "Phloem / फ्लोएम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStomata are small pores present in the epidermis of leaves, guarded by kidney-shaped guard cells. They regulate the exchange of gases and the process of transpiration\n\n📖 हिंदी स्पष्टीकरण:\nरंध्र पत्तियों के बाह्य त्वचा (एपिडर्मिस) में मौजूद छोटे छिद्र होते हैं, जो वृक्क के आकार की रक्षक कोशिकाओं द्वारा सुरक्षित होते हैं। वे गैसों के विनिमय और वाष्पोत्सर्जन की प्रक्रिया को नियंत्रित करते हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which tissue stores food in plants? पौधों में भोजन का संचय कौन सा ऊतक करता है?",
+      "options": {
+        "a": "Sclerenchyma / स्क्लेरेनकाइमा",
+        "b": "Xylem fibres / जाइलम फाइबर",
+        "c": "Parenchyma / पैरेन्काइमा",
+        "d": "Meristematic tissue / विभाज्योतक ऊतक"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nParenchyma is a basic simple permanent tissue that primarily functions as food storage tissue. In some cases, it also performs photosynthesis (chlorenchyma)\n\n📖 हिंदी स्पष्टीकरण:\nपैरेन्काइमा एक बुनियादी सरल स्थायी ऊतक है जो मुख्य रूप से भोजन संचय ऊतक के रूप में कार्य करता है। कुछ मामलों में, यह प्रकाश संश्लेषण (क्लोरेनकाइमा) भी करता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "The waxy, water-resistant layer on the outer surface of desert plants is called: रेगिस्तानी पौधों की बाहरी सतह पर मोमी, जल-प्रतिरोधी परत को क्या कहा जाता है?",
+      "options": {
+        "a": "Suberin / सुबेरिन",
+        "b": "Lignin / लिग्निन",
+        "c": "Cuticle / क्यूटिकल",
+        "d": "Cellulose / सेलुलोज"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCuticle is a layer of a waxy substance called cutin secreted by the epidermis. It protects against water loss, injury, and fungal invasion, especially in dry habitats\n\n📖 हिंदी स्पष्टीकरण:\nक्यूटिकल एपिडर्मिस द्वारा स्रावित क्यूटिन नामक मोमी पदार्थ की एक परत है। यह विशेष रूप से शुष्क आवासों में पानी की कमी, चोट और कवक के आक्रमण से बचाता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Lateral meristem is responsible for increasing the: पार्श्व विभाज्योतक क्या बढ़ाने के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Length of the plant / पौधे की लंबाई",
+        "b": "Girth (width) of the stem / तने का घेरा (चौड़ाई)",
+        "c": "Number of leaves / पत्तियों की संख्या",
+        "d": "Size of flowers / फूलों का आकार"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLateral meristem (like cambium) is present beneath the bark and helps in sideways growth. It increases the diameter or girth of the root and stem\n\n📖 हिंदी स्पष्टीकरण:\nपार्श्व विभाज्योतक (जैसे कैम्बियम) छाल के नीचे मौजूद होता है और पार्श्व वृद्धि में मदद करता है। यह जड़ और तने के व्यास या घेरे को बढ़ाता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "Sieve tubes and companion cells are the components of: चालनी नलिकाएं और सहचर कोशिकाएं किसके घटक हैं?",
+      "options": {
+        "a": "Xylem / जाइलम",
+        "b": "Phloem / फ्लोएम",
+        "c": "Sclerenchyma / स्क्लेरेनकाइमा",
+        "d": "Meristem / विभाज्योतक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPhloem is composed of four types of elements: sieve tubes, companion cells, phloem parenchyma, and phloem fibres. Sieve tubes and companion cells work together to transport food\n\n📖 हिंदी स्पष्टीकरण:\nफ्लोएम चार प्रकार के तत्वों से बना होता है: चालनी नलिकाएं, सहचर कोशिकाएं, फ्लोएम पैरेन्काइमा और फ्लोएम फाइबर। चालनी नलिकाएं और सहचर कोशिकाएं भोजन के परिवहन के लिए मिलकर काम करती हैं।"
+    },
+    {
+      "q_num": 13,
+      "question": "What is the main difference between Transpiration and Guttation? वाष्पोत्सर्जन और बिंदु-स्राव के बीच मुख्य अंतर क्या है?",
+      "options": {
+        "a": "Transpiration occurs at night / वाष्पोत्सर्जन रात में होता है।",
+        "b": "Guttation is loss of water as vapor / बिंदु-स्राव वाष्प के रूप में पानी की हानि है।",
+        "c": "Transpiration cools the plant body / वाष्पोत्सर्जन पौधे के शरीर को ठंडा करता है।",
+        "d": "Guttation happens through stomata / बिंदु-स्राव रंध्रों के माध्यम से होता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTranspiration is the loss of water vapor through stomata and cools the plant, whereas guttation is the loss of water droplets through hydathodes, usually at night, with no cooling effect\n\n📖 हिंदी स्पष्टीकरण:\nवाष्पोत्सर्जन रंध्रों के माध्यम से जल वाष्प की हानि है और पौधे को ठंडा करता है, जबकि बिंदु-स्राव जलरंध्र (हाइडाथोड्स) के माध्यम से पानी की बूंदों की हानि है, जो आमतौर पर रात में होती है, जिसका कोई शीतलन प्रभाव नहीं होता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Cells of meristematic tissue lack vacuoles because: विभाज्योतक ऊतक की कोशिकाओं में रिक्तिकाओं का अभाव होता है क्योंकि:",
+      "options": {
+        "a": "They are dead cells / वे मृत कोशिकाएं हैं।",
+        "b": "They do not store food or waste / वे भोजन या अपशिष्ट का संचय नहीं करते हैं।",
+        "c": "They perform photosynthesis / वे प्रकाश संश्लेषण करते हैं।",
+        "d": "They have very thin cytoplasm / उनका कोशिका द्रव्य बहुत पतला होता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMeristematic cells are actively dividing and have dense cytoplasm with prominent nuclei. Since they don't need to store nutrients or provide turgidity like permanent cells, vacuoles are absent\n\n📖 हिंदी स्पष्टीकरण:\nविभाज्योतक कोशिकाएं सक्रिय रूप से विभाजित होती हैं और इनमें प्रमुख केंद्रकों के साथ सघन कोशिका द्रव्य होता है। चूँकि उन्हें स्थायी कोशिकाओं की तरह पोषक तत्वों को संग्रहीत करने या स्फीति प्रदान करने की आवश्यकता नहीं होती है, इसलिए रिक्तिकाएं अनुपस्थित होती हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which of the following phloem components is a dead tissue? निम्नलिखित में से कौन सा फ्लोएम घटक एक मृत ऊतक है?",
+      "options": {
+        "a": "Sieve tube / चालनी नलिका",
+        "b": "Companion cell / सहचर कोशिका",
+        "c": "Phloem parenchyma / फ्लोएम पैरेन्काइमा",
+        "d": "Phloem fiber / फ्लोएम फाइबर"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nMost components of phloem (sieve tubes, companion cells, parenchyma) are living. However, phloem fibers are dead cells that provide mechanical rigidity and support\n\n📖 हिंदी स्पष्टीकरण:\nफ्लोएम के अधिकांश घटक (चालनी नलिकाएं, सहचर कोशिकाएं, पैरेन्काइमा) जीवित हैं। हालांकि, फ्लोएम फाइबर मृत कोशिकाएं हैं जो यांत्रिक कठोरता और सहायता प्रदान करती हैं।"
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): Plant tissues have a simpler organization compared to animal tissues.\n कथन (A): पशु ऊतकों की तुलना में पादप ऊतकों का संगठन सरल होता है।\n Reason (R): Plants have a stationary habit and do not require mobility.\n कारण (R): पौधों की प्रकृति स्थिर होती है और उन्हें गतिशीलता की आवश्यकता नहीं होती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBecause plants do not move, their tissue organization is targeted towards providing structural support rather than complex mobility, leading to a simpler structure with many dead tissues\n\n📖 हिंदी स्पष्टीकरण:\nक्योंकि पौधे गति नहीं करते हैं, उनका ऊतक संगठन जटिल गतिशीलता के बजाय संरचनात्मक सहायता प्रदान करने की ओर लक्षित होता है, जिससे कई मृत ऊतकों के साथ एक सरल संरचना बनती है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements regarding Meristematic tissue is INCORRECT? विभाज्योतक ऊतक के संबंध में निम्नलिखित में से कौन सा कथन गलत है?",
+      "options": {
+        "a": "Intercellular spaces are absent / अंतःकोशिकीय स्थान अनुपस्थित होते हैं।",
+        "b": "Cells have a prominent nucleus / कोशिकाओं में एक प्रमुख केंद्रक होता है।",
+        "c": "The cell wall is made of lignin / कोशिका भित्ति लिग्निन से बनी होती है।",
+        "d": "Cytoplasm is very dense / कोशिका द्रव्य बहुत सघन होता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe cell walls of meristematic tissues are thin and made of cellulose, not lignin. Lignin is found in mature, dead tissues like sclerenchyma for strength\n\n📖 हिंदी स्पष्टीकरण:\nविभाज्योतक ऊतकों की कोशिका भित्ति पतली होती है और सेलुलोज से बनी होती है, लिग्निन से नहीं। लिग्निन मजबूती के लिए स्क्लेरेनकाइमा जैसे परिपक्व, मृत ऊतकों में पाया जाता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Assertion (A): Parenchyma tissue is often called a 'packaging' tissue. कथन (A): पैरेन्काइमा ऊतक को अक्सर 'पैकेजिंग' ऊतक कहा जाता है।\n Reason (R): It fills the spaces between other tissues and maintains the shape of the plant. कारण (R): यह अन्य ऊतकों के बीच के स्थान को भरता है और पौधे के आकार को बनाए रखता है।",
+      "options": {
+        "a": "Both A and R are true and R explains A / A और R दोनों सत्य हैं और R, A की व्याख्या करता है।",
+        "b": "Both A and R are true but R does not explain A / A और R दोनों सत्य हैं लेकिन R, A की व्याख्या नहीं करता है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
+        "d": "Both A and R are false / A और R दोनों गलत हैं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nParenchyma is widely distributed in plant bodies, filling gaps and acting as a primary supporting and storage tissue. In aquatic plants, it becomes aerenchyma to provide buoyancy\n\n📖 हिंदी स्पष्टीकरण:\nपैरेन्काइमा पादप निकायों में व्यापक रूप से वितरित होता है, अंतराल भरता है और प्राथमिक सहायक और संचय ऊतक के रूप में कार्य करता है। जलीय पौधों में, यह उछाल प्रदान करने के लिए एरेनकाइमा बन जाता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Match the following meristems with their functions: निम्नलिखित विभाज्योतकों को उनके कार्यों के साथ सुमेलित करें:\n 1. Apical Meristem / शीर्षस्थ विभज्योतक — P. Increase in girth / मोटाई/घेरे में वृद्धि\n 2. Lateral Meristem / पार्श्व विभज्योतक — Q. Increase in height / ऊंचाई में वृद्धि\n 3. Intercalary Meristem / अंतर्विष्ट विभज्योतक — R. Growth of internodes / पर्वसंधियों की वृद्धि",
+      "options": {
+        "a": "1-Q, 2-P, 3-R",
+        "b": "1-P, 2-Q, 3-R",
+        "c": "1-R, 2-P, 3-Q",
+        "d": "1-Q, 2-R, 3-P"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nApical meristem increases height (length), Lateral meristem increases girth (width), and Intercalary meristem increases the length of leaves and internodes\n\n📖 हिंदी स्पष्टीकरण:\nशीर्षस्थ विभाज्योतक ऊंचाई (लंबाई) बढ़ाता है, पार्श्व विभाज्योतक घेरा (चौड़ाई) बढ़ाता है, और अंतर्विष्ट विभाज्योतक पत्तियों और पर्वसंधियों की लंबाई बढ़ाता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Which of the following is NOT a function of the Epidermis? निम्नलिखित में से कौन सा बाह्यत्वचा (एपिडर्मिस) का कार्य नहीं है?",
+      "options": {
+        "a": "Protection against injury / चोट के विरुद्ध सुरक्षा",
+        "b": "Regulation of gaseous exchange / गैसीय विनिमय का नियमन",
+        "c": "Absorption of water in roots / जड़ों में पानी का अवशोषण",
+        "d": "Conduction of food materials / खाद्य पदार्थों का संवहन"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe epidermis provides protection, prevents water loss, and handles absorption (via root hairs). Conduction of food is the specialized function of Phloem\n\n📖 हिंदी स्पष्टीकरण:\nबाह्यत्वचा (एपिडर्मिस) सुरक्षा प्रदान करता है, पानी की कमी को रोकता है, और अवशोषण (जड़ बालों के माध्यम से) को संभालता है। भोजन का संवहन फ्लोएम का विशिष्ट कार्य है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Consider the following statements about Complex Permanent Tissues: जटिल स्थायी ऊतकों के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. They are made up of more than one type of cells./ वे एक से अधिक प्रकार की कोशिकाओं से बने होते हैं।\n 2. Xylem parenchyma is the only living part of xylem tissue. / जाइलम पैरेन्काइमा जाइलम ऊतक का एकमात्र जीवित भाग है।\n 3. Phloem conducts food in a unidirectional manner. / फ्लोएम भोजन को एक ही दिशा में पहुंचाता है।\n Which of the statements is/are correct? कौन सा/से कथन सही है/हैं?",
+      "options": {
+        "a": "Only 1 / केवल 1",
+        "b": "1 and 2 / 1 और 2",
+        "c": "2 and 3 / 2 और 3",
+        "d": "All of the above / उपरोक्त सभी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStatement 3 is wrong because phloem conducts food bidirectionally (two-way), whereas xylem is unidirectional. Xylem parenchyma is indeed the only living component in xylem\n\n📖 हिंदी स्पष्टीकरण:\nकथन 3 गलत है क्योंकि फ्लोएम भोजन का द्विदिशीय (दो-तरफा) संवहन करता है, जबकि जाइलम एकदिशीय होता है। जाइलम पैरेन्काइमा वास्तव में जाइलम में एकमात्र जीवित घटक है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Differentiation is a process where: विभेदन एक ऐसी प्रक्रिया है जहाँ:",
+      "options": {
+        "a": "Cells divide rapidly / कोशिकाएं तेजी से विभाजित होती हैं।",
+        "b": "Cells lose the ability to divide and take a permanent shape / कोशिकाएं विभाजित होने की क्षमता खो देती हैं और स्थायी आकार ले लेती हैं।",
+        "c": "Permanent tissue becomes meristematic / स्थायी ऊतक विभाज्योतक बन जाता है।",
+        "d": "Water is lost through leaves / पत्तियों के माध्यम से पानी की हानि होती है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMeristematic cells undergo differentiation to form permanent tissues. During this, they acquire a specific role, fixed size, and permanent structure\n\n📖 हिंदी स्पष्टीकरण:\nविभाज्योतक कोशिकाएं स्थायी ऊतक बनाने के लिए विभेदन से गुजरती हैं। इसके दौरान, वे एक विशिष्ट भूमिका, निश्चित आकार और स्थायी संरचना प्राप्त करते हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Assertion (A): Guard cells regulate the opening and closing of stomata.\n कथन (A): रक्षक कोशिकाएं रंध्रों के खुलने और बंद होने को नियंत्रित करती हैं।\n Reason (R): When water flows into guard cells, they swell and the pore opens.\n कारण (R): जब पानी रक्षक कोशिकाओं में बहता है, तो वे सूज जाती हैं और छिद्र खुल जाता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation / A और R दोनों सत्य हैं और R सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the explanation / A और R दोनों सत्य हैं लेकिन R व्याख्या नहीं है।",
+        "c": "A is true, R is false / A सत्य है, R गलत है।",
+        "d": "A is false, R is true / A गलत है, R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nTurgidity of guard cells controls the stomatal aperture. When they absorb water and swell, the kidney-shaped cells curve outwards, opening the pore\n\n📖 हिंदी स्पष्टीकरण:\nरक्षक कोशिकाओं की स्फीति रंध्र के छिद्र को नियंत्रित करती है। जब वे पानी सोखते हैं और सूज जाते हैं, तो के आकार की कोशिकाएं बाहर की ओर मुड़ जाती हैं, जिससे गैस विनिमय के लिए छिद्र खुल जाता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Identify the tissue based on these features: इन विशेषताओं के आधार पर ऊतक की पहचान करें:\n 1. Made of dead cells. / मृत कोशिकाओं से बना हुआ।\n 2. Walls contain Suberin. / दीवारों में सुबेरिन मौजूद है।\n 3. Found in mature roots and shoots. / परिपक्व जड़ों और शाखाओं में पाया जाता है।",
+      "options": {
+        "a": "Epidermis / एपिडर्मिस",
+        "b": "Cork / कॉर्क",
+        "c": "Phloem / फ्लोएम",
+        "d": "Xylem Parenchyma / जाइलम पैरेन्काइमा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nCork cells are compactly arranged dead cells with suberized walls. This makes them waterproof and airtight, providing a protective layer to older plant parts\n\n📖 हिंदी स्पष्टीकरण:\nकॉर्क कोशिकाएं सुबेरिन युक्त दीवारों वाली सघन रूप से व्यवस्थित मृत कोशिकाएं होती हैं। यह उन्हें जलरोधक और वायुरोधी बनाता है, जो पुराने पौधों के हिस्सों को एक सुरक्षात्मक परत प्रदान करता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Assertion (A): Sclereids provide hardness to walnut shells and seed coats.\n कथन (A): स्केलेराइड्स अखरोट के छिलकों और बीजों के आवरण को कठोरता प्रदान करते हैं।\n Reason (R): Sclereids are a type of Parenchyma cells.\n कारण (R): स्केलेराइड्स एक प्रकार की पैरेन्काइमा कोशिकाएं हैं।",
+      "options": {
+        "a": "Both A and R are true / A और R दोनों सत्य हैं।",
+        "b": "A is true but R is false / A सत्य है लेकिन R गलत है।",
+        "c": "A is false but R is true / A गलत है लेकिन R सत्य है।",
+        "d": "Both are false / दोनों गलत हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSclereids are a specialized type of Sclerenchyma cells, not parenchyma. They have extremely thick lignified walls that give hardness to fruits and seeds\n\n📖 हिंदी स्पष्टीकरण:\nस्केलेराइड्स स्क्लेरेनकाइमा कोशिकाओं का एक विशिष्ट प्रकार है, पैरेन्काइमा का नहीं। उनकी कोशिका भित्ति बहुत मोटी और लिग्निन युक्त होती है जो फलों और बीजों को कठोरता प्रदान करती है।"
+    }
+  ]
+}

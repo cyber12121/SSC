@@ -1,0 +1,308 @@
+{
+  "chapter_num": 7,
+  "chapter_title": "Metals And Non Metals",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which of the following metals is liquid at room temperature?\nकमरे के तापमान पर निम्नलिखित में से कौन सी धातु द्रव अवस्था में होती है?",
+      "options": {
+        "a": "Sodium / सोडियम",
+        "b": "Mercury / पारा",
+        "c": "Gallium / गैलियम",
+        "d": "Silver / चाँदी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMercury (Hg) is the only metal that remains liquid at room temperature. It is used in thermometers because it has a high coefficient of expansion and does not stick to glass.\n\n📖 हिंदी स्पष्टीकरण:\nपारा (Hg) एकमात्र ऐसी धातु है जो कमरे के तापमान पर तरल रहती है। इसका उपयोग थर्मामीटर में किया जाता है क्योंकि इसका प्रसार गुणांक उच्च होता है और यह काँच से नहीं चिपकता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which non-metal is a good conductor of electricity?\nकौन सी अधातु विद्युत की सुचालक है?",
+      "options": {
+        "a": "Sulfur / सल्फर",
+        "b": "Phosphorus / फॉस्फोरस",
+        "c": "Graphite / ग्रेफाइट",
+        "d": "Iodine / आयोडीन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGraphite is an allotrope of carbon that has free electrons, allowing it to conduct electricity unlike most other non‑metals. It is commonly used as electrodes in batteries.\n\n📖 हिंदी स्पष्टीकरण:\nग्रेफाइट कार्बन का एक अपररूप है जिसमें मुक्त इलेक्ट्रॉन होते हैं, जो इसे अधिकांश अन्य अधातुओं के विपरीत विद्युत का सुचालक बना देते हैं। इसका उपयोग प्रायः बैटरियों में इलेक्ट्रोड के रूप में किया जाता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "The property of metals by which they can be beaten into thin sheets is called:\nधातुओं का वह गुण जिसके कारण उन्हें पीटकर पतली चादरों में बदला जा सकता है, कहलाता है:",
+      "options": {
+        "a": "Ductility / तन्यता",
+        "b": "Malleability / आघातवर्धनीयता",
+        "c": "Sonorous / ध्वन्यात्मकता",
+        "d": "Lustre / चमक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMalleability allows metals to be hammered into very thin foils without breaking. Gold and silver are among the most malleable metals.\n\n📖 हिंदी स्पष्टीकरण:\nआघातवर्धनीयता वह गुण है जिसके कारण धातुओं को बिना टूटे बहुत पतली पन्नियों में पीटा जा सकता है। सोना और चाँदी सबसे अधिक आघातवर्धनीय धातुओं में गिने जाते हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which of the following metals can be easily cut with a knife?\nनिम्नलिखित में से किस धातु को चाकू से आसानी से काटा जा सकता है?",
+      "options": {
+        "a": "Iron / लोहा",
+        "b": "Copper / ताँबा",
+        "c": "Sodium / सोडियम",
+        "d": "Aluminium / एल्युमीनियम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAlkali metals like sodium (Na) and potassium (K) are exceptionally soft and have low densities. They can be sliced easily with a kitchen knife.\n\n📖 हिंदी स्पष्टीकरण:\nसोडियम (Na) और पोटेशियम (K) जैसी क्षार धातुएँ अत्यधिक नरम होती हैं और इनका घनत्व कम होता है। इन्हें सामान्य रसोई के चाकू से भी आसानी से काटा जा सकता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Metals generally form which type of oxides?\nधातुएँ सामान्यतः किस प्रकार के ऑक्साइड बनाती हैं?",
+      "options": {
+        "a": "Acidic / अम्लीय",
+        "b": "Basic / क्षारीय",
+        "c": "Neutral / उदासीन",
+        "d": "Amphoteric / उभयधर्मी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMost metal oxides react with water to form bases (metal hydroxides) or react with acids to form salt and water. For example, magnesium oxide (MgO) is basic.\n\n📖 हिंदी स्पष्टीकरण:\nअधिकांश धातु ऑक्साइड पानी के साथ अभिक्रिया करके क्षार (धातु हाइड्रॉक्साइड) बनाते हैं या अम्लों के साथ क्रिया करके लवण और पानी बनाते हैं। उदाहरण के लिए, मैग्नीशियम ऑक्साइड (MgO) क्षारीय प्रकृति का होता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which metal is the best conductor of heat and electricity?\nकौन सी धातु ऊष्मा और विद्युत की सबसे अच्छी सुचालक है?",
+      "options": {
+        "a": "Gold / सोना",
+        "b": "Copper / ताँबा",
+        "c": "Silver / चाँदी",
+        "d": "Aluminium / एल्युमीनियम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSilver (Ag) has the highest electrical and thermal conductivity of all metals due to its large number of free electrons. Copper is the second‑best conductor.\n\n📖 हिंदी स्पष्टीकरण:\nचाँदी (Ag) में मुक्त इलेक्ट्रॉनों की अधिकता के कारण सभी धातुओं की तुलना में सर्वाधिक विद्युत और तापीय चालकता होती है। ताँबा दूसरा सबसे अच्छा सुचालक है।"
+    },
+    {
+      "q_num": 7,
+      "question": "What is the process of coating iron with a thin layer of zinc to prevent rusting called?\nजंग लगने से रोकने के लिए लोहे पर जस्ते की पतली परत चढ़ाने की प्रक्रिया क्या कहलाती है?",
+      "options": {
+        "a": "Anodizing / एनोडीकरण",
+        "b": "Galvanization / गैल्वनीकरण",
+        "c": "Alloying / मिश्रधातु बनाना",
+        "d": "Corrosion / संक्षारण"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGalvanization protects steel and iron by providing a protective zinc coating. Zinc corrodes in preference to iron, acting as a sacrificial layer.\n\n📖 हिंदी स्पष्टीकरण:\nगैल्वनीकरण में लोहे या स्टील पर जस्ता की सुरक्षात्मक परत चढ़ाई जाती है। संक्षारण की स्थिति में जस्ता, लोहे से पहले संक्षारित हो जाता है और एक बलिदानी परत के रूप में काम करता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which non-metal is stored in water to prevent it from catching fire?\nकिस अधातु को आग पकड़ने से रोकने के लिए पानी में रखा जाता है?",
+      "options": {
+        "a": "Sodium / सोडियम",
+        "b": "Phosphorus / फॉस्फोरस",
+        "c": "Sulfur / सल्फर",
+        "d": "Carbon / कार्बन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWhite phosphorus is highly reactive and catches fire spontaneously when exposed to air. Storing it under water prevents it from reacting with atmospheric oxygen.\n\n📖 हिंदी स्पष्टीकरण:\nसफेद फॉस्फोरस अत्यधिक क्रियाशील होता है और हवा के संपर्क में आते ही स्वयं जल उठता है। इसे पानी में डुबोकर रखने से यह वायुमंडलीय ऑक्सीजन के साथ अभिक्रिया नहीं कर पाता।"
+    },
+    {
+      "q_num": 9,
+      "question": "An alloy of mercury with other metals is known as:\nपारे की अन्य धातुओं के साथ मिश्र धातु को किस रूप में जाना जाता है?",
+      "options": {
+        "a": "Brass / पीतल",
+        "b": "Bronze / काँसा",
+        "c": "Amalgam / अमलगम",
+        "d": "Solder / सोल्डर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAmalgams are alloys formed by the reaction of mercury with another metal. They are widely used in dentistry for filling cavities in teeth.\n\n📖 हिंदी स्पष्टीकरण:\nअमलगम वे मिश्रधातुएँ हैं जो पारा और किसी अन्य धातु की अभिक्रिया से बनती हैं। इनका प्रयोग दंत चिकित्सा में दाँतों के छिद्र भरने के लिए व्यापक रूप से किया जाता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Which metal is most abundant in the Earth's crust?\nपृथ्वी की भूपर्पटी में कौन सी धातु सबसे प्रचुर मात्रा में पाई जाती है?",
+      "options": {
+        "a": "Iron / लोहा",
+        "b": "Aluminium / एल्युमीनियम",
+        "c": "Calcium / कैल्शियम",
+        "d": "Sodium / सोडियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAluminium is the most abundant metal in the Earth's crust, making up about 8% of its weight. It is followed by iron.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी की पपड़ी में एल्युमीनियम सबसे प्रचुर मात्रा में पाई जाने वाली धातु है, जो इसके द्रव्यमान का लगभग 8% भाग बनाती है। इसके बाद लोहे का स्थान आता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which of the following oxides is amphoteric in nature?\nनिम्नलिखित में से कौन सा ऑक्साइड प्रकृति में उभयधर्मी है?",
+      "options": {
+        "a": "Na₂O / Na₂O",
+        "b": "MgO / MgO",
+        "c": "Al₂O₃ / Al₂O₃",
+        "d": "CuO / CuO"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAmphoteric oxides like aluminium oxide (Al₂O₃) react with both acids and bases to produce salt and water. This behaviour is characteristic of certain metal oxides.\n\n📖 हिंदी स्पष्टीकरण:\nएल्युमीनियम ऑक्साइड (Al₂O₃) जैसे उभयधर्मी ऑक्साइड अम्ल और क्षार दोनों के साथ अभिक्रिया करके लवण और पानी बनाते हैं। यह कुछ धातु ऑक्साइडों की विशिष्ट विशेषता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What are the main components of the alloy 'Bronze'?\nमिश्रधातु 'काँसा' के मुख्य घटक क्या हैं?",
+      "options": {
+        "a": "Copper and Zinc / ताँबा और जस्ता",
+        "b": "Copper and Tin / ताँबा और टिन",
+        "c": "Lead and Tin / सीसा और टिन",
+        "d": "Copper and Nickel / ताँबा और निकल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBronze typically consists of approximately 88% copper (Cu) and 12% tin (Sn). It is harder than pure copper and more resistant to corrosion.\n\n📖 हिंदी स्पष्टीकरण:\nकाँसा सामान्यतः लगभग 88% ताँबा (Cu) और 12% टिन (Sn) से मिलकर बना होता है। यह शुद्ध ताँबे की तुलना में अधिक कठोर तथा संक्षारण के प्रति अधिक प्रतिरोधी होता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "When a metal reacts with dilute Nitric Acid (HNO₃), hydrogen gas is usually not evolved because:\nजब कोई धातु तनु नाइट्रिक अम्ल (HNO₃) के साथ अभिक्रिया करती है, तो आमतौर पर हाइड्रोजन गैस नहीं निकलती है क्योंकि:",
+      "options": {
+        "a": "HNO₃ is a strong reducing agent / HNO₃ एक प्रबल अपचायक है।",
+        "b": "HNO₃ is a strong oxidizing agent / HNO₃ एक प्रबल ऑक्सीकारक है।",
+        "c": "Metals become passive / धातुएँ निष्क्रिय हो जाती हैं।",
+        "d": "The reaction is too slow / अभिक्रिया बहुत धीमी है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNitric acid oxidises the hydrogen produced into water (H₂O) and itself gets reduced to nitrogen oxides. Only magnesium and manganese produce H₂ with very dilute HNO₃.\n\n📖 हिंदी स्पष्टीकरण:\nनाइट्रिक अम्ल उत्पन्न हाइड्रोजन को ऑक्सीकरण करके पानी (H₂O) में बदल देता है और स्वयं नाइट्रोजन ऑक्साइडों में अपचयित हो जाता है। केवल मैग्नीशियम और मैंगनीज बहुत तनु HNO₃ के साथ H₂ गैस उत्पन्न करते हैं।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which of the following is the correct sequence in extraction of metals from ore?\nअयस्क से धातुओं के निष्कर्षण में निम्नलिखित में से कौन सा सही क्रम है?",
+      "options": {
+        "a": "Reduction → Refining → Concentration / कमी → परिष्करण → सांद्रण",
+        "b": "Refining → Concentration → Reduction / परिष्करण → सांद्रण → कमी",
+        "c": "Concentration → Reduction → Refining / सांद्रण → कमी → परिष्करण",
+        "d": "Concentration → Electrolysis → Roasting / सांद्रण → विद्युत अपघटन → भूनना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe general steps in metallurgy are: concentration of the ore (removal of gangue), reduction of the concentrated ore to metal and then refining to obtain pure metal.\n\n📖 हिंदी स्पष्टीकरण:\nधातु विज्ञान (मेटलर्जी) में सामान्य क्रम यह है: पहले अयस्क का सांद्रण कर अशुद्धियाँ (गैंग) हटाना, फिर सांद्रित अयस्क को अपचयित करके धातु प्राप्त करना और अंत में शुद्ध धातु पाने के लिए परिष्करण करना।"
+    },
+    {
+      "q_num": 15,
+      "question": "Aqua Regia is a mixture of concentrated HCl and concentrated HNO₃ in the ratio of:\nएक्वा रेजिया सांद्र HCl और सांद्र HNO₃ का मिश्रण है, जिसका अनुपात होता है:",
+      "options": {
+        "a": "1:3",
+        "b": "3:1",
+        "c": "2:1",
+        "d": "1:2"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAqua regia consists of concentrated HCl and concentrated HNO₃ in a 3:1 ratio. It is a highly corrosive liquid capable of dissolving noble metals like gold.\n\n📖 हिंदी स्पष्टीकरण:\nएक्वा रेजिया में 3:1 के अनुपात में सांद्र HCl और सांद्र HNO₃ होता है। यह एक अत्यधिक संक्षारक तरल है जो सोने जैसी उत्कृष्ट धातुओं को भी घोल सकता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): Ionic compounds have high melting and boiling points.\nReason (R): Large amount of energy is required to break the strong inter-ionic attraction.\nकथन (A): आयनिक यौगिकों का गलनांक और क्वथनांक उच्च होता है।\nकारण (R): मजबूत अंतर‑आयनिक आकर्षण को तोड़ने के लिए बड़ी मात्रा में ऊर्जा की आवश्यकता होती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation / A और R दोनों सही हैं और R सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation / A और R दोनों सही हैं लेकिन R सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true and R explains A. Ionic compounds are held together by strong electrostatic forces between oppositely charged ions, so a large amount of thermal energy is needed to overcome these forces.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की व्याख्या करता है। आयनिक यौगिकों में विपरीत आवेशित आयनों के बीच प्रबल स्थिरविद्युत आकर्षण होता है, जिन्हें तोड़ने के लिए अधिक तापीय ऊर्जा की आवश्यकता होती है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which statement about 'Anodizing' is correct?\n'एनोडीकरण' के बारे में कौन सा कथन सही है?",
+      "options": {
+        "a": "Coating iron with zinc / लोहे पर जस्ता चढ़ाना।",
+        "b": "Forming a thick oxide layer of aluminium / एल्युमीनियम की मोटी ऑक्साइड परत बनाना।",
+        "c": "Making metals soft / धातुओं को नरम बनाना।",
+        "d": "Producing Brass / पीतल का उत्पादन करना।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAnodizing is an electrolytic process that increases the thickness of the natural oxide layer on aluminium, making it more resistant to corrosion and improving its appearance.\n\n📖 हिंदी स्पष्टीकरण:\nएनोडीकरण एक विद्युत‑अपघटनी प्रक्रिया है जो एल्युमीनियम पर बनी प्राकृतिक ऑक्साइड परत को मोटा कर देती है, जिससे यह अधिक संक्षारण‑प्रतिरोधी हो जाता है और इसकी चमक भी बढ़ जाती है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Statement I: Non-metals do not react with water to evolve hydrogen gas.\nStatement II: Non-metals cannot donate electrons to hydrogen ions.\nकथन I: अधातुएँ हाइड्रोजन गैस निकालने के लिए पानी के साथ अभिक्रिया नहीं करती हैं।\nकथन II: अधातुएँ हाइड्रोजन आयनों को इलेक्ट्रॉन दान नहीं कर सकती हैं।",
+      "options": {
+        "a": "Both Statement I and II are correct / कथन I और II दोनों सही हैं।",
+        "b": "Both Statement I and II are incorrect / कथन I और II दोनों गलत हैं।",
+        "c": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
+        "d": "Statement I is incorrect, II is correct / कथन I गलत है, II सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth statements are correct. Non‑metals are generally electron acceptors. To produce H₂ gas from water or acids, electrons must be donated to H⁺ ions, which non‑metals cannot do.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। अधातु सामान्यतः इलेक्ट्रॉन स्वीकार करने वाले होते हैं। पानी या अम्लों से H₂ गैस उत्पन्न करने के लिए H⁺ आयनों को इलेक्ट्रॉन दान करना पड़ता है, जो अधातु नहीं कर सकते।"
+    },
+    {
+      "q_num": 19,
+      "question": "The greenish coating formed on copper statues is due to the formation of:\nताँबे की मूर्तियों पर बनने वाली हरी परत किसके बनने के कारण होती है?",
+      "options": {
+        "a": "Copper Oxide / कॉपर ऑक्साइड",
+        "b": "Copper Sulphide / कॉपर सल्फाइड",
+        "c": "Basic Copper Carbonate / बेसिक कॉपर कार्बोनेट",
+        "d": "Copper Nitrate / कॉपर नाइट्रेट"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCopper reacts with moist carbon dioxide in the air to form basic copper carbonate, which gives the surface a characteristic green colour.\n\n📖 हिंदी स्पष्टीकरण:\nताँबा हवा में उपस्थित नम कार्बन डाइऑक्साइड के साथ अभिक्रिया करके बेसिक कॉपर कार्बोनेट बनाता है, जो उसकी सतह पर हरे रंग की परत के रूप में दिखाई देता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Solder is used for welding electrical wires.\nReason (R): Solder has a very high melting point.\nकथन (A): सोल्डर का उपयोग बिजली के तारों को जोड़ने के लिए किया जाता है।\nकारण (R): सोल्डर का गलनांक बहुत उच्च होता है।",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation / A और R दोनों सही हैं और R सही व्याख्या है।",
+        "b": "Both A and R are true but R is not correct / A और R दोनों सही हैं लेकिन R सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA is true but R is false. Solder, an alloy of lead and tin, has a relatively low melting point, which allows it to melt easily and join electrical wires without overheating them.\n\n📖 हिंदी स्पष्टीकरण:\nA सही है लेकिन R गलत है। सोल्डर (सीसा और टिन की मिश्रधातु) का गलनांक अपेक्षाकृत कम होता है, जिससे यह आसानी से पिघलकर तारों को जोड़ सकता है और उन्हें अत्यधिक गर्म भी नहीं करता।"
+    },
+    {
+      "q_num": 21,
+      "question": "Statement I: Pure gold is 24 carats and is very soft.\nStatement II: 22 carat gold contains 2 parts of copper or silver.\nकथन I: शुद्ध सोना 24 कैरेट का होता है और बहुत नरम होता है।\nकथन II: 22 कैरेट सोने में 2 भाग ताँबा या चाँदी होता है।",
+      "options": {
+        "a": "Both statements are true / दोनों कथन सत्य हैं।",
+        "b": "Both statements are false / दोनों कथन असत्य हैं।",
+        "c": "Statement I is true, II is false / कथन I सत्य है, II असत्य है।",
+        "d": "Statement I is false, II is true / कथन I असत्य है, II सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth statements are true. Pure gold (24 carat) is very soft and unsuitable for jewellery, so 22 carat gold is prepared by mixing 2 parts of copper or silver with 22 parts of gold.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। शुद्ध सोना (24 कैरेट) बहुत नरम होता है और आभूषण बनाने के लिए उपयुक्त नहीं होता, इसलिए 22 कैरेट सोना 22 भाग सोने में 2 भाग ताँबा या चाँदी मिलाकर तैयार किया जाता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which of the following is correct regarding reactivity series?\nअभिक्रियाशीलता श्रेणी के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "options": {
+        "a": "Magnesium > Aluminium > Zinc > Iron / मैग्नीशियम > एल्युमीनियम > जस्ता > लोहा",
+        "b": "Iron > Zinc > Aluminium > Magnesium / लोहा > जस्ता > एल्युमीनियम > मैग्नीशियम",
+        "c": "Aluminium > Magnesium > Iron > Zinc / एल्युमीनियम > मैग्नीशियम > लोहा > जस्ता",
+        "d": "Zinc > Iron > Magnesium > Aluminium / जस्ता > लोहा > मैग्नीशियम > एल्युमीनियम"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nOption (a) reflects the correct decreasing order of reactivity among these metals: magnesium is the most reactive, followed by aluminium, then zinc, and iron is the least reactive of the four.\n\n📖 हिंदी स्पष्टीकरण:\nदिए गए विकल्पों में (a) इन धातुओं की अभिक्रियाशीलता का सही घटता क्रम है: मैग्नीशियम सबसे अधिक क्रियाशील है, उसके बाद एल्युमीनियम, फिर जस्ता और इन चारों में लोहा सबसे कम क्रियाशील है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Assertion (A): Aluminium is used to make aircraft bodies.\nकथन (A): हवाई जहाज की बॉडी बनाने के लिए एल्युमीनियम का उपयोग किया जाता है।\nReason (R): Aluminium is light, strong and resistant to corrosion.\nकारण (R): एल्युमीनियम हल्का, मजबूत और संक्षारण‑प्रतिरोधी होता है।",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation / A और R दोनों सही हैं और R सही व्याख्या है।",
+        "b": "Both A and R are true but R is not correct / A और R दोनों सही हैं लेकिन R सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true and R explains A. Aluminium alloys such as duralumin are preferred in aircraft because they are light, yet strong and highly resistant to corrosion, giving a high strength‑to‑weight ratio.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की सही व्याख्या करता है। ड्यूरालुमिन जैसी एल्युमीनियम मिश्रधातुएँ हल्की होने के साथ‑साथ मजबूत और संक्षारण‑रोधी होती हैं, इसलिए हवाई जहाजों की बॉडी बनाने के लिए इनका प्रयोग किया जाता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Stainless steel is an alloy of Iron with:\nस्टेनलेस स्टील लोहे की किसके साथ मिश्रधातु है?",
+      "options": {
+        "a": "Nickel and Chromium / निकल और क्रोमियम",
+        "b": "Copper and Zinc / ताँबा और जस्ता",
+        "c": "Lead and Tin / सीसा और टिन",
+        "d": "Magnesium and Aluminium / मैग्नीशियम और एल्युमीनियम"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAdding nickel and chromium to iron produces stainless steel, which is hard, tough and resists rusting even in moist conditions.\n\n📖 हिंदी स्पष्टीकरण:\nलोहे में निकल और क्रोमियम मिलाने से स्टेनलेस स्टील बनता है, जो कठोर, मज़बूत होता है और नमी की उपस्थिति में भी जंग नहीं पकड़ता।"
+    },
+    {
+      "q_num": 25,
+      "question": "Statement I: Ionic compounds are generally soluble in water.\nStatement II: Ionic compounds are insoluble in petrol or kerosene.\nकथन I: आयनिक यौगिक आमतौर पर पानी में घुलनशील होते हैं।\nकथन II: आयनिक यौगिक पेट्रोल या मिट्टी के तेल में अघुलनशील होते हैं।",
+      "options": {
+        "a": "Both statements are correct / दोनों कथन सही हैं।",
+        "b": "Both statements are incorrect / दोनों कथन गलत हैं।",
+        "c": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
+        "d": "Statement I is incorrect, II is correct / कथन I गलत है, II सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth statements are correct. Ionic compounds dissolve in polar solvents like water but remain insoluble in non‑polar solvents like petrol or kerosene.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। आयनिक यौगिक पानी जैसे ध्रुवीय विलायकों में घुल जाते हैं, लेकिन पेट्रोल या मिट्टी के तेल जैसे अध्रुवीय विलायकों में सामान्यतः अघुलनशील रहते हैं।"
+    }
+  ]
+}

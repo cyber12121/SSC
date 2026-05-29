@@ -1,0 +1,908 @@
+{
+  "chapter_num": 18,
+  "chapter_title": "Physics Full Test",
+  "subject": "GK Full Tests",
+  "subject_id": "gk_full_tests",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Consider the following statements regarding Newton’s Laws of Motion:\n न्यूटन के गति के नियमों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Newton’s first law defines the concept of inertia. / न्यूटन का पहला नियम जड़त्व की अवधारणा को परिभाषित करता है।\n (b) Newton’s second law provides a measure of force. / न्यूटन का दूसरा नियम बल का माप प्रदान करता है।\n (c) Newton’s third law states that action and reaction act on the same body. / न्यूटन का तीसरा नियम कहता है कि क्रिया और प्रतिक्रिया एक ही वस्तु पर कार्य करते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAction and reaction always act on two different bodies, not the same one.\n\n📖 हिंदी स्पष्टीकरण:\nक्रिया और प्रतिक्रिया हमेशा दो अलग-अलग निकायों पर कार्य करते हैं, एक ही पर नहीं।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which of the following statements about Surface Tension is correct?\n पृष्ठ तनाव (Surface Tension) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "It increases with an increase in temperature. / तापमान में वृद्धि के साथ यह बढ़ता है।",
+        "b": "It is responsible for the spherical shape of rain drops. / यह वर्षा की बूंदों के गोलाकार आकार के लिए जिम्मेदार है।",
+        "c": "It is a molecular property of gases. / यह गैसों का एक आणविक गुण है।",
+        "d": "Addition of detergents increases the surface tension of water. / डिटर्जेंट मिलाने से पानी का पृष्ठ तनाव बढ़ जाता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSurface tension acts to minimize the surface area, leading to spherical shapes. It decreases with temperature.\n\n📖 हिंदी स्पष्टीकरण:\nपृष्ठ तनाव सतह क्षेत्र को कम करने का कार्य करता है, जिससे आकार गोलाकार हो जाता है। तापमान के साथ यह घटता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Consider the following statements regarding Sound Waves:\n ध्वनि तरंगों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Sound waves are longitudinal mechanical waves. / ध्वनि तरंगें अनुदैर्ध्य यांत्रिक तरंगें हैं।\n (b) The speed of sound is maximum in vacuum. / निर्वात में ध्वनि की गति अधिकतम होती है।\n (c) Speed of sound increases with increase in humidity. / आर्द्रता बढ़ने के साथ ध्वनि की गति बढ़ जाती है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSound cannot travel in a vacuum. Speed of sound is higher in moist air because moist air is less dense than dry air.\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि निर्वात में गमन नहीं कर सकती। नम हवा में ध्वनि की गति अधिक होती है क्योंकि नम हवा शुष्क हवा की तुलना में कम घनी होती है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Total Internal Reflection (TIR) occurs when light travels from:\n पूर्ण आंतरिक परावर्तन (TIR) तब होता है जब प्रकाश गमन करता है:",
+      "options": {
+        "a": "Rarer medium to denser medium at any angle. / किसी भी कोण पर विरल माध्यम से सघन माध्यम में।",
+        "b": "Denser medium to rarer medium with angle of incidence greater than critical angle. / क्रांतिक कोण से अधिक आपतन कोण के साथ सघन माध्यम से विरल माध्यम में।",
+        "c": "Rarer medium to denser medium with angle of incidence less than critical angle. / क्रांतिक कोण से कम आपतन कोण के साथ विरल माध्यम से सघन माध्यम में।",
+        "d": "One medium to another with the same refractive index. / समान अपवर्तनांक वाले एक माध्यम से दूसरे माध्यम में।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nFor TIR, light must move from denser to rarer medium and the angle of incidence must exceed the critical angle.\n\n📖 हिंदी स्पष्टीकरण:\nTIR के लिए, प्रकाश को सघन से विरल माध्यम में जाना चाहिए और आपतन कोण क्रांतिक कोण से अधिक होना चाहिए।"
+    },
+    {
+      "q_num": 5,
+      "question": "Consider the following statements regarding Archimedes' Principle:\n आर्किमिडीज के सिद्धांत के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The buoyant force depends on the density of the fluid. / उत्प्लावक बल द्रव के घनत्व पर निर्भर करता है।\n (b) The buoyant force depends on the mass of the object submerged. / उत्प्लावक बल डूबी हुई वस्तु के द्रव्यमान पर निर्भर करता है।\n (c) An object floats if it displaces a weight of fluid equal to its own weight. / कोई वस्तु तैरती है यदि वह अपने स्वयं के वजन के बराबर द्रव के वजन को विस्थापित करती है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "options": {
+        "a": "a only / केवल a",
+        "b": "a and c / a और c",
+        "c": "b and c / b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBuoyant force depends on the volume of the submerged part and density of the fluid, not the object's mass.\n\n📖 हिंदी स्पष्टीकरण:\nउत्प्लावक बल डूबे हुए हिस्से के आयतन और द्रव के घनत्व पर निर्भर करता है, वस्तु के द्रव्यमान पर नहीं।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following is correct about the 'Critical Mass' in a nuclear reaction?\n परमाणु प्रतिक्रिया में 'क्रांतिक द्रव्यमान' (Critical Mass) के बारे में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It is the minimum mass required for a self-sustained chain reaction. / यह स्व-स्थायी श्रृंखला प्रतिक्रिया के लिए आवश्यक न्यूनतम द्रव्यमान है।",
+        "b": "It is the mass at which an element becomes stable. / यह वह द्रव्यमान है जिस पर कोई तत्व स्थिर हो जाता है।",
+        "c": "It is the maximum mass a star can have before becoming a black hole. / यह वह अधिकतम द्रव्यमान है जो एक तारा ब्लैक होल बनने से पहले रख सकता है।",
+        "d": "It is the mass of electrons in a neutral atom. / यह एक तटस्थ परमाणु में इलेक्ट्रॉनों का द्रव्यमान है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCritical mass is the smallest amount of fissile material needed for a sustained nuclear chain reaction.\n\n📖 हिंदी स्पष्टीकरण:\nक्रांतिक द्रव्यमान निरंतर परमाणु श्रृंखला प्रतिक्रिया के लिए आवश्यक विखंडनीय सामग्री की न्यूनतम मात्रा है।"
+    },
+    {
+      "q_num": 7,
+      "question": "Consider the following statements about Viscosity:\n श्यानता (Viscosity) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Viscosity of liquids decreases with increase in temperature. / तापमान बढ़ने के साथ द्रवों की श्यानता घटती है।\n (b) Viscosity of gases increases with increase in temperature. / तापमान बढ़ने के साथ गैसों की श्यानता बढ़ती है।\n (c) It is the internal friction between layers of a fluid. / यह किसी द्रव की परतों के बीच का आंतरिक घर्षण है।\n Which of the statements given above are correct? / ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nLiquids lose viscosity when heated, while gas molecules collide more frequently, increasing their viscosity.\n\n📖 हिंदी स्पष्टीकरण:\nगर्म करने पर द्रवों की श्यानता कम हो जाती है, जबकि गैस के अणु अधिक बार टकराते हैं, जिससे उनकी श्यानता बढ़ जाती है।"
+    },
+    {
+      "q_num": 8,
+      "question": "A person is sitting in a car which is at rest. The reaction from the road at each of the four wheels of the car is 'R'. When the car runs on a straight level road, how will the reaction at the front wheels change?\n एक व्यक्ति कार में बैठा है जो स्थिर है। कार के चारों पहियों में से प्रत्येक पर सड़क से प्रतिक्रिया 'R' है। जब कार एक सीधी समतल सड़क पर चलती है, तो अगले पहियों पर प्रतिक्रिया कैसे बदलेगी?",
+      "options": {
+        "a": "It will be more than R / यह R से अधिक होगी",
+        "b": "It will be less than R / यह R से कम होगी",
+        "c": "It will remain equal to R / यह R के बराबर रहेगी",
+        "d": "It depends on the speed of the car / यह कार की गति पर निर्भर करता है"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDue to the aerodynamic lift and shifting of weight during acceleration, the reaction at front wheels decreases.\n\n📖 हिंदी स्पष्टीकरण:\nवायुगतिकीय उत्थान (aerodynamic lift) और त्वरण के दौरान वजन के स्थानांतरण के कारण, अगले पहियों पर प्रतिक्रिया कम हो जाती है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Consider the following statements regarding Electromagnetic Waves:\n विद्युत चुंबकीय तरंगों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They do not require a material medium for propagation. / उन्हें संचरण के लिए किसी भौतिक माध्यम की आवश्यकता नहीं होती है।\n (b) They are longitudinal in nature. / वे प्रकृति में अनुदैर्ध्य होती हैं।\n (c) X-rays have shorter wavelength than Radio waves. / एक्स-रे की तरंग दैर्ध्य रेडियो तरंगों की तुलना में कम होती है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "a and c / a और c",
+        "c": "b and c / b और c",
+        "d": "c only / केवल c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEM waves are transverse, not longitudinal. X-rays are high frequency and low wavelength compared to Radio waves.\n\n📖 हिंदी स्पष्टीकरण:\nविद्युत चुंबकीय तरंगें अनुप्रस्थ होती हैं, अनुदैर्ध्य नहीं। रेडियो तरंगों की तुलना में एक्स-रे उच्च आवृत्ति और कम तरंग दैर्ध्य वाली होती हैं।"
+    },
+    {
+      "q_num": 10,
+      "question": "What happens to the centripetal force of an object moving in a circle if its velocity is doubled?\n यदि किसी वृत्त में घूम रही वस्तु का वेग दोगुना कर दिया जाए तो उसके अभिकेंद्र बल (Centripetal force) का क्या होगा?",
+      "options": {
+        "a": "It remains the same / यह समान रहता है",
+        "b": "It becomes double / यह दोगुना हो जाता है",
+        "c": "It becomes four times / यह चार गुना हो जाता है",
+        "d": "It becomes half / यह आधा हो जाता है"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCentripetal force F = mv² / r. If v is doubled, v² becomes 4 times.\n\n📖 हिंदी स्पष्टीकरण:\nअभिकेंद्र बल F = mv² / r। यदि v को दोगुना किया जाता है, तो v² 4 गुना हो जाता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Consider the following statements regarding Capillarity:\n केशिकत्व (Capillarity) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is caused by the combined effect of cohesion and adhesion. / यह ससंजन और आसंजन के संयुक्त प्रभाव के कारण होता है।\n (b) If the contact angle is less than 90°, the liquid level rises in the tube. / यदि संपर्क कोण 90° से कम है, तो ट्यूब में द्रव का स्तर बढ़ जाता है।\n (c) Water in a capillary tube forms a convex meniscus. / केशिकानली में पानी एक उत्तल मेनिस्कस (convex meniscus) बनाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nWater forms a concave meniscus because it wets the surface. Mercury forms a convex meniscus.\n\n📖 हिंदी स्पष्टीकरण:\nपानी एक अवतल मेनिस्कस बनाता है क्योंकि यह सतह को भिगोता है। पारा उत्तल मेनिस्कस बनाता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "Which of the following statements is correct regarding the 'Escape Velocity' of Earth?\n पृथ्वी के 'पलायन वेग' (Escape Velocity) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "It depends on the mass of the object being launched. / यह प्रक्षेपित की जा रही वस्तु के द्रव्यमान पर निर्भर करता है।",
+        "b": "It is independent of the direction of projection. / यह प्रक्षेपण की दिशा से स्वतंत्र है।",
+        "c": "It is approximately 9.8 km/s. / यह लगभग 9.8 किमी/सेकंड है।",
+        "d": "It increases with the height of the launch station. / यह लॉन्च स्टेशन की ऊंचाई के साथ बढ़ता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEscape velocity ve = √ (2GM / R) is independent of the object's mass and direction. For Earth, it is 11.2 km/s.\n\n📖 हिंदी स्पष्टीकरण:\nपलायन वेग ve = √ (2GM / R) वस्तु के द्रव्यमान और दिशा से स्वतंत्र है। पृथ्वी के लिए, यह 11.2 किमी/सेकंड है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Consider the following statements regarding Convex Mirrors:\n उत्तल दर्पणों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They always form a virtual and diminished image. / वे हमेशा एक आभासी और छोटा प्रतिबिंब बनाते हैं।\n (b) They have a narrower field of view compared to plane mirrors. / समतल दर्पणों की तुलना में उनका दृष्टि क्षेत्र संकरा होता है।\n (c) They are used as rear-view mirrors in vehicles. / इनका उपयोग वाहनों में रियर-व्यू मिरर के रूप में किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a only / केवल a"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nConvex mirrors provide a wider field of view, which is why they are preferred for vehicles.\n\n📖 हिंदी स्पष्टीकरण:\nउत्तल दर्पण व्यापक दृष्टि क्षेत्र प्रदान करते हैं, यही कारण है कि उन्हें वाहनों के लिए पसंद किया जाता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "The phenomenon of 'Mirage' is a result of:\n 'मृगतृष्णा' (Mirage) की घटना किसका परिणाम है?",
+      "options": {
+        "a": "Only Refraction of light / केवल प्रकाश का अपवर्तन",
+        "b": "Only Total Internal Reflection / केवल पूर्ण आंतरिक परावर्तन",
+        "c": "Refraction and Total Internal Reflection / अपवर्तन और पूर्ण आंतरिक परावर्तन",
+        "d": "Diffraction of light / प्रकाश का विवर्तन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMirages occur due to the gradual refraction of light in air layers of different densities followed by TIR.\n\n📖 हिंदी स्पष्टीकरण:\nमृगतृष्णा अलग-अलग घनत्व वाली हवा की परतों में प्रकाश के क्रमिक अपवर्तन और उसके बाद होने वाले TIR के कारण होती है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Consider the following statements regarding Resistivity:\n प्रतिरोधकता (Resistivity) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It depends on the dimensions (length/area) of the material. / यह सामग्री के आयामों (लंबाई/क्षेत्रफल) पर निर्भर करता है।\n (b) It depends on the nature of the material and temperature. / यह सामग्री की प्रकृति और तापमान पर निर्भर करता है।\n (c) Its S.I. unit is Ohm-meter(ִΩ⋅m). / इसकी S.I. इकाई ओम-मीटर (Ω⋅m) है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nResistance depends on dimensions, but resistivity is an intrinsic property that depends only on material and temperature.\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिरोध आयामों पर निर्भर करता है, लेकिन प्रतिरोधकता एक आंतरिक गुण है जो केवल सामग्री और तापमान पर निर्भर करती है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements regarding Gravitational Force:\n गुरुत्वाकर्षण बल के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is always attractive in nature. / यह प्रकृति में हमेशा आकर्षक होता है।\n (b) It is the strongest force in nature. / यह प्रकृति का सबसे प्रबल बल है।\n (c) It follows the inverse square law. / यह व्युत्क्रम वर्ग नियम (inverse square law) का पालन करता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nGravitational force is the weakest of the four fundamental forces. Strong Nuclear Force is the strongest.\n\n📖 हिंदी स्पष्टीकरण:\nगुरुत्वाकर्षण बल चार मौलिक बलों में सबसे कमजोर है। प्रबल नाभिकीय बल सबसे मजबूत होता है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following statements about 'Work' is correct?\n 'कार्य' के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "Work done is always positive. / किया गया कार्य हमेशा धनात्मक होता है।",
+        "b": "It is a vector quantity. / यह एक सदिश राशि है।",
+        "c": "No work is done when the force is perpendicular to the displacement. / जब बल विस्थापन के लंबवत होता है तो कोई कार्य नहीं होता है।",
+        "d": "Its S.I. unit is Watt. / इसकी S.I. इकाई वाट (Watt) है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nW = Fd cos(θ). If θ = 90° (perpendicular), cos(90°) = 0, so work done is zero.\nW = Fd cos(θ)\n\n📖 हिंदी स्पष्टीकरण:\n। यदि θ = 90° (लंबवत) है, तो cos(90°) = 0, इसलिए किया गया कार्य शून्य होता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Consider the following statements regarding a Simple Pendulum:\n एक सरल लोलक (Simple Pendulum) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Its time period depends on the mass of the bob. / इसका आवर्तकाल गोलक (bob) के द्रव्यमान पर निर्भर करता है।\n (b) Its time period is directly proportional to the square root of its length. / इसका आवर्तकाल इसकी लंबाई के वर्गमूल के सीधे आनुपातिक होता है।\n (c) If taken to the Moon, its time period will increase. / यदि इसे चंद्रमा पर ले जाया जाए, तो इसका आवर्तकाल बढ़ जाएगा।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTime period T = 2π√(l/g). It is independent of mass. On the Moon, g decreases, so T increases.\n\n📖 हिंदी स्पष्टीकरण:\nआवर्तकाल T = 2π√(l/g)। यह द्रव्यमान से स्वतंत्र है। चंद्रमा पर g कम हो जाता है, इसलिए T बढ़ जाता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "At what temperature are the Celsius and Fahrenheit scales equal?\n किस तापमान पर सेल्सियस और फारेनहाइट स्केल समान होते हैं?",
+      "options": {
+        "a": "40°",
+        "b": "-40°",
+        "c": "37°",
+        "d": "0°"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nUsing the formula C/5 = (F - 32)/9, both scales meet at -40°.\n\n📖 हिंदी स्पष्टीकरण:\nसूत्र C/5 = (F - 32)/9 का उपयोग करते हुए, दोनों स्केल -40° पर मिलते हैं।"
+    },
+    {
+      "q_num": 20,
+      "question": "Consider the following statements regarding Nuclear Fusion:\n परमाणु संलयन (Nuclear Fusion) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is the source of energy in the Sun and stars. / यह सूर्य और तारों में ऊर्जा का स्रोत है।\n (b) It requires very high temperature and pressure. / इसके लिए बहुत उच्च तापमान और दबाव की आवश्यकता होती है।\n (c) Hydrogen bomb is based on the principle of nuclear fusion. / हाइड्रोजन बम परमाणु संलयन के सिद्धांत पर आधारित है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "b and c / केवल b और c",
+        "c": "a and c / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are correct. Fusion involves joining light nuclei like Hydrogen to form Helium.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। संलयन में हीलियम बनाने के लिए हाइड्रोजन जैसे हल्के नाभिकों को जोड़ना शामिल है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which of the following statements is INCORRECT regarding 'Ohm's Law'?\n 'ओम के नियम' के संबंध में निम्नलिखित में से कौन-सा कथन गलत है?",
+      "options": {
+        "a": "It states that V = IR. / यह बताता है कि V = IR।",
+        "b": "It is applicable to all types of conductors including semiconductors. / यह अर्धचालकों (semiconductors) सहित सभी प्रकार के चालकों पर लागू होता है।",
+        "c": "The V-I graph for an ohmic conductor is a straight line. / एक ओमीय चालक के लिए V-I ग्राफ एक सीधी रेखा होती है।",
+        "d": "It relates potential difference, current, and resistance. / यह विभवांतर, धारा और प्रतिरोध के बीच संबंध बताता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOhm's Law is not applicable to non-ohmic conductors like semiconductors, vacuum tubes, or transistors.\n\n📖 हिंदी स्पष्टीकरण:\nओम का नियम अर्धचालक, वैक्यूम ट्यूब या ट्रांजिस्टर जैसे गैर-ओमीय चालकों पर लागू नहीं होता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Consider the following statements regarding Transformers:\n ट्रांसफॉर्मर के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They work on the principle of Mutual Induction. / वे अन्योन्य प्रेरण (Mutual Induction) के सिद्धांत पर कार्य करते हैं।\n (b) They can be used to step up or step down DC voltage. / इनका उपयोग DC वोल्टेज को बढ़ाने या घटाने के लिए किया जा सकता है।\n (c) They are used to change the voltage of AC current. / इनका उपयोग AC धारा के वोल्टेज को बदलने के लिए किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTransformers only work with Alternating Current (AC), not Direct Current (DC).\n\n📖 हिंदी स्पष्टीकरण:\nट्रांसफॉर्मर केवल प्रत्यावर्ती धारा (AC) के साथ काम करते हैं, दिष्ट धारा (DC) के साथ नहीं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which color of light deviates the most when passing through a prism?\n प्रिज्म से गुजरते समय प्रकाश का कौन-सा रंग सबसे अधिक विचलित (deviate) होता है?",
+      "options": {
+        "a": "Red / लाल",
+        "b": "Yellow / पीला",
+        "c": "Green / हरा",
+        "d": "Violet / बैंगनी"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nViolet light has the shortest wavelength and highest frequency, so it deviates the most. Red deviates the least.\n\n📖 हिंदी स्पष्टीकरण:\nबैंगनी प्रकाश की तरंग दैर्ध्य सबसे कम और आवृत्ति सबसे अधिक होती है, इसलिए यह सबसे अधिक विचलित होता है। लाल सबसे कम विचलित होता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Consider the following statements regarding Friction:\n घर्षण (Friction) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Static friction is always greater than kinetic friction. / स्थैतिक घर्षण हमेशा गतिज घर्षण से अधिक होता है।\n (b) Friction depends on the area of contact. / घर्षण संपर्क के क्षेत्र (area of contact) पर निर्भर करता है।\n (c) Lubrication is used to reduce friction. / घर्षण को कम करने के लिए स्नेहन (Lubrication) का उपयोग किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFriction is independent of the area of contact but depends on the nature of the surfaces.\n\n📖 हिंदी स्पष्टीकरण:\nघर्षण संपर्क के क्षेत्र से स्वतंत्र होता है लेकिन सतहों की प्रकृति पर निर्भर करता है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which instrument is used to measure Atmospheric Pressure?\n वायुमंडलीय दाब मापने के लिए किस यंत्र का उपयोग किया जाता है?",
+      "options": {
+        "a": "Hydrometer / हाइड्रोमीटर",
+        "b": "Barometer / बैरोमीटर",
+        "c": "Hygrometer / हाइग्रोमीटर",
+        "d": "Altimeter / अल्टीमीटर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBarometer is used for pressure. Hygrometer is for humidity, and Hydrometer is for relative density of liquids.\n\n📖 हिंदी स्पष्टीकरण:\nबैरोमीटर का उपयोग दाब के लिए किया जाता है। हाइग्रोमीटर आर्द्रता के लिए है, और हाइड्रोमीटर तरल पदार्थों के सापेक्ष घनत्व के लिए है।"
+    },
+    {
+      "q_num": 26,
+      "question": "Consider the following statements regarding Ultrasound Waves:\n अल्ट्रासाउंड तरंगों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Their frequency is greater than 20,000 Hz. / इनकी आवृत्ति 20,000 हर्ट्ज से अधिक होती है।\n (b) They are used in SONAR to measure ocean depth. / इनका उपयोग समुद्र की गहराई मापने के लिए सोनार (SONAR) में किया जाता है।\n (c) Bats use ultrasound for navigation. / चमगादड़ नेविगेशन के लिए अल्ट्रासाउंड का उपयोग करते हैं।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "a, b and c / a, b और c",
+        "c": "b and c only / केवल b और c",
+        "d": "a and c only / केवल a और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAll statements are correct regarding ultrasonic waves.\n\n📖 हिंदी स्पष्टीकरण:\nअल्ट्रासोनिक तरंगों के संबंध में सभी कथन सही हैं।"
+    },
+    {
+      "q_num": 27,
+      "question": "The working of a Rocket is based on the principle of conservation of:\n रॉकेट का कार्य करना किसके संरक्षण के सिद्धांत पर आधारित है?",
+      "options": {
+        "a": "Mass / द्रव्यमान",
+        "b": "Charge / आवेश",
+        "c": "Linear Momentum / रेखीय संवेग",
+        "d": "Angular Momentum / कोणीय संवेग"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRocket propulsion follows Newton's Third Law and the law of conservation of linear momentum.\n\n📖 हिंदी स्पष्टीकरण:\nरॉकेट प्रणोदन न्यूटन के तीसरे नियम और रेखीय संवेग संरक्षण के नियम का पालन करता है।"
+    },
+    {
+      "q_num": 28,
+      "question": "Consider the following statements regarding Heat Transfer:\n ऊष्मा स्थानांतरण (Heat Transfer) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Conduction occurs mainly in solids. / चालन (Conduction) मुख्य रूप से ठोस पदार्थों में होता है।\n (b) Convection requires a material medium. / संवहन (Convection) के लिए भौतिक माध्यम की आवश्यकता होती है।\n (c) Radiation is the fastest mode of heat transfer and can occur in vacuum. / विकिरण (Radiation) ऊष्मा स्थानांतरण का सबसे तेज़ तरीका है और निर्वात में हो सकता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a, b and c / a, b और c",
+        "d": "a and c / a और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nConduction and convection need a medium, while radiation (EM waves) travels at the speed of light.\n\n📖 हिंदी स्पष्टीकरण:\nचालन और संवहन के लिए माध्यम की आवश्यकता होती है, जबकि विकिरण (EM तरंगें) प्रकाश की गति से चलती हैं।"
+    },
+    {
+      "q_num": 29,
+      "question": "What happens to the weight of an object when it is taken from the Equator to the Poles?\n जब किसी वस्तु को भूमध्य रेखा से ध्रुवों पर ले जाया जाता है तो उसके भार का क्या होता है?",
+      "options": {
+        "a": "It decreases / यह घटता है",
+        "b": "It increases / यह बढ़ता है",
+        "c": "It remains the same / यह समान रहता है",
+        "d": "It becomes zero / यह शून्य हो जाता है"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAcceleration due to gravity (g) is maximum at poles and minimum at the equator. Weight W = mg.\n\n📖 हिंदी स्पष्टीकरण:\nगुरुत्वाकर्षण के कारण त्वरण (g) ध्रुवों पर अधिकतम और भूमध्य रेखा पर न्यूनतम होता है। भार W = mg।"
+    },
+    {
+      "q_num": 30,
+      "question": "Consider the following statements regarding Semiconductors:\n अर्धचालकों (Semiconductors) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Their conductivity increases with an increase in temperature. / तापमान बढ़ने के साथ इनकी चालकता बढ़ती है।\n (b) Silicon and Germanium are examples of semiconductors. / सिलिकॉन और जर्मेनियम अर्धचालकों के उदाहरण हैं।\n (c) Doping is the process of adding impurities to increase conductivity. / डोपिंग चालकता बढ़ाने के लिए अशुद्धियाँ मिलाने की प्रक्रिया है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nSemiconductors have a negative temperature coefficient of resistance, meaning resistance decreases and conductivity increases with heat.\n\n📖 हिंदी स्पष्टीकरण:\nअर्धचालकों में प्रतिरोध का ऋणात्मक तापमान गुणांक होता है, जिसका अर्थ है कि गर्मी के साथ प्रतिरोध घटता है और चालकता बढ़ती है।"
+    },
+    {
+      "q_num": 31,
+      "question": "Consider the following statements regarding Radioactivity:\n रेडियोधर्मिता (Radioactivity) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Alpha particles have the highest ionizing power. / अल्फा कणों में सबसे अधिक आयनकारी शक्ति होती है।\n (b) Gamma rays have the highest penetrating power. / गामा किरणों में सबसे अधिक भेदन क्षमता होती है।\n (c) Beta particles are positively charged. / बीटा कण धनात्मक रूप से आवेशित होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBeta particles are fast-moving electrons, hence they are negatively charged.\n\n📖 हिंदी स्पष्टीकरण:\nबीटा कण तेजी से चलने वाले इलेक्ट्रॉन होते हैं, इसलिए वे ऋणात्मक रूप से आवेशित होते हैं।"
+    },
+    {
+      "q_num": 32,
+      "question": "Which of the following is correct regarding the 'Power of a Lens'?\n 'लेंस की शक्ति' के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It is measured in Diopters. / इसे डायोप्टर में मापा जाता है।",
+        "b": "It is directly proportional to the focal length. / यह फोकल लंबाई के सीधे आनुपातिक है।",
+        "c": "Concave lenses have positive power. / अवतल लेंस में धनात्मक शक्ति होती है।",
+        "d": "Convex lenses have negative power. / उत्तल लेंस में ऋणात्मक शक्ति होती है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nPower P = 1/f. It is inversely proportional to focal length. Convex lenses have positive power, and concave lenses have negative power.\n\n📖 हिंदी स्पष्टीकरण:\nशक्ति P = 1/f । यह फोकल लंबाई के व्युत्क्रमानुपाती है। उत्तल लेंस में धनात्मक शक्ति और अवतल लेंस में ऋणात्मक शक्ति होती है।"
+    },
+    {
+      "q_num": 33,
+      "question": "Consider the following statements about Magnetic Lines of Force:\n चुंबकीय बल रेखाओं के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They form closed continuous loops. / वे बंद निरंतर लूप बनाते हैं।\n (b) They intersect each other at the poles. / वे ध्रुवों पर एक-दूसरे को काटते हैं।\n (c) Outside the magnet, they move from North pole to South pole. / चुंबक के बाहर, वे उत्तरी ध्रुव से दक्षिणी ध्रुव की ओर चलते हैं।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMagnetic field lines never intersect each other at any point.\n\n📖 हिंदी स्पष्टीकरण:\nचुंबकीय क्षेत्र रेखाएं कभी भी किसी बिंदु पर एक-दूसरे को नहीं काटती हैं।"
+    },
+    {
+      "q_num": 34,
+      "question": "Which of the following statements about 'Isotopes' is correct?\n 'समस्थानिक' (Isotopes) के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "They have the same number of neutrons but different atomic numbers. / उनमें न्यूट्रॉन की संख्या समान लेकिन परमाणु क्रमांक भिन्न होते हैं।",
+        "b": "They have the same atomic number but different mass numbers. / उनका परमाणु क्रमांक समान लेकिन द्रव्यमान संख्या भिन्न होती है।",
+        "c": "They have different chemical properties. / उनके रासायनिक गुण भिन्न होते हैं।",
+        "d": "Carbon-12 and Carbon-14 are not isotopes. / कार्बन-12 और कार्बन-14 समस्थानिक नहीं हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIsotopes have the same number of protons (atomic number) but different number of neutrons, leading to different mass numbers.\n\n📖 हिंदी स्पष्टीकरण:\nसमस्थानिकों में प्रोटॉन की संख्या (परमाणु क्रमांक) समान होती है लेकिन न्यूट्रॉन की संख्या भिन्न होती है, जिससे द्रव्यमान संख्या भिन्न हो जाती है।"
+    },
+    {
+      "q_num": 35,
+      "question": "Consider the following statements regarding Bernoulli's Principle:\n बरनौली के सिद्धांत के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is based on the law of conservation of energy. / यह ऊर्जा संरक्षण के नियम पर आधारित है\n (b) As the speed of a moving fluid increases, its pressure decreases. / जैसे-जैसे गतिमान द्रव की गति बढ़ती है, उसका दाब घटता है।\n (c) It explains the 'lift' of an airplane wing. / यह हवाई जहाज के पंख के 'लिफ्ट' की व्याख्या करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "b and c / केवल b और c",
+        "c": "a, b and c / a, b और c",
+        "d": "c only / केवल c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBernoulli's principle states that for an incompressible fluid, an increase in velocity occurs simultaneously with a decrease in pressure.\n\n📖 हिंदी स्पष्टीकरण:\nबरनौली का सिद्धांत बताता है कि एक असम्पीडित द्रव के लिए, वेग में वृद्धि दबाव में कमी के साथ-साथ होती है।"
+    },
+    {
+      "q_num": 36,
+      "question": "Which of the following is correct regarding 'Myopia' (Short-sightedness)?\n 'मायोपिया' (निकट दृष्टिदोष) के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "The person cannot see nearby objects clearly. / व्यक्ति पास की वस्तुओं को स्पष्ट रूप से नहीं देख सकता है।",
+        "b": "The image is formed behind the retina. / प्रतिबिंब रेटिना के पीछे बनता है।",
+        "c": "It is corrected using a Concave lens. / इसे अवतल लेंस का उपयोग करके ठीक किया जाता है।",
+        "d": "It is corrected using a Convex lens. / इसे उत्तल लेंस का उपयोग करके ठीक किया जाता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn myopia, the eyeball is elongated and the image forms in front of the retina. A diverging (concave) lens is needed for correction.\n\n📖 हिंदी स्पष्टीकरण:\nमायोपिया में, नेत्रगोलक लंबा हो जाता है और प्रतिबिंब रेटिना के सामने बनता है। सुधार के लिए अपसारी (अवतल) लेंस की आवश्यकता होती है।"
+    },
+    {
+      "q_num": 37,
+      "question": "Consider the following statements regarding Heat and Temperature:\n ऊष्मा और तापमान के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Heat is a form of energy. / ऊष्मा ऊर्जा का एक रूप है।\n (b) Temperature is the degree of hotness or coldness. / तापमान गर्मी या ठंडक का स्तर है।\n (c) Heat flows from a body at lower temperature to a body at higher temperature spontaneously. / ऊष्मा कम तापमान वाले शरीर से उच्च तापमान वाले शरीर की ओर स्वतः प्रवाहित होती है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "a and c only / केवल a और c",
+        "c": "a, b and c / a, b और c",
+        "d": "b only / केवल b"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAccording to the Second Law of Thermodynamics, heat always flows from a higher temperature to a lower temperature spontaneously.\n\n📖 हिंदी स्पष्टीकरण:\nऊष्मागतिकी के दूसरे नियम के अनुसार, ऊष्मा हमेशा उच्च तापमान से निम्न तापमान की ओर स्वतः प्रवाहित होती है।"
+    },
+    {
+      "q_num": 38,
+      "question": "In which medium does light travel the slowest?\n प्रकाश किस माध्यम में सबसे धीमी गति से गमन करता है?",
+      "options": {
+        "a": "Vacuum / निर्वात",
+        "b": "Air / हवा",
+        "c": "Water / पानी",
+        "d": "Diamond / हीरा"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nSpeed of light is inversely proportional to the refractive index. Diamond has the highest refractive index (≈ 2.42), so speed is minimum.\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश की गति अपवर्तनांक के व्युत्क्रमानुपाती होती है। हीरे का अपवर्तनांक सबसे अधिक (≈ 2.42) होता है, इसलिए गति न्यूनतम होती है।"
+    },
+    {
+      "q_num": 39,
+      "question": "Consider the following statements regarding Kepler’s Laws:\n केपलर के नियमों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Planets move in elliptical orbits with the Sun at one focus. / ग्रह सूर्य के चारों ओर दीर्घवृत्ताकार कक्षाओं में घूमते हैं।\n (b) The square of the time period of a planet is proportional to the cube of its semi-major axis (T² ∝ R³). / ग्रह के आवर्तकाल का वर्ग उसके अर्ध-दीर्घ अक्ष के घन के आनुपातिक होता है।\n (c) A planet moves faster when it is closer to the Sun. / जब कोई ग्रह सूर्य के करीब होता है तो वह तेजी से चलता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "b and c / केवल b और c",
+        "c": "a and c / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are correct. These are Kepler's three laws of planetary motion.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। ये ग्रहों की गति के केपलर के तीन नियम हैं।"
+    },
+    {
+      "q_num": 40,
+      "question": "Which property of light causes the 'Blue color of the sky'?\n प्रकाश का कौन-सा गुण 'आकाश के नीले रंग' का कारण बनता है?",
+      "options": {
+        "a": "Dispersion / विक्षेपण",
+        "b": "Reflection / परावर्तन",
+        "c": "Scattering / प्रकीर्णन",
+        "d": "Refraction / अपवर्तन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRayleigh scattering causes shorter wavelengths (blue) to scatter more than longer wavelengths (red).\n\n📖 हिंदी स्पष्टीकरण:\nरेले प्रकीर्णन के कारण लंबी तरंग दैर्ध्य (लाल) की तुलना में छोटी तरंग दैर्ध्य (नीला) अधिक प्रकीर्णित होती है।"
+    },
+    {
+      "q_num": 41,
+      "question": "Consider the following statements regarding Photoelectric Effect:\n प्रकाश विद्युत प्रभाव (Photoelectric Effect) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It demonstrates the particle nature of light. / यह प्रकाश की कण प्रकृति को प्रदर्शित करता है।\n (b) Kinetic energy of emitted electrons depends on the intensity of light. / उत्सर्जित इलेक्ट्रॉनों की गतिज ऊर्जा प्रकाश की तीव्रता पर निर्भर करती है।\n (c) It was explained by Albert Einstein using the concept of Photons. / अल्बर्ट आइंस्टीन ने फोटॉन की अवधारणा का उपयोग करके इसकी व्याख्या की थी।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "a and c / केवल a और c",
+        "c": "b and c / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nKinetic energy of photoelectrons depends on the frequency of light, while the number of electrons (current) depends on intensity.\n\n📖 हिंदी स्पष्टीकरण:\nफोटोइलेक्ट्रॉनों की गतिज ऊर्जा प्रकाश की आवृत्ति पर निर्भर करती है, जबकि इलेक्ट्रॉनों की संख्या (धारा) तीव्रता पर निर्भर करती है।"
+    },
+    {
+      "q_num": 42,
+      "question": "Which of the following is an example of an 'Inelastic Collision'?\n निम्नलिखित में से कौन-सा 'अप्रत्यास्थ टक्कर' (Inelastic Collision) का उदाहरण है?",
+      "options": {
+        "a": "Collision between two billiard balls. / दो बिलियर्ड गेंदों के बीच टक्कर।",
+        "b": "A mud ball sticking to a wall after hitting it. / दीवार से टकराने के बाद मिट्टी की गेंद का उस पर चिपक जाना।",
+        "c": "Collision between gas molecules. / गैस के अणुओं के बीच टक्कर।",
+        "d": "None of the above. / उपरोक्त में से कोई नहीं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn a perfectly inelastic collision, kinetic energy is not conserved and the objects stick together.\n\n📖 हिंदी स्पष्टीकरण:\nएक पूर्णतः अप्रत्यास्थ टक्कर में, गतिज ऊर्जा संरक्षित नहीं रहती है और वस्तुएं आपस में चिपक जाती हैं।"
+    },
+    {
+      "q_num": 43,
+      "question": "Consider the following statements regarding Surface Tension and Capillarity:\n पृष्ठ तनाव और केशिकत्व के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Insects can walk on water due to surface tension. / कीट पृष्ठ तनाव के कारण पानी पर चल सकते हैं।\n (b) Capillary rise is zero in space (weightlessness). / अंतरिक्ष (भारहीनता) में केशिकत्व उत्थान शून्य होता है।\n (c) Hot soup is tastier because it has lower surface tension. / गर्म सूप अधिक स्वादिष्ट होता है क्योंकि इसका पृष्ठ तनाव कम होता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "a and c / केवल a और c",
+        "c": "b and c / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn weightlessness, g=0. Since capillary rise h = (2T cosθ) / (rρg), if g=0, h becomes infinite (the liquid fills the tube completely), not zero.\n\n📖 हिंदी स्पष्टीकरण:\nभारहीनता में, g=0। चूँकि केशिकत्व उत्थान h = (2T cosθ) / (rρg) है, यदि g=0 है, तो h अनंत हो जाता है (तरल ट्यूब को पूरी तरह भर देता है), शून्य नहीं।"
+    },
+    {
+      "q_num": 44,
+      "question": "The resistance of an ideal Ammeter and an ideal Voltmeter should be:\n एक आदर्श एमीटर (Ammeter) और एक आदर्श वोल्टमीटर (Voltmeter) का प्रतिरोध होना चाहिए:",
+      "options": {
+        "a": "Zero and Infinite respectively. / क्रमशः शून्य और अनंत।",
+        "b": "Infinite and Zero respectively. / क्रमशः अनंत और शून्य।",
+        "c": "Zero and Zero. / शून्य और शून्य।",
+        "d": "Infinite and Infinite. / अनंत और अनंत।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAn ideal ammeter should have zero resistance to not affect current, while a voltmeter should have infinite resistance to not draw any current.\n\n📖 हिंदी स्पष्टीकरण:\nएक आदर्श एमीटर में धारा को प्रभावित न करने के लिए शून्य प्रतिरोध होना चाहिए, जबकि वोल्टमीटर में कोई धारा न खींचने के लिए अनंत प्रतिरोध होना चाहिए।"
+    },
+    {
+      "q_num": 45,
+      "question": "Consider the following statements about Primary Colors of Light:\n प्रकाश के प्राथमिक रंगों (Primary Colors) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) The primary colors are Red, Green, and Blue. / प्राथमिक रंग लाल, हरा और नीला हैं।\n (b) Mixing all three primary colors of light produces Black. / प्रकाश के तीनों प्राथमिक रंगों को मिलाने से काला रंग बनता है।\n (c) Secondary colors are formed by mixing two primary colors. / दो प्राथमिक रंगों को मिलाने से द्वितीयक रंग बनते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "a and c / केवल a और c",
+        "c": "b and c / केवल b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMixing the three primary colors of light (Additive mixing) produces White light, not Black.\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश के तीन प्राथमिक रंगों को मिलाने (योगात्मक मिश्रण) से सफेद प्रकाश बनता है, काला नहीं।"
+    },
+    {
+      "q_num": 46,
+      "question": "Consider the following statements regarding Ideal Gases:\n आदर्श गैसों (Ideal Gases) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) There are no intermolecular forces of attraction between gas molecules. / गैस के अणुओं के बीच कोई अंतर-आणविक आकर्षण बल नहीं होता है।\n (b) The volume of the molecules is negligible compared to the total volume of the gas. / गैस के कुल आयतन की तुलना में अणुओं का आयतन नगण्य होता है।\n (c) Ideal gas behavior is observed at low temperature and high pressure. / निम्न तापमान और उच्च दबाव पर आदर्श गैस व्यवहार देखा जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nReal gases behave ideally at high temperature and low pressure.\n\n📖 हिंदी स्पष्टीकरण:\nवास्तविक गैसें उच्च तापमान और निम्न दबाव पर आदर्श रूप से व्यवहार करती हैं।"
+    },
+    {
+      "q_num": 47,
+      "question": "Which of the following is correct regarding a 'Fuse Wire' used in domestic circuits?\n घरेलू सर्किट में उपयोग किए जाने वाले 'फ्यूज वायर' के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It has high melting point and high resistance. / इसमें उच्च गलनांक और उच्च प्रतिरोध होता है।",
+        "b": "It has low melting point and high resistance. / इसमें निम्न गलनांक और उच्च प्रतिरोध होता है।",
+        "c": "It is connected in parallel to the circuit. / यह सर्किट के समानांतर (parallel) जुड़ा होता है।",
+        "d": "It is made of pure copper. / यह शुद्ध तांबे का बना होता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA fuse wire must have a low melting point so that it melts during overcurrent. It has high resistance to produce sufficient heat.\n\n📖 हिंदी स्पष्टीकरण:\nफ्यूज तार का गलनांक कम होना चाहिए ताकि अत्यधिक धारा के दौरान वह पिघल जाए। पर्याप्त गर्मी पैदा करने के लिए इसमें उच्च प्रतिरोध होता है।"
+    },
+    {
+      "q_num": 48,
+      "question": "Consider the following statements regarding Heat Engines:\n ऊष्मा इंजनों (Heat Engines) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) No heat engine can have 100% efficiency. / किसी भी ऊष्मा इंजन की दक्षता 100% नहीं हो सकती।\n (b) Efficiency of a Carnot engine depends on the nature of the working substance. / कार्नोट इंजन की दक्षता कार्यकारी पदार्थ की प्रकृति पर निर्भर करती है।\n (c) Efficiency increases if the temperature of the sink is decreased. / सिंक (sink) का तापमान कम करने पर दक्षता बढ़ जाती है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nEfficiency η = 1 - T(sink) / T(source). It is independent of the working substance and depends only on temperatures.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षता η = 1 - T(sink) / T(source)। यह कार्यकारी पदार्थ से स्वतंत्र है और केवल तापमान पर निर्भर करती है।"
+    },
+    {
+      "q_num": 49,
+      "question": "Which phenomenon is responsible for the 'Twinkling of Stars'?\n 'तारों के टिमटिमाने' के लिए कौन-सी घटना जिम्मेदार है?",
+      "options": {
+        "a": "Atmospheric Reflection / वायुमंडलीय परावर्तन",
+        "b": "Atmospheric Refraction / वायुमंडलीय अपवर्तन",
+        "c": "Dispersion of light / प्रकाश का विक्षेपण",
+        "d": "Internal Reflection / आंतरिक परावर्तन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStars twinkle due to continuous refraction of starlight as it passes through different layers of the atmosphere with varying densities.\n\n📖 हिंदी स्पष्टीकरण:\nवायुमंडल की विभिन्न घनत्व वाली परतों से गुजरते समय तारों के प्रकाश के निरंतर अपवर्तन के कारण तारे टिमटिमाते हैं।"
+    },
+    {
+      "q_num": 50,
+      "question": "Consider the following statements regarding X-Rays:\n एक्स-रे (X-Rays) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are deflected by electric and magnetic fields. / वे विद्युत और चुंबकीय क्षेत्रों द्वारा विक्षेपित होते हैं।\n (b) They travel at the speed of light. / वे प्रकाश की गति से यात्रा करते हैं।\n (c) They can pass through human flesh but are absorbed by bones. / वे मानव मांस से गुजर सकते हैं लेकिन हड्डियों द्वारा अवशोषित कर लिए जाते हैं।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nX-rays are electromagnetic waves (neutral) and are not deflected by electric or magnetic fields.\n\n📖 हिंदी स्पष्टीकरण:\nएक्स-रे विद्युत चुंबकीय तरंगें (तटस्थ) हैं और विद्युत या चुंबकीय क्षेत्रों द्वारा विक्षेपित नहीं होती हैं।"
+    },
+    {
+      "q_num": 51,
+      "question": "Which of the following is correct regarding 'Latent Heat'?\n 'गुप्त ऊष्मा' (Latent Heat) के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It causes an increase in temperature of the substance. / यह पदार्थ के तापमान में वृद्धि का कारण बनता है।",
+        "b": "It is the heat required for a change of state without changing the temperature. / यह तापमान बदले बिना अवस्था परिवर्तन के लिए आवश्यक ऊष्मा है।",
+        "c": "Latent heat of vaporization of water is less than latent heat of fusion. / पानी के वाष्पीकरण की गुप्त ऊष्मा संलयन की गुप्त ऊष्मा से कम होती है।",
+        "d": "Its S.I. unit is Joule/Kelvin. / इसकी S.I. इकाई जूल/केल्विन है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLatent heat is used to break/form molecular bonds during phase change at constant temperature.\n\n📖 हिंदी स्पष्टीकरण:\nगुप्त ऊष्मा का उपयोग स्थिर तापमान पर अवस्था परिवर्तन के दौरान आणविक बंधों को तोड़ने/बनाने के लिए किया जाता है।"
+    },
+    {
+      "q_num": 52,
+      "question": "Consider the following statements regarding simple harmonic motion (SHM):\n सरल आवर्त गति (SHM) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Acceleration is always proportional to the displacement from mean position. / त्वरण हमेशा माध्य स्थिति से विस्थापन के आनुपातिक होता है।\n (b) Velocity is maximum at the extreme positions. / चरम स्थितियों (extreme positions) पर वेग अधिकतम होता है।\n (c) Kinetic energy is maximum at the mean position. / माध्य स्थिति पर गतिज ऊर्जा अधिकतम होती है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a only / केवल a"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn SHM, velocity is zero at extreme positions and maximum at the mean position.\n\n📖 हिंदी स्पष्टीकरण:\nSHM में, चरम स्थितियों पर वेग शून्य और माध्य स्थिति पर अधिकतम होता है।"
+    },
+    {
+      "q_num": 53,
+      "question": "Which of the following is an 'Ohmic Conductor'?\n निम्नलिखित में से कौन-सा एक 'ओमीय चालक' (Ohmic Conductor) है?",
+      "options": {
+        "a": "Transistor / ट्रांजिस्टर",
+        "b": "Silver wire / चांदी का तार",
+        "c": "LED / एल.ई.डी.",
+        "d": "Diode / डायोड"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMetals like silver and copper obey Ohm's law (V ∝ I) at constant temperature. Others listed are semiconductor devices (non-ohmic).\n\n📖 हिंदी स्पष्टीकरण:\nचांदी और तांबे जैसी धातुएं स्थिर तापमान पर ओम के नियम (V ∝ I) का पालन करती हैं। सूचीबद्ध अन्य अर्धचालक उपकरण (गैर-ओमीय) हैं।"
+    },
+    {
+      "q_num": 54,
+      "question": "Consider the following statements regarding Centrifugal Force:\n अपकेन्द्री बल (Centrifugal Force) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a pseudo-force observed in non-inertial frames. / यह गैर-जड़त्वीय फ्रेम में देखा जाने वाला एक छद्म बल (pseudo-force) है।\n (b) It acts towards the center of the circular path. / यह वृत्ताकार पथ के केंद्र की ओर कार्य करता है।\n (c) It is used in cream separators to separate cream from milk. / इसका उपयोग दूध से क्रीम अलग करने के लिए क्रीम सेपरेटर में किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCentrifugal force acts away from the center. Centripetal force acts towards the center.\n\n📖 हिंदी स्पष्टीकरण:\nअपकेन्द्री बल केंद्र से दूर कार्य करता है। अभिकेंद्र बल केंद्र की ओर कार्य करता है।"
+    },
+    {
+      "q_num": 55,
+      "question": "In a step-up transformer, which of the following increases in the secondary coil?\n स्टेप-अप ट्रांसफॉर्मर में, द्वितीयक कुंडली (secondary coil) में निम्नलिखित में से क्या बढ़ता है?",
+      "options": {
+        "a": "Voltage / वोल्टेज",
+        "b": "Current / धारा",
+        "c": "Frequency / आवृत्ति",
+        "d": "Power / शक्ति"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nA step-up transformer increases voltage while decreasing current to keep power constant (ideally). Frequency remains unchanged.\n\n📖 हिंदी स्पष्टीकरण:\nस्टेप-अप ट्रांसफॉर्मर वोल्टेज बढ़ाता है जबकि शक्ति को स्थिर रखने के लिए धारा को कम करता है। आवृत्ति अपरिवर्तित रहती है।"
+    },
+    {
+      "q_num": 56,
+      "question": "Consider the following statements regarding Longitudinal Waves:\n अनुदैर्ध्य तरंगों (Longitudinal Waves) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Particle vibration is parallel to the direction of wave propagation. / कणों का कंपन तरंग संचरण की दिशा के समानांतर होता है।\n (b) They can be polarized. / उन्हें ध्रुवित (polarized) किया जा सकता है।\n (c) Sound waves in air are longitudinal waves. / हवा में ध्वनि तरंगें अनुदैर्ध्य तरंगें होती हैं।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "a and c / a और c",
+        "c": "b and c / b और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOnly transverse waves (like light) can be polarized. Longitudinal waves cannot be polarized.\n\n📖 हिंदी स्पष्टीकरण:\nकेवल अनुप्रस्थ तरंगों (जैसे प्रकाश) को ध्रुवित किया जा सकता है। अनुदैर्ध्य तरंगों को ध्रुवित नहीं किया जा सकता।"
+    },
+    {
+      "q_num": 57,
+      "question": "Which color of light is least scattered by fog or smoke?\n कोहरे या धुएं से प्रकाश का कौन-सा रंग सबसे कम प्रकीर्णित (scattered) होता है?",
+      "options": {
+        "a": "Blue / नीला",
+        "b": "Yellow / पीला",
+        "c": "Red / लाल",
+        "d": "Violet / बैंगनी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRed has the longest wavelength, so it is scattered the least. That's why danger signals are red.\n\n📖 हिंदी स्पष्टीकरण:\nलाल रंग की तरंग दैर्ध्य सबसे लंबी होती है, इसलिए यह सबसे कम प्रकीर्णित होता है। इसीलिए खतरे के संकेत लाल होते हैं।"
+    },
+    {
+      "q_num": 58,
+      "question": "Consider the following statements regarding Mass and Weight:\n द्रव्यमान और भार के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Mass is a scalar quantity while weight is a vector quantity. / द्रव्यमान एक अदिश राशि है जबकि भार एक सदिश राशि है।\n (b) Mass of an object remains constant everywhere. / किसी वस्तु का द्रव्यमान हर जगह स्थिर रहता है।\n (c) Weight of an object becomes zero at the center of the Earth. / पृथ्वी के केंद्र पर किसी वस्तु का भार शून्य हो जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a, b and c / a, b और c",
+        "d": "c only / केवल c"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAll statements are correct. Weight W = mg. At the center of Earth, g = 0, so W = 0.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। भार W = mg। पृथ्वी के केंद्र पर g = 0, इसलिए W = 0"
+    },
+    {
+      "q_num": 59,
+      "question": "The magnetic field inside a long current-carrying solenoid is:\n धारा प्रवाहित करने वाले एक लंबे सोलेनोइड (solenoid) के अंदर चुंबकीय क्षेत्र होता है:",
+      "options": {
+        "a": "Zero / शून्य",
+        "b": "Decreases towards the ends / सिरों की ओर घटता है",
+        "c": "Uniform at all points / सभी बिंदुओं पर एकसमान",
+        "d": "Varies with distance from the axis / अक्ष से दूरी के साथ बदलता है"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nInside a solenoid, the magnetic field lines are parallel and uniform.\n\n📖 हिंदी स्पष्टीकरण:\nएक सोलेनोइड के अंदर, चुंबकीय क्षेत्र रेखाएं समानांतर और एकसमान होती हैं।"
+    },
+    {
+      "q_num": 60,
+      "question": "Which of the following is correct regarding 'Kirchhoff's First Law' (Junction Rule)?\n 'किरचॉफ के पहले नियम' (जंक्शन नियम) के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It is based on the conservation of energy. / यह ऊर्जा संरक्षण पर आधारित है।",
+        "b": "It states that the algebraic sum of currents at a junction is zero. / यह बताता है कि एक जंक्शन पर धाराओं का बीजगणितीय योग शून्य होता है।",
+        "c": "It is based on the conservation of mass. / यह द्रव्यमान संरक्षण पर आधारित है।",
+        "d": "It is used to find the voltage in a closed loop. / इसका उपयोग बंद लूप में वोल्टेज खोजने के लिए किया जाता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nKirchhoff's First Law is based on the conservation of charge.\n\n📖 हिंदी स्पष्टीकरण:\nकिरचॉफ का पहला नियम आवेश के संरक्षण पर आधारित है।"
+    },
+    {
+      "q_num": 61,
+      "question": "Consider the following statements regarding Radioactivity and Nuclear Energy:\n रेडियोधर्मिता और परमाणु ऊर्जा के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Nuclear Fission is used in Nuclear Reactors for electricity generation. / परमाणु रिएक्टरों में बिजली उत्पादन के लिए परमाणु विखंडन (Fission) का उपयोग किया जाता है।\n (b) Control rods in nuclear reactors are made of materials like Boron or Cadmium. / परमाणु रिएक्टरों में नियंत्रण छड़ें बोरोन या कैडमियम जैसी सामग्री से बनी होती हैं।\n (c) Heavy water (D₂O) is used as a fuel in nuclear reactors. / परमाणु रिएक्टरों में भारी जल (D₂O) का उपयोग ईंधन के रूप में किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHeavy water is used as a moderator or coolant to slow down neutrons, not as a fuel. Uranium or Plutonium are used as fuels.\n\n📖 हिंदी स्पष्टीकरण:\nभारी जल का उपयोग न्यूट्रॉन को धीमा करने के लिए मंदक (moderator) या शीतलक के रूप में किया जाता है, ईंधन के रूप में नहीं। यूरेनियम या प्लूटोनियम का उपयोग ईंधन के रूप में किया जाता है।"
+    },
+    {
+      "q_num": 62,
+      "question": "Which of the following statements about 'Optical Fibers' is correct?\n 'ऑप्टिकल फाइबर' के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": {
+        "a": "They work on the principle of Refraction. / वे अपवर्तन के सिद्धांत पर कार्य करते हैं।",
+        "b": "They work on the principle of Total Internal Reflection. / वे पूर्ण आंतरिक परावर्तन के सिद्धांत पर कार्य करते हैं।",
+        "c": "They are used for generating electricity. / इनका उपयोग बिजली पैदा करने के लिए किया जाता है।",
+        "d": "Information is transmitted in the form of sound waves. / सूचना का प्रसारण ध्वनि तरंगों के रूप में किया जाता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOptical fibers transmit data as light pulses using the principle of Total Internal Reflection (TIR) with minimal energy loss.\n\n📖 हिंदी स्पष्टीकरण:\nऑप्टिकल फाइबर न्यूनतम ऊर्जा हानि के साथ पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत का उपयोग करके प्रकाश दालों के रूप में डेटा संचारित करते हैं।"
+    },
+    {
+      "q_num": 63,
+      "question": "Consider the following statements regarding Surface Tension:\n पृष्ठ तनाव के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Surface tension is a scalar quantity. / पृष्ठ तनाव एक अदिश राशि है।\n (b) It is defined as force per unit length. / इसे प्रति इकाई लंबाई बल के रूप में परिभाषित किया गया है।\n (c) The S.I. unit of surface tension is Newton-meter (N·m). / पृष्ठ तनाव की S.I. इकाई न्यूटन-मीटर (N·m) है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe S.I. unit of surface tension is Newton per meter (N/m), not Newton-meter.\n\n📖 हिंदी स्पष्टीकरण:\nपृष्ठ तनाव की S.I. इकाई न्यूटन प्रति मीटर (N/m) है, न कि न्यूटन-मीटर।"
+    },
+    {
+      "q_num": 64,
+      "question": "Which of the following correctly describes 'Dispersion of Light'?\n निम्नलिखित में से कौन 'प्रकाश के विक्षेपण' (Dispersion of Light) का सही वर्णन करता है?",
+      "options": {
+        "a": "Bending of light when it enters from one medium to another. / प्रकाश का एक माध्यम से दूसरे माध्यम में प्रवेश करते समय मुड़ना।",
+        "b": "Bending of light around the corners of an obstacle. / किसी बाधा के कोनों पर प्रकाश का मुड़ना।",
+        "c": "Splitting of white light into its constituent colors. / श्वेत प्रकाश का अपने घटक रंगों में विभाजित होना।",
+        "d": "Bouncing back of light from a polished surface. / पॉलिश की हुई सतह से प्रकाश का वापस लौटना।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDispersion is the splitting of white light into VIBGYOR when passing through a prism due to different speeds of different colors.\n\n📖 हिंदी स्पष्टीकरण:\nविक्षेपण, विभिन्न रंगों की अलग-अलग गति के कारण प्रिज्म से गुजरते समय श्वेत प्रकाश का VIBGYOR में विभाजित होना है।"
+    },
+    {
+      "q_num": 65,
+      "question": "Consider the following statements regarding Semiconductors and Doping:\n अर्धचालकों और डोपिंग के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) P-type semiconductors are formed by adding pentavalent impurities. / पेंटावेलेंट अशुद्धियाँ मिलाने से P-प्रकार के अर्धचालक बनते हैं।\n (b) N-type semiconductors are formed by adding pentavalent impurities like Phosphorus. / फास्फोरस जैसी पेंटावेलेंट अशुद्धियाँ मिलाने से N-प्रकार के अर्धचालक बनते हैं।\n (c) In P-type semiconductors, holes are the majority charge carriers. / P-प्रकार के अर्धचालकों में, होल (holes) बहुसंख्यक आवेश वाहक होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b / a और b",
+        "b": "b and c / b और c",
+        "c": "a and c / a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nP-type semiconductors are formed by adding trivalent impurities (like Boron or Aluminum), not pentavalent.\n\n📖 हिंदी स्पष्टीकरण:\nP-प्रकार के अर्धचालक ट्राइवेलेंट अशुद्धियों (जैसे बोरोन या एल्युमिनियम) को मिलाने से बनते हैं, पेंटावेलेंट नहीं।"
+    },
+    {
+      "q_num": 66,
+      "question": "The stars appear to move from East to West because:\n तारे पूर्व से पश्चिम की ओर चलते हुए प्रतीत होते हैं क्योंकि:",
+      "options": {
+        "a": "All stars move from East to West. / सभी तारे पूर्व से पश्चिम की ओर चलते हैं।",
+        "b": "The Earth rotates from West to East on its axis. / पृथ्वी अपनी धुरी पर पश्चिम से पूर्व की ओर घूमती है।",
+        "c": "The Earth rotates from East to West on its axis. / पृथ्वी अपनी धुरी पर पूर्व से पश्चिम की ओर घूमती है।",
+        "d": "The background of the universe moves. / ब्रह्मांड की पृष्ठभूमि चलती है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe apparent motion of celestial bodies is due to the Earth's rotation from West to East.\n\n📖 हिंदी स्पष्टीकरण:\nआकाशीय पिंडों की स्पष्ट गति पृथ्वी के पश्चिम से पूर्व की ओर घूमने के कारण होती है।"
+    },
+    {
+      "q_num": 67,
+      "question": "Consider the following statements regarding the Heating Effect of Electric Current:\n विद्युत धारा के तापीय प्रभाव के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is also known as Joule's heating. / इसे जूल हीटिंग के रूप में भी जाना जाता है।\n (b) Heat produced is directly proportional to the square of the current (H ∝ I²). / उत्पन्न ऊष्मा धारा के वर्ग के सीधे आनुपातिक होती है (H ∝ I²)।\n (c) Electric heaters and toasters work on this principle. / इलेक्ट्रिक हीटर और टोस्टर इसी सिद्धांत पर काम करते हैं।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements correctly describe Joule's Law of Heating, where H = I²Rt.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन जूल के तापन नियम का सही वर्णन करते हैं, जहाँ H = I²Rt है।"
+    },
+    {
+      "q_num": 68,
+      "question": "Which of the following is correct regarding 'Inertia'?\n 'जड़त्व' (Inertia) के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It is the ability of a body to change its state of rest. / यह किसी पिंड की अपनी विश्राम की स्थिति को बदलने की क्षमता है।",
+        "b": "Inertia is directly proportional to the mass of the object. / जड़त्व वस्तु के द्रव्यमान के सीधे आनुपातिक होता है।",
+        "c": "Only moving objects have inertia. / केवल गतिमान वस्तुओं में ही जड़त्व होता है।",
+        "d": "It is measured in Newtons. / इसे न्यूटन में मापा जाता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nInertia is the resistance of an object to any change in its motion. Mass is the measure of inertia.\n\n📖 हिंदी स्पष्टीकरण:\nजड़त्व किसी वस्तु की अपनी गति में किसी भी परिवर्तन के प्रति प्रतिरोध है। द्रव्यमान जड़त्व का माप है।"
+    },
+    {
+      "q_num": 69,
+      "question": "Consider the following statements regarding Electromagnetic Spectrum:\n विद्युत चुंबकीय स्पेक्ट्रम के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Gamma rays have the minimum wavelength. / गामा किरणों की तरंग दैर्ध्य न्यूनतम होती है।\n (b) Radio waves have the maximum wavelength. / रेडियो तरंगों की तरंग दैर्ध्य अधिकतम होती है।\n (c) Infrared waves are used in night vision goggles. / इन्फ्रारेड तरंगों का उपयोग नाइट विजन गॉगल्स में किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b / केवल a और b",
+        "b": "b and c / केवल b और c",
+        "c": "a and c / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll statements are correct. The order of wavelength is Radio > Microwave > Infrared > Visible > UV > X-ray > Gamma.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। तरंग दैर्ध्य का क्रम है: रेडियो > माइक्रोवेव > इन्फ्रारेड > दृश्य > यूवी > एक्स-रे > गामा।"
+    },
+    {
+      "q_num": 70,
+      "question": "Which of the following is correct regarding the 'Magnifying Glass' (Simple Microscope)?\n 'आवर्धक कांच' (Magnifying Glass) के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "It is a Concave lens. / यह एक अवतल लेंस है।",
+        "b": "It is a Convex lens used for viewing objects at a distance. / यह दूर की वस्तुओं को देखने के लिए उपयोग किया जाने वाला उत्तल लेंस है।",
+        "c": "It is a Convex lens of short focal length. / यह कम फोकल लंबाई वाला एक उत्तल लेंस है।",
+        "d": "It always forms a real and inverted image. / यह हमेशा वास्तविक और उल्टा प्रतिबिंब बनाता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA magnifying glass is a convex lens that produces a virtual, erect, and magnified image when the object is placed within its focal length.\n\n📖 हिंदी स्पष्टीकरण:\nआवर्धक कांच एक उत्तल लेंस है जो फोकल लंबाई के भीतर वस्तु रखे जाने पर आभासी, सीधा और बड़ा प्रतिबिंब बनाता है।"
+    },
+    {
+      "q_num": 71,
+      "question": "Consider the following statements regarding Heat Radiation:\n ऊष्मा विकिरण के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Dark surfaces are better absorbers of heat than light surfaces. / गहरी सतहें हल्की सतहों की तुलना में ऊष्मा की बेहतर अवशोषक होती हैं।\n (b) Rough surfaces are better emitters of heat than polished surfaces. / खुरदरी सतहें पॉलिश की हुई सतहों की तुलना में ऊष्मा की बेहतर उत्सर्जक होती हैं।\n (c) Vacuum is necessary for heat transfer by radiation. / विकिरण द्वारा ऊष्मा स्थानांतरण के लिए निर्वात आवश्यक है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a, b and c / a, b और c",
+        "d": "a only / केवल a"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nVacuum is not necessary for radiation, though radiation can occur through it. Radiation can also travel through transparent media.\n\n📖 हिंदी स्पष्टीकरण:\nविकिरण के लिए निर्वात आवश्यक नहीं है, हालांकि इसके माध्यम से विकिरण हो सकता है। विकिरण पारदर्शी माध्यमों से भी यात्रा कर सकता है।"
+    },
+    {
+      "q_num": 72,
+      "question": "Which of the following is correct regarding 'Capacitance'?\n 'धारिता' (Capacitance) के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options": {
+        "a": "Its S.I. unit is Farad. / इसकी S.I. इकाई फैराड (Farad) है।",
+        "b": "It is the ability to store magnetic energy. / यह चुंबकीय ऊर्जा को संग्रहीत करने की क्षमता है।",
+        "c": "It is defined as C = V/Q. / इसे C = V/Q के रूप में परिभाषित किया गया है।",
+        "d": "It increases if the distance between plates of a parallel plate capacitor is increased. / यदि समानांतर प्लेट कैपेसिटर की प्लेटों के बीच की दूरी बढ़ाई जाती है तो यह बढ़ जाती है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCapacitance is the ability to store electric charge (C = Q/V). For a parallel plate capacitor, C = ∈₀ A / d, so it decreases if distance d increases.\n\n📖 हिंदी स्पष्टीकरण:\nधारिता विद्युत आवेश को संग्रहीत करने की क्षमता है (C = Q/V)। समानांतर प्लेट कैपेसिटर के लिए, C = ∈₀ A / d है, इसलिए दूरी d बढ़ने पर यह घट जाती है।"
+    },
+    {
+      "q_num": 73,
+      "question": "Consider the following statements regarding 'Sound Pitch' and 'Loudness':\n 'ध्वनि के तारत्व' (Pitch) और 'प्रबलता' (Loudness) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Pitch of sound depends on the frequency of vibration. / ध्वनि का तारत्व कंपन की आवृत्ति पर निर्भर करता है।\n (b) Loudness of sound depends on the amplitude of vibration. / ध्वनि की प्रबलता कंपन के आयाम (amplitude) पर निर्भर करती है।\n (c) Loudness is measured in Hertz. / प्रबलता को हर्ट्ज में मापा जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLoudness is measured in Decibels (dB). Hertz (Hz) is the unit of frequency.\n\n📖 हिंदी स्पष्टीकरण:\nप्रबलता को डेसिबल (dB) में मापा जाता है। हर्ट्ज (Hz) आवृत्ति की इकाई है।"
+    },
+    {
+      "q_num": 74,
+      "question": "Which property of a liquid is used in the working of a hydraulic lift?\n हाइड्रोलिक लिफ्ट के कार्य करने में द्रव के किस गुण का उपयोग किया जाता है?",
+      "options": {
+        "a": "Bernoulli's Principle / बरनौली का सिद्धांत",
+        "b": "Pascal's Law / पास्कल का नियम",
+        "c": "Archimedes' Principle / आर्किमिडीज का सिद्धांत",
+        "d": "Newton's Law of Cooling / न्यूटन का शीतलन नियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPascal’s law states that pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid.\n\n📖 हिंदी स्पष्टीकरण:\nपास्कल का नियम कहता है कि एक बंद द्रव पर लगाया गया दबाव द्रव के प्रत्येक भाग में बिना कम हुए संचरित होता है।"
+    },
+    {
+      "q_num": 75,
+      "question": "Consider the following statements regarding G.P.S. (Global Positioning System):\n G.P.S. (ग्लोबल पोजिशनिंग सिस्टम) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It uses a constellation of satellites to provide location data. / यह स्थान डेटा प्रदान करने के लिए उपग्रहों के एक समूह का उपयोग करता है।\n (b) It works using radio waves. / यह रेडियो तरंगों का उपयोग करके काम करता है।\n (c) It requires at least 10 satellites to determine a position on Earth. / पृथ्वी पर स्थिति निर्धारित करने के लिए कम से कम 10 उपग्रहों की आवश्यकता होती है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "options": {
+        "a": "a and b only / केवल a और b",
+        "b": "b and c only / केवल b और c",
+        "c": "a and c only / केवल a और c",
+        "d": "a, b and c / a, b और c"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nGPS requires a minimum of 4 satellites to accurately determine a user's 3D position (latitude, longitude, altitude) and time.\n\n📖 हिंदी स्पष्टीकरण:\nसटीक रूप से उपयोगकर्ता की 3D स्थिति (अक्षांश, देशांतर, ऊंचाई) और समय निर्धारित करने के लिए GPS को कम से कम 4 उपग्रहों की आवश्यकता होती है।"
+    }
+  ]
+}

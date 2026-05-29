@@ -1,0 +1,308 @@
+{
+  "chapter_num": 5,
+  "chapter_title": "Digestive And Respiratory System",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "What is the length of the human food pipe (Oesophagus)? / मानव ग्रासनली की लंबाई कितनी होती है?",
+      "options": {
+        "a": "15 cm / 15 सेमी",
+        "b": "25 cm / 25 सेमी",
+        "c": "35 cm / 35 सेमी",
+        "d": "10 cm / 10 सेमी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe food pipe or oesophagus is approximately 25 cm long. It serves as a passage that carries food directly from the mouth to the stomach\n\n📖 हिंदी स्पष्टीकरण:\nभोजन नली या ग्रासनली लगभग 25 सेमी लंबी होती है। यह एक मार्ग के रूप में कार्य करती है जो भोजन को सीधे मुँह से पेट तक ले जाती है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which enzyme is released in the mouth to break down complex carbohydrates? / जटिल कार्बोहाइड्रेट को तोड़ने के लिए मुँह में कौन सा एंजाइम निकलता है?",
+      "options": {
+        "a": "Pepsin / पेप्सिन",
+        "b": "Trypsin / ट्रिप्सिन",
+        "c": "Salivary Amylase / लार एमाइलेज",
+        "d": "Lipase / लाइपेज"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSalivary Amylase is secreted by the salivary glands in the buccal cavity. Its primary function is to break down complex carbohydrates into simpler forms\n\n📖 हिंदी स्पष्टीकरण:\nलार एमाइलेज मुख गुहा में लार ग्रंथियों द्वारा स्रावित होता है। इसका प्राथमिक कार्य जटिल कार्बोहाइड्रेट को सरल रूपों में तोड़ना है।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which organ is responsible for the secretion of bile juice? / पित्त रस के स्राव के लिए कौन सा अंग जिम्मेदार है?",
+      "options": {
+        "a": "Pancreas / अग्न्याशय",
+        "b": "Gallbladder / पित्ताशय",
+        "c": "Liver / यकृत",
+        "d": "Stomach / आमाशय"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe liver is the largest gland in the body and secretes bile juice. Although it is secreted by the liver, it is stored in the gallbladder until needed for digestion\n\n📖 हिंदी स्पष्टीकरण:\nयकृत शरीर की सबसे बड़ी ग्रंथि है और पित्त रस का स्राव करती है। हालाँकि यह यकृत द्वारा स्रावित होता है, लेकिन पाचन के लिए आवश्यकता होने तक इसे पित्ताशय में संग्रहित किया जाता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "What is the pH value of gastric juice in the stomach? / आमाशय में जठर रस का pH मान क्या होता है?",
+      "options": {
+        "a": "7.4",
+        "b": "1.6",
+        "c": "8.5",
+        "d": "5.0"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGastric juice contains Hydrochloric acid (HCl), making the medium highly acidic. The pH value is approximately 1.6, which helps in killing bacteria and activating pepsin\n\n📖 हिंदी स्पष्टीकरण:\nजठर रस में हाइड्रोक्लोरिक अम्ल (HCl) होता है, जो माध्यम को अत्यधिक अम्लीय बनाता है। इसका pH मान लगभग 1.6 होता है, जो बैक्टीरिया को मारने और पेप्सिन को सक्रिय करने में मदद करता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Villi are finger-like projections found in which part of the digestive system? / विली पाचन तंत्र के किस भाग में पाई जाने वाली उंगली जैसी संरचनाएं हैं?",
+      "options": {
+        "a": "Stomach / आमाशय",
+        "b": "Large Intestine / बड़ी आँत",
+        "c": "Small Intestine / छोटी आँत",
+        "d": "Oesophagus / ग्रासनली"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nVilli are located in the small intestine. They increase the surface area for the efficient absorption of digested food into the bloodstream\n\n📖 हिंदी स्पष्टीकरण:\nविली छोटी आँत में स्थित होती हैं। वे रक्तप्रवाह में पचे हुए भोजन के कुशल अवशोषण के लिए सतह क्षेत्र को बढ़ाती हैं।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which part of the plant is primarily responsible for gas exchange through pores called stomata? / पौधे का कौन सा भाग मुख्य रूप से रंध्र नामक छिद्रों के माध्यम से गैस विनिमय के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Roots / जड़ें",
+        "b": "Leaves / पत्तियाँ",
+        "c": "Flowers / फूल",
+        "d": "Stem / तना"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe epidermis of leaves contains tiny pores called stomata, guarded by guard cells. These pores allow for the quick exchange of oxygen and carbon dioxide\n\n📖 हिंदी स्पष्टीकरण:\nपत्तियों के बाह्यत्वचा (एपिडर्मिस) में रंध्र नामक छोटे छिद्र होते हैं, जो रक्षक कोशिकाओं द्वारा घिरे होते हैं। ये छिद्र ऑक्सीजन और कार्बन डाइऑक्साइड के त्वरित विनिमय की अनुमति देते हैं।"
+    },
+    {
+      "q_num": 7,
+      "question": "In which cell organelle does aerobic respiration take place? / वायवीय श्वसन किस कोशिका अंगक में होता है?",
+      "options": {
+        "a": "Ribosomes / राइबोसोम",
+        "b": "Nucleus / केंद्रक",
+        "c": "Mitochondria / सूत्रकणिका",
+        "d": "Lysosomes / लाइसोसोम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAerobic respiration occurs in the presence of oxygen within the mitochondria. This process breaks down pyruvate to release a high amount of energy (36 ATP)\n\n📖 हिंदी स्पष्टीकरण:\nवायवीय श्वसन सूत्रकणिका के भीतर ऑक्सीजन की उपस्थिति में होता है। यह प्रक्रिया बड़ी मात्रा में ऊर्जा (36 ATP) छोड़ने के लिए पाइरुवेट को तोड़ती है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which structure prevents food from entering the trachea during swallowing? / निगलते समय भोजन को श्वासनली (ट्रैकिया) में जाने से कौन सी संरचना रोकती है?",
+      "options": {
+        "a": "Larynx / स्वरयंत्र",
+        "b": "Pharynx / ग्रसनी",
+        "c": "Epiglottis / कंठच्छद",
+        "d": "Alveoli / कूपिका"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe epiglottis is a leaf-shaped flap of cartilage that acts as a lid. It covers the opening of the airway while swallowing to ensure food goes into the esophagus and not the lungs\n\n📖 हिंदी स्पष्टीकरण:\nकंठच्छद (एपिग्लॉटिस) उपास्थि का एक पत्ती के आकार का फ्लैप है जो ढक्कन के रूप में कार्य करता है। यह निगलते समय वायुमार्ग के खुलने को ढक देता है ताकि भोजन फेफड़ों के बजाय ग्रासनली में जाए।"
+    },
+    {
+      "q_num": 9,
+      "question": "Through which organ do fish respire? / मछली किस अंग के माध्यम से श्वसन करती है?",
+      "options": {
+        "a": "Lungs / फेफड़े",
+        "b": "Skin / त्वचा",
+        "c": "Gills / गलफड़े",
+        "d": "Trachea / श्वासनली"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFish use specialized organs called gills for respiration. Gills extract dissolved oxygen from the water as it passes over the gill filaments\n\n📖 हिंदी स्पष्टीकरण:\nमछलियाँ श्वसन के लिए गलफड़े (गिल्स) नामक विशिष्ट अंगों का उपयोग करती हैं। गलफड़े पानी से घुली हुई ऑक्सीजन को तब निकालते हैं जब वह गिल फिलामेंट्स के ऊपर से गुजरता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "What is the end product of anaerobic respiration in muscle cells during a lack of oxygen? / ऑक्सीजन की कमी के दौरान मांसपेशियों की कोशिकाओं में अवायवीय श्वसन का अंतिम उत्पाद क्या होता है?",
+      "options": {
+        "a": "Ethanol / इथेनॉल",
+        "b": "Lactic acid / लैक्टिक अम्ल",
+        "c": "Carbon dioxide / कार्बन डाइऑक्साइड",
+        "d": "Glucose / ग्लूकोज"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nWhen muscle cells lack oxygen, glucose breaks down into lactic acid and energy. The accumulation of lactic acid is responsible for muscle cramps\n\n📖 हिंदी स्पष्टीकरण:\nजब मांसपेशियों की कोशिकाओं में ऑक्सीजन की कमी होती है, तो ग्लूकोज लैक्टिक अम्ल और ऊर्जा में टूट जाता है। लैक्टिक अम्ल का जमा होना मांसपेशियों में ऐंठन के लिए जिम्मेदार होता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which muscle controls the passage of food from the stomach to the small intestine? / कौन सी मांसपेशी आमाशय से छोटी आँत में भोजन के जाने को नियंत्रित करती है?",
+      "options": {
+        "a": "Cardiac muscle / हृदय मांसपेशी",
+        "b": "Sphincter muscle / संकोचिनी मांसपेशी",
+        "c": "Skeletal muscle / कंकाल मांसपेशी",
+        "d": "Diaphragm / डायाफ्राम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe sphincter muscle is located at the exit of the stomach. It regulates the flow of partially digested food (chyme) into the duodenum of the small intestine\n\n📖 हिंदी स्पष्टीकरण:\nसंकोचिनी (स्फिंक्टर) मांसपेशी आमाशय के निकास पर स्थित होती है। यह छोटी आँत के ग्रहणी में आंशिक रूप से पचे हुए भोजन के प्रवाह को नियंत्रित करती है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What is the correct sequence of the parts of the Small Intestine? / छोटी आँत के भागों का सही क्रम क्या है?",
+      "options": {
+        "a": "Jejunum → Ileum → Duodenum / मध्यांत्र → शेषान्त्र → ग्रहणी",
+        "b": "Duodenum → Jejunum → Ileum / ग्रहणी → मध्यांत्र → शेषान्त्र",
+        "c": "Ileum → Duodenum → Jejunum / शेषान्त्र → ग्रहणी → मध्यांत्र",
+        "d": "Duodenum → Ileum → Jejunum / ग्रहणी → शेषान्त्र → मध्यांत्र"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe small intestine is divided into three parts: the Duodenum (first), Jejunum (middle), and Ileum (last). It is the site for major digestion and absorption\n\n📖 हिंदी स्पष्टीकरण:\nछोटी आँत को तीन भागों में बांटा गया है: ग्रहणी, मध्यांत्र और शेषान्त्र। यह मुख्य पाचन और अवशोषण का स्थल है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which component of pancreatic juice is responsible for digesting proteins into amino acids? / अग्नाशयी रस का कौन सा घटक प्रोटीन को अमीनो अम्ल में पचाने के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Lipase / लाइपेज",
+        "b": "Amylase / एमाइलेज",
+        "c": "Trypsin / ट्रिप्सिन",
+        "d": "Pepsin / पेप्सिन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPancreatic juice contains trypsin, which acts on proteins to convert them into amino acids. This enzyme works best in a basic medium provided by bile juice\n\n📖 हिंदी स्पष्टीकरण:\nअग्नाशयी रस में ट्रिप्सिन होता है, जो प्रोटीन को अमीनो अम्ल में बदलने का कार्य करता है। यह एंजाइम पित्त रस द्वारा प्रदान किए गए क्षारीय माध्यम में सबसे अच्छा काम करता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "During exhalation, what happens to the rib cage and the diaphragm? / उच्छ्वास के दौरान, पसलियों और डायाफ्राम का क्या होता है?",
+      "options": {
+        "a": "Rib cage moves up, Diaphragm moves down / पसलियां ऊपर जाती हैं, डायाफ्राम नीचे जाता है।",
+        "b": "Rib cage moves down, Diaphragm moves up / पसलियां नीचे जाती हैं, डायाफ्राम ऊपर जाता है।",
+        "c": "Both move up / दोनों ऊपर जाते हैं।",
+        "d": "Both move down / दोनों नीचे जाते हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDuring exhalation, the lungs contract to push air out. The rib cage moves downward and the diaphragm relaxes and moves upward, reducing the chest cavity's volume\n\n📖 हिंदी स्पष्टीकरण:\nउच्छ्वास के दौरान, फेफड़े हवा को बाहर निकालने के लिए सिकुड़ते हैं। पसलियां नीचे की ओर चलती हैं और डायाफ्राम शिथिल होकर ऊपर की ओर बढ़ता है, जिससे छाती की गुहा का आयतन कम हो जाता है।"
+    },
+    {
+      "q_num": 15,
+      "question": "In which part of the large intestine is water primarily absorbed? / बड़ी आँत के किस भाग में मुख्य रूप से जल का अवशोषण होता है?",
+      "options": {
+        "a": "Cecum / अंधनाल",
+        "b": "Rectum / मलाशय",
+        "c": "Colon / बृहदान्त्र",
+        "d": "Anus / गुदा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe colon is the main part of the large intestine responsible for absorbing water and salts from indigestible food residues before excretion\n\n📖 हिंदी स्पष्टीकरण:\nबृहदान्त्र (कोलन) बड़ी आँत का मुख्य भाग है जो उत्सर्जन से पहले अपचनीय भोजन अवशेषों से पानी और लवण को अवशोषित करने के लिए जिम्मेदार है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Consider the following statements about the Liver: / यकृत के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. It is the largest gland of the human body. / यह मानव शरीर की सबसे बड़ी ग्रंथि है।\n 2. It converts glucose into glycogen. / यह ग्लूकोज को ग्लाइकोजन में परिवर्तित करता है।\n 3. Kupffer cells in the liver are involved in the breakdown of RBCs. / यकृत में कुफ़्फ़र कोशिकाएं RBC के टूटने में शामिल होती हैं।\n Which of the statements given above are correct? / ऊपर दिए गए कथनों में से कौन सा सही है?",
+      "options": {
+        "a": "1 and 2 only/ केवल 1 और 2",
+        "b": "2 and 3 only / केवल 2 और 3",
+        "c": "1 and 3 only / केवल 1 और 3",
+        "d": "1, 2, and 3 / 1, 2 और 3"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe liver is the largest gland and performs vital functions like glycogenesis (converting glucose to glycogen). Kupffer cells are specialized phagocytic cells that break down old red blood cells\n\n📖 हिंदी स्पष्टीकरण:\nयकृत सबसे बड़ी ग्रंथि है और ग्लाइकोजेनेसिस जैसे महत्वपूर्ण कार्य करता है। कुफ़्फ़र कोशिकाएं विशिष्ट फागोसिटिक कोशिकाएं होती हैं जो पुरानी लाल रक्त कोशिकाओं को तोड़ती हैं।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): The inner lining of the small intestine has numerous villi. / अभिकथन (A): छोटी आँत के आंतरिक अस्तर में कई विली होते हैं।\n Reason (R): Villi decrease the surface area for food absorption. / कारण (R): विली भोजन के अवशोषण के लिए सतह क्षेत्र को कम करते हैं।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAssertion (A) is correct as the small intestine has villi. However, the Reason (R) is false because villi actually increase the surface area to maximize absorption, not decrease it\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन (A) सही है क्योंकि छोटी आँत में विली होते हैं। हालाँकि, कारण (R) गलत है क्योंकि विली वास्तव में अवशोषण को अधिकतम करने के लिए सतह क्षेत्र को बढ़ाते हैं, न कि कम करते हैं।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following is NOT a part of the Alimentary Canal? / निम्नलिखित में से कौन सा आहार नली का हिस्सा नहीं है?",
+      "options": {
+        "a": "Stomach / आमाशय",
+        "b": "Small Intestine / छोटी आँत",
+        "c": "Liver / यकृत",
+        "d": "Oesophagus / ग्रासनली"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe alimentary canal is the continuous passage through which food passes (mouth to anus). While the liver and pancreas are digestive glands, they are not considered part of the canal itself\n\n📖 हिंदी स्पष्टीकरण:\nआहार नली वह निरंतर मार्ग है जिससे भोजन गुजरता है। हालाँकि यकृत और अग्न्याशय पाचन ग्रंथियां हैं, उन्हें स्वयं नली का हिस्सा नहीं माना जाता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "In boys, the growing 'larynx' is visible as a distinct bulge at the front of the throat called _______. \n लड़कों में, विकसित हो रहा 'स्वरयंत्र' गले के सामने एक विशिष्ट उभार के रूप में दिखाई देता है जिसे _______ कहा जाता है।",
+      "options": {
+        "a": "Adrenaline / एड्रेनालाईन",
+        "b": "Kanthamani (Adam's apple) / कंठमणि (एडम्स एप्पल)",
+        "c": "Corn / कोर्न",
+        "d": "Gullet / ग्रसिका"
+      },
+      "answer": "b",
+      "solution": ""
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Trachea does not collapse during inhalation. / अभिकथन (A): श्वासनली श्वसन के दौरान पिचकती नहीं है।\n Reason (R): It is surrounded by rings of cartilage. / कारण (R): यह उपास्थि के छल्लों से घिरी होती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe trachea is supported by C-shaped cartilaginous rings. These rings provide structural support and prevent the airway from collapsing even when there is little air in it\n\n📖 हिंदी स्पष्टीकरण:\nश्वासनली सी-आकार के उपास्थि छल्लों द्वारा समर्थित होती है। ये छल्ले संरचनात्मक सहायता प्रदान करते हैं और वायुमार्ग को पिचकने से रोकते हैं, भले ही उसमें हवा कम हो।"
+    },
+    {
+      "q_num": 21,
+      "question": "Statement 1: Aerobic respiration produces 2 ATP molecules. / कथन 1: वायवीय श्वसन 2 ATP अणुओं का उत्पादन करता है।\n Statement 2: Anaerobic respiration in yeast produces ethanol and CO2. / कथन 2: खमीर में अवायवीय श्वसन इथेनॉल और CO2 पैदा करता है।",
+      "options": {
+        "a": "Only Statement 1 is correct. / केवल कथन 1 सही है।",
+        "b": "Only Statement 2 is correct. / केवल कथन 2 सही है।",
+        "c": "Both statements are correct. / दोनों कथन सही हैं।",
+        "d": "Neither statement is correct. / दोनों में से कोई भी कथन सही नहीं है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nStatement 1 is incorrect because aerobic respiration produces 36 ATP, while anaerobic produces only 2. Statement 2 is correct as yeast fermentation results in ethanol and CO2\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है क्योंकि वायवीय श्वसन 36 ATP पैदा करता है, जबकि अवायवीय केवल 2 पैदा करता है। कथन 2 सही है क्योंकि यीस्ट किण्वन के परिणामस्वरूप इथेनॉल और CO2 प्राप्त होते हैं।"
+    },
+    {
+      "q_num": 22,
+      "question": "What is the role of Mucus membrane in the stomach? / आमाशय में श्लेष्मा झिल्ली की क्या भूमिका है?",
+      "options": {
+        "a": "To digest proteins / प्रोटीन पचाना",
+        "b": "To kill bacteria / बैक्टीरिया मारना",
+        "c": "To protect the stomach lining from HCl / आमाशय के अस्तर को HCl से बचाना",
+        "d": "To absorb nutrients / पोषक तत्वों को अवशोषित करना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe stomach releases highly acidic HCl. The mucus membrane secretes a protective layer that prevents the stomach's own delicate lining from being eroded by the acid\n\n📖 हिंदी स्पष्टीकरण:\nआमाशय अत्यधिक अम्लीय HCl छोड़ता है। श्लेष्मा झिल्ली एक सुरक्षात्मक परत स्रावित करती है जो आमाशय के अपने नाजुक अस्तर को अम्ल द्वारा नष्ट होने से बचाती है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Where is the respiration control centre located in the human brain? / मानव मस्तिष्क में श्वसन नियंत्रण केंद्र कहाँ स्थित है?",
+      "options": {
+        "a": "Cerebrum / प्रमस्तिष्क",
+        "b": "Cerebellum / अनुमस्तिष्क",
+        "c": "Medulla Oblongata / मेडुला ऑबलोंगाटा",
+        "d": "Hypothalamus / हाइपोथैलेमस"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Medulla Oblongata, located in the hindbrain, automatically regulates the rate and depth of breathing based on the body's needs\n\n📖 हिंदी स्पष्टीकरण:\nमेडुला ऑबलोंगाटा, जो पश्च मस्तिष्क में स्थित होता है, शरीर की जरूरतों के आधार पर सांस लेने की दर और गहराई को स्वचालित रूप से नियंत्रित करता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Small intestine is the longest part of the alimentary canal. / अभिकथन (A): छोटी आँत आहार नली का सबसे लंबा भाग है।\n Reason (R): It is about 7-8 meters in length. / कारण (R): इसकी लंबाई लगभग 7-8 मीटर होती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDespite being called \"small\" (due to its diameter), the small intestine is indeed the longest part of the digestive tract, measuring 7-8 meters to provide maximum surface for digestion. / \"\n\n📖 हिंदी स्पष्टीकरण:\nछोटी\" (इसके व्यास के कारण) कहे जाने के बावजूद, छोटी आँत वास्तव में पाचन तंत्र का सबसे लंबा हिस्सा है, जो पाचन के लिए अधिकतम सतह प्रदान करने के लिए 7-8 मीटर लंबी होती है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which of the following is the correct order of air passage during inhalation? / उच्छ्वास के दौरान वायु मार्ग का सही क्रम कौन सा है?",
+      "options": {
+        "a": "Nasal cavity → Larynx → Pharynx → Trachea → Alveoli / नासिका गुहा स्वरयंत्र ग्रसनी श्वासनली वायु कूपिकाएँ",
+        "b": "Nasal cavity → Pharynx → Larynx → Trachea → Alveoli / नासिका गुहा ग्रसनी स्वरयंत्र श्वासनली वायु कूपिकाएँ",
+        "c": "Nasal cavity → Trachea → Pharynx → Larynx → Alveoli / नासिका गुहा श्वासनली ग्रसनी स्वरयंत्र वायु कूपिकाएँ",
+        "d": "Nasal cavity → Pharynx → Trachea → Larynx → Alveoli / नासिका गुहा ग्रसनी श्वासनली स्वरयंत्र वायु कूपिकाएँ"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAir enters through the nasal cavity, passes through the pharynx (common passage), then the larynx (voice box), down the trachea, and finally reaches the alveoli for gas exchange\n\n📖 हिंदी स्पष्टीकरण:\nहवा नासिका गुहा के माध्यम से प्रवेश करती है, ग्रसनी (सामान्य मार्ग) से गुजरती है, फिर स्वरयंत्र (वॉइस बॉक्स), श्वासनली से नीचे जाती है, और अंत में गैस विनिमय के लिए एल्वियोली (कूपिका) तक पहुँचती है।"
+    }
+  ]
+}

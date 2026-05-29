@@ -1,0 +1,308 @@
+{
+  "chapter_num": 2,
+  "chapter_title": "Latitude And Longitude",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "What is the shape of the Earth commonly referred to in geography, characterized by being slightly flat at the poles and bulged at the equator?\n भूगोल में आमतौर पर पृथ्वी की आकृति क्या है, जो ध्रुवों पर थोड़ा सपाट और भूमध्य रेखा पर उभरी हुई है?",
+      "options": {
+        "a": "Perfect Sphere / पूर्ण गोलाकार",
+        "b": "Oblate Spheroid / चपटा गोलाकार",
+        "c": "Pear Shape / नाशपाती का आकार",
+        "d": "Circular Disc / वृत्तीय डिस्क"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Earth's shape is described as a Geoid or Oblate Spheroid, which is a little flat from the top and bottom (poles) and bulged at the center (equator) due to centrifugal force.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी के आकार को भू-आकृतिक या चपटा गोलाकार के रूप में वर्णित किया गया है, जो ऊपर और नीचे (ध्रुवों) से थोड़ा सपाट है और केन्द्र (भूमध्य रेखा) पर केन्द्रापसारक बल के कारण उभरा हुआ है।"
+    },
+    {
+      "q_num": 2,
+      "question": "What is the specific angular distance (longitude) of the Prime Meridian, also known as the Greenwich Meridian?प्रधान मध्यान (ग्रीनविच मध्यान) की विशिष्ट कोणीय दूरी (देशांतर) क्या है?",
+      "options": {
+        "a": "90∘ East / 90∘ (पूर्व)",
+        "b": "180∘ Longitude/ 180∘ (देशांतर)",
+        "c": "0∘ Longitude / 0∘ (देशांतर)",
+        "d": "23.5∘ North / 23.5∘ (उत्तर)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Prime Meridian's specific angular distance (longitude) is 0∘ Longitude. This line, which passes through Greenwich, England, is the internationally accepted reference point from which all other longitudes are measured, 180∘ to the East and 180∘ to the West\n\n📖 हिंदी स्पष्टीकरण:\nप्रधान मध्याह्न रेखा की विशिष्ट कोणीय दूरी (देशांतर) 0∘ देशांतर है। यह रेखा, जो इंग्लैंड के ग्रीनविच से होकर गुजरती है, अंतरराष्ट्रीय स्तर पर स्वीकृत संदर्भ बिंदु है जहाँ से अन्य सभी देशांतरों को मापा जाता है, पूर्व में 180∘ और पश्चिम में 180∘।"
+    },
+    {
+      "q_num": 3,
+      "question": "What is the primary cause for the occurrence of Tides (the periodic rise and fall of ocean water levels)?\n ज्वार (समुद्र के जल स्तर में आवधिक वृद्धि और गिरावट) की घटना का प्राथमिक कारण क्या है?",
+      "options": {
+        "a": "Earth's Rotation / पृथ्वी का घूर्णन",
+        "b": "Gravitational pull of the Moon / चंद्रमा का गुरुत्वाकर्षण खिंचाव",
+        "c": "Earth's Revolution / पृथ्वी की परिक्रमण",
+        "d": "Centrifugal Force / केन्द्रापसारक बल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTides are caused primarily by the gravitational pull of the Moon\n\n📖 हिंदी स्पष्टीकरण:\nज्वार मुख्य रूप से चंद्रमा के गुरुत्वाकर्षण खिंचाव के कारण होता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "How many total degrees of longitude are used to divide the Earth?\n पृथ्वी को विभाजित करने के लिए देशांतर की कुल कितनी डिग्री का उपयोग किया जाता है?",
+      "options": {
+        "a": "361",
+        "b": "180",
+        "c": "360",
+        "d": "181"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe total number of longitudes is 360 (from to East and to West).\n\n📖 हिंदी स्पष्टीकरण:\nदेशांतरों की कुल संख्या 360 (पूर्व और पश्चिम तक) है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which date marks the occurrence of Aphelion, the point when the Earth is farthest from the Sun in its orbit?\n कौन सी तिथि अपसौर की घटना को चिह्नित करती है, वह बिंदु जब पृथ्वी अपनी कक्षा में सूर्य से सबसे दूर होती है?",
+      "options": {
+        "a": "3rd January / 3 जनवरी",
+        "b": "21st June / 21 जून",
+        "c": "4th July / 4 जुलाई",
+        "d": "22nd December / 22 दिसंबर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAphelion (\n\n📖 हिंदी स्पष्टीकरण:\nअपसौर) occurs on 4th July, when the distance between the Earth and the Sun is maximum (152.1 million kilometers).\nअपसौर 4 जुलाई को होता है, जब पृथ्वी और सूर्य के बीच की दूरी अधिकतम (152.1 मिलियन किलोमीटर) होती है।"
+    },
+    {
+      "q_num": 6,
+      "question": "The Earth rotates on its own axis from which direction?\n पृथ्वी अपनी धुरी पर किस दिशा से घूमती है?",
+      "options": {
+        "a": "East to West / पूर्व से पश्चिम",
+        "b": "North to South / उत्तर से दक्षिण",
+        "c": "West to East / पश्चिम से पूर्व",
+        "d": "South to North / दक्षिण से उत्तर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Earth rotates on its own axis from West to East, which is counter-clockwise (Anticlockwise).\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी पश्चिम से पूर्व की ओर अपनी धुरी पर घूमती है, जो वामावर्त है।"
+    },
+    {
+      "q_num": 7,
+      "question": "What is the approximate distance between two consecutive lines of latitude (for of latitude)?\n अक्षांश की दो क्रमागत रेखाओं (अक्षांश के लिये) के बीच की अनुमानित दूरी क्या है?",
+      "options": {
+        "a": "100 km / 100 किमी",
+        "b": "111 km / 111 किमी",
+        "c": "120 km / 120 किमी",
+        "d": "150 km / 150 किमी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe distance between each degree of latitude is approximately 111 km.\n\n📖 हिंदी स्पष्टीकरण:\nअक्षांश की प्रत्येक डिग्री के बीच की दूरी लगभग 111 किमी है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which line of latitude demarcates the northern extent of the Torrid Zone?\n अक्षांश की कौन सी रेखा उष्ण क्षेत्र की उत्तरी सीमा का सीमांकन करती है?",
+      "options": {
+        "a": "Equator / भूमध्य रेखा",
+        "b": "Arctic Circle / आर्कटिक वृत्त",
+        "c": "Tropic of Capricorn / मकर रेखा",
+        "d": "Tropic of Cancer / कर्क रेखा"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Torrid Zone is located between the Tropic of Cancer (23∘5′′N) and the Tropic of Capricorn (23∘5′′S).\n\n📖 हिंदी स्पष्टीकरण:\nउष्ण क्षेत्र कर्क रेखा (23∘26′22′′N) और मकर रेखा (23∘26′22′′S) के बीच स्थित है।"
+    },
+    {
+      "q_num": 9,
+      "question": "The movement of Earth around the Sun in an elliptical orbit is called:\n एक अण्डाकार कक्षा में सूर्य के चारों ओर पृथ्वी की गति कहलाती है:",
+      "options": {
+        "a": "Rotation / घूर्णन",
+        "b": "Axial Inclination / अक्षीय झुकाव",
+        "c": "Revolution / परिक्रमण",
+        "d": "Eclipse / ग्रहण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Earth revolves around the Sun in an elliptical orbit, a process called Revolution\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी सूर्य के चारों ओर एक अण्डाकार कक्षा में घूमती है, इस प्रक्रिया को परिक्रमण कहा जाता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "In which specific alignment of the Earth, Moon, and Sun does a Lunar Eclipse happen?\n चंद्रग्रहण पृथ्वी, चंद्रमा और सूर्य के किस विशिष्ट संरेखण में होता है?",
+      "options": {
+        "a": "Moon comes between Sun and Earth / चंद्रमा सूर्य और पृथ्वी के बीच आता है।",
+        "b": "Earth comes between Sun and Moon / पृथ्वी सूर्य और चंद्रमा के बीच आती है।",
+        "c": "Sun comes between Moon and Earth / सूर्य चंद्रमा और पृथ्वी के बीच आता है।",
+        "d": "Moon is perpendicular to Sun and Earth / चंद्रमा सूर्य और पृथ्वी के लंबवत है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA Lunar eclipse occurs when the Earth comes between the Sun and the Moon, casting the Earth's shadow on the Moon\n\n📖 हिंदी स्पष्टीकरण:\nचंद्र ग्रहण तब होता है जब पृथ्वी सूर्य और चंद्रमा के बीच आ जाती है, जिससे पृथ्वी की छाया चंद्रमा पर पड़ती है।"
+    },
+    {
+      "q_num": 11,
+      "question": "What is the precise duration of the Earth's Revolution around the Sun, as mentioned in the document?\n जैसा कि दस्तावेज़ में उल्लेख किया गया है, सूर्य के चारों ओर पृथ्वी की परिक्रमा की सटीक अवधि क्या है?",
+      "options": {
+        "a": "365 days 6 hours / 365 दिन 6 घंटे",
+        "b": "365 days 6 hours 9 minutes / 365 दिन 6 घंटे 9 मिनट 9 सेकंड",
+        "c": "365 days 5 hours 48 minutes / 365 दिन 5 घंटे 48 मिनट",
+        "d": "365 days 6 hours 4 minutes / 365 दिन 6 घंटे 4 मिनट"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOne complete revolution takes exactly 365 days 6 hours 9 minutes.\n\n📖 हिंदी स्पष्टीकरण:\nएक पूर्ण चक्कर लगाने में ठीक 365 दिन 6 घंटे 9 मिनट 9 सेकंड लगते हैं।"
+    },
+    {
+      "q_num": 12,
+      "question": "The equatorial radius of the Earth (6378 km) is greater than the polar radius (6357 km). This difference is primarily due to:\n पृथ्वी की भूमध्यरेखीय त्रिज्या (6378 किमी) ध्रुवीय त्रिज्या (6357 किमी) से अधिक है। यह अंतर मुख्य रूप से इसके कारण है:",
+      "options": {
+        "a": "Stronger gravitational force at the Equator. / भूमध्य रेखा पर मजबूत गुरुत्वाकर्षण बल।",
+        "b": "Greater centrifugal force at the Equator / भूमध्य रेखा पर अधिक केन्द्रापसारक बल।",
+        "c": "Axial inclination of 23.5∘/ 23.5∘ का अक्षीय झुकाव।",
+        "d": "The presence of major land masses near the equator / भूमध्य रेखा के पास प्रमुख भूभागों की उपस्थिति।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Earth bulges at the center (equator) because of the more Centrifugal force (\n\n📖 हिंदी स्पष्टीकरण:\nकेन्द्रीय अपसारी बल) at the Equator, which results in a greater equatorial radius\nभूमध्य रेखा पर अधिक अपकेंद्रीय बल (केन्द्रीय अपसारी बल) के कारण पृथ्वी केंद्र (भूमध्य रेखा) पर उभरी हुई है, जिसके परिणामस्वरूप भूमध्यरेखीय त्रिज्या अधिक होती है।"
+    },
+    {
+      "q_num": 13,
+      "question": "The Indian Standard Time (IST) is ahead of Greenwich Mean Time (GMT) by:\n भारतीय मानक समय (IST) ग्रीनविच मीन टाइम (GMT) से कितना आगे है:",
+      "options": {
+        "a": "4 hours 30 minutes / 4 घंटे 30 मिनट",
+        "b": "5 hours / 5 घंटे",
+        "c": "5 hours 30 minutes / 5 घंटे 30 मिनट",
+        "d": "6 hours / 6 घंटे"
+      },
+      "answer": "c",
+      "solution": ""
+    },
+    {
+      "q_num": 14,
+      "question": "A geographical grid has:\n 1. Lines that run east to west around the globe to mark latitude.\n 2. Lines that run north to south from north pole to south pole indicate longitude.\n Which of the statements given above is/are correct?\n एक भौगोलिक ग्रिड में होते हैं:\n 1. अक्षांश को दर्शाने के लिए विश्व भर में पूर्व से पश्चिम की ओर चलने वाली रेखाएँ।\n 2. उत्तरी ध्रुव से दक्षिणी ध्रुव तक उत्तर से दक्षिण की ओर चलने वाली रेखाएँ देशांतर को दर्शाती हैं।\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "1 only / केवल 1",
+        "b": "2 only / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA geographical grid is formed by the intersection of latitudes (east–west) and longitudes (north–south) — used to determine any location on Earth\n\n📖 हिंदी स्पष्टीकरण:\nएक भौगोलिक ग्रिड अक्षांशों (पूर्व-पश्चिम) और देशांतरों (उत्तर-दक्षिण) के प्रतिच्छेदन से बनता है - जिसका उपयोग पृथ्वी पर किसी भी स्थान को निर्धारित करने के लिए किया जाता है।"
+    },
+    {
+      "q_num": 15,
+      "question": "What is the value of the Earth's axial inclination (अक्षीय झुकाव) with respect to the perpendicular to the orbital plane?\n पृथ्वी के अक्षीय झुकाव का मान कक्षीय तल के लंबवत के संबंध में क्या है?",
+      "options": {
+        "a": "66.5∘",
+        "b": "23.5∘",
+        "c": "90∘",
+        "d": "10∘"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe axial inclination (\n\n📖 हिंदी स्पष्टीकरण:\nअक्षीय झुकाव) is given as 23.5∘(or 23∘30∘).\nअक्षीय झुकाव 23.5∘(या 23∘30∘) के रूप में दिया गया है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Which of the following describes the geographical extent of the Frigid Zone in the Southern Hemisphere?\n निम्नलिखित में से कौन दक्षिणी गोलार्ध में शीत क्षेत्र की भौगोलिक सीमा का वर्णन करता है?",
+      "options": {
+        "a": "Between Tropic of Capricorn and Equator. / मकर रेखा और भूमध्य रेखा के बीच",
+        "b": "Between Tropic of Capricorn and Antarctic Circle / मकर रेखा और अंटार्कटिक वृत्त के बीच।",
+        "c": "Beyond the Antarctic Circle (66.5∘ S) / अंटार्कटिक वृत्त से परे (66.5∘S)",
+        "d": "Between Antarctic Circle and Equator / अंटार्कटिक वृत्त और भूमध्य रेखा के बीच ।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Frigid zone is located beyond the Arctic and Antarctic circles and is the coldest region on Earth\n\n📖 हिंदी स्पष्टीकरण:\nशीत क्षेत्र आर्कटिक और अंटार्कटिक वृत्त से परे स्थित है और पृथ्वी पर सबसे ठंडा क्षेत्र है"
+    },
+    {
+      "q_num": 17,
+      "question": "Which key event of the Earth's movement around the Sun results in the change of seasons?\n सूर्य के चारों ओर पृथ्वी की गति की कौन सी प्रमुख घटना ऋतुओं के परिवर्तन का कारण बनती है",
+      "options": {
+        "a": "Earth's Rotation. / पृथ्वी का घूर्णन",
+        "b": "Earth's Revolution and the tilt of its axis. / पृथ्वी की परिक्रमा और उसके अक्ष का झुकाव।",
+        "c": "Perihelion and Aphelion distance variation. / उपसौर और अपसौर दूरी भिन्नता।",
+        "d": "Earth's orbital speed fluctuation / पृथ्वी की कक्षीय गति में उतार-चढ़ाव।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSeasons are caused by the Earth's revolution around the sun and the tilt of its axis\n\n📖 हिंदी स्पष्टीकरण:\nऋतुएँ पृथ्वी के सूर्य के चारों ओर घूमने और उसकी धुरी के झुकाव के कारण होती हैं।"
+    },
+    {
+      "q_num": 18,
+      "question": "The distance between two longitudes is maximum at the Equator. What is this maximum distance?\n भूमध्य रेखा पर दो देशांतरों के बीच की दूरी अधिकतम होती है। यह अधिकतम दूरी क्या है?",
+      "options": {
+        "a": "111.0 km / 111.0 किमी",
+        "b": "111.32 km / 111.32 किमी",
+        "c": "120.5 km /120.5 किमी",
+        "d": "105.42 km / 105.42 किमी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe distance between each longitude is maximum at the equator at 111.32 km and decreases towards the poles, where it is 0.\n\n📖 हिंदी स्पष्टीकरण:\nप्रत्येक देशांतर के बीच की दूरी भूमध्य रेखा पर 111.32 किमी (अधिकतम) होती है और ध्रुवों की ओर घटती जाती है, जहां यह 0 है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Which of the following countries is NOT listed as a nation through which the Prime Meridian (0∘ Longitude) passes?\n निम्नलिखित में से किस देश को उस राष्ट्र के रूप में सूचीबद्ध नहीं किया गया है जिसके माध्यम से प्रधान मध्याह्न रेखा (0∘ देशांतर) गुजरती है?",
+      "options": {
+        "a": "Spain / स्पेन",
+        "b": "Algeria / अल्जीरिया",
+        "c": "Mali / माली",
+        "d": "Nigeria / नाइजीरिया"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe list of countries is: United Kingdom (UK), France, Spain, Algeria, Mali, Burkina Faso, Ghana, and Togo. Nigeria is not on this list.\n\n📖 हिंदी स्पष्टीकरण:\nदेशों की सूची है: यूनाइटेड किंगडम (यूके), फ्रांस, स्पेन, अल्जीरिया, माली, बुर्किना फासो, घाना और टोगो। नाइजीरिया इस सूची में नहीं है।"
+    },
+    {
+      "q_num": 20,
+      "question": "During which position (relative to Earth's orbit) does the phenomenon of a 'Super Moon' occur?\n किस स्थिति के दौरान (पृथ्वी की कक्षा के सापेक्ष) 'सुपर मून' की घटना घटित होती है?",
+      "options": {
+        "a": "When the Moon's orbit is farthest from Earth during a New Moon. / जब अमावस्या के दौरान चंद्रमा की कक्षा पृथ्वी से सबसे दूर होती है।",
+        "b": "When the Moon's orbit is closest to Earth during a Full or New Moon. / जब पूर्णिमा या अमावस्या के दौरान चंद्रमा की कक्षा पृथ्वी के सबसे निकट होती है।",
+        "c": "When there are two full moons within a single calendar month. / जब एक ही कैलेंडर महीने के भीतर दो पूर्णिमा होती हैं।",
+        "d": "When the Earth blocks the sun's light causing the moon to look reddish. / जब पृथ्वी सूर्य के प्रकाश को अवरुद्ध कर देती है जिससे चंद्रमा लाल दिखने लगता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA Super Moon is defined as when the Moon's orbit is closest to Earth during a full/new moon.\n\n📖 हिंदी स्पष्टीकरण:\nएक सुपर मून को तब परिभाषित किया जाता है जब पूर्णिमा/अमावस्या के दौरान चंद्रमा की कक्षा पृथ्वी के सबसे करीब होती है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which statement is correct concerning the comparison of the Earth's rotational speed (घूर्णी गति) at different geographical locations?\n विभिन्न भौगोलिक स्थानों पर पृथ्वी की घूर्णन गति (घूर्णी गति) की तुलना के संबंध में कौन सा कथन सही है?",
+      "options": {
+        "a": "Polar speed is greater than Equatorial speed. / ध्रुवीय गति भूमध्यरेखीय गति से अधिक होती है",
+        "b": "Equatorial speed is greater than Polar speed / भूमध्यरेखीय गति ध्रुवीय गति से अधिक होती है।",
+        "c": "Speed is uniform across all latitudes. / गति सभी अक्षांशों में एक समान होती है।",
+        "d": "Speed increases as latitude increases. / अक्षांश बढ़ने पर गति बढ़ती है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe rotational speed of the Earth is maximum at the Equator and minimum at the Poles (\n\n📖 हिंदी स्पष्टीकरण:\nध्रुव). This is explicitly stated as Equatorial speed (भूमध्यरेखीय गति) >>>>>Polar speed (ध्रुवीय गति)\nपृथ्वी की घूर्णन गति भूमध्य रेखा पर अधिकतम और ध्रुवों (ध्रुव) पर न्यूनतम है। इसे स्पष्ट रूप से कहा गया है - भूमध्यरेखीय गति >ध्रुवीय गति"
+    },
+    {
+      "q_num": 22,
+      "question": "The Equinox (Equinox) is characterized by which of the following conditions?\n विषुव की विशेषता निम्नलिखित में से किस स्थिति से होती है?",
+      "options": {
+        "a": "The North Pole is maximally tilted towards the Sun. / उत्तरी ध्रुव अधिकतम सूर्य की ओर झुका हुआ है।",
+        "b": "The Southern Hemisphere experiences Summer Solstice. / दक्षिणी गोलार्ध ग्रीष्म अयनांत का अनुभव करता है।",
+        "c": "Neither of the poles is tilted towards the Sun. / कोई भी ध्रुव सूर्य की ओर झुका हुआ नहीं है।",
+        "d": "The Sun's rays are directly overhead the Tropic of Cancer. / सूर्य की किरणें कर्क रेखा के ठीक ऊपर पड़ती हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAn Equinox is the time when the Sun’s apparent path crosses the equator, and crucially, neither of the pole is tilted towards the sun, making day and night approximately equal.\n\n📖 हिंदी स्पष्टीकरण:\nविषुव वह समय होता है जब सूर्य का स्पष्ट पथ भूमध्य रेखा को पार करता है, और महत्वपूर्ण बात यह है कि कोई भी ध्रुव सूर्य की ओर झुका हुआ नहीं होता है, जिससे दिन और रात लगभग बराबर हो जाते हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "Why are all lines of Longitude considered 'Great Circles', whereas the Equator is the only line of Latitude that is a Great Circle?सभी देशांतर रेखाओं को 'महावृत्त' क्यों माना जाता है, जबकि भूमध्य रेखा ही एकमात्र अक्षांश रेखा है जो महावृत्त है?",
+      "options": {
+        "a": "Because longitude runs from east to west, dividing the Earth into two equal hemispheres. // क्योंकि देशांतर पूर्व से पश्चिम की ओर चलते हैं, जो पृथ्वी को दो बराबर गोलार्द्धों में विभाजित करते हैं।",
+        "b": "Because longitude is the smallest possible circle that can be drawn around a sphere. // क्योंकि देशांतर सबसे बड़ा संभव वृत्त है जिसे एक गोले के चारों ओर खींचा जा सकता है।",
+        "c": "Because the equator is the largest circle that passes through the center of the Earth, and all longitudes (meridians) also pass through the center. // क्योंकि भूमध्य रेखा सबसे बड़ा वृत्त है जो पृथ्वी के केंद्र से होकर गुजरता है, और सभी देशांतर (मेरिडियन) भी केंद्र से होकर गुजरते हैं।",
+        "d": "Because longitudes connect two poles, while other latitudes are smaller parallel circles. // क्योंकि देशांतर दो ध्रुवों को जोड़ते हैं, जबकि अन्य अक्षांश छोटे समानांतर वृत्त होते हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA Great Circle is the largest possible circle drawn around a sphere that divides it into two equal parts (Hemispheres). The Equator is the only latitude that passes through the center. All longitudes (meridians) run North to South and form a complete circle that passes through the center; hence they are all Great Circles.\n\n📖 हिंदी स्पष्टीकरण:\nएक वृहत् वृत्त किसी गोले के चारों ओर खींचा गया सबसे बड़ा वृत्त होता है जो उसे दो बराबर भागों (गोलार्धों) में विभाजित करता है। भूमध्य रेखा एकमात्र अक्षांश है जो केंद्र से होकर गुजरता है। सभी देशांतर (मध्याह्न रेखाएँ) उत्तर से दक्षिण की ओर चलती हैं और एक पूर्ण वृत्त बनाती हैं जो केंद्र से होकर गुजरता है; इसलिए वे सभी वृहत् वृत्त हैं"
+    },
+    {
+      "q_num": 24,
+      "question": "A ship crosses the International Date Line (180∘Meridian) while traveling westward (e.g., from the Pacific Ocean towards Asia). Based on the concept of time calculation, what date adjustment must be made?\n एक जहाज पश्चिम की ओर (जैसे, प्रशांत महासागर से एशिया की ओर) यात्रा करते समय अंतर्राष्ट्रीय तिथि रेखा (180∘मेरिडियन) को पार करता है। समय गणना की अवधारणा के आधार पर, किस तिथि का समायोजन किया जाना चाहिए?",
+      "options": {
+        "a": "Repeat the same date (add 1 day to the calendar) / उस तारीख को दोहराएं (कैलेंडर में 1 दिन जोड़ें)",
+        "b": "Skip one date (subtract 1 day from the calendar) / एक तारीख छोड़ें (कैलेंडर से 1 दिन घटाएं)।",
+        "c": "Add 12 hours to the time. / समय में 12 घंटे जोड़ें।",
+        "d": "Subtract 12 hours from the time. / समय से 12 घंटे घटाएं।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nWhen moving East from the Prime Meridian, time increases. When moving West, time decreases. Moving West across the IDL means you are moving from a day 'behind' to a day 'ahead'.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधान मध्यान से पूर्व की ओर बढ़ने पर समय बढ़ जाता है। पश्चिम की ओर बढ़ने पर समय कम हो जाता है। ILD के पार पश्चिम की ओर बढ़ने का मतलब है कि आप एक दिन 'पीछे' से एक दिन 'आगे' (पश्चिमी गोलार्ध पूर्वी गोलार्ध) की ओर बढ़ रहे हैं।"
+    },
+    {
+      "q_num": 25,
+      "question": "The maximum tides, known as 'Spring Tides', occur when the Sun, Earth, and Moon are in which specific arrangement?\n अधिकतम ज्वार, जिसे 'स्प्रिंग टाइड्स' (दीर्घ ज्वार) के रूप में जाना जाता है, तब होता है जब सूर्य, पृथ्वी और चंद्रमा किस विशिष्ट व्यवस्था में होते हैं?",
+      "options": {
+        "a": "In perpendicular alignment to each other. / एक दूसरे के लंबवत संरेखण में",
+        "b": "In a straight-line alignment. / एक सीधी रेखा संरेखण में।",
+        "c": "When the Moon is at its farthest point (Apogee). / जब चंद्रमा अपने सबसे दूर बिंदु (एपोजी/अपभु) पर होता है।",
+        "d": "During the Equinoxes only. / केवल विषुवों के दौरान।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSpring Tides occur when the Earth, Moon, and Sun are aligned along a straight line, combining their gravitational pull to produce the maximum tidal range\n\n📖 हिंदी स्पष्टीकरण:\nस्प्रिंग टाइड्स तब होते हैं जब पृथ्वी, चंद्रमा और सूर्य एक सीधी रेखा के साथ संरेखित होते हैं, जिससे उनका गुरुत्वाकर्षण बल मिलकर अधिकतम ज्वारीय सीमा उत्पन्न करता है।"
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "chapter_num": 8,
+  "chapter_title": "Atmosphere",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which gas constitutes the highest percentage by volume in the Earth's atmosphere?\n पृथ्वी के वायुमंडल में आयतन के अनुसार किस गैस का प्रतिशत सर्वाधिक है?",
+      "options": {
+        "a": "Oxygen / ऑक्सीजन",
+        "b": "Carbon Dioxide / कार्बन डाइऑक्साइड",
+        "c": "Nitrogen / नाइट्रोजन",
+        "d": "Argon / आर्गन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNitrogen is the most abundant gas, making up about 78% of the atmosphere by volume. It is relatively inert and plays an important role in the nitrogen cycle.\nPercentage of gases in the atmosphere:\nNitrogen (78%) > Oxygen (21%) > Argon (0.9%) > Carbon dioxide (0.036%)\n\n📖 हिंदी स्पष्टीकरण:\nनाइट्रोजन सबसे प्रचुर मात्रा में पाई जाने वाली गैस है, जो आयतन के हिसाब से वायुमंडल का लगभग 78% भाग बनाती है । यह अपेक्षाकृत अक्रिय (Inert) है और नाइट्रोजन चक्र में महत्वपूर्ण भूमिका निभाती है।\nवायुमंडल में गैसों का प्रतिशत:\nनाइट्रोजन (78%) > ऑक्सीजन (21%) > आर्गन (0.9%) > कार्बन डाई ऑक्साइड (0.036%)"
+    },
+    {
+      "q_num": 2,
+      "question": "In which layer of the atmosphere do almost all-weather phenomena like rain, fog, and hail occur?\n वायुमंडल की किस परत में वर्षा, कोहरा और ओलावृष्टि जैसी लगभग सभी मौसम संबंधी घटनाएँ होती हैं?",
+      "options": {
+        "a": "Mesosphere / मध्यमंडल",
+        "b": "Stratosphere / समताप मंडल",
+        "c": "Exosphere / बहिर्मंडल",
+        "d": "Troposphere / क्षोभ मंडल"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe troposphere is the lowest layer of the atmosphere, extending to an average altitude of 13 km (8 km at the poles and 18 km at the equator). Almost all weather phenomena (rain, storms, clouds, etc.) occur here, and air, water vapor, and dust particles are present, which is why all weather-related phenomena are confined to this layer.\n\n📖 हिंदी स्पष्टीकरण:\nक्षोभ मंडल वायुमंडल की सबसे निचली परत है, जो औसतन 13 किमी (ध्रुवों पर 8 किमी और भूमध्य रेखा पर 18 किमी) की ऊँचाई तक फैली हुई है। इसमें लगभग सभी मौसमी घटनाएं (वर्षा, तूफान, बादल आदि) घटित होती है एवं हवा, जल वाष्प और धूल के कण मौजूद होते हैं, जिसके कारण सभी मौसम संबंधी घटनाएँ इसी परत तक सीमित रहती हैं ।"
+    },
+    {
+      "q_num": 3,
+      "question": "What is the approximate percentage contribution of Oxygen in the Earth's atmosphere?\n पृथ्वी के वायुमंडल में ऑक्सीजन का लगभग कितना प्रतिशत योगदान है?",
+      "options": {
+        "a": "78%",
+        "b": "21%",
+        "c": "0.9%",
+        "d": "0.036%"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOxygen is the second most abundant gas in the Earth's atmosphere. It is vital for respiration and combustion processes on Earth.\n\n📖 हिंदी स्पष्टीकरण:\nऑक्सीजन पृथ्वी के वायुमंडल में दूसरी सबसे प्रचुर मात्रा में पाई जाने वाली गैस है । यह पृथ्वी पर श्वसन और दहन प्रक्रियाओं के लिए महत्वपूर्ण है।"
+    },
+    {
+      "q_num": 4,
+      "question": "The protective ozone layer, which shields the Earth from harmful UV radiation, is found in which layer of the atmosphere?\n हानिकारक पराबैंगनी (UV) विकिरण से पृथ्वी की रक्षा करने वाली ओजोन की सुरक्षात्मक परत वायुमंडल की किस परत में पाई जाती है?",
+      "options": {
+        "a": "Troposphere / क्षोभ मंडल",
+        "b": "Stratosphere / समताप मंडल",
+        "c": "Thermosphere / ताप मंडल",
+        "d": "Mesosphere / मध्यमंडल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe ozone layer is located primarily in the stratosphere, between approximately 30 and 35 km in altitude. This is an important layer because it absorbs most of the harmful ultraviolet rays from the sun.\nOzone Day - September 16 (1987, commemorates the Montreal Protocol)\n\n📖 हिंदी स्पष्टीकरण:\nओजोन परत मुख्य रूप से समताप मंडल में, लगभग 30-35 किमी की ऊँचाई के बीच स्थित होती है । यह एक महत्वपूर्ण परत है क्योंकि यह सूर्य से आने वाले अधिकांश हानिकारक पराबैंगनी किरणों को अवशोषित कर लेती है ।\nओजोन दिवस - 16 सितंबर (1987, मॉन्ट्रियल प्रोटोकॉल के उपलक्ष्य में)"
+    },
+    {
+      "q_num": 5,
+      "question": "Which of the following is the most abundant inert gas present in the atmosphere?\n निम्नलिखित में से कौन-सी वायुमंडल में मौजूद सबसे प्रचुर अक्रिय गैस है?",
+      "options": {
+        "a": "Neon / नियॉन",
+        "b": "Helium / हीलियम",
+        "c": "Argon / आर्गन",
+        "d": "Krypton / क्रिप्टॉन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArgon (Ar) makes up about 0.9% of the Earth's atmosphere and is the most abundant noble (inert) gas. It is commonly used in lighting and welding applications.\n\n📖 हिंदी स्पष्टीकरण:\nआर्गन (Ar) पृथ्वी के वायुमंडल का लगभग 0.9% भाग बनाती है और यह सबसे प्रचुर मात्रा में पाई जाने वाली एक अक्रिय गैस है । इसका उपयोग आमतौर पर प्रकाश व्यवस्था और वेल्डिंग अनुप्रयोगों में किया जाता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "What is the approximate height of the Troposphere at the Equator, as stated in the context?\n संदर्भ में बताए अनुसार, भूमध्य रेखा पर क्षोभमंडल की अनुमानित ऊँचाई कितनी है?",
+      "options": {
+        "a": "8 km",
+        "b": "13 km",
+        "c": "18 km",
+        "d": "50 km"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe height of the Troposphere is variable. It is highest at the Equator (about 18 km) due to stronger convection, and lowest at the Poles (about 8 km). The average height is 13 km.\n\n📖 हिंदी स्पष्टीकरण:\nक्षोभ मंडल की ऊँचाई परिवर्तनशील होती है । यह मजबूत संवहन के कारण भूमध्य रेखा पर सबसे अधिक (18 किमी) और ध्रुवों पर सबसे कम (लगभग 8 किमी) होती है । इसकी औसत ऊँचाई 13 किमी है।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which layer of the atmosphere is known as the Ionosphere because of the presence of ions that reflect radio waves back to Earth?\n वायुमंडल की किस परत को आयनमंडल के रूप में जाना जाता है क्योंकि इसमें आयन मौजूद होते हैं जो रेडियो तरंगों को वापस पृथ्वी पर परावर्तित करते हैं?",
+      "options": {
+        "a": "Mesosphere / मध्यमंडल",
+        "b": "Thermosphere / ताप मंडल",
+        "c": "Stratosphere / समताप मंडल",
+        "d": "Exosphere / बहिर्मंडल"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe thermosphere (between 80 and 400 km) contains ions (electrically charged particles) and is therefore called the ionosphere layer. This layer is important for long-distance radio communication because it reflects radio waves back to the Earth's surface. It is the hottest layer of the atmosphere.\n\n📖 हिंदी स्पष्टीकरण:\nतापमंडल (80 से 400 किमी के बीच) में आयन (विद्युत आवेशित कण) होते हैं और इसलिए इसे आयनमंडल परत कहा जाता है। यह परत लंबी दूरी के रेडियो संचार के लिए महत्वपूर्ण है क्योंकि यह रेडियो तरंगों को पृथ्वी की सतह पर वापस परावर्तित करती है । यह वायुमंडल की सबसे गर्म परत है।"
+    },
+    {
+      "q_num": 8,
+      "question": "What is the phenomenon where air temperature decreases with increasing height in the Troposphere, at a rate of per kilometer, called?\n क्षोभ मंडल में बढ़ती ऊँचाई के साथ वायु के तापमान में प्रति किलोमीटर की दर से होने वाली कमी की घटना को क्या कहा जाता है?",
+      "options": {
+        "a": "Temperature Inversion / तापीय प्रतिलोमन",
+        "b": "Isotherm / समताप रेखा",
+        "c": "Latent Heat / गुप्त ऊष्मा",
+        "d": "Lapse Rate / सामान्य ह्रास दर"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Lapse Rate is the standard rate at which air temperature decreases with altitude in the Troposphere. This rate is approximately 6.5°c per kilometer or 1°c per 165 meters.\n\n📖 हिंदी स्पष्टीकरण:\nसामान्य ह्रास दर (Lapse Rate) वह मानक दर है जिस पर क्षोभ मंडल में ऊँचाई के साथ हवा का तापमान कम होता जाता है । यह दर लगभग 6.5°c प्रति किलोमीटर या 1°c -165 मीटर पर होती है ।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which layer of the atmosphere is the coldest, where meteorites typically burn up?\n वायुमंडल की कौन-सी परत सबसे ठंडी है, जहाँ आमतौर पर उल्कापिंड जलकर समाप्त हो जाते हैं?",
+      "options": {
+        "a": "Stratosphere / समताप मंडल",
+        "b": "Thermosphere / ताप मंडल",
+        "c": "Mesosphere / मध्यमंडल",
+        "d": "Exosphere / बहिर्मंडल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Mesosphere is characterized as the coldest layer of the atmosphere. It is the layer where incoming meteors or meteorites usually disintegrate due to friction with air molecules.\n\n📖 हिंदी स्पष्टीकरण:\nमध्यमंडल को वायुमंडल की सबसे ठंडी परत के रूप में जाना जाता है । यह वह परत है जहाँ आने वाले उल्का या उल्कापिंड आमतौर पर हवा के अणुओं के साथ घर्षण के कारण विघटित हो जाते हैं ।"
+    },
+    {
+      "q_num": 10,
+      "question": "The horizontal transfer of heat by wind, which results in phenomena like 'loo' in India, is known as:\n पवन द्वारा ऊष्मा का क्षैतिज स्थानांतरण, जिसके परिणामस्वरूप भारत में 'लू' जैसी घटनाएँ होती हैं, उसे क्या कहा जाता है:",
+      "options": {
+        "a": "Conduction / चालन",
+        "b": "Convection / संवहन",
+        "c": "Radiation / विकिरण",
+        "d": "Advection / अभिवहन"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAdvection is the process of horizontal transfer of heat in the atmosphere. This process includes the movement of warm or cold air masses, and the 'loo' (hot dry summer wind) is cited as an example of advection.\n\n📖 हिंदी स्पष्टीकरण:\nअभिवहन (Advection) वायुमंडल में ऊष्मा के क्षैतिज स्थानांतरण की प्रक्रिया है । इस प्रक्रिया में गर्म या ठंडी हवा के द्रव्यमान की गति शामिल होती है, और 'लू' (गर्म शुष्क ग्रीष्मकालीन हवा) को अभिवहन के एक उदाहरण के रूप में उद्धृत किया गया है ।"
+    },
+    {
+      "q_num": 11,
+      "question": "Consider the following statements regarding the Stratosphere:\n समताप मंडल के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Jet planes prefer to fly in this layer due to the absence of weather phenomena. / जेट विमान मौसम संबंधी घटनाओं की अनुपस्थिति के कारण इस परत में उड़ने को प्राथमिकता देते हैं।\n 2. Temperature in this layer increases with increasing altitude. / इस परत में तापमान ऊँचाई बढ़ने के साथ बढ़ता है।\n 3. The lowest extent of this layer is defined by the Tropopause. / इस परत की सबसे निचली सीमा ट्रोपोपॉज़ द्वारा परिभाषित है।\n Which of the statements given above are correct?\n ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "1 and 2 only / केवल 1 और 2",
+        "b": "2 and 3 only / केवल 2 और 3",
+        "c": "1 and 3 only / केवल 1 और 3",
+        "d": "1, 2 and 3 / 1, 2 और 3"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAll three statements are correct. Jet planes utilize the stable, non-turbulent conditions of the Stratosphere for smooth flight. The temperature rises here because the ozone layer absorbs UV radiation. The Tropopause is the line separating the Troposphere from the Stratosphere.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन सही हैं। जेट विमान सुचारू उड़ान के लिए समताप मंडल की स्थिर, अशांत परिस्थितियों का उपयोग करते हैं। यहाँ तापमान बढ़ता है क्योंकि ओजोन परत पराबैंगनी विकिरण को अवशोषित करती है । ट्रोपोपॉज़ क्षोभ मंडल को समताप मंडल से अलग करने वाली रेखा है ।"
+    },
+    {
+      "q_num": 12,
+      "question": "What percentage of the Earth's total water is available as 'Fresh Water', and which component holds the largest share of this freshwater?\n पृथ्वी के कुल जल का कितना प्रतिशत मीठा जल के रूप में उपलब्ध है, और इस मीठे जल का सबसे बड़ा हिस्सा किस घटक में निहित है?",
+      "options": {
+        "a": "97.2%; Groundwater / 97.2%; भूजल",
+        "b": "2.8%; Lakes / 2.8%; झील",
+        "c": "2.8%; Ice caps/glaciers / 2.8%; हिमशिखर/हिमनद",
+        "d": "68.7%; Rivers / 68.7%; नदी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nOnly 2.8% of the total global water is fresh water (rest 97.2% is saline). Out of this fresh water, the largest portion (68.7%) is locked up in permanent ice caps and glaciers. The next largest share is groundwater (30.1%).\n\n📖 हिंदी स्पष्टीकरण:\nकुल वैश्विक जल का केवल 2.8% ही ताज़ा/मीठा जल है (शेष 97.2% खारा है)। इस मीठे जल में से सबसे बड़ा हिस्सा (68.7%) स्थायी हिम टोपियों और ग्लेशियरों में बंद है । दूसरा सबसे बड़ा हिस्सा भूजल (30.1%) है ।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which of the following atmospheric gases, though listed in the context, is specifically mentioned as NOT being a greenhouse gas?\n संदर्भ में सूचीबद्ध निम्नलिखित वायुमंडलीय गैसों में से किसे विशेष रूप से ग्रीनहाउस गैस नहीं होने के रूप में उल्लिखित किया गया है?",
+      "options": {
+        "a": "Water vapour / जल वाष्प",
+        "b": "Methane (CH4) / मीथेन (CH4)",
+        "c": "Nitrous oxide (N₂O) / नाइट्रस ऑक्साइड (N₂O)",
+        "d": "Sulphur Dioxide (SO2) / सल्फर डाइऑक्साइड (SO2)"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe list of greenhouse gases includes water vapor, carbon dioxide (CO2), methane (CH4), Nitrous oxide (N₂O), etc. Sulphur dioxide (SO₂), however, is not considered a greenhouse gas."
+    },
+    {
+      "q_num": 14,
+      "question": "Assertion (A): Insolation received at the Equator is less compared to the Tropics.\n Reason (R): The presence of a good amount of clouds over the Equator reduces the amount of solar radiation reaching the surface.\n अभिकथन (A): भूमध्य रेखा पर प्राप्त सूर्यातप की मात्रा उष्णकटिबंधीय क्षेत्रों की तुलना में कम होती है।\n कारण (R): भूमध्य रेखा के ऊपर बड़ी मात्रा में बादलों की उपस्थिति सतह तक पहुँचने वाले सौर विकिरण की मात्रा को कम कर देती है।",
+      "options": {
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) का सही स्पष्टीकरण है।",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
+        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
+        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe assertion is true; Insolation is generally less at the Equator compared to the tropics (where it is highest at deserts). The reason is also correct and explains the phenomenon: the high concentration of clouds near the Equator reflects a large portion of the incoming sunlight (high Albedo), thus reducing the Insolation on the ground.\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन सत्य है; भूमध्य रेखा पर सूर्यातप उष्णकटिबंधीय क्षेत्रों (जहाँ यह रेगिस्तानों में सबसे अधिक होता है) की तुलना में आम तौर पर कम होता है । कारण भी सही है और इस घटना की व्याख्या करता है: भूमध्य रेखा के पास बादलों की उच्च सघनता आने वाले सूर्य के प्रकाश के एक बड़े हिस्से को परावर्तित कर देती है (उच्च एल्बेडो), जिससे जमीन पर सूर्यातप कम हो जाता है ।"
+    },
+    {
+      "q_num": 15,
+      "question": "The thickness of the stratospheric ozone layer is measured in which unit?\n समताप मंडलीय ओजोन परत की मोटाई किस इकाई में मापी जाती है?",
+      "options": {
+        "a": "Dobson / डॉबसन",
+        "b": "Celsius / सेल्सियस",
+        "c": "Pascal / पास्कल",
+        "d": "Decibel / डेसिबल"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe ozone layer thickness is measured in the Dobson Unit (DU). This unit is a measure of the total amount of ozone in a column stretching from the Earth's surface to the top of the atmosphere.\n\n📖 हिंदी स्पष्टीकरण:\nओज़ोन परत की मोटाई को डॉबसन इकाई (DU) में मापा जाता है। यह इकाई पृथ्वी की सतह से लेकर वायुमंडल के ऊपरी भाग तक फैले एक स्तंभ में उपस्थित कुल ओज़ोन की मात्रा को मापने की एक इकाई है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Identify the correct set of conditions favorable for the occurrence of 'Temperature Inversion' in the atmosphere:\n वायुमंडल में ‘तापीय व्युत्क्रमण’ की घटना के लिए अनुकूल परिस्थितियों के सही समूह की पहचान करें:",
+      "options": {
+        "a": "short summer night, fast moving air, cloudy sky / छोटी ग्रीष्मकालीन रात, तेज़ी से चलती हवा, बादल वाला आकाश",
+        "b": "Long winter night, still air, clear cloudless sky / लंबी शीतकालीन रात, शांत हवा, साफ बादल रहित आकाश",
+        "c": "Long summer day, still air, cloudy sky / लंबी ग्रीष्मकालीन दिन, शांत हवा, बादल वाला आकाश",
+        "d": "Short winter day, fast moving air, clear cloudless sky / छोटा शीतकालीन दिन, तेज़ी से चलती हवा, साफ बादल रहित आकाश"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTemperature Inversion, where temperature increases with height, is favored by specific conditions. These conditions include a long winter night (maximum surface cooling), still air (no mixing), and a clear cloudless sky (allowing rapid heat loss by terrestrial radiation).\n\n📖 हिंदी स्पष्टीकरण:\nतापीय प्रतिलोमन/व्युत्क्रमण, जहाँ ऊँचाई के साथ तापमान बढ़ता है, विशिष्ट परिस्थितियों द्वारा समर्थित होता है । इन परिस्थितियों में लंबी शीतकालीन रात (अधिकतम सतह शीतलन), शांत हवा (कोई मिश्रण नहीं), और एक साफ बादल रहित आकाश (स्थलीय विकिरण द्वारा तेजी से ऊष्मा हानि की अनुमति) शामिल हैं ।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following is an example of an opaque surface having the highest Albedo (reflectivity) as per the provided data?\n प्रदान किए गए आंकड़ों के अनुसार, निम्नलिखित में से कौन-सा एक अपारदर्शी सतह का उदाहरण है जिसका एल्बेडो (परावर्तनशीलता) सबसे अधिक है?",
+      "options": {
+        "a": "Sand/Desert / रेत/रेगिस्तान",
+        "b": "Old Snow / पुरानी बर्फ",
+        "c": "Fresh Snow / ताज़ी बर्फ",
+        "d": "Oceans, lakes / महासागर, झीलें"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAlbedo is the proportion of light reflected by a surface. According to the table, fresh snow has an albedo of 80%, which is the highest value among the listed Earth surface types (Clouds like Cumulonimbus have 90%, but are not strictly a surface).\n\n📖 हिंदी स्पष्टीकरण:\nएल्बेडो (Albedo) एक सतह द्वारा परावर्तित प्रकाश का अनुपात है । तालिका के अनुसार, ताज़ी बर्फ का एल्बेडो 80% है, जो सूचीबद्ध पृथ्वी सतह प्रकारों में सबसे अधिक मान है (क्यूमुलोनिम्बस जैसे बादलों का 90% है, लेकिन वे पूरी तरह से सतह नहीं हैं)।"
+    },
+    {
+      "q_num": 18,
+      "question": "Match the process of water cycle with its correct transformation:\n जल चक्र की प्रक्रिया को उसके सही परिवर्तन के साथ सुमेलित करें:\n List I (Process) / सूची I (प्रक्रिया) | List II (Transformation) / सूची II (परिवर्तन) |\n | P. Evaporation / वाष्पीकरण | 1. Water Vapour - Water / जलवाष्प - जल |\n | Q. Condensation / संघनन | 2. Water - Water Vapour / जल - जलवाष्प |\n | R. Precipitation / वर्षण | 3. Release of moisture (rain, snow, hail) / नमी का विमोचन (वर्षा, हिम, ओला) |",
+      "options": {
+        "a": "P-1, Q-2, R-3",
+        "b": "P-2, Q-1, R-3",
+        "c": "P-3, Q-2, R-1",
+        "d": "P-1, Q-3, R-2"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nEvaporation is the change of state from liquid water to water vapour (gas). Condensation is the opposite, where water vapour changes back into liquid water. Precipitation is the release of moisture in any form that falls from the sky, such as rain or snow.\n\n📖 हिंदी स्पष्टीकरण:\nवाष्पीकरण द्रव जल से जल वाष्प (गैस) में अवस्था का परिवर्तन है । संघनन इसका विपरीत है, जहाँ जल वाष्प वापस तरल जल में बदल जाती है । वर्षण नमी का किसी भी रूप में विमोचन है जो आकाश से गिरता है, जैसे वर्षा या हिम ।"
+    },
+    {
+      "q_num": 19,
+      "question": "Which process of heat transfer is primarily responsible for the heating of the atmosphere near the Earth's surface after it receives solar radiation?\n सौर विकिरण प्राप्त होने के बाद पृथ्वी (सतह के निकट) की सतह द्वारा वायुमंडल को गर्म करने के लिए ऊष्मा स्थानांतरण की कौन-सी प्रक्रिया मुख्य रूप से जिम्मेदार है?",
+      "options": {
+        "a": "Radiation (Long wavelength) / विकिरण (लंबी तरंगदैर्ध्य)",
+        "b": "Conduction (near the surface) / चालन (सतह के नजदीक)",
+        "c": "Convection (vertical transfer) / संवहन (ऊर्ध्वाधर स्थानांतरण)",
+        "d": "Advection (horizontal transfer) / अभिवहन (क्षैतिज स्थानांतरण)"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSolar Insolation (short wavelength) heats the Earth's surface, not the atmosphere directly. The layer of air closest to the Earth's surface then heats up through conduction. This heated air then moves vertically via convection, transferring heat higher up.\n\n📖 हिंदी स्पष्टीकरण:\nसौर सूर्यातप (छोटी तरंगदैर्ध्य) पृथ्वी की सतह को गर्म करता है, वायुमंडल को सीधे नहीं। पृथ्वी की सतह के सबसे निकट की हवा की परत फिर चालन (Conduction) के माध्यम से गर्म होती है । यह गर्म हवा फिर संवहन (Convection) के माध्यम से ऊर्ध्वाधर रूप से चलती है, जिससे ऊष्मा ऊपर की ओर स्थानांतरित होती है ।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Tropospheric Ozone is considered 'bad ozone' for the environment.\n Reason (R): It is naturally occurring and helps in filtering harmful UV rays from the Sun.\n अभिकथन (A): क्षोभमंडलीय ओजोन को पर्यावरण के लिए 'खराब ओजोन' माना जाता है।\n कारण (R): यह प्राकृतिक रूप से उत्पन्न होती है और सूर्य से आने वाली हानिकारक पराबैंगनी किरणों को छानने में मदद करती है।",
+      "options": {
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) का सही स्पष्टीकरण है।",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
+        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
+        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAssertion (A) is true; the PDF explicitly states that Tropospheric Ozone is bad for our environment (as it is a pollutant). However, Reason (R) is false. The ozone that filters UV rays (good ozone) is in the Stratosphere. Tropospheric ozone is a component of smog and harmful to human health and plant life.\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन (A) सत्य है; जो स्पष्ट रूप से बताता है कि क्षोभमंडलीय ओजोन हमारे पर्यावरण के लिए खराब है (क्योंकि यह एक प्रदूषक है)। हालाँकि, कारण (R) असत्य है। पराबैंगनी किरणों को छानने वाला ओज़ोन (अच्छा ओज़ोन) समताप मंडल में होता है । क्षोभमंडलीय ओजोन धुंध (स्मॉग) का एक घटक है और मानव स्वास्थ्य तथा पौधों के जीवन के लिए हानिकारक है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Regarding Orographic Rainfall, consider the following statements:\n पर्वतीय वर्षा के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. It is a type of rainfall caused due to the presence of a mountain barrier. / यह एक प्रकार की वर्षा है जो एक पर्वत अवरोध की उपस्थिति के कारण होती है।\n 2. The Windward side of the mountain receives precipitation from moist, rising air. / पर्वत का पवनमुखी हिस्सा नम, ऊपर उठती हवा से वर्षा प्राप्त करता है।\n 3. The Leeward side is also known as the rain shadow region because it receives dry, descending air. / पवनाभिमुख हिस्से को वर्षा छाया क्षेत्र के रूप में भी जाना जाता है क्योंकि यह शुष्क, नीचे उतरती हवा प्राप्त करता है।\n Which of the statements given above are correct? ऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options": {
+        "a": "1 and 2 only / केवल 1 और 2",
+        "b": "2 and 3 only / केवल 2 और 3",
+        "c": "1 and 3 only / केवल 1 और 3",
+        "d": "1, 2 and 3 / 1, 2 और 3"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nOrographic rainfall occurs when moist air is forced to rise over a mountain barrier. The windward side (windward) experiences condensation and precipitation. The descending air on the other side (leeward) is dry and forms a rain shadow..\n\n📖 हिंदी स्पष्टीकरण:\nपर्वतीय वर्षा तब होती है जब नम हवा को पर्वत अवरोध के ऊपर उठने के लिए मजबूर किया जाता है। पवन की ओर मुख वाली तरफ (पवनमुखी) संघनन और वर्षा का अनुभव करती है । दूसरी तरफ नीचे उतरती हवा (पवनाभिमुख) शुष्क होती है और वर्षा छाया क्षेत्र का निर्माण करती है ।"
+    },
+    {
+      "q_num": 22,
+      "question": "Arrange the following stages of Earth's atmosphere evolution in chronological order (oldest to newest):\n पृथ्वी के वायुमंडल के विकास के निम्नलिखित चरणों को कालानुक्रमिक क्रम (सबसे पुराने से सबसे नए) में व्यवस्थित करें:\n 1. Loss of primordial atmosphere due to excessive solar flares. / अत्यधिक सौर प्रज्वाल के कारण आदिम वायुमंडल की हानि।\n 2. Modification by the living world (plants) through photosynthesis. / प्रकाश संश्लेषण के माध्यम से जीवित जगत (पौधों) द्वारा संशोधन।\n 3. Outgassing of gases from the hot interior of Earth through volcanism. / ज्वालामुखी गतिविधि के माध्यम से पृथ्वी के गर्म आंतरिक भाग से गैसों का उत्सर्जन।",
+      "options": {
+        "a": "1 - 2 - 3",
+        "b": "2 - 3 - 1",
+        "c": "1 - 3 - 2",
+        "d": "3 - 1 - 2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe evolution occurred in three main stages: 1. Loss of primordial atmosphere . 2. Outgassing/Volcanism (releasing gases from Earth's hot interior). 3. Modification by the living world (plants started adding oxygen through photosynthesis).\n\n📖 हिंदी स्पष्टीकरण:\nविकास तीन मुख्य चरणों में हुआ:\n1. आदिम वायुमंडल की हानि (जिसमें , He था) ।\n2. गैसों का उत्सर्जन/ज्वालामुखी गतिविधि (पृथ्वी के गर्म आंतरिक भाग से गैसों का उत्सर्जन)।\n3. जीवित जगत द्वारा संशोधन (पौधों ने प्रकाश संश्लेषण के माध्यम से ऑक्सीजन जोड़ना शुरू किया) ।"
+    },
+    {
+      "q_num": 23,
+      "question": "Differentiate between 'Absolute Humidity' and 'Relative Humidity' based on the definitions provided:\n प्रदान की गई परिभाषाओं के आधार पर 'निरपेक्ष आर्द्रता (Absolute Humidity)' और 'सापेक्ष आर्द्रता (Relative Humidity)' के बीच अंतर स्पष्ट करें:",
+      "options": {
+        "a": "Absolute Humidity is the actual amount of water vapor; Relative Humidity is the percentage of moisture present compared to its full capacity. / निरपेक्ष आर्द्रता जल वाष्प की वास्तविक मात्रा है; सापेक्ष आर्द्रता उसकी पूर्ण क्षमता की तुलना में मौजूद नमी का प्रतिशत है।",
+        "b": "Absolute Humidity is the percentage of moisture; Relative Humidity is the total volume of water vapor. / निरपेक्ष आर्द्रता नमी का प्रतिशत है; सापेक्ष आर्द्रता जल वाष्प की कुल मात्रा है।",
+        "c": "Absolute Humidity relates to cold air; Relative Humidity relates to warm air. / निरपेक्ष आर्द्रता ठंडी हवा से संबंधित है; सापेक्ष आर्द्रता गर्म हवा से संबंधित है।",
+        "d": "Absolute Humidity is measured in Dobson Units; Relative Humidity is measured in percent. / निरपेक्ष आर्द्रता डॉबसन इकाइयों में मापी जाती है; सापेक्ष आर्द्रता प्रतिशत में मापी जाती है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAbsolute Humidity is the measurement of the actual amount of water vapour present in the atmosphere. Relative Humidity is a ratio, expressed as a percentage (%), that compares the actual moisture to the maximum possible capacity of the air at that temperature (saturation).\n\n📖 हिंदी स्पष्टीकरण:\nनिरपेक्ष आर्द्रता वायुमंडल में मौजूद जल वाष्प की वास्तविक मात्रा का माप है । सापेक्ष आर्द्रता एक अनुपात है, जिसे प्रतिशत (%) के रूप में व्यक्त किया जाता है, जो उस तापमान पर हवा की अधिकतम संभव क्षमता (संतृप्ति) से वास्तविक नमी की तुलना करता है ।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which of the following forms of condensation involves the use of Silver Iodide (AgI) or Potassium Iodide to induce precipitation?\n निम्नलिखित में से संघनन का कौन-सा रूप वर्षा को प्रेरित करने के लिए सिल्वर आयोडाइड (AgI) या पोटेशियम आयोडाइड (Kl) के उपयोग को शामिल करता है?",
+      "options": {
+        "a": "Frost / पाला",
+        "b": "Dew / ओस",
+        "c": "Mist / कुहासा",
+        "d": "Cloud seeding / मेघ-बीजन"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nCloud seeding (or artificial rain) is an artificial process used to enhance precipitation. It involves adding substances such as Silver Iodide (AgI) or Potassium Iodide (KI) into suspended clouds to help ice crystals form, which causes water droplets to freeze and fall as rain or snow.\n.\n\n📖 हिंदी स्पष्टीकरण:\nक्लाउड सीडिंग (मेघ-बीजन या कृत्रिम बारिश) वर्षा को बढ़ावा देने के लिए उपयोग की जाने वाली एक कृत्रिम प्रक्रिया है । इसमें निलंबित बादलों में सिल्वर आयोडाइड (AgI) या पोटेशियम आयोडाइड (Kl) जैसे पदार्थ मिलाए जाते हैं, ताकि बर्फ के क्रिस्टल बनने में मदद मिल सके, जिससे पानी की बूँदें जम जाती हैं और वर्षा या हिमपात के रूप में गिरती हैं ।"
+    },
+    {
+      "q_num": 25,
+      "question": "Identify the correct pair of a significant atmospheric boundary/feature and its defining altitude:\n एक महत्वपूर्ण वायुमंडलीय सीमा/विशेषता और उसकी परिभाषित ऊँचाई के सही जोड़े की पहचान करें:",
+      "options": {
+        "a": "Karman line: 600 km / कर्मन रेखा: 600 किमी",
+        "b": "Ozone layer (maximum concentration): 85 km / ओजोन परत (अधिकतम सांद्रता): 85 किमी",
+        "c": "Stratopause: Boundary between Stratosphere and Mesosphere / समताप सीमा (स्ट्रैटोपॉज़): समताप मंडल और मध्यमंडल के बीच की सीमा",
+        "d": "Mesosphere base: 25 km / मध्यमंडल आधार: 25 किमी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Stratopause is correctly defined as the dividing line between the Stratosphere and the Mesosphere. The Karman line is defined as the boundary between the Earth's atmosphere and the Exosphere at 100 km. The ozone layer is between 30-35 km.\n\n📖 हिंदी स्पष्टीकरण:\nसमताप सीमा (स्ट्रैटोपॉज़) को समताप मंडल और मध्यमंडल के बीच की विभाजक रेखा के रूप में सही ढंग से परिभाषित किया गया है । कर्मन रेखा को पृथ्वी के वायुमंडल और बहिर्मंडल के बीच 100 किमी पर सीमा के रूप में परिभाषित किया गया है। ओजोन परत 30-35 किमी के बीच स्थित है।"
+    }
+  ]
+}

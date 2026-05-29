@@ -1,0 +1,488 @@
+{
+  "chapter_num": 12,
+  "chapter_title": "Geography Test 6",
+  "subject": "GK Full Tests",
+  "subject_id": "gk_full_tests",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Consider the following pairs of straits and connecting water bodies:\n निम्नलिखित जलडमरूमध्यों और उनसे जुड़े जल निकायों के युग्मों पर विचार करें:\n (a) Bosporus – Black Sea and Mediterranean Sea\n बॉस्फोरस – काला सागर और भूमध्य सागर\n (b) Bering Strait – Arctic Ocean and Pacific Ocean\n बेयरिंग जलडमरूमध्य – आर्कटिक महासागर और प्रशांत महासागर\n (c) Strait of Dover – North Sea and English Channel\n डोवर जलडमरूमध्य – उत्तरी सागर और इंग्लिश चैनल\n Which of the above pairs are correctly matched?\n उपरोक्त में से कौन-से युग्म सही मिलाए गए हैं?",
+      "options": {
+        "a": "1 and 2 / 1 और 2",
+        "b": "2 and 3 / 2 और 3",
+        "c": "1 and 3 / 1 और 3",
+        "d": "Only 2 / केवल 2"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBosporus links the Black Sea to the Sea of Marmara, the Bering Strait connects the Arctic and Pacific Oceans, and the Strait of Dover connects the North Sea and the English Channel..\n\n📖 हिंदी स्पष्टीकरण:\nबॉस्फोरस काला सागर को मरमरा सागर से जोड़ता है, बेयरिंग जलडमरूमध्य आर्कटिक और प्रशांत महासागर को जोड़ता है, तथा डोवर जलडमरूमध्य उत्तरी सागर और इंग्लिश चैनल को जोड़ता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which of the following deserts is located in Asia?\n निम्नलिखित में से कौन-सा मरुस्थल एशिया में स्थित है?",
+      "options": {
+        "a": "Atacama / अटाकामा",
+        "b": "Gobi / गोबी",
+        "c": "Great Victoria / ग्रेट विक्टोरिया",
+        "d": "Mojave / मोहावे"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nGobi Desert lies in Mongolia and China.\n\n📖 हिंदी स्पष्टीकरण:\nगोबी मरुस्थल मंगोलिया और चीन में स्थित है।"
+    },
+    {
+      "q_num": 3,
+      "question": "The longest latitude is:\n सबसे लंबा अक्षांश कौन-सा है?",
+      "options": {
+        "a": "Arctic Circle / आर्कटिक वृत्त",
+        "b": "Tropic of Cancer / कर्क रेखा",
+        "c": "Tropic of Capricorn / मकर रेखा",
+        "d": "Equator / भूमध्य रेखा"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe Equator is the largest circle of latitude.\n\n📖 हिंदी स्पष्टीकरण:\nभूमध्य रेखा सबसे बड़ा अक्षांश वृत्त है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Which of the following is a primary activity in Human Geography?\n मानव भूगोल में निम्नलिखित में से कौन-सी प्राथमिक गतिविधि है?",
+      "options": {
+        "a": "Mining / खनन",
+        "b": "Banking / बैंकिंग",
+        "c": "Transport / परिवहन",
+        "d": "Teaching / अध्यापन"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nMining is a primary activity involving extraction of resources.\n\n📖 हिंदी स्पष्टीकरण:\nखनन प्राकृतिक संसाधन निकालने वाली प्राथमिक गतिविधि है।"
+    },
+    {
+      "q_num": 5,
+      "question": "The International Date Line deviates from 180° meridian to avoid dividing which region?\n अंतरराष्ट्रीय तिथि रेखा 180° मध्याह्न से हटकर किस क्षेत्र को विभाजित होने से बचाती है?",
+      "options": {
+        "a": "Madagascar / मेडागास्कर",
+        "b": "Maldives / मालदीव",
+        "c": "Aleutian Islands / एल्युटियन द्वीप",
+        "d": "Sri Lanka / श्रीलंका"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIDL bends to avoid splitting the Aleutian Islands.\n\n📖 हिंदी स्पष्टीकरण:\nतिथि रेखा एल्युटियन द्वीपों को विभाजित होने से बचाने हेतु मुड़ती है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which country is known as the “Land of the Midnight Sun”?\n कौन-सा देश ‘मिडनाइट सन की भूमि’ कहलाता है?",
+      "options": {
+        "a": "South Africa / दक्षिण अफ्रीका",
+        "b": "Egypt / मिस्र",
+        "c": "Chile / चिली",
+        "d": "Norway / नॉर्वे"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nNorway experiences midnight sun due to high latitude.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च अक्षांश के कारण नॉर्वे में मध्यरात्रि सूर्य दिखाई देता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which region is densely populated?\n निम्नलिखित क्षेत्रों में से कौन-सा क्षेत्र घनी आबादी वाला है?",
+      "options": {
+        "a": "Equatorial forests / भूमध्य रेखीय वन",
+        "b": "River valleys / नदी घाटियाँ",
+        "c": "Hot deserts / गर्म मरुस्थल",
+        "d": "Polar regions / ध्रुवीय क्षेत्र"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRiver valleys provide fertile land and water, supporting dense population.\n\n📖 हिंदी स्पष्टीकरण:\nनदी घाटियाँ उपजाऊ भूमि और जल उपलब्ध कराती हैं, इसलिए जनसंख्या सघन होती है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which sea has the highest salinity?\n निम्नलिखित में से किस सागर की लवणता सर्वाधिक है?",
+      "options": {
+        "a": "Red Sea / लाल सागर",
+        "b": "Black Sea / काला सागर",
+        "c": "Baltic Sea / बाल्टिक सागर",
+        "d": "Arabian Sea / अरब सागर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHigh evaporation and low river inflow make the Red Sea highly saline.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च वाष्पीकरण और कम नदी प्रवाह के कारण लाल सागर की लवणता अधिक है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which mountain range separates Europe and Asia?\n कौन-सी पर्वतमाला यूरोप और एशिया को अलग करती है?",
+      "options": {
+        "a": "Andes / एंडीज",
+        "b": "Ural / यूराल",
+        "c": "Rockies / रॉकी",
+        "d": "Alps / ऐल्प्स"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nUral Mountains form the traditional boundary between Europe and Asia.\n\n📖 हिंदी स्पष्टीकरण:\nयूराल पर्वत यूरोप और एशिया की पारंपरिक सीमा बनाते हैं।"
+    },
+    {
+      "q_num": 10,
+      "question": "Which of the following rivers flows northward?\n निम्नलिखित में से कौन-सी नदी उत्तर की ओर बहती है?",
+      "options": {
+        "a": "Congo / कांगो",
+        "b": "Nile / नील",
+        "c": "Mississippi / मिसिसिपी",
+        "d": "Danube / डेन्यूब"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNile flows from south to north into the Mediterranean Sea.\n\n📖 हिंदी स्पष्टीकरण:\nनील दक्षिण से उत्तर की ओर बहती है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Which of the following is a secondary activity?\n निम्नलिखित में से कौन-सी द्वितीयक गतिविधि है?",
+      "options": {
+        "a": "Agriculture / कृषि",
+        "b": "Manufacturing / विनिर्माण",
+        "c": "Fishing / मत्स्यन",
+        "d": "Forestry / वानिकी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSecondary activities involve processing of raw materials.\n\n📖 हिंदी स्पष्टीकरण:\nद्वितीयक गतिविधियाँ कच्चे माल के प्रसंस्करण से जुड़ी होती हैं।"
+    },
+    {
+      "q_num": 12,
+      "question": "The world’s largest island is:\n विश्व का सबसे बड़ा द्वीप कौन-सा है?",
+      "options": {
+        "a": "Borneo / बोर्नियो",
+        "b": "New Guinea / न्यू गिनी",
+        "c": "Madagascar / मेडागास्कर",
+        "d": "Greenland / ग्रीनलैंड"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nGreenland is the world’s largest island not considered a continent.\n\n📖 हिंदी स्पष्टीकरण:\nग्रीनलैंड विश्व का सबसे बड़ा द्वीप है जिसे महाद्वीप नहीं माना जाता।"
+    },
+    {
+      "q_num": 13,
+      "question": "The country associated with the Great Rift Valley is:\n ‘ग्रेट रिफ्ट वैली’ किस देश से संबंधित है?",
+      "options": {
+        "a": "China / चीन",
+        "b": "Kenya / केन्या",
+        "c": "Peru / पेरू",
+        "d": "France / फ्रांस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Great Rift Valley stretches across East Africa, mainly Kenya.\n\n📖 हिंदी स्पष्टीकरण:\nग्रेट रिफ्ट वैली पूर्वी अफ्रीका में फैली है और मुख्यतः केन्या में स्थित है।"
+    },
+    {
+      "q_num": 14,
+      "question": "The smallest continent in the world is:\n विश्व का सबसे छोटा महाद्वीप कौन-सा है?",
+      "options": {
+        "a": "South America / दक्षिण अमेरिका",
+        "b": "Europe / यूरोप",
+        "c": "Australia / ऑस्ट्रेलिया",
+        "d": "Antarctica / अंटार्कटिका"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAustralia is the smallest continent by area.\n\n📖 हिंदी स्पष्टीकरण:\nऑस्ट्रेलिया क्षेत्रफल के आधार पर सबसे छोटा महाद्वीप है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Which is the deepest ocean in the world?\n विश्व का सबसे गहरा महासागर कौन-सा है?",
+      "options": {
+        "a": "Pacific / प्रशांत",
+        "b": "Atlantic / अटलांटिक",
+        "c": "Indian / हिंद महासागर",
+        "d": "Arctic / आर्कटिक"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Pacific Ocean has the deepest point—Mariana Trench.\n\n📖 हिंदी स्पष्टीकरण:\nप्रशांत महासागर में विश्व का सबसे गहरा स्थान—मेरिआना गर्त स्थित है।"
+    },
+    {
+      "q_num": 16,
+      "question": "According to latest estimates, the most populous country is:\n नवीनतम अनुमानों के अनुसार विश्व का सर्वाधिक जनसंख्या वाला देश कौन-सा है?",
+      "options": {
+        "a": "China / चीन",
+        "b": "India / भारत",
+        "c": "USA / अमेरिका",
+        "d": "Indonesia / इंडोनेशिया"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIndia has surpassed China as the world’s most populous country.\n\n📖 हिंदी स्पष्टीकरण:\nभारत जनसंख्या के मामले में चीन को पीछे कर चुका है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which of the following is the largest peninsula in the world?\n निम्नलिखित में से विश्व का सबसे बड़ा प्रायद्वीप कौन-सा है?",
+      "options": {
+        "a": "Korean Peninsula / कोरियाई प्रायद्वीप",
+        "b": "Arabian Peninsula / अरब प्रायद्वीप",
+        "c": "Alaska Peninsula / अलास्का प्रायद्वीप",
+        "d": "Iberian Peninsula / आईबेरियन प्रायद्वीप"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nArabian Peninsula is the world’s largest peninsula.\n\n📖 हिंदी स्पष्टीकरण:\nअरब प्रायद्वीप विश्व का सबसे बड़ा प्रायद्वीप है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which of the following is a major push factor of migration?\n निम्नलिखित में से प्रवासन का प्रमुख प्रेरक (धक्का) कारक कौन-सा है?",
+      "options": {
+        "a": "Urban lifestyle / शहरी जीवनशैली",
+        "b": "Better education / बेहतर शिक्षा",
+        "c": "Higher wages / अधिक वेतन",
+        "d": "Unemployment / बेरोज़गारी"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nUnemployment pushes people to move out of their region.\n\n📖 हिंदी स्पष्टीकरण:\nबेरोज़गारी लोगों को अपना क्षेत्र छोड़ने के लिए मजबूर करती है।"
+    },
+    {
+      "q_num": 19,
+      "question": "The narrow water body separating Africa from Europe is:\n अफ्रीका और यूरोप को अलग करने वाला संकरा जल निकाय कौन-सा है?",
+      "options": {
+        "a": "Bering Strait / बेयरिंग जलडमरूमध्य",
+        "b": "Bosporus / बॉस्फोरस",
+        "c": "Strait of Gibraltar / जिब्राल्टर जलडमरूमध्य",
+        "d": "Palk Strait / पाक जलडमरूमध्य"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nStrait of Gibraltar separates Africa and Europe.\n\n📖 हिंदी स्पष्टीकरण:\nजिब्राल्टर जलडमरूमध्य अफ्रीका और यूरोप को अलग करता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "The most urbanized continent in the world is:\n विश्व का सर्वाधिक शहरीकृत महाद्वीप कौन-सा है?",
+      "options": {
+        "a": "Europe / यूरोप",
+        "b": "Australia / ऑस्ट्रेलिया",
+        "c": "South America / दक्षिण अमेरिका",
+        "d": "North America / उत्तरी अमेरिका"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nNorth America has the highest urban population percentage.\n\n📖 हिंदी स्पष्टीकरण:\nउत्तरी अमेरिका में शहरी जनसंख्या का प्रतिशत सबसे अधिक है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which of the following is the largest landlocked country?\n निम्नलिखित में से सबसे बड़ा भू-आवेष्ठित देश कौन-सा है?",
+      "options": {
+        "a": "Kazakhstan / कज़ाख़स्तान",
+        "b": "Mongolia / मंगोलिया",
+        "c": "Chad / चाड",
+        "d": "Bolivia / बोलिविया"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nKazakhstan is the largest landlocked country by area.\n\n📖 हिंदी स्पष्टीकरण:\nकज़ाख़स्तान क्षेत्रफल के अनुसार सबसे बड़ा भू-आवेष्ठित देश है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which among the following is a characteristic of human development?\n निम्नलिखित में से मानव विकास की प्रमुख विशेषता कौन-सी है?",
+      "options": {
+        "a": "Expansion of choices / विकल्पों का विस्तार",
+        "b": "Higher taxes / अधिक कर",
+        "c": "Migration bans / प्रवासन प्रतिबंध",
+        "d": "Increased inequality / बढ़ती असमानता"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nHuman development stresses expanding people’s choices.\n\n📖 हिंदी स्पष्टीकरण:\nमानव विकास का मूल उद्देश्य लोगों के विकल्पों का विस्तार करना है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which country is the largest archipelago nation in the world?\n विश्व का सबसे बड़ा द्वीपसमूह राष्ट्र कौन-सा है?",
+      "options": {
+        "a": "Indonesia / इंडोनेशिया",
+        "b": "Philippines / फिलीपींस",
+        "c": "Japan / जापान",
+        "d": "New Zealand / न्यूज़ीलैंड"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nIndonesia has over 17,000 islands, making it the largest archipelagic nation.\n\n📖 हिंदी स्पष्टीकरण:\nइंडोनेशिया में 17,000 से अधिक द्वीप हैं, जो इसे विश्व का सबसे बड़ा द्वीपसमूह राष्ट्र बनाते हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which latitude passes through the maximum number of countries?\n कौन-सा अक्षांश सर्वाधिक देशों से होकर गुजरता है?",
+      "options": {
+        "a": "Equator / भूमध्य रेखा",
+        "b": "Tropic of Cancer / कर्क रेखा",
+        "c": "Tropic of Capricorn / मकर रेखा",
+        "d": "Arctic Circle / आर्कटिक वृत्त"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Tropic of Cancer crosses 17 countries, the highest among all latitudes.\n\n📖 हिंदी स्पष्टीकरण:\nकर्क रेखा 17 देशों से गुजरती है, जो सर्वाधिक है।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which region is known for very low population density?\n कौन-सा क्षेत्र अत्यंत कम जनसंख्या घनत्व के लिए जाना जाता है?",
+      "options": {
+        "a": "Western Europe / पश्चिमी यूरोप",
+        "b": "Siberia / साइबेरिया",
+        "c": "Ganga Plains / गंगा का मैदान",
+        "d": "Japan / जापान"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nExtreme cold and harsh climate make Siberia sparsely populated.\n\n📖 हिंदी स्पष्टीकरण:\nअत्यधिक ठंड और कठोर जलवायु साइबेरिया में कम जनसंख्या का कारण है।"
+    },
+    {
+      "q_num": 26,
+      "question": "Which of the following is the world’s longest mountain range?\n निम्नलिखित में से विश्व की सबसे लंबी पर्वतमाला कौन-सी है?",
+      "options": {
+        "a": "Alps / ऐल्प्स",
+        "b": "Rockies / रॉकी",
+        "c": "Himalayas / हिमालय",
+        "d": "Andes / एंडीज"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nAndes run along western South America for about 7,000 km.\n\n📖 हिंदी स्पष्टीकरण:\nएंडीज पर्वतमाला लगभग 7,000 किमी लंबी है।"
+    },
+    {
+      "q_num": 27,
+      "question": "Which demographic trend is typical of developed countries?\n विकसित देशों में जनसांख्यिकीय प्रवृत्ति कैसी होती है?",
+      "options": {
+        "a": "Low birth rate / कम जन्म दर",
+        "b": "High death rate / अधिक मृत्यु दर",
+        "c": "High infant mortality / अधिक शिशु मृत्यु दर",
+        "d": "High fertility / अधिक प्रजनन दर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDeveloped nations have low birth rates due to better living conditions.\n\n📖 हिंदी स्पष्टीकरण:\nबेहतर जीवन स्तर के कारण विकसित देशों में जन्म दर कम होती है।"
+    },
+    {
+      "q_num": 28,
+      "question": "Which hemisphere contains the maximum landmass?\n विश्व के स्थलभाग का अधिकांश हिस्सा किस गोलार्ध में स्थित है?",
+      "options": {
+        "a": "Eastern Hemisphere / पूर्वी गोलार्ध",
+        "b": "Southern Hemisphere / दक्षिणी गोलार्ध",
+        "c": "Northern Hemisphere / उत्तरी गोलार्ध",
+        "d": "Western Hemisphere / पश्चिमी गोलार्ध"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAbout two-thirds of the landmass lies in the Northern Hemisphere.\n\n📖 हिंदी स्पष्टीकरण:\nविश्व का लगभग दो-तिहाई स्थलभाग उत्तरी गोलार्ध में है।"
+    },
+    {
+      "q_num": 29,
+      "question": "The largest freshwater lake (by area) in the world is:\n क्षेत्रफल के आधार पर विश्व की सबसे बड़ी मीठे पानी की झील कौन-सी है?",
+      "options": {
+        "a": "Lake Superior / सुपीरियर झील",
+        "b": "Lake Victoria / विक्टोरिया झील",
+        "c": "Lake Baikal / बैकाल झील",
+        "d": "Great Bear Lake / ग्रेट बियर झील"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLake Superior is the largest freshwater lake by area.\n\n📖 हिंदी स्पष्टीकरण:\nसुपीरियर झील क्षेत्रफल के आधार पर सबसे बड़ी मीठे पानी की झील है।"
+    },
+    {
+      "q_num": 30,
+      "question": "Which of the following is the world’s fastest-growing population region?\n निम्नलिखित में से किस क्षेत्र में जनसंख्या वृद्धि सर्वाधिक तेजी से हो रही है?",
+      "options": {
+        "a": "Europe / यूरोप",
+        "b": "Africa / अफ्रीका",
+        "c": "North America / उत्तरी अमेरिका",
+        "d": "Australia / ऑस्ट्रेलिया"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAfrica has the highest population growth rate globally.\n\n📖 हिंदी स्पष्टीकरण:\nअफ्रीका में विश्व की सर्वाधिक जनसंख्या वृद्धि दर है।"
+    },
+    {
+      "q_num": 31,
+      "question": "Which is the largest ocean current in the world?\n विश्व की सबसे बड़ी महासागरीय धारा कौन-सी है?",
+      "options": {
+        "a": "Kuroshio Current / कुरोशियो धारा",
+        "b": "Gulf Stream / गल्फ स्ट्रीम",
+        "c": "Antarctic Circumpolar Current / अंटार्कटिक परिपश्चिमी धारा",
+        "d": "Labrador Current / लैब्राडोर धारा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Antarctic Circumpolar Current is the largest and strongest current.\n\n📖 हिंदी स्पष्टीकरण:\nअंटार्कटिक परिपश्चिमी धारा विश्व की सबसे बड़ी और शक्तिशाली महासागरीय धारा है।"
+    },
+    {
+      "q_num": 32,
+      "question": "Which region is known as the “Roof of the World”?\n किस क्षेत्र को “विश्व की छत” कहा जाता है?",
+      "options": {
+        "a": "Andes / एंडीज",
+        "b": "Altai Mountains / अल्ताई पर्वत",
+        "c": "Pamir Plateau / पामीर पठार",
+        "d": "Antarctica / अंटार्कटिका"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPamir Plateau is famously called the “Roof of the World.”\n\n📖 हिंदी स्पष्टीकरण:\nपामीर पठार को “विश्व की छत” कहा जाता है।"
+    },
+    {
+      "q_num": 33,
+      "question": "The ‘Lapse Rate’ decreases sharply in which atmospheric layer?\n ‘Lapse Rate’ किस वायुमंडलीय परत में अचानक कम हो जाता है?",
+      "options": {
+        "a": "Troposphere / क्षोभमंडल",
+        "b": "Tropopause / क्षोभावरोध",
+        "c": "Stratosphere / समतापमंडल",
+        "d": "Mesosphere / मध्यमंडल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn the stratosphere, temperature increases with height due to ozone absorption; hence lapse rate nearly drops.\n\n📖 हिंदी स्पष्टीकरण:\nसमतापमंडल में ऊँचाई के साथ तापमान बढ़ता है, इसलिए यहाँ lapse rate लगभग समाप्त हो जाता है।"
+    },
+    {
+      "q_num": 34,
+      "question": "Which of the following regions is known for ‘Block Mountains’?\n निम्नलिखित में से कौन-सा क्षेत्र ‘खंड पर्वत’ (Block Mountains) के लिए प्रसिद्ध है?",
+      "options": {
+        "a": "Vosges (Europe) / वोज (यूरोप)",
+        "b": "Himalayas / हिमालय",
+        "c": "Western Ghats / पश्चिमी घाट",
+        "d": "Ural Mountains / यूराल पर्वत"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nVosges and Black Forest regions are classic examples of Block Mountains.\n\n📖 हिंदी स्पष्टीकरण:\nवोज और ब्लैक फॉरेस्ट क्षेत्र खंड पर्वत के प्रमुख उदाहरण हैं।"
+    },
+    {
+      "q_num": 35,
+      "question": "Ox-bow lakes are most commonly found in which stage of a river?\n आक्स-बो झीलें नदी के किस चरण में सर्वाधिक पाई जाती हैं?",
+      "options": {
+        "a": "Youth stage / युवा अवस्था",
+        "b": "Mature stage / परिपक्व अवस्था",
+        "c": "Old stage / वृद्धावस्था",
+        "d": "All stages / सभी अवस्थाएँ"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nOx-bow lakes develop due to intense meandering typical of the old stage of a river.\n\n📖 हिंदी स्पष्टीकरण:\nनदी के वृद्धावस्था चरण में तीव्र मंद्रता (meandering) से आक्स-बो झीलें बनती हैं।"
+    },
+    {
+      "q_num": 36,
+      "question": "The ‘Roaring Forties’ are strongest in which hemisphere?\n ‘Roaring Forties’ किस गोलार्ध में सर्वाधिक प्रबल होती हैं?",
+      "options": {
+        "a": "Northern Hemisphere / उत्तरी गोलार्ध",
+        "b": "Southern Hemisphere / दक्षिणी गोलार्ध",
+        "c": "Both equally / दोनों में समान",
+        "d": "None / कोई नहीं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSouthern Hemisphere has no major landmasses; thus winds blow freely and strongly.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिणी गोलार्ध में बड़े भूभाग नहीं हैं, इसलिए हवाएँ अत्यंत तेज़ चलती हैं।"
+    },
+    {
+      "q_num": 37,
+      "question": "Which of the following is a cyclic type of plate boundary movement?\n निम्नलिखित में से कौन-सा प्लेट सीमा गति का चक्रीय प्रकार है?",
+      "options": {
+        "a": "Wilson Cycle / विल्सन चक्र",
+        "b": "Slab Pull / स्लैब पुल",
+        "c": "Ridge Push / रिज पुश",
+        "d": "Mantle Plume / मेंटल प्लूम"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nWilson Cycle explains the repeated opening and closing of ocean basins.\n\n📖 हिंदी स्पष्टीकरण:\nविल्सन चक्र महासागरों के बार-बार खुलने और बंद होने की प्रक्रिया बताता है।"
+    },
+    {
+      "q_num": 38,
+      "question": "Which of the following deserts is formed due to ‘cold ocean currents’?\n कौन-सा मरुस्थल ‘शीत महासागरीय धाराओं’ के कारण बना है?",
+      "options": {
+        "a": "Atacama / अटाकामा",
+        "b": "Gobi / गोबी",
+        "c": "Thar / थार",
+        "d": "Kalahari / कालाहारी"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nAtacama formed due to the cold Peru Current causing extreme aridity.\n\n📖 हिंदी स्पष्टीकरण:\nअटाकामा शुष्क पेरू धारा (ठंडी धारा) के कारण अत्यधिक शुष्क बना।"
+    },
+    {
+      "q_num": 39,
+      "question": "The ‘Moho Discontinuity’ separates which two layers?\n ‘मोहो असंततता’ पृथ्वी की किन दो परतों को अलग करती है?",
+      "options": {
+        "a": "Crust–Mantle / भूपर्पटी–मैंटल",
+        "b": "Mantle–Outer Core / मैंटल–बाह्य कोर",
+        "c": "Outer Core–Inner Core / बाह्य कोर–आंतरिक कोर",
+        "d": "Lithosphere–Asthenosphere / स्थलमंडल–अस्थेनोस्फियर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nMohorovičić discontinuity lies between crust and mantle.\n\n📖 हिंदी स्पष्टीकरण:\nमोहो असंततता भूपर्पटी और मैंटल के बीच स्थित है।"
+    },
+    {
+      "q_num": 40,
+      "question": "Which one of the following is an example of ‘Tsunami earthquake’?\n निम्नलिखित में से कौन ‘सुनामी भूकंप’ का उदाहरण है?",
+      "options": {
+        "a": "1896 Sanriku Earthquake",
+        "b": "2001 Bhuj Earthquake",
+        "c": "2015 Nepal Earthquake",
+        "d": "1993 Latur Earthquake"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe 1896 Sanriku event caused unusually high tsunami waves relative to its magnitude.\n\n📖 हिंदी स्पष्टीकरण:\n1896 सानरिकु घटना में परिमाण कम तथा सुनामी लहरें अत्यधिक ऊँची थीं।"
+    }
+  ]
+}

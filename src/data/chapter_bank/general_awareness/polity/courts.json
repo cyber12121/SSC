@@ -1,0 +1,308 @@
+{
+  "chapter_num": 13,
+  "chapter_title": "Courts",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "A Special Majority (2/3rd members) of each House of Parliament is required for the removal of a judge of the Supreme Court on the ground of:\n सुप्रीम कोर्ट के न्यायाधीश को किस आधार पर हटाने के लिए संसद के प्रत्येक सदन के विशेष बहुमत (2/3 सदस्य) की आवश्यकता होती है?",
+      "options": {
+        "a": "Absence from duty / कर्तव्य से अनुपस्थिति",
+        "b": "Misbehaviour or incapacity / दुर्व्यवहार या अक्षमता",
+        "c": "Voluntary resignation / स्वैच्छिक त्यागपत्र",
+        "d": "Violation of the Constitution / संविधान का उल्लंघन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe removal of a Supreme Court judge is based on the grounds of proved misbehaviour or incapacity. The order for removal is issued by the President only after an address has been passed by both Houses of Parliament with a Special Majority. This stringent procedure ensures the independence of the judiciary, protecting judges from executive or legislative overreach.\n\n📖 हिंदी स्पष्टीकरण:\nसुप्रीम कोर्ट के न्यायाधीश को हटाने का आधार सिद्ध दुर्व्यवहार या अक्षमता है। यह आदेश राष्ट्रपति द्वारा तभी जारी किया जाता है जब संसद के दोनों सदनों द्वारा विशेष बहुमत से एक प्रस्ताव पारित किया गया हो। यह कठोर प्रक्रिया न्यायपालिका की स्वतंत्रता सुनिश्चित करती है, जिससे न्यायाधीशों को कार्यपालिका या विधायिका के अत्यधिक हस्तक्षेप से बचाया जाता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which body has the power to create laws to establish a procedure for investigating a judge's misconduct or incapacity?\n न्यायाधीश के दुर्व्यवहार या अक्षमता की जाँच के लिए एक प्रक्रिया स्थापित करने हेतु कानून बनाने की शक्ति किस निकाय के पास है?",
+      "options": {
+        "a": "The Supreme Court / सुप्रीम कोर्ट",
+        "b": "The President / राष्ट्रपति",
+        "c": "The Parliament / संसद",
+        "d": "The Chief Justice of India (CJI) / भारत के मुख्य न्यायाधीश (CJI)"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nUnder Article 124(5) of the Indian Constitution, Parliament is empowered to determine by law how misbehavior or incapacity of a judge of the Supreme Court (and High Courts) shall be investigated. Under this provision, the Judges (Inquiry) Act, 1968 was enacted, which lays down the entire procedure for investigation.\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान के अनुच्छेद 124(5) के तहत, संसद को यह अधिकार दिया गया है कि वह क़ानून बनाकर यह निर्धारित करे कि सुप्रीम कोर्ट (और हाई कोर्ट) के किसी न्यायाधीश के दुर्व्यवहार या अक्षमता की जाँच किस प्रकार की जाएगी। इसी प्रावधान के अंतर्गत न्यायाधीश (जांच) अधिनियम, 1968 बनाया गया, जो जाँच की पूरी प्रक्रिया तय करता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "The National Judicial Appointments Commission (NJAC) was introduced by Parliament through which Constitutional Amendment Act?\n संसद द्वारा राष्ट्रीय न्यायिक नियुक्ति आयोग (NJAC) को किस संवैधानिक संशोधन अधिनियम के माध्यम से पेश किया गया था?",
+      "options": {
+        "a": "42nd Constitutional Amendment Act / 42वाँ संवैधानिक संशोधन अधिनियम",
+        "b": "99th Constitutional Amendment Act / 99वाँ संवैधानिक संशोधन अधिनियम",
+        "c": "7th Constitutional Amendment Act / 7वाँ संवैधानिक संशोधन अधिनियम",
+        "d": "43rd Constitutional Amendment Act / 43वाँ संवैधानिक संशोधन अधिनियम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe 99th Constitutional Amendment Act was passed by the Parliament to replace the Collegium System with the National Judicial Appointments Commission (NJAC). However, the Supreme Court, in the 4th Judges Case (2015), declared this amendment unconstitutional and null and void, restoring the Collegium System for the appointment of judges.\n\n📖 हिंदी स्पष्टीकरण:\n99वें संवैधानिक संशोधन अधिनियम को संसद द्वारा कॉलेजियम प्रणाली को राष्ट्रीय न्यायिक नियुक्ति आयोग (NJAC) से बदलने के लिए पारित किया गया था। हालाँकि, सुप्रीम कोर्ट ने, चौथे न्यायाधीश मामले (2015) में, इस संशोधन को असंवैधानिक और शून्य घोषित कर दिया, जिससे न्यायाधीशों की नियुक्ति के लिए कॉलेजियम प्रणाली बहाल हो गई।"
+    },
+    {
+      "q_num": 4,
+      "question": "The law declared by the Supreme Court is binding on all courts under which Article?\n सुप्रीम कोर्ट द्वारा घोषित कानून किस अनुच्छेद के तहत सभी न्यायालयों पर बाध्यकारी है?",
+      "options": {
+        "a": "Article 137 / अनुच्छेद 137",
+        "b": "Article 138 / अनुच्छेद 138",
+        "c": "Article 141 / अनुच्छेद 141",
+        "d": "Article 142 / अनुच्छेद 142"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArticle 141 of the Constitution states that the law declared by the Supreme Court shall be binding on all courts within the territory of India. This principle establishes judicial precedent and uniformity in the interpretation and application of law across the country.\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान का अनुच्छेद 141 यह निर्धारित करता है कि सुप्रीम कोर्ट द्वारा घोषित कानून भारत के क्षेत्र के भीतर सभी न्यायालयों पर बाध्यकारी होगा। यह सिद्धांत पूरे देश में कानून की व्याख्या और अनुप्रयोग में न्यायिक मिसाल और एकरूपता स्थापित करता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Who among the following filed the Writ Petition that led to the famous verdict of the Supreme Court of India recognising the Right to Privacy as a Fundamental Right?\n इनमें से किसने वह रिट याचिका दायर की थी, जिसके फलस्वरूप भारत के उच्चतम न्यायालय ने निजता के अधिकार को मूल अधिकार के रूप में मान्यता देने का प्रसिद्ध निर्णय दिया?",
+      "options": {
+        "a": "Justice P. N. Bhagwati / न्यायमूर्ति पी० एन० भगवती",
+        "b": "Justice Rohinton Fali Nariman / न्यायमूर्ति रोहिंटन फली नरीमन",
+        "c": "Justice K. S. Puttaswamy / न्यायमूर्ति के० एस० पुट्टास्वामी",
+        "d": "Justice Anil R. Dave / न्यायमूर्ति अनिल आर० दवे"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe landmark judgment recognizing the Right to Privacy as a fundamental right was delivered in the case of Justice K. S. Puttaswamy (Retd.) v. Union of India (2017). Justice K. S. Puttaswamy was the primary petitioner in this case.\n\n📖 हिंदी स्पष्टीकरण:\nनिजता के अधिकार को मूल अधिकार के रूप में मान्यता देने वाला ऐतिहासिक निर्णय न्यायमूर्ति के० एस० पुट्टास्वामी (सेवानिवृत्त) बनाम भारत संघ (2017) के मामले में दिया गया था। न्यायमूर्ति के० एस० पुट्टास्वामी इस मामले में मुख्य याचिकाकर्ता थे।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which Constitutional Amendment Act is associated with the establishment of a common High Court for two or more states?\n दो या दो से अधिक राज्यों के लिए एक सामान्य उच्च न्यायालय की स्थापना से कौन सा संवैधानिक संशोधन अधिनियम जुड़ा हुआ है?",
+      "options": {
+        "a": "42nd Constitutional Amendment / 42वाँ संवैधानिक संशोधन",
+        "b": "99th Constitutional Amendment / 99वाँ संवैधानिक संशोधन",
+        "c": "7th Constitutional Amendment / 7वाँ संवैधानिक संशोधन",
+        "d": "43rd Constitutional Amendment / 43वाँ संवैधानिक संशोधन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe 7th Constitutional Amendment (1956) enabled the Parliament to establish a common High Court for two or more states, as outlined in Article 231. This provision is utilized for states like Maharashtra and Goa, which share the Bombay High Court, and several North-Eastern states under the Guwahati High Court.\n\n📖 हिंदी स्पष्टीकरण:\n7वें संवैधानिक संशोधन (1956) ने संसद को अनुच्छेद 231 में उल्लिखित अनुसार, दो या दो से अधिक राज्यों के लिए एक सामान्य उच्च न्यायालय स्थापित करने में सक्षम बनाया। इस प्रावधान का उपयोग महाराष्ट्र और गोवा जैसे राज्यों के लिए किया जाता है, जो बॉम्बे उच्च न्यायालय साझा करते हैं, और गुवाहाटी उच्च न्यायालय के तहत कई उत्तर-पूर्वी राज्य भी।"
+    },
+    {
+      "q_num": 7,
+      "question": "The number of judges (other than the Chief Justice) in a High Court is determined by:\n उच्च न्यायालय में (मुख्य न्यायाधीश के अलावा) न्यायाधीशों की संख्या किसके द्वारा निर्धारित की जाती है?",
+      "options": {
+        "a": "The Chief Justice of the concerned High Court / संबंधित उच्च न्यायालय के मुख्य न्यायाधीश",
+        "b": "The Parliament / संसद",
+        "c": "The President / राष्ट्रपति",
+        "d": "The Governor of the State / राज्य के राज्यपाल"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAccording to Article 216 of the Indian Constitution, the number of judges (other than the Chief Justice) in a High Court is determined from time to time by the President, taking into account the needs and workload of the State/Territory concerned.\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान के अनुच्छेद 216 के अनुसार, किसी उच्च न्यायालय में (मुख्य न्यायाधीश के अलावा) न्यायाधीशों की संख्या राष्ट्रपति द्वारा समय-समय पर निर्धारित की जाती है। यह संख्या संबंधित राज्य/क्षेत्र की आवश्यकता और कार्यभार को ध्यान में रखकर तय की जाती है।"
+    },
+    {
+      "q_num": 8,
+      "question": "The order for the removal of a judge of the Supreme Court is issued by:\n सुप्रीम कोर्ट के न्यायाधीश को हटाने का आदेश किसके द्वारा जारी किया जाता है?",
+      "options": {
+        "a": "The Chief Justice of India / भारत के मुख्य न्यायाधीश",
+        "b": "The Prime Minister / प्रधानमंत्री",
+        "c": "The Parliament / संसद",
+        "d": "The President / राष्ट्रपति"
+      },
+      "answer": "d",
+      "solution": "📖 English Explanation:\nThe actual 'Order of President' is the final step in the removal process of a Supreme Court judge. This order, however, can only be issued after the address for removal has been passed by the Parliament with a special majority, on the grounds of proved misbehaviour or incapacity\n\n📖 हिंदी स्पष्टीकरण:\nसुप्रीम कोर्ट के न्यायाधीश को हटाने की प्रक्रिया में 'राष्ट्रपति का आदेश' अंतिम चरण होता है। हालाँकि, यह आदेश सिद्ध दुर्व्यवहार या अक्षमता के आधार पर संसद द्वारा विशेष बहुमत से हटाए जाने का प्रस्ताव पारित होने के बाद ही जारी किया जा सकता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Who has the power to enlarge the jurisdiction of the Supreme Court under Article 138 of the Constitution?\n संविधान के अनुच्छेद 138 के तहत सुप्रीम कोर्ट के क्षेत्राधिकार को बढ़ाने की शक्ति किसके पास है?",
+      "options": {
+        "a": "The President / राष्ट्रपति",
+        "b": "The Supreme Court itself / सुप्रीम कोर्ट स्वयं",
+        "c": "The Parliament by law / संसद द्वारा कानून द्वारा",
+        "d": "The Chief Justice of India / भारत के मुख्य न्यायाधीश"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArticle 138 explicitly grants the power to the Parliament to enlarge the jurisdiction of the Supreme Court by enacting a law. This allows the Parliament to assign additional powers and functions to the Supreme Court beyond those initially provided in the Constitution.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 138 स्पष्ट रूप से संसद को कानून बनाकर सुप्रीम कोर्ट के क्षेत्राधिकार को बढ़ाने की शक्ति प्रदान करता है। यह संसद को सुप्रीम कोर्ट को संविधान में शुरू में दिए गए लोगों के अलावा अतिरिक्त शक्तियाँ और कार्य सौंपने की अनुमति देता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Who submits the report on the Union Accounts to the President for presentation to the Houses of Parliament?\n संसद के सदनों में प्रस्तुति के लिए संघीय लेखा पर रिपोर्ट राष्ट्रपति को कौन प्रस्तुत करता है?",
+      "options": {
+        "a": "The Prime Minister / प्रधान मंत्री",
+        "b": "The Minister of Finance / वित्त मंत्री",
+        "c": "The Comptroller and Auditor General (CAG) / नियंत्रक और महालेखा परीक्षक (CAG)",
+        "d": "The Speaker of the Lok Sabha / लोकसभा अध्यक्ष"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Comptroller and Auditor General (CAG) of India submits reports on the Union's accounts directly to the President. The President then causes these reports to be laid before both Houses of the Parliament. This ensures Parliamentary oversight over the executive's financial expenditure.\n\n📖 हिंदी स्पष्टीकरण:\nभारत के नियंत्रक और महालेखा परीक्षक (CAG) संघ के खातों पर रिपोर्ट सीधे राष्ट्रपति को प्रस्तुत करते हैं। इसके बाद राष्ट्रपति इन रिपोर्टों को संसद के दोनों सदनों के समक्ष रखवाते हैं। यह कार्यपालिका के वित्तीय व्यय पर संसदीय निगरानी सुनिश्चित करता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Consider the following statements regarding the Supreme Court of India:\n भारत के उच्चतम न्यायालय के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Statement I: The maximum possible strength of the Supreme Court, including the CJI, is 34 judges, and this number can be changed by the Parliament.\n कथन I: CJI सहित उच्चतम न्यायालय की अधिकतम संभावित संख्या 34 न्यायाधीश है, और इस संख्या को संसद द्वारा बदला जा सकता है।\n 2. Statement II: Article 145 allows the Supreme Court to set its own rules for operation, but these rules cannot conflict with laws made by the Parliament.\n कथन II: अनुच्छेद 145 उच्चतम न्यायालय को संचालन के लिए अपने नियम निर्धारित करने की अनुमति देता है, लेकिन ये नियम संसद द्वारा बनाए गए कानूनों के साथ संघर्ष नहीं कर सकते।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "Statement I only / केवल कथन I",
+        "b": "Statement II only / केवल कथन II",
+        "c": "Statement I and Statement II / कथन I और कथन II दोनों",
+        "d": "Neither Statement I nor Statement II / न तो कथन I और न ही कथन II"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nStatement I is correct as the maximum strength is currently 1 CJI + 33 other judges (34 in total), and the power to regulate the constitution and organisation of the SC lies with Parliament. Statement II is correct as the SC's rule-making power under Article 145 is subject to any law made by Parliament and presidential approval.\n\n📖 हिंदी स्पष्टीकरण:\nकथन I सही है क्योंकि अधिकतम संख्या वर्तमान में 1 CJI + 33 अन्य न्यायाधीश (कुल 34) है, और SC के संविधान और संगठन को विनियमित करने की शक्ति संसद के पास है। कथन II सही है क्योंकि अनुच्छेद 145 के तहत SC की नियम बनाने की शक्ति संसद द्वारा बनाए गए किसी भी कानून के अधीन है और इसके लिए राष्ट्रपति की मंजूरी आवश्यक है।"
+    },
+    {
+      "q_num": 12,
+      "question": "Assertion (A): The Supreme Court, in the 4th Judges Case, declared the 99th Constitutional Amendment Act as unconstitutional and null and void.\n अभिकथन (A): सुप्रीम कोर्ट ने, चौथे न्यायाधीश मामले में, 99वें संवैधानिक संशोधन अधिनियम को असंवैधानिक और शून्य घोषित कर दिया।\n Reason (R): The 99th CA sought to replace the Collegium System with the National Judicial Appointments Commission (NJAC).\n कारण (R): 99वें संवैधानिक संशोधन अधिनियम का उद्देश्य कॉलेजियम प्रणाली को राष्ट्रीय न्यायिक नियुक्ति आयोग (NJAC) से बदलना था।",
+      "options": {
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं और (R), (A) का सही स्पष्टीकरण है।",
+        "b": "Both (A) and (R) are true but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
+        "c": "(A) is true but (R) is false. / (A) सत्य है लेकिन (R) असत्य है।",
+        "d": "(A) is false but (R) is true. / (A) असत्य है लेकिन (R) सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Supreme Court struck down the 99th CA (Assertion A) because it viewed the creation of the NJAC (Reason R) as an infringement on the principle of judicial independence, which is part of the basic structure of the Constitution. Therefore, the reason directly explains why the SC took the action mentioned in the assertion.\n\n📖 हिंदी स्पष्टीकरण:\nसुप्रीम कोर्ट ने 99वें संवैधानिक संशोधन अधिनियम (अभिकथन A) को इस आधार पर रद्द कर दिया क्योंकि उसने NJAC के निर्माण (कारण R) को न्यायिक स्वतंत्रता के सिद्धांत का उल्लंघन माना, जो संविधान की मूल संरचना का हिस्सा है। इसलिए, कारण सीधे बताता है कि SC ने अभिकथन में उल्लिखित कार्रवाई क्यों की।"
+    },
+    {
+      "q_num": 13,
+      "question": "Consider the following statements regarding the powers of the Parliament over High Courts:\n उच्च न्यायालयों पर संसद की शक्तियों के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Statement I: Parliament has the power to extend the jurisdiction of a High Court to a Union Territory.\n कथन I: संसद के पास उच्च न्यायालय के क्षेत्राधिकार को किसी केंद्र शासित प्रदेश तक विस्तारित करने की शक्ति है।\n 2. Statement II: The salaries, allowances, leaves, and pension rights of High Court judges are determined by Parliament.\n कथन II: उच्च न्यायालय के न्यायाधीशों के वेतन, भत्ते, छुट्टियाँ और पेंशन अधिकार संसद द्वारा निर्धारित किए जाते हैं।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "Statement I only / केवल कथन I",
+        "b": "Statement II only / केवल कथन II",
+        "c": "Both Statement I and Statement II / कथन I और कथन II दोनों",
+        "d": "Neither Statement I nor Statement II / न तो कथन I और न ही कथन II"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBoth statements are correct. Article 230 grants Parliament the power to extend the jurisdiction of a High Court to, or exclude the jurisdiction of a High Court from, any Union Territory (Statement I). Also, Article 221 states that the Parliament determines the service conditions, including salary and pension rights, of the High Court judges (Statement II).\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। अनुच्छेद 230 संसद को किसी भी केंद्र शासित प्रदेश तक उच्च न्यायालय के क्षेत्राधिकार को विस्तारित करने या किसी उच्च न्यायालय के क्षेत्राधिकार को उससे बाहर करने की शक्ति प्रदान करता है (कथन I)। साथ ही, अनुच्छेद 221 कहता है कि संसद उच्च न्यायालय के न्यायाधीशों के वेतन और पेंशन अधिकारों सहित सेवा शर्तों का निर्धारण करती है (कथन II)।"
+    },
+    {
+      "q_num": 14,
+      "question": "Which one of the following organizations challenged the constitutionality of Section 377 of the Indian Penal Code in the Supreme Court of India?\n निम्नलिखित में से किस संगठन ने भारतीय दंड संहिता की धारा 377 की संवैधानिकता को भारत के उच्चतम न्यायालय में चुनौती दी है?",
+      "options": {
+        "a": "Naz Foundation (India) Trust / नाज़ फाउंडेशन (इंडिया) ट्रस्ट",
+        "b": "Bachpan Bachao Andolan / बचपन बचाओ आंदोलन",
+        "c": "Sambhav Foundation India / संभव फाउंडेशन इंडिया",
+        "d": "ActionAid India / एक्शनएड इंडिया"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe Naz Foundation (India) Trust was the primary organization that first challenged the constitutionality of Section 377 of the Indian Penal Code in the Delhi High Court and subsequently played a crucial role in the legal battle that reached the Supreme Court. The Delhi High Court decision in Naz Foundation v. Govt. of NCT of Delhi (2009) initially decriminalized the section, but the Supreme Court later overturned it in 2013 (Suresh Kumar Koushal v. Naz Foundation). Finally, the Supreme Court's verdict in Navtej Singh Johar v. Union of India (2018) read down Section 377 to exclude consensual sexual acts between adults of the same sex, effectively decriminalizing homosexuality.\n\n📖 हिंदी स्पष्टीकरण:\nनाज़ फाउंडेशन (इंडिया) ट्रस्ट वह प्राथमिक संगठन था जिसने पहले दिल्ली उच्च न्यायालय में भारतीय दंड संहिता की धारा 377 की संवैधानिकता को चुनौती दी थी और बाद में उच्चतम न्यायालय तक पहुँचे कानूनी संघर्ष में महत्वपूर्ण भूमिका निभाई थी। नाज़ फाउंडेशन बनाम एन.सी.टी. दिल्ली सरकार (2009) में दिल्ली उच्च न्यायालय के फैसले ने शुरू में इस धारा को अपराधमुक्त कर दिया था, लेकिन उच्चतम न्यायालय ने बाद में 2013 में इसे उलट दिया (सुरेश कुमार कौशल बनाम नाज़ फाउंडेशन)। अंत में, नवतेज सिंह जौहर बनाम भारत संघ (2018) में उच्चतम न्यायालय के फैसले ने धारा 377 को समलैंगिक वयस्कों के बीच सहमति से यौन कृत्यों को बाहर करने के लिए पढ़ा, जिससे समलैंगिकता को प्रभावी ढंग से अपराधमुक्त कर दिया गया।"
+    },
+    {
+      "q_num": 15,
+      "question": "Consider the following statements: निम्नलिखित कथनों पर विचार करें:\n 1. Statement I: A former Supreme Court judge cannot practice law in any court or before any authority within the territory of India. कथन I: सुप्रीम कोर्ट का एक पूर्व न्यायाधीश भारत के क्षेत्र के भीतर किसी भी अदालत या किसी भी प्राधिकरण के सामने कानून का अभ्यास नहीं कर सकता है।\n 2. Statement II: A former permanent High Court judge is restricted from practicing law in any court in India, except the Supreme Court and other High Courts. कथन II: एक पूर्व स्थायी उच्च न्यायालय न्यायाधीश को सुप्रीम कोर्ट और अन्य उच्च न्यायालयों को छोड़कर, भारत में किसी भी अदालत में कानून का अभ्यास करने से प्रतिबंधित किया जाता है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "Statement I only / केवल कथन I",
+        "b": "Statement II only / केवल कथन II",
+        "c": "Both Statement I and Statement II / कथन I और कथन II दोनों",
+        "d": "Neither Statement I nor Statement II / न तो कथन I और न ही कथन II"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nStatement I is correct; Article 124(7) imposes a complete ban on practice for a former SC judge. Statement II is also correct; Article 220 restricts a former permanent HC judge from practicing in any court except the Supreme Court and the other High Courts(other than the High Court where they served), providing a partial restriction.\n\n📖 हिंदी स्पष्टीकरण:\nकथन I सही है; अनुच्छेद 124(7) एक पूर्व SC न्यायाधीश पर अभ्यास के लिए पूर्ण प्रतिबंध लगाता है। कथन II भी सही है; अनुच्छेद 220 एक पूर्व स्थायी HC न्यायाधीश को सुप्रीम कोर्ट और अन्य उच्च न्यायालयों को छोड़कर भारत में किसी भी अदालत में अभ्यास करने से प्रतिबंधित करता है, एक आंशिक प्रतिबंध प्रदान करता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Which of the following is true regarding the removal of both Supreme Court and High Court judges?\n सुप्रीम कोर्ट और हाई कोर्ट दोनों के न्यायाधीशों को हटाने के संबंध में निम्नलिखित में से कौन सा सत्य है?",
+      "options": {
+        "a": "The process for removal is the same for both. / हटाने की प्रक्रिया दोनों के लिए समान है।",
+        "b": "The order of removal is issued by the Chief Justice of India. / हटाने का आदेश भारत के मुख्य न्यायाधीश द्वारा जारी किया जाता है।",
+        "c": "The removal requires a Simple Majority of Parliament. / हटाने के लिए संसद के साधारण बहुमत की आवश्यकता होती है।",
+        "d": "The grounds for removal are only incapacity. / हटाने का आधार केवल अक्षमता है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe removal process for a High Court judge is the same as that for a Supreme Court judge. Both require an order from the President following an address passed by each House of the Parliament by a Special Majority, on the grounds of proved misbehaviour or incapacity.\n\n📖 हिंदी स्पष्टीकरण:\nएक उच्च न्यायालय के न्यायाधीश को हटाने की प्रक्रिया सुप्रीम कोर्ट के न्यायाधीश के लिए समान है। दोनों को सिद्ध दुर्व्यवहार या अक्षमता के आधार पर, संसद के प्रत्येक सदन द्वारा विशेष बहुमत से पारित प्रस्ताव के बाद राष्ट्रपति के एक आदेश की आवश्यकता होती है।"
+    },
+    {
+      "q_num": 17,
+      "question": "The power of the Supreme Court to review its own judgements or orders is provided under:\n सुप्रीम कोर्ट को अपने स्वयं के निर्णयों या आदेशों की समीक्षा करने की शक्ति किसके तहत प्रदान की गई है?",
+      "options": {
+        "a": "Article 132 / अनुच्छेद 132",
+        "b": "Article 136 / अनुच्छेद 136",
+        "c": "Article 137 / अनुच्छेद 137",
+        "d": "Article 140 / अनुच्छेद 140"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArticle 137 grants the Supreme Court the power to review any judgment pronounced or order made by it. This power is subject to the provisions of any law made by Parliament or any rules made under Article 145, demonstrating a legislative influence on the judicial process\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 137 सुप्रीम कोर्ट को उसके द्वारा दिए गए किसी भी निर्णय या आदेश की समीक्षा करने की शक्ति प्रदान करता है। यह शक्ति संसद द्वारा बनाए गए किसी भी कानून या अनुच्छेद 145 के तहत बनाए गए किसी भी नियम के प्रावधानों के अधीन है, जो न्यायिक प्रक्रिया पर विधायी प्रभाव को दर्शाता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "The enforcement of decrees and orders of the Supreme Court across the territory of India is dealt with by:\n भारत के क्षेत्र में सुप्रीम कोर्ट के फैसलों और आदेशों को लागू करने का कार्य किसके द्वारा किया जाता है?",
+      "options": {
+        "a": "Article 124 / अनुच्छेद 124",
+        "b": "Article 142 / अनुच्छेद 142",
+        "c": "Article 145 / अनुच्छेद 145",
+        "d": "Article 147 / अनुच्छेद 147"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nArticle 142 deals with the enforcement of decrees and orders of the Supreme Court, stating that the SC may pass such decree or order as is necessary for doing complete justice in any cause or matter pending before it. This power is often associated with judicial activism, as demonstrated in the Bhopal Gas Tragedy case.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 142 सुप्रीम कोर्ट के फैसलों और आदेशों को लागू करने से संबंधित है, जिसमें कहा गया है कि SC अपने समक्ष लंबित किसी भी कारण या मामले में पूर्ण न्याय करने के लिए आवश्यक ऐसा फैसला या आदेश पारित कर सकता है। यह शक्ति अक्सर न्यायिक सक्रियता से जुड़ी होती है, जैसा कि भोपाल गैस त्रासदी मामले में प्रदर्शित हुआ था।"
+    },
+    {
+      "q_num": 19,
+      "question": "The Supreme Court of India exercises advisory jurisdiction under which Article of the Constitution of India?\n भारत का उच्चतम न्यायालय भारत के संविधान के किस अनुच्छेद के अधीन सलाहकार अधिकारिता का प्रयोग करता है?",
+      "options": {
+        "a": "Article 141 / अनुच्छेद 141",
+        "b": "Article 142 / अनुच्छेद 142",
+        "c": "Article 143 / अनुच्छेद 143",
+        "d": "Article 144 / अनुच्छेद 144"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArticle 143 of the Constitution of India vests the Supreme Court with the power to advise the President of India on a question of law or fact of public importance. This is known as the Advisory Jurisdiction. Article 141 deals with the binding nature of the law declared by the Supreme Court. Article 142 deals with the power to pass an order for doing complete justice. Article 144 directs all authorities to act in aid of the Supreme Court.\n\n📖 हिंदी स्पष्टीकरण:\nभारत के संविधान का अनुच्छेद 143 उच्चतम न्यायालय को राष्ट्रपति को लोक महत्व के कानून या तथ्य के प्रश्न पर सलाह देने की शक्ति प्रदान करता है। इसे सलाहकार अधिकारिता के रूप में जाना जाता है। अनुच्छेद 141 उच्चतम न्यायालय द्वारा घोषित कानून की बाध्यकारी प्रकृति से संबंधित है। अनुच्छेद 142 पूर्ण न्याय करने के लिए आदेश पारित करने की शक्ति से संबंधित है। अनुच्छेद 144 सभी प्राधिकरणों को उच्चतम न्यायालय की सहायता में कार्य करने का निर्देश देता है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): The President has the power to consult the Supreme Court on a matter of general public importance.\n अभिकथन (A): राष्ट्रपति के पास सामान्य सार्वजनिक महत्व के मामले पर सुप्रीम कोर्ट से परामर्श करने की शक्ति है।\n Reason (R): The SC's advice is not binding on the President in all cases of advisory jurisdiction.\n कारण (R): सलाहकार क्षेत्राधिकार के सभी मामलों में SC की सलाह राष्ट्रपति पर बाध्यकारी नहीं होती है।",
+      "options": {
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं और (R), (A) का सही स्पष्टीकरण है।",
+        "b": "Both (A) and (R) are true but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
+        "c": "(A) is true but (R) is false. / (A) सत्य है लेकिन (R) असत्य है।",
+        "d": "(A) is false but (R) is true. / (A) असत्य है लेकिन (R) सत्य है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAssertion (A) is true as per Article 143 (Advisory Jurisdiction), which allows the President to seek SC's opinion on two types of matters: pre-constitutional and general public importance. Reason (R) is also true as the SC's advice is not binding on the President for matters of general importance, but it does not explain why the President has the power to consult the SC.\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन (A) अनुच्छेद 143 (सलाहकार क्षेत्राधिकार) के अनुसार सत्य है, जो राष्ट्रपति को दो प्रकार के मामलों पर SC की राय लेने की अनुमति देता है: संवैधानिक पूर्व और सामान्य सार्वजनिक महत्व। कारण (R) भी सत्य है क्योंकि सामान्य महत्व के मामलों के लिए SC की सलाह राष्ट्रपति पर बाध्यकारी नहीं होती है, लेकिन यह इस बात की व्याख्या नहीं करता कि राष्ट्रपति को SC से परामर्श करने की शक्ति क्यों है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which one of the following statements with regard to the impeachment of a Judge of the Supreme Court of India is not correct?\n भारत के उच्चतम न्यायालय के किसी न्यायाधीश पर महाभियोग चलाने के संबंध में निम्नलिखित कथनों में से कौन-सा सही नहीं है?",
+      "options": {
+        "a": "A motion addressed to the President, signed by at least 100 members of both the Houses of the Parliament is delivered to the Speaker. / संसद के दोनों सदनों के कम-से-कम 100 सदस्यों द्वारा हस्ताक्षरित और राष्ट्रपति को संबोधित प्रस्ताव अध्यक्ष को प्रस्तुत किया जाता है।",
+        "b": "The motion is investigated by Committee of three (The Chief Justice or a judge of the Supreme Court, a Chief Justice of a High Court, and a distinguished jurist.)/ प्रस्ताव की जांच तीन सदस्यों वाली समिति (मुख्य न्यायाधीश या सर्वोच्च न्यायालय के न्यायाधीश, उच्च न्यायालय के मुख्य न्यायाधीश और एक प्रतिष्ठित न्यायविद) द्वारा की जाती है।",
+        "c": "If the Committee finds the Judge guilty of misbehaviour or that he suffers from incapacity, the motion together with the report of the Committee is taken up for consideration in the House where the motion is pending. / यदि समिति इस निष्कर्ष पर पहुँचती है कि न्यायाधीश कदाचार का दोषी है या असमर्थता से ग्रस्त है, तो समिति की रिपोर्ट के साथ-साथ इस प्रस्ताव पर सदन में विचार किया जाएगा जहाँ यह प्रस्ताव लंबित है।",
+        "d": "The Judge will be removed after the President gives his order for removal. / राष्ट्रपति द्वारा हटाए जाने का आदेश दिए जाने के पश्चात् न्यायाधीश को हटाया जाएगा।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe motion, signed by the requisite number of members (100 in Lok Sabha or 50 in Rajya Sabha), is delivered to the Speaker (or Chairman). The rest of the process involves the committee investigation and subsequent motion consideration in the Parliament before the President issues the removal order. Statement (a) It is not required that 100 members of both Houses sign the motion.\n\n📖 हिंदी स्पष्टीकरण:\nप्रस्ताव, अपेक्षित सदस्यों (लोकसभा में 100 या राज्यसभा में 50) द्वारा हस्ताक्षरित, अध्यक्ष (या सभापति) को सौंपा जाता है। शेष प्रक्रिया में समिति द्वारा जाँच और राष्ट्रपति द्वारा निष्कासन आदेश जारी करने से पहले संसद में प्रस्ताव पर विचार शामिल होता है। कथन (a) यह आवश्यक नहीं है कि दोनों सदनों के 100 सदस्य प्रस्ताव पर हस्ताक्षर करें।"
+    },
+    {
+      "q_num": 22,
+      "question": "The Judgment of the Supreme Court in Peoples' Union for Civil Liberties v. Union of India 2004 is related to which of the following?\n पीपल्स यूनियन फॉर सिविल लिबर्टीज़ बनाम भारत संघ 2004 मामले में उच्चतम न्यायालय का निर्णय निम्नलिखित में से किससे संबंधित है?",
+      "options": {
+        "a": "Right to Shelter / आश्रय का अधिकार",
+        "b": "Right against Custodial violence / अभिरक्षा में हिंसा के विरुद्ध अधिकार",
+        "c": "Right to Information / सूचना का अधिकार",
+        "d": "Right to Speedy trial / शीघ्र विचारण का अधिकार"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe 2004 Supreme Court judgment in Peoples' Union for Civil Liberties v. Union of India dealt with the Right to Information (RTI), specifically in the context of voter's rights. It affirmed the right of voters to know about the assets, liabilities, and educational qualifications of candidates contesting elections, holding it as part of the freedom of speech and expression under Article 19(1)(a) of the Constitution.\n\n📖 हिंदी स्पष्टीकरण:\nपीपल्स यूनियन फॉर सिविल लिबर्टीज़ बनाम भारत संघ मामले में 2004 का उच्चतम न्यायालय का निर्णय सूचना के अधिकार से संबंधित था, विशेष रूप से मतदाता के अधिकारों के संदर्भ में। इसने चुनाव लड़ने वाले उम्मीदवारों की संपत्ति, देनदारियों और शैक्षिक योग्यताओं के बारे में जानने के मतदाताओं के अधिकार की पुष्टि की, इसे संविधान के अनुच्छेद 19(1)(a) के तहत वाक् और अभिव्यक्ति की स्वतंत्रता के हिस्से के रूप में माना।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which one of the following powers of the Supreme Court is also conferred on a High Court?\n उच्चतम न्यायालय की निम्नलिखित शक्तियों में से कौन-सी उच्च न्यायालय को भी प्रदान की गयी है?",
+      "options": {
+        "a": "Advisory power / सलाहकारी शक्ति",
+        "b": "Power of doing complete justice in any cause or matter pending before the court / न्यायालय के समक्ष लंबित किसी वाद या मामले में पूर्ण न्याय करने की शक्ति",
+        "c": "Power of court of record / अभिलेख न्यायालय की शक्ति",
+        "d": "Power to allow/refuse Special Leave Petitions / विशेष इजाजत याचिकाओं को मंजूर करने/नामंजूर करने की शक्ति"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBoth the Supreme Court (under Article 129) and the High Courts (under Article 215) are designated as Courts of Record. This power means their records and judicial proceedings have evidentiary value and cannot be questioned when produced in any court, and they have the power to punish for contempt of court. Advisory power (Art 143) and Special Leave Petitions (Art 136) are exclusive to the Supreme Court. The power to 'do complete justice' (Art 142) is also exclusive to the Supreme Court.\n\n📖 हिंदी स्पष्टीकरण:\nउच्चतम न्यायालय (अनुच्छेद 129 के तहत) और उच्च न्यायालय (अनुच्छेद 215 के तहत) दोनों को अभिलेख न्यायालय के रूप में नामित किया गया है। इस शक्ति का अर्थ है कि उनके रिकॉर्ड और न्यायिक कार्यवाही साक्ष्य के रूप में मूल्य रखती हैं और किसी भी न्यायालय में प्रस्तुत किए जाने पर उन पर प्रश्न नहीं उठाया जा सकता है, और उनके पास न्यायालय की अवमानना के लिए दंडित करने की शक्ति है। सलाहकारी शक्ति (अनुच्छेद 143) और विशेष इजाजत याचिकाएं (अनुच्छेद 136) उच्चतम न्यायालय के लिए अनन्य हैं। 'पूर्ण न्याय करने की शक्ति' (अनुच्छेद 142) भी उच्चतम न्यायालय के लिए अनन्य है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which one of the following statements about the Supreme Court is not correct?\n उच्चतम न्यायालय के बारे में निम्नलिखित कथनों में से कौन-सा सही नहीं है?",
+      "options": {
+        "a": "Under Article 129 and Article 144 of the Constitution of India, the Supreme Court has been vested with power to punish for contempt of court. / भारत के संविधान के अनुच्छेद 129 और अनुच्छेद 144 के अंतर्गत, न्यायालय की अवमानना के लिए दंड देने की शक्ति उच्चतम न्यायालय में निहित की गयी है।",
+        "b": "The Supreme Court has been vested with advisory jurisdiction. / सलाहकारी अधिकारिता को उच्चतम न्यायालय में निहित किया गया है।",
+        "c": "The Supreme Court may refuse to provide opinion to the President, if so asked, in certain circumstances. / यदि राय माँगी जाती है, तो उच्चतम न्यायालय, कतिपय परिस्थितियों में राष्ट्रपति को राय देने से इंकार कर सकता है",
+        "d": "Law declared by the Supreme Court is binding on all courts within the territory of India. / उच्चतम न्यायालय द्वारा घोषित विधि भारत के राज्यक्षेत्र के भीतर सभी न्यायालयों के लिए आबद्धकर है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nArticle 129 declares the Supreme Court a Court of Record and gives it the power to punish for its contempt. However, Article 144 deals with the civil and judicial authorities in India acting in aid of the Supreme Court. Therefore, connecting Article 144 with the power to punish for contempt is incorrect. The rest of the statements are correct: it has advisory jurisdiction (Art 143) , can refuse to advise in certain cases , and its law is binding on all courts (Art 141).\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 129 उच्चतम न्यायालय को अभिलेख न्यायालय घोषित करता है और इसे अपनी अवमानना के लिए दंडित करने की शक्ति देता है। हालांकि, अनुच्छेद 144 भारत के भीतर सिविल और न्यायिक अधिकारियों से संबंधित है जो उच्चतम न्यायालय की सहायता में कार्य करते हैं। इसलिए, अनुच्छेद 144 को अवमानना के लिए दंडित करने की शक्ति से जोड़ना गलत है। बाकी कथन सही हैं: इसके पास सलाहकार अधिकारिता है (अनुच्छेद 143) , कुछ मामलों में सलाह देने से इंकार कर सकता है , और इसके द्वारा घोषित विधि सभी न्यायालयों पर बाध्यकारी है (अनुच्छेद 141) ।"
+    },
+    {
+      "q_num": 25,
+      "question": "Who can be appointed as a Judge of the Supreme Court?\n उच्चतम न्यायालय के न्यायाधीश के रूप में किसे नियुक्त किया जा सकता है?",
+      "options": {
+        "a": "An advocate who has practised for at least ten years in any court / किसी अधिवक्ता को, जिसने किसी न्यायालय में कम-से-कम दस वर्ष तक विधि व्यवसाय किया है",
+        "b": "A Judge of a High Court for at least three years / किसी उच्च न्यायालय के न्यायाधीश को, जो कम-से-कम तीन वर्ष तक न्यायाधीश रहा ह",
+        "c": "A distinguished jurist in the opinion of the President of India / भारत के राष्ट्रपति की राय में पारंगत विधिवेत्ता को",
+        "d": "A person who has held a judicial office for at least fifteen years / किसी व्यक्ति को, जो कम-से-कम पंद्रह वर्ष तक न्यायिक पद पर रहा है"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nArticle 124(3) of the Constitution of India provides for the following qualifications for appointment as a Supreme Court Judge:\n5. (a) Has been a Judge of a High Court for at least five years (Option (b) says three years, which is incorrect).\n6. (b) Has been an advocate of a High Court for at least ten years (Option (a) says in any court, but the standard qualification usually specifies High Court).\n7. (c) Is, in the opinion of the President, a distinguished jurist. Option (c) is one of the explicitly stated qualifications for appointment to the Supreme Court.\n8. (a)\n9. (b)\n10. (c)\n\n📖 हिंदी स्पष्टीकरण:\nभारत के संविधान का अनुच्छेद 124(3) उच्चतम न्यायालय के न्यायाधीश के रूप में नियुक्ति के लिए निम्नलिखित योग्यताएँ प्रदान करता है:\nकम-से-कम पाँच वर्ष तक किसी उच्च न्यायालय का न्यायाधीश रहा हो (विकल्प (b) में तीन वर्ष है, जो गलत है)।\nकम-से-कम दस वर्ष तक किसी उच्च न्यायालय का अधिवक्ता रहा हो (विकल्प (a) में किसी भी न्यायालय में कहा गया है, लेकिन मानक योग्यता आमतौर पर उच्च न्यायालय को निर्दिष्ट करती है)।\nराष्ट्रपति की राय में पारंगत विधिवेत्ता हो। विकल्प (c) उच्चतम न्यायालय में नियुक्ति के लिए स्पष्ट रूप से बताई गई योग्यताओं में से एक है।"
+    }
+  ]
+}

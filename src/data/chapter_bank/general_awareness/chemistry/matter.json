@@ -1,0 +1,308 @@
+{
+  "chapter_num": 1,
+  "chapter_title": "Matter",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "What is the fourth state of matter called? / पदार्थ की चौथी अवस्था को क्या कहा जाता है?",
+      "options": {
+        "a": "Solid / ठोस",
+        "b": "Plasma / प्लाज्मा",
+        "c": "Gas / गैस",
+        "d": "Bose-Einstein Condensate / बोस-आइंस्टीन कंडेनसेट"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPlasma is an ionized gas containing equal numbers of positive and negative charges, typically formed at high temperatures\n\n📖 हिंदी स्पष्टीकरण:\nप्लाज्मा एक आयनित गैस है जिसमें धनात्मक और ऋणात्मक आवेश समान संख्या में होते हैं, जो आमतौर पर उच्च तापमान पर बनती है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which process involves the direct change of a solid into a gas? / ठोस का सीधे गैस में परिवर्तन किस प्रक्रिया में शामिल है?",
+      "options": {
+        "a": "Evaporation / वाष्पीकरण",
+        "b": "Condensation / संघनन",
+        "c": "Sublimation / ऊर्ध्वपातन",
+        "d": "Deposition / निक्षेपण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nSublimation is the process where a solid changes directly to gas without passing through the liquid state, like naphthalene\n\n📖 हिंदी स्पष्टीकरण:\nऊर्ध्वपातन वह प्रक्रिया है जहाँ ठोस बिना तरल अवस्था से गुजरे सीधे गैस में बदल जाता है, जैसे नेफ़थलीन।"
+    },
+    {
+      "q_num": 3,
+      "question": "A pure substance made of only one type of atom is called: / केवल एक ही प्रकार के परमाणु से बने शुद्ध पदार्थ को क्या कहते हैं?",
+      "options": {
+        "a": "Compound / यौगिक",
+        "b": "Mixture / मिश्रण",
+        "c": "Element / तत्व",
+        "d": "Alloy / मिश्र धातु"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAn element is a pure substance consisting of only one kind of atom that cannot be broken down chemically\n\n📖 हिंदी स्पष्टीकरण:\nतत्व एक शुद्ध पदार्थ है जिसमें केवल एक ही प्रकार के परमाणु होते हैं जिन्हें रासायनिक रूप से विभाजित नहीं किया जा सकता है।"
+    },
+    {
+      "q_num": 4,
+      "question": "Brass is a mixture of which two metals? / पीतल किन दो धातुओं का मिश्रण है?",
+      "options": {
+        "a": "Copper and Tin / तांबा और टिन",
+        "b": "Copper and Zinc / तांबा और जस्ता",
+        "c": "Iron and Carbon / लोहा और कार्बन",
+        "d": "Gold and Silver / सोना और चांदी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBrass is an alloy consisting of approximately 60-90% copper and 10-35% zinc\n\n📖 हिंदी स्पष्टीकरण:\nपीतल एक मिश्र धातु है जिसमें लगभग 60-90% तांबा और 10-35% जस्ता होता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "The movement of particles suspended in a medium is known as: / किसी माध्यम में निलंबित कणों की हलचल को क्या कहा जाता है?",
+      "options": {
+        "a": "Tyndall Effect / टिंडल प्रभाव",
+        "b": "Brownian Movement / ब्राउनियन गति",
+        "c": "Chromatography / क्रोमैटोग्राफी",
+        "d": "Centrifugation / अपकेंद्रीकरण"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nNamed after Robert Brown, it is the random, zigzag motion of microscopic particles in a fluid\n\n📖 हिंदी स्पष्टीकरण:\nरॉबर्ट ब्राउन के नाम पर आधारित, यह किसी तरल में सूक्ष्म कणों की यादृच्छिक, टेढ़ी-मेढ़ी गति है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Which of the following is a chemical change? / निम्नलिखित में से कौन सा रासायनिक परिवर्तन है?",
+      "options": {
+        "a": "Melting of ice / बर्फ का पिघलना",
+        "b": "Shredding paper / कागज के टुकड़े करना",
+        "c": "Burning of wood / लकड़ी का जलना",
+        "d": "Chopping wood / लकड़ी काटना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBurning creates new products like ash and smoke, involving a change in chemical composition\n\n📖 हिंदी स्पष्टीकरण:\nजलने से राख और धुएं जैसे नए उत्पाद बनते हैं, जिससे रासायनिक संरचना में परिवर्तन होता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "What is the size of particles in a true solution? / एक वास्तविक विलयन में कणों का आकार क्या होता है?",
+      "options": {
+        "a": "Less than 1 nm / 1 नैनोमीटर से कम",
+        "b": "More than 1000 nm / 1000 नैनोमीटर से अधिक",
+        "c": "Between 1 and 100 nm / 1 और 100 नैनोमीटर के बीच",
+        "d": "Exactly 100 nm / ठीक 100 नैनोमीटर"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nParticles in a solution are extremely small (less than 10⁻⁹ m) and cannot be seen by the naked eye\n\n📖 हिंदी स्पष्टीकरण:\nविलयन में कण अत्यंत छोटे (10⁻⁹ मीटर से कम) होते हैं और उन्हें नग्न आंखों से नहीं देखा जा सकता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "The process used to separate cream from milk is: / दूध से क्रीम अलग करने के लिए प्रयुक्त प्रक्रिया है:",
+      "options": {
+        "a": "Filtration / निस्पंदन",
+        "b": "Distillation / आसवन",
+        "c": "Centrifugation / अपकेंद्रीकरण",
+        "d": "Crystallisation / क्रिस्टलीकरण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCentrifugation uses rapid rotation to separate denser particles from lighter ones\n\n📖 हिंदी स्पष्टीकरण:\nअपकेंद्रीकरण सघन कणों को हल्के कणों से अलग करने के लिए तीव्र घूर्णन का उपयोग करता है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which state of matter is formed at temperatures close to absolute zero? / परम शून्य के करीब तापमान पर पदार्थ की कौन सी अवस्था बनती है?",
+      "options": {
+        "a": "Plasma / प्लाज्मा",
+        "b": "Solid / ठोस",
+        "c": "Bose-Einstein Condensate / बोस-आइंस्टीन कंडेनसेट",
+        "d": "Liquid / द्रव्य"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBEC is formed when a gas of bosons is cooled to temperatures very near 0 Kelvin / BEC\n\n📖 हिंदी स्पष्टीकरण:\nतब बनता है जब बोसॉन की गैस को 0 केल्विन के बहुत करीब तापमान पर ठंडा किया जाता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Tincture of iodine is a solution of iodine in: / टिंचर आयोडीन किसका विलयन है?",
+      "options": {
+        "a": "Water / पानी",
+        "b": "Alcohol / अल्कोहल",
+        "c": "Oil / तेल",
+        "d": "Ether / ईथर"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nTincture of iodine uses iodine as the solute and alcohol as the solvent\n\n📖 हिंदी स्पष्टीकरण:\nटिंचर आयोडीन में आयोडीन का उपयोग विलेय के रूप में और अल्कोहल का विलायक के रूप में किया जाता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "Fractional distillation is used when the difference in boiling points is: / प्रभाजी आसवन का उपयोग तब किया जाता है जब क्वथनांक में अंतर हो:",
+      "options": {
+        "a": "More than 25 K / 25 K से अधिक",
+        "b": "Less than 25 K / 25 K से कम",
+        "c": "Exactly 50 K / ठीक 50 K",
+        "d": "More than 100 K / 100 K से अधिक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIt is used for miscible liquids with boiling point differences less than 25 K, such as air components\n\n📖 हिंदी स्पष्टीकरण:\nइसका उपयोग 25 K से कम क्वथनांक अंतर वाले मिश्रणीय तरल पदार्थों, जैसे हवा के घटकों के लिए किया जाता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "Which of the following describes a heterogeneous mixture? / निम्नलिखित में से कौन सा एक विषमांगी मिश्रण का वर्णन करता है?",
+      "options": {
+        "a": "Uniform composition / समान संरचना",
+        "b": "Components cannot be seen by naked eye / घटकों को नग्न आंखों से नहीं देखा जा सकता",
+        "c": "Non-uniform composition / असमान संरचना",
+        "d": "Single phase throughout / पूरी तरह से एक ही चरण में"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nHeterogeneous mixtures have distinct phases and non-uniform distribution, like oil in water\n\n📖 हिंदी स्पष्टीकरण:\nविषमांगी मिश्रणों में अलग-अलग चरण और असमान वितरण होता है, जैसे पानी में तेल।"
+    },
+    {
+      "q_num": 13,
+      "question": "The scattering of light by colloidal particles is called: / कोलाइडल कणों द्वारा प्रकाश के प्रकीर्णन को क्या कहा जाता है?",
+      "options": {
+        "a": "Reflection / परावर्तन",
+        "b": "Refraction / अपवर्तन",
+        "c": "Tyndall Effect / टिंडल प्रभाव",
+        "d": "Dispersion / विक्षेपण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTyndall effect occurs when a beam of light is visible due to scattering by colloidal or suspension particles\n\n📖 हिंदी स्पष्टीकरण:\nटिंडल प्रभाव तब होता है जब कोलाइडल या निलंबन कणों द्वारा प्रकीर्णन के कारण प्रकाश की किरण दिखाई देती है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Calculate the mass % of a solution containing 40g salt in 320g water. / 320 ग्राम पानी में 40 ग्राम नमक वाले विलयन के द्रव्यमान % की गणना करें।",
+      "options": {
+        "a": "12.5%",
+        "b": "11.11%",
+        "c": "10%",
+        "d": "15%"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMass % = (40 / (40 + 320)) x 100 = (40/360) x 100 = 11.11%\n\n📖 हिंदी स्पष्टीकरण:\nद्रव्यमान % = (विलेय का द्रव्यमान / विलयन का कुल द्रव्यमान) x 100 = (40/360) x 100 = 11.11%।"
+    },
+    {
+      "q_num": 15,
+      "question": "In a saturated solution, what happens if you add more solute? / एक संतृप्त विलयन में, यदि आप अधिक विलेय डालते हैं तो क्या होता है?",
+      "options": {
+        "a": "It dissolves quickly / यह जल्दी घुल जाता है।",
+        "b": "It does not dissolve / यह नहीं घुलता है।",
+        "c": "The solution becomes unsaturated / विलयन असंतृप्त हो जाता है।",
+        "d": "It changes color / इसका रंग बदल जाता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA saturated solution cannot dissolve any more solute at a given temperature\n\n📖 हिंदी स्पष्टीकरण:\nएक संतृप्त विलयन किसी दिए गए तापमान पर और अधिक विलेय को नहीं घोल सकता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Statement 1: Crystallisation is better than simple evaporation for purifying solids. / \n कथन 1: ठोस पदार्थों को शुद्ध करने के लिए क्रिस्टलीकरण साधारण वाष्पीकरण से बेहतर है।\n Statement 2: Some solids decompose or get charred on heating to dryness. / \n कथन 2: कुछ ठोस सूखने तक गर्म करने पर विघटित हो जाते हैं या झुलस जाते हैं।",
+      "options": {
+        "a": "Both statements are true and 2 explains 1 / दोनों कथन सत्य हैं और 2, 1 की व्याख्या करता है।",
+        "b": "Both are true but 2 does not explain 1 / दोनों सत्य हैं लेकिन 2, 1 की व्याख्या नहीं करता है।",
+        "c": "1 is true, 2 is false / 1 सत्य है, 2 असत्य है।",
+        "d": "1 is false, 2 is true / 1 असत्य है, 2 सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCrystallisation prevents decomposition and removes soluble impurities better than evaporation\n\n📖 हिंदी स्पष्टीकरण:\nक्रिस्टलीकरण वाष्पीकरण की तुलना में विघटन को रोकता है और घुलनशील अशुद्धियों को बेहतर तरीके से हटाता है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): Gases have high kinetic energy and movement. / \n कथन (A): गैसों में उच्च गतिज ऊर्जा और गति होती है।\n Reason (R): The force of attraction between gas particles is very low. / \n कारण (R): गैस के कणों के बीच आकर्षण बल बहुत कम होता है।",
+      "options": {
+        "a": "A and R are true; R is the correct explanation of A / A और R सत्य हैं; R, A की सही व्याख्या है।",
+        "b": "A and R are true; R is not the correct explanation of A / A और R सत्य हैं; R, A की सही व्याख्या नहीं है।",
+        "c": "A is true; R is false / A सत्य है; R असत्य है।",
+        "d": "A is false; R is true / A असत्य है; R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLow attraction allows particles to move freely with high kinetic energy\n\n📖 हिंदी स्पष्टीकरण:\nकम आकर्षण बल कणों को उच्च गतिज ऊर्जा के साथ स्वतंत्र रूप से घूमने की अनुमति देता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which method is used to separate drugs from blood? / रक्त से दवाओं को अलग करने के लिए किस विधि का उपयोग किया जाता है?",
+      "options": {
+        "a": "Distillation / आसवन",
+        "b": "Chromatography / क्रोमैटोग्राफी",
+        "c": "Filtration / निस्पंदन",
+        "d": "Sublimation / ऊर्ध्वपातन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nChromatography is used to separate solutes that dissolve in the same solvent\n\n📖 हिंदी स्पष्टीकरण:\nक्रोमैटोग्राफी का उपयोग उन विलेय पदार्थों को अलग करने के लिए किया जाता है जो एक ही विलायक में घुलते हैं।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statement 1: Alloys are considered mixtures, not compounds. / कथन 1: मिश्र धातुओं को मिश्रण माना जाता है, यौगिक नहीं।\n Statement 2: They show the properties of their constituents and can have variable composition. / कथन 2: वे अपने घटकों के गुण दिखाते हैं और उनकी संरचना परिवर्तनशील हो सकती है।",
+      "options": {
+        "a": "Both true, 2 explains 1 / दोनों सत्य, 2, 1 की व्याख्या करता है।",
+        "b": "Both true, 2 doesn't explain 1 / दोनों सत्य, 2 व्याख्या नहीं करता",
+        "c": "1 is true, 2 false / 1 सत्य, 2 असत्य",
+        "d": "1 false, 2 true / 1 असत्य, 2 सत्य"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSince alloys retain component properties and don't have a fixed ratio, they are physical mixtures\n\n📖 हिंदी स्पष्टीकरण:\nचूँकि मिश्र धातु घटक गुणों को बरकरार रखते हैं और इनका निश्चित अनुपात नहीं होता, इसलिए वे भौतिक मिश्रण हैं।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Suspension is an unstable mixture. / कथन (A): निलंबन एक अस्थिर मिश्रण है।\n Reason (R): Particles in a suspension settle down when left undisturbed. / कारण (R): निलंबन में कण बिना हिलाए छोड़ देने पर नीचे बैठ जाते हैं।",
+      "options": {
+        "a": "A and R true; R explains A / A और R सत्य; R, A की व्याख्या करता है।",
+        "b": "A and R true; R no explanation / A और R सत्य; R व्याख्या नहीं करता।",
+        "c": "A true, R false / A सत्य, R असत्य",
+        "d": "A false, R true / A असत्य, R सत्य"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nLarge particle size (over 1000 nm) causes gravity to pull them down over time\n\n📖 हिंदी स्पष्टीकरण:\nकणों का बड़ा आकार (1000 नैनोमीटर से अधिक) समय के साथ गुरुत्वाकर्षण के कारण उन्हें नीचे खींच लेता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Match the following Colloids with their types: / निम्नलिखित कोलाइड को उनके प्रकारों के साथ मिलाएँ:\n 1. Fog - A. Gel / 1. कोहरा - A. जेल\n 2. Milk - B. Aerosol / 2. दूध - B. एयरोसोल\n 3. Cheese - C. Emulsion / 3. पनीर - C. पायसी",
+      "options": {
+        "a": "1-B, 2-C, 3-A",
+        "b": "1-A, 2-B, 3-C",
+        "c": "1-C, 2-A, 3-B",
+        "d": "1-B, 2-A, 3-C"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nFog is liquid in gas (Aerosol), Milk is liquid in liquid (Emulsion), Cheese is liquid in solid (Gel)\n\n📖 हिंदी स्पष्टीकरण:\nकोहरा गैस में तरल (एयरोसोल) है, दूध तरल में तरल (पायसी) है, पनीर ठोस में तरल (जेल) है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Statement 1: Evaporation increases with higher humidity. / कथन 1: उच्च आर्द्रता के साथ वाष्पीकरण बढ़ता है।\n Statement 2: Humidity is the amount of water vapor present in air. / कथन 2: आर्द्रता हवा में मौजूद जलवाष्प की मात्रा है।",
+      "options": {
+        "a": "Both true / दोनों सत्य",
+        "b": "1 true, 2 false / 1 सत्य, 2 असत्य",
+        "c": "1 false, 2 true / 1 असत्य, 2 सत्य",
+        "d": "Both false / दोनों असत्य"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nEvaporation rate decreases as humidity increases because the air is already saturated\n\n📖 हिंदी स्पष्टीकरण:\nहवा पहले से ही संतृप्त होने के कारण आर्द्रता बढ़ने पर वाष्पीकरण की दर कम हो जाती है।"
+    },
+    {
+      "q_num": 23,
+      "question": "Which of the following is NOT a property of an amorphous solid? / निम्नलिखित में से कौन सा अनाकार ठोस का गुण नहीं है?",
+      "options": {
+        "a": "Irregular shape / अनियमित आकार",
+        "b": "Sharp melting point / तीक्ष्ण गलनांक",
+        "c": "Isotropic nature / समदैशिक प्रकृति",
+        "d": "Pseudo solids / छद्म ठोस"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAmorphous solids like glass soften over a range of temperatures, unlike crystalline solids\n\n📖 हिंदी स्पष्टीकरण:\nकांच जैसे अनाकार ठोस क्रिस्टलीय ठोसों के विपरीत, तापमान की एक सीमा पर नरम होते हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): Burning a candle is both a physical and chemical change. / कथन (A): मोमबत्ती जलाना भौतिक और रासायनिक दोनों परिवर्तन है।\n Reason (R): Melting of wax is physical, while burning the thread is chemical. / कारण (R): मोम का पिघलना भौतिक है, जबकि धागे का जलना रासायनिक है।",
+      "options": {
+        "a": "A and R true; R explains A / A और R सत्य; R, A की व्याख्या करता है।",
+        "b": "A and R true; R no explanation / A और R सत्य; R व्याख्या नहीं करता।",
+        "c": "A true, R false / A सत्य, R असत्य",
+        "d": "A false, R true / A असत्य, R सत्य"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nWax melting can be reversed (physical), but burning the thread creates new substances (chemical)\n\n📖 हिंदी स्पष्टीकरण:\nमोम का पिघलना बदला जा सकता है (भौतिक), लेकिन बत्ती के जलने से नए पदार्थ बनते हैं (रासायनिक)।"
+    },
+    {
+      "q_num": 25,
+      "question": "Which method is used to separate ammonium chloride from salt? / नमक से अमोनियम क्लोराइड को अलग करने के लिए किस विधि का उपयोग किया जाता है?",
+      "options": {
+        "a": "Distillation / आसवन",
+        "b": "Crystallisation / क्रिस्टलीकरण",
+        "c": "Sublimation / ऊर्ध्वपातन",
+        "d": "Centrifugation / अपकेंद्रीकरण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nAmmonium chloride is sublimable and turns into vapor directly, leaving the non-sublimable salt behind\n\n📖 हिंदी स्पष्टीकरण:\nअमोनियम क्लोराइड ऊर्ध्वपातन योग्य है और सीधे वाष्प में बदल जाता है, जिससे नमक पीछे रह जाता है।"
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "chapter_num": 7,
+  "chapter_title": "Monetary Policy",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Who is responsible for formulating the Monetary Policy in India? भारत में मौद्रिक नीति तैयार करने के लिए कौन जिम्मेदार है?",
+      "options": {
+        "a": "Government of India / भारत सरकार",
+        "b": "Reserve Bank of India (RBI) / भारतीय रिजर्व बैंक (RBI)",
+        "c": "Finance Ministry / वित्त मंत्रालय",
+        "d": "SEBI / सेबी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Monetary Policy is regulated by the RBI to control the money supply and inflation in the economy. It uses various quantitative and qualitative tools to maintain price stability\n\n📖 हिंदी स्पष्टीकरण:\nमौद्रिक नीति अर्थव्यवस्था में मुद्रा आपूर्ति और मुद्रास्फीति को नियंत्रित करने के लिए RBI द्वारा विनियमित की जाती है। यह मूल्य स्थिरता बनाए रखने के लिए विभिन्न मात्रात्मक और गुणात्मक उपकरणों का उपयोग करता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "What is the full form of CRR in the context of banking? बैंकिंग के संदर्भ में CRR का पूर्ण रूप क्या है?",
+      "options": {
+        "a": "Cash Reserve Ratio / कैश रिजर्व रेशियो",
+        "b": "Central Reserve Rate / सेंट्रल रिजर्व रेट",
+        "c": "Credit Ratio Rate / क्रेडिट रेशियो रेट",
+        "d": "Cash Return Ratio / कैश रिटर्न रेशियो"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nCRR is the percentage of a bank's total deposits (NDTL) that it must keep with the RBI in the form of cash. Banks do not earn any interest on this amount. / CRR\n\n📖 हिंदी स्पष्टीकरण:\nबैंक की कुल जमा राशि (NDTL) का वह प्रतिशत है जिसे उसे नकद के रूप में RBI के पास रखना होता है। बैंक इस राशि पर कोई ब्याज नहीं कमाते हैं।"
+    },
+    {
+      "q_num": 3,
+      "question": "Which of the following is the most liquid asset? निम्नलिखित में से कौन सी सबसे तरल संपत्ति है?",
+      "options": {
+        "a": "Gold / सोना",
+        "b": "Property / संपत्ति",
+        "c": "Cash / नकद",
+        "d": "Government Securities / सरकारी प्रतिभूतियाँ"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nLiquidity refers to how easily an asset can be used for transactions. Cash is considered the most liquid asset, while property is among the least liquid\n\n📖 हिंदी स्पष्टीकरण:\nतरलता का तात्पर्य है कि किसी संपत्ति का उपयोग लेनदेन के लिए कितनी आसानी से किया जा सकता है। नकद को सबसे तरल संपत्ति माना जाता है, जबकि संपत्ति सबसे कम तरल संपत्तियों में से है।"
+    },
+    {
+      "q_num": 4,
+      "question": "The interest rate at which RBI lends money to commercial banks for short-term periods is called: वह ब्याज दर जिस पर RBI वाणिज्यिक बैंकों को अल्पावधि के लिए पैसा उधार देता है, कहलाती है:",
+      "options": {
+        "a": "Reverse Repo Rate / रिवर्स रेपो दर",
+        "b": "Bank Rate / बैंक दर",
+        "c": "Repo Rate / रेपो दर",
+        "d": "SLR"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRepo Rate stands for Repurchase Obligation. It is the rate at which RBI lends money to banks against collateral like Government Securities\n\n📖 हिंदी स्पष्टीकरण:\nरेपो रेट का मतलब पुनर्खरीद दायित्व है। यह वह दर है जिस पर RBI सरकारी प्रतिभूतियों जैसे संपार्श्विक के बदले बैंकों को पैसा उधार देता है।"
+    },
+    {
+      "q_num": 5,
+      "question": "In which form can a bank keep its Statutory Liquidity Ratio (SLR)? एक बैंक अपना वैधानिक तरलता अनुपात (SLR) किस रूप में रख सकता है?",
+      "options": {
+        "a": "Only Cash / केवल नकद",
+        "b": "Cash, Gold, and Government Securities / नकद, सोना और सरकारी प्रतिभूतियाँ",
+        "c": "Only Gold / केवल सोना",
+        "d": "Only Foreign Currency / केवल विदेशी मुद्रा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSLR is the reserve that banks must maintain with themselves. Unlike CRR, banks earn interest on the assets kept under SLR, especially on G-Secs. / SLR\n\n📖 हिंदी स्पष्टीकरण:\nवह रिजर्व है जिसे बैंकों को अपने पास बनाए रखना चाहिए। CRR के विपरीत, बैंक SLR के तहत रखी गई संपत्तियों, विशेष रूप से सरकारी प्रतिभूतियों (G-Secs) पर ब्याज कमाते हैं।"
+    },
+    {
+      "q_num": 6,
+      "question": "What happens to the Money Multiplier when the CRR increases? CRR बढ़ने पर मुद्रा गुणक का क्या होता है?",
+      "options": {
+        "a": "It increases / यह बढ़ता है",
+        "b": "It decreases / यह घटता है",
+        "c": "It remains constant / यह स्थिर रहता है",
+        "d": "It becomes zero / यह शून्य हो जाता है"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThere is an inverse relationship between the Cash Reserve Ratio and the Money Multiplier. When CRR increases, banks have less money to lend, reducing the money creation in the economy\n\n📖 हिंदी स्पष्टीकरण:\nनकद आरक्षित अनुपात और मुद्रा गुणक के बीच विपरीत संबंध है। जब CRR बढ़ता है, तो बैंकों के पास उधार देने के लिए कम पैसा होता है, जिससे अर्थव्यवस्था में मुद्रा निर्माण कम हो जाता है।"
+    },
+    {
+      "q_num": 7,
+      "question": "On the recommendation of which committee was the current Monetary Policy framework established? किस समिति की सिफारिश पर वर्तमान मौद्रिक नीति ढांचा स्थापित किया गया था?",
+      "options": {
+        "a": "Narasimham Committee / नरसिम्हम समिति",
+        "b": "Urjit Patel Committee / उर्जित पटेल समिति",
+        "c": "Hilton Young Commission / हिल्टन यंग कमीशन",
+        "d": "Raghuram Rajan Committee / रघुराम राजन समिति"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe modern Monetary Policy framework in India was revamped based on the recommendations of the Urjit Patel Committee\n\n📖 हिंदी स्पष्टीकरण:\nभारत में आधुनिक मौद्रिक नीति ढांचे को उर्जित पटेल समिति की सिफारिशों के आधार पर नया रूप दिया गया था।"
+    },
+    {
+      "q_num": 8,
+      "question": "What are short-term Government Securities (with maturity less than 1 year) called? अल्पकालिक सरकारी प्रतिभूतियों (1 वर्ष से कम परिपक्वता वाली) को क्या कहा जाता है?",
+      "options": {
+        "a": "Shares / शेयर",
+        "b": "Debentures / ऋण-पत्र",
+        "c": "Treasury Bills / ट्रेजरी बिल",
+        "d": "Mutual Funds / म्यूचुअल फंड"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTreasury Bills (T-Bills) are money market instruments issued by the government with maturities of 91, 182, or 364 days\n\n📖 हिंदी स्पष्टीकरण:\nट्रेजरी बिल (टी-बिल) सरकार द्वारा जारी किए गए मुद्रा बाजार के उपकरण हैं जिनकी परिपक्वता 91, 182 या 364 दिनों की होती है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Under which policy does the Government of India use Taxes and Subsidies to control inflation? किस नीति के तहत भारत सरकार मुद्रास्फीति को नियंत्रित करने के लिए करों और सब्सिडी का उपयोग करती है?",
+      "options": {
+        "a": "Monetary Policy / मौद्रिक नीति",
+        "b": "Industrial Policy / औद्योगिक नीति",
+        "c": "Fiscal Policy / राजकोषीय नीति",
+        "d": "Agricultural Policy / कृषि नीति"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nFiscal policy is managed by the Government, focusing on taxation and spending, whereas Monetary policy is managed by the RBI\n\n📖 हिंदी स्पष्टीकरण:\nराजकोषीय नीति सरकार द्वारा प्रबंधित की जाती है, जो कराधान और खर्च पर केंद्रित होती है, जबकि मौद्रिक नीति RBI द्वारा प्रबंधित की जाती है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Which account type generally offers 0% interest rate to the account holder? कौन सा खाता प्रकार आम तौर पर खाताधारक को 0% ब्याज दर प्रदान करता है?",
+      "options": {
+        "a": "Savings Account / बचत खाता",
+        "b": "Fixed Deposit / सावधि जमा",
+        "c": "Current Account / चालू खाता",
+        "d": "Recurring Deposit / आवर्ती जमा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCurrent accounts are used by businesses for high volumes of transactions and typically do not provide any interest\n\n📖 हिंदी स्पष्टीकरण:\nचालू खातों का उपयोग व्यवसायों द्वारा उच्च मात्रा में लेनदेन के लिए किया जाता है और आमतौर पर कोई ब्याज प्रदान नहीं करते हैं।"
+    },
+    {
+      "q_num": 11,
+      "question": "What is the primary difference between Bank Rate and Repo Rate? बैंक दर और रेपो दर के बीच मुख्य अंतर क्या है?",
+      "options": {
+        "a": "Repo rate requires collateral, Bank rate does not / रेपो दर के लिए संपार्श्विक की आवश्यकता होती है, बैंक दर के लिए नहीं।",
+        "b": "Bank rate is for short-term, Repo rate for long-term / बैंक दर अल्पावधि के लिए है, रेपो दर दीर्घावधि के लिए।",
+        "c": "Only Bank rate is decided by RBI / केवल बैंक दर RBI द्वारा तय की जाती है।",
+        "d": "Repo rate is always higher than Bank rate / रेपो दर हमेशा बैंक दर से अधिक होती है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBank rate is for long-term lending without collateral, while Repo rate is for short-term lending where G-Secs are kept as collateral\n\n📖 हिंदी स्पष्टीकरण:\nबैंक दर बिना संपार्श्विक के दीर्घकालिक ऋण के लिए है, जबकि रेपो दर अल्पकालिक ऋण के लिए है जहां सरकारी प्रतिभूतियों को संपार्श्विक के रूप में रखा जाता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What constitutes the 'Liquidity Adjustment Facility' (LAF) of RBI? RBI की 'तरलता समायोजन सुविधा' (LAF) में क्या शामिल है?",
+      "options": {
+        "a": "CRR and SLR / CRR और SLR",
+        "b": "Repo Rate and Reverse Repo Rate / रेपो दर और रिवर्स रेपो दर",
+        "c": "Bank Rate and MSF / बैंक दर और MSF",
+        "d": "Open Market Operations / खुला बाजार संचालन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLAF allows banks to borrow money through repo agreements or lend to RBI through reverse repo to manage daily liquidity. / LAF\n\n📖 हिंदी स्पष्टीकरण:\nबैंकों को दैनिक तरलता का प्रबंधन करने के लिए रेपो समझौतों के माध्यम से पैसा उधार लेने या रिवर्स रेपो के माध्यम से RBI को उधार देने की अनुमति देता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which of the following is considered a 'Qualitative Tool' of monetary policy? निम्नलिखित में से किसे मौद्रिक नीति का 'गुणात्मक उपकरण' माना जाता है?",
+      "options": {
+        "a": "Bank Rate / बैंक दर",
+        "b": "Open Market Operations / खुला बाजार संचालन",
+        "c": "Moral Suasion / नैतिक अनुनय",
+        "d": "Cash Reserve Ratio / नकद आरक्षित अनुपात"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nQualitative tools like Moral Suasion and Credit Rationing target the direction of credit rather than the total volume of money\n\n📖 हिंदी स्पष्टीकरण:\nनैतिक अनुनय और उधार राशि नियतन (क्रेडिट राशनिंग) जैसे गुणात्मक उपकरण पैसे की कुल मात्रा के बजाय क्रेडिट की दिशा को लक्षित करते हैं।"
+    },
+    {
+      "q_num": 14,
+      "question": "What is 'Marginal Standing Facility' (MSF)? 'सीमांत स्थायी सुविधा' (MSF) क्या है?",
+      "options": {
+        "a": "long term loan to public / जनता को दीर्घकालिक ऋण",
+        "b": "Overnight loan for scheduled commercial banks / अनुसूचित वाणिज्यिक बैंकों के लिए रातों-रात ऋण",
+        "c": "Interest free loan to government / सरकार को ब्याज मुक्त ऋण",
+        "d": "Subsidy given to farmers / किसानों को दी जाने वाली सब्सिडी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMSF is an emergency window for banks to borrow overnight from RBI by dipping into their SLR quota. / MSF\n\n📖 हिंदी स्पष्टीकरण:\nबैंकों के लिए अपने SLR कोटे का उपयोग करके RBI से रातों-रात उधार लेने के लिए एक आपातकालीन खिड़की है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Why does the Currency Deposit Ratio (CDR) usually increase during festive seasons? त्योहारों के मौसम में आमतौर पर मुद्रा जमा अनुपात (CDR) क्यों बढ़ जाता है?",
+      "options": {
+        "a": "People deposit more money / लोग ज्यादा पैसा जमा करते हैं।",
+        "b": "People withdraw cash for expenses / लोग खर्चों के लिए नकद निकालते हैं।",
+        "c": "Banks increase interest rates / बैंक ब्याज दरें बढ़ाते हैं।",
+        "d": "RBI reduces the money supply / RBI मुद्रा आपूर्ति कम कर देता है।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nDuring festivals, the demand for physical cash increases as people withdraw money from banks to meet extra shopping and travel expenses\n\n📖 हिंदी स्पष्टीकरण:\nत्योहारों के दौरान, भौतिक नकदी की मांग बढ़ जाती है क्योंकि लोग अतिरिक्त खरीदारी और यात्रा खर्चों को पूरा करने के लिए बैंकों से पैसा निकालते हैं।"
+    },
+    {
+      "q_num": 16,
+      "question": "During a period of high Inflation, what action is RBI likely to take? उच्च मुद्रास्फीति की अवधि के दौरान, RBI द्वारा क्या कार्रवाई करने की संभावना है?",
+      "options": {
+        "a": "Decrease CRR and SLR / CRR और SLR कम करना",
+        "b": "Buy Government Securities / सरकारी प्रतिभूतियां खरीदना",
+        "c": "Increase Repo Rate and CRR / रेपो रेट और CRR बढ़ाना",
+        "d": "Decrease Bank Rate / बैंक दर कम करना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nTo control inflation, RBI uses a 'Tight' monetary policy by increasing rates to reduce the money supply in the market\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रास्फीति को नियंत्रित करने के लिए, RBI बाजार में मुद्रा आपूर्ति को कम करने के लिए दरों में वृद्धि करके 'कठोर' मौद्रिक नीति का उपयोग करता है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Assertion (A): RBI buys Government Securities during Deflation.\n कथन (A): RBI अपस्फीति के दौरान सरकारी प्रतिभूतियां खरीदता है।\n Reason (R): Buying G-Secs injects liquidity into the banking system.\n कारण (R): सरकारी प्रतिभूतियाँ खरीदने से बैंकिंग प्रणाली में तरलता आती है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBy buying G-Secs, RBI gives cash to banks, which increases money supply to counter deflationary trends\n\n📖 हिंदी स्पष्टीकरण:\nसरकारी प्रतिभूतियाँ (G-Secs) खरीदकर, RBI बैंकों को नकद देता है, जिससे अपस्फीति की प्रवृत्तियों का मुकाबला करने के लिए मुद्रा आपूर्ति बढ़ जाती है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Consider the following statements about 'Moral Suasion':\n 'नैतिक अनुनय' के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. It is a quantitative tool of RBI. / यह RBI का एक मात्रात्मक उपकरण है।\n 2. It involves guidelines and requests to banks to control speculative lending. / इसमें सट्टा ऋण को नियंत्रित करने के लिए बैंकों को दिशा-निर्देश और अनुरोध शामिल हैं।\n Which is/are correct? कौन सा/से सही है/हैं?",
+      "options": {
+        "a": "Only 1 / केवल 1",
+        "b": "Only 2 / केवल 2",
+        "c": "Both 1 and 2 / 1 और 2 दोनों",
+        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nMoral Suasion is a qualitative tool (not quantitative) where RBI uses persuasion rather than force to influence bank lending\n\n📖 हिंदी स्पष्टीकरण:\nनैतिक अनुनय एक गुणात्मक उपकरण है (मात्रात्मक नहीं) जहाँ RBI बैंक ऋण को प्रभावित करने के लिए बल के बजाय अनुनय का उपयोग करता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Statement I: Expansionary monetary policy is also called 'Dovish' policy.\n कथन I: विस्तारवादी मौद्रिक नीति को 'डोविश' (नरम मौद्रिक नीति) नीति भी कहा जाता है।\n Statement II: It involves decreasing interest rates to boost the economy.\n कथन II: इसमें अर्थव्यवस्था को बढ़ावा देने के लिए ब्याज दरों को कम करना शामिल है।",
+      "options": {
+        "a": "Only Statement I is correct / केवल कथन I सही है।",
+        "b": "Only Statement II is correct / केवल कथन II सही है।",
+        "c": "Both are correct / दोनों सही हैं।",
+        "d": "Both are incorrect / दोनों गलत हैं।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nEasy or Dovish(Expansionary )policy reduces monetary restrictions and interest rates to increase the money supply and stimulate growth\n\n📖 हिंदी स्पष्टीकरण:\nडोविश नीति मुद्रा आपूर्ति बढ़ाने और विकास को प्रोत्साहित करने के लिए नियामकों और ब्याज दरों को कम करती है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Banks can earn interest on the assets kept under SLR.\n कथन (A): बैंक SLR के तहत रखी गई संपत्तियों पर ब्याज कमाते हैं।\n Reason (R): SLR can be maintained in the form of gold and interest-bearing government securities.\n कारण (R): SLR को सोने और ब्याज वाली सरकारी प्रतिभूतियों के रूप में बनाए रखा जा सकता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
+        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nUnlike CRR, SLR assets like Government bonds provide interest income to the banks, making it a profitable reserve. / CRR\n\n📖 हिंदी स्पष्टीकरण:\nके विपरीत, सरकारी बॉन्ड जैसी SLR संपत्तियां बैंकों को ब्याज आय प्रदान करती हैं, जिससे यह एक लाभदायक रिजर्व बन जाता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "Which of the following is NOT a component of a bank's Liabilities? निम्नलिखित में से कौन सा बैंक की देनदारियों का घटक नहीं है?",
+      "options": {
+        "a": "Savings Account Deposits / बचत खाता जमा",
+        "b": "Loans given to the Public / जनता को दिए गए ऋण",
+        "c": "Share Capital / शेयर पूंजी",
+        "d": "Current Account Deposits / चालू खाता जमा"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nLoans given to the public are 'Assets' for a bank because they generate interest income; deposits are 'Liabilities' as they must be returned\n\n📖 हिंदी स्पष्टीकरण:\nजनता को दिए गए ऋण बैंक के लिए 'संपत्ति' हैं क्योंकि वे ब्याज आय उत्पन्न करते हैं; जमा 'देनदारियाँ' हैं क्योंकि उन्हें वापस किया जाना चाहिए।"
+    },
+    {
+      "q_num": 22,
+      "question": "Statement I: Repo rate is usually higher than the Bank rate.\n कथन I: रेपो दर आमतौर पर बैंक दर से अधिक होती है।\n Statement II: Reverse Repo Rate is the rate at which RBI borrows from banks.\n कथन II: रिवर्स रेपो दर वह दर है जिस पर RBI बैंकों से उधार लेता है।",
+      "options": {
+        "a": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
+        "b": "Statement II is correct, I is incorrect / कथन II सही है, I गलत है।",
+        "c": "Both are correct / दोनों सही हैं।",
+        "d": "Both are incorrect / दोनों गलत हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nBank rate is typically higher than the Repo rate. Reverse Repo is indeed the rate at which RBI absorbs liquidity from banks\n\n📖 हिंदी स्पष्टीकरण:\nबैंक दर आम तौर पर रेपो दर से अधिक होती है। रिवर्स रेपो वास्तव में वह दर है जिस पर RBI बैंकों से तरलता को सोखता है।"
+    },
+    {
+      "q_num": 23,
+      "question": "'Open Market Operations' (OMO) involves the sale and purchase of: 'खुला बाजार संचालन' (OMO) में किसकी बिक्री और खरीद शामिल है?",
+      "options": {
+        "a": "Foreign Currency / विदेशी मुद्रा",
+        "b": "Gold / सोना",
+        "c": "Government Securities / सरकारी प्रतिभूतियां",
+        "d": "Corporate Bonds / कॉर्पोरेट बॉन्ड"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nOMO is a quantitative tool used by RBI to regulate money supply by buying or selling G-Secs in the open market. / OMO\n\n📖 हिंदी स्पष्टीकरण:\nएक मात्रात्मक उपकरण है जिसका उपयोग RBI द्वारा खुले बाजार में सरकारी प्रतिभूतियों को खरीदकर या बेचकर मुद्रा आपूर्ति को विनियमित करने के लिए किया जाता है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Assertion (A): NBFCs do not need to maintain CRR and SLR.\n कथन (A): NBFCs को CRR और SLR बनाए रखने की आवश्यकता नहीं है।\n Reason (R): They are not considered Scheduled Commercial Banks.\n कारण (R): उन्हें अनुसूचित वाणिज्यिक बैंक नहीं माना जाता है।",
+      "options": {
+        "a": "Both A and R are true and R explains A / A और R दोनों सत्य हैं और R, A की व्याख्या करता है।",
+        "b": "Both A and R are true but R does not explain A / A और R दोनों सत्य हैं लेकिन R, A की व्याख्या नहीं करता है।",
+        "c": "A is true, R is false / A सत्य है, R असत्य है।",
+        "d": "A is false, R is true / A असत्य है, R सत्य है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nNon-Banking Financial Companies (NBFCs) are exempt from CRR and SLR requirements that apply to commercial banks\n\n📖 हिंदी स्पष्टीकरण:\nगैर-बैंकिंग वित्तीय कंपनियां (NBFC) CRR और SLR आवश्यकताओं से मुक्त हैं जो वाणिज्यिक बैंकों पर लागू होती हैं।"
+    },
+    {
+      "q_num": 25,
+      "question": "Credit Rationing is a tool where: उधार राशि नियतन (क्रेडिट राशनिंग) एक ऐसा उपकरण है जहां:",
+      "options": {
+        "a": "Interest rates are fixed for all / ब्याज दरें सभी के लिए निश्चित हैं।",
+        "b": "Maximum limit of credit is fixed for different sectors / विभिन्न क्षेत्रों के लिए ऋण की अधिकतम सीमा तय की गई है।",
+        "c": "RBI gives free loans to banks / RBI बैंकों को मुफ्त ऋण देता है।",
+        "d": "Taxes are increased by the Govt / सरकार द्वारा कर बढ़ाए जाते हैं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nUnder Credit Rationing, the central bank fixes the credit supply or limits for specific industries or purposes to control the flow of money\n\n📖 हिंदी स्पष्टीकरण:\nक्रेडिट राशनिंग के तहत, केंद्रीय बैंक पैसे के प्रवाह को नियंत्रित करने के लिए विशिष्ट उद्योगों या उद्देश्यों के लिए क्रेडिट आपूर्ति या सीमा तय करता है।"
+    }
+  ]
+}

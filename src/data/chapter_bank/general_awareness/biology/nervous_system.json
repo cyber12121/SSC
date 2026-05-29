@@ -1,0 +1,296 @@
+{
+  "chapter_num": 7,
+  "chapter_title": "Nervous System",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Which part of the human brain is the largest? / मानव मस्तिष्क का सबसे बड़ा भाग कौन सा है?",
+      "options": {
+        "a": "Cerebellum / अनुमस्तिष्क",
+        "b": "Thalamus / थैलेमस",
+        "c": "Cerebrum / प्रमस्तिष्क",
+        "d": "Medulla Oblongata / मेडुला ओब्लोंगाटा"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCerebrum is the largest part of the brain and is divided into two hemispheres. It is responsible for complex functions like memory and learning\n\n📖 हिंदी स्पष्टीकरण:\nप्रमस्तिष्क मस्तिष्क का सबसे बड़ा हिस्सा है और इसे दो गोलार्द्धों में विभाजित किया गया है। यह याददाश्त और सीखने जैसे जटिल कार्यों के लिए जिम्मेदार है।"
+    },
+    {
+      "q_num": 2,
+      "question": "What is the average weight of a male human brain? / पुरुष मानव मस्तिष्क का औसत वजन कितना होता है?",
+      "options": {
+        "a": "1200 gm / 1200 ग्राम",
+        "b": "1370 gm / 1370 ग्राम",
+        "c": "1500 gm / 1500 ग्राम",
+        "d": "1250 gm / 1250 ग्राम"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe weight of the human brain varies by gender, with males averaging around 1370 gm and females around 1198 gm\n\n📖 हिंदी स्पष्टीकरण:\nमानव मस्तिष्क का वजन लिंग के अनुसार भिन्न होता है, पुरुषों में यह औसतन 1370 ग्राम और महिलाओं में लगभग 1198 ग्राम होता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "How many pairs of spinal nerves are present in the human body? / मानव शरीर में मेरु तंत्रिकाएं के कितने जोड़े मौजूद होते हैं?",
+      "options": {
+        "a": "12 pairs / 12 जोड़े",
+        "b": "31 pairs / 31 जोड़े",
+        "c": "22 pairs / 22 जोड़े",
+        "d": "8 pairs / 8 जोड़े"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThere are 31 pairs of spinal nerves that emerge from the spinal cord to connect the CNS to the rest of the body\n\n📖 हिंदी स्पष्टीकरण:\nरीढ़ की हड्डी से 31 जोड़े मेरु तंत्रिकाएं निकलती हैं जो केंद्रीय तंत्रिका तंत्र (CNS) को शरीर के बाकी हिस्सों से जोड़ती हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "The outer layer of the cranial meninges is called: / कपाल तानिकाओं की बाहरी परत को क्या कहा जाता है?",
+      "options": {
+        "a": "Pia Mater / पिया मैटर",
+        "b": "Arachnoid / एराक्नॉइड",
+        "c": "Dura Mater / ड्यूरा मैटर",
+        "d": "Corpus Callosum / कॉर्पस कैलोसम"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe brain is protected by three layers of meninges, where the Dura Mater is the tough outermost layer\n\n📖 हिंदी स्पष्टीकरण:\nमस्तिष्क तानिकाओं की तीन परतों द्वारा सुरक्षित रहता है, जिसमें ड्यूरा मैटर सबसे बाहरी सख्त परत होती है।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which part of the brain is known as the \"Little Brain\"? / मस्तिष्क के किस भाग को \"छोटा मस्तिष्क\" कहा जाता है?",
+      "options": {
+        "a": "Cerebrum / प्रमस्तिष्क",
+        "b": "Hypothalamus / हाइपोथैलेमस",
+        "c": "Cerebellum / अनुमस्तिष्क",
+        "d": "Pons / पोन्स"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe cerebellum, located in the hindbrain, is called the \"little brain\" and maintains body posture and balance\n\n📖 हिंदी स्पष्टीकरण:\nपश्च मस्तिष्क में स्थित अनुमस्तिष्क को \"छोटा मस्तिष्क\" कहा जाता है और यह शरीर की मुद्रा और संतुलन बनाए रखता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Hunger and thirst are controlled by which part of the brain? / भूख और प्यास मस्तिष्क के किस भाग द्वारा नियंत्रित होती है?",
+      "options": {
+        "a": "Thalamus / थैलेमस",
+        "b": "Hypothalamus / हाइपोथैलेमस",
+        "c": "Medulla / मेडुला",
+        "d": "Pons / पोन्स"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe hypothalamus contains centers that regulate the urge for eating (hunger) and drinking (thirst)\n\n📖 हिंदी स्पष्टीकरण:\nहाइपोथैलेमस में ऐसे केंद्र होते हैं जो खाने की इच्छा (भूख) और पीने की इच्छा (प्यास) को नियंत्रित करते हैं।"
+    },
+    {
+      "q_num": 7,
+      "question": "Which part of the brain connects it to the spinal cord? / मस्तिष्क का कौन सा भाग इसे रीढ़ की हड्डी से जोड़ता है?",
+      "options": {
+        "a": "Cerebrum / प्रमस्तिष्क",
+        "b": "Midbrain / मध्य मस्तिष्क",
+        "c": "Medulla Oblongata / मेडुला ओब्लोंगाटा",
+        "d": "Thalamus / थैलेमस"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Medulla Oblongata is the lower part of the hindbrain that continues down as the spinal cord\n\n📖 हिंदी स्पष्टीकरण:\nमेडुला ओब्लोंगाटा पश्च मस्तिष्क का निचला हिस्सा है जो नीचे रीढ़ की हड्डी के रूप में जारी रहता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "The total number of bones in the human skull is: / मानव खोपड़ी में हड्डियों की कुल संख्या कितनी है?",
+      "options": {
+        "a": "14",
+        "b": "8",
+        "c": "22",
+        "d": "30"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe human skull consists of 22 bones, comprising 8 cranial bones and 14 facial bones\n\n📖 हिंदी स्पष्टीकरण:\nमानव खोपड़ी में 22 हड्डियाँ होती हैं, जिनमें 8 कपाल हड्डियाँ और 14 चेहरे की हड्डियाँ शामिल हैं।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which layer of the meninges is in direct contact with the brain tissue? / तानिकाओं (मेनिन्जेस) की कौन सी परत मस्तिष्क के ऊतकों के सीधे संपर्क में होती है?",
+      "options": {
+        "a": "Dura Mater / ड्यूरा मैटर",
+        "b": "Pia Mater / पिया मैटर",
+        "c": "Arachnoid / एराक्नॉइड",
+        "d": "Skull / खोपड़ी"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nPia Mater is the thin, delicate innermost layer of the meninges that touches the brain surface\n\n📖 हिंदी स्पष्टीकरण:\nपिया मैटर मेनिन्जेस की पतली, कोमल सबसे भीतरी परत है जो मस्तिष्क की सतह को छूती है।"
+    },
+    {
+      "q_num": 10,
+      "question": "Sensory neurons are also known as: / संवेदी न्यूरॉन्स को इस नाम से भी जाना जाता है:",
+      "options": {
+        "a": "Efferent nerves / अपवाही तंत्रिकाएं",
+        "b": "Afferent nerves / अभिवाही तंत्रिकाएं",
+        "c": "Motor nerves / प्रेरक तंत्रिकाएं",
+        "d": "Mixed nerves / मिश्रित तंत्रिकाएं"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nSensory (Afferent) nerves carry information from body organs to the Central Nervous System (CNS)\n\n📖 हिंदी स्पष्टीकरण:\nसंवेदी (अभिवाही) तंत्रिकाएं शरीर के अंगों से केंद्रीय तंत्रिका तंत्र (CNS) तक जानकारी ले जाती हैं।"
+    },
+    {
+      "q_num": 11,
+      "question": "The \"Fight-or-Flight\" response is controlled by which system? / \"लड़ो या उड़ो\" प्रतिक्रिया किस तंत्र द्वारा नियंत्रित होती है?",
+      "options": {
+        "a": "Parasympathetic Nervous System / परानुकंपी तंत्रिका तंत्र",
+        "b": "Sympathetic Nervous System / अनुकंपी तंत्रिका तंत्र",
+        "c": "Somatic Nervous System / कायिक तंत्रिका तंत्र",
+        "d": "Central Nervous System / केंद्रीय तंत्रिका तंत्र"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Sympathetic system prepares the body for stress or danger by activating the flight-or-fight response\n\n📖 हिंदी स्पष्टीकरण:\nअनुकंपी तंत्रिका तंत्र \"लड़ो या उड़ो\" प्रतिक्रिया को सक्रिय करके शरीर को तनाव या खतरे के लिए तैयार करता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What connects the two hemispheres of the cerebrum? / प्रमस्तिष्क के दो गोलार्द्धों को क्या जोड़ता है?",
+      "options": {
+        "a": "Thalamus / थैलेमस",
+        "b": "Corpus Callosum / कॉर्पस कैलोसम",
+        "c": "Pons / पोन्स",
+        "d": "Sulcus / सल्क्स"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe cerebral hemispheres are connected by a large tract of nerve fibers called the Corpus Callosum\n\n📖 हिंदी स्पष्टीकरण:\nप्रमस्तिष्क गोलार्द्ध तंत्रिका तंतुओं के एक बड़े पथ से जुड़े होते हैं जिसे कॉर्पस कैलोसम कहा जाता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which part of the brain acts as a \"Relay Station\" for sensory information? / मस्तिष्क का कौन सा भाग संवेदी सूचनाओं के लिए \"रिले स्टेशन\" के रूप में कार्य करता है?",
+      "options": {
+        "a": "Hypothalamus / हाइपोथैलेमस",
+        "b": "Thalamus / थैलेमस",
+        "c": "Cerebellum / अनुमस्तिष्क",
+        "d": "Midbrain / मध्य मस्तिष्क"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Thalamus receives sensory signals and relays them to the appropriate area of the cerebral cortex\n\n📖 हिंदी स्पष्टीकरण:\nथैलेमस संवेदी संकेतों को प्राप्त करता है और उन्हें सेरेब्रल कॉर्टेक्स के उचित क्षेत्र में रिले करता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "Involuntary functions like heartbeat and respiration are controlled by: / दिल की धड़कन और श्वसन जैसे अनैच्छिक कार्य किसके द्वारा नियंत्रित होते हैं?",
+      "options": {
+        "a": "Forebrain / अग्र मस्तिष्क",
+        "b": "Cerebellum / अनुमस्तिष्क",
+        "c": "Medulla Oblongata / मेडुला ओब्लोंगाटा",
+        "d": "Spinal Cord / रीढ़ की हड्डी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMedulla contains vital centers that regulate heartbeat, breathing, and gastric secretions\n\n📖 हिंदी स्पष्टीकरण:\nमेडुला में महत्वपूर्ण केंद्र होते हैं जो दिल की धड़कन, श्वसन और गैस्ट्रिक स्राव को नियंत्रित करते हैं।"
+    },
+    {
+      "q_num": 15,
+      "question": "The \"Rest and Digest\" response is the primary function of: / \"आराम और पाचन\" प्रतिक्रिया किसका प्राथमिक कार्य है?",
+      "options": {
+        "a": "Sympathetic Nervous System / अनुकंपी तंत्रिका तंत्र",
+        "b": "Somatic Nervous System / कायिक तंत्रिका तंत्र",
+        "c": "Parasympathetic Nervous System / परानुकंपी तंत्रिका तंत्र",
+        "d": "Central Nervous System / केंद्रीय तंत्रिका तंत्र"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Parasympathetic system relaxes the body and returns its systems to normal after stress\n\n📖 हिंदी स्पष्टीकरण:\nपरानुकंपी तंत्रिका तंत्र शरीर को आराम देता है और तनाव के बाद इसके तंत्र को सामान्य स्थिति में लाता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Which of the following statements about the Midbrain is correct? / मध्य मस्तिष्क के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": {
+        "a": "It is located between the Thalamus and Pons / यह थैलेमस और पोन्स के बीच स्थित है।",
+        "b": "It controls body temperature / यह शरीर के तापमान को नियंत्रित करता है।",
+        "c": "It is the largest part of the brain / यह मस्तिष्क का सबसे बड़ा हिस्सा है।",
+        "d": "It connects the brain to the spinal cord / यह मस्तिष्क को रीढ़ की हड्डी से जोड़ता है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nThe midbrain is situated between the hypothalamus (forebrain) and the pons (hindbrain) and controls eye movements\n\n📖 हिंदी स्पष्टीकरण:\nमध्य मस्तिष्क हाइपोथैलेमस (अग्रमस्तिष्क) और पोन्स (पश्चमस्तिष्क) के बीच स्थित होता है और आंखों की गति को नियंत्रित करता है।"
+    },
+    {
+      "q_num": 17,
+      "question": "Statement I: The cerebral cortex is often referred to as grey matter. / कथन I: प्रमस्तिष्क वल्कुट (कॉर्टेक्स) को अक्सर ग्रे मैटर कहा जाता है।\n Statement II: This appearance is due to the high concentration of neuron cell bodies. / कथन II: यह उपस्थिति न्यूरॉन कोशिका निकायों की उच्च सांद्रता के कारण है।",
+      "options": {
+        "a": "Only I is correct / केवल I सही है।",
+        "b": "Only II is correct / केवल II सही है।",
+        "c": "Both I and II are correct / I और II दोनों सही हैं।",
+        "d": "Neither is correct / कोई भी सही नहीं है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe greyish appearance of the cerebral cortex, covering the cerebrum, gives it the name \"grey matter\"\n\n📖 हिंदी स्पष्टीकरण:\nप्रमस्तिष्क को ढकने वाले सेरेब्रल कॉर्टेक्स की धूसर उपस्थिति इसे \"ग्रे मैटर\" नाम देती है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Which part of the human brain is affected by Alzheimer's disease? / अल्जाइमर रोग मस्तिष्क के किस भाग को प्रभावित करता है?",
+      "options": {
+        "a": "Cerebellum / अनुमस्तिष्क",
+        "b": "Cerebrum / प्रमस्तिष्क",
+        "c": "Medulla / मेडुला",
+        "d": "Pons / पोन्स"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nAlzheimer's is a degenerative disorder affecting the cerebrum, leading to loss of memory and dementia\n\n📖 हिंदी स्पष्टीकरण:\nअल्जाइमर प्रमस्तिष्क को प्रभावित करने वाला एक अपक्षयी विकार है, जिससे याददाश्त कम हो जाती है और डिमेंशिया होता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "Match the following regions of the spinal cord with their nerve pairs: / रीढ़ की हड्डी के क्षेत्रों को उनके तंत्रिका जोड़ों के साथ सुमेलित करें:\n 1. Cervical - A. 12 pairs / ग्रीवा - A. 12 जोड़े\n 2. Thoracic - B. 8 pairs / वक्षीय - B. 8 जोड़े\n 3. Lumbar - C. 5 pairs / कमर - C. 5 जोड़े",
+      "options": {
+        "a": "1-A, 2-B, 3-C",
+        "b": "1-B, 2-A, 3-C",
+        "c": "1-C, 2-A, 3-B",
+        "d": "1-B, 2-C, 3-A"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThere are 8 pairs of cervical, 12 pairs of thoracic, and 5 pairs of lumbar nerves in the spinal cord\n\n📖 हिंदी स्पष्टीकरण:\nरीढ़ की हड्डी में 8 जोड़े ग्रीवा, 12 जोड़े वक्षीय और 5 जोड़े कमर नसें होती हैं।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): The brain consumes a disproportionate amount of the body's energy. / अभिकथन (A): मस्तिष्क शरीर की ऊर्जा की एक विषम मात्रा की खपत करता है।\n Reason (R): It accounts for only 2% of body weight but uses about 20-25% of glucose. / \n कारण (R): यह शरीर के वजन का केवल 2% है लेकिन लगभग 20-25% ग्लूकोज का उपयोग करता है।",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true, R is false / A सही है, R गलत है।",
+        "d": "A is false, R is true / A गलत है, R सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nDespite its small size, the brain is metabolically active and demands a high percentage of oxygen and glucose\n\n📖 हिंदी स्पष्टीकरण:\nअपने छोटे आकार के बावजूद, मस्तिष्क उपापचयी रूप से सक्रिय है और ऑक्सीजन और ग्लूकोज के उच्च प्रतिशत की मांग करता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "The \"vestigial\" part of the human spinal column mentioned is the: / मानव रीढ़ की हड्डी का उल्लेखित \"अविशेषांक\" भाग कौन सा है?",
+      "options": {
+        "a": "Sacrum / सेक्रम",
+        "b": "Coccyx / कोक्सीक्स",
+        "c": "Lumbar / लम्बर",
+        "d": "Thoracic / थोरैसिक"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nThe Coccyx is considered a vestigial part of the human skeletal system at the base of the spine\n\n📖 हिंदी स्पष्टीकरण:\nकोक्सीक्स को रीढ़ के आधार पर मानव कंकाल तंत्र का एक अवशेषी भाग माना जाता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "Which of the following is NOT a function of the Forebrain? / निम्नलिखित में से कौन सा अग्र मस्तिष्क का कार्य नहीं है?",
+      "options": {
+        "a": "Reasoning / तर्क",
+        "b": "Problem-solving / समस्या समाधान",
+        "c": "Coordination of eye movements / आँखों की गति का समन्वय",
+        "d": "Control of voluntary actions / स्वैच्छिक क्रियाओं का नियंत्रण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nEye movement coordination is a function of the Midbrain and Pons, not the Forebrain\n\n📖 हिंदी स्पष्टीकरण:\nआँखों की गति का समन्वय मध्य मस्तिष्क और पोन्स का कार्य है, न कि अग्र मस्तिष्क का।"
+    },
+    {
+      "q_num": 23,
+      "question": "Assertion (A): Meningitis is a disease related to the brain. / \n अभिकथन (A): मेनिन्जाइटिस मस्तिष्क से संबंधित एक बीमारी है।\n Reason (R): It involves inflammation of the protective membranes covering the brain. / \n कारण (R): इसमें मस्तिष्क को ढकने वाली सुरक्षात्मक झिल्लियों में सूजन शामिल है।",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is not correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true, R is false / A सही है, R गलत है।",
+        "d": "A is false, R is true / A गलत है, R सही है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMeningitis is the inflammation of the cranial meninges (Dura, Arachnoid, and Pia mater)\nsQ24. Statement I: Motor nerves are also called Efferent nerves\nStatement II: They carry information from the CNS to the body organs\n5. Only I is correct\n6. Only II is correct\n7. Both I and II are correct / I\n8. Both are incorrect\nMotor (Efferent) nerves transmit signals from the brain/spinal cord to muscles and organs for action\n\n📖 हिंदी स्पष्टीकरण:\nमेनिन्जाइटिस कपाल तानिकाओं (ड्यूरा, एराक्नॉइड और पिया मैटर) की सूजन है।\nकथन I: मोटर नसों को अपवाही नसें भी कहा जाता है।\nकथन II: वे CNS से शरीर के अंगों तक जानकारी ले जाते हैं।\nकेवल I सही है।\nकेवल II सही है।\nऔर II दोनों सही हैं।\nदोनों गलत हैं।\nमोटर (अपवाही) नसें क्रिया के लिए मस्तिष्क/रीढ़ की हड्डी से मांसपेशियों और अंगों तक संकेत भेजती हैं।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which lobe of the cerebrum is primarily responsible for visual processing? / प्रमस्तिष्क का कौन सा लोब मुख्य रूप से दृश्य प्रसंस्करण के लिए जिम्मेदार है?",
+      "options": {
+        "a": "Frontal Lobe / ललाट पाली",
+        "b": "Parietal Lobe / पार्श्वकपाल पाली",
+        "c": "Occipital Lobe / पश्चकपाल पाली",
+        "d": "Temporal Lobe / कर्ण पाली"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThe Occipital lobe, located at the back of the cerebrum, is the primary center for vision\n\n📖 हिंदी स्पष्टीकरण:\nपश्चकपाल पाली, जो प्रमस्तिष्क के पीछे स्थित है, दृष्टि का प्राथमिक केंद्र है।"
+    }
+  ]
+}

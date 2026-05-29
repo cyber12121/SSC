@@ -1,0 +1,308 @@
+{
+  "chapter_num": 5,
+  "chapter_title": "Chemical Reactions",
+  "subject": "General Awareness",
+  "subject_id": "gk",
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "What type of change is the formation of new products with different chemical properties?\nनए रासायनिक गुणों वाले उत्पादों का निर्माण किस प्रकार का परिवर्तन है?",
+      "options": {
+        "a": "Physical Change / भौतिक परिवर्तन",
+        "b": "Chemical Change / रासायनिक परिवर्तन",
+        "c": "Reversible Change / प्रतिवर्ती परिवर्तन",
+        "d": "Isothermal Change / समतापी परिवर्तन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nA chemical change involves a change in the chemical composition of matter, leading to the formation of new products. It is usually irreversible and involves energy exchange.\n\n📖 हिंदी स्पष्टीकरण:\nरासायनिक परिवर्तन में पदार्थ की रासायनिक संरचना बदल जाती है, जिससे नए उत्पादों का निर्माण होता है। यह आमतौर पर अनुत्क्रमणीय होता है और इसमें ऊर्जा का आदान‑प्रदान शामिल होता है।"
+    },
+    {
+      "q_num": 2,
+      "question": "Which reaction is characterized by the release of energy in the form of heat?\nऊष्मा के रूप में ऊर्जा मुक्त करने वाली अभिक्रिया को क्या कहा जाता है?",
+      "options": {
+        "a": "Endothermic / ऊष्माशोषी",
+        "b": "Exothermic / ऊष्माक्षेपी",
+        "c": "Photolysis / प्रकाश अपघटन",
+        "d": "Electrolysis / विद्युत अपघटन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nExothermic reactions release heat energy into the surroundings. 'Exo' means 'out', indicating the outward flow of heat from the system.\n\n📖 हिंदी स्पष्टीकरण:\nऊष्माक्षेपी अभिक्रियाएँ आसपास के वातावरण में ऊष्मीय ऊर्जा मुक्त करती हैं। 'क्षेपी' का अर्थ है बाहर की ओर, जो तंत्र से ऊष्मा के बाहर जाने को दर्शाता है।"
+    },
+    {
+      "q_num": 3,
+      "question": "A reaction in which a single product is formed from two or more reactants is called:\nवह अभिक्रिया जिसमें दो या दो से अधिक अभिकारकों से एकल उत्पाद बनता है, कहलाती है:",
+      "options": {
+        "a": "Decomposition Reaction / अपघटन अभिक्रिया",
+        "b": "Displacement Reaction / विस्थापन अभिक्रिया",
+        "c": "Combination Reaction / संयोजन अभिक्रिया",
+        "d": "Double Displacement / द्विविस्थापन अभिक्रिया"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn a combination reaction, two or more substances combine to form a single new substance. Most combination reactions are exothermic in nature.\n\n📖 हिंदी स्पष्टीकरण:\nसंयोजन अभिक्रिया में दो या अधिक पदार्थ मिलकर एक नया पदार्थ बनाते हैं। अधिकांश संयोजन अभिक्रियाएँ ऊष्माक्षेपी होती हैं।"
+    },
+    {
+      "q_num": 4,
+      "question": "What is the common name of Calcium Oxide (CaO)?\nकैल्शियम ऑक्साइड (CaO) का सामान्य नाम क्या है?",
+      "options": {
+        "a": "Slaked Lime / बुझा हुआ चूना",
+        "b": "Limestone / चूना पत्थर",
+        "c": "Quick Lime / बिना बुझा चूना",
+        "d": "Bleaching Powder / ब्लीचिंग पाउडर"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCalcium oxide is known as quick lime. When it reacts with water, it forms calcium hydroxide, which is called slaked lime.\n\n📖 हिंदी स्पष्टीकरण:\nकैल्शियम ऑक्साइड को बिना बुझा चूना (क्विक लाइम) कहा जाता है। जब यह पानी के साथ अभिक्रिया करता है तो कैल्शियम हाइड्रॉक्साइड बनता है, जिसे बुझा हुआ चूना कहते हैं।"
+    },
+    {
+      "q_num": 5,
+      "question": "Which gas is primarily responsible for turning lime water milky?\nचूने के पानी को दूधिया करने के लिए मुख्य रूप से कौन सी गैस जिम्मेदार है?",
+      "options": {
+        "a": "Oxygen / ऑक्सीजन",
+        "b": "Nitrogen / नाइट्रोजन",
+        "c": "Carbon Dioxide / कार्बन डाइऑक्साइड",
+        "d": "Hydrogen / हाइड्रोजन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nCarbon dioxide reacts with lime water (calcium hydroxide) to form calcium carbonate, which is insoluble and turns the solution milky.\n\n📖 हिंदी स्पष्टीकरण:\nकार्बन डाइऑक्साइड, चूने के पानी (कैल्शियम हाइड्रॉक्साइड) के साथ अभिक्रिया करके कैल्शियम कार्बोनेट बनाती है, जो अघुलनशील होता है और घोल को दूधिया बना देता है।"
+    },
+    {
+      "q_num": 6,
+      "question": "Respiration is considered which type of chemical reaction?\nश्वसन को किस प्रकार की रासायनिक अभिक्रिया माना जाता है?",
+      "options": {
+        "a": "Endothermic / ऊष्माशोषी",
+        "b": "Exothermic / ऊष्माक्षेपी",
+        "c": "Decomposition / अपघटन",
+        "d": "Displacement / विस्थापन"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRespiration involves the breakdown of glucose in the presence of oxygen to release energy in the form of heat and ATP, making it an exothermic process.\n\n📖 हिंदी स्पष्टीकरण:\nश्वसन में ऑक्सीजन की उपस्थिति में ग्लूकोज का विघटन होकर ऊर्जा (ऊष्मा और ATP) मुक्त होती है, जिससे यह एक ऊष्माक्षेपी प्रक्रिया बन जाती है।"
+    },
+    {
+      "q_num": 7,
+      "question": "The decomposition of a substance using heat is known as:\nऊष्मा का उपयोग करके किसी पदार्थ के अपघटन को क्या कहा जाता है?",
+      "options": {
+        "a": "Electrolysis / विद्युत अपघटन",
+        "b": "Photolysis / प्रकाश अपघटन",
+        "c": "Thermal Decomposition / तापीय अपघटन",
+        "d": "Oxidation / ऑक्सीकरण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nThermal decomposition is a type of decomposition reaction where a single reactant breaks down into multiple products when heated.\n\n📖 हिंदी स्पष्टीकरण:\nतापीय अपघटन एक प्रकार की अपघटन अभिक्रिया है, जिसमें एक ही अभिकारक को गर्म करने पर वह कई उत्पादों में टूट जाता है।"
+    },
+    {
+      "q_num": 8,
+      "question": "Which metal is cleaned before burning in air to remove its oxide layer?\nकिस धातु को वायु में जलाने से पहले उसकी ऑक्साइड परत हटाने के लिए साफ किया जाता है?",
+      "options": {
+        "a": "Iron / लोहा",
+        "b": "Gold / सोना",
+        "c": "Magnesium / मैग्नीशियम",
+        "d": "Silver / चाँदी"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nMagnesium ribbon is cleaned with sandpaper to remove the MgO layer that forms due to atmospheric oxygen; otherwise this layer prevents further reaction.\n\n📖 हिंदी स्पष्टीकरण:\nमैग्नीशियम रिबन को सैंडपेपर से रगड़कर साफ किया जाता है ताकि वायुमंडलीय ऑक्सीजन के कारण बनी MgO की परत हट जाए, वरना यह परत आगे की अभिक्रिया को रोकती है।"
+    },
+    {
+      "q_num": 9,
+      "question": "Which of the following is an example of Photolysis?\nनिम्नलिखित में से कौन सा प्रकाश अपघटन का उदाहरण है?",
+      "options": {
+        "a": "Decomposition of CaCO₃ / CaCO₃ का अपघटन",
+        "b": "Electrolysis of water / जल का विद्युत अपघटन",
+        "c": "Decomposition of AgCl in sunlight / सूर्य के प्रकाश में AgCl का अपघटन",
+        "d": "Burning of coal / कोयले का जलना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nPhotolysis uses light energy to break down compounds. Silver chloride (AgCl) decomposes in sunlight to form grey silver and chlorine gas.\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश अपघटन में यौगिकों को तोड़ने के लिए प्रकाश ऊर्जा का उपयोग किया जाता है। सिल्वर क्लोराइड (AgCl) सूर्य के प्रकाश में विघटित होकर धूसर रंग की चाँदी और क्लोरीन गैस बनाता है।"
+    },
+    {
+      "q_num": 10,
+      "question": "What is the chemical formula of Rust?\nजंग का रासायनिक सूत्र क्या है?",
+      "options": {
+        "a": "FeO",
+        "b": "Fe₂O₃·xH₂O",
+        "c": "FeCl₃",
+        "d": "FeSO₄"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRust is technically hydrated iron(III) oxide, represented as Fe₂O₃·xH₂O. It forms when iron reacts with oxygen and moisture in the air.\n\n📖 हिंदी स्पष्टीकरण:\nजंग तकनीकी रूप से हाइड्रेटेड आयरन(III) ऑक्साइड है, जिसे Fe₂O₃·xH₂O से दर्शाया जाता है। यह तब बनता है जब लोहा हवा में उपस्थित ऑक्सीजन और नमी के साथ अभिक्रिया करता है।"
+    },
+    {
+      "q_num": 11,
+      "question": "In the electrolysis of water, the volume of gas collected at the cathode is:\nजल के विद्युत अपघटन में, कैथोड पर एकत्रित गैस का आयतन होता है:",
+      "options": {
+        "a": "Half of oxygen / ऑक्सीजन का आधा",
+        "b": "Equal to oxygen / ऑक्सीजन के बराबर",
+        "c": "Double of oxygen / ऑक्सीजन का दोगुना",
+        "d": "Triple of oxygen / ऑक्सीजन का तीन गुना"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nDuring electrolysis, water decomposes to give hydrogen at the cathode and oxygen at the anode in a 2:1 ratio by volume, so the gas at cathode is double that at anode.\n\n📖 हिंदी स्पष्टीकरण:\nविद्युत अपघटन के दौरान जल विघटित होकर कैथोड पर हाइड्रोजन और एनोड पर ऑक्सीजन देता है, जिनका आयतन अनुपात 2:1 होता है; अतः कैथोड पर प्राप्त गैस का आयतन ऑक्सीजन से दोगुना होता है।"
+    },
+    {
+      "q_num": 12,
+      "question": "What happens when an iron nail is placed in a blue copper sulphate solution?\nजब नीले कॉपर सल्फेट के घोल में लोहे की कील रखी जाती है तो क्या होता है?",
+      "options": {
+        "a": "No reaction / कोई अभिक्रिया नहीं होती।",
+        "b": "Solution remains blue / घोल नीला ही रहता है।",
+        "c": "Solution turns green / घोल हरा हो जाता है।",
+        "d": "Solution turns yellow / घोल पीला हो जाता है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIron, being more reactive than copper, displaces it from the solution to form green iron sulphate (FeSO₄), and copper is deposited on the nail.\n\n📖 हिंदी स्पष्टीकरण:\nलोहा, ताँबे से अधिक क्रियाशील होने के कारण उसे उसके घोल से विस्थापित कर देता है और हरा आयरन सल्फेट (FeSO₄) बनता है, साथ ही ताँबा कील पर जम जाता है।"
+    },
+    {
+      "q_num": 13,
+      "question": "Which of the following is used in black and white photography?\nनिम्नलिखित में से किसका उपयोग श्वेत‑श्याम फोटोग्राफी में किया जाता है?",
+      "options": {
+        "a": "AgCl and AgBr / AgCl और AgBr",
+        "b": "NaCl and KCl / NaCl और KCl",
+        "c": "CaCO₃ and CaO / CaCO₃ और CaO",
+        "d": "Pb(NO₃)₂ and PbO / Pb(NO₃)₂ और PbO"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nSilver chloride (AgCl) and silver bromide (AgBr) are photosensitive salts. They decompose on exposure to light, a property used in black and white photography to develop images.\n\n📖 हिंदी स्पष्टीकरण:\nसिल्वर क्लोराइड (AgCl) और सिल्वर ब्रोमाइड (AgBr) प्रकाश‑संवेदी लवण हैं। प्रकाश के संपर्क में आने पर ये विघटित हो जाते हैं, और इसी गुण का उपयोग श्वेत‑श्याम फोटोग्राफी में चित्र विकसित करने के लिए किया जाता है।"
+    },
+    {
+      "q_num": 14,
+      "question": "The reaction Na₂SO₄ + BaCl₂ → BaSO₄ + 2NaCl is an example of:\nअभिक्रिया Na₂SO₄ + BaCl₂ → BaSO₄ + 2NaCl किसका उदाहरण है?",
+      "options": {
+        "a": "Combination Reaction / संयोजन अभिक्रिया",
+        "b": "Displacement Reaction / विस्थापन अभिक्रिया",
+        "c": "Double Displacement Reaction / द्विविस्थापन अभिक्रिया",
+        "d": "Decomposition Reaction / अपघटन अभिक्रिया"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nIn this reaction, ions are exchanged between the two reactants to form new products, including a white precipitate of barium sulphate (BaSO₄). This is a double displacement (precipitation) reaction.\n\n📖 हिंदी स्पष्टीकरण:\nइस अभिक्रिया में दोनों अभिकारकों के बीच आयनों का आदान‑प्रदान होकर नए उत्पाद बनते हैं, जिनमें बेरीयम सल्फेट (BaSO₄) का सफेद अवक्षेप भी शामिल है। यह द्विविस्थापन (अवक्षेपण) अभिक्रिया है।"
+    },
+    {
+      "q_num": 15,
+      "question": "Fatty foods develop an unpleasant smell and taste due to:\nवसायुक्त खाद्य पदार्थों में अप्रिय गंध और स्वाद किसके कारण विकसित होता है?",
+      "options": {
+        "a": "Reduction / अपचयन",
+        "b": "Corrosion / संक्षारण",
+        "c": "Rancidity / विकृतगंधिता",
+        "d": "Neutralisation / उदासीनीकरण"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nRancidity occurs due to the oxidation of fats and oils present in food, making them stale, foul‑smelling and unpleasant to taste.\n\n📖 हिंदी स्पष्टीकरण:\nविकृतगंधिता भोजन में उपस्थित वसा और तेलों के ऑक्सीकरण के कारण होती है, जिससे भोजन बासी, दुर्गंधपूर्ण और स्वाद में अप्रिय हो जाता है।"
+    },
+    {
+      "q_num": 16,
+      "question": "Assertion (A): Burning of natural gas is an exothermic reaction.\nReason (R): Exothermic reactions are those in which heat is absorbed.\nअभिकथन (A): प्राकृतिक गैस का जलना एक ऊष्माक्षेपी अभिक्रिया है।\nकारण (R): ऊष्माक्षेपी अभिक्रियाएँ वे होती हैं जिनमें ऊष्मा अवशोषित होती है।",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nA is true but R is false. Burning of natural gas releases heat to the surroundings, so it is exothermic. Exothermic reactions are defined as reactions that release heat, not absorb it.\n\n📖 हिंदी स्पष्टीकरण:\nA सही है लेकिन R गलत है। प्राकृतिक गैस के जलने पर ऊष्मा बाहर निकलती है, इसलिए यह ऊष्माक्षेपी अभिक्रिया है। ऊष्माक्षेपी अभिक्रियाएँ वे हैं जो ऊष्मा मुक्त करती हैं, न कि उसे अवशोषित करती हैं।"
+    },
+    {
+      "q_num": 17,
+      "question": "Which gas is filled in chips packets to prevent oxidation?\nऑक्सीकरण को रोकने के लिए चिप्स के पैकेट में कौन सी गैस भरी जाती है?",
+      "options": {
+        "a": "Oxygen / ऑक्सीजन",
+        "b": "Hydrogen / हाइड्रोजन",
+        "c": "Nitrogen / नाइट्रोजन",
+        "d": "Chlorine / क्लोरीन"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nNitrogen is an inert gas that creates an oxygen‑free environment inside the packet, preventing the fats in chips from getting oxidised and becoming rancid.\n\n📖 हिंदी स्पष्टीकरण:\nनाइट्रोजन एक अक्रिय गैस है जो पैकेट के अंदर ऑक्सीजन‑मुक्त वातावरण बनाती है, जिससे चिप्स में उपस्थित वसा का ऑक्सीकरण होकर विकृतगंधिता होने से बचाव होता है।"
+    },
+    {
+      "q_num": 18,
+      "question": "Statement I: Corrosion of copper results in a green coating.\nStatement II: This green coating is a mixture of Copper Carbonate and Copper Hydroxide.\nकथन I: ताँबे के संक्षारण के परिणामस्वरूप हरा लेप बन जाता है।\nकथन II: यह हरा लेप कॉपर कार्बोनेट और कॉपर हाइड्रॉक्साइड का मिश्रण है।",
+      "options": {
+        "a": "Only Statement I is correct / केवल कथन I सही है।",
+        "b": "Only Statement II is correct / केवल कथन II सही है।",
+        "c": "Both statements are correct / दोनों कथन सही हैं।",
+        "d": "Neither statement is correct / कोई भी कथन सही नहीं है।"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nBoth statements are correct. Copper reacts with moist carbon dioxide in air to form basic copper carbonate, which can be written as CuCO₃·Cu(OH)₂, giving copper a characteristic green coating.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। ताँबा हवा में उपस्थित नम CO₂ के साथ अभिक्रिया करके बेसिक कॉपर कार्बोनेट (CuCO₃·Cu(OH)₂) बनाता है, जो ताँबे की सतह पर हरे रंग की परत के रूप में दिखाई देता है।"
+    },
+    {
+      "q_num": 19,
+      "question": "What is the oxidation number of Nitrogen in N₂O₅?\nN₂O₅ में नाइट्रोजन की ऑक्सीकरण संख्या क्या है?",
+      "options": {
+        "a": "+2",
+        "b": "+3",
+        "c": "+5",
+        "d": "-2"
+      },
+      "answer": "c",
+      "solution": "📖 English Explanation:\nLet the oxidation state of nitrogen be x. In N₂O₅: 2x + 5(-2) = 0 ⇒ 2x - 10 = 0 ⇒ 2x = 10 ⇒ x = +5. So nitrogen has an oxidation number of +5 in N₂O₅.\n\n📖 हिंदी स्पष्टीकरण:\nमान लें नाइट्रोजन की ऑक्सीकरण अवस्था x है। N₂O₅ में: 2x + 5(-2) = 0 ⇒ 2x - 10 = 0 ⇒ 2x = 10 ⇒ x = +5। अतः N₂O₅ में नाइट्रोजन की ऑक्सीकरण संख्या +5 होती है।"
+    },
+    {
+      "q_num": 20,
+      "question": "Assertion (A): Magnesium ribbon burns with a dazzling white flame.\nReason (R): Magnesium reacts with oxygen to form Magnesium Oxide.\nअभिकथन (A): मैग्नीशियम रिबन चमकदार सफेद लौ के साथ जलता है।\nकारण (R): मैग्नीशियम ऑक्सीजन के साथ अभिक्रिया करके मैग्नीशियम ऑक्साइड बनाता है।",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true and R explains A. The vigorous reaction of magnesium with oxygen produces magnesium oxide along with a dazzling white flame.\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की व्याख्या करता है। मैग्नीशियम का ऑक्सीजन के साथ तीव्र दहन मैग्नीशियम ऑक्साइड (MgO) बनाते हुए चमकदार सफेद लौ उत्पन्न करता है।"
+    },
+    {
+      "q_num": 21,
+      "question": "A substance that gains oxygen or loses hydrogen during a reaction is said to be:\nअभिक्रिया के दौरान ऑक्सीजन प्राप्त करने वाले या हाइड्रोजन खोने वाले पदार्थ को क्या कहा जाता है?",
+      "options": {
+        "a": "Reduced / अपचयित",
+        "b": "Oxidised / ऑक्सीकृत",
+        "c": "Neutralised / उदासीन",
+        "d": "Electrolysed / विद्युत अपघटित"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nOxidation is defined as the addition of oxygen to, or the removal of hydrogen from, a substance during a reaction.\n\n📖 हिंदी स्पष्टीकरण:\nऑक्सीकरण को किसी पदार्थ में ऑक्सीजन के जुड़ने या उससे हाइड्रोजन के निकलने के रूप में परिभाषित किया जाता है।"
+    },
+    {
+      "q_num": 22,
+      "question": "In a Redox reaction, which of the following happens simultaneously?\nरेडॉक्स अभिक्रिया में, निम्नलिखित में से क्या एक साथ होता है?",
+      "options": {
+        "a": "Evaporation and Condensation / वाष्पीकरण और संघनन",
+        "b": "Oxidation and Reduction / ऑक्सीकरण और अपचयन",
+        "c": "Melting and freezing / पिघलना और जमना",
+        "d": "Ionisation and Neutralisation / आयनीकरण और उदासीनीकरण"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nRedox reactions involve both oxidation (loss of electrons) and reduction (gain of electrons) occurring simultaneously in the same overall process.\n\n📖 हिंदी स्पष्टीकरण:\nरेडॉक्स अभिक्रियाओं में एक ही समग्र प्रक्रिया के भीतर एक साथ ऑक्सीकरण (इलेक्ट्रॉनों की हानि) और अपचयन (इलेक्ट्रॉनों की प्राप्ति) दोनों होते हैं।"
+    },
+    {
+      "q_num": 23,
+      "question": "What is the oxidation number of Calcium in CaO?\nCaO में कैल्शियम की ऑक्सीकरण संख्या क्या है?",
+      "options": {
+        "a": "+1",
+        "b": "+2",
+        "c": "-2",
+        "d": "0"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn CaO, oxygen has an oxidation state of -2. Let the oxidation state of calcium be x: x + (-2) = 0 ⇒ x = +2. So calcium has an oxidation number of +2 in CaO.\n\n📖 हिंदी स्पष्टीकरण:\nCaO में ऑक्सीजन की ऑक्सीकरण अवस्था -2 होती है। यदि कैल्शियम की अवस्था x मानें, तो x + (-2) = 0 ⇒ x = +2। अतः CaO में कैल्शियम की ऑक्सीकरण संख्या +2 है।"
+    },
+    {
+      "q_num": 24,
+      "question": "Which of the following is NOT a characteristic of a Physical Change?\nनिम्नलिखित में से कौन सी भौतिक परिवर्तन की विशेषता नहीं है?",
+      "options": {
+        "a": "Usually reversible / आमतौर पर प्रतिवर्ती।",
+        "b": "New products are formed / नए उत्पादों का बनना।",
+        "c": "No change in chemical composition / रासायनिक संरचना में कोई बदलाव नहीं।",
+        "d": "No effect on chemical bonds / रासायनिक बंधों पर कोई प्रभाव नहीं।"
+      },
+      "answer": "b",
+      "solution": "📖 English Explanation:\nIn a physical change, no new substance is formed; only the state or appearance changes. Formation of new products is a feature of chemical change, not physical change.\n\n📖 हिंदी स्पष्टीकरण:\nभौतिक परिवर्तन में कोई नया पदार्थ नहीं बनता, केवल अवस्था या रूप‑रंग में परिवर्तन होता है। नए उत्पादों का बनना रासायनिक परिवर्तन की विशेषता है, भौतिक परिवर्तन की नहीं।"
+    },
+    {
+      "q_num": 25,
+      "question": "Assertion (A): Lead nitrate on heating gives brown fumes.\nReason (R): Nitrogen dioxide gas is released which is brown in colour.\nअभिकथन (A): लेड नाइट्रेट को गर्म करने पर भूरा धुआँ निकलता है।\nकारण (R): नाइट्रोजन डाइऑक्साइड गैस निकलती है जो भूरे रंग की होती है।",
+      "options": {
+        "a": "Both A and R are true and R is correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
+        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+      },
+      "answer": "a",
+      "solution": "📖 English Explanation:\nBoth A and R are true, and R correctly explains A. On heating, lead nitrate undergoes thermal decomposition to form lead oxide, oxygen and brown fumes of nitrogen dioxide (NO₂).\n\n📖 हिंदी स्पष्टीकरण:\nA और R दोनों सही हैं और R, A की सही व्याख्या करता है। लेड नाइट्रेट को गर्म करने पर इसका तापीय अपघटन होकर लेड ऑक्साइड, ऑक्सीजन तथा भूरे रंग की NO₂ गैस के धुएँ का निर्माण होता है।"
+    }
+  ]
+}
