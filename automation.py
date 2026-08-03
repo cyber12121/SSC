@@ -6,11 +6,12 @@ import google.generativeai as genai
 
 # ================= CONFIG =================
 
-genai.configure(api_key="AIzaSyAiyMCqx--__gIsFQWgN6QQw5f_2aVcZAE")
+genai.configure(api_key="AQ.Ab8RN6J8XAebgeIJujBFZn_-5YZXx_pNgp8c2dg7qg4nzZ7FJw")
 
-INPUT_FOLDER = r"D:\MY Project\ssc-cgl-practice-pro\Screenshots"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_FOLDER = os.path.join(BASE_DIR, "Screenshots")
 DONE_FOLDER = os.path.join(INPUT_FOLDER, "done")
-OUTPUT_FOLDER = r"D:\MY Project\ssc-cgl-practice-pro\src\data\mock_errors"
+OUTPUT_FOLDER = os.path.join(BASE_DIR, "src", "data", "mock_errors")
 
 os.makedirs(DONE_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
