@@ -106,11 +106,55 @@ export default function App() {
   const processData = (data: SubjectData, deletedIds: Set<string>) => {
     const filteredData: SubjectData = {};
     Object.entries(data).forEach(([subject, chapters]) => {
-      filteredData[subject] = chapters.map(chapter => {
-        const filteredQuestions = chapter.questions.filter(q => !deletedIds.has(getQuestionId(chapter, q)));
+      const mergedChaptersMap: Record<string, Chapter> = {};
+
+      chapters.forEach(chapter => {
+        const titleLower = chapter.chapter_title.trim().toLowerCase();
+        let canonicalTitle = chapter.chapter_title;
+
+        // Standardize Math chapter names to include parenthetical versions
+        if (subject.toLowerCase() === 'mathematics' || subject.toLowerCase().includes('aptitude')) {
+          const lower = titleLower.replace(/\s+/g, ' ');
+          if (lower === 'number system' || lower === 'number system (includes hcf, lcm, fractions)') {
+            canonicalTitle = 'Number System (Includes HCF, LCM, Fractions)';
+          } else if (lower === 'time and work' || lower === 'time and work (includes pipe and cistern)') {
+            canonicalTitle = 'Time and Work (Includes Pipe and Cistern)';
+          } else if (lower === 'time, speed and distance' || lower === 'time, speed and distance (includes boat, stream, races)') {
+            canonicalTitle = 'Time, Speed and Distance (Includes Boat, Stream, Races)';
+          } else if (lower === 'trigonometry' || lower === 'trigonometry (includes heights and distances)') {
+            canonicalTitle = 'Trigonometry (Includes Heights and Distances)';
+          }
+        }
+
+        const key = canonicalTitle.trim().toLowerCase();
+
+        if (!mergedChaptersMap[key]) {
+          mergedChaptersMap[key] = {
+            ...chapter,
+            chapter_title: canonicalTitle,
+            questions: []
+          };
+        }
+
+        const existingQs = mergedChaptersMap[key].questions;
+        const existingQTexts = new Set(existingQs.map(q => q.question.trim().toLowerCase()));
+
+        chapter.questions.forEach(q => {
+          if (!deletedIds.has(getQuestionId(chapter, q))) {
+            const qTextClean = q.question.trim().toLowerCase();
+            if (!existingQTexts.has(qTextClean)) {
+              existingQs.push(q);
+              existingQTexts.add(qTextClean);
+            }
+          }
+        });
+      });
+
+      filteredData[subject] = Object.values(mergedChaptersMap).map((chapter, chIdx) => {
         return {
           ...chapter,
-          questions: filteredQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+          chapter_num: chIdx + 1,
+          questions: chapter.questions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
         };
       }).filter(chapter => chapter.questions.length > 0);
     });
