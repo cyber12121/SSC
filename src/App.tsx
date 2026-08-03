@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { QuizContainer } from './components/QuizContainer';
+import { ErrorHeatmap } from './components/ErrorHeatmap';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, orderBy, getDocs, deleteDoc, doc } from 'firebase/firestore';
@@ -83,7 +84,7 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap'>('home');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | null>(null);
@@ -499,12 +500,19 @@ export default function App() {
                 <BookmarkIcon className="w-5 h-5 mr-2" />
                 Bookmarks
               </button>
-              <button 
+              <button
                 onClick={() => setView('dashboard')}
                 className={`flex items-center font-bold transition-colors ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <LayoutDashboard className="w-5 h-5 mr-2" />
                 Dashboard
+              </button>
+              <button
+                onClick={() => setView('heatmap')}
+                className={`flex items-center font-bold transition-colors ${view === 'heatmap' ? 'text-red-600' : 'text-slate-500 hover:text-slate-800'}`}
+              >
+                <Flame className="w-5 h-5 mr-2" />
+                Heatmap
               </button>
               {user ? (
                 <button 
@@ -1252,6 +1260,21 @@ export default function App() {
                   </div>
                 </div>
               )}
+            </motion.div>
+          )}
+
+          {view === 'heatmap' && (
+            <motion.div
+              key="heatmap"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="mb-12">
+                <h1 className="text-4xl font-black text-slate-900 mb-4">Error Heatmap</h1>
+                <p className="text-xl text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
+              </div>
+              <ErrorHeatmap mockData={mockData} />
             </motion.div>
           )}
         </AnimatePresence>
