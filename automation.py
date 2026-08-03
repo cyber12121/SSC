@@ -29,19 +29,19 @@ FILE_MAP = {
 
 CHAPTER_MAP = {
     # Mathematics
-    "hcf and lcm": "Number System",
-    "decimals and fractions": "Number System",
-    "number system & decimals and fractions": "Number System",
-    "pipe and cistern": "Time and Work",
-    "boat and streams": "Time, Speed and Distance",
-    "boat and stream": "Time, Speed and Distance",
-    "races and games": "Time, Speed and Distance",
-    "heights and distances": "Trigonometry",
+    "hcf and lcm": "Number System (Includes HCF, LCM, Fractions)",
+    "decimals and fractions": "Number System (Includes HCF, LCM, Fractions)",
+    "number system & decimals and fractions": "Number System (Includes HCF, LCM, Fractions)",
+    "pipe and cistern": "Time and Work (Includes Pipe and Cistern)",
+    "boat and streams": "Time, Speed and Distance (Includes Boat, Stream, Races)",
+    "boat and stream": "Time, Speed and Distance (Includes Boat, Stream, Races)",
+    "races and games": "Time, Speed and Distance (Includes Boat, Stream, Races)",
+    "heights and distances": "Trigonometry (Includes Heights and Distances)",
     "statistics": "Statistics and Probability",
     "algebraic equations": "Algebra",
     "quadratic equations": "Algebra",
-    "arithmetic": "Number System",
-    "arithmetic mock": "Number System",
+    "arithmetic": "Number System (Includes HCF, LCM, Fractions)",
+    "arithmetic mock": "Number System (Includes HCF, LCM, Fractions)",
     
     # English
     "synonyms and antonyms": "Vocabulary",
