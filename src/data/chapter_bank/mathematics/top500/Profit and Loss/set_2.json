@@ -1,0 +1,186 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Profit and Loss",
+  "questions": [
+    {
+      "question": "A piece of land was sold to a person through two middlemen, in which each middle man received a profit of 25%. If the person bought the land for Rs.625000, what was the original price of the land?",
+      "options": {
+        "a": "4,25,000",
+        "b": "3,75,000",
+        "c": "3,50,000",
+        "d": "4,00,000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the chain. \nx × (5/4) × (5/4) = 6,25,000 \n Step 2   Walk it back. \nx = 6,25,000 × 16/25 = ₹4,00,000",
+      "q_num": 1
+    },
+    {
+      "question": "A two-wheeler dealer sells a scooter for Rs. 46,000 and makes some loss. If he had sold it for Rs. 58,000 his profit would have been double his loss. What was the cost price (in Rs.) of the scooter ?",
+      "options": {
+        "a": "52000",
+        "b": "54000",
+        "c": "48000",
+        "d": "50000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Profit at 58,000 is double the loss at \n46,000. \n58,000 − x = 2(x − 46,000) \n Step 2   Solve. \n3x = 1,50,000   ⇒  x = ₹50,000",
+      "q_num": 2
+    },
+    {
+      "question": "An article is sold at a profit of 30%. If both cost price and selling price of the article are decreased by Rs.100, the profit now would be 45%. The original cost price of the article is:",
+      "options": {
+        "a": "Rs.400",
+        "b": "Rs.250",
+        "c": "Rs.300",
+        "d": "Rs.500"
+      },
+      "answer": "c",
+      "solution": "Step 1   Before and after. \nSP/CP = 13/10        (SP − 100)/(CP − 100) = 29/20 \n Step 2   Substitute SP = 1.3 CP and solve. \n20(1.3C − 100) = 29(C − 100)   ⇒  3C = 900   ⇒  CP \n= ₹300",
+      "q_num": 3
+    },
+    {
+      "question": "A certain quantity of rice was bought for Rs. X and sold for Rs. Y, thereby earning a profit of 25%. Had the cost price been 20% less and the selling price been Rs. 58 less, a profit of 20% would have been earned. Find the value of X.",
+      "options": {
+        "a": "250",
+        "b": "200",
+        "c": "300",
+        "d": "400"
+      },
+      "answer": "b",
+      "solution": "Original -> Final\nP \nx 5/4 (1st)\n5P/4 \nx 5/4 (2nd)\n625000 \nP x 25/16 = 625000 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nStep 1   The given profit. \nY = 1.25X \n Step 2   The alternative. \n(Y − 58)/(0.8X) = 6/5   ⇒  5Y − 290 = 4.8X \n Step 3   Substitute and solve. \n6.25X − 290 = 4.8X   ⇒  1.45X = 290   ⇒  X = 200",
+      "q_num": 4
+    },
+    {
+      "question": "Anil bought two articles A and B at a total cost of Rs.10,000. He sold the article A at 15% profit and the article B at 10% loss. In the whole deal, he made no profit or no loss. Find the selling price of the article A.",
+      "options": {
+        "a": "Rs.4,500",
+        "b": "Rs.4,600",
+        "c": "Rs.5,400",
+        "d": "Rs.4,200"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write both. \nA + B = 10,000        1.15A + 0.9B = 10,000 \n Step 2   Substitute. \n0.25A = 1,000   ⇒  A = ₹4,000 \n Step 3   A's selling price. \n4,000 × 1.15 = ₹4,600",
+      "q_num": 5
+    },
+    {
+      "question": "An oil refinery buys oil at Rs 3600 per barrel. There is 10% wastage. If the refinery wants to earn 5% profit then at what price should it sell including 8% tax on selling price? (in Rs per barrel)",
+      "options": {
+        "a": "3674",
+        "b": "3711",
+        "c": "4219",
+        "d": "4536"
+      },
+      "answer": "d",
+      "solution": "Step 1   Cost of what actually survives. \n3,600 / 0.9 = ₹4,000 \n Step 2   Add the profit, then the tax. \n4,000 × 1.05 = 4,200   ⇒  4,200 × 1.08 = ₹4,536",
+      "q_num": 6
+    },
+    {
+      "question": "Oil equal to 20% of the weight of groundnut is extracted in a mill. The matter left after extraction is sold as cattle feed at the rate of Rs. 12.5/kg. The groundnuts are bought at Rs. 20/kg. The processing cost is Rs. 5/kg. At what price (Rs. per kg) should the oil be sold to earn 20% profit on total costs?",
+      "options": {
+        "a": "250",
+        "b": "150",
+        "c": "200",
+        "d": "100"
+      },
+      "answer": "d",
+      "solution": "Step 1   Take 100 kg of groundnut. \ncost = 100 × 20 + 100 × 5 = ₹2,500   ⇒  must \nfetch 2,500 × 1.2 = ₹3,000 \n Step 2   The cattle feed brings in. \n80 kg × 12.5 = ₹1,000 \n Step 3   So the 20 kg of oil must bring. \n3,000 − 1,000 = ₹2,000   ⇒  ₹100 a kg",
+      "q_num": 7
+    },
+    {
+      "question": "Cost of 4 pens, 6 note books and 9 files is Rs. 305. Cost of 3 pens, 4 notebooks and 2 files is Rs. 145. What is the cost (in Rs) of 5 pens, 8 notebooks and 16 files? 4",
+      "options": {
+        "a": "415",
+        "b": "465",
+        "c": "440",
+        "d": "Cannot be \ndetermined"
+      },
+      "answer": "b",
+      "solution": "Step 1   Double the first. \n8P + 12N + 18F = 610 \n Step 2   Subtract the second. \n(8P + 12N + 18F) − (3P + 4N + 2F) = 610 − 145 \n Step 3   Which is exactly what was asked. \n5P + 8N + 16F = ₹465",
+      "q_num": 8
+    },
+    {
+      "question": "Amit sold an article for Rs.7000 and incurred a loss. Had he sold it for Rs.8750, his gain would have been three-fourth of the amount of loss that he incurred. At what price should he sell the article to get 10% profit?",
+      "options": {
+        "a": "Rs.8400",
+        "b": "Rs.7800",
+        "c": "Rs.8000",
+        "d": "Rs.8800"
+      },
+      "answer": "d",
+      "solution": "Step 1   The relation. \n8,750 − x = (3/4)(x − 7,000) \n Step 2   Solve. \n35,000 − 4x = 3x − 21,000   ⇒  7x = 56,000   ⇒  \nCP = ₹8,000 \n Step 3   For a 10% profit. \n8,000 × 1.1 = ₹8,800",
+      "q_num": 9
+    },
+    {
+      "question": "When the price of an item was reduced by 25%, then its sale was increased by x%. If there is an increase of 20% in the receipt of the revenue, the value of x will be :",
+      "options": {
+        "a": "50",
+        "b": "45",
+        "c": "60",
+        "d": "75"
+      },
+      "answer": "c",
+      "solution": "Step 1   Take price 100 and quantity 10. \nold revenue = 1,000   ⇒  new revenue = 1,200 \n Step 2   At the reduced price of 75. \nquantity = 1,200/75 = 16 \n Step 3   The rise in sales. \n(16 − 10)/10 × 100 = 60%",
+      "q_num": 10
+    },
+    {
+      "question": "A merchant makes a profit of 20% by selling an article. What would be the percentage change in the profit percent had he paid 10% less for and the customer paid 10% more for it?",
+      "options": {
+        "a": "33.33%",
+        "b": "133.33%",
+        "c": "140%",
+        "d": "145%"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take CP = 500, so SP = 600. \n10% less paid  ⇒  CP = 450        10% more \nreceived  ⇒  SP = 660 \n Step 2   The new profit. \n210 / 450 × 100 = 46.67% \n Step 3   The CHANGE in the profit percentage. \n(46.67 − 20)/20 × 100 = 133.33%",
+      "q_num": 11
+    },
+    {
+      "question": "Abhi bought two articles for Rs.624. He sold one at a loss of 14% and the other at a profit of 14%. If the selling price of both the articles is equal, then the difference between their cost prices (in Rs) is:",
+      "options": {
+        "a": "89.64",
+        "b": "87.36",
+        "c": "89.68",
+        "d": "88.84"
+      },
+      "answer": "b",
+      "solution": "Step 1   Set the selling prices equal. \n0.86A = 1.14B   ⇒  A : B = 114 : 86 = 57 : 43 \n Step 2   Value one part. \n100 parts = ₹624   ⇒  1 part = ₹6.24 \n Step 3   The difference is 14 parts. \n14 × 6.24 = ₹87.36",
+      "q_num": 12
+    },
+    {
+      "question": "The marked price of a microwave oven is ₹15,990 and it is sold for ₹12,792. What is the rate of discount offered?",
+      "options": {
+        "a": "20%",
+        "b": "24%",
+        "c": "25%",
+        "d": "21% [SSC CGL \nTier-I 25/07/2023 Shift-IV]"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the discount out in rupees. \n15,990 − 12,792 = ₹3,198 \n Step 2   Express it on the marked price. \n3,198 / 15,990 × 100 = 20%",
+      "q_num": 13
+    },
+    {
+      "question": "1 bottle of honey costs ₹240 but a pack of 4 of the same bottles costs ₹768. What is the effective discount (in %) on the pack? 1",
+      "options": {
+        "a": "16%",
+        "b": "25%",
+        "c": "10%",
+        "d": "20% [SSC CGL \nTier-II 19-02-2018]"
+      },
+      "answer": "d",
+      "solution": "Step 1   Build the marked price of the pack. \n4 × 240 = ₹960,   sold for ₹768 \n Step 2   Discount on that marked price. \n192 / 960 × 100 = 20%",
+      "q_num": 14
+    },
+    {
+      "question": "1 bar of chocolate costs ₹80 but a box containing 6 bars of the same chocolate costs ₹400. What is the effective discount (in %) on the box? 1",
+      "options": {
+        "a": "20%",
+        "b": "16.67%",
+        "c": "25%",
+        "d": "15% [SSC \nCGL Tier-II 9-3-2018]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Marked price against the box price. \n6 × 80 = ₹480,   sold for ₹400   ⇒  discount = \n₹80 \n Step 2   As a percentage. \n80 / 480 = 1/6 = 16.67%",
+      "q_num": 15
+    }
+  ]
+}

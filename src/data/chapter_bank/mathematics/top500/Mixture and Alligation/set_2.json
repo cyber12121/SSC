@@ -1,0 +1,102 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Mixture and Alligation",
+  "questions": [
+    {
+      "question": "In a tank, solutions A, B and C are mixed in the ratio 5:3:2 respectively. 10 liters of this mixture is taken out. After this, 5 liters of solution A and 3 liters of solution C are added to the tank. If after these operations the amount of solution A becomes 25 liters more than the amount of solution B, then what was the total amount of mixture initially present in the tank (in liters)?",
+      "options": {
+        "a": "140",
+        "b": "240",
+        "c": "120",
+        "d": "110"
+      },
+      "answer": "d",
+      "solution": "Step 1   Let the tank hold 10x at 5 : 3 : 2. The 10 L \nremoved takes 5, 3 and 2. \nA = 5x − 5        B = 3x − 3        C = 2x − 2 \n Step 2   Now 5 L of A and 3 L of C go back. \nA = 5x        B = 3x − 3        C = 2x + 1 \n Step 3   A exceeds B by 25 L. \n5x − (3x − 3) = 25   ⇒  2x = 22   ⇒  x = 11 \n Step 4   The tank. \n10x = 110 L \nTotal = 10k. Removing 10 L takes A : B : C = 5 : 3 \n: 2 (one whole set), then + 5 L A and + 3 L C: \n𝐴 =  5𝑘,   𝐵 =  3𝑘 − 3,   𝐶 =  2𝑘 +  1 \n5𝑘−(3𝑘−3) = 25 →𝑘= 11 \n𝑡𝑜𝑡𝑎𝑙 =  10𝑘 =  110 𝐿",
+      "q_num": 1
+    },
+    {
+      "question": "From a container of vegetable oil 13L of vegetable oil is taken out and replaced by another type of vegetable oil. This process is repeated 3 times more. Find the initial amount of vegetable oil in the container if at the end the ratio of vegetable oil and another type of vegetable oil becomes 2401:1695.",
+      "options": {
+        "a": "91L",
+        "b": "65L",
+        "c": "104L",
+        "d": "84.5L"
+      },
+      "answer": "c",
+      "solution": "Step 1   The two parts total 4,096. \n2401 : 1695   ⇒  original oil = 2401/4096 of the \nwhole \n Step 2   Recognise the power. \n2401/4096 = (7/8)⁴ = (1 − 13/V)⁴   ⇒  1 − 13/V = 7/8 \nThree containers  (filled amount, milk : water)\n40 x 87.5% = 35 (3:2)\nmilk 21 \nwater 14 \n30 x 80% = 24 (5:1)\nmilk 20 \nwater 4\n20 x 90% = 18 (7:2)\nmilk 14 \nwater 4 \ntotal 77 L\nmilk 55 \nwater 22 \nmilk : water = 55 : 22 = 5 : 2 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 3   Solve. \n13/V = 1/8   ∴  V = 104 L",
+      "q_num": 2
+    },
+    {
+      "question": "100 litres of a mixture of spirit and water in the ratio 3:4 is present in a container A. 30 litres of the mixture is transferred to another container B. Then the container A is filled with 30 litres of water. Then 40 litres of the mixture is again transferred to container B. The ratio of water to spirit of the mixture in container B is equal to: 3:4",
+      "options": {
+        "a": "87:158",
+        "b": "158:87",
+        "c": "1:2",
+        "d": "2:1"
+      },
+      "answer": "b",
+      "solution": "Step 1   30 L goes to B, so 70 L stays — still 3 : 4. \nA keeps spirit 30, water 40 \n Step 2   A is topped up with 30 L of water. \nA now holds spirit 30, water 70   (100 L) \n Step 3   40 L of that goes to B. \nspirit 12, water 28 join the first 30 L \nA (3 : 4). Send 30 L to B; refill A with 30 L water \n(A now 3 : 7); send 40 L of A to B:",
+      "q_num": 3
+    },
+    {
+      "question": "The ratio of principal and amount for one year is 5 : 6. Find the rate of simple interest.",
+      "options": {
+        "a": "10%",
+        "b": "11%",
+        "c": "20%",
+        "d": "15%"
+      },
+      "answer": "c",
+      "solution": "Step 1   P : A = 5 : 6, so the interest is the gap. \nI = A − P = 6 − 5 = 1 part,  on a principal of 5 parts \n Step 2   One year, so R is just I/P as a percentage. \nR = (1/5) × 100 = 20%",
+      "q_num": 4
+    },
+    {
+      "question": "A sum of ₹800 becomes ₹1040 at simple interest in 3 years. If the interest rate is increased by 3%, then find the amount. ₹800",
+      "options": {
+        "a": "₹1,102",
+        "b": "₹1,112",
+        "c": "₹1,212",
+        "d": "₹1,012"
+      },
+      "answer": "b",
+      "solution": "Step 1   Find the original rate from the given \namount. \nSI = 1040 − 800 = ₹240 over 3 yr   ∴  r = 240 × \n100 / (800 × 3) = 10% \n Step 2   The rate rises by 3%, so only that 3% is \nnew. \nextra = 800 × 3 × 3 / 100 = ₹72 \n Step 3   Add it to the amount already worked out. \nNew amount = 1040 + 72 = ₹1,112",
+      "q_num": 5
+    },
+    {
+      "question": "The interest on a certain deposit at 4.5% p.a is ₹135 in one year. How much additional interest in one year be on the same deposit at 5% per annum?",
+      "options": {
+        "a": "₹14",
+        "b": "₹18",
+        "c": "₹16",
+        "d": "₹15"
+      },
+      "answer": "d",
+      "solution": "Step 1   Compare the two rates. \n4.5% → 5% is an increase of 0.5%,  and 4.5 ÷ 0.5 \n= 9 \n Step 2   Scale the interest by the same factor. \nextra interest = 135 ÷ 9 = ₹15",
+      "q_num": 6
+    },
+    {
+      "question": "In what time will ₹10000 at 4% per annum, ₹8000 produce the same interest as does 4 years at 5% Simple interest rate? ₹10000",
+      "options": {
+        "a": "3 Years",
+        "b": "5 Years",
+        "c": "6 Years",
+        "d": "4 \nYears"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write both sides. \n10000 × 4 × t = 8000 × 5 × 4 \n Step 2   Cancel and solve. \n40,000 t = 1,60,000   ∴  t = 4 years",
+      "q_num": 7
+    },
+    {
+      "question": "If the total simple interest received on a sum of money for 25 years is 5/8 of the principal, what is the rate of simple interest, paid per year?",
+      "options": {
+        "a": "3.5%",
+        "b": "2.5%",
+        "c": "3%",
+        "d": "2%"
+      },
+      "answer": "b",
+      "solution": "Step 1   Put the fraction into the SI formula. \nP × r × 25 / 100 = (5/8) P \nSIMPLE INTEREST \nLEVEL - 1 \none year:  P = 5 parts,  I = 1 part\nP (5) \nI (1) \nR = 1/5 x 100 = 20% \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   Cancel P and solve for r. \n25r / 100 = 5/8   ⇒  r = 20/8 = 2.5%",
+      "q_num": 8
+    }
+  ]
+}

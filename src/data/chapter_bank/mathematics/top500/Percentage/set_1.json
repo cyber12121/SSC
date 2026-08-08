@@ -1,0 +1,414 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Percentage",
+  "questions": [
+    {
+      "question": "When a number is increased by 216, it becomes 140% of itself. What is the number?",
+      "options": {
+        "a": "540",
+        "b": "756",
+        "c": "450",
+        "d": "675"
+      },
+      "answer": "a",
+      "solution": "'Becomes 140% of itself' means the increase is \nthe extra 40%. \n Step 1   Write it. \nx + 216 = 1.4x \n Step 2   Solve. \n0.4x = 216   ∴  x = 540",
+      "q_num": 1
+    },
+    {
+      "question": "Two numbers are 40% and 80% less than a third number. By how much percent is the second number to be enhanced to make it equal to the first number?",
+      "options": {
+        "a": "100",
+        "b": "33.3",
+        "c": "66.6",
+        "d": "200"
+      },
+      "answer": "d",
+      "solution": "Both are measured off the third number, so give \nit 100. \n Step 1   Fix all three. \nC = 100   ⇒  A = 60,   B = 20 \n Step 2   Lift B to A, measured on B. \n(60 − 20)/20 × 100 = 200%",
+      "q_num": 2
+    },
+    {
+      "question": "Price of diesel increased from Rs. 45/litre to Rs. 50/litre. How much should the consumption of diesel be reduced (in %) so as to increase expenditure by only 5% ?",
+      "options": {
+        "a": "5.5",
+        "b": "5",
+        "c": "4",
+        "d": "4.5"
+      },
+      "answer": "a",
+      "solution": "Expenditure = price × quantity. Fix the old \nproduct, then divide by the NEW price. \n Step 1   Old expenditure, with quantity 100. \n45 × 100 = ₹4,500 \n Step 2   It may rise by 5%. \n4,500 × 1.05 = ₹4,725 \n Step 3   What that buys at ₹50. \n4,725 / 50 = 94.5   ⇒  cut = 5.5%",
+      "q_num": 3
+    },
+    {
+      "question": "The length and the breadth of a cuboid are increased by 10% each, whereas the Numerator up, Denominator down Numerator x 1.12 112 Denominator x 0.92 92 92/112 = 23/28 Number grows to 140% Number = 100% 100 +216 -> 140% 140 40% = 216 Raise 2nd up to 1st 1st = 60 1st 60 2nd = 20 2nd 20 raise 20 -> 60 Consumption drop Old qty = 100 @ 45 100 New qty = 4725/50 94.5 100 -> 94.5 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 height is reduced by 10%. By how much did the volume change?",
+      "options": {
+        "a": "10 decrease",
+        "b": "8.9 increase",
+        "c": "8.9 \ndecrease",
+        "d": "10% increase"
+      },
+      "answer": "b",
+      "solution": "Step 1   Volume factor. \n(11/10) × (11/10) × (9/10) = 1,089/1,000 \n Step 2   So the volume. \n+8.9%",
+      "q_num": 4
+    },
+    {
+      "question": "Price of a ticket of a show of circus is Rs. 12. When the price of the ticket is reduced then the audience is increased by 80% and the total income is increased by 20%. Find the price of the ticket after reduction.",
+      "options": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "9"
+      },
+      "answer": "a",
+      "solution": "Work in total collection: audience × ticket price. \n Step 1   Take the audience as 100. \nold income = 12 × 100 = 1,200 \n Step 2   Audience +80%, income +20%. \naudience = 180,   income = 1,440 \n Step 3   New ticket price. \n1,440 / 180 = ₹8",
+      "q_num": 5
+    },
+    {
+      "question": "The length and breadth of the room are decreased by y%. If the cost of painting the room goes down by 30.27%, what is the value of y?",
+      "options": {
+        "a": "14%",
+        "b": "15.5%",
+        "c": "16%",
+        "d": "16.5%"
+      },
+      "answer": "d",
+      "solution": "Two dimensions each cut by y% — the cross term \nmatters. \n Step 1   Area change. \n−2y + y²/100 = −30.27 \n Step 2   Test the options rather than solving the \nquadratic. \ny = 16 → 30.44 ✗        y = 16.5 → 33 − 2.7225 = \n30.2775 ✓",
+      "q_num": 6
+    },
+    {
+      "question": "A student scores 38% and fails by 12 marks. If passing is 40%, what are the maximum marks of the exam? Volume factor 1000 x 1.1 (l +10%) 1100 x 1.1",
+      "options": {
+        "a": "450",
+        "b": "500",
+        "c": "550",
+        "d": "600"
+      },
+      "answer": "d",
+      "solution": "The marks he falls short by ARE the percentage \ngap — that is the whole question. \n Step 1   The gap. \n40% − 38% = 2%,  which is the 12 marks \n Step 2   So one percent, then the total. \n1% = 6   ∴  maximum marks = 600",
+      "q_num": 7
+    },
+    {
+      "question": "62 ½ % of a number exceeds 25% of the same number by 15. What is the number?",
+      "options": {
+        "a": "40",
+        "b": "50",
+        "c": "60",
+        "d": "70"
+      },
+      "answer": "a",
+      "solution": "Step 1   As fractions. \n62½% = 5/8        25% = 2/8 \n Step 2   Their difference is the 15. \n(3/8)x = 15   ∴  x = 40",
+      "q_num": 8
+    },
+    {
+      "question": "A square plot of land is to be expanded such that its area becomes 225% of the original. By what percentage must each side be increased?",
+      "options": {
+        "a": "50%",
+        "b": "100%",
+        "c": "25%",
+        "d": "50.5%"
+      },
+      "answer": "a",
+      "solution": "Area scales as the SQUARE of the side — so take \nthe square root. \n Step 1   Area factor. \n225% = 2.25 \n Step 2   Side factor. \n√2.25 = 1.5   ⇒  each side up 50%",
+      "q_num": 9
+    },
+    {
+      "question": "The radius of a spherical balloon is inflated from 3.5 cm to 4.9 cm by pushing air into it. What is the percentage increase in the volume of the original balloon?",
+      "options": {
+        "a": "173.6%",
+        "b": "174.4%",
+        "c": "74.4%",
+        "d": "73.6%"
+      },
+      "answer": "b",
+      "solution": "Volume scales as the cube of the radius. \n Step 1   Radius factor. \n4.9 / 3.5 = 7/5 \n Step 2   Cube it. \n(7/5)³ = 343/125   ⇒  rise = 218/125 × 100 = 174.4% \nScale the gap up\n12 \n/ 2 (per 1%)\n6 \nx 100 (full)\n600 \nmax marks = 600 \nDifference of the parts\n5/8 of N\n5 \n2/8 of N\n2 \ndiff 3/8 = 15 \nSide ratio = sqrt(area)\nOld side = 2\n2 \nNew side = 3\n3 \n2 -> 3 = +50% \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 10
+    },
+    {
+      "question": "If the price of petrol increased by 7%, then by what percentage should the consumption be decreased by the consumer, If the expenditure on petrol remains unchanged?",
+      "options": {
+        "a": "6 58/107%",
+        "b": "3 49/107%",
+        "c": "4 99/107%",
+        "d": "5 11/107%"
+      },
+      "answer": "a",
+      "solution": "Step 1   The rule. \ncut = r/(100 + r) × 100 \n Step 2   At 7%. \n7/107 × 100 = 700/107 = 6 58/107 %",
+      "q_num": 11
+    },
+    {
+      "question": "In a constituency, 85% of the total number of people on the electoral roll cast their votes during an election. 10% of the votes cast were declared invalid. If there were 3,000,00 people on the electoral roll, and Dharam secured 1,37,700 valid votes, what percentage of the total number of valid votes did Dharam secure?",
+      "options": {
+        "a": "50.5%",
+        "b": "70.2%",
+        "c": "45.9%",
+        "d": "60.0%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Votes cast. \n85% of 3,00,000 = 2,55,000 \n Step 2   Valid votes. \n2,55,000 × 0.9 = 2,29,500 \n Step 3   Dharam's share of the VALID votes. \n1,37,700 / 2,29,500 × 100 = 60%",
+      "q_num": 12
+    },
+    {
+      "question": "Hari, Kamal and Lalit contested an election in which 6050 votes were polled and none of the votes were invalid. Kamal got 42% more votes than the total votes obtained by Hari and Lalit together. If Lalit obtained only 8% of the total polled votes, find the number of votes obtained by Hari.",
+      "options": {
+        "a": "1556",
+        "b": "1668",
+        "c": "1912",
+        "d": "2016"
+      },
+      "answer": "d",
+      "solution": "Volume factor (1.4)^3\n1000 \nx 1.4\n1400 \nx 1.4\n1960 \nx 1.4\n2744 \n2744/1000 -> +174.4% \nPrice up 7%, keep expenditure\nPrice 100 -> 107\n100 \n107 \nConsumption 107 -> 100\n107 \n100 \ndrop 7 in 107 \nLEVEL - 2 \nValid votes\n300000 \nx 0.85 (cast)\n255000 \nx 0.90 (valid)\n229500 \nvalid = 229500 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nStep 1   Let H + L be one block. \nK = 1.42(H + L),   and  K + (H + L) = 6,050 \n Step 2   So the block. \n2.42(H + L) = 6,050   ⇒  H + L = 2,500 \n Step 3   Lalit is 8% of the poll. \nL = 484   ∴  H = 2,500 − 484 = 2,016",
+      "q_num": 13
+    },
+    {
+      "question": "Aditya buys 300 mangoes for Rs. 1100. Some of these mangoes are rotten and thrown away. He sells the remaining mangoes at Rs. 5 each and makes a profit of Rs. 150. Find the percentage of mangoes thrown away.",
+      "options": {
+        "a": "15 ⅔%",
+        "b": "16 ⅔%",
+        "c": "16 ½%",
+        "d": "16 ⅓%"
+      },
+      "answer": "b",
+      "solution": "Step 1   Money taken. \n1,100 + 150 = ₹1,250   ⇒  1,250 / 5 = 250 mangoes \nsold \n Step 2   So thrown away. \n300 − 250 = 50   ⇒  50/300 × 100 = 16⅔%",
+      "q_num": 14
+    },
+    {
+      "question": "In a factory with 400 employees, the ratio of the number of male employees to that of female employees is 5 : 3. There are 87.5% regular employees in the factory. If 92% of male employees are regular employees, then what is the percentage of regular female employees? 400",
+      "options": {
+        "a": "85%",
+        "b": "77%",
+        "c": "87.5%",
+        "d": "80%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Split the workforce. \nM = 250,  F = 150   (5 : 3 of 400) \n Step 2   Regulars in total, and among the men. \n87.5% of 400 = 350        92% of 250 = 230 \n Step 3   So the women. \n350 − 230 = 120   ⇒  120/150 = 80%",
+      "q_num": 15
+    },
+    {
+      "question": "When the price of sugar gets raised by 30%, a person increases his expenditure on sugar only by 12%. By what percentage",
+      "options": {
+        "a": "12.75%",
+        "b": "13.85%",
+        "c": "11.54%",
+        "d": "15.75%"
+      },
+      "answer": "b",
+      "solution": "Split of 6050 votes\nHari + Lalit = 50 parts\n50 \nKamal = 71 parts\n71 \n121 parts = 6050 -> H+L = 2500 \nBought vs sold mangoes\nBought = 300\n300 \nSold = 250\n250 \nthrown = 50 \nRegular split (total 350)\nMale regular = 92% x 250\n230 \nFemale regular = 350-230\n120 \nof 150 females \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nStep 1   Take price 10 and expenditure 100. \nnew price = 13,   new expenditure = 112   ⇒  new \nquantity = 112/13 \n Step 2   Against the old quantity of 10. \n(10 − 112/13)/10 = 18/130 × 100 = 13.85%",
+      "q_num": 16
+    },
+    {
+      "question": "X is 35% less than Y, Z is 40% more than the sum of X and Y. By what percent is Z more than two times X",
+      "options": {
+        "a": "75.4%",
+        "b": "77.7%",
+        "c": "75.8%",
+        "d": "78.1%"
+      },
+      "answer": "b",
+      "solution": "Step 1   X and Z. \nX = 65        Z = 1.4(65 + 100) = 231 \n Step 2   Compare Z with twice X. \n(231 − 130)/130 × 100 = 77.7%",
+      "q_num": 17
+    },
+    {
+      "question": "Due to 20% reduction in the price of wheat per kg, Ram is able to buy 5 kg more for Rs. 800. What is the original quantity (in kg) of wheat?",
+      "options": {
+        "a": "50",
+        "b": "20",
+        "c": "40",
+        "d": "30"
+      },
+      "answer": "b",
+      "solution": "Step 1   Quantity ratio. \nold : new = 4 : 5 \n Step 2   The extra 5 kg is one part. \n1 part = 5 kg   ∴  original = 4 parts = 20 kg",
+      "q_num": 18
+    },
+    {
+      "question": "24% of Reena's Salary is equal to 38% of Sunita's Salary. Veena's salary is two-third of the total salary of Reena and Sunita. If Veena's Salary is Rs. 62,000 then Sunita's Salary is.",
+      "options": {
+        "a": "Rs. 36,000",
+        "b": "Rs. 38,000",
+        "c": "Rs. 35,000",
+        "d": "Rs. 32,000"
+      },
+      "answer": "a",
+      "solution": "Cross-multiply the two salary percentages to fix \ntheir ratio first. \n Step 1   Reena against Sunita. \n24R = 38S   ⇒  R : S = 38 : 24 = 19 : 12 \n Step 2   Veena is two-thirds of the pair. \n(2/3)(19 + 12)k = 62k/3 = 62,000   ⇒  k = 3,000 \n Step 3   Sunita. \n12 × 3,000 = ₹36,000",
+      "q_num": 19
+    },
+    {
+      "question": "A man's annual income has increased by Rs 1.2 lakhs but the tax on income that he has to pay has reduced from 12% to 10%. He now pays the same amount of tax as before. What is his increased income (in Rs lakh)?",
+      "options": {
+        "a": "8.4",
+        "b": "7.2",
+        "c": "9.6",
+        "d": "6 \nConsumption cut\nOld qty = 10\n10 \nNew qty = 112/13\n8.615 \ndrop 18 in 130 \nZ vs 2X\nZ = 231\nZ 231 \n2X = 130\n2X 130 \nZ exceeds 2X by 101 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026"
+      },
+      "answer": "b",
+      "solution": "Step 1   Old tax and new tax. \n0.12x   and   0.10(x + 1,20,000) \n Step 2   Equate and solve. \n0.02x = 12,000   ⇒  x = ₹6,00,000 \n Step 3   The question asks for the INCREASED \nincome. \n6,00,000 + 1,20,000 = ₹7,20,000 = 7.2 lakh",
+      "q_num": 20
+    },
+    {
+      "question": "A shopkeeper has a certain number of apples of which 10% are found to be rotten. He sells 85% of the remaining good apples and still has 405 good apples. How many apples did he originally have?",
+      "options": {
+        "a": "3000",
+        "b": "3500",
+        "c": "2500",
+        "d": "2000"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take 100 apples. \n10% rotten  ⇒  90 good \n Step 2   He sells 85% of those. \nleft = 15% of 90 = 13.5 \n Step 3   That 13.5 stands for 405. \n100 × 405/13.5 = 3,000 apples",
+      "q_num": 21
+    },
+    {
+      "question": "The price of Onion increases by 12.5%. The consumption of onions also increases by 12.5%. What is the approximate percentage increase in the expenditure on account of the purchase of Onions? ɗ",
+      "options": {
+        "a": "28.44%",
+        "b": "29.12%",
+        "c": "24.82%",
+        "d": "26.56%"
+      },
+      "answer": "d",
+      "solution": "12.5% is 1/8, so both price and quantity go 8 → 9. \n Step 1   Expenditure factor. \n(9/8) × (9/8) = 81/64 \n Step 2   The rise. \n17/64 × 100 = 26.56%",
+      "q_num": 22
+    },
+    {
+      "question": "Three numbers A, B and C are in the ratio of 2 : 3 : 5. If each number is increased by 20%, 40% and 60% respectively, then what will be the new ratio?",
+      "options": {
+        "a": "12 : 17 : 35",
+        "b": "12 : 21 : 40",
+        "c": "13 : 21 : 33",
+        "d": "15 : 21 : 40"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take 200, 300, 500. \n+20% → 240        +40% → 420        +60% → 800 \n Step 2   Reduce by 20. \n12 : 21 : 40",
+      "q_num": 23
+    },
+    {
+      "question": "In a certain year, the population of a city was 18000. In the next year, the population of males increased by 5% and the population of females increased by 7%, and the total population increased to 19,200, then what was the ratio of population of males and females in that given year?",
+      "options": {
+        "a": "4 : 3",
+        "b": "1 : 5",
+        "c": "3 : 5",
+        "d": "2 : 5"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write both. \nM + F = 18,000        0.05M + 0.07F = 1,200 \n Step 2   Substitute and solve. \n900 + 0.02F = 1,200   ⇒  F = 15,000,  M = 3,000 \n Step 3   Ratio. \nM : F = 1 : 5",
+      "q_num": 24
+    },
+    {
+      "question": "Entry ticket of a cinema hall is Rs. 250. When the price is reduced by a certain percentage then the sales of ticket increase by 50%, whereas the overall collection is reduced by 17.5%. Find the percentage decrease in the price of the ticket.",
+      "options": {
+        "a": "45",
+        "b": "40",
+        "c": "42",
+        "d": "48"
+      },
+      "answer": "a",
+      "solution": "Collection = price × tickets \n Step 1   Let the new price be x, sales 1.5 times. \n1.5x = 0.825 × 250 \n Step 2   Solve. \nx = 206.25 / 1.5 = ₹137.50 \n Step 3   The fall. \n(250 − 137.5)/250 × 100 = 45%",
+      "q_num": 25
+    },
+    {
+      "question": "When the price of sugar increased by 28%, a family reduced its consumption per month such that the expenditure on sugar was only 12% more than the earlier one. If the family consumed 18.4 kg sugar per month earlier, then what is its new consumption of sugar per month?",
+      "options": {
+        "a": "15.8 kg",
+        "b": "16.6 kg",
+        "c": "15.75 kg",
+        "d": "16.1 \nkg"
+      },
+      "answer": "d",
+      "solution": "Step 1   Quantity factor. \n112/128 = 7/8 \n Step 2   Apply it to 18.4 kg. \n18.4 × 7/8 = 16.1 kg",
+      "q_num": 26
+    },
+    {
+      "question": "The income of A is Rs. 35,600 per month. He saves 20% of his income. If his monthly income increases by 25% and the expenditure increases by 30%, then his monthly savings increase by: A",
+      "options": {
+        "a": "Rs. 356",
+        "b": "Rs. 385",
+        "c": "Rs. 375",
+        "d": "Rs. 335"
+      },
+      "answer": "a",
+      "solution": "Step 1   Now. \nincome 100,  expenditure 80,  savings 20 \n Step 2   After the rises. \nincome 125,  expenditure 104   ⇒  savings 21 \n Step 3   So savings rise by 1 part in 20. \n5% of ₹7,120 = ₹356",
+      "q_num": 27
+    },
+    {
+      "question": "Suresh can save 20% of his income. But after 4 years, his income increases by 40% and he still manages to save the same amount as before. What is the percent increase in his expenditure ?",
+      "options": {
+        "a": "50",
+        "b": "22",
+        "c": "45",
+        "d": "23"
+      },
+      "answer": "a",
+      "solution": "Step 1   Before. \nincome 100,  savings 20,  expenditure 80 \n Step 2   After a 40% rise, savings unchanged. \nincome 140,  savings 20   ⇒  expenditure 120 \n Step 3   Rise in expenditure. \n40/80 × 100 = 50%",
+      "q_num": 28
+    },
+    {
+      "question": "In a city 39% of the men are married and 51% of the women are married. Considering that nobody is married more than once. What percent of the population is married?",
+      "options": {
+        "a": "44%",
+        "b": "44.2%",
+        "c": "43%",
+        "d": "44.50%"
+      },
+      "answer": "b",
+      "solution": "Married men and married women are the SAME \ncouples counted twice. \n Step 1   Equate the two counts. \n39% of M = 51% of W   ⇒  M : W = 51 : 39 = 17 : 13 \n Step 2   Take M = 17 × 100 and W = 13 × 100. \nmarried = 39(17) + 51(13) = 663 + 663 = 1,326  out \nof 3,000 \n Step 3   As a percentage. \n1,326 / 3,000 × 100 = 44.2%",
+      "q_num": 29
+    },
+    {
+      "question": "Gita purchase an apartment and pays EMI for that. Her monthly income is Rs. 80,000. She spends 15% on the education of her children 40% on household affairs, sends 10% to GPF, saves 15% in a savings bank account and pays the rest of the amount as EMI. How much EMI does she pay ?",
+      "options": {
+        "a": "Rs. 16,000",
+        "b": "Rs. 14,000",
+        "c": "Rs. 8,000",
+        "d": "Rs. 20,000"
+      },
+      "answer": "a",
+      "solution": "Step 1   The named spending. \n15 + 40 + 10 + 15 = 80% \n Step 2   So the EMI. \n20% of 80,000 = ₹16,000",
+      "q_num": 30
+    },
+    {
+      "question": "A metallic conical bowl with base radius 10 cm and height 24 cm is uniformly heated, increasing all dimensions by 10%. By how much does the volume increase?",
+      "options": {
+        "a": "10%",
+        "b": "21%",
+        "c": "33.1%",
+        "d": "35%"
+      },
+      "answer": "c",
+      "solution": "Step 1   Every dimension up 10%. \nvolume factor = (11/10)³ = 1,331/1,000 \n Step 2   The rise. \n331/1,000 = 33.1%",
+      "q_num": 31
+    },
+    {
+      "question": "A student needs at least 60% to pass. He got 40% on the first exam, 70% on the second and x% on the third (equal weightage). What is the minimum x% to pass?",
+      "options": {
+        "a": "70%",
+        "b": "80%",
+        "c": "75%",
+        "d": "85%"
+      },
+      "answer": "a",
+      "solution": "Step 1   Three papers at 60% each. \nneeded = 3 × 60 = 180 points \n Step 2   He already has. \n40 + 70 = 110   ∴  x = 70",
+      "q_num": 32
+    },
+    {
+      "question": "Two candidates appeared for an examination. The marks obtained by one candidate exceeded those of the other by 75. Moreover, his score was equivalent to 80% of the combined marks of both candidates. Determine the marks obtained by each candidate.",
+      "options": {
+        "a": "45 and 120",
+        "b": "55 and 130",
+        "c": "35 and 110",
+        "d": "25 and 100"
+      },
+      "answer": "d",
+      "solution": "Step 1   His score is 80% of the combined. \ny = 0.8(x + y)   ⇒  5y = 4x + 4y   ⇒  y = 4x \n Step 2   And he leads by 75. \n4x − x = 75   ⇒  x = 25,  y = 100",
+      "q_num": 33
+    },
+    {
+      "question": "A man started off a business with a certain capital amount. In the first year, he earned 60% profit and donated 50% of the total capital (initial amount + profit). He followed the same procedure with the remaining capital after the second and the third year. If at the end of the three years, he is left with Rs. 15,360, what was the initial amount with Split of income (100%) Spent + saved = 80% Ed 15 House 40 GPF 10 Save 15 EMI = rest = 20% EMI 20 20% of 80000 Volume factor (1.1)^3 1000 x 1.1 1100 x 1.1 1210 x 1.1 1331 1331/1000 -> +33.1% LEVEL - 3 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "20,000",
+        "b": "30,000",
+        "c": "25,000",
+        "d": "32,000"
+      },
+      "answer": "b",
+      "solution": "Step 1   One year's effect. \n100 → 160 → 80        (so ×0.8 a year) \n Step 2   Three years. \n80 → 128 → 64 → 102.4 → 51.2 \n Step 3   That 51.2 stands for ₹15,360. \n1 unit = ₹300   ∴  initial = 100 × 300 = ₹30,000",
+      "q_num": 34
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Ratio and Proportion",
+  "questions": [
+    {
+      "question": "A sum of ₹8,200 was divided among A, B and C such that A had ₹500 more than B and C had ₹300 more than A. How much was C's share (in ₹)? ₹8,200",
+      "options": {
+        "a": "2,300",
+        "b": "2,800",
+        "c": "3,100",
+        "d": "2,000"
+      },
+      "answer": "c",
+      "solution": "Everything here is described with respect to B, \nso take B as the base. \nA = B + 500        C = A + 300 = B + 800 \n Step 1   Add the three shares and equate to the \ngiven total. \nB + (B + 500) + (B + 800) = 8,200   ⇒  3B + 1,300 \n= 8,200   ∴  B = ₹2,300 \n Step 2   Come back to what was asked — C, not \nB. \nC = B + 800 = 2,300 + 800 = ₹3,100",
+      "q_num": 1
+    },
+    {
+      "question": "What is the mean proportional between 64 and 4096? 64",
+      "options": {
+        "a": "512",
+        "b": "192",
+        "c": "128",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": "",
+      "q_num": 2
+    },
+    {
+      "question": "Find the fourth proportion to 0.2412, 0.6 and 20. 0.2412, 0.6",
+      "options": {
+        "a": "54",
+        "b": "24",
+        "c": "50",
+        "d": "48"
+      },
+      "answer": "c",
+      "solution": "Fourth proportional",
+      "q_num": 3
+    },
+    {
+      "question": "A is directly proportional to B. When A = 52, B = 91. Find A when B = 126. (SSC Selection Posts XI) A",
+      "options": {
+        "a": "70",
+        "b": "76",
+        "c": "84",
+        "d": "72"
+      },
+      "answer": "d",
+      "solution": "A ∝ B means the fraction A / B never changes. \nReduce it once, then reuse it. \n Step 1    \nA / B = 52 / 91 = 4 / 7      (÷ 13) \n Step 2    \nA = 4/7 × 126 = 4 × 18 = 72",
+      "q_num": 4
+    },
+    {
+      "question": "In a proportion, the product of the first and fourth terms is 70 and that of the second and third terms is 3.5y. The value of y is:",
+      "options": {
+        "a": "17",
+        "b": "20",
+        "c": "15",
+        "d": "22"
+      },
+      "answer": "b",
+      "solution": "Product of extremes = product of means: \n70 = 3.5𝑦 → 𝑦= 20",
+      "q_num": 5
+    },
+    {
+      "question": "Two numbers are in the ratio 3:5. If the sum of their squares is 2176, find the sum of the two numbers.",
+      "options": {
+        "a": "68",
+        "b": "56",
+        "c": "60",
+        "d": "64"
+      },
+      "answer": "d",
+      "solution": "A ratio is given, so use ONE letter — the numbers \nare 3k and 5k, never x and y. \n Step 1    \n(3k)² + (5k)² = 9k² + 25k² = 34k² = 2,176   ⇒  k² = \n64   ∴  k = 8 \n Step 2    \n3k + 5k = 8k = 8 × 8 = 64",
+      "q_num": 6
+    },
+    {
+      "question": "A is 150% of B and B is 40% of C. If A+B+C = 20, then 2B + 3C – 4A = ? A, B",
+      "options": {
+        "a": "16",
+        "b": "14",
+        "c": "20",
+        "d": "15"
+      },
+      "answer": "b",
+      "solution": "Step 1   Let C = 10  \nB = 40% of C = 4          A = 150% of B = 6 \n Step 2    \nA + B + C = 6 + 4 + 10 = 20 — exactly the given \nsum, so 1 unit = 1 \n Step 3    \n2B + 3C − 4A = 8 + 30 − 24 = 14",
+      "q_num": 7
+    },
+    {
+      "question": "What number must be added to each of the numbers 1, 7 and 25 so that the resulting sums are in continued proportion? 1, 7",
+      "options": {
+        "a": "4",
+        "b": "5",
+        "c": "2",
+        "d": "6"
+      },
+      "answer": "c",
+      "solution": "Continued proportion means the middle term is \nthe mean proportional :  b² = a × c. \n Step 1   Add x to each and write that condition. \n(7 + x)² = (1 + x)(25 + x) \n Step 2   Expand — the x² cancels from both sides. \n49 + 14x + x² = 25 + 26x + x²   ⇒  24 = 12x   ∴  x = \n2",
+      "q_num": 8
+    },
+    {
+      "question": "Atul purchased bread costing ₹20 and gave a ₹100 note. The shopkeeper returned balance in coins of ₹2, ₹5 and ₹10 in ratio 5:4:1. How many ₹5 coins did he give?",
+      "options": {
+        "a": "6",
+        "b": "5",
+        "c": "4",
+        "d": "8"
+      },
+      "answer": "d",
+      "solution": "Balance = 100−20 = ₹80 in coins ₹2:₹5:₹10 = \n5:4:1:",
+      "q_num": 9
+    },
+    {
+      "question": "Hridaya found coins of ₹1, ₹2, ₹5 and ₹10 in ratio 10:5:2:1. If there are 72 coins in all, how much money (₹) was in the piggy bank? ş",
+      "options": {
+        "a": "100",
+        "b": "72",
+        "c": "160",
+        "d": "90"
+      },
+      "answer": "c",
+      "solution": "Two different things are counted here — the \nNUMBER of coins and their VALUE. Count first. \n Step 1   The counts are 10k, 5k, 2k, k. \n10k + 5k + 2k + k = 18k = 72   ∴  k = 4 \n Step 2   Now the value — multiply every count by \nits denomination. \n1(10k) + 2(5k) + 5(2k) + 10(k) = 10k + 10k + 10k + \n10k = 40k \nValue = 40 × 4 = ₹160",
+      "q_num": 10
+    },
+    {
+      "question": "If (6x + 5y):(6x – 5y) = 11:5, find x:y.",
+      "options": {
+        "a": "20:9",
+        "b": "15:8",
+        "c": "12:5",
+        "d": "18:11"
+      },
+      "answer": "a",
+      "solution": "The SUM and the DIFFERENCE of the same two \nterms are given — that is exactly where \ncomponendo–dividendo is used. \n Step 1   Apply it :  if p / q = m / n  then  (p + q) / (p \n− q) = (m + n) / (m − n). \n[(6x+5y) + (6x−5y)] / [(6x+5y) − (6x−5y)] = (11 + 5) \n/ (11 − 5) \n12x / 10y = 16 / 6   ⇒   6x / 5y = 8 / 3 \n Step 2   Cross-multiply and reduce. \n18x = 40y    ∴  x : y = 40 : 18 = 20 : 9",
+      "q_num": 11
+    },
+    {
+      "question": "Three friends A, B, and C have money in the ratio 2:3:4 summing to ₹81. If they each receive an equal amount x, their new ratio becomes 4:5:6. Find x. (CGL 2025)",
+      "options": {
+        "a": "15",
+        "b": "18",
+        "c": "17",
+        "d": "16"
+      },
+      "answer": "b",
+      "solution": "The same amount x goes to each friend, so the \ntotal rises by 3x — 4 : 5 : 6 does not sit on ₹81. \n Step 1   Fix the present shares from 2 : 3 : 4. \n2 + 3 + 4 = 9 units = ₹81   ⇒  1 unit = ₹9   ∴  A = \n18,  B = 27,  C = 36 \n Step 2   Add x to any TWO of them and match \nthe new ratio. \n(18 + x) / (27 + x) = 4 / 5   ⇒  90 + 5x = 108 + 4x   ∴  \nx = ₹18",
+      "q_num": 12
+    },
+    {
+      "question": "A recipe needs ingredients A, B and C in the ratio 5:3:2. If the chef only has 400 grams of ingredient A, what is the total amount of mixture he can make? (CGL 2025)",
+      "options": {
+        "a": "600 gm",
+        "b": "800 gm",
+        "c": "1000 gm",
+        "d": "1200 gm"
+      },
+      "answer": "b",
+      "solution": "One quantity is known — so find the value of one \nunit from it, then scale to the whole. \n Step 1   A is 5 units. \n5 units = 400 g   ∴  1 unit = 80 g \n Step 2   The mixture is all the units together. \nTotal = (5 + 3 + 2) = 10 units = 10 × 80 = 800 g \n₹1 : ₹2 : ₹5 : ₹10  =  10 : 5 : 2 : 1      (k = \n4) \n₹1 \n×10\n₹2 \n×5\n₹5 \n×2\n₹10\n×1\nevery denomination contributes 10k — \nall four are equal in value \nEach friend receives the same x\nnow\n18 \n27 \n36 \n+18\n36 \n45 \n54 \n36 : 45 : 54  =  4 : 5 : 6 ✓ \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 13
+    },
+    {
+      "question": "Three numbers are such that the second is 150% of the first, and the third is 80% of the second. What is the ratio of the first to the third? (CGL 2025)",
+      "options": {
+        "a": "5:6",
+        "b": "2:3",
+        "c": "5:4",
+        "d": "5:8"
+      },
+      "answer": "a",
+      "solution": "",
+      "q_num": 14
+    },
+    {
+      "question": "Out of 200 students, 20% failed the exam. Out of the remaining, 20% passed with distinction. Find the ratio of students who passed with distinction to those who passed without distinction. (CGL 2025) 200",
+      "options": {
+        "a": "1:3",
+        "b": "1:4",
+        "c": "1:5",
+        "d": "1:6"
+      },
+      "answer": "b",
+      "solution": "",
+      "q_num": 15
+    },
+    {
+      "question": "A sum of ₹x is divided among A, B and C such that A:B = 6:7 and B:C = 3:2. If the difference between shares of A and C is ₹540, find x. ₹x",
+      "options": {
+        "a": "7020",
+        "b": "7155",
+        "c": "7425",
+        "d": "7290"
+      },
+      "answer": "b",
+      "solution": "Here, B has different values in the two ratios (7 & \n3). Equalise B first. \n \n Step 1   The given ₹540 is the difference A − C. \nPut it in units. \nA − C = 18 − 14 = 4 units = ₹540    ∴  1 unit = ₹135 \n Step 2   x is the whole sum, so take all the terms \ntogether. \nx = (18 + 21 + 14) units = 53 × 135 = ₹7,155",
+      "q_num": 16
+    },
+    {
+      "question": "M = mean proportional between 16 and 9; N = third proportional between 9 and 15. Find 5M + 3N. (SSC Selection Posts XI) M = 16",
+      "options": {
+        "a": "125",
+        "b": "300",
+        "c": "135",
+        "d": "225"
+      },
+      "answer": "c",
+      "solution": "M = √(16×9) = 12,  N = 15²/9 = 25: \n5𝑀+ 3𝑁= 60 + 75 = 135",
+      "q_num": 17
+    },
+    {
+      "question": "Monthly income of A and B is in ratio 3:4 and expenditure in ratio 2:3. If each saves ₹4,000/month, what is B's income? A",
+      "options": {
+        "a": "₹20,000",
+        "b": "₹14,000",
+        "c": "₹16,000",
+        "d": "₹12,000"
+      },
+      "answer": "c",
+      "solution": "Income and expenditure carry DIFFERENT ratios, \nso they need different letters. Savings joins \nthem. \nIncome = 3k, 4k        Expenditure = 2m, 3m        \nSavings = Income − Expenditure \n Step 1   One savings equation per person. \n3k − 2m = 4,000   …(i)          4k − 3m = 4,000   \n…(ii) \n Step 2   (i)×3 − (ii)×2 clears m. \n9k − 6m = 12,000   and   8k − 6m = 8,000   ⇒  k \n= 4,000 \n Step 3   B's income is 4k. \nB = 4 × 4,000 = ₹16,000",
+      "q_num": 18
+    },
+    {
+      "question": "When x is added to each of 2, 3, 30 and 35, the numbers are in proportion. Find mean proportional between (x+7) and (x–2). (SSC CGL Tier-II 11-9-2019)",
+      "options": {
+        "a": "7",
+        "b": "6",
+        "c": "5",
+        "d": "4"
+      },
+      "answer": "b",
+      "solution": "𝑚𝑒𝑎𝑛𝑝𝑟𝑜𝑝= ට൫(𝑥+ 7)(𝑥−2)൯= ඥ(12 × 3) = 6",
+      "q_num": 19
+    },
+    {
+      "question": "If x is subtracted from each of 20, 37, 54 and 105 and they are in proportion, find the mean proportional between (7x–5) and (x+1).",
+      "options": {
+        "a": "8",
+        "b": "6",
+        "c": "12",
+        "d": "9"
+      },
+      "answer": "a",
+      "solution": "𝑚𝑒𝑎𝑛 𝑝𝑟𝑜𝑝= ට൫(7𝑥−5)(𝑥+ 1)൯= ඥ(16 × 4) = 8",
+      "q_num": 20
+    },
+    {
+      "question": "A shopkeeper placed an order for jeans, shirts and t-shirts at ₹500, ₹350 and ₹200 in ratio 1:2:3 for ₹46,800. How many t- shirts did he order?",
+      "options": {
+        "a": "104",
+        "b": "26",
+        "c": "78",
+        "d": "52"
+      },
+      "answer": "c",
+      "solution": "Quantities are 1 : 2 : 3 but the prices differ — so \nbuild the COST of each line, not the count. \n Step 1   Let the quantities be k, 2k, 3k and cost \neach line. \njeans 500k        shirts 350(2k) = 700k        t-shirts \n200(3k) = 600k \n Step 2   Add the three costs to the bill. \n500k + 700k + 600k = 1,800k = ₹46,800   ∴  k = \n26 \n Step 3   T-shirts are 3k. \n3k = 3 × 26 = 78",
+      "q_num": 21
+    },
+    {
+      "question": "Bunty had candies and chewing gums in ratio 7:13. After eating 8 candies and 11 chewing gums the ratio became 1:2. How many candies does he have now? (SSC CGL Tier-II 18-02-2018)",
+      "options": {
+        "a": "65",
+        "b": "35",
+        "c": "54",
+        "d": "27"
+      },
+      "answer": "d",
+      "solution": "",
+      "q_num": 22
+    },
+    {
+      "question": "The ratio of income of A to B is 5:7. A and B save ₹4,000 and ₹5,000. If A's expenditure = 266⅔% of B's expenditure, find total income of A and B. (SSC CGL Tier- II 11-9-2019) A",
+      "options": {
+        "a": "₹26,400",
+        "b": "₹28,800",
+        "c": "₹24,000",
+        "d": "₹25,200"
+      },
+      "answer": "c",
+      "solution": "A_exp = 66⅔% of B_exp  [source 266⅔% is \nimpossible]:",
+      "q_num": 23
+    },
+    {
+      "question": "How many job applicants had applied if selected : unselected = 19:17. If 1,200 less applied and 800 less selected, ratio would be 1:1. (SSC CGL Tier-II 20-02-2018)",
+      "options": {
+        "a": "6,000",
+        "b": "7,200",
+        "c": "8,400",
+        "d": "4,800"
+      },
+      "answer": "b",
+      "solution": "Selected : unselected = 19 : 17, so the applicants \nare 36 units. Both drops act on those units. \n Step 1   Write each figure after the drop. \napplied = 36k − 1,200        selected = 19k − 800 \nunselected = (36k − 1,200) − (19k − 800) = 17k − \n400 \n Step 2   The new ratio is 1 : 1, so the two are simply \nequal. \n19k − 800 = 17k − 400   ⇒  2k = 400   ∴  k = 200 \n Step 3   Applicants = 36k. \n36 × 200 = 7,200",
+      "q_num": 24
+    },
+    {
+      "question": "A sum of ₹4,360 was to be divided among A, B, C and D in ratio 3:4:5:8 but was divided in ratio 1/3:1/4:1/5:1/8 by mistake. Which statement holds true? ₹4,360",
+      "options": {
+        "a": "A received ₹956 more",
+        "b": "B received ₹318 \nmore",
+        "c": "D received ₹1,144 less",
+        "d": "C \nreceived ₹123 less"
+      },
+      "answer": "c",
+      "solution": "The wrong split is in FRACTIONS — turn it into \nwhole \nnumbers \nfirst, \nor \nnothing \ncan \nbe \ncompared. \n Step 1   Multiply 1/3 : 1/4 : 1/5 : 1/8 by the LCM of \nthe denominators, 120. \nCandies : Gums = 7k : 13k   (eat 8 & 11 → 1:2)\nstart\n7k \n13k \nnow\n7k−8 \n13k−11 \n2(7k−8)=13k−11 → k=5 → candies = 27 \nIncome\nExp\nSavings\nA\n5k\n5k−4000\n4000\nB\n7k\n7k−5000\n5000\n5k−4000 = ⅔(7k−5000) → k=2000 → total = 12k = \n₹24,000 \nApplicants  =  19k + 17k  =  36k\nstart\nselected 19k \nunselected 17k \nafter\n19k − 800 \n17k − 400 \nthe two become equal → k = 200 → applicants = \n7,200 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n1/3 : 1/4 : 1/5 : 1/8   ×120   →   40 : 30 : 24 : 15       (sum \n= 109) \n Step 2   Value one unit on each side. \ncorrect : 4,360 ÷ 20 = ₹218 per unit          mistake \n: 4,360 ÷ 109 = ₹40 per unit \n Step 3   Work all four people side by side. \n \n Step 4   Read the option that matches the \ncolumn. \n \nD : 1,744 → 600, so D received ₹1,144 LESS",
+      "q_num": 25
+    },
+    {
+      "question": "The expenses for a college picnic are partly fixed and partly variable. Charge is ₹400/head for 15 people and ₹300/head for 30 people. Find charge/head for 75 people.",
+      "options": {
+        "a": "₹220",
+        "b": "₹230",
+        "c": "₹240",
+        "d": "₹250"
+      },
+      "answer": "c",
+      "solution": "“Partly fixed, partly variable” always means  \nTotal = Fixed + (people × Variable). \n Step 1   Turn each per-head charge into a TOTAL \nexpense. \n15 people :  15 × 400 = ₹6,000 = F + 15V \n30 people :  30 × 300 = ₹9,000 = F + 30V \n Step 2   Subtract — F disappears. \n15V = 3,000   ∴  V = ₹200        F = 6,000 − 15(200) \n= ₹3,000 \n Step 3   Put 75 people into the same model. \nTotal = 3,000 + 75 × 200 = ₹18,000   ∴  per head \n= 18,000 ÷ 75 = ₹240",
+      "q_num": 26
+    },
+    {
+      "question": "Total expenses of a boarding house are partly fixed and partly varying. Avg expense/boarder is ₹700 for 25 boarders and ₹600 for 50 boarders. Find avg expense for 100 boarders.",
+      "options": {
+        "a": "₹550",
+        "b": "₹580",
+        "c": "₹540",
+        "d": "₹570"
+      },
+      "answer": "a",
+      "solution": "Same model as the previous question :  Total = \nFixed + (boarders × Variable). \n Step 1   Turn the averages into totals. \n25 boarders :  25 × 700 = ₹17,500 = F + 25V \n50 boarders :  50 × 600 = ₹30,000 = F + 50V \n Step 2   Subtract. \n25V = 12,500   ∴  V = ₹500        F = 17,500 − 12,500 \n= ₹5,000 \n Step 3   Now 100 boarders. \nTotal = 5,000 + 100 × 500 = ₹55,000   ∴  average \n= ₹550",
+      "q_num": 27
+    },
+    {
+      "question": "The incomes of P, Q and R are in ratio 9:15:10 and savings in ratio 10:15:12. If R spends 60% of his income, find the ratio of expenditures of P, Q and R. P, Q",
+      "options": {
+        "a": "18:17:30",
+        "b": "17:30:18",
+        "c": "17:18:30",
+        "d": "18:30:17"
+      },
+      "answer": "b",
+      "solution": "Income 9a:15a:10a; R saves 40% → b=a/3; Exp = \nIncome − Savings:",
+      "q_num": 28
+    },
+    {
+      "question": "In an office, 5/8 of employees are males. 2/5 of males are non-technical; 2/3 of females are technical. What fraction of total employees are technical workers?",
+      "options": {
+        "a": "5/8",
+        "b": "1/2",
+        "c": "2/5",
+        "d": "3/8"
+      },
+      "answer": "a",
+      "solution": "Technical part of each group:",
+      "q_num": 29
+    },
+    {
+      "question": "Aman has ₹20 and ₹10 notes amounting to ₹390. If numbers are interchanged, new amount is ₹90 less. Find number of ₹20 notes.",
+      "options": {
+        "a": "15",
+        "b": "12",
+        "c": "14",
+        "d": "16"
+      },
+      "answer": "d",
+      "solution": "Interchanging the notes changes the amount, so \nwrite BOTH amounts in the same two letters. \nLet a = number of ₹20 notes,   b = number of \n₹10 notes \n Step 1   Original amount, then the interchanged \none. \n20a + 10b = 390          10a + 20b = 390 − 90 = 300 \n Step 2   Divide both by 10 to keep the numbers \nsmall. \n2a + b = 39   …(i)          a + 2b = 30   …(ii) \n Step 3   2×(i) − (ii) clears b. \n4a + 2b = 78   and   a + 2b = 30   ⇒  3a = 48   ∴  a \n= 16",
+      "q_num": 30
+    },
+    {
+      "question": "A rabbit takes 8 leaps for every 5 leaps of a rat, and distance covered by rat in 5 leaps = distance by rabbit in 4 leaps. Find ratio of their speeds.",
+      "options": {
+        "a": "2:1",
+        "b": "3:2",
+        "c": "3:4",
+        "d": "2:5"
+      },
+      "answer": "a",
+      "solution": "Speed = (leaps taken in a given time) × (length of \none leap). The question gives both, separately. \n Step 1   Leap RATE — straight from the first line. \nrabbit : rat  =  8 : 5   leaps in the same time \n Step 2   Leap LENGTH — from the distance line. \n5 × (rat leap) = 4 × (rabbit leap)   ∴  rat leap : \nrabbit leap = 4 : 5 \n Step 3   Multiply rate by length for each animal. \nrabbit = 8 × 5 = 40        rat = 5 × 4 = 20    ∴  40 : \n20 = 2 : 1",
+      "q_num": 31
+    },
+    {
+      "question": "In a class, ratio of boys to girls is 5:3. If 20% of boys and 40% of girls fail in an exam, what is the ratio of boys who passed to girls who passed? (CGL 2025)",
+      "options": {
+        "a": "20:9",
+        "b": "9:20",
+        "c": "21:19",
+        "d": "22:7"
+      },
+      "answer": "a",
+      "solution": "Employees (male 5/8, female 3/8)\n1 \nmale 5/8\ntech 3/8\nfemale 3/8\ntech 2/8\ntechnical = 3/8 + 2/8 = 5/8 \nX : Y = 9 : 7   (total ₹5,000)\nX=2812.50 \nY=2187.50 \n(5/9)X=(5/7)Y → Y=5000×7/16 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 32
+    },
+    {
+      "question": "Deepak spends 75% of his income; Karan spends 80% of his income. Both save ₹7,500 each. Sanjay's income is 1/3 of (Deepak + Karan's income). If Sanjay spends 7/9 of his income, find his savings. (CGL 2025)",
+      "options": {
+        "a": "₹5,500",
+        "b": "₹5,900",
+        "c": "₹5,000",
+        "d": "₹5,700"
+      },
+      "answer": "c",
+      "solution": "The savings are given, not the incomes — so read \neach income BACKWARDS from its savings \npercentage. \n Step 1   Deepak spends 75%, so he saves 25%. \n25% of income = ₹7,500   ∴  Deepak = ₹30,000 \n Step 2   Karan spends 80%, so he saves 20%. \n20% of income = ₹7,500   ∴  Karan = ₹37,500 \n Step 3   Sanjay is one-third of the two together. \nSanjay = ⅓ × (30,000 + 37,500) = ⅓ × 67,500 = \n₹22,500 \n Step 4   He spends 7/9, so he saves 2/9. \nSavings = 2/9 × 22,500 = ₹5,000",
+      "q_num": 33
+    },
+    {
+      "question": "Rice worth ₹120/kg and ₹130/kg are mixed with a third variety in ratio 1:1:2. If the mixture is worth ₹150/kg, what is the price of the third variety per kg? ₹120/kg",
+      "options": {
+        "a": "₹175",
+        "b": "₹170",
+        "c": "₹165",
+        "d": "₹180"
+      },
+      "answer": "a",
+      "solution": "",
+      "q_num": 34
+    },
+    {
+      "question": "Expenditure on heads A, B, C, D and E is in proportion 3:5:7:11:? The expenditure on E equals the arithmetic mean of A and D. If C exceeds B by ₹18,000, find the total expenditure. (CGL 2025) A, B, C, D",
+      "options": {
+        "a": "₹1,80,000",
+        "b": "₹2,40,000",
+        "c": "₹2,97,000",
+        "d": "₹2,52,000"
+      },
+      "answer": "c",
+      "solution": "E = mean(A,D) = (3+11)/2 = 7 → parts 3:5:7:11:7. The \ngiven fact is C−B = 7u−5u = 2u:",
+      "q_num": 35
+    },
+    {
+      "question": "The ratio of X's to Y's income last year was 4:5. Ratio of last year to this year income: X = 3:4, Y = 2:3. If sum of present incomes is ₹15,400, find X's present income. Boys : Girls = 5 : 3 (pass 80% / 60%) boys : girls = 5 : 3 boys 5k pass 4k girls 3k pass 1.8k passed boys : girls = 4 : 1.8 = 20 : 9 each income recovered from its savings Deepak 30,000 Karan 37,500 Sanjay 22,500 Sanjay saves 2/9 of ₹22,500 = ₹5,000 Alligation 125 x 150 (x−150) : (150−125) = 1 : 1 → x = ₹175 Key step: C − B (C = 7 units, B = 5 units) C = 7u 7 units B = 5u 5 units C−B = 2u = ₹18,000 → 1u = ₹9,000 → total 33u = ₹2,97,000 LEVEL - 3 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "₹9,000",
+        "b": "₹7,900",
+        "c": "₹7,500",
+        "d": "₹6,400"
+      },
+      "answer": "d",
+      "solution": "Two different years are involved. Fix LAST year \nfrom 4 : 5, then grow each person separately. \n Step 1   Last year :  X = 4m,  Y = 5m. \nX grows 3 → 4 :   X_this = 4/3 × 4m = 16m/3 \nY grows 2 → 3 :   Y_this = 3/2 × 5m = 15m/2 \n Step 2   Add the present incomes to ₹15,400. \n16m/3 + 15m/2 = (32m + 45m)/6 = 77m/6 = \n15,400   ∴  m = 1,200 \n Step 3   X's present income. \nX_this = 16 × 1,200 ÷ 3 = ₹6,400",
+      "q_num": 36
+    }
+  ]
+}

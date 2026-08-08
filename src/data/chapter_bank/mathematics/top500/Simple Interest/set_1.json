@@ -1,0 +1,294 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Simple Interest",
+  "questions": [
+    {
+      "question": "In what time will ₹3720 amount to ₹5282.4 at the rate of 12% per annual simple interest? 12%",
+      "options": {
+        "a": "5 Years",
+        "b": "3½ Years",
+        "c": "5½ Years",
+        "d": "3 \nYears"
+      },
+      "answer": "b",
+      "solution": "Step 1   Interest first. \nSI = 5282.4 − 3720 = ₹1562.4 \n Step 2   Now solve for the time. \nt = 1562.4 × 100 / (3720 × 12) = 3½ years",
+      "q_num": 1
+    },
+    {
+      "question": "A sum doubles in seven years at simple interest. In how many years will the sum become five times the original sum?",
+      "options": {
+        "a": "35",
+        "b": "21",
+        "c": "28",
+        "d": "30"
+      },
+      "answer": "c",
+      "solution": "Step 1   Doubling in 7 years tells you what one \nblock is worth. \nP → 2P in 7 yr   ⇒  interest of one 7-year block \n= P \n Step 2   Five times the sum needs four such \nblocks. \n5P − P = 4P of interest   ⇒  4 blocks = 4 × 7 = 28 \nyears",
+      "q_num": 2
+    },
+    {
+      "question": "If the simple interest for 9 years be equal to 45% of the principal, then the rate of interest per annum is equal to:",
+      "options": {
+        "a": "6%",
+        "b": "8%",
+        "c": "5%",
+        "d": "9%"
+      },
+      "answer": "c",
+      "solution": "Step 1   Write it out. \nP × 9 × r / 100 = 45P / 100 \n Step 2   Cancel and solve. \n9r = 45   ∴  r = 5%",
+      "q_num": 3
+    },
+    {
+      "question": "If the ratio of principal and the simple interest for 5 years is 10 : 7, then the rate of interest (per annum) is:",
+      "options": {
+        "a": "15%",
+        "b": "20%",
+        "c": "10%",
+        "d": "14%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Read the ratio as a fraction. \nP : I = 10 : 7   ⇒  I / P = 7/10 \n Step 2   Set it equal to r × t / 100. \n7/10 = r × 5 / 100   ∴  r = 14% \nevery 7-year block adds one more P\nP \n+7 yr\n2P \n+7 yr\n3P \n+7 yr\n4P \n+7 yr\n5P \n5P is reached after 4 blocks = 28 years \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 4
+    },
+    {
+      "question": "The simple interest on ₹2460 will be 162 less than the interest on ₹3000 at the rate of 5% per annum. Find the time taken in years. ₹2460",
+      "options": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "answer": "d",
+      "solution": "Step 1   One calculation on the difference. \n(3000 − 2460) × 5 × t / 100 = 162 \n Step 2   Solve. \n540 × 5 × t / 100 = 27t = 162   ∴  t = 6 years",
+      "q_num": 5
+    },
+    {
+      "question": "A sum of money becomes 8/7 of itself in 2 years at a certain rate of simple interest. Find the annual interest rate.",
+      "options": {
+        "a": "8⁵/₇%",
+        "b": "7³/₇%",
+        "c": "6²/₇%",
+        "d": "7¹/₇%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Read the interest as a fraction of P. \nI / P = (8 − 7) / 7 = 1/7   over 2 years \n Step 2   Divide by the time, then convert to a \npercentage. \nper year = 1/14   ⇒  R = (1/14) × 100 = 50/7 = 71/7 \n%",
+      "q_num": 6
+    },
+    {
+      "question": "What is the ratio of the simple interest earned on a certain sum of money at 21% per annum for 8 years to that earned on the same sum at the same rate for 21 years?",
+      "options": {
+        "a": "8:21",
+        "b": "21:5",
+        "c": "21:8",
+        "d": "5:21"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write the two interests and cancel. \n(P × 21 × 8) : (P × 21 × 21)  — P and 21 cancel \n Step 2   Read the ratio. \n= 8 : 21",
+      "q_num": 7
+    },
+    {
+      "question": "A person deposited ₹15600 in a fixed deposit at 10% per annum simple interest. After every second year he adds the interest earned to the principal. The interest at the end of 4 years is..",
+      "options": {
+        "a": "₹6,655",
+        "b": "₹3,975",
+        "c": "₹6,864",
+        "d": "₹3,744"
+      },
+      "answer": "c",
+      "solution": "Step 1   First block, principal ₹15,600. \n10% of 15,600 = ₹1,560 a year   ⇒  2 years = \n₹3,120 \n Step 2   Add it in; the principal changes once. \nnew principal = 15,600 + 3,120 = ₹18,720 \n Step 3   Second block on the new principal. \n10% of 18,720 = ₹1,872 a year   ⇒  2 years = \n₹3,744 \n Step 4   Total interest over the 4 years. \n3,120 + 3,744 = ₹6,864",
+      "q_num": 8
+    },
+    {
+      "question": "A sum of ₹x is lent out in three parts. The first part is lent at 6% per annum at simple interest for 6 years. The second part is lent at 8% per annum for 5 years. And the third part is lent at 12% per annum for 3 years. If all three simple interests are equal, what is the ratio of the three parts? ₹x",
+      "options": {
+        "a": "10:9:6",
+        "b": "20:18:12",
+        "c": "10:9:12",
+        "d": "20:18:10"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the equality. \np × 6 × 6 = q × 8 × 5 = r × 12 × 3    ⇒   36p = 40q = \n36r \n Step 2   Divide right through by the LCM 360. \np : q : r = 360/36 : 360/40 : 360/36 = 10 : 9 : 10",
+      "q_num": 9
+    },
+    {
+      "question": "A sum of ₹18,000 is invested for 16 months at 12% per annum at simple interest. What is the total amount after the period? ₹18,000",
+      "options": {
+        "a": "₹19,520",
+        "b": "₹20,880",
+        "c": "₹21,520",
+        "d": "₹20,520"
+      },
+      "answer": "b",
+      "solution": "Step 1   Interest for the period. \nSI = 18,000 × 12 × (16/12) / 100 = ₹2,880 \n Step 2   Amount = principal + interest. \n18,000 + 2,880 = ₹20,880",
+      "q_num": 10
+    },
+    {
+      "question": "A sum of ₹10000 is deposited in a bank. After one year, another sum of ₹5000 is deposited. After another year the bank pays simple interest at 5% per annum. What is the total amount at the end of 3 years from the time of first deposit? ₹10000",
+      "options": {
+        "a": "₹17,000",
+        "b": "₹16,000",
+        "c": "₹16,500",
+        "d": "₹17,500"
+      },
+      "answer": "a",
+      "solution": "Step 1   The first deposit runs the full 3 years. \n10,000 × 5 × 3 / 100 = ₹1,500 \n Step 2   The second one joins a year later, so 2 \nyears. \n5,000 × 5 × 2 / 100 = ₹500 \n Step 3   Add both deposits and both interests. \n15,000 + 2,000 = ₹17,000",
+      "q_num": 11
+    },
+    {
+      "question": "The difference between the simple interest on a sum of money at 10% per annum for 3 years and that at 8% for 3 years is ₹72. The sum is:",
+      "options": {
+        "a": "₹1,100",
+        "b": "₹1,200",
+        "c": "₹1,300",
+        "d": "₹1,500"
+      },
+      "answer": "b",
+      "solution": "Step 1   Convert both. \n10% × 3 = 30% of P        8% × 3 = 24% of P \n Step 2   The gap is the given ₹72. \n(30 − 24)% of P = 6% of P = 72   ∴  P = ₹1,200",
+      "q_num": 12
+    },
+    {
+      "question": "The principal, which will give simple interest of ₹4,800 in 4 years at the rate of 16% per annum is:",
+      "options": {
+        "a": "₹7,000",
+        "b": "₹7,500",
+        "c": "₹7,200",
+        "d": "₹7,800"
+      },
+      "answer": "b",
+      "solution": "Step 1   One year's interest. \n4,800 ÷ 4 = ₹1,200 \n Step 2   Now a single year's formula gives P. \nP × 16 × 1 / 100 = 1,200   ∴  P = ₹7,500",
+      "q_num": 13
+    },
+    {
+      "question": "In what time will a sum of money double itself at 6¼ % per annum simple interest? 6¼% Ů",
+      "options": {
+        "a": "12 years",
+        "b": "14 years",
+        "c": "16 years",
+        "d": "18 \nyears"
+      },
+      "answer": "c",
+      "solution": "Step 1   Write the doubling condition. \nP × (25/4) × t / 100 = P \n Step 2   Cancel P and solve. \nt = 100 ÷ (25/4) = 16 years",
+      "q_num": 14
+    },
+    {
+      "question": "S deposits a total of ₹50000 in two accounts which give simple interest at the rate of 8% and 12% per annum respectively. After one year he receives a total of 5200 as interest. How much money does he deposit in his account with 12% interest rate? S",
+      "options": {
+        "a": "25,000",
+        "b": "32,000",
+        "c": "30,000",
+        "d": "20,000"
+      },
+      "answer": "c",
+      "solution": "Step 1   Find the overall rate the ₹5,200 \nrepresents. \n5,200 / 50,000 × 100 = 10.4% \n Step 2   Put 8% and 12% on either side of 10.4%. \ndistances 10.4 − 8 = 2.4  and  12 − 10.4 = 1.6   ⇒  \nparts = 1.6 : 2.4 = 2 : 3 \n Step 3   The 12% account takes the 3 parts. \n(3/5) × 50,000 = ₹30,000",
+      "q_num": 15
+    },
+    {
+      "question": "Two equal sums were lent on simple interest at 6% and 10% per annum respectively. The first sum was recovered the 12% part takes 3/5 of 50,000 = 30,000 cheaper dearer 8% 12% 10.4% 1.6 2.4 2 : 3 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 two years later than the second sum and the amount in each case was ₹1105. What was the sum (in ₹) lent in each scheme?",
+      "options": {
+        "a": "850",
+        "b": "936",
+        "c": "891",
+        "d": "900"
+      },
+      "answer": "a",
+      "solution": "Step 1   The first sum runs 2 years longer. \n6(t + 2) = 10t   ⇒  4t = 12   ∴  t = 3 years \n Step 2   So the 6% sum ran 5 years. Use its \namount. \nP(1 + 6 × 5/100) = 1105   ⇒  1.30 P = 1105   ∴  P = \n₹850",
+      "q_num": 16
+    },
+    {
+      "question": "The difference between the simple interest on a fixed amount for 7 years and on the same amount for 12 years is ₹2,500. If the rate of interest is 10% p.a., then the amount is:",
+      "options": {
+        "a": "₹6,000",
+        "b": "₹5,000",
+        "c": "₹4,500",
+        "d": "₹5,500"
+      },
+      "answer": "b",
+      "solution": "Step 1   Convert both spans to percentages of P. \n7 × 10% = 70%        12 × 10% = 120% \n Step 2   Their gap is the given ₹2,500. \n50% of P = 2,500   ∴  P = ₹5,000",
+      "q_num": 17
+    },
+    {
+      "question": "What is the simple interest on a sum of ₹99000 at 12½% per annum for a period of 9 months? ₹99000",
+      "options": {
+        "a": "₹8281.25",
+        "b": "₹9282.25",
+        "c": "₹7281.25",
+        "d": "₹9281.25"
+      },
+      "answer": "d",
+      "solution": "Step 1   Rewrite the rate and the time. \n12½% = 1/8        9 months = 9/12 year \n Step 2   Multiply straight through. \nSI = 99,000 × (1/8) × (9/12) = ₹9,281.25",
+      "q_num": 18
+    },
+    {
+      "question": "A person invested one-fourth of the sum of ₹25,000 at a certain rate of simple interest and the rest at 4% p.a. higher rate. If the total interest received for 2 years is ₹4,125, what is the rate at which the second sum was invested?",
+      "options": {
+        "a": "9.25%",
+        "b": "9.5%",
+        "c": "7.5%",
+        "d": "5.25%"
+      },
+      "answer": "a",
+      "solution": "Step 1   Split the sum. \none-fourth = ₹6,250 at x%,   the rest = ₹18,750 \nat (x + 4)%,  both for 2 years \n Step 2   Add the two interests to ₹4,125. \n125x + 375(x + 4) = 4,125   ⇒  500x = 2,625   ∴  x = \n5.25 \n Step 3   Read the question again — it asks for the \nSECOND rate. \nx + 4 = 9.25%",
+      "q_num": 19
+    },
+    {
+      "question": "If the annual rate of simple interest increases from 11% to 17½% then a person's yearly income increases by 1,071.20. The simple interest (in ₹) on the same sum at 10% for 5 years is:",
+      "options": {
+        "a": "₹8,240",
+        "b": "₹9,120",
+        "c": "₹7,250",
+        "d": "₹16,480"
+      },
+      "answer": "a",
+      "solution": "Step 1   Find the rate difference and recover P. \n17½% − 11% = 6.5% of P = 1,071.20   ∴  P = ₹16,480 \n Step 2   10% for 5 years is simply half the sum. \nSI = 50% of 16,480 = ₹8,240",
+      "q_num": 20
+    },
+    {
+      "question": "Two equal sums are borrowed at 10% and 8% simple interest p.a. respectively, at the same time. The first sum is received 2 years earlier than the second one and the amount received in each case was ₹36,900. Each sum was ____?",
+      "options": {
+        "a": "₹20,200",
+        "b": "₹18,100",
+        "c": "₹21,500",
+        "d": "₹20,500"
+      },
+      "answer": "d",
+      "solution": "Step 1   The first sum is received 2 years earlier. \n10t = 8(t + 2)   ⇒  2t = 16   ∴  t = 8 years \n Step 2   Use the amount on the 10% sum. \nP(1 + 80/100) = 36,900   ⇒  1.8 P = 36,900   ∴  P = \n₹20,500",
+      "q_num": 21
+    },
+    {
+      "question": "If the total simple interest on a sum of ₹1,400 for 4 years at rate of interest x% p.a. and on the same sum for two years at the same rate, is ₹672, then the value of x is:",
+      "options": {
+        "a": "6%",
+        "b": "9%",
+        "c": "8%",
+        "d": "10%"
+      },
+      "answer": "c",
+      "solution": "Step 1   Write both interests. \n1400 · x · 4/100 + 1400 · x · 2/100 = 672 \n Step 2   Combine and solve. \n56x + 28x = 84x = 672   ∴  x = 8",
+      "q_num": 22
+    },
+    {
+      "question": "A sum of ₹2400 is invested for 4 years at R% per annum, simple interest and the simple interest received is ₹1152. Find the amount received after 3 years when the same sum is invested at (R + 8)% p.a., simple interest. ₹2400",
+      "options": {
+        "a": "₹3,840",
+        "b": "₹3,260",
+        "c": "₹3,180",
+        "d": "₹2,880"
+      },
+      "answer": "a",
+      "solution": "Step 1   One year's interest, then the rate. \n1,152 ÷ 4 = ₹288 a year   ⇒  R = 288/2400 × 100 \n= 12% \n Step 2   New rate R + 8 = 20%, i.e. one-fifth. \nyearly interest = 2,400 ÷ 5 = ₹480 \n Step 3   Three years of it. \n480 × 3 = ₹1,440",
+      "q_num": 23
+    },
+    {
+      "question": "The simple interest on a certain sum is one fourth of the sum and the interest rate per annum is 4 times the number of years. If the rate of interest increases by 2% then what will be the simple interest (in ₹) on ₹5000 for 3 years?",
+      "options": {
+        "a": "₹1,800",
+        "b": "₹3000",
+        "c": "₹1,500",
+        "d": "₹2,000"
+      },
+      "answer": "a",
+      "solution": "Step 1   Cancel P out of the condition. \nR × T = 25,   and the question says R = 4T \n Step 2   One letter now. \n4T · T = 25   ⇒  T = 2.5 yr   ∴  R = 10% \n Step 3   Rate rises by 2%, so 12% on ₹5,000 for 3 \nyears. \nLEVEL - 3 \nat the new rate of 20%\nprincipal\nP 2,400 \nafter 3 yr\nP 2,400 \nSI 1,440 \nyearly interest 2,400/5 = 480, so 3 yr = 1,440 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n5,000 × 3 × 12 / 100 = ₹1,800",
+      "q_num": 24
+    }
+  ]
+}

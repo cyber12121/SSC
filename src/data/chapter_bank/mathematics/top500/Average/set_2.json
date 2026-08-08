@@ -1,0 +1,210 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average",
+  "questions": [
+    {
+      "question": "If 40 is added to a list of natural numbers, the average increases by 4. When 30 is added to the new list, the average increases by 1 more. How many numbers were there originally? Ů",
+      "options": {
+        "a": "4",
+        "b": "5",
+        "c": "8",
+        "d": "6"
+      },
+      "answer": "a",
+      "solution": "Step 1   Adding 40 lifts the average by 4. \n(nA + 40)/(n+1) = A + 4   ⇒  A + 4n = 36 \n Step 2   Adding 30 lifts it by 1 more. \n(nA + 70)/(n+2) = A + 5   ⇒  2A + 5n = 60 \n Step 3   Solve the pair. \n2(36 − 4n) + 5n = 60   ⇒  n = 4",
+      "q_num": 1
+    },
+    {
+      "question": "The average of 46 numbers is 50.5. The average of the first 25 is 45 and that of the last 18 is 56. The 28th number is 67. If the 26th and 27th numbers are excluded, what is the average of the remaining numbers? 46",
+      "options": {
+        "a": "51.5",
+        "b": "50.4",
+        "c": "50",
+        "d": "51"
+      },
+      "answer": "c",
+      "solution": "Step 1   The whole list and the named blocks. \n46 × 50.5 = 2,323        25 × 45 = 1,125        18 × 56 \n= 1,008        28th = 67 \n Step 2   What is left is the 26th and 27th. \n2,323 − 1,125 − 1,008 − 67 = 123 \n Step 3   Drop them. \n(2,323 − 123)/44 = 2,200/44 = 50",
+      "q_num": 2
+    },
+    {
+      "question": "There are 3 groups — male, female and children. There are 20 males, and females + children together are 4 more than males. Average weight: males 54 kg, females 49 kg, children 30 kg. If the overall average is 48.25 kg, what is the difference between the number of females and children? 3",
+      "options": {
+        "a": "17",
+        "b": "10",
+        "c": "7",
+        "d": "14"
+      },
+      "answer": "b",
+      "solution": "Step 1   Total weight. \n44 × 48.25 = 2,123 \n Step 2   By group. \n54(20) + 49F + 30(24 − F) = 2,123 \n Step 3   Solve. \n1,800 + 19F = 2,123   ⇒  F = 17,  C = 7   ∴  difference \n= 10",
+      "q_num": 3
+    },
+    {
+      "question": "The average weight of a certain number of students is 72 kg. If 10 students",
+      "options": {
+        "a": "54",
+        "b": "46",
+        "c": "56",
+        "d": "44"
+      },
+      "answer": "b",
+      "solution": "Step 1   After the change. \ntotal = 72x − 10(78) + 4(80) = 72x − 460,  count \n= x − 6 \n Step 2   The average drops 0.7. \n72x − 460 = 71.3(x − 6)   ⇒  0.7x = 32.2   ⇒  x = 46",
+      "q_num": 4
+    },
+    {
+      "question": "The average age of 7 students is 28 years. Average of first three is 30. The 4th student is 4 years younger than the 5th. The last two are equal in age and 5 years more than average of first three. Find the average age of 4th and 5th students. 7",
+      "options": {
+        "a": "20 years",
+        "b": "36 years",
+        "c": "18 years",
+        "d": "16 \nyears"
+      },
+      "answer": "c",
+      "solution": "Step 1   Total and the first three. \n7 × 28 = 196        3 × 30 = 90 \n Step 2   The last two are 5 above 30. \n35 each  ⇒  70 \n Step 3   So the 4th and 5th. \n196 − 90 − 70 = 36   ⇒  average = 18",
+      "q_num": 5
+    },
+    {
+      "question": "Ram, Shyam, Rohan, Rita and Mukesh are five members of a family whose weight is recorded sequentially and average is calculated each time. If the average increases by 2 kg each time, how much heavier is Mukesh than Ram?",
+      "options": {
+        "a": "14 kg",
+        "b": "12 kg",
+        "c": "16 kg",
+        "d": "18 kg"
+      },
+      "answer": "c",
+      "solution": "A running average that climbs by 2 every time \nmeans each entry is 4 above the one before. \n Step 1   Write the five entries. \nRam x,  Shyam x+4,  Rohan x+8,  Rita x+12,  \nMukesh x+16 \n Step 2   The gap asked for. \nMukesh − Ram = 16 kg",
+      "q_num": 6
+    },
+    {
+      "question": "A company had 4 departments with an average of 45 employees each. A fifth department was added with 90 employees. Due to restructuring, 10 employees from each of the original four departments were transferred to the new department. What is the new average number of employees per department?",
+      "options": {
+        "a": "48",
+        "b": "52",
+        "c": "50",
+        "d": "56"
+      },
+      "answer": "d",
+      "solution": "Step 1   Total employees. \n4 × 45 + 90 = 270 \n Step 2   Now over five departments. \n270 / 5 = 54",
+      "q_num": 7
+    },
+    {
+      "question": "In a digital learning centre, the average score in tests 1 & 2 is 82.6, in tests 2 & 3 is 84.2, and in tests 1 & 3 is 80.4. If the student scored 2.5 marks less in the 3rd test than in the 1st, find the marks in the 2nd test.",
+      "options": {
+        "a": "83.25",
+        "b": "83.55",
+        "c": "82.95",
+        "d": "84.05"
+      },
+      "answer": "b",
+      "solution": "Step 1   Tests 1 and 3. \n1 + 3 = 2 × 80.4 = 160.8        1 − 3 = 2.5 \n Step 2   Add and halve. \n2 × test1 = 163.3   ⇒  test1 = 81.65 \n Step 3   Then test 2. \n165.2 − 81.65 = 83.55",
+      "q_num": 8
+    },
+    {
+      "question": "The average weight of students in sections A and B (40 each) is 45.5 kg and 44.2 kg. Two students from A",
+      "options": {
+        "a": "35.75 kg",
+        "b": "34.25 kg",
+        "c": "34.5 kg",
+        "d": "35 \nkg"
+      },
+      "answer": "a",
+      "solution": "Equal averages with equal counts means equal \nTOTALS — that is the whole equation. \n Step 1   Section totals. \nA = 40 × 45.5 = 1,820        B = 40 × 44.2 = 1,768 \n Step 2   Two students of 2 × 48.75 = 97.5 kg go A \n→ B, and 2x comes back. \n1,820 − 97.5 + 2x  =  1,768 + 97.5 − 2x \n Step 3   Solve. \n4x = 143   ⇒  x = 35.75 kg",
+      "q_num": 9
+    },
+    {
+      "question": "The average weight of A, B and C is 60 kg. When D joins, average becomes 65 kg. When E (3 kg less than D) replaces A, the average of B, C, D and E becomes 67 kg. What is the weight of A? A, B",
+      "options": {
+        "a": "60 kg",
+        "b": "69 kg",
+        "c": "65 kg",
+        "d": "72 kg"
+      },
+      "answer": "b",
+      "solution": "Step 1   A + B + C, then D. \n3 × 60 = 180        4 × 65 = 260   ⇒  D = 80   ⇒  E = \n77 \n Step 2   The second group of four. \nB + C + D + E = 4 × 67 = 268   ⇒  B + C = 268 − \n157 = 111 \n Step 3   A is the rest. \n180 − 111 = 69 kg",
+      "q_num": 10
+    },
+    {
+      "question": "The average monthly expenditure of a man is ₹2400 during the first 3 months, ₹3500 during the next 5 months and ₹4800 for the remaining 4 months. If his total savings for the year is ₹3500, what is his average monthly income (in ₹)?",
+      "options": {
+        "a": "₹4100",
+        "b": "₹3950",
+        "c": "₹3700",
+        "d": "₹4550"
+      },
+      "answer": "b",
+      "solution": "Step 1   The three blocks. \n3(2,400) + 5(3,500) + 4(4,800) = 7,200 + 17,500 \n+ 19,200 = ₹43,900 \n Step 2   Income = spending + savings. \n43,900 + 3,500 = ₹47,400 \n Step 3   Per month. \n47,400 / 12 = ₹3,950",
+      "q_num": 11
+    },
+    {
+      "question": "The average of 8 numbers 127, 432, p, 89, q, 99, 842 and 76 is 221. Both p and q are two- digit numbers. The units digit of p is one less than that of q and the tens digit of q is one less than that of p. The sum of the digits of p is: 8",
+      "options": {
+        "a": "14",
+        "b": "12",
+        "c": "13",
+        "d": "11"
+      },
+      "answer": "d",
+      "solution": "Step 1   The eight numbers and the six known \nones. \n8 × 221 = 1,768        known six = 1,665   ⇒  p + q = \n103 \n Step 2   Write p = 10a + b; the clues make q = 10(a \n− 1) + (b + 1). \np + q = 20a + 2b − 9 = 103   ⇒  10a + b = 56   ∴  p \n= 56 \n Step 3   Digit sum of p. \n5 + 6 = 11",
+      "q_num": 12
+    },
+    {
+      "question": "The average weight of some students in a group is 58 kg. If 8 students",
+      "options": {
+        "a": "40",
+        "b": "45",
+        "c": "35",
+        "d": "50"
+      },
+      "answer": "b",
+      "solution": "Step 1   After the change. \ntotal = 58x − 8(54) + (53.6 + 54 + 57.4) = 58x − \n267,   count = x − 5 \n Step 2   The average rises 0.575. \n58x − 267 = 58.575(x − 5)   ⇒  0.575x = 25.875   ⇒  \nx = 45",
+      "q_num": 13
+    },
+    {
+      "question": "Ram, Shyam, Rohan, Rita and Mukesh are five members of a family. Ram's weight is 50 kg. The average weight of Ram and Shyam is 55 kg. The average weight of Ram, Shyam and Rohan is 60 kg. The average weight of Ram, Shyam, Rohan and Rita is 62.5 kg. If the average weight of all five is 64 kg, what is the weight of Mukesh?",
+      "options": {
+        "a": "66 kg",
+        "b": "68 kg",
+        "c": "70 kg",
+        "d": "72 kg"
+      },
+      "answer": "c",
+      "solution": "Step 1   Work down the chain. \nRam 50   ⇒  Shyam = 110 − 50 = 60   ⇒  Rohan = \n180 − 110 = 70 \n Step 2   Then Rita and Mukesh. \nRita = 250 − 180 = 70        Mukesh = 320 − 250 = \n70 kg",
+      "q_num": 14
+    },
+    {
+      "question": "If the first number is 20% less than the third number and the ratio of the second and third numbers is 7 : 10, then by what percentage is the average of the first and third numbers more than the second number?",
+      "options": {
+        "a": "26 4/7",
+        "b": "28 2/7",
+        "c": "24 2/7",
+        "d": "28 4/7"
+      },
+      "answer": "d",
+      "solution": "Step 1   Let C = 10, so B = 7 and A is 20% less than \nC. \nA = 0.8 × 10 = 8 \n Step 2   Average the first and third. \n(8 + 10)/2 = 9 \n Step 3   Compare that with B, on B. \n(9 − 7)/7 × 100 = 200/7 = 28 4/7 %",
+      "q_num": 15
+    },
+    {
+      "question": "If, in a competitive exam, the marks obtained by Sam are 19% less than those of Peter, then the marks obtained by Peter are how much percentage more than the marks obtained by Sam?",
+      "options": {
+        "a": "21.50%",
+        "b": "22.25%",
+        "c": "28.64%",
+        "d": "23.46%"
+      },
+      "answer": "d",
+      "solution": "'19% less' works downward from Peter — so set \nPeter at 100, not Sam. \n Step 1   Fix the two marks. \nPeter = 100   ⇒  Sam = 81 \n Step 2   Peter's excess, measured on SAM. \n19/81 × 100 = 23.46%",
+      "q_num": 16
+    },
+    {
+      "question": "If the numerator of a fraction is increased by 12%, and its denominator is decreased by 8%, the value of that fraction becomes 16/17. Find the original fraction.",
+      "options": {
+        "a": "28/23",
+        "b": "119/92",
+        "c": "23/28",
+        "d": "92/119"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the new fraction. \n(112x/100) / (92y/100) = 112x / 92y = 28x / 23y \n Step 2   Set it to 16/17 and cross-multiply. \n28x × 17 = 16 × 23y   ⇒  x/y = 368/476 = 92/119 \nPERCENTAGE \nLEVEL - 1 \n1st & 3rd vs 2nd\n1st = 8, 3rd = 10\n1st 8 \n3rd 10 \n2nd = 7\n2nd 7 \navg(8,10) = 9 \nPeter vs Sam\nPeter = 100\nP 100 \nSam = 81\nS 81 \nPeter exceeds Sam by 19 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 17
+    }
+  ]
+}

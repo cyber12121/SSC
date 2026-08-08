@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { QuizContainer } from './components/QuizContainer';
 import { ErrorHeatmap } from './components/ErrorHeatmap';
@@ -27,7 +27,7 @@ Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
   if (data.mockErrors) chapters.push(...data.mockErrors);
 
   // Determine section and topic from path (only applicable to Mathematics in chapter_bank)
-  let section: 'spartan' | 'pinnacle' | 'qrb' | undefined = undefined;
+  let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | undefined = undefined;
   let topic_name: string | undefined = undefined;
   let set_name: string | undefined = undefined;
 
@@ -35,6 +35,7 @@ Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
     if (path.includes('/mathematics/spartan/')) section = 'spartan';
     else if (path.includes('/mathematics/pinnacle/')) section = 'pinnacle';
     else if (path.includes('/mathematics/qrb/')) section = 'qrb';
+    else if (path.includes('/mathematics/top500/')) section = 'top500';
 
     if (section) {
       const parts = path.split(`/${section}/`);
@@ -87,7 +88,7 @@ export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap'>('home');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-  const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | null>(null);
+  const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
   const [user, setUser] = useState<User | null>(null);
@@ -127,7 +128,7 @@ export default function App() {
           }
         }
 
-        const key = canonicalTitle.trim().toLowerCase();
+        const key = `${canonicalTitle.trim().toLowerCase()}|${chapter.set_name || ''}`;
 
         if (!mergedChaptersMap[key]) {
           mergedChaptersMap[key] = {
@@ -639,7 +640,7 @@ export default function App() {
                       <p className="text-lg text-slate-500 font-medium">Choose a specialized book or practice series to get started with focused topic revision.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       {/* Spartan Card */}
                       <motion.div
                         whileHover={{ y: -8, scale: 1.02 }}
@@ -721,6 +722,35 @@ export default function App() {
                             {currentData['Mathematics']?.filter(ch => ch.section === 'qrb').length || 0} Chapters
                           </span>
                           <div className="flex items-center font-bold text-emerald-600 group-hover:translate-x-2 transition-transform">
+                            Enter Section
+                            <ChevronRight className="w-5 h-5 ml-1" />
+                          </div>
+                        </div>
+                      </motion.div>
+
+                      {/* Top500 Card */}
+                      <motion.div
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        onClick={() => setSelectedMathSection('top500')}
+                        className="relative bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer overflow-hidden flex flex-col justify-between min-h-[320px]"
+                      >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-bl-[100px] -z-0 transition-all duration-300 group-hover:scale-110"></div>
+                        <div className="relative z-10">
+                          <div className="w-16 h-16 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-8 shadow-lg shadow-violet-100 group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-300">
+                            <Star className="w-8 h-8" />
+                          </div>
+                          <h3 className="text-2xl font-black text-slate-800 mb-3 group-hover:text-violet-600 transition-colors">
+                            Top 500 Series
+                          </h3>
+                          <p className="text-slate-500 font-medium leading-relaxed">
+                            The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.
+                          </p>
+                        </div>
+                        <div className="mt-8 flex items-center justify-between relative z-10">
+                          <span className="text-sm font-bold text-violet-600 bg-violet-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                            {currentData['Mathematics']?.filter(ch => ch.section === 'top500').length || 0} Chapters
+                          </span>
+                          <div className="flex items-center font-bold text-violet-600 group-hover:translate-x-2 transition-transform">
                             Enter Section
                             <ChevronRight className="w-5 h-5 ml-1" />
                           </div>

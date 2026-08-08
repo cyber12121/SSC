@@ -1,0 +1,294 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Discount",
+  "questions": [
+    {
+      "question": "If house tax is paid before the due date, one gets a reduction of 12% on the amount of the bill. By paying the tax before the due date, a person got a reduction of ₹2,100. The amount (in ₹) of house tax was:",
+      "options": {
+        "a": "₹21,000",
+        "b": "₹17,500",
+        "c": "₹25,000",
+        "d": "₹18,000 [SSC CPO-SI 23/11/2020 Shift-II]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Scale back up. \n12% of bill = 2,100   ∴  bill = 2,100 / 12 × 100 = \n₹17,500",
+      "q_num": 1
+    },
+    {
+      "question": "A ₹750 tin of cheese is offered at 8% discount and a ₹1,250 tin of butter at 20% discount. If we buy 5 tins of cheese and 3 tins of butter, what is the effective discount we get (in %)? ₹750",
+      "options": {
+        "a": "12%",
+        "b": "15%",
+        "c": "14%",
+        "d": "16% [SSC CGL \nTier-II 17-2-2018]"
+      },
+      "answer": "c",
+      "solution": "Step 1   Marked total of each item. \ncheese : 5 × 750 = ₹3,750        butter : 3 × 1,250 \n= ₹3,750 \n Step 2   The two totals are equal, so the weights \nare 1 : 1. \neffective discount = (8 + 20) / 2 = 14%",
+      "q_num": 2
+    },
+    {
+      "question": "A ₹1000 box of cookies is offered at 10% discount and a ₹400 bar of chocolate is offered at 8% discount. If we buy 2 boxes of cookies and 3 bars of chocolate, what is the effective discount we get (in%)? ₹1000",
+      "options": {
+        "a": "9%",
+        "b": "9.25%",
+        "c": "8.75%",
+        "d": "8.5% [SSC \nCGL Tier-II 19-02-2018]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Marked total of each. \ncookies : 2 × 1,000 = ₹2,000        chocolate : 3 × \n400 = ₹1,200   ⇒  5 : 3 \n Step 2   Alligation between 8% and 10% with \nthose weights. \n3(x − 8) = 5(10 − x)   ⇒  8x = 74   ∴  x = 9.25%",
+      "q_num": 3
+    },
+    {
+      "question": "Raghav purchased a shirt at ₹1,500 and marked up the price of the shirt by 40%. 12 : 100 :: 2100 : x 12 100 2100 x x = 17500 Total discount amount cheese 5x60 300 butter 3x250 750 total disc 1050 eff = 1050/7500 = 14% Total discount amount cookies 2x100 200 choc 3x32 96 total disc 296 eff = 296/3200 = 9.25% simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 What is the discount percentage he has to offer in order to get a profit of ₹75?",
+      "options": {
+        "a": "75%",
+        "b": "15%",
+        "c": "50%",
+        "d": "25%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Marked price from the cost. \nMP = 1,500 × 1.40 = ₹2,100 \n Step 2   The selling price he needs. \nSP = 1,500 + 75 = ₹1,575   ⇒  discount = ₹525 \n Step 3   As a percentage of the marked price. \n525 / 2,100 = 25%",
+      "q_num": 4
+    },
+    {
+      "question": "The marked price of an article is ₹550. A shopkeeper allows a discount of 20% and still gets a profit of 10%. If he sells it for ₹470, profit percent will be:",
+      "options": {
+        "a": "16%",
+        "b": "17.5%",
+        "c": "18%",
+        "d": "16.8% [SSC CGL \nTier-I 2018 – 10.06.2019 Shift-I]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Selling price after the discount. \n550 − 20% = ₹440,  which carries 10% proﬁt   ∴  \nCP = ₹400 \n Step 2   Now the new selling price. \n470 − 400 = ₹70 proﬁt   ⇒  70 / 400 × 100 = \n17.5%",
+      "q_num": 5
+    },
+    {
+      "question": "If an item has 12% discount on the marked price of ₹10,000 but the item is sold at ₹8,360 only, then what additional discount (in %) did the customer get?",
+      "options": {
+        "a": "6%",
+        "b": "7%",
+        "c": "5%",
+        "d": "8% [SSC CGL Tier-\nII 18-02-2018]"
+      },
+      "answer": "c",
+      "solution": "Step 1   What the first discount leaves. \n10,000 − 12% = ₹8,800 \n Step 2   The further cut, measured on 8,800. \n8,800 − 8,360 = ₹440   ⇒  440 / 8,800 × 100 = \n5%",
+      "q_num": 6
+    },
+    {
+      "question": "Ranbir bought a car at a 50% discount on the cost price of the car. Had he got a 60% discount, he would have spent ₹1,00,000 less. Calculate the cost price of the car.",
+      "options": {
+        "a": "₹10 Lacs",
+        "b": "₹18 lacs",
+        "c": "₹20 lacs",
+        "d": "₹15 lakh"
+      },
+      "answer": "a",
+      "solution": "Step 1   The gap between the two offers. \n60% − 50% = 10% of CP = ₹1,00,000 \n Step 2   Scale up. \nCP = 1,00,000 × 10 = ₹10,00,000  (₹10 lacs) \nMP -> SP\nmarked\nMP 2100\nsold\nSP 1575\ndisc 525\ndisc = 525/2100 = 25%\nNow sold for 470\nCP 400 \nprofit \n70\nprofit% = 70/400 = 17.5% \n8800 -> 8360\nafter 12%\n8800 \npaid\n8360 \nextra \n440\nextra disc = 440/8800 = 5% \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 7
+    },
+    {
+      "question": "The single discount which is equal to three successive discounts of 10%, 20% and 35%.",
+      "options": {
+        "a": "42.3%",
+        "b": "65.4%",
+        "c": "53.2%",
+        "d": "48.7% \n[SSC CGL Mains 26/10/2023]"
+      },
+      "answer": "c",
+      "solution": "Step 1   First pair, by a + b − ab/100. \n−10 − 20 + (10 × 20)/100 = −28% \n Step 2   Fold that into the third. \n−28 − 35 + (28 × 35)/100 = −63 + 9.8 = −53.2%",
+      "q_num": 8
+    },
+    {
+      "question": "12%, 20% and 25% consecutive discounts will be equal to which single discount? 12%, 20%",
+      "options": {
+        "a": "57.0%",
+        "b": "52.20%",
+        "c": "47.20%",
+        "d": "49.5% \n[SSC CGL Tier-I 17/07/2023 Shift-II]"
+      },
+      "answer": "c",
+      "solution": "Step 1   First pair. \n−12 − 20 + 240/100 = −29.6% \n Step 2   With the third. \n−29.6 − 25 + (29.6 × 25)/100 = −54.6 + 7.4 = \n−47.2%",
+      "q_num": 9
+    },
+    {
+      "question": "The marked price of a frock is ₹4,500. It is to be sold at ₹2,400 at two successive discounts. If the first discount is 20%, then the second discount will be?",
+      "options": {
+        "a": "66⅓%",
+        "b": "30%",
+        "c": "40%",
+        "d": "33⅓%  \n[SSC CGL Tier-I 20/07/2023 Shift-I]"
+      },
+      "answer": "d",
+      "solution": "Step 1   After the first discount. \n4,500 − 20% = ₹3,600 \n Step 2   From 3,600 down to 2,400. \ncut = ₹1,200   ⇒  1,200 / 3,600 = 1/3 = 33⅓%",
+      "q_num": 10
+    },
+    {
+      "question": "A shopkeeper marks his goods at 35% above the cost price and gives some Discount gap 50% off 0.5 CP 60% off 0.4 CP gap 0.1 CP 0.1 CP = 1,00,000 -> CP = 10 lacs LEVEL - 2 Apply discounts one by one MP = 100 x 0.9 90 x 0.8 72 x 0.65 46.8 disc = 100 - 46.8 = 53.2% Apply discounts one by one MP = 100 x 0.88 88 x 0.8 70.4 x 0.75 52.8 disc = 100 - 52.8 = 47.2% 3600 -> 2400 after 1st 3600 sold SP 2400 2nd disc 1200 2nd = 1200/3600 = 33 1/3% simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 discount. If he gets 14% profit, then what is the rate of discount?",
+      "options": {
+        "a": "14.44%",
+        "b": "15.55%",
+        "c": "16.66%",
+        "d": "17.77% \n[SSC CHSL Tier-I 14/08/2023 Shift-IV]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Fill in the three prices. \nCP = 100   ⇒  MP = 135,   SP = 114 \n Step 2   Discount on the marked price. \n21 / 135 × 100 = 15.55%",
+      "q_num": 11
+    },
+    {
+      "question": "The marked price and the cost price of an article are in ratio 5:4. If the profit earned by selling the article is 12.5%, then what is the discount percentage?",
+      "options": {
+        "a": "12.5%",
+        "b": "15%",
+        "c": "8%",
+        "d": "10%"
+      },
+      "answer": "d",
+      "solution": "Step 1   MP : CP = 5 : 4, so take 50 and 40. \n12.5% of 40 = 5   ⇒  SP = ₹45 \n Step 2   Discount on the marked 50. \n5 / 50 = 10%",
+      "q_num": 12
+    },
+    {
+      "question": "A shopkeeper was offering two successive discounts of 20% and 15% on an item whose marked price is ₹1,000 while another shopkeeper was offering a flat 33% discount on the same item. Find the positive difference in the nominal amounts of discounts.",
+      "options": {
+        "a": "₹10",
+        "b": "₹90",
+        "c": "₹100",
+        "d": "₹900"
+      },
+      "answer": "a",
+      "solution": "Work the two offers separately in rupees, then \ncompare. \n Step 1   The successive pair. \n1,000 − 20% = 800,  − 15% = ₹680   ⇒  discount \n= ₹320 \n Step 2   The flat offer. \n1,000 − 33% = ₹670   ⇒  discount = ₹330 \n Step 3   Difference. \n330 − 320 = ₹10",
+      "q_num": 13
+    },
+    {
+      "question": "After allowing a discount of 15% on the marked price of an article, it was sold for ₹425. Had the discount not been given, the profit would have been 25%. What was the cost price (in ₹) of the article?",
+      "options": {
+        "a": "₹325",
+        "b": "₹450",
+        "c": "₹500",
+        "d": "₹400  \n[SSC CHSL 10/08/2021 Shift-I]"
+      },
+      "answer": "d",
+      "solution": "Step 1   425 is 85% of the marked price. \nMP -> SP\nmarked\nMP 135 \nsold\nSP 114 \ndisc 21\ndisc = 21/135 = 15.55% \nMP -> SP\nmarked\nMP 5 \nsold\nSP 4.5 \ndisc 0.5\ndisc = 0.5/5 = 10% \nShop A: 20% then 15%\nMP = 1000 \nx 0.8\n800 \nx 0.85\n680 \ndisc A = 1000 - 680 = 320 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nMP = 425 / 0.85 = ₹500 \n Step 2   Selling at the full 500 would be a 25% \nprofit. \nCP = 500 / 1.25 = ₹400",
+      "q_num": 14
+    },
+    {
+      "question": "A retailer gives 40% discount on a certain article, and earns a profit of 25%. If the article costs ₹4,320 to the retailer, what is its marked price (in ₹)?",
+      "options": {
+        "a": "₹8,000",
+        "b": "₹2,592",
+        "c": "₹9,000",
+        "d": "₹6,000  \n[SSC MTS 22/10/2021 Shift-I]"
+      },
+      "answer": "c",
+      "solution": "Step 1   Write each relation as a ratio. \n40% off  ⇒  MP : SP = 5 : 3            25% profit  ⇒  \nSP : CP = 5 : 4 \n Step 2   Equalise SP (LCM of 3 and 5 = 15). \nMP : SP : CP = 25 : 15 : 12 \n Step 3   CP is 12 parts. \n12 parts = 4,320 ⇒ 1 part = 360   ∴  MP = 25 × 360 \n= ₹9,000",
+      "q_num": 15
+    },
+    {
+      "question": "A person bought an article at 30% discount on its marked price. The person then sold it at 30% profit for ₹427.70. What was the marked price of the article?",
+      "options": {
+        "a": "₹470",
+        "b": "₹480",
+        "c": "₹500",
+        "d": "₹450  \n[SSC CPO-SI 13/12/2019 Shift-I]"
+      },
+      "answer": "a",
+      "solution": "Step 1   After a 30% discount he pays 7 units. \nCP = 7 units   ⇒  SP at 30% profit = 7 × 1.3 = 9.1 \nunits \n Step 2   That is the ₹427.70. \n9.1 units = 427.70 ⇒ 1 unit = ₹47   ∴  MP = ₹470",
+      "q_num": 16
+    },
+    {
+      "question": "An item costs ₹400. During a festival sale, a company offers x% off on its regular price along with a discount coupon of 10%. The price after using both discounts is ₹216. What is the value of x?",
+      "options": {
+        "a": "40",
+        "b": "35",
+        "c": "30",
+        "d": "25  \n[SSC CGL 11/04/2022 Shift-I]"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write the chain. \n400 × (1 − x/100) × 0.9 = 216 \n Step 2   Solve. \n1 − x/100 = 216/360 = 0.6   ∴  x = 40",
+      "q_num": 17
+    },
+    {
+      "question": "A hotel gives a discount of 12% on booking 2 or more rooms and an additional 5% discount on payment using any SBI card. Rakesh booked 2 rooms at ₹1,500 per room Sell at MP = 25% profit CP 400 profit 100 CP = 500/1.25 = 400 MP -> SP (40% off) marked MP 9000 sold SP 5400 disc 3600 MP = 5400/0.6 = 9000 MP -> cost -> SP MP = ? x 0.7 cost x 1.3 427.70 MP = 427.70/0.91 = 470 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 per day and paid using SBI silver card. How much did he pay?",
+      "options": {
+        "a": "₹2618",
+        "b": "₹1254",
+        "c": "₹2508",
+        "d": "₹2498 \n[SSC CGL 05/12/2022 Shift-I]"
+      },
+      "answer": "c",
+      "solution": "Step 1   The booking is 2 rooms. \n2 × 1,500 = ₹3,000 \n Step 2   12%, then 5% on what is left. \n3,000 × 0.88 = 2,640,   then × 0.95 = ₹2,508",
+      "q_num": 18
+    },
+    {
+      "question": "In a scheme, discounts are: 10% on clothes, 12% on groceries, 15% on stationery, 20% on footwear. Anjali bought tea (₹450), a notebook (₹100) and a bathroom slipper (₹850). Find the net value.",
+      "options": {
+        "a": "1116",
+        "b": "1471",
+        "c": "1261",
+        "d": "1161  \n[SSC Selection Posts XI 28/06/2023 Shift-III]"
+      },
+      "answer": "d",
+      "solution": "Step 1   Match every item to its category. \ntea ₹450 → groceries 12%     notebook ₹100 → \nstationery 15%     slipper ₹850 → footwear 20% \n Step 2   Net value of each, then add. \n396 + 85 + 680 = ₹1,161",
+      "q_num": 19
+    },
+    {
+      "question": "A shopkeeper bought 80 kg of rice at a 10% discount. Also, 1 kg rice was offered free for every 20 kg purchased. If he sells the rice at the marked price, his profit percentage will be?",
+      "options": {
+        "a": "16 2/3%",
+        "b": "14 2/7%",
+        "c": "15 1/3%",
+        "d": "15 \n3/7% [SSC CGL Tier-I 2019 – 05/03/2020 Shift-I]"
+      },
+      "answer": "a",
+      "solution": "Count what he PAYS for and what he SELLS \nseparately — the free kilos are pure gain. \n Step 1   Take the marked rate as ₹10/kg. \ncost = 80 × 10 × 0.9 = ₹720 \n Step 2   He receives 4 free kilos for the 80 bought. \nsells 84 kg at ₹10 = ₹840 \n Step 3   Profit. \n120 / 720 = 1/6 = 16⅔%",
+      "q_num": 20
+    },
+    {
+      "question": "A shopkeeper usually gives a discount of 10% on the marked price. During a sale, 12% then 5% off MP = 3000 x 0.88 2640 x 0.95 2508 amount paid = Rs.2508 Net payable tea 450 (12%) 396 book 100 (15%) 85 slipper 850 (20%) 680 net 1161 396 + 85 + 680 = 1161 Profit cost 7200 profit 1200 profit = 1200/7200 = 16 2/3% simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 he gives two more discounts — first at 50% of the original discount and second at 40% of the first. What is the equivalent single discount rate",
+      "options": {
+        "a": "14.85%",
+        "b": "13.27%",
+        "c": "16.21%",
+        "d": "11.25% \n[SSC CHSL 10/07/2019 Shift-II]"
+      },
+      "answer": "c",
+      "solution": "Step 1   The three discounts. \n10%,   50% of 10% = 5%,   40% of 5% = 2% \n Step 2   Fold them two at a time. \n−10 − 5 + 0.5 = −14.5%,   then −14.5 − 2 + 0.29 = \n−16.21%",
+      "q_num": 21
+    },
+    {
+      "question": "In a scheme, a shopkeeper offers a 10% discount if you buy two or more books. Kiran buys two books for ₹540. If the shopkeeper still makes a 20% profit, find the profit he would make if he sold the books without the discount.",
+      "options": {
+        "a": "₹120",
+        "b": "₹150",
+        "c": "₹180",
+        "d": "₹200  \n[SSC CHSL 12/11/2025 Shift-03]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Marked total. \nMP = 540 / 0.9 = ₹600 \n Step 2   Cost price. \nCP = 540 / 1.2 = ₹450 \n Step 3   Profit if sold at the full marked price. \n600 − 450 = ₹150",
+      "q_num": 22
+    },
+    {
+      "question": "A shopkeeper pays 12% of the cost price as tax while purchasing an item whose cost is ₹500. He wants to earn a profit of 20% after giving a discount of 16% on the marked price. What should the marked price be?",
+      "options": {
+        "a": "₹800",
+        "b": "₹960",
+        "c": "₹840",
+        "d": "₹780 [SSC \nCHSL 18/03/2020 Shift-I]"
+      },
+      "answer": "a",
+      "solution": "Step 1   Real cost to him. \n500 + 12% of 500 = ₹560 \n Step 2   The selling price he wants. \nSP = 560 × 1.20 = ₹672 \n Step 3   That is 84% of the marked price. \nMP = 672 / 0.84 = ₹800",
+      "q_num": 23
+    },
+    {
+      "question": "A person marks his 40 items at 20% above the cost price. He sells 10 items at 10% discount and 20 items at 15% discount. What is the maximum discount (rounded off) he can offer on the remaining items if he still gets some profit?",
+      "options": {
+        "a": "28%",
+        "b": "25%",
+        "c": "26%",
+        "d": "21% [SSC CHSL \n13/10/2020 Shift-II]"
+      },
+      "answer": "c",
+      "solution": "Step 1   Prices per item. \nCP = 100, MP = 120;  total cost of 40 items = \n₹4,000 \n Step 2   What the first thirty bring in. \n10 × 108 = 1,080     20 × 102 = 2,040     ⇒  ₹3,120 \n Step 3   The last ten must beat the shortfall. \n4,000 − 3,120 = 880   ⇒  each above ₹88 \n Step 4   Turn that into a discount. \n(120 − 88)/120 = 26.67%  ⇒  the largest whole \ndiscount that still profits = 26%",
+      "q_num": 24
+    }
+  ]
+}

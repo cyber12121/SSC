@@ -1,0 +1,150 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Compound Interest",
+  "questions": [
+    {
+      "question": "A borrowed a sum of ₹160000 from B at 10% per annum simple interest. At the same time he lent the same sum to C at the same rate on compound interest, compounded semi- annually for 2 years. Find the amount (in ₹) earned by A in the whole transaction. A",
+      "options": {
+        "a": "4281",
+        "b": "4280",
+        "c": "2481",
+        "d": "2840"
+      },
+      "answer": "c",
+      "solution": "Step 1   What he pays B. \n1,60,000 × 10 × 2 / 100 = ₹32,000 \n Step 2   What he earns from C — 5% a half-year, \nfour periods, row 4 : 6 : 4 : 1. \nlayers 8,000, 400, 20, 1  ⇒  32,000 + 2,400 + 80 \n+ 1 = ₹34,481 \n Step 3   What he keeps. \n34,481 − 32,000 = ₹2,481",
+      "q_num": 1
+    },
+    {
+      "question": "If a sum of money triples in four years at compound interest, then in how many years will that amount become 27 times at the same interest rate?",
+      "options": {
+        "a": "10 years",
+        "b": "16 years",
+        "c": "12 years",
+        "d": "15 \nyears"
+      },
+      "answer": "c",
+      "solution": "Step 1   Express the target. \n27 = 3³  ⇒  three tripling periods \n Step 2   Each takes 4 years. \n3 × 4 = 12 years",
+      "q_num": 2
+    },
+    {
+      "question": "Amit borrowed a sum of ₹25,000 on simple interest. Bhola borrowed the same amount on compound interest (interest compounded yearly). At the end of 2 years, Bhola had to pay ₹160 more interest than Amit. The rate of interest charged per annum is:",
+      "options": {
+        "a": "16/25%",
+        "b": "8/25%",
+        "c": "8%",
+        "d": "3⅛%"
+      },
+      "answer": "c",
+      "solution": "Step 1   The identity. \nC: half-yearly at 5%\n160000 \nx 1.05\n168000 \nx 1.05\n176400 \nx 1.05\n185220 \nx 1.05\n194481 = A \nCI from C = 34481 \nReach 27x\nx \nx3 (4 yr)\n3x \nx3 (4 yr)\n9x \nx3 (4 yr)\n27x \n3 x 4 = 12 years \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nCI − SI = P × (r/100)² \n Step 2   Put in the numbers. \n25,000 × r²/10,000 = 160   ⇒  2.5 r² = 160   ⇒  r² = \n64   ∴  r = 8%",
+      "q_num": 3
+    },
+    {
+      "question": "₹4,000 is given at 5% per annum for one year and interest is compounded half yearly. ₹2,000 is given at 40% per annum compounded quarterly for 1 year. The total interest received is nearest to: ₹4,000",
+      "options": {
+        "a": "₹1,333.30",
+        "b": "₹1,130.70",
+        "c": "₹1,888.80",
+        "d": "₹1,444.40"
+      },
+      "answer": "b",
+      "solution": "Step 1   ₹4,000 at 2.5% twice, row 2 : 1. \n2(100) + 2.5 = ₹202.50 \n Step 2   ₹2,000 at 10% four times, row 4 : 6 : 4 : 1. \n4(200) + 6(20) + 4(2) + 0.2 = ₹928.20 \n Step 3   Total. \n202.50 + 928.20 = ₹1,130.70",
+      "q_num": 4
+    },
+    {
+      "question": "Any certain amount was invested at a certain compound interest rate. The compound after five years is 1.1881 times of the amount obtained in three years. What is percentage rate of interest?",
+      "options": {
+        "a": "9.2%",
+        "b": "8%",
+        "c": "8.1%",
+        "d": "9%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Divide. \nA₅ / A₃ = 1.1881 = (1 + r)² \n Step 2   Take the square root. \n1 + r = 1.09   ∴  r = 9%",
+      "q_num": 5
+    },
+    {
+      "question": "If the different between simple interest and compound interest on a certain sum of money at 10% per annum for 3 years is equal to ₹310, then what is the interest on that sum?",
+      "options": {
+        "a": "₹10,000",
+        "b": "₹9,500",
+        "c": "₹12,000",
+        "d": "₹8,000"
+      },
+      "answer": "a",
+      "solution": "Step 1   The identity. \nCI − SI = P × (r/100)² × (3 + r/100) \n Step 2   At 10% it collapses. \nP × 0.01 × 3.1 = 0.031 P = 310   ∴  P = ₹10,000",
+      "q_num": 6
+    },
+    {
+      "question": "A and B together borrowed a sum of ₹51,750 at an interest rate of 7% p.a. compound interest in such a way that to settle the loan, A paid as much amount after three years as paid by B after 4 years from the days of borrowing. The sum (in ₹) borrowed by A was: A",
+      "options": {
+        "a": "₹24,860",
+        "b": "₹25,000",
+        "c": "₹26,750",
+        "d": "₹25,650"
+      },
+      "answer": "c",
+      "solution": "Step 1   Set the two equal. \nA(1.07)³ = B(1.07)⁴   ⇒  A / B = 1.07 = 107 / 100 \n Step 2   Split ₹51,750. \n207 parts = 51,750 ⇒ 1 part = 250   ∴  A = 107 × \n250 = ₹26,750",
+      "q_num": 7
+    },
+    {
+      "question": "A person borrowed a certain sum at 10% p.a. for three years, interest being compound annually. At the end of two years, he repaid a sum of ₹6,634 and at the end of the third year, he cleared off the debt simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 by paying ₹13,200. What was the sum borrowed him?",
+      "options": {
+        "a": "16,400",
+        "b": "15,600",
+        "c": "16,500",
+        "d": "15,400"
+      },
+      "answer": "d",
+      "solution": "Step 1   Let P = 1,000x; two years of growth. \namount = 1,210x \n Step 2   He repays ₹6,634, and the rest grows one \nmore year. \n(1,210x − 6,634) × 1.1 = 13,200 \n Step 3   Solve. \n1,331x − 7,297.4 = 13,200   ⇒  1,331x = 20,497.4   ∴  \nx = 15.4,  P = ₹15,400",
+      "q_num": 8
+    },
+    {
+      "question": "Water is pouring into a cuboidal reservoir at the rate of 50 liters per minute. If the volume of reservoir is 120 m³. Find the number of hours that it will take to fill the reservoir?",
+      "options": {
+        "a": "35",
+        "b": "40",
+        "c": "45",
+        "d": "30"
+      },
+      "answer": "b",
+      "solution": "Step 1   Convert the reservoir to litres. \n120 m³ = 120 × 1,000 = 1,20,000 litres \n Step 2   Divide by the rate. \n1,20,000 / 50 = 2,400 minutes \n Step 3   The question asks for hours. \n2,400 / 60 = 40 hours",
+      "q_num": 9
+    },
+    {
+      "question": "Pipe A can fill a tank of capacity 350 litres in 3½ minutes, pipe B can fill a tank of capacity 780 liters in 8⅔ minutes. How long (in min) will it take to fill a tank of capacity 1615 liters, if both pipes are opened together?",
+      "options": {
+        "a": "8",
+        "b": "8½",
+        "c": "9",
+        "d": "7½"
+      },
+      "answer": "b",
+      "solution": "Step 1   Litres per minute for each pipe. \nA : 350 / 3½ = 100 L/min        B : 780 / (26/3) = \n90 L/min \n Step 2   Running together. \n100 + 90 = 190 L/min \n Step 3   Time for the 1,615-litre tank. \n1,615 / 190 = 8½ minutes",
+      "q_num": 10
+    },
+    {
+      "question": "Pipe A and pipe B running together can fill a cistern in 6 minutes. If B takes 5 minutes more than A to fill the cistern, then what will be the time in which A and B will fill that cistern separately?",
+      "options": {
+        "a": "15 min & 20 min",
+        "b": "10 min & 15 min",
+        "c": "15 min & 10 min",
+        "d": "25 min & 20 min"
+      },
+      "answer": "b",
+      "solution": "Step 1   Add the rates and set them to the joint \ntime. \n1/a + 1/(a + 5) = 1/6 \n Step 2   Clear the fractions. \n6(2a + 5) = a(a + 5)   ⇒  a² − 7a − 30 = 0 \n Step 3   Factorise. \n(a − 10)(a + 3) = 0   ⇒  a = 10   ∴  A = 10 min,  B = \n15 min",
+      "q_num": 11
+    },
+    {
+      "question": "Pipes A and B together can fill an empty tank in 6½ minutes. If A takes 3 minutes more than B to fill the tank, then the time (in minutes) in which A alone would fill one- third part of the tank is:",
+      "options": {
+        "a": "6 min",
+        "b": "4.5 min",
+        "c": "5.5 min",
+        "d": "5 min"
+      },
+      "answer": "d",
+      "solution": "Step 1   Let B take b minutes, so A takes b + 3. \n1/(b + 3) + 1/b = 1/(6⅔) = 3/20 \n Step 2   Clear and solve. \n20(2b + 3) = 3b(b + 3)   ⇒  3b² − 31b − 60 = 0   ⇒  \nb = 12 \nPIPE & CISTERN \nLEVEL - 1 \nLEVEL - 2 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 3   So A takes 15 minutes for the whole tank. \none-third of it = 15 / 3 = 5 minutes",
+      "q_num": 12
+    }
+  ]
+}

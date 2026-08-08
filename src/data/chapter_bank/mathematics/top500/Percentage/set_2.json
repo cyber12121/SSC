@@ -1,0 +1,150 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Percentage",
+  "questions": [
+    {
+      "question": "A man's annual income has increased by Rs. 5 lakhs but the tax on income that he has to pay has reduced from 12% to 10%. He now pays Rs. 10,000 more income tax. What is his increased income (in Rs. lakhs)?",
+      "options": {
+        "a": "20",
+        "b": "25",
+        "c": "15",
+        "d": "10"
+      },
+      "answer": "b",
+      "solution": "Step 1   Equate the two taxes. \n0.10(x + 5,00,000) = 0.12x + 10,000 \n Step 2   Solve. \n0.02x = 40,000   ⇒  x = ₹20 lakh \n Step 3   The increased income. \n20 + 5 = ₹25 lakh",
+      "q_num": 1
+    },
+    {
+      "question": "If decreasing 110 by x% gives the same result as increasing 50 by x%, then x% of 650 is what percentage",
+      "options": {
+        "a": "12%",
+        "b": "14%",
+        "c": "17%",
+        "d": "18%"
+      },
+      "answer": "b",
+      "solution": "Two expressions, one value — set them equal \nand x falls out. \n Step 1   Write both sides. \n110(100 − x) = 50(100 + x) \n Step 2   Solve. \n11,000 − 110x = 5,000 + 50x   ⇒  160x = 6,000   ⇒  \nx = 37.5 \n Step 3   Now compare the two quantities asked \nfor. \n37.5% of 650 = 243.75        27.5% of 780 = 214.5 \n(243.75 − 214.5)/214.5 × 100 ≈ 14%",
+      "q_num": 2
+    },
+    {
+      "question": "In an election between two candidates, 20% of the registered voters did not cast their vote and 40 votes were declared invalid. The winner got 42% of the registered votes and was declared the winner by 112 votes. What was the number of registered voters ?",
+      "options": {
+        "a": "1500",
+        "b": "1200",
+        "c": "3800",
+        "d": "1800"
+      },
+      "answer": "d",
+      "solution": "Step 1   Let the roll be 1000x. \ncast = 800x        valid = 800x − 40        winner = \n420x \nCapital over 3 years (start 100)\n100 \nx 0.8 (yr 1)\n80 \nx 0.8 (yr 2)\n64 \nx 0.8 (yr 3)\n51.2 \n51.2 units = 15360 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   So the loser. \n(800x − 40) − 420x = 380x − 40 \n Step 3   The margin is 112. \n420x − (380x − 40) = 40x + 40 = 112   ⇒  x = 1.8   \n∴  roll = 1,800",
+      "q_num": 3
+    },
+    {
+      "question": "In an election, 12% of the voters in the voter list did not cast their votes, whereas 84 voters cast their ballot papers blank. There were only two candidates: Ramagya and Shravan. The winner, Ramagya, was supported by 54% of all the voters in the list. He got 1456 more votes than his rival, Shravan. Find the total number of voters in the list.",
+      "options": {
+        "a": "6860",
+        "b": "7860",
+        "c": "5690",
+        "d": "6670"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let the list be 1000x. \ncast = 880x        valid = 880x − 84        Ramagya \n= 540x \n Step 2   Shravan is the rest. \n(880x − 84) − 540x = 340x − 84 \n Step 3   Ramagya leads by 1,456. \n200x + 84 = 1,456   ⇒  x = 6.86   ∴  list = 6,860",
+      "q_num": 4
+    },
+    {
+      "question": "In an election between two candidates, the defeated candidate secured 42% of the valid votes polled and lost the election by 2545800 votes. If 365500 votes were declared invalid and 30% people did not cast their vote, what was the approximate number of people (in millions) in the electorate who did NOT cast their votes ?",
+      "options": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "5"
+      },
+      "answer": "b",
+      "solution": "Step 1   Valid votes. \n16% of valid = 25,45,800   ⇒  valid = 1,59,11,250 \n Step 2   Add the invalid to get the votes cast. \n1,59,11,250 + 3,65,500 = 1,62,76,750,  which is \n70% of the roll \n Step 3   The 30% who stayed away. \nroll ≈ 2,32,52,500   ⇒  30% ≈ 7 million",
+      "q_num": 5
+    },
+    {
+      "question": "A construction project was estimated to be completed in 180 days. Due to rain, only 60% of the days were productive. If the work done each productive day is constant, by what percent must daily output be increased to complete the project on time?",
+      "options": {
+        "a": "60.65%",
+        "b": "65%",
+        "c": "70.43%",
+        "d": "66.67%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Productive days. \n60% of 180 = 108 days \n Step 2   So the daily output must scale. \n180/108 = 5/3 \n Step 3   The rise. \n2/3 × 100 = 66⅔% \n \nSame work, fewer days\nPlanned = 180 days\n180 \nAvailable = 108 days\n108 \noutput x 180/108 = 5/3 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 6
+    },
+    {
+      "question": "A quality control officer tracks the defect rates in 4 different machines in a textile factory. The first machine produces fabrics with an average defect rate of 1.8%, the second with 2.4% and the third with 1.6%. The fourth machine operated for 5 fewer hours than the average run time of the first three, yet its total defective output was 0.92 units. If the total number of defective units from all four machines is 4.12, and each machine's total production was identical, find the defect percentage of the fourth machine.",
+      "options": {
+        "a": "1.52%",
+        "b": "1.58%",
+        "c": "1.667%",
+        "d": "1.73%"
+      },
+      "answer": "c",
+      "solution": "Step 1   Defects of the first three. \n4.12 − 0.92 = 3.2 units \n Step 2   Each machine produces the same x. \n(1.8 + 2.4 + 1.6)% of x = 5.8% of x = 3.2   ⇒  x = \n1,600/29 \n Step 3   The fourth machine's rate. \n0.92 / x × 100 = 0.92 × 29/1,600 × 100 ≈ 1.67%",
+      "q_num": 7
+    },
+    {
+      "question": "A bacteria culture increases by 20% every hour for 3 hours, then decreases by 10% in the 4th hour, and finally increases by 25% in the 5th hour. If the initial count was 5,000, what will be the approximate count after 5 hours?",
+      "options": {
+        "a": "8,900",
+        "b": "9,830",
+        "c": "9,650",
+        "d": "9,720"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the chain. \n5,000 × (1.2)³ × 0.9 × 1.25 \n Step 2   Collapse it. \n(1.2)³ = 1.728   ⇒  1.728 × 0.9 × 1.25 = 1.944 \n Step 3   Final count. \n5,000 × 1.944 = 9,720",
+      "q_num": 8
+    },
+    {
+      "question": "A shopkeeper earns 10% on an investment but loses 20% on another investment. If the ratio of the two investments is 2 : 3, then the combined loss percentage is :",
+      "options": {
+        "a": "8% Loss",
+        "b": "8% Profit",
+        "c": "15% Profit",
+        "d": "15%Loss"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the investments as 200 and 300. \n+10% of 200 = +₹20        −20% of 300 = −₹60 \n Step 2   Net, over the total invested. \n−40 / 500 × 100 = 8% loss",
+      "q_num": 9
+    },
+    {
+      "question": "The marked price of mustard oil is 10% more than its cost price. At what percentage less than the marked price should it be sold, to have no profit and no loss.",
+      "options": {
+        "a": "9 3/11 %",
+        "b": "9 4/11%",
+        "c": "9 1/11 %",
+        "d": "9 2/11%"
+      },
+      "answer": "c",
+      "solution": "Step 1   CP = 10, so MP = 11. \nno profit no loss  ⇒  SP = CP = 10 \n Step 2   The cut, measured on the MARKED price. \n1/11 × 100 = 9 1/11 %",
+      "q_num": 10
+    },
+    {
+      "question": "If the cost price of a book is 92% of its selling price, then what will be the profit percentage of the sale of the book (Correct to two decimal place)?",
+      "options": {
+        "a": "8.53%",
+        "b": "2.25%",
+        "c": "8.00%",
+        "d": "8.69%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Set SP = 100. \nCP = 92   ⇒  profit = 8 \n Step 2   On the cost. \n8/92 × 100 = 200/23 = 8.69%",
+      "q_num": 11
+    },
+    {
+      "question": "A dishonest shopkeeper claims to sell grains at the cost price, but uses a weight of 920 gm instead of 1 kg. find his profit percentage.",
+      "options": {
+        "a": "7.90%",
+        "b": "7.80%",
+        "c": "8.50%",
+        "d": "8.70% \nPROFIT & LOSS \nLEVEL - 1 \nInvested -> Returned\ninvested\nInv1 200 \nInv2 300 \nreturned\n+10% -> 220 \n-20% -> 240 \n460 vs 500 -> loss 40 \nMP -> SP (no profit)\nmarked\nMP 11 \nsell at CP\nSP 10 \ncut 1\ndiscount = 1 on 11 \nCP -> SP (profit)\ncost\nCP 23\nsold\nCP 23\nprofit 2\nSP = 25, profit = 2 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026"
+      },
+      "answer": "d",
+      "solution": "Step 1   Per 'kilo' sold. \ntakes 1000,  gives 920   ⇒  gain = 80 \n Step 2   On what it cost him. \n80/920 × 100 = 2/23 × 100 = 8.70%",
+      "q_num": 12
+    }
+  ]
+}

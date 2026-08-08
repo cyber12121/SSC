@@ -1,0 +1,306 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Time and Work",
+  "questions": [
+    {
+      "question": "20 women and 15 men together can complete a work in 6 days. One woman takes 150 days to complete the work. In how many days can one man complete the same work? 20",
+      "options": {
+        "a": "450",
+        "b": "350",
+        "c": "210",
+        "d": "225"
+      },
+      "answer": "a",
+      "solution": "Step 1   What 20 women do in a day. \n20 × 1/150 = 2/15 \n Step 2   So the 15 men supply the rest of the 1/6. \n1/6 − 2/15 = 1/30   ⇒  one man = 1/450   ∴  450 \ndays",
+      "q_num": 1
+    },
+    {
+      "question": "A, B and C together can complete a work in 12 days. A and B respectively alone can complete the same work in 36 and 36 days. In how many days can C alone complete the same work? A, B",
+      "options": {
+        "a": "36",
+        "b": "12",
+        "c": "25",
+        "d": "48"
+      },
+      "answer": "a",
+      "solution": "Step 1   A and B together. \n1/36 + 1/36 = 1/18 \n Step 2   C is the difference. \n1/12 − 1/18 = 1/36   ∴  C alone takes 36 days",
+      "q_num": 2
+    },
+    {
+      "question": "A can complete a work in 8 days by working 5 hours per day and B can complete the same work in 10 days by working 6 hours per day. If both worked together for 8 hours a day, how many days will they take to complete the work? A Ů",
+      "options": {
+        "a": "6 Days",
+        "b": "5 Days",
+        "c": "3 Days",
+        "d": "5 Days"
+      },
+      "answer": "c",
+      "solution": "Step 1   Total hours each needs. \nA : 8 × 5 = 40 h        B : 10 × 6 = 60 h \n Step 2   Take the job as 120 units. \nA = 3/h,  B = 2/h   ⇒  together 5/h   ⇒  120/5 = 24 \nhours \n Step 3   At 8 hours a day. \n24 / 8 = 3 days",
+      "q_num": 3
+    },
+    {
+      "question": "S₁ and S₂ together can do a piece of work in 18 days, S₂ and S₃ together in 27 days, while S₃ and S₁ together can do it in 54 days. In how many days can all three working together do 50% of work? S₁",
+      "options": {
+        "a": "9 Days",
+        "b": "8 Days",
+        "c": "6 Days",
+        "d": "7 Days"
+      },
+      "answer": "a",
+      "solution": "Step 1   Add. \n1/18 + 1/27 + 1/54 = 6/54 = 1/9 = 2(S₁ + S₂ + S₃) \n Step 2   So all three together. \nrate = 1/18   ⇒  the whole job in 18 days \n Step 3   The question wants half the job. \n18 / 2 = 9 days",
+      "q_num": 4
+    },
+    {
+      "question": "A and B together can complete a work in 48 days. A is four times as efficient as B. In how many days can B alone complete the work? A",
+      "options": {
+        "a": "240 Days",
+        "b": "220 Days",
+        "c": "120 Days",
+        "d": "320 Days"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write both rates in B's units. \nA = 4B   ⇒  A + B = 5B = 1/48 \n Step 2   So B alone. \nB = 1/240   ∴  240 days",
+      "q_num": 5
+    },
+    {
+      "question": "A can do ¼th of the work in 9 days. B can do ²⁄3of the same work in 28 days. In how many days will A and B complete the same work while working together? A",
+      "options": {
+        "a": "252/13 Days",
+        "b": "261/15 Days",
+        "c": "262/11 \nDays",
+        "d": "198/17 Days"
+      },
+      "answer": "a",
+      "solution": "Step 1   Full-job times. \nA : ¼ in 9 days  ⇒  36 days        B : ⅔ in 28 days  \n⇒  42 days \n Step 2   Add the rates. \n1/36 + 1/42 = 13/252   ⇒  252/13 days",
+      "q_num": 6
+    },
+    {
+      "question": "A can complete a work in 16 days and B can complete the same work in 12 days. They worked together for 4 days and then A left, then B completed the remaining work alone. For how many days did B work to complete the work? A",
+      "options": {
+        "a": "9",
+        "b": "4",
+        "c": "6",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the job as 48 units. \nA = 3/day,  B = 4/day \n Step 2   Four days together. \n(3 + 4) × 4 = 28 units   ⇒  20 left \n Step 3   B finishes alone. \n20 / 4 = 5 days   ∴  B worked 4 + 5 = 9 days in \nall",
+      "q_num": 7
+    },
+    {
+      "question": "A and B do a piece of work in 12 days and 18 days respectively. They worked together for 4 days after which B was replaced by C and remaining work was completed by A and C in next 4 days. In how many days will C alone complete 50% of the same work? A",
+      "options": {
+        "a": "21",
+        "b": "18",
+        "c": "24",
+        "d": "36"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take the job as 36 units. \nA = 3/day,  B = 2/day   ⇒  4 days together = 20 \nunits,  16 left \n Step 2   A and C clear those 16 in 4 days. \nA + C = 4/day   ⇒  C = 1/day \n Step 3   So C alone, for half the job. \n36 / 1 = 36 days   ⇒  50% = 18 days",
+      "q_num": 8
+    },
+    {
+      "question": "A does half as much as B in ¹⁄₆th time. If together they take 16 days to complete the work, how many days will B alone take to complete the work? A, B",
+      "options": {
+        "a": "64 Days",
+        "b": "76 Days",
+        "c": "38 Days",
+        "d": "44 \nDays"
+      },
+      "answer": "a",
+      "solution": "Step 1   Turn it into rates. \nA's rate = (1/2) ÷ (1/6) = 3 times B's   ⇒  A = 3B \n Step 2   Together they are 4B. \n4B = 1/16   ⇒  B = 1/64   ∴  64 days",
+      "q_num": 9
+    },
+    {
+      "question": "A can do a piece of work in 20 days while B can do the same work in 25 days. Both of them work together for 10 days and C alone completes the remaining work in 10 days. In how many days will A, B and C together complete the same work? A",
+      "options": {
+        "a": "12 Days",
+        "b": "10 Days",
+        "c": "8 Days",
+        "d": "5 \nDays"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take the job as 100 units. \nA = 5/day,  B = 4/day   ⇒  10 days together = 90 \nunits,  10 left \n Step 2   C clears 10 units in 10 days. \nC = 1/day \n Step 3   All three. \n100 / (5 + 4 + 1) = 10 days",
+      "q_num": 10
+    },
+    {
+      "question": "B would have taken 10 hours more than what A would have taken to complete a task if each worked alone. Working together they can complete the task in 12 hours. How many hours would B take to do 50% of the task? B",
+      "options": {
+        "a": "30",
+        "b": "15",
+        "c": "20",
+        "d": "10"
+      },
+      "answer": "b",
+      "solution": "Step 1   Add the rates. \n1/a + 1/(a + 10) = 1/12 \n Step 2   Clear and factorise. \na² − 14a − 120 = 0   ⇒  (a − 20)(a + 6) = 0   ⇒  a = \n20,  B = 30 \n Step 3   Half the task for B. \n30 / 2 = 15 hours",
+      "q_num": 11
+    },
+    {
+      "question": "A can do 40% of a work in 12 days, whereas B can do 60% of the same work in 15 days. Both work together for 10 days. C completes the remaining work alone in 4 days. A, B and C together will complete 28% of the same work in: A",
+      "options": {
+        "a": "2 days",
+        "b": "2½ days",
+        "c": "3 days",
+        "d": "1½ \ndays"
+      },
+      "answer": "a",
+      "solution": "Step 1   Full-job times, and the job as 150 units. \nA : 40% in 12 days ⇒ 30 days ⇒ 5/day        B : \n60% in 15 days ⇒ 25 days ⇒ 6/day \n Step 2   Ten days together, then C. \n11 × 10 = 110 units   ⇒  40 left,  cleared by C in 4 \ndays   ⇒  C = 10/day \n Step 3   All three on 28% of the job. \n28% of 150 = 42   ⇒  42 / 21 = 2 days",
+      "q_num": 12
+    },
+    {
+      "question": "A and B can together complete a task in 18 hours. After 6 hours A leaves. B takes 36 hours to finish the rest of the task. How many hours would A have taken to do the task if he worked alone? A",
+      "options": {
+        "a": "54",
+        "b": "45",
+        "c": "21",
+        "d": "27"
+      },
+      "answer": "d",
+      "solution": "Step 1   The first six hours. \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n6 × 1/18 = 1/3 done   ⇒  2/3 left \n Step 2   B clears that alone in 36 hours. \nB's rate = (2/3)/36 = 1/54 \n Step 3   So A is the difference. \n1/18 − 1/54 = 1/27   ∴  A alone takes 27 hours",
+      "q_num": 13
+    },
+    {
+      "question": "A and B together can do certain work in x days. Working alone, A and B can do the same work in (x+8) and (x+18) days respectively. A and B together will complete 5/6 of the same work in: A",
+      "options": {
+        "a": "8 days",
+        "b": "12 days",
+        "c": "9 days",
+        "d": "10 days"
+      },
+      "answer": "d",
+      "solution": "Step 1   Add the two individual rates to the joint \none. \n1/(x + 8) + 1/(x + 18) = 1/x \n Step 2   Clear. \nx(2x + 26) = (x + 8)(x + 18)   ⇒  x² = 144   ⇒  x = 12 \n Step 3   Five-sixths of the job. \n12 × 5/6 = 10 days",
+      "q_num": 14
+    },
+    {
+      "question": "A is twice as efficient as B and C is thrice as efficient as B. Working together, they can finish a certain work in 5 days. A and C worked together for 5 days. B alone would complete the remaining work in ______. A, B",
+      "options": {
+        "a": "5 days",
+        "b": "8 days",
+        "c": "6 days",
+        "d": "4 days"
+      },
+      "answer": "a",
+      "solution": "Step 1   A = 2B and C = 3B. \nA + B + C = 6B = 1/5   ⇒  B = 1/30 \n Step 2   A and C for five days. \n(5B) × 5 = 25/30 = 5/6 done   ⇒  1/6 left \n Step 3   B finishes it. \n(1/6) ÷ (1/30) = 5 days",
+      "q_num": 15
+    },
+    {
+      "question": "A can do one-third of a job in 15 days. B can do 75% of the same job in 18 days and C can do the same job in 36 days. B and C work together for 8 days. In how many days will A alone complete the remaining work? A",
+      "options": {
+        "a": "24 days",
+        "b": "20 days",
+        "c": "16 days",
+        "d": "18 \ndays"
+      },
+      "answer": "b",
+      "solution": "Step 1   Full-job times, and the job as 360 units. \nA : ⅓ in 15 ⇒ 45 days ⇒ 8/day        B : 75% in 18 \n⇒ 24 days ⇒ 15/day        C : 36 days ⇒ 10/day \n Step 2   B and C for eight days. \n25 × 8 = 200 units   ⇒  160 left \n Step 3   A alone. \n160 / 8 = 20 days",
+      "q_num": 16
+    },
+    {
+      "question": "A and B can complete a work in 15 days and 10 days respectively. They started doing the work together but after 4 days B had to leave. Then A working with a new worker C completed the remaining work in 3 days. If C works alone, in how many days can he do 40% of the same work? A",
+      "options": {
+        "a": "9",
+        "b": "8½",
+        "c": "8",
+        "d": "10"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the job as 30 units. \nA = 2/day,  B = 3/day   ⇒  4 days together = 20 \nunits,  10 left \n Step 2   A and C clear those in 3 days. \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nA + C = 10/3   ⇒  C = 4/3 per day \n Step 3   C alone on 40% of the job. \n40% of 30 = 12   ⇒  12 ÷ 4/3 = 9 days",
+      "q_num": 17
+    },
+    {
+      "question": "P can complete five-eighths of a work in 15 days and Q can complete three-fourths of the same work in 30 days. They worked together for 8 days and then P left. How much time will Q working alone take to complete the remaining work? P",
+      "options": {
+        "a": "15 days 16 hours",
+        "b": "15 days 8 hours",
+        "c": "20 \ndays 4 hours",
+        "d": "18 days 16 hours"
+      },
+      "answer": "d",
+      "solution": "Step 1   Full-job times, job as 120 units. \nP : ⅝ in 15 ⇒ 24 days ⇒ 5/day        Q : ¾ in 30 ⇒ \n40 days ⇒ 3/day \n Step 2   Eight days together. \n8 × 8 = 64 units   ⇒  56 left \n Step 3   Q alone. \n56 / 3 = 18⅔ days = 18 days 16 hours",
+      "q_num": 18
+    },
+    {
+      "question": "The ratio of the efficiencies of A, B and C is 7:5:4. Working together, they can finish a work in 35 days. A and B work together for 28 days. The remaining work will be completed (in days) by C alone: A, B",
+      "options": {
+        "a": "60",
+        "b": "63",
+        "c": "49",
+        "d": "56"
+      },
+      "answer": "d",
+      "solution": "Step 1   7 + 5 + 4 = 16 units a day for 35 days. \njob = 16 × 35 = 560 units \n Step 2   A and B for 28 days. \n12 × 28 = 336   ⇒  224 left \n Step 3   C alone at 4 a day. \n224 / 4 = 56 days",
+      "q_num": 19
+    },
+    {
+      "question": "To do a certain work, the ratio of the efficiencies of A, B and C is 7:5:6. Working together, they complete the work in 35 days. B and C work together for 21 days. The remaining work will be completed by A alone in:",
+      "options": {
+        "a": "57 days",
+        "b": "60 days",
+        "c": "54 days",
+        "d": "50 \ndays"
+      },
+      "answer": "a",
+      "solution": "Step 1   7 + 5 + 6 = 18 a day for 35 days. \njob = 630 units \n Step 2   B and C for 21 days. \n11 × 21 = 231   ⇒  399 left \n Step 3   A alone at 7 a day. \n399 / 7 = 57 days",
+      "q_num": 20
+    },
+    {
+      "question": "A group of men decided to do a work in 6 days but every day 18 men left the job. If the work is completed in 8 days, how many men initially decided to do that work?",
+      "options": {
+        "a": "188",
+        "b": "150",
+        "c": "300",
+        "d": "252"
+      },
+      "answer": "d",
+      "solution": "Step 1   Planned against actual. \nplanned = 6m        actual = m + (m − 18) + … + \n(m − 126) = 8m − 18(0+1+…+7) \n Step 2   Equate them. \n8m − 504 = 6m   ⇒  2m = 504   ∴  m = 252 men",
+      "q_num": 21
+    },
+    {
+      "question": "Four men and 6 women can complete a certain piece of work in 5 days whereas three men and 4 women can complete it in 7 days. How many men should assist 25 women to complete 2½ times the same work in 5 days?",
+      "options": {
+        "a": "10",
+        "b": "8",
+        "c": "4",
+        "d": "5"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write both. \n4M + 6W = 1/5        3M + 4W = 1/7 \n Step 2   Eliminate M. \n2W = 3/5 − 4/7 = 1/35   ⇒  W = 1/70,  and then M \n= 1/35 \n Step 3   The requirement: 2½ jobs in 5 days. \nrate needed = 1/2   ⇒  x/35 + 25/70 = 1/2   ⇒  x/35 \n= 1/7   ∴  x = 5 men",
+      "q_num": 22
+    },
+    {
+      "question": "A works 5.4 items faster than B. When each is working alone, A takes 22 days less than B to complete the work. If A and B work together, find the number of days to complete the same work. A, B",
+      "options": {
+        "a": "4¼",
+        "b": "4³⁄₁₆",
+        "c": "4⁵⁄₃₂",
+        "d": "4⁷⁄₃₂"
+      },
+      "answer": "d",
+      "solution": "Step 1   Let A take a days. \nB = 5.4a,  and 5.4a − a = 22   ⇒  4.4a = 22   ⇒  a = \n5,  B = 27 \n Step 2   Together. \n(5 × 27)/(5 + 27) = 135/32 = 4 7/32 days",
+      "q_num": 23
+    },
+    {
+      "question": "A alone can do ²⁄₅ of a work in 12 days. B is 25% more efficient than A. C alone can do the same work in 12 days less than B. D is 25% less efficient than C. If they all work together, in how many days will the work be completed? A",
+      "options": {
+        "a": "300/47",
+        "b": "240/53",
+        "c": "180/43",
+        "d": "200/51"
+      },
+      "answer": "b",
+      "solution": "Step 1   A, then B, then C, then D. \nA : ⅖ in 12 days ⇒ 30 days        B : 25% faster ⇒ \n30/1.25 = 24 days \nC : 12 days less than B ⇒ 12 days        D : 25% \nslower than C ⇒ 12/0.75 = 16 days \n Step 2   Add the rates over 240. \n8 + 10 + 20 + 15 = 53/240 \n Step 3   Invert. \n240/53 days",
+      "q_num": 24
+    },
+    {
+      "question": "A and B working separately can do a piece of work in 21 and 24 days, respectively. If they work for a day alternately with A beginning the work, it would be completed in ______. A",
+      "options": {
+        "a": "24⅛ days",
+        "b": "21³⁄₈ days",
+        "c": "22³⁄₈ days",
+        "d": "22⅛ days"
+      },
+      "answer": "c",
+      "solution": "Step 1   Take the job as 168 units. \nA = 8/day,  B = 7/day   ⇒  one cycle = 15 units \n Step 2   How many whole cycles fit. \n11 cycles = 22 days = 165 units   ⇒  3 left \n Step 3   Day 23 is A's turn. \n3/8 of a day   ∴  22⅜ days",
+      "q_num": 25
+    }
+  ]
+}

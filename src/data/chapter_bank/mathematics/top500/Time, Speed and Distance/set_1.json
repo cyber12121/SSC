@@ -1,0 +1,498 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Time, Speed and Distance",
+  "questions": [
+    {
+      "question": "In a journey of three unequal laps, a car covers 200 km in 4 h in the first lap, 162 km at 15 m/s in the second lap, and covers the remaining distance in 4 h such that its average speed for the whole journey is 50 km/h. What was the car's speed in the third lap?",
+      "options": {
+        "a": "52 km/h",
+        "b": "47 km/h",
+        "c": "45 km/h",
+        "d": "42 km/h"
+      },
+      "answer": "b",
+      "solution": "Step 1   Time of each lap. \n4 h;  162 ÷ 54 = 3 h;  4 h   ⇒  11 hours in all \n Step 2   Total distance from the average. \n50 × 11 = 550 km   ⇒  third lap = 550 − 362 = 188 \nkm \n Step 3   Its speed. \n188 / 4 = 47 km/h",
+      "q_num": 1
+    },
+    {
+      "question": "A car moving at a uniform speed covers a certain distance in 6 hours. If the speed was increased by 10 km/hr, the distance could be covered in 5 hours. What distance was covered by the car?",
+      "options": {
+        "a": "200 km",
+        "b": "300 km",
+        "c": "350 km",
+        "d": "250 \nkm"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write it. \n6s = 5(s + 10)   ⇒  s = 50 km/hr \n Step 2   So the distance. \n6 × 50 = 300 km",
+      "q_num": 2
+    },
+    {
+      "question": "A man travelled 1200 km in 16 hours, partly by car at 40 km/h and partly by train at 80 km/h. What distance was travelled by car?",
+      "options": {
+        "a": "80 km",
+        "b": "96 km",
+        "c": "120 km",
+        "d": "100 km"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let x km go by car. \nx/40 + (1200 − x)/80 = 16 \n Step 2   Clear and solve. \n2x + 1200 − x = 1280   ⇒  x = 80 km",
+      "q_num": 3
+    },
+    {
+      "question": "In covering 30 km, Abhay takes 2 hours more than Sameer. If Abhay doubles his speed, he would take 1 hour less than Sameer. Find Abhay's speed. 30 km",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "6.25",
+        "d": "7.5"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write both. \n30/a = 30/s + 2        30/2a = 30/s − 1 \n Step 2   Subtract. \n30/a − 15/a = 3   ⇒  15/a = 3   ⇒  a = 5 km/h",
+      "q_num": 4
+    },
+    {
+      "question": "If a person walks at 5 km/h instead of 6 km/h, he would have walked 5 km more. What distance did he actually travel at 5 km/h?",
+      "options": {
+        "a": "15 km",
+        "b": "25 km",
+        "c": "18 km",
+        "d": "24 km"
+      },
+      "answer": "b",
+      "solution": "Step 1   Let the time be t. \n6t − 5t = 5   ⇒  t = 5 hours \n Step 2   Distance actually walked. \n5 × 5 = 25 km",
+      "q_num": 5
+    },
+    {
+      "question": "A driver drives at a uniform speed of 60 km/h and reaches a 330 km destination 30 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 minutes late. What % increase in speed is needed to reach on time?",
+      "options": {
+        "a": "12%",
+        "b": "15%",
+        "c": "10%",
+        "d": "20%"
+      },
+      "answer": "c",
+      "solution": "Step 1   His time and the scheduled one. \n330/60 = 5.5 h,  which is 30 min late   ⇒  \nscheduled = 5 h \n Step 2   Speed needed, and the rise. \n330/5 = 66   ⇒  6/60 = 10%",
+      "q_num": 6
+    },
+    {
+      "question": "Alok starts from P towards Q at 6 km/hr. Raman starts walking from P to Q at the same time at 9 km/hr. Raman, after reaching Q, immediately returns and meets Alok at point R. Find PR, given PQ = 15 km.",
+      "options": {
+        "a": "20 km",
+        "b": "12 km",
+        "c": "15 km",
+        "d": "18 km"
+      },
+      "answer": "b",
+      "solution": "Step 1   Raman reaches Q. \n15/9 = 5/3 h,  by when Alok has done 6 × 5/3 = \n10 km \n Step 2   They are 5 km apart and closing at 15 \nkm/h. \n5/15 = 1/3 h   ⇒  Alok walks 2 km more \n Step 3   So PR. \n10 + 2 = 12 km",
+      "q_num": 7
+    },
+    {
+      "question": "A train runs at 30 km/h for the first 100 km, at 40 km/h for the second 100 km, and at 50 km/h for the last 100 km. Find its average speed.",
+      "options": {
+        "a": "37.5 km/h",
+        "b": "38.3 km/h",
+        "c": "39.2 km/h",
+        "d": "40.2 km/h"
+      },
+      "answer": "b",
+      "solution": "Step 1   Total time. \n100/30 + 100/40 + 100/50 = 47/6 hours \n Step 2   Average. \n300 ÷ 47/6 = 38.3 km/h",
+      "q_num": 8
+    },
+    {
+      "question": "A truck covers 140 km at 35 km/h, the next 20 km in 30 minutes, and the last 30 km at 60 km/h. What is the average speed (in km/h) of the truck?",
+      "options": {
+        "a": "40",
+        "b": "42",
+        "c": "48.5",
+        "d": "38"
+      },
+      "answer": "d",
+      "solution": "Step 1   Each leg. \n140/35 = 4 h;   20 km in 0.5 h;   30/60 = 0.5 h \n Step 2   Average. \n190 / 5 = 38 km/h",
+      "q_num": 9
+    },
+    {
+      "question": "Farhan and Aman are travelling from Delhi to Haryana. The difference and sum of their speeds are 40 km/hour and 60 km/hour respectively. If Farhan finishes 8 minutes earlier than Aman in a race, find the distance they both cover.",
+      "options": {
+        "a": "8/3 km",
+        "b": "3/5 km",
+        "c": "3/8 km",
+        "d": "5/3 km"
+      },
+      "answer": "d",
+      "solution": "Step 1   Solve for the pair. \nf + a = 60,  f − a = 40   ⇒  f = 50,  a = 10 \n Step 2   The 8-minute gap. \nd/10 − d/50 = 2/15   ⇒  4d/50 = 2/15   ⇒  d = 5/3 \nkm",
+      "q_num": 10
+    },
+    {
+      "question": "A thief is noticed by a policeman from a distance of 97 m and starts running; the policeman gives chase. The thief runs at 21 m/sec and the policeman at 23 m/sec. What time does the policeman take to catch the thief?",
+      "options": {
+        "a": "62.5 sec",
+        "b": "40 sec",
+        "c": "45 sec",
+        "d": "48.5 \nsec"
+      },
+      "answer": "d",
+      "solution": "Step 1   Closing rate. \n23 − 21 = 2 m/s \n Step 2   Time to close 97 m. \n97 / 2 = 48.5 seconds",
+      "q_num": 11
+    },
+    {
+      "question": "A driver leaves Bangalore at 8:30 A.M. expecting to reach a place 300 km away by 12:30 P.M. At 10:30 he finds he has covered only 40% of the distance. By how much must he increase his speed to keep to schedule?",
+      "options": {
+        "a": "45 km/hr",
+        "b": "40 km/hr",
+        "c": "35 km/hr",
+        "d": "30 km/hr"
+      },
+      "answer": "d",
+      "solution": "Step 1   Progress by 10:30. \n40% of 300 = 120 km in 2 h   ⇒  his speed is 60 \nkm/hr \n Step 2   What is left, and the time left. \n180 km in 2 h   ⇒  90 km/hr needed \n Step 3   The increase. \n90 − 60 = 30 km/hr",
+      "q_num": 12
+    },
+    {
+      "question": "A takes 30 minutes more than B to cover 15 km at a certain speed, but if A doubles his speed, he covers the same distance in one hour less than B. Find B's speed (in km/h). A",
+      "options": {
+        "a": "6 km/h",
+        "b": "5½ km/h",
+        "c": "5 km/h",
+        "d": "6½ \nkm/h"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write both. \n15/a = 15/b + ½        15/2a = 15/b − 1 \n Step 2   Subtract to get A. \n7.5/a = 1.5   ⇒  a = 5 km/h \n Step 3   Back-substitute for B. \n3 = 15/b + ½   ⇒  b = 6 km/h",
+      "q_num": 13
+    },
+    {
+      "question": "Two trains, 121 m and 99 m long, run in opposite directions at 40 km/h and 32 km/h. In what time will they be completely clear of each other from the moment they meet? 121",
+      "options": {
+        "a": "11 sec",
+        "b": "12 sec",
+        "c": "10 sec",
+        "d": "13 sec"
+      },
+      "answer": "a",
+      "solution": "Step 1   Relative speed. \n40 + 32 = 72 km/h = 20 m/s \n Step 2   Total length to clear. \n(121 + 99)/20 = 11 seconds",
+      "q_num": 14
+    },
+    {
+      "question": "Two trains between Bangalore and Chennai start at the same time from their respective stations and move towards each other at 80 km/h and 95 km/h. When they meet, one train has travelled 180 km more than the other. Find the distance between Bangalore and Chennai.",
+      "options": {
+        "a": "1200 km",
+        "b": "345 km",
+        "c": "2100 km",
+        "d": "400 km"
+      },
+      "answer": "c",
+      "solution": "Step 1   Find the time. \n(95 − 80)t = 180   ⇒  t = 12 h \n Step 2   Total distance. \n(95 + 80) × 12 = 2,100 km",
+      "q_num": 15
+    },
+    {
+      "question": "A person goes to office by scooter at 50 km/hr and reaches 10 minutes early. At 40 km/hr, he reaches 20 minutes late. What speed (in km/hr) gets him there exactly on time?",
+      "options": {
+        "a": "47 4/13",
+        "b": "47 2/13",
+        "c": "46 2/13",
+        "d": "48 2/13"
+      },
+      "answer": "c",
+      "solution": "Step 1   Write the gap. \nd/40 − d/50 = ½   ⇒  d/200 = ½   ⇒  d = 100 km \n Step 2   The scheduled time. \nat 50 km/h he takes 2 h and is 10 min early   ⇒  \nschedule = 13/6 h \n Step 3   Speed for exactly that. \n100 ÷ 13/6 = 600/13 = 46 2/13 km/hr",
+      "q_num": 16
+    },
+    {
+      "question": "Without stoppages, a train covers a distance at an average speed of 75 km/h; with stoppages, it covers the same distance at 65 km/h. How many minutes per hour does the train stop?",
+      "options": {
+        "a": "10 min",
+        "b": "7 min",
+        "c": "9 min",
+        "d": "8 min"
+      },
+      "answer": "d",
+      "solution": "Step 1   Distance lost each hour. \n75 − 65 = 10 km \n Step 2   How long the train would take to cover \nit. \n(10/75) × 60 = 8 minutes an hour",
+      "q_num": 17
+    },
+    {
+      "question": "P starts from A at 6 a.m. and reaches B after 8 hours. Q starts from B at 8 a.m. and reaches A after 9 hours. When they meet, what is the ratio of the distance travelled by Q to that travelled by P? P",
+      "options": {
+        "a": "6 : 7",
+        "b": "3 : 8",
+        "c": "6 : 11",
+        "d": "8 : 3"
+      },
+      "answer": "c",
+      "solution": "Step 1   Speeds, and P's head start. \nP = D/8,  Q = D/9;  by 8 a.m. P has done D/4 \n Step 2   They close the remaining 3D/4. \n(3D/4) ÷ (17D/72) = 54/17 hours \n Step 3   Distances at that moment. \nQ = 6D/17,   P = D/4 + 27D/68 = 11D/17   ⇒  6 : 11",
+      "q_num": 18
+    },
+    {
+      "question": "Flight A usually takes 1 hour more than Flight B to travel 7200 km. Due to engine trouble, Flight B's speed falls by 1/6th, so it takes 36 minutes more than Flight A for the same journey. Find the speed of Flight A (in km/hr). 7200 km",
+      "options": {
+        "a": "800",
+        "b": "900",
+        "c": "750",
+        "d": "720"
+      },
+      "answer": "a",
+      "solution": "Step 1   A's time and B's slowed time. \nA = t + 1;   speed down 1/6 ⇒ time × 6/5 ⇒ 6t/5 \n Step 2   The slowed B is 36 min behind A. \n6t/5 = (t + 1) + 0.6   ⇒  t/5 = 1.6   ⇒  t = 8 h,  A = 9 \nh \n Step 3   A's speed. \n7,200 / 9 = 800 km/hr \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 19
+    },
+    {
+      "question": "A thief running at 7 km/h is chased by a policeman at 12 km/h. If the thief is 280 m ahead, find the time required for the policeman to catch him. 7 km/h",
+      "options": {
+        "a": "3 1/25",
+        "b": "3 2/25",
+        "c": "3 9/25",
+        "d": "4 9/25"
+      },
+      "answer": "c",
+      "solution": "Step 1   Closing rate. \n12 − 7 = 5 km/h \n Step 2   Time to close 280 m. \n0.28/5 h = 3.36 min = 3 9/25 minutes",
+      "q_num": 20
+    },
+    {
+      "question": "A boy increases his speed to 9/5 times his original speed, and so reaches school 40 minutes before the usual time. How long does he usually take?",
+      "options": {
+        "a": "120 min",
+        "b": "30 min",
+        "c": "90 min",
+        "d": "45 \nmin"
+      },
+      "answer": "c",
+      "solution": "Step 1   New time. \nspeed × 9/5   ⇒  time × 5/9   ⇒  saving = 4/9 of \nthe usual \n Step 2   That saving is 40 minutes. \nusual = 40 × 9/4 = 90 minutes",
+      "q_num": 21
+    },
+    {
+      "question": "Sarthak completed a marathon in 4 hours 35 minutes: a 10 km run, a 20 km cycle ride, then a final run. He ran the first stage at 6 km/hr and cycled at 16 km/hr. If his last- run speed was half his first-run speed, find the total distance covered.",
+      "options": {
+        "a": "5 km",
+        "b": "35 km",
+        "c": "40 km",
+        "d": "45 km"
+      },
+      "answer": "b",
+      "solution": "Step 1   Time on the first two legs. \n10/6 h = 100 min        20/16 h = 75 min   ⇒  175 \nmin \n Step 2   Time left, at half the running speed. \n275 − 175 = 100 min at 3 km/hr = 5 km \n Step 3   Total distance. \n10 + 20 + 5 = 35 km",
+      "q_num": 22
+    },
+    {
+      "question": "A bus can run 20% faster than a bike. Both start from the same place at the same time and reach the same 60 km destination together. On the way, the bus stops at a station for 10 minutes. Find the speed of the bike.",
+      "options": {
+        "a": "60 km/h",
+        "b": "70 km/h",
+        "c": "65 km/h",
+        "d": "55 km/h"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let the bike do b km/h; the bus does 1.2b. \n60/b − 60/1.2b = 1/6 \n Step 2   Solve. \n(60/b)(1 − 5/6) = 1/6   ⇒  10/b = 1/6   ⇒  b = 60 \nkm/h",
+      "q_num": 23
+    },
+    {
+      "question": "A police station, a bank and a thief's safe house lie in a straight line, the bank in between. The police-station-to-safe-house distance is four times the bank-to-safe- house distance. After looting the bank at 9:15 am, the thief flees; a policeman gives chase at 16 km/h and catches him at the safe house in fifteen minutes. Find the distance between the bank and the police station. simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "4 km",
+        "b": "1 km",
+        "c": "3 km",
+        "d": "2 km"
+      },
+      "answer": "c",
+      "solution": "Step 1   The policeman's run. \n16 km/h × ¼ h = 4 km = station to safe house \n Step 2   That is four times the bank-to-safehouse \nleg. \nbank to safe house = 1 km   ⇒  station to bank \n= 4 − 1 = 3 km",
+      "q_num": 24
+    },
+    {
+      "question": "Vaibhav and Vignesh each travel 78 km, Vaibhav being the faster. The sum of their speeds is 91 km/h and their total time is 3 hours 30 minutes. Find Vaibhav's speed.",
+      "options": {
+        "a": "54 km/h",
+        "b": "45 km/h",
+        "c": "52 km/h",
+        "d": "48 km/h"
+      },
+      "answer": "c",
+      "solution": "Step 1   Write the time equation. \n78/v₁ + 78/v₂ = 3.5   ⇒  78(91)/(v₁v₂) = 3.5   ⇒  v₁v₂ \n= 2,028 \n Step 2   Roots of x² − 91x + 2028 = 0. \nx = 52 or 39   ⇒  the faster is 52 km/h",
+      "q_num": 25
+    },
+    {
+      "question": "Cars A and B leave Delhi for Shimla at 8:30 a.m. and 9:00 a.m., travelling at 40 km/hr and 50 km/hr respectively. At what distance from Delhi will both cars be together?",
+      "options": {
+        "a": "100 km",
+        "b": "200 km",
+        "c": "5 km",
+        "d": "45 km"
+      },
+      "answer": "a",
+      "solution": "Step 1   A's head start by 9:00. \n40 × ½ = 20 km \n Step 2   B closes at 10 km/h. \n20/10 = 2 hours   ⇒  distance = 50 × 2 = 100 km \nfrom Delhi",
+      "q_num": 26
+    },
+    {
+      "question": "From A to B, Raghav travels each quarter of the distance at 10, 15, 20 and 30 km/h in turn. Manish, on the same route, travels each quarter of the total time at the same four speeds in turn. If Raghav's average speed is y km/h and Manish's is z km/h, find (z − y).",
+      "options": {
+        "a": "2.75",
+        "b": "1.5",
+        "c": "2.5",
+        "d": "0"
+      },
+      "answer": "a",
+      "solution": "Step 1   Raghav — equal quarters of distance. \ny = 4 ÷ (1/10 + 1/15 + 1/20 + 1/30) = 16 km/h \n Step 2   Manish — equal quarters of time. \nz = (10 + 15 + 20 + 30)/4 = 18.75 km/h \n Step 3   The difference. \n18.75 − 16 = 2.75",
+      "q_num": 27
+    },
+    {
+      "question": "A man cycling at 8 km/hr reaches office at 11 am; at 12 km/hr he reaches at 9 am. At what speed should he cycle to reach office at exactly 10 am?",
+      "options": {
+        "a": "9.6 km/hr",
+        "b": "10 km/hr",
+        "c": "11.2 km/hr",
+        "d": "Cannot be determined"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write the gap. \nd/8 − d/12 = 2   ⇒  d/24 = 2   ⇒  d = 48 km \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   He starts at 5 a.m. (6 hours before 11). \nto arrive at 10 he has 5 h   ⇒  48/5 = 9.6 km/hr",
+      "q_num": 28
+    },
+    {
+      "question": "Vivek starts moving at 70 km/hr at 8:00 am. Neeraj starts moving in the same direction 4 hours later, at 120 km/hr. Which statement(s) is/are correct? I. They meet at 5:36 pm. II. The total distance covered by both till 4 pm is 1080 km.",
+      "options": {
+        "a": "Neither I nor II",
+        "b": "Only I",
+        "c": "Both I and \nII",
+        "d": "Only II"
+      },
+      "answer": "b",
+      "solution": "Step 1   When they meet. \nhead start = 70 × 4 = 280 km,  closing at 50   ⇒  \n5.6 h after 12:00 = 5:36 pm ✓ \n Step 2   Distance by 4 pm. \nVivek 8 h × 70 = 560,  Neeraj 4 h × 120 = 480   ⇒  \n1,040 km, not 1,080 ✗ \n Step 3   So only the first claim stands. \nOnly I",
+      "q_num": 29
+    },
+    {
+      "question": "The speed of a thief is 4/5 times the speed of a policeman. The thief covers 6 km before being caught in 30 minutes. What was the initial distance between the policeman and the thief (in km)?",
+      "options": {
+        "a": "1.2",
+        "b": "0.8",
+        "c": "1.5",
+        "d": "1.0"
+      },
+      "answer": "c",
+      "solution": "Step 1   Thief's speed. \n6 km in ½ h = 12 km/h   ⇒  policeman = 12 × 5/4 \n= 15 km/h \n Step 2   In that same half hour. \npoliceman covers 7.5 km   ⇒  initial gap = 7.5 − \n6 = 1.5 km",
+      "q_num": 30
+    },
+    {
+      "question": "Places B1 and B2 are 500 km apart. Sonit and Robin start from B1 towards B2 together; after reaching B2 they return to B1. Sonit's speed is 80 km/hr more than Robin's. They meet after 6 hours. Which statement(s) is/are correct? I. Distance covered by Sonit is 600 km. II. Robin's speed is 120/3 km/hr.",
+      "options": {
+        "a": "Neither I nor II",
+        "b": "Only I",
+        "c": "Only II",
+        "d": "Both I and II"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write it. \n6(2r + 80) = 1,000   ⇒  r = 130/3 ≈ 43.33 km/h,  \nnot 120/3 ✗ \n Step 2   Sonit's distance. \n6 × (43.33 + 80) = 740 km,  not 600 ✗ \n Step 3   So neither claim holds. \nNeither I nor II",
+      "q_num": 31
+    },
+    {
+      "question": "A policeman chases a thief on a straight road, catching him in 15 minutes at 60 km/h, or in 0.5 hours at 45 km/h. What speed (in km/h) would let him catch the thief in exactly 10 minutes?",
+      "options": {
+        "a": "65",
+        "b": "75",
+        "c": "90",
+        "d": "70"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write both. \n¼(60 − t) = g        ½(45 − t) = g \n Step 2   Equate and solve. \n15 − 0.25t = 22.5 − 0.5t   ⇒  t = 30 km/h,  g = 7.5 \nkm \n Step 3   For a 10-minute chase. \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n(s − 30)/6 = 7.5   ⇒  s = 75 km/h",
+      "q_num": 32
+    },
+    {
+      "question": "A and B start from points X and Y respectively at the same time, towards each other. After meeting, A and B take 5.4 hours and 2.4 hours respectively to reach Y and X. If A's speed was 16 km/h, find B's speed (in km/h). A",
+      "options": {
+        "a": "24",
+        "b": "20",
+        "c": "30",
+        "d": "18"
+      },
+      "answer": "a",
+      "solution": "Step 1   Apply it. \nA : B = √(2.4) : √(5.4) = 2 : 3 \n Step 2   So B. \n16 × 3/2 = 24 km/h",
+      "q_num": 33
+    },
+    {
+      "question": "Ajit Singh left place P at 9:30 a.m. for place Q; David Raj left place Q at 1:30 p.m. for place P. The distance between P and Q is 416 km. Ajit's speed is 44 km/h and David's is 52 km/h. At what time will they meet?",
+      "options": {
+        "a": "4 pm",
+        "b": "4:30 pm",
+        "c": "6 pm",
+        "d": "5 pm"
+      },
+      "answer": "a",
+      "solution": "Step 1   By 1:30 p.m. \n44 × 4 = 176 km done   ⇒  416 − 176 = 240 km \nleft \n Step 2   Closing at 96 km/h. \n240/96 = 2.5 h   ⇒  1:30 p.m. + 2 h 30 min = 4 \np.m.",
+      "q_num": 34
+    },
+    {
+      "question": "Trains X and Y start at the same time — X from station A to B, Y from station B to A. After crossing each other, X takes 8 2/5 hours and Y takes 4 2/7 hours to reach their destinations. If X's speed is 50 km/h, find Y's speed (in km/h).",
+      "options": {
+        "a": "56",
+        "b": "70",
+        "c": "63",
+        "d": "84"
+      },
+      "answer": "b",
+      "solution": "Step 1   Ratio of speeds. \nX : Y = √(30/7) : √(42/5) → X/Y = 5/7 \n Step 2   So Y. \n50 × 7/5 = 70 km/h",
+      "q_num": 35
+    },
+    {
+      "question": "Trains A and B start from stations X and Y respectively towards each other. After crossing, they reach Y and X in 4 hours 48 minutes and 3 hours 20 minutes respectively. If train A's speed is 45 km/h, find train B's speed. simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "60 km/h",
+        "b": "64.8 km/h",
+        "c": "54 km/h",
+        "d": "37.5 km/h"
+      },
+      "answer": "c",
+      "solution": "Step 1   Ratio of speeds. \nA/B = √(10/3) ÷ √(24/5) = 5/6 \n Step 2   So B. \n45 × 6/5 = 54 km/h",
+      "q_num": 36
+    },
+    {
+      "question": "45 pillars stand in a line, evenly spaced. A car travelling at a uniform 72 km/h takes 18 seconds to go from the 1st to the 10th pillar. Find the distance between the 11th and 31st pillar (in metres). 45",
+      "options": {
+        "a": "800 m",
+        "b": "820 m",
+        "c": "840 m",
+        "d": "910 m"
+      },
+      "answer": "a",
+      "solution": "Step 1   One gap. \n72 km/h = 20 m/s   ⇒  18 s covers 360 m over 9 \ngaps   ⇒  40 m each \n Step 2   From the 11th to the 31st is 20 gaps. \n20 × 40 = 800 m",
+      "q_num": 37
+    },
+    {
+      "question": "B starts 4.5 minutes after A from the same point, for a place 3.5 miles away. A, on reaching the destination, turns back and walks a mile, where he meets B. If A covers a mile in 6 minutes, find how many minutes B takes to cover a mile. A",
+      "options": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "9"
+      },
+      "answer": "d",
+      "solution": "Step 1   A's journey. \n3.5 miles out = 21 min,  then 1 mile back = 6 min   \n⇒  27 min, at 2.5 miles from the start \n Step 2   B has been walking since minute 4.5. \n27 − 4.5 = 22.5 min for 2.5 miles   ⇒  9 minutes \na mile",
+      "q_num": 38
+    },
+    {
+      "question": "A delivery boy left his office at 10 a.m. riding at 32 km/h, delivered an article, waited 15 minutes for payment, then returned to the office at 11:25 a.m. at 24 km/h. Find the total distance travelled.",
+      "options": {
+        "a": "35 km",
+        "b": "40 km",
+        "c": "32 km",
+        "d": "30 km"
+      },
+      "answer": "c",
+      "solution": "Step 1   Time actually spent riding. \n10:00 to 11:25 = 85 min,  less 15 min waiting = \n70 min = 7/6 h \n Step 2   One way is d each way. \nd/32 + d/24 = 7/6   ⇒  7d/96 = 7/6   ⇒  d = 16 km \n Step 3   Total travelled. \n2 × 16 = 32 km",
+      "q_num": 39
+    },
+    {
+      "question": "A man starts running from point P at 11 am at 10 km/h, running for 2 hours and resting for 1 hour, repeating this pattern until caught by another runner who starts from P at 2 pm and runs non-stop at 15 km/h. At what time (in the afternoon) is he caught?",
+      "options": {
+        "a": "6:20",
+        "b": "4:40",
+        "c": "6:00",
+        "d": "5:30 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026"
+      },
+      "answer": "b",
+      "solution": "Step 1   Where the runner is when the chase starts at 2 pm. \n11–1 running = 20 km,  1–2 resting   ⇒  20 km \n Step 2   2–4 pm: both move. \nrunner 20 + 10x,  chaser 15x   ⇒  at 4 pm they are 40 and 30, not caught \n Step 3   4–5 pm the runner rests at 40 km. \n30 + 15t = 40   ⇒  t = ⅔ h   ∴  caught at 4:40 pm",
+      "q_num": 40
+    },
+    {
+      "question": "A person travels P to Q at 20 km/h, Q to R at q km/h, and R to S at r km/h, where PQ = QR = RS. If the average speed from P to R is 280/11 km/h and from Q to S is 112/3 km/h, find r.",
+      "options": {
+        "a": "37.5 km/h",
+        "b": "45 km/h",
+        "c": "40 km/h",
+        "d": "42.5 km/h"
+      },
+      "answer": "c",
+      "solution": "Step 1   P to R. \n2 ÷ (1/20 + 1/q) = 280/11   ⇒  1/q = 1/35   ⇒  q = 35 km/h \n Step 2   Q to S. \n2 ÷ (1/35 + 1/r) = 112/3   ⇒  1/r = 1/40   ⇒  r = 40 km/h",
+      "q_num": 41
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Compound Interest",
+  "questions": [
+    {
+      "question": "Geeta deposited a certain sum of money in her bank account, which amount to ₹27,783 at 5% per annum in 3 years, the interest being compounded annually. How much money did she deposited?",
+      "options": {
+        "a": "₹26,000",
+        "b": "₹25,000",
+        "c": "₹24,000",
+        "d": "₹25,500"
+      },
+      "answer": "c",
+      "solution": "= \n Step 1   Three years at 5%. \nA / P = (21/20)³ = 9,261 / 8,000 \n Step 2   Scale to the given amount. \n9,261 units = 27,783 ⇒ 1 unit = 3   ∴  P = 8,000 × \n3 = ₹24,000",
+      "q_num": 1
+    },
+    {
+      "question": "The compound interest on a certain sum of money at 21% per annum compound for 2 years is ₹11138.40 (interest is compounded annually). What will be the amount (₹in) received after 2 years.",
+      "options": {
+        "a": "35,138.40",
+        "b": "31,538.040",
+        "c": "24,000.50",
+        "d": "28,315.40"
+      },
+      "answer": "a",
+      "solution": "Step 1   Two years at 21%. \nA / P = (121/100)² = 14,641 / 10,000   ⇒  CI = 4,641 \nunits \n Step 2   Value one unit from the given interest. \n4,641 units = ₹11,138.40   ⇒  1 unit = ₹2.40 \n Step 3   The amount is 14,641 units. \n14,641 × 2.40 = ₹35,138.40",
+      "q_num": 2
+    },
+    {
+      "question": "The amount received at 10% per annum compound interest after 3 yrs is Rs. 10,648. What was the principal (in Rs.)? 10% Ů",
+      "options": {
+        "a": "₹8000",
+        "b": "₹9000",
+        "c": "₹8500",
+        "d": "₹7500"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write the growth as a fraction. \nA / P = (11/10)³ = 1,331 / 1,000 \n Step 2   Value a unit and take P. \n1,331 units = 10,648 ⇒ 1 unit = 8   ∴  P = 1,000 × 8 \n= ₹8,000",
+      "q_num": 3
+    },
+    {
+      "question": "If a sum increases by 21% after 2 years, then the rate of compound interest per annum, when compounded annually, must be: Check: grow 24000 (x 1.05) P = 24000 x 1.05 25200 x 1.05 26460 x 1.05 27783 = A P = 24000 P -> Amount (2 yr) principal P 24000 amount P 24000 CI 11138.4 A = 35138.40 Check: grow 8000 (x 1.1) P = 8000 x 1.1 8800 x 1.1 9680 x 1.1 10648 = A P = 8000 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "10.5%",
+        "b": "11.5%",
+        "c": "10%",
+        "d": "11%"
+      },
+      "answer": "c",
+      "solution": "Step 1   Set that equal to the given rise. \n2r + r²/100 = 21 \n Step 2   Solve. \nr² + 200r − 2,100 = 0   ⇒  r = 10%",
+      "q_num": 4
+    },
+    {
+      "question": "A certain amount of money at compound interest grows to ₹66,550 in 3 years and ₹73,205 in 4 years. The rate percent per annum is:",
+      "options": {
+        "a": "5%",
+        "b": "10%",
+        "c": "9%",
+        "d": "11%"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take the difference. \n73,205 − 66,550 = ₹6,655 \n Step 2   Measure it on the 3-year amount. \n6,655 / 66,550 × 100 = 10%",
+      "q_num": 5
+    },
+    {
+      "question": "The difference between the compound interest on a sum of ₹8,000 for 1 year at the rate of 10% per annum, interest compounded yearly and half yearly is: ₹8,000",
+      "options": {
+        "a": "₹10",
+        "b": "₹40",
+        "c": "₹20",
+        "d": "₹30"
+      },
+      "answer": "c",
+      "solution": "Step 1   Layers. \n5% of 8,000 = 400      5% of 400 = 20 \n Step 2   The difference is the last layer. \n(800 + 20) − 800 = ₹20",
+      "q_num": 6
+    },
+    {
+      "question": "The simple interest on a sum at 3% per annum in 3 years is ₹315. What will be the compound interest on this amount compounded annually at the rate of 4% per annum for 2 years?",
+      "options": {
+        "a": "₹228.48",
+        "b": "₹204",
+        "c": "₹285.6",
+        "d": "₹326.6"
+      },
+      "answer": "c",
+      "solution": "Step 1   One year of simple interest. \n315 / 3 = ₹105 a year, which is 3% of P   ∴  P = \n₹3,500 \n Step 2   Now 2 years at 4%, row 2 : 1. \n4% of 3,500 = 140      4% of 140 = 5.6 \n Step 3   Add the layers. \n2(140) + 5.6 = ₹285.60",
+      "q_num": 7
+    },
+    {
+      "question": "The difference in compound interest on a certain sum at 10% p.a. for one year, when the interest is compounded half yearly and yearly, is ₹88.80. What is the simple interest on the same sum for 1⅔years at the same rate?",
+      "options": {
+        "a": "₹5,920",
+        "b": "₹5,916",
+        "c": "₹5,986",
+        "d": "₹5,980"
+      },
+      "answer": "a",
+      "solution": "Step 1   Yearly against half-yearly, one year. \nyearly = 10x        half-yearly (5% twice) = 10x + \n0.25x = 10.25x \n Step 2   The gap is the extra quarter-unit. \n0.25x = 88.80   ⇒  x = 355.2   ∴  P = ₹35,520 \n Step 3   Simple interest for 1⅓ years at 10%. \n35,520 × 10 × (4/3) / 100 = ₹4,736",
+      "q_num": 8
+    },
+    {
+      "question": "The compound interest on ₹10000 at 20% per annum is ₹4641. If compounding is done half yearly, for how many years was the principal invested? ₹10000",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "2",
+        "d": "3"
+      },
+      "answer": "c",
+      "solution": "Step 1   Half-yearly at 20% p.a. means 10% a \nperiod. \nlayers : 1,000,  100,  10,  1 \n Step 2   Match the given interest to a Pascal row. \n4,641 = 4(1,000) + 6(100) + 4(10) + 1(1)  —  the \nrow 4 : 6 : 4 : 1 \n Step 3   Four half-years. \n4 periods ÷ 2 = 2 years",
+      "q_num": 9
+    },
+    {
+      "question": "Find the amount received by P by investing a sum of ₹5000 at an annual rate of 5% on the maturity period of one year. If the interest is calculated on the basis of quarterly compounding. (Round your answer to the nearest integer) P",
+      "options": {
+        "a": "₹5,200",
+        "b": "₹5,945",
+        "c": "₹5,330",
+        "d": "₹5,255"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the growth. \nA = 5,000 × (1.0125)⁴ \n Step 2   Compute. \nA = 5,000 × 1.05095 = ₹5,254.7 ≈ ₹5,255",
+      "q_num": 10
+    },
+    {
+      "question": "A sum of money becomes ₹11880 after 4 years and ₹17820 after 6 years on compound interest, if the interest is compounded annually. What will be half of the sum (in rs.)?",
+      "options": {
+        "a": "2,410",
+        "b": "2,530",
+        "c": "2,640",
+        "d": "2,750"
+      },
+      "answer": "c",
+      "solution": "Step 1   Divide the two amounts. \n17,820 / 11,880 = 3/2 = (1 + r)²   over the 2-year \ngap \nLEVEL - 2 \nGrow 10000 (x 1.1)\nP = 10000\nx 1.1\n11000\nx 1.1\n12100\nx 1.1\n13310\nx 1.1\n14641 = A\nCI = 4641 -> 4 half-yrs = 2 years \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   So the 4-year factor is its square. \n(1 + r)⁴ = 9/4   ⇒  P = 11,880 × 4/9 = ₹5,280 \n Step 3   Half of it. \n5,280 / 2 = ₹2,640",
+      "q_num": 11
+    },
+    {
+      "question": "If the interest is compounded quarterly, what will be a sum of ₹75000 amount in one year at 16% per annum. (rounded to two decimal places)?",
+      "options": {
+        "a": "₹87379.40",
+        "b": "₹87739.40",
+        "c": "₹89773.40",
+        "d": "₹87937.40"
+      },
+      "answer": "b",
+      "solution": "Step 1   Build the layers. \n4% of 75,000 = 3,000     of 3,000 = 120     of 120 \n= 4.8     of 4.8 = 0.192 \n Step 2   Multiply by the row and add. \n4(3,000) + 6(120) + 4(4.8) + 0.192 = ₹12,739.392 \n Step 3   Amount. \n75,000 + 12,739.39 = ₹87,739.40",
+      "q_num": 12
+    },
+    {
+      "question": "A certain sum of money was lent for a period of 1 year 9 month at a rate of 10% per annum compounded annually. If the compound interest is ₹1460. Find the amount of money lent.",
+      "options": {
+        "a": "₹8,000",
+        "b": "₹6,000",
+        "c": "₹7,500",
+        "d": "₹8,200"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let P = 100x. The first year is compound. \ninterest = 10x,  amount = 110x \n Step 2   The 9 months are simple interest on that \namount. \n110x × (3/4) × 10/100 = 8.25x \n Step 3   Total interest is ₹1,460. \n10x + 8.25x = 18.25x = 1,460   ⇒  x = 80   ∴  P = \n₹8,000",
+      "q_num": 13
+    },
+    {
+      "question": "A sum is deposited for 4 years at a rate of 10% per annum compounded annually. The difference between the interest received at the end of 2 years and the received at the end of 4 years is ₹5082. Find the sum (in₹). 4",
+      "options": {
+        "a": "20,000",
+        "b": "50,820",
+        "c": "25,500",
+        "d": "10,164"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let P = 10,000x. \n2 years : CI = 2,100x        4 years : CI = 4,641x \n Step 2   Their difference is the given ₹5,082. \n2,541x = 5,082   ⇒  x = 2   ∴  P = ₹20,000",
+      "q_num": 14
+    },
+    {
+      "question": "If compound interest received on a certain amount in the 3 years is Rs. 12,100, what will be the compound interest (in Rs) for the 4th year on the same amount if rate of interest is 9%?",
+      "options": {
+        "a": "₹17080",
+        "b": "₹15669",
+        "c": "₹13189",
+        "d": "₹14376"
+      },
+      "answer": "c",
+      "solution": "Step 1   Grow the 3-year interest by 9%. \n9% of 12,100 = ₹1,089 \n Step 2   Add it on. \n12,100 + 1,089 = ₹13,189",
+      "q_num": 15
+    },
+    {
+      "question": "What is the compound interest on a sum of ₹7,200 for 2⅖ years at 20% p.a., interest compounded yearly (nearest to an integer)? ₹7,200",
+      "options": {
+        "a": "₹3,997",
+        "b": "₹4,290",
+        "c": "₹4,205",
+        "d": "₹3,960"
+      },
+      "answer": "a",
+      "solution": "Step 1   Two whole years at 20%, row 2 : 1. \n20% of 7,200 = 1,440   ⇒  2(1,440) + 288 = ₹3,168,  \namount ₹10,368 \n Step 2   The remaining ⅖ year. \n10,368 × (2/5) × 20/100 = ₹829.44 \n Step 3   Total interest. \n3,168 + 829.44 = ₹3,997.44 ≈ ₹3,997",
+      "q_num": 16
+    },
+    {
+      "question": "If the rate of interest is 4% for the first year, 5% for the second year and 6% for the third year, then compound interest on ₹10000 for 3 years, if interest is compounded annually?",
+      "options": {
+        "a": "₹1,570.50",
+        "b": "₹1,575.20",
+        "c": "₹1,580.25",
+        "d": "₹1,500.00"
+      },
+      "answer": "b",
+      "solution": "Step 1   Year by year. \n10,000 → 10,400 → 10,920 → 11,575.20 \n Step 2   Interest is what it gained. \n11,575.20 − 10,000 = ₹1,575.20",
+      "q_num": 17
+    },
+    {
+      "question": "A sum of 18,000 is lent at 10% p.a. compound interest, compounded annually. What is the difference between the Next year at 9% Yr-3 CI = 12100 x 1.09 13189 = Yr-4 CI CI(4th yr) = 13189 2 full yr then 2/5 yr P = 7200 x 1.2 (yr 1) 8640 x 1.2 (yr 2) 10368 +8% (2/5 yr) 11197.44 = A CI = 11197.44 - 7200 ~ 3997 Rates 4%, 5%, 6% P = 10000 x 1.04 10400 x 1.05 10920 x 1.06 11575.20 = A CI = 11575.20 - 10000 = 1575.20 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 compound interest for 3rd year and 4th year? ₹18,000",
+      "options": {
+        "a": "₹215.40",
+        "b": "₹217.80",
+        "c": "₹220.60",
+        "d": "₹221.80"
+      },
+      "answer": "b",
+      "solution": "Step 1   His formula. \nI(n+1) − I(n) = P × r² × (1 + r)^(n−1),   r as a decimal \n Step 2   Put in the numbers for the 3rd and 4th \nyear. \n18,000 × (0.1)² × (1.1)² = 18,000 × 0.01 × 1.21 = \n₹217.80",
+      "q_num": 18
+    },
+    {
+      "question": "When interest is compounded annually, the amount of money in a bank account doubles in 7 years. How many years will it take to multiply this amount in the bank 8 times?",
+      "options": {
+        "a": "21",
+        "b": "35",
+        "c": "28",
+        "d": "14"
+      },
+      "answer": "a",
+      "solution": "Step 1   Express 8 times as doublings. \n8 = 2³  ⇒  three doubling periods \n Step 2   Each doubling takes 7 years. \n3 × 7 = 21 years",
+      "q_num": 19
+    },
+    {
+      "question": "A sum of money on simple interest doubles itself in 8 years and on compound interest if the interest is compounded annually, the sum becomes four times of itself in 2 years. Find the ratio of the annual rates of simple interest and compound interest proposed?",
+      "options": {
+        "a": "3:5",
+        "b": "1:8",
+        "c": "2:3",
+        "d": "5:3"
+      },
+      "answer": "b",
+      "solution": "Step 1   Simple interest doubling in 8 years. \ninterest = P in 8 years   ⇒  r = 100/8 = 12.5% \n Step 2   Compound interest quadrupling in 2 \nyears. \n(1 + r)² = 4   ⇒  1 + r = 2   ∴  r = 100% \n Step 3   The ratio asked for. \n12.5 : 100 = 1 : 8",
+      "q_num": 20
+    },
+    {
+      "question": "A sum amounts to ₹8,028 in 3 years and to ₹12,042 in 6 years at a certain rate percent per annum, when the interest is compounded yearly. The sum is:",
+      "options": {
+        "a": "₹5,352",
+        "b": "₹5,325",
+        "c": "₹5,235",
+        "d": "₹5,253"
+      },
+      "answer": "a",
+      "solution": "Step 1   The 3-year growth factor. \n12,042 / 8,028 = 3/2 = (1 + r)³ \n Step 2   Climb back from the 3-year amount. \nP = 8,028 × 2/3 = ₹5,352",
+      "q_num": 21
+    },
+    {
+      "question": "A man invested a total of 12,050 in two parts, one at 10% p.a. simple interest for 2 years and the other at the same rate at compound interest, interest being compounded annually, for the same time. The amounts he received from both the parts are equal. The sum (in ₹) invested at the compound interest is: Reach 8x x x2 (7 yr) 2x x2 (7 yr) 4x x2 (7 yr) 8x 3 x 7 = 21 years simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "5850",
+        "b": "6000",
+        "c": "5780",
+        "d": "5800"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write both growth factors for 2 years at \n10%. \nsimple : 1.20        compound : 1.21 \n Step 2   Equal amounts make the parts inverse. \nSI part : CI part = 1.21 : 1.20 = 121 : 120 \n Step 3   Split ₹12,050. \n241 parts = 12,050 ⇒ 1 part = 50   ∴  compound \npart = 120 × 50 = ₹6,000",
+      "q_num": 22
+    },
+    {
+      "question": "A man invests ₹7,000 at 8% per annum simple interest for 2 years and ₹10,000 at the same rate for the same period, compounded annually. What will be the total interest and the total amount (in ₹) respectively, on maturity?",
+      "options": {
+        "a": "19,748 and 2,874",
+        "b": "2,748 and 19,784",
+        "c": "19,784 and 2,784",
+        "d": "2,784 and 19,784"
+      },
+      "answer": "d",
+      "solution": "Step 1   The simple part. \n7,000 × 8 × 2 / 100 = ₹1,120 \n Step 2   The compound part, row 2 : 1. \n8% of 10,000 = 800,  of 800 = 64   ⇒  2(800) + \n64 = ₹1,664 \n Step 3   Totals. \ninterest = 1,120 + 1,664 = ₹2,784        amount = \n17,000 + 2,784 = ₹19,784",
+      "q_num": 23
+    },
+    {
+      "question": "Rahul invested two equal sums of money at compound interest under two schemes A and B. Under scheme A, the interest rate was 10% per annum and under scheme B, the interest rate was 12% p.a. Rahul got ₹1,050 as interest on the amount invested in scheme A after 2 years. How much interested will Rahul earned under scheme B after two years, if the interest is compounded annually in both schemes?",
+      "options": {
+        "a": "₹1,722",
+        "b": "₹1,372",
+        "c": "₹1,270",
+        "d": "₹1,272"
+      },
+      "answer": "d",
+      "solution": "Step 1   Scheme A, 2 years at 10%. \nCI = 21% of P = 1,050   ⇒  P = ₹5,000 \n Step 2   Scheme B on the same ₹5,000 at 12%, \nrow 2 : 1. \n12% of 5,000 = 600,  of 600 = 72   ⇒  2(600) + 72 \n= ₹1,272 \n \nCI on 10000 at 8%\nP = 10000 \nx 1.08\n10800 \nx 1.08\n11664 = A \nCI = 1664 \nScheme B at 12%\nP = 5000 \nx 1.12\n5600 \nx 1.12\n6272 = A \nCI(B) = 6272 - 5000 = 1272 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 24
+    },
+    {
+      "question": "Divide ₹66300 between A and B such that the amount received by A after 8 years is equal to the amount received by B after 10 years. Whereas the rate of interest is 10% per annum compounded annually. ₹66300",
+      "options": {
+        "a": "A=₹35,520, B=₹30,810",
+        "b": "A=₹37,000, \nB=₹29,300",
+        "c": "A=₹35,200, B=₹31,000",
+        "d": "A=₹36,300, B=₹30,000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Set the two amounts equal. \nA(1.1)⁸ = B(1.1)¹⁰   ⇒  A / B = (1.1)² = 121 / 100 \n Step 2   Split ₹66,300 in 121 : 100. \n221 parts = 66,300 ⇒ 1 part = 300   ∴  A = \n₹36,300,  B = ₹30,000",
+      "q_num": 25
+    },
+    {
+      "question": "A person borrowed a sum of ₹30,800 at 10% per annum for 3 years. Interest compounded annually. At the end of the second year, he paid a sum of ₹13268. At the end of IIIrd year he paid Rs. x to clear of the debt. Find the value of x.",
+      "options": {
+        "a": "26,400",
+        "b": "26,200",
+        "c": "26,510",
+        "d": "26,620"
+      },
+      "answer": "a",
+      "solution": "Step 1   Two years of growth, row 2 : 1. \n10% of 30,800 = 3,080,  of 3,080 = 308   ⇒  \ninterest = ₹6,468,  amount = ₹37,268 \n Step 2   He pays ₹13,268 at that point. \n37,268 − 13,268 = ₹24,000 still owed \n Step 3   One more year on the balance. \nx = 24,000 × 1.1 = ₹26,400",
+      "q_num": 26
+    },
+    {
+      "question": "For a fixed period an amount of Rs. 60,000 invested at a fixed rate. The amount, whose interest is compounded annually, has increased to Rs. 63,654. If at the same rate, the amount would have been invested for half of the duration, how much would it have increased? ₹60,000",
+      "options": {
+        "a": "61800 Rs.",
+        "b": "61675 Rs.",
+        "c": "61827 Rs.",
+        "d": "61809 Rs."
+      },
+      "answer": "a",
+      "solution": "Step 1   Divide. \n63,654 / 60,000 = 1.0609 = (1.03)²   ⇒  3% a \nperiod over 2 periods \n Step 2   Half the duration is one period. \n60,000 × 1.03 = ₹61,800   ⇒  increase = ₹1,800",
+      "q_num": 27
+    },
+    {
+      "question": "Loan was given at compound interest. The amounts to ₹1250 in 1 year and ₹1458 in 3 years at a certain annual interest rate. What will be the simple interest on this amount at same rate of 5⅖years.",
+      "options": {
+        "a": "₹600",
+        "b": "₹480",
+        "c": "₹500",
+        "d": "₹520 \nLEVEL - 3 \nPay-off schedule\nP = 30800 \nx 1.21 (2 yr)\n37268 \n- 13268 paid\n24000 \nx 1.1 (yr 3)\n26400 = x \nx = 26400 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026"
+      },
+      "answer": "c",
+      "solution": "The two given amounts are two years apart — \nthat gap gives the rate. \n Step 1   Divide them. \n1,458 / 1,250 = 729/625 = (1 + r)²   ⇒  1 + r = 27/25   \n∴  r = 8% \n Step 2   Climb back one year to the sum lent. \nP × 1.08 = 1,250   ⇒  P ≈ ₹1,157.41 \n Step 3   Simple interest on it for 5½ years. \n1,157.41 × 8 × 5.5 / 100 ≈ ₹509  (the printed \noption rounds this to ₹500)",
+      "q_num": 28
+    }
+  ]
+}

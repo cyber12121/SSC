@@ -1,0 +1,174 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Partnership",
+  "questions": [
+    {
+      "question": "A, B and C started a business with their capitals in the ratio 4 : 2 : 9. At the end of every quarter, A halves his capital whereas B doubles his capital and C leaves his capital unchanged. If at the end of a year, A's profit was ₹24,000, then what is the total profit (in ₹)? A, B",
+      "options": {
+        "a": "₹2,30,400",
+        "b": "₹2,35,200",
+        "c": "₹2,16,000",
+        "d": "₹2,25,600"
+      },
+      "answer": "b",
+      "solution": "Step 1   The four quarterly capitals. \nA : 4, 2, 1, 0.5        B : 2, 4, 8, 16        C : 9 throughout \n Step 2   Capital-months. \nA = 3 × 7.5 = 22.5        B = 3 × 30 = 90        C = 12 × \n9 = 108 \n Step 3   Reduce. \n22.5 : 90 : 108 = 5 : 20 : 24   (49 parts) \n Step 4   A's 5 parts are ₹24,000. \n1 part = ₹4,800   ∴  total = 49 × 4,800 = \n₹2,35,200",
+      "q_num": 1
+    },
+    {
+      "question": "A, B and C enter into a partnership with capitals in the ratio 2/3 : 3/5 : 5/6. After 8 months, A increases his share of capital by 25%. If at the end of the year, the total profit earned is ₹5,820 then the share of C in the profit is: A, B",
+      "options": {
+        "a": "₹2,250",
+        "b": "₹2,350",
+        "c": "₹2,450",
+        "d": "₹2,050"
+      },
+      "answer": "a",
+      "solution": "Step 1   Scale 2/3 : 3/5 : 5/6 by 30. \n20 : 18 : 25 \n Step 2   A runs 20 for 8 months, then 25 for 4. \nA = 20×8 + 25×4 = 260        B = 18×12 = 216        C \n= 25×12 = 300 \n Step 3   Reduce and value a part. \n65 : 54 : 75  (194 parts)   ⇒  5,820 / 194 = ₹30 \n Step 4   C holds 75 parts. \n75 × 30 = ₹2,250",
+      "q_num": 2
+    },
+    {
+      "question": "A, B and C started a business with their capitals in the ratio 2 : 3 : 5. A increased his capital by 50% after 4 months, B increased his capital by 33⅓% after 6 months and C withdrew 50% of his capital after 8 months, from the start of the business. If the total profit at the end of a year was ₹86,800, then the difference between the shares of A and C in the profit was: A, B",
+      "options": {
+        "a": "₹7,000",
+        "b": "₹9,800",
+        "c": "₹8,400",
+        "d": "₹12,600"
+      },
+      "answer": "d",
+      "solution": "Step 1   Take the capitals as 200, 300, 500. \nA : 200 for 4 months, then 300 for 8        B : 300 \nfor 6, then 400 for 6        C : 500 for 8, then 250 \nfor 4 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   Capital-months. \nA = 800 + 2,400 = 3,200        B = 1,800 + 2,400 = \n4,200        C = 4,000 + 1,000 = 5,000 \n Step 3   Reduce by 200 and value a part. \n16 : 21 : 25  (62 parts)   ⇒  86,800 / 62 = ₹1,400 \n Step 4   C exceeds A by 9 parts. \n(25 − 16) × 1,400 = ₹12,600",
+      "q_num": 3
+    },
+    {
+      "question": "'A' started a business with a capital of ₹54,000 and admitted 'B' and 'C' after 4 months and 6 months, respectively. At the end of the year, the profit was divided in the ratio 1 : 4 : 5. What is the difference between the capitals invested by 'B' and 'C'? 'A'",
+      "options": {
+        "a": "₹1,62,000",
+        "b": "₹3,24,000",
+        "c": "₹2,16,000",
+        "d": "₹1,08,000"
+      },
+      "answer": "c",
+      "solution": "Step 1   A gives the value of one part. \n54,000 × 12 = 6,48,000  =  1 part \n Step 2   B ran 8 months and holds 4 parts. \n8B = 4 × 6,48,000   ∴  B = ₹3,24,000 \n Step 3   C ran 6 months and holds 5 parts. \n6C = 5 × 6,48,000   ∴  C = ₹5,40,000 \n Step 4   The difference asked for. \n5,40,000 − 3,24,000 = ₹2,16,000",
+      "q_num": 4
+    },
+    {
+      "question": "If Karan invested ₹4,000 and Kiran invested ₹5,000 for a period of 'x' and 'y' months respectively. If Karan receives ₹32,000 as the share from a profit of ₹52,000, then what is the value of x : y?",
+      "options": {
+        "a": "4 : 3",
+        "b": "4 : 1",
+        "c": "3 : 2",
+        "d": "2 : 1"
+      },
+      "answer": "d",
+      "solution": "Step 1   Karan takes 32,000 of 52,000, so Kiran \ntakes 20,000. \nshares = 32,000 : 20,000 = 8 : 5 \n Step 2   Shares are capital × time. \n4,000x / 5,000y = 8/5   ⇒  20x = 40y   ∴  x : y = 2 \n: 1",
+      "q_num": 5
+    },
+    {
+      "question": "Three partners shared the profit in a business in the proportion of 9 : 8 : 11. They invested their capitals for 4 months, 6 months and 18 months, respectively. What was the ratio of their capitals?",
+      "options": {
+        "a": "81 : 16 : 66",
+        "b": "81 : 48 : 22",
+        "c": "27 : 48 : 22",
+        "d": "27 : 16 : 66"
+      },
+      "answer": "b",
+      "solution": "Step 1   Divide the profit terms by the periods. \n9/4 : 8/6 : 11/18 \n Step 2   Clear with the LCM 36. \n81 : 48 : 22",
+      "q_num": 6
+    },
+    {
+      "question": "Two businessmen A and B invest in a business in the ratio 5 : 8. They decided to reinvest 30% of the profit they earned back into the business. The remaining profit they distributed amongst themselves. If A's share of the profit was ₹87,500 then how much profit (in Rs) did the business make?",
+      "options": {
+        "a": "2,27,000",
+        "b": "2,50,000",
+        "c": "3,75,000",
+        "d": "3,25,000"
+      },
+      "answer": "d",
+      "solution": "Step 1   A holds 5 of the 13 parts of what is shared. \n(5/13) × shared = 87,500   ⇒  shared = ₹2,27,500 \n Step 2   That is the 70% left after reinvestment. \ntotal = 2,27,500 / 0.7 = ₹3,25,000 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 7
+    },
+    {
+      "question": "Keshav, Surjeet and Thomas started a business with investments in the ratio 2 : 3 : 4. The ratio of their period of investment is 5 : 6 : 9. Twenty percent of the profit was spent on rent and maintenance of the office. Remaining profit was distributed among themselves. If the difference in the shares of profit of Keshav and Surjeet is ₹7,264, then how much is the total profit (in ₹)? Keshav, Surjeet",
+      "options": {
+        "a": "72,640",
+        "b": "58,112",
+        "c": "46,490",
+        "d": "51,060"
+      },
+      "answer": "a",
+      "solution": "Step 1   Capital × period. \n(2×5) : (3×6) : (4×9) = 10 : 18 : 36 = 5 : 9 : 18   (32 \nparts) \n Step 2   Keshav and Surjeet differ by 4 parts. \n(9 − 5) parts = ₹7,264   ⇒  1 part = ₹1,816 \n Step 3   The shared money is all 32 parts. \n32 × 1,816 = ₹58,112 \n Step 4   That is the 80% left after rent. \ntotal profit = 58,112 / 0.8 = ₹72,640",
+      "q_num": 8
+    },
+    {
+      "question": "A sum (in ₹) is distributed between A, B and C in the ratio 9 : 6 : 11. If A gives ₹500 from his share to C, the ratio of shares of A, B and C becomes 4 : 3 : 6. What is the sum of shares (in ₹) of B and C, in the beginning?",
+      "options": {
+        "a": "₹7,800",
+        "b": "₹7,500",
+        "c": "₹8,500",
+        "d": "₹9,100"
+      },
+      "answer": "c",
+      "solution": "Step 1   Match B in both. \nold 9 : 6 : 11 with B = 6x;  new 4 : 3 : 6 with B = 3 \nunits   ⇒  1 new unit = 2x \n Step 2   A lost ₹500 and now holds 4 units = 8x. \n9x − 500 = 8x   ∴  x = ₹500 \n Step 3   B and C at the start. \n(6 + 11)x = 17 × 500 = ₹8,500",
+      "q_num": 9
+    },
+    {
+      "question": "A, B and C start a business. A invests 33⅓% of the total capital, B invests 25% of the remaining and C, the rest. If the total profit at the end of the year is ₹2,19,000, then A's share (in ₹) is: A, B",
+      "options": {
+        "a": "65,000",
+        "b": "71,000",
+        "c": "73,000",
+        "d": "79,000"
+      },
+      "answer": "c",
+      "solution": "'Percent of the REMAINING' is not a percent of \nthe whole — subtract as you go. \n Step 1   Take the capital as 1. \nA = 1/3        remaining = 2/3        B = ¼ × 2/3 = 1/6        \nC = 1 − 1/3 − 1/6 = 1/2 \n Step 2   Clear the fractions. \nA : B : C = 1/3 : 1/6 : 1/2 = 2 : 1 : 3   (6 parts) \n Step 3   A holds 2 parts. \n2,19,000 / 6 = 36,500   ∴  A = 2 × 36,500 = ₹73,000",
+      "q_num": 10
+    },
+    {
+      "question": "In what ratio must a grocer mix two varieties of rices costings Rs. 128 and Rs 143 per kg respectively so as to get a mixture of rice price at 137.75 per kg?",
+      "options": {
+        "a": "12 : 5",
+        "b": "5 : 4",
+        "c": "7 : 13",
+        "d": "6 : 7"
+      },
+      "answer": "c",
+      "solution": "Step 1   Distance of each price from the mean. \n143 − 137.75 = 5.25        137.75 − 128 = 9.75 \n Step 2   The quantities take the OPPOSITE \ndistances. \n128 : 143 = 5.25 : 9.75 = 21 : 39 = 7 : 13",
+      "q_num": 11
+    },
+    {
+      "question": "If 36 liters of solution containing 20% milk is added to 48 liters of solution containing 10% milk what will be the percentage of milk in the resulting solution?",
+      "options": {
+        "a": "13.36%",
+        "b": "15.48%",
+        "c": "12.38%",
+        "d": "14.28%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Milk in each. \n36 × 20% = 7.2 L        48 × 10% = 4.8 L \n Step 2   Milk over total volume. \n12 / 84 = 1/7 = 14.28%",
+      "q_num": 12
+    },
+    {
+      "question": "A mixture of 70 liters of wine and water contain 10% water. How much water needs to be added to make the amount of water in the resulting mixture 12.5%? 70",
+      "options": {
+        "a": "5 Liter",
+        "b": "4 Lite",
+        "c": "2 Liter",
+        "d": "3 Liter"
+      },
+      "answer": "c",
+      "solution": "Step 1   Split the 70 L. \nwater 10% = 7 L        wine = 63 L  (this stays) \n Step 2   Wine must become 87.5% of the new \ntotal. \n63 = 87.5% of total   ⇒  total = 72 L \n Step 3   So the water rises from 7 to 9. \n9 − 7 = 2 L added",
+      "q_num": 13
+    },
+    {
+      "question": "470 liters of a mixture of milk and water contains 5% of water. A mischievous boy MIXTURE & ALLIGATION LEVEL - 1 Alligation about mean 137.75 Rs.128 Rs.143 128 143 137.75 5.25 9.75 128 : 143 = 5.25 : 9.75 = 7 : 13 Milk from each solution adds up (total 84 L) 36 L @ 20% milk 7.2 rest 28.8 48 L @ 10% milk 4.8 rest 43.2 84 L milk 12 rest 72 milk % = 12 / 84 = 1/7 = 14.28% Wine stays 63 L; only water is added 10% water wine 63 water 7 12.5% water wine 63 water 9 wine 63 = 87.5% of total -> total 72 -> add 9 - 7 = 2 L simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 added some water in the mixture and now there is 6% water in the new mixture. Find the quantity of water added by the boy in the mixture. 470",
+      "options": {
+        "a": "6 Liters",
+        "b": "5 Liters",
+        "c": "8 Liters",
+        "d": "10 \nLiters"
+      },
+      "answer": "b",
+      "solution": "Step 1   Split the 470 L. \nwater 5% = 23.5 L        milk = 446.5 L  (this stays) \n Step 2   Milk must become 94% of the new total. \n446.5 = 94% of total   ⇒  total = 475 L \n Step 3   Water added. \n475 − 470 = 5 L",
+      "q_num": 14
+    }
+  ]
+}

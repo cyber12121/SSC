@@ -1,0 +1,174 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Pipe and Cistern",
+  "questions": [
+    {
+      "question": "Two pipes S1 and S2 alone can fill an empty tank in 15 hours and 20 hours respectively. Pipe S3 alone can empty the completely filled tank in 40 hours. Firstly, both S1 and S2 are opened and after 2 hours S3 is also opened. In how much time will the tank be completely filled after S3 is opened?",
+      "options": {
+        "a": "92/11 Hrs",
+        "b": "90/13 Hrs",
+        "c": "90/17 Hrs",
+        "d": "89/12 Hrs"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the tank as 120 units. \nS1 = 8,   S2 = 6,   S3 = −3 \n Step 2   The first two hours, before S3. \n(8 + 6) × 2 = 28 units   ⇒  92 units left \n Step 3   Now all three run. \n8 + 6 − 3 = 11 units an hour   ⇒  92/11 hours",
+      "q_num": 1
+    },
+    {
+      "question": "Pipes A and B can fill a tank in 16 hours and 24 hours, respectively. Whereas pipe C can empty the full tank in 40 hours. All three pipes are opened together, but pipe A is closed after 10 hours. After how many hours will the remaining part of the tank be filled?",
+      "options": {
+        "a": "10",
+        "b": "20",
+        "c": "15½",
+        "d": "12½"
+      },
+      "answer": "d",
+      "solution": "Step 1   Take the tank as 240 units. \nA = 15,   B = 10,   C = −6 \n Step 2   First ten hours, all three. \n(15 + 10 − 6) × 10 = 190 units   ⇒  50 left \n Step 3   A is closed; B and C carry on. \n50 / (10 − 6) = 12½ hours",
+      "q_num": 2
+    },
+    {
+      "question": "Pipes A and B can fill a tank in 12 hours & 16 hours respectively and pipe C can empty the full tank in 24 hours. All three pipes are opened together, but after 4 hours pipe B is closed. In how many hours will the empty tank be completely filled?",
+      "options": {
+        "a": "18",
+        "b": "32",
+        "c": "28",
+        "d": "14"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the tank as 48 units. \nA = 4,   B = 3,   C = −2 \n Step 2   First four hours, all three. \n(4 + 3 − 2) × 4 = 20 units   ⇒  28 left \n Step 3   A and C finish it. \n28 / (4 − 2) = 14 hours \n Step 4   Total. \n4 + 14 = 18 hours",
+      "q_num": 3
+    },
+    {
+      "question": "Pipes A and B are filling pipes while pipe C is an emptying pipe. A and B can fill a tank in 72 and 90 minutes respectively. When all three pipes are opened together, the tank gets filled in 2 hours. A and B are opened together for 12 minutes, then closed and C is opened. The tank will be empty after:",
+      "options": {
+        "a": "12 min",
+        "b": "15 min",
+        "c": "18 min",
+        "d": "16 min"
+      },
+      "answer": "c",
+      "solution": "Step 1   Take the tank as 360 units. \nA = 5,   B = 4,   and all three together = 360/120 \n= 3 \n Step 2   So C must be swallowing the difference. \nC = (5 + 4) − 3 = 6 units a minute \n Step 3   A and B run for 12 minutes. \n(5 + 4) × 12 = 108 units \n Step 4   C alone drains that. \n108 / 6 = 18 minutes",
+      "q_num": 4
+    },
+    {
+      "question": "Pipes A, B and C can fill a tank in 30h, 40h and 60h respectively. Pipes A, B and C are opened at 7 am, 8 am and 10 am, respectively on the same day. When will the tank be full?",
+      "options": {
+        "a": "10:00 PM",
+        "b": "9:20 PM",
+        "c": "10:20 PM",
+        "d": "9:40 PM"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take the tank as 120 units. \nA = 4,   B = 3,   C = 2 \n Step 2   7–8 am, A alone; 8–10 am, A and B. \n4 + (4 + 3) × 2 = 18 units by 10 am   ⇒  102 left \n Step 3   From 10 am all three run. \n102 / 9 = 11 h 20 min \n Step 4   Add it to 10 am. \n10:00 am + 11 h 20 min = 9:20 PM",
+      "q_num": 5
+    },
+    {
+      "question": "Pipes A and B can fill a tank in one hour and two hours respectively while pipe C can empty the filled up tank in one hour and fifteen minutes. A and C are turned on together at 9 am. After 2 hours, only A is closed and B is turned on. When will the tank be emptied?",
+      "options": {
+        "a": "10:30 am",
+        "b": "12:20 pm",
+        "c": "11:30 am",
+        "d": "12:10 pm"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take the tank as 20 units. \nA = 20,   B = 10,   C = −16 \n Step 2   9 am to 11 am, A and C. \n(20 − 16) × 2 = 8 units standing in the tank \n Step 3   A closes, B opens — now the net rate is \nnegative. \n10 − 16 = −6 units an hour \n Step 4   Time to drain the 8 units. \n8 / 6 = 1 h 20 min   ⇒  11:00 am + 1 h 20 min = \n12:20 pm",
+      "q_num": 6
+    },
+    {
+      "question": "Pipes A and B can fill a tank in 10 hours and 40 hours, respectively. C is an outlet pipe. If all three pipes are opened simultaneously, it takes 80 minutes more than A and B together to fill the tank. A and B are kept opened for 7 hours then closed and C was opened. C will now empty the tank in:",
+      "options": {
+        "a": "42 hours",
+        "b": "49 hours",
+        "c": "45.5 hours",
+        "d": "38.5 hours"
+      },
+      "answer": "b",
+      "solution": "Step 1   A and B together. \n1/10 + 1/40 = 1/8   ⇒  8 hours \n Step 2   With C it takes 80 minutes longer. \n8 + 4/3 = 28/3 hours   ⇒  combined rate = 3/28 \n Step 3   So C's own rate. \n1/8 − 3/28 = 1/56   ⇒  C empties in 56 hours \n Step 4   A and B run 7 hours, then C drains what \nis there. \n7 × 1/8 = 7/8 filled   ⇒  (7/8) × 56 = 49 hours",
+      "q_num": 7
+    },
+    {
+      "question": "Two inlets A and B are connected to a tank. A and B can fill the tank in 32 hours and 28 hours respectively. If both the pipes starting from A are opened one by one for 1 hour then in what time will the tank be filled (in hours, rounded to the nearest integer)?",
+      "options": {
+        "a": "36",
+        "b": "22",
+        "c": "24",
+        "d": "30"
+      },
+      "answer": "d",
+      "solution": "Step 1   Take the tank as 224 units. \nA = 7,   B = 8   ⇒  one 2-hour cycle = 15 units \n Step 2   How many whole cycles fit. \n14 cycles = 28 hours = 210 units   ⇒  14 units left \n Step 3   Hour 29 is A's turn. \nA adds 7   ⇒  7 units still left \n Step 4   Hour 30 is B's, and B only needs part of \nit. \n7/8 of an hour   ⇒  total ≈ 29.9 hours,  i.e. 30 to \nthe nearest integer",
+      "q_num": 8
+    },
+    {
+      "question": "Pipes A and B can fill a tank in 16 hours and 24 hours, respectively, and pipe C alone can empty the full tank in x hours. All pipes were opened together at 10:30 am, but C was closed at 2:30 pm. If the tank was full at 8:30 pm on the same day, then what is the value of x?",
+      "options": {
+        "a": "48 hours",
+        "b": "96 hours",
+        "c": "45 hours",
+        "d": "64 hours"
+      },
+      "answer": "b",
+      "solution": "Step 1   Take the tank as 48 units; the clock runs \n10:30 am to 8:30 pm, i.e. 10 hours. \nA = 3,   B = 2   ⇒  A + B = 5 units an hour \n Step 2   First 4 hours with C, then 6 hours \nwithout. \n4(5 − 48/x) + 6(5) = 48 \n Step 3   Solve. \n50 − 192/x = 48   ⇒  192/x = 2   ∴  x = 96 hours",
+      "q_num": 9
+    },
+    {
+      "question": "A and B can do a work in 4 days. B and C can do the same work in 5 days. C and A can do the same work in 10 days. If A, B, C work together, in how many days can they complete the work? A",
+      "options": {
+        "a": "3⁷⁄₁₁",
+        "b": "11³⁄₇",
+        "c": "3¹¹⁄₇",
+        "d": "11⁷⁄₃"
+      },
+      "answer": "a",
+      "solution": "Step 1   Add the three rates. \n1/4 + 1/5 + 1/10 = 11/20,  and this is 2(A + B + C) \n Step 2   Halve it. \nA + B + C = 11/40   ⇒  together they take 40/11 \n= 3 7/11 days",
+      "q_num": 10
+    },
+    {
+      "question": "100 workers can dig a 2000m long canal in 25 days by working 8 hours daily. Find the number of workers required to dig a similar canal of 2800m long in 32 days working 5 hours daily. 100",
+      "options": {
+        "a": "175",
+        "b": "170",
+        "c": "165",
+        "d": "180"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write each factor as new-over-old (or its \ninverse for days and hours). \nworkers = 100 × (2800/2000) × (25/32) × (8/5) \n Step 2   Multiply. \n100 × 1.4 × 25/32 × 1.6 = 175 workers",
+      "q_num": 11
+    },
+    {
+      "question": "A man can complete a work in 12 days and a woman can complete the same work in 10 days. 2 men and 3 women work on alternate days and the man starts work on the first day. The work will be completed within _________ days.",
+      "options": {
+        "a": "24/5",
+        "b": "21/5",
+        "c": "22/3",
+        "d": "22/5"
+      },
+      "answer": "d",
+      "solution": "Step 1   A day of men and a day of women. \n2 men = 2/12 = 1/6        3 women = 3/10 \n Step 2   So one cycle of two days. \n1/6 + 3/10 = 7/15   ⇒  four days = 14/15,  leaving \n1/15 \n Step 3   Day five is the men's turn. \n(1/15) ÷ (1/6) = 2/5 day   ∴  total = 4 + 2/5 = 22/5 \ndays",
+      "q_num": 12
+    },
+    {
+      "question": "If a man completes a work in 10 days and the same work completed by a woman in 8 days. If they work together, in how many days will the work be completed?",
+      "options": {
+        "a": "40/9",
+        "b": "42/9",
+        "c": "40/7",
+        "d": "38/8"
+      },
+      "answer": "a",
+      "solution": "Step 1   Add them. \n1/10 + 1/8 = 9/40 \n Step 2   Invert. \n40/9 days",
+      "q_num": 13
+    },
+    {
+      "question": "In a camp of 70 boys, there are food provisions for 36 days. If 50 more boys join the camp, how many days will the food provision last? TIME & WORK LEVEL - 1 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 70",
+      "options": {
+        "a": "18 Days",
+        "b": "24 Days",
+        "c": "21 Days",
+        "d": "25 \nDays"
+      },
+      "answer": "c",
+      "solution": "Step 1   The stock. \n70 × 36 = 2,520 boy-days \n Step 2   Shared among the new head-count. \n2,520 / 120 = 21 days",
+      "q_num": 14
+    }
+  ]
+}

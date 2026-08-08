@@ -1,0 +1,366 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average",
+  "questions": [
+    {
+      "question": "The average marks of 40 students was found to be 68. If the marks of two students were incorrectly entered as 48 and 64 instead of 84 and 46 respectively, what is the correct average? 40",
+      "options": {
+        "a": "68",
+        "b": "68.45",
+        "c": "69",
+        "d": "69.45"
+      },
+      "answer": "b",
+      "solution": "Step 1   Net correction. \n(84 − 48) + (46 − 64) = 36 − 18 = +18 \n Step 2   Over 40 students. \n18 / 40 = 0.45   ∴  correct average = 68 + 0.45 = \n68.45",
+      "q_num": 1
+    },
+    {
+      "question": "The average age of a father and his two sons is 27 years. Five years ago, the average age of the two sons was 12 years. What is the present age of the father?",
+      "options": {
+        "a": "42",
+        "b": "34",
+        "c": "49",
+        "d": "47"
+      },
+      "answer": "d",
+      "solution": "Step 1   The three together. \n3 × 27 = 81 years \n Step 2   The sons, five years on. \naverage 12 + 5 = 17 each   ⇒  34 together \n Step 3   The father is the rest. \n81 − 34 = 47 years",
+      "q_num": 2
+    },
+    {
+      "question": "The average of 10 consecutive even numbers is 25. If the even number immediately preceding the smallest number is also included, what will be the new average? 10 Ţ",
+      "options": {
+        "a": "23",
+        "b": "9",
+        "c": "24",
+        "d": "11"
+      },
+      "answer": "c",
+      "solution": "Step 1   Ten consecutive evens n … n+18. \naverage = n + 9 = 25   ⇒  n = 16,  so they run 16 \nto 34 \n Step 2   Bring in the even number just below. \n14 joins them   ⇒  sum = 250 + 14 = 264 over 11 \nnumbers \n Step 3   New average. \n264 / 11 = 24",
+      "q_num": 3
+    },
+    {
+      "question": "The average of 7 consecutive odd numbers is A. If next 3 and previous 2 odd numbers to these 7 are also included, what is the new average of these 12 consecutive odd numbers? 7 Ţ",
+      "options": {
+        "a": "A+1",
+        "b": "A-2",
+        "c": "A+2",
+        "d": "A+3"
+      },
+      "answer": "a",
+      "solution": "Step 1   Seven consecutive odds have their middle \nat A. \nthey run A−6 … A+6 \n Step 2   Add the next 3 and the previous 2. \nnow A−10 … A+12,  twelve numbers \n Step 3   The new middle is halfway between A \nand A+2. \nnew average = A + 1",
+      "q_num": 4
+    },
+    {
+      "question": "The average of the three-digit numbers 432, 407, x32, 4x1 and 38x is 508. Find the average of (x+1), (x-2), (x+3) and (x+2). 432, 407, x32, 4x1",
+      "options": {
+        "a": "9",
+        "b": "4",
+        "c": "3",
+        "d": "5"
+      },
+      "answer": "a",
+      "solution": "Step 1   The five numbers total. \n5 × 508 = 2,540 \n Step 2   Units column: 2 + 7 + 2 + 1 + x must end in \n0. \n12 + x   ⇒  x = 8 \n Step 3   Now the four expressions. \n(9 + 6 + 11 + 10)/4 = 36/4 = 9",
+      "q_num": 5
+    },
+    {
+      "question": "The average marks obtained by Raghav in 12 tests is 24. Zubeida has maintained an average of 23 so far but has taken only 9 tests. Each test is out of 30 marks. At least how much must Zubeida score in any one of the remaining three tests to still have a chance to match Raghav's performance?",
+      "options": {
+        "a": "21",
+        "b": "22",
+        "c": "20",
+        "d": "19"
+      },
+      "answer": "a",
+      "solution": "Step 1   The target and what she has. \nRaghav : 12 × 24 = 288        Zubeida : 9 × 23 = \n207 \n Step 2   Still needed over three tests. \n288 − 207 = 81 \n Step 3   Push two tests to the maximum 30. \n81 − 60 = 21   ∴  at least 21 in the third",
+      "q_num": 6
+    },
+    {
+      "question": "Raman had a certain average after 9 innings. He scores 100 runs in the 10th innings, due to which his average increases by 8 runs. What is his new average?",
+      "options": {
+        "a": "20",
+        "b": "24",
+        "c": "22",
+        "d": "28"
+      },
+      "answer": "d",
+      "solution": "Step 1   Nine earlier innings each rise by 8. \n9 × 8 = 72 runs of the century are used up \n Step 2   What is left is the new average. \n100 − 72 = 28",
+      "q_num": 7
+    },
+    {
+      "question": "In a one-day match, Team A scored runs at the rate of 5.3 runs per over in 50 overs. Team B is playing with 5 overs left and the run rate required to equal Team A's score is 7.2 runs per over. What is the score of Team B now?",
+      "options": {
+        "a": "265",
+        "b": "238",
+        "c": "254",
+        "d": "229"
+      },
+      "answer": "d",
+      "solution": "Step 1   Team A's total. \n5.3 × 50 = 265 \n Step 2   What B still needs. \n7.2 × 5 = 36 \n Step 3   So B is on. \n265 − 36 = 229",
+      "q_num": 8
+    },
+    {
+      "question": "What is the average of all numbers between 100 and 200 which are divisible by 13? 100",
+      "options": {
+        "a": "147.5",
+        "b": "145.5",
+        "c": "143.5",
+        "d": "149.5"
+      },
+      "answer": "d",
+      "solution": "An evenly spaced list averages to (first + last)/2 \n— no counting needed. \n Step 1   First and last multiples of 13 in range. \n13 × 8 = 104        13 × 15 = 195 \n Step 2   Average them. \n(104 + 195)/2 = 149.5",
+      "q_num": 9
+    },
+    {
+      "question": "The average of 17 consecutive natural numbers is 30. If 5 previous consecutive natural numbers are also included, what is the smallest number among these 22 numbers? 17 Ţ",
+      "options": {
+        "a": "13",
+        "b": "17",
+        "c": "16",
+        "d": "18.9"
+      },
+      "answer": "b",
+      "solution": "Middle-is-the-average again, \n Step 1   17 consecutive naturals with average 30. \nmiddle = 30   ⇒  they run 22 to 38 \n Step 2   Five earlier numbers join. \nsmallest = 22 − 5 = 17",
+      "q_num": 10
+    },
+    {
+      "question": "The average of 6 members of a family is 25 years. If the age of the youngest member is 4 years, what was the average age of the family just before the birth of the youngest member?",
+      "options": {
+        "a": "27.2 years",
+        "b": "32.8 years",
+        "c": "24.8 years",
+        "d": "25.2 years"
+      },
+      "answer": "d",
+      "solution": "Two things must happen: drop the member who \ndid not exist, and wind everyone else back. \n Step 1   The family now. \n6 × 25 = 150 years \n Step 2   Remove the youngest and wind the \nother five back 4 years each. \n(150 − 4) − 5(4) = 146 − 20 = 126 \n Step 3   Average over the five. \n126 / 5 = 25.2 years",
+      "q_num": 11
+    },
+    {
+      "question": "A student's marks were mistakenly written as 44 instead of 86. Due to this error, the average marks of the class decreased by 3/2. What is the number of students in the class?",
+      "options": {
+        "a": "36",
+        "b": "24",
+        "c": "28",
+        "d": "30"
+      },
+      "answer": "c",
+      "solution": "Step 1   The error. \n86 − 44 = 42 marks lost \n Step 2   It moved the average by 3/2. \nn = 42 ÷ 1.5 = 28 students",
+      "q_num": 12
+    },
+    {
+      "question": "In a family of six men and some women, the average monthly consumption of grains per person is 14.4 kg. The average monthly consumption per person is 20 kg for men and 6 kg for women. Find the number of women in the family.",
+      "options": {
+        "a": "6",
+        "b": "8",
+        "c": "4",
+        "d": "7"
+      },
+      "answer": "c",
+      "solution": "Step 1   Distances from the overall 14.4. \nmen : 20 − 14.4 = 5.6        women : 14.4 − 6 = 8.4 \n Step 2   Group sizes take the opposite distances. \nmen : women = 8.4 : 5.6 = 3 : 2 \n Step 3   Six men is 3 parts. \n1 part = 2   ∴  women = 2 parts = 4 \nLEVEL - 2 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 13
+    },
+    {
+      "question": "The average of some numbers is 54.6. If 75% of the numbers are increased by 5.6 each and the rest are decreased by 8.4 each, what is the new average?",
+      "options": {
+        "a": "55.8",
+        "b": "55.6",
+        "c": "56.3",
+        "d": "56.7"
+      },
+      "answer": "d",
+      "solution": "Step 1   Weighted movement. \n0.75(+5.6) + 0.25(−8.4) = 4.2 − 2.1 = +2.1 \n Step 2   New average. \n54.6 + 2.1 = 56.7",
+      "q_num": 14
+    },
+    {
+      "question": "A zoo has an average of 500 visitors on Sunday and 200 on other days. The average number of visitors per day in a 30-day month beginning with a Sunday is:",
+      "options": {
+        "a": "225",
+        "b": "275",
+        "c": "300",
+        "d": "250"
+      },
+      "answer": "d",
+      "solution": "Count the special days first — a 30-day month \nstarting on Sunday holds exactly 5 of them. \n Step 1   Split the month. \n5 Sundays,  25 other days \n Step 2   Total visitors. \n5(500) + 25(200) = 2,500 + 5,000 = 7,500 \n Step 3   Per day. \n7,500 / 30 = 250",
+      "q_num": 15
+    },
+    {
+      "question": "The average weight of 30 students in a class is 45 kg. A student whose weight is 48.5 kg is replaced by another student, and the average weight increases by 200 gm. Find the weight of the new student. 30",
+      "options": {
+        "a": "50 kg",
+        "b": "51 kg",
+        "c": "54.5 kg",
+        "d": "55 kg"
+      },
+      "answer": "c",
+      "solution": "Step 1   The total rises. \n200 g × 30 = 6,000 g = 6 kg \n Step 2   That whole rise sits on the new student. \n48.5 + 6 = 54.5 kg",
+      "q_num": 16
+    },
+    {
+      "question": "In a company with 600 employees, the average age of male employees is 42 years and of female employees is 41 years. If the overall average age is 41 years 9 months, the number of female employees is: 600",
+      "options": {
+        "a": "450",
+        "b": "350",
+        "c": "150",
+        "d": "250"
+      },
+      "answer": "c",
+      "solution": "Alligation again, this time on ages. \n Step 1   41 years 9 months as a decimal. \n41.75 \n Step 2   Distances. \n42 − 41.75 = 0.25        41.75 − 41 = 0.75   ⇒  men : \nwomen = 3 : 1 \n Step 3   Split the 600. \nwomen = ¼ × 600 = 150 \nmen : women = 3 : 2\ncheaper\ndearer\nwomen 6\nmen 20\n14.4\n8.4\n5.6\n3 : 2 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 17
+    },
+    {
+      "question": "The average of marks of 25 students was 19. The teacher realized that two students' marks were taken as 18 and 19 instead of 14 and 15. Find the new correct average. 25",
+      "options": {
+        "a": "17.43",
+        "b": "16.56",
+        "c": "18.68",
+        "d": "17.65"
+      },
+      "answer": "c",
+      "solution": "Step 1   Net change. \n(14 + 15) − (18 + 19) = −8 \n Step 2   Over 25 students. \n−8/25 = −0.32   ∴  19 − 0.32 = 18.68",
+      "q_num": 18
+    },
+    {
+      "question": "Three numbers are such that if the average of any two of them is added to the third, the sums obtained are 168, 174 and 180 respectively. What is the average of the original three numbers?",
+      "options": {
+        "a": "86",
+        "b": "87",
+        "c": "84",
+        "d": "89"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write them. \n(a+b)/2 + c = 168        (b+c)/2 + a = 174        (a+c)/2 \n+ b = 180 \n Step 2   Add. \n(a+b+c) + (a+b+c) = 522   ⇒  a + b + c = 261 \n Step 3   Average. \n261 / 3 = 87",
+      "q_num": 19
+    },
+    {
+      "question": "Three numbers are such that when the average of any two of them is added to the third, the results are 180, 168, and 150 respectively. What is the average of the original three numbers?",
+      "options": {
+        "a": "83",
+        "b": "84",
+        "c": "85",
+        "d": "86"
+      },
+      "answer": "a",
+      "solution": "Step 1   Add all three. \n2(a + b + c) = 180 + 168 + 150 = 498   ⇒  a + b + c \n= 249 \n Step 2   Average. \n249 / 3 = 83",
+      "q_num": 20
+    },
+    {
+      "question": "A person estimates his weight as more than 70 but less than 80 kg. His friend estimates it as more than 74 but less than 84 kg. His mother says it is less than 78 kg. Assuming the weight is an integer and all are correct, what is the average of the possible weights?",
+      "options": {
+        "a": "76.5 kg",
+        "b": "76 kg",
+        "c": "77 kg",
+        "d": "75 kg"
+      },
+      "answer": "b",
+      "solution": "Step 1   Intersect the ranges. \n70 < w < 80,   74 < w < 84,   w < 78   ⇒   74 < w \n< 78 \n Step 2   Whole numbers in that gap. \n75, 76, 77   ⇒  average = 76",
+      "q_num": 21
+    },
+    {
+      "question": "A student finds the average of ten 2- digit numbers. While copying, he writes one number with its digits interchanged. As a result, his answer is 3.6 less than the correct male : female = 3 : 1 cheaper dearer female 41 male 42 41.75 0.75 0.25 3 : 1 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 answer. The difference of the digits of the number in which he made the mistake is:",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "9",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": "Swapping the digits of a two-digit number \nalways changes it by a multiple of 9. \n Step 1   The change. \n(10x + y) − (10y + x) = 9(x − y) \n Step 2   The average fell 3.6 over ten numbers. \ntotal fell 36   ⇒  9(x − y) = 36   ∴  x − y = 4",
+      "q_num": 22
+    },
+    {
+      "question": "The average age of 7 members of a family is 35 years. The youngest members are twins aged 15 years. What was the average age of the family at the time of the birth of the twins? 7",
+      "options": {
+        "a": "25",
+        "b": "27",
+        "c": "28",
+        "d": "30"
+      },
+      "answer": "c",
+      "solution": "Step 1   The family now. \n7 × 35 = 245 years \n Step 2   Remove the twins and wind the other \nfive back 15 years each. \n(245 − 30) − 5(15) = 215 − 75 = 140 \n Step 3   Average over the five. \n140 / 5 = 28 years",
+      "q_num": 23
+    },
+    {
+      "question": "x, y and z are three positive numbers such that y is 4/5 times of x and z is 5/8 times of y. If the average of reciprocals of x, y and z is 17/240, then the average of 3 times of x and 5 times of y will be: x, y, z",
+      "options": {
+        "a": "60",
+        "b": "45",
+        "c": "70",
+        "d": "40"
+      },
+      "answer": "c",
+      "solution": "Step 1   Let x = 10. \ny = 4/5 × 10 = 8        z = 5/8 × 8 = 5 \n Step 2   Average of the reciprocals. \n(1/10 + 1/8 + 1/5)/3 = (17/40)/3 = 17/120 \n Step 3   Given 17/240, so the real numbers are \ndouble. \nx = 20,  y = 16,  z = 10 \n Step 4   Now the average asked for. \n(3x + 5y)/2 = (60 + 80)/2 = 70",
+      "q_num": 24
+    },
+    {
+      "question": "Average of a, b, c and d is 2d+4. Also, the average of a & b is 8, b & c is 5, and c & d is 4. If e = a+d+1, what is the average of d and e? a, b, c",
+      "options": {
+        "a": "3",
+        "b": "8",
+        "c": "8.5",
+        "d": "7"
+      },
+      "answer": "b",
+      "solution": "Step 1   The four together. \na + b + c + d = 4(2d + 4) = 8d + 16 \n Step 2   The pairs. \na + b = 16        b + c = 10        c + d = 8 \n Step 3   Adding the three pairs gives a + 2b + 2c \n+ d = 34. \n(8d + 16) + 10 = 34   ⇒  d = 1 \n Step 4   Then e and the answer. \nc = 7, b = 3, a = 13   ⇒  e = a + d + 1 = 15   ∴  (d + \ne)/2 = 8",
+      "q_num": 25
+    },
+    {
+      "question": "A book contains pages starting from Page number 1. A page is torn. The sum of remaining page numbers is 824. Find the page numbers of the torn page.",
+      "options": {
+        "a": "17, 18",
+        "b": "19, 20",
+        "c": "18, 19",
+        "d": "20, 21"
+      },
+      "answer": "c",
+      "solution": "A torn LEAF carries two consecutive page \nnumbers, so the missing sum is odd. \n Step 1   Find the nearest triangular number \nabove 824. \n41 × 42 / 2 = 861 \n Step 2   So the leaf carried. \n861 − 824 = 37 \n Step 3   Two consecutive numbers summing to \n37. \n2x + 1 = 37   ⇒  x = 18   ∴  pages 18 and 19",
+      "q_num": 26
+    },
+    {
+      "question": "A is the average of 10 numbers. B is the average after 2 numbers",
+      "options": {
+        "a": "21",
+        "b": "14",
+        "c": "12",
+        "d": "26"
+      },
+      "answer": "b",
+      "solution": "Step 1   Out with two, in with three. \n10A − 2(48) + 3(56) = 10A + 72,  now over 11 \nnumbers \n Step 2   So 10A + 72 = 11B, with A + B = 438. \n11A + 10A + 72 = 11 × 438   ⇒  21A = 4,746   ⇒  A = \n226,  B = 212 \n Step 3   Difference. \n226 − 212 = 14",
+      "q_num": 27
+    },
+    {
+      "question": "The average score of a cricketer for 20 matches is 52. His highest score exceeds his lowest by 120. Excluding these two innings, the average of remaining 18 matches is 50. Find the highest score. 20",
+      "options": {
+        "a": "125",
+        "b": "130",
+        "c": "120",
+        "d": "140"
+      },
+      "answer": "b",
+      "solution": "Excluding two innings hands you their SUM — \npair it with the given difference. \n Step 1   Totals. \n20 × 52 = 1,040        18 × 50 = 900 \n Step 2   So the two extremes. \nH + L = 140,   and  H − L = 120 \n Step 3   Add and halve. \n2H = 260   ∴  H = 130",
+      "q_num": 28
+    },
+    {
+      "question": "There are 75 students in a hostel. Due to new admission, 15 new students joined the mess, and the daily expenditure of the mess increased by Rs. 240, while the average expenditure per student decreased by Rs. 5. What was the original expenditure of the mess (in Rs)?",
+      "options": {
+        "a": "₹4,350",
+        "b": "₹3,540",
+        "c": "₹4,530",
+        "d": "₹3,450"
+      },
+      "answer": "d",
+      "solution": "Write the mess bill both ways — before and after \n— and set them equal. \n Step 1   Let the old average be x. \nold total = 75x        new total = 75x + 240 over \n90 students at (x − 5) \n Step 2   Equate. \n90(x − 5) = 75x + 240   ⇒  15x = 690   ⇒  x = 46 \n Step 3   Original expenditure. \n75 × 46 = ₹3,450",
+      "q_num": 29
+    },
+    {
+      "question": "The average of eleven numbers is 56. The average of the first three is 52 and the next five is 60. The 9th and 10th numbers are 3 and 1 more than the 11th respectively. Find the average of the 9th and 11th numbers. 11",
+      "options": {
+        "a": "54",
+        "b": "53.5",
+        "c": "52.5",
+        "d": "52"
+      },
+      "answer": "b",
+      "solution": "Step 1   Total, and the two known groups. \n11 × 56 = 616        3 × 52 = 156        5 × 60 = 300 \n Step 2   The last three. \n616 − 456 = 160 \n Step 3   With the 9th and 10th above the 11th by \n3 and 1. \n3x + 4 = 160   ⇒  11th = 52,  9th = 55 \n Step 4   Average of the 9th and 11th. \n(55 + 52)/2 = 53.5",
+      "q_num": 30
+    }
+  ]
+}

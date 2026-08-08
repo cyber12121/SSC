@@ -1,0 +1,258 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Partnership",
+  "questions": [
+    {
+      "question": "A certain sum is divided between four people in the ratio 3 : 4 : 7 : 8, respectively. If the amount received by D is ₹408 more than the amount received by B, what is the total amount received by C and D?",
+      "options": {
+        "a": "₹1,530",
+        "b": "₹1,630",
+        "c": "₹1,510",
+        "d": "₹1,610"
+      },
+      "answer": "a",
+      "solution": "Step 1   D exceeds B by 4 parts. \n(8 − 4) parts = ₹408   ⇒  1 part = ₹102 \n Step 2   C and D together. \n(7 + 8) = 15 parts = ₹1,530",
+      "q_num": 1
+    },
+    {
+      "question": "If a sum of ₹1,180 is to be divided among A, B and C, such that 2 times A's share, 5 times B's share and 7 times C's share, are equal, then A's share is:",
+      "options": {
+        "a": "₹750",
+        "b": "₹500",
+        "c": "₹650",
+        "d": "₹700"
+      },
+      "answer": "d",
+      "solution": "Step 1   Turn the equalities into a ratio. \n2A = 5B = 7C   ⇒  A : B : C = 1/2 : 1/5 : 1/7 = 35 : 14 \n: 10 \n Step 2   Value a part. \n59 parts = ₹1,180 ⇒ 1 part = ₹20   ∴  A = 35 × 20 \n= ₹700",
+      "q_num": 2
+    },
+    {
+      "question": "A, B and C are partners in a business. A whose capital has been used for 5 months, claims 1/7 of the profit. B whose capital has been used for 7 months, claims 1/5 of the profit. C has invested ₹4,600 for 9 months. How much capital did A contribute? A, B",
+      "options": {
+        "a": "₹1,800",
+        "b": "₹1,650",
+        "c": "₹1,600",
+        "d": "₹1,850"
+      },
+      "answer": "a",
+      "solution": "Step 1   Common denominator 35. \nA = 1/7 = 5/35        B = 1/5 = 7/35        C = 35 − 5 − \n7 = 23/35 \n Step 2   So the profit ratio is 5 : 7 : 23, and C's \ncapital-months are known. \nC : 4,600 × 9 = 41,400 stands for 23 parts   ⇒  1 \npart = ₹1,800 \n Step 3   A's own capital-months are 5x, worth 5 \nparts. \n5x = 5 × 1,800   ∴  x = ₹1,800",
+      "q_num": 3
+    },
+    {
+      "question": "The profit earned by a company is to be divided among three friends who invested their money in the company, in the proportion of 6 : 9 : 11. If the share of the person who invested the most is ₹2,310, then what is the sum of the money (in ₹) received by the other two friends?",
+      "options": {
+        "a": "1,890",
+        "b": "3,150",
+        "c": "5,460",
+        "d": "1,260"
+      },
+      "answer": "b",
+      "solution": "18,144 in 3:5:8\nA 3402\nB 5670 \nC 9072 \nB - A = 2/16 x 18144 = 2268 \n1180 in 35:14:10\nA 700 \nB 280 \nC 200\ntotal 59; A = 35 x 20 = 700 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nStep 1   Value one part. \n11 parts = ₹2,310   ⇒  1 part = ₹210 \n Step 2   The other two together. \n(6 + 9) = 15 parts = ₹3,150",
+      "q_num": 4
+    },
+    {
+      "question": "Ramesh started a business investing a sum of ₹40,000. Six months later, Kevin joined by investing ₹20,000. If they make a profit of ₹10,000 at the end of the year, how much is the share of Kevin? Ramesh",
+      "options": {
+        "a": "₹3,000",
+        "b": "₹4,000",
+        "c": "₹2,500",
+        "d": "₹2,000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Multiply each by the months it stayed in. \nRamesh 40,000 × 12 = 4,80,000        Kevin \n20,000 × 6 = 1,20,000   ⇒  4 : 1 \n Step 2   Split the profit. \n5 parts = ₹10,000 ⇒ 1 part = ₹2,000   ∴  Kevin = \n₹2,000",
+      "q_num": 5
+    },
+    {
+      "question": "A sum of ₹12,992 is divided among A, B and C such that the ratio of the shares of A and C is 4 : 15 and that of the shares of A and B is 2 : 5. The difference (in ₹) between the shares of B and C is: ₹12,992",
+      "options": {
+        "a": "1,792",
+        "b": "3,136",
+        "c": "2,240",
+        "d": "2,688"
+      },
+      "answer": "c",
+      "solution": "Step 1   Line them up on A. \nA : C = 4 : 15        A : B = 2 : 5 = 4 : 10   ⇒   A : B : C \n= 4 : 10 : 15 \n Step 2   Value a part. \n29 parts = ₹12,992   ⇒  1 part = ₹448 \n Step 3   C exceeds B by 5 parts. \n(15 − 10) × 448 = ₹2,240",
+      "q_num": 6
+    },
+    {
+      "question": "A, B and C together invest ₹53,000 in a business. A invests ₹5,000 more than B and B invests ₹6,000 more than C. Out of a total profit of ₹31,800, find the share of A. A, B",
+      "options": {
+        "a": "₹13,800",
+        "b": "₹12,800",
+        "c": "₹12,500",
+        "d": "₹13,500"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let C = x. \nB = x + 6,000        A = x + 11,000 \n Step 2   Their total is ₹53,000. \n3x + 17,000 = 53,000   ∴  x = ₹12,000 \n Step 3   Capitals 23 : 18 : 12 (in thousands). \n53 parts = ₹31,800 ⇒ 1 part = ₹600   ∴  A = 23 × \n600 = ₹13,800",
+      "q_num": 7
+    },
+    {
+      "question": "A sum of ₹1,50,000 is distributed among three persons A, B and C, so that they receive 20%, 30% and 50% respectively. A receives the same amount from another sum of money which is distributed among them so that they receive 50%, 30% and 20%, respectively. Find the total amount received from both sums of money, by B. profit 6:9:11 A 1260 B 1890 C 2310 others = 1260 + 1890 = 3150 Profit = capital x time R 40000 x 12 mo = 480000 K 20000 x 6 mo = 120000 480000 : 120000 = 4 : 1 LEVEL - 2 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 ₹1,50,000",
+      "options": {
+        "a": "₹60,000",
+        "b": "₹63,000",
+        "c": "₹58,000",
+        "d": "₹55,000"
+      },
+      "answer": "b",
+      "solution": "Step 1   Share out the first sum. \nA 20% = ₹30,000        B 30% = ₹45,000        C \n50% = ₹75,000 \n Step 2   A's ₹30,000 is 50% of the second sum. \nsecond sum = ₹60,000 \n Step 3   B takes 30% of it, then add his two \nshares. \n30% of 60,000 = 18,000   ∴  B total = 45,000 + \n18,000 = ₹63,000",
+      "q_num": 8
+    },
+    {
+      "question": "A sum of ₹12,000 is divided among A, B, C and D such that the ratio of shares of A and B is 8 : 9, that of B and C is 2 : 3 and that of C and D is 9 : 13. What is the difference between the shares of B and D? ₹12,000",
+      "options": {
+        "a": "₹2,760",
+        "b": "₹2,400",
+        "c": "₹1,320",
+        "d": "₹2,520"
+      },
+      "answer": "d",
+      "solution": "Step 1   Chain A : B, B : C and C : D. \n8 : 9,  2 : 3,  9 : 13   ⇒   A : B : C : D = 16 : 18 : 27 : \n39 \n Step 2   Value a part. \n100 parts = ₹12,000   ⇒  1 part = ₹120 \n Step 3   B against D. \n(39 − 18) × 120 = ₹2,520",
+      "q_num": 9
+    },
+    {
+      "question": "A sum is divided among A, B, C and D such that the ratio of the shares of A and B is 2 : 3, that of B and C is 1 : 2 and that of C and D is 3 : 4. If the difference between the shares of A and D is ₹648, then the sum of their shares is:",
+      "options": {
+        "a": "₹2,484",
+        "b": "₹2,160",
+        "c": "₹1,944",
+        "d": "₹2,052"
+      },
+      "answer": "d",
+      "solution": "Step 1   Chain 2 : 3,  1 : 2  and  3 : 4. \nA : B : C : D = 2 : 3 : 6 : 8 \n Step 2   D exceeds A by 6 parts. \n(8 − 2) parts = ₹648   ⇒  1 part = ₹108 \n Step 3   Their total. \n(2 + 3 + 6 + 8) = 19 parts = 19 × 108 = ₹2,052",
+      "q_num": 10
+    },
+    {
+      "question": "A sum of ₹x is divided among A, B and C such that the ratio of shares of A and B is 7 : 12 and that of B and C is 8 : 5. If the difference in the shares of A and C is ₹214, then the value of x is: ₹x",
+      "options": {
+        "a": "11,556",
+        "b": "11,342",
+        "c": "11,770",
+        "d": "11,128"
+      },
+      "answer": "b",
+      "solution": "Step 1   Bridge on B (LCM of 12 and 8 = 24). \n7 : 12 → 14 : 24        8 : 5 → 24 : 15   ⇒   A : B : C = 14 \n: 24 : 15 \n Step 2   A and C differ by 1 part. \n|14 − 15| = 1 part = ₹214 \n Step 3   The whole sum. \nx = 53 × 214 = ₹11,342 \nB's total share\nfrom 1,50,000 (30%)\n45000 \nfrom 60,000 (30%)\n18000 \nB total\n63000 \n45000 + 18000 = 63000 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 11
+    },
+    {
+      "question": "A, B and C invest in a business in the ratio 5 : 6 : 5. A and C are working partners. Only B is a sleeping partner hence his share will be 3/4th of what it would have been if he were a working partner. If they make ₹50,000 profit, half of which is reinvested in the business and the other half is distributed between the partners, then how much does C get (in Rs.)? A, B",
+      "options": {
+        "a": "20,000",
+        "b": "6,000",
+        "c": "10,000",
+        "d": "9,000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Scale B down to three-quarters. \n5 : 6 : 5   ⇒   5 : 4.5 : 5   ⇒  ×2 →  10 : 9 : 10   (29 \nparts) \n Step 2   Only half the profit is distributed. \n½ × 50,000 = ₹25,000 \n Step 3   C's share. \n(10/29) × 25,000 ≈ ₹8,621",
+      "q_num": 12
+    },
+    {
+      "question": "A, B and C invest in a business in the ratio 4 : 5 : 7. C is a sleeping partner, so his share of profits will be half of what it would have been if he were a working partner. If they make ₹36,000 profit of which 25% is reinvested in the business, how much does B get (in ₹)? A, B",
+      "options": {
+        "a": "7,560",
+        "b": "10,800",
+        "c": "8,640",
+        "d": "9,200"
+      },
+      "answer": "b",
+      "solution": "Step 1   Scale and clear the halves. \n4 : 5 : 7   ⇒   4 : 5 : 3.5   ⇒  ×2 →  8 : 10 : 7   (25 \nparts) \n Step 2   25% is reinvested, so 75% is shared. \n0.75 × 36,000 = ₹27,000 \n Step 3   B's 10 parts. \n(10/25) × 27,000 = ₹10,800",
+      "q_num": 13
+    },
+    {
+      "question": "A starts a taxi service by investing ₹25 lakhs. After 3 months, B joins the business by investing ₹40 lakhs, then 4 months after B joined, C too joins them by investing ₹50 lakhs. One year after A started the business they make ₹2,73,000 in profit. What is C's share of the profit (in ₹)? A ₹25",
+      "options": {
+        "a": "1,00,000",
+        "b": "1,25,000",
+        "c": "75,000",
+        "d": "1,50,000"
+      },
+      "answer": "c",
+      "solution": "Step 1   Months each capital actually ran. \nA 25L × 12 = 300        B 40L × 9 = 360        C 50L \n× 5 = 250 \n Step 2   Reduce. \n300 : 360 : 250 = 30 : 36 : 25   (91 parts) \n Step 3   Value a part and take C's 25. \n2,73,000 / 91 = ₹3,000   ∴  C = 25 × 3,000 = \n₹75,000",
+      "q_num": 14
+    },
+    {
+      "question": "A and B started a business by investing equal amounts. Four months later, C joins them by investing ₹3.5 lakhs. B leaves the capital x time (lakh) A 25 x 12 mo = 300 B 40 x 9 mo = 360 C 50 x 5 mo = 250 30 : 36 : 25 (total 91) simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 business after 4 months since C joined. At the end of the year the business makes ₹62,400 profit out of which A collects ₹24,000 as his share. How much should be paid to C (in ₹) as his share of profit? A",
+      "options": {
+        "a": "16,000",
+        "b": "32,000",
+        "c": "22,400",
+        "d": "27,800"
+      },
+      "answer": "c",
+      "solution": "Step 1   Capital-months, with A and B equal at x. \nA = 12x        B = 8x        C = 3.5L × 8 = 28 (lakh-\nmonths) \n Step 2   A collects 24,000 out of 62,400. \n12x / (20x + 28) = 24,000/62,400 = 5/13   ∴  x = \n2.5 lakh \n Step 3   So the ratio is 30 : 20 : 28, and C takes his \n28. \nC = (28/78) × 62,400 = ₹22,400",
+      "q_num": 15
+    },
+    {
+      "question": "A and B invest in a business in the ratio 3 : 7. The business makes a profit of ₹60,000 in 1 year. They decide to distribute the profit remaining after reinvesting 40% of the profit. How much will A get (in ₹)? A",
+      "options": {
+        "a": "25,200",
+        "b": "15,600",
+        "c": "10,800",
+        "d": "20,400"
+      },
+      "answer": "c",
+      "solution": "Step 1   What is actually shared. \n60% of 60,000 = ₹36,000 \n Step 2   Split it 3 : 7. \n10 parts = 36,000 ⇒ 1 part = 3,600   ∴  A = 3 × \n3,600 = ₹10,800",
+      "q_num": 16
+    },
+    {
+      "question": "A, B and C started a business. Thrice the investment of A is equal to twice the investment of B and also equal to four times the investment of C. If C's share out of the total profit is ₹4,863, then the share of A in the profit is: A, B",
+      "options": {
+        "a": "₹9,726",
+        "b": "₹6,484",
+        "c": "₹8,105",
+        "d": "₹7,272"
+      },
+      "answer": "b",
+      "solution": "Step 1   Turn the equalities into a ratio. \n3A = 2B = 4C   ⇒  A : B : C = 1/3 : 1/2 : 1/4 = 4 : 6 : \n3 \n Step 2   C holds 3 parts. \n3 parts = ₹4,863 ⇒ 1 part = ₹1,621   ∴  A = 4 × \n1,621 = ₹6,484",
+      "q_num": 17
+    },
+    {
+      "question": "A, B and C invested their capitals in the ratio of 2 : 3 : 5. The ratio of months for which A, B and C invested is 4 : 2 : 3. If C gets a share of profit which is ₹1,47,000 more than that of A, then B's share of profit is: A, B",
+      "options": {
+        "a": "₹1,05,000",
+        "b": "₹1,89,000",
+        "c": "₹1,68,000",
+        "d": "₹1,26,000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Capital × time. \n(2 × 4) : (3 × 2) : (5 × 3) = 8 : 6 : 15   (29 parts) \n Step 2   C exceeds A by 7 parts. \n(15 − 8) parts = ₹1,47,000   ⇒  1 part = ₹21,000 \n Step 3   B holds 6 parts. \n6 × 21,000 = ₹1,26,000 \n \nProfit = capital x time\nA\n2  x 4  = 8\nB\n3  x 2  = 6\nC\n5  x 3  = 15\n8 : 6 : 15 (total 29) \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "q_num": 18
+    },
+    {
+      "question": "A and B invest in a business in the ratio 4 : 3. After 10 months B leaves the business after withdrawing his investment. In the first year the business made a profit of ₹49,000. What is B's share (in ₹) of this profit? A",
+      "options": {
+        "a": "25,000",
+        "b": "20,000",
+        "c": "18,000",
+        "d": "22,000"
+      },
+      "answer": "c",
+      "solution": "Step 1   Capital-months. \nA 4 × 12 = 48        B 3 × 10 = 30   ⇒  8 : 5   (13 parts) \n Step 2   B's share. \n(5/13) × 49,000 ≈ ₹18,846",
+      "q_num": 19
+    },
+    {
+      "question": "Suresh, Dinesh and Ramesh become partners in a business by investing money in the ratio 3 : 6 : 8. If their investments are increased by 5%, 15% and 20% respectively, then what will be the ratio of their profit for one year? Suresh, Dinesh",
+      "options": {
+        "a": "35 : 46 : 64",
+        "b": "7 : 46 : 64",
+        "c": "21 : 46 : 64",
+        "d": "19 : 46 : 64"
+      },
+      "answer": "c",
+      "solution": "Step 1   Scale 3 : 6 : 8 up. \n300,  600,  800 \n Step 2   Apply 5%, 15% and 20%. \n315,  690,  960 \n Step 3   Reduce by 15. \n21 : 46 : 64",
+      "q_num": 20
+    },
+    {
+      "question": "A, B and C started a business with their capitals in the ratio 1 : 4 : 4. At the end of every 3 months, A doubles his capital, B halves his capital and C leaves his capital unchanged. At the end of the year, if B's share in the profit was ₹4,50,000, then the total profit (in ₹ Lakhs) was: A, B",
+      "options": {
+        "a": "24.2",
+        "b": "32.4",
+        "c": "34.8",
+        "d": "23.1 \ncapital x time\nA\n4  x 12  = 48\nB\n3  x 10  = 30\n48 : 30 = 8 : 5 \nLEVEL - 3 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write each partner's four quarterly \ncapitals. \nA : 10, 20, 40, 80        B : 40, 20, 10, 5        C : 40 \nthroughout \n Step 2   Add each row, then multiply once by the \n3 months of a quarter. \nA = 3 × 150 = 450        B = 3 × 75 = 225        C = 12 \n× 40 = 480 \n Step 3   Reduce by 15. \n30 : 15 : 32   (77 parts) \n Step 4   B's 15 parts are ₹4,50,000. \n1 part = ₹30,000   ∴  total = 77 × 30,000 = \n₹23,10,000 = 23.1 lakh",
+      "q_num": 21
+    }
+  ]
+}

@@ -26,7 +26,11 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   isAdmin = false
 }) => {
   const totalQuestions = chapter.questions.length;
-  
+
+  // Per-question time limit (seconds): 36s chapter bank (45s for Top500 set_2); no timer for mock errors.
+  const perQuestionSec = category === 'mockErrors' ? 0 : (chapter.section === 'top500' && chapter.set_name === 'set_2' ? 45 : 36);
+  const totalQuizTime = perQuestionSec > 0 ? perQuestionSec * totalQuestions : null;
+
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [timeSpent, setTimeSpent] = useState<Record<number, number>>({});
@@ -36,6 +40,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [currentTimer, setCurrentTimer] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<number | null>(totalQuizTime);
   
   const startTimeRef = useRef<number>(Date.now());
 
@@ -65,6 +70,27 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
     return () => clearInterval(interval);
   }, [currentIdx, answers, isPaused]);
+
+  // Quiz countdown: auto-submits when time is up (chapter bank only, not mock errors).
+  useEffect(() => {
+    if (totalQuizTime == null || isFinished || isReviewMode) return;
+
+    const interval = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev == null) return null;
+        if (prev <= 1) {
+          clearInterval(interval);
+          // record time for the current question before auto-submitting
+          recordTime();
+          setIsFinished(true);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [totalQuizTime, isFinished, isReviewMode]);
 
   const recordTime = () => {
     if (isPaused) return;
@@ -264,9 +290,11 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 {isPaused ? <Play className="w-3.5 h-3.5 mr-1.5 fill-current" /> : <Pause className="w-3.5 h-3.5 mr-1.5 fill-current" />}
                 <span>{isPaused ? "Resume" : "Pause"}</span>
               </button>
-              <div className="flex items-center space-x-2 bg-blue-700 px-3 py-1.5 rounded-md text-sm font-mono tracking-wider font-semibold">
+              <div className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm font-mono tracking-wider font-semibold ${totalQuizTime != null && timeLeft != null && timeLeft <= 60 ? 'bg-red-600 animate-pulse' : 'bg-blue-700'}`}>
                 <Clock className="w-4 h-4 mr-1" />
-                {Math.floor(currentTimer / 60).toString().padStart(2, '0')}:{(currentTimer % 60).toString().padStart(2, '0')}
+                {totalQuizTime != null && timeLeft != null
+                  ? `${Math.floor(timeLeft / 60).toString().padStart(2, '0')}:${(timeLeft % 60).toString().padStart(2, '0')}`
+                  : `${Math.floor(currentTimer / 60).toString().padStart(2, '0')}:${(currentTimer % 60).toString().padStart(2, '0')}`}
               </div>
             </div>
           )}

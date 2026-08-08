@@ -32,7 +32,7 @@ export interface Chapter {
   subject_id: string;
   questions: Question[];
   id?: string;
-  section?: 'spartan' | 'pinnacle' | 'qrb';
+  section?: 'spartan' | 'pinnacle' | 'qrb' | 'top500';
   topic_name?: string;
   set_name?: string;
 }

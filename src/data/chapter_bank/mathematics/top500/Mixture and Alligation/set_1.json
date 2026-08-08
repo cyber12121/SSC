@@ -1,0 +1,282 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Mixture and Alligation",
+  "questions": [
+    {
+      "question": "If 80 liters of milk solution has 60% milk in it then how much milk should be added to make milk 80% in the solution?",
+      "options": {
+        "a": "80 Lit",
+        "b": "50lit",
+        "c": "60 Lit",
+        "d": "70 Lit"
+      },
+      "answer": "a",
+      "solution": "Step 1   Split the 80 L. \nmilk 60% = 48 L        water = 32 L  (this stays) \n Step 2   Water must become 20% of the new \ntotal. \n32 = 20% of total   ⇒  total = 160 L \n Step 3   Milk needed. \n128 − 48 = 80 L added",
+      "q_num": 1
+    },
+    {
+      "question": "An alloy contains copper and tin in the ratio 3 : 2. If 250 gm of copper is added to this alloy then the copper in it becomes double the quantity of tin in it. What is the amount (in gm) of tin in the alloy?",
+      "options": {
+        "a": "250",
+        "b": "750",
+        "c": "1000",
+        "d": "500"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the alloy in parts. \nCu = 3k,   Sn = 2k \n Step 2   After adding, copper is double the tin. \n3k + 250 = 2(2k)   ⇒  k = 250 \n Step 3   Tin. \n2k = 500 g",
+      "q_num": 2
+    },
+    {
+      "question": "A juice seller mixes water in pure mango juice. If he sells the mixture at the cost price of pure mango juice and makes a profit of 20%, then what is the ratio of water and pure mango juice in the mixture respectively? Milk stays 446.5 L; only water is added 5% water milk 446.5 water 23.5 6% water milk 446.5 water 28.5 milk = 94% of total -> total 475 -> add 5 L Water stays 32 L; only milk is added 60% milk milk 48 water 32 80% milk milk 128 water 32 water 32 = 20% of total -> total 160 -> add milk 80 L Copper 3k, Tin 2k; add 250 g copper now Cu 3k Sn 2k +250 g Cu Cu 3k+250 Sn 2k 3k + 250 = 2 x (2k) -> k = 250 -> Tin = 2k = 500 g simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "3 : 2",
+        "b": "1 : 5",
+        "c": "2 : 3",
+        "d": "5 : 1"
+      },
+      "answer": "b",
+      "solution": "Step 1   Read the profit as the water part. \n20% profit  ⇒  water : juice = 20 : 100 = 1 : 5",
+      "q_num": 3
+    },
+    {
+      "question": "Two containers, A and B, contain a mixture of wine and water. The ratio of wine and water in container A is 2:1, while their ratio in container B is 4:3. If 9 liters are drawn from container A and 14 liters from container B, and the contents are mixed in a third container, what is the ratio of wine and water in the new mixture?",
+      "options": {
+        "a": "3 : 11",
+        "b": "14 : 9",
+        "c": "9 : 14",
+        "d": "11 : 3"
+      },
+      "answer": "b",
+      "solution": "Step 1   9 L from A at 2 : 1. \nwine 6 L,  water 3 L \n Step 2   14 L from B at 4 : 3. \nwine 8 L,  water 6 L \n Step 3   Add them. \nwine 14 : water 9",
+      "q_num": 4
+    },
+    {
+      "question": "A shopkeeper of a vegetable canteen mixed three varieties of rice, X, Y and Z in the ratio 4:1:3 to make a 4 kg packet of rice. The cost price per kg of X, Y and Z varieties of rice are ₹2, ₹4 and ₹6 respectively. What will be the cost price (in ₹) of the rice packet?",
+      "options": {
+        "a": "10",
+        "b": "15",
+        "c": "30",
+        "d": "18"
+      },
+      "answer": "b",
+      "solution": "Step 1   4 kg split 4 : 1 : 3. \nX = 2 kg        Y = 0.5 kg        Z = 1.5 kg \n Step 2   Cost each and add. \n2(2) + 0.5(4) + 1.5(6) = 4 + 2 + 9 = ₹15",
+      "q_num": 5
+    },
+    {
+      "question": "In what ratio does a grocer mix tea at Rs. 26 per kg and Rs. 32 per kg so that by selling the mixture at Rs 30 per kg they may gain 10%?",
+      "options": {
+        "a": "26 : 7",
+        "b": "7 : 16",
+        "c": "7 : 26",
+        "d": "16 : 7"
+      },
+      "answer": "a",
+      "solution": "Step 1   Cost of the mixture. \nSP 30 at 10% gain   ⇒  CP = 30 / 1.1 = ₹300/11 \n Step 2   Alligate 26 and 32 about 300/11. \n300/11 − 26 = 14/11        32 − 300/11 = 52/11 \n Step 3   Opposite distances. \n52/11 : 14/11 = 26 : 7 \nSold at ₹30 with 10% gain  ->  cost of the \nmixture = 30 / 1.1 = ₹300/11:",
+      "q_num": 6
+    },
+    {
+      "question": "The ratio of water and milk in a mixture of 178 liters is 5 : 7. How much water should be added to the mixture to make the ratio of water and milk 3 : 4? 178",
+      "options": {
+        "a": "23/224 Liter",
+        "b": "17/324 Liter",
+        "c": "11/224 \nLiter",
+        "d": "13/324 Liter"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write the mixture in parts. \nwater 5k,  milk 7k,  with 12k = 178 L \n Step 2   Add x water and match the new ratio. \n(5k + x) / 7k = 3/4   ⇒  20k + 4x = 21k   ⇒  x = k/4 \n Step 3   Value k. \nk = 178/12   ∴  x = 178/48 ≈ 3.7 L \nWater = 178 x 5/12 ≈ 74.17 L, milk = 178 x 7/12 ≈ \n103.83 L. Milk is unchanged; new water : milk = \n3 : 4: \n𝑥= (3/4)(623/6) −445/6 \n=  89/24 ≈ 3.71 𝐿 \n.",
+      "q_num": 7
+    },
+    {
+      "question": "X and Y are two alloys of copper and aluminium prepared by mixing the metals in the ratio 6 : 5 and 5 : 9 respectively. If equal quantities of the alloys are melted to form a third alloy Z, what ratio of copper and aluminium will be in Z? X",
+      "options": {
+        "a": "154 : 163",
+        "b": "139 : 154",
+        "c": "165 : 139",
+        "d": "139 \n: 169"
+      },
+      "answer": "d",
+      "solution": "Step 1   Their totals are 11 and 14 parts, so scale \nboth to 154. \nX : 6 : 5  ×14 →  84 : 70        Y : 5 : 9  ×11 →  55 : 99 \n Step 2   Add the two. \ncopper 84 + 55 = 139        aluminium 70 + 99 = \n169 \n Step 3   So Z is. \n139 : 169",
+      "q_num": 8
+    },
+    {
+      "question": "A Can contains a mixture of two liquids A and B in the ratio 7 : 5. When 9 liters of mixture are drawn off and the Can is filled with B, the ratio of A and B becomes 7 : 9. How many liters of liquid A was contained initially?",
+      "options": {
+        "a": "35 Liters",
+        "b": "19 Liters",
+        "c": "40 Liters",
+        "d": "21 \nLiters"
+      },
+      "answer": "d",
+      "solution": "Step 1   The can is 7 : 5, so 9 L removes 7/12 and \n5/12 of itself. \nA removed = 5.25 L        B removed = 3.75 L \n Step 2   Then 9 L of B goes back in. \n(7x − 5.25) / (5x − 3.75 + 9) = 7/9 \n Step 3   Solve. \n63x − 47.25 = 35x + 36.75   ⇒  28x = 84   ⇒  x = 3   \n∴  A = 7x = 21 L \nLet total = V. Drawing 9 L removes A and B in \n7 : 5; then 9 L of B is added back: \n(7𝑉−63): (5𝑉+ 63) = 7: 9 \n→  𝑉 =  36",
+      "q_num": 9
+    },
+    {
+      "question": "The ratio of milk to water in a 100 liters mixture is 2 : 3. 10 liters of this mixture is with drawn and replaced with milk. This process is repeated 2 more times, what is the percentage of milk in final mixture? 100",
+      "options": {
+        "a": "58.21%",
+        "b": "51.24%",
+        "c": "54.27%",
+        "d": "56.26%"
+      },
+      "answer": "d",
+      "solution": "Step 1   Water at the start. \n100 L at 2 : 3  ⇒  water = 60 L \n Step 2   Three replacements of 10 L each. \nwater = 60 × (1 − 10/100)³ = 60 × 0.729 = 43.74 L \n Step 3   Milk is the rest. \n100 − 43.74 = 56.26 L  ⇒  56.26%",
+      "q_num": 10
+    },
+    {
+      "question": "A vessel contains a 32 litres solution of acid and water in which the ratio of acid and water is 5 : 3 if 12 litres of the solution is taken out and 7.5 liters of water are added to it, then what is the ratio of acid and water in the resulting solution?",
+      "options": {
+        "a": "5 : 6",
+        "b": "4 : 7",
+        "c": "4 : 9",
+        "d": "8 : 11"
+      },
+      "answer": "a",
+      "solution": "Step 1   Split the 32 L. \nacid = 20 L,  water = 12 L \n Step 2   12 L removed at 5 : 3. \nacid −7.5 → 12.5        water −4.5 → 7.5 \n Step 3   Add 7.5 L water. \n12.5 : (7.5 + 7.5) = 12.5 : 15 = 5 : 6",
+      "q_num": 11
+    },
+    {
+      "question": "A container has 30 litres of milk, from which 3 litres of milk is taken out and replaced with water. The process is done three times. What is the final ratio of the water and the milk in the container?",
+      "options": {
+        "a": "729 : 271",
+        "b": "19 : 81",
+        "c": "81 : 19",
+        "d": "271 : 729"
+      },
+      "answer": "d",
+      "solution": "Step 1   Three replacements of 3 L from 30 L. \nmilk = 30 × (1 − 1/10)³ = 30 × 0.729 = 21.87 L \n Step 2   Water is the rest. \n30 − 21.87 = 8.13 L   ⇒  water : milk = 8.13 : 21.87 \n= 271 : 729",
+      "q_num": 12
+    },
+    {
+      "question": "A vessel contains a solution of two liquids A and B in the ratio 5:3. When 10 litres of the solution is taken out and replaced by the same quantity of B, the ratio of A and B in the vessel becomes 10:11. The quantity (in litres) of the solution, in the vessel was.",
+      "options": {
+        "a": "42",
+        "b": "52",
+        "c": "44",
+        "d": "48"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let the vessel hold 8x at 5 : 3; 10 L removed \nsplits in that ratio. \nA = 5x − 6.25        B = 3x − 3.75 + 10 = 3x + 6.25 \n Step 2   Match the new ratio. \n(5x − 6.25)/(3x + 6.25) = 10/11   ⇒  25x = 131.25   ⇒  \nx = 5.25 \n Step 3   The vessel. \n8x = 42 L \nLet total = V. Removing 10 L (5:3) then adding \n10 L of B: \n(5𝑉−50): (3𝑉+ 50) = 10: 11 \n→  𝑉 =  42",
+      "q_num": 13
+    },
+    {
+      "question": "A jar contains a mixture of fruit juice and water in the ratio 5:x. When 1 litre of water is added to 4 litres of the mixture the ratio of fruit juice to water becomes 1:1. What is the value of x?",
+      "options": {
+        "a": "3",
+        "b": "1",
+        "c": "2",
+        "d": "4"
+      },
+      "answer": "a",
+      "solution": "Step 1   After adding, 5 L is half juice. \njuice = 2.5 L  (unchanged) \n Step 2   So the original 4 L held. \nwater = 4 − 2.5 = 1.5 L   ⇒  5 : 3   ∴  x = 3",
+      "q_num": 14
+    },
+    {
+      "question": "A cask contains mixed tea from Assam, Darjeeling and Nilgiri hills in the ratio 2:3:1. Another cask contains tea from Darjeeling, 30 L milk; draw 3 L & refill water, x3 milk 30 21.87 x 9/10 (3x) milk 21.87, water 8.13 -> water : milk = 271 : 729 A shrinks, B grows (V = 42 L) start 5 : 3 A 26.25 B 15.75 after 10 : 11 A 20 B 22 total solution = 42 L 4 L of the 5 : x jar, then + 1 L water -> 1 : 1 4 L (5 : x) juice water + 1 L water juice 2.5 water 2.5 20/(5+x) = 4x/(5+x) + 1 -> x = 3 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026 Nilgiri hills and Kangra valley in the ratio 5:4:3. If both mixed teas are mixed together in equal weight to form a new brand, then what is the weight of Kangra valley tea per kilogram in the new brand?",
+      "options": {
+        "a": "500 gm",
+        "b": "100 gm",
+        "c": "250 gm",
+        "d": "125 \ngm"
+      },
+      "answer": "d",
+      "solution": "Step 1   Cask 1 is 6 parts, cask 2 is 12 — double the \nfirst. \ncask 1 :  A 4,  D 6,  N 2        cask 2 :  D 5,  N 4,  K \n3 \n Step 2   Add tea by tea. \nA 4,  D 11,  N 6,  K 3   (total 24) \n Step 3   Kangra per kilogram. \n3/24 × 1000 = 125 g",
+      "q_num": 15
+    },
+    {
+      "question": "The concentration of salt in a 150 liter solution is 40%. How many liters of water must be added to reduce the concentration to 20%, and then how much pure salt must be added to bring the concentration back to 50%? 150",
+      "options": {
+        "a": "150 L water & 180 L salt",
+        "b": "90 L water & \n170 L salt",
+        "c": "170 L water & 30 L salt",
+        "d": "150 L \nwater & 10 L salt"
+      },
+      "answer": "a",
+      "solution": "Step 1   Split the 150 L. \nsalt 40% = 60 L        water = 90 L \n Step 2   Dilute to 20% — the salt is the anchor. \n60 = 20% of total   ⇒  total = 300 L   ∴  water \nadded = 150 L \n Step 3   Now strengthen to 50% — the water (240 \nL) is the anchor. \nsalt must equal the water   ⇒  salt = 240 L   ∴  \npure salt added = 240 − 60 = 180 L \n \n(60 + 𝑠)/(300 + 𝑠) = 1/2 \n→  𝑎𝑑𝑑 𝑠 =  180 𝐿 𝑠𝑎𝑙𝑡",
+      "q_num": 16
+    },
+    {
+      "question": "A chef has two cans of mixture of acid and water. He mixes the contents of both the cans in a beaker. The resulting mixture is half water and half acid. In what proportion did he mix the contents of can 1 and can 2, if the ratio of acid-and-water in can 2 is 2:3 and the ratio of acid-and-water in can 1 is 5:3?",
+      "options": {
+        "a": "2 : 3",
+        "b": "4 : 5",
+        "c": "4 : 7",
+        "d": "3 : 7"
+      },
+      "answer": "b",
+      "solution": "1 kg from each cask  (equal weight)\nCask 1 (2:3:1)\nAssam 2 \nDarj 3 \nNilgiri 1\nCask 2 (5:4:3)\nDarj 5 \nNilgiri 4 \nKangra 3 \n2 kg brand\nKangra \n1/4 kg\nrest 7/4 kg \nKangra = 1/4 kg in 2 kg  ->  125 g per kg \nSalt fixed at 60 L; dilute to 20%\n40%  (150 L)\nsalt 60 \nwater 90 \n20%  (300 L)\nsalt 60 \nwater 240 \nadd 300 - 150 = 150 L water \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\nStep 1   Acid fraction in each can, and in the \nmixture. \ncan 1 = 5/8        can 2 = 2/5        mixture = 1/2 \n Step 2   Distances from the mean. \n5/8 − 1/2 = 1/8        1/2 − 2/5 = 1/10 \n Step 3   Opposite distances. \ncan 1 : can 2 = 1/10 : 1/8 = 8 : 10 = 4 : 5",
+      "q_num": 17
+    },
+    {
+      "question": "The concentration of three acids, A, B and C are specified as 20%, 30% and 40% respectively. They are mixed in the ratio 3:5:a, resulting in a solution of 30% concentration. What is the value of 'a'?",
+      "options": {
+        "a": "3",
+        "b": "1",
+        "c": "2",
+        "d": "4"
+      },
+      "answer": "a",
+      "solution": "Step 1   Write the balance. \n(3 × 20 + 5 × 30 + a × 40) / (3 + 5 + a) = 30 \n Step 2   Solve. \n210 + 40a = 240 + 30a   ⇒  10a = 30   ∴  a = 3 \nB (30%) sits exactly at the target mean, so A's \ndeficit must cancel C's surplus: \n3𝑥(30 −20) = 𝑎𝑥(40 −30) \n→  30 =  10𝑎  →  𝑎 =  3",
+      "q_num": 18
+    },
+    {
+      "question": "A bag contains red, blue and green marbles in the ratio 4:5:6. If 6 red marbles are taken out and 3 green marbles are added, the new ratio becomes 2:5:7. How many red marbles were originally in the bag?",
+      "options": {
+        "a": "12",
+        "b": "14",
+        "c": "16",
+        "d": "20"
+      },
+      "answer": "a",
+      "solution": "Step 1   Old 4x : 5x : 6x, new 2 : 5 : 7 — blue matches \n5x to 5. \n1 new unit = x \n Step 2   Red loses 6 and lands on 2 units. \n4x − 6 = 2x   ⇒  x = 3 \n Step 3   Reds at the start. \n4x = 12",
+      "q_num": 19
+    },
+    {
+      "question": "A wall has only yellow and white colors painted on it. The ratio of white and yellow parts on the wall is 2 : 1 and the ratio of white and yellow parts on the upper half is 4: 1. What is the ratio of white and yellow in the lower half?",
+      "options": {
+        "a": "4:7",
+        "b": "4:11",
+        "c": "7:8",
+        "d": "8:7"
+      },
+      "answer": "d",
+      "solution": "Step 1   The whole wall. \nwhite = 2/3        yellow = 1/3 \n Step 2   The upper half is half the wall, split 4 : 1. \nwhite = ½ × 4/5 = 2/5        yellow = ½ × 1/5 = 1/10 \n Step 3   Subtract for the lower half. \nwhite = 2/3 − 2/5 = 4/15        yellow = 1/3 − 1/10 = \n7/30 \n Step 4   Reduce. \nAlligation on acid fraction (mean = 1/2)\ncan1 (5:3)\ncan2 (2:3)\n5/8\n2/5\n1/2\n1/10\n1/8\ncan1 : can2  =  1/10 : 1/8  =  4 : 5 \nR : B : G = 4 : 5 : 6; blue is untouched  ->  k = 3\nstart (k=3)\nR 12 \nB 15 \nG 18 \nafter  2 : 5 : 7\nR 6 \nB 15 \nG 21 \n(4k - 6)/5k = 2/5  ->  k = 3  ->  red originally = 12 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n4/15 : 7/30 = 8 : 7 \nWhole wall = 2 (upper = lower = 1). Total white : \nyellow = 2 : 1  ->  white 4/3, yellow 2/3. \nUpper half (4 : 1)  ->  white 4/5, yellow 1/5.  Lower \n= whole - upper: \n𝑤ℎ𝑖𝑡𝑒 =  4/3 − 4/5 =  8/15 \n𝑦𝑒𝑙𝑙𝑜𝑤 =  2/3 − 1/5 =  7/15  →  8 ∶ 7",
+      "q_num": 20
+    },
+    {
+      "question": "The ratio of Land & water on earth is 1 : 2 and the ratio of Land & water in Northern Hemisphere is 2 : 3. Find the ratio of Land to water in southern Hemisphere?",
+      "options": {
+        "a": "4:11",
+        "b": "4:13",
+        "c": "5:7",
+        "d": "13:7"
+      },
+      "answer": "a",
+      "solution": "Step 1   The earth. \nland = 1/3        water = 2/3 \n Step 2   The northern half, split 2 : 3. \nland = ½ × 2/5 = 1/5        water = ½ × 3/5 = 3/10 \n Step 3   Subtract. \nland = 1/3 − 1/5 = 2/15        water = 2/3 − 3/10 = \n11/30 \n Step 4   Reduce. \n2/15 : 11/30 = 4 : 11",
+      "q_num": 21
+    },
+    {
+      "question": "A large container has a 50 litre mixture of juice and water is the ratio 3:2. In this mixture a 60 litre juice and water mixture is added, that has a juice to water ratio of 2:1. After this, 11 litres of the solution is replaced with pure juice. What is the ratio of water to juice in the final mixture?",
+      "options": {
+        "a": "37:18",
+        "b": "29:81",
+        "c": "4:7",
+        "d": "18:37"
+      },
+      "answer": "d",
+      "solution": "Step 1   What is in the container after the pour. \n50 L at 3:2 → juice 30, water 20        60 L at 2:1 → \njuice 40, water 20 \n110 L holding juice 70, water 40 \n Step 2   11 L drawn off leaves in the ratio 70 : 40 = \n7 : 4. \njuice −7 → 63        water −4 → 36 \n Step 3   11 L of pure juice goes back. \njuice 63 + 11 = 74        water 36   ⇒  water : juice \n= 36 : 74 = 18 : 37 \n \n𝑤𝑎𝑡𝑒𝑟∶ 𝑗𝑢𝑖𝑐𝑒 =  36 ∶ 74 =  18 ∶ 37",
+      "q_num": 22
+    },
+    {
+      "question": "A milkman uses three containers for selling milk, their capacities being 40L, 30 L and 20L respectively. He fills respectively 87.5%, 80% and 90% of the container with a mix of milk and water in the ratios, 3 : 2, 5 : 1 and 7 : 2 respectively. What is the ratio of the total quantity of milk to that of water carried by him? North + South = whole Earth (land : water) North (15) land 6 water 9 South (15) land 4 water 11 Earth (30) land 10 water 20 South = Earth - North -> land : water = 4 : 11 LEVEL - 3 Mix the two, then replace 11 L with pure juice A: 50 L (3:2) juice 30 water 20 add 60 L (2:1) juice 40 water 20 110 L -> 7 : 4 juice 70 water 40 remove 11 L (7:4) -> 63 : 36, then + 11 L juice -> 74 : 36 simplicrack simplicrack Math simplicrack Maths MRQ SERIES SSC CGL 2026",
+      "options": {
+        "a": "35 : 9",
+        "b": "7 : 2",
+        "c": "5 : 2",
+        "d": "31 : 12"
+      },
+      "answer": "c",
+      "solution": "Step 1   How much mixture each can actually \nholds. \n87.5% of 40 = 35 L        80% of 30 = 24 L        90% \nof 20 = 18 L \n Step 2   Split each by its own ratio. \n35 at 3:2 → 21 & 14        24 at 5:1 → 20 & 4        18 at \n7:2 → 14 & 4 \n Step 3   Add the columns. \nmilk 55 : water 22 = 5 : 2",
+      "q_num": 23
+    }
+  ]
+}

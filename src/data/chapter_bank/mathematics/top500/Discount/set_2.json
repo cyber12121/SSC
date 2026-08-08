@@ -1,0 +1,210 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Discount",
+  "questions": [
+    {
+      "question": "A dealer marks an article 40% above the cost price and gives two successive discounts of 20% and 25% on the marked price. If he suffers a loss of ₹140, then the cost price (in ₹) of the article is:",
+      "options": {
+        "a": "₹872",
+        "b": "₹875",
+        "c": "₹840",
+        "d": "₹900 [SSC \nCGL Tier-I 2019 – 03/03/2020 Shift-II]"
+      },
+      "answer": "b",
+      "solution": "Step 1   Run the chain. \nMP = 140   ⇒  140 × 0.8 × 0.75 = ₹84 \n Step 2   That is a loss of 16 per 100. \nloss 16% = ₹140   ∴  CP = 140/16 × 100 = ₹875",
+      "q_num": 1
+    },
+    {
+      "question": "On an article marked ₹1600, successive discounts of y% and z% were given. As a result the item was sold for ₹1056. Which of the following options CANNOT be a set of values of y and z? ₹1600",
+      "options": {
+        "a": "y=20, z=17.5",
+        "b": "y=22, z=15.5",
+        "c": "y=4, z=31.25",
+        "d": "y=12, z=25  \n[SSC CHSL Tier-I 09/08/2023 Shift-III]"
+      },
+      "answer": "b",
+      "solution": "Step 1   What fraction of the marked price \nsurvives. \n1,056 / 1,600 = 0.66   ⇒  combined discount = \n34% \n Step 2   Test each pair against y + z − yz/100 = 34. \n(a) 20, 17.5 → 34 ✓     (c) 4, 31.25 → 34 ✓     (d) 12, \n25 → 34 ✓ \n Step 3   The odd one out. \n(b) 22, 15.5 → 37.5 − 3.41 = 34.09 ✗   — so (b) \ncannot occur",
+      "q_num": 2
+    },
+    {
+      "question": "The marked prices of a pen and pencil are in the ratio of 5:6. The shopkeeper gives an 18% discount on the pen. If the total discount on both the pen and pencil is 12%, then the discount offered on the pencil is:",
+      "options": {
+        "a": "7%",
+        "b": "10%",
+        "c": "8%",
+        "d": "11%  \n[SSC CHSL 18/11/2025 Shift-02]"
+      },
+      "answer": "a",
+      "solution": "Step 1   Take the marked prices as 500 and 600. \npen's discount = 18% of 500 = ₹90 \n Step 2   Total discount is 12% of both. \n12% of 1,100 = ₹132   ⇒  pencil's share = 132 − 90 \n= ₹42 \n Step 3   As a percentage of the pencil's marked \nprice. \n42 / 600 = 7%",
+      "q_num": 3
+    },
+    {
+      "question": "A dealer gives a discount of 7% on the marked price and gives 1 article free on every 25 articles purchased, and thus earns a profit of 25%. Find the percentage increase in marked price over the cost price (up to two decimal places).",
+      "options": {
+        "a": "1.4%",
+        "b": "38.87%",
+        "c": "37.88%",
+        "d": "39.78% \n[SSC CHSL Tier-I 04/08/2023 Shift-III]"
+      },
+      "answer": "d",
+      "solution": "Step 1   Selling 26 for the price of 25, at 7% off. \nSP = MP × (25/26) × (93/100) \n Step 2   That selling price is a 25% profit, so with \nCP = 100: \nMP × (25/26) × 0.93 = 125   ⇒  MP = 26 × 500 / 93 \n= 139.78 \n Step 3   Increase over cost. \n139.78 − 100 = 39.78%",
+      "q_num": 4
+    },
+    {
+      "question": "A retailer marked a jacket 60% above its cost price. During off-season clearance, he offered a flat discount of ₹1800 and still made a profit of 20%. What was the cost price of the jacket?",
+      "options": {
+        "a": "₹3000",
+        "b": "₹4000",
+        "c": "₹3600",
+        "d": "₹4500 \n[SSC CPO 11/12/2025 Shift-01]"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the selling price two ways. \nMP = 1.6x   and   SP = 1.6x − 1,800 = 1.2x \n Step 2   Solve. \n0.4x = 1,800   ∴  x = ₹4,500",
+      "q_num": 5
+    },
+    {
+      "question": "Rohan sells a bed by giving a 65% discount on its list price. If instead he had given only a 62% discount, the selling price would have been ₹6,000 more. What is the original marked price of the bed?",
+      "options": {
+        "a": "₹4,40,000",
+        "b": "₹3,20,000",
+        "c": "₹2,20,000",
+        "d": "₹2,00,000  \n[Previous Year Question]"
+      },
+      "answer": "d",
+      "solution": "Step 1   The gap between the two offers. \n65% − 62% = 3% of MP = ₹6,000 \n Step 2   Scale up. \n1% = 2,000   ∴  MP = ₹2,00,000",
+      "q_num": 6
+    },
+    {
+      "question": "A shopkeeper allows 16% discount on every item and still makes a profit of 8%. If he gives 8% discount instead of 16% on an item marked for ₹1800, what will be his profit percent",
+      "options": {
+        "a": "19%",
+        "b": "18.31%",
+        "c": "18%",
+        "d": "18.29% \n[Previous Year Question]"
+      },
+      "answer": "d",
+      "solution": "Step 1   The 16% offer. \nSP = 1,800 × 0.84 = 1,512, which is 8% profit   ∴  \nCP = ₹1,400 \n Step 2   The 8% offer. \nSP = 1,800 × 0.92 = ₹1,656   ⇒  profit = ₹256 \n Step 3   As a percentage of cost. \n256 / 1,400 × 100 = 18.29%",
+      "q_num": 7
+    },
+    {
+      "question": "The marked price of an article is 60% above its cost price (CP = ₹750). It is sold for ₹710.40, after two successive discounts of 20% and x%. If a single discount of 1.5x% is given on the same marked price, the loss percentage will be:",
+      "options": {
+        "a": "3.5%",
+        "b": "4%",
+        "c": "3%",
+        "d": "2.0%  \n[Previous Year Question]"
+      },
+      "answer": "d",
+      "solution": "Step 1   Marked price, then the first discount. \nMP = 750 × 1.6 = 1,200   ⇒  1,200 × 0.8 = ₹960 \n Step 2   960 falls to 710.40, which fixes x. \n710.40 / 960 = 0.74   ∴  x = 26 \n Step 3   Now the single discount of 1.5x = 39%. \nSP = 1,200 × 0.61 = ₹732   ⇒  loss = 750 − 732 = \n₹18 \n Step 4   As a percentage of cost. \n18 / 750 × 100 = 2.4%",
+      "q_num": 8
+    },
+    {
+      "question": "(HW) An item undergoes two successive discounts: 12.5% and then 20%. After those discounts, a tax of 18% is applied on the reduced price, and the final amount the customer pays is ₹927. What was the original price of the item?",
+      "options": {
+        "a": "₹1022.28",
+        "b": "₹1028.22",
+        "c": "₹1128.22",
+        "d": "₹1122.28  \n[SSC CHSL 17/11/2025 Shift-02]"
+      },
+      "answer": "d",
+      "solution": "Step 1   Write the whole chain as factors. \nP × 0.875 × 0.80 × 1.18 = 927 \n Step 2   Collapse and divide. \nP × 0.826 = 927   ∴  P = ₹1,122.28",
+      "q_num": 9
+    },
+    {
+      "question": "To clear stock, a seller gives an 8% discount on the marked price. He spends ₹x on promotion. Total cost of items is ₹2,50,000 and the marked price is 10% more than cost. He earns no profit or loss. What is the value of x? ː",
+      "options": {
+        "a": "₹3000",
+        "b": "₹6000",
+        "c": "₹4500",
+        "d": "₹7500 \n[Previous Year Question]"
+      },
+      "answer": "a",
+      "solution": "Step 1   Marked price, then the discount. \nMP = 2,50,000 × 1.10 = 2,75,000   ⇒  SP = \n2,75,000 × 0.92 = ₹2,53,000 \n Step 2   Set it against everything he spent. \n2,53,000 = 2,50,000 + x   ∴  x = ₹3,000",
+      "q_num": 10
+    },
+    {
+      "question": "A trader gives 5% discount on the marked price of an article and gives 4 articles free for buying 14 articles and gains 33% in the entire transaction. The marked price of an article is what per cent more than its cost price?",
+      "options": {
+        "a": "79%",
+        "b": "80%",
+        "c": "81%",
+        "d": "90%  \n[Previous Year Question]"
+      },
+      "answer": "b",
+      "solution": "Step 1   He is paid for 14 but parts with 18. \nSP / MP = (14/18) × (19/20) = 133/180 \n Step 2   The 33% gain fixes the third term. \nMP : SP : CP = 180 : 133 : 100 \n Step 3   Marked price against cost. \n(180 − 100)/100 = 80%",
+      "q_num": 11
+    },
+    {
+      "question": "Ramanna purchased raw materials to manufacture a product. 22.5% of the raw materials got wasted. 80% of the cost of raw materials used was added as manufacturing cost. Ramanna sells the product to earn an overall profit of 20% after offering a discount of 20%. How many times of total raw material cost was the marked price?",
+      "options": {
+        "a": "2.42 times",
+        "b": "2.44 times",
+        "c": "2.43 times",
+        "d": "2.40 times [Previous Year Question]"
+      },
+      "answer": "c",
+      "solution": "Step 1   Take the raw material as ₹1,00,000. \n22.5% wasted   ⇒  material used = ₹77,500 \n Step 2   Manufacturing is 80% of what was used. \n0.80 × 77,500 = ₹62,000   ⇒  total cost = \n₹1,62,000 \n Step 3   20% profit, then work back through the \n20% discount. \nSP = 1,62,000 × 1.2 = 1,94,400   ⇒  MP = 1,94,400 \n/ 0.8 = ₹2,43,000 \n Step 4   Against the raw material cost. \n2,43,000 / 1,00,000 = 2.43 times",
+      "q_num": 12
+    },
+    {
+      "question": "(HW) A shopkeeper was offering two successive discounts of 20% and 15% on an item whose marked price is ₹1,000 while another shopkeeper was offering a flat 33% discount on the same item. Find the positive difference in the nominal amounts of discounts given by the two shopkeepers on the sale of the item.",
+      "options": {
+        "a": "₹10",
+        "b": "₹90",
+        "c": "₹100",
+        "d": "₹900 [SSC MTS \n25/07/2022 Shift-II]"
+      },
+      "answer": "a",
+      "solution": "Step 1   The successive pair. \n1,000 × 0.8 × 0.85 = ₹680   ⇒  discount = ₹320 \n Step 2   The flat offer. \n1,000 × 0.67 = ₹670   ⇒  discount = ₹330 \n Step 3   Difference. \n330 − 320 = ₹10",
+      "q_num": 13
+    },
+    {
+      "question": "₹3,600 is divided in such a way that half of the first part, one-third of the second part and one-fifth of the third part are equal. What is the value of the third part? ₹3,600",
+      "options": {
+        "a": "1000",
+        "b": "1800",
+        "c": "2400",
+        "d": "1080"
+      },
+      "answer": "b",
+      "solution": "Step 1   Read the ratio straight off. \nx/2 = y/3 = z/5   ⇒   x : y : z = 2 : 3 : 5 \n Step 2   Value one part. \n10 parts = ₹3,600 ⇒ 1 part = ₹360   ∴  third part \n= 5 × 360 = ₹1,800",
+      "q_num": 14
+    },
+    {
+      "question": "Sunderlal distributed his savings of ₹1,62,000 among his wife, 3 sons and a daughter in such a way that his wife gets double of what his daughter gets and his daughter gets double of what each of his sons get. How much will his daughter get?",
+      "options": {
+        "a": "₹27,000",
+        "b": "₹36,000",
+        "c": "₹72,000",
+        "d": "₹18,000"
+      },
+      "answer": "b",
+      "solution": "Step 1   Build the shares upward. \nson = 1   ⇒  daughter = 2   ⇒  wife = 4 \n Step 2   Total the parts. \n4 + 2 + (3 × 1) = 9 parts = ₹1,62,000   ⇒  1 part = \n₹18,000 \n Step 3   The daughter holds 2 parts. \n2 × 18,000 = ₹36,000",
+      "q_num": 15
+    },
+    {
+      "question": "According to the will of Ks, ₹21,25,000 was to be divided between the son and the daughter in the ratio 7/6 : 5/3. How much did the son get (in Rs.)? Ks",
+      "options": {
+        "a": "8,75,000",
+        "b": "12,50,000",
+        "c": "10,00,000",
+        "d": "11,25,000"
+      },
+      "answer": "a",
+      "solution": "Step 1   Put both over 6. \n7/6 : 5/3 = 7/6 : 10/6 = 7 : 10 \n Step 2   Value a part and take the son's 7. \n17 parts = ₹21,25,000 ⇒ 1 part = ₹1,25,000   ∴  \nson = 7 × 1,25,000 = ₹8,75,000",
+      "q_num": 16
+    },
+    {
+      "question": "On dividing the amount of ₹18,144 among three people A, B, C in the ratio of 3 : 5 : 8, the amount B gets more than A is: ₹18,144",
+      "options": {
+        "a": "₹2,268",
+        "b": "₹2,178",
+        "c": "₹2,464",
+        "d": "₹2,386"
+      },
+      "answer": "a",
+      "solution": "Step 1   Value one part. \nPARTNERSHIP \nLEVEL - 1 \n3600 in 2:3:5\n1st 720\n2nd 1080 \n3rd 1800 \n3rd = 5/10 x 3600 = 1800 \n1,62,000 in 9 parts\nwife 72000 \ndaughter \n36000\n3 sons 54000 \ndaughter = 2 x 18000 = 36000 \n21,25,000 in 7:10\nson 875000 \ndaughter 1250000 \nson = 7/17 x 2125000 = 875000 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n3 + 5 + 8 = 16 parts = ₹18,144   ⇒  1 part = ₹1,134 \n Step 2   B exceeds A by 2 parts. \n(5 − 3) × 1,134 = ₹2,268",
+      "q_num": 17
+    }
+  ]
+}

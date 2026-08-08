@@ -1,0 +1,138 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Time and Work",
+  "questions": [
+    {
+      "question": "A is 40% more efficient than B and C is 20% less efficient than B. Working together, they can finish a task in 15 days. In how many days will B alone complete 75% of the task? A, B",
+      "options": {
+        "a": "44",
+        "b": "36",
+        "c": "32",
+        "d": "48"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write the three efficiencies. \nA = 1.4B,   C = 0.8B   ⇒  total = 3.2B = 1/15 \n Step 2   So B alone. \nB = 1/48   ⇒  48 days for the whole task \n Step 3   Three-quarters of it. \n48 × 0.75 = 36 days",
+      "q_num": 1
+    },
+    {
+      "question": "To complete a certain task, X is 40% more efficient than Y, and Z is 40% less efficient than Y. Working together, they can complete the task in 21 days. Y and Z together worked for 35 days. The remaining work will be completed by X alone in:",
+      "options": {
+        "a": "5 days",
+        "b": "8 days",
+        "c": "4 days",
+        "d": "6 days"
+      },
+      "answer": "a",
+      "solution": "Step 1   X = 1.4Y and Z = 0.6Y. \ntotal = 3Y = 1/21   ⇒  Y = 1/63 \n Step 2   Y and Z for 35 days. \n1.6Y × 35 = 56/63 = 8/9 done   ⇒  1/9 left \n Step 3   X alone at 1.4/63 = 1/45. \n(1/9) ÷ (1/45) = 5 days",
+      "q_num": 2
+    },
+    {
+      "question": "4 boys from school A and 6 boys from school B together can set up an exhibition in 5 days, which 5 boys from school A and 10 boys from school C together can do in 4 days. 3 boys from school B and 4 boys from school C together can do it in 10 days. How many boys from school A can set up the exhibition in one day? ˋ",
+      "options": {
+        "a": "20",
+        "b": "40",
+        "c": "60",
+        "d": "80"
+      },
+      "answer": "b",
+      "solution": "Step 1   Write them, with a, b, c as one boy's daily \nwork. \n4a + 6b = 1/5        5a + 10c = 1/4        3b + 4c = 1/10 \n Step 2   Substitute b and c from the first two into \nthe third. \n(0.2 − 4a)/2 + 0.4(0.25 − 5a) = 0.1   ⇒  0.2 − 4a = \n0.1   ⇒  a = 0.025 \n Step 3   Boys needed to finish in one day. \n1 / 0.025 = 40 boys",
+      "q_num": 3
+    },
+    {
+      "question": "A can complete a task in 12 days and B can complete the same task in 18 days. They start working together but A works for only 2 days. The remaining work is completed by B. If the total wage is ₹2,400, what is B's share (in ₹)? A",
+      "options": {
+        "a": "1600",
+        "b": "1800",
+        "c": "1200",
+        "d": "2000"
+      },
+      "answer": "d",
+      "solution": "Step 1   Take the task as 36 units. \nA = 3/day,  B = 2/day \n Step 2   A works only 2 days. \nA does 6 units   ⇒  B does the other 30 \n Step 3   Split ₹2,400 in 6 : 30. \nB = 2,400 × 30/36 = ₹2,000",
+      "q_num": 4
+    },
+    {
+      "question": "K₁ can complete a work alone in 4 days, K₂ can complete the same work in 8 days while K₃ can complete the same work alone in 32 days. They work together and complete the task, received a total of ₹3900 as payment. What is the share of the person who received the maximum amount? K₁",
+      "options": {
+        "a": "₹1,200",
+        "b": "₹2,000",
+        "c": "₹1,600",
+        "d": "₹2,400"
+      },
+      "answer": "d",
+      "solution": "Step 1   Take the work as 32 units. \nK₁ = 8/day,  K₂ = 4/day,  K₃ = 1/day   ⇒  13 parts \n Step 2   K₁ takes 8 of them. \n3,900 × 8/13 = ₹2,400",
+      "q_num": 5
+    },
+    {
+      "question": "The wages of three labourers A, B and C are in the ratio 10:12:15. A's wage is increased in the ratio 5:6. B's wage is increased in the ratio 3:4 and C's wage is increased in the ratio 3:5. The new ratio of the wages of A:B:C is:",
+      "options": {
+        "a": "15:18:20",
+        "b": "12:16:25",
+        "c": "6:7:9",
+        "d": "8:6:5"
+      },
+      "answer": "b",
+      "solution": "Step 1   Start from 10 : 12 : 15. \nA × 6/5 = 12        B × 4/3 = 16        C × 5/3 = 25 \n Step 2   The new ratio. \n12 : 16 : 25",
+      "q_num": 6
+    },
+    {
+      "question": "The speeds of two bodies are in the ratio 2 : 3. If the difference in the time taken to cover 50 m is 10 sec, find the difference in their speeds.",
+      "options": {
+        "a": "5/6 m/s",
+        "b": "6/5 m/s",
+        "c": "7/5 m/s",
+        "d": "8/9 \nm/s"
+      },
+      "answer": "a",
+      "solution": "Step 1   Let the speeds be 2v and 3v. \n50/2v − 50/3v = 50/6v = 10   ⇒  v = 5/6 \n Step 2   The gap in speeds is one v. \n3v − 2v = 5/6 m/s",
+      "q_num": 7
+    },
+    {
+      "question": "Two tourist buses start from the same point and move along two roads at right angles, at speeds of 48 km/h and 36 km/h respectively. What is the distance between the buses after 15 seconds?",
+      "options": {
+        "a": "150 m",
+        "b": "350 m",
+        "c": "250 m",
+        "d": "175 m"
+      },
+      "answer": "c",
+      "solution": "Step 1   Distance each covers in 15 seconds. \n48 km/h = 40/3 m/s → 200 m        36 km/h = 10 \nm/s → 150 m \n Step 2   Pythagoras. \n√(200² + 150²) = 250 m",
+      "q_num": 8
+    },
+    {
+      "question": "A bus starts with some initial speed and its speed increases every hour by 9 km/hr. If it takes 11 hours to cover 572 km, what was its initial speed (in km/hr)?",
+      "options": {
+        "a": "3.5",
+        "b": "7",
+        "c": "10.5",
+        "d": "14"
+      },
+      "answer": "b",
+      "solution": "Step 1   Sum of 11 hours. \n11u + 9(0 + 1 + … + 10) = 11u + 495 = 572 \n Step 2   Solve. \n11u = 77   ⇒  u = 7 km/hr",
+      "q_num": 9
+    },
+    {
+      "question": "A car travelling at 3/8th of its actual speed covers 65 km in 2 hours 10 minutes. Find the actual speed of the car.",
+      "options": {
+        "a": "80 km/hr",
+        "b": "40 km/hr",
+        "c": "160 km/hr",
+        "d": "120 km/hr"
+      },
+      "answer": "a",
+      "solution": "Step 1   Reduced speed. \n2 h 10 min = 13/6 h   ⇒  65 ÷ 13/6 = 30 km/hr \n Step 2   That is ⅜ of the real speed. \n30 × 8/3 = 80 km/hr",
+      "q_num": 10
+    },
+    {
+      "question": "A dog takes 5 leaps for every 6 leaps of a hare, but 4 leaps of the dog equal 5 leaps of the hare. What is the ratio of the speed of the dog to the hare?",
+      "options": {
+        "a": "24 : 25",
+        "b": "16 : 24",
+        "c": "24 : 16",
+        "d": "25 : 24"
+      },
+      "answer": "d",
+      "solution": "Step 1   Leap lengths from the second fact. \n4 dog = 5 hare   ⇒  dog : hare leap = 5 : 4 \n Step 2   Multiply rate by length. \n(5 × 5) : (6 × 4) = 25 : 24",
+      "q_num": 11
+    }
+  ]
+}

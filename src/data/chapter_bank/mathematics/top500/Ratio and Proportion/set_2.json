@@ -1,0 +1,198 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Ratio and Proportion",
+  "questions": [
+    {
+      "question": "The ratio of incomes of A and B is 5:3 and expenditures is 9:5. A's income is twice B's expenditure. Find ratio of savings of A and B. A",
+      "options": {
+        "a": "2:3",
+        "b": "3:4",
+        "c": "3:2",
+        "d": "1:1"
+      },
+      "answer": "d",
+      "solution": "",
+      "q_num": 1
+    },
+    {
+      "question": "The ratio of sum of salaries of A & B to their difference is 11:1, and same for B & C. A's salary is highest, C's is lowest. If total salaries = ₹1,82,000, find B's salary. (SSC CGL Tier-II 20-02-2018) A",
+      "options": {
+        "a": "₹72,000",
+        "b": "₹60,000",
+        "c": "₹50,000",
+        "d": "₹86,400"
+      },
+      "answer": "b",
+      "solution": "Sum and difference again — componendo–\ndividendo turns each pair straight into a ratio. \n Step 1   Convert both given pairs. \n(A + B)/(A − B) = 11/1   ⇒  A : B = (11 + 1) : (11 − 1) = \n12 : 10 = 6 : 5 \n(B + C)/(B − C) = 11/1   ⇒  B : C = 6 : 5 \n Step 2   B is the common term — equalise it. \n \n Step 3   Total the units and value one of them. \n36 + 30 + 25 = 91 units = ₹1,82,000   ∴  1 unit = \n₹2,000 \n Step 4   B is 30 units. \nB = 30 × 2,000 = ₹60,000",
+      "q_num": 2
+    },
+    {
+      "question": "A sum of ₹15,525 is divided among Sunil, Anil and Jameel. After deducting ₹22, ₹35 and ₹48 from their shares, remainders are in ratio 7:10:13. Find new ratio if ₹16, ₹77 and ₹37 are added to original shares. ₹15,525",
+      "options": {
+        "a": "9:13:17",
+        "b": "18:26:35",
+        "c": "36:52:67",
+        "d": "None \nof these"
+      },
+      "answer": "c",
+      "solution": "Here, 7 : 10 : 13 is the ratio of the remainders — \nnot of ₹15,525. So deduct first, then divide. \nTotal deduction = 22 + 35 + 48 = ₹105    ∴  15,525 \n− 105 = ₹15,420 \n \n Step 1   Calculating side by side. \nSum of the terms = 7 + 10 + 13 = 30 units = \n₹15,420    ∴  1 unit = ₹514 \nIncome\nExp\nSavings\nA\n10n\n9n\nn\nB\n6n\n5n\nn\nA_income = 2·B_exp → k=2n → savings A:B = n:n = \n1:1 \nLCM (5, 6) = 30    →    make B = 30 in both ratios\nA : B  =  6 : 5\n× 6\n36 : 30\nB : C  =  6 : 5\n× 5\n30 : 25\n∴  A : B : C  =  36 : 30 : 25\nGiven total  =  ₹15,525\n₹15,420 \n₹105 \n7 : 10 : 13 is divided into this \ndeducted\n22 + 35 + 48 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n \n Step 2 (Optional)   Cross-verifying the final values. \nOriginal shares :  3,620 + 5,175 + 6,730 = ₹15,525 \n✓  (equals the given sum)",
+      "q_num": 3
+    },
+    {
+      "question": "A dog takes 8 jumps for every 12 jumps of the lion and a fox takes 15 jumps for every 12 jumps of the lion. Distance covered in 8 dog jumps = 16 lion jumps = 24 fox jumps. Find ratio of their speeds.",
+      "options": {
+        "a": "8:12:15",
+        "b": "6:8:33",
+        "c": "8:6:5",
+        "d": "5:8:6"
+      },
+      "answer": "c",
+      "solution": "Speed = (jumps in the same time) × (length of \none jump). Take one LION jump as the unit. \n Step 1   Read the jump lengths off the distance \nline. \n8 dog = 16 lion   ⇒  1 dog jump = 2 lion jumps \n24 fox = 16 lion   ⇒  1 fox jump = ⅔ lion jump \n Step 2   Multiply each animal's rate by its own \njump length. \n \n16 : 12 : 10  =  8 : 6 : 5",
+      "q_num": 4
+    },
+    {
+      "question": "Two candles of same height are lighted simultaneously. First burns in 8 hours, second in 6 hours. After how many hours does the ratio of 1st to 2nd candle become 2:1?",
+      "options": {
+        "a": "4 hours 48 minutes",
+        "b": "5 hours 30 \nminutes",
+        "c": "12 hours",
+        "d": "6 hours"
+      },
+      "answer": "a",
+      "solution": "Both candles start at the same height, so work \nwith the FRACTION left, never the height. \n Step 1   After t hours, write what is left of each. \nfirst = (8 − t)/8  of its height          second = (6 − \nt)/6  of its height \n Step 2   The leftovers are in 2 : 1. \n(8 − t)/8 = 2 × (6 − t)/6   ⇒  3(8 − t) = 8(6 − t) \n Step 3   Solve. \n24 − 3t = 48 − 8t   ⇒  5t = 24   ∴  t = 4.8 h = 4 \nhours 48 minutes",
+      "q_num": 5
+    },
+    {
+      "question": "x varies directly as y and inversely as z. When y = 1.8 and z = 4.5, x = 2.5. Find x when y = 4.2 and z = 1.25. x",
+      "options": {
+        "a": "21",
+        "b": "20",
+        "c": "10.5",
+        "d": "10"
+      },
+      "answer": "a",
+      "solution": "𝑥= 6.25 × (4.2/1.25) = 21",
+      "q_num": 6
+    },
+    {
+      "question": "A semi-precious stone weighing 48g costs ₹2,30,400. It breaks in ratio 5:7 by weight. If price ∝ (weight)², find the loss in rupees. 48 Ť",
+      "options": {
+        "a": "₹1,12,000",
+        "b": "₹40,000",
+        "c": "₹1,18,400",
+        "d": "₹78,400"
+      },
+      "answer": "a",
+      "solution": "",
+      "q_num": 7
+    },
+    {
+      "question": "A diamond broke into three parts in ratio 2:3:4 by weight. Price ∝ (weight)². If loss after breaking = ₹52,000, find the original price.",
+      "options": {
+        "a": "₹80,000",
+        "b": "₹50,000",
+        "c": "₹60,000",
+        "d": "₹81,000"
+      },
+      "answer": "d",
+      "solution": "",
+      "q_num": 8
+    },
+    {
+      "question": "A supplier ordered 8 boxes of premium pens (price = twice standard pens). Boxes were interchanged in delivery, increasing the bill by 25%. Find the ratio of original boxes of premium to standard pens. (CGL 2025)",
+      "options": {
+        "a": "2:1",
+        "b": "1:3",
+        "c": "1:2",
+        "d": "3:1"
+      },
+      "answer": "c",
+      "solution": "",
+      "q_num": 9
+    },
+    {
+      "question": "A company ordered 20 high-end laptops (price = 5× standard desktop). Numbers were interchanged in delivery, increasing the bill by 80%. Find the ratio of laptops to desktops in the original order. (CGL 2025)",
+      "options": {
+        "a": "1:2",
+        "b": "2:1",
+        "c": "5:2",
+        "d": "2:5"
+      },
+      "answer": "d",
+      "solution": "",
+      "q_num": 10
+    },
+    {
+      "question": "A baker ordered 10 kg of premium flour (price = twice standard flour). Quantities were interchanged in error, decreasing the total cost by 25%. Find the ratio of premium flour to standard flour in the original order. (CGL 2025)",
+      "options": {
+        "a": "1:2",
+        "b": "5:2",
+        "c": "3:4",
+        "d": "4:5"
+      },
+      "answer": "b",
+      "solution": "",
+      "q_num": 11
+    },
+    {
+      "question": "What will be the average of first 50 positive even numbers?",
+      "options": {
+        "a": "50.5",
+        "b": "51",
+        "c": "50",
+        "d": "51.5"
+      },
+      "answer": "b",
+      "solution": "Write the numbers out before averaging — the \npattern does the work. \n Step 1   The first 50 even numbers are 2, 4, … 100. \nsum = 2(1 + 2 + … + 50) = 2 × (50 × 51)/2 = 2,550 \n Step 2   Divide by how many there are. \n2,550 / 50 = 51        (= n + 1, with n = 50)",
+      "q_num": 12
+    },
+    {
+      "question": "Find the average of the cubes of first five natural numbers.",
+      "options": {
+        "a": "35",
+        "b": "40",
+        "c": "45",
+        "d": "50"
+      },
+      "answer": "c",
+      "solution": "Cubes have their own sum formula — use it \nrather than adding 1 + 8 + 27 + … \n Step 1   Sum of the first n cubes. \n[n(n+1)/2]² = [5 × 6/2]² = 15² = 225 \n Step 2   Divide by n. \n225 / 5 = 45",
+      "q_num": 13
+    },
+    {
+      "question": "The average of 39 numbers is zero. How many of those numbers can be greater than zero? 39",
+      "options": {
+        "a": "0",
+        "b": "38",
+        "c": "20",
+        "d": "39"
+      },
+      "answer": "b",
+      "solution": "An average of zero means the positives are \nexactly cancelled by the negatives. \n Step 1   At least one number must be negative. \nso at most 39 − 1 = 38 can be greater than zero",
+      "q_num": 14
+    },
+    {
+      "question": "A cricket team scored 156 runs in 30 overs. It has to make 275 runs in 50 overs. How many average runs does it need per over in the remaining overs?",
+      "options": {
+        "a": "5.75",
+        "b": "5.95",
+        "c": "5.85",
+        "d": "5.9"
+      },
+      "answer": "b",
+      "solution": "Work in runs still needed, not in run rates. \n Step 1   Runs already made and runs still \nrequired. \n156 scored,  275 − 156 = 119 still needed \n Step 2   Overs left. \n50 − 30 = 20   ⇒  119 / 20 = 5.95 an over",
+      "q_num": 15
+    },
+    {
+      "question": "The average of 8 numbers is 45. If each of the first 4 numbers is increased by 5 and each of the last 4 numbers is decreased by 3, what will be the new average? 8",
+      "options": {
+        "a": "45",
+        "b": "47",
+        "c": "46",
+        "d": "48"
+      },
+      "answer": "c",
+      "solution": "Never rebuild the sum — add up the CHANGES \nand divide by the count. \nAVERAGE \nLEVEL - 1 \n275 in 50 overs\n30 overs \nneed 20 overs \n119/20 = 5.95 per over \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 1   Total change. \n4(+5) + 4(−3) = 20 − 12 = +8 \n Step 2   Spread it over the 8 numbers. \n8 / 8 = +1   ∴  new average = 45 + 1 = 46",
+      "q_num": 16
+    }
+  ]
+}
