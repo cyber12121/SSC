@@ -128,7 +128,7 @@ export default function App() {
           }
         }
 
-        const key = `${canonicalTitle.trim().toLowerCase()}|${chapter.set_name || ''}`;
+        const key = `${canonicalTitle.trim().toLowerCase()}|${chapter.section || ''}|${chapter.set_name || ''}`;
 
         if (!mergedChaptersMap[key]) {
           mergedChaptersMap[key] = {
