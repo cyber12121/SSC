@@ -7,6 +7,7 @@ import { QuestionCard } from './QuestionCard';
 interface QuizContainerProps {
   chapter: Chapter;
   category: 'mockErrors' | 'chapterBank';
+  mode: 'practice' | 'mock';
   onComplete: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => void;
   bookmarkedIds?: Set<number>;
   onBookmarkToggle?: (question: Question) => void;
@@ -19,6 +20,7 @@ type QuestionStatus = 'not-visited' | 'correct' | 'wrong' | 'marked' | 'answered
 export const QuizContainer: React.FC<QuizContainerProps> = ({ 
   chapter, 
   category, 
+  mode,
   onComplete,
   bookmarkedIds = new Set(),
   onBookmarkToggle,
@@ -253,7 +255,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   }
 
   const currentQuestion = chapter.questions[currentIdx];
-  const isShowSolution = !!answers[currentIdx]; // Show solution if answered (Instant Solution mode)
+  // Practice mode: reveal solution instantly on answering. Mock mode: hide until submit/review.
+  const isShowSolution = mode === 'practice' ? !!answers[currentIdx] : false;
 
   const stats = {
     correct: Object.keys(answers).filter(idx => answers[parseInt(idx)] === chapter.questions[parseInt(idx)].answer).length,
@@ -290,11 +293,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 {isPaused ? <Play className="w-3.5 h-3.5 mr-1.5 fill-current" /> : <Pause className="w-3.5 h-3.5 mr-1.5 fill-current" />}
                 <span>{isPaused ? "Resume" : "Pause"}</span>
               </button>
-              <div className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm font-mono tracking-wider font-semibold ${totalQuizTime != null && timeLeft != null && timeLeft <= 60 ? 'bg-red-600 animate-pulse' : 'bg-blue-700'}`}>
+              <div className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm font-mono tracking-wider font-semibold ${mode === 'mock' && totalQuizTime != null && timeLeft != null && timeLeft <= 60 ? 'bg-red-600 animate-pulse' : 'bg-blue-700'}`}>
                 <Clock className="w-4 h-4 mr-1" />
-                {totalQuizTime != null && timeLeft != null
-                  ? `${Math.floor(timeLeft / 60).toString().padStart(2, '0')}:${(timeLeft % 60).toString().padStart(2, '0')}`
-                  : `${Math.floor(currentTimer / 60).toString().padStart(2, '0')}:${(currentTimer % 60).toString().padStart(2, '0')}`}
+                {mode === 'practice'
+                  ? `Q ${Math.floor(currentTimer / 60).toString().padStart(2, '0')}:${(currentTimer % 60).toString().padStart(2, '0')}`
+                  : (totalQuizTime != null && timeLeft != null
+                    ? `${Math.floor(timeLeft / 60).toString().padStart(2, '0')}:${(timeLeft % 60).toString().padStart(2, '0')}`
+                    : `${Math.floor(currentTimer / 60).toString().padStart(2, '0')}:${(currentTimer % 60).toString().padStart(2, '0')}`)}
               </div>
             </div>
           )}
@@ -397,7 +402,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   onBookmark={() => onBookmarkToggle?.(currentQuestion)}
                   isAdmin={isAdmin}
                   onDelete={() => onDeleteQuestion?.(currentQuestion)}
-                  timeSpentSeconds={isReviewMode ? (timeSpent[currentIdx] || 0) : undefined}
+                  timeSpentSeconds={isReviewMode ? (timeSpent[currentIdx] || 0) : (mode === 'practice' ? currentTimer : undefined)}
                 />
               )}
             </AnimatePresence>

@@ -87,6 +87,14 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap'>('home');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
+  const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
+    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('quizMode') : null;
+    return saved === 'mock' ? 'mock' : 'practice';
+  });
+  const setQuizModePersisted = (mode: 'practice' | 'mock') => {
+    setQuizMode(mode);
+    try { localStorage.setItem('quizMode', mode); } catch {}
+  };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
@@ -515,6 +523,30 @@ export default function App() {
                 <Flame className="w-5 h-5 mr-2" />
                 Heatmap
               </button>
+              <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200" title="Quiz mode">
+                <button
+                  onClick={() => setQuizModePersisted('practice')}
+                  className={`px-3 py-2 rounded-lg text-sm font-bold transition-all flex items-center ${
+                    quizMode === 'practice'
+                      ? 'bg-white text-emerald-600 shadow-sm'
+                      : 'text-slate-500 hover:text-slate-800'
+                  }`}
+                >
+                  <BookOpen className="w-4 h-4 mr-1.5" />
+                  Practice
+                </button>
+                <button
+                  onClick={() => setQuizModePersisted('mock')}
+                  className={`px-3 py-2 rounded-lg text-sm font-bold transition-all flex items-center ${
+                    quizMode === 'mock'
+                      ? 'bg-white text-red-600 shadow-sm'
+                      : 'text-slate-500 hover:text-slate-800'
+                  }`}
+                >
+                  <Trophy className="w-4 h-4 mr-1.5" />
+                  Mock
+                </button>
+              </div>
               {user ? (
                 <button 
                   onClick={handleLogout}
@@ -905,6 +937,7 @@ export default function App() {
               <QuizContainer 
                 chapter={activeChapter} 
                 category={category}
+                mode={quizMode}
                 onComplete={handleQuizComplete} 
                 bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
                 onBookmarkToggle={toggleBookmark}
