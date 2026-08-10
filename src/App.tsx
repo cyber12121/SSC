@@ -447,7 +447,7 @@ export default function App() {
           <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg shadow-blue-200">
             <GraduationCap className="text-white w-10 h-10" />
           </div>
-          <h1 className="text-3xl font-black text-slate-900 mb-4">SSC CGL Practice Pro</h1>
+          <h1 className="text-3xl font-black text-slate-900 mb-4">mock</h1>
           <p className="text-slate-500 mb-8 font-medium">Please login to access your private practice dashboard.</p>
           <button
             onClick={handleLogin}
@@ -491,7 +491,16 @@ export default function App() {
               <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
                 <GraduationCap className="text-white w-6 h-6" />
               </div>
-              <span className="text-2xl font-black tracking-tight text-slate-800">SSC CGL <span className="text-blue-600">PRO</span></span>
+              <span className="text-2xl font-black tracking-tight text-slate-800">mock</span>
+              <a
+                href="https://cat-nu-ruby.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 px-3 py-1.5 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-200 text-sm flex items-center"
+                title="Open CAT practice"
+              >
+                CAT
+              </a>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
