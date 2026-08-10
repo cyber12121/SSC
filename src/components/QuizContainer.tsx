@@ -15,7 +15,7 @@ interface QuizContainerProps {
   isAdmin?: boolean;
 }
 
-type QuestionStatus = 'not-visited' | 'correct' | 'wrong' | 'marked' | 'answered-marked';
+  type QuestionStatus = 'not-visited' | 'correct' | 'wrong' | 'marked' | 'answered-marked' | 'answered';
 
 export const QuizContainer: React.FC<QuizContainerProps> = ({ 
   chapter, 
@@ -165,6 +165,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     if (isMarked && isAnswered) return 'answered-marked';
     if (isMarked) return 'marked';
     if (isAnswered) {
+      // In Mock mode, don't reveal correct/wrong colours until review.
+      if (mode === 'mock' && !isReviewMode) return 'answered';
       const isCorrect = answers[idx] === chapter.questions[idx].answer;
       return isCorrect ? 'correct' : 'wrong';
     }
@@ -259,8 +261,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const isShowSolution = mode === 'practice' ? !!answers[currentIdx] : false;
 
   const stats = {
-    correct: Object.keys(answers).filter(idx => answers[parseInt(idx)] === chapter.questions[parseInt(idx)].answer).length,
-    wrong: Object.keys(answers).filter(idx => answers[parseInt(idx)] !== chapter.questions[parseInt(idx)].answer).length,
+    correct: mode === 'mock' && !isReviewMode ? 0 : Object.keys(answers).filter(idx => answers[parseInt(idx)] === chapter.questions[parseInt(idx)].answer).length,
+    wrong: mode === 'mock' && !isReviewMode ? 0 : Object.keys(answers).filter(idx => answers[parseInt(idx)] !== chapter.questions[parseInt(idx)].answer).length,
+    answered: Object.keys(answers).length,
     marked: markedForReview.size,
     notAttempted: totalQuestions - Object.keys(answers).length - markedForReview.size,
   };
@@ -429,14 +432,23 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
         {/* Legend */}
         <div className="p-4 grid grid-cols-2 gap-y-3 gap-x-2 border-b border-gray-200 bg-white text-xs font-medium text-gray-700">
-          <div className="flex items-center">
-            <span className="w-6 h-6 rounded-tl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-green-500 text-white mr-2 text-[10px]">{stats.correct}</span>
-            Correct
-          </div>
-          <div className="flex items-center">
-            <span className="w-6 h-6 rounded-bl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-red-500 text-white mr-2 text-[10px]">{stats.wrong}</span>
-            Wrong
-          </div>
+          {mode === 'mock' && !isReviewMode ? (
+            <div className="flex items-center">
+              <span className="w-6 h-6 rounded-md flex items-center justify-center bg-blue-400 text-white mr-2 text-[10px]">{stats.answered}</span>
+              Answered
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center">
+                <span className="w-6 h-6 rounded-tl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-green-500 text-white mr-2 text-[10px]">{stats.correct}</span>
+                Correct
+              </div>
+              <div className="flex items-center">
+                <span className="w-6 h-6 rounded-bl-full rounded-tr-full rounded-br-full flex items-center justify-center bg-red-500 text-white mr-2 text-[10px]">{stats.wrong}</span>
+                Wrong
+              </div>
+            </>
+          )}
           <div className="flex items-center">
             <span className="w-6 h-6 rounded-md flex items-center justify-center bg-gray-200 text-gray-700 mr-2 text-[10px]">{stats.notAttempted}</span>
             Not Attempted
@@ -469,6 +481,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               } else if (status === 'wrong') {
                 bgClass = "bg-red-500 text-white hover:bg-red-600";
                 shapeClass = "rounded-bl-full rounded-tr-full rounded-br-full";
+              } else if (status === 'answered') {
+                bgClass = "bg-blue-400 text-white hover:bg-blue-500";
+                shapeClass = "rounded-md";
               } else if (status === 'marked' || status === 'answered-marked') {
                 bgClass = "bg-purple-600 text-white hover:bg-purple-700";
                 shapeClass = "rounded-full";
