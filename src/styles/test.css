@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --test-primary: #2C3E50;
+  --test-success: #27AE60;
+  --test-background: #F8F9FA;
+  --test-text: #34495E;
+  --test-muted: #7F8C8D;
+  --test-border: #EAECEE;
+  --test-hover: #F0F3F4;
+}
+
+/* Base reset for test window */
+.test-window {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--test-background);
+  color: var(--test-text);
+  line-height: 1.6;
+}
+
+/* Headings */
+.test-window h1,
+.test-window h2,
+.test-window h3,
+.test-window h4,
+.test-window h5,
+.test-window h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  color: var(--test-primary);
+}
+
+.test-window h1 { font-size: 2rem; }
+.test-window h2 { font-size: 1.75rem; }
+.test-window h3 { font-size: 1.5rem; }
+.test-window h4 { font-size: 1.25rem; }
+
+/* Body text */
+.test-window p,
+.test-window li,
+.test-window label,
+.test-window input,
+.test-window select,
+.test-window textarea,
+.test-window button {
+  font-size: 1rem;
+}
+
+/* Utility for code snippets */
+.test-window code,
+.test-window .code-snippet {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--test-hover);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Containers */
+.test-window .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Cards */
+.test-window .card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--test-border);
+}
+
+/* Buttons */
+.test-window .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.test-window .btn-primary {
+  background-color: var(--test-primary);
+  color: white;
+}
+
+.test-window .btn-primary:hover {
+  background-color: #1A252F;
+}
+
+.test-window .btn-success {
+  background-color: var(--test-success);
+  color: white;
+}
+
+.test-window .btn-success:hover {
+  background-color: #1E8449;
+}
+
+.test-window .btn-outline {
+  background: transparent;
+  color: var(--test-primary);
+  border: 2px solid var(--test-primary);
+}
+
+.test-window .btn-outline:hover {
+  background-color: var(--test-hover);
+  color: var(--test-primary);
+}
+
+/* Forms */
+.test-window .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.test-window .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.test-window .form-group input,
+.test-window .form-group select,
+.test-window .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--test-border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.test-window .form-group input:focus,
+.test-window .form-group select:focus,
+.test-window .form-group textarea:focus {
+  outline: none;
+  border-color: var(--test-primary);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+/* Layout helpers */
+.test-window .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.test-window .space-y > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Progress breathing space */
+.test-window .breathing-space {
+  margin: 3rem 0;
+  min-height: 4rem;
+}
+
+/* Question specific styles */
+.test-window .question-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--test-border);
+}
+
+.test-window .question-text {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.test-window .options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.test-window .option-btn {
+  background: white;
+  border: 2px solid var(--test-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: left;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.test-window .option-btn:hover {
+  border-color: var(--test-primary);
+  background-color: var(--test-hover);
+}
+
+.test-window .option-btn.selected {
+  border-color: var(--test-success);
+  background-color: #E8F8F5;
+  color: var(--test-success);
+}
+
+.test-window .option-btn.correct {
+  border-color: var(--test-success);
+  background-color: #E8F8F5;
+  color: var(--test-success);
+}
+
+.test-window .option-btn.wrong {
+  border-color: #E74C3C;
+  background-color: #FDEDEC;
+  color: #E74C3C;
+}
+
+/* Timer */
+.test-window .timer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--test-primary);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Navigation */
+.test-window .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.test-window .nav button,
+.test-window .nav a.btn {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .test-window .container {
+    padding: 1rem;
+  }
+
+  .test-window h1 {
+    font-size: 1.5rem;
+  }
+
+  .test-window .question-card {
+    padding: 1.5rem;
+  }
+}

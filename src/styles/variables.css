@@ -1,0 +1,211 @@
+/* ============================================
+   Minimalist Design Tokens
+   Primary accent: Muted teal (#14b8a6)
+   ============================================ */
+
+:root {
+  /* ==========================================================================
+     COLORS - Monochromatic + Single Accent
+     ========================================================================== */
+
+  /* Neutral scale - warm grays */
+  --neutral-50:  #fafafa;
+  --neutral-100: #f4f4f4;
+  --neutral-200: #e4e4e4;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+
+  /* Single accent - muted teal/green */
+  --accent-50:  #f0fdfa;
+  --accent-100: #ccfbf1;
+  --accent-200: #99f6e4;
+  --accent-300: #5eead4;
+  --accent-400: #2dd4bf;
+  --accent-500: #14b8a6;  /* PRIMARY ACCENT */
+  --accent-600: #0d9488;
+  --accent-700: #0f766e;
+  --accent-800: #115e59;
+  --accent-900: #134e4a;
+
+  /* Semantic colors */
+  --success:  #16a34a;
+  --success-50:  #f0fdf4;
+  --success-100: #dcfce7;
+  --success-200: #b2f2bb;
+  --success-300: #82c997;
+  --success-400: #50c967;
+  --success-500: #22c55e;
+  --success-600: #16a34a;
+  --success-700: #15803d;
+  --success-800: #166534;
+  --success-900: #14532d;
+
+  --error: #dc2626;
+  --error-50:  #fef2f2;
+  --error-100: #fee2e2;
+  --error-200: #fecaca;
+  --error-300: #fca5a5;
+  --error-400: #f87171;
+  --error-500: #ef4444;
+  --error-600: #dc2626;
+  --error-700: #b91c1c;
+  --error-800: #991b1b;
+  --error-900: #7f1d1d;
+
+  --warning: #eab308;
+  --warning-50: #fefce8;
+  --warning-100: #fef3c7;
+  --warning-200: #fef9c3;
+  --warning-300: #fef3a1;
+  --warning-400: #fef3a1;
+  --warning-500: #eab308;
+  --warning-600: #ca8a04;
+  --warning-700: #a16207;
+  --warning-800: #854d0e;
+  --warning-900: #713f12;
+
+  --info:  #0ea5e9;
+  --info-50:  #eff6ff;
+  --info-100: #dbeafe;
+  --info-200: #bfdbfe;
+  --info-300: #93c5fd;
+  --info-400: #60a5fa;
+  --info-500: #0ea5e9;
+  --info-600: #0284c7;
+  --info-700: #0369a1;
+  --info-800: #075985;
+  --info-900: #0c4a6e;
+
+  /* Surface & background */
+  --bg-primary:   #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary:  #f4f4f4;
+
+  /* Text */
+  --text-primary:   #171717;
+  --text-secondary: #525252;
+  --text-tertiary:  #737373;
+  --text-inverse:   #ffffff;
+
+  /* Borders */
+  --border-light:  #e4e4e4;
+  --border-medium: #d4d4d4;
+  --border-focus:  #14b8a6;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md:  0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg:  0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+
+  /* Radii */
+  --radius-sm:  0.375rem;  /* 6px */
+  --radius-md:  0.5rem;    /* 8px */
+  --radius-lg:  0.75rem;   /* 12px */
+  --radius-xl:  1rem;      /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+}
+
+/* Support dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-50:  #171717;
+    --neutral-100: #262626;
+    --neutral-200: #404040;
+    --neutral-300: #525252;
+    --neutral-400: #737373;
+    --neutral-500: #a3a3a3;
+    --neutral-600: #d4d4d4;
+    --neutral-700: #e4e4e4;
+    --neutral-800: #f4f4f4;
+    --neutral-900: #fafafa;
+
+    --bg-primary:   #171717;
+    --bg-secondary: #262626;
+    --bg-tertiary:  #404040;
+
+    --text-primary:   #fafafa;
+    --text-secondary: #d4d4d4;
+    --text-tertiary:  #a3a3a3;
+
+    --border-light:  #262626;
+    --border-medium: #404040;
+  }
+}
+
+/* ===========================
+   TYPOGRAPHY SCALE
+   =========================== */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Scale - modular (1.25 ratio) */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.25rem;    /* 20px */
+  --text-2xl:   1.563rem;   /* 25px */
+  --text-3xl:   1.953rem;  /* 31px */
+  --text-4xl:   2.441rem;  /* 39px */
+  --text-5xl:   3.052rem;  /* 49px */
+  --text-6xl:   3.815rem;  /* 61px */
+
+  /* Line heights */
+  --leading-tight:    1.1;
+  --leading-snug:     1.375;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.625;
+  --leading-loose:    2;
+
+  /* Font weights */
+  --weight-normal:    400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+}
+
+/* ===============================
+   SPACING SCALE (4px base)
+   =============================== */
+:root {
+  --space-1:  0.25rem;  /* 4px */
+  --space-2:  0.5rem;   /* 8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-7:  1.75rem;  /* 28px */
+  --space-8:  2rem;     /* 32px */
+  --space-9:  2.25rem;  /* 36px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-11: 2.75rem;  /* 44px */
+  --space-12: 3rem;     /* 48px */
+  --space-14: 3.5rem;   /* 56px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+}
+
+/* ===============================
+   Z-INDEX LAYERS
+   =============================== */
+:root {
+  --z-dropdown:   10;
+  --z-sticky:     20;
+  --z-fixed:      30;
+  --z-messaging:  40;
+  --z-modal-bg:   50;
+  --z-modal:      100;
+  --z-popover:    110;
+  --z-tooltip:    120;
+}

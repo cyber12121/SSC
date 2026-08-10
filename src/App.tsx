@@ -589,219 +589,137 @@ export default function App() {
             {view === 'home' && (
               <motion.div
                 key="home"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                exit={{ opacity: 0, y: -12 }}
               >
-                {/* Header & Category Toggle */}
-                <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-                  <div>
-                    <h1 className="text-4xl font-black text-slate-900 mb-4 leading-tight">
-                      {selectedSubject ? `${selectedSubject}` : `Your Personal Practice Hub`}
-                    </h1>
-                    <p className="text-xl text-slate-500 max-w-2xl">
-                      {selectedSubject ? `Select a chapter or attempt all questions.` : `Master your subjects with focused practice and error analysis.`}
-                    </p>
-                  </div>
-                  
-                  {!selectedSubject && (
-                    <div className="flex bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
-                      <button
-                        onClick={() => setCategory('chapterBank')}
-                        className={`px-6 py-3 rounded-xl font-bold transition-all flex items-center ${
-                          category === 'chapterBank'
-                            ? 'bg-white text-blue-600 shadow-sm'
-                            : 'text-slate-500 hover:text-slate-800'
-                        }`}
-                      >
-                        <ListChecks className="w-5 h-5 mr-2" />
-                        Chapter Bank
-                      </button>
-                      <button
-                        onClick={() => setCategory('mockErrors')}
-                        className={`px-6 py-3 rounded-xl font-bold transition-all flex items-center ${
-                          category === 'mockErrors'
-                            ? 'bg-white text-red-600 shadow-sm'
-                            : 'text-slate-500 hover:text-slate-800'
-                        }`}
-                      >
-                        <AlertCircle className="w-5 h-5 mr-2" />
-                        Mock Errors
-                      </button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Subject Selection or Chapter Selection */}
                 {!selectedSubject ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {Object.keys(currentData).map((subject, idx) => (
-                      <motion.div
-                        key={idx}
-                        whileHover={{ y: -8 }}
-                        className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer"
-                        onClick={() => setSelectedSubject(subject)}
-                      >
-                        <div className="flex items-start justify-between mb-6">
-                          <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 ${
-                            category === 'mockErrors' 
-                              ? 'bg-red-50 text-red-600 group-hover:bg-red-600' 
-                              : 'bg-blue-50 text-blue-600 group-hover:bg-blue-600'
-                          } group-hover:text-white`}>
-                            <Layers className="w-7 h-7" />
-                          </div>
-                          <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase tracking-wider">
-                            {currentData[subject].length} Chapters
+                  <>
+                    {/* Hero */}
+                    <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-indigo-50 via-white to-white p-8 sm:p-10">
+                      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                        <div className="max-w-xl">
+                          <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-semibold text-indigo-600 ring-1 ring-indigo-100">
+                            SSC CGL Prep
                           </span>
+                          <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                            Practice smart. Beat the competition.
+                          </h1>
+                          <p className="mt-3 text-slate-500">
+                            Curated chapter banks and focused mock-error drills — pick a subject and start solving.
+                          </p>
                         </div>
-                        <h3 className="text-2xl font-black text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
-                          {subject}
-                        </h3>
-                        <div className={`flex items-center font-bold group-hover:translate-x-2 transition-transform ${
-                          category === 'mockErrors' ? 'text-red-600' : 'text-blue-600'
-                        }`}>
-                          View Chapters
-                          <ChevronRight className="w-5 h-5 ml-2" />
+                        <div className="inline-flex shrink-0 rounded-xl border border-slate-200 bg-white p-1">
+                          <button
+                            onClick={() => setCategory('chapterBank')}
+                            className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors flex items-center ${
+                              category === 'chapterBank' ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-800'
+                            }`}
+                          >
+                            <ListChecks className="w-4 h-4 mr-2" />
+                            Chapter Bank
+                          </button>
+                          <button
+                            onClick={() => setCategory('mockErrors')}
+                            className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors flex items-center ${
+                              category === 'mockErrors' ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-800'
+                            }`}
+                          >
+                            <AlertCircle className="w-4 h-4 mr-2" />
+                            Mock Errors
+                          </button>
                         </div>
-                      </motion.div>
-                    ))}
-                  </div>
+                      </div>
+                    </section>
+
+                    {/* Subjects */}
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                      {Object.keys(currentData).map((subject) => {
+                        const tint = (
+                          {
+                            Mathematics: 'bg-blue-50 text-blue-600',
+                            Reasoning: 'bg-violet-50 text-violet-600',
+                            English: 'bg-emerald-50 text-emerald-600',
+                            'General Awareness': 'bg-amber-50 text-amber-600',
+                            'GK/GS': 'bg-amber-50 text-amber-600',
+                          } as Record<string, string>
+                        )[subject] || 'bg-slate-100 text-slate-500';
+                        return (
+                          <motion.div
+                            key={subject}
+                            whileHover={{ y: -3 }}
+                            onClick={() => setSelectedSubject(subject)}
+                            className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm"
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${tint}`}>
+                                <Layers className="w-5 h-5" />
+                              </div>
+                              <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                                {currentData[subject].length} Chapters
+                              </span>
+                            </div>
+                            <h3 className="mt-5 text-lg font-semibold text-slate-800">{subject}</h3>
+                            <div className="mt-2 flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
+                              View Chapters
+                              <ChevronRight className="w-4 h-4 ml-1" />
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </>
                 ) : selectedSubject === 'Mathematics' && category === 'chapterBank' && !selectedMathSection ? (
-                  <div className="space-y-8">
-                    <button 
+                  <div className="space-y-6">
+                    <button
                       onClick={() => setSelectedSubject(null)}
-                      className="flex items-center text-slate-500 font-bold hover:text-slate-800 transition-colors"
+                      className="flex items-center text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors"
                     >
-                      <ChevronLeft className="w-5 h-5 mr-1" />
+                      <ChevronLeft className="w-4 h-4 mr-1" />
                       Back to Subjects
                     </button>
 
-                    <div className="text-center max-w-2xl mx-auto mb-12">
-                      <h2 className="text-3xl font-black text-slate-900 mb-4">Mathematics Practice Sections</h2>
-                      <p className="text-lg text-slate-500 font-medium">Choose a specialized book or practice series to get started with focused topic revision.</p>
+                    <div>
+                      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Mathematics Practice Sections</h2>
+                      <p className="mt-1 text-slate-500">Choose a specialised book or practice series to get started.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      {/* Spartan Card */}
-                      <motion.div
-                        whileHover={{ y: -8, scale: 1.02 }}
-                        onClick={() => setSelectedMathSection('spartan')}
-                        className="relative bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer overflow-hidden flex flex-col justify-between min-h-[320px]"
-                      >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-bl-[100px] -z-0 transition-all duration-300 group-hover:scale-110"></div>
-                        <div className="relative z-10">
-                          <div className="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-8 shadow-lg shadow-amber-100 group-hover:bg-gradient-to-br group-hover:from-amber-500 group-hover:to-orange-500 group-hover:text-white transition-all duration-300">
-                            <Shield className="w-8 h-8" />
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                      {([
+                        { key: 'spartan', icon: Shield, tint: 'bg-amber-50 text-amber-600', title: 'Spartan Series', desc: 'High-yield, battle-tested challenges and conceptually advanced problem sets.' },
+                        { key: 'pinnacle', icon: Crown, tint: 'bg-blue-50 text-blue-600', title: 'Pinnacle Series', desc: 'Comprehensive past year practice sets, exhaustive subject mapping, and exam models.' },
+                        { key: 'qrb', icon: Zap, tint: 'bg-emerald-50 text-emerald-600', title: 'QRB Series', desc: 'Quick Revision Book question bank focusing on high-speed formula checks and concepts.' },
+                        { key: 'top500', icon: Star, tint: 'bg-violet-50 text-violet-600', title: 'Top 500 Series', desc: 'The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.' },
+                      ] as const).map(({ key, icon: Icon, tint, title, desc }) => (
+                        <motion.div
+                          key={key}
+                          whileHover={{ y: -3 }}
+                          onClick={() => setSelectedMathSection(key)}
+                          className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm flex flex-col"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${tint}`}>
+                              <Icon className="w-5 h-5" />
+                            </div>
+                            <h3 className="text-base font-semibold text-slate-800">{title}</h3>
                           </div>
-                          <h3 className="text-2xl font-black text-slate-800 mb-3 group-hover:text-amber-600 transition-colors">
-                            Spartan Series
-                          </h3>
-                          <p className="text-slate-500 font-medium leading-relaxed">
-                            High-yield, battle-tested challenges and conceptually advanced problem sets.
-                          </p>
-                        </div>
-                        <div className="mt-8 flex items-center justify-between relative z-10">
-                          <span className="text-sm font-bold text-amber-600 bg-amber-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
-                            {currentData['Mathematics']?.filter(ch => ch.section === 'spartan').length || 0} Chapters
-                          </span>
-                          <div className="flex items-center font-bold text-amber-600 group-hover:translate-x-2 transition-transform">
-                            Enter Section
-                            <ChevronRight className="w-5 h-5 ml-1" />
+                          <p className="mt-3 flex-1 text-sm text-slate-500 leading-relaxed">{desc}</p>
+                          <div className="mt-4 flex items-center justify-between">
+                            <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                              {currentData['Mathematics']?.filter(ch => ch.section === key).length || 0} Chapters
+                            </span>
+                            <div className="flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
+                              Enter
+                              <ChevronRight className="w-4 h-4 ml-1" />
+                            </div>
                           </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Pinnacle Card */}
-                      <motion.div
-                        whileHover={{ y: -8, scale: 1.02 }}
-                        onClick={() => setSelectedMathSection('pinnacle')}
-                        className="relative bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer overflow-hidden flex flex-col justify-between min-h-[320px]"
-                      >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-bl-[100px] -z-0 transition-all duration-300 group-hover:scale-110"></div>
-                        <div className="relative z-10">
-                          <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 shadow-lg shadow-blue-100 group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-indigo-500 group-hover:text-white transition-all duration-300">
-                            <Crown className="w-8 h-8" />
-                          </div>
-                          <h3 className="text-2xl font-black text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
-                            Pinnacle Series
-                          </h3>
-                          <p className="text-slate-500 font-medium leading-relaxed">
-                            Comprehensive past year practice sets, exhaustive subject mapping, and exam models.
-                          </p>
-                        </div>
-                        <div className="mt-8 flex items-center justify-between relative z-10">
-                          <span className="text-sm font-bold text-blue-600 bg-blue-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
-                            {currentData['Mathematics']?.filter(ch => ch.section === 'pinnacle').length || 0} Chapters
-                          </span>
-                          <div className="flex items-center font-bold text-blue-600 group-hover:translate-x-2 transition-transform">
-                            Enter Section
-                            <ChevronRight className="w-5 h-5 ml-1" />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* QRB Card */}
-                      <motion.div
-                        whileHover={{ y: -8, scale: 1.02 }}
-                        onClick={() => setSelectedMathSection('qrb')}
-                        className="relative bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer overflow-hidden flex flex-col justify-between min-h-[320px]"
-                      >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-bl-[100px] -z-0 transition-all duration-300 group-hover:scale-110"></div>
-                        <div className="relative z-10">
-                          <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-8 shadow-lg shadow-emerald-100 group-hover:bg-gradient-to-br group-hover:from-emerald-500 group-hover:to-teal-500 group-hover:text-white transition-all duration-300">
-                            <Zap className="w-8 h-8" />
-                          </div>
-                          <h3 className="text-2xl font-black text-slate-800 mb-3 group-hover:text-emerald-600 transition-colors">
-                            QRB Series
-                          </h3>
-                          <p className="text-slate-500 font-medium leading-relaxed">
-                            Quick Revision Book question bank focusing on high-speed formula checks and concepts.
-                          </p>
-                        </div>
-                        <div className="mt-8 flex items-center justify-between relative z-10">
-                          <span className="text-sm font-bold text-emerald-600 bg-emerald-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
-                            {currentData['Mathematics']?.filter(ch => ch.section === 'qrb').length || 0} Chapters
-                          </span>
-                          <div className="flex items-center font-bold text-emerald-600 group-hover:translate-x-2 transition-transform">
-                            Enter Section
-                            <ChevronRight className="w-5 h-5 ml-1" />
-                          </div>
-                        </div>
-                      </motion.div>
-
-                      {/* Top500 Card */}
-                      <motion.div
-                        whileHover={{ y: -8, scale: 1.02 }}
-                        onClick={() => setSelectedMathSection('top500')}
-                        className="relative bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer overflow-hidden flex flex-col justify-between min-h-[320px]"
-                      >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-bl-[100px] -z-0 transition-all duration-300 group-hover:scale-110"></div>
-                        <div className="relative z-10">
-                          <div className="w-16 h-16 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-8 shadow-lg shadow-violet-100 group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-300">
-                            <Star className="w-8 h-8" />
-                          </div>
-                          <h3 className="text-2xl font-black text-slate-800 mb-3 group-hover:text-violet-600 transition-colors">
-                            Top 500 Series
-                          </h3>
-                          <p className="text-slate-500 font-medium leading-relaxed">
-                            The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.
-                          </p>
-                        </div>
-                        <div className="mt-8 flex items-center justify-between relative z-10">
-                          <span className="text-sm font-bold text-violet-600 bg-violet-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
-                            {currentData['Mathematics']?.filter(ch => ch.section === 'top500').length || 0} Chapters
-                          </span>
-                          <div className="flex items-center font-bold text-violet-600 group-hover:translate-x-2 transition-transform">
-                            Enter Section
-                            <ChevronRight className="w-5 h-5 ml-1" />
-                          </div>
-                        </div>
-                      </motion.div>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
                 ) : (
-                  <div className="space-y-8">
-                    <button 
+                  <div className="space-y-6">
+                    <button
                       onClick={() => {
                         if (selectedTopic) {
                           setSelectedTopic(null);
@@ -811,32 +729,43 @@ export default function App() {
                           setSelectedSubject(null);
                         }
                       }}
-                      className="flex items-center text-slate-500 font-bold hover:text-slate-800 transition-colors"
+                      className="flex items-center text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors"
                     >
-                      <ChevronLeft className="w-5 h-5 mr-1" />
+                      <ChevronLeft className="w-4 h-4 mr-1" />
                       {selectedTopic ? 'Back to Topics' : (selectedSubject === 'Mathematics' && category === 'chapterBank' ? 'Back to Math Sections' : 'Back to Subjects')}
                     </button>
- 
+
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-2xl font-bold tracking-tight text-slate-900">{selectedSubject}</h2>
+                      <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                        category === 'mockErrors' ? 'bg-rose-50 text-rose-600' : 'bg-indigo-50 text-indigo-600'
+                      }`}>
+                        {category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
+                      </span>
+                    </div>
+
                     {/* Mock Errors: Attempt All Option */}
                     {category === 'mockErrors' && (
-                      <div className="bg-red-50 border border-red-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                      <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
                         <div>
-                          <h3 className="text-2xl font-black text-red-800 mb-2">Attempt All {selectedSubject} Errors</h3>
-                          <p className="text-red-600 font-medium">Practice all {currentData[selectedSubject].reduce((acc, ch) => acc + ch.questions.length, 0)} questions from all topics at once.</p>
+                          <h3 className="text-lg font-semibold text-slate-800">Attempt All {selectedSubject} Errors</h3>
+                          <p className="mt-1 text-sm text-slate-500">
+                            Practice all {currentData[selectedSubject].reduce((acc, ch) => acc + ch.questions.length, 0)} questions from every topic at once.
+                          </p>
                         </div>
-                        <button 
+                        <button
                           onClick={() => startAllSubjectQuiz(selectedSubject)}
-                          className="px-8 py-4 bg-red-600 text-white rounded-2xl font-bold hover:bg-red-700 transition-all shadow-xl shadow-red-200 flex items-center"
+                          className="inline-flex shrink-0 items-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
                         >
-                          <Play className="w-5 h-5 mr-2" />
+                          <Play className="w-4 h-4 mr-2" />
                           Start All
                         </button>
                       </div>
                     )}
- 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                       {(() => {
-                        const relevantChapters = currentData[selectedSubject].filter(chapter => 
+                        const relevantChapters = currentData[selectedSubject].filter(chapter =>
                           !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
                         );
                         const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
@@ -848,7 +777,7 @@ export default function App() {
 
                           return topics.map((topic, idx) => {
                             const topicChapters = relevantChapters.filter(ch => ch.topic_name === topic);
-                            
+
                             let displayTitle = topic.replace(/_/g, ' ');
                             if (topic === 'history_ancient') displayTitle = 'Ancient History';
                             else if (topic === 'history_medieval') displayTitle = 'Medieval History';
@@ -858,30 +787,22 @@ export default function App() {
                             return (
                               <motion.div
                                 key={idx}
-                                whileHover={{ y: -8 }}
-                                className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer"
+                                whileHover={{ y: -3 }}
                                 onClick={() => setSelectedTopic(topic)}
+                                className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm"
                               >
-                                <div className="flex items-start justify-between mb-6">
-                                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 ${
-                                    category === 'mockErrors' 
-                                      ? 'bg-red-50 text-red-600 group-hover:bg-red-600' 
-                                      : 'bg-blue-50 text-blue-600 group-hover:bg-blue-600'
-                                  } group-hover:text-white`}>
-                                    <Layers className="w-7 h-7" />
+                                <div className="flex items-center justify-between">
+                                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-500">
+                                    <Layers className="w-5 h-5" />
                                   </div>
-                                  <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase tracking-wider">
+                                  <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
                                     {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
                                   </span>
                                 </div>
-                                <h3 className="text-2xl font-black text-slate-800 mb-2 group-hover:text-blue-600 transition-colors capitalize">
-                                  {displayTitle}
-                                </h3>
-                                <div className={`flex items-center font-bold group-hover:translate-x-2 transition-transform mt-6 ${
-                                  category === 'mockErrors' ? 'text-red-600' : 'text-blue-600'
-                                }`}>
+                                <h3 className="mt-4 text-base font-semibold capitalize text-slate-800">{displayTitle}</h3>
+                                <div className="mt-2 flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
                                   {isMathSection ? 'View Sets' : 'View Chapters'}
-                                  <ChevronRight className="w-5 h-5 ml-2" />
+                                  <ChevronRight className="w-4 h-4 ml-1" />
                                 </div>
                               </motion.div>
                             );
@@ -899,33 +820,23 @@ export default function App() {
                         return chaptersToRender.map((chapter, idx) => (
                           <motion.div
                             key={idx}
-                            whileHover={{ y: -8 }}
-                            className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 group cursor-pointer"
+                            whileHover={{ y: -3 }}
                             onClick={() => startQuiz(chapter)}
+                            className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm"
                           >
-                            <div className="flex items-start justify-between mb-6">
-                              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 ${
-                                category === 'mockErrors' 
-                                  ? 'bg-red-50 text-red-600 group-hover:bg-red-600' 
-                                  : 'bg-blue-50 text-blue-600 group-hover:bg-blue-600'
-                              } group-hover:text-white`}>
-                                <BookOpen className="w-7 h-7" />
+                            <div className="flex items-center justify-between">
+                              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-500">
+                                <BookOpen className="w-5 h-5" />
                               </div>
-                              <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase tracking-wider">
+                              <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
                                 {chapter.set_name ? `Set ${chapter.set_name.replace('set_', '')}` : `Ch ${chapter.chapter_num}`}
                               </span>
                             </div>
-                            <h3 className="text-2xl font-black text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
-                              {chapter.set_name ? `${chapter.chapter_title}` : chapter.chapter_title}
-                            </h3>
-                            <p className="text-slate-500 font-medium mb-6">
-                              {chapter.questions.length} Questions
-                            </p>
-                            <div className={`flex items-center font-bold group-hover:translate-x-2 transition-transform ${
-                              category === 'mockErrors' ? 'text-red-600' : 'text-blue-600'
-                            }`}>
+                            <h3 className="mt-4 text-base font-semibold text-slate-800">{chapter.chapter_title}</h3>
+                            <p className="mt-1 text-sm text-slate-500">{chapter.questions.length} Questions</p>
+                            <div className="mt-3 flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
                               Start Practice
-                              <ChevronRight className="w-5 h-5 ml-2" />
+                              <ChevronRight className="w-4 h-4 ml-1" />
                             </div>
                           </motion.div>
                         ));
