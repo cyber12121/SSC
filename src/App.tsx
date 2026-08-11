@@ -596,24 +596,26 @@ export default function App() {
                 {!selectedSubject ? (
                   <>
                     {/* Hero */}
-                    <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-indigo-50 via-white to-white p-8 sm:p-10">
-                      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                    <section className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 p-8 sm:p-10">
+                      <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"></div>
+                      <div className="pointer-events-none absolute -bottom-24 left-8 h-72 w-72 rounded-full bg-fuchsia-400/20 blur-3xl"></div>
+                      <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                         <div className="max-w-xl">
-                          <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-semibold text-indigo-600 ring-1 ring-indigo-100">
+                          <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/20">
                             SSC CGL Prep
                           </span>
-                          <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                             Practice smart. Beat the competition.
                           </h1>
-                          <p className="mt-3 text-slate-500">
+                          <p className="mt-3 text-indigo-100">
                             Curated chapter banks and focused mock-error drills — pick a subject and start solving.
                           </p>
                         </div>
-                        <div className="inline-flex shrink-0 rounded-xl border border-slate-200 bg-white p-1">
+                        <div className="inline-flex shrink-0 rounded-xl border border-white/20 bg-white/10 p-1 backdrop-blur">
                           <button
                             onClick={() => setCategory('chapterBank')}
                             className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors flex items-center ${
-                              category === 'chapterBank' ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-800'
+                              category === 'chapterBank' ? 'bg-white text-indigo-700' : 'text-white hover:bg-white/10'
                             }`}
                           >
                             <ListChecks className="w-4 h-4 mr-2" />
@@ -622,7 +624,7 @@ export default function App() {
                           <button
                             onClick={() => setCategory('mockErrors')}
                             className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors flex items-center ${
-                              category === 'mockErrors' ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-800'
+                              category === 'mockErrors' ? 'bg-white text-indigo-700' : 'text-white hover:bg-white/10'
                             }`}
                           >
                             <AlertCircle className="w-4 h-4 mr-2" />
@@ -635,34 +637,34 @@ export default function App() {
                     {/* Subjects */}
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                       {Object.keys(currentData).map((subject) => {
-                        const tint = (
+                        const chip = (
                           {
-                            Mathematics: 'bg-blue-50 text-blue-600',
-                            Reasoning: 'bg-violet-50 text-violet-600',
-                            English: 'bg-emerald-50 text-emerald-600',
-                            'General Awareness': 'bg-amber-50 text-amber-600',
-                            'GK/GS': 'bg-amber-50 text-amber-600',
+                            Mathematics: 'from-blue-500 to-indigo-600',
+                            Reasoning: 'from-violet-500 to-purple-600',
+                            English: 'from-emerald-500 to-teal-600',
+                            'General Awareness': 'from-amber-500 to-orange-600',
+                            'GK/GS': 'from-pink-500 to-rose-600',
                           } as Record<string, string>
-                        )[subject] || 'bg-slate-100 text-slate-500';
+                        )[subject] || 'from-slate-500 to-slate-600';
                         return (
                           <motion.div
                             key={subject}
-                            whileHover={{ y: -3 }}
+                            whileHover={{ y: -4 }}
                             onClick={() => setSelectedSubject(subject)}
-                            className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm"
+                            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-100"
                           >
                             <div className="flex items-center justify-between">
-                              <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${tint}`}>
-                                <Layers className="w-5 h-5" />
+                              <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-sm`}>
+                                <Layers className="w-6 h-6" />
                               </div>
                               <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
                                 {currentData[subject].length} Chapters
                               </span>
                             </div>
-                            <h3 className="mt-5 text-lg font-semibold text-slate-800">{subject}</h3>
-                            <div className="mt-2 flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
+                            <h3 className="mt-5 text-lg font-bold text-slate-800">{subject}</h3>
+                            <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
                               View Chapters
-                              <ChevronRight className="w-4 h-4 ml-1" />
+                              <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                             </div>
                           </motion.div>
                         );
@@ -686,31 +688,31 @@ export default function App() {
 
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                       {([
-                        { key: 'spartan', icon: Shield, tint: 'bg-amber-50 text-amber-600', title: 'Spartan Series', desc: 'High-yield, battle-tested challenges and conceptually advanced problem sets.' },
-                        { key: 'pinnacle', icon: Crown, tint: 'bg-blue-50 text-blue-600', title: 'Pinnacle Series', desc: 'Comprehensive past year practice sets, exhaustive subject mapping, and exam models.' },
-                        { key: 'qrb', icon: Zap, tint: 'bg-emerald-50 text-emerald-600', title: 'QRB Series', desc: 'Quick Revision Book question bank focusing on high-speed formula checks and concepts.' },
-                        { key: 'top500', icon: Star, tint: 'bg-violet-50 text-violet-600', title: 'Top 500 Series', desc: 'The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.' },
-                      ] as const).map(({ key, icon: Icon, tint, title, desc }) => (
+                        { key: 'spartan', icon: Shield, chip: 'from-amber-500 to-orange-600', title: 'Spartan Series', desc: 'High-yield, battle-tested challenges and conceptually advanced problem sets.' },
+                        { key: 'pinnacle', icon: Crown, chip: 'from-blue-500 to-indigo-600', title: 'Pinnacle Series', desc: 'Comprehensive past year practice sets, exhaustive subject mapping, and exam models.' },
+                        { key: 'qrb', icon: Zap, chip: 'from-emerald-500 to-teal-600', title: 'QRB Series', desc: 'Quick Revision Book question bank focusing on high-speed formula checks and concepts.' },
+                        { key: 'top500', icon: Star, chip: 'from-violet-500 to-purple-600', title: 'Top 500 Series', desc: 'The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.' },
+                      ] as const).map(({ key, icon: Icon, chip, title, desc }) => (
                         <motion.div
                           key={key}
-                          whileHover={{ y: -3 }}
+                          whileHover={{ y: -4 }}
                           onClick={() => setSelectedMathSection(key)}
-                          className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm flex flex-col"
+                          className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-100 flex flex-col"
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${tint}`}>
+                            <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-sm`}>
                               <Icon className="w-5 h-5" />
                             </div>
-                            <h3 className="text-base font-semibold text-slate-800">{title}</h3>
+                            <h3 className="text-base font-bold text-slate-800">{title}</h3>
                           </div>
                           <p className="mt-3 flex-1 text-sm text-slate-500 leading-relaxed">{desc}</p>
                           <div className="mt-4 flex items-center justify-between">
                             <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
                               {currentData['Mathematics']?.filter(ch => ch.section === key).length || 0} Chapters
                             </span>
-                            <div className="flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
+                            <div className="flex items-center text-sm font-semibold text-indigo-600">
                               Enter
-                              <ChevronRight className="w-4 h-4 ml-1" />
+                              <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                             </div>
                           </div>
                         </motion.div>
@@ -755,7 +757,7 @@ export default function App() {
                         </div>
                         <button
                           onClick={() => startAllSubjectQuiz(selectedSubject)}
-                          className="inline-flex shrink-0 items-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+                          className="inline-flex shrink-0 items-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-200 transition-all hover:shadow-lg hover:shadow-indigo-300 hover:-translate-y-0.5"
                         >
                           <Play className="w-4 h-4 mr-2" />
                           Start All
@@ -787,22 +789,22 @@ export default function App() {
                             return (
                               <motion.div
                                 key={idx}
-                                whileHover={{ y: -3 }}
+                                whileHover={{ y: -4 }}
                                 onClick={() => setSelectedTopic(topic)}
-                                className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm"
+                                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
                               >
                                 <div className="flex items-center justify-between">
-                                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-500">
+                                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
                                     <Layers className="w-5 h-5" />
                                   </div>
                                   <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
                                     {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
                                   </span>
                                 </div>
-                                <h3 className="mt-4 text-base font-semibold capitalize text-slate-800">{displayTitle}</h3>
-                                <div className="mt-2 flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
+                                <h3 className="mt-4 text-base font-bold capitalize text-slate-800">{displayTitle}</h3>
+                                <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
                                   {isMathSection ? 'View Sets' : 'View Chapters'}
-                                  <ChevronRight className="w-4 h-4 ml-1" />
+                                  <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                 </div>
                               </motion.div>
                             );
@@ -820,23 +822,23 @@ export default function App() {
                         return chaptersToRender.map((chapter, idx) => (
                           <motion.div
                             key={idx}
-                            whileHover={{ y: -3 }}
+                            whileHover={{ y: -4 }}
                             onClick={() => startQuiz(chapter)}
-                            className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-indigo-300 hover:shadow-sm"
+                            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
                           >
                             <div className="flex items-center justify-between">
-                              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-500">
+                              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
                                 <BookOpen className="w-5 h-5" />
                               </div>
                               <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
                                 {chapter.set_name ? `Set ${chapter.set_name.replace('set_', '')}` : `Ch ${chapter.chapter_num}`}
                               </span>
                             </div>
-                            <h3 className="mt-4 text-base font-semibold text-slate-800">{chapter.chapter_title}</h3>
+                            <h3 className="mt-4 text-base font-bold text-slate-800">{chapter.chapter_title}</h3>
                             <p className="mt-1 text-sm text-slate-500">{chapter.questions.length} Questions</p>
-                            <div className="mt-3 flex items-center text-sm font-medium text-slate-400 transition-colors group-hover:text-indigo-600">
+                            <div className="mt-3 flex items-center text-sm font-semibold text-indigo-600">
                               Start Practice
-                              <ChevronRight className="w-4 h-4 ml-1" />
+                              <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                             </div>
                           </motion.div>
                         ));
