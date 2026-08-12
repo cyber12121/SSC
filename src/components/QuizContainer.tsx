@@ -65,13 +65,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     });
     
     const interval = setInterval(() => {
-      if (!isPaused && !answers[currentIdx]) {
+      if (!isPaused) {
         setCurrentTimer(prev => prev + 1);
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [currentIdx, answers, isPaused]);
+  }, [currentIdx, isPaused]);
 
   // Quiz countdown: auto-submits when time is up (chapter bank only, not mock errors).
   useEffect(() => {
@@ -162,15 +162,22 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     const isAnswered = !!answers[idx];
     const isMarked = markedForReview.has(idx);
 
-    if (isMarked && isAnswered) return 'answered-marked';
-    if (isMarked) return 'marked';
+    // During the live test a marked question keeps its purple marker.
+    // In review mode we always show correctness (right/wrong) so the colour
+    // never gets overridden by the marker — this keeps it consistent with the
+    // revisit review (which has no marked state).
+    if (!isReviewMode) {
+      if (isMarked && isAnswered) return 'answered-marked';
+      if (isMarked) return 'marked';
+    }
+
     if (isAnswered) {
       // In Mock mode, don't reveal correct/wrong colours until review.
       if (mode === 'mock' && !isReviewMode) return 'answered';
       const isCorrect = answers[idx] === chapter.questions[idx].answer;
       return isCorrect ? 'correct' : 'wrong';
     }
-    
+
     return 'not-visited'; // Gray for both not visited and skipped
   };
 
@@ -292,6 +299,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     notAttempted: totalQuestions - Object.keys(answers).length - markedForReview.size,
   };
 
+  const totalReviewedTime = (Object.values(timeSpent) as number[]).reduce((acc, t) => acc + (t || 0), 0);
+
   return (
     <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)] bg-gray-100 border-t border-gray-200">
       {/* LEFT COLUMN: Main Question Area */}
@@ -299,8 +308,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         
         {/* Top Header */}
         <div className={`${isReviewMode ? 'bg-slate-700' : 'bg-blue-600'} text-white px-6 py-3 flex items-center justify-between shadow-sm z-10`}>
-          <div className="font-bold text-lg">
+          <div className="font-bold text-lg flex items-center gap-3">
             {isReviewMode ? `Review Mode: ${chapter.chapter_title}` : chapter.chapter_title}
+            {isReviewMode && (
+              <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-md">
+                Time: {Math.floor(totalReviewedTime / 60)}m {totalReviewedTime % 60}s
+              </span>
+            )}
           </div>
           {isReviewMode ? (
             <button
@@ -518,7 +532,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   key={idx}
                   onClick={() => jumpToQuestion(idx)}
                   className={`w-10 h-10 flex items-center justify-center text-sm font-semibold transition-colors relative mx-auto
-                    ${bgClass} ${shapeClass} ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''}
+                    ${bgClass} ${shapeClass} ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''} ${isReviewMode && markedForReview.has(idx) ? 'ring-2 ring-purple-400 ring-offset-1' : ''}
                   `}
                 >
                   {idx + 1}

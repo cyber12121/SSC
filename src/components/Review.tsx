@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RotateCcw, History, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { QuizResult, QuestionProgress } from '../types';
+import { QuizResult } from '../types';
 import { QuestionCard } from './QuestionCard';
 
 interface ReviewViewProps {
@@ -11,8 +11,8 @@ interface ReviewViewProps {
 
 type Status = 'correct' | 'wrong' | 'skipped';
 
-const getStatus = (d: QuestionProgress): Status => {
-  if (d.selectedAnswer) return d.isCorrect ? 'correct' : 'wrong';
+const getStatus = (selectedAnswer: string, isCorrect: boolean): Status => {
+  if (selectedAnswer) return isCorrect ? 'correct' : 'wrong';
   return 'skipped';
 };
 
@@ -21,7 +21,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
   const [currentIdx, setCurrentIdx] = useState(0);
 
   const current = items[currentIdx];
-  const currentStatus = getStatus(current);
+  const totalTime = result.totalTime || 0;
 
   return (
     <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)] bg-gray-100 border-t border-gray-200">
@@ -29,8 +29,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
       <div className="flex-1 flex flex-col bg-white">
         {/* Header */}
         <div className="bg-slate-700 text-white px-6 py-3 flex items-center justify-between shadow-sm z-10">
-          <div className="font-bold text-lg truncate">
-            Review: {result.chapter_title}
+          <div className="font-bold text-lg flex items-center gap-3 truncate">
+            Review Mode: {result.chapter_title}
+            <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-md">
+              Time: {Math.floor(totalTime / 60)}m {totalTime % 60}s
+            </span>
           </div>
           <div className="flex items-center space-x-3">
             <button
@@ -45,7 +48,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
               className="flex items-center bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors"
             >
               <History className="w-3.5 h-3.5 mr-1.5" />
-              Back
+              Back to Dashboard
             </button>
           </div>
         </div>
@@ -68,8 +71,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           )}
         </div>
 
-        {/* Navigation */}
-        <div className="flex items-center justify-center space-x-3 py-3 border-t border-gray-200 bg-white">
+        {/* Action bar (mirrors the in-quiz review bar) */}
+        <div className="flex items-center justify-center space-x-2 py-3 border-t border-gray-200 bg-white">
           <button
             onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)}
             disabled={currentIdx === 0}
@@ -77,12 +80,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
               currentIdx === 0 ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-slate-700 text-white hover:bg-slate-800'
             }`}
           >
-            <ChevronLeft className="w-4 h-4 inline mr-1" />
             Previous
           </button>
-          <span className="text-sm font-semibold text-slate-500">
-            {currentIdx + 1} / {items.length}
-          </span>
           <button
             onClick={() => currentIdx < items.length - 1 && setCurrentIdx(currentIdx + 1)}
             disabled={currentIdx === items.length - 1}
@@ -91,7 +90,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
             }`}
           >
             Next
-            <ChevronRight className="w-4 h-4 inline ml-1" />
+          </button>
+          <button
+            onClick={onBack}
+            className="px-5 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Back to Dashboard
           </button>
         </div>
       </div>
@@ -132,8 +136,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           <div className="text-xs font-bold text-gray-700 mb-3 uppercase tracking-wider">Choose a Question</div>
           <div className="grid grid-cols-4 gap-3">
             {items.map((d, idx) => {
-              const status = getStatus(d);
+              const status = getStatus(d.selectedAnswer, d.isCorrect);
               const isActive = currentIdx === idx;
+
               let bgClass = 'bg-gray-200 text-gray-700 hover:bg-gray-300';
               let shapeClass = 'rounded-md';
               if (status === 'correct') {
@@ -143,12 +148,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
                 bgClass = 'bg-red-500 text-white hover:bg-red-600';
                 shapeClass = 'rounded-bl-full rounded-tr-full rounded-br-full';
               }
+
               return (
                 <button
                   key={idx}
                   onClick={() => setCurrentIdx(idx)}
                   className={`w-10 h-10 flex items-center justify-center text-sm font-semibold transition-colors relative mx-auto
-                    ${bgClass} ${shapeClass} ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''}`}
+                    ${bgClass} ${shapeClass} ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''}
+                  `}
                 >
                   {idx + 1}
                 </button>
