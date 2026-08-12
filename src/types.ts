@@ -50,6 +50,7 @@ export interface QuizResult {
   chapter_title: string;
   subject: string;
   category: 'mockErrors' | 'chapterBank';
+  mode?: 'practice' | 'mock';
   score: number;
   totalQuestions: number;
   totalTime: number;

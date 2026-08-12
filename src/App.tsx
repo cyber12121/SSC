@@ -868,7 +868,7 @@ export default function App() {
                                 Start Practice
                                 <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                               </div>
-                              {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}|${category}`) && (
+                              {latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}|${category}`)?.mode === 'mock' && (
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -1296,13 +1296,15 @@ export default function App() {
                                      >
                                        <RotateCcw className="w-4 h-4" />
                                      </button>
-                                      <button
-                                        onClick={() => openReview(result)}
-                                        className="p-3 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all flex items-center justify-center"
-                                        title="Review last attempt"
-                                      >
-                                        <History className="w-4 h-4" />
-                                      </button>
+                                       {result.mode === 'mock' && (
+                                         <button
+                                           onClick={() => openReview(result)}
+                                           className="p-3 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all flex items-center justify-center"
+                                           title="Review last attempt"
+                                         >
+                                           <History className="w-4 h-4" />
+                                         </button>
+                                       )}
                                    </>
                                  );
                                })()}

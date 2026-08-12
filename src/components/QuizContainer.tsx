@@ -207,6 +207,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       chapter_title: chapter.chapter_title,
       subject: chapter.subject,
       category,
+      mode,
       score,
       totalQuestions,
       totalTime,
@@ -250,13 +251,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={() => setIsReviewMode(true)}
-              className="flex-1 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center justify-center shadow-lg"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Review Questions
-            </button>
+            {mode === 'mock' && (
+              <button
+                onClick={() => setIsReviewMode(true)}
+                className="flex-1 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center justify-center shadow-lg"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Review Questions
+              </button>
+            )}
             <button
               onClick={handleReattempt}
               className="flex-1 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors flex items-center justify-center shadow-lg"
