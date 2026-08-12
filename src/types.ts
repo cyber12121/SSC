@@ -43,6 +43,7 @@ export interface QuestionProgress {
   isCorrect: boolean;
   selectedAnswer: string;
   question?: Question;
+  marked?: boolean;
 }
 
 export interface QuizResult {

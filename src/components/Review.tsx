@@ -154,7 +154,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
                   key={idx}
                   onClick={() => setCurrentIdx(idx)}
                   className={`w-10 h-10 flex items-center justify-center text-sm font-semibold transition-colors relative mx-auto
-                    ${bgClass} ${shapeClass} ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''}
+                    ${bgClass} ${shapeClass} ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''} ${d.marked ? 'ring-2 ring-purple-400 ring-offset-1' : ''}
                   `}
                 >
                   {idx + 1}

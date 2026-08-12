@@ -223,7 +223,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         timeSpent: timeSpent[idx] || 0,
         isCorrect: answers[idx] === q.answer,
         selectedAnswer: answers[idx] || '',
-        question: q
+        question: q,
+        marked: markedForReview.has(idx),
       }))
     };
 

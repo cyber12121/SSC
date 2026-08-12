@@ -186,8 +186,10 @@ export default function App() {
   // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
   const latestResultByChapter = React.useMemo(() => {
     const map = new Map<string, QuizResult>();
-    // userResults is ordered completedAt desc, so the first seen is the newest.
+    // userResults is ordered completedAt desc. Only Mock attempts are reviewable,
+    // so track the newest Mock attempt per chapter (practice attempts are skipped).
     userResults.forEach(r => {
+      if (r.mode !== 'mock') return;
       const key = `${r.subject}|${r.chapter_title}|${r.category}`;
       if (!map.has(key)) map.set(key, r);
     });
@@ -605,7 +607,7 @@ export default function App() {
         </div>
       </nav>
 
-      <main className={view === 'quiz' ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'}>
+      <main className={view === 'quiz' || view === 'review' ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'}>
         {loading ? (
           <div className="flex flex-col items-center justify-center py-40">
             <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-4" />
@@ -868,7 +870,7 @@ export default function App() {
                                 Start Practice
                                 <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                               </div>
-                              {latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}|${category}`)?.mode === 'mock' && (
+                              {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}|${category}`) && (
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -876,7 +878,7 @@ export default function App() {
                                     if (r) openReview(r);
                                   }}
                                   className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
-                                  title="Review last attempt"
+                                  title="Review last mock attempt"
                                 >
                                   <History className="w-4 h-4" />
                                 </button>
