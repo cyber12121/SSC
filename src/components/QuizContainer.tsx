@@ -31,7 +31,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   // Per-question time limit (seconds): 36s chapter bank (45s for Top500 set_2); no timer for mock errors.
   const perQuestionSec = category === 'mockErrors' ? 0 : (chapter.section === 'top500' && chapter.set_name === 'set_2' ? 45 : 36);
-  const totalQuizTime = perQuestionSec > 0 ? perQuestionSec * totalQuestions : null;
+  const totalQuizTime = mode === 'mock' && perQuestionSec > 0 ? perQuestionSec * totalQuestions : null;
 
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
