@@ -174,6 +174,19 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     return 'not-visited'; // Gray for both not visited and skipped
   };
 
+  const handleReattempt = () => {
+    setAnswers({});
+    setTimeSpent({});
+    setVisited(new Set([0]));
+    setMarkedForReview(new Set());
+    setIsFinished(false);
+    setIsReviewMode(false);
+    setCurrentIdx(0);
+    setCurrentTimer(0);
+    setIsPaused(false);
+    setTimeLeft(totalQuizTime);
+  };
+
   const calculateScore = () => {
     let correct = 0;
     chapter.questions.forEach((q, idx) => {
@@ -201,7 +214,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         q_num: q.q_num,
         timeSpent: timeSpent[idx] || 0,
         isCorrect: answers[idx] === q.answer,
-        selectedAnswer: answers[idx] || ''
+        selectedAnswer: answers[idx] || '',
+        question: q
       }))
     };
 
@@ -242,6 +256,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             >
               <BookOpen className="w-5 h-5 mr-2" />
               Review Questions
+            </button>
+            <button
+              onClick={handleReattempt}
+              className="flex-1 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors flex items-center justify-center shadow-lg"
+            >
+              <RotateCcw className="w-5 h-5 mr-2" />
+              Reattempt
             </button>
             <button
               onClick={() => onComplete(results)}

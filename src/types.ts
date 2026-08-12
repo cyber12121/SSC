@@ -42,6 +42,7 @@ export interface QuestionProgress {
   timeSpent: number;
   isCorrect: boolean;
   selectedAnswer: string;
+  question?: Question;
 }
 
 export interface QuizResult {

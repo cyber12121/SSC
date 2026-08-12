@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, BarChart3, RotateCcw } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { QuizContainer } from './components/QuizContainer';
 import { ErrorHeatmap } from './components/ErrorHeatmap';
+import { AnalysisView } from './components/AnalysisView';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, orderBy, getDocs, deleteDoc, doc } from 'firebase/firestore';
@@ -85,7 +86,8 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'analysis'>('home');
+  const [analysisResult, setAnalysisResult] = useState<QuizResult | null>(null);
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
     const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('quizMode') : null;
@@ -181,6 +183,17 @@ export default function App() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loadingBookmarks, setLoadingBookmarks] = useState(false);
 
+  // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
+  const latestResultByChapter = React.useMemo(() => {
+    const map = new Map<string, QuizResult>();
+    // userResults is ordered completedAt desc, so the first seen is the newest.
+    userResults.forEach(r => {
+      const key = `${r.subject}|${r.chapter_title}|${r.category}`;
+      if (!map.has(key)) map.set(key, r);
+    });
+    return map;
+  }, [userResults]);
+
   // Auth Listener
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -206,7 +219,7 @@ export default function App() {
 
   // Fetch Results
   useEffect(() => {
-    if (user && view === 'dashboard') {
+    if (user) {
       const fetchResults = async () => {
         setLoadingResults(true);
         try {
@@ -426,6 +439,20 @@ export default function App() {
       }
     }
     setView('home');
+  };
+
+  const openAnalysis = (result: QuizResult) => {
+    setAnalysisResult(result);
+    setView('analysis');
+  };
+
+  const reattemptFromResult = (result: QuizResult) => {
+    const data = result.category === 'mockErrors' ? mockData : bankData;
+    const chapter = (data[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+    if (chapter) {
+      setCategory(result.category);
+      startQuiz(chapter);
+    }
   };
 
   const isAuthorized = user?.email === 'cyberdevil0101@gmail.com';
@@ -836,9 +863,24 @@ export default function App() {
                             </div>
                             <h3 className="mt-4 text-base font-bold text-slate-800">{chapter.chapter_title}</h3>
                             <p className="mt-1 text-sm text-slate-500">{chapter.questions.length} Questions</p>
-                            <div className="mt-3 flex items-center text-sm font-semibold text-indigo-600">
-                              Start Practice
-                              <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                            <div className="mt-3 flex items-center justify-between">
+                              <div className="flex items-center text-sm font-semibold text-indigo-600">
+                                Start Practice
+                                <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                              </div>
+                              {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}|${category}`) && (
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}|${category}`);
+                                    if (r) openAnalysis(r);
+                                  }}
+                                  className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
+                                  title="View previous attempt analysis"
+                                >
+                                  <BarChart3 className="w-4 h-4" />
+                                </button>
+                              )}
                             </div>
                           </motion.div>
                         ));
@@ -1235,17 +1277,52 @@ export default function App() {
                                 (result.score / result.totalQuestions) >= 0.8 ? 'text-green-600' : 
                                 (result.score / result.totalQuestions) >= 0.5 ? 'text-yellow-600' : 'text-red-600'
                               }`}>
-                                {Math.round((result.score / result.totalQuestions) * 100)}%
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                                 {Math.round((result.score / result.totalQuestions) * 100)}%
+                               </div>
+                             </div>
+                             <div className="flex items-center space-x-3">
+                               {(() => {
+                                 const data = result.category === 'mockErrors' ? mockData : bankData;
+                                 const chapter = (data[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+                                 return (
+                                   <>
+                                     <button
+                                       onClick={() => chapter && reattemptFromResult(result)}
+                                       disabled={!chapter}
+                                       className={`p-3 rounded-xl font-bold transition-all flex items-center justify-center ${
+                                         chapter ? 'bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white' : 'bg-slate-100 text-slate-300 cursor-not-allowed'
+                                       }`}
+                                       title={chapter ? 'Reattempt this quiz' : 'Source chapter no longer available'}
+                                     >
+                                       <RotateCcw className="w-4 h-4" />
+                                     </button>
+                                     <button
+                                       onClick={() => openAnalysis(result)}
+                                       className="p-3 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all flex items-center justify-center"
+                                       title="View attempt analysis"
+                                     >
+                                       <BarChart3 className="w-4 h-4" />
+                                     </button>
+                                   </>
+                                 );
+                               })()}
+                             </div>
+                           </div>
+                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
               )}
             </motion.div>
+          )}
+
+          {view === 'analysis' && analysisResult && (
+            <AnalysisView
+              result={analysisResult}
+              onReattempt={() => reattemptFromResult(analysisResult)}
+              onBack={() => setView('dashboard')}
+            />
           )}
 
           {view === 'heatmap' && (
