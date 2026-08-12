@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw } from 'lucide-react';
-import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, BarChart3, Target } from 'lucide-react';
+import { Chapter, SubjectData, QuizResult, Bookmark, Question, MockRecord, MockMistake } from './types';
 import { QuizContainer } from './components/QuizContainer';
 import { ErrorHeatmap } from './components/ErrorHeatmap';
 import { ReviewView } from './components/Review';
+import { MockAnalysisView } from './components/MockAnalysisView';
+import { MockMistakesView } from './components/MockMistakesView';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
-import { collection, addDoc, query, where, orderBy, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, query, where, getDocs, deleteDoc, doc } from 'firebase/firestore';
 // Dynamic import of all subject JSON files (recursive)
 const subjectModules = import.meta.glob('./data/**/*.json', { eager: true });
 
@@ -86,7 +88,7 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'mockAnalysis' | 'mockMistakes'>('home');
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
@@ -182,6 +184,43 @@ export default function App() {
   const [loadingResults, setLoadingResults] = useState(false);
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loadingBookmarks, setLoadingBookmarks] = useState(false);
+
+  // Mock Analysis + Mock Mistakes
+  const [mocks, setMocks] = useState<MockRecord[]>([]);
+  const [mockMistakes, setMockMistakes] = useState<MockMistake[]>([]);
+
+  const fetchMocks = async () => {
+    if (!user) return;
+    try {
+      const q = query(collection(db, 'mocks'), where('userId', '==', user.uid));
+      const querySnapshot = await getDocs(q);
+      const list = querySnapshot.docs.map(d => ({ ...d.data(), id: d.id })) as MockRecord[];
+      list.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+      setMocks(list);
+    } catch (error) {
+      console.error('Error fetching mocks:', error);
+    }
+  };
+
+  const fetchMockMistakes = async () => {
+    if (!user) return;
+    try {
+      const q = query(collection(db, 'mockMistakes'), where('userId', '==', user.uid));
+      const querySnapshot = await getDocs(q);
+      const list = querySnapshot.docs.map(d => ({ ...d.data(), id: d.id })) as MockMistake[];
+      list.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+      setMockMistakes(list);
+    } catch (error) {
+      console.error('Error fetching mock mistakes:', error);
+    }
+  };
+
+  useEffect(() => {
+    if (user && (view === 'mockAnalysis' || view === 'mockMistakes')) {
+      fetchMocks();
+      fetchMockMistakes();
+    }
+  }, [user, view]);
 
   // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
   const latestResultByChapter = React.useMemo(() => {
@@ -355,6 +394,54 @@ export default function App() {
     }
   };
 
+  const addMock = async (mock: Omit<MockRecord, 'id' | 'userId' | 'createdAt'>) => {
+    if (!user) return;
+    try {
+      const docRef = await addDoc(collection(db, 'mocks'), {
+        ...mock,
+        userId: user.uid,
+        createdAt: new Date().toISOString()
+      });
+      setMocks(prev => [{ ...mock, userId: user.uid, id: docRef.id, createdAt: new Date().toISOString() }, ...prev]);
+    } catch (error) {
+      console.error('Error saving mock:', error);
+    }
+  };
+
+  const deleteMock = async (id: string) => {
+    if (!user) return;
+    try {
+      await deleteDoc(doc(db, 'mocks', id));
+      setMocks(prev => prev.filter(m => m.id !== id));
+    } catch (error) {
+      console.error('Error deleting mock:', error);
+    }
+  };
+
+  const addMockMistake = async (mistake: Omit<MockMistake, 'id' | 'userId' | 'createdAt'>) => {
+    if (!user) return;
+    try {
+      const docRef = await addDoc(collection(db, 'mockMistakes'), {
+        ...mistake,
+        userId: user.uid,
+        createdAt: new Date().toISOString()
+      });
+      setMockMistakes(prev => [{ ...mistake, userId: user.uid, id: docRef.id, createdAt: new Date().toISOString() }, ...prev]);
+    } catch (error) {
+      console.error('Error saving mistake:', error);
+    }
+  };
+
+  const deleteMockMistake = async (id: string) => {
+    if (!user) return;
+    try {
+      await deleteDoc(doc(db, 'mockMistakes', id));
+      setMockMistakes(prev => prev.filter(m => m.id !== id));
+    } catch (error) {
+      console.error('Error deleting mistake:', error);
+    }
+  };
+
   const handleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -379,6 +466,12 @@ export default function App() {
   const startQuiz = (chapter: Chapter) => {
     setActiveChapter(chapter);
     setView('quiz');
+    if (quizMode === 'mock') {
+      const el = document.documentElement;
+      if (el.requestFullscreen) {
+        el.requestFullscreen().catch(() => {});
+      }
+    }
   };
 
   const startAllSubjectQuiz = (subjectName: string) => {
@@ -441,6 +534,9 @@ export default function App() {
       }
     }
     setView('home');
+    if (document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
   };
 
   const openReview = (result: QuizResult) => {
@@ -513,6 +609,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900">
       {/* Navigation */}
+      {view !== 'quiz' && view !== 'review' && (
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
@@ -561,6 +658,20 @@ export default function App() {
                 <Flame className="w-5 h-5 mr-2" />
                 Heatmap
               </button>
+              <button
+                onClick={() => setView('mockAnalysis')}
+                className={`flex items-center font-bold transition-colors ${view === 'mockAnalysis' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+              >
+                <BarChart3 className="w-5 h-5 mr-2" />
+                Mock Analysis
+              </button>
+              <button
+                onClick={() => setView('mockMistakes')}
+                className={`flex items-center font-bold transition-colors ${view === 'mockMistakes' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+              >
+                <Target className="w-5 h-5 mr-2" />
+                Mock Mistakes
+              </button>
               <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200" title="Quiz mode">
                 <button
                   onClick={() => setQuizModePersisted('practice')}
@@ -606,6 +717,7 @@ export default function App() {
           </div>
         </div>
       </nav>
+      )}
 
       <main className={view === 'quiz' || view === 'review' ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'}>
         {loading ? (
@@ -1341,6 +1453,40 @@ export default function App() {
                 <p className="text-xl text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
               </div>
               <ErrorHeatmap mockData={mockData} />
+            </motion.div>
+          )}
+
+          {view === 'mockAnalysis' && (
+            <motion.div
+              key="mockAnalysis"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <MockAnalysisView
+                mocks={mocks}
+                onAdd={addMock}
+                onDelete={deleteMock}
+                user={user}
+                onLogin={handleLogin}
+              />
+            </motion.div>
+          )}
+
+          {view === 'mockMistakes' && (
+            <motion.div
+              key="mockMistakes"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <MockMistakesView
+                mistakes={mockMistakes}
+                onAdd={addMockMistake}
+                onDelete={deleteMockMistake}
+                user={user}
+                onLogin={handleLogin}
+              />
             </motion.div>
           )}
         </AnimatePresence>

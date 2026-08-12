@@ -51,5 +51,19 @@ service cloud.firestore {
       allow create, delete: if isAuthenticated() && request.auth.token.email == 'cyberdevil0101@gmail.com';
     }
 
+    // Mocks Collection
+    match /mocks/{mockId} {
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // Mock Mistakes Collection
+    match /mockMistakes/{mistakeId} {
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
   }
 }
