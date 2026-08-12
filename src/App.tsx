@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, BarChart3, RotateCcw } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { QuizContainer } from './components/QuizContainer';
 import { ErrorHeatmap } from './components/ErrorHeatmap';
-import { AnalysisView } from './components/AnalysisView';
+import { ReviewView } from './components/Review';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, orderBy, getDocs, deleteDoc, doc } from 'firebase/firestore';
@@ -86,8 +86,8 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'analysis'>('home');
-  const [analysisResult, setAnalysisResult] = useState<QuizResult | null>(null);
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review'>('home');
+  const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
     const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('quizMode') : null;
@@ -441,9 +441,9 @@ export default function App() {
     setView('home');
   };
 
-  const openAnalysis = (result: QuizResult) => {
-    setAnalysisResult(result);
-    setView('analysis');
+  const openReview = (result: QuizResult) => {
+    setReviewResult(result);
+    setView('review');
   };
 
   const reattemptFromResult = (result: QuizResult) => {
@@ -873,12 +873,12 @@ export default function App() {
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}|${category}`);
-                                    if (r) openAnalysis(r);
+                                    if (r) openReview(r);
                                   }}
                                   className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
-                                  title="View previous attempt analysis"
+                                  title="Review last attempt"
                                 >
-                                  <BarChart3 className="w-4 h-4" />
+                                  <History className="w-4 h-4" />
                                 </button>
                               )}
                             </div>
@@ -1296,13 +1296,13 @@ export default function App() {
                                      >
                                        <RotateCcw className="w-4 h-4" />
                                      </button>
-                                     <button
-                                       onClick={() => openAnalysis(result)}
-                                       className="p-3 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all flex items-center justify-center"
-                                       title="View attempt analysis"
-                                     >
-                                       <BarChart3 className="w-4 h-4" />
-                                     </button>
+                                      <button
+                                        onClick={() => openReview(result)}
+                                        className="p-3 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all flex items-center justify-center"
+                                        title="Review last attempt"
+                                      >
+                                        <History className="w-4 h-4" />
+                                      </button>
                                    </>
                                  );
                                })()}
@@ -1317,10 +1317,10 @@ export default function App() {
             </motion.div>
           )}
 
-          {view === 'analysis' && analysisResult && (
-            <AnalysisView
-              result={analysisResult}
-              onReattempt={() => reattemptFromResult(analysisResult)}
+          {view === 'review' && reviewResult && (
+            <ReviewView
+              result={reviewResult}
+              onReattempt={() => reattemptFromResult(reviewResult)}
               onBack={() => setView('dashboard')}
             />
           )}
