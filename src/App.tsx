@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, BarChart3, Target } from 'lucide-react';
-import { Chapter, SubjectData, QuizResult, Bookmark, Question, MockRecord, MockMistake } from './types';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw } from 'lucide-react';
+import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { QuizContainer } from './components/QuizContainer';
 import { ErrorHeatmap } from './components/ErrorHeatmap';
 import { ReviewView } from './components/Review';
-import { MockAnalysisView } from './components/MockAnalysisView';
-import { MockMistakesView } from './components/MockMistakesView';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
-import { collection, addDoc, query, where, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
 // Dynamic import of all subject JSON files (recursive)
 const subjectModules = import.meta.glob('./data/**/*.json', { eager: true });
 
@@ -88,8 +86,9 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'mockAnalysis' | 'mockMistakes'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review'>('home');
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
+  const [reviewBackTo, setReviewBackTo] = useState<'home' | 'dashboard'>('dashboard');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
     const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('quizMode') : null;
@@ -185,51 +184,16 @@ export default function App() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loadingBookmarks, setLoadingBookmarks] = useState(false);
 
-  // Mock Analysis + Mock Mistakes
-  const [mocks, setMocks] = useState<MockRecord[]>([]);
-  const [mockMistakes, setMockMistakes] = useState<MockMistake[]>([]);
-
-  const fetchMocks = async () => {
-    if (!user) return;
-    try {
-      const q = query(collection(db, 'mocks'), where('userId', '==', user.uid));
-      const querySnapshot = await getDocs(q);
-      const list = querySnapshot.docs.map(d => ({ ...d.data(), id: d.id })) as MockRecord[];
-      list.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
-      setMocks(list);
-    } catch (error) {
-      console.error('Error fetching mocks:', error);
-    }
-  };
-
-  const fetchMockMistakes = async () => {
-    if (!user) return;
-    try {
-      const q = query(collection(db, 'mockMistakes'), where('userId', '==', user.uid));
-      const querySnapshot = await getDocs(q);
-      const list = querySnapshot.docs.map(d => ({ ...d.data(), id: d.id })) as MockMistake[];
-      list.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
-      setMockMistakes(list);
-    } catch (error) {
-      console.error('Error fetching mock mistakes:', error);
-    }
-  };
-
-  useEffect(() => {
-    if (user && (view === 'mockAnalysis' || view === 'mockMistakes')) {
-      fetchMocks();
-      fetchMockMistakes();
-    }
-  }, [user, view]);
-
   // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
   const latestResultByChapter = React.useMemo(() => {
     const map = new Map<string, QuizResult>();
     // userResults is ordered completedAt desc. Only Mock attempts are reviewable,
     // so track the newest Mock attempt per chapter (practice attempts are skipped).
+    // Key ignores `category` so a Mock attempt shows its Review button on the Home
+    // card regardless of which category tab (chapterBank / mockErrors) is active.
     userResults.forEach(r => {
       if (r.mode !== 'mock') return;
-      const key = `${r.subject}|${r.chapter_title}|${r.category}`;
+      const key = `${r.subject}|${r.chapter_title}`;
       if (!map.has(key)) map.set(key, r);
     });
     return map;
@@ -259,28 +223,28 @@ export default function App() {
   }, []);
 
   // Fetch Results
-  useEffect(() => {
-    if (user) {
-      const fetchResults = async () => {
-        setLoadingResults(true);
-        try {
-          const q = query(
-            collection(db, 'results'),
-            where('userId', '==', user.uid),
-            orderBy('completedAt', 'desc')
-          );
-          const querySnapshot = await getDocs(q);
-          const results = querySnapshot.docs.map(doc => doc.data() as QuizResult);
-          setUserResults(results);
-        } catch (error) {
-          console.error('Error fetching results:', error);
-        } finally {
-          setLoadingResults(false);
-        }
-      };
-      fetchResults();
+  const fetchResults = useCallback(async () => {
+    if (!user) return;
+    setLoadingResults(true);
+    try {
+      const q = query(
+        collection(db, 'results'),
+        where('userId', '==', user.uid),
+        orderBy('completedAt', 'desc')
+      );
+      const querySnapshot = await getDocs(q);
+      const results = querySnapshot.docs.map(doc => doc.data() as QuizResult);
+      setUserResults(results);
+    } catch (error) {
+      console.error('Error fetching results:', error);
+    } finally {
+      setLoadingResults(false);
     }
-  }, [user, view]);
+  }, [user]);
+
+  useEffect(() => {
+    fetchResults();
+  }, [user, view, fetchResults]);
 
   // Fetch Bookmarks
   const fetchBookmarks = async () => {
@@ -394,54 +358,6 @@ export default function App() {
     }
   };
 
-  const addMock = async (mock: Omit<MockRecord, 'id' | 'userId' | 'createdAt'>) => {
-    if (!user) return;
-    try {
-      const docRef = await addDoc(collection(db, 'mocks'), {
-        ...mock,
-        userId: user.uid,
-        createdAt: new Date().toISOString()
-      });
-      setMocks(prev => [{ ...mock, userId: user.uid, id: docRef.id, createdAt: new Date().toISOString() }, ...prev]);
-    } catch (error) {
-      console.error('Error saving mock:', error);
-    }
-  };
-
-  const deleteMock = async (id: string) => {
-    if (!user) return;
-    try {
-      await deleteDoc(doc(db, 'mocks', id));
-      setMocks(prev => prev.filter(m => m.id !== id));
-    } catch (error) {
-      console.error('Error deleting mock:', error);
-    }
-  };
-
-  const addMockMistake = async (mistake: Omit<MockMistake, 'id' | 'userId' | 'createdAt'>) => {
-    if (!user) return;
-    try {
-      const docRef = await addDoc(collection(db, 'mockMistakes'), {
-        ...mistake,
-        userId: user.uid,
-        createdAt: new Date().toISOString()
-      });
-      setMockMistakes(prev => [{ ...mistake, userId: user.uid, id: docRef.id, createdAt: new Date().toISOString() }, ...prev]);
-    } catch (error) {
-      console.error('Error saving mistake:', error);
-    }
-  };
-
-  const deleteMockMistake = async (id: string) => {
-    if (!user) return;
-    try {
-      await deleteDoc(doc(db, 'mockMistakes', id));
-      setMockMistakes(prev => prev.filter(m => m.id !== id));
-    } catch (error) {
-      console.error('Error deleting mistake:', error);
-    }
-  };
-
   const handleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -519,7 +435,11 @@ export default function App() {
     startQuiz(virtualChapter);
   };
 
-  const handleQuizComplete = async (results: Omit<QuizResult, 'userId' | 'completedAt'>) => {
+  const handleQuizComplete = async (
+    results: Omit<QuizResult, 'userId' | 'completedAt'>,
+    openReviewAfter = false
+  ) => {
+    let savedResult: QuizResult | null = null;
     if (user) {
       try {
         const fullResult: QuizResult = {
@@ -528,12 +448,20 @@ export default function App() {
           completedAt: new Date().toISOString(),
         };
         await addDoc(collection(db, 'results'), fullResult);
+        savedResult = fullResult;
         console.log('Progress saved successfully');
+        await fetchResults();
       } catch (error) {
         console.error('Error saving progress:', error);
       }
     }
-    setView('home');
+    if (openReviewAfter && savedResult) {
+      setReviewResult(savedResult);
+      setReviewBackTo('home');
+      setView('review');
+    } else {
+      setView('home');
+    }
     if (document.fullscreenElement && document.exitFullscreen) {
       document.exitFullscreen().catch(() => {});
     }
@@ -541,6 +469,7 @@ export default function App() {
 
   const openReview = (result: QuizResult) => {
     setReviewResult(result);
+    setReviewBackTo('dashboard');
     setView('review');
   };
 
@@ -657,20 +586,6 @@ export default function App() {
               >
                 <Flame className="w-5 h-5 mr-2" />
                 Heatmap
-              </button>
-              <button
-                onClick={() => setView('mockAnalysis')}
-                className={`flex items-center font-bold transition-colors ${view === 'mockAnalysis' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <BarChart3 className="w-5 h-5 mr-2" />
-                Mock Analysis
-              </button>
-              <button
-                onClick={() => setView('mockMistakes')}
-                className={`flex items-center font-bold transition-colors ${view === 'mockMistakes' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <Target className="w-5 h-5 mr-2" />
-                Mock Mistakes
               </button>
               <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200" title="Quiz mode">
                 <button
@@ -982,11 +897,11 @@ export default function App() {
                                 Start Practice
                                 <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                               </div>
-                              {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}|${category}`) && (
+                              {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}|${category}`);
+                                    const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
                                     if (r) openReview(r);
                                   }}
                                   className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
@@ -1017,6 +932,7 @@ export default function App() {
                 category={category}
                 mode={quizMode}
                 onComplete={handleQuizComplete} 
+                onReviewLastAttempt={(r) => handleQuizComplete(r, true)}
                 bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
                 onBookmarkToggle={toggleBookmark}
                 isAdmin={isAuthorized}
@@ -1437,7 +1353,7 @@ export default function App() {
             <ReviewView
               result={reviewResult}
               onReattempt={() => reattemptFromResult(reviewResult)}
-              onBack={() => setView('dashboard')}
+              onBack={() => setView(reviewBackTo)}
             />
           )}
 
@@ -1453,40 +1369,6 @@ export default function App() {
                 <p className="text-xl text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
               </div>
               <ErrorHeatmap mockData={mockData} />
-            </motion.div>
-          )}
-
-          {view === 'mockAnalysis' && (
-            <motion.div
-              key="mockAnalysis"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <MockAnalysisView
-                mocks={mocks}
-                onAdd={addMock}
-                onDelete={deleteMock}
-                user={user}
-                onLogin={handleLogin}
-              />
-            </motion.div>
-          )}
-
-          {view === 'mockMistakes' && (
-            <motion.div
-              key="mockMistakes"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <MockMistakesView
-                mistakes={mockMistakes}
-                onAdd={addMockMistake}
-                onDelete={deleteMockMistake}
-                user={user}
-                onLogin={handleLogin}
-              />
             </motion.div>
           )}
         </AnimatePresence>

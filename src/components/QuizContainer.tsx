@@ -8,7 +8,8 @@ interface QuizContainerProps {
   chapter: Chapter;
   category: 'mockErrors' | 'chapterBank';
   mode: 'practice' | 'mock';
-  onComplete: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => void;
+  onComplete: (results: Omit<QuizResult, 'userId' | 'completedAt'>, openReviewAfter?: boolean) => void;
+  onReviewLastAttempt?: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => void;
   bookmarkedIds?: Set<number>;
   onBookmarkToggle?: (question: Question) => void;
   onDeleteQuestion?: (question: Question) => void;
@@ -22,6 +23,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   category, 
   mode,
   onComplete,
+  onReviewLastAttempt,
   bookmarkedIds = new Set(),
   onBookmarkToggle,
   onDeleteQuestion,
@@ -202,15 +204,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     return correct;
   };
 
-  if (isFinished && !isReviewMode) {
+  const buildResults = (): Omit<QuizResult, 'userId' | 'completedAt'> => {
     const score = calculateScore();
     const totalTime = (Object.values(timeSpent) as number[]).reduce((acc, t) => acc + t, 0);
-    const attemptedQuestions = Object.keys(answers).length;
-    const percentage = attemptedQuestions > 0 
-      ? Math.round((score / attemptedQuestions) * 100) 
-      : 0;
-
-    const results: Omit<QuizResult, 'userId' | 'completedAt'> = {
+    return {
       chapter_title: chapter.chapter_title,
       subject: chapter.subject,
       category,
@@ -227,6 +224,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         marked: markedForReview.has(idx),
       }))
     };
+  };
+
+  if (isFinished && !isReviewMode) {
+    const score = calculateScore();
+    const totalTime = (Object.values(timeSpent) as number[]).reduce((acc, t) => acc + t, 0);
+    const attemptedQuestions = Object.keys(answers).length;
+    const percentage = attemptedQuestions > 0 
+      ? Math.round((score / attemptedQuestions) * 100) 
+      : 0;
+
+    const results = buildResults();
 
     return (
       <div className="flex items-center justify-center min-h-[80vh] p-4 bg-gray-50">
@@ -318,13 +326,28 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             )}
           </div>
           {isReviewMode ? (
-            <button
-              onClick={() => setIsReviewMode(false)}
-              className="bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors flex items-center"
-            >
-              <Trophy className="w-4 h-4 mr-1.5" />
-              Back to Summary
-            </button>
+            <div className="flex items-center space-x-3">
+              {onReviewLastAttempt && (
+                <button
+                  onClick={() => {
+                    const r = buildResults();
+                    onReviewLastAttempt(r);
+                  }}
+                  className="bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors flex items-center"
+                  title="Open the full last-attempt review"
+                >
+                  <BookOpen className="w-4 h-4 mr-1.5" />
+                  Open full review
+                </button>
+              )}
+              <button
+                onClick={() => setIsReviewMode(false)}
+                className="bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors flex items-center"
+              >
+                <Trophy className="w-4 h-4 mr-1.5" />
+                Back to Summary
+              </button>
+            </div>
           ) : (
             <div className="flex items-center space-x-3">
               <button

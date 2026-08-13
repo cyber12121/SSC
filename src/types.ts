@@ -68,23 +68,3 @@ export interface Bookmark {
   category: 'mockErrors' | 'chapterBank';
   bookmarkedAt: string;
 }
-
-export interface MockRecord {
-  id?: string;
-  userId: string;
-  mockName: string;
-  marks: number;
-  percentile: number;
-  createdAt: string;
-}
-
-export type MistakeCategory = 'concept-gap' | 'time-speed' | 'decision-gap' | 'careless';
-
-export interface MockMistake {
-  id?: string;
-  userId: string;
-  subject: string;
-  category: MistakeCategory;
-  note: string;
-  createdAt: string;
-}
