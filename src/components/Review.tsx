@@ -19,9 +19,11 @@ const getStatus = (selectedAnswer: string, isCorrect: boolean): Status => {
 export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onBack }) => {
   const items = result.questionDetails;
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [testMode, setTestMode] = useState(false);
 
   const current = items[currentIdx];
   const totalTime = result.totalTime || 0;
+  const showSolution = !testMode;
 
   return (
     <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)] bg-gray-100 border-t border-gray-200">
@@ -37,19 +39,29 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           </div>
           <div className="flex items-center space-x-3">
             <button
+              onClick={() => setTestMode(!testMode)}
+              className={`flex items-center px-3 py-1.5 rounded-md text-sm font-semibold transition-colors ${
+                testMode ? 'bg-amber-500 hover:bg-amber-600 text-white' : 'bg-slate-800 hover:bg-slate-900'
+              }`}
+            >
+              {testMode ? 'Exit Test Mode' : 'Test Mode'}
+            </button>
+            <button
               onClick={onReattempt}
               className="flex items-center bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors"
             >
               <RotateCcw className="w-3.5 h-3.5 mr-1.5" />
               Reattempt
             </button>
-            <button
-              onClick={onBack}
-              className="flex items-center bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors"
-            >
-              <History className="w-3.5 h-3.5 mr-1.5" />
-              Back to Dashboard
-            </button>
+            {!testMode && (
+              <button
+                onClick={onBack}
+                className="flex items-center bg-slate-800 hover:bg-slate-900 px-3 py-1.5 rounded-md text-sm font-semibold transition-colors"
+              >
+                <History className="w-3.5 h-3.5 mr-1.5" />
+                Back to Dashboard
+              </button>
+            )}
           </div>
         </div>
 
@@ -60,7 +72,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
               question={current.question}
               onAnswer={() => {}}
               selectedAnswer={current.selectedAnswer || null}
-              showSolution={true}
+              showSolution={showSolution}
               isAdmin={false}
               timeSpentSeconds={current.timeSpent}
             />
@@ -91,12 +103,21 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           >
             Next
           </button>
-          <button
-            onClick={onBack}
-            className="px-5 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
-          >
-            Back to Dashboard
-          </button>
+          {testMode ? (
+            <button
+              onClick={onReattempt}
+              className="px-5 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Reattempt
+            </button>
+          ) : (
+            <button
+              onClick={onBack}
+              className="px-5 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Back to Dashboard
+            </button>
+          )}
         </div>
       </div>
 
@@ -135,18 +156,20 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
         <div className="p-4 bg-blue-50/20 flex-1 overflow-y-auto custom-scrollbar">
           <div className="text-xs font-bold text-gray-700 mb-3 uppercase tracking-wider">Choose a Question</div>
           <div className="grid grid-cols-4 gap-3">
-            {items.map((d, idx) => {
+             {items.map((d, idx) => {
               const status = getStatus(d.selectedAnswer, d.isCorrect);
               const isActive = currentIdx === idx;
 
               let bgClass = 'bg-gray-200 text-gray-700 hover:bg-gray-300';
               let shapeClass = 'rounded-md';
-              if (status === 'correct') {
-                bgClass = 'bg-green-500 text-white hover:bg-green-600';
-                shapeClass = 'rounded-tl-full rounded-tr-full rounded-br-full';
-              } else if (status === 'wrong') {
-                bgClass = 'bg-red-500 text-white hover:bg-red-600';
-                shapeClass = 'rounded-bl-full rounded-tr-full rounded-br-full';
+              if (!testMode) {
+                if (status === 'correct') {
+                  bgClass = 'bg-green-500 text-white hover:bg-green-600';
+                  shapeClass = 'rounded-tl-full rounded-tr-full rounded-br-full';
+                } else if (status === 'wrong') {
+                  bgClass = 'bg-red-500 text-white hover:bg-red-600';
+                  shapeClass = 'rounded-bl-full rounded-tr-full rounded-br-full';
+                }
               }
 
               return (
