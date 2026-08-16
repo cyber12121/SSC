@@ -20,10 +20,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
   const items = result.questionDetails;
   const [currentIdx, setCurrentIdx] = useState(0);
   const [testMode, setTestMode] = useState(false);
+  const [testAnswers, setTestAnswers] = useState<Record<number, string>>({});
+
+  const handleTestAnswer = (ans: 'a' | 'b' | 'c' | 'd') =>
+    setTestAnswers(prev => ({ ...prev, [currentIdx]: ans }));
 
   const current = items[currentIdx];
   const totalTime = result.totalTime || 0;
-  const showSolution = !testMode;
+  const selectedAnswer = testMode
+    ? (testAnswers[currentIdx] ?? null)
+    : (current.selectedAnswer || null);
+  const showSolution = testMode ? !!testAnswers[currentIdx] : true;
 
   return (
     <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)] bg-gray-100 border-t border-gray-200">
@@ -39,7 +46,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           </div>
           <div className="flex items-center space-x-3">
             <button
-              onClick={() => setTestMode(!testMode)}
+              onClick={() => { setTestMode(t => !t); setTestAnswers({}); }}
               className={`flex items-center px-3 py-1.5 rounded-md text-sm font-semibold transition-colors ${
                 testMode ? 'bg-amber-500 hover:bg-amber-600 text-white' : 'bg-slate-800 hover:bg-slate-900'
               }`}
@@ -70,11 +77,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           {current?.question ? (
             <QuestionCard
               question={current.question}
-              onAnswer={() => {}}
-              selectedAnswer={current.selectedAnswer || null}
+              onAnswer={testMode ? handleTestAnswer : () => {}}
+              selectedAnswer={selectedAnswer}
               showSolution={showSolution}
               isAdmin={false}
-              timeSpentSeconds={current.timeSpent}
+              timeSpentSeconds={testMode ? undefined : current.timeSpent}
             />
           ) : (
             <div className="h-full flex items-center justify-center text-slate-400 font-medium p-8 text-center">
@@ -157,12 +164,22 @@ export const ReviewView: React.FC<ReviewViewProps> = ({ result, onReattempt, onB
           <div className="text-xs font-bold text-gray-700 mb-3 uppercase tracking-wider">Choose a Question</div>
           <div className="grid grid-cols-4 gap-3">
              {items.map((d, idx) => {
-              const status = getStatus(d.selectedAnswer, d.isCorrect);
               const isActive = currentIdx === idx;
+              const testAns = testAnswers[idx];
+              const testCorrect = testAns ? testAns === d.question.answer : null;
 
               let bgClass = 'bg-gray-200 text-gray-700 hover:bg-gray-300';
               let shapeClass = 'rounded-md';
-              if (!testMode) {
+              if (testMode) {
+                if (testCorrect === true) {
+                  bgClass = 'bg-green-500 text-white hover:bg-green-600';
+                  shapeClass = 'rounded-tl-full rounded-tr-full rounded-br-full';
+                } else if (testCorrect === false) {
+                  bgClass = 'bg-red-500 text-white hover:bg-red-600';
+                  shapeClass = 'rounded-bl-full rounded-tr-full rounded-br-full';
+                }
+              } else {
+                const status = getStatus(d.selectedAnswer, d.isCorrect);
                 if (status === 'correct') {
                   bgClass = 'bg-green-500 text-white hover:bg-green-600';
                   shapeClass = 'rounded-tl-full rounded-tr-full rounded-br-full';

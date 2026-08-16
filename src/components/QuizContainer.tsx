@@ -77,7 +77,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   // Quiz countdown: auto-submits when time is up (chapter bank only, not mock errors).
   useEffect(() => {
-    if (totalQuizTime == null || isFinished || isReviewMode) return;
+    if (totalQuizTime == null || isFinished || isReviewMode || isPaused) return;
 
     const interval = setInterval(() => {
       setTimeLeft(prev => {
@@ -94,7 +94,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [totalQuizTime, isFinished, isReviewMode]);
+  }, [totalQuizTime, isFinished, isReviewMode, isPaused]);
 
   const recordTime = () => {
     if (isPaused) return;
