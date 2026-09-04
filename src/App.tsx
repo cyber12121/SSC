@@ -5,6 +5,7 @@ import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { QuizContainer } from './components/QuizContainer';
 import { ErrorHeatmap } from './components/ErrorHeatmap';
 import { ReviewView } from './components/Review';
+import { DrillHub } from './components/drill/DrillHub';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
@@ -19,6 +20,8 @@ Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
   // Determine if it's mockErrors or chapterBank based on the file path
   const isMock = path.includes('/mock_errors/');
   const isBank = path.includes('/chapter_bank/');
+
+  if (!isMock && !isBank) return;
   
   // The data could be a single chapter object or an array of chapters
   const chapters = Array.isArray(data) ? data : (data.questions ? [data] : []);
@@ -86,7 +89,7 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill'>('home');
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
   const [reviewBackTo, setReviewBackTo] = useState<'home' | 'dashboard'>('dashboard');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
@@ -565,6 +568,13 @@ export default function App() {
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Practice
+              </button>
+              <button 
+                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                className={`flex items-center font-bold transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+              >
+                <Zap className="w-5 h-5 mr-2" />
+                Speed Drill
               </button>
               <button 
                 onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
@@ -1355,6 +1365,17 @@ export default function App() {
               onReattempt={() => reattemptFromResult(reviewResult)}
               onBack={() => setView(reviewBackTo)}
             />
+          )}
+
+          {view === 'drill' && (
+            <motion.div
+              key="drill"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+            >
+              <DrillHub />
+            </motion.div>
           )}
 
           {view === 'heatmap' && (

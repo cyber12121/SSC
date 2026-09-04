@@ -1,0 +1,123 @@
+[
+  {
+    "category": "Algebra",
+    "title": "Sum of Cubes Identity",
+    "formula": "a³ + b³ + c³ - 3abc = (a + b + c)(a² + b² + c² - ab - bc - ca)",
+    "alternate": "= ½ (a + b + c)[(a - b)² + (b - c)² + (c - a)²]",
+    "key_note": "If a + b + c = 0 or a = b = c, then a³ + b³ + c³ = 3abc"
+  },
+  {
+    "category": "Algebra",
+    "title": "Third Form: (a + b + c) & Sum of Products",
+    "formula": "a³ + b³ + c³ - 3abc = (a + b + c)[(a + b + c)² - 3(ab + bc + ca)]",
+    "key_note": "Extremely frequent in SSC Tier 1 & 2 when (a+b+c) and (ab+bc+ca) are given."
+  },
+  {
+    "category": "Algebra",
+    "title": "Reciprocal Power Shortcuts",
+    "formula": "If x + 1/x = k, then:\n• x² + 1/x² = k² - 2\n• x³ + 1/x³ = k³ - 3k\n• x⁴ + 1/x⁴ = (k² - 2)² - 2\n• x⁵ + 1/x⁵ = (x² + 1/x²)(x³ + 1/x³) - (x + 1/x)",
+    "key_note": "If x - 1/x = k: x² + 1/x² = k² + 2, x³ - 1/x³ = k³ + 3k"
+  },
+  {
+    "category": "Algebra",
+    "title": "Square of Trinomial",
+    "formula": "(a + b + c)² = a² + b² + c² + 2(ab + bc + ca)",
+    "key_note": "ab + bc + ca = ½ [(a + b + c)² - (a² + b² + c²)]"
+  },
+  {
+    "category": "Geometry",
+    "title": "Inradius & Circumradius (General Triangle)",
+    "formula": "Inradius (r) = Δ / s\nCircumradius (R) = (a × b × c) / (4Δ)",
+    "key_note": "where Δ = Area of triangle, s = semi-perimeter = (a+b+c)/2"
+  },
+  {
+    "category": "Geometry",
+    "title": "Inradius & Circumradius (Right-Angled Triangle)",
+    "formula": "r = (P + B - H) / 2\nR = H / 2",
+    "key_note": "In a right triangle, circumcentre is the midpoint of the hypotenuse."
+  },
+  {
+    "category": "Geometry",
+    "title": "Inradius & Circumradius (Equilateral Triangle)",
+    "formula": "r = a / (2√3)\nR = a / √3\nRatio R : r = 2 : 1",
+    "key_note": "Area of incircle : Area of circumcircle = 1 : 4"
+  },
+  {
+    "category": "Geometry",
+    "title": "Direct & Transverse Common Tangents",
+    "formula": "DCT = √(d² - (r₁ - r₂)²)\nTCT = √(d² - (r₁ + r₂)²)",
+    "key_note": "d = distance between centres; r₁, r₂ = radii (DCT is always longer than TCT)"
+  },
+  {
+    "category": "Geometry",
+    "title": "Apollonius' Theorem (Median Relation)",
+    "formula": "AB² + AC² = 2(AD² + BD²)",
+    "key_note": "Where AD is the median on side BC (and BD = CD = BC/2)"
+  },
+  {
+    "category": "Mensuration",
+    "title": "Cone & Frustum of Cone",
+    "formula": "Cone Vol = ⅓ π r² h,  CSA = π r l  (l = √(r² + h²))\nFrustum Vol = ⅓ π h (R² + r² + Rr)\nFrustum CSA = π l (R + r), where l = √(h² + (R - r)²)",
+    "key_note": "TSA = CSA + π(R² + r²)"
+  },
+  {
+    "category": "Mensuration",
+    "title": "Hemisphere & Sphere",
+    "formula": "Sphere: Vol = ⁴⁄₃ π r³,  Surface Area = 4 π r²\nHemisphere: Vol = ⅔ π r³,  CSA = 2 π r²,  TSA = 3 π r²",
+    "key_note": "Hollow hemisphere TSA = 2π(R² + r²) + π(R² - r²) = 3πR² + πr²"
+  },
+  {
+    "category": "Mensuration",
+    "title": "Prism & Pyramid",
+    "formula": "Prism: Vol = Base Area × Height,  LSA = Base Perimeter × Height\nPyramid: Vol = ⅓ × Base Area × Height,  LSA = ½ × Base Perimeter × Slant Height (l)",
+    "key_note": "TSA = LSA + Base Area (for pyramid) / 2×Base Area (for prism)"
+  },
+  {
+    "category": "Trigonometry",
+    "title": "Important Special Angles (15° & 75°)",
+    "formula": "sin 15° = cos 75° = (√6 - √2) / 4\ncos 15° = sin 75° = (√6 + √2) / 4\ntan 15° = cot 75° = 2 - √3\ntan 75° = cot 15° = 2 + √3",
+    "key_note": "tan 15° × tan 75° = 1"
+  },
+  {
+    "category": "Trigonometry",
+    "title": "Maxima & Minima of Trigonometric Functions",
+    "formula": "For a sin θ + b cos θ:  Max = +√(a² + b²),  Min = -√(a² + b²)\nFor a sin²θ + b cos²θ:  Max = max(a, b),  Min = min(a, b)\nFor a tan²θ + b cot²θ:  Min = 2√(ab) (Max is ∞)\nFor a sin²θ + b cosec²θ: Min = 2√(ab)",
+    "key_note": "Very standard question in SSC CGL Tier 1/2"
+  },
+  {
+    "category": "Trigonometry",
+    "title": "Secant & Cosecant Identities Shortcuts",
+    "formula": "If sec θ + tan θ = x  ⟹  sec θ - tan θ = 1/x  ⟹  sec θ = ½(x + 1/x),  tan θ = ½(x - 1/x)\nIf cosec θ + cot θ = y  ⟹  cosec θ - cot θ = 1/y",
+    "key_note": "Allows finding any trig ratio in < 5 seconds."
+  },
+  {
+    "category": "Arithmetic",
+    "title": "Difference between CI and SI",
+    "formula": "For 2 Years: Diff = P × (R / 100)²\nFor 3 Years: Diff = P × (R / 100)² × [(300 + R) / 100]",
+    "key_note": "R is annual interest rate %, P is Principal"
+  },
+  {
+    "category": "Arithmetic",
+    "title": "Successive Percentage Change",
+    "formula": "Net % Change = a + b + (a × b) / 100\nFor 2 successive discounts d₁ & d₂: Equivalent Discount = (d₁ + d₂ - (d₁ × d₂) / 100) %",
+    "key_note": "Use positive sign for increase/profit and negative for decrease/loss/discount."
+  },
+  {
+    "category": "Arithmetic",
+    "title": "Time, Speed & Distance: Meeting Point Formula",
+    "formula": "If two trains start towards each other and after meeting take T₁ and T₂ to reach their destinations:\nSpeed₁ / Speed₂ = √(T₂ / T₁)",
+    "key_note": "Also, time to meet = √(T₁ × T₂)"
+  },
+  {
+    "category": "Arithmetic",
+    "title": "Average Speed Formulas",
+    "formula": "Equal distance (2 parts): Avg Speed = 2xy / (x + y)\nEqual distance (3 parts): Avg Speed = 3xyz / (xy + yz + zx)\nGeneral: Avg Speed = Total Distance / Total Time",
+    "key_note": "x, y, z are speeds across equal distance intervals"
+  },
+  {
+    "category": "Banking",
+    "title": "Quadratic Equation Sign Rule (Banking PO / Clerk)",
+    "formula": "Equation: ax² + bx + c = 0\n• Signs (+, +) ⟹ Roots: (-, -)\n• Signs (-, +) ⟹ Roots: (+, +)\n• Signs (+, -) ⟹ Roots: (-, +)\n• Signs (-, -) ⟹ Roots: (+, -)",
+    "key_note": "If both constant terms are negative (c < 0 in both equations), relationship is always 'Cannot be Determined (CND)'!"
+  }
+]
