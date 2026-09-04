@@ -77,12 +77,8 @@ export const CalculationCheatSheet: React.FC<Props> = ({ isOpen, onClose, initia
                     <div className="text-sm font-extrabold text-slate-800">
                       ({t.a}, {t.b}, {t.c})
                     </div>
-                    <div className="text-[11px] text-slate-400 mt-1 font-medium">
-                      {t.type === 'primitive' ? (
-                        <span className="text-blue-600 font-semibold">Primitive</span>
-                      ) : (
-                        <span>{t.base}</span>
-                      )}
+                    <div className="text-[11px] text-blue-600 mt-1 font-bold">
+                      Primitive
                     </div>
                   </div>
                 ))}

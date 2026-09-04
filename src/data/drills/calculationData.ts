@@ -2,8 +2,7 @@ export interface TripletItem {
   a: number;
   b: number;
   c: number;
-  type: 'primitive' | 'scaled';
-  base?: string;
+  type: 'primitive';
   tags?: string[];
 }
 
@@ -15,12 +14,12 @@ export interface CalculationQuestion {
   subPrompt?: string;
   answer: number;
   explanation?: string;
+  rawKey: string; // Unique key to track individual items (e.g. 'square-19', 'triplet-5-12-13', 'table-17')
   metadata?: Record<string, any>;
 }
 
-// 1. Triplets (Pythagorean Triplets)
-export const TRIPLETS_DATA: TripletItem[] = [
-  // Primitives
+// 1. Primitive Triplets Only (All 16 must-know SSC primitive triplets)
+export const PRIMITIVE_TRIPLETS: TripletItem[] = [
   { a: 3, b: 4, c: 5, type: 'primitive', tags: ['basic', 'must-know'] },
   { a: 5, b: 12, c: 13, type: 'primitive', tags: ['basic', 'must-know'] },
   { a: 7, b: 24, c: 25, type: 'primitive', tags: ['basic', 'must-know'] },
@@ -37,43 +36,33 @@ export const TRIPLETS_DATA: TripletItem[] = [
   { a: 39, b: 80, c: 89, type: 'primitive', tags: ['advanced'] },
   { a: 48, b: 55, c: 73, type: 'primitive', tags: ['advanced'] },
   { a: 65, b: 72, c: 97, type: 'primitive', tags: ['advanced'] },
-  // High Frequency Scaled
-  { a: 6, b: 8, c: 10, type: 'scaled', base: '3, 4, 5 (×2)' },
-  { a: 9, b: 12, c: 15, type: 'scaled', base: '3, 4, 5 (×3)' },
-  { a: 12, b: 16, c: 20, type: 'scaled', base: '3, 4, 5 (×4)' },
-  { a: 15, b: 20, c: 25, type: 'scaled', base: '3, 4, 5 (×5)' },
-  { a: 18, b: 24, c: 30, type: 'scaled', base: '3, 4, 5 (×6)' },
-  { a: 10, b: 24, c: 26, type: 'scaled', base: '5, 12, 13 (×2)' },
-  { a: 15, b: 36, c: 39, type: 'scaled', base: '5, 12, 13 (×3)' },
-  { a: 14, b: 48, c: 50, type: 'scaled', base: '7, 24, 25 (×2)' },
-  { a: 16, b: 30, c: 34, type: 'scaled', base: '8, 15, 17 (×2)' },
-  { a: 24, b: 70, c: 74, type: 'scaled', base: '12, 35, 37 (×2)' },
-  { a: 40, b: 42, c: 58, type: 'scaled', base: '20, 21, 29 (×2)' },
 ];
 
-// 2. Tables: 12 to 24
-// Multipliers 2 through 12, plus 13-20 for high-frequency banking/SSC speed
+export const TRIPLETS_DATA = PRIMITIVE_TRIPLETS;
+
+// 2. Tables: 12 to 24 (all 13 numbers from 12 through 24)
 export const TABLES_CONFIG = {
   minTable: 12,
   maxTable: 24,
   multipliers: [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19],
 };
 
-// 3. Squares: 17 to 39
+// 3. Squares: 17 to 39 (all 23 numbers from 17 through 39)
 export const SQUARES_17_39 = Array.from({ length: 39 - 17 + 1 }, (_, i) => {
   const n = 17 + i;
   return { n, val: n * n };
 });
 
-// 4. Cubes: 11 to 25
+// 4. Cubes: 11 to 25 (all 15 numbers from 11 through 25)
 export const CUBES_11_25 = Array.from({ length: 25 - 11 + 1 }, (_, i) => {
   const n = 11 + i;
   return { n, val: n * n * n };
 });
 
 // 5. Powers:
-// - Powers up to 6 of 2, 3, 4
-// - Powers up to 4 of 5, 6, 7, 8, 9
+// - Powers up to 6 of 2, 3, 4 (18 items)
+// - Powers up to 4 of 5, 6, 7, 8, 9 (20 items)
+// Total = 38 distinct power combinations
 export const POWERS_DATA = [
   // 2^1 to 2^6
   { base: 2, exp: 1, val: 2 },
@@ -130,7 +119,7 @@ export const POWERS_DATA = [
   { base: 9, exp: 4, val: 6561 },
 ];
 
-// 6. Factorials up to 8
+// 6. Factorials up to 8 (all 8 numbers from 1! to 8!)
 export const FACTORIALS_DATA = [
   { n: 1, val: 1, breakdown: '1' },
   { n: 2, val: 2, breakdown: '2 × 1' },
@@ -146,10 +135,11 @@ export const FACTORIALS_DATA = [
 export const CALC_SECTIONS = [
   {
     id: 'triplets',
-    title: 'Pythagorean Triplets',
-    shortTitle: 'Triplets',
+    title: 'Primitive Triplets',
+    shortTitle: 'Triplets (Primitives)',
     badge: 'Step 1',
-    description: 'Find the missing leg or hypotenuse in standard SSC right triangles',
+    description: 'All 16 primitive Pythagorean triplets tested at least once',
+    count: PRIMITIVE_TRIPLETS.length,
     color: 'from-blue-600 to-indigo-600',
     lightBg: 'bg-blue-50 text-blue-700 border-blue-200',
     accentColor: 'blue',
@@ -159,7 +149,8 @@ export const CALC_SECTIONS = [
     title: 'Tables (12 to 24)',
     shortTitle: 'Tables 12–24',
     badge: 'Step 2',
-    description: 'High-speed multiplication recall for tables 12 through 24',
+    description: 'Every table from 12 through 24 tested at least once',
+    count: 24 - 12 + 1,
     color: 'from-emerald-600 to-teal-600',
     lightBg: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     accentColor: 'emerald',
@@ -169,7 +160,8 @@ export const CALC_SECTIONS = [
     title: 'Squares (17 to 39)',
     shortTitle: 'Squares 17–39',
     badge: 'Step 3',
-    description: 'Instant square calculation from 17² to 39²',
+    description: 'Every square from 17² to 39² tested at least once',
+    count: SQUARES_17_39.length,
     color: 'from-amber-500 to-orange-600',
     lightBg: 'bg-amber-50 text-amber-700 border-amber-200',
     accentColor: 'amber',
@@ -179,7 +171,8 @@ export const CALC_SECTIONS = [
     title: 'Cubes (11 to 25)',
     shortTitle: 'Cubes 11–25',
     badge: 'Step 4',
-    description: 'Instant cube calculation from 11³ to 25³',
+    description: 'Every cube from 11³ to 25³ tested at least once',
+    count: CUBES_11_25.length,
     color: 'from-purple-600 to-violet-600',
     lightBg: 'bg-purple-50 text-purple-700 border-purple-200',
     accentColor: 'purple',
@@ -189,7 +182,8 @@ export const CALC_SECTIONS = [
     title: 'Powers (2–4 to ^6 & 5–9 to ^4)',
     shortTitle: 'Powers',
     badge: 'Step 5',
-    description: 'Powers of 2, 3, 4 up to 6th power & 5, 6, 7, 8, 9 up to 4th power',
+    description: 'All 38 power values tested at least once',
+    count: POWERS_DATA.length,
     color: 'from-rose-500 to-pink-600',
     lightBg: 'bg-rose-50 text-rose-700 border-rose-200',
     accentColor: 'rose',
@@ -199,7 +193,8 @@ export const CALC_SECTIONS = [
     title: 'Factorials (1! to 8!)',
     shortTitle: 'Factorials 1–8',
     badge: 'Step 6',
-    description: 'Quick factorial recall from 1! to 8!',
+    description: 'All 8 factorials from 1! to 8! tested at least once',
+    count: FACTORIALS_DATA.length,
     color: 'from-cyan-600 to-blue-600',
     lightBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
     accentColor: 'cyan',
@@ -208,136 +203,198 @@ export const CALC_SECTIONS = [
 
 export type SectionId = (typeof CALC_SECTIONS)[number]['id'];
 
-// Generators for each section
-export function generateQuestionForSection(section: SectionId): CalculationQuestion {
+// Fisher-Yates Shuffler
+export function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Generate question for a specific primitive triplet
+export function createTripletQuestion(item: TripletItem): CalculationQuestion {
+  // 50% missing hypotenuse, 25% missing leg a, 25% missing leg b
+  const missing = Math.random() < 0.5 ? 'c' : Math.random() < 0.5 ? 'a' : 'b';
+  let prompt = '';
+  let subPrompt = '';
+  let answer = 0;
+
+  if (missing === 'c') {
+    prompt = `[ ${item.a} , ${item.b} , ? ]`;
+    subPrompt = 'Find the Hypotenuse (c)';
+    answer = item.c;
+  } else if (missing === 'a') {
+    prompt = `[ ? , ${item.b} , ${item.c} ]`;
+    subPrompt = 'Find missing Leg (a)';
+    answer = item.a;
+  } else {
+    prompt = `[ ${item.a} , ? , ${item.c} ]`;
+    subPrompt = 'Find missing Leg (b)';
+    answer = item.b;
+  }
+
+  return {
+    id: `triplet-${item.a}-${item.b}-${item.c}-${Date.now()}-${Math.random()}`,
+    section: 'triplets',
+    sectionTitle: 'Primitive Triplets',
+    prompt,
+    subPrompt,
+    answer,
+    rawKey: `triplet-${item.a}-${item.b}-${item.c}`,
+    explanation: `${item.a}² + ${item.b}² = ${item.a * item.a} + ${item.b * item.b} = ${item.c * item.c} = ${item.c}²`,
+    metadata: { item, missing },
+  };
+}
+
+// Generate question for a table number
+export function createTableQuestion(table: number): CalculationQuestion {
+  const multiplier = TABLES_CONFIG.multipliers[Math.floor(Math.random() * TABLES_CONFIG.multipliers.length)];
+  return {
+    id: `table-${table}-${multiplier}-${Date.now()}-${Math.random()}`,
+    section: 'tables',
+    sectionTitle: 'Tables 12–24',
+    prompt: `${table} × ${multiplier}`,
+    subPrompt: `Calculate product`,
+    answer: table * multiplier,
+    rawKey: `table-${table}`,
+    explanation: `${table} × ${multiplier} = ${table * multiplier}`,
+  };
+}
+
+// Generate question for square
+export function createSquareQuestion(item: { n: number; val: number }): CalculationQuestion {
+  const isRoot = Math.random() < 0.25;
+  if (isRoot) {
+    return {
+      id: `square-root-${item.n}-${Date.now()}-${Math.random()}`,
+      section: 'squares',
+      sectionTitle: 'Squares 17–39',
+      prompt: `√${item.val}`,
+      subPrompt: `Square root of ${item.val}`,
+      answer: item.n,
+      rawKey: `square-${item.n}`,
+      explanation: `√${item.val} = ${item.n} (since ${item.n}² = ${item.val})`,
+    };
+  }
+  return {
+    id: `square-${item.n}-${Date.now()}-${Math.random()}`,
+    section: 'squares',
+    sectionTitle: 'Squares 17–39',
+    prompt: `${item.n}²`,
+    subPrompt: `Square of ${item.n}`,
+    answer: item.val,
+    rawKey: `square-${item.n}`,
+    explanation: `${item.n}² = ${item.val}`,
+  };
+}
+
+// Generate question for cube
+export function createCubeQuestion(item: { n: number; val: number }): CalculationQuestion {
+  const isRoot = Math.random() < 0.25;
+  if (isRoot) {
+    return {
+      id: `cube-root-${item.n}-${Date.now()}-${Math.random()}`,
+      section: 'cubes',
+      sectionTitle: 'Cubes 11–25',
+      prompt: `∛${item.val}`,
+      subPrompt: `Cube root of ${item.val}`,
+      answer: item.n,
+      rawKey: `cube-${item.n}`,
+      explanation: `∛${item.val} = ${item.n} (since ${item.n}³ = ${item.val})`,
+    };
+  }
+  return {
+    id: `cube-${item.n}-${Date.now()}-${Math.random()}`,
+    section: 'cubes',
+    sectionTitle: 'Cubes 11–25',
+    prompt: `${item.n}³`,
+    subPrompt: `Cube of ${item.n}`,
+    answer: item.val,
+    rawKey: `cube-${item.n}`,
+    explanation: `${item.n}³ = ${item.val}`,
+  };
+}
+
+// Generate question for power
+export function createPowerQuestion(item: { base: number; exp: number; val: number }): CalculationQuestion {
+  return {
+    id: `power-${item.base}-${item.exp}-${Date.now()}-${Math.random()}`,
+    section: 'powers',
+    sectionTitle: 'Powers (2–9)',
+    prompt: `${item.base}^${item.exp}`,
+    subPrompt: `${item.base} raised to power ${item.exp}`,
+    answer: item.val,
+    rawKey: `power-${item.base}^${item.exp}`,
+    explanation: `${item.base}^${item.exp} = ${item.val}`,
+  };
+}
+
+// Generate question for factorial
+export function createFactorialQuestion(item: { n: number; val: number; breakdown: string }): CalculationQuestion {
+  return {
+    id: `factorial-${item.n}-${Date.now()}-${Math.random()}`,
+    section: 'factorials',
+    sectionTitle: 'Factorials 1–8',
+    prompt: `${item.n}!`,
+    subPrompt: `Factorial of ${item.n}`,
+    answer: item.val,
+    rawKey: `factorial-${item.n}`,
+    explanation: `${item.n}! = ${item.breakdown} = ${item.val}`,
+  };
+}
+
+/**
+ * Generates an EXHAUSTIVE, shuffled deck for a section guaranteeing that
+ * EVERY single number in the required range appears at least once!
+ */
+export function generateExhaustiveDeckForSection(section: SectionId): CalculationQuestion[] {
   switch (section) {
     case 'triplets': {
-      const item = TRIPLETS_DATA[Math.floor(Math.random() * TRIPLETS_DATA.length)];
-      // Choose missing side: 50% hypotenuse (c), 25% leg a, 25% leg b
-      const missing = Math.random() < 0.5 ? 'c' : Math.random() < 0.5 ? 'a' : 'b';
-      let prompt = '';
-      let subPrompt = '';
-      let answer = 0;
-
-      if (missing === 'c') {
-        prompt = `[ ${item.a} , ${item.b} , ? ]`;
-        subPrompt = 'Find the Hypotenuse (c)';
-        answer = item.c;
-      } else if (missing === 'a') {
-        prompt = `[ ? , ${item.b} , ${item.c} ]`;
-        subPrompt = 'Find the missing Leg (a)';
-        answer = item.a;
-      } else {
-        prompt = `[ ${item.a} , ? , ${item.c} ]`;
-        subPrompt = 'Find the missing Leg (b)';
-        answer = item.b;
-      }
-
-      return {
-        id: `triplet-${Date.now()}-${Math.random()}`,
-        section: 'triplets',
-        sectionTitle: 'Pythagorean Triplets',
-        prompt,
-        subPrompt,
-        answer,
-        explanation: `${item.a}² + ${item.b}² = ${item.a * item.a} + ${item.b * item.b} = ${item.c * item.c} = ${item.c}² ${
-          item.base ? `(${item.base})` : ''
-        }`,
-        metadata: { item, missing },
-      };
+      // All 16 primitive triplets
+      const deck = PRIMITIVE_TRIPLETS.map((t) => createTripletQuestion(t));
+      return shuffleArray(deck);
     }
 
     case 'tables': {
-      // Pick table from 12 to 24
-      const table = Math.floor(Math.random() * (TABLES_CONFIG.maxTable - TABLES_CONFIG.minTable + 1)) + TABLES_CONFIG.minTable;
-      const multiplier = TABLES_CONFIG.multipliers[Math.floor(Math.random() * TABLES_CONFIG.multipliers.length)];
-      return {
-        id: `table-${Date.now()}-${Math.random()}`,
-        section: 'tables',
-        sectionTitle: 'Tables 12–24',
-        prompt: `${table} × ${multiplier}`,
-        subPrompt: `Calculate product`,
-        answer: table * multiplier,
-        explanation: `${table} × ${multiplier} = ${table * multiplier}`,
-      };
+      // All tables from 12 through 24
+      const tablesList = Array.from(
+        { length: TABLES_CONFIG.maxTable - TABLES_CONFIG.minTable + 1 },
+        (_, i) => TABLES_CONFIG.minTable + i
+      );
+      const deck = tablesList.map((tbl) => createTableQuestion(tbl));
+      return shuffleArray(deck);
     }
 
     case 'squares': {
-      const item = SQUARES_17_39[Math.floor(Math.random() * SQUARES_17_39.length)];
-      // 80% direct square, 20% square root
-      const isRoot = Math.random() < 0.2;
-      if (isRoot) {
-        return {
-          id: `square-${Date.now()}-${Math.random()}`,
-          section: 'squares',
-          sectionTitle: 'Squares 17–39',
-          prompt: `√${item.val}`,
-          subPrompt: `Square root of ${item.val}`,
-          answer: item.n,
-          explanation: `√${item.val} = ${item.n} (since ${item.n}² = ${item.val})`,
-        };
-      }
-      return {
-        id: `square-${Date.now()}-${Math.random()}`,
-        section: 'squares',
-        sectionTitle: 'Squares 17–39',
-        prompt: `${item.n}²`,
-        subPrompt: `Square of ${item.n}`,
-        answer: item.val,
-        explanation: `${item.n}² = ${item.val}`,
-      };
+      // All numbers from 17 through 39
+      const deck = SQUARES_17_39.map((item) => createSquareQuestion(item));
+      return shuffleArray(deck);
     }
 
     case 'cubes': {
-      const item = CUBES_11_25[Math.floor(Math.random() * CUBES_11_25.length)];
-      // 80% direct cube, 20% cube root
-      const isRoot = Math.random() < 0.2;
-      if (isRoot) {
-        return {
-          id: `cube-${Date.now()}-${Math.random()}`,
-          section: 'cubes',
-          sectionTitle: 'Cubes 11–25',
-          prompt: `∛${item.val}`,
-          subPrompt: `Cube root of ${item.val}`,
-          answer: item.n,
-          explanation: `∛${item.val} = ${item.n} (since ${item.n}³ = ${item.val})`,
-        };
-      }
-      return {
-        id: `cube-${Date.now()}-${Math.random()}`,
-        section: 'cubes',
-        sectionTitle: 'Cubes 11–25',
-        prompt: `${item.n}³`,
-        subPrompt: `Cube of ${item.n}`,
-        answer: item.val,
-        explanation: `${item.n}³ = ${item.val}`,
-      };
+      // All numbers from 11 through 25
+      const deck = CUBES_11_25.map((item) => createCubeQuestion(item));
+      return shuffleArray(deck);
     }
 
     case 'powers': {
-      const item = POWERS_DATA[Math.floor(Math.random() * POWERS_DATA.length)];
-      return {
-        id: `power-${Date.now()}-${Math.random()}`,
-        section: 'powers',
-        sectionTitle: 'Powers (2–9)',
-        prompt: `${item.base}^${item.exp}`,
-        subPrompt: `${item.base} raised to power ${item.exp}`,
-        answer: item.val,
-        explanation: `${item.base}^${item.exp} = ${item.val}`,
-      };
+      // All 38 power items (2,3,4 to 6 & 5,6,7,8,9 to 4)
+      const deck = POWERS_DATA.map((item) => createPowerQuestion(item));
+      return shuffleArray(deck);
     }
 
     case 'factorials': {
-      const item = FACTORIALS_DATA[Math.floor(Math.random() * FACTORIALS_DATA.length)];
-      return {
-        id: `factorial-${Date.now()}-${Math.random()}`,
-        section: 'factorials',
-        sectionTitle: 'Factorials 1–8',
-        prompt: `${item.n}!`,
-        subPrompt: `Factorial of ${item.n}`,
-        answer: item.val,
-        explanation: `${item.n}! = ${item.breakdown} = ${item.val}`,
-      };
+      // All 8 factorials (1! to 8!)
+      const deck = FACTORIALS_DATA.map((item) => createFactorialQuestion(item));
+      return shuffleArray(deck);
     }
   }
+}
+
+// Fallback single question generator
+export function generateQuestionForSection(section: SectionId): CalculationQuestion {
+  const deck = generateExhaustiveDeckForSection(section);
+  return deck[0];
 }

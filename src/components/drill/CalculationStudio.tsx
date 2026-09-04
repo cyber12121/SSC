@@ -6,7 +6,6 @@ import {
   X,
   Sparkles,
   Zap,
-  HelpCircle,
   RotateCcw,
   Check,
   Flame,
@@ -14,16 +13,17 @@ import {
   Volume2,
   VolumeX,
   Grid,
-  ChevronRight,
   ArrowRight,
   Target,
-  ArrowLeft,
+  AlertCircle,
+  Repeat,
+  Trophy,
 } from 'lucide-react';
 import {
   CALC_SECTIONS,
   SectionId,
   CalculationQuestion,
-  generateQuestionForSection,
+  generateExhaustiveDeckForSection,
 } from '../../data/drills/calculationData';
 import { CalculationCheatSheet } from './CalculationCheatSheet';
 import { CalculationSummary, SectionStats } from './CalculationSummary';
@@ -34,7 +34,11 @@ interface Props {
   initialSection?: SectionId;
 }
 
-const QUESTIONS_PER_SECTION_ROUTINE = 6; // 6 questions per section = 36 questions total in marathon
+interface RepeatItem {
+  question: CalculationQuestion;
+  remainingRepeats: number; // 3 to 1
+  delay: number; // steps before re-asking
+}
 
 export const CalculationStudio: React.FC<Props> = ({
   onClose,
@@ -45,7 +49,12 @@ export const CalculationStudio: React.FC<Props> = ({
   const [drillMode, setDrillMode] = useState<'routine' | 'free'>(initialMode);
   const [activeSectionId, setActiveSectionId] = useState<SectionId>(initialSection);
   const [routineSectionIndex, setRoutineSectionIndex] = useState<number>(0);
-  const [routineSectionQCount, setRoutineSectionQCount] = useState<number>(0);
+
+  // Decks & Repetition Queues
+  const [deck, setDeck] = useState<CalculationQuestion[]>([]);
+  const [initialDeckSize, setInitialDeckSize] = useState<number>(1);
+  const [repeatQueue, setRepeatQueue] = useState<RepeatItem[]>([]);
+  const [activeRepeatItem, setActiveRepeatItem] = useState<RepeatItem | null>(null);
 
   // Fullscreen state
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
@@ -74,7 +83,7 @@ export const CalculationStudio: React.FC<Props> = ({
   const [isFinished, setIsFinished] = useState<boolean>(false);
 
   // Question & input state
-  const [question, setQuestion] = useState<CalculationQuestion | null>(null);
+  const [currentQuestion, setCurrentQuestion] = useState<CalculationQuestion | null>(null);
   const [inputVal, setInputVal] = useState<string>('');
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [revealed, setRevealed] = useState<boolean>(false);
@@ -82,11 +91,11 @@ export const CalculationStudio: React.FC<Props> = ({
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Determine current active section depending on mode
+  // Current active section metadata
   const currentSection =
     drillMode === 'routine' ? CALC_SECTIONS[routineSectionIndex] : CALC_SECTIONS.find((s) => s.id === activeSectionId)!;
 
-  // Simple Web Audio API beeps
+  // Sound generator
   const playAudioTone = useCallback(
     (type: 'correct' | 'wrong' | 'complete') => {
       if (!soundEnabled) return;
@@ -124,38 +133,42 @@ export const CalculationStudio: React.FC<Props> = ({
           osc.stop(now + 0.35);
         }
       } catch {
-        // Ignore audio playback errors if user hasn't interacted
+        // Audio context may be restricted before interaction
       }
     },
     [soundEnabled]
   );
 
-  // Generate question for current section
-  const loadNextQuestion = useCallback(
-    (targetSection?: SectionId) => {
-      const secId = targetSection || currentSection.id;
-      const q = generateQuestionForSection(secId);
-      setQuestion(q);
-      setInputVal('');
-      setFeedback(null);
-      setRevealed(false);
-    },
-    [currentSection]
-  );
+  // Initialize or transition section
+  const initSection = useCallback((secId: SectionId) => {
+    const fullDeck = generateExhaustiveDeckForSection(secId);
+    setInitialDeckSize(fullDeck.length);
+    setRepeatQueue([]);
+    setActiveRepeatItem(null);
+    setInputVal('');
+    setFeedback(null);
+    setRevealed(false);
 
-  // Initialize first problem
+    // Pick first question
+    const firstQ = fullDeck[0];
+    const remainingDeck = fullDeck.slice(1);
+    setDeck(remainingDeck);
+    setCurrentQuestion(firstQ);
+  }, []);
+
+  // When section or drill mode changes, initialize section
   useEffect(() => {
-    loadNextQuestion(currentSection.id);
-  }, [drillMode, routineSectionIndex, activeSectionId]);
+    initSection(currentSection.id);
+  }, [drillMode, routineSectionIndex, activeSectionId, initSection]);
 
   // Keep focus on input
   useEffect(() => {
     if (!isFinished) {
       inputRef.current?.focus();
     }
-  }, [question, isFinished]);
+  }, [currentQuestion, isFinished]);
 
-  // Elapsed timer
+  // Timer
   useEffect(() => {
     if (isFinished) return;
     const interval = setInterval(() => {
@@ -164,7 +177,7 @@ export const CalculationStudio: React.FC<Props> = ({
     return () => clearInterval(interval);
   }, [isFinished]);
 
-  // Handle Fullscreen toggle
+  // Fullscreen handling
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen?.().catch(() => {});
@@ -183,25 +196,129 @@ export const CalculationStudio: React.FC<Props> = ({
     return () => document.removeEventListener('fullscreenchange', handleFsChange);
   }, []);
 
-  // Format timer
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
     return `${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // Progression logic
-  const handleCorrectSubmission = () => {
-    if (!question) return;
+  // Pull next question considering exhaustive deck and 3x mistake repetition queue
+  const nextQuestion = (
+    currentDeck: CalculationQuestion[],
+    currentQueue: RepeatItem[],
+    prevAnswerWasCorrect: boolean,
+    prevRepeatItem: RepeatItem | null,
+    prevQuestion: CalculationQuestion
+  ) => {
+    setInputVal('');
+    setFeedback(null);
+    setRevealed(false);
+
+    let updatedQueue = [...currentQueue];
+
+    // Decrement delay on pending repeats
+    updatedQueue = updatedQueue.map((item) => ({
+      ...item,
+      delay: Math.max(0, item.delay - 1),
+    }));
+
+    if (prevAnswerWasCorrect) {
+      if (prevRepeatItem) {
+        // Decrement repeat count
+        const newRem = prevRepeatItem.remainingRepeats - 1;
+        if (newRem <= 0) {
+          // Cleared from queue!
+          updatedQueue = updatedQueue.filter((it) => it.question.rawKey !== prevRepeatItem.question.rawKey);
+        } else {
+          // Keep in queue with delay = 1
+          updatedQueue = updatedQueue.map((it) =>
+            it.question.rawKey === prevRepeatItem.question.rawKey
+              ? { ...it, remainingRepeats: newRem, delay: 1 }
+              : it
+          );
+        }
+      }
+    } else {
+      // Prev answer was WRONG or revealed:
+      // Must repeat 3 times!
+      const existingIdx = updatedQueue.findIndex((it) => it.question.rawKey === prevQuestion.rawKey);
+      if (existingIdx >= 0) {
+        // Reset remaining repeats to 3
+        updatedQueue[existingIdx] = {
+          ...updatedQueue[existingIdx],
+          remainingRepeats: 3,
+          delay: 1,
+        };
+      } else {
+        // Add new repeat entry
+        updatedQueue.push({
+          question: prevQuestion,
+          remainingRepeats: 3,
+          delay: 1,
+        });
+      }
+    }
+
+    setRepeatQueue(updatedQueue);
+
+    // Now decide which question to present next:
+    // 1. Ready repeat item (delay === 0)
+    const readyRepeatIdx = updatedQueue.findIndex((it) => it.delay === 0);
+
+    // If deck has items and there's a ready repeat item:
+    // Interleave: show repeat item with 50% probability, or 100% if deck is empty
+    if (readyRepeatIdx >= 0 && (currentDeck.length === 0 || Math.random() < 0.6)) {
+      const chosenRepeat = updatedQueue[readyRepeatIdx];
+      setActiveRepeatItem(chosenRepeat);
+      setCurrentQuestion(chosenRepeat.question);
+      return;
+    }
+
+    // 2. Next item from deck
+    if (currentDeck.length > 0) {
+      const [nextQ, ...restDeck] = currentDeck;
+      setDeck(restDeck);
+      setActiveRepeatItem(null);
+      setCurrentQuestion(nextQ);
+      return;
+    }
+
+    // 3. If deck is empty, check if any repeat items remain (even with delay > 0)
+    if (updatedQueue.length > 0) {
+      const chosenRepeat = updatedQueue[0];
+      setActiveRepeatItem(chosenRepeat);
+      setCurrentQuestion(chosenRepeat.question);
+      return;
+    }
+
+    // 4. Deck is empty AND repeat queue is empty => SECTION COMPLETED!
+    playAudioTone('complete');
+
+    if (drillMode === 'routine') {
+      const nextSecIdx = routineSectionIndex + 1;
+      if (nextSecIdx >= CALC_SECTIONS.length) {
+        // Completed all 6 steps!
+        setIsFinished(true);
+      } else {
+        setRoutineSectionIndex(nextSecIdx);
+      }
+    } else {
+      // In free mode, restart deck or offer review
+      initSection(activeSectionId);
+    }
+  };
+
+  // Correct submission
+  const handleCorrect = () => {
+    if (!currentQuestion) return;
     playAudioTone('correct');
     setFeedback('correct');
 
-    // Update section stats
     setStatsBySection((prev) => ({
       ...prev,
-      [question.section]: {
-        correct: prev[question.section].correct + 1,
-        total: prev[question.section].total + 1,
+      [currentQuestion.section]: {
+        correct: prev[currentQuestion.section].correct + 1,
+        total: prev[currentQuestion.section].total + 1,
       },
     }));
 
@@ -211,40 +328,28 @@ export const CalculationStudio: React.FC<Props> = ({
       return next;
     });
 
+    const activeRepeatCopy = activeRepeatItem;
+    const currentQCopy = currentQuestion;
+    const currentDeckCopy = deck;
+    const currentQueueCopy = repeatQueue;
+
     setTimeout(() => {
-      if (drillMode === 'routine') {
-        const nextQCount = routineSectionQCount + 1;
-        if (nextQCount >= QUESTIONS_PER_SECTION_ROUTINE) {
-          // Advance to next section in routine
-          const nextSecIdx = routineSectionIndex + 1;
-          if (nextSecIdx >= CALC_SECTIONS.length) {
-            // Completed all 6 steps!
-            playAudioTone('complete');
-            setIsFinished(true);
-          } else {
-            setRoutineSectionIndex(nextSecIdx);
-            setRoutineSectionQCount(0);
-          }
-        } else {
-          setRoutineSectionQCount(nextQCount);
-          loadNextQuestion(CALC_SECTIONS[routineSectionIndex].id);
-        }
-      } else {
-        loadNextQuestion(activeSectionId);
-      }
+      nextQuestion(currentDeckCopy, currentQueueCopy, true, activeRepeatCopy, currentQCopy);
     }, 160);
   };
 
-  const handleWrongSubmission = () => {
-    if (!question) return;
+  // Wrong submission
+  const handleWrong = () => {
+    if (!currentQuestion) return;
     playAudioTone('wrong');
     setFeedback('wrong');
     setStreak(0);
+
     setStatsBySection((prev) => ({
       ...prev,
-      [question.section]: {
-        correct: prev[question.section].correct,
-        total: prev[question.section].total + 1,
+      [currentQuestion.section]: {
+        correct: prev[currentQuestion.section].correct,
+        total: prev[currentQuestion.section].total + 1,
       },
     }));
 
@@ -253,38 +358,29 @@ export const CalculationStudio: React.FC<Props> = ({
     }, 450);
   };
 
-  const handleSkipOrReveal = () => {
-    if (!question) return;
+  // Skip or reveal answer
+  const handleReveal = () => {
+    if (!currentQuestion) return;
     setRevealed(true);
     setStreak(0);
+
     setStatsBySection((prev) => ({
       ...prev,
-      [question.section]: {
-        correct: prev[question.section].correct,
-        total: prev[question.section].total + 1,
+      [currentQuestion.section]: {
+        correct: prev[currentQuestion.section].correct,
+        total: prev[currentQuestion.section].total + 1,
       },
     }));
   };
 
   const handleAdvanceAfterReveal = () => {
-    if (drillMode === 'routine') {
-      const nextQCount = routineSectionQCount + 1;
-      if (nextQCount >= QUESTIONS_PER_SECTION_ROUTINE) {
-        const nextSecIdx = routineSectionIndex + 1;
-        if (nextSecIdx >= CALC_SECTIONS.length) {
-          playAudioTone('complete');
-          setIsFinished(true);
-        } else {
-          setRoutineSectionIndex(nextSecIdx);
-          setRoutineSectionQCount(0);
-        }
-      } else {
-        setRoutineSectionQCount(nextQCount);
-        loadNextQuestion(CALC_SECTIONS[routineSectionIndex].id);
-      }
-    } else {
-      loadNextQuestion(activeSectionId);
-    }
+    if (!currentQuestion) return;
+    const activeRepeatCopy = activeRepeatItem;
+    const currentQCopy = currentQuestion;
+    const currentDeckCopy = deck;
+    const currentQueueCopy = repeatQueue;
+
+    nextQuestion(currentDeckCopy, currentQueueCopy, false, activeRepeatCopy, currentQCopy);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -292,22 +388,22 @@ export const CalculationStudio: React.FC<Props> = ({
     if (!/^\d*$/.test(val)) return;
     setInputVal(val);
 
-    if (!question || val === '') return;
+    if (!currentQuestion || val === '') return;
     const num = parseInt(val, 10);
-    if (!isNaN(num) && num === question.answer) {
-      handleCorrectSubmission();
+    if (!isNaN(num) && num === currentQuestion.answer) {
+      handleCorrect();
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      if (!question || inputVal.trim() === '') return;
+      if (!currentQuestion || inputVal.trim() === '') return;
       const num = parseInt(inputVal.trim(), 10);
-      if (num === question.answer) {
-        handleCorrectSubmission();
+      if (num === currentQuestion.answer) {
+        handleCorrect();
       } else {
-        handleWrongSubmission();
+        handleWrong();
       }
     } else if (e.key === 'Escape') {
       if (showCheatSheet) {
@@ -318,7 +414,6 @@ export const CalculationStudio: React.FC<Props> = ({
     }
   };
 
-  // Numpad input helper
   const handleNumpadPress = (char: string) => {
     if (char === 'clear') {
       setInputVal('');
@@ -327,21 +422,13 @@ export const CalculationStudio: React.FC<Props> = ({
       const nextVal = inputVal.slice(0, -1);
       setInputVal(nextVal);
       inputRef.current?.focus();
-    } else if (char === 'enter') {
-      if (!question || inputVal === '') return;
-      const num = parseInt(inputVal, 10);
-      if (num === question.answer) {
-        handleCorrectSubmission();
-      } else {
-        handleWrongSubmission();
-      }
     } else {
       const nextVal = inputVal + char;
       setInputVal(nextVal);
-      if (question) {
+      if (currentQuestion) {
         const num = parseInt(nextVal, 10);
-        if (num === question.answer) {
-          handleCorrectSubmission();
+        if (num === currentQuestion.answer) {
+          handleCorrect();
         }
       }
       inputRef.current?.focus();
@@ -350,7 +437,6 @@ export const CalculationStudio: React.FC<Props> = ({
 
   const restartRoutine = () => {
     setRoutineSectionIndex(0);
-    setRoutineSectionQCount(0);
     setElapsedSeconds(0);
     setStreak(0);
     setIsFinished(false);
@@ -363,22 +449,25 @@ export const CalculationStudio: React.FC<Props> = ({
       factorials: { correct: 0, total: 0 },
     });
     setDrillMode('routine');
-    loadNextQuestion('triplets');
   };
 
   const switchToIndividualSection = (secId: SectionId) => {
     setDrillMode('free');
     setActiveSectionId(secId);
     setIsFinished(false);
-    loadNextQuestion(secId);
   };
+
+  // Progress metrics
+  const answeredDeckCount = initialDeckSize - deck.length;
+  const remainingInDeck = deck.length;
+  const pendingMistakes = repeatQueue.length;
 
   return (
     <div
       ref={containerRef}
       className="fixed inset-0 z-40 bg-slate-900 text-slate-100 flex flex-col overflow-hidden select-none font-sans"
     >
-      {/* Top Header Bar */}
+      {/* Header Bar */}
       <header className="flex items-center justify-between px-4 sm:px-6 py-3 bg-slate-950/80 border-b border-slate-800/80 backdrop-blur-md">
         {/* Left: Branding & Mode Switcher */}
         <div className="flex items-center space-x-3 sm:space-x-4">
@@ -388,7 +477,9 @@ export const CalculationStudio: React.FC<Props> = ({
             </div>
             <div className="hidden sm:block">
               <span className="font-black text-sm text-white tracking-tight">Calculation Studio</span>
-              <span className="text-[10px] text-blue-400 font-bold block uppercase tracking-wider">Speed Workout</span>
+              <span className="text-[10px] text-blue-400 font-bold block uppercase tracking-wider">
+                Full Screen Drill
+              </span>
             </div>
           </div>
 
@@ -400,8 +491,6 @@ export const CalculationStudio: React.FC<Props> = ({
               onClick={() => {
                 setDrillMode('routine');
                 setRoutineSectionIndex(0);
-                setRoutineSectionQCount(0);
-                loadNextQuestion('triplets');
               }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 drillMode === 'routine'
@@ -414,7 +503,6 @@ export const CalculationStudio: React.FC<Props> = ({
             <button
               onClick={() => {
                 setDrillMode('free');
-                loadNextQuestion(activeSectionId);
               }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 drillMode === 'free'
@@ -433,6 +521,7 @@ export const CalculationStudio: React.FC<Props> = ({
             <Flame className="w-4 h-4 mr-1.5 fill-amber-400" />
             <span>{streak} Streak</span>
           </div>
+
           <div className="text-slate-400 font-mono">
             Time: <span className="text-white font-bold">{formatTime(elapsedSeconds)}</span>
           </div>
@@ -499,9 +588,9 @@ export const CalculationStudio: React.FC<Props> = ({
       </header>
 
       {/* Routine Progress / Section Tabs Subheader */}
-      <div className="px-4 sm:px-6 py-2.5 bg-slate-950 border-b border-slate-800/60 overflow-x-auto scrollbar-none">
+      <div className="px-4 sm:px-6 py-2.5 bg-slate-950 border-b border-slate-800/60 flex items-center justify-between overflow-x-auto scrollbar-none gap-4">
         {drillMode === 'routine' ? (
-          <div className="flex items-center space-x-2 sm:space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             {CALC_SECTIONS.map((sec, idx) => {
               const isCurrent = idx === routineSectionIndex;
               const isCompleted = idx < routineSectionIndex;
@@ -519,11 +608,6 @@ export const CalculationStudio: React.FC<Props> = ({
                   <span className="mr-1.5 opacity-60">{sec.badge}</span>
                   <span>{sec.shortTitle}</span>
                   {isCompleted && <Check className="w-3 h-3 ml-1.5 text-emerald-400" />}
-                  {isCurrent && (
-                    <span className="ml-2 text-[10px] bg-blue-500 text-white px-1.5 py-0.2 rounded-full">
-                      {routineSectionQCount + 1}/{QUESTIONS_PER_SECTION_ROUTINE}
-                    </span>
-                  )}
                 </div>
               );
             })}
@@ -548,6 +632,19 @@ export const CalculationStudio: React.FC<Props> = ({
             })}
           </div>
         )}
+
+        {/* Section Live Counters: Exhaustive progress & mistake queue */}
+        <div className="flex items-center space-x-3 text-xs font-bold whitespace-nowrap">
+          <span className="text-slate-400">
+            Covered: <strong className="text-white">{answeredDeckCount}</strong>/{initialDeckSize}
+          </span>
+          {pendingMistakes > 0 && (
+            <span className="flex items-center text-amber-400 bg-amber-400/15 border border-amber-400/30 px-2 py-0.5 rounded-lg">
+              <Repeat className="w-3 h-3 mr-1" />
+              {pendingMistakes} mistake{pendingMistakes > 1 ? 's' : ''} (repeating 3×)
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Main Studio Body */}
@@ -562,13 +659,22 @@ export const CalculationStudio: React.FC<Props> = ({
           />
         ) : (
           <div className="w-full max-w-xl mx-auto flex flex-col items-center">
-            {/* Section Tag Badge */}
-            <div className="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-bold text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-              <span>{currentSection.title}</span>
-              <span className="text-slate-500">•</span>
-              <span className="text-slate-400">{currentSection.description}</span>
-            </div>
+            {/* Header info / mistake repetition notice */}
+            {activeRepeatItem ? (
+              <div className="mb-4 inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-xs font-black text-amber-300 animate-pulse">
+                <Repeat className="w-3.5 h-3.5" />
+                <span>Mistake Drill: Repeat ({activeRepeatItem.remainingRepeats} of 3 remaining)</span>
+              </div>
+            ) : (
+              <div className="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-bold text-slate-300">
+                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                <span>{currentSection.title}</span>
+                <span className="text-slate-500">•</span>
+                <span className="text-slate-400">
+                  {remainingInDeck} number{remainingInDeck !== 1 ? 's' : ''} remaining
+                </span>
+              </div>
+            )}
 
             {/* Flashcard Box */}
             <div
@@ -577,27 +683,29 @@ export const CalculationStudio: React.FC<Props> = ({
                   ? 'border-emerald-500 bg-emerald-950/20 ring-4 ring-emerald-500/20'
                   : feedback === 'wrong'
                   ? 'border-rose-500 bg-rose-950/20 ring-4 ring-rose-500/20 animate-shake'
+                  : activeRepeatItem
+                  ? 'border-amber-500/50 bg-amber-950/10'
                   : 'border-slate-800 hover:border-slate-700'
               }`}
             >
               {/* Question Subtitle / Prompt Info */}
-              {question?.subPrompt && (
+              {currentQuestion?.subPrompt && (
                 <div className="text-slate-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3">
-                  {question.subPrompt}
+                  {currentQuestion.subPrompt}
                 </div>
               )}
 
               {/* Big Math Prompt */}
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={question?.id}
+                  key={currentQuestion?.id}
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.12 }}
                   className="text-4xl sm:text-6xl font-black text-white tracking-tight mb-8 text-center"
                 >
-                  {question?.prompt}
+                  {currentQuestion?.prompt}
                 </motion.div>
               </AnimatePresence>
 
@@ -625,17 +733,20 @@ export const CalculationStudio: React.FC<Props> = ({
               </div>
 
               {/* Revealed Solution Card */}
-              {revealed && question && (
+              {revealed && currentQuestion && (
                 <motion.div
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="w-full p-4 rounded-2xl bg-slate-900/90 border border-slate-800 mb-4 text-center"
                 >
-                  <div className="text-xs text-slate-400 font-bold uppercase mb-1">Answer</div>
-                  <div className="text-2xl font-black text-emerald-400 mb-1">{question.answer}</div>
-                  {question.explanation && (
-                    <div className="text-xs text-slate-300 font-medium">{question.explanation}</div>
+                  <div className="text-xs text-slate-400 font-bold uppercase mb-1">Correct Answer</div>
+                  <div className="text-2xl font-black text-emerald-400 mb-1">{currentQuestion.answer}</div>
+                  {currentQuestion.explanation && (
+                    <div className="text-xs text-slate-300 font-medium">{currentQuestion.explanation}</div>
                   )}
+                  <p className="text-[11px] text-amber-400 font-bold mt-2">
+                    ⚠️ Marked for repetition: will be repeated 3 times until mastered.
+                  </p>
                   <button
                     onClick={handleAdvanceAfterReveal}
                     className="mt-3 inline-flex items-center space-x-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all"
@@ -649,12 +760,18 @@ export const CalculationStudio: React.FC<Props> = ({
               {/* Skip / Reveal / Enter Hint */}
               {!revealed && (
                 <div className="flex items-center justify-between w-full text-xs text-slate-500 px-2 mt-2">
-                  <span>Press <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Enter</kbd> to submit</span>
+                  <span>
+                    Press{' '}
+                    <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">
+                      Enter
+                    </kbd>{' '}
+                    to submit
+                  </span>
                   <button
-                    onClick={handleSkipOrReveal}
+                    onClick={handleReveal}
                     className="text-slate-400 hover:text-amber-400 font-bold underline transition-colors"
                   >
-                    Reveal Answer
+                    Reveal Answer (Repeat 3×)
                   </button>
                 </div>
               )}
