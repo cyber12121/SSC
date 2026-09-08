@@ -12,6 +12,8 @@ const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ d
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const ErrorHeatmap = React.lazy(() => import('./components/ErrorHeatmap').then(m => ({ default: m.ErrorHeatmap })));
 
+import { getCachedData, setCachedData } from './utils/cache';
+
 // Dynamic import of all subject JSON files (recursive) - lazy split chunks!
 const subjectModules = import.meta.glob('./data/**/*.json');
 
@@ -205,15 +207,30 @@ export default function App() {
   const [dataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+    getCachedData<{ rawMockData: SubjectData; rawBankData: SubjectData }>()
+      .then(cached => {
+        if (cached && isMounted && Object.keys(cached.rawBankData || {}).length > 0) {
+          setRawData(cached);
+          setDataLoading(false);
+        }
+      })
+      .catch(() => {});
+
     loadSubjectData()
       .then(data => {
-        setRawData(data);
-        setDataLoading(false);
+        if (isMounted) {
+          setRawData(data);
+          setDataLoading(false);
+          setCachedData(data).catch(() => {});
+        }
       })
       .catch(err => {
         console.error('Error loading subject data:', err);
-        setDataLoading(false);
+        if (isMounted) setDataLoading(false);
       });
+
+    return () => { isMounted = false; };
   }, []);
 
   const mockData = React.useMemo(() => processData(rawData.rawMockData, deletedQuestionIds), [rawData.rawMockData, deletedQuestionIds]);

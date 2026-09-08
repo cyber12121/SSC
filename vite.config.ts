@@ -20,19 +20,30 @@ export default defineConfig(({mode}) => {
       rollupOptions: {
         output: {
           manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('firebase')) {
+            const normalizedId = id.replace(/\\/g, '/');
+            if (normalizedId.includes('node_modules')) {
+              if (normalizedId.includes('firebase')) {
                 return 'vendor-firebase';
               }
-              if (id.includes('lucide-react')) {
+              if (normalizedId.includes('lucide-react')) {
                 return 'vendor-lucide';
               }
-              if (id.includes('motion')) {
+              if (normalizedId.includes('motion')) {
                 return 'vendor-motion';
               }
-              if (id.includes('react') || id.includes('react-dom')) {
+              if (normalizedId.includes('react') || normalizedId.includes('react-dom')) {
                 return 'vendor-react';
               }
+            }
+            if (normalizedId.includes('/src/data/')) {
+              if (normalizedId.includes('/mathematics/')) return 'data-mathematics';
+              if (normalizedId.includes('/general_awareness/')) return 'data-general-awareness';
+              if (normalizedId.includes('/gk_full_tests/')) return 'data-gk-full-tests';
+              if (normalizedId.includes('/english/')) return 'data-english';
+              if (normalizedId.includes('/reasoning/')) return 'data-reasoning';
+              if (normalizedId.includes('/drills/')) return 'data-drills';
+              if (normalizedId.includes('/mock_errors/')) return 'data-mock-errors';
+              return 'data-other';
             }
           },
         },
