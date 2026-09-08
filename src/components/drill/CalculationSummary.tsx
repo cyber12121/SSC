@@ -22,8 +22,9 @@ export const CalculationSummary: React.FC<Props> = ({
   onPracticeSection,
   onExit,
 }) => {
-  const totalAttempted = Object.values(statsBySection).reduce((acc, curr) => acc + curr.total, 0);
-  const totalCorrect = Object.values(statsBySection).reduce((acc, curr) => acc + curr.correct, 0);
+  const statsList = Object.values(statsBySection) as SectionStats[];
+  const totalAttempted = statsList.reduce((acc, curr) => acc + curr.total, 0);
+  const totalCorrect = statsList.reduce((acc, curr) => acc + curr.correct, 0);
   const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
   const avgTimePerQ = totalAttempted > 0 ? (totalSeconds / totalAttempted).toFixed(1) : '0.0';
 

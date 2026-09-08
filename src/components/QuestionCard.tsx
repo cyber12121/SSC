@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, Bookmark, BookmarkCheck, Trash2, AlertTriangle, Clock } from 'lucide-react';
+import { Check, X, Bookmark, BookmarkCheck, Trash2, AlertTriangle, Clock, Zap } from 'lucide-react';
 import { Question } from '../types';
 
 const formatBilingualText = (text: string) => {
@@ -46,11 +46,17 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   return (
     <div className="bg-white h-full flex flex-col px-8 py-6">
       {/* Question Header */}
-      <div className="flex items-center justify-between border-b border-gray-200 pb-3 mb-6">
-        <div className="flex items-center space-x-4">
-          <span className="text-lg font-bold text-gray-800">
-            Question No. {question.q_num}
+      <div className="flex items-center justify-between border-b border-gray-200 pb-3 mb-5">
+        <div className="flex items-center flex-wrap gap-2.5">
+          <span className="text-[17px] font-bold text-gray-900">
+            Question No.{question.q_num}
           </span>
+          <div className="flex items-center space-x-1 text-xs text-gray-700">
+            <span className="font-semibold text-gray-500">Marks</span>
+            <span className="bg-[#616161] text-white text-xs font-bold px-2 py-0.5 rounded-full">
+              +2, -0.5
+            </span>
+          </div>
           {question.tags?.difficulty && (
             <span className={`px-2 py-0.5 text-xs font-semibold uppercase rounded ${
               question.tags.difficulty === 'easy' ? 'bg-green-100 text-green-700' :
@@ -61,13 +67,13 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             </span>
           )}
           {timeSpentSeconds !== undefined && (
-            <span className="flex items-center text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
-              <Clock className="w-3.5 h-3.5 mr-1 text-slate-400" />
-              Time Taken: {Math.floor(timeSpentSeconds / 60)}m {timeSpentSeconds % 60}s
+            <span className="flex items-center text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-0.5 rounded-md">
+              <Clock className="w-3.5 h-3.5 mr-1 text-gray-500" />
+              You: {Math.floor(timeSpentSeconds / 60).toString().padStart(2, '0')}:{(timeSpentSeconds % 60).toString().padStart(2, '0')}
             </span>
           )}
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 text-xs font-medium text-gray-600">
           {isAdmin && onDelete && (
             <button
               onClick={(e) => {
@@ -76,7 +82,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   onDelete();
                 }
               }}
-              className="flex items-center text-red-500 hover:text-red-700 text-sm font-medium transition-colors"
+              className="flex items-center text-red-500 hover:text-red-700 transition-colors"
               title="Delete Question"
             >
               <Trash2 className="w-4 h-4 mr-1" />
@@ -89,25 +95,33 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 e.stopPropagation();
                 onBookmark();
               }}
-              className={`flex items-center text-sm font-medium transition-colors ${
+              className={`flex items-center space-x-1 hover:text-[#0097a7] transition-colors ${
                 isBookmarked 
-                  ? 'text-blue-600' 
-                  : 'text-gray-500 hover:text-gray-700'
+                  ? 'text-[#0288d1] font-bold' 
+                  : 'text-gray-600'
               }`}
             >
               {isBookmarked ? (
                 <>
-                  <BookmarkCheck className="w-4 h-4 mr-1 fill-current" />
-                  Saved
+                  <BookmarkCheck className="w-4 h-4 fill-current" />
+                  <span>Saved</span>
                 </>
               ) : (
                 <>
-                  <Bookmark className="w-4 h-4 mr-1" />
-                  Save
+                  <Bookmark className="w-4 h-4" />
+                  <span>Save</span>
                 </>
               )}
             </button>
           )}
+          <button
+            onClick={() => alert("Thank you. This question has been reported for review.")}
+            className="flex items-center space-x-1 hover:text-red-600 transition-colors"
+            title="Report Question"
+          >
+            <AlertTriangle className="w-4 h-4" />
+            <span>Report</span>
+          </button>
         </div>
       </div>
 
@@ -134,46 +148,88 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         )}
 
         {/* Options */}
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3.5 mb-6">
           {(Object.entries(question.options) as [('a' | 'b' | 'c' | 'd'), string][]).map(([key, value]) => {
             const isSelected = selectedAnswer === key;
             const isCorrect = question.answer === key;
             const showCorrect = showSolution && isCorrect;
             const showWrong = showSolution && isSelected && !isCorrect;
 
+            if (showSolution) {
+              if (showCorrect) {
+                return (
+                  <div
+                    key={key}
+                    className="bg-[#2e7d32] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm transition-all"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <Check className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
+                      <span className="text-[15px] font-medium leading-normal">
+                        {formatBilingualText(value)}
+                      </span>
+                    </div>
+                    <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0 ml-3">
+                      40% answered correctly
+                    </span>
+                  </div>
+                );
+              }
+
+              if (showWrong) {
+                return (
+                  <div
+                    key={key}
+                    className="bg-[#c62828] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm transition-all"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <X className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
+                      <span className="text-[15px] font-medium leading-normal">
+                        {formatBilingualText(value)}
+                      </span>
+                    </div>
+                    <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0 ml-3">
+                      Your Answer
+                    </span>
+                  </div>
+                );
+              }
+
+              return (
+                <div
+                  key={key}
+                  className="px-4 py-3 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
+                >
+                  <span className="w-5 mr-3 shrink-0" />
+                  <span className="leading-normal">{formatBilingualText(value)}</span>
+                </div>
+              );
+            }
+
             return (
               <label
                 key={key}
-                className={`flex items-start p-3 border rounded transition-all duration-150 ${
-                  showSolution ? 'cursor-default' : 'cursor-pointer hover:bg-blue-50'
-                } ${
-                  isSelected && !showSolution ? 'bg-blue-50 border-blue-300' : 'border-transparent'
-                } ${showCorrect ? 'bg-green-50 border-green-300' : ''} ${
-                  showWrong ? 'bg-red-50 border-red-300' : ''
+                className={`flex items-start p-3.5 border rounded-lg transition-all duration-150 cursor-pointer ${
+                  isSelected
+                    ? 'border-[#0097a7] bg-cyan-50/40 text-gray-900 shadow-xs'
+                    : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50/80 text-gray-800'
                 }`}
               >
-                <div className="relative flex items-center justify-center mt-0.5 mr-4">
+                <div className="relative flex items-center justify-center mt-0.5 mr-3.5 shrink-0">
                   <input
                     type="radio"
                     name={`question-${question.q_num}`}
                     value={key}
                     checked={isSelected}
-                    onChange={() => !showSolution && onAnswer(key)}
-                    disabled={showSolution}
-                    className="sr-only" // Hide default radio
+                    onChange={() => onAnswer(key)}
+                    className="sr-only"
                   />
-                  {/* Custom Radio Button */}
-                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                    isSelected ? 'border-blue-600' : 'border-gray-400'
-                  } ${showCorrect ? 'border-green-600 bg-green-600 text-white' : ''} ${
-                    showWrong ? 'border-red-600 bg-red-600 text-white' : ''
+                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+                    isSelected ? 'border-[#0097a7]' : 'border-gray-400'
                   }`}>
-                    {isSelected && !showSolution && <div className="w-2.5 h-2.5 rounded-full bg-blue-600"></div>}
-                    {showCorrect && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
-                    {showWrong && <X className="w-3.5 h-3.5" strokeWidth={3} />}
+                    {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#0097a7]" />}
                   </div>
                 </div>
-                <div className={`flex-1 text-[15px] whitespace-pre-line ${showCorrect ? 'text-green-800 font-semibold' : ''} ${showWrong ? 'text-red-800 font-semibold' : 'text-gray-800'}`}>
+                <div className="flex-1 text-[15px] font-medium leading-normal whitespace-pre-line">
                   {formatBilingualText(value)}
                 </div>
               </label>
@@ -181,15 +237,30 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           })}
         </div>
 
+        {/* Subtext notice matching screenshot */}
+        {showSolution && (
+          <p className="text-xs text-gray-500 italic mt-1 mb-6">
+            Reattempt mode is Off. Turn it on from bottom bar
+          </p>
+        )}
+
         {/* Solution Block */}
         {showSolution && question.solution && (
-          <div className="mt-8 p-5 bg-green-50 rounded border border-green-200">
-            <h3 className="text-green-800 font-bold mb-3 flex items-center text-sm uppercase tracking-wide">
-              <Check className="w-4 h-4 mr-2" />
-              Solution
-            </h3>
-            <div className="text-green-900 leading-relaxed text-[15px] whitespace-pre-line">
-              {formatSolution(question.solution)}
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <div className="mb-3">
+              <span className="border-b-2 border-[#0097a7] text-[#0097a7] font-bold text-sm inline-block pb-1">
+                Solution
+              </span>
+            </div>
+
+            <div className="bg-white rounded-lg">
+              <div className="flex items-center space-x-1.5 text-amber-500 mb-2">
+                <Zap className="w-4 h-4 fill-amber-400 text-amber-500" />
+                <span className="text-sm font-bold text-gray-900">Shortcut Trick</span>
+              </div>
+              <div className="text-[14px] text-gray-800 leading-relaxed font-mono bg-gray-50 p-4 rounded-md border border-gray-100 whitespace-pre-line">
+                {formatSolution(question.solution)}
+              </div>
             </div>
           </div>
         )}

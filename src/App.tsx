@@ -1364,6 +1364,10 @@ export default function App() {
               result={reviewResult}
               onReattempt={() => reattemptFromResult(reviewResult)}
               onBack={() => setView(reviewBackTo)}
+              userName={user?.displayName || 'Vinay'}
+              bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === reviewResult.chapter_title).map(b => b.question.q_num))}
+              onBookmarkToggle={toggleBookmark}
+              onViewAnalytics={() => setView('dashboard')}
             />
           )}
 
