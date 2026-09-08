@@ -1,7 +1,21 @@
 [
   {
     "chapter_num": 1,
-    "chapter_title": "Mock Errors",
+    "chapter_title": "Speed Issue",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": []
+  },
+  {
+    "chapter_num": 2,
+    "chapter_title": "Unattempted",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": []
+  },
+  {
+    "chapter_num": 3,
+    "chapter_title": "Wrong",
     "subject": "Reasoning",
     "subject_id": "reasoning",
     "questions": []

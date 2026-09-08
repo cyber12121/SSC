@@ -108,6 +108,7 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 };
 
 const getQuestionId = (chapter: Chapter, question: Question) => {
+  if (question.id) return question.id;
   return `${chapter.subject}|${chapter.chapter_title}|${question.question}`.replace(/\s+/g, '_');
 };
 
@@ -464,6 +465,27 @@ export default function App() {
       subject: subjectName,
       subject_id: subjectName.toLowerCase().replace(/\s+/g, '_'),
       questions: allQuestions
+    };
+    startQuiz(virtualChapter);
+  };
+
+  const startMockTopicQuiz = (chapter: Chapter, topicName: string) => {
+    const filteredQuestions = chapter.questions
+      .filter(q => (q.tags?.topic || (q as any).topic || 'General') === topicName)
+      .map((q, idx) => ({
+        ...q,
+        q_num: idx + 1
+      }));
+    if (filteredQuestions.length === 0) {
+      alert(`No questions available in topic "${topicName}" yet.`);
+      return;
+    }
+    const virtualChapter: Chapter = {
+      chapter_num: chapter.chapter_num,
+      chapter_title: `${chapter.chapter_title} • ${topicName}`,
+      subject: chapter.subject,
+      subject_id: chapter.subject_id,
+      questions: filteredQuestions
     };
     startQuiz(virtualChapter);
   };
@@ -906,100 +928,243 @@ export default function App() {
                       </div>
                     )}
 
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                      {(() => {
-                        const relevantChapters = currentData[selectedSubject].filter(chapter =>
-                          !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
-                        );
-                        const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
-                        const isGK = selectedSubject === 'General Awareness' && category === 'chapterBank';
+                    {category === 'mockErrors' ? (
+                      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+                        {currentData[selectedSubject].map((chapter, idx) => {
+                          const isSpeed = chapter.chapter_title.toLowerCase().includes('speed');
+                          const isUnattempted = chapter.chapter_title.toLowerCase().includes('unattempted') || chapter.chapter_title.toLowerCase().includes('skipped');
+                          const isWrong = chapter.chapter_title.toLowerCase().includes('wrong') || chapter.chapter_title.toLowerCase().includes('error');
 
-                        if ((isMathSection || isGK) && !selectedTopic) {
-                          const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
-                          topics.sort((a, b) => a.localeCompare(b));
+                          // Compute topic-wise breakdown
+                          const topicMap: Record<string, number> = {};
+                          chapter.questions.forEach(q => {
+                            const t = q.tags?.topic || (q as any).topic || 'General';
+                            topicMap[t] = (topicMap[t] || 0) + 1;
+                          });
 
-                          return topics.map((topic, idx) => {
-                            const topicChapters = relevantChapters.filter(ch => ch.topic_name === topic);
+                          const sortedTopics = Object.entries(topicMap).sort((a, b) => b[1] - a[1]);
 
-                            let displayTitle = topic.replace(/_/g, ' ');
-                            if (topic === 'history_ancient') displayTitle = 'Ancient History';
-                            else if (topic === 'history_medieval') displayTitle = 'Medieval History';
-                            else if (topic === 'history_modern') displayTitle = 'Modern History';
-                            else if (topic === 'static_gk') displayTitle = 'Static GK';
+                          // Theme config per bucket
+                          const theme = isSpeed
+                            ? {
+                                border: 'border-amber-200 hover:border-amber-300',
+                                bgHeader: 'from-amber-500/10 via-amber-50/30 to-transparent',
+                                iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-amber-200',
+                                badge: 'bg-amber-100 text-amber-800 border border-amber-200',
+                                topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300 hover:shadow-sm',
+                                topicCount: 'bg-amber-200/70 text-amber-900',
+                                btn: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-amber-200',
+                                subText: 'Overtime & Speed Lags',
+                                icon: Zap
+                              }
+                            : isUnattempted
+                            ? {
+                                border: 'border-blue-200 hover:border-blue-300',
+                                bgHeader: 'from-blue-500/10 via-blue-50/30 to-transparent',
+                                iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-blue-200',
+                                badge: 'bg-blue-100 text-blue-800 border border-blue-200',
+                                topicPill: 'bg-blue-50/80 hover:bg-blue-100 text-blue-950 border-blue-200/80 hover:border-blue-300 hover:shadow-sm',
+                                topicCount: 'bg-blue-200/70 text-blue-900',
+                                btn: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-blue-200',
+                                subText: 'Skipped & Left Out',
+                                icon: AlertCircle
+                              }
+                            : {
+                                border: 'border-rose-200 hover:border-rose-300',
+                                bgHeader: 'from-rose-500/10 via-rose-50/30 to-transparent',
+                                iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-rose-200',
+                                badge: 'bg-rose-100 text-rose-800 border border-rose-200',
+                                topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300 hover:shadow-sm',
+                                topicCount: 'bg-rose-200/70 text-rose-900',
+                                btn: 'bg-gradient-to-r from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 text-white shadow-rose-200',
+                                subText: 'Incorrect Answers',
+                                icon: Flame
+                              };
 
-                            return (
-                              <motion.div
-                                key={idx}
-                                whileHover={{ y: -4 }}
-                                onClick={() => setSelectedTopic(topic)}
-                                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
-                              >
+                          const IconComp = theme.icon;
+
+                          return (
+                            <motion.div
+                              key={idx}
+                              initial={{ opacity: 0, y: 15 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: idx * 0.08 }}
+                              className={`flex flex-col rounded-3xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl ${theme.border}`}
+                            >
+                              {/* Bucket Header */}
+                              <div className={`rounded-t-3xl bg-gradient-to-b p-6 pb-4 ${theme.bgHeader}`}>
                                 <div className="flex items-center justify-between">
-                                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
-                                    <Layers className="w-5 h-5" />
+                                  <div className={`flex h-12 w-12 items-center justify-center rounded-2xl shadow-md ${theme.iconBg}`}>
+                                    <IconComp className="w-6 h-6" />
                                   </div>
-                                  <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
-                                    {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
+                                  <span className={`rounded-full px-3 py-1 text-xs font-bold ${theme.badge}`}>
+                                    {chapter.questions.length} {chapter.questions.length === 1 ? 'Question' : 'Questions'}
                                   </span>
                                 </div>
-                                <h3 className="mt-4 text-base font-bold capitalize text-slate-800">{displayTitle}</h3>
-                                <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
-                                  {isMathSection ? 'View Sets' : 'View Chapters'}
+                                <h3 className="mt-4 text-xl font-black text-slate-900">{chapter.chapter_title}</h3>
+                                <p className="mt-0.5 text-xs font-medium text-slate-500">{theme.subText}</p>
+                              </div>
+
+                              {/* Topic Sub-Buckets Breakdown */}
+                              <div className="flex-1 p-6 pt-3">
+                                <div className="mb-3 flex items-center justify-between">
+                                  <span className="text-[11px] font-bold tracking-wider uppercase text-slate-400">
+                                    Topic Breakdown ({sortedTopics.length})
+                                  </span>
+                                  <span className="text-[11px] font-medium text-slate-400">Click topic to drill</span>
+                                </div>
+
+                                {sortedTopics.length === 0 ? (
+                                  <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 py-10 text-center">
+                                    <p className="text-xs font-semibold text-slate-400">No questions in this bucket yet</p>
+                                    <p className="mt-1 text-[11px] text-slate-400">Captured mock errors will appear here</p>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-col gap-2 max-h-[320px] overflow-y-auto pr-1">
+                                    {sortedTopics.map(([topicName, count]) => (
+                                      <button
+                                        key={topicName}
+                                        onClick={() => startMockTopicQuiz(chapter, topicName)}
+                                        className={`group flex items-center justify-between rounded-xl border p-2.5 px-3 text-left text-xs font-semibold transition-all duration-150 ${theme.topicPill}`}
+                                      >
+                                        <div className="flex items-center gap-2 truncate">
+                                          <span className="truncate">{topicName}</span>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                                          <span className={`rounded-md px-2 py-0.5 text-[11px] font-black ${theme.topicCount}`}>
+                                            {count}
+                                          </span>
+                                          <ChevronRight className="w-3.5 h-3.5 opacity-40 transition-transform group-hover:translate-x-0.5 group-hover:opacity-100" />
+                                        </div>
+                                      </button>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* Bucket Practice All Action */}
+                              <div className="border-t border-slate-100 p-4 bg-slate-50/50 rounded-b-3xl flex items-center gap-2">
+                                <button
+                                  onClick={() => startQuiz(chapter)}
+                                  disabled={chapter.questions.length === 0}
+                                  className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition-all shadow-sm disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
+                                >
+                                  <Play className="w-3.5 h-3.5 fill-current" />
+                                  Practice All {chapter.chapter_title} ({chapter.questions.length})
+                                </button>
+                                {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                  <button
+                                    onClick={() => {
+                                      const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
+                                      if (r) openReview(r, 'home');
+                                    }}
+                                    className="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors shadow-sm"
+                                    title="Review last attempt"
+                                  >
+                                    <History className="w-4 h-4" />
+                                  </button>
+                                )}
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                        {(() => {
+                          const relevantChapters = currentData[selectedSubject].filter(chapter =>
+                            !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
+                          );
+                          const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
+                          const isGK = selectedSubject === 'General Awareness' && category === 'chapterBank';
+
+                          if ((isMathSection || isGK) && !selectedTopic) {
+                            const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
+                            topics.sort((a, b) => a.localeCompare(b));
+
+                            return topics.map((topic, idx) => {
+                              const topicChapters = relevantChapters.filter(ch => ch.topic_name === topic);
+
+                              let displayTitle = topic.replace(/_/g, ' ');
+                              if (topic === 'history_ancient') displayTitle = 'Ancient History';
+                              else if (topic === 'history_medieval') displayTitle = 'Medieval History';
+                              else if (topic === 'history_modern') displayTitle = 'Modern History';
+                              else if (topic === 'static_gk') displayTitle = 'Static GK';
+
+                              return (
+                                <motion.div
+                                  key={idx}
+                                  whileHover={{ y: -4 }}
+                                  onClick={() => setSelectedTopic(topic)}
+                                  className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
+                                >
+                                  <div className="flex items-center justify-between">
+                                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
+                                      <Layers className="w-5 h-5" />
+                                    </div>
+                                    <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                                      {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
+                                    </span>
+                                  </div>
+                                  <h3 className="mt-4 text-base font-bold capitalize text-slate-800">{displayTitle}</h3>
+                                  <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
+                                    {isMathSection ? 'View Sets' : 'View Chapters'}
+                                    <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                  </div>
+                                </motion.div>
+                              );
+                            });
+                          }
+
+                          let chaptersToRender = (isMathSection || isGK) && selectedTopic
+                            ? relevantChapters.filter(ch => ch.topic_name === selectedTopic)
+                            : relevantChapters;
+
+                          if (selectedSubject === 'General Awareness') {
+                            chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
+                          }
+
+                          return chaptersToRender.map((chapter, idx) => (
+                            <motion.div
+                              key={idx}
+                              whileHover={{ y: -4 }}
+                              onClick={() => startQuiz(chapter)}
+                              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
+                            >
+                              <div className="flex items-center justify-between">
+                                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
+                                  <BookOpen className="w-5 h-5" />
+                                </div>
+                                <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                                  {chapter.set_name ? `Set ${chapter.set_name.replace('set_', '')}` : `Ch ${chapter.chapter_num}`}
+                                </span>
+                              </div>
+                              <h3 className="mt-4 text-base font-bold text-slate-800">{chapter.chapter_title}</h3>
+                              <p className="mt-1 text-sm text-slate-500">{chapter.questions.length} Questions</p>
+                              <div className="mt-3 flex items-center justify-between">
+                                <div className="flex items-center text-sm font-semibold text-indigo-600">
+                                  Start Practice
                                   <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                 </div>
-                              </motion.div>
-                            );
-                          });
-                        }
-
-                        let chaptersToRender = (isMathSection || isGK) && selectedTopic
-                          ? relevantChapters.filter(ch => ch.topic_name === selectedTopic)
-                          : relevantChapters;
-
-                        if (selectedSubject === 'General Awareness') {
-                          chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
-                        }
-
-                        return chaptersToRender.map((chapter, idx) => (
-                          <motion.div
-                            key={idx}
-                            whileHover={{ y: -4 }}
-                            onClick={() => startQuiz(chapter)}
-                            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
-                                <BookOpen className="w-5 h-5" />
+                                {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
+                                      if (r) openReview(r, 'home');
+                                    }}
+                                    className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
+                                    title="Review last attempt"
+                                  >
+                                    <History className="w-4 h-4" />
+                                  </button>
+                                )}
                               </div>
-                              <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
-                                {chapter.set_name ? `Set ${chapter.set_name.replace('set_', '')}` : `Ch ${chapter.chapter_num}`}
-                              </span>
-                            </div>
-                            <h3 className="mt-4 text-base font-bold text-slate-800">{chapter.chapter_title}</h3>
-                            <p className="mt-1 text-sm text-slate-500">{chapter.questions.length} Questions</p>
-                            <div className="mt-3 flex items-center justify-between">
-                              <div className="flex items-center text-sm font-semibold text-indigo-600">
-                                Start Practice
-                                <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                              </div>
-                              {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
-                                <button
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
-                                    if (r) openReview(r, 'home');
-                                  }}
-                                  className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
-                                  title="Review last attempt"
-                                >
-                                  <History className="w-4 h-4" />
-                                </button>
-                              )}
-                            </div>
-                          </motion.div>
-                        ));
-                      })()}
-                    </div>
+                            </motion.div>
+                          ));
+                        })()}
+                      </div>
+                    )}
                   </div>
                 )}
               </motion.div>

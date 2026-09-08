@@ -1,7 +1,14 @@
 [
   {
     "chapter_num": 1,
-    "chapter_title": "Mock Errors",
+    "chapter_title": "Unattempted",
+    "subject": "General Awareness",
+    "subject_id": "general_awareness",
+    "questions": []
+  },
+  {
+    "chapter_num": 2,
+    "chapter_title": "Wrong",
     "subject": "General Awareness",
     "subject_id": "general_awareness",
     "questions": []
