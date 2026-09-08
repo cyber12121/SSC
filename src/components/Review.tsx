@@ -368,7 +368,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         return (
                           <div 
                             key={key}
-                            className="bg-[#2e7d32] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm transition-all"
+                            className="bg-[#2e7d32] text-white rounded px-4 py-3.5 flex items-center justify-between shadow-sm transition-all"
                           >
                             <div className="flex items-center space-x-3">
                               <Check className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
@@ -376,9 +376,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                                 {renderText(optText)}
                               </span>
                             </div>
-                            <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0 ml-3">
-                              {accuracyPercent}% answered correctly
-                            </span>
+                            <div className="flex items-center space-x-2 shrink-0 ml-3">
+                              {userSelected && (
+                                <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm whitespace-nowrap">
+                                  Your first attempt
+                                </span>
+                              )}
+                              <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm whitespace-nowrap">
+                                {accuracyPercent}% answered correctly
+                              </span>
+                            </div>
                           </div>
                         );
                       }
@@ -387,15 +394,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         return (
                           <div 
                             key={key}
-                            className="bg-[#c62828] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm transition-all"
+                            className="bg-[#c62828] text-white rounded px-4 py-3.5 flex items-center justify-between shadow-sm transition-all"
                           >
                             <div className="flex items-center space-x-3">
-                              <X className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
+                              <RotateCcw className="w-4 h-4 text-white shrink-0" />
                               <span className="text-[15px] font-medium leading-normal">
                                 {renderText(optText)}
                               </span>
                             </div>
-                            <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0 ml-3">
+                            <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm shrink-0 ml-3">
                               Your Answer
                             </span>
                           </div>
@@ -405,7 +412,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       return (
                         <div 
                           key={key}
-                          className="px-4 py-3 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
+                          className="px-4 py-3.5 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
                         >
                           <span className="w-5 mr-3 shrink-0" />
                           <span className="leading-normal">{renderText(optText)}</span>
@@ -631,28 +638,28 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </div>
             </div>
 
-            {/* Legend / Status Grid (2x2) */}
-            <div className="p-3 border-b border-blue-200/80 bg-white/40 grid grid-cols-2 gap-y-2 gap-x-3 text-xs shrink-0">
-              <div className="flex items-center">
-                <span className="w-5 h-5 rounded bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] mr-2 shadow-sm">
+            {/* Legend / Status Row */}
+            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-3 text-xs shrink-0 flex-wrap gap-y-2">
+              <div className="flex items-center space-x-1.5">
+                <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                   {correctCount}
                 </span>
                 <span className="text-gray-700 font-medium">Correct</span>
               </div>
-              <div className="flex items-center">
-                <span className="w-5 h-5 rounded bg-white border border-gray-700 text-gray-900 flex items-center justify-center font-bold text-[11px] mr-2 shadow-sm">
+              <div className="flex items-center space-x-1.5">
+                <span className="w-6 h-6 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[11px] shadow-sm">
                   {unattemptedCount}
                 </span>
                 <span className="text-gray-700 font-medium">Unattempted</span>
               </div>
-              <div className="flex items-center">
-                <span className="w-5 h-5 rounded bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px] mr-2 shadow-sm">
+              <div className="flex items-center space-x-1.5">
+                <span className="w-6 h-6 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                   {wrongCount}
                 </span>
                 <span className="text-gray-700 font-medium">Incorrect</span>
               </div>
-              <div className="flex items-center">
-                <span className="w-5 h-5 rounded bg-[#fbc02d] text-white flex items-center justify-center font-bold text-[11px] mr-2 shadow-sm">
+              <div className="flex items-center space-x-1.5">
+                <span className="w-6 h-6 rounded-full bg-[#fbc02d] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                   {partiallyCorrectCount}
                 </span>
                 <span className="text-gray-700 font-medium">Partially Correct</span>
@@ -696,18 +703,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
 
             {/* SECTION Title Bar */}
-            <div className="px-4 py-2 text-xs font-bold text-gray-800 bg-[#b2ebf2]/60 shrink-0">
-              SECTION : {result.subject || 'Test'}
+            <div className="px-4 py-2 text-xs font-bold text-gray-700 bg-[#b2ebf2]/60 shrink-0 tracking-wide">
+              SECTION : <span className="text-gray-900">{result.subject || 'Test'}</span>
             </div>
 
             {/* Question Palette Grid */}
-            <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
-              <div className="grid grid-cols-5 gap-2.5">
+            <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
+              <div className="grid grid-cols-5 gap-2">
                 {filteredIndices.map(idx => {
                   const status = getQuestionStatus(idx);
                   const isCurrent = currentIdx === idx;
                   
-                  let badgeStyle = "bg-white border border-gray-700 text-gray-900";
+                  let badgeStyle = "bg-white border-2 border-gray-400 text-gray-800";
                   if (status === 'correct') {
                     badgeStyle = "bg-[#2e7d32] text-white border-transparent";
                   } else if (status === 'wrong') {
@@ -718,8 +725,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     <button
                       key={idx}
                       onClick={() => setCurrentIdx(idx)}
-                      className={`h-9 rounded-xl flex items-center justify-center text-xs font-bold transition-all shadow-xs ${badgeStyle} ${
-                        isCurrent ? 'ring-2 ring-sky-500 ring-offset-2 scale-105 z-10' : 'hover:opacity-90'
+                      className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm ${badgeStyle} ${
+                        isCurrent ? 'ring-2 ring-[#0097a7] ring-offset-1 scale-110 z-10 shadow-md' : 'hover:opacity-80 hover:scale-105'
                       }`}
                     >
                       {idx + 1}

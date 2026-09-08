@@ -558,38 +558,38 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
 
             {/* Legend Box */}
-            <div className="p-3 border-b border-blue-200/80 bg-white/40 grid grid-cols-2 gap-y-2 gap-x-2 text-xs shrink-0 font-medium text-gray-700">
+            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-3 text-xs shrink-0 flex-wrap gap-y-2 font-medium text-gray-700">
               {mode === 'mock' && !isReviewMode ? (
-                <div className="flex items-center">
-                  <span className="w-5 h-5 rounded bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] mr-1.5 shadow-xs">
+                <div className="flex items-center space-x-1.5">
+                  <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                     {stats.answered}
                   </span>
                   <span>Answered</span>
                 </div>
               ) : (
                 <>
-                  <div className="flex items-center">
-                    <span className="w-5 h-5 rounded bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] mr-1.5 shadow-xs">
+                  <div className="flex items-center space-x-1.5">
+                    <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                       {stats.correct}
                     </span>
                     <span>Correct</span>
                   </div>
-                  <div className="flex items-center">
-                    <span className="w-5 h-5 rounded bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px] mr-1.5 shadow-xs">
+                  <div className="flex items-center space-x-1.5">
+                    <span className="w-6 h-6 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                       {stats.wrong}
                     </span>
                     <span>Wrong</span>
                   </div>
                 </>
               )}
-              <div className="flex items-center">
-                <span className="w-5 h-5 rounded bg-white border border-gray-700 text-gray-900 flex items-center justify-center font-bold text-[11px] mr-1.5 shadow-xs">
+              <div className="flex items-center space-x-1.5">
+                <span className="w-6 h-6 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[11px] shadow-sm">
                   {stats.notAttempted}
                 </span>
                 <span>Not Attempted</span>
               </div>
-              <div className="flex items-center">
-                <span className="w-5 h-5 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-[11px] mr-1.5 shadow-xs">
+              <div className="flex items-center space-x-1.5">
+                <span className="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
                   {stats.marked}
                 </span>
                 <span>Marked</span>
@@ -597,21 +597,21 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
 
             {/* SECTION Title Bar */}
-            <div className="px-4 py-2 text-xs font-bold text-gray-800 bg-[#b2ebf2]/60 shrink-0">
-              SECTION : {chapter.subject || 'Test'}
+            <div className="px-4 py-2 text-xs font-bold text-gray-700 bg-[#b2ebf2]/60 shrink-0 tracking-wide">
+              SECTION : <span className="text-gray-900">{chapter.subject || 'Test'}</span>
             </div>
 
             {/* Palette Grid */}
-            <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
+            <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
               <div className="text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-2.5">
                 Choose a Question
               </div>
-              <div className="grid grid-cols-5 gap-2.5">
+              <div className="grid grid-cols-5 gap-2">
                 {chapter.questions.map((q, idx) => {
                   const status = getStatus(idx);
                   const isActive = currentIdx === idx;
                   
-                  let badgeStyle = "bg-white border border-gray-700 text-gray-900";
+                  let badgeStyle = "bg-white border-2 border-gray-400 text-gray-800";
                   if (status === 'correct') {
                     badgeStyle = "bg-[#2e7d32] text-white border-transparent";
                   } else if (status === 'wrong') {
@@ -619,20 +619,20 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   } else if (status === 'answered') {
                     badgeStyle = "bg-[#2e7d32] text-white border-transparent";
                   } else if (status === 'marked' || status === 'answered-marked') {
-                    badgeStyle = "bg-purple-600 text-white border-transparent rounded-full";
+                    badgeStyle = "bg-purple-600 text-white border-transparent";
                   }
 
                   return (
                     <button
                       key={idx}
                       onClick={() => jumpToQuestion(idx)}
-                      className={`h-9 rounded-xl flex items-center justify-center text-xs font-bold transition-all shadow-xs relative ${badgeStyle} ${
-                        isActive ? 'ring-2 ring-sky-500 ring-offset-2 scale-105 z-10' : 'hover:opacity-90'
+                      className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm relative ${badgeStyle} ${
+                        isActive ? 'ring-2 ring-[#0097a7] ring-offset-1 scale-110 z-10 shadow-md' : 'hover:opacity-80 hover:scale-105'
                       }`}
                     >
                       {idx + 1}
                       {status === 'answered-marked' && (
-                        <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border border-white" />
+                        <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border border-white" />
                       )}
                     </button>
                   );

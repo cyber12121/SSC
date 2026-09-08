@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, Bookmark, BookmarkCheck, Trash2, AlertTriangle, Clock, Zap } from 'lucide-react';
+import { Check, RotateCcw, Bookmark, BookmarkCheck, Trash2, AlertTriangle, Clock, Zap } from 'lucide-react';
 import { Question } from '../types';
 
 const formatBilingualText = (text: string) => {
@@ -160,7 +160,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 return (
                   <div
                     key={key}
-                    className="bg-[#2e7d32] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm transition-all"
+                    className="bg-[#2e7d32] text-white rounded px-4 py-3.5 flex items-center justify-between shadow-sm transition-all"
                   >
                     <div className="flex items-center space-x-3">
                       <Check className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
@@ -168,9 +168,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                         {formatBilingualText(value)}
                       </span>
                     </div>
-                    <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0 ml-3">
-                      40% answered correctly
-                    </span>
+                    <div className="flex items-center space-x-2 shrink-0 ml-3">
+                      {isSelected && (
+                        <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm whitespace-nowrap">
+                          Your first attempt
+                        </span>
+                      )}
+                      <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm whitespace-nowrap">
+                        40% answered correctly
+                      </span>
+                    </div>
                   </div>
                 );
               }
@@ -179,15 +186,15 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 return (
                   <div
                     key={key}
-                    className="bg-[#c62828] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm transition-all"
+                    className="bg-[#c62828] text-white rounded px-4 py-3.5 flex items-center justify-between shadow-sm transition-all"
                   >
                     <div className="flex items-center space-x-3">
-                      <X className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
+                      <RotateCcw className="w-4 h-4 text-white shrink-0" />
                       <span className="text-[15px] font-medium leading-normal">
                         {formatBilingualText(value)}
                       </span>
                     </div>
-                    <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0 ml-3">
+                    <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm shrink-0 ml-3">
                       Your Answer
                     </span>
                   </div>
@@ -197,7 +204,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               return (
                 <div
                   key={key}
-                  className="px-4 py-3 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
+                  className="px-4 py-3.5 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
                 >
                   <span className="w-5 mr-3 shrink-0" />
                   <span className="leading-normal">{formatBilingualText(value)}</span>
