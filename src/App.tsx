@@ -2,87 +2,108 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
-import { QuizContainer } from './components/QuizContainer';
-import { ErrorHeatmap } from './components/ErrorHeatmap';
-import { ReviewView } from './components/Review';
-import { DrillHub } from './components/drill/DrillHub';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
-// Dynamic import of all subject JSON files (recursive)
-const subjectModules = import.meta.glob('./data/**/*.json', { eager: true });
 
-const rawMockData: SubjectData = {};
-const rawBankData: SubjectData = {};
+// Lazy load heavier views to minimize initial bundle footprint and speed up first paint
+const QuizContainer = React.lazy(() => import('./components/QuizContainer').then(m => ({ default: m.QuizContainer })));
+const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
+const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
+const ErrorHeatmap = React.lazy(() => import('./components/ErrorHeatmap').then(m => ({ default: m.ErrorHeatmap })));
 
-Object.entries(subjectModules).forEach(([path, module]: [string, any]) => {
-  const data = module.default;
-  // Determine if it's mockErrors or chapterBank based on the file path
-  const isMock = path.includes('/mock_errors/');
-  const isBank = path.includes('/chapter_bank/');
+// Dynamic import of all subject JSON files (recursive) - lazy split chunks!
+const subjectModules = import.meta.glob('./data/**/*.json');
 
-  if (!isMock && !isBank) return;
-  
-  // The data could be a single chapter object or an array of chapters
-  const chapters = Array.isArray(data) ? data : (data.questions ? [data] : []);
-  
-  // If the data structure is the old one (with chapterBank/mockErrors keys), handle it too
-  if (data.chapterBank) chapters.push(...data.chapterBank);
-  if (data.mockErrors) chapters.push(...data.mockErrors);
+const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankData: SubjectData }> => {
+  const rawMockData: SubjectData = {};
+  const rawBankData: SubjectData = {};
 
-  // Determine section and topic from path (only applicable to Mathematics in chapter_bank)
-  let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | undefined = undefined;
-  let topic_name: string | undefined = undefined;
-  let set_name: string | undefined = undefined;
+  const entries = Object.entries(subjectModules);
+  const loaded = await Promise.all(
+    entries.map(async ([path, loader]) => {
+      try {
+        const mod: any = await (loader as () => Promise<any>)();
+        return { path, data: mod.default || mod };
+      } catch (e) {
+        console.error('Failed to load JSON chunk:', path, e);
+        return null;
+      }
+    })
+  );
 
-  if (isBank) {
-    if (path.includes('/mathematics/spartan/')) section = 'spartan';
-    else if (path.includes('/mathematics/pinnacle/')) section = 'pinnacle';
-    else if (path.includes('/mathematics/qrb/')) section = 'qrb';
-    else if (path.includes('/mathematics/top500/')) section = 'top500';
+  loaded.forEach(item => {
+    if (!item) return;
+    const { path, data } = item;
+    // Determine if it's mockErrors or chapterBank based on the file path
+    const isMock = path.includes('/mock_errors/');
+    const isBank = path.includes('/chapter_bank/');
 
-    if (section) {
-      const parts = path.split(`/${section}/`);
-      if (parts.length > 1) {
-        const subPath = parts[1]; // e.g., "percentage/set_1.json" or "chapter_1.json"
-        const subParts = subPath.split('/');
-        if (subParts.length >= 2) {
-          topic_name = subParts[0]; // "percentage"
-          set_name = subParts[1].replace('.json', ''); // "set_1"
+    if (!isMock && !isBank) return;
+    
+    // The data could be a single chapter object or an array of chapters
+    const chapters = Array.isArray(data) ? data : (data.questions ? [data] : []);
+    
+    // If the data structure is the old one (with chapterBank/mockErrors keys), handle it too
+    if (data.chapterBank) chapters.push(...data.chapterBank);
+    if (data.mockErrors) chapters.push(...data.mockErrors);
+
+    // Determine section and topic from path (only applicable to Mathematics in chapter_bank)
+    let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | undefined = undefined;
+    let topic_name: string | undefined = undefined;
+    let set_name: string | undefined = undefined;
+
+    if (isBank) {
+      if (path.includes('/mathematics/spartan/')) section = 'spartan';
+      else if (path.includes('/mathematics/pinnacle/')) section = 'pinnacle';
+      else if (path.includes('/mathematics/qrb/')) section = 'qrb';
+      else if (path.includes('/mathematics/top500/')) section = 'top500';
+
+      if (section) {
+        const parts = path.split(`/${section}/`);
+        if (parts.length > 1) {
+          const subPath = parts[1]; // e.g., "percentage/set_1.json" or "chapter_1.json"
+          const subParts = subPath.split('/');
+          if (subParts.length >= 2) {
+            topic_name = subParts[0]; // "percentage"
+            set_name = subParts[1].replace('.json', ''); // "set_1"
+          }
+        }
+      } else if (path.includes('/general_awareness/')) {
+        const parts = path.split('/general_awareness/');
+        if (parts.length > 1) {
+          const subPath = parts[1]; // e.g., "chemistry/acid_bases_and_salts_vivid.json"
+          const subParts = subPath.split('/');
+          if (subParts.length >= 2) {
+            topic_name = subParts[0]; // "chemistry"
+          }
         }
       }
-    } else if (path.includes('/general_awareness/')) {
-      const parts = path.split('/general_awareness/');
-      if (parts.length > 1) {
-        const subPath = parts[1]; // e.g., "chemistry/acid_bases_and_salts_vivid.json"
-        const subParts = subPath.split('/');
-        if (subParts.length >= 2) {
-          topic_name = subParts[0]; // "chemistry"
-        }
-      }
     }
-  }
 
-  chapters.forEach((chapter: any) => {
-    const subject = chapter.subject;
-    if (section) {
-      chapter.section = section;
-    }
-    if (topic_name) {
-      chapter.topic_name = topic_name;
-    }
-    if (set_name) {
-      chapter.set_name = set_name;
-    }
-    if (isMock || (path.includes('mockErrors') && !isBank)) {
-      if (!rawMockData[subject]) rawMockData[subject] = [];
-      rawMockData[subject].push(chapter);
-    } else {
-      if (!rawBankData[subject]) rawBankData[subject] = [];
-      rawBankData[subject].push(chapter);
-    }
+    chapters.forEach((chapter: any) => {
+      const subject = chapter.subject;
+      if (section) {
+        chapter.section = section;
+      }
+      if (topic_name) {
+        chapter.topic_name = topic_name;
+      }
+      if (set_name) {
+        chapter.set_name = set_name;
+      }
+      if (isMock || (path.includes('mockErrors') && !isBank)) {
+        if (!rawMockData[subject]) rawMockData[subject] = [];
+        rawMockData[subject].push(chapter);
+      } else {
+        if (!rawBankData[subject]) rawBankData[subject] = [];
+        rawBankData[subject].push(chapter);
+      }
+    });
   });
-});
+
+  return { rawMockData, rawBankData };
+};
 
 const getQuestionId = (chapter: Chapter, question: Question) => {
   return `${chapter.subject}|${chapter.chapter_title}|${question.question}`.replace(/\s+/g, '_');
@@ -177,8 +198,26 @@ export default function App() {
     return filteredData;
   };
 
-  const mockData = React.useMemo(() => processData(rawMockData, deletedQuestionIds), [deletedQuestionIds]);
-  const bankData = React.useMemo(() => processData(rawBankData, deletedQuestionIds), [deletedQuestionIds]);
+  const [rawData, setRawData] = useState<{ rawMockData: SubjectData; rawBankData: SubjectData }>({
+    rawMockData: {},
+    rawBankData: {}
+  });
+  const [dataLoading, setDataLoading] = useState(true);
+
+  useEffect(() => {
+    loadSubjectData()
+      .then(data => {
+        setRawData(data);
+        setDataLoading(false);
+      })
+      .catch(err => {
+        console.error('Error loading subject data:', err);
+        setDataLoading(false);
+      });
+  }, []);
+
+  const mockData = React.useMemo(() => processData(rawData.rawMockData, deletedQuestionIds), [rawData.rawMockData, deletedQuestionIds]);
+  const bankData = React.useMemo(() => processData(rawData.rawBankData, deletedQuestionIds), [rawData.rawBankData, deletedQuestionIds]);
 
   const currentData = category === 'mockErrors' ? mockData : bankData;
 
@@ -709,41 +748,56 @@ export default function App() {
                     </section>
 
                     {/* Subjects */}
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                      {Object.keys(currentData).map((subject) => {
-                        const chip = (
-                          {
-                            Mathematics: 'from-blue-500 to-indigo-600',
-                            Reasoning: 'from-violet-500 to-purple-600',
-                            English: 'from-emerald-500 to-teal-600',
-                            'General Awareness': 'from-amber-500 to-orange-600',
-                            'GK/GS': 'from-pink-500 to-rose-600',
-                          } as Record<string, string>
-                        )[subject] || 'from-slate-500 to-slate-600';
-                        return (
-                          <motion.div
-                            key={subject}
-                            whileHover={{ y: -4 }}
-                            onClick={() => setSelectedSubject(subject)}
-                            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-100"
-                          >
+                    {dataLoading ? (
+                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                        {[1, 2, 3, 4, 5, 6].map((i) => (
+                          <div key={i} className="h-40 rounded-2xl border border-slate-200 bg-white p-6 animate-pulse">
                             <div className="flex items-center justify-between">
-                              <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-sm`}>
-                                <Layers className="w-6 h-6" />
+                              <div className="h-12 w-12 rounded-xl bg-slate-100" />
+                              <div className="h-5 w-16 rounded-md bg-slate-100" />
+                            </div>
+                            <div className="mt-5 h-6 w-32 rounded bg-slate-100" />
+                            <div className="mt-3 h-4 w-24 rounded bg-slate-100" />
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                        {Object.keys(currentData).map((subject) => {
+                          const chip = (
+                            {
+                              Mathematics: 'from-blue-500 to-indigo-600',
+                              Reasoning: 'from-violet-500 to-purple-600',
+                              English: 'from-emerald-500 to-teal-600',
+                              'General Awareness': 'from-amber-500 to-orange-600',
+                              'GK/GS': 'from-pink-500 to-rose-600',
+                            } as Record<string, string>
+                          )[subject] || 'from-slate-500 to-slate-600';
+                          return (
+                            <motion.div
+                              key={subject}
+                              whileHover={{ y: -4 }}
+                              onClick={() => setSelectedSubject(subject)}
+                              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-100"
+                            >
+                              <div className="flex items-center justify-between">
+                                <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-sm`}>
+                                  <Layers className="w-6 h-6" />
+                                </div>
+                                <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                                  {currentData[subject].length} Chapters
+                                </span>
                               </div>
-                              <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
-                                {currentData[subject].length} Chapters
-                              </span>
-                            </div>
-                            <h3 className="mt-5 text-lg font-bold text-slate-800">{subject}</h3>
-                            <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
-                              View Chapters
-                              <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                            </div>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
+                              <h3 className="mt-5 text-lg font-bold text-slate-800">{subject}</h3>
+                              <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
+                                View Chapters
+                                <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    )}
                   </>
                 ) : selectedSubject === 'Mathematics' && category === 'chapterBank' && !selectedMathSection ? (
                   <div className="space-y-6">
@@ -945,17 +999,24 @@ export default function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <QuizContainer 
-                chapter={activeChapter} 
-                category={category}
-                mode={quizMode}
-                onComplete={handleQuizComplete} 
-                onReviewLastAttempt={(r) => handleQuizComplete(r, true)}
-                bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
-                onBookmarkToggle={toggleBookmark}
-                isAdmin={isAuthorized}
-                onDeleteQuestion={handleDeleteQuestion}
-              />
+              <React.Suspense fallback={
+                <div className="flex flex-col items-center justify-center py-40">
+                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                  <p className="text-slate-500 font-bold">Loading quiz...</p>
+                </div>
+              }>
+                <QuizContainer 
+                  chapter={activeChapter} 
+                  category={category}
+                  mode={quizMode}
+                  onComplete={handleQuizComplete} 
+                  onReviewLastAttempt={(r) => handleQuizComplete(r, true)}
+                  bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
+                  onBookmarkToggle={toggleBookmark}
+                  isAdmin={isAuthorized}
+                  onDeleteQuestion={handleDeleteQuestion}
+                />
+              </React.Suspense>
             </motion.div>
           )}
 
@@ -1368,15 +1429,22 @@ export default function App() {
           )}
 
           {view === 'review' && reviewResult && (
-            <ReviewView
-              result={reviewResult}
-              onReattempt={() => reattemptFromResult(reviewResult)}
-              onBack={() => setView(reviewBackTo)}
-              userName={user?.displayName || 'Vinay'}
-              bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === reviewResult.chapter_title).map(b => b.question.q_num))}
-              onBookmarkToggle={toggleBookmark}
-              onViewAnalytics={() => setView('dashboard')}
-            />
+            <React.Suspense fallback={
+              <div className="flex flex-col items-center justify-center py-40">
+                <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                <p className="text-slate-500 font-bold">Loading review...</p>
+              </div>
+            }>
+              <ReviewView
+                result={reviewResult}
+                onReattempt={() => reattemptFromResult(reviewResult)}
+                onBack={() => setView(reviewBackTo)}
+                userName={user?.displayName || 'Vinay'}
+                bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === reviewResult.chapter_title).map(b => b.question.q_num))}
+                onBookmarkToggle={toggleBookmark}
+                onViewAnalytics={() => setView('dashboard')}
+              />
+            </React.Suspense>
           )}
 
           {view === 'drill' && (
@@ -1386,7 +1454,14 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
             >
-              <DrillHub />
+              <React.Suspense fallback={
+                <div className="flex flex-col items-center justify-center py-40">
+                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                  <p className="text-slate-500 font-bold">Loading speed drills...</p>
+                </div>
+              }>
+                <DrillHub />
+              </React.Suspense>
             </motion.div>
           )}
 
@@ -1401,7 +1476,14 @@ export default function App() {
                 <h1 className="text-4xl font-black text-slate-900 mb-4">Error Heatmap</h1>
                 <p className="text-xl text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
               </div>
-              <ErrorHeatmap mockData={mockData} />
+              <React.Suspense fallback={
+                <div className="flex flex-col items-center justify-center py-40">
+                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                  <p className="text-slate-500 font-bold">Loading error heatmap...</p>
+                </div>
+              }>
+                <ErrorHeatmap mockData={mockData} />
+              </React.Suspense>
             </motion.div>
           )}
         </AnimatePresence>
