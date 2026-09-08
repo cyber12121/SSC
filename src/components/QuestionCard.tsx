@@ -49,8 +49,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   avgTimeSeconds,
 }) => {
   const optionKeys: ('a' | 'b' | 'c' | 'd')[] = ['a', 'b', 'c', 'd'];
-  const isCorrect = selectedAnswer?.toLowerCase() === question.correct_answer?.toLowerCase();
-  const isAttempted = !!selectedAnswer;
+  const correctAnswerKey = (question.answer || (question as any).correct_answer || (question as any).correctOption || '')?.toString().toLowerCase().trim();
+  const normalizedSelected = selectedAnswer?.toLowerCase().trim() || null;
+  const isCorrect = normalizedSelected !== null && normalizedSelected === correctAnswerKey;
+  const isAttempted = !!normalizedSelected;
 
   return (
     <div className="bg-white h-full flex flex-col">
@@ -167,8 +169,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             const value = question.options[key];
             if (!value) return null;
 
-            const isSelected = selectedAnswer?.toLowerCase() === key;
-            const isCorrectOption = question.correct_answer?.toLowerCase() === key;
+            const isSelected = normalizedSelected === key;
+            const isCorrectOption = correctAnswerKey === key;
 
             // In solution mode:
             if (showSolution) {

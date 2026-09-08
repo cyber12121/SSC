@@ -120,6 +120,14 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     if (currentIdx < totalQuestions - 1) setCurrentIdx(currentIdx + 1);
   };
 
+  const getCorrectAnswer = (q: Question) =>
+    (q.answer || (q as any).correct_answer || (q as any).correctOption || '')?.toString().toLowerCase().trim();
+
+  const isQuestionCorrect = (idx: number) => {
+    const userAns = answers[idx]?.toLowerCase().trim();
+    return !!userAns && userAns === getCorrectAnswer(chapter.questions[idx]);
+  };
+
   const getStatus = (idx: number): QuestionStatus => {
     const isAnswered = !!answers[idx];
     const isMarked = markedForReview.has(idx);
@@ -128,13 +136,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     if (!isReviewMode) {
       if (isMarked && isAnswered) return 'answered-marked';
       if (isMarked) return 'marked';
-      if (isAnswered) return mode === 'mock' ? 'answered' : (answers[idx] === chapter.questions[idx].answer ? 'correct' : 'wrong');
+      if (isAnswered) return mode === 'mock' ? 'answered' : (isQuestionCorrect(idx) ? 'correct' : 'wrong');
       if (isVis && idx !== currentIdx) return 'not-attempted';
       return 'not-visited';
     }
 
     if (isAnswered) {
-      return answers[idx] === chapter.questions[idx].answer ? 'correct' : 'wrong';
+      return isQuestionCorrect(idx) ? 'correct' : 'wrong';
     }
     return 'not-visited';
   };
@@ -146,7 +154,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   const calculateScore = () =>
-    chapter.questions.filter((q, idx) => answers[idx] === q.answer).length;
+    chapter.questions.filter((_, idx) => isQuestionCorrect(idx)).length;
 
   const buildResults = (): Omit<QuizResult, 'userId' | 'completedAt'> => {
     const score = calculateScore();
@@ -162,7 +170,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       questionDetails: chapter.questions.map((q, idx) => ({
         q_num: q.q_num,
         timeSpent: timeSpent[idx] || 0,
-        isCorrect: answers[idx] === q.answer,
+        isCorrect: isQuestionCorrect(idx),
         selectedAnswer: answers[idx] || '',
         question: q,
         marked: markedForReview.has(idx),
@@ -244,8 +252,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const isShowSolution = mode === 'practice' ? !!answers[currentIdx] : false;
 
   const stats = {
-    correct: Object.keys(answers).filter(i => answers[parseInt(i)] === chapter.questions[parseInt(i)].answer).length,
-    wrong: Object.keys(answers).filter(i => answers[parseInt(i)] !== chapter.questions[parseInt(i)].answer).length,
+    correct: Object.keys(answers).filter(i => isQuestionCorrect(parseInt(i, 10))).length,
+    wrong: Object.keys(answers).filter(i => !isQuestionCorrect(parseInt(i, 10))).length,
     answered: Object.keys(answers).length,
     marked: markedForReview.size,
     notAttempted: totalQuestions - Object.keys(answers).length,
