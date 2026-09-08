@@ -43,7 +43,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   result, 
   onReattempt, 
   onBack,
-  userName = 'Vinay',
+  userName = 'Candidate',
   bookmarkedIds = new Set(),
   onBookmarkToggle,
   onViewAnalytics
@@ -535,9 +535,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               Previous
             </button>
 
-            {/* Re-attempt Questions Toggle Switch */}
+            {/* Practice Mode (Hide Solutions) Toggle Switch */}
             <div className="flex items-center space-x-3">
-              <span className="text-xs font-semibold text-gray-700">Re-attempt Questions</span>
+              <span className="text-xs font-semibold text-gray-700">Practice Mode (Hide Solutions)</span>
               <button
                 role="switch"
                 aria-checked={reattemptMode}

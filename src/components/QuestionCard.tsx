@@ -46,7 +46,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   onDelete,
   isAdmin = false,
   timeSpentSeconds,
-  avgTimeSeconds = 42,
+  avgTimeSeconds,
 }) => {
   const optionKeys: ('a' | 'b' | 'c' | 'd')[] = ['a', 'b', 'c', 'd'];
   const isCorrect = selectedAnswer?.toLowerCase() === question.correct_answer?.toLowerCase();
@@ -83,15 +83,14 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 <span className="flex items-center text-xs font-medium text-gray-600 gap-1 ml-1">
                   <Clock className="w-3.5 h-3.5 text-[#0097a7]" />
                   <span>You: {fmt(timeSpentSeconds)}</span>
-                  <span className="text-gray-400 ml-1">Avg: {fmt(avgTimeSeconds)}</span>
+                  {avgTimeSeconds !== undefined && (
+                    <span className="text-gray-400 ml-1">| Avg: {fmt(avgTimeSeconds)}</span>
+                  )}
                 </span>
               )}
 
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#2e7d32] text-white ml-1">
-                Marks 2
-              </span>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded bg-[#10b981]/15 text-[#065f46] border border-[#10b981]/30">
-                71% answered correctly
+              <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200 ml-1">
+                Marks +2, -0.5
               </span>
             </>
           ) : (
@@ -187,14 +186,15 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                       </span>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
-                      {isSelected && (
+                      {isSelected ? (
                         <span className="text-[11px] font-semibold bg-white/20 text-white px-2.5 py-0.5 rounded border border-white/30">
-                          Your first attempt
+                          Your Attempt (Correct)
+                        </span>
+                      ) : (
+                        <span className="text-[11px] font-semibold bg-white/20 text-white px-2.5 py-0.5 rounded border border-white/30">
+                          Correct Answer
                         </span>
                       )}
-                      <span className="text-[11px] font-semibold bg-white/20 text-white px-2.5 py-0.5 rounded border border-white/30">
-                        71% answered correctly
-                      </span>
                     </div>
                   </div>
                 );

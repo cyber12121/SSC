@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Trophy, Clock, CheckCircle2, CornerDownLeft, RotateCcw,
@@ -213,26 +213,26 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {onReviewLastAttempt && (
               <button
                 onClick={() => onReviewLastAttempt(results)}
-                className="flex-1 py-3 bg-[#0097a7] hover:bg-[#00838f] text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
+                className="py-3 bg-[#0097a7] hover:bg-[#00838f] text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
               >
                 <BookOpen className="w-4 h-4 mr-2" />Review Questions
               </button>
             )}
             <button
               onClick={handleReattempt}
-              className="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
+              className="py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
             >
               <RotateCcw className="w-4 h-4 mr-2" />Reattempt
             </button>
             <button
-              onClick={() => onComplete(results)}
-              className="flex-1 py-3 bg-gray-800 hover:bg-black text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
+              onClick={() => onComplete(results, false)}
+              className="py-3 bg-slate-800 hover:bg-black text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
             >
-              <CornerDownLeft className="w-4 h-4 mr-2" />Dashboard
+              <CornerDownLeft className="w-4 h-4 mr-2" />Back to Chapters
             </button>
           </div>
         </motion.div>

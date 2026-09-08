@@ -246,12 +246,8 @@ export default function App() {
   // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
   const latestResultByChapter = React.useMemo(() => {
     const map = new Map<string, QuizResult>();
-    // userResults is ordered completedAt desc. Only Mock attempts are reviewable,
-    // so track the newest Mock attempt per chapter (practice attempts are skipped).
-    // Key ignores `category` so a Mock attempt shows its Review button on the Home
-    // card regardless of which category tab (chapterBank / mockErrors) is active.
+    // Track the newest saved attempt per chapter
     userResults.forEach(r => {
-      if (r.mode !== 'mock') return;
       const key = `${r.subject}|${r.chapter_title}`;
       if (!map.has(key)) map.set(key, r);
     });
@@ -534,9 +530,9 @@ export default function App() {
     }
   };
 
-  const openReview = (result: QuizResult) => {
+  const openReview = (result: QuizResult, backTo: 'home' | 'dashboard' = 'dashboard') => {
     setReviewResult(result);
-    setReviewBackTo('dashboard');
+    setReviewBackTo(backTo);
     setView('review');
   };
 
@@ -991,10 +987,10 @@ export default function App() {
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
-                                    if (r) openReview(r);
+                                    if (r) openReview(r, 'home');
                                   }}
                                   className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
-                                  title="Review last mock attempt"
+                                  title="Review last attempt"
                                 >
                                   <History className="w-4 h-4" />
                                 </button>
@@ -1044,9 +1040,20 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-4xl mx-auto"
             >
-              <div className="mb-12">
-                <h1 className="text-4xl font-black text-slate-900 mb-4">Bookmarked Questions</h1>
-                <p className="text-xl text-slate-500">Review your saved questions across all subjects.</p>
+              <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-2">Bookmarked Questions</h1>
+                  <p className="text-base sm:text-lg text-slate-500">Review your saved questions across all subjects.</p>
+                </div>
+                {selectedBookmarkSubject === null && (
+                  <button
+                    onClick={() => setView('home')}
+                    className="self-start sm:self-auto flex items-center text-sm font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-4 py-2 rounded-xl shadow-sm transition-colors"
+                  >
+                    <ChevronLeft className="w-4 h-4 mr-1" />
+                    Back to Practice
+                  </button>
+                )}
               </div>
 
               {!user ? (
@@ -1456,7 +1463,7 @@ export default function App() {
                 result={reviewResult}
                 onReattempt={() => reattemptFromResult(reviewResult)}
                 onBack={() => setView(reviewBackTo)}
-                userName={user?.displayName || 'Vinay'}
+                userName={user?.displayName || 'Candidate'}
                 bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === reviewResult.chapter_title).map(b => b.question.q_num))}
                 onBookmarkToggle={toggleBookmark}
                 onViewAnalytics={() => setView('dashboard')}
@@ -1477,7 +1484,7 @@ export default function App() {
                   <p className="text-slate-500 font-bold">Loading speed drills...</p>
                 </div>
               }>
-                <DrillHub />
+                <DrillHub onBack={() => setView('home')} />
               </React.Suspense>
             </motion.div>
           )}
@@ -1489,9 +1496,18 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="mb-12">
-                <h1 className="text-4xl font-black text-slate-900 mb-4">Error Heatmap</h1>
-                <p className="text-xl text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
+              <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-2">Error Heatmap</h1>
+                  <p className="text-base sm:text-lg text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
+                </div>
+                <button
+                  onClick={() => setView('home')}
+                  className="self-start sm:self-auto flex items-center text-sm font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-4 py-2 rounded-xl shadow-sm transition-colors"
+                >
+                  <ChevronLeft className="w-4 h-4 mr-1" />
+                  Back to Practice
+                </button>
               </div>
               <React.Suspense fallback={
                 <div className="flex flex-col items-center justify-center py-40">

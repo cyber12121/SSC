@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Calculator,
   Play,
+  ChevronLeft,
 } from 'lucide-react';
 import { SpeedMathDrill } from './SpeedMathDrill';
 import { FractionDrill } from './FractionDrill';
@@ -22,7 +23,11 @@ import { SectionId } from '../../data/drills/calculationData';
 
 type DrillTab = 'calculation' | 'math' | 'fractions' | 'powers' | 'triplets' | 'formulas';
 
-export const DrillHub: React.FC = () => {
+interface DrillHubProps {
+  onBack?: () => void;
+}
+
+export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
   const [activeTab, setActiveTab] = useState<DrillTab>('calculation');
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
   const [studioInitialSection, setStudioInitialSection] = useState<SectionId>('triplets');
@@ -74,6 +79,15 @@ export const DrillHub: React.FC = () => {
       {/* Minimalist Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
+          {onBack && (
+            <button
+              onClick={onBack}
+              className="inline-flex items-center text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors mb-2"
+            >
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              Back to Practice
+            </button>
+          )}
           <div className="flex items-center gap-2 mb-1">
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
               Calculation & Speed Drills
