@@ -1,21 +1,7 @@
 [
   {
     "chapter_num": 1,
-    "chapter_title": "Speed Issue",
-    "subject": "English",
-    "subject_id": "english",
-    "questions": []
-  },
-  {
-    "chapter_num": 2,
-    "chapter_title": "Unattempted",
-    "subject": "English",
-    "subject_id": "english",
-    "questions": []
-  },
-  {
-    "chapter_num": 3,
-    "chapter_title": "Wrong",
+    "chapter_title": "Mock Errors",
     "subject": "English",
     "subject_id": "english",
     "questions": []
