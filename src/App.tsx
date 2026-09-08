@@ -383,6 +383,10 @@ export default function App() {
   };
 
   const startQuiz = (chapter: Chapter) => {
+    if (!chapter.questions || chapter.questions.length === 0) {
+      alert(`No questions available in "${chapter.chapter_title}" yet.`);
+      return;
+    }
     setActiveChapter(chapter);
     setView('quiz');
     if (quizMode === 'mock') {
@@ -394,10 +398,14 @@ export default function App() {
   };
 
   const startAllSubjectQuiz = (subjectName: string) => {
-    const allQuestions = currentData[subjectName].flatMap(ch => ch.questions).map((q, idx) => ({
+    const allQuestions = (currentData[subjectName] || []).flatMap(ch => ch.questions).map((q, idx) => ({
       ...q,
       q_num: idx + 1
     }));
+    if (allQuestions.length === 0) {
+      alert(`No questions available in ${subjectName} yet.`);
+      return;
+    }
     const virtualChapter: Chapter = {
       chapter_num: 0,
       chapter_title: `All ${subjectName} Questions`,

@@ -1,102 +1,23 @@
 [
   {
     "chapter_num": 1,
-    "chapter_title": "Ancient History Mock",
+    "chapter_title": "Speed Issue",
     "subject": "General Awareness",
     "subject_id": "general_awareness",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Sample GK Mock Question?",
-        "options": {
-          "a": "Opt 1",
-          "b": "Opt 2",
-          "c": "Opt 3",
-          "d": "Opt 4"
-        },
-        "answer": "a",
-        "solution": "Sample solution."
-      }
-    ]
+    "questions": []
   },
   {
-    "chapter_num": 1,
-    "chapter_title": "Indian Agriculture",
+    "chapter_num": 2,
+    "chapter_title": "Unattempted",
     "subject": "General Awareness",
     "subject_id": "general_awareness",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "A crop primarily associated with equatorial regions can also be cultivated in tropical and sub-tropical areas. It requires a hot and humid climate, annual rainfall exceeding 200 cm, and temperatures generally above 25°C. Which one of the following crops fits this description?",
-        "options": {
-          "a": "Paddy",
-          "b": "Rubber",
-          "c": "Tea",
-          "d": "Sugarcane"
-        },
-        "answer": "b",
-        "solution": "Rubber is an equatorial crop, but under special conditions, it is also grown in tropical and sub-tropical areas. It requires a moist and humid climate with rainfall of more than 200 cm and temperature above 25°C."
-      }
-    ]
+    "questions": []
   },
   {
-    "chapter_num": 1,
-    "chapter_title": "Indian National Movement",
+    "chapter_num": 3,
+    "chapter_title": "Wrong",
     "subject": "General Awareness",
     "subject_id": "general_awareness",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "When did the British Cabinet Mission arrive in India in order to examine the Muslim League's demand, and to suggest a suitable political framework for a free India?",
-        "options": {
-          "a": "March 1946",
-          "b": "January 1946",
-          "c": "May 1946",
-          "d": "August 1946"
-        },
-        "answer": "a",
-        "solution": "The Cabinet Mission arrived in India in March 1946 to discuss the transfer of power from the British government to Indian leadership."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Indian Polity - Centre-State Relations",
-    "subject": "General Awareness",
-    "subject_id": "general_awareness",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Which of the following statements regarding the distribution of legislative powers between the Union and State legislatures is correct?",
-        "options": {
-          "a": "The State legislature can legislate on matters enumerated in the Union List",
-          "b": "The Union legislature can legislate on matters in the Concurrent List only with State approval",
-          "c": "The Union Government can issue directions to the States under Article 256",
-          "d": "The Union and States have equal powers on matters in the Union List"
-        },
-        "answer": "c",
-        "solution": "Article 256 of the Indian Constitution provides that the executive power of every State shall be so exercised as to ensure compliance with the laws made by Parliament, and the Union Government can give such directions to a State as may appear to the Government of India to be necessary for that purpose."
-      }
-    ]
-  },
-  {
-    "chapter_num": 1,
-    "chapter_title": "Indian Polity - Judiciary",
-    "subject": "General Awareness",
-    "subject_id": "general_awareness",
-    "questions": [
-      {
-        "q_num": 1,
-        "question": "Rearrange the following stages in the process of judicial decision-making in a court of law in the correct order:\n\nP. Pronouncement of the final judgment.\nQ. Filing of the case and submission of pleadings.\nR. Examination of evidence and arguments by both sides.\nS. Interpretation of law and application to the facts of the case.",
-        "options": {
-          "a": "Q → R → P → S",
-          "b": "R → Q → S → P",
-          "c": "Q → S → R → P",
-          "d": "Q → R → S → P"
-        },
-        "answer": "d",
-        "solution": "The correct sequence of judicial decision-making starts with filing a case (Q), followed by the examination of evidence (R), interpretation of law (S), and finally pronouncement of judgment (P)."
-      }
-    ]
+    "questions": []
   }
 ]
