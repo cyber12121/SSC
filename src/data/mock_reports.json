@@ -1,5 +1,52 @@
 [
   {
+    "id": "mock_1788966548202_2ph43",
+    "title": "Full Mock - 09 Sept 2026",
+    "type": "full",
+    "date": "2026-09-09T15:09:08.193Z",
+    "totalQuestions": 100,
+    "maxMarks": 200,
+    "totalScore": 106.5,
+    "overallAccuracy": 75.3,
+    "totalCorrect": 58,
+    "totalWrong": 19,
+    "totalUnattempted": 23,
+    "sections": {
+      "reasoning": {
+        "total": 25,
+        "correct": 24,
+        "wrong": 1,
+        "unattempted": 0,
+        "score": 47.5,
+        "accuracy": 96
+      },
+      "generalAwareness": {
+        "total": 25,
+        "correct": 5,
+        "wrong": 9,
+        "unattempted": 11,
+        "score": 5.5,
+        "accuracy": 35.7
+      },
+      "mathematics": {
+        "total": 25,
+        "correct": 7,
+        "wrong": 6,
+        "unattempted": 12,
+        "score": 11,
+        "accuracy": 53.8
+      },
+      "english": {
+        "total": 25,
+        "correct": 22,
+        "wrong": 3,
+        "unattempted": 0,
+        "score": 42.5,
+        "accuracy": 88
+      }
+    }
+  },
+  {
     "id": "mock_1788962164380_zzfu1",
     "title": "Full Mock - 09 Sept 2026",
     "type": "full",

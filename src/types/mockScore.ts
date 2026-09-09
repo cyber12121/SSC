@@ -1,3 +1,5 @@
+import { Question } from '../types';
+
 export interface SectionScore {
   total: number;
   correct: number;
@@ -26,4 +28,5 @@ export interface MockScoreReport {
     english?: SectionScore;
     generalAwareness?: SectionScore;
   };
+  questions?: Question[];
 }

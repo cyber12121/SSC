@@ -905,6 +905,91 @@
           "topic": "Error Spotting",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_cc2c8e0c3f",
+        "q_num": 54,
+        "question": "Identify the segment in the sentence which contains the grammatical error: His strike rate in this series is 74.35, which is the higher than that of any other batsman.",
+        "options": {
+          "a": "is the higher",
+          "b": "His strike rate",
+          "c": "than that of any other",
+          "d": "in this series"
+        },
+        "answer": "a",
+        "solution": "In the given sentence, ‘higher’ is a comparative degree. Generally, the definite article ‘the’ is not used with the comparative degree. Thus, the use of the definite article 'the' is not needed and should be eliminated from the sentence. Correct Sentence: His strike rate in this series is 74.35, which is higher than that of any other batsman.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_c9e2060eba",
+        "q_num": 55,
+        "question": "Choose the correctly spelt word.",
+        "options": {
+          "a": "ricocheat",
+          "b": "ricochet",
+          "c": "recochet",
+          "d": "riccochet"
+        },
+        "answer": "b",
+        "solution": "The correct spelling is 'ricochet' and it means rebound. Example sentence: A bullet ricocheted off a nearby wall.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_bc95cf271c",
+        "q_num": 56,
+        "question": "Select the segment of the sentence that contains grammatical error. If there is no error, mark 'No error': Some people have generously contributed to the welfare fund but they wanted that there names should not be published.",
+        "options": {
+          "a": "Some people have generously contributed",
+          "b": "to the welfare fund but they wanted",
+          "c": "that there names should not be published.",
+          "d": "No error"
+        },
+        "answer": "c",
+        "solution": "In the given sentence 'there' has been used which is wrong. A possessive pronoun is needed for people, hence, 'their' will be used here. So, the correct sentence will be: Some people have generously contributed to the welfare fund but they wanted that their names should not be published.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_9a7f4bc550",
+        "q_num": 57,
+        "question": "Read the given passage carefully. Select the most appropriate option that can substitute the underlined segment in the sentence: \\\"Robert’s chest expands with victory. She glances at him to see how he is dealing with this act of being removed from the high position of authority. But his brother has a faraway smile on his face. Is he relieved? Or was he distracted by something he considers more important?\\\"",
+        "options": {
+          "a": "dethronement",
+          "b": "abdication",
+          "c": "revolution",
+          "d": "coronation"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A (Dethronement).\n\nKey Points:\nDethronement means the act of removing someone from their position of power, especially a monarch or ruler.\nExample: The dethronement of the king led to a period of political instability in the country.\nThe word fits the context as Robert is described as being removed from a high position of authority.\n\nAdditional Information:\n- Abdication: Refers to voluntarily renouncing a throne or position of power.\n- Revolution: Refers to a sudden, radical, or complete change, often in politics or government.\n- Coronation: Refers to the ceremony of crowning a monarch.",
+        "tags": {
+          "topic": "Idioms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_e0ba41ff4a",
+        "q_num": 58,
+        "question": "Select the most appropriate option to fill in blank 1.",
+        "options": {
+          "a": "complex",
+          "b": "fine",
+          "c": "systematic",
+          "d": "easy"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A.\n\nKey Points:\nThe word \"complex\" means consisting of many different and connected parts.\nIn the context of describing society, \"complex\" conveys that modern society has many diverse and interconnected aspects.\nThe other options: \"fine,\" \"systematic,\" and \"easy\" do not capture the intricacy and interconnectedness described in the passage.\nComplete Sentence: Hierarchy is key in ensuring normal functioning of our increasingly complex society.\n\nAdditional Information:\n- Fine: Means very high quality or acceptable.\n- Systematic: Means structured or methodical.\n- Easy: Means not difficult or requiring little effort.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
       }
     ]
   }

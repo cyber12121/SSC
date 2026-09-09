@@ -1197,38 +1197,38 @@ export default function App() {
                 {!selectedSubject ? (
                   <>
                     {/* Hero */}
-                    <section className="relative mb-5 overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 p-5 sm:p-7 shadow-sm">
+                    <section className="relative mb-3.5 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 px-4 py-3 sm:px-5 sm:py-3.5 shadow-xs">
                       <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"></div>
                       <div className="pointer-events-none absolute -bottom-24 left-8 h-72 w-72 rounded-full bg-fuchsia-400/20 blur-3xl"></div>
-                      <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                      <div className="relative flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                         <div className="max-w-xl">
-                          <span className="inline-flex items-center rounded-full bg-white/15 px-2.5 py-0.5 text-[11px] font-semibold text-white ring-1 ring-white/20">
+                          <span className="inline-flex items-center rounded-full bg-white/15 px-2 py-0.2 text-[10px] font-bold text-white ring-1 ring-white/20">
                             SSC CGL Prep
                           </span>
-                          <h1 className="mt-2 text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+                          <h1 className="mt-1 text-base sm:text-lg font-bold tracking-tight text-white">
                             Practice smart. Beat the competition.
                           </h1>
-                          <p className="mt-1.5 text-xs sm:text-sm text-indigo-100">
+                          <p className="mt-0.5 text-xs text-indigo-100">
                             Curated chapter banks and focused mock-error drills — pick a subject and start solving.
                           </p>
                         </div>
-                        <div className="inline-flex shrink-0 rounded-xl border border-white/20 bg-white/10 p-1 backdrop-blur">
+                        <div className="inline-flex shrink-0 rounded-lg border border-white/20 bg-white/10 p-0.5 backdrop-blur">
                           <button
                             onClick={() => setCategory('chapterBank')}
-                            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors flex items-center ${
-                              category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs' : 'text-white hover:bg-white/10'
+                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${
+                              category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
                             }`}
                           >
-                            <ListChecks className="w-3.5 h-3.5 mr-1.5" />
+                            <ListChecks className="w-3.5 h-3.5 mr-1" />
                             Chapter Bank
                           </button>
                           <button
                             onClick={() => setCategory('mockErrors')}
-                            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors flex items-center ${
-                              category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs' : 'text-white hover:bg-white/10'
+                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${
+                              category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
                             }`}
                           >
-                            <AlertCircle className="w-3.5 h-3.5 mr-1.5" />
+                            <AlertCircle className="w-3.5 h-3.5 mr-1" />
                             Mock Errors
                           </button>
                         </div>
@@ -1237,20 +1237,20 @@ export default function App() {
 
                     {/* Subjects: 4 Columns on desktop for perfect balance */}
                     {dataLoading ? (
-                      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+                      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
                         {[1, 2, 3, 4].map((i) => (
-                          <div key={i} className="h-32 rounded-xl border border-slate-200 bg-white p-4 animate-pulse">
+                          <div key={i} className="h-28 rounded-xl border border-slate-200 bg-white p-3 animate-pulse">
                             <div className="flex items-center justify-between">
-                              <div className="h-9 w-9 rounded-lg bg-slate-100" />
-                              <div className="h-4 w-14 rounded-md bg-slate-100" />
+                              <div className="h-8 w-8 rounded-lg bg-slate-100" />
+                              <div className="h-4 w-12 rounded bg-slate-100" />
                             </div>
-                            <div className="mt-4 h-5 w-28 rounded bg-slate-100" />
-                            <div className="mt-2 h-3.5 w-20 rounded bg-slate-100" />
+                            <div className="mt-3 h-4 w-24 rounded bg-slate-100" />
+                            <div className="mt-1.5 h-3 w-16 rounded bg-slate-100" />
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+                      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
                         {Object.keys(currentData).map((subject) => {
                           const chip = (
                             {
@@ -1264,22 +1264,22 @@ export default function App() {
                           return (
                             <motion.div
                               key={subject}
-                              whileHover={{ y: -3 }}
+                              whileHover={{ y: -2 }}
                               onClick={() => setSelectedSubject(subject)}
-                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/90 bg-white p-4 sm:p-4.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-100/50 hover:border-indigo-300 shadow-xs"
+                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs"
                             >
                               <div className="flex items-center justify-between">
-                                <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-xs`}>
-                                  <Layers className="w-5 h-5" />
+                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
+                                  <Layers className="w-4 h-4" />
                                 </div>
-                                <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[11px] font-semibold text-slate-500 border border-slate-100">
+                                <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
                                   {currentData[subject].length} Ch
                                 </span>
                               </div>
-                              <h3 className="mt-3 text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
-                              <div className="mt-1.5 flex items-center text-xs font-semibold text-indigo-600">
+                              <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
+                              <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
                                 View Chapters
-                                <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-1" />
+                                <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                               </div>
                             </motion.div>
                           );
@@ -1288,110 +1288,110 @@ export default function App() {
                     )}
 
                     {/* ─── High-Yield Practice Hub & Feature Cards ─── */}
-                    <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                    <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2.5">
                       {/* Speed Drill */}
                       <div 
                         onClick={() => setView('drill')}
-                        className="group bg-white rounded-xl p-4 border border-slate-200/90 shadow-xs hover:border-amber-300 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+                        className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-amber-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between">
-                          <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100 group-hover:scale-105 transition-transform">
-                            <Zap className="w-5 h-5 fill-amber-500/20 text-amber-600" />
+                          <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100 group-hover:scale-105 transition-transform">
+                            <Zap className="w-3.5 h-3.5 fill-amber-500/20 text-amber-600" />
                           </div>
-                          <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">
+                          <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">
                             Speed Studio
                           </span>
                         </div>
-                        <div className="mt-3">
-                          <h4 className="text-sm font-black text-slate-900 group-hover:text-amber-700 transition-colors">Calculation & Speed Drill</h4>
-                          <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                        <div className="mt-2">
+                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Calculation & Speed Drill</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
                             Powers, cubes, fraction conversions, and Pythagorean triplets calculation drill.
                           </p>
                         </div>
-                        <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-amber-600">
+                        <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-amber-600">
                           <span>Open Studio</span>
-                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </div>
                       </div>
 
                       {/* Error Heatmap */}
                       <div 
                         onClick={() => setView('heatmap')}
-                        className="group bg-white rounded-xl p-4 border border-slate-200/90 shadow-xs hover:border-red-300 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+                        className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-red-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between">
-                          <div className="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center border border-red-100 group-hover:scale-105 transition-transform">
-                            <Flame className="w-5 h-5 fill-red-500/20 text-red-600" />
+                          <div className="w-7 h-7 rounded-lg bg-red-50 text-red-600 flex items-center justify-center border border-red-100 group-hover:scale-105 transition-transform">
+                            <Flame className="w-3.5 h-3.5 fill-red-500/20 text-red-600" />
                           </div>
-                          <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-red-50 text-red-700 border border-red-200">
+                          <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-red-50 text-red-700 border border-red-200">
                             Weak Spot Matrix
                           </span>
                         </div>
-                        <div className="mt-3">
-                          <h4 className="text-sm font-black text-slate-900 group-hover:text-red-700 transition-colors">Error Pattern Heatmap</h4>
-                          <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                        <div className="mt-2">
+                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-red-700 transition-colors">Error Pattern Heatmap</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
                             Analyze wrong answers, negative marks, and speed bottlenecks across mock tests.
                           </p>
                         </div>
-                        <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-red-600">
+                        <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-red-600">
                           <span>Analyze Errors</span>
-                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </div>
                       </div>
 
                       {/* Bookmarks */}
                       <div 
                         onClick={() => setView('bookmarks')}
-                        className="group bg-white rounded-xl p-4 border border-slate-200/90 shadow-xs hover:border-blue-300 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+                        className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-blue-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between">
-                          <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100 group-hover:scale-105 transition-transform">
-                            <BookmarkIcon className="w-5 h-5 fill-blue-500/20 text-blue-600" />
+                          <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100 group-hover:scale-105 transition-transform">
+                            <BookmarkIcon className="w-3.5 h-3.5 fill-blue-500/20 text-blue-600" />
                           </div>
-                          <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
+                          <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
                             Saved Vault
                           </span>
                         </div>
-                        <div className="mt-3">
-                          <h4 className="text-sm font-black text-slate-900 group-hover:text-blue-700 transition-colors">Bookmarked Questions</h4>
-                          <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                        <div className="mt-2">
+                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-blue-700 transition-colors">Bookmarked Questions</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
                             Quick-revision bank of tricky questions, formula tricks, and flagged problems.
                           </p>
                         </div>
-                        <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600">
+                        <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-blue-600">
                           <span>Review Vault</span>
-                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </div>
                       </div>
                     </div>
 
                     {/* ─── Recent Activity & Prep Readiness ─── */}
-                    <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-3.5">
+                    <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-2.5">
                       {/* Left: Recent Activity or Starter Chapters (2 cols) */}
-                      <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs">
-                        <div className="flex items-center justify-between mb-3">
+                      <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs">
+                        <div className="flex items-center justify-between mb-2.5">
                           <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                              <History className="w-4 h-4" />
+                            <div className="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                              <History className="w-3.5 h-3.5" />
                             </div>
-                            <h4 className="text-sm font-black text-slate-900">
+                            <h4 className="text-xs font-bold text-slate-900">
                               {userResults.length > 0 ? 'Recent Practice Activity' : 'Recommended Starting Chapters'}
                             </h4>
                           </div>
                           {userResults.length > 0 && (
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-2.5">
                               <button 
                                 onClick={handleClearAllResults}
                                 disabled={loadingResults}
-                                className="text-xs font-bold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 disabled:opacity-50"
+                                className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 disabled:opacity-50"
                                 title="Clear all recent activity"
                               >
-                                <Trash2 className="w-3.5 h-3.5" />
+                                <Trash2 className="w-3 h-3" />
                                 Clear History
                               </button>
                               <button 
                                 onClick={() => setView('dashboard')}
-                                className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
+                                className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
                               >
                                 View All ({userResults.length}) →
                               </button>
@@ -1404,20 +1404,20 @@ export default function App() {
                             {userResults.slice(0, 4).map((r, idx) => {
                               const acc = r.totalQuestions > 0 ? Math.round((r.score / r.totalQuestions) * 100) : 0;
                               return (
-                                <div key={idx} className="py-2.5 flex items-center justify-between gap-3">
-                                  <div className="min-w-0 flex items-center gap-2.5">
-                                    <span className="text-[11px] font-black px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">
+                                <div key={idx} className="py-2 flex items-center justify-between gap-2.5">
+                                  <div className="min-w-0 flex items-center gap-2">
+                                    <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-slate-100 text-slate-700">
                                       {r.subject}
                                     </span>
                                     <div className="min-w-0">
-                                      <p className="text-xs font-bold text-slate-800 truncate">{r.chapter_title}</p>
+                                      <p className="text-xs font-semibold text-slate-800 truncate">{r.chapter_title}</p>
                                       <p className="text-[10px] text-slate-400">
                                         {r.score}/{r.totalQuestions} correct • {r.mode === 'mock' ? 'Mock Mode' : 'Practice'}
                                       </p>
                                     </div>
                                   </div>
-                                  <div className="flex items-center gap-2.5 shrink-0">
-                                    <span className={`text-xs font-black px-2 py-0.5 rounded-md ${
+                                  <div className="flex items-center gap-2 shrink-0">
+                                    <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-md ${
                                       acc >= 75 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
                                       acc >= 50 ? 'bg-amber-50 text-amber-700 border border-amber-200' :
                                       'bg-rose-50 text-rose-700 border border-rose-200'
@@ -1426,7 +1426,7 @@ export default function App() {
                                     </span>
                                     <button
                                       onClick={() => openReview(r, 'home')}
-                                      className="text-xs font-bold text-slate-600 hover:text-indigo-600 px-2 py-1 bg-slate-50 hover:bg-indigo-50 rounded-lg transition-colors"
+                                      className="text-xs font-semibold text-slate-600 hover:text-indigo-600 px-2 py-0.5 bg-slate-50 hover:bg-indigo-50 rounded-md transition-colors"
                                     >
                                       Review
                                     </button>
@@ -1436,7 +1436,7 @@ export default function App() {
                             })}
                           </div>
                         ) : (
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {[
                               { sub: 'Mathematics', title: 'Percentage & Profit Loss', count: 'High Yield', icon: Calculator, color: 'text-blue-600 bg-blue-50' },
                               { sub: 'Reasoning', title: 'Coding-Decoding & Analogy', count: 'High Yield', icon: Compass, color: 'text-purple-600 bg-purple-50' },
@@ -1448,18 +1448,18 @@ export default function App() {
                                 <div 
                                   key={idx}
                                   onClick={() => setSelectedSubject(s.sub)}
-                                  className="p-3 rounded-lg border border-slate-100 hover:border-slate-300 hover:bg-slate-50/70 transition-all cursor-pointer flex items-center justify-between group"
+                                  className="p-2 rounded-lg border border-slate-100 hover:border-slate-300 hover:bg-slate-50/70 transition-all cursor-pointer flex items-center justify-between group"
                                 >
-                                  <div className="flex items-center gap-2.5 min-w-0">
-                                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${s.color}`}>
-                                      <SIcon className="w-4 h-4" />
+                                  <div className="flex items-center gap-2 min-w-0">
+                                    <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${s.color}`}>
+                                      <SIcon className="w-3.5 h-3.5" />
                                     </div>
                                     <div className="min-w-0">
-                                      <p className="text-xs font-bold text-slate-900 truncate">{s.title}</p>
-                                      <span className="text-[10px] text-slate-400 font-semibold">{s.sub} • {s.count}</span>
+                                      <p className="text-xs font-semibold text-slate-900 truncate">{s.title}</p>
+                                      <span className="text-[10px] text-slate-400 font-medium">{s.sub} • {s.count}</span>
                                     </div>
                                   </div>
-                                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 transition-all shrink-0" />
+                                  <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 transition-all shrink-0" />
                                 </div>
                               );
                             })}
@@ -1468,46 +1468,46 @@ export default function App() {
                       </div>
 
                       {/* Right: Prep Readiness Summary (1 col) */}
-                      <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs flex flex-col justify-between">
+                      <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs flex flex-col justify-between">
                         <div>
-                          <div className="flex items-center justify-between mb-3">
-                            <div className="flex items-center gap-2">
-                              <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                                <Target className="w-4 h-4" />
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-1.5">
+                              <div className="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                                <Target className="w-3.5 h-3.5" />
                               </div>
-                              <h4 className="text-sm font-black text-slate-900">Exam Readiness</h4>
+                              <h4 className="text-xs font-bold text-slate-900">Exam Readiness</h4>
                             </div>
-                            <span className="text-[10px] font-black uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md">
+                            <span className="text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded">
                               SSC CGL
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-2 gap-2 mt-2">
-                            <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-100">
-                              <span className="text-[10px] font-bold text-slate-400 uppercase">Solved</span>
-                              <p className="text-lg font-black text-slate-900 mt-0.5">{dashboardStats.totalQuestions}</p>
+                          <div className="grid grid-cols-2 gap-1.5 mt-1.5">
+                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                              <span className="text-[9px] font-bold text-slate-400 uppercase">Solved</span>
+                              <p className="text-base font-bold text-slate-900 mt-0.5">{dashboardStats.totalQuestions}</p>
                             </div>
-                            <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-100">
-                              <span className="text-[10px] font-bold text-slate-400 uppercase">Accuracy</span>
-                              <p className="text-lg font-black text-emerald-600 mt-0.5">{dashboardStats.overallAccuracy}%</p>
+                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                              <span className="text-[9px] font-bold text-slate-400 uppercase">Accuracy</span>
+                              <p className="text-base font-bold text-emerald-600 mt-0.5">{dashboardStats.overallAccuracy}%</p>
                             </div>
-                            <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-100">
-                              <span className="text-[10px] font-bold text-slate-400 uppercase">Quizzes</span>
-                              <p className="text-lg font-black text-indigo-600 mt-0.5">{dashboardStats.totalQuizzes}</p>
+                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                              <span className="text-[9px] font-bold text-slate-400 uppercase">Quizzes</span>
+                              <p className="text-base font-bold text-indigo-600 mt-0.5">{dashboardStats.totalQuizzes}</p>
                             </div>
-                            <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-100">
-                              <span className="text-[10px] font-bold text-slate-400 uppercase">Avg Time</span>
-                              <p className="text-lg font-black text-amber-600 mt-0.5">{dashboardStats.avgTimePerQ}s</p>
+                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                              <span className="text-[9px] font-bold text-slate-400 uppercase">Avg Time</span>
+                              <p className="text-base font-bold text-amber-600 mt-0.5">{dashboardStats.avgTimePerQ}s</p>
                             </div>
                           </div>
                         </div>
 
-                        <div className="mt-3 pt-3 border-t border-slate-100">
+                        <div className="mt-2.5 pt-2 border-t border-slate-100">
                           <button
                             onClick={() => setView('dashboard')}
-                            className="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
+                            className="w-full py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
                           >
-                            <LayoutDashboard className="w-3.5 h-3.5" />
+                            <LayoutDashboard className="w-3 h-3" />
                             Open Detailed Analytics
                           </button>
                         </div>
@@ -1515,21 +1515,24 @@ export default function App() {
                     </div>
                   </>
                 ) : selectedSubject === 'Mathematics' && category === 'chapterBank' && !selectedMathSection ? (
-                  <div className="space-y-6">
-                    <button
-                      onClick={() => setSelectedSubject(null)}
-                      className="flex items-center text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors"
-                    >
-                      <ChevronLeft className="w-4 h-4 mr-1" />
-                      Back to Subjects
-                    </button>
-
-                    <div>
-                      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Mathematics Practice Sections</h2>
-                      <p className="mt-1 text-slate-500">Choose a specialised book or practice series to get started.</p>
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                      <div className="flex items-center gap-2.5">
+                        <button
+                          onClick={() => setSelectedSubject(null)}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" />
+                          Subjects
+                        </button>
+                        <div>
+                          <h2 className="text-sm font-bold text-slate-900 tracking-tight">Mathematics Practice Sections</h2>
+                          <p className="text-[11px] text-slate-500 font-medium">Choose a specialised book or practice series to get started</p>
+                        </div>
+                      </div>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {([
                         { key: 'spartan', icon: Shield, chip: 'from-amber-500 to-orange-600', title: 'Spartan Series', desc: 'High-yield, battle-tested challenges and conceptually advanced problem sets.' },
                         { key: 'pinnacle', icon: Crown, chip: 'from-blue-500 to-indigo-600', title: 'Pinnacle Series', desc: 'Comprehensive past year practice sets, exhaustive subject mapping, and exam models.' },
@@ -1538,24 +1541,24 @@ export default function App() {
                       ] as const).map(({ key, icon: Icon, chip, title, desc }) => (
                         <motion.div
                           key={key}
-                          whileHover={{ y: -4 }}
+                          whileHover={{ y: -2 }}
                           onClick={() => setSelectedMathSection(key)}
-                          className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-100 flex flex-col"
+                          className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md flex flex-col shadow-xs"
                         >
-                          <div className="flex items-center gap-3">
-                            <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-sm`}>
-                              <Icon className="w-5 h-5" />
+                          <div className="flex items-center gap-2.5">
+                            <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
+                              <Icon className="w-4 h-4" />
                             </div>
-                            <h3 className="text-base font-bold text-slate-800">{title}</h3>
+                            <h3 className="text-xs font-bold text-slate-800">{title}</h3>
                           </div>
-                          <p className="mt-3 flex-1 text-sm text-slate-500 leading-relaxed">{desc}</p>
-                          <div className="mt-4 flex items-center justify-between">
-                            <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                          <p className="mt-2 flex-1 text-[11px] text-slate-500 leading-relaxed">{desc}</p>
+                          <div className="mt-3 flex items-center justify-between">
+                            <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
                               {currentData['Mathematics']?.filter(ch => ch.section === key).length || 0} Chapters
                             </span>
-                            <div className="flex items-center text-sm font-semibold text-indigo-600">
+                            <div className="flex items-center text-xs font-semibold text-indigo-600">
                               Enter
-                              <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                              <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                             </div>
                           </div>
                         </motion.div>
@@ -1563,27 +1566,33 @@ export default function App() {
                     </div>
                   </div>
                 ) : (
-                  <div className="space-y-6">
-                    <button
-                      onClick={() => {
-                        if (selectedTopic) {
-                          setSelectedTopic(null);
-                        } else if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
-                          setSelectedMathSection(null);
-                        } else {
-                          setSelectedSubject(null);
-                        }
-                      }}
-                      className="flex items-center text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors"
-                    >
-                      <ChevronLeft className="w-4 h-4 mr-1" />
-                      {selectedTopic ? 'Back to Topics' : (selectedSubject === 'Mathematics' && category === 'chapterBank' ? 'Back to Math Sections' : 'Back to Subjects')}
-                    </button>
-
-                    <div className="flex items-center justify-between">
-                      <h2 className="text-2xl font-bold tracking-tight text-slate-900">{selectedSubject}</h2>
-                      <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                        category === 'mockErrors' ? 'bg-rose-50 text-rose-600' : 'bg-indigo-50 text-indigo-600'
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                      <div className="flex items-center gap-2.5">
+                        <button
+                          onClick={() => {
+                            if (selectedTopic) {
+                              setSelectedTopic(null);
+                            } else if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
+                              setSelectedMathSection(null);
+                            } else {
+                              setSelectedSubject(null);
+                            }
+                          }}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" />
+                          {selectedTopic ? 'Topics' : (selectedSubject === 'Mathematics' && category === 'chapterBank' ? 'Math Sections' : 'Subjects')}
+                        </button>
+                        <div>
+                          <h2 className="text-sm font-bold text-slate-900 tracking-tight">{selectedSubject}</h2>
+                          <p className="text-[11px] text-slate-500 font-medium">
+                            {category === 'mockErrors' ? 'Mock error remediation & weak topic drills' : 'Comprehensive chapter-wise question vault'}
+                          </p>
+                        </div>
+                      </div>
+                      <span className={`self-start sm:self-auto rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                        category === 'mockErrors' ? 'bg-rose-50 text-rose-600 border border-rose-100' : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
                       }`}>
                         {category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
                       </span>
@@ -1591,47 +1600,47 @@ export default function App() {
 
                     {/* Mock Errors: Attempt All Option & View Mode Toggle */}
                     {category === 'mockErrors' && (currentData[selectedSubject] || []).length > 0 && (
-                      <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="flex flex-col gap-3 rounded-xl border border-slate-200/80 bg-white p-3 sm:flex-row sm:items-center sm:justify-between shadow-xs">
                         <div>
-                          <h3 className="text-lg font-bold text-slate-800">Practice {selectedSubject} Mock Errors</h3>
-                          <p className="mt-1 text-sm text-slate-500">
+                          <h3 className="text-xs font-bold text-slate-800">Practice {selectedSubject} Mock Errors</h3>
+                          <p className="text-[11px] text-slate-500 font-medium">
                             {clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)} error questions recorded across {clubbedMockChapters.length} chapters.
                           </p>
                         </div>
-                        <div className="flex flex-wrap items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-2">
                           {/* Toggle Mode: Chapter-Wise vs By Error Bucket */}
-                          <div className="inline-flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-inner">
+                          <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
                             <button
                               onClick={() => setMockViewModePersisted('chapters')}
-                              className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 ${
                                 mockViewMode === 'chapters'
-                                  ? 'bg-white text-indigo-700 shadow-sm'
+                                  ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-slate-500 hover:text-slate-800'
                               }`}
                               title="Club all questions chapter-wise across Slow, Unattempted, and Wrong"
                             >
-                              <ListChecks className="w-4 h-4" />
+                              <ListChecks className="w-3.5 h-3.5" />
                               Chapter-Wise
                             </button>
                             <button
                               onClick={() => setMockViewModePersisted('buckets')}
-                              className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 ${
                                 mockViewMode === 'buckets'
-                                  ? 'bg-white text-indigo-700 shadow-sm'
+                                  ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-slate-500 hover:text-slate-800'
                               }`}
                               title="View questions grouped into Speed Issue, Unattempted, and Wrong buckets"
                             >
-                              <Layers className="w-4 h-4" />
+                              <Layers className="w-3.5 h-3.5" />
                               By Error Type
                             </button>
                           </div>
 
                           <button
                             onClick={() => startAllSubjectQuiz(selectedSubject)}
-                            className="inline-flex shrink-0 items-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-200 transition-all hover:shadow-lg hover:shadow-indigo-300 hover:-translate-y-0.5"
+                            className="inline-flex shrink-0 items-center rounded-lg bg-indigo-600 hover:bg-indigo-700 px-3.5 py-1 text-xs font-semibold text-white shadow-xs transition-all hover:shadow-sm"
                           >
-                            <Play className="w-4 h-4 mr-2" />
+                            <Play className="w-3.5 h-3.5 mr-1" />
                             Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})
                           </button>
                         </div>
@@ -1640,30 +1649,30 @@ export default function App() {
 
                     {category === 'mockErrors' ? (
                       (currentData[selectedSubject] || []).length === 0 ? (
-                        <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
-                          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-rose-50 text-rose-500 shadow-inner mb-4">
-                            <Flame className="h-8 w-8" />
+                        <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-xs">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-50 text-rose-500 mb-2">
+                            <Flame className="h-5 w-5" />
                           </div>
-                          <h3 className="text-lg font-bold text-slate-800">No Mock Errors Recorded</h3>
-                          <p className="mt-1 text-sm text-slate-500 max-w-md">
+                          <h3 className="text-xs font-bold text-slate-800">No Mock Errors Recorded</h3>
+                          <p className="mt-0.5 text-[11px] text-slate-500 max-w-md">
                             There are currently no mock error questions for {selectedSubject}. Errors captured from mocks will appear here.
                           </p>
                         </div>
                       ) : mockViewMode === 'chapters' ? (
                         /* Chapter-Wise Clubbed View (Compact List Format) */
-                        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div className="bg-white rounded-xl shadow-xs border border-slate-200/80 overflow-hidden">
                           {/* List Header */}
-                          <div className="px-6 py-4 border-b border-slate-100 bg-slate-50/80 flex items-center justify-between text-xs font-black uppercase tracking-wider text-slate-500">
+                          <div className="px-4 py-2 border-b border-slate-100 bg-slate-50/80 flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
                             <div className="flex items-center gap-2">
                               <span>Chapter Name ({clubbedMockChapters.length})</span>
                               <span className="text-[10px] text-slate-400 font-medium normal-case hidden sm:inline">(Ranked in descending order of total)</span>
                             </div>
-                            <div className="flex items-center gap-2 sm:gap-6 text-right">
-                              <span className="w-14 sm:w-16 text-amber-600">⚡ Slow</span>
-                              <span className="w-14 sm:w-16 text-rose-600">❌ Wrong</span>
-                              <span className="w-14 sm:w-16 text-blue-600">◯ Skipped</span>
-                              <span className="w-14 sm:w-16 text-indigo-700">🔥 Total</span>
-                              <span className="w-20 sm:w-24 text-center hidden sm:inline">Action</span>
+                            <div className="flex items-center gap-2 sm:gap-4 text-right">
+                              <span className="w-12 sm:w-14 text-amber-600">⚡ Slow</span>
+                              <span className="w-12 sm:w-14 text-rose-600">❌ Wrong</span>
+                              <span className="w-12 sm:w-14 text-blue-600">◯ Skipped</span>
+                              <span className="w-12 sm:w-14 text-indigo-700">🔥 Total</span>
+                              <span className="w-16 sm:w-20 text-center hidden sm:inline">Action</span>
                             </div>
                           </div>
 
@@ -1673,25 +1682,25 @@ export default function App() {
                               <div
                                 key={ch.topic}
                                 onClick={() => setActiveMockChapterModal(ch)}
-                                className="group px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-indigo-50/30 transition-all cursor-pointer"
+                                className="group px-4 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-indigo-50/30 transition-all cursor-pointer"
                               >
                                 {/* Left details */}
-                                <div className="flex items-center gap-3.5 min-w-0 flex-1">
-                                  <span className="w-7 h-7 rounded-lg bg-slate-100 group-hover:bg-indigo-100 group-hover:text-indigo-700 text-slate-500 text-xs font-black flex items-center justify-center shrink-0 transition-colors">
+                                <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                                  <span className="w-5 h-5 rounded-md bg-slate-100 group-hover:bg-indigo-100 group-hover:text-indigo-700 text-slate-500 text-[10px] font-bold flex items-center justify-center shrink-0 transition-colors">
                                     #{idx + 1}
                                   </span>
                                   <div className="min-w-0">
-                                    <h4 className="text-base font-black text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
+                                    <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
                                       {ch.topic}
                                     </h4>
-                                    <span className="text-xs text-slate-400 font-medium sm:hidden">
+                                    <span className="text-[10px] text-slate-400 font-medium sm:hidden">
                                       Click to view {ch.total} questions
                                     </span>
                                   </div>
                                 </div>
 
                                 {/* Right counts & practice button */}
-                                <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-6 shrink-0">
+                                <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-4 shrink-0">
                                   {/* Slow */}
                                   <button
                                     onClick={(e) => {
@@ -1699,14 +1708,14 @@ export default function App() {
                                       if (ch.slow > 0) startClubbedChapterQuiz(ch.topic, ch.slowQuestions, 'slow');
                                     }}
                                     disabled={ch.slow === 0}
-                                    className={`w-14 sm:w-16 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 ${
+                                    className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
                                       ch.slow > 0
-                                        ? 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 hover:scale-105'
+                                        ? 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100'
                                         : 'text-slate-300 bg-slate-50 cursor-default'
                                     }`}
                                     title={ch.slow > 0 ? `Practice ${ch.slow} slow questions` : 'No slow questions'}
                                   >
-                                    <Zap className="w-3.5 h-3.5 shrink-0" />
+                                    <Zap className="w-3 h-3 shrink-0" />
                                     <span>{ch.slow}</span>
                                   </button>
 
@@ -1717,14 +1726,14 @@ export default function App() {
                                       if (ch.wrong > 0) startClubbedChapterQuiz(ch.topic, ch.wrongQuestions, 'wrong');
                                     }}
                                     disabled={ch.wrong === 0}
-                                    className={`w-14 sm:w-16 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 ${
+                                    className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
                                       ch.wrong > 0
-                                        ? 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 hover:scale-105'
+                                        ? 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100'
                                         : 'text-slate-300 bg-slate-50 cursor-default'
                                     }`}
                                     title={ch.wrong > 0 ? `Practice ${ch.wrong} wrong questions` : 'No wrong questions'}
                                   >
-                                    <XCircle className="w-3.5 h-3.5 shrink-0" />
+                                    <XCircle className="w-3 h-3 shrink-0" />
                                     <span>{ch.wrong}</span>
                                   </button>
 
@@ -1735,20 +1744,20 @@ export default function App() {
                                       if (ch.unattempted > 0) startClubbedChapterQuiz(ch.topic, ch.unattemptedQuestions, 'unattempted');
                                     }}
                                     disabled={ch.unattempted === 0}
-                                    className={`w-14 sm:w-16 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 ${
+                                    className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
                                       ch.unattempted > 0
-                                        ? 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 hover:scale-105'
+                                        ? 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100'
                                         : 'text-slate-300 bg-slate-50 cursor-default'
                                     }`}
                                     title={ch.unattempted > 0 ? `Practice ${ch.unattempted} skipped questions` : 'No skipped questions'}
                                   >
-                                    <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                                    <AlertCircle className="w-3 h-3 shrink-0" />
                                     <span>{ch.unattempted}</span>
                                   </button>
 
                                   {/* Total */}
-                                  <div className="w-14 sm:w-16 py-1.5 rounded-xl text-xs font-black bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center gap-1">
-                                    <Flame className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                                  <div className="w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center gap-1">
+                                    <Flame className="w-3 h-3 text-indigo-600 shrink-0" />
                                     <span>{ch.total}</span>
                                   </div>
 
@@ -1758,10 +1767,10 @@ export default function App() {
                                       e.stopPropagation();
                                       startClubbedChapterQuiz(ch.topic, ch.questions);
                                     }}
-                                    className="w-20 sm:w-24 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-sm flex items-center justify-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
+                                    className="w-16 sm:w-20 py-1 rounded-lg text-[11px] font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center justify-center gap-1"
                                     title={`Start quiz with all ${ch.total} questions for ${ch.topic}`}
                                   >
-                                    <Play className="w-3 h-3 fill-current" />
+                                    <Play className="w-2.5 h-2.5 fill-current" />
                                     Practice
                                   </button>
                                 </div>
@@ -1771,11 +1780,11 @@ export default function App() {
                         </div>
                       ) : (
                         /* Original By Error Bucket View */
-                        <div className={`grid gap-6 ${
+                        <div className={`grid gap-3.5 ${
                           (currentData[selectedSubject] || []).length === 1
-                            ? 'grid-cols-1 max-w-2xl mx-auto w-full'
+                            ? 'grid-cols-1 max-w-xl mx-auto w-full'
                             : (currentData[selectedSubject] || []).length === 2
-                            ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto w-full'
+                            ? 'grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto w-full'
                             : 'grid-cols-1 lg:grid-cols-3 w-full'
                         }`}>
                           {(currentData[selectedSubject] || []).map((chapter, idx) => {
@@ -1800,9 +1809,9 @@ export default function App() {
                                   bgHeader: 'from-amber-500/10 via-amber-50/30 to-transparent',
                                   iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-amber-200',
                                   badge: 'bg-amber-100 text-amber-800 border border-amber-200',
-                                  topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300 hover:shadow-sm',
+                                  topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300',
                                   topicCount: 'bg-amber-200/70 text-amber-900',
-                                  btn: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-amber-200',
+                                  btn: 'bg-amber-500 hover:bg-amber-600 text-white shadow-xs',
                                   subText: 'Overtime & Speed Lags',
                                   icon: Zap
                                 }
@@ -1812,9 +1821,9 @@ export default function App() {
                                   bgHeader: 'from-blue-500/10 via-blue-50/30 to-transparent',
                                   iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-blue-200',
                                   badge: 'bg-blue-100 text-blue-800 border border-blue-200',
-                                  topicPill: 'bg-blue-50/80 hover:bg-blue-100 text-blue-950 border-blue-200/80 hover:border-blue-300 hover:shadow-sm',
+                                  topicPill: 'bg-blue-50/80 hover:bg-blue-100 text-blue-950 border-blue-200/80 hover:border-blue-300',
                                   topicCount: 'bg-blue-200/70 text-blue-900',
-                                  btn: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-blue-200',
+                                  btn: 'bg-blue-600 hover:bg-blue-700 text-white shadow-xs',
                                   subText: 'Skipped & Left Out',
                                   icon: AlertCircle
                                 }
@@ -1824,9 +1833,9 @@ export default function App() {
                                   bgHeader: 'from-indigo-500/10 via-indigo-50/30 to-transparent',
                                   iconBg: 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-indigo-200',
                                   badge: 'bg-indigo-100 text-indigo-800 border border-indigo-200',
-                                  topicPill: 'bg-indigo-50/80 hover:bg-indigo-100 text-indigo-950 border-indigo-200/80 hover:border-indigo-300 hover:shadow-sm',
+                                  topicPill: 'bg-indigo-50/80 hover:bg-indigo-100 text-indigo-950 border-indigo-200/80 hover:border-indigo-300',
                                   topicCount: 'bg-indigo-200/70 text-indigo-900',
-                                  btn: 'bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white shadow-indigo-200',
+                                  btn: 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs',
                                   subText: 'All English Mock Errors',
                                   icon: BookOpen
                                 }
@@ -1835,9 +1844,9 @@ export default function App() {
                                   bgHeader: 'from-rose-500/10 via-rose-50/30 to-transparent',
                                   iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-rose-200',
                                   badge: 'bg-rose-100 text-rose-800 border border-rose-200',
-                                  topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300 hover:shadow-sm',
+                                  topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300',
                                   topicCount: 'bg-rose-200/70 text-rose-900',
-                                  btn: 'bg-gradient-to-r from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 text-white shadow-rose-200',
+                                  btn: 'bg-rose-600 hover:bg-rose-700 text-white shadow-xs',
                                   subText: 'Incorrect Answers',
                                   icon: Flame
                                 };
@@ -1847,55 +1856,54 @@ export default function App() {
                             return (
                               <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, y: 15 }}
+                                initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.08 }}
-                                className={`flex flex-col rounded-3xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl ${theme.border}`}
+                                transition={{ delay: idx * 0.05 }}
+                                className={`flex flex-col rounded-xl border bg-white shadow-xs transition-all duration-200 hover:shadow-md ${theme.border}`}
                               >
                                 {/* Bucket Header */}
-                                <div className={`rounded-t-3xl bg-gradient-to-b p-6 pb-4 ${theme.bgHeader}`}>
+                                <div className={`rounded-t-xl bg-gradient-to-b p-3.5 pb-2.5 ${theme.bgHeader}`}>
                                   <div className="flex items-center justify-between">
-                                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl shadow-md ${theme.iconBg}`}>
-                                      <IconComp className="w-6 h-6" />
+                                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg shadow-xs ${theme.iconBg}`}>
+                                      <IconComp className="w-4 h-4" />
                                     </div>
-                                    <span className={`rounded-full px-3 py-1 text-xs font-bold ${theme.badge}`}>
+                                    <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${theme.badge}`}>
                                       {chapter.questions.length} {chapter.questions.length === 1 ? 'Question' : 'Questions'}
                                     </span>
                                   </div>
-                                  <h3 className="mt-4 text-xl font-black text-slate-900">{chapter.chapter_title}</h3>
-                                  <p className="mt-0.5 text-xs font-medium text-slate-500">{theme.subText}</p>
+                                  <h3 className="mt-2 text-sm font-bold text-slate-900">{chapter.chapter_title}</h3>
+                                  <p className="text-[11px] font-medium text-slate-500">{theme.subText}</p>
                                 </div>
 
                                 {/* Topic Sub-Buckets Breakdown */}
-                                <div className="flex-1 p-6 pt-3">
-                                  <div className="mb-3 flex items-center justify-between">
-                                    <span className="text-[11px] font-bold tracking-wider uppercase text-slate-400">
+                                <div className="flex-1 p-3.5 pt-2">
+                                  <div className="mb-2 flex items-center justify-between">
+                                    <span className="text-[10px] font-bold tracking-wider uppercase text-slate-400">
                                       Topic Breakdown ({sortedTopics.length})
                                     </span>
-                                    <span className="text-[11px] font-medium text-slate-400">Click topic to drill</span>
+                                    <span className="text-[10px] font-medium text-slate-400">Click to drill</span>
                                   </div>
 
                                   {sortedTopics.length === 0 ? (
-                                    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 py-10 text-center">
-                                      <p className="text-xs font-semibold text-slate-400">No questions in this bucket yet</p>
-                                      <p className="mt-1 text-[11px] text-slate-400">Captured mock errors will appear here</p>
+                                    <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-slate-200 py-6 text-center">
+                                      <p className="text-[11px] font-semibold text-slate-400">No questions in this bucket</p>
                                     </div>
                                   ) : (
-                                    <div className="flex flex-col gap-2 max-h-[320px] overflow-y-auto pr-1">
+                                    <div className="flex flex-col gap-1.5 max-h-[260px] overflow-y-auto pr-1">
                                       {sortedTopics.map(([topicName, count]) => (
                                         <button
                                           key={topicName}
                                           onClick={() => startMockTopicQuiz(chapter, topicName)}
-                                          className={`group flex items-center justify-between rounded-xl border p-2.5 px-3 text-left text-xs font-semibold transition-all duration-150 ${theme.topicPill}`}
+                                          className={`group flex items-center justify-between rounded-lg border p-2 px-2.5 text-left text-xs font-semibold transition-all duration-150 ${theme.topicPill}`}
                                         >
-                                          <div className="flex items-center gap-2 truncate">
+                                          <div className="flex items-center gap-1.5 truncate">
                                             <span className="truncate">{topicName}</span>
                                           </div>
-                                          <div className="flex items-center gap-1.5 shrink-0 ml-2">
-                                            <span className={`rounded-md px-2 py-0.5 text-[11px] font-black ${theme.topicCount}`}>
+                                          <div className="flex items-center gap-1 shrink-0 ml-1.5">
+                                            <span className={`rounded px-1.5 py-0.2 text-[10px] font-bold ${theme.topicCount}`}>
                                               {count}
                                             </span>
-                                            <ChevronRight className="w-3.5 h-3.5 opacity-40 transition-transform group-hover:translate-x-0.5 group-hover:opacity-100" />
+                                            <ChevronRight className="w-3 h-3 opacity-40 transition-transform group-hover:translate-x-0.5 group-hover:opacity-100" />
                                           </div>
                                         </button>
                                       ))}
@@ -1904,14 +1912,14 @@ export default function App() {
                                 </div>
 
                                 {/* Bucket Practice All Action */}
-                                <div className="border-t border-slate-100 p-4 bg-slate-50/50 rounded-b-3xl flex items-center gap-2">
+                                <div className="border-t border-slate-100 p-2.5 bg-slate-50/50 rounded-b-xl flex items-center gap-2">
                                   <button
                                     onClick={() => startQuiz(chapter)}
                                     disabled={chapter.questions.length === 0}
-                                    className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition-all shadow-sm disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
+                                    className={`flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-xs font-semibold transition-all shadow-xs disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
                                   >
-                                    <Play className="w-3.5 h-3.5 fill-current" />
-                                    Practice All {chapter.chapter_title} ({chapter.questions.length})
+                                    <Play className="w-3 h-3 fill-current" />
+                                    Practice All ({chapter.questions.length})
                                   </button>
                                   {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
                                     <button
@@ -1919,10 +1927,10 @@ export default function App() {
                                         const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
                                         if (r) openReview(r, 'home');
                                       }}
-                                      className="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors shadow-sm"
+                                      className="p-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors shadow-xs"
                                       title="Review last attempt"
                                     >
-                                      <History className="w-4 h-4" />
+                                      <History className="w-3.5 h-3.5" />
                                     </button>
                                   )}
                                 </div>
@@ -1932,7 +1940,7 @@ export default function App() {
                         </div>
                       )
                     ) : (
-                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                         {(() => {
                           const relevantChapters = (currentData[selectedSubject] || []).filter(chapter =>
                             !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
@@ -1956,22 +1964,22 @@ export default function App() {
                               return (
                                 <motion.div
                                   key={idx}
-                                  whileHover={{ y: -4 }}
+                                  whileHover={{ y: -2 }}
                                   onClick={() => setSelectedTopic(topic)}
-                                  className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
+                                  className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md shadow-xs flex flex-col justify-between"
                                 >
                                   <div className="flex items-center justify-between">
-                                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
-                                      <Layers className="w-5 h-5" />
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-xs">
+                                      <Layers className="w-4 h-4" />
                                     </div>
-                                    <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                                    <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
                                       {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
                                     </span>
                                   </div>
-                                  <h3 className="mt-4 text-base font-bold capitalize text-slate-800">{displayTitle}</h3>
-                                  <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
+                                  <h3 className="mt-2.5 text-xs font-bold capitalize text-slate-800">{displayTitle}</h3>
+                                  <div className="mt-2 flex items-center text-xs font-semibold text-indigo-600">
                                     {isMathSection ? 'View Sets' : 'View Chapters'}
-                                    <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                    <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                   </div>
                                 </motion.div>
                               );
@@ -1989,24 +1997,26 @@ export default function App() {
                           return chaptersToRender.map((chapter, idx) => (
                             <motion.div
                               key={idx}
-                              whileHover={{ y: -4 }}
+                              whileHover={{ y: -2 }}
                               onClick={() => startQuiz(chapter)}
-                              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100"
+                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md shadow-xs flex flex-col justify-between"
                             >
                               <div className="flex items-center justify-between">
-                                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-sm">
-                                  <BookOpen className="w-5 h-5" />
+                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-xs">
+                                  <BookOpen className="w-4 h-4" />
                                 </div>
-                                <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
+                                <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
                                   {chapter.set_name ? `Set ${chapter.set_name.replace('set_', '')}` : `Ch ${chapter.chapter_num}`}
                                 </span>
                               </div>
-                              <h3 className="mt-4 text-base font-bold text-slate-800">{chapter.chapter_title}</h3>
-                              <p className="mt-1 text-sm text-slate-500">{chapter.questions.length} Questions</p>
-                              <div className="mt-3 flex items-center justify-between">
-                                <div className="flex items-center text-sm font-semibold text-indigo-600">
+                              <div>
+                                <h3 className="mt-2.5 text-xs font-bold text-slate-800 line-clamp-1">{chapter.chapter_title}</h3>
+                                <p className="mt-0.5 text-[11px] text-slate-500">{chapter.questions.length} Questions</p>
+                              </div>
+                              <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
+                                <div className="flex items-center text-xs font-semibold text-indigo-600">
                                   Start Practice
-                                  <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                  <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                 </div>
                                 {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
                                   <button
@@ -2015,10 +2025,10 @@ export default function App() {
                                       const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
                                       if (r) openReview(r, 'home');
                                     }}
-                                    className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
+                                    className="p-1.5 rounded-md bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
                                     title="Review last attempt"
                                   >
-                                    <History className="w-4 h-4" />
+                                    <History className="w-3.5 h-3.5" />
                                   </button>
                                 )}
                               </div>
@@ -2068,94 +2078,100 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               className="w-full"
             >
-              <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                  <h1 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">Bookmarked Questions</h1>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Review your saved questions across all subjects.</p>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white px-4 py-2.5 rounded-xl border border-slate-200/80 shadow-xs mb-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                    <BookmarkIcon className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <div>
+                    <h1 className="text-sm font-bold text-slate-900 tracking-tight">Bookmarked Questions</h1>
+                    <p className="text-[11px] text-slate-500 font-medium">Review your saved questions across all subjects</p>
+                  </div>
                 </div>
                 {selectedBookmarkSubject === null && (
                   <button
                     onClick={() => setView('home')}
-                    className="self-start sm:self-auto flex items-center text-xs font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200/90 px-3.5 py-1.5 rounded-lg shadow-xs transition-colors"
+                    className="self-start sm:self-auto flex items-center text-xs font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-lg transition-colors"
                   >
-                    <ChevronLeft className="w-3.5 h-3.5 mr-1" />
+                    <ChevronLeft className="w-3.5 h-3.5 mr-0.5" />
                     Back to Practice
                   </button>
                 )}
               </div>
 
               {!user ? (
-                <div className="text-center py-16 bg-white rounded-2xl shadow-xs border border-slate-200/90 max-w-lg mx-auto">
-                  <div className="w-14 h-14 bg-slate-100 text-slate-400 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <LogIn className="w-7 h-7" />
+                <div className="text-center py-12 bg-white rounded-xl shadow-xs border border-slate-200/90 max-w-md mx-auto">
+                  <div className="w-10 h-10 bg-slate-100 text-slate-400 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <LogIn className="w-5 h-5" />
                   </div>
-                  <h2 className="text-xl font-black text-slate-900 mb-2">Login to View Bookmarks</h2>
-                  <button onClick={handleLogin} className="px-6 py-2.5 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition-all shadow-xs">
+                  <h2 className="text-base font-bold text-slate-900 mb-1">Login to View Bookmarks</h2>
+                  <p className="text-slate-500 text-xs mb-3.5">Save tricky questions to cloud storage across devices</p>
+                  <button onClick={handleLogin} className="px-4 py-1.5 bg-blue-600 text-white rounded-lg text-xs font-bold hover:bg-blue-700 transition-all shadow-xs">
                     Login with Google
                   </button>
                 </div>
               ) : loadingBookmarks ? (
-                <div className="flex flex-col items-center justify-center py-16">
-                  <Loader2 className="w-8 h-8 text-blue-600 animate-spin mb-3" />
-                  <p className="text-slate-500 font-bold text-xs">Loading bookmarks...</p>
+                <div className="flex flex-col items-center justify-center py-12">
+                  <Loader2 className="w-6 h-6 text-blue-600 animate-spin mb-2" />
+                  <p className="text-slate-500 font-semibold text-xs">Loading bookmarks...</p>
                 </div>
               ) : bookmarks.length === 0 ? (
-                <div className="text-center py-16 bg-white rounded-2xl shadow-xs border border-slate-200/90 max-w-lg mx-auto">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <BookmarkIcon className="w-7 h-7" />
+                <div className="text-center py-12 bg-white rounded-xl shadow-xs border border-slate-200/90 max-w-md mx-auto">
+                  <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <BookmarkIcon className="w-5 h-5" />
                   </div>
-                  <h2 className="text-xl font-black text-slate-900 mb-2">No Bookmarks Yet</h2>
-                  <p className="text-slate-500 text-xs mb-5">Bookmark questions during practice to review them later.</p>
-                  <button onClick={() => setView('home')} className="px-6 py-2.5 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition-all shadow-xs">
+                  <h2 className="text-base font-bold text-slate-900 mb-1">No Bookmarks Yet</h2>
+                  <p className="text-slate-500 text-xs mb-3.5">Bookmark questions during practice to review them later.</p>
+                  <button onClick={() => setView('home')} className="px-4 py-1.5 bg-blue-600 text-white rounded-lg text-xs font-bold hover:bg-blue-700 transition-all shadow-xs">
                     Start Practicing
                   </button>
                 </div>
               ) : (
-                <div className="space-y-4">
+                <div>
                   {selectedBookmarkSubject === null ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
                       {(Object.entries(bookmarksBySubjectAndChapter) as [string, Record<string, Bookmark[]>][]).map(([subject, chaptersObj]) => {
                         const allSubjectBookmarks = Object.values(chaptersObj).flat();
                         const totalChapters = Object.keys(chaptersObj).length;
                         return (
                           <motion.div
                             key={subject}
-                            whileHover={{ y: -3 }}
-                            className="bg-white rounded-xl p-4 sm:p-4.5 shadow-xs border border-slate-200/90 group cursor-pointer flex flex-col justify-between"
+                            whileHover={{ y: -2 }}
+                            className="bg-white rounded-xl p-3 shadow-xs border border-slate-200/80 group cursor-pointer flex flex-col justify-between hover:border-blue-300 transition-all"
                             onClick={() => setSelectedBookmarkSubject(subject)}
                           >
                             <div>
-                              <div className="flex items-start justify-between mb-3">
-                                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                  <Layers className="w-5 h-5" />
+                              <div className="flex items-start justify-between mb-2">
+                                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                  <Layers className="w-4 h-4" />
                                 </div>
-                                <span className="px-2 py-0.5 bg-slate-50 text-slate-500 text-[10px] font-bold rounded-md border border-slate-100 uppercase tracking-wider">
+                                <span className="px-1.5 py-0.2 bg-slate-50 text-slate-500 text-[9px] font-bold rounded border border-slate-100 uppercase tracking-wider">
                                   {totalChapters} Ch
                                 </span>
                               </div>
                               
-                              <h3 className="text-base font-black text-slate-800 mb-1 group-hover:text-blue-600 transition-colors capitalize">
+                              <h3 className="text-xs font-bold text-slate-800 mb-0.5 group-hover:text-blue-600 transition-colors capitalize">
                                 {subject}
                               </h3>
-                              <p className="text-slate-500 font-medium mb-6">
+                              <p className="text-[11px] text-slate-400 font-medium mb-3">
                                 {allSubjectBookmarks.length} Bookmarked {allSubjectBookmarks.length === 1 ? 'Question' : 'Questions'}
                               </p>
                             </div>
 
-                            <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
-                              <div className="flex items-center font-bold text-blue-600 group-hover:translate-x-2 transition-transform">
+                            <div className="flex items-center justify-between mt-auto pt-2 border-t border-slate-100 text-xs">
+                              <div className="flex items-center font-semibold text-blue-600 group-hover:translate-x-0.5 transition-transform text-[11px]">
                                 View Chapters
-                                <ChevronRight className="w-5 h-5 ml-1" />
+                                <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
                               </div>
                               <button
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   startSubjectBookmarkQuiz(subject, allSubjectBookmarks);
                                 }}
-                                className="p-3 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white rounded-xl font-bold transition-all flex items-center justify-center hover:scale-105"
+                                className="p-1.5 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg font-bold transition-all flex items-center justify-center"
                                 title={`Practice ${subject} Bookmarks`}
                               >
-                                <Play className="w-4 h-4 fill-current" />
+                                <Play className="w-3 h-3 fill-current" />
                               </button>
                             </div>
                           </motion.div>
@@ -2168,76 +2184,74 @@ export default function App() {
                       const chaptersObj: Record<string, Bookmark[]> = bookmarksBySubjectAndChapter[subject] || {};
                       const allSubjectBookmarks: Bookmark[] = Object.values(chaptersObj).flat() as Bookmark[];
                       return (
-                        <div className="space-y-8">
-                          {/* Back Button */}
-                          <button 
-                            onClick={() => setSelectedBookmarkSubject(null)}
-                            className="flex items-center text-slate-500 font-bold hover:text-slate-800 transition-colors"
-                          >
-                            <ChevronLeft className="w-5 h-5 mr-1" />
-                            Back to Bookmarked Subjects
-                          </button>
-
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
-                            <div className="flex items-center space-x-4">
-                              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                                <Layers className="w-6 h-6" />
+                        <div className="space-y-3">
+                          {/* Back & Subject Header */}
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white px-3.5 py-2.5 rounded-xl border border-slate-200/80 shadow-xs">
+                            <div className="flex items-center space-x-3">
+                              <button 
+                                onClick={() => setSelectedBookmarkSubject(null)}
+                                className="p-1 rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors"
+                                title="Back to Bookmarked Subjects"
+                              >
+                                <ChevronLeft className="w-4 h-4" />
+                              </button>
+                              <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                                <Layers className="w-4 h-4" />
                               </div>
                               <div>
-                                <h2 className="text-2xl font-black text-slate-800 capitalize">{subject} Bookmarks</h2>
-                                <p className="text-sm text-slate-500 font-medium">{allSubjectBookmarks.length} bookmarked {allSubjectBookmarks.length === 1 ? 'question' : 'questions'}</p>
+                                <h2 className="text-xs font-bold text-slate-800 capitalize leading-tight">{subject} Bookmarks</h2>
+                                <p className="text-[10px] text-slate-400 font-medium">{allSubjectBookmarks.length} bookmarked {allSubjectBookmarks.length === 1 ? 'question' : 'questions'}</p>
                               </div>
                             </div>
                             <button
                               onClick={() => startSubjectBookmarkQuiz(subject, allSubjectBookmarks)}
-                              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md shadow-blue-100 flex items-center justify-center hover:-translate-y-0.5"
+                              className="px-3.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-all shadow-xs flex items-center justify-center self-start sm:self-auto"
                             >
-                              <Play className="w-4 h-4 mr-2 fill-current" />
-                              Practice Subject
+                              <Play className="w-3 h-3 mr-1.5 fill-current" />
+                              Practice All {subject}
                             </button>
                           </div>
 
                           {/* Chapters Accordion */}
-                          <div className="space-y-6">
+                          <div className="space-y-2.5">
                             {Object.entries(chaptersObj).map(([chapterTitle, chapterBookmarks]) => {
                               const key = `${subject}|${chapterTitle}`;
-                              // Collapsed by default: expanded only if in state as true
                               const isExpanded = expandedChapters[key] === true;
                               return (
-                                <div key={chapterTitle} className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                                <div key={chapterTitle} className="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs hover:border-slate-300 transition-all">
                                   {/* Accordion Header */}
                                   <div 
                                     onClick={() => toggleChapterExpand(subject, chapterTitle)}
-                                    className="p-6 flex items-center justify-between cursor-pointer hover:bg-slate-50/50 transition-colors select-none"
+                                    className="px-3.5 py-2.5 flex items-center justify-between cursor-pointer hover:bg-slate-50/50 transition-colors select-none"
                                   >
-                                    <div className="flex items-center space-x-4 flex-1">
-                                      <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-600 flex items-center justify-center">
-                                        <BookOpen className="w-5 h-5" />
+                                    <div className="flex items-center space-x-2.5 flex-1 min-w-0">
+                                      <div className="w-7 h-7 rounded-lg bg-slate-50 text-slate-600 flex items-center justify-center shrink-0">
+                                        <BookOpen className="w-3.5 h-3.5" />
                                       </div>
-                                      <div>
-                                        <h3 className="font-extrabold text-slate-800 text-lg leading-snug">{chapterTitle}</h3>
-                                        <span className="inline-flex items-center text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full mt-1">
+                                      <div className="min-w-0">
+                                        <h3 className="font-bold text-slate-800 text-xs leading-tight truncate">{chapterTitle}</h3>
+                                        <span className="inline-flex items-center text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.2 rounded mt-0.5">
                                           {chapterBookmarks.length} saved
                                         </span>
                                       </div>
                                     </div>
                                     
-                                    <div className="flex items-center space-x-3" onClick={(e) => e.stopPropagation()}>
+                                    <div className="flex items-center space-x-1.5" onClick={(e) => e.stopPropagation()}>
                                       {/* Practice Chapter Bookmarks Button */}
                                       <button
                                         onClick={() => startChapterBookmarkQuiz(subject, chapterTitle, chapterBookmarks)}
-                                        className="p-3 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-xl font-bold transition-all flex items-center justify-center hover:scale-105"
+                                        className="p-1.5 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg transition-all flex items-center justify-center"
                                         title={`Practice ${chapterTitle} Bookmarks`}
                                       >
-                                        <Play className="w-4 h-4 fill-current" />
+                                        <Play className="w-3 h-3 fill-current" />
                                       </button>
                                       
                                       {/* Toggle Chevron */}
                                       <button
                                         onClick={() => toggleChapterExpand(subject, chapterTitle)}
-                                        className="p-2 text-slate-400 hover:text-slate-600 transition-colors"
+                                        className="p-1 text-slate-400 hover:text-slate-600 transition-colors"
                                       >
-                                        <ChevronRight className={`w-6 h-6 transform transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
+                                        <ChevronRight className={`w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
                                       </button>
                                     </div>
                                   </div>
@@ -2249,57 +2263,57 @@ export default function App() {
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: 'auto', opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="border-t border-slate-50 p-6 bg-slate-50/20"
+                                        transition={{ duration: 0.15 }}
+                                        className="border-t border-slate-100 p-3 bg-slate-50/20"
                                       >
-                                        <div className="grid grid-cols-1 gap-6">
+                                        <div className="grid grid-cols-1 gap-2.5">
                                           {chapterBookmarks.map((bookmark) => (
                                             <motion.div
                                               key={bookmark.id}
-                                              className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 relative group"
+                                              className="bg-white rounded-xl p-3 shadow-xs border border-slate-200/80 relative group"
                                             >
-                                              <div className="flex justify-between items-start mb-4">
-                                                <div className="flex items-center space-x-3">
-                                                  <span className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full ${
-                                                    bookmark.category === 'mockErrors' ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'
+                                              <div className="flex justify-between items-start mb-2">
+                                                <div className="flex items-center space-x-2">
+                                                  <span className={`px-2 py-0.5 text-[9px] font-bold uppercase rounded-md ${
+                                                    bookmark.category === 'mockErrors' ? 'bg-red-50 text-red-600 border border-red-100' : 'bg-blue-50 text-blue-600 border border-blue-100'
                                                   }`}>
                                                     {bookmark.category === 'mockErrors' ? 'Mock Error' : 'Chapter Bank'}
                                                   </span>
                                                 </div>
                                                 <button
                                                   onClick={() => bookmark.id && toggleBookmark(bookmark.question)}
-                                                  className="p-2 text-slate-300 hover:text-red-600 transition-colors"
+                                                  className="p-1 text-slate-300 hover:text-rose-600 transition-colors"
                                                   title="Remove Bookmark"
                                                 >
-                                                  <Trash2 className="w-5 h-5" />
+                                                  <Trash2 className="w-3.5 h-3.5" />
                                                 </button>
                                               </div>
-                                              <h4 className="text-lg font-bold text-slate-800 mb-6 leading-relaxed">
+                                              <h4 className="text-xs font-bold text-slate-800 mb-2.5 leading-relaxed">
                                                 {bookmark.question.question}
                                               </h4>
-                                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                                 {Object.entries(bookmark.question.options).map(([key, value]) => (
                                                   <div
                                                     key={key}
-                                                    className={`p-4 rounded-xl border-2 flex items-center ${
+                                                    className={`p-2 rounded-lg border flex items-center ${
                                                       bookmark.question.answer === key
-                                                        ? 'border-green-500 bg-green-50'
-                                                        : 'border-slate-50 bg-slate-50/50'
+                                                        ? 'border-emerald-500 bg-emerald-50/60'
+                                                        : 'border-slate-200 bg-slate-50/40'
                                                     }`}
                                                   >
-                                                    <span className={`w-8 h-8 flex items-center justify-center rounded-lg mr-4 font-bold ${
-                                                      bookmark.question.answer === key ? 'bg-green-500 text-white' : 'bg-slate-200 text-slate-500'
+                                                    <span className={`w-5 h-5 flex items-center justify-center rounded text-xs mr-2 font-bold ${
+                                                      bookmark.question.answer === key ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-600'
                                                     }`}>
                                                       {key.toUpperCase()}
                                                     </span>
-                                                    <span className="text-slate-700 font-medium">{value}</span>
+                                                    <span className="text-slate-700 text-xs font-medium">{value}</span>
                                                   </div>
                                                 ))}
                                               </div>
                                               {bookmark.question.solution && (
-                                                <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
-                                                  <p className="text-blue-700 text-sm leading-relaxed">
-                                                    <span className="font-bold">Solution:</span> {bookmark.question.solution}
+                                                <div className="mt-2.5 p-2 bg-blue-50/60 rounded-lg border border-blue-100 text-xs">
+                                                  <p className="text-blue-900 leading-relaxed">
+                                                    <span className="font-bold text-blue-700">Solution:</span> {bookmark.question.solution}
                                                   </p>
                                                 </div>
                                               )}
@@ -2371,125 +2385,111 @@ export default function App() {
                   </div>
                 </div>
               ) : (
-                <div className="space-y-4">
+                <div className="space-y-2.5">
                   {/* Dashboard Top Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 sm:p-5 rounded-2xl shadow-xs border border-slate-200/90">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white px-3.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80">
                     <div>
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider mb-1">
-                        <span>SSC CGL Analytics</span>
+                      <div className="flex items-center gap-1.5">
+                        <span className="px-1.5 py-0.2 rounded bg-blue-50 text-blue-700 text-[9px] font-bold uppercase tracking-wider">SSC CGL Analytics</span>
+                        <h2 className="text-xs font-bold text-slate-900 leading-none">Performance Dashboard</h2>
                       </div>
-                      <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">Performance Dashboard</h2>
-                      <p className="text-slate-500 text-xs font-medium mt-0.5">
+                      <p className="text-slate-400 text-[10px] font-medium mt-0.5">
                         Comprehensive overview of your accuracy, pacing, and subject strengths.
                       </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5">
                       <button
                         onClick={() => setView('heatmap')}
-                        className="px-3.5 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs transition-colors flex items-center gap-1.5 border border-rose-100"
+                        className="px-2.5 py-1 rounded-md bg-rose-50 hover:bg-rose-100 text-rose-700 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-rose-100 shadow-xs"
                       >
-                        <Flame className="w-3.5 h-3.5 text-rose-600" />
+                        <Flame className="w-3 h-3 text-rose-600" />
                         Heatmap
                       </button>
                       <button
                         onClick={() => setView('home')}
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-xs transition-all shadow-xs flex items-center gap-1.5"
+                        className="px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold text-[11px] transition-all shadow-xs flex items-center gap-1"
                       >
-                        <BookOpen className="w-3.5 h-3.5" />
+                        <BookOpen className="w-3 h-3" />
                         Practice Hub
                       </button>
                     </div>
                   </div>
 
-                  {/* Summary KPI Cards */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                  {/* Summary KPI Cards (Single-Row Compact) */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-1.5">
                     {/* Total Quizzes */}
-                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Total Quizzes</div>
-                        <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                          <Trophy className="w-4 h-4" />
-                        </div>
+                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-md bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                        <Trophy className="w-3 h-3" />
                       </div>
-                      <div className="text-2xl font-black text-slate-900 mb-0.5">{dashboardStats.totalQuizzes}</div>
-                      <div className="text-[11px] text-slate-400 font-medium">
-                        {dashboardStats.mockCount} Mocks • {dashboardStats.practiceCount} Practice
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-slate-900 leading-none">{dashboardStats.totalQuizzes}</div>
+                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Total Quizzes</div>
                       </div>
                     </div>
 
                     {/* Overall Accuracy */}
-                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Overall Accuracy</div>
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                          dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-600' :
-                          dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-600' :
-                          'bg-rose-50 text-rose-600'
-                        }`}>
-                          <Target className="w-4 h-4" />
-                        </div>
-                      </div>
-                      <div className={`text-2xl font-black mb-0.5 ${
-                        dashboardStats.overallAccuracy >= 75 ? 'text-emerald-600' :
-                        dashboardStats.overallAccuracy >= 50 ? 'text-amber-600' :
-                        'text-rose-600'
+                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
+                      <div className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 ${
+                        dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-600' :
+                        dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-600' :
+                        'bg-rose-50 text-rose-600'
                       }`}>
-                        {dashboardStats.overallAccuracy}%
+                        <Target className="w-3 h-3" />
                       </div>
-                      <div className="text-[11px] text-slate-400 font-medium">
-                        {dashboardStats.totalCorrect} / {dashboardStats.totalQuestions} questions correct
+                      <div className="min-w-0">
+                        <div className={`text-sm font-bold leading-none ${
+                          dashboardStats.overallAccuracy >= 75 ? 'text-emerald-600' :
+                          dashboardStats.overallAccuracy >= 50 ? 'text-amber-600' :
+                          'text-rose-600'
+                        }`}>
+                          {dashboardStats.overallAccuracy}%
+                        </div>
+                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Accuracy</div>
                       </div>
                     </div>
 
                     {/* Total Questions */}
-                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Questions Solved</div>
-                        <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
-                          <ListChecks className="w-4 h-4" />
-                        </div>
+                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-md bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                        <ListChecks className="w-3 h-3" />
                       </div>
-                      <div className="text-2xl font-black text-purple-600 mb-0.5">{dashboardStats.totalQuestions}</div>
-                      <div className="text-[11px] text-slate-400 font-medium">
-                        Across all topics & drills
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-purple-600 leading-none">{dashboardStats.totalQuestions}</div>
+                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Questions Solved</div>
                       </div>
                     </div>
 
                     {/* Avg Time per Question */}
-                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Avg. Time / Question</div>
-                        <div className="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center">
-                          <Clock className="w-4 h-4" />
-                        </div>
+                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-md bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
+                        <Clock className="w-3 h-3" />
                       </div>
-                      <div className="text-2xl font-black text-orange-600 mb-0.5">{dashboardStats.avgTimePerQ}s</div>
-                      <div className="text-[11px] text-slate-400 font-medium">
-                        {dashboardStats.avgTimePerQ > 0 && dashboardStats.avgTimePerQ <= 45 ? '⚡ Fast pace (< 45s)' :
-                         dashboardStats.avgTimePerQ > 0 && dashboardStats.avgTimePerQ <= 70 ? '✓ Solid pacing (< 70s)' :
-                         'Focus on question speed'}
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-orange-600 leading-none">{dashboardStats.avgTimePerQ}s</div>
+                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Avg Time / Q</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Subject-Wise Performance Breakdown */}
-                  <div className="bg-white rounded-2xl shadow-xs border border-slate-200/90 p-4 sm:p-5">
-                    <div className="flex items-center justify-between mb-4">
+                  <div className="bg-white rounded-lg shadow-xs border border-slate-200/80 p-3">
+                    <div className="flex items-center justify-between mb-2">
                       <div>
-                        <h3 className="text-xl font-black text-slate-900">Subject Breakdown</h3>
-                        <p className="text-slate-500 text-sm font-medium mt-0.5">Click any subject to filter recent attempts</p>
+                        <h3 className="text-xs font-bold text-slate-900 leading-none">Subject Breakdown</h3>
+                        <p className="text-slate-400 text-[10px] font-medium mt-0.5">Click any subject to filter recent attempts</p>
                       </div>
                       {dashSubjectFilter !== 'all' && (
                         <button
                           onClick={() => setDashSubjectFilter('all')}
-                          className="text-xs font-bold text-blue-600 hover:text-blue-700 bg-blue-50 px-3 py-1.5 rounded-lg transition-colors"
+                          className="text-[11px] font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2 py-0.5 rounded transition-colors"
                         >
-                          Clear Subject Filter
+                          Clear Filter
                         </button>
                       )}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
                       {['Mathematics', 'Reasoning', 'English', 'General Awareness'].map((subName) => {
                         const theme = getSubjectTheme(subName);
                         const Icon = theme.icon;
@@ -2500,17 +2500,17 @@ export default function App() {
                           <div
                             key={subName}
                             onClick={() => setDashSubjectFilter(isSelected ? 'all' : subName)}
-                            className={`cursor-pointer p-5 rounded-2xl border transition-all duration-200 ${
+                            className={`cursor-pointer p-2.5 rounded-lg border transition-all duration-150 ${
                               isSelected
-                                ? 'ring-2 ring-blue-500 shadow-md bg-blue-50/20 border-blue-200'
-                                : 'bg-slate-50/50 hover:bg-white hover:shadow-md border-slate-100'
+                                ? 'ring-1 ring-blue-500 shadow-xs bg-blue-50/20 border-blue-200'
+                                : 'bg-slate-50/50 hover:bg-white hover:shadow-xs border-slate-200/80'
                             }`}
                           >
-                            <div className="flex items-center justify-between mb-4">
-                              <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br ${theme.gradient} text-white shadow-sm`}>
-                                <Icon className="w-5 h-5" />
+                            <div className="flex items-center justify-between mb-1.5">
+                              <div className={`w-6 h-6 rounded-md flex items-center justify-center bg-gradient-to-br ${theme.gradient} text-white shadow-xs`}>
+                                <Icon className="w-3 h-3" />
                               </div>
-                              <span className={`text-xs font-bold px-2 py-0.5 rounded-md ${
+                              <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded ${
                                 stat.accuracy >= 75 ? 'bg-emerald-100 text-emerald-800' :
                                 stat.accuracy >= 50 ? 'bg-amber-100 text-amber-800' :
                                 stat.totalQ > 0 ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-500'
@@ -2519,17 +2519,17 @@ export default function App() {
                               </span>
                             </div>
 
-                            <h4 className="font-bold text-slate-900 text-base mb-1">{subName}</h4>
+                            <h4 className="font-bold text-slate-900 text-xs mb-1 leading-none">{subName}</h4>
 
                             {/* Accuracy Bar */}
-                            <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden mb-3">
+                            <div className="w-full bg-slate-200 rounded-full h-1 overflow-hidden mb-1.5">
                               <div
                                 className={`h-full rounded-full transition-all duration-500 ${theme.bar}`}
                                 style={{ width: `${stat.accuracy}%` }}
                               />
                             </div>
 
-                            <div className="grid grid-cols-2 gap-2 text-xs">
+                            <div className="grid grid-cols-2 gap-1 text-[10px]">
                               <div>
                                 <span className="text-slate-400 block font-medium">Questions:</span>
                                 <span className="font-bold text-slate-700">{stat.totalQ} ({stat.correct} ✓)</span>
@@ -2546,50 +2546,50 @@ export default function App() {
                   </div>
 
                   {/* Recent Activity Section */}
-                  <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                  <div className="bg-white rounded-xl shadow-xs border border-slate-200/80 overflow-hidden">
                     {/* Header with Filters */}
-                    <div className="p-6 sm:p-8 border-b border-slate-100 space-y-4">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div className="flex items-center gap-3">
-                          <h3 className="text-xl font-black text-slate-900">Recent Activity</h3>
-                          <span className="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">
+                    <div className="p-3 sm:p-3.5 border-b border-slate-100 space-y-2.5">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-xs font-bold text-slate-900">Recent Activity</h3>
+                          <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-bold">
                             {filteredUserResults.length} {filteredUserResults.length === 1 ? 'Attempt' : 'Attempts'}
                           </span>
                           {userResults.length > 0 && (
                             <button
                               onClick={handleClearAllResults}
                               disabled={loadingResults}
-                              className="flex items-center gap-1.5 px-3 py-1 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-xl text-xs font-bold transition-all disabled:opacity-50"
+                              className="flex items-center gap-1 px-2.5 py-0.5 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-md text-[10px] font-bold transition-all disabled:opacity-50"
                               title="Clear all recent activity records"
                             >
-                              <Trash2 className="w-3.5 h-3.5" />
+                              <Trash2 className="w-3 h-3" />
                               <span>Clear History</span>
                             </button>
                           )}
                         </div>
 
                         {/* Search Bar */}
-                        <div className="relative w-full sm:w-64">
-                          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                        <div className="relative w-full sm:w-60">
+                          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
                           <input
                             type="text"
                             value={dashSearchQuery}
                             onChange={(e) => setDashSearchQuery(e.target.value)}
                             placeholder="Search chapter or topic..."
-                            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                            className="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:bg-white transition-all"
                           />
                         </div>
                       </div>
 
                       {/* Filter Controls Row */}
-                      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                      <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
                         {/* Category Tabs */}
-                        <div className="inline-flex bg-slate-100 p-1 rounded-xl border border-slate-200/70 text-xs font-bold">
+                        <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200/70 text-[11px] font-semibold">
                           <button
                             onClick={() => setDashCategoryFilter('all')}
-                            className={`px-3 py-1.5 rounded-lg transition-all ${
+                            className={`px-2.5 py-1 rounded-md transition-all ${
                               dashCategoryFilter === 'all'
-                                ? 'bg-white text-slate-900 shadow-sm'
+                                ? 'bg-white text-slate-900 shadow-xs'
                                 : 'text-slate-500 hover:text-slate-800'
                             }`}
                           >
@@ -2597,9 +2597,9 @@ export default function App() {
                           </button>
                           <button
                             onClick={() => setDashCategoryFilter('chapterBank')}
-                            className={`px-3 py-1.5 rounded-lg transition-all ${
+                            className={`px-2.5 py-1 rounded-md transition-all ${
                               dashCategoryFilter === 'chapterBank'
-                                ? 'bg-white text-blue-600 shadow-sm'
+                                ? 'bg-white text-blue-600 shadow-xs'
                                 : 'text-slate-500 hover:text-slate-800'
                             }`}
                           >
@@ -2607,9 +2607,9 @@ export default function App() {
                           </button>
                           <button
                             onClick={() => setDashCategoryFilter('mockErrors')}
-                            className={`px-3 py-1.5 rounded-lg transition-all ${
+                            className={`px-2.5 py-1 rounded-md transition-all ${
                               dashCategoryFilter === 'mockErrors'
-                                ? 'bg-white text-rose-600 shadow-sm'
+                                ? 'bg-white text-rose-600 shadow-xs'
                                 : 'text-slate-500 hover:text-slate-800'
                             }`}
                           >
@@ -2618,11 +2618,11 @@ export default function App() {
                         </div>
 
                         {/* Subject and Sort dropdowns */}
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2">
                           <select
                             value={dashSubjectFilter}
                             onChange={(e) => setDashSubjectFilter(e.target.value)}
-                            className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                            className="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                           >
                             <option value="all">All Subjects</option>
                             <option value="Mathematics">Mathematics</option>
@@ -2634,7 +2634,7 @@ export default function App() {
                           <select
                             value={dashSort}
                             onChange={(e) => setDashSort(e.target.value as any)}
-                            className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                            className="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                           >
                             <option value="newest">Newest First</option>
                             <option value="accuracy-desc">Highest Accuracy</option>
@@ -2646,15 +2646,15 @@ export default function App() {
 
                     {/* Results List */}
                     {filteredUserResults.length === 0 ? (
-                      <div className="p-12 text-center">
-                        <p className="text-slate-500 font-bold mb-3">No activity matching your current filter.</p>
+                      <div className="p-8 text-center">
+                        <p className="text-slate-500 font-bold text-xs mb-2">No activity matching your current filter.</p>
                         <button
                           onClick={() => {
                             setDashCategoryFilter('all');
                             setDashSubjectFilter('all');
                             setDashSearchQuery('');
                           }}
-                          className="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl font-bold text-xs hover:bg-blue-100 transition-colors"
+                          className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg font-semibold text-xs hover:bg-blue-100 transition-colors"
                         >
                           Clear Filters
                         </button>
@@ -2675,26 +2675,26 @@ export default function App() {
                           return (
                             <div
                               key={result.id || idx}
-                              className="p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-5 hover:bg-slate-50/80 transition-colors"
+                              className="p-3 sm:p-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-3 hover:bg-slate-50/80 transition-colors"
                             >
                               {/* Left details */}
-                              <div className="flex items-start gap-4 min-w-0">
-                                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-sm bg-gradient-to-br ${theme.gradient} text-white`}>
-                                  <Icon className="w-6 h-6" />
+                              <div className="flex items-start gap-3 min-w-0">
+                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow-xs bg-gradient-to-br ${theme.gradient} text-white`}>
+                                  <Icon className="w-4 h-4" />
                                 </div>
                                 <div className="min-w-0 flex-1">
-                                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold border ${theme.badge}`}>
+                                  <div className="flex flex-wrap items-center gap-1.5 mb-1">
+                                    <span className={`px-2 py-0.2 rounded-md text-[10px] font-bold border ${theme.badge}`}>
                                       {theme.name}
                                     </span>
-                                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold border ${
+                                    <span className={`px-1.5 py-0.2 rounded-md text-[10px] font-semibold border ${
                                       result.category === 'mockErrors'
                                         ? 'bg-rose-50 text-rose-700 border-rose-200'
                                         : 'bg-blue-50 text-blue-700 border-blue-200'
                                     }`}>
                                       {result.category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
                                     </span>
-                                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold border ${
+                                    <span className={`px-1.5 py-0.2 rounded-md text-[10px] font-semibold border ${
                                       result.mode === 'mock'
                                         ? 'bg-amber-50 text-amber-700 border-amber-200'
                                         : 'bg-slate-100 text-slate-700 border-slate-200'
@@ -2702,41 +2702,41 @@ export default function App() {
                                       {result.mode === 'mock' ? 'Mock Test' : 'Practice Drill'}
                                     </span>
                                   </div>
-                                  <h4 className="text-base sm:text-lg font-black text-slate-900 truncate" title={result.chapter_title}>
+                                  <h4 className="text-xs font-bold text-slate-900 truncate" title={result.chapter_title}>
                                     {result.chapter_title}
                                   </h4>
-                                  <p className="text-xs text-slate-400 font-medium mt-0.5">
+                                  <p className="text-[10px] text-slate-400 font-medium mt-0.5">
                                     {formatAttemptDate(result.completedAt)}
                                   </p>
                                 </div>
                               </div>
 
                               {/* Right Metrics & Actions */}
-                              <div className="flex flex-wrap items-center justify-between lg:justify-end gap-3 sm:gap-6 border-t lg:border-t-0 pt-4 lg:pt-0 border-slate-100">
-                                <div className="text-left sm:text-right min-w-[65px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Score</div>
-                                  <div className="text-base sm:text-lg font-black text-slate-900">
+                              <div className="flex flex-wrap items-center justify-between lg:justify-end gap-2.5 sm:gap-4 border-t lg:border-t-0 pt-2 lg:pt-0 border-slate-100">
+                                <div className="text-left sm:text-right min-w-[55px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Score</div>
+                                  <div className="text-xs font-bold text-slate-900">
                                     {result.score}/{result.totalQuestions}
                                   </div>
                                 </div>
 
-                                <div className="text-left sm:text-right min-w-[65px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Avg/Q</div>
-                                  <div className="text-base sm:text-lg font-black text-orange-600">
+                                <div className="text-left sm:text-right min-w-[55px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Avg/Q</div>
+                                  <div className="text-xs font-bold text-orange-600">
                                     {avgQ}s
                                   </div>
                                 </div>
 
-                                <div className="text-left sm:text-right min-w-[75px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Time</div>
-                                  <div className="text-base sm:text-lg font-black text-slate-700">
+                                <div className="text-left sm:text-right min-w-[65px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Time</div>
+                                  <div className="text-xs font-bold text-slate-700">
                                     {Math.floor(result.totalTime / 60)}m {result.totalTime % 60}s
                                   </div>
                                 </div>
 
-                                <div className="text-left sm:text-right min-w-[70px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Accuracy</div>
-                                  <div className={`inline-flex items-center px-2 py-0.5 rounded-lg text-sm font-black border ${
+                                <div className="text-left sm:text-right min-w-[60px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Accuracy</div>
+                                  <div className={`inline-flex items-center px-1.5 py-0.2 rounded-md text-xs font-bold border ${
                                     accuracyRate >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
                                     accuracyRate >= 50 ? 'bg-amber-50 text-amber-700 border-amber-200' :
                                     'bg-rose-50 text-rose-700 border-rose-200'
@@ -2746,30 +2746,30 @@ export default function App() {
                                 </div>
 
                                 {/* Actions */}
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-1.5">
                                   <button
                                     onClick={() => reattemptFromResult(result)}
-                                    className="p-2.5 rounded-xl font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-sm flex items-center justify-center"
+                                    className="p-1.5 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-xs flex items-center justify-center"
                                     title="Reattempt this quiz"
                                   >
-                                    <RotateCcw className="w-4 h-4" />
+                                    <RotateCcw className="w-3.5 h-3.5" />
                                   </button>
                                   {hasStoredQuestions && (
                                     <button
                                       onClick={() => openReview(result)}
-                                      className="p-2.5 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all shadow-sm flex items-center justify-center"
+                                      className="p-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all shadow-xs flex items-center justify-center"
                                       title="Review questions & explanations"
                                     >
-                                      <History className="w-4 h-4" />
+                                      <History className="w-3.5 h-3.5" />
                                     </button>
                                   )}
                                   {result.id && (
                                     <button
                                       onClick={() => handleDeleteResult(result.id)}
-                                      className="p-2.5 rounded-xl bg-slate-100 hover:bg-rose-600 text-slate-400 hover:text-white font-bold transition-all shadow-sm flex items-center justify-center"
+                                      className="p-1.5 rounded-lg bg-slate-100 hover:bg-rose-600 text-slate-400 hover:text-white font-bold transition-all shadow-xs flex items-center justify-center"
                                       title="Delete this attempt"
                                     >
-                                      <Trash2 className="w-4 h-4" />
+                                      <Trash2 className="w-3.5 h-3.5" />
                                     </button>
                                   )}
                                 </div>
@@ -2829,16 +2829,21 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                  <h1 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">Error Heatmap</h1>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Visualize subject-wise error patterns across your top error-prone chapters.</p>
+              <div className="flex items-center justify-between gap-2.5 bg-white px-3.5 py-1.5 rounded-lg border border-slate-200/80 shadow-xs mb-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-md bg-red-50 text-red-600 flex items-center justify-center font-bold shrink-0">
+                    <Flame className="w-3.5 h-3.5 text-red-500" />
+                  </div>
+                  <div>
+                    <h1 className="text-xs font-bold text-slate-900 tracking-tight leading-none">Error Heatmap</h1>
+                    <p className="text-[10px] text-slate-400 font-medium leading-tight mt-0.5">Visualize subject-wise error patterns across your top error-prone chapters</p>
+                  </div>
                 </div>
                 <button
                   onClick={() => setView('home')}
-                  className="self-start sm:self-auto flex items-center text-xs font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200/90 px-3.5 py-1.5 rounded-lg shadow-xs transition-colors"
+                  className="flex items-center text-[11px] font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2 py-1 rounded-md transition-colors shrink-0"
                 >
-                  <ChevronLeft className="w-3.5 h-3.5 mr-1" />
+                  <ChevronLeft className="w-3 h-3 mr-0.5" />
                   Back to Practice
                 </button>
               </div>
@@ -2866,7 +2871,15 @@ export default function App() {
                   <p className="text-slate-500 font-bold">Loading mock score dashboard...</p>
                 </div>
               }>
-                <MockScoreDashboard onBack={() => setView('home')} />
+                <MockScoreDashboard 
+                  onBack={() => setView('home')} 
+                  mockData={mockData}
+                  onStartPracticeMock={(chapter: Chapter, mode?: 'practice' | 'mock') => {
+                    setCategory('mockErrors');
+                    setQuizMode(mode || quizMode || 'practice');
+                    startQuiz(chapter);
+                  }}
+                />
               </React.Suspense>
             </motion.div>
           )}

@@ -547,6 +547,15 @@ async function startServer() {
         existingReports.unshift(calculatedReport);
         fs.writeFileSync(mockReportPath, JSON.stringify(existingReports, null, 2), "utf-8");
         console.log(`[Mock Import] Mock Score Report saved: ${calculatedReport.title} (Score: ${calculatedReport.totalScore}/${calculatedReport.maxMarks})`);
+
+        // Also save mock questions for one-click practice
+        try {
+          const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
+          if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
+          fs.writeFileSync(path.join(qDir, `${calculatedReport.id}.json`), JSON.stringify(rawList, null, 2), "utf-8");
+        } catch (qSaveErr) {
+          console.error("[Mock Import] Error saving mock questions file:", qSaveErr);
+        }
       } catch (repErr) {
         console.error("[Mock Import] Error generating score report:", repErr);
       }
@@ -591,6 +600,35 @@ async function startServer() {
     }
   });
 
+  // Mock Questions Endpoints
+  app.get("/api/mock-questions/:id", (req, res) => {
+    try {
+      const { id } = req.params;
+      const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${id}.json`);
+      if (fs.existsSync(qPath)) {
+        const questions = JSON.parse(fs.readFileSync(qPath, "utf-8"));
+        return res.json(questions);
+      }
+      res.json([]);
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
+  app.post("/api/mock-questions/:id", (req, res) => {
+    try {
+      const { id } = req.params;
+      const questions = req.body;
+      const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
+      if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
+      const qPath = path.join(qDir, `${id}.json`);
+      fs.writeFileSync(qPath, JSON.stringify(questions, null, 2), "utf-8");
+      res.json({ success: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
   app.delete("/api/mock-reports/:id", (req, res) => {
     try {
       const { id } = req.params;
@@ -599,6 +637,11 @@ async function startServer() {
         let reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
         reports = reports.filter((r: any) => r.id !== id);
         fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
+      }
+      // Also delete questions file if exists
+      const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${id}.json`);
+      if (fs.existsSync(qPath)) {
+        fs.unlinkSync(qPath);
       }
       res.json({ success: true });
     } catch (e: any) {

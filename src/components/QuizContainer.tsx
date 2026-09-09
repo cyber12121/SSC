@@ -40,8 +40,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 }) => {
   const totalQuestions = chapter.questions.length;
 
-  const perQuestionSec = category === 'mockErrors' ? 0 : (chapter.section === 'top500' && chapter.set_name === 'set_2' ? 45 : 36);
-  const totalQuizTime = mode === 'mock' && perQuestionSec > 0 ? perQuestionSec * totalQuestions : null;
+  const perQuestionSec = 36;
+  const totalQuizTime = mode === 'mock' ? perQuestionSec * totalQuestions : null;
 
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});

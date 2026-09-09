@@ -497,6 +497,125 @@
           "topic": "Syllogism",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_e116e261a7",
+        "q_num": 30,
+        "question": "Select the combination of letters that when sequentially placed in the blanks of the given series will complete the series.\n_ msk _ prm _ kt _ r _ s _ tpr _ skt _",
+        "options": {
+          "a": "r, s, t, p, m, k, m, p",
+          "b": "r, t, s, p, m, m, m, p",
+          "c": "r, t, s, p, m, k, k, p",
+          "d": "r, t, s, p, m, k, m, p"
+        },
+        "answer": "d",
+        "solution": "Let's check each option, Option 4 follows a repetitive pattern of \" r m s k t p \". Hence, the correct answer is \"r, t, s, p, m, k, m, p\".",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_fd1b76c66d",
+        "q_num": 31,
+        "question": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
+        "options": {
+          "a": "PRT",
+          "b": "RTU",
+          "c": "TVX",
+          "d": "UWY"
+        },
+        "answer": "c",
+        "solution": "The pattern followed here is according to the alphabetical positions of the letters. Similarly, TVX follows the correct pattern. Hence, 'TVX' is the correct answer.",
+        "tags": {
+          "topic": "Analogy",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f394f87a7e",
+        "q_num": 32,
+        "question": "Four pairs of letter-clusters have been given, out of which three are alike in some manner and one is different. Select the one that is different.",
+        "options": {
+          "a": "CAT : HXV",
+          "b": "DOG : ILI",
+          "c": "XYZ : CVB",
+          "d": "GOD : LFL"
+        },
+        "answer": "d",
+        "solution": "All follow the same pattern, except 'GOD: LFL'. Hence, \"GOD: LFL\" is the odd one.",
+        "tags": {
+          "topic": "Analogy",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_10e33fe5d7",
+        "q_num": 33,
+        "question": "If the mathematical operator, '+' means '– ', '×' means '+', '÷' means '×', and '–' means '÷', then the value of 28 + (11 × 7) – 9 ÷ 5 is",
+        "options": {
+          "a": "45",
+          "b": "12",
+          "c": "13.5",
+          "d": "18"
+        },
+        "answer": "d",
+        "solution": "Given expression is: 28 + (11 × 7) – 9 ÷ 5. After replacing the operators by their meaning, we get: 28 – (11 + 7) ÷ 9 × 5 = 28 – 18 ÷ 9 × 5 = 28 – 2 × 5 = 28 – 10 = 18. Hence, the correct answer is 18.",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_9c6e5a1a68",
+        "q_num": 34,
+        "question": "Two statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome doctors are scientists.\nSome scientists are engineers.\nConclusions:\nI. All engineers are doctors.\nII. Some doctors are engineers.",
+        "options": {
+          "a": "Only conclusion I follows",
+          "b": "Neither conclusion I nor II follows",
+          "c": "Both conclusions I and II follow",
+          "d": "Only conclusion II follows"
+        },
+        "answer": "b",
+        "solution": "Conclusions: I. All engineers are doctors. -> Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true). II. Some doctors are engineers. -> Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true). Hence, the correct answer is \"Neither conclusion I nor II follows\".",
+        "tags": {
+          "topic": "Syllogism",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_22da7ae608",
+        "q_num": 35,
+        "question": "If FLOWER is coded EMNXDS, then how is GAMBLE coded?",
+        "options": {
+          "a": "HCODNG",
+          "b": "BFCKLF",
+          "c": "DMXNES",
+          "d": "FBLCKF"
+        },
+        "answer": "d",
+        "solution": "We know, Given, Similarly, Hence, the correct answer is FBLCKF.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_be1b8994af",
+        "q_num": 36,
+        "question": "Three different positions of the same dice are shown. Find which numbered face is opposite to the face showing 6?",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "Logic : If two dice have the same two face values in the given image then the third number is opposite to each other.\nIn Dice 1 and Dice 2, Numbers 2 and 5 are common.\nTherefore, it is clear the opposite face of 3 is 6.\nHence, the correct answer is 3.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -1106,6 +1225,23 @@
         "solution": "Given:\nStatement: If all players play to their full potential, we will win the match. We have won the match.\nConclusions:\nI. All players played to their full potential - False (Because the statement is of the form If P, then Q. From the fact that Q has occurred (we won the match), it cannot be concluded that P must have occurred.)\nII. Some players did not play to their full potential - False (Because there is no information to conclude this.)\n\nSo, neither Conclusion I nor Conclusion II follows.\n\nHence, the correct answer is \"Neither I nor II follows\".",
         "tags": {
           "topic": "Syllogism",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_363988f1ae",
+        "q_num": 27,
+        "question": "Refer to the given number symbol series and answer the question given below.\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\nIf all the odd numbers are dropped from the given series, then which symbol/number will be at the seventh position to the left of the symbol/number that is ninth from the left end?",
+        "options": {
+          "a": "3",
+          "b": "2",
+          "c": "%",
+          "d": "4"
+        },
+        "answer": "d",
+        "solution": "Given Series:\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%) = 4\n\nHence, the correct answer is \"4\".",
+        "tags": {
+          "topic": "Coding-Decoding",
           "difficulty": "medium"
         }
       }

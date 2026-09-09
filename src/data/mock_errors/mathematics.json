@@ -956,6 +956,108 @@
           "topic": "Algebra",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_0656145e78",
+        "q_num": 57,
+        "question": "What should be the least five digit number that on dividing by 3, 7, 13 and 37 give 2 as remainder?",
+        "options": {
+          "a": "10103",
+          "b": "10099",
+          "c": "10101",
+          "d": "None of the above"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nThe numbers 3, 7, 13, and 37 are all prime numbers.\n\nTheir LCM is simply their product: 3 × 7 × 13 × 37 = 10101.\n\nThis is already the least five-digit number divisible by all four.\n\nTo get a remainder of 2, simply add 2 to this LCM: 10101 + 2 = 10103.\n∴ The correct answer is 10103.\n\nAlternate Method\nGiven:\nDivisors: 3, 7, 13, 37\nRemainder: 2\nFormula: Required Number = LCM(Divisors) × k + Remainder\n\nCalculations:\n⇒ LCM(3, 7, 13, 37) = 3 × 7 × 13 × 37\n⇒ 21 × 13 × 37\n⇒ 273 × 37\n⇒ 10101\n\nThe number must be of the form 10101k + 2.\n\nFor the least five-digit number, we take k = 1:\n⇒ Number = 10101 × 1 + 2\n⇒ Number = 10101 + 2\n⇒ Number = 10103\n∴ The correct answer is 10103.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_81a9ddec2e",
+        "q_num": 58,
+        "question": "The speed of a boat in still water is 9 km/h. If it takes the same time in going 35 km downstream as it takes in going 28 km upstream, then what is the speed (in km/h) of the stream?",
+        "options": {
+          "a": "1",
+          "b": "0.5",
+          "c": "1.5",
+          "d": "1.2"
+        },
+        "answer": "a",
+        "solution": "Given:\nThe speed of a boat in still water is 9 km/h.\nDistance covered in downstream = 35 km\nDistance covered in upstream = 28 km\n\nConcept used:\nSpeed = Distance / Time\nDownstream speed = (v + u)\nUpstream speed = (v - u)\nWhere, v = Speed of the boat in still water, u = Speed of the stream\n\nCalculation:\nLet the speed of the stream be 's' km/h\nAccording to the question,\n35 / (9 + s) = 28 / (9 - s)\n⇒ 35(9 - s) = 28(9 + s)\n⇒ 5(9 - s) = 4(9 + s)\n⇒ 45 - 5s = 36 + 4s\n⇒ 9 = 9s\n⇒ s = 1 km/h\n∴ The speed of the stream is 1 km/h.",
+        "tags": {
+          "topic": "Speed, Time & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3688598cdc",
+        "q_num": 59,
+        "question": "In a school auditorium 2/7 of the students are girls. If there are 111 more boys than girls, how many boys are there in the school auditorium?",
+        "options": {
+          "a": "400",
+          "b": "315",
+          "c": "259",
+          "d": "185"
+        },
+        "answer": "d",
+        "solution": "Given Fraction = 2/7\nTotal Students = 7 units\nGirls = 2 units\nBoys = 7 - 2 = 5 units\n\nAlso Given, there are 111 more boys than girls\nAccording to the fraction,\nMore Number = 5 - 2 = 3 units\n3 units = 111\n1 unit = 37\nNumber of boys = 5 units = 5 × 37 = 185\n∴ Total of 185 boys are there in the school auditorium.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7e2f79e808",
+        "q_num": 60,
+        "question": "The compound interest accrued on an amount of Rs. 25,500 at the end of three years is Rs. 8,440.50. What would be the simple interest accrued on the same amount at the same rate in the same period?",
+        "options": {
+          "a": "Rs. 7650",
+          "b": "Rs. 4650",
+          "c": "Rs. 5650",
+          "d": "Rs. 6650"
+        },
+        "answer": "a",
+        "solution": "Ratio of Amount to Principal for 3 years = (25500 + 8440.50) ÷ 25500 = 33940.5 ÷ 25500 = 1331 / 1000.\nEquivalent ratio for 1 year = ∛(1331 / 1000) = 11 / 10.\nInterest rate (R) = (11 − 10) ÷ 10 × 100% = 10%.\nSimple Interest for 3 years = 30% of Principal = 30% of 25500 = 7650.\n∴ The correct answer is Rs. 7650.",
+        "tags": {
+          "topic": "SI & CI",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b1062974ec",
+        "q_num": 61,
+        "question": "A leaves from a place X at 10 a.m. at 40 km/h. B leaves from the same place at 2 p.m. at 80 km/h, and chases A. When and how far from X will B meet A?",
+        "options": {
+          "a": "6 p.m.; 140 km",
+          "b": "4 p.m.; 160 km",
+          "c": "4 p.m.; 200 km",
+          "d": "6 p.m.; 320 km"
+        },
+        "answer": "d",
+        "solution": "Given:\nThe speed of A is 40 km/h\nThe speed of B is 80 km/h\n\nConcept used:\nSpeed = Distance / Time\nWhen two objects are moving in the same direction then their relative speed = Difference of their individual speeds\n\nCalculation:\nDistance travelled by A till 2 pm = 4 × 40 = 160 km\nA and B travelled in the same direction then relative speed = 80 - 40 = 40 km/h\nTime taken by B to meet A = 160 / 40 = 4 hours or at 6 pm\nIn 4 hours travelled distance by B = 4 × 80 = 320 km\n∴ The required result will be 320 km and at 6 pm.",
+        "tags": {
+          "topic": "Speed, Time & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1b01dd96f6",
+        "q_num": 62,
+        "question": "In case of a particular transaction, the profit earned is 14(2/7)%. What fraction is the cost price of the selling price?",
+        "options": {
+          "a": "17",
+          "b": "78",
+          "c": "87",
+          "d": "18"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick: Convert Profit % to fraction: 14 2/7% = 1/7. Here, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit. Selling Price (SP) = CP + Profit = 7 + 1 = 8 units. Required fraction (CP/SP) = 7/8.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -1797,6 +1899,210 @@
           "topic": "Percentage",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_e3cf87d32d",
+        "q_num": 50,
+        "question": "A candidate who scores 20% of the marks falls short by 10 marks to pass the exam, while another candidate who scores 42% of the marks surpasses the passing marks by 12%. What is the maximum number of marks?",
+        "options": {
+          "a": "50",
+          "b": "80",
+          "c": "100",
+          "d": "120"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nDifference in percentage = 42% − 20% = 22%\n\nIn terms of marks, 42% is 12% of total marks above passing and 20% is 10 marks below passing.\n\nLet maximum marks be M. Passing marks = 0.20M + 10. Also, 0.42M = (Passing marks) + 0.12M.\n\n⇒ 0.42M − 0.12M = 0.20M + 10 ⇒ 0.30M = 0.20M + 10 ⇒ 0.10M = 10.\n∴ The correct answer is 100 marks.\n\nAlternate Method\nLet maximum marks be x.\nCandidate 1: Score = 20% of x = 0.20x\nPassing Marks = Score + Deficit = 0.20x + 10 --- (Equation 1)\nCandidate 2: Score = 42% of x = 0.42x\n\nThis score is 12% of maximum marks more than passing marks.\n\n⇒ Passing Marks = 0.42x − 12% of x = 0.42x − 0.12x = 0.30x --- (Equation 2)\n\nEquating Equation 1 and Equation 2:\n\n⇒ 0.20x + 10 = 0.30x\n⇒ 0.30x − 0.20x = 10\n⇒ 0.10x = 10\n⇒ x = 10 / 0.10 = 100\n∴ The correct answer is 100 marks.\n\nAdditional Information\nPassing Percentage\nIt is the minimum percentage required to pass. Passing % = (Passing Marks / Maximum Marks) × 100.\n\nPercentage Change\nWhen comparing two scores, the difference in percentage points relates directly to the difference in actual marks via the base of Maximum Marks.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_61dc6ff101",
+        "q_num": 51,
+        "question": "A sector of a circle has a radius of 18 cm and a central angle of 125°. What will be its approximate perimeter? (Use π = 22/7)",
+        "options": {
+          "a": "73.85 cm",
+          "b": "74 cm",
+          "c": "75.3 cm",
+          "d": "73 cm"
+        },
+        "answer": "c",
+        "solution": "Given:\nRadius = 18 cm\nCentral angle = 125°\n\nFormula used:\nPerimeter of sector of a circle = (θ / 360°) × 2πr + 2r\n\nCalculation:\nAccording to the question:\nPerimeter of sector of a circle = (125 / 360) × 2 × (22 / 7) × 18 + 2 × 18\n⇒ (25 / 72) × (44 / 7) × 18 + 36\n⇒ (275 / 7) + 36\n⇒ (275 + 252) / 7\n⇒ 527 / 7\n⇒ 75.28 cm ~ 75.3 cm\n∴ The required perimeter is 75.3 cm.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_71153dea2f",
+        "q_num": 52,
+        "question": "36 workmen are employed to finish a certain work in 48 days. But it is found that in 24 days, only 2/5 work is done. How many more men must be taken to finish the work in time?",
+        "options": {
+          "a": "16",
+          "b": "20",
+          "c": "18",
+          "d": "None of these"
+        },
+        "answer": "c",
+        "solution": "Given:\n36 workmen can do 2/5 part of a work in 24 days.\n\nConcept:\nTotal work = (Number of men × Time taken) / part of work done\n\nCalculation:\nTotal work = (36 × 24) / (2/5) units = 2160 units\nTime required to complete the rest work = (48 - 24) days = 24 days\nLet extra workers required to complete the work in time be x, then:\n{(x + 36) × 24} / (1 - 2/5) = 2160 units\n⇒ {(x + 36) × 24} / (3/5) = 2160 units\n⇒ x + 36 = (2160 / 24) × (3 / 5)\n⇒ x + 36 = 90 × 3 / 5\n⇒ x = 54 - 36 = 18 workers\n∴ 18 extra workers are required to do the same work in 48 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f00f1d97d6",
+        "q_num": 53,
+        "question": "The average of 5 results is 46 and that of the first four is 45. The fifth result is:",
+        "options": {
+          "a": "10",
+          "b": "1",
+          "c": "12.5",
+          "d": "50"
+        },
+        "answer": "d",
+        "solution": "Since the average of 5 results is 46, the sum of 5 values is 5 × 46 = 230. Sum of first 4 values is 4 × 45 = 180. Hence the fifth number is 230 - 180 = 50.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d2b0d496ec",
+        "q_num": 54,
+        "question": "A dealer sells an article by allowing a 20% discount on its marked price and still gains 12%. If the cost price of the article is Rs. 750, then its marked price (in Rs.) is:",
+        "options": {
+          "a": "1,050",
+          "b": "1,025",
+          "c": "1,150",
+          "d": "1,125"
+        },
+        "answer": "a",
+        "solution": "Use the direct relation: CP : MP = (100 − Discount%) : (100 + Profit%). CP : MP = (100 − 20) : (100 + 12) = 80 : 112 = 5 : 7. Given Cost Price (CP) = 5 units = ₹750, so 1 unit = 750 ÷ 5 = 150. Marked Price (MP) = 7 units = 7 × 150 = 1050.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c798868bb9",
+        "q_num": 55,
+        "question": "The distance between two stations A and B is 700 km. A train covers the journey from A to B at a speed of 80 km/h and returns back to A with a uniform speed of 65 km/h. The average speed of train during the whole journey, is closest to:",
+        "options": {
+          "a": "74 km/h",
+          "b": "71.72 km/h",
+          "c": "72.7 km/h",
+          "d": "70.73 km/h"
+        },
+        "answer": "b",
+        "solution": "Given:\nDistance between A and B = 700 km\nSpeed of train from A to B = 80 km/h\nSpeed of train from B to A = 65 km/h\n\nConcept used:\nDistance = Speed × Time\nAverage speed = Total distance travelled / Total time taken\n\nCalculation:\nTime taken by train from A to B = Distance / Speed = 700 / 80\nTime taken by train from B to A = 700 / 65\nAverage speed during the whole journey = Total distance / Total time\n⇒ (700 + 700) / [(700 / 80 + 700 / 65)]\n⇒ (700 + 700) / [700 × (1 / 80 + 1 / 65)]\n⇒ (2 × 700) / [700 × (13 + 16) / 1040]\n⇒ 2 / (29 / 1040)\n⇒ (1040 × 2) / 29 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.\n\nShortcut Trick:\nIf the distance travelled in both the cases is the same, then we can apply this formula:\nAverage speed = (2 × product of the two speeds) / (Sum of the two speeds)\n⇒ (2 × 80 × 65) / (80 + 65)\n⇒ 10400 / 145 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.",
+        "tags": {
+          "topic": "Time, Speed and Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_fd8e9b9eae",
+        "q_num": 56,
+        "question": "A person invested a total of Rs. 57,500 at 4%, 5% and 8% per annum simple interest. At the end of the year, he received equal interest in all the three cases. The amount invested at 5% was:",
+        "options": {
+          "a": "Rs. 20,000",
+          "b": "Rs. 25,000",
+          "c": "Rs. 37,500",
+          "d": "Rs. 20,750"
+        },
+        "answer": "a",
+        "solution": "Given:\nPrincipal = 57,500\nRate of interest = 4%, 5% and 8%\n\nFormula used:\nS.I = (P × R × T) / 100\n\nCalculation:\nLet the three parts be x, y and z\nThen,\n⇒ (x × 4 × 1) / 100 = (y × 5 × 1) / 100 = (z × 8 × 1) / 100\n⇒ 0.04x = 0.05y = 0.08z\n⇒ x : y : z = 10 : 8 : 5\nSum invested at 5% = (8 / 23) × 57,500 = 20,000\n∴ The answer is Rs 20,000.",
+        "tags": {
+          "topic": "SI & CI",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_794b4b2f5e",
+        "q_num": 57,
+        "question": "The LCM and HCF of two positive numbers are 96 and 8, respectively. If the sum of the numbers is 56, then the difference between the numbers is:",
+        "options": {
+          "a": "8",
+          "b": "9",
+          "c": "12",
+          "d": "10"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick:\nLet the numbers be 8x and 8y, where x and y are co-prime.\nProduct of ratios (x × y) = LCM ÷ HCF = 96 ÷ 8 = 12.\nSum of ratios (x + y) = Sum ÷ HCF = 56 ÷ 8 = 7.\nFind two numbers that multiply to 12 and add to 7 → 3 and 4.\nDifference between numbers = HCF × (x − y) = 8 × (4 − 3) = 8.\n∴ The correct answer is 8.\n\nAlternate Method:\nGiven:\nLCM = 96, HCF = 8, Sum (a + b) = 56.\n\nFormula Used:\nProduct of two numbers (a × b) = LCM × HCF\nAlgebraic identity: (a − b)² = (a + b)² − 4ab\n\nCalculations:\n⇒ Product (ab) = 96 × 8 = 768\n⇒ Sum (a + b) = 56\n⇒ (a − b)² = (56)² − 4 × (768)\n⇒ (a − b)² = 3136 − 3072\n⇒ (a − b)² = 64\n⇒ (a − b) = √64 = 8\n∴ The correct answer is 8.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6ec62896fd",
+        "q_num": 58,
+        "question": "The LCM of two numbers is 495 and their HCF is 5. If the sum of the numbers is 100, then their difference is:",
+        "options": {
+          "a": "46",
+          "b": "70",
+          "c": "10",
+          "d": "90"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick:\nLet the two numbers be 5a and 5b, where a and b are coprime.\nGiven LCM = 495 ⇒ 5 × a × b = 495 ⇒ a × b = 99\nGiven Sum = 100 ⇒ 5a + 5b = 100 ⇒ a + b = 20\nValues satisfying both conditions are a = 11 and b = 9.\nDifference = 5a − 5b = 5 × (11 − 9) = 10.\n∴ The correct answer is 10.\n\nAlternate Method:\nGiven:\nLCM of the two numbers = 495\nHCF of the two numbers = 5\nSum of the numbers (a + b) = 100\n\nFormula Used:\nProduct of two numbers = HCF × LCM\n(a − b)² = (a + b)² − 4ab\n\nCalculations:\n⇒ a × b = 5 × 495 = 2475\n⇒ (a − b)² = (a + b)² − 4ab\n⇒ (a − b)² = (100)² − 4 × 2475\n⇒ (a − b)² = 10000 − 9900\n⇒ (a − b)² = 100\n⇒ a − b = √100\n⇒ a − b = 10\n∴ The correct answer is 10.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_97d0a74368",
+        "q_num": 59,
+        "question": "For what relation between a and b is the equation sin θ = (a + b) / (2√(ab)) possible?",
+        "options": {
+          "a": "a = b",
+          "b": "a ≤ b",
+          "c": "a ≥ b",
+          "d": "a > b"
+        },
+        "answer": "a",
+        "solution": "Given:\nSin θ = (a + b) / (2√(ab))\n\nConcept:\n-1 ≤ sin θ ≤ +1\n\nCalculation:\n-1 ≤ (a + b) / (2√(ab)) ≤ +1\nWe solve one of them:\n(a + b) / (2√(ab)) ≤ 1\n⇒ a + b ≤ 2√(ab)\n⇒ a + b - 2√(ab) ≤ 0\n⇒ (√a - √b)² ≤ 0\n⇒ √a = √b ⇒ a = b\n∴ The correct answer is a = b\n\nShortcut Trick:\nWe can solve this question by options to satisfy the equation.\nPut a = b\nThen Sin θ = (a + a) / (2√(a × a))\nSin θ = 2a / 2a = 1 (since sin θ ≤ 1)",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7b6ec16311",
+        "q_num": 60,
+        "question": "The income of A is 40% more than the income of B, and the income of C is 30% less than the total incomes of A and B. The income of A is what per cent less than the income of C?",
+        "options": {
+          "a": "25%",
+          "b": "16%",
+          "c": "1623%",
+          "d": "20%"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick: Let Income of B = 100. Income of A = 140 (40% more than B). Income of C = 70% of (140 + 100) = 0.7 × 240 = 168. Difference between C and A = 168 − 140 = 28. Required % = (28 ÷ 168) × 100 = 1/6 × 100 = 16(2/3)%. ∴ The correct answer is 16(2/3)%.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2ffc20fa7a",
+        "q_num": 61,
+        "question": "If the 11-digit number 79x6402087y is divisible by 72, then for smallest value of x, what is the value of (x + 2y)?",
+        "options": {
+          "a": "4",
+          "b": "9",
+          "c": "2",
+          "d": "6"
+        },
+        "answer": "a",
+        "solution": "For a number to be divisible by 72, it must be perfectly divisible by both 8 and 9. Rule of 8: The last three digits (87y) must be divisible by 8 ⇒ 872 is divisible by 8, so y = 2. Rule of 9: The sum of digits (45 + x) must be divisible by 9 ⇒ The smallest possible value for x is 0. Required value = (x + 2y) = 0 + 2 × 2 = 4. ∴ The correct answer is 4.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -2194,6 +2500,108 @@
         "solution": "Shortcut Trick: Ratio of time taken by Pabitra, Kader, and Rahim = 6 : 3 : 2. Efficiency ratio = 1/6 : 1/3 : 1/2 = 1 : 2 : 3. Combined efficiency = 1 + 2 + 3 = 6 units/day. Total Work = Combined Efficiency × Time = 6 × 2 = 12 units. Time taken by Kader alone = Total Work ÷ Kader's Efficiency = 12 ÷ 2 = 6 days. ∴ The correct answer is 6 days.",
         "tags": {
           "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_31499953b6",
+        "q_num": 24,
+        "question": "What is the sum of digits of the number which when divided by 24, 40, and 48 leaves the remainder of 13, 29, and 37, respectively?",
+        "options": {
+          "a": "11",
+          "b": "12",
+          "c": "8",
+          "d": "13"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nFind the common difference (k) between divisors and remainders: 24 − 13 = 11, 40 − 29 = 11, 48 − 37 = 11.\n\nCalculate LCM of (24, 40, 48) = 240.\n\nThe required number is (LCM × n) − k. For n = 1, Number = 240 − 11 = 229.\n\nSum of digits of 229 = 2 + 2 + 9 = 13.\n∴ The correct answer is 13.\n\nAlternate Method\nGiven:\nDivisors: D1 = 24, D2 = 40, D3 = 48\nRemainders: R1 = 13, R2 = 29, R3 = 37\n\nFormula Used:\nWhen (D1 − R1) = (D2 − R2) = (D3 − R3) = k, the number is [LCM(D1, D2, D3) × n] − k.\n\nCalculations:\n⇒ Difference (k) = 24 − 13 = 11\n⇒ Difference (k) = 40 − 29 = 11\n⇒ Difference (k) = 48 − 37 = 11\n⇒ LCM of 24, 40, and 48:\n⇒ 24 = 2³ × 3\n⇒ 40 = 2³ × 5\n⇒ 48 = 2⁴ × 3\n⇒ LCM = 2⁴ × 3 × 5 = 16 × 15 = 240\n⇒ Smallest required number = 240 − 11 = 229\n⇒ Sum of digits = 2 + 2 + 9 = 13\n∴ The correct answer is 13.\n\nAdditional Information\nLCM Method with Constant Remainder\nIf a number leaves the same remainder 'r' when divided by x, y, and z, the number is LCM(x, y, z) × n + r.\n\nLCM Method with Constant Difference\nIf the difference between divisor and remainder is constant 'k', the number is LCM(divisors) × n − k.\n\nSum of Digits Property\nThe sum of digits of a number is often used in divisibility tests for 3 and 9, where the sum must be divisible by the divisor.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_69b8450d81",
+        "q_num": 25,
+        "question": "If cosθ/(cosecθ + 1) + cosθ/(cosecθ - 1) = 2 where 0 < θ < 90°, then what is the value of sin⁴ θ + cos⁴ θ?",
+        "options": {
+          "a": "2",
+          "b": "1",
+          "c": "12",
+          "d": "14"
+        },
+        "answer": "c",
+        "solution": "Given:\ncosθ / (cosecθ + 1) + cosθ / (cosecθ - 1) = 2\n\nFormula Used:\ncosec²θ - 1 = cot²θ\n\nCalculation:\n⇒ cosθ(cosecθ - 1) + cosθ(cosecθ + 1) / (cosec²θ - 1) = 2\n⇒ (cosθ cosecθ - cosθ + cosθ cosecθ + cosθ) / cot²θ = 2\n⇒ 2cosθ cosecθ / cot²θ = 2\n⇒ cosθ × (1/sinθ) = cot²θ\n⇒ cotθ = cot²θ\n⇒ cotθ = 1\n⇒ θ = 45°\nNow, We have to find the value of sin⁴ θ + cos⁴ θ\nPutting θ = 45°, we get\n⇒ sin⁴ 45° + cos⁴ 45°\n⇒ (1/4) + (1/4) = 1/2\n∴ The value of sin⁴ θ + cos⁴ θ is 1/2.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0e75d8e3ff",
+        "q_num": 26,
+        "question": "The cost of plastering the four walls of a room is 25. The cost of plastering a room twice in length, breadth and height will be",
+        "options": {
+          "a": "50",
+          "b": "75",
+          "c": "100",
+          "d": "200"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nArea of four walls is proportional to (Length + Breadth) × Height.\n\nIf all dimensions (L, B, H) are doubled, the new area becomes 2 × 2 = 4 times the original area.\n\nCost is directly proportional to the area.\nNew Cost = 4 × Original Cost = 4 × 25 = 100.\n∴ The correct answer is 100.\n\nAlternate Method\nGiven:\nOriginal cost of plastering = 25\nNew dimensions = 2 × Original dimensions\n\nFormula Used:\nArea of four walls = 2 × (Length + Breadth) × Height\n\nCalculations:\n⇒ Let original dimensions be L, B, and H.\n⇒ Original Area (A1) = 2(L + B)H\n⇒ New dimensions: L' = 2L, B' = 2B, H' = 2H\n⇒ New Area (A2) = 2(2L + 2B) × 2H\n⇒ A2 = 2 × 2(L + B) × 2H = 4 × [2(L + B)H]\n⇒ A2 = 4 × A1\n⇒ Since cost is proportional to area: New Cost = 4 × 25 = 100\n∴ The correct answer is 100.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f3f5431f4b",
+        "q_num": 27,
+        "question": "Ram is 500 km ahead of Laxman. If they move in the same direction, Laxman catches Ram in 25 hours. If they move in the opposite direction toward each other, they meet in 5 hours. Find the difference between the total distance traveled by Laxman across both scenarios and the total distance traveled by Ram across both scenarios",
+        "options": {
+          "a": "600 km",
+          "b": "800 km",
+          "c": "1000 km",
+          "d": "500 km"
+        },
+        "answer": "a",
+        "solution": "Given:\nRam is 500 km ahead of Laxman,\nIf they move in the same direction Laxman catches Ram in 25 hours,\nIf they move in the opposite direction Laxman will catch Ram in 5 hours,\n\nConcept used:\nDistance = Time × Speed\nRelative speed = u + v (when two bodies with speeds u and v moving toward each other)\nRelative speed = u - v (when two bodies with speed u and v moving away from each other)\n\nCalculation:\nLet R and L be the speed of Ram and Laxman respectively.\nAccording to the question,\n\nFirst case:\nRelative speed = L - R = 500 / 25 = 20 kmph\n\nSecond case:\nRelative speed = L + R = 500 / 5 = 100 kmph\nNow, on solving the above equations, we get,\n⇒ L = 60 kmph and R = 40 kmph\n\nAgain according to the question,\nThe total distance covered by Ram,\n⇒ 40 × (25 + 5) = 1200 km\n\nThe total distance covered by Laxman,\n⇒ 60 × (25 + 5) = 1800 km\n\nThe required difference in the distance,\n⇒ 1800 - 1200 = 600 km\nTherefore, '600 km' is the required answer.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_67c751c6a0",
+        "q_num": 28,
+        "question": "Out of two numbers, the first number is three-fourth of the second number. If the average of the reciprocals of the two numbers is 7/48, then the first number is:",
+        "options": {
+          "a": "8",
+          "b": "4",
+          "c": "10",
+          "d": "6"
+        },
+        "answer": "d",
+        "solution": "Ratio of the first number to the second number is 3 : 4. Let the numbers be 3x and 4x. Sum of reciprocals = 2 × Average = 2 × (7/48) = 7/24. According to the ratio: (1/3x) + (1/4x) = 7/24 ⇒ (4 + 3)/12x = 7/24. 7/12x = 7/24 ⇒ 12x = 24 ⇒ x = 2. First number = 3 × 2 = 6.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_18bca0360c",
+        "q_num": 29,
+        "question": "In a ΔPQR, ∠P = 40°. If the bisectors of the remaining angles meet at A, then the sum of ∠AQR and ∠ARQ equals:",
+        "options": {
+          "a": "110°",
+          "b": "100°",
+          "c": "80°",
+          "d": "70°"
+        },
+        "answer": "d",
+        "solution": "A is the incenter of the triangle since it is situated at the internal bisectors of the angle. ∠QAR = 90° + (∠P / 2). Substituting the values, we get ∠QAR = 90° + (40 / 2) = 110°. In ΔAQR, ∠AQR + ∠ARQ + ∠QAR = 180° ⇒ ∠AQR + ∠ARQ = 180° - 110° = 70°.",
+        "tags": {
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       }

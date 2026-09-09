@@ -63,6 +63,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             Question No.{question.q_num}
           </span>
 
+          {question.tags?.topic && (
+            <span className="text-xs font-semibold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-100">
+              {question.tags.topic}
+            </span>
+          )}
+
           {showSolution ? (
             <>
               {isAttempted ? (
