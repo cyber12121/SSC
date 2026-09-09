@@ -4,6 +4,279 @@
     "chapter_title": "Mock Errors",
     "subject": "English",
     "subject_id": "english",
-    "questions": []
+    "questions": [
+      {
+        "id": "engl_2eb2b7f97b",
+        "q_num": 1,
+        "question": "Consider the following sentences:\n(A) India must take its laws on waste seriously to stop microplastics pollution.\n(B) India must take its laws on waste serious to stop microplastics pollution.\n(C) India must take seriously its laws on waste to stop microplastics pollution.\n(D) The laws must be took seriously to stop microplastics pollution.\nWhich of the above sentences is/are grammatically CORRECT?",
+        "options": {
+          "a": "(A) and (D)",
+          "b": "Only (A)",
+          "c": "Only (B)",
+          "d": "(C) and (D)"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'Only (A)'.\n\nKey Points\n\nSentence (A) is grammatically CORRECT.\nThe use of modal 'must' is correct. It is showing 'obligation'.\nAdverb 'seriously' is qualifying the verb 'take' and the position of the adverb is also apt.\nSentence (B) is grammatically INCORRECT.\nAdjective 'serious' should be replaced with adverb 'seriously' to qualify the verb 'take'.\nSentence (C) is also INCORRECT.\n'Take' is a transitive verb and it needs an object. The object here is 'its laws'. \nWe can't put an adverb between a verb and its direct object.\nThus, the position of 'seriously' is not correct.\nSentence (D) is INCORRECT.\nThe Sentence is in passive voice. We need V3 (taken), not V2 (took).\n'must be took' should be replaced with 'must be taken'.\n\nTherefore, the correct answer is option 2).",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_d12e364c54",
+        "q_num": 2,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).\nB) That unduly restrictive state regulation of abortion is unconstitutional.\nC) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\nD) In a majority opinion written by Justice Harry A. Blackmun.",
+        "options": {
+          "a": "CDAB",
+          "b": "ADBC",
+          "c": "ACBD",
+          "d": "ABDC"
+        },
+        "answer": "d",
+        "solution": "The correct answer is \"ABDC\"\n\nKey Points\n\nLet's look at the correct sequence of the given passage.\nStatement A is the opening sentence of the paragraph as it introduces us to the theme of the passage. The theme of the passage is the Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).  \nStatement B is the second sentence of the passage as it mentions that the legal case was about the unduly restrictive state regulation of abortion which was considered unconstitutional. \nStatement D is the third sentence of the passage as it mentions the majority opinion of the court by Justice Harry A. Blackmun.\nStatement C is the last sentence of the passage as it states the opinion of the court on the legal matter which is that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\n\nHence, the correct sequence is \"ABDC\"\n\nThe complete passage is: A) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2). B) That unduly restrictive state regulation of abortion is unconstitutional. D) In a majority opinion written by Justice Harry A. Blackmun. C) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.",
+        "tags": {
+          "topic": "Analogy",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1219ec03d8",
+        "q_num": 3,
+        "question": "The club meets on the last Thursday of every month in a dilapidated palace.",
+        "options": {
+          "a": "Neglected",
+          "b": "Regenerated",
+          "c": "Furnished",
+          "d": "Renovated"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 'Renovated.' Let us see the meaning of Dilapidated: Dilapidated: (used about buildings, furniture, etc.) old and broken. Let us see the meanings of the given options: Neglected: suffering a lack of proper care. Regenerated: (of an organ or tissue) regrown. Furnished: (of accommodation) available to be rented with furniture. Renovated: repaired and improved, especially a building. From the meanings of the given words, we can say that the one which is closest to the opposite in meaning of the underlined word is 'Renovated.'",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8ad36a76c4",
+        "q_num": 4,
+        "question": "Select the most appropriate ANTONYM of the given word:\nCynical",
+        "options": {
+          "a": "Negligent",
+          "b": "Silent",
+          "c": "Optimistic",
+          "d": "Usurper"
+        },
+        "answer": "c",
+        "solution": "The correct answer is \"Optimistic.\" \"Cynical\" means distrustful or pessimistic. Optimistic means hopeful or confident. The antonym of a word is a word that means the opposite of it. Therefore, the antonym of cynical is optimistic.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_82df173019",
+        "q_num": 5,
+        "question": "Change the sentence from direct speech to indirect speech.\nTarun says to the manager, \"Representatives of the member states will be meeting next week.\"",
+        "options": {
+          "a": "Tarun tells the manager that representatives of the member states will be meeting next week.",
+          "b": "Tarun tells the manager that representatives of the member states would be meeting next week.",
+          "c": "Tarun tells the manager that representatives of the member states are going to meet next week.",
+          "d": "Tarun tells the manager that representatives of the member states meet next week."
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'Tarun tells the manager that representatives of the member states will be meeting next week.' While changing the narration of an assertive sentence, we need to follow the given steps: The conjunction ‘that’ should be used in place of a comma (,) and inverted commas (“ ”). ‘Says to’ will be changed into ‘tells'. When 'says to' is used in the reporting speech, the tense of the reported speech is not changed.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_973755afb6",
+        "q_num": 6,
+        "question": "Select the sentence with no spelling errors.",
+        "options": {
+          "a": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
+          "b": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
+          "c": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
+          "d": "Police who did not understand the orthodox methods of the Black Hood suspected him of numerous crimes."
+        },
+        "answer": "d",
+        "solution": "The correct answer is Option 4. The word \"orthodox\" means conforming to what is generally or traditionally accepted as right or true; established and approved. \"numerous\" means great in number; many. Hence, we can infer that the sentence with no spelling errors is Option 4.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_16912c7e14",
+        "q_num": 7,
+        "question": "According to the passage, what methods did ancient civilizations, such as the Egyptians and the Inca, use to accumulate and utilize phosphorus for agriculture?",
+        "options": {
+          "a": "They exclusively mined phosphate rocks using advanced machinery.",
+          "b": "They imported large quantities of chemical fertilizers from neighbouring empires.",
+          "c": "They synthesized superphosphate using acid treatments.",
+          "d": "They relied on river flooding, seabird guano collection, and systems to trap phosphorus from natural sources."
+        },
+        "answer": "d",
+        "solution": "The correct answer is Option 4. Ancient Egyptian methods: Developed intricate systems to trap phosphorus carried by the Nile’s floodwaters, ensuring its use for agriculture. Inca practices: Built their empire along coastlines rich in seabird guano, a natural source of phosphorus, and utilized this nutrient-dense resource for agriculture. Other civilizations also settled in regions where natural phosphorus sources collected, such as riverbeds, deltas, and upwelling ocean waters.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_7cf483152d",
+        "q_num": 8,
+        "question": "How does the author’s tone shift between the description of early phosphorus use and the emergence of industrial phosphate mining, and what effect does this shift have on the reader’s perception of humanity’s relationship with the environment?",
+        "options": {
+          "a": "The tone shifts from optimistic to indifferent, making the reader see environmental impact as negligible.",
+          "b": "The tone transitions from reverential and harmonious to critical and exploitative, prompting concern over humanity’s increasing detachment from natural cycles.",
+          "c": "The tone remains consistently celebratory, emphasizing technological progress and human ingenuity.",
+          "d": "The tone changes from nostalgic to scientific, encouraging readers to appreciate the complexity of phosphorus chemistry."
+        },
+        "answer": "b",
+        "solution": "Early phosphorus use:\nThe tone is reverential and harmonious, describing how early civilizations relied on natural phosphorus cycles and worked with the environment.\nIndustrial phosphate mining:\nThe tone becomes critical and highlights exploitative practices, such as mining, land degradation, and the detachment from natural cycles.\nThis shift prompts the reader to question and feel concern over humanity’s increasing exploitation of the environment, moving from harmony to detachment.\nTherefore, the correct answer is Option 2 (B).",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_4e06e19379",
+        "q_num": 9,
+        "question": "Based on the passage, what can be inferred about the consequences of phosphorus extraction practices on both human societies and the natural environment during the transition from traditional to industrial agriculture?",
+        "options": {
+          "a": "Phosphorus extraction practices led to immediate and universal increases in crop yields with no negative side effects.",
+          "b": "The shift to industrial extraction resulted in environmental degradation and reinforced exploitative attitudes toward land and people.",
+          "c": "Traditional societies suffered from constant phosphorus shortages, causing frequent famines.",
+          "d": "The transition to industrial methods had little impact on society or the environment, as phosphorus remained rare."
+        },
+        "answer": "b",
+        "solution": "Environmental degradation:\nThe passage describes how industrial phosphate mining involved razing the land, which led to soil degradation and disrupted natural cycles.\nExploitative attitudes:\nAs industrial extraction practices grew, land and people were increasingly viewed as resources to be exploited, rather than respected as part of a natural cycle.\nThis shift contributed to significant negative consequences for both societies and the environment.\nTherefore, the correct answer is Option 2 (B).",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_008a934ad0",
+        "q_num": 10,
+        "question": "Choose the correct one-word substitute for:\n‘To bribe or otherwise induce someone to commit an unlawful act, such as perjury’.",
+        "options": {
+          "a": "Subpoena",
+          "b": "Subjugate",
+          "c": "Suborn",
+          "d": "Substantiate"
+        },
+        "answer": "c",
+        "solution": "The word \"Suborn\" means to bribe or otherwise induce someone to commit an unlawful act, such as perjury.\nExample: The lawyer was accused of attempting to suborn a witness to give false testimony in court.\nTherefore, the correct answer is: Suborn.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_399e2465a3",
+        "q_num": 11,
+        "question": "Select the most appropriate synonym of the underlined word.\nThe bawdy humour of the play wasn’t to everyone’s taste.",
+        "options": {
+          "a": "piecemeal",
+          "b": "ludicrous",
+          "c": "rowdy",
+          "d": "indecorous"
+        },
+        "answer": "d",
+        "solution": "'Bawdy' refers to humor that deals with sexual matters in a comical way; it can also refer to sexual indecency.\n'Indecorous' refers to something that lacks good taste, manners, or decorum, which can include sexually explicit or unrefined humor, hence it is the closest synonym to 'bawdy'.\nTherefore, the correct answer is Option 4 (D).",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b7c215f2b9",
+        "q_num": 12,
+        "question": "Select the option that expresses the given sentence in direct speech.\nElisa ordered her brother to play outside and let her work in peace.",
+        "options": {
+          "a": "Elisa said to her brother, “Play outside that let me do my work in peace.”",
+          "b": "Elisa said to her brother, “Play outside and let me work in peace.”",
+          "c": "Elisa said to her brother, “Play outside to let me do my work in peace.”",
+          "d": "Elisa said to her brother, “Play outside and let me do my work in peace.”"
+        },
+        "answer": "b",
+        "solution": "When we want to report an order or request, we can use a verb like 'asked' or 'ordered' with a to-clause. The pattern is verb + indirect object + to-clause (ordered + her brother + to play).\nHence, the correct direct speech is: Elisa said to her brother, “Play outside and let me work in peace.”",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_e48c34c83f",
+        "q_num": 13,
+        "question": "Select the most appropriate option to substitute the bracketed segment in the given sentence. If no substitution is required, select No substitution required.\nGiraffe deaths have also increased because human populations (has grow and expand into) what used to be wild lands.",
+        "options": {
+          "a": "has grown and expand into",
+          "b": "have grow and expanded",
+          "c": "have grown and expanded into",
+          "d": "No substitution required"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C.\nKey Points:\nThe correct verb forms should be used to match the subject and tense of the sentence.\nThe subject \"human populations\" is plural, so the verb should be \"have\" instead of \"has.\"\nThe verbs \"grown\" and \"expanded\" should be in the past participle form to correctly complete the present perfect tense.\nThe phrase \"into what used to be wild lands\" should remain intact for clarity and meaning.\nTherefore, the correct sentence is: \"Giraffe deaths have also increased because human populations have grown and expanded into what used to be wild lands.\"",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_d90974d3fa",
+        "q_num": 14,
+        "question": "The sentence below has errors in two parts. Identify the same.\n\nShe is one of the finest musician (A) who performs regularly (B) at the cultural centre (C) every weekend. (D)",
+        "options": {
+          "a": "AB",
+          "b": "AC",
+          "c": "BD",
+          "d": "CD"
+        },
+        "answer": "a",
+        "solution": "The phrase \"one of the finest\" must be followed by a plural noun. Therefore, \"musician\" in part (A) should be \"musicians\". The relative clause refers to the plural noun \"musicians\"; therefore, the plural verb \"perform\" should be used instead of \"performs\" in part (B). Thus, parts (A) and (B) contain errors.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1727aa21d4",
+        "q_num": 15,
+        "question": "Choose the correct idiom that can fit in the blank making the sentence grammatically and meaningfully correct.\n\nA fierce, icy wind whipped up the lake's fiery red surface and forced us to ________________________ from our lakeside walk.\nOptions:\nA: beat a hasty retreat\nB: tell tales out of school\nC: play the giddy goat\nD: pay through the nose",
+        "options": {
+          "a": "beat a hasty retreat",
+          "b": "tell tales out of school",
+          "c": "play the giddy goat",
+          "d": "pay through the nose"
+        },
+        "answer": "a",
+        "solution": "The sentence talks of adverse conditions in the surroundings of the lake. Thus, the idiom 'beat a hasty retreat', i.e., 'withdraw quickly in order to avoid something unpleasant', fits correctly in the blank as it conveys that the subject retreated from the place because of the conditions alongside the lake. Hence, option (a) is the correct answer.\n\n'Tell tales out of school' - to reveal confidential or sensitive information; to gossip; 'play the giddy goat' - behave in an irresponsible, silly, or playful way; 'pay through the nose' - pay much more than a fair price. None of these idioms are relevant to the context of the sentence.",
+        "tags": {
+          "topic": "Idioms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_7ae5c50aed",
+        "q_num": 16,
+        "question": "Which part of the following sentence contains a spelling error?\n\nThe engineer inspected the infrastucture (1) before approving the final design (2) for the new suspension bridge (3) yesterday. (4)\nOptions:\nA: 3\nB: 4\nC: 1\nD: 2",
+        "options": {
+          "a": "3",
+          "b": "4",
+          "c": "1",
+          "d": "2"
+        },
+        "answer": "c",
+        "solution": "The word infrastucture is incorrectly spelt.\n\nThe correct spelling is infrastructure, which means the basic physical systems and facilities needed for a country or organisation to function.\n\nHence, (c) is the correct answer.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      }
+    ]
   }
 ]

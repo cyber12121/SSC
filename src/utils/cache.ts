@@ -1,6 +1,6 @@
 const DB_NAME = 'cgl_app_cache';
 const STORE_NAME = 'datasets';
-const CACHE_KEY = 'subject_data_v2';
+const CACHE_KEY = 'subject_data_v4';
 
 export const getCachedData = async <T>(): Promise<T | null> => {
   if (typeof window === 'undefined' || !window.indexedDB) return null;

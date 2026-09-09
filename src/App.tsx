@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
+import { detectTopic } from './utils/topicDetector';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
@@ -112,6 +113,85 @@ const getQuestionId = (chapter: Chapter, question: Question) => {
   return `${chapter.subject}|${chapter.chapter_title}|${question.question}`.replace(/\s+/g, '_');
 };
 
+const getSubjectTheme = (subject: string) => {
+  const sub = (subject || '').toLowerCase();
+  if (sub.includes('math') || sub.includes('quant') || sub.includes('aptitude')) {
+    return {
+      name: 'Mathematics',
+      icon: Calculator,
+      gradient: 'from-violet-600 to-indigo-600',
+      textCol: 'text-violet-600',
+      bgLight: 'bg-violet-50',
+      borderCol: 'border-violet-200',
+      badge: 'bg-violet-100 text-violet-800 border-violet-200',
+      bar: 'bg-violet-600',
+    };
+  }
+  if (sub.includes('reason') || sub.includes('logic')) {
+    return {
+      name: 'Reasoning',
+      icon: Compass,
+      gradient: 'from-purple-600 to-fuchsia-600',
+      textCol: 'text-purple-600',
+      bgLight: 'bg-purple-50',
+      borderCol: 'border-purple-200',
+      badge: 'bg-purple-100 text-purple-800 border-purple-200',
+      bar: 'bg-purple-600',
+    };
+  }
+  if (sub.includes('english') || sub.includes('verbal')) {
+    return {
+      name: 'English',
+      icon: Languages,
+      gradient: 'from-emerald-500 to-teal-600',
+      textCol: 'text-emerald-600',
+      bgLight: 'bg-emerald-50',
+      borderCol: 'border-emerald-200',
+      badge: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+      bar: 'bg-emerald-600',
+    };
+  }
+  if (sub.includes('aware') || sub.includes('gk') || sub.includes('gs') || sub.includes('science')) {
+    return {
+      name: 'General Awareness',
+      icon: Globe2,
+      gradient: 'from-amber-500 to-orange-500',
+      textCol: 'text-amber-600',
+      bgLight: 'bg-amber-50',
+      borderCol: 'border-amber-200',
+      badge: 'bg-amber-100 text-amber-800 border-amber-200',
+      bar: 'bg-amber-500',
+    };
+  }
+  return {
+    name: subject || 'General',
+    icon: BookOpen,
+    gradient: 'from-slate-600 to-slate-700',
+    textCol: 'text-slate-600',
+    bgLight: 'bg-slate-50',
+    borderCol: 'border-slate-200',
+    badge: 'bg-slate-100 text-slate-800 border-slate-200',
+    bar: 'bg-slate-600',
+  };
+};
+
+const formatAttemptDate = (isoStr?: string) => {
+  if (!isoStr) return 'Recently';
+  try {
+    const d = new Date(isoStr);
+    if (isNaN(d.getTime())) return 'Recently';
+    return d.toLocaleDateString(undefined, {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  } catch {
+    return 'Recently';
+  }
+};
+
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill'>('home');
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
@@ -134,6 +214,40 @@ export default function App() {
   const [deletedQuestionIds, setDeletedQuestionIds] = useState<Set<string>>(new Set());
   const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
+
+  // Dashboard filter states
+  const [dashCategoryFilter, setDashCategoryFilter] = useState<'all' | 'chapterBank' | 'mockErrors'>('all');
+  const [dashSubjectFilter, setDashSubjectFilter] = useState<string>('all');
+  const [dashSearchQuery, setDashSearchQuery] = useState<string>('');
+  const [dashSort, setDashSort] = useState<'newest' | 'accuracy-desc' | 'accuracy-asc'>('newest');
+
+  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type)
+  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets'>(() => {
+    try {
+      const saved = localStorage.getItem('mockViewMode');
+      return saved === 'buckets' ? 'buckets' : 'chapters';
+    } catch {
+      return 'chapters';
+    }
+  });
+
+  const setMockViewModePersisted = (mode: 'chapters' | 'buckets') => {
+    setMockViewMode(mode);
+    try { localStorage.setItem('mockViewMode', mode); } catch {}
+  };
+
+  const [activeMockChapterModal, setActiveMockChapterModal] = useState<{
+    topic: string;
+    subject: string;
+    total: number;
+    slow: number;
+    unattempted: number;
+    wrong: number;
+    questions: (Question & { errorType: 'speed_issue' | 'unattempted' | 'wrong' })[];
+    slowQuestions: Question[];
+    unattemptedQuestions: Question[];
+    wrongQuestions: Question[];
+  } | null>(null);
 
   const toggleChapterExpand = (subject: string, chapter: string) => {
     const key = `${subject}|${chapter}`;
@@ -289,7 +403,10 @@ export default function App() {
         orderBy('completedAt', 'desc')
       );
       const querySnapshot = await getDocs(q);
-      const results = querySnapshot.docs.map(doc => doc.data() as QuizResult);
+      const results = querySnapshot.docs.map(doc => ({
+        ...doc.data(),
+        id: doc.id
+      })) as QuizResult[];
       setUserResults(results);
     } catch (error) {
       console.error('Error fetching results:', error);
@@ -532,8 +649,8 @@ export default function App() {
           userId: user.uid,
           completedAt: new Date().toISOString(),
         };
-        await addDoc(collection(db, 'results'), fullResult);
-        savedResult = fullResult;
+        const docRef = await addDoc(collection(db, 'results'), fullResult);
+        savedResult = { ...fullResult, id: docRef.id };
         console.log('Progress saved successfully');
         await fetchResults();
       } catch (error) {
@@ -559,12 +676,268 @@ export default function App() {
   };
 
   const reattemptFromResult = (result: QuizResult) => {
-    const data = result.category === 'mockErrors' ? mockData : bankData;
-    const chapter = (data[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+    // 1. Check primary category
+    const primaryData = result.category === 'mockErrors' ? mockData : bankData;
+    let chapter = (primaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+
+    // 2. Check alternate category
+    if (!chapter) {
+      const secondaryData = result.category === 'mockErrors' ? bankData : mockData;
+      chapter = (secondaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+      if (chapter) {
+        setCategory(result.category === 'mockErrors' ? 'chapterBank' : 'mockErrors');
+        startQuiz(chapter);
+        return;
+      }
+    }
+
+    // 3. Sub-topic breakdown if format is "Chapter • Topic"
+    if (!chapter && result.chapter_title.includes(' • ')) {
+      const [parentTitle, topic] = result.chapter_title.split(' • ');
+      const parentChapter = (primaryData[result.subject] || []).find(ch => ch.chapter_title === parentTitle.trim());
+      if (parentChapter) {
+        setCategory(result.category);
+        startMockTopicQuiz(parentChapter, topic.trim());
+        return;
+      }
+    }
+
+    // 4. "All Subject Questions" quiz
+    if (!chapter && result.chapter_title.startsWith('All ') && result.chapter_title.includes(' Questions')) {
+      setCategory(result.category);
+      startAllSubjectQuiz(result.subject);
+      return;
+    }
+
     if (chapter) {
       setCategory(result.category);
       startQuiz(chapter);
+      return;
     }
+
+    // 5. Fallback: reconstruct virtual chapter from stored questionDetails
+    const storedQuestions = (result.questionDetails || [])
+      .map(qd => qd.question)
+      .filter((q): q is Question => Boolean(q && q.question));
+
+    if (storedQuestions.length > 0) {
+      const virtualChapter: Chapter = {
+        chapter_num: 0,
+        chapter_title: result.chapter_title,
+        subject: result.subject,
+        subject_id: result.subject.toLowerCase().replace(/\s+/g, '_'),
+        questions: storedQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+      };
+      setCategory(result.category);
+      startQuiz(virtualChapter);
+      return;
+    }
+
+    alert('Source questions for this quiz could not be reloaded.');
+  };
+
+  const handleDeleteResult = async (resultId?: string) => {
+    if (!resultId) return;
+    if (!window.confirm('Are you sure you want to delete this quiz attempt from your history?')) return;
+    try {
+      await deleteDoc(doc(db, 'results', resultId));
+      setUserResults(prev => prev.filter(r => r.id !== resultId));
+    } catch (error) {
+      console.error('Error deleting result:', error);
+      alert('Failed to delete quiz result.');
+    }
+  };
+
+  const dashboardStats = useMemo(() => {
+    if (!userResults || userResults.length === 0) {
+      return {
+        totalQuizzes: 0,
+        totalQuestions: 0,
+        totalCorrect: 0,
+        overallAccuracy: 0,
+        totalTimeSeconds: 0,
+        avgTimePerQ: 0,
+        mockCount: 0,
+        practiceCount: 0,
+        subjectStats: {
+          'Mathematics': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+          'Reasoning': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+          'English': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+          'General Awareness': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
+        } as Record<string, { totalQ: number; correct: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }>
+      };
+    }
+
+    let totalQ = 0;
+    let totalCorrect = 0;
+    let totalTime = 0;
+    let mockCount = 0;
+    let practiceCount = 0;
+
+    const subjectStats: Record<string, { totalQ: number; correct: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }> = {
+      'Mathematics': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+      'Reasoning': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+      'English': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+      'General Awareness': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
+    };
+
+    userResults.forEach(r => {
+      const qCount = Number(r.totalQuestions) || 0;
+      const score = Number(r.score) || 0;
+      const time = Number(r.totalTime) || 0;
+
+      totalQ += qCount;
+      totalCorrect += score;
+      totalTime += time;
+
+      if (r.mode === 'mock') mockCount++;
+      else practiceCount++;
+
+      const theme = getSubjectTheme(r.subject);
+      const subKey = theme.name;
+
+      if (!subjectStats[subKey]) {
+        subjectStats[subKey] = { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 };
+      }
+      subjectStats[subKey].quizzes += 1;
+      subjectStats[subKey].totalQ += qCount;
+      subjectStats[subKey].correct += score;
+      subjectStats[subKey].totalTime += time;
+    });
+
+    Object.keys(subjectStats).forEach(sub => {
+      const s = subjectStats[sub];
+      s.accuracy = s.totalQ > 0 ? Math.round((s.correct / s.totalQ) * 100) : 0;
+      s.avgTime = s.totalQ > 0 ? Math.round(s.totalTime / s.totalQ) : 0;
+    });
+
+    const overallAccuracy = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
+    const avgTimePerQ = totalQ > 0 ? Math.round(totalTime / totalQ) : 0;
+
+    return {
+      totalQuizzes: userResults.length,
+      totalQuestions: totalQ,
+      totalCorrect,
+      overallAccuracy,
+      totalTimeSeconds: totalTime,
+      avgTimePerQ,
+      mockCount,
+      practiceCount,
+      subjectStats
+    };
+  }, [userResults]);
+
+  const filteredUserResults = useMemo(() => {
+    return userResults
+      .filter(r => {
+        if (dashCategoryFilter !== 'all' && r.category !== dashCategoryFilter) return false;
+        if (dashSubjectFilter !== 'all') {
+          const theme = getSubjectTheme(r.subject);
+          if (theme.name !== dashSubjectFilter && r.subject !== dashSubjectFilter) return false;
+        }
+        if (dashSearchQuery.trim()) {
+          const q = dashSearchQuery.toLowerCase();
+          const matchTitle = (r.chapter_title || '').toLowerCase().includes(q);
+          const matchSub = (r.subject || '').toLowerCase().includes(q);
+          if (!matchTitle && !matchSub) return false;
+        }
+        return true;
+      })
+      .sort((a, b) => {
+        if (dashSort === 'newest') {
+          return new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime();
+        }
+        const accA = a.totalQuestions > 0 ? a.score / a.totalQuestions : 0;
+        const accB = b.totalQuestions > 0 ? b.score / b.totalQuestions : 0;
+        if (dashSort === 'accuracy-desc') return accB - accA;
+        if (dashSort === 'accuracy-asc') return accA - accB;
+        return 0;
+      });
+  }, [userResults, dashCategoryFilter, dashSubjectFilter, dashSearchQuery, dashSort]);
+
+  // Clubbed Mock Error Chapters: group all questions chapter-wise across Slow, Unattempted, and Wrong
+  const clubbedMockChapters = useMemo(() => {
+    if (category !== 'mockErrors' || !selectedSubject) return [];
+    const chapters = currentData[selectedSubject] || [];
+    const map: Record<string, {
+      topic: string;
+      subject: string;
+      total: number;
+      slow: number;
+      unattempted: number;
+      wrong: number;
+      questions: (Question & { errorType: 'speed_issue' | 'unattempted' | 'wrong' })[];
+      slowQuestions: Question[];
+      unattemptedQuestions: Question[];
+      wrongQuestions: Question[];
+    }> = {};
+
+    chapters.forEach(ch => {
+      const titleLower = ch.chapter_title.toLowerCase();
+      let errorType: 'speed_issue' | 'unattempted' | 'wrong' = 'wrong';
+      if (titleLower.includes('speed') || titleLower.includes('slow')) {
+        errorType = 'speed_issue';
+      } else if (titleLower.includes('unattempted') || titleLower.includes('skipped') || titleLower.includes('left')) {
+        errorType = 'unattempted';
+      } else if (titleLower.includes('wrong') || titleLower.includes('incorrect')) {
+        errorType = 'wrong';
+      }
+
+      ch.questions.forEach(q => {
+        const topic = detectTopic(q, selectedSubject);
+        if (!map[topic]) {
+          map[topic] = {
+            topic,
+            subject: selectedSubject,
+            total: 0,
+            slow: 0,
+            unattempted: 0,
+            wrong: 0,
+            questions: [],
+            slowQuestions: [],
+            unattemptedQuestions: [],
+            wrongQuestions: []
+          };
+        }
+        map[topic].total += 1;
+        const qWithError = { ...q, errorType };
+        map[topic].questions.push(qWithError);
+
+        if (errorType === 'speed_issue') {
+          map[topic].slow += 1;
+          map[topic].slowQuestions.push(q);
+        } else if (errorType === 'unattempted') {
+          map[topic].unattempted += 1;
+          map[topic].unattemptedQuestions.push(q);
+        } else {
+          map[topic].wrong += 1;
+          map[topic].wrongQuestions.push(q);
+        }
+      });
+    });
+
+    return Object.values(map).sort((a, b) => b.total - a.total);
+  }, [category, selectedSubject, currentData]);
+
+  const startClubbedChapterQuiz = (
+    topicName: string,
+    questions: Question[],
+    subType?: 'slow' | 'unattempted' | 'wrong'
+  ) => {
+    if (!selectedSubject) return;
+    if (!questions || questions.length === 0) {
+      alert(`No questions available for this drill.`);
+      return;
+    }
+    const label = subType === 'slow' ? ' • Slow' : subType === 'unattempted' ? ' • Skipped' : subType === 'wrong' ? ' • Wrong' : '';
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `${topicName}${label}`,
+      subject: selectedSubject,
+      subject_id: selectedSubject.toLowerCase().replace(/\s+/g, '_'),
+      questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+    };
+    startQuiz(virtualChapter);
   };
 
   const isAuthorized = user?.email === 'cyberdevil0101@gmail.com';
@@ -909,170 +1282,352 @@ export default function App() {
                       </span>
                     </div>
 
-                    {/* Mock Errors: Attempt All Option */}
-                    {category === 'mockErrors' && (
+                    {/* Mock Errors: Attempt All Option & View Mode Toggle */}
+                    {category === 'mockErrors' && (currentData[selectedSubject] || []).length > 0 && (
                       <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
                         <div>
-                          <h3 className="text-lg font-semibold text-slate-800">Attempt All {selectedSubject} Errors</h3>
+                          <h3 className="text-lg font-bold text-slate-800">Practice {selectedSubject} Mock Errors</h3>
                           <p className="mt-1 text-sm text-slate-500">
-                            Practice all {currentData[selectedSubject].reduce((acc, ch) => acc + ch.questions.length, 0)} questions from every topic at once.
+                            {clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)} error questions recorded across {clubbedMockChapters.length} chapters.
                           </p>
                         </div>
-                        <button
-                          onClick={() => startAllSubjectQuiz(selectedSubject)}
-                          className="inline-flex shrink-0 items-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-200 transition-all hover:shadow-lg hover:shadow-indigo-300 hover:-translate-y-0.5"
-                        >
-                          <Play className="w-4 h-4 mr-2" />
-                          Start All
-                        </button>
+                        <div className="flex flex-wrap items-center gap-3">
+                          {/* Toggle Mode: Chapter-Wise vs By Error Bucket */}
+                          <div className="inline-flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-inner">
+                            <button
+                              onClick={() => setMockViewModePersisted('chapters')}
+                              className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
+                                mockViewMode === 'chapters'
+                                  ? 'bg-white text-indigo-700 shadow-sm'
+                                  : 'text-slate-500 hover:text-slate-800'
+                              }`}
+                              title="Club all questions chapter-wise across Slow, Unattempted, and Wrong"
+                            >
+                              <ListChecks className="w-4 h-4" />
+                              Chapter-Wise
+                            </button>
+                            <button
+                              onClick={() => setMockViewModePersisted('buckets')}
+                              className={`px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
+                                mockViewMode === 'buckets'
+                                  ? 'bg-white text-indigo-700 shadow-sm'
+                                  : 'text-slate-500 hover:text-slate-800'
+                              }`}
+                              title="View questions grouped into Speed Issue, Unattempted, and Wrong buckets"
+                            >
+                              <Layers className="w-4 h-4" />
+                              By Error Type
+                            </button>
+                          </div>
+
+                          <button
+                            onClick={() => startAllSubjectQuiz(selectedSubject)}
+                            className="inline-flex shrink-0 items-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-200 transition-all hover:shadow-lg hover:shadow-indigo-300 hover:-translate-y-0.5"
+                          >
+                            <Play className="w-4 h-4 mr-2" />
+                            Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})
+                          </button>
+                        </div>
                       </div>
                     )}
 
                     {category === 'mockErrors' ? (
-                      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-                        {currentData[selectedSubject].map((chapter, idx) => {
-                          const isSpeed = chapter.chapter_title.toLowerCase().includes('speed');
-                          const isUnattempted = chapter.chapter_title.toLowerCase().includes('unattempted') || chapter.chapter_title.toLowerCase().includes('skipped');
-                          const isWrong = chapter.chapter_title.toLowerCase().includes('wrong') || chapter.chapter_title.toLowerCase().includes('error');
+                      (currentData[selectedSubject] || []).length === 0 ? (
+                        <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
+                          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-rose-50 text-rose-500 shadow-inner mb-4">
+                            <Flame className="h-8 w-8" />
+                          </div>
+                          <h3 className="text-lg font-bold text-slate-800">No Mock Errors Recorded</h3>
+                          <p className="mt-1 text-sm text-slate-500 max-w-md">
+                            There are currently no mock error questions for {selectedSubject}. Errors captured from mocks will appear here.
+                          </p>
+                        </div>
+                      ) : mockViewMode === 'chapters' ? (
+                        /* Chapter-Wise Clubbed View (Compact List Format) */
+                        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                          {/* List Header */}
+                          <div className="px-6 py-4 border-b border-slate-100 bg-slate-50/80 flex items-center justify-between text-xs font-black uppercase tracking-wider text-slate-500">
+                            <div className="flex items-center gap-2">
+                              <span>Chapter Name ({clubbedMockChapters.length})</span>
+                              <span className="text-[10px] text-slate-400 font-medium normal-case hidden sm:inline">(Ranked in descending order of total)</span>
+                            </div>
+                            <div className="flex items-center gap-2 sm:gap-6 text-right">
+                              <span className="w-14 sm:w-16 text-amber-600">⚡ Slow</span>
+                              <span className="w-14 sm:w-16 text-rose-600">❌ Wrong</span>
+                              <span className="w-14 sm:w-16 text-blue-600">◯ Skipped</span>
+                              <span className="w-14 sm:w-16 text-indigo-700">🔥 Total</span>
+                              <span className="w-20 sm:w-24 text-center hidden sm:inline">Action</span>
+                            </div>
+                          </div>
 
-                          // Compute topic-wise breakdown
-                          const topicMap: Record<string, number> = {};
-                          chapter.questions.forEach(q => {
-                            const t = q.tags?.topic || (q as any).topic || 'General';
-                            topicMap[t] = (topicMap[t] || 0) + 1;
-                          });
-
-                          const sortedTopics = Object.entries(topicMap).sort((a, b) => b[1] - a[1]);
-
-                          // Theme config per bucket
-                          const theme = isSpeed
-                            ? {
-                                border: 'border-amber-200 hover:border-amber-300',
-                                bgHeader: 'from-amber-500/10 via-amber-50/30 to-transparent',
-                                iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-amber-200',
-                                badge: 'bg-amber-100 text-amber-800 border border-amber-200',
-                                topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300 hover:shadow-sm',
-                                topicCount: 'bg-amber-200/70 text-amber-900',
-                                btn: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-amber-200',
-                                subText: 'Overtime & Speed Lags',
-                                icon: Zap
-                              }
-                            : isUnattempted
-                            ? {
-                                border: 'border-blue-200 hover:border-blue-300',
-                                bgHeader: 'from-blue-500/10 via-blue-50/30 to-transparent',
-                                iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-blue-200',
-                                badge: 'bg-blue-100 text-blue-800 border border-blue-200',
-                                topicPill: 'bg-blue-50/80 hover:bg-blue-100 text-blue-950 border-blue-200/80 hover:border-blue-300 hover:shadow-sm',
-                                topicCount: 'bg-blue-200/70 text-blue-900',
-                                btn: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-blue-200',
-                                subText: 'Skipped & Left Out',
-                                icon: AlertCircle
-                              }
-                            : {
-                                border: 'border-rose-200 hover:border-rose-300',
-                                bgHeader: 'from-rose-500/10 via-rose-50/30 to-transparent',
-                                iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-rose-200',
-                                badge: 'bg-rose-100 text-rose-800 border border-rose-200',
-                                topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300 hover:shadow-sm',
-                                topicCount: 'bg-rose-200/70 text-rose-900',
-                                btn: 'bg-gradient-to-r from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 text-white shadow-rose-200',
-                                subText: 'Incorrect Answers',
-                                icon: Flame
-                              };
-
-                          const IconComp = theme.icon;
-
-                          return (
-                            <motion.div
-                              key={idx}
-                              initial={{ opacity: 0, y: 15 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: idx * 0.08 }}
-                              className={`flex flex-col rounded-3xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl ${theme.border}`}
-                            >
-                              {/* Bucket Header */}
-                              <div className={`rounded-t-3xl bg-gradient-to-b p-6 pb-4 ${theme.bgHeader}`}>
-                                <div className="flex items-center justify-between">
-                                  <div className={`flex h-12 w-12 items-center justify-center rounded-2xl shadow-md ${theme.iconBg}`}>
-                                    <IconComp className="w-6 h-6" />
+                          {/* Rows */}
+                          <div className="divide-y divide-slate-100">
+                            {clubbedMockChapters.map((ch, idx) => (
+                              <div
+                                key={ch.topic}
+                                onClick={() => setActiveMockChapterModal(ch)}
+                                className="group px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-indigo-50/30 transition-all cursor-pointer"
+                              >
+                                {/* Left details */}
+                                <div className="flex items-center gap-3.5 min-w-0 flex-1">
+                                  <span className="w-7 h-7 rounded-lg bg-slate-100 group-hover:bg-indigo-100 group-hover:text-indigo-700 text-slate-500 text-xs font-black flex items-center justify-center shrink-0 transition-colors">
+                                    #{idx + 1}
+                                  </span>
+                                  <div className="min-w-0">
+                                    <h4 className="text-base font-black text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
+                                      {ch.topic}
+                                    </h4>
+                                    <span className="text-xs text-slate-400 font-medium sm:hidden">
+                                      Click to view {ch.total} questions
+                                    </span>
                                   </div>
-                                  <span className={`rounded-full px-3 py-1 text-xs font-bold ${theme.badge}`}>
-                                    {chapter.questions.length} {chapter.questions.length === 1 ? 'Question' : 'Questions'}
-                                  </span>
-                                </div>
-                                <h3 className="mt-4 text-xl font-black text-slate-900">{chapter.chapter_title}</h3>
-                                <p className="mt-0.5 text-xs font-medium text-slate-500">{theme.subText}</p>
-                              </div>
-
-                              {/* Topic Sub-Buckets Breakdown */}
-                              <div className="flex-1 p-6 pt-3">
-                                <div className="mb-3 flex items-center justify-between">
-                                  <span className="text-[11px] font-bold tracking-wider uppercase text-slate-400">
-                                    Topic Breakdown ({sortedTopics.length})
-                                  </span>
-                                  <span className="text-[11px] font-medium text-slate-400">Click topic to drill</span>
                                 </div>
 
-                                {sortedTopics.length === 0 ? (
-                                  <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 py-10 text-center">
-                                    <p className="text-xs font-semibold text-slate-400">No questions in this bucket yet</p>
-                                    <p className="mt-1 text-[11px] text-slate-400">Captured mock errors will appear here</p>
-                                  </div>
-                                ) : (
-                                  <div className="flex flex-col gap-2 max-h-[320px] overflow-y-auto pr-1">
-                                    {sortedTopics.map(([topicName, count]) => (
-                                      <button
-                                        key={topicName}
-                                        onClick={() => startMockTopicQuiz(chapter, topicName)}
-                                        className={`group flex items-center justify-between rounded-xl border p-2.5 px-3 text-left text-xs font-semibold transition-all duration-150 ${theme.topicPill}`}
-                                      >
-                                        <div className="flex items-center gap-2 truncate">
-                                          <span className="truncate">{topicName}</span>
-                                        </div>
-                                        <div className="flex items-center gap-1.5 shrink-0 ml-2">
-                                          <span className={`rounded-md px-2 py-0.5 text-[11px] font-black ${theme.topicCount}`}>
-                                            {count}
-                                          </span>
-                                          <ChevronRight className="w-3.5 h-3.5 opacity-40 transition-transform group-hover:translate-x-0.5 group-hover:opacity-100" />
-                                        </div>
-                                      </button>
-                                    ))}
-                                  </div>
-                                )}
-                              </div>
-
-                              {/* Bucket Practice All Action */}
-                              <div className="border-t border-slate-100 p-4 bg-slate-50/50 rounded-b-3xl flex items-center gap-2">
-                                <button
-                                  onClick={() => startQuiz(chapter)}
-                                  disabled={chapter.questions.length === 0}
-                                  className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition-all shadow-sm disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
-                                >
-                                  <Play className="w-3.5 h-3.5 fill-current" />
-                                  Practice All {chapter.chapter_title} ({chapter.questions.length})
-                                </button>
-                                {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                {/* Right counts & practice button */}
+                                <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-6 shrink-0">
+                                  {/* Slow */}
                                   <button
-                                    onClick={() => {
-                                      const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
-                                      if (r) openReview(r, 'home');
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      if (ch.slow > 0) startClubbedChapterQuiz(ch.topic, ch.slowQuestions, 'slow');
                                     }}
-                                    className="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors shadow-sm"
-                                    title="Review last attempt"
+                                    disabled={ch.slow === 0}
+                                    className={`w-14 sm:w-16 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 ${
+                                      ch.slow > 0
+                                        ? 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 hover:scale-105'
+                                        : 'text-slate-300 bg-slate-50 cursor-default'
+                                    }`}
+                                    title={ch.slow > 0 ? `Practice ${ch.slow} slow questions` : 'No slow questions'}
                                   >
-                                    <History className="w-4 h-4" />
+                                    <Zap className="w-3.5 h-3.5 shrink-0" />
+                                    <span>{ch.slow}</span>
                                   </button>
-                                )}
+
+                                  {/* Wrong */}
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      if (ch.wrong > 0) startClubbedChapterQuiz(ch.topic, ch.wrongQuestions, 'wrong');
+                                    }}
+                                    disabled={ch.wrong === 0}
+                                    className={`w-14 sm:w-16 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 ${
+                                      ch.wrong > 0
+                                        ? 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 hover:scale-105'
+                                        : 'text-slate-300 bg-slate-50 cursor-default'
+                                    }`}
+                                    title={ch.wrong > 0 ? `Practice ${ch.wrong} wrong questions` : 'No wrong questions'}
+                                  >
+                                    <XCircle className="w-3.5 h-3.5 shrink-0" />
+                                    <span>{ch.wrong}</span>
+                                  </button>
+
+                                  {/* Skipped */}
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      if (ch.unattempted > 0) startClubbedChapterQuiz(ch.topic, ch.unattemptedQuestions, 'unattempted');
+                                    }}
+                                    disabled={ch.unattempted === 0}
+                                    className={`w-14 sm:w-16 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 ${
+                                      ch.unattempted > 0
+                                        ? 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 hover:scale-105'
+                                        : 'text-slate-300 bg-slate-50 cursor-default'
+                                    }`}
+                                    title={ch.unattempted > 0 ? `Practice ${ch.unattempted} skipped questions` : 'No skipped questions'}
+                                  >
+                                    <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                                    <span>{ch.unattempted}</span>
+                                  </button>
+
+                                  {/* Total */}
+                                  <div className="w-14 sm:w-16 py-1.5 rounded-xl text-xs font-black bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center gap-1">
+                                    <Flame className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                                    <span>{ch.total}</span>
+                                  </div>
+
+                                  {/* Practice All Button */}
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      startClubbedChapterQuiz(ch.topic, ch.allQuestions);
+                                    }}
+                                    className="w-20 sm:w-24 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-sm flex items-center justify-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
+                                    title={`Start quiz with all ${ch.total} questions for ${ch.topic}`}
+                                  >
+                                    <Play className="w-3 h-3 fill-current" />
+                                    Practice
+                                  </button>
+                                </div>
                               </div>
-                            </motion.div>
-                          );
-                        })}
-                      </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        /* Original By Error Bucket View */
+                        <div className={`grid gap-6 ${
+                          (currentData[selectedSubject] || []).length === 1
+                            ? 'grid-cols-1 max-w-2xl mx-auto w-full'
+                            : (currentData[selectedSubject] || []).length === 2
+                            ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto w-full'
+                            : 'grid-cols-1 lg:grid-cols-3 w-full'
+                        }`}>
+                          {(currentData[selectedSubject] || []).map((chapter, idx) => {
+                            const isSpeed = chapter.chapter_title.toLowerCase().includes('speed');
+                            const isUnattempted = chapter.chapter_title.toLowerCase().includes('unattempted') || chapter.chapter_title.toLowerCase().includes('skipped');
+                            const isWrong = chapter.chapter_title.toLowerCase().includes('wrong');
+                            const isAllErrors = chapter.chapter_title.toLowerCase().includes('mock') || chapter.chapter_title.toLowerCase().includes('all');
+
+                            // Compute topic-wise breakdown
+                            const topicMap: Record<string, number> = {};
+                            chapter.questions.forEach(q => {
+                              const t = q.tags?.topic || (q as any).topic || 'General';
+                              topicMap[t] = (topicMap[t] || 0) + 1;
+                            });
+
+                            const sortedTopics = Object.entries(topicMap).sort((a, b) => b[1] - a[1]);
+
+                            // Theme config per bucket
+                            const theme = isSpeed
+                              ? {
+                                  border: 'border-amber-200 hover:border-amber-300',
+                                  bgHeader: 'from-amber-500/10 via-amber-50/30 to-transparent',
+                                  iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-amber-200',
+                                  badge: 'bg-amber-100 text-amber-800 border border-amber-200',
+                                  topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300 hover:shadow-sm',
+                                  topicCount: 'bg-amber-200/70 text-amber-900',
+                                  btn: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-amber-200',
+                                  subText: 'Overtime & Speed Lags',
+                                  icon: Zap
+                                }
+                              : isUnattempted
+                              ? {
+                                  border: 'border-blue-200 hover:border-blue-300',
+                                  bgHeader: 'from-blue-500/10 via-blue-50/30 to-transparent',
+                                  iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-blue-200',
+                                  badge: 'bg-blue-100 text-blue-800 border border-blue-200',
+                                  topicPill: 'bg-blue-50/80 hover:bg-blue-100 text-blue-950 border-blue-200/80 hover:border-blue-300 hover:shadow-sm',
+                                  topicCount: 'bg-blue-200/70 text-blue-900',
+                                  btn: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-blue-200',
+                                  subText: 'Skipped & Left Out',
+                                  icon: AlertCircle
+                                }
+                              : isAllErrors
+                              ? {
+                                  border: 'border-indigo-200 hover:border-indigo-300',
+                                  bgHeader: 'from-indigo-500/10 via-indigo-50/30 to-transparent',
+                                  iconBg: 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-indigo-200',
+                                  badge: 'bg-indigo-100 text-indigo-800 border border-indigo-200',
+                                  topicPill: 'bg-indigo-50/80 hover:bg-indigo-100 text-indigo-950 border-indigo-200/80 hover:border-indigo-300 hover:shadow-sm',
+                                  topicCount: 'bg-indigo-200/70 text-indigo-900',
+                                  btn: 'bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white shadow-indigo-200',
+                                  subText: 'All English Mock Errors',
+                                  icon: BookOpen
+                                }
+                              : {
+                                  border: 'border-rose-200 hover:border-rose-300',
+                                  bgHeader: 'from-rose-500/10 via-rose-50/30 to-transparent',
+                                  iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-rose-200',
+                                  badge: 'bg-rose-100 text-rose-800 border border-rose-200',
+                                  topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300 hover:shadow-sm',
+                                  topicCount: 'bg-rose-200/70 text-rose-900',
+                                  btn: 'bg-gradient-to-r from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 text-white shadow-rose-200',
+                                  subText: 'Incorrect Answers',
+                                  icon: Flame
+                                };
+
+                            const IconComp = theme.icon;
+
+                            return (
+                              <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: idx * 0.08 }}
+                                className={`flex flex-col rounded-3xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl ${theme.border}`}
+                              >
+                                {/* Bucket Header */}
+                                <div className={`rounded-t-3xl bg-gradient-to-b p-6 pb-4 ${theme.bgHeader}`}>
+                                  <div className="flex items-center justify-between">
+                                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl shadow-md ${theme.iconBg}`}>
+                                      <IconComp className="w-6 h-6" />
+                                    </div>
+                                    <span className={`rounded-full px-3 py-1 text-xs font-bold ${theme.badge}`}>
+                                      {chapter.questions.length} {chapter.questions.length === 1 ? 'Question' : 'Questions'}
+                                    </span>
+                                  </div>
+                                  <h3 className="mt-4 text-xl font-black text-slate-900">{chapter.chapter_title}</h3>
+                                  <p className="mt-0.5 text-xs font-medium text-slate-500">{theme.subText}</p>
+                                </div>
+
+                                {/* Topic Sub-Buckets Breakdown */}
+                                <div className="flex-1 p-6 pt-3">
+                                  <div className="mb-3 flex items-center justify-between">
+                                    <span className="text-[11px] font-bold tracking-wider uppercase text-slate-400">
+                                      Topic Breakdown ({sortedTopics.length})
+                                    </span>
+                                    <span className="text-[11px] font-medium text-slate-400">Click topic to drill</span>
+                                  </div>
+
+                                  {sortedTopics.length === 0 ? (
+                                    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 py-10 text-center">
+                                      <p className="text-xs font-semibold text-slate-400">No questions in this bucket yet</p>
+                                      <p className="mt-1 text-[11px] text-slate-400">Captured mock errors will appear here</p>
+                                    </div>
+                                  ) : (
+                                    <div className="flex flex-col gap-2 max-h-[320px] overflow-y-auto pr-1">
+                                      {sortedTopics.map(([topicName, count]) => (
+                                        <button
+                                          key={topicName}
+                                          onClick={() => startMockTopicQuiz(chapter, topicName)}
+                                          className={`group flex items-center justify-between rounded-xl border p-2.5 px-3 text-left text-xs font-semibold transition-all duration-150 ${theme.topicPill}`}
+                                        >
+                                          <div className="flex items-center gap-2 truncate">
+                                            <span className="truncate">{topicName}</span>
+                                          </div>
+                                          <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                                            <span className={`rounded-md px-2 py-0.5 text-[11px] font-black ${theme.topicCount}`}>
+                                              {count}
+                                            </span>
+                                            <ChevronRight className="w-3.5 h-3.5 opacity-40 transition-transform group-hover:translate-x-0.5 group-hover:opacity-100" />
+                                          </div>
+                                        </button>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+
+                                {/* Bucket Practice All Action */}
+                                <div className="border-t border-slate-100 p-4 bg-slate-50/50 rounded-b-3xl flex items-center gap-2">
+                                  <button
+                                    onClick={() => startQuiz(chapter)}
+                                    disabled={chapter.questions.length === 0}
+                                    className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition-all shadow-sm disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
+                                  >
+                                    <Play className="w-3.5 h-3.5 fill-current" />
+                                    Practice All {chapter.chapter_title} ({chapter.questions.length})
+                                  </button>
+                                  {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                    <button
+                                      onClick={() => {
+                                        const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
+                                        if (r) openReview(r, 'home');
+                                      }}
+                                      className="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors shadow-sm"
+                                      title="Review last attempt"
+                                    >
+                                      <History className="w-4 h-4" />
+                                    </button>
+                                  )}
+                                </div>
+                              </motion.div>
+                            );
+                          })}
+                        </div>
+                      )
                     ) : (
                       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {(() => {
-                          const relevantChapters = currentData[selectedSubject].filter(chapter =>
+                          const relevantChapters = (currentData[selectedSubject] || []).filter(chapter =>
                             !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
                           );
                           const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
@@ -1464,7 +2019,7 @@ export default function App() {
               key="dashboard"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-6xl mx-auto space-y-8"
             >
               {!user ? (
                 <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100">
@@ -1472,7 +2027,7 @@ export default function App() {
                     <LogIn className="w-10 h-10" />
                   </div>
                   <h2 className="text-3xl font-black text-slate-900 mb-4">Login to Track Progress</h2>
-                  <p className="text-slate-500 mb-8">Sign in with Google to save your quiz results and track your performance.</p>
+                  <p className="text-slate-500 mb-8 max-w-md mx-auto">Sign in with Google to store your quiz attempts, view detailed performance metrics, and track your SSC CGL preparation journey.</p>
                   <button
                     onClick={handleLogin}
                     className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
@@ -1481,136 +2036,430 @@ export default function App() {
                   </button>
                 </div>
               ) : loadingResults ? (
-                <div className="flex flex-col items-center justify-center py-20">
-                  <Loader2 className="w-10 h-10 text-blue-600 animate-spin mb-4" />
-                  <p className="text-slate-500 font-bold">Fetching your results...</p>
+                <div className="flex flex-col items-center justify-center py-24">
+                  <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-4" />
+                  <p className="text-slate-500 font-bold text-lg">Fetching your performance analytics...</p>
                 </div>
               ) : userResults.length === 0 ? (
-                <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100">
-                  <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100 p-8">
+                  <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                     <Trophy className="w-10 h-10" />
                   </div>
-                  <h2 className="text-3xl font-black text-slate-900 mb-4">No Results Yet</h2>
-                  <p className="text-slate-500 mb-8">Complete a quiz to see your performance analytics here.</p>
-                  <button
-                    onClick={() => setView('home')}
-                    className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
-                  >
-                    Start Practicing
-                  </button>
+                  <h2 className="text-3xl font-black text-slate-900 mb-3">No Results Recorded Yet</h2>
+                  <p className="text-slate-500 mb-8 max-w-lg mx-auto">Complete a practice quiz or mock error drill to see your accuracy, speed breakdown, and subject-level insights here.</p>
+                  <div className="flex flex-wrap items-center justify-center gap-4">
+                    <button
+                      onClick={() => setView('home')}
+                      className="px-8 py-3.5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+                    >
+                      Start Chapter Practice
+                    </button>
+                    <button
+                      onClick={() => setView('heatmap')}
+                      className="px-8 py-3.5 bg-rose-50 text-rose-600 border border-rose-200 rounded-2xl font-bold hover:bg-rose-100 transition-all"
+                    >
+                      View Error Heatmap
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <div className="space-y-8">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-3xl font-black text-slate-900">Performance Overview</h2>
-                    <button
-                      onClick={() => setView('home')}
-                      className="text-blue-600 font-bold hover:text-blue-700 transition-colors"
-                    >
-                      Back to Practice
-                    </button>
-                  </div>
-
-                  {/* Summary Stats */}
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100">
-                      <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-2">Total Quizzes</div>
-                      <div className="text-3xl font-black text-slate-900">{userResults.length}</div>
-                    </div>
-                    <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100">
-                      <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-2">Avg. Accuracy</div>
-                      <div className="text-3xl font-black text-blue-600">
-                        {Math.round(userResults.reduce((acc, r) => acc + (r.score / r.totalQuestions), 0) / userResults.length * 100)}%
+                  {/* Dashboard Top Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-black uppercase tracking-wider mb-2">
+                        <span>SSC CGL Analytics</span>
                       </div>
+                      <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Performance Dashboard</h2>
+                      <p className="text-slate-500 text-sm font-medium mt-1">
+                        Comprehensive overview of your accuracy, pacing, and subject strengths.
+                      </p>
                     </div>
-                    <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100">
-                      <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-2">Total Questions</div>
-                      <div className="text-3xl font-black text-purple-600">
-                        {userResults.reduce((acc, r) => acc + r.totalQuestions, 0)}
-                      </div>
-                    </div>
-                    <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100">
-                      <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-2">Avg. Time/Q</div>
-                      <div className="text-3xl font-black text-orange-600">
-                        {Math.round(userResults.reduce((acc, r) => acc + r.totalTime, 0) / userResults.reduce((acc, r) => acc + r.totalQuestions, 0))}s
-                      </div>
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={() => setView('heatmap')}
+                        className="px-4 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-sm transition-colors flex items-center gap-2 border border-rose-100"
+                      >
+                        <Flame className="w-4 h-4 text-rose-600" />
+                        Heatmap
+                      </button>
+                      <button
+                        onClick={() => setView('home')}
+                        className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-sm transition-all shadow-md shadow-blue-100 flex items-center gap-2"
+                      >
+                        <BookOpen className="w-4 h-4" />
+                        Practice Hub
+                      </button>
                     </div>
                   </div>
 
-                  {/* Recent Results List */}
-                  <div className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
-                    <div className="p-8 border-b border-slate-100">
-                      <h3 className="text-xl font-black text-slate-900">Recent Activity</h3>
+                  {/* Summary KPI Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    {/* Total Quizzes */}
+                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Total Quizzes</div>
+                        <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                          <Trophy className="w-5 h-5" />
+                        </div>
+                      </div>
+                      <div className="text-3xl font-black text-slate-900 mb-1">{dashboardStats.totalQuizzes}</div>
+                      <div className="text-xs text-slate-400 font-medium">
+                        {dashboardStats.mockCount} Mocks • {dashboardStats.practiceCount} Practice
+                      </div>
                     </div>
-                    <div className="divide-y divide-slate-100">
-                      {userResults.map((result, idx) => (
-                        <div key={idx} className="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-slate-50 transition-colors">
-                          <div className="flex items-start space-x-4">
-                            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-                              result.category === 'mockErrors' ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'
-                            }`}>
-                              {result.category === 'mockErrors' ? <AlertCircle className="w-6 h-6" /> : <BookOpen className="w-6 h-6" />}
+
+                    {/* Overall Accuracy */}
+                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Overall Accuracy</div>
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                          dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-600' :
+                          dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-600' :
+                          'bg-rose-50 text-rose-600'
+                        }`}>
+                          <Target className="w-5 h-5" />
+                        </div>
+                      </div>
+                      <div className={`text-3xl font-black mb-1 ${
+                        dashboardStats.overallAccuracy >= 75 ? 'text-emerald-600' :
+                        dashboardStats.overallAccuracy >= 50 ? 'text-amber-600' :
+                        'text-rose-600'
+                      }`}>
+                        {dashboardStats.overallAccuracy}%
+                      </div>
+                      <div className="text-xs text-slate-400 font-medium">
+                        {dashboardStats.totalCorrect} / {dashboardStats.totalQuestions} questions correct
+                      </div>
+                    </div>
+
+                    {/* Total Questions */}
+                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Questions Solved</div>
+                        <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+                          <ListChecks className="w-5 h-5" />
+                        </div>
+                      </div>
+                      <div className="text-3xl font-black text-purple-600 mb-1">{dashboardStats.totalQuestions}</div>
+                      <div className="text-xs text-slate-400 font-medium">
+                        Across all topics & error drills
+                      </div>
+                    </div>
+
+                    {/* Avg Time per Question */}
+                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Avg. Time / Question</div>
+                        <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center">
+                          <Clock className="w-5 h-5" />
+                        </div>
+                      </div>
+                      <div className="text-3xl font-black text-orange-600 mb-1">{dashboardStats.avgTimePerQ}s</div>
+                      <div className="text-xs text-slate-400 font-medium">
+                        {dashboardStats.avgTimePerQ > 0 && dashboardStats.avgTimePerQ <= 45 ? '⚡ Fast pace (< 45s)' :
+                         dashboardStats.avgTimePerQ > 0 && dashboardStats.avgTimePerQ <= 70 ? '✓ Solid pacing (< 70s)' :
+                         'Focus on question speed'}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Subject-Wise Performance Breakdown */}
+                  <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 sm:p-8">
+                    <div className="flex items-center justify-between mb-6">
+                      <div>
+                        <h3 className="text-xl font-black text-slate-900">Subject Breakdown</h3>
+                        <p className="text-slate-500 text-sm font-medium mt-0.5">Click any subject to filter recent attempts</p>
+                      </div>
+                      {dashSubjectFilter !== 'all' && (
+                        <button
+                          onClick={() => setDashSubjectFilter('all')}
+                          className="text-xs font-bold text-blue-600 hover:text-blue-700 bg-blue-50 px-3 py-1.5 rounded-lg transition-colors"
+                        >
+                          Clear Subject Filter
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {['Mathematics', 'Reasoning', 'English', 'General Awareness'].map((subName) => {
+                        const theme = getSubjectTheme(subName);
+                        const Icon = theme.icon;
+                        const stat = dashboardStats.subjectStats[subName] || { totalQ: 0, correct: 0, quizzes: 0, accuracy: 0, avgTime: 0 };
+                        const isSelected = dashSubjectFilter === subName;
+
+                        return (
+                          <div
+                            key={subName}
+                            onClick={() => setDashSubjectFilter(isSelected ? 'all' : subName)}
+                            className={`cursor-pointer p-5 rounded-2xl border transition-all duration-200 ${
+                              isSelected
+                                ? 'ring-2 ring-blue-500 shadow-md bg-blue-50/20 border-blue-200'
+                                : 'bg-slate-50/50 hover:bg-white hover:shadow-md border-slate-100'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between mb-4">
+                              <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br ${theme.gradient} text-white shadow-sm`}>
+                                <Icon className="w-5 h-5" />
+                              </div>
+                              <span className={`text-xs font-bold px-2 py-0.5 rounded-md ${
+                                stat.accuracy >= 75 ? 'bg-emerald-100 text-emerald-800' :
+                                stat.accuracy >= 50 ? 'bg-amber-100 text-amber-800' :
+                                stat.totalQ > 0 ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-500'
+                              }`}>
+                                {stat.totalQ > 0 ? `${stat.accuracy}% Acc` : 'No data'}
+                              </span>
                             </div>
-                            <div>
-                              <h4 className="text-lg font-black text-slate-900">{result.chapter_title}</h4>
-                              <p className="text-slate-500 font-medium">{result.subject} • {new Date(result.completedAt).toLocaleDateString()}</p>
+
+                            <h4 className="font-bold text-slate-900 text-base mb-1">{subName}</h4>
+
+                            {/* Accuracy Bar */}
+                            <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden mb-3">
+                              <div
+                                className={`h-full rounded-full transition-all duration-500 ${theme.bar}`}
+                                style={{ width: `${stat.accuracy}%` }}
+                              />
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-2 text-xs">
+                              <div>
+                                <span className="text-slate-400 block font-medium">Questions:</span>
+                                <span className="font-bold text-slate-700">{stat.totalQ} ({stat.correct} ✓)</span>
+                              </div>
+                              <div>
+                                <span className="text-slate-400 block font-medium">Avg Time:</span>
+                                <span className="font-bold text-slate-700">{stat.avgTime}s/Q</span>
+                              </div>
                             </div>
                           </div>
-                          <div className="flex items-center space-x-6">
-                            <div className="text-right">
-                              <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-1">Score</div>
-                              <div className="text-xl font-black text-slate-900">{result.score}/{result.totalQuestions}</div>
-                            </div>
-                            <div className="text-right">
-                              <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-1">Avg/Q</div>
-                              <div className="text-xl font-black text-orange-600">{Math.round(result.totalTime / result.totalQuestions)}s</div>
-                            </div>
-                            <div className="text-right">
-                              <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-1">Total Time</div>
-                              <div className="text-xl font-black text-slate-900">{Math.floor(result.totalTime / 60)}m {result.totalTime % 60}s</div>
-                            </div>
-                            <div className="text-right">
-                              <div className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-1">Accuracy</div>
-                              <div className={`text-xl font-black ${
-                                (result.score / result.totalQuestions) >= 0.8 ? 'text-green-600' : 
-                                (result.score / result.totalQuestions) >= 0.5 ? 'text-yellow-600' : 'text-red-600'
-                              }`}>
-                                 {Math.round((result.score / result.totalQuestions) * 100)}%
-                               </div>
-                             </div>
-                             <div className="flex items-center space-x-3">
-                               {(() => {
-                                 const data = result.category === 'mockErrors' ? mockData : bankData;
-                                 const chapter = (data[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
-                                 return (
-                                   <>
-                                     <button
-                                       onClick={() => chapter && reattemptFromResult(result)}
-                                       disabled={!chapter}
-                                       className={`p-3 rounded-xl font-bold transition-all flex items-center justify-center ${
-                                         chapter ? 'bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white' : 'bg-slate-100 text-slate-300 cursor-not-allowed'
-                                       }`}
-                                       title={chapter ? 'Reattempt this quiz' : 'Source chapter no longer available'}
-                                     >
-                                       <RotateCcw className="w-4 h-4" />
-                                     </button>
-                                       {result.mode === 'mock' && (
-                                         <button
-                                           onClick={() => openReview(result)}
-                                           className="p-3 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all flex items-center justify-center"
-                                           title="Review last attempt"
-                                         >
-                                           <History className="w-4 h-4" />
-                                         </button>
-                                       )}
-                                   </>
-                                 );
-                               })()}
-                             </div>
-                           </div>
-                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
+                  </div>
+
+                  {/* Recent Activity Section */}
+                  <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    {/* Header with Filters */}
+                    <div className="p-6 sm:p-8 border-b border-slate-100 space-y-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-xl font-black text-slate-900">Recent Activity</h3>
+                          <span className="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">
+                            {filteredUserResults.length} {filteredUserResults.length === 1 ? 'Attempt' : 'Attempts'}
+                          </span>
+                        </div>
+
+                        {/* Search Bar */}
+                        <div className="relative w-full sm:w-64">
+                          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                          <input
+                            type="text"
+                            value={dashSearchQuery}
+                            onChange={(e) => setDashSearchQuery(e.target.value)}
+                            placeholder="Search chapter or topic..."
+                            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Filter Controls Row */}
+                      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                        {/* Category Tabs */}
+                        <div className="inline-flex bg-slate-100 p-1 rounded-xl border border-slate-200/70 text-xs font-bold">
+                          <button
+                            onClick={() => setDashCategoryFilter('all')}
+                            className={`px-3 py-1.5 rounded-lg transition-all ${
+                              dashCategoryFilter === 'all'
+                                ? 'bg-white text-slate-900 shadow-sm'
+                                : 'text-slate-500 hover:text-slate-800'
+                            }`}
+                          >
+                            All Modes
+                          </button>
+                          <button
+                            onClick={() => setDashCategoryFilter('chapterBank')}
+                            className={`px-3 py-1.5 rounded-lg transition-all ${
+                              dashCategoryFilter === 'chapterBank'
+                                ? 'bg-white text-blue-600 shadow-sm'
+                                : 'text-slate-500 hover:text-slate-800'
+                            }`}
+                          >
+                            Chapter Bank
+                          </button>
+                          <button
+                            onClick={() => setDashCategoryFilter('mockErrors')}
+                            className={`px-3 py-1.5 rounded-lg transition-all ${
+                              dashCategoryFilter === 'mockErrors'
+                                ? 'bg-white text-rose-600 shadow-sm'
+                                : 'text-slate-500 hover:text-slate-800'
+                            }`}
+                          >
+                            Mock Errors
+                          </button>
+                        </div>
+
+                        {/* Subject and Sort dropdowns */}
+                        <div className="flex items-center gap-3">
+                          <select
+                            value={dashSubjectFilter}
+                            onChange={(e) => setDashSubjectFilter(e.target.value)}
+                            className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                          >
+                            <option value="all">All Subjects</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Reasoning">Reasoning</option>
+                            <option value="English">English</option>
+                            <option value="General Awareness">General Awareness</option>
+                          </select>
+
+                          <select
+                            value={dashSort}
+                            onChange={(e) => setDashSort(e.target.value as any)}
+                            className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                          >
+                            <option value="newest">Newest First</option>
+                            <option value="accuracy-desc">Highest Accuracy</option>
+                            <option value="accuracy-asc">Lowest Accuracy</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Results List */}
+                    {filteredUserResults.length === 0 ? (
+                      <div className="p-12 text-center">
+                        <p className="text-slate-500 font-bold mb-3">No activity matching your current filter.</p>
+                        <button
+                          onClick={() => {
+                            setDashCategoryFilter('all');
+                            setDashSubjectFilter('all');
+                            setDashSearchQuery('');
+                          }}
+                          className="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl font-bold text-xs hover:bg-blue-100 transition-colors"
+                        >
+                          Clear Filters
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="divide-y divide-slate-100">
+                        {filteredUserResults.map((result, idx) => {
+                          const theme = getSubjectTheme(result.subject);
+                          const Icon = theme.icon;
+                          const accuracyRate = result.totalQuestions > 0
+                            ? Math.round((result.score / result.totalQuestions) * 100)
+                            : 0;
+                          const avgQ = result.totalQuestions > 0
+                            ? Math.round(result.totalTime / result.totalQuestions)
+                            : 0;
+                          const hasStoredQuestions = Boolean(result.questionDetails && result.questionDetails.length > 0);
+
+                          return (
+                            <div
+                              key={result.id || idx}
+                              className="p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-5 hover:bg-slate-50/80 transition-colors"
+                            >
+                              {/* Left details */}
+                              <div className="flex items-start gap-4 min-w-0">
+                                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-sm bg-gradient-to-br ${theme.gradient} text-white`}>
+                                  <Icon className="w-6 h-6" />
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold border ${theme.badge}`}>
+                                      {theme.name}
+                                    </span>
+                                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold border ${
+                                      result.category === 'mockErrors'
+                                        ? 'bg-rose-50 text-rose-700 border-rose-200'
+                                        : 'bg-blue-50 text-blue-700 border-blue-200'
+                                    }`}>
+                                      {result.category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
+                                    </span>
+                                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold border ${
+                                      result.mode === 'mock'
+                                        ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                        : 'bg-slate-100 text-slate-700 border-slate-200'
+                                    }`}>
+                                      {result.mode === 'mock' ? 'Mock Test' : 'Practice Drill'}
+                                    </span>
+                                  </div>
+                                  <h4 className="text-base sm:text-lg font-black text-slate-900 truncate" title={result.chapter_title}>
+                                    {result.chapter_title}
+                                  </h4>
+                                  <p className="text-xs text-slate-400 font-medium mt-0.5">
+                                    {formatAttemptDate(result.completedAt)}
+                                  </p>
+                                </div>
+                              </div>
+
+                              {/* Right Metrics & Actions */}
+                              <div className="flex flex-wrap items-center justify-between lg:justify-end gap-3 sm:gap-6 border-t lg:border-t-0 pt-4 lg:pt-0 border-slate-100">
+                                <div className="text-left sm:text-right min-w-[65px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Score</div>
+                                  <div className="text-base sm:text-lg font-black text-slate-900">
+                                    {result.score}/{result.totalQuestions}
+                                  </div>
+                                </div>
+
+                                <div className="text-left sm:text-right min-w-[65px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Avg/Q</div>
+                                  <div className="text-base sm:text-lg font-black text-orange-600">
+                                    {avgQ}s
+                                  </div>
+                                </div>
+
+                                <div className="text-left sm:text-right min-w-[75px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Time</div>
+                                  <div className="text-base sm:text-lg font-black text-slate-700">
+                                    {Math.floor(result.totalTime / 60)}m {result.totalTime % 60}s
+                                  </div>
+                                </div>
+
+                                <div className="text-left sm:text-right min-w-[70px]">
+                                  <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider mb-0.5">Accuracy</div>
+                                  <div className={`inline-flex items-center px-2 py-0.5 rounded-lg text-sm font-black border ${
+                                    accuracyRate >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                    accuracyRate >= 50 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                    'bg-rose-50 text-rose-700 border-rose-200'
+                                  }`}>
+                                    {accuracyRate}%
+                                  </div>
+                                </div>
+
+                                {/* Actions */}
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    onClick={() => reattemptFromResult(result)}
+                                    className="p-2.5 rounded-xl font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-sm flex items-center justify-center"
+                                    title="Reattempt this quiz"
+                                  >
+                                    <RotateCcw className="w-4 h-4" />
+                                  </button>
+                                  {hasStoredQuestions && (
+                                    <button
+                                      onClick={() => openReview(result)}
+                                      className="p-2.5 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all shadow-sm flex items-center justify-center"
+                                      title="Review questions & explanations"
+                                    >
+                                      <History className="w-4 h-4" />
+                                    </button>
+                                  )}
+                                  {result.id && (
+                                    <button
+                                      onClick={() => handleDeleteResult(result.id)}
+                                      className="p-2.5 rounded-xl bg-slate-100 hover:bg-rose-600 text-slate-400 hover:text-white font-bold transition-all shadow-sm flex items-center justify-center"
+                                      title="Delete this attempt"
+                                    >
+                                      <Trash2 className="w-4 h-4" />
+                                    </button>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
@@ -1686,6 +2535,209 @@ export default function App() {
           )}
         </AnimatePresence>
       )}
+
+      {/* Chapter Drill & Questions Preview Modal for Mock Errors */}
+      <AnimatePresence>
+        {activeMockChapterModal && (
+          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm p-0 sm:p-4">
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 40, scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+              className="bg-white w-full sm:max-w-3xl max-h-[90vh] sm:rounded-3xl rounded-t-3xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden"
+            >
+              {/* Modal Header */}
+              <div className="px-6 pt-6 pb-5 bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 text-white rounded-t-3xl">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-white/20 text-white text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider">
+                        {activeMockChapterModal.subject}
+                      </span>
+                      <span className="text-white/70 text-xs font-semibold">
+                        {activeMockChapterModal.total} total error questions
+                      </span>
+                    </div>
+                    <h2 className="text-2xl font-black text-white leading-tight">{activeMockChapterModal.topic}</h2>
+
+                    {/* Breakdown Badges */}
+                    <div className="flex flex-wrap items-center gap-2 mt-3">
+                      {activeMockChapterModal.wrong > 0 && (
+                        <span className="bg-rose-500/30 border border-rose-300/40 text-rose-100 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
+                          <XCircle className="w-3.5 h-3.5" /> {activeMockChapterModal.wrong} Wrong
+                        </span>
+                      )}
+                      {activeMockChapterModal.slow > 0 && (
+                        <span className="bg-amber-500/30 border border-amber-300/40 text-amber-100 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
+                          <Zap className="w-3.5 h-3.5" /> {activeMockChapterModal.slow} Slow
+                        </span>
+                      )}
+                      {activeMockChapterModal.unattempted > 0 && (
+                        <span className="bg-blue-500/30 border border-blue-300/40 text-blue-100 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
+                          <AlertCircle className="w-3.5 h-3.5" /> {activeMockChapterModal.unattempted} Skipped
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setActiveMockChapterModal(null)}
+                    className="w-9 h-9 rounded-2xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors shrink-0"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+
+                {/* Quick Drill Action Buttons in Header */}
+                <div className="flex flex-wrap items-center gap-2 mt-4 pt-3 border-t border-white/15">
+                  <button
+                    onClick={() => {
+                      const topic = activeMockChapterModal.topic;
+                      const qs = activeMockChapterModal.questions;
+                      setActiveMockChapterModal(null);
+                      startClubbedChapterQuiz(topic, qs);
+                    }}
+                    className="px-4 py-2 bg-white text-indigo-900 rounded-xl text-xs font-black hover:bg-indigo-50 transition-all shadow-sm flex items-center gap-1.5"
+                  >
+                    <Play className="w-3.5 h-3.5 fill-current" />
+                    Practice All ({activeMockChapterModal.total})
+                  </button>
+
+                  {activeMockChapterModal.wrong > 0 && (
+                    <button
+                      onClick={() => {
+                        const topic = activeMockChapterModal.topic;
+                        const qs = activeMockChapterModal.wrongQuestions;
+                        setActiveMockChapterModal(null);
+                        startClubbedChapterQuiz(topic, qs, 'wrong');
+                      }}
+                      className="px-3.5 py-2 bg-rose-500/40 hover:bg-rose-500/60 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
+                    >
+                      <XCircle className="w-3.5 h-3.5" />
+                      Wrong Only ({activeMockChapterModal.wrong})
+                    </button>
+                  )}
+
+                  {activeMockChapterModal.slow > 0 && (
+                    <button
+                      onClick={() => {
+                        const topic = activeMockChapterModal.topic;
+                        const qs = activeMockChapterModal.slowQuestions;
+                        setActiveMockChapterModal(null);
+                        startClubbedChapterQuiz(topic, qs, 'slow');
+                      }}
+                      className="px-3.5 py-2 bg-amber-500/40 hover:bg-amber-500/60 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
+                    >
+                      <Zap className="w-3.5 h-3.5" />
+                      Slow Only ({activeMockChapterModal.slow})
+                    </button>
+                  )}
+
+                  {activeMockChapterModal.unattempted > 0 && (
+                    <button
+                      onClick={() => {
+                        const topic = activeMockChapterModal.topic;
+                        const qs = activeMockChapterModal.unattemptedQuestions;
+                        setActiveMockChapterModal(null);
+                        startClubbedChapterQuiz(topic, qs, 'unattempted');
+                      }}
+                      className="px-3.5 py-2 bg-blue-500/40 hover:bg-blue-500/60 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
+                    >
+                      <AlertCircle className="w-3.5 h-3.5" />
+                      Skipped Only ({activeMockChapterModal.unattempted})
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Questions List */}
+              <div className="flex-1 overflow-y-auto p-5 space-y-4">
+                {activeMockChapterModal.questions.map((q, qIdx) => {
+                  const isWrong = q.errorType === 'wrong';
+                  const isSlow = q.errorType === 'speed_issue';
+
+                  return (
+                    <div key={q.id || qIdx} className="rounded-2xl border border-slate-200 bg-slate-50/50 overflow-hidden">
+                      {/* Question header */}
+                      <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100">
+                        <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
+                        <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
+                          isWrong ? 'bg-red-100 text-red-700' :
+                          isSlow ? 'bg-amber-100 text-amber-700' :
+                          'bg-blue-100 text-blue-700'
+                        }`}>
+                          {isWrong ? '✗ Wrong Answer' : isSlow ? '⚡ Speed Issue' : '◯ Skipped / Left'}
+                        </span>
+                      </div>
+
+                      <div className="p-4 space-y-3">
+                        <p className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed">
+                          {q.question}
+                        </p>
+
+                        {/* Options */}
+                        {q.options && (
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {(['a', 'b', 'c', 'd'] as const).map(optKey => {
+                              const optText = q.options[optKey];
+                              if (!optText) return null;
+                              const isCorrect = q.answer === optKey;
+                              return (
+                                <div
+                                  key={optKey}
+                                  className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
+                                    isCorrect
+                                      ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
+                                      : 'bg-white border-slate-200 text-slate-600'
+                                  }`}
+                                >
+                                  <span className={`w-6 h-6 rounded-lg shrink-0 flex items-center justify-center font-black text-[11px] uppercase ${
+                                    isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500'
+                                  }`}>
+                                    {optKey}
+                                  </span>
+                                  <span className="truncate">{optText}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+
+                        {/* Solution */}
+                        {q.solution && (
+                          <details className="group">
+                            <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none">
+                              <BookOpen className="w-3.5 h-3.5" />
+                              View Solution
+                              <ChevronRight className="w-3 h-3 transition-transform group-open:rotate-90" />
+                            </summary>
+                            <div className="mt-2 text-xs font-medium text-slate-700 whitespace-pre-line leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200">
+                              {q.solution}
+                            </div>
+                          </details>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Modal Footer */}
+              <div className="px-5 py-3.5 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
+                <span className="text-xs text-slate-400 font-medium">
+                  {activeMockChapterModal.questions.length} questions in this chapter
+                </span>
+                <button
+                  onClick={() => setActiveMockChapterModal(null)}
+                  className="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition-colors shadow-sm"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </main>
   </div>
 );

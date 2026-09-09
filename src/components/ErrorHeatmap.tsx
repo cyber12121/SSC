@@ -1,316 +1,619 @@
-import React, { useMemo } from 'react';
-import { motion } from 'motion/react';
-import { Flame, TrendingUp, AlertTriangle, BarChart3 } from 'lucide-react';
-import { SubjectData, Chapter } from '../types';
-
-interface HeatmapCell {
-  subject: string;
-  chapterTitle: string;
-  errorCount: number;
-  totalQuestions: number;
-  errorRate: number;
-}
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { 
+  Flame, 
+  AlertTriangle, 
+  Clock, 
+  XCircle, 
+  Search, 
+  ChevronRight, 
+  X, 
+  BarChart2,
+  BookOpen,
+  Calculator,
+  Languages,
+  Compass,
+  Globe2,
+  TrendingDown,
+  Zap,
+  Target,
+  AlertCircle
+} from 'lucide-react';
+import { SubjectData, Chapter, Question } from '../types';
+import { detectTopic } from '../utils/topicDetector';
 
 interface ErrorHeatmapProps {
   mockData: SubjectData;
 }
 
-const getErrorCount = (chapter: Chapter): number => {
-  return chapter.questions.filter(q => q.answer === null).length;
+interface QuestionWithError extends Question {
+  errorType: 'wrong' | 'unattempted' | 'speed_issue';
+  detectedTopic: string;
+  parentSubject: string;
+}
+
+interface ChapterHeatmapItem {
+  topic: string;
+  subject: string;
+  totalErrors: number;
+  wrongCount: number;
+  unattemptedCount: number;
+  speedIssueCount: number;
+  negativeMarks: number;
+  questions: QuestionWithError[];
+  severity: 'critical' | 'high' | 'medium' | 'low';
+}
+
+const SUBJECT_CONFIG: Record<string, { icon: any; gradient: string; accent: string; light: string; pill: string; ring: string }> = {
+  'Mathematics': {
+    icon: Calculator,
+    gradient: 'from-violet-600 to-indigo-600',
+    accent: '#6d28d9',
+    light: 'bg-violet-50',
+    pill: 'bg-violet-100 text-violet-800',
+    ring: 'ring-violet-400',
+  },
+  'Reasoning': {
+    icon: Compass,
+    gradient: 'from-purple-600 to-fuchsia-600',
+    accent: '#9333ea',
+    light: 'bg-purple-50',
+    pill: 'bg-purple-100 text-purple-800',
+    ring: 'ring-purple-400',
+  },
+  'English': {
+    icon: Languages,
+    gradient: 'from-emerald-500 to-teal-600',
+    accent: '#059669',
+    light: 'bg-emerald-50',
+    pill: 'bg-emerald-100 text-emerald-800',
+    ring: 'ring-emerald-400',
+  },
+  'General Awareness': {
+    icon: Globe2,
+    gradient: 'from-amber-500 to-orange-500',
+    accent: '#d97706',
+    light: 'bg-amber-50',
+    pill: 'bg-amber-100 text-amber-800',
+    ring: 'ring-amber-400',
+  }
 };
 
-const getErrorRate = (chapter: Chapter): number => {
-  const total = chapter.questions.length;
-  if (total === 0) return 0;
-  return getErrorCount(chapter) / total;
-};
-
-const errorRateColor = (rate: number): string => {
-  if (rate === 0) return '#22c55e';
-  if (rate <= 0.1) return '#84cc16';
-  if (rate <= 0.2) return '#eab308';
-  if (rate <= 0.3) return '#f97316';
-  if (rate <= 0.5) return '#ef4444';
-  return '#dc2626';
-};
-
-const errorRateBg = (rate: number): string => {
-  if (rate === 0) return 'bg-green-50 border-green-200';
-  if (rate <= 0.1) return 'bg-lime-50 border-lime-200';
-  if (rate <= 0.2) return 'bg-yellow-50 border-yellow-200';
-  if (rate <= 0.3) return 'bg-orange-50 border-orange-200';
-  if (rate <= 0.5) return 'bg-red-50 border-red-200';
-  return 'bg-red-100 border-red-300';
-};
-
-const errorRateText = (rate: number): string => {
-  if (rate === 0) return 'text-green-700';
-  if (rate <= 0.1) return 'text-lime-700';
-  if (rate <= 0.2) return 'text-yellow-700';
-  if (rate <= 0.3) return 'text-orange-700';
-  if (rate <= 0.5) return 'text-red-700';
-  return 'text-red-800';
+const SEVERITY_CONFIG = {
+  critical: { label: 'Critical', dot: 'bg-red-500', bar: 'bg-red-500', text: 'text-red-700', badge: 'bg-red-100 text-red-700 border-red-200' },
+  high:     { label: 'High',     dot: 'bg-orange-500', bar: 'bg-orange-500', text: 'text-orange-700', badge: 'bg-orange-100 text-orange-700 border-orange-200' },
+  medium:   { label: 'Medium',   dot: 'bg-amber-400',  bar: 'bg-amber-400',  text: 'text-amber-700', badge: 'bg-amber-100 text-amber-700 border-amber-200' },
+  low:      { label: 'Low',      dot: 'bg-slate-300',  bar: 'bg-slate-300',  text: 'text-slate-500', badge: 'bg-slate-100 text-slate-600 border-slate-200' },
 };
 
 export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
-  const { topChapters, heatmapData, subjectOrder } = useMemo(() => {
-    // Collect all chapters with errors across all subjects
-    const allChapters: HeatmapCell[] = [];
+  const [selectedTypeFilter, setSelectedTypeFilter] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [activeDrillChapter, setActiveDrillChapter] = useState<ChapterHeatmapItem | null>(null);
 
-    Object.entries(mockData).forEach(([subject, chapters]) => {
-      (chapters as Chapter[]).forEach(chapter => {
-        const errors = getErrorCount(chapter);
-        if (errors > 0) {
-          allChapters.push({
-            subject,
-            chapterTitle: chapter.chapter_title,
-            errorCount: errors,
-            totalQuestions: chapter.questions.length,
-            errorRate: errors / chapter.questions.length,
-          });
-        }
+  const { subjectGroups, allSubjects, totalOverallErrors } = useMemo(() => {
+    const groups: Record<string, {
+      subject: string;
+      totalErrors: number;
+      totalWrong: number;
+      totalUnattempted: number;
+      totalSpeed: number;
+      negativeMarks: number;
+      chapters: ChapterHeatmapItem[];
+    }> = {};
+
+    let totalOverallErrors = 0;
+
+    (Object.entries(mockData) as [string, Chapter[]][]).forEach(([subject, chapterList]) => {
+      if (!groups[subject]) {
+        groups[subject] = { subject, totalErrors: 0, totalWrong: 0, totalUnattempted: 0, totalSpeed: 0, negativeMarks: 0, chapters: [] };
+      }
+
+      const topicMap: Record<string, ChapterHeatmapItem> = {};
+
+      chapterList.forEach(chapter => {
+        const chTitle = (chapter.chapter_title || '').toLowerCase();
+        let errorType: 'wrong' | 'unattempted' | 'speed_issue' = 'wrong';
+
+        if (chTitle.includes('unattempted') || chTitle.includes('skipped')) errorType = 'unattempted';
+        else if (chTitle.includes('speed') || chTitle.includes('slow')) errorType = 'speed_issue';
+
+        chapter.questions.forEach(q => {
+          totalOverallErrors++;
+          groups[subject].totalErrors++;
+
+          if (errorType === 'wrong') { groups[subject].totalWrong++; groups[subject].negativeMarks += 0.5; }
+          else if (errorType === 'unattempted') groups[subject].totalUnattempted++;
+          else if (errorType === 'speed_issue') groups[subject].totalSpeed++;
+
+          const topic = detectTopic(q, subject);
+
+          if (!topicMap[topic]) {
+            topicMap[topic] = { topic, subject, totalErrors: 0, wrongCount: 0, unattemptedCount: 0, speedIssueCount: 0, negativeMarks: 0, questions: [], severity: 'low' };
+          }
+
+          const qEnriched: QuestionWithError = { ...q, errorType, detectedTopic: topic, parentSubject: subject };
+          topicMap[topic].totalErrors++;
+          topicMap[topic].questions.push(qEnriched);
+
+          if (errorType === 'wrong') { topicMap[topic].wrongCount++; topicMap[topic].negativeMarks += 0.5; }
+          else if (errorType === 'unattempted') topicMap[topic].unattemptedCount++;
+          else if (errorType === 'speed_issue') topicMap[topic].speedIssueCount++;
+        });
       });
+
+      const chapters = Object.values(topicMap).map(c => {
+        let severity: 'critical' | 'high' | 'medium' | 'low' = 'low';
+        if (c.totalErrors >= 5 || c.wrongCount >= 4) severity = 'critical';
+        else if (c.totalErrors >= 3 || c.wrongCount >= 2) severity = 'high';
+        else if (c.totalErrors >= 2) severity = 'medium';
+        return { ...c, severity };
+      });
+
+      chapters.sort((a, b) => (b.totalErrors - a.totalErrors) || (b.wrongCount - a.wrongCount));
+      groups[subject].chapters = chapters;
     });
 
-    // Sort by error count descending, take top 5
-    allChapters.sort((a, b) => b.errorCount - a.errorCount || b.errorRate - a.errorRate);
-    const topChapters = allChapters.slice(0, 5);
+    const subjects = Object.keys(groups).filter(s => groups[s].totalErrors > 0);
+    subjects.sort((a, b) => (groups[b]?.totalErrors || 0) - (groups[a]?.totalErrors || 0));
 
-    // Get unique subjects
-    const subjects = [...new Set(allChapters.map(c => c.subject))];
-
-    // Build heatmap data: for each subject, get error rate for each top chapter
-    const heatmapData = subjects.map(subject => {
-      const chapterRates = topChapters.map(tc => {
-        const match = allChapters.find(c => c.subject === subject && c.chapterTitle === tc.chapterTitle);
-        return match || { subject, chapterTitle: tc.chapterTitle, errorCount: 0, totalQuestions: 0, errorRate: 0 };
-      });
-      return { subject, chapters: chapterRates };
-    });
-
-    return { topChapters, heatmapData, subjectOrder: subjects };
+    return { subjectGroups: groups, allSubjects: subjects, totalOverallErrors };
   }, [mockData]);
 
-  const totalErrors = topChapters.reduce((sum, c) => sum + c.errorCount, 0);
-  const totalQuestions = topChapters.reduce((sum, c) => sum + c.totalQuestions, 0);
-  const overallRate = totalQuestions > 0 ? (totalErrors / totalQuestions * 100) : 0;
+  const [activeSubject, setActiveSubject] = useState<string>(() => allSubjects[0] || 'Mathematics');
 
-  if (topChapters.length === 0) {
+  const currentSubjectName = useMemo(() => {
+    if (allSubjects.includes(activeSubject)) return activeSubject;
+    return allSubjects[0] || 'Mathematics';
+  }, [activeSubject, allSubjects]);
+
+  const currentSubjectData = subjectGroups[currentSubjectName] || {
+    subject: currentSubjectName, totalErrors: 0, totalWrong: 0,
+    totalUnattempted: 0, totalSpeed: 0, negativeMarks: 0, chapters: []
+  };
+
+  const filteredChapters = useMemo(() => {
+    return currentSubjectData.chapters.filter(item => {
+      if (selectedTypeFilter === 'wrong' && item.wrongCount === 0) return false;
+      if (selectedTypeFilter === 'unattempted' && item.unattemptedCount === 0) return false;
+      if (selectedTypeFilter === 'speed' && item.speedIssueCount === 0) return false;
+      if (searchQuery.trim()) return item.topic.toLowerCase().includes(searchQuery.toLowerCase());
+      return true;
+    });
+  }, [currentSubjectData, selectedTypeFilter, searchQuery]);
+
+  const maxErrors = filteredChapters.length > 0 ? filteredChapters[0].totalErrors : 1;
+  const subjectCfg = SUBJECT_CONFIG[currentSubjectName] || SUBJECT_CONFIG['Mathematics'];
+  const SubjectIcon = subjectCfg.icon;
+
+  // Empty state
+  if (totalOverallErrors === 0) {
     return (
-      <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100">
-        <div className="w-20 h-20 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-          <Flame className="w-10 h-10" />
+      <div className="flex flex-col items-center justify-center min-h-[60vh] py-20 text-center">
+        <div className="relative mb-8">
+          <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-indigo-100 to-violet-100 flex items-center justify-center shadow-lg shadow-indigo-100">
+            <BarChart2 className="w-12 h-12 text-indigo-500" />
+          </div>
+          <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center shadow-sm">
+            <span className="text-white text-[10px] font-black">0</span>
+          </div>
         </div>
-        <h2 className="text-3xl font-black text-slate-900 mb-4">No Errors Found</h2>
-        <p className="text-slate-500 mb-8">Your mock error data looks clean — no errors recorded yet.</p>
+        <h2 className="text-3xl font-black text-slate-900 mb-3 tracking-tight">No Errors Recorded Yet</h2>
+        <p className="text-slate-500 text-base max-w-md leading-relaxed mb-2">
+          Your subject-wise weakness heatmap populates automatically as you take mock tests.
+        </p>
+        <p className="text-xs font-semibold text-slate-400 bg-slate-50 rounded-xl px-4 py-2 border border-slate-100">
+          Sync results from the Chrome Extension to see your breakdown here.
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <h2 className="text-3xl font-black text-slate-900 mb-2">Error Heatmap</h2>
-          <p className="text-lg text-slate-500 font-medium">
-            Subject-wise error density across the top 5 error-prone chapters
-          </p>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="bg-red-50 border border-red-200 rounded-2xl px-5 py-3 flex items-center gap-3">
-            <AlertTriangle className="w-5 h-5 text-red-600" />
-            <div>
-              <div className="text-sm font-bold text-red-600">Total Errors</div>
-              <div className="text-2xl font-black text-red-700">{totalErrors}</div>
-            </div>
-          </div>
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3 flex items-center gap-3">
-            <BarChart3 className="w-5 h-5 text-slate-600" />
-            <div>
-              <div className="text-sm font-bold text-slate-500">Overall Error Rate</div>
-              <div className="text-2xl font-black text-slate-800">{overallRate.toFixed(1)}%</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="space-y-6 pb-16">
 
-      {/* Legend */}
-      <div className="flex items-center gap-3 bg-white rounded-2xl px-6 py-4 border border-slate-100 shadow-sm">
-        <span className="text-sm font-bold text-slate-500 mr-2">Error Rate:</span>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-green-100 border border-green-300"></div>
-          <span className="text-xs font-bold text-slate-500">0%</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-yellow-100 border border-yellow-300"></div>
-          <span className="text-xs font-bold text-slate-500">10-20%</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-orange-100 border border-orange-300"></div>
-          <span className="text-xs font-bold text-slate-500">20-30%</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-red-100 border border-red-300"></div>
-          <span className="text-xs font-bold text-slate-500">30-50%</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-red-200 border border-red-400"></div>
-          <span className="text-xs font-bold text-slate-500">50%+</span>
-        </div>
-      </div>
+      {/* ─── Subject Tab Strip ─── */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {allSubjects.map(subj => {
+          const cfg = SUBJECT_CONFIG[subj] || SUBJECT_CONFIG['Mathematics'];
+          const Icon = cfg.icon;
+          const stats = subjectGroups[subj];
+          const isActive = subj === currentSubjectName;
 
-      {/* Top 5 Chapters Summary */}
-      <div className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
-        <div className="p-6 border-b border-slate-100">
-          <h3 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-red-500" />
-            Top 5 Error-Prone Chapters
-          </h3>
-        </div>
-        <div className="divide-y divide-slate-100">
-          {topChapters.map((cell, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className="p-5 flex items-center justify-between hover:bg-slate-50/50 transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg ${
-                  cell.errorRate >= 0.3 ? 'bg-red-100 text-red-700' :
-                  cell.errorRate >= 0.2 ? 'bg-orange-100 text-orange-700' :
-                  cell.errorRate >= 0.1 ? 'bg-yellow-100 text-yellow-700' :
-                  'bg-green-100 text-green-700'
-                }`}>
-                  {idx + 1}
-                </div>
-                <div>
-                  <div className="font-extrabold text-slate-800">{cell.chapterTitle}</div>
-                  <div className="text-sm text-slate-500 font-medium">{cell.subject}</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-6">
-                <div className="text-right">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Errors</div>
-                  <div className={`text-xl font-black ${errorRateText(cell.errorRate)}`}>{cell.errorCount}</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Rate</div>
-                  <div className={`text-xl font-black ${errorRateText(cell.errorRate)}`}>
-                    {(cell.errorRate * 100).toFixed(1)}%
-                  </div>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Qs</div>
-                  <div className="text-xl font-black text-slate-700">{cell.totalQuestions}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Heatmap Grid */}
-      <div className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
-        <div className="p-6 border-b border-slate-100">
-          <h3 className="text-xl font-black text-slate-900">Subject × Chapter Heatmap</h3>
-          <p className="text-sm text-slate-500 mt-1">Color intensity shows error concentration per cell</p>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-slate-100">
-                <th className="text-left p-4 text-sm font-bold text-slate-500 uppercase tracking-wider min-w-[140px]">Subject</th>
-                {topChapters.map((tc, idx) => (
-                  <th key={idx} className="text-center p-4 text-sm font-bold text-slate-500 uppercase tracking-wider min-w-[160px]">
-                    <div className="truncate" title={tc.chapterTitle}>
-                      {tc.chapterTitle.length > 25 ? tc.chapterTitle.substring(0, 25) + '…' : tc.chapterTitle}
-                    </div>
-                    <div className="text-xs font-normal text-slate-400 mt-1">{tc.totalQuestions} Qs</div>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {heatmapData.map((row, rowIdx) => (
-                <motion.tr
-                  key={row.subject}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: rowIdx * 0.08 }}
-                  className="border-b border-slate-50 hover:bg-slate-50/50 transition-colors"
-                >
-                  <td className="p-4 font-extrabold text-slate-800 text-sm">{row.subject}</td>
-                  {row.chapters.map((cell, colIdx) => (
-                    <td key={colIdx} className="p-3 text-center">
-                      {cell.errorCount === 0 ? (
-                        <div className="w-full py-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-400 text-sm font-bold">
-                          —
-                        </div>
-                      ) : (
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.2 + rowIdx * 0.05 + colIdx * 0.05 }}
-                          className={`py-3 rounded-xl border-2 ${errorRateBg(cell.errorRate)}`}
-                        >
-                          <div className={`text-lg font-black ${errorRateText(cell.errorRate)}`}>
-                            {(cell.errorRate * 100).toFixed(1)}%
-                          </div>
-                          <div className="text-xs font-bold text-slate-500 mt-1">
-                            {cell.errorCount}/{cell.totalQuestions}
-                          </div>
-                        </motion.div>
-                      )}
-                    </td>
-                  ))}
-                </motion.tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      {/* Subject Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {heatmapData.map((row, idx) => {
-          const subjectErrors = row.chapters.reduce((s, c) => s + c.errorCount, 0);
-          const subjectQs = row.chapters.reduce((s, c) => s + c.totalQuestions, 0);
-          const subjectRate = subjectQs > 0 ? (subjectErrors / subjectQs * 100) : 0;
           return (
-            <motion.div
-              key={row.subject}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className={`rounded-2xl p-6 border-2 ${
-                subjectRate >= 30 ? 'bg-red-50 border-red-200' :
-                subjectRate >= 15 ? 'bg-orange-50 border-orange-200' :
-                subjectRate > 0 ? 'bg-yellow-50 border-yellow-200' :
-                'bg-green-50 border-green-200'
+            <button
+              key={subj}
+              onClick={() => { setActiveSubject(subj); setSelectedTypeFilter('all'); setSearchQuery(''); }}
+              className={`relative overflow-hidden rounded-2xl p-4 text-left transition-all duration-200 border ${
+                isActive
+                  ? 'bg-slate-900 border-slate-900 shadow-xl shadow-slate-900/20 scale-[1.02]'
+                  : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-md shadow-sm'
               }`}
             >
-              <div className="font-extrabold text-slate-800 mb-2">{row.subject}</div>
-              <div className="flex items-end gap-2">
-                <span className={`text-3xl font-black ${
-                  subjectRate >= 30 ? 'text-red-700' :
-                  subjectRate >= 15 ? 'text-orange-700' :
-                  subjectRate > 0 ? 'text-yellow-700' :
-                  'text-green-700'
+              {isActive && (
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.gradient} opacity-[0.12]`} />
+              )}
+              <div className="relative flex items-start justify-between gap-2">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                  isActive
+                    ? `bg-gradient-to-br ${cfg.gradient} shadow-lg`
+                    : `${cfg.light}`
                 }`}>
-                  {subjectRate.toFixed(1)}%
+                  <Icon className={`w-5 h-5 ${isActive ? 'text-white' : ''}`} style={!isActive ? { color: cfg.accent } : {}} />
+                </div>
+                <span className={`text-xs font-black px-2 py-0.5 rounded-lg mt-0.5 ${
+                  isActive ? 'bg-white/15 text-white' : 'bg-red-50 text-red-600'
+                }`}>
+                  {stats?.totalErrors || 0}
                 </span>
-                <span className="text-sm font-bold text-slate-500 pb-1">error rate</span>
               </div>
-              <div className="mt-3 text-sm font-bold text-slate-500">
-                {subjectErrors} errors in {subjectQs} questions
+              <div className="relative mt-3">
+                <div className={`font-black text-sm leading-tight ${isActive ? 'text-white' : 'text-slate-900'}`}>{subj}</div>
+                <div className={`text-[11px] font-semibold mt-0.5 ${isActive ? 'text-slate-300' : 'text-slate-400'}`}>
+                  {stats?.chapters.length || 0} weak topics
+                </div>
               </div>
-            </motion.div>
+            </button>
           );
         })}
       </div>
+
+      {/* ─── KPI Metric Bar ─── */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {/* Total Errors */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
+          <div className="w-11 h-11 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
+            <AlertTriangle className="w-5 h-5 text-red-500" />
+          </div>
+          <div>
+            <div className="text-2xl font-black text-slate-900">{currentSubjectData.totalErrors}</div>
+            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Total Errors</div>
+          </div>
+        </div>
+
+        {/* Negative Marks */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
+          <div className="w-11 h-11 rounded-xl bg-rose-50 flex items-center justify-center flex-shrink-0">
+            <TrendingDown className="w-5 h-5 text-rose-500" />
+          </div>
+          <div>
+            <div className="text-2xl font-black text-rose-600">−{currentSubjectData.negativeMarks.toFixed(1)}</div>
+            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Neg. Marks</div>
+          </div>
+        </div>
+
+        {/* Speed Issues */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
+          <div className="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center flex-shrink-0">
+            <Clock className="w-5 h-5 text-amber-500" />
+          </div>
+          <div>
+            <div className="text-2xl font-black text-amber-600">{currentSubjectData.totalSpeed}</div>
+            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Speed Issues</div>
+          </div>
+        </div>
+
+        {/* Skipped */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
+          <div className="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
+            <XCircle className="w-5 h-5 text-orange-500" />
+          </div>
+          <div>
+            <div className="text-2xl font-black text-orange-600">{currentSubjectData.totalUnattempted}</div>
+            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Skipped</div>
+          </div>
+        </div>
+      </div>
+
+      {/* ─── Filters Row ─── */}
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col sm:flex-row sm:items-center gap-4">
+        {/* Filter Pills */}
+        <div className="flex items-center gap-2 flex-wrap flex-1">
+          {[
+            { id: 'all',         label: `All (${currentSubjectData.chapters.length})`, cls: 'bg-slate-900 text-white', idle: 'bg-slate-100 text-slate-600 hover:bg-slate-200' },
+            { id: 'wrong',       label: 'Wrong',       cls: 'bg-red-600 text-white',    idle: 'bg-red-50 text-red-700 hover:bg-red-100' },
+            { id: 'unattempted', label: 'Skipped',     cls: 'bg-orange-500 text-white', idle: 'bg-orange-50 text-orange-700 hover:bg-orange-100' },
+            { id: 'speed',       label: 'Speed',       cls: 'bg-amber-500 text-white',  idle: 'bg-amber-50 text-amber-700 hover:bg-amber-100' },
+          ].map(f => (
+            <button
+              key={f.id}
+              onClick={() => setSelectedTypeFilter(f.id)}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all ${selectedTypeFilter === f.id ? f.cls + ' shadow-sm' : f.idle}`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Search */}
+        <div className="relative w-full sm:w-52">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+          <input
+            type="text"
+            placeholder={`Search ${currentSubjectName}...`}
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className="w-full pl-8 pr-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:bg-white transition-all"
+          />
+        </div>
+      </div>
+
+      {/* ─── Heatmap Table ─── */}
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        {/* Table Header */}
+        <div className="grid grid-cols-12 gap-2 px-5 py-3 bg-slate-50 border-b border-slate-200 text-[10px] font-black uppercase tracking-widest text-slate-400">
+          <div className="col-span-1">#</div>
+          <div className="col-span-4">Topic</div>
+          <div className="col-span-3">Heat Bar</div>
+          <div className="col-span-1 text-center text-amber-600">Slow</div>
+          <div className="col-span-1 text-center text-red-600">Wrong</div>
+          <div className="col-span-1 text-center text-orange-500">Skip</div>
+          <div className="col-span-1 text-right">Total</div>
+        </div>
+
+        {/* Rows */}
+        <div className="divide-y divide-slate-100">
+          {filteredChapters.length === 0 && (
+            <div className="py-16 text-center text-sm text-slate-400 font-semibold">
+              No topics match the current filter.
+            </div>
+          )}
+
+          {filteredChapters.map((item, idx) => {
+            const sev = SEVERITY_CONFIG[item.severity];
+            const barPct = Math.round((item.totalErrors / maxErrors) * 100);
+            const isTop = idx < 3;
+
+            return (
+              <motion.div
+                key={`${item.subject}-${item.topic}`}
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: Math.min(idx * 0.025, 0.3) }}
+                onClick={() => setActiveDrillChapter(item)}
+                className="grid grid-cols-12 gap-2 px-5 py-3.5 items-center hover:bg-indigo-50/40 cursor-pointer transition-colors group"
+              >
+                {/* Rank */}
+                <div className="col-span-1">
+                  <span className={`w-6 h-6 rounded-lg inline-flex items-center justify-center text-[11px] font-black ${
+                    isTop ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500'
+                  }`}>
+                    {idx + 1}
+                  </span>
+                </div>
+
+                {/* Topic name + severity badge */}
+                <div className="col-span-4 min-w-0 flex items-center gap-2">
+                  <div className="min-w-0">
+                    <div className="font-bold text-sm text-slate-900 group-hover:text-indigo-700 transition-colors truncate leading-tight">
+                      {item.topic}
+                    </div>
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <span className={`inline-flex items-center gap-1 text-[10px] font-black px-1.5 py-0.5 rounded-md border ${sev.badge}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${sev.dot}`} />
+                        {sev.label}
+                      </span>
+                      {item.negativeMarks > 0 && (
+                        <span className="text-[10px] font-black text-rose-500">
+                          −{item.negativeMarks.toFixed(1)}m
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Heat bar */}
+                <div className="col-span-3 flex items-center gap-2">
+                  <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${barPct}%` }}
+                      transition={{ duration: 0.6, ease: 'easeOut', delay: idx * 0.03 }}
+                      className={`h-full rounded-full ${sev.bar}`}
+                    />
+                  </div>
+                  <span className="text-[10px] font-bold text-slate-400 w-7 text-right">{barPct}%</span>
+                </div>
+
+                {/* Slow */}
+                <div className="col-span-1 flex justify-center">
+                  {item.speedIssueCount > 0
+                    ? <span className="px-2 py-0.5 rounded-lg text-[11px] font-black bg-amber-50 text-amber-700 border border-amber-200">{item.speedIssueCount}</span>
+                    : <span className="text-slate-200 text-sm">—</span>
+                  }
+                </div>
+
+                {/* Wrong */}
+                <div className="col-span-1 flex justify-center">
+                  {item.wrongCount > 0
+                    ? <span className="px-2 py-0.5 rounded-lg text-[11px] font-black bg-red-50 text-red-700 border border-red-200">{item.wrongCount}</span>
+                    : <span className="text-slate-200 text-sm">—</span>
+                  }
+                </div>
+
+                {/* Skipped */}
+                <div className="col-span-1 flex justify-center">
+                  {item.unattemptedCount > 0
+                    ? <span className="px-2 py-0.5 rounded-lg text-[11px] font-black bg-orange-50 text-orange-700 border border-orange-200">{item.unattemptedCount}</span>
+                    : <span className="text-slate-200 text-sm">—</span>
+                  }
+                </div>
+
+                {/* Total + arrow */}
+                <div className="col-span-1 flex items-center justify-end gap-1.5">
+                  <span className={`px-2 py-0.5 rounded-lg text-[11px] font-black ${
+                    item.severity === 'critical' ? 'bg-red-600 text-white' :
+                    item.severity === 'high'     ? 'bg-orange-500 text-white' :
+                    item.severity === 'medium'   ? 'bg-amber-400 text-white' :
+                                                   'bg-slate-700 text-white'
+                  }`}>
+                    {item.totalErrors}
+                  </span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all hidden sm:block" />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Footer legend */}
+        {filteredChapters.length > 0 && (
+          <div className="px-5 py-3 border-t border-slate-100 bg-slate-50/60 flex items-center justify-between flex-wrap gap-2">
+            <span className="text-[11px] font-semibold text-slate-400">
+              Showing <strong className="text-slate-600">{filteredChapters.length}</strong> of {currentSubjectData.chapters.length} topics
+            </span>
+            <div className="flex items-center gap-4">
+              {(['critical', 'high', 'medium'] as const).map(s => (
+                <div key={s} className="flex items-center gap-1.5">
+                  <div className={`w-2 h-2 rounded-full ${SEVERITY_CONFIG[s].dot}`} />
+                  <span className="text-[10px] font-semibold text-slate-500">{SEVERITY_CONFIG[s].label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* ─── Drill-down Modal ─── */}
+      <AnimatePresence>
+        {activeDrillChapter && (
+          <div
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-6 bg-slate-950/60 backdrop-blur-sm"
+            onClick={e => { if (e.target === e.currentTarget) setActiveDrillChapter(null); }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 40, scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+              className="bg-white w-full sm:max-w-3xl max-h-[90vh] sm:rounded-3xl rounded-t-3xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden"
+            >
+              {/* Modal header */}
+              <div className={`px-6 pt-6 pb-5 bg-gradient-to-br ${
+                SUBJECT_CONFIG[activeDrillChapter.subject]?.gradient || 'from-indigo-600 to-violet-600'
+              } rounded-t-3xl`}>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-white/20 text-white text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider">
+                        {activeDrillChapter.subject}
+                      </span>
+                      <span className="text-white/60 text-[10px] font-semibold">
+                        {activeDrillChapter.questions.length} questions
+                      </span>
+                    </div>
+                    <h2 className="text-2xl font-black text-white leading-tight">{activeDrillChapter.topic}</h2>
+                    <div className="flex items-center gap-3 mt-2">
+                      {activeDrillChapter.wrongCount > 0 && (
+                        <span className="text-white/80 text-xs font-bold flex items-center gap-1">
+                          <XCircle className="w-3.5 h-3.5" /> {activeDrillChapter.wrongCount} wrong
+                        </span>
+                      )}
+                      {activeDrillChapter.unattemptedCount > 0 && (
+                        <span className="text-white/80 text-xs font-bold flex items-center gap-1">
+                          <AlertCircle className="w-3.5 h-3.5" /> {activeDrillChapter.unattemptedCount} skipped
+                        </span>
+                      )}
+                      {activeDrillChapter.speedIssueCount > 0 && (
+                        <span className="text-white/80 text-xs font-bold flex items-center gap-1">
+                          <Zap className="w-3.5 h-3.5" /> {activeDrillChapter.speedIssueCount} slow
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setActiveDrillChapter(null)}
+                    className="w-9 h-9 rounded-2xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors flex-shrink-0"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Questions list */}
+              <div className="flex-1 overflow-y-auto p-5 space-y-4">
+                {activeDrillChapter.questions.map((q, qIdx) => {
+                  const isWrong = q.errorType === 'wrong';
+                  const isSlow  = q.errorType === 'speed_issue';
+
+                  return (
+                    <div key={q.id || qIdx} className="rounded-2xl border border-slate-200 bg-slate-50/50 overflow-hidden">
+                      {/* Question header */}
+                      <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100">
+                        <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
+                        <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
+                          isWrong ? 'bg-red-100 text-red-700' :
+                          isSlow  ? 'bg-amber-100 text-amber-700' :
+                                    'bg-orange-100 text-orange-700'
+                        }`}>
+                          {isWrong ? '✗ Wrong −0.5' : isSlow ? '⚡ Speed Issue' : '◯ Skipped'}
+                        </span>
+                      </div>
+
+                      <div className="p-4 space-y-3">
+                        {/* Question text */}
+                        <p className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed">{q.question}</p>
+
+                        {/* Options */}
+                        {q.options && (
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {(['a', 'b', 'c', 'd'] as const).map(optKey => {
+                              const optText = q.options[optKey];
+                              if (!optText) return null;
+                              const isCorrect = q.answer === optKey;
+                              return (
+                                <div
+                                  key={optKey}
+                                  className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
+                                    isCorrect
+                                      ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
+                                      : 'bg-white border-slate-200 text-slate-600'
+                                  }`}
+                                >
+                                  <span className={`w-6 h-6 rounded-lg flex-shrink-0 flex items-center justify-center font-black text-[11px] uppercase ${
+                                    isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500'
+                                  }`}>
+                                    {optKey}
+                                  </span>
+                                  <span className="truncate">{optText}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+
+                        {/* Solution */}
+                        {q.solution && (
+                          <details className="group">
+                            <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none">
+                              <BookOpen className="w-3.5 h-3.5" />
+                              View Solution
+                              <ChevronRight className="w-3 h-3 transition-transform group-open:rotate-90" />
+                            </summary>
+                            <div className="mt-2 text-xs font-medium text-slate-700 whitespace-pre-line leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200">
+                              {q.solution}
+                            </div>
+                          </details>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Modal footer */}
+              <div className="px-5 py-3.5 border-t border-slate-100 bg-slate-50/70 flex justify-end">
+                <button
+                  onClick={() => setActiveDrillChapter(null)}
+                  className="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition-colors shadow-sm"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

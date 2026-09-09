@@ -48,6 +48,7 @@ export interface QuestionProgress {
 }
 
 export interface QuizResult {
+  id?: string;
   userId: string;
   chapter_title: string;
   subject: string;

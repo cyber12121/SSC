@@ -4,13 +4,440 @@
     "chapter_title": "Unattempted",
     "subject": "General Awareness",
     "subject_id": "general_awareness",
-    "questions": []
+    "questions": [
+      {
+        "id": "gene_7623573494",
+        "q_num": 1,
+        "question": "Who was awarded the 2025 Nobel Prize in Literature for his compelling and visionary oeuvre?",
+        "options": {
+          "a": "László Krasznahorkai",
+          "b": "Kazuo Ishiguro",
+          "c": "Bob Dylan",
+          "d": "Orhan Pamuk"
+        },
+        "answer": "a",
+        "solution": "The correct answer is László Krasznahorkai.\n\nIn News\nThe 2025 Nobel Prize in Literature was awarded to Hungarian author László Krasznahorkai for his compelling and visionary oeuvre that reaffirms the power of art in the midst of apocalyptic terror.\n\nKey Points\nLászló Krasznahorkai is known for his dense, apocalyptic prose and philosophical depth, often referred to as the “writer of the apocalypse.”\nHis works, such as \"Satantango,\" \"The Melancholy of Resistance,\" and \"Baron Wenckheim’s Homecoming,\" are known for long, hypnotic sentences that reflect chaos and despair, yet find beauty and endurance within destruction.\nKrasznahorkai's fiction captures humanity on the brink of collapse, transcendence, and revelation, making him a unique voice in contemporary literature.\nHe becomes the latest laureate in a long tradition of writers whose works have contributed significantly to literature's power to capture the human condition in times of crisis.\n\nAdditional Information\nSully Prudhomme\nFirst laureate of the Nobel Prize in Literature in 1901.\nSelma Lagerlöf\nFirst woman to win the Nobel Prize in Literature in 1909.\nNobel Prize in Literature\nA prestigious global award given annually to authors whose work has made a significant impact in the field of literature.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5ddb06790d",
+        "q_num": 2,
+        "question": "With reference to Sahitya Akademi Yuva Puraskar announced in June 2025, which of the following statements is/are correct?\n1. Yuva Puraskar was announced in 23 Indian languages.\n2. There is no Yuva Puraskar in Dogri this year.\nSelect the correct answer from the code given below:\nCode:",
+        "options": {
+          "a": "Only 1",
+          "b": "Both 1 and 2",
+          "c": "Neither 1 nor 2",
+          "d": "Only 2"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Both 1 and 2.\n\nKey Points\n“Yuva Puraskar was announced in 23 Indian languages.” — True.\nSahitya Akademi’s press note for June 18, 2025 lists 23 awardees for the Yuva Puraskar (i.e., awards in 23 languages).\n\n“There is no Yuva Puraskar in Dogri this year.” — True.\nBoth the official press note and the Akademi’s language-wise awards page explicitly state “No Award in Dogri language” for 2025.\n\nRecap: Since one language (Dogri) had no award, the total awards = 23, confirming both statements.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_6cc3208a44",
+        "q_num": 3,
+        "question": "Who studied ecological succession in the Indiana Dunes of Northwest Indiana in the 1890s?",
+        "options": {
+          "a": "Frederic Clements",
+          "b": "Henry Chandler Cowles",
+          "c": "G Evelyn Hutchinson",
+          "d": "Charles Elton"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Henry Chandler Cowles. Key Points: Henry Chandler Cowles studied ecological succession in the Indiana Dunes of Northwest Indiana in the 1890s. He was a University of Chicago botany professor and conservationist whose studies of plant life in the Indiana Dunes made him one of America's most notable early ecologists.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2d3600cea8",
+        "q_num": 4,
+        "question": "Who among the following has been appointed as the Comptroller General of India in November 2024?",
+        "options": {
+          "a": "Tuhin Kanta Pandey",
+          "b": "Dr. V Narayanan",
+          "c": "Mahesh Kumar Aggarwal",
+          "d": "K Sanjay Murthy"
+        },
+        "answer": "d",
+        "solution": "The correct answer is K Sanjay Murthy. K Sanjay Murthy was appointed as the Comptroller General of India in November 2024. The Comptroller General of India is a crucial constitutional authority responsible for auditing the revenue and expenditure of the Government of India under Article 148 of the Indian Constitution.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a9d8467746",
+        "q_num": 5,
+        "question": "In badminton, what is the width of the court for singles matches, as per official rules?",
+        "options": {
+          "a": "5.18 meters, marked by the inner sidelines",
+          "b": "6.1 meters, marked by the outer sidelines",
+          "c": "6.1 meters, marked by the inner sidelines",
+          "d": "There is no separate sideline for singles; the doubles width is used throughout"
+        },
+        "answer": "a",
+        "solution": "A badminton court is 13.4 meters long and 6.1 meters wide overall (the doubles width). For singles play, however, the playing width is narrower - bounded by the inner sidelines - at 5.18 meters, since the outer 0.46 m strip on each side (between the inner and outer sidelines) is used only in doubles.\n\nFurther Insights:\n\nThe net height is 1.55 m at the posts and 1.524 m at the center. The service courts are further divided by a center line, with the short service line placed 1.98 m from the net on each side.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5dfd4140e7",
+        "q_num": 6,
+        "question": "Who is the author of the novel \"Gods and Ends\", shortlisted for the JCB Prize for Literature in 2021?",
+        "options": {
+          "a": "Lindsay Pereira",
+          "b": "Amitav Ghosh",
+          "c": "Jerry Pinto",
+          "d": "Avni Doshi"
+        },
+        "answer": "a",
+        "solution": "\"Gods and Ends\" (2021, Penguin Random House India) is the debut novel of Lindsay Pereira. Set in Orlem, Malad, a Roman Catholic suburb of Mumbai, it portrays the intersecting, often grim lives of tenants in a rundown building called Obrigado Mansion. The novel was shortlisted for the JCB Prize for Literature, 2021, and the Tata Literature Live! First Book Award.\n\nWhy the other options are incorrect:\n\nOption (b) Amitav Ghosh is known for works like The Shadow Lines and the Ibis Trilogy, unrelated to this novel.\n\nOption (c) Jerry Pinto is known for Em and the Big Hoom, also set in Mumbai but a distinct work.\n\nOption (d) Avni Doshi authored Burnt Sugar, which was shortlisted for the Booker Prize (2020), not the JCB Prize, and is a different book.\n\nFurther Insights:\n\nLindsay Pereira's second novel, The Memoirs of Valmiki Rao (2023), a contemporary retelling of the Ramayana, was a joint winner of the Godrej Literature Live! Fiction Book of the Year Award in 2024.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b272feed60",
+        "q_num": 7,
+        "question": "Consider the following statements.\n\nI. IAS officer Anurag Jain has been appointed as the Chief Executive Officer (CEO) of NITI Aayog in July 2026.\n\nII. He replaced BVR Subrahmanyam.\n\nWhich of the above statements is/are correct?",
+        "options": {
+          "a": "I only",
+          "b": "II only",
+          "c": "Both I and II",
+          "d": "Neither I nor II"
+        },
+        "answer": "a",
+        "solution": "The Centre appointed IAS officer Anurag Jain, a 1989-batch officer of the Madhya Pradesh cadre, as the Chief Executive Officer (CEO) of NITI Aayog for two years.\n\nHe replaces Nidhi Chibber, who held the additional charge of CEO NITI Aayog after BVR Subrahmanyam demitted office.\n\nThe order further stated that Jain's appointment will be on the same terms and conditions as those applicable to his predecessor.\n\nAs chief secretary of Madhya Pradesh, Jain was instrumental in framing almost 30 sector-specific investment policies covering nearly all facets of trade and industry.\n\nThe Madhya Pradesh government appointed Ashok Barnwal, a 1991-batch Indian Administrative Service (IAS) officer and Additional Chief Secretary in the state government, as the officiating Chief Secretary.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_0927b43bfc",
+        "q_num": 8,
+        "question": "According to the MCC Laws of Cricket, a new ball used in men's cricket weighs between:",
+        "options": {
+          "a": "155.9 g - 163 g",
+          "b": "140 g - 150 g",
+          "c": "170 g - 180 g",
+          "d": "200 g - 210 g"
+        },
+        "answer": "a",
+        "solution": "Per the Laws of Cricket (Law 4.1), a new ball must weigh not less than 155.9 g and not more than 163 g, with a circumference of 22.4 - 22.9 cm.\n\nFurther Insights:\n- The Laws of Cricket also specify the ball's circumference as 22.4 cm to 22.9 cm (8.81 - 9 inches) for men's cricket.\n- Women's and junior cricket use lighter, smaller balls (140 - 151 g for women's cricket).\n- The ball's weight and hardness are governed by the Marylebone Cricket Club (MCC), the custodian of the Laws of Cricket, and its core is made of cork layered with tightly wound string, encased in leather.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8b13bf8664",
+        "q_num": 9,
+        "question": "The iconic Hindustani classical khayal composition \"Payaliya Jhankar More\" (composed in Raag Puriya Dhanashree) is traditionally set to the rhythmic cycle of.",
+        "options": {
+          "a": "Kaharwa",
+          "b": "Teen Taal",
+          "c": "Dadra",
+          "d": "Chautaal"
+        },
+        "answer": "b",
+        "solution": "Teen Taal (Correct): \"Payaliya Jhankar\" is a well-known khayal bandish in Raag Puriya Dhanashree performed in Drut Teen Taal. Teen Taal consists of 16 beats arranged into four equal divisions of 4+4+4+4. Kaharwa has 8 beats, Dadra has 6 beats, while Chautaal has 12 beats.\n\nKaharwa: An 8-beat fast/medium rhythmic cycle (4+4).\nDadra: A 6-beat light classical cycle (3+3).\nChautaal: A 12-beat cycle used primarily in Dhrupad style performance (2+2+2+2+2+2 with distinct Pakhawaj strokes).",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8cac0516d1",
+        "q_num": 10,
+        "question": "Consider the following statements regarding the inaugural Indian Athletics Awards:\n\nStatement 1: Neeraj Chopra (men) and Parul Chaudhary (women) were named the Athletics Federation of India's Athletes of the Year 2025.\n\nStatement 2: High jumper Pooja (women) and long jumper Shahnavaz Khan (men) received the Emerging Athlete awards.\n\nStatement 3: P.T. Usha was the sole recipient of the Lifetime Achievement Award presented at the ceremony.\n\nWhich of the following options is correct?",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "2 and 3 only",
+          "c": "1 and 3 only",
+          "d": "1, 2, and 3"
+        },
+        "answer": "a",
+        "solution": "Statement I (Correct):\nNeeraj Chopra and Parul Chaudhary (national record holder in 3,000m steeplechase and 5,000m) were named the Men's and Women's Athletes of the Year 2025, respectively.\n\nStatement II (Correct):\nThe Emerging Athlete awards were presented to high jumper Pooja in the women's category and long jumper Shahnavaz Khan in the men's category.\n\nStatement III (Incorrect):\nP.T. Usha was not the sole recipient. The Lifetime Achievement Award was presented to four recipients: P.T. Usha, Anju Bobby George, G.S. Randhawa, and Bahadur Singh Chauhan.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      }
+    ]
   },
   {
     "chapter_num": 2,
     "chapter_title": "Wrong",
     "subject": "General Awareness",
     "subject_id": "general_awareness",
-    "questions": []
+    "questions": [
+      {
+        "id": "gene_65f9915588",
+        "q_num": 1,
+        "question": "The most abundant element found in the earth's crust is:",
+        "options": {
+          "a": "Carbon",
+          "b": "Nitrogen",
+          "c": "Oxygen",
+          "d": "Silicon"
+        },
+        "answer": "c",
+        "solution": "Oxygen is the most abundant element found in the earth's crust, accounting for 46.6% of the Earth's crust. Silicon is second at 27.72%, followed by Aluminium at 8.13%.",
+        "tags": {
+          "topic": "Geography",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_efef98ff7f",
+        "q_num": 2,
+        "question": "Which of the following can be threats to the biodiversity of any Geographical area?\n(A) Global warming\n(B) Fragmentation of natural habitat\n(C) Invasion by alien species\n(D) Promotion of vegetarianism\nSelect the correct answer by using the codes given below.",
+        "options": {
+          "a": "Only (A) and (B)",
+          "b": "Only (B) and (C)",
+          "c": "(A), (B), (C) and (D)",
+          "d": "Only (A), (B) and (C)"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Only (A), (B), and (C).\n\nKey Points\n\nBiodiversity -\nIt refers to the diversity and variability of life on Earth.\nThe year 2010 has been declared the International Year of Biodiversity.\nIt is a natural resource, from which all our needs of life are met.\n\nAdditional Information\n\nCauses of loss of biodiversity -\nDestruction of natural habitats, hunting, rapid fishing, deforestation, increasing air pollution, water pollution, soil contamination, and global warming (or climate change).\nAll these factors are linked to overpopulation.\nApart from these man-made causes, there are also some natural causes that lead to the loss of biodiversity.\nThe National Biodiversity Authority (NBA) was constituted in 2003 by the Central Government under the Biodiversity Act of 2002.\nThe NBA is a statutory body and its headquarter is in Chennai.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ee06fcc973",
+        "q_num": 3,
+        "question": "Which of the following statements is not correct about the enactment of the Government of India Act 1858?",
+        "options": {
+          "a": "The Government of India was placed in the care of a new government department, the India Office in London, headed by a Secretary of State, a member of the Queen's family.",
+          "b": "Once appointed as Viceroy, he served his term even after his party in Britain resigned.",
+          "c": "The British Parliament transferred the powers of the East India Company to the British Crown in order to ensure a more responsible management of Indian affairs.",
+          "d": "The Queen's Viceroy had replaced the Company's Governor-General as the supreme authority in India."
+        },
+        "answer": "a",
+        "solution": "The correct answer is The Government of India was placed in the care of a new government department, the India Office in London, headed by a Secretary of State, a member of the Queen's family.\n\nKey Points\nLord Stanley President of the Board of Control introduced a bill for the 'Better Government' of India which became an Act of Parliament in August 1858.\nThe Government of India passed from the hands of the English East India Company to the crown.\nThe armed forces of the company were transferred to the crown.\nThe Board of control and the court of Directors were abolished.\nTheir place was taken by the Secretary of State of India and his India Council.\nThey were to govern India in the name of her majesty.\nThe Secretary of State was to sit in Parliament.\nAs a cabinet minister of England, he was responsible to Parliament. Hence, Statement 1 is incorrect.\nUltimate power over India remained with Parliament.\nOnce appointed as Viceroy, he served his term even after his party in Britain resigned. Hence, Statement 2 is correct.\nThe British Parliament transferred the powers of the East India Company to the British Crown in order to ensure a more responsible management of Indian affairs. Hence, Statement 3 is correct.\nThe Queen's Viceroy had replaced the Company's Governor-General as the supreme authority in India. Hence, Statement 4 is correct.\nIn matters of policy and its execution the viceroy was increasingly reduced to a subordinate position in relation to the British Government.\nThe Government of India was finally directly controlled by London.\n\nThus, option 1 is the correct answer.",
+        "tags": {
+          "topic": "History",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_4eded4ece6",
+        "q_num": 4,
+        "question": "Which of the following statements best defines the true meaning of democratic government?",
+        "options": {
+          "a": "A government formed through direct elections.",
+          "b": "A government where the head of state is elected by the people.",
+          "c": "A government that explains its actions and defends its decisions to the people.",
+          "d": "A government governing the citizens through a written constitution."
+        },
+        "answer": "c",
+        "solution": "The correct answer is option 3.\n\nKey Points\nElections (whether direct or indirect) alone do not guarantee democratic government. Hence option 1 is incorrect.\nSometimes autocratic leaders like Hitler also get elected through ballot voting.\nElections should be based on a universal adult franchise as it is based on equality which is a basic principle of democracy.\nElections should be free and fair which should provide equal opportunity to contest and get elected.\nA Republic is where the head of state is elected by the people. Hence option 2 is incorrect.\nIt is not necessarily to be democratic.\nFor ex-China is a republic but not democratic whereas the United Kingdom is a monarch but still democratic.\nA democratic government must be responsible and answerable to the people.\nIt should necessarily explain the policies, provide information to the public and give freedom to criticize the actions through free speech.\nThis best describes the democratic government. Hence option 3 is correct.\nA democratic government need not necessarily have a written set of rules. Hence option 4 is incorrect.\nCountries like New Zealand and Britain have an unwritten constitution, but they qualify to be democratic countries due to features like freedom of speech and expression whereas Countries like Myanmar have a written constitution but not democracy.\n\nAdditional Information\nDemocracy is a form of government in which: Rulers elected by the people take all the major decisions.\nElections offer a choice and fair opportunity to the people to change the current rulers\nThis choice and opportunity are available to all the people on an equal basis, and the exercise of this choice leads to a government limited by basic rules of the constitution and citizens’ rights.\nA democratic government rules within limits set by constitutional law and citizens’ rights.",
+        "tags": {
+          "topic": "Polity",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ecfdeb00c4",
+        "q_num": 5,
+        "question": "Trade winds that cross the equator and enter the Indian peninsula in _______ direction bring monsoons to India.",
+        "options": {
+          "a": "south-west",
+          "b": "north-east",
+          "c": "north-west",
+          "d": "south-east"
+        },
+        "answer": "a",
+        "solution": "The correct answer is \"south-west\". Key Points: A seasonal shift in wind direction is called a monsoon. Monsoons are reasons for heavy rainfall. The Indian monsoon is the most prominent monsoon in the world. The direction in which the monsoon blows is from land towards the Sea in the winters and from Sea towards land in the summers. Due to the Coriolis force, these trade winds turn right towards the low-pressure regions in India after crossing the equator and begin blowing in the southwestern direction.",
+        "tags": {
+          "topic": "Geography",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a984fdd040",
+        "q_num": 6,
+        "question": "Which of the following statements is NOT correct regarding the rabi crops?",
+        "options": {
+          "a": "Southern and southeastern states are important for the production of wheat and other rabi crops.",
+          "b": "These crops are harvested in summer from April to June.",
+          "c": "Some of the important rabi crops are wheat, barley, peas, gram and mustard.",
+          "d": "Rabi crops are sown in winter from October to December."
+        },
+        "answer": "a",
+        "solution": "The correct answer is Southern and southeastern states are important for the production of wheat and other rabi crops. Key Points: Punjab, Haryana, Uttar Pradesh, and Madhya Pradesh are major contributors to the production of wheat, barley, and other rabi crops. These regions have favorable climatic conditions and fertile soil, making them suitable for the cultivation of rabi crops.",
+        "tags": {
+          "topic": "Geography",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_50354bbb9c",
+        "q_num": 7,
+        "question": "Which one of the following statements is incorrect regarding the Bihu festival of Assam?",
+        "options": {
+          "a": "This festival is organized to celebrate the new year.",
+          "b": "These are Bahag Bihu, Kati Bihu and Magh Bihu.",
+          "c": "The entire Bihu festival takes place on a Sankranti day.",
+          "d": "There are three types of Bihu celebrated in Assam."
+        },
+        "answer": "c",
+        "solution": "The correct answer is The entire Bihu festival takes place on a Sankranti day. Key Points: Bihu is a set of three important festivals observed in the Indian state of Assam which are Rongali or Bohag Bihu observed in April, Kongali or Kati Bihu observed in October, and Bhogali or Magh Bihu observed in January.",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_3ad029f682",
+        "q_num": 8,
+        "question": "Which of the following statements NOT true regarding Firoz Tughlaq?",
+        "options": {
+          "a": "He withdrew all Taquavi (agricultural) loans granted by Mohammed-bin-Tughlaq.",
+          "b": "He imposed an irrigation tax",
+          "c": "He devastated the Jagannath Temple at Puri.",
+          "d": "None of the above"
+        },
+        "answer": "d",
+        "solution": "The correct answer is None of the above. Key Points: Firoz Shah Tughlaq, the third ruler of the Tughlaq dynasty, ruled the Delhi Sultanate from 1351 to 1388. He withdrew all Taquavi (agricultural) loans granted by Mohammed-bin-Tughlaq, raised the salary of revenue officers, constructed 150 wells, 100 bridges, 50 dams, irrigation canals, and was the first Sultan to impose an irrigation tax.",
+        "tags": {
+          "topic": "History",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_bc16d2b40c",
+        "q_num": 9,
+        "question": "Arrange the following British-era structures in India in chronological order of their completion (earliest to latest):\n\n(a) Chhatrapati Shivaji Maharaj Terminus (Victoria Terminus), Mumbai\n\n(b) St. Paul's Cathedral, Kolkata\n\n(c) Rajabai Clock Tower, Mumbai",
+        "options": {
+          "a": "(b) → (a) → (c)",
+          "b": "(a) → (b) → (c)",
+          "c": "(b) → (c) → (a)",
+          "d": "(c) → (b) → (a)"
+        },
+        "answer": "c",
+        "solution": "(b) → (c) → (a) - Correct.\n\n· St. Paul's Cathedral, Kolkata (b): Designed in the Gothic Revival style by Major General William Nairn Forbes, construction began in 1839 and was completed in 1847.\n\n· Rajabai Clock Tower, Mumbai (c): Designed by Sir George Gilbert Scott in the Venetian-Gothic style, construction began in 1869 and was completed in 1878.\n\n· Chhatrapati Shivaji Maharaj Terminus, Mumbai (a): Designed by Frederick William Stevens as an outstanding example of Victorian Gothic Revival combined with traditional Indian motifs, construction began in 1878 and was completed in 1887 (inaugurated in 1888).\n\nFurther Insights:\n\n· St. Paul's Cathedral (Kolkata): Recognized as the first Anglican cathedral in Asia and the first newly built cathedral in the overseas territory of the British Empire.\n\n· Rajabai Clock Tower (Mumbai): Located within the Fort campus of the University of Mumbai, it was funded by businessman Premchand Roychand and named after his mother, Rajabai.\n\n· Chhatrapati Shivaji Maharaj Terminus (Mumbai): Formerly known as Victoria Terminus (VT), it was designated a UNESCO World Heritage Site in 2004 for its rich architectural synthesis of Italianate Gothic and Indian structural details.",
+        "tags": {
+          "topic": "History",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_60dbcdd318",
+        "q_num": 10,
+        "question": "Determine the correctly matched pair for Mauryan-era administrative officers:",
+        "options": {
+          "a": "Samaharta - Chief Collector of Revenue",
+          "b": "Sannidhata - Chief of the Army (Commander-in-Chief)",
+          "c": "Akshapataladhyaksha - Superintendent of Mines",
+          "d": "Akaradhyaksha - Superintendent of Weights and Measures"
+        },
+        "answer": "a",
+        "solution": "Samaharta (Correct): In the Mauryan administrative framework (as described in Chanakya's Arthashastra), the Samaharta was responsible for assessing and collecting revenue from all sources across the empire.\n\nSannidhata (Incorrect): Refers to the Chief Treasury Officer / Custodian of the Royal Storehouse, whereas the Commander-in-Chief was known as the Senapati.\n\nAkshapataladhyaksha (Incorrect): Refers to the Superintendent of Accounts / Records Office (Accountant General).\n\nAkaradhyaksha (Incorrect): Refers to the Superintendent of Mines, while the Superintendent of Weights and Measures was known as the Pautavadhyaksha.",
+        "tags": {
+          "topic": "History",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d0638cf20c",
+        "q_num": 11,
+        "question": "Who defeated the Hindu Shahi ruler Jayapala at the Battle of Peshawar in 1001 CE?",
+        "options": {
+          "a": "Sabuktigin",
+          "b": "Mahmud of Ghazni",
+          "c": "Muhammad Ghori",
+          "d": "Alauddin Khalji"
+        },
+        "answer": "b",
+        "solution": "Mahmud of Ghazni defeated Jayapala at Peshawar in 1001 CE, an early episode in his series of invasions of northwestern India. (Note: Jayapala had earlier also been defeated by Sabuktigin, Mahmud's father, in 988 CE - a common source of confusion in this question.)\n\nFurther Insights:\n\n- Mahmud of Ghazni is traditionally credited with seventeen invasions/expeditions into India between about 1000 and 1027 CE. His early campaigns were directed against the Hindu Shahi kingdom.\n\n- Jayapala, humiliated by the defeat, is said to have abdicated in favour of his son Anandapala and self-immolated, considering defeat a disgrace.\n\n- The Hindu Shahi kingdom, with its capital at Waihind (near modern Peshawar), continued to resist Ghaznavid expansion under Anandapala and later Trilochanapala, but was progressively weakened and eventually absorbed, opening the route for further raids into the Punjab and Gangetic plains - most notably Mahmud's raid on the Somnath temple in 1025 CE.",
+        "tags": {
+          "topic": "History",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_56ce95d539",
+        "q_num": 12,
+        "question": "Read the following statements carefully and choose the correct option regarding Assertion (A) and Reason (R).\n\nAssertion (A): In a closed economy, the total value of Gross Domestic Product (GDP) is always identical to the Gross National Product (GNP).\n\nReason (R): A closed economy has no foreign trade or financial transactions with outside economies, resulting in zero Net Income from Abroad.",
+        "options": {
+          "a": "Both A and R are true and R is the correct explanation of A.",
+          "b": "Both A and R are true but R is not the correct explanation of A.",
+          "c": "A is true but R is false.",
+          "d": "A is false but R is true."
+        },
+        "answer": "a",
+        "solution": "Assertion (A) is True: In national income accounting, GNP = GDP + Net Income from Abroad. In a closed economy, where external trade and net factor incomes do not exist, GDP and GNP remain equal.\n\nReason (R) is True: A closed economy is defined as one that has no trading activity or financial flows with outside economies. Therefore, Net Income from Abroad is zero, which mathematically makes GNP = GDP.\n\nFurther Insights:\n\nIn an open economy, GNP may be greater than, less than, or equal to GDP depending on Net Factor Income from Abroad (NFIA). Positive NFIA makes GNP greater than GDP, while negative NFIA makes GNP lower than GDP. The trade balance should not be confused with NFIA.",
+        "tags": {
+          "topic": "Economics",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_7631540d04",
+        "q_num": 13,
+        "question": "Which Indian city hosted the 12th BRICS Labour and Employment Ministers' Meeting?",
+        "options": {
+          "a": "Kochi",
+          "b": "Hyderabad",
+          "c": "Mumbai",
+          "d": "New Delhi"
+        },
+        "answer": "b",
+        "solution": "The 12th BRICS Labour and Employment Ministers' Meeting was hosted in Hyderabad, India, on July 15 - 16, 2026.\n\nKey Details of the Meeting\n- Host City: Hyderabad\n- Dates: July 15 - 16, 2026\n- Chairperson: Union Minister for Labour and Employment, Dr. Mansukh Mandaviya\n- Theme: \"Building for Resilience, Innovation, Cooperation and Sustainability\" under India's BRICS Chairship\n\nMain Focus Areas\n- Advancing social security and labour market formalization\n- Enhancing women's participation in the workforce\n- Skills development and digital public infrastructure for worker welfare\n- Launch of the India-backed BRICS CONNECT platform",
+        "tags": {
+          "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e6f0980406",
+        "q_num": 14,
+        "question": "Consider the following statements regarding the advisory jurisdiction of the Supreme Court:\n\n1) Under Article 143, the President of India can seek the Supreme Court's advisory opinion on questions of law or fact of public importance.\n\n2) The advisory opinion given by the Supreme Court under Article 143 is binding on the President and the Government of India.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct: Article 143 empowers the President to refer a question of law or fact of public importance to the Supreme Court for its opinion, where it appears that such a question has arisen or is likely to arise.\n\nStatement 2 is incorrect: The opinion rendered by the Supreme Court under Article 143 is advisory in nature - it is not binding on the President or the government, unlike the Court's judgments in its ordinary original or appellate jurisdiction.",
+        "tags": {
+          "topic": "Polity",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_cba0abeec0",
+        "q_num": 15,
+        "question": "Consider the following statements regarding Lord Lansdowne's tenure as Viceroy of India (1888 - 1894):\n\n1) The Indian Councils Act of 1892, passed during his viceroyalty, enlarged the legislative councils and introduced the principle of direct election to non-official seats.\n\n2) The Durand Line, demarcating the boundary between British India and Afghanistan, was agreed upon during his tenure.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "b",
+        "solution": "Statement 1 is incorrect: The Indian Councils Act, 1892 did enlarge the legislative councils (central and provincial) and increase their deliberative functions (e.g., allowing members to discuss the budget and ask questions), but it did not introduce direct election. It only permitted certain bodies (municipalities, universities, chambers of commerce, zamindar associations) to recommend or nominate members, whom the government could then appoint - an indirect, quasi-elective principle, not direct election.\n\nStatement 2 is correct: The Durand Line was agreed upon in 1893 through a treaty between Sir Mortimer Durand (representing British India) and Amir Abdur Rahman Khan of Afghanistan, during Lansdowne's viceroyalty, fixing the boundary between British India and Afghanistan.\n\nFurther Insights:\n\nLansdowne's tenure also saw the Factory Act of 1891, which restricted working hours for women and children and mandated a weekly holiday, and the reorganisation of the Indian Army through the creation of the Imperial Service Troops scheme with princely states.",
+        "tags": {
+          "topic": "History",
+          "difficulty": "medium"
+        }
+      }
+    ]
   }
 ]

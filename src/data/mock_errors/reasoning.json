@@ -4,20 +4,227 @@
     "chapter_title": "Speed Issue",
     "subject": "Reasoning",
     "subject_id": "reasoning",
-    "questions": []
+    "questions": [
+      {
+        "id": "reas_cfc94727f7",
+        "q_num": 1,
+        "question": "Six friends, G, H, I, J, K, and L, are sitting around a circular table, facing towards the centre of the table. H is sitting third to the left of G. L and I are not neighbours of H. K is sitting to the immediate right of I. Who is sitting to the immediate left of L?",
+        "options": {
+          "a": "J",
+          "b": "H",
+          "c": "I",
+          "d": "G"
+        },
+        "answer": "a",
+        "solution": "Six friends, G, H, I, J, K, and L, are sitting around a circular table, facing towards the centre of the table.\n1) H is sitting third to the left of G.\n2) L and I are not neighbours of H.\n3) K is sitting to the immediate right of I.\nTherefore, 'J' is sitting to the immediate left of 'L'.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_30a5dd5352",
+        "q_num": 2,
+        "question": "Which number breaks the sequence?\n\n5, 7, 10, 15, 23, 33, 46",
+        "options": {
+          "a": "23",
+          "b": "10",
+          "c": "33",
+          "d": "46"
+        },
+        "answer": "a",
+        "solution": "The sequence should follow consecutive prime-number increments.\n\n5 + 2 = 7\n7 + 3 = 10\n10 + 5 = 15\n15 + 7 = 22\n22 + 11 = 33\n33 + 13 = 46\n\nSo, 23 should be replaced by 22.\n\nHence, 23 breaks the sequence.",
+        "tags": {
+          "topic": "Number Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f5aa4f2eb4",
+        "q_num": 3,
+        "question": "Which number breaks the sequence?\n\n6, 14, 31, 67, 140, 293",
+        "options": {
+          "a": "67",
+          "b": "293",
+          "c": "140",
+          "d": "14"
+        },
+        "answer": "c",
+        "solution": "The sequence should follow: multiply by 2 and add consecutive prime numbers.\n\n6 × 2 + 2 = 14\n14 × 2 + 3 = 31\n31 × 2 + 5 = 67\n67 × 2 + 7 = 141\n141 × 2 + 11 = 293\n\nSo, 140 should be replaced by 141.\n\nHence, 140 breaks the sequence.",
+        "tags": {
+          "topic": "Number Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2236d0a08c",
+        "q_num": 4,
+        "question": "Identify the next number:\n\n91, 127, 171, 223, 283, ?",
+        "options": {
+          "a": "351",
+          "b": "349",
+          "c": "353",
+          "d": "357"
+        },
+        "answer": "a",
+        "solution": "Differences:\n\n127 − 91 = 36\n171 − 127 = 44\n223 − 171 = 52\n283 − 223 = 60\n\nThe differences increase by 8.\n\nNext difference = 68\n\n283 + 68 = 351",
+        "tags": {
+          "topic": "Number Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_fba4311abe",
+        "q_num": 5,
+        "question": "X * Y means X is father of Y\n\nX & Y means X is son of Y\n\nX ^ Y means X is wife of Y\n\nIf, J & W * N ^ T and J * C & Q, then how is N related to Q?",
+        "options": {
+          "a": "Sister-in-law",
+          "b": "Mother-in-law",
+          "c": "Sister",
+          "d": "Daughter-in-law"
+        },
+        "answer": "a",
+        "solution": "J & W * N ^ T and J * C & Q\n\nIt means,\nJ is son of W, who is father of N, hence, J is N's brother.\nNow, N is wife of T.\nAlso, J is father of C, who is son of Q.\nThus, Q is wife of J.\nWe get,\nHence, N is Q's sister-in-law.",
+        "tags": {
+          "topic": "Blood Relations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_584a7b8943",
+        "q_num": 6,
+        "question": "Select the option that represents the letters that, when sequentially placed from left to right in the blanks, will complete the letter series.\n\npx_v_np_u_tn_x",
+        "options": {
+          "a": "u, t, p, v, p",
+          "b": "u, t, x, u, p",
+          "c": "u, u, x, v, p",
+          "d": "u, t, x, v, p"
+        },
+        "answer": "d",
+        "solution": "The correct sequence is:\n\npxuvtnpxuvtnpx\n\nSo, option (d) is the correct answer.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      }
+    ]
   },
   {
     "chapter_num": 2,
     "chapter_title": "Unattempted",
     "subject": "Reasoning",
     "subject_id": "reasoning",
-    "questions": []
+    "questions": [
+      {
+        "id": "reas_e95d684c9b",
+        "q_num": 1,
+        "question": "Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row facing North. B is sitting at one extreme end. E is sitting second to the left of B. C is sitting between A and E. G is NOT sitting at any extreme end. F is sitting to the immediate right of D. Who is sitting second to the left of G?",
+        "options": {
+          "a": "E",
+          "b": "C",
+          "c": "A",
+          "d": "F"
+        },
+        "answer": "b",
+        "solution": "Let us consider that all of them are facing north.\n1) Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row.\n2) B is sitting at one extreme end.\n3) E is sitting second to the left of B.\n4) C is sitting between A and E.\n5) G is NOT sitting at any extreme end.\n6) F is sitting to the immediate right of D.\nThe final arrangement shows that 'C' is sitting second to the left of G.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "difficulty": "medium"
+        }
+      }
+    ]
   },
   {
     "chapter_num": 3,
     "chapter_title": "Wrong",
     "subject": "Reasoning",
     "subject_id": "reasoning",
-    "questions": []
+    "questions": [
+      {
+        "id": "reas_744e7419bc",
+        "q_num": 1,
+        "question": "Select the option that is related to the third term in the same way as the second term is related to the first term:\nDART ∶ XGLZ ∶∶ SPIN ∶ ?",
+        "options": {
+          "a": "MVOT",
+          "b": "YVCT",
+          "c": "YJCT",
+          "d": "MVCT"
+        },
+        "answer": "d",
+        "solution": "The table shows the place value of the alphabet from A to Z and Z to A.\nThe logic followed here is:\nGiven letter group is DART ∶ XGLZ ∶∶ SPIN ∶ ?\nNow, DART ∶ XGLZ\nSimilarly, SPIN ∶ ?\nTherefore, the letter group for SPIN is \"MVCT\".\nHence, the correct answer is \"Option (4)\"",
+        "tags": {
+          "topic": "Analogy",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_0a90c39969",
+        "q_num": 2,
+        "question": "How many such pairs of letters are there in the word REGULATION (in the forward direction) which have as many letters between them in the word as there are in the English alphabetical order?",
+        "options": {
+          "a": "3",
+          "b": "2",
+          "c": "1",
+          "d": "4"
+        },
+        "answer": "b",
+        "solution": "There are two such pairs in alphabetical order (GN) and (RU). ON and LI are not counted as these pairs are in reverse direction, which is prohibited in the question.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_6c7ecdb831",
+        "q_num": 3,
+        "question": "Which two numbers should be interchanged to make the given equation correct?\n\n592 ÷ 6 × 8 - 164 × 4 + (96 ÷ 48) = 202",
+        "options": {
+          "a": "6 and 4",
+          "b": "6 and 8",
+          "c": "4 and 8",
+          "d": "164 and 96"
+        },
+        "answer": "a",
+        "solution": "Option A:\n592 ÷ 6 × 8 - 164 × 4 + (96 ÷ 48) = 202\nAfter interchanging the numbers:\n592 ÷ 4 × 8 - 164 × 6 + (96 ÷ 48) = 202\nUSING BODMAS:\n148 × 8 - 984 + 2 = 202\n1186 - 984 = 202\n202 is equal to 202\nSo, Option (A) is the correct answer.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_fc19c6dc4e",
+        "q_num": 4,
+        "question": "During heavy rainfall a compass started giving wrong directions, South became North West and West became North East. If a person wanted to travel towards North direction, which of the following directions should he see in the compass?",
+        "options": {
+          "a": "East",
+          "b": "North",
+          "c": "South East",
+          "d": "South West"
+        },
+        "answer": "c",
+        "solution": "The directions are rotated by 135 degrees in the anticlockwise direction, hence he must read the South East direction.",
+        "tags": {
+          "topic": "Direction & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1fe1e66a01",
+        "q_num": 5,
+        "question": "In the question below, a statement is given followed by a few conclusions which may or may not follow from the statement. Choose the one that reflects the conclusion that follows.\n\nStatement: The president of the boxing institution said, \"Every month, the players who perform well should be given rewards.\"\n\nConclusions:\n\nI. There is no system of rewarding the best players in the institution.\n\nII. The number of players in the institution is very low.",
+        "options": {
+          "a": "Only I follows",
+          "b": "Only II follows",
+          "c": "Neither I nor II follows",
+          "d": "Both I and II follow"
+        },
+        "answer": "c",
+        "solution": "Conclusion I: Does not follow. Proposing a monthly reward scheme (\"should be given rewards\") does not logically prove that no reward system currently exists - a system might already exist on an annual or quarterly basis, or the president may simply be advocating for an upgrade.\n\nConclusion II: Does not follow. The statement provides zero information regarding the total number or strength of players in the institution.\n\nSince neither conclusion can be logically derived without making assumptions, so, Neither I nor II follows is the correct answer.",
+        "tags": {
+          "topic": "Syllogism",
+          "difficulty": "medium"
+        }
+      }
+    ]
   }
 ]

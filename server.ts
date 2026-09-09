@@ -146,25 +146,35 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
   }
 
   const modelName = process.env.GEMINI_MODEL || "gemini-2.0-flash-lite";
-  console.log(`[AI Processor] Sending ${questionsToProcess.length} questions to Gemini (${modelName})...`);
+  console.log(`[AI Processor] Processing ${questionsToProcess.length} questions in mini-batches with Gemini (${modelName})...`);
 
   try {
     const { GoogleGenAI } = await import("@google/genai");
     const ai = new GoogleGenAI({ apiKey });
+    const CHUNK_SIZE = 5;
 
-    const promptText = `You are an expert SSC CGL Exam Content Refiner. Process each question carefully:
+    for (let c = 0; c < toProcessIndices.length; c += CHUNK_SIZE) {
+      const chunkIndices = toProcessIndices.slice(c, c + CHUNK_SIZE);
+      const chunkQuestions = chunkIndices.map(i => questions[i]);
+
+      console.log(`[AI Processor] 🚀 Batch ${Math.floor(c / CHUNK_SIZE) + 1}/${Math.ceil(toProcessIndices.length / CHUNK_SIZE)} (${chunkQuestions.length} questions)...`);
+
+      const promptText = `You are an expert SSC CGL Exam Content Refiner. Process each question carefully:
 
 Tasks for each question:
 1. "topic": Classify into its official SSC CGL main syllabus topic (e.g. Percentage, Profit & Loss, SI & CI, Time & Work, Geometry, Mensuration, Algebra, Trigonometry, Number System, Syllogism, Blood Relations, Analogy, Coding-Decoding, Seating Arrangement, Direction & Distance, Error Spotting, Cloze Test, Idioms, Synonyms & Antonyms, History, Polity, Geography, Economics, General Science, Static GK).
 2. "question": Clean and format the question prompt:
-   - Restore mathematical powers/exponents and superscripts (e.g., if HTML superscripts flattened "31³ + 18³ - 37³" into "313 + 183 - 373" or "x²" into "x2", format properly as "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210" using the solution for context).
-   - Strip any leaked option choices that were pasted at the end of the question text (e.g. trailing numbers or option lines following "is equal to:").
+   - Restore mathematical powers/exponents and superscripts (e.g., "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210", "x²" or "x^2").
+   - Strip any leaked option choices that were pasted at the end of the question text.
    - Remove residual platform noise (like "Reattempt mode is Off", "Marks +2", "Report", "Save", language headers).
-3. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys).
+3. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable.
 4. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
 
+CRITICAL JSON FORMAT RULE:
+Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. Do not output unescaped characters.
+
 Questions to process:
-${questionsToProcess.map((q, idx) => `[${idx}]
+${chunkQuestions.map((q, idx) => `[${idx}]
 Subject: ${q.subject || q.section || "General"}
 Current Correct Option: ${q.correctOption || "N/A"}
 Question Text:
@@ -178,7 +188,7 @@ Solution:
 ${q.solution || ""}
 `).join("\n---\n")}
 
-Return ONLY a JSON array with one object per question in exact order:
+Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
 [
   {
     "topic": "Topic Name",
@@ -188,33 +198,47 @@ Return ONLY a JSON array with one object per question in exact order:
   }
 ]`;
 
-    const response = await ai.models.generateContent({
-      model: modelName,
-      contents: promptText,
-      config: { responseMimeType: "application/json" }
-    });
+      const response = await ai.models.generateContent({
+        model: modelName,
+        contents: promptText,
+        config: { responseMimeType: "application/json" }
+      });
 
-    const parsed = JSON.parse(response.text || "[]");
-    if (!Array.isArray(parsed) || parsed.length !== questionsToProcess.length) {
-      throw new Error(`Gemini response format mismatch: Expected ${questionsToProcess.length} items, received ${parsed.length || 0}. Raw: ${response.text}`);
+      let rawText = (response.text || "[]").trim();
+      if (rawText.startsWith("```json")) rawText = rawText.slice(7);
+      if (rawText.startsWith("```")) rawText = rawText.slice(3);
+      if (rawText.endsWith("```")) rawText = rawText.slice(0, -3);
+      rawText = rawText.trim();
+
+      let parsed: any[];
+      try {
+        parsed = JSON.parse(rawText);
+      } catch (parseErr: any) {
+        console.error(`[AI Processor] ❌ Batch ${Math.floor(c / CHUNK_SIZE) + 1} JSON parse failed:`, parseErr.message);
+        throw new Error(`AI processing failed: Invalid JSON received from Gemini on batch ${Math.floor(c / CHUNK_SIZE) + 1} (${parseErr.message}). Halting import.`);
+      }
+
+      if (!Array.isArray(parsed) || parsed.length !== chunkIndices.length) {
+        throw new Error(`AI processing failed: Batch ${Math.floor(c / CHUNK_SIZE) + 1} item count mismatch (Expected ${chunkIndices.length}, got ${parsed?.length || 0}). Halting import.`);
+      }
+
+      parsed.forEach((item, idx) => {
+        const originalIdx = chunkIndices[idx];
+        const originalQ = questions[originalIdx];
+        results[originalIdx] = {
+          topic: (item.topic || "").trim(),
+          questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
+          solution: (item.solution || originalQ.solution || "").trim(),
+          correctOption: (item.correctOption || originalQ.correctOption || "A").toUpperCase().trim()
+        };
+      });
     }
 
-    parsed.forEach((item, idx) => {
-      const originalIdx = toProcessIndices[idx];
-      const originalQ = questions[originalIdx];
-      results[originalIdx] = {
-        topic: item.topic || "General",
-        questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
-        solution: (item.solution || originalQ.solution || "").trim(),
-        correctOption: (item.correctOption || originalQ.correctOption || "A").toUpperCase().trim()
-      };
-    });
-
-    console.log(`[AI Processor] ✅ Successfully refined & classified all ${parsed.length} questions with Gemini!`);
+    console.log(`[AI Processor] ✅ Successfully refined & classified all ${toProcessIndices.length} questions with Gemini!`);
     return results;
   } catch (err: any) {
-    console.error(`[AI Processor] ❌ Gemini call failed:`, err?.message || err);
-    throw new Error(`Gemini AI processing failed: ${err?.message || err}`);
+    console.error(`[AI Processor] ❌ AI Processing failed. Halting import without saving any questions:`, err?.message || err);
+    throw err;
   }
 }
 
@@ -251,19 +275,13 @@ async function startServer() {
       }
 
       if (!rawList || rawList.length === 0) {
-        console.warn(`[CGL-APP Server] ⚠️ [RECEIVE] Empty payload received`);
         return res.status(400).json({ error: "No questions in payload" });
       }
 
-      console.log(`\n======================================================`);
-      console.log(`[CGL-APP Server] 📥 [RECEIVE] Received ${rawList.length} questions from extension`);
-      console.log(`[CGL-APP Server] 🚀 [START PROCESS] Running AI topic classification & text refinement...`);
-      console.log(`======================================================`);
+      console.log(`[Mock Import] Received ${rawList.length} questions. Classifying topics & refining structure...`);
 
       // 1. Run AI topic classification, structure cleaning, and N/A answer resolution
       const enriched = await classifyAndRefineBatchWithAI(rawList);
-
-      console.log(`[CGL-APP Server] 🤖 [PROCESS] AI classification complete. Distributing questions into error buckets...`);
 
       // 2. Group incoming questions by normalized subject
       const subjectMap: Record<string, any[]> = {};
@@ -298,8 +316,9 @@ async function startServer() {
         const subjectName = items[0].subjectName;
         const subjectId = fileName.replace(".json", "");
 
-        // Ensure chapters structure
+        // Configure buckets per subject
         if (subjectName === "Mathematics" || subjectName === "Reasoning") {
+          // 3 Buckets for Math & Reasoning
           if (!chapters.some(c => c.chapter_title === "Speed Issue")) {
             chapters.push({ chapter_num: 1, chapter_title: "Speed Issue", subject: subjectName, subject_id: subjectId, questions: [] });
           }
@@ -310,6 +329,9 @@ async function startServer() {
             chapters.push({ chapter_num: 3, chapter_title: "Wrong", subject: subjectName, subject_id: subjectId, questions: [] });
           }
         } else if (subjectName === "General Awareness") {
+          // 2 Buckets for GK (Unattempted & Wrong, no Speed Issue)
+          // Remove any legacy Speed Issue from GK
+          chapters = chapters.filter(c => c.chapter_title !== "Speed Issue");
           if (!chapters.some(c => c.chapter_title === "Unattempted")) {
             chapters.push({ chapter_num: 1, chapter_title: "Unattempted", subject: subjectName, subject_id: subjectId, questions: [] });
           }
@@ -317,34 +339,46 @@ async function startServer() {
             chapters.push({ chapter_num: 2, chapter_title: "Wrong", subject: subjectName, subject_id: subjectId, questions: [] });
           }
         } else if (subjectName === "English") {
-          if (chapters.length === 0) {
-            chapters.push({ chapter_num: 1, chapter_title: "Mock Errors", subject: subjectName, subject_id: subjectId, questions: [] });
-          }
+          // 1 Bucket for English (Mock Errors)
+          // Consolidate any multiple chapters into single "Mock Errors" chapter
+          const allEnglishQuestions = chapters.flatMap(c => c.questions || []);
+          chapters = [{
+            chapter_num: 1,
+            chapter_title: "Mock Errors",
+            subject: subjectName,
+            subject_id: subjectId,
+            questions: allEnglishQuestions
+          }];
         }
+
+        // Sort chapters
+        chapters.sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
 
         let addedCount = 0;
 
         for (const item of items) {
           const q = item.raw;
-          const status = q.status || "Incorrect";
+          const status = (q.status || "Incorrect").toLowerCase();
           let targetTitle = "Wrong";
 
           if (subjectName === "Mathematics" || subjectName === "Reasoning") {
-            if (status.includes("Slow") || status === "Speed Issue") {
+            if (status.includes("slow") || status.includes("speed")) {
               targetTitle = "Speed Issue";
-            } else if (status.includes("Unattempted") || status.includes("Skipped")) {
+            } else if (status.includes("unattempted") || status.includes("skipped")) {
               targetTitle = "Unattempted";
             } else {
               targetTitle = "Wrong";
             }
           } else if (subjectName === "General Awareness") {
-            if (status.includes("Unattempted") || status.includes("Skipped")) {
+            // GK: 2 buckets (Unattempted or Wrong)
+            if (status.includes("unattempted") || status.includes("skipped")) {
               targetTitle = "Unattempted";
             } else {
               targetTitle = "Wrong";
             }
-          } else {
-            targetTitle = chapters[0]?.chapter_title || "Mock Errors";
+          } else if (subjectName === "English") {
+            // English: 1 bucket (Mock Errors)
+            targetTitle = "Mock Errors";
           }
 
           let targetChapter = chapters.find(c => c.chapter_title === targetTitle);
@@ -393,17 +427,12 @@ async function startServer() {
 
         fs.writeFileSync(filePath, JSON.stringify(chapters, null, 2), "utf-8");
         resultsSummary[subjectName] = addedCount;
-        console.log(`[CGL-APP Server] 💾 [SAVE] Saved to src/data/mock_errors/${fileName} (+${addedCount} new questions, total: ${chapters.reduce((acc: number, c: any) => acc + c.questions.length, 0)})`);
       }
 
-      console.log(`======================================================`);
-      console.log(`[CGL-APP Server] ✅ [FINISH] Mock import completed successfully!`);
-      console.log(`[CGL-APP Server] 📊 [SUMMARY]:`, JSON.stringify(resultsSummary));
-      console.log(`======================================================\n`);
-
+      console.log(`[Mock Import] Success:`, resultsSummary);
       res.json({ success: true, imported: resultsSummary });
     } catch (err: any) {
-      console.error(`[CGL-APP Server] ❌ [ERROR] Mock import failed:`, err.message || err);
+      console.error("[Mock Import] Error:", err);
       res.status(500).json({ error: err.message || "Failed to process mock import" });
     }
   });
