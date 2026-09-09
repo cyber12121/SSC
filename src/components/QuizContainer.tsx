@@ -12,8 +12,9 @@ interface QuizContainerProps {
   chapter: Chapter;
   category: 'mockErrors' | 'chapterBank';
   mode: 'practice' | 'mock';
-  onComplete: (results: Omit<QuizResult, 'userId' | 'completedAt'>, openReviewAfter?: boolean) => void;
-  onReviewLastAttempt?: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => void;
+  onSaveResult: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => Promise<QuizResult | null>;
+  onExit: () => void;
+  onReviewAttempt?: (result: QuizResult) => void;
   bookmarkedIds?: Set<number>;
   onBookmarkToggle?: (question: Question) => void;
   onDeleteQuestion?: (question: Question) => void;
@@ -29,8 +30,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   chapter,
   category,
   mode,
-  onComplete,
-  onReviewLastAttempt,
+  onSaveResult,
+  onExit,
+  onReviewAttempt,
   bookmarkedIds = new Set(),
   onBookmarkToggle,
   onDeleteQuestion,
@@ -53,6 +55,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [timeLeft, setTimeLeft] = useState<number | null>(totalQuizTime);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [showQuestionPaper, setShowQuestionPaper] = useState(false);
+  const [submittedResult, setSubmittedResult] = useState<QuizResult | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const startTimeRef = useRef<number>(Date.now());
 
@@ -77,7 +81,11 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     const interval = setInterval(() => {
       setTimeLeft(prev => {
         if (prev == null) return null;
-        if (prev <= 1) { clearInterval(interval); recordTime(); setIsFinished(true); return 0; }
+        if (prev <= 1) {
+          clearInterval(interval);
+          handleSubmitTest();
+          return 0;
+        }
         return prev - 1;
       });
     }, 1000);
@@ -150,7 +158,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const handleReattempt = () => {
     setAnswers({}); setTimeSpent({}); setVisited(new Set([0])); setMarkedForReview(new Set());
     setIsFinished(false); setIsReviewMode(false); setCurrentIdx(0); setCurrentTimer(0);
-    setIsPaused(false); setTimeLeft(totalQuizTime);
+    setIsPaused(false); setTimeLeft(totalQuizTime); setSubmittedResult(null);
   };
 
   const calculateScore = () =>
@@ -178,6 +186,43 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     };
   };
 
+  const handleSubmitTest = async () => {
+    if (isFinished || isSubmitting) return;
+    recordTime();
+    setIsSubmitting(true);
+    const results = buildResults();
+    try {
+      const saved = await onSaveResult(results);
+      if (saved) {
+        setSubmittedResult(saved);
+      } else {
+        setSubmittedResult({
+          ...results,
+          id: 'local-' + Date.now(),
+          userId: '',
+          completedAt: new Date().toISOString()
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting quiz result:', error);
+      setSubmittedResult({
+        ...results,
+        id: 'local-' + Date.now(),
+        userId: '',
+        completedAt: new Date().toISOString()
+      });
+    } finally {
+      setIsSubmitting(false);
+      setIsFinished(true);
+    }
+  };
+
+  const confirmAndSubmit = () => {
+    if (window.confirm('Are you sure you want to submit the test?')) {
+      handleSubmitTest();
+    }
+  };
+
   /* ── SCORE SCREEN ── */
   if (isFinished && !isReviewMode) {
     const score = calculateScore();
@@ -186,6 +231,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     const wrong = attempted - score;
     const accuracy = attempted > 0 ? Math.round((score / attempted) * 100) : 0;
     const results = buildResults();
+    const activeResult: QuizResult = submittedResult || {
+      ...results,
+      id: 'local-' + Date.now(),
+      userId: '',
+      completedAt: new Date().toISOString()
+    };
 
     return (
       <div className="flex items-center justify-center min-h-screen p-4 bg-[#f4f7f9]">
@@ -222,9 +273,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {onReviewLastAttempt && (
+            {onReviewAttempt && (
               <button
-                onClick={() => onReviewLastAttempt(results)}
+                onClick={() => onReviewAttempt(activeResult)}
                 className="py-3 bg-[#0097a7] hover:bg-[#00838f] text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
               >
                 <BookOpen className="w-4 h-4 mr-2" />Review Questions
@@ -237,7 +288,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               <RotateCcw className="w-4 h-4 mr-2" />Reattempt
             </button>
             <button
-              onClick={() => onComplete(results, false)}
+              onClick={onExit}
               className="py-3 bg-slate-800 hover:bg-black text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
             >
               <CornerDownLeft className="w-4 h-4 mr-2" />Back to Chapters
@@ -287,8 +338,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       <header className="h-[46px] px-4 flex items-center justify-between shrink-0 shadow z-30" style={{ background: '#0097a7' }}>
         <div className="flex items-center gap-3">
           <button
-            onClick={() => { if (window.confirm('Exit test? Progress will be saved.')) onComplete(buildResults()); }}
+            onClick={() => {
+              if (window.confirm('Are you sure you want to exit the test? Your progress will NOT be recorded in Recent Activity.')) {
+                onExit();
+              }
+            }}
             className="p-1.5 hover:bg-white/10 rounded-full transition-colors"
+            title="Exit test without saving"
           >
             <ArrowLeft className="w-5 h-5 text-white" />
           </button>
@@ -303,9 +359,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         <div className="flex items-center gap-3">
           {isReviewMode ? (
             <div className="flex items-center gap-2">
-              {onReviewLastAttempt && (
+              {onReviewAttempt && submittedResult && (
                 <button
-                  onClick={() => onReviewLastAttempt(buildResults())}
+                  onClick={() => onReviewAttempt(submittedResult)}
                   className="text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
                   style={{ background: '#0288d1' }}
                 >Full Review</button>
@@ -452,9 +508,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     style={{ background: '#0097a7' }}
                   >Save &amp; Next</button>
                   <button
-                    onClick={() => { if (window.confirm('Are you sure you want to submit the test?')) { recordTime(); setIsFinished(true); } }}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded"
-                  >Submit Test</button>
+                    onClick={confirmAndSubmit}
+                    disabled={isSubmitting}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded disabled:opacity-50"
+                  >
+                    {isSubmitting ? 'Submitting...' : 'Submit Test'}
+                  </button>
                 </div>
               </>
             )}
@@ -555,9 +614,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 style={{ background: '#b3e5fc' }}
               >Question Paper</button>
               <button
-                onClick={() => { if (window.confirm('Submit test now?')) { recordTime(); setIsFinished(true); } }}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded text-center transition-colors"
-              >Submit Test</button>
+                onClick={confirmAndSubmit}
+                disabled={isSubmitting}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded text-center transition-colors disabled:opacity-50"
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit Test'}
+              </button>
             </div>
           </aside>
         )}
@@ -604,6 +666,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               >Close</button>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* ── SUBMITTING OVERLAY ── */}
+      {isSubmitting && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex flex-col items-center justify-center text-white">
+          <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin mb-4" />
+          <p className="text-base font-bold">Submitting Test...</p>
+          <p className="text-xs text-white/70 mt-1">Saving results to Recent Activity</p>
         </div>
       )}
     </div>

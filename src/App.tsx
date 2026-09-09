@@ -637,35 +637,69 @@ export default function App() {
     startQuiz(virtualChapter);
   };
 
-  const handleQuizComplete = async (
-    results: Omit<QuizResult, 'userId' | 'completedAt'>,
-    openReviewAfter = false
-  ) => {
-    let savedResult: QuizResult | null = null;
-    if (user) {
-      try {
-        const fullResult: QuizResult = {
-          ...results,
-          userId: user.uid,
-          completedAt: new Date().toISOString(),
-        };
-        const docRef = await addDoc(collection(db, 'results'), fullResult);
-        savedResult = { ...fullResult, id: docRef.id };
-        console.log('Progress saved successfully');
-        await fetchResults();
-      } catch (error) {
-        console.error('Error saving progress:', error);
-      }
+  const handleSaveQuizResult = async (
+    results: Omit<QuizResult, 'userId' | 'completedAt'>
+  ): Promise<QuizResult | null> => {
+    if (!user) return null;
+    try {
+      const fullResult: QuizResult = {
+        ...results,
+        userId: user.uid,
+        completedAt: new Date().toISOString(),
+      };
+      const docRef = await addDoc(collection(db, 'results'), fullResult);
+      const saved = { ...fullResult, id: docRef.id };
+      console.log('Progress saved successfully');
+      await fetchResults();
+      return saved;
+    } catch (error) {
+      console.error('Error saving progress:', error);
+      return null;
     }
-    if (openReviewAfter && savedResult) {
-      setReviewResult(savedResult);
-      setReviewBackTo('home');
-      setView('review');
-    } else {
-      setView('home');
-    }
+  };
+
+  const handleQuizExit = () => {
+    setView('home');
     if (document.fullscreenElement && document.exitFullscreen) {
       document.exitFullscreen().catch(() => {});
+    }
+  };
+
+  const handleReviewFromQuiz = (result: QuizResult) => {
+    if (document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
+    openReview(result, 'home');
+  };
+
+  const handleClearAllResults = async () => {
+    if (!user) {
+      alert('Please log in to manage your activity history.');
+      return;
+    }
+    if (userResults.length === 0) {
+      alert('No recent activity records to clear.');
+      return;
+    }
+    if (!window.confirm(`Are you sure you want to permanently delete all ${userResults.length} records from your Recent Activity history? This action cannot be undone.`)) {
+      return;
+    }
+    setLoadingResults(true);
+    try {
+      const q = query(
+        collection(db, 'results'),
+        where('userId', '==', user.uid)
+      );
+      const querySnapshot = await getDocs(q);
+      const deletePromises = querySnapshot.docs.map(d => deleteDoc(doc(db, 'results', d.id)));
+      await Promise.all(deletePromises);
+      setUserResults([]);
+      console.log('All recent activity results deleted successfully');
+    } catch (error) {
+      console.error('Error clearing recent activity:', error);
+      alert('Failed to clear recent activity. Please check your connection and try again.');
+    } finally {
+      setLoadingResults(false);
     }
   };
 
@@ -1299,12 +1333,23 @@ export default function App() {
                             </h4>
                           </div>
                           {userResults.length > 0 && (
-                            <button 
-                              onClick={() => setView('dashboard')}
-                              className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
-                            >
-                              View All ({userResults.length}) →
-                            </button>
+                            <div className="flex items-center gap-3">
+                              <button 
+                                onClick={handleClearAllResults}
+                                disabled={loadingResults}
+                                className="text-xs font-bold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 disabled:opacity-50"
+                                title="Clear all recent activity"
+                              >
+                                <Trash2 className="w-3.5 h-3.5" />
+                                Clear History
+                              </button>
+                              <button 
+                                onClick={() => setView('dashboard')}
+                                className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
+                              >
+                                View All ({userResults.length}) →
+                              </button>
+                            </div>
                           )}
                         </div>
 
@@ -1958,8 +2003,9 @@ export default function App() {
                   chapter={activeChapter} 
                   category={category}
                   mode={quizMode}
-                  onComplete={handleQuizComplete} 
-                  onReviewLastAttempt={(r) => handleQuizComplete(r, true)}
+                  onSaveResult={handleSaveQuizResult}
+                  onExit={handleQuizExit}
+                  onReviewAttempt={handleReviewFromQuiz}
                   bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
                   onBookmarkToggle={toggleBookmark}
                   isAdmin={isAuthorized}
@@ -2463,6 +2509,17 @@ export default function App() {
                           <span className="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">
                             {filteredUserResults.length} {filteredUserResults.length === 1 ? 'Attempt' : 'Attempts'}
                           </span>
+                          {userResults.length > 0 && (
+                            <button
+                              onClick={handleClearAllResults}
+                              disabled={loadingResults}
+                              className="flex items-center gap-1.5 px-3 py-1 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-xl text-xs font-bold transition-all disabled:opacity-50"
+                              title="Clear all recent activity records"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                              <span>Clear History</span>
+                            </button>
+                          )}
                         </div>
 
                         {/* Search Bar */}
