@@ -994,102 +994,102 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900">
+    <div className="min-h-screen bg-slate-100/70 font-sans text-slate-900">
       {/* Navigation */}
       {view !== 'quiz' && view !== 'review' && (
-      <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
+      <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20">
+          <div className="flex justify-between h-16">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
-              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
-                <GraduationCap className="text-white w-6 h-6" />
+              <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
+                <GraduationCap className="text-white w-5 h-5" />
               </div>
-              <span className="text-2xl font-black tracking-tight text-slate-800">mock</span>
+              <span className="text-xl font-black tracking-tight text-slate-800">mock</span>
               <a
                 href="https://cat-nu-ruby.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 px-3 py-1.5 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-200 text-sm flex items-center"
+                className="ml-2 px-2.5 py-1 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700 transition-all shadow-md shadow-purple-200 text-xs flex items-center"
                 title="Open CAT practice"
               >
                 CAT
               </a>
             </div>
             
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               <button 
                 onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
-                className={`flex items-center font-bold transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
-                <BookOpen className="w-5 h-5 mr-2" />
+                <BookOpen className="w-4 h-4 mr-1.5" />
                 Practice
               </button>
               <button 
                 onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
-                className={`flex items-center font-bold transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
-                <Zap className="w-5 h-5 mr-2" />
+                <Zap className="w-4 h-4 mr-1.5" />
                 Speed Drill
               </button>
               <button 
                 onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
-                className={`flex items-center font-bold transition-colors ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                className={`flex items-center font-bold text-sm transition-colors ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
-                <BookmarkIcon className="w-5 h-5 mr-2" />
+                <BookmarkIcon className="w-4 h-4 mr-1.5" />
                 Bookmarks
               </button>
               <button
                 onClick={() => setView('dashboard')}
-                className={`flex items-center font-bold transition-colors ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                className={`flex items-center font-bold text-sm transition-colors ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
-                <LayoutDashboard className="w-5 h-5 mr-2" />
+                <LayoutDashboard className="w-4 h-4 mr-1.5" />
                 Dashboard
               </button>
               <button
                 onClick={() => setView('heatmap')}
-                className={`flex items-center font-bold transition-colors ${view === 'heatmap' ? 'text-red-600' : 'text-slate-500 hover:text-slate-800'}`}
+                className={`flex items-center font-bold text-sm transition-colors ${view === 'heatmap' ? 'text-red-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
-                <Flame className="w-5 h-5 mr-2" />
+                <Flame className="w-4 h-4 mr-1.5" />
                 Heatmap
               </button>
-              <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200" title="Quiz mode">
+              <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
                 <button
                   onClick={() => setQuizModePersisted('practice')}
-                  className={`px-3 py-2 rounded-lg text-sm font-bold transition-all flex items-center ${
+                  className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${
                     quizMode === 'practice'
-                      ? 'bg-white text-emerald-600 shadow-sm'
+                      ? 'bg-white text-emerald-600 shadow-xs'
                       : 'text-slate-500 hover:text-slate-800'
                   }`}
                 >
-                  <BookOpen className="w-4 h-4 mr-1.5" />
+                  <BookOpen className="w-3.5 h-3.5 mr-1" />
                   Practice
                 </button>
                 <button
                   onClick={() => setQuizModePersisted('mock')}
-                  className={`px-3 py-2 rounded-lg text-sm font-bold transition-all flex items-center ${
+                  className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${
                     quizMode === 'mock'
-                      ? 'bg-white text-red-600 shadow-sm'
+                      ? 'bg-white text-red-600 shadow-xs'
                       : 'text-slate-500 hover:text-slate-800'
                   }`}
                 >
-                  <Trophy className="w-4 h-4 mr-1.5" />
+                  <Trophy className="w-3.5 h-3.5 mr-1" />
                   Mock
                 </button>
               </div>
               {user ? (
                 <button 
                   onClick={handleLogout}
-                  className="p-3 text-slate-500 hover:text-red-600 transition-colors"
+                  className="p-2 text-slate-500 hover:text-red-600 transition-colors"
                   title="Logout"
                 >
-                  <LogOut className="w-6 h-6" />
+                  <LogOut className="w-5 h-5" />
                 </button>
               ) : (
                 <button 
                   onClick={handleLogin}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200 flex items-center text-xs"
                 >
-                  <LogIn className="w-5 h-5 mr-2" />
+                  <LogIn className="w-4 h-4 mr-1.5" />
                   Login
                 </button>
               )}
@@ -1099,11 +1099,11 @@ export default function App() {
       </nav>
       )}
 
-      <main className={view === 'quiz' || view === 'review' ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'}>
+      <main className={view === 'quiz' || view === 'review' ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6'}>
         {loading ? (
-          <div className="flex flex-col items-center justify-center py-40">
-            <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-4" />
-            <p className="text-slate-500 font-bold">Loading your practice hub...</p>
+          <div className="flex flex-col items-center justify-center py-28">
+            <Loader2 className="w-10 h-10 text-blue-600 animate-spin mb-3" />
+            <p className="text-slate-500 font-bold text-sm">Loading your practice hub...</p>
           </div>
         ) : (
           <AnimatePresence mode="wait">
@@ -1117,60 +1117,60 @@ export default function App() {
                 {!selectedSubject ? (
                   <>
                     {/* Hero */}
-                    <section className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 p-8 sm:p-10">
+                    <section className="relative mb-5 overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 p-5 sm:p-7 shadow-sm">
                       <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"></div>
                       <div className="pointer-events-none absolute -bottom-24 left-8 h-72 w-72 rounded-full bg-fuchsia-400/20 blur-3xl"></div>
-                      <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                      <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div className="max-w-xl">
-                          <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/20">
+                          <span className="inline-flex items-center rounded-full bg-white/15 px-2.5 py-0.5 text-[11px] font-semibold text-white ring-1 ring-white/20">
                             SSC CGL Prep
                           </span>
-                          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                          <h1 className="mt-2 text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
                             Practice smart. Beat the competition.
                           </h1>
-                          <p className="mt-3 text-indigo-100">
+                          <p className="mt-1.5 text-xs sm:text-sm text-indigo-100">
                             Curated chapter banks and focused mock-error drills — pick a subject and start solving.
                           </p>
                         </div>
                         <div className="inline-flex shrink-0 rounded-xl border border-white/20 bg-white/10 p-1 backdrop-blur">
                           <button
                             onClick={() => setCategory('chapterBank')}
-                            className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors flex items-center ${
-                              category === 'chapterBank' ? 'bg-white text-indigo-700' : 'text-white hover:bg-white/10'
+                            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors flex items-center ${
+                              category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs' : 'text-white hover:bg-white/10'
                             }`}
                           >
-                            <ListChecks className="w-4 h-4 mr-2" />
+                            <ListChecks className="w-3.5 h-3.5 mr-1.5" />
                             Chapter Bank
                           </button>
                           <button
                             onClick={() => setCategory('mockErrors')}
-                            className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors flex items-center ${
-                              category === 'mockErrors' ? 'bg-white text-indigo-700' : 'text-white hover:bg-white/10'
+                            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors flex items-center ${
+                              category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs' : 'text-white hover:bg-white/10'
                             }`}
                           >
-                            <AlertCircle className="w-4 h-4 mr-2" />
+                            <AlertCircle className="w-3.5 h-3.5 mr-1.5" />
                             Mock Errors
                           </button>
                         </div>
                       </div>
                     </section>
 
-                    {/* Subjects */}
+                    {/* Subjects: 4 Columns on desktop for perfect balance */}
                     {dataLoading ? (
-                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                        {[1, 2, 3, 4, 5, 6].map((i) => (
-                          <div key={i} className="h-40 rounded-2xl border border-slate-200 bg-white p-6 animate-pulse">
+                      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+                        {[1, 2, 3, 4].map((i) => (
+                          <div key={i} className="h-32 rounded-xl border border-slate-200 bg-white p-4 animate-pulse">
                             <div className="flex items-center justify-between">
-                              <div className="h-12 w-12 rounded-xl bg-slate-100" />
-                              <div className="h-5 w-16 rounded-md bg-slate-100" />
+                              <div className="h-9 w-9 rounded-lg bg-slate-100" />
+                              <div className="h-4 w-14 rounded-md bg-slate-100" />
                             </div>
-                            <div className="mt-5 h-6 w-32 rounded bg-slate-100" />
-                            <div className="mt-3 h-4 w-24 rounded bg-slate-100" />
+                            <div className="mt-4 h-5 w-28 rounded bg-slate-100" />
+                            <div className="mt-2 h-3.5 w-20 rounded bg-slate-100" />
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
                         {Object.keys(currentData).map((subject) => {
                           const chip = (
                             {
@@ -1184,22 +1184,22 @@ export default function App() {
                           return (
                             <motion.div
                               key={subject}
-                              whileHover={{ y: -4 }}
+                              whileHover={{ y: -3 }}
                               onClick={() => setSelectedSubject(subject)}
-                              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-100"
+                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/90 bg-white p-4 sm:p-4.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-100/50 hover:border-indigo-300 shadow-xs"
                             >
                               <div className="flex items-center justify-between">
-                                <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-sm`}>
-                                  <Layers className="w-6 h-6" />
+                                <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${chip} text-white shadow-xs`}>
+                                  <Layers className="w-5 h-5" />
                                 </div>
-                                <span className="rounded-md bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-400">
-                                  {currentData[subject].length} Chapters
+                                <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[11px] font-semibold text-slate-500 border border-slate-100">
+                                  {currentData[subject].length} Ch
                                 </span>
                               </div>
-                              <h3 className="mt-5 text-lg font-bold text-slate-800">{subject}</h3>
-                              <div className="mt-2 flex items-center text-sm font-semibold text-indigo-600">
+                              <h3 className="mt-3 text-base font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
+                              <div className="mt-1.5 flex items-center text-xs font-semibold text-indigo-600">
                                 View Chapters
-                                <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-1" />
                               </div>
                             </motion.div>
                           );
@@ -1449,7 +1449,7 @@ export default function App() {
                                   <button
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      startClubbedChapterQuiz(ch.topic, ch.allQuestions);
+                                      startClubbedChapterQuiz(ch.topic, ch.questions);
                                     }}
                                     className="w-20 sm:w-24 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-sm flex items-center justify-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
                                     title={`Start quiz with all ${ch.total} questions for ${ch.topic}`}
@@ -2063,100 +2063,100 @@ export default function App() {
                   </div>
                 </div>
               ) : (
-                <div className="space-y-8">
+                <div className="space-y-4">
                   {/* Dashboard Top Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 sm:p-5 rounded-2xl shadow-xs border border-slate-200/90">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-black uppercase tracking-wider mb-2">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider mb-1">
                         <span>SSC CGL Analytics</span>
                       </div>
-                      <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Performance Dashboard</h2>
-                      <p className="text-slate-500 text-sm font-medium mt-1">
+                      <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">Performance Dashboard</h2>
+                      <p className="text-slate-500 text-xs font-medium mt-0.5">
                         Comprehensive overview of your accuracy, pacing, and subject strengths.
                       </p>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
                       <button
                         onClick={() => setView('heatmap')}
-                        className="px-4 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-sm transition-colors flex items-center gap-2 border border-rose-100"
+                        className="px-3.5 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs transition-colors flex items-center gap-1.5 border border-rose-100"
                       >
-                        <Flame className="w-4 h-4 text-rose-600" />
+                        <Flame className="w-3.5 h-3.5 text-rose-600" />
                         Heatmap
                       </button>
                       <button
                         onClick={() => setView('home')}
-                        className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-sm transition-all shadow-md shadow-blue-100 flex items-center gap-2"
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-xs transition-all shadow-xs flex items-center gap-1.5"
                       >
-                        <BookOpen className="w-4 h-4" />
+                        <BookOpen className="w-3.5 h-3.5" />
                         Practice Hub
                       </button>
                     </div>
                   </div>
 
                   {/* Summary KPI Cards */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     {/* Total Quizzes */}
-                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Total Quizzes</div>
-                        <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                          <Trophy className="w-5 h-5" />
+                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Total Quizzes</div>
+                        <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                          <Trophy className="w-4 h-4" />
                         </div>
                       </div>
-                      <div className="text-3xl font-black text-slate-900 mb-1">{dashboardStats.totalQuizzes}</div>
-                      <div className="text-xs text-slate-400 font-medium">
+                      <div className="text-2xl font-black text-slate-900 mb-0.5">{dashboardStats.totalQuizzes}</div>
+                      <div className="text-[11px] text-slate-400 font-medium">
                         {dashboardStats.mockCount} Mocks • {dashboardStats.practiceCount} Practice
                       </div>
                     </div>
 
                     {/* Overall Accuracy */}
-                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Overall Accuracy</div>
-                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Overall Accuracy</div>
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
                           dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-600' :
                           dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-600' :
                           'bg-rose-50 text-rose-600'
                         }`}>
-                          <Target className="w-5 h-5" />
+                          <Target className="w-4 h-4" />
                         </div>
                       </div>
-                      <div className={`text-3xl font-black mb-1 ${
+                      <div className={`text-2xl font-black mb-0.5 ${
                         dashboardStats.overallAccuracy >= 75 ? 'text-emerald-600' :
                         dashboardStats.overallAccuracy >= 50 ? 'text-amber-600' :
                         'text-rose-600'
                       }`}>
                         {dashboardStats.overallAccuracy}%
                       </div>
-                      <div className="text-xs text-slate-400 font-medium">
+                      <div className="text-[11px] text-slate-400 font-medium">
                         {dashboardStats.totalCorrect} / {dashboardStats.totalQuestions} questions correct
                       </div>
                     </div>
 
                     {/* Total Questions */}
-                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Questions Solved</div>
-                        <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
-                          <ListChecks className="w-5 h-5" />
+                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Questions Solved</div>
+                        <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
+                          <ListChecks className="w-4 h-4" />
                         </div>
                       </div>
-                      <div className="text-3xl font-black text-purple-600 mb-1">{dashboardStats.totalQuestions}</div>
-                      <div className="text-xs text-slate-400 font-medium">
-                        Across all topics & error drills
+                      <div className="text-2xl font-black text-purple-600 mb-0.5">{dashboardStats.totalQuestions}</div>
+                      <div className="text-[11px] text-slate-400 font-medium">
+                        Across all topics & drills
                       </div>
                     </div>
 
                     {/* Avg Time per Question */}
-                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="text-slate-400 font-bold uppercase text-[11px] tracking-wider">Avg. Time / Question</div>
-                        <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center">
-                          <Clock className="w-5 h-5" />
+                    <div className="bg-white p-4 rounded-xl shadow-xs border border-slate-200/90 flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="text-slate-400 font-bold uppercase text-[10px] tracking-wider">Avg. Time / Question</div>
+                        <div className="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center">
+                          <Clock className="w-4 h-4" />
                         </div>
                       </div>
-                      <div className="text-3xl font-black text-orange-600 mb-1">{dashboardStats.avgTimePerQ}s</div>
-                      <div className="text-xs text-slate-400 font-medium">
+                      <div className="text-2xl font-black text-orange-600 mb-0.5">{dashboardStats.avgTimePerQ}s</div>
+                      <div className="text-[11px] text-slate-400 font-medium">
                         {dashboardStats.avgTimePerQ > 0 && dashboardStats.avgTimePerQ <= 45 ? '⚡ Fast pace (< 45s)' :
                          dashboardStats.avgTimePerQ > 0 && dashboardStats.avgTimePerQ <= 70 ? '✓ Solid pacing (< 70s)' :
                          'Focus on question speed'}
@@ -2165,8 +2165,8 @@ export default function App() {
                   </div>
 
                   {/* Subject-Wise Performance Breakdown */}
-                  <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 sm:p-8">
-                    <div className="flex items-center justify-between mb-6">
+                  <div className="bg-white rounded-2xl shadow-xs border border-slate-200/90 p-4 sm:p-5">
+                    <div className="flex items-center justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-black text-slate-900">Subject Breakdown</h3>
                         <p className="text-slate-500 text-sm font-medium mt-0.5">Click any subject to filter recent attempts</p>
@@ -2510,16 +2510,16 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
-                  <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-2">Error Heatmap</h1>
-                  <p className="text-base sm:text-lg text-slate-500">Visualize subject-wise error patterns across your top error-prone chapters.</p>
+                  <h1 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">Error Heatmap</h1>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Visualize subject-wise error patterns across your top error-prone chapters.</p>
                 </div>
                 <button
                   onClick={() => setView('home')}
-                  className="self-start sm:self-auto flex items-center text-sm font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-4 py-2 rounded-xl shadow-sm transition-colors"
+                  className="self-start sm:self-auto flex items-center text-xs font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-200/90 px-3.5 py-1.5 rounded-lg shadow-xs transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4 mr-1" />
+                  <ChevronLeft className="w-3.5 h-3.5 mr-1" />
                   Back to Practice
                 </button>
               </div>

@@ -210,10 +210,10 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
   }
 
   return (
-    <div className="space-y-6 pb-16">
+    <div className="space-y-4 pb-8">
 
       {/* ─── Subject Tab Strip ─── */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
         {allSubjects.map(subj => {
           const cfg = SUBJECT_CONFIG[subj] || SUBJECT_CONFIG['Mathematics'];
           const Icon = cfg.icon;
@@ -224,32 +224,32 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
             <button
               key={subj}
               onClick={() => { setActiveSubject(subj); setSelectedTypeFilter('all'); setSearchQuery(''); }}
-              className={`relative overflow-hidden rounded-2xl p-4 text-left transition-all duration-200 border ${
+              className={`relative overflow-hidden rounded-xl p-3 text-left transition-all duration-200 border ${
                 isActive
-                  ? 'bg-slate-900 border-slate-900 shadow-xl shadow-slate-900/20 scale-[1.02]'
-                  : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-md shadow-sm'
+                  ? 'bg-slate-900 border-slate-900 shadow-md shadow-slate-900/20 ring-2 ring-slate-900'
+                  : 'bg-white border-slate-200/80 hover:border-slate-300 hover:shadow-sm shadow-xs'
               }`}
             >
               {isActive && (
-                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.gradient} opacity-[0.12]`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.gradient} opacity-[0.14]`} />
               )}
-              <div className="relative flex items-start justify-between gap-2">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+              <div className="relative flex items-center justify-between gap-2">
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
                   isActive
-                    ? `bg-gradient-to-br ${cfg.gradient} shadow-lg`
+                    ? `bg-gradient-to-br ${cfg.gradient} shadow-sm`
                     : `${cfg.light}`
                 }`}>
-                  <Icon className={`w-5 h-5 ${isActive ? 'text-white' : ''}`} style={!isActive ? { color: cfg.accent } : {}} />
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-white' : ''}`} style={!isActive ? { color: cfg.accent } : {}} />
                 </div>
-                <span className={`text-xs font-black px-2 py-0.5 rounded-lg mt-0.5 ${
-                  isActive ? 'bg-white/15 text-white' : 'bg-red-50 text-red-600'
+                <span className={`text-[11px] font-black px-2 py-0.5 rounded-md ${
+                  isActive ? 'bg-white/15 text-white' : 'bg-red-50 text-red-600 border border-red-100'
                 }`}>
                   {stats?.totalErrors || 0}
                 </span>
               </div>
-              <div className="relative mt-3">
-                <div className={`font-black text-sm leading-tight ${isActive ? 'text-white' : 'text-slate-900'}`}>{subj}</div>
-                <div className={`text-[11px] font-semibold mt-0.5 ${isActive ? 'text-slate-300' : 'text-slate-400'}`}>
+              <div className="relative mt-2">
+                <div className={`font-black text-xs sm:text-sm leading-tight truncate ${isActive ? 'text-white' : 'text-slate-900'}`}>{subj}</div>
+                <div className={`text-[10px] font-semibold mt-0.5 ${isActive ? 'text-slate-300' : 'text-slate-400'}`}>
                   {stats?.chapters.length || 0} weak topics
                 </div>
               </div>
@@ -259,56 +259,56 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       </div>
 
       {/* ─── KPI Metric Bar ─── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
         {/* Total Errors */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
-          <div className="w-11 h-11 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
-            <AlertTriangle className="w-5 h-5 text-red-500" />
+        <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 border border-red-100">
+            <AlertTriangle className="w-4 h-4 text-red-500" />
           </div>
-          <div>
-            <div className="text-2xl font-black text-slate-900">{currentSubjectData.totalErrors}</div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Total Errors</div>
+          <div className="min-w-0">
+            <div className="text-xl font-black text-slate-900 leading-tight">{currentSubjectData.totalErrors}</div>
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Total Errors</div>
           </div>
         </div>
 
         {/* Negative Marks */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
-          <div className="w-11 h-11 rounded-xl bg-rose-50 flex items-center justify-center flex-shrink-0">
-            <TrendingDown className="w-5 h-5 text-rose-500" />
+        <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-rose-50 flex items-center justify-center flex-shrink-0 border border-rose-100">
+            <TrendingDown className="w-4 h-4 text-rose-500" />
           </div>
-          <div>
-            <div className="text-2xl font-black text-rose-600">−{currentSubjectData.negativeMarks.toFixed(1)}</div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Neg. Marks</div>
+          <div className="min-w-0">
+            <div className="text-xl font-black text-rose-600 leading-tight">−{currentSubjectData.negativeMarks.toFixed(1)}</div>
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Neg. Marks</div>
           </div>
         </div>
 
         {/* Speed Issues */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
-          <div className="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center flex-shrink-0">
-            <Clock className="w-5 h-5 text-amber-500" />
+        <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0 border border-amber-100">
+            <Clock className="w-4 h-4 text-amber-500" />
           </div>
-          <div>
-            <div className="text-2xl font-black text-amber-600">{currentSubjectData.totalSpeed}</div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Speed Issues</div>
+          <div className="min-w-0">
+            <div className="text-xl font-black text-amber-600 leading-tight">{currentSubjectData.totalSpeed}</div>
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Speed Issues</div>
           </div>
         </div>
 
         {/* Skipped */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex items-center gap-4">
-          <div className="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
-            <XCircle className="w-5 h-5 text-orange-500" />
+        <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0 border border-orange-100">
+            <XCircle className="w-4 h-4 text-orange-500" />
           </div>
-          <div>
-            <div className="text-2xl font-black text-orange-600">{currentSubjectData.totalUnattempted}</div>
-            <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Skipped</div>
+          <div className="min-w-0">
+            <div className="text-xl font-black text-orange-600 leading-tight">{currentSubjectData.totalUnattempted}</div>
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Skipped</div>
           </div>
         </div>
       </div>
 
       {/* ─── Filters Row ─── */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col sm:flex-row sm:items-center gap-4">
+      <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs px-3.5 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
         {/* Filter Pills */}
-        <div className="flex items-center gap-2 flex-wrap flex-1">
+        <div className="flex items-center gap-1.5 flex-wrap">
           {[
             { id: 'all',         label: `All (${currentSubjectData.chapters.length})`, cls: 'bg-slate-900 text-white', idle: 'bg-slate-100 text-slate-600 hover:bg-slate-200' },
             { id: 'wrong',       label: 'Wrong',       cls: 'bg-red-600 text-white',    idle: 'bg-red-50 text-red-700 hover:bg-red-100' },
@@ -318,7 +318,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
             <button
               key={f.id}
               onClick={() => setSelectedTypeFilter(f.id)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all ${selectedTypeFilter === f.id ? f.cls + ' shadow-sm' : f.idle}`}
+              className={`px-3 py-1 rounded-lg text-xs font-black transition-all ${selectedTypeFilter === f.id ? f.cls + ' shadow-xs' : f.idle}`}
             >
               {f.label}
             </button>
@@ -326,22 +326,22 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
         </div>
 
         {/* Search */}
-        <div className="relative w-full sm:w-52">
+        <div className="relative w-full sm:w-56">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
           <input
             type="text"
             placeholder={`Search ${currentSubjectName}...`}
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-8 pr-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:bg-white transition-all"
+            className="w-full pl-8 pr-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:bg-white transition-all"
           />
         </div>
       </div>
 
       {/* ─── Heatmap Table ─── */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
         {/* Table Header */}
-        <div className="grid grid-cols-12 gap-2 px-5 py-3 bg-slate-50 border-b border-slate-200 text-[10px] font-black uppercase tracking-widest text-slate-400">
+        <div className="grid grid-cols-12 gap-2 px-4 py-2.5 bg-slate-50 border-b border-slate-200 text-[10px] font-black uppercase tracking-wider text-slate-400">
           <div className="col-span-1">#</div>
           <div className="col-span-4">Topic</div>
           <div className="col-span-3">Heat Bar</div>
@@ -354,7 +354,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
         {/* Rows */}
         <div className="divide-y divide-slate-100">
           {filteredChapters.length === 0 && (
-            <div className="py-16 text-center text-sm text-slate-400 font-semibold">
+            <div className="py-12 text-center text-xs text-slate-400 font-semibold">
               No topics match the current filter.
             </div>
           )}
@@ -367,15 +367,15 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
             return (
               <motion.div
                 key={`${item.subject}-${item.topic}`}
-                initial={{ opacity: 0, x: -8 }}
+                initial={{ opacity: 0, x: -6 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: Math.min(idx * 0.025, 0.3) }}
+                transition={{ delay: Math.min(idx * 0.02, 0.25) }}
                 onClick={() => setActiveDrillChapter(item)}
-                className="grid grid-cols-12 gap-2 px-5 py-3.5 items-center hover:bg-indigo-50/40 cursor-pointer transition-colors group"
+                className="grid grid-cols-12 gap-2 px-4 py-2.5 items-center hover:bg-indigo-50/40 cursor-pointer transition-colors group"
               >
                 {/* Rank */}
                 <div className="col-span-1">
-                  <span className={`w-6 h-6 rounded-lg inline-flex items-center justify-center text-[11px] font-black ${
+                  <span className={`w-5 h-5 rounded-md inline-flex items-center justify-center text-[10px] font-black ${
                     isTop ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500'
                   }`}>
                     {idx + 1}
