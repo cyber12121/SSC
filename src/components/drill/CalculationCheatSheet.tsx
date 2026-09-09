@@ -9,15 +9,18 @@ import {
   CALC_SECTIONS,
   SectionId,
 } from '../../data/drills/calculationData';
+import fractionsData from '../../data/drills/fractions.json';
+
+type SheetTab = SectionId | 'fractions';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
-  initialSection?: SectionId;
+  initialSection?: SheetTab;
 }
 
 export const CalculationCheatSheet: React.FC<Props> = ({ isOpen, onClose, initialSection = 'triplets' }) => {
-  const [activeTab, setActiveTab] = useState<SectionId>(initialSection);
+  const [activeTab, setActiveTab] = useState<SheetTab>(initialSection);
 
   if (!isOpen) return null;
 
@@ -58,6 +61,16 @@ export const CalculationCheatSheet: React.FC<Props> = ({ isOpen, onClose, initia
               {sec.badge}: {sec.shortTitle}
             </button>
           ))}
+          <button
+            onClick={() => setActiveTab('fractions')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+              activeTab === 'fractions'
+                ? 'bg-blue-600 text-white shadow-sm shadow-blue-200'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200/70'
+            }`}
+          >
+            Ref: Fractions %
+          </button>
         </div>
 
         {/* Content Body */}
@@ -206,6 +219,36 @@ export const CalculationCheatSheet: React.FC<Props> = ({ isOpen, onClose, initia
                     </div>
                     <div className="text-[11px] text-slate-400 font-mono font-medium">
                       = {item.breakdown}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Section 7: Fractions & Percentages */}
+          {activeTab === 'fractions' && (
+            <div className="space-y-4">
+              <div className="p-4 bg-indigo-50/60 rounded-2xl border border-indigo-100 text-xs text-indigo-900 font-medium flex items-center justify-between">
+                <span><strong>Fractions to Percentages (1/2 to 1/25):</strong> High-frequency percentage conversions for Arithmetic & DI.</span>
+                <span className="text-[11px] font-bold text-indigo-600 bg-white px-2.5 py-1 rounded-lg border border-indigo-200">
+                  {fractionsData.length} Values
+                </span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                {fractionsData.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:border-indigo-300 transition-all text-center"
+                  >
+                    <div className="text-base font-black text-slate-900">
+                      {item.fraction}
+                    </div>
+                    <div className="text-sm font-extrabold text-indigo-600 mt-0.5">
+                      {item.percentage}
+                    </div>
+                    <div className="text-[10px] text-slate-400 font-mono mt-0.5">
+                      ≈ {item.decimal}
                     </div>
                   </div>
                 ))}
