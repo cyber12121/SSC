@@ -66,7 +66,7 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+    <div className="w-full">
       {/* Fullscreen Calculation Studio Modal */}
       {isStudioOpen && (
         <CalculationStudio
@@ -77,7 +77,7 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
       )}
 
       {/* Minimalist Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
         <div>
           {onBack && (
             <button
