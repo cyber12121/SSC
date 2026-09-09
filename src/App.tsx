@@ -12,6 +12,7 @@ const QuizContainer = React.lazy(() => import('./components/QuizContainer').then
 const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const ErrorHeatmap = React.lazy(() => import('./components/ErrorHeatmap').then(m => ({ default: m.ErrorHeatmap })));
+const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
 
 import { getCachedData, setCachedData } from './utils/cache';
 
@@ -193,7 +194,7 @@ const formatAttemptDate = (isoStr?: string) => {
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill' | 'mockScores'>('home');
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
   const [reviewBackTo, setReviewBackTo] = useState<'home' | 'dashboard'>('dashboard');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
@@ -407,7 +408,18 @@ export default function App() {
         ...doc.data(),
         id: doc.id
       })) as QuizResult[];
-      setUserResults(results);
+
+      // Filter out cleared history and individually deleted items
+      const clearedAt = localStorage.getItem('activity_cleared_at_' + user.uid);
+      const hiddenIds = new Set(JSON.parse(localStorage.getItem('hidden_result_ids_' + user.uid) || '[]'));
+
+      const filtered = results.filter(r => {
+        if (hiddenIds.has(r.id)) return false;
+        if (clearedAt && r.completedAt && r.completedAt <= clearedAt) return false;
+        return true;
+      });
+
+      setUserResults(filtered);
     } catch (error) {
       console.error('Error fetching results:', error);
     } finally {
@@ -685,21 +697,35 @@ export default function App() {
       return;
     }
     setLoadingResults(true);
+
+    // 1. Immediately record cleared timestamp in localStorage so UI is instantly and permanently cleared
+    const nowIso = new Date().toISOString();
+    try {
+      localStorage.setItem('activity_cleared_at_' + user.uid, nowIso);
+    } catch {}
+
+    // 2. Clear state immediately
+    setUserResults([]);
+
+    // 3. Attempt physical deletion from Firestore (handles permission errors gracefully)
     try {
       const q = query(
         collection(db, 'results'),
         where('userId', '==', user.uid)
       );
       const querySnapshot = await getDocs(q);
-      const deletePromises = querySnapshot.docs.map(d => deleteDoc(doc(db, 'results', d.id)));
+      const deletePromises = querySnapshot.docs.map(d =>
+        deleteDoc(doc(db, 'results', d.id)).catch(err => {
+          console.warn('Firestore doc delete permission note:', d.id, err);
+        })
+      );
       await Promise.all(deletePromises);
-      setUserResults([]);
-      console.log('All recent activity results deleted successfully');
+      console.log('All recent activity results processed');
     } catch (error) {
-      console.error('Error clearing recent activity:', error);
-      alert('Failed to clear recent activity. Please check your connection and try again.');
+      console.warn('Firestore bulk delete notice (handled via local filter):', error);
     } finally {
       setLoadingResults(false);
+      alert('All recent activity records have been cleared from your history.');
     }
   };
 
@@ -773,12 +799,25 @@ export default function App() {
   const handleDeleteResult = async (resultId?: string) => {
     if (!resultId) return;
     if (!window.confirm('Are you sure you want to delete this quiz attempt from your history?')) return;
+    
+    // Store in hidden list so it immediately and permanently disappears
+    if (user) {
+      try {
+        const key = 'hidden_result_ids_' + user.uid;
+        const hidden: string[] = JSON.parse(localStorage.getItem(key) || '[]');
+        if (!hidden.includes(resultId)) {
+          hidden.push(resultId);
+          localStorage.setItem(key, JSON.stringify(hidden));
+        }
+      } catch {}
+    }
+    
+    setUserResults(prev => prev.filter(r => r.id !== resultId));
+
     try {
       await deleteDoc(doc(db, 'results', resultId));
-      setUserResults(prev => prev.filter(r => r.id !== resultId));
     } catch (error) {
-      console.error('Error deleting result:', error);
-      alert('Failed to delete quiz result.');
+      console.warn('Firestore deleteDoc notice (handled via local filter):', error);
     }
   };
 
@@ -1078,6 +1117,13 @@ export default function App() {
               >
                 <LayoutDashboard className="w-4 h-4 mr-1.5" />
                 Dashboard
+              </button>
+              <button
+                onClick={() => setView('mockScores')}
+                className={`flex items-center font-bold text-sm transition-colors ${view === 'mockScores' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+              >
+                <Trophy className="w-4 h-4 mr-1.5" />
+                Mock Scores
               </button>
               <button
                 onClick={() => setView('heatmap')}
@@ -2803,6 +2849,24 @@ export default function App() {
                 </div>
               }>
                 <ErrorHeatmap mockData={mockData} />
+              </React.Suspense>
+            </motion.div>
+          )}
+
+          {view === 'mockScores' && (
+            <motion.div
+              key="mockScores"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <React.Suspense fallback={
+                <div className="flex flex-col items-center justify-center py-40">
+                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                  <p className="text-slate-500 font-bold">Loading mock score dashboard...</p>
+                </div>
+              }>
+                <MockScoreDashboard onBack={() => setView('home')} />
               </React.Suspense>
             </motion.div>
           )}

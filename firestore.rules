@@ -34,7 +34,7 @@ service cloud.firestore {
 
     // Results Collection
     match /results/{resultId} {
-      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow read, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
       allow create: if isAuthenticated() && isValidResult(request.resource.data);
     }
 

@@ -25,6 +25,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { QuizResult, Question } from '../types';
+import { cleanSolutionText } from '../utils/cleanSolution';
 
 interface ReviewViewProps {
   result: QuizResult;
@@ -138,15 +139,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (!sol) return '';
     let text = sol;
     if (language === 'English') {
-      const parts = text.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
-      text = parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
+      return cleanSolutionText(text);
     } else if (language === 'Hindi') {
       const parts = text.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
       if (parts.length > 1) {
         text = parts[1].trim();
       }
+      return cleanSolutionText(text);
     }
-    return text;
+    return cleanSolutionText(text);
   };
 
   // Filter questions for the palette

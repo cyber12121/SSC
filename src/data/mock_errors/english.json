@@ -16,7 +16,7 @@
           "d": "(C) and (D)"
         },
         "answer": "b",
-        "solution": "The correct answer is 'Only (A)'.\n\nKey Points\n\nSentence (A) is grammatically CORRECT.\nThe use of modal 'must' is correct. It is showing 'obligation'.\nAdverb 'seriously' is qualifying the verb 'take' and the position of the adverb is also apt.\nSentence (B) is grammatically INCORRECT.\nAdjective 'serious' should be replaced with adverb 'seriously' to qualify the verb 'take'.\nSentence (C) is also INCORRECT.\n'Take' is a transitive verb and it needs an object. The object here is 'its laws'. \nWe can't put an adverb between a verb and its direct object.\nThus, the position of 'seriously' is not correct.\nSentence (D) is INCORRECT.\nThe Sentence is in passive voice. We need V3 (taken), not V2 (took).\n'must be took' should be replaced with 'must be taken'.\n\nTherefore, the correct answer is option 2).",
+        "solution": "The correct answer is 'Only (A)'.\n\nKey Points\nSentence (A) is grammatically CORRECT.\nThe use of modal 'must' is correct. It is showing 'obligation'.\nAdverb 'seriously' is qualifying the verb 'take' and the position of the adverb is also apt.\nSentence (B) is grammatically INCORRECT.\nAdjective 'serious' should be replaced with adverb 'seriously' to qualify the verb 'take'.\nSentence (C) is also INCORRECT.\n'Take' is a transitive verb and it needs an object. The object here is 'its laws'.\nWe can't put an adverb between a verb and its direct object.\nThus, the position of 'seriously' is not correct.\nSentence (D) is INCORRECT.\nThe Sentence is in passive voice. We need V3 (taken), not V2 (took).\n'must be took' should be replaced with 'must be taken'.\n\nTherefore, the correct answer is option 2).",
         "tags": {
           "topic": "Error Spotting",
           "difficulty": "medium"
@@ -33,7 +33,7 @@
           "d": "ABDC"
         },
         "answer": "d",
-        "solution": "The correct answer is \"ABDC\"\n\nKey Points\n\nLet's look at the correct sequence of the given passage.\nStatement A is the opening sentence of the paragraph as it introduces us to the theme of the passage. The theme of the passage is the Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).  \nStatement B is the second sentence of the passage as it mentions that the legal case was about the unduly restrictive state regulation of abortion which was considered unconstitutional. \nStatement D is the third sentence of the passage as it mentions the majority opinion of the court by Justice Harry A. Blackmun.\nStatement C is the last sentence of the passage as it states the opinion of the court on the legal matter which is that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\n\nHence, the correct sequence is \"ABDC\"\n\nThe complete passage is: A) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2). B) That unduly restrictive state regulation of abortion is unconstitutional. D) In a majority opinion written by Justice Harry A. Blackmun. C) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.",
+        "solution": "The correct answer is \"ABDC\"\n\nKey Points\nLet's look at the correct sequence of the given passage.\nStatement A is the opening sentence of the paragraph as it introduces us to the theme of the passage. The theme of the passage is the Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).\nStatement B is the second sentence of the passage as it mentions that the legal case was about the unduly restrictive state regulation of abortion which was considered unconstitutional.\nStatement D is the third sentence of the passage as it mentions the majority opinion of the court by Justice Harry A. Blackmun.\nStatement C is the last sentence of the passage as it states the opinion of the court on the legal matter which is that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\n\nHence, the correct sequence is \"ABDC\"\nThe complete passage is: A) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2). B) That unduly restrictive state regulation of abortion is unconstitutional. D) In a majority opinion written by Justice Harry A. Blackmun. C) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.",
         "tags": {
           "topic": "Analogy",
           "difficulty": "medium"
@@ -272,6 +272,635 @@
         },
         "answer": "c",
         "solution": "The word infrastucture is incorrectly spelt.\n\nThe correct spelling is infrastructure, which means the basic physical systems and facilities needed for a country or organisation to function.\n\nHence, (c) is the correct answer.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_2d8fc29fa4",
+        "q_num": 17,
+        "question": "Fill in the blank with the appropriate preposition.\n\nShe walked ___ the room without speaking to anyone.",
+        "options": {
+          "a": "over",
+          "b": "through",
+          "c": "across",
+          "d": "along"
+        },
+        "answer": "b",
+        "solution": "The preposition 'through' is used to indicate movement from one end of an enclosed space to the other. A room is an enclosed area, so movement within it is correctly expressed using 'through'. 'Across' is used for open or flat spaces, while 'over' [above] and 'along' [next to] do not suit the context. Hence, (b) is the correct answer.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_e9df3e2511",
+        "q_num": 18,
+        "question": "Climate change, driven primarily by human activities such as burning fossil fuels and deforestation, is profoundly altering Earth's ecosystems. Rising global temperatures disrupt weather patterns, leading to more frequent extreme events like droughts, floods, and heatwaves. These changes threaten biodiversity, the variety of life forms that sustain ecological balance. Species unable to adapt or migrate face extinction; for instance, coral reefs are bleaching due to warmer oceans, endangering marine life dependent on them. Polar regions are particularly vulnerable, with melting ice caps forcing animals like polar bears to swim longer distances for food, increasing mortality rates.\n\nTropical forests, home to over half of the world's species, are experiencing shifts in rainfall, causing habitat fragmentation and invasive species proliferation. Agriculture is impacted as changing climates affect crop yields and pest distributions, potentially leading to food shortages. Conservation efforts include establishing protected areas, restoring habitats, and promoting sustainable land use. International agreements like the Paris Accord aim to limit warming to 1.5°C, but implementation lags due to political and economic barriers.\n\nBiodiversity loss also affects human societies, as it diminishes ecosystem services such as pollination, water purification, and carbon sequestration. Indigenous communities, often stewards of biodiverse lands, advocate for traditional knowledge in conservation strategies. Technological innovations, including satellite monitoring and genetic engineering, offer tools to track and bolster species resilience. However, without drastic reductions in greenhouse gas emissions, projections indicate up to one million species could vanish by 2050. Addressing this crisis requires global cooperation, policy reforms, and individual actions like reducing carbon footprints to preserve the intricate web of life on our planet.\n\nWhat is the primary driver of climate change mentioned in the passage?",
+        "options": {
+          "a": "Natural solar variations",
+          "b": "Ocean currents",
+          "c": "Volcanic eruptions",
+          "d": "Human activities like burning fossil fuels"
+        },
+        "answer": "d",
+        "solution": "From the following sentence in paragraph 1, \"Climate change, driven primarily by human activities such as burning fossil fuels and deforestation, is profoundly altering Earth's ecosystems,\" it can be noted that the primary drivers of climate change are human activities like burning fossil fuels and deforestation.\n\nHence, the correct answer is option (d).",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0f1e5c2c76",
+        "q_num": 19,
+        "question": "In the following question, the first and the last parts of the sentence/passage are numbered 1 and 6. The rest of the sentence/passage is split into four parts - P, Q, R, and S. These four parts are not given in their proper order. Read the sentence/passage and find the most logical order of the parts between 1 and 6.\n\n1: The process of photosynthesis is essential for life on Earth. P. This energy is used to convert carbon dioxide and water into glucose. Q. Green plants absorb sunlight through the chlorophyll present in their leaves. R. Oxygen is released as a by-product of this chemical reaction. S. The stored chemical energy supports plant growth and metabolism. 6: Photosynthesis, therefore, sustains both plant life and atmospheric balance.",
+        "options": {
+          "a": "PQSR",
+          "b": "QPRS",
+          "c": "PQRS",
+          "d": "QSPR"
+        },
+        "answer": "b",
+        "solution": "After the introduction in (1), (Q) begins the process by describing light absorption. (P) follows with energy conversion. (R) logically comes next, explaining oxygen release. (S) then highlights the benefit to plants before the concluding sentence. (6) is a concluding statement.\n\nThus, the correct sequence is QPRS.\n\nHence, option (b) is the correct answer.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_29debe12e3",
+        "q_num": 20,
+        "question": "Select the most appropriate option to improve the underlined segment in the given sentence. If there is no need to improve it, select 'No improvement'.\n\nNeither Kia nor him has been able to recognize the ludicrous message.",
+        "options": {
+          "a": "Neither Kia nor he has",
+          "b": "Neither Kia nor he have",
+          "c": "Neither Kia nor him have",
+          "d": "No improvement"
+        },
+        "answer": "a",
+        "solution": "In the case of 'neither..nor', always put the verb according to the subject that is closest. In this case, 'has' (singular verb) must agree with 'he' (singular subject). The pronoun which performs action or is the doer is called the Subjective Pronoun. In this context, the persons mentioned are performing the action and so, subjective pronouns must be used. Thus, 'Neither Kia nor he has' should replace 'Neither Kia nor him has'.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_d1ad47980f",
+        "q_num": 21,
+        "question": "Select the most appropriate meaning of the given idiom.\n\nLike a lamb to the slaughter",
+        "options": {
+          "a": "To be physically timid.",
+          "b": "To be calm and not complaining.",
+          "c": "To be awake.",
+          "d": "To be young."
+        },
+        "answer": "b",
+        "solution": "If someone does something or goes somewhere like a lamb to the slaughter, they do it without knowing that something bad is going to happen and therefore act calmly and without fighting against the situation. Hence, (b) is the correct answer.",
+        "tags": {
+          "topic": "Idioms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_4238e8044d",
+        "q_num": 22,
+        "question": "Choose the sentence that uses a homonym of the underlined word:\n\nThe fine print in the contract was hard to read.",
+        "options": {
+          "a": "The artist created a fine painting with intricate details.",
+          "b": "He paid the parking fine at the city hall.",
+          "c": "The weather was fine for the outdoor concert.",
+          "d": "She received a fine award for her contributions."
+        },
+        "answer": "b",
+        "solution": "In the original sentence, \"fine\" is an adjective meaning very small or detailed.\n\nOptions a) and c) use \"fine\" in the same sense.\n\nOption b) uses \"fine\" as a monetary penalty, which is unrelated to quality.\n\nHence, option (b) is the correct answer.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_041c8a2712",
+        "q_num": 23,
+        "question": "The following sentence has been split into four segments. Identify the segment that contains a grammatical error.\n\nThe soldiers, besides the general, has taken up arms against the king.",
+        "options": {
+          "a": "The soldiers, besides",
+          "b": "the general, has taken",
+          "c": "up arms against",
+          "d": "the king."
+        },
+        "answer": "b",
+        "solution": "The error lies in option (b).\n\nIf two subjects are separated by 'besides', the verb agrees with the main subject.\n\nFor example: The thief, besides his apprentice, has been caught by the police.\n\nSimilarly, in this context, 'soldiers' is the main subject. As the subject is plural in form, the verb that must agree with it must also be plural.\n\nHence, 'has' must be replaced by 'have'.\n\nThus, the error is in option (b) the general has taken.\n\nTherefore, the corrected form of the sentence is: The soldiers, besides the general, have taken up arms against the king.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_23c133d808",
+        "q_num": 24,
+        "question": "In the following question, one part of the sentence has an error. Identify the segment in the sentence which contains a grammatical error and choose the option accordingly.\n\nIn any organisation, the most active and critical area is the computer support help desk.",
+        "options": {
+          "a": "the most active and critical",
+          "b": "the computer support help desk",
+          "c": "area is",
+          "d": "In any organisation"
+        },
+        "answer": "a",
+        "solution": "When two adjectives qualify the same noun, both adjectives should be expressed in the same degree. 'Most' is a superlative degree. Therefore, we should use 'most' before 'critical'.\n\nThe correct sentence is: In any organisation, the most active and most critical area is the computer support help desk.\nHence, option (a) is the correct answer.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0a2221e7bc",
+        "q_num": 25,
+        "question": "Which sentence contains a word that is spelled incorrectly?",
+        "options": {
+          "a": "The proposal was approved without hesitation.",
+          "b": "She displayed remarkable enthusiam for the project.",
+          "c": "The instructions were clear and precise.",
+          "d": "He handled the situation with maturity."
+        },
+        "answer": "b",
+        "solution": "Among the given options, (b) is incorrect because the word \"enthusiam\" is misspelt. The correct spelling is \"enthusiasm\", which means eager interest or excitement. Hence, (b) is the correct answer.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_888f3b17c1",
+        "q_num": 26,
+        "question": "Read the given passage and answer the question that follows.\n\nRenewable energy sources, including solar, wind, hydro, and geothermal, are transforming the global energy landscape by offering clean alternatives to fossil fuels. Driven by the need to combat climate change and reduce air pollution, countries are investing heavily in these technologies. Solar photovoltaic panels convert sunlight into electricity, with costs plummeting due to manufacturing efficiencies and economies of scale. Wind turbines harness kinetic energy from air currents, particularly effective in coastal and open plain regions. Hydropower, though established, faces criticism for ecosystem disruption from dams.\n\nThe transition to renewables is accelerated by policy incentives like subsidies and tax credits, alongside international commitments such as the UN's Sustainable Development Goals. Energy storage solutions, like lithium-ion batteries, address intermittency issues, ensuring reliable supply during non-generating periods. In developing nations, off-grid solar systems empower rural communities with access to electricity, boosting education and economic opportunities.\n\nHowever, challenges include high initial investments, land use conflicts for large-scale projects, and dependency on rare earth minerals for components. Recycling and innovation in materials are mitigating these. The energy sector's job market is evolving, with renewables creating more employment in installation and maintenance than traditional sources. As electric vehicles gain traction, integrated smart grids optimize distribution, reducing waste. Ultimately, achieving a net-zero emissions future hinges on scaling renewables globally, fostering energy independence, and minimizing geopolitical tensions over oil reserves. This shift not only preserves the environment but also promotes equitable growth in an increasingly interconnected world, benefiting future generations and long-term global stability.\n\nWhat benefit do off-grid solar systems provide in developing nations?",
+        "options": {
+          "a": "Reduced access to electricity",
+          "b": "Empowerment of rural communities",
+          "c": "Higher initial investments",
+          "d": "Job losses in energy sector"
+        },
+        "answer": "b",
+        "solution": "As per the following sentence from paragraph 2, \"In developing nations, off-grid solar systems empower rural communities with access to electricity, boosting education and economic opportunities,\" it can be noted that off-grid solar systems provide empowerment to rural communities with access to electricity thereby encouraging education and economic opportunities.\n\nHence, the correct answer is option (b).",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_fa6a6a2e71",
+        "q_num": 27,
+        "question": "Read the passage carefully and answer the question that follows:\n\nIn an age marked by constant stimulation, emotional volatility, and instant reactions, the idea of Zen Mode as emotional discipline has gained renewed relevance. Emotional discipline does not imply suppression of feelings or emotional detachment; rather, it refers to the conscious regulation of one's emotional responses. Zen Mode encourages individuals to pause, observe, and respond thoughtfully instead of reacting impulsively. In doing so, it transforms emotions from disruptive forces into sources of clarity and balance. Zen Mode emphasises awareness over impulse. Emotions such as anger, frustration, anxiety, or excitement are natural human experiences, but problems arise when these emotions dictate behaviour without reflection. Emotional discipline begins with recognising these feelings as they arise, without judgement or resistance. By cultivating mindfulness, Zen Mode creates a mental space between stimulus and response, allowing individuals to choose calm and reason over emotional overflow. This practice strengthens self-control and fosters inner stability.\n\nWhich of the following best expresses the central idea of the passage?",
+        "options": {
+          "a": "Zen Mode teaches emotional suppression to achieve peace and prosperity in life.",
+          "b": "Emotional discipline through Zen Mode enhances personal and professional balance.",
+          "c": "Emotional reactions are unavoidable in modern life and must not be paid attention to.",
+          "d": "Professional success depends primarily on emotional neutrality and detachment."
+        },
+        "answer": "b",
+        "solution": "The passage consistently presents Zen Mode as a practice of emotional discipline that helps individuals regulate responses, improve relationships, and handle professional challenges effectively. It does not advocate emotional suppression or narrow professional outcomes. Therefore, option (b) best captures the central idea of the passage. Hence, (b) is the correct answer.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_452f52d810",
+        "q_num": 28,
+        "question": "Identify the segment in the sentence which contains a grammatical error. If there is no error in the sentence, select 'No error'.\n\nI cracked SSC CGL with nothing else but determination and the guts to never give up.",
+        "options": {
+          "a": "I cracked SSC CGL with nothing else",
+          "b": "but determination and the",
+          "c": "guts to never give up",
+          "d": "No error"
+        },
+        "answer": "d",
+        "solution": "The sentence is grammatically correct. There is no error in any part of the sentence. Therefore, the answer is: (d) No error.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1505369de7",
+        "q_num": 29,
+        "question": "Choose the word from the options that is opposite in meaning to the given word.\n\nIndigent",
+        "options": {
+          "a": "Furtive",
+          "b": "Impecunious",
+          "c": "Abstain",
+          "d": "Affluent"
+        },
+        "answer": "d",
+        "solution": "'Indigent' means 'Poor; needy.' 'Impecunious' means 'Having little or no money.' 'Furtive' means 'Attempting to avoid notice or attention, typically because of guilt or a belief that discovery would lead to trouble; secretive.' 'Abstain' means 'Restrain oneself from doing or enjoying something.' 'Affluent' means wealthy, which is the opposite of indigent. Hence, option (d) is the correct answer.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_40710d3056",
+        "q_num": 30,
+        "question": "Select the most appropriate synonym of the given word.\n\nFerocious",
+        "options": {
+          "a": "grave",
+          "b": "savage",
+          "c": "solemn",
+          "d": "benign"
+        },
+        "answer": "b",
+        "solution": "Ferocious and savage both mean fierce. Grave and solemn mean serious. Benign means harmless. Option B is the right answer.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_f54aeae0d1",
+        "q_num": 31,
+        "question": "Which spelling is correct for expressing disapproval?",
+        "options": {
+          "a": "Pajorative",
+          "b": "Pejerative",
+          "c": "Pejorative",
+          "d": "Pejoritive"
+        },
+        "answer": "c",
+        "solution": "\"Pejorative\" means expressing contempt or disapproval; having a negative or belittling connotation. Usage: The term was once neutral but has now taken on a pejorative meaning in modern usage. Hence, option (c) is the correct answer.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_ca2d288f2d",
+        "q_num": 32,
+        "question": "Select the most appropriate ANTONYM to replace the underlined word.\n\nToxic workplaces impose serious and lasting harm on affected employees.",
+        "options": {
+          "a": "Surviving",
+          "b": "Enduring",
+          "c": "Ephemeral",
+          "d": "Undying"
+        },
+        "answer": "c",
+        "solution": "Lasting means enduring or able to endure over a long period of time. Ephemeral means something that lasts for a very short time. So, the correct antonym option is 'ephemeral' (option (c)). Surviving means remaining alive. Enduring means lasting over a period of time. Undying means lasting forever.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_f0e3050331",
+        "q_num": 33,
+        "question": "Parts of a sentence are given below in jumbled order. Arrange the parts in the correct order to form a meaningful sentence.\n\nO. of being posted\n\nP. the creative team was thrilled\n\nQ. when their latest viral reel\n\nR. gained millions of views\n\nS. within just a few hours",
+        "options": {
+          "a": "PQRSO",
+          "b": "RSOQP",
+          "c": "SOPQR",
+          "d": "QRSOP"
+        },
+        "answer": "a",
+        "solution": "After reading all the parts thoroughly, we can say that pairing P with Q logically starts the sentence with \"the creative team was thrilled when their latest viral reel,\" introducing the subject and their excitement. Next, pairing Q with R continues the thought by stating that the reel \"gained millions of views,\" which elaborates on the reason for their thrill. Following this, R pairs well with S, as it specifies \"within just a few hours,\" providing a time frame that emphasizes the speed of the reel's success. Finally, O concludes the sentence with \"of being posted,\" giving context to the timeframe of the reel's viral status. Therefore, the correct order is PQRSO, making option A the correct answer.\n\nThe final sentence: The creative team was thrilled when their latest viral reel gained millions of views within just a few hours of being posted.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_95b6796e30",
+        "q_num": 34,
+        "question": "She had a child's inchoate awareness of language.",
+        "options": {
+          "a": "mercurial",
+          "b": "decree",
+          "c": "rudimentary",
+          "d": "deprave"
+        },
+        "answer": "c",
+        "solution": "The correct answer is \"confused\". Inchoate means just begun and not fully formed or developed. Mercurial means changing rapidly and unpredictably in mood or behaviour. Decree means an official order issued by a government or other authority. Deprave means to corrupt morally or by intemperance or sensuality. Therefore, the closest in meaning is rudimentary / confused.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_c1b0f78bae",
+        "q_num": 35,
+        "question": "Select the option which means the same as the group of words given: A set of facts or a fixed limit that establishes or limits how something can or must happen or be done.",
+        "options": {
+          "a": "Parameter",
+          "b": "Scope",
+          "c": "Minimum",
+          "d": "Policy"
+        },
+        "answer": "a",
+        "solution": "Parameter refers to the factors or limits which affect the way that something can be done or made. Scope is the extent of the area or subject matter. Minimum is the least amount. Policy is a course of action. Hence, 'Parameter' is the correct word.",
+        "tags": {
+          "topic": "Idioms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_a21d003cb2",
+        "q_num": 36,
+        "question": "Based on the passage, what conclusion can be drawn about modelling and predicting social change?",
+        "options": {
+          "a": "It is straightforward to account for all variables, including random personal choices and weather, in historical models.",
+          "b": "Only military and political decisions matter in shaping history.",
+          "c": "The outcomes of wars are never influenced by chance.",
+          "d": "Models of social change must contend with unpredictable and unquantifiable variables that can alter outcomes dramatically."
+        },
+        "answer": "d",
+        "solution": "The author points out that random factors played decisive roles in major historical outcomes, suggesting that models of social change face immense challenges due to unpredictable variables. Therefore, models of social change must contend with unpredictable and unquantifiable variables that can alter outcomes dramatically.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_7d4326ab2a",
+        "q_num": 37,
+        "question": "Select the incorrectly spelt word from the given sentence.\nSome people regard a fear of new things as an unmistakable sign of a provincial atitude.",
+        "options": {
+          "a": "provincial",
+          "b": "atitude",
+          "c": "Some",
+          "d": "unmistakable"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option B.\n\nThe word \"atitude\" is incorrectly spelt. It should be \"attitude\". The word \"attitude\" means a settled way of thinking or feeling about something.\nExample: She has a positive attitude towards life.\n\"Attitude\" refers to a way of thinking or feeling about someone or something, typically one that is reflected in a person's behavior.\n\nHere are the other options explained along with their example sentences:\nProvincial: Relating to a province or the regions outside the capital city of a country, especially when regarded as unsophisticated or narrow-minded.\nSome: A certain unspecified number or amount.\nUnmistakable: Not able to be mistaken for anything else; very distinctive.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_2f4b650d0e",
+        "q_num": 38,
+        "question": "Choose the correct sequence of tenses.\nAfter the movie ________, we ________ to a café.",
+        "options": {
+          "a": "ended, went",
+          "b": "ends, go",
+          "c": "ended, goes",
+          "d": "end, went"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A i.e. \"ended, went\".\n\nProgression of Past Events: This sentence describes actions in sequence, each completed in the past.\n- \"Ended\" appropriately captures the movie's conclusion.\n- \"Went\" effectively indicates the subsequent activity of moving to a café.\n\nTherefore, the correct answer is \"After the movie ended, we went to a café.\"",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_bb8850c219",
+        "q_num": 39,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the right order to form a meaningful and coherent paragraph.\nA. By contrast, in musical theatre an actor's dramatic performance is primary, and the music plays a lesser role.\nB. Opera refers to a dramatic art form, originating in Europe, in which the emotional content is conveyed to the audience as much through music, both vocal and instrumental, as it is through the lyrics.\nC. The drama in opera is presented using the primary elements of theatre such as scenery, costumes, and acting.\nD. However, the words of the opera, or libretto, are sung rather than spoken.",
+        "options": {
+          "a": "ADCB",
+          "b": "CADB",
+          "c": "CABD",
+          "d": "BADC"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 'BADC'. Sentence B is the independent sentence and introduces the concept of opera. Sentence A points out a contrasting picture by stating that 'musical theatre' is more about the actor's performance. Sentence D points out how it is different from a musical theatre performance. Sentence C is the concluding statement of the passage as it points out how drama is presented in opera. Thus, the correct order after rearrangement is BADC.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_fdb9537d9d",
+        "q_num": 40,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. Metal detectors are useful for finding metal hidden within objects or metal objects buried underground.\nB. Metal detector is an electronic instrument that detects the presence of metals nearby.\nC. If the sensor comes near a piece of metal, this is indicated by a changing tone in earphones or a needle moving on an indicator.\nD. They often consist of a handheld unit with a sensor probe that can be swept over the ground or other objects.",
+        "options": {
+          "a": "BADC",
+          "b": "ABCD",
+          "c": "ADBC",
+          "d": "BCDA"
+        },
+        "answer": "a",
+        "solution": "Sentence B states that a metal detector is an electronic instrument used to detect the presence of metals nearby. Sentence A follows by explaining the usefulness of metal detectors. Sentence D describes the common features such as a handheld unit with a sensor probe. Finally, sentence C concludes by explaining how metal detectors work. Therefore, the correct order is BADC.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_2ca0b21fd3",
+        "q_num": 41,
+        "question": "Choose the correct alternative to replace the bold part. In case no correction is needed your answer is 'No Improvement'.\nButter is made of milk.",
+        "options": {
+          "a": "From",
+          "b": "With",
+          "c": "Up of",
+          "d": "No improvement"
+        },
+        "answer": "a",
+        "solution": "\"Made of\" is used when the shape of the material is not changed (e.g., A notebook is made of paper). \"Make from\" is used when the shape of the material has undergone a total change. Butter is made from milk.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_68cc62e5d8",
+        "q_num": 42,
+        "question": "Choose the correct one-word substitute for: 'The quality of having a ready insight into things; shrewdness'.",
+        "options": {
+          "a": "Mendacity",
+          "b": "Audacity",
+          "c": "Perspicacity",
+          "d": "Tenacity"
+        },
+        "answer": "c",
+        "solution": "The word \"Perspicacity\" refers to the quality of having a ready insight into things; shrewdness. Mendacity means untruthfulness, audacity means boldness, and tenacity means determination.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_536dc3dc26",
+        "q_num": 43,
+        "question": "What will come in blank (1) of the given passage?",
+        "options": {
+          "a": "Sinecure",
+          "b": "Cynosure",
+          "c": "Quagmire",
+          "d": "Paradigm"
+        },
+        "answer": "c",
+        "solution": "\"Quagmire\" refers to an awkward, complex, or hazardous situation from which it is difficult to extricate oneself, which perfectly fits the geopolitical scramble described in the passage.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_055db5f4f1",
+        "q_num": 44,
+        "question": "What will come in blank (2)?",
+        "options": {
+          "a": "should formulate",
+          "b": "formulate",
+          "c": "is formulating",
+          "d": "to formulate"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'formulate'. The sentence contains the anticipatory structure \"It is essential that...\", which is a hallmark trigger for the mandative subjunctive mood. When adjectives of necessity or importance are followed by a \"that\" clause, the verb in that clause must be in its base form (the infinitive without 'to').",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_e2627d7aec",
+        "q_num": 45,
+        "question": "What will come in blank (3)?",
+        "options": {
+          "a": "are actually",
+          "b": "is actually",
+          "c": "being actually",
+          "d": "have been"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'are actually'. In formal English, when a sentence or a clause starts with \"not only\", grammatical inversion must occur, placing the auxiliary verb before the subject \"the territorial disputes\" (plural), thus requiring the plural auxiliary verb \"are\".",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_dbbb649d4c",
+        "q_num": 46,
+        "question": "What will come in blank (4)?",
+        "options": {
+          "a": "Panacea",
+          "b": "Fillip",
+          "c": "Shibboleth",
+          "d": "Cataclysm"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 'Cataclysm'. 'Cataclysm' refers to a large-scale and violent event or disaster, which perfectly describes the massive negative consequences of unchecked Arctic exploitation leading to irreversible environmental damage.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_ece34333d9",
+        "q_num": 47,
+        "question": "Select the most appropriate option to fill in the blanks.\nThere’s more than the 101 - seater dining table at the Falaknuma palace that is awe ______. The library done in rosewood and mahogany is a place that will force anyone to ______, if only to admire the fine original polish, the furniture and the walnut carved high roof. The last is supposedly an ______ of the one at Windsor Castle.",
+        "options": {
+          "a": "inspiring; pause; imitation",
+          "b": "breathtaking; stalk; admiration",
+          "c": "admiring; bustle; alliteration",
+          "d": "conveying; appreciate; abolition"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'inspiring; pause; imitation'. Option 1 provides the most suitable words: 'inspiring' to describe the awe, 'pause' to reflect stopping to admire the library, and 'imitation' to indicate the roof is modeled after the one at Windsor Castle.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_71f382ba46",
+        "q_num": 48,
+        "question": "Select the option that will improve the underlined part of the given sentence. In case no improvement is needed, select 'No improvement required'. The books has become enormously popular with students who do not like to read.",
+        "options": {
+          "a": "have become enormous",
+          "b": "No improvement required",
+          "c": "have became enormously",
+          "d": "have become enormously"
+        },
+        "answer": "d",
+        "solution": "Here the correct answer is have become enormously. The subject 'books' is plural, therefore, a plural helping verb 'have' will be used. Also, 'have' is followed by the V3 form of the verb 'become'. The structure of present perfect tense is: Subject + has/have + V3 form of the verb + Object. Also, 'enormously' will be used because it is an adverb which will modify the adjective 'popular'.",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b632f43767",
+        "q_num": 49,
+        "question": "A sentence has been given in Active/Passive Voice. Out of the four alternatives suggested below, select the one which best expresses the same sentence in Passive/Active Voice. I remember them taking me to the Zoo.",
+        "options": {
+          "a": "I remember having being taken to the Zoo.",
+          "b": "I remember to be taken to the Zoo.",
+          "c": "I remember being taken to the Zoo.",
+          "d": "I remember I was taken to the Zoo."
+        },
+        "answer": "c",
+        "solution": "The original sentence is: \"I remember them taking me to the Zoo,\" which is in the active voice. To convert this sentence into passive voice, the gerund \"taking\" becomes \"being taken\". Therefore, \"I remember being taken to the Zoo\" is the correct conversion maintaining the original meaning and tense.",
+        "tags": {
+          "topic": "Idioms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b713514659",
+        "q_num": 50,
+        "question": "Select the most appropriate ANTONYM of the given word. Terse",
+        "options": {
+          "a": "Authoritative",
+          "b": "Polite",
+          "c": "Timid",
+          "d": "Excited"
+        },
+        "answer": "b",
+        "solution": "\"Terse\" means using few words and often seeming rude or unfriendly. \"Polite\" is the opposite of \"rude or unfriendly\", meaning showing good manners and respect for others. Therefore, the antonym of Terse is Polite.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_96b6da64be",
+        "q_num": 51,
+        "question": "John ______ (lie) down on the bed for a short time after lunch. (Fill in the blank using the appropriate form of the verb in the bracket)",
+        "options": {
+          "a": "lied",
+          "b": "lay",
+          "c": "laid",
+          "d": "none of these"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'lay'. The verb \"lie\" is an intransitive verb, and its past tense is \"lay.\" In this context, \"John lay down\" is the correct form of the verb. \"Lay\" is the past tense of \"lie,\" and it refers to the action of reclining or being in a horizontal position. \"Lied\" is the past tense of \"lie\" when referring to not telling the truth, but this is not the intended meaning in the sentence. \"Laid\" is the past tense of \"lay,\" which means to put something down, but here, \"lie\" is the correct verb to use for reclining. Complete Sentence: \"John lay down on the bed for a short time after lunch.\"",
+        "tags": {
+          "topic": "Error Spotting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_6c0ac2e359",
+        "q_num": 52,
+        "question": "What will come in blank (1)?",
+        "options": {
+          "a": "Fillip",
+          "b": "Quagmire",
+          "c": "Cynosure",
+          "d": "Paradigm"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'Quagmire'.\n\nKey Points\nThe passage describes India’s persistent trade deficit as a \"cycle of dependency that is difficult to break,\" emphasizing the complexity and the struggle of policymakers to manage it.\n\"Quagmire\" refers to an awkward, complex, or hazardous situation from which it is difficult to extract oneself. This perfectly fits the \"persistent\" and \"structural\" nature of the deficit described.\n\"Fillip\" refers to something which acts as a stimulus or boost. A trade deficit is a drain on the economy, not a boost, making this logically incorrect.\n\"Cynosure\" is a person or thing that is the center of attention or admiration. While the deficit is a center of focus, it is not admired, and \"quagmire\" better captures the negative, trapped nature of the issue.\n\"Paradigm\" is a typical example or pattern. While the deficit is a pattern, \"quagmire\" is a much stronger descriptor for a \"difficult to break\" structural problem.\nTherefore, the correct answer is 'Option 2'.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_da2e7ab3de",
+        "q_num": 53,
+        "question": "Improve the underlined part of the sentence. Choose 'No improvement' as an answer if the sentence is grammatically correct.\nThey plan to marrying in the spring.",
+        "options": {
+          "a": "plan to marry",
+          "b": "No improvement",
+          "c": "plans to marry",
+          "d": "plan to married"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option 1)\n\nKey Points\nThe phrase \"plan to marrying\" is incorrect in English grammar.\nThe correct form is \"plan to marry,\" which uses the base form of the verb after \"to.\"\nIn English grammar, after verbs that indicate planning or intention (such as \"plan,\" \"intend,\" \"want\"), use the base form of the verb (also known as the infinitive form) following \"to.\"\nExample: \"I plan to travel next year.\"\n\nThe correct sentence is \"They plan to marry in the spring.\"\n\nAdditional Information\nOther options (\"plans to marry,\" \"plan to married\") also have grammatical errors.",
         "tags": {
           "topic": "Error Spotting",
           "difficulty": "medium"

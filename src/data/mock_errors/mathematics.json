@@ -33,7 +33,7 @@
           "d": "Rs. 132"
         },
         "answer": "b",
-        "solution": "Shortcut Trick\n\nLoss = CP of 75 articles − SP of 75 articles = SP of 5 articles\n\n⇒ CP of 75 articles = SP of (75 + 5) articles = SP of 80 articles\n\n⇒ SP of 80 articles = Total CP = ₹10800\n\n⇒ SP of 1 article = 10800 ÷ 80 = 135\n\n∴ The correct answer is ₹135.\n\nAlternate Method\n\nGiven:\n\nTotal articles purchased = 75\n\nTotal Cost Price (CP) = ₹10800\n\nLoss incurred = Selling Price (SP) of 5 articles\n\nFormula Used:\n\nLoss = Total CP − Total SP\n\nCalculations:\n\n⇒ Total CP of 75 articles − Total SP of 75 articles = Loss\n\n⇒ ₹10800 − SP of 75 articles = SP of 5 articles\n\n⇒ ₹10800 = SP of 75 articles + SP of 5 articles\n\n⇒ ₹10800 = SP of 80 articles\n\n⇒ SP of 1 article = 10800 ÷ 80\n\n⇒ SP of 1 article = 135\n\n∴ The correct answer is ₹135.\n\nAdditional Information\n\nProfit and Loss Equation\n\nProfit occurs when SP > CP (Profit = SP − CP), and Loss occurs when CP > SP (Loss = CP − SP).\n\nSimilar Concept (Profit in terms of SP)\n\nIf there is a profit equal to the SP of y articles on selling x articles, then CP of x articles = SP of (x − y) articles.\n\nProfit and Loss Percentage\n\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Both are computed on the Cost Price by default.",
+        "solution": "Shortcut Trick\nLoss = CP of 75 articles − SP of 75 articles = SP of 5 articles\n⇒ CP of 75 articles = SP of (75 + 5) articles = SP of 80 articles\n⇒ SP of 80 articles = Total CP = ₹10800\n⇒ SP of 1 article = 10800 ÷ 80 = 135\n∴ The correct answer is ₹135.\n\nAlternate Method\nGiven:\nTotal articles purchased = 75\nTotal Cost Price (CP) = ₹10800\nLoss incurred = Selling Price (SP) of 5 articles\n\nFormula Used:\nLoss = Total CP − Total SP\n\nCalculations:\n⇒ Total CP of 75 articles − Total SP of 75 articles = Loss\n⇒ ₹10800 − SP of 75 articles = SP of 5 articles\n⇒ ₹10800 = SP of 75 articles + SP of 5 articles\n⇒ ₹10800 = SP of 80 articles\n⇒ SP of 1 article = 10800 ÷ 80\n⇒ SP of 1 article = 135\n∴ The correct answer is ₹135.\n\nAdditional Information\nProfit and Loss Equation\nProfit occurs when SP > CP (Profit = SP − CP), and Loss occurs when CP > SP (Loss = CP − SP).\n\nSimilar Concept (Profit in terms of SP)\n\nIf there is a profit equal to the SP of y articles on selling x articles, then CP of x articles = SP of (x − y) articles.\n\nProfit and Loss Percentage\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Both are computed on the Cost Price by default.",
         "tags": {
           "topic": "Profit & Loss",
           "difficulty": "medium"
@@ -50,7 +50,7 @@
           "d": "Rs. 540"
         },
         "answer": "c",
-        "solution": "Shortcut Trick\n\nTotal time from 10th Feb to 24th April = 18 + 31 + 24 = 73 days = 1/5 year.\n\nEffective interest rate for 1/5 year = 8.5% ÷ 5 = 1.7%.\n\nSimple Interest = 1.7% of 32000 = (1.7 × 32000) ÷ 100 = Rs. 544.\n\n∴ The correct answer is Rs. 544.\n\nAlternate Method\n\nGiven:\n\nPrincipal (P) = Rs. 32000\n\nRate (R) = 8.5% p.a.\n\nTime (T) = 10th Feb., 2019 to 24th April, 2019\n\nFormula Used:\n\nSI = (P × R × T) ÷ 100\n\nCalculations:\n\n⇒ Number of days in February (2019 is a non-leap year) = 28 − 10 = 18 days\n\n⇒ Number of days in March = 31 days\n\n⇒ Number of days in April = 24 days\n\n⇒ Total Time (T) = 18 + 31 + 24 = 73 days\n\n⇒ Time in years = 73 ÷ 365 = 1/5 years\n\n⇒ SI = (32000 × 8.5 × 1) ÷ (100 × 5)\n\n⇒ SI = 320 × 1.7\n\n⇒ SI = Rs. 544\n\n∴ The correct answer is Rs. 544.\n\nAdditional Information\n\nCounting of Days in SI Calculation\n\nGenerally, the day the money is deposited is not counted, but the day the money is withdrawn is counted. Total days are then converted to years by dividing by 365.\n\nLeap Year Consideration\n\nIf the given period falls within a leap year and includes the month of February, 29 days are considered for February. For the year 2019, it is a non-leap year so February has 28 days.\n\nStandard Day Fractions\n\nExam questions frequently use exact multiples of 73 days for simple calculations because 73 days = 1/5 year, 146 days = 2/5 year, 219 days = 3/5 year, and 292 days = 4/5 year.",
+        "solution": "Shortcut Trick\nTotal time from 10th Feb to 24th April = 18 + 31 + 24 = 73 days = 1/5 year.\nEffective interest rate for 1/5 year = 8.5% ÷ 5 = 1.7%.\nSimple Interest = 1.7% of 32000 = (1.7 × 32000) ÷ 100 = Rs. 544.\n∴ The correct answer is Rs. 544.\n\nAlternate Method\nGiven:\nPrincipal (P) = Rs. 32000\nRate (R) = 8.5% p.a.\nTime (T) = 10th Feb., 2019 to 24th April, 2019\n\nFormula Used:\nSI = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Number of days in February (2019 is a non-leap year) = 28 − 10 = 18 days\n⇒ Number of days in March = 31 days\n⇒ Number of days in April = 24 days\n⇒ Total Time (T) = 18 + 31 + 24 = 73 days\n⇒ Time in years = 73 ÷ 365 = 1/5 years\n⇒ SI = (32000 × 8.5 × 1) ÷ (100 × 5)\n⇒ SI = 320 × 1.7\n⇒ SI = Rs. 544\n∴ The correct answer is Rs. 544.\n\nAdditional Information\nCounting of Days in SI Calculation\n\nGenerally, the day the money is deposited is not counted, but the day the money is withdrawn is counted. Total days are then converted to years by dividing by 365.\n\nLeap Year Consideration\n\nIf the given period falls within a leap year and includes the month of February, 29 days are considered for February. For the year 2019, it is a non-leap year so February has 28 days.\n\nStandard Day Fractions\n\nExam questions frequently use exact multiples of 73 days for simple calculations because 73 days = 1/5 year, 146 days = 2/5 year, 219 days = 3/5 year, and 292 days = 4/5 year.",
         "tags": {
           "topic": "SI & CI",
           "difficulty": "medium"
@@ -67,7 +67,7 @@
           "d": "Rs 70"
         },
         "answer": "d",
-        "solution": "Shortcut Trick\n\nRatio of number of coins (Rs 1 : 50p : 25p) = 1 : 1/2 : 1/3 = 6 : 3 : 2\n\nRatio of their values = (6 × 1) : (3 × 1/2) : (2 × 1/4) = 6 : 1.5 : 0.5 = 12 : 3 : 1\n\nTotal value = 12 + 3 + 1 = 16 units\n\n16 units = Rs 1120 ⇒ 1 unit = 1120 ÷ 16 = Rs 70\n\nValue of 25 paisa coins = 1 unit = Rs 70\n\n∴ The correct answer is Rs 70.\n\nAlternate Method\n\nGiven:\n\nTypes of coins: Rs 1, 50 paisa (Rs 1/2), and 25 paisa (Rs 1/4).\n\nRatio of the number of coins = 1 : 1/2 : 1/3\n\nTotal amount in the bag = Rs 1120\n\nFormula Used:\n\nTotal Value = Number of coins × Denomination Value\n\nCalculations:\n\n⇒ Multiply the given coin ratio by the LCM of denominators (6) to convert to integers.\n\n⇒ Number of coins ratio = (1 × 6) : (1/2 × 6) : (1/3 × 6) = 6 : 3 : 2\n\n⇒ Let the number of Rs 1, 50 paisa, and 25 paisa coins be 6x, 3x, and 2x respectively.\n\n⇒ Value of Rs 1 coins = 6x × 1 = 6x\n\n⇒ Value of 50 paisa coins = 3x × 0.5 = 1.5x\n\n⇒ Value of 25 paisa coins = 2x × 0.25 = 0.5x\n\n⇒ Total value = 6x + 1.5x + 0.5x = 8x\n\n⇒ According to the given data, total amount is Rs 1120.\n\n⇒ 8x = 1120\n\n⇒ x = 1120 ÷ 8 = 140\n\n⇒ Total value of 25 paisa coins = 0.5x = 0.5 × 140 = 70\n\n∴ The correct answer is Rs 70.\n\nAdditional Information\n\nRatio of Coins vs Value\n\nWhen the ratio of the number of coins is given, multiply it by the respective denomination to find the ratio of their values. Conversely, divide the value ratio by the denomination to find the number of coins ratio.\n\nCommon Denominations\n\nIt is a standard rule to convert all coins into rupees: 50 paisa = Rs 1/2, 25 paisa = Rs 1/4, 20 paisa = Rs 1/5, and 10 paisa = Rs 1/10.\n\nConsistency of Units\n\nAlways ensure that both individual denominations and the total final amount are measured in the same unit (either entirely in Rupees or entirely in paise) to avoid calculation errors.",
+        "solution": "Shortcut Trick\nRatio of number of coins (Rs 1 : 50p : 25p) = 1 : 1/2 : 1/3 = 6 : 3 : 2\nRatio of their values = (6 × 1) : (3 × 1/2) : (2 × 1/4) = 6 : 1.5 : 0.5 = 12 : 3 : 1\nTotal value = 12 + 3 + 1 = 16 units\n16 units = Rs 1120 ⇒ 1 unit = 1120 ÷ 16 = Rs 70\nValue of 25 paisa coins = 1 unit = Rs 70\n∴ The correct answer is Rs 70.\n\nAlternate Method\nGiven:\nTypes of coins: Rs 1, 50 paisa (Rs 1/2), and 25 paisa (Rs 1/4).\nRatio of the number of coins = 1 : 1/2 : 1/3\nTotal amount in the bag = Rs 1120\n\nFormula Used:\nTotal Value = Number of coins × Denomination Value\n\nCalculations:\n⇒ Multiply the given coin ratio by the LCM of denominators (6) to convert to integers.\n⇒ Number of coins ratio = (1 × 6) : (1/2 × 6) : (1/3 × 6) = 6 : 3 : 2\n⇒ Let the number of Rs 1, 50 paisa, and 25 paisa coins be 6x, 3x, and 2x respectively.\n⇒ Value of Rs 1 coins = 6x × 1 = 6x\n⇒ Value of 50 paisa coins = 3x × 0.5 = 1.5x\n⇒ Value of 25 paisa coins = 2x × 0.25 = 0.5x\n⇒ Total value = 6x + 1.5x + 0.5x = 8x\n⇒ According to the given data, total amount is Rs 1120.\n⇒ 8x = 1120\n⇒ x = 1120 ÷ 8 = 140\n⇒ Total value of 25 paisa coins = 0.5x = 0.5 × 140 = 70\n∴ The correct answer is Rs 70.\n\nAdditional Information\nRatio of Coins vs Value\n\nWhen the ratio of the number of coins is given, multiply it by the respective denomination to find the ratio of their values. Conversely, divide the value ratio by the denomination to find the number of coins ratio.\n\nCommon Denominations\n\nIt is a standard rule to convert all coins into rupees: 50 paisa = Rs 1/2, 25 paisa = Rs 1/4, 20 paisa = Rs 1/5, and 10 paisa = Rs 1/10.\n\nConsistency of Units\n\nAlways ensure that both individual denominations and the total final amount are measured in the same unit (either entirely in Rupees or entirely in paise) to avoid calculation errors.",
         "tags": {
           "topic": "Number System",
           "difficulty": "medium"
@@ -84,7 +84,7 @@
           "d": "86.5"
         },
         "answer": "c",
-        "solution": "Shortcut Trick\n\nLet the two numbers be 17 units and 45 units.\n\n1/3 of the smaller number = 17/3 units, and 1/5 of the bigger number = 45/5 = 9 units.\n\nDifference = 9 − 17/3 = (27 − 17) / 3 = 10/3 units.\n\nGiven, 10/3 units = 15 ⇒ 1 unit = 15 × 3 ÷ 10 = 4.5\n\nSmaller number = 17 units = 17 × 4.5 = 76.5\n\n∴ The correct answer is 76.5.",
+        "solution": "Shortcut Trick\nLet the two numbers be 17 units and 45 units.\n1/3 of the smaller number = 17/3 units, and 1/5 of the bigger number = 45/5 = 9 units.\nDifference = 9 − 17/3 = (27 − 17) / 3 = 10/3 units.\nGiven, 10/3 units = 15 ⇒ 1 unit = 15 × 3 ÷ 10 = 4.5\nSmaller number = 17 units = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -101,7 +101,7 @@
           "d": "39 years"
         },
         "answer": "b",
-        "solution": "Shortcut Trick\n\nAge of excluded person = Initial Average + (Remaining members × Drop in average)\n\n⇒ Age of teacher = 18 + (40 × 0.5)\n\n⇒ Age of teacher = 18 + 20\n\n⇒ Age of teacher = 38 years\n\n∴ The correct answer is 38 years.",
+        "solution": "Shortcut Trick\nAge of excluded person = Initial Average + (Remaining members × Drop in average)\n⇒ Age of teacher = 18 + (40 × 0.5)\n⇒ Age of teacher = 18 + 20\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.",
         "tags": {
           "topic": "Averages",
           "difficulty": "medium"
@@ -118,7 +118,7 @@
           "d": "7 ∶ 8"
         },
         "answer": "a",
-        "solution": "Shortcut Trick\n\nBy using the direct alligation cross-multiplication rule:\n\nQuantity Ratio = (Mean Price − Cheaper Price) : (Dearer Price − Mean Price)\n\n⇒ Ratio = (64 − 60) : (67.5 − 64)\n\n⇒ Ratio = 4 : 3.5\n\n⇒ Ratio = 8 : 7\n\n∴ The correct answer is 8 : 7.",
+        "solution": "Shortcut Trick\nBy using the direct alligation cross-multiplication rule:\n\nQuantity Ratio = (Mean Price − Cheaper Price) : (Dearer Price − Mean Price)\n⇒ Ratio = (64 − 60) : (67.5 − 64)\n⇒ Ratio = 4 : 3.5\n⇒ Ratio = 8 : 7\n∴ The correct answer is 8 : 7.",
         "tags": {
           "topic": "Alligation & Mixture",
           "difficulty": "medium"
@@ -135,7 +135,7 @@
           "d": "456"
         },
         "answer": "c",
-        "solution": "We know, (a + b)^3 = a^3 + b^3 + 3ab(a + b)\n\nHere, a = 2y and b = 1/(4y).\n\nCubing both sides of 2y + 1/(4y) = 8:\n(2y + 1/(4y))^3 = 8^3\n(8y^3 + 1/(64y^3)) + 3(2y)(1/(4y))(2y + 1/(4y)) = 512\n8y^3 + 1/(64y^3) + (3/2)(8) = 512\n8y^3 + 1/(64y^3) + 12 = 512\n8y^3 + 1/(64y^3) = 512 - 12 = 500.",
+        "solution": "We know, (a + b)^3 = a^3 + b^3 + 3ab(a + b)\nHere, a = 2y and b = 1/(4y).\nCubing both sides of 2y + 1/(4y) = 8:\n(2y + 1/(4y))^3 = 8^3\n(8y^3 + 1/(64y^3)) + 3(2y)(1/(4y))(2y + 1/(4y)) = 512\n8y^3 + 1/(64y^3) + (3/2)(8) = 512\n8y^3 + 1/(64y^3) + 12 = 512\n8y^3 + 1/(64y^3) = 512 - 12 = 500.",
         "tags": {
           "topic": "Algebra",
           "difficulty": "medium"
@@ -152,7 +152,7 @@
           "d": "40"
         },
         "answer": "c",
-        "solution": "Let the two numbers be 'x' and (150 - x) respectively.\n\nSo, (55/100)*x : (45/100)*(150 - x) = 11:6\n\n=> 11x / [9(150 - x)] = 11/6\n\n=> x / [3(150 - x)] = 1/2\n\n=> 450 - 3x = 2x\n\n=> x = 90\n\nSecond number = 150 - 90 = 60\n\nRequired difference = 90 - 60 = 30",
+        "solution": "Let the two numbers be 'x' and (150 - x) respectively.\nSo, (55/100)*x : (45/100)*(150 - x) = 11:6\n=> 11x / [9(150 - x)] = 11/6\n=> x / [3(150 - x)] = 1/2\n=> 450 - 3x = 2x\n=> x = 90\nSecond number = 150 - 90 = 60\nRequired difference = 90 - 60 = 30",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -169,7 +169,7 @@
           "d": "39.42%, 60.58%"
         },
         "answer": "a",
-        "solution": "Total parts = 7 + 9 = 16\n\nPercentage of amount given to Ankush = (7/16) * 100 = 43.75%\n\nPercentage of amount given to Ankit = (9/16) * 100 = 56.25%",
+        "solution": "Total parts = 7 + 9 = 16\nPercentage of amount given to Ankush = (7/16) * 100 = 43.75%\nPercentage of amount given to Ankit = (9/16) * 100 = 56.25%",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -186,7 +186,7 @@
           "d": "18.5 cm"
         },
         "answer": "b",
-        "solution": "If D, E and F are midpoints of AB, BC and CA,\nthen DE + EF + DF = 1/2(AB + BC + CA)\n= 1/2(17 + 23 + 18) = 29 cm\n\nRequired value = 1/2 * (DE + EF + DF) = 14.5 cm",
+        "solution": "If D, E and F are midpoints of AB, BC and CA,\nthen DE + EF + DF = 1/2(AB + BC + CA)\n= 1/2(17 + 23 + 18) = 29 cm\nRequired value = 1/2 * (DE + EF + DF) = 14.5 cm",
         "tags": {
           "topic": "Geometry",
           "difficulty": "medium"
@@ -206,6 +206,754 @@
         "solution": "x : y = 5 : 4\nTotal parts = 5 + 4 = 9\nx's 5 parts = \\u20b957,000.\nRemaining profit = 57000 * (9/5)\n95% of total profit = \\u20b91,02,600\nTherefore,\n100% = (102600 / 95) * 100\n= \\u20b91,08,000\nHence, (a) is correct.",
         "tags": {
           "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d1a6260792",
+        "q_num": 13,
+        "question": "In a class, 60% of students pass Physics, 70% pass Chemistry, and 15% pass neither. What percentage of students pass both subjects?",
+        "options": {
+          "a": "35%",
+          "b": "40%",
+          "c": "45%",
+          "d": "50%"
+        },
+        "answer": "c",
+        "solution": "Let, the total number of students = 100\nStudents passing neither = 15%\nPercentage of students who pass at least one subject = 100 - 15 = 85%\nPercentage passing Physics or Chemistry = Percentage passing Physics + Percentage passing Chemistry - Percentage passing both\n=> 85 = 60 + 70 - Percentage passing both\n=> Percentage passing both = 45%",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e0b6666a6a",
+        "q_num": 14,
+        "question": "A 198 L vessel has milk to water ratio equal to 5 : 4. First, 36 L of the mixture is withdrawn and replaced by water. Next, 44 L of the mixture is withdrawn and replaced by water. Find the final milk to water ratio.",
+        "options": {
+          "a": "35:64",
+          "b": "5:9",
+          "c": "25:44",
+          "d": "9:16"
+        },
+        "answer": "a",
+        "solution": "Initial milk = 198 × (5/9) = 110; water = 88.\nAfter 36 L out: milk removed = 36 × (110/198) = 20; water removed = 16.\nAfter refill: milk = 110 − 20 = 90; water = 88 − 16 + 36 = 108; total = 198.\nNow withdraw 44 L: milk removed = 44 × (90/198) = 20; water removed = 24.\nAfter refill: milk = 90 − 20 = 70; water = 108 − 24 + 44 = 128.\nFinal ratio = 70:128 = 35:64.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_55a314da27",
+        "q_num": 15,
+        "question": "The average salary of 8 employees in a department is Rs. 50,000. Two employees leave, earning Rs. 45,000 and Rs. 55,000 respectively. What is the new average salary of the remaining employees?",
+        "options": {
+          "a": "Rs. 48000",
+          "b": "Rs. 49000",
+          "c": "Rs. 50000",
+          "d": "Rs. 51000"
+        },
+        "answer": "c",
+        "solution": "Total salary of 8 employees = 8 × 50000 = Rs. 400000\nNew total salary = 400000 − (45000 + 55000) = 400000 - 100000 = Rs. 300000\nRemaining number of employees = 6\nNew average salary = 300000/6 = Rs. 50000",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_77686bb0a5",
+        "q_num": 16,
+        "question": "The ratio of the number of boys to girls in school is 17: 20. If the number of boys and girls increased by 25% and 40%, respectively, then what will be the new ratio?",
+        "options": {
+          "a": "91/113",
+          "b": "88/113",
+          "c": "85/112",
+          "d": "87/112"
+        },
+        "answer": "c",
+        "solution": "The new number of boys = 17 × 125/100\nThe new number of girls = 20 × 140/100\nHence, the required ratio = (17 × 125)/(20 × 140)\n= 85/112",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_153d568947",
+        "q_num": 17,
+        "question": "20 men can build a wall in 30 days. After working for 10 days, 15 more men join them. How many more days will they take to finish the wall?",
+        "options": {
+          "a": "11(3/7) days",
+          "b": "12(4/7) days",
+          "c": "10(2/7) days",
+          "d": "13(5/7) days"
+        },
+        "answer": "a",
+        "solution": "Total work = 20 men × 30 days = 600 man-days\nWork done in first 10 days by 20 men = 20 × 10 = 200 man-days\nRemaining work = 600 - 200 = 400 man-days\nNew total men after 10 days = 20 + 15 = 35 men\nDays required to finish remaining work = Remaining work / Number of men = 400 / 35 = 11(3/7) days",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c99357859d",
+        "q_num": 18,
+        "question": "∛9 × √9 × ∛13 × √13 = ?",
+        "options": {
+          "a": "117\n1/6",
+          "b": "117\n5/6",
+          "c": "0",
+          "d": "117"
+        },
+        "answer": "b",
+        "solution": "Expression can be written as:\n9^(1/3) × 9^(1/2) × 13^(1/3) × 13^(1/2)\n= 9^(1/3 + 1/2) × 13^(1/3 + 1/2)\n= 9^(5/6) × 13^(5/6)\n= (9 × 13)^(5/6)\n= 117^(5/6)",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b0e3dda86c",
+        "q_num": 19,
+        "question": "A square-shaped plot has a side of 130m. A path of width 5m is constructed around the outside of the plot. Find the area of the path (in m²).",
+        "options": {
+          "a": "2830",
+          "b": "2480",
+          "c": "1550",
+          "d": "2700"
+        },
+        "answer": "d",
+        "solution": "Side of plot = 130 m\nSide of plot with path = 130 + 5 + 5 = 140 m\nArea of path = Area of plot with path - Area of plot\n= 140² - 130² = 270 * 10\n= 2700 m²",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_45bf66f6ca",
+        "q_num": 20,
+        "question": "An angle is 11/4th of its supplementary angle. What is the measure of the angle?",
+        "options": {
+          "a": "72˚",
+          "b": "132˚",
+          "c": "108˚",
+          "d": "88˚"
+        },
+        "answer": "b",
+        "solution": "Let, the supplementary angles be 'a' and '11a/4'.\na + 11a/4 = 180°\n15a = 180° * 4\na = 48°\nHence, 11a/4 = 132°",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7d22ef9f0f",
+        "q_num": 21,
+        "question": "A grocer mixes 12 kg of tea at Rs. 30/kg and 18 kg of tea at Rs. 40/kg. If he sold the mixture at Rs. 52/kg, find his profit percentage.",
+        "options": {
+          "a": "44 (4/9)%",
+          "b": "45 (1/3)%",
+          "c": "44 (2/3)%",
+          "d": "45 (4/9)%"
+        },
+        "answer": "a",
+        "solution": "Total cost price for the grocer = 12 × 30 + 18 × 40 = Rs. 1080\nTotal selling price = 52 × (12 + 18) = 52 × 30 = Rs. 1560\nAmount of profit = 1560 - 1080 = Rs. 480\nRequired percentage = (480 / 1080) × 100 = 44 (4/9)%",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9e33305f9e",
+        "q_num": 22,
+        "question": "A, B, and C together start a business. Two times the investment of A equals three times the investment of B and the capital of B is four times that of C. Find the respective ratio of shares of A, B and C in the profit.",
+        "options": {
+          "a": "3: 2: 1",
+          "b": "6: 4: 1",
+          "c": "2: 3: 1",
+          "d": "1: 4: 1"
+        },
+        "answer": "b",
+        "solution": "Let the investment of C be X.\nB's investment = 4X\n2 × A's investment = 3 × B's investment\n2 × A's investment = 3 × 4X = 12X\nA's investment = 6X\nHence, the required ratio = A : B : C = 6X : 4X : X = 6 : 4 : 1",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c88477d540",
+        "q_num": 23,
+        "question": "The total surface area of a right circular cylinder is 54π cm². If its height is twice its radius, what is its volume?",
+        "options": {
+          "a": "54π cm\n3",
+          "b": "108π cm\n3",
+          "c": "81π cm\n3",
+          "d": "72π cm\n3"
+        },
+        "answer": "a",
+        "solution": "Let the radius of a cylinder be r cm. Height = 2r. Total surface area = 54π. 2πr(h + r) = 54π => r(2r + r) = 27 => r² = 9 => r = 3 cm, h = 6 cm. Hence, volume of cylinder = πr²h = π * 3² * 6 = 54π cm³. Express Method: Volume = πr² * h = π * 2r³ [as h = 2r] = 2πr³. That means if we divide the options by 2π, we will get a perfect cube. From the given options, only option A satisfies this condition.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_357f379b94",
+        "q_num": 24,
+        "question": "A chord of the larger among two concentric circles is of length 30 cm and it is tangent to the smaller circle. What is the area (in sq. cm) of the annular portion between the two circles?",
+        "options": {
+          "a": "225π",
+          "b": "900π",
+          "c": "600π",
+          "d": "450π"
+        },
+        "answer": "a",
+        "solution": "Let Radius of larger circle be R cm and that of smaller circle be r cm. Here AB = 30 / 2 = 15 cm. Area of Annular portion = Area of larger circle - Area of smaller circle = πR² - πr² = π(R² - r²)...(1). In triangle AOB, R² = 15² + r² => R² - r² = 225. Now, from eq (1), Area of annular portion = 225π cm².",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b3d6130456",
+        "q_num": 25,
+        "question": "The table shows annual revenue (in crores \\u20b9) of a restaurant chain:\\n\\nYear | Revenue\\n2015 | 20\\n2016 | 25\\n2017 | 30\\n2018 | 28\\n2019 | 40\\n2020 | 45\\n\\nWhich year had the highest increase compared to the previous year?",
+        "options": {
+          "a": "2017",
+          "b": "2016",
+          "c": "2019",
+          "d": "2020"
+        },
+        "answer": "c",
+        "solution": "2016 increase = 25 - 20 = 5\n2017 = 30 - 25 = 5\n2018 = 28 - 30 = - 2\n2019 = 40 - 28 = 12\n2020 = 45 - 40 = 5\nHighest = 12 in 2019",
+        "tags": {
+          "topic": "Data Interpretation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f15527f5d3",
+        "q_num": 26,
+        "question": "A chef mixes two types of flour, one costing ₹180/kg and the other ₹220/kg, with a third type of flour. The ratio of the three types in the mix is 2:3:4. If the price of the mixture is ₹240/kg, find the price of the third type of flour.",
+        "options": {
+          "a": "Rs.285/kg",
+          "b": "Rs.275/kg",
+          "c": "Rs.295/kg",
+          "d": "Rs.300/kg"
+        },
+        "answer": "a",
+        "solution": "Let the price of the third type of flour be Rs. A.\n\nAccording to the question,\n\n180 x 2 + 220 x 3 + 4 x A = (2 + 3 + 4) x 240\n360 + 660 + 4A = 2160\n4A = 1140\nA = Rs.285",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f7c4deab76",
+        "q_num": 27,
+        "question": "If cos φ = 15/17, then find the value of (2 cosec φ − 3 tan φ).",
+        "options": {
+          "a": "17/4",
+          "b": "49/20",
+          "c": "9/20",
+          "d": "53/20"
+        },
+        "answer": "d",
+        "solution": "cos φ = adjacent/hypotenuse\nadjacent = 15, hypotenuse = 17\nOpposite = √(17² − 15²) = √(289 − 225) = 8\nsin φ = 8/17\ncosec φ = 17/8\ntan φ = (8/17)/(15/17) = 8/15\n2 cosec φ − 3 tan φ = 2 * (17/8) - 3 * (8/15)\n=> 34/8 − 24/15\n=> 17/4 − 8/5\n(85 − 32)/20 = 53/20",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4e04410c00",
+        "q_num": 28,
+        "question": "Two persons P and Q start from points A and B respectively, which are 200 km apart, heading towards each other. P travels at 10 km/h and Q at 20 km/h. After 4 hours of travel, Q stops for 30 minutes, then continues at the same speed. At what time from the start do they meet?",
+        "options": {
+          "a": "6.5 h",
+          "b": "7 h",
+          "c": "7.5 h",
+          "d": "8 h"
+        },
+        "answer": "b",
+        "solution": "Distance covered by P in 4 h = 10 × 4 = 40 km\nDistance covered by Q in 4 h = 20 × 4 = 80 km\nRemaining distance = 200 − (40 + 80) = 80 km\n\nDuring Q's stop of 0.5 h, P covers = 10 × 0.5 = 5 km\n\nNew remaining distance = 80 − 5 = 75 km\nRelative speed when both moving = 10 + 20 = 30 km/h\nTime to meet after stop = 75/30 = 2.5 h\nTotal time = 4 + 0.5 + 2.5 = 7 h",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_004c3434d4",
+        "q_num": 29,
+        "question": "If x = 3 - √2, then find the value of 3x^2 + 2x – 4",
+        "options": {
+          "a": "20 - √2",
+          "b": "35 + √2",
+          "c": "35 - 20√2",
+          "d": "35 - 2√2"
+        },
+        "answer": "c",
+        "solution": "Given x = 3 - √2\nx - 3 = -√2\nSquaring both sides: (x - 3)^2 = 2\nx^2 - 6x + 9 = 2\nx^2 - 6x + 7 = 0\nNow, let's find the value of 3x^2 + 2x – 4\nSubstitute x = 3 - √2:\n3(3 - √2)^2 + 2(3 - √2) - 4\n= 3(9 + 2 - 6√2) + 6 - 2√2 - 4\n= 3(11 - 6√2) + 2 - 2√2\n= 33 - 18√2 + 2 - 2√2\n= 35 - 20√2",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc1c1f26de",
+        "q_num": 30,
+        "question": "If x + 1/x = y + 1/y, then x = ?",
+        "options": {
+          "a": "0,1",
+          "b": "y,y²",
+          "c": "y,2y",
+          "d": "y,1/y"
+        },
+        "answer": "d",
+        "solution": "Given x + 1/x = y + 1/y\nx - y = 1/y - 1/x\nx - y = (x - y)/(xy)\n(x - y) - (x - y)/(xy) = 0\n(x - y)[1 - 1/(xy)] = 0\nThis gives x - y = 0 => x = y\nOr 1 - 1/(xy) = 0 => xy = 1 => x = 1/y\nThus, x = y, 1/y",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7b027dbab5",
+        "q_num": 31,
+        "question": "Simplify the given expression.",
+        "options": {
+          "a": "2",
+          "b": "1",
+          "c": "0",
+          "d": "-1"
+        },
+        "answer": "c",
+        "solution": "The expression evaluates to 0.",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_93ab266699",
+        "q_num": 32,
+        "question": "In a circular race of 840 m, A and B start running in the same direction at the same time from the same point at the speeds of 6 m/s and 12 m/s, respectively. After how much time will they meet next?",
+        "options": {
+          "a": "140 s",
+          "b": "20 s",
+          "c": "70 s",
+          "d": "40 s"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\n\nSince A and B are moving in the same direction, their relative speed is the difference between their speeds.\n\nRelative Speed = 12 − 6 = 6 m/s\n\nTime to meet next = Total Distance ÷ Relative Speed\n\nTime = 840 ÷ 6 = 140 s\n\n∴ The correct answer is 140 s.\n\nAlternate Method\n\nGiven:\n\n⇒ Length of circular track (D) = 840 m\n\n⇒ Speed of A (SA) = 6 m/s\n\n⇒ Speed of B (SB) = 12 m/s\n\nFormula Used:\n\n⇒ Relative Speed (same direction) = |SB − SA|\n\n⇒ Time to meet = Total Distance ÷ Relative Speed\n\nCalculations:\n\n⇒ Relative Speed = 12 m/s − 6 m/s = 6 m/s\n\n⇒ Time to meet = 840 ÷ 6\n\n⇒ Time to meet = 140 s\n\n∴ The correct answer is 140 s.",
+        "tags": {
+          "topic": "Time, Speed and Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0b3567d181",
+        "q_num": 33,
+        "question": "In a division sum, the divisor is 13 times the quotient and 6 times the remainder. If the remainder is 39, then the dividend is:",
+        "options": {
+          "a": "4,800",
+          "b": "4,576",
+          "c": "4,251",
+          "d": "4,240"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\\n\\nGiven Remainder = 39\\n\\nDivisor = 6 × 39 = 234\\n\\nQuotient = 234 ÷ 13 = 18\\n\\nDividend = (Divisor × Quotient) + Remainder\\n\\nDividend = (234 × 18) + 39 = 4212 + 39 = 4251\\n\\n∴ The correct answer is 4251.\\n\\nAlternate Method\\n\\nGiven:\\n\\nRemainder (R) = 39\\n\\nDivisor (D) = 13 × Quotient (Q)\\n\\nDivisor (D) = 6 × Remainder (R)\\n\\nFormula Used:\\n\\nDividend = (Divisor × Quotient) + Remainder\\n\\nCalculations:\\n\\n⇒ Divisor (D) = 6 × 39\\n\\n⇒ D = 234\\n\\n⇒ 234 = 13 × Q\\n\\n⇒ Q = 234 ÷ 13\\n\\n⇒ Q = 18\\n\\n⇒ Dividend = (234 × 18) + 39\\n\\n⇒ Dividend = 4212 + 39\\n\\n⇒ Dividend = 4251\\n\\n∴ The correct answer is 4251.\\n\\nAdditional Information\\n\\nDivision Algorithm\\n\\nThe fundamental relation in division is: Dividend = (Divisor × Quotient) + Remainder, where the remainder is always strictly less than the divisor.\\n\\nDivisibility Rule for 13\\n\\nTo quickly check if a number is divisible by 13, multiply the last digit by 4 and add it to the remaining truncated number. If the new result is divisible by 13, the original number is also divisible.\\n\\nRemainder Theorem\\n\\nIn polynomial algebra, when a polynomial P(x) is divided by a linear polynomial (x − a), the remainder obtained is equal to the value of P(a).",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1f3cd761e1",
+        "q_num": 34,
+        "question": "Simplify the following expression:\\n(32^4 - 1) / [33 × 31 × (2^10 + 1)]",
+        "options": {
+          "a": "2",
+          "b": "1",
+          "c": "-2",
+          "d": "-1"
+        },
+        "answer": "b",
+        "solution": "Solution\\n\\nShortcut Trick\\n\\nExpress 32 as 2^5, making the numerator (2^5)^4 − 1 = 2^20 − 1.\\n\\nRewrite the product 33 × 31 as (32 + 1)(32 − 1) = 32^2 − 1 = (2^5)^2 − 1 = 2^10 − 1.\\n\\nThe denominator becomes (2^10 − 1)(2^10 + 1) = (2^10)^2 − 1^2 = 2^20 − 1.\\n\\nDivide the numerator by the denominator: (2^20 − 1) ÷ (2^20 − 1) = 1.\\n\\n∴ The correct answer is 1.\\n\\nAlternate Method\\n\\nGiven:\\n\\nExpression: (32^4 − 1) ÷ [33 × 31 × (2^10 + 1)]\\n\\nFormula Used:\\na^2 − b^2 = (a − b)(a + b)\\n\\n(a^m)^n = a^(m × n)\\n\\nCalculations:\\n\\n⇒ Let's expand and simplify the denominator first.\\n\\n⇒ 33 × 31 = (32 + 1) × (32 − 1)\\n\\n⇒ Applying the a^2 − b^2 formula, we get 32^2 − 1^2.\\n\\n⇒ Since 32 = 2^5, we have (2^5)^2 − 1 = 2^10 − 1.\\n\\n⇒ Now substitute this back into the denominator expression: (2^10 − 1) × (2^10 + 1).\\n\\n⇒ Again applying the a^2 − b^2 formula, the denominator becomes (2^10)^2 − 1^2 = 2^20 − 1.\\n\\n⇒ Next, simplify the numerator: 32^4 − 1 = (2^5)^4 − 1 = 2^20 − 1.\\n\\n⇒ The complete expression simplifies to (2^20 − 1) ÷ (2^20 − 1).\\n\\n⇒ Since the numerator and denominator are exactly the same, they cancel out to leave 1.\\n\\n∴ The correct answer is 1.\\n\\nAdditional Information\\n\\nBODMAS Rule\\n\\nIt dictates the precise order of mathematical operations to follow: Brackets, Orders (powers and roots), Division, Multiplication, Addition, and Subtraction.\\n\\nLaws of Exponents\\n\\nKey rules to quickly handle base numbers include a^m × a^n = a^(m+n), a^m ÷ a^n = a^(m−n), and (a^m)^n = a^(m×n).\\n\\nDifference of Squares\\n\\nThe algebraic identity a^2 − b^2 = (a − b)(a + b) is an essential tool frequently used to simplify large mathematical products mentally.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_680f68d231",
+        "q_num": 35,
+        "question": "A motorboat, whose speed is 15 km/h in still water goes 20 km downstream and comes back in a total of 4 hours. The speed of the stream (in km/h) is:",
+        "options": {
+          "a": "4√3",
+          "b": "7√3",
+          "c": "6√3",
+          "d": "5√3"
+        },
+        "answer": "d",
+        "solution": "Solution\\n\\nShortcut Trick\\n\\nTotal Time = [ 2 × Distance × Boat Speed ] ÷ [ (Boat Speed)^2 − (Stream Speed)^2 ]\\n\\n4 = [ 2 × 20 × 15 ] ÷ [ 15^2 − v^2 ]\\n\\n4 × (225 − v^2) = 600\\n\\n225 − v^2 = 150 ⇒ v^2 = 75\\n\\nv = √75 = 5√3 km/h\\n\\n∴ The correct answer is 5√3 km/h.\\n\\nAlternate Method\\n\\nGiven:\\n\\nSpeed of motorboat in still water (u) = 15 km/h\\n\\nDistance (d) = 20 km\\n\\nTotal time taken (T) = 4 hours\\n\\nLet the speed of the stream be v km/h.\\n\\nFormula Used:\\n\\nTime = Distance ÷ Speed\\n\\nDownstream Speed = u + v\\n\\nUpstream Speed = u − v\\n\\nCalculations:\\n\\n⇒ Downstream Speed = (15 + v) km/h\\n\\n⇒ Upstream Speed = (15 − v) km/h\\n\\n⇒ Total Time = [Distance ÷ Downstream Speed] + [Distance ÷ Upstream Speed]\\n\\n⇒ 20 ÷ (15 + v) + 20 ÷ (15 − v) = 4\\n\\n⇒ 20 × [ (15 − v + 15 + v) ÷ (15^2 − v^2) ] = 4\\n\\n⇒ 20 × [ 30 ÷ (225 − v^2) ] = 4\\n\\n⇒ 600 ÷ (225 − v^2) = 4\\n\\n⇒ 225 − v^2 = 150\\n\\n⇒ v^2 = 75\\n\\n⇒ v = √75 = 5√3 km/h\\n\\n∴ The correct answer is 5√3 km/h.\\n\\nAdditional Information\\n\\nDownstream Speed\\n\\nWhen the boat moves in the direction of the stream, speeds are added. Downstream Speed = Speed of Boat + Speed of Stream.\\n\\nUpstream Speed\\n\\nWhen the boat moves against the direction of the stream, speeds are subtracted. Upstream Speed = Speed of Boat − Speed of Stream.\\n\\nSpeed in Still Water\\n\\nIf downstream and upstream speeds are given, Speed of Boat = (Downstream Speed + Upstream Speed) ÷ 2.\\n\\nSpeed of Stream\\n\\nIf downstream and upstream speeds are given, Speed of Stream = (Downstream Speed − Upstream Speed) ÷ 2.",
+        "tags": {
+          "topic": "Time, Speed and Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5ee1f233de",
+        "q_num": 36,
+        "question": "The ages of A and B are in the ratio 4 : 7, respectively. After 8 years, the ratio of their ages will be 2 : 3. What is the sum of the ages of A and B (in years)?",
+        "options": {
+          "a": "44",
+          "b": "36",
+          "c": "38",
+          "d": "42"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\n\nPresent ratio A : B = 4 : 7 (Gap = 7 − 4 = 3)\nFuture ratio A : B = 2 : 3 (Gap = 3 − 2 = 1) → Multiply by 3 to equalize gaps ⇒ 6 : 9\n\nIncrease in ratio parts for both A and B = 6 − 4 = 2 parts.\n2 parts ≡ 8 years ⇒ 1 part = 4 years.\n\nSum of present ages = (4 + 7) = 11 parts = 11 × 4 = 44 years.\n\n∴ The correct answer is 44 years.\n\nAlternate Method\n\nGiven:\nPresent ages of A and B are in the ratio 4 : 7\nAfter 8 years, the ratio of their ages will be 2 : 3\n\nMethod Used:\nEquating the age ratios using algebraic variables to find the exact multiplier.\n\nCalculations:\n⇒ Let the present ages of A and B be 4x and 7x respectively.\n⇒ After 8 years, A's age = (4x + 8) and B's age = (7x + 8)\n⇒ According to the condition: (4x + 8) ÷ (7x + 8) = 2 ÷ 3\n⇒ Cross-multiplying: 3 × (4x + 8) = 2 × (7x + 8)\n⇒ 12x + 24 = 14x + 16\n⇒ 14x − 12x = 24 − 16\n⇒ 2x = 8 ⇒ x = 4\n⇒ Sum of their present ages = 4x + 7x = 11x\n⇒ Total sum = 11 × 4 = 44 years\n\n∴ The correct answer is 44 years.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_80b06c6d09",
+        "q_num": 37,
+        "question": "If A : B = 8 : 13, B : C = 5 : 8 and C : D = 4 : 5, then A : B : C : D is equal to:",
+        "options": {
+          "a": "20 : 50 : 105 : 119",
+          "b": "38 : 65 : 111 : 120",
+          "c": "40 : 60 : 103 : 112",
+          "d": "40 : 65 : 104 : 130"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\n\nUsing the vertical and cross multiplication shortcut for continuous ratios:\n\nA = 8 × 5 × 4 = 160, B = 13 × 5 × 4 = 260\nC = 13 × 8 × 4 = 416, D = 13 × 8 × 5 = 520\n\nA : B : C : D = 160 : 260 : 416 : 520 ⇒ 40 : 65 : 104 : 130\n\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAlternate Method\n\nGiven:\nA : B = 8 : 13\nB : C = 5 : 8\nC : D = 4 : 5\n\nConcept Used:\nWe use the adjacent block fill method. Write the given ratios in rows and fill the empty spaces with the adjacent number in that row, then multiply the columns downwards.\n\nCalculations:\n⇒ Multiply the values in each column to get the combined ratio.\n⇒ Column A = 8 × 5 × 4 = 160\n⇒ Column B = 13 × 5 × 4 = 260\n⇒ Column C = 13 × 8 × 4 = 416\n⇒ Column D = 13 × 8 × 5 = 520\n⇒ A : B : C : D = 160 : 260 : 416 : 520\n⇒ Dividing each term by 4 to simplify the ratio, we get:\n⇒ A : B : C : D = 40 : 65 : 104 : 130\n\n∴ The correct answer is 40 : 65 : 104 : 130.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_77fcbbff2f",
+        "q_num": 38,
+        "question": "A group of 25 tourists consume 5 containers of food in 8 days in a hotel. How many containers will be required for 10 tourists to eat for 16 days?",
+        "options": {
+          "a": "4",
+          "b": "3",
+          "c": "6",
+          "d": "5"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\n\nUsing the Chain Rule (MDH) formula: M1 × D1 / W1 = M2 × D2 / W2\n\nWhere M = tourists, D = days, W = containers of food.\n\n⇒ (25 × 8) / 5 = (10 × 16) / W2\n⇒ 40 = 160 / W2 ⇒ W2 = 4\n\n∴ The correct answer is 4 containers.\n\nAlternate Method\n\nGiven:\nGroup 1: M1 = 25 tourists, D1 = 8 days, W1 = 5 containers\nGroup 2: M2 = 10 tourists, D2 = 16 days, W2 = ?\n\nFormula Used:\nM1 × D1 / W1 = M2 × D2 / W2\n\nCalculations:\n⇒ (25 × 8) / 5 = (10 × 16) / W2\n⇒ 200 / 5 = 160 / W2\n⇒ 40 = 160 / W2\n⇒ W2 = 160 / 40\n⇒ W2 = 4\n\n∴ The correct answer is 4 containers.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_41eb9aecd5",
+        "q_num": 39,
+        "question": "A dealer sells an article at ₹850 after offering a cash discount of 15% on its marked price. Without discount, he would have earned a profit of 25%. What is the cost price of the article (in ₹)?",
+        "options": {
+          "a": "800",
+          "b": "950",
+          "c": "900",
+          "d": "1000"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick: Selling Price (SP) = ₹850, Discount = 15% ⇒ MP = 850 × (100 ÷ 85) = ₹1000. Without discount, SP = MP = ₹1000. Profit = 25% ⇒ CP = 1000 × (100 ÷ 125) = ₹800. ∴ The correct answer is ₹800.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d370cee3cd",
+        "q_num": 40,
+        "question": "If x + y = 12 and xy = 6, then the value of x/y + y/x is equal to:",
+        "options": {
+          "a": "22",
+          "b": "26",
+          "c": "24",
+          "d": "18"
+        },
+        "answer": "a",
+        "solution": "We need to find the value of x/y + y/x, which simplifies to (x² + y²) ÷ xy. Using the identity: x² + y² = (x + y)² − 2xy. Substitute the given values (x + y = 12, xy = 6) directly into the combined formula. Required value = (12² − 2 × 6) ÷ 6 = (144 − 12) ÷ 6 = 132 ÷ 6 = 22. ∴ The correct answer is 22.",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_97ddfdf82e",
+        "q_num": 41,
+        "question": "Male and female population of a city is increased by 50% and 20% respectively in 2017 from 2016 and male population in 2016 was 40% more than female population, then by what percent total population of the city is increased in 2017?",
+        "options": {
+          "a": "32.5%",
+          "b": "24.5%",
+          "c": "37.5%",
+          "d": "42.5%"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n\nRatio of Male to Female population in 2016 = 140 : 100 = 7 : 5.\n\nWe can use the weighted average method to find the net percentage change directly:\n\nOverall % increase = [(Ratio of Male × % change in Male) + (Ratio of Female × % change in Female)] ÷ Total Ratio\n\nOverall % increase = [(7 × 50) + (5 × 20)] ÷ (7 + 5)\n\nOverall % increase = (350 + 100) ÷ 12 = 450 ÷ 12 = 37.5%.\n\n∴ The correct answer is 37.5%.\n\nAlternate Method\n\nGiven:\n\nMale population in 2016 is 40% more than female population.\n\nMale population increased by 50% and female population increased by 20% in 2017.\n\nFormula Used:\n\nPercentage Increase = (Net Increase ÷ Initial Value) × 100\n\nCalculations:\n\n⇒ Let the female population in 2016 be 100x.\n\n⇒ Male population in 2016 = 100x + (40% of 100x) = 140x.\n\n⇒ Total population in 2016 = 100x + 140x = 240x.\n\n⇒ In 2017, male population = 140x + (50% of 140x) = 140x + 70x = 210x.\n\n⇒ In 2017, female population = 100x + (20% of 100x) = 100x + 20x = 120x.\n\n⇒ Total population in 2017 = 210x + 120x = 330x.\n\n⇒ Net increase in total population = 330x − 240x = 90x.\n\n⇒ Percentage increase = (90x ÷ 240x) × 100 = (9 ÷ 24) × 100\n\n⇒ Percentage increase = (3 ÷ 8) × 100 = 37.5%.\n\n∴ The correct answer is 37.5%.\n\nAdditional Information\n\nPercentage Change\n\nThe formula for finding the net percentage change of any value is calculated as: [(New Value − Old Value) ÷ Old Value] × 100.\n\nWeighted Average in Percentage\n\nIf a total quantity is split into multiple parts in the ratio w1 : w2, and their individual percentage changes are p1% and p2%, the net percentage change of the entire group is (w1p1 + w2p2) ÷ (w1 + w2).\n\nBase Shift Concept\n\nWhen calculating percentage increases for two different components, always remember that their percentage values act upon their respective initial base numbers, not on the combined group total.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8419cf9639",
+        "q_num": 42,
+        "question": "6 persons running around a ground complete one round in 6, 10, 12, 18, 30 and 40 minutes respectively. After how much time will they meet for the first time if they started running at the same time?",
+        "options": {
+          "a": "6 hours",
+          "b": "5 hours",
+          "c": "4.5 hours",
+          "d": "4 hours"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\n\nThe time taken by the runners to meet for the first time at the starting point is simply the LCM of their individual round times.\n\nRequired time = LCM(6, 10, 12, 18, 30, 40)\n\nRequired time = 360 minutes\n\nTime in hours = 360 ÷ 60 = 6 hours\n\n∴ The correct answer is 6 hours.\n\nAlternate Method\n\nGiven:\n\nTimes taken by 6 persons to complete one round = 6, 10, 12, 18, 30, and 40 minutes.\n\nFormula Used:\n\nTime to meet again at the starting point = LCM of individual times to complete one round.\n\nCalculations:\n\n⇒ We need to find the Least Common Multiple (LCM) of 6, 10, 12, 18, 30, and 40.\n\n⇒ Prime factorization of 6 = 2 × 3\n\n⇒ Prime factorization of 10 = 2 × 5\n\n⇒ Prime factorization of 12 = 2^2 × 3\n\n⇒ Prime factorization of 18 = 2 × 3^2\n\n⇒ Prime factorization of 30 = 2 × 3 × 5\n\n⇒ Prime factorization of 40 = 2^3 × 5\n\n⇒ LCM is the product of the highest powers of all prime factors involved.\n\n⇒ Highest power of 2 = 2^3\n\n⇒ Highest power of 3 = 3^2\n\n⇒ Highest power of 5 = 5\n\n⇒ LCM = 2^3 × 3^2 × 5 = 8 × 9 × 5 = 360 minutes.\n\n⇒ Converting the time into hours = 360 ÷ 60 = 6 hours.\n\n∴ The correct answer is 6 hours.\n\nAdditional Information\n\nMeeting at the Starting Point on Circular Track\n\nWhen multiple people are moving around a circular track starting at the same time and place, they meet at the starting point simultaneously after a time equal to the LCM of the times taken by each to complete one round independently.\n\nFirst Meeting Anywhere on Circular Track\n\nIf two runners move in the same direction, the time to meet for the first time anywhere on the track = Track Length ÷ (S1 − S2). If they move in opposite directions, Time to meet = Track Length ÷ (S1 + S2).\n\nLCM Formula for Fractions\n\nIf the individual completion times are given as fractions, you can find the meeting time using: LCM of fractions = (LCM of Numerators) ÷ (HCF of Denominators).",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b0761174b5",
+        "q_num": 43,
+        "question": "The length of a minute hand of a wall clock is 9 cm. What is the area swept (in cm\\u00b2) by the minute hand in 20 minutes? (Take \\u03c0 = 3.14)",
+        "options": {
+          "a": "88.78",
+          "b": "84.78",
+          "c": "67.74",
+          "d": "57.78"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick: The minute hand covers a full 360\\u00b0 circle in 60 minutes. Fraction of circle swept in 20 minutes = 20 \\u00f7 60 = 1/3 of the total area. Area swept = (1 \\u00f7 3) \\u00d7 \\u03c0 \\u00d7 r^2. Area = (1 \\u00f7 3) \\u00d7 3.14 \\u00d7 (9)^2. Area = 3.14 \\u00d7 27 = 84.78 cm\\u00b2. \\u2234 The correct answer is 84.78 cm\\u00b2.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_76cbafa420",
+        "q_num": 44,
+        "question": "Mukesh sells almonds at the cost price but uses a false weight and thus gains a 23% profit. How many grams of almonds is he giving for 3.075 kg?",
+        "options": {
+          "a": "2500",
+          "b": "2700",
+          "c": "2400",
+          "d": "2600"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick: Since the shopkeeper sells at cost price, the profit of 23% is entirely due to false weight. Ratio of Claimed Weight (SP) to Actual Weight (CP) = (100 + 23) : 100 = 123 : 100. Here, Claimed Weight = 3.075 kg = 3075 g. 123 units \\u2192 3075 g, 1 unit \\u2192 25 g. Actual Weight (100 units) = 25 \\u00d7 100 = 2500 g. \\u2234 The correct answer is 2500 g.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_14f455cccd",
+        "q_num": 45,
+        "question": "If cos θ - sin θ = 0, then (sin^8 θ + cos^8 θ) is:",
+        "options": {
+          "a": "18",
+          "b": "14",
+          "c": "16",
+          "d": "12"
+        },
+        "answer": "a",
+        "solution": "Given cos θ − sin θ = 0, which implies tan θ = 1.\nThis means the angle θ = 45°.\nAt θ = 45°, sin θ = 1/√2 and cos θ = 1/√2.\nSubstitute the values: (1/√2)^8 + (1/√2)^8\n⇒ 1/16 + 1/16 = 2/16 = 1/8.\n∴ The correct answer is 1/8.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2060d96550",
+        "q_num": 46,
+        "question": "The height of a right pyramid and the side length of its square base are equal. The perimeter of the base is 36 inches. Give its volume in cubic inches.",
+        "options": {
+          "a": "734",
+          "b": "104",
+          "c": "243",
+          "d": "215"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nSide of the square base = Base Perimeter ÷ 4 = 36 ÷ 4 = 9 inches.\nHeight of the pyramid = Side of the base = 9 inches.\nVolume of right pyramid = (1/3) × Base Area × Height\nVolume = (1/3) × (9 × 9) × 9 = 243 cubic inches.\n∴ The correct answer is 243 cubic inches.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_73daef66db",
+        "q_num": 47,
+        "question": "A solid sphere of radius 3 cm is melted to form a right circular cone such that the height of the cone is half the radius of the cone. Find the radius of the cone.",
+        "options": {
+          "a": "3 cm",
+          "b": "4 cm",
+          "c": "5 cm",
+          "d": "6 cm"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nWhen a solid object is melted to form another, the total volume remains conserved.\n\n\\u21d2 Volume of Sphere = Volume of Cone\n\\u21d2 (4/3) \\u00d7 \\u03c0 \\u00d7 (3)\\u00b3 = (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 (r / 2)\n\\u21d2 4 \\u00d7 27 = r\\u00b3 / 2\n\\u21d2 r\\u00b3 = 216 \\u21d2 r = 6 cm\n\n\\u2234 The correct answer is 6 cm.\n\nAlternate Method\nGiven:\nRadius of the sphere (R) = 3 cm\nLet the radius of the cone be r cm.\nHeight of the cone (h) = r / 2\n\nFormula Used:\nVolume of Sphere = (4/3) \\u00d7 \\u03c0 \\u00d7 R\\u00b3\nVolume of Cone = (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 h\n\nCalculations:\n\\u21d2 Volume of Cone = Volume of Sphere\n\\u21d2 (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 h = (4/3) \\u00d7 \\u03c0 \\u00d7 R\\u00b3\n\nSubstituting the given values into the equation:\n\n\\u21d2 (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 (r / 2) = (4/3) \\u00d7 \\u03c0 \\u00d7 3\\u00b3\n\nCanceling out (\\u03c0 / 3) from both sides of the equation:\n\n\\u21d2 r\\u00b3 / 2 = 4 \\u00d7 27\n\\u21d2 r\\u00b3 / 2 = 108\n\\u21d2 r\\u00b3 = 216\n\\u21d2 r = (216)\\u00b9\\u207f\\u00b3\n\\u21d2 r = 6 cm\n\n\\u2234 The correct answer is 6 cm.\n\nAdditional Information\nPrinciple of Melting and Recasting\n\nWhenever a 3D solid figure is melted and converted into another solid, the initial volume is exactly equal to the final volume regardless of the shape.\n\nTotal Surface Area of Cone\n\nThe total surface area of a cone involves the curved area plus the circular base area: TSA = \\u03c0 \\u00d7 r \\u00d7 l + \\u03c0 \\u00d7 r\\u00b2, where l is the slant height.\n\nSurface Area of Sphere\n\nA complete sphere has a continuous curved surface with an area given by the formula: SA = 4 \\u00d7 \\u03c0 \\u00d7 R\\u00b2.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cb6961f409",
+        "q_num": 48,
+        "question": "If 15 men can do a piece of work in 12 days working 7 hours a day. How many men are needed to complete another work, which is thrice the first one, in 14 days working 9 hours a day?",
+        "options": {
+          "a": "30",
+          "b": "40",
+          "c": "35",
+          "d": "28"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nUsing the MDH rule for compound proportion directly:\n\n(M\\u2081 \\u00d7 D\\u2081 \\u00d7 H\\u2081) / W\\u2081 = (M\\u2082 \\u00d7 D\\u2082 \\u00d7 H\\u2082) / W\\u2082\n\\u21d2 (15 \\u00d7 12 \\u00d7 7) / 1 = (M\\u2082 \\u00d7 14 \\u00d7 9) / 3\n\\u21d2 1260 = M\\u2082 \\u00d7 42\n\\u21d2 M\\u2082 = 30\n\n\\u2234 The correct answer is 30 men.\n\nAlternate Method\nGiven:\nCase 1: M\\u2081 = 15 men, D\\u2081 = 12 days, H\\u2081 = 7 hours, W\\u2081 = 1 unit\nCase 2: M\\u2082 = ? men, D\\u2082 = 14 days, H\\u2082 = 9 hours, W\\u2082 = 3 units\n\nFormula Used:\nChain Rule: (M\\u2081 \\u00d7 D\\u2081 \\u00d7 H\\u2081) / W\\u2081 = (M\\u2082 \\u00d7 D\\u2082 \\u00d7 H\\u2082) / W\\u2082\n\nCalculations:\n\\u21d2 (15 \\u00d7 12 \\u00d7 7) / 1 = (M\\u2082 \\u00d7 14 \\u00d7 9) / 3\n\\u21d2 1260 = (M\\u2082 \\u00d7 126) / 3\n\\u21d2 1260 = M\\u2082 \\u00d7 42\n\\u21d2 M\\u2082 = 1260 \\u00f7 42\n\\u21d2 M\\u2082 = 30\n\n\\u2234 The correct answer is 30 men.\n\nAdditional Information\nChain Rule (MDH Rule)\n\nUsed when multiple variables affect the total work. Formula: (M\\u2081 \\u00d7 D\\u2081 \\u00d7 H\\u2081 \\u00d7 E\\u2081) / W\\u2081 = (M\\u2082 \\u00d7 D\\u2082 \\u00d7 H\\u2082 \\u00d7 E\\u2082) / W\\u2082, where M is Men, D is Days, H is Hours, E is Efficiency, and W is Work done or Wages earned.\n\nWork and Wages\n\nWhen multiple workers complete a job together, the total wages are divided strictly in the ratio of the actual work done by each individual. If they work for the same number of days, wages are distributed in the ratio of their efficiencies.\n\nTime and Efficiency Ratio\n\nEfficiency is inversely proportional to the time taken to complete the work. If the efficiency ratio of person A to person B is x:y, then the ratio of time taken by them to complete the same work is y:x.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8f0b22e09d",
+        "q_num": 49,
+        "question": "A worker covers a distance of 81 km in 11 hours. He travels partly on foot at 4.5 km/h and partly on bicycle at 15 km/h. What is the distance covered on the cycle?",
+        "options": {
+          "a": "45 km",
+          "b": "37.5 km",
+          "c": "52.5 km",
+          "d": "30 km"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nIf the worker travelled the entire 11 hours on foot, the distance covered = 11 \\u00d7 4.5 = 49.5 km.\n\nExtra distance remaining to be covered = 81 \\u2212 49.5 = 31.5 km.\nDifference in speeds between the cycle and foot = 15 \\u2212 4.5 = 10.5 km/h.\nTime spent travelling on the cycle = 31.5 \\u00f7 10.5 = 3 hours.\nDistance covered on the cycle = 3 \\u00d7 15 = 45 km.\n\n\\u2234 The correct answer is 45 km.\n\nAlternate Method\nGiven:\nTotal distance = 81 km\nTotal time = 11 hours\nSpeed on foot = 4.5 km/h\nSpeed on cycle = 15 km/h\n\nFormula Used:\nDistance = Speed \\u00d7 Time\n\nCalculations:\n\\u21d2 Let the time travelled on foot be t hours.\n\n\\u21d2 Time travelled on the cycle = (11 \\u2212 t) hours.\n\\u21d2 Distance covered on foot + Distance covered on cycle = Total distance\n\n\\u21d2 (4.5 \\u00d7 t) + 15 \\u00d7 (11 \\u2212 t) = 81\n\n\\u21d2 4.5t + 165 \\u2212 15t = 81\n\n\\u21d2 10.5t = 165 \\u2212 81\n\n\\u21d2 10.5t = 84\n\n\\u21d2 t = 84 \\u00f7 10.5 = 8 hours\n\\u21d2 Time travelled on cycle = 11 \\u2212 8 = 3 hours.\n\\u21d2 Distance covered on cycle = Speed \\u00d7 Time = 15 \\u00d7 3 = 45 km.\n\n\\u2234 The correct answer is 45 km.\n\nAdditional Information\nAverage Speed\n\nAverage Speed = Total Distance \\u00f7 Total Time. It represents the constant speed required to cover the whole distance in the given timeframe without any variations.\n\nAlligation Method in Speed\n\nWhen applying the cross-alligation method directly on two different speeds to obtain an average speed, the resulting ratio strictly represents the ratio of time taken, not the distance.\n\nShift / Minimum Value Trick\n\nWhen a total value is comprised of two parts, assuming the entire operation happens at the minimum rate allows finding the specific remainder. Dividing this remainder by the unit rate difference reveals the proportion of the higher rate component.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2861c47b47",
+        "q_num": 50,
+        "question": "What is the value of (1 + sec^2 A / 1 + cos^2 A)(1 + sin^2 A / 1 + cosec^2 A)?",
+        "options": {
+          "a": "cos2 A",
+          "b": "cosec2 A",
+          "c": "sec2 A",
+          "d": "tan2 A"
+        },
+        "answer": "d",
+        "solution": "Assume an angle, say A = 45°, to quickly evaluate the expression.\n⇒ sec^2 45° = 2, cos^2 45° = 1/2, sin^2 45° = 1/2, cosec^2 45° = 2\n⇒ Expression = [(1 + 2) ÷ (1 + 1/2)] × [(1 + 1/2) ÷ (1 + 2)]\n⇒ Expression = (3 ÷ 3/2) × (3/2 ÷ 3) = 2 × 1/2 = 1\nFrom the given options, tan^2 45° = (1)^2 = 1.\n∴ The correct answer is tan^2 A.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b32e436f7a",
+        "q_num": 51,
+        "question": "Vinay sells an article at a profit of 20 percent. If both the cost price and selling price are reduced by Rs. 20, then the profit becomes 40 percent. What is the initial cost price?",
+        "options": {
+          "a": "Rs. 80",
+          "b": "Rs. 60",
+          "c": "Rs. 50",
+          "d": "Rs. 40"
+        },
+        "answer": "d",
+        "solution": "Initial ratio of CP : SP = 100 : 120 = 5 : 6\nNew ratio of CP : SP = 100 : 140 = 5 : 7 (since both CP and SP are reduced by ₹20)\nApplying the cross-multiplication method: Difference in ratio units = (5 × 7) − (5 × 6) = 5 units.\nAbsolute difference in value = (7 × 20) − (5 × 20) = 40.\n⇒ 5 units = ₹40 (Since initial CP is exactly 5 units, Initial CP = ₹40).\n∴ The correct answer is ₹40.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a3266121f6",
+        "q_num": 52,
+        "question": "If the radius of a sphere is increased by 3 cm, then its surface area increases by 156π cm^2. The radius of the sphere before the increase was:",
+        "options": {
+          "a": "7 cm",
+          "b": "8 cm",
+          "c": "6 cm",
+          "d": "5 cm"
+        },
+        "answer": "d",
+        "solution": "Increase in surface area = 4π[(r + 3)^2 − r^2] = 156π\n⇒ (r + 3)^2 − r^2 = 39\n⇒ r^2 + 6r + 9 − r^2 = 39\n⇒ 6r = 30 ⇒ r = 5 cm\n∴ The correct answer is 5 cm.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_355ec96a84",
+        "q_num": 53,
+        "question": "Evaluate: (6.25)^(1/2) × (0.0144)^(1/2) + 1 / ((0.027)^(1/3) × (81)^(1/4))",
+        "options": {
+          "a": "57",
+          "b": "911",
+          "c": "139",
+          "d": "1"
+        },
+        "answer": "c",
+        "solution": "Given expression: (6.25)^(1/2) × (0.0144)^(1/2) + 1 / ((0.027)^(1/3) × (81)^(1/4))\n⇒ = √6.25 × √0.0144 + 1 / (∛0.027 × ⁴√81)\n⇒ = 2.5 × 0.12 + 1 / (0.3 × 3)\n⇒ = 0.3 + 1 / 0.9\n⇒ = 0.3 + 10/9 = (2.7 + 10) / 9 = 13/9\n∴ The correct answer is 13/9.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_eeaf978a14",
+        "q_num": 54,
+        "question": "The average age of 35 children of the class is 16 years. 15 more children joined whose average age is 14 years. What is the average age of all the 50 children together?",
+        "options": {
+          "a": "13.4 years",
+          "b": "14.5 years",
+          "c": "15.4 years",
+          "d": "16.5 years"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick: Ratio of number of children = 35 : 15 = 7 : 3. Let base average be 14 years. Deviation of the first group from 14 = +2 years. Net deviation per child = (7 × 2) ÷ (7 + 3) = 14 ÷ 10 = +1.4 years. Combined Average = Base average + Net deviation = 14 + 1.4 = 15.4 years. ∴ The correct answer is 15.4 years.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6a040a5730",
+        "q_num": 55,
+        "question": "If the denominator of a fraction is multiplied by 2 and the numerator is increased by 2, the fraction becomes 1/2. If instead, the numerator is multiplied by 2 and the denominator is increased by 2, it becomes 6/7. What is the sum of the numerator and the denominator of the original fraction (in lowest form)?",
+        "options": {
+          "a": "11",
+          "b": "8",
+          "c": "7",
+          "d": "6"
+        },
+        "answer": "b",
+        "solution": "Let the original fraction be x/y. Condition 1: (x + 2) / (2y) = 1/2 ⇒ 2(x + 2) = 2y ⇒ y = x + 2. Condition 2: (2x) / (y + 2) = 6/7 ⇒ 14x = 6(y + 2). Substituting y = x + 2 into Condition 2 gives 7x = 3(x + 2) + 6 ⇒ 4x = 12 ⇒ x = 3, y = 5. Original fraction = 3/5. Sum = 3 + 5 = 8. ∴ The correct answer is 8.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_af3ff8505d",
+        "q_num": 56,
+        "question": "If twice the son's age (in years) is added to the age of his father, the sum is 91. If twice the age (in years) of father is added to the age of the son, the sum is 119. What is the difference (in years) between the ages of father and son?",
+        "options": {
+          "a": "30",
+          "b": "27",
+          "c": "28",
+          "d": "29"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick: When coefficients of variables are swapped, subtract the smaller equation from the larger one to find the difference directly. (2F + S) - (F + 2S) = 119 - 91 => F - S = 28. ∴ The correct answer is 28 years.",
+        "tags": {
+          "topic": "Algebra",
           "difficulty": "medium"
         }
       }
@@ -279,7 +1027,7 @@
           "d": "1256.5 metres"
         },
         "answer": "a",
-        "solution": "Shortcut Trick\n\nWhen the time taken by both moving objects is constant, the ratio of the distance covered is equal to the ratio of their speeds.\n\nSpeed ratio (Thief : Policeman) = 11 : 13\n\nDistance ratio (Thief : Policeman) = 11 : 13\n\nDifference in distance covered = 13 parts − 11 parts = 2 parts\n\nGiven the initial distance difference is 225 m ⇒ 2 parts = 225 m ⇒ 1 part = 112.5 m\n\nDistance run by the thief = 11 parts = 11 × 112.5 = 1237.5 metres\n\n∴ The correct answer is 1237.5 metres.\n\nAlternate Method\n\nGiven:\n\nInitial distance between policeman and thief = 225 m\n\nSpeed of thief = 11 km/h\n\nSpeed of policeman = 13 km/h\n\nFormula Used:\n\nRelative speed (same direction) = Speed1 − Speed2\n\nTime = Distance ÷ Relative Speed\n\nDistance = Speed × Time\n\nCalculations:\n\n⇒ Relative speed = 13 − 11 = 2 km/h\n\n⇒ Relative speed in m/s = 2 × (5/18) = 5/9 m/s\n\n⇒ Time taken to catch the thief = Distance ÷ Relative speed = 225 ÷ (5/9)\n\n⇒ Time taken = 225 × (9/5) = 45 × 9 = 405 seconds\n\n⇒ Speed of thief in m/s = 11 × (5/18) = 55/18 m/s\n\n⇒ Distance covered by thief before getting caught = Speed of thief × Time taken\n\n⇒ Distance = (55/18) × 405 = 55 × 22.5\n\n⇒ Distance = 1237.5 m\n\n∴ The correct answer is 1237.5 metres.\n\nAdditional Information\n\nRelative Speed (Same Direction)\n\nWhen two bodies are moving in the same direction, their relative speed is the difference between their individual speeds: S = S1 − S2.\n\nRelative Speed (Opposite Direction)\n\nWhen two bodies are moving in opposite directions towards each other, their relative speed is the sum of their individual speeds: S = S1 + S2.\n\nUnit Conversion\n\nTo convert speed from km/h to m/s, multiply the value by 5/18. To convert speed from m/s to km/h, multiply the value by 18/5.",
+        "solution": "Shortcut Trick\nWhen the time taken by both moving objects is constant, the ratio of the distance covered is equal to the ratio of their speeds.\n\nSpeed ratio (Thief : Policeman) = 11 : 13\nDistance ratio (Thief : Policeman) = 11 : 13\nDifference in distance covered = 13 parts − 11 parts = 2 parts\nGiven the initial distance difference is 225 m ⇒ 2 parts = 225 m ⇒ 1 part = 112.5 m\nDistance run by the thief = 11 parts = 11 × 112.5 = 1237.5 metres\n∴ The correct answer is 1237.5 metres.\n\nAlternate Method\nGiven:\nInitial distance between policeman and thief = 225 m\nSpeed of thief = 11 km/h\nSpeed of policeman = 13 km/h\n\nFormula Used:\nRelative speed (same direction) = Speed1 − Speed2\nTime = Distance ÷ Relative Speed\nDistance = Speed × Time\n\nCalculations:\n⇒ Relative speed = 13 − 11 = 2 km/h\n⇒ Relative speed in m/s = 2 × (5/18) = 5/9 m/s\n⇒ Time taken to catch the thief = Distance ÷ Relative speed = 225 ÷ (5/9)\n⇒ Time taken = 225 × (9/5) = 45 × 9 = 405 seconds\n⇒ Speed of thief in m/s = 11 × (5/18) = 55/18 m/s\n⇒ Distance covered by thief before getting caught = Speed of thief × Time taken\n⇒ Distance = (55/18) × 405 = 55 × 22.5\n⇒ Distance = 1237.5 m\n∴ The correct answer is 1237.5 metres.\n\nAdditional Information\nRelative Speed (Same Direction)\n\nWhen two bodies are moving in the same direction, their relative speed is the difference between their individual speeds: S = S1 − S2.\n\nRelative Speed (Opposite Direction)\n\nWhen two bodies are moving in opposite directions towards each other, their relative speed is the sum of their individual speeds: S = S1 + S2.\n\nUnit Conversion\n\nTo convert speed from km/h to m/s, multiply the value by 5/18. To convert speed from m/s to km/h, multiply the value by 18/5.",
         "tags": {
           "topic": "Direction & Distance",
           "difficulty": "medium"
@@ -296,7 +1044,7 @@
           "d": "300 metres"
         },
         "answer": "d",
-        "solution": "Shortcut Trick\n\nThe ratio of circumferences of two circles is identical to the ratio of their radii.\n\nRatio of outer radius (R) to inner radius (r) = 17 ∶ 15\n\nWidth of the path in ratio units = 17 − 15 = 2 units.\n\nGiven width = 40 metres, so 2 units = 40 metres ⇒ 1 unit = 20 metres.\n\nInner radius = 15 units = 15 × 20 = 300 metres.\n\n∴ The correct answer is 300 metres.",
+        "solution": "Shortcut Trick\nThe ratio of circumferences of two circles is identical to the ratio of their radii.\n\nRatio of outer radius (R) to inner radius (r) = 17 ∶ 15\nWidth of the path in ratio units = 17 − 15 = 2 units.\nGiven width = 40 metres, so 2 units = 40 metres ⇒ 1 unit = 20 metres.\nInner radius = 15 units = 15 × 20 = 300 metres.\n∴ The correct answer is 300 metres.",
         "tags": {
           "topic": "Mensuration",
           "difficulty": "medium"
@@ -313,7 +1061,7 @@
           "d": "18740"
         },
         "answer": "a",
-        "solution": "Shortcut Trick\n\nProfit ratio = (Capital × Time)\n\nA : B : C = (3 × 12) : (2 × 12) : (6 × 6 + 3 × 6)\n\n⇒ A : B : C = 36 : 24 : 54 = 6 : 4 : 9\n\nTotal profit = 19 parts = ₹53010 ⇒ 1 part = ₹2790\n\nA's profit = 6 parts = 6 × 2790 = ₹16740\n\n∴ The correct answer is ₹16740.\n\nAlternate Method\n\nGiven:\nRatio of initial investments of A, B and C = 3 : 2 : 6\nC withdraws half of his capital after 6 months.\nTotal profit for the year = ₹53010\n\nFormula Used:\nProfit Ratio = Product of Capital and Time Period\n\nCalculations:\n⇒ Equivalent capital for A = 3 × 12 = 36 units\n⇒ Equivalent capital for B = 2 × 12 = 24 units\n⇒ Equivalent capital for C = (6 × 6) + (3 × 6) = 36 + 18 = 54 units\n⇒ Ratio of profits (A : B : C) = 36 : 24 : 54\n⇒ Simplified profit ratio = 6 : 4 : 9\n⇒ Total ratio parts = 6 + 4 + 9 = 19\n⇒ A's share = (6 ÷ 19) × Total Profit\n⇒ A's share = (6 ÷ 19) × 53010\n⇒ A's share = 6 × 2790 = 16740\n\n∴ The correct answer is ₹16740.",
+        "solution": "Shortcut Trick\nProfit ratio = (Capital × Time)\nA : B : C = (3 × 12) : (2 × 12) : (6 × 6 + 3 × 6)\n⇒ A : B : C = 36 : 24 : 54 = 6 : 4 : 9\nTotal profit = 19 parts = ₹53010 ⇒ 1 part = ₹2790\nA's profit = 6 parts = 6 × 2790 = ₹16740\n∴ The correct answer is ₹16740.\n\nAlternate Method\nGiven:\nRatio of initial investments of A, B and C = 3 : 2 : 6\nC withdraws half of his capital after 6 months.\nTotal profit for the year = ₹53010\n\nFormula Used:\nProfit Ratio = Product of Capital and Time Period\n\nCalculations:\n⇒ Equivalent capital for A = 3 × 12 = 36 units\n⇒ Equivalent capital for B = 2 × 12 = 24 units\n⇒ Equivalent capital for C = (6 × 6) + (3 × 6) = 36 + 18 = 54 units\n⇒ Ratio of profits (A : B : C) = 36 : 24 : 54\n⇒ Simplified profit ratio = 6 : 4 : 9\n⇒ Total ratio parts = 6 + 4 + 9 = 19\n⇒ A's share = (6 ÷ 19) × Total Profit\n⇒ A's share = (6 ÷ 19) × 53010\n⇒ A's share = 6 × 2790 = 16740\n∴ The correct answer is ₹16740.",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -330,7 +1078,7 @@
           "d": "480"
         },
         "answer": "d",
-        "solution": "Shortcut Trick\n\nUsing the method of Alligation:\n\nRatio of Officers to Non-officers = (130 − 120) : (450 − 130)\n\nRatio = 10 : 320 = 1 : 32\n\nGiven 1 ratio unit = 15 officers, then 32 ratio units = 15 × 32 = 480 non-officers.\n\n∴ The correct answer is 480 non-officers.\n\nAlternate Method\n\nGiven:\nAverage salary of overall staff = Rs. 130\nAverage salary of officers = Rs. 450\nAverage salary of non-officers = Rs. 120\nNumber of officers = 15\n\nFormula Used:\nOverall Average = (Total salary of all staff) ÷ (Total number of staff)\n\nCalculations:\nLet the number of non-officers be x.\n\n⇒ Total salary of officers = 450 × 15 = 6750\n⇒ Total salary of non-officers = 120 × x = 120x\n⇒ Total staff members = 15 + x\n⇒ Overall Average = (6750 + 120x) ÷ (15 + x)\n⇒ 130 = (6750 + 120x) ÷ (15 + x)\n⇒ 130 × (15 + x) = 6750 + 120x\n⇒ 1950 + 130x = 6750 + 120x\n⇒ 130x − 120x = 6750 − 1950\n⇒ 10x = 4800\n⇒ x = 480\n\n∴ The correct answer is 480 non-officers.",
+        "solution": "Shortcut Trick\nUsing the method of Alligation:\n\nRatio of Officers to Non-officers = (130 − 120) : (450 − 130)\nRatio = 10 : 320 = 1 : 32\nGiven 1 ratio unit = 15 officers, then 32 ratio units = 15 × 32 = 480 non-officers.\n∴ The correct answer is 480 non-officers.\n\nAlternate Method\nGiven:\nAverage salary of overall staff = Rs. 130\nAverage salary of officers = Rs. 450\nAverage salary of non-officers = Rs. 120\nNumber of officers = 15\n\nFormula Used:\nOverall Average = (Total salary of all staff) ÷ (Total number of staff)\n\nCalculations:\nLet the number of non-officers be x.\n⇒ Total salary of officers = 450 × 15 = 6750\n⇒ Total salary of non-officers = 120 × x = 120x\n⇒ Total staff members = 15 + x\n⇒ Overall Average = (6750 + 120x) ÷ (15 + x)\n⇒ 130 = (6750 + 120x) ÷ (15 + x)\n⇒ 130 × (15 + x) = 6750 + 120x\n⇒ 1950 + 130x = 6750 + 120x\n⇒ 130x − 120x = 6750 − 1950\n⇒ 10x = 4800\n⇒ x = 480\n∴ The correct answer is 480 non-officers.",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -347,7 +1095,7 @@
           "d": "945"
         },
         "answer": "b",
-        "solution": "Shortcut Trick\n\nWhen a hole is drilled completely through a solid, the net Total Surface Area (TSA) is:\n\nNet TSA = (TSA of Cube) − (2 × Base Area of Hole) + (Curved Surface Area of Hole)\n\nNet TSA = 6a² − 2πr² + 2πrh\n\nNet TSA = 6 × 14² − 2 × (22/7) × (3.5)² + 2 × (22/7) × 3.5 × 14\n\nNet TSA = 1176 − 77 + 308 = 1407 cm²\n\n∴ The correct answer is 1407 cm².\n\nAlternate Method\n\nGiven:\n⇒ Edge of the solid cube (a) = 14 cm\n⇒ Radius of the cylindrical hole (r) = 3.5 cm\n⇒ Height of the cylindrical hole (h) = Edge of cube = 14 cm\n\nFormula Used:\n⇒ Total Surface Area = (TSA of solid cube) − (2 × Area of circular bases of hole) + (CSA of cylindrical hole)\n⇒ TSA = 6a² − 2πr² + 2πrh\n\nCalculations:\n⇒ TSA of cube = 6 × 14 × 14 = 6 × 196 = 1176 cm²\n⇒ Area of 2 circular bases = 2 × (22/7) × 3.5 × 3.5 = 77 cm²\n⇒ CSA of cylindrical hole = 2 × (22/7) × 3.5 × 14 = 308 cm²\n⇒ Total Surface Area = 1176 − 77 + 308 = 1407 cm²\n\n∴ The correct answer is 1407 cm².",
+        "solution": "Shortcut Trick\nWhen a hole is drilled completely through a solid, the net Total Surface Area (TSA) is:\n\nNet TSA = (TSA of Cube) − (2 × Base Area of Hole) + (Curved Surface Area of Hole)\nNet TSA = 6a² − 2πr² + 2πrh\nNet TSA = 6 × 14² − 2 × (22/7) × (3.5)² + 2 × (22/7) × 3.5 × 14\nNet TSA = 1176 − 77 + 308 = 1407 cm²\n∴ The correct answer is 1407 cm².\n\nAlternate Method\nGiven:\n⇒ Edge of the solid cube (a) = 14 cm\n⇒ Radius of the cylindrical hole (r) = 3.5 cm\n⇒ Height of the cylindrical hole (h) = Edge of cube = 14 cm\n\nFormula Used:\n⇒ Total Surface Area = (TSA of solid cube) − (2 × Area of circular bases of hole) + (CSA of cylindrical hole)\n⇒ TSA = 6a² − 2πr² + 2πrh\n\nCalculations:\n⇒ TSA of cube = 6 × 14 × 14 = 6 × 196 = 1176 cm²\n⇒ Area of 2 circular bases = 2 × (22/7) × 3.5 × 3.5 = 77 cm²\n⇒ CSA of cylindrical hole = 2 × (22/7) × 3.5 × 14 = 308 cm²\n⇒ Total Surface Area = 1176 − 77 + 308 = 1407 cm²\n∴ The correct answer is 1407 cm².",
         "tags": {
           "topic": "Mensuration",
           "difficulty": "medium"
@@ -364,7 +1112,7 @@
           "d": "6"
         },
         "answer": "d",
-        "solution": "LCM of 8, 12, and 15 = 120\n\nNumbers divisible by 120 between 800 and 1500 = 840, 960, 1080, 1200, 1320, 1440\n\nTherefore, required answer is 6.",
+        "solution": "LCM of 8, 12, and 15 = 120\nNumbers divisible by 120 between 800 and 1500 = 840, 960, 1080, 1200, 1320, 1440\nTherefore, required answer is 6.",
         "tags": {
           "topic": "Number System",
           "difficulty": "medium"
@@ -471,6 +1219,584 @@
           "topic": "Number System",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_197dbb783a",
+        "q_num": 16,
+        "question": "Three circular fountains are installed in a park, one inside another. The diameters of the fountains are in arithmetic progression. If the circumference of the smallest fountain is 12π m and that of the largest fountain is 20π m, then what is the circumference of the middle fountain?",
+        "options": {
+          "a": "18π",
+          "b": "15π",
+          "c": "16π",
+          "d": "19π"
+        },
+        "answer": "c",
+        "solution": "The circumference of the smallest fountain is 12π m, so its diameter is 12 m. The circumference of the largest fountain is 20π m, so its diameter is 20 m. The diameters are in arithmetic progression. Therefore, the diameter of the middle fountain is the average of the smallest and largest diameters. Middle diameter = (12 + 20) / 2 = 16 m. Now, circumference of the middle fountain = π * 16 = 16π m.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_97f9e498fb",
+        "q_num": 17,
+        "question": "Last month, Anju's monthly saving was Rs. 2500 and Varun's monthly saving was Rs. 3200. This month, Anju's monthly saving is Rs. 2900 and Varun's monthly saving is Rs. 3800. Find the value of [(X - Y) * 100 / Y], where X% is the percentage increase in Varun's monthly saving this month over last month and Y% is the percentage increase in Anju's monthly saving this month over last month.",
+        "options": {
+          "a": "17.1845",
+          "b": "17.1875",
+          "c": "17.1895",
+          "d": "17.1825"
+        },
+        "answer": "b",
+        "solution": "Anju's monthly saving last month = Rs. 2500. Anju's monthly saving this month = Rs. 2900. Y = (2900 - 2500) * 100 / 2500 = 16%. Varun's monthly saving last month = Rs. 3200. Varun's monthly saving this month = Rs. 3800. X = (3800 - 3200) * 100 / 3200 = 18.75%. Hence, [(X - Y) * 100 / Y] = [(18.75 - 16) * 100 / 16] = 17.1875.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5d4940ae7a",
+        "q_num": 18,
+        "question": "A shop had planned to allow a discount of d% on the marked price. At that discount the profit on cost would have been 15%. However, when the discount was increased by 5 percentage points, the profit reduced to 5%. Find the percentage by which the marked price exceeds the cost price.",
+        "options": {
+          "a": "80%",
+          "b": "90%",
+          "c": "100%",
+          "d": "120%"
+        },
+        "answer": "c",
+        "solution": "Let CP = 1 and MP = m. Case 1: m(1 - d) = 1.15. Case 2: m(1 - d - 0.05) = 1.05. Divide case 1 by case 2: (1 - d) / (1 - d - 0.05) = 1.15 / 1.05 = 23 / 21. Let t = 1 - d. Then t / (t - 0.05) = 23 / 21 => 21t = 23t - 1.15 => 2t = 1.15 => t = 0.575 => d = 0.425. From case 1: m = 1.15 / 0.575 = 2.00. Markup% = (2.00 - 1) / 1 * 100 = 100%.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e44d129507",
+        "q_num": 19,
+        "question": "Each edge of a right prism measures 12 m and its height is 20 m. If the base is a regular hexagon, what is the volume of the prism?",
+        "options": {
+          "a": "4320√3 m\n3",
+          "b": "3960√3 m\n3",
+          "c": "4800√3 m\n3",
+          "d": "3600√3 m\n3"
+        },
+        "answer": "a",
+        "solution": "Side a = 12 m and height h = 20 m\nArea of regular hexagon = (3\\u221a3/2)a^2 = (3\\u221a3/2) * 144 = 216\\u221a3 m^2\nHence, Volume = base area X height = 216\\u221a3 X 20 = 4320\\u221a3 m^3",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9f9856338a",
+        "q_num": 20,
+        "question": "A circular metal disc of radius 9 cm has a sector of 120\\u02da removed. The remaining part is rolled to form a closed cone. What is the volume of the cone (in terms of \\u03c0, cm^3)?",
+        "options": {
+          "a": "24√7π",
+          "b": "48√3π",
+          "c": "36√5π",
+          "d": "54√2π"
+        },
+        "answer": "c",
+        "solution": "Original disc radius, R = 9 cm\nCentral angle of remaining sector = 360\\u02da \\u2212 120\\u02da = 240\\u02da\nArc length of remaining = (240/360) X 2\\u03c0R = 12\\u03c0 cm\nBase radius of cone, r = arc length/(2\\u03c0) = 12\\u03c0/(2\\u03c0) = 6 cm\nSlant height of cone, l = R = 9 cm\nHeight of cone, h = \\u221a(l^2 - r^2) = \\u221a(9^2 - 6^2)\n= \\u221a(81 \\u2212 36) = 3\\u221a5 cm\nHence, volume of cone = 1/3 X \\u03c0r^2h\n= 1/3 X \\u03c0 X 6^2 X 3\\u221a5 = 36\\u221a5 \\u03c0 cm^3",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cf2147eca3",
+        "q_num": 21,
+        "question": "The number of males in coaches A and B, are in the ratio of 3: 2. The number of males in coach C is 20% more than the sum of number of males in coaches A and B. If the number of males in coaches B and C together is 400, then find the number of males in coach A.",
+        "options": {
+          "a": "150",
+          "b": "120",
+          "c": "160",
+          "d": "140"
+        },
+        "answer": "a",
+        "solution": "Let number of males in coaches A and B be 3x and 2x respectively.\n\nThen,\n\nNumber of males in coach C = 5x × 120/100 = 6x\n\nGiven,\n\n2x + 6x = 400\n8x = 400\nx = 50\nTherefore,\nNumber of males in coach A = 3x = 3 × 50 = 150",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2aaca2872a",
+        "q_num": 22,
+        "question": "The cost of a pearl is directly proportional to the square of its weight. The cost of a 25 grams pearl is ₹3000. This pearl got broken down into two pieces in the ratio of 3:2. How much loss percent is incurred due to this breakage?",
+        "options": {
+          "a": "55%",
+          "b": "48%",
+          "c": "51%",
+          "d": "42%"
+        },
+        "answer": "b",
+        "solution": "Cost of a pearl ∝ Square of its weight\n3000 = k × 25^2\nk = 24/5\nNow,\nWeight of pieces are 3/5 × 25 = 15 grams and 2/5 × 25 = 10 grams\nTotal cost = 24/5 × 15 × 15 + 24/5 × 10 × 10 = ₹1560\nLoss percentage = [(3000 - 1560)/3000] × 100 = 48%",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6a8d270773",
+        "q_num": 23,
+        "question": "5% simple interest on first part and 7% simple interest on second yields Rs.360 in total, and the second sum is ₹1,200 more than the first. What is the total principal?",
+        "options": {
+          "a": "₹5,600",
+          "b": "₹6,000",
+          "c": "₹5,800",
+          "d": "₹6,200"
+        },
+        "answer": "c",
+        "solution": "Let first = x, second = x + 1200\nInterest = 0.05x + 0.07(x + 1200) = 360\n0.05x + 0.07x + 84 = 360\n=> 0.12x = 276\n=> x = 2300\nTotal = 2300 + 3500 = ₹5800",
+        "tags": {
+          "topic": "SI & CI",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ae8c8c8a37",
+        "q_num": 24,
+        "question": "Amit bought a laptop for ₹20,000 and spent ₹4,000 on repairs. He sold it to Rohit at a profit of 25%. Rohit then spent ₹3,000 on upgrades and sold it to Suresh at a profit of ₹11000. Find the profit percentage earned by Rohit.",
+        "options": {
+          "a": "20%",
+          "b": "33.33%",
+          "c": "66.67%",
+          "d": "45%"
+        },
+        "answer": "b",
+        "solution": "Cost price of laptop for Amit = 20000 + 4000 = Rs. 24000\nCost price of laptop for Rohit = 125% of 24000 + 3000 = Rs. 33000\nProfit % = 11000/33000 × 100 = 33.33%",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b5f9f68d16",
+        "q_num": 25,
+        "question": "A trader bought 10 pens: five at ₹60 each and five at ₹90 each. He marks all pens at the same price and offers a flat 10% discount. If he desires an overall profit of 20%, what should be the common marked price per pen?",
+        "options": {
+          "a": "₹110",
+          "b": "₹100",
+          "c": "₹95",
+          "d": "₹105"
+        },
+        "answer": "b",
+        "solution": "Total cost = 5 × 60 + 5 × 90 = 300 + 450 = ₹750\nNumber of pens = 10\nAverage CP per pen = 750/10 = ₹75\nTarget SP per pen for 20% profit = 1.20 × 75 = ₹90\nLet M = marked price per pen (₹)\nSP after 10% discount = 0.90M\n0.90M = 90\nM = 90 / 0.90 = ₹100",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8eca30b38c",
+        "q_num": 26,
+        "question": "In a division sum, the divisor is six times the quotient and the quotient exceeds the remainder by two. If the divisor is 72, determine the remainder.",
+        "options": {
+          "a": "9",
+          "b": "10",
+          "c": "11",
+          "d": "12"
+        },
+        "answer": "b",
+        "solution": "Divisor = 72\nQuotient = 72/6 = 12\nRemainder = 12 - 2 = 10",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7fe3300cac",
+        "q_num": 27,
+        "question": "The radii of the two concentric circles are 27 cm and 18 cm. The area (in cm²) of the closed figure bounded by the boundaries of the circle is:",
+        "options": {
+          "a": "505π",
+          "b": "405π",
+          "c": "288π",
+          "d": "504π"
+        },
+        "answer": "b",
+        "solution": "Solution\\n\\nShortcut Trick\\n\\nArea of a circular ring = π × (R − r) × (R + r)\\n\\nSubstitute R = 27 and r = 18 into the formula:\\n\\n⇒ Area = π × (27 − 18) × (27 + 18)\\n\\n⇒ Area = π × 9 × 45\\n\\n⇒ Area = 405π\\n\\n∴ The correct answer is 405π cm².\\n\\nAlternate Method\\n\\nGiven:\\n\\n⇒ Outer radius of the circle (R) = 27 cm\\n\\n⇒ Inner radius of the circle (r) = 18 cm\\n\\nFormula Used:\\n\\n⇒ Area of the bounded region (Ring) = Area of outer circle − Area of inner circle\\n\\n⇒ Area = πR^2 − πr^2 = π(R^2 − r^2)\\n\\nCalculations:\\n\\n⇒ Area = π × (27)^2 − π × (18)^2\\n\\n⇒ Area = π × (729 − 324)\\n\\n⇒ Area = 405π\\n\\n∴ The correct answer is 405π cm².\\n\\nAdditional Information\\n\\nConcentric Circles\\n\\nConcentric circles are circles that share the exact same center point but have different radii. The region enclosed between two concentric circles is often referred to as an annulus or a circular ring.\\n\\nWidth of the Circular Ring\\n\\nThe thickness or width of the ring is uniformly distributed and can be calculated by subtracting the inner radius from the outer radius: Width = R − r.\\n\\nAlgebraic Identities\\n\\nWhen solving questions involving the difference of squares, applying the algebraic identity a^2 − b^2 = (a − b)(a + b) will severely reduce the calculation time and prevent squaring large values.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0b532955b6",
+        "q_num": 28,
+        "question": "The simple interest on a sum of money is 9/45 of the sum. If the number of years is numerically 5 times of rate per cent per annum, then find the rate per cent per annum.",
+        "options": {
+          "a": "7%",
+          "b": "2%",
+          "c": "5%",
+          "d": "3%"
+        },
+        "answer": "b",
+        "solution": "Solution\\n\\nShortcut Trick\\n\\nEffective Rate % over the entire period = (SI ÷ P) × 100\\n\\nRate × Time = (9 ÷ 45) × 100\\n\\nGiven Time (T) = 5R, we substitute T directly:\\n\\nR × 5R = (1 ÷ 5) × 100\\n\\n5R^2 = 20 ⇒ R^2 = 4 ⇒ R = 2\\n\\n∴ The correct answer is 2%.\\n\\nAlternate Method\\n\\nGiven:\\n\\nSimple Interest (SI) = 9/45 of Principal (P) = P / 5\\n\\nTime (T) = 5 × Rate (R)\\n\\nFormula Used:\\n\\nSimple Interest (SI) = (P × R × T) ÷ 100\\n\\nCalculations:\\n\\n⇒ P / 5 = (P × R × 5R) ÷ 100\\n\\nDividing both sides by P:\\n\\n⇒ 1 / 5 = 5R^2 / 100\\n\\n⇒ 1 / 5 = R^2 / 20\\n\\n⇒ R^2 = 20 / 5\\n\\n⇒ R^2 = 4\\n\\n⇒ R = √4 = 2\\n\\n∴ The correct answer is 2%.\\n\\nAdditional Information\\n\\nSimple Interest (SI) Basics\\n\\nSimple interest is charged only on the initial principal for the entire duration. The formula is SI = (P × R × T) ÷ 100.\\n\\nImportant Variation Formulas\\n\\nPrincipal (P) = (SI × 100) ÷ (R × T) | Time (T) = (SI × 100) ÷ (P × R)\\n\\nSimple Interest vs Compound Interest\\n\\nSI grows linearly over time, whereas Compound Interest (CI) grows exponentially because interest is calculated on both the principal and the accumulated interest.",
+        "tags": {
+          "topic": "SI & CI",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8b377760b8",
+        "q_num": 29,
+        "question": "If P sin 60° = Q cosec 45°, then the value of (P^2 + Q^2) / (P^2 - Q^2) is equal to:",
+        "options": {
+          "a": "511",
+          "b": "117",
+          "c": "115",
+          "d": "711"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n\nFrom the given equation: P/Q = cosec 45° ÷ sin 60° = √2 ÷ (√3/2) = 2√2/√3\n\nSquaring both sides gives: P^2/Q^2 = 8/3\n\nApplying the Componendo and Dividendo rule directly:\n\n(P^2 + Q^2) / (P^2 − Q^2) = (8 + 3) / (8 − 3) = 11/5\n\n∴ The correct answer is 11/5.\n\nAlternate Method\n\nGiven:\nP sin 60° = Q cosec 45°\n\nConcept Used:\nStandard trigonometric values: sin 60° = √3/2 and cosec 45° = √2\n\nCalculations:\n⇒ P × (√3/2) = Q × √2\n⇒ P/Q = √2 ÷ (√3/2)\n⇒ P/Q = (2√2) / √3\n\nSquaring both sides of the equation:\n⇒ P^2/Q^2 = (2√2)^2 / (√3)^2\n⇒ P^2/Q^2 = 8/3\n\nLet P^2 = 8k and Q^2 = 3k. Substituting these into the required expression:\n⇒ (P^2 + Q^2) / (P^2 − Q^2)\n⇒ (8k + 3k) / (8k − 3k)\n⇒ 11k / 5k\n⇒ 11/5\n\n∴ The correct answer is 11/5.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_939b44f428",
+        "q_num": 30,
+        "question": "P drives a car for 5 hours and after every hour he doubles the speed. In the fifth hour, his speed is 128 km/h. What is his average speed of the journey in km/h?",
+        "options": {
+          "a": "52.6",
+          "b": "55.6",
+          "c": "49.6",
+          "d": "62.6"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n\nWhen time intervals are equal, Average Speed = Arithmetic mean of all speeds.\n\nThe speeds for the 5 hours form a geometric sequence ending in 128: 8, 16, 32, 64, 128 km/h.\n\nSum of speeds = 8 + 16 + 32 + 64 + 128 = 248 km/h.\n\nAverage Speed = 248 ÷ 5 = 49.6 km/h.\n\n∴ The correct answer is 49.6 km/h.\n\nAlternate Method\n\nGiven:\nTotal time taken for the journey = 5 hours\nSpeed in the 5th hour = 128 km/h\nThe speed doubles after every hour.\n\nFormula Used:\nDistance = Speed × Time\nAverage Speed = Total Distance ÷ Total Time\n\nCalculations:\nLet the speed in the 1st hour be v km/h.\nSpeeds in consecutive hours follow the pattern: 2v, 4v, 8v, 16v.\n⇒ Speed in the 5th hour = 16v = 128\n⇒ v = 128 ÷ 16 = 8 km/h\n\nThe distance covered in each 1-hour interval is numerically equal to the speed:\n⇒ Distance in 1st hour = 8 × 1 = 8 km\n⇒ Distance in 2nd hour = 16 × 1 = 16 km\n⇒ Distance in 3rd hour = 32 × 1 = 32 km\n⇒ Distance in 4th hour = 64 × 1 = 64 km\n⇒ Distance in 5th hour = 128 × 1 = 128 km\n⇒ Total Distance = 8 + 16 + 32 + 64 + 128 = 248 km\n⇒ Average Speed = 248 ÷ 5 = 49.6 km/h\n\n∴ The correct answer is 49.6 km/h.",
+        "tags": {
+          "topic": "Time, Speed and Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_42470a3da6",
+        "q_num": 31,
+        "question": "A square pyramid with side 10 cm has a volume of 400 cm^3. Find the total surface area of the pyramid.",
+        "options": {
+          "a": "240 cm2",
+          "b": "300 cm2",
+          "c": "360 cm2",
+          "d": "420 cm2"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n\nVolume = 1/3 × a^2 × h ⇒ 400 = 1/3 × 100 × h ⇒ h = 12 cm.\n\nSlant height l = √(h^2 + (a/2)^2) = √(12^2 + 5^2) = 13 cm.\n\nTotal Surface Area (TSA) = Base Area + Lateral Surface Area\n\n⇒ TSA = a^2 + 2al\n\n⇒ TSA = 10^2 + 2 × 10 × 13 = 100 + 260 = 360 cm^2.\n\n∴ The correct answer is 360 cm^2.\n\nAlternate Method\n\nGiven:\n\nBase side (a) = 10 cm\n\nVolume (V) = 400 cm^3\n\nFormula Used:\n\nVolume = 1/3 × a^2 × h\n\nSlant height (l) = √(h^2 + (a/2)^2)\n\nTotal Surface Area = a^2 + 2al\n\nCalculations:\n\n⇒ 400 = 1/3 × 10^2 × h\n\n⇒ 400 = 1/3 × 100 × h\n\n⇒ h = (400 × 3) ÷ 100\n\n⇒ h = 12 cm\n\nNow, finding the slant height (l):\n\n⇒ l = √(12^2 + (10/2)^2)\n\n⇒ l = √(144 + 25)\n\n⇒ l = √169 = 13 cm\n\nNow, finding the Total Surface Area (TSA):\n\n⇒ TSA = (10)^2 + 2 × 10 × 13\n\n⇒ TSA = 100 + 260\n\n⇒ TSA = 360 cm^2\n\n∴ The correct answer is 360 cm^2.\n\nAdditional Information\n\nVolume of a Pyramid\n\nThe volume of any pyramid is defined as exactly one-third of the volume of the corresponding prism: V = 1/3 × Base Area × Height.\n\nLateral Surface Area (LSA)\n\nFor a regular pyramid, the lateral surface area is formed by identical isosceles triangles: LSA = 1/2 × Perimeter of Base × Slant Height.\n\nEuler's Formula for Polyhedrons\n\nFor any solid polyhedron (like a pyramid), the number of Faces (F), Vertices (V), and Edges (E) are related by the formula: F + V = E + 2.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_724d585803",
+        "q_num": 32,
+        "question": "Two trains start at the same time from Bangalore and Chennai and proceed towards each other at the speeds of 80 km/h and 95 km/h. When they meet, it is found that one train has travelled 180 km more than the other. The distance between Bangalore and Chennai is:",
+        "options": {
+          "a": "345 km",
+          "b": "400 km",
+          "c": "1200 km",
+          "d": "2100 km"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick: When time is constant, Distance \\u221d Speed. Difference in Speed = 95 \\u2212 80 = 15 km/h. Total Speed = 95 + 80 = 175 km/h. Total Distance = (Total Speed \\u00f7 Difference in Speed) \\u00d7 Difference in Distance. Total Distance = (175 \\u00f7 15) \\u00d7 180 = 175 \\u00d7 12 = 2100 km. \\u2234 The correct answer is 2100 km.",
+        "tags": {
+          "topic": "Time, Speed and Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a60e83eb72",
+        "q_num": 33,
+        "question": "Rs. 1092 is divided among 2 men, 6 women and 8 boys so that the share of a man, a woman and a boy are in the ratio 3 ∶ 2 ∶ 1. Then, how much does a man get? (In Rs.)",
+        "options": {
+          "a": "126",
+          "b": "120",
+          "c": "122",
+          "d": "124"
+        },
+        "answer": "a",
+        "solution": "Total equivalent ratio units = (2 × 3) + (6 × 2) + (8 × 1) = 6 + 12 + 8 = 26 units.\nValue of 26 units = ₹1092.\nValue of 1 unit = 1092 ÷ 26 = ₹42.\nShare of 1 man = 3 units = 3 × 42 = ₹126.\n∴ The correct answer is ₹126.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_353b090c78",
+        "q_num": 34,
+        "question": "Two individuals, A and B, have rented a field. A places 12 horses for 5 months and 20 sheep for 4 months. B places 15 cows for 6 months and 30 sheep for 3 months. If 3 horses consume the same food as 5 cows and 6 cows consume the same food as 10 sheep, find what portion of the rent A should pay?",
+        "options": {
+          "a": "3773",
+          "b": "2345",
+          "c": "4356",
+          "d": "5534"
+        },
+        "answer": "a",
+        "solution": "Convert all animals to Cows (C) to find the total equivalent consumption ratio.\nGiven 3H = 5C ⇒ 1H = 5/3 C, and 10S = 6C ⇒ 1S = 3/5 C.\nA's usage = [12 × (5/3) × 5] + [20 × (3/5) × 4] = 100 + 48 = 148 cow-months.\nB's usage = (15 × 6) + [30 × (3/5) × 3] = 90 + 54 = 144 cow-months.\nRatio of rent A : B = 148 : 144 = 37 : 36.\n∴ The correct answer is 37/73.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_30e23abf95",
+        "q_num": 35,
+        "question": "Mohan can complete the work in 28 days, and Rohan can complete the work in 56 days, if Sohan is 60% more efficient than Rohan then in how many days Mohan and Sohan can complete the 90% of the work?",
+        "options": {
+          "a": "13 days",
+          "b": "14 days",
+          "c": "12 days",
+          "d": "11 days"
+        },
+        "answer": "b",
+        "solution": "Let Total Work = LCM(28, 56) = 56 units.\nEfficiency of Mohan = 56 ÷ 28 = 2 units/day, and Rohan = 56 ÷ 56 = 1 unit/day.\nSohan is 60% more efficient than Rohan, so Sohan's efficiency = 1 × 1.6 = 1.6 units/day.\nCombined efficiency of Mohan and Sohan = 2 + 1.6 = 3.6 units/day.\nTime = (90% of Total Work) ÷ (Combined Efficiency) = 50.4 ÷ 3.6 = 14 days.\n∴ The correct answer is 14 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9efa8a336b",
+        "q_num": 36,
+        "question": "What will be the difference between mean and median of the given data?\n21, 11, 27, 8, 5, 12, 7, 23, 3, 14, 9, 19",
+        "options": {
+          "a": "1.25",
+          "b": "1.75",
+          "c": "1.45",
+          "d": "1.5"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\n\nMean of the given data = Sum of data ÷ Total numbers = 159 ÷ 12 = 13.25\n\nArranging data in ascending order: 3, 5, 7, 8, 9, 11, 12, 14, 19, 21, 23, 27\n\nMedian = Average of 6th and 7th terms = (11 + 12) ÷ 2 = 11.5\n\nDifference = 13.25 − 11.5 = 1.75\n\n∴ The correct answer is 1.75.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_adcef2c88c",
+        "q_num": 37,
+        "question": "The areas of the three adjacent faces of a closed cuboidal box are 120 cm^2, 60 cm^2 and 72 cm^2 respectively. Then, the total surface area of the box is:",
+        "options": {
+          "a": "252 cm2",
+          "b": "378 cm2",
+          "c": "504 cm2",
+          "d": "630 cm2"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n\nThe total surface area of a cuboid is twice the sum of the areas of its three adjacent faces.\n\n⇒ Total Surface Area = 2 × (Sum of adjacent faces)\n\n⇒ Total Surface Area = 2 × (120 + 60 + 72)\n\n⇒ Total Surface Area = 2 × 252 = 504 cm^2\n\n∴ The correct answer is 504 cm^2.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7fb49f3d6d",
+        "q_num": 38,
+        "question": "At a dinner party, every two guests used a bowl of rice between them, every three guests used a bowl of dal among them and every four guests used a bowl of curd among them. There are altogether 65 bowls. What is the number of guests present at the party?",
+        "options": {
+          "a": "90",
+          "b": "80",
+          "c": "70",
+          "d": "60"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\n\nLet the total number of guests be the LCM of 2, 3, and 4, which is 12 units.\n\nNumber of bowls used = (12 ÷ 2) + (12 ÷ 3) + (12 ÷ 4) = 6 + 4 + 3 = 13 units.\n\nGiven total bowls = 65, so we equate: 13 units = 65 ⇒ 1 unit = 5.\n\nTotal guests = 12 units = 12 × 5 = 60 guests.\n\n∴ The correct answer is 60 guests.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f1bde47b9a",
+        "q_num": 39,
+        "question": "A, B and C can reap a field in 2 days; B, C and D in 3 days; C, D and A in 7 days; D, A and B in 10 days. In what time can A, B, C and D together reap it?",
+        "options": {
+          "a": "75/14 days",
+          "b": "66/7 days",
+          "c": "630/226 days",
+          "d": "94/3 days"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n\nLet Total Work = LCM(2, 3, 7, 10) = 210 units.\n\nSum of 1-day work (efficiencies) of all 4 groups = (210 ÷ 2) + (210 ÷ 3) + (210 ÷ 7) + (210 ÷ 10) = 105 + 70 + 30 + 21 = 226.\n\nSince each person is included in exactly 3 groups, their combined actual efficiency = 226 / 3 units/day.\n\nTime required = Total Work ÷ Actual Efficiency = 210 ÷ (226 / 3) = 630 / 226 days.\n\n∴ The correct answer is 630/226 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_282457e824",
+        "q_num": 40,
+        "question": "A car travels for 6 hours at different speeds. For the first two hours at 60 m/s, for the next 2 hours at 50 m/s and for the remaining time at x m/s. If the average speed for the entire journey is 52 m/s, what is the value of x?",
+        "options": {
+          "a": "46",
+          "b": "4412",
+          "c": "4512",
+          "d": "48"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nFor equal time intervals (2 hours each), the average speed over the entire journey is simply the arithmetic mean of the individual speeds.\n⇒ Average Speed = (S1 + S2 + S3) ÷ 3\n⇒ 52 = (60 + 50 + x) ÷ 3\n⇒ 156 = 110 + x ⇒ x = 46\n∴ The correct answer is 46.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a45046c8a4",
+        "q_num": 41,
+        "question": "In a trapezium ABCD, AB || CD and perpendicular distance between them is 15 cm. Diagonals of trapezium cut at point O, shorter of the two parallel side is 12 cm long and if ratio of area of \\u2206AOB to the area of \\u2206COD is 1 : 4, then what will be the area of trapezium?",
+        "options": {
+          "a": "270 cm2",
+          "b": "320 cm2",
+          "c": "240 cm2",
+          "d": "305 cm2"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nThe ratio of areas of similar triangles is the square of the ratio of their corresponding sides.\n\nRatio of sides AB and CD = \\u221a(1/4) = 1 : 2\nGiven the shorter side is 12 cm, so the longer side = 12 \\u00d7 2 = 24 cm.\nArea of trapezium = 1/2 \\u00d7 (Sum of parallel sides) \\u00d7 Height\nArea = 1/2 \\u00d7 (12 + 24) \\u00d7 15 = 18 \\u00d7 15 = 270 cm\\u00b2.\n\n\\u2234 The correct answer is 270 cm\\u00b2.\n\nAlternate Method\nGiven:\nIn trapezium ABCD, AB || CD.\n\nHeight (h) = 15 cm.\nShorter side = 12 cm.\nArea(\\u0394AOB) : Area(\\u0394COD) = 1 : 4.\n\nFormula Used:\nArea of Trapezium = 1/2 \\u00d7 (Sum of parallel sides) \\u00d7 height\nFor similar triangles, Ratio of Areas = (Ratio of corresponding sides)\\u00b2\n\nCalculations:\n\\u21d2 In \\u0394AOB and \\u0394COD, AB || CD.\n\n\\u21d2 \\u2220OAB = \\u2220OCD and \\u2220OBA = \\u2220ODC (Alternate interior angles).\n\n\\u21d2 \\u2234 \\u0394AOB \\u223c \\u0394COD (by AA similarity criterion).\n\n\\u21d2 Area(\\u0394AOB) / Area(\\u0394COD) = AB\\u00b2 / CD\\u00b2\n\\u21d2 1 / 4 = AB\\u00b2 / CD\\u00b2\n\\u21d2 AB / CD = \\u221a(1 / 4) = 1 / 2\n\\u21d2 Since the ratio of AB : CD is 1 : 2, AB is the shorter side.\n\\u21d2 AB = 12 cm.\n\\u21d2 CD = 2 \\u00d7 12 = 24 cm.\n\\u21d2 Area of Trapezium = 1/2 \\u00d7 (AB + CD) \\u00d7 h\n\\u21d2 Area = 1/2 \\u00d7 (12 + 24) \\u00d7 15\n\\u21d2 Area = 1/2 \\u00d7 36 \\u00d7 15\n\\u21d2 Area = 18 \\u00d7 15 = 270 cm\\u00b2.\n\n\\u2234 The correct answer is 270 cm\\u00b2.\n\nAdditional Information\nSimilar Triangles Area Theorem\n\nThe ratio of the areas of two similar triangles is strictly equal to the square of the ratio of their corresponding sides.\n\nProperties of a Trapezium\n\nA trapezium is a quadrilateral with exactly one pair of parallel sides. The diagonals of a trapezium intersect each other, dividing themselves proportionally.\n\nArea of a Trapezium\n\nThe area formula is 1/2 \\u00d7 (a + b) \\u00d7 h, where 'a' and 'b' represent the parallel bases, and 'h' represents the perpendicular distance between them.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9ce6639ba4",
+        "q_num": 42,
+        "question": "A can do a piece of work in 15 days and B is 25% more efficient than A. If A and B both work for 4 days and after 4 days C can complete the remaining work alone in 8 days, then find time taken by A, B and C together to complete the whole work.",
+        "options": {
+          "a": "6 days",
+          "b": "5 days",
+          "c": "8 days",
+          "d": "10 days"
+        },
+        "answer": "b",
+        "solution": "Assume A's efficiency = 4 units/day → B's efficiency = 1.25 × 4 = 5 units/day.\nTotal Work = 15 × 4 = 60 units.\nWork done by A & B in 4 days = (4 + 5) × 4 = 36 units → Remaining = 24 units.\nC's efficiency = 24 ÷ 8 = 3 units/day → Total combined efficiency = 4 + 5 + 3 = 12 units/day.\n∴ The correct answer is 5 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2b8978b3f9",
+        "q_num": 43,
+        "question": "The speed of a boat downstream is 2.5 times its speed upstream. If the total time taken by the boat for going 15 km downstream and the same distance upstream is 4 2/3 hours, then what is the speed (in km/h) of the boat downstream?",
+        "options": {
+          "a": "1112",
+          "b": "1114",
+          "c": "1058",
+          "d": "10"
+        },
+        "answer": "b",
+        "solution": "Ratio of downstream to upstream speed = 2.5 : 1 = 5 : 2. For equal distance, the time ratio is inversely proportional to the speed ratio = 2 : 5. Total time = 2 + 5 = 7 units → 14/3 hours. Time taken downstream (2 units) = (14/3) × (2/7) = 4/3 hours. Downstream speed = Distance ÷ Time = 15 ÷ (4/3) = 11.25 = 45/4 km/h.",
+        "tags": {
+          "topic": "Time, Speed and Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5912d87bd4",
+        "q_num": 44,
+        "question": "The length of a room is 5.5 m and the width is 3.75 m. Find the cost of paving the floor with slabs at the rate of Rs. 800 per sq. meter.",
+        "options": {
+          "a": "Rs. 15000",
+          "b": "Rs. 15550",
+          "c": "Rs. 15600",
+          "d": "Rs. 16500"
+        },
+        "answer": "d",
+        "solution": "Area of the floor = Length × Width = 5.5 × 3.75 = 20.625 m². Total Cost = Area × Rate = 20.625 × 800 = Rs. 16500.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc97bb86c7",
+        "q_num": 45,
+        "question": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm^3) (rounded off to the closest integral value)?",
+        "options": {
+          "a": "461",
+          "b": "565",
+          "c": "368",
+          "d": "197"
+        },
+        "answer": "b",
+        "solution": "Using the combined volume formula for a cone on a hemisphere: V = (1/3) * π * r^2 * (2r + h). Cone height h = Total height - radius = 11.6 - 5.6 = 6 cm. V = (1/3) * (22/7) * 5.6 * 5.6 * (2 * 5.6 + 6) ≈ 565.07 cm^3. Rounding off to the closest integer gives 565 cm^3. ∴ The correct answer is 565 cm^3.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_38301e4a96",
+        "q_num": 46,
+        "question": "Aman's average score in a series of tests was ‘y’. He appeared in one more test and obtained score ‘z’. If Aman appeared in total ‘n’ tests, then which one of the following expression shows his average score for all the tests?",
+        "options": {
+          "a": "y(n−1)+zn",
+          "b": "y(n−1)+zn",
+          "c": "y(n−1)+1n",
+          "d": "y(n−1)n"
+        },
+        "answer": "a",
+        "solution": "Total number of tests taken by Aman = n. Number of initial tests before the last one = n - 1. Sum of scores in the first (n - 1) tests = Average * Count = y(n - 1). Total sum of all n tests = Initial sum + Score of last test = y(n - 1) + z. New Average = Total Sum / Total Tests = [y(n - 1) + z] / n. ∴ The correct answer is [y(n - 1) + z] / n.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_dc9ec085ba",
+        "q_num": 47,
+        "question": "What is the area (in square units) of the triangle formed by the graphs of the equations: 2x - y + 8 = 0 and 8x + 3y - 24 = 0, and y = 0?",
+        "options": {
+          "a": "28",
+          "b": "24",
+          "c": "36",
+          "d": "32"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick: Put y = 0 to find the base points on the X-axis: 2x + 8 = 0 => x = -4 and 8x - 24 = 0 => x = 3. The length of the base = 3 - (-4) = 7 units. To find the height, find the y-coordinate of the intersection of 2x - y + 8 = 0 and 8x + 3y - 24 = 0. Multiply the first equation by 4 to get 8x - 4y + 32 = 0, and subtract it from the second: 7y - 56 = 0 => y = 8. Area = 1/2 × Base × Height = 1/2 × 7 × 8 = 28 sq units. ∴ The correct answer is 28 sq units.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_61937a1a5c",
+        "q_num": 48,
+        "question": "An electric fan lists at Rs.265.80 and is sold at a discount of 10%. The shopkeeper gives a further discount of 8% for cash payment. The selling price of the fan, when payment is made in cash, is:",
+        "options": {
+          "a": "Rs.210.07",
+          "b": "Rs.239.22",
+          "c": "Rs.220.08",
+          "d": "Rs.250.00"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick: Using the multiplying factor method for successive discounts: Selling Price = Marked Price × (100 - D1)% × (100 - D2)%. SP = 265.80 × 0.90 × 0.92 = 265.80 × 0.828 = 220.0824 ≈ 220.08. ∴ The correct answer is Rs. 220.08.",
+        "tags": {
+          "topic": "Profit & Loss",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b5da322451",
+        "q_num": 49,
+        "question": "In a Maths quiz 10 students scored 20 marks, six students scored 19 marks, five students scored 18 marks, four students scored 17 marks, and two students scored 12 marks. The average marks scored by the class (correct to 2 decimal places) is:",
+        "options": {
+          "a": "17.34",
+          "b": "18.37",
+          "c": "15.23",
+          "d": "16.25"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nUse the Net Deviation Method by taking an Assumed Average = 18.\nNet deviation = (10 × 2) + (6 × 1) + (5 × 0) + (4 × −1) + (2 × −6)\nNet deviation = 20 + 6 + 0 − 4 − 12 = +10 marks\nAverage change per student = +10 ÷ 27 ≈ +0.37\nActual Average = 18 + 0.37 = 18.37\n∴ The correct answer is 18.37 marks.\n\nAlternate Method\nFrequency Distribution of Marks\nMarks Scored\n2\n12\n4\n17\n5\n18\n6\n19\n10\n20\n\nGiven:\nDistribution of students and their marks:\n\n10 students scored 20 marks\n\n6 students scored 19 marks\n\n5 students scored 18 marks\n\n4 students scored 17 marks\n\n2 students scored 12 marks\n\nFormula Used:\nAverage = Sum of all observations ÷ Total number of observations\n\nCalculations:\n⇒ Total students = 10 + 6 + 5 + 4 + 2 = 27\n⇒ Total marks = (10 × 20) + (6 × 19) + (5 × 18) + (4 × 17) + (2 × 12)\n⇒ Total marks = 200 + 114 + 90 + 68 + 24\n⇒ Total marks = 496\n⇒ Average marks = 496 ÷ 27\n⇒ Average marks ≈ 18.3703...\n∴ The correct answer is 18.37 marks.\n\nAdditional Information\nWeighted Average\n\nWhen data sets have different frequencies or weights, the weighted average is calculated as Sum(wi × xi) ÷ Sum(wi), where w is the respective frequency and x is the value.\n\nAssumed Mean Deviation Method\n\nA faster way to find averages involves picking an assumed mean (A), calculating total deviation (D) of all items from A, and finding True Average = A + (D ÷ N).\n\nCombined Average\n\nFor two groups with sizes n1 and n2 and averages A1 and A2, the combined average is given by the formula (n1A1 + n2A2) ÷ (n1 + n2).",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -491,7 +1817,7 @@
           "d": "160"
         },
         "answer": "b",
-        "solution": "Shortcut Trick\n\nDifference in percentage = 40% − 20% = 20%\n\nDifference in marks = 72 (shortfall) + 8 (excess) = 80 marks\n\nSince 20% of maximum marks = 80 marks\n\nPassing marks = 20% marks + 72 marks = 80 + 72 = 152\n\n∴ The correct answer is 152 marks.\n\nAlternate Method\n\nGiven:\n\nMarks scored in case 1 = 20% (Failed by 72 marks)\n\nMarks scored in case 2 = 40% (8 marks more than passing marks)\n\nCalculation:\n\nLet the total maximum marks be x.\n\n⇒ Passing marks = 20% of x + 72\n\n⇒ Passing marks = 40% of x − 8\n\nEquating both the expressions:\n\n⇒ 20% of x + 72 = 40% of x − 8\n\n⇒ 40% of x − 20% of x = 72 + 8\n\n⇒ 20% of x = 80\n\n⇒ x = (80 × 100) ÷ 20\n\n⇒ x = 400\n\n⇒ Passing marks = 20% of 400 + 72\n\n⇒ Passing marks = 80 + 72 = 152\n\n∴ The correct answer is 152 marks.\n\nAdditional Information\n\nPassing Marks Concept\n\nWhen a student fails by a certain margin, Passing Marks = Obtained Marks + Shortfall Marks.\n\nExcess Marks Concept\n\nWhen a student scores above passing marks, Passing Marks = Obtained Marks − Excess Marks.\n\nDifference Rule\n\nThe percentage difference between the two scenarios will always be equal to the sum of the shortfall marks and the excess marks.",
+        "solution": "Shortcut Trick\nDifference in percentage = 40% − 20% = 20%\nDifference in marks = 72 (shortfall) + 8 (excess) = 80 marks\nSince 20% of maximum marks = 80 marks\nPassing marks = 20% marks + 72 marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAlternate Method\nGiven:\nMarks scored in case 1 = 20% (Failed by 72 marks)\nMarks scored in case 2 = 40% (8 marks more than passing marks)\n\nCalculation:\nLet the total maximum marks be x.\n⇒ Passing marks = 20% of x + 72\n⇒ Passing marks = 40% of x − 8\n\nEquating both the expressions:\n\n⇒ 20% of x + 72 = 40% of x − 8\n⇒ 40% of x − 20% of x = 72 + 8\n⇒ 20% of x = 80\n⇒ x = (80 × 100) ÷ 20\n⇒ x = 400\n⇒ Passing marks = 20% of 400 + 72\n⇒ Passing marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAdditional Information\nPassing Marks Concept\nWhen a student fails by a certain margin, Passing Marks = Obtained Marks + Shortfall Marks.\n\nExcess Marks Concept\n\nWhen a student scores above passing marks, Passing Marks = Obtained Marks − Excess Marks.\nDifference Rule\n\nThe percentage difference between the two scenarios will always be equal to the sum of the shortfall marks and the excess marks.",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -508,7 +1834,7 @@
           "d": "None of the above"
         },
         "answer": "b",
-        "solution": "Shortcut Trick\n\nLet the required number be 100%.\n\nThe three parts given are 100%, 50%, and 25%.\n\nSum of these parts = 100% + 50% + 25% = 175%\n\nAverage = 175% ÷ 3 = 280\n\n⇒ 100% = (280 × 3 × 100) ÷ 175 = 480\n\n∴ The correct answer is 480.",
+        "solution": "Shortcut Trick\nLet the required number be 100%.\n\nThe three parts given are 100%, 50%, and 25%.\n\nSum of these parts = 100% + 50% + 25% = 175%\nAverage = 175% ÷ 3 = 280\n⇒ 100% = (280 × 3 × 100) ÷ 175 = 480\n∴ The correct answer is 480.",
         "tags": {
           "topic": "Percentage",
           "difficulty": "medium"
@@ -525,7 +1851,7 @@
           "d": "4 times"
         },
         "answer": "b",
-        "solution": "Relative speed = 20 − 12 = 8 m/s\n\nFor one overtake, the faster athlete must gain one complete lap = 1000 m.\n\nTime for one overtake = 1000 / 8 = 125 seconds\n\nTime taken by the faster athlete to finish 5 km = 5000 / 20 = 250 seconds\n\nNumber of overtakes = 250 / 125 = 2\n\nHence, (B) is correct.",
+        "solution": "Relative speed = 20 − 12 = 8 m/s\n\nFor one overtake, the faster athlete must gain one complete lap = 1000 m.\n\nTime for one overtake = 1000 / 8 = 125 seconds\nTime taken by the faster athlete to finish 5 km = 5000 / 20 = 250 seconds\nNumber of overtakes = 250 / 125 = 2\nHence, (B) is correct.",
         "tags": {
           "topic": "Time, Speed and Distance",
           "difficulty": "medium"
@@ -542,7 +1868,7 @@
           "d": "12.8 cm"
         },
         "answer": "c",
-        "solution": "Since two of the angles are similar, the triangles ABC and QRP are similar.\n\nTherefore,\nAB/BC = QR/PR\n12/15 = QR/12\nQR = 144/15 = 9.6 cm",
+        "solution": "Since two of the angles are similar, the triangles ABC and QRP are similar.\nTherefore,\nAB/BC = QR/PR\n12/15 = QR/12\nQR = 144/15 = 9.6 cm",
         "tags": {
           "topic": "Geometry",
           "difficulty": "medium"
@@ -559,7 +1885,7 @@
           "d": "59/2"
         },
         "answer": "a",
-        "solution": "cos87° = cos(90° - 3°) = sin3°\ncos84° = cos(90° - 6°) = sin6°\n\nTherefore, cos²87° + cos²84° + cos²81° + ...... + cos²6° + cos²3°\n= (cos²87° + cos²3°) + (cos²84° + cos²6°)... to 14 terms + cos²45°\n= (sin²3° + cos²3°) + (sin²6° + cos²6°)... to 14 terms + 1/2\n= 14 + 1/2 = 29/2",
+        "solution": "cos87° = cos(90° - 3°) = sin3°\ncos84° = cos(90° - 6°) = sin6°\nTherefore, cos²87° + cos²84° + cos²81° + ...... + cos²6° + cos²3°\n= (cos²87° + cos²3°) + (cos²84° + cos²6°)... to 14 terms + cos²45°\n= (sin²3° + cos²3°) + (sin²6° + cos²6°)... to 14 terms + 1/2\n= 14 + 1/2 = 29/2",
         "tags": {
           "topic": "Trigonometry",
           "difficulty": "medium"
@@ -613,6 +1939,261 @@
         "solution": "Simplify: √72 = 6√2 and √32 = 4√2. Therefore, x = 6√2 - 4√2 = 2√2. Now, x² = (2√2)² = 4 × 2 = 8.",
         "tags": {
           "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b5868a537d",
+        "q_num": 9,
+        "question": "The non-terminating repeating decimal among the following fractions is:",
+        "options": {
+          "a": "153/4",
+          "b": "189/20",
+          "c": "147/26",
+          "d": "177/8"
+        },
+        "answer": "c",
+        "solution": "[If the denominator contains only factors of 2 and/or 5, then its decimal expansion will terminate]\n\n(a) 153/4\nFactor of 4 = 2 × 2 [Terminating decimal]\n\n(b) 189/20\nFactor of 20 = 2 × 2 × 5 [Terminating decimal]\n\n(c) 147/26\nFactor of 26 = 2 × 13 [Non-terminating decimal]\n\n(d) 177/8\nFactor of 8 = 2 × 2 × 2 [Terminating decimal]",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b5d9ec3f1d",
+        "q_num": 10,
+        "question": "A boy 2.1 m tall can just see the sun over a 42.8 m tall building, which is 40.7\\u221a3 m away from him. The angle of elevation of the sun is:",
+        "options": {
+          "a": "30˚",
+          "b": "90˚",
+          "c": "45˚",
+          "d": "60˚"
+        },
+        "answer": "a",
+        "solution": "BD = CE = Height of boy = 2.1 m\nAE = Height of building = 42.8 m\nDE = BC = Distance between boy and building = 40.7\\u221a3 m\nAC = 42.8 m - 2.1 m = 40.7 m\nTan \\u03b8 = 40.7/(40.7\\u221a3)\nTan \\u03b8 = 1/\\u221a3\n\\u03b8 = 30\\u02da",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2e59dc9078",
+        "q_num": 11,
+        "question": "If the value of 1 / 32.12 is 0.03113, then what is the value of 1 / 0.00003212?",
+        "options": {
+          "a": "3113",
+          "b": "31130",
+          "c": "311.3",
+          "d": "31.13"
+        },
+        "answer": "b",
+        "solution": "1/32.12 = 0.03113\n\n100/3212 = 0.03113\n\n1/0.00003212 = 100000000/3212 = 31130",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f67fb20ec6",
+        "q_num": 12,
+        "question": "The distance between the point P ((3X - 2), 15) and the origin is 17 units. What is the value of X?",
+        "options": {
+          "a": "10/3",
+          "b": "-2",
+          "c": "-3",
+          "d": "Both (a) and (b)"
+        },
+        "answer": "d",
+        "solution": "Let point O(0, 0) be the origin\nSo, PO^2 = 17^2\n=> [(3x - 2) - 0]^2 + 15^2 = 289\n=> (3X - 2)^2 = -225 + 289\n=> (3x - 2)^2 = 64\n=> 3X - 2 = ±8\nSo, X = 10/3 , -2",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1e3a1f181f",
+        "q_num": 13,
+        "question": "On a sum of money, the compound interest for 2 years is Rs. 832, while the simple interest for the same time period is Rs.800, then find out the difference amount for period of 3 years?",
+        "options": {
+          "a": "98.56",
+          "b": "96.43",
+          "c": "90",
+          "d": "None of these"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\n\nSI for 1 year = 800 ÷ 2 = ₹400\n\nDifference for 2 years = CI − SI = 832 − 800 = ₹32\n\nRate (R) = (Interest on 1st year SI ÷ 1st year SI) × 100 = (32 ÷ 400) × 100 = 8%\n\nFor 3 years, Difference = 3 × (2-year Diff) + (R% of 2-year Diff)\n\nDifference = 3 × 32 + (8% of 32) = 96 + 2.56 = 98.56\n\n∴ The correct answer is ₹98.56.\n\nAlternate Method\n\nGiven:\n\nCompound Interest (CI) for 2 years = ₹832\n\nSimple Interest (SI) for 2 years = ₹800\n\nFormula Used:\n\nDifference for 2 years (D2) = P × (R ÷ 100)^2\n\nDifference for 3 years (D3) = 3 × D2 + (R% of D2)\n\nCalculations:\n\n⇒ SI for 1 year = Total SI ÷ 2 = 800 ÷ 2 = ₹400\n\n⇒ Difference between CI and SI for 2 years (D2) = 832 − 800 = ₹32\n\n⇒ The difference of ₹32 is the interest earned exactly on the first year's SI (₹400).\n\n⇒ Rate of Interest (R) = (32 ÷ 400) × 100% = 8%\n\n⇒ Difference for 3 years (D3) = 3 × D2 + (R% of D2)\n\n⇒ D3 = 3 × 32 + (8 ÷ 100) × 32\n\n⇒ D3 = 96 + 2.56\n\n⇒ D3 = ₹98.56\n\n∴ The correct answer is ₹98.56.\n\nAdditional Information\n\nTree Method for Compound Interest\n\nIt breaks down CI into simple interest and interest-on-interest components. The 1st row is always the Simple Interest. The lower rows sum up to represent the exact difference between CI and SI over the years.\n\nCI vs SI Difference (2 Years)\n\nFormula: Diff2 = P × (R ÷ 100)^2. It strictly represents the interest generated on the first year's simple interest.\n\nCI vs SI Difference (3 Years)\n\nFormula: Diff3 = P × (R ÷ 100)^2 × (3 + R ÷ 100). For fast calculation, simply multiply the 2-year difference by 3 and add the rate percentage of the 2-year difference.",
+        "tags": {
+          "topic": "SI & CI",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_56a4391f1e",
+        "q_num": 14,
+        "question": "Two tangents TP and TQ are drawn to circle with centre O from an external point T, where P and Q are points on circumference of the circle. If \\u2220PTQ = 50\\u00b0, then find the value of \\u2220TOQ.",
+        "options": {
+          "a": "100°",
+          "b": "75°",
+          "c": "55°",
+          "d": "65°"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick: The line joining the external point to the centre bisects the angle between the two tangents. \\u21d2 \\u2220OTQ = \\u2220PTQ \\u00f7 2 = 50\\u00b0 \\u00f7 2 = 25\\u00b0. In right-angled \\u0394OQT, the radius OQ is perpendicular to the tangent TQ at point Q (\\u2220OQT = 90\\u00b0). \\u21d2 \\u2220TOQ = 90\\u00b0 \\u2212 \\u2220OTQ = 90\\u00b0 \\u2212 25\\u00b0 = 65\\u00b0. \\u2234 The correct answer is 65\\u00b0.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_04596cae22",
+        "q_num": 15,
+        "question": "A closed cylindrical tank with a height of 1 m and a base diameter of 140 cm must be constructed from a metal sheet. For the same, how many m\\u00b2 of the sheet are required? [Use \\u03c0 = 22/7]",
+        "options": {
+          "a": "10.56 m2",
+          "b": "7.48 m2",
+          "c": "9.23 m2",
+          "d": "7 m2"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick: For a closed cylinder, Total Surface Area = 2\\u03c0r(r + h). Radius (r) = 140 \\u00f7 2 = 70 cm = 0.7 m, Height (h) = 1 m. Area = 2 \\u00d7 (22/7) \\u00d7 0.7 \\u00d7 (0.7 + 1). Area = 44 \\u00d7 0.1 \\u00d7 1.7 = 7.48. \\u2234 The correct answer is 7.48 m\\u00b2.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_94d1a43c6a",
+        "q_num": 16,
+        "question": "A vessel can be filled by a tap A in 8 minutes, and by another tap B in 10 minutes. A third tap C can empty the vessel in 4 minutes. If all taps are opened simultaneously when the vessel is half full, then which of the following is true?",
+        "options": {
+          "a": "The vessel will be filled in 20 minutes.",
+          "b": "The vessel will be filled in 40 minutes.",
+          "c": "The vessel will be emptied in 40 minutes.",
+          "d": "The vessel will be emptied in 20 minutes."
+        },
+        "answer": "d",
+        "solution": "Total Capacity = LCM(8, 10, 4) = 40 units.\nEfficiency of taps → A: +5, B: +4, C: −10.\nNet efficiency = 5 + 4 − 10 = −1 unit/min (Negative means vessel empties).\nSince the vessel is half full, volume to empty = 40 ÷ 2 = 20 units.\nTime to empty the vessel = 20 ÷ 1 = 20 minutes.\n∴ The correct answer is emptied in 20 minutes.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_40daccfd72",
+        "q_num": 17,
+        "question": "What should come in place of both x in the equation x / √128 = √162 / x?",
+        "options": {
+          "a": "12",
+          "b": "14",
+          "c": "144",
+          "d": "196"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\n\nCross-multiply the given values to solve for x^2 directly:\n\nx^2 = √128 × √162 = √(128 × 162)\n\nx^2 = √(64 × 2 × 81 × 2) = √(64 × 81 × 4)\n\nx^2 = 8 × 9 × 2 = 144\n\nx = √144 = 12\n\n∴ The correct answer is 12.\n\nAlternate Method\n\nGiven:\n\nx / √128 = √162 / x\n\nCalculation:\n\n⇒ Cross-multiplying both sides, we get:\n\n⇒ x × x = √128 × √162\n\n⇒ x^2 = √(128 × 162)\n\n⇒ Factorizing the numbers into perfect squares:\n\n⇒ x^2 = √(64 × 2 × 81 × 2)\n\n⇒ x^2 = √(64 × 81 × 4)\n\n⇒ Taking the square root of the perfect squares:\n\n⇒ x^2 = 8 × 9 × 2\n\n⇒ x^2 = 144\n\n⇒ x = √144\n\n⇒ x = 12\n\n∴ The correct answer is 12.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3e4dbc1270",
+        "q_num": 18,
+        "question": "An equilateral triangle with side a units is cut on the vertices to make it a regular hexagon. What is the area of the hexagon?",
+        "options": {
+          "a": "3a223√ square units",
+          "b": "2a233√ square units",
+          "c": "2a23√ square units",
+          "d": "a223√ square units"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nWhen the vertices of an equilateral triangle are cut to form a regular hexagon, the side length is exactly trisected.\n\nSide of the regular hexagon = Side of triangle \\u00f7 3 = a / 3.\nArea of a regular hexagon = 6 \\u00d7 Area of small equilateral triangle = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 (side)\\u00b2.\nArea = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 (a / 3)\\u00b2 = (3\\u221a3 \\u00f7 2) \\u00d7 (a\\u00b2 \\u00f7 9).\nArea = \\u221aa\\u00b2 \\u00f7 6 = a\\u00b2 / (2\\u221a3).\n\n\\u2234 The correct answer is a\\u00b2 / (2\\u221a3) square units.\n\nAlternate Method\nGiven:\nAn equilateral triangle with side length a.\n\nThe vertices are cut out to make a regular hexagon.\n\nFormula Used:\nArea of an equilateral triangle = (\\u221a3 \\u00f7 4) \\u00d7 a\\u00b2\nArea of a regular hexagon = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 x\\u00b2 (where x is the side length)\n\nCalculations:\n\\u21d2 Let the side length of the regular hexagon be x.\n\n\\u21d2 When cutting the vertices of an equilateral triangle to form a regular hexagon, the cut-out portions are smaller equilateral triangles of side length x.\n\n\\u21d2 The original side 'a' consists of three linear segments: one side of a cut-off triangle, one side of the hexagon, and one side of another cut-off triangle.\n\n\\u21d2 x + x + x = a\n\\u21d2 3x = a\n\\u21d2 x = a / 3\n\n\\u21d2 The area of the regular hexagon is the combined area of 6 small equilateral triangles of side x.\n\n\\u21d2 Area = 6 \\u00d7 [(\\u221a3 \\u00f7 4) \\u00d7 (a / 3)\\u00b2]\n\\u21d2 Area = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 (a\\u00b2 \\u00f7 9)\n\\u21d2 Area = (6\\u221a3 \\u00d7 a\\u00b2) \\u00f7 36\n\\u21d2 Area = (\\u221a3 \\u00d7 a\\u00b2) \\u00f7 6\n\n\\u21d2 Multiplying numerator and denominator by \\u221a3 to simplify the fraction:\n\n\\u21d2 Area = (\\u221a3 \\u00d7 \\u221a3 \\u00d7 a\\u00b2) \\u00f7 (6 \\u00d7 \\u221a3) = 3a\\u00b2 \\u00f7 6\\u221a3\n\\u21d2 Area = a\\u00b2 / (2\\u221a3)\n\n\\u2234 The correct answer is a\\u00b2 / (2\\u221a3) square units.\n\nAdditional Information\nArea of an Equilateral Triangle\n\nThe area of an equilateral triangle with side 'a' is given by Area = (\\u221a3 \\u00f7 4) \\u00d7 a\\u00b2, and its height is h = (\\u221a3 \\u00f7 2) \\u00d7 a.\n\nRegular Hexagon Area\n\nA regular hexagon with side 'x' is structurally made of 6 identical equilateral triangles. Its total area is 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 x\\u00b2 = (3\\u221a3 \\u00f7 2) \\u00d7 x\\u00b2.\n\nInradius & Circumradius of Equilateral Triangle\n\nFor an equilateral triangle of side 'a', the inradius is r = a \\u00f7 (2\\u221a3) and the circumradius is R = a \\u00f7 \\u221a3. Note that the circumradius is always exactly double the inradius (R = 2r).\n\nMax Area Hexagon in a Triangle\n\nThe largest regular hexagon that can be inscribed in any equilateral triangle is formed precisely by cutting off its corners, and its side length is always strictly one-third of the parent triangle's side.",
+        "tags": {
+          "topic": "Mensuration",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d09753e158",
+        "q_num": 19,
+        "question": "From 11 to 50, how many numbers are there which are exactly divisible by 7 but not by 3?",
+        "options": {
+          "a": "Two",
+          "b": "Four",
+          "c": "Five",
+          "d": "Six"
+        },
+        "answer": "b",
+        "solution": "Total multiples of 7 from 11 to 50 = (49 − 14) ÷ 7 + 1 = 6. Total multiples of 21 (divisible by both 7 and 3) from 11 to 50 = (42 − 21) ÷ 21 + 1 = 2. Total numbers divisible by 7 but not by 3 = 6 − 2 = 4.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d10d8d3a7e",
+        "q_num": 20,
+        "question": "The present population of a city is 17,500. The population decreases by 12% in the first year and increases by 8% in the second year. Find the population after 2 years.",
+        "options": {
+          "a": "16,632",
+          "b": "28,500",
+          "c": "15,350",
+          "d": "21,320"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick: Use the successive multiplying factor method for consecutive percentage changes: Final Population = Initial Population * (1 - Decrease%) * (1 + Increase%). Final Population = 17500 * (88 / 100) * (108 / 100) = 17500 * 0.88 * 1.08 = 15400 * 1.08 = 16632. ∴ The correct answer is 16,632.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_420dcdaa86",
+        "q_num": 21,
+        "question": "In ΔABC, ∠B = 90° and BD ⟂ AC. If AC = 9 cm and AD = 3 cm, then BD is equal to:",
+        "options": {
+          "a": "2√3 cm",
+          "b": "3√3 cm",
+          "c": "2√2 cm",
+          "d": "3√2 cm"
+        },
+        "answer": "d",
+        "solution": "By the Geometric Mean Theorem for a right-angled triangle: Altitude to hypotenuse = √(Product of hypotenuse segments). CD = AC - AD = 9 - 3 = 6 cm, BD = √(3 * 6) = √18 = 3√2 cm. ∴ The correct answer is 3√2 cm.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0181530d17",
+        "q_num": 22,
+        "question": "If cot 18° = pq, then the value of cosec^2(378°) / (1 + tan^2(378°)) is",
+        "options": {
+          "a": "1",
+          "b": "pq",
+          "c": "p3q3",
+          "d": "p2q2"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick: Reduce the angle to the first quadrant: 378° = 360° + 18°. The expression becomes cosec^2 18° / (1 + tan^2 18°). Using 1 + tan^2 θ = sec^2 θ, it simplifies to cosec^2 18° / sec^2 18°. Since cosec θ / sec θ = cot θ, the entire expression strictly reduces to cot^2 18°. Substitute cot 18° = p/q directly to get (p/q)^2 = p^2/q^2. ∴ The correct answer is p^2/q^2.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5f3c9193b8",
+        "q_num": 23,
+        "question": "Pabitra takes twice as long as Kader or three times as long as Rahim to complete a task. If they work together, they can complete the task in 2 days. How long will it take Kader to complete the task on his own?",
+        "options": {
+          "a": "6 days",
+          "b": "5 days",
+          "c": "12 days",
+          "d": "8 days"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick: Ratio of time taken by Pabitra, Kader, and Rahim = 6 : 3 : 2. Efficiency ratio = 1/6 : 1/3 : 1/2 = 1 : 2 : 3. Combined efficiency = 1 + 2 + 3 = 6 units/day. Total Work = Combined Efficiency × Time = 6 × 2 = 12 units. Time taken by Kader alone = Total Work ÷ Kader's Efficiency = 12 ÷ 2 = 6 days. ∴ The correct answer is 6 days.",
+        "tags": {
+          "topic": "Time & Work",
           "difficulty": "medium"
         }
       }

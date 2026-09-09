@@ -2,6 +2,8 @@ import React from 'react';
 import { Check, RotateCcw, Bookmark, BookmarkCheck, Trash2, Flag, Clock, Zap } from 'lucide-react';
 import { Question } from '../types';
 
+import { cleanSolutionText } from '../utils/cleanSolution';
+
 const formatBilingualText = (text: string) => {
   if (!text) return '';
   return text
@@ -15,9 +17,7 @@ const formatBilingualText = (text: string) => {
 };
 
 const formatSolution = (sol: string) => {
-  if (!sol) return '';
-  const parts = sol.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
-  return parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
+  return cleanSolutionText(sol);
 };
 
 const fmt = (s: number) =>
@@ -291,7 +291,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               <div className="flex items-center gap-1.5 text-amber-600 mb-2">
                 <Zap className="w-4 h-4 fill-amber-500 text-amber-500" />
                 <span className="text-sm font-bold text-gray-900 underline decoration-amber-400 decoration-2 underline-offset-2">
-                  Shortcut Trick
+                  {/shortcut trick/i.test(question.solution) ? 'Shortcut Trick & Detailed Solution' : 'Detailed Explanation'}
                 </span>
               </div>
               <div className="text-[13.5px] text-gray-800 leading-relaxed font-mono bg-gray-50 p-4 rounded-md border border-gray-100 whitespace-pre-line">

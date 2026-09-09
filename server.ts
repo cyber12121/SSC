@@ -5,6 +5,7 @@ import fs from "fs";
 import cors from "cors";
 import dotenv from "dotenv";
 import crypto from "crypto";
+import { cleanSolutionText } from "./src/utils/cleanSolution";
 
 dotenv.config();
 
@@ -242,6 +243,107 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
   }
 }
 
+// Compute Mock Score & Accuracy Report
+function computeMockScoreReport(rawList: any[], mockTitle?: string): any {
+  const subjectGroups: Record<string, any[]> = {
+    Reasoning: [],
+    "General Awareness": [],
+    Mathematics: [],
+    English: []
+  };
+
+  rawList.forEach(q => {
+    const rawSubject = q.subject || q.section || "Quantitative Aptitude";
+    const { name } = normalizeSubject(rawSubject);
+    if (subjectGroups[name]) {
+      subjectGroups[name].push(q);
+    }
+  });
+
+  const activeSubjects = Object.keys(subjectGroups).filter(k => subjectGroups[k].length > 0);
+  const isFullMock = activeSubjects.length >= 2 || rawList.length >= 70;
+  const mockType: "full" | "sectional" = isFullMock ? "full" : "sectional";
+
+  const sections: Record<string, any> = {};
+  let totalCorrect = 0;
+  let totalWrong = 0;
+  let totalUnattempted = 0;
+  let totalScore = 0;
+
+  const subjectsToProcess = isFullMock ? ["Reasoning", "General Awareness", "Mathematics", "English"] : activeSubjects;
+
+  for (const sub of subjectsToProcess) {
+    const qList = subjectGroups[sub] || [];
+    let wrong = 0;
+    let unattempted = 0;
+    let correct = 0;
+    let hasExplicitCorrect = false;
+
+    qList.forEach(q => {
+      const status = (q.status || "").toLowerCase();
+      if (status.includes("correct") && !status.includes("incorrect")) {
+        correct++;
+        hasExplicitCorrect = true;
+      } else if (status.includes("wrong") || status.includes("incorrect")) {
+        wrong++;
+      } else if (status.includes("unattempted") || status.includes("skipped")) {
+        unattempted++;
+      } else {
+        wrong++;
+      }
+    });
+
+    const standardTotal = 25;
+    if (!hasExplicitCorrect || qList.length < standardTotal) {
+      correct = Math.max(0, standardTotal - wrong - unattempted);
+    }
+
+    const sectionScore = Math.round(((correct * 2) - (wrong * 0.5)) * 10) / 10;
+    const attempted = correct + wrong;
+    const accuracy = attempted > 0 ? Math.round((correct / attempted) * 1000) / 10 : 0;
+
+    totalCorrect += correct;
+    totalWrong += wrong;
+    totalUnattempted += unattempted;
+    totalScore += sectionScore;
+
+    const key = sub === "General Awareness" ? "generalAwareness" : sub === "Mathematics" ? "mathematics" : sub.toLowerCase();
+    sections[key] = {
+      total: standardTotal,
+      correct,
+      wrong,
+      unattempted,
+      score: sectionScore,
+      accuracy
+    };
+  }
+
+  const totalQuestions = isFullMock ? 100 : (subjectsToProcess.length * 25);
+  const maxMarks = totalQuestions * 2;
+  const totalAttempted = totalCorrect + totalWrong;
+  const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 1000) / 10 : 0;
+
+  const now = new Date();
+  const dateStr = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+  const title = mockTitle || (isFullMock ? `Full Mock - ${dateStr}` : `${activeSubjects[0] || "Sectional"} Mock - ${dateStr}`);
+
+  return {
+    id: "mock_" + Date.now() + "_" + Math.random().toString(36).substring(2, 7),
+    title,
+    type: mockType,
+    subject: isFullMock ? undefined : (activeSubjects[0] || "General"),
+    date: now.toISOString(),
+    totalQuestions,
+    maxMarks,
+    totalScore: Math.round(totalScore * 10) / 10,
+    overallAccuracy,
+    totalCorrect,
+    totalWrong,
+    totalUnattempted,
+    sections
+  };
+}
+
 async function startServer() {
   const app = express();
   const PORT = 3000;
@@ -413,7 +515,7 @@ async function startServer() {
                 d: (q.options?.D || q.options?.d || "").trim()
               },
               answer: cleanAns,
-              solution: (enr.solution || q.solution || "").trim(),
+              solution: cleanSolutionText(enr.solution || q.solution || ""),
               tags: {
                 topic: enr.topic || "General",
                 difficulty: status.includes("Slow") ? "hard" : "medium"
@@ -429,11 +531,88 @@ async function startServer() {
         resultsSummary[subjectName] = addedCount;
       }
 
+      // 4. Calculate and save Mock Score Report
+      let calculatedReport = null;
+      try {
+        calculatedReport = computeMockScoreReport(rawList, payload.title || payload.testName || payload.name);
+        const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+        let existingReports: any[] = [];
+        if (fs.existsSync(mockReportPath)) {
+          try {
+            existingReports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+          } catch {
+            existingReports = [];
+          }
+        }
+        existingReports.unshift(calculatedReport);
+        fs.writeFileSync(mockReportPath, JSON.stringify(existingReports, null, 2), "utf-8");
+        console.log(`[Mock Import] Mock Score Report saved: ${calculatedReport.title} (Score: ${calculatedReport.totalScore}/${calculatedReport.maxMarks})`);
+      } catch (repErr) {
+        console.error("[Mock Import] Error generating score report:", repErr);
+      }
+
       console.log(`[Mock Import] Success:`, resultsSummary);
-      res.json({ success: true, imported: resultsSummary });
+      res.json({ success: true, imported: resultsSummary, scoreReport: calculatedReport });
     } catch (err: any) {
       console.error("[Mock Import] Error:", err);
       res.status(500).json({ error: err.message || "Failed to process mock import" });
+    }
+  });
+
+  // Mock Reports Endpoints
+  app.get("/api/mock-reports", (req, res) => {
+    try {
+      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+      if (!fs.existsSync(mockReportPath)) return res.json([]);
+      const data = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+      res.json(data);
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
+  app.post("/api/mock-reports", (req, res) => {
+    try {
+      const report = req.body;
+      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+      let reports: any[] = [];
+      if (fs.existsSync(mockReportPath)) {
+        try {
+          reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+        } catch {
+          reports = [];
+        }
+      }
+      reports.unshift(report);
+      fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
+      res.json({ success: true, report });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
+  app.delete("/api/mock-reports/:id", (req, res) => {
+    try {
+      const { id } = req.params;
+      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+      if (fs.existsSync(mockReportPath)) {
+        let reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+        reports = reports.filter((r: any) => r.id !== id);
+        fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
+      }
+      res.json({ success: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
+  app.delete("/api/mock-reports", (req, res) => {
+    try {
+      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+      fs.writeFileSync(mockReportPath, "[]", "utf-8");
+      res.json({ success: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
     }
   });
 
