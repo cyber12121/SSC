@@ -383,21 +383,21 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({ onBack }
         </div>
       ) : (
         <>
-          {/* ─── 3 HERO METRICS (Clean & High-Impact) ─── */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* ─── 3 HERO METRICS (Compact & Sleek) ─── */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {/* 1. Latest / Total Score */}
-            <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
-              <div className="flex items-center justify-between text-slate-500 mb-2">
-                <span className="text-xs font-bold uppercase tracking-wider">Latest Score</span>
-                <Trophy className="w-4 h-4 text-blue-600" />
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs">
+              <div className="flex items-center justify-between text-slate-500 mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">Latest Score</span>
+                <Trophy className="w-3.5 h-3.5 text-blue-600" />
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-slate-900">
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-2xl font-black text-slate-900">
                   {latestReport ? latestReport.totalScore : 0}
                 </span>
-                <span className="text-sm font-bold text-slate-400">/ {aggregateStats.maxMarks}</span>
+                <span className="text-xs font-bold text-slate-400">/ {aggregateStats.maxMarks}</span>
               </div>
-              <p className="text-xs text-slate-500 mt-2 font-medium">
+              <p className="text-[11px] text-slate-400 mt-1 font-medium truncate">
                 {latestReport
                   ? `${latestReport.totalCorrect} Correct • ${latestReport.totalWrong} Wrong • ${latestReport.totalUnattempted} Skipped`
                   : 'No attempts'}
@@ -405,38 +405,38 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({ onBack }
             </div>
 
             {/* 2. Overall Accuracy */}
-            <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
-              <div className="flex items-center justify-between text-slate-500 mb-2">
-                <span className="text-xs font-bold uppercase tracking-wider">Overall Accuracy</span>
-                <Target className="w-4 h-4 text-emerald-600" />
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs">
+              <div className="flex items-center justify-between text-slate-500 mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">Overall Accuracy</span>
+                <Target className="w-3.5 h-3.5 text-emerald-600" />
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className={`text-3xl font-black ${
+              <div className="flex items-baseline gap-1.5">
+                <span className={`text-2xl font-black ${
                   (latestReport?.overallAccuracy || 0) >= 85 ? 'text-emerald-600' :
                   (latestReport?.overallAccuracy || 0) >= 70 ? 'text-amber-600' : 'text-rose-600'
                 }`}>
                   {latestReport ? latestReport.overallAccuracy : 0}%
                 </span>
-                <span className="text-xs font-bold text-slate-400">
+                <span className="text-[11px] font-bold text-slate-400">
                   (Avg: {aggregateStats.avgAccuracy}%)
                 </span>
               </div>
-              <p className="text-xs text-slate-500 mt-2 font-medium">
+              <p className="text-[11px] text-slate-400 mt-1 font-medium truncate">
                 {(latestReport?.overallAccuracy || 0) >= 85 ? 'Target achieved (≥85% accuracy) ✅' : 'Aim for ≥85% accuracy to maximize rank'}
               </p>
             </div>
 
             {/* 3. Best Score */}
-            <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
-              <div className="flex items-center justify-between text-slate-500 mb-2">
-                <span className="text-xs font-bold uppercase tracking-wider">Best Score</span>
-                <TrendingUp className="w-4 h-4 text-purple-600" />
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs">
+              <div className="flex items-center justify-between text-slate-500 mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">Best Score</span>
+                <TrendingUp className="w-3.5 h-3.5 text-purple-600" />
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-slate-900">{aggregateStats.bestScore}</span>
-                <span className="text-sm font-bold text-slate-400">/ {aggregateStats.maxMarks}</span>
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-2xl font-black text-slate-900">{aggregateStats.bestScore}</span>
+                <span className="text-xs font-bold text-slate-400">/ {aggregateStats.maxMarks}</span>
               </div>
-              <p className="text-xs text-slate-500 mt-2 font-medium">
+              <p className="text-[11px] text-slate-400 mt-1 font-medium truncate">
                 Across {aggregateStats.totalMocks} {activeTab === 'full' ? 'Full Mocks' : 'Sectional Mocks'} recorded
               </p>
             </div>
@@ -467,8 +467,37 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({ onBack }
               )}
             </div>
 
+            {/* Fixed Header Row Above Mocks */}
+            <div className="hidden xl:flex items-stretch border-b border-slate-200/90 bg-slate-100/75 divide-x divide-slate-200/90 text-[11px] font-black uppercase tracking-wider text-slate-500">
+              <div className="w-[260px] 2xl:w-[280px] shrink-0 px-4 py-2.5 flex items-center">
+                Mock Test &amp; Activity
+              </div>
+              <div className="flex-1 grid grid-cols-4 divide-x divide-slate-200/90">
+                <div className="px-3.5 py-2.5 flex items-center justify-between text-indigo-700">
+                  <span>Reasoning</span>
+                  <span className="text-[10px] text-slate-400 font-bold lowercase tracking-normal">score / acc</span>
+                </div>
+                <div className="px-3.5 py-2.5 flex items-center justify-between text-amber-700">
+                  <span>GA / GK</span>
+                  <span className="text-[10px] text-slate-400 font-bold lowercase tracking-normal">score / acc</span>
+                </div>
+                <div className="px-3.5 py-2.5 flex items-center justify-between text-blue-700">
+                  <span>Quantitative</span>
+                  <span className="text-[10px] text-slate-400 font-bold lowercase tracking-normal">score / acc</span>
+                </div>
+                <div className="px-3.5 py-2.5 flex items-center justify-between text-emerald-700">
+                  <span>English</span>
+                  <span className="text-[10px] text-slate-400 font-bold lowercase tracking-normal">score / acc</span>
+                </div>
+              </div>
+              <div className="w-[180px] shrink-0 px-4 py-2.5 flex items-center justify-between text-slate-700">
+                <span>Total Score</span>
+                <span className="text-[10px] text-slate-400 font-bold lowercase tracking-normal">overall acc</span>
+              </div>
+            </div>
+
             {/* List Rows */}
-            <div className="divide-y divide-slate-100">
+            <div className="divide-y divide-slate-200/80">
               {filteredReports.map((report) => {
                 const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
                   day: '2-digit',
@@ -477,48 +506,94 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({ onBack }
                 });
 
                 return (
-                  <div key={report.id} className="transition-colors hover:bg-slate-50/50">
-                    <div className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                      {/* Left: Info */}
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <span className="text-xs font-bold text-slate-900 truncate">
-                            {report.title}
-                          </span>
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
-                            {dateClean}
-                          </span>
-                        </div>
-                        <p className="text-xs text-slate-400 mt-1 font-medium">
-                          {report.totalCorrect} Correct • {report.totalWrong} Wrong • {report.totalUnattempted} Skipped
-                        </p>
+                  <div
+                    key={report.id}
+                    className="flex flex-col xl:flex-row items-stretch divide-y xl:divide-y-0 xl:divide-x divide-slate-200/90 hover:bg-slate-50/40 transition-colors"
+                  >
+                    {/* 1. Left: Mock Details & Stats */}
+                    <div className="w-full xl:w-[260px] 2xl:w-[280px] shrink-0 px-4 py-2.5 bg-slate-50/30 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-xs font-black text-slate-900 truncate">
+                          {report.title}
+                        </span>
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-white border border-slate-200/80 text-slate-500">
+                          {dateClean}
+                        </span>
                       </div>
+                      <div className="text-[11px] text-slate-400 mt-1 font-medium flex items-center gap-1.5 flex-wrap">
+                        <span className="text-emerald-600 font-semibold">{report.totalCorrect}c</span>
+                        <span className="text-slate-300">•</span>
+                        <span className="text-rose-500 font-semibold">{report.totalWrong}w</span>
+                        <span className="text-slate-300">•</span>
+                        <span className="text-slate-400 font-semibold">{report.totalUnattempted}s</span>
+                      </div>
+                    </div>
 
-                      {/* Right: Scores & Delete */}
-                      <div className="flex items-center gap-3 shrink-0">
-                        {/* Score Badge */}
-                        <div className="text-right">
-                          <span className="text-sm font-black text-slate-900">
+                    {/* 2. Middle: Four Subjects (Score & Acc Only) */}
+                    <div className="flex-1 grid grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/90">
+                      {[
+                        { key: 'reasoning', label: 'Reasoning', color: 'text-indigo-700', bg: 'bg-indigo-50/20 hover:bg-indigo-50/50' },
+                        { key: 'generalAwareness', label: 'GA / GK', color: 'text-amber-700', bg: 'bg-amber-50/20 hover:bg-amber-50/50' },
+                        { key: 'mathematics', label: 'Quantitative', color: 'text-blue-700', bg: 'bg-blue-50/20 hover:bg-blue-50/50' },
+                        { key: 'english', label: 'English', color: 'text-emerald-700', bg: 'bg-emerald-50/20 hover:bg-emerald-50/50' },
+                      ].map((sub) => {
+                        const sData = report.sections?.[sub.key as keyof typeof report.sections];
+                        if (!sData && report.type === 'sectional') return null;
+                        const score = sData ? sData.score : 0;
+                        const acc = sData ? sData.accuracy : 0;
+
+                        return (
+                          <div
+                            key={sub.key}
+                            className={`px-3.5 sm:px-4 py-2 flex items-center justify-between gap-2 transition-all ${sub.bg}`}
+                            title={`${sub.label}: ${score}/50 marks • ${acc}% accuracy (${sData?.correct || 0} Correct, ${sData?.wrong || 0} Wrong, ${sData?.unattempted || 0} Skipped)`}
+                          >
+                            <div>
+                              {/* Show subject label only on smaller screens where table header is hidden */}
+                              <span className={`text-[10px] font-bold ${sub.color} block xl:hidden leading-tight`}>
+                                {sub.label}
+                              </span>
+                              <div className="flex items-baseline gap-1">
+                                <span className="text-sm font-black text-slate-900 leading-none">{score}</span>
+                                <span className="text-[10px] font-bold text-slate-400">/ 50</span>
+                              </div>
+                            </div>
+                            <span className={`text-[10px] font-black px-1.5 py-0.5 rounded shadow-2xs ${
+                              acc >= 85 ? 'bg-emerald-100 text-emerald-800' :
+                              acc >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
+                            }`}>
+                              {acc}%
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* 3. Right: Total Score & Action */}
+                    <div className="w-full xl:w-[180px] shrink-0 px-4 py-2 bg-slate-50/30 flex items-center justify-between gap-3">
+                      <div className="text-left">
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-base font-black text-slate-900 leading-none">
                             {report.totalScore}
                           </span>
-                          <span className="text-xs text-slate-400 font-bold"> / {report.maxMarks}</span>
-                          <span className={`block text-[11px] font-bold ${
-                            report.overallAccuracy >= 85 ? 'text-emerald-600' :
-                            report.overallAccuracy >= 70 ? 'text-amber-600' : 'text-rose-600'
-                          }`}>
-                            {report.overallAccuracy}% Acc
-                          </span>
+                          <span className="text-[10px] font-bold text-slate-400">/ {report.maxMarks}</span>
                         </div>
-
-                        {/* Delete Single Mock */}
-                        <button
-                          onClick={() => handleDeleteMock(report.id)}
-                          className="p-1.5 rounded-lg border border-slate-200 hover:bg-rose-50 text-slate-400 hover:text-rose-600 transition-colors"
-                          title="Delete this record"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
+                        <span className={`inline-block text-[10px] font-black mt-0.5 ${
+                          report.overallAccuracy >= 85 ? 'text-emerald-600' :
+                          report.overallAccuracy >= 70 ? 'text-amber-600' : 'text-rose-600'
+                        }`}>
+                          {report.overallAccuracy}% Acc
+                        </span>
                       </div>
+
+                      {/* Delete Single Mock */}
+                      <button
+                        onClick={() => handleDeleteMock(report.id)}
+                        className="p-1.5 rounded-lg border border-slate-200 hover:bg-rose-50 text-slate-400 hover:text-rose-600 transition-colors shrink-0"
+                        title="Delete this record"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
                 );
