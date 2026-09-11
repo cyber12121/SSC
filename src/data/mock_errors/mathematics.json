@@ -35,7 +35,7 @@
         "answer": "b",
         "solution": "Shortcut Trick\nLoss = CP of 75 articles − SP of 75 articles = SP of 5 articles\n⇒ CP of 75 articles = SP of (75 + 5) articles = SP of 80 articles\n⇒ SP of 80 articles = Total CP = ₹10800\n⇒ SP of 1 article = 10800 ÷ 80 = 135\n∴ The correct answer is ₹135.\n\nAlternate Method\nGiven:\nTotal articles purchased = 75\nTotal Cost Price (CP) = ₹10800\nLoss incurred = Selling Price (SP) of 5 articles\n\nFormula Used:\nLoss = Total CP − Total SP\n\nCalculations:\n⇒ Total CP of 75 articles − Total SP of 75 articles = Loss\n⇒ ₹10800 − SP of 75 articles = SP of 5 articles\n⇒ ₹10800 = SP of 75 articles + SP of 5 articles\n⇒ ₹10800 = SP of 80 articles\n⇒ SP of 1 article = 10800 ÷ 80\n⇒ SP of 1 article = 135\n∴ The correct answer is ₹135.\n\nAdditional Information\nProfit and Loss Equation\nProfit occurs when SP > CP (Profit = SP − CP), and Loss occurs when CP > SP (Loss = CP − SP).\n\nSimilar Concept (Profit in terms of SP)\n\nIf there is a profit equal to the SP of y articles on selling x articles, then CP of x articles = SP of (x − y) articles.\n\nProfit and Loss Percentage\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Both are computed on the Cost Price by default.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -52,7 +52,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\nTotal time from 10th Feb to 24th April = 18 + 31 + 24 = 73 days = 1/5 year.\nEffective interest rate for 1/5 year = 8.5% ÷ 5 = 1.7%.\nSimple Interest = 1.7% of 32000 = (1.7 × 32000) ÷ 100 = Rs. 544.\n∴ The correct answer is Rs. 544.\n\nAlternate Method\nGiven:\nPrincipal (P) = Rs. 32000\nRate (R) = 8.5% p.a.\nTime (T) = 10th Feb., 2019 to 24th April, 2019\n\nFormula Used:\nSI = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Number of days in February (2019 is a non-leap year) = 28 − 10 = 18 days\n⇒ Number of days in March = 31 days\n⇒ Number of days in April = 24 days\n⇒ Total Time (T) = 18 + 31 + 24 = 73 days\n⇒ Time in years = 73 ÷ 365 = 1/5 years\n⇒ SI = (32000 × 8.5 × 1) ÷ (100 × 5)\n⇒ SI = 320 × 1.7\n⇒ SI = Rs. 544\n∴ The correct answer is Rs. 544.\n\nAdditional Information\nCounting of Days in SI Calculation\n\nGenerally, the day the money is deposited is not counted, but the day the money is withdrawn is counted. Total days are then converted to years by dividing by 365.\n\nLeap Year Consideration\n\nIf the given period falls within a leap year and includes the month of February, 29 days are considered for February. For the year 2019, it is a non-leap year so February has 28 days.\n\nStandard Day Fractions\n\nExam questions frequently use exact multiples of 73 days for simple calculations because 73 days = 1/5 year, 146 days = 2/5 year, 219 days = 3/5 year, and 292 days = 4/5 year.",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Simple Interest",
           "difficulty": "medium"
         }
       },
@@ -69,7 +69,7 @@
         "answer": "d",
         "solution": "Shortcut Trick\nRatio of number of coins (Rs 1 : 50p : 25p) = 1 : 1/2 : 1/3 = 6 : 3 : 2\nRatio of their values = (6 × 1) : (3 × 1/2) : (2 × 1/4) = 6 : 1.5 : 0.5 = 12 : 3 : 1\nTotal value = 12 + 3 + 1 = 16 units\n16 units = Rs 1120 ⇒ 1 unit = 1120 ÷ 16 = Rs 70\nValue of 25 paisa coins = 1 unit = Rs 70\n∴ The correct answer is Rs 70.\n\nAlternate Method\nGiven:\nTypes of coins: Rs 1, 50 paisa (Rs 1/2), and 25 paisa (Rs 1/4).\nRatio of the number of coins = 1 : 1/2 : 1/3\nTotal amount in the bag = Rs 1120\n\nFormula Used:\nTotal Value = Number of coins × Denomination Value\n\nCalculations:\n⇒ Multiply the given coin ratio by the LCM of denominators (6) to convert to integers.\n⇒ Number of coins ratio = (1 × 6) : (1/2 × 6) : (1/3 × 6) = 6 : 3 : 2\n⇒ Let the number of Rs 1, 50 paisa, and 25 paisa coins be 6x, 3x, and 2x respectively.\n⇒ Value of Rs 1 coins = 6x × 1 = 6x\n⇒ Value of 50 paisa coins = 3x × 0.5 = 1.5x\n⇒ Value of 25 paisa coins = 2x × 0.25 = 0.5x\n⇒ Total value = 6x + 1.5x + 0.5x = 8x\n⇒ According to the given data, total amount is Rs 1120.\n⇒ 8x = 1120\n⇒ x = 1120 ÷ 8 = 140\n⇒ Total value of 25 paisa coins = 0.5x = 0.5 × 140 = 70\n∴ The correct answer is Rs 70.\n\nAdditional Information\nRatio of Coins vs Value\n\nWhen the ratio of the number of coins is given, multiply it by the respective denomination to find the ratio of their values. Conversely, divide the value ratio by the denomination to find the number of coins ratio.\n\nCommon Denominations\n\nIt is a standard rule to convert all coins into rupees: 50 paisa = Rs 1/2, 25 paisa = Rs 1/4, 20 paisa = Rs 1/5, and 10 paisa = Rs 1/10.\n\nConsistency of Units\n\nAlways ensure that both individual denominations and the total final amount are measured in the same unit (either entirely in Rupees or entirely in paise) to avoid calculation errors.",
         "tags": {
-          "topic": "Number System",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -86,7 +86,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\nLet the two numbers be 17 units and 45 units.\n1/3 of the smaller number = 17/3 units, and 1/5 of the bigger number = 45/5 = 9 units.\nDifference = 9 − 17/3 = (27 − 17) / 3 = 10/3 units.\nGiven, 10/3 units = 15 ⇒ 1 unit = 15 × 3 ÷ 10 = 4.5\nSmaller number = 17 units = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -103,7 +103,7 @@
         "answer": "b",
         "solution": "Shortcut Trick\nAge of excluded person = Initial Average + (Remaining members × Drop in average)\n⇒ Age of teacher = 18 + (40 × 0.5)\n⇒ Age of teacher = 18 + 20\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.",
         "tags": {
-          "topic": "Averages",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -120,7 +120,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\nBy using the direct alligation cross-multiplication rule:\n\nQuantity Ratio = (Mean Price − Cheaper Price) : (Dearer Price − Mean Price)\n⇒ Ratio = (64 − 60) : (67.5 − 64)\n⇒ Ratio = 4 : 3.5\n⇒ Ratio = 8 : 7\n∴ The correct answer is 8 : 7.",
         "tags": {
-          "topic": "Alligation & Mixture",
+          "topic": "Mixture & Alligation",
           "difficulty": "medium"
         }
       },
@@ -154,7 +154,7 @@
         "answer": "c",
         "solution": "Let the two numbers be 'x' and (150 - x) respectively.\nSo, (55/100)*x : (45/100)*(150 - x) = 11:6\n=> 11x / [9(150 - x)] = 11/6\n=> x / [3(150 - x)] = 1/2\n=> 450 - 3x = 2x\n=> x = 90\nSecond number = 150 - 90 = 60\nRequired difference = 90 - 60 = 30",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -205,7 +205,7 @@
         "answer": "a",
         "solution": "x : y = 5 : 4\nTotal parts = 5 + 4 = 9\nx's 5 parts = \\u20b957,000.\nRemaining profit = 57000 * (9/5)\n95% of total profit = \\u20b91,02,600\nTherefore,\n100% = (102600 / 95) * 100\n= \\u20b91,08,000\nHence, (a) is correct.",
         "tags": {
-          "topic": "Partnership",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -239,7 +239,7 @@
         "answer": "a",
         "solution": "Initial milk = 198 × (5/9) = 110; water = 88.\nAfter 36 L out: milk removed = 36 × (110/198) = 20; water removed = 16.\nAfter refill: milk = 110 − 20 = 90; water = 88 − 16 + 36 = 108; total = 198.\nNow withdraw 44 L: milk removed = 44 × (90/198) = 20; water removed = 24.\nAfter refill: milk = 90 − 20 = 70; water = 108 − 24 + 44 = 128.\nFinal ratio = 70:128 = 35:64.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Mixture & Alligation",
           "difficulty": "medium"
         }
       },
@@ -256,7 +256,7 @@
         "answer": "c",
         "solution": "Total salary of 8 employees = 8 × 50000 = Rs. 400000\nNew total salary = 400000 − (45000 + 55000) = 400000 - 100000 = Rs. 300000\nRemaining number of employees = 6\nNew average salary = 300000/6 = Rs. 50000",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -273,7 +273,7 @@
         "answer": "c",
         "solution": "The new number of boys = 17 × 125/100\nThe new number of girls = 20 × 140/100\nHence, the required ratio = (17 × 125)/(20 × 140)\n= 85/112",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -358,7 +358,7 @@
         "answer": "a",
         "solution": "Total cost price for the grocer = 12 × 30 + 18 × 40 = Rs. 1080\nTotal selling price = 52 × (12 + 18) = 52 × 30 = Rs. 1560\nAmount of profit = 1560 - 1080 = Rs. 480\nRequired percentage = (480 / 1080) × 100 = 44 (4/9)%",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Mixture & Alligation",
           "difficulty": "medium"
         }
       },
@@ -392,7 +392,7 @@
         "answer": "a",
         "solution": "Let the radius of a cylinder be r cm. Height = 2r. Total surface area = 54π. 2πr(h + r) = 54π => r(2r + r) = 27 => r² = 9 => r = 3 cm, h = 6 cm. Hence, volume of cylinder = πr²h = π * 3² * 6 = 54π cm³. Express Method: Volume = πr² * h = π * 2r³ [as h = 2r] = 2πr³. That means if we divide the options by 2π, we will get a perfect cube. From the given options, only option A satisfies this condition.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -443,7 +443,7 @@
         "answer": "a",
         "solution": "Let the price of the third type of flour be Rs. A.\n\nAccording to the question,\n\n180 x 2 + 220 x 3 + 4 x A = (2 + 3 + 4) x 240\n360 + 660 + 4A = 2160\n4A = 1140\nA = Rs.285",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Mixture & Alligation",
           "difficulty": "medium"
         }
       },
@@ -477,7 +477,7 @@
         "answer": "b",
         "solution": "Distance covered by P in 4 h = 10 × 4 = 40 km\nDistance covered by Q in 4 h = 20 × 4 = 80 km\nRemaining distance = 200 − (40 + 80) = 80 km\n\nDuring Q's stop of 0.5 h, P covers = 10 × 0.5 = 5 km\n\nNew remaining distance = 80 − 5 = 75 km\nRelative speed when both moving = 10 + 20 = 30 km/h\nTime to meet after stop = 75/30 = 2.5 h\nTotal time = 4 + 0.5 + 2.5 = 7 h",
         "tags": {
-          "topic": "Time & Work",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -528,7 +528,7 @@
         "answer": "c",
         "solution": "The expression evaluates to 0.",
         "tags": {
-          "topic": "Algebra",
+          "topic": "Simplification",
           "difficulty": "medium"
         }
       },
@@ -545,7 +545,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\n\nSince A and B are moving in the same direction, their relative speed is the difference between their speeds.\n\nRelative Speed = 12 − 6 = 6 m/s\n\nTime to meet next = Total Distance ÷ Relative Speed\n\nTime = 840 ÷ 6 = 140 s\n\n∴ The correct answer is 140 s.\n\nAlternate Method\n\nGiven:\n\n⇒ Length of circular track (D) = 840 m\n\n⇒ Speed of A (SA) = 6 m/s\n\n⇒ Speed of B (SB) = 12 m/s\n\nFormula Used:\n\n⇒ Relative Speed (same direction) = |SB − SA|\n\n⇒ Time to meet = Total Distance ÷ Relative Speed\n\nCalculations:\n\n⇒ Relative Speed = 12 m/s − 6 m/s = 6 m/s\n\n⇒ Time to meet = 840 ÷ 6\n\n⇒ Time to meet = 140 s\n\n∴ The correct answer is 140 s.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -579,7 +579,7 @@
         "answer": "b",
         "solution": "Solution\\n\\nShortcut Trick\\n\\nExpress 32 as 2^5, making the numerator (2^5)^4 − 1 = 2^20 − 1.\\n\\nRewrite the product 33 × 31 as (32 + 1)(32 − 1) = 32^2 − 1 = (2^5)^2 − 1 = 2^10 − 1.\\n\\nThe denominator becomes (2^10 − 1)(2^10 + 1) = (2^10)^2 − 1^2 = 2^20 − 1.\\n\\nDivide the numerator by the denominator: (2^20 − 1) ÷ (2^20 − 1) = 1.\\n\\n∴ The correct answer is 1.\\n\\nAlternate Method\\n\\nGiven:\\n\\nExpression: (32^4 − 1) ÷ [33 × 31 × (2^10 + 1)]\\n\\nFormula Used:\\na^2 − b^2 = (a − b)(a + b)\\n\\n(a^m)^n = a^(m × n)\\n\\nCalculations:\\n\\n⇒ Let's expand and simplify the denominator first.\\n\\n⇒ 33 × 31 = (32 + 1) × (32 − 1)\\n\\n⇒ Applying the a^2 − b^2 formula, we get 32^2 − 1^2.\\n\\n⇒ Since 32 = 2^5, we have (2^5)^2 − 1 = 2^10 − 1.\\n\\n⇒ Now substitute this back into the denominator expression: (2^10 − 1) × (2^10 + 1).\\n\\n⇒ Again applying the a^2 − b^2 formula, the denominator becomes (2^10)^2 − 1^2 = 2^20 − 1.\\n\\n⇒ Next, simplify the numerator: 32^4 − 1 = (2^5)^4 − 1 = 2^20 − 1.\\n\\n⇒ The complete expression simplifies to (2^20 − 1) ÷ (2^20 − 1).\\n\\n⇒ Since the numerator and denominator are exactly the same, they cancel out to leave 1.\\n\\n∴ The correct answer is 1.\\n\\nAdditional Information\\n\\nBODMAS Rule\\n\\nIt dictates the precise order of mathematical operations to follow: Brackets, Orders (powers and roots), Division, Multiplication, Addition, and Subtraction.\\n\\nLaws of Exponents\\n\\nKey rules to quickly handle base numbers include a^m × a^n = a^(m+n), a^m ÷ a^n = a^(m−n), and (a^m)^n = a^(m×n).\\n\\nDifference of Squares\\n\\nThe algebraic identity a^2 − b^2 = (a − b)(a + b) is an essential tool frequently used to simplify large mathematical products mentally.",
         "tags": {
-          "topic": "Number System",
+          "topic": "Simplification",
           "difficulty": "medium"
         }
       },
@@ -596,7 +596,7 @@
         "answer": "d",
         "solution": "Solution\\n\\nShortcut Trick\\n\\nTotal Time = [ 2 × Distance × Boat Speed ] ÷ [ (Boat Speed)^2 − (Stream Speed)^2 ]\\n\\n4 = [ 2 × 20 × 15 ] ÷ [ 15^2 − v^2 ]\\n\\n4 × (225 − v^2) = 600\\n\\n225 − v^2 = 150 ⇒ v^2 = 75\\n\\nv = √75 = 5√3 km/h\\n\\n∴ The correct answer is 5√3 km/h.\\n\\nAlternate Method\\n\\nGiven:\\n\\nSpeed of motorboat in still water (u) = 15 km/h\\n\\nDistance (d) = 20 km\\n\\nTotal time taken (T) = 4 hours\\n\\nLet the speed of the stream be v km/h.\\n\\nFormula Used:\\n\\nTime = Distance ÷ Speed\\n\\nDownstream Speed = u + v\\n\\nUpstream Speed = u − v\\n\\nCalculations:\\n\\n⇒ Downstream Speed = (15 + v) km/h\\n\\n⇒ Upstream Speed = (15 − v) km/h\\n\\n⇒ Total Time = [Distance ÷ Downstream Speed] + [Distance ÷ Upstream Speed]\\n\\n⇒ 20 ÷ (15 + v) + 20 ÷ (15 − v) = 4\\n\\n⇒ 20 × [ (15 − v + 15 + v) ÷ (15^2 − v^2) ] = 4\\n\\n⇒ 20 × [ 30 ÷ (225 − v^2) ] = 4\\n\\n⇒ 600 ÷ (225 − v^2) = 4\\n\\n⇒ 225 − v^2 = 150\\n\\n⇒ v^2 = 75\\n\\n⇒ v = √75 = 5√3 km/h\\n\\n∴ The correct answer is 5√3 km/h.\\n\\nAdditional Information\\n\\nDownstream Speed\\n\\nWhen the boat moves in the direction of the stream, speeds are added. Downstream Speed = Speed of Boat + Speed of Stream.\\n\\nUpstream Speed\\n\\nWhen the boat moves against the direction of the stream, speeds are subtracted. Upstream Speed = Speed of Boat − Speed of Stream.\\n\\nSpeed in Still Water\\n\\nIf downstream and upstream speeds are given, Speed of Boat = (Downstream Speed + Upstream Speed) ÷ 2.\\n\\nSpeed of Stream\\n\\nIf downstream and upstream speeds are given, Speed of Stream = (Downstream Speed − Upstream Speed) ÷ 2.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Boats & Streams",
           "difficulty": "medium"
         }
       },
@@ -613,7 +613,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\n\nPresent ratio A : B = 4 : 7 (Gap = 7 − 4 = 3)\nFuture ratio A : B = 2 : 3 (Gap = 3 − 2 = 1) → Multiply by 3 to equalize gaps ⇒ 6 : 9\n\nIncrease in ratio parts for both A and B = 6 − 4 = 2 parts.\n2 parts ≡ 8 years ⇒ 1 part = 4 years.\n\nSum of present ages = (4 + 7) = 11 parts = 11 × 4 = 44 years.\n\n∴ The correct answer is 44 years.\n\nAlternate Method\n\nGiven:\nPresent ages of A and B are in the ratio 4 : 7\nAfter 8 years, the ratio of their ages will be 2 : 3\n\nMethod Used:\nEquating the age ratios using algebraic variables to find the exact multiplier.\n\nCalculations:\n⇒ Let the present ages of A and B be 4x and 7x respectively.\n⇒ After 8 years, A's age = (4x + 8) and B's age = (7x + 8)\n⇒ According to the condition: (4x + 8) ÷ (7x + 8) = 2 ÷ 3\n⇒ Cross-multiplying: 3 × (4x + 8) = 2 × (7x + 8)\n⇒ 12x + 24 = 14x + 16\n⇒ 14x − 12x = 24 − 16\n⇒ 2x = 8 ⇒ x = 4\n⇒ Sum of their present ages = 4x + 7x = 11x\n⇒ Total sum = 11 × 4 = 44 years\n\n∴ The correct answer is 44 years.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -630,7 +630,7 @@
         "answer": "d",
         "solution": "Shortcut Trick\n\nUsing the vertical and cross multiplication shortcut for continuous ratios:\n\nA = 8 × 5 × 4 = 160, B = 13 × 5 × 4 = 260\nC = 13 × 8 × 4 = 416, D = 13 × 8 × 5 = 520\n\nA : B : C : D = 160 : 260 : 416 : 520 ⇒ 40 : 65 : 104 : 130\n\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAlternate Method\n\nGiven:\nA : B = 8 : 13\nB : C = 5 : 8\nC : D = 4 : 5\n\nConcept Used:\nWe use the adjacent block fill method. Write the given ratios in rows and fill the empty spaces with the adjacent number in that row, then multiply the columns downwards.\n\nCalculations:\n⇒ Multiply the values in each column to get the combined ratio.\n⇒ Column A = 8 × 5 × 4 = 160\n⇒ Column B = 13 × 5 × 4 = 260\n⇒ Column C = 13 × 8 × 4 = 416\n⇒ Column D = 13 × 8 × 5 = 520\n⇒ A : B : C : D = 160 : 260 : 416 : 520\n⇒ Dividing each term by 4 to simplify the ratio, we get:\n⇒ A : B : C : D = 40 : 65 : 104 : 130\n\n∴ The correct answer is 40 : 65 : 104 : 130.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -664,7 +664,7 @@
         "answer": "a",
         "solution": "Shortcut Trick: Selling Price (SP) = ₹850, Discount = 15% ⇒ MP = 850 × (100 ÷ 85) = ₹1000. Without discount, SP = MP = ₹1000. Profit = 25% ⇒ CP = 1000 × (100 ÷ 125) = ₹800. ∴ The correct answer is ₹800.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -698,7 +698,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\n\nRatio of Male to Female population in 2016 = 140 : 100 = 7 : 5.\n\nWe can use the weighted average method to find the net percentage change directly:\n\nOverall % increase = [(Ratio of Male × % change in Male) + (Ratio of Female × % change in Female)] ÷ Total Ratio\n\nOverall % increase = [(7 × 50) + (5 × 20)] ÷ (7 + 5)\n\nOverall % increase = (350 + 100) ÷ 12 = 450 ÷ 12 = 37.5%.\n\n∴ The correct answer is 37.5%.\n\nAlternate Method\n\nGiven:\n\nMale population in 2016 is 40% more than female population.\n\nMale population increased by 50% and female population increased by 20% in 2017.\n\nFormula Used:\n\nPercentage Increase = (Net Increase ÷ Initial Value) × 100\n\nCalculations:\n\n⇒ Let the female population in 2016 be 100x.\n\n⇒ Male population in 2016 = 100x + (40% of 100x) = 140x.\n\n⇒ Total population in 2016 = 100x + 140x = 240x.\n\n⇒ In 2017, male population = 140x + (50% of 140x) = 140x + 70x = 210x.\n\n⇒ In 2017, female population = 100x + (20% of 100x) = 100x + 20x = 120x.\n\n⇒ Total population in 2017 = 210x + 120x = 330x.\n\n⇒ Net increase in total population = 330x − 240x = 90x.\n\n⇒ Percentage increase = (90x ÷ 240x) × 100 = (9 ÷ 24) × 100\n\n⇒ Percentage increase = (3 ÷ 8) × 100 = 37.5%.\n\n∴ The correct answer is 37.5%.\n\nAdditional Information\n\nPercentage Change\n\nThe formula for finding the net percentage change of any value is calculated as: [(New Value − Old Value) ÷ Old Value] × 100.\n\nWeighted Average in Percentage\n\nIf a total quantity is split into multiple parts in the ratio w1 : w2, and their individual percentage changes are p1% and p2%, the net percentage change of the entire group is (w1p1 + w2p2) ÷ (w1 + w2).\n\nBase Shift Concept\n\nWhen calculating percentage increases for two different components, always remember that their percentage values act upon their respective initial base numbers, not on the combined group total.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -715,7 +715,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\n\nThe time taken by the runners to meet for the first time at the starting point is simply the LCM of their individual round times.\n\nRequired time = LCM(6, 10, 12, 18, 30, 40)\n\nRequired time = 360 minutes\n\nTime in hours = 360 ÷ 60 = 6 hours\n\n∴ The correct answer is 6 hours.\n\nAlternate Method\n\nGiven:\n\nTimes taken by 6 persons to complete one round = 6, 10, 12, 18, 30, and 40 minutes.\n\nFormula Used:\n\nTime to meet again at the starting point = LCM of individual times to complete one round.\n\nCalculations:\n\n⇒ We need to find the Least Common Multiple (LCM) of 6, 10, 12, 18, 30, and 40.\n\n⇒ Prime factorization of 6 = 2 × 3\n\n⇒ Prime factorization of 10 = 2 × 5\n\n⇒ Prime factorization of 12 = 2^2 × 3\n\n⇒ Prime factorization of 18 = 2 × 3^2\n\n⇒ Prime factorization of 30 = 2 × 3 × 5\n\n⇒ Prime factorization of 40 = 2^3 × 5\n\n⇒ LCM is the product of the highest powers of all prime factors involved.\n\n⇒ Highest power of 2 = 2^3\n\n⇒ Highest power of 3 = 3^2\n\n⇒ Highest power of 5 = 5\n\n⇒ LCM = 2^3 × 3^2 × 5 = 8 × 9 × 5 = 360 minutes.\n\n⇒ Converting the time into hours = 360 ÷ 60 = 6 hours.\n\n∴ The correct answer is 6 hours.\n\nAdditional Information\n\nMeeting at the Starting Point on Circular Track\n\nWhen multiple people are moving around a circular track starting at the same time and place, they meet at the starting point simultaneously after a time equal to the LCM of the times taken by each to complete one round independently.\n\nFirst Meeting Anywhere on Circular Track\n\nIf two runners move in the same direction, the time to meet for the first time anywhere on the track = Track Length ÷ (S1 − S2). If they move in opposite directions, Time to meet = Track Length ÷ (S1 + S2).\n\nLCM Formula for Fractions\n\nIf the individual completion times are given as fractions, you can find the meeting time using: LCM of fractions = (LCM of Numerators) ÷ (HCF of Denominators).",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -732,7 +732,7 @@
         "answer": "b",
         "solution": "Shortcut Trick: The minute hand covers a full 360\\u00b0 circle in 60 minutes. Fraction of circle swept in 20 minutes = 20 \\u00f7 60 = 1/3 of the total area. Area swept = (1 \\u00f7 3) \\u00d7 \\u03c0 \\u00d7 r^2. Area = (1 \\u00f7 3) \\u00d7 3.14 \\u00d7 (9)^2. Area = 3.14 \\u00d7 27 = 84.78 cm\\u00b2. \\u2234 The correct answer is 84.78 cm\\u00b2.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -749,7 +749,7 @@
         "answer": "a",
         "solution": "Shortcut Trick: Since the shopkeeper sells at cost price, the profit of 23% is entirely due to false weight. Ratio of Claimed Weight (SP) to Actual Weight (CP) = (100 + 23) : 100 = 123 : 100. Here, Claimed Weight = 3.075 kg = 3075 g. 123 units \\u2192 3075 g, 1 unit \\u2192 25 g. Actual Weight (100 units) = 25 \\u00d7 100 = 2500 g. \\u2234 The correct answer is 2500 g.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -783,7 +783,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\nSide of the square base = Base Perimeter ÷ 4 = 36 ÷ 4 = 9 inches.\nHeight of the pyramid = Side of the base = 9 inches.\nVolume of right pyramid = (1/3) × Base Area × Height\nVolume = (1/3) × (9 × 9) × 9 = 243 cubic inches.\n∴ The correct answer is 243 cubic inches.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -800,7 +800,7 @@
         "answer": "d",
         "solution": "Solution\n\nShortcut Trick\nWhen a solid object is melted to form another, the total volume remains conserved.\n\n\\u21d2 Volume of Sphere = Volume of Cone\n\\u21d2 (4/3) \\u00d7 \\u03c0 \\u00d7 (3)\\u00b3 = (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 (r / 2)\n\\u21d2 4 \\u00d7 27 = r\\u00b3 / 2\n\\u21d2 r\\u00b3 = 216 \\u21d2 r = 6 cm\n\n\\u2234 The correct answer is 6 cm.\n\nAlternate Method\nGiven:\nRadius of the sphere (R) = 3 cm\nLet the radius of the cone be r cm.\nHeight of the cone (h) = r / 2\n\nFormula Used:\nVolume of Sphere = (4/3) \\u00d7 \\u03c0 \\u00d7 R\\u00b3\nVolume of Cone = (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 h\n\nCalculations:\n\\u21d2 Volume of Cone = Volume of Sphere\n\\u21d2 (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 h = (4/3) \\u00d7 \\u03c0 \\u00d7 R\\u00b3\n\nSubstituting the given values into the equation:\n\n\\u21d2 (1/3) \\u00d7 \\u03c0 \\u00d7 r\\u00b2 \\u00d7 (r / 2) = (4/3) \\u00d7 \\u03c0 \\u00d7 3\\u00b3\n\nCanceling out (\\u03c0 / 3) from both sides of the equation:\n\n\\u21d2 r\\u00b3 / 2 = 4 \\u00d7 27\n\\u21d2 r\\u00b3 / 2 = 108\n\\u21d2 r\\u00b3 = 216\n\\u21d2 r = (216)\\u00b9\\u207f\\u00b3\n\\u21d2 r = 6 cm\n\n\\u2234 The correct answer is 6 cm.\n\nAdditional Information\nPrinciple of Melting and Recasting\n\nWhenever a 3D solid figure is melted and converted into another solid, the initial volume is exactly equal to the final volume regardless of the shape.\n\nTotal Surface Area of Cone\n\nThe total surface area of a cone involves the curved area plus the circular base area: TSA = \\u03c0 \\u00d7 r \\u00d7 l + \\u03c0 \\u00d7 r\\u00b2, where l is the slant height.\n\nSurface Area of Sphere\n\nA complete sphere has a continuous curved surface with an area given by the formula: SA = 4 \\u00d7 \\u03c0 \\u00d7 R\\u00b2.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -834,7 +834,7 @@
         "answer": "a",
         "solution": "Solution\n\nShortcut Trick\nIf the worker travelled the entire 11 hours on foot, the distance covered = 11 \\u00d7 4.5 = 49.5 km.\n\nExtra distance remaining to be covered = 81 \\u2212 49.5 = 31.5 km.\nDifference in speeds between the cycle and foot = 15 \\u2212 4.5 = 10.5 km/h.\nTime spent travelling on the cycle = 31.5 \\u00f7 10.5 = 3 hours.\nDistance covered on the cycle = 3 \\u00d7 15 = 45 km.\n\n\\u2234 The correct answer is 45 km.\n\nAlternate Method\nGiven:\nTotal distance = 81 km\nTotal time = 11 hours\nSpeed on foot = 4.5 km/h\nSpeed on cycle = 15 km/h\n\nFormula Used:\nDistance = Speed \\u00d7 Time\n\nCalculations:\n\\u21d2 Let the time travelled on foot be t hours.\n\n\\u21d2 Time travelled on the cycle = (11 \\u2212 t) hours.\n\\u21d2 Distance covered on foot + Distance covered on cycle = Total distance\n\n\\u21d2 (4.5 \\u00d7 t) + 15 \\u00d7 (11 \\u2212 t) = 81\n\n\\u21d2 4.5t + 165 \\u2212 15t = 81\n\n\\u21d2 10.5t = 165 \\u2212 81\n\n\\u21d2 10.5t = 84\n\n\\u21d2 t = 84 \\u00f7 10.5 = 8 hours\n\\u21d2 Time travelled on cycle = 11 \\u2212 8 = 3 hours.\n\\u21d2 Distance covered on cycle = Speed \\u00d7 Time = 15 \\u00d7 3 = 45 km.\n\n\\u2234 The correct answer is 45 km.\n\nAdditional Information\nAverage Speed\n\nAverage Speed = Total Distance \\u00f7 Total Time. It represents the constant speed required to cover the whole distance in the given timeframe without any variations.\n\nAlligation Method in Speed\n\nWhen applying the cross-alligation method directly on two different speeds to obtain an average speed, the resulting ratio strictly represents the ratio of time taken, not the distance.\n\nShift / Minimum Value Trick\n\nWhen a total value is comprised of two parts, assuming the entire operation happens at the minimum rate allows finding the specific remainder. Dividing this remainder by the unit rate difference reveals the proportion of the higher rate component.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -868,7 +868,7 @@
         "answer": "d",
         "solution": "Initial ratio of CP : SP = 100 : 120 = 5 : 6\nNew ratio of CP : SP = 100 : 140 = 5 : 7 (since both CP and SP are reduced by ₹20)\nApplying the cross-multiplication method: Difference in ratio units = (5 × 7) − (5 × 6) = 5 units.\nAbsolute difference in value = (7 × 20) − (5 × 20) = 40.\n⇒ 5 units = ₹40 (Since initial CP is exactly 5 units, Initial CP = ₹40).\n∴ The correct answer is ₹40.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -885,7 +885,7 @@
         "answer": "d",
         "solution": "Increase in surface area = 4π[(r + 3)^2 − r^2] = 156π\n⇒ (r + 3)^2 − r^2 = 39\n⇒ r^2 + 6r + 9 − r^2 = 39\n⇒ 6r = 30 ⇒ r = 5 cm\n∴ The correct answer is 5 cm.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -919,7 +919,7 @@
         "answer": "c",
         "solution": "Shortcut Trick: Ratio of number of children = 35 : 15 = 7 : 3. Let base average be 14 years. Deviation of the first group from 14 = +2 years. Net deviation per child = (7 × 2) ÷ (7 + 3) = 14 ÷ 10 = +1.4 years. Combined Average = Base average + Net deviation = 14 + 1.4 = 15.4 years. ∴ The correct answer is 15.4 years.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -936,7 +936,7 @@
         "answer": "b",
         "solution": "Let the original fraction be x/y. Condition 1: (x + 2) / (2y) = 1/2 ⇒ 2(x + 2) = 2y ⇒ y = x + 2. Condition 2: (2x) / (y + 2) = 6/7 ⇒ 14x = 6(y + 2). Substituting y = x + 2 into Condition 2 gives 7x = 3(x + 2) + 6 ⇒ 4x = 12 ⇒ x = 3, y = 5. Original fraction = 3/5. Sum = 3 + 5 = 8. ∴ The correct answer is 8.",
         "tags": {
-          "topic": "Number System",
+          "topic": "Algebra",
           "difficulty": "medium"
         }
       },
@@ -970,7 +970,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\nThe numbers 3, 7, 13, and 37 are all prime numbers.\n\nTheir LCM is simply their product: 3 × 7 × 13 × 37 = 10101.\n\nThis is already the least five-digit number divisible by all four.\n\nTo get a remainder of 2, simply add 2 to this LCM: 10101 + 2 = 10103.\n∴ The correct answer is 10103.\n\nAlternate Method\nGiven:\nDivisors: 3, 7, 13, 37\nRemainder: 2\nFormula: Required Number = LCM(Divisors) × k + Remainder\n\nCalculations:\n⇒ LCM(3, 7, 13, 37) = 3 × 7 × 13 × 37\n⇒ 21 × 13 × 37\n⇒ 273 × 37\n⇒ 10101\n\nThe number must be of the form 10101k + 2.\n\nFor the least five-digit number, we take k = 1:\n⇒ Number = 10101 × 1 + 2\n⇒ Number = 10101 + 2\n⇒ Number = 10103\n∴ The correct answer is 10103.",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -987,7 +987,7 @@
         "answer": "a",
         "solution": "Given:\nThe speed of a boat in still water is 9 km/h.\nDistance covered in downstream = 35 km\nDistance covered in upstream = 28 km\n\nConcept used:\nSpeed = Distance / Time\nDownstream speed = (v + u)\nUpstream speed = (v - u)\nWhere, v = Speed of the boat in still water, u = Speed of the stream\n\nCalculation:\nLet the speed of the stream be 's' km/h\nAccording to the question,\n35 / (9 + s) = 28 / (9 - s)\n⇒ 35(9 - s) = 28(9 + s)\n⇒ 5(9 - s) = 4(9 + s)\n⇒ 45 - 5s = 36 + 4s\n⇒ 9 = 9s\n⇒ s = 1 km/h\n∴ The speed of the stream is 1 km/h.",
         "tags": {
-          "topic": "Speed, Time & Distance",
+          "topic": "Boats & Streams",
           "difficulty": "medium"
         }
       },
@@ -1004,7 +1004,7 @@
         "answer": "d",
         "solution": "Given Fraction = 2/7\nTotal Students = 7 units\nGirls = 2 units\nBoys = 7 - 2 = 5 units\n\nAlso Given, there are 111 more boys than girls\nAccording to the fraction,\nMore Number = 5 - 2 = 3 units\n3 units = 111\n1 unit = 37\nNumber of boys = 5 units = 5 × 37 = 185\n∴ Total of 185 boys are there in the school auditorium.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -1021,7 +1021,7 @@
         "answer": "a",
         "solution": "Ratio of Amount to Principal for 3 years = (25500 + 8440.50) ÷ 25500 = 33940.5 ÷ 25500 = 1331 / 1000.\nEquivalent ratio for 1 year = ∛(1331 / 1000) = 11 / 10.\nInterest rate (R) = (11 − 10) ÷ 10 × 100% = 10%.\nSimple Interest for 3 years = 30% of Principal = 30% of 25500 = 7650.\n∴ The correct answer is Rs. 7650.",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Compound Interest",
           "difficulty": "medium"
         }
       },
@@ -1038,7 +1038,7 @@
         "answer": "d",
         "solution": "Given:\nThe speed of A is 40 km/h\nThe speed of B is 80 km/h\n\nConcept used:\nSpeed = Distance / Time\nWhen two objects are moving in the same direction then their relative speed = Difference of their individual speeds\n\nCalculation:\nDistance travelled by A till 2 pm = 4 × 40 = 160 km\nA and B travelled in the same direction then relative speed = 80 - 40 = 40 km/h\nTime taken by B to meet A = 160 / 40 = 4 hours or at 6 pm\nIn 4 hours travelled distance by B = 4 × 80 = 320 km\n∴ The required result will be 320 km and at 6 pm.",
         "tags": {
-          "topic": "Speed, Time & Distance",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -1055,7 +1055,7 @@
         "answer": "b",
         "solution": "Shortcut Trick: Convert Profit % to fraction: 14 2/7% = 1/7. Here, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit. Selling Price (SP) = CP + Profit = 7 + 1 = 8 units. Required fraction (CP/SP) = 7/8.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       }
@@ -1097,7 +1097,7 @@
         "answer": "a",
         "solution": "Radius of circumcircle = side of inscribed regular hexagon = r. Area of circle = πr². Area of regular hexagon = (3√3/2)r². Uncovered Area = πr² − (3√3/2)r² = r²(2π − 3√3) / 2. Ratio = Area of circle ÷ Uncovered Area = 2π / (2π − 3√3).",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -1114,7 +1114,7 @@
         "answer": "a",
         "solution": "Total Lateral Surface Area = Total Surface Area − Base Area = 260 − 120 = 140 cm². Number of Lateral Faces = Total Lateral Area ÷ Area of each lateral face = 140 ÷ 20 = 7.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1131,7 +1131,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\nWhen the time taken by both moving objects is constant, the ratio of the distance covered is equal to the ratio of their speeds.\n\nSpeed ratio (Thief : Policeman) = 11 : 13\nDistance ratio (Thief : Policeman) = 11 : 13\nDifference in distance covered = 13 parts − 11 parts = 2 parts\nGiven the initial distance difference is 225 m ⇒ 2 parts = 225 m ⇒ 1 part = 112.5 m\nDistance run by the thief = 11 parts = 11 × 112.5 = 1237.5 metres\n∴ The correct answer is 1237.5 metres.\n\nAlternate Method\nGiven:\nInitial distance between policeman and thief = 225 m\nSpeed of thief = 11 km/h\nSpeed of policeman = 13 km/h\n\nFormula Used:\nRelative speed (same direction) = Speed1 − Speed2\nTime = Distance ÷ Relative Speed\nDistance = Speed × Time\n\nCalculations:\n⇒ Relative speed = 13 − 11 = 2 km/h\n⇒ Relative speed in m/s = 2 × (5/18) = 5/9 m/s\n⇒ Time taken to catch the thief = Distance ÷ Relative speed = 225 ÷ (5/9)\n⇒ Time taken = 225 × (9/5) = 45 × 9 = 405 seconds\n⇒ Speed of thief in m/s = 11 × (5/18) = 55/18 m/s\n⇒ Distance covered by thief before getting caught = Speed of thief × Time taken\n⇒ Distance = (55/18) × 405 = 55 × 22.5\n⇒ Distance = 1237.5 m\n∴ The correct answer is 1237.5 metres.\n\nAdditional Information\nRelative Speed (Same Direction)\n\nWhen two bodies are moving in the same direction, their relative speed is the difference between their individual speeds: S = S1 − S2.\n\nRelative Speed (Opposite Direction)\n\nWhen two bodies are moving in opposite directions towards each other, their relative speed is the sum of their individual speeds: S = S1 + S2.\n\nUnit Conversion\n\nTo convert speed from km/h to m/s, multiply the value by 5/18. To convert speed from m/s to km/h, multiply the value by 18/5.",
         "tags": {
-          "topic": "Direction & Distance",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -1148,7 +1148,7 @@
         "answer": "d",
         "solution": "Shortcut Trick\nThe ratio of circumferences of two circles is identical to the ratio of their radii.\n\nRatio of outer radius (R) to inner radius (r) = 17 ∶ 15\nWidth of the path in ratio units = 17 − 15 = 2 units.\nGiven width = 40 metres, so 2 units = 40 metres ⇒ 1 unit = 20 metres.\nInner radius = 15 units = 15 × 20 = 300 metres.\n∴ The correct answer is 300 metres.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -1165,7 +1165,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\nProfit ratio = (Capital × Time)\nA : B : C = (3 × 12) : (2 × 12) : (6 × 6 + 3 × 6)\n⇒ A : B : C = 36 : 24 : 54 = 6 : 4 : 9\nTotal profit = 19 parts = ₹53010 ⇒ 1 part = ₹2790\nA's profit = 6 parts = 6 × 2790 = ₹16740\n∴ The correct answer is ₹16740.\n\nAlternate Method\nGiven:\nRatio of initial investments of A, B and C = 3 : 2 : 6\nC withdraws half of his capital after 6 months.\nTotal profit for the year = ₹53010\n\nFormula Used:\nProfit Ratio = Product of Capital and Time Period\n\nCalculations:\n⇒ Equivalent capital for A = 3 × 12 = 36 units\n⇒ Equivalent capital for B = 2 × 12 = 24 units\n⇒ Equivalent capital for C = (6 × 6) + (3 × 6) = 36 + 18 = 54 units\n⇒ Ratio of profits (A : B : C) = 36 : 24 : 54\n⇒ Simplified profit ratio = 6 : 4 : 9\n⇒ Total ratio parts = 6 + 4 + 9 = 19\n⇒ A's share = (6 ÷ 19) × Total Profit\n⇒ A's share = (6 ÷ 19) × 53010\n⇒ A's share = 6 × 2790 = 16740\n∴ The correct answer is ₹16740.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Partnership",
           "difficulty": "medium"
         }
       },
@@ -1182,7 +1182,7 @@
         "answer": "d",
         "solution": "Shortcut Trick\nUsing the method of Alligation:\n\nRatio of Officers to Non-officers = (130 − 120) : (450 − 130)\nRatio = 10 : 320 = 1 : 32\nGiven 1 ratio unit = 15 officers, then 32 ratio units = 15 × 32 = 480 non-officers.\n∴ The correct answer is 480 non-officers.\n\nAlternate Method\nGiven:\nAverage salary of overall staff = Rs. 130\nAverage salary of officers = Rs. 450\nAverage salary of non-officers = Rs. 120\nNumber of officers = 15\n\nFormula Used:\nOverall Average = (Total salary of all staff) ÷ (Total number of staff)\n\nCalculations:\nLet the number of non-officers be x.\n⇒ Total salary of officers = 450 × 15 = 6750\n⇒ Total salary of non-officers = 120 × x = 120x\n⇒ Total staff members = 15 + x\n⇒ Overall Average = (6750 + 120x) ÷ (15 + x)\n⇒ 130 = (6750 + 120x) ÷ (15 + x)\n⇒ 130 × (15 + x) = 6750 + 120x\n⇒ 1950 + 130x = 6750 + 120x\n⇒ 130x − 120x = 6750 − 1950\n⇒ 10x = 4800\n⇒ x = 480\n∴ The correct answer is 480 non-officers.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Mixture & Alligation",
           "difficulty": "medium"
         }
       },
@@ -1199,7 +1199,7 @@
         "answer": "b",
         "solution": "Shortcut Trick\nWhen a hole is drilled completely through a solid, the net Total Surface Area (TSA) is:\n\nNet TSA = (TSA of Cube) − (2 × Base Area of Hole) + (Curved Surface Area of Hole)\nNet TSA = 6a² − 2πr² + 2πrh\nNet TSA = 6 × 14² − 2 × (22/7) × (3.5)² + 2 × (22/7) × 3.5 × 14\nNet TSA = 1176 − 77 + 308 = 1407 cm²\n∴ The correct answer is 1407 cm².\n\nAlternate Method\nGiven:\n⇒ Edge of the solid cube (a) = 14 cm\n⇒ Radius of the cylindrical hole (r) = 3.5 cm\n⇒ Height of the cylindrical hole (h) = Edge of cube = 14 cm\n\nFormula Used:\n⇒ Total Surface Area = (TSA of solid cube) − (2 × Area of circular bases of hole) + (CSA of cylindrical hole)\n⇒ TSA = 6a² − 2πr² + 2πrh\n\nCalculations:\n⇒ TSA of cube = 6 × 14 × 14 = 6 × 196 = 1176 cm²\n⇒ Area of 2 circular bases = 2 × (22/7) × 3.5 × 3.5 = 77 cm²\n⇒ CSA of cylindrical hole = 2 × (22/7) × 3.5 × 14 = 308 cm²\n⇒ Total Surface Area = 1176 − 77 + 308 = 1407 cm²\n∴ The correct answer is 1407 cm².",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1216,7 +1216,7 @@
         "answer": "d",
         "solution": "LCM of 8, 12, and 15 = 120\nNumbers divisible by 120 between 800 and 1500 = 840, 960, 1080, 1200, 1320, 1440\nTherefore, required answer is 6.",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -1301,7 +1301,7 @@
         "answer": "a",
         "solution": "8 months rate = 15 × (8/12) = 10%. Number of periods = 24/8 = 3. CI for 3 periods at 10%, CI = P [ (110 / 100)³ - 1 ] => 6620 = P [ (1331 / 1000) - 1 ] => 6620 = P × (331 / 1000) => P = (6620 × 1000) / 331 = ₹20,000.",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Compound Interest",
           "difficulty": "medium"
         }
       },
@@ -1318,7 +1318,7 @@
         "answer": "b",
         "solution": "For an arithmetic progression, Average = (First term + Last term) / 2. Given: First term + Last term = 86. Therefore, Average = 86 / 2 = 43.",
         "tags": {
-          "topic": "Number System",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -1335,7 +1335,7 @@
         "answer": "c",
         "solution": "The circumference of the smallest fountain is 12π m, so its diameter is 12 m. The circumference of the largest fountain is 20π m, so its diameter is 20 m. The diameters are in arithmetic progression. Therefore, the diameter of the middle fountain is the average of the smallest and largest diameters. Middle diameter = (12 + 20) / 2 = 16 m. Now, circumference of the middle fountain = π * 16 = 16π m.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -1369,7 +1369,7 @@
         "answer": "c",
         "solution": "Let CP = 1 and MP = m. Case 1: m(1 - d) = 1.15. Case 2: m(1 - d - 0.05) = 1.05. Divide case 1 by case 2: (1 - d) / (1 - d - 0.05) = 1.15 / 1.05 = 23 / 21. Let t = 1 - d. Then t / (t - 0.05) = 23 / 21 => 21t = 23t - 1.15 => 2t = 1.15 => t = 0.575 => d = 0.425. From case 1: m = 1.15 / 0.575 = 2.00. Markup% = (2.00 - 1) / 1 * 100 = 100%.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -1386,7 +1386,7 @@
         "answer": "a",
         "solution": "Side a = 12 m and height h = 20 m\nArea of regular hexagon = (3\\u221a3/2)a^2 = (3\\u221a3/2) * 144 = 216\\u221a3 m^2\nHence, Volume = base area X height = 216\\u221a3 X 20 = 4320\\u221a3 m^3",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1403,7 +1403,7 @@
         "answer": "c",
         "solution": "Original disc radius, R = 9 cm\nCentral angle of remaining sector = 360\\u02da \\u2212 120\\u02da = 240\\u02da\nArc length of remaining = (240/360) X 2\\u03c0R = 12\\u03c0 cm\nBase radius of cone, r = arc length/(2\\u03c0) = 12\\u03c0/(2\\u03c0) = 6 cm\nSlant height of cone, l = R = 9 cm\nHeight of cone, h = \\u221a(l^2 - r^2) = \\u221a(9^2 - 6^2)\n= \\u221a(81 \\u2212 36) = 3\\u221a5 cm\nHence, volume of cone = 1/3 X \\u03c0r^2h\n= 1/3 X \\u03c0 X 6^2 X 3\\u221a5 = 36\\u221a5 \\u03c0 cm^3",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1420,7 +1420,7 @@
         "answer": "a",
         "solution": "Let number of males in coaches A and B be 3x and 2x respectively.\n\nThen,\n\nNumber of males in coach C = 5x × 120/100 = 6x\n\nGiven,\n\n2x + 6x = 400\n8x = 400\nx = 50\nTherefore,\nNumber of males in coach A = 3x = 3 × 50 = 150",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -1437,7 +1437,7 @@
         "answer": "b",
         "solution": "Cost of a pearl ∝ Square of its weight\n3000 = k × 25^2\nk = 24/5\nNow,\nWeight of pieces are 3/5 × 25 = 15 grams and 2/5 × 25 = 10 grams\nTotal cost = 24/5 × 15 × 15 + 24/5 × 10 × 10 = ₹1560\nLoss percentage = [(3000 - 1560)/3000] × 100 = 48%",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -1454,7 +1454,7 @@
         "answer": "c",
         "solution": "Let first = x, second = x + 1200\nInterest = 0.05x + 0.07(x + 1200) = 360\n0.05x + 0.07x + 84 = 360\n=> 0.12x = 276\n=> x = 2300\nTotal = 2300 + 3500 = ₹5800",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Simple Interest",
           "difficulty": "medium"
         }
       },
@@ -1471,7 +1471,7 @@
         "answer": "b",
         "solution": "Cost price of laptop for Amit = 20000 + 4000 = Rs. 24000\nCost price of laptop for Rohit = 125% of 24000 + 3000 = Rs. 33000\nProfit % = 11000/33000 × 100 = 33.33%",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -1488,7 +1488,7 @@
         "answer": "b",
         "solution": "Total cost = 5 × 60 + 5 × 90 = 300 + 450 = ₹750\nNumber of pens = 10\nAverage CP per pen = 750/10 = ₹75\nTarget SP per pen for 20% profit = 1.20 × 75 = ₹90\nLet M = marked price per pen (₹)\nSP after 10% discount = 0.90M\n0.90M = 90\nM = 90 / 0.90 = ₹100",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -1522,7 +1522,7 @@
         "answer": "b",
         "solution": "Solution\\n\\nShortcut Trick\\n\\nArea of a circular ring = π × (R − r) × (R + r)\\n\\nSubstitute R = 27 and r = 18 into the formula:\\n\\n⇒ Area = π × (27 − 18) × (27 + 18)\\n\\n⇒ Area = π × 9 × 45\\n\\n⇒ Area = 405π\\n\\n∴ The correct answer is 405π cm².\\n\\nAlternate Method\\n\\nGiven:\\n\\n⇒ Outer radius of the circle (R) = 27 cm\\n\\n⇒ Inner radius of the circle (r) = 18 cm\\n\\nFormula Used:\\n\\n⇒ Area of the bounded region (Ring) = Area of outer circle − Area of inner circle\\n\\n⇒ Area = πR^2 − πr^2 = π(R^2 − r^2)\\n\\nCalculations:\\n\\n⇒ Area = π × (27)^2 − π × (18)^2\\n\\n⇒ Area = π × (729 − 324)\\n\\n⇒ Area = 405π\\n\\n∴ The correct answer is 405π cm².\\n\\nAdditional Information\\n\\nConcentric Circles\\n\\nConcentric circles are circles that share the exact same center point but have different radii. The region enclosed between two concentric circles is often referred to as an annulus or a circular ring.\\n\\nWidth of the Circular Ring\\n\\nThe thickness or width of the ring is uniformly distributed and can be calculated by subtracting the inner radius from the outer radius: Width = R − r.\\n\\nAlgebraic Identities\\n\\nWhen solving questions involving the difference of squares, applying the algebraic identity a^2 − b^2 = (a − b)(a + b) will severely reduce the calculation time and prevent squaring large values.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -1539,7 +1539,7 @@
         "answer": "b",
         "solution": "Solution\\n\\nShortcut Trick\\n\\nEffective Rate % over the entire period = (SI ÷ P) × 100\\n\\nRate × Time = (9 ÷ 45) × 100\\n\\nGiven Time (T) = 5R, we substitute T directly:\\n\\nR × 5R = (1 ÷ 5) × 100\\n\\n5R^2 = 20 ⇒ R^2 = 4 ⇒ R = 2\\n\\n∴ The correct answer is 2%.\\n\\nAlternate Method\\n\\nGiven:\\n\\nSimple Interest (SI) = 9/45 of Principal (P) = P / 5\\n\\nTime (T) = 5 × Rate (R)\\n\\nFormula Used:\\n\\nSimple Interest (SI) = (P × R × T) ÷ 100\\n\\nCalculations:\\n\\n⇒ P / 5 = (P × R × 5R) ÷ 100\\n\\nDividing both sides by P:\\n\\n⇒ 1 / 5 = 5R^2 / 100\\n\\n⇒ 1 / 5 = R^2 / 20\\n\\n⇒ R^2 = 20 / 5\\n\\n⇒ R^2 = 4\\n\\n⇒ R = √4 = 2\\n\\n∴ The correct answer is 2%.\\n\\nAdditional Information\\n\\nSimple Interest (SI) Basics\\n\\nSimple interest is charged only on the initial principal for the entire duration. The formula is SI = (P × R × T) ÷ 100.\\n\\nImportant Variation Formulas\\n\\nPrincipal (P) = (SI × 100) ÷ (R × T) | Time (T) = (SI × 100) ÷ (P × R)\\n\\nSimple Interest vs Compound Interest\\n\\nSI grows linearly over time, whereas Compound Interest (CI) grows exponentially because interest is calculated on both the principal and the accumulated interest.",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Compound Interest",
           "difficulty": "medium"
         }
       },
@@ -1573,7 +1573,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\n\nWhen time intervals are equal, Average Speed = Arithmetic mean of all speeds.\n\nThe speeds for the 5 hours form a geometric sequence ending in 128: 8, 16, 32, 64, 128 km/h.\n\nSum of speeds = 8 + 16 + 32 + 64 + 128 = 248 km/h.\n\nAverage Speed = 248 ÷ 5 = 49.6 km/h.\n\n∴ The correct answer is 49.6 km/h.\n\nAlternate Method\n\nGiven:\nTotal time taken for the journey = 5 hours\nSpeed in the 5th hour = 128 km/h\nThe speed doubles after every hour.\n\nFormula Used:\nDistance = Speed × Time\nAverage Speed = Total Distance ÷ Total Time\n\nCalculations:\nLet the speed in the 1st hour be v km/h.\nSpeeds in consecutive hours follow the pattern: 2v, 4v, 8v, 16v.\n⇒ Speed in the 5th hour = 16v = 128\n⇒ v = 128 ÷ 16 = 8 km/h\n\nThe distance covered in each 1-hour interval is numerically equal to the speed:\n⇒ Distance in 1st hour = 8 × 1 = 8 km\n⇒ Distance in 2nd hour = 16 × 1 = 16 km\n⇒ Distance in 3rd hour = 32 × 1 = 32 km\n⇒ Distance in 4th hour = 64 × 1 = 64 km\n⇒ Distance in 5th hour = 128 × 1 = 128 km\n⇒ Total Distance = 8 + 16 + 32 + 64 + 128 = 248 km\n⇒ Average Speed = 248 ÷ 5 = 49.6 km/h\n\n∴ The correct answer is 49.6 km/h.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -1590,7 +1590,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\n\nVolume = 1/3 × a^2 × h ⇒ 400 = 1/3 × 100 × h ⇒ h = 12 cm.\n\nSlant height l = √(h^2 + (a/2)^2) = √(12^2 + 5^2) = 13 cm.\n\nTotal Surface Area (TSA) = Base Area + Lateral Surface Area\n\n⇒ TSA = a^2 + 2al\n\n⇒ TSA = 10^2 + 2 × 10 × 13 = 100 + 260 = 360 cm^2.\n\n∴ The correct answer is 360 cm^2.\n\nAlternate Method\n\nGiven:\n\nBase side (a) = 10 cm\n\nVolume (V) = 400 cm^3\n\nFormula Used:\n\nVolume = 1/3 × a^2 × h\n\nSlant height (l) = √(h^2 + (a/2)^2)\n\nTotal Surface Area = a^2 + 2al\n\nCalculations:\n\n⇒ 400 = 1/3 × 10^2 × h\n\n⇒ 400 = 1/3 × 100 × h\n\n⇒ h = (400 × 3) ÷ 100\n\n⇒ h = 12 cm\n\nNow, finding the slant height (l):\n\n⇒ l = √(12^2 + (10/2)^2)\n\n⇒ l = √(144 + 25)\n\n⇒ l = √169 = 13 cm\n\nNow, finding the Total Surface Area (TSA):\n\n⇒ TSA = (10)^2 + 2 × 10 × 13\n\n⇒ TSA = 100 + 260\n\n⇒ TSA = 360 cm^2\n\n∴ The correct answer is 360 cm^2.\n\nAdditional Information\n\nVolume of a Pyramid\n\nThe volume of any pyramid is defined as exactly one-third of the volume of the corresponding prism: V = 1/3 × Base Area × Height.\n\nLateral Surface Area (LSA)\n\nFor a regular pyramid, the lateral surface area is formed by identical isosceles triangles: LSA = 1/2 × Perimeter of Base × Slant Height.\n\nEuler's Formula for Polyhedrons\n\nFor any solid polyhedron (like a pyramid), the number of Faces (F), Vertices (V), and Edges (E) are related by the formula: F + V = E + 2.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1607,7 +1607,7 @@
         "answer": "d",
         "solution": "Shortcut Trick: When time is constant, Distance \\u221d Speed. Difference in Speed = 95 \\u2212 80 = 15 km/h. Total Speed = 95 + 80 = 175 km/h. Total Distance = (Total Speed \\u00f7 Difference in Speed) \\u00d7 Difference in Distance. Total Distance = (175 \\u00f7 15) \\u00d7 180 = 175 \\u00d7 12 = 2100 km. \\u2234 The correct answer is 2100 km.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Trains",
           "difficulty": "medium"
         }
       },
@@ -1624,7 +1624,7 @@
         "answer": "a",
         "solution": "Total equivalent ratio units = (2 × 3) + (6 × 2) + (8 × 1) = 6 + 12 + 8 = 26 units.\nValue of 26 units = ₹1092.\nValue of 1 unit = 1092 ÷ 26 = ₹42.\nShare of 1 man = 3 units = 3 × 42 = ₹126.\n∴ The correct answer is ₹126.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -1641,7 +1641,7 @@
         "answer": "a",
         "solution": "Convert all animals to Cows (C) to find the total equivalent consumption ratio.\nGiven 3H = 5C ⇒ 1H = 5/3 C, and 10S = 6C ⇒ 1S = 3/5 C.\nA's usage = [12 × (5/3) × 5] + [20 × (3/5) × 4] = 100 + 48 = 148 cow-months.\nB's usage = (15 × 6) + [30 × (3/5) × 3] = 90 + 54 = 144 cow-months.\nRatio of rent A : B = 148 : 144 = 37 : 36.\n∴ The correct answer is 37/73.",
         "tags": {
-          "topic": "Partnership",
+          "topic": "Ratio & Proportion",
           "difficulty": "medium"
         }
       },
@@ -1675,7 +1675,7 @@
         "answer": "b",
         "solution": "Shortcut Trick\n\nMean of the given data = Sum of data ÷ Total numbers = 159 ÷ 12 = 13.25\n\nArranging data in ascending order: 3, 5, 7, 8, 9, 11, 12, 14, 19, 21, 23, 27\n\nMedian = Average of 6th and 7th terms = (11 + 12) ÷ 2 = 11.5\n\nDifference = 13.25 − 11.5 = 1.75\n\n∴ The correct answer is 1.75.",
         "tags": {
-          "topic": "Number System",
+          "topic": "Statistics",
           "difficulty": "medium"
         }
       },
@@ -1692,7 +1692,7 @@
         "answer": "c",
         "solution": "Shortcut Trick\n\nThe total surface area of a cuboid is twice the sum of the areas of its three adjacent faces.\n\n⇒ Total Surface Area = 2 × (Sum of adjacent faces)\n\n⇒ Total Surface Area = 2 × (120 + 60 + 72)\n\n⇒ Total Surface Area = 2 × 252 = 504 cm^2\n\n∴ The correct answer is 504 cm^2.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1709,7 +1709,7 @@
         "answer": "d",
         "solution": "Shortcut Trick\n\nLet the total number of guests be the LCM of 2, 3, and 4, which is 12 units.\n\nNumber of bowls used = (12 ÷ 2) + (12 ÷ 3) + (12 ÷ 4) = 6 + 4 + 3 = 13 units.\n\nGiven total bowls = 65, so we equate: 13 units = 65 ⇒ 1 unit = 5.\n\nTotal guests = 12 units = 12 × 5 = 60 guests.\n\n∴ The correct answer is 60 guests.",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -1743,7 +1743,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\nFor equal time intervals (2 hours each), the average speed over the entire journey is simply the arithmetic mean of the individual speeds.\n⇒ Average Speed = (S1 + S2 + S3) ÷ 3\n⇒ 52 = (60 + 50 + x) ÷ 3\n⇒ 156 = 110 + x ⇒ x = 46\n∴ The correct answer is 46.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -1760,7 +1760,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\nThe ratio of areas of similar triangles is the square of the ratio of their corresponding sides.\n\nRatio of sides AB and CD = \\u221a(1/4) = 1 : 2\nGiven the shorter side is 12 cm, so the longer side = 12 \\u00d7 2 = 24 cm.\nArea of trapezium = 1/2 \\u00d7 (Sum of parallel sides) \\u00d7 Height\nArea = 1/2 \\u00d7 (12 + 24) \\u00d7 15 = 18 \\u00d7 15 = 270 cm\\u00b2.\n\n\\u2234 The correct answer is 270 cm\\u00b2.\n\nAlternate Method\nGiven:\nIn trapezium ABCD, AB || CD.\n\nHeight (h) = 15 cm.\nShorter side = 12 cm.\nArea(\\u0394AOB) : Area(\\u0394COD) = 1 : 4.\n\nFormula Used:\nArea of Trapezium = 1/2 \\u00d7 (Sum of parallel sides) \\u00d7 height\nFor similar triangles, Ratio of Areas = (Ratio of corresponding sides)\\u00b2\n\nCalculations:\n\\u21d2 In \\u0394AOB and \\u0394COD, AB || CD.\n\n\\u21d2 \\u2220OAB = \\u2220OCD and \\u2220OBA = \\u2220ODC (Alternate interior angles).\n\n\\u21d2 \\u2234 \\u0394AOB \\u223c \\u0394COD (by AA similarity criterion).\n\n\\u21d2 Area(\\u0394AOB) / Area(\\u0394COD) = AB\\u00b2 / CD\\u00b2\n\\u21d2 1 / 4 = AB\\u00b2 / CD\\u00b2\n\\u21d2 AB / CD = \\u221a(1 / 4) = 1 / 2\n\\u21d2 Since the ratio of AB : CD is 1 : 2, AB is the shorter side.\n\\u21d2 AB = 12 cm.\n\\u21d2 CD = 2 \\u00d7 12 = 24 cm.\n\\u21d2 Area of Trapezium = 1/2 \\u00d7 (AB + CD) \\u00d7 h\n\\u21d2 Area = 1/2 \\u00d7 (12 + 24) \\u00d7 15\n\\u21d2 Area = 1/2 \\u00d7 36 \\u00d7 15\n\\u21d2 Area = 18 \\u00d7 15 = 270 cm\\u00b2.\n\n\\u2234 The correct answer is 270 cm\\u00b2.\n\nAdditional Information\nSimilar Triangles Area Theorem\n\nThe ratio of the areas of two similar triangles is strictly equal to the square of the ratio of their corresponding sides.\n\nProperties of a Trapezium\n\nA trapezium is a quadrilateral with exactly one pair of parallel sides. The diagonals of a trapezium intersect each other, dividing themselves proportionally.\n\nArea of a Trapezium\n\nThe area formula is 1/2 \\u00d7 (a + b) \\u00d7 h, where 'a' and 'b' represent the parallel bases, and 'h' represents the perpendicular distance between them.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -1794,7 +1794,7 @@
         "answer": "b",
         "solution": "Ratio of downstream to upstream speed = 2.5 : 1 = 5 : 2. For equal distance, the time ratio is inversely proportional to the speed ratio = 2 : 5. Total time = 2 + 5 = 7 units → 14/3 hours. Time taken downstream (2 units) = (14/3) × (2/7) = 4/3 hours. Downstream speed = Distance ÷ Time = 15 ÷ (4/3) = 11.25 = 45/4 km/h.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Boats & Streams",
           "difficulty": "medium"
         }
       },
@@ -1828,7 +1828,7 @@
         "answer": "b",
         "solution": "Using the combined volume formula for a cone on a hemisphere: V = (1/3) * π * r^2 * (2r + h). Cone height h = Total height - radius = 11.6 - 5.6 = 6 cm. V = (1/3) * (22/7) * 5.6 * 5.6 * (2 * 5.6 + 6) ≈ 565.07 cm^3. Rounding off to the closest integer gives 565 cm^3. ∴ The correct answer is 565 cm^3.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -1845,7 +1845,7 @@
         "answer": "a",
         "solution": "Total number of tests taken by Aman = n. Number of initial tests before the last one = n - 1. Sum of scores in the first (n - 1) tests = Average * Count = y(n - 1). Total sum of all n tests = Initial sum + Score of last test = y(n - 1) + z. New Average = Total Sum / Total Tests = [y(n - 1) + z] / n. ∴ The correct answer is [y(n - 1) + z] / n.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -1862,7 +1862,7 @@
         "answer": "a",
         "solution": "Shortcut Trick: Put y = 0 to find the base points on the X-axis: 2x + 8 = 0 => x = -4 and 8x - 24 = 0 => x = 3. The length of the base = 3 - (-4) = 7 units. To find the height, find the y-coordinate of the intersection of 2x - y + 8 = 0 and 8x + 3y - 24 = 0. Multiply the first equation by 4 to get 8x - 4y + 32 = 0, and subtract it from the second: 7y - 56 = 0 => y = 8. Area = 1/2 × Base × Height = 1/2 × 7 × 8 = 28 sq units. ∴ The correct answer is 28 sq units.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Coordinate Geometry",
           "difficulty": "medium"
         }
       },
@@ -1879,7 +1879,7 @@
         "answer": "c",
         "solution": "Shortcut Trick: Using the multiplying factor method for successive discounts: Selling Price = Marked Price × (100 - D1)% × (100 - D2)%. SP = 265.80 × 0.90 × 0.92 = 265.80 × 0.828 = 220.0824 ≈ 220.08. ∴ The correct answer is Rs. 220.08.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -1896,7 +1896,7 @@
         "answer": "b",
         "solution": "Shortcut Trick\nUse the Net Deviation Method by taking an Assumed Average = 18.\nNet deviation = (10 × 2) + (6 × 1) + (5 × 0) + (4 × −1) + (2 × −6)\nNet deviation = 20 + 6 + 0 − 4 − 12 = +10 marks\nAverage change per student = +10 ÷ 27 ≈ +0.37\nActual Average = 18 + 0.37 = 18.37\n∴ The correct answer is 18.37 marks.\n\nAlternate Method\nFrequency Distribution of Marks\nMarks Scored\n2\n12\n4\n17\n5\n18\n6\n19\n10\n20\n\nGiven:\nDistribution of students and their marks:\n\n10 students scored 20 marks\n\n6 students scored 19 marks\n\n5 students scored 18 marks\n\n4 students scored 17 marks\n\n2 students scored 12 marks\n\nFormula Used:\nAverage = Sum of all observations ÷ Total number of observations\n\nCalculations:\n⇒ Total students = 10 + 6 + 5 + 4 + 2 = 27\n⇒ Total marks = (10 × 20) + (6 × 19) + (5 × 18) + (4 × 17) + (2 × 12)\n⇒ Total marks = 200 + 114 + 90 + 68 + 24\n⇒ Total marks = 496\n⇒ Average marks = 496 ÷ 27\n⇒ Average marks ≈ 18.3703...\n∴ The correct answer is 18.37 marks.\n\nAdditional Information\nWeighted Average\n\nWhen data sets have different frequencies or weights, the weighted average is calculated as Sum(wi × xi) ÷ Sum(wi), where w is the respective frequency and x is the value.\n\nAssumed Mean Deviation Method\n\nA faster way to find averages involves picking an assumed mean (A), calculating total deviation (D) of all items from A, and finding True Average = A + (D ÷ N).\n\nCombined Average\n\nFor two groups with sizes n1 and n2 and averages A1 and A2, the combined average is given by the formula (n1A1 + n2A2) ÷ (n1 + n2).",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Statistics",
           "difficulty": "medium"
         }
       },
@@ -1930,7 +1930,7 @@
         "answer": "c",
         "solution": "Given:\nRadius = 18 cm\nCentral angle = 125°\n\nFormula used:\nPerimeter of sector of a circle = (θ / 360°) × 2πr + 2r\n\nCalculation:\nAccording to the question:\nPerimeter of sector of a circle = (125 / 360) × 2 × (22 / 7) × 18 + 2 × 18\n⇒ (25 / 72) × (44 / 7) × 18 + 36\n⇒ (275 / 7) + 36\n⇒ (275 + 252) / 7\n⇒ 527 / 7\n⇒ 75.28 cm ~ 75.3 cm\n∴ The required perimeter is 75.3 cm.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -1981,7 +1981,7 @@
         "answer": "a",
         "solution": "Use the direct relation: CP : MP = (100 − Discount%) : (100 + Profit%). CP : MP = (100 − 20) : (100 + 12) = 80 : 112 = 5 : 7. Given Cost Price (CP) = 5 units = ₹750, so 1 unit = 750 ÷ 5 = 150. Marked Price (MP) = 7 units = 7 × 150 = 1050.",
         "tags": {
-          "topic": "Profit & Loss",
+          "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
       },
@@ -1998,7 +1998,7 @@
         "answer": "b",
         "solution": "Given:\nDistance between A and B = 700 km\nSpeed of train from A to B = 80 km/h\nSpeed of train from B to A = 65 km/h\n\nConcept used:\nDistance = Speed × Time\nAverage speed = Total distance travelled / Total time taken\n\nCalculation:\nTime taken by train from A to B = Distance / Speed = 700 / 80\nTime taken by train from B to A = 700 / 65\nAverage speed during the whole journey = Total distance / Total time\n⇒ (700 + 700) / [(700 / 80 + 700 / 65)]\n⇒ (700 + 700) / [700 × (1 / 80 + 1 / 65)]\n⇒ (2 × 700) / [700 × (13 + 16) / 1040]\n⇒ 2 / (29 / 1040)\n⇒ (1040 × 2) / 29 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.\n\nShortcut Trick:\nIf the distance travelled in both the cases is the same, then we can apply this formula:\nAverage speed = (2 × product of the two speeds) / (Sum of the two speeds)\n⇒ (2 × 80 × 65) / (80 + 65)\n⇒ 10400 / 145 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Trains",
           "difficulty": "medium"
         }
       },
@@ -2015,7 +2015,7 @@
         "answer": "a",
         "solution": "Given:\nPrincipal = 57,500\nRate of interest = 4%, 5% and 8%\n\nFormula used:\nS.I = (P × R × T) / 100\n\nCalculation:\nLet the three parts be x, y and z\nThen,\n⇒ (x × 4 × 1) / 100 = (y × 5 × 1) / 100 = (z × 8 × 1) / 100\n⇒ 0.04x = 0.05y = 0.08z\n⇒ x : y : z = 10 : 8 : 5\nSum invested at 5% = (8 / 23) × 57,500 = 20,000\n∴ The answer is Rs 20,000.",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Simple Interest",
           "difficulty": "medium"
         }
       },
@@ -2032,7 +2032,7 @@
         "answer": "a",
         "solution": "Shortcut Trick:\nLet the numbers be 8x and 8y, where x and y are co-prime.\nProduct of ratios (x × y) = LCM ÷ HCF = 96 ÷ 8 = 12.\nSum of ratios (x + y) = Sum ÷ HCF = 56 ÷ 8 = 7.\nFind two numbers that multiply to 12 and add to 7 → 3 and 4.\nDifference between numbers = HCF × (x − y) = 8 × (4 − 3) = 8.\n∴ The correct answer is 8.\n\nAlternate Method:\nGiven:\nLCM = 96, HCF = 8, Sum (a + b) = 56.\n\nFormula Used:\nProduct of two numbers (a × b) = LCM × HCF\nAlgebraic identity: (a − b)² = (a + b)² − 4ab\n\nCalculations:\n⇒ Product (ab) = 96 × 8 = 768\n⇒ Sum (a + b) = 56\n⇒ (a − b)² = (56)² − 4 × (768)\n⇒ (a − b)² = 3136 − 3072\n⇒ (a − b)² = 64\n⇒ (a − b) = √64 = 8\n∴ The correct answer is 8.",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -2049,7 +2049,7 @@
         "answer": "c",
         "solution": "Shortcut Trick:\nLet the two numbers be 5a and 5b, where a and b are coprime.\nGiven LCM = 495 ⇒ 5 × a × b = 495 ⇒ a × b = 99\nGiven Sum = 100 ⇒ 5a + 5b = 100 ⇒ a + b = 20\nValues satisfying both conditions are a = 11 and b = 9.\nDifference = 5a − 5b = 5 × (11 − 9) = 10.\n∴ The correct answer is 10.\n\nAlternate Method:\nGiven:\nLCM of the two numbers = 495\nHCF of the two numbers = 5\nSum of the numbers (a + b) = 100\n\nFormula Used:\nProduct of two numbers = HCF × LCM\n(a − b)² = (a + b)² − 4ab\n\nCalculations:\n⇒ a × b = 5 × 495 = 2475\n⇒ (a − b)² = (a + b)² − 4ab\n⇒ (a − b)² = (100)² − 4 × 2475\n⇒ (a − b)² = 10000 − 9900\n⇒ (a − b)² = 100\n⇒ a − b = √100\n⇒ a − b = 10\n∴ The correct answer is 10.",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -2142,7 +2142,7 @@
         "answer": "b",
         "solution": "Shortcut Trick\nLet the required number be 100%.\n\nThe three parts given are 100%, 50%, and 25%.\n\nSum of these parts = 100% + 50% + 25% = 175%\nAverage = 175% ÷ 3 = 280\n⇒ 100% = (280 × 3 × 100) ÷ 175 = 480\n∴ The correct answer is 480.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },
@@ -2159,7 +2159,7 @@
         "answer": "b",
         "solution": "Relative speed = 20 − 12 = 8 m/s\n\nFor one overtake, the faster athlete must gain one complete lap = 1000 m.\n\nTime for one overtake = 1000 / 8 = 125 seconds\nTime taken by the faster athlete to finish 5 km = 5000 / 20 = 250 seconds\nNumber of overtakes = 250 / 125 = 2\nHence, (B) is correct.",
         "tags": {
-          "topic": "Time, Speed and Distance",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -2210,7 +2210,7 @@
         "answer": "b",
         "solution": "Formula:\nEquation of a line in slope-intercept form is:\ny = mx + c\nWhere:\nm = slope of the line\nc = y-intercept\nGiven equation:\ny = 3x - 5\nComparing with:\ny = mx + c\nm = 3\nTherefore, the slope of the line is 3.",
         "tags": {
-          "topic": "Algebra",
+          "topic": "Coordinate Geometry",
           "difficulty": "medium"
         }
       },
@@ -2244,7 +2244,7 @@
         "answer": "b",
         "solution": "Simplify: √72 = 6√2 and √32 = 4√2. Therefore, x = 6√2 - 4√2 = 2√2. Now, x² = (2√2)² = 4 × 2 = 8.",
         "tags": {
-          "topic": "Number System",
+          "topic": "Simplification",
           "difficulty": "medium"
         }
       },
@@ -2278,7 +2278,7 @@
         "answer": "a",
         "solution": "BD = CE = Height of boy = 2.1 m\nAE = Height of building = 42.8 m\nDE = BC = Distance between boy and building = 40.7\\u221a3 m\nAC = 42.8 m - 2.1 m = 40.7 m\nTan \\u03b8 = 40.7/(40.7\\u221a3)\nTan \\u03b8 = 1/\\u221a3\n\\u03b8 = 30\\u02da",
         "tags": {
-          "topic": "Trigonometry",
+          "topic": "Height & Distance",
           "difficulty": "medium"
         }
       },
@@ -2329,7 +2329,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\n\nSI for 1 year = 800 ÷ 2 = ₹400\n\nDifference for 2 years = CI − SI = 832 − 800 = ₹32\n\nRate (R) = (Interest on 1st year SI ÷ 1st year SI) × 100 = (32 ÷ 400) × 100 = 8%\n\nFor 3 years, Difference = 3 × (2-year Diff) + (R% of 2-year Diff)\n\nDifference = 3 × 32 + (8% of 32) = 96 + 2.56 = 98.56\n\n∴ The correct answer is ₹98.56.\n\nAlternate Method\n\nGiven:\n\nCompound Interest (CI) for 2 years = ₹832\n\nSimple Interest (SI) for 2 years = ₹800\n\nFormula Used:\n\nDifference for 2 years (D2) = P × (R ÷ 100)^2\n\nDifference for 3 years (D3) = 3 × D2 + (R% of D2)\n\nCalculations:\n\n⇒ SI for 1 year = Total SI ÷ 2 = 800 ÷ 2 = ₹400\n\n⇒ Difference between CI and SI for 2 years (D2) = 832 − 800 = ₹32\n\n⇒ The difference of ₹32 is the interest earned exactly on the first year's SI (₹400).\n\n⇒ Rate of Interest (R) = (32 ÷ 400) × 100% = 8%\n\n⇒ Difference for 3 years (D3) = 3 × D2 + (R% of D2)\n\n⇒ D3 = 3 × 32 + (8 ÷ 100) × 32\n\n⇒ D3 = 96 + 2.56\n\n⇒ D3 = ₹98.56\n\n∴ The correct answer is ₹98.56.\n\nAdditional Information\n\nTree Method for Compound Interest\n\nIt breaks down CI into simple interest and interest-on-interest components. The 1st row is always the Simple Interest. The lower rows sum up to represent the exact difference between CI and SI over the years.\n\nCI vs SI Difference (2 Years)\n\nFormula: Diff2 = P × (R ÷ 100)^2. It strictly represents the interest generated on the first year's simple interest.\n\nCI vs SI Difference (3 Years)\n\nFormula: Diff3 = P × (R ÷ 100)^2 × (3 + R ÷ 100). For fast calculation, simply multiply the 2-year difference by 3 and add the rate percentage of the 2-year difference.",
         "tags": {
-          "topic": "SI & CI",
+          "topic": "Compound Interest",
           "difficulty": "medium"
         }
       },
@@ -2363,7 +2363,7 @@
         "answer": "b",
         "solution": "Shortcut Trick: For a closed cylinder, Total Surface Area = 2\\u03c0r(r + h). Radius (r) = 140 \\u00f7 2 = 70 cm = 0.7 m, Height (h) = 1 m. Area = 2 \\u00d7 (22/7) \\u00d7 0.7 \\u00d7 (0.7 + 1). Area = 44 \\u00d7 0.1 \\u00d7 1.7 = 7.48. \\u2234 The correct answer is 7.48 m\\u00b2.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       },
@@ -2397,7 +2397,7 @@
         "answer": "a",
         "solution": "Shortcut Trick\n\nCross-multiply the given values to solve for x^2 directly:\n\nx^2 = √128 × √162 = √(128 × 162)\n\nx^2 = √(64 × 2 × 81 × 2) = √(64 × 81 × 4)\n\nx^2 = 8 × 9 × 2 = 144\n\nx = √144 = 12\n\n∴ The correct answer is 12.\n\nAlternate Method\n\nGiven:\n\nx / √128 = √162 / x\n\nCalculation:\n\n⇒ Cross-multiplying both sides, we get:\n\n⇒ x × x = √128 × √162\n\n⇒ x^2 = √(128 × 162)\n\n⇒ Factorizing the numbers into perfect squares:\n\n⇒ x^2 = √(64 × 2 × 81 × 2)\n\n⇒ x^2 = √(64 × 81 × 4)\n\n⇒ Taking the square root of the perfect squares:\n\n⇒ x^2 = 8 × 9 × 2\n\n⇒ x^2 = 144\n\n⇒ x = √144\n\n⇒ x = 12\n\n∴ The correct answer is 12.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Algebra",
           "difficulty": "medium"
         }
       },
@@ -2414,7 +2414,7 @@
         "answer": "d",
         "solution": "Solution\n\nShortcut Trick\nWhen the vertices of an equilateral triangle are cut to form a regular hexagon, the side length is exactly trisected.\n\nSide of the regular hexagon = Side of triangle \\u00f7 3 = a / 3.\nArea of a regular hexagon = 6 \\u00d7 Area of small equilateral triangle = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 (side)\\u00b2.\nArea = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 (a / 3)\\u00b2 = (3\\u221a3 \\u00f7 2) \\u00d7 (a\\u00b2 \\u00f7 9).\nArea = \\u221aa\\u00b2 \\u00f7 6 = a\\u00b2 / (2\\u221a3).\n\n\\u2234 The correct answer is a\\u00b2 / (2\\u221a3) square units.\n\nAlternate Method\nGiven:\nAn equilateral triangle with side length a.\n\nThe vertices are cut out to make a regular hexagon.\n\nFormula Used:\nArea of an equilateral triangle = (\\u221a3 \\u00f7 4) \\u00d7 a\\u00b2\nArea of a regular hexagon = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 x\\u00b2 (where x is the side length)\n\nCalculations:\n\\u21d2 Let the side length of the regular hexagon be x.\n\n\\u21d2 When cutting the vertices of an equilateral triangle to form a regular hexagon, the cut-out portions are smaller equilateral triangles of side length x.\n\n\\u21d2 The original side 'a' consists of three linear segments: one side of a cut-off triangle, one side of the hexagon, and one side of another cut-off triangle.\n\n\\u21d2 x + x + x = a\n\\u21d2 3x = a\n\\u21d2 x = a / 3\n\n\\u21d2 The area of the regular hexagon is the combined area of 6 small equilateral triangles of side x.\n\n\\u21d2 Area = 6 \\u00d7 [(\\u221a3 \\u00f7 4) \\u00d7 (a / 3)\\u00b2]\n\\u21d2 Area = 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 (a\\u00b2 \\u00f7 9)\n\\u21d2 Area = (6\\u221a3 \\u00d7 a\\u00b2) \\u00f7 36\n\\u21d2 Area = (\\u221a3 \\u00d7 a\\u00b2) \\u00f7 6\n\n\\u21d2 Multiplying numerator and denominator by \\u221a3 to simplify the fraction:\n\n\\u21d2 Area = (\\u221a3 \\u00d7 \\u221a3 \\u00d7 a\\u00b2) \\u00f7 (6 \\u00d7 \\u221a3) = 3a\\u00b2 \\u00f7 6\\u221a3\n\\u21d2 Area = a\\u00b2 / (2\\u221a3)\n\n\\u2234 The correct answer is a\\u00b2 / (2\\u221a3) square units.\n\nAdditional Information\nArea of an Equilateral Triangle\n\nThe area of an equilateral triangle with side 'a' is given by Area = (\\u221a3 \\u00f7 4) \\u00d7 a\\u00b2, and its height is h = (\\u221a3 \\u00f7 2) \\u00d7 a.\n\nRegular Hexagon Area\n\nA regular hexagon with side 'x' is structurally made of 6 identical equilateral triangles. Its total area is 6 \\u00d7 (\\u221a3 \\u00f7 4) \\u00d7 x\\u00b2 = (3\\u221a3 \\u00f7 2) \\u00d7 x\\u00b2.\n\nInradius & Circumradius of Equilateral Triangle\n\nFor an equilateral triangle of side 'a', the inradius is r = a \\u00f7 (2\\u221a3) and the circumradius is R = a \\u00f7 \\u221a3. Note that the circumradius is always exactly double the inradius (R = 2r).\n\nMax Area Hexagon in a Triangle\n\nThe largest regular hexagon that can be inscribed in any equilateral triangle is formed precisely by cutting off its corners, and its side length is always strictly one-third of the parent triangle's side.",
         "tags": {
-          "topic": "Mensuration",
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       },
@@ -2516,7 +2516,7 @@
         "answer": "d",
         "solution": "Shortcut Trick\nFind the common difference (k) between divisors and remainders: 24 − 13 = 11, 40 − 29 = 11, 48 − 37 = 11.\n\nCalculate LCM of (24, 40, 48) = 240.\n\nThe required number is (LCM × n) − k. For n = 1, Number = 240 − 11 = 229.\n\nSum of digits of 229 = 2 + 2 + 9 = 13.\n∴ The correct answer is 13.\n\nAlternate Method\nGiven:\nDivisors: D1 = 24, D2 = 40, D3 = 48\nRemainders: R1 = 13, R2 = 29, R3 = 37\n\nFormula Used:\nWhen (D1 − R1) = (D2 − R2) = (D3 − R3) = k, the number is [LCM(D1, D2, D3) × n] − k.\n\nCalculations:\n⇒ Difference (k) = 24 − 13 = 11\n⇒ Difference (k) = 40 − 29 = 11\n⇒ Difference (k) = 48 − 37 = 11\n⇒ LCM of 24, 40, and 48:\n⇒ 24 = 2³ × 3\n⇒ 40 = 2³ × 5\n⇒ 48 = 2⁴ × 3\n⇒ LCM = 2⁴ × 3 × 5 = 16 × 15 = 240\n⇒ Smallest required number = 240 − 11 = 229\n⇒ Sum of digits = 2 + 2 + 9 = 13\n∴ The correct answer is 13.\n\nAdditional Information\nLCM Method with Constant Remainder\nIf a number leaves the same remainder 'r' when divided by x, y, and z, the number is LCM(x, y, z) × n + r.\n\nLCM Method with Constant Difference\nIf the difference between divisor and remainder is constant 'k', the number is LCM(divisors) × n − k.\n\nSum of Digits Property\nThe sum of digits of a number is often used in divisibility tests for 3 and 9, where the sum must be divisible by the divisor.",
         "tags": {
-          "topic": "Number System",
+          "topic": "LCM & HCF",
           "difficulty": "medium"
         }
       },
@@ -2567,7 +2567,7 @@
         "answer": "a",
         "solution": "Given:\nRam is 500 km ahead of Laxman,\nIf they move in the same direction Laxman catches Ram in 25 hours,\nIf they move in the opposite direction Laxman will catch Ram in 5 hours,\n\nConcept used:\nDistance = Time × Speed\nRelative speed = u + v (when two bodies with speeds u and v moving toward each other)\nRelative speed = u - v (when two bodies with speed u and v moving away from each other)\n\nCalculation:\nLet R and L be the speed of Ram and Laxman respectively.\nAccording to the question,\n\nFirst case:\nRelative speed = L - R = 500 / 25 = 20 kmph\n\nSecond case:\nRelative speed = L + R = 500 / 5 = 100 kmph\nNow, on solving the above equations, we get,\n⇒ L = 60 kmph and R = 40 kmph\n\nAgain according to the question,\nThe total distance covered by Ram,\n⇒ 40 × (25 + 5) = 1200 km\n\nThe total distance covered by Laxman,\n⇒ 60 × (25 + 5) = 1800 km\n\nThe required difference in the distance,\n⇒ 1800 - 1200 = 600 km\nTherefore, '600 km' is the required answer.",
         "tags": {
-          "topic": "Time & Work",
+          "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
       },
@@ -2584,7 +2584,7 @@
         "answer": "d",
         "solution": "Ratio of the first number to the second number is 3 : 4. Let the numbers be 3x and 4x. Sum of reciprocals = 2 × Average = 2 × (7/48) = 7/24. According to the ratio: (1/3x) + (1/4x) = 7/24 ⇒ (4 + 3)/12x = 7/24. 7/12x = 7/24 ⇒ 12x = 24 ⇒ x = 2. First number = 3 × 2 = 6.",
         "tags": {
-          "topic": "Percentage",
+          "topic": "Average",
           "difficulty": "medium"
         }
       },

@@ -35,53 +35,96 @@ function getLocalTopicTag(subject: string, text: string, currentTopic?: string):
   const s = text.toLowerCase();
 
   if (/mathematics|quant/i.test(subject)) {
-    if (/\b(sin|cos|tan|cot|sec|cosec|trigonometr|height and distance)\b/i.test(s)) return "Trigonometry";
-    if (/\b(triangle|circle|chord|tangent|rhombus|parallelogram|trapezium|centroid|orthocenter|circumcenter)\b/i.test(s)) return "Geometry";
-    if (/\b(x\s*[\+\-\*\/]|polynomial|quadratic|x\^2|a\^3\s*\+\s*b\^3|linear equation|identity)\b/i.test(s)) return "Algebra";
-    if (/\b(cone|cylinder|sphere|hemisphere|cuboid|cube|frustum|surface area|volume of)\b/i.test(s)) return "Mensuration";
-    if (/\b(work|pipes?|cistern|efficiency|alternate days?)\b/i.test(s)) return "Time & Work";
-    if (/\b(train|speed|downstream|upstream|boat|km\/h|relative speed|race)\b/i.test(s)) return "Speed Time & Distance";
-    if (/\b(compound interest|simple interest|compounded|per annum is ₹|sum becomes \d+ times)\b/i.test(s)) return "Simple & Compound Interest";
-    if (/\b(marked price|cost price|selling price|discount|gain percentage|loss percentage|profit)\b/i.test(s)) return "Profit & Loss";
-    if (/\b(percent|percentage|increased by \d+%|decreased by \d+%)\b/i.test(s)) return "Percentage";
-    if (/\b(ratio|proportion|fourth proportional|mean proportional)\b/i.test(s)) return "Ratio & Proportion";
-    if (/\b(average|mean of|average score|average age)\b/i.test(s)) return "Average";
-    if (/\b(divisible|remainder|hcf|lcm|prime number|unit digit)\b/i.test(s)) return "Number System";
-    if (/\b(bar graph|pie chart|table shows|histogram|line graph)\b/i.test(s)) return "Data Interpretation";
-    return "Arithmetic";
+    // 1. Data Interpretation
+    if (/\b(bar graph|pie chart|table shows|histogram|line graph|data interpretation)\b/i.test(s)) return "Data Interpretation";
+    // 2. Trigonometry & Height & Distance
+    if (/\b(height and distance|angle of elevation|angle of depression)\b/i.test(s)) return "Height & Distance";
+    if (/\b(sin|cos|tan|cot|sec|cosec|trigonometr)\b/i.test(s)) return "Trigonometry";
+    // 3. Coordinate Geometry & Geometry
+    if (/\b(coordinate|collinear|slope of|abscissa|ordinate|equation of line|line intersects)\b/i.test(s)) return "Coordinate Geometry";
+    if (/\b(triangle|circle|chord|tangent|rhombus|parallelogram|trapezium|centroid|orthocenter|circumcenter|incenter|secant)\b/i.test(s)) return "Geometry";
+    // 4. Mensuration 3D & 2D
+    if (/\b(cone|cylinder|sphere|hemisphere|cuboid|cube|frustum|surface area|volume of)\b/i.test(s)) return "Mensuration 3D";
+    if (/\b(area of triangle|area of circle|perimeter|semi-circle|sector|quadrilateral area|area of a rhombus|area of rectangle)\b/i.test(s)) return "Mensuration 2D";
+    // 5. Statistics & Probability
+    if (/\b(probability|sample space|dice is rolled|cards are drawn|coin is tossed)\b/i.test(s)) return "Probability";
+    if (/\b(median|mode|variance|standard deviation|frequency distribution|statistics)\b/i.test(s)) return "Statistics";
+    // 6. Boats & Streams, Trains, Time Speed & Distance
+    if (/\b(boat|motorboat|stream|downstream|upstream|still water)\b/i.test(s)) return "Boats & Streams";
+    if (/\b(train|platform|passes a pole|crosses a bridge|length of the train)\b/i.test(s)) return "Trains";
+    if (/\b(speed|km\/h|relative speed|circular race|\brace\b|distance of \d+|km in \d+ hours|car travels|thief was spotted by a policeman|policeman started the chase)\b/i.test(s)) return "Time, Speed & Distance";
+    // 7. Pipes & Cisterns & Time & Work
+    if (/\b(pipes?|cistern|emptying|filling tap|leak in a tank)\b/i.test(s)) return "Pipes & Cisterns";
+    if (/\b(work|worker|efficiency|alternate days?|days to complete|men and \d+ women can do a work)\b/i.test(s)) return "Time & Work";
+    // 8. Mixture & Alligation & Partnership
+    if (/\b(mixture|alligation|mixes|vessel has milk to water|replaced by water|types of flour|alloy|milk to water ratio equal to)\b/i.test(s)) return "Mixture & Alligation";
+    if (/\b(partnership|invested in a business|business together|share of profit after|ratio of their investment|withdraw half his capital|three friends a, b, c invested)\b/i.test(s)) return "Partnership";
+    // 9. Compound & Simple Interest
+    if (/\b(compound interest|compounded|compounded annually|compounded half-yearly|compounded 8-monthly)\b/i.test(s)) return "Compound Interest";
+    if (/\b(simple interest|per annum is ₹|sum becomes \d+ times|invested at \d+% per annum)\b/i.test(s)) return "Simple Interest";
+    // 10. Profit, Loss & Discount
+    if (/\b(marked price|cost price|selling price|discount|gain percentage|loss percentage|profit percentage|loss of|marked at|sold at rs|loss%)\b/i.test(s)) return "Profit, Loss & Discount";
+    // 11. Average
+    if (/\b(average|mean of|average score|average age|average salary|average weight|average of 5 results|average of a number)\b/i.test(s)) return "Average";
+    // 12. Ratio & Proportion
+    if (/\b(ratio|proportion|fourth proportional|mean proportional|third proportional|ratio of the number of|ratio equal to|divided among \d+|numbers are in the ratio|a : b =|ratio of their ages|2\/7 of the students are girls)\b/i.test(s)) return "Ratio & Proportion";
+    // 13. Percentage
+    if (/\b(percent|percentage|increased by \d+%|decreased by \d+%|\d+% of|marks and failed by|pass percentage|falls short by \d+ marks to pass|population of a city is increased|population decreases by|gives 7 parts .* what percentage)\b/i.test(s)) return "Percentage";
+    // 14. LCM & HCF
+    if (/\b(hcf|lcm|highest common factor|least common multiple)\b/i.test(s)) return "LCM & HCF";
+    // 15. Simplification & Number System & Algebra
+    if (/\b(simplify|simplification|value of \(\d+|\b(bodmas)\b)\b/i.test(s)) return "Simplification";
+    if (/\b(divisible|remainder|prime number|unit digit|reciprocal|sum of two numbers is \d+ and their product)\b/i.test(s)) return "Number System";
+    if (/\b(x\s*[\+\-\*\/]|polynomial|quadratic|x\^2|a\^3|b\^3|linear equation|identity|equation x\s*\/)\b/i.test(s)) return "Algebra";
+    return "Number System";
   }
 
   if (/reasoning/i.test(subject)) {
-    if (/\b(statements?:|conclusions?:|all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(s)) return "Syllogism";
-    if (/\b(mother|father|brother|sister|son|daughter|uncle|aunt|nephew|niece|husband|wife|photograph)\b/i.test(s)) return "Blood Relations";
-    if (/\b(walks? \d+|turns? left|turns? right|north|south|east|west)\b/i.test(s)) return "Direction & Distance";
-    if (/\b(coded as|code language)\b/i.test(s)) return "Coding-Decoding";
-    if (/\b(related to the third|in the same way as|analogy)\b/i.test(s)) return "Analogy";
-    if (/\b(odd one out|three of the following|does not belong)\b/i.test(s)) return "Classification";
-    if (/\b(replace the question mark|series)\b/i.test(s)) return "Number Series";
-    if (/\b(interchange the signs|correct equation)\b/i.test(s)) return "Mathematical Operations";
-    if (/\b(dice|cube|opposite to the face)\b/i.test(s)) return "Dice & Cube";
+    if (/\b(dice|cube|opposite to the face|positions of the same dice)\b/i.test(s)) return "Cube & Dice";
+    if (/\b(interchange the signs|interchange the two signs|correct equation|mathematical operator|operator.*means|which two numbers should be interchanged|which of the two digits should be interchanged)\b/i.test(s)) return "Mathematical Operations";
+    if (/\b(in a row of|row of children|how many children are there in that row|ranks? \d+|from the left end|from the right end|from the top|from the bottom|ranking|order and ranking)\b/i.test(s)) return "Ranking & Order";
+    if (/\b(walks? \d+|turns? left|turns? right|walked \d+|towards north|towards south|towards east|towards west|shortest distance between .* starting)\b/i.test(s)) return "Direction & Distance";
+    if (/\b(mirror image)\b/i.test(s)) return "Mirror Image";
+    if (/\b(water image)\b/i.test(s)) return "Water Image";
+    if (/\b(paper is folded|paper folding|unfolded|cutting)\b/i.test(s)) return "Paper Folding & Cutting";
+    if (/\b(embedded|hidden figure)\b/i.test(s)) return "Embedded Figure";
+    if (/\b(incomplete figure|figure completion|complete the given figure|pattern figure)\b/i.test(s)) return "Figure Completion";
+    if (/\b(number of triangles|number of squares|counting of figures|figure counting|how many triangles)\b/i.test(s)) return "Figure Counting";
+    if (/\b(clock|calendar|day of the week|leap year)\b/i.test(s)) return "Clock & Calendar";
+    if (/\b(circular table|facing the center|linear row|seating arrangement)\b/i.test(s)) return "Seating Arrangement";
+    if (/\b(mother|father|brother|sister|son|daughter|uncle|aunt|nephew|niece|husband|wife|photograph|blood relation)\b/i.test(s)) return "Blood Relations";
+    if (/\b(statements?:|conclusions?:|all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is|syllogism)\b/i.test(s)) return "Syllogism";
+    if (/\b(statement and assumption|assumption)\b/i.test(s)) return "Statement & Assumption";
+    if (/\b(statement and conclusion)\b/i.test(s)) return "Statement & Conclusion";
     if (/\b(venn diagram|represents the relationship)\b/i.test(s)) return "Venn Diagram";
-    if (/\b(mirror image|water image)\b/i.test(s)) return "Mirror & Water Image";
-    if (/\b(paper is folded|unfolded|folding)\b/i.test(s)) return "Paper Folding";
-    if (/\b(embedded|hidden figure)\b/i.test(s)) return "Embedded Figures";
-    if (/\b(circular table|facing the center|linear row|seating)\b/i.test(s)) return "Seating Arrangement";
+    if (/\b(odd one out|three of the following|four words have been given of which three are alike|does not belong|classification)\b/i.test(s)) return "Classification / Odd One Out";
+    if (/\b(replace the question mark|number series|letter series|breaks the pattern|pattern|number sequence|number symbol series|letter, number, symbol series|\d+,\s*\d+,\s*\d+|cluster of five integers|pairs of numbers are there in|pairs of letters are there in|sequentially placed in the blanks of the given series)\b/i.test(s)) return "Series";
+    if (/\b(coded as|code language|coding-decoding)\b/i.test(s)) return "Coding-Decoding";
+    if (/\b(related to the third|in the same way as|analogy|related in the same)\b/i.test(s)) return "Analogy";
+    if (/\b(missing number|matrix)\b/i.test(s)) return "Missing Number";
+    if (/\b(puzzle)\b/i.test(s)) return "Puzzle";
     return "General Reasoning";
   }
 
   if (/english/i.test(subject)) {
-    if (/\b(grammatical error|spot the error|contains an error)\b/i.test(s)) return "Spotting Errors";
-    if (/\b(substitute|substitution|underline|improve)\b/i.test(s)) return "Sentence Improvement";
-    if (/\b(fill in the blank|blank)\b/i.test(s)) return "Fill in the Blanks";
-    if (/\b(synonym|antonym|similar|opposite in meaning)\b/i.test(s)) return "Synonyms & Antonyms";
-    if (/\b(idiom|phrase)\b/i.test(s)) return "Idioms & Phrases";
-    if (/\b(one word substitution|group of words)\b/i.test(s)) return "One Word Substitution";
+    if (/\b(correctly spelt|incorrectly spelt|misspelt|spelling|spelled|spelt)\b/i.test(s)) return "Spelling Errors";
+    if (/\b(indirect speech|direct speech|reported speech|narration)\b/i.test(s)) return "Direct & Indirect Speech";
     if (/\b(passive voice|active voice)\b/i.test(s)) return "Active & Passive Voice";
-    if (/\b(indirect speech|direct speech|reported speech)\b/i.test(s)) return "Direct & Indirect Speech";
-    if (/\b(correctly spelt|incorrectly spelt|misspelt)\b/i.test(s)) return "Spelling Errors";
-    if (/\b(cloze|passage)\b/i.test(s)) return "Cloze Test";
-    if (/\b([P-S]{4}|jumbled)\b/i.test(s)) return "Para Jumbles";
-    return "Grammar & Vocab";
+    if (/\b(one word substitution|one-word substitute|one word substitute|group of words)\b/i.test(s)) return "One Word Substitution";
+    if (/\b([P-S]{4}|jumbled|para jumbles?|arrange the sentences|order of the parts|order to form a meaningful)\b/i.test(s)) return "Para Jumbles";
+    if (/\b(substitute|substitution|underline|improve|sentence improvement)\b/i.test(s)) return "Sentence Improvement";
+    if (/\b(synonym|antonym|similar|opposite in meaning|homonym)\b/i.test(s)) return "Synonyms & Antonyms";
+    if (/\b(idiom|phrase)\b/i.test(s)) return "Idioms & Phrases";
+    if (/\b(fill in the blank|blank)\b/i.test(s)) return "Fill in the Blanks";
+    if (/\b(subject-verb agreement|subject verb agreement)\b/i.test(s)) return "Subject-Verb Agreement";
+    if (/\b(preposition|prepositions)\b/i.test(s)) return "Prepositions";
+    if (/\b(article|articles)\b/i.test(s)) return "Articles";
+    if (/\b(conjunction|conjunctions)\b/i.test(s)) return "Conjunctions";
+    if (/\b(pronoun|pronouns)\b/i.test(s)) return "Pronouns";
+    if (/\b(tenses|sequence of tenses)\b/i.test(s)) return "Tenses";
+    if (/\b(grammatical error|spot the error|contains an error|spotting error|grammatically correct)\b/i.test(s)) return "Spotting Errors";
+    if (/\b(cloze|passage|reading comprehension)\b/i.test(s)) return "Cloze Test";
+    return "Spotting Errors";
   }
 
   if (/general awareness/i.test(subject)) {
@@ -163,7 +206,70 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
       const promptText = `You are an expert SSC CGL Exam Content Refiner. Process each question carefully:
 
 Tasks for each question:
-1. "topic": Classify into its official SSC CGL main syllabus topic (e.g. Percentage, Profit & Loss, SI & CI, Time & Work, Geometry, Mensuration, Algebra, Trigonometry, Number System, Syllogism, Blood Relations, Analogy, Coding-Decoding, Seating Arrangement, Direction & Distance, Error Spotting, Cloze Test, Idioms, Synonyms & Antonyms, History, Polity, Geography, Economics, General Science, Static GK).
+1. "topic": Classify into its official SSC CGL main syllabus topic:
+   - For Mathematics:
+     * Number System
+     * Simplification
+     * LCM & HCF
+     * Percentage
+     * Ratio & Proportion
+     * Average
+     * Profit, Loss & Discount
+     * Simple Interest
+     * Compound Interest
+     * Time & Work
+     * Pipes & Cisterns
+     * Time, Speed & Distance
+     * Boats & Streams
+     * Trains
+     * Mixture & Alligation
+     * Partnership
+     * Algebra
+     * Geometry
+     * Mensuration 2D
+     * Mensuration 3D
+     * Trigonometry
+     * Height & Distance
+     * Data Interpretation
+     * Statistics
+     * Probability
+     * Coordinate Geometry
+   - For English:
+     * Error Detection & Grammar: Subject-Verb Agreement, Tenses, Articles, Prepositions, Conjunctions, Pronouns, Adjectives, Adverbs, Noun, Verb, Active & Passive Voice, Direct & Indirect Speech, Modals, Conditional Sentences, Spotting Errors
+     * Vocabulary & Comprehension: Spelling Errors, Sentence Improvement, One Word Substitution, Idioms & Phrases, Synonyms & Antonyms, Fill in the Blanks, Cloze Test, Para Jumbles
+   - For Reasoning:
+     * Analogy
+     * Classification / Odd One Out
+     * Series
+     * Coding-Decoding
+     * Blood Relations
+     * Direction & Distance
+     * Ranking & Order
+     * Venn Diagram
+     * Syllogism
+     * Statement & Conclusion
+     * Statement & Assumption
+     * Mathematical Operations
+     * Missing Number
+     * Puzzle
+     * Seating Arrangement
+     * Mirror Image
+     * Water Image
+     * Paper Folding & Cutting
+     * Figure Completion
+     * Embedded Figure
+     * Figure Counting
+     * Cube & Dice
+     * Non-Verbal Series
+     * Clock & Calendar
+   - For General Awareness:
+     * History
+     * Polity
+     * Geography
+     * Economics
+     * General Science
+     * Static GK
+     * Current Affairs
 2. "question": Clean and format the question prompt:
    - Restore mathematical powers/exponents and superscripts (e.g., "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210", "x²" or "x^2").
    - Strip any leaked option choices that were pasted at the end of the question text.
