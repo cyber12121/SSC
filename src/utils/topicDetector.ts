@@ -87,12 +87,54 @@ export function detectTopic(q: Question, subject: string): string {
   }
 
   if (sub.includes('aware') || sub.includes('gk') || sub.includes('gs')) {
-    if (/\b(dynasty|mughal|maurya|gupta|delhi sultanate|harappan|indus|british|viceroy|gandhi|battle|buddhism|jainism|history)\b/i.test(s)) return 'History';
-    if (/\b(constitution|article \d+|fundamental rights|president|prime minister|parliament|lok sabha|rajya sabha|supreme court|amendment|panchayat|polity)\b/i.test(s)) return 'Polity';
-    if (/\b(river|mountain|himalaya|plateau|soil|climate|monsoon|national park|ocean|strait|geography)\b/i.test(s)) return 'Geography';
-    if (/\b(gdp|inflation|rbi|monetary policy|repo rate|fiscal|budget|banking|economics)\b/i.test(s)) return 'Economics';
-    if (/\b(cell|photosynthesis|newton|acid|base|chemical|velocity|force|hormone|enzyme|vitamin|disease|element|atom|science)\b/i.test(s)) return 'General Science';
-    if (/\b(dance|classical dance|folk dance|festival|award|nobel|bharat ratna|temple|monument|author|stadium|static gk)\b/i.test(s)) return 'Static GK';
+    // 1. Static GK: Dance, Music, Festivals
+    if (/\b(kathak|bharatanatyam|kathakali|kuchipudi|odissi|manipuri|mohiniyattam|sattriya|garba|bhangra|ghoomar|lavani|yakshagana|chhau|classical dance|folk dance)\b/i.test(s)) return 'Folk & Classical Dances';
+    if (/\b(sitar|sarod|tabla|shehnai|flute|veena|santur|ghat|ghatam|sarangi|mridangam|hindustani classical music|carnatic music|raga|ragas|gharana|vocal|andolan)\b/i.test(s)) return 'Music & Musical Instruments';
+    if (/\b(festival|bihu|hornbill|losar|pongal|onam|chath|pushkar mela|fair|harvest festival)\b/i.test(s)) return 'Festivals & Fairs';
+
+    // 2. Static GK: Awards, Books, Sports
+    if (/\b(sangeet natak akademi|sahitya akademi|arjuna award|khel ratna|padma vibhushan|padma bhushan|padma shri|bharat ratna|nobel prize|dadasaheb phalke|jnanpith|award|national award)\b/i.test(s)) return 'Awards & Honours';
+    if (/\b(written by|author of the book|novel|autobiography|memoir|the serpent and the rope|in praise of coalition politics|author)\b/i.test(s)) return 'Books & Authors';
+    if (/\b(olympic|commonwealth games|asian games|khelo india|cricket|fifa|football|badminton|tennis|hockey|trophy|cup|medal tally|motto of the 2026)\b/i.test(s)) return 'Sports & Trophies';
+
+    // 3. Static GK: Heritage, Org, Census, Days
+    if (/\b(unesco|world heritage|terracotta|temple|monument|caves?|ajanta|ellora|elephanta|konark|khajuraho|red fort|taj mahal|qutb minar|brihadisvara|shore temple|sun temple)\b/i.test(s)) return 'Temples, Monuments & Heritage Sites';
+    if (/\b(brics|asean|saarc|united nations|\bun\b|who|unicef|imf|world bank|wto|nato|ilo|unep|headquarters)\b/i.test(s)) return 'International Organisations';
+    if (/\b(census|literacy rate|sex ratio|population density)\b/i.test(s)) return 'Census & Demographics';
+    if (/\b(celebrated on|observed on|world environment day|earth day|water day|international yoga day|theme of|ai hackathon 2025|important day)\b/i.test(s)) return 'Important Days & Themes';
+
+    // 4. History (Ancient, Medieval, Modern)
+    if (/\b(harappan|indus valley|mohenjo|vedic|rigveda|upanishad|buddhism|buddha|jainism|mahavira|tirthankara|maurya|ashoka|chandragupta|magadha|mahajanapada|gupta|harshavardhana|sangam|stone age|paleolithic|neolithic|mesolithic|rajendra i|chola dynasty|pallava|chalukya)\b/i.test(s)) return 'Ancient History';
+    if (/\b(firoz tughlaq|delhi sultanate|slave dynasty|khilji|tughlaq|lodhi|sayyid|mughal|babur|humayun|akbar|jahangir|shah jahan|aurangzeb|maratha|shivaji|peshwa|vijayanagar|bahmani|jayapala|battle of peshawar|tansen)\b/i.test(s)) return 'Medieval History';
+    if (/\b(east india company|battle of plassey|battle of buxar|governor-general|viceroy|lord lansdowne|lord dalhousie|lord curzon|lord canning|revolt of 1857|sepoy mutiny|indian national congress|gandhi|non-cooperation|civil disobedience|quit india|cabinet mission|partition of bengal|act allotted ₹1 lakh|government of india act|lala lajpat rai|princely states|battle of aliwal|khalsa army|british-era structures|james wilson)\b/i.test(s)) return 'Modern History';
+
+    // 5. Polity
+    if (/\b(fundamental rights?|fundamental duties|dpsp|directive principles|article 1[4-9]|article 2[0-9]|article 3[0-2]|article 51a|habeas corpus|mandamus)\b/i.test(s)) return 'Fundamental Rights & Duties';
+    if (/\b(president of india|vice president|prime minister|council of ministers|governor|chief minister|supreme leader)\b/i.test(s)) return 'Union & State Executive';
+    if (/\b(parliament|lok sabha|rajya sabha|speaker|money bill|state legislative assembly|vidhan sabha|death penalty)\b/i.test(s)) return 'Parliament & State Legislature';
+    if (/\b(supreme court|high court|chief justice|judicial review|writs?)\b/i.test(s)) return 'Judiciary';
+    if (/\b(panchayat|panchayati raj|73rd amendment|74th amendment|municipality|gram sabha)\b/i.test(s)) return 'Panchayati Raj & Local Government';
+    if (/\b(constitution|preamble|constituent assembly|schedule \d+|amendment|article \d+|election commission|cag)\b/i.test(s)) return 'Indian Polity & Constitution';
+
+    // 6. Geography
+    if (/\b(national park|wildlife sanctuary|biosphere reserve|tiger reserve|mudumalai|biodiversity|endangered spec|critically endangered)\b/i.test(s)) return 'National Parks & Environment';
+    if (/\b(himalaya|river|ganga|indus|brahmaputra|godavari|krishna|kaveri|narmada|tapti|western ghats|eastern ghats|delta|tributary|ujh multipurpose|fossil parks|rohtang tunnel)\b/i.test(s)) return 'Indian Drainage & Physiography';
+    if (/\b(monsoon|soil|alluvial|black soil|laterite|climate|rainfall)\b/i.test(s)) return 'Indian Climate & Soil';
+    if (/\b(earth rotation|earthquake|volcano|atmosphere|troposphere|stratosphere|ocean current|tides?|solar system)\b/i.test(s)) return 'Physical Geography';
+    if (/\b(continent|desert|sahara|strait|equator|tropic of)\b/i.test(s)) return 'World Geography';
+
+    // 7. Economics
+    if (/\b(rbi|reserve bank|repo rate|monetary policy|bank rate|inflation|deflation|money supply)\b/i.test(s)) return 'Banking & Monetary Policy';
+    if (/\b(budget|fiscal policy|fiscal deficit|direct tax|indirect tax|gst|income tax)\b/i.test(s)) return 'Fiscal Policy & Budget';
+    if (/\b(gdp|gnp|national income|per capita income|economic growth|five year plan)\b/i.test(s)) return 'Macroeconomics & National Income';
+    if (/\b(demand|supply|elasticity|monopoly|market)\b/i.test(s)) return 'Microeconomics & Markets';
+    if (/\b(pmay|pradhan mantri awas|sampann|scheme|agriculture are given below)\b/i.test(s)) return 'Government Schemes & Policies';
+
+    // 8. General Science: Biology, Chemistry, Physics
+    if (/\b(cell|mitochondria|dna|rna|hormone|enzyme|vitamin|disease|bacteria|virus|food- \(i\) sugar|autism|asd|preserving food|human ear)\b/i.test(s)) return 'Biology';
+    if (/\b(acid|base|chemical|periodic table|atomic|metal|non-metal|ndma|nitrosamine)\b/i.test(s)) return 'Chemistry';
+    if (/\b(newton|velocity|force|gravity|energy|power|light|speed of light|vacuum|sound|frequency|electricity|voltage|distance–time graph|uniform speed|amca|combat aircraft|exercise rotor clap)\b/i.test(s)) return 'Physics';
+
     return 'Static GK';
   }
 
