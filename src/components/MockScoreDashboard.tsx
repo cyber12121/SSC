@@ -251,17 +251,23 @@ export function normalizeMockQuestions(rawList: any[]): Question[] {
   });
 
   // Re-index sequentially 1..N
-  return mapped.map((q, idx) => ({
-    id: q.id,
-    q_num: idx + 1,
-    question: q.question,
-    options: q.options,
-    answer: q.answer,
-    solution: q.solution,
-    image: q.image,
-    tags: q.tags
-  }));
+  return mapped.map((q, idx) => {
+    const secKey = q.subjectName === 'Reasoning' ? 'part_a' : q.subjectName === 'General Awareness' ? 'part_b' : q.subjectName === 'Mathematics' ? 'part_c' : 'part_d';
+    return {
+      id: q.id,
+      q_num: idx + 1,
+      question: q.question,
+      options: q.options,
+      answer: q.answer,
+      solution: q.solution,
+      image: q.image,
+      subject: q.subjectName,
+      section: secKey,
+      tags: q.tags
+    };
+  });
 }
+
 
 export type MockQuestionErrorStatus = 'wrong' | 'unattempted' | 'slow' | 'correct';
 

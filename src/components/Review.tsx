@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   ArrowLeft, 
   Star, 
@@ -22,10 +22,21 @@ import {
   HelpCircle,
   TrendingUp,
   XCircle,
-  CheckCircle2
+  CheckCircle2,
+  Layers
 } from 'lucide-react';
 import { QuizResult, Question } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
+
+export interface ReviewSection {
+  id: string;
+  label: string;
+  title: string;
+  startIndex: number;
+  endIndex: number;
+  count: number;
+  indices: number[];
+}
 
 interface ReviewViewProps {
   result: QuizResult;
@@ -51,6 +62,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 }) => {
   const items = result.questionDetails || [];
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [activeSectionId, setActiveSectionId] = useState<string>('auto');
   const [reattemptMode, setReattemptMode] = useState(false);
   const [reattemptAnswers, setReattemptAnswers] = useState<Record<number, string>>({});
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -64,6 +76,169 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [reportSubmitted, setReportSubmitted] = useState(false);
   const [localBookmarks, setLocalBookmarks] = useState<Set<number>>(new Set(bookmarkedIds));
 
+  // Helper to map question to SSC canonical section keys
+  const getQuestionSectionKey = (q?: Question): 'part_a' | 'part_b' | 'part_c' | 'part_d' | null => {
+    if (!q) return null;
+    const explicitSec = (q as any).section;
+    if (explicitSec === 'part_a' || explicitSec === 'part_b' || explicitSec === 'part_c' || explicitSec === 'part_d') {
+      return explicitSec;
+    }
+    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || '');
+    if (/reason|intel/i.test(raw)) return 'part_a';
+    if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'part_b';
+    if (/quant|math|aptitude/i.test(raw)) return 'part_c';
+    if (/eng/i.test(raw)) return 'part_d';
+    return null;
+  };
+
+  // Compute sections dynamically from question details
+  const sections: ReviewSection[] = useMemo(() => {
+    const raw = items || [];
+    const total = raw.length;
+    if (total === 0) return [];
+
+    const partAIndices: number[] = [];
+    const partBIndices: number[] = [];
+    const partCIndices: number[] = [];
+    const partDIndices: number[] = [];
+    const otherIndices: number[] = [];
+
+    raw.forEach((it, idx) => {
+      const sec = getQuestionSectionKey(it.question);
+      if (sec === 'part_a') partAIndices.push(idx);
+      else if (sec === 'part_b') partBIndices.push(idx);
+      else if (sec === 'part_c') partCIndices.push(idx);
+      else if (sec === 'part_d') partDIndices.push(idx);
+      else otherIndices.push(idx);
+    });
+
+    const hasExplicit = (partAIndices.length + partBIndices.length + partCIndices.length + partDIndices.length) > 0;
+
+    // 1. Explicit or detected section tags
+    if (hasExplicit) {
+      if (otherIndices.length > 0) {
+        if (partAIndices.length > 0) partAIndices.push(...otherIndices);
+        else if (partBIndices.length > 0) partBIndices.push(...otherIndices);
+        else if (partCIndices.length > 0) partCIndices.push(...otherIndices);
+        else if (partDIndices.length > 0) partDIndices.push(...otherIndices);
+        else partAIndices.push(...otherIndices);
+      }
+
+      const list: ReviewSection[] = [];
+      if (partAIndices.length > 0) {
+        list.push({
+          id: 'part_a',
+          label: 'PART-A',
+          title: 'General Intelligence and Reasoning',
+          startIndex: partAIndices[0],
+          endIndex: partAIndices[partAIndices.length - 1] + 1,
+          count: partAIndices.length,
+          indices: partAIndices
+        });
+      }
+      if (partBIndices.length > 0) {
+        list.push({
+          id: 'part_b',
+          label: 'PART-B',
+          title: 'General Awareness',
+          startIndex: partBIndices[0],
+          endIndex: partBIndices[partBIndices.length - 1] + 1,
+          count: partBIndices.length,
+          indices: partBIndices
+        });
+      }
+      if (partCIndices.length > 0) {
+        list.push({
+          id: 'part_c',
+          label: 'PART-C',
+          title: 'Quantitative Aptitude',
+          startIndex: partCIndices[0],
+          endIndex: partCIndices[partCIndices.length - 1] + 1,
+          count: partCIndices.length,
+          indices: partCIndices
+        });
+      }
+      if (partDIndices.length > 0) {
+        list.push({
+          id: 'part_d',
+          label: 'PART-D',
+          title: 'English Comprehension',
+          startIndex: partDIndices[0],
+          endIndex: partDIndices[partDIndices.length - 1] + 1,
+          count: partDIndices.length,
+          indices: partDIndices
+        });
+      }
+      if (list.length > 0) return list;
+    }
+
+    // 2. Standard 100 questions SSC Full Mock (25 each)
+    if (total === 100) {
+      return [
+        { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: 25, count: 25, indices: Array.from({ length: 25 }, (_, i) => i) },
+        { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: 25, endIndex: 50, count: 25, indices: Array.from({ length: 25 }, (_, i) => i + 25) },
+        { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: 50, endIndex: 75, count: 25, indices: Array.from({ length: 25 }, (_, i) => i + 50) },
+        { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: 75, endIndex: 100, count: 25, indices: Array.from({ length: 25 }, (_, i) => i + 75) },
+      ];
+    }
+
+    // 3. Fallback: single section
+    return [
+      {
+        id: 'part_all',
+        label: result.subject || 'Section',
+        title: result.chapter_title || result.subject || 'Questions',
+        startIndex: 0,
+        endIndex: total,
+        count: total,
+        indices: Array.from({ length: total }, (_, i) => i)
+      }
+    ];
+  }, [items, result.subject, result.chapter_title]);
+
+  // Track the current section that contains currentIdx
+  const currentSection = useMemo(() => {
+    return sections.find(s => s.indices.includes(currentIdx)) || sections[0] || {
+      id: 'part_all',
+      label: result.subject || 'Section',
+      title: result.chapter_title || result.subject || 'Questions',
+      startIndex: 0,
+      endIndex: items.length,
+      count: items.length,
+      indices: items.map((_, i) => i)
+    };
+  }, [sections, currentIdx, items, result.subject, result.chapter_title]);
+
+  // Keep activeSectionId in sync with currentIdx if in auto mode
+  useEffect(() => {
+    if (activeSectionId !== 'all') {
+      const match = sections.find(s => s.indices.includes(currentIdx));
+      if (match && match.id !== activeSectionId) {
+        setActiveSectionId(match.id);
+      }
+    }
+  }, [currentIdx, sections, activeSectionId]);
+
+  // Active section for display
+  const activeSection = useMemo(() => {
+    if (activeSectionId === 'all') {
+      return {
+        id: 'all',
+        label: 'ALL',
+        title: 'All Sections',
+        startIndex: 0,
+        endIndex: items.length,
+        count: items.length,
+        indices: items.map((_, i) => i)
+      };
+    }
+    const found = sections.find(s => s.id === activeSectionId);
+    return found || currentSection;
+  }, [activeSectionId, sections, currentSection, items]);
+
+  const activeIndices = activeSection.indices;
+  const questionNumberInSection = activeIndices.indexOf(currentIdx) + 1;
+
   const current = items[currentIdx];
   const question = current?.question;
 
@@ -73,6 +248,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const wrongCount = items.filter(i => i.selectedAnswer && !i.isCorrect).length;
   const unattemptedCount = totalQuestions - correctCount - wrongCount;
   const partiallyCorrectCount = 0; // standard mock has single-correct
+
+  // Section specific stats
+  const sectionQuestionsCount = activeIndices.length;
+  const sectionCorrectCount = activeIndices.filter(idx => items[idx]?.isCorrect).length;
+  const sectionWrongCount = activeIndices.filter(idx => items[idx]?.selectedAnswer && !items[idx]?.isCorrect).length;
+  const sectionUnattemptedCount = sectionQuestionsCount - sectionCorrectCount - sectionWrongCount;
 
   const handleBookmarkClick = () => {
     if (!question) return;
@@ -100,6 +281,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   const getQuestionStatus = (idx: number) => {
     const item = items[idx];
+    if (!item) return 'unattempted';
     if (reattemptMode && reattemptAnswers[idx]) {
       return reattemptAnswers[idx] === item.question?.answer ? 'correct' : 'wrong';
     }
@@ -150,8 +332,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     return cleanSolutionText(text);
   };
 
-  // Filter questions for the palette
-  const filteredIndices = items.map((_, idx) => idx).filter(idx => {
+  // Filter questions for the active section palette
+  const filteredIndices = activeIndices.filter(idx => {
     if (selectedFilter === 'all') return true;
     const status = getQuestionStatus(idx);
     if (selectedFilter === 'correct') return status === 'correct';
@@ -159,6 +341,41 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (selectedFilter === 'unattempted') return status === 'unattempted';
     return true;
   });
+
+  const handleSectionClick = (secId: string) => {
+    setActiveSectionId(secId);
+    if (secId === 'all') return;
+    const target = sections.find(s => s.id === secId);
+    if (target && !target.indices.includes(currentIdx)) {
+      setCurrentIdx(target.indices[0]);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIdx > 0) {
+      const prevIdx = currentIdx - 1;
+      setCurrentIdx(prevIdx);
+      if (activeSectionId !== 'all') {
+        const prevSec = sections.find(s => s.indices.includes(prevIdx));
+        if (prevSec && prevSec.id !== activeSectionId) {
+          setActiveSectionId(prevSec.id);
+        }
+      }
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIdx < items.length - 1) {
+      const nextIdx = currentIdx + 1;
+      setCurrentIdx(nextIdx);
+      if (activeSectionId !== 'all') {
+        const nextSec = sections.find(s => s.indices.includes(nextIdx));
+        if (nextSec && nextSec.id !== activeSectionId) {
+          setActiveSectionId(nextSec.id);
+        }
+      }
+    }
+  };
 
   const currentStatus = current ? getQuestionStatus(currentIdx) : 'unattempted';
   const isBookmarked = question ? localBookmarks.has(question.q_num) : false;
@@ -227,17 +444,49 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
       {/* 2. SECONDARY SUB-BAR (SECTIONS & Language) */}
       <div className="bg-white border-b border-gray-200 h-11 px-4 sm:px-6 flex items-center justify-between shrink-0 z-20">
-        <div className="flex items-center space-x-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-gray-400 border-r border-gray-200 pr-3">
+        <div className="flex items-center space-x-2 overflow-x-auto py-1 custom-scrollbar">
+          <span className="text-xs font-bold uppercase tracking-wider text-gray-400 border-r border-gray-200 pr-3 shrink-0">
             SECTIONS
           </span>
-          <button className="bg-[#004d40] text-white text-xs font-semibold px-5 py-1.5 rounded shadow-sm hover:bg-[#003830] transition-colors">
-            {result.subject || 'Test'}
-          </button>
+          {sections.map((sec) => {
+            const isActive = activeSection.id === sec.id;
+            return (
+              <button
+                key={sec.id}
+                onClick={() => handleSectionClick(sec.id)}
+                className={`text-xs font-semibold px-4 py-1.5 rounded transition-all shrink-0 cursor-pointer flex items-center space-x-1.5 ${
+                  isActive
+                    ? 'bg-[#004d40] text-white shadow-sm font-bold ring-2 ring-[#004d40]/30'
+                    : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                }`}
+                title={`${sec.label}: ${sec.title} (${sec.count} Questions)`}
+              >
+                <span>{sec.label}</span>
+                <span className={`text-[10.5px] px-1.5 py-0.2 rounded-full font-mono ${isActive ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'}`}>
+                  {sec.count}
+                </span>
+              </button>
+            );
+          })}
+
+          {sections.length > 1 && (
+            <button
+              onClick={() => handleSectionClick('all')}
+              className={`text-xs font-semibold px-3 py-1.5 rounded transition-all shrink-0 cursor-pointer flex items-center space-x-1 ${
+                activeSection.id === 'all'
+                  ? 'bg-[#004d40] text-white shadow-sm font-bold ring-2 ring-[#004d40]/30'
+                  : 'bg-white border border-gray-300 text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+              }`}
+              title="View all questions across all sections"
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>All ({totalQuestions})</span>
+            </button>
+          )}
         </div>
 
-        <div className="flex items-center space-x-2 text-xs">
-          <span className="font-medium text-gray-600">View In</span>
+        <div className="flex items-center space-x-2 text-xs shrink-0 ml-3">
+          <span className="font-medium text-gray-600 hidden sm:inline">View In</span>
           <select 
             value={language}
             onChange={(e) => setLanguage(e.target.value as LanguageType)}
@@ -260,8 +509,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           <div className="border-b border-gray-200 px-6 py-2.5 flex items-center justify-between shrink-0 bg-white">
             <div className="flex items-center flex-wrap gap-2.5">
               <span className="text-[17px] font-bold text-gray-900">
-                Question No.{currentIdx + 1}
+                Question No.{questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1}
               </span>
+
+              {sections.length > 1 && (
+                <span className="text-xs bg-teal-50 border border-teal-200 text-teal-800 font-semibold px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                  <span className="font-bold">{currentSection.label}:</span>
+                  <span className="truncate max-w-[160px] sm:max-w-xs">{currentSection.title}</span>
+                  <span className="text-teal-600 font-mono text-[11px]">(Overall #{currentIdx + 1})</span>
+                </span>
+              )}
 
               {/* Status Badge: Skipped / Correct / Incorrect */}
               {currentStatus === 'correct' && (
@@ -529,7 +786,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           <div className="bg-[#f5f5f5] border-t border-gray-200 h-13 px-6 flex items-center justify-between shrink-0 z-10">
             {/* Previous Button */}
             <button
-              onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)}
+              onClick={handlePrevious}
               disabled={currentIdx === 0}
               className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-5 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             >
@@ -560,7 +817,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
             {/* Next Button */}
             <button
-              onClick={() => currentIdx < items.length - 1 && setCurrentIdx(currentIdx + 1)}
+              onClick={handleNext}
               disabled={currentIdx === items.length - 1}
               className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-5 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             >
@@ -639,31 +896,25 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </div>
             </div>
 
-            {/* Legend / Status Row */}
+            {/* Legend / Status Row (Section & Overall) */}
             <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-3 text-xs shrink-0 flex-wrap gap-y-2">
-              <div className="flex items-center space-x-1.5">
+              <div className="flex items-center space-x-1.5" title={`Section: ${sectionCorrectCount} | Overall: ${correctCount}`}>
                 <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
-                  {correctCount}
+                  {sectionCorrectCount}
                 </span>
                 <span className="text-gray-700 font-medium">Correct</span>
               </div>
-              <div className="flex items-center space-x-1.5">
+              <div className="flex items-center space-x-1.5" title={`Section: ${sectionUnattemptedCount} | Overall: ${unattemptedCount}`}>
                 <span className="w-6 h-6 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[11px] shadow-sm">
-                  {unattemptedCount}
+                  {sectionUnattemptedCount}
                 </span>
                 <span className="text-gray-700 font-medium">Unattempted</span>
               </div>
-              <div className="flex items-center space-x-1.5">
+              <div className="flex items-center space-x-1.5" title={`Section: ${sectionWrongCount} | Overall: ${wrongCount}`}>
                 <span className="w-6 h-6 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
-                  {wrongCount}
+                  {sectionWrongCount}
                 </span>
                 <span className="text-gray-700 font-medium">Incorrect</span>
-              </div>
-              <div className="flex items-center space-x-1.5">
-                <span className="w-6 h-6 rounded-full bg-[#fbc02d] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
-                  {partiallyCorrectCount}
-                </span>
-                <span className="text-gray-700 font-medium">Partially Correct</span>
               </div>
             </div>
 
@@ -704,14 +955,23 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
 
             {/* SECTION Title Bar */}
-            <div className="px-4 py-2 text-xs font-bold text-gray-700 bg-[#b2ebf2]/60 shrink-0 tracking-wide">
-              SECTION : <span className="text-gray-900">{result.subject || 'Test'}</span>
+            <div className="px-4 py-2 text-xs font-bold text-gray-700 bg-[#b2ebf2]/60 shrink-0 tracking-wide flex items-center justify-between">
+              <span className="truncate pr-2">
+                SECTION : <span className="text-gray-900 font-bold">{activeSection.label}</span>
+                {activeSection.title !== activeSection.label && (
+                  <span className="text-gray-600 font-normal ml-1">({activeSection.title})</span>
+                )}
+              </span>
+              <span className="text-[11px] bg-[#0097a7] text-white font-bold px-2 py-0.5 rounded-full shrink-0">
+                {activeSection.count} Qs
+              </span>
             </div>
 
-            {/* Question Palette Grid */}
+            {/* Question Palette Grid (Section-Wise) */}
             <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
               <div className="grid grid-cols-5 gap-2">
                 {filteredIndices.map(idx => {
+                  const localNumber = activeIndices.indexOf(idx) + 1;
                   const status = getQuestionStatus(idx);
                   const isCurrent = currentIdx === idx;
                   
@@ -726,11 +986,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     <button
                       key={idx}
                       onClick={() => setCurrentIdx(idx)}
+                      title={`Question ${localNumber} of ${activeSection.label} (Overall #${idx + 1}) - ${status}`}
                       className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm ${badgeStyle} ${
                         isCurrent ? 'ring-2 ring-[#0097a7] ring-offset-1 scale-110 z-10 shadow-md' : 'hover:opacity-80 hover:scale-105'
                       }`}
                     >
-                      {idx + 1}
+                      {activeSectionId === 'all' ? idx + 1 : localNumber}
                     </button>
                   );
                 })}
@@ -775,35 +1036,51 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </button>
             </div>
             
-            <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
-              {items.map((it, idx) => (
-                <div key={idx} className="border-b border-gray-200 pb-5">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-sm text-[#0097a7]">Question {idx + 1}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded font-semibold ${
-                      it.isCorrect ? 'bg-green-100 text-green-800' : (it.selectedAnswer ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-600')
-                    }`}>
-                      {it.isCorrect ? 'Correct' : (it.selectedAnswer ? 'Incorrect' : 'Unattempted')}
-                    </span>
+            <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+              {sections.map(sec => {
+                const secItems = sec.indices.map(idx => ({ item: items[idx], idx, localNum: sec.indices.indexOf(idx) + 1 }));
+                return (
+                  <div key={sec.id} className="space-y-4">
+                    <div className="sticky top-0 bg-[#e0f2f1] text-[#004d40] px-4 py-2.5 rounded-lg font-bold text-sm flex items-center justify-between border border-teal-200 shadow-xs z-10">
+                      <span>{sec.label}: {sec.title}</span>
+                      <span className="text-xs font-semibold bg-white/80 px-2 py-0.5 rounded-full">{sec.count} Questions</span>
+                    </div>
+
+                    <div className="space-y-5 pl-1 pr-1">
+                      {secItems.map(({ item: it, idx, localNum }) => (
+                        <div key={idx} className="border-b border-gray-200 pb-5">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="font-bold text-sm text-[#0097a7]">
+                              Q{localNum} <span className="text-gray-400 font-normal text-xs">(Overall #{idx + 1})</span>
+                            </span>
+                            <span className={`text-xs px-2 py-0.5 rounded font-semibold ${
+                              it.isCorrect ? 'bg-green-100 text-green-800' : (it.selectedAnswer ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-600')
+                            }`}>
+                              {it.isCorrect ? 'Correct' : (it.selectedAnswer ? 'Incorrect' : 'Unattempted')}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line">
+                            {renderText(it.question?.question)}
+                          </p>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            {it.question && (Object.entries(it.question.options) as [string, string][]).map(([k, val]) => (
+                              <div 
+                                key={k} 
+                                className={`p-2 rounded border ${
+                                  k === it.question?.answer ? 'border-green-500 bg-green-50 font-bold text-green-900' : 'border-gray-200 bg-gray-50 text-gray-700'
+                                }`}
+                              >
+                                <span className="uppercase mr-1.5 font-bold">{k}.</span>
+                                {renderText(val)}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line">
-                    {renderText(it.question?.question)}
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    {it.question && (Object.entries(it.question.options) as [string, string][]).map(([k, val]) => (
-                      <div 
-                        key={k} 
-                        className={`p-2 rounded border ${
-                          k === it.question?.answer ? 'border-green-500 bg-green-50 font-bold text-green-900' : 'border-gray-200 bg-gray-50 text-gray-700'
-                        }`}
-                      >
-                        <span className="uppercase mr-1.5 font-bold">{k}.</span>
-                        {renderText(val)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="p-4 border-t border-gray-200 bg-gray-50 flex justify-end">
