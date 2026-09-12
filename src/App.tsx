@@ -250,7 +250,13 @@ export default function App() {
   const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const [deletedQuestionIds, setDeletedQuestionIds] = useState<Set<string>>(new Set());
+  const [deletedQuestionIds, setDeletedQuestionIds] = useState<Set<string>>(() => {
+    try {
+      const cached = typeof localStorage !== 'undefined' ? localStorage.getItem('cgl_deleted_question_ids') : null;
+      if (cached) return new Set(JSON.parse(cached));
+    } catch {}
+    return new Set();
+  });
   const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
 
@@ -333,8 +339,10 @@ export default function App() {
         const existingQTexts = new Set(existingQs.map(q => q.question.trim().toLowerCase()));
 
         chapter.questions.forEach(q => {
-          if (!deletedIds.has(getQuestionId(chapter, q))) {
-            const qTextClean = q.question.trim().toLowerCase();
+          const qId = getQuestionId(chapter, q);
+          const qTextClean = q.question.trim().toLowerCase();
+          const isDeleted = deletedIds.has(qId) || deletedIds.has(qTextClean) || (!!q.id && deletedIds.has(q.id));
+          if (!isDeleted) {
             if (!existingQTexts.has(qTextClean)) {
               existingQs.push(q);
               existingQTexts.add(qTextClean);
@@ -422,10 +430,20 @@ export default function App() {
     const fetchDeleted = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, 'deleted_questions'));
-        const ids = new Set(querySnapshot.docs.map(doc => doc.data().questionId as string));
-        setDeletedQuestionIds(ids);
+        setDeletedQuestionIds(prev => {
+          const merged = new Set(prev);
+          querySnapshot.docs.forEach(doc => {
+            const data = doc.data();
+            if (data.questionId) merged.add(data.questionId);
+            if (data.questionText) merged.add(data.questionText);
+          });
+          try {
+            localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(merged)));
+          } catch {}
+          return merged;
+        });
       } catch (error) {
-        console.error('Error fetching deleted questions:', error);
+        console.warn('Could not fetch deleted questions from remote DB (offline or rules):', error);
       }
     };
     fetchDeleted();
@@ -551,33 +569,49 @@ export default function App() {
   };
 
   const handleDeleteQuestion = async (question: Question) => {
-    if (!user || user.email !== 'cyberdevil0101@gmail.com') return;
-    if (!activeChapter) return;
+    const qTextClean = question.question.trim().toLowerCase();
+    const qId = activeChapter ? getQuestionId(activeChapter, question) : (question.id || qTextClean);
 
-    const qId = getQuestionId(activeChapter, question);
+    // 1. Immediately update deletedQuestionIds set & localStorage so it's deleted everywhere
+    setDeletedQuestionIds(prev => {
+      const next = new Set(prev);
+      next.add(qId);
+      next.add(qTextClean);
+      if (question.id) next.add(question.id);
+      try {
+        localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(next)));
+      } catch {}
+      return next;
+    });
+
+    // 2. Remove from activeChapter immediately for instant UI reactivity
+    if (activeChapter) {
+      const updatedQuestions = activeChapter.questions.filter(q => {
+        const thisId = getQuestionId(activeChapter, q);
+        const thisText = q.question.trim().toLowerCase();
+        return thisId !== qId && thisText !== qTextClean && (!question.id || q.id !== question.id);
+      });
+      setActiveChapter({
+        ...activeChapter,
+        questions: updatedQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+      });
+    }
+
+    // 3. Also remove from bookmarks if present
+    setBookmarks(prev => prev.filter(b => b.question.question.trim().toLowerCase() !== qTextClean));
+
+    // 4. Persist to Firestore deleted_questions collection
     try {
       await addDoc(collection(db, 'deleted_questions'), {
         questionId: qId,
-        deletedBy: user.uid,
+        questionText: qTextClean,
+        chapter_title: activeChapter?.chapter_title || 'Unknown',
+        subject: activeChapter?.subject || 'Unknown',
+        deletedBy: user?.uid || 'user',
         deletedAt: new Date().toISOString()
       });
-      setDeletedQuestionIds(prev => {
-        const next = new Set(prev);
-        next.add(qId);
-        return next;
-      });
-
-      // Update activeChapter immediately for UI reactivity
-      if (activeChapter) {
-        const updatedQuestions = activeChapter.questions.filter(q => getQuestionId(activeChapter, q) !== qId);
-        setActiveChapter({
-          ...activeChapter,
-          questions: updatedQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
-        });
-      }
     } catch (error) {
-      console.error('Error deleting question:', error);
-      alert('Failed to delete question. Check console for details.');
+      console.warn('Could not sync deleted question to remote DB (offline/rules):', error);
     }
   };
 
@@ -3103,6 +3137,7 @@ export default function App() {
                 bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === reviewResult.chapter_title).map(b => b.question.q_num))}
                 onBookmarkToggle={toggleBookmark}
                 onViewAnalytics={() => setView('dashboard')}
+                onDeleteQuestion={handleDeleteQuestion}
               />
             </React.Suspense>
           )}

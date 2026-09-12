@@ -4,7 +4,7 @@ import {
   Trophy, Clock, CheckCircle2, CornerDownLeft, RotateCcw,
   Pause, Play, BookOpen, ChevronRight, ChevronLeft,
   X, FileText, ArrowLeft, AlertTriangle, ChevronDown,
-  Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb
+  Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb, Trash2
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
@@ -65,15 +65,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   // Normalize subject into canonical SSC section keys (PART-A: Reasoning, PART-B: GA, PART-C: Math, PART-D: English)
   const getQuestionSectionKey = useCallback((q: Question): 'part_a' | 'part_b' | 'part_c' | 'part_d' | null => {
-    const explicitSec = (q as any).section;
-    if (explicitSec === 'part_a' || explicitSec === 'part_b' || explicitSec === 'part_c' || explicitSec === 'part_d') {
-      return explicitSec;
-    }
-    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || '');
+    const rawSec = String((q as any).section || (q as any).sectionKey || '').toLowerCase().trim();
+    if (rawSec === 'part_a' || rawSec === 'part a' || rawSec === 'part-a' || rawSec === 'section 1' || rawSec === 'section a') return 'part_a';
+    if (rawSec === 'part_b' || rawSec === 'part b' || rawSec === 'part-b' || rawSec === 'section 2' || rawSec === 'section b') return 'part_b';
+    if (rawSec === 'part_c' || rawSec === 'part c' || rawSec === 'part-c' || rawSec === 'section 3' || rawSec === 'section c') return 'part_c';
+    if (rawSec === 'part_d' || rawSec === 'part d' || rawSec === 'part-d' || rawSec === 'section 4' || rawSec === 'section d') return 'part_d';
+
+    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || '').toLowerCase();
     if (/reason|intel/i.test(raw)) return 'part_a';
-    if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'part_b';
-    if (/quant|math|aptitude/i.test(raw)) return 'part_c';
-    if (/eng/i.test(raw)) return 'part_d';
+    if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy|current/i.test(raw)) return 'part_b';
+    if (/quant|math|aptitude|arithmetic|advance/i.test(raw)) return 'part_c';
+    if (/eng|comprehension|verbal/i.test(raw)) return 'part_d';
     return null;
   }, []);
 
@@ -82,6 +84,57 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     const raw = chapter.questions || [];
     const total = raw.length;
 
+    // 1. Standard 100 questions SSC Full Mock (25 questions each: Reasoning, GA, Quant, English)
+    if (total === 100) {
+      const partA: Question[] = [];
+      const partB: Question[] = [];
+      const partC: Question[] = [];
+      const partD: Question[] = [];
+
+      raw.forEach(q => {
+        const sec = getQuestionSectionKey(q);
+        if (sec === 'part_a') partA.push(q);
+        else if (sec === 'part_b') partB.push(q);
+        else if (sec === 'part_c') partC.push(q);
+        else if (sec === 'part_d') partD.push(q);
+      });
+
+      // If all 4 sections are explicitly identified with questions
+      if (partA.length > 0 && partB.length > 0 && partC.length > 0 && partD.length > 0) {
+        const orderedList = [...partA, ...partB, ...partC, ...partD];
+        const startA = 0;
+        const endA = partA.length;
+        const startB = endA;
+        const endB = startB + partB.length;
+        const startC = endB;
+        const endC = startC + partC.length;
+        const startD = endC;
+        const endD = startD + partD.length;
+
+        return {
+          questions: orderedList,
+          sections: [
+            { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: startA, endIndex: endA, count: partA.length },
+            { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: startB, endIndex: endB, count: partB.length },
+            { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: startC, endIndex: endC, count: partC.length },
+            { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: startD, endIndex: endD, count: partD.length },
+          ]
+        };
+      }
+
+      // Canonical 25-25-25-25 split for standard SSC CGL Tier 1 Mock tests
+      return {
+        questions: raw,
+        sections: [
+          { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: 25, count: 25 },
+          { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: 25, endIndex: 50, count: 25 },
+          { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: 50, endIndex: 75, count: 25 },
+          { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: 75, endIndex: 100, count: 25 },
+        ]
+      };
+    }
+
+    // 2. If questions carry section or subject classification (e.g. from Mock Score practice, mock error remediation, or multi-subject test)
     const partA: Question[] = [];
     const partB: Question[] = [];
     const partC: Question[] = [];
@@ -99,9 +152,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
     const hasExplicit = (partA.length + partB.length + partC.length + partD.length) > 0;
 
-    // 1. If questions carry section or subject classification (e.g. from Mock Score practice, mock error remediation, or multi-subject test)
     if (hasExplicit) {
-      // Put unclassified questions into first populated section or partA
       if (other.length > 0) {
         if (partA.length > 0) partA.push(...other);
         else if (partB.length > 0) partB.push(...other);
@@ -128,19 +179,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       ];
 
       return { questions: orderedList, sections: computed };
-    }
-
-    // 2. Standard 100 questions SSC Full Mock (25 each)
-    if (total === 100) {
-      return {
-        questions: raw,
-        sections: [
-          { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: 25, count: 25 },
-          { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: 25, endIndex: 50, count: 25 },
-          { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: 50, endIndex: 75, count: 25 },
-          { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: 75, endIndex: 100, count: 25 },
-        ]
-      };
     }
 
     // 3. Fallback for single-subject chapter without individual question subject tags
@@ -188,6 +226,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [zoomLevel, setZoomLevel] = useState<number>(0); // -1: small, 0: base, 1: large, 2: xl
   const [showSymbolsModal, setShowSymbolsModal] = useState(false);
   const [showInstructionsModal, setShowInstructionsModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [deleteToast, setDeleteToast] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const toggleFullscreen = () => {
@@ -337,16 +378,62 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     }
   };
 
+  const handleConfirmDelete = async () => {
+    if (!currentQuestion) return;
+    setIsDeleting(true);
+    try {
+      if (onDeleteQuestion) {
+        await onDeleteQuestion(currentQuestion);
+      }
+      setAnswers(prev => {
+        const n = { ...prev };
+        delete n[currentIdx];
+        return n;
+      });
+      setMarkedForReview(prev => {
+        const n = new Set(prev);
+        n.delete(currentIdx);
+        return n;
+      });
+      setShowSolutionMap(prev => {
+        const n = { ...prev };
+        delete n[currentIdx];
+        return n;
+      });
+      setShowDeleteModal(false);
+      setDeleteToast('Question permanently deleted everywhere.');
+      setTimeout(() => setDeleteToast(null), 3500);
+    } catch (e) {
+      console.error('Error deleting question:', e);
+      alert('Failed to delete question. Please try again.');
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   const jumpToQuestion = (idx: number) => {
     if (idx < 0 || idx >= totalQuestions) return;
     recordTime();
     setCurrentIdx(idx);
+    const secIdx = sections.findIndex(s => s.count > 0 && idx >= s.startIndex && idx < s.endIndex);
+    if (secIdx !== -1) {
+      setActiveSectionIdx(secIdx);
+    }
   };
 
   const handleSaveAndNext = () => {
     recordTime();
+    // If current question was marked for review, save answer and remove from review
+    if (markedRef.current.has(currentIdx)) {
+      setMarkedForReview(prev => {
+        const n = new Set(prev);
+        n.delete(currentIdx);
+        markedRef.current = n;
+        return n;
+      });
+    }
     if (currentIdx < totalQuestions - 1) {
-      setCurrentIdx(currentIdx + 1);
+      jumpToQuestion(currentIdx + 1);
     } else {
       setShowSubmitModal(true);
     }
@@ -361,7 +448,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       return n;
     });
     if (currentIdx < totalQuestions - 1) {
-      setCurrentIdx(currentIdx + 1);
+      jumpToQuestion(currentIdx + 1);
+    } else {
+      setShowSubmitModal(true);
     }
   };
 
@@ -563,6 +652,27 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </button>
           </div>
         </motion.div>
+      </div>
+    );
+  }
+
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-slate-50 text-center">
+        <div className="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mb-4 border border-rose-200 shadow-sm">
+          <Trash2 className="w-8 h-8" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-800 mb-2">No Questions Remaining</h3>
+        <p className="text-gray-500 text-sm max-w-md mb-6">
+          All questions in this chapter or test have been deleted.
+        </p>
+        <button
+          onClick={onExit}
+          className="px-6 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold text-sm rounded-lg transition-colors flex items-center gap-2 shadow-sm cursor-pointer"
+        >
+          <CornerDownLeft className="w-4 h-4" />
+          <span>Back to Chapters</span>
+        </button>
       </div>
     );
   }
@@ -830,8 +940,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         )}
       </div>
 
-      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on Left, Action Buttons on Right) ── */}
-      <div className="bg-white border-b border-gray-300 px-4 py-1.5 flex items-center justify-between gap-4 shrink-0 z-20 overflow-x-auto">
+      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on Left, Action Buttons on Right - Testbook Exact) ── */}
+      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-between gap-3 shrink-0 z-20 overflow-x-auto">
         {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
         <div className="flex items-center gap-1.5 shrink-0">
           {sections.map((sec, idx) => {
@@ -843,12 +953,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 onClick={() => handleSectionClick(idx)}
                 disabled={!hasQuestions}
                 title={`${sec.label}: ${sec.title} (${sec.count} Questions)`}
-                className={`px-3 py-1 text-xs sm:text-sm font-bold rounded-[3px] transition-all shrink-0 ${
+                className={`px-3 py-1 text-xs sm:text-sm font-bold rounded-[2px] transition-all shrink-0 select-none ${
                   isActive
-                    ? 'bg-[#008000] text-white shadow-xs'
+                    ? 'bg-[#008000] text-white border border-[#006600] shadow-xs'
                     : hasQuestions
-                    ? 'bg-white border border-gray-300 text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer'
-                    : 'bg-white border border-gray-200 text-gray-300 cursor-not-allowed opacity-50'
+                    ? 'bg-white border border-[#d0d0d0] text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer'
+                    : 'bg-white border border-[#e5e5e5] text-[#b0b0b0] cursor-not-allowed opacity-60'
                 }`}
               >
                 <span>{sec.label}</span>
@@ -896,37 +1006,37 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </button>
           </div>
         ) : (
-          /* Mock Mode Buttons */
-          <div className="flex items-center gap-2 shrink-0 ml-auto">
+          /* Mock Mode Buttons (Exact match to official Testbook interface) */
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap"
             >
               Previous
             </button>
             <button
               onClick={handleMarkAndNext}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
             >
               Mark for Review
             </button>
             <button
               onClick={handleSaveAndNext}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
             >
               Save &amp; Next
             </button>
             <button
               onClick={handleSubmitSection}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
             >
               Submit Section
             </button>
             <button
               onClick={() => setShowSubmitModal(true)}
               disabled={isSubmitting}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer whitespace-nowrap"
             >
               Submit Test
             </button>
@@ -993,6 +1103,18 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                           <span className="hidden sm:inline">Bookmark</span>
                         </>
                       )}
+                    </button>
+                  )}
+
+                  {/* Delete Button (Permanently deletes question from everywhere) */}
+                  {onDeleteQuestion && currentQuestion && (
+                    <button
+                      onClick={() => setShowDeleteModal(true)}
+                      className="flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 hover:border-rose-300 transition-colors cursor-pointer shadow-2xs"
+                      title="Permanently delete this unwanted or incomplete question from everywhere"
+                    >
+                      <Trash2 className="w-3.5 h-3.5 text-rose-600" />
+                      <span className="hidden sm:inline">Delete</span>
                     </button>
                   )}
 
@@ -1772,6 +1894,64 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* ── DELETE QUESTION CONFIRMATION MODAL ── */}
+      {showDeleteModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in duration-150">
+          <div className="bg-white rounded-lg max-w-md w-full shadow-2xl border border-gray-300 overflow-hidden">
+            <div className="bg-rose-600 text-white px-4 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Trash2 className="w-5 h-5" />
+                <h3 className="font-bold text-sm sm:text-base">Delete Question Permanently</h3>
+              </div>
+              <button
+                onClick={() => setShowDeleteModal(false)}
+                disabled={isDeleting}
+                className="text-white/80 hover:text-white cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-5 space-y-3 text-sm text-gray-700">
+              <p className="font-semibold text-gray-900">
+                Are you sure you want to delete Question No. {questionNumberInSection}?
+              </p>
+              <div className="bg-rose-50 border border-rose-200 rounded p-3 text-xs text-rose-800 leading-relaxed">
+                <p className="font-bold mb-1">Warning: Permanent Deletion Across Entire App</p>
+                This question will be completely removed from this test and filtered out from all future practice and mock tests across the app and database.
+              </div>
+              <p className="text-xs text-gray-600 line-clamp-3 italic bg-gray-50 p-2.5 rounded border border-gray-200">
+                "{getQuestionText()}"
+              </p>
+            </div>
+            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end gap-2.5">
+              <button
+                onClick={() => setShowDeleteModal(false)}
+                disabled={isDeleting}
+                className="px-4 py-1.5 border border-gray-300 text-gray-700 text-xs font-bold rounded hover:bg-gray-100 cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleConfirmDelete}
+                disabled={isDeleting}
+                className="px-4 py-1.5 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded transition-colors shadow-xs cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>{isDeleting ? 'Deleting Everywhere...' : 'Delete Everywhere'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── TOAST NOTIFICATION ── */}
+      {deleteToast && (
+        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-lg shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-slate-700 animate-in slide-in-from-bottom duration-200">
+          <Trash2 className="w-4 h-4 text-rose-400" />
+          <span>{deleteToast}</span>
         </div>
       )}
 

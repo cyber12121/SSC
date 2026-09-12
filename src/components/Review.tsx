@@ -23,7 +23,8 @@ import {
   TrendingUp,
   XCircle,
   CheckCircle2,
-  Layers
+  Layers,
+  Trash2
 } from 'lucide-react';
 import { QuizResult, Question } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
@@ -46,6 +47,7 @@ interface ReviewViewProps {
   bookmarkedIds?: Set<number>;
   onBookmarkToggle?: (question: Question) => void;
   onViewAnalytics?: () => void;
+  onDeleteQuestion?: (question: Question) => Promise<void> | void;
 }
 
 type FilterType = 'all' | 'correct' | 'incorrect' | 'unattempted';
@@ -58,7 +60,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   userName = 'Candidate',
   bookmarkedIds = new Set(),
   onBookmarkToggle,
-  onViewAnalytics
+  onViewAnalytics,
+  onDeleteQuestion
 }) => {
   const items = result.questionDetails || [];
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -75,6 +78,30 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportSubmitted, setReportSubmitted] = useState(false);
   const [localBookmarks, setLocalBookmarks] = useState<Set<number>>(new Set(bookmarkedIds));
+  const [deletedIndices, setDeletedIndices] = useState<Set<number>>(new Set());
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [deleteToast, setDeleteToast] = useState<string | null>(null);
+
+  const handleConfirmDelete = async () => {
+    const currentQ = items[currentIdx]?.question;
+    if (!currentQ) return;
+    setIsDeleting(true);
+    try {
+      if (onDeleteQuestion) {
+        await onDeleteQuestion(currentQ);
+      }
+      setDeletedIndices(prev => new Set(prev).add(currentIdx));
+      setShowDeleteModal(false);
+      setDeleteToast('Question permanently deleted everywhere.');
+      setTimeout(() => setDeleteToast(null), 3500);
+    } catch (e) {
+      console.error('Error deleting question:', e);
+      alert('Failed to delete question. Please check connection and try again.');
+    } finally {
+      setIsDeleting(false);
+    }
+  };
 
   // Helper to map question to SSC canonical section keys
   const getQuestionSectionKey = (q?: Question): 'part_a' | 'part_b' | 'part_c' | 'part_d' | null => {
@@ -584,6 +611,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 <Flag className="w-4 h-4" />
                 <span>Report</span>
               </button>
+
+              {onDeleteQuestion && (
+                <button
+                  onClick={() => setShowDeleteModal(true)}
+                  className="flex items-center space-x-1 text-rose-600 hover:text-rose-700 hover:bg-rose-50 px-2 py-0.5 rounded border border-rose-200 transition-colors"
+                  title="Permanently delete this question from everywhere"
+                >
+                  <Trash2 className="w-3.5 h-3.5" />
+                  <span>Delete</span>
+                </button>
+              )}
             </div>
           </div>
 
@@ -1251,6 +1289,64 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               )}
             </div>
           </div>
+        </div>
+      )}
+
+      {/* ── DELETE QUESTION CONFIRMATION MODAL ── */}
+      {showDeleteModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in duration-150">
+          <div className="bg-white rounded-lg max-w-md w-full shadow-2xl border border-gray-300 overflow-hidden">
+            <div className="bg-rose-600 text-white px-4 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Trash2 className="w-5 h-5" />
+                <h3 className="font-bold text-sm sm:text-base">Delete Question Permanently</h3>
+              </div>
+              <button
+                onClick={() => setShowDeleteModal(false)}
+                disabled={isDeleting}
+                className="text-white/80 hover:text-white cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-5 space-y-3 text-sm text-gray-700">
+              <p className="font-semibold text-gray-900">
+                Are you sure you want to delete Question No. {questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1}?
+              </p>
+              <div className="bg-rose-50 border border-rose-200 rounded p-3 text-xs text-rose-800 leading-relaxed">
+                <p className="font-bold mb-1">Warning: Permanent Deletion Across Entire App</p>
+                This question will be completely removed from this test and filtered out from all future practice and mock tests across the app and database.
+              </div>
+              <p className="text-xs text-gray-600 line-clamp-3 italic bg-gray-50 p-2.5 rounded border border-gray-200">
+                "{items[currentIdx]?.question?.question}"
+              </p>
+            </div>
+            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end gap-2.5">
+              <button
+                onClick={() => setShowDeleteModal(false)}
+                disabled={isDeleting}
+                className="px-4 py-1.5 border border-gray-300 text-gray-700 text-xs font-bold rounded hover:bg-gray-100 cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleConfirmDelete}
+                disabled={isDeleting}
+                className="px-4 py-1.5 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded transition-colors shadow-xs cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>{isDeleting ? 'Deleting Everywhere...' : 'Delete Everywhere'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── TOAST NOTIFICATION ── */}
+      {deleteToast && (
+        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-lg shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-slate-700 animate-in slide-in-from-bottom duration-200">
+          <Trash2 className="w-4 h-4 text-rose-400" />
+          <span>{deleteToast}</span>
         </div>
       )}
 
