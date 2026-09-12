@@ -38,6 +38,8 @@ export interface Chapter {
   section?: 'spartan' | 'pinnacle' | 'qrb' | 'top500';
   topic_name?: string;
   set_name?: string;
+  gk_subject?: string;
+  is_test?: boolean;
 }
 
 export interface QuestionProgress {

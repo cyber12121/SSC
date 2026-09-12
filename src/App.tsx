@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { detectTopic } from './utils/topicDetector';
+import { GK_SUBJECT_CONFIGS, GK_SUBJECT_LIST, GKSubjectId, getChapterGKSubject, getTopicGKSubject, formatGKSubTopicTitle } from './utils/gkSubjectHelper';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
@@ -15,6 +16,16 @@ const ErrorHeatmap = React.lazy(() => import('./components/ErrorHeatmap').then(m
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
 
 import { getCachedData, setCachedData } from './utils/cache';
+
+const GK_ICONS: Record<string, any> = {
+  Landmark,
+  Scale,
+  Globe2,
+  TrendingUp,
+  Atom,
+  Sparkles,
+  FileText,
+};
 
 // Dynamic import of all subject JSON files (recursive) - lazy split chunks!
 const subjectModules = import.meta.glob('./data/**/*.json');
@@ -82,11 +93,29 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
             topic_name = subParts[0]; // "chemistry"
           }
         }
+      } else if (path.includes('/gk_full_tests/')) {
+        const fileName = (path.split('/gk_full_tests/')[1] || '').toLowerCase();
+        if (fileName.includes('history')) topic_name = 'history';
+        else if (fileName.includes('polity')) topic_name = 'polity';
+        else if (fileName.includes('geography')) topic_name = 'geography';
+        else if (fileName.includes('economics')) topic_name = 'economics';
+        else if (fileName.includes('physics')) topic_name = 'physics';
+        else if (fileName.includes('chemistry')) topic_name = 'chemistry';
+        else if (fileName.includes('biology')) topic_name = 'biology';
+        else topic_name = 'tests';
       }
     }
 
     chapters.forEach((chapter: any) => {
-      const subject = chapter.subject;
+      let subject = chapter.subject;
+
+      // Unify GK Full Tests under General Awareness so all GK is subject-wise
+      if (path.includes('/gk_full_tests/')) {
+        chapter.is_test = true;
+        chapter.subject = 'General Awareness';
+        subject = 'General Awareness';
+      }
+
       if (section) {
         chapter.section = section;
       }
@@ -96,6 +125,12 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
       if (set_name) {
         chapter.set_name = set_name;
       }
+
+      // Compute GK Subject
+      if (subject === 'General Awareness' || path.includes('/general_awareness/') || path.includes('/gk_full_tests/')) {
+        chapter.gk_subject = getChapterGKSubject(chapter);
+      }
+
       if (isMock || (path.includes('mockErrors') && !isBank)) {
         if (!rawMockData[subject]) rawMockData[subject] = [];
         rawMockData[subject].push(chapter);
@@ -208,6 +243,9 @@ export default function App() {
   };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
+  const [selectedGKSubject, setSelectedGKSubject] = useState<GKSubjectId | null>(null);
+  const [selectedGKSubTopic, setSelectedGKSubTopic] = useState<string>('all');
+  const [mockGKFilter, setMockGKFilter] = useState<string>('all');
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
   const [user, setUser] = useState<User | null>(null);
@@ -557,6 +595,8 @@ export default function App() {
       setView('home');
       setSelectedSubject(null);
       setSelectedMathSection(null);
+      setSelectedGKSubject(null);
+      setSelectedGKSubTopic('all');
       setSelectedTopic(null);
       setSelectedBookmarkSubject(null);
     } catch (error) {
@@ -981,6 +1021,10 @@ export default function App() {
 
       ch.questions.forEach(q => {
         const topic = detectTopic(q, selectedSubject);
+        if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
+          if (getTopicGKSubject(topic) !== mockGKFilter) return;
+        }
+
         if (!map[topic]) {
           map[topic] = {
             topic,
@@ -1013,7 +1057,7 @@ export default function App() {
     });
 
     return Object.values(map).sort((a, b) => b.total - a.total);
-  }, [category, selectedSubject, currentData]);
+  }, [category, selectedSubject, currentData, mockGKFilter]);
 
   const startClubbedChapterQuiz = (
     topicName: string,
@@ -1096,7 +1140,7 @@ export default function App() {
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
         <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
               <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
                 <GraduationCap className="text-white w-5 h-5" />
               </div>
@@ -1114,14 +1158,14 @@ export default function App() {
             
             <div className="hidden md:flex items-center space-x-6">
               <button 
-                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
                 className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <BookOpen className="w-4 h-4 mr-1.5" />
                 Practice
               </button>
               <button 
-                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
                 className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <Zap className="w-4 h-4 mr-1.5" />
@@ -1274,7 +1318,9 @@ export default function App() {
                       </div>
                     ) : (
                       <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-                        {Object.keys(currentData).map((subject) => {
+                        {Object.keys(currentData)
+                          .filter(s => s !== 'GK Full Tests')
+                          .map((subject) => {
                           const chip = (
                             {
                               Mathematics: 'from-blue-500 to-indigo-600',
@@ -1288,22 +1334,50 @@ export default function App() {
                             <motion.div
                               key={subject}
                               whileHover={{ y: -2 }}
-                              onClick={() => setSelectedSubject(subject)}
-                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs"
+                              onClick={() => {
+                                setSelectedSubject(subject);
+                                if (subject === 'General Awareness') {
+                                  setSelectedGKSubject(null);
+                                  setSelectedGKSubTopic('all');
+                                }
+                              }}
+                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs flex flex-col justify-between"
                             >
-                              <div className="flex items-center justify-between">
-                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
-                                  <Layers className="w-4 h-4" />
+                              <div>
+                                <div className="flex items-center justify-between">
+                                  <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
+                                    <Layers className="w-4 h-4" />
+                                  </div>
+                                  <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
+                                    {currentData[subject]?.length || 0} Ch
+                                  </span>
                                 </div>
-                                <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
-                                  {currentData[subject].length} Ch
-                                </span>
+                                <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
+                                <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
+                                  View Chapters
+                                  <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+                                </div>
                               </div>
-                              <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
-                              <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
-                                View Chapters
-                                <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
-                              </div>
+
+                              {subject === 'General Awareness' && (
+                                <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
+                                  {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').map((sub) => (
+                                    <button
+                                      key={sub.id}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSelectedSubject('General Awareness');
+                                        setSelectedGKSubject(sub.id);
+                                        setSelectedGKSubTopic('all');
+                                      }}
+                                      className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
+                                      title={`Open ${sub.title}`}
+                                    >
+                                      {sub.shortTitle}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
                             </motion.div>
                           );
                         })}
@@ -1588,6 +1662,62 @@ export default function App() {
                       ))}
                     </div>
                   </div>
+                ) : selectedSubject === 'General Awareness' && category === 'chapterBank' && !selectedGKSubject ? (
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                      <div className="flex items-center gap-2.5">
+                        <button
+                          onClick={() => { setSelectedSubject(null); setSelectedGKSubject(null); }}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" />
+                          Subjects
+                        </button>
+                        <div>
+                          <h2 className="text-sm font-bold text-slate-900 tracking-tight">General Awareness (GK) Subjects</h2>
+                          <p className="text-[11px] text-slate-500 font-medium">Choose a subject to practice chapter-wise questions and full tests</p>
+                        </div>
+                      </div>
+                      <span className="rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">
+                        GK Vault
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      {GK_SUBJECT_LIST.map((sub) => {
+                        const Icon = GK_ICONS[sub.iconName] || Globe2;
+                        const chaptersForSub = (currentData['General Awareness'] || []).filter(ch => {
+                          if (sub.id === 'full_tests') return ch.is_test || ch.subject === 'GK Full Tests';
+                          return getChapterGKSubject(ch) === sub.id;
+                        });
+                        return (
+                          <motion.div
+                            key={sub.id}
+                            whileHover={{ y: -2 }}
+                            onClick={() => { setSelectedGKSubject(sub.id); setSelectedGKSubTopic('all'); }}
+                            className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md flex flex-col justify-between shadow-xs"
+                          >
+                            <div>
+                              <div className="flex items-center justify-between">
+                                <div className={`flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br ${sub.gradient} text-white shadow-xs`}>
+                                  <Icon className="w-4 h-4" />
+                                </div>
+                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold border ${sub.badge}`}>
+                                  {chaptersForSub.length} {sub.id === 'full_tests' ? 'Tests' : 'Chapters'}
+                                </span>
+                              </div>
+                              <h3 className="mt-3 text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{sub.title}</h3>
+                              <p className="mt-1 text-[11px] text-slate-500 leading-relaxed line-clamp-2">{sub.desc}</p>
+                            </div>
+                            <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-indigo-600">
+                              <span>Enter Subject</span>
+                              <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 ) : (
                   <div className="space-y-4">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-xs">
@@ -1596,6 +1726,9 @@ export default function App() {
                           onClick={() => {
                             if (selectedTopic) {
                               setSelectedTopic(null);
+                            } else if (selectedGKSubject && category === 'chapterBank') {
+                              setSelectedGKSubject(null);
+                              setSelectedGKSubTopic('all');
                             } else if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
                               setSelectedMathSection(null);
                             } else {
@@ -1605,12 +1738,24 @@ export default function App() {
                           className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors"
                         >
                           <ChevronLeft className="w-3.5 h-3.5" />
-                          {selectedTopic ? 'Topics' : (selectedSubject === 'Mathematics' && category === 'chapterBank' ? 'Math Sections' : 'Subjects')}
+                          {selectedTopic
+                            ? 'Topics'
+                            : (selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
+                              ? 'GK Subjects'
+                              : (selectedSubject === 'Mathematics' && category === 'chapterBank' ? 'Math Sections' : 'Subjects'))}
                         </button>
                         <div>
-                          <h2 className="text-sm font-bold text-slate-900 tracking-tight">{selectedSubject}</h2>
+                          <h2 className="text-sm font-bold text-slate-900 tracking-tight">
+                            {selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
+                              ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.title
+                              : selectedSubject}
+                          </h2>
                           <p className="text-[11px] text-slate-500 font-medium">
-                            {category === 'mockErrors' ? 'Mock error remediation & weak topic drills' : 'Comprehensive chapter-wise question vault'}
+                            {category === 'mockErrors'
+                              ? 'Mock error remediation & weak topic drills'
+                              : selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
+                              ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.desc
+                              : 'Comprehensive chapter-wise question vault'}
                           </p>
                         </div>
                       </div>
@@ -1620,6 +1765,64 @@ export default function App() {
                         {category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
                       </span>
                     </div>
+
+                    {/* GK Quick-Switch Subject Tabs & Sub-topic Filter */}
+                    {selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject && (
+                      <div className="space-y-2">
+                        {/* Quick Subject Tabs */}
+                        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar">
+                          {GK_SUBJECT_LIST.map((sub) => {
+                            const Icon = GK_ICONS[sub.iconName] || Globe2;
+                            const isSelected = selectedGKSubject === sub.id;
+                            const count = (currentData['General Awareness'] || []).filter(ch => {
+                              if (sub.id === 'full_tests') return ch.is_test || ch.subject === 'GK Full Tests';
+                              return getChapterGKSubject(ch) === sub.id;
+                            }).length;
+                            return (
+                              <button
+                                key={sub.id}
+                                onClick={() => {
+                                  setSelectedGKSubject(sub.id);
+                                  setSelectedGKSubTopic('all');
+                                }}
+                                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
+                                  isSelected
+                                    ? 'bg-indigo-600 text-white shadow-xs'
+                                    : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
+                                }`}
+                              >
+                                <Icon className="w-3.5 h-3.5" />
+                                <span>{sub.shortTitle}</span>
+                                <span className={`px-1.5 py-0.2 text-[10px] rounded font-bold ${
+                                  isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                                }`}>
+                                  {count}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {/* Sub-Topics / Series Filter Tabs */}
+                        {GK_SUBJECT_CONFIGS[selectedGKSubject]?.subTopics.length > 1 && (
+                          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar">
+                            {GK_SUBJECT_CONFIGS[selectedGKSubject].subTopics.map((st) => (
+                              <button
+                                key={st.key}
+                                onClick={() => setSelectedGKSubTopic(st.key)}
+                                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all shrink-0 ${
+                                  selectedGKSubTopic === st.key
+                                    ? 'bg-slate-900 text-white shadow-xs'
+                                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+                                }`}
+                              >
+                                {st.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
 
                     {/* Mock Errors: Attempt All Option & View Mode Toggle */}
                     {category === 'mockErrors' && (currentData[selectedSubject] || []).length > 0 && (
@@ -1667,6 +1870,38 @@ export default function App() {
                             Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})
                           </button>
                         </div>
+                      </div>
+                    )}
+
+                    {category === 'mockErrors' && selectedSubject === 'General Awareness' && (currentData[selectedSubject] || []).length > 0 && (
+                      <div className="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar">
+                        <button
+                          onClick={() => setMockGKFilter('all')}
+                          className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 ${
+                            mockGKFilter === 'all'
+                              ? 'bg-indigo-600 text-white shadow-xs'
+                              : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+                          }`}
+                        >
+                          All GK
+                        </button>
+                        {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').map((sub) => {
+                          const Icon = GK_ICONS[sub.iconName] || Globe2;
+                          return (
+                            <button
+                              key={sub.id}
+                              onClick={() => setMockGKFilter(sub.id)}
+                              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1 ${
+                                mockGKFilter === sub.id
+                                  ? 'bg-indigo-600 text-white shadow-xs'
+                                  : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+                              }`}
+                            >
+                              <Icon className="w-3.5 h-3.5" />
+                              <span>{sub.shortTitle}</span>
+                            </button>
+                          );
+                        })}
                       </div>
                     )}
 
@@ -1819,7 +2054,10 @@ export default function App() {
                             // Compute topic-wise breakdown
                             const topicMap: Record<string, number> = {};
                             chapter.questions.forEach(q => {
-                              const t = q.tags?.topic || (q as any).topic || 'General';
+                              const t = q.tags?.topic || (q as any).topic || detectTopic(q, selectedSubject);
+                              if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
+                                if (getTopicGKSubject(t) !== mockGKFilter) return;
+                              }
                               topicMap[t] = (topicMap[t] || 0) + 1;
                             });
 
@@ -1965,24 +2203,39 @@ export default function App() {
                     ) : (
                       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                         {(() => {
-                          const relevantChapters = (currentData[selectedSubject] || []).filter(chapter =>
-                            !(selectedSubject === 'Mathematics' && category === 'chapterBank') || chapter.section === selectedMathSection
-                          );
-                          const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
-                          const isGK = selectedSubject === 'General Awareness' && category === 'chapterBank';
+                          const relevantChapters = (currentData[selectedSubject] || []).filter(chapter => {
+                            if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
+                              return chapter.section === selectedMathSection;
+                            }
+                            if (selectedSubject === 'General Awareness' && category === 'chapterBank') {
+                              if (selectedGKSubject === 'full_tests') {
+                                if (!chapter.is_test && chapter.subject !== 'GK Full Tests') return false;
+                                if (selectedGKSubTopic && selectedGKSubTopic !== 'all') {
+                                  const chSub = getChapterGKSubject(chapter);
+                                  return chSub === selectedGKSubTopic;
+                                }
+                                return true;
+                              }
+                              const chSub = getChapterGKSubject(chapter);
+                              if (chSub !== selectedGKSubject) return false;
+                              if (selectedGKSubTopic && selectedGKSubTopic !== 'all') {
+                                if (selectedGKSubTopic === 'tests') return Boolean(chapter.is_test);
+                                return chapter.topic_name === selectedGKSubTopic;
+                              }
+                              return true;
+                            }
+                            return true;
+                          });
 
-                          if ((isMathSection || isGK) && !selectedTopic) {
+                          const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
+
+                          if (isMathSection && !selectedTopic) {
                             const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
                             topics.sort((a, b) => a.localeCompare(b));
 
                             return topics.map((topic, idx) => {
                               const topicChapters = relevantChapters.filter(ch => ch.topic_name === topic);
-
-                              let displayTitle = topic.replace(/_/g, ' ');
-                              if (topic === 'history_ancient') displayTitle = 'Ancient History';
-                              else if (topic === 'history_medieval') displayTitle = 'Medieval History';
-                              else if (topic === 'history_modern') displayTitle = 'Modern History';
-                              else if (topic === 'static_gk') displayTitle = 'Static GK';
+                              const displayTitle = topic.replace(/_/g, ' ');
 
                               return (
                                 <motion.div
@@ -1996,12 +2249,12 @@ export default function App() {
                                       <Layers className="w-4 h-4" />
                                     </div>
                                     <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
-                                      {topicChapters.length} {isMathSection ? 'Sets' : (topicChapters.length === 1 ? 'Chapter' : 'Chapters')}
+                                      {topicChapters.length} Sets
                                     </span>
                                   </div>
                                   <h3 className="mt-2.5 text-xs font-bold capitalize text-slate-800">{displayTitle}</h3>
                                   <div className="mt-2 flex items-center text-xs font-semibold text-indigo-600">
-                                    {isMathSection ? 'View Sets' : 'View Chapters'}
+                                    View Sets
                                     <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                   </div>
                                 </motion.div>
@@ -2009,12 +2262,24 @@ export default function App() {
                             });
                           }
 
-                          let chaptersToRender = (isMathSection || isGK) && selectedTopic
+                          let chaptersToRender = isMathSection && selectedTopic
                             ? relevantChapters.filter(ch => ch.topic_name === selectedTopic)
                             : relevantChapters;
 
                           if (selectedSubject === 'General Awareness') {
-                            chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
+                            chaptersToRender = [...chaptersToRender].sort((a, b) => {
+                              if (a.is_test && !b.is_test) return 1;
+                              if (!a.is_test && b.is_test) return -1;
+                              return (a.chapter_num || 0) - (b.chapter_num || 0);
+                            });
+                          }
+
+                          if (chaptersToRender.length === 0) {
+                            return (
+                              <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-slate-200">
+                                <p className="text-xs font-bold text-slate-600">No chapters found for this selection.</p>
+                              </div>
+                            );
                           }
 
                           return chaptersToRender.map((chapter, idx) => (
@@ -2025,16 +2290,30 @@ export default function App() {
                               className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md shadow-xs flex flex-col justify-between"
                             >
                               <div className="flex items-center justify-between">
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-xs">
-                                  <BookOpen className="w-4 h-4" />
+                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${
+                                  chapter.is_test
+                                    ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                    : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
+                                } shadow-xs`}>
+                                  {chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
                                 </div>
-                                <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
-                                  {chapter.set_name ? `Set ${chapter.set_name.replace('set_', '')}` : `Ch ${chapter.chapter_num}`}
+                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${
+                                  chapter.is_test
+                                    ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                    : 'bg-slate-50 text-slate-500'
+                                }`}>
+                                  {chapter.is_test
+                                    ? 'Full Test'
+                                    : chapter.set_name
+                                    ? `Set ${chapter.set_name.replace('set_', '')}`
+                                    : `Ch ${chapter.chapter_num}`}
                                 </span>
                               </div>
                               <div>
                                 <h3 className="mt-2.5 text-xs font-bold text-slate-800 line-clamp-1">{chapter.chapter_title}</h3>
-                                <p className="mt-0.5 text-[11px] text-slate-500">{chapter.questions.length} Questions</p>
+                                <p className="mt-0.5 text-[11px] text-slate-500">
+                                  {chapter.questions.length} Questions {chapter.topic_name ? `• ${formatGKSubTopicTitle(chapter.topic_name)}` : ''}
+                                </p>
                               </div>
                               <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
                                 <div className="flex items-center text-xs font-semibold text-indigo-600">

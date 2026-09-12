@@ -34,7 +34,7 @@ export const CrossGridMatrixDrill: React.FC = () => {
 
   const currentTier = GRID_TIERS[selectedTierIdx];
 
-  const targetSolveCount = currentTier.size === 10 ? 10 : currentTier.size * currentTier.size;
+  const targetSolveCount = currentTier.size * currentTier.size;
 
   const initGrid = () => {
     const { size, range } = currentTier;

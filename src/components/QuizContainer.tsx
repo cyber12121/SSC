@@ -4,9 +4,10 @@ import {
   Trophy, Clock, CheckCircle2, CornerDownLeft, RotateCcw,
   Pause, Play, BookOpen, ChevronRight, ChevronLeft,
   X, FileText, ArrowLeft, AlertTriangle, ChevronDown,
-  Maximize2, Minimize2
+  Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
+import { cleanSolutionText } from '../utils/cleanSolution';
 
 interface QuizContainerProps {
   chapter: Chapter;
@@ -167,6 +168,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [activeSectionIdx, setActiveSectionIdx] = useState(initialSectionIdx);
   const [currentIdx, setCurrentIdx] = useState(sections[initialSectionIdx]?.startIndex || 0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [showSolutionMap, setShowSolutionMap] = useState<Record<number, boolean>>({});
   const [timeSpent, setTimeSpent] = useState<Record<number, number>>({});
   const [visited, setVisited] = useState<Set<number>>(new Set([0]));
   const [markedForReview, setMarkedForReview] = useState<Set<number>>(new Set());
@@ -299,7 +301,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     recordTime();
     setAnswers(prev => {
       const updated = { ...prev };
-      if (updated[currentIdx] === answer) {
+      if (mode === 'mock' && updated[currentIdx] === answer) {
         delete updated[currentIdx];
       } else {
         updated[currentIdx] = answer;
@@ -307,6 +309,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       answersRef.current = updated;
       return updated;
     });
+
+    if (mode === 'practice') {
+      setShowSolutionMap(prev => ({ ...prev, [currentIdx]: true }));
+    }
   };
 
   const handleClearResponse = () => {
@@ -322,6 +328,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       markedRef.current = n;
       return n;
     });
+    if (mode === 'practice') {
+      setShowSolutionMap(prev => {
+        const n = { ...prev };
+        delete n[currentIdx];
+        return n;
+      });
+    }
   };
 
   const jumpToQuestion = (idx: number) => {
@@ -388,6 +401,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   const handleReattempt = () => {
     setAnswers({}); setTimeSpent({}); setVisited(new Set([0])); setMarkedForReview(new Set());
+    setShowSolutionMap({});
     answersRef.current = {}; timeSpentRef.current = {}; markedRef.current = new Set();
     startTimeRef.current = Date.now();
     setIsFinished(false); isFinishedRef.current = false;
@@ -499,9 +513,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           <div className="w-16 h-16 bg-cyan-50 text-[#0097a7] rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
             <Trophy className="w-8 h-8" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-1">Test Submitted!</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-1">
+            {mode === 'practice' ? 'Practice Session Completed!' : 'Test Submitted!'}
+          </h2>
           <p className="text-gray-500 text-sm mb-6">
-            You completed <span className="font-semibold text-gray-700">{chapter.chapter_title}</span>
+            {mode === 'practice' ? 'You practiced ' : 'You completed '}
+            <span className="font-semibold text-gray-700">{chapter.chapter_title}</span>
           </p>
 
           <div className="grid grid-cols-2 gap-3 mb-6 text-left">
@@ -566,6 +583,28 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     notAttempted: totalQuestions - Object.keys(answers).length,
   };
 
+  // Practice mode stats
+  const scorePractice = calculateScore();
+  const answeredPractice = Object.keys(answers).length;
+  const wrongPractice = answeredPractice - scorePractice;
+  const accuracyPractice = answeredPractice > 0 ? Math.round((scorePractice / answeredPractice) * 100) : 0;
+  const unattemptedPractice = totalQuestions - answeredPractice;
+
+  const correctOptionKey = getCorrectAnswer(currentQuestion);
+  const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
+
+  const getFormattedSolution = () => {
+    if (!currentQuestion?.solution) return '';
+    const cleaned = cleanSolutionText(currentQuestion.solution);
+    if (language === 'Hindi') {
+      const parts = cleaned.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
+      if (parts.length > 1) {
+        return parts[1].trim();
+      }
+    }
+    return cleaned;
+  };
+
   // Question numbering within section (e.g. Question No. 2)
   const questionNumberInSection = currentIdx - activeSection.startIndex + 1;
 
@@ -594,16 +633,28 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   return (
     <div className="flex flex-col h-screen w-full bg-white text-gray-900 select-none overflow-hidden font-sans">
 
-      {/* ── TOP HEADER BAR (Exact match to Testbook screenshot) ── */}
+      {/* ── TOP HEADER BAR ── */}
       <header className="h-[60px] bg-white border-b border-gray-300 px-4 flex items-center justify-between shrink-0 shadow-2xs z-30">
-        {/* Left: Testbook Brand + Test Subtitle + Zoom Buttons */}
+        {/* Left: Brand + Test Subtitle + Mode Badge + Zoom Buttons */}
         <div className="flex items-center gap-3">
           <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 text-[#00baf2]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 2H5C3.89 2 3 2.89 3 4v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm-7 16H6v-2h6v2zm0-4H6v-2h6v2zm0-4H6V8h6v2zm6 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V8h4v2z"/>
-              </svg>
-              <span className="font-extrabold text-lg tracking-tight text-[#00baf2] leading-none">testbook</span>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
+                <svg className="w-5 h-5 text-[#00baf2]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 2H5C3.89 2 3 2.89 3 4v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm-7 16H6v-2h6v2zm0-4H6v-2h6v2zm0-4H6V8h6v2zm6 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V8h4v2z"/>
+                </svg>
+                <span className="font-extrabold text-lg tracking-tight text-[#00baf2] leading-none">testbook</span>
+              </div>
+              {mode === 'practice' ? (
+                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1 shadow-2xs">
+                  <BookOpen className="w-3 h-3 text-emerald-600" />
+                  Practice Mode
+                </span>
+              ) : (
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 border border-blue-200">
+                  Mock Simulator
+                </span>
+              )}
             </div>
             <span className="text-[10px] font-bold text-gray-900 truncate max-w-[130px] sm:max-w-[200px] mt-0.5">
               {chapter.chapter_title || 'Percentage'}
@@ -629,22 +680,36 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
         </div>
 
-        {/* Center: Title & Candidate Roll No */}
+        {/* Center: Title & Candidate Roll No (or Practice Live Score) */}
         <div className="hidden md:flex flex-col items-center justify-center text-center">
           <h2 className="text-sm font-bold text-gray-900 leading-tight">
             {chapter.chapter_title || 'Percentage'}
           </h2>
-          <span className="text-[11px] text-gray-700 font-semibold mt-0.5">
-            Roll No : 919754035746
-          </span>
+          {mode === 'mock' ? (
+            <span className="text-[11px] text-gray-700 font-semibold mt-0.5">
+              Roll No : 919754035746
+            </span>
+          ) : (
+            <div className="flex items-center gap-3 text-xs font-semibold mt-0.5">
+              <span className="text-emerald-700 flex items-center gap-1">
+                <Check className="w-3.5 h-3.5 stroke-[3]" /> {scorePractice} Correct
+              </span>
+              <span className="text-rose-700 flex items-center gap-1">
+                <X className="w-3.5 h-3.5 stroke-[3]" /> {wrongPractice} Incorrect
+              </span>
+              <span className="text-indigo-700 font-bold">
+                {accuracyPractice}% Accuracy
+              </span>
+            </div>
+          )}
         </div>
 
-        {/* Right: Fullscreen, Pause, Time Left, Candidate Photos */}
+        {/* Right: Fullscreen, Pause, Time Left, Candidate Photos (or Practice Finish) */}
         <div className="flex items-center gap-2.5 shrink-0">
           {/* Fullscreen Button */}
           <button
             onClick={toggleFullscreen}
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-[#00baf2] text-[#00baf2] hover:bg-[#00baf2]/10 flex items-center justify-center transition-colors"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-[#00baf2] text-[#00baf2] hover:bg-[#00baf2]/10 flex items-center justify-center transition-colors cursor-pointer"
             title="Toggle Fullscreen"
           >
             {isFullscreen ? <Minimize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
@@ -653,15 +718,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           {/* Pause Button */}
           <button
             onClick={handlePauseToggle}
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-[#00baf2] text-[#00baf2] hover:bg-[#00baf2]/10 flex items-center justify-center transition-colors"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-[#00baf2] text-[#00baf2] hover:bg-[#00baf2]/10 flex items-center justify-center transition-colors cursor-pointer"
             title={isPaused ? 'Resume Test' : 'Pause Test'}
           >
             {isPaused ? <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-emerald-600" /> : <Pause className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-[#00baf2]" />}
           </button>
 
-          {/* Section Time Badge (Red on Yellow) */}
+          {/* Section Time Badge */}
           <div className="flex flex-col items-center">
-            <span className="text-[10px] text-gray-500 font-semibold leading-tight">Section Time</span>
+            <span className="text-[10px] text-gray-500 font-semibold leading-tight">
+              {mode === 'practice' ? 'Time Spent' : 'Section Time'}
+            </span>
             <div className="bg-[#fff9db] border border-[#ffe066] text-[#d90429] font-mono font-bold text-sm sm:text-base px-2 py-0.5 rounded shadow-2xs leading-none">
               {mode === 'practice'
                 ? fmtTime(currentTimer)
@@ -669,62 +736,102 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
           </div>
 
-          {/* Candidate Profile Photos (Registration & Captured) */}
-          <div className="hidden sm:flex items-center gap-1.5 ml-1">
-            <CandidateAvatar label="Registration Photo" />
-            <CandidateAvatar label="Captured Photo" />
-          </div>
+          {mode === 'mock' ? (
+            /* Candidate Profile Photos in Mock Mode */
+            <div className="hidden sm:flex items-center gap-1.5 ml-1">
+              <CandidateAvatar label="Registration Photo" />
+              <CandidateAvatar label="Captured Photo" />
+            </div>
+          ) : (
+            /* Finish Practice Button in Practice Mode */
+            <button
+              onClick={() => setShowSubmitModal(true)}
+              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer ml-1"
+              title="Finish Practice and view summary"
+            >
+              <CheckCircle2 className="w-4 h-4" />
+              <span className="hidden sm:inline">Finish Practice</span>
+            </button>
+          )}
 
-          {/* Exit test */}
+          {/* Exit Button */}
           <button
             onClick={() => {
-              if (window.confirm('Are you sure you want to exit the test? Your progress will not be saved.')) {
+              if (window.confirm(mode === 'practice' ? 'Are you sure you want to exit practice mode?' : 'Are you sure you want to exit the test? Your progress will not be saved.')) {
                 onExit();
               }
             }}
-            className="p-1 text-gray-400 hover:text-red-600 rounded transition-colors ml-1"
-            title="Exit Test"
+            className="p-1 text-gray-400 hover:text-red-600 rounded transition-colors ml-1 cursor-pointer"
+            title="Exit"
           >
             <ArrowLeft className="w-4 h-4" />
           </button>
         </div>
       </header>
 
-      {/* ── SECOND SUB-HEADER ROW 1 (Links on Left, Total Questions Answered on Right) ── */}
+      {/* ── SECOND SUB-HEADER ROW 1 (Links on Left, Status Counter on Right) ── */}
       <div className="bg-white border-b border-gray-200 px-4 py-1.5 flex items-center justify-between shrink-0 z-20">
-        {/* Quick Links: SYMBOLS | INSTRUCTIONS | OVERALL TEST SUMMARY */}
-        <div className="flex items-center gap-4 text-[11px] font-bold tracking-wide uppercase">
-          <button
-            onClick={() => setShowSymbolsModal(true)}
-            className="text-[#0088cc] hover:underline cursor-pointer"
-          >
-            SYMBOLS
-          </button>
-          <button
-            onClick={() => setShowInstructionsModal(true)}
-            className="text-[#d9534f] hover:underline cursor-pointer"
-          >
-            INSTRUCTIONS
-          </button>
-          <button
-            onClick={() => setShowQuestionPaper(true)}
-            className="text-[#a94442] hover:underline cursor-pointer"
-          >
-            OVERALL TEST SUMMARY
-          </button>
-        </div>
+        {mode === 'mock' ? (
+          /* Quick Links: SYMBOLS | INSTRUCTIONS | OVERALL TEST SUMMARY in Mock */
+          <div className="flex items-center gap-4 text-[11px] font-bold tracking-wide uppercase">
+            <button
+              onClick={() => setShowSymbolsModal(true)}
+              className="text-[#0088cc] hover:underline cursor-pointer"
+            >
+              SYMBOLS
+            </button>
+            <button
+              onClick={() => setShowInstructionsModal(true)}
+              className="text-[#d9534f] hover:underline cursor-pointer"
+            >
+              INSTRUCTIONS
+            </button>
+            <button
+              onClick={() => setShowQuestionPaper(true)}
+              className="text-[#a94442] hover:underline cursor-pointer"
+            >
+              OVERALL TEST SUMMARY
+            </button>
+          </div>
+        ) : (
+          /* Practice Mode Sub-header Left: Breadcrumb / Topic Info */
+          <div className="flex items-center gap-2 text-xs text-gray-700">
+            <span className="font-bold text-gray-900">
+              Question {currentIdx + 1} of {totalQuestions}
+            </span>
+            {currentQuestion?.tags?.topic && (
+              <span className="bg-indigo-50 text-indigo-700 font-semibold px-2 py-0.5 rounded text-[11px] border border-indigo-100">
+                {currentQuestion.tags.topic}
+              </span>
+            )}
+          </div>
+        )}
 
-        {/* Right: Total Questions Answered (Yellow Box matching screenshot) */}
-        <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 font-bold ml-auto">
-          <span>Total Questions Answered:</span>
-          <span className="bg-[#ffff00] border border-gray-400 text-black px-1.5 py-0.5 font-bold text-xs">
-            {stats.answered}
-          </span>
-        </div>
+        {/* Right: Answered / Practice status counter */}
+        {mode === 'mock' ? (
+          <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 font-bold ml-auto">
+            <span>Total Questions Answered:</span>
+            <span className="bg-[#ffff00] border border-gray-400 text-black px-1.5 py-0.5 font-bold text-xs">
+              {stats.answered}
+            </span>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2.5 text-xs font-semibold ml-auto">
+            <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 flex items-center gap-1">
+              <Check className="w-3 h-3 stroke-[3]" /> {scorePractice} Correct
+            </span>
+            <span className="text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 flex items-center gap-1">
+              <X className="w-3 h-3 stroke-[3]" /> {wrongPractice} Wrong
+            </span>
+            <span className="text-gray-600 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
+              {unattemptedPractice} Left
+            </span>
+          </div>
+        )}
       </div>
 
-      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on Left, Action Buttons on Right with gap) ── */}
-      <div className="bg-white border-b border-gray-300 px-4 py-1.5 flex items-center gap-6 shrink-0 z-20 overflow-x-auto">
+      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on Left, Action Buttons on Right) ── */}
+      <div className="bg-white border-b border-gray-300 px-4 py-1.5 flex items-center justify-between gap-4 shrink-0 z-20 overflow-x-auto">
         {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
         <div className="flex items-center gap-1.5 shrink-0">
           {sections.map((sec, idx) => {
@@ -750,41 +857,81 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           })}
         </div>
 
-        {/* Action Buttons: Previous, Mark for Review, Save & Next, Submit Section, Submit Test */}
-        <div className="flex items-center gap-2 shrink-0">
-          <button
-            onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
-            disabled={currentIdx === 0}
-            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-          >
-            Previous
-          </button>
-          <button
-            onClick={handleMarkAndNext}
-            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
-          >
-            Mark for Review
-          </button>
-          <button
-            onClick={handleSaveAndNext}
-            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
-          >
-            Save &amp; Next
-          </button>
-          <button
-            onClick={handleSubmitSection}
-            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
-          >
-            Submit Section
-          </button>
-          <button
-            onClick={() => setShowSubmitModal(true)}
-            disabled={isSubmitting}
-            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer"
-          >
-            Submit Test
-          </button>
-        </div>
+        {/* Action Buttons: Practice vs Mock Mode */}
+        {mode === 'practice' ? (
+          <div className="flex items-center gap-2 shrink-0 ml-auto">
+            <button
+              onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+              disabled={currentIdx === 0}
+              className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>Previous</span>
+            </button>
+
+            <button
+              onClick={() => setShowSolutionMap(prev => ({ ...prev, [currentIdx]: !isSolutionOpen }))}
+              className={`font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors cursor-pointer flex items-center gap-1.5 ${
+                isSolutionOpen
+                  ? 'bg-amber-500 text-white hover:bg-amber-600'
+                  : 'bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100'
+              }`}
+            >
+              {isSolutionOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5 text-amber-600" />}
+              <span>{isSolutionOpen ? 'Hide Solution' : 'Show Solution'}</span>
+            </button>
+
+            <button
+              onClick={() => {
+                if (currentIdx < totalQuestions - 1) {
+                  jumpToQuestion(currentIdx + 1);
+                } else {
+                  setShowSubmitModal(true);
+                }
+              }}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded transition-colors shadow-2xs cursor-pointer flex items-center gap-1"
+            >
+              <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        ) : (
+          /* Mock Mode Buttons */
+          <div className="flex items-center gap-2 shrink-0 ml-auto">
+            <button
+              onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+              disabled={currentIdx === 0}
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            >
+              Previous
+            </button>
+            <button
+              onClick={handleMarkAndNext}
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+            >
+              Mark for Review
+            </button>
+            <button
+              onClick={handleSaveAndNext}
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+            >
+              Save &amp; Next
+            </button>
+            <button
+              onClick={handleSubmitSection}
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+            >
+              Submit Section
+            </button>
+            <button
+              onClick={() => setShowSubmitModal(true)}
+              disabled={isSubmitting}
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer"
+            >
+              Submit Test
+            </button>
+          </div>
+        )}
       </div>
 
       {/* ── MAIN LAYOUT (QUESTION ON LEFT, PALETTE ON RIGHT) ── */}
@@ -810,19 +957,52 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           ) : (
             <>
               {/* Question Label Row: Question No. X | Language | Report */}
+              {/* Question Label Row: Question No. X | Bookmark | Language | Report */}
               <div className="flex items-center justify-between mb-3">
-                <span className="font-bold text-gray-900 text-sm sm:text-base">
-                  Question No. {questionNumberInSection}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-gray-900 text-sm sm:text-base">
+                    Question No. {questionNumberInSection}
+                  </span>
+                  {mode === 'practice' && (
+                    <span className="text-xs text-gray-500 font-medium">
+                      (Q.{currentIdx + 1} of {totalQuestions})
+                    </span>
+                  )}
+                </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                  {/* Bookmark Button */}
+                  {onBookmarkToggle && currentQuestion && (
+                    <button
+                      onClick={() => onBookmarkToggle(currentQuestion)}
+                      className={`flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded border transition-colors cursor-pointer ${
+                        bookmarkedIds.has(currentQuestion.q_num)
+                          ? 'bg-amber-50 text-amber-700 border-amber-300'
+                          : 'bg-white text-gray-600 border-gray-300 hover:text-amber-600 hover:border-amber-200'
+                      }`}
+                      title="Bookmark this question"
+                    >
+                      {bookmarkedIds.has(currentQuestion.q_num) ? (
+                        <>
+                          <BookmarkCheck className="w-3.5 h-3.5 text-amber-600 fill-amber-600" />
+                          <span className="hidden sm:inline">Bookmarked</span>
+                        </>
+                      ) : (
+                        <>
+                          <Bookmark className="w-3.5 h-3.5" />
+                          <span className="hidden sm:inline">Bookmark</span>
+                        </>
+                      )}
+                    </button>
+                  )}
+
                   {/* Select Language dropdown */}
                   <div className="flex items-center gap-1 text-xs text-gray-700">
-                    <span className="font-medium">Select Language</span>
+                    <span className="font-medium">Language</span>
                     <div className="relative">
                       <button
                         onClick={() => setShowLanguageMenu(!showLanguageMenu)}
-                        className="flex items-center gap-1 border border-gray-300 rounded px-2.5 py-0.5 text-xs text-gray-700 bg-white hover:bg-gray-50 font-medium"
+                        className="flex items-center gap-1 border border-gray-300 rounded px-2.5 py-0.5 text-xs text-gray-700 bg-white hover:bg-gray-50 font-medium cursor-pointer"
                       >
                         {language}
                         <ChevronDown className="w-3 h-3 text-gray-500 ml-0.5" />
@@ -831,13 +1011,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                         <div className="absolute right-0 mt-1 w-24 bg-white border border-gray-200 rounded shadow-lg py-1 z-20 text-xs">
                           <button
                             onClick={() => { setLanguage('English'); setShowLanguageMenu(false); }}
-                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium"
+                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium cursor-pointer"
                           >
                             English
                           </button>
                           <button
                             onClick={() => { setLanguage('Hindi'); setShowLanguageMenu(false); }}
-                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium"
+                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium cursor-pointer"
                           >
                             Hindi
                           </button>
@@ -857,9 +1037,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 </div>
               </div>
 
-              {/* Single Bordered Container for Question Statement & Divided Options Table */}
+              {/* Question Statement Box */}
               <div className="border border-gray-300 rounded-[2px] bg-white overflow-hidden shadow-2xs mb-4">
-                {/* Question Statement */}
                 <div className={`p-4 sm:p-5 ${fontSizeClass} text-gray-900 leading-relaxed`}>
                   <p className="whitespace-pre-wrap">{getQuestionText()}</p>
                   {currentQuestion?.image?.src && (
@@ -873,79 +1052,234 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   )}
                 </div>
 
-                {/* Options Table (Each option has left radio column and right text column) */}
-                <div className="border-t border-gray-200 divide-y divide-gray-200">
+                {/* Mock Mode Options Table (Official Testbook Table) */}
+                {mode === 'mock' && (
+                  <div className="border-t border-gray-200 divide-y divide-gray-200">
+                    {currentQuestion && optionKeys.map((k) => {
+                      const rawOpt = currentQuestion.options[k];
+                      if (!rawOpt) return null;
+                      const isSelected = answers[currentIdx] === k;
+                      const optText = getOptionText(rawOpt);
+
+                      return (
+                        <div
+                          key={k}
+                          onClick={() => handleAnswer(k)}
+                          className={`flex items-stretch hover:bg-slate-50/80 cursor-pointer transition-colors ${
+                            isSelected ? 'bg-blue-50/30' : 'bg-white'
+                          }`}
+                        >
+                          {/* Left column: Radio button */}
+                          <div className="w-12 shrink-0 border-r border-gray-200 flex items-center justify-center py-3.5 bg-white">
+                            <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all ${
+                              isSelected ? 'border-blue-600 bg-white' : 'border-gray-400 bg-white'
+                            }`}>
+                              {isSelected && <div className="w-2 h-2 rounded-full bg-blue-600" />}
+                            </div>
+                          </div>
+
+                          {/* Right column: Option text */}
+                          <div className={`flex-1 px-4 py-3.5 ${fontSizeClass} text-gray-800 leading-normal flex items-center`}>
+                            {optText}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {/* Practice Mode Options Cards (Instant Feedback) */}
+              {mode === 'practice' && (
+                <div className="space-y-2.5 mb-5">
                   {currentQuestion && optionKeys.map((k) => {
                     const rawOpt = currentQuestion.options[k];
                     if (!rawOpt) return null;
-                    const isSelected = answers[currentIdx] === k;
                     const optText = getOptionText(rawOpt);
+                    const isSelected = answers[currentIdx] === k;
+                    const isAttempted = answers[currentIdx] !== undefined;
+                    const isCorrectOption = k === correctOptionKey;
+
+                    let cardStyle = 'border-gray-300 bg-white hover:border-indigo-400 hover:bg-indigo-50/20 text-gray-800';
+                    let badgeIcon = (
+                      <div className={`w-7 h-7 rounded-full border flex items-center justify-center font-bold text-xs uppercase ${
+                        isSelected ? 'border-indigo-600 bg-indigo-50 text-indigo-700' : 'border-gray-300 text-gray-600 bg-gray-50'
+                      }`}>
+                        {k}
+                      </div>
+                    );
+                    let statusBadge = null;
+
+                    if (isAttempted) {
+                      if (isCorrectOption) {
+                        cardStyle = 'border-emerald-500 bg-emerald-50/90 text-emerald-950 font-medium ring-1 ring-emerald-500 shadow-2xs';
+                        badgeIcon = (
+                          <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+                            <Check className="w-4 h-4 stroke-[3]" />
+                          </div>
+                        );
+                        statusBadge = (
+                          <span className="text-[11px] font-bold bg-emerald-600 text-white px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-xs">
+                            <Check className="w-3 h-3 stroke-[3]" />
+                            Correct Answer
+                          </span>
+                        );
+                      } else if (isSelected) {
+                        cardStyle = 'border-rose-500 bg-rose-50/90 text-rose-950 font-medium ring-1 ring-rose-500 shadow-2xs';
+                        badgeIcon = (
+                          <div className="w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-xs">
+                            <X className="w-4 h-4 stroke-[3]" />
+                          </div>
+                        );
+                        statusBadge = (
+                          <span className="text-[11px] font-bold bg-rose-600 text-white px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-xs">
+                            <X className="w-3 h-3 stroke-[3]" />
+                            Your Answer (Incorrect)
+                          </span>
+                        );
+                      } else {
+                        cardStyle = 'border-gray-200 bg-gray-50/60 text-gray-400 opacity-60';
+                        badgeIcon = (
+                          <div className="w-7 h-7 rounded-full border border-gray-200 text-gray-400 bg-gray-100 flex items-center justify-center text-xs uppercase">
+                            {k}
+                          </div>
+                        );
+                      }
+                    }
 
                     return (
                       <div
                         key={k}
                         onClick={() => handleAnswer(k)}
-                        className={`flex items-stretch hover:bg-slate-50/80 cursor-pointer transition-colors ${
-                          isSelected ? 'bg-blue-50/30' : 'bg-white'
-                        }`}
+                        className={`flex items-center justify-between p-3.5 sm:p-4 rounded-xl border transition-all cursor-pointer ${cardStyle}`}
                       >
-                        {/* Left column: Radio button */}
-                        <div className="w-12 shrink-0 border-r border-gray-200 flex items-center justify-center py-3.5 bg-white">
-                          <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all ${
-                            isSelected ? 'border-blue-600 bg-white' : 'border-gray-400 bg-white'
-                          }`}>
-                            {isSelected && <div className="w-2 h-2 rounded-full bg-blue-600" />}
-                          </div>
+                        <div className="flex items-center gap-3.5 flex-1 min-w-0 pr-2">
+                          {badgeIcon}
+                          <span className={`${fontSizeClass} leading-normal select-text`}>
+                            {optText}
+                          </span>
                         </div>
-
-                        {/* Right column: Option text */}
-                        <div className={`flex-1 px-4 py-3.5 ${fontSizeClass} text-gray-800 leading-normal flex items-center`}>
-                          {optText}
-                        </div>
+                        {statusBadge && <div className="shrink-0 ml-2">{statusBadge}</div>}
                       </div>
                     );
                   })}
                 </div>
-              </div>
+              )}
 
-              {/* Clear Response Button */}
+              {/* Clear Response / Reattempt in Mock vs Practice Mode */}
               {answers[currentIdx] && (
-                <div className="flex justify-start mb-4">
-                  <button
-                    onClick={handleClearResponse}
-                    className="text-xs text-gray-500 hover:text-red-600 underline font-medium cursor-pointer"
-                  >
-                    Clear Selected Option
-                  </button>
+                <div className="flex items-center justify-between mb-4">
+                  {mode === 'mock' ? (
+                    <button
+                      onClick={handleClearResponse}
+                      className="text-xs text-gray-500 hover:text-red-600 underline font-medium cursor-pointer"
+                    >
+                      Clear Selected Option
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleClearResponse}
+                      className="text-xs text-gray-500 hover:text-red-600 font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>Clear Selection (Try Again)</span>
+                    </button>
+                  )}
                 </div>
+              )}
+
+              {/* Practice Mode Solution & Step-by-Step Explanation Box */}
+              {mode === 'practice' && isSolutionOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="rounded-xl border border-emerald-300 bg-emerald-50/30 overflow-hidden shadow-xs mb-6"
+                >
+                  <div className="bg-emerald-700 text-white px-4 py-2.5 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Lightbulb className="w-4 h-4 text-amber-300 fill-amber-300" />
+                      <h4 className="font-bold text-xs sm:text-sm tracking-wide uppercase">
+                        Step-by-Step Solution &amp; Explanation
+                      </h4>
+                    </div>
+                    <span className="bg-white/20 text-white text-xs font-extrabold px-2.5 py-0.5 rounded-full border border-white/30">
+                      Correct: Option ({correctOptionKey.toUpperCase()})
+                    </span>
+                  </div>
+
+                  <div className="p-4 sm:p-5 text-gray-900 bg-white">
+                    {getFormattedSolution() ? (
+                      <div className={`whitespace-pre-wrap ${fontSizeClass} leading-relaxed font-sans text-gray-800`}>
+                        {getFormattedSolution()}
+                      </div>
+                    ) : (
+                      <div className="text-sm text-gray-600">
+                        The correct answer is Option <b className="text-gray-900">({correctOptionKey.toUpperCase()})</b>: {currentQuestion?.options?.[correctOptionKey] || ''}
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
               )}
             </>
           )}
         </div>
 
         {/* ── RIGHT PANE: PALETTE & SECTION ANALYSIS (Matches Testbook screenshot) ── */}
+        {/* ── RIGHT PANE: PALETTE & ANALYSIS ── */}
         <aside className="w-[300px] sm:w-[320px] shrink-0 min-h-0 border-l border-gray-300 bg-white p-4 flex flex-col h-full overflow-y-auto pb-8 custom-scrollbar">
 
-          {/* Header with ▶ and Section Title (Left aligned like Testbook) */}
-          <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold text-sm sm:text-base">
-            <span className="text-[#00baf2] text-base leading-none">▶</span>
-            <span className="font-bold text-gray-900 text-sm truncate">
-              {activeSection.title || 'General Intelligence'}
-            </span>
-          </div>
+          {/* Header */}
+          {mode === 'practice' ? (
+            <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-200">
+              <div className="flex items-center gap-1.5 text-gray-900 font-bold text-sm">
+                <BookOpen className="w-4 h-4 text-emerald-600" />
+                <span>Practice Palette</span>
+              </div>
+              <span className="text-[11px] font-semibold text-gray-500">
+                {answeredPractice}/{totalQuestions} Attempted
+              </span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold text-sm sm:text-base">
+              <span className="text-[#00baf2] text-base leading-none">▶</span>
+              <span className="font-bold text-gray-900 text-sm truncate">
+                {activeSection.title || 'General Intelligence'}
+              </span>
+            </div>
+          )}
 
-          {/* Question Palette 6-column Grid (Exact match to official Testbook color coding) */}
-          <div className="grid grid-cols-6 gap-x-2 gap-y-2.5 mb-6">
+          {/* Question Palette Grid */}
+          <div className="grid grid-cols-6 gap-x-2 gap-y-2.5 mb-4">
             {sectionQuestions.map((q, localIdx) => {
               const globalIdx = activeSection.startIndex + localIdx;
-              const isAnswered = !!answers[globalIdx];
+              const isAnswered = answers[globalIdx] !== undefined;
+              const isCorrect = isQuestionCorrect(globalIdx);
               const isMarked = markedForReview.has(globalIdx);
+              const isCurrent = globalIdx === currentIdx;
 
-              // Official Testbook Symbol & Color Coding:
-              // 1. Blue (12) -> Not yet attempted
-              // 2. Green (13) -> Answered
-              // 3. Red (14) + ▲ below -> Not yet answered, but marked for review
-              // 4. Yellow (15) + ▲ below -> Answered, but marked for review
+              if (mode === 'practice') {
+                let btnColor = 'bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200';
+                if (isAnswered) {
+                  btnColor = isCorrect
+                    ? 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs'
+                    : 'bg-rose-600 text-white hover:bg-rose-700 shadow-2xs';
+                }
+
+                return (
+                  <button
+                    key={globalIdx}
+                    onClick={() => jumpToQuestion(globalIdx)}
+                    className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[3px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-all ${btnColor} ${
+                      isCurrent ? 'ring-2 ring-indigo-600 ring-offset-1 scale-105 z-10 font-black shadow-xs' : ''
+                    }`}
+                    title={`Question ${localIdx + 1}: ${isAnswered ? (isCorrect ? 'Correct' : 'Incorrect') : 'Not Attempted'}`}
+                  >
+                    <span className="leading-none">{localIdx + 1}</span>
+                  </button>
+                );
+              }
+
+              // Official Testbook Symbol & Color Coding for Mock Mode:
               let btnColor = 'bg-[#0000ff] text-white';
               let showArrow = false;
 
@@ -982,42 +1316,96 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             })}
           </div>
 
-          {/* Section Analysis Table (Exact match to screenshot: grey header + yellow cells) */}
-          <div className="mt-auto border border-gray-400 rounded-none overflow-hidden shadow-2xs">
-            {/* Table Header: PART-A Analysis */}
-            <div className="bg-[#b8b8b8] border-b border-gray-400 py-1 text-center font-bold text-xs sm:text-sm text-gray-900 tracking-wide">
-              {activeSection.label} Analysis
+          {/* Practice Mode Legend */}
+          {mode === 'practice' && (
+            <div className="grid grid-cols-3 gap-1.5 p-2 bg-slate-50 border border-slate-200 rounded-md text-[10px] font-semibold text-slate-700 mb-4">
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-[2px] bg-emerald-600 shrink-0" />
+                <span>Correct</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-[2px] bg-rose-600 shrink-0" />
+                <span>Wrong</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-[2px] bg-slate-200 border border-slate-300 shrink-0" />
+                <span>Unattempted</span>
+              </div>
             </div>
+          )}
 
-            <table className="w-full text-xs sm:text-sm border-collapse">
-              <tbody>
-                <tr className="border-b border-gray-400">
-                  <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                    Answered
-                  </td>
-                  <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                    {sectionAnswered}
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-400">
-                  <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                    Not Answered
-                  </td>
-                  <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                    {sectionNotAnswered}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                    Mark for Review
-                  </td>
-                  <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                    {sectionMarked}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          {/* Performance / Analysis Table */}
+          {mode === 'practice' ? (
+            <div className="mt-auto border border-emerald-300 rounded-md overflow-hidden shadow-2xs">
+              <div className="bg-emerald-700 py-1.5 text-center font-bold text-xs text-white tracking-wide">
+                Practice Performance
+              </div>
+              <table className="w-full text-xs border-collapse bg-white">
+                <tbody className="divide-y divide-gray-200">
+                  <tr>
+                    <td className="p-2 font-medium text-emerald-800 bg-emerald-50/50 pl-3">Correct</td>
+                    <td className="p-2 font-bold text-emerald-700 bg-emerald-50/80 text-center w-16">
+                      {scorePractice}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium text-rose-800 bg-rose-50/50 pl-3">Incorrect</td>
+                    <td className="p-2 font-bold text-rose-700 bg-rose-50/80 text-center w-16">
+                      {wrongPractice}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium text-gray-700 pl-3">Unattempted</td>
+                    <td className="p-2 font-bold text-gray-700 text-center w-16">
+                      {unattemptedPractice}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium text-indigo-800 bg-indigo-50/50 pl-3">Accuracy</td>
+                    <td className="p-2 font-bold text-indigo-700 bg-indigo-50/80 text-center w-16">
+                      {accuracyPractice}%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className="mt-auto border border-gray-400 rounded-none overflow-hidden shadow-2xs">
+              {/* Table Header: PART-A Analysis */}
+              <div className="bg-[#b8b8b8] border-b border-gray-400 py-1 text-center font-bold text-xs sm:text-sm text-gray-900 tracking-wide">
+                {activeSection.label} Analysis
+              </div>
+
+              <table className="w-full text-xs sm:text-sm border-collapse">
+                <tbody>
+                  <tr className="border-b border-gray-400">
+                    <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
+                      Answered
+                    </td>
+                    <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
+                      {sectionAnswered}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-400">
+                    <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
+                      Not Answered
+                    </td>
+                    <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
+                      {sectionNotAnswered}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
+                      Mark for Review
+                    </td>
+                    <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
+                      {sectionMarked}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          )}
         </aside>
       </div>
 
@@ -1264,19 +1652,23 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         </div>
       )}
 
-      {/* ── SUBMIT TEST CONFIRMATION MODAL ── */}
+      {/* ── SUBMIT TEST / FINISH PRACTICE MODAL ── */}
       {showSubmitModal && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
-            <div className="text-white px-5 py-3.5 flex items-center justify-between bg-[#2460b9]">
+            <div className={`text-white px-5 py-3.5 flex items-center justify-between ${
+              mode === 'practice' ? 'bg-emerald-700' : 'bg-[#2460b9]'
+            }`}>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-white" />
-                <h3 className="font-bold text-base">Submit Test Confirmation</h3>
+                <h3 className="font-bold text-base">
+                  {mode === 'practice' ? 'Finish Practice Session' : 'Submit Test Confirmation'}
+                </h3>
               </div>
               <button
                 onClick={() => setShowSubmitModal(false)}
                 disabled={isSubmitting}
-                className="hover:bg-white/20 p-1 rounded text-white"
+                className="hover:bg-white/20 p-1 rounded text-white cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -1284,40 +1676,80 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <div className="p-5 space-y-4">
               <p className="text-sm text-gray-600">
-                Are you sure you want to submit your test? Here is your current attempt summary:
+                {mode === 'practice'
+                  ? 'Ready to wrap up your practice session? Here is your performance summary:'
+                  : 'Are you sure you want to submit your test? Here is your current attempt summary:'}
               </p>
 
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2 text-xs">
-                <div className="flex justify-between font-bold border-b border-slate-200 pb-1.5 text-gray-700">
-                  <span>Current Section</span>
-                  <span className="text-gray-900">{activeSection.title}</span>
+              {mode === 'practice' ? (
+                <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2 text-xs">
+                  <div className="flex justify-between font-bold border-b border-slate-200 pb-1.5 text-gray-700">
+                    <span>Chapter</span>
+                    <span className="text-gray-900 truncate max-w-[200px]">{chapter.chapter_title}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-gray-600">
+                    <span>Total Questions:</span>
+                    <span className="font-bold text-gray-900">{totalQuestions}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-emerald-700 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
+                      Correct:
+                    </span>
+                    <span className="font-bold">{scorePractice}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-rose-700 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-rose-600 inline-block" />
+                      Incorrect:
+                    </span>
+                    <span className="font-bold">{wrongPractice}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-gray-700 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-gray-400 inline-block" />
+                      Unattempted:
+                    </span>
+                    <span className="font-bold">{unattemptedPractice}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-indigo-700 font-bold border-t border-slate-200 pt-1.5">
+                    <span>Accuracy:</span>
+                    <span>{accuracyPractice}%</span>
+                  </div>
                 </div>
-                <div className="flex justify-between py-0.5 text-gray-600">
-                  <span>Total Questions:</span>
-                  <span className="font-bold text-gray-900">{totalQuestions}</span>
+              ) : (
+                <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2 text-xs">
+                  <div className="flex justify-between font-bold border-b border-slate-200 pb-1.5 text-gray-700">
+                    <span>Current Section</span>
+                    <span className="text-gray-900">{activeSection.title}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-gray-600">
+                    <span>Total Questions:</span>
+                    <span className="font-bold text-gray-900">{totalQuestions}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-emerald-700 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
+                      Answered:
+                    </span>
+                    <span className="font-bold">{stats.answered}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-amber-700 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
+                      Not Attempted:
+                    </span>
+                    <span className="font-bold">{totalQuestions - stats.answered - stats.marked}</span>
+                  </div>
+                  <div className="flex justify-between py-0.5 text-purple-700 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-purple-600 inline-block" />
+                      Marked for Review:
+                    </span>
+                    <span className="font-bold">{stats.marked}</span>
+                  </div>
                 </div>
-                <div className="flex justify-between py-0.5 text-emerald-700 font-medium">
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
-                    Answered:
-                  </span>
-                  <span className="font-bold">{stats.answered}</span>
-                </div>
-                <div className="flex justify-between py-0.5 text-amber-700 font-medium">
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
-                    Not Attempted:
-                  </span>
-                  <span className="font-bold">{totalQuestions - stats.answered - stats.marked}</span>
-                </div>
-                <div className="flex justify-between py-0.5 text-purple-700 font-medium">
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-purple-600 inline-block" />
-                    Marked for Review:
-                  </span>
-                  <span className="font-bold">{stats.marked}</span>
-                </div>
-              </div>
+              )}
 
               <div className="flex items-center gap-2 pt-2">
                 <button
@@ -1325,7 +1757,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   disabled={isSubmitting}
                   className="flex-1 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-lg transition-colors cursor-pointer"
                 >
-                  Return to Test
+                  {mode === 'practice' ? 'Continue Practicing' : 'Return to Test'}
                 </button>
                 <button
                   onClick={handleSubmitTest}
@@ -1333,7 +1765,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   className="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm disabled:opacity-50 cursor-pointer"
                 >
                   <CheckCircle2 className="w-4 h-4" />
-                  {isSubmitting ? 'Submitting...' : 'Yes, Submit Test'}
+                  {isSubmitting
+                    ? 'Saving...'
+                    : (mode === 'practice' ? 'Finish & Save Summary' : 'Yes, Submit Test')}
                 </button>
               </div>
             </div>
