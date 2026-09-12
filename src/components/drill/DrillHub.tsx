@@ -18,15 +18,16 @@ import { FractionDrill } from './FractionDrill';
 import { CalculationStudio } from './CalculationStudio';
 import { CalculationCheatSheet } from './CalculationCheatSheet';
 import { SectionId } from '../../data/drills/calculationData';
+import { ArunSharmaSpeedLab } from './calculation/ArunSharmaSpeedLab';
 
-type DrillTab = 'calculation' | 'math';
+type DrillTab = 'mental_speed' | 'calculation' | 'math';
 
 interface DrillHubProps {
   onBack?: () => void;
 }
 
 export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
-  const [activeTab, setActiveTab] = useState<DrillTab>('calculation');
+  const [activeTab, setActiveTab] = useState<DrillTab>('mental_speed');
   const [calcSubTab, setCalcSubTab] = useState<'studio' | 'fractions'>('studio');
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
   const [studioInitialSection, setStudioInitialSection] = useState<SectionId>('triplets');
@@ -57,7 +58,8 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
   };
 
   const tabs: { id: DrillTab; label: string; icon: any; tag?: string }[] = [
-    { id: 'calculation', label: 'Calculation Tab', icon: Calculator, tag: 'Full Screen' },
+    { id: 'mental_speed', label: 'Mental Speed Lab', icon: Sparkles, tag: 'Arun Sharma' },
+    { id: 'calculation', label: 'Calculation Studio', icon: Calculator, tag: 'Full Screen' },
     { id: 'math', label: 'Speed Math', icon: Zap, tag: '80% 2/3-Digit' },
   ];
 
@@ -138,6 +140,18 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
       {/* Main Content Area */}
       <div>
         <AnimatePresence mode="wait">
+          {activeTab === 'mental_speed' && (
+            <motion.div
+              key="mental_speed"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.15 }}
+            >
+              <ArunSharmaSpeedLab />
+            </motion.div>
+          )}
+
           {activeTab === 'calculation' && (
             <motion.div
               key="calculation"
