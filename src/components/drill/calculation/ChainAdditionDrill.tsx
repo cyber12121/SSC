@@ -153,11 +153,12 @@ export const ChainAdditionDrill: React.FC = () => {
         newUnlocked = selectedLevel + 1;
       }
 
-      const prevBest = progress.bestScores[selectedLevel] || 0;
+      const prevBest = progress?.bestScores?.[selectedLevel] || 0;
       const updated: ModuleProgress = {
         unlockedLevel: newUnlocked,
-        bestScores: { ...progress.bestScores, [selectedLevel]: Math.max(prevBest, finalScore) },
-        bestTimes: { ...progress.bestTimes, [selectedLevel]: elapsedTime }
+        bestScores: { ...(progress?.bestScores || {}), [selectedLevel]: Math.max(prevBest, finalScore) },
+        bestTimes: { ...(progress?.bestTimes || {}), [selectedLevel]: elapsedTime },
+        streakCount: progress?.streakCount || {}
       };
 
       setProgress(updated);

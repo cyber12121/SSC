@@ -210,14 +210,15 @@ export const NumberLineHopDrill: React.FC = () => {
         newUnlocked = selectedLevel + 1;
       }
 
-      const currentStreak = passed ? (progress.streakCount[selectedLevel] || 0) + 1 : 0;
-      const best = progress.bestTimes[selectedLevel];
+      const currentStreak = passed ? ((progress?.streakCount?.[selectedLevel] || 0) + 1) : 0;
+      const best = progress?.bestTimes?.[selectedLevel];
       const newBest = best ? Math.min(best, elapsedTime) : elapsedTime;
 
       const updated: ModuleProgress = {
         unlockedLevel: newUnlocked,
-        streakCount: { ...progress.streakCount, [selectedLevel]: currentStreak },
-        bestTimes: { ...progress.bestTimes, [selectedLevel]: newBest }
+        bestScores: progress?.bestScores || {},
+        streakCount: { ...(progress?.streakCount || {}), [selectedLevel]: currentStreak },
+        bestTimes: { ...(progress?.bestTimes || {}), [selectedLevel]: newBest }
       };
 
       setProgress(updated);
@@ -228,7 +229,7 @@ export const NumberLineHopDrill: React.FC = () => {
     }
   };
 
-  const streakForActiveLevel = progress.streakCount[selectedLevel] || 0;
+  const streakForActiveLevel = progress?.streakCount?.[selectedLevel] || 0;
 
   return (
     <div className="w-full bg-slate-50/70 rounded-2xl border border-slate-200/90 p-4 sm:p-6 shadow-xs space-y-5">

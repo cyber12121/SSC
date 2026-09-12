@@ -202,32 +202,57 @@ export interface ModuleProgress {
   unlockedLevel: number;
   bestScores: Record<number, number>; // level -> best score out of 10
   bestTimes: Record<number, number>;  // level -> completion time in seconds
+  streakCount: Record<number, number>; // level -> streak count
 }
 
 export const loadAdditionProgress = (): ModuleProgress => {
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_ADDITION_KEY);
-    if (raw) return JSON.parse(raw);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const raw = localStorage.getItem(LOCAL_STORAGE_ADDITION_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        return {
+          unlockedLevel: parsed.unlockedLevel || 1,
+          bestScores: parsed.bestScores || {},
+          bestTimes: parsed.bestTimes || {},
+          streakCount: parsed.streakCount || {}
+        };
+      }
+    }
   } catch {}
-  return { unlockedLevel: 1, bestScores: {}, bestTimes: {} };
+  return { unlockedLevel: 1, bestScores: {}, bestTimes: {}, streakCount: {} };
 };
 
 export const saveAdditionProgress = (p: ModuleProgress) => {
   try {
-    localStorage.setItem(LOCAL_STORAGE_ADDITION_KEY, JSON.stringify(p));
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem(LOCAL_STORAGE_ADDITION_KEY, JSON.stringify(p));
+    }
   } catch {}
 };
 
 export const loadSubtractionProgress = (): ModuleProgress => {
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_SUBTRACTION_KEY);
-    if (raw) return JSON.parse(raw);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const raw = localStorage.getItem(LOCAL_STORAGE_SUBTRACTION_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        return {
+          unlockedLevel: parsed.unlockedLevel || 1,
+          bestScores: parsed.bestScores || {},
+          bestTimes: parsed.bestTimes || {},
+          streakCount: parsed.streakCount || {}
+        };
+      }
+    }
   } catch {}
-  return { unlockedLevel: 1, bestScores: {}, bestTimes: {} };
+  return { unlockedLevel: 1, bestScores: {}, bestTimes: {}, streakCount: {} };
 };
 
 export const saveSubtractionProgress = (p: ModuleProgress) => {
   try {
-    localStorage.setItem(LOCAL_STORAGE_SUBTRACTION_KEY, JSON.stringify(p));
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem(LOCAL_STORAGE_SUBTRACTION_KEY, JSON.stringify(p));
+    }
   } catch {}
 };
