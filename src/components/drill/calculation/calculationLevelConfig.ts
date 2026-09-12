@@ -7,109 +7,109 @@ export interface AdditionLevelConfig {
   minVal: number;
   maxVal: number;
   description: string;
-  centuryCrossing: 'low' | 'moderate' | 'high' | 'heavy' | 'full';
+  passingScore: number; // out of 10 questions
   targetBenchmarkSec: number;
 }
 
 export const ADDITION_LEVELS: AdditionLevelConfig[] = [
   {
     level: 1,
-    title: 'Foundations Sprint',
+    title: 'Foundations Sprint (5 Nos)',
     nodeCount: 5,
     minVal: 11,
     maxVal: 30,
-    description: 'Decompose small 2-digit numbers into tens & units.',
-    centuryCrossing: 'low',
+    description: 'Add 5 consecutive numbers (11–30) mentally in one go.',
+    passingScore: 8,
     targetBenchmarkSec: 6
   },
   {
     level: 2,
-    title: 'Foundations Stamina',
+    title: 'Foundations Stamina (10 Nos)',
     nodeCount: 10,
     minVal: 11,
     maxVal: 30,
-    description: 'Full 10-node chain with small numbers to build mental flow.',
-    centuryCrossing: 'low',
+    description: 'Add 10 consecutive numbers (11–30) mentally in one go.',
+    passingScore: 8,
     targetBenchmarkSec: 12
   },
   {
     level: 3,
-    title: 'Mid-Tier Sprint',
+    title: 'Mid-Tier Sprint (5 Nos)',
     nodeCount: 5,
     minVal: 30,
     maxVal: 50,
-    description: 'Jump through the 30–50 range and bridge hundreds easily.',
-    centuryCrossing: 'moderate',
+    description: 'Add 5 consecutive numbers (30–50) crossing hundreds easily.',
+    passingScore: 8,
     targetBenchmarkSec: 7
   },
   {
     level: 4,
-    title: 'Mid-Tier Stamina',
+    title: 'Mid-Tier Stamina (10 Nos)',
     nodeCount: 10,
     minVal: 30,
     maxVal: 50,
-    description: '10 consecutive additions reaching totals ~350–450.',
-    centuryCrossing: 'moderate',
+    description: 'Add 10 consecutive numbers (30–50) reaching totals ~350–450.',
+    passingScore: 8,
     targetBenchmarkSec: 14
   },
   {
     level: 5,
-    title: 'Upper-Tier Sprint',
+    title: 'Upper-Tier Sprint (5 Nos)',
     nodeCount: 5,
     minVal: 50,
     maxVal: 70,
-    description: 'Fast reflex on numbers in the 50s and 60s.',
-    centuryCrossing: 'high',
+    description: 'Fast mental reflex on 5 numbers in the 50s and 60s.',
+    passingScore: 8,
     targetBenchmarkSec: 8
   },
   {
     level: 6,
-    title: 'Upper-Tier Stamina',
+    title: 'Upper-Tier Stamina (10 Nos)',
     nodeCount: 10,
     minVal: 50,
     maxVal: 70,
-    description: 'Consecutive century crossings reaching ~550–650.',
-    centuryCrossing: 'high',
+    description: '10 consecutive additions of 50s–60s reaching ~550–650.',
+    passingScore: 8,
     targetBenchmarkSec: 16
   },
   {
     level: 7,
-    title: 'Heavyweight Sprint',
+    title: 'Heavyweight Sprint (5 Nos)',
     nodeCount: 5,
     minVal: 70,
     maxVal: 99,
-    description: 'Master highest 2-digit combinations (70s, 80s, 90s).',
-    centuryCrossing: 'heavy',
+    description: '5 high 2-digit numbers (70s, 80s, 90s) in continuous flow.',
+    passingScore: 8,
     targetBenchmarkSec: 9
   },
   {
     level: 8,
-    title: 'Heavyweight Stamina',
+    title: 'Heavyweight Stamina (10 Nos)',
     nodeCount: 10,
     minVal: 70,
     maxVal: 99,
-    description: 'Intense running working-memory challenge reaching ~800+.',
-    centuryCrossing: 'heavy',
+    description: '10 high 2-digit numbers reaching totals ~800+.',
+    passingScore: 8,
     targetBenchmarkSec: 18
   },
   {
     level: 9,
-    title: 'Mixed Exam Sprint',
+    title: 'Mixed Exam Sprint (5 Nos)',
     nodeCount: 5,
     minVal: 11,
     maxVal: 99,
-    description: 'Unpredictable mix of small and large 2-digit numbers.',
-    centuryCrossing: 'full',
+    description: 'Mixed small and large numbers (11–99) exam simulation.',
+    passingScore: 9,
     targetBenchmarkSec: 8
   },
   {
     level: 10,
-    title: 'Arun Sharma Legend',
+    title: 'Arun Sharma Legend (10 Nos)',
     nodeCount: 10,
     minVal: 11,
     maxVal: 99,
-    description: 'The ultimate CAT / SSC CGL speed benchmark (Page 2 of the book).',
-    centuryCrossing: 'full',
+    description: 'The ultimate CAT / SSC CGL 10-number benchmark (Page 2 of the book).',
+    passingScore: 9,
     targetBenchmarkSec: 12
   }
 ];
@@ -174,13 +174,13 @@ export const SUBTRACTION_LEVELS: SubtractionLevelConfig[] = [
   }
 ];
 
-const LOCAL_STORAGE_ADDITION_KEY = 'cgl_calc_addition_progress_v1';
+const LOCAL_STORAGE_ADDITION_KEY = 'cgl_calc_addition_progress_v2';
 const LOCAL_STORAGE_SUBTRACTION_KEY = 'cgl_calc_subtraction_progress_v1';
 
 export interface ModuleProgress {
   unlockedLevel: number;
-  streakCount: Record<number, number>; // level -> consecutive 100% runs (need 3 to unlock next)
-  bestTimes: Record<number, number>; // level -> best completion time in seconds
+  bestScores: Record<number, number>; // level -> best score out of 10
+  bestTimes: Record<number, number>;  // level -> completion time in seconds
 }
 
 export const loadAdditionProgress = (): ModuleProgress => {
@@ -188,7 +188,7 @@ export const loadAdditionProgress = (): ModuleProgress => {
     const raw = localStorage.getItem(LOCAL_STORAGE_ADDITION_KEY);
     if (raw) return JSON.parse(raw);
   } catch {}
-  return { unlockedLevel: 1, streakCount: {}, bestTimes: {} };
+  return { unlockedLevel: 1, bestScores: {}, bestTimes: {} };
 };
 
 export const saveAdditionProgress = (p: ModuleProgress) => {
@@ -202,7 +202,7 @@ export const loadSubtractionProgress = (): ModuleProgress => {
     const raw = localStorage.getItem(LOCAL_STORAGE_SUBTRACTION_KEY);
     if (raw) return JSON.parse(raw);
   } catch {}
-  return { unlockedLevel: 1, streakCount: {}, bestTimes: {} };
+  return { unlockedLevel: 1, bestScores: {}, bestTimes: {} };
 };
 
 export const saveSubtractionProgress = (p: ModuleProgress) => {
