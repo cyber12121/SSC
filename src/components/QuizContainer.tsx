@@ -940,8 +940,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         )}
       </div>
 
-      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on Left, Action Buttons on Right - Testbook Exact) ── */}
-      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-between gap-3 shrink-0 z-20 overflow-x-auto">
+      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills and Action Buttons aligned to the left - Testbook Exact) ── */}
+      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-start gap-2 sm:gap-3 shrink-0 z-20 overflow-x-auto">
         {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
         <div className="flex items-center gap-1.5 shrink-0">
           {sections.map((sec, idx) => {
@@ -969,7 +969,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
         {/* Action Buttons: Practice vs Mock Mode */}
         {mode === 'practice' ? (
-          <div className="flex items-center gap-2 shrink-0 ml-auto">
+          <div className="flex items-center gap-2 shrink-0 ml-3 sm:ml-6">
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
@@ -1006,8 +1006,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </button>
           </div>
         ) : (
-          /* Mock Mode Buttons (Exact match to official Testbook interface) */
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
+          /* Mock Mode Buttons (Exact match to official Testbook interface - Left aligned after PART pills) */
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-3 sm:ml-7">
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
