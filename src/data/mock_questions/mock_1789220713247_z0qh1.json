@@ -1,0 +1,172 @@
+[
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 6",
+    "status": "Unattempted",
+    "userTime": "00:10",
+    "avgTime": "00:42",
+    "questionText": "A and B share a rented field. A utilizes 20 horses for 5 months, while B uses 30 cows for 4 months and 45 sheep for 5 months. If 2 horses are equivalent to 5 cows, and 3 cows are equal to 9 sheep. What portion of the rent is A pay ?",
+    "options": {
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
+    },
+    "correctOption": "D",
+    "solution": "Solution\n\nShortcut Trick\n\nConvert all animals into equivalent cows: 1 horse = 2.5 cows, and 3 sheep = 1 cow.\n\nA's usage = (20 × 2.5) cows × 5 months = 250 cow-months.\n\nB's usage = (30 cows × 4 months) + (45 ÷ 3) cows × 5 months = 120 + 75 = 195 cow-months.\n\nTotal equivalent usage = 250 + 195 = 445 cow-months.\n\nA's rent portion = A's usage ÷ Total usage = 250 ÷ 445 = 50/89.\n\n∴ The correct answer is 50/89.\n\nAlternate Method\n\nGiven:\n\n⇒ A uses 20 horses for 5 months.\n\n⇒ B uses 30 cows for 4 months and 45 sheep for 5 months.\n\n⇒ Conversion rates: 2 horses = 5 cows, and 3 cows = 9 sheep.\n\nFormula Used:\n\n⇒ Portion of Rent = (Individual Equivalent Usage) ÷ (Total Equivalent Usage)\n\nEquivalent Cow-Months Usage\nA: 250 units\nB: 195 units\nShare: 250 / 445 = 50 / 89\nShare: 195 / 445 = 39 / 89\n\nCalculations:\n\n⇒ Determine equivalent cow units for A:\n\n⇒ 2 horses = 5 cows ⇒ 20 horses = (5 ÷ 2) × 20 = 50 cows.\n\n⇒ A's total usage = 50 cows × 5 months = 250 cow-months.\n\n⇒ Determine equivalent cow units for B:\n\n⇒ 9 sheep = 3 cows ⇒ 45 sheep = (3 ÷ 9) × 45 = 15 cows.\n\n⇒ B's usage from cows = 30 cows × 4 months = 120 cow-months.\n\n⇒ B's usage from sheep = 15 cows × 5 months = 75 cow-months.\n\n⇒ B's total usage = 120 + 75 = 195 cow-months.\n\n⇒ Total usage by A and B = 250 + 195 = 445 cow-months.\n\n⇒ A's portion = 250 ÷ 445.\n\n⇒ Simplify the fraction by dividing numerator and denominator by 5:\n\n⇒ 250 ÷ 5 = 50\n\n⇒ 445 ÷ 5 = 89\n\n⇒ A's Portion = 50/89\n\n∴ The correct answer is 50/89.\n\nAdditional Information\n\nPartnership in Renting\n\nWhen individuals share a rented property or field, the rent must be divided proportionally based on both the amount of resources used and the time duration (Usage × Time).\n\nAnimal Equivalence\n\nWhen multiple entity types are involved (horses, cows, sheep), convert all of them into a single common base unit before calculating the total usage to ensure a uniform scale.\n\nCompound Ratio\n\nThe final ratio of share is a compound ratio formed by multiplying the equivalent units ratio and the time ratio for each individual."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 7",
+    "status": "Unattempted",
+    "userTime": "02:21",
+    "avgTime": "01:16",
+    "questionText": "A and B start a business. A invests 2 times more than B. After 8 months, A withdraws half of his capital, and B triples his capital. If the total profit after one year is ₹75,000, find the share of A.",
+    "options": {
+      "A": "₹40,000",
+      "B": "₹50,000",
+      "C": "₹60,000",
+      "D": "₹45,000"
+    },
+    "correctOption": "D",
+    "solution": "Solution\n\nShortcut Trick\n\nA invests 2 times more than B ⇒ Initial capital ratio A : B = 3 : 1.\n\nA's profit units = (3 × 8) + (1.5 × 4) = 30; B's profit units = (1 × 8) + (3 × 4) = 20.\n\nProfit ratio A : B = 30 : 20 = 3 : 2.\n\nA's share = [3 ÷ (3 + 2)] × 75000 = ₹45,000.\n\n∴ The correct answer is ₹45,000.\n\nAlternate Method\n\nGiven:\n\n⇒ Total profit after one year (12 months) = ₹75,000\n\n⇒ A invests 2 times more than B initially.\n\nFormula Used:\n\n⇒ Profit Ratio = (Capital × Time)\n\nA\n8 mo × 3x\n4 mo × 1.5x\nSum = 30x\nB\n8 mo × 1x\n4 mo × 3x\nSum = 20x\nProfit Ratio (A : B) = 30x : 20x = 3 : 2\n\nCalculations:\n\n⇒ Let B's initial investment be x.\n\n⇒ A invests 2 times more than B, so A's initial investment = x + 2x = 3x.\n\n⇒ For the first 8 months, A's capital is 3x and B's capital is x.\n\n⇒ For the remaining 4 months, A withdraws half of his capital, so A's new capital = 3x ÷ 2 = 1.5x.\n\n⇒ For the remaining 4 months, B triples his capital, so B's new capital = 3 × x = 3x.\n\n⇒ A's profit equivalent = (3x × 8) + (1.5x × 4) = 24x + 6x = 30x.\n\n⇒ B's profit equivalent = (x × 8) + (3x × 4) = 8x + 12x = 20x.\n\n⇒ Profit Ratio of A : B = 30x : 20x = 3 : 2.\n\n⇒ Total ratio parts = 3 + 2 = 5 parts.\n\n⇒ A's share = (3 ÷ 5) × 75000 = 3 × 15000\n\n⇒ A's share = ₹45,000.\n\n∴ The correct answer is ₹45,000.\n\nAdditional Information\n\nPartnership Core Principle\n\nProfit is exclusively distributed among partners in the ratio of their effective investments (the product of capital and duration). Key formula: Profit Ratio = C1T1 : C2T2.\n\n\"More Than\" Phrasing Concept\n\nWhen a question states \"A is n times more than B\", the expression evaluates to A = B + nB. It must not be confused with \"A is n times of B\" which simply means A = nB.\n\nActive vs Sleeping Partner\n\nAn active partner actively works for the business and typically claims a salary or fixed percentage of total profit before the remainder is split purely based on the initial capital-time ratio among all partners."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 8",
+    "status": "Incorrect",
+    "userTime": "00:28",
+    "avgTime": "02:46",
+    "questionText": "The average salary of 24 employees is ₹40,000. The average salary of 8 senior staff is ₹60,000. What is the average salary for the other employees?",
+    "options": {
+      "A": "₹30,000",
+      "B": "₹40,000",
+      "C": "₹50,000",
+      "D": "₹60,000"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nRatio of Senior Staff to Other Employees = 8 : 16 = 1 : 2\n\nDeviation of senior staff average = ₹60,000 − ₹40,000 = +20,000\n\nTotal deviation of senior staff (1 unit) = 1 × 20,000 = +20,000\n\nTo balance the average, the other employees (2 units) must have a deviation of −20,000 ÷ 2 = −10,000\n\nAverage salary of other employees = ₹40,000 − 10,000 = ₹30,000\n\n∴ The correct answer is ₹30,000.\n\nAlternate Method\n\nGiven:\n\nTotal number of employees = 24\n\nAverage salary of all employees = ₹40,000\n\nNumber of senior staff = 8\n\nAverage salary of senior staff = ₹60,000\n\n8 Senior Staff\nAvg: ₹60,000\n16 Other Employees\nAvg: ₹x\nTotal: 24 Employees (Avg: ₹40,000)\n\nFormula Used:\n\nTotal Salary = Average Salary × Number of Employees\n\nCalculations:\n\n⇒ Total salary of all 24 employees = 24 × 40,000 = ₹9,60,000\n\n⇒ Total salary of 8 senior staff = 8 × 60,000 = ₹4,80,000\n\n⇒ Number of other employees = 24 − 8 = 16\n\n⇒ Total salary of 16 other employees = 9,60,000 − 4,80,000 = ₹4,80,000\n\n⇒ Average salary of other employees = 4,80,000 ÷ 16 = ₹30,000\n\n∴ The correct answer is ₹30,000.\n\nAdditional Information\n\nCombined Average\n\nWhen two groups of sizes n1 and n2 have averages A1 and A2, their combined average is given by (n1A1 + n2A2) ÷ (n1 + n2).\n\nDeviation Method in Averages\n\nThe sum of deviations of all individual values from their true average is always zero. If one group has a positive deviation, the remaining group must have an equal negative deviation to balance the overall average.\n\nWeighted Average\n\nInstead of calculating the total sum with large numbers, the simplified ratios of the group sizes can be used as weights to find the combined average much faster."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 11",
+    "status": "Incorrect",
+    "userTime": "00:30",
+    "avgTime": "00:37",
+    "questionText": "A tank contains 3,500 milliliters of water. If its full capacity is 0.005 kiloliters, what percentage of the tank is empty?",
+    "options": {
+      "A": "25%",
+      "B": "30%",
+      "C": "35%",
+      "D": "40%"
+    },
+    "correctOption": "B",
+    "solution": "Solution\n\nShortcut Trick\n\nTotal Capacity = 0.005 kl = 0.005 × 1,000,000 ml = 5,000 ml.\n\nEmpty volume = 5,000 − 3,500 = 1,500 ml.\n\nEmpty Percentage = (1,500 ÷ 5,000) × 100 = 30%.\n\n∴ The correct answer is 30%.\n\nAlternate Method\n\nGiven:\n\nFilled volume of the tank = 3,500 ml\n\nTotal capacity of the tank = 0.005 kl\n\nFormula Used:\n\n1 kiloliter (kl) = 1,000 liters (L)\n\n1 liter (L) = 1,000 milliliters (ml)\n\nPercentage = (Part value ÷ Total value) × 100\n\nTotal Capacity\n5000 ml\nEmpty = 1500 ml\n( ? % )\nFilled = 3500 ml\n\nCalculations:\n\n⇒ Total capacity = 0.005 kl = 0.005 × 1,000 × 1,000 ml\n\n⇒ Total capacity = 5,000 ml\n\n⇒ Empty volume = Total capacity − Filled volume\n\n⇒ Empty volume = 5,000 − 3,500 = 1,500 ml\n\n⇒ Percentage of empty tank = (1,500 ÷ 5,000) × 100\n\n⇒ Percentage of empty tank = 0.3 × 100 = 30%\n\n∴ The correct answer is 30%.\n\nAdditional Information\n\nUnit Conversions of Volume\n\n1 Kiloliter (kl) = 103 Liters = 106 Milliliters (ml). Always ensure all given quantities are in the exact same measurement unit before performing any arithmetic calculations.\n\nComplementary Percentages\n\nThe sum of the percentage of the filled portion and the empty portion of a container is always exactly 100%. If a tank is 70% full, it is fundamentally 100% − 70% = 30% empty.\n\nPercentage Calculation Rule\n\nTo calculate what percentage quantity X is of quantity Y, use the standard formula: (X ÷ Y) × 100. The base reference value (Total Capacity) must always reside in the denominator."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 12",
+    "status": "Unattempted",
+    "userTime": "00:08",
+    "avgTime": "00:18",
+    "questionText": "A stationery supplier ordered 8 boxes of premium pens and some boxes of standard pens. The price of premium pens per box was twice that of standard pens. When the order was delivered, the number of boxes of premium and standard pens had been accidentally interchanged. This increased the total bill by 25%. What was the ratio of the original number of boxes of premium pens to the original number of boxes of standard pens?",
+    "options": {
+      "A": "2 : 1",
+      "B": "1 : 3",
+      "C": "1 : 2",
+      "D": "3 : 1"
+    },
+    "correctOption": "C",
+    "solution": "Solution\n\nShortcut Trick\n\nLet the price of standard and premium pens be 1 and 2 units respectively, and standard boxes ordered be y.\n\nOriginal Cost = (8 × 2) + (y × 1) = 16 + y\n\nNew Cost (after interchange) = (y × 2) + (8 × 1) = 2y + 8\n\nGiven a 25% increase in the bill, the multiplier is 5/4, giving: (2y + 8) / (16 + y) = 5 / 4\n\n⇒ 8y + 32 = 5y + 80 ⇒ 3y = 48 ⇒ y = 16\n\nRatio of Premium to Standard = 8 : 16 = 1 : 2.\n\n∴ The correct answer is 1 : 2.\n\nAlternate Method\n\nGiven:\n\nOriginal number of premium boxes = 8\n\nPrice of a premium box is twice the price of a standard box.\n\nNew total bill is 25% more than the original bill due to interchanged quantities.\n\nOriginal Bill (100%)\n16 + y\nNew Bill (125%)\n2y + 8\n+ 25% Increase\n\nCalculations:\n\n⇒ Let the original number of standard pen boxes be y and price per standard box be P.\n\n⇒ Price per premium box = 2P.\n\n⇒ Original Bill = (8 × 2P) + (y × P) = P(16 + y)\n\n⇒ When quantities are interchanged, there are y premium boxes and 8 standard boxes.\n\n⇒ New Bill = (y × 2P) + (8 × P) = P(2y + 8)\n\n⇒ The new bill is 25% more than the original, so New Bill = 1.25 × Original Bill\n\n⇒ P(2y + 8) = 1.25 × P(16 + y)\n\n⇒ 2y + 8 = 1.25 × (16 + y)\n\n⇒ 2y + 8 = 20 + 1.25y\n\n⇒ 2y − 1.25y = 20 − 8\n\n⇒ 0.75y = 12\n\n⇒ y = 12 ÷ 0.75 = 16\n\n⇒ Original number of standard pen boxes = 16.\n\n⇒ Required ratio (Premium boxes : Standard boxes) = 8 : 16 = 1 : 2.\n\n∴ The correct answer is 1 : 2.\n\nAdditional Information\n\nRatio & Proportion\n\nA ratio compares values, showing how much of one there is compared to another. If two quantities are in the ratio a:b, they can be represented directly as ax and bx for calculation purposes to quickly establish a relation.\n\nPercentage Increase\n\nWhen a quantity increases by R%, its new value becomes (100 + R)% of the original. An increase of 25% corresponds to a multiplying factor of 125% or 5/4.\n\nInterchange of Quantities\n\nWhen two items with original quantities x and y and respective unit prices a and b are interchanged, the net change in the total bill follows the shortcut formula: Change = (a − b)(y − x). A positive result directly indicates a percentage increase."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 15",
+    "status": "Correct (Slow)",
+    "userTime": "01:14",
+    "avgTime": "00:31",
+    "questionText": "A bookseller sells a novel for ₹Y and makes a loss of 10%. To clear old stock, he decides to mark the novel at ₹0.8Y. He then allows a further discount of 5% on this marked price. What will be the percentage loss that he will incur on this clearance sale?",
+    "options": {
+      "A": "2.5%",
+      "B": "57.5%",
+      "C": "66.67%",
+      "D": "31.6%"
+    },
+    "correctOption": "D",
+    "solution": "Solution\n\nShortcut Trick\n\nLet the Cost Price (CP) be 100. With a 10% loss, the initial Selling Price Y = 90.\n\nNew Marked Price (MP) = 0.8 × Y = 0.8 × 90 = 72.\n\nNew Selling Price after 5% discount = 72 × 0.95 = 68.4.\n\nOverall Loss = CP − New SP = 100 − 68.4 = 31.6.\n\nPercentage Loss = (31.6 ÷ 100) × 100 = 31.6%.\n\n∴ The correct answer is 31.6%.\n\nAlternate Method\n\nGiven:\n\nInitial Selling Price (SP) = Y\n\nLoss = 10%\n\nMarked Price (MP) = 0.8Y\n\nDiscount = 5%\n\nFormula Used:\n\nCost Price (CP) = SP × [ 100 ÷ (100 − Loss%) ]\n\nSelling Price after discount = MP × [ (100 − Discount%) ÷ 100 ]\n\nPercentage Loss = [ (CP − SP) ÷ CP ] × 100\n\nCP = 100\nY = 90\nMP = 72\nSP₂ = 68.4\n−10%\n× 0.8\n−5%\nOverall Loss = 100 − 68.4 = 31.6%\n\nCalculations:\n\nLet the Cost Price (CP) of the novel be ₹100.\n\n⇒ Loss = 10% of CP = ₹10\n\n⇒ Initial SP (Y) = CP − Loss = 100 − 10 = ₹90\n\nNow, the new Marked Price (MP) is set to 0.8Y to clear old stock.\n\n⇒ MP = 0.8 × 90 = ₹72\n\nThe bookseller gives a 5% discount on this new MP.\n\n⇒ Discount = 5% of 72 = ₹3.6\n\n⇒ New SP = MP − Discount = 72 − 3.6 = ₹68.4\n\nNow, calculating the overall loss on the clearance sale with respect to the original CP:\n\n⇒ Overall Loss = CP − New SP = 100 − 68.4 = ₹31.6\n\n⇒ Percentage Loss = (Overall Loss ÷ CP) × 100 = (31.6 ÷ 100) × 100 = 31.6%\n\n(Note: The exact result is 31.6%. The option 31.59% is generated if intermediate fractional steps like 10/9 are rounded early.)\n\n∴ The correct answer is 31.6%.\n\nAdditional Information\n\nMarked Price and Successive Discount\n\nWhen discounts are applied sequentially, the effective selling price is calculated directly as MP × (1 − d1/100) × (1 − d2/100).\n\nCost Price vs Selling Price\n\nProfit or loss is always calculated on the base Cost Price (CP) unless the question specifically directs otherwise. The general relation is given by CP = SP × [ 100 ÷ (100 ± Profit/Loss%) ].\n\nDiscount vs Loss\n\nDiscount is an amount deduced solely from the Marked Price (MP), whereas Loss is the deficit calculated against the Cost Price (CP). Offering deep discounts can frequently push the Selling Price below the Cost Price, leading to an overall loss."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 17",
+    "status": "Unattempted",
+    "userTime": "00:29",
+    "avgTime": "00:18",
+    "questionText": "A furniture manufacturer sells a dining table set to a showroom at a 25% discount on the marked price, but adds a 10% handling fee on the discounted price. The showroom then sells the set for ₹4500 more than what they paid, thereby earning a profit of 30%. At what price had the manufacturer marked the dining table set?",
+    "options": {
+      "A": "₹19,254.62",
+      "B": "₹18,181.82",
+      "C": "₹20,654.67",
+      "D": "₹22,546.68"
+    },
+    "correctOption": "B",
+    "solution": "Solution\n\nShortcut Trick\n\nCost Price (CP) for the showroom = Profit ÷ Profit% = 4500 ÷ 30% = ₹15,000\n\nNet multiplying factor from MP to CP = (1 − 25%) × (1 + 10%) = 0.75 × 1.10 = 0.825\n\nMarked Price (MP) = CP ÷ Net Factor\n\nMP = 15,000 ÷ 0.825 = 2,00,000 ÷ 11 = 18,181.818... ≈ ₹18,181.82\n\n∴ The correct answer is ₹18,181.82.\n\nAlternate Method\n\nGiven:\n\nDiscount offered by manufacturer = 25%\n\nHandling fee added on discounted price = 10%\n\nProfit earned by showroom = 30%\n\nProfit amount = ₹4500\n\nFormula Used:\n\nCost Price (CP) = Profit ÷ (Profit% ÷ 100)\n\nFinal Cost Price = MP × (1 − Discount%) × (1 + Fee%)\n\nMP\n−25% Disc.\n+10% Fee\n(× 0.825)\nCP\nProfit = 30%\nProfit = ₹4500\nCP × 30% = 4500\nSP\nMP × 0.75 × 1.10 = CP\n\nCalculations:\n\n⇒ Showroom CP × 0.30 = 4500\n\n⇒ Showroom CP = 4500 ÷ 0.30 = ₹15,000\n\nLet the Marked Price be MP.\n\n⇒ Discounted Price = MP × 0.75\n\n⇒ Price after handling fee (Showroom CP) = MP × 0.75 × 1.10\n\n⇒ 0.825 MP = 15,000\n\n⇒ MP = 15,000 ÷ 0.825\n\n⇒ MP = 1,50,00,000 ÷ 825 = 2,00,000 ÷ 11\n\n⇒ MP = 18,181.818... ≈ ₹18,181.82\n\n∴ The correct answer is ₹18,181.82.\n\nAdditional Information\n\nMarked Price & Discount\n\nDiscount is always calculated on the Marked Price (MP). Selling Price (SP) = MP − Discount = MP × (100 − D%) ÷ 100.\n\nSuccessive Percentage Changes\n\nWhen multiple changes occur on a value, the final value is computed as Initial Value × (1 ± R1/100) × (1 ± R2/100). The overall percentage change is not simply the sum of individual percentages.\n\nProfit & Loss Basics\n\nProfit or Loss is always calculated on the Cost Price (CP) unless stated otherwise. Profit = SP − CP, and Profit% = (Profit ÷ CP) × 100."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 19",
+    "status": "Correct (Slow)",
+    "userTime": "01:09",
+    "avgTime": "00:35",
+    "questionText": "A person invested ₹18,000 in two schemes — Scheme X at 15% p.a. and Scheme Y at 10% p.a., both under simple interest. After 1 year, the total interest from both schemes was ₹2,160. How much was invested in Scheme X?",
+    "options": {
+      "A": "₹6,000",
+      "B": "₹7,000",
+      "C": "₹7,200",
+      "D": "₹6,200"
+    },
+    "correctOption": "C",
+    "solution": "Solution\n\nShortcut Trick\n\nIf the entire sum of ₹18,000 was invested at the lower rate of 10% p.a., the total interest generated would be ₹1,800.\n\nThe extra interest earned = ₹2,160 − ₹1,800 = ₹360.\n\nThis extra ₹360 is solely due to the additional 5% interest rate on Scheme X (since 15% − 10% = 5%).\n\nTherefore, 5% of Scheme X investment = ₹360.\n\n100% of Scheme X investment = ₹360 × (100 ÷ 5) = ₹7,200.\n\n∴ The correct answer is ₹7,200.\n\nAlternate Method\n\nGiven:\n\nTotal Principal = ₹18,000\n\nRate for Scheme X = 15% p.a. | Rate for Scheme Y = 10% p.a.\n\nTotal Simple Interest for 1 year = ₹2,160\n\nMethod Used:\n\nWe can find the overall combined interest rate and apply the Alligation method to determine the ratio of investments.\n\n⇒ Overall interest rate = (Total Interest ÷ Total Principal) × 100\n\n⇒ Overall rate = (2160 ÷ 18000) × 100 = 12%\n\nScheme X (15%)\nScheme Y (10%)\n12%\n12 − 10 = 2\n15 − 12 = 3\nRatio (X : Y) = 2 : 3\n\nCalculations:\n\n⇒ Total ratio parts = 2 + 3 = 5 parts\n\n⇒ 5 parts = ₹18,000\n\n⇒ 1 part = 18000 ÷ 5 = ₹3,600\n\n⇒ Investment in Scheme X (2 parts) = 2 × 3600 = ₹7,200\n\n∴ The correct answer is ₹7,200.\n\nAdditional Information\n\nAlligation Method\n\nWhen an amount is divided into two components and invested at different rates, the ratio of the invested parts can be quickly found using the diagonal cross-difference between the individual component rates and the overall average rate.\n\nShift Method (Shortcut Trick)\n\nThis assumes the entire sum is invested at the lower percentage. The remaining unassigned extra interest corresponds directly to the percentage difference between the two rates applied only on the higher-rate amount.\n\nSimple Interest (SI)\n\nSI = (P × R × T) ÷ 100. Under simple interest, the principal never changes, meaning the interest accrued remains strictly constant for every equivalent time period."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 22",
+    "status": "Correct (Slow)",
+    "userTime": "00:36",
+    "avgTime": "00:20",
+    "questionText": "If the base of a prism is a regular hexagon of side 6 cm and the height is 10 cm, what is its volume?",
+    "options": {
+      "A": "550√2 cm³",
+      "B": "500√6 cm³",
+      "C": "480√3 cm³",
+      "D": "540√3 cm³"
+    },
+    "correctOption": "D",
+    "solution": "Solution\n\nShortcut Trick\n\nVolume of a regular hexagonal prism = (3√3 ÷ 2) × a2 × h\n\nGiven base side (a) = 6 cm and height (h) = 10 cm\n\nVolume = (3√3 ÷ 2) × 62 × 10\n\nVolume = (3√3 ÷ 2) × 36 × 10 = 54√3 × 10 = 540√3 cm3\n\n∴ The correct answer is 540√3 cm3.\n\nAlternate Method\n\nGiven:\n\nSide of the regular hexagonal base (a) = 6 cm\n\nHeight of the prism (h) = 10 cm\n\nFormula Used:\n\nArea of a regular hexagon = 6 × (√3 ÷ 4) × a2 = (3√3 ÷ 2) × a2\n\nVolume of a prism = Base Area × Height\n\n6 cm\n10 cm\nRegular\nHexagonal\nPrism\n\nCalculations:\n\n⇒ Base Area = (3√3 ÷ 2) × (6)2\n\n⇒ Base Area = (3√3 ÷ 2) × 36\n\n⇒ Base Area = 54√3 cm2\n\n⇒ Volume of the prism = 54√3 × 10\n\n⇒ Volume = 540√3 cm3\n\n∴ The correct answer is 540√3 cm3.\n\nAdditional Information\n\nVolume of a Prism\n\nThe volume of any right prism is calculated by multiplying the area of its base by its height. Formula: Volume = Base Area × Height.\n\nArea of a Regular Hexagon\n\nA regular hexagon consists of six equilateral triangles. The area is calculated as Area = 6 × (√3 ÷ 4) × a2 = (3√3 ÷ 2) × a2, where 'a' is the side length.\n\nTotal Surface Area of Hexagonal Prism\n\nThe total surface area includes the lateral surface area and the areas of the two bases. Formula: TSA = (6 × a × h) + 2 × [(3√3 ÷ 2) × a2]."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 24",
+    "status": "Correct (Slow)",
+    "userTime": "00:43",
+    "avgTime": "00:19",
+    "questionText": "A solid cylinder radius 5 cm is drilled by four cylindrical holes each radius 1 cm length equal to the full height. Volume removed is approximately what percent?",
+    "options": {
+      "A": "16%",
+      "B": "20%",
+      "C": "32%",
+      "D": "48%"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nSince the height of the cylinder and the holes is the same, the ratio of volumes is equal to the ratio of their base areas.\n\nBase area of the original solid cylinder = π × 52 = 25π.\n\nTotal base area of the 4 removed holes = 4 × (π × 12) = 4π.\n\nPercentage of volume removed = (4π ÷ 25π) × 100.\n\n⇒ (4 ÷ 25) × 100 = 16%.\n\n∴ The correct answer is 16%.\n\nAlternate Method\n\nGiven:\n\nRadius of the solid cylinder (R) = 5 cm\n\nRadius of each drilled hole (r) = 1 cm\n\nNumber of drilled holes = 4\n\nLet the full height of the cylinder be h.\n\nFormula Used:\n\nVolume of a cylinder = πr2h\n\nPercentage removed = (Volume removed ÷ Total original volume) × 100\n\nR = 5 cm\nr = 1 cm\nTop View of the Cylinder\n\nCalculations:\n\n⇒ Original volume of the solid cylinder = π × R2 × h = π × 52 × h = 25πh\n\n⇒ Volume of one cylindrical hole = π × r2 × h = π × 12 × h = 1πh\n\n⇒ Total volume removed by the 4 holes = 4 × 1πh = 4πh\n\n⇒ Percentage of volume removed = (4πh ÷ 25πh) × 100\n\n⇒ Percentage removed = (4 ÷ 25) × 100\n\n⇒ Percentage removed = 16%\n\n∴ The correct answer is 16%.\n\nAdditional Information\n\nCylinder Volume vs Surface Area\n\nWhile drilling holes decreases the overall volume of the solid cylinder, it actually increases the total surface area by exposing new inner cylindrical surfaces.\n\nVolume of a Cylinder\n\nThe total space occupied by a right circular cylinder is universally given by V = πr2h, where r is the base radius and h is the height.\n\nVolume of a Cone\n\nA cone with the exact same base radius and height as a cylinder contains exactly one-third of the cylinder's volume, evaluated as V = (1 ÷ 3)πr2h."
+  }
+]

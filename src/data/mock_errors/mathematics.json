@@ -1262,6 +1262,839 @@
           "topic": "Mensuration 2D",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_7f1a9b29fc",
+        "q_num": 75,
+        "question": "Evaluate the continued fraction: x = 2 + 1 / (3 + 1 / (4 + 1/2))",
+        "options": {
+          "a": "\\( \\frac{67}{29} \\)",
+          "b": "\\( \\frac{41}{17 }\\)",
+          "c": "\\( \\frac{45}{19} \\)",
+          "d": "\\( \\frac{47}{20} \\)"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nFor continued fractions, solve directly from the bottommost denominator to the top.\n\nBottom fraction: 4 + 1/2 = 9/2\nMiddle fraction: 3 + 2/9 = 29/9\nTop fraction: 2 + 9/29 = 67/29\n∴ The correct answer is 67/29.\n\nAlternate Method\nGiven:\nx = 2 + 1 / [3 + 1 / (4 + 1/2)]\n\nCalculations:\nSolve the innermost fraction first (bottom-up approach):\n\n⇒ 4 + 1/2 = (8 + 1) / 2 = 9/2\n\nSubstitute this back into the expression:\n\n⇒ x = 2 + 1 / [3 + 1 / (9/2)]\n⇒ x = 2 + 1 / (3 + 2/9)\nNow, simplify the next denominator:\n⇒ 3 + 2/9 = (27 + 2) / 9 = 29/9\n\nSubstitute this back into the expression:\n\n⇒ x = 2 + 1 / (29/9)\n⇒ x = 2 + 9/29\n⇒ x = (58 + 9) / 29\n⇒ x = 67/29\n∴ The correct answer is 67/29.\n\nAdditional Information\nBODMAS Rule in Fractions\n\nAlways follow the order of Brackets, Orders, Division, Multiplication, Addition, and Subtraction. In continued fractions, treat the bottommost denominator as an implicit bracket.\n\nReciprocal of a Fraction\n\nDividing by a fraction is the same as multiplying by its reciprocal. For example, 1 ÷ (a/b) = b/a.\n\nContinued Fractions\n\nA continued fraction is evaluated through a step-by-step upward process of simplifying the lowest mixed fraction and reciprocating it.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_55fe7c8da4",
+        "q_num": 76,
+        "question": "A company placed an order for 20 high-end laptops and some quantity of standard desktops. The price of a high-end laptop was 5 times that of a standard desktop. Due to a mistake, the number of laptops and desktops was interchanged in the delivery. This caused the total bill to increase by 80%. What was the ratio of the number of high-end laptops to standard desktops in the original order?",
+        "options": {
+          "a": "1:2",
+          "b": "2:1",
+          "c": "5:2",
+          "d": "2:5"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nLet desktop price = 1, laptop price = 5, and the number of desktops ordered = x.\nOriginal bill = 20 × 5 + x × 1 = 100 + x\nNew interchanged bill = x × 5 + 20 × 1 = 5x + 20\nGiven the new bill is 80% more, so (5x + 20) = 1.8 × (100 + x)\n⇒ 5x + 20 = 180 + 1.8x ⇒ 3.2x = 160 ⇒ x = 50\n∴ The correct answer is 2:5.\n\nAlternate Method\nOriginal Order\nLaptops = 20\nDesktops = x\nBill = 100 + x\n+80%\nNew Order\nLaptops = x\nDesktops = 20\nBill = 5x + 20\nRequired Ratio = 20 : x\n\nGiven:\n⇒ Number of high-end laptops originally ordered = 20\n⇒ Let the number of standard desktops originally ordered = x\n⇒ Price of a high-end laptop = 5 × Price of a standard desktop\n\nFormula Used:\n⇒ Total Bill = (Quantity of Laptops × Price of Laptop) + (Quantity of Desktops × Price of Desktop)\n⇒ New Bill = Original Bill × (100% + Increase%)\n\nCalculations:\n⇒ Let the price of a standard desktop be 1 unit. Then the price of a high-end laptop is 5 units.\n⇒ Original Bill = (20 × 5) + (x × 1) = 100 + x\n⇒ Due to the mistake, the new quantity of laptops = x, and desktops = 20.\n⇒ New Bill = (x × 5) + (20 × 1) = 5x + 20\n⇒ It is given that the new bill is 80% higher than the original bill. This means the new bill is 180% of the original bill.\n⇒ 5x + 20 = (100 + x) × (180 ÷ 100)\n⇒ 5x + 20 = (100 + x) × 1.8\n⇒ 5x + 20 = 180 + 1.8x\n⇒ 5x − 1.8x = 180 − 20\n⇒ 3.2x = 160\n⇒ x = 160 ÷ 3.2\n⇒ x = 50\n⇒ Number of standard desktops originally ordered = 50\n⇒ Required Ratio = (Number of High-End Laptops) : (Number of Standard Desktops) = 20 : 50 = 2 : 5\n∴ The correct answer is 2:5.\n\nAdditional Information\nInterchange of Quantities Rule\n\nWhen the quantities of two items are interchanged, the change in total value is equal to the product of the difference in their unit prices and the difference in their original quantities: Change in Value = (P1 − P2) × (Q2 − Q1).\n\nPercentage Increase Formula\n\nThe percentage increase between two values is calculated as: % Increase = [(New Value − Original Value) ÷ Original Value] × 100.\n\nBase Value in Percentages\n\nWhenever a value increases by R%, the new value becomes Original Value × (1 + R/100). Identifying the correct base value (the original order bill) is crucial to avoid calculation errors.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_dbef993931",
+        "q_num": 77,
+        "question": "Find the compound interest on ₹8,000 at 12% per annum for 3 years 4 months, compounded annually.",
+        "options": {
+          "a": "₹3,000",
+          "b": "₹4,000",
+          "c": "₹3,689",
+          "d": "₹3,600"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nUsing the multiplying factor method for Compound Interest:\n\nRate for 3 full years = 12% (Multiplier = 1.12)\nRate for next 4 months = 12% × (4/12) = 4% (Multiplier = 1.04)\nAmount = P × (1.12)^3 × (1.04)\nAmount = 8000 × 1.404928 × 1.04 ≈ 11689\nCompound Interest = 11689 − 8000 = 3689\n∴ The correct answer is ₹3,689.\n\nAlternate Method\nGiven:\nPrincipal (P) = ₹8,000\nRate (R) = 12% per annum\nTime (T) = 3 years 4 months = 3 + 4/12 years = 10/3 years\n\nFormula Used:\nA = P × (1 + R/100)^n × (1 + r/100)\nWhere n is the full years and r is the rate for the fractional year.\n\nStart\n₹8000\n+12% (1Yr)\nYear 1\n₹8960\n+12% (1Yr)\nYear 2\n₹10035.2\n+12% (1Yr)\nYear 3\n₹11239.4\n+4% (4Mo)\n3 Yr 4 Mo\n₹11689\nTotal CI = ₹11689 − ₹8000 = ₹3689\n\nCalculations:\n⇒ Rate for the fractional 4 months (1/3 year) = 12% × 1/3 = 4%\n⇒ Amount (A) = 8000 × (1 + 12/100)^3 × (1 + 4/100)\n⇒ A = 8000 × (112/100)^3 × (104/100)\n⇒ A = 8000 × 1.12 × 1.12 × 1.12 × 1.04\n⇒ A = 8000 × 1.404928 × 1.04\n⇒ A = 11239.424 × 1.04 = 11689.00\n⇒ Compound Interest (CI) = A − P\n⇒ CI = 11689 − 8000 = 3689\n∴ The correct answer is ₹3,689.\n\nAdditional Information\nFractional Year Compounding\n\nWhen time is in fractions (e.g., n years and m months), apply the full compounding rate for complete years and a proportionally reduced rate for the remaining fractional year.\n\nEffective Compound Interest Rate\n\nFor two consecutive periods at rates x% and y%, the overall effective compound interest percentage can be calculated using the successive percentage formula: x + y + (x × y)/100.\n\nDifference Between CI and SI\n\nFor 2 years, the difference between compound and simple interest is CI − SI = P(R/100)^2. For 3 years, the difference is CI − SI = P(R/100)^2(3 + R/100).",
+        "tags": {
+          "topic": "Compound Interest",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_451cb63d81",
+        "q_num": 78,
+        "question": "A car starts from point P on a circular track and an SUV starts from point Q, which is 600 meters ahead of P in the direction of motion. The car's speed is 15 m/s, and the SUV's speed is 10 m/s. The circumference of the track is 1.5 km. How much distance will the car have traveled when it first overtakes the SUV?",
+        "options": {
+          "a": "900 m",
+          "b": "1200 m",
+          "c": "1500 m",
+          "d": "1800 m"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nRelative speed of Car with respect to SUV = 15 − 10 = 5 m/s.\nTime required to close the initial gap of 600 m = 600 ÷ 5 = 120 seconds.\nDistance traveled by car in this time = Speed × Time = 15 × 120 = 1800 m.\n∴ The correct answer is 1800 m.\n\nAlternate Method\nGiven:\n⇒ Speed of car (SC) = 15 m/s\n⇒ Speed of SUV (SS) = 10 m/s\n⇒ Initial distance between them in direction of motion (d) = 600 m\n⇒ Track circumference = 1.5 km = 1500 m (Extra information)\n\nFormula Used:\n⇒ Time taken to overtake = Distance ÷ Relative Speed\n⇒ Distance = Speed × Time\n\nCalculation:\n⇒ Since both vehicles are moving in the same direction, Relative Speed = SC − SS\n⇒ Relative Speed = 15 − 10 = 5 m/s\n⇒ Time taken to overtake = 600 ÷ 5 = 120 seconds\n⇒ Distance traveled by car = SC × Time taken\n⇒ Distance = 15 × 120 = 1800 m\n∴ The correct answer is 1800 m.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6238e228b9",
+        "q_num": 79,
+        "question": "What is the central angle of a sector with an arc length of 10 cm in a circle of radius 5 cm?",
+        "options": {
+          "a": "6 radians",
+          "b": "3 radians",
+          "c": "2 radians",
+          "d": "4 radians"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nThe relationship between arc length (l), radius (r), and central angle (θ) in radians is directly calculated using the formula:\n\nθ = l ÷ r\n⇒ θ = 10 ÷ 5 = 2 radians\n∴ The correct answer is 2 radians.\n\nAlternate Method\nGiven:\nArc length of the sector (l) = 10 cm\nRadius of the circle (r) = 5 cm\n\nFormula Used:\nThe central angle in radians subtended by an arc at the center of a circle is the ratio of the arc length to its radius.\n\nAngle (θ) = Arc length (l) ÷ Radius (r)\n\nCalculations:\n⇒ θ = 10 cm ÷ 5 cm\n⇒ θ = 2\n\nSince the formula directly yields the angle in radians, the central angle is 2 radians.\n\n∴ The correct answer is 2 radians.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5189998964",
+        "q_num": 80,
+        "question": "The expenditure of a household on food, clothing, and entertainment is in the ratio 2 : 4 : 4. In the coming year, the cost of food is expected to fall by 10%, clothing to rise by 5%, and entertainment to fall by 15%. What is the percent change (increase or decrease) in the total household expenditure?",
+        "options": {
+          "a": "5% decrease",
+          "b": "6% increase",
+          "c": "6% decrease",
+          "d": "5% increase"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nUsing the weighted average method for net percentage change:\n\nNet % Change = [ (2 × −10%) + (4 × 5%) + (4 × −15%) ] ÷ (2 + 4 + 4)\nNet % Change = ( −20% + 20% − 60% ) ÷ 10\nNet % Change = −60% ÷ 10 = −6%\n\nThe negative sign represents a decrease.\n\n∴ The correct answer is 6% decrease.\n\nAlternate Method\nGiven:\nRatio of expenditure on Food, Clothing, and Entertainment = 2 : 4 : 4\n\nLet actual initial expenditures be a convenient multiple of the ratio, such as 200, 400, and 400.\n\nFood\n200\n−10%\nClothing\n400\n+5%\nEntertainment\n400\n−15%\n−20\n+20\n−60\nNet Change = −60 out of Total 1000 = −6%\n\nCalculations:\n⇒ Total initial expenditure = 200 + 400 + 400 = 1000\n⇒ New expenditure on Food = 200 − (10% of 200) = 200 − 20 = 180\n⇒ New expenditure on Clothing = 400 + (5% of 400) = 400 + 20 = 420\n⇒ New expenditure on Entertainment = 400 − (15% of 400) = 400 − 60 = 340\n⇒ Total new expenditure = 180 + 420 + 340 = 940\n⇒ Net change in expenditure = 940 − 1000 = −60\n⇒ Percentage change = (Net change ÷ Total initial expenditure) × 100\n⇒ Percentage change = (−60 ÷ 1000) × 100 = −6%\n\nThe negative value implies a decrease of 6%.\n\n∴ The correct answer is 6% decrease.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_625b775924",
+        "q_num": 81,
+        "question": "A and B invested ₹1,20,000 and ₹1,60,000 respectively. A remained for 10 months and B for 7 months. What is the total profit if B's share is ₹16,800?",
+        "options": {
+          "a": "₹34,800",
+          "b": "₹34,000",
+          "c": "₹10,000",
+          "d": "₹10,500"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nProfit ratio A : B = (1,20,000 × 10) : (1,60,000 × 7) = 15 : 14.\nTotal profit units = 15 + 14 = 29 units.\nGiven B's share (14 units) = ₹16,800.\nValue of 1 unit = 16,800 ÷ 14 = ₹1,200.\nTotal profit (29 units) = 29 × 1,200 = ₹34,800.\n∴ The correct answer is ₹34,800.\n\nAlternate Method\nGiven:\nInvestment by A = ₹1,20,000\nInvestment by B = ₹1,60,000\nTime period for A = 10 months\nTime period for B = 7 months\nB's profit share = ₹16,800\n\nFormula Used:\nProfit Ratio = (Capital of A × Time of A) : (Capital of B × Time of B)\n\nPartner A\n1.2L × 10 months\nProfit: 15 Units\nPartner B\n1.6L × 7 months\nProfit: 14 Units\n14 Units = ₹16,800 → 29 Units = ₹34,800\n\nCalculations:\n⇒ Profit Ratio of A : B = (1,20,000 × 10) : (1,60,000 × 7)\n⇒ Profit Ratio = 12,00,000 : 11,20,000\n⇒ By simplifying, we get Profit Ratio = 120 : 112 = 15 : 14\n⇒ Let A's profit be 15x and B's profit be 14x.\n⇒ Total profit = 15x + 14x = 29x\n⇒ We are given that B's profit share is ₹16,800.\n⇒ 14x = 16,800\n⇒ x = 16,800 ÷ 14 = 1,200\n⇒ Total profit = 29 × 1,200 = 34,800\n∴ The correct answer is ₹34,800.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a33bb29132",
+        "q_num": 82,
+        "question": "Evaluate: 12 (1/2)% of 560 km + 66 (2/3)% of 240 km",
+        "options": {
+          "a": "140 km",
+          "b": "230 km",
+          "c": "320 km",
+          "d": "450 km"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nMemorize common percentage to fraction conversions for faster calculation.\n\n12 1/2% = 1/8 and 66 2/3% = 2/3\n⇒ Expression = (1/8) × 560 + (2/3) × 240\n⇒ Expression = 70 + 160 = 230\n∴ The correct answer is 230 km.\n\nAlternate Method\nGiven:\n12 1/2% of 560 km + 66 2/3% of 240 km\n\nCalculation:\n⇒ 12 1/2% = 25/2 % = (25/2) × (1/100) = 25/200 = 1/8\n⇒ 66 2/3% = 200/3 % = (200/3) × (1/100) = 200/300 = 2/3\n\nSubstituting the fractional values into the original expression:\n\n⇒ (1/8 × 560) + (2/3 × 240)\n⇒ 70 + 160\n⇒ 230\n∴ The correct answer is 230 km.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_28fab67b4b",
+        "q_num": 83,
+        "question": "A vendor sells shirts at ₹500 each, earning a 2% commission, and ties at ₹150 each, with a 12% commission. If he sells 3 shirts and 4 ties per day, what will be his total commission earned in 30 days?",
+        "options": {
+          "a": "₹2850",
+          "b": "₹3000",
+          "c": "₹3060",
+          "d": "₹3200"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nDaily commission from shirts = 3 × (2% of 500) = 3 × 10 = ₹30\nDaily commission from ties = 4 × (12% of 150) = 4 × 18 = ₹72\nTotal daily commission = 30 + 72 = ₹102\nTotal commission earned in 30 days = 102 × 30 = ₹3060\n∴ The correct answer is ₹3060.\n\nAlternate Method\nGiven:\nPrice of a shirt = ₹500, Commission on a shirt = 2%\nPrice of a tie = ₹150, Commission on a tie = 12%\nItems sold per day = 3 shirts and 4 ties\nTotal days = 30\n\nCalculations:\n⇒ Commission earned on one shirt = 2% of 500 = (2 ÷ 100) × 500 = ₹10\n⇒ Commission earned on 3 shirts per day = 3 × 10 = ₹30\n⇒ Commission earned on one tie = 12% of 150 = (12 ÷ 100) × 150 = ₹18\n⇒ Commission earned on 4 ties per day = 4 × 18 = ₹72\n⇒ Total commission earned per day = 30 + 72 = ₹102\n⇒ Total commission earned in 30 days = 102 × 30 = ₹3060\n∴ The correct answer is ₹3060.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_04e635a36c",
+        "q_num": 84,
+        "question": "The profit made on an item sold for ₹2200 is equal to the loss incurred when it is sold for ₹1800. What will be the profit or loss percentage if the item is sold for ₹2050?",
+        "options": {
+          "a": "Profit of 2.25%",
+          "b": "Loss of 3.5%",
+          "c": "Profit of 2.5%",
+          "d": "Loss of 4.25%"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nIf the profit at one selling price equals the loss at another, the Cost Price is exactly halfway between them.\n\nCP = (SP1 + SP2) ÷ 2\nCP = (2200 + 1800) ÷ 2 = ₹2000\nNew SP = ₹2050 ⇒ Profit = 2050 − 2000 = ₹50\nProfit % = (50 ÷ 2000) × 100 = 2.5%\n∴ The correct answer is Profit of 2.5%.\n\nAlternate Method\nGiven:\nSelling Price 1 (SP1) = ₹2200\nSelling Price 2 (SP2) = ₹1800\nProfit at SP1 = Loss at SP2\n\nFormula Used:\nProfit = SP − CP\nLoss = CP − SP\nProfit % = (Profit ÷ CP) × 100\n\nCalculations:\nLet the cost price of the item be CP.\n⇒ Profit at SP1 = Loss at SP2\n⇒ 2200 − CP = CP − 1800\n⇒ 2CP = 2200 + 1800\n⇒ 2CP = 4000\n⇒ CP = ₹2000\nNow, the item is sold for a new SP = ₹2050.\n⇒ Profit = New SP − CP = 2050 − 2000 = ₹50\n⇒ Profit % = (50 ÷ 2000) × 100\n⇒ Profit % = 2.5%\n∴ The correct answer is Profit of 2.5%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a42b62184f",
+        "q_num": 85,
+        "question": "A mobile phone retailer sells a phone for ₹P and earns a profit of 20%. For a special festive offer, he marks the same phone at ₹1.5P. At the offer, he provides a discount of 10%. What will be the percentage profit that he will make during the festive offer?",
+        "options": {
+          "a": "0.26",
+          "b": "0.56",
+          "c": "0.62",
+          "d": "0.6"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nCost Price (CP) to Selling Price (SP1) ratio at 20% profit = 100 : 120 = 5 : 6.\nAssuming CP = 5 units, then initial SP1 = P = 6 units.\nGiven the festive Marked Price (MP) = 1.5P ⇒ MP = 1.5 × 6 = 9 units.\nA discount of 10% is given, so New SP = 9 × 0.9 = 8.1 units.\nProfit % = [(New SP − CP) ÷ CP] × 100 = [(8.1 − 5) ÷ 5] × 100 = 62%.\n∴ The correct answer is 62% (or 0.62).\n\nAlternate Method\nGiven:\nInitial Selling Price = ₹P\nInitial Profit = 20%\nNew Marked Price (MP) = 1.5P\nFestive Discount = 10%\n\nCalculations:\n⇒ CP = P × (100 ÷ 120) = 5P/6\n⇒ New SP = 1.5P × (90 ÷ 100) = 1.35P = 27P/20\n⇒ Profit = New SP − CP = (27P/20) − (5P/6)\n⇒ LCM of 20 and 6 is 60.\n⇒ Profit = (81P − 50P) ÷ 60 = 31P/60\n⇒ Profit % = [(31P/60) ÷ (5P/6)] × 100\n⇒ Profit % = (31/60) × (6/5) × 100\n⇒ Profit % = (31/50) × 100 = 62%\n⇒ Expressed as a decimal fraction, it is 0.62.\n∴ The correct answer is 62% (or 0.62).",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8fe59094bb",
+        "q_num": 86,
+        "question": "A shopkeeper marks his goods at 60% above the cost price. He allows a discount of 25% on the marked price. If he also gives an additional cash discount of ₹150, and still makes a profit of 14% on the cost price, what is the cost price of the goods?",
+        "options": {
+          "a": "₹2000",
+          "b": "₹2500",
+          "c": "₹3000",
+          "d": "₹3500"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nLet CP = 100%. Then Marked Price (MP) = 160% (as it is 60% above CP).\nSelling Price (SP) after 25% discount = 160% − (25% of 160%) = 120%.\nActual Final SP = 100% + 14% profit = 114%.\nDifference in SPs = 120% − 114% = 6%, which corresponds to the ₹150 cash discount.\n⇒ 6% of CP = 150 ⇒ CP = 150 × 100 ÷ 6 = ₹2500.\n∴ The correct answer is ₹2500.\n\nAlternate Method\nGiven:\nMarkup = 60% above Cost Price\nDiscount = 25%\nAdditional Cash Discount = ₹150\nOverall Profit = 14%\n\nCalculations:\n⇒ Let the Cost Price (CP) be 100x.\n⇒ Marked Price (MP) = 100x + (60% of 100x) = 160x.\n⇒ Selling Price before cash discount = 160x − (25% of 160x) = 160x − 40x = 120x.\n⇒ Final Selling Price = 120x − 150.\n⇒ Based on the profit percentage, Final SP = CP + (14% of CP) = 114x.\n⇒ Equating both values of Final SP:\n⇒ 120x − 150 = 114x\n⇒ 120x − 114x = 150\n⇒ 6x = 150\n⇒ x = 25\n⇒ Cost Price = 100x = 100 × 25 = ₹2500.\n∴ The correct answer is ₹2500.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a3853d4fdf",
+        "q_num": 87,
+        "question": "Suppose x = √2 + √3, y = √5 + √1, and z = 2√2 + 1; then which of the following is true?",
+        "options": {
+          "a": "x < y < z",
+          "b": "z < y < x",
+          "c": "y < x < z",
+          "d": "x < z < y"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nSubstitute approximate decimal values: √2 ≈ 1.414, √3 ≈ 1.732, √5 ≈ 2.236\n⇒ x ≈ 1.414 + 1.732 = 3.146\n⇒ y ≈ 2.236 + 1 = 3.236\n⇒ z ≈ 2 × 1.414 + 1 = 3.828\n⇒ Comparing values: 3.146 < 3.236 < 3.828 ⇒ x < y < z\n∴ The correct answer is x < y < z.\n\nAlternate Method\nGiven:\nx = √2 + √3\ny = √5 + √1\nz = 2√2 + 1\n\nCalculations:\n⇒ Squaring all the given terms to compare their magnitudes:\n⇒ x^2 = (√2 + √3)^2 = 2 + 3 + 2√6 = 5 + √24\n⇒ y^2 = (√5 + 1)^2 = 5 + 1 + 2√5 = 6 + √20\n⇒ z^2 = (2√2 + 1)^2 = 8 + 1 + 4√2 = 9 + √32\n⇒ Using approximations for easier comparison: √20 ≈ 4.47, √24 ≈ 4.89, √32 ≈ 5.65\n⇒ x^2 ≈ 5 + 4.89 = 9.89\n⇒ y^2 ≈ 6 + 4.47 = 10.47\n⇒ z^2 ≈ 9 + 5.65 = 14.65\n⇒ Comparing the calculated squares gives: 9.89 < 10.47 < 14.65\n⇒ x^2 < y^2 < z^2\n⇒ Since x, y, and z are all positive numerical values, their order remains the same: x < y < z.\n∴ The correct answer is x < y < z.",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0beb67bc01",
+        "q_num": 88,
+        "question": "A and B started a business by investing ₹48,000 and ₹72,000 respectively. After 6 months, A withdrew half of his capital, while B increased his capital by ₹24,000. At the end of the year, they earned a total profit of ₹55,000. What is B's share in the profit?",
+        "options": {
+          "a": "₹26,500",
+          "b": "₹28,000",
+          "c": "₹38,500",
+          "d": "₹36,000"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nRatio of Profit = (CapitalA × TimeA) : (CapitalB × TimeB)\nProfit Ratio = [(48 × 6) + (24 × 6)] : [(72 × 6) + (96 × 6)]\nProfit Ratio = [6 × (48 + 24)] : [6 × (72 + 96)] = 72 : 168 = 3 : 7\nB's share = (7 ÷ 10) × 55000 = ₹38,500\n∴ The correct answer is ₹38,500.\n\nAlternate Method\nGiven:\nInitial capital of A = ₹48,000\nInitial capital of B = ₹72,000\nTotal time of investment = 1 year = 12 months\nTotal profit earned at the end of the year = ₹55,000\n\nCalculations:\n⇒ Equivalent capital of A = (₹48,000 × 6 months) + (₹24,000 × 6 months)\n⇒ Equivalent capital of A = ₹2,88,000 + ₹1,44,000 = ₹4,32,000\n⇒ Equivalent capital of B = (₹72,000 × 6 months) + (₹96,000 × 6 months)\n⇒ Equivalent capital of B = ₹4,32,000 + ₹5,76,000 = ₹10,08,000\n⇒ Ratio of profit (A : B) = 4,32,000 : 10,08,000\n⇒ Ratio of profit (A : B) = 432 : 1008 = 3 : 7\n⇒ Sum of ratio parts = 3 + 7 = 10 parts\n⇒ B's share in profit = (7 ÷ 10) × Total Profit\n⇒ B's share = (7 ÷ 10) × 55,000\n⇒ B's share = 7 × 5,500 = ₹38,500\n∴ The correct answer is ₹38,500.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_563206c773",
+        "q_num": 89,
+        "question": "A baker ordered 10 kg of premium flour and some additional kg of standard flour. The price of premium flour per kg was twice that of the standard flour. Due to an ordering error, the quantities of the two types of flour were interchanged. This decreased the total cost by 25%. Find the ratio of the quantity of premium flour to standard flour in the original order.",
+        "options": {
+          "a": "1:2",
+          "b": "5:2",
+          "c": "3:4",
+          "d": "4:5"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nLet the price of standard flour = ₹1/kg and premium flour = ₹2/kg.\nOriginal cost = 10 × 2 + x × 1 = 20 + x\nNew cost = x × 2 + 10 × 1 = 2x + 10\nAs cost decreased by 25%, New Cost = 75% of Original Cost ⇒ 3/4\n⇒ (2x + 10) / (20 + x) = 3/4 ⇒ 8x + 40 = 60 + 3x ⇒ 5x = 20 ⇒ x = 4 kg.\n∴ The correct answer is 5:2.\n\nAlternate Method\nGiven:\n⇒ Premium flour quantity = 10 kg\n⇒ Let standard flour quantity = x kg\n⇒ Let standard flour price = P per kg, then premium flour price = 2P per kg\n\nCalculations:\n⇒ Original Total Cost = (10 × 2P) + (x × P) = P(20 + x)\n⇒ After interchange, New Total Cost = (x × 2P) + (10 × P) = P(2x + 10)\n⇒ The new cost is 25% less than the original cost.\n⇒ New Cost = (100% − 25%) of Original Cost = 75% of Original Cost\n⇒ P(2x + 10) = 0.75 × P(20 + x)\n⇒ 2x + 10 = 0.75(20) + 0.75x\n⇒ 2x + 10 = 15 + 0.75x\n⇒ 2x − 0.75x = 15 − 10\n⇒ 1.25x = 5\n⇒ x = 5 ÷ 1.25 = 4\n⇒ The original quantity of standard flour is 4 kg.\n⇒ Ratio of premium to standard flour = 10 : 4 = 5 : 2\n∴ The correct answer is 5:2.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_840e8500ca",
+        "q_num": 90,
+        "question": "A trader sells one brand of tea at ₹150 per kg, incurring a 25% loss. He also sells another brand of tea at ₹200 per kg, incurring a 20% loss. If he mixes the two brands in equal proportions and sells the mixture at ₹175 per kg, what is his overall profit or loss percentage?",
+        "options": {
+          "a": "Loss of 22.22%",
+          "b": "Profit of 22.22%",
+          "c": "Loss of 25%",
+          "d": "Profit of 25%"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nCP of Brand A = 150 × (100 / 75) = ₹200/kg\nCP of Brand B = 200 × (100 / 80) = ₹250/kg\nFor an equal mixture (1 kg each), Total CP = 200 + 250 = ₹450\nTotal SP for 2 kg = 175 × 2 = ₹350\nLoss % = ((450 − 350) / 450) × 100 = (100 / 450) × 100 = 22.22%\n∴ The correct answer is Loss of 22.22%.\n\nAlternate Method\nGiven:\nSP of Brand A = ₹150/kg, Loss = 25%\nSP of Brand B = ₹200/kg, Loss = 20%\nMixture proportion = 1 : 1\nSP of the mixture = ₹175/kg\n\nFormula Used:\nCP = SP × [100 / (100 − Loss %)]\nLoss % = (Loss / Total CP) × 100\n\nCalculations:\n⇒ CP of Brand A = 150 × [100 / (100 − 25)]\n⇒ CP of Brand A = 150 × (100 / 75) = ₹200/kg\n⇒ CP of Brand B = 200 × [100 / (100 − 20)]\n⇒ CP of Brand B = 200 × (100 / 80) = ₹250/kg\n⇒ Assuming he mixes exactly 1 kg of each brand, Total Quantity = 2 kg\n⇒ Total CP for 2 kg = 200 + 250 = ₹450\n⇒ Total SP for 2 kg = 175 × 2 = ₹350\n⇒ Overall Loss = Total CP − Total SP = 450 − 350 = ₹100\n⇒ Overall Loss % = (Loss / Total CP) × 100\n⇒ Overall Loss % = (100 / 450) × 100 = (2 / 9) × 100 ≈ 22.22%\n∴ The correct answer is Loss of 22.22%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_20994b5f5f",
+        "q_num": 91,
+        "question": "A car covers 40% of a certain distance at a pace of 20 km/h and the remaining distance at a pace of 30 km/h. What is the average speed of the car for the entire journey?",
+        "options": {
+          "a": "24 km/h",
+          "b": "25 km/h",
+          "c": "26 km/h",
+          "d": "27 km/h"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nLet the total distance be assumed as 100 km.\nFirst part of the distance = 40 km, covered at 20 km/h.\nTime taken = 40 ÷ 20 = 2 hours.\nRemaining distance = 60 km, covered at 30 km/h.\nTime taken = 60 ÷ 30 = 2 hours.\nAverage Speed = Total Distance ÷ Total Time = 100 ÷ (2 + 2) = 25 km/h.\n∴ The correct answer is 25 km/h.\n\nAlternate Method\nGiven:\nFirst part of distance (D1) = 40% of total distance\nSpeed for first part (S1) = 20 km/h\nRemaining distance (D2) = 60% of total distance\nSpeed for remaining part (S2) = 30 km/h\n\nFormula Used:\nAverage Speed = Total Distance ÷ Total Time\nTime = Distance ÷ Speed\n\nCalculations:\n⇒ Let the total distance be D km.\n⇒ Time taken for the first part = 0.4D ÷ 20 = 4D ÷ 200 = D ÷ 50 hours\n⇒ Time taken for the remaining part = 0.6D ÷ 30 = 6D ÷ 300 = D ÷ 50 hours\n⇒ Total Time taken = (D ÷ 50) + (D ÷ 50) = 2D ÷ 50 = D ÷ 25 hours\n⇒ Average Speed = Total Distance ÷ Total Time\n⇒ Average Speed = D ÷ (D ÷ 25)\n⇒ Average Speed = 25 km/h\n∴ The correct answer is 25 km/h.\n\nAdditional Information\nAverage Speed for Equal Distances\n\nWhen a certain distance is covered at speed 'x' and an equal distance at speed 'y', the Average Speed = (2xy) ÷ (x + y).\n\nAverage Speed for Equal Time Intervals\n\nWhen travelling for equal time periods at speeds 'x' and 'y', the Average Speed = (x + y) ÷ 2.\n\nRelative Speed\n\nIf two bodies move in the same direction, relative speed = S1 − S2. If they move in opposite directions, relative speed = S1 + S2.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bd2b7bfb5f",
+        "q_num": 92,
+        "question": "The area of a sector of a circle with radius 7 cm and central angle 90° is:",
+        "options": {
+          "a": "38.5 cm²",
+          "b": "35.2 cm²",
+          "c": "40.5 cm²",
+          "d": "42.62 cm²"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nA central angle of 90° means the sector is exactly a quarter of the full circle.\n\nArea of a full circle = π × r^2\n⇒ Full Area = (22/7) × 7 × 7 = 154 cm^2\nArea of the sector = 154 ÷ 4 = 38.5 cm^2\n∴ The correct answer is 38.5 cm^2.\n\nAlternate Method\nGiven:\nRadius of the circle (r) = 7 cm\nCentral angle (θ) = 90°\n\nFormula Used:\nArea of a sector = (θ ÷ 360°) × π × r^2\n\nCalculations:\n⇒ Area = (90° ÷ 360°) × (22/7) × 7^2\n⇒ Area = (1/4) × (22/7) × 49\n⇒ Area = (1/4) × 154\n⇒ Area = 38.5 cm^2\n∴ The correct answer is 38.5 cm^2.\n\nAdditional Information\nLength of an Arc\n\nThe length of the arc bounding the sector is given by: l = (θ ÷ 360°) × 2πr.\n\nPerimeter of a Sector\n\nThe perimeter of a sector includes the arc length and the two radii forming the sector: Perimeter = l + 2r.\n\nArea of a Segment\n\nA segment is the region bounded by a chord and an arc. Its area is: Area of segment = Area of sector − Area of the corresponding triangle.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_218123439b",
+        "q_num": 93,
+        "question": "What is the value of 4 + 44 + 444 + 4444 + 44444?",
+        "options": {
+          "a": "49380",
+          "b": "42300",
+          "c": "41300",
+          "d": "45000"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nFor a series of a repeated digit 'd' in the form d + dd + ddd + ... up to n terms (where n ≤ 9):\n\nSum = d × 123...n\nHere, the digit d = 4 and there are 5 terms.\nSum = 4 × 12345 = 49380\n∴ The correct answer is 49380.\n\nAlternate Method\nGiven:\nExpression = 4 + 44 + 444 + 4444 + 44444\n\nCalculation:\nFactoring out 4 from the expression:\n\n⇒ 4 × (1 + 11 + 111 + 1111 + 11111)\n\nAdding the numbers inside the bracket step-by-step:\n\n⇒ 1 + 11 = 12\n⇒ 12 + 111 = 123\n⇒ 123 + 1111 = 1234\n⇒ 1234 + 11111 = 12345\nNow, multiply the sum by 4:\n⇒ 4 × 12345\n\nBreaking it down:\n\n⇒ 4 × (10000 + 2000 + 300 + 40 + 5)\n⇒ 40000 + 8000 + 1200 + 160 + 20 = 49380\n∴ The correct answer is 49380.\n\nAdditional Information\nSum of Repeated 1s\n\nThe sum of a series 1 + 11 + 111 + ... up to n terms (for n ≤ 9) is always a sequential number 123...n.\n\nSum of Repeated 9s\n\nFor a series like 9 + 99 + 999 + ... up to n terms, rewrite each term as (10 − 1) + (100 − 1) + (1000 − 1) ... to simplify the calculation to (10 + 100 + 1000 + ...) − n.\n\nColumn Addition Shortcut for Repeated Digits\n\nTo add repeated digit terms vertically, count the digits in each column. The units column has n terms, tens has n−1 terms, and so on. Multiply the digit by the count and sequentially carry over the extra value to the next place.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5cdd23c408",
+        "q_num": 94,
+        "question": "Simplify: (1 2/5 + 2.6) − 1 3/4",
+        "options": {
+          "a": "2.25",
+          "b": "2.1",
+          "c": "2.35",
+          "d": "2.5"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nConvert all mixed fractions directly into decimals for faster calculation.\n\n1 2/5 = 1 + 0.4 = 1.4\n1 3/4 = 1 + 0.75 = 1.75\n⇒ (1.4 + 2.6) − 1.75\n⇒ 4.0 − 1.75 = 2.25\n∴ The correct answer is 2.25.\n\nAlternate Method\nGiven:\n(1 2/5 + 2.6) − 1 3/4\n\nMethod Used:\n\nConvert mixed fractions and decimals into improper fractions and simplify using BODMAS.\n\nCalculations:\n⇒ 1 2/5 = (1 × 5 + 2)/5 = 7/5\n⇒ 2.6 = 26/10 = 13/5\n⇒ 1 3/4 = (1 × 4 + 3)/4 = 7/4\n⇒ Expression = (7/5 + 13/5) − 7/4\n⇒ Expression = (20/5) − 7/4\n⇒ Expression = 4 − 7/4\n⇒ Expression = (16 − 7)/4\n⇒ Expression = 9/4\n⇒ Expression = 2.25\n∴ The correct answer is 2.25.\n\nAdditional Information\nBODMAS Rule\n\nSimplification problems always follow the BODMAS order: Brackets, Orders, Division, Multiplication, Addition, and Subtraction.\n\nFraction to Decimal Conversion\n\nConverting mixed fractions directly to decimals (e.g., 2/5 = 0.4 and 3/4 = 0.75) avoids LCM calculations and saves significant time in exams.\n\nMixed to Improper Fraction\n\nA mixed fraction A B/C can be converted to an improper fraction using the standard formula (A × C + B) ÷ C.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_313bdda084",
+        "q_num": 95,
+        "question": "A invests ₹20,000, while B invests ₹30,000. A receives an additional 20% for management. The total profit is ₹60,000. What is A's share?",
+        "options": {
+          "a": "₹51,200",
+          "b": "₹41,200",
+          "c": "₹31,200",
+          "d": "₹21,200"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nA's management fee = 20% of ₹60,000 = ₹12,000\nRemaining profit to be shared = 60,000 − 12,000 = ₹48,000\nProfit sharing ratio of A and B = 20,000 : 30,000 = 2 : 3\nA's profit share = (2/5) × 48,000 = ₹19,200\nA's total share = 12,000 + 19,200 = ₹31,200\n∴ The correct answer is ₹31,200.\n\nAlternate Method\nGiven:\nA's investment = ₹20,000\nB's investment = ₹30,000\nTotal profit = ₹60,000\nA's management commission = 20% of total profit\nTotal Profit: ₹60,000\nA's Mgmt: ₹12,000\nRemaining: ₹48,000\nA's Share: ₹19,200\nB's: ₹28,800\nA's Total: ₹31,200\n\nCalculations:\n⇒ Profit distribution ratio = Ratio of investments (since time period is equal)\n⇒ Ratio of A : B = 20,000 : 30,000 = 2 : 3\n⇒ A's management fee = (20 / 100) × 60,000 = ₹12,000\n⇒ Remaining profit = 60,000 − 12,000 = ₹48,000\n⇒ A's share from remaining profit = 48,000 × [2 ÷ (2 + 3)]\n⇒ A's share = 48,000 × (2 / 5) = ₹19,200\n⇒ Total share of A = Management fee + Profit share\n⇒ Total share of A = 12,000 + 19,200 = ₹31,200\n∴ The correct answer is ₹31,200.\n\nAdditional Information\nActive vs Sleeping Partner\n\nAn active partner manages the business and receives a salary or a fixed percentage of the profit before the remainder is split. A sleeping partner only invests capital and takes a share of the remaining profit based on investment and time.\n\nPartnership Profit Formula\n\nProfit is directly proportional to the product of capital invested and the time period for which it is invested. Profit Ratio = (C1 × T1) : (C2 × T2).",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cfd25385a9",
+        "q_num": 96,
+        "question": "A can lay railway track between two specified stations in 16 days, while B can complete the same task in 12 days. When C assists them, they manage to finish the job in just 4 days. How long would it take for C to complete the job on their own?",
+        "options": {
+          "a": "8\\(\\frac{1}{2}\\) days",
+          "b": "9\\(\\frac{1}{2}\\) days",
+          "c": "9 \\(\\frac{3}{5}\\) days",
+          "d": "10 days"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nTotal Work = LCM(16, 12, 4) = 48 units\nEfficiencies: A = 48 ÷ 16 = 3, B = 48 ÷ 12 = 4, A + B + C = 48 ÷ 4 = 12\nEfficiency of C = 12 − (3 + 4) = 5 units/day\nTime taken by C alone = 48 ÷ 5 = 9 3/5 days\n∴ The correct answer is 9 3/5 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_41511e4505",
+        "q_num": 97,
+        "question": "Three varieties of rice costing ₹40/kg, ₹50/kg, and a third unknown price are mixed in the ratio 2:3:5. If the resulting mixture is sold at ₹55/kg, making a profit of 10% on the cost price, what is the price of the third variety of rice per kg?",
+        "options": {
+          "a": "₹52.50",
+          "b": "₹57.50",
+          "c": "₹54.00",
+          "d": "₹62.50"
+        },
+        "answer": "c",
+        "solution": "Cost Price (CP) of mixture = 55 × (100 ÷ 110) = ₹50/kg.\n\nUsing the net deviation method from the average CP (₹50):\nNet deviation = 2 × (40 − 50) + 3 × (50 − 50) + 5 × (x − 50) = 0\n⇒ −20 + 0 + 5(x − 50) = 0\n⇒ 5(x − 50) = 20 ⇒ x − 50 = 4 ⇒ x = 54\n∴ The correct answer is ₹54.00.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_baccf6f14f",
+        "q_num": 98,
+        "question": "A can build up a wall in 8 days while B can break it in 3 days. A has worked for 4 days and then B joined to work with A for another 2 days only. In how many days will A alone build up the remaining part of the wall?",
+        "options": {
+          "a": "",
+          "b": "8days",
+          "c": "9 days",
+          "d": "5days"
+        },
+        "answer": "a",
+        "solution": "Let total work be LCM(8, 3) = 24 units.\nEfficiency of A = 24 ÷ 8 = +3 units/day, Efficiency of B = 24 ÷ 3 = −8 units/day (negative as B breaks the wall).\nWork done in first 4 days by A = 4 × 3 = +12 units.\nWork done in next 2 days by A and B together = 2 × (3 − 8) = −10 units.\nTotal work completed = 12 − 10 = 2 units. Remaining work = 24 − 2 = 22 units.\nTime for A to build the remaining work = 22 ÷ 3 = 71/3 days.\n∴ The correct answer is 71/3 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d001949290",
+        "q_num": 99,
+        "question": "A bookseller sells a novel for ₹Y and makes a loss of 10%. To clear old stock, he decides to mark the novel at ₹0.8Y. He then allows a further discount of 5% on this marked price. What will be the percentage loss that he will incur on this clearance sale?",
+        "options": {
+          "a": "2.5%",
+          "b": "57.5%",
+          "c": "66.67%",
+          "d": "31.6%"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick: Let the Cost Price (CP) be 100. With a 10% loss, the initial Selling Price Y = 90. New Marked Price (MP) = 0.8 × Y = 0.8 × 90 = 72. New Selling Price after 5% discount = 72 × 0.95 = 68.4. Overall Loss = CP − New SP = 100 − 68.4 = 31.6. Percentage Loss = (31.6 ÷ 100) × 100 = 31.6%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2c209975d2",
+        "q_num": 100,
+        "question": "A person invested ₹18,000 in two schemes — Scheme X at 15% p.a. and Scheme Y at 10% p.a., both under simple interest. After 1 year, the total interest from both schemes was ₹2,160. How much was invested in Scheme X?",
+        "options": {
+          "a": "₹6,000",
+          "b": "₹7,000",
+          "c": "₹7,200",
+          "d": "₹6,200"
+        },
+        "answer": "c",
+        "solution": "If the entire sum of ₹18,000 was invested at the lower rate of 10% p.a., the total interest generated would be ₹1,800. The extra interest earned = ₹2,160 − ₹1,800 = ₹360. This extra ₹360 is solely due to the additional 5% interest rate on Scheme X (since 15% − 10% = 5%). Therefore, 5% of Scheme X investment = ₹360. 100% of Scheme X investment = ₹360 × (100 ÷ 5) = ₹7,200.",
+        "tags": {
+          "topic": "Simple Interest",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_06ce03839c",
+        "q_num": 101,
+        "question": "If the base of a prism is a regular hexagon of side 6 cm and the height is 10 cm, what is its volume?",
+        "options": {
+          "a": "550√2 cm³",
+          "b": "500√6 cm³",
+          "c": "480√3 cm³",
+          "d": "540√3 cm³"
+        },
+        "answer": "d",
+        "solution": "Volume of a regular hexagonal prism = (3√3 ÷ 2) × a^2 × h. Given base side (a) = 6 cm and height (h) = 10 cm. Volume = (3√3 ÷ 2) × 6^2 × 10 = (3√3 ÷ 2) × 36 × 10 = 540√3 cm^3.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e60fef7316",
+        "q_num": 102,
+        "question": "A solid cylinder radius 5 cm is drilled by four cylindrical holes each radius 1 cm length equal to the full height. Volume removed is approximately what percent?",
+        "options": {
+          "a": "16%",
+          "b": "20%",
+          "c": "32%",
+          "d": "48%"
+        },
+        "answer": "a",
+        "solution": "Since the height of the cylinder and the holes is the same, the ratio of volumes is equal to the ratio of their base areas. Base area of the original solid cylinder = π × 5^2 = 25π. Total base area of the 4 removed holes = 4 × (π × 1^2) = 4π. Percentage of volume removed = (4π ÷ 25π) × 100 = (4 ÷ 25) × 100 = 16%.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_eccc5398b0",
+        "q_num": 103,
+        "question": "Three numbers are such that when the average of any two of them is added to the third, the results obtained are 180, 168, and 150, respectively. What is the average of the original three numbers?",
+        "options": {
+          "a": "83",
+          "b": "84",
+          "c": "85",
+          "d": "86"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nSumming the three given results evaluates to 2 times the sum of the three numbers.\n\n⇒ 2 × (Sum of three numbers) = 180 + 168 + 150 = 498\n⇒ Sum of three numbers = 498 ÷ 2 = 249\n⇒ Average of three numbers = 249 ÷ 3 = 83\n∴ The correct answer is 83.\n\nAlternate Method\nGiven:\nThree numbers where the average of any two added to the third gives 180, 168, and 150 respectively.\n\nFormula Used:\nAverage = Sum of all observations ÷ Total number of observations\na + b + 2c = 360\n2a + b + c = 336\na + 2b + c = 300\n+\n+\n4(a + b + c) = 996\nAverage = 83\n\nCalculations:\nLet the original three numbers be a, b, and c.\n⇒ (a + b) ÷ 2 + c = 180\n⇒ a + b + 2c = 360     ... (Equation 1)\n⇒ (b + c) ÷ 2 + a = 168\n⇒ 2a + b + c = 336     ... (Equation 2)\n⇒ (c + a) ÷ 2 + b = 150\n⇒ a + 2b + c = 300     ... (Equation 3)\n\nAdding Equation 1, Equation 2, and Equation 3 together:\n\n⇒ 4a + 4b + 4c = 360 + 336 + 300\n⇒ 4(a + b + c) = 996\n⇒ a + b + c = 249\n\nThe average of the three numbers is their sum divided by 3:\n\n⇒ Average = (a + b + c) ÷ 3\n⇒ Average = 249 ÷ 3 = 83\n∴ The correct answer is 83.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1835a17e7f",
+        "q_num": 104,
+        "question": "A 60-litres solution of alcohol and water has 20% water. How many litres of alcohol must be added to the solution to make the water content 15%?",
+        "options": {
+          "a": "10 litres",
+          "b": "20 litres",
+          "c": "30 litres",
+          "d": "40 litres"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nSince only alcohol is added, the total quantity of water remains constant throughout the process.\n\nInitial Water % × Initial Volume = Final Water % × Final Volume\n20% × 60 = 15% × Final Volume\nFinal Volume = (20 × 60) ÷ 15 = 1200 ÷ 15 = 80 litres\nAmount of alcohol added = Final Volume − Initial Volume = 80 − 60 = 20 litres.\n∴ The correct answer is 20 litres.\n\nAlternate Method\nGiven:\nInitial volume of solution = 60 litres\nPercentage of water initially = 20%\nTarget percentage of water finally = 15%\n\nFormula Used:\nWe can solve this using the rule of Alligation on the alcohol percentage.\n\nInitial alcohol % = 100% − 20% = 80%\nPure alcohol added % = 100%\nFinal mixture alcohol % = 100% − 15% = 85%\n\n80%\nInitial\n60 Litres\n100%\nAdded\nx Litres\n85%\nMixture\n15\n5\nRatio = 15 : 5 = 3 : 1\n\nCalculations:\nFrom the Alligation diagram, the ratio of the initial volume to the pure added alcohol is:\n\n⇒ Initial Volume : Added Alcohol = 15 : 5\n⇒ Initial Volume : Added Alcohol = 3 : 1\n⇒ 3 ratio units = 60 litres\n⇒ 1 ratio unit = 60 ÷ 3 = 20 litres\n⇒ Added alcohol = 20 litres\n∴ The correct answer is 20 litres.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_77fe37d3f6",
+        "q_num": 105,
+        "question": "A train leaves Station A at 6:00 AM and travels towards Station B at a constant speed of 60 km/h. Another train leaves Station B at 8:00 AM and travels towards Station A at a constant speed of 90 km/h. The distance between the two stations is 540 km. At what time will the two trains meet?",
+        "options": {
+          "a": "9:48 AM",
+          "b": "10:48 AM",
+          "c": "11:45 AM",
+          "d": "12:45 AM"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nDistance covered by the first train in 2 hours (6:00 AM to 8:00 AM) = 60 × 2 = 120 km.\nRemaining distance at 8:00 AM = 540 − 120 = 420 km.\nRelative speed of both trains moving towards each other = 60 + 90 = 150 km/h.\nTime taken to meet after 8:00 AM = 420 ÷ 150 = 2.8 hours = 2 hours 48 minutes.\nMeeting time = 8:00 AM + 2 hours 48 minutes = 10:48 AM.\n∴ The correct answer is 10:48 AM.",
+        "tags": {
+          "topic": "Trains",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ff0d3b6c1a",
+        "q_num": 106,
+        "question": "A circular garden having a diameter of 10 m is surrounded by a concrete path that is 1 m wide. Calculate the percentage increase in area resulting from the addition of the path.",
+        "options": {
+          "a": "18%",
+          "b": "12%",
+          "c": "44%",
+          "d": "54%"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nInitial radius (r) = 10 ÷ 2 = 5 m, New radius (R) = 5 + 1 = 6 m.\nPercentage increase in radius = (1 ÷ 5) × 100 = 20%.\n\nSince area is proportional to the square of the radius, apply successive percentage change: 2x + (x^2 ÷ 100).\n\nPercentage increase in area = 2 × 20 + (20^2 ÷ 100) = 40 + 4 = 44%.\n∴ The correct answer is 44%.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2f0694675a",
+        "q_num": 107,
+        "question": "Suresh ordered 6 kg of premium flour and some additional kilograms of ordinary flour. The price of the premium flour per kg was twice that of the ordinary flour. When the order was delivered, the quantities of premium and ordinary flour had been swapped. This change increased his bill by 20%. Find the ratio of the original quantity of premium flour to the original quantity of ordinary flour.",
+        "options": {
+          "a": "2 : 3",
+          "b": "3 : 5",
+          "c": "5 : 4",
+          "d": "4 : 7"
+        },
+        "answer": "d",
+        "solution": "Solution\nShortcut Trick\nLet the price of Ordinary flour be ₹1/kg and Premium flour be ₹2/kg.\nOriginal Cost = (6 × 2) + (x × 1) = 12 + x.\nSwapped Cost = (x × 2) + (6 × 1) = 2x + 6.\nAccording to the question: (2x + 6) = 120% of (12 + x) ⇒ (2x + 6) = 1.2(12 + x).\nSolving the equation: 2x + 6 = 14.4 + 1.2x ⇒ 0.8x = 8.4 ⇒ x = 10.5 kg.\nRequired Ratio = 6 : 10.5 = 60 : 105 = 4 : 7.\n∴ The correct answer is 4 : 7.\n\nAlternate Method\nGiven:\n⇒ Quantity of Premium Flour ordered = 6 kg\n⇒ Quantity of Ordinary Flour ordered = x kg\n⇒ Price Ratio (Premium : Ordinary) = 2 : 1\n⇒ Increase in Bill = 20%\n\nFormula Used:\n⇒ Total Bill = (Quantity1 × Price1) + (Quantity2 × Price2)\n\nCalculations:\n⇒ Let the price of ordinary flour be ₹y/kg. Then the price of premium flour is ₹2y/kg.\n⇒ Original Bill = (6 × 2y) + (x × y) = 12y + xy = y(12 + x)\n⇒ After swapping quantities, the New Bill = (x × 2y) + (6 × y) = 2xy + 6y = y(2x + 6)\n⇒ New Bill = Original Bill + 20% of Original Bill\n⇒ y(2x + 6) = 1.2 × y(12 + x)\n⇒ 2x + 6 = 14.4 + 1.2x\n⇒ 2x − 1.2x = 14.4 − 6\n⇒ 0.8x = 8.4\n⇒ x = 8.4 ÷ 0.8 = 10.5 kg\n⇒ Original Quantity Ratio (Premium : Ordinary) = 6 : 10.5\n⇒ Ratio = 6 : 21/2 = 12 : 21 = 4 : 7\n∴ The correct answer is 4 : 7.\n\nAdditional Information\nPercentage Change\n\nThe percentage change is calculated as: ((New Value − Old Value) / Old Value) × 100.\n\nRatio and Proportion\n\nA ratio compares two quantities by division. If a/b = c/d, then a, b, c, d are in proportion.\n\nEffect of Swapping\n\nSwapping quantities of items with different prices leads to a price increase if more of the expensive item is delivered than originally ordered.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bbe163bd8b",
+        "q_num": 108,
+        "question": "A cone is such that its Curved Surface Area (CSA) equals 3 times its Base Area. If radius is r, find the slant height l.",
+        "options": {
+          "a": "r",
+          "b": "2r",
+          "c": "3r",
+          "d": "4r"
+        },
+        "answer": "c",
+        "solution": "Solution\nShortcut Trick\nGiven: Curved Surface Area (CSA) = 3 × Base Area\nFormula: πrl = 3 × πr^2\n\nBy canceling π and r from both sides:\n\nl = 3r\n∴ The correct answer is 3r.\n\nAlternate Method\nGiven:\nRadius of the cone = r\nSlant height of the cone = l\n\nFormula Used:\n1. Curved Surface Area (CSA) of a cone = πrl\n2. Base Area of a cone = πr^2\n\nCalculations:\nAccording to the question:\n\n⇒ CSA = 3 × Base Area\n⇒ π × r × l = 3 × (π × r^2)\n⇒ l = (3 × π × r × r) ÷ (π × r)\n⇒ l = 3r\n∴ The correct answer is 3r.\n\nAdditional Information\nTotal Surface Area (TSA)\n\nThe Total Surface Area of a cone includes both the curved part and the circular base: TSA = πr(l + r).\n\nRelationship between h, r, and l\n\nThe height (h), radius (r), and slant height (l) of a cone are related by the Pythagoras Theorem: l^2 = r^2 + h^2.\n\nVolume of a Cone\n\nThe Volume of a cone represents the capacity of the cone and is given by: V = (1/3)πr^2h.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0fed2647bc",
+        "q_num": 109,
+        "question": "A circular table with a radius of 30 cm has a decorative cut where a chord subtends a 90° angle at the center. What percentage of the table's total area does the major segment represent? (Use π = 3.14)",
+        "options": {
+          "a": "75.50%",
+          "b": "85.50",
+          "c": "71.50",
+          "d": "90.92"
+        },
+        "answer": "d",
+        "solution": "Solution\nShortcut Trick\nPercentage of Major Segment = [1 − (Fractional Area of Minor Segment)] × 100\nMinor Segment Fraction = (θ/360) − (sin θ / 2π)\nFor θ = 90°: Ratio = (90/360) − (1 / (2 × 3.14)) = 0.25 − 0.1592 = 0.0908\nMajor Segment % = (1 − 0.0908) × 100 = 90.92%\n∴ The correct answer is 90.92%.\n\nAlternate Method\nGiven:\nRadius of circular table (r) = 30 cm\nCentral angle (θ) = 90°\nπ = 3.14\n\nFormula used:\nArea of circle = π × r^2\nArea of sector = (θ/360) × π × r^2\nArea of segment = Area of sector − Area of triangle\nArea of triangle = (1/2) × r^2 × sin(θ)\nPercentage of major segment = (Area of major segment/Area of circle) × 100\n\nCalculation:\n⇒ Area of circle = 3.14 × 30^2\n⇒ Area of circle = 3.14 × 900 = 2826 cm^2\n⇒ Area of sector = (90/360) × 3.14 × 30^2\n⇒ Area of sector = (1/4) × 3.14 × 900 = 706.5 cm^2\n⇒ Area of triangle = (1/2) × 30^2 × sin 90°\n⇒ Area of triangle = (1/2) × 900 × 1 = 450 cm^2\n⇒ Area of minor segment = 706.5 − 450 = 256.5 cm^2\n⇒ Area of major segment = 2826 − 256.5 = 2569.5 cm^2\n⇒ Percentage of major segment = (2569.5/2826) × 100\n⇒ Percentage of major segment = 90.9%\n∴ The correct answer is 90.9%.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bf35a68ae5",
+        "q_num": 110,
+        "question": "Two containers of the same volume are 40% and 50% full of water, respectively. They are then filled completely with milk. If the contents of both containers are mixed in a larger vessel, what is the percentage of milk in the final mixture?",
+        "options": {
+          "a": "0.45",
+          "b": "0.5",
+          "c": "0.55",
+          "d": "0.6"
+        },
+        "answer": "c",
+        "solution": "Let the volume of each container be 100 units. Container 1 has 40 units water ⇒ Milk filled = 100 − 40 = 60 units. Container 2 has 50 units water ⇒ Milk filled = 100 − 50 = 50 units. Total milk in mixture = 60 + 50 = 110 units; Total volume = 100 + 100 = 200 units. Fraction of milk in final mixture = 110 ÷ 200 = 0.55.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b305d91f01",
+        "q_num": 111,
+        "question": "A furniture store sells a dining table for ₹Z, making a 25% profit. During a festive season, they increase the marked price of the same table to ₹1.6Z. They then offer a special discount of 20% on this increased marked price. What will be the percentage profit made by the store during the festive season?",
+        "options": {
+          "a": "0.26",
+          "b": "0.56",
+          "c": "0.62",
+          "d": "0.6"
+        },
+        "answer": "d",
+        "solution": "Given the initial Selling Price is ₹Z and the profit is 25%, the Cost Price (CP) = Z ÷ 1.25 = 0.8Z. During the festive season, the new Marked Price is ₹1.6Z. With a 20% discount on the Marked Price, the new SP = 1.6Z × (1 − 0.20) = 1.28Z. Profit amount = New SP − CP = 1.28Z − 0.8Z = 0.48Z. Percentage profit (as a fraction) = 0.48Z ÷ 0.8Z = 0.6 (or 60%).",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1ce24447e2",
+        "q_num": 112,
+        "question": "Simplify: ((1.5 + (3/4)) ÷ (2.25 - (1/2))) + 0.6",
+        "options": {
+          "a": "1.8857",
+          "b": "2.8857",
+          "c": "3.8857",
+          "d": "4.8857"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nConvert the given fractions directly to decimals for faster calculation:\n\n⇒ 3/4 = 0.75 and 1/2 = 0.5\n\nSubstitute these values into the expression:\n\n⇒ ((1.5 + 0.75) ÷ (2.25 − 0.5)) + 0.6\n⇒ (2.25 ÷ 1.75) + 0.6 = (9 ÷ 7) + 0.6 ≈ 1.2857 + 0.6 = 1.8857\n∴ The correct answer is 1.8857.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0457527853",
+        "q_num": 113,
+        "question": "A container holds a mixture of three liquids A, B, and C in ratio 2 : 3 : 5. If 6 liters of liquid A, 12 liters of liquid B, and a certain amount of liquid C are added to the container, the new ratio of liquids A, B, and C becomes 3 : 5 : 8. Find the quantity (in liters) of liquid C added.",
+        "options": {
+          "a": "15 liters",
+          "b": "16 liters",
+          "c": "18 liters",
+          "d": "20 liters"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nEquating the initial and new ratios for liquids A and B: (2x + 6) ÷ (3x + 12) = 3 ÷ 5 ⇒ 10x + 30 = 9x + 36 ⇒ x = 6.\nNew quantity of A = 2(6) + 6 = 18 liters (which represents 3 parts of the new ratio).\nSince 3 parts = 18 liters, 1 part = 6 liters, and new C (8 parts) = 8 × 6 = 48 liters.\nInitial quantity of C = 5x = 5(6) = 30 liters.\nQuantity of C added = Final C − Initial C = 48 − 30 = 18 liters.\n∴ The correct answer is 18 liters.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_be27860cac",
+        "q_num": 114,
+        "question": "Gautam started a business with a sum of ₹ 60,000. Jatin joined him 8 months later with a sum of ₹ 35,000. At what respective ratio will the two share the profit after two years?",
+        "options": {
+          "a": "18:7",
+          "b": "15:7",
+          "c": "12:7",
+          "d": "5:7"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nIn a partnership, the profit ratio is directly proportional to the product of Investment and Time.\n\nGautam's equivalent investment = 60000 × 24 months\nJatin's equivalent investment = 35000 × 16 months\nProfit Ratio = (60000 × 24) : (35000 × 16) = (60 × 3) : (35 × 2) = 180 : 70 = 18 : 7\n∴ The correct answer is 18:7.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_caebe1f77e",
+        "q_num": 115,
+        "question": "A pyramid has a base area of 60 cm² and height 9 cm. What is its volume?",
+        "options": {
+          "a": "180 cm³",
+          "b": "280 cm³",
+          "c": "240 cm³",
+          "d": "160 cm³"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nThe volume of any pyramid is directly one-third of the product of its base area and height.\n\nVolume = (1 ÷ 3) × Base Area × Height\nVolume = (1 ÷ 3) × 60 × 9 = 180 cm³\n∴ The correct answer is 180 cm³.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_934ebf7509",
+        "q_num": 116,
+        "question": "In △ABC, a line segment DE is parallel to BC, with D on AB and E on AC. If the ratio of the area of △ADE to the area of the trapezoid DECB is 4:21, what is the ratio of AD to DB?",
+        "options": {
+          "a": "2:3",
+          "b": "2:5",
+          "c": "3:5",
+          "d": "4:5"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nArea of △ADE : Area of trapezoid DECB = 4 : 21\nTotal Area of △ABC = Area(△ADE) + Area(DECB) = 4 + 21 = 25 parts\nRatio of corresponding sides AD : AB = √(Area of △ADE) : √(Area of △ABC) = √4 : √25 = 2 : 5\nSince point D is on AB, DB = AB − AD = 5 − 2 = 3 parts\n∴ The correct answer is 2:3.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c79d93ecc0",
+        "q_num": 117,
+        "question": "There are two parallel chords measuring 16 cm and 12 cm, both situated on the same side of the center of a circle. The space between the two chords is 2 cm. What is the radius of the circle?",
+        "options": {
+          "a": "8 cm",
+          "b": "10 cm",
+          "c": "12 cm",
+          "d": "15 cm"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nThe half-lengths of the two chords are 16 ÷ 2 = 8 cm and 12 ÷ 2 = 6 cm.\n\nIn a circle, the radius, half-chord, and perpendicular distance from the center form a right-angled triangle.\n\nNotice that the lengths 6, 8, and 10 form a standard Pythagorean triplet (6² + 8² = 10²).\n\nThe distances from the center to the chords are 6 cm and 8 cm, and their difference is 8 − 6 = 2 cm, matching the given spacing perfectly.\n\nTherefore, the hypotenuse, which represents the circle's radius, must be 10 cm.\n∴ The correct answer is 10 cm.\n\nAlternate Method\nGiven:\nLength of larger chord (AB) = 16 cm\nLength of smaller chord (CD) = 12 cm\nSpace between the chords = 2 cm\n\nFormula Used:\nA perpendicular drawn from the center of a circle to a chord bisects the chord.\n\nAccording to Pythagoras theorem: r² = (Perpendicular distance)² + (Half of chord)²\n\nCalculations:\nLet the perpendicular distance of the larger chord from the center be x cm.\n\nSince both chords are on the same side of the center, the distance of the smaller chord from the center will be (x + 2) cm.\n\nHalf of larger chord = 16 ÷ 2 = 8 cm\nHalf of smaller chord = 12 ÷ 2 = 6 cm\n\nApplying the Pythagoras theorem for the larger chord:\n\n⇒ r² = x² + 8²\n⇒ r² = x² + 64 --- (Equation 1)\n\nApplying the Pythagoras theorem for the smaller chord:\n\n⇒ r² = (x + 2)² + 6²\n⇒ r² = x² + 4x + 4 + 36\n⇒ r² = x² + 4x + 40 --- (Equation 2)\n\nEquating (Equation 1) and (Equation 2):\n\n⇒ x² + 64 = x² + 4x + 40\n⇒ 4x = 64 − 40\n⇒ 4x = 24\n⇒ x = 6 cm\n\nSubstituting the value of x into Equation 1:\n\n⇒ r² = 6² + 64\n⇒ r² = 36 + 64 = 100\n⇒ r = √100 = 10 cm\n∴ The correct answer is 10 cm.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cb94c333db",
+        "q_num": 118,
+        "question": "What is the area of the segment formed by a chord in a circle of radius 12 cm, if the angle subtended at the center is 150°?",
+        "options": {
+          "a": "60π-36",
+          "b": "36π-36",
+          "c": "60π-72",
+          "d": "36π-72"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nDirect formula for the Area of a Segment:\n\n⇒ Area = r² × [(π × θ ÷ 360°) − (sin θ ÷ 2)]\n⇒ Area = 12² × [(π × 150° ÷ 360°) − (sin 150° ÷ 2)]\n⇒ Area = 144 × [(5π ÷ 12) − (1 ÷ 4)]\n⇒ Area = 60π − 36 cm²\n∴ The correct answer is 60π − 36 cm².\n\nAlternate Method\nArea of Segment = Area of Sector − Area of Triangle\n\nGiven:\n⇒ Radius of the circle (r) = 12 cm\n⇒ Angle subtended at the center (θ) = 150°\n\nFormula Used:\n⇒ Area of Sector = (θ ÷ 360°) × πr²\n⇒ Area of Triangle = (1 ÷ 2) × r² × sin θ\n⇒ Area of Segment = Area of Sector − Area of Triangle\n\nCalculations:\n⇒ Area of Sector = (150° ÷ 360°) × π × 12²\n⇒ Area of Sector = (5 ÷ 12) × π × 144 = 60π cm²\n⇒ To find the area of the triangle, we use sin(150°) = sin(180° − 30°) = sin(30°) = 1 ÷ 2\n⇒ Area of Triangle = (1 ÷ 2) × 12² × (1 ÷ 2)\n⇒ Area of Triangle = (1 ÷ 2) × 144 × (1 ÷ 2) = 36 cm²\n⇒ Area of Segment = 60π − 36 cm²\n∴ The correct answer is 60π − 36 cm².",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_060894d026",
+        "q_num": 119,
+        "question": "A and B invest ₹50,000 and ₹70,000 respectively in a business. After 1 year, the total profit is distributed including simple interest at 10% per annum on the capital of each partner. If the total profit including interest is ₹18,000, what is A's share of the profit?",
+        "options": {
+          "a": "₹7,000",
+          "b": "₹7,500",
+          "c": "₹8,000",
+          "d": "₹8,500"
+        },
+        "answer": "b",
+        "solution": "Total Capital = 50,000 + 70,000 = 1,20,000.\nTotal Interest to be paid = 10% of 1,20,000 = ₹12,000.\nRemaining profit to be shared = 18,000 − 12,000 = ₹6,000.\nCapital ratio A : B = 5 : 7 → A's profit share = (5 ÷ 12) × 6,000 = ₹2,500.\nA's total share = Interest (5,000) + Profit (2,500) = ₹7,500.\n∴ The correct answer is ₹7,500.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a6bbd9304c",
+        "q_num": 120,
+        "question": "A sector of a circle with radius 6 cm has a central angle of 60°. What is the area of the corresponding segment?",
+        "options": {
+          "a": "(3π-9√3) sq. cm",
+          "b": "(6π-9√3) sq. cm",
+          "c": "(6π-18√3) sq. cm",
+          "d": "(12π-18√3) sq. cm"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nArea of a segment = r^2 \\times [(\\pi \\theta \\div 360°) - (\\sin \\theta \\div 2)]\n\\Rightarrow \\text{Area} = 6^2 \\times [(\\pi \\times 60° \\div 360°) - (\\sin 60° \\div 2)]\n\\Rightarrow \\text{Area} = 36 \\times [(\\pi \\div 6) - (\\sqrt{3} \\div 4)]\n\\Rightarrow \\text{Area} = (6\\pi - 9\\sqrt{3}) \\text{ sq. cm}\n\n\\therefore The correct answer is (6\\pi - 9\\sqrt{3}) sq. cm.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_760136e99e",
+        "q_num": 121,
+        "question": "There are 5 consecutive even numbers X₁, X₂, X₃, X₄, X₅ and 4 consecutive odd numbers Y₁, Y₂, Y₃, Y₄. The average of the even numbers is 4 more than the average of the odd numbers. If the sum of the even numbers is 32 more than the sum of the odd numbers, find the average of the odd numbers.",
+        "options": {
+          "a": "16",
+          "b": "4",
+          "c": "12",
+          "d": "8"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nLet the average of the 4 consecutive odd numbers be A.\nAverage of the 5 consecutive even numbers = A + 4\nGiven: Sum of even numbers − Sum of odd numbers = 32\n⇒ 5 × (A + 4) − 4 × A = 32\n⇒ 5A + 20 − 4A = 32\n⇒ A = 32 - 20 = 12\n∴ The correct answer is 12.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2050759f9d",
+        "q_num": 122,
+        "question": "A is three times as efficient as a worker than B, which allows A to complete a job in 60 days less than B. If they work together, they can finish the job in:",
+        "options": {
+          "a": "19.2 days",
+          "b": "22.5 days",
+          "c": "16 days",
+          "d": "20 days"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nEfficiency ratio of A : B = 3 : 1, so Time ratio A : B = 1 : 3.\nDifference in time ratio = 3 − 1 = 2 units.\n2 units = 60 days ⇒ 1 unit = 30 days (A's time) and 3 units = 90 days (B's time).\nTime taken together = (30 × 90) ÷ (30 + 90) = 2700 ÷ 120 = 22.5 days.\n∴ The correct answer is 22.5 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_41f8db1e96",
+        "q_num": 123,
+        "question": "A cyclist has to cover a distance of 80 km. After cycling for 4 hours and 48 minutes, he finds that he has completed \\(\\frac{4}{5}\\) th of the total distance. What is his speed in km/h?",
+        "options": {
+          "a": "15.45 km/h",
+          "b": "16 km/h",
+          "c": "13.33 km/h",
+          "d": "10 km/h"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nDistance covered = 80 × (4/5) = 64 km.\nTime = 4 hrs 48 mins = 4 + (48 ÷ 60) = 24/5 hours.\nSpeed = Distance ÷ Time = 64 × (5/24) = 40/3 = 13.33 km/h.\n∴ The correct answer is 13.33 km/h.\n\nAlternate Method\nGiven:\nTotal Distance = 80 km\nTime taken = 4 hours 48 minutes\nFraction of distance completed = 4/5\n\nFormula Used:\nSpeed = Distance ÷ Time\n\nCalculations:\n⇒ Distance covered = 80 × (4/5) = 64 km\n⇒ Time taken in hours = 4 + (48 ÷ 60)\n⇒ Time taken = 4 + 4/5 = 24/5 hours\n⇒ Speed = 64 ÷ (24/5)\n⇒ Speed = 64 × (5/24)\n⇒ Speed = 40/3 = 13.33 km/h\n∴ The correct answer is 13.33 km/h.\n\nAdditional Information\nUnit Conversion\n\nTo convert km/h to m/s, multiply by 5/18. To convert m/s to km/h, multiply by 18/5.\n\nAverage Speed\n\nAverage Speed = Total Distance ÷ Total Time. If equal distances are covered at speeds x and y, Average Speed = 2xy ÷ (x + y).\n\nRelative Speed\n\nIf two objects move in opposite directions, Relative Speed = S1 + S2. If moving in the same direction, Relative Speed = |S1 − S2|.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -2409,6 +3242,686 @@
           "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_e04081d063",
+        "q_num": 68,
+        "question": "The number of red, blue, and green marbles in a bag is in the ratio 3 : 4 : 6. If 20 red marbles, 15 blue marbles, and an unknown number of green marbles are added to the bag, the ratio of red, blue, and green marbles becomes 4 : 5 : 7. Determine the number of green marbles added.",
+        "options": {
+          "a": "3",
+          "b": "5",
+          "c": "7",
+          "d": "9"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nBy applying the cross-multiplication method on Red and Blue marbles:\n\nInitial Ratio → 3 : 4 | Final Ratio → 4 : 5 | Quantity Added → +20, +15\n1 initial ratio unit = [(4 × 15) − (5 × 20)] ÷ [(3 × 5) − (4 × 4)] = (60 − 100) ÷ (15 − 16) = 40.\nInitial Green marbles = 6 × 40 = 240.\nNew Red marbles = (3 × 40) + 20 = 140, which represents 4 parts in the final ratio ⇒ 1 final unit = 140 ÷ 4 = 35.\nNew Green marbles = 7 × 35 = 245 ⇒ Green marbles added = 245 − 240 = 5.\n∴ The correct answer is 5.\n\nAlternate Method\nGiven:\nInitial ratio of red, blue, and green marbles = 3 : 4 : 6\nMarbles added = 20 red, 15 blue, and an unknown number of green marbles (y).\nFinal ratio of red, blue, and green marbles = 4 : 5 : 7\nInitial Ratio\nRed = 3x\nBlue = 4x\nGreen = 6x\nFinal Ratio\nRed = 4 parts\nBlue = 5 parts\nGreen = 7 parts\n+20\n+15\n+y\n\nCalculations:\n⇒ Let the initial number of red, blue, and green marbles be 3x, 4x, and 6x respectively.\n⇒ After adding 20 red and 15 blue marbles, the new counts become (3x + 20) and (4x + 15).\n⇒ Given the new ratio of red to blue is 4 : 5.\n⇒ (3x + 20) ÷ (4x + 15) = 4 ÷ 5\n⇒ 5 × (3x + 20) = 4 × (4x + 15)\n⇒ 15x + 100 = 16x + 60\n⇒ 16x − 15x = 100 − 60\n⇒ x = 40\n⇒ Initial red marbles = 3 × 40 = 120\n⇒ Initial green marbles = 6 × 40 = 240\n⇒ New red marbles = 120 + 20 = 140\n⇒ Let the number of green marbles added be y. The new count of green marbles is (240 + y).\n⇒ Given the new ratio of red to green is 4 : 7.\n⇒ 140 ÷ (240 + y) = 4 ÷ 7\n⇒ 240 + y = (140 × 7) ÷ 4\n⇒ 240 + y = 35 × 7 = 245\n⇒ y = 245 − 240 = 5\n∴ The correct answer is 5.\n\nAdditional Information\nRatio and Proportion\n\nA ratio compares two quantities, indicating how many times one number contains another. For quantities a and b, it is represented as a : b or the fraction a/b.\n\nCross-Multiplication Method in Ratios\n\nWhen a given ratio a : b changes to c : d by adding quantities x and y respectively, the value of 1 initial ratio unit is directly obtained using the formula (cy − dx) ÷ (ad − bc).",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b0428e0ef9",
+        "q_num": 69,
+        "question": "A candy shop owner buys three kinds of candies: red, blue, and green. Red candies are purchased at 3 for ₹15, blue candies at 4 for ₹18, and green candies at 5 for ₹22. He mixes them in the ratio 1 : 1 : 2. He sells all the mixed candies at 2 for ₹10. What is his approximate gain or loss percentage?",
+        "options": {
+          "a": "Loss of 9.2%",
+          "b": "Profit of 9.29%",
+          "c": "Profit of 10%",
+          "d": "Loss of 10%"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nCP per candy: Red = 15 ÷ 3 = ₹5, Blue = 18 ÷ 4 = ₹4.5, Green = 22 ÷ 5 = ₹4.4\nTotal CP for 4 mixed candies (in ratio 1:1:2) = 5 + 4.5 + (2 × 4.4) = ₹18.3\nSP for 4 mixed candies = 4 × (10 ÷ 2) = ₹20\nProfit = 20 − 18.3 = ₹1.7\nProfit % = (1.7 ÷ 18.3) × 100 ≈ 9.29%\n∴ The correct answer is Profit of 9.29%.\n\nAlternate Method\nCandy Mixture (1 : 1 : 2 Ratio)\n1 Red @ ₹5\n1 Blue @ ₹4.5\n2 Green @ ₹4.4\nTotal CP = ₹18.3\n+ Profit ₹1.7\nTotal SP = ₹20\nProfit % = (1.7 ÷ 18.3) × 100 ≈ 9.29%\n\nGiven:\nRed candies bought at 3 for ₹15\n\nBlue candies bought at 4 for ₹18\n\nGreen candies bought at 5 for ₹22\n\nMixture ratio = 1 : 1 : 2\nSelling price = 2 for ₹10\n\nCalculations:\n⇒ Let the number of Red, Blue, and Green candies mixed be 1, 1, and 2 respectively.\n⇒ Total candies mixed = 1 + 1 + 2 = 4 candies\n⇒ Cost Price (CP) of 1 Red candy = 15 ÷ 3 = ₹5\n⇒ Cost Price (CP) of 1 Blue candy = 18 ÷ 4 = ₹4.5\n⇒ Cost Price (CP) of 1 Green candy = 22 ÷ 5 = ₹4.4\n⇒ Total Cost Price of 4 mixed candies = (1 × 5) + (1 × 4.5) + (2 × 4.4)\n⇒ Total CP = 5 + 4.5 + 8.8 = ₹18.3\n⇒ Selling Price (SP) of 1 candy = 10 ÷ 2 = ₹5\n⇒ Total SP of 4 mixed candies = 4 × 5 = ₹20\n⇒ Since SP is greater than CP, there is a profit.\n⇒ Profit = SP − CP = 20 − 18.3 = ₹1.7\n⇒ Profit % = (Profit ÷ Total CP) × 100\n⇒ Profit % = (1.7 ÷ 18.3) × 100\n⇒ Profit % = 170 ÷ 18.3 ≈ 9.289% ≈ 9.29%\n∴ The correct answer is Profit of 9.29%.\n\nAdditional Information\nProfit & Loss Formulas\n\nProfit occurs when Selling Price (SP) > Cost Price (CP). Profit = SP − CP. Profit Percentage is calculated on the total Cost Price: (Profit ÷ CP) × 100.\n\nMixture Average Cost\n\nWhen different quantities of items are mixed, the Average Cost Price is simply the total cost of all components combined, divided by the total physical quantity.\n\nRatio Multipliers Trick\n\nInstead of finding a large common multiple (LCM) to equate quantities, directly taking sample quantities equal to the given ratio (such as 1, 1, and 2 units) makes percentage-based calculations perfectly proportional and much faster.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a4cd545469",
+        "q_num": 70,
+        "question": "A 100-litre solution contains acid and water in the ratio 3:2. Some quantity of this solution is removed and replaced with pure acid. If the final ratio of acid to water becomes 7:3, how many litres of solution were replaced?",
+        "options": {
+          "a": "35 litres",
+          "b": "25 litres",
+          "c": "50 litres",
+          "d": "20 litres"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nApply the alligation method on the water concentration of the mixtures.\n\nInitial mixture water = 40%, Added pure acid water = 0%, Final mixture water = 30%.\nRatio of remaining mixture to added pure acid = (30 − 0) : (40 − 30) = 30 : 10 = 3 : 1.\nThis means 1 part out of a total of (3 + 1) = 4 parts was replaced.\nReplaced quantity = 1 / 4 of total volume = (1 / 4) × 100 = 25 litres.\n∴ The correct answer is 25 litres.\n\nAlternate Method\nGiven:\nInitial volume of the solution = 100 litres\nInitial ratio of acid to water = 3 : 2\nFinal ratio of acid to water = 7 : 3\n\nCalculations:\n⇒ Quantity of water in the initial solution = (2 / 5) × 100 = 40 litres\n⇒ Let x litres of the solution be removed and replaced with pure acid.\n⇒ Quantity of water removed = (2 / 5) × x = 0.4x litres\n⇒ Remaining water in the solution = 40 − 0.4x litres\n⇒ Since only pure acid is added back, the overall quantity of water in the final mixture does not increase.\n⇒ Final volume of the solution is maintained at 100 litres.\n⇒ Quantity of water in the final solution = (3 / 10) × 100 = 30 litres\n⇒ Equating the remaining water to final water:\n⇒ 40 − 0.4x = 30\n⇒ 0.4x = 10\n⇒ x = 10 ÷ 0.4 = 25 litres\n∴ The correct answer is 25 litres.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5eb839e114",
+        "q_num": 71,
+        "question": "A circular park having a radius of 14 m. If a 1.5 m wide path is built around it, what is the approximate area of the path?",
+        "options": {
+          "a": "139 m²",
+          "b": "135 m²",
+          "c": "142 m²",
+          "d": "150 m²"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nArea of a circular path outside a circle = π × w × (2r + w)\nArea = (22 ÷ 7) × 1.5 × (2 × 14 + 1.5)\nArea = (33 ÷ 7) × 29.5 = 973.5 ÷ 7 ≈ 139.07 m²\n∴ The correct answer is 139 m².\n\nAlternate Method\nGiven:\n⇒ Radius of the circular park, r = 14 m\n⇒ Width of the path built around it, w = 1.5 m\n\nFormula Used:\n⇒ Area of the path = Area of the outer circle − Area of the inner circle\n⇒ Area of a circle = πR²\n\nCalculations:\n⇒ Outer radius, R = r + w\n⇒ R = 14 + 1.5 = 15.5 m\n⇒ Area of the path = πR² − πr²\n⇒ Area = π × (15.5² − 14²)\n⇒ Area = (22 ÷ 7) × (15.5 + 14) × (15.5 − 14)\n⇒ Area = (22 ÷ 7) × 29.5 × 1.5\n⇒ Area = (33 ÷ 7) × 29.5\n⇒ Area = 973.5 ÷ 7 ≈ 139.07 m²\n⇒ The approximate area of the path is 139 m².\n∴ The correct answer is 139 m².",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_98e6bb2532",
+        "q_num": 72,
+        "question": "Two individuals, A and B, have rented a field. A places 21 horses in the field for 6 months and 15 cows for 2 months. B adds 15 cows for 6 months and 40 sheep for 7.5 months. If 3 horses consume the same amount of food as 5 cows, and 6 cows eat as much as 10 sheep, what portion of the rent should A cover?",
+        "options": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nConvert all animals to equivalent cows to find the total grazing units.\n\n1 horse = 5/3 cows and 1 sheep = 3/5 cows.\nA's total grazing = (21 × 5/3 × 6) + (15 × 2) = 210 + 30 = 240 cow-months.\nB's total grazing = (15 × 6) + (40 × 3/5 × 7.5) = 90 + 180 = 270 cow-months.\nA's rent portion = 240 ÷ (240 + 270) = 240 ÷ 510 = 8/17.\n∴ The correct answer is 8/17.\n\nAlternate Method\nGiven:\nA places 21 horses for 6 months and 15 cows for 2 months.\n\nB places 15 cows for 6 months and 40 sheep for 7.5 months.\n\nFood equality: 3 horses = 5 cows and 6 cows = 10 sheep.\n\nFormula Used:\nTotal Usage = Equivalent Number of Animals × Time Period\n\n240 Units\nRatio: 8\n270 Units\nRatio: 9\nA's Rent Share\nB's Rent Share\n\nCalculations:\n⇒ First, convert all animals into equivalent cow units for calculation consistency.\n⇒ 3 horses = 5 cows ⇒ 1 horse = 5/3 cows\n⇒ 6 cows = 10 sheep ⇒ 1 sheep = 6/10 = 3/5 cows\n⇒ Total grazing consumption for A = (21 × 5/3 × 6) + (15 × 2)\n⇒ Total equivalent units for A = 210 + 30 = 240 cow-months\n⇒ Total grazing consumption for B = (15 × 6) + (40 × 3/5 × 7.5)\n⇒ Total equivalent units for B = 90 + 180 = 270 cow-months\n⇒ The total rent will be distributed in the ratio of their total grazing consumption.\n⇒ Ratio of rent share (A : B) = 240 : 270 = 8 : 9\n⇒ Total ratio parts = 8 + 9 = 17 parts\n⇒ Portion of the rent A should cover = 8 / 17\n∴ The correct answer is 8/17.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_77725b4e7a",
+        "q_num": 73,
+        "question": "Two individuals, A and B rent a pasture. A uses 16 cows for a duration of 3 months and 20 sheep for 4 months and B uses 30 sheep for 6 months. If 4 cows are equivalent to 8 sheep, determine A's portion of the rent.",
+        "options": {
+          "a": "\\(\\frac{44}{89}\\)",
+          "b": "\\(\\frac{54}{89}\\)",
+          "c": "\\(\\frac{64}{89}\\)",
+          "d": "\\(\\frac{74}{89}\\)"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nConvert cows to equivalent sheep: 4 cows = 8 sheep ⇒ 1 cow = 2 sheep.\nA's equivalent sheep-months = (16 × 2 × 3) + (20 × 4) = 96 + 80 = 176.\nB's equivalent sheep-months = 30 × 6 = 180.\nRatio of A's rent to B's rent = 176 : 180 = 44 : 45.\nA's portion out of the total rent = 44 ÷ (44 + 45) = 44/89.\n∴ The correct answer is 44/89.\n\nAlternate Method\nGiven:\nA uses 16 cows for 3 months and 20 sheep for 4 months.\n\nB uses 30 sheep for 6 months.\n\nEquivalence: 4 cows = 8 sheep.\n\nFormula Used:\nRent Share Ratio = Total equivalent animal-months of A : Total equivalent animal-months of B\n\nRent Sharing Proportion\nA: 176 units\nB: 180 units\nRatio = 44\nRatio = 45\n\nCalculations:\n⇒ First, find the sheep equivalent for A's cows.\n⇒ 4 cows = 8 sheep → 1 cow = 2 sheep.\n⇒ A's 16 cows = 16 × 2 = 32 sheep.\n⇒ Total equivalent sheep-months for A = (32 sheep × 3 months) + (20 sheep × 4 months).\n⇒ Total for A = 96 + 80 = 176 sheep-months.\n⇒ Total equivalent sheep-months for B = 30 sheep × 6 months.\n⇒ Total for B = 180 sheep-months.\n⇒ Rent Ratio (A : B) = 176 : 180 = 44 : 45.\n⇒ Total proportion parts = 44 + 45 = 89.\n⇒ A's portion of the rent = 44/89.\n∴ The correct answer is 44/89.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_176b468af8",
+        "q_num": 74,
+        "question": "How many approximate kgs of sugar costing ₹45 per kg must be mixed with 25 kg of sugar costing ₹32 per kg so that a 15% gain may be obtained by selling the mixture at ₹43.70 per kg?",
+        "options": {
+          "a": "15 kg",
+          "b": "25 kg",
+          "c": "21 kg",
+          "d": "18 kg"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nFirst, find the Cost Price (CP) of the mixture from its Selling Price (SP) and Gain %.\n\nCP of mixture = SP ÷ (1 + Gain%) = 43.70 ÷ 1.15 = ₹38/kg\nUsing Alligation, Ratio of quantities = (38 − 32) : (45 − 38) = 6 : 7\n\nSince 7 parts correspond to 25 kg, 6 parts will correspond to: (25 ÷ 7) × 6 = 150 ÷ 7 ≈ 21.43 kg\n\n∴ The correct answer is 21 kg.\n\nAlternate Method\nGiven:\nCP of first type of sugar = ₹45/kg\nCP of second type of sugar = ₹32/kg\nQuantity of second type of sugar = 25 kg\nSP of mixture = ₹43.70/kg\nProfit on mixture = 15%\n\nCalculations:\n⇒ Mean CP of mixture = 43.70 × [100 ÷ (100 + 15)]\n⇒ Mean CP = (43.70 × 100) ÷ 115\n⇒ Mean CP = 4370 ÷ 115 = ₹38/kg\n⇒ Using the rule of alligation, the ratio of the quantities is:\n⇒ (Mean CP − CP2) : (CP1 − Mean CP) = (38 − 32) : (45 − 38) = 6 : 7\n⇒ Let the required quantity of the first type of sugar be x kg.\n⇒ x ÷ 25 = 6 ÷ 7\n⇒ x = (25 × 6) ÷ 7\n⇒ x = 150 ÷ 7 ≈ 21.43 kg\n⇒ Therefore, approximately 21 kg of the first type of sugar must be mixed.\n∴ The correct answer is 21 kg.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3b897bea5a",
+        "q_num": 75,
+        "question": "In a city, the current number of literate people is 25,000. If the number of literate males decreases by 5% and the number of literate females increases by 10%, the total literate population becomes 25,250. What is the present number of literate males in the city?",
+        "options": {
+          "a": "12,500",
+          "b": "14,000",
+          "c": "15,000",
+          "d": "16,500"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nNet increase in population = 25250 − 25000 = 250.\nOverall percentage change = (250 ÷ 25000) × 100 = +1%.\n\nUsing the Alligation method on the percentage change of Males (−5%) and Females (+10%):\n\nRatio of Males to Females = (10 − 1) : (1 − (−5)) = 9 : 6 = 3 : 2.\nPresent number of literate males = (3 ÷ 5) × 25000 = 15000.\n∴ The correct answer is 15,000 males.\n\nAlternate Method\nGiven:\nTotal current literate population = 25,000\nNew total literate population = 25,250\nNet increase = 25,250 − 25,000 = 250\n\nCalculations:\nLet the current number of literate males be M and females be F.\n⇒ M + F = 25,000 --- (Equation 1)\n\nThe number of males decreases by 5% and females increases by 10%, resulting in a net increase of 250.\n\n⇒ 10% of F − 5% of M = 250\n⇒ (10 ÷ 100) × F − (5 ÷ 100) × M = 250\n\nMultiplying the entire equation by 100:\n\n⇒ 10F − 5M = 25,000\n\nDividing by 5 to simplify:\n\n⇒ 2F − M = 5,000 --- (Equation 2)\n\nAdding Equation 1 and Equation 2:\n\n⇒ (M + F) + (2F − M) = 25,000 + 5,000\n⇒ 3F = 30,000\n⇒ F = 10,000\n\nSubstituting the value of F back into Equation 1:\n\n⇒ M + 10,000 = 25,000\n⇒ M = 15,000\n∴ The correct answer is 15,000 males.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f57003dadc",
+        "q_num": 76,
+        "question": "Evaluate the expression: \\(\\left(\\frac{1}{3-\\sqrt{8}}\\right) - \\left(\\frac{1}{\\sqrt{8}-\\sqrt{7}}\\right) + \\left(\\frac{1}{\\sqrt{7}-\\sqrt{6}}\\right) - \\left(\\frac{1}{\\sqrt{6}-\\sqrt{5}}\\right) + \\left(\\frac{1}{\\sqrt{5}-2}\\right) = ?\\)",
+        "options": {
+          "a": "5",
+          "b": "3",
+          "c": "2",
+          "d": "0"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nRewrite 3 as √9 and 2 as √4 to see the continuous pattern.\n\nRationalizing 1/(√a − √b) gives √a + √b when a − b = 1.\nThe given expression evaluates to: (√9 + √8) − (√8 + √7) + (√7 + √6) − (√6 + √5) + (√5 + √4)\n\nAll intermediate terms cancel out, leaving only the first and last parts: √9 + √4 = 3 + 2 = 5\n\n∴ The correct answer is 5.\n\nAlternate Method\nGiven:\n1/(3 − √8) − 1/(√8 − √7) + 1/(√7 − √6) − 1/(√6 − √5) + 1/(√5 − 2)\n\nFormula Used:\n(a − b)(a + b) = a^2 − b^2\n\nCalculations:\n⇒ Rationalize the first term:\n⇒ 1/(3 − √8) = (3 + √8) / (3^2 − (√8)^2) = (3 + √8) / (9 − 8) = 3 + √8\n⇒ Rationalize the second term:\n⇒ 1/(√8 − √7) = (√8 + √7) / ((√8)^2 − (√7)^2) = (√8 + √7) / (8 − 7) = √8 + √7\n⇒ Rationalize the third term:\n⇒ 1/(√7 − √6) = (√7 + √6) / (7 − 6) = √7 + √6\n⇒ Rationalize the fourth term:\n⇒ 1/(√6 − √5) = (√6 + √5) / (6 − 5) = √6 + √5\n⇒ Rationalize the fifth term:\n⇒ 1/(√5 − 2) = (√5 + 2) / ((√5)^2 − 2^2) = (√5 + 2) / (5 − 4) = √5 + 2\n⇒ Substitute all these simplified values back into the original expression:\n⇒ (3 + √8) − (√8 + √7) + (√7 + √6) − (√6 + √5) + (√5 + 2)\n⇒ Expand by applying the minus signs:\n⇒ 3 + √8 − √8 − √7 + √7 + √6 − √6 − √5 + √5 + 2\n⇒ Cancel out the opposite matching pairs:\n⇒ 3 + 0 + 0 + 0 + 0 + 2 = 5\n∴ The correct answer is 5.\n\nAdditional Information\nRationalization of Surds\n\nTo remove a square root surd from the denominator, multiply both the numerator and denominator by its conjugate. The conjugate of (√a − √b) is (√a + √b).\n\nDifference of Squares Formula\nThe standard algebraic identity (x − y)(x + y) = x^2 − y^2 is widely applied during rationalization to eliminate square root symbols entirely from denominators.\n\nContinuous Series Simplification\n\nWhen solving a continuous sequence of surd fractions, locating patterns like differences of 1 will allow quick cancellation of intermediate terms, drastically reducing calculation time.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_87cac6a6e2",
+        "q_num": 77,
+        "question": "The average of 13 numbers is 70. The average of the first five numbers is 60. The average of the next five numbers is 25% higher than the average of the first five numbers. The 11th number is 6 less than the 13th number, and the 12th number is 4 greater than the 13th number. What is the average of the 11th and 12th numbers?",
+        "options": {
+          "a": "78",
+          "b": "77",
+          "c": "76",
+          "d": "74"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nNet deviation of the first 10 numbers from the overall average 70 = 5 × (60 − 70) + 5 × (75 − 70) = −50 + 25 = −25.\n\nTo balance the overall average, the sum of the last 3 numbers must be = 3 × 70 − (−25) = 235.\n\nLet the 13th number be x. Then 11th = x − 6, and 12th = x + 4.\nSum = (x − 6) + (x + 4) + x = 3x − 2 = 235 ⇒ x = 79.\nThe 11th number = 73, and the 12th number = 83. Their average = (73 + 83) ÷ 2 = 78.\n∴ The correct answer is 78.\n\nAlternate Method\nGiven:\nAverage of 13 numbers = 70\nAverage of first 5 numbers = 60\nAverage of next 5 numbers = 60 + (25% of 60) = 75\n11th number = 13th number − 6\n12th number = 13th number + 4\n\n1st 5 Nums\nAvg: 60\nSum: 300\nNext 5 Nums\nAvg: 75\nSum: 375\n11th, 12th, 13th\nAvg: ?\nSum: 235\nTotal Sum of 13 Nums = 910 (Avg = 70)\n\nFormula Used:\nSum of observations = Average × Number of observations\n\nCalculations:\n⇒ Total sum of 13 numbers = 13 × 70 = 910\n⇒ Sum of first 5 numbers = 5 × 60 = 300\n⇒ Sum of next 5 numbers = 5 × 75 = 375\n⇒ Sum of the remaining 3 numbers (11th, 12th, 13th) = 910 − (300 + 375) = 235\n⇒ Let the 13th number be x.\n⇒ 11th number = x − 6\n⇒ 12th number = x + 4\n⇒ Sum of these three numbers = (x − 6) + (x + 4) + x = 3x − 2\n⇒ 3x − 2 = 235\n⇒ 3x = 237\n⇒ x = 79\n⇒ 11th number = 79 − 6 = 73\n⇒ 12th number = 79 + 4 = 83\n⇒ Average of 11th and 12th numbers = (73 + 83) ÷ 2 = 156 ÷ 2 = 78\n∴ The correct answer is 78.\n\nAdditional Information\nWeighted Average\n\nWhen different groups have different averages, the combined average is calculated as (n1A1 + n2A2 + ...) ÷ (n1 + n2 + ...).\n\nNet Deviation Method\n\nThe sum of deviations of all observations from their arithmetic mean is always zero. This property is highly useful for finding missing observations in a data set without calculating heavy sum values.\n\nSuccessive Percentage Increase\n\nIf a base value is increased by x%, the new value is obtained by multiplying the base by (1 + x/100). For example, a 25% increase on a base of 60 makes it 60 × 1.25 = 75.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b82da0c6b0",
+        "q_num": 78,
+        "question": "If the compound interest on a certain sum at 16(2/3)% per annum for 3 years is ₹1270, find the simple interest on the same sum at the same rate and for the same period.",
+        "options": {
+          "a": "₹1080",
+          "b": "₹1000",
+          "c": "₹1500",
+          "d": "₹2000"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nRate = 16 2/3% = 1/6.\nLet Principal = 6^3 = 216 units.\nAmount after 3 years = 7^3 = 343 units ⇒ CI = 343 − 216 = 127 units.\nGiven CI = ₹1270 ⇒ 127 units = 1270 ⇒ 1 unit = ₹10.\nSI for 3 years = 216 × (1/6) × 3 = 108 units = 108 × 10 = ₹1080.\n∴ The correct answer is ₹1080.",
+        "tags": {
+          "topic": "Compound Interest",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ddac9b7adb",
+        "q_num": 79,
+        "question": "An antique dealer sold three items, A, B, and C, with their selling prices in the ratio 4:5:6. He suffered a loss of 10% on item A, made a profit of 50% on item B, and broke even (no profit, no loss) on item C. What was his approximate percentage gain or loss in the overall deal?",
+        "options": {
+          "a": "loss of 8.88%",
+          "b": "profit of 8.88%",
+          "c": "profit of 10.88%",
+          "d": "loss of 10.88%"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nTo avoid decimal calculations, multiply the SP ratio 4 : 5 : 6 by 9 to get assumed SP values: 36, 45, and 54.\nTotal SP = 36 + 45 + 54 = 135 units.\nCP of A = 36 ÷ 0.90 = 40, CP of B = 45 ÷ 1.50 = 30, and CP of C = 54 (no profit/loss).\nTotal CP = 40 + 30 + 54 = 124 units.\nProfit = 135 − 124 = 11 units. ⇒ Profit % = (11 ÷ 124) × 100 ≈ 8.87% (approx. 8.88%).\n∴ The correct answer is profit of 8.88%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc6cc565cf",
+        "q_num": 80,
+        "question": "A wholesaler buys a batch of ceiling fans at a 50% markup over the factory's base cost ₹C. He then allows a 20% trade discount to the retailer. The retailer applies a 40% markup on his cost and offers a flat 10% discount to customers on the printed price. If a customer finally pays ₹18,144, what is the original base cost (₹C) of one ceiling fan from the factory?",
+        "options": {
+          "a": "₹12,000",
+          "b": "₹11,500",
+          "c": "₹10,800",
+          "d": "₹10,000"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nApplying successive percentage multipliers on the base cost C yields the final selling price:\n\nFinal SP = C × 1.5 (markup) × 0.8 (discount) × 1.4 (markup) × 0.9 (discount)\n⇒ 18144 = C × 1.2 × 1.26\n⇒ 18144 = 1.512C\n⇒ C = 18144 ÷ 1.512 = 12000\n∴ The correct answer is ₹12,000.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_20b616eaf3",
+        "q_num": 81,
+        "question": "A circular pond is surrounded by a path 2 m wide. If the total area (pond + path) is 616 m² and the pond area is 452.16 m², what is the radius of the pond? (take π = 3.14)",
+        "options": {
+          "a": "10 m",
+          "b": "11 m",
+          "c": "12 m",
+          "d": "13 m"
+        },
+        "answer": "c",
+        "solution": "The area of the pond is directly given as 452.16 m².\nArea of a circular pond = π × r²\n⇒ 3.14 × r² = 452.16\n⇒ r² = 452.16 ÷ 3.14 = 144\n⇒ r = √144 = 12 m\n∴ The correct answer is 12 m.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_aa6fa5535f",
+        "q_num": 82,
+        "question": "Given, x + 1/x = 5, then determine the value of x² + 1/x².",
+        "options": {
+          "a": "25",
+          "b": "24",
+          "c": "26",
+          "d": "23"
+        },
+        "answer": "d",
+        "solution": "If x + 1/x = k, then x² + 1/x² = k² − 2.\nHere, k = 5.\nx² + 1/x² = 5² − 2 = 25 − 2 = 23\n∴ The correct answer is 23.",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_60938bd8d8",
+        "q_num": 83,
+        "question": "A and B share a rented field. A utilizes 20 horses for 5 months, while B uses 30 cows for 4 months and 45 sheep for 5 months. If 2 horses are equivalent to 5 cows, and 3 cows are equal to 9 sheep. What portion of the rent is A pay?",
+        "options": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nConvert all animals into equivalent cows: 1 horse = 2.5 cows, and 3 sheep = 1 cow.\nA's usage = (20 × 2.5) cows × 5 months = 250 cow-months.\nB's usage = (30 cows × 4 months) + (45 ÷ 3) cows × 5 months = 120 + 75 = 195 cow-months.\nTotal equivalent usage = 250 + 195 = 445 cow-months.\nA's rent portion = A's usage ÷ Total usage = 250 ÷ 445 = 50/89.\n∴ The correct answer is 50/89.\n\nAlternate Method\nGiven:\n⇒ A uses 20 horses for 5 months.\n⇒ B uses 30 cows for 4 months and 45 sheep for 5 months.\n⇒ Conversion rates: 2 horses = 5 cows, and 3 cows = 9 sheep.\n\nFormula Used:\n⇒ Portion of Rent = (Individual Equivalent Usage) ÷ (Total Equivalent Usage)\n\nEquivalent Cow-Months Usage\nA: 250 units\nB: 195 units\nShare: 250 / 445 = 50 / 89\nShare: 195 / 445 = 39 / 89\n\nCalculations:\n⇒ Determine equivalent cow units for A:\n⇒ 2 horses = 5 cows ⇒ 20 horses = (5 ÷ 2) × 20 = 50 cows.\n⇒ A's total usage = 50 cows × 5 months = 250 cow-months.\n⇒ Determine equivalent cow units for B:\n⇒ 9 sheep = 3 cows ⇒ 45 sheep = (3 ÷ 9) × 45 = 15 cows.\n⇒ B's usage from cows = 30 cows × 4 months = 120 cow-months.\n⇒ B's usage from sheep = 15 cows × 5 months = 75 cow-months.\n⇒ B's total usage = 120 + 75 = 195 cow-months.\n⇒ Total usage by A and B = 250 + 195 = 445 cow-months.\n⇒ A's portion = 250 ÷ 445.\n⇒ Simplify the fraction by dividing numerator and denominator by 5:\n⇒ 250 ÷ 5 = 50\n⇒ 445 ÷ 5 = 89\n⇒ A's Portion = 50/89\n∴ The correct answer is 50/89.\n\nAdditional Information\nPartnership in Renting\n\nWhen individuals share a rented property or field, the rent must be divided proportionally based on both the amount of resources used and the time duration (Usage × Time).\n\nAnimal Equivalence\n\nWhen multiple entity types are involved (horses, cows, sheep), convert all of them into a single common base unit before calculating the total usage to ensure a uniform scale.\n\nCompound Ratio\n\nThe final ratio of share is a compound ratio formed by multiplying the equivalent units ratio and the time ratio for each individual.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_070e8b20fd",
+        "q_num": 84,
+        "question": "A and B start a business. A invests 2 times more than B. After 8 months, A withdraws half of his capital, and B triples his capital. If the total profit after one year is ₹75,000, find the share of A.",
+        "options": {
+          "a": "₹40,000",
+          "b": "₹50,000",
+          "c": "₹60,000",
+          "d": "₹45,000"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nA invests 2 times more than B ⇒ Initial capital ratio A : B = 3 : 1.\nA's profit units = (3 × 8) + (1.5 × 4) = 30; B's profit units = (1 × 8) + (3 × 4) = 20.\nProfit ratio A : B = 30 : 20 = 3 : 2.\nA's share = [3 ÷ (3 + 2)] × 75000 = ₹45,000.\n∴ The correct answer is ₹45,000.\n\nAlternate Method\nGiven:\n⇒ Total profit after one year (12 months) = ₹75,000\n⇒ A invests 2 times more than B initially.\n\nFormula Used:\n⇒ Profit Ratio = (Capital × Time)\n\nA\n8 mo × 3x\n4 mo × 1.5x\nSum = 30x\nB\n8 mo × 1x\n4 mo × 3x\nSum = 20x\nProfit Ratio (A : B) = 30x : 20x = 3 : 2\n\nCalculations:\n⇒ Let B's initial investment be x.\n⇒ A invests 2 times more than B, so A's initial investment = x + 2x = 3x.\n⇒ For the first 8 months, A's capital is 3x and B's capital is x.\n⇒ For the remaining 4 months, A withdraws half of his capital, so A's new capital = 3x ÷ 2 = 1.5x.\n⇒ For the remaining 4 months, B triples his capital, so B's new capital = 3 × x = 3x.\n⇒ A's profit equivalent = (3x × 8) + (1.5x × 4) = 24x + 6x = 30x.\n⇒ B's profit equivalent = (x × 8) + (3x × 4) = 8x + 12x = 20x.\n⇒ Profit Ratio of A : B = 30x : 20x = 3 : 2.\n⇒ Total ratio parts = 3 + 2 = 5 parts.\n⇒ A's share = (3 ÷ 5) × 75000 = 3 × 15000\n⇒ A's share = ₹45,000.\n∴ The correct answer is ₹45,000.\n\nAdditional Information\nPartnership Core Principle\n\nProfit is exclusively distributed among partners in the ratio of their effective investments (the product of capital and duration). Key formula: Profit Ratio = C1T1 : C2T2.\n\n\"More Than\" Phrasing Concept\n\nWhen a question states \"A is n times more than B\", the expression evaluates to A = B + nB. It must not be confused with \"A is n times of B\" which simply means A = nB.\n\nActive vs Sleeping Partner\n\nAn active partner actively works for the business and typically claims a salary or fixed percentage of total profit before the remainder is split purely based on the initial capital-time ratio among all partners.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_da34fad45d",
+        "q_num": 85,
+        "question": "A stationery supplier ordered 8 boxes of premium pens and some boxes of standard pens. The price of premium pens per box was twice that of standard pens. When the order was delivered, the number of boxes of premium and standard pens had been accidentally interchanged. This increased the total bill by 25%. What was the ratio of the original number of boxes of premium pens to the original number of boxes of standard pens?",
+        "options": {
+          "a": "2 : 1",
+          "b": "1 : 3",
+          "c": "1 : 2",
+          "d": "3 : 1"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nLet the price of standard and premium pens be 1 and 2 units respectively, and standard boxes ordered be y.\n\nOriginal Cost = (8 × 2) + (y × 1) = 16 + y\nNew Cost (after interchange) = (y × 2) + (8 × 1) = 2y + 8\n\nGiven a 25% increase in the bill, the multiplier is 5/4, giving: (2y + 8) / (16 + y) = 5 / 4\n\n⇒ 8y + 32 = 5y + 80 ⇒ 3y = 48 ⇒ y = 16\nRatio of Premium to Standard = 8 : 16 = 1 : 2.\n∴ The correct answer is 1 : 2.\n\nAlternate Method\nGiven:\nOriginal number of premium boxes = 8\n\nPrice of a premium box is twice the price of a standard box.\n\nNew total bill is 25% more than the original bill due to interchanged quantities.\n\nOriginal Bill (100%)\n16 + y\nNew Bill (125%)\n2y + 8\n+ 25% Increase\n\nCalculations:\n⇒ Let the original number of standard pen boxes be y and price per standard box be P.\n⇒ Price per premium box = 2P.\n⇒ Original Bill = (8 × 2P) + (y × P) = P(16 + y)\n⇒ When quantities are interchanged, there are y premium boxes and 8 standard boxes.\n⇒ New Bill = (y × 2P) + (8 × P) = P(2y + 8)\n⇒ The new bill is 25% more than the original, so New Bill = 1.25 × Original Bill\n⇒ P(2y + 8) = 1.25 × P(16 + y)\n⇒ 2y + 8 = 1.25 × (16 + y)\n⇒ 2y + 8 = 20 + 1.25y\n⇒ 2y − 1.25y = 20 − 8\n⇒ 0.75y = 12\n⇒ y = 12 ÷ 0.75 = 16\n⇒ Original number of standard pen boxes = 16.\n⇒ Required ratio (Premium boxes : Standard boxes) = 8 : 16 = 1 : 2.\n∴ The correct answer is 1 : 2.\n\nAdditional Information\nRatio & Proportion\n\nA ratio compares values, showing how much of one there is compared to another. If two quantities are in the ratio a:b, they can be represented directly as ax and bx for calculation purposes to quickly establish a relation.\n\nPercentage Increase\n\nWhen a quantity increases by R%, its new value becomes (100 + R)% of the original. An increase of 25% corresponds to a multiplying factor of 125% or 5/4.\n\nInterchange of Quantities\n\nWhen two items with original quantities x and y and respective unit prices a and b are interchanged, the net change in the total bill follows the shortcut formula: Change = (a − b)(y − x). A positive result directly indicates a percentage increase.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a0404b8ca1",
+        "q_num": 86,
+        "question": "A furniture manufacturer sells a dining table set to a showroom at a 25% discount on the marked price, but adds a 10% handling fee on the discounted price. The showroom then sells the set for ₹4500 more than what they paid, thereby earning a profit of 30%. At what price had the manufacturer marked the dining table set?",
+        "options": {
+          "a": "₹19,254.62",
+          "b": "₹18,181.82",
+          "c": "₹20,654.67",
+          "d": "₹22,546.68"
+        },
+        "answer": "b",
+        "solution": "Cost Price (CP) for the showroom = Profit ÷ Profit% = 4500 ÷ 30% = ₹15,000. Net multiplying factor from MP to CP = (1 − 25%) × (1 + 10%) = 0.75 × 1.10 = 0.825. Marked Price (MP) = CP ÷ Net Factor = 15,000 ÷ 0.825 = 2,00,000 ÷ 11 ≈ ₹18,181.82.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e2329c9f0d",
+        "q_num": 87,
+        "question": "A school organized a field trip for 100 students and 10 chaperones. Each student was given a snack pack containing items equal to 15% of the total number of students. Each chaperone received a snack pack with items equal to 25% of the total number of students. How many snack items were distributed in total?",
+        "options": {
+          "a": "1750",
+          "b": "2000",
+          "c": "2250",
+          "d": "2500"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nTotal items for students = 100 × (15% of 100) = 100 × 15 = 1500\nTotal items for chaperones = 10 × (25% of 100) = 10 × 25 = 250\nTotal items distributed = 1500 + 250 = 1750\n∴ The correct answer is 1750 items.\n\nAlternate Method\nGiven:\nTotal number of students = 100\nTotal number of chaperones = 10\nItems per student's snack pack = 15% of total students\nItems per chaperone's snack pack = 25% of total students\n\nFormula Used:\nValue = (Percentage ÷ 100) × Base Value\n\nStudents\nCount = 100\nItems/pack = 15% of 100 = 15\nTotal = 100 × 15 = 1500\n+\nChaperones\nCount = 10\nItems/pack = 25% of 100 = 25\nTotal = 10 × 25 = 250\nTotal Snack Items = 1500 + 250 = 1750\n\nCalculations:\n⇒ Items in each student's pack = 15% of 100 = (15 ÷ 100) × 100 = 15 items\n⇒ Total items given to 100 students = 100 × 15 = 1500 items\n⇒ Items in each chaperone's pack = 25% of 100 = (25 ÷ 100) × 100 = 25 items\n⇒ Total items given to 10 chaperones = 10 × 25 = 250 items\n⇒ Total items distributed = Total student items + Total chaperone items\n⇒ Total items distributed = 1500 + 250 = 1750\n∴ The correct answer is 1750 items.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f00e1f13d5",
+        "q_num": 88,
+        "question": "A clothing store sold three dresses, D1, D2, and D3, whose selling prices were in the ratio 5:6:7. They made a profit of 20% on D1, a loss of 10% on D2, and a profit of 30% on D3. What was their approximate total profit or loss percentage for the entire sale?",
+        "options": {
+          "a": "profit of 12.25%",
+          "b": "loss of 10.98%",
+          "c": "profit of 10.98%",
+          "d": "loss of 12.25%"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nLet SP of dresses D1, D2, and D3 be 5, 6, and 7 units respectively. (Total SP = 18)\n\nSince profit is 20%, loss is 10%, and profit is 30% respectively, their multipliers are 1.2, 0.9, and 1.3.\n\nTotal CP = 5/1.2 + 6/0.9 + 7/1.3 = 25/6 + 20/3 + 70/13 = 65/6 + 70/13 = 1265/78\nTotal Profit = Total SP − Total CP = 18 − 1265/78 = 139/78\nProfit % = (Total Profit ÷ Total CP) × 100 = (139/78 ÷ 1265/78) × 100 = 13900/1265 ≈ 10.98%\n∴ The correct answer is profit of 10.98%.\n\nAlternate Method\nGiven:\nSelling Price (SP) ratio of D1 : D2 : D3 = 5 : 6 : 7\nProfit on D1 = 20%, Loss on D2 = 10%, Profit on D3 = 30%\n\nFormula Used:\nCost Price (CP) = [SP ÷ (100 ± Profit/Loss %)] × 100\nOverall Profit % = [(Total SP − Total CP) ÷ Total CP] × 100\n\nCalculations:\nLet the Selling Prices of the three dresses be 500, 600, and 700 units respectively.\n\n⇒ Total SP = 500 + 600 + 700 = 1800 units\n\nCalculating the Cost Price of each dress:\n\n⇒ CP of D1 = (500 ÷ 120) × 100 = 5000/12 = 1250/3 units\n⇒ CP of D2 = (600 ÷ 90) × 100 = 6000/9 = 2000/3 units\n⇒ CP of D3 = (700 ÷ 130) × 100 = 7000/13 units\n⇒ Total CP = 1250/3 + 2000/3 + 7000/13\n⇒ Total CP = 3250/3 + 7000/13 = (42250 + 21000) ÷ 39 = 63250/39 units\nNow, finding the overall profit margin:\n⇒ Total SP = 1800 = 70200/39 units\n⇒ Total Profit = Total SP − Total CP = (70200 − 63250) ÷ 39 = 6950/39 units\n⇒ Profit % = [(6950/39) ÷ (63250/39)] × 100\n⇒ Profit % = (6950 ÷ 63250) × 100\n⇒ Profit % = (695 ÷ 6325) × 100 = (139 ÷ 1265) × 100 ≈ 10.988%\n∴ The correct answer is profit of 10.98%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4082707803",
+        "q_num": 89,
+        "question": "A wholesaler marks up the price of a microwave oven by 60% above its cost price. He gives a 15% trade discount to a retailer. The retailer, in turn, marks up the price by 25% above his purchase price and offers a 10% festival discount to the customer. If the customer finally pays ₹14,490 for the microwave, what is the original approximate cost price of the oven to the wholesaler?",
+        "options": {
+          "a": "₹9,471",
+          "b": "₹9,500",
+          "c": "₹10,000",
+          "d": "₹10,500"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nIn successive chain transactions, the equivalent multiplying factor method is the fastest.\n\nNet multiplying factor = 1.60 (wholesaler markup) × 0.85 (wholesaler discount) × 1.25 (retailer markup) × 0.90 (retailer discount)\nNet factor = 1.60 × 0.85 × 1.25 × 0.90 = 1.53\n14490 = Original CP × 1.53 ⇒ CP = 14490 ÷ 1.53 ≈ 9470.588\n∴ The correct answer is ₹9,471.\n\nAlternate Method\nWholesaler\nCP = 100x\nWholesaler\nMP = 160x\nRetailer\nCP = 136x\nRetailer\nMP = 170x\nFinal\nSP = 153x\n+60%\n−15%\n+25%\n−10%\nFinal SP = 153x = ₹14,490\n\nGiven:\nFinal Selling Price (paid by customer) = ₹14,490\nLet the original cost price of the microwave to the wholesaler be 100x.\n\nCalculations:\n⇒ Wholesaler's Marked Price (MP) = 100x + 60% of 100x = 160x\n⇒ Trade discount given by wholesaler = 15% of 160x = 24x\n⇒ Retailer's Cost Price (CP) = 160x − 24x = 136x\n⇒ Retailer's Marked Price (MP) = 136x + 25% of 136x = 136x + 34x = 170x\n⇒ Festival discount given by retailer = 10% of 170x = 17x\n⇒ Final Selling Price (SP) = 170x − 17x = 153x\n⇒ According to the given data, Final SP = 14490\n⇒ 153x = 14490\n⇒ x = 14490 ÷ 153 ≈ 94.7058\n⇒ Wholesaler's Cost Price = 100x = 100 × 94.7058 = 9470.58\n⇒ Approximate original cost price = ₹9,471\n∴ The correct answer is ₹9,471.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_67841e26cb",
+        "q_num": 90,
+        "question": "A and B can complete a task together in 12 days, while B and C can finish it in 16 days. After A works on it for 5 days and B for 7 days, C takes the remaining 13 days to finish the work. How many days would it take for C to complete the work alone?",
+        "options": {
+          "a": "24 days",
+          "b": "16 days",
+          "c": "20 days",
+          "d": "18 days"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nTotal Work = LCM(12, 16) = 48 units. Efficiency: (A + B) = 4, (B + C) = 3.\nGiven: A works 5 days, B works 7 days, C works 13 days = Total Work.\nRewrite as: 5(A + B) + 2(B + C) + 11C = 48 units.\n⇒ 5(4) + 2(3) + 11C = 48 ⇒ 26 + 11C = 48 ⇒ C = 2 units/day.\nTime taken by C alone = Total Work ÷ Efficiency = 48 ÷ 2 = 24 days.\n∴ The correct answer is 24 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_85504965e9",
+        "q_num": 91,
+        "question": "Two individuals, X and Y, rent a pasture together. X has 10 goats that they graze for 3 months. Y grazes 15 sheep for 4 months and 5 horses for 2 months. The following relationships are given:\n2 goats are equivalent to 3 sheep, 1 sheep is equivalent to 2 horses.\nWhat amount of rent should X pay if the total rent is split by grazing units?",
+        "options": {
+          "a": "9/22",
+          "b": "2/5",
+          "c": "1/4",
+          "d": "3/4"
+        },
+        "answer": "a",
+        "solution": "Solution\nShortcut Trick\nConvert all animals to Sheep Units: 1 Goat = 1.5 Sheep and 1 Horse = 0.5 Sheep.\nX units = 10 Goats × 1.5 × 3 Months = 45.\nY units = (15 Sheep × 4 Months) + (5 Horses × 0.5 × 2 Months) = 60 + 5 = 65.\nX share = 45 ÷ (45 + 65) = 45 ÷ 110 = 9/22.\n∴ The correct answer is 9/22.\n\nAlternate Method\nGiven:\nX: 10 Goats for 3 Months.\nY: 15 Sheep for 4 Months and 5 Horses for 2 Months.\nEquivalency: 2 Goats = 3 Sheep; 1 Sheep = 2 Horses.\n\nConversion to Sheep Units:\n\n⇒ 1 Goat = 3/2 Sheep = 1.5 Sheep\n⇒ 1 Horse = 1/2 Sheep = 0.5 Sheep\n\nCalculating Total Consumption:\n\n⇒ X Consumption = (10 × 1.5) × 3 = 15 × 3 = 45 Unit-months\n⇒ Y Consumption = (15 × 4) + (5 × 0.5 × 2) = 60 + 5 = 65 Unit-months\n\nRent Calculation:\n\n⇒ Total Rent Units = 45 + 65 = 110 Units\n⇒ X Share = X Units ÷ Total Units\n⇒ X Share = 45/110 = 9/22\n∴ The correct answer is 9/22.\n\nAdditional Information\nPartnership Concept\n\nIn a joint venture or rental, the cost is shared in the ratio of (Investment/Quantity × Time). Profit or rent share ∝ (Q × T).\n\nEquivalent Units\n\nWhen different entities are involved, always convert all quantities into a single common base unit using the given equivalence ratios before performing calculations.\n\nRatio and Proportion\n\nIf a total W is divided in the ratio a : b, then the share of the first person is a / (a + b) × W.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3ddfea72ac",
+        "q_num": 92,
+        "question": "P, Q, and R started a business with capitals in the ratio 1:2:3. After 4 months, R withdrew 50% of his capital. After another 4 months, Q withdrew 25% of his capital. The business continued for a total of 12 months. Find the ratio of profit shares of P : Q : R.",
+        "options": {
+          "a": "4 : 6 : 7",
+          "b": "3 : 5 : 6",
+          "c": "4 : 5 : 8",
+          "d": "6 : 11 : 12"
+        },
+        "answer": "d",
+        "solution": "Solution\nShortcut Trick\nLet initial capitals of P, Q, and R be 1, 2, and 3 units.\nP's share = 1 × 12 = 12 units.\nQ's share = (2 × 8 months) + (1.5 × 4 months) = 16 + 6 = 22 units.\nR's share = (3 × 4 months) + (1.5 × 8 months) = 12 + 12 = 24 units.\nRequired Ratio = 12 : 22 : 24 = 6 : 11 : 12.\n∴ The correct answer is 6 : 11 : 12.\n\nAlternate Method\nGiven: Initial capital ratio P : Q : R = 1 : 2 : 3. Total duration = 12 months.\nFormula: Profit Share = Capital × Time\n\nStep-by-step calculation:\n\n⇒ Let capitals of P, Q, and R be x, 2x, and 3x.\n⇒ Profit of P = x × 12 = 12x\n⇒ Profit of Q = (2x × 8) + (2x − 25% of 2x) × 4\n⇒ Profit of Q = 16x + (1.5x × 4) = 16x + 6x = 22x\n⇒ Profit of R = (3x × 4) + (3x − 50% of 3x) × 8\n⇒ Profit of R = 12x + (1.5x × 8) = 12x + 12x = 24x\n⇒ Ratio P : Q : R = 12x : 22x : 24x\n⇒ Dividing by 2x: Ratio = 6 : 11 : 12\n∴ The correct answer is 6 : 11 : 12.\n\nAdditional Information\nPartnership Rule\n\nIn a partnership, the profit is distributed in the ratio of the product of capital and time: P1 : P2 = (C1 × T1) : (C2 × T2).\n\nTypes of Partnership\n\nSimple partnership involves same time periods for all, while compound partnership involves different time periods or changing capitals.\n\nWorking Partner\n\nA partner who manages the business is a working partner and may receive a fixed salary or commission before the profit is shared.",
+        "tags": {
+          "topic": "Partnership",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_54f06bc63b",
+        "q_num": 93,
+        "question": "A fruit vendor buys three varieties of apples. The first variety is bought at 3 for 8, the second at 4 for 9, and the third at 1 for 4. He mixes them in the ratio 1 : 2 : 1 respectively. If he sells all the apples at 5 for 13, what is his approximate gain or loss percentage?",
+        "options": {
+          "a": "Profit of 2.13%",
+          "b": "Loss of 6.8%",
+          "c": "Profit of 3.5%",
+          "d": "Loss of 3.5%"
+        },
+        "answer": "b",
+        "solution": "Solution\nShortcut Trick\nTake LCM of individual quantities (3, 4, 1) and selling quantity (5) = 60.\n\nAssume mix ratio 1 : 2 : 1 as 60, 120, and 60 apples respectively.\nTotal Cost Price (CP) = (60 ÷ 3)×8 + (120 ÷ 4)×9 + (60 ÷ 1)×4 = 160 + 270 + 240 = ₹670.\nTotal Selling Price (SP) = (240 ÷ 5) × 13 = 48 × 13 = ₹624.\nLoss % = [(670 − 624) ÷ 670] × 100 = (46 ÷ 670) × 100 ≈ 6.86%.\n∴ The correct answer is Loss of 6.8%.\n\nAlternate Method\nGiven:\nVariety 1: 3 apples for ₹8 | Variety 2: 4 apples for ₹9 | Variety 3: 1 apple for ₹4.\nMixing Ratio: 1 : 2 : 1 | Selling Price: 5 apples for ₹13.\nLet the number of apples of each variety be 60, 120, and 60.\n⇒ CP of Variety 1 = (8 ÷ 3) × 60 = ₹160.\n⇒ CP of Variety 2 = (9 ÷ 4) × 120 = ₹270.\n⇒ CP of Variety 3 = (4 ÷ 1) × 60 = ₹240.\n⇒ Total Cost Price (CP) = 160 + 270 + 240 = ₹670.\n⇒ Total Apples = 60 + 120 + 60 = 240 apples.\n⇒ Total Selling Price (SP) = (13 ÷ 5) × 240 = ₹624.\n⇒ Loss = CP − SP = 670 − 624 = ₹46.\n⇒ Loss % = (Loss ÷ CP) × 100 = (46 ÷ 670) × 100 = 6.865...%\n∴ The correct answer is Loss of 6.8%.\n\nAdditional Information\nWeighted Average CP\n\nWhen multiple items with different rates are mixed, the net CP is (n1c1 + n2c2 + ...) ÷ (n1 + n2 + ...).\n\nProfit and Loss Percentage\nGain % = (Profit ÷ CP) × 100 and Loss % = (Loss ÷ CP) × 100. Both are always calculated on the CP.\n\nUnitary Method for Quantities\n\nTo simplify calculations involving different quantities, assume a total quantity that is the LCM of all given denominators.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_74096276f8",
+        "q_num": 94,
+        "question": "A container holds a mixture of three liquids: A, B, and C, in the ratio of 4:3:1. 40 litres of this mixture are removed, and then 10 litres of liquid A and 15 litres of liquid B are poured into the container. If the resultant quantity of liquid B is 5 litres more than the resultant quantity of liquid A, what was the initial total quantity of the mixture in the container (in litres)?",
+        "options": {
+          "a": "40",
+          "b": "80",
+          "c": "14",
+          "d": "20"
+        },
+        "answer": "a",
+        "solution": "Solution\nShortcut Trick\nInitial ratio of A:B:C = 4:3:1 ⇒ Total = 8 units.\nIn 40L removed, A = (4/8) × 40 = 20L and B = (3/8) × 40 = 15L.\nNet change in A = −20 + 10 = −10L; Net change in B = −15 + 15 = 0L.\nLet initial quantities be 4x and 3x. Resultant B − Resultant A = 5.\n⇒ (3x + 0) − (4x − 10) = 5 ⇒ 10 − x = 5 ⇒ x = 5.\nInitial mixture = 8x = 8 × 5 = 40 litres.\n∴ The correct answer is 40 litres.\n\nAlternate Method\nGiven: Initial ratio A:B:C = 4:3:1, Removed mixture = 40L, Added A = 10L, Added B = 15L, Final B − A = 5L.\nFormula Used: Quantity of a component = (Ratio of component / Sum of ratios) × Total quantity.\nLet the initial quantities of A, B, and C be 4x, 3x, and x respectively.\n⇒ Initial total quantity = 4x + 3x + x = 8x.\n⇒ Quantity of A removed = (4 / (4+3+1)) × 40 = (4/8) × 40 = 20 litres.\n⇒ Quantity of B removed = (3 / 8) × 40 = 15 litres.\n⇒ Resultant quantity of A = (4x − 20) + 10 = 4x − 10 litres.\n⇒ Resultant quantity of B = (3x − 15) + 15 = 3x litres.\n⇒ According to the condition: Resultant B − Resultant A = 5\n⇒ 3x − (4x − 10) = 5\n⇒ 3x − 4x + 10 = 5\n⇒ −x = 5 − 10 ⇒ −x = −5 ⇒ x = 5.\n⇒ Initial total quantity = 8x = 8 × 5 = 40 litres.\n∴ The correct answer is 40 litres.\n\nAdditional Information\nMixture Ratio Invariance\n\nWhen a portion of a mixture is removed, the ratio of the components in the remaining part as well as in the removed part remains the same as the original ratio.\n\nComponent Addition\n\nAdding a pure component to a mixture only increases the quantity of that specific component and changes the overall ratio of the mixture.\n\nAlligation Rule\n\nFor two-component mixtures, the Alligation method can be used to find the ratio in which two mixtures should be mixed to achieve a desired concentration.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_eb67fc0f2a",
+        "q_num": 95,
+        "question": "What is the average of all three-digit numbers divisible by 23?",
+        "options": {
+          "a": "752",
+          "b": "552",
+          "c": "652",
+          "d": "452"
+        },
+        "answer": "b",
+        "solution": "The sequence of multiples forms an Arithmetic Progression (A.P.). Average of an A.P. = (First Term + Last Term) ÷ 2. First 3-digit multiple of 23 = 115. Last 3-digit multiple of 23 = 989. Average = (115 + 989) ÷ 2 = 552.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_361c796987",
+        "q_num": 96,
+        "question": "A stationery shop ordered 6 dozen red pens and some additional dozen blue pens. The price of the red pens per dozen was three times that of the blue ones. When the order was delivered, it was found that the number of dozens of the two colours had been interchanged. This increased the bill by 40%. Find the ratio of the number of dozens of red pens to the number of dozens of blue pens in the original order.",
+        "options": {
+          "a": "1:1",
+          "b": "1:2",
+          "c": "2:3",
+          "d": "3:4"
+        },
+        "answer": "b",
+        "solution": "Assume the price of Blue pens = 1 unit, Red pens = 3 units, and let Blue pens ordered = B dozens. Original Bill = (6 × 3) + (B × 1) = 18 + B. Interchanged Bill = (B × 3) + (6 × 1) = 3B + 6. The new bill is 40% more, meaning it is 1.4 times the original bill. ⇒ 3B + 6 = 1.4 × (18 + B) ⇒ 1.6B = 19.2 ⇒ B = 12. Required ratio = 6 : 12 = 1 : 2.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b869166197",
+        "q_num": 97,
+        "question": "A tank has a mixture of solutions A, B, and C in the respective ratio of 7:8:5. 40 litres of this mixture is drained out, and subsequently, 15 litres of solution A and 5 litres of solution C are added to the tank. If the resultant quantity of solution A is 25 litres less than the resultant quantity of solution B, what was the initial quantity of mixture in the tank (in litres)?",
+        "options": {
+          "a": "840",
+          "b": "240",
+          "c": "890",
+          "d": "320"
+        },
+        "answer": "a",
+        "solution": "Let remaining mixture components A, B, and C be 7k, 8k, and 5k (Total = 20k). Final quantity of A = 7k + 15 L and Final quantity of B = 8k. Given, Final B − Final A = 25 ⇒ 8k − (7k + 15) = 25 ⇒ k = 40. Total remaining mixture = 20 × 40 = 800 L. Initial mixture = 800 L + 40 L (drained) = 840 L.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b3288060cb",
+        "q_num": 98,
+        "question": "Three friends, X, Y, and Z, are cycling on a circular track with a circumference of 2 km. They all start from the same point at 9:00 a.m. and travel in the same direction with speeds of 10 km/h, 12 km/h, and 15 km/h respectively. How many times will all three of them meet at the starting point if they continue cycling until 1:00 p.m.?",
+        "options": {
+          "a": "1 time",
+          "b": "2 times",
+          "c": "3 times",
+          "d": "4 times"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nTime taken for one round = Distance ÷ Speed.\nTx = 2/10 = 1/5 h, Ty = 2/12 = 1/6 h, Tz = 2/15 h.\nTime to meet at start = LCM(1/5, 1/6, 2/15) = 2/1 = 2 hours.\nTotal time from 9:00 a.m. to 1:00 p.m. = 4 hours.\nNumber of meetings = Total time ÷ Meeting interval = 4 ÷ 2 = 2 times.\n∴ The correct answer is 2 times.\n\nAlternate Method\nGiven:\nCircumference of the track (D) = 2 km\nSpeeds: X = 10 km/h, Y = 12 km/h, Z = 15 km/h\nCycling duration = 9:00 a.m. to 1:00 p.m. = 4 hours\n\nFormula Used:\nTime = Distance ÷ Speed\nMeeting time at start point = LCM of individual times taken for one round\nLCM of fractions = LCM of Numerators ÷ HCF of Denominators\n\nCalculations:\n⇒ Tx = 2 ÷ 10 = 1/5 h\n⇒ Ty = 2 ÷ 12 = 1/6 h\n⇒ Tz = 2 ÷ 15 = 2/15 h\n⇒ Meeting time = LCM(1/5, 1/6, 2/15)\n⇒ LCM of numerators (1, 1, 2) = 2\n⇒ HCF of denominators (5, 6, 15) = 1\n⇒ LCM(1/5, 1/6, 2/15) = 2 ÷ 1 = 2 hours\n⇒ They all meet at the starting point every 2 hours.\n⇒ Total duration from 9:00 a.m. to 1:00 p.m. = 4 hours.\n⇒ Number of meetings = 4 ÷ 2 = 2 times\n∴ The correct answer is 2 times.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1613d82df3",
+        "q_num": 99,
+        "question": "A book publisher offers a novel to a bookstore at a 30% discount on the cover price. However, they charge an additional 5% on the discounted price for shipping. The bookstore sells the novel for ₹1620 more, earning a profit of 40%. What was the original cover price of the novel?",
+        "options": {
+          "a": "₹5,510.20",
+          "b": "₹19,254.62",
+          "c": "₹18,181.82",
+          "d": "₹20,654.67"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nLet the Cover Price be 100 units.\nDiscounted Price = 100 − 30% = 70 units.\nTotal Cost Price = 70 + (5% of 70) = 73.5 units.\nProfit = 40% of Cost Price = 0.40 × 73.5 = 29.4 units.\n\nSince 29.4 units = ₹1620, Cover Price (100 units) = (1620 ÷ 29.4) × 100 ≈ ₹5510.20\n\n∴ The correct answer is ₹5,510.20.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_59f3baa633",
+        "q_num": 100,
+        "question": "A circular disc of radius 7 cm is inscribed inside an equilateral triangle. What is the approximate area of the remaining portion of the triangle?",
+        "options": {
+          "a": "100.6 cm²",
+          "b": "148.2 cm²",
+          "c": "200.3 cm²",
+          "d": "155.6 cm²"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nFor an equilateral triangle circumscribing a circle of radius r, the remaining area can be directly calculated as:\n\n⇒ Remaining Area = r² × (3√3 − π)\n⇒ Remaining Area = 7² × (3 × 1.732 − 3.142)\n⇒ Remaining Area ≈ 49 × (5.196 − 3.142) = 49 × 2.054\n⇒ Remaining Area ≈ 100.64 cm²\n∴ The correct answer is 100.6 cm².",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_fbe10a1040",
+        "q_num": 101,
+        "question": "A right triangle has sides 3, 4, and 5. A smaller triangle is drawn inside it with its vertices on the sides of the larger triangle, such that it is similar to the larger triangle. If its perimeter is 6, what is its area?",
+        "options": {
+          "a": "1.5",
+          "b": "2.4",
+          "c": "3",
+          "d": "6"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nPerimeter of larger triangle = 3 + 4 + 5 = 12.\nArea of larger triangle = 1/2 × 3 × 4 = 6.\n\nFor similar triangles, the ratio of their areas equals the square of the ratio of their perimeters.\n\nArea of smaller triangle = 6 × (6 ÷ 12)²\n⇒ Area = 6 × (1/2)² = 6 ÷ 4 = 1.5.\n∴ The correct answer is 1.5 sq. units.\n\nAlternate Method\nGiven:\n⇒ Sides of the larger right-angled triangle = 3, 4, and 5\n⇒ Perimeter of the inscribed smaller similar triangle = 6\n\nFormula Used:\n⇒ Area of a right triangle = 1/2 × Base × Perpendicular Height\n⇒ For two similar triangles: Area1 / Area2 = (Perimeter1 / Perimeter2)²\n\nCalculations:\n⇒ The perimeter of the larger triangle = 3 + 4 + 5 = 12\n⇒ Area of the larger triangle = 1/2 × 3 × 4 = 6 sq. units\n⇒ The ratio of their perimeters (Smaller : Larger) = 6 / 12 = 1/2\n⇒ According to the similarity theorem, the ratio of their areas is the square of the scale factor.\n⇒ Area Ratio = (1 / 2)² = 1 / 4\n⇒ Let the area of the smaller triangle be A.\n⇒ A / 6 = 1 / 4\n⇒ A = 6 × (1 / 4) = 1.5 sq. units\n∴ The correct answer is 1.5 sq. units.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_dd8c82a5dc",
+        "q_num": 102,
+        "question": "The distance between the centers of two circles is d. The lengths of their direct and transverse common tangents are L and M, respectively. If L² + M² = 200 and the sum of the squares of their radii is 100, what is the value of d?",
+        "options": {
+          "a": "10",
+          "b": "10√2",
+          "c": "5√2",
+          "d": "20"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nThe standard identity relating the direct common tangent (L), transverse common tangent (M), distance between centers (d) and radii (r1, r2) is:\n\nL² + M² = 2d² − 2(r1² + r2²)\nGiven: L² + M² = 200, and r1² + r2² = 100\n⇒ 200 = 2d² − 2(100)\n⇒ 2d² = 400 ⇒ d² = 200 ⇒ d = 10√2\n∴ The correct answer is 10√2 units.\n\nAlternate Method\nGiven:\nDistance between centers = d\nDirect common tangent = L\nTransverse common tangent = M\nSum of squares of common tangents, L² + M² = 200\nSum of squares of radii, r1² + r2² = 100\n\nFormula:\n\nLength of direct common tangent (L) = √[d² − (r1 − r2)²]\nLength of transverse common tangent (M) = √[d² − (r1 + r2)²]\n\nCalculations:\nSquaring both formulas to eliminate the square roots:\n\n⇒ L² = d² − (r1² + r2² − 2r1r2)\n⇒ M² = d² − (r1² + r2² + 2r1r2)\n\nAdding both equations together:\n\n⇒ L² + M² = d² − r1² − r2² + 2r1r2 + d² − r1² − r2² − 2r1r2\n⇒ L² + M² = 2d² − 2(r1² + r2²)\n\nSubstitute the given values into the derived equation:\n\n⇒ 200 = 2d² − 2(100)\n⇒ 200 = 2d² − 200\n⇒ 2d² = 400\n⇒ d² = 200\n⇒ d = √200 = 10√2\n∴ The correct answer is 10√2 units.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_760136e99e",
+        "q_num": 103,
+        "question": "There are 5 consecutive even numbers X₁, X₂, X₃, X₄, X₅ and 4 consecutive odd numbers Y₁, Y₂, Y₃, Y₄. The average of the even numbers is 4 more than the average of the odd numbers. If the sum of the even numbers is 32 more than the sum of the odd numbers, find the average of the odd numbers.",
+        "options": {
+          "a": "16",
+          "b": "4",
+          "c": "12",
+          "d": "8"
+        },
+        "answer": "c",
+        "solution": "Let the average of the 4 consecutive odd numbers be A.\nAverage of the 5 consecutive even numbers = A + 4\nGiven: Sum of even numbers − Sum of odd numbers = 32\n⇒ 5 × (A + 4) − 4 × A = 32\n⇒ 5A + 20 − 4A = 32\n⇒ A = 32 - 20 = 12\n∴ The correct answer is 12.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2632907dfa",
+        "q_num": 104,
+        "question": "Aman needed ₹30,000 for a start-up and split the sum between two private lenders under simple-interest terms:\nLender A charges 9% p.a. (simple interest)\nLender B charges 6% p.a. (simple interest)\nAman kept both loans exactly 4 years and then made a single lump-sum payment that settled only the accumulated interest, which came to ₹9,600. After preparing his books of account, Aman discovered that if he interchanged the principal amounts taken from the two lenders, his four-year interest outgo would have been ₹1,200 less than what he actually paid. How much of the original ₹30,000 did Aman borrow at 9% p.a. from Lender A?",
+        "options": {
+          "a": "₹10,000",
+          "b": "₹8,000",
+          "c": "₹7,000",
+          "d": "₹20,000"
+        },
+        "answer": "a",
+        "solution": "Actual SI = 9600 - 1200 = ₹8400\nTotal interest paid in 1 year = 8400 ÷ 4 = ₹2100.\nOverall average rate of interest = (2100 ÷ 30000) × 100 = 7%.\nUsing the Alligation method, the ratio of principals at 9% and 6% = (7 − 6) : (9 − 7) = 1 : 2.\nAmount borrowed from Lender A (at 9%) = 30000 × [1 ÷ (2 + 1)] = ₹10,000.\n∴ The correct answer is ₹10,000.",
+        "tags": {
+          "topic": "Simple Interest",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ea8d355176",
+        "q_num": 105,
+        "question": "Sarah invested amounts in three different schemes M, N, and O at simple interest rates of 10% p.a., 12% p.a., and 15% p.a. respectively. If the total interest accrued in one year was ₹2282 and the amount invested in Scheme O was 180% of the amount invested in Scheme M and 250% of the amount invested in Scheme N, what was the amount invested in Scheme N?",
+        "options": {
+          "a": "₹3000",
+          "b": "₹3200",
+          "c": "₹3600",
+          "d": "₹4000"
+        },
+        "answer": "c",
+        "solution": "From the given condition, O = 1.8M and O = 2.5N.\nInvestment ratio M : N : O = (1 ÷ 1.8) : (1 ÷ 2.5) : 1 = 25 : 18 : 45.\nLet the investments be 25 units, 18 units, and 45 units.\nTotal Simple Interest = (25 × 10%) + (18 × 12%) + (45 × 15%) = 2.5 + 2.16 + 6.75 = 11.41 units.\nSince 11.41 units = ₹2282, 1 unit = 2282 ÷ 11.41 = ₹200.\nAmount in Scheme N = 18 units = 18 × 200 = ₹3600.\n∴ The correct answer is ₹3600.",
+        "tags": {
+          "topic": "Simple Interest",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_68f3a2f2db",
+        "q_num": 106,
+        "question": "A vertical pole of height H stands on the ground. From a point P on the ground, the angle of elevation of the top of the pole is 60°. From a different point Q, located 10 meters away from point P (directly along the line extending from the base of the pole), the angle of elevation to the top of the pole is 30°. What is the height of the pole?",
+        "options": {
+          "a": "5√3m",
+          "b": "10√3m",
+          "c": "10 m",
+          "d": "20 m"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nWhen the angle of elevation changes from \\beta to \\alpha over a distance d, the height H is found using: d = H \\times (\\cot \\beta - \\cot \\alpha).\n\nHere d = 10 m, \\alpha = 60° and \\beta = 30°:\n10 = H \\times (\\cot 30° - \\cot 60°)\n10 = H \\times (\\sqrt{3} - 1/\\sqrt{3}) \\Rightarrow 10 = H \\times (2/\\sqrt{3})\nH = 5\\sqrt{3} m.\n\n\\therefore The correct answer is 5\\sqrt{3} m.\n\nAlternate Method\nGiven:\nDistance between the two points, PQ = 10 m.\nAngle of elevation from point P, \\angle APB = 60°.\nAngle of elevation from point Q, \\angle AQB = 30°.\n\nFormula Used:\n\\tan(\\theta) = \\text{Perpendicular} \\div \\text{Base}\n\nCalculations:\nLet the height of the pole AB be H and the distance PB be x.\n\nIn right-angled triangle APB:\n\\Rightarrow \\tan(60°) = AB \\div PB\n\\Rightarrow \\sqrt{3} = H \\div x\n\\Rightarrow x = H \\div \\sqrt{3}\n\nIn right-angled triangle AQB:\n\\Rightarrow \\tan(30°) = AB \\div QB\n\\Rightarrow 1 \\div \\sqrt{3} = H \\div (PQ + PB)\n\\Rightarrow 1 \\div \\sqrt{3} = H \\div (10 + x)\n\\Rightarrow 10 + x = H\\sqrt{3}\n\nSubstitute the value of x:\n\\Rightarrow 10 + (H \\div \\sqrt{3}) = H\\sqrt{3}\n\\Rightarrow 10 = H\\sqrt{3} - (H \\div \\sqrt{3})\n\\Rightarrow 10 = (3H - H) \\div \\sqrt{3}\n\\Rightarrow 10 = 2H \\div \\sqrt{3}\n\\Rightarrow 2H = 10\\sqrt{3}\n\\Rightarrow H = 5\\sqrt{3} m\n\n\\therefore The correct answer is 5\\sqrt{3} m.",
+        "tags": {
+          "topic": "Height & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_28fda1da09",
+        "q_num": 107,
+        "question": "A right circular cone has radius of 7 cm and a height of 24 cm. A sphere is placed inside the cone such that it touches the base and the slanted surface of the cone. Find the radius of this inscribed sphere.",
+        "options": {
+          "a": "5.25 cm",
+          "b": "4.86 cm",
+          "c": "3.82 cm",
+          "d": "6.24 cm"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nThe radius (r) of a sphere inscribed in a right circular cone of base radius R, height H, and slant height L is given directly by the formula:\n\\Rightarrow r = (R \\times H) \\div (R + L)\n\\Rightarrow L = \\sqrt{R^2 + H^2} = \\sqrt{7^2 + 24^2} = \\sqrt{625} = 25 cm\n\\Rightarrow r = (7 \\times 24) \\div (7 + 25) = 168 \\div 32\n\\Rightarrow r = 5.25 cm\n\n\\therefore The correct answer is 5.25 cm.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -2976,6 +4489,312 @@
         "solution": "Shortcut Trick\nApply the Digital Sum (DS) method to solve the equation quickly.\n\nDS of 31³ = 4³ = 64 ⇒ 1 | DS of 18³ = 9³ = 729 ⇒ 0.\nDS of 37³ = 1³ = 1 | DS of 210 = 3.\nOverall Expression DS = 1 + 0 − 1 + 3 = 3.\nCheck options: DS of −14820 = −(1+4+8+2) = −15 ⇒ −6. Add 9 to get positive DS: −6 + 9 = 3.\n∴ The correct answer is -14820.\n\nAlternate Method\nGiven:\nExpression: 31³ + 18³ − 37³ + 210\n\nFormula Used:\nx³ = x × x × x\n\nCalculations:\n⇒ 31³ = 31 × 31 × 31 = 29791\n⇒ 18³ = 18 × 18 × 18 = 5832\n⇒ 37³ = 37 × 37 × 37 = 50653\n\nSubstitute the obtained values back into the expression:\n\n⇒ Expression = 29791 + 5832 − 50653 + 210\n⇒ Expression = 35623 − 50653 + 210\n⇒ Expression = −15030 + 210\n⇒ Expression = −14820\n∴ The correct answer is -14820.\n\nAdditional Information\nSimplification Rules\n\nAlways follow the proper order of operations (BODMAS). First evaluate powers and exponents before proceeding with addition and subtraction.\n\nDigital Sum Concept\n\nThe digital sum of a number is the single-digit sum of its digits. The digital sum of the problem expression must equal the digital sum of its exact solution, making it an excellent verification tool.\n\nUnit Digit Concept\n\nThe unit digit of an arithmetic expression relies purely on the unit digits of the numbers involved. For example, 1³ + 8³ − 7³ + 0 yields a unit digit calculation of 1 + 2 − 3 + 0 = 0.",
         "tags": {
           "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_565d93d23b",
+        "q_num": 34,
+        "question": "A builder has 100 m of fencing wire. He can use this wire to enclose a circular garden or a square garden. If he wants to maximize the enclosed area, what is the approximate ratio of the area of the largest possible circular garden to the area of the largest possible square garden, using the entire 100 m of wire?",
+        "options": {
+          "a": "1:1",
+          "b": "1.27:1",
+          "c": "1.57:1",
+          "d": "2:1"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick: For any given perimeter, the ratio of the area of a circle to a square is the constant 4 : π. Ratio = 4 / π ≈ 4 ÷ 3.1416. Ratio ≈ 1.27 : 1. The total wire length of 100 m is not needed to find this ratio.\n\nAlternate Method:\nGiven: Total length of wire = Perimeter of circle = Perimeter of square = 100 m\nFormula Used:\nCircumference of circle = 2 × π × r, Area of circle = π × r^2\nPerimeter of square = 4 × a, Area of square = a^2\n\nCalculations:\n⇒ Circumference of the circle = 2 × π × r = 100\n⇒ Radius (r) = 50/π m\n⇒ Area of circle = π × (50/π)^2 = 2500/π m^2\n⇒ Perimeter of the square = 4 × a = 100\n⇒ Side (a) = 25 m\n⇒ Area of square = 25^2 = 625 m^2\n⇒ Ratio of areas = (2500/π) ÷ 625\n⇒ Ratio = 4 / π\n⇒ Ratio ≈ 4 ÷ 3.1416 = 1.2732...\n⇒ Approximate ratio = 1.27 : 1\n∴ The correct answer is 1.27:1.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_55bd03eab4",
+        "q_num": 35,
+        "question": "A vertical cylindrical container is filled with oil. A solid hemispherical stone of radius 7 cm is immersed completely, and the oil level rises by 3 cm. What is the radius of the cylinder?",
+        "options": {
+          "a": "6.29 cm",
+          "b": "7.43 cm",
+          "c": "8.73 cm",
+          "d": "11.41 cm"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick: By the principle of displacement, Volume of oil raised = Volume of immersed hemisphere.\n⇒ π × R^2 × h = 2/3 × π × r^3\n⇒ R^2 × 3 = 2/3 × 7^3\n⇒ R^2 = 686 ÷ 9\n⇒ R = √686 ÷ 3 ≈ 26.19 ÷ 3 ≈ 8.73 cm\n\nAlternate Method:\nGiven:\nRadius of the hemispherical stone (r) = 7 cm\nRise in the oil level (h) = 3 cm\nFormula Used:\nVolume of a cylinder = πR^2h\nVolume of a hemisphere = 2/3 πr^3\n\nCalculations:\nWhen the stone is immersed completely, the volume of the oil displaced equals the volume of the stone.\n⇒ Volume of displaced oil = Volume of hemisphere\n⇒ π × R^2 × h = 2/3 × π × r^3\n⇒ π × R^2 × 3 = 2/3 × π × 7^3\nCancelling π from both sides:\n⇒ 3 × R^2 = 2/3 × 343\n⇒ R^2 = 686 ÷ 9\n⇒ R = √(686 ÷ 9) = √686 ÷ 3\n⇒ R ≈ 26.19 ÷ 3\n⇒ R ≈ 8.73 cm\n∴ The correct answer is 8.73 cm.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_be1dd8ce8f",
+        "q_num": 36,
+        "question": "If sin(90° - x) = cos(2x), then what is x?",
+        "options": {
+          "a": "0°",
+          "b": "30°",
+          "c": "25°",
+          "d": "15°"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nUsing the identity sin(90° − θ) = cos(θ), we get cos(x) = cos(2x).\n\nBy comparing the angles directly for the principal value, we can write:\n\nx = 2x ⇒ x = 0°\nChecking the options, 0° satisfies the equation: sin(90°) = cos(0°) ⇒ 1 = 1.\n∴ The correct answer is 0°.\n\nAlternate Method\nGiven:\nsin(90° − x) = cos(2x)\n\nFormula Used:\nsin(90° − θ) = cos(θ)\ncos(2θ) = 2cos^2(θ) − 1\n\nCalculation:\n⇒ sin(90° − x) = cos(2x)\n⇒ cos(x) = cos(2x)\n⇒ cos(x) = 2cos^2(x) − 1\n⇒ 2cos^2(x) − cos(x) − 1 = 0\n⇒ 2cos^2(x) − 2cos(x) + cos(x) − 1 = 0\n⇒ 2cos(x)(cos(x) − 1) + 1(cos(x) − 1) = 0\n⇒ (2cos(x) + 1)(cos(x) − 1) = 0\n⇒ cos(x) = 1 or cos(x) = −1/2\nFor x in the first quadrant (as per options), cos(x) = 1.\n⇒ x = 0°\n∴ The correct answer is 0°.\n\nAdditional Information\nComplementary Angle Identities\n\nFor any angle θ, sin(90° − θ) = cos(θ), cos(90° − θ) = sin(θ), and tan(90° − θ) = cot(θ).\n\nGeneral Solution of Cosine\n\nIf cos(x) = cos(y), then the general solution is x = 360° × n ± y, where n is any integer.\n\nDouble Angle Formula\n\ncos(2θ) can be expressed as cos^2(θ) − sin^2(θ), or 2cos^2(θ) − 1, or 1 − 2sin^2(θ).",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cfde071127",
+        "q_num": 37,
+        "question": "A tea seller bought 15 kg of Darjeeling tea at ₹300 per kg and 25 kg of Assam tea at ₹240 per kg. He mixed them together. Due to a slight drop in market prices, he had to sell the entire mixture at ₹260 per kg. Calculate his total profit or loss.",
+        "options": {
+          "a": "Loss of ₹100",
+          "b": "Profit of ₹100",
+          "c": "Profit of ₹200",
+          "d": "Profit of ₹300"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nCalculate the net profit or loss per unit directly using individual deviations from the final Selling Price:\n\nLoss on Darjeeling tea = (300 − 260) = ₹40/kg ⇒ Total = 15 × 40 = ₹600 (Loss)\nProfit on Assam tea = (260 − 240) = ₹20/kg ⇒ Total = 25 × 20 = ₹500 (Profit)\nNet overall effect = 500 (Profit) − 600 (Loss) = −100 (Net Loss)\n∴ The correct answer is Loss of ₹100.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e67e950a93",
+        "q_num": 38,
+        "question": "The average salary of 24 employees is ₹40,000. The average salary of 8 senior staff is ₹60,000. What is the average salary for the other employees?",
+        "options": {
+          "a": "₹30,000",
+          "b": "₹40,000",
+          "c": "₹50,000",
+          "d": "₹60,000"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nRatio of Senior Staff to Other Employees = 8 : 16 = 1 : 2\nDeviation of senior staff average = ₹60,000 − ₹40,000 = +20,000\nTotal deviation of senior staff (1 unit) = 1 × 20,000 = +20,000\n\nTo balance the average, the other employees (2 units) must have a deviation of −20,000 ÷ 2 = −10,000\n\nAverage salary of other employees = ₹40,000 − 10,000 = ₹30,000\n∴ The correct answer is ₹30,000.\n\nAlternate Method\nGiven:\nTotal number of employees = 24\nAverage salary of all employees = ₹40,000\nNumber of senior staff = 8\nAverage salary of senior staff = ₹60,000\n\n8 Senior Staff\nAvg: ₹60,000\n16 Other Employees\nAvg: ₹x\nTotal: 24 Employees (Avg: ₹40,000)\n\nFormula Used:\nTotal Salary = Average Salary × Number of Employees\n\nCalculations:\n⇒ Total salary of all 24 employees = 24 × 40,000 = ₹9,60,000\n⇒ Total salary of 8 senior staff = 8 × 60,000 = ₹4,80,000\n⇒ Number of other employees = 24 − 8 = 16\n⇒ Total salary of 16 other employees = 9,60,000 − 4,80,000 = ₹4,80,000\n⇒ Average salary of other employees = 4,80,000 ÷ 16 = ₹30,000\n∴ The correct answer is ₹30,000.\n\nAdditional Information\nCombined Average\n\nWhen two groups of sizes n1 and n2 have averages A1 and A2, their combined average is given by (n1A1 + n2A2) ÷ (n1 + n2).\n\nDeviation Method in Averages\n\nThe sum of deviations of all individual values from their true average is always zero. If one group has a positive deviation, the remaining group must have an equal negative deviation to balance the overall average.\n\nWeighted Average\n\nInstead of calculating the total sum with large numbers, the simplified ratios of the group sizes can be used as weights to find the combined average much faster.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4ba5536769",
+        "q_num": 39,
+        "question": "A tank contains 3,500 milliliters of water. If its full capacity is 0.005 kiloliters, what percentage of the tank is empty?",
+        "options": {
+          "a": "25%",
+          "b": "30%",
+          "c": "35%",
+          "d": "40%"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nTotal Capacity = 0.005 kl = 0.005 × 1,000,000 ml = 5,000 ml.\nEmpty volume = 5,000 − 3,500 = 1,500 ml.\nEmpty Percentage = (1,500 ÷ 5,000) × 100 = 30%.\n∴ The correct answer is 30%.\n\nAlternate Method\nGiven:\nFilled volume of the tank = 3,500 ml\nTotal capacity of the tank = 0.005 kl\n\nFormula Used:\n1 kiloliter (kl) = 1,000 liters (L)\n1 liter (L) = 1,000 milliliters (ml)\nPercentage = (Part value ÷ Total value) × 100\nTotal Capacity\n5000 ml\nEmpty = 1500 ml\n( ? % )\nFilled = 3500 ml\n\nCalculations:\n⇒ Total capacity = 0.005 kl = 0.005 × 1,000 × 1,000 ml\n⇒ Total capacity = 5,000 ml\n⇒ Empty volume = Total capacity − Filled volume\n⇒ Empty volume = 5,000 − 3,500 = 1,500 ml\n⇒ Percentage of empty tank = (1,500 ÷ 5,000) × 100\n⇒ Percentage of empty tank = 0.3 × 100 = 30%\n∴ The correct answer is 30%.\n\nAdditional Information\nUnit Conversions of Volume\n\n1 Kiloliter (kl) = 10³ Liters = 10⁶ Milliliters (ml). Always ensure all given quantities are in the exact same measurement unit before performing any arithmetic calculations.\n\nComplementary Percentages\n\nThe sum of the percentage of the filled portion and the empty portion of a container is always exactly 100%. If a tank is 70% full, it is fundamentally 100% − 70% = 30% empty.\n\nPercentage Calculation Rule\n\nTo calculate what percentage quantity X is of quantity Y, use the standard formula: (X ÷ Y) × 100. The base reference value (Total Capacity) must always reside in the denominator.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_730ed2ab67",
+        "q_num": 40,
+        "question": "A circular signboard has a radius of 2 m. If painting costs ₹60 per m² and 10% of the board is left unpainted, what is the total painting cost?",
+        "options": {
+          "a": "₹658.2",
+          "b": "₹678.2",
+          "c": "₹630.4",
+          "d": "₹681.9"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nTotal Cost = (Percentage Painted) × (Area of Circle) × Rate\n⇒ Total Cost = 90% × (π × r^2) × 60\n⇒ Total Cost = 0.9 × 3.14 × 2^2 × 60\n⇒ Total Cost = 0.9 × 12.56 × 60 = 678.24\n⇒ Total Cost ≈ ₹678.2\n∴ The correct answer is ₹678.2.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_86ed41c350",
+        "q_num": 41,
+        "question": "The Cost Price of 7 articles is equal to the Selling Price of 10 articles. The loss percent is:",
+        "options": {
+          "a": "30%",
+          "b": "20%",
+          "c": "40%",
+          "d": "300/7 %"
+        },
+        "answer": "a",
+        "solution": "Solution\nShortcut Trick\nDirectly equate the units: 7 × Cost Price (CP) = 10 × Selling Price (SP).\nRearrange to find the ratio: CP / SP = 10 / 7.\n\nThis implies CP is 10 units and SP is 7 units.\n\nLoss = 10 − 7 = 3 units.\nLoss Percentage = (3 ÷ 10) × 100 = 30%.\n∴ The correct answer is 30%.\n\nAlternate Method\nGiven:\nCost Price (CP) of 7 articles = Selling Price (SP) of 10 articles.\n\nFormula Used:\nLoss = Cost Price − Selling Price\nLoss Percent = (Loss ÷ Cost Price) × 100\n\nCalculations:\n⇒ Let the Cost Price of 1 article be ₹1.\n⇒ Cost Price of 7 articles = ₹7.\n⇒ According to the question, Selling Price of 10 articles = ₹7.\n⇒ Cost Price of 10 articles = ₹10.\n⇒ Loss on 10 articles = CP of 10 articles − SP of 10 articles = 10 − 7 = ₹3.\n⇒ Loss Percent = (3 ÷ 10) × 100.\n⇒ Loss Percent = 3 × 10 = 30%.\n∴ The correct answer is 30%.\n\nAdditional Information\nProfit Percentage\n\nWhen the Selling Price is greater than the Cost Price, Profit % = [(SP − CP) ÷ CP] × 100.\n\nSuccessive Profit/Loss\n\nIf an article is sold at a profit of a% and then at a loss of b%, the net profit/loss is given by [a − b − (ab ÷ 100)]%.\n\nRelation between CP and SP\n\nCost Price can be calculated as CP = [100 ÷ (100 − Loss%)] × SP when a loss is incurred.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b19e727783",
+        "q_num": 42,
+        "question": "If sin A + cos A = √2 sin A, then what is the value of tan A?",
+        "options": {
+          "a": "√2",
+          "b": "1",
+          "c": "√2 + 1",
+          "d": "√2 - 1"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\n⇒ sin A + cos A = √2 sin A\n⇒ cos A = sin A(√2 − 1) ⇒ cot A = √2 − 1\n⇒ tan A = 1 ÷ cot A = 1 ÷ (√2 − 1)\n⇒ Rationalizing the denominator gives tan A = √2 + 1\n∴ The correct answer is √2 + 1.\n\nAlternate Method\nGiven:\nsin A + cos A = √2 sin A\n\nFormula Used:\ntan A = sin A ÷ cos A\n(a − b)(a + b) = a² − b²\n\nCalculations:\n⇒ Divide the entire given equation by cos A:\n⇒ (sin A ÷ cos A) + (cos A ÷ cos A) = √2(sin A ÷ cos A)\n⇒ tan A + 1 = √2 tan A\n⇒ 1 = √2 tan A − tan A\n⇒ 1 = tan A(√2 − 1)\n⇒ tan A = 1 ÷ (√2 − 1)\n⇒ Multiply numerator and denominator by (√2 + 1):\n⇒ tan A = (√2 + 1) ÷ [(√2 − 1)(√2 + 1)]\n⇒ tan A = (√2 + 1) ÷ [(√2)² − (1)²]\n⇒ tan A = (√2 + 1) ÷ (2 − 1)\n⇒ tan A = √2 + 1\n∴ The correct answer is √2 + 1.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e5f309a0ee",
+        "q_num": 43,
+        "question": "Simplify: (1.5 + 3/8)³ - (9/5 × 1.25)",
+        "options": {
+          "a": "4.3418",
+          "b": "5.3418",
+          "c": "6.5526",
+          "d": "7.5526"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nConvert terms to simple fractions for faster and error-free calculation:\n\n(3/2 + 3/8)³ − (9/5 × 5/4)\n\n⇒ (15/8)³ − 9/4\n⇒ 3375/512 − 1152/512 = 2223/512\n⇒ 2223 ÷ 512 ≈ 4.3418\n∴ The correct answer is 4.3418.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7c2faad4e6",
+        "q_num": 44,
+        "question": "A metal sphere having a radius of 10 centimeters is melted down and molded into 8 identical smaller solid spheres. What is the ratio of the surface area of the original sphere to the total surface area of all 8 smaller spheres?",
+        "options": {
+          "a": "1:2",
+          "b": "2:1",
+          "c": "1:4",
+          "d": "1:1"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nVolume is proportional to the cube of the radius, while surface area is proportional to the square of the radius.\n\nSince 1 large sphere is melted into 8 identical smaller spheres, the volume ratio of 1 Large : 1 Small = 8 : 1.\n\nTherefore, the radius ratio of Large : Small = 8^(1/3) : 1^(1/3) = 2 : 1.\nThe surface area ratio of 1 Large : 1 Small = 2² : 1² = 4 : 1.\n\nRatio of the surface area of 1 Large sphere to 8 Small spheres = 4 : (8 × 1) = 4 : 8 = 1 : 2.\n\n∴ The correct answer is 1:2.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f5ff9c47c7",
+        "q_num": 45,
+        "question": "A cylinder and hemisphere have the same radius. If cylinder is placed on the hemisphere then their combined height is 30 cm. If the cylinder and hemisphere have equal volumes, find the radius.",
+        "options": {
+          "a": "12cm",
+          "b": "15cm",
+          "c": "16cm",
+          "d": "18cm"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nSince the cylinder and hemisphere have equal volumes on the same base radius, their height ratio h : r = 2 : 3.\n\nTotal height in terms of ratio units = 2 + 3 = 5 units.\nGiven total combined height = 30 cm.\nRadius of hemisphere (3 units) = (30 ÷ 5) × 3 = 18 cm.\n∴ The correct answer is 18 cm.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6ecf99f121",
+        "q_num": 46,
+        "question": "Two circles have radii of 12 cm and 4 cm. If the length of a direct common tangent is 15 cm, what is the distance between their centers?",
+        "options": {
+          "a": "15 cm",
+          "b": "17 cm",
+          "c": "18 cm",
+          "d": "20 cm"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nFor Direct Common Tangent (DCT) and distance between centers (d):\n\nd² = DCT² + (R − r)²\n⇒ d = √(15² + 8²)\n⇒ d = √(225 + 64) = √289 = 17 cm\n∴ The correct answer is 17 cm.\n\nAlternate Method\nGiven:\n⇒ Radius of larger circle (R) = 12 cm\n⇒ Radius of smaller circle (r) = 4 cm\n⇒ Length of Direct Common Tangent (DCT) = 15 cm\n\nFormula Used:\n⇒ DCT = √[d² − (R − r)²]\nWhere 'd' is the distance between the centers of the two circles.\n\nCalculations:\n⇒ 15 = √[d² − (12 − 4)²]\n⇒ 15 = √[d² − 8²]\n\nSquaring both sides:\n\n⇒ 225 = d² − 64\n⇒ d² = 225 + 64\n⇒ d² = 289\n⇒ d = 17 cm\n∴ The correct answer is 17 cm.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_59c7de9d55",
+        "q_num": 47,
+        "question": "A cyclist has to cover a distance of 80 km. After cycling for 4 hours and 48 minutes, he finds that he has completed 4/5 th of the total distance. What is his speed in km/h?",
+        "options": {
+          "a": "15.45 km/h",
+          "b": "16 km/h",
+          "c": "13.33 km/h",
+          "d": "10 km/h"
+        },
+        "answer": "c",
+        "solution": "Distance covered = 80 × (4/5) = 64 km.\nTime = 4 hrs 48 mins = 4 + (48 ÷ 60) = 24/5 hours.\nSpeed = Distance ÷ Time = 64 × (5/24) = 40/3 = 13.33 km/h.\n∴ The correct answer is 13.33 km/h.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_67606b000e",
+        "q_num": 48,
+        "question": "If two circles are touching internally how many common tangents do they have?",
+        "options": {
+          "a": "0",
+          "b": "1",
+          "c": "2",
+          "d": "3"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nWhen two circles touch each other internally, they share exactly one point of contact.\n\nA common tangent is a straight line that touches both circles without crossing inside them.\n\nSince one circle is inside the other, any line touching the smaller circle elsewhere will cut through the larger circle.\n\nThus, a tangent can only be drawn exactly at their single shared point of contact.\n\n\\therefore The correct answer is 1.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f1c02d83b9",
+        "q_num": 49,
+        "question": "Two chords, AB and CD, are equal in length and are at a distance of 10 cm from the center of a circle. If the radius is 26 cm, what is the length of AB?",
+        "options": {
+          "a": "12 cm",
+          "b": "24 cm",
+          "c": "36 cm",
+          "d": "48 cm"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nThe perpendicular from the center bisects the chord, forming a right-angled triangle with the radius.\n\nHalf of the chord length = \\sqrt{\\text{Radius}^2 - \\text{Distance}^2}\nHalf chord = \\sqrt{26^2 - 10^2} = \\sqrt{676 - 100} = \\sqrt{576} = 24 cm.\nTotal length of chord AB = 2 \\times 24 = 48 cm.\n\n\\therefore The correct answer is 48 cm.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a525c05649",
+        "q_num": 50,
+        "question": "What is the average of all numbers between 1000 and 1300 that are divisible by 25?",
+        "options": {
+          "a": "1150",
+          "b": "1200",
+          "c": "1575",
+          "d": "1500"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nNumbers divisible by 25 form an Arithmetic Progression (AP) since the gap between consecutive numbers is constant (25).\n\nFor any sequence in an AP, the average is simply the mean of the first and the last terms.\n\nThe first multiple of 25 strictly after 1000 is 1025, and the last multiple strictly before 1300 is 1275.\n\nAverage = (First Term + Last Term) ÷ 2\nAverage = (1025 + 1275) ÷ 2 = 2300 ÷ 2 = 1150.\n∴ The correct answer is 1150.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_68f3a2f2db",
+        "q_num": 51,
+        "question": "A vertical pole of height H stands on the ground. From a point P on the ground, the angle of elevation of the top of the pole is 60°. From a different point Q, located 10 meters away from point P (directly along the line extending from the base of the pole), the angle of elevation to the top of the pole is 30°. What is the height of the pole?",
+        "options": {
+          "a": "5√3m",
+          "b": "10√3m",
+          "c": "10 m",
+          "d": "20 m"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nWhen the angle of elevation changes from β to α over a distance d, the height H is found using: d = H × (cot β − cot α).\n\nHere d = 10 m, α = 60° and β = 30°:\n10 = H × (cot 30° − cot 60°)\n10 = H × (√3 − 1/√3) ⇒ 10 = H × (2/√3)\nH = 5√3 m.\n∴ The correct answer is 5√3 m.\n\nAlternate Method\nGiven:\nDistance between the two points, PQ = 10 m.\nAngle of elevation from point P, ∠APB = 60°.\nAngle of elevation from point Q, ∠AQB = 30°.\n\nFormula Used:\ntan(θ) = Perpendicular ÷ Base\n\nCalculations:\nLet the height of the pole AB be H and the distance PB be x.\n\nIn right-angled triangle APB:\n\n⇒ tan(60°) = AB ÷ PB\n⇒ √3 = H ÷ x\n⇒ x = H ÷ √3     ... (Equation 1)\n\nIn right-angled triangle AQB:\n\n⇒ tan(30°) = AB ÷ QB\n⇒ 1 ÷ √3 = H ÷ (PQ + PB)\n⇒ 1 ÷ √3 = H ÷ (10 + x)\n⇒ 10 + x = H√3\n\nSubstitute the value of x from Equation 1:\n\n⇒ 10 + (H ÷ √3) = H√3\n⇒ 10 = H√3 − (H ÷ √3)\n⇒ 10 = (3H − H) ÷ √3\n⇒ 10 = 2H ÷ √3\n⇒ 2H = 10√3\n⇒ H = 5√3 m\n∴ The correct answer is 5√3 m.\n\nAdditional Information\nDistance Formula in Heights & Distances\n\nWhen moving a distance d directly towards or away from a vertically standing object of height H, causing the angle of elevation to change between α and β (where α > β), the relation is given by d = H × (cot β − cot α).\n\nAngle of Elevation vs Angle of Depression\n\nThe angle of elevation is the angle formed above the horizontal line of sight when looking up. The angle of depression is the angle formed below the horizontal line when looking down. Geometrically, they are equal for two observers looking at each other due to alternate interior angles.\n\nKey Trigonometric Values\n\nMost height and distance questions are solved using three standard tangent values: tan(30°) = 1/√3, tan(45°) = 1, and tan(60°) = √3.",
+        "tags": {
+          "topic": "Height & Distance",
           "difficulty": "medium"
         }
       }

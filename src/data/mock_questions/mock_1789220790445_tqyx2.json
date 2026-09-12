@@ -1,0 +1,138 @@
+[
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 6",
+    "status": "Unattempted",
+    "userTime": "00:04",
+    "avgTime": "00:25",
+    "questionText": "Two individuals, X and Y, rent a pasture together. X has 10 goats that they graze for 3 months. Y grazes 15 sheep for 4 months and 5 horses for 2 months. The following relationships are given:\n2 goats are equivalent to 3 sheep, 1 sheep is equivalent to 2 horses.\nWhat amount of rent should X pay if the total rent is split by grazing units?",
+    "options": {
+      "A": "9/22",
+      "B": "2/5",
+      "C": "1/4",
+      "D": "3/4"
+    },
+    "correctOption": "A",
+    "solution": "Solution\nShortcut Trick\n\nConvert all animals to Sheep Units: 1 Goat = 1.5 Sheep and 1 Horse = 0.5 Sheep.\n\nX units = 10 Goats × 1.5 × 3 Months = 45.\n\nY units = (15 Sheep × 4 Months) + (5 Horses × 0.5 × 2 Months) = 60 + 5 = 65.\n\nX share = 45 ÷ (45 + 65) = 45 ÷ 110 = 9/22.\n\n∴ The correct answer is 9/22.\n\nAlternate Method\n\nGiven:\n\nX: 10 Goats for 3 Months.\n\nY: 15 Sheep for 4 Months and 5 Horses for 2 Months.\n\nEquivalency: 2 Goats = 3 Sheep; 1 Sheep = 2 Horses.\n\nConversion to Sheep Units:\n\n⇒ 1 Goat = 3/2 Sheep = 1.5 Sheep\n\n⇒ 1 Horse = 1/2 Sheep = 0.5 Sheep\n\nCalculating Total Consumption:\n\n⇒ X Consumption = (10 × 1.5) × 3 = 15 × 3 = 45 Unit-months\n\n⇒ Y Consumption = (15 × 4) + (5 × 0.5 × 2) = 60 + 5 = 65 Unit-months\n\nRent Calculation:\n\n⇒ Total Rent Units = 45 + 65 = 110 Units\n\n⇒ X Share = X Units ÷ Total Units\n\n⇒ X Share = 45/110 = 9/22\n\n∴ The correct answer is 9/22.\n\nAdditional Information\n\nPartnership Concept\n\nIn a joint venture or rental, the cost is shared in the ratio of (Investment/Quantity × Time). Profit or rent share ∝ (Q × T).\n\nEquivalent Units\n\nWhen different entities are involved, always convert all quantities into a single common base unit using the given equivalence ratios before performing calculations.\n\nRatio and Proportion\n\nIf a total W is divided in the ratio a : b, then the share of the first person is a / (a + b) × W."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 7",
+    "status": "Unattempted",
+    "userTime": "01:22",
+    "avgTime": "00:58",
+    "questionText": "P, Q, and R started a business with capitals in the ratio 1:2:3. After 4 months, R withdrew 50% of his capital. After another 4 months, Q withdrew 25% of his capital. The business continued for a total of 12 months. Find the ratio of profit shares of P : Q : R.",
+    "options": {
+      "A": "4 : 6 : 7",
+      "B": "3 : 5 : 6",
+      "C": "4 : 5 : 8",
+      "D": "6 : 11 : 12"
+    },
+    "correctOption": "D",
+    "solution": "Solution\nShortcut Trick\n\nLet initial capitals of P, Q, and R be 1, 2, and 3 units.\n\nP's share = 1 × 12 = 12 units.\n\nQ's share = (2 × 8 months) + (1.5 × 4 months) = 16 + 6 = 22 units.\n\nR's share = (3 × 4 months) + (1.5 × 8 months) = 12 + 12 = 24 units.\n\nRequired Ratio = 12 : 22 : 24 = 6 : 11 : 12.\n\n∴ The correct answer is 6 : 11 : 12.\n\nAlternate Method\n\nGiven: Initial capital ratio P : Q : R = 1 : 2 : 3. Total duration = 12 months.\n\nFormula: Profit Share = Capital × Time\n\nStep-by-step calculation:\n\n⇒ Let capitals of P, Q, and R be x, 2x, and 3x.\n\n⇒ Profit of P = x × 12 = 12x\n\n⇒ Profit of Q = (2x × 8) + (2x − 25% of 2x) × 4\n\n⇒ Profit of Q = 16x + (1.5x × 4) = 16x + 6x = 22x\n\n⇒ Profit of R = (3x × 4) + (3x − 50% of 3x) × 8\n\n⇒ Profit of R = 12x + (1.5x × 8) = 12x + 12x = 24x\n\n⇒ Ratio P : Q : R = 12x : 22x : 24x\n\n⇒ Dividing by 2x: Ratio = 6 : 11 : 12\n\n∴ The correct answer is 6 : 11 : 12.\n\nAdditional Information\n\nPartnership Rule\n\nIn a partnership, the profit is distributed in the ratio of the product of capital and time: P1 : P2 = (C1 × T1) : (C2 × T2).\n\nTypes of Partnership\n\nSimple partnership involves same time periods for all, while compound partnership involves different time periods or changing capitals.\n\nWorking Partner\n\nA partner who manages the business is a working partner and may receive a fixed salary or commission before the profit is shared."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 12",
+    "status": "Correct (Slow)",
+    "userTime": "01:29",
+    "avgTime": "00:24",
+    "questionText": "Suresh ordered 6 kg of premium flour and some additional kilograms of ordinary flour. The price of the premium flour per kg was twice that of the ordinary flour. When the order was delivered, the quantities of premium and ordinary flour had been swapped. This change increased his bill by 20%. Find the ratio of the original quantity of premium flour to the original quantity of ordinary flour.",
+    "options": {
+      "A": "2 : 3",
+      "B": "3 : 5",
+      "C": "5 : 4",
+      "D": "4 : 7"
+    },
+    "correctOption": "D",
+    "solution": "Solution\nShortcut Trick\n\nLet the price of Ordinary flour be ₹1/kg and Premium flour be ₹2/kg.\n\nOriginal Cost = (6 × 2) + (x × 1) = 12 + x.\n\nSwapped Cost = (x × 2) + (6 × 1) = 2x + 6.\n\nAccording to the question: (2x + 6) = 120% of (12 + x) ⇒ (2x + 6) = 1.2(12 + x).\n\nSolving the equation: 2x + 6 = 14.4 + 1.2x ⇒ 0.8x = 8.4 ⇒ x = 10.5 kg.\n\nRequired Ratio = 6 : 10.5 = 60 : 105 = 4 : 7.\n\n∴ The correct answer is 4 : 7.\n\nAlternate Method\n\nGiven:\n\n⇒ Quantity of Premium Flour ordered = 6 kg\n\n⇒ Quantity of Ordinary Flour ordered = x kg\n\n⇒ Price Ratio (Premium : Ordinary) = 2 : 1\n\n⇒ Increase in Bill = 20%\n\nFormula Used:\n\n⇒ Total Bill = (Quantity1 × Price1) + (Quantity2 × Price2)\n\nCalculations:\n\n⇒ Let the price of ordinary flour be ₹y/kg. Then the price of premium flour is ₹2y/kg.\n\n⇒ Original Bill = (6 × 2y) + (x × y) = 12y + xy = y(12 + x)\n\n⇒ After swapping quantities, the New Bill = (x × 2y) + (6 × y) = 2xy + 6y = y(2x + 6)\n\n⇒ New Bill = Original Bill + 20% of Original Bill\n\n⇒ y(2x + 6) = 1.2 × y(12 + x)\n\n⇒ 2x + 6 = 14.4 + 1.2x\n\n⇒ 2x − 1.2x = 14.4 − 6\n\n⇒ 0.8x = 8.4\n\n⇒ x = 8.4 ÷ 0.8 = 10.5 kg\n\n⇒ Original Quantity Ratio (Premium : Ordinary) = 6 : 10.5\n\n⇒ Ratio = 6 : 21/2 = 12 : 21 = 4 : 7\n\n∴ The correct answer is 4 : 7.\n\nAdditional Information\n\nPercentage Change\n\nThe percentage change is calculated as: ((New Value − Old Value) / Old Value) × 100.\n\nRatio and Proportion\n\nA ratio compares two quantities by division. If a/b = c/d, then a, b, c, d are in proportion.\n\nEffect of Swapping\n\nSwapping quantities of items with different prices leads to a price increase if more of the expensive item is delivered than originally ordered."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "userTime": "00:14",
+    "avgTime": "00:18",
+    "questionText": "The Cost Price of 7 articles is equal to the Selling Price of 10 articles. The loss percent is:",
+    "options": {
+      "A": "30%",
+      "B": "20%",
+      "C": "40%",
+      "D": "300/7 %"
+    },
+    "correctOption": "A",
+    "solution": "Solution\nShortcut Trick\n\nDirectly equate the units: 7 × Cost Price (CP) = 10 × Selling Price (SP).\n\nRearrange to find the ratio: CP / SP = 10 / 7.\n\nThis implies CP is 10 units and SP is 7 units.\n\nLoss = 10 − 7 = 3 units.\n\nLoss Percentage = (3 ÷ 10) × 100 = 30%.\n\n∴ The correct answer is 30%.\n\nAlternate Method\n\nGiven:\n\nCost Price (CP) of 7 articles = Selling Price (SP) of 10 articles.\n\nFormula Used:\n\nLoss = Cost Price − Selling Price\n\nLoss Percent = (Loss ÷ Cost Price) × 100\n\nCalculations:\n\n⇒ Let the Cost Price of 1 article be ₹1.\n\n⇒ Cost Price of 7 articles = ₹7.\n\n⇒ According to the question, Selling Price of 10 articles = ₹7.\n\n⇒ Cost Price of 10 articles = ₹10.\n\n⇒ Loss on 10 articles = CP of 10 articles − SP of 10 articles = 10 − 7 = ₹3.\n\n⇒ Loss Percent = (3 ÷ 10) × 100.\n\n⇒ Loss Percent = 3 × 10 = 30%.\n\n∴ The correct answer is 30%.\n\nAdditional Information\n\nProfit Percentage\n\nWhen the Selling Price is greater than the Cost Price, Profit % = [(SP − CP) ÷ CP] × 100.\n\nSuccessive Profit/Loss\n\nIf an article is sold at a profit of a% and then at a loss of b%, the net profit/loss is given by [a − b − (ab ÷ 100)]%.\n\nRelation between CP and SP\n\nCost Price can be calculated as CP = [100 ÷ (100 − Loss%)] × SP when a loss is incurred."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 15",
+    "status": "Unattempted",
+    "userTime": "01:10",
+    "avgTime": "00:19",
+    "questionText": "A fruit vendor buys three varieties of apples. The first variety is bought at 3 for 8, the second at 4 for 9, and the third at 1 for 4. He mixes them in the ratio 1 : 2 : 1 respectively. If he sells all the apples at 5 for 13, what is his approximate gain or loss percentage?",
+    "options": {
+      "A": "Profit of 2.13%",
+      "B": "Loss of 6.8%",
+      "C": "Profit of 3.5%",
+      "D": "Loss of 3.5%"
+    },
+    "correctOption": "B",
+    "solution": "Solution\nShortcut Trick\n\nTake LCM of individual quantities (3, 4, 1) and selling quantity (5) = 60.\n\nAssume mix ratio 1 : 2 : 1 as 60, 120, and 60 apples respectively.\n\nTotal Cost Price (CP) = (60 ÷ 3)×8 + (120 ÷ 4)×9 + (60 ÷ 1)×4 = 160 + 270 + 240 = ₹670.\n\nTotal Selling Price (SP) = (240 ÷ 5) × 13 = 48 × 13 = ₹624.\n\nLoss % = [(670 − 624) ÷ 670] × 100 = (46 ÷ 670) × 100 ≈ 6.86%.\n\n∴ The correct answer is Loss of 6.8%.\n\nAlternate Method\n\nGiven:\n\nVariety 1: 3 apples for ₹8 | Variety 2: 4 apples for ₹9 | Variety 3: 1 apple for ₹4.\n\nMixing Ratio: 1 : 2 : 1 | Selling Price: 5 apples for ₹13.\n\nLet the number of apples of each variety be 60, 120, and 60.\n\n⇒ CP of Variety 1 = (8 ÷ 3) × 60 = ₹160.\n\n⇒ CP of Variety 2 = (9 ÷ 4) × 120 = ₹270.\n\n⇒ CP of Variety 3 = (4 ÷ 1) × 60 = ₹240.\n\n⇒ Total Cost Price (CP) = 160 + 270 + 240 = ₹670.\n\n⇒ Total Apples = 60 + 120 + 60 = 240 apples.\n\n⇒ Total Selling Price (SP) = (13 ÷ 5) × 240 = ₹624.\n\n⇒ Loss = CP − SP = 670 − 624 = ₹46.\n\n⇒ Loss % = (Loss ÷ CP) × 100 = (46 ÷ 670) × 100 = 6.865...%\n\n∴ The correct answer is Loss of 6.8%.\n\nAdditional Information\n\nWeighted Average CP\n\nWhen multiple items with different rates are mixed, the net CP is (n1c1 + n2c2 + ...) ÷ (n1 + n2 + ...).\n\nProfit and Loss Percentage\n\nGain % = (Profit ÷ CP) × 100 and Loss % = (Loss ÷ CP) × 100. Both are always calculated on the CP.\n\nUnitary Method for Quantities\n\nTo simplify calculations involving different quantities, assume a total quantity that is the LCM of all given denominators."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 18",
+    "status": "Unattempted",
+    "userTime": "00:16",
+    "avgTime": "00:11",
+    "questionText": "A container holds a mixture of three liquids: A, B, and C, in the ratio of 4:3:1. 40 litres of this mixture are removed, and then 10 litres of liquid A and 15 litres of liquid B are poured into the container. If the resultant quantity of liquid B is 5 litres more than the resultant quantity of liquid A, what was the initial total quantity of the mixture in the container (in litres)?",
+    "options": {
+      "A": "40",
+      "B": "80",
+      "C": "14",
+      "D": "20"
+    },
+    "correctOption": "A",
+    "solution": "Solution\nShortcut Trick\n\nInitial ratio of A:B:C = 4:3:1 ⇒ Total = 8 units.\n\nIn 40L removed, A = (4/8) × 40 = 20L and B = (3/8) × 40 = 15L.\n\nNet change in A = −20 + 10 = −10L; Net change in B = −15 + 15 = 0L.\n\nLet initial quantities be 4x and 3x. Resultant B − Resultant A = 5.\n\n⇒ (3x + 0) − (4x − 10) = 5 ⇒ 10 − x = 5 ⇒ x = 5.\n\nInitial mixture = 8x = 8 × 5 = 40 litres.\n\n∴ The correct answer is 40 litres.\n\nAlternate Method\n\nGiven: Initial ratio A:B:C = 4:3:1, Removed mixture = 40L, Added A = 10L, Added B = 15L, Final B − A = 5L.\n\nFormula Used: Quantity of a component = (Ratio of component / Sum of ratios) × Total quantity.\n\nLet the initial quantities of A, B, and C be 4x, 3x, and x respectively.\n\n⇒ Initial total quantity = 4x + 3x + x = 8x.\n\n⇒ Quantity of A removed = (4 / (4+3+1)) × 40 = (4/8) × 40 = 20 litres.\n\n⇒ Quantity of B removed = (3 / 8) × 40 = 15 litres.\n\n⇒ Resultant quantity of A = (4x − 20) + 10 = 4x − 10 litres.\n\n⇒ Resultant quantity of B = (3x − 15) + 15 = 3x litres.\n\n⇒ According to the condition: Resultant B − Resultant A = 5\n\n⇒ 3x − (4x − 10) = 5\n\n⇒ 3x − 4x + 10 = 5\n\n⇒ −x = 5 − 10 ⇒ −x = −5 ⇒ x = 5.\n\n⇒ Initial total quantity = 8x = 8 × 5 = 40 litres.\n\n∴ The correct answer is 40 litres.\n\nAdditional Information\n\nMixture Ratio Invariance\n\nWhen a portion of a mixture is removed, the ratio of the components in the remaining part as well as in the removed part remains the same as the original ratio.\n\nComponent Addition\n\nAdding a pure component to a mixture only increases the quantity of that specific component and changes the overall ratio of the mixture.\n\nAlligation Rule\n\nFor two-component mixtures, the Alligation method can be used to find the ratio in which two mixtures should be mixed to achieve a desired concentration."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 20",
+    "status": "Correct (Slow)",
+    "userTime": "00:31",
+    "avgTime": "00:23",
+    "questionText": "A cone is such that its Curved Surface Area (CSA) equals 3 times its Base Area. If radius is r, find the slant height l.",
+    "options": {
+      "A": "r",
+      "B": "2r",
+      "C": "3r",
+      "D": "4r"
+    },
+    "correctOption": "C",
+    "solution": "Solution\nShortcut Trick\n\nGiven: Curved Surface Area (CSA) = 3 × Base Area\n\nFormula: πrl = 3 × πr2\n\nBy canceling π and r from both sides:\n\nl = 3r\n\n∴ The correct answer is 3r.\n\nAlternate Method\n\nGiven:\n\nRadius of the cone = r\n\nSlant height of the cone = l\n\nFormula Used:\n\n1. Curved Surface Area (CSA) of a cone = πrl\n\n2. Base Area of a cone = πr2\n\nCalculations:\n\nAccording to the question:\n\n⇒ CSA = 3 × Base Area\n\n⇒ π × r × l = 3 × (π × r2)\n\n⇒ l = (3 × π × r × r) ÷ (π × r)\n\n⇒ l = 3r\n\n∴ The correct answer is 3r.\n\nAdditional Information\n\nTotal Surface Area (TSA)\n\nThe Total Surface Area of a cone includes both the curved part and the circular base: TSA = πr(l + r).\n\nRelationship between h, r, and l\n\nThe height (h), radius (r), and slant height (l) of a cone are related by the Pythagoras Theorem: l2 = r2 + h2.\n\nVolume of a Cone\n\nThe Volume of a cone represents the capacity of the cone and is given by: V = (1/3)πr2h."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 23",
+    "status": "Correct (Slow)",
+    "userTime": "01:20",
+    "avgTime": "00:23",
+    "questionText": "A circular table with a radius of 30 cm has a decorative cut where a chord subtends a 90° angle at the center. What percentage of the table's total area does the major segment represent? (Use π = 3.14)",
+    "options": {
+      "A": "75.50%",
+      "B": "85.50",
+      "C": "71.50",
+      "D": "90.92"
+    },
+    "correctOption": "D",
+    "solution": "Solution\nShortcut Trick\n\nPercentage of Major Segment = [1 − (Fractional Area of Minor Segment)] × 100\n\nMinor Segment Fraction = (θ/360) − (sin θ / 2π)\n\nFor θ = 90°: Ratio = (90/360) − (1 / (2 × 3.14)) = 0.25 − 0.1592 = 0.0908\n\nMajor Segment % = (1 − 0.0908) × 100 = 90.92%\n\n∴ The correct answer is 90.92%.\n\nAlternate Method\n\nGiven:\n\nRadius of circular table (r) = 30 cm\nCentral angle (θ) = 90°\nπ = 3.14\n\nFormula used:\n\nArea of circle = π × r²\nArea of sector = (θ/360) × π × r²\nArea of segment = Area of sector − Area of triangle\nArea of triangle = (1/2) × r² × sin(θ)\nPercentage of major segment = (Area of major segment/Area of circle) × 100\n\nCalculation:\n\n⇒ Area of circle = 3.14 × 30²\n\n⇒ Area of circle = 3.14 × 900 = 2826 cm²\n\n⇒ Area of sector = (90/360) × 3.14 × 30²\n\n⇒ Area of sector = (1/4) × 3.14 × 900 = 706.5 cm²\n\n⇒ Area of triangle = (1/2) × 30² × sin 90°\n\n⇒ Area of triangle = (1/2) × 900 × 1 = 450 cm²\n\n⇒ Area of minor segment = 706.5 − 450 = 256.5 cm²\n\n⇒ Area of major segment = 2826 − 256.5 = 2569.5 cm²\n\n⇒ Percentage of major segment = (2569.5/2826) × 100\n\n⇒ Percentage of major segment = 90.9%\n\n∴ The correct answer is 90.9%."
+  }
+]

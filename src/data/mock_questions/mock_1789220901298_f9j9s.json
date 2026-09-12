@@ -1,0 +1,257 @@
+[
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 3",
+    "status": "Incorrect",
+    "userTime": "01:26",
+    "avgTime": "01:01",
+    "questionText": "Simplify:(1.5 + 3/8)3 - (9/5 × 1.25)",
+    "options": {
+      "A": "4.3418",
+      "B": "5.3418",
+      "C": "6.5526",
+      "D": "7.5526"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nConvert terms to simple fractions for faster and error-free calculation:\n\n(3/2 + 3/8)3 − (9/5 × 5/4)\n\n⇒ (15/8)3 − 9/4\n\n⇒ 3375/512 − 1152/512 = 2223/512\n\n⇒ 2223 ÷ 512 ≈ 4.3418\n\n∴ The correct answer is 4.3418.\n\nAlternate Method\n\nGiven:\n\n(1.5 + 3/8)3 − (9/5 × 1.25)\n\nCalculations:\n\n⇒ Convert decimals to fractions to easily simplify the expression:\n\n⇒ 1.5 = 15/10 = 3/2\n\n⇒ 1.25 = 125/100 = 5/4\n\n⇒ Substitute the fraction values back into the expression:\n\n⇒ (3/2 + 3/8)3 − (9/5 × 5/4)\n\n⇒ Make denominators equal inside the bracket:\n\n⇒ (12/8 + 3/8)3 − 9/4\n\n⇒ Add the terms together inside the bracket:\n\n⇒ (15/8)3 − 9/4\n\n⇒ Calculate the cube of the fraction (153 = 3375, 83 = 512):\n\n⇒ 3375/512 − 9/4\n\n⇒ Make denominators equal to perform subtraction (multiply 9/4 by 128/128):\n\n⇒ 3375/512 − (9 × 128)/(4 × 128)\n\n⇒ 3375/512 − 1152/512\n\n⇒ Subtract the numerators:\n\n⇒ (3375 − 1152) / 512\n\n⇒ 2223 / 512\n\n⇒ Convert the final fraction back to a decimal:\n\n⇒ 2223 ÷ 512 = 4.341796875\n\n⇒ Rounding to four decimal places, we get 4.3418.\n\n∴ The correct answer is 4.3418.\n\nAdditional Information\n\nBODMAS Rule\n\nAlways simplify complex mathematical expressions in the exact order of Brackets, Orders (powers and roots), Division, Multiplication, Addition, and Subtraction.\n\nFraction to Decimal Conversion\n\nMemorizing common fraction values makes calculations significantly faster. For example, 1/8 = 0.125, 3/8 = 0.375, and 1/4 = 0.25.\n\nRounding Decimals\n\nWhen rounding to 4 decimal places, check the 5th decimal digit. If it is 5 or more, round up the 4th digit by 1. Otherwise, leave it unchanged."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 4",
+    "status": "Correct (Slow)",
+    "userTime": "01:08",
+    "avgTime": "00:58",
+    "questionText": "Simplify:((1.5 + \\(\\frac{3}{4}\\)) ÷ (2.25 - \\(\\frac{1}{2}\\))) + 0.6",
+    "options": {
+      "A": "1.8857",
+      "B": "2.8857",
+      "C": "3.8857",
+      "D": "4.8857"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nConvert the given fractions directly to decimals for faster calculation:\n\n⇒ 3/4 = 0.75 and 1/2 = 0.5\n\nSubstitute these values into the expression:\n\n⇒ ((1.5 + 0.75) ÷ (2.25 − 0.5)) + 0.6\n\n⇒ (2.25 ÷ 1.75) + 0.6 = (9 ÷ 7) + 0.6 ≈ 1.2857 + 0.6 = 1.8857\n\n∴ The correct answer is 1.8857.\n\nAlternate Method\n\nGiven:\n\nExpression = ((1.5 + 3/4) ÷ (2.25 − 1/2)) + 0.6\n\nCalculations:\n\nTo avoid decimal division, convert all values to fractions:\n\n⇒ 1.5 = 3/2\n\n⇒ 2.25 = 9/4\n\n⇒ 0.6 = 3/5\n\nSubstitute the fractions back into the expression:\n\n⇒ ((3/2 + 3/4) ÷ (9/4 − 1/2)) + 3/5\n\nMake denominators equal to add and subtract the inner terms:\n\n⇒ ((6/4 + 3/4) ÷ (9/4 − 2/4)) + 3/5\n\n⇒ (9/4 ÷ 7/4) + 3/5\n\n⇒ (9/4 × 4/7) + 3/5\n\n⇒ 9/7 + 3/5\n\nTake the LCM of 7 and 5, which is 35:\n\n⇒ (45 + 21) / 35\n\n⇒ 66 / 35 ≈ 1.885714...\n\n⇒ Rounding to 4 decimal places, we get 1.8857.\n\n∴ The correct answer is 1.8857.\n\nAdditional Information\n\nBODMAS Rule\n\nAlways follow the sequence of Brackets, Orders, Division/Multiplication, and Addition/Subtraction while simplifying expressions.\n\nFraction to Decimal Conversion\n\nMemorising common fraction-to-decimal values like 1/2 = 0.5, 3/4 = 0.75, and 1/5 = 0.2 helps in quick calculation without the need to take an LCM."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 5",
+    "status": "Correct (Slow)",
+    "userTime": "01:00",
+    "avgTime": "00:45",
+    "questionText": "A container holds a mixture of three liquids A, B, and C in ratio 2 : 3 : 5. If 6 liters of liquid A, 12 liters of liquid B, and a certain amount of liquid C are added to the container, the new ratio of liquids A, B, and C becomes 3 : 5 : 8. Find the quantity (in liters) of liquid C added.",
+    "options": {
+      "A": "15 liters",
+      "B": "16 liters",
+      "C": "18 liters",
+      "D": "20 liters"
+    },
+    "correctOption": "C",
+    "solution": "Solution\n\nShortcut Trick\n\nEquating the initial and new ratios for liquids A and B: (2x + 6) ÷ (3x + 12) = 3 ÷ 5 ⇒ 10x + 30 = 9x + 36 ⇒ x = 6.\n\nNew quantity of A = 2(6) + 6 = 18 liters (which represents 3 parts of the new ratio).\n\nSince 3 parts = 18 liters, 1 part = 6 liters, and new C (8 parts) = 8 × 6 = 48 liters.\n\nInitial quantity of C = 5x = 5(6) = 30 liters.\n\nQuantity of C added = Final C − Initial C = 48 − 30 = 18 liters.\n\n∴ The correct answer is 18 liters.\n\nAlternate Method\n\nGiven:\n\nInitial ratio of A, B, and C = 2 : 3 : 5\n\nQuantity added to A = 6 liters\n\nQuantity added to B = 12 liters\n\nNew ratio of A, B, and C = 3 : 5 : 8\n\nFormula Used:\n\nNew Quantity = Initial Quantity + Quantity Added\n\nLiquid A\n2x → 12 L\n+ 6 L\n18 L (3 parts)\nLiquid B\n3x → 18 L\n+ 12 L\n30 L (5 parts)\nLiquid C\n5x → 30 L\n+ y L\n48 L (8 parts)\nInitial Ratio = 2 : 3 : 5\ny = 48 − 30 = 18 Liters\n\nCalculations:\n\n⇒ Let the initial quantities of A, B, and C be 2x, 3x, and 5x respectively.\n\n⇒ After adding 6 liters to A and 12 liters to B, their respective new quantities are:\n\n⇒ New A = 2x + 6\n\n⇒ New B = 3x + 12\n\n⇒ According to the new given ratio of A to B (3 : 5), we can set up the equation:\n\n⇒ (2x + 6) ÷ (3x + 12) = 3 ÷ 5\n\n⇒ 5 × (2x + 6) = 3 × (3x + 12)\n\n⇒ 10x + 30 = 9x + 36\n\n⇒ 10x − 9x = 36 − 30\n\n⇒ x = 6\n\n⇒ Initial quantity of C = 5x = 5 × 6 = 30 liters\n\n⇒ New quantity of A = 2(6) + 6 = 12 + 6 = 18 liters\n\n⇒ According to the new ratio (3 : 5 : 8), 3 parts correspond to 18 liters of liquid A.\n\n⇒ 1 part = 18 ÷ 3 = 6 liters\n\n⇒ The new quantity of C corresponds to 8 parts of this ratio.\n\n⇒ New C = 8 × 6 = 48 liters\n\n⇒ Quantity of C added = New quantity of C − Initial quantity of C\n\n⇒ Quantity of C added = 48 − 30 = 18 liters\n\n∴ The correct answer is 18 liters.\n\nAdditional Information\n\nRatio Multiplier Concept\n\nWhen components of a mixture are given in a ratio a : b : c, their absolute quantities can be modeled as ax, bx, and cx where x acts as a common variable multiplier.\n\nHandling Independent Alterations\n\nWhen distinct amounts are added to specific mixture components, forming an equation using only the known ratio components will yield the multiplier first, before trying to evaluate the unknown variables.\n\nCross-Multiplication Method\n\nFor simple rational equations structured as a ÷ b = c ÷ d, you can quickly simplify and solve by using direct cross-multiplication: a × d = b × c."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 6",
+    "status": "Correct (Slow)",
+    "userTime": "01:11",
+    "avgTime": "00:57",
+    "questionText": "Gautam started a business with a sum of ₹ 60,000. Jatin joined him 8 months later with a sum of ₹ 35,000. At what respective ratio will the two share the profit after two years?",
+    "options": {
+      "A": "18:7",
+      "B": "15:7",
+      "C": "12:7",
+      "D": "5:7"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nIn a partnership, the profit ratio is directly proportional to the product of Investment and Time.\n\nGautam's equivalent investment = 60000 × 24 months\n\nJatin's equivalent investment = 35000 × 16 months\n\nProfit Ratio = (60000 × 24) : (35000 × 16) = (60 × 3) : (35 × 2) = 180 : 70 = 18 : 7\n\n∴ The correct answer is 18:7.\n\nAlternate Method\n\nGiven:\n\nGautam's investment (C1) = ₹ 60,000\n\nJatin's investment (C2) = ₹ 35,000\n\nTotal business duration = 2 years = 24 months\n\nJatin joins 8 months later.\n\nFormula Used:\n\nProfit Ratio = (C1 × T1) : (C2 × T2)\n\nGautam (₹ 60,000)\n24 months\nJatin (₹ 35,000)\n16 months\nJoined 8 months later\nProfit Ratio = (60k × 24) : (35k × 16)\n\nCalculations:\n\n⇒ Gautam's time period (T1) = 24 months\n\n⇒ Jatin's time period (T2) = 24 − 8 = 16 months\n\n⇒ Profit Ratio = (60000 × 24) : (35000 × 16)\n\n⇒ Simplifying the capitals by removing common zeros:\n\n⇒ Profit Ratio = (60 × 24) : (35 × 16)\n\n⇒ Profit Ratio = 1440 : 560\n\n⇒ Dividing both sides by 80:\n\n⇒ Profit Ratio = 18 : 7\n\n∴ The correct answer is 18:7.\n\nAdditional Information\n\nCompound Partnership\n\nWhen the capitals of partners are invested for different time periods, it is called a compound partnership. The share of profit for each partner is calculated by multiplying their respective capital with the time period.\n\nJoining Mid-way\n\nIf a partner joins the business t months after the business started, and the total duration to calculate profit is T months, their capital is actively invested for only (T − t) months.\n\nActive vs Sleeping Partner\n\nAn active partner manages the operations and usually receives a fixed percentage or salary from the total profit before the remainder is distributed. A sleeping partner only provides capital and shares the remaining profit based entirely on the investment ratio."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 12",
+    "status": "Unattempted",
+    "userTime": "00:02",
+    "avgTime": "00:28",
+    "questionText": "A book publisher offers a novel to a bookstore at a 30% discount on the cover price. However, they charge an additional 5% on the discounted price for shipping. The bookstore sells the novel for ₹1620 more, earning a profit of 40%. What was the original cover price of the novel?",
+    "options": {
+      "A": "₹5,510.20",
+      "B": "₹19,254.62",
+      "C": "₹18,181.82",
+      "D": "₹20,654.67"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nLet the Cover Price be 100 units.\n\nDiscounted Price = 100 − 30% = 70 units.\n\nTotal Cost Price = 70 + (5% of 70) = 73.5 units.\n\nProfit = 40% of Cost Price = 0.40 × 73.5 = 29.4 units.\n\nSince 29.4 units = ₹1620, Cover Price (100 units) = (1620 ÷ 29.4) × 100 ≈ ₹5510.20\n\n∴ The correct answer is ₹5,510.20.\n\nAlternate Method\n\nGiven:\n\nDiscount on Cover Price = 30%\n\nShipping charge on discounted price = 5%\n\nProfit percentage = 40%\n\nProfit amount (sold for ₹1620 more) = ₹1620\n\nCover Price\n(x)\n-30% disc\n+5% ship\nCost Price\n(0.735x)\n+40% Profit\n= ₹1620\nSelling Price\n(CP + 1620)\nEquation: 40% of 0.735x = 1620\n\nFormula Used:\n\nCost Price (CP) = Discounted Price × (1 + Shipping Rate)\n\nProfit = Profit % × CP\n\nCalculations:\n\n⇒ Let the original Cover Price of the novel be x.\n\n⇒ Discounted Price = x − 30% of x = 0.70x\n\n⇒ Cost Price (CP) = 0.70x + 5% of 0.70x\n\n⇒ CP = 0.70x + 0.035x = 0.735x\n\n⇒ Profit = 40% of CP = 0.40 × 0.735x = 0.294x\n\n⇒ We are given that the Profit earned is ₹1620.\n\n⇒ 0.294x = 1620\n\n⇒ x = 1620 ÷ 0.294\n\n⇒ x = 1620000 ÷ 294\n\n⇒ x ≈ 5510.20\n\n∴ The correct answer is ₹5,510.20.\n\nAdditional Information\n\nMarked Price (Cover Price)\n\nIt is the original price printed on an item. Successive discounts or flat discounts are always calculated on the Marked Price before deciding the Selling Price or Purchase Cost.\n\nEffective Cost Price with Overheads\n\nWhen extra charges like shipping, repairs, or transportation are incurred, they are added to the initial discounted purchase price to evaluate the total effective Cost Price.\n\nProfit and Loss Application\n\nAll Profit and Loss calculations and percentage margins are applied purely on the final Cost Price, not on the original marked price. Formula: Profit % = (Profit ÷ CP) × 100."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "userTime": "00:37",
+    "avgTime": "00:39",
+    "questionText": "A metal sphere having a radius of 10 centimeters is melted down and molded into 8 identical smaller solid spheres. What is the ratio of the surface area of the original sphere to the total surface area of all 8 smaller spheres?",
+    "options": {
+      "A": "1:2",
+      "B": "2:1",
+      "C": "1:4",
+      "D": "1:1"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nVolume is proportional to the cube of the radius, while surface area is proportional to the square of the radius.\n\nSince 1 large sphere is melted into 8 identical smaller spheres, the volume ratio of 1 Large : 1 Small = 8 : 1.\n\nTherefore, the radius ratio of Large : Small = 81/3 : 11/3 = 2 : 1.\n\nThe surface area ratio of 1 Large : 1 Small = 22 : 12 = 4 : 1.\n\nRatio of the surface area of 1 Large sphere to 8 Small spheres = 4 : (8 × 1) = 4 : 8 = 1 : 2.\n\n∴ The correct answer is 1:2.\n\nAlternate Method\n\nGiven:\n\nRadius of original metal sphere (R) = 10 cm\n\nNumber of identical smaller spheres (n) = 8\n\nFormula Used:\n\nVolume of a sphere = (4/3) × π × r3\n\nSurface Area of a sphere = 4 × π × r2\n\nR = 10\nOriginal Sphere\nMelted into 8\nr\n× 8\nSmaller Spheres\n\nCalculations:\n\n⇒ Total volume remains constant when melting and recasting.\n\n⇒ Volume of original sphere = 8 × Volume of one smaller sphere\n\n⇒ (4/3) × π × R3 = 8 × (4/3) × π × r3\n\n⇒ R3 = 8r3\n\n⇒ 103 = 8r3\n\n⇒ 1000 = 8r3\n\n⇒ r3 = 125 ⇒ r = 5 cm\n\n⇒ Surface Area of Original Sphere (S1) = 4 × π × 102\n\n⇒ S1 = 400π cm2\n\n⇒ Total Surface Area of 8 Smaller Spheres (S2) = 8 × (4 × π × 52)\n\n⇒ S2 = 8 × 100π = 800π cm2\n\n⇒ Required Ratio = S1 : S2 = 400π : 800π\n\n⇒ Ratio = 1 : 2\n\n∴ The correct answer is 1:2.\n\nAdditional Information\n\nMelting and Recasting Law\n\nWhen a solid object is melted and recast into new shapes, the total volume of the material is always conserved, though the total surface area will change.\n\nDimensional Scaling Factors\n\nIf the linear dimension (radius, side) of a 3D figure changes by a factor of k, then its surface area scales by k2 and its volume scales by k3.\n\nSphere vs Hemisphere Properties\n\nFor a full sphere, Total Surface Area = 4πr2. For a solid hemisphere, the Curved Surface Area is 2πr2 while the Total Surface Area is 3πr2 because of the flat circular base."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 16",
+    "status": "Incorrect",
+    "userTime": "00:43",
+    "avgTime": "00:46",
+    "questionText": "A cylinder and hemisphere have the same radius. If cylinder is placed on the hemisphere then their combined height is 30 cm. If the cylinder and hemisphere have equal volumes, find the radius.",
+    "options": {
+      "A": "12cm",
+      "B": "15cm",
+      "C": "16cm",
+      "D": "18cm"
+    },
+    "correctOption": "D",
+    "solution": "Solution\n\nShortcut Trick\n\nSince the cylinder and hemisphere have equal volumes on the same base radius, their height ratio h : r = 2 : 3.\n\nTotal height in terms of ratio units = 2 + 3 = 5 units.\n\nGiven total combined height = 30 cm.\n\nRadius of hemisphere (3 units) = (30 ÷ 5) × 3 = 18 cm.\n\n∴ The correct answer is 18 cm.\n\nAlternate Method\n\nGiven:\n\nTotal combined height = h + r = 30 cm\n\nVolume of the Cylinder = Volume of the Hemisphere\n\nFormula Used:\n\nVolume of Cylinder = πr2h\n\nVolume of Hemisphere = (2/3)πr3\n\n30 cm\nh\nr\nr\nCylinder and Hemisphere\n\nCalculations:\n\n⇒ πr2h = (2 ÷ 3) × πr3\n\n⇒ h = (2 ÷ 3)r\n\n⇒ Substituting the value of h in the combined height equation:\n\n⇒ (2 ÷ 3)r + r = 30\n\n⇒ (5 ÷ 3)r = 30\n\n⇒ r = 30 × 3 ÷ 5\n\n⇒ r = 18 cm\n\n∴ The correct answer is 18 cm.\n\nAdditional Information\n\nVolume and Surface Area of a Cylinder\n\nThe volume is given by V = πr2h. The total surface area is 2πr(r + h), where r is the base radius and h is the height.\n\nVolume and Surface Area of a Hemisphere\n\nThe volume is given by V = (2/3)πr3. The curved surface area is 2πr2, and the total surface area is 3πr2.\n\nRatio-Unitary Method in Geometry\n\nWhen two 3D shapes have equal volumes and identical base radii, equating their volume formulas directly provides the ratio of their heights, significantly speeding up complex fractional calculations."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 17",
+    "status": "Correct (Slow)",
+    "userTime": "00:27",
+    "avgTime": "00:16",
+    "questionText": "A pyramid has a base area of 60 cm² and height 9 cm. What is its volume?",
+    "options": {
+      "A": "180 cm³",
+      "B": "280 cm³",
+      "C": "240 cm³",
+      "D": "160 cm³"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nThe volume of any pyramid is directly one-third of the product of its base area and height.\n\nVolume = (1 ÷ 3) × Base Area × Height\n\nVolume = (1 ÷ 3) × 60 × 9 = 180 cm3\n\n∴ The correct answer is 180 cm3.\n\nAlternate Method\n\nGiven:\n\nBase Area of the pyramid = 60 cm2\n\nHeight of the pyramid = 9 cm\n\nFormula Used:\n\nVolume of a Pyramid = (1 ÷ 3) × Base Area × Height\n\nh = 9 cm\nBase Area = 60 sq. cm\n\nCalculations:\n\n⇒ Volume = (1 ÷ 3) × 60 × 9\n\n⇒ Volume = 20 × 9\n\n⇒ Volume = 180 cm3\n\n∴ The correct answer is 180 cm3.\n\nAdditional Information\n\nPrism vs Pyramid Volume\n\nThe volume of a prism is directly calculated as Base Area × Height, whereas a pyramid's volume is exactly one-third of the prism's volume having the same base and height.\n\nTotal Surface Area of a Pyramid\n\nTotal Surface Area = Lateral Surface Area + Base Area. For a regular pyramid, Lateral Surface Area = (1 ÷ 2) × Base Perimeter × Slant Height.\n\nCone as a Pyramid\n\nA cone is a specific type of pyramid with a circular base. Its volume formula is exactly (1 ÷ 3) × πr2h, which follows the same foundational logic."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 18",
+    "status": "Unattempted",
+    "userTime": "00:05",
+    "avgTime": "00:33",
+    "questionText": "A circular disc of radius 7 cm is inscribed inside an equilateral triangle. What is the approximate area of the remaining portion of the triangle?",
+    "options": {
+      "A": "100.6 cm²",
+      "B": "148.2 cm²",
+      "C": "200.3 cm²",
+      "D": "155.6 cm²"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nFor an equilateral triangle circumscribing a circle of radius r, the remaining area can be directly calculated as:\n\n⇒ Remaining Area = r2 × (3√3 − π)\n\n⇒ Remaining Area = 72 × (3 × 1.732 − 3.142)\n\n⇒ Remaining Area ≈ 49 × (5.196 − 3.142) = 49 × 2.054\n\n⇒ Remaining Area ≈ 100.64 cm2\n\n∴ The correct answer is 100.6 cm2.\n\nAlternate Method\n\nGiven:\n\nRadius of the inscribed circular disc (r) = 7 cm\n\nFormula Used:\n\nInradius of equilateral triangle = a ÷ 2√3 (where a is the side length)\n\nArea of equilateral triangle = (√3 ÷ 4) × a2\n\nArea of a circle = π × r2\n\nr = 7 cm\na = 14√3 cm\nRemaining Area = Area of Triangle − Area of Circle\n\nCalculations:\n\n⇒ a ÷ 2√3 = 7\n\n⇒ a = 14√3 cm\n\n⇒ Area of the equilateral triangle = (√3 ÷ 4) × (14√3)2\n\n⇒ Area of the equilateral triangle = (√3 ÷ 4) × 196 × 3 = 147√3 cm2\n\n⇒ Taking √3 ≈ 1.732\n\n⇒ Area of the triangle ≈ 147 × 1.732 = 254.604 cm2\n\n⇒ Area of the circle = (22 ÷ 7) × 72 = 154 cm2\n\n⇒ Remaining Area = Area of the triangle − Area of the circle\n\n⇒ Remaining Area = 254.604 − 154 = 100.604 cm2\n\n∴ The correct answer is 100.6 cm2.\n\nAdditional Information\n\nCircumcircle of an Equilateral Triangle\n\nThe circumradius (R) of an equilateral triangle is exactly double its inradius. Formula: R = a ÷ √3 = 2r.\n\nArea Ratio of Incircle and Circumcircle\n\nFor any equilateral triangle, the ratio of the area of the incircle to the area of the circumcircle is always 1:4.\n\nHeight of an Equilateral Triangle\n\nThe height or median (h) divides the triangle symmetrically. Formula: h = (√3 ÷ 2) × a."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 20",
+    "status": "Correct (Slow)",
+    "userTime": "00:29",
+    "avgTime": "00:21",
+    "questionText": "In △ABC, a line segment DE is parallel to BC, with D on AB and E on AC. If the ratio of the area of △ADE to the area of the trapezoid DECB is 4:21, what is the ratio of AD to DB?",
+    "options": {
+      "A": "2:3",
+      "B": "2:5",
+      "C": "3:5",
+      "D": "4:5"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nArea of △ADE : Area of trapezoid DECB = 4 : 21\n\nTotal Area of △ABC = Area(△ADE) + Area(DECB) = 4 + 21 = 25 parts\n\nRatio of corresponding sides AD : AB = √(Area of △ADE) : √(Area of △ABC) = √4 : √25 = 2 : 5\n\nSince point D is on AB, DB = AB − AD = 5 − 2 = 3 parts\n\n∴ The correct answer is 2:3.\n\nAlternate Method\n\nA\nB\nC\nD\nE\nArea = 4 units\nArea = 21 units\n\nGiven:\n\nDE is parallel to BC (DE || BC).\n\nArea of △ADE : Area of trapezoid DECB = 4 : 21.\n\nFormula Used:\n\nIf two triangles are similar, the ratio of their areas is equal to the square of the ratio of their corresponding sides.\n\nArea(△ADE) ÷ Area(△ABC) = (AD ÷ AB)2\n\nCalculations:\n\n⇒ Area of △ABC = Area of △ADE + Area of trapezoid DECB\n\n⇒ Area of △ABC = 4 + 21 = 25 units\n\n⇒ In △ADE and △ABC, DE || BC\n\n⇒ ∠ADE = ∠ABC (Corresponding angles)\n\n⇒ ∠AED = ∠ACB (Corresponding angles)\n\n⇒ ∴ △ADE ~ △ABC (by AA similarity criterion)\n\n⇒ Area(△ADE) ÷ Area(△ABC) = (AD ÷ AB)2\n\n⇒ 4 ÷ 25 = (AD ÷ AB)2\n\n⇒ AD ÷ AB = √(4 ÷ 25) = 2 ÷ 5\n\n⇒ Let AD = 2x and AB = 5x\n\n⇒ Since point D lies on AB, AB = AD + DB\n\n⇒ DB = AB − AD\n\n⇒ DB = 5x − 2x = 3x\n\n⇒ Ratio of AD to DB = 2x : 3x = 2 : 3\n\n∴ The correct answer is 2:3.\n\nAdditional Information\n\nArea of Similar Triangles\n\nThe ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides, altitudes, medians, or angle bisectors.\n\nBasic Proportionality Theorem (Thales Theorem)\n\nIf a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio. ⇒ AD ÷ DB = AE ÷ EC.\n\nAA Similarity Criterion\n\nIf two angles of one triangle are respectively equal to two angles of another triangle, then the two triangles are structurally similar."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 21",
+    "status": "Unattempted",
+    "userTime": "00:15",
+    "avgTime": "00:25",
+    "questionText": "A right triangle has sides 3, 4, and 5. A smaller triangle is drawn inside it with its vertices on the sides of the larger triangle, such that it is similar to the larger triangle. If its perimeter is 6, what is its area?",
+    "options": {
+      "A": "1.5",
+      "B": "2.4",
+      "C": "3",
+      "D": "6"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nPerimeter of larger triangle = 3 + 4 + 5 = 12.\n\nArea of larger triangle = 1/2 × 3 × 4 = 6.\n\nFor similar triangles, the ratio of their areas equals the square of the ratio of their perimeters.\n\nArea of smaller triangle = 6 × (6 ÷ 12)2\n\n⇒ Area = 6 × (1/2)2 = 6 ÷ 4 = 1.5.\n\n∴ The correct answer is 1.5 sq. units.\n\nAlternate Method\n\nGiven:\n\n⇒ Sides of the larger right-angled triangle = 3, 4, and 5\n\n⇒ Perimeter of the inscribed smaller similar triangle = 6\n\nFormula Used:\n\n⇒ Area of a right triangle = 1/2 × Base × Perpendicular Height\n\n⇒ For two similar triangles: Area1 / Area2 = (Perimeter1 / Perimeter2)2\n\n3\n4\n5\n2\n1.5\n2.5\n\nCalculations:\n\n⇒ The perimeter of the larger triangle = 3 + 4 + 5 = 12\n\n⇒ Area of the larger triangle = 1/2 × 3 × 4 = 6 sq. units\n\n⇒ The ratio of their perimeters (Smaller : Larger) = 6 / 12 = 1/2\n\n⇒ According to the similarity theorem, the ratio of their areas is the square of the scale factor.\n\n⇒ Area Ratio = (1 / 2)2 = 1 / 4\n\n⇒ Let the area of the smaller triangle be A.\n\n⇒ A / 6 = 1 / 4\n\n⇒ A = 6 × (1 / 4) = 1.5 sq. units\n\n∴ The correct answer is 1.5 sq. units.\n\nAdditional Information\n\nSimilarity Area Theorem\n\nFor any two similar triangles, the ratio of their areas is equal to the square of the ratio of their corresponding sides, altitudes, or perimeters: Area1 / Area2 = (P1 / P2)2.\n\nMedial Triangle Property\n\nThe triangle formed by connecting the midpoints of the sides of a given triangle is called the medial triangle. It perfectly represents a similar inscribed triangle whose area is exactly 1/4th of the original area, and perimeter is half of the original.\n\nRight Angled Triangle Basics\n\nThe area of a right-angled triangle is simply 1/2 × Base × Perpendicular Height. The three sides strictly follow the Pythagorean theorem relation: a2 + b2 = c2."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 22",
+    "status": "Incorrect",
+    "userTime": "01:19",
+    "avgTime": "00:27",
+    "questionText": "Two circles have radii of 12 cm and 4 cm. If the length of a direct common tangent is 15 cm, what is the distance between their centers?",
+    "options": {
+      "A": "15 cm",
+      "B": "17 cm",
+      "C": "18 cm",
+      "D": "20 cm"
+    },
+    "correctOption": "B",
+    "solution": "Solution\n\nShortcut Trick\n\nFor Direct Common Tangent (DCT) and distance between centers (d):\n\nd2 = DCT2 + (R − r)2\n\n⇒ d = √(152 + 82)\n\n⇒ d = √(225 + 64) = √289 = 17 cm\n\n∴ The correct answer is 17 cm.\n\nAlternate Method\n\nC1\nC2\nR = 12 cm\nr = 4 cm\nDCT = 15 cm\nd = ?\nT1\nT2\n\nGiven:\n\n⇒ Radius of larger circle (R) = 12 cm\n\n⇒ Radius of smaller circle (r) = 4 cm\n\n⇒ Length of Direct Common Tangent (DCT) = 15 cm\n\nFormula Used:\n\n⇒ DCT = √[d2 − (R − r)2]\n\nWhere 'd' is the distance between the centers of the two circles.\n\nCalculations:\n\n⇒ 15 = √[d2 − (12 − 4)2]\n\n⇒ 15 = √[d2 − 82]\n\nSquaring both sides:\n\n⇒ 225 = d2 − 64\n\n⇒ d2 = 225 + 64\n\n⇒ d2 = 289\n\n⇒ d = 17 cm\n\n∴ The correct answer is 17 cm.\n\nAdditional Information\n\nTransverse Common Tangent (TCT)\n\nA tangent that crosses the line joining the centers of the circles. Formula: TCT = √[d2 − (R + r)2]\n\nTouching Circles Externally\n\nWhen circles touch each other externally, the distance between centers is d = R + r, and the DCT length simplifies directly to 2√(R × r).\n\nNumber of Common Tangents\n\nIf circles are completely disjoint (d > R + r), they have exactly 4 common tangents (2 direct and 2 transverse)."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 23",
+    "status": "Unattempted",
+    "userTime": "00:10",
+    "avgTime": "00:14",
+    "questionText": "The distance between the centers of two circles is d. The lengths of their direct and transverse common tangents are L and M, respectively. If L2 + M2 = 200 and the sum of the squares of their radii is 100, what is the value of d?",
+    "options": {
+      "A": "10",
+      "B": "10√2",
+      "C": "5√2",
+      "D": "20"
+    },
+    "correctOption": "B",
+    "solution": "Solution\n\nShortcut Trick\n\nThe standard identity relating the direct common tangent (L), transverse common tangent (M), distance between centers (d) and radii (r1, r2) is:\n\nL2 + M2 = 2d2 − 2(r12 + r22)\n\nGiven: L2 + M2 = 200, and r12 + r22 = 100\n\n⇒ 200 = 2d2 − 2(100)\n\n⇒ 2d2 = 400 ⇒ d2 = 200 ⇒ d = 10√2\n\n∴ The correct answer is 10√2 units.\n\nAlternate Method\n\nGiven:\n\nDistance between centers = d\n\nDirect common tangent = L\n\nTransverse common tangent = M\n\nSum of squares of common tangents, L2 + M2 = 200\n\nSum of squares of radii, r12 + r22 = 100\n\nL (Direct Tangent)\nM (Transverse Tangent)\nd\nC₁\nC₂\n\nFormula:\n\nLength of direct common tangent (L) = √[d2 − (r1 − r2)2]\n\nLength of transverse common tangent (M) = √[d2 − (r1 + r2)2]\n\nCalculations:\n\nSquaring both formulas to eliminate the square roots:\n\n⇒ L2 = d2 − (r12 + r22 − 2r1r2)\n\n⇒ M2 = d2 − (r12 + r22 + 2r1r2)\n\nAdding both equations together:\n\n⇒ L2 + M2 = d2 − r12 − r22 + 2r1r2 + d2 − r12 − r22 − 2r1r2\n\n⇒ L2 + M2 = 2d2 − 2(r12 + r22)\n\nSubstitute the given values into the derived equation:\n\n⇒ 200 = 2d2 − 2(100)\n\n⇒ 200 = 2d2 − 200\n\n⇒ 2d2 = 400\n\n⇒ d2 = 200\n\n⇒ d = √200 = 10√2\n\n∴ The correct answer is 10√2 units.\n\nAdditional Information\n\nDirect Common Tangent (DCT)\n\nA common tangent is called a direct tangent if it does not intersect the line segment joining the centers of the circles. Its length is greater than the transverse common tangent.\n\nTransverse Common Tangent (TCT)\n\nA common tangent is called a transverse tangent if it intersects the line segment connecting the centers of the two circles.\n\nNumber of Common Tangents\n\nTwo disjoint circles have exactly 4 common tangents (2 DCT and 2 TCT). If the circles touch externally, they have 3 common tangents. Intersecting circles only have 2 direct common tangents."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 24",
+    "status": "Correct (Slow)",
+    "userTime": "00:49",
+    "avgTime": "00:26",
+    "questionText": "There are two parallel chords measuring 16 cm and 12 cm, both situated on the same side of the center of a circle. The space between the two chords is 2 cm. What is the radius of the circle?",
+    "options": {
+      "A": "8 cm",
+      "B": "10 cm",
+      "C": "12 cm",
+      "D": "15 cm"
+    },
+    "correctOption": "B",
+    "solution": "Solution\n\nShortcut Trick\n\nThe half-lengths of the two chords are 16 ÷ 2 = 8 cm and 12 ÷ 2 = 6 cm.\n\nIn a circle, the radius, half-chord, and perpendicular distance from the center form a right-angled triangle.\n\nNotice that the lengths 6, 8, and 10 form a standard Pythagorean triplet (62 + 82 = 102).\n\nThe distances from the center to the chords are 6 cm and 8 cm, and their difference is 8 − 6 = 2 cm, matching the given spacing perfectly.\n\nTherefore, the hypotenuse, which represents the circle's radius, must be 10 cm.\n\n∴ The correct answer is 10 cm.\n\nAlternate Method\n\nGiven:\n\nLength of larger chord (AB) = 16 cm\n\nLength of smaller chord (CD) = 12 cm\n\nSpace between the chords = 2 cm\n\nO\nC\nD\nA\nB\nP\nQ\n8\n6\n2\nx\nr\nr\n\nFormula Used:\n\nA perpendicular drawn from the center of a circle to a chord bisects the chord.\n\nAccording to Pythagoras theorem: r2 = (Perpendicular distance)2 + (Half of chord)2\n\nCalculations:\n\nLet the perpendicular distance of the larger chord from the center be x cm.\n\nSince both chords are on the same side of the center, the distance of the smaller chord from the center will be (x + 2) cm.\n\nHalf of larger chord = 16 ÷ 2 = 8 cm\n\nHalf of smaller chord = 12 ÷ 2 = 6 cm\n\nApplying the Pythagoras theorem for the larger chord:\n\n⇒ r2 = x2 + 82\n\n⇒ r2 = x2 + 64 --- (Equation 1)\n\nApplying the Pythagoras theorem for the smaller chord:\n\n⇒ r2 = (x + 2)2 + 62\n\n⇒ r2 = x2 + 4x + 4 + 36\n\n⇒ r2 = x2 + 4x + 40 --- (Equation 2)\n\nEquating (Equation 1) and (Equation 2):\n\n⇒ x2 + 64 = x2 + 4x + 40\n\n⇒ 4x = 64 − 40\n\n⇒ 4x = 24\n\n⇒ x = 6 cm\n\nSubstituting the value of x into Equation 1:\n\n⇒ r2 = 62 + 64\n\n⇒ r2 = 36 + 64 = 100\n\n⇒ r = √100 = 10 cm\n\n∴ The correct answer is 10 cm.\n\nAdditional Information\n\nPerpendicular Bisector Theorem\n\nA perpendicular dropped from the center of a circle to a chord bisects the chord into two equal halves.\n\nParallel Chords on Opposite Sides\n\nIf two parallel chords lie on opposite sides of the center, the perpendicular distance between them is the sum of their individual distances from the center (d1 + d2).\n\nPythagorean Triplets\n\nMany geometry problems can be solved significantly faster by recognizing common triplets like (3, 4, 5), (6, 8, 10), or (5, 12, 13) which perfectly satisfy the equation a2 + b2 = c2."
+  },
+  {
+    "subject": "Quantitative Aptitude",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 25",
+    "status": "Correct (Slow)",
+    "userTime": "01:08",
+    "avgTime": "00:31",
+    "questionText": "What is the area of the segment formed by a chord in a circle of radius 12 cm, if the angle subtended at the center is 150°?",
+    "options": {
+      "A": "60π-36",
+      "B": "36π-36",
+      "C": "60π-72",
+      "D": "36π-72"
+    },
+    "correctOption": "A",
+    "solution": "Solution\n\nShortcut Trick\n\nDirect formula for the Area of a Segment:\n\n⇒ Area = r2 × [(π × θ ÷ 360°) − (sin θ ÷ 2)]\n\n⇒ Area = 122 × [(π × 150° ÷ 360°) − (sin 150° ÷ 2)]\n\n⇒ Area = 144 × [(5π ÷ 12) − (1 ÷ 4)]\n\n⇒ Area = 60π − 36 cm2\n\n∴ The correct answer is 60π−36 cm2.\n\nAlternate Method\n\n150°\n12 cm\n12 cm\nO\nA\nB\nSegment\nArea of Segment = Area of Sector − Area of Triangle\n\nGiven:\n\n⇒ Radius of the circle (r) = 12 cm\n\n⇒ Angle subtended at the center (θ) = 150°\n\nFormula Used:\n\n⇒ Area of Sector = (θ ÷ 360°) × πr2\n\n⇒ Area of Triangle = (1 ÷ 2) × r2 × sin θ\n\n⇒ Area of Segment = Area of Sector − Area of Triangle\n\nCalculations:\n\n⇒ Area of Sector = (150° ÷ 360°) × π × 122\n\n⇒ Area of Sector = (5 ÷ 12) × π × 144 = 60π cm2\n\n⇒ To find the area of the triangle, we use sin(150°) = sin(180° − 30°) = sin(30°) = 1 ÷ 2\n\n⇒ Area of Triangle = (1 ÷ 2) × 122 × (1 ÷ 2)\n\n⇒ Area of Triangle = (1 ÷ 2) × 144 × (1 ÷ 2) = 36 cm2\n\n⇒ Area of Segment = 60π − 36 cm2\n\n∴ The correct answer is 60π−36 cm2.\n\nAdditional Information\n\nArea of Major Segment\n\nIt is calculated by subtracting the area of the minor segment from the total area of the circle: Area = πr2 − Area of Minor Segment.\n\nLength of an Arc\n\nThe arc length corresponding to a central angle θ is a fraction of the circle's circumference: L = (θ ÷ 360°) × 2πr.\n\nPerimeter of a Sector\n\nThe boundary length of a sector comprises the arc length and two radii: Perimeter = L + 2r."
+  }
+]
