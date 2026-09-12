@@ -11,7 +11,10 @@ import {
   ArrowRight,
   Lightbulb,
   Check,
-  X
+  X,
+  Play,
+  Target,
+  Timer
 } from 'lucide-react';
 import {
   ADDITION_LEVELS,
@@ -24,6 +27,7 @@ import {
 export const ChainAdditionDrill: React.FC = () => {
   const [progress, setProgress] = useState<ModuleProgress>(loadAdditionProgress);
   const [selectedLevel, setSelectedLevel] = useState<number>(1);
+  const [isStarted, setIsStarted] = useState<boolean>(false);
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState<number>(1); // 1 to 10
   const [numbers, setNumbers] = useState<number[]>([]);
   const [userInput, setUserInput] = useState<string>('');
@@ -60,6 +64,7 @@ export const ChainAdditionDrill: React.FC = () => {
   };
 
   const startNewSet = (level: number = selectedLevel) => {
+    setIsStarted(true);
     setCurrentQuestionIdx(1);
     setRoundScore(0);
     setElapsedTime(0);
@@ -70,9 +75,15 @@ export const ChainAdditionDrill: React.FC = () => {
     generateNumbers(cfg);
   };
 
-  useEffect(() => {
-    startNewSet(selectedLevel);
-  }, [selectedLevel]);
+  // Reset drill to briefing when changing levels
+  const handleSelectLevel = (lvl: number) => {
+    if (lvl > progress.unlockedLevel) return;
+    setSelectedLevel(lvl);
+    setIsStarted(false);
+    setIsFinished(false);
+    setIsTimerRunning(false);
+    setElapsedTime(0);
+  };
 
   // Stopwatch
   useEffect(() => {
@@ -199,43 +210,101 @@ export const ChainAdditionDrill: React.FC = () => {
 
             return (
               <button
-                key={lvl.level}
-                onClick={() => {
-                  if (isUnlocked) {
-                    setSelectedLevel(lvl.level);
-                  }
-                }}
-                disabled={!isUnlocked}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 cursor-pointer ${
-                  isCurrent
-                    ? 'bg-blue-600 text-white shadow-sm ring-2 ring-blue-500/30'
-                    : isUnlocked
-                    ? 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
-                    : 'bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed opacity-60'
-                }`}
-              >
-                {!isUnlocked ? (
-                  <Lock className="w-3 h-3 text-slate-400" />
-                ) : (
-                  <span>L{lvl.level}</span>
-                )}
-                <span className="text-[11px] font-medium opacity-90">
-                  ({lvl.nodeCount}N)
+              key={lvl.level}
+              onClick={() => handleSelectLevel(lvl.level)}
+              disabled={!isUnlocked}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 cursor-pointer ${
+                isCurrent
+                  ? 'bg-blue-600 text-white shadow-sm ring-2 ring-blue-500/30'
+                  : isUnlocked
+                  ? 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
+                  : 'bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed opacity-60'
+              }`}
+            >
+              {!isUnlocked ? (
+                <Lock className="w-3 h-3 text-slate-400" />
+              ) : (
+                <span>L{lvl.level}</span>
+              )}
+              <span className="text-[11px] font-medium opacity-90">
+                ({lvl.nodeCount}N)
+              </span>
+              {best !== undefined && isUnlocked && (
+                <span className={`text-[10px] px-1 rounded ${isCurrent ? 'bg-white/20' : 'bg-slate-100'}`}>
+                  {best}/10
                 </span>
-                {best !== undefined && isUnlocked && (
-                  <span className={`text-[10px] px-1 rounded ${isCurrent ? 'bg-white/20' : 'bg-slate-100'}`}>
-                    {best}/10
-                  </span>
-                )}
-              </button>
-            );
-          })}
-        </div>
+              )}
+            </button>
+          );
+        })}
       </div>
+    </div>
 
-      {/* 2. Main Drill Area */}
-      {!isFinished ? (
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-6">
+    {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+    {!isStarted && !isFinished && (
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+      >
+        <div className="text-center space-y-2">
+          <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-blue-100">
+            <Target className="w-7 h-7" />
+          </div>
+          <h3 className="text-xl font-black text-slate-900">
+            Level {activeLevelConfig.level}: {activeLevelConfig.title}
+          </h3>
+          <p className="text-sm text-slate-600 max-w-md mx-auto">
+            {activeLevelConfig.description}
+          </p>
+        </div>
+
+        {/* Arun Sharma Method Tip Box */}
+        <div className="bg-blue-50/70 border border-blue-200/80 rounded-xl p-4 space-y-2">
+          <div className="text-xs font-bold text-blue-800 flex items-center gap-1.5">
+            <Lightbulb className="w-4 h-4 text-blue-600" />
+            <span>Arun Sharma Continuous Addition Concept (Page 2)</span>
+          </div>
+          <p className="text-xs text-slate-700 leading-relaxed">
+            Keep a running subtotal in memory. When adding each new number, add the units first to reach a friendly round number, then leap by the tens.
+          </p>
+          <div className="bg-white/90 border border-blue-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-blue-900">
+            <span>Chain Sequence:</span>
+            <span>{activeLevelConfig.nodeCount} Numbers in range [{activeLevelConfig.minVal} – {activeLevelConfig.maxVal}]</span>
+            <span className="bg-blue-600 text-white px-2 py-0.5 rounded text-[11px] font-sans">Pass: {activeLevelConfig.passingScore}/10</span>
+          </div>
+        </div>
+
+        {/* Drill Targets Grid */}
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+            <span className="text-[10px] uppercase font-bold text-slate-400 block">Questions</span>
+            <span className="text-base font-black text-slate-800">10 Problems</span>
+          </div>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+            <span className="text-[10px] uppercase font-bold text-slate-400 block">Unlock Target</span>
+            <span className="text-base font-black text-emerald-700">≥ {activeLevelConfig.passingScore} / 10</span>
+          </div>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+            <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Speed</span>
+            <span className="text-base font-black text-blue-700">~{activeLevelConfig.targetBenchmarkSec}s / chain</span>
+          </div>
+        </div>
+
+        {/* Start Drill Button */}
+        <button
+          onClick={() => startNewSet(selectedLevel)}
+          className="w-full py-4 bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <Play className="w-5 h-5 fill-current" />
+          <span>Start Addition Drill</span>
+        </button>
+      </motion.div>
+    )}
+
+    {/* 2. Main Drill Area */}
+    {isStarted && !isFinished && (
+      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-6">
           {/* Status Header */}
           <div className="flex items-center justify-between text-xs text-slate-500">
             <span className="font-bold uppercase tracking-wider">
@@ -357,8 +426,10 @@ export const ChainAdditionDrill: React.FC = () => {
             </div>
           )}
         </div>
-      ) : (
-        /* 3. 10-Question Scorecard */
+      )}
+
+      {/* 3. 10-Question Scorecard */}
+      {isFinished && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}

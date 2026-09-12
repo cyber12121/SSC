@@ -210,7 +210,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const answersRef = useRef(answers);
   answersRef.current = answers;
   const timeSpentRef = useRef(timeSpent);
-  timeSpentRef.current = timeSpent;
+  useEffect(() => {
+    timeSpentRef.current = timeSpent;
+  }, [timeSpent]);
   const markedRef = useRef(markedForReview);
   markedRef.current = markedForReview;
   const currentIdxRef = useRef(currentIdx);
@@ -239,12 +241,24 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   useEffect(() => {
     if (isFinished) return;
     startTimeRef.current = Date.now();
-    setCurrentTimer(0);
+    const previouslySpent = timeSpentRef.current[currentIdx] || 0;
+    setCurrentTimer(previouslySpent);
     setVisited(prev => { const n = new Set(prev); n.add(currentIdx); return n; });
     const interval = setInterval(() => {
       if (!isPaused && !isFinished) setCurrentTimer(prev => prev + 1);
     }, 1000);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      if (!isPaused && !isFinished) {
+        const duration = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
+        if (duration > 0) {
+          const newTime = (timeSpentRef.current[currentIdx] || 0) + duration;
+          timeSpentRef.current = { ...timeSpentRef.current, [currentIdx]: newTime };
+          setTimeSpent(prev => ({ ...prev, [currentIdx]: newTime }));
+          startTimeRef.current = Date.now();
+        }
+      }
+    };
   }, [currentIdx, isPaused, isFinished]);
 
   useEffect(() => {
@@ -268,11 +282,11 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const recordTime = () => {
     if (isPaused) return;
     const duration = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
-    setTimeSpent(prev => {
-      const updated = { ...prev, [currentIdx]: (prev[currentIdx] || 0) + duration };
-      timeSpentRef.current = updated;
-      return updated;
-    });
+    if (duration > 0) {
+      const newTime = (timeSpentRef.current[currentIdx] || 0) + duration;
+      timeSpentRef.current = { ...timeSpentRef.current, [currentIdx]: newTime };
+      setTimeSpent(prev => ({ ...prev, [currentIdx]: newTime }));
+    }
     startTimeRef.current = Date.now();
   };
 

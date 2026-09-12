@@ -121,56 +121,77 @@ export interface SubtractionLevelConfig {
   maxVal: number;
   description: string;
   type: 'same_decade' | 'unit_match' | 'century_bridge' | 'three_digit_match' | 'three_digit_complex';
+  questionCount: number;
+  passingScore: number;
+  targetBenchmarkSec: number;
 }
 
 export const SUBTRACTION_LEVELS: SubtractionLevelConfig[] = [
   {
     level: 1,
-    title: 'Friendly Decade Hop',
+    title: 'Friendly Decade Hop (11–50)',
     minVal: 11,
     maxVal: 50,
-    description: 'Single hop forward with no unit borrowing needed.',
-    type: 'same_decade'
+    description: 'Single hop forward with no unit borrowing needed (e.g. 48 − 23).',
+    type: 'same_decade',
+    questionCount: 10,
+    passingScore: 8,
+    targetBenchmarkSec: 3
   },
   {
     level: 2,
-    title: 'Unit-Match Hop (20–70)',
+    title: 'Unit-Match Hop (20–75)',
     minVal: 20,
-    maxVal: 70,
-    description: 'Hop to align unit digit first, then leap the tens.',
-    type: 'unit_match'
+    maxVal: 75,
+    description: 'Hop forward to align unit digit first, then leap tens (e.g. 72 − 38).',
+    type: 'unit_match',
+    questionCount: 10,
+    passingScore: 8,
+    targetBenchmarkSec: 4
   },
   {
     level: 3,
-    title: 'Decade Bridge Hop (50–100)',
-    minVal: 50,
+    title: 'Decade Bridge Hop (40–100)',
+    minVal: 40,
     maxVal: 100,
-    description: 'Bridge through nearest multiple of 10 or 50.',
-    type: 'century_bridge'
+    description: 'Forward jump across multiples of 10 or 50 milestone (e.g. 83 − 37).',
+    type: 'century_bridge',
+    questionCount: 10,
+    passingScore: 8,
+    targetBenchmarkSec: 4
   },
   {
     level: 4,
-    title: 'Century Crossing (80–180)',
-    minVal: 80,
-    maxVal: 180,
-    description: 'Forward jump across 100 on the number line.',
-    type: 'century_bridge'
+    title: 'Century Crossing (70–190)',
+    minVal: 70,
+    maxVal: 190,
+    description: 'Arun Sharma benchmark: leap across 100 on the number line (e.g. 134 − 78).',
+    type: 'century_bridge',
+    questionCount: 10,
+    passingScore: 8,
+    targetBenchmarkSec: 5
   },
   {
     level: 5,
     title: '3-Digit Matching Milestone (200–999)',
     minVal: 200,
     maxVal: 999,
-    description: 'Arun Sharma method: jump to match end digits, then leap hundreds.',
-    type: 'three_digit_match'
+    description: 'Jump to match end digits, then leap the hundreds (e.g. 738 − 211).',
+    type: 'three_digit_match',
+    questionCount: 10,
+    passingScore: 8,
+    targetBenchmarkSec: 6
   },
   {
     level: 6,
     title: '3-Digit Complex Leap (300–999)',
     minVal: 300,
     maxVal: 999,
-    description: 'High-speed exam subtraction without borrowing.',
-    type: 'three_digit_complex'
+    description: 'Exam speed subtraction crossing century benchmarks (e.g. 813 − 478).',
+    type: 'three_digit_complex',
+    questionCount: 10,
+    passingScore: 8,
+    targetBenchmarkSec: 7
   }
 ];
 
