@@ -652,21 +652,44 @@ export default function App() {
   const handleSaveQuizResult = async (
     results: Omit<QuizResult, 'userId' | 'completedAt'>
   ): Promise<QuizResult | null> => {
-    if (!user) return null;
+    const fullResult: QuizResult = {
+      ...results,
+      userId: user ? user.uid : 'guest',
+      completedAt: new Date().toISOString(),
+    };
+
+    if (!user) {
+      const guestSaved = { ...fullResult, id: 'guest-' + Date.now() };
+      try {
+        const guestHistory = JSON.parse(localStorage.getItem('guest_results') || '[]');
+        localStorage.setItem('guest_results', JSON.stringify([guestSaved, ...guestHistory].slice(0, 50)));
+      } catch {}
+      return guestSaved;
+    }
+
     try {
-      const fullResult: QuizResult = {
-        ...results,
-        userId: user.uid,
-        completedAt: new Date().toISOString(),
-      };
-      const docRef = await addDoc(collection(db, 'results'), fullResult);
+      // Deep sanitize to strip any undefined properties that Firestore rejects
+      const sanitizedDoc = JSON.parse(JSON.stringify(fullResult));
+      const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
       const saved = { ...fullResult, id: docRef.id };
-      console.log('Progress saved successfully');
-      await fetchResults();
+      console.log('Progress saved successfully with ID:', docRef.id);
+      
+      // Optimistically update recent activity state immediately
+      setUserResults(prev => [saved, ...prev.filter(r => r.id !== saved.id)]);
+
+      // Background sync with Firestore
+      fetchResults().catch(err => console.warn('Background sync note:', err));
       return saved;
     } catch (error) {
-      console.error('Error saving progress:', error);
-      return null;
+      console.error('Error saving progress to Firestore:', error);
+      // Fallback local storage so test attempt is never lost
+      const localSaved = { ...fullResult, id: 'local-' + Date.now() };
+      try {
+        const localHistory = JSON.parse(localStorage.getItem('offline_results_' + user.uid) || '[]');
+        localStorage.setItem('offline_results_' + user.uid, JSON.stringify([localSaved, ...localHistory].slice(0, 50)));
+      } catch {}
+      setUserResults(prev => [localSaved, ...prev.filter(r => r.id !== localSaved.id)]);
+      return localSaved;
     }
   };
 
@@ -1067,7 +1090,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 font-sans text-slate-900">
+    <div className={`font-sans text-slate-900 ${view === 'quiz' || view === 'review' ? 'h-screen overflow-hidden bg-white' : 'min-h-screen bg-slate-100'}`}>
       {/* Navigation */}
       {view !== 'quiz' && view !== 'review' && (
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
@@ -1179,7 +1202,7 @@ export default function App() {
       </nav>
       )}
 
-      <main className={view === 'quiz' || view === 'review' ? 'w-full' : 'max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5'}>
+      <main className={view === 'quiz' || view === 'review' ? 'w-full h-full overflow-hidden' : 'max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5'}>
         {loading ? (
           <div className="flex flex-col items-center justify-center py-28">
             <Loader2 className="w-10 h-10 text-blue-600 animate-spin mb-3" />
@@ -2048,6 +2071,7 @@ export default function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              className="w-full h-full overflow-hidden"
             >
               <React.Suspense fallback={
                 <div className="flex flex-col items-center justify-center py-40">

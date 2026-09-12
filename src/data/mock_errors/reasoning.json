@@ -616,6 +616,74 @@
           "topic": "Cube & Dice",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_72a2184b49",
+        "q_num": 37,
+        "question": "Select the missing number from the given options.\n7 \n11 \n14 \n8 \n12 \n9 \n113 \n265 \n?",
+        "options": {
+          "a": "277",
+          "b": "361",
+          "c": "625",
+          "d": "281"
+        },
+        "answer": "a",
+        "solution": "The pattern followed is:\n7² + 8² = 49 + 64 = 113\n11² + 12² = 121 + 144 = 265\nSimilarly,\n14² + 9² = 196 + 81 = 277\nHence, 277 is the correct answer.",
+        "tags": {
+          "topic": "Missing Number",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2522376fd8",
+        "q_num": 38,
+        "question": "Identify the number that does NOT belong to the following series.\n46, 93, 188, 379, 764, 1529",
+        "options": {
+          "a": "764",
+          "b": "93",
+          "c": "188",
+          "d": "379"
+        },
+        "answer": "a",
+        "solution": "The pattern followed here is:\nGiven: 46, 93, 188, 379, 764, 1529\n⇒ 46 × 2 + 1 = 92 + 1 = 93\n⇒ 93 × 2 + 2 = 186 + 2 = 188\n⇒ 188 × 2 + 3 = 376 + 3 = 379\n⇒ 379 × 2 + 4 = 758 + 4 = 762 ≠ 764\n⇒ 762 × 2 + 5 = 1524 + 5 = 1529\nHence, the correct answer is \"764\".",
+        "tags": {
+          "topic": "Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1b3a8e98c4",
+        "q_num": 39,
+        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set. (NOTE: Operations should be performed on the whole numbers, without breaking down the numbers into its constituent digits.)\n(36, 99, 106)\n(72, 207, 214)",
+        "options": {
+          "a": "(64, 193, 200)",
+          "b": "(48, 125, 132)",
+          "c": "(24, 63, 70)",
+          "d": "(52, 157, 164)"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is:\nLogic: 1st number × 3 - 9 = 2nd number,\n2nd number + 7 = 3rd number.\n\nHere,\n(36, 99, 106)\n⇒ 36 × 3 - 9 = 108 - 9 = 99,\n⇒ 99 + 7 = 106.\n\n(72, 207, 214)\n⇒ 72 × 3 - 9 = 216 - 9 = 207,\n⇒ 207 + 7 = 214.\n\nSimilarly,\n(24, 63, 70)\n⇒ 24 × 3 - 9 = 72 - 9 = 63,\n⇒ 63 + 7 = 70.\nHence, the correct answer is Option C.",
+        "tags": {
+          "topic": "Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_a3de29cd5e",
+        "q_num": 40,
+        "question": "Select the option that represents the letters that, when sequentially placed from left to right in the blanks below, will complete the letter series.\nL _ _ A _ _ S _ _ K _ _ L _ _ A",
+        "options": {
+          "a": "A S L K A L S A K A",
+          "b": "K S K K A L S A K A",
+          "c": "K S L K A L S A K S",
+          "d": "K S L K A L S A K A"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is:\n\nFrom Option 1) A S L K A L S A K A\nL A S A / L K S A / L K S A / L K A A → Does not follow pattern.\n\nFrom Option 2) K S K K A L S A K A\nL K S A / K K S A / L K S A / L K A A → Does not follow pattern.\n\nFrom Option 3) K S L K A L S A K S\nL K S A / L K S A / L K S A / L K S A → follows a pattern of LKSA.\n\nFrom option 4) K S L K A L S A K A\nL K S A / L K S A / L K S A / L K A A → Does not follow pattern.\n\nHence, the correct answer is 'Option 3'.",
+        "tags": {
+          "topic": "Series",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -775,6 +843,23 @@
         "solution": "1) (6 × 4) = 24, Square of 24 = 576\n2) (1 × 7) = 7, Square of 7 = 49 ≠ 343\n3) (2 × 7) = 14, Square of 14 = 196\n4) (3 × 2) = 6, Square of 6 = 36\nHence, 17 – 343 is odd number pair.",
         "tags": {
           "topic": "Analogy",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_53f295d68c",
+        "q_num": 10,
+        "question": "If 22 + 4 = 24 and 18 + 5 = 15, then 16 + 9 is equal to",
+        "options": {
+          "a": "36",
+          "b": "60",
+          "c": "9",
+          "d": "21"
+        },
+        "answer": "d",
+        "solution": "Here the logic is:\n22 + 4 = 26 = 2 + 6 = 8 × 3 = 24\n18 + 5 = 23 = 2 + 3 = 5 × 3 = 15\nSimilarly;\n16 + 9 = 25 = 2 + 5 = 7 × 3 = 21\nHence correct option is 21",
+        "tags": {
+          "topic": "Mathematical Operations",
           "difficulty": "medium"
         }
       }
@@ -1242,6 +1327,108 @@
         "solution": "Given Series:\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%) = 4\n\nHence, the correct answer is \"4\".",
         "tags": {
           "topic": "Ranking & Order",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_c8bd4a199e",
+        "q_num": 28,
+        "question": "You were giving your NDA exam. So while filling your OMR sheet, your pen stopped working suddenly. You will",
+        "options": {
+          "a": "sit in the examination center till the exam time gets over and will not write anything.",
+          "b": "requested an invigilator for a pen",
+          "c": "take out another pen that you carried and finish the examination.",
+          "d": "leave the examination hall"
+        },
+        "answer": "c",
+        "solution": "The correct answer is take out another pen that you carried and finish the examination.\n\nThis shows how planned you are toward the exam and reflects officer-like qualities such as effective intelligence and organizing abilities.",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_3b7602e623",
+        "q_num": 29,
+        "question": "Which two signs can be interchanged so as to balance the given equation?\n72 ÷ 36 + 12 × 13 - 48 = 63",
+        "options": {
+          "a": "× and ÷",
+          "b": "+ and -",
+          "c": "+ and ÷",
+          "d": "× and -"
+        },
+        "answer": "c",
+        "solution": "BODMAS RULE:\n\nOption (3): + and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 + 36 ÷ 12 × 13 - 48 = 63\n⇒ 72 + 3 × 13 - 48 = 63\n⇒ 72 + 39 - 48 = 63\n⇒ 111 - 48 = 63\n⇒ 63 = 63\n⇒ LHS = RHS\nHence, the correct answer is \"+ and ÷\".",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_29bbecccc9",
+        "q_num": 30,
+        "question": "In the following question, select the odd word pair from the given alternatives.",
+        "options": {
+          "a": "Question - Answer",
+          "b": "Pencil - Rub",
+          "c": "Cup - Saucer",
+          "d": "Chair - Table"
+        },
+        "answer": "b",
+        "solution": "In the pairs \"Question - Answer\", \"Cup - Saucer\", and \"Chair - Table\", the two words are directly related and often used together in a complementary way.\nA question is often followed by an answer.\nA cup is often placed on a saucer.\nA chair is often paired with a table.\n\nHowever, the pair \"Pencil - Rub\" doesn't follow the same pattern of complementary use. While you might use an eraser to remove pencil markings, the word 'rub' itself doesn't have a direct, complementary relationship to 'pencil'. Therefore, \"Pencil - Rub\" is the odd one out.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_a5eb796395",
+        "q_num": 31,
+        "question": "Statement: Should Yoga and meditation be made compulsory in schools?\nArguments:\nI. Yes. Yoga and meditation help the students to have better concentration which eventually helps in their studies.\nII. No. Children are already occupied with so much work and they can’t dedicate their valuable time to Yoga and meditation.",
+        "options": {
+          "a": "A) Neither argument I nor argument II is strong.",
+          "b": "Both arguments I and II are strong.",
+          "c": "Only argument I is strong.",
+          "d": "Only argument II is strong."
+        },
+        "answer": "c",
+        "solution": "Argument I is strong because it is true that Yoga and meditation help students develop better concentration, which aids their studies.\nArgument II is not strong as the reason given against Yoga and meditation is vague.\nHence, only argument I is strong.",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7a94433db5",
+        "q_num": 32,
+        "question": "In a class of 37 students, Ramesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh. How many students were ranked below Dinesh?",
+        "options": {
+          "a": "22",
+          "b": "23",
+          "c": "21",
+          "d": "24"
+        },
+        "answer": "a",
+        "solution": "Total number of students = 37.\nRamesh's rank from the top = 9th.\nDinesh's rank is 6 places below Ramesh, so Dinesh's position from the top = 9 + 6 = 15th.\nNumber of students below Dinesh = Total students - Dinesh's position from top = 37 - 15 = 22.\nTherefore, 22 students were ranked below Dinesh.",
+        "tags": {
+          "topic": "Ranking & Order",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b1247d54a1",
+        "q_num": 33,
+        "question": "The sequence of folding a piece of paper and the manner in which the folded paper has been cut is shown below. Choose a figure which would most closely resemble the unfolded form of the paper.",
+        "options": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "answer": "c",
+        "solution": "By reversing the folding and cutting steps symmetrically, we obtain the unfolded form of the paper.",
+        "tags": {
+          "topic": "Paper Folding & Cutting",
           "difficulty": "medium"
         }
       }

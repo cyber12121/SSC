@@ -14,6 +14,8 @@ export interface Question {
     src: string;
     caption?: string;
   } | null;
+  subject?: string;
+  section?: string;
   tags?: {
     topic?: string;
     exam_years?: string[];

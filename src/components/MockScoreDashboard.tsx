@@ -557,7 +557,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     return list;
   };
 
-  const openPracticeModal = async (report: MockScoreReport, targetSection: string = 'Reasoning') => {
+  const openPracticeModal = async (report: MockScoreReport, targetSection: string = 'all') => {
     let normalizedTarget = targetSection;
     if (/quant|math/i.test(targetSection)) normalizedTarget = 'Mathematics';
     else if (/reason/i.test(targetSection)) normalizedTarget = 'Reasoning';
@@ -700,6 +700,26 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         return;
       }
 
+      // Sort questions in canonical SSC order: Reasoning (Part A) -> GA (Part B) -> Quant (Part C) -> English (Part D)
+      const subjectOrder: Record<string, number> = {
+        'Reasoning': 1,
+        'General Awareness': 2,
+        'Mathematics': 3,
+        'English': 4,
+        'Other': 5
+      };
+
+      filtered.sort((a, b) => {
+        const subA = normalizeSub(a.subject || a.section || a.subjectName || '');
+        const subB = normalizeSub(b.subject || b.section || b.subjectName || '');
+        const ordA = subjectOrder[subA] || 99;
+        const ordB = subjectOrder[subB] || 99;
+        if (ordA !== ordB) return ordA - ordB;
+        const numA = Number(a.q_num || a.qNum || a.questionNumber || a.originalIdx || 0);
+        const numB = Number(b.q_num || b.qNum || b.questionNumber || b.originalIdx || 0);
+        return numA - numB;
+      });
+
       // 3. Format questions for quiz
       const formattedQuestions: Question[] = filtered.map((item, idx) => {
         const rawSub = item.subject || item.section || item.subjectName || practiceSection;
@@ -741,6 +761,14 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         const solution = (item.solution || item.explanation || item.sol || '').trim();
         const topicText = item.topic || item.tags?.topic || 'General';
 
+        const secKey = subjectName === 'Reasoning'
+          ? 'part_a'
+          : subjectName === 'General Awareness'
+          ? 'part_b'
+          : subjectName === 'Mathematics'
+          ? 'part_c'
+          : 'part_d';
+
         return {
           id: item.id || `mock_err_${idx + 1}_${Math.random().toString(36).slice(2, 7)}`,
           q_num: idx + 1,
@@ -749,6 +777,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           answer: ans,
           solution: solution || undefined,
           image: item.image || null,
+          subject: subjectName,
+          section: secKey,
           tags: {
             topic: `${subjectName} • ${statusLabel} • ${topicText}`,
             difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
@@ -756,14 +786,14 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         };
       });
 
-      const sectionTitle = practiceSection === 'all' ? 'All Mistakes' : `${practiceSection} Mistakes`;
+      const sectionTitle = practiceSection === 'all' ? 'All 4 Sections Mistakes' : `${practiceSection} Mistakes`;
       const filterLabel = practiceErrorFilter === 'all' ? '' : ` (${practiceErrorFilter.toUpperCase()})`;
 
       const virtualChapter: Chapter = {
         chapter_num: 0,
         chapter_title: `${practiceModalReport.title} - ${sectionTitle}${filterLabel}`,
-        subject: practiceSection === 'all' ? 'Mock Errors' : practiceSection,
-        subject_id: practiceSection === 'all' ? 'mock_errors' : practiceSection.toLowerCase().replace(/\s+/g, '_'),
+        subject: practiceSection === 'all' ? 'All 4 Sections Mock' : practiceSection,
+        subject_id: practiceSection === 'all' ? 'all_sections_mock' : practiceSection.toLowerCase().replace(/\s+/g, '_'),
         questions: formattedQuestions
       };
 
@@ -1105,7 +1135,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                     {/* 4. Action Column */}
                     <div className="w-full xl:w-[165px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1">
                       <button
-                        onClick={() => openPracticeModal(report, 'Reasoning')}
+                        onClick={() => openPracticeModal(report, report.type === 'sectional' && report.subject ? report.subject : 'all')}
                         disabled={practicingId === report.id}
                         className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap"
                         title="Practice mistakes section-wise (slow, incorrect, unattempted)"
@@ -1115,7 +1145,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                         ) : (
                           <Play className="w-2.5 h-2.5 fill-current" />
                         )}
-                        <span>Practice Mistakes</span>
+                        <span>Practice Mock</span>
                       </button>
 
                       <button

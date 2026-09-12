@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Trophy, Clock, CheckCircle2, CornerDownLeft, RotateCcw,
   Pause, Play, BookOpen, ChevronRight, ChevronLeft,
-  X, FileText, User, ArrowLeft
+  X, FileText, ArrowLeft, AlertTriangle, ChevronDown,
+  Maximize2, Minimize2
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
-import { QuestionCard } from './QuestionCard';
 
 interface QuizContainerProps {
   chapter: Chapter;
@@ -21,10 +21,30 @@ interface QuizContainerProps {
   isAdmin?: boolean;
 }
 
-type QuestionStatus = 'not-visited' | 'not-attempted' | 'correct' | 'wrong' | 'marked' | 'answered-marked' | 'answered';
+interface MockSection {
+  id: string;
+  label: string; // PART-A, PART-B, PART-C, PART-D
+  title: string;
+  startIndex: number;
+  endIndex: number;
+  count: number;
+}
 
 const fmtTime = (s: number) =>
-  `${Math.floor(s / 60).toString().padStart(2, '0')}:${(s % 60).toString().padStart(2, '0')}`;
+  `${Math.floor(s / 60).toString().padStart(2, '0')} : ${(s % 60).toString().padStart(2, '0')}`;
+
+const CandidateAvatar: React.FC<{ label: string }> = ({ label }) => (
+  <div className="flex flex-col items-center">
+    <div className="w-11 h-12 bg-gray-200 rounded-[2px] border border-gray-300 overflow-hidden flex flex-col items-center justify-end relative shadow-2xs">
+      <svg className="w-9 h-11 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+      </svg>
+      <div className="absolute bottom-0 inset-x-0 bg-black/80 text-white text-[7px] leading-tight text-center py-0.5 px-0.5 truncate font-sans">
+        {label}
+      </div>
+    </div>
+  </div>
+);
 
 export const QuizContainer: React.FC<QuizContainerProps> = ({
   chapter,
@@ -39,11 +59,113 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   isAdmin = false
 }) => {
   const totalQuestions = chapter.questions.length;
-
   const perQuestionSec = 36;
   const totalQuizTime = mode === 'mock' ? perQuestionSec * totalQuestions : null;
 
-  const [currentIdx, setCurrentIdx] = useState(0);
+  // Normalize subject into canonical SSC section keys (PART-A: Reasoning, PART-B: GA, PART-C: Math, PART-D: English)
+  const getQuestionSectionKey = useCallback((q: Question): 'part_a' | 'part_b' | 'part_c' | 'part_d' | null => {
+    const explicitSec = (q as any).section;
+    if (explicitSec === 'part_a' || explicitSec === 'part_b' || explicitSec === 'part_c' || explicitSec === 'part_d') {
+      return explicitSec;
+    }
+    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || '');
+    if (/reason|intel/i.test(raw)) return 'part_a';
+    if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'part_b';
+    if (/quant|math|aptitude/i.test(raw)) return 'part_c';
+    if (/eng/i.test(raw)) return 'part_d';
+    return null;
+  }, []);
+
+  // Compute 4 mock sections and properly ordered questions
+  const { questions, sections } = useMemo(() => {
+    const raw = chapter.questions || [];
+    const total = raw.length;
+
+    const partA: Question[] = [];
+    const partB: Question[] = [];
+    const partC: Question[] = [];
+    const partD: Question[] = [];
+    const other: Question[] = [];
+
+    raw.forEach(q => {
+      const sec = getQuestionSectionKey(q);
+      if (sec === 'part_a') partA.push(q);
+      else if (sec === 'part_b') partB.push(q);
+      else if (sec === 'part_c') partC.push(q);
+      else if (sec === 'part_d') partD.push(q);
+      else other.push(q);
+    });
+
+    const hasExplicit = (partA.length + partB.length + partC.length + partD.length) > 0;
+
+    // 1. If questions carry section or subject classification (e.g. from Mock Score practice, mock error remediation, or multi-subject test)
+    if (hasExplicit) {
+      // Put unclassified questions into first populated section or partA
+      if (other.length > 0) {
+        if (partA.length > 0) partA.push(...other);
+        else if (partB.length > 0) partB.push(...other);
+        else if (partC.length > 0) partC.push(...other);
+        else if (partD.length > 0) partD.push(...other);
+        else partA.push(...other);
+      }
+
+      const orderedList = [...partA, ...partB, ...partC, ...partD];
+      const startA = 0;
+      const endA = partA.length;
+      const startB = endA;
+      const endB = startB + partB.length;
+      const startC = endB;
+      const endC = startC + partC.length;
+      const startD = endC;
+      const endD = startD + partD.length;
+
+      const computed: MockSection[] = [
+        { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: startA, endIndex: endA, count: partA.length },
+        { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: startB, endIndex: endB, count: partB.length },
+        { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: startC, endIndex: endC, count: partC.length },
+        { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: startD, endIndex: endD, count: partD.length },
+      ];
+
+      return { questions: orderedList, sections: computed };
+    }
+
+    // 2. Standard 100 questions SSC Full Mock (25 each)
+    if (total === 100) {
+      return {
+        questions: raw,
+        sections: [
+          { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: 25, count: 25 },
+          { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: 25, endIndex: 50, count: 25 },
+          { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: 50, endIndex: 75, count: 25 },
+          { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: 75, endIndex: 100, count: 25 },
+        ]
+      };
+    }
+
+    // 3. Fallback for single-subject chapter without individual question subject tags
+    const chSub = String(chapter.subject || '');
+    let targetKey = 'part_a';
+    if (/quant|math|aptitude/i.test(chSub)) targetKey = 'part_c';
+    else if (/aware|gk|gs|ga/i.test(chSub)) targetKey = 'part_b';
+    else if (/eng/i.test(chSub)) targetKey = 'part_d';
+
+    const computed: MockSection[] = [
+      { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: targetKey === 'part_a' ? total : 0, count: targetKey === 'part_a' ? total : 0 },
+      { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: targetKey === 'part_b' ? 0 : (targetKey === 'part_a' ? total : 0), endIndex: targetKey === 'part_b' ? total : (targetKey === 'part_a' ? total : 0), count: targetKey === 'part_b' ? total : 0 },
+      { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: targetKey === 'part_c' ? 0 : total, endIndex: targetKey === 'part_c' ? total : total, count: targetKey === 'part_c' ? total : 0 },
+      { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: targetKey === 'part_d' ? 0 : total, endIndex: targetKey === 'part_d' ? total : total, count: targetKey === 'part_d' ? total : 0 },
+    ];
+
+    return { questions: raw, sections: computed };
+  }, [chapter.questions, chapter.subject, getQuestionSectionKey]);
+
+  const initialSectionIdx = useMemo(() => {
+    const idx = sections.findIndex(s => s.count > 0);
+    return idx !== -1 ? idx : 0;
+  }, [sections]);
+
+  const [activeSectionIdx, setActiveSectionIdx] = useState(initialSectionIdx);
+  const [currentIdx, setCurrentIdx] = useState(sections[initialSectionIdx]?.startIndex || 0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [timeSpent, setTimeSpent] = useState<Record<number, number>>({});
   const [visited, setVisited] = useState<Set<number>>(new Set([0]));
@@ -51,14 +173,62 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [isFinished, setIsFinished] = useState(false);
   const [currentTimer, setCurrentTimer] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [isReviewMode, setIsReviewMode] = useState(false);
   const [timeLeft, setTimeLeft] = useState<number | null>(totalQuizTime);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [language, setLanguage] = useState<'English' | 'Hindi'>('English');
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [showQuestionPaper, setShowQuestionPaper] = useState(false);
+  const [showSubmitModal, setShowSubmitModal] = useState(false);
+  const [showReportModal, setShowReportModal] = useState(false);
+  const [reportReason, setReportReason] = useState('Incorrect Question or Solution');
+  const [reportSubmitted, setReportSubmitted] = useState(false);
   const [submittedResult, setSubmittedResult] = useState<QuizResult | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState<number>(0); // -1: small, 0: base, 1: large, 2: xl
+  const [showSymbolsModal, setShowSymbolsModal] = useState(false);
+  const [showInstructionsModal, setShowInstructionsModal] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().then(() => setIsFullscreen(true)).catch(() => {});
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().then(() => setIsFullscreen(false)).catch(() => {});
+      }
+    }
+  };
+
+  const fontSizeClass = zoomLevel === -1
+    ? 'text-xs'
+    : zoomLevel === 1
+    ? 'text-base'
+    : zoomLevel === 2
+    ? 'text-lg'
+    : 'text-sm sm:text-[15px]';
 
   const startTimeRef = useRef<number>(Date.now());
+  const answersRef = useRef(answers);
+  answersRef.current = answers;
+  const timeSpentRef = useRef(timeSpent);
+  timeSpentRef.current = timeSpent;
+  const markedRef = useRef(markedForReview);
+  markedRef.current = markedForReview;
+  const currentIdxRef = useRef(currentIdx);
+  currentIdxRef.current = currentIdx;
+  const isFinishedRef = useRef(isFinished);
+  isFinishedRef.current = isFinished;
+  const isSubmittingRef = useRef(isSubmitting);
+  isSubmittingRef.current = isSubmitting;
+  const isPausedRef = useRef(isPaused);
+  isPausedRef.current = isPaused;
+
+  // Sync activeSectionIdx when currentIdx changes
+  useEffect(() => {
+    const secIdx = sections.findIndex(s => s.count > 0 && currentIdx >= s.startIndex && currentIdx < s.endIndex);
+    if (secIdx !== -1 && secIdx !== activeSectionIdx) {
+      setActiveSectionIdx(secIdx);
+    }
+  }, [currentIdx, sections, activeSectionIdx]);
 
   useEffect(() => {
     if (currentIdx >= totalQuestions && totalQuestions > 0) {
@@ -67,35 +237,42 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   }, [totalQuestions, currentIdx]);
 
   useEffect(() => {
+    if (isFinished) return;
     startTimeRef.current = Date.now();
     setCurrentTimer(0);
     setVisited(prev => { const n = new Set(prev); n.add(currentIdx); return n; });
     const interval = setInterval(() => {
-      if (!isPaused) setCurrentTimer(prev => prev + 1);
+      if (!isPaused && !isFinished) setCurrentTimer(prev => prev + 1);
     }, 1000);
     return () => clearInterval(interval);
-  }, [currentIdx, isPaused]);
+  }, [currentIdx, isPaused, isFinished]);
 
   useEffect(() => {
-    if (totalQuizTime == null || isFinished || isReviewMode || isPaused) return;
+    if (totalQuizTime == null || isFinished || isPaused) return;
     const interval = setInterval(() => {
       setTimeLeft(prev => {
         if (prev == null) return null;
         if (prev <= 1) {
           clearInterval(interval);
-          handleSubmitTest();
+          setTimeout(() => {
+            handleSubmitTest();
+          }, 0);
           return 0;
         }
         return prev - 1;
       });
     }, 1000);
     return () => clearInterval(interval);
-  }, [totalQuizTime, isFinished, isReviewMode, isPaused]);
+  }, [totalQuizTime, isFinished, isPaused]);
 
   const recordTime = () => {
     if (isPaused) return;
-    const duration = Math.round((Date.now() - startTimeRef.current) / 1000);
-    setTimeSpent(prev => ({ ...prev, [currentIdx]: (prev[currentIdx] || 0) + duration }));
+    const duration = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
+    setTimeSpent(prev => {
+      const updated = { ...prev, [currentIdx]: (prev[currentIdx] || 0) + duration };
+      timeSpentRef.current = updated;
+      return updated;
+    });
     startTimeRef.current = Date.now();
   };
 
@@ -106,67 +283,114 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   const handleAnswer = (answer: 'a' | 'b' | 'c' | 'd') => {
     recordTime();
-    setAnswers(prev => ({ ...prev, [currentIdx]: answer }));
+    setAnswers(prev => {
+      const updated = { ...prev };
+      if (updated[currentIdx] === answer) {
+        delete updated[currentIdx];
+      } else {
+        updated[currentIdx] = answer;
+      }
+      answersRef.current = updated;
+      return updated;
+    });
   };
 
   const handleClearResponse = () => {
-    setAnswers(prev => { const n = { ...prev }; delete n[currentIdx]; return n; });
-    setMarkedForReview(prev => { const n = new Set(prev); n.delete(currentIdx); return n; });
+    setAnswers(prev => {
+      const n = { ...prev };
+      delete n[currentIdx];
+      answersRef.current = n;
+      return n;
+    });
+    setMarkedForReview(prev => {
+      const n = new Set(prev);
+      n.delete(currentIdx);
+      markedRef.current = n;
+      return n;
+    });
   };
 
-  const jumpToQuestion = (idx: number) => { recordTime(); setCurrentIdx(idx); };
+  const jumpToQuestion = (idx: number) => {
+    if (idx < 0 || idx >= totalQuestions) return;
+    recordTime();
+    setCurrentIdx(idx);
+  };
 
   const handleSaveAndNext = () => {
     recordTime();
-    if (currentIdx < totalQuestions - 1) setCurrentIdx(currentIdx + 1);
-    else alert("You have reached the end of the test. Click 'Submit Test' to finish.");
+    if (currentIdx < totalQuestions - 1) {
+      setCurrentIdx(currentIdx + 1);
+    } else {
+      setShowSubmitModal(true);
+    }
   };
 
   const handleMarkAndNext = () => {
     recordTime();
-    setMarkedForReview(prev => { const n = new Set(prev); n.add(currentIdx); return n; });
-    if (currentIdx < totalQuestions - 1) setCurrentIdx(currentIdx + 1);
+    setMarkedForReview(prev => {
+      const n = new Set(prev);
+      n.add(currentIdx);
+      markedRef.current = n;
+      return n;
+    });
+    if (currentIdx < totalQuestions - 1) {
+      setCurrentIdx(currentIdx + 1);
+    }
   };
 
-  const getCorrectAnswer = (q: Question) =>
-    (q.answer || (q as any).correct_answer || (q as any).correctOption || '')?.toString().toLowerCase().trim();
-
-  const isQuestionCorrect = (idx: number) => {
-    const userAns = answers[idx]?.toLowerCase().trim();
-    return !!userAns && userAns === getCorrectAnswer(chapter.questions[idx]);
+  const handleSectionClick = (idx: number) => {
+    const sec = sections[idx];
+    if (!sec || sec.count === 0) return;
+    recordTime();
+    setActiveSectionIdx(idx);
+    setCurrentIdx(sec.startIndex);
   };
 
-  const getStatus = (idx: number): QuestionStatus => {
-    const isAnswered = !!answers[idx];
-    const isMarked = markedForReview.has(idx);
-    const isVis = visited.has(idx);
-
-    if (!isReviewMode) {
-      if (isMarked && isAnswered) return 'answered-marked';
-      if (isMarked) return 'marked';
-      if (isAnswered) return mode === 'mock' ? 'answered' : (isQuestionCorrect(idx) ? 'correct' : 'wrong');
-      if (isVis && idx !== currentIdx) return 'not-attempted';
-      return 'not-visited';
+  const handleSubmitSection = () => {
+    recordTime();
+    // Check if next section exists with questions
+    const nextSecIdx = sections.findIndex((s, i) => i > activeSectionIdx && s.count > 0);
+    if (nextSecIdx !== -1) {
+      setActiveSectionIdx(nextSecIdx);
+      setCurrentIdx(sections[nextSecIdx].startIndex);
+    } else {
+      setShowSubmitModal(true);
     }
+  };
 
-    if (isAnswered) {
-      return isQuestionCorrect(idx) ? 'correct' : 'wrong';
-    }
-    return 'not-visited';
+  const getCorrectAnswer = (q: Question) => {
+    const raw = (q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option || '')?.toString().toLowerCase().trim();
+    if (raw === '1' || raw === 'opt1' || raw === 'option 1' || raw === 'option a') return 'a';
+    if (raw === '2' || raw === 'opt2' || raw === 'option 2' || raw === 'option b') return 'b';
+    if (raw === '3' || raw === 'opt3' || raw === 'option 3' || raw === 'option c') return 'c';
+    if (raw === '4' || raw === 'opt4' || raw === 'option 4' || raw === 'option d') return 'd';
+    return raw;
+  };
+
+  const isQuestionCorrect = (idx: number, answersMap: Record<number, string> = answers) => {
+    const userAns = answersMap[idx]?.toLowerCase().trim();
+    return !!userAns && userAns === getCorrectAnswer(questions[idx]);
   };
 
   const handleReattempt = () => {
     setAnswers({}); setTimeSpent({}); setVisited(new Set([0])); setMarkedForReview(new Set());
-    setIsFinished(false); setIsReviewMode(false); setCurrentIdx(0); setCurrentTimer(0);
+    answersRef.current = {}; timeSpentRef.current = {}; markedRef.current = new Set();
+    startTimeRef.current = Date.now();
+    setIsFinished(false); isFinishedRef.current = false;
+    const firstSec = sections.findIndex(s => s.count > 0);
+    const startSec = firstSec !== -1 ? firstSec : 0;
+    setCurrentIdx(sections[startSec]?.startIndex || 0); setCurrentTimer(0);
+    setActiveSectionIdx(startSec);
     setIsPaused(false); setTimeLeft(totalQuizTime); setSubmittedResult(null);
   };
 
-  const calculateScore = () =>
-    chapter.questions.filter((_, idx) => isQuestionCorrect(idx)).length;
+  const calculateScore = (answersMap: Record<number, string> = answers) =>
+    questions.filter((_, idx) => isQuestionCorrect(idx, answersMap)).length;
 
-  const buildResults = (): Omit<QuizResult, 'userId' | 'completedAt'> => {
-    const score = calculateScore();
-    const totalTime = (Object.values(timeSpent) as number[]).reduce((a, t) => a + t, 0);
+  const buildResults = (computedTimeSpent: Record<number, number> = timeSpent, answersMap: Record<number, string> = answers): Omit<QuizResult, 'userId' | 'completedAt'> => {
+    const score = calculateScore(answersMap);
+    const totalTime = (Object.values(computedTimeSpent) as number[]).reduce((a, t) => a + t, 0);
+    const currentMarked = markedRef.current;
     return {
       chapter_title: chapter.chapter_title,
       subject: chapter.subject,
@@ -175,22 +399,38 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       score,
       totalQuestions,
       totalTime,
-      questionDetails: chapter.questions.map((q, idx) => ({
+      questionDetails: questions.map((q, idx) => ({
         q_num: q.q_num,
-        timeSpent: timeSpent[idx] || 0,
-        isCorrect: isQuestionCorrect(idx),
-        selectedAnswer: answers[idx] || '',
+        timeSpent: computedTimeSpent[idx] || 0,
+        isCorrect: isQuestionCorrect(idx, answersMap),
+        selectedAnswer: answersMap[idx] || '',
         question: q,
-        marked: markedForReview.has(idx),
+        marked: currentMarked.has(idx),
       }))
     };
   };
 
   const handleSubmitTest = async () => {
-    if (isFinished || isSubmitting) return;
-    recordTime();
+    if (isFinishedRef.current || isSubmittingRef.current) return;
     setIsSubmitting(true);
-    const results = buildResults();
+    isSubmittingRef.current = true;
+
+    if (document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
+
+    const duration = isPausedRef.current ? 0 : Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
+    const activeIdx = currentIdxRef.current;
+    const finalTimeSpent: Record<number, number> = {
+      ...timeSpentRef.current,
+      [activeIdx]: (timeSpentRef.current[activeIdx] || 0) + duration
+    };
+    timeSpentRef.current = finalTimeSpent;
+    setTimeSpent(finalTimeSpent);
+
+    const currentAnswers = answersRef.current;
+    const results = buildResults(finalTimeSpent, currentAnswers);
+
     try {
       const saved = await onSaveResult(results);
       if (saved) {
@@ -213,18 +453,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       });
     } finally {
       setIsSubmitting(false);
+      isSubmittingRef.current = false;
       setIsFinished(true);
-    }
-  };
-
-  const confirmAndSubmit = () => {
-    if (window.confirm('Are you sure you want to submit the test?')) {
-      handleSubmitTest();
+      isFinishedRef.current = true;
+      setShowSubmitModal(false);
     }
   };
 
   /* ── SCORE SCREEN ── */
-  if (isFinished && !isReviewMode) {
+  if (isFinished) {
     const score = calculateScore();
     const totalTime = (Object.values(timeSpent) as number[]).reduce((a, t) => a + t, 0);
     const attempted = Object.keys(answers).length;
@@ -299,337 +536,612 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     );
   }
 
-  const currentQuestion = chapter.questions[currentIdx];
-  const isShowSolution = mode === 'practice' ? !!answers[currentIdx] : false;
+  const currentQuestion = questions[currentIdx] || questions[0];
+  const activeSection = sections[activeSectionIdx] || sections[0];
+  const sectionQuestions = questions.slice(activeSection.startIndex, activeSection.endIndex);
 
+  // Section Analysis stats (matches the screenshot: PART-A Analysis)
+  const sectionAnswered = sectionQuestions.filter((_, i) => !!answers[activeSection.startIndex + i]).length;
+  const sectionMarked = sectionQuestions.filter((_, i) => markedForReview.has(activeSection.startIndex + i)).length;
+  const sectionNotAnswered = sectionQuestions.length - sectionAnswered;
+
+  // Overall stats for submission modal
   const stats = {
-    correct: Object.keys(answers).filter(i => isQuestionCorrect(parseInt(i, 10))).length,
-    wrong: Object.keys(answers).filter(i => !isQuestionCorrect(parseInt(i, 10))).length,
     answered: Object.keys(answers).length,
     marked: markedForReview.size,
     notAttempted: totalQuestions - Object.keys(answers).length,
   };
 
-  /* ── BADGE STYLE FOR PALETTE ── */
-  const getBadgeStyle = (idx: number, isActive: boolean): string => {
-    const status = getStatus(idx);
-    let base = '';
-    if (status === 'correct' || status === 'answered') {
-      base = 'bg-[#2e7d32] text-white border-transparent';
-    } else if (status === 'wrong') {
-      base = 'bg-[#c62828] text-white border-transparent';
-    } else if (status === 'not-attempted') {
-      base = 'bg-[#e65100] text-white border-transparent';
-    } else if (status === 'marked' || status === 'answered-marked') {
-      base = 'bg-[#7b1fa2] text-white border-transparent';
-    } else {
-      base = 'bg-white text-gray-800 border-gray-400 border-2';
+  // Question numbering within section (e.g. Question No. 2)
+  const questionNumberInSection = currentIdx - activeSection.startIndex + 1;
+
+  // Extract bilingual text if available
+  const getQuestionText = () => {
+    if (!currentQuestion?.question) return '';
+    const text = currentQuestion.question;
+    const parts = text.split(/\s+\/\s+/);
+    if (language === 'Hindi' && parts.length > 1) {
+      return parts[1].trim();
     }
-    if (isActive) base += ' ring-2 ring-[#0097a7] ring-offset-1 scale-110 shadow-md z-10';
-    return base;
+    return parts[0].trim();
   };
 
-  const isTimeWarning = mode === 'mock' && totalQuizTime != null && timeLeft != null && timeLeft <= 60;
+  const getOptionText = (rawOptionText: string) => {
+    if (!rawOptionText) return '';
+    const parts = rawOptionText.split(/\s+\/\s+/);
+    if (language === 'Hindi' && parts.length > 1) {
+      return parts[1].trim();
+    }
+    return parts[0].trim();
+  };
+
+  const optionKeys: ('a' | 'b' | 'c' | 'd')[] = ['a', 'b', 'c', 'd'];
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#f4f7f9] overflow-hidden select-none" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div className="flex flex-col h-screen w-full bg-white text-gray-900 select-none overflow-hidden font-sans">
 
-      {/* ── TOP HEADER (teal) ── */}
-      <header className="h-[46px] px-4 flex items-center justify-between shrink-0 shadow z-30" style={{ background: '#0097a7' }}>
+      {/* ── TOP HEADER BAR (Exact match to Testbook screenshot) ── */}
+      <header className="h-[60px] bg-white border-b border-gray-300 px-4 flex items-center justify-between shrink-0 shadow-2xs z-30">
+        {/* Left: Testbook Brand + Test Subtitle + Zoom Buttons */}
         <div className="flex items-center gap-3">
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5">
+              <svg className="w-5 h-5 text-[#00baf2]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 2H5C3.89 2 3 2.89 3 4v16c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm-7 16H6v-2h6v2zm0-4H6v-2h6v2zm0-4H6V8h6v2zm6 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V8h4v2z"/>
+              </svg>
+              <span className="font-extrabold text-lg tracking-tight text-[#00baf2] leading-none">testbook</span>
+            </div>
+            <span className="text-[10px] font-bold text-gray-900 truncate max-w-[130px] sm:max-w-[200px] mt-0.5">
+              {chapter.chapter_title || 'Percentage'}
+            </span>
+          </div>
+
+          {/* Zoom Buttons */}
+          <div className="flex items-center gap-1 ml-2">
+            <button
+              onClick={() => setZoomLevel(prev => Math.min(prev + 1, 2))}
+              className="px-2.5 py-0.5 bg-[#1e60aa] hover:bg-[#164d8a] text-white text-[11px] font-bold rounded-full transition-all shadow-2xs cursor-pointer"
+              title="Zoom In"
+            >
+              Zoom (+)
+            </button>
+            <button
+              onClick={() => setZoomLevel(prev => Math.max(prev - 1, -1))}
+              className="px-2.5 py-0.5 bg-[#1e60aa] hover:bg-[#164d8a] text-white text-[11px] font-bold rounded-full transition-all shadow-2xs cursor-pointer"
+              title="Zoom Out"
+            >
+              Zoom (-)
+            </button>
+          </div>
+        </div>
+
+        {/* Center: Title & Candidate Roll No */}
+        <div className="hidden md:flex flex-col items-center justify-center text-center">
+          <h2 className="text-sm font-bold text-gray-900 leading-tight">
+            {chapter.chapter_title || 'Percentage'}
+          </h2>
+          <span className="text-[11px] text-gray-700 font-semibold mt-0.5">
+            Roll No : 919754035746
+          </span>
+        </div>
+
+        {/* Right: Fullscreen, Pause, Time Left, Candidate Photos */}
+        <div className="flex items-center gap-2.5 shrink-0">
+          {/* Fullscreen Button */}
+          <button
+            onClick={toggleFullscreen}
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-[#00baf2] text-[#00baf2] hover:bg-[#00baf2]/10 flex items-center justify-center transition-colors"
+            title="Toggle Fullscreen"
+          >
+            {isFullscreen ? <Minimize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+          </button>
+
+          {/* Pause Button */}
+          <button
+            onClick={handlePauseToggle}
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-[#00baf2] text-[#00baf2] hover:bg-[#00baf2]/10 flex items-center justify-center transition-colors"
+            title={isPaused ? 'Resume Test' : 'Pause Test'}
+          >
+            {isPaused ? <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-emerald-600" /> : <Pause className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-[#00baf2]" />}
+          </button>
+
+          {/* Section Time Badge (Red on Yellow) */}
+          <div className="flex flex-col items-center">
+            <span className="text-[10px] text-gray-500 font-semibold leading-tight">Section Time</span>
+            <div className="bg-[#fff9db] border border-[#ffe066] text-[#d90429] font-mono font-bold text-sm sm:text-base px-2 py-0.5 rounded shadow-2xs leading-none">
+              {mode === 'practice'
+                ? fmtTime(currentTimer)
+                : (totalQuizTime != null && timeLeft != null ? fmtTime(timeLeft) : fmtTime(currentTimer))}
+            </div>
+          </div>
+
+          {/* Candidate Profile Photos (Registration & Captured) */}
+          <div className="hidden sm:flex items-center gap-1.5 ml-1">
+            <CandidateAvatar label="Registration Photo" />
+            <CandidateAvatar label="Captured Photo" />
+          </div>
+
+          {/* Exit test */}
           <button
             onClick={() => {
-              if (window.confirm('Are you sure you want to exit the test? Your progress will NOT be recorded in Recent Activity.')) {
+              if (window.confirm('Are you sure you want to exit the test? Your progress will not be saved.')) {
                 onExit();
               }
             }}
-            className="p-1.5 hover:bg-white/10 rounded-full transition-colors"
-            title="Exit test without saving"
+            className="p-1 text-gray-400 hover:text-red-600 rounded transition-colors ml-1"
+            title="Exit Test"
           >
-            <ArrowLeft className="w-5 h-5 text-white" />
+            <ArrowLeft className="w-4 h-4" />
           </button>
-          <div>
-            <div className="text-[11px] text-white/70 leading-none mb-0.5">Tests</div>
-            <div className="text-sm font-bold text-white leading-tight truncate max-w-xs sm:max-w-md">
-              {isReviewMode ? `Review: ${chapter.chapter_title}` : chapter.chapter_title}
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3">
-          {isReviewMode ? (
-            <div className="flex items-center gap-2">
-              {onReviewAttempt && submittedResult && (
-                <button
-                  onClick={() => onReviewAttempt(submittedResult)}
-                  className="text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
-                  style={{ background: '#0288d1' }}
-                >Full Review</button>
-              )}
-              <button
-                onClick={() => setIsReviewMode(false)}
-                className="bg-white/20 hover:bg-white/30 text-white text-xs font-bold px-3 py-1.5 rounded"
-              >Back to Summary</button>
-            </div>
-          ) : (
-            <div className="flex items-center gap-2">
-              <button
-                onClick={handlePauseToggle}
-                className="flex items-center bg-white/15 hover:bg-white/25 px-2.5 py-1 rounded text-xs font-semibold text-white transition-colors"
-              >
-                {isPaused ? <Play className="w-3.5 h-3.5 mr-1 fill-current" /> : <Pause className="w-3.5 h-3.5 mr-1 fill-current" />}
-                {isPaused ? 'Resume' : 'Pause'}
-              </button>
-
-              <div className={`flex items-center gap-1 px-3 py-1 rounded text-xs font-mono font-bold tracking-wider ${isTimeWarning ? 'bg-red-600 text-white animate-pulse' : 'bg-white/20 text-white'}`}>
-                <Clock className="w-3.5 h-3.5" />
-                {mode === 'practice'
-                  ? fmtTime(currentTimer)
-                  : (totalQuizTime != null && timeLeft != null ? fmtTime(timeLeft) : fmtTime(currentTimer))}
-              </div>
-            </div>
-          )}
         </div>
       </header>
 
-      {/* ── SECTIONS SUB-BAR ── */}
-      <div className="bg-white border-b border-gray-200 h-10 px-4 flex items-center justify-between shrink-0 z-20">
-        <div className="flex items-center gap-3">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-gray-400 border-r border-gray-200 pr-3">
-            SECTIONS
-          </span>
-          <button className="text-white text-xs font-bold px-4 py-1.5 rounded" style={{ background: '#004d40' }}>
-            {chapter.subject || 'Test'}
+      {/* ── SECOND SUB-HEADER ROW 1 (Links on Left, Total Questions Answered on Right) ── */}
+      <div className="bg-white border-b border-gray-200 px-4 py-1.5 flex items-center justify-between shrink-0 z-20">
+        {/* Quick Links: SYMBOLS | INSTRUCTIONS | OVERALL TEST SUMMARY */}
+        <div className="flex items-center gap-4 text-[11px] font-bold tracking-wide uppercase">
+          <button
+            onClick={() => setShowSymbolsModal(true)}
+            className="text-[#0088cc] hover:underline cursor-pointer"
+          >
+            SYMBOLS
+          </button>
+          <button
+            onClick={() => setShowInstructionsModal(true)}
+            className="text-[#d9534f] hover:underline cursor-pointer"
+          >
+            INSTRUCTIONS
+          </button>
+          <button
+            onClick={() => setShowQuestionPaper(true)}
+            className="text-[#a94442] hover:underline cursor-pointer"
+          >
+            OVERALL TEST SUMMARY
           </button>
         </div>
-        <div className="flex items-center gap-2 text-xs text-gray-600">
-          <span className="font-medium">View In</span>
-          <span className="border border-gray-300 rounded px-2.5 py-0.5 font-medium text-gray-800 bg-white">English</span>
+
+        {/* Right: Total Questions Answered (Yellow Box matching screenshot) */}
+        <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 font-bold ml-auto">
+          <span>Total Questions Answered:</span>
+          <span className="bg-[#ffff00] border border-gray-400 text-black px-1.5 py-0.5 font-bold text-xs">
+            {stats.answered}
+          </span>
         </div>
       </div>
 
-      {/* ── MAIN WORKSPACE ── */}
-      <div className="flex-1 flex overflow-hidden relative">
-
-        {/* LEFT COLUMN */}
-        <div className="flex-1 flex flex-col bg-white overflow-hidden border-r border-gray-200">
-
-          {/* Scrollable Question Content */}
-          <div className="flex-1 overflow-y-auto relative">
-            {isPaused ? (
-              <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm z-30 flex flex-col items-center justify-center p-8 text-center text-white">
-                <div className="w-16 h-16 bg-[#0097a7] rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse">
-                  <Pause className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Test Paused</h3>
-                <p className="text-slate-200 max-w-sm mb-6 text-sm">Timer suspended. Click below to resume.</p>
-                <button
-                  onClick={handlePauseToggle}
-                  className="px-6 py-2.5 bg-[#0097a7] hover:bg-[#00838f] text-white rounded-xl font-bold text-sm flex items-center"
-                >
-                  <Play className="w-4 h-4 mr-2 fill-current" />Resume Test
-                </button>
-              </div>
-            ) : (
-              <AnimatePresence mode="wait">
-                {currentQuestion && (
-                  <motion.div
-                    key={currentQuestion.q_num}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="h-full"
-                  >
-                    <QuestionCard
-                      question={currentQuestion}
-                      onAnswer={isReviewMode ? () => {} : handleAnswer}
-                      selectedAnswer={answers[currentIdx] || null}
-                      showSolution={isReviewMode ? true : isShowSolution}
-                      isBookmarked={bookmarkedIds.has(currentQuestion.q_num)}
-                      onBookmark={() => onBookmarkToggle?.(currentQuestion)}
-                      isAdmin={isAdmin}
-                      onDelete={() => onDeleteQuestion?.(currentQuestion)}
-                      timeSpentSeconds={isReviewMode ? (timeSpent[currentIdx] || 0) : (mode === 'practice' ? currentTimer : undefined)}
-                    />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            )}
-          </div>
-
-          {/* ── BOTTOM ACTION BAR ── */}
-          <div className="bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] px-5 py-2.5 flex items-center justify-between shrink-0 z-10">
-            {isReviewMode ? (
-              <>
-                <button
-                  onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)}
-                  disabled={currentIdx === 0}
-                  className="text-[#01579b] text-xs font-semibold px-5 py-2 rounded disabled:opacity-40 disabled:cursor-not-allowed"
-                  style={{ background: '#b3e5fc' }}
-                >Previous</button>
-                <button
-                  onClick={() => currentIdx < totalQuestions - 1 && setCurrentIdx(currentIdx + 1)}
-                  disabled={currentIdx === totalQuestions - 1}
-                  className="text-[#01579b] text-xs font-semibold px-5 py-2 rounded disabled:opacity-40 disabled:cursor-not-allowed"
-                  style={{ background: '#b3e5fc' }}
-                >Next</button>
-                <button
-                  onClick={() => setIsReviewMode(false)}
-                  className="bg-gray-800 text-white text-xs font-semibold px-5 py-2 rounded hover:bg-black"
-                >Back to Summary</button>
-              </>
-            ) : (
-              <>
-                {/* Left: Previous + Clear Response */}
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
-                    disabled={currentIdx === 0}
-                    className="text-[#01579b] text-xs font-semibold px-4 py-2 rounded disabled:opacity-40 disabled:cursor-not-allowed"
-                    style={{ background: '#b3e5fc' }}
-                  >Previous</button>
-                  <button
-                    onClick={handleClearResponse}
-                    disabled={!answers[currentIdx]}
-                    className="border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 text-xs font-semibold px-3.5 py-2 rounded disabled:opacity-40 disabled:cursor-not-allowed"
-                  >Clear Response</button>
-                </div>
-
-                {/* Right: Mark, Save, Submit */}
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={handleMarkAndNext}
-                    className="text-white text-xs font-semibold px-4 py-2 rounded"
-                    style={{ background: '#0288d1' }}
-                  >Mark for Review &amp; Next</button>
-                  <button
-                    onClick={handleSaveAndNext}
-                    className="text-white text-xs font-semibold px-4 py-2 rounded"
-                    style={{ background: '#0097a7' }}
-                  >Save &amp; Next</button>
-                  <button
-                    onClick={confirmAndSubmit}
-                    disabled={isSubmitting}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded disabled:opacity-50"
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Submit Test'}
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
+      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on Left, Action Buttons on Right with gap) ── */}
+      <div className="bg-white border-b border-gray-300 px-4 py-1.5 flex items-center gap-6 shrink-0 z-20 overflow-x-auto">
+        {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
+        <div className="flex items-center gap-1.5 shrink-0">
+          {sections.map((sec, idx) => {
+            const isActive = idx === activeSectionIdx;
+            const hasQuestions = sec.count > 0;
+            return (
+              <button
+                key={sec.id}
+                onClick={() => handleSectionClick(idx)}
+                disabled={!hasQuestions}
+                title={`${sec.label}: ${sec.title} (${sec.count} Questions)`}
+                className={`px-3 py-1 text-xs sm:text-sm font-bold rounded-[3px] transition-all shrink-0 ${
+                  isActive
+                    ? 'bg-[#008000] text-white shadow-xs'
+                    : hasQuestions
+                    ? 'bg-white border border-gray-300 text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer'
+                    : 'bg-white border border-gray-200 text-gray-300 cursor-not-allowed opacity-50'
+                }`}
+              >
+                <span>{sec.label}</span>
+              </button>
+            );
+          })}
         </div>
 
-        {/* ── SIDEBAR COLLAPSE TOGGLE ── */}
-        <button
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="absolute top-1/2 -translate-y-1/2 z-30 py-3 px-1 rounded-l-md shadow-md cursor-pointer flex items-center justify-center transition-all"
-          style={{ right: sidebarOpen ? '280px' : '0px', background: '#37474f' }}
-          title={sidebarOpen ? 'Hide Palette' : 'Show Palette'}
-        >
-          {sidebarOpen ? <ChevronRight className="w-4 h-4 text-white" /> : <ChevronLeft className="w-4 h-4 text-white" />}
-        </button>
+        {/* Action Buttons: Previous, Mark for Review, Save & Next, Submit Section, Submit Test */}
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+            disabled={currentIdx === 0}
+            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+          >
+            Previous
+          </button>
+          <button
+            onClick={handleMarkAndNext}
+            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+          >
+            Mark for Review
+          </button>
+          <button
+            onClick={handleSaveAndNext}
+            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+          >
+            Save &amp; Next
+          </button>
+          <button
+            onClick={handleSubmitSection}
+            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs cursor-pointer"
+          >
+            Submit Section
+          </button>
+          <button
+            onClick={() => setShowSubmitModal(true)}
+            disabled={isSubmitting}
+            className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-medium text-xs sm:text-sm px-3.5 py-1 rounded-[3px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer"
+          >
+            Submit Test
+          </button>
+        </div>
+      </div>
 
-        {/* ── RIGHT SIDEBAR ── */}
-        {sidebarOpen && (
-          <aside className="w-[280px] flex flex-col shrink-0 h-full overflow-hidden" style={{ background: '#e1f5fe', borderLeft: '1px solid #b3e5fc' }}>
+      {/* ── MAIN LAYOUT (QUESTION ON LEFT, PALETTE ON RIGHT) ── */}
+      <div className="flex-1 min-h-0 flex overflow-hidden">
 
-            {/* Candidate Header */}
-            <div className="p-3 border-b flex items-center justify-between shrink-0" style={{ borderColor: '#b3d9f0', background: 'rgba(255,255,255,0.65)' }}>
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shadow-sm" style={{ background: '#00bcd4', color: '#fff' }}>
-                  <User className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-gray-800 leading-tight">Candidate</div>
-                  <div className="text-[10px] text-gray-500 leading-tight">{chapter.subject}</div>
-                </div>
+        {/* ── LEFT PANE: QUESTION & OPTIONS TABLE (Exact match to Testbook) ── */}
+        <div className="flex-1 min-h-0 overflow-y-auto p-4 sm:p-6 pb-32 bg-white border-r border-gray-200 custom-scrollbar">
+
+          {isPaused ? (
+            <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
+              <div className="w-14 h-14 bg-[#2460b9] text-white rounded-full flex items-center justify-center mb-3 shadow">
+                <Pause className="w-7 h-7 fill-current" />
               </div>
-            </div>
-
-            {/* Legend / Stats Row */}
-            <div className="px-3 py-2 border-b flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs shrink-0 font-medium text-gray-700" style={{ borderColor: '#b3d9f0', background: 'rgba(255,255,255,0.4)' }}>
-              {(mode === 'mock' && !isReviewMode) ? (
-                <div className="flex items-center gap-1.5">
-                  <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px]">{stats.answered}</span>
-                  <span>Answered</span>
-                </div>
-              ) : (
-                <>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px]">{stats.correct}</span>
-                    <span>Correct</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-6 h-6 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px]">{stats.wrong}</span>
-                    <span>Wrong</span>
-                  </div>
-                </>
-              )}
-              <div className="flex items-center gap-1.5">
-                <span className="w-6 h-6 rounded-full bg-white border-2 border-gray-400 text-gray-800 flex items-center justify-center font-bold text-[11px]">{totalQuestions - stats.answered - stats.marked}</span>
-                <span>Not Attempted</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-6 h-6 rounded-full bg-[#7b1fa2] text-white flex items-center justify-center font-bold text-[11px]">{stats.marked}</span>
-                <span>Marked</span>
-              </div>
-            </div>
-
-            {/* Section Label */}
-            <div className="px-3 py-1.5 text-xs font-bold text-gray-700 tracking-wide shrink-0" style={{ background: 'rgba(178,235,242,0.55)' }}>
-              SECTION : <span className="text-gray-900">{chapter.subject || 'Test'}</span>
-            </div>
-
-            {/* Question Palette Grid */}
-            <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
-              <div className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Choose a Question</div>
-              <div className="grid grid-cols-5 gap-2">
-                {chapter.questions.map((q, idx) => {
-                  const status = getStatus(idx);
-                  const isActive = currentIdx === idx;
-                  const badgeStyle = getBadgeStyle(idx, isActive);
-
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => jumpToQuestion(idx)}
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm relative hover:opacity-80 hover:scale-105 ${badgeStyle}`}
-                    >
-                      {idx + 1}
-                      {status === 'answered-marked' && (
-                        <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Sidebar Footer */}
-            <div className="p-3 border-t grid grid-cols-2 gap-2 shrink-0" style={{ borderColor: '#b3d9f0', background: 'rgba(255,255,255,0.65)' }}>
+              <h3 className="text-xl font-bold text-gray-800 mb-1">Test Paused</h3>
+              <p className="text-gray-500 text-sm mb-5">Click below to resume your test timer.</p>
               <button
-                onClick={() => setShowQuestionPaper(true)}
-                className="text-[#01579b] text-xs font-bold py-2 rounded text-center transition-colors"
-                style={{ background: '#b3e5fc' }}
-              >Question Paper</button>
-              <button
-                onClick={confirmAndSubmit}
-                disabled={isSubmitting}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded text-center transition-colors disabled:opacity-50"
+                onClick={handlePauseToggle}
+                className="px-5 py-2 bg-[#2460b9] hover:bg-[#1c4d94] text-white rounded font-bold text-sm flex items-center shadow"
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Test'}
+                <Play className="w-4 h-4 mr-2 fill-current" /> Resume Test
               </button>
             </div>
-          </aside>
-        )}
+          ) : (
+            <>
+              {/* Question Label Row: Question No. X | Language | Report */}
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-bold text-gray-900 text-sm sm:text-base">
+                  Question No. {questionNumberInSection}
+                </span>
+
+                <div className="flex items-center gap-4">
+                  {/* Select Language dropdown */}
+                  <div className="flex items-center gap-1 text-xs text-gray-700">
+                    <span className="font-medium">Select Language</span>
+                    <div className="relative">
+                      <button
+                        onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+                        className="flex items-center gap-1 border border-gray-300 rounded px-2.5 py-0.5 text-xs text-gray-700 bg-white hover:bg-gray-50 font-medium"
+                      >
+                        {language}
+                        <ChevronDown className="w-3 h-3 text-gray-500 ml-0.5" />
+                      </button>
+                      {showLanguageMenu && (
+                        <div className="absolute right-0 mt-1 w-24 bg-white border border-gray-200 rounded shadow-lg py-1 z-20 text-xs">
+                          <button
+                            onClick={() => { setLanguage('English'); setShowLanguageMenu(false); }}
+                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium"
+                          >
+                            English
+                          </button>
+                          <button
+                            onClick={() => { setLanguage('Hindi'); setShowLanguageMenu(false); }}
+                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium"
+                          >
+                            Hindi
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Report Button */}
+                  <button
+                    onClick={() => { setShowReportModal(true); setReportSubmitted(false); }}
+                    className="flex items-center gap-1 text-xs text-gray-600 hover:text-red-600 transition-colors font-medium cursor-pointer"
+                  >
+                    <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
+                    <span>Report</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Single Bordered Container for Question Statement & Divided Options Table */}
+              <div className="border border-gray-300 rounded-[2px] bg-white overflow-hidden shadow-2xs mb-4">
+                {/* Question Statement */}
+                <div className={`p-4 sm:p-5 ${fontSizeClass} text-gray-900 leading-relaxed`}>
+                  <p className="whitespace-pre-wrap">{getQuestionText()}</p>
+                  {currentQuestion?.image?.src && (
+                    <div className="mt-4">
+                      <img
+                        src={currentQuestion.image.src}
+                        alt="Question diagram"
+                        className="max-h-72 max-w-full rounded border border-gray-200"
+                      />
+                    </div>
+                  )}
+                </div>
+
+                {/* Options Table (Each option has left radio column and right text column) */}
+                <div className="border-t border-gray-200 divide-y divide-gray-200">
+                  {currentQuestion && optionKeys.map((k) => {
+                    const rawOpt = currentQuestion.options[k];
+                    if (!rawOpt) return null;
+                    const isSelected = answers[currentIdx] === k;
+                    const optText = getOptionText(rawOpt);
+
+                    return (
+                      <div
+                        key={k}
+                        onClick={() => handleAnswer(k)}
+                        className={`flex items-stretch hover:bg-slate-50/80 cursor-pointer transition-colors ${
+                          isSelected ? 'bg-blue-50/30' : 'bg-white'
+                        }`}
+                      >
+                        {/* Left column: Radio button */}
+                        <div className="w-12 shrink-0 border-r border-gray-200 flex items-center justify-center py-3.5 bg-white">
+                          <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all ${
+                            isSelected ? 'border-blue-600 bg-white' : 'border-gray-400 bg-white'
+                          }`}>
+                            {isSelected && <div className="w-2 h-2 rounded-full bg-blue-600" />}
+                          </div>
+                        </div>
+
+                        {/* Right column: Option text */}
+                        <div className={`flex-1 px-4 py-3.5 ${fontSizeClass} text-gray-800 leading-normal flex items-center`}>
+                          {optText}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Clear Response Button */}
+              {answers[currentIdx] && (
+                <div className="flex justify-start mb-4">
+                  <button
+                    onClick={handleClearResponse}
+                    className="text-xs text-gray-500 hover:text-red-600 underline font-medium cursor-pointer"
+                  >
+                    Clear Selected Option
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+
+        {/* ── RIGHT PANE: PALETTE & SECTION ANALYSIS (Matches Testbook screenshot) ── */}
+        <aside className="w-[300px] sm:w-[320px] shrink-0 min-h-0 border-l border-gray-300 bg-white p-4 flex flex-col h-full overflow-y-auto pb-8 custom-scrollbar">
+
+          {/* Header with ▶ and Section Title (Left aligned like Testbook) */}
+          <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold text-sm sm:text-base">
+            <span className="text-[#00baf2] text-base leading-none">▶</span>
+            <span className="font-bold text-gray-900 text-sm truncate">
+              {activeSection.title || 'General Intelligence'}
+            </span>
+          </div>
+
+          {/* Question Palette 6-column Grid (Exact match to official Testbook color coding) */}
+          <div className="grid grid-cols-6 gap-x-2 gap-y-2.5 mb-6">
+            {sectionQuestions.map((q, localIdx) => {
+              const globalIdx = activeSection.startIndex + localIdx;
+              const isAnswered = !!answers[globalIdx];
+              const isMarked = markedForReview.has(globalIdx);
+
+              // Official Testbook Symbol & Color Coding:
+              // 1. Blue (12) -> Not yet attempted
+              // 2. Green (13) -> Answered
+              // 3. Red (14) + ▲ below -> Not yet answered, but marked for review
+              // 4. Yellow (15) + ▲ below -> Answered, but marked for review
+              let btnColor = 'bg-[#0000ff] text-white';
+              let showArrow = false;
+
+              if (isAnswered && isMarked) {
+                btnColor = 'bg-[#ffff00] text-black font-bold border border-yellow-400';
+                showArrow = true;
+              } else if (isMarked) {
+                btnColor = 'bg-[#cc0000] text-white';
+                showArrow = true;
+              } else if (isAnswered) {
+                btnColor = 'bg-[#008000] text-white';
+                showArrow = false;
+              } else {
+                btnColor = 'bg-[#0000ff] text-white';
+                showArrow = false;
+              }
+
+              return (
+                <div key={globalIdx} className="flex flex-col items-center justify-start relative">
+                  <button
+                    onClick={() => jumpToQuestion(globalIdx)}
+                    className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[2px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-colors shadow-2xs ${btnColor} hover:opacity-90`}
+                    title={`Question ${localIdx + 1}`}
+                  >
+                    <span className="leading-none">{localIdx + 1}</span>
+                  </button>
+                  {showArrow && (
+                    <span className="text-[8px] text-black font-black leading-none mt-0.5 select-none">
+                      ▲
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Section Analysis Table (Exact match to screenshot: grey header + yellow cells) */}
+          <div className="mt-auto border border-gray-400 rounded-none overflow-hidden shadow-2xs">
+            {/* Table Header: PART-A Analysis */}
+            <div className="bg-[#b8b8b8] border-b border-gray-400 py-1 text-center font-bold text-xs sm:text-sm text-gray-900 tracking-wide">
+              {activeSection.label} Analysis
+            </div>
+
+            <table className="w-full text-xs sm:text-sm border-collapse">
+              <tbody>
+                <tr className="border-b border-gray-400">
+                  <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
+                    Answered
+                  </td>
+                  <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
+                    {sectionAnswered}
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-400">
+                  <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
+                    Not Answered
+                  </td>
+                  <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
+                    {sectionNotAnswered}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
+                    Mark for Review
+                  </td>
+                  <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
+                    {sectionMarked}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
       </div>
+
+      {/* ── SYMBOLS MODAL (Exact match to official Testbook table) ── */}
+      {showSymbolsModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-md max-w-xl w-full shadow-2xl border border-gray-300 overflow-hidden">
+            <div className="bg-[#2460b9] text-white px-4 py-2.5 flex items-center justify-between">
+              <h3 className="font-bold text-sm">Question Palette Symbols &amp; Legends</h3>
+              <button onClick={() => setShowSymbolsModal(false)} className="text-white/80 hover:text-white cursor-pointer">
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-[#ded7c4] text-gray-900 font-bold border-b border-gray-300">
+                    <th className="p-2.5 text-center w-24 border-r border-gray-300">Symbol</th>
+                    <th className="p-2.5 text-left">Description</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="p-2.5 text-center border-r border-gray-200">
+                      <div className="w-4 h-4 rounded-full border border-gray-500 mx-auto" />
+                    </td>
+                    <td className="p-2.5 text-[#0047ba] font-bold">Option Not chosen</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="p-2.5 text-center border-r border-gray-200">
+                      <div className="w-4 h-4 rounded-full border border-blue-600 mx-auto flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-blue-600" />
+                      </div>
+                    </td>
+                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
+                      Option chosen as correct (By clicking on it again you can delete your option and choose another option if desired.)
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="p-2.5 text-center border-r border-gray-200">
+                      <div className="w-7 h-6 bg-[#0000ff] text-white font-bold rounded-[2px] mx-auto flex items-center justify-center text-xs">
+                        12
+                      </div>
+                    </td>
+                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
+                      Question number shown in blue color indicates that you have not yet attempted the question.
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="p-2.5 text-center border-r border-gray-200">
+                      <div className="w-7 h-6 bg-[#008000] text-white font-bold rounded-[2px] mx-auto flex items-center justify-center text-xs">
+                        13
+                      </div>
+                    </td>
+                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
+                      Question number shown in green color indicates that you have answered the question.
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="p-2.5 text-center border-r border-gray-200">
+                      <div className="flex flex-col items-center mx-auto">
+                        <div className="w-7 h-6 bg-[#cc0000] text-white font-bold rounded-[2px] flex items-center justify-center text-xs">
+                          14
+                        </div>
+                        <span className="text-[8px] text-black font-black leading-none mt-0.5">▲</span>
+                      </div>
+                    </td>
+                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
+                      You have not yet answered the question, but marked it for coming back for review later, if time permits.
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="p-2.5 text-center border-r border-gray-200">
+                      <div className="flex flex-col items-center mx-auto">
+                        <div className="w-7 h-6 bg-[#ffff00] text-black font-bold border border-yellow-400 rounded-[2px] flex items-center justify-center text-xs">
+                          15
+                        </div>
+                        <span className="text-[8px] text-black font-black leading-none mt-0.5">▲</span>
+                      </div>
+                    </td>
+                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
+                      You have answered the question, but marked it for review later, if time permits.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end">
+              <button
+                onClick={() => setShowSymbolsModal(false)}
+                className="px-4 py-1.5 bg-[#2460b9] text-white text-xs font-bold rounded hover:bg-[#1c4d94] cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── INSTRUCTIONS MODAL ── */}
+      {showInstructionsModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl border border-gray-300 overflow-hidden">
+            <div className="bg-[#2460b9] text-white px-4 py-2.5 flex items-center justify-between">
+              <h3 className="font-bold text-sm">General Instructions</h3>
+              <button onClick={() => setShowInstructionsModal(false)} className="text-white/80 hover:text-white cursor-pointer">
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="p-4 overflow-y-auto space-y-3 text-xs text-gray-700 leading-relaxed custom-scrollbar">
+              <p className="font-bold text-gray-900 text-sm">1. Navigating to a Question:</p>
+              <p>• Click on the question number in the Question Palette to go to that question directly.</p>
+              <p>• Click on <b>Save &amp; Next</b> to save your answer for the current question and then go to the next question.</p>
+              <p>• Click on <b>Mark for Review</b> to save your answer, mark it for review, and go to the next question.</p>
+              <p className="font-bold text-gray-900 text-sm mt-3">2. Answering a Question:</p>
+              <p>• To select your answer, click on the option row or radio button.</p>
+              <p>• To deselect your chosen answer, click on the <b>Clear Selected Option</b> button.</p>
+              <p>• To change your chosen answer, click on another option.</p>
+              <p className="font-bold text-gray-900 text-sm mt-3">3. Navigating through Sections:</p>
+              <p>• Sections in this paper are displayed above the question panel. Questions in a section can be viewed by clicking on the section name.</p>
+            </div>
+            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end">
+              <button
+                onClick={() => setShowInstructionsModal(false)}
+                className="px-4 py-1.5 bg-[#2460b9] text-white text-xs font-bold rounded hover:bg-[#1c4d94] cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── QUESTION PAPER MODAL ── */}
       {showQuestionPaper && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
-            <div className="text-white px-6 py-3.5 flex items-center justify-between" style={{ background: '#0097a7' }}>
+            <div className="text-white px-6 py-3.5 flex items-center justify-between bg-[#2460b9]">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5" />
                 <h3 className="font-bold text-base">Question Paper - {chapter.chapter_title}</h3>
@@ -640,10 +1152,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
 
             <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
-              {chapter.questions.map((q, idx) => (
+              {questions.map((q, idx) => (
                 <div key={idx} className="border-b border-gray-200 pb-5">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-sm" style={{ color: '#0097a7' }}>Question {idx + 1}</span>
+                    <span className="font-bold text-sm text-[#2460b9]">Question {idx + 1}</span>
                     <span className="text-xs text-gray-500 font-medium">Marks: +2, -0.5</span>
                   </div>
                   <p className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line">{q.question}</p>
@@ -661,9 +1173,155 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             <div className="p-4 border-t border-gray-200 bg-gray-50 flex justify-end">
               <button
                 onClick={() => setShowQuestionPaper(false)}
-                className="px-5 py-2 text-white text-xs font-bold rounded hover:opacity-90"
-                style={{ background: '#0097a7' }}
+                className="px-5 py-2 text-white text-xs font-bold rounded hover:opacity-90 bg-[#2460b9]"
               >Close</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── REPORT QUESTION MODAL ── */}
+      {showReportModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <div className="text-white px-5 py-3.5 flex items-center justify-between bg-amber-600">
+              <div className="flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-white" />
+                <h3 className="font-bold text-base">Report Question No. {questionNumberInSection}</h3>
+              </div>
+              <button onClick={() => setShowReportModal(false)} className="hover:bg-white/20 p-1 rounded text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-5 space-y-4">
+              {reportSubmitted ? (
+                <div className="text-center py-6">
+                  <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto mb-2" />
+                  <p className="font-bold text-gray-800 text-sm">Feedback Received</p>
+                  <p className="text-xs text-gray-500 mt-1">Thank you for reporting. Our team will review this question.</p>
+                  <button
+                    onClick={() => setShowReportModal(false)}
+                    className="mt-4 px-4 py-2 bg-gray-800 text-white rounded text-xs font-bold"
+                  >
+                    Close
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <p className="text-xs text-gray-600">Please choose the issue you found with this question:</p>
+                  <div className="space-y-2 text-xs">
+                    {[
+                      'Incorrect Question or Solution',
+                      'Wrong Options or Ambiguous Answer',
+                      'Image / Formatting / Translation Error',
+                      'Other Issue'
+                    ].map(r => (
+                      <label key={r} className="flex items-center gap-2.5 p-2 rounded border border-gray-200 hover:bg-slate-50 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="reportReason"
+                          checked={reportReason === r}
+                          onChange={() => setReportReason(r)}
+                          className="accent-blue-600"
+                        />
+                        <span className="text-gray-800 font-medium">{r}</span>
+                      </label>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-2 pt-2">
+                    <button
+                      onClick={() => setShowReportModal(false)}
+                      className="flex-1 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={() => setReportSubmitted(true)}
+                      className="flex-1 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded transition-colors"
+                    >
+                      Submit Report
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── SUBMIT TEST CONFIRMATION MODAL ── */}
+      {showSubmitModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <div className="text-white px-5 py-3.5 flex items-center justify-between bg-[#2460b9]">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-white" />
+                <h3 className="font-bold text-base">Submit Test Confirmation</h3>
+              </div>
+              <button
+                onClick={() => setShowSubmitModal(false)}
+                disabled={isSubmitting}
+                className="hover:bg-white/20 p-1 rounded text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-5 space-y-4">
+              <p className="text-sm text-gray-600">
+                Are you sure you want to submit your test? Here is your current attempt summary:
+              </p>
+
+              <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2 text-xs">
+                <div className="flex justify-between font-bold border-b border-slate-200 pb-1.5 text-gray-700">
+                  <span>Current Section</span>
+                  <span className="text-gray-900">{activeSection.title}</span>
+                </div>
+                <div className="flex justify-between py-0.5 text-gray-600">
+                  <span>Total Questions:</span>
+                  <span className="font-bold text-gray-900">{totalQuestions}</span>
+                </div>
+                <div className="flex justify-between py-0.5 text-emerald-700 font-medium">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
+                    Answered:
+                  </span>
+                  <span className="font-bold">{stats.answered}</span>
+                </div>
+                <div className="flex justify-between py-0.5 text-amber-700 font-medium">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
+                    Not Attempted:
+                  </span>
+                  <span className="font-bold">{totalQuestions - stats.answered - stats.marked}</span>
+                </div>
+                <div className="flex justify-between py-0.5 text-purple-700 font-medium">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-purple-600 inline-block" />
+                    Marked for Review:
+                  </span>
+                  <span className="font-bold">{stats.marked}</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 pt-2">
+                <button
+                  onClick={() => setShowSubmitModal(false)}
+                  disabled={isSubmitting}
+                  className="flex-1 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-lg transition-colors cursor-pointer"
+                >
+                  Return to Test
+                </button>
+                <button
+                  onClick={handleSubmitTest}
+                  disabled={isSubmitting}
+                  className="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm disabled:opacity-50 cursor-pointer"
+                >
+                  <CheckCircle2 className="w-4 h-4" />
+                  {isSubmitting ? 'Submitting...' : 'Yes, Submit Test'}
+                </button>
+              </div>
             </div>
           </div>
         </div>

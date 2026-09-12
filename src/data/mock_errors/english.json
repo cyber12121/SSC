@@ -990,6 +990,125 @@
           "topic": "Cloze Test",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_5342c0a35c",
+        "q_num": 59,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. When the fish, at last, had been safely landed, I asked the brothers if they ate fish.\nB. The condition that I put was that they had to help me land another fish for my men.\nC. On receiving their eager answer that they most certainly did, I told them I would give them the fish we had just landed.\nD. To this they readily agreed and the wait started again.",
+        "options": {
+          "a": "DCBA",
+          "b": "ABCD",
+          "c": "ACBD",
+          "d": "BDCA"
+        },
+        "answer": "c",
+        "solution": "The correct sequence is A, C, B, D.\nA is the opening sentence explaining the situation. C follows as the immediate next step. B introduces the condition, and D concludes with their agreement.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_defd8731fb",
+        "q_num": 60,
+        "question": "Environmental campaigns are marked by rousing calls for collective, transformative action on a global scale.\nP : Addressing this bedrock issue of data access is vitally important at a time when the impacts of climate change are manifesting with increasing severity.\nQ : For human settlements to thrive in a climate-changing world, planning must be informed by a deep understanding of local ecologies and socio-economic contexts.\nR : But to achieve this, access to the right data is essential.\nS : It has pushed us into new territory where the contextual and traditional knowledge of farmers and indigenous communities needs to be integrated with better data.\nFor example, a farmer producer organization in Anantapur needs to know what changes to make to improve income and adapt to a water-stressed future, or a conservation group in Wayanad needs a list of native species for landscape restoration work.\nFind the proper sequence of the four sentences (P, Q, R, S) between S1 and S6.",
+        "options": {
+          "a": "PQRS",
+          "b": "RSQP",
+          "c": "QRPS",
+          "d": "QRSP"
+        },
+        "answer": "c",
+        "solution": "Q follows S1 as it discusses planning for human settlements. R follows Q to introduce access to data. P extends information regarding data access. S connects with S6 as addressing data access pushes into new territory. Hence, the correct sequence is QRPS.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_6ca592a0ae",
+        "q_num": 61,
+        "question": "Choose the correct sentence.",
+        "options": {
+          "a": "I will be written a letter to my friend.",
+          "b": "I have written a letter to my friend.",
+          "c": "I has written a letter to my friend.",
+          "d": "I shall have been written a letter to my friend."
+        },
+        "answer": "b",
+        "solution": "Option B uses the present perfect tense correctly, formed by 'have/has' followed by the past participle of the main verb. Other options contain grammatical errors.",
+        "tags": {
+          "topic": "Tenses",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_16fd679e2d",
+        "q_num": 62,
+        "question": "Choose the appropriate word to complete the given sentence.\nI suggest ______ a search party.",
+        "options": {
+          "a": "to form",
+          "b": "forming",
+          "c": "form",
+          "d": "to forming"
+        },
+        "answer": "b",
+        "solution": "The correct answer is \"forming\".\n\nKey Points\n\"Forming\" is the gerund form of 'form' and is the correct form to use following 'suggest' when you're providing advice or a recommendation.\nThe verb 'suggest' is usually followed by a gerund (-ing form of a verb) not an infinitive when it refers to a proposal for an action the speaker wants someone else to do.\n\nTherefore, the correct answer is \"option 2\".",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0d1e414c99",
+        "q_num": 63,
+        "question": "In the following question, out of the four alternatives, select the alternative which will improve the underlined part of the sentence. In case no improvement is needed, select “No improvement”.\nThey built a wall to avoid soil being washed away.",
+        "options": {
+          "a": "to be washed away",
+          "b": "been washed away",
+          "c": "be washed away",
+          "d": "No improvement"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 'No improvement'.\n\nKey Points\nThere are some verbs that are followed by v1 + ing.\nSome examples of these verbs are: enjoy, love, hate, like, admit, deny, finish, avoid, etc.\nExamples,\nI try to avoid going shopping on Sundays.\nI haven't finished writing my new novel.\nAccording to the rule and examples that are given above, 'being washed away' is correct in the given sentence.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5421a9fa86",
+        "q_num": 64,
+        "question": "What will come in blank (5)?",
+        "options": {
+          "a": "were",
+          "b": "was",
+          "c": "had",
+          "d": "is"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'were'.\n\nKey Points\nThe sentence employs a Conditional Inversion structure starting with \"Should\": \"Should India (5) __________ to ignore the imperative...\"\nThis is a formal, academic way of expressing a Second Conditional (hypothetical) statement: \"If India were to ignore...\" becomes \"Should India were to ignore...\" or more commonly in this specific \"to-infinitive\" structure, the subjunctive 'were' is used to denote the remote possibility of the event.\nIn the Subjunctive Mood, \"were\" is used for all subjects (even singular ones like \"India\") to express a condition that is contrary to fact or highly hypothetical.\nOption 2 (\"was\") is considered informal and is typically penalized in high-stakes competitive exams like CAT/GMAT when used in hypothetical conditionals.\nOption 3 (\"had\") would require a past participle (e.g., Should India had ignored), but it doesn't fit the \"to ignore\" infinitive structure. Option 4 (\"is\") is the indicative present and cannot be used in a hypothetical \"should\" inversion.\nTherefore, the correct answer is 'Option 1'.",
+        "tags": {
+          "topic": "Cloze Test",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0c4243f85d",
+        "q_num": 65,
+        "question": "The following passage consists of six sentences. The first and the sixth sentences are given. The middle four sentences in each have been removed and jumbled up. These are labelled P, Q, R and S. You are required to find out the proper sequence of the four sentences and choose the correct order from the options.\nS1- The empowerment of women and the improvement of their political, social, economic and health status is a highly important end in itself.\nP- In addition, it is essential for the achievement of sustainable development.\nQ- In all parts of the world, women are facing threats to their lives, health and well-being as a result of being overburdened with work and of their lack of power and influence.\nR- In most regions of the world, women receive less formal education than men, and at the same time, women's own knowledge, abilities and coping mechanisms often go unrecognized.\nS- The full participation and partnership of both women and men is required in productive and reproductive life, including shared responsibilities for the care and nurturing of children and maintenance of the household.\nS6- The power relations that impede women's attainment of healthy and fulfilling lives operate at many levels of society, from the most personal to the highly public.",
+        "options": {
+          "a": "PSRQ",
+          "b": "PSQR",
+          "c": "SPQR",
+          "d": "SPRQ"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'PSQR.'\n\nKey Points\nWhile arranging the parts of the passage given in options, we have to find some grammatical or contextual connections between them, so let’s find out.\nThe first statement in the sequence should be the one that best connects with S1.\nIt should be a continuation or extension of S1.\nP follows S1 because it is adding more information to the empowerment of women.\nS follows P because it is talking about requirement of full participation and partnership of both women and men.\nQ follows S because it is talking about the lack of power and influence.\nR is directly connected to S6.\nS6 provides a conclusion to the story.\nTherefore, the sequence is 'S1PSQRS6.'\nThus, the correct answer is 'PSQR.'",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
       }
     ]
   }

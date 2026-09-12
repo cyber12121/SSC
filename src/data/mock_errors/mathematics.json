@@ -1058,6 +1058,74 @@
           "topic": "Profit, Loss & Discount",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_668c84ffd7",
+        "q_num": 63,
+        "question": "The length, breadth, height of a room are 6 m 40 cm, 4 m 80 cm and 3 m 20 cm respectively. Find the longest tape which can measure the dimensions of the room exactly.",
+        "options": {
+          "a": "1 m 80 cm",
+          "b": "1 m 20 cm",
+          "c": "1 m 60 cm",
+          "d": "1 m 40 cm"
+        },
+        "answer": "c",
+        "solution": "The longest tape required to measure the dimensions exactly is the Highest Common Factor (HCF) of the dimensions.\n\nConvert all dimensions to cm: 640 cm, 480 cm, 320 cm.\nAll numbers are clear multiples of 160: 640 = 160 × 4, 480 = 160 × 3, and 320 = 160 × 2.\nHCF = 160 cm = 1 m 60 cm.\n∴ The correct answer is 1 m 60 cm.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3d11f130a0",
+        "q_num": 64,
+        "question": "A retailer bought 50 kg of Arhar Dal at a discount of 20%. Besides 2 kg dal was freely offered to him by the wholesaler at the purchase of 50 kg. Now he sells the dal at the marked price to a customer. Find the profit percentage of the retailer?",
+        "options": {
+          "a": "30%",
+          "b": "12%",
+          "c": "15%",
+          "d": "22%"
+        },
+        "answer": "a",
+        "solution": "Let the marked price (MP) of 1 kg dal be 10 units.\nCost Price (CP) for retailer = 50 kg × 8 units (due to 20% discount) = 400 units.\nTotal quantity to sell = 50 kg + 2 kg free = 52 kg.\nSelling Price (SP) of 52 kg at MP = 52 × 10 units = 520 units.\nProfit % = [(SP − CP) ÷ CP] × 100 = [(520 − 400) ÷ 400] × 100 = 30%.\n∴ The correct answer is 30%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3bf98362f3",
+        "q_num": 65,
+        "question": "∛(8^4) × ∛(125^2) ÷ √(4^3) is equal to",
+        "options": {
+          "a": "50",
+          "b": "40",
+          "c": "100",
+          "d": "80"
+        },
+        "answer": "a",
+        "solution": "Given:\n∛(8^4) × ∛(125^2) ÷ √(4^3)\n\nFormula used:\nⁿ√a^m = a^(m/n)\n\nCalculation:\n⇒ (8^4)^(1/3) × (125^2)^(1/3) ÷ (4^3)^(1/2)\n⇒ (2^3)^(4/3) × (5^3)^(2/3) ÷ (2^2)^(3/2)\n⇒ 2^4 × 5^2 ÷ 2^3\n⇒ 16 × 25 ÷ 8\n⇒ 400 ÷ 8\n⇒ 50\n∴ The correct answer is 50.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d307de59f2",
+        "q_num": 66,
+        "question": "An inlet pipe fills up a cistern in 2 hours, while an outlet pipe empties it in 4 hours. The empty cistern was being filled up with both the pipes open for 1 hour, after which someone closed the outlet. How long will it take in total to fill up the cistern?",
+        "options": {
+          "a": "2 hours 15 minutes",
+          "b": "2 hours 30 minutes",
+          "c": "3 hours",
+          "d": "1 hour 30 minutes"
+        },
+        "answer": "b",
+        "solution": "Total capacity = LCM of 2 and 4 = 4 units.\nEfficiency: Inlet = +2 units/hr, Outlet = −1 unit/hr.\nVolume filled in the 1st hour (both open) = 2 − 1 = +1 unit.\nRemaining capacity to be filled = 4 − 1 = 3 units.\nTotal time = 1 hr (initial) + (3 ÷ 2) hr (remaining filled by inlet) = 2.5 hours.\n∴ The correct answer is 2 hours 30 minutes.",
+        "tags": {
+          "topic": "Pipes & Cisterns",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -2103,6 +2171,74 @@
           "topic": "Number System",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_c15a3089e7",
+        "q_num": 62,
+        "question": "To pack a set of books, Gautam got cartons of a certain height that were 48 inches long and 27 inches wide. If the volume of such a carton was 22.5 cubic feet, what was the height of each carton? [Use 1 foot = 12 inches.]",
+        "options": {
+          "a": "36 inches",
+          "b": "32.5 inches",
+          "c": "30 inches",
+          "d": "32 inches"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nConvert the given volume directly into cubic inches by multiplying by 12^3.\n\nVolume in inches = 22.5 × 1728 = 38880 inch^3\nSince Volume = Length × Width × Height\nHeight = 38880 ÷ (48 × 27)\nHeight = 38880 ÷ 1296 = 30 inches\n∴ The correct answer is 30 inches.\n\nAlternate Method\nGiven:\nLength (L) = 48 inches\nWidth (B) = 27 inches\nVolume (V) = 22.5 ft^3\n1 ft = 12 inches\n\nFormula Used:\nVolume of a cuboid = L × B × H\n\nCalculations:\n⇒ Volume in inch^3 = 22.5 × 12 × 12 × 12\n⇒ Volume = 22.5 × 1728 = 38880 inch^3\n⇒ L × B × H = 38880\n⇒ 48 × 27 × H = 38880\n⇒ 1296 × H = 38880\n⇒ H = 38880 ÷ 1296\n⇒ H = 30 inches\n∴ The correct answer is 30 inches.\n\nAdditional Information\nVolume of a Cuboid\nV = L × B × H, where L, B, and H denote length, breadth, and height respectively.\nSurface Area of a Cuboid\nTotal Surface Area (TSA) = 2(LB + BH + HL). Lateral Surface Area (LSA) = 2H(L + B).\nDiagonal of a Cuboid\nThe length of the longest space diagonal inside a cuboid is √(L^2 + B^2 + H^2).\nUnit Conversions\nSince 1 foot = 12 inches, calculating volume requires taking the cube of 12. Thus, 1 cubic foot = 12^3 = 1728 cubic inches.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0b0f630db8",
+        "q_num": 63,
+        "question": "A hemispherical bowl of diameter 16 cm is full of ice cream. Each student in a class is served exactly 6 scoops of ice cream. If the hemispherical scoop is having a radius of 2 cm, then ice cream is served to approximately how many students?",
+        "options": {
+          "a": "13 students",
+          "b": "10 students",
+          "c": "12 students",
+          "d": "8 students"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nTotal number of scoops in the bowl = (Radius of bowl ÷ Radius of scoop)^3\n⇒ Total scoops = (8 ÷ 2)^3 = 4^3 = 64 scoops\nSince each student is served exactly 6 scoops:\n⇒ Number of students served = 64 ÷ 6 = 10.66\n\nIce cream can be fully served to a maximum of 10 students with exactly 6 scoops each.\n\n∴ The correct answer is 10 students.\n\nAlternate Method\nGiven:\nDiameter of the hemispherical bowl = 16 cm ⇒ Radius (R) = 16 ÷ 2 = 8 cm\nRadius of the hemispherical scoop (r) = 2 cm\nScoops served per student = 6\n\nFormula Used:\nVolume of a hemisphere = (2 ÷ 3) × π × radius^3\n\nCalculations:\n⇒ Volume of the ice cream in the bowl = (2 ÷ 3) × π × 8^3 = (2 ÷ 3) × π × 512\n⇒ Volume of a single scoop = (2 ÷ 3) × π × 2^3 = (2 ÷ 3) × π × 8\n⇒ Total number of scoops = Volume of bowl ÷ Volume of single scoop\n⇒ Total number of scoops = [(2 ÷ 3) × π × 512] ÷ [(2 ÷ 3) × π × 8] = 512 ÷ 8 = 64 scoops\n⇒ Since each student receives exactly 6 scoops, the number of students = 64 ÷ 6 = 10.66\n⇒ Thus, ice cream is fully served to 10 students, leaving exactly 4 scoops remaining in the bowl.\n∴ The correct answer is 10 students.\n\nAdditional Information\nVolume of a Hemisphere\nA hemisphere is exactly half of a complete sphere. Its volume formula is V = (2 ÷ 3) × π × r^3.\nTotal Surface Area (TSA) of a Hemisphere\nThe TSA encompasses the curved surface along with the flat circular base. The formula is TSA = 3 × π × r^2.\nVolume Proportionality Rule\nFor any pair of 3D shapes featuring identical proportions (like two spheres or hemispheres), the ratio of their total volumes equals the cube of the ratio of their corresponding linear dimensions.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_fb7f8447c1",
+        "q_num": 64,
+        "question": "In a bag, the number of ₹5 coins is 8 more than the number of ₹10 coins but 20% less than the number of ₹2 coins. If the total amount in the bag is ₹270, what is the number of ₹5 coins?",
+        "options": {
+          "a": "15",
+          "b": "20",
+          "c": "25",
+          "d": "18"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nLet the number of ₹2 coins be 5y. Then ₹5 coins (20% less) = 4y, and ₹10 coins = 4y − 8.\n\nTotal value = 2(5y) + 5(4y) + 10(4y − 8) = 270.\n10y + 20y + 40y − 80 = 270 ⇒ 70y = 350 ⇒ y = 5.\nNumber of ₹5 coins = 4 × 5 = 20.\n∴ The correct answer is 20.\n\nAlternate Method\nGiven:\nNumber of ₹5 coins is 8 more than the number of ₹10 coins.\nNumber of ₹5 coins is 20% less than the number of ₹2 coins.\nTotal amount in the bag = ₹270.\n\nFormula Used:\nTotal Value = (Value of ₹2 coins) + (Value of ₹5 coins) + (Value of ₹10 coins)\n\nCalculation:\n⇒ Let the number of ₹2 coins be 5y.\n⇒ Number of ₹5 coins is 20% less = 5y × (80 ÷ 100) = 4y\n⇒ Number of ₹10 coins is 8 less than ₹5 coins = 4y − 8\n⇒ Total value = (2 × 5y) + (5 × 4y) + 10 × (4y − 8) = 270\n⇒ 10y + 20y + 40y − 80 = 270\n⇒ 70y = 350\n⇒ y = 350 ÷ 70 = 5\n⇒ Number of ₹5 coins = 4 × 5 = 20\n∴ The correct answer is 20.\n\nAdditional Information\nCoins and Denominations\nThe total value of any denomination is calculated by multiplying the face value of the coin with the number of coins (Value = Denomination × Count).\nPercentage Relationships\nIf quantity A is R% less than quantity B, then A = B × (100 − R) ÷ 100. This relationship is often used to find the ratio between multiple quantities quickly.\nLinear Equations\nWord problems often translate into linear equations format ax + b = c, where solving for the common ratio variable 'y' or 'x' gives the exact values for each parameter.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9d4111aaff",
+        "q_num": 65,
+        "question": "The base of a triangular field is three times its altitude. If the cost of cultivating the field at Rs. 24.4/hect is Rs. 448.35, find its height. (in metres)",
+        "options": {
+          "a": "320",
+          "b": "350",
+          "c": "240",
+          "d": "275"
+        },
+        "answer": "b",
+        "solution": "Total Area = Total Cost ÷ Rate per hectare\nArea = 448.35 ÷ 24.4 = 18.375 hectares = 183750 m²\nArea of a triangle = ½ × Base × Height\n½ × 3h × h = 183750 ⇒ h² = 122500\nh = √122500 = 350 m\n∴ The correct answer is 350 m.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -2602,6 +2738,57 @@
         "solution": "A is the incenter of the triangle since it is situated at the internal bisectors of the angle. ∠QAR = 90° + (∠P / 2). Substituting the values, we get ∠QAR = 90° + (40 / 2) = 110°. In ΔAQR, ∠AQR + ∠ARQ + ∠QAR = 180° ⇒ ∠AQR + ∠ARQ = 180° - 110° = 70°.",
         "tags": {
           "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_53e7623a03",
+        "q_num": 30,
+        "question": "If a sum triples in 4 years at simple interest, find the time that it would take to become 5 times itself at the same rate of interest.",
+        "options": {
+          "a": "6 years",
+          "b": "8 years",
+          "c": "5 years",
+          "d": "3 years"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nIn Simple Interest, Interest is directly proportional to Time when Principal and Rate are constant.\n\nFor a sum to triple (3 times), Interest = 3 − 1 = 2 units.\nFor a sum to become 5 times, Interest = 5 − 1 = 4 units.\nTime for 2 units interest = 4 years.\nTime for 4 units interest = (4 ÷ 2) × 4 = 8 years.\n∴ The correct answer is 8 years.\n\nAlternate Method\nGiven: Time (T1) = 4 years, Amount1 = 3P, Amount2 = 5P (where P is Principal)\nFormula: Simple Interest (SI) = (P × R × T) / 100\n⇒ SI1 = Amount1 − P = 3P − P = 2P ⇒ 2P = (P × R × 4) / 100 ⇒ R = (2P × 100) / (4P) = 50% ⇒ SI2 = Amount2 − P = 5P − P = 4P ⇒ 4P = (P × 50 × T2) / 100 ⇒ T2 = (4P × 100) / (50P) ⇒ T2 = 400 / 50 = 8 years\n∴ The correct answer is 8 years.\n\nAdditional Information\nInterest Proportionality\nIn simple interest, the interest earned is directly proportional to time (T) and rate (R) since SI = (P × R × T) / 100.\nAmount as n-times Principal\nIf a sum becomes n times itself, the interest earned is (n − 1) × P. For same rate and principal, T1 / (n1 − 1) = T2 / (n2 − 1).\nRule of SI vs CI\nFor the first year (or first compounding period), SI and CI are equal if the principal and rate are the same.",
+        "tags": {
+          "topic": "Simple Interest",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7633536ba1",
+        "q_num": 31,
+        "question": "A boat can go 54 km upstream in 6 hours. If the speed of the stream is 4.8 km/h, then how much time (in hours) will the boat take to cover a distance of 279 km downstream?",
+        "options": {
+          "a": "20",
+          "b": "15",
+          "c": "18",
+          "d": "16"
+        },
+        "answer": "b",
+        "solution": "Upstream speed (U) = 54 ÷ 6 = 9 km/h.\nDownstream speed (D) = U + 2 × Stream speed = 9 + 2 × 4.8 = 18.6 km/h.\nTime downstream = Distance ÷ D = 279 ÷ 18.6 = 15 hours.\n∴ The correct answer is 15 hours.",
+        "tags": {
+          "topic": "Boats & Streams",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0d6df928fe",
+        "q_num": 32,
+        "question": "Amount on compound interest is doubled to the original amount in 3 years. In how many years will it be eight times its original amount?",
+        "options": {
+          "a": "6",
+          "b": "7",
+          "c": "8",
+          "d": "9"
+        },
+        "answer": "d",
+        "solution": "If a sum becomes n times in T years at Compound Interest, it will become n^m times in m × T years.\nHere, the sum becomes 2 times in 3 years.\nWe need the sum to become 8 times, which is 2^3 times (so m = 3).\nRequired time = 3 × 3 = 9 years.\n∴ The correct answer is 9 years.",
+        "tags": {
+          "topic": "Compound Interest",
           "difficulty": "medium"
         }
       }
