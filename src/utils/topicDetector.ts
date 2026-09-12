@@ -1,12 +1,29 @@
 import { Question } from '../types';
 
 export function detectTopic(q: Question, subject: string): string {
-  if (q.tags?.topic && q.tags.topic !== 'General' && q.tags.topic !== 'Unknown') {
-    return q.tags.topic;
-  }
-
   const s = (q.question + ' ' + (q.solution || '')).toLowerCase();
   const sub = (subject || '').toLowerCase();
+  const isReasoning = sub.includes('reason') || sub.includes('intel');
+
+  let currentTopic = q.tags?.topic;
+
+  // Clean obvious cross-subject or cross-topic misclassifications in Reasoning
+  if (isReasoning && currentTopic) {
+    if (
+      currentTopic === 'Number System' ||
+      currentTopic === 'Static GK' ||
+      (currentTopic === 'Analogy' && /\b(given series|breaks the pattern|odd number pair|reverse alphabetical|arranged in the reverse)\b/i.test(s)) ||
+      (currentTopic === 'Coding-Decoding' && /\b(interchanged|equation|pairs of letters|vowel is changed)\b/i.test(s)) ||
+      (currentTopic === 'Seating Arrangement' && /\b(flagpoles|rank|corridor|how many flagpoles|from the left end and)\b/i.test(s)) ||
+      (currentTopic === 'Syllogism' && !/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(s))
+    ) {
+      currentTopic = undefined;
+    }
+  }
+
+  if (currentTopic && currentTopic !== 'General' && currentTopic !== 'Unknown') {
+    return currentTopic;
+  }
 
   if (sub.includes('math') || sub.includes('quant') || sub.includes('aptitude')) {
     if (/\b(bar graph|pie chart|table shows|histogram|line graph|data interpretation)\b/i.test(s)) return 'Data Interpretation';
@@ -38,11 +55,11 @@ export function detectTopic(q: Question, subject: string): string {
     return 'Number System';
   }
 
-  if (sub.includes('reason')) {
+  if (isReasoning) {
     if (/\b(dice|cube|opposite to the face|positions of the same dice)\b/i.test(s)) return 'Cube & Dice';
-    if (/\b(interchange the signs|interchange the two signs|correct equation|mathematical operator|operator.*means|which two numbers should be interchanged|which of the two digits should be interchanged)\b/i.test(s)) return 'Mathematical Operations';
-    if (/\b(in a row of|row of children|how many children are there in that row|ranks? \d+|from the left end|from the right end|from the top|from the bottom|ranking|order and ranking)\b/i.test(s)) return 'Ranking & Order';
-    if (/\b(walks? \d+|turns? left|turns? right|walked \d+|towards north|towards south|towards east|towards west|shortest distance between .* starting)\b/i.test(s)) return 'Direction & Distance';
+    if (/\b(interchange the signs|interchange the two signs|correct equation|mathematical operator|operator.*means|which two numbers should be interchanged|which of the two digits should be interchanged|equations will be correct)\b/i.test(s)) return 'Mathematical Operations';
+    if (/\b(in a row of|row of children|how many children are there in that row|ranks? \d+|from the left end|from the right end|from the top|from the bottom|ranking|order and ranking|flagpoles|midway between)\b/i.test(s)) return 'Order & Ranking';
+    if (/\b(walks? \d+|turns? left|turns? right|walked \d+|towards north|towards south|towards east|towards west|shortest distance between .* starting|compass started giving wrong directions)\b/i.test(s)) return 'Direction & Distance';
     if (/\b(mirror image)\b/i.test(s)) return 'Mirror Image';
     if (/\b(water image)\b/i.test(s)) return 'Water Image';
     if (/\b(paper is folded|paper folding|unfolded|cutting)\b/i.test(s)) return 'Paper Folding & Cutting';
@@ -50,14 +67,17 @@ export function detectTopic(q: Question, subject: string): string {
     if (/\b(incomplete figure|figure completion|complete the given figure|pattern figure)\b/i.test(s)) return 'Figure Completion';
     if (/\b(number of triangles|number of squares|counting of figures|figure counting|how many triangles)\b/i.test(s)) return 'Figure Counting';
     if (/\b(clock|calendar|day of the week|leap year)\b/i.test(s)) return 'Clock & Calendar';
-    if (/\b(circular table|facing the center|linear row|seating arrangement)\b/i.test(s)) return 'Seating Arrangement';
-    if (/\b(mother|father|brother|sister|son|daughter|uncle|aunt|nephew|niece|husband|wife|photograph|blood relation)\b/i.test(s)) return 'Blood Relations';
-    if (/\b(statements?:|conclusions?:|all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is|syllogism)\b/i.test(s)) return 'Syllogism';
+    if (/\b(circular table|facing the center|linear row|seating arrangement|sitting in a row|sitting second to the left)\b/i.test(s)) return 'Seating Arrangement';
+    if (/\b(mother|father|brother|sister|son|daughter|uncle|aunt|nephew|niece|husband|wife|photograph|blood relation|father-in-law)\b/i.test(s)) return 'Blood Relations';
+    if (/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(s)) return 'Syllogism';
     if (/\b(statement and assumption|assumption)\b/i.test(s)) return 'Statement & Assumption';
-    if (/\b(statement and conclusion)\b/i.test(s)) return 'Statement & Conclusion';
+    if (/\b(statement:?|conclusions?:?|statement is given followed by a few conclusions)\b/i.test(s)) return 'Statement & Conclusion';
     if (/\b(venn diagram|represents the relationship)\b/i.test(s)) return 'Venn Diagram';
-    if (/\b(odd one out|three of the following|four words have been given of which three are alike|does not belong|classification)\b/i.test(s)) return 'Classification / Odd One Out';
-    if (/\b(replace the question mark|number series|letter series|breaks the pattern|pattern|number sequence|number symbol series|letter, number, symbol series|\d+,\s*\d+,\s*\d+|cluster of five integers|pairs of numbers are there in|pairs of letters are there in|sequentially placed in the blanks of the given series)\b/i.test(s)) return 'Series';
+    if (/\b(odd one out|three of the following|four words have been given of which three are alike|does not belong|classification|odd number pair)\b/i.test(s)) return 'Classification / Odd One Out';
+    if (/\b(pairs of letters|letter immediately succeeding|reverse alphabetical order|alphabetical order|word formation)\b/i.test(s)) return 'Alphabet Test';
+    if (/\b(decimal number and smallest decimal|arithmetical reasoning)\b/i.test(s)) return 'Arithmetical Reasoning';
+    if (/\b(replace the question mark|number series|breaks the pattern|pattern|number sequence|\d+,\s*\d+,\s*\d+|cluster of five integers)\b/i.test(s)) return 'Number Series';
+    if (/\b(letter series|letter, number, symbol series|sequentially placed in the blanks of the given series)\b/i.test(s)) return 'Letter & Symbol Series';
     if (/\b(coded as|code language|coding-decoding)\b/i.test(s)) return 'Coding-Decoding';
     if (/\b(related to the third|in the same way as|analogy|related in the same)\b/i.test(s)) return 'Analogy';
     if (/\b(missing number|matrix)\b/i.test(s)) return 'Missing Number';

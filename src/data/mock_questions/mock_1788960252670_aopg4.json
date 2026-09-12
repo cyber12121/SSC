@@ -1,7 +1,7 @@
 [
   {
     "id": "reas_3bd1ae9384",
-    "q_num": 26,
+    "q_num": 1,
     "question": "In the word OPTICAL, each vowel is changed to the letter immediately succeeding it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters is repeated twice in the new group of letters thus formed?",
     "options": {
       "a": "B",
@@ -12,7 +12,7 @@
     "answer": "a",
     "solution": "The logic follows here is :-\n\nIn the word OPTICAL:\n- Each vowel (O, I, A) is changed to the letter immediately succeeding it in the English alphabetical order\n- Each consonant (P, T, C, L) is changed to the letter immediately preceding it in the English alphabetical order:\nWord: O P T I C A L\nVowel + 1 & Consonant - 1 -> P O S J B B K\n\nAfter applying the transformations: POSJBBK\nIn the new sequence, the letter 'B' is repeated twice.\n\nThus, the correct answer is \"Option 1\".",
     "tags": {
-      "topic": "Coding-Decoding",
+      "topic": "Alphabet Test",
       "difficulty": "medium"
     },
     "status": "wrong",
@@ -22,7 +22,7 @@
   },
   {
     "id": "reas_024b042612",
-    "q_num": 27,
+    "q_num": 2,
     "question": "In a certain code language, 'EARLY' is written as 'ZNSCF' and 'GAUGE' is written as 'FIVCH'. How will 'INBOX' be written in that language?",
     "options": {
       "a": "YQCQJ",
@@ -43,7 +43,7 @@
   },
   {
     "id": "reas_aaee89f8a8",
-    "q_num": 28,
+    "q_num": 3,
     "question": "Which of the following numbers will replace the question mark (?) in the given series?\\n4, 9, 20, 43, 90, ?",
     "options": {
       "a": "181",
@@ -54,7 +54,7 @@
     "answer": "d",
     "solution": "The pattern followed in the given series is multiplying by 2 and adding an increasing number (or consecutive differences doubling):\n4 × 2 + 1 = 9\n9 × 2 + 2 = 20\n20 × 2 + 3 = 43\n43 × 2 + 4 = 90\n90 × 2 + 5 = 185\nHence, the correct answer is 185.",
     "tags": {
-      "topic": "Analogy",
+      "topic": "Number Series",
       "difficulty": "medium"
     },
     "status": "wrong",
@@ -64,7 +64,7 @@
   },
   {
     "id": "reas_acb57a8a29",
-    "q_num": 29,
+    "q_num": 4,
     "question": "Three statements are given, followed by three conclusions numbered I, II and III. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome plants are flowers.\nSome flowers are fruits.\nAll flowers are gardens.\nConclusions:\nI. Some gardens are plants.\nII. Some fruits are gardens.\nIII. Some gardens are flowers.",
     "options": {
       "a": "Only conclusions I and III follow",
@@ -85,7 +85,7 @@
   },
   {
     "id": "reas_e95d684c9b",
-    "q_num": 1,
+    "q_num": 5,
     "question": "Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row facing North. B is sitting at one extreme end. E is sitting second to the left of B. C is sitting between A and E. G is NOT sitting at any extreme end. F is sitting to the immediate right of D. Who is sitting second to the left of G?",
     "options": {
       "a": "E",
@@ -106,7 +106,7 @@
   },
   {
     "id": "reas_b8bd0cac6f",
-    "q_num": 2,
+    "q_num": 6,
     "question": "Along a straight corridor, there are some flagpoles in a line. Pole A is 16th from the left end and Pole B is 9th from the right end. Pole C is exactly midway between A and B, and C is 20th from the left end. How many flagpoles are there?",
     "options": {
       "a": "34",
@@ -117,7 +117,7 @@
     "answer": "b",
     "solution": "Let N = total flagpoles\nPosition of B from the left = N - 9 + 1 = N - 8\nMidway means C's position = (position of A + position of B) / 2\n20 = (16 + (N - 8)) / 2\n40 = 16 + N - 8\n40 = N + 8\nN = 32",
     "tags": {
-      "topic": "Seating Arrangement",
+      "topic": "Order & Ranking",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -127,7 +127,7 @@
   },
   {
     "id": "reas_557de5f845",
-    "q_num": 3,
+    "q_num": 7,
     "question": "Six persons - Dustin, Lucas, Will, Mike, Steve and Robin are sitting in a linear row facing the south direction. Mike sits third to the right of Lucas. Will sits second to the right of Steve. Mike sits immediate left of Dustin. Who among the following sits second to the left of Robin?",
     "options": {
       "a": "Dustin",
@@ -148,7 +148,7 @@
   },
   {
     "id": "reas_0473731a8b",
-    "q_num": 4,
+    "q_num": 8,
     "question": "Ree is the father-in-law of Tee. Kee is the brother of Lee. Zee is the sister of Nee. Lee is the daughter of Dee. Nee is the mother of Kee. Zee is the spouse of Tee. What is the relation between Ree and Dee?",
     "options": {
       "a": "Ree is the father-in-law of Dee.",
@@ -169,7 +169,7 @@
   },
   {
     "id": "reas_84803eb1cf",
-    "q_num": 5,
+    "q_num": 9,
     "question": "Select the numbers from among the given options that can replace the question marks (?) in the following series:\n\n3, 13, 40, 101, 230, ?",
     "options": {
       "a": "495",
@@ -180,7 +180,7 @@
     "answer": "a",
     "solution": "3 * 2 + 7 = 13\n13 * 2 + 14 = 40\n40 * 2 + 21 = 101\n101 * 2 + 28 = 230\nSo, ? = 230 * 2 + 35 = 495",
     "tags": {
-      "topic": "Analogy",
+      "topic": "Number Series",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -190,7 +190,7 @@
   },
   {
     "id": "reas_74e83d5f25",
-    "q_num": 6,
+    "q_num": 10,
     "question": "In a certain code language, 'BRAIN' is coded as '259261813' and 'LUCKY' is coded as '15624162'. How will 'WHITE' be coded in that language?",
     "options": {
       "a": "41918722",
@@ -211,7 +211,7 @@
   },
   {
     "id": "reas_b28ac884db",
-    "q_num": 7,
+    "q_num": 11,
     "question": "Select the option that is related to the fourth term in the same way as the first term is related to the second term and the fifth term is related to the sixth term.\n16 : 96 :: ? : 161 :: 18 : 120",
     "options": {
       "a": "22",
@@ -232,7 +232,7 @@
   },
   {
     "id": "reas_52d1b9da5e",
-    "q_num": 8,
+    "q_num": 12,
     "question": "0, 6, 24, 60, 120, 210, ___",
     "options": {
       "a": "336",
@@ -243,7 +243,7 @@
     "answer": "a",
     "solution": "The logic followed here is:\n1^3 - 1 = 0\n2^3 - 2 = 8 - 2 = 6\n3^3 - 3 = 27 - 3 = 24\n4^3 - 4 = 64 - 4 = 60\n5^3 - 5 = 125 - 5 = 120\n6^3 - 6 = 216 - 6 = 210\n7^3 - 7 = 343 - 7 = 336.\n\nHence, the correct answer is \"336\".",
     "tags": {
-      "topic": "Number System",
+      "topic": "Number Series",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -253,7 +253,7 @@
   },
   {
     "id": "reas_bf498cd3ce",
-    "q_num": 9,
+    "q_num": 13,
     "question": "In the following question, select the odd number pair from the given alternatives.\nOptions:\nA: 64 – 576\nB: 17 – 343\nC: 27 – 196\nD: 32 – 36",
     "options": {
       "a": "64 – 576",
@@ -264,7 +264,7 @@
     "answer": "b",
     "solution": "1) (6 × 4) = 24, Square of 24 = 576\n2) (1 × 7) = 7, Square of 7 = 49 ≠ 343\n3) (2 × 7) = 14, Square of 14 = 196\n4) (3 × 2) = 6, Square of 6 = 36\nHence, 17 – 343 is odd number pair.",
     "tags": {
-      "topic": "Analogy",
+      "topic": "Classification / Odd One Out",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -274,7 +274,7 @@
   },
   {
     "id": "reas_744e7419bc",
-    "q_num": 1,
+    "q_num": 14,
     "question": "Select the option that is related to the third term in the same way as the second term is related to the first term:\nDART ∶ XGLZ ∶∶ SPIN ∶ ?",
     "options": {
       "a": "MVOT",
@@ -295,7 +295,7 @@
   },
   {
     "id": "reas_0a90c39969",
-    "q_num": 2,
+    "q_num": 15,
     "question": "How many such pairs of letters are there in the word REGULATION (in the forward direction) which have as many letters between them in the word as there are in the English alphabetical order?",
     "options": {
       "a": "3",
@@ -306,7 +306,7 @@
     "answer": "b",
     "solution": "There are two such pairs in alphabetical order (GN) and (RU). ON and LI are not counted as these pairs are in reverse direction, which is prohibited in the question.",
     "tags": {
-      "topic": "Coding-Decoding",
+      "topic": "Alphabet Test",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -316,7 +316,7 @@
   },
   {
     "id": "reas_6c7ecdb831",
-    "q_num": 3,
+    "q_num": 16,
     "question": "Which two numbers should be interchanged to make the given equation correct?\n\n592 ÷ 6 × 8 - 164 × 4 + (96 ÷ 48) = 202",
     "options": {
       "a": "6 and 4",
@@ -327,7 +327,7 @@
     "answer": "a",
     "solution": "Option A:\n592 ÷ 6 × 8 - 164 × 4 + (96 ÷ 48) = 202\nAfter interchanging the numbers:\n592 ÷ 4 × 8 - 164 × 6 + (96 ÷ 48) = 202\nUSING BODMAS:\n148 × 8 - 984 + 2 = 202\n1186 - 984 = 202\n202 is equal to 202\nSo, Option (A) is the correct answer.",
     "tags": {
-      "topic": "Coding-Decoding",
+      "topic": "Mathematical Operations",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -337,7 +337,7 @@
   },
   {
     "id": "reas_fc19c6dc4e",
-    "q_num": 4,
+    "q_num": 17,
     "question": "During heavy rainfall a compass started giving wrong directions, South became North West and West became North East. If a person wanted to travel towards North direction, which of the following directions should he see in the compass?",
     "options": {
       "a": "East",
@@ -358,7 +358,7 @@
   },
   {
     "id": "reas_1fe1e66a01",
-    "q_num": 5,
+    "q_num": 18,
     "question": "In the question below, a statement is given followed by a few conclusions which may or may not follow from the statement. Choose the one that reflects the conclusion that follows.\n\nStatement: The president of the boxing institution said, \"Every month, the players who perform well should be given rewards.\"\n\nConclusions:\n\nI. There is no system of rewarding the best players in the institution.\n\nII. The number of players in the institution is very low.",
     "options": {
       "a": "Only I follows",
@@ -369,7 +369,7 @@
     "answer": "c",
     "solution": "Conclusion I: Does not follow. Proposing a monthly reward scheme (\"should be given rewards\") does not logically prove that no reward system currently exists - a system might already exist on an annual or quarterly basis, or the president may simply be advocating for an upgrade.\nConclusion II: Does not follow. The statement provides zero information regarding the total number or strength of players in the institution.\n\nSince neither conclusion can be logically derived without making assumptions, so, Neither I nor II follows is the correct answer.",
     "tags": {
-      "topic": "Syllogism",
+      "topic": "Statement & Conclusion",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -379,7 +379,7 @@
   },
   {
     "id": "reas_51ab3e7f2f",
-    "q_num": 6,
+    "q_num": 19,
     "question": "In the following question, four words have been given of which three are alike in some way and one is different. Find the odd one out.",
     "options": {
       "a": "Volleyball",
@@ -390,7 +390,7 @@
     "answer": "b",
     "solution": "Volleyball, Soccer, and Basketball are team sports.\n\nGolf is primarily an individual sport, making it the odd one.",
     "tags": {
-      "topic": "Static GK",
+      "topic": "Classification / Odd One Out",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -400,7 +400,7 @@
   },
   {
     "id": "reas_7c59e533b8",
-    "q_num": 7,
+    "q_num": 20,
     "question": "Find the number that breaks the pattern.\n\n19, 50, 87, 128, 175",
     "options": {
       "a": "128",
@@ -411,7 +411,7 @@
     "answer": "b",
     "solution": "Logic for the given series -\n\n19 + 31 = 50\n50 + 37 = 87\n87 + 41 = 128\n128 + 43 = 171 (not 175)\nHence, wrong term = 175",
     "tags": {
-      "topic": "Number System",
+      "topic": "Number Series",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -421,7 +421,7 @@
   },
   {
     "id": "reas_50a60b15b6",
-    "q_num": 8,
+    "q_num": 21,
     "question": "The position of how many letters will remain unchanged in each of the letters in the word TAMPLING is arranged in the reverse alphabetical order?",
     "options": {
       "a": "Two",
@@ -432,7 +432,7 @@
     "answer": "c",
     "solution": "If each of the letters in the word TAMPLING is arranged in the reverse alphabetical order, then we get:\n\nT A M P L I N G\nT P N M L I G A\n\nThus, the position of three letters remain unchanged.",
     "tags": {
-      "topic": "Analogy",
+      "topic": "Alphabet Test",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -442,7 +442,7 @@
   },
   {
     "id": "reas_01b9088fa2",
-    "q_num": 9,
+    "q_num": 22,
     "question": "By interchanging the given numbers (not digits), which of the following equations will be correct?\n\n5 and 11\n\nI. 147 + [(51 - 16) ÷ 11] x 5 = 224\n\nII. [(263 + 47) ÷ 5] - 15 x 11 = 27",
     "options": {
       "a": "Only I",
@@ -453,7 +453,7 @@
     "answer": "a",
     "solution": "If the numbers 5 and 11 (not digits) are interchanged, then the equation will be:\n\nEquation I: 147 + [(51 - 16) ÷ 5] x 11 = 224\nSo, 147 + [35 ÷ 5] x 11 = 224\nSo, 147 + 7 x 11 = 224\nSo, 147 + 77 = 224\nSo, 224 = 224\n\nSo, equation I is correct.\n\nEquation II: [(263 + 47) ÷ 11] - 15 x 5 = 27\nSo, [310 ÷ 11] - 15 x 5 = 27\n\nSo, 28.18 - 75 = 27\n\nSo, -46.82 ≠ 27\n\nSo, equation II is incorrect.",
     "tags": {
-      "topic": "Coding-Decoding",
+      "topic": "Mathematical Operations",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -463,7 +463,7 @@
   },
   {
     "id": "reas_dd95fce913",
-    "q_num": 10,
+    "q_num": 23,
     "question": "The difference between the greatest decimal number and smallest decimal number, 0.8678, 0.09875, 0.05989, 0.7856 is:",
     "options": {
       "a": "0.81791",
@@ -474,7 +474,7 @@
     "answer": "c",
     "solution": "The greatest decimal number = 0.8678\nThe smallest decimal number = 0.05989\nSo, the required difference = 0.8678 - 0.05989 = 0.80791",
     "tags": {
-      "topic": "Number System",
+      "topic": "Arithmetical Reasoning",
       "difficulty": "medium"
     },
     "status": "correct",
@@ -484,7 +484,7 @@
   },
   {
     "id": "reas_5d9da835b7",
-    "q_num": 11,
+    "q_num": 24,
     "question": "Usha started walking straight from her house. She turned 6 times left during her journey. Finally, she is facing towards north. In which direction did she start walking from her house? (She took no right turn)",
     "options": {
       "a": "East",
@@ -505,7 +505,7 @@
   },
   {
     "id": "reas_a7e722e335",
-    "q_num": 12,
+    "q_num": 25,
     "question": "Find the missing number: 10 : 728 :: ? : 1727",
     "options": {
       "a": "15",

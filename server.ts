@@ -28,11 +28,26 @@ function normalizeSubject(raw: string): { name: string; file: string } {
 
 // Fast Rule-Based SSC Topic Matcher (instant local fallback)
 function getLocalTopicTag(subject: string, text: string, currentTopic?: string): string {
+  const isReasoning = /reasoning|intel/i.test(subject);
+  const s = text.toLowerCase();
+
+  if (isReasoning) {
+    // Invalidate obvious cross-subject or cross-topic misclassifications
+    if (
+      currentTopic === "Number System" ||
+      currentTopic === "Static GK" ||
+      (currentTopic === "Analogy" && /\b(given series|breaks the pattern|odd number pair|reverse alphabetical|arranged in the reverse)\b/i.test(s)) ||
+      (currentTopic === "Coding-Decoding" && /\b(interchanged|equation|pairs of letters|vowel is changed)\b/i.test(s)) ||
+      (currentTopic === "Seating Arrangement" && /\b(flagpoles|rank|corridor|how many flagpoles|from the left end and)\b/i.test(s)) ||
+      (currentTopic === "Syllogism" && !/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(s))
+    ) {
+      currentTopic = undefined;
+    }
+  }
+
   if (currentTopic && currentTopic !== "General" && currentTopic !== "Unknown") {
     return currentTopic;
   }
-
-  const s = text.toLowerCase();
 
   if (/mathematics|quant/i.test(subject)) {
     // 1. Data Interpretation
@@ -79,11 +94,11 @@ function getLocalTopicTag(subject: string, text: string, currentTopic?: string):
     return "Number System";
   }
 
-  if (/reasoning/i.test(subject)) {
+  if (isReasoning) {
     if (/\b(dice|cube|opposite to the face|positions of the same dice)\b/i.test(s)) return "Cube & Dice";
-    if (/\b(interchange the signs|interchange the two signs|correct equation|mathematical operator|operator.*means|which two numbers should be interchanged|which of the two digits should be interchanged)\b/i.test(s)) return "Mathematical Operations";
-    if (/\b(in a row of|row of children|how many children are there in that row|ranks? \d+|from the left end|from the right end|from the top|from the bottom|ranking|order and ranking)\b/i.test(s)) return "Ranking & Order";
-    if (/\b(walks? \d+|turns? left|turns? right|walked \d+|towards north|towards south|towards east|towards west|shortest distance between .* starting)\b/i.test(s)) return "Direction & Distance";
+    if (/\b(interchange the signs|interchange the two signs|correct equation|mathematical operator|operator.*means|which two numbers should be interchanged|which of the two digits should be interchanged|equations will be correct)\b/i.test(s)) return "Mathematical Operations";
+    if (/\b(in a row of|row of children|how many children are there in that row|ranks? \d+|from the left end|from the right end|from the top|from the bottom|ranking|order and ranking|flagpoles|midway between)\b/i.test(s)) return "Order & Ranking";
+    if (/\b(walks? \d+|turns? left|turns? right|walked \d+|towards north|towards south|towards east|towards west|shortest distance between .* starting|compass started giving wrong directions)\b/i.test(s)) return "Direction & Distance";
     if (/\b(mirror image)\b/i.test(s)) return "Mirror Image";
     if (/\b(water image)\b/i.test(s)) return "Water Image";
     if (/\b(paper is folded|paper folding|unfolded|cutting)\b/i.test(s)) return "Paper Folding & Cutting";
@@ -91,14 +106,17 @@ function getLocalTopicTag(subject: string, text: string, currentTopic?: string):
     if (/\b(incomplete figure|figure completion|complete the given figure|pattern figure)\b/i.test(s)) return "Figure Completion";
     if (/\b(number of triangles|number of squares|counting of figures|figure counting|how many triangles)\b/i.test(s)) return "Figure Counting";
     if (/\b(clock|calendar|day of the week|leap year)\b/i.test(s)) return "Clock & Calendar";
-    if (/\b(circular table|facing the center|linear row|seating arrangement)\b/i.test(s)) return "Seating Arrangement";
-    if (/\b(mother|father|brother|sister|son|daughter|uncle|aunt|nephew|niece|husband|wife|photograph|blood relation)\b/i.test(s)) return "Blood Relations";
-    if (/\b(statements?:|conclusions?:|all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is|syllogism)\b/i.test(s)) return "Syllogism";
+    if (/\b(circular table|facing the center|linear row|seating arrangement|sitting in a row|sitting second to the left)\b/i.test(s)) return "Seating Arrangement";
+    if (/\b(mother|father|brother|sister|son|daughter|uncle|aunt|nephew|niece|husband|wife|photograph|blood relation|father-in-law)\b/i.test(s)) return "Blood Relations";
+    if (/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(s)) return "Syllogism";
     if (/\b(statement and assumption|assumption)\b/i.test(s)) return "Statement & Assumption";
-    if (/\b(statement and conclusion)\b/i.test(s)) return "Statement & Conclusion";
+    if (/\b(statement:?|conclusions?:?|statement is given followed by a few conclusions)\b/i.test(s)) return "Statement & Conclusion";
     if (/\b(venn diagram|represents the relationship)\b/i.test(s)) return "Venn Diagram";
-    if (/\b(odd one out|three of the following|four words have been given of which three are alike|does not belong|classification)\b/i.test(s)) return "Classification / Odd One Out";
-    if (/\b(replace the question mark|number series|letter series|breaks the pattern|pattern|number sequence|number symbol series|letter, number, symbol series|\d+,\s*\d+,\s*\d+|cluster of five integers|pairs of numbers are there in|pairs of letters are there in|sequentially placed in the blanks of the given series)\b/i.test(s)) return "Series";
+    if (/\b(odd one out|three of the following|four words have been given of which three are alike|does not belong|classification|odd number pair)\b/i.test(s)) return "Classification / Odd One Out";
+    if (/\b(pairs of letters|letter immediately succeeding|reverse alphabetical order|alphabetical order|word formation)\b/i.test(s)) return "Alphabet Test";
+    if (/\b(decimal number and smallest decimal|arithmetical reasoning)\b/i.test(s)) return "Arithmetical Reasoning";
+    if (/\b(replace the question mark|number series|breaks the pattern|pattern|number sequence|\d+,\s*\d+,\s*\d+|cluster of five integers)\b/i.test(s)) return "Number Series";
+    if (/\b(letter series|letter, number, symbol series|sequentially placed in the blanks of the given series)\b/i.test(s)) return "Letter & Symbol Series";
     if (/\b(coded as|code language|coding-decoding)\b/i.test(s)) return "Coding-Decoding";
     if (/\b(related to the third|in the same way as|analogy|related in the same)\b/i.test(s)) return "Analogy";
     if (/\b(missing number|matrix)\b/i.test(s)) return "Missing Number";
@@ -201,7 +219,18 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
   // Identify questions that need AI classification, N/A answer resolution, or structural cleanup
   questions.forEach((q, idx) => {
     const existingTopic = q.topic;
-    const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown";
+    const rawSub = (q.subject || q.section || "").toLowerCase();
+    const isReasoning = rawSub.includes("reason") || rawSub.includes("intel");
+    const isMismatchedReasoning = isReasoning && (
+      existingTopic === "Number System" ||
+      existingTopic === "Static GK" ||
+      (existingTopic === "Analogy" && /\b(replace the question mark|in the given series|breaks the pattern|odd number pair|reverse alphabetical|arranged in the reverse)\b/i.test(q.questionText || q.question || "")) ||
+      (existingTopic === "Coding-Decoding" && /\b(interchanged|equation|pairs of letters|vowel is changed)\b/i.test(q.questionText || q.question || "")) ||
+      (existingTopic === "Seating Arrangement" && /\b(flagpoles|rank|corridor|how many flagpoles|from the left end and)\b/i.test(q.questionText || q.question || "")) ||
+      (existingTopic === "Syllogism" && !/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(q.questionText || q.question || ""))
+    );
+
+    const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown" && !isMismatchedReasoning;
     const hasValidAnswer = q.correctOption && q.correctOption !== "N/A" && /^[A-D]$/i.test(q.correctOption.trim());
     const hasCleanText = !(q.questionText || q.question || "").includes("Reattempt mode is Off");
 
@@ -248,70 +277,120 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
       const promptText = `You are an expert SSC CGL Exam Content Refiner. Process each question carefully:
 
 Tasks for each question:
-1. "topic": Classify into its official SSC CGL main syllabus topic:
-   - For Mathematics:
-     * Number System
-     * Simplification
+1. "topic": Classify strictly into its official SSC CGL main syllabus topic:
+   - For Reasoning (General Intelligence):
+     * Analogy (Semantic Analogy, Number Analogy, Letter Analogy)
+     * Classification / Odd One Out (Word Classification, Number Classification, Letter Classification)
+     * Number Series (Missing Number Series, Wrong Number in Series)
+     * Letter & Symbol Series (Alphabet Series, Continuous Pattern Series, Alphanumeric Series)
+     * Coding-Decoding (Letter Coding, Number Coding, Reverse Place Value Coding, Substitution Coding)
+     * Alphabet Test (Letter Pairs Problem, Word Rearrangement, Invariance, Vowel-Consonant Operations)
+     * Word Formation & Dictionary Order
+     * Order & Ranking (Positions from left/right/top/bottom, Midpoint, Total in row/column)
+     * Direction & Distance (Turns, Angles/Rotation, Shadow, Shortest Distance)
+     * Blood Relations (Family Tree, Coded Blood Relations, Indicating Form)
+     * Venn Diagram (Logical Venn Diagrams, Geometric Venn Data Analysis)
+     * Syllogism (Deductive Venn Logic: Statements with All, Some, No, Some Not)
+     * Mathematical Operations (Interchange of Signs & Numbers, Balancing Equations via BODMAS)
+     * Arithmetical Reasoning (Calculation-based reasoning, Age problems, Decimal comparisons)
+     * Statement & Conclusion (Critical verbal reasoning deduction from statements)
+     * Statement & Assumption
+     * Statement & Arguments
+     * Course of Action
+     * Cause & Effect
+     * Seating Arrangement (Linear Row North/South Facing, Circular In/Out Facing)
+     * Missing Number / Matrix (Number puzzles, Grid/box matrix)
+     * Clock & Calendar (Clock hands angles, Calendar day of week, Leap years)
+     * Cube & Dice (Opposite faces, Unfolded/open dice)
+     * Figure Counting (Counting triangles, squares, rectangles, straight lines)
+     * Mirror Image & Water Image
+     * Paper Folding & Cutting
+     * Embedded Figure
+     * Figure Completion
+     * Non-Verbal Series & Analogy
+
+     CRITICAL TOPIC RULES FOR REASONING:
+     - NEVER assign Mathematics topics (e.g., "Number System") or General Awareness topics (e.g., "Static GK") to Reasoning questions.
+     - Sequences ($a_1, a_2, a_3, \dots, ?$) and finding wrong number are "Number Series", NOT "Analogy".
+     - Proportional comparisons ($A : B :: C : D$) are "Analogy".
+     - Selecting the single odd/different item out of 4 options is "Classification / Odd One Out".
+     - Counting letter pairs (like in REGULATION), vowel/consonant operations (like in OPTICAL), or reverse alphabetical sorting (like in TAMPLING) belong to "Alphabet Test", NOT "Coding-Decoding" or "Analogy".
+     - Exchanging signs or numbers to satisfy arithmetic equations using BODMAS is "Mathematical Operations", NOT "Coding-Decoding".
+     - Positions from ends, midway positions, or total flagpoles/students in a line is "Order & Ranking", NOT "Seating Arrangement".
+     - Everyday statements followed by logical inferences are "Statement & Conclusion", NOT "Syllogism" (reserve "Syllogism" strictly for categorical All/Some/No Venn diagrams).
+
+   - For Mathematics (Quantitative Aptitude):
+     * Number System (Divisibility rules, Unit digit, Remainder theorem, Factors, Primes)
+     * Simplification (VBODMAS, Surds & Indices, Algebraic fractions)
      * LCM & HCF
      * Percentage
-     * Ratio & Proportion
-     * Average
-     * Profit, Loss & Discount
-     * Simple Interest
-     * Compound Interest
-     * Time & Work
-     * Pipes & Cisterns
-     * Time, Speed & Distance
-     * Boats & Streams
-     * Trains
-     * Mixture & Alligation
+     * Ratio & Proportion (Direct/Inverse, Proportional parts, Coin problems)
      * Partnership
-     * Algebra
-     * Geometry
-     * Mensuration 2D
-     * Mensuration 3D
-     * Trigonometry
-     * Height & Distance
-     * Data Interpretation
-     * Statistics
-     * Probability
-     * Coordinate Geometry
-   - For English:
-     * Error Detection & Grammar: Subject-Verb Agreement, Tenses, Articles, Prepositions, Conjunctions, Pronouns, Adjectives, Adverbs, Noun, Verb, Active & Passive Voice, Direct & Indirect Speech, Modals, Conditional Sentences, Spotting Errors
-     * Vocabulary & Comprehension: Spelling Errors, Sentence Improvement, One Word Substitution, Idioms & Phrases, Synonyms & Antonyms, Fill in the Blanks, Cloze Test, Para Jumbles
-   - For Reasoning:
-     * Analogy
-     * Classification / Odd One Out
-     * Series
-     * Coding-Decoding
-     * Blood Relations
-     * Direction & Distance
-     * Ranking & Order
-     * Venn Diagram
-     * Syllogism
-     * Statement & Conclusion
-     * Statement & Assumption
-     * Mathematical Operations
-     * Missing Number
-     * Puzzle
-     * Seating Arrangement
-     * Mirror Image
-     * Water Image
-     * Paper Folding & Cutting
-     * Figure Completion
-     * Embedded Figure
-     * Figure Counting
-     * Cube & Dice
-     * Non-Verbal Series
-     * Clock & Calendar
+     * Mixture & Alligation
+     * Average
+     * Profit, Loss & Discount (Cost/Selling/Marked Price, Successive discounts, Dishonest dealer)
+     * Simple Interest
+     * Compound Interest (Annual, Half-yearly, 8-monthly, Difference CI-SI, Installments)
+     * Time & Work (Efficiency, Alternate days, Men-Women-Children formulas, Wages)
+     * Pipes & Cisterns
+     * Time, Speed & Distance (Relative speed, Average speed, Races, Police & Thief)
+     * Trains (Crossing poles/platforms, Opposite/same direction)
+     * Boats & Streams (Upstream, Downstream, Still water speed)
+     * Algebra (Linear/Quadratic equations, Algebraic identities, Polynomials)
+     * Geometry (Lines & Angles, Triangles, Circles, Tangents, Chords, Quadrilaterals)
+     * Coordinate Geometry (Distance formula, Slopes, Equation of line)
+     * Mensuration 2D (Area & perimeter of triangles, quadrilaterals, circles)
+     * Mensuration 3D (Surface area & volume of cube, cuboid, cylinder, cone, sphere, frustum)
+     * Trigonometry (Ratios, Identities, Complementary angles, Maxima & Minima)
+     * Height & Distance (Elevation, Depression, Multi-point observations)
+     * Statistics (Mean, Median, Mode, Standard Deviation, Variance)
+     * Probability (Coins, Dice, Cards, Balls)
+     * Data Interpretation (Bar graph, Pie chart, Line graph, Table chart, Histogram)
+
+   - For English Comprehension:
+     * Spotting Errors (Subject-Verb Agreement, Tenses, Articles, Prepositions, Conjunctions, Pronouns, Nouns, Adjectives, Adverbs, Modals, Conditionals)
+     * Sentence Improvement (Phrase replacement & grammatical improvement)
+     * Active & Passive Voice
+     * Direct & Indirect Speech (Narration)
+     * Fill in the Blanks (Single & Double fillers)
+     * Cloze Test
+     * Synonyms & Antonyms
+     * Idioms & Phrases
+     * One Word Substitution
+     * Spelling Errors (Correctly spelt / Incorrectly spelt words)
+     * Para Jumbles (PQRS Sentence rearrangement)
+     * Reading Comprehension
+
    - For General Awareness:
-     * History: Ancient History, Medieval History, Modern History
-     * General Science: Physics, Chemistry, Biology
-     * Static GK: Folk & Classical Dances, Music & Musical Instruments, Festivals & Fairs, Books & Authors, Awards & Honours, Sports & Trophies, Temples, Monuments & Heritage Sites, International Organisations, Census & Demographics, Important Days & Themes, First in India & World, Static GK
-     * Indian Polity: Indian Polity & Constitution, Fundamental Rights & Duties, Union & State Executive, Parliament & State Legislature, Judiciary, Panchayati Raj & Local Government
-     * Geography: Indian Drainage & Physiography, Indian Climate & Soil, National Parks & Environment, Physical Geography, World Geography
-     * Economics: Macroeconomics & National Income, Banking & Monetary Policy, Fiscal Policy & Budget, Microeconomics & Markets, Government Schemes & Policies
-     * Current Affairs: National & International Current Affairs, Defence & Summits
+     * Ancient History (Indus Valley, Vedic, Buddhism, Jainism, Mauryas, Guptas, South Indian Dynasties)
+     * Medieval History (Delhi Sultanate, Mughals, Marathas, Vijayanagar, Bhakti/Sufi)
+     * Modern History (East India Company, Revolt of 1857, INC, National Freedom Movement, Viceroys)
+     * Indian Polity & Constitution (Preamble, Fundamental Rights & Duties, DPSP, President, Parliament, Judiciary, Panchayati Raj, Amendments)
+     * Physical Geography (Earth structure, Atmosphere, Ocean currents, Continents)
+     * Indian Drainage & Physiography (Himalayas, Rivers, Tributaries, Waterfalls, Lakes)
+     * Indian Climate & Soil (Monsoon, Soil types, Agriculture & Crops)
+     * National Parks & Environment (Sanctuaries, Biosphere reserves, Ramsar sites, Biodiversity)
+     * World Geography
+     * Macroeconomics & National Income (GDP, GNP, Inflation, Five Year Plans)
+     * Banking & Monetary Policy (RBI, Repo rate, Monetary tools)
+     * Fiscal Policy & Budget (Deficit, Taxes, GST, Union Budget)
+     * Microeconomics & Markets (Demand, Supply, Market types)
+     * Government Schemes & Policies
+     * Physics (Mechanics, Optics, Electricity, Sound, Thermodynamics, Units)
+     * Chemistry (Periodic table, Acids & Bases, Metals/Non-metals, Everyday chemistry)
+     * Biology (Cell, Human physiology, Plant physiology, Diseases & Vitamins, Genetics)
+     * Folk & Classical Dances
+     * Music & Musical Instruments (Gharanas, Eminent exponents)
+     * Festivals & Fairs
+     * Temples, Monuments & Heritage Sites (UNESCO sites)
+     * Books & Authors
+     * Awards & Honours (Bharat Ratna, Padma awards, Gallantry, Nobel, Literary)
+     * Sports & Trophies (Tournaments, Players, Terminology)
+     * Census & Demographics (2011 Census)
+     * Important Days & Themes
+     * International Organisations (UN, WHO, IMF, World Bank, WTO, BRICS)
+     * National & International Current Affairs
+
 2. "question": Clean and format the question prompt:
    - Restore mathematical powers/exponents and superscripts (e.g., "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210", "x²" or "x^2").
    - Strip any leaked option choices that were pasted at the end of the question text.
