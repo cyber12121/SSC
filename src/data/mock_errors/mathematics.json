@@ -2095,6 +2095,176 @@
           "topic": "Time, Speed & Distance",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_48c6907e6b",
+        "q_num": 124,
+        "question": "Find the least number that should be added to 3135 to make it a perfect square.",
+        "options": {
+          "a": "1",
+          "b": "4",
+          "c": "9",
+          "d": "6"
+        },
+        "answer": "a",
+        "solution": "Square of 55 = 3025\nSquare of 56 = 3136\nLeast number = 3136 - 3135 = 1",
+        "tags": {
+          "topic": "Number System",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_65ff234e96",
+        "q_num": 125,
+        "question": "A town has a present population of 2,00,000. Its population increases by a net rate of 5% every year. Find the population of the town at the end of 3 years.",
+        "options": {
+          "a": "2,31,525",
+          "b": "2,30,000",
+          "c": "2,32,000",
+          "d": "2,35,000"
+        },
+        "answer": "a",
+        "solution": "Given:\nPresent population = 2,00,000\nAnnual net increase = 5%\n\nPopulation after 3 years:\n= 2,00,000 * (1 + 5/100)^3\n= 2,00,000 * (1.05)^3\n= 2,00,000 * 1.157625\n= 2,31,525\nTherefore, the population of the town at the end of 3 years is 2,31,525.",
+        "tags": {
+          "topic": "Percentage",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_45b7348001",
+        "q_num": 126,
+        "question": "In a ΔPQR, side QR is extended to point 'S', such that ∠PRS = 126°. If ∠QPR = (4/3) * ∠PQR, then find the value of ∠QPR.",
+        "options": {
+          "a": "68°",
+          "b": "72°",
+          "c": "76°",
+          "d": "80°"
+        },
+        "answer": "b",
+        "solution": "Let, ∠PQR = x\nGiven, ∠QPR = (4/3)x\nAlso, ∠PRS = 126°\nSo, ∠PRS = ∠QPR + ∠PQR\n126 = (4/3)x + x\n126 = (4/3)x + (3/3)x\n126 = (7/3)x\nx = 126 * 3/7\nx = 54°\nNow, ∠QPR = (4/3) * 54\n∠QPR = 72°\nTherefore, the value of ∠QPR is 72°.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a61580407f",
+        "q_num": 127,
+        "question": "A chord AB of a circle is 18 cm long. The tangents at A and B are parallel. What is the diameter of the circle?",
+        "options": {
+          "a": "12 cm",
+          "b": "15 cm",
+          "c": "18 cm",
+          "d": "20 cm"
+        },
+        "answer": "c",
+        "solution": "The radius drawn to the point of contact is perpendicular to the tangent. Since the tangents at A and B are parallel, the radii OA and OB, being perpendicular to parallel tangents, are also parallel. As both OA and OB pass through the centre O, they must lie on the same straight line. Therefore, A, O and B are collinear, so AB is a diameter of the circle. Diameter = AB = 18 cm. Therefore, the diameter of the circle is 18 cm.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c8f51cd770",
+        "q_num": 128,
+        "question": "If B / A = 0.8, find (2A - B) / (2A + B) + 11 / 14",
+        "options": {
+          "a": "1(1/14)",
+          "b": "1(3/14)",
+          "c": "2(3/14)",
+          "d": "2(1/14)"
+        },
+        "answer": "b",
+        "solution": "Given B/A = 0.8 = 4/5. Let B = 4x and A = 5x. Then (2A - B) / (2A + B) = (2(5x) - 4x) / (2(5x) + 4x) = (10x - 4x) / (10x + 4x) = 6x / 14x = 6/14. Adding 11/14: 6/14 + 11/14 = 17/14 = 1(3/14).",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_048e8b1e62",
+        "q_num": 129,
+        "question": "If 3m - 3/m = 10, find the value of m^2 + 1/m^2",
+        "options": {
+          "a": "109/4",
+          "b": "118/9",
+          "c": "118/4",
+          "d": "109/9"
+        },
+        "answer": "b",
+        "solution": "3m - (3/m) = 10 implies m - (1/m) = 10/3. Squaring both sides: m^2 + (1/m^2) - 2 = 100/9, so m^2 + (1/m^2) = 100/9 + 2 = 118/9.",
+        "tags": {
+          "topic": "Algebra",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_11a667f7ef",
+        "q_num": 130,
+        "question": "An artist forms triangle ABC. She connects the midpoints of its sides to form triangle DEF inside it. What is the area of triangle DEF in relation to triangle ABC?",
+        "options": {
+          "a": "1 : 2",
+          "b": "1 : 3",
+          "c": "1 : 4",
+          "d": "1 : 6"
+        },
+        "answer": "c",
+        "solution": "When the midpoints of the sides of a triangle are joined, the new triangle formed is the medial triangle whose side length is half of the corresponding side of the original triangle. The ratio of their areas is equal to the square of the ratio of their corresponding sides, which is (1/2)^2 = 1/4. Therefore, the ratio of the area of triangle DEF to that of triangle ABC is 1 : 4.",
+        "tags": {
+          "topic": "Geometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_beccefdc1f",
+        "q_num": 131,
+        "question": "The average weight of 8 students is 52 kg. If two students weighing 47 kg and 61 kg leave the group, what will be the average weight of the remaining students?",
+        "options": {
+          "a": "50.5 kg",
+          "b": "51.33 kg",
+          "c": "51.5 kg",
+          "d": "52 kg"
+        },
+        "answer": "b",
+        "solution": "Total weight of 8 students:\n8 × 52 = 416 kg\n\nWeight of students leaving:\n47 + 61 = 108 kg\nRemaining weight:\n416 - 108 = 308 kg\nNumber of remaining students = 6\n\nAverage:\n308 / 6 = 51.333...",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a0da3ea2a7",
+        "q_num": 132,
+        "question": "Evaluate:\n\n√(20 + √(20 + √(20 + ...)))",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "6",
+          "d": "8"
+        },
+        "answer": "b",
+        "solution": "Let √(20 + √(20 + √(20 + ...))) = x\nThen, x = √(20 + x)\nSquaring both sides,\nx² = 20 + x\nx² - x - 20 = 0\n(x - 5)(x + 4) = 0\nSince x is positive, x = 5.\n\nExpress Method:\nFactors of 20 = 5 and 4.\nSince there is a + sign in the question, the answer will be the larger factor, that is, 5.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d4426fa124",
+        "q_num": 133,
+        "question": "A principal earns simple interest equal to 42% of itself in 6 years. At the same annual rate, what is the difference between compound interest and simple interest on ₹40,000 for 2 years?",
+        "options": {
+          "a": "₹176",
+          "b": "₹184",
+          "c": "₹196",
+          "d": "₹204"
+        },
+        "answer": "c",
+        "solution": "In 6 years, SI = 42% of principal.\nR = 42 / 6 = 7%\n\nFor 2 years,\nCI - SI = P(R / 100)²\n= 40000 × (7 / 100)²\n= 40000 × (49 / 10000)\n= ₹196",
+        "tags": {
+          "topic": "Compound Interest",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -3920,6 +4090,40 @@
         "solution": "Shortcut Trick\nThe radius (r) of a sphere inscribed in a right circular cone of base radius R, height H, and slant height L is given directly by the formula:\n\\Rightarrow r = (R \\times H) \\div (R + L)\n\\Rightarrow L = \\sqrt{R^2 + H^2} = \\sqrt{7^2 + 24^2} = \\sqrt{625} = 25 cm\n\\Rightarrow r = (7 \\times 24) \\div (7 + 25) = 168 \\div 32\n\\Rightarrow r = 5.25 cm\n\n\\therefore The correct answer is 5.25 cm.",
         "tags": {
           "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c169f6611b",
+        "q_num": 108,
+        "question": "A distributor purchases electric heaters at a price 60% above the factory's basic cost C. He gives a 25% trade discount to a shopkeeper. The shopkeeper then adds a 30% markup to his purchase price and offers customers a 10% discount on the marked price. If a customer pays ₹21,060 for one heater, what was its basic cost at the factory?",
+        "options": {
+          "a": "₹12,000",
+          "b": "₹14,000",
+          "c": "₹15,000",
+          "d": "₹16,000"
+        },
+        "answer": "c",
+        "solution": "Factory's basic cost = C\n\nDistributor's price:\n= 160% of C\n= 1.6C\n\nAfter 25% trade discount:\n= 1.6C * 75/100\n= 1.2C\n\nAfter 30% markup by the shopkeeper:\n= 1.2C * 130/100\n= 1.56C\n\nAfter 10% customer discount:\nFinal price = 1.56C * 90/100\n= 1.404C\n\nGiven,\n1.404C = 21,060\nC = 21,060 ÷ 1.404\n= ₹15,000\nTherefore, the factory's basic cost was ₹15,000.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6b58eb0eda",
+        "q_num": 109,
+        "question": "A circle is inscribed in a triangle XYZ. It touches sides XY, YZ, and ZX at points A, C, and B respectively. If XB = 4.2 cm, YZ = 8 cm, and YC = 3.2 cm, then the perimeter of the triangle XYZ is:",
+        "options": {
+          "a": "25.8 cm",
+          "b": "32.5 cm",
+          "c": "24.4 cm",
+          "d": "28.2 cm"
+        },
+        "answer": "c",
+        "solution": "We know that tangents drawn from the same point are equal. So, XB = XA = 4.2 cm. YZ = 8 cm, YC = 3.2 cm. So, CZ = YZ - YC = 8 - 3.2 = 4.8 cm and so, BZ = 4.8 cm. YC = YA = 3.2 cm. Perimeter of Triangle XYZ = XY + YZ + ZAX = (4.2 + 3.2) + 8 + (4.8 + 4.2) = 24.4 cm.",
+        "tags": {
+          "topic": "Geometry",
           "difficulty": "medium"
         }
       }

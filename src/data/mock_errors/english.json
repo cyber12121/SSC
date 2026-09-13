@@ -1109,6 +1109,142 @@
           "topic": "Para Jumbles",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_d52785762f",
+        "q_num": 66,
+        "question": "Select the most appropriate synonym of the given word.\n\nFanatical",
+        "options": {
+          "a": "Jaunty",
+          "b": "Tedious",
+          "c": "Moderate",
+          "d": "Zealous"
+        },
+        "answer": "d",
+        "solution": "'Fanatical' means 'Filled with excessive and single-minded zeal.'. Options a) and b) can be rejected as they are unrelated to the word. 'Moderate' means 'Average in amount, intensity, quality, or degree.'. Hence, option c) can also be rejected as it is the exact opposite. 'Jaunty' means 'Having or expressing a lively, cheerful, and self-confident manner.'. 'Tedious' means 'Too long, slow, or dull; tiresome or monotonous.'. Hence, option d) is the correct answer.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_7862f009e0",
+        "q_num": 67,
+        "question": "Select the appropriate idiom for the given blank.\n\nA major _________________ at the meeting will be the appointment of an auditor, after Grant Thornton's resignation.",
+        "options": {
+          "a": "Bone of contention",
+          "b": "Tooth and nail",
+          "c": "Read between the lines",
+          "d": "Hard gram to crack"
+        },
+        "answer": "a",
+        "solution": "The sentence talks about the appointment of a new auditor after the resignation of the previous auditor. The sentence will take the idiom 'bone of contention' (which means 'the subject of a dispute') which suggests that the appointment is a controversial situation and might arise a dispute. Other idioms 'tooth and nail' (which means 'with all one's power'), 'read between the lines' (which means 'understand the hidden meaning') do not fit in the given sentence contextually. The idiom 'a hard gram to crack' is incorrect. The actual one is 'bone of contention' (which means 'a difficult problem'). Hence, the answer is option a).",
+        "tags": {
+          "topic": "Idioms & Phrases",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_80ed1f13fe",
+        "q_num": 68,
+        "question": "Given below are five jumbled sentences. Select the option that gives their correct logical sequence.\n\nA. Blockchain technology is essentially a decentralized, distributed, and immutable digital ledger of transactions.\n\nB. This immutability and transparency make it highly secure for recording various types of valuable information.\n\nC. Beyond cryptocurrencies, blockchain finds applications in supply chain management, voting systems, and digital identity.\n\nD. Each \"block\" in the chain contains a number of transactions cryptographically linked to the previous one.\n\nE. Once a block is added to the chain, the data within it cannot be altered retroactively.",
+        "options": {
+          "a": "ABEDC",
+          "b": "BCEDA",
+          "c": "ADEBC",
+          "d": "EACBD"
+        },
+        "answer": "c",
+        "solution": "The correct sequence is ADEBC.\n\nSentence A introduces and defines \"Blockchain technology,\" providing its core characteristics, making it a suitable opening.\n\nSentence D elaborates on the structure of the blockchain introduced in A, explaining what \"Each 'block' in the chain\" contains and how it's linked.\n\nSentence E describes a key feature related to adding blocks to the chain (mentioned in D): the immutability of data once a block is added.\n\nSentence B explains the consequence of \"This immutability\" (described in E) and transparency, highlighting its security benefits.\n\nSentence C provides a concluding thought, expanding on the applications of blockchain \"Beyond cryptocurrencies,\" showing its versatility based on the features described earlier.\n\nThus, the coherent and logical order is ADEBC.\n\nHence, option (c) is the answer.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_eaf98a1e32",
+        "q_num": 69,
+        "question": "Directions : Read the passage and answer the following questions:\n\nIn the contemporary administrative framework of India, the roles of Divisional Commissioner and District Collector constitute significant pillars of regional governance, though they differ considerably in jurisdiction, authority, and functional responsibilities. While both positions are occupied by senior civil servants, their administrative scope and operational focus vary according to the level at which they function within the governmental hierarchy.\n\nThe District Collector, often referred to as the District Magistrate or Deputy Commissioner in certain states, serves as the chief executive authority at the district level. Since the district represents the fundamental unit of administration, the Collector is entrusted with responsibilities such as revenue administration, maintenance of law and order, implementation of developmental schemes, disaster management, and coordination of electoral processes. Owing to constant interaction with local institutions and the public, the office of the Collector remains closely associated with grassroots governance and immediate administrative concerns.\n\nIn contrast, the Divisional Commissioner operates at a broader regional level and supervises the administration of multiple districts grouped within a division. Rather than directly addressing routine district-level issues, the Commissioner primarily undertakes inspection, coordination, policy monitoring, and administrative review. The office ensures consistency in governance, evaluates the performance of district administrations, and facilitates communication between the state government and subordinate administrative units. This supervisory role enables the Commissioner to maintain administrative uniformity across an entire division.\n\nFurthermore, the distinction between the two offices may be understood through the nature of their decision-making responsibilities. The Collector functions as an executive authority directly involved in field administration and public service delivery, whereas the Divisional Commissioner acts as a supervisory and appellate authority overseeing the functioning of several Collectors simultaneously. Consequently, while the Collector focuses on operational administration within a single district, the Commissioner concentrates on broader regional coordination and institutional efficiency.\n\nIn essence, the relationship between the Divisional Commissioner and the District Collector reflects a structured administrative hierarchy designed to balance local governance with regional supervision. Together, these offices contribute to effective policy implementation, administrative accountability, and coordinated governance across the state system.\n\nThe word \"appellate\" in the passage most nearly means:",
+        "options": {
+          "a": "Related to reviewing decisions made by lower authorities",
+          "b": "Intended to increase public participation in governance",
+          "c": "Connected with collecting administrative revenue",
+          "d": "Concerned with implementing welfare schemes directly"
+        },
+        "answer": "a",
+        "solution": "Among the given options, related to reviewing decisions made by lower authorities is the best fit because the word \"appellate\" refers to the authority to examine, revise, or hear appeals against decisions taken by subordinate bodies or officials. In the passage, it highlights the supervisory role of the Divisional Commissioner over district administrations. Hence, (a) is the correct answer.\n\nThe other options are contextually incorrect because \"appellate\" does not refer to public participation, revenue collection, or direct welfare implementation.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_3c6ec9eea3",
+        "q_num": 70,
+        "question": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech.\n\nDuring the inquiry, the treasurer said, \"I did not authorise the transfer, and I never instructed anyone to conceal it.\"",
+        "options": {
+          "a": "The treasurer refused to authorise the transfer or instruct anyone to conceal it.",
+          "b": "The treasurer denied to have authorised the transfer or to have instructed anyone to conceal it.",
+          "c": "The treasurer denied having concealed the transfer after instructing someone to authorise it.",
+          "d": "The treasurer denied having authorised the transfer or having instructed anyone to conceal it."
+        },
+        "answer": "d",
+        "solution": "Option (d) correctly presents the treasurer's rejection of both allegations through DENIED HAVING AUTHORISED and HAVING INSTRUCTED. The structure accurately refers to actions alleged to have occurred before the inquiry.\n\nRule-based deduction: \"Denied\" is normally followed by a gerund or perfect gerund, not by a to-infinitive.\n• Option (a) changes denial of a past act into refusal to perform an act.\n• Option (b) incorrectly uses \"denied to have\".\n• Option (c) changes both the actions and their relationship.",
+        "tags": {
+          "topic": "Direct & Indirect Speech",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_2563c2a16e",
+        "q_num": 71,
+        "question": "The sentence below has errors in two parts. Identify the same.\n\nThe committee recommended that every applicant (A) submits the required documents (B) before the interview (C) without failing. (D)",
+        "options": {
+          "a": "AB",
+          "b": "BD",
+          "c": "CD",
+          "d": "AC"
+        },
+        "answer": "b",
+        "solution": "After \"recommended that\", the subjunctive mood is used, so the base form \"submit\" should replace \"submits\" in part (B). Also, the correct idiomatic expression is \"without fail\", not \"without failing\".\n\nThus, parts (B) and (D) contain errors.\n\nHence, (b) is the correct answer.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_e671bf3e3a",
+        "q_num": 72,
+        "question": "The following sentence has been split into four segments. Identify the segment that contains a grammatical error.\n\nThe case has been / dismiss due / to a lack of / convincing evidence.",
+        "options": {
+          "a": "dismiss due",
+          "b": "to a lack of",
+          "c": "convincing evidence",
+          "d": "the case has been"
+        },
+        "answer": "a",
+        "solution": "The part that has an error is 'dismiss due'. The error is the use of the verb 'dismiss' in the sentence that is in the Present Perfect tense. The format of a Present Perfect tense sentence is Subject + has/have + been + V3 (past participle form) + object. In this sentence, the verb is in the base form (V1) and it must be replaced with the V3 form 'dismissed'.\n\nThe correct sentence is: The case has been dismissed due to a lack of convincing evidence.\nHence, the correct answer is option (a).",
+        "tags": {
+          "topic": "Spotting Errors",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5f74b649b7",
+        "q_num": 73,
+        "question": "Choose the correct one-word substitution for the blank in the sentence below.\n\nThe professor of ________ spent years tracing the origins and historical development of English words.",
+        "options": {
+          "a": "etymology",
+          "b": "ecology",
+          "c": "sociology",
+          "d": "physiology"
+        },
+        "answer": "a",
+        "solution": "Etymology is the study of the origin and history of words and their meanings.\n\nEcology is the study of organisms and their environment rather than language history.\n\nSociology deals with society and social behaviour, not word origins.\n\nPhysiology concerns the functions of living organisms and body systems.\n\nTherefore, the correct answer is etymology.",
+        "tags": {
+          "topic": "One Word Substitution",
+          "difficulty": "medium"
+        }
       }
     ]
   }

@@ -684,6 +684,57 @@
           "topic": "Series",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_a19ef5b607",
+        "q_num": 41,
+        "question": "Find the missing term (?) in the following series:\n\n?, 60, 84, 112, 144, 180",
+        "options": {
+          "a": "30",
+          "b": "40",
+          "c": "35",
+          "d": "45"
+        },
+        "answer": "b",
+        "solution": "Given series:\n?, 60, 84, 112, 144, 180\n\nFind the differences between consecutive terms:\n60 → 84 = +24\n84 → 112 = +28\n112 → 144 = +32\n144 → 180 = +36\n\nThe differences are:\n24, 28, 32, 36, ...\n\nEach difference increases by 4.\nTherefore, the previous difference will be:\n24 − 4 = 20\n\nSo,\n? + 20 = 60\n? = 60 − 20\n? = 40\n\nHence, the missing term = 40",
+        "tags": {
+          "topic": "Number Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_956a434594",
+        "q_num": 42,
+        "question": "Find the missing term (?) in the following series:\n\n130, 138, 111, 175, ?",
+        "options": {
+          "a": "100",
+          "b": "80",
+          "c": "75",
+          "d": "50"
+        },
+        "answer": "d",
+        "solution": "130 + 2^3 = 138\n138 - 3^3 = 111\n111 + 4^3 = 175\n175 - 5^3 = 50\nHence, the missing term = 50",
+        "tags": {
+          "topic": "Number Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7dd11b0a16",
+        "q_num": 43,
+        "question": "Two positions of the same cubical block are shown. When one of the faces W is at the top, which face will be at the bottom?",
+        "options": {
+          "a": "D",
+          "b": "S",
+          "c": "U",
+          "d": "H"
+        },
+        "answer": "a",
+        "solution": "From both the figures, adjacent faces of D are G, S, H, and U. This means W will be opposite to D. So, the face shown at the bottom will be D when the face at the top will be W.\n\nHence, option (a) is correct.",
+        "tags": {
+          "topic": "Cube & Dice",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -1429,6 +1480,91 @@
         "solution": "By reversing the folding and cutting steps symmetrically, we obtain the unfolded form of the paper.",
         "tags": {
           "topic": "Paper Folding & Cutting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_9bad0cb158",
+        "q_num": 34,
+        "question": "In a row of 60 employees, P is 21st from the left and Q is 24th from the right. R is exactly midway between P and Q. If P and R interchange their positions, what will be P's new position from the right?",
+        "options": {
+          "a": "31st",
+          "b": "30th",
+          "c": "29th",
+          "d": "32nd"
+        },
+        "answer": "d",
+        "solution": "Total employees = 60\n\nP is 21st from the left.\n\nQ is 24th from the right.\n\nQ's position from the left =\n= 60 − 24 + 1\n= 37th\n\nR is exactly midway between P and Q.\nPosition of R =\n= (21 + 37) ÷ 2\n= 58 ÷ 2\n= 29th from the left\nNow P and R interchange their positions.\nTherefore, P moves to R's original position, i.e. 29th from the left.\n\nP's new position from the right\n= 60 − 29 + 1\n= 32nd",
+        "tags": {
+          "topic": "Order & Ranking",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_ff5f3d7e2a",
+        "q_num": 35,
+        "question": "How many triangles are present in the given figure?",
+        "options": {
+          "a": "18",
+          "b": "17",
+          "c": "13",
+          "d": "15"
+        },
+        "answer": "b",
+        "solution": "There are 17 triangles in the given figure.\n\nTriangles are - ABC, ACF, BCD, BCE, BDE, BCI, CDI, CEL, CJM, CFG, CFM, FGM, FHM, GHM, IJH, JKL, KMN.",
+        "tags": {
+          "topic": "Figure Counting",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2c4f9ed7f6",
+        "q_num": 36,
+        "question": "Which two numbers should be interchanged to make the given equation correct?\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50",
+        "options": {
+          "a": "2 and 6",
+          "b": "3 and 4",
+          "c": "3 and 6",
+          "d": "2 and 4"
+        },
+        "answer": "c",
+        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMAS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMAS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMAS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMAS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7c62bd9293",
+        "q_num": 37,
+        "question": "Select the option which is related to the third term in the same way as the second term is related to the first term.\n\nCajon : Hand : : Harmonica : ?",
+        "options": {
+          "a": "Mouth",
+          "b": "Feet",
+          "c": "Hand",
+          "d": "Nose"
+        },
+        "answer": "a",
+        "solution": "Cajon is played by hands and harmonica is played by mouth.",
+        "tags": {
+          "topic": "Analogy",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_096bd9c7bf",
+        "q_num": 38,
+        "question": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following statement is correct?",
+        "options": {
+          "a": "Jenny is sitting second to right of Mani",
+          "b": "Simi and Sanu sit at the ends",
+          "c": "Only one person sits between Jenny and Mani",
+          "d": "Rani is sitting to the left of Simi"
+        },
+        "answer": "c",
+        "solution": "Simi sits second to left of Sanu.\n\nRani sits immediate right of Mani.\n\nSince Jenny sits towards left of Rani, the first case becomes invalid.\nHence, only one person sits between Jenny and Mani.",
+        "tags": {
+          "topic": "Seating Arrangement",
           "difficulty": "medium"
         }
       }

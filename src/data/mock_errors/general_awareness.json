@@ -1109,6 +1109,142 @@
           "topic": "Static GK",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_c19010eff8",
+        "q_num": 66,
+        "question": "Which traditional musical instrument, associated with the Baul minstrels of Bengal, is a single-stringed instrument made from a wooden or coconut shell soundbox attached to a bamboo neck?",
+        "options": {
+          "a": "Niyara Hongsing Ke",
+          "b": "Ektara",
+          "c": "Kamaicha",
+          "d": "Pung"
+        },
+        "answer": "b",
+        "solution": "The Ektara is a one-stringed drone instrument closely associated with the wandering Baul minstrels of Bengal. It has a resonating gourd or coconut-shell soundbox covered with skin, from which a bamboo neck rises, with a single string plucked to produce a rhythmic drone accompanying Baul devotional songs.\n\nThe other options don't fit:\nthe Kamaicha is a bowed, multi-stringed instrument of the Manganiyar community of Rajasthan;\nthe Pung is a barrel-shaped drum used in Manipuri dance forms like Pung Cholom;\n\"Niyara Hongsing Ke\" isn't a recognized standard Indian classical/folk instrument name.",
+        "tags": {
+          "topic": "Music & Musical Instruments",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e3d8924dec",
+        "q_num": 67,
+        "question": "Who is the author of the book Land of the Seven Rivers: A Brief History of India's Geography?",
+        "options": {
+          "a": "Sanjeev Sanyal",
+          "b": "William Dalrymple",
+          "c": "Romila Thapar",
+          "d": "Ramachandra Guha"
+        },
+        "answer": "a",
+        "solution": "Land of the Seven Rivers was written by Sanjeev Sanyal, an economist and writer. The book traces how India's geography - its rivers, mountains, coastlines and trade routes - has shaped the subcontinent's history, from the Vedic-era Sapta Sindhu (the \"seven rivers\" of the title, believed to refer to the Indus system) through to the changing courses of rivers and the rise and fall of cities and ports across Indian history.",
+        "tags": {
+          "topic": "Books & Authors",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d55ce84c07",
+        "q_num": 68,
+        "question": "Consider the following statements regarding literacy as per Census 2011:\n\nStatement 1: During the last decade preceding the 2011 Census, the highest improvement in literacy rate was observed among rural females, at 24%.\n\nStatement 2: Among the gender literacy gap indicators, Kerala recorded the lowest male-female literacy gap among all States/UTs, while Rajasthan recorded the highest.\n\nWhich of the above statements is/are correct?",
+        "options": {
+          "a": "Only 1",
+          "b": "Only 2",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct: As per Census 2011 data, rural females registered the highest improvement in literacy rate over the preceding decade, at 24%.\nStatement 2 is incorrect because Meghalaya, not Kerala, recorded the lowest male-female literacy gap, while Rajasthan recorded the highest.",
+        "tags": {
+          "topic": "Census & Demographics",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_16e65e55f2",
+        "q_num": 69,
+        "question": "In January 2026, the National Highways Authority of India announced four Guinness World Records achieved on NH-544G. These feats were executed on which economic corridor?",
+        "options": {
+          "a": "Delhi-Mumbai Expressway",
+          "b": "Bengaluru-Kadapa'Vijayawada Economic Corridor",
+          "c": "Chennai-Bengaluru Industrial Corridor",
+          "d": "Mumbai-Nagpur Samruddhi Mahamarg"
+        },
+        "answer": "b",
+        "solution": "NHAI announced that it had created four Guinness World Records on the under-implementation Bengaluru-Kadapa-Vijayawada Economic Corridor of NH-544G. On January 6, NHAI said it made two Guinness World Records near Puttaparthi, Andhra Pradesh.\n\nFirst was the record for the longest continuous laying of bituminous concrete, covering 28.89 lane km or a 3-lane wide 9.63 km long section within 24 hours.\n\nThe second record was created for continuous laying of the highest quantity of 10,655 metric tonnes of bituminous concrete in 24 hours.\n\nAccording to a statement, both records were established for the first time globally under the six-lane National Highway project on the Bengaluru-Kadapa-Vijayawada Economic Corridor.\n\nBuilding further on this momentum, the National Highway Authority of India (NHAI) said two additional Guinness World Records were created on January 11.\n\nThese include the continuous laying of 57,500 metric tonnes of bituminous concrete and a record for continuous paving of 156 lane km or 3-lane wide 52 km long section, surpassing the previous world record of 84.4 lane km or 2-lane wide 42.2 km long section.\n\nThese record-setting feats were executed across Package-2 and Package-3 of the Bengaluru-Kadapa-Vijayawada Economic Corridor, it added.\n\nThe 343 km long, access-controlled six-lane Bengaluru-Kadapa-Vijayawada Economic Corridor has been designed for a safe, high-speed, and scenic travel experience. It features 17 interchanges, 10 wayside amenities, a 5.3 km long tunnel, and around 21-km section of the corridor passes through a forest area.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_65193bae9c",
+        "q_num": 70,
+        "question": "Dipa Karmakar's performance of which high-difficulty vault helped her finish 4th in the women's vault final at the Rio 2016 Olympics?",
+        "options": {
+          "a": "Yurchenko vault",
+          "b": "Produnova vault",
+          "c": "Tsukahara vault",
+          "d": "Amanar vault"
+        },
+        "answer": "b",
+        "solution": "Dipa Karmakar performed the Produnova vault - a front handspring followed by two front somersaults in the air, one of the most difficult and dangerous vaults in gymnastics, nicknamed the \"vault of death.\" Her execution of it at the Rio 2016 Olympics helped her finish 4th in the women's vault final, narrowly missing a medal by just 0.15 points and becoming the first Indian gymnast to compete in an Olympic final. Only a handful of gymnasts in the world attempt the Produnova due to its high risk and difficulty.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_9461f76b9b",
+        "q_num": 71,
+        "question": "Read the Assertion (A) and Reason (R) below and choose the correct option:\n\nAssertion (A): The Pension Fund Regulatory and Development Authority (PFRDA) is the primary regulator of the Atal Pension Yojana (APY).\n\nReason (R): This is because the Central Recordkeeping Agency (CRA) for APY works independently of PFRDA and is regulated directly by the Ministry of Finance instead.",
+        "options": {
+          "a": "Both A and R are true, and R is the correct explanation of A",
+          "b": "Both A and R are true, but R is not the correct explanation of A",
+          "c": "A is false, but R is true",
+          "d": "A is true, but R is false"
+        },
+        "answer": "d",
+        "solution": "Assertion (A) is true: PFRDA regulates and oversees APY as part of the broader National Pension System, setting rules and protecting subscribers' interests.\nReason (R) is false: The CRA (currently Protean eGov Technologies Ltd.) is registered with and regulated by PFRDA itself - it does not work independently, and it is not regulated by the Ministry of Finance. It simply handles recordkeeping and subscriber service under PFRDA's oversight.\n\nFurther Insights:\nMinistry of Finance = sponsors the scheme and funds the guaranteed pension.\nPFRDA = regulates the entire scheme, including the CRA.\nPOPs (banks, post offices, etc.) = handle subscriber registration and contributions.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_744f0827cc",
+        "q_num": 72,
+        "question": "Which of the following pairs is correctly matched regarding the animals and their respective phylum?",
+        "options": {
+          "a": "Jelly fish - Mollusca",
+          "b": "Cray fish - Insecta",
+          "c": "Whale - Chordata",
+          "d": "Devil fish - Coelenterate"
+        },
+        "answer": "c",
+        "solution": "Option c is correct: Whale is not a true fish - it is an aquatic mammal belonging to the phylum Chordata, class Mammalia (order Cetacea). Like all mammals, whales are warm-blooded, breathe through lungs (surfacing periodically for air), give birth to live young, and nurse them with milk - none of which are fish characteristics.\n\nWhy the other options are incorrect:\n(a). Jellyfish - Mollusca (Incorrect): Jellyfish actually belong to the phylum Coelenterata (Cnidaria), not Mollusca. They have a simple radially symmetrical body with a central body cavity (coelenteron) and stinging cells (cnidocytes/nematocysts) - a hallmark feature of cnidarians. Mollusca instead includes soft-bodied animals like snails, octopuses, and clams.\n(b). Crayfish - Insecta (Incorrect): Crayfish belong to the phylum Arthropoda, but within class Crustacea, not Insecta. Crustaceans (like crabs, prawns, and crayfish) typically have two pairs of antennae and gills for respiration, while insects have one pair of antennae, three pairs of legs, and (usually) wings - key distinguishing features.\n(d). Devil fish - Coelenterate (Incorrect): \"Devil fish\" commonly refers to the manta ray (or sometimes an octopus, depending on regional usage), which - if referring to the manta ray - belongs to phylum Chordata, class Chondrichthyes (cartilaginous fish), not Coelenterata.",
+        "tags": {
+          "topic": "Biology",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_1edd5be2f6",
+        "q_num": 73,
+        "question": "Which of the following about the World Para Athletics Grand Prix 2026 New Delhi leg is/are correct?\n\nI. India finished on top of the medal standings.\n\nII. India secured 208 medals.\n\nIII. Bosnia and Herzegovina finished second with 35 medals.",
+        "options": {
+          "a": "I and II only",
+          "b": "II and III only",
+          "c": "I and III only",
+          "d": "I, II and III"
+        },
+        "answer": "a",
+        "solution": "India finished on top of the medal standings at the World Para Athletics Grand Prix 2026 New Delhi leg, securing 208 medals as the three-day competition concluded at the Jawaharlal Nehru Stadium.\n\nThe host nation won 75 gold, 69 silver and 64 bronze medals. Russia finished second with 35 medals, while Bosnia and Herzegovina placed third with three.\n\nIndia's double Paralympic bronze medallist Preeti Pal won her second gold of the meet in the women's 200m T35-T37. India also secured podium sweeps in several events, including the men's shot put F57 where Shubham Juyal took gold with a 14.45-metre throw. In the men's 200 meter T37-T44, Rakeshbhai Bhatt clocked 24.10 seconds to lead an all-Indian podium, while Manojkumar Sabapathi won gold in the men's 800 meter T53-T54.\n\nThe event featured 257 athletes from eight countries. Earlier in the meet, Paralympic champions Sumit Antil and Praveen Kumar also secured gold medals. The New Delhi leg was the second stop of the 13th Grand Prix season, offering key international classification opportunities ahead of the 2026 World Para Athletics Championships and the 2028 Los Angeles Paralympics.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -2679,6 +2815,91 @@
         "solution": "The correct answer is Naveen Kundu.\n\nIn News\nNaveen Kundu has authored the book “Reclaiming Incredible: A Blueprint of India Tourism’s Unclaimed Throne”.\n\nKey Points\nNaveen Kundu is a veteran tourism professional with extensive experience in the sector.\nThe book presents a strategic roadmap to achieve a trillion-dollar tourism economy by 2047.\nIt emphasizes modern communication strategies and global marketing for Indian tourism.\nThe book aligns its vision with the goals of Viksit Bharat 2047.\n\nAdditional Information\nReclaiming Incredible\nFocuses on repositioning India as a global tourism and economic powerhouse.\nHighlights opportunities in MICE tourism and global events.\nAdvocates showcasing India’s pre-invasion civilizational heritage.\nViksit Bharat 2047\nA long-term vision for India’s economic and social development by 2047.\nTourism is identified as a key contributor to GDP growth and employment.",
         "tags": {
           "topic": "Static GK",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a1aff28b9b",
+        "q_num": 93,
+        "question": "As per the International Labour Organization (ILO), How did India's social protection coverage change between 2015 and 2025?",
+        "options": {
+          "a": "From 25% to 54.3%",
+          "b": "From 19% to 64.3%",
+          "c": "From 25% to 64.3%",
+          "d": "From 19% to 74.3%"
+        },
+        "answer": "b",
+        "solution": "India has witnessed a historic surge in social protection coverage, with the International Labour Organization (ILO) noting an increase from 19% in 2015 to 64.3% in 2025, marking the fastest expansion globally.\n\nThe ILO's ILOSTAT database confirms that over 94 crore Indians are now covered by at least one social protection benefit. This leap in coverage positions India second globally in terms of the number of beneficiaries. The Government attributed the expansion to welfare and labour-related social protection schemes. The ILO acknowledged the updated coverage figure and its Director-General praised India's welfare efforts.\n\nMr. Mansukh Mandaviya stated that this achievement is a testament to India's digital governance and social commitment. The present figure represents Phase I of the data pooling exercise, covering the Central sector and women-centric schemes across eight states. With further phases underway, India's social protection coverage is expected to surpass 100 crore beneficiaries. This progress is set to support India's international negotiations for Social Security Agreements (SSAs).",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_3e24ffe148",
+        "q_num": 94,
+        "question": "Match each ruler of the Delhi Sultanate in Column A with their respective period of reign in Column B:\n\nColumn A\nA. Iltutmish\nB. Balban\nC. Firoz Shah Tughlaq\nD. Sikandar Lodi\n\nColumn B\n1. 1266 - 1287\n2. 1351 - 1388\n3. 1489 - 1517\n4. 1211 - 1236",
+        "options": {
+          "a": "A→4, B→1, C→2, D→3",
+          "b": "A→1, B→4, C→3, D→2",
+          "c": "A→4, B→2, C→1, D→3",
+          "d": "A→2, B→1, C→4, D→3"
+        },
+        "answer": "a",
+        "solution": "A. Iltutmish (1211 - 1236): The real founder of the Delhi Sultanate's administrative structure; consolidated Qutbuddin Aibak's conquests, introduced the Iqta system, and secured recognition from the Abbasid Caliph.\nB. Balban (1266 - 1287): Of the Slave (Mamluk) dynasty; known for his \"Theory of Kingship\" (blood and lineage), ruthless suppression of nobles (the Chahalgani/Group of Forty), and iron-fisted administration.\nC. Firoz Shah Tughlaq (1351 - 1388): Known for extensive canal and public works construction, introducing new taxes as per Islamic law, and founding cities like Firozabad and Hisar; his reign saw the decline of Tughlaq central authority begin.\nD. Sikandar Lodi (1489 - 1517): Second ruler of the Lodi dynasty; founded Agra, standardized measurement units (the Gaz-i-Sikandari), and was a patron of Persian and Hindi literature.",
+        "tags": {
+          "topic": "Medieval History",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_0e4d602a5b",
+        "q_num": 95,
+        "question": "Who launched the Bharatiya Bhasha Anubhag (Indian Languages Section) in June 2025?",
+        "options": {
+          "a": "Narendra Modi",
+          "b": "Rajnath Singh",
+          "c": "Dharmendra Pradhan",
+          "d": "Amit Shah"
+        },
+        "answer": "d",
+        "solution": "Union Home Minister Amit Shah launched the Bharatiya Bhasha Anubhag (Indian Languages Section) in New Delhi on June 6, 2025.\n\nPurpose: to reduce the influence of foreign languages in administration, promote regional languages in governance, and make the Department of Official Language a complete department.\n\nMany dignitaries including the Union Home Secretary and the Secretary, Official Language were present on the occasion. Union Home Minister and Minister of Cooperation Shri Amit Shah said that, under the leadership of Prime Minister Shri Narendra Modi, with the establishment of the Bharatiya Bhasha Anubhag (Indian Languages Section), the Department of Official Language has now become a complete department.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_22f9a8e0dc",
+        "q_num": 96,
+        "question": "Article 32 is contained in which Part of the Constitution of India?",
+        "options": {
+          "a": "Fundamental Duties",
+          "b": "Directive Principles of State Policy",
+          "c": "Fundamental Rights",
+          "d": "Preamble"
+        },
+        "answer": "c",
+        "solution": "Article 32 guarantees the right to move the Supreme Court for enforcement of Fundamental Rights (through writs like Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo Warranto), falls under Part III - Fundamental Rights of the Constitution. Dr. B.R. Ambedkar famously called Article 32 the \"heart and soul\" of the Constitution, as it makes Fundamental Rights enforceable rather than merely declaratory.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_847c8f6d93",
+        "q_num": 97,
+        "question": "Read the Assertion (A) and Reason (R) below and choose the correct option:\n\nAssertion (A): Inward-looking trade policies protected domestic industries using tariffs and quotas, which ultimately provided high incentives for Indian producers to improve product quality.\n\nReason (R): Import substitution aimed to replace foreign imports with domestic production to promote self-reliance.",
+        "options": {
+          "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+          "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+          "c": "(A) is false, but (R) is true.",
+          "d": "(A) is true, but (R) is false."
+        },
+        "answer": "c",
+        "solution": "Assertion (A): Protecting domestic producers from foreign competition actually deprived them of the incentive to improve quality, leading to inefficiencies rather than quality upgrades. Thus, (A) is false.\nReason (R): Import substitution specifically aimed to encourage domestic production of goods (e.g., vehicles) instead of importing them. Thus, (R) is true.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
           "difficulty": "medium"
         }
       }

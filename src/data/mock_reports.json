@@ -1,5 +1,52 @@
 [
   {
+    "id": "mock_1789306746566_4oxe1",
+    "title": "Full Mock - 13 Sept 2026",
+    "type": "full",
+    "date": "2026-09-13T13:39:06.507Z",
+    "totalQuestions": 100,
+    "maxMarks": 200,
+    "totalScore": 140,
+    "overallAccuracy": 82.2,
+    "totalCorrect": 74,
+    "totalWrong": 16,
+    "totalUnattempted": 10,
+    "sections": {
+      "reasoning": {
+        "total": 25,
+        "correct": 20,
+        "wrong": 5,
+        "unattempted": 0,
+        "score": 37.5,
+        "accuracy": 80
+      },
+      "generalAwareness": {
+        "total": 25,
+        "correct": 12,
+        "wrong": 5,
+        "unattempted": 8,
+        "score": 21.5,
+        "accuracy": 70.6
+      },
+      "mathematics": {
+        "total": 25,
+        "correct": 23,
+        "wrong": 0,
+        "unattempted": 2,
+        "score": 46,
+        "accuracy": 100
+      },
+      "english": {
+        "total": 25,
+        "correct": 19,
+        "wrong": 6,
+        "unattempted": 0,
+        "score": 35,
+        "accuracy": 76
+      }
+    }
+  },
+  {
     "id": "mock_1789221040234_tn095",
     "title": "Mathematics Mock - 12 Sept 2026",
     "type": "sectional",
