@@ -735,6 +735,125 @@
           "topic": "Cube & Dice",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_34e35331ac",
+        "q_num": 44,
+        "question": "In a certain code language, 'BRIGHT' is written as 'JSCVJI' and 'BROKEN' is written as 'PSCPGM'. How will 'BUDGET' be written as in that language?",
+        "options": {
+          "a": "EVCTEG",
+          "b": "TEGDUB",
+          "c": "DUBTEG",
+          "d": "EVCVGI"
+        },
+        "answer": "d",
+        "solution": "The logic followed here is:\n\nFor, 'BRIGHT' is written as 'JSCVJI',\n\nFor, 'BROKEN' is written as 'PSCPGM',\n\nSimilarly, for 'BUDGET'\n\nSo, 'BUDGET' will be written as 'EVCVGI'.\n\nHence, the correct answer is 'Option 4'.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1fd4e8d365",
+        "q_num": 45,
+        "question": "In a certain code language,\n\"yak lot sip kit fat\" is written as \"fk xv bn sq tu\",\n\"fit fat raw dot lip\" is written as \"er dp yp hb sq\",\n\"raw but sit mat yak\" is written as \"tu rt fl dy yp\".\nWhat is the code for \"yak\" in that language?",
+        "options": {
+          "a": "rt",
+          "b": "yp",
+          "c": "tu",
+          "d": "dy"
+        },
+        "answer": "c",
+        "solution": "Comparing the sentences:\n\n'yak' is common in sentence 1 and sentence 3.\nCommon code in sentence 1 and sentence 3 is 'tu'.\n\nHence, 'tu' is the correct answer.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_16929c51a0",
+        "q_num": 46,
+        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\nBZC, EXF, HVI, KTL, ?",
+        "options": {
+          "a": "ONR",
+          "b": "MOR",
+          "c": "NRO",
+          "d": "ORN"
+        },
+        "answer": "c",
+        "solution": "The position of letters according to the English alphabet series:\nB (+3) = E, E (+3) = H, H (+3) = K, K (+3) = N\nZ (-3) = X, X (-3) = V, V (-3) = T, T (-3) = Q\nC (+3) = F, F (+3) = I, I (+3) = L, L (+3) = O\nHence, the correct answer is 'NRO'.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_460570c426",
+        "q_num": 47,
+        "question": "Select the correct option that indicates the arrangement of the given words in the order in which they appear in an English dictionary.\n1. Relatival\n2. Relation\n3. Related\n4. Relative\n5. Relatable",
+        "options": {
+          "a": "5, 2, 3, 1, 4",
+          "b": "5, 3, 2, 4, 1",
+          "c": "4, 5, 3, 2, 1",
+          "d": "5, 3, 2, 1, 4"
+        },
+        "answer": "d",
+        "solution": "According to the sequence in the dictionary, the correct order of the given words is:\n5. Relatable\n3. Related\n2. Relation\n1. Relatival\n4. Relative",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2404bd7189",
+        "q_num": 48,
+        "question": "Which two numbers should be interchanged to make the given equation correct?\n7 × 3 - 98 ÷ 14 + 5 = 31",
+        "options": {
+          "a": "5 and 3",
+          "b": "31 and 7",
+          "c": "3 and 14",
+          "d": "7 and 98"
+        },
+        "answer": "a",
+        "solution": "Checking Option A (5 and 3): 7 × 5 - 98 ÷ 14 + 3 = 35 - 7 + 3 = 31, which equals RHS (31). Thus, LHS = RHS.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_004f68690b",
+        "q_num": 49,
+        "question": "If in a code language, 'TV' is coded as 55. How is “CLOCK” written in that code language?",
+        "options": {
+          "a": "54",
+          "b": "57",
+          "c": "48",
+          "d": "52"
+        },
+        "answer": "b",
+        "solution": "The pattern is the sum of alphabetical place values plus 13. For T (20) and V (22): (20 + 22) + 13 = 55. For CLOCK: (3 + 12 + 15 + 3 + 11) + 13 = 44 + 13 = 57.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_84b822db19",
+        "q_num": 50,
+        "question": "'A + B' means - 'A is brother of B'\n'A = B' means - 'A is son of B'\n'A & B' means - 'A is wife of B'\n'A @ B' means - 'A is father of B'\nIf P = H = T & U @ N + R, then how is N related to P?",
+        "options": {
+          "a": "Father in law",
+          "b": "Maternal Uncle",
+          "c": "Paternal Uncle",
+          "d": "Brother in law"
+        },
+        "answer": "c",
+        "solution": "As per the given data:\nA + B means A is a brother of B\nA = B means A is a son of B\nA & B means A is a wife of B\nA @ B means A is a father of B\n\nGiven:\nP = H = T & U @ N + R\n\nHere, N is the Paternal uncle of P.\n\nHence, Option C is the correct answer.",
+        "tags": {
+          "topic": "Blood Relations",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -911,6 +1030,40 @@
         "solution": "Here the logic is:\n22 + 4 = 26 = 2 + 6 = 8 × 3 = 24\n18 + 5 = 23 = 2 + 3 = 5 × 3 = 15\nSimilarly;\n16 + 9 = 25 = 2 + 5 = 7 × 3 = 21\nHence correct option is 21",
         "tags": {
           "topic": "Mathematical Operations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_247bc5589e",
+        "q_num": 11,
+        "question": "Select the number that can replace the question mark (?) in the following series.\n61, 63, 65, 77, 89, ?, 149, 205",
+        "options": {
+          "a": "132",
+          "b": "119",
+          "c": "123",
+          "d": "115"
+        },
+        "answer": "b",
+        "solution": "The logic follows here is:\n61 + (1)^2 + 1 = 61 + 2 = 63\n63 + (2)^2 - 2 = 63 + 2 = 65\n65 + (3)^2 + 3 = 65 + 12 = 77\n77 + (4)^2 - 4 = 77 + 12 = 89\n89 + (5)^2 + 5 = 89 + 30 = 119\n119 + (6)^2 - 6 = 119 + 30 = 149\n149 + (7)^2 + 7 = 149 + 56 = 205\nHence, the correct answer is '119'.",
+        "tags": {
+          "topic": "Number Series",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_4cc728695e",
+        "q_num": 12,
+        "question": "Study the given pattern carefully and select the number that can replace the question mark (?) in it.\n5\n7\n100\n8\n9\n181\n11\n10\n?",
+        "options": {
+          "a": "260",
+          "b": "255",
+          "c": "265",
+          "d": "244"
+        },
+        "answer": "c",
+        "solution": "The pattern followed in the given table is:\n(First term + 1)^2 + (Second term + 1)^2 = Third term\nRow 1) (5 + 1)^2 + (7 + 1)^2 = 100\n(6)^2 + (8)^2 = 100\n36 + 64 = 100\nRow 2) (8 + 1)^2 + (9 + 1)^2 = 181\n(9)^2 + (10)^2 = 181\n81 + 100 = 181\nRow 3) (11 + 1)^2 + (10 + 1)^2 = ?\n(12)^2 + (11)^2 = ?\n144 + 121 = 265\nHence, the correct answer is option 3.",
+        "tags": {
+          "topic": "Missing Number / Matrix",
           "difficulty": "medium"
         }
       }
@@ -1565,6 +1718,74 @@
         "solution": "Simi sits second to left of Sanu.\n\nRani sits immediate right of Mani.\n\nSince Jenny sits towards left of Rani, the first case becomes invalid.\nHence, only one person sits between Jenny and Mani.",
         "tags": {
           "topic": "Seating Arrangement",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_ffbe700b4b",
+        "q_num": 39,
+        "question": "The second number in the given number pairs is obtained by performing certain mathematical operation(s) on the first number. The same operation(s) are followed in all the number pairs except one. Find that odd number pair.",
+        "options": {
+          "a": "19 : 323",
+          "b": "43 : 731",
+          "c": "21 : 357",
+          "d": "15 : 256"
+        },
+        "answer": "d",
+        "solution": "The logic followed here is: first number × 17 = second number. Option A: 19 × 17 = 323. Option B: 43 × 17 = 731. Option C: 21 × 17 = 357. Option D: 15 × 17 = 255 (given as 256). Thus this is the odd pair which doesn't follow the logic.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_5ba81f3cd0",
+        "q_num": 40,
+        "question": "A stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21. His profit percent is about:",
+        "options": {
+          "a": "20%",
+          "b": "5%",
+          "c": "10%",
+          "d": "15%"
+        },
+        "answer": "c",
+        "solution": "Cost Price of 21 pencils = Rs. 20. Selling Price of 20 pencils = Rs. 21, so Selling Price of 1 pencil = Rs. 21 / 20 = Rs. 1.05. Selling Price of 21 pencils = 21 × 1.05 = Rs. 22.05. Profit = 22.05 - 20 = 2.05. Profit % = (2.05 / 20) × 100 = 10.25% ≈ 10%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_614ad256f4",
+        "q_num": 41,
+        "question": "Parth said pointing to a photograph of a boy, 'he is the only son of my father's brother's son', if so how is the boy related to Parth?",
+        "options": {
+          "a": "Cousin",
+          "b": "Father",
+          "c": "Nephew",
+          "d": "Son"
+        },
+        "answer": "c",
+        "solution": "Below table represents symbols used to draw a family tree.\nWe can draw the Family Tree from the information given:\nSo, the boy in the photograph is the nephew of Parth.\nHence, 'Nephew' is the correct answer.",
+        "tags": {
+          "topic": "Blood Relations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f4952acd0d",
+        "q_num": 42,
+        "question": "Select the set in which the numbers are related in the same way as are the numbers of the given sets.\n(NOTE: Operations should be performed on the whole numbers, without breaking down the numbers into its constituent digits.)\n(45, 81, 104)\n(52, 88, 111)",
+        "options": {
+          "a": "(49, 85, 108)",
+          "b": "(34, 60, 83)",
+          "c": "(54, 90, 110)",
+          "d": "(27, 59, 82)"
+        },
+        "answer": "a",
+        "solution": "Logic: Second number - First number = 36, Third number - Second number = 23, and Third number - First number = 59\n(45, 81, 104) → 81 - 45 = 36, 104 - 81 = 23, 104 - 45 = 59\nAnd,\n(52, 88, 111) → 88 - 52 = 36, 111 - 88 = 23, 111 - 52 = 59\nSimilarly,\n(49, 85, 108) → 85 - 49 = 36, 108 - 85 = 23, 108 - 49 = 59\nHence, Option A is the correct answer.",
+        "tags": {
+          "topic": "Analogy",
           "difficulty": "medium"
         }
       }

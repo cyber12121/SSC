@@ -2265,6 +2265,57 @@
           "topic": "Compound Interest",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_4c9393c88c",
+        "q_num": 134,
+        "question": "The selling price of x items is equal to the cost price of 32 items and profit percent is 28%. What is the value of x?",
+        "options": {
+          "a": "30",
+          "b": "24",
+          "c": "21",
+          "d": "25"
+        },
+        "answer": "d",
+        "solution": "Given:\nSP of x items = CP of 32 items\nProfit % = 28\n\nConcept used:\n\nSP = CP + CP × profit%\nSP = selling price\nCP = cost price\n\nCalculation:\nLet CP of each item be Rs. 100a\nSo, CP of x item = Rs. 100xa\nSP of each item = 128xa\n\nAccording to the question,\n\nx.SP = 32.CP\n⇒ 128ax = 3200a\n⇒ x = 3200a/128a\n⇒ x = 25\nSo, x = 25 items\n∴ The value of x is 25.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d6db89c12c",
+        "q_num": 135,
+        "question": "A well is dug 20 m and it has a diameter of 7 m. The earth taken out is spread as a regular plot of 22 m × 14 m dimensions, then the height of the platform formed is?",
+        "options": {
+          "a": "2.1 m",
+          "b": "2.5 m",
+          "c": "2.9 m",
+          "d": "3.5 m"
+        },
+        "answer": "b",
+        "solution": "Given:\nHeight of well (h) = 20 m\nDiameter of the well (d) = 7 m\nLength of the rectangular plot = 22 m\nBreadth of the rectangular plot = 14 m\n\nConcept used:\nVolume of well = πr²h\nVolume of the rectangular plot = length × breadth × height\n\nCalculation:\nRadius of well (r) = 7 / 2 = 3.5 m\nVolume of well = (22 / 7 × 3.5 × 3.5 × 20) = 770 m³\nVolume of well = Volume of the rectangular plot\nNow, according to the above concept,\nVolume of the rectangular plot = length × breadth × height\n⇒ 770 = (22 × 14 × height)\n⇒ Height = 770 / (22 × 14) = 5 / 2 = 2.5 m\n∴ The required height is 2.5 m",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc3395f085",
+        "q_num": 136,
+        "question": "If tanθ + secθ = m, then what is secθ equal to?",
+        "options": {
+          "a": "m2−12m",
+          "b": "m2+12m",
+          "c": "m+1m",
+          "d": "m2+1m"
+        },
+        "answer": "b",
+        "solution": "Given:\ntanθ + secθ = m\n\nFormula used:\nsec^2θ – tan^2θ = 1\n(a + b)(a - b) = a^2 - b^2\n\nCalculation:\nsecθ + tanθ = m ----(1)\nNow, we know that\nsec^2θ – tan^2θ = 1\nBy using the formula (a + b)(a - b) = a^2 - b^2\n⇒ (secθ – tanθ) (secθ + tanθ) = 1\n⇒ secθ – tanθ = 1/(secθ + tanθ)\n⇒ secθ – tanθ = 1/m -----(2)\n\nAdding equation (1) & (2)\n⇒ secθ + tanθ + secθ – tanθ = m + 1/m\n⇒ 2secθ = m + 1/m\n⇒ 2secθ = (m^2 + 1)/m\n⇒ secθ = (m^2 + 1) / 2m\n∴ The required value is (m^2 + 1) / 2m.",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -4126,6 +4177,57 @@
           "topic": "Geometry",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_88573d8469",
+        "q_num": 110,
+        "question": "A, B, and C can do a piece of work in 16, 24, and 32 days respectively. They start together, but C leaves after 4 days and A leaves 6 days before the completion of the work. In how many days will the work be completed?",
+        "options": {
+          "a": "12 days",
+          "b": "15 days",
+          "c": "9 days",
+          "d": "14 days"
+        },
+        "answer": "a",
+        "solution": "Given:\nA, B, and C can complete the work in 16, 24, and 32 days respectively.\n\nThey start together, but C leaves after 4 days and A leaves 6 days before the completion of the work.\n\nConcept used:\n\nTotal work = work done each day × total time taken (in days)\n\nCalculation:\nLCM (16, 24, 32) = 96\nLet the total work be LCM for the time taken by them.\nThus, total work = 96 units\n\nefficiency,\n\nA makes a day = 96 ÷ 16 = 6 units\nB makes a day = 96 ÷ 24 = 4 units\nC does a day = 96 ÷ 32 = 3 units\n\nThe entire work is completed in P days.\n\nAccording to the question,\n\n6 × (P - 6) + 4 × P + 3 × 4 = 96\n⇒ 10P = 96 + 36 - 12\n⇒ P = 12\n∴ The work will be completed in 12 days.",
+        "tags": {
+          "topic": "Time & Work",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_fa47e32e69",
+        "q_num": 111,
+        "question": "A trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y. If the ratio of the cost prices of X and Y is 3 : 4, then what is the gain/loss in the entire transaction (correct to one decimal place)?",
+        "options": {
+          "a": "Gain of 3.7%",
+          "b": "Gain of 4.8%",
+          "c": "Loss of 4.5%",
+          "d": "Loss of 3.9%"
+        },
+        "answer": "a",
+        "solution": "Given:\nA trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y.\nThe ratio of the cost prices of X and Y is 3 : 4.\n\nConcept used:\nProfit% = (Profit / Cost Price) × 100%\nSelling Price = Cost Price - Cost Price × Loss%\nSelling Price = Cost Price + Cost Price × Gain%\n\nCalculation:\nLet the cost price of X and Y be Rs. 300 and Rs. 400.\nTotal cost price = 300 + 400 = Rs. 700\nSelling price of X = 300 + 300 × 30% = Rs. 390\nSelling price of Y = 400 - 400 × 16% = Rs. 336\nTotal selling price = 390 + 336 = Rs. 726\nGain made = 726 - 700 = Rs. 26\nNow, gain% in the entire transaction = (26 / 700) × 100% ≈ 3.7%\n∴ The gain in the entire transaction is 3.7%.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_546e088147",
+        "q_num": 112,
+        "question": "Ram, Shyam and Ghanshyam have ₹32, ₹46 and ₹50, respectively, with them. Their mother asks them to give her equal amounts so that the money held by them now are in continued proportion. Find the amount taken from each of them.",
+        "options": {
+          "a": "₹91.36",
+          "b": "₹51.78",
+          "c": "₹91.78",
+          "d": "₹51.60"
+        },
+        "answer": "d",
+        "solution": "Given:\nRam has ₹32.\nShyam has ₹46.\nGhanshyam has ₹50.\nThey give equal amounts to their mother such that the remaining amounts are in continued proportion.\n\nFormula Used:\nFor continued proportion: a/b = b/c or b^2 = a ⋅ c.\n\nCalculation:\nLet the amount given by each of them to their mother be x.\nThen, the remaining amounts are:\nRam: ₹(32 - x)\nShyam: ₹(46 - x)\nGhanshyam: ₹(50 - x)\n\nFor continued proportion:\n(32 - x)/(46 - x) = (46 - x)/(50 - x)\n\nBy cross-multiplication:\n(46 - x)^2 = (32 - x) ⋅ (50 - x)\n\nExpanding both sides:\n⇒ (46 - x)^2 = 32 × 50 - 32x - 50x + x^2\n⇒ 2116 - 92x + x^2 = 1600 - 82x + x^2\n\nCancel out x^2 from both sides:\n⇒ 2116 - 92x = 1600 - 82x\n\nSimplify:\n⇒ 2116 - 1600 = 92x - 82x\n⇒ 516 = 10x\n⇒ x = 51.6\n\nThe amount taken from each of them is ₹51.60.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -4999,6 +5101,125 @@
         "solution": "Solution\n\nShortcut Trick\nWhen the angle of elevation changes from β to α over a distance d, the height H is found using: d = H × (cot β − cot α).\n\nHere d = 10 m, α = 60° and β = 30°:\n10 = H × (cot 30° − cot 60°)\n10 = H × (√3 − 1/√3) ⇒ 10 = H × (2/√3)\nH = 5√3 m.\n∴ The correct answer is 5√3 m.\n\nAlternate Method\nGiven:\nDistance between the two points, PQ = 10 m.\nAngle of elevation from point P, ∠APB = 60°.\nAngle of elevation from point Q, ∠AQB = 30°.\n\nFormula Used:\ntan(θ) = Perpendicular ÷ Base\n\nCalculations:\nLet the height of the pole AB be H and the distance PB be x.\n\nIn right-angled triangle APB:\n\n⇒ tan(60°) = AB ÷ PB\n⇒ √3 = H ÷ x\n⇒ x = H ÷ √3     ... (Equation 1)\n\nIn right-angled triangle AQB:\n\n⇒ tan(30°) = AB ÷ QB\n⇒ 1 ÷ √3 = H ÷ (PQ + PB)\n⇒ 1 ÷ √3 = H ÷ (10 + x)\n⇒ 10 + x = H√3\n\nSubstitute the value of x from Equation 1:\n\n⇒ 10 + (H ÷ √3) = H√3\n⇒ 10 = H√3 − (H ÷ √3)\n⇒ 10 = (3H − H) ÷ √3\n⇒ 10 = 2H ÷ √3\n⇒ 2H = 10√3\n⇒ H = 5√3 m\n∴ The correct answer is 5√3 m.\n\nAdditional Information\nDistance Formula in Heights & Distances\n\nWhen moving a distance d directly towards or away from a vertically standing object of height H, causing the angle of elevation to change between α and β (where α > β), the relation is given by d = H × (cot β − cot α).\n\nAngle of Elevation vs Angle of Depression\n\nThe angle of elevation is the angle formed above the horizontal line of sight when looking up. The angle of depression is the angle formed below the horizontal line when looking down. Geometrically, they are equal for two observers looking at each other due to alternate interior angles.\n\nKey Trigonometric Values\n\nMost height and distance questions are solved using three standard tangent values: tan(30°) = 1/√3, tan(45°) = 1, and tan(60°) = √3.",
         "tags": {
           "topic": "Height & Distance",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_38dc1475c5",
+        "q_num": 52,
+        "question": "Simplify.\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)",
+        "options": {
+          "a": "cos A",
+          "b": "sin 2A",
+          "c": "cos 2A",
+          "d": "sin A"
+        },
+        "answer": "c",
+        "solution": "Given:\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)\n\nCalculation:\n⇒ sin[90 – (36 – A)]sin[90 – (36 + A)] + cos (54° – A) cos (54° + A)\n⇒ sin(54º + A)sin(54º – A) + cos (54° – A) cos (54° + A)\n⇒ Using the identity cos(A – B),\n⇒ cos(54 + A – 54 + A) = cos(2A)\n\nTherefore, the value of cos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A) is cos(2A).",
+        "tags": {
+          "topic": "Trigonometry",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_141cfdeadb",
+        "q_num": 53,
+        "question": "The average weight of the first thirteen persons among fourteen persons is 78 kg. The weight of the 14th person is 39 kg more than the average weight of all the fourteen persons. Find the weight of the 14th person.",
+        "options": {
+          "a": "118 kg",
+          "b": "98 kg",
+          "c": "110 kg",
+          "d": "120 kg"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nThe extra weight of the 14th person (39 kg) is distributed among the first 13 persons to equalize their average to the overall average.\n\nTotal Average = Average of 13 persons + (Extra weight ÷ 13)\nTotal Average = 78 + (39 ÷ 13) = 78 + 3 = 81 kg\nWeight of 14th person = Total Average + Extra = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAlternate Method\nGiven:\nAverage weight of 13 persons = 78 kg\nWeight of 14th person = Average of 14 persons + 39 kg\n\nFormula Used:\nAverage = Sum of all observations ÷ Number of observations\n\nCalculations:\nLet the average weight of all 14 persons be x kg.\n⇒ Total weight of 14 persons = 14 × x = 14x\n⇒ Weight of 14th person = x + 39\n⇒ Sum of weights of 13 persons = 13 × 78 = 1014 kg\n⇒ Total Weight = Sum of 13 persons + Weight of 14th person\n⇒ 14x = 1014 + (x + 39)\n⇒ 14x − x = 1053\n⇒ 13x = 1053\n⇒ x = 1053 ÷ 13\n⇒ x = 81 kg\n⇒ Weight of 14th person = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.",
+        "tags": {
+          "topic": "Average",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6d217c0a16",
+        "q_num": 54,
+        "question": "Aarav owns a watch worth Rs. 10,000. He sells it to Bhavin at a profit of 15%. After some days, Bhavin sells it back to Aarav at 15% loss. Find the percentage profit or loss faced by Aarav.",
+        "options": {
+          "a": "17.25% loss",
+          "b": "18.75% loss",
+          "c": "18.25% profit",
+          "d": "17.25% profit"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nAarav sells the watch for ₹11,500 (15% profit on ₹10,000).\n\nBhavin sells it back at a 15% loss on his Cost Price (₹11,500).\n\nBhavin's Loss = 15% of 11,500 = ₹1,725.\n\nSince Aarav gets the watch back, his net cash gain is exactly Bhavin's loss amount.\n\nNet Profit % = (1,725 ÷ 10,000) × 100 = 17.25%.\n∴ The correct answer is 17.25% profit.\n\nAlternate Method\nGiven:\nInitial Cost Price (CP1) of watch = ₹10,000\nProfit percentage for Aarav = 15%\nLoss percentage for Bhavin = 15%\n\nCalculations:\n⇒ Selling Price of Aarav (SP1) = 10,000 + (15 ÷ 100) × 10,000 = ₹11,500\n⇒ Cost Price for Bhavin = ₹11,500\n⇒ Selling Price of Bhavin (SP2) = 11,500 − (15 ÷ 100) × 11,500\n⇒ SP2 = 11,500 − 1,725 = ₹9,775\n⇒ This SP2 is the price Aarav pays to get the watch back.\n⇒ Aarav's total profit = (Amount received from sale) − (Amount paid for buy-back)\n⇒ Net Profit = 11,500 − 9,775 = ₹1,725\n⇒ Profit % = (Net Profit ÷ Initial CP) × 100\n⇒ Profit % = (1,725 ÷ 10,000) × 100 = 17.25%\n∴ The correct answer is 17.25% profit.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_041c558815",
+        "q_num": 55,
+        "question": "The floor of a room 12 m long and 8 m wide is to be decorated with square designs having the maximum possible area. Find the number of square designs required.",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "8",
+          "d": "6"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nSide of the maximum possible square = HCF of length and width.\nSide = HCF(12, 8) = 4 m.\nNumber of square designs = (Length × Width) ÷ (Side × Side).\nNumber of designs = (12 × 8) ÷ (4 × 4) = 96 ÷ 16 = 6.\n∴ The correct answer is 6.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2d1955a14d",
+        "q_num": 56,
+        "question": "If the volume of a hemisphere is 155232 cm³, then half of the radius (in cm) of the hemisphere is: (Use π = 22/7)",
+        "options": {
+          "a": "18",
+          "b": "42",
+          "c": "21",
+          "d": "12"
+        },
+        "answer": "c",
+        "solution": "Given:\nVolume of a hemisphere = 155232 cm³\nπ = 22 / 7\n\nFormula Used:\nVolume of a hemisphere = (2 / 3) × π × r³\nWhere r = radius of the hemisphere.\n\nCalculation:\nGiven Volume = 155232 cm³\nUsing the formula:\n(2 / 3) × (22 / 7) × r³ = 155232\n⇒ r³ = (155232 × 3 × 7) / (2 × 22)\n⇒ r³ = (155232 × 21) / 44\n⇒ r³ = 74088\n\nTaking the cube root:\n⇒ r = ∛74088\n⇒ r = 42 cm\nHalf of the radius = r / 2\n⇒ Half of the radius = 42 / 2\n⇒ Half of the radius = 21 cm\n\nThe half of the radius of the hemisphere is 21 cm.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6ad8830f2a",
+        "q_num": 57,
+        "question": "If 3^(2p+4) = 6561, then find the value of (p + 1)^4",
+        "options": {
+          "a": "1",
+          "b": "81",
+          "c": "27",
+          "d": "16"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nConvert 6561 into a power of 3: 6561 = 3^8.\nEquating the exponents of base 3: 2p + 4 = 8 ⇒ 2p = 4 ⇒ p = 2.\nSubstitute p = 2 to find the required expression: (p + 1)^4 = (2 + 1)^4 = 3^4 = 81.\n∴ The correct answer is 81.",
+        "tags": {
+          "topic": "Simplification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7beb7a9938",
+        "q_num": 58,
+        "question": "The maximum number of boxes, each of length 0.2m, breadth 0.4m and height 0.5m that can be placed in a box of length 2m, breadth 1m and height 0.5m is",
+        "options": {
+          "a": "30",
+          "b": "40",
+          "c": "20",
+          "d": "25"
+        },
+        "answer": "d",
+        "solution": "Given:\nDimensions of each small box are length 0.2 m, breadth 0.4 m and height 0.5 m.\nDimensions of bigger box are length 2 m, breadth 1 m and height 0.5 m.\n\nFormula:\nNumber of boxes = Volume of bigger box / Volume of each small box\n\nCalculation:\nVolume of bigger box = 2 × 1 × 0.5\n⇒ 1 m^3\nVolume of each smaller box = 0.2 × 0.4 × 0.5\n⇒ 0.04 m^3\n∴ No. of boxes = 1 / 0.04\n⇒ 100 / 4\n⇒ 25",
+        "tags": {
+          "topic": "Mensuration 3D",
           "difficulty": "medium"
         }
       }

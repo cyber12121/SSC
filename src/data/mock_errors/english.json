@@ -1245,6 +1245,193 @@
           "topic": "One Word Substitution",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_c0e6629802",
+        "q_num": 74,
+        "question": "Select the most appropriate synonym of the word \"Brontide\"",
+        "options": {
+          "a": "Silence",
+          "b": "Rumbling",
+          "c": "Light",
+          "d": "Explosion"
+        },
+        "answer": "b",
+        "solution": "The correct answer is: Option 2 (Rumbling).\n\nKey Points\nThe word \"Brontide\" refers to the low, muffled, and distant sound of thunder or rumbling.\nExample: The brontide echoed softly across the valley after the storm.\n\"Rumbling\" relates to a continuous, deep, resonant sound, similar to thunder.\nExample: We heard a rumbling sound as the earthquake began to shake the ground.\nHence, we can conclude that the synonym of \"Brontide\" is \"Rumbling.\"",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_08bde08277",
+        "q_num": 75,
+        "question": "Select the most appropriate antonym for the given word.\nGrumble",
+        "options": {
+          "a": "Complain",
+          "b": "Compliment",
+          "c": "Dangle",
+          "d": "Calamity"
+        },
+        "answer": "b",
+        "solution": "The correct answer is \"Compliment\".\n\nKey Points\nGrumble means to complain or protest about something in a bad-tempered but typically muted way.\nExample: She often grumbles about her work environment being too stressful.\nThe correct antonym, compliment, refers to a polite expression of praise or admiration.\nExample: He received a compliment from his boss for his excellent performance.\nTherefore, the correct answer is \"Option 2\".",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8de7aa2393",
+        "q_num": 76,
+        "question": "In the following question, out of the given alternatives, choose the one which best expresses the opposite meaning of the given word.\nFECUND",
+        "options": {
+          "a": "Barren",
+          "b": "Solid",
+          "c": "Unploughed",
+          "d": "Hard"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'Barren'.\n\nKey Points\nFecund - producing or capable of producing an abundance of offspring or new growth; highly fertile.\nBarren - (used about land or soil) not good enough for plants to grow on.\nAs we can see, the meaning of 'Fecund' is opposite to that of 'Barren'.\nTherefore, the correct answer is- 'Barren'.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_28a34248c4",
+        "q_num": 77,
+        "question": "In the following question, four words have been given out of which one word is incorrectly spelt. Find the incorrectly spelt word.",
+        "options": {
+          "a": "Forray",
+          "b": "Ferry",
+          "c": "Fairy",
+          "d": "Fiery"
+        },
+        "answer": "a",
+        "solution": "The correct answer is option A. Forray is the wrong spelling. The correct spelling is 'foray' which means 'a sudden attack or incursion into enemy territory, especially to obtain something; a raid.'\n\nFerry: boat or ship for conveying passengers and goods, especially over a relatively short distance and as a regular service.\nFairy: a small imaginary being of human form that has magical powers, especially a female one.\nFiery: consisting of fire or burning strongly and brightly.",
+        "tags": {
+          "topic": "Spelling Errors",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1c9a6d4fd4",
+        "q_num": 78,
+        "question": "Find the incorrectly spelt word.",
+        "options": {
+          "a": "Smirk",
+          "b": "Tardy",
+          "c": "Tarnis",
+          "d": "Wade"
+        },
+        "answer": "c",
+        "solution": "The spelling of the word 'tarnis' is wrong here. The correct spelling is 'tarnish.' It means 'lose or cause to lose lustre'.\n\nSmirk: smile in an irritatingly smug.\nTardy: delaying or delayed beyond the right or expected time.\nWade: walk with effort through water or another liquid or viscous substance.",
+        "tags": {
+          "topic": "Spelling Errors",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1236cd0de7",
+        "q_num": 79,
+        "question": "Choose the correct appropriate word to fill in the blank from the given alternatives.\nShe _______ when she heard that terrible news.",
+        "options": {
+          "a": "packed",
+          "b": "frenzied",
+          "c": "panicked",
+          "d": "frantic"
+        },
+        "answer": "c",
+        "solution": "The correct solution is option C i.e. panicked.\n\nKey Points\nContext of the sentence: We need a verb in the blank to show what happened to the person after she heard the terrible news.\nLet’s look at the meaning of the words given below:\nPacking means cram large number of things into.\nFrenzied means wildly excited or uncontrolled.\nPanicked means felt or caused to feel panic.\nFrantic means distraught with fear, anxiety, or other emotion (adjective).\nFrom the above explanations, we find that panicked is the only word that will fit the context as a verb.",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b002ae8cec",
+        "q_num": 80,
+        "question": "Select the segment of the sentence that contains a grammatical error. If there is no error, mark 'No error' as your answer.\nHe was determined to (a)/ both beat the record (b)/ with win the crowd over. (c)/ No Error (d)",
+        "options": {
+          "a": "a",
+          "b": "b",
+          "c": "c",
+          "d": "d"
+        },
+        "answer": "c",
+        "solution": "The correct answer is option C (c).\n\nKey Points\nIn part (c) of the sentence, \"with\" is used, following the correlative conjunction \"both\" which is grammatically wrong.\nCorrelative conjunction both...and are always used in pair in a sentence.\nThus, the error 'with' will be rectified by 'and' to make the sentence contextually and grammatically correct.\n\nThe Correct sentence: He was determined to both beat the record and win the crowd over.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_22cc5bbad1",
+        "q_num": 81,
+        "question": "Select the most appropriate option to complete the following sentence: I was really astonished. I didn’t know____.",
+        "options": {
+          "a": "What to tell",
+          "b": "What to say",
+          "c": "Told",
+          "d": "What to said"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'What to say'. The sentence describes a situation where the speaker was astonished and unsure about what to express. The phrase \"What to say\" is appropriate because it refers to the action of speaking or expressing.",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_985e2b34ba",
+        "q_num": 82,
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. In Earth’s orbit itself, the U.S. Space Surveillance Network is tracking more than 14,000 pieces of space junk that are larger than 10 cm (4 inches) across, such as defunct satellites and rocket stages.\nB. It’s estimated that there are millions of pieces smaller than that.\nC. Humanity hasn’t taken only memories and left only footprints in the outer space but we’ve left a lot of junk up there.\nD. Because of the high speeds at which objects move in Earth’s orbit, even little pieces of space debris can cause damage such as the windows on the space shuttle often had to be replaced because of damage from collisions with debris smaller than a millimeter.",
+        "options": {
+          "a": "BCDA",
+          "b": "CABD",
+          "c": "DABC",
+          "d": "ACBD"
+        },
+        "answer": "b",
+        "solution": "The correct sequence is CABD. Statement C is the first sentence as it introduces the general theme of leaving junk in space. Statement A follows with specific tracking data from the U.S. Space Surveillance Network. Statement B adds an estimate regarding smaller pieces. Statement D concludes by explaining the damage caused by these high-speed objects.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_98ba9fbf4a",
+        "q_num": 83,
+        "question": "Which of the following words is most nearly the SYNONYM of the word \"perennial\" as used in the passage?",
+        "options": {
+          "a": "Ephemeral",
+          "b": "Occasional",
+          "c": "Recurrent",
+          "d": "Subterranean"
+        },
+        "answer": "c",
+        "solution": "The word \"perennial\" means lasting or existing for a long or apparently infinite time; enduring or continually recurring. \"Recurrent\" means occurring often or repeatedly, making it the most appropriate synonym.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_cd469d12ed",
+        "q_num": 84,
+        "question": "What can be reasonably inferred from the passage regarding the wetlands (beels) of Assam?",
+        "options": {
+          "a": "Their conservation and restoration would reduce the velocity and volume of floodwaters reaching human settlements during extreme rainfall.",
+          "b": "Their transformation into agricultural land has successfully mitigated the hydraulic ferocity of flash floods in urban areas.",
+          "c": "They were artificially engineered by disaster management authorities to act as longitudinal barriers against sediment deposition.",
+          "d": "They are the primary source of the heavy silt that elevates the channel floor of the Brahmaputra River"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option 1. Wetlands function as natural hydrological sinks by absorbing excess runoff during peak monsoon periods and releasing water gradually, thus reducing the velocity and volume of floodwaters reaching human settlements.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "difficulty": "medium"
+        }
       }
     ]
   }
