@@ -1,0 +1,392 @@
+{
+  "chapter_num": 3,
+  "chapter_title": "Synonyms - Set 3",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "ayush_vocab",
+  "topic_name": "synonyms",
+  "set_name": "set_3",
+  "is_test": true,
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Choose the closest synonym of \"Apposite\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Skillful",
+        "c": "Relevant",
+        "d": "Childish"
+      },
+      "answer": "c",
+      "solution": "Highly appropriate or relevant to a situation\n\n💡 Mnemonic Trick: Memory trick: link “Relevant” with “Highly appropriate relevant situation”.\n📖 Source: PDF • page 10\n🎯 Target Word: Apposite (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 2,
+      "question": "Choose the closest synonym of \"Ignominy\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Childish",
+        "c": "Disgrace",
+        "d": "Skillful"
+      },
+      "answer": "c",
+      "solution": "Public disgrace or shame\n\n💡 Mnemonic Trick: Memory trick: link “Disgrace” with “Public disgrace shame”.\n📖 Source: PDF • page 10\n🎯 Target Word: Ignominy (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 3,
+      "question": "Choose the closest synonym of \"Neophyte\"",
+      "options": {
+        "a": "Beginner",
+        "b": "Amplify",
+        "c": "Childish",
+        "d": "Skillful"
+      },
+      "answer": "a",
+      "solution": "A beginner or novice in a subject or activity\n\n💡 Mnemonic Trick: Memory trick: link “Beginner” with “beginner novice subject activity”.\n📖 Source: PDF • page 10\n🎯 Target Word: Neophyte (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 4,
+      "question": "Choose the closest synonym of \"Propitiate\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Promote",
+        "c": "Appease",
+        "d": "Abandon"
+      },
+      "answer": "c",
+      "solution": "To win favor or calm anger through actions\n\n💡 Mnemonic Trick: Memory trick: link “Appease” with “favor calm anger through actions”.\n📖 Source: PDF • page 10\n🎯 Target Word: Propitiate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the closest synonym of \"Disparaging\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Childish",
+        "c": "Amplify",
+        "d": "Belittling"
+      },
+      "answer": "d",
+      "solution": "Showing a lack of respect; belittling\n\n💡 Mnemonic Trick: Memory trick: link “Belittling” with “Showing lack respect belittling”.\n📖 Source: PDF • page 10\n🎯 Target Word: Disparaging (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 6,
+      "question": "Choose the closest synonym of \"Elucidate\"",
+      "options": {
+        "a": "Clear",
+        "b": "Renounce",
+        "c": "Clarify",
+        "d": "Origin"
+      },
+      "answer": "c",
+      "solution": "To make something clear or explain in detail\n\n💡 Mnemonic Trick: Memory trick: link “Clarify” with “make something clear explain detail”.\n📖 Source: PDF • page 10\n🎯 Target Word: Elucidate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the closest synonym of \"Capitulate\"",
+      "options": {
+        "a": "Yield",
+        "b": "Renounce",
+        "c": "Abandon",
+        "d": "Surrender"
+      },
+      "answer": "d",
+      "solution": "To surrender or give up resistance\n\n💡 Mnemonic Trick: Memory trick: link “Surrender” with “surrender give resistance”.\n📖 Source: PDF • page 10\n🎯 Target Word: Capitulate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the closest synonym of \"Exculpate\"",
+      "options": {
+        "a": "Clear",
+        "b": "Incisive",
+        "c": "Pardon",
+        "d": "Exonerate"
+      },
+      "answer": "d",
+      "solution": "To clear someone from blame or guilt\n\n💡 Mnemonic Trick: Memory trick: link “Exonerate” with “clear someone from blame guilt”.\n📖 Source: PDF • page 10\n🎯 Target Word: Exculpate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the closest synonym of \"Absolve\"",
+      "options": {
+        "a": "Coarse",
+        "b": "Annoy",
+        "c": "Pardon",
+        "d": "Exonerate"
+      },
+      "answer": "c",
+      "solution": "To free from guilt or responsibility\n\n💡 Mnemonic Trick: Memory trick: link “Pardon” with “free from guilt responsibility”.\n📖 Source: PDF • page 10\n🎯 Target Word: Absolve (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the closest synonym of \"Egregious\"",
+      "options": {
+        "a": "Shocking",
+        "b": "Childish",
+        "c": "Skillful",
+        "d": "Amplify"
+      },
+      "answer": "a",
+      "solution": "Outstandingly bad or shocking\n\n💡 Mnemonic Trick: Memory trick: link “Shocking” with “Outstandingly shocking”.\n📖 Source: PDF • page 10\n🎯 Target Word: Egregious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the closest synonym of \"Gregarious\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Childish",
+        "c": "Amplify",
+        "d": "Sociable"
+      },
+      "answer": "d",
+      "solution": "Fond of company; sociable\n\n💡 Mnemonic Trick: Memory trick: link “Sociable” with “Fond company sociable”.\n📖 Source: PDF • page 10\n🎯 Target Word: Gregarious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the closest synonym of \"Laconic\"",
+      "options": {
+        "a": "Mysterious",
+        "b": "Amplify",
+        "c": "Concise",
+        "d": "Generous"
+      },
+      "answer": "c",
+      "solution": "Using very few words\n\n💡 Mnemonic Trick: Memory trick: link “Concise” with “Using very words”.\n📖 Source: PDF • page 10\n🎯 Target Word: Laconic (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the closest synonym of \"Magnanimous\"",
+      "options": {
+        "a": "Concise",
+        "b": "Erratic",
+        "c": "Pale",
+        "d": "Generous"
+      },
+      "answer": "d",
+      "solution": "Very generous and forgiving\n\n💡 Mnemonic Trick: Memory trick: link “Generous” with “Very generous forgiving”.\n📖 Source: PDF • page 10\n🎯 Target Word: Magnanimous (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 14,
+      "question": "Choose the closest synonym of \"Quarrel\"",
+      "options": {
+        "a": "Rash",
+        "b": "Feud",
+        "c": "Weak",
+        "d": "Hate"
+      },
+      "answer": "b",
+      "solution": "A heated argument or disagreement\n\n💡 Mnemonic Trick: Memory trick: link “Feud” with “heated argument disagreement”.\n📖 Source: PDF • page 10\n🎯 Target Word: Quarrel (n/v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the closest synonym of \"Ambiguous\"",
+      "options": {
+        "a": "Delay",
+        "b": "Vague",
+        "c": "Alert",
+        "d": "Annoy"
+      },
+      "answer": "b",
+      "solution": "Having more than one meaning; unclear\n\n💡 Mnemonic Trick: Memory trick: link “Vague” with “Having more than meaning unclear”.\n📖 Source: PDF • page 10\n🎯 Target Word: Ambiguous (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the closest synonym of \"Intransigent\"",
+      "options": {
+        "a": "Unyielding",
+        "b": "Skillful",
+        "c": "Submissive",
+        "d": "Stubbornness"
+      },
+      "answer": "a",
+      "solution": "Refusing to change one’s views or agree\n\n💡 Mnemonic Trick: Memory trick: link “Unyielding” with “Refusing change views agree”.\n📖 Source: PDF • page 14\n🎯 Target Word: Intransigent (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the closest synonym of \"Perfunctory\"",
+      "options": {
+        "a": "Humdrum",
+        "b": "Amplify",
+        "c": "Cursory",
+        "d": "Random"
+      },
+      "answer": "c",
+      "solution": "Done as a duty or formality, without interest, care, or effort\n\n💡 Mnemonic Trick: Memory trick: link “Cursory” with “Done duty formality, without interest,”.\n📖 Source: PDF • page 14\n🎯 Target Word: Perfunctory (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the closest synonym of \"Recreant\"",
+      "options": {
+        "a": "Coward",
+        "b": "Coarse",
+        "c": "Annoy",
+        "d": "Amplify"
+      },
+      "answer": "a",
+      "solution": "Lacking courage or loyalty\n\n💡 Mnemonic Trick: Memory trick: link “Coward” with “Lacking courage loyalty”.\n📖 Source: PDF • page 14\n🎯 Target Word: Recreant (n/adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the closest synonym of \"Malediction\"",
+      "options": {
+        "a": "Curse",
+        "b": "Harmful",
+        "c": "Annoy",
+        "d": "Delay"
+      },
+      "answer": "a",
+      "solution": "An expression wishing harm or evil upon someone\n\n💡 Mnemonic Trick: Memory trick: link “Curse” with “expression wishing harm evil upon”.\n📖 Source: PDF • page 14\n🎯 Target Word: Malediction (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the closest synonym of \"Proclivity\"",
+      "options": {
+        "a": "Tendency",
+        "b": "Decline",
+        "c": "Skillful",
+        "d": "Childish"
+      },
+      "answer": "a",
+      "solution": "A natural inclination or tendency, especially toward a particular behaviour\n\n💡 Mnemonic Trick: Memory trick: link “Tendency” with “natural inclination tendency, especially toward”.\n📖 Source: PDF • page 14\n🎯 Target Word: Proclivity (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    }
+  ]
+}

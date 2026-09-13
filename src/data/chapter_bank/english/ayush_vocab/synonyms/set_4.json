@@ -1,0 +1,392 @@
+{
+  "chapter_num": 4,
+  "chapter_title": "Synonyms - Set 4",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "ayush_vocab",
+  "topic_name": "synonyms",
+  "set_name": "set_4",
+  "is_test": true,
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Choose the closest synonym of \"Adulation\"",
+      "options": {
+        "a": "Tribute",
+        "b": "Articulate",
+        "c": "Skillful",
+        "d": "Flattery"
+      },
+      "answer": "d",
+      "solution": "Excessive admiration or praise, often insincere or overdone\n\n💡 Mnemonic Trick: Memory trick: link “Flattery” with “Excessive admiration praise, often insincere”.\n📖 Source: PDF • page 14\n🎯 Target Word: Adulation (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 2,
+      "question": "Choose the closest synonym of \"Incessant\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Continuous",
+        "c": "Childish",
+        "d": "Random"
+      },
+      "answer": "b",
+      "solution": "Continuing without interruption; never stopping\n\n💡 Mnemonic Trick: Memory trick: link “Continuous” with “Continuing without interruption never stopping”.\n📖 Source: PDF • page 14\n🎯 Target Word: Incessant (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 3,
+      "question": "Choose the closest synonym of \"Wistful\"",
+      "options": {
+        "a": "Nostalgic",
+        "b": "Meticulous",
+        "c": "Flattery",
+        "d": "Submissive"
+      },
+      "answer": "a",
+      "solution": "Having a sad, longing, or thoughtful desire, often mixed with regret or nostalgia\n\n💡 Mnemonic Trick: Memory trick: link “Nostalgic” with “Having sad, longing, thoughtful desire,”.\n📖 Source: PDF • page 14\n🎯 Target Word: Wistful (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 4,
+      "question": "Choose the closest synonym of \"Knavery\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Annoy",
+        "c": "Coarse",
+        "d": "Deceit"
+      },
+      "answer": "d",
+      "solution": "Dishonest or rogue-like behavior\n\n💡 Mnemonic Trick: Memory trick: link “Deceit” with “Dishonest rogue-like behavior”.\n📖 Source: PDF • page 14\n🎯 Target Word: Knavery (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the closest synonym of \"Capricious\"",
+      "options": {
+        "a": "Generous",
+        "b": "Erratic",
+        "c": "Amplify",
+        "d": "Promote"
+      },
+      "answer": "b",
+      "solution": "Changing suddenly and unpredictably\n\n💡 Mnemonic Trick: Memory trick: link “Erratic” with “Changing suddenly unpredictably”.\n📖 Source: PDF • page 14\n🎯 Target Word: Capricious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 6,
+      "question": "Choose the closest synonym of \"Fickle\"",
+      "options": {
+        "a": "Generous",
+        "b": "Erratic",
+        "c": "Unpredictable",
+        "d": "Inexperienced"
+      },
+      "answer": "c",
+      "solution": "Changing opinions, feelings, or loyalties frequently and without reason\n\n💡 Mnemonic Trick: Memory trick: link “Unpredictable” with “Changing opinions, feelings, loyalties frequently”.\n📖 Source: PDF • page 14\n🎯 Target Word: Fickle (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the closest synonym of \"Lackluster\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Exhaust",
+        "c": "Coward",
+        "d": "Humdrum"
+      },
+      "answer": "d",
+      "solution": "Lacking energy, enthusiasm, brightness, or interest\n\n💡 Mnemonic Trick: Memory trick: link “Humdrum” with “Lacking energy, enthusiasm, brightness, interest”.\n📖 Source: PDF • page 14\n🎯 Target Word: Lackluster (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the closest synonym of \"Brisk\"",
+      "options": {
+        "a": "Generous",
+        "b": "Erratic",
+        "c": "Energetic",
+        "d": "Exhaust"
+      },
+      "answer": "c",
+      "solution": "Quick, lively, and full of energy; active and vigorous\n\n💡 Mnemonic Trick: Memory trick: link “Energetic” with “Quick, lively, full energy active”.\n📖 Source: PDF • page 14\n🎯 Target Word: Brisk (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the closest synonym of \"Notorious\"",
+      "options": {
+        "a": "Renounce",
+        "b": "Origin",
+        "c": "Shocking",
+        "d": "Infamous"
+      },
+      "answer": "d",
+      "solution": "Well-known for something bad or negative\n\n💡 Mnemonic Trick: Memory trick: link “Infamous” with “Well-known something negative”.\n📖 Source: PDF • page 14\n🎯 Target Word: Notorious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the closest synonym of \"Garrulous\"",
+      "options": {
+        "a": "Talkative",
+        "b": "Decline",
+        "c": "Meticulous",
+        "d": "Persuasive"
+      },
+      "answer": "a",
+      "solution": "Excessively talkative, especially about trivial matters\n\n💡 Mnemonic Trick: Memory trick: link “Talkative” with “Excessively talkative, especially about trivial”.\n📖 Source: PDF • page 14\n🎯 Target Word: Garrulous (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the closest synonym of \"Acrimonious\"",
+      "options": {
+        "a": "Deceit",
+        "b": "Bitter",
+        "c": "Generous",
+        "d": "Erratic"
+      },
+      "answer": "b",
+      "solution": "Angry and bitter in tone, speech, or behavior\n\n💡 Mnemonic Trick: Memory trick: link “Bitter” with “Angry bitter tone, speech, behavior”.\n📖 Source: PDF • page 14\n🎯 Target Word: Acrimonious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the closest synonym of \"Blatant\"",
+      "options": {
+        "a": "Obvious",
+        "b": "Generous",
+        "c": "Meticulous",
+        "d": "Shocking"
+      },
+      "answer": "a",
+      "solution": "Very obvious and conspicuous, often in a bad or offensive way\n\n💡 Mnemonic Trick: Memory trick: link “Obvious” with “Very obvious conspicuous, often offensive”.\n📖 Source: PDF • page 14\n🎯 Target Word: Blatant (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the closest synonym of \"Recalcitrant\"",
+      "options": {
+        "a": "Rebellious",
+        "b": "Skillful",
+        "c": "Disobedient",
+        "d": "Childish"
+      },
+      "answer": "a",
+      "solution": "Stubbornly resistant to authority or control\n\n💡 Mnemonic Trick: Memory trick: link “Rebellious” with “Stubbornly resistant authority control”.\n📖 Source: PDF • page 14\n🎯 Target Word: Recalcitrant (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 14,
+      "question": "Choose the closest synonym of \"Abrogate\"",
+      "options": {
+        "a": "Annoy",
+        "b": "Coarse",
+        "c": "Repeal",
+        "d": "Reject"
+      },
+      "answer": "c",
+      "solution": "To formally abolish, annul, or repeal a law, agreement, or custom\n\n💡 Mnemonic Trick: Memory trick: link “Repeal” with “formally abolish, annul, repeal law,”.\n📖 Source: PDF • page 14\n🎯 Target Word: Abrogate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the closest synonym of \"Vigilant\"",
+      "options": {
+        "a": "Rash",
+        "b": "Annoy",
+        "c": "Delay",
+        "d": "Alert"
+      },
+      "answer": "d",
+      "solution": "Watchful\n\n💡 Mnemonic Trick: Memory trick: link “Alert” with “Watchful”.\n📖 Source: PDF • page 18\n🎯 Target Word: Vigilant (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the closest synonym of \"Obsequious\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Childish",
+        "c": "Submissive",
+        "d": "Amplify"
+      },
+      "answer": "c",
+      "solution": "Overly submissive, flattering\n\n💡 Mnemonic Trick: Memory trick: link “Submissive” with “Overly submissive, flattering”.\n📖 Source: PDF • page 18\n🎯 Target Word: Obsequious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the closest synonym of \"Pinnacle\"",
+      "options": {
+        "a": "Weak",
+        "b": "Hate",
+        "c": "Peak",
+        "d": "Rash"
+      },
+      "answer": "c",
+      "solution": "Highest point\n\n💡 Mnemonic Trick: Memory trick: link “Peak” with “Highest point”.\n📖 Source: PDF • page 18\n🎯 Target Word: Pinnacle (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the closest synonym of \"Cacophony\"",
+      "options": {
+        "a": "Promote",
+        "b": "Tirade",
+        "c": "Amplify",
+        "d": "Discord"
+      },
+      "answer": "d",
+      "solution": "Harsh noise\n\n💡 Mnemonic Trick: Memory trick: link “Discord” with “Harsh noise”.\n📖 Source: PDF • page 18\n🎯 Target Word: Cacophony (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the closest synonym of \"Deteriorate\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Worsen",
+        "c": "Coarse",
+        "d": "Annoy"
+      },
+      "answer": "b",
+      "solution": "Become worse\n\n💡 Mnemonic Trick: Memory trick: link “Worsen” with “Become worse”.\n📖 Source: PDF • page 18\n🎯 Target Word: Deteriorate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the closest synonym of \"Abstruse\"",
+      "options": {
+        "a": "Difficult",
+        "b": "Clear",
+        "c": "Childish",
+        "d": "Skillful"
+      },
+      "answer": "a",
+      "solution": "Hard to understand\n\n💡 Mnemonic Trick: Memory trick: link “Difficult” with “Hard understand”.\n📖 Source: PDF • page 18\n🎯 Target Word: Abstruse (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    }
+  ]
+}

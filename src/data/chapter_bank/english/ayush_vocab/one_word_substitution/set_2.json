@@ -1,0 +1,392 @@
+{
+  "chapter_num": 2,
+  "chapter_title": "One Word Substitution - Set 2",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "ayush_vocab",
+  "topic_name": "one_word_substitution",
+  "set_name": "set_2",
+  "is_test": true,
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "Choose the one-word substitution for: \"A person who can talk non-stop or can speak continuously.\"",
+      "options": {
+        "a": "Somniloquist (n)",
+        "b": "Garrulous (n)",
+        "c": "Recluse (n)",
+        "d": "Garrulous (adj)"
+      },
+      "answer": "d",
+      "solution": "A person who can talk non-stop or can speak continuously.\n\n💡 Mnemonic Trick: Memory trick: link “Garrulous (adj)” with “person talk non-stop speak continuously”.\n📖 Source: PDF • page 7\n🎯 Target Word: Garrulous (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 2,
+      "question": "Choose the one-word substitution for: \"A person who does not drink any alcohol.\"",
+      "options": {
+        "a": "Garrulous (n)",
+        "b": "Somniloquist (n)",
+        "c": "Teetotaler (n)",
+        "d": "Recluse (n)"
+      },
+      "answer": "c",
+      "solution": "A person who does not drink any alcohol.\n\n💡 Mnemonic Trick: Memory trick: link “Teetotaler (n)” with “person does drink alcohol”.\n📖 Source: PDF • page 7\n🎯 Target Word: Teetotaler (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 3,
+      "question": "Choose the one-word substitution for: \"A person who helps others through charity\"",
+      "options": {
+        "a": "Philanthropist (n)",
+        "b": "Cynic (n)",
+        "c": "Garrulous (n)",
+        "d": "Somniloquist (n)"
+      },
+      "answer": "a",
+      "solution": "A person who helps others through charity\n\n💡 Mnemonic Trick: Memory trick: link “Philanthropist (n)” with “person helps others through charity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Philanthropist (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 4,
+      "question": "Choose the one-word substitution for: \"One who always expects the worst\"",
+      "options": {
+        "a": "Pessimist (n)",
+        "b": "Recluse (n)",
+        "c": "Garrulous (n)",
+        "d": "Cobbler (n)"
+      },
+      "answer": "a",
+      "solution": "One who always expects the worst\n\n💡 Mnemonic Trick: Memory trick: link “Pessimist (n)” with “always expects worst”.\n📖 Source: PDF • page 12\n🎯 Target Word: Pessimist (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the one-word substitution for: \"Honesty and strong moral principles\"",
+      "options": {
+        "a": "Integrity (n)",
+        "b": "Abscond (v)",
+        "c": "Modesty (n)",
+        "d": "Apostate (n)"
+      },
+      "answer": "a",
+      "solution": "Honesty and strong moral principles\n\n💡 Mnemonic Trick: Memory trick: link “Integrity (n)” with “Honesty strong moral principles”.\n📖 Source: PDF • page 12\n🎯 Target Word: Integrity (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 6,
+      "question": "Choose the one-word substitution for: \"Humility and lack of vanity\"",
+      "options": {
+        "a": "Abeyance (n)",
+        "b": "Modesty (n)",
+        "c": "Ennui (n)",
+        "d": "Abscond (v)"
+      },
+      "answer": "b",
+      "solution": "Humility and lack of vanity\n\n💡 Mnemonic Trick: Memory trick: link “Modesty (n)” with “Humility lack vanity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Modesty (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the one-word substitution for: \"A short interesting story\"",
+      "options": {
+        "a": "Ephemeral (adj)",
+        "b": "Cliffhanger (n)",
+        "c": "Anecdote (n)",
+        "d": "Parable (n)"
+      },
+      "answer": "c",
+      "solution": "A short interesting story\n\n💡 Mnemonic Trick: Memory trick: link “Anecdote (n)” with “short interesting story”.\n📖 Source: PDF • page 12\n🎯 Target Word: Anecdote (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the one-word substitution for: \"Government by the wealthy\"",
+      "options": {
+        "a": "Autocracy (n)",
+        "b": "Matricide (n)",
+        "c": "Plutocracy (n)",
+        "d": "Facsimile (n)"
+      },
+      "answer": "c",
+      "solution": "Government by the wealthy\n\n💡 Mnemonic Trick: Memory trick: link “Plutocracy (n)” with “Government wealthy”.\n📖 Source: PDF • page 12\n🎯 Target Word: Plutocracy (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the one-word substitution for: \"Love of mankind; charity\"",
+      "options": {
+        "a": "Kleptomaniac (n)",
+        "b": "Anthropologist (n)",
+        "c": "Philanthropy (n)",
+        "d": "Embezzlement (n)"
+      },
+      "answer": "c",
+      "solution": "Love of mankind; charity\n\n💡 Mnemonic Trick: Memory trick: link “Philanthropy (n)” with “Love mankind charity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Philanthropy (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the one-word substitution for: \"Using long words\"",
+      "options": {
+        "a": "Embezzlement (n)",
+        "b": "Sesquipedalian (adj)",
+        "c": "Calligraphy (n)",
+        "d": "Kleptomaniac (n)"
+      },
+      "answer": "b",
+      "solution": "Using long words\n\n💡 Mnemonic Trick: Memory trick: link “Sesquipedalian (adj)” with “Using long words”.\n📖 Source: PDF • page 12\n🎯 Target Word: Sesquipedalian (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the one-word substitution for: \"Decorative handwriting\"",
+      "options": {
+        "a": "Kleptomaniac (n)",
+        "b": "Calligraphy (n)",
+        "c": "Plutocracy (n)",
+        "d": "Embezzlement (n)"
+      },
+      "answer": "b",
+      "solution": "Decorative handwriting\n\n💡 Mnemonic Trick: Memory trick: link “Calligraphy (n)” with “Decorative handwriting”.\n📖 Source: PDF • page 12\n🎯 Target Word: Calligraphy (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the one-word substitution for: \"Art of taking photographs\"",
+      "options": {
+        "a": "Calligraphy (n)",
+        "b": "Cartography (n)",
+        "c": "Photography (n)",
+        "d": "Embezzlement (n)"
+      },
+      "answer": "c",
+      "solution": "Art of taking photographs\n\n💡 Mnemonic Trick: Memory trick: link “Photography (n)” with “taking photographs”.\n📖 Source: PDF • page 12\n🎯 Target Word: Photography (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the one-word substitution for: \"Delaying tasks unnecessarily\"",
+      "options": {
+        "a": "Embezzlement (n)",
+        "b": "Calligraphy (n)",
+        "c": "Procrastination (n)",
+        "d": "Kleptomaniac (n)"
+      },
+      "answer": "c",
+      "solution": "Delaying tasks unnecessarily\n\n💡 Mnemonic Trick: Memory trick: link “Procrastination (n)” with “Delaying tasks unnecessarily”.\n📖 Source: PDF • page 12\n🎯 Target Word: Procrastination (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 14,
+      "question": "Choose the one-word substitution for: \"Discussion to reach agreement\"",
+      "options": {
+        "a": "Kleptomaniac (n)",
+        "b": "Calligraphy (n)",
+        "c": "Negotiation (n)",
+        "d": "Embezzlement (n)"
+      },
+      "answer": "c",
+      "solution": "Discussion to reach agreement\n\n💡 Mnemonic Trick: Memory trick: link “Negotiation (n)” with “Discussion reach agreement”.\n📖 Source: PDF • page 12\n🎯 Target Word: Negotiation (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the one-word substitution for: \"Temporary suspension\"",
+      "options": {
+        "a": "Facsimile (n)",
+        "b": "Matricide (n)",
+        "c": "Abeyance (n)",
+        "d": "Plutocracy (n)"
+      },
+      "answer": "c",
+      "solution": "Temporary suspension\n\n💡 Mnemonic Trick: Memory trick: link “Abeyance (n)” with “Temporary suspension”.\n📖 Source: PDF • page 12\n🎯 Target Word: Abeyance (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the one-word substitution for: \"Compulsive thief\"",
+      "options": {
+        "a": "Plutocracy (n)",
+        "b": "Calligraphy (n)",
+        "c": "Embezzlement (n)",
+        "d": "Kleptomaniac (n)"
+      },
+      "answer": "d",
+      "solution": "Compulsive thief\n\n💡 Mnemonic Trick: Memory trick: link “Kleptomaniac (n)” with “Compulsive thief”.\n📖 Source: PDF • page 12\n🎯 Target Word: Kleptomaniac (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the one-word substitution for: \"Person overly anxious about health\"",
+      "options": {
+        "a": "Somniloquist (n)",
+        "b": "Autocracy (n)",
+        "c": "Hypochondriac (n)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "c",
+      "solution": "Person overly anxious about health\n\n💡 Mnemonic Trick: Memory trick: link “Hypochondriac (n)” with “Person overly anxious about health”.\n📖 Source: PDF • page 12\n🎯 Target Word: Hypochondriac (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the one-word substitution for: \"The act of imitating someone&#x27;s speech, mannerisms, or actions for entertainment or ridicule\"",
+      "options": {
+        "a": "Interment (n)",
+        "b": "Arson (n)",
+        "c": "Mimicry (n)",
+        "d": "Impromptu (n)"
+      },
+      "answer": "c",
+      "solution": "The act of imitating someone's speech, mannerisms, or actions for entertainment or ridicule\n\n💡 Mnemonic Trick: Memory trick: link “Mimicry (n)” with “imitating someone speech, mannerisms, actions”.\n📖 Source: PDF • page 15\n🎯 Target Word: Mimicry (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the one-word substitution for: \"A communicable disease that can spread rapidly from person to person through direct contact\"",
+      "options": {
+        "a": "Autocracy (n)",
+        "b": "Philanthropist (n)",
+        "c": "Garrulous (n)",
+        "d": "Contagious (adj)"
+      },
+      "answer": "d",
+      "solution": "A communicable disease that can spread rapidly from person to person through direct contact\n\n💡 Mnemonic Trick: Memory trick: link “Contagious (adj)” with “communicable disease that spread rapidly”.\n📖 Source: PDF • page 15\n🎯 Target Word: Contagious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      }
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the one-word substitution for: \"In his extreme old age when he behaves like a fool\"",
+      "options": {
+        "a": "Elegy (n)",
+        "b": "Facsimile (n)",
+        "c": "Abeyance (n)",
+        "d": "Dotage (n)"
+      },
+      "answer": "d",
+      "solution": "In his extreme old age when he behaves like a fool\n\n💡 Mnemonic Trick: Memory trick: link “Dotage (n)” with “extreme when behaves like fool”.\n📖 Source: PDF • page 15\n🎯 Target Word: Dotage (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      }
+    }
+  ]
+}

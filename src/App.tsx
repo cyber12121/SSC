@@ -63,8 +63,8 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
     if (data.chapterBank) chapters.push(...data.chapterBank);
     if (data.mockErrors) chapters.push(...data.mockErrors);
 
-    // Determine section and topic from path (only applicable to Mathematics in chapter_bank)
-    let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | undefined = undefined;
+    // Determine section and topic from path (applicable to Mathematics and English in chapter_bank)
+    let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'general' | undefined = undefined;
     let topic_name: string | undefined = undefined;
     let set_name: string | undefined = undefined;
 
@@ -73,14 +73,17 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
       else if (path.includes('/mathematics/pinnacle/')) section = 'pinnacle';
       else if (path.includes('/mathematics/qrb/')) section = 'qrb';
       else if (path.includes('/mathematics/top500/')) section = 'top500';
+      else if (path.includes('/english/ayush_vocab/')) section = 'ayush_vocab';
+      else if (path.includes('/english/')) section = 'general';
 
-      if (section) {
-        const parts = path.split(`/${section}/`);
+      if (section && section !== 'general') {
+        const marker = section === 'ayush_vocab' ? '/ayush_vocab/' : `/${section}/`;
+        const parts = path.split(marker);
         if (parts.length > 1) {
-          const subPath = parts[1]; // e.g., "percentage/set_1.json" or "chapter_1.json"
+          const subPath = parts[1]; // e.g., "percentage/set_1.json" or "synonyms/set_1.json"
           const subParts = subPath.split('/');
           if (subParts.length >= 2) {
-            topic_name = subParts[0]; // "percentage"
+            topic_name = subParts[0]; // "percentage" or "synonyms"
             set_name = subParts[1].replace('.json', ''); // "set_1"
           }
         }
@@ -114,6 +117,11 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
         chapter.is_test = true;
         chapter.subject = 'General Awareness';
         subject = 'General Awareness';
+      }
+
+      if (path.includes('/english/')) {
+        chapter.subject = 'English';
+        subject = 'English';
       }
 
       if (section) {
@@ -243,6 +251,7 @@ export default function App() {
   };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
+  const [selectedEnglishSection, setSelectedEnglishSection] = useState<'ayush_vocab' | 'general' | null>(null);
   const [selectedGKSubject, setSelectedGKSubject] = useState<GKSubjectId | null>(null);
   const [selectedGKSubTopic, setSelectedGKSubTopic] = useState<string>('all');
   const [mockGKFilter, setMockGKFilter] = useState<string>('all');
@@ -629,6 +638,7 @@ export default function App() {
       setView('home');
       setSelectedSubject(null);
       setSelectedMathSection(null);
+      setSelectedEnglishSection(null);
       setSelectedGKSubject(null);
       setSelectedGKSubTopic('all');
       setSelectedTopic(null);
@@ -1174,7 +1184,7 @@ export default function App() {
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
         <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedEnglishSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
               <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
                 <GraduationCap className="text-white w-5 h-5" />
               </div>
@@ -1192,14 +1202,14 @@ export default function App() {
             
             <div className="hidden md:flex items-center space-x-6">
               <button 
-                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedEnglishSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
                 className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <BookOpen className="w-4 h-4 mr-1.5" />
                 Practice
               </button>
               <button 
-                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedEnglishSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
                 className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <Zap className="w-4 h-4 mr-1.5" />
@@ -1374,6 +1384,13 @@ export default function App() {
                                   setSelectedGKSubject(null);
                                   setSelectedGKSubTopic('all');
                                 }
+                                if (subject === 'Mathematics') {
+                                  setSelectedMathSection(null);
+                                }
+                                if (subject === 'English') {
+                                  setSelectedEnglishSection(null);
+                                }
+                                setSelectedTopic(null);
                               }}
                               className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs flex flex-col justify-between"
                             >
@@ -1410,6 +1427,35 @@ export default function App() {
                                       {sub.shortTitle}
                                     </button>
                                   ))}
+                                </div>
+                              )}
+
+                              {subject === 'English' && (
+                                <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setSelectedSubject('English');
+                                      setSelectedEnglishSection('ayush_vocab');
+                                      setSelectedTopic(null);
+                                    }}
+                                    className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 transition-colors"
+                                    title="Open SSC 2025 Vocabs by Ayush"
+                                  >
+                                    Vocab 2025 (914 Qs)
+                                  </button>
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setSelectedSubject('English');
+                                      setSelectedEnglishSection('general');
+                                      setSelectedTopic(null);
+                                    }}
+                                    className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
+                                    title="Open Grammar & Practice"
+                                  >
+                                    Grammar
+                                  </button>
                                 </div>
                               )}
                             </motion.div>
@@ -1571,7 +1617,7 @@ export default function App() {
                             {[
                               { sub: 'Mathematics', title: 'Percentage & Profit Loss', count: 'High Yield', icon: Calculator, color: 'text-blue-600 bg-blue-50' },
                               { sub: 'Reasoning', title: 'Coding-Decoding & Analogy', count: 'High Yield', icon: Compass, color: 'text-purple-600 bg-purple-50' },
-                              { sub: 'English', title: 'Error Spotting & Grammar', count: 'Core Rules', icon: Languages, color: 'text-emerald-600 bg-emerald-50' },
+                              { sub: 'English', title: 'SSC 2025 Vocabs (by Ayush)', count: '914 High-Yield Qs', icon: Sparkles, color: 'text-emerald-600 bg-emerald-50' },
                               { sub: 'General Awareness', title: 'Indian Polity & Constitution', count: 'Frequent', icon: Globe2, color: 'text-amber-600 bg-amber-50' },
                             ].map((s, idx) => {
                               const SIcon = s.icon;
@@ -1752,6 +1798,83 @@ export default function App() {
                       })}
                     </div>
                   </div>
+                ) : selectedSubject === 'English' && category === 'chapterBank' && !selectedEnglishSection ? (
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                      <div className="flex items-center gap-2.5">
+                        <button
+                          onClick={() => setSelectedSubject(null)}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" />
+                          Subjects
+                        </button>
+                        <div>
+                          <h2 className="text-sm font-bold text-slate-900 tracking-tight">English Language & Comprehension</h2>
+                          <p className="text-[11px] text-slate-500 font-medium">Choose a practice section or specialized vocabulary vault</p>
+                        </div>
+                      </div>
+                      <span className="rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        English Vault
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                      {([
+                        {
+                          key: 'ayush_vocab',
+                          icon: Sparkles,
+                          chip: 'from-emerald-500 to-teal-600',
+                          badge: 'SSC 2025 Edition',
+                          title: 'All Vocabs SSC 2025 - by Ayush',
+                          desc: '914 High-Yield questions organized into sets of 20. Full coverage of Synonyms, Antonyms, One Word Substitution, Idioms & Phrases, and Spellings with mnemonics.',
+                          count: `${(currentData['English'] || []).filter(ch => ch.section === 'ayush_vocab').reduce((acc, ch) => acc + (ch.questions?.length || 0), 0)} Questions • ${(currentData['English'] || []).filter(ch => ch.section === 'ayush_vocab').length} Sets of 20`
+                        },
+                        {
+                          key: 'general',
+                          icon: BookOpen,
+                          chip: 'from-blue-500 to-indigo-600',
+                          badge: 'Grammar & Core',
+                          title: 'Grammar & Chapter Practice',
+                          desc: 'Topic-wise grammar fundamentals, rule revisions, and chapter-wise question bank.',
+                          count: `${(currentData['English'] || []).filter(ch => ch.section !== 'ayush_vocab').length} Chapters`
+                        }
+                      ] as const).map(({ key, icon: Icon, chip, badge, title, desc, count }) => (
+                        <motion.div
+                          key={key}
+                          whileHover={{ y: -2 }}
+                          onClick={() => { setSelectedEnglishSection(key); setSelectedTopic(null); }}
+                          className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-4 transition-all duration-200 hover:border-emerald-300 hover:shadow-md flex flex-col justify-between shadow-xs"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2.5">
+                                <div className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
+                                  <Icon className="w-4.5 h-4.5" />
+                                </div>
+                                <div>
+                                  <h3 className="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">{title}</h3>
+                                  <span className="inline-block text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 mt-0.5">
+                                    {badge}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <p className="mt-2.5 text-xs text-slate-500 leading-relaxed">{desc}</p>
+                          </div>
+                          <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+                            <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[11px] font-semibold text-slate-500">
+                              {count}
+                            </span>
+                            <div className="flex items-center text-xs font-bold text-emerald-600">
+                              Enter Section
+                              <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
                 ) : (
                   <div className="space-y-4">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-xs">
@@ -1765,6 +1888,8 @@ export default function App() {
                               setSelectedGKSubTopic('all');
                             } else if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
                               setSelectedMathSection(null);
+                            } else if (selectedSubject === 'English' && category === 'chapterBank') {
+                              setSelectedEnglishSection(null);
                             } else {
                               setSelectedSubject(null);
                             }
@@ -1776,12 +1901,18 @@ export default function App() {
                             ? 'Topics'
                             : (selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
                               ? 'GK Subjects'
-                              : (selectedSubject === 'Mathematics' && category === 'chapterBank' ? 'Math Sections' : 'Subjects'))}
+                              : (selectedSubject === 'Mathematics' && category === 'chapterBank'
+                                ? 'Math Sections'
+                                : (selectedSubject === 'English' && category === 'chapterBank'
+                                  ? 'English Sections'
+                                  : 'Subjects')))}
                         </button>
                         <div>
                           <h2 className="text-sm font-bold text-slate-900 tracking-tight">
                             {selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
                               ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.title
+                              : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
+                              ? 'All Vocabs SSC 2025 - by Ayush'
                               : selectedSubject}
                           </h2>
                           <p className="text-[11px] text-slate-500 font-medium">
@@ -1789,6 +1920,8 @@ export default function App() {
                               ? 'Mock error remediation & weak topic drills'
                               : selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
                               ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.desc
+                              : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
+                              ? '914 High-Yield SSC 2025 vocabulary questions in sets of 20'
                               : 'Comprehensive chapter-wise question vault'}
                           </p>
                         </div>
@@ -2241,6 +2374,13 @@ export default function App() {
                             if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
                               return chapter.section === selectedMathSection;
                             }
+                            if (selectedSubject === 'English' && category === 'chapterBank') {
+                              if (selectedEnglishSection === 'ayush_vocab') {
+                                return chapter.section === 'ayush_vocab';
+                              } else {
+                                return chapter.section !== 'ayush_vocab';
+                              }
+                            }
                             if (selectedSubject === 'General Awareness' && category === 'chapterBank') {
                               if (selectedGKSubject === 'full_tests') {
                                 if (!chapter.is_test && chapter.subject !== 'GK Full Tests') return false;
@@ -2262,33 +2402,68 @@ export default function App() {
                           });
 
                           const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
+                          const isEnglishVocabSection = selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab';
+                          const isTopicLevelSection = isMathSection || isEnglishVocabSection;
 
-                          if (isMathSection && !selectedTopic) {
+                          if (isTopicLevelSection && !selectedTopic) {
                             const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
-                            topics.sort((a, b) => a.localeCompare(b));
+                            if (isEnglishVocabSection) {
+                              const vocabOrder = ['synonyms', 'antonyms', 'one_word_substitution', 'idioms_and_phrases', 'spellings'];
+                              topics.sort((a, b) => {
+                                const idxA = vocabOrder.indexOf(a);
+                                const idxB = vocabOrder.indexOf(b);
+                                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                                return a.localeCompare(b);
+                              });
+                            } else {
+                              topics.sort((a, b) => a.localeCompare(b));
+                            }
 
                             return topics.map((topic, idx) => {
                               const topicChapters = relevantChapters.filter(ch => ch.topic_name === topic);
-                              const displayTitle = topic.replace(/_/g, ' ');
+                              const totalQuestions = topicChapters.reduce((acc, ch) => acc + (ch.questions?.length || 0), 0);
+                              const displayTitle = isEnglishVocabSection
+                                ? (topic === 'synonyms' ? 'Synonyms'
+                                  : topic === 'antonyms' ? 'Antonyms'
+                                  : topic === 'one_word_substitution' ? 'One Word Substitution'
+                                  : topic === 'idioms_and_phrases' ? 'Idioms & Phrases'
+                                  : topic === 'spellings' ? 'Spellings'
+                                  : topic.replace(/_/g, ' '))
+                                : topic.replace(/_/g, ' ');
+
+                              const chipGrad = isEnglishVocabSection
+                                ? (topic === 'synonyms' ? 'from-emerald-500 to-teal-600'
+                                  : topic === 'antonyms' ? 'from-cyan-500 to-blue-600'
+                                  : topic === 'one_word_substitution' ? 'from-violet-500 to-purple-600'
+                                  : topic === 'idioms_and_phrases' ? 'from-amber-500 to-orange-600'
+                                  : 'from-rose-500 to-pink-600')
+                                : 'from-indigo-500 to-violet-600';
 
                               return (
                                 <motion.div
                                   key={idx}
                                   whileHover={{ y: -2 }}
                                   onClick={() => setSelectedTopic(topic)}
-                                  className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md shadow-xs flex flex-col justify-between"
+                                  className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${
+                                    isEnglishVocabSection ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
+                                  } hover:shadow-md shadow-xs flex flex-col justify-between`}
                                 >
                                   <div className="flex items-center justify-between">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-xs">
-                                      <Layers className="w-4 h-4" />
+                                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chipGrad} text-white shadow-xs`}>
+                                      {isEnglishVocabSection ? <Sparkles className="w-4 h-4" /> : <Layers className="w-4 h-4" />}
                                     </div>
-                                    <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
-                                      {topicChapters.length} Sets
-                                    </span>
+                                    <div className="flex items-center gap-1.5">
+                                      <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
+                                        {topicChapters.length} Sets
+                                      </span>
+                                      <span className="rounded-md bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-100">
+                                        {totalQuestions} Qs
+                                      </span>
+                                    </div>
                                   </div>
                                   <h3 className="mt-2.5 text-xs font-bold capitalize text-slate-800">{displayTitle}</h3>
-                                  <div className="mt-2 flex items-center text-xs font-semibold text-indigo-600">
-                                    View Sets
+                                  <div className={`mt-2 flex items-center text-xs font-semibold ${isEnglishVocabSection ? 'text-emerald-600' : 'text-indigo-600'}`}>
+                                    View Sets (20 Qs each)
                                     <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                   </div>
                                 </motion.div>
@@ -2296,7 +2471,7 @@ export default function App() {
                             });
                           }
 
-                          let chaptersToRender = isMathSection && selectedTopic
+                          let chaptersToRender = isTopicLevelSection && selectedTopic
                             ? relevantChapters.filter(ch => ch.topic_name === selectedTopic)
                             : relevantChapters;
 
@@ -2306,6 +2481,8 @@ export default function App() {
                               if (!a.is_test && b.is_test) return -1;
                               return (a.chapter_num || 0) - (b.chapter_num || 0);
                             });
+                          } else if (isEnglishVocabSection) {
+                            chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
                           }
 
                           if (chaptersToRender.length === 0) {
@@ -2321,22 +2498,30 @@ export default function App() {
                               key={idx}
                               whileHover={{ y: -2 }}
                               onClick={() => startQuiz(chapter)}
-                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 hover:border-indigo-300 hover:shadow-md shadow-xs flex flex-col justify-between"
+                              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${
+                                chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
+                              } hover:shadow-md shadow-xs flex flex-col justify-between`}
                             >
                               <div className="flex items-center justify-between">
                                 <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${
-                                  chapter.is_test
+                                  chapter.section === 'ayush_vocab'
+                                    ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
+                                    : chapter.is_test
                                     ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
                                     : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
                                 } shadow-xs`}>
-                                  {chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+                                  {chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
                                 </div>
                                 <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${
-                                  chapter.is_test
+                                  chapter.section === 'ayush_vocab'
+                                    ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                                    : chapter.is_test
                                     ? 'bg-amber-50 text-amber-700 border border-amber-200'
                                     : 'bg-slate-50 text-slate-500'
                                 }`}>
-                                  {chapter.is_test
+                                  {chapter.section === 'ayush_vocab'
+                                    ? `Set ${chapter.chapter_num}`
+                                    : chapter.is_test
                                     ? 'Full Test'
                                     : chapter.set_name
                                     ? `Set ${chapter.set_name.replace('set_', '')}`
@@ -2350,8 +2535,8 @@ export default function App() {
                                 </p>
                               </div>
                               <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
-                                <div className="flex items-center text-xs font-semibold text-indigo-600">
-                                  Start Practice
+                                <div className={`flex items-center text-xs font-semibold ${chapter.section === 'ayush_vocab' ? 'text-emerald-600' : 'text-indigo-600'}`}>
+                                  Start Set
                                   <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                 </div>
                                 {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
