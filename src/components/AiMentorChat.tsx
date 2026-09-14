@@ -56,8 +56,8 @@ function FormattedMessage({ content }: { content: string }) {
   let tableBuffer: string[] = [];
 
   const formatInline = (text: string) => {
-    // Bold: **text**
-    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
+    // Math formulas: $...$, bold: **...**, italic: *...*, code: `...`
+    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`|\$[^\$]+?\$)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={i} className="font-semibold text-slate-900">{part.slice(2, -2)}</strong>;
@@ -70,6 +70,20 @@ function FormattedMessage({ content }: { content: string }) {
           <code key={i} className="px-1.5 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-mono text-xs border border-indigo-100/60">
             {part.slice(1, -1)}
           </code>
+        );
+      }
+      if (part.startsWith('$') && part.endsWith('$')) {
+        const mathClean = part.slice(1, -1)
+          .replace(/\\text\{([^}]+)\}/g, '$1')
+          .replace(/\\rightarrow|\\to/g, '→')
+          .replace(/\\times/g, '×')
+          .replace(/\\Delta/g, 'Δ')
+          .replace(/\\le/g, '≤')
+          .replace(/\\ge/g, '≥');
+        return (
+          <span key={i} className="px-1.5 py-0.2 mx-0.5 rounded bg-amber-50 text-amber-900 font-medium font-mono text-[11px] border border-amber-200/70 inline-block shadow-2xs">
+            {mathClean}
+          </span>
         );
       }
       return part;

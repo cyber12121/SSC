@@ -24,19 +24,30 @@ HOW TO ANSWER:
 - When explaining mathematical or reasoning questions, clearly demonstrate the conceptual approach followed by shortcut tricks or elimination methods.
 - For English questions, explain the underlying grammatical rule or contextual vocabulary clue.
 - When asked for a study plan or improvement advice, give clear day-wise or priority-based steps with concrete targets (e.g., target accuracy > 85%, cutoff benchmarks).
+- Language Flexibility: You are fluent in English, Hindi, and Hinglish. If the candidate asks in Hindi or Hinglish (e.g., "English me score kaise improve kare?", "maths ke weak topics batao"), respond naturally in warm, motivating Hinglish with English terminology for SSC concepts.
+- Question Number Precision: When the candidate asks about a specific question number (e.g. "question 4", "Q9", "#12"), specifically inspect and explain that exact question from the active test or candidate's error history.
 - Format responses beautifully using Markdown: bold key terms, use bullet points, tables when presenting comparisons or schedules, and clean math notation.`;
 
 // Question Searcher across mock questions and mock errors
 function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
-  if (!queryText || queryText.trim().length < 3) return [];
+  if (!queryText || queryText.trim().length < 2) return [];
   const results: any[] = [];
   const qLower = queryText.toLowerCase().trim();
 
+  // Extract explicit question number if present e.g. "question 4", "q 9", "#12"
+  const qNumMatch = qLower.match(/\b(?:question|q)\s*#?\s*(\d+)\b/i) || qLower.match(/#(\d+)\b/);
+  const targetQNum = qNumMatch ? parseInt(qNumMatch[1], 10) : null;
+
   // Words to ignore in matching
-  const stopWords = new Set(['what', 'which', 'where', 'when', 'how', 'why', 'give', 'show', 'tell', 'explain', 'question', 'solution', 'mock', 'data', 'this', 'that', 'with', 'from']);
+  const stopWords = new Set(['what', 'which', 'where', 'when', 'how', 'why', 'give', 'show', 'tell', 'explain', 'solution', 'mock', 'data', 'this', 'that', 'with', 'from']);
   const keywords = qLower.split(/\s+/).filter(w => w.length >= 3 && !stopWords.has(w));
 
-  const isMatch = (text: string, topic: string, sol: string) => {
+  const isMatch = (text: string, topic: string, sol: string, qNumStr?: string | number) => {
+    // Explicit question number match
+    if (targetQNum !== null && qNumStr !== undefined && qNumStr !== null) {
+      const parsedNum = typeof qNumStr === 'number' ? qNumStr : parseInt(String(qNumStr).replace(/[^0-9]/g, ''), 10);
+      if (parsedNum === targetQNum) return true;
+    }
     // Exact phrase match
     if (text.includes(qLower) || topic.includes(qLower) || sol.includes(qLower)) return true;
     // Keyword match
@@ -58,7 +69,7 @@ function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
             const text = (q.question || '').toLowerCase();
             const topic = (q.tags?.topic || q.topic || '').toLowerCase();
             const sol = (q.solution || '').toLowerCase();
-            if (isMatch(text, topic, sol)) {
+            if (isMatch(text, topic, sol, q.q_num)) {
               results.push({
                 source: `Mock Errors (${ch.subject || file.replace('.json', '')})`,
                 topic: q.tags?.topic || q.topic,
@@ -86,7 +97,7 @@ function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
           const text = (item.questionText || item.question || '').toLowerCase();
           const topic = (item.topic || '').toLowerCase();
           const sol = (item.solution || '').toLowerCase();
-          if (isMatch(text, topic, sol)) {
+          if (isMatch(text, topic, sol, item.questionNumber || item.q_num)) {
             results.push({
               source: `Mock Test Question (${item.subject || 'General'})`,
               topic: item.topic,
