@@ -155,6 +155,44 @@ ${topWeakTopics.length > 0 ? topWeakTopics.join('\n') : '- Topic error patterns 
 RECENT MOCK RESULTS LOG:
 ${recentMocks.join('\n')}`;
 
+  // Ingest RCA Classification Data & Silly Mistake Logs
+  try {
+    if (typeof window !== 'undefined') {
+      const rcaRaw = window.localStorage?.getItem('cgl_rca_global_store');
+      if (rcaRaw) {
+        const rcaStore = JSON.parse(rcaRaw);
+        const entries = Object.values(rcaStore) as any[];
+        if (entries.length > 0) {
+          const counts = { C: 0, A: 0, T: 0, G: 0 };
+          const sillyNotes: string[] = [];
+
+          entries.forEach(item => {
+            if (item?.tag && counts[item.tag as keyof typeof counts] !== undefined) {
+              counts[item.tag as keyof typeof counts]++;
+            }
+            if (item?.tag === 'A' && item?.sillyMistakeNote && typeof item.sillyMistakeNote === 'string' && item.sillyMistakeNote.trim()) {
+              const topicStr = item.topic ? `[${item.subject || 'General'} • ${item.topic}]` : '';
+              sillyNotes.push(`${topicStr} "${item.sillyMistakeNote.trim()}"`);
+            }
+          });
+
+          summary += `\n\nROOT CAUSE ANALYSIS (RCA) ERROR AUDIT:
+• Total Classified Errors: ${entries.length} questions
+  - [C] Conceptual Gaps: ${counts.C} questions (formulas forgotten / concepts unclear)
+  - [A] Silly Mistakes: ${counts.A} questions (calculation slip, misread question, rushed)
+  - [T] Time / Ego Traps: ${counts.T} questions (spent too much time / failed to skip early)
+  - [G] Guesswork Failed: ${counts.G} questions (50-50 hunch went wrong)`;
+
+          if (sillyNotes.length > 0) {
+            summary += `\n\nCANDIDATE'S RECORDED SILLY MISTAKE LOG (Exact student notes):
+${sillyNotes.slice(-6).map(n => `- ${n}`).join('\n')}
+(Help the candidate overcome these specific recurring calculation or comprehension habits!)`;
+          }
+        }
+      }
+    }
+  } catch {}
+
   if (activeMockReport) {
     summary += `\n\nCURRENTLY ACTIVE MOCK REPORT BEING REVIEWED BY CANDIDATE:
 • Mock Title: "${activeMockReport.title}"

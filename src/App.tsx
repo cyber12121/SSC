@@ -3520,6 +3520,11 @@ export default function App() {
                     setQuizMode(mode || quizMode || 'practice');
                     startQuiz(chapter);
                   }}
+                  onReviewMock={(quizResult: QuizResult) => {
+                    setReviewResult(quizResult);
+                    setReviewBackTo('mockScores');
+                    setView('review');
+                  }}
                 />
               </React.Suspense>
             </motion.div>

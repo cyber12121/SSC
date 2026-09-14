@@ -21,15 +21,24 @@ import {
   Calculator,
   Compass,
   BookOpen,
-  HelpCircle
+  HelpCircle,
+  Eye
 } from 'lucide-react';
 import { MockScoreReport, SectionScore } from '../types/mockScore';
-import { Chapter, Question, SubjectData } from '../types';
+import { Chapter, Question, SubjectData, QuizResult, QuestionProgress } from '../types';
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
 const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
+
+const normalizeSubName = (raw: string = '') => {
+  if (/reason|intel/i.test(raw)) return 'Reasoning';
+  if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
+  if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
+  if (/eng/i.test(raw)) return 'English';
+  return 'Other';
+};
 
 export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): MockScoreReport {
   const normalizeSubject = (raw: string) => {
@@ -320,18 +329,21 @@ interface MockScoreDashboardProps {
   onBack?: () => void;
   mockData?: SubjectData;
   onStartPracticeMock?: (chapter: Chapter, mode?: 'practice' | 'mock') => void;
+  onReviewMock?: (result: QuizResult) => void;
 }
 
 export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   onBack,
   mockData,
-  onStartPracticeMock
+  onStartPracticeMock,
+  onReviewMock
 }) => {
   const [activeTab, setActiveTab] = useState<'full' | 'sectional'>('full');
   const [reports, setReports] = useState<MockScoreReport[]>([]);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [practicingId, setPracticingId] = useState<string | null>(null);
+  const [reviewingId, setReviewingId] = useState<string | null>(null);
   const [modalQuizMode, setModalQuizMode] = useState<'practice' | 'mock'>('practice');
 
   // Section-Wise Practice Modal State
@@ -852,6 +864,194 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     openPracticeModal(report, 'all');
   };
 
+  const handleReviewMock = async (report: MockScoreReport) => {
+    if (!onReviewMock) return;
+    setReviewingId(report.id);
+    try {
+      const rawList = await loadRawMockQuestions(report);
+      if (!rawList || rawList.length === 0) {
+        alert('Could not find question data for this mock test. Please re-import or re-take the mock.');
+        return;
+      }
+
+      // Load existing RCA classifications from localStorage if any
+      let rcaMap: Record<string, any> = {};
+      try {
+        const savedRca = localStorage.getItem(`cgl_rca_${report.id}`) || localStorage.getItem(`cgl_rca_${report.title}`);
+        if (savedRca) rcaMap = JSON.parse(savedRca);
+      } catch {}
+
+      const formattedQuestions: Question[] = rawList.map((item, idx) => {
+        const rawSub = item.subject || item.section || item.subjectName || (report.type === 'sectional' && report.subject ? report.subject : 'Quantitative Aptitude');
+        const subjectName = normalizeSubName(rawSub);
+
+        let options: { a: string; b: string; c: string; d: string } = { a: '', b: '', c: '', d: '' };
+        if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
+          options = {
+            a: String(item.options.a || item.options['1'] || item.options.A || '').trim(),
+            b: String(item.options.b || item.options['2'] || item.options.B || '').trim(),
+            c: String(item.options.c || item.options['3'] || item.options.C || '').trim(),
+            d: String(item.options.d || item.options['4'] || item.options.D || '').trim()
+          };
+        } else if (Array.isArray(item.options)) {
+          options = {
+            a: typeof item.options[0] === 'object' ? String(item.options[0]?.text || item.options[0]?.value || item.options[0]?.val || '') : String(item.options[0] || ''),
+            b: typeof item.options[1] === 'object' ? String(item.options[1]?.text || item.options[1]?.value || item.options[1]?.val || '') : String(item.options[1] || ''),
+            c: typeof item.options[2] === 'object' ? String(item.options[2]?.text || item.options[2]?.value || item.options[2]?.val || '') : String(item.options[2] || ''),
+            d: typeof item.options[3] === 'object' ? String(item.options[3]?.text || item.options[3]?.value || item.options[3]?.val || '') : String(item.options[3] || '')
+          };
+        }
+
+        let ans: 'a' | 'b' | 'c' | 'd' = 'a';
+        const rawAns = item.answer || item.correctOption || item.correct_option || item.correctAnswer || item.right_answer || item.ans || '';
+        const strAns = String(rawAns).trim().toLowerCase();
+        if (strAns === 'a' || strAns === '1' || strAns === 'option a' || strAns === 'opt a') ans = 'a';
+        else if (strAns === 'b' || strAns === '2' || strAns === 'option b' || strAns === 'opt b') ans = 'b';
+        else if (strAns === 'c' || strAns === '3' || strAns === 'option c' || strAns === 'opt c') ans = 'c';
+        else if (strAns === 'd' || strAns === '4' || strAns === 'option d' || strAns === 'opt d') ans = 'd';
+        else {
+          if (options.a && strAns === options.a.trim().toLowerCase()) ans = 'a';
+          else if (options.b && strAns === options.b.trim().toLowerCase()) ans = 'b';
+          else if (options.c && strAns === options.c.trim().toLowerCase()) ans = 'c';
+          else if (options.d && strAns === options.d.trim().toLowerCase()) ans = 'd';
+        }
+
+        // Fallback for "N/A" correctOption: extract from solution
+        if (strAns === 'n/a' || !strAns || (!options[ans] && strAns !== 'a')) {
+          const sol = String(item.solution || item.explanation || item.sol || '').toLowerCase();
+          const m = sol.match(/correct\s*(?:answer|option)\s*(?:is|=|:)?\s*["']?(?:option\s*)?([1-4a-d])/i);
+          if (m) {
+            const v = m[1].toLowerCase();
+            if (v === '1' || v === 'a') ans = 'a';
+            else if (v === '2' || v === 'b') ans = 'b';
+            else if (v === '3' || v === 'c') ans = 'c';
+            else if (v === '4' || v === 'd') ans = 'd';
+          } else {
+            (['a', 'b', 'c', 'd'] as const).forEach(k => {
+              const optVal = options[k]?.toLowerCase().trim();
+              if (optVal && optVal.length > 0 && (sol.includes(`"${optVal}"`) || sol.includes(`'${optVal}'`))) {
+                ans = k;
+              }
+            });
+          }
+        }
+
+        const solution = (item.solution || item.explanation || item.sol || '').trim();
+        const rawT = item.topic || item.tags?.topic;
+        const topicText = rawT ? normalizeTopicTitle(rawT) : 'General';
+
+        const qId = item.id || `mock_q_${idx + 1}_${report.id}`;
+        const existingRca = item.rca || rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)];
+
+        return {
+          id: qId,
+          q_num: idx + 1,
+          question: (item.question || item.questionText || item.qText || `Question ${idx + 1}`).trim(),
+          options,
+          answer: ans,
+          solution: solution || undefined,
+          image: item.image || null,
+          subject: subjectName,
+          tags: {
+            topic: topicText,
+            difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
+          },
+          avgTime: item.avgTime || item.avg_time || item.avgTimeSeconds || 45,
+          rca: existingRca
+        };
+      });
+
+      const questionDetails: QuestionProgress[] = rawList.map((item, idx) => {
+        const q = formattedQuestions[idx];
+        const status = getMockQuestionStatus(item);
+        const isSlow = status === 'slow';
+        const isCorrect = status === 'correct' || isSlow;
+        const isUnattempted = status === 'unattempted';
+        const isWrong = status === 'wrong';
+
+        let selected = '';
+        const rawUser = String(
+          item.userAnswer ??
+          item.user_answer ??
+          item.selected ??
+          item.selectedAnswer ??
+          item.chosenOption ??
+          item.chosen_option ??
+          item.yourOption ??
+          item.your_option ??
+          item.markedOption ??
+          item.marked_option ??
+          item.userAttempt ??
+          item.givenAnswer ??
+          item.given_answer ??
+          item.candidateAnswer ??
+          item.myAnswer ??
+          ''
+        ).trim().toLowerCase();
+
+        if (rawUser === 'a' || rawUser === '1' || rawUser === 'option a' || rawUser === 'opt a') selected = 'a';
+        else if (rawUser === 'b' || rawUser === '2' || rawUser === 'option b' || rawUser === 'opt b') selected = 'b';
+        else if (rawUser === 'c' || rawUser === '3' || rawUser === 'option c' || rawUser === 'opt c') selected = 'c';
+        else if (rawUser === 'd' || rawUser === '4' || rawUser === 'option d' || rawUser === 'opt d') selected = 'd';
+        else if (q.options) {
+          if (q.options.a && rawUser === q.options.a.trim().toLowerCase()) selected = 'a';
+          else if (q.options.b && rawUser === q.options.b.trim().toLowerCase()) selected = 'b';
+          else if (q.options.c && rawUser === q.options.c.trim().toLowerCase()) selected = 'c';
+          else if (q.options.d && rawUser === q.options.d.trim().toLowerCase()) selected = 'd';
+        }
+
+        if (!selected) {
+          if (isCorrect) {
+            selected = q.answer;
+          } else if (isWrong) {
+            // Student made a wrong choice; select alternate option so Review shows incorrect attempt
+            const altOptions: ('a' | 'b' | 'c' | 'd')[] = (['a', 'b', 'c', 'd'] as const).filter(k => k !== q.answer);
+            selected = altOptions[0] || 'b';
+          }
+        }
+
+        const timeSpent = Number(item.timeSpent || item.timeTaken || item.time_spent || item.time || (isSlow ? 65 : 35));
+
+        return {
+          q_num: idx + 1,
+          timeSpent,
+          isCorrect,
+          selectedAnswer: isUnattempted ? '' : selected,
+          status: isSlow ? 'slow' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
+          errorType: isSlow ? 'slow' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
+          isSlow,
+          avgTime: q.avgTime,
+          avgTimeSeconds: typeof q.avgTime === 'number' ? q.avgTime : undefined,
+          question: q,
+          rca: q.rca
+        };
+      });
+
+      const totalTime = questionDetails.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
+
+      const reviewQuizResult: QuizResult = {
+        id: report.id,
+        userId: 'mock_candidate',
+        chapter_title: report.title,
+        subject: report.type === 'sectional' && report.subject ? report.subject : 'All 4 Sections Mock',
+        category: 'mockErrors',
+        mode: 'mock',
+        score: report.totalScore,
+        totalQuestions: formattedQuestions.length,
+        totalTime,
+        completedAt: report.date || new Date().toISOString(),
+        questionDetails
+      };
+
+      onReviewMock(reviewQuizResult);
+    } catch (err: any) {
+      console.error('Failed to open mock review:', err);
+      alert('Error opening review: ' + (err.message || 'Unknown error'));
+    } finally {
+      setReviewingId(null);
+    }
+  };
+
   const handleDeleteMock = async (id: string) => {
     if (!window.confirm('Are you sure you want to remove this mock score record?')) return;
     try {
@@ -1171,11 +1371,25 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                     </div>
 
                     {/* 4. Action Column */}
-                    <div className="w-full xl:w-[165px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1">
+                    <div className="w-full xl:w-[225px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1.5">
+                      <button
+                        onClick={() => handleReviewMock(report)}
+                        disabled={reviewingId === report.id}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white border border-emerald-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+                        title="Review all questions, view solutions & classify root causes (RCA)"
+                      >
+                        {reviewingId === report.id ? (
+                          <Loader2 className="w-3 h-3 animate-spin" />
+                        ) : (
+                          <Eye className="w-3 h-3" />
+                        )}
+                        <span>Review</span>
+                      </button>
+
                       <button
                         onClick={() => openPracticeModal(report, report.type === 'sectional' && report.subject ? report.subject : 'all')}
                         disabled={practicingId === report.id}
-                        className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap"
+                        className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
                         title="Practice mistakes section-wise (slow, incorrect, unattempted)"
                       >
                         {practicingId === report.id ? (
@@ -1188,7 +1402,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
                       <button
                         onClick={() => handleDeleteMock(report.id)}
-                        className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0"
+                        className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0 cursor-pointer"
                         title="Delete this record"
                       >
                         <Trash2 className="w-3.5 h-3.5" />

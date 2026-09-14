@@ -25,9 +25,12 @@ import {
   CheckCircle2,
   Layers,
   Trash2,
-  Sparkles
+  Sparkles,
+  Target,
+  Download,
+  Edit3
 } from 'lucide-react';
-import { QuizResult, Question } from '../types';
+import { QuizResult, Question, RCATagType, RCAClassification } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
 
 const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
@@ -110,6 +113,179 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
+
+  // ─── ROOT CAUSE ANALYSIS (RCA) CLASSIFICATION STATE ───
+  const isMockReview = Boolean(
+    result.chapter_title?.toLowerCase().includes('mock') || 
+    (result.totalQuestions >= 20) || 
+    result.category === 'mockErrors'
+  );
+  const [classifyModeEnabled, setClassifyModeEnabled] = useState<boolean>(true);
+  const [rcaMap, setRcaMap] = useState<Record<number, RCAClassification>>(() => {
+    const map: Record<number, RCAClassification> = {};
+    (result.questionDetails || []).forEach((qd, idx) => {
+      if (qd.rca) map[idx] = qd.rca;
+      else if (qd.question?.rca) map[idx] = qd.question.rca;
+    });
+
+    try {
+      if (typeof window !== 'undefined') {
+        const saved = window.localStorage?.getItem(`cgl_rca_${result.id}`) || 
+                      window.localStorage?.getItem(`cgl_rca_${result.chapter_title}`);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          Object.assign(map, parsed);
+        }
+      }
+    } catch {}
+    return map;
+  });
+
+  const [activeSillyNote, setActiveSillyNote] = useState<string>('');
+
+  // Sync active silly note when moving between questions
+  useEffect(() => {
+    const currentRca = rcaMap[currentIdx] || items[currentIdx]?.rca || items[currentIdx]?.question?.rca;
+    if (currentRca && currentRca.tag === 'A') {
+      setActiveSillyNote(currentRca.sillyMistakeNote || '');
+    } else {
+      setActiveSillyNote('');
+    }
+  }, [currentIdx, rcaMap]);
+
+  const rcaStats = useMemo(() => {
+    const counts = { C: 0, A: 0, T: 0, G: 0, total: 0 };
+    Object.values(rcaMap).forEach(item => {
+      if (item && item.tag && counts[item.tag] !== undefined) {
+        counts[item.tag]++;
+        counts.total++;
+      }
+    });
+    return counts;
+  }, [rcaMap]);
+
+  const handleSelectRcaTag = (tag: RCATagType) => {
+    const tagNames: Record<RCATagType, RCAClassification['tagName']> = {
+      C: 'Conceptual Gap',
+      A: 'Silly Mistake',
+      T: 'Time / Ego Trap',
+      G: 'Guesswork Failed'
+    };
+
+    const newRca: RCAClassification = {
+      tag,
+      tagName: tagNames[tag],
+      sillyMistakeNote: tag === 'A' ? (activeSillyNote || rcaMap[currentIdx]?.sillyMistakeNote || '') : undefined,
+      classifiedAt: new Date().toISOString()
+    };
+
+    const updated = { ...rcaMap, [currentIdx]: newRca };
+    setRcaMap(updated);
+
+    // Update in-memory objects
+    if (items[currentIdx]) {
+      items[currentIdx].rca = newRca;
+      if (items[currentIdx].question) {
+        items[currentIdx].question!.rca = newRca;
+      }
+    }
+
+    // Persist to localStorage
+    try {
+      if (typeof window !== 'undefined') {
+        if (result.id) window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updated));
+        if (result.chapter_title) window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updated));
+
+        // Update global store for Error Heatmap & Sankalp AI
+        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+        const qId = items[currentIdx]?.question?.id || `${result.id || 'mock'}_${currentIdx + 1}`;
+        globalStore[qId] = {
+          ...newRca,
+          mockId: result.id,
+          mockTitle: result.chapter_title,
+          subject: items[currentIdx]?.question?.subject || result.subject,
+          topic: items[currentIdx]?.question?.tags?.topic || 'General',
+          questionText: items[currentIdx]?.question?.question
+        };
+        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+
+        // Update mock questions array if in localStorage
+        if (result.id) {
+          const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+          if (cachedRaw) {
+            const cachedList = JSON.parse(cachedRaw);
+            if (Array.isArray(cachedList) && cachedList[currentIdx]) {
+              cachedList[currentIdx].rca = newRca;
+              window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
+            }
+          }
+        }
+      }
+    } catch {}
+  };
+
+  const handleSaveSillyNote = (note: string) => {
+    setActiveSillyNote(note);
+    if (rcaMap[currentIdx]?.tag === 'A') {
+      const updatedRca: RCAClassification = {
+        ...rcaMap[currentIdx],
+        sillyMistakeNote: note,
+        classifiedAt: new Date().toISOString()
+      };
+      const updated = { ...rcaMap, [currentIdx]: updatedRca };
+      setRcaMap(updated);
+
+      if (items[currentIdx]) {
+        items[currentIdx].rca = updatedRca;
+        if (items[currentIdx].question) {
+          items[currentIdx].question!.rca = updatedRca;
+        }
+      }
+
+      try {
+        if (typeof window !== 'undefined') {
+          if (result.id) window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updated));
+          if (result.chapter_title) window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updated));
+
+          const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+          const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+          const qId = items[currentIdx]?.question?.id || `${result.id || 'mock'}_${currentIdx + 1}`;
+          if (globalStore[qId]) {
+            globalStore[qId].sillyMistakeNote = note;
+            window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+          }
+        }
+      } catch {}
+    }
+  };
+
+  const handleExportRcaJson = () => {
+    try {
+      const exportData = items.map((item, idx) => {
+        const q = item.question || ({} as Question);
+        const rca = rcaMap[idx] || item.rca || q.rca;
+        return {
+          ...q,
+          q_num: idx + 1,
+          userAnswer: item.selectedAnswer,
+          isCorrect: item.isCorrect,
+          timeSpent: item.timeSpent,
+          rca: rca || null
+        };
+      });
+
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${(result.chapter_title || 'Mock').replace(/\s+/g, '_')}_RCA_Analysis.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.error('Export failed:', e);
+    }
+  };
 
   // Pre-index avgTime from bundled mock questions or localStorage to guarantee availability on historical attempts
   const [mockAvgTimeMap, setMockAvgTimeMap] = useState<Map<string, number>>(new Map());
@@ -358,19 +534,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   const current = items[currentIdx];
   const question = current?.question;
-
-  // Question stats calculation
-  const totalQuestions = items.length;
-  const correctCount = items.filter(i => i.isCorrect).length;
-  const wrongCount = items.filter(i => i.selectedAnswer && !i.isCorrect).length;
-  const unattemptedCount = totalQuestions - correctCount - wrongCount;
-  const partiallyCorrectCount = 0; // standard mock has single-correct
-
-  // Section specific stats
-  const sectionQuestionsCount = activeIndices.length;
-  const sectionCorrectCount = activeIndices.filter(idx => items[idx]?.isCorrect).length;
-  const sectionWrongCount = activeIndices.filter(idx => items[idx]?.selectedAnswer && !items[idx]?.isCorrect).length;
-  const sectionUnattemptedCount = sectionQuestionsCount - sectionCorrectCount - sectionWrongCount;
+  const currentRca: RCAClassification | undefined = rcaMap[currentIdx] || current?.rca || question?.rca;
 
   const handleBookmarkClick = () => {
     if (!question) return;
@@ -396,15 +560,71 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     }));
   };
 
-  const getQuestionStatus = (idx: number) => {
+  // Question stats calculation
+  const getQuestionStatus = (idx: number): 'correct' | 'wrong' | 'unattempted' | 'slow' => {
     const item = items[idx];
     if (!item) return 'unattempted';
     if (reattemptMode && reattemptAnswers[idx]) {
       return reattemptAnswers[idx] === item.question?.answer ? 'correct' : 'wrong';
     }
+    const qStatus = String((item as any).status || (item as any).errorType || '').toLowerCase();
+    
+    // 1. Unattempted / Skipped
+    if (
+      qStatus.includes('unattempt') || 
+      qStatus.includes('skip') || 
+      qStatus.includes('left') || 
+      qStatus === 'not attempted'
+    ) {
+      return 'unattempted';
+    }
+    
+    // 2. Slow / Speed Issue (Correct, but took too long)
+    if (
+      qStatus.includes('slow') || 
+      qStatus.includes('speed') || 
+      (item as any).isSlow === true || 
+      (item as any).status === 'slow'
+    ) {
+      return 'slow';
+    }
+    
+    // 3. Correct (and not incorrect)
+    if (
+      item.isCorrect === true || 
+      ((qStatus.includes('correct') && !qStatus.includes('incorrect'))) || 
+      qStatus === 'right'
+    ) {
+      return 'correct';
+    }
+    
+    // 4. Incorrect / Wrong
+    if (
+      qStatus.includes('wrong') || 
+      qStatus.includes('incorrect') || 
+      item.isCorrect === false
+    ) {
+      return 'wrong';
+    }
+    
     if (!item.selectedAnswer) return 'unattempted';
     return item.isCorrect ? 'correct' : 'wrong';
   };
+
+  // Question stats calculation
+  const totalQuestions = items.length;
+  const correctCount = items.filter((_, idx) => getQuestionStatus(idx) === 'correct').length;
+  const slowCount = items.filter((_, idx) => getQuestionStatus(idx) === 'slow').length;
+  const wrongCount = items.filter((_, idx) => getQuestionStatus(idx) === 'wrong').length;
+  const unattemptedCount = totalQuestions - correctCount - slowCount - wrongCount;
+  const partiallyCorrectCount = 0; // standard mock has single-correct
+
+  // Section specific stats
+  const sectionQuestionsCount = activeIndices.length;
+  const sectionCorrectCount = activeIndices.filter(idx => getQuestionStatus(idx) === 'correct').length;
+  const sectionSlowCount = activeIndices.filter(idx => getQuestionStatus(idx) === 'slow').length;
+  const sectionWrongCount = activeIndices.filter(idx => getQuestionStatus(idx) === 'wrong').length;
+  const sectionUnattemptedCount = sectionQuestionsCount - sectionCorrectCount - sectionSlowCount - sectionWrongCount;
 
   // Speed evaluation
   const getSpeedType = (timeSpent: number = 0, isCorrect: boolean) => {
@@ -454,6 +674,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (selectedFilter === 'all') return true;
     const status = getQuestionStatus(idx);
     if (selectedFilter === 'correct') return status === 'correct';
+    if (selectedFilter === 'slow') return status === 'slow';
     if (selectedFilter === 'incorrect') return status === 'wrong';
     if (selectedFilter === 'unattempted') return status === 'unattempted';
     return true;
@@ -527,8 +748,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   // Percentage answered correctly (simulate realistic platform percentage ~35-65%)
   const accuracyPercent = question?.tags?.difficulty === 'easy' ? 68 : (question?.tags?.difficulty === 'hard' ? 24 : 40);
 
-  // Marks logic (+2 for correct, -0.5 for incorrect, 0 for skipped)
-  const currentMarks = currentStatus === 'correct' ? 2 : (currentStatus === 'wrong' ? -0.5 : 0);
+  // Marks logic (+2 for correct/slow, -0.5 for incorrect, 0 for skipped)
+  const currentMarks = (currentStatus === 'correct' || currentStatus === 'slow') ? 2 : (currentStatus === 'wrong' ? -0.5 : 0);
 
   return (
     <div className="flex flex-col h-screen w-full bg-[#f4f7f9] overflow-hidden select-none font-sans text-gray-800">
@@ -628,6 +849,34 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         </div>
 
         <div className="flex items-center space-x-2 text-xs shrink-0 ml-3">
+          {/* Classify RCA Toggle */}
+          <button
+            type="button"
+            onClick={() => setClassifyModeEnabled(prev => !prev)}
+            className={`text-[11px] font-bold px-2.5 py-1 rounded transition-all flex items-center space-x-1.5 cursor-pointer border ${
+              classifyModeEnabled
+                ? 'bg-purple-50 text-purple-700 border-purple-300 ring-1 ring-purple-400/40 shadow-xs'
+                : 'bg-white text-gray-500 border-gray-300 hover:bg-gray-50'
+            }`}
+            title="Toggle Root-Cause Analysis (RCA) classification toolbar"
+          >
+            <span>🎯 Classify (RCA):</span>
+            <span className="font-extrabold uppercase">{classifyModeEnabled ? 'ON' : 'OFF'}</span>
+          </button>
+
+          {/* Export RCA Analysis JSON if classified */}
+          {rcaStats.total > 0 && (
+            <button
+              type="button"
+              onClick={handleExportRcaJson}
+              className="text-[11px] font-semibold px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 flex items-center space-x-1 transition-colors cursor-pointer"
+              title="Export full mock test data with RCA classification tags and silly mistake notes as JSON"
+            >
+              <Download className="w-3 h-3 text-slate-600" />
+              <span className="hidden md:inline">Export RCA ({rcaStats.total})</span>
+            </button>
+          )}
+
           <span className="font-medium text-gray-600 hidden sm:inline">View In</span>
           <select 
             value={language}
@@ -662,10 +911,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </span>
               )}
 
-              {/* Status Badge: Skipped / Correct / Incorrect */}
+              {/* Status Badge: Skipped / Correct / Incorrect / Slow */}
               {currentStatus === 'correct' && (
                 <span className="bg-[#2e7d32] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
                   Correct
+                </span>
+              )}
+              {currentStatus === 'slow' && (
+                <span className="bg-[#ef6c00] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                  <span>Slow (Correct)</span>
                 </span>
               )}
               {currentStatus === 'wrong' && (
@@ -701,29 +955,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </span>
             </div>
 
-            {/* Save & Report & Ask AI Actions */}
+            {/* Save & Report Actions */}
             <div className="flex items-center space-x-3 text-xs font-medium text-gray-600">
-              <button
-                onClick={() => {
-                  window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
-                    detail: {
-                      questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
-                      questionText: question.question,
-                      options: question.options,
-                      userAnswer: current?.userAnswer,
-                      correctAnswer: question.answer,
-                      solution: question.solution,
-                      topic: question.tags?.topic || (question as any).topic || result.subject
-                    }
-                  }));
-                }}
-                className="flex items-center space-x-1 text-indigo-600 hover:text-indigo-800 font-bold transition-all px-2.5 py-1 rounded-md bg-indigo-50 hover:bg-indigo-100 cursor-pointer shadow-2xs border border-indigo-100"
-                title="Ask Sankalp AI Mentor to explain this question"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                <span>Ask AI</span>
-              </button>
-
               <button 
                 onClick={handleBookmarkClick}
                 className={`flex items-center space-x-1 hover:text-[#0097a7] transition-colors ${
@@ -917,11 +1150,201 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </div>
 
                 {/* Subtext notice matching screenshot */}
-                <p className="text-xs text-gray-500 italic mt-2 mb-6">
+                <p className="text-xs text-gray-500 italic mt-2 mb-4">
                   {reattemptMode 
                     ? "Reattempt mode is On. Click an option to test yourself."
                     : "Reattempt mode is Off. Turn it on from bottom bar"}
                 </p>
+
+                {/* 4-Bucket Root Cause Analysis (RCA) Classification Bar */}
+                {classifyModeEnabled && (
+                  <div className="my-5 p-3.5 sm:p-4 rounded-xl border border-indigo-200 bg-gradient-to-r from-indigo-50/70 via-purple-50/50 to-cyan-50/60 shadow-xs">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                      <div className="flex items-center gap-2">
+                        <span className="flex items-center justify-center w-6 h-6 rounded-md bg-indigo-600 text-white shadow-xs">
+                          <Target className="w-3.5 h-3.5" />
+                        </span>
+                        <div>
+                          <h4 className="text-xs font-bold text-gray-900 flex items-center gap-1.5">
+                            <span>Root-Cause Analysis (RCA) Tag</span>
+                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                              currentRca?.tag === 'C' ? 'bg-purple-100 text-purple-800' :
+                              currentRca?.tag === 'A' ? 'bg-rose-100 text-rose-800' :
+                              currentRca?.tag === 'T' ? 'bg-amber-100 text-amber-800' :
+                              currentRca?.tag === 'G' ? 'bg-blue-100 text-blue-800' :
+                              'bg-gray-100 text-gray-600'
+                            }`}>
+                              {currentRca?.tag ? `[${currentRca.tag}] ${currentRca.tagName}` : 'Not Classified'}
+                            </span>
+                          </h4>
+                          <p className="text-[11px] text-gray-500">
+                            Classify this mistake to reveal traps in Error Heatmap and train Sankalp AI.
+                          </p>
+                        </div>
+                      </div>
+
+                      {currentRca?.tag && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const updated = { ...rcaMap };
+                            delete updated[currentIdx];
+                            setRcaMap(updated);
+                            if (items[currentIdx]) items[currentIdx].rca = undefined;
+                            if (items[currentIdx]?.question) items[currentIdx].question!.rca = undefined;
+                          }}
+                          className="text-[11px] text-gray-400 hover:text-rose-600 transition-colors cursor-pointer underline decoration-dotted"
+                        >
+                          Clear Tag
+                        </button>
+                      )}
+                    </div>
+
+                    {/* 4 Classification Buttons */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                      {/* [C] Conceptual Gap */}
+                      <button
+                        type="button"
+                        onClick={() => handleSelectRcaTag('C')}
+                        className={`p-2.5 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between ${
+                          currentRca?.tag === 'C'
+                            ? 'bg-purple-600 text-white border-purple-600 shadow-md ring-2 ring-purple-300 ring-offset-1'
+                            : 'bg-white hover:bg-purple-50/80 border-purple-200 text-gray-800'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                            currentRca?.tag === 'C' ? 'bg-white/25 text-white' : 'bg-purple-100 text-purple-800'
+                          }`}>
+                            [C]
+                          </span>
+                          {currentRca?.tag === 'C' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+                        </div>
+                        <span className="text-xs font-bold">Conceptual Gap</span>
+                        <span className={`text-[10px] mt-0.5 ${currentRca?.tag === 'C' ? 'text-purple-100' : 'text-gray-500'}`}>
+                          Formula forgotten / Concept unclear
+                        </span>
+                      </button>
+
+                      {/* [A] Silly Mistake */}
+                      <button
+                        type="button"
+                        onClick={() => handleSelectRcaTag('A')}
+                        className={`p-2.5 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between ${
+                          currentRca?.tag === 'A'
+                            ? 'bg-rose-600 text-white border-rose-600 shadow-md ring-2 ring-rose-300 ring-offset-1'
+                            : 'bg-white hover:bg-rose-50/80 border-rose-200 text-gray-800'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                            currentRca?.tag === 'A' ? 'bg-white/25 text-white' : 'bg-rose-100 text-rose-800'
+                          }`}>
+                            [A]
+                          </span>
+                          {currentRca?.tag === 'A' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+                        </div>
+                        <span className="text-xs font-bold">Silly Mistake</span>
+                        <span className={`text-[10px] mt-0.5 ${currentRca?.tag === 'A' ? 'text-rose-100' : 'text-gray-500'}`}>
+                          Calculation, misread, rushed
+                        </span>
+                      </button>
+
+                      {/* [T] Time / Ego Trap */}
+                      <button
+                        type="button"
+                        onClick={() => handleSelectRcaTag('T')}
+                        className={`p-2.5 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between ${
+                          currentRca?.tag === 'T'
+                            ? 'bg-amber-600 text-white border-amber-600 shadow-md ring-2 ring-amber-300 ring-offset-1'
+                            : 'bg-white hover:bg-amber-50/80 border-amber-200 text-gray-800'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                            currentRca?.tag === 'T' ? 'bg-white/25 text-white' : 'bg-amber-100 text-amber-800'
+                          }`}>
+                            [T]
+                          </span>
+                          {currentRca?.tag === 'T' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+                        </div>
+                        <span className="text-xs font-bold">Time / Ego Trap</span>
+                        <span className={`text-[10px] mt-0.5 ${currentRca?.tag === 'T' ? 'text-amber-100' : 'text-gray-500'}`}>
+                          Spent too long / Should skip
+                        </span>
+                      </button>
+
+                      {/* [G] Guesswork Failed */}
+                      <button
+                        type="button"
+                        onClick={() => handleSelectRcaTag('G')}
+                        className={`p-2.5 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between ${
+                          currentRca?.tag === 'G'
+                            ? 'bg-blue-600 text-white border-blue-600 shadow-md ring-2 ring-blue-300 ring-offset-1'
+                            : 'bg-white hover:bg-blue-50/80 border-blue-200 text-gray-800'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                            currentRca?.tag === 'G' ? 'bg-white/25 text-white' : 'bg-blue-100 text-blue-800'
+                          }`}>
+                            [G]
+                          </span>
+                          {currentRca?.tag === 'G' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+                        </div>
+                        <span className="text-xs font-bold">Guesswork Failed</span>
+                        <span className={`text-[10px] mt-0.5 ${currentRca?.tag === 'G' ? 'text-blue-100' : 'text-gray-500'}`}>
+                          50-50 hunch went wrong
+                        </span>
+                      </button>
+                    </div>
+
+                    {/* Silly Mistake Writing Box when [A] is selected */}
+                    {currentRca?.tag === 'A' && (
+                      <div className="mt-3 p-3 rounded-lg bg-rose-50/80 border border-rose-200 transition-all">
+                        <div className="flex items-center justify-between mb-1.5">
+                          <label className="text-xs font-bold text-rose-900 flex items-center gap-1.5">
+                            <Edit3 className="w-3.5 h-3.5 text-rose-600" />
+                            <span>Describe what went wrong in your silly mistake:</span>
+                          </label>
+                          <span className="text-[10px] text-rose-600 font-semibold">Auto-saved to mock JSON</span>
+                        </div>
+                        
+                        {/* 1-click Quick Chips */}
+                        <div className="flex flex-wrap gap-1.5 mb-2">
+                          {[
+                            'Calculation error (+/-)',
+                            'Misread the question',
+                            'Marked wrong option',
+                            'Rushed under time panic',
+                            'Overlooked "NOT / INCORRECT"',
+                            'Unit conversion missed'
+                          ].map((chip) => (
+                            <button
+                              key={chip}
+                              type="button"
+                              onClick={() => {
+                                const newNote = activeSillyNote ? `${activeSillyNote}, ${chip}` : chip;
+                                handleSaveSillyNote(newNote);
+                              }}
+                              className="text-[10.5px] px-2 py-0.5 rounded-full bg-white hover:bg-rose-100 border border-rose-200 text-rose-800 transition-colors cursor-pointer shadow-2xs"
+                            >
+                              + {chip}
+                            </button>
+                          ))}
+                        </div>
+
+                        <textarea
+                          value={activeSillyNote}
+                          onChange={(e) => handleSaveSillyNote(e.target.value)}
+                          placeholder="e.g. Added 14 instead of 24 in step 2, or read 'diameter' as 'radius'..."
+                          rows={2}
+                          className="w-full text-xs p-2.5 rounded-md border border-rose-300 focus:border-rose-500 focus:ring-1 focus:ring-rose-400 bg-white text-gray-800 placeholder-gray-400 outline-none"
+                        />
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Solution Section */}
                 {(!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && (
@@ -1074,6 +1497,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       Correct ({correctCount})
                     </button>
                     <button
+                      onClick={() => { setSelectedFilter('slow'); setShowFilterMenu(false); }}
+                      className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 ${selectedFilter === 'slow' ? 'font-bold text-amber-700' : 'text-gray-700'}`}
+                    >
+                      Slow ({slowCount})
+                    </button>
+                    <button
                       onClick={() => { setSelectedFilter('incorrect'); setShowFilterMenu(false); }}
                       className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 ${selectedFilter === 'incorrect' ? 'font-bold text-red-700' : 'text-gray-700'}`}
                     >
@@ -1091,24 +1520,30 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
 
             {/* Legend / Status Row (Section & Overall) */}
-            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-3 text-xs shrink-0 flex-wrap gap-y-2">
-              <div className="flex items-center space-x-1.5" title={`Section: ${sectionCorrectCount} | Overall: ${correctCount}`}>
-                <span className="w-6 h-6 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
+            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-2.5 text-xs shrink-0 flex-wrap gap-y-1.5">
+              <div className="flex items-center space-x-1" title={`Section: ${sectionCorrectCount} | Overall: ${correctCount}`}>
+                <span className="w-5 h-5 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionCorrectCount}
                 </span>
-                <span className="text-gray-700 font-medium">Correct</span>
+                <span className="text-gray-700 font-medium text-[11px]">Correct</span>
               </div>
-              <div className="flex items-center space-x-1.5" title={`Section: ${sectionUnattemptedCount} | Overall: ${unattemptedCount}`}>
-                <span className="w-6 h-6 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[11px] shadow-sm">
+              <div className="flex items-center space-x-1" title={`Section: ${sectionSlowCount} | Overall: ${slowCount}`}>
+                <span className="w-5 h-5 rounded-full bg-[#ef6c00] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
+                  {sectionSlowCount}
+                </span>
+                <span className="text-gray-700 font-medium text-[11px]">Slow</span>
+              </div>
+              <div className="flex items-center space-x-1" title={`Section: ${sectionUnattemptedCount} | Overall: ${unattemptedCount}`}>
+                <span className="w-5 h-5 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionUnattemptedCount}
                 </span>
-                <span className="text-gray-700 font-medium">Unattempted</span>
+                <span className="text-gray-700 font-medium text-[11px]">Skipped</span>
               </div>
-              <div className="flex items-center space-x-1.5" title={`Section: ${sectionWrongCount} | Overall: ${wrongCount}`}>
-                <span className="w-6 h-6 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">
+              <div className="flex items-center space-x-1" title={`Section: ${sectionWrongCount} | Overall: ${wrongCount}`}>
+                <span className="w-5 h-5 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionWrongCount}
                 </span>
-                <span className="text-gray-700 font-medium">Incorrect</span>
+                <span className="text-gray-700 font-medium text-[11px]">Incorrect</span>
               </div>
             </div>
 
@@ -1133,17 +1568,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className="w-6 h-6 rounded-full bg-rose-100 text-[#c62828] flex items-center justify-center mb-0.5 shadow-xs">
-                    <Frown className="w-3.5 h-3.5" />
-                  </div>
-                  <span className="text-[9.5px] text-gray-600 leading-tight">Slow</span>
-                </div>
-
-                <div className="flex flex-col items-center">
                   <div className="w-6 h-6 rounded-full bg-amber-100 text-[#ef6c00] flex items-center justify-center mb-0.5 shadow-xs">
                     <AlertTriangle className="w-3.5 h-3.5" />
                   </div>
-                  <span className="text-[9.5px] text-gray-600 leading-tight">On Time but not Correct</span>
+                  <span className="text-[9.5px] text-gray-600 leading-tight">Slow (Correct)</span>
+                </div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-6 h-6 rounded-full bg-rose-100 text-[#c62828] flex items-center justify-center mb-0.5 shadow-xs">
+                    <Frown className="w-3.5 h-3.5" />
+                  </div>
+                  <span className="text-[9.5px] text-gray-600 leading-tight">Incorrect</span>
                 </div>
               </div>
             </div>
@@ -1168,10 +1603,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   const localNumber = activeIndices.indexOf(idx) + 1;
                   const status = getQuestionStatus(idx);
                   const isCurrent = currentIdx === idx;
+                  const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
                   
                   let badgeStyle = "bg-white border-2 border-gray-400 text-gray-800";
                   if (status === 'correct') {
                     badgeStyle = "bg-[#2e7d32] text-white border-transparent";
+                  } else if (status === 'slow') {
+                    badgeStyle = "bg-[#ef6c00] text-white border-transparent";
                   } else if (status === 'wrong') {
                     badgeStyle = "bg-[#c62828] text-white border-transparent";
                   }
@@ -1180,12 +1618,22 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     <button
                       key={idx}
                       onClick={() => setCurrentIdx(idx)}
-                      title={`Question ${localNumber} of ${activeSection.label} (Overall #${idx + 1}) - ${status}`}
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm ${badgeStyle} ${
+                      title={`Question ${localNumber} of ${activeSection.label} (Overall #${idx + 1}) - ${status}${qRca ? ` [RCA: ${qRca.tag} - ${qRca.tagName}]` : ''}`}
+                      className={`relative w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm ${badgeStyle} ${
                         isCurrent ? 'ring-2 ring-[#0097a7] ring-offset-1 scale-110 z-10 shadow-md' : 'hover:opacity-80 hover:scale-105'
                       }`}
                     >
                       {activeSectionId === 'all' ? idx + 1 : localNumber}
+                      {qRca && (
+                        <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full text-[9px] font-mono font-black flex items-center justify-center shadow-xs border border-white ${
+                          qRca.tag === 'C' ? 'bg-purple-600 text-white' :
+                          qRca.tag === 'A' ? 'bg-rose-600 text-white' :
+                          qRca.tag === 'T' ? 'bg-amber-500 text-white' :
+                          'bg-blue-600 text-white'
+                        }`}>
+                          {qRca.tag}
+                        </span>
+                      )}
                     </button>
                   );
                 })}
@@ -1247,11 +1695,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                             <span className="font-bold text-sm text-[#0097a7]">
                               Q{localNum} <span className="text-gray-400 font-normal text-xs">(Overall #{idx + 1})</span>
                             </span>
-                            <span className={`text-xs px-2 py-0.5 rounded font-semibold ${
-                              it.isCorrect ? 'bg-green-100 text-green-800' : (it.selectedAnswer ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-600')
-                            }`}>
-                              {it.isCorrect ? 'Correct' : (it.selectedAnswer ? 'Incorrect' : 'Unattempted')}
-                            </span>
+                            {(() => {
+                              const qSt = getQuestionStatus(idx);
+                              if (qSt === 'correct') return <span className="text-xs px-2 py-0.5 rounded font-semibold bg-green-100 text-green-800">Correct</span>;
+                              if (qSt === 'slow') return <span className="text-xs px-2 py-0.5 rounded font-semibold bg-amber-100 text-amber-800">Slow (Correct)</span>;
+                              if (qSt === 'wrong') return <span className="text-xs px-2 py-0.5 rounded font-semibold bg-red-100 text-red-800">Incorrect</span>;
+                              return <span className="text-xs px-2 py-0.5 rounded font-semibold bg-gray-100 text-gray-600">Unattempted</span>;
+                            })()}
                           </div>
                           <p className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line">
                             {renderText(it.question?.question)}
@@ -1312,18 +1762,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 <div className="bg-blue-50 border border-blue-200 p-3 rounded-xl">
                   <span className="text-xs text-blue-700 font-semibold uppercase">Score</span>
                   <p className="text-2xl font-black text-blue-900 mt-1">
-                    {(correctCount * 2 - wrongCount * 0.5).toFixed(1)}
+                    {((correctCount + slowCount) * 2 - wrongCount * 0.5).toFixed(1)}
                   </p>
                   <span className="text-[10px] text-blue-600">Max: {totalQuestions * 2}</span>
                 </div>
                 <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-xl">
                   <span className="text-xs text-emerald-700 font-semibold uppercase">Accuracy</span>
                   <p className="text-2xl font-black text-emerald-900 mt-1">
-                    {totalQuestions > 0 && (correctCount + wrongCount) > 0 
-                      ? `${Math.round((correctCount / (correctCount + wrongCount)) * 100)}%` 
+                    {totalQuestions > 0 && (correctCount + slowCount + wrongCount) > 0 
+                      ? `${Math.round(((correctCount + slowCount) / (correctCount + slowCount + wrongCount)) * 100)}%` 
                       : '0%'}
                   </p>
-                  <span className="text-[10px] text-emerald-600">{correctCount}/{correctCount + wrongCount} attempted</span>
+                  <span className="text-[10px] text-emerald-600">{correctCount + slowCount}/{correctCount + slowCount + wrongCount} attempted</span>
                 </div>
                 <div className="bg-purple-50 border border-purple-200 p-3 rounded-xl">
                   <span className="text-xs text-purple-700 font-semibold uppercase">Time Spent</span>
@@ -1342,6 +1792,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     <CheckCircle2 className="w-4 h-4 mr-2" /> Correct
                   </span>
                   <span className="font-bold text-green-800">{correctCount}</span>
+                </div>
+                <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                  <span className="flex items-center text-[#ef6c00] font-medium">
+                    <AlertTriangle className="w-4 h-4 mr-2" /> Slow (Correct)
+                  </span>
+                  <span className="font-bold text-amber-800">{slowCount}</span>
                 </div>
                 <div className="flex justify-between items-center py-1 border-b border-gray-100">
                   <span className="flex items-center text-red-700 font-medium">

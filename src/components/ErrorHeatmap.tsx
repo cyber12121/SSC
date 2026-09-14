@@ -17,9 +17,11 @@ import {
   TrendingDown,
   Zap,
   Target,
-  AlertCircle
+  AlertCircle,
+  HelpCircle,
+  BrainCircuit
 } from 'lucide-react';
-import { SubjectData, Chapter, Question } from '../types';
+import { SubjectData, Chapter, Question, RCAClassification } from '../types';
 import { detectTopic } from '../utils/topicDetector';
 
 interface ErrorHeatmapProps {
@@ -30,6 +32,7 @@ interface QuestionWithError extends Question {
   errorType: 'wrong' | 'unattempted' | 'speed_issue';
   detectedTopic: string;
   parentSubject: string;
+  rcaClassification?: RCAClassification;
 }
 
 interface ChapterHeatmapItem {
@@ -42,6 +45,13 @@ interface ChapterHeatmapItem {
   negativeMarks: number;
   questions: QuestionWithError[];
   severity: 'critical' | 'high' | 'medium' | 'low';
+  rcaCounts: {
+    C: number;
+    A: number;
+    T: number;
+    G: number;
+    unclassified: number;
+  };
 }
 
 const SUBJECT_CONFIG: Record<string, { icon: any; gradient: string; accent: string; light: string; pill: string; ring: string }> = {
@@ -87,11 +97,23 @@ const SEVERITY_CONFIG = {
 };
 
 export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
+  const [viewMode, setViewMode] = useState<'error_type' | 'rca'>('error_type');
   const [selectedTypeFilter, setSelectedTypeFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeDrillChapter, setActiveDrillChapter] = useState<ChapterHeatmapItem | null>(null);
 
   const { subjectGroups, allSubjects, totalOverallErrors } = useMemo(() => {
+    // Read global RCA classifications saved from Mock Reviews
+    const globalRcaStore: Record<string, any> = (() => {
+      try {
+        if (typeof window !== 'undefined') {
+          const raw = window.localStorage?.getItem('cgl_rca_global_store');
+          return raw ? JSON.parse(raw) : {};
+        }
+      } catch {}
+      return {};
+    })();
+
     const groups: Record<string, {
       subject: string;
       totalErrors: number;
@@ -99,6 +121,13 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       totalUnattempted: number;
       totalSpeed: number;
       negativeMarks: number;
+      rcaTotals: {
+        C: number;
+        A: number;
+        T: number;
+        G: number;
+        unclassified: number;
+      };
       chapters: ChapterHeatmapItem[];
     }> = {};
 
@@ -106,7 +135,16 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
 
     (Object.entries(mockData) as [string, Chapter[]][]).forEach(([subject, chapterList]) => {
       if (!groups[subject]) {
-        groups[subject] = { subject, totalErrors: 0, totalWrong: 0, totalUnattempted: 0, totalSpeed: 0, negativeMarks: 0, chapters: [] };
+        groups[subject] = {
+          subject,
+          totalErrors: 0,
+          totalWrong: 0,
+          totalUnattempted: 0,
+          totalSpeed: 0,
+          negativeMarks: 0,
+          rcaTotals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+          chapters: []
+        };
       }
 
       const topicMap: Record<string, ChapterHeatmapItem> = {};
@@ -129,10 +167,33 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
           const topic = detectTopic(q, subject);
 
           if (!topicMap[topic]) {
-            topicMap[topic] = { topic, subject, totalErrors: 0, wrongCount: 0, unattemptedCount: 0, speedIssueCount: 0, negativeMarks: 0, questions: [], severity: 'low' };
+            topicMap[topic] = {
+              topic,
+              subject,
+              totalErrors: 0,
+              wrongCount: 0,
+              unattemptedCount: 0,
+              speedIssueCount: 0,
+              negativeMarks: 0,
+              rcaCounts: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+              questions: [],
+              severity: 'low'
+            };
           }
 
-          const qEnriched: QuestionWithError = { ...q, errorType, detectedTopic: topic, parentSubject: subject };
+          // Ingest RCA tag if present on question or in global store
+          const qRca: RCAClassification | undefined = q.rca || (q.id && globalRcaStore[q.id] ? globalRcaStore[q.id] : undefined);
+
+          if (qRca?.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag)) {
+            const tagKey = qRca.tag as 'C' | 'A' | 'T' | 'G';
+            groups[subject].rcaTotals[tagKey]++;
+            topicMap[topic].rcaCounts[tagKey]++;
+          } else {
+            groups[subject].rcaTotals.unclassified++;
+            topicMap[topic].rcaCounts.unclassified++;
+          }
+
+          const qEnriched: QuestionWithError = { ...q, errorType, detectedTopic: topic, parentSubject: subject, rcaClassification: qRca };
           topicMap[topic].totalErrors++;
           topicMap[topic].questions.push(qEnriched);
 
@@ -169,18 +230,28 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
 
   const currentSubjectData = subjectGroups[currentSubjectName] || {
     subject: currentSubjectName, totalErrors: 0, totalWrong: 0,
-    totalUnattempted: 0, totalSpeed: 0, negativeMarks: 0, chapters: []
+    totalUnattempted: 0, totalSpeed: 0, negativeMarks: 0,
+    rcaTotals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+    chapters: []
   };
 
   const filteredChapters = useMemo(() => {
     return currentSubjectData.chapters.filter(item => {
-      if (selectedTypeFilter === 'wrong' && item.wrongCount === 0) return false;
-      if (selectedTypeFilter === 'unattempted' && item.unattemptedCount === 0) return false;
-      if (selectedTypeFilter === 'speed' && item.speedIssueCount === 0) return false;
+      if (viewMode === 'error_type') {
+        if (selectedTypeFilter === 'wrong' && item.wrongCount === 0) return false;
+        if (selectedTypeFilter === 'unattempted' && item.unattemptedCount === 0) return false;
+        if (selectedTypeFilter === 'speed' && item.speedIssueCount === 0) return false;
+      } else {
+        if (selectedTypeFilter === 'C' && item.rcaCounts.C === 0) return false;
+        if (selectedTypeFilter === 'A' && item.rcaCounts.A === 0) return false;
+        if (selectedTypeFilter === 'T' && item.rcaCounts.T === 0) return false;
+        if (selectedTypeFilter === 'G' && item.rcaCounts.G === 0) return false;
+        if (selectedTypeFilter === 'unclassified' && item.rcaCounts.unclassified === 0) return false;
+      }
       if (searchQuery.trim()) return item.topic.toLowerCase().includes(searchQuery.toLowerCase());
       return true;
     });
-  }, [currentSubjectData, selectedTypeFilter, searchQuery]);
+  }, [currentSubjectData, selectedTypeFilter, searchQuery, viewMode]);
 
   const maxErrors = filteredChapters.length > 0 ? filteredChapters[0].totalErrors : 1;
   const subjectCfg = SUBJECT_CONFIG[currentSubjectName] || SUBJECT_CONFIG['Mathematics'];
@@ -258,71 +329,184 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
         })}
       </div>
 
-      {/* ─── KPI Metric Bar (Compact Single-Row Cards) ─── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
-        {/* Total Errors */}
-        <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-red-50 flex items-center justify-center shrink-0 border border-red-100">
-            <AlertTriangle className="w-3 h-3 text-red-500" />
+      {/* ─── Mode Switcher Header ─── */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between bg-white rounded-xl border border-slate-200/80 px-3.5 py-2 shadow-xs gap-2">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-black text-xs">
+            {viewMode === 'rca' ? <Target className="w-3.5 h-3.5" /> : <BarChart2 className="w-3.5 h-3.5" />}
           </div>
-          <div className="min-w-0">
-            <div className="text-sm font-bold text-slate-900 leading-none">{currentSubjectData.totalErrors}</div>
-            <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Total Errors</div>
-          </div>
-        </div>
-
-        {/* Negative Marks */}
-        <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
-            <TrendingDown className="w-3 h-3 text-rose-500" />
-          </div>
-          <div className="min-w-0">
-            <div className="text-sm font-bold text-rose-600 leading-none">−{currentSubjectData.negativeMarks.toFixed(1)}</div>
-            <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Neg. Marks</div>
+          <div>
+            <span className="text-xs font-bold text-slate-900 block leading-tight">
+              {viewMode === 'rca' ? 'Root Cause Analysis (4-Bucket RCA)' : 'Mock Error Heatmap'}
+            </span>
+            <span className="text-[10px] text-slate-500">
+              {viewMode === 'rca' 
+                ? 'Categorized by: [C] Conceptual Gap, [A] Silly Mistake, [T] Time Trap, [G] Guesswork' 
+                : 'Categorized by: Wrong, Skipped, and Slow questions'}
+            </span>
           </div>
         </div>
 
-        {/* Speed Issues */}
-        <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center shrink-0 border border-amber-100">
-            <Clock className="w-3 h-3 text-amber-500" />
-          </div>
-          <div className="min-w-0">
-            <div className="text-sm font-bold text-amber-600 leading-none">{currentSubjectData.totalSpeed}</div>
-            <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Speed Issues</div>
-          </div>
-        </div>
-
-        {/* Skipped */}
-        <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
-            <XCircle className="w-3 h-3 text-orange-500" />
-          </div>
-          <div className="min-w-0">
-            <div className="text-sm font-bold text-orange-600 leading-none">{currentSubjectData.totalUnattempted}</div>
-            <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Skipped</div>
-          </div>
+        {/* Segmented Control */}
+        <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 shrink-0">
+          <button
+            type="button"
+            onClick={() => { setViewMode('error_type'); setSelectedTypeFilter('all'); }}
+            className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer ${
+              viewMode === 'error_type'
+                ? 'bg-white text-slate-900 shadow-xs'
+                : 'text-slate-500 hover:text-slate-900'
+            }`}
+          >
+            Error Type
+          </button>
+          <button
+            type="button"
+            onClick={() => { setViewMode('rca'); setSelectedTypeFilter('all'); }}
+            className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+              viewMode === 'rca'
+                ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xs'
+                : 'text-purple-700 hover:text-purple-900'
+            }`}
+          >
+            <Target className="w-3 h-3" />
+            <span>RCA Mode (4-Bucket)</span>
+          </button>
         </div>
       </div>
+
+      {/* ─── KPI Metric Bar (Compact Single-Row Cards) ─── */}
+      {viewMode === 'error_type' ? (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
+          {/* Total Errors */}
+          <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-red-50 flex items-center justify-center shrink-0 border border-red-100">
+              <AlertTriangle className="w-3 h-3 text-red-500" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-slate-900 leading-none">{currentSubjectData.totalErrors}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Total Errors</div>
+            </div>
+          </div>
+
+          {/* Negative Marks */}
+          <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
+              <TrendingDown className="w-3 h-3 text-rose-500" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-rose-600 leading-none">−{currentSubjectData.negativeMarks.toFixed(1)}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Neg. Marks</div>
+            </div>
+          </div>
+
+          {/* Speed Issues */}
+          <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center shrink-0 border border-amber-100">
+              <Clock className="w-3 h-3 text-amber-500" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-amber-600 leading-none">{currentSubjectData.totalSpeed}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Speed Issues</div>
+            </div>
+          </div>
+
+          {/* Skipped */}
+          <div className="bg-white rounded-lg border border-slate-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+              <XCircle className="w-3 h-3 text-orange-500" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-orange-600 leading-none">{currentSubjectData.totalUnattempted}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Skipped</div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
+          {/* [C] Conceptual Gap */}
+          <div className="bg-white rounded-lg border border-purple-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-purple-50 flex items-center justify-center shrink-0 border border-purple-100">
+              <span className="font-mono text-[11px] font-black text-purple-700">[C]</span>
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-purple-700 leading-none">{currentSubjectData.rcaTotals.C}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Conceptual Gap</div>
+            </div>
+          </div>
+
+          {/* [A] Silly Mistake */}
+          <div className="bg-white rounded-lg border border-rose-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
+              <span className="font-mono text-[11px] font-black text-rose-700">[A]</span>
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-rose-700 leading-none">{currentSubjectData.rcaTotals.A}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Silly Mistake</div>
+            </div>
+          </div>
+
+          {/* [T] Time Trap */}
+          <div className="bg-white rounded-lg border border-amber-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center shrink-0 border border-amber-100">
+              <span className="font-mono text-[11px] font-black text-amber-700">[T]</span>
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-amber-700 leading-none">{currentSubjectData.rcaTotals.T}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Time / Ego Trap</div>
+            </div>
+          </div>
+
+          {/* [G] Guesswork */}
+          <div className="bg-white rounded-lg border border-blue-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100">
+              <span className="font-mono text-[11px] font-black text-blue-700">[G]</span>
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-blue-700 leading-none">{currentSubjectData.rcaTotals.G}</div>
+              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Guesswork Failed</div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ─── Filters Row ─── */}
       <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         {/* Filter Pills */}
         <div className="flex items-center gap-1.5 flex-wrap">
-          {[
-            { id: 'all',         label: `All (${currentSubjectData.chapters.length})`, cls: 'bg-slate-900 text-white', idle: 'bg-slate-100 text-slate-600 hover:bg-slate-200' },
-            { id: 'wrong',       label: 'Wrong',       cls: 'bg-red-600 text-white',    idle: 'bg-red-50 text-red-700 hover:bg-red-100' },
-            { id: 'unattempted', label: 'Skipped',     cls: 'bg-orange-500 text-white', idle: 'bg-orange-50 text-orange-700 hover:bg-orange-100' },
-            { id: 'speed',       label: 'Speed',       cls: 'bg-amber-500 text-white',  idle: 'bg-amber-50 text-amber-700 hover:bg-amber-100' },
-          ].map(f => (
-            <button
-              key={f.id}
-              onClick={() => setSelectedTypeFilter(f.id)}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${selectedTypeFilter === f.id ? f.cls + ' shadow-xs' : f.idle}`}
-            >
-              {f.label}
-            </button>
-          ))}
+          {viewMode === 'error_type' ? (
+            [
+              { id: 'all',         label: `All (${currentSubjectData.chapters.length})`, cls: 'bg-slate-900 text-white', idle: 'bg-slate-100 text-slate-600 hover:bg-slate-200' },
+              { id: 'wrong',       label: 'Wrong',       cls: 'bg-red-600 text-white',    idle: 'bg-red-50 text-red-700 hover:bg-red-100' },
+              { id: 'unattempted', label: 'Skipped',     cls: 'bg-orange-500 text-white', idle: 'bg-orange-50 text-orange-700 hover:bg-orange-100' },
+              { id: 'speed',       label: 'Speed',       cls: 'bg-amber-500 text-white',  idle: 'bg-amber-50 text-amber-700 hover:bg-amber-100' },
+            ].map(f => (
+              <button
+                key={f.id}
+                onClick={() => setSelectedTypeFilter(f.id)}
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${selectedTypeFilter === f.id ? f.cls + ' shadow-xs' : f.idle}`}
+              >
+                {f.label}
+              </button>
+            ))
+          ) : (
+            [
+              { id: 'all',          label: `All (${currentSubjectData.chapters.length})`, cls: 'bg-slate-900 text-white', idle: 'bg-slate-100 text-slate-600 hover:bg-slate-200' },
+              { id: 'C',            label: `[C] Concept (${currentSubjectData.rcaTotals.C})`, cls: 'bg-purple-600 text-white', idle: 'bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200' },
+              { id: 'A',            label: `[A] Silly (${currentSubjectData.rcaTotals.A})`, cls: 'bg-rose-600 text-white', idle: 'bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200' },
+              { id: 'T',            label: `[T] Trap (${currentSubjectData.rcaTotals.T})`, cls: 'bg-amber-600 text-white', idle: 'bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200' },
+              { id: 'G',            label: `[G] Guess (${currentSubjectData.rcaTotals.G})`, cls: 'bg-blue-600 text-white', idle: 'bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200' },
+              { id: 'unclassified', label: `Unclassified (${currentSubjectData.rcaTotals.unclassified})`, cls: 'bg-slate-700 text-white', idle: 'bg-slate-100 text-slate-600 hover:bg-slate-200' },
+            ].map(f => (
+              <button
+                key={f.id}
+                onClick={() => setSelectedTypeFilter(f.id)}
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${selectedTypeFilter === f.id ? f.cls + ' shadow-xs' : f.idle}`}
+              >
+                {f.label}
+              </button>
+            ))
+          )}
         </div>
 
         {/* Search */}
@@ -345,10 +529,21 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
           <div className="col-span-1">#</div>
           <div className="col-span-4">Topic</div>
           <div className="col-span-3">Heat Bar</div>
-          <div className="col-span-1 text-center text-amber-600">Slow</div>
-          <div className="col-span-1 text-center text-red-600">Wrong</div>
-          <div className="col-span-1 text-center text-orange-500">Skip</div>
-          <div className="col-span-1 text-right">Total</div>
+          {viewMode === 'error_type' ? (
+            <>
+              <div className="col-span-1 text-center text-amber-600">Slow</div>
+              <div className="col-span-1 text-center text-red-600">Wrong</div>
+              <div className="col-span-1 text-center text-orange-500">Skip</div>
+              <div className="col-span-1 text-right">Total</div>
+            </>
+          ) : (
+            <>
+              <div className="col-span-1 text-center text-purple-700 font-mono" title="[C] Conceptual Gap">[C]</div>
+              <div className="col-span-1 text-center text-rose-700 font-mono" title="[A] Silly Mistake">[A]</div>
+              <div className="col-span-1 text-center text-amber-700 font-mono" title="[T] Time / Ego Trap">[T]</div>
+              <div className="col-span-1 text-center text-blue-700 font-mono" title="[G] Guesswork Failed">[G]</div>
+            </>
+          )}
         </div>
 
         {/* Rows */}
@@ -415,41 +610,79 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                   <span className="text-[10px] font-medium text-slate-400 w-6 text-right">{barPct}%</span>
                 </div>
 
-                {/* Slow */}
-                <div className="col-span-1 flex justify-center">
-                  {item.speedIssueCount > 0
-                    ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">{item.speedIssueCount}</span>
-                    : <span className="text-slate-200 text-xs">—</span>
-                  }
-                </div>
+                {viewMode === 'error_type' ? (
+                  <>
+                    {/* Slow */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.speedIssueCount > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">{item.speedIssueCount}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
 
-                {/* Wrong */}
-                <div className="col-span-1 flex justify-center">
-                  {item.wrongCount > 0
-                    ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-red-50 text-red-700 border border-red-200">{item.wrongCount}</span>
-                    : <span className="text-slate-200 text-xs">—</span>
-                  }
-                </div>
+                    {/* Wrong */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.wrongCount > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-red-50 text-red-700 border border-red-200">{item.wrongCount}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
 
-                {/* Skipped */}
-                <div className="col-span-1 flex justify-center">
-                  {item.unattemptedCount > 0
-                    ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-orange-50 text-orange-700 border border-orange-200">{item.unattemptedCount}</span>
-                    : <span className="text-slate-200 text-xs">—</span>
-                  }
-                </div>
+                    {/* Skipped */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.unattemptedCount > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-orange-50 text-orange-700 border border-orange-200">{item.unattemptedCount}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
 
-                {/* Total + arrow */}
-                <div className="col-span-1 flex items-center justify-end gap-1">
-                  <span className={`px-1.5 py-0.2 rounded text-[10px] font-bold ${
-                    item.severity === 'critical' ? 'bg-red-600 text-white' :
-                    item.severity === 'high'     ? 'bg-orange-500 text-white' :
-                    item.severity === 'medium'   ? 'bg-amber-500 text-white' :
-                                                   'bg-slate-700 text-white'
-                  }`}>
-                    {item.totalErrors}
-                  </span>
-                </div>
+                    {/* Total + arrow */}
+                    <div className="col-span-1 flex items-center justify-end gap-1">
+                      <span className={`px-1.5 py-0.2 rounded text-[10px] font-bold ${
+                        item.severity === 'critical' ? 'bg-red-600 text-white' :
+                        item.severity === 'high'     ? 'bg-orange-500 text-white' :
+                        item.severity === 'medium'   ? 'bg-amber-500 text-white' :
+                                                       'bg-slate-700 text-white'
+                      }`}>
+                        {item.totalErrors}
+                      </span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* [C] Concept */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.rcaCounts.C > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">{item.rcaCounts.C}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
+
+                    {/* [A] Silly */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.rcaCounts.A > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200">{item.rcaCounts.A}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
+
+                    {/* [T] Trap */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.rcaCounts.T > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">{item.rcaCounts.T}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
+
+                    {/* [G] Guess */}
+                    <div className="col-span-1 flex justify-center">
+                      {item.rcaCounts.G > 0
+                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">{item.rcaCounts.G}</span>
+                        : <span className="text-slate-200 text-xs">—</span>
+                      }
+                    </div>
+                  </>
+                )}
               </motion.div>
             );
           })}
@@ -538,8 +771,21 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                   return (
                     <div key={q.id || qIdx} className="rounded-2xl border border-slate-200 bg-slate-50/50 overflow-hidden">
                       {/* Question header */}
-                      <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100">
-                        <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
+                      <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100 flex-wrap gap-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
+                          {q.rcaClassification && (
+                            <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold flex items-center gap-1 ${
+                              q.rcaClassification.tag === 'C' ? 'bg-purple-100 text-purple-800' :
+                              q.rcaClassification.tag === 'A' ? 'bg-rose-100 text-rose-800' :
+                              q.rcaClassification.tag === 'T' ? 'bg-amber-100 text-amber-800' :
+                              'bg-blue-100 text-blue-800'
+                            }`}>
+                              <span className="font-mono font-black">[{q.rcaClassification.tag}]</span>
+                              <span>{q.rcaClassification.tagName}</span>
+                            </span>
+                          )}
+                        </div>
                         <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
                           isWrong ? 'bg-red-100 text-red-700' :
                           isSlow  ? 'bg-amber-100 text-amber-700' :
@@ -550,6 +796,16 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                       </div>
 
                       <div className="p-4 space-y-3">
+                        {/* Silly Mistake Note if classified under A */}
+                        {q.rcaClassification?.sillyMistakeNote && (
+                          <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-950">
+                            <span className="font-bold text-[10px] uppercase tracking-wider text-rose-700 block mb-0.5">
+                              Recorded Silly Mistake:
+                            </span>
+                            <span className="italic font-medium">"{q.rcaClassification.sillyMistakeNote}"</span>
+                          </div>
+                        )}
+
                         {/* Question text */}
                         <p className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed">{q.question}</p>
 

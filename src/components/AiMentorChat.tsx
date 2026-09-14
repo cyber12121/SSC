@@ -396,6 +396,11 @@ export function AiMentorChat({
     return sorted.length > 0 ? sorted[0][0] : 'Active & Passive Voice';
   }, [mockErrorsData]);
 
+  // Pre-aggregate mock statistics briefing for Gemini
+  const mockContextString = useMemo(() => {
+    return buildMockAiSummary(mockReports, mockErrorsData, activeMockReport);
+  }, [mockReports, mockErrorsData, activeMockReport]);
+
   const handleSendMessage = async (textToSend?: string) => {
     const query = (textToSend || inputText).trim();
     if (!query || isLoading) return;

@@ -1,3 +1,12 @@
+export type RCATagType = 'C' | 'A' | 'T' | 'G';
+
+export interface RCAClassification {
+  tag: RCATagType;
+  tagName: 'Conceptual Gap' | 'Silly Mistake' | 'Time / Ego Trap' | 'Guesswork Failed';
+  sillyMistakeNote?: string;
+  classifiedAt: string;
+}
+
 export interface Question {
   id?: string;
   q_num: number;
@@ -24,6 +33,7 @@ export interface Question {
   };
   avgTime?: string | number;
   avgTimeSeconds?: number;
+  rca?: RCAClassification;
 }
 
 export interface SubjectData {
@@ -53,6 +63,7 @@ export interface QuestionProgress {
   marked?: boolean;
   avgTime?: string | number;
   avgTimeSeconds?: number;
+  rca?: RCAClassification;
 }
 
 export interface QuizResult {
