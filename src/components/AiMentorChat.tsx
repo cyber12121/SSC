@@ -18,8 +18,10 @@ import {
   Brain,
   ChevronDown,
   HelpCircle,
-  Clock,
-  ArrowRight
+  ArrowRight,
+  Play,
+  Zap,
+  Clock
 } from 'lucide-react';
 import { MockScoreReport } from '../types/mockScore';
 import { QuizResult } from '../types';
@@ -37,27 +39,95 @@ interface AiMentorChatProps {
   mockErrorsData?: Record<string, any[]>;
   activeMockReport?: MockScoreReport | null;
   activeReviewResult?: QuizResult | null;
+  onStartWeakTopicDrill?: (topic: string, subject?: string) => void;
 }
 
 const DEFAULT_SUGGESTIONS = [
   { icon: Target, label: 'Analyze my weak topics across all mocks', text: 'Analyze all my mocks and tell me my top 3 weakest topics and what I should do.' },
   { icon: TrendingUp, label: 'How to boost my score to 150+?', text: 'Looking at my current mock scores, what is my gap to reach 150+ in Tier-1 and which section gives the highest ROI?' },
   { icon: Flame, label: 'Why am I losing marks in English?', text: 'Analyze my English performance across my mocks and give me a fix for my errors.' },
-  { icon: Clock, label: 'Create a 15-day mock revision plan', text: 'Create a focused 15-day revision and mock attempt schedule tailored to my current strengths and weaknesses.' }
+  { icon: Brain, label: 'Create a 15-day mock revision plan', text: 'Create a focused 15-day revision and mock attempt schedule tailored to my current strengths and weaknesses.' }
 ];
+
+// Clean residual or malformed LaTeX formulas into clean, readable math & unicode
+function cleanLatexMath(text: string): string {
+  if (!text) return '';
+  let s = text;
+
+  // 1. Fix broken '≤ft' artifact created by bad \le replacement on \left
+  s = s.replace(/≤ft\s*\(/g, '(').replace(/≤ft\s*\[/g, '[');
+
+  // 2. Remove LaTeX delimiter wrappers \left and \right
+  s = s.replace(/\\left\s*([(\[{|])/g, '$1');
+  s = s.replace(/\\right\s*([)\]}|])/g, '$1');
+  s = s.replace(/\\left|\\right/g, '');
+
+  // 3. Convert mixed numbers: e.g. 16\frac{2}{3} -> 16 2/3
+  s = s.replace(/(\d+)\s*\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '$1 $2/$3');
+
+  // 4. Convert remaining fractions: \frac{a}{b} -> (a / b) or a/b
+  let prev = '';
+  do {
+    prev = s;
+    s = s.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '($1 / $2)');
+  } while (s !== prev);
+
+  // Clean up simple fractions like (1 / 9) to 1/9 (preserve if followed by power/exponent)
+  s = s.replace(/\((\d+)\s*\/\s*(\d+)\)(?!\^|[²³])/g, '$1/$2');
+  s = s.replace(/\(([a-zA-Z0-9]+)\s*\/\s*([a-zA-Z0-9]+)\)(?!\^|[²³])/g, '$1/$2');
+
+  // Collapse redundant double parentheses like ((x / 10)) to (x / 10)
+  s = s.replace(/\(\(([^\(\)]+)\)\)/g, '($1)');
+
+  // Common superscripts
+  s = s.replace(/\^2\b|\^\{2\}/g, '²');
+  s = s.replace(/\^3\b|\^\{3\}/g, '³');
+
+  // 5. Convert \text{...} to plain text
+  s = s.replace(/\\text\{([^{}]+)\}/g, '$1');
+
+  // 6. Clean LaTeX spacing and special symbols
+  s = s.replace(/\\(quad|qquad|;|!|,)/g, ' ');
+  s = s.replace(/\\(to|rightarrow)/g, ' → ');
+  s = s.replace(/\\times/g, ' × ');
+  s = s.replace(/\\div/g, ' ÷ ');
+  s = s.replace(/\\pm/g, ' ± ');
+  s = s.replace(/\\le(?!ft)/g, ' ≤ ');
+  s = s.replace(/\\ge/g, ' ≥ ');
+  s = s.replace(/\\Delta/g, 'Δ');
+  s = s.replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
+  s = s.replace(/\\sqrt/g, '√');
+  s = s.replace(/\\%/g, '%');
+
+  // 7. Strip remaining standalone backslashes before words e.g. \approx
+  s = s.replace(/\\(approx|approxeq)/g, '≈');
+  s = s.replace(/\\(neq|ne)/g, '≠');
+  s = s.replace(/\\(infty)/g, '∞');
+
+  // 8. Strip standalone LaTeX math dollar wrappers $
+  s = s.replace(/\$/g, '');
+
+  // 9. Clean redundant multiple spaces
+  s = s.replace(/[ \t]{2,}/g, ' ');
+
+  return s;
+}
 
 // Lightweight Markdown Renderer for clean formatted responses
 function FormattedMessage({ content }: { content: string }) {
+  // Pre-clean any LaTeX formulas into clean, readable notation
+  const sanitizedContent = cleanLatexMath(content);
+
   // Parse lines for headers, bullet points, horizontal rules, and tables
-  const lines = content.split('\n');
+  const lines = sanitizedContent.split('\n');
   const elements: React.ReactNode[] = [];
   let inCodeBlock = false;
   let codeBuffer: string[] = [];
   let tableBuffer: string[] = [];
 
   const formatInline = (text: string) => {
-    // Math formulas: $...$, bold: **...**, italic: *...*, code: `...`
-    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`|\$[^\$]+?\$)/g);
+    // Bold: **...**, italic: *...*, code: `...`
+    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={i} className="font-semibold text-slate-900">{part.slice(2, -2)}</strong>;
@@ -70,20 +140,6 @@ function FormattedMessage({ content }: { content: string }) {
           <code key={i} className="px-1.5 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-mono text-xs border border-indigo-100/60">
             {part.slice(1, -1)}
           </code>
-        );
-      }
-      if (part.startsWith('$') && part.endsWith('$')) {
-        const mathClean = part.slice(1, -1)
-          .replace(/\\text\{([^}]+)\}/g, '$1')
-          .replace(/\\rightarrow|\\to/g, '→')
-          .replace(/\\times/g, '×')
-          .replace(/\\Delta/g, 'Δ')
-          .replace(/\\le/g, '≤')
-          .replace(/\\ge/g, '≥');
-        return (
-          <span key={i} className="px-1.5 py-0.2 mx-0.5 rounded bg-amber-50 text-amber-900 font-medium font-mono text-[11px] border border-amber-200/70 inline-block shadow-2xs">
-            {mathClean}
-          </span>
         );
       }
       return part;
@@ -153,6 +209,33 @@ function FormattedMessage({ content }: { content: string }) {
       return;
     } else if (tableBuffer.length > 0) {
       flushTable();
+    }
+
+    // Targeted Drill Card trigger: [DRILL: Topic Name]
+    const drillMatch = line.trim().match(/\[DRILL:\s*([^\]]+)\]/i);
+    if (drillMatch) {
+      const drillTopic = drillMatch[1].trim();
+      elements.push(
+        <div key={`drill-${idx}`} className="my-2.5 p-3 rounded-xl bg-gradient-to-r from-indigo-50/90 via-purple-50/90 to-amber-50/90 border border-indigo-200/80 flex items-center justify-between gap-3 shadow-xs">
+          <div className="min-w-0">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 flex items-center gap-1">
+              <Zap className="w-3 h-3 text-amber-500 fill-current" />
+              Targeted Practice Drill
+            </span>
+            <h5 className="text-xs font-black text-slate-900 truncate">{drillTopic}</h5>
+          </div>
+          <button
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('cgl_launch_drill', { detail: { topic: drillTopic } }));
+            }}
+            className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+          >
+            <Play className="w-3 h-3 fill-current" />
+            <span>Start Test</span>
+          </button>
+        </div>
+      );
+      return;
     }
 
     // Horizontal Rule
@@ -230,17 +313,25 @@ function FormattedMessage({ content }: { content: string }) {
   return <div className="space-y-0.5">{elements}</div>;
 }
 
-export function AiMentorChat({ mockReports, mockErrorsData, activeMockReport, activeReviewResult }: AiMentorChatProps) {
+export function AiMentorChat({
+  mockReports,
+  mockErrorsData,
+  activeMockReport,
+  activeReviewResult,
+  onStartWeakTopicDrill
+}: AiMentorChatProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
-    const saved = localStorage.getItem('cgl_ai_chat_history');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        // ignore
+    try {
+      if (typeof window !== 'undefined') {
+        const saved = window.localStorage?.getItem('cgl_ai_chat_history');
+        if (saved) {
+          return JSON.parse(saved);
+        }
       }
+    } catch (e) {
+      // ignore storage disallow error
     }
     return [
       {
@@ -259,9 +350,15 @@ export function AiMentorChat({ mockReports, mockErrorsData, activeMockReport, ac
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  // Sync chat history to localStorage
+  // Sync chat history to localStorage safely
   useEffect(() => {
-    localStorage.setItem('cgl_ai_chat_history', JSON.stringify(messages));
+    try {
+      if (typeof window !== 'undefined') {
+        window.localStorage?.setItem('cgl_ai_chat_history', JSON.stringify(messages));
+      }
+    } catch (e) {
+      // storage not allowed or quota exceeded
+    }
   }, [messages]);
 
   // Scroll to bottom whenever new message arrives
@@ -278,10 +375,26 @@ export function AiMentorChat({ mockReports, mockErrorsData, activeMockReport, ac
     }
   }, [isOpen]);
 
-  // Aggregate current mock profile context string
-  const mockContextString = useMemo(() => {
-    return buildMockAiSummary(mockReports, mockErrorsData, activeMockReport);
-  }, [mockReports, mockErrorsData, activeMockReport]);
+  // Identify top weak topic from error data
+  const topWeakTopic = useMemo(() => {
+    const errorCounts: Record<string, number> = {};
+    if (mockErrorsData) {
+      Object.values(mockErrorsData).forEach(chapters => {
+        if (Array.isArray(chapters)) {
+          chapters.forEach(ch => {
+            (ch.questions || []).forEach((q: any) => {
+              const raw = q.tags?.topic || q.topic;
+              if (raw && raw !== 'General') {
+                errorCounts[raw] = (errorCounts[raw] || 0) + 1;
+              }
+            });
+          });
+        }
+      });
+    }
+    const sorted = Object.entries(errorCounts).sort((a, b) => b[1] - a[1]);
+    return sorted.length > 0 ? sorted[0][0] : 'Active & Passive Voice';
+  }, [mockErrorsData]);
 
   const handleSendMessage = async (textToSend?: string) => {
     const query = (textToSend || inputText).trim();
@@ -354,6 +467,35 @@ export function AiMentorChat({ mockReports, mockErrorsData, activeMockReport, ac
     }
   };
 
+  // Handle Ask AI from Review button & Launch Drill from Bot
+  const handleSendMessageRef = useRef(handleSendMessage);
+  handleSendMessageRef.current = handleSendMessage;
+
+  useEffect(() => {
+    const handleAskAi = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (!detail) return;
+      setIsOpen(true);
+      const prompt = `Please explain Question #${detail.questionNumber} (${detail.topic || 'General'}):\n\nQuestion:\n${detail.questionText}\n\nMy Chosen Option: ${detail.userAnswer ? detail.userAnswer.toUpperCase() : 'Unattempted / Left'}\nCorrect Answer: ${detail.correctAnswer ? detail.correctAnswer.toUpperCase() : 'Refer to solution'}\n\nPlease explain why my answer was wrong, break down the core concept/grammar rule step-by-step, and give me a fast shortcut trick to solve this in under 30 seconds.`;
+      handleSendMessageRef.current(prompt);
+    };
+
+    const handleLaunchDrill = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail?.topic && onStartWeakTopicDrill) {
+        setIsOpen(false);
+        onStartWeakTopicDrill(detail.topic);
+      }
+    };
+
+    window.addEventListener('cgl_ask_ai_question', handleAskAi);
+    window.addEventListener('cgl_launch_drill', handleLaunchDrill);
+    return () => {
+      window.removeEventListener('cgl_ask_ai_question', handleAskAi);
+      window.removeEventListener('cgl_launch_drill', handleLaunchDrill);
+    };
+  }, [onStartWeakTopicDrill]);
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -372,12 +514,16 @@ export function AiMentorChat({ mockReports, mockErrorsData, activeMockReport, ac
         }
       ];
       setMessages(reset);
-      localStorage.removeItem('cgl_ai_chat_history');
+      try {
+        if (typeof window !== 'undefined') {
+          window.localStorage?.removeItem('cgl_ai_chat_history');
+        }
+      } catch (e) {}
     }
   };
 
   const copyToClipboard = (text: string, id: string) => {
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(cleanLatexMath(text));
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   };
@@ -625,8 +771,32 @@ export function AiMentorChat({ mockReports, mockErrorsData, activeMockReport, ac
             {/* Quick Suggestion Chips */}
             {messages.length <= 2 && !isLoading && (
               <div className="px-3 pt-2 pb-1 bg-white border-t border-slate-100 flex flex-nowrap overflow-x-auto gap-1.5 scrollbar-none">
+                {onStartWeakTopicDrill && (
+                  <button
+                    onClick={() => {
+                      setIsOpen(false);
+                      onStartWeakTopicDrill(topWeakTopic);
+                    }}
+                    className="px-2.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-[10px] font-bold transition-all shrink-0 flex items-center gap-1.5 cursor-pointer shadow-xs active:scale-95"
+                    title={`Start a 15-question targeted drill on ${topWeakTopic}`}
+                  >
+                    <Zap className="w-3 h-3 text-amber-200 shrink-0 fill-current" />
+                    <span>⚡ Drill: {topWeakTopic} (15 Qs)</span>
+                  </button>
+                )}
+
+                {activeReviewResult && (
+                  <button
+                    onClick={() => handleSendMessage('Review all my wrong questions in this test and explain the solutions step-by-step.')}
+                    className="px-2.5 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-700 text-[10px] font-bold transition-all shrink-0 flex items-center gap-1.5 cursor-pointer active:scale-95"
+                  >
+                    <Target className="w-3 h-3 text-indigo-600 shrink-0" />
+                    <span>Explain My Mistakes in this Test</span>
+                  </button>
+                )}
+
                 {DEFAULT_SUGGESTIONS.map((s, idx) => {
-                  const Icon = s.icon;
+                  const Icon = s.icon || Target;
                   return (
                     <button
                       key={idx}

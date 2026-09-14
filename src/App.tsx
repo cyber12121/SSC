@@ -273,8 +273,12 @@ export default function App() {
   const [reviewBackTo, setReviewBackTo] = useState<'home' | 'dashboard'>('dashboard');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
-    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('quizMode') : null;
-    return saved === 'mock' ? 'mock' : 'practice';
+    try {
+      const saved = typeof window !== 'undefined' ? window.localStorage?.getItem('quizMode') : null;
+      return saved === 'mock' ? 'mock' : 'practice';
+    } catch {
+      return 'practice';
+    }
   });
   const setQuizModePersisted = (mode: 'practice' | 'mock') => {
     setQuizMode(mode);
@@ -506,8 +510,14 @@ export default function App() {
       })) as QuizResult[];
 
       // Filter out cleared history and individually deleted items
-      const clearedAt = localStorage.getItem('activity_cleared_at_' + user.uid);
-      const hiddenIds = new Set(JSON.parse(localStorage.getItem('hidden_result_ids_' + user.uid) || '[]'));
+      let clearedAt: string | null = null;
+      let hiddenIds = new Set<string>();
+      try {
+        if (typeof window !== 'undefined') {
+          clearedAt = window.localStorage?.getItem('activity_cleared_at_' + user.uid) || null;
+          hiddenIds = new Set(JSON.parse(window.localStorage?.getItem('hidden_result_ids_' + user.uid) || '[]'));
+        }
+      } catch (e) {}
 
       const filtered = results.filter(r => {
         if (hiddenIds.has(r.id)) return false;
@@ -734,6 +744,62 @@ export default function App() {
       subject_id: chapter.subject_id,
       questions: filteredQuestions
     };
+    startQuiz(virtualChapter);
+  };
+
+  const startWeakTopicDrill = (topicName: string, subjectName?: string) => {
+    const normalized = normalizeTopicTitle(topicName);
+    const targetSubject = subjectName || (
+      ['Active & Passive Voice', 'Direct & Indirect Speech', 'Para Jumbles', 'One Word Substitution', 'Spelling Errors', 'Synonyms & Antonyms', 'Spotting Errors', 'Cloze Test'].includes(normalized)
+        ? 'English'
+        : ['Missing Number / Matrix', 'Analogy', 'Coding-Decoding', 'Syllogism', 'Direction & Distance', 'Blood Relations', 'Venn Diagram'].includes(normalized)
+        ? 'Reasoning'
+        : 'Mathematics'
+    );
+
+    // 1. Gather all questions matching this topic from mockData (mock errors)
+    const mockQuestions = (mockData[targetSubject] || []).flatMap(ch => ch.questions).filter(q => {
+      const raw = q.tags?.topic || (q as any).topic || detectTopic(q, targetSubject);
+      return normalizeTopicTitle(raw) === normalized;
+    });
+
+    // 2. Gather from bankData (chapter bank)
+    const bankQuestions = (bankData[targetSubject] || []).flatMap(ch => ch.questions).filter(q => {
+      const raw = q.tags?.topic || (q as any).topic || detectTopic(q, targetSubject);
+      return normalizeTopicTitle(raw) === normalized;
+    });
+
+    // Combine, deduplicate, and limit to 15-20 questions
+    const combined = [...mockQuestions, ...bankQuestions];
+    const seen = new Set<string>();
+    const drillQuestions: Question[] = [];
+    for (const q of combined) {
+      const key = (q.question || '').trim().toLowerCase();
+      if (!seen.has(key)) {
+        seen.add(key);
+        drillQuestions.push({
+          ...q,
+          q_num: drillQuestions.length + 1
+        });
+        if (drillQuestions.length >= 20) break;
+      }
+    }
+
+    if (drillQuestions.length === 0) {
+      alert(`No practice questions found specifically for topic "${normalized}".`);
+      return;
+    }
+
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `AI Targeted Drill • ${normalized} (${drillQuestions.length} Qs)`,
+      subject: targetSubject,
+      subject_id: targetSubject.toLowerCase().replace(/\s+/g, '_'),
+      questions: drillQuestions
+    };
+
+    setCategory('mockErrors');
+    setQuizMode('practice');
     startQuiz(virtualChapter);
   };
 
@@ -3671,6 +3737,7 @@ export default function App() {
         mockReports={mockReportsList} 
         mockErrorsData={mockData} 
         activeReviewResult={view === 'review' ? reviewResult : null}
+        onStartWeakTopicDrill={startWeakTopicDrill}
       />
     )}
   </div>

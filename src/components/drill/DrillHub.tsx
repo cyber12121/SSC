@@ -35,20 +35,29 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
   const [showCheatSheet, setShowCheatSheet] = useState<boolean>(false);
 
   const [streak, setStreak] = useState<number>(() => {
-    const saved = localStorage.getItem('calc_drill_streak');
-    return saved ? parseInt(saved, 10) : 1;
+    try {
+      if (typeof window !== 'undefined') {
+        const saved = window.localStorage?.getItem('calc_drill_streak');
+        return saved ? parseInt(saved, 10) : 1;
+      }
+    } catch {}
+    return 1;
   });
 
   // Track daily visit
   useEffect(() => {
-    const lastDate = localStorage.getItem('calc_drill_last_date');
-    const today = new Date().toDateString();
-    if (lastDate !== today) {
-      localStorage.setItem('calc_drill_last_date', today);
-      const newStreak = parseInt(localStorage.getItem('calc_drill_streak') || '0', 10) + 1;
-      localStorage.setItem('calc_drill_streak', newStreak.toString());
-      setStreak(newStreak);
-    }
+    try {
+      if (typeof window !== 'undefined') {
+        const lastDate = window.localStorage?.getItem('calc_drill_last_date');
+        const today = new Date().toDateString();
+        if (lastDate !== today) {
+          window.localStorage?.setItem('calc_drill_last_date', today);
+          const newStreak = parseInt(window.localStorage?.getItem('calc_drill_streak') || '0', 10) + 1;
+          window.localStorage?.setItem('calc_drill_streak', newStreak.toString());
+          setStreak(newStreak);
+        }
+      }
+    } catch {}
   }, []);
 
   const openFullscreenStudio = (mode: 'routine' | 'free' = 'routine', section: SectionId = 'triplets') => {

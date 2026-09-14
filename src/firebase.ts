@@ -11,14 +11,17 @@ export const googleProvider = new GoogleAuthProvider();
 // Connection test
 async function testConnection() {
   try {
-    await getDocFromServer(doc(db, 'test', 'connection'));
-  } catch (error) {
+    if (typeof window !== 'undefined') {
+      await getDocFromServer(doc(db, 'test', 'connection'));
+    }
+  } catch (error: any) {
+    // Gracefully handle offline or restricted storage contexts
     if (error instanceof Error && error.message.includes('the client is offline')) {
-      console.error("Please check your Firebase configuration. The client is offline.");
+      console.warn("Firebase notice: The client is offline.");
     }
   }
 }
-testConnection();
+testConnection().catch(() => {});
 
 export enum OperationType {
   CREATE = 'create',

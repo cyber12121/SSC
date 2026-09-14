@@ -24,7 +24,8 @@ import {
   XCircle,
   CheckCircle2,
   Layers,
-  Trash2
+  Trash2,
+  Sparkles
 } from 'lucide-react';
 import { QuizResult, Question } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
@@ -700,8 +701,29 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </span>
             </div>
 
-            {/* Save & Report Actions */}
-            <div className="flex items-center space-x-4 text-xs font-medium text-gray-600">
+            {/* Save & Report & Ask AI Actions */}
+            <div className="flex items-center space-x-3 text-xs font-medium text-gray-600">
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
+                    detail: {
+                      questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
+                      questionText: question.question,
+                      options: question.options,
+                      userAnswer: current?.userAnswer,
+                      correctAnswer: question.answer,
+                      solution: question.solution,
+                      topic: question.tags?.topic || (question as any).topic || result.subject
+                    }
+                  }));
+                }}
+                className="flex items-center space-x-1 text-indigo-600 hover:text-indigo-800 font-bold transition-all px-2.5 py-1 rounded-md bg-indigo-50 hover:bg-indigo-100 cursor-pointer shadow-2xs border border-indigo-100"
+                title="Ask Sankalp AI Mentor to explain this question"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                <span>Ask AI</span>
+              </button>
+
               <button 
                 onClick={handleBookmarkClick}
                 className={`flex items-center space-x-1 hover:text-[#0097a7] transition-colors ${
@@ -905,10 +927,30 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 {(!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && (
                   <div className="mt-8 pt-4 border-t border-gray-200">
                     {/* Solution Header Tab */}
-                    <div className="mb-4">
+                    <div className="mb-4 flex items-center justify-between">
                       <span className="border-b-2 border-[#0097a7] text-[#0097a7] font-bold text-sm inline-block pb-1.5">
                         Solution
                       </span>
+                      <button
+                        onClick={() => {
+                          window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
+                            detail: {
+                              questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
+                              questionText: question.question,
+                              options: question.options,
+                              userAnswer: current?.userAnswer,
+                              correctAnswer: question.answer,
+                              solution: question.solution,
+                              topic: question.tags?.topic || (question as any).topic || result.subject
+                            }
+                          }));
+                        }}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer group"
+                        title="Ask Sankalp AI Mentor to explain this question, formulas, and elimination tricks"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform" />
+                        <span>Ask AI to Explain</span>
+                      </button>
                     </div>
 
                     {/* Shortcut Trick / Solution Body */}
