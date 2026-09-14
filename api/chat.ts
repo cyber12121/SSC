@@ -113,6 +113,8 @@ function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
               source: `Mock Test Question (${item.subject || 'General'})`,
               topic: item.topic,
               status: item.status,
+              userTime: item.userTime || item.user_time || item.timeSpent,
+              avgTime: item.avgTime || item.avg_time,
               question: item.questionText || item.question,
               options: item.options,
               answer: item.correctOption || item.answer,
@@ -178,6 +180,7 @@ Options: ${JSON.stringify(q.options || {})}
 Candidate Chosen Answer: ${q.userAnswer ? q.userAnswer.toUpperCase() : 'Unattempted / Left'}
 True Correct Answer: ${q.correctAnswer ? q.correctAnswer.toUpperCase() : 'Refer to solution'}
 Result: ${q.isCorrect ? '✅ CORRECT' : '❌ WRONG / SKIPPED'}
+Time Spent: ${q.timeSpent ? q.timeSpent + 's' : (q.userTime || 'N/A')} (Platform Avg Time: ${q.avgTime ? q.avgTime + 's' : 'N/A'})
 Step-by-step Official Solution:
 ${q.solution || 'Solution not provided'}
 `).join('\n---\n');
@@ -192,6 +195,7 @@ ${q.solution || 'Solution not provided'}
         relevantQs.map((q, idx) => `
 [Matched Question #${idx + 1} from ${q.source}]
 Topic: ${q.topic || 'General'}
+Time: You: ${q.userTime || 'N/A'} | Platform Avg: ${q.avgTime || 'N/A'}
 Question: ${q.question}
 Options: ${JSON.stringify(q.options || {})}
 Correct Answer: ${q.answer || 'Refer to solution'}

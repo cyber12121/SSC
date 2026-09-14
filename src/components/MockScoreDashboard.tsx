@@ -943,6 +943,22 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         const qId = item.id || `mock_q_${idx + 1}_${report.id}`;
         const existingRca = item.rca || rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)];
 
+        const rawAvg = item.avgTime || item.avg_time || item.avgTimeSeconds;
+        let parsedAvg = 45;
+        if (typeof rawAvg === 'number' && rawAvg > 0) {
+          parsedAvg = rawAvg;
+        } else if (rawAvg) {
+          const str = String(rawAvg).trim();
+          if (str.includes(':')) {
+            const p = str.split(':').map(x => parseInt(x, 10));
+            if (p.length === 2 && !isNaN(p[0]) && !isNaN(p[1])) parsedAvg = p[0] * 60 + p[1];
+            else if (p.length === 3 && !isNaN(p[0]) && !isNaN(p[1]) && !isNaN(p[2])) parsedAvg = p[0] * 3600 + p[1] * 60 + p[2];
+          } else {
+            const n = parseInt(str.replace(/[^0-9]/g, ''), 10);
+            if (!isNaN(n) && n > 0) parsedAvg = n;
+          }
+        }
+
         return {
           id: qId,
           q_num: idx + 1,
@@ -956,7 +972,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             topic: topicText,
             difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
           },
-          avgTime: item.avgTime || item.avg_time || item.avgTimeSeconds || 45,
+          avgTime: parsedAvg,
+          avgTimeSeconds: parsedAvg,
           rca: existingRca
         };
       });
@@ -1010,7 +1027,22 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           }
         }
 
-        const timeSpent = Number(item.timeSpent || item.timeTaken || item.time_spent || item.time || (isSlow ? 65 : 35));
+        // Parse user time from "01:01" or seconds
+        const rawUserTime = item.userTime || item.user_time || item.timeSpent || item.timeTaken || item.time_spent || item.time;
+        let timeSpent = isSlow ? 65 : 35;
+        if (typeof rawUserTime === 'number' && rawUserTime > 0) {
+          timeSpent = rawUserTime;
+        } else if (rawUserTime) {
+          const str = String(rawUserTime).trim();
+          if (str.includes(':')) {
+            const p = str.split(':').map(x => parseInt(x, 10));
+            if (p.length === 2 && !isNaN(p[0]) && !isNaN(p[1])) timeSpent = p[0] * 60 + p[1];
+            else if (p.length === 3 && !isNaN(p[0]) && !isNaN(p[1]) && !isNaN(p[2])) timeSpent = p[0] * 3600 + p[1] * 60 + p[2];
+          } else {
+            const n = parseInt(str.replace(/[^0-9]/g, ''), 10);
+            if (!isNaN(n) && n > 0) timeSpent = n;
+          }
+        }
 
         return {
           q_num: idx + 1,

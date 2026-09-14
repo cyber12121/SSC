@@ -287,13 +287,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     }
   };
 
-  // Pre-index avgTime from bundled mock questions or localStorage to guarantee availability on historical attempts
+  // Pre-index avgTime and userTime from bundled mock questions or localStorage
   const [mockAvgTimeMap, setMockAvgTimeMap] = useState<Map<string, number>>(new Map());
+  const [mockUserTimeMap, setMockUserTimeMap] = useState<Map<string, number>>(new Map());
 
   useEffect(() => {
     let isCancelled = false;
-    const loadMockAvgTimes = async () => {
-      const map = new Map<string, number>();
+    const loadMockTimes = async () => {
+      const avgMap = new Map<string, number>();
+      const userMap = new Map<string, number>();
 
       // 1. Check if there is data in localStorage for mock reports
       try {
@@ -305,11 +307,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               const list = JSON.parse(raw);
               if (Array.isArray(list)) {
                 list.forEach((item: any) => {
-                  const parsedSec = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
-                  if (parsedSec !== null) {
-                    const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
-                    if (text) map.set(text, parsedSec);
-                    if (item.id) map.set(String(item.id), parsedSec);
+                  const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+                  const parsedAvg = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
+                  if (parsedAvg !== null) {
+                    if (text) avgMap.set(text, parsedAvg);
+                    if (item.id) avgMap.set(String(item.id), parsedAvg);
+                  }
+                  const parsedUser = parseAvgTimeToSeconds(item.userTime || item.user_time || item.timeSpent || item.timeTaken);
+                  if (parsedUser !== null && parsedUser > 0) {
+                    if (text) userMap.set(text, parsedUser);
+                    if (item.id) userMap.set(String(item.id), parsedUser);
                   }
                 });
               }
@@ -328,11 +335,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             const list = mod.default || mod;
             if (Array.isArray(list)) {
               list.forEach((item: any) => {
-                const parsedSec = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
-                if (parsedSec !== null) {
-                  const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
-                  if (text) map.set(text, parsedSec);
-                  if (item.id) map.set(String(item.id), parsedSec);
+                const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+                const parsedAvg = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
+                if (parsedAvg !== null) {
+                  if (text) avgMap.set(text, parsedAvg);
+                  if (item.id) avgMap.set(String(item.id), parsedAvg);
+                }
+                const parsedUser = parseAvgTimeToSeconds(item.userTime || item.user_time || item.timeSpent || item.timeTaken);
+                if (parsedUser !== null && parsedUser > 0) {
+                  if (text) userMap.set(text, parsedUser);
+                  if (item.id) userMap.set(String(item.id), parsedUser);
                 }
               });
             }
@@ -340,12 +352,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         }
       } catch {}
 
-      if (!isCancelled && map.size > 0) {
-        setMockAvgTimeMap(map);
+      if (!isCancelled) {
+        if (avgMap.size > 0) setMockAvgTimeMap(avgMap);
+        if (userMap.size > 0) setMockUserTimeMap(userMap);
       }
     };
 
-    loadMockAvgTimes();
+    loadMockTimes();
     return () => { isCancelled = true; };
   }, []);
 
@@ -745,6 +758,38 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     // Default when not given in mock: 35 seconds
     return 35;
   }, [question, current, mockAvgTimeMap]);
+
+  // User time for question:
+  // Check direct userTime/timeSpent, then query mockUserTimeMap by question text/id
+  const userSeconds = useMemo(() => {
+    const rawDirect = 
+      (current as any)?.timeSpent ?? 
+      (current as any)?.userTime ?? 
+      (current as any)?.user_time ?? 
+      question?.timeSpent ?? 
+      (question as any)?.userTime ?? 
+      (question as any)?.user_time;
+
+    const parsedDirect = parseAvgTimeToSeconds(rawDirect);
+    // If it's a real parsed time from extractor and not the generic 65/35 fallback
+    if (parsedDirect !== null && parsedDirect > 0 && parsedDirect !== 65 && parsedDirect !== 35) {
+      return parsedDirect;
+    }
+
+    if (question) {
+      if (question.id && mockUserTimeMap.has(String(question.id))) {
+        return mockUserTimeMap.get(String(question.id))!;
+      }
+      const cleanText = (question.question || '').trim().toLowerCase();
+      if (cleanText && mockUserTimeMap.has(cleanText)) {
+        return mockUserTimeMap.get(cleanText)!;
+      }
+    }
+
+    if (parsedDirect !== null && parsedDirect > 0) return parsedDirect;
+    return typeof current?.timeSpent === 'number' ? current.timeSpent : 0;
+  }, [question, current, mockUserTimeMap]);
+
   // Percentage answered correctly (simulate realistic platform percentage ~35-65%)
   const accuracyPercent = question?.tags?.difficulty === 'easy' ? 68 : (question?.tags?.difficulty === 'hard' ? 24 : 40);
 
@@ -936,7 +981,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               {/* Stopwatch & Time: You: 00:05  Avg: 01:11 */}
               <div className="flex items-center space-x-1.5 text-xs text-gray-700 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
                 <Clock className="w-3.5 h-3.5 text-gray-500" />
-                <span className="font-medium">You: {formatTime(current?.timeSpent || 0)}</span>
+                <span className="font-medium">You: {formatTime(userSeconds)}</span>
                 <span className="text-gray-300">|</span>
                 <span className="text-gray-500">Avg: {formatTime(avgSeconds)}</span>
               </div>
