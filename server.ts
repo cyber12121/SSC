@@ -6,6 +6,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import crypto from "crypto";
 import { cleanSolutionText } from "./src/utils/cleanSolution";
+import chatHandler from "./api/chat";
 
 dotenv.config();
 
@@ -230,11 +231,22 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
       (existingTopic === "Syllogism" && !/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(q.questionText || q.question || ""))
     );
 
+    // Detect Matrix / Missing Number / Grid questions
+    const qText = (q.questionText || q.question || "").trim();
+    const isMatrixQuestion = 
+      /\b(matrix|missing number|number puzzle|box matrix|grid matrix)\b/i.test(existingTopic || "") ||
+      /\b(matrix|missing number|replace the question mark \(\?\)|study the given pattern|find the missing number)\b/i.test(qText) ||
+      /\b(row 1|row 2|row 3|column 1|column 2|column 3)\b/i.test(q.solution || "") ||
+      /(?:^\s*\d+\s*[\r\n]+){4,}/m.test(qText);
+
+    const sendMatrixToAI = process.env.SEND_MOCK_MATRIX_TO_AI !== "false";
+    const forceAIForMatrix = sendMatrixToAI && isMatrixQuestion;
+
     const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown" && !isMismatchedReasoning;
     const hasValidAnswer = q.correctOption && q.correctOption !== "N/A" && /^[A-D]$/i.test(q.correctOption.trim());
     const hasCleanText = !(q.questionText || q.question || "").includes("Reattempt mode is Off");
 
-    if (hasValidTopic && hasValidAnswer && hasCleanText) {
+    if (hasValidTopic && hasValidAnswer && hasCleanText && !forceAIForMatrix) {
       results[idx] = {
         topic: existingTopic,
         questionText: (q.questionText || q.question || "").trim(),
@@ -395,6 +407,11 @@ Tasks for each question:
    - Restore mathematical powers/exponents and superscripts (e.g., "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210", "x²" or "x^2").
    - Strip any leaked option choices that were pasted at the end of the question text.
    - Remove residual platform noise (like "Reattempt mode is Off", "Marks +2", "Report", "Save", language headers).
+   - For Matrix / Number Grid / Missing Number questions: If numbers/items are listed vertically or in an unstructured plain list (e.g. 5 \n 7 \n 100 \n 8 \n 9 \n 181 \n 11 \n 10 \n ?), format them into a clean Markdown table with clear rows and columns representing the grid:
+     | 5 | 7 | 100 |
+     | 8 | 9 | 181 |
+     | 11 | 10 | ? |
+     Always classify the topic strictly as "Missing Number / Matrix".
 3. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable.
 4. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
 
@@ -582,6 +599,9 @@ async function startServer() {
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok", message: "SSC CGL Backend is running" });
   });
+
+  // Gemini AI Chatbot Endpoint (Same handler as Vercel serverless)
+  app.post("/api/chat", chatHandler);
 
   // Automated Mock Error Import Endpoint
   app.post("/api/mock-import", async (req, res) => {
@@ -771,9 +791,17 @@ async function startServer() {
             existingReports = [];
           }
         }
-        existingReports.unshift(calculatedReport);
-        fs.writeFileSync(mockReportPath, JSON.stringify(existingReports, null, 2), "utf-8");
-        console.log(`[Mock Import] Mock Score Report saved: ${calculatedReport.title} (Score: ${calculatedReport.totalScore}/${calculatedReport.maxMarks})`);
+        const isDuplicateReport = existingReports.some(r => 
+          (payload.id && r.id === payload.id) ||
+          (r.title === calculatedReport.title && r.type === calculatedReport.type && r.totalScore === calculatedReport.totalScore && r.totalCorrect === calculatedReport.totalCorrect && r.totalWrong === calculatedReport.totalWrong)
+        );
+        if (!isDuplicateReport) {
+          existingReports.unshift(calculatedReport);
+          fs.writeFileSync(mockReportPath, JSON.stringify(existingReports, null, 2), "utf-8");
+          console.log(`[Mock Import] Mock Score Report saved: ${calculatedReport.title} (Score: ${calculatedReport.totalScore}/${calculatedReport.maxMarks})`);
+        } else {
+          console.log(`[Mock Import] Skipped duplicate score report for: ${calculatedReport.title}`);
+        }
 
         // Also save mock questions for one-click practice
         try {

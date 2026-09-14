@@ -3,6 +3,7 @@ import { Check, RotateCcw, Bookmark, BookmarkCheck, Trash2, Flag, Clock, Zap } f
 import { Question } from '../types';
 
 import { cleanSolutionText } from '../utils/cleanSolution';
+import { parseAvgTimeToSeconds } from './Review';
 
 const formatBilingualText = (text: string) => {
   if (!text) return '';
@@ -53,6 +54,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   const normalizedSelected = selectedAnswer?.toLowerCase().trim() || null;
   const isCorrect = normalizedSelected !== null && normalizedSelected === correctAnswerKey;
   const isAttempted = !!normalizedSelected;
+  const effectiveAvgSec = avgTimeSeconds ?? parseAvgTimeToSeconds(question.avgTime || (question as any)?.avg_time) ?? 35;
 
   return (
     <div className="bg-white h-full flex flex-col">
@@ -91,9 +93,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 <span className="flex items-center text-xs font-medium text-gray-600 gap-1 ml-1">
                   <Clock className="w-3.5 h-3.5 text-[#0097a7]" />
                   <span>You: {fmt(timeSpentSeconds)}</span>
-                  {avgTimeSeconds !== undefined && (
-                    <span className="text-gray-400 ml-1">| Avg: {fmt(avgTimeSeconds)}</span>
-                  )}
+                  <span className="text-gray-400 ml-1">| Avg: {fmt(effectiveAvgSec)}</span>
                 </span>
               )}
 

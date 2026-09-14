@@ -22,6 +22,8 @@ export interface Question {
     high_yield?: boolean;
     difficulty?: 'easy' | 'medium' | 'hard';
   };
+  avgTime?: string | number;
+  avgTimeSeconds?: number;
 }
 
 export interface SubjectData {
@@ -49,6 +51,8 @@ export interface QuestionProgress {
   selectedAnswer: string;
   question?: Question;
   marked?: boolean;
+  avgTime?: string | number;
+  avgTimeSeconds?: number;
 }
 
 export interface QuizResult {

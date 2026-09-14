@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { MockScoreReport, SectionScore } from '../types/mockScore';
 import { Chapter, Question, SubjectData } from '../types';
+import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
@@ -224,7 +225,8 @@ export function normalizeMockQuestions(rawList: any[]): Question[] {
       imgObj = { src: item.img };
     }
 
-    const topicName = item.topic || item.tags?.topic || 'General';
+    const rawTopic = item.topic || item.tags?.topic;
+    const topicName = rawTopic ? normalizeTopicTitle(rawTopic) : 'General';
 
     return {
       id: item.id || `mock_q_${originalIdx + 1}_${Math.random().toString(36).slice(2, 7)}`,
@@ -238,7 +240,8 @@ export function normalizeMockQuestions(rawList: any[]): Question[] {
       tags: {
         topic: topicName !== 'General' ? `${subjectName} • ${topicName}` : subjectName,
         difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
-      }
+      },
+      avgTime: item.avgTime || item.avg_time || item.avgTimeSeconds
     };
   });
 
@@ -368,6 +371,20 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         } catch {}
       }
 
+      // Filter out duplicate reports or purged duplicate mock IDs
+      const seenKeys = new Set<string>();
+      loaded = loaded.filter(r => {
+        if (r.id === 'mock_1789390419229_wwxcs' || r.id === 'mock_1789389316470_i3i84') return false;
+        const key = `${r.type}|${r.subject || ''}|${r.totalScore}|${r.totalCorrect}|${r.totalWrong}|${r.totalUnattempted}`;
+        if (seenKeys.has(key)) return false;
+        seenKeys.add(key);
+        return true;
+      });
+
+      try {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(loaded));
+      } catch {}
+
       setReports(loaded);
       setLoading(false);
     };
@@ -379,6 +396,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     setReports(newReports);
     try {
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newReports));
+      window.dispatchEvent(new Event('cgl_mock_reports_updated'));
     } catch {}
   };
 
@@ -464,6 +482,18 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(report)
         });
+      } catch {}
+
+      // Trigger background AI enrichment & error extraction (matrix questions sent to AI)
+      try {
+        fetch('/api/mock-import', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: report.title,
+            questions: rawQuestions
+          })
+        }).catch(e => console.warn('AI mock import note:', e));
       } catch {}
 
       const updated = [report, ...reports];
@@ -765,7 +795,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         }
 
         const solution = (item.solution || item.explanation || item.sol || '').trim();
-        const topicText = item.topic || item.tags?.topic || 'General';
+        const rawT = item.topic || item.tags?.topic;
+        const topicText = rawT ? normalizeTopicTitle(rawT) : 'General';
 
         const secKey = subjectName === 'Reasoning'
           ? 'part_a'
@@ -788,7 +819,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           tags: {
             topic: `${subjectName} • ${statusLabel} • ${topicText}`,
             difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
-          }
+          },
+          avgTime: item.avgTime || item.avg_time || item.avgTimeSeconds
         };
       });
 

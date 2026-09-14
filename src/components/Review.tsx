@@ -29,6 +29,33 @@ import {
 import { QuizResult, Question } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
 
+const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
+
+export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
+  if (rawTime === undefined || rawTime === null) return null;
+  if (typeof rawTime === 'number') {
+    return isNaN(rawTime) || rawTime <= 0 ? null : Math.round(rawTime);
+  }
+  const str = String(rawTime).trim();
+  if (!str) return null;
+
+  // Format "MM:SS", "M:SS", or "HH:MM:SS"
+  if (str.includes(':')) {
+    const parts = str.split(':').map(p => parseInt(p.trim(), 10));
+    if (parts.some(p => isNaN(p))) return null;
+    if (parts.length === 2) {
+      return parts[0] * 60 + parts[1];
+    }
+    if (parts.length === 3) {
+      return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    }
+  }
+
+  // Raw numeric string e.g. "35" or "35s"
+  const parsed = parseInt(str.replace(/[^0-9]/g, ''), 10);
+  return isNaN(parsed) || parsed <= 0 ? null : parsed;
+};
+
 export interface ReviewSection {
   id: string;
   label: string;
@@ -82,6 +109,68 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
+
+  // Pre-index avgTime from bundled mock questions or localStorage to guarantee availability on historical attempts
+  const [mockAvgTimeMap, setMockAvgTimeMap] = useState<Map<string, number>>(new Map());
+
+  useEffect(() => {
+    let isCancelled = false;
+    const loadMockAvgTimes = async () => {
+      const map = new Map<string, number>();
+
+      // 1. Check if there is data in localStorage for mock reports
+      try {
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('cgl_mock_questions_')) {
+            const raw = localStorage.getItem(key);
+            if (raw) {
+              const list = JSON.parse(raw);
+              if (Array.isArray(list)) {
+                list.forEach((item: any) => {
+                  const parsedSec = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
+                  if (parsedSec !== null) {
+                    const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+                    if (text) map.set(text, parsedSec);
+                    if (item.id) map.set(String(item.id), parsedSec);
+                  }
+                });
+              }
+            }
+          }
+        }
+      } catch {}
+
+      // 2. Load from mockQuestionModules
+      try {
+        const paths = Object.keys(mockQuestionModules);
+        for (const path of paths) {
+          const loader = mockQuestionModules[path];
+          if (typeof loader === 'function') {
+            const mod: any = await loader();
+            const list = mod.default || mod;
+            if (Array.isArray(list)) {
+              list.forEach((item: any) => {
+                const parsedSec = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
+                if (parsedSec !== null) {
+                  const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+                  if (text) map.set(text, parsedSec);
+                  if (item.id) map.set(String(item.id), parsedSec);
+                }
+              });
+            }
+          }
+        }
+      } catch {}
+
+      if (!isCancelled && map.size > 0) {
+        setMockAvgTimeMap(map);
+      }
+    };
+
+    loadMockAvgTimes();
+    return () => { isCancelled = true; };
+  }, []);
 
   const handleConfirmDelete = async () => {
     const currentQ = items[currentIdx]?.question;
@@ -407,8 +496,33 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const currentStatus = current ? getQuestionStatus(currentIdx) : 'unattempted';
   const isBookmarked = question ? localBookmarks.has(question.q_num) : false;
 
-  // Average time for question (simulate realistic average if not stored)
-  const avgSeconds = 23;
+  // Average time for question:
+  // Use exact avgTime if provided in mock data; if not given, default to 35 seconds
+  const avgSeconds = useMemo(() => {
+    const rawDirect = 
+      question?.avgTime ?? 
+      (question as any)?.avg_time ?? 
+      question?.avgTimeSeconds ?? 
+      (current as any)?.avgTime ?? 
+      (current as any)?.avg_time ?? 
+      (current as any)?.avgTimeSeconds;
+
+    const parsedDirect = parseAvgTimeToSeconds(rawDirect);
+    if (parsedDirect !== null) return parsedDirect;
+
+    if (question) {
+      if (question.id && mockAvgTimeMap.has(String(question.id))) {
+        return mockAvgTimeMap.get(String(question.id))!;
+      }
+      const cleanText = (question.question || '').trim().toLowerCase();
+      if (cleanText && mockAvgTimeMap.has(cleanText)) {
+        return mockAvgTimeMap.get(cleanText)!;
+      }
+    }
+
+    // Default when not given in mock: 35 seconds
+    return 35;
+  }, [question, current, mockAvgTimeMap]);
   // Percentage answered correctly (simulate realistic platform percentage ~35-65%)
   const accuracyPercent = question?.tags?.difficulty === 'easy' ? 68 : (question?.tags?.difficulty === 'hard' ? 24 : 40);
 
@@ -564,10 +678,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </span>
               )}
 
-              {/* Stopwatch & Time: You: 00:05  Avg: 00:23 */}
+              {/* Stopwatch & Time: You: 00:05  Avg: 01:11 */}
               <div className="flex items-center space-x-1.5 text-xs text-gray-700 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
                 <Clock className="w-3.5 h-3.5 text-gray-500" />
-                <span className="font-medium">You: {formatTime(current?.timeSpent || 5)}</span>
+                <span className="font-medium">You: {formatTime(current?.timeSpent || 0)}</span>
                 <span className="text-gray-300">|</span>
                 <span className="text-gray-500">Avg: {formatTime(avgSeconds)}</span>
               </div>

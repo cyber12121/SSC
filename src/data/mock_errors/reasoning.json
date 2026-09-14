@@ -1053,7 +1053,7 @@
       {
         "id": "reas_4cc728695e",
         "q_num": 12,
-        "question": "Study the given pattern carefully and select the number that can replace the question mark (?) in it.\n5\n7\n100\n8\n9\n181\n11\n10\n?",
+        "question": "Study the given pattern carefully and select the number that can replace the question mark (?) in it.\n\n| 5 | 7 | 100 |\n| 8 | 9 | 181 |\n| 11 | 10 | ? |",
         "options": {
           "a": "260",
           "b": "255",

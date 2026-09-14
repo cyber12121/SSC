@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
-import { detectTopic } from './utils/topicDetector';
+import { detectTopic, normalizeTopicTitle } from './utils/topicDetector';
 import { GK_SUBJECT_CONFIGS, GK_SUBJECT_LIST, GKSubjectId, getChapterGKSubject, getTopicGKSubject, formatGKSubTopicTitle } from './utils/gkSubjectHelper';
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
@@ -14,6 +14,9 @@ const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ d
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const ErrorHeatmap = React.lazy(() => import('./components/ErrorHeatmap').then(m => ({ default: m.ErrorHeatmap })));
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
+import { MockScoreReport } from './types/mockScore';
+import initialMockReports from './data/mock_reports.json';
+import { AiMentorChat } from './components/AiMentorChat';
 
 import { getCachedData, setCachedData } from './utils/cache';
 
@@ -238,6 +241,34 @@ const formatAttemptDate = (isoStr?: string) => {
 
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill' | 'mockScores'>('home');
+  const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
+    try {
+      const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('cgl_mock_score_reports') : null;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {}
+    return initialMockReports as MockScoreReport[];
+  });
+
+  useEffect(() => {
+    const handleStorage = () => {
+      try {
+        const saved = localStorage.getItem('cgl_mock_score_reports');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) setMockReportsList(parsed);
+        }
+      } catch (e) {}
+    };
+    window.addEventListener('storage', handleStorage);
+    window.addEventListener('cgl_mock_reports_updated', handleStorage);
+    return () => {
+      window.removeEventListener('storage', handleStorage);
+      window.removeEventListener('cgl_mock_reports_updated', handleStorage);
+    };
+  }, []);
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
   const [reviewBackTo, setReviewBackTo] = useState<'home' | 'dashboard'>('dashboard');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
@@ -684,7 +715,10 @@ export default function App() {
 
   const startMockTopicQuiz = (chapter: Chapter, topicName: string) => {
     const filteredQuestions = chapter.questions
-      .filter(q => (q.tags?.topic || (q as any).topic || 'General') === topicName)
+      .filter(q => {
+        const raw = q.tags?.topic || (q as any).topic || detectTopic(q, chapter.subject || '');
+        return normalizeTopicTitle(raw) === topicName;
+      })
       .map((q, idx) => ({
         ...q,
         q_num: idx + 1
@@ -837,7 +871,25 @@ export default function App() {
   };
 
   const openReview = (result: QuizResult, backTo: 'home' | 'dashboard' = 'dashboard') => {
-    setReviewResult(result);
+    let resultToReview = result;
+    if (!result.questionDetails || result.questionDetails.length === 0) {
+      const primaryData = result.category === 'mockErrors' ? mockData : bankData;
+      const secondaryData = result.category === 'mockErrors' ? bankData : mockData;
+      const chapter = (primaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title)
+        || (secondaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+      if (chapter && chapter.questions) {
+        resultToReview = {
+          ...result,
+          questionDetails: chapter.questions.map(q => ({
+            question: q,
+            userAnswer: null,
+            isCorrect: false,
+            timeSpent: 0
+          }))
+        };
+      }
+    }
+    setReviewResult(resultToReview);
     setReviewBackTo(backTo);
     setView('review');
   };
@@ -1064,7 +1116,7 @@ export default function App() {
       }
 
       ch.questions.forEach(q => {
-        const topic = detectTopic(q, selectedSubject);
+        const topic = normalizeTopicTitle(detectTopic(q, selectedSubject));
         if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
           if (getTopicGKSubject(topic) !== mockGKFilter) return;
         }
@@ -2221,7 +2273,8 @@ export default function App() {
                             // Compute topic-wise breakdown
                             const topicMap: Record<string, number> = {};
                             chapter.questions.forEach(q => {
-                              const t = q.tags?.topic || (q as any).topic || detectTopic(q, selectedSubject);
+                              const rawTopic = q.tags?.topic || (q as any).topic || detectTopic(q, selectedSubject);
+                              const t = normalizeTopicTitle(rawTopic);
                               if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
                                 if (getTopicGKSubject(t) !== mockGKFilter) return;
                               }
@@ -3270,21 +3323,20 @@ export default function App() {
                                 {/* Actions */}
                                 <div className="flex items-center gap-1.5">
                                   <button
+                                    onClick={() => openReview(result)}
+                                    className="px-2.5 py-1.5 rounded-lg font-bold text-xs bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                                    title="Review questions & solutions"
+                                  >
+                                    <BookOpen className="w-3.5 h-3.5" />
+                                    <span>Review</span>
+                                  </button>
+                                  <button
                                     onClick={() => reattemptFromResult(result)}
-                                    className="p-1.5 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-xs flex items-center justify-center"
+                                    className="p-1.5 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-xs flex items-center justify-center cursor-pointer"
                                     title="Reattempt this quiz"
                                   >
                                     <RotateCcw className="w-3.5 h-3.5" />
                                   </button>
-                                  {hasStoredQuestions && (
-                                    <button
-                                      onClick={() => openReview(result)}
-                                      className="p-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-bold transition-all shadow-xs flex items-center justify-center"
-                                      title="Review questions & explanations"
-                                    >
-                                      <History className="w-3.5 h-3.5" />
-                                    </button>
-                                  )}
                                   {result.id && (
                                     <button
                                       onClick={() => handleDeleteResult(result.id)}
@@ -3612,6 +3664,15 @@ export default function App() {
         )}
       </AnimatePresence>
     </main>
+
+    {/* Floating Gemini AI Mentor Assistant - visible on Home, Dashboard, etc., hidden when starting a mock or practice quiz */}
+    {view !== 'quiz' && (
+      <AiMentorChat 
+        mockReports={mockReportsList} 
+        mockErrorsData={mockData} 
+        activeReviewResult={view === 'review' ? reviewResult : null}
+      />
+    )}
   </div>
 );
 }

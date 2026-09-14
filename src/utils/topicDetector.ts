@@ -1,11 +1,32 @@
 import { Question } from '../types';
 
+export function normalizeTopicTitle(rawTopic?: string | null): string {
+  if (!rawTopic) return 'General';
+  const clean = rawTopic.trim();
+  if (!clean || clean === 'General' || clean === 'Unknown') return 'General';
+  if (/^active\s*(&|and)?\s*passive(\s*voice)?$/i.test(clean)) return 'Active & Passive Voice';
+  if (/^direct\s*(&|and)?\s*indirect(\s*speech)?$/i.test(clean) || /^narration$/i.test(clean)) return 'Direct & Indirect Speech';
+  if (/^missing\s*numbers?(\s*\/\s*matrix)?$/i.test(clean) || /^matrix$/i.test(clean)) return 'Missing Number / Matrix';
+  if (/^one\s*words?(\s*substitut\w*)?$/i.test(clean)) return 'One Word Substitution';
+  if (/^para\s*jumbles?$/i.test(clean) || /^pqrs$/i.test(clean)) return 'Para Jumbles';
+  if (/^spelling?\s*errors?$/i.test(clean) || /^misspelt$/i.test(clean)) return 'Spelling Errors';
+  if (/^synonyms?\s*(&|and)?\s*antonyms?$/i.test(clean)) return 'Synonyms & Antonyms';
+  if (/^idioms?\s*(&|and)?\s*phrases?$/i.test(clean)) return 'Idioms & Phrases';
+  if (/^fill\s*in\s*the\s*blanks?$/i.test(clean)) return 'Fill in the Blanks';
+  if (/^sentence\s*improvement$/i.test(clean)) return 'Sentence Improvement';
+  if (/^spotting?\s*errors?$/i.test(clean)) return 'Spotting Errors';
+  if (/^cloze\s*test$/i.test(clean)) return 'Cloze Test';
+  return clean;
+}
+
 export function detectTopic(q: Question, subject: string): string {
   const s = (q.question + ' ' + (q.solution || '')).toLowerCase();
   const sub = (subject || '').toLowerCase();
   const isReasoning = sub.includes('reason') || sub.includes('intel');
 
-  let currentTopic = q.tags?.topic;
+  const rawTag = q.tags?.topic || (q as any).topic;
+  let currentTopic: string | undefined = rawTag ? normalizeTopicTitle(rawTag) : undefined;
+  if (currentTopic === 'General') currentTopic = undefined;
 
   // Clean obvious cross-subject or cross-topic misclassifications in Reasoning
   if (isReasoning && currentTopic) {

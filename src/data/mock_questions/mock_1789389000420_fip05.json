@@ -1,0 +1,200 @@
+[
+  {
+    "questionNumber": "Question 3",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CGL 24/09/2025 Shift-3",
+    "status": "Skipped",
+    "userTime": "1m 38s",
+    "avgTime": "58s",
+    "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The fact that the rule had been amended after the voting was not communicated to the council.",
+    "options": {
+      "A": "The amended rule was not communicated after voting.",
+      "B": "The rule was communicated after amendment, not before.",
+      "C": "The council wasn't informed that the rule had been amended after voting.",
+      "D": "Someone amended the rule and avoided communication."
+    },
+    "correctOption": "N/A",
+    "solution": "Correct Answer: 3\nThe given sentence is in passive voice: \"The fact that the rule had been amended after the voting was not communicated to the council.\" In the active construction, \"the council\" becomes the subject, giving: \"The council wasn’t informed that the rule had been amended after voting.\"\nOption 1 retains the passive structure. Option 2 does not correctly convey the original meaning. Option 3 correctly conveys the meaning and is the intended active-voice transformation. Option 4 changes the meaning by introducing \"someone\" as the subject.\nAns: The council wasn’t informed that the rule had been amended after voting."
+  },
+  {
+    "questionNumber": "Question 5",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CGL 25/09/2025 Shift-1",
+    "status": "Skipped",
+    "userTime": "23s",
+    "avgTime": "42s",
+    "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: It had been made clear by the committee that the rule would not be altered.",
+    "options": {
+      "A": "The committee made it clear that the rule would not be altered.",
+      "B": "The rule was made clear not to be altered by the committee.",
+      "C": "The rule alteration was clarified by the committee.",
+      "D": "The committee had altered the rule as made clear."
+    },
+    "correctOption": "A",
+    "solution": "Rule: When converting from passive to active, identify the subject performing the action. The passive structure 'It had been made clear by the committee...' becomes active 'The committee made it clear...'.\nThe passive sentence \"It had been made clear by the committee...\" has 'the committee' as the doer. To make it active, 'the committee' becomes the subject. The verb phrase 'had been made clear' changes to 'made it clear'.\nOption 2 is a passive construction. Option 3 changes the meaning. Option 4 changes the meaning.\nCorrect Answer is The committee made it clear that the rule would not be altered because it correctly identifies the subject and uses the active past tense.\nAns: The committee made it clear that the rule would not be altered."
+  },
+  {
+    "questionNumber": "Question 7",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CGL 25/09/2025 Shift-2",
+    "status": "Skipped",
+    "userTime": "13s",
+    "avgTime": "41s",
+    "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The investigation was believed to have been compromised by internal leaks.",
+    "options": {
+      "A": "The investigation compromised internal leaks, as believed.",
+      "B": "It was believed that internal leaks had compromised the investigation.",
+      "C": "Someone believed the investigation was compromising leaks.",
+      "D": "Internal leaks are believed to compromise the investigation."
+    },
+    "correctOption": "B",
+    "solution": "Rule: When converting from passive to active, identify the logical subject performing the action. The passive structure 'was believed to have been compromised' becomes active 'It was believed that internal leaks had compromised'.\nThe passive sentence \"The investigation was believed to have been compromised by internal leaks\" has 'internal leaks' as the doer. To make it active, a logical subject like 'It' is introduced. The verb phrase becomes 'It was believed that internal leaks had compromised'.\nOption 1 is a passive construction. Option 3 is a passive construction. Option 4 changes the tense.\nCorrect Answer is It was believed that internal leaks had compromised the investigation because it correctly introduces a logical subject and uses the active past perfect.\nAns: It was believed that internal leaks had compromised the investigation."
+  },
+  {
+    "questionNumber": "Question 11",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CGL 26/09/2025 Shift-1",
+    "status": "Skipped",
+    "userTime": "54s",
+    "avgTime": "50s",
+    "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The candidates were found to have been submitting forged documents during verification.",
+    "options": {
+      "A": "The verification process found the candidates had submitted forged documents.",
+      "B": "It was found that forged documents had been submitted by candidates.",
+      "C": "The candidates were found submitting forgeries, as verified.",
+      "D": "Officials found that the candidates had been submitting forged documents."
+    },
+    "correctOption": "D",
+    "solution": "Rule: When converting from passive to active, identify the subject performing the action. The passive structure 'were found to have been submitting' becomes active 'Officials found that the candidates had been submitting'.\nThe passive sentence \"The candidates were found to have been submitting...\" has an implied subject. To make it active, a logical subject like 'Officials' is introduced. The verb phrase becomes 'found that the candidates had been submitting'.\nOption 1 changes the subject and tense. Option 2 is a passive construction. Option 3 is grammatically incomplete.\nCorrect Answer is Officials found that the candidates had been submitting forged documents because it correctly introduces a logical subject and uses the active past perfect continuous.\nAns: Officials found that the candidates had been submitting forged documents."
+  },
+  {
+    "questionNumber": "Question 13",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CGL 26/09/2025 Shift-2",
+    "status": "Skipped",
+    "userTime": "12s",
+    "avgTime": "42s",
+    "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe suggestion that the vote had been manipulated was vehemently denied.",
+    "options": {
+      "A": "The vote denied the manipulation of the suggestion.",
+      "B": "Someone vehemently denied the suggestion that the vote had been manipulated.",
+      "C": "It was denied that the vote had been manipulated.",
+      "D": "It was denied that someone manipulated the vote suggestion."
+    },
+    "correctOption": "B",
+    "solution": "Rule: When converting from passive to active, identify the logical subject performing the action. The passive structure 'The suggestion... was vehemently denied' becomes active 'Someone vehemently denied the suggestion...'.\nThe passive sentence \"The suggestion that the vote had been manipulated was vehemently denied\" has an implied subject. To make it active, a logical subject like 'Someone' is introduced. The verb 'was denied' changes to 'denied'.\nOption 1 is nonsensical. Option 3 is a passive construction. Option 4 changes the meaning.\nCorrect Answer is Someone vehemently denied the suggestion that the vote had been manipulated because it correctly introduces a logical subject and uses the active past tense.\nAns: Someone vehemently denied the suggestion that the vote had been manipulated."
+  },
+  {
+    "questionNumber": "Question 15",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CGL 26/09/2025 Shift-3",
+    "status": "Skipped",
+    "userTime": "24s",
+    "avgTime": "38s",
+    "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure.\n\nThe machinery was known to have been operated manually during the testing phase.",
+    "options": {
+      "A": "Manual operators were known to test the machinery.",
+      "B": "Someone was known to operate the machinery manually during testing.",
+      "C": "It was known that the machinery had been manually tested.",
+      "D": "It was known that someone had manually operated the machinery during the testing phase."
+    },
+    "correctOption": "D",
+    "solution": "Rule: When converting from passive to active, identify the logical subject performing the action. The passive structure 'was known to have been operated manually' becomes active 'It was known that someone had manually operated...'.\nThe passive sentence \"The machinery was known to have been operated manually...\" has an implied subject. To make it active, a logical subject like 'It' is introduced. The verb phrase becomes 'It was known that someone had manually operated'.\nOption 1 changes the meaning. Option 2 changes the meaning. Option 3 is a passive construction.\nCorrect Answer is It was known that someone had manually operated the machinery during the testing phase because it correctly introduces a logical subject and uses the active past perfect.\nAns: It was known that someone had manually operated the machinery during the testing phase."
+  },
+  {
+    "questionNumber": "Question 16",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "N/A",
+    "status": "Incorrect",
+    "userTime": "19s",
+    "avgTime": "25s",
+    "questionText": "CGL Tier-2\n\nSelect the correct active form of the given sentence.\n\nThe massive exterior wall of the old mansion was being painted by the skilled laborers when it suddenly started raining heavily.",
+    "options": {
+      "A": "The skilled laborers had been painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
+      "B": "The skilled laborers are painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
+      "C": "The skilled laborers were painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
+      "D": "The skilled laborers painted the massive exterior wall of the old mansion when it suddenly started raining heavily."
+    },
+    "correctOption": "C",
+    "solution": "Rule: The past continuous passive ('was being painted') converts to the past continuous active ('were painting'). The agent becomes the subject.\nThe passive sentence \"The massive exterior wall... was being painted by the skilled laborers...\" is in the past continuous tense. To convert to active, the agent 'the skilled laborers' becomes the subject. The verb phrase 'was being painted' changes to 'were painting'.\nOption 1 uses the past perfect continuous, changing the tense. Option 2 mixes present and past tenses. Option 3 uses the simple past, losing the continuous aspect.\nCorrect Answer is The skilled laborers were painting the massive exterior wall of the old mansion when it suddenly started raining heavily because it correctly uses the active past continuous tense.\nAns: The skilled laborers were painting the massive exterior wall of the old mansion when it suddenly started raining heavily."
+  },
+  {
+    "questionNumber": "Question 17",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "N/A",
+    "status": "Skipped",
+    "userTime": "8s",
+    "avgTime": "32s",
+    "questionText": "CGL Tier-2\n\nSelect the correct passive form of the given sentence.\n\nThe burglar destroyed several items in the room. Even the carpet has been torn.",
+    "options": {
+      "A": "The burglar, being destroyed several items in the room, also carpet has torn.",
+      "B": "Several items in the room were destroyed by the burglar. Even the carpet has been torn.",
+      "C": "Including the carpet, several items in the room have been torn by the burglar.",
+      "D": "Several items destroyed in the room by the burglar. Even the carpet he has torn."
+    },
+    "correctOption": "B",
+    "solution": "Rule: The simple past active voice ('destroyed') converts to the simple past passive voice ('were destroyed'). The present perfect passive ('has been torn') remains as is.\nThe active sentence \"The burglar destroyed several items...\" is in the simple past tense. To convert to passive, the object 'several items' becomes the subject. The verb 'destroyed' changes to 'were destroyed'. The second sentence is already in passive and should remain unchanged.\nOption 1 is grammatically incorrect. Option 3 changes the meaning. Option 4 is grammatically incorrect.\nCorrect Answer is Several items in the room were destroyed by the burglar. Even the carpet has been torn because it correctly converts the first part to passive and keeps the second part as is.\nAns: Several items in the room were destroyed by the burglar. Even the carpet has been torn."
+  },
+  {
+    "questionNumber": "Question 19",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CHSL 12/11/2025 Shift-2",
+    "status": "Incorrect",
+    "userTime": "16s",
+    "avgTime": "31s",
+    "questionText": "Change the following sentence into the Active form.\n\nLet the documents be submitted to the head of the department by the end of the week.\n\nChoose the correct option: [SSC CHSL Tier 1, 12 Nov 2025, Shift-2]",
+    "options": {
+      "A": "You should submit the documents to the head of the department by the end of the week.",
+      "B": "Submit the documents to the head of the department by the end of the week.",
+      "C": "The documents will be submitted to the head of the department by the end of the week.",
+      "D": "Let the head of the department submit the documents by the end of the week."
+    },
+    "correctOption": "A",
+    "solution": "Rule: For a passive imperative sentence starting with 'Let', the active voice is formed by directly starting with the base form of the verb.\nThe passive imperative \"Let the documents be submitted...\" instructs that an action be done. To convert to active, the instruction is given directly: \"Submit the documents...\". The 'Let' and 'be' are removed, and the verb takes its base form.\nOption 1 is a suggestion, not a command. Option 3 changes the tense. Option 4 is a suggestion to another person.\nCorrect Answer is Submit the documents to the head of the department by the end of the week because it correctly converts the passive imperative to an active command.\nAns: Submit the documents to the head of the department by the end of the week."
+  },
+  {
+    "questionNumber": "Question 20",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CHSL 12/11/2025 Shift-2",
+    "status": "Incorrect",
+    "userTime": "14s",
+    "avgTime": "18s",
+    "questionText": "Choose the correct passive voice transformation of the sentence:\n\nPeople eat rice in many countries.\n\nChoose the correct option: [SSC CHSL Tier 1, 12 Nov 2025, Shift-2]",
+    "options": {
+      "A": "Rice was eaten by people in many countries.",
+      "B": "Rice was eaten in many countries.",
+      "C": "Rice is eaten in many countries.",
+      "D": "Rice has been eaten by people in many countries."
+    },
+    "correctOption": "C",
+    "solution": "Rule: The simple present active voice ('eat') converts to the simple present passive voice ('is eaten'). When the subject is general (e.g., 'people'), the agent phrase is often omitted.\nThe active sentence \"People eat rice in many countries\" is in the simple present tense. To convert to passive, the object 'rice' becomes the subject. The verb 'eat' changes to 'is eaten'. Since 'people' is a general subject, the agent 'by people' is usually omitted.\nOption 1 uses the simple past. Option 2 omits the verb 'is'. Option 4 uses the present perfect.\nCorrect Answer is Rice is eaten in many countries because it correctly uses the simple present passive and omits the unnecessary agent.\nAns: Rice is eaten in many countries."
+  },
+  {
+    "questionNumber": "Question 24",
+    "subject": "English",
+    "topic": "Active & Passive Voice",
+    "shift": "CHSL 13/11/2025 Shift-1",
+    "status": "Skipped",
+    "userTime": "12s",
+    "avgTime": "16s",
+    "questionText": "Change the following sentence into the Active form: Let the documents be submitted to the head of the department by the end of the week. [SSC CHSL Tier 1, 13 Nov 2025, Shift-1]",
+    "options": {
+      "A": "You should submit the documents to the head of the department by the end of the week.",
+      "B": "Submit the documents to the head of the department by the end of the week.",
+      "C": "The documents will be submitted to the head of the department by the end of the week.",
+      "D": "Let the head of the department submit the documents by the end of the week."
+    },
+    "correctOption": "A",
+    "solution": "Rule: For a passive imperative sentence starting with 'Let', the active voice is formed by directly starting with the base form of the verb.\nThe passive imperative \"Let the documents be submitted...\" instructs that an action be done. To convert to active, the instruction is given directly: \"Submit the documents...\". The 'Let' and 'be' are removed, and the verb takes its base form.\nOption 1 is a suggestion, not a command. Option 3 changes the tense. Option 4 is a suggestion to another person.\nCorrect Answer is Submit the documents to the head of the department by the end of the week because it correctly converts the passive imperative to an active command.\nAns: Submit the documents to the head of the department by the end of the week."
+  }
+]
