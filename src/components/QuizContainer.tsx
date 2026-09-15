@@ -4,7 +4,7 @@ import {
   Trophy, Clock, CheckCircle2, CornerDownLeft, RotateCcw,
   Pause, Play, BookOpen, ChevronRight, ChevronLeft,
   X, FileText, ArrowLeft, AlertTriangle, ChevronDown,
-  Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb, Trash2
+  Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb, Trash2, Sparkles
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
@@ -1326,16 +1326,38 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   animate={{ opacity: 1, y: 0 }}
                   className="rounded-xl border border-emerald-300 bg-emerald-50/30 overflow-hidden shadow-xs mb-6"
                 >
-                  <div className="bg-emerald-700 text-white px-4 py-2.5 flex items-center justify-between">
+                  <div className="bg-emerald-700 text-white px-4 py-2.5 flex items-center justify-between flex-wrap gap-2">
                     <div className="flex items-center gap-2">
                       <Lightbulb className="w-4 h-4 text-amber-300 fill-amber-300" />
                       <h4 className="font-bold text-xs sm:text-sm tracking-wide uppercase">
                         Step-by-Step Solution &amp; Explanation
                       </h4>
                     </div>
-                    <span className="bg-white/20 text-white text-xs font-extrabold px-2.5 py-0.5 rounded-full border border-white/30">
-                      Correct: Option ({correctOptionKey.toUpperCase()})
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => {
+                          window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
+                            detail: {
+                              questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
+                              questionText: currentQuestion?.question,
+                              options: currentQuestion?.options,
+                              userAnswer: answers[currentIdx],
+                              correctAnswer: correctOptionKey,
+                              solution: currentQuestion?.solution,
+                              topic: (currentQuestion as any)?.tags?.topic || (currentQuestion as any)?.topic || chapter?.chapter_title || category || 'Practice'
+                            }
+                          }));
+                        }}
+                        className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer group border border-white/20"
+                        title="Ask Tommy to explain this question, formulas, and elimination tricks"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform" />
+                        <span>Ask Tommy</span>
+                      </button>
+                      <span className="bg-white/20 text-white text-xs font-extrabold px-2.5 py-0.5 rounded-full border border-white/30">
+                        Correct: Option ({correctOptionKey.toUpperCase()})
+                      </span>
+                    </div>
                   </div>
 
                   <div className="p-4 sm:p-5 text-gray-900 bg-white">

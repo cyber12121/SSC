@@ -45,6 +45,7 @@ interface ChapterHeatmapItem {
   negativeMarks: number;
   questions: QuestionWithError[];
   severity: 'critical' | 'high' | 'medium' | 'low';
+  marksRecovery?: number; // #4: Potential marks recoverable by fixing 60% of wrong Qs
   rcaCounts: {
     C: number;
     A: number;
@@ -203,12 +204,18 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
         });
       });
 
+      // #8: Relative/percentage-based severity (avoids all topics being "critical")
+      const subjectTotalErrors = Object.values(topicMap).reduce((s, c) => s + c.totalErrors, 0);
       const chapters = Object.values(topicMap).map(c => {
+        const errorShare = subjectTotalErrors > 0 ? (c.totalErrors / subjectTotalErrors) * 100 : 0;
         let severity: 'critical' | 'high' | 'medium' | 'low' = 'low';
-        if (c.totalErrors >= 5 || c.wrongCount >= 4) severity = 'critical';
-        else if (c.totalErrors >= 3 || c.wrongCount >= 2) severity = 'high';
-        else if (c.totalErrors >= 2) severity = 'medium';
-        return { ...c, severity };
+        // Critical: top 15% of all subject errors OR 5+ errors, High: top 8% OR 3+ errors
+        if (errorShare >= 15 || c.wrongCount >= 5) severity = 'critical';
+        else if (errorShare >= 8 || c.wrongCount >= 3) severity = 'high';
+        else if (errorShare >= 4 || c.totalErrors >= 2) severity = 'medium';
+        // Also attach marks recovery: converting 60% of wrong → marks gained
+        const marksRecovery = Math.round((Math.ceil(c.wrongCount * 0.6) * 2 + c.wrongCount * 0.5) * 10) / 10;
+        return { ...c, severity, marksRecovery };
       });
 
       chapters.sort((a, b) => (b.totalErrors - a.totalErrors) || (b.wrongCount - a.wrongCount));
@@ -583,7 +590,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                     <div className="font-semibold text-xs text-slate-900 group-hover:text-indigo-600 transition-colors truncate leading-tight">
                       {item.topic}
                     </div>
-                    <div className="flex items-center gap-1 mt-0.5">
+                    <div className="flex items-center gap-1 mt-0.5 flex-wrap">
                       <span className={`inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.2 rounded border ${sev.badge}`}>
                         <span className={`w-1 h-1 rounded-full ${sev.dot}`} />
                         {sev.label}
@@ -591,6 +598,12 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                       {item.negativeMarks > 0 && (
                         <span className="text-[9px] font-bold text-rose-500">
                           −{item.negativeMarks.toFixed(1)}m
+                        </span>
+                      )}
+                      {/* #4: Marks Recovery badge */}
+                      {item.marksRecovery !== undefined && item.marksRecovery > 0 && (
+                        <span className="text-[9px] font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-1 py-0.2 rounded" title={`Fixing 60% of wrong Qs here recovers ~${item.marksRecovery} marks`}>
+                          +{item.marksRecovery}m ↑
                         </span>
                       )}
                     </div>

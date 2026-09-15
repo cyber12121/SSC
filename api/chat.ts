@@ -2,7 +2,7 @@ import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
 
-const SYSTEM_INSTRUCTION = `You are "Sankalp AI", an elite, analytical, highly encouraging SSC CGL Exam Mentor & Strategy Coach built directly into the candidate's CGL Preparation Portal.
+const SYSTEM_INSTRUCTION = `You are "Tommy", an elite, analytical, highly encouraging study assistant and exam coach built directly into the candidate's CGL Preparation Portal.
 
 YOUR CORE EXPERTISE:
 1. SSC CGL Exam Pattern & Syllabus:
@@ -24,12 +24,16 @@ YOUR CORE EXPERTISE:
 
 4. TOPIC, SUBTOPIC & CONCEPT WEAKNESS SYNTHESIS:
    When the candidate asks what concepts they are weak in, where they are losing marks, or for a diagnosis of their mistakes:
-   - Ground your analysis directly in the "CANDIDATE ERROR & CONCEPT WEAKNESS MATRIX" provided in context.
-   - Name the exact Subject, Topic, Subtopic, and the specific Missed Concepts/Rules (e.g. "In Geometry, your primary leak is Circles - Tangents & Secants where you missed questions on the Tangent-Secant Theorem").
-   - Categorize your advice into 3 Actionable Tiers:
-     * Tier 1: Immediate Marks (Silly mistakes [A] in topics where the candidate already knows the concept but panicked or misread).
-     * Tier 2: Time Savers (Questions where the candidate fell into Time/Ego Traps [T] or took >2x average time).
-     * Tier 3: Core Conceptual Weaknesses (Repeated Conceptual Gaps [C] with specific formulas/rules to revise).
+   - Ground your analysis STRICTLY in the "CANDIDATE ERROR & CONCEPT WEAKNESS MATRIX" provided in context. Never invent counts or topics not present in the matrix.
+   - Name the exact Subject, Topic, Subtopic, and the specific Missed Concepts/Rules.
+
+   ALWAYS organize the diagnosis using these 3 Status-Based Tiers (every question has a status, so this ALWAYS works):
+   * ❌ Tier 1 — INCORRECT (Wrong answers): Topics where you attempted but chose the wrong option. For each, name the exact missed concept/formula/rule and give a 1-line fix.
+   * ⏱ Tier 2 — CORRECT (Slow): Topics where you got it right but took too long (>2x platform average). Give the shortcut/pattern-match trick to solve it in under 45 seconds next time.
+   * ⬜ Tier 3 — UNATTEMPTED (Skipped): Topics you left blank. Classify as either (a) "Smart Skip" — genuinely tough, right call; or (b) "Avoidable Skip" — should be attempted with minimal revision, and give the specific revision target.
+
+   BONUS LAYER — If RCA tags [C], [A], [T], [G] are present for some questions, mention them inside the relevant tier as extra context (e.g., "2 of these were tagged as Silly Mistakes [A] by you — the concept is clear, just slow down your first read").
+   If no RCA tags exist, skip the bonus layer entirely. Do NOT say "no RCA data available" — just silently omit it.
    - Conclude with a targeted drill recommendation using [DRILL: Topic Name] on its own line.
 
 HOW TO ANSWER:
@@ -217,6 +221,38 @@ function generateTopicAndSubtopicWeaknessSummary(queryText: string): string {
   }
 }
 
+// ── #7: Synonym expansion map for fuzzy question matching ──────────────────
+// Keys are user-typed words; values are additional search terms to include
+const SEARCH_SYNONYMS: Record<string, string[]> = {
+  'boat':        ['stream', 'downstream', 'upstream', 'still water', 'river', 'motorboat'],
+  'river':       ['stream', 'downstream', 'upstream', 'boat'],
+  'pipe':        ['cistern', 'tap', 'filling', 'emptying', 'tank', 'leak'],
+  'tank':        ['cistern', 'pipe', 'tap', 'filling', 'emptying'],
+  'profit':      ['cp', 'sp', 'selling price', 'cost price', 'gain', 'loss', 'discount', 'marked price'],
+  'loss':        ['cp', 'sp', 'selling price', 'cost price', 'gain', 'discount', 'markup'],
+  'discount':    ['marked price', 'selling price', 'cost price', 'mp', 'sp'],
+  'interest':    ['principal', 'rate', 'amount', 'compound', 'simple', 'si', 'ci', 'per annum'],
+  'train':       ['platform', 'pole', 'bridge', 'crosses', 'length of the train', 'speed'],
+  'speed':       ['distance', 'time', 'km/h', 'race', 'circular', 'relative speed'],
+  'work':        ['efficiency', 'days', 'worker', 'men', 'women', 'complete'],
+  'mixture':     ['alligation', 'alloy', 'milk', 'water', 'ratio', 'vessel'],
+  'triangle':    ['geometry', 'circle', 'angle', 'area', 'perimeter', 'tangent', 'chord'],
+  'circle':      ['tangent', 'chord', 'secant', 'radius', 'diameter', 'arc', 'geometry'],
+  'trigonometry':['sin', 'cos', 'tan', 'cot', 'sec', 'cosec', 'angle', 'height', 'distance'],
+  'height':      ['distance', 'elevation', 'depression', 'angle', 'trigonometry'],
+  'percentage':  ['percent', 'increase', 'decrease', 'marks', 'population'],
+  'ratio':       ['proportion', 'fourth proportional', 'mean proportional'],
+  'average':     ['mean', 'age', 'weight', 'salary', 'score'],
+  'probability': ['dice', 'cards', 'coin', 'tossed', 'drawn', 'sample space'],
+  'voice':       ['active', 'passive', 'subject', 'object', 'verb'],
+  'narration':   ['direct', 'indirect', 'speech', 'reported'],
+  'analogy':     ['related', 'pair', 'same way', 'as is to'],
+  'series':      ['pattern', 'sequence', 'next', 'missing number', 'replace'],
+  'direction':   ['north', 'south', 'east', 'west', 'distance', 'walking', 'facing'],
+  'blood':       ['relation', 'mother', 'father', 'brother', 'sister', 'son', 'daughter'],
+  'coding':      ['decoding', 'code', 'language', 'coded', 'written'],
+};
+
 // Question Searcher across mock questions and mock errors
 function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
   if (!queryText || queryText.trim().length < 2) return [];
@@ -228,8 +264,23 @@ function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
   const targetQNum = qNumMatch ? parseInt(qNumMatch[1], 10) : null;
 
   // Words to ignore in matching
-  const stopWords = new Set(['what', 'which', 'where', 'when', 'how', 'why', 'give', 'show', 'tell', 'explain', 'solution', 'mock', 'data', 'this', 'that', 'with', 'from']);
-  const keywords = qLower.split(/\s+/).filter(w => w.length >= 3 && !stopWords.has(w));
+  const stopWords = new Set(['what', 'which', 'where', 'when', 'how', 'why', 'give', 'show', 'tell', 'explain', 'solution', 'mock', 'data', 'this', 'that', 'with', 'from', 'about', 'the', 'and', 'for']);
+  const baseKeywords = qLower.split(/\s+/).filter(w => w.length >= 3 && !stopWords.has(w));
+
+  // Expand keywords using synonym map
+  const expandedKeywords = new Set<string>(baseKeywords);
+  baseKeywords.forEach(kw => {
+    const syns = SEARCH_SYNONYMS[kw];
+    if (syns) syns.forEach(s => expandedKeywords.add(s));
+    // Also check partial matches in synonym keys
+    Object.entries(SEARCH_SYNONYMS).forEach(([key, vals]) => {
+      if (kw.includes(key) || key.includes(kw)) {
+        expandedKeywords.add(key);
+        vals.forEach(v => expandedKeywords.add(v));
+      }
+    });
+  });
+  const keywords = Array.from(expandedKeywords);
 
   const isMatch = (text: string, topic: string, sol: string, qNumStr?: string | number) => {
     // Explicit question number match
@@ -239,9 +290,11 @@ function findRelevantQuestionsAndSolutions(queryText: string, maxResults = 5) {
     }
     // Exact phrase match
     if (text.includes(qLower) || topic.includes(qLower) || sol.includes(qLower)) return true;
-    // Keyword match
+    // Expanded keyword match (any synonym hit counts)
     if (keywords.length > 0) {
-      return keywords.some(kw => text.includes(kw) || topic.includes(kw) || sol.includes(kw));
+      const matchCount = keywords.filter(kw => text.includes(kw) || topic.includes(kw) || sol.includes(kw)).length;
+      // Require at least 2 keyword hits if keywords list is large (reduces false positives)
+      return baseKeywords.length > 3 ? matchCount >= 2 : matchCount >= 1;
     }
     return false;
   };

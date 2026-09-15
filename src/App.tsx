@@ -3774,8 +3774,8 @@ export default function App() {
       </AnimatePresence>
     </main>
 
-    {/* Floating Gemini AI Mentor Assistant - visible on Home, Dashboard, etc., hidden when starting a mock or practice quiz */}
-    {view !== 'quiz' && (
+    {/* Floating Tommy AI Assistant - enabled in practice mode solutions and across all portal views; hidden only during timed mock exam */}
+    {(view !== 'quiz' || quizMode === 'practice') && (
       <AiMentorChat 
         mockReports={mockReportsList} 
         mockErrorsData={mockData} 

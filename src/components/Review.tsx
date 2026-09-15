@@ -1282,7 +1282,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                             </span>
                           </h4>
                           <p className="text-[11px] text-gray-500">
-                            Classify this mistake to reveal traps in Error Heatmap and train Sankalp AI.
+                            Classify this mistake to reveal traps in Error Heatmap and train Tommy.
                           </p>
                         </div>
                       </div>
@@ -1473,10 +1473,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                           }));
                         }}
                         className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer group"
-                        title="Ask Sankalp AI Mentor to explain this question, formulas, and elimination tricks"
+                        title="Ask Tommy to explain this question, formulas, and elimination tricks"
                       >
                         <Sparkles className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform" />
-                        <span>Ask AI to Explain</span>
+                        <span>Ask Tommy</span>
                       </button>
                     </div>
 

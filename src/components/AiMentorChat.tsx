@@ -21,7 +21,8 @@ import {
   ArrowRight,
   Play,
   Zap,
-  Clock
+  Clock,
+  GripVertical
 } from 'lucide-react';
 import { MockScoreReport } from '../types/mockScore';
 import { QuizResult } from '../types';
@@ -42,12 +43,106 @@ interface AiMentorChatProps {
   onStartWeakTopicDrill?: (topic: string, subject?: string) => void;
 }
 
-const DEFAULT_SUGGESTIONS = [
-  { icon: Target, label: 'Analyze my weak topics across all mocks', text: 'Analyze all my mocks and tell me my top 3 weakest topics and what I should do.' },
-  { icon: TrendingUp, label: 'How to boost my score to 150+?', text: 'Looking at my current mock scores, what is my gap to reach 150+ in Tier-1 and which section gives the highest ROI?' },
-  { icon: Flame, label: 'Why am I losing marks in English?', text: 'Analyze my English performance across my mocks and give me a fix for my errors.' },
-  { icon: Brain, label: 'Create a 15-day mock revision plan', text: 'Create a focused 15-day revision and mock attempt schedule tailored to my current strengths and weaknesses.' }
-];
+// #6: Dynamic suggestions computed at runtime from real mock data
+function useDynamicSuggestions(
+  mockReports: MockScoreReport[],
+  topWeakTopic: string,
+  activeReviewResult?: QuizResult | null
+) {
+  return useMemo(() => {
+    const suggestions: { icon: any; label: string; text: string }[] = [];
+
+    if (mockReports.length === 0) {
+      // No data yet — onboarding suggestions
+      suggestions.push(
+        { icon: HelpCircle, label: 'How do I get started?', text: 'I have not taken any mock tests yet. How should I start my SSC CGL preparation and what should be my first steps?' },
+        { icon: Brain, label: 'What is the CGL syllabus?', text: 'Give me a complete breakdown of the SSC CGL Tier-1 syllabus with topic weights and what to prioritize first.' },
+        { icon: Target, label: 'How long to prepare for CGL?', text: 'How many months does it take to crack SSC CGL from scratch and what is the ideal study plan?' },
+        { icon: TrendingUp, label: 'Best mock test strategy', text: 'What is the best strategy to attempt a CGL Tier-1 mock test and how should I analyze my results?' }
+      );
+      return suggestions;
+    }
+
+    const fullMocks = mockReports.filter(r => r.type === 'full');
+    const sortedFull = [...fullMocks].sort((a, b) => {
+      const da = a.date ? new Date(a.date).getTime() : 0;
+      const db = b.date ? new Date(b.date).getTime() : 0;
+      return db - da;
+    });
+    const latestScore = sortedFull[0]?.totalScore ?? 0;
+    const earliestScore = sortedFull[sortedFull.length - 1]?.totalScore ?? 0;
+    const trendDelta = sortedFull.length >= 2 ? latestScore - earliestScore : 0;
+    const isDeclinig = sortedFull.length >= 2 && trendDelta < -5;
+    const isStagnant = sortedFull.length >= 3 && Math.abs(trendDelta) <= 5;
+
+    // Always: explain my biggest weak area
+    if (topWeakTopic && topWeakTopic !== 'Active & Passive Voice') {
+      suggestions.push({
+        icon: Flame,
+        label: `Fix my #1 weak topic: ${topWeakTopic}`,
+        text: `Analyze my errors in ${topWeakTopic} and give me a step-by-step concept revision plan, shortcut tricks, and the most common question patterns I must master.`
+      });
+    } else {
+      suggestions.push({
+        icon: Flame,
+        label: 'Explain my top weak areas',
+        text: 'Analyze all my mocks and tell me my top 3 weakest topics and give me a targeted action plan for each.'
+      });
+    }
+
+    // Trend-based suggestion
+    if (isDeclinig) {
+      suggestions.push({
+        icon: TrendingUp,
+        label: `My score dropped ${Math.abs(trendDelta)} pts — why?`,
+        text: `My full mock score has dropped by ${Math.abs(trendDelta)} marks. Analyze my section-wise trends and tell me exactly what changed and how to reverse this decline.`
+      });
+    } else if (isStagnant) {
+      suggestions.push({
+        icon: TrendingUp,
+        label: 'My score is stuck — how to break the plateau?',
+        text: 'My mock scores are stagnant and not improving. Identify the exact bottleneck from my data and give me a strategy shift to break the plateau and improve by 10+ marks.'
+      });
+    } else if (latestScore > 0 && latestScore < 140) {
+      suggestions.push({
+        icon: TrendingUp,
+        label: `Gap to 145 cutoff: how to close it?`,
+        text: `My latest score is ${latestScore}/200. What are the highest ROI actions to cross the 145-150 cutoff? Which section should I fix first?`
+      });
+    } else if (latestScore >= 140) {
+      suggestions.push({
+        icon: TrendingUp,
+        label: `How to push from ${latestScore} to 155+?`,
+        text: `My latest score is ${latestScore}/200. I want to push to 155+. What are the marginal gains I can make — which errors are easiest to convert and which section has most upside?`
+      });
+    }
+
+    // If reviewing a quiz, add context-specific suggestion
+    if (activeReviewResult) {
+      suggestions.push({
+        icon: Target,
+        label: 'Explain my mistakes in this quiz',
+        text: 'Review all my wrong questions in this test and explain the solutions step-by-step with the exact concept or rule I missed.'
+      });
+    } else {
+      // Generic revision plan
+      suggestions.push({
+        icon: Brain,
+        label: 'Create a 15-day revision roadmap',
+        text: 'Based on my mock performance, create a focused 15-day revision and mock attempt schedule with daily targets and section-wise priorities.'
+      });
+    }
+
+    // Always add marks recovery question
+    suggestions.push({
+      icon: ArrowRight,
+      label: 'Where am I losing the most marks?',
+      text: 'From all my mocks and error bank, identify where I lose the most marks and calculate my marks recovery opportunity if I fix my top 3 weak areas.'
+    });
+
+    return suggestions.slice(0, 4); // Cap at 4 chips
+  }, [mockReports, topWeakTopic, activeReviewResult]);
+}
 
 // Clean residual or malformed LaTeX formulas into clean, readable math & unicode
 function cleanLatexMath(text: string): string {
@@ -337,7 +432,7 @@ export function AiMentorChat({
       {
         id: 'welcome_1',
         role: 'assistant',
-        text: `**Namaste Aspirant!** 🙏 I am **Sankalp AI**, your personalized SSC CGL Mentor.\n\nI have complete visibility into your **${mockReports.length} Mock Tests** and error patterns. Ask me anything about:\n* Your weak topics & score trends across mocks\n* Targeted 45+ strategy in Mathematics or English\n* Concept doubts, grammar rules, or shortcut tricks\n* Personalized revision & mock attempt roadmaps\n\nHow can I help you crack SSC CGL today?`,
+        text: `**Namaste!** 🙏 I am **Tommy**, your personal study assistant and problem solver.\n\nI have complete visibility into your **${mockReports.length} Mock Tests**, practice sessions, and error patterns. Ask me anything about:\n* Step-by-step solutions & shortcut tricks for any question\n* Your weak topics & score trends across mocks\n* Targeted strategy in Mathematics, Reasoning, English, or GK\n* Concept doubts, grammar rules, or revision plans\n\nHow can I help you today?`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ];
@@ -349,6 +444,25 @@ export function AiMentorChat({
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const isDraggingRef = useRef(false);
+
+  // Viewport bounds for free dragging anywhere on screen
+  const [dragBounds, setDragBounds] = useState({ top: -800, left: -1200, right: 10, bottom: 10 });
+
+  useEffect(() => {
+    const updateBounds = () => {
+      if (typeof window === 'undefined') return;
+      setDragBounds({
+        top: -(window.innerHeight - 80),
+        left: -(window.innerWidth - 180),
+        right: 10,
+        bottom: 10
+      });
+    };
+    updateBounds();
+    window.addEventListener('resize', updateBounds);
+    return () => window.removeEventListener('resize', updateBounds);
+  }, []);
 
   // Sync chat history to localStorage safely
   useEffect(() => {
@@ -401,6 +515,9 @@ export function AiMentorChat({
     return buildMockAiSummary(mockReports, mockErrorsData, activeMockReport);
   }, [mockReports, mockErrorsData, activeMockReport]);
 
+  // #6: Compute personalized dynamic suggestions
+  const dynamicSuggestions = useDynamicSuggestions(mockReports, topWeakTopic, activeReviewResult);
+
   const handleSendMessage = async (textToSend?: string) => {
     const query = (textToSend || inputText).trim();
     if (!query || isLoading) return;
@@ -417,11 +534,19 @@ export function AiMentorChat({
     setIsLoading(true);
 
     try {
-      // Prepare multi-turn messages for API
-      const conversationPayload = [...messages, userMessage].slice(-10).map(m => ({
-        role: m.role,
-        text: m.text
-      }));
+      // #10: Pin first message (welcome/context) + last 9 — so session context is never lost
+      const allMsgs = [...messages, userMessage];
+      let conversationPayload: { role: string; text: string }[];
+      if (allMsgs.length <= 10) {
+        conversationPayload = allMsgs.map(m => ({ role: m.role, text: m.text }));
+      } else {
+        // Always keep the first message (welcome + context) + the most recent 9
+        const [first, ...rest] = allMsgs;
+        conversationPayload = [
+          { role: first.role, text: first.text },
+          ...rest.slice(-9).map(m => ({ role: m.role, text: m.text }))
+        ];
+      }
 
       const res = await fetch('/api/chat', {
         method: 'POST',
@@ -509,12 +634,12 @@ export function AiMentorChat({
   };
 
   const handleClearHistory = () => {
-    if (confirm('Clear entire conversation history with Sankalp AI?')) {
+    if (confirm('Clear entire conversation history with Tommy?')) {
       const reset = [
         {
           id: 'welcome_reset',
           role: 'assistant' as const,
-          text: `Chat history cleared. I'm ready for your next question! Ask me about your mocks, SSC CGL concepts, or preparation strategy.`,
+          text: `Chat history cleared. I'm Tommy, ready for your next question! Ask me about your questions, solutions, or preparation strategy.`,
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }
       ];
@@ -535,42 +660,57 @@ export function AiMentorChat({
 
   return (
     <>
-      {/* Floating Action Trigger Button */}
-      <AnimatePresence>
-        {!isOpen && (
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            className="fixed bottom-5 right-5 z-50 flex items-center gap-2"
-          >
-            <button
-              onClick={() => setIsOpen(true)}
-              className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 text-white shadow-xl hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer border border-white/20"
-              title="Open SSC CGL AI Mentor Chat"
-            >
-              <div className="relative">
-                <Sparkles className="w-5 h-5 text-amber-300 animate-pulse" />
-                <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-              </div>
-              <div className="flex flex-col text-left">
-                <span className="text-xs font-bold tracking-wide flex items-center gap-1.5">
-                  Ask Sankalp AI
-                  <span className="px-1.5 py-0.2 rounded text-[9px] font-black bg-white/20 text-white uppercase tracking-wider">
-                    Mentor
-                  </span>
-                </span>
-                <span className="text-[10px] text-indigo-100 font-medium">
-                  {mockReports.length} Mocks Synced
-                </span>
-              </div>
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Floating Draggable Action Trigger Button - Moveable anywhere across screen */}
+      <motion.div
+        drag
+        dragMomentum={false}
+        dragElastic={0.08}
+        dragConstraints={dragBounds}
+        onDragStart={() => {
+          isDraggingRef.current = true;
+        }}
+        onDragEnd={() => {
+          setTimeout(() => {
+            isDraggingRef.current = false;
+          }, 150);
+        }}
+        animate={{
+          opacity: isOpen ? 0 : 1,
+          scale: isOpen ? 0.75 : 1,
+          pointerEvents: isOpen ? 'none' : 'auto'
+        }}
+        transition={{ duration: 0.18 }}
+        className="fixed bottom-5 right-5 z-50 flex items-center gap-2 touch-none select-none"
+      >
+        <button
+          onClick={(e) => {
+            if (isDraggingRef.current) {
+              e.preventDefault();
+              return;
+            }
+            setIsOpen(true);
+          }}
+          className="group relative flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 text-white shadow-xl hover:shadow-2xl hover:shadow-indigo-500/30 transition-shadow duration-300 cursor-grab active:cursor-grabbing border border-white/20"
+          title="Ask Tommy (Drag anywhere on screen to reposition)"
+        >
+          <GripVertical className="w-3.5 h-3.5 text-white/40 group-hover:text-white/80 shrink-0" />
+          <div className="relative shrink-0">
+            <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
+            <span className="absolute -top-1 -right-1 flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+          </div>
+          <div className="flex flex-col text-left pr-1">
+            <span className="text-xs font-bold tracking-wide flex items-center gap-1 leading-tight">
+              Tommy
+            </span>
+            <span className="text-[9px] text-indigo-200/90 font-medium leading-tight">
+              Ask AI
+            </span>
+          </div>
+        </button>
+      </motion.div>
 
       {/* Main Chat Modal Panel */}
       <AnimatePresence>
@@ -595,10 +735,7 @@ export function AiMentorChat({
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
-                    <h3 className="text-xs font-bold text-white truncate">Sankalp AI</h3>
-                    <span className="text-[9px] font-semibold px-1.5 py-0.2 rounded bg-indigo-500/30 text-indigo-200 border border-indigo-400/30">
-                      CGL Mentor
-                    </span>
+                    <h3 className="text-xs font-bold text-white truncate">Tommy</h3>
                   </div>
                   <p className="text-[10px] text-slate-300 truncate flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -760,7 +897,7 @@ export function AiMentorChat({
                     <Bot className="w-3.5 h-3.5 text-amber-300 animate-spin" />
                   </div>
                   <div className="flex items-center gap-1.5 px-3 py-2 bg-white rounded-2xl border border-slate-200 shadow-xs">
-                    <span className="text-[11px] font-medium text-slate-600">Sankalp AI is analyzing...</span>
+                    <span className="text-[11px] font-medium text-slate-600">Tommy is analyzing...</span>
                     <span className="flex gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce" style={{ animationDelay: '0ms' }} />
                       <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce" style={{ animationDelay: '150ms' }} />
@@ -800,7 +937,7 @@ export function AiMentorChat({
                   </button>
                 )}
 
-                {DEFAULT_SUGGESTIONS.map((s, idx) => {
+                {dynamicSuggestions.map((s, idx) => {
                   const Icon = s.icon || Target;
                   return (
                     <button
@@ -824,7 +961,7 @@ export function AiMentorChat({
                   value={inputText}
                   onChange={e => setInputText(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask Sankalp AI about your mocks, weak areas, or CGL strategy..."
+                  placeholder="Ask Tommy about this question, your mocks, or strategy..."
                   rows={1}
                   className="w-full resize-none bg-transparent px-2 py-1 text-xs text-slate-800 placeholder-slate-400 focus:outline-hidden max-h-24 min-h-[32px] leading-relaxed"
                 />
