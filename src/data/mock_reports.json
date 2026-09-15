@@ -1,1 +1,49 @@
-[]
+[
+  {
+    "id": "mock_1789478579858_bz3ds",
+    "title": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "type": "full",
+    "date": "2026-09-15T13:22:59.724Z",
+    "totalQuestions": 100,
+    "maxMarks": 200,
+    "totalScore": 100.5,
+    "overallAccuracy": 65.2,
+    "totalCorrect": 58,
+    "totalWrong": 31,
+    "totalUnattempted": 11,
+    "sections": {
+      "reasoning": {
+        "total": 25,
+        "correct": 19,
+        "wrong": 4,
+        "unattempted": 2,
+        "score": 36,
+        "accuracy": 82.6
+      },
+      "generalAwareness": {
+        "total": 25,
+        "correct": 8,
+        "wrong": 12,
+        "unattempted": 5,
+        "score": 10,
+        "accuracy": 40
+      },
+      "mathematics": {
+        "total": 25,
+        "correct": 15,
+        "wrong": 7,
+        "unattempted": 3,
+        "score": 26.5,
+        "accuracy": 68.2
+      },
+      "english": {
+        "total": 25,
+        "correct": 16,
+        "wrong": 8,
+        "unattempted": 1,
+        "score": 28,
+        "accuracy": 66.7
+      }
+    }
+  }
+]

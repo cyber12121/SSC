@@ -581,7 +581,10 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string): any {
 
   const now = new Date();
   const dateStr = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-  const title = mockTitle || (isFullMock ? `Full Mock - ${dateStr}` : `${activeSubjects[0] || "Sectional"} Mock - ${dateStr}`);
+  const detectedFromQuestions = rawList.find(q => q.testName || q.title || q.test_name)?.testName ||
+                                rawList.find(q => q.testName || q.title || q.test_name)?.title ||
+                                rawList.find(q => q.testName || q.title || q.test_name)?.test_name;
+  const title = (mockTitle && mockTitle.trim()) || detectedFromQuestions || (isFullMock ? `Full Mock - ${dateStr}` : `${activeSubjects[0] || "Sectional"} Mock - ${dateStr}`);
 
   return {
     id: "mock_" + Date.now() + "_" + Math.random().toString(36).substring(2, 7),
@@ -781,7 +784,7 @@ async function startServer() {
                 d: (q.options?.D || q.options?.d || "").trim()
               },
               answer: cleanAns,
-              solution: cleanSolutionText(enr.solution || q.solution || ""),
+              solution: cleanSolutionText(q.solution || enr.solution || ""),
               topic: enr.topic || q.topic || "General",
               subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
               conceptTested: enr.conceptTested || q.conceptTested || "",
@@ -839,7 +842,7 @@ async function startServer() {
               subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
               conceptTested: enr.conceptTested || q.conceptTested || "",
               questionText: enr.questionText || q.questionText || q.question,
-              solution: enr.solution || q.solution,
+              solution: cleanSolutionText(q.solution || enr.solution || ""),
               correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
               tags: {
                 ...(q.tags || {}),

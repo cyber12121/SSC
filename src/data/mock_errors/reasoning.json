@@ -1,1 +1,403 @@
-[]
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Speed Issue",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": [
+      {
+        "id": "reas_34e35331ac",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:01",
+        "avgTime": "00:50",
+        "question": "In a certain code language, 'BRIGHT' is written as 'JSCVJI' and 'BROKEN' is written as 'PSCPGM'. How will 'BUDGET' be written as in that language?",
+        "options": {
+          "a": "EVCTEG",
+          "b": "TEGDUB",
+          "c": "DUBTEG",
+          "d": "EVCVGI"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nThe logic followed here is:\n\nFor, ‘BRIGHT’ is written as ‘JSCVJI’,\n\nFor, ‘BROKEN' is written as 'PSCPGM’,\n\nSimilarly, for 'BUDGET'\n\nSo, 'BUDGET' will  be written as 'EVCVGI'.\n\nHence, the correct answer is \"Option 4\".",
+        "topic": "Coding-Decoding",
+        "subtopic": "Letter Coding",
+        "conceptTested": "Forward and reverse letter shifting patterns for word encryption",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Letter Coding",
+          "conceptTested": "Forward and reverse letter shifting patterns for word encryption",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1fd4e8d365",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:38",
+        "avgTime": "00:30",
+        "question": "In a certain code language,\n“yak lot sip kit fat” is written as “fk xv bn sq tu”,\n“fit fat raw dot lip” is written as “er dp yp hb sq”,\n“raw but sit mat yak” is written as “tu rt fl dy yp”.\nWhat is the code for “yak” in that language?",
+        "options": {
+          "a": "rt",
+          "b": "yp",
+          "c": "tu",
+          "d": "dy"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nWord\n\nyak\n\nfat\n\nraw\n\nCode\n\ntu\n\nsq\n\nyp\n\nHence,‘tu’ is the correct answer",
+        "topic": "Coding-Decoding",
+        "subtopic": "Substitution Coding",
+        "conceptTested": "Common word elimination method in multiline coded sentences",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Substitution Coding",
+          "conceptTested": "Common word elimination method in multiline coded sentences",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_16929c51a0",
+        "q_num": 3,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:37",
+        "avgTime": "00:13",
+        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\nBZC, EXF, HVI, KTL, ?",
+        "options": {
+          "a": "ONR",
+          "b": "MOR",
+          "c": "NRO",
+          "d": "ORN"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe position of letters according to the English alphabet series:\n\nHence, the correct answer is \"NRO\"",
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Alphabet Series",
+        "conceptTested": "Positional alphabet increments and decrements across multi-letter clusters",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Alphabet Series",
+          "conceptTested": "Positional alphabet increments and decrements across multi-letter clusters",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_460570c426",
+        "q_num": 4,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "00:28",
+        "question": "Select the correct option that indicates the arrangement of the given words in the order in which they appear in an English dictionary.\n1. Relatival\n2. Relation\n3. Related\n4. Relative\n5. Relatable",
+        "options": {
+          "a": "5, 2, 3, 1, 4",
+          "b": "5, 3, 2, 4, 1",
+          "c": "4, 5, 3, 2, 1",
+          "d": "5, 3, 2, 1, 4"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nAccording to the sequence in the dictionary:\n\nThe correct order of the given words is:\n\n5. Relatable\n3. Related\n2. Relation\n1. Relatival\n4. Relative\nHence, the correct answer is \"5, 3, 2, 1, 4\".",
+        "topic": "Word Formation & Dictionary Order",
+        "subtopic": "Dictionary Arrangement",
+        "conceptTested": "Alphabetical sorting of words letter by letter as they appear in a standard English dictionary.",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "subtopic": "Dictionary Arrangement",
+          "conceptTested": "Alphabetical sorting of words letter by letter as they appear in a standard English dictionary.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2404bd7189",
+        "q_num": 5,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:38",
+        "avgTime": "00:27",
+        "question": "Which two numbers should be interchanged to make the given equation correct?\n7 × 3 - 98 ÷ 14 + 5 = 31",
+        "options": {
+          "a": "5 and 3",
+          "b": "31 and 7",
+          "c": "3 and 14",
+          "d": "7 and 98"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Numbers & BODMAS",
+        "conceptTested": "Balancing equations via number interchange and strict adherence to the BODMAS rule.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Numbers & BODMAS",
+          "conceptTested": "Balancing equations via number interchange and strict adherence to the BODMAS rule.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_004f68690b",
+        "q_num": 6,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:05",
+        "avgTime": "00:42",
+        "question": "If in a code language, 'TV' is coded as 55. How is “CLOCK” written in that code language?",
+        "options": {
+          "a": "54",
+          "b": "57",
+          "c": "48",
+          "d": "52"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nThe pattern followed here is,\n\nLetter\n\nT\n\nV\n\nPlace Value\n\n20\n\n22\n\nCode\n\n(20 + 22) + 13 = 55\n\nSimilarly,\n\nLetter\n\nC\n\nL\n\nO\n\nC\n\nK\n\nPlace Value\n\n3\n\n12\n\n15\n\n3\n\n11\n\nCode\n\n(3 + 12 + 15 + 3 + 11) + 13 = 57\nHence, 57 is the correct answer.",
+        "topic": "Coding-Decoding",
+        "subtopic": "Number Coding",
+        "conceptTested": "Sum of alphabetical place values combined with a constant offset value.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Number Coding",
+          "conceptTested": "Sum of alphabetical place values combined with a constant offset value.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_5453f1c684",
+        "q_num": 7,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:50",
+        "avgTime": "00:34",
+        "question": "If 'A + B' means 'A is brother of B', 'A = B' means 'A is son of B', 'A & B' means 'A is wife of B', 'A @ B' means 'A is father of B', then how is N related to P given the expression: P = H = T & U @ N + R?",
+        "options": {
+          "a": "Father in law",
+          "b": "Maternal Uncle",
+          "c": "Paternal Uncle",
+          "d": "Brother in law"
+        },
+        "answer": "c",
+        "solution": "As per the given data:\nP = H means P is son of H.\nH = T means H is son of T.\nT & U means T is wife of U (so U is father and T is mother).\nU @ N means U is father of N.\nN + R means N is brother of R.\n\nTracing the lineage: P, H, and N are sons/children of T and U. Thus, N is the brother of P's father (H), which makes N the paternal uncle of P.\nHence, Option (C) is the answer.",
+        "topic": "Blood Relations",
+        "subtopic": "Coded Blood Relations",
+        "conceptTested": "Tracing generational and matrimonial linkages through symbolic operators to establish the relation between two family members.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Coded Blood Relations",
+          "conceptTested": "Tracing generational and matrimonial linkages through symbolic operators to establish the relation between two family members.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "chapter_num": 2,
+    "chapter_title": "Unattempted",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": [
+      {
+        "id": "reas_247bc5589e",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "01:23",
+        "avgTime": "01:08",
+        "question": "Select the number that can replace the question mark (?) in the following series.\n61, 63, 65, 77, 89, ?, 149, 205",
+        "options": {
+          "a": "132",
+          "b": "119",
+          "c": "123",
+          "d": "115"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)2 + 1 = 61 + 2 = 63\n63 + (2)2 - 2  = 63 + 2 = 65\n65 + (3)2 + 3 = 65 + 12 = 77\n77 + (4)2 - 4 = 77 + 12 = 89\n89 + (5)2 + 5 = 89 + 30 = 119\n119 + (6)2 - 6 = 119 + 30 = 149\n149 + (7)2 + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Mixed arithmetic and square difference series pattern recognition",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Mixed arithmetic and square difference series pattern recognition",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_4cc728695e",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:44",
+        "avgTime": "00:53",
+        "question": "Study the given pattern carefully and select the number that can replace the question mark (?) in it.\n\n| 5 | 7 | 100 |\n| 8 | 9 | 181 |\n| 11 | 10 | ? |",
+        "options": {
+          "a": "260",
+          "b": "255",
+          "c": "265",
+          "d": "244"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)2 + (Second term + 1)2  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)2 + (7 + 1)2 = 100\n(6)2 + (8)2 = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)2 + (9 + 1)2 = 181\n(9)2 + (10)2 = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)2 + (10 + 1)2 = ?\n(12)2 + (11)2 = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
+        "topic": "Missing Number / Matrix",
+        "subtopic": "Number puzzles",
+        "conceptTested": "Grid matrix arithmetic involving squares of incremented row values: (a+1)^2 + (b+1)^2 = c",
+        "tags": {
+          "topic": "Missing Number / Matrix",
+          "subtopic": "Number puzzles",
+          "conceptTested": "Grid matrix arithmetic involving squares of incremented row values: (a+1)^2 + (b+1)^2 = c",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "chapter_num": 3,
+    "chapter_title": "Wrong",
+    "subject": "Reasoning",
+    "subject_id": "reasoning",
+    "questions": [
+      {
+        "id": "reas_ffbe700b4b",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:58",
+        "avgTime": "00:49",
+        "question": "The second number in the given number pairs is obtained by performing certain mathematical operation(s) on the first number. The same operation(s) are followed in all the number pairs except one. Find that odd number pair.",
+        "options": {
+          "a": "19 : 323",
+          "b": "43 : 731",
+          "c": "21 : 357",
+          "d": "15 : 256"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nThe logic followed here is:\n\nThe applied logic in all pairs:  first number × 17 = second number\noption 1) 19 : 323\n19 × 17= 323\noption 2) 43 : 731\n43 × 17 = 731\noption 3) 21 : 357\n21 × 17 = 357\noption 4) 15 : 356\n15 × 17 = 255\n\nThus this is the odd pair which doesn't follow the logic as followed by other pairs.\n\nHence, the correct answer is 15 : 356.",
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Number Classification",
+        "conceptTested": "Identification of an anomaly in number pairs based on a constant multiplicative relationship.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Number Classification",
+          "conceptTested": "Identification of an anomaly in number pairs based on a constant multiplicative relationship.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_5ba81f3cd0",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:29",
+        "avgTime": "00:42",
+        "question": "A stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21. His profit percent is about:",
+        "options": {
+          "a": "20%",
+          "b": "5%",
+          "c": "10%",
+          "d": "15%"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nAccording to the given information:\n\nA stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21.\n\nGiven:\nCost Price of 21 pencils = Rs. 20\nSelling Price of 20 pencils = Rs. 21\nSelling Price of 1 pencil = Rs. 21 / 20 = Rs. 1.05\nSelling Price of 21 pencils = 21 × 1.05 = 22.05\n⇒ Profit = Selling price - Cost price\n⇒ Profit = 22.05 - 20\n⇒ Profit = 2.05\n⇒ Profit% = (profit/cost price) × 100\n⇒ Profit% = (2.05 / 20) × 100\n⇒ Profit% = (0.1025) × 100\n⇒ Profit% = 10.25\n\nThus, the profit percent is 10.25 ≈ 10.\n\nHence, the correct answer is \"10\".",
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Profit & Loss - Quantity/Price Variation",
+        "conceptTested": "Calculation of profit percentage when goods are bought and sold in differing quantities and prices.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Profit & Loss - Quantity/Price Variation",
+          "conceptTested": "Calculation of profit percentage when goods are bought and sold in differing quantities and prices.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_614ad256f4",
+        "q_num": 3,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:14",
+        "avgTime": "00:21",
+        "question": "Parth said pointing to a photograph of a boy, 'he is the only son of my father’s brother’s son', if so how is the boy related to Parth?",
+        "options": {
+          "a": "Cousin",
+          "b": "Father",
+          "c": "Nephew",
+          "d": "Son"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nBelow table represents symbols used to draw a family tree,\n\nWe can draw the following Family Tree from the information given above:\n\nSo, the boy in photograph is nephew of Parth.\n\nHence, ‘Nephew’ is the correct answer.",
+        "topic": "Blood Relations",
+        "subtopic": "Indicating Form / Pointing Form",
+        "conceptTested": "Translating a descriptive family relationship into a genealogical tree to determine kinship.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Indicating Form / Pointing Form",
+          "conceptTested": "Translating a descriptive family relationship into a genealogical tree to determine kinship.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d87a6587a3",
+        "q_num": 4,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:51",
+        "avgTime": "00:36",
+        "question": "Select the set in which the numbers are related in the same way as are the numbers of the given sets:\n(45, 81, 104)\n(52, 88, 111)\n\n(NOTE: Operations should be performed on whole numbers, without breaking down numbers into individual digits.)",
+        "options": {
+          "a": "(49, 85, 108)",
+          "b": "(34, 60, 83)",
+          "c": "(54, 90, 110)",
+          "d": "(27, 59, 82)"
+        },
+        "answer": "a",
+        "solution": "Logic: Second number - First number = 36, Third number - Second number = 23, and Third number - First number = 59.\nFor (45, 81, 104) -> 81 - 45 = 36, 104 - 81 = 23, 104 - 45 = 59.\nFor (52, 88, 111) -> 88 - 52 = 36, 111 - 88 = 23, 111 - 52 = 59.\nSimilarly, for (49, 85, 108) -> 85 - 49 = 36, 108 - 85 = 23, 108 - 49 = 59.\nHence, Option A is the correct answer.",
+        "topic": "Analogy",
+        "subtopic": "Number Analogy",
+        "conceptTested": "Identifying difference patterns between consecutive elements in number tuples.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number Analogy",
+          "conceptTested": "Identifying difference patterns between consecutive elements in number tuples.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  }
+]

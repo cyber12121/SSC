@@ -1,1 +1,403 @@
-[]
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Speed Issue",
+    "subject": "Mathematics",
+    "subject_id": "mathematics",
+    "questions": [
+      {
+        "id": "math_4c9393c88c",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "02:06",
+        "avgTime": "00:40",
+        "question": "The selling price of x items is equal to the cost price of 32 items and profit percent is 28%. What is the value of x?",
+        "options": {
+          "a": "30",
+          "b": "24",
+          "c": "21",
+          "d": "25"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nGiven:\nSP of x items = CP of 32 items\nProfit % = 28\n\nConcept used:\n\nSP = CP + CP × profit%\nSP = selling price\nCP = cost price\n\nCalculation:\nLet CP of each item be Rs. 100a\nSo, CP of x item = Rs. 100xa\nSP of each item = 128xa\n\nAccording to the question,\n\nx.SP = 32.CP\n⇒ 128ax = 3200a\n⇒ x = 3200a/128a\n⇒ x = 25\nSo, x = 25 items\n∴ The value of x is 25.",
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Profit & Loss - Equivalent Cost/Selling Price Relations",
+        "conceptTested": "Relation between Cost Price and Selling Price: x × SP = y × CP when profit percentage is given by equating unit prices.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Profit & Loss - Equivalent Cost/Selling Price Relations",
+          "conceptTested": "Relation between Cost Price and Selling Price: x × SP = y × CP when profit percentage is given by equating unit prices.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_05bc878ef7",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:16",
+        "avgTime": "00:23",
+        "question": "A well is dug 20 m and it has a diameter of 7 m. The earth taken out is spread as a regular plot 22 m × 14 m dimension, then height of the platform formed is?",
+        "options": {
+          "a": "2.1 m",
+          "b": "2.5 m",
+          "c": "2.9 m",
+          "d": "3.5 m"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nGiven:\nHeight of well (h) = 20 m\nDiameter of the well (d) = 7 m\nLength of the rectangular plot = 22 m\nBreadth of the rectangular plot = 14 m\n\nConcept used:\n\nVolume of well = πr2h\nVolume of the rectangular slot = length × breadth × height\n\nCalculation:\nRadius of well (r) = (\n7\n2\n7\n2\n) = 3.5 m\nVolume of well = (\n22\n7\n22\n7\n× 3.5 × 3.5 × 20) = 770 m3\n\nVolume of well = Volume of the rectangular slot\nNow, according to the above concept,\nVolume of the rectangular slot = length × breadth × height\n⇒ 770 = (22 × 14 × height)\n⇒ Height = (\n770\n22×14\n770\n22\n×\n14\n) = (\n5\n2\n5\n2\n) = 2.5 m\n∴ The required height is 2.5 m",
+        "topic": "Mensuration 3D",
+        "subtopic": "Cylinder - Conversion of Solid Shapes",
+        "conceptTested": "Conservation of volume when converting a solid cylinder into a rectangular platform (Volume of cylinder = Volume of cuboid).",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cylinder - Conversion of Solid Shapes",
+          "conceptTested": "Conservation of volume when converting a solid cylinder into a rectangular platform (Volume of cylinder = Volume of cuboid).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc3395f085",
+        "q_num": 3,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:24",
+        "avgTime": "00:13",
+        "question": "If tanθ + secθ = m, then what is secθ equal to?",
+        "options": {
+          "a": "m2−12m",
+          "b": "m2+12m",
+          "c": "m+1m",
+          "d": "m2+1m"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nGiven:\ntanθ + secθ = m\n\nFormula used:\nsec2θ – tan2θ = 1\n(a + b)(a - b) = a2 - b2\n\nCalculation:\nsecθ + tanθ = m       ----(1)\nNow, we know that\nsec2θ – tan2θ = 1\nBy using the formula (a + b)(a - b) = a2 - b2\n⇒ (secθ – tanθ) (secθ + tanθ) = 1\n⇒ secθ – tanθ = 1/(secθ + tanθ)\n⇒ secθ – tanθ = 1/m       -----(2)\n\nAdding equation (1) & (2)\n\n⇒ secθ + tanθ + secθ – tanθ = m + 1/m\n⇒ 2secθ = m + 1/m\n⇒ 2secθ = m2 + 1/m\n⇒ secθ =\nm\n2\n+1\n2m\n𝑚\n2\n+\n1\n2\n𝑚\n\n∴ The required value is\nm\n2\n+1\n2m\n𝑚\n2\n+\n1\n2\n𝑚\n.",
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Identities & Equations",
+        "conceptTested": "Fundamental trigonometric identity sec²θ - tan²θ = 1 and algebraic manipulation of linear combinations.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Identities & Equations",
+          "conceptTested": "Fundamental trigonometric identity sec²θ - tan²θ = 1 and algebraic manipulation of linear combinations.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "chapter_num": 2,
+    "chapter_title": "Unattempted",
+    "subject": "Mathematics",
+    "subject_id": "mathematics",
+    "questions": [
+      {
+        "id": "math_88573d8469",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:16",
+        "avgTime": "00:49",
+        "question": "A, B, and C can do a piece of work in 16, 24, and 32 days respectively. They start together, but C leaves after 4 days and A leaves 6 days before the completion of the work. In how many days will the work be completed?",
+        "options": {
+          "a": "12 days",
+          "b": "15 days",
+          "c": "9 days",
+          "d": "14 days"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nGiven:\nA, B, and C can complete the work in 16, 24, and 32 days respectively.\n\nThey start together, but C leaves after 4 days and A leaves 6 days before the completion of the work.\n\nConcept used:\n\nTotal work = work done each day × total time taken (in days)\n\nCalculation:\nLCM (16, 24, 32) = 96\nLet the total work be LCM for the time taken by them.\nThus, total work = 96 units\n\nefficiency,\n\nA makes a day = 96 ÷ 16 = 6 units\nB makes a day = 96 ÷ 24 = 4 units\nC does a day = 96 ÷ 32 = 3 units\n\nThe entire work is completed in P days.\n\nAccording to the question,\n\n6 × (P - 6) + 4 × P + 3 × 4 = 96\n⇒ 10P = 96 + 36 - 12\n⇒ P = 12\n∴ The work will be completed in 12 days.",
+        "topic": "Time & Work",
+        "subtopic": "Time & Work - Leaving/Joining after fixed days",
+        "conceptTested": "Work equivalence principle: Total Work = Sum of (Efficiency × Individual Time Worked) for all workers.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Time & Work - Leaving/Joining after fixed days",
+          "conceptTested": "Work equivalence principle: Total Work = Sum of (Efficiency × Individual Time Worked) for all workers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_fa47e32e69",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:02",
+        "avgTime": "00:18",
+        "question": "A trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y. If the ratio of the cost prices of X and Y is 3 : 4, then what is the gain/loss in the entire transaction (correct to one decimal place)?",
+        "options": {
+          "a": "Gain of 3.7%",
+          "b": "Gain of 4.8%",
+          "c": "Loss of 4.5%",
+          "d": "Loss of 3.9%"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nGiven:\nA trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y.\n\nThe ratio of the cost prices of X and Y is 3 ∶ 4.\n\nConcept used:\n\nProfit% =\nProfit\nCost Price\n×100%\n𝑃\n𝑟\n𝑜\n𝑓\n𝑖\n𝑡\n𝐶\n𝑜\n𝑠\n𝑡\n\n𝑃\n𝑟\n𝑖\n𝑐\n𝑒\n×\n100\n%\n\nSelling Price = Cost Price - Cost Price × Loss%\nSelling Price = Cost Price + Cost Price × Gain%\n\nCalculation:\nLet the cost price of X and Y be Rs. 300 and Rs. 400.\nTotal cost price = 300 + 400 = Rs. 700\nSelling price of X = 300 + 300 × 30% = Rs. 390\nSelling price of Y = 400 - 400 × 16% = Rs. 336\nTotal selling price = 390 + 336 = Rs. 726\nGain made = 726 - 700 = Rs. 26\nNow, gain% in the entire transaction =\n26\n700\n×100%\n26\n700\n×\n100\n%\n≈ 3.7%\n\n∴ The gain in the entire transaction is 3.7%.",
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Profit & Loss - Multiple Articles",
+        "conceptTested": "Calculating overall profit/loss percentage by assuming baseline cost prices in a given ratio.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Profit & Loss - Multiple Articles",
+          "conceptTested": "Calculating overall profit/loss percentage by assuming baseline cost prices in a given ratio.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4719e8b917",
+        "q_num": 3,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:10",
+        "avgTime": "00:14",
+        "question": "Ram, Shyam and Ghanshyam have ₹30, ₹40 and ₹60, respectively, with them. Their mother asks them to give her equal amounts so that the money held by them now are in continued proportion. Find the amount taken from each of them.",
+        "options": {
+          "a": "₹10",
+          "b": "₹15",
+          "c": "₹20",
+          "d": "₹25"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nGiven:\nRam has ₹30.\n\nShyam has ₹40.\n\nGhanshyam has ₹60.\n\nThey give equal amounts to their mother such that the remaining amounts are in continued proportion.\n\nFormula Used:\nFor continued proportion: a/b = b/c or b2 = a ⋅ c\n\nCalculation:\nLet the amount given by each of them to their mother be x .\n\nThen, the remaining amounts are:\n\nRam: ₹(30 - x)\nShyam: ₹(40 - x)\nGhanshyam: ₹(60 - x)\n\nFor continued proportion:\n\n(30 - x)/(40 - x) = (40 - x)/(60 - x)\n\nBy cross-multiplication:\n\n(40 - x)2 = (30 - x) ⋅ (60 - x)\n\nExpanding both sides:\n\n⇒ 1600 - 80x + x2 = 30 × 60 - 30x - 60x + x2\n⇒ 1600 - 80x + x2 = 1800 - 90x + x2\n\nCancel out x2 from both sides:\n\n⇒ 1600 - 80x = 1800 - 90x\n\nSimplify:\n\n⇒ 90x - 80x = 1800 - 1600\n⇒ 10x = 200\n⇒ x = 20\n\nThe amount taken from each of them is ₹20.",
+        "topic": "Ratio & Proportion",
+        "subtopic": "Continued Proportion",
+        "conceptTested": "Condition for continued proportion: a/b = b/c or b² = a · c.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Continued Proportion",
+          "conceptTested": "Condition for continued proportion: a/b = b/c or b² = a · c.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "chapter_num": 3,
+    "chapter_title": "Wrong",
+    "subject": "Mathematics",
+    "subject_id": "mathematics",
+    "questions": [
+      {
+        "id": "math_38dc1475c5",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:31",
+        "avgTime": "00:28",
+        "question": "Simplify.\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)",
+        "options": {
+          "a": "cos A",
+          "b": "sin 2A",
+          "c": "cos 2A",
+          "d": "sin A"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nGiven:\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)\n\nCalculation:\n⇒ sin[90 – (36 – A)]sin[90 – (36 + A)] + cos (54° – A) cos (54° + A)\n⇒ sin(54º + A)sin(54º – A) + cos (54° – A)cos (54° + A)\n⇒ Using the identity cos(A – B),\n⇒ cos(54 + A – 54 + A) = cos(2A)\n\nTherefore, the value of cos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A) is cos(2A).",
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Identities & Transformation",
+        "conceptTested": "Product-to-sum identities and complementary angle relations: cos(90°-θ) = sinθ and sin(A+B)sin(A-B) = sin²A - sin²B.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Identities & Transformation",
+          "conceptTested": "Product-to-sum identities and complementary angle relations: cos(90°-θ) = sinθ and sin(A+B)sin(A-B) = sin²A - sin²B.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_141cfdeadb",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:28",
+        "avgTime": "00:51",
+        "question": "The average weight of the first thirteen persons among fourteen persons is 78 kg. The weight of the 14th person is 39 kg more than the average weight of all the fourteen persons. Find the weight of the 14th person.",
+        "options": {
+          "a": "118 kg",
+          "b": "98 kg",
+          "c": "110 kg",
+          "d": "120 kg"
+        },
+        "answer": "d",
+        "solution": "Solution\nShortcut Trick\nThe extra weight of the 14th person (39 kg) is distributed among the first 13 persons to equalize their average to the overall average.\n\nTotal Average = Average of 13 persons + (Extra weight ÷ 13)\nTotal Average = 78 + (39 ÷ 13) = 78 + 3 = 81 kg\nWeight of 14th person = Total Average + Extra = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAlternate Method\nGiven:\nAverage weight of 13 persons = 78 kg\nWeight of 14th person = Average of 14 persons + 39 kg\n\nFormula Used:\nAverage = Sum of all observations ÷ Number of observations\n\nCalculations:\nLet the average weight of all 14 persons be x kg.\n⇒ Total weight of 14 persons = 14 × x = 14x\n⇒ Weight of 14th person = x + 39\n⇒ Sum of weights of 13 persons = 13 × 78 = 1014 kg\n⇒ Total Weight = Sum of 13 persons + Weight of 14th person\n⇒ 14x = 1014 + (x + 39)\n⇒ 14x − x = 1053\n⇒ 13x = 1053\n⇒ x = 1053 ÷ 13\n⇒ x = 81 kg\n⇒ Weight of 14th person = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAdditional Information\nAverage Concept\n\nAverage is the central value of a set of data. Formula: Average = Total Sum ÷ Total Number.\n\nDeviation Method\n\nIf a new member joins and the average increases, the new member's value = Old Average + (Increase in Average × New Strength).\n\nSum of Observations\n\nSum = Average × Number of observations. Any change in sum directly impacts the average by Change ÷ n.",
+        "topic": "Average",
+        "subtopic": "Average - Addition & Removal of Observations",
+        "conceptTested": "Total Sum = Average × Number of observations, and balancing group weight deviations to find individual values.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Average - Addition & Removal of Observations",
+          "conceptTested": "Total Sum = Average × Number of observations, and balancing group weight deviations to find individual values.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6d217c0a16",
+        "q_num": 3,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "01:17",
+        "avgTime": "00:56",
+        "question": "Aarav owns a watch worth Rs. 10,000. He sells it to Bhavin at a profit of 15%. After some days, Bhavin sells it back to Aarav at 15% loss. Find the percentage profit or loss faced by Aarav.",
+        "options": {
+          "a": "17.25% loss",
+          "b": "18.75% loss",
+          "c": "18.25% profit",
+          "d": "17.25% profit"
+        },
+        "answer": "d",
+        "solution": "Solution\nShortcut Trick\nAarav sells the watch for ₹11,500 (15% profit on ₹10,000).\n\nBhavin sells it back at a 15% loss on his Cost Price (₹11,500).\n\nBhavin's Loss = 15% of 11,500 = ₹1,725.\n\nSince Aarav gets the watch back, his net cash gain is exactly Bhavin's loss amount.\n\nNet Profit % = (1,725 ÷ 10,000) × 100 = 17.25%.\n∴ The correct answer is 17.25% profit.\n\nAlternate Method\nGiven:\nInitial Cost Price (CP1) of watch = ₹10,000\nProfit percentage for Aarav = 15%\nLoss percentage for Bhavin = 15%\n\nCalculations:\n⇒ Selling Price of Aarav (SP1) = 10,000 + (15 ÷ 100) × 10,000 = ₹11,500\n⇒ Cost Price for Bhavin = ₹11,500\n⇒ Selling Price of Bhavin (SP2) = 11,500 − (15 ÷ 100) × 11,500\n⇒ SP2 = 11,500 − 1,725 = ₹9,775\n⇒ This SP2 is the price Aarav pays to get the watch back.\n⇒ Aarav's total profit = (Amount received from sale) − (Amount paid for buy-back)\n⇒ Net Profit = 11,500 − 9,775 = ₹1,725\n⇒ Profit % = (Net Profit ÷ Initial CP) × 100\n⇒ Profit % = (1,725 ÷ 10,000) × 100 = 17.25%\n∴ The correct answer is 17.25% profit.\n\nAdditional Information\nNet Profit in Buyback Transactions\n\nWhen an item is sold at a profit and bought back at a loss, the original seller's total profit is the sum of the initial profit amount and the savings made during the buy-back.\n\nEffect of Different Base Values\n\nA 15% profit and a 15% loss do not cancel each other out because the base Cost Price changes after the first transaction. The second percentage is calculated on the new Selling Price.\n\nProfit and Loss Formulas\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Always ensure the CP used is specific to the person making the transaction.",
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Successive Transactions & Buyback Profit/Loss",
+        "conceptTested": "Net profit or loss calculation in sequential transactions where base cost price changes after each transfer.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Successive Transactions & Buyback Profit/Loss",
+          "conceptTested": "Net profit or loss calculation in sequential transactions where base cost price changes after each transfer.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_041c558815",
+        "q_num": 4,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:12",
+        "avgTime": "00:19",
+        "question": "The floor of a room 12 m long and 8 m wide is to be decorated with square designs having the maximum possible area. Find the number of square designs required.",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "8",
+          "d": "6"
+        },
+        "answer": "d",
+        "solution": "Solution\nShortcut Trick\nSide of the maximum possible square = HCF of length and width.\nSide = HCF(12, 8) = 4 m.\nNumber of square designs = (Length × Width) ÷ (Side × Side).\nNumber of designs = (12 × 8) ÷ (4 × 4) = 96 ÷ 16 = 6.\n∴ The correct answer is 6.\n\nAlternate Method\nGiven: Length (L) = 12 m and Width (W) = 8 m.\n\nFormula Used:\n1. Area of rectangle = Length × Width\n2. Side of square (max area) = HCF(L, W)\n3. Number of squares = (Total Area) ÷ (Area of one square)\n\nCalculations:\n⇒ Total Area of the floor = 12 m × 8 m = 96 m2\n⇒ To find the maximum possible area of square designs, find HCF of 12 and 8.\n⇒ 12 = 2 × 2 × 3\n⇒ 8 = 2 × 2 × 2\n⇒ HCF(12, 8) = 2 × 2 = 4 m\n⇒ Area of one square design = 4 m × 4 m = 16 m2\n⇒ Number of square designs required = 96 ÷ 16\n⇒ Number of square designs required = 6\n∴ The correct answer is 6.\n\nAdditional Information\nHighest Common Factor (HCF)\n\nThe HCF of two or more numbers is the largest positive integer that divides each of the numbers without leaving a remainder.\n\nMinimum Number of Tiles\n\nTo minimize the number of tiles needed to cover a rectangular area, the side of each square tile must be the HCF of the length and breadth of the rectangle.\n\nArea and Perimeter of a Square\n\nArea = side2 and Perimeter = 4 × side. All four sides of a square are equal and each angle is 90°.",
+        "topic": "LCM & HCF",
+        "subtopic": "HCF Applications - Tiling and Partitioning",
+        "conceptTested": "Finding the side length of the largest possible square tile using the Highest Common Factor (HCF) of the room's dimensions.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "HCF Applications - Tiling and Partitioning",
+          "conceptTested": "Finding the side length of the largest possible square tile using the Highest Common Factor (HCF) of the room's dimensions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_223ce6b384",
+        "q_num": 5,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:47",
+        "avgTime": "00:29",
+        "question": "If the volume of a hemisphere is 155232 cm^3, then half of the radius (in cm) of the hemisphere is: (Use π = 22/7)",
+        "options": {
+          "a": "18",
+          "b": "42",
+          "c": "21",
+          "d": "12"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nGiven:\nVolume of a hemisphere = 155232 cm3\nπ = 22 / 7\n\nFormula Used:\nVolume of a hemisphere = (2 / 3) × π × r3\nWhere r = radius of the hemisphere.\n\nCalculation:\nGiven Volume = 155232 cm3\n\nUsing the formula:\n\n(2 / 3) × (22 / 7) × r3 = 155232\n⇒ r3 = (155232 × 3 × 7) / (2 × 22)\n⇒ r3 = (155232 × 21) / 44\n⇒ r3 = 74088\n\nTaking the cube root:\n\n⇒ r = ∛74088\n⇒ r = 42 cm\nHalf of the radius = r / 2\n⇒ Half of the radius = 42 / 2\n⇒ Half of the radius = 21 cm\n\nThe half of the radius of the hemisphere is 21 cm.",
+        "topic": "Mensuration 3D",
+        "subtopic": "Hemisphere - Volume & Dimensions",
+        "conceptTested": "Finding the radius of a hemisphere given its volume using the formula V = (2/3)πr^3.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Hemisphere - Volume & Dimensions",
+          "conceptTested": "Finding the radius of a hemisphere given its volume using the formula V = (2/3)πr^3.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6ad8830f2a",
+        "q_num": 6,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:36",
+        "avgTime": "00:17",
+        "question": "If 3^(2p+4) = 6561, then find the value of (p + 1)^4",
+        "options": {
+          "a": "1",
+          "b": "81",
+          "c": "27",
+          "d": "16"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nConvert 6561 into a power of 3: 6561 = 38.\nEquating the exponents of base 3: 2p + 4 = 8 ⇒ 2p = 4 ⇒ p = 2.\nSubstitute p = 2 to find the required expression: (p + 1)4 = (2 + 1)4 = 34 = 81.\n∴ The correct answer is 81.\n\nAlternate Method\nGiven:\n3(2p+4) = 6561\n\nFormula Used:\nIf am = an for any base a > 1, then m = n.\n\nCalculations:\n⇒ 3(2p+4) = 6561\n\nFactorizing 6561 gives:\n\n⇒ 3(2p+4) = 3 × 3 × 3 × 3 × 3 × 3 × 3 × 3\n⇒ 3(2p+4) = 38\nSince the bases are the same, we can safely equate the exponents:\n⇒ 2p + 4 = 8\n⇒ 2p = 8 − 4\n⇒ 2p = 4\n⇒ p = 2\nNow, substitute the value of p into the required expression (p + 1)4:\n⇒ (2 + 1)4\n⇒ 34\n⇒ 81\n∴ The correct answer is 81.\n\nAdditional Information\nLaw of Exponents (Multiplication & Division)\n\nWhen multiplying terms with the same base, add their exponents: am × an = am+n. When dividing, subtract them: am ÷ an = am−n.\n\nPower of a Power Rule\n\nWhen raising a power to another power, multiply the exponents: (am)n = am×n.\n\nZero and Negative Exponents\n\nAny non-zero base to the power of 0 is 1: a0 = 1. A negative exponent denotes the reciprocal of the base raised to the positive power: a−n = 1 ÷ an.",
+        "topic": "Simplification",
+        "subtopic": "Indices & Surds - Exponential Equations",
+        "conceptTested": "Equating exponents when bases are equal: if a^m = a^n, then m = n.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Indices & Surds - Exponential Equations",
+          "conceptTested": "Equating exponents when bases are equal: if a^m = a^n, then m = n.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7beb7a9938",
+        "q_num": 7,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:16",
+        "avgTime": "00:11",
+        "question": "The maximum number of boxes, each of length 0.2m, breadth 0.4m and height 0.5m that can be placed in a box of length 2m, breadth 1m and height 0.5m is",
+        "options": {
+          "a": "30",
+          "b": "40",
+          "c": "20",
+          "d": "25"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nGiven:\nDimensions of each small box are length 0.2 m,  breadth 0.4 m and height 0.5 m.\n\nDimensions of bigger box are  length 2 m, breadth 1 m and height 0.5 m.\n\nFormula:\n\nNumber of boxes = Volume of bigger box / Volume of each small box\n\nCalculation:\nVolume of bigger box = 2 × 1 × 0.5\n⇒ 1 m3\nVolume of each smaller box = 0.2 × 0.4 × 0.5\n⇒ 0.04 m3\n∴ No. of boxes = 1/(0.04)\n⇒ 100/4\n⇒ 25",
+        "topic": "Mensuration 3D",
+        "subtopic": "Cube & Cuboid Volume & Packing",
+        "conceptTested": "Volume of cuboid = length × breadth × height and calculating maximum packing capacity using volume ratios.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cube & Cuboid Volume & Packing",
+          "conceptTested": "Volume of cuboid = length × breadth × height and calculating maximum packing capacity using volume ratios.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  }
+]

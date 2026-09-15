@@ -1,1 +1,358 @@
-[]
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Mock Errors",
+    "subject": "English",
+    "subject_id": "english",
+    "questions": [
+      {
+        "id": "engl_c0e6629802",
+        "q_num": 1,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:17",
+        "question": "Select the most appropriate synonym of the word \"Brontide\".",
+        "options": {
+          "a": "Silence",
+          "b": "Rumbling",
+          "c": "Light",
+          "d": "Explosion"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nThe correct answer is: Option 2 (Rumbling).\n\nKey Points\nThe word \"Brontide\" refers to the low, muffled, and distant sound of thunder or rumbling. (दूर से आने वाली गड़गड़ाहट की आवाज)\nExample: The brontide echoed softly across the valley after the storm.\n\"Rumbling\" relates to a continuous, deep, resonant sound, similar to thunder. (गड़गड़ाहट)\nExample: We heard a rumbling sound as the earthquake began to shake the ground.\nHence, we can conclude that the synonym of \"Brontide\" is \"Rumbling.\"\nTherefore, the correct answer is: Option 2 (Rumbling).\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nSilence (शांति): The absence of sound or noise.\nExample: The silence in the library was broken by the sound of a dropped book.\nLight (प्रकाश): A natural agent that makes things visible.\nExample: The morning light streamed through the windows, filling the room with warmth.\nExplosion (विस्फोट): A violent and sudden outbreak, often with a loud noise.\nExample: The explosion of fireworks lit up the night sky during the festival.",
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary recall and identification of semantic equivalents.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary recall and identification of semantic equivalents.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_08bde08277",
+        "q_num": 2,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:13",
+        "question": "Select the most appropriate antonym for the given word: Grumble",
+        "options": {
+          "a": "Complain",
+          "b": "Compliment",
+          "c": "Dangle",
+          "d": "Calamity"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nThe correct answer is \"Compliment\".\n\nKey Points\nGrumble means to complain or protest about something in a bad-tempered but typically muted way. (बड़बड़ाना)\nExample: She often grumbles about her work environment being too stressful.\nThe correct antonym, compliment, refers to a polite expression of praise or admiration. (प्रशंसा)\nExample: He received a compliment from his boss for his excellent performance.\nTherefore, the correct answer is \"Option 2\".\n\nAdditional Information\nComplain (शिकायत करना): Express dissatisfaction or annoyance about something.\nExample: The customers complain about the poor service at the restaurant.\nDangle (लटकना): Hang or swing loosely.\nExample: The earrings dangled from her ears.\nCalamity (आपदा): An event causing great and often sudden damage or distress; a disaster.\nExample: The earthquake was a great calamity for the city.",
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Antonyms",
+        "conceptTested": "Vocabulary recall and identification of contrasting word meanings.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Antonyms",
+          "conceptTested": "Vocabulary recall and identification of contrasting word meanings.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8de7aa2393",
+        "q_num": 3,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:21",
+        "question": "In the following question, out of the given alternatives, choose the one which best expresses the opposite meaning of the given word.\nFECUND",
+        "options": {
+          "a": "Barren",
+          "b": "Solid",
+          "c": "Unploughed",
+          "d": "Hard"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nThe correct answer is 'Barren'.\n\nKey Points\nFecund - producing or capable of producing an abundance of offspring or new growth; highly fertile.(संतान या नई वृद्धि की प्रचुरता पैदा करने या पैदा करने में सक्षम; अत्यधिक उपजाऊ)\nFor example- As an artist, she gets most of her inspiration from nature; her daily walks in the woods are a fecund source of ideas.\nBarren - (used about land or soil) not good enough for plants to grow on.((भूमि या मिट्टी के बारे में प्रयुक्त) पौधों के बढ़ने के लिए पर्याप्त नहीं है)\nFor example- He also wants to use the water to irrigate barren desert land.\nAs we can see, the meaning of 'Fecund' is opposite to that of 'Barren'.\nTherefore, the correct answer is- 'Barren'.\n\nAdditional Information\nSolid- hard and firm; not in the form of liquid or gas.(कठोर और दृढ़; तरल या गैस के रूप में नहीं)\nUnploughed- (of an area of land) not having been ploughed.((भूमि के एक क्षेत्र की) जुताई नहीं की गई)\nHard- not soft to touch; not easy to break or bend. (स्पर्श करने के लिए नरम नहीं; तोड़ना या झुकना आसान नहीं है)",
+        "topic": "English Comprehension",
+        "subtopic": "Synonyms & Antonyms",
+        "conceptTested": "Finding the antonym of an advanced vocabulary word (Fecund vs Barren)",
+        "tags": {
+          "topic": "English Comprehension",
+          "subtopic": "Synonyms & Antonyms",
+          "conceptTested": "Finding the antonym of an advanced vocabulary word (Fecund vs Barren)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_bd9238521c",
+        "q_num": 4,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:27",
+        "avgTime": "00:28",
+        "question": "Select the most appropriate option that can substitute the underlined segment in the given sentence.\nPersonal growth involves self-reflection and resilience, leading to a deeper understanding of oneself.",
+        "options": {
+          "a": "in-depth grasp",
+          "b": "compoundable knowledge",
+          "c": "expanded aware",
+          "d": "thorough analysis"
+        },
+        "answer": "d",
+        "solution": "Solution\nThe correct answer is 'thorough analysis'.\nKey Points\nThe underlined segment \"deeper understanding\" indicates an intensive, detailed examination and insight gained through self-reflection.\n\"Thorough analysis\" is the correct grammatical and contextual substitute given the official answer key:\nThorough matches the meaning of \"deep\" or exhaustive.\nAnalysis reflects the detailed examination and study of one's own thoughts, feelings, and resilience.\nAdditionally, the sentence uses the indefinite article \"a\" (\"leading to a...\"), which correctly pairs with the consonant sound of \"thorough analysis\" (whereas in-depth grasp would grammatically require the article \"an\").\nOptions 1, 2, and 3 are incorrect due to grammatical mismatch or improper word usage.\nTherefore, the correct answer is Option 4.\nSubstitute Sentence: \"Personal growth involves self-reflection and resilience, leading to a thorough analysis of oneself.\"\n\nAdditional Information\nOption 1: \"in-depth grasp\" is incorrect because it begins with a vowel sound (/ɪ/) and would require the article \"an\" rather than the given \"a\" (\"leading to a in-depth grasp\" is grammatically incorrect).\nOption 2: \"compoundable knowledge\" is contextually irrelevant, as \"compoundable\" refers to legal settlements or interest accumulation.\nOption 3: \"expanded aware\" is grammatically flawed because \"aware\" is an adjective; a noun like \"awareness\" would be required.",
+        "topic": "English Comprehension",
+        "subtopic": "Sentence Improvement",
+        "conceptTested": "Grammatical appropriateness, contextual vocabulary substitution, and article-consonant agreement",
+        "tags": {
+          "topic": "English Comprehension",
+          "subtopic": "Sentence Improvement",
+          "conceptTested": "Grammatical appropriateness, contextual vocabulary substitution, and article-consonant agreement",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_28a34248c4",
+        "q_num": 5,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:13",
+        "avgTime": "00:15",
+        "question": "In the following question, four words have been given out of which one word is incorrectly spelt. Find the incorrectly spelt word.",
+        "options": {
+          "a": "Forray",
+          "b": "Ferry",
+          "c": "Fairy",
+          "d": "Fiery"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nThe correct answer is option 1. Forray is the wrong spelling. The correct spelling is ''foray'' which means ''a sudden attack or incursion into enemy territory, especially to obtain something; a raid.''\n\nFerry: boat or ship for conveying passengers and goods, especially over a relatively short distance and as a regular service.\nFairy: a small imaginary being of human form that has magical powers, especially a female one.\nFiery: consisting of fire or burning strongly and brightly.",
+        "topic": "English Comprehension",
+        "subtopic": "Spelling Errors",
+        "conceptTested": "Identifying incorrectly spelt words and their correct alternative (Foray vs Forray)",
+        "tags": {
+          "topic": "English Comprehension",
+          "subtopic": "Spelling Errors",
+          "conceptTested": "Identifying incorrectly spelt words and their correct alternative (Foray vs Forray)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1c9a6d4fd4",
+        "q_num": 6,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:21",
+        "avgTime": "00:11",
+        "question": "Find the incorrectly spelt word.",
+        "options": {
+          "a": "Smirk",
+          "b": "Tardy",
+          "c": "Tarnis",
+          "d": "Wade"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe spelling of the word 'tarnis' is wrong here. The correct spelling is 'tarnish.' It means 'lose or cause to lose lustre'.\n\nSmirk: smile in an irritatingly smug.\nTardy: delaying or delayed beyond the right or expected time.\nWade: walk with effort through water or another liquid or viscous substance.",
+        "topic": "English Comprehension",
+        "subtopic": "Spelling Errors",
+        "conceptTested": "Identifying incorrectly spelt words (Tarnish vs Tarnis)",
+        "tags": {
+          "topic": "English Comprehension",
+          "subtopic": "Spelling Errors",
+          "conceptTested": "Identifying incorrectly spelt words (Tarnish vs Tarnis)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1236cd0de7",
+        "q_num": 7,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:14",
+        "avgTime": "00:13",
+        "question": "Choose the correct appropriate word to fill in the blank from the given alternatives.\nShe _______ when she heard that terrible news.",
+        "options": {
+          "a": "packed",
+          "b": "frenzied",
+          "c": "panicked",
+          "d": "frantic"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe correct solution is option 3 i.e. panicked.\n\nKey Points\nContext of the sentence: We need a verb in the blank to show what happened to the person after she heard the terrible news.\nLet’s look at the meaning of the words given below:\nPacking means cram large number of things into.\nFrenzied means wildly excited or uncontrolled.\nPanicked means felt or caused to feel panic(sudden uncontrollable fear or anxiety, often causing wildly unthinking behaviour).\nFrantic means distraught with fear, anxiety, or other emotion.\nFrom the above explanations, we find that panicked is the only word that will fit the context of the sentence.\n\nCorrect sentence: She panicked when she heard the news.\n\nMistake Points\n\nWe might choose option 4 i.e. frantic because it also means fear but the word ‘frantic’ is an adjective so it will not fit in the given blank which requires a verb.\n‘Panicked’ is a verb that means 'felt fear or anxiety'. So, it is the correct choice for the blank.",
+        "topic": "English Comprehension",
+        "subtopic": "Fill in the Blanks",
+        "conceptTested": "Choosing the correct grammatical part of speech (Verb vs Adjective) to fill a blank in past tense",
+        "tags": {
+          "topic": "English Comprehension",
+          "subtopic": "Fill in the Blanks",
+          "conceptTested": "Choosing the correct grammatical part of speech (Verb vs Adjective) to fill a blank in past tense",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b002ae8cec",
+        "q_num": 8,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:18",
+        "avgTime": "00:23",
+        "question": "Select the segment of the sentence that contains a grammatical error. If there is no error, mark 'No error' as your answer.\nHe was determined to (a)/ both beat the record (b)/ with win the crowd over. (c)/ No Error (d)",
+        "options": {
+          "a": "a",
+          "b": "b",
+          "c": "c",
+          "d": "d"
+        },
+        "answer": "c",
+        "solution": "In part (c) of the sentence, 'with' is used incorrectly following the correlative conjunction 'both'. The correct correlative pair is 'both...and'. Thus, 'with' should be replaced by 'and' to make the sentence grammatically correct.",
+        "topic": "Spotting Errors",
+        "subtopic": "Correlative Conjunctions - Both...and",
+        "conceptTested": "Correlative conjunctions like both...and must be followed by parallel structures and use the correct paired conjunction rather than substituting 'with'.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Correlative Conjunctions - Both...and",
+          "conceptTested": "Correlative conjunctions like both...and must be followed by parallel structures and use the correct paired conjunction rather than substituting 'with'.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_22cc5bbad1",
+        "q_num": 9,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:16",
+        "question": "Select the most appropriate option to complete the following sentence: I was really astonished. I didn’t know____.",
+        "options": {
+          "a": "What to tell",
+          "b": "What to say",
+          "c": "Told",
+          "d": "What to said"
+        },
+        "answer": "b",
+        "solution": "Solution\nThe correct answer is 'What to say'.\n\nKey Points\nThe sentence describes a situation where the speaker was astonished and unsure about what to express. The phrase \"What to say\" is appropriate because it refers to the action of speaking or expressing.\nOption 1, \"What to tell,\" is incorrect because \"tell\" requires an object to indicate whom or what you are addressing (e.g., \"tell him\").\nOption 3, \"Told,\" is grammatically incorrect in this context because it does not fit the sentence structure.\nOption 4, \"What to said,\" is incorrect because \"said\" is the past tense form and cannot follow \"to.\"\nTherefore, the correct answer is Option 2.\nComplete Sentence: \"I was really astonished. I didn't know what to say.\"\n\nAdditional Information\nOption 1: \"What to tell\" is incorrect because it is incomplete without specifying whom or what.\nOption 3: \"Told\" is incorrect; it doesn't fit the sentence structure as it is a past tense form of \"tell.\"\nOption 4: \"What to said\" is incorrect because \"said\" cannot follow \"to\" due to grammatical rules.",
+        "topic": "Fill in the Blanks",
+        "subtopic": "Infinitive Phrases",
+        "conceptTested": "Verb complementation using wh-word followed by an infinitive (what to say) versus transitive verbs requiring objects.",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "subtopic": "Infinitive Phrases",
+          "conceptTested": "Verb complementation using wh-word followed by an infinitive (what to say) versus transitive verbs requiring objects.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_985e2b34ba",
+        "q_num": 10,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:05",
+        "avgTime": "00:47",
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. In Earth’s orbit itself, the U.S. Space Surveillance Network is tracking more than 14,000 pieces of space junk that are larger than 10 cm (4 inches) across, such as defunct satellites and rocket stages.\nB. It’s estimated that there are millions of pieces smaller than that.\nC. Humanity hasn’t taken only memories and left only footprints in the outer space but we’ve left a lot of junk up there.\nD. Because of the high speeds at which objects move in Earth’s orbit, even little pieces of space debris can cause damage such as the windows on the space shuttle often had to be replaced because of damage from collisions with debris smaller than a millimeter.",
+        "options": {
+          "a": "BCDA",
+          "b": "CABD",
+          "c": "DABC",
+          "d": "ACBD"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nThe correct answer is \"CABD\"\n\nKey Points\nLet's look at the correct sequence of the passage.\nStatement C is the first sentence of the passage as it begins with a general statement which is that humanity hasn’t taken only memories and left only footprints in the outer space but we’ve left a lot of junk up there.\nStatement A is the second sentence of the passage as it mentions a specific fact..In Earth’s orbit itself, the U.S. Space Surveillance Network is tracking more than 14,000 pieces of space junk that are larger than 10 cm (4 inches) across, such as defunct satellites and rocket stages.\nStatement B is the third sentence of the passage as it gives the estimate that there are millions of pieces smaller than that.\nStatement D is the last sentence of the passage as it explains the reason behind previous statement . it mentions  that because of the high speeds at which objects move in Earth’s orbit, even little pieces of space debris can cause damage such as the windows on the space shuttle often had to be replaced because of damage from collisions with debris smaller than a millimeter.\n\n​Hence, the correct sequence is \"CABD\"\n\nThe correct passage is: C) Humanity hasn’t taken only memories and left only footprints in the outer space but we’ve left a lot of junk up there A) In Earth’s orbit itself, the U.S. Space Surveillance Network is tracking more than 14,000 pieces of space junk that are larger than 10 cm (4 inches) across, such as defunct satellites and rocket stages.. B) It’s estimated that there are millions of pieces smaller than that.D) Because of the high speeds at which objects move in Earth’s orbit, even little pieces of space debris can cause damage such as the windows on the space shuttle often had to be replaced because of damage from collisions with debris smaller than a millimeter.",
+        "topic": "Para Jumbles",
+        "subtopic": "Sentence Rearrangement (PQRS)",
+        "conceptTested": "Logical flow from a general opening statement introducing a topic to specific supporting details and consequences.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Sentence Rearrangement (PQRS)",
+          "conceptTested": "Logical flow from a general opening statement introducing a topic to specific supporting details and consequences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0500aad30a",
+        "q_num": 11,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:13",
+        "avgTime": "00:52",
+        "question": "Which of the following words is most nearly the SYNONYM of the word \"perennial\" as used in the first paragraph of the passage?",
+        "options": {
+          "a": "Ephemeral",
+          "b": "Occasional",
+          "c": "Recurrent",
+          "d": "Subterranean"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe correct answer is: Option 3 i.e. Recurrent.\n\nKey Points\nThe word \"perennial\" means lasting or existing for a long or apparently infinite time; enduring or continually recurring. (बार-बार होनेवाला, चिरस्थायी)\nExample: The region is known for its perennial rivers that flow year-round.\n\"Recurrent\" means occurring often or repeatedly. (पुनरावर्ती)\nExample: They suffered from recurrent bouts of illness.\nHence, the word most nearly the synonym of \"perennial\" is \"recurrent\".\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nEphemeral (क्षणिक): Lasting for a very short time.\nExample: The beauty of the morning dew is ephemeral, disappearing as the sun rises.\nOccasional (आकस्मिक): Occurring, appearing, or done infrequently and irregularly.\nExample: They enjoyed occasional visits to the countryside.\nSubterranean (भूमिगत): Existing, occurring, or done under the earth's surface.\nExample: The city has an extensive subterranean passageway system.",
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Vocabulary in Context",
+        "conceptTested": "Identifying precise lexical synonyms for advanced vocabulary words.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Vocabulary in Context",
+          "conceptTested": "Identifying precise lexical synonyms for advanced vocabulary words.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_cd469d12ed",
+        "q_num": 12,
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "02:48",
+        "avgTime": "01:32",
+        "question": "What can be reasonably inferred from the passage regarding the wetlands (beels) of Assam?",
+        "options": {
+          "a": "Their conservation and restoration would reduce the velocity and volume of floodwaters reaching human settlements during extreme rainfall.",
+          "b": "Their transformation into agricultural land has successfully mitigated the hydraulic ferocity of flash floods in urban areas.",
+          "c": "They were artificially engineered by disaster management authorities to act as longitudinal barriers against sediment deposition.",
+          "d": "They are the primary source of the heavy silt that elevates the channel floor of the Brahmaputra River"
+        },
+        "answer": "a",
+        "solution": "Solution\nThe correct answer is Option 1.\n\nKey Points\nOption 1: Their conservation and restoration would reduce the velocity and volume of floodwaters reaching human settlements during extreme rainfall.\nThis is correct. The passage explains that wetlands (beels) function as natural hydrological sinks by absorbing excess runoff during peak monsoon periods and releasing water gradually during dry periods. Therefore, restoring these wetlands would help reduce the intensity and speed of floodwaters reaching populated areas.\nOption 2: Their transformation into agricultural land has successfully mitigated the hydraulic ferocity of flash floods in urban areas.\nThis is incorrect. The passage states the opposite: wetland encroachment for agriculture and urbanization has destroyed natural flood buffers, increasing unregulated runoff and worsening flood conditions.\nOption 3: They were artificially engineered by disaster management authorities to act as longitudinal barriers against sediment deposition.\nThis is incorrect. The passage describes wetlands as natural ecological systems, not artificial structures. Longitudinal barriers refer to embankments, not wetlands.\nOption 4: They are the primary source of the heavy silt that elevates the channel floor of the Brahmaputra River.\nThis is incorrect. The passage attributes sediment accumulation in the river channel to the restriction of lateral spill caused by embankments, not to wetlands.\nTherefore, the correct answer is Option 1: Their conservation and restoration would reduce the velocity and volume of floodwaters reaching human settlements during extreme rainfall.\n\nAdditional Information\nWetlands (beels) act as natural flood-control systems by storing excess water and gradually releasing it, reducing sudden surges in river discharge.\nThe passage advocates wetland rejuvenation as part of a nature-based approach to flood management, replacing excessive dependence on artificial engineering solutions.",
+        "topic": "Reading Comprehension",
+        "subtopic": "Inference and Passage Analysis",
+        "conceptTested": "Logical deduction of author's arguments and environmental cause-effect relationships from descriptive passages.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Inference and Passage Analysis",
+          "conceptTested": "Logical deduction of author's arguments and environmental cause-effect relationships from descriptive passages.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  }
+]
