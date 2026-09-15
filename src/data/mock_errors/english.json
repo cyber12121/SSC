@@ -1920,124 +1920,8 @@
         }
       },
       {
-        "id": "engl_2d8fc29fa4",
-        "q_num": 67,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "B",
-        "userTime": "00:17",
-        "avgTime": "00:20",
-        "question": "Fill in the blank with the appropriate preposition.\n\nShe walked ___ the room without speaking to anyone.",
-        "options": {
-          "a": "over",
-          "b": "through",
-          "c": "across",
-          "d": "along"
-        },
-        "answer": "b",
-        "solution": "The preposition 'through' is used to indicate movement from one end of an enclosed space to the other. A room is an enclosed area, so movement within it is correctly expressed using 'through'. 'Across' is used for open or flat spaces, while 'over' [above] and 'along' [next to] do not suit the context. Hence, (b) is the correct answer.",
-        "topic": "Spotting Errors",
-        "subtopic": "Prepositions",
-        "conceptTested": "Usage of prepositions indicating movement through an enclosed space.",
-        "tags": {
-          "topic": "Spotting Errors",
-          "subtopic": "Prepositions",
-          "conceptTested": "Usage of prepositions indicating movement through an enclosed space.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "engl_e9df3e2511",
-        "q_num": 68,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "D",
-        "correctOption": "D",
-        "userTime": "01:34",
-        "avgTime": "00:20",
-        "question": "Climate change, driven primarily by human activities such as burning fossil fuels and deforestation, is profoundly altering Earth's ecosystems. Rising global temperatures disrupt weather patterns, leading to more frequent extreme events like droughts, floods, and heatwaves. These changes threaten biodiversity, the variety of life forms that sustain ecological balance. Species unable to adapt or migrate face extinction; for instance, coral reefs are bleaching due to warmer oceans, endangering marine life dependent on them. Polar regions are particularly vulnerable, with melting ice caps forcing animals like polar bears to swim longer distances for food, increasing mortality rates.\n\nTropical forests, home to over half of the world's species, are experiencing shifts in rainfall, causing habitat fragmentation and invasive species proliferation. Agriculture is impacted as changing climates affect crop yields and pest distributions, potentially leading to food shortages. Conservation efforts include establishing protected areas, restoring habitats, and promoting sustainable land use. International agreements like the Paris Accord aim to limit warming to 1.5°C, but implementation lags due to political and economic barriers.\n\nBiodiversity loss also affects human societies, as it diminishes ecosystem services such as pollination, water purification, and carbon sequestration. Indigenous communities, often stewards of biodiverse lands, advocate for traditional knowledge in conservation strategies. Technological innovations, including satellite monitoring and genetic engineering, offer tools to track and bolster species resilience. However, without drastic reductions in greenhouse gas emissions, projections indicate up to one million species could vanish by 2050. Addressing this crisis requires global cooperation, policy reforms, and individual actions like reducing carbon footprints to preserve the intricate web of life on our planet.\n\nWhat is the primary driver of climate change mentioned in the passage?",
-        "options": {
-          "a": "Natural solar variations",
-          "b": "Ocean currents",
-          "c": "Volcanic eruptions",
-          "d": "Human activities like burning fossil fuels"
-        },
-        "answer": "d",
-        "solution": "From the following sentence in paragraph 1, \"Climate change, driven primarily by human activities such as burning fossil fuels and deforestation, is profoundly altering Earth's ecosystems,\" it can be noted that the primary drivers of climate change are human activities like burning fossil fuels and deforestation.\n\nHence, the correct answer is option (d).",
-        "topic": "Reading Comprehension",
-        "subtopic": "Direct Detail Comprehension",
-        "conceptTested": "Extracting explicitly stated facts and primary causes from informational text.",
-        "tags": {
-          "topic": "Reading Comprehension",
-          "subtopic": "Direct Detail Comprehension",
-          "conceptTested": "Extracting explicitly stated facts and primary causes from informational text.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "engl_0f1e5c2c76",
-        "q_num": 69,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "00:44",
-        "avgTime": "00:20",
-        "question": "In the following question, the first and the last parts of the sentence/passage are numbered 1 and 6. The rest of the sentence/passage is split into four parts - P, Q, R, and S. These four parts are not given in their proper order. Read the sentence/passage and find the most logical order of the parts between 1 and 6.\n\n1: The process of photosynthesis is essential for life on Earth.\nP. This energy is used to convert carbon dioxide and water into glucose.\nQ. Green plants absorb sunlight through the chlorophyll present in their leaves.\nR. Oxygen is released as a by-product of this chemical reaction.\nS. The stored chemical energy supports plant growth and metabolism.\n6: Photosynthesis, therefore, sustains both plant life and atmospheric balance.",
-        "options": {
-          "a": "PQSR",
-          "b": "QPRS",
-          "c": "PQRS",
-          "d": "QSPR"
-        },
-        "answer": "b",
-        "solution": "After the introduction in (1), (Q) begins the process by describing light absorption. (P) follows with energy conversion. (R) logically comes next, explaining oxygen release. (S) then highlights the benefit to plants before the concluding sentence. (6) is a concluding statement.\n\nThus, the correct sequence is QPRS.\n\nHence, option (b) is the correct answer.",
-        "topic": "Para Jumbles",
-        "subtopic": "Sentence Rearrangement",
-        "conceptTested": "Logical flow and coherence between sentence parts in descriptive processes.",
-        "tags": {
-          "topic": "Para Jumbles",
-          "subtopic": "Sentence Rearrangement",
-          "conceptTested": "Logical flow and coherence between sentence parts in descriptive processes.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "engl_29debe12e3",
-        "q_num": 70,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "A",
-        "correctOption": "A",
-        "userTime": "00:39",
-        "avgTime": "00:20",
-        "question": "Select the most appropriate option to improve the underlined segment in the given sentence. If there is no need to improve it, select 'No improvement'.\n\nNeither Kia nor him has been able to recognize the ludicrous message.",
-        "options": {
-          "a": "Neither Kia nor he has",
-          "b": "Neither Kia nor he have",
-          "c": "Neither Kia nor him have",
-          "d": "No improvement"
-        },
-        "answer": "a",
-        "solution": "In the case of 'neither..nor', always put the verb according to the subject that is closest. In this case, 'has' (singular verb) must agree with 'he' (singular subject). So, option (b) is incorrect.\n\nThe pronoun which performs action or is the doer is called the Subjective Pronoun. In this context, the persons mentioned are performing the action and so, subjective pronouns must be used. Thus, the sentence needs an improvement and also, option (c) is incorrect as an objective pronoun is used here.\n\nThus, 'Neither Kia nor he has' should replace 'Neither Kia nor him has'.\n\nTherefore, the correct answer is (a), Neither Kia nor he has.\nThe corrected form of the sentence is: Neither Kia nor he has been able to recognize the ludicrous message.\n\nAdditional Information:\nThe pronoun which takes action is called the Subjective Pronoun.\n\nI\nHe\nShe\nWe\nYou\nThey\n\nThe pronoun which is the receiver of the action is called the Objective Pronoun.\n\nMe\nHim\nHer\nUs\nYou\nThem",
-        "topic": "Spotting Errors",
-        "subtopic": "Subject-Verb Agreement & Pronouns",
-        "conceptTested": "Correlative conjunction 'Neither...nor' agrees with the nearest subject, and subjective case pronouns must be used for subjects.",
-        "tags": {
-          "topic": "Spotting Errors",
-          "subtopic": "Subject-Verb Agreement & Pronouns",
-          "conceptTested": "Correlative conjunction 'Neither...nor' agrees with the nearest subject, and subjective case pronouns must be used for subjects.",
-          "difficulty": "medium"
-        }
-      },
-      {
         "id": "engl_d1ad47980f",
-        "q_num": 71,
+        "q_num": 67,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2066,7 +1950,7 @@
       },
       {
         "id": "engl_4238e8044d",
-        "q_num": 72,
+        "q_num": 68,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2095,7 +1979,7 @@
       },
       {
         "id": "engl_041c8a2712",
-        "q_num": 73,
+        "q_num": 69,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2124,7 +2008,7 @@
       },
       {
         "id": "engl_23c133d808",
-        "q_num": 74,
+        "q_num": 70,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2153,7 +2037,7 @@
       },
       {
         "id": "engl_0a2221e7bc",
-        "q_num": 75,
+        "q_num": 71,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2182,7 +2066,7 @@
       },
       {
         "id": "engl_e7bc6d020c",
-        "q_num": 76,
+        "q_num": 72,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2211,7 +2095,7 @@
       },
       {
         "id": "engl_318de5551e",
-        "q_num": 77,
+        "q_num": 73,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2240,7 +2124,7 @@
       },
       {
         "id": "engl_452f52d810",
-        "q_num": 78,
+        "q_num": 74,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2269,7 +2153,7 @@
       },
       {
         "id": "engl_1505369de7",
-        "q_num": 79,
+        "q_num": 75,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2298,7 +2182,7 @@
       },
       {
         "id": "engl_40710d3056",
-        "q_num": 80,
+        "q_num": 76,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2327,7 +2211,7 @@
       },
       {
         "id": "engl_f54aeae0d1",
-        "q_num": 81,
+        "q_num": 77,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Unattempted",
@@ -2356,7 +2240,7 @@
       },
       {
         "id": "engl_ca2d288f2d",
-        "q_num": 82,
+        "q_num": 78,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2385,7 +2269,7 @@
       },
       {
         "id": "engl_f0e3050331",
-        "q_num": 83,
+        "q_num": 79,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2409,6 +2293,180 @@
           "topic": "English Comprehension",
           "subtopic": "Para Jumbles",
           "conceptTested": "Logical sentence rearrangement and structural cohesion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_bb994d1811",
+        "q_num": 80,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:09",
+        "avgTime": "00:19",
+        "question": "Select the most appropriate synonym of the given word:\\n\\nFanatical",
+        "options": {
+          "a": "Jaunty",
+          "b": "Tedious",
+          "c": "Moderate",
+          "d": "Zealous"
+        },
+        "answer": "d",
+        "solution": "'Fanatical' means 'Filled with excessive and single-minded zeal.'. Options a) and b) can be rejected as they are unrelated to the word. 'Moderate' means 'Average in amount, intensity, quality, or degree.'. Hence, option c) can also be rejected as it is the exact opposite. 'Jaunty' means 'Having or expressing a lively, cheerful, and self-confident manner.'. 'Tedious' means 'Too long, slow, or dull; tiresome or monotonous.'. Hence, option d) is the correct answer.",
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Identifying vocabulary with similar semantic meaning.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Identifying vocabulary with similar semantic meaning.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_92776a0842",
+        "q_num": 81,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:29",
+        "avgTime": "00:27",
+        "question": "Select the appropriate idiom for the given blank.\\n\\nA major _________________ at the meeting will be the appointment of an auditor, after Grant Thornton's resignation.",
+        "options": {
+          "a": "Bone of contention",
+          "b": "Tooth and nail",
+          "c": "Read between the lines",
+          "d": "Hard gram to crack"
+        },
+        "answer": "a",
+        "solution": "The sentence talks about the appointment of a new auditor after the resignation of the previous auditor. The sentence will take the idiom 'bone of contention'(which means 'the subject of a dispute') which suggests that the appointment is a controversial situation and might arise a dispute. Other idioms 'tooth and nail' (which means 'with all one's power'), 'read between the lines' (which means 'understand the hidden meaning') do not fit in the given sentence contextually. The idiom 'a hard gram to crack' is incorrect. The actual one is 'bone of contention'(which means 'a difficult problem'). Hence, the answer is option a).",
+        "topic": "Idioms & Phrases",
+        "subtopic": "Fill in the blank with appropriate idiom",
+        "conceptTested": "Contextual usage of idioms in sentences.",
+        "tags": {
+          "topic": "Idioms & Phrases",
+          "subtopic": "Fill in the blank with appropriate idiom",
+          "conceptTested": "Contextual usage of idioms in sentences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_79e5982d25",
+        "q_num": 82,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:17",
+        "avgTime": "00:20",
+        "question": "Fill in the blank with the appropriate preposition.\\n\\nShe walked ___ the room without speaking to anyone.",
+        "options": {
+          "a": "over",
+          "b": "through",
+          "c": "across",
+          "d": "along"
+        },
+        "answer": "b",
+        "solution": "The preposition 'through' is used to indicate movement from one end of an enclosed space to the other. A room is an enclosed area, so movement within it is correctly expressed using 'through'. 'Across' is used for open or flat spaces, while 'over' [above] and 'along' [next to] do not suit the context. Hence, (b) is the correct answer.",
+        "topic": "Spotting Errors",
+        "subtopic": "Prepositions",
+        "conceptTested": "The preposition 'through' is used to indicate movement from one end of an enclosed space to the other.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Prepositions",
+          "conceptTested": "The preposition 'through' is used to indicate movement from one end of an enclosed space to the other.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_df652b4bd5",
+        "q_num": 83,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:34",
+        "avgTime": "00:20",
+        "question": "What is the primary driver of climate change mentioned in the passage?",
+        "options": {
+          "a": "Natural solar variations",
+          "b": "Ocean currents",
+          "c": "Volcanic eruptions",
+          "d": "Human activities like burning fossil fuels"
+        },
+        "answer": "d",
+        "solution": "From the following sentence in paragraph 1, \"Climate change, driven primarily by human activities such as burning fossil fuels and deforestation, is profoundly altering Earth's ecosystems,\" it can be noted that the primary drivers of climate change are human activities like burning fossil fuels and deforestation.\n\nHence, the correct answer is option (d).",
+        "topic": "Reading Comprehension",
+        "subtopic": "Main Idea / Direct Information",
+        "conceptTested": "Locating explicitly stated causes and effects within a technical or environmental passage.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Main Idea / Direct Information",
+          "conceptTested": "Locating explicitly stated causes and effects within a technical or environmental passage.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_fd9c7a92c0",
+        "q_num": 84,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:44",
+        "avgTime": "00:20",
+        "question": "In the following question, the first and the last parts of the sentence/passage are numbered 1 and 6. The rest of the sentence/passage is split into four parts - P, Q, R, and S. These four parts are not given in their proper order. Read the sentence/passage and find the most logical order of the parts between 1 and 6.\\n\\n1: The process of photosynthesis is essential for life on Earth. P. This energy is used to convert carbon dioxide and water into glucose. Q. Green plants absorb sunlight through the chlorophyll present in their leaves. R. Oxygen is released as a by-product of this chemical reaction. S. The stored chemical energy supports plant growth and metabolism. 6: Photosynthesis, therefore, sustains both plant life and atmospheric balance.",
+        "options": {
+          "a": "PQSR",
+          "b": "QPRS",
+          "c": "PQRS",
+          "d": "QSPR"
+        },
+        "answer": "b",
+        "solution": "After the introduction in (1), (Q) begins the process by describing light absorption. (P) follows with energy conversion. (R) logically comes next, explaining oxygen release. (S) then highlights the benefit to plants before the concluding sentence. (6) is a concluding statement.\n\nThus, the correct sequence is QPRS.\n\nHence, option (b) is the correct answer.",
+        "topic": "Para Jumbles",
+        "subtopic": "Sentence Rearrangement (PQRS)",
+        "conceptTested": "Logical sequencing of sentences to establish chronological or cause-and-effect flow regarding a scientific process.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Sentence Rearrangement (PQRS)",
+          "conceptTested": "Logical sequencing of sentences to establish chronological or cause-and-effect flow regarding a scientific process.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8104b98ee9",
+        "q_num": 85,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:39",
+        "avgTime": "00:20",
+        "question": "Select the most appropriate option to improve the underlined segment in the given sentence. If there is no need to improve it, select 'No improvement'.\n\nNeither Kia nor \\underline{him has} been able to recognize the ludicrous message.",
+        "options": {
+          "a": "Neither Kia nor he has",
+          "b": "Neither Kia nor he have",
+          "c": "Neither Kia nor him have",
+          "d": "No improvement"
+        },
+        "answer": "a",
+        "solution": "In the case of 'neither..nor', always put the verb according to the subject that is closest. In this case, 'has' (singular verb) must agree with 'he' (singular subject). So, option (b) is incorrect.\n\nThe pronoun which performs action or is the doer is called the Subjective Pronoun. In this context, the persons mentioned are performing the action and so, subjective pronouns must be used. Thus, the sentence needs an improvement and also, option (c) is incorrect as an objective pronoun is used here.\n\nThus, 'Neither Kia nor he has' should replace 'Neither Kia nor him has'.\n\nTherefore, the correct answer is (a), Neither Kia nor he has.\nThe corrected form of the sentence is: Neither Kia nor he has been able to recognize the ludicrous message.\n\nAdditional Information:\nThe pronoun which takes action is called the Subjective Pronoun.\n\nI\nHe\nShe\nWe\nYou\nThey\n\nThe pronoun which is the receiver of the action is called the Objective Pronoun.\n\nMe\nHim\nHer\nUs\nYou\nThem",
+        "topic": "English Comprehension",
+        "subtopic": "Sentence Improvement - Pronouns & Subject-Verb Agreement",
+        "conceptTested": "Pronouns connected by 'neither...nor' take the subjective case, and the verb agrees with the nearest subject.",
+        "tags": {
+          "topic": "English Comprehension",
+          "subtopic": "Sentence Improvement - Pronouns & Subject-Verb Agreement",
+          "conceptTested": "Pronouns connected by 'neither...nor' take the subjective case, and the verb agrees with the nearest subject.",
           "difficulty": "medium"
         }
       }

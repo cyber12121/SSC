@@ -934,182 +934,8 @@
         }
       },
       {
-        "id": "reas_1dad225dab",
-        "q_num": 33,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "00:45",
-        "avgTime": "00:30",
-        "question": "What number should be subtracted from (23/40 + 13/20 - 7/10) to get 3/8?",
-        "options": {
-          "a": "17/20",
-          "b": "3/20",
-          "c": "19/40",
-          "d": "6/20"
-        },
-        "answer": "b",
-        "solution": "According to the Question,\n\n23/40 + 13/20 - 7/10\n\n= 23/40 + 26/40 - 28/40\n= (23+26-28)/40\n= 21/40\n\nLet x be the number that should be subtracted from (23/40 + 13/20 - 7/10) or 21/40 to get 3/8\n\n∴ 21/40 - x =3/8\nx = 21/40 - 3/8\nx = 21/40 - 15/40\nx= 6/40 = 3/20 Ans.",
-        "topic": "Arithmetical Reasoning",
-        "subtopic": "Fraction Arithmetic & Linear Equation",
-        "conceptTested": "Solving simple linear equations with fractions by finding a common denominator.",
-        "tags": {
-          "topic": "Arithmetical Reasoning",
-          "subtopic": "Fraction Arithmetic & Linear Equation",
-          "conceptTested": "Solving simple linear equations with fractions by finding a common denominator.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_dc54b351e9",
-        "q_num": 34,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "A",
-        "correctOption": "A",
-        "userTime": "01:03",
-        "avgTime": "00:30",
-        "question": "Select the option which is related to the third term in the same way as the second term is related to the first term and the sixth term is related to the fifth term.\n\nKO : VZ : : QU : ? : : VZ : GK",
-        "options": {
-          "a": "BF",
-          "b": "ZD",
-          "c": "AF",
-          "d": "BE"
-        },
-        "answer": "a",
-        "solution": "K (LMN) O (PQRSTU) V (WXY) Z. V (WXY) Z (ABCDEF) G (HIJ) K\n\nSimilarly, Q (RST) U (VWXYZA) B (CDE) F",
-        "topic": "Analogy",
-        "subtopic": "Letter Analogy",
-        "conceptTested": "Alphabet position skipping pattern and logical progression across letter clusters.",
-        "tags": {
-          "topic": "Analogy",
-          "subtopic": "Letter Analogy",
-          "conceptTested": "Alphabet position skipping pattern and logical progression across letter clusters.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_3239c3bb54",
-        "q_num": 35,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "D",
-        "correctOption": "D",
-        "userTime": "00:38",
-        "avgTime": "00:30",
-        "question": "The sum of two numbers is 80 and their product is 1564. What will be the sum of their reciprocals?",
-        "options": {
-          "a": "25/391",
-          "b": "15/391",
-          "c": "40/391",
-          "d": "20/391"
-        },
-        "answer": "d",
-        "solution": "Let the number be x and y respectively.\n\nGiven,\n\nx + y = 80\nxy = 1564\nSum of their reciprocals = (1/x) + (1/y)\n= (x + y)/xy\n= 80/1564\n= 20/391",
-        "topic": "Arithmetical Reasoning",
-        "subtopic": "Algebraic Word Problems (Reciprocal Sums)",
-        "conceptTested": "Algebraic manipulation using the sum and product of two numbers to find the sum of their reciprocals: (1/x + 1/y) = (x + y) / xy.",
-        "tags": {
-          "topic": "Arithmetical Reasoning",
-          "subtopic": "Algebraic Word Problems (Reciprocal Sums)",
-          "conceptTested": "Algebraic manipulation using the sum and product of two numbers to find the sum of their reciprocals: (1/x + 1/y) = (x + y) / xy.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_b489d4fb9d",
-        "q_num": 36,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "01:00",
-        "avgTime": "00:30",
-        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\n\nA G U, G U V, U V T, V T W, ?",
-        "options": {
-          "a": "T W X",
-          "b": "T W S",
-          "c": "W T X",
-          "d": "W T S"
-        },
-        "answer": "b",
-        "solution": "Here, the logic is:\n\nFor each term, the last two alphabets are carried forward in the next term.\n\nU + 1 = V; V - 2 = T; T + 3 = W; W - 4 = S",
-        "topic": "Letter & Symbol Series",
-        "subtopic": "Alphabet Series",
-        "conceptTested": "Cyclic letter-cluster sequence tracking patterns across positions.",
-        "tags": {
-          "topic": "Letter & Symbol Series",
-          "subtopic": "Alphabet Series",
-          "conceptTested": "Cyclic letter-cluster sequence tracking patterns across positions.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_c72ac87552",
-        "q_num": 37,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "C",
-        "correctOption": "C",
-        "userTime": "00:45",
-        "avgTime": "00:30",
-        "question": "Here some problem or solution of the problem is given in the statement you have to choose the appropriate logical deduction for given statement.\n\nStatement:\n\nA city increased bus frequency on two overcrowded corridors and introduced a single smart pass usable on buses and metro. After these changes, average waiting time for buses on those corridors fell, and transfers to metro increased. Air-quality readings near those corridors improved, but the report states that the improvement was no more than 6% compared to the previous quarter.\n\nConclusions:\n\nI. The air-quality improvement near those corridors was less than 6%.\n\nII. Integrated passes and higher bus frequency can increase bus-to-metro transfers.\n\nIII. The smart pass is the only reason for the improvement in air quality.\n\nWhich conclusion(s) necessarily follow(s)?",
-        "options": {
-          "a": "Only II and III follow",
-          "b": "Only I and II follow",
-          "c": "Only II follows",
-          "d": "Only III follows"
-        },
-        "answer": "c",
-        "solution": "Conclusion I does not follow because \"no more than 6%\" allows exactly 6%, so \"less than 6%\" is not guaranteed.\n\nConclusion II follows because the statement directly says transfers to metro increased after these changes.\n\nConclusion III does not follow because the improvement in air quality could be due to higher bus frequency (reducing car trips), the smart pass, or both. The statement does not establish the smart pass as the sole cause.",
-        "topic": "Statement & Conclusion",
-        "subtopic": "Critical Reasoning Deduction",
-        "conceptTested": "Valid logical inference extraction from complex informational texts.",
-        "tags": {
-          "topic": "Statement & Conclusion",
-          "subtopic": "Critical Reasoning Deduction",
-          "conceptTested": "Valid logical inference extraction from complex informational texts.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_9baac4343b",
-        "q_num": 38,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "A",
-        "correctOption": "A",
-        "userTime": "01:28",
-        "avgTime": "00:30",
-        "question": "Match the address below with its exact duplicate:\n\nAddress: Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
-        "options": {
-          "a": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
-          "b": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Treat Near Federation Square, Melbourne VIC 3000, Australia",
-          "c": "Lucas Millet, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
-          "d": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melborne VIC 3000, Australia"
-        },
-        "answer": "a",
-        "solution": "The information given in (a) is similar to the information given in the question while rest of (b), (c) and (d) have some errors like:\n\nOption (b):\n\nLucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Treat Near Federation Square, Melbourne VIC 3000, Australia------(Word is wrong)\n\nOption (c):\n\nLucas Millet, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia------(Spelling mistake)\n\nOption (d):\n\nLucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melborne VIC 3000, Australia------(Spelling mistake)",
-        "topic": "Word Formation & Dictionary Order",
-        "subtopic": "Address Matching",
-        "conceptTested": "Literal string and token comparison for exact duplicate identification.",
-        "tags": {
-          "topic": "Word Formation & Dictionary Order",
-          "subtopic": "Address Matching",
-          "conceptTested": "Literal string and token comparison for exact duplicate identification.",
-          "difficulty": "medium"
-        }
-      },
-      {
         "id": "reas_f57355e749",
-        "q_num": 39,
+        "q_num": 33,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1138,7 +964,7 @@
       },
       {
         "id": "reas_224012b069",
-        "q_num": 40,
+        "q_num": 34,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1167,7 +993,7 @@
       },
       {
         "id": "reas_a37a2f87eb",
-        "q_num": 41,
+        "q_num": 35,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1196,7 +1022,7 @@
       },
       {
         "id": "reas_d7ecad6b11",
-        "q_num": 42,
+        "q_num": 36,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1225,7 +1051,7 @@
       },
       {
         "id": "reas_82a0fa1bf3",
-        "q_num": 43,
+        "q_num": 37,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1254,7 +1080,7 @@
       },
       {
         "id": "reas_7badb5fabf",
-        "q_num": 44,
+        "q_num": 38,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1283,7 +1109,7 @@
       },
       {
         "id": "reas_93728c7132",
-        "q_num": 45,
+        "q_num": 39,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1312,7 +1138,7 @@
       },
       {
         "id": "reas_6de8cc262f",
-        "q_num": 46,
+        "q_num": 40,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1336,6 +1162,180 @@
           "topic": "Word Formation & Dictionary Order",
           "subtopic": "Word Rearrangement from Numbered Letters",
           "conceptTested": "Rearranging jumbled letters indicated by numbers to form a meaningful word",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1dad225dab",
+        "q_num": 41,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:45",
+        "avgTime": "00:30",
+        "question": "What number should be subtracted from (23/40 + 13/20 - 7/10) to get 3/8?",
+        "options": {
+          "a": "17/20",
+          "b": "3/20",
+          "c": "19/40",
+          "d": "6/20"
+        },
+        "answer": "b",
+        "solution": "According to the Question,\n\n23/40 + 13/20 - 7/10\n\n= 23/40 + 26/40 - 28/40\n= (23+26-28)/40\n= 21/40\n\nLet x be the number that should be subtracted from (23/40 + 13/20 - 7/10) or 21/40 to get 3/8\n\n∴ 21/40 - x =3/8\nx = 21/40 - 3/8\nx = 21/40 - 15/40\nx= 6/40 = 3/20 Ans.",
+        "topic": "Simplification",
+        "subtopic": "Fractions & Basic Arithmetic",
+        "conceptTested": "Basic algebraic linear equation framing and fraction subtraction with LCM.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Fractions & Basic Arithmetic",
+          "conceptTested": "Basic algebraic linear equation framing and fraction subtraction with LCM.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_dc54b351e9",
+        "q_num": 42,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:03",
+        "avgTime": "00:30",
+        "question": "Select the option which is related to the third term in the same way as the second term is related to the first term and the sixth term is related to the fifth term.\n\nKO : VZ : : QU : ? : : VZ : GK",
+        "options": {
+          "a": "BF",
+          "b": "ZD",
+          "c": "AF",
+          "d": "BE"
+        },
+        "answer": "a",
+        "solution": "K (LMN) O (PQRSTU) V (WXY) Z. V (WXY) Z (ABCDEF) G (HIJ) K\n\nSimilarly, Q (RST) U (VWXYZA) B (CDE) F",
+        "topic": "Analogy",
+        "subtopic": "Letter Analogy",
+        "conceptTested": "Positional alphabet letter shifting and coding pattern.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter Analogy",
+          "conceptTested": "Positional alphabet letter shifting and coding pattern.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_3239c3bb54",
+        "q_num": 43,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:38",
+        "avgTime": "00:30",
+        "question": "The sum of two numbers is 80 and their product is 1564. What will be the sum of their reciprocals?",
+        "options": {
+          "a": "25/391",
+          "b": "15/391",
+          "c": "40/391",
+          "d": "20/391"
+        },
+        "answer": "d",
+        "solution": "Let the number be x and y respectively.\n\nGiven,\n\nx + y = 80\nxy = 1564\nSum of their reciprocals = (1/x) + (1/y)\n= (x + y)/xy\n= 80/1564\n= 20/391",
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Reciprocal and Algebraic Equations",
+        "conceptTested": "Sum of reciprocals of two numbers expressed in terms of their sum and product: (1/x) + (1/y) = (x + y)/xy.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Reciprocal and Algebraic Equations",
+          "conceptTested": "Sum of reciprocals of two numbers expressed in terms of their sum and product: (1/x) + (1/y) = (x + y)/xy.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b489d4fb9d",
+        "q_num": 44,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "00:30",
+        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\n\nA G U, G U V, U V T, V T W, ?",
+        "options": {
+          "a": "T W X",
+          "b": "T W S",
+          "c": "W T X",
+          "d": "W T S"
+        },
+        "answer": "b",
+        "solution": "Here, the logic is:\n\nFor each term, the last two alphabets are carried forward in the next term.\n\nU + 1 = V; V - 2 = T; T + 3 = W; W - 4 = S",
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Alphabet Series",
+        "conceptTested": "Positional alphabet advancement and cyclic rotation patterns in letter clusters.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Alphabet Series",
+          "conceptTested": "Positional alphabet advancement and cyclic rotation patterns in letter clusters.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_c72ac87552",
+        "q_num": 45,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:45",
+        "avgTime": "00:30",
+        "question": "Here some problem or solution of the problem is given in the statement you have to choose the appropriate logical deduction for given statement.\n\nStatement:\n\nA city increased bus frequency on two overcrowded corridors and introduced a single smart pass usable on buses and metro. After these changes, average waiting time for buses on those corridors fell, and transfers to metro increased. Air-quality readings near those corridors improved, but the report states that the improvement was no more than 6% compared to the previous quarter.\n\nConclusions:\n\nI. The air-quality improvement near those corridors was less than 6%.\n\nII. Integrated passes and higher bus frequency can increase bus-to-metro transfers.\n\nIII. The smart pass is the only reason for the improvement in air quality.\n\nWhich conclusion(s) necessarily follow(s)?",
+        "options": {
+          "a": "Only II and III follow",
+          "b": "Only I and II follow",
+          "c": "Only II follows",
+          "d": "Only III follows"
+        },
+        "answer": "c",
+        "solution": "Conclusion I does not follow because \"no more than 6%\" allows exactly 6%, so \"less than 6%\" is not guaranteed.\n\nConclusion II follows because the statement directly says transfers to metro increased after these changes.\n\nConclusion III does not follow because the improvement in air quality could be due to higher bus frequency (reducing car trips), the smart pass, or both. The statement does not establish the smart pass as the sole cause.",
+        "topic": "Statement & Conclusion",
+        "subtopic": "Critical Verbal Reasoning Deduction",
+        "conceptTested": "Deducing valid logical inferences from complex real-world policy and observational statements.",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Critical Verbal Reasoning Deduction",
+          "conceptTested": "Deducing valid logical inferences from complex real-world policy and observational statements.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_9baac4343b",
+        "q_num": 46,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:28",
+        "avgTime": "00:30",
+        "question": "Match the address below with its exact duplicate:\n\nAddress: Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
+        "options": {
+          "a": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
+          "b": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Treat Near Federation Square, Melbourne VIC 3000, Australia",
+          "c": "Lucas Millet, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
+          "d": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melborne VIC 3000, Australia"
+        },
+        "answer": "a",
+        "solution": "The information given in (a) is similar to the information given in the question while rest of (b), (c) and (d) have some errors like:\n\nOption (b):\n\nLucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Treat Near Federation Square, Melbourne VIC 3000, Australia------(Word is wrong)\n\nOption (c):\n\nLucas Millet, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia------(Spelling mistake)\n\nOption (d):\n\nLucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melborne VIC 3000, Australia------(Spelling mistake)",
+        "topic": "Alphabet Test",
+        "subtopic": "Word Rearrangement & Invariance",
+        "conceptTested": "Exact string matching and identification of typos or spelling variations in complex text addresses.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Word Rearrangement & Invariance",
+          "conceptTested": "Exact string matching and identification of typos or spelling variations in complex text addresses.",
           "difficulty": "medium"
         }
       }
@@ -2603,95 +2603,8 @@
         }
       },
       {
-        "id": "reas_9026b3e470",
-        "q_num": 32,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "B",
-        "userTime": "00:19",
-        "avgTime": "00:30",
-        "question": "In the following question, four words have been given of which three are alike in some way and one is different. Find the odd one out.\nOptions:\nA: Volleyball\nB: Golf\nC: Soccer\nD: Basketball",
-        "options": {
-          "a": "Volleyball",
-          "b": "Golf",
-          "c": "Soccer",
-          "d": "Basketball"
-        },
-        "answer": "b",
-        "solution": "Volleyball, Soccer, and Basketball are team sports.\n\nGolf is primarily an individual sport, making it the odd one.",
-        "topic": "Classification / Odd One Out",
-        "subtopic": "Word Classification",
-        "conceptTested": "Categorization of sports based on whether they are played individually or in teams.",
-        "tags": {
-          "topic": "Classification / Odd One Out",
-          "subtopic": "Word Classification",
-          "conceptTested": "Categorization of sports based on whether they are played individually or in teams.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_469c175dfa",
-        "q_num": 33,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "A",
-        "correctOption": "B",
-        "userTime": "01:22",
-        "avgTime": "00:30",
-        "question": "Find the number that breaks the pattern.\n\n19, 50, 87, 128, 175\nOptions:\nA: 128\nB: 175\nC: 50\nD: 19",
-        "options": {
-          "a": "128",
-          "b": "175",
-          "c": "50",
-          "d": "19"
-        },
-        "answer": "b",
-        "solution": "Logic for the given series -\n\n19 + 31 = 50\n50 + 37 = 87\n87 + 41 = 128\n128 + 43 = 171 (not 175)\nHence, wrong term = 175",
-        "topic": "Number Series",
-        "subtopic": "Wrong Number in Series",
-        "conceptTested": "Identifying incorrect terms in a sequence by analyzing the underlying differences or arithmetic pattern.",
-        "tags": {
-          "topic": "Number Series",
-          "subtopic": "Wrong Number in Series",
-          "conceptTested": "Identifying incorrect terms in a sequence by analyzing the underlying differences or arithmetic pattern.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_50a60b15b6",
-        "q_num": 34,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "A",
-        "correctOption": "C",
-        "userTime": "00:37",
-        "avgTime": "00:30",
-        "question": "The position of how many letters will remain unchanged in each of the letters in the word TAMPLING is arranged in the reverse alphabetical order?",
-        "options": {
-          "a": "Two",
-          "b": "Four",
-          "c": "Three",
-          "d": "One"
-        },
-        "answer": "c",
-        "solution": "If each of the letters in the word TAMPLING is arranged in the reverse alphabetical order, then we get:\n\nT\tA\tM\tP\tL\tI\tN\tG\nT\tP\tN\tM\tL\tI\tG\tA\n\nThus, the position of three letters remain unchanged.",
-        "topic": "Alphabet Test",
-        "subtopic": "Word Rearrangement",
-        "conceptTested": "Invariance of character positions under alphabetical or reverse alphabetical sorting.",
-        "tags": {
-          "topic": "Alphabet Test",
-          "subtopic": "Word Rearrangement",
-          "conceptTested": "Invariance of character positions under alphabetical or reverse alphabetical sorting.",
-          "difficulty": "medium"
-        }
-      },
-      {
         "id": "reas_01b9088fa2",
-        "q_num": 35,
+        "q_num": 32,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2720,7 +2633,7 @@
       },
       {
         "id": "reas_dd95fce913",
-        "q_num": 36,
+        "q_num": 33,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2749,7 +2662,7 @@
       },
       {
         "id": "reas_5d9da835b7",
-        "q_num": 37,
+        "q_num": 34,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2778,7 +2691,7 @@
       },
       {
         "id": "reas_a7e722e335",
-        "q_num": 38,
+        "q_num": 35,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2807,7 +2720,7 @@
       },
       {
         "id": "reas_ca1249931e",
-        "q_num": 39,
+        "q_num": 36,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -2831,6 +2744,93 @@
           "topic": "Blood Relations",
           "subtopic": "Indicating Form / Puzzle Blood Relation",
           "conceptTested": "Tracing family tree connections through complex descriptive statements.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_0a7c9b25e3",
+        "q_num": 37,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:19",
+        "avgTime": "00:30",
+        "question": "In the following question, four words have been given of which there are alike in some way and one is different. Find the odd one out.",
+        "options": {
+          "a": "Volleyball",
+          "b": "Golf",
+          "c": "Soccer",
+          "d": "Basketball"
+        },
+        "answer": "b",
+        "solution": "Volleyball, Soccer, and Basketball are team sports.\n\nGolf is primarily an individual sport, making it the odd one.",
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Word Classification",
+        "conceptTested": "Categorization of sports based on team participation versus individual formats.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Word Classification",
+          "conceptTested": "Categorization of sports based on team participation versus individual formats.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7c59e533b8",
+        "q_num": 38,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:22",
+        "avgTime": "00:30",
+        "question": "Find the number that breaks the pattern.\n\n19, 50, 87, 128, 175",
+        "options": {
+          "a": "128",
+          "b": "175",
+          "c": "50",
+          "d": "19"
+        },
+        "answer": "b",
+        "solution": "Logic for the given series -\n\n19 + 31 = 50\n50 + 37 = 87\n87 + 41 = 128\n128 + 43 = 171 (not 175)\nHence, wrong term = 175",
+        "topic": "Number Series",
+        "subtopic": "Wrong Number in Series",
+        "conceptTested": "Identification of arithmetic progression with varying consecutive prime or incremental differences.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Wrong Number in Series",
+          "conceptTested": "Identification of arithmetic progression with varying consecutive prime or incremental differences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_50a60b15b6",
+        "q_num": 39,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:37",
+        "avgTime": "00:30",
+        "question": "The position of how many letters will remain unchanged in each of the letters in the word TAMPLING is arranged in the reverse alphabetical order?",
+        "options": {
+          "a": "Two",
+          "b": "Four",
+          "c": "Three",
+          "d": "One"
+        },
+        "answer": "c",
+        "solution": "If each of the letters in the word TAMPLING is arranged in the reverse alphabetical order, then we get:\n\nT\tA\tM\tP\tL\tI\tN\tG\nT\tP\tN\tM\tL\tI\tG\tA\n\nThus, the position of three letters remain unchanged.",
+        "topic": "Alphabet Test",
+        "subtopic": "Word Rearrangement & Invariance",
+        "conceptTested": "Counting letters whose positions remain unchanged after sorting a word in reverse alphabetical order.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Word Rearrangement & Invariance",
+          "conceptTested": "Counting letters whose positions remain unchanged after sorting a word in reverse alphabetical order.",
           "difficulty": "medium"
         }
       }

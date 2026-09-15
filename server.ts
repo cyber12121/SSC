@@ -210,6 +210,107 @@ interface AIEnrichmentResult {
   correctOption?: string;
 }
 
+// Robust JSON Sanitizer for LLM outputs:
+// Fixes unescaped LaTeX backslashes (\underline, \unit, \alpha, \sqrt, etc.) and bad Unicode escapes
+function sanitizeJsonString(raw: string): string {
+  let result = "";
+  let inString = false;
+  let i = 0;
+
+  while (i < raw.length) {
+    const char = raw[i];
+
+    if (!inString) {
+      if (char === '"') {
+        inString = true;
+      }
+      result += char;
+      i++;
+    } else {
+      if (char === '"') {
+        inString = false;
+        result += char;
+        i++;
+      } else if (char === '\\') {
+        const next = raw[i + 1];
+        if (next === undefined) {
+          result += "\\\\";
+          i++;
+        } else if (next === '"' || next === '\\' || next === '/' || next === 'b' || next === 'f' || next === 'n' || next === 'r' || next === 't') {
+          result += char + next;
+          i += 2;
+        } else if (next === 'u') {
+          // Check if followed by 4 hex digits
+          const hex = raw.slice(i + 2, i + 6);
+          if (/^[0-9a-fA-F]{4}$/.test(hex)) {
+            result += char + next + hex;
+            i += 6;
+          } else {
+            // Bad unicode escape (e.g. \underline, \unit, \upsilon, \union) -> escape the backslash!
+            result += "\\\\u";
+            i += 2;
+          }
+        } else {
+          // Unescaped backslash before non-standard JSON escape (e.g. \alpha, \theta, \times, \text, \(, \[, etc.)
+          result += "\\\\" + next;
+          i += 2;
+        }
+      } else if (char === '\n') {
+        result += "\\n";
+        i++;
+      } else if (char === '\r') {
+        result += "\\r";
+        i++;
+      } else if (char === '\t') {
+        result += "\\t";
+        i++;
+      } else {
+        result += char;
+        i++;
+      }
+    }
+  }
+  return result;
+}
+
+function parseGeminiJsonArray(rawText: string): any[] {
+  let text = (rawText || "[]").trim();
+  if (text.startsWith("```json")) text = text.slice(7);
+  if (text.startsWith("```")) text = text.slice(3);
+  if (text.endsWith("```")) text = text.slice(0, -3);
+  text = text.trim();
+
+  // Try direct parse first
+  try {
+    const direct = JSON.parse(text);
+    if (Array.isArray(direct)) return direct;
+  } catch {
+    // Continue to sanitization
+  }
+
+  // Sanitize invalid backslashes, bad unicode escapes (\underline etc.) and unescaped control chars
+  const sanitized = sanitizeJsonString(text);
+  try {
+    const parsed = JSON.parse(sanitized);
+    if (Array.isArray(parsed)) return parsed;
+  } catch (err: any) {
+    // Fallback: extract substring between first '[' and last ']'
+    const firstBracket = sanitized.indexOf('[');
+    const lastBracket = sanitized.lastIndexOf(']');
+    if (firstBracket !== -1 && lastBracket > firstBracket) {
+      const sliced = sanitized.slice(firstBracket, lastBracket + 1);
+      try {
+        const slicedParsed = JSON.parse(sliced);
+        if (Array.isArray(slicedParsed)) return slicedParsed;
+      } catch {
+        // Fall through
+      }
+    }
+    throw err;
+  }
+  throw new Error("Gemini response is not a valid JSON array");
+}
+
 // AI Batch Classifier & Structure Refiner:
 // - Classifies SSC CGL syllabus topic, granular subtopic, and specific concept tested
 // - Cleans corrupted formatting or UI artifacts from question and solution
@@ -424,7 +525,7 @@ Tasks for each question:
 6. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
 
 CRITICAL JSON FORMAT RULE:
-Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. Do not output unescaped characters.
+Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. In particular, any LaTeX or mathematical backslashes (like \\underline, \\frac, \\sqrt, \\alpha) MUST be double-escaped as \\\\underline, \\\\frac, etc. Do not output raw unescaped backslashes.
 
 Questions to process:
 ${chunkQuestions.map((q, idx) => `[${idx}]
@@ -453,42 +554,63 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
   }
 ]`;
 
-      const response = await ai.models.generateContent({
-        model: modelName,
-        contents: promptText,
-        config: { responseMimeType: "application/json" }
-      });
+      const batchNum = Math.floor(c / CHUNK_SIZE) + 1;
+      const totalBatches = Math.ceil(toProcessIndices.length / CHUNK_SIZE);
+      let batchSuccess = false;
+      let lastBatchError: any = null;
 
-      let rawText = (response.text || "[]").trim();
-      if (rawText.startsWith("```json")) rawText = rawText.slice(7);
-      if (rawText.startsWith("```")) rawText = rawText.slice(3);
-      if (rawText.endsWith("```")) rawText = rawText.slice(0, -3);
-      rawText = rawText.trim();
+      for (let attempt = 1; attempt <= 2 && !batchSuccess; attempt++) {
+        try {
+          const response = await ai.models.generateContent({
+            model: modelName,
+            contents: promptText,
+            config: { responseMimeType: "application/json" }
+          });
 
-      let parsed: any[];
-      try {
-        parsed = JSON.parse(rawText);
-      } catch (parseErr: any) {
-        console.error(`[AI Processor] ❌ Batch ${Math.floor(c / CHUNK_SIZE) + 1} JSON parse failed:`, parseErr.message);
-        throw new Error(`AI processing failed: Invalid JSON received from Gemini on batch ${Math.floor(c / CHUNK_SIZE) + 1} (${parseErr.message}). Halting import.`);
+          const rawText = response.text || "[]";
+          const parsed = parseGeminiJsonArray(rawText);
+
+          if (!Array.isArray(parsed) || parsed.length !== chunkIndices.length) {
+            throw new Error(`Item count mismatch (Expected ${chunkIndices.length}, got ${parsed?.length || 0})`);
+          }
+
+          parsed.forEach((item, idx) => {
+            const originalIdx = chunkIndices[idx];
+            const originalQ = questions[originalIdx];
+            results[originalIdx] = {
+              topic: (item.topic || originalQ.topic || originalQ.subject || "General").trim(),
+              subtopic: (item.subtopic || item.topic || originalQ.subtopic || originalQ.topic || "").trim(),
+              conceptTested: (item.conceptTested || originalQ.conceptTested || "").trim(),
+              questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
+              solution: (item.solution || originalQ.solution || "").trim(),
+              correctOption: (item.correctOption || originalQ.correctOption || "A").toUpperCase().trim()
+            };
+          });
+
+          batchSuccess = true;
+        } catch (batchErr: any) {
+          lastBatchError = batchErr;
+          if (attempt === 1) {
+            console.warn(`[AI Processor] ⚠️ Batch ${batchNum}/${totalBatches} attempt 1 failed (${batchErr.message}). Retrying once...`);
+            await new Promise(r => setTimeout(r, 1200));
+          }
+        }
       }
 
-      if (!Array.isArray(parsed) || parsed.length !== chunkIndices.length) {
-        throw new Error(`AI processing failed: Batch ${Math.floor(c / CHUNK_SIZE) + 1} item count mismatch (Expected ${chunkIndices.length}, got ${parsed?.length || 0}). Halting import.`);
+      if (!batchSuccess) {
+        console.warn(`[AI Processor] ⚠️ Batch ${batchNum}/${totalBatches} failed after 2 attempts: ${lastBatchError?.message || lastBatchError}. Preserving original question data for this batch so import is not halted.`);
+        chunkIndices.forEach((originalIdx) => {
+          const originalQ = questions[originalIdx];
+          results[originalIdx] = {
+            topic: (originalQ.topic || originalQ.subject || "General").trim(),
+            subtopic: (originalQ.subtopic || originalQ.topic || "").trim(),
+            conceptTested: (originalQ.conceptTested || "").trim(),
+            questionText: (originalQ.questionText || originalQ.question || "").trim(),
+            solution: (originalQ.solution || "").trim(),
+            correctOption: (originalQ.correctOption || "A").toUpperCase().trim()
+          };
+        });
       }
-
-      parsed.forEach((item, idx) => {
-        const originalIdx = chunkIndices[idx];
-        const originalQ = questions[originalIdx];
-        results[originalIdx] = {
-          topic: (item.topic || "").trim(),
-          subtopic: (item.subtopic || item.topic || "").trim(),
-          conceptTested: (item.conceptTested || "").trim(),
-          questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
-          solution: (item.solution || originalQ.solution || "").trim(),
-          correctOption: (item.correctOption || originalQ.correctOption || "A").toUpperCase().trim()
-        };
-      });
     }
 
     console.log(`[AI Processor] ✅ Successfully refined & classified all ${toProcessIndices.length} questions with Gemini!`);
@@ -833,7 +955,7 @@ async function startServer() {
         // Also save mock questions to mock_tests and mock_questions with topic, subtopic & conceptTested
         try {
           const enrichedMasterList = rawList.map((q, idx) => {
-            const enr = enriched[idx] || {};
+            const enr: any = enriched[idx] || {};
             const rawAns = enr.correctOption || q.correctOption || q.answer || "a";
             const cleanAns = rawAns.toLowerCase().trim();
             return {
@@ -951,8 +1073,27 @@ async function startServer() {
       const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
       if (fs.existsSync(mockReportPath)) {
         let reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+        const targetReport = reports.find((r: any) => r.id === id);
         reports = reports.filter((r: any) => r.id !== id);
         fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
+
+        // If report had a title, remove any questions from mock_errors
+        if (targetReport?.title) {
+          const mockDir = path.join(process.cwd(), "src", "data", "mock_errors");
+          ["english.json", "mathematics.json", "reasoning.json", "general_awareness.json"].forEach(file => {
+            const filePath = path.join(mockDir, file);
+            if (fs.existsSync(filePath)) {
+              try {
+                const chapters = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+                chapters.forEach((ch: any) => {
+                  ch.questions = (ch.questions || []).filter((q: any) => q.testName !== targetReport.title);
+                  ch.questions.forEach((q: any, idx: number) => { q.q_num = idx + 1; });
+                });
+                fs.writeFileSync(filePath, JSON.stringify(chapters, null, 2), "utf-8");
+              } catch {}
+            }
+          });
+        }
       }
       // Also delete from mock_tests and mock_questions
       const tPath = path.join(process.cwd(), "src", "data", "mock_tests", `${id}.json`);

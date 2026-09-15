@@ -63,43 +63,74 @@ export const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'Gen
 };
 
 export function parseMockDetails(report: MockScoreReport) {
-  const title = report.title || 'Mock Test';
+  const title = (report.title || '').trim();
 
   // 1. Platform Detection
+  // In CGL prep, all "[Sectional Timing]" tests come from Oliveboard
   let platform = report.platform;
   if (!platform) {
-    if (/oliveboard/i.test(title)) platform = 'Oliveboard';
-    else if (/testbook/i.test(title)) platform = 'Testbook';
-    else platform = 'Testbook'; // Default platform
+    if (/oliveboard|sectional\s*timing/i.test(title)) {
+      platform = 'Oliveboard';
+    } else {
+      platform = 'Testbook';
+    }
   }
 
   // 2. Parse clean short title & subtitle
   let shortTitle = title;
   let subtitle = 'SSC CGL 2026';
 
-  const fullMatch = title.match(/Full\s*Test\s*[-–]?\s*(\d+)/i) || title.match(/Full\s*Test\s*(\d+)/i);
-  const secTimingMatch = title.match(/\[Sectional\s*Timing\]\s*[-–]?\s*(?:Tier\s*I\s*[-–]?\s*)?(\d+)/i) ||
-                         title.match(/Sectional\s*Timing\s*#?(\d+)/i);
-  const sectionalSubjectMatch = title.match(/\[Sectional\s*[-–]\s*([^\]]+)\]/i);
-  const liveMatch = /Officer’s\s*Friday/i.test(title) || /Mega\s*Live/i.test(title);
+  // Check Oliveboard tests:
+  // e.g. "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test" -> "Live Test"
+  // e.g. "SSC CGL 2026 [Sectional Timing] - Tier I- 3" -> "Mock 3"
+  const isOliveboard = platform === 'Oliveboard' || /oliveboard|sectional\s*timing/i.test(title);
+  const obLiveMatch = isOliveboard && /Live\s*Test/i.test(title);
+  const obNumberedMatch = isOliveboard && !obLiveMatch && (
+    title.match(/\[Sectional\s*Timing\]\s*[-–]?\s*(?:Tier\s*I\s*[-–]?\s*)?(\d+)(?!\s*Live)/i) ||
+    title.match(/(?:Mock|Tier\s*I)\s*[-–]?\s*(\d+)(?!\s*Live)/i) ||
+    title.match(/Sectional\s*Timing.*?(\d+)$/i)
+  );
 
-  if (fullMatch) {
-    shortTitle = `Full Test ${fullMatch[1]}`;
+  // Check Testbook full tests:
+  // e.g. "SSC CGL Tier I: Full Test - 5" -> "Full Test 5"
+  const tbFullMatch = title.match(/Full\s*Test\s*[-–]?\s*(\d+)/i);
+
+  // Check Testbook live tests:
+  // e.g. "SSC CGL 2026: Officer’s Friday - Mega Live Test" -> "Mega Live Test"
+  const tbLiveMatch = /Officer’s\s*Friday/i.test(title) || /Mega\s*Live/i.test(title);
+
+  // Check Sectional subject tests:
+  // e.g. "SSC CGL 2026 [Sectional - Quantitative Aptitude]" -> "Quant Sectional"
+  const sectionalSubjectMatch = title.match(/\[Sectional\s*[-–]\s*([^\]]+)\]/i);
+
+  if (obLiveMatch) {
+    shortTitle = 'Live Test';
+    subtitle = 'Sectional Timing';
+  } else if (obNumberedMatch) {
+    shortTitle = `Mock ${obNumberedMatch[1]}`;
+    subtitle = 'Sectional Timing';
+  } else if (tbFullMatch) {
+    shortTitle = `Full Test ${tbFullMatch[1]}`;
     subtitle = 'SSC CGL Tier I';
-  } else if (secTimingMatch) {
-    shortTitle = `Sectional Timing #${secTimingMatch[1]}`;
-    subtitle = 'SSC CGL Tier I';
-  } else if (sectionalSubjectMatch) {
-    shortTitle = `${sectionalSubjectMatch[1].trim()} Sectional`;
-    subtitle = 'SSC CGL 2026';
-  } else if (liveMatch) {
+  } else if (tbLiveMatch) {
     shortTitle = 'Mega Live Test';
     subtitle = 'Officer’s Friday';
+  } else if (sectionalSubjectMatch) {
+    const rawSub = sectionalSubjectMatch[1].trim();
+    const shortSub = /quant/i.test(rawSub) ? 'Quant' :
+                     /reason/i.test(rawSub) ? 'Reasoning' :
+                     /english/i.test(rawSub) ? 'English' :
+                     /aware|gk|ga/i.test(rawSub) ? 'GA/GK' : rawSub;
+    shortTitle = `${shortSub} Sectional`;
+    subtitle = 'SSC CGL 2026';
   } else if (report.type === 'sectional' && report.subject) {
     shortTitle = `${report.subject} Sectional`;
     subtitle = 'SSC CGL 2026';
   } else {
     shortTitle = title.replace(/^SSC\s*CGL\s*(2026|Tier\s*I)?\s*[:-]?\s*/i, '').trim() || title;
+    if (shortTitle.length > 18) {
+      shortTitle = shortTitle.slice(0, 18).trim();
+    }
   }
 
   return { shortTitle, platform, subtitle };
@@ -443,10 +474,16 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
 
       // Filter out duplicate reports or purged duplicate mock IDs
+      const seenIds = new Set<string>();
       const seenKeys = new Set<string>();
       loaded = loaded.filter(r => {
+        if (!r || !r.id) return false;
         if (r.id === 'mock_1789390419229_wwxcs' || r.id === 'mock_1789389316470_i3i84') return false;
-        const key = `${r.type}|${r.subject || ''}|${r.totalScore}|${r.totalCorrect}|${r.totalWrong}|${r.totalUnattempted}`;
+        if (seenIds.has(r.id)) return false;
+        seenIds.add(r.id);
+
+        // Deduplicate only when title + platform match (same mock re-imported)
+        const key = `${r.platform || ''}|${r.title || ''}|${r.type}`;
         if (seenKeys.has(key)) return false;
         seenKeys.add(key);
         return true;

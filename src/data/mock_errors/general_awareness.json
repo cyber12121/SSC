@@ -2092,6 +2092,35 @@
           "conceptTested": "Constitutional provisions of Article 279A regarding the GST Council quorum and decision-making.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_16a389952e",
+        "q_num": 73,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "00:09",
+        "avgTime": "00:36",
+        "question": "Consider the following statements regarding literacy as per Census 2011:\\n\\nStatement 1: During the last decade preceding the 2011 Census, the highest improvement in literacy rate was observed among rural females, at 24%.\\n\\nStatement 2: Among the gender literacy gap indicators, Kerala recorded the lowest male-female literacy gap among all States/UTs, while Rajasthan recorded the highest.\\n\\nWhich of the above statements is/are correct?",
+        "options": {
+          "a": "Only 1",
+          "b": "Only 2",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct: As per Census 2011 data, rural females registered the highest improvement in literacy rate over the preceding decade, at 24%.\nStatement 2 is incorrect because Meghalaya, not Kerala, recorded the lowest male-female literacy gap, while Rajasthan recorded the highest.",
+        "topic": "Census & Demographics",
+        "subtopic": "Literacy Rates & Gender Gap (2011 Census)",
+        "conceptTested": "Statistical insights of Census 2011 regarding rural female literacy improvement and inter-state gender literacy gaps.",
+        "tags": {
+          "topic": "Census & Demographics",
+          "subtopic": "Literacy Rates & Gender Gap (2011 Census)",
+          "conceptTested": "Statistical insights of Census 2011 regarding rural female literacy improvement and inter-state gender literacy gaps.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -4219,298 +4248,8 @@
         }
       },
       {
-        "id": "gene_c64ab043fc",
-        "q_num": 74,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "D",
-        "userTime": "00:12",
-        "avgTime": "00:20",
-        "question": "The procedure for the amendment of the Constitution of India, as well as the powers of Parliament to amend it, are detailed in which Part of the Constitution?",
-        "options": {
-          "a": "Part XV",
-          "b": "Part XVII",
-          "c": "Part XVIII",
-          "d": "Part XX"
-        },
-        "answer": "d",
-        "solution": "Part XX of the Constitution deals with \"Amendment of the Constitution\".\n\nIt contains Article 368, which lays down:\n\nthe procedure for amending the Constitution\n\nthe powers of Parliament to amend it\n\ntypes of amendments (simple majority, special majority, and ratification)\n\nPart XV deals with Elections (Articles 324 - 329A).\n\nPart XVII deals with Official Languages (Articles 343 - 351).\n\nPart XVIII deals with Emergency Provisions (Articles 352 - 360).\n\nFurther Insights\nArticle 368 is the core article for constitutional amendments.\n\nIndia follows a rigid + flexible amendment system (neither fully rigid nor fully flexible).\n\nAmendments needing state ratification include changes affecting federal structure (e.g., SC/ST lists, legislative powers).\n\nBasic Structure Doctrine, established in Kesavananda Bharati (1973), limits Parliament's amending power.\n\nConstitutional amendments can be challenged in court if they violate the basic structure.",
-        "topic": "Indian Polity & Constitution",
-        "subtopic": "Constitutional Amendments",
-        "conceptTested": "Identification of Constitutional Parts and Article 368 procedures.",
-        "tags": {
-          "topic": "Indian Polity & Constitution",
-          "subtopic": "Constitutional Amendments",
-          "conceptTested": "Identification of Constitutional Parts and Article 368 procedures.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_5790f18267",
-        "q_num": 75,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "D",
-        "correctOption": "C",
-        "userTime": "00:09",
-        "avgTime": "00:20",
-        "question": "Who led the Sikh Khalsa Army against the British forces during the Battle of Aliwal (1846) in the First Anglo-Sikh War?",
-        "options": {
-          "a": "Lal Singh",
-          "b": "Tej Singh",
-          "c": "Ranjodh Singh Majithia",
-          "d": "Sher Singh Attariwalla"
-        },
-        "answer": "c",
-        "solution": "During the Battle of Aliwal (28 January 1846), the Sikh Khalsa Army was commanded by Ranjodh Singh Majithia.\n\nHe led Sikh forces against the British troops under Sir Harry Smith.\n\nThe battle ended in a British victory, but Majithia is remembered for his strategic resistance.\n\nFurther Insights\nThe Battle of Aliwal (1846) is often called the \"Battle Without a Mistake\" by the British due to Harry Smith's tactics.\n\nIt was a decisive British victory in the First Anglo-Sikh War.\n\nThe battle took place on the banks of the Sutlej River.\n\nThe First Anglo-Sikh War ended with the Treaty of Lahore (1846).\n\nThe Sikh Khalsa Army was considered one of the most disciplined and modern armies of the time.",
-        "topic": "Modern History",
-        "subtopic": "National Freedom Movement & British Expansion",
-        "conceptTested": "Chronology and leadership of the Anglo-Sikh Wars in the 19th century.",
-        "tags": {
-          "topic": "Modern History",
-          "subtopic": "National Freedom Movement & British Expansion",
-          "conceptTested": "Chronology and leadership of the Anglo-Sikh Wars in the 19th century.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_23310112e9",
-        "q_num": 76,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "A",
-        "correctOption": "D",
-        "userTime": "00:32",
-        "avgTime": "00:20",
-        "question": "In the context of Indian geography, which of the following rivers is NOT considered an \"Antecedent River\"?",
-        "options": {
-          "a": "Indus",
-          "b": "Satluj",
-          "c": "Brahmaputra",
-          "d": "Yamuna"
-        },
-        "answer": "d",
-        "solution": "Unlike the others, the Yamuna originates within the Himalayas (at the Yamunotri Glacier on the Bandarpunch peaks in Uttarakhand). Its origin and course are a result of, and subsequent to, the main structural upliftment of the Himalayas. It does not cut across the entire mountain barrier from Tibet, making it a consequent/subsequent river rather than an antecedent one.\n\nAn antecedent river is a river that existed before the upliftment of the mountain range it flows through. As the mountains (the Himalayas, in this case) slowly rose, these rivers cut down into the rising land mass at the same rate, maintaining their original courses and creating deep, vertical gorges. Essentially, these rivers are older than the mountains themselves.",
-        "topic": "Indian Drainage & Physiography",
-        "subtopic": "Himalayan Drainage System & River Systems",
-        "conceptTested": "Definition and identification of antecedent rivers versus consequent rivers.",
-        "tags": {
-          "topic": "Indian Drainage & Physiography",
-          "subtopic": "Himalayan Drainage System & River Systems",
-          "conceptTested": "Definition and identification of antecedent rivers versus consequent rivers.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_4fb7f8b07c",
-        "q_num": 77,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "D",
-        "correctOption": "B",
-        "userTime": "00:11",
-        "avgTime": "00:20",
-        "question": "Which Act allotted ₹1 lakh for the promotion of education in India for the first time?",
-        "options": {
-          "a": "Charter Act of 1793",
-          "b": "Charter Act of 1813",
-          "c": "Charter Act of 1833",
-          "d": "Wood's Despatch of 1854"
-        },
-        "answer": "b",
-        "solution": "The Charter Act of 1813 was the first official step by the British toward state-sponsored education in India.\n\nIt earmarked ₹1 lakh per year for \"the revival and promotion of literature and the encouragement of the learned natives of India and for the introduction and promotion of knowledge of the sciences.\n\nFurther Insights\nThe Macaulay Minute (1835) promoted English as the medium of instruction.\n\nThe Wood's Despatch (1854) established universities in Calcutta, Bombay, and Madras (1857).\n\nThe Hunter Commission (1882) focused on primary and secondary education.\n\nThe Sadler Commission (1917 - 19) recommended reforms in university governance.\n\nThe Sargent Plan (1944) proposed universal, compulsory education for children aged 6 - 14.",
-        "topic": "Modern History",
-        "subtopic": "British Acts & Educational Reforms",
-        "conceptTested": "Key legislative provisions under the Charter Act of 1813 regarding education in India.",
-        "tags": {
-          "topic": "Modern History",
-          "subtopic": "British Acts & Educational Reforms",
-          "conceptTested": "Key legislative provisions under the Charter Act of 1813 regarding education in India.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_e0080bf521",
-        "q_num": 78,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "B",
-        "correctOption": "A",
-        "userTime": "00:13",
-        "avgTime": "00:20",
-        "question": "Who wrote the novel \"The Serpent and the Rope,\" which won the Sahitya Akademi Award in 1964?",
-        "options": {
-          "a": "Raja Rao",
-          "b": "R.K. Narayan",
-          "c": "Mulk Raj Anand",
-          "d": "Amitav Ghosh"
-        },
-        "answer": "a",
-        "solution": "Raja Rao wrote \"The Serpent and the Rope\", a semi-autobiographical novel.\n\nIt won the Sahitya Akademi Award in 1964 for its deep philosophical themes.\n\nR.K. Narayan - wrote novels like Malgudi Days and The Guide.\n\nMulk Raj Anand - Known for Untouchable and Coolie.\n\nAmitav Ghosh - Wrote The Shadow Lines, Sea of Poppies, etc.\n\nFurther Insights\nRaja Rao is considered one of the founding figures of Indian English writing.\n\nThe Serpent and the Rope blends Indian philosophy with personal narrative.\n\nHe also wrote Kanthapura, a major novel on India's freedom movement.\n\nSahitya Akademi Awards are among India's highest literary honors.",
-        "topic": "Books & Authors",
-        "subtopic": "Indian English Literature & Awards",
-        "conceptTested": "Identification of award-winning literary works and their respective Indian authors.",
-        "tags": {
-          "topic": "Books & Authors",
-          "subtopic": "Indian English Literature & Awards",
-          "conceptTested": "Identification of award-winning literary works and their respective Indian authors.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_f3c32564b2",
-        "q_num": 79,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "B",
-        "userTime": "00:17",
-        "avgTime": "00:20",
-        "question": "Which state scheme provides direct financial assistance to girl students studying in Classes 9 to 12 to help them continue their education and reduce dropout rates?",
-        "options": {
-          "a": "Beti Bachao Beti Padhao",
-          "b": "Namo Lakshmi Yojana",
-          "c": "Sukanya Samriddhi Yojana",
-          "d": "PM POSHAN Scheme"
-        },
-        "answer": "b",
-        "solution": "The scheme \"Namo Laxmi Yojana\" by the Education Department, Government of Gujarat, aims to encourage girls studying in government, aided, and private schools in Gujarat to complete their education from Class 9th to 12th by providing direct financial assistance.\n\nEach eligible girl will receive a total financial support of ₹50,000/- on completion of classes 9th to 12th under this scheme.\n\nBeti Bachao Beti Padhao\n\nThis scheme focuses on:\n\nimproving the child sex ratio\n\npromoting education awareness\n\npreventing gender discrimination\n\nPM POSHAN Scheme\n\nPM POSHAN provides mid-day meals to schoolchildren.\n\nMainly targets Classes 1 - 8,",
-        "topic": "Government Schemes & Policies",
-        "subtopic": "Educational & Welfare Schemes",
-        "conceptTested": "Knowledge of state-specific welfare initiatives aimed at reducing female student dropout rates.",
-        "tags": {
-          "topic": "Government Schemes & Policies",
-          "subtopic": "Educational & Welfare Schemes",
-          "conceptTested": "Knowledge of state-specific welfare initiatives aimed at reducing female student dropout rates.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_97ef580ac8",
-        "q_num": 80,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "D",
-        "userTime": "00:13",
-        "avgTime": "00:20",
-        "question": "Consider the following statements regarding the \"National Tansen Samman\" award:\n\n1) The Tansen Samman was established in the year 1980 by the Government of Maharashtra to honor musical excellence.\n\n2) While Tansen was a vocalist, the award is not restricted to singers; it is given for \"long-term contribution\" to Carnatic Music (vocal or instrumental).\n\nWhich of the statements given above is/are correct?",
-        "options": {
-          "a": "1 only",
-          "b": "2 only",
-          "c": "Both 1 and 2",
-          "d": "Neither 1 nor 2"
-        },
-        "answer": "d",
-        "solution": "The Tansen Samman was established by the Government of Madhya Pradesh, not Maharashtra.\n\nIt began in 1980 - 81, as part of the Tansen Sangeet Samaroh held annually in Gwalior.\n\nThe award is given for contributions in Hindustani Classical Music, not Carnatic Music.\n\nTansen was a legendary figure in the Hindustani (North Indian) tradition, not Carnatic (South Indian).\n\nThe award includes both vocal and instrumental Hindustani musicians.\n\nFurther Insights\nTansen / Tansen Samman\n\nTansen was one of Emperor Akbar's Navaratnas (Nine Gems).\n\nHis tomb in Gwalior is the venue for the annual Tansen music festival.\n\nThe award recognises lifelong excellence in Hindustani music.\n\nIt is considered among the highest music honours in India.\n\nHindustani Classical Music\n\nIt evolved from ancient traditions like Dhrupad.\n\nUses ragas (melodies) and talas (rhythmic cycles).\n\nInstruments like sitar, sarod, tabla, and shehnai are central.\n\nIt diverged from Carnatic music around the 13th century.",
-        "topic": "Awards & Honours",
-        "subtopic": "National Awards - Tansen Samman",
-        "conceptTested": "Facts regarding the National Tansen Samman: established by the Government of Madhya Pradesh in 1980, awarded for contributions in Hindustani classical music.",
-        "tags": {
-          "topic": "Awards & Honours",
-          "subtopic": "National Awards - Tansen Samman",
-          "conceptTested": "Facts regarding the National Tansen Samman: established by the Government of Madhya Pradesh in 1980, awarded for contributions in Hindustani classical music.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_fd007b8013",
-        "q_num": 81,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "B",
-        "userTime": "00:20",
-        "avgTime": "00:20",
-        "question": "Which of the following temples is primarily constructed using terracotta (fully burnt clay) and is famous for its intricate low-relief carvings?",
-        "options": {
-          "a": "Shore Temple, Mahabalipuram",
-          "b": "Shyam Rai Temple, Bishnupur",
-          "c": "Konark Sun Temple, Odisha",
-          "d": "Brihadisvara Temple, Thanjavur"
-        },
-        "answer": "b",
-        "solution": "The Shyam Rai Temple in Bishnupur (West Bengal) is a classic example of terracotta temple architecture.\n\nIt was built by the Malla kings and is known for its Pancharatna style (five towers).\n\nThe walls are covered with beautiful terracotta panels depicting scenes from epics and daily life.\n\nShore Temple, Mahabalipuram\n\nBuilt using granite stone, not terracotta.\n\nPart of Pallava rock-cut and structural temples.\n\nKonark Sun Temple, Odisha\n\nConstructed using Khondalite stone, not terracotta.\n\nFamous for its chariot-shaped stone architecture.\n\nBrihadisvara Temple, Thanjavur\n\nBuilt using granite, especially massive blocks.\n\nRepresents Dravidian stone architecture.\n\nFurther Insights\nBishnupur is famous for dozens of terracotta temples built by the Malla kings.\n\nTerracotta was used due to the scarcity of stones in Bengal.\n\nPancharatna and Navaratna styles are unique features of Bengal temple architecture.\n\nTerracotta art commonly depicts Ramayana, Mahabharata, and Krishna Leela stories.",
-        "topic": "Temples, Monuments & Heritage Sites",
-        "subtopic": "Terracotta Architecture & Temples",
-        "conceptTested": "Architectural features of regional Indian temples, specifically terracotta temple styles in West Bengal like the Shyam Rai Temple in Bishnupur.",
-        "tags": {
-          "topic": "Temples, Monuments & Heritage Sites",
-          "subtopic": "Terracotta Architecture & Temples",
-          "conceptTested": "Architectural features of regional Indian temples, specifically terracotta temple styles in West Bengal like the Shyam Rai Temple in Bishnupur.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_65fcada581",
-        "q_num": 82,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "00:32",
-        "avgTime": "00:20",
-        "question": "Which one of the following pairs of \"Biosphere Reserve\" and the \"State\" it is primarily located in is CORRECTLY matched?",
-        "options": {
-          "a": "Nokrek - Assam",
-          "b": "Simlipal - Odisha",
-          "c": "Cold Desert - Uttarakhand",
-          "d": "Panna - Rajasthan"
-        },
-        "answer": "b",
-        "solution": "Simlipal Biosphere Reserve is located in the state of Odisha.\n\nIt is one of India's earliest designated biosphere reserves and home to tigers, elephants, and rich biodiversity.\n\nNokrek Biosphere Reserve is in Meghalaya\n\nCold Desert Biosphere Reserve is located in Himachal Pradesh\n\nPanna Biosphere Reserve is in Madhya Pradesh\n\nFurther Insights\nIndia has 18 designated Biosphere Reserves.\n\nBiosphere Reserves include core, buffer, and transition zones.\n\nMany reserves are part of UNESCO's World Network of Biosphere Reserves (WNBR).\n\nExamples included in UNESCO WNBR: Nilgiri, Sundarbans, Gulf of Mannar, Nanda Devi, Khangchendzonga.",
-        "topic": "National Parks & Environment",
-        "subtopic": "Biosphere Reserves of India",
-        "conceptTested": "Geographical locations of India's notified Biosphere Reserves across various states.",
-        "tags": {
-          "topic": "National Parks & Environment",
-          "subtopic": "Biosphere Reserves of India",
-          "conceptTested": "Geographical locations of India's notified Biosphere Reserves across various states.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "gene_6de3af343e",
-        "q_num": 83,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "B",
-        "correctOption": "C",
-        "userTime": "00:10",
-        "avgTime": "00:20",
-        "question": "Which landmark Supreme Court case ruled that the Directive Principles of State Policy cannot override Fundamental Rights and directly led to the 1st Constitutional Amendment Act?",
-        "options": {
-          "a": "Golaknath vs. State of Punjab",
-          "b": "Kesavananda Bharati vs. State of Kerala",
-          "c": "Champakam Dorairajan vs. State of Madras",
-          "d": "Minerva Mills vs. Union of India"
-        },
-        "answer": "c",
-        "solution": "In State of Madras v. Champakam Dorairajan (1951), the Supreme Court ruled that:\n\nFundamental Rights override Directive Principles, and the State cannot violate Fundamental Rights while implementing DPSPs.\n\nThis judgment led the government to pass the 1st Constitutional Amendment Act (1951) to allow reservations in education and to modify Article 15(4).\n\nGolaknath vs. State of Punjab\n\nThis case (1967) ruled that Parliament cannot amend Fundamental Rights.\n\nKesavananda Bharati vs. State of Kerala\n\nThe 1973 case established the Basic Structure Doctrine.\n\nMinerva Mills vs. Union of India\n\nThis 1980 case said Fundamental Rights and DPSPs are complementary.\n\nIt struck down parts of the 42nd Amendment for giving DPSPs supremacy.\n\nFurther Insights\nThe 1st Constitutional Amendment Act (1951) introduced Articles 15(4) and 19(6).\n\nIt strengthened affirmative action policies for backward classes.\n\nChampakam Dorairajan was one of the earliest constitutional cases tested before the SC.\n\nDPSPs are non-justiciable, while Fundamental Rights are enforceable.\n\nThis case shaped India's early reservation and social justice policies.",
-        "topic": "Indian Polity & Constitution",
-        "subtopic": "Fundamental Rights vs DPSP / Judicial Pronouncements",
-        "conceptTested": "Champakam Dorairajan case (1951) ruling that Fundamental Rights override Directive Principles of State Policy, leading to the 1st Constitutional Amendment Act.",
-        "tags": {
-          "topic": "Indian Polity & Constitution",
-          "subtopic": "Fundamental Rights vs DPSP / Judicial Pronouncements",
-          "conceptTested": "Champakam Dorairajan case (1951) ruling that Fundamental Rights override Directive Principles of State Policy, leading to the 1st Constitutional Amendment Act.",
-          "difficulty": "medium"
-        }
-      },
-      {
         "id": "gene_9aa88842f3",
-        "q_num": 84,
+        "q_num": 74,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4539,7 +4278,7 @@
       },
       {
         "id": "gene_5c0bcfa676",
-        "q_num": 85,
+        "q_num": 75,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4568,7 +4307,7 @@
       },
       {
         "id": "gene_2998c920ea",
-        "q_num": 86,
+        "q_num": 76,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4597,7 +4336,7 @@
       },
       {
         "id": "gene_91821a6ad4",
-        "q_num": 87,
+        "q_num": 77,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4626,7 +4365,7 @@
       },
       {
         "id": "gene_5a70377f5a",
-        "q_num": 88,
+        "q_num": 78,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4655,7 +4394,7 @@
       },
       {
         "id": "gene_f69ae8bf45",
-        "q_num": 89,
+        "q_num": 79,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4684,7 +4423,7 @@
       },
       {
         "id": "gene_2f9d8dcdfb",
-        "q_num": 90,
+        "q_num": 80,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4713,7 +4452,7 @@
       },
       {
         "id": "gene_0f29e47b3a",
-        "q_num": 91,
+        "q_num": 81,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4742,7 +4481,7 @@
       },
       {
         "id": "gene_4cea6c12d5",
-        "q_num": 92,
+        "q_num": 82,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4771,7 +4510,7 @@
       },
       {
         "id": "gene_7455b11004",
-        "q_num": 93,
+        "q_num": 83,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4800,7 +4539,7 @@
       },
       {
         "id": "gene_51537301c9",
-        "q_num": 94,
+        "q_num": 84,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4829,7 +4568,7 @@
       },
       {
         "id": "gene_a0f78e52d5",
-        "q_num": 95,
+        "q_num": 85,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4858,7 +4597,7 @@
       },
       {
         "id": "gene_8779adea3d",
-        "q_num": 96,
+        "q_num": 86,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4887,7 +4626,7 @@
       },
       {
         "id": "gene_333aeb4df2",
-        "q_num": 97,
+        "q_num": 87,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4916,7 +4655,7 @@
       },
       {
         "id": "gene_5cb3c5ccdb",
-        "q_num": 98,
+        "q_num": 88,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4945,7 +4684,7 @@
       },
       {
         "id": "gene_cef5a48698",
-        "q_num": 99,
+        "q_num": 89,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -4974,7 +4713,7 @@
       },
       {
         "id": "gene_f01758c841",
-        "q_num": 100,
+        "q_num": 90,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -5003,7 +4742,7 @@
       },
       {
         "id": "gene_28f2b5b2b3",
-        "q_num": 101,
+        "q_num": 91,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -5032,7 +4771,7 @@
       },
       {
         "id": "gene_57eeeb5e14",
-        "q_num": 102,
+        "q_num": 92,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Incorrect",
@@ -5056,6 +4795,325 @@
           "topic": "Physical Geography",
           "subtopic": "Karst Topography & Landforms",
           "conceptTested": "Identification of underground limestone cave deposits formed by mineral-rich water dripping from ceiling to floor.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_3e3810f51c",
+        "q_num": 93,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:32",
+        "avgTime": "00:39",
+        "question": "Match each ruler of the Delhi Sultanate in Column A with their respective period of reign in Column B:\\n\\nColumn A\\tColumn B\\n1. Iltutmish\\t1. 1266 - 1287\\n2. Balban\\t2. 1351 - 1388\\n3. Firoz Shah Tughlaq\\t3. 1489 - 1517\\n4. Sikandar Lodi\\t4. 1211 - 1236",
+        "options": {
+          "a": "A→4, B→1, C→2, D→3",
+          "b": "A→1, B→4, C→3, D→2",
+          "c": "A→4, B→2, C→1, D→3",
+          "d": "A→2, B→1, C→4, D→3"
+        },
+        "answer": "a",
+        "solution": "A. Iltutmish (1211 - 1236): The real founder of the Delhi Sultanate's administrative structure; consolidated Qutbuddin Aibak's conquests, introduced the Iqta system, and secured recognition from the Abbasid Caliph.\nB. Balban (1266 - 1287): Of the Slave (Mamluk) dynasty; known for his \"Theory of Kingship\" (blood and lineage), ruthless suppression of nobles (the Chahalgani/Group of Forty), and iron-fisted administration.\nC. Firoz Shah Tughlaq (1351 - 1388): Known for extensive canal and public works construction, introducing new taxes as per Islamic law, and founding cities like Firozabad and Hisar; his reign saw the decline of Tughlaq central authority begin.\nD. Sikandar Lodi (1489 - 1517): Second ruler of the Lodi dynasty; founded Agra, standardized measurement units (the Gaz-i-Sikandari), and was a patron of Persian and Hindi literature.",
+        "topic": "Medieval History",
+        "subtopic": "Delhi Sultanate Rulers & Reign Periods",
+        "conceptTested": "Chronological matching of key monarchs of the Delhi Sultanate (Slave, Tughlaq, and Lodi dynasties) with their respective regnal periods.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Delhi Sultanate Rulers & Reign Periods",
+          "conceptTested": "Chronological matching of key monarchs of the Delhi Sultanate (Slave, Tughlaq, and Lodi dynasties) with their respective regnal periods.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c64ab043fc",
+        "q_num": 94,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:12",
+        "avgTime": "00:20",
+        "question": "The procedure for the amendment of the Constitution of India, as well as the powers of Parliament to amend it, are detailed in which Part of the Constitution?",
+        "options": {
+          "a": "Part XV",
+          "b": "Part XVII",
+          "c": "Part XVIII",
+          "d": "Part XX"
+        },
+        "answer": "d",
+        "solution": "Part XX of the Constitution deals with \"Amendment of the Constitution\".\n\nIt contains Article 368, which lays down:\n\nthe procedure for amending the Constitution\n\nthe powers of Parliament to amend it\n\ntypes of amendments (simple majority, special majority, and ratification)\n\nPart XV deals with Elections (Articles 324 - 329A).\n\nPart XVII deals with Official Languages (Articles 343 - 351).\n\nPart XVIII deals with Emergency Provisions (Articles 352 - 360).\n\nFurther Insights\nArticle 368 is the core article for constitutional amendments.\n\nIndia follows a rigid + flexible amendment system (neither fully rigid nor fully flexible).\n\nAmendments needing state ratification include changes affecting federal structure (e.g., SC/ST lists, legislative powers).\n\nBasic Structure Doctrine, established in Kesavananda Bharati (1973), limits Parliament's amending power.\n\nConstitutional amendments can be challenged in court if they violate the basic structure.",
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Amendments & Parts of the Constitution",
+        "conceptTested": "Identification of Constitutional parts and articles governing constitutional amendment procedures.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Amendments & Parts of the Constitution",
+          "conceptTested": "Identification of Constitutional parts and articles governing constitutional amendment procedures.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5790f18267",
+        "q_num": 95,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:20",
+        "question": "Who led the Sikh Khalsa Army against the British forces during the Battle of Aliwal (1846) in the First Anglo-Sikh War?",
+        "options": {
+          "a": "Lal Singh",
+          "b": "Tej Singh",
+          "c": "Ranjodh Singh Majithia",
+          "d": "Sher Singh Attariwalla"
+        },
+        "answer": "c",
+        "solution": "During the Battle of Aliwal (28 January 1846), the Sikh Khalsa Army was commanded by Ranjodh Singh Majithia.\n\nHe led Sikh forces against the British troops under Sir Harry Smith.\n\nThe battle ended in a British victory, but Majithia is remembered for his strategic resistance.\n\nFurther Insights\nThe Battle of Aliwal (1846) is often called the \"Battle Without a Mistake\" by the British due to Harry Smith's tactics.\n\nIt was a decisive British victory in the First Anglo-Sikh War.\n\nThe battle took place on the banks of the Sutlej River.\n\nThe First Anglo-Sikh War ended with the Treaty of Lahore (1846).\n\nThe Sikh Khalsa Army was considered one of the most disciplined and modern armies of the time.",
+        "topic": "Modern History",
+        "subtopic": "National Freedom Movement & British Expansion",
+        "conceptTested": "Battles of the First Anglo-Sikh War and key commanders of the Sikh Khalsa Army.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "National Freedom Movement & British Expansion",
+          "conceptTested": "Battles of the First Anglo-Sikh War and key commanders of the Sikh Khalsa Army.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_23310112e9",
+        "q_num": 96,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:32",
+        "avgTime": "00:20",
+        "question": "In the context of Indian geography, which of the following rivers is NOT considered an \"Antecedent River\"?",
+        "options": {
+          "a": "Indus",
+          "b": "Satluj",
+          "c": "Brahmaputra",
+          "d": "Yamuna"
+        },
+        "answer": "d",
+        "solution": "Unlike the others, the Yamuna originates within the Himalayas (at the Yamunotri Glacier on the Bandarpunch peaks in Uttarakhand). Its origin and course are a result of, and subsequent to, the main structural upliftment of the Himalayas. It does not cut across the entire mountain barrier from Tibet, making it a consequent/subsequent river rather than an antecedent one.\n\nAn antecedent river is a river that existed before the upliftment of the mountain range it flows through. As the mountains (the Himalayas, in this case) slowly rose, these rivers cut down into the rising land mass at the same rate, maintaining their original courses and creating deep, vertical gorges. Essentially, these rivers are older than the mountains themselves.",
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Himalayan Rivers & Drainage Systems",
+        "conceptTested": "Identification of antecedent vs consequent rivers in the Indian river system.",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Himalayan Rivers & Drainage Systems",
+          "conceptTested": "Identification of antecedent vs consequent rivers in the Indian river system.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_4fb7f8b07c",
+        "q_num": 97,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:11",
+        "avgTime": "00:20",
+        "question": "Which Act allotted ₹1 lakh for the promotion of education in India for the first time?",
+        "options": {
+          "a": "Charter Act of 1793",
+          "b": "Charter Act of 1813",
+          "c": "Charter Act of 1833",
+          "d": "Wood's Despatch of 1854"
+        },
+        "answer": "b",
+        "solution": "The Charter Act of 1813 was the first official step by the British toward state-sponsored education in India.\n\nIt earmarked ₹1 lakh per year for \"the revival and promotion of literature and the encouragement of the learned natives of India and for the introduction and promotion of knowledge of the sciences.\n\nFurther Insights\nThe Macaulay Minute (1835) promoted English as the medium of instruction.\n\nThe Wood's Despatch (1854) established universities in Calcutta, Bombay, and Madras (1857).\n\nThe Hunter Commission (1882) focused on primary and secondary education.\n\nThe Sadler Commission (1917 - 19) recommended reforms in university governance.\n\nThe Sargent Plan (1944) proposed universal, compulsory education for children aged 6 - 14.",
+        "topic": "Modern History",
+        "subtopic": "British Acts & Educational Reforms",
+        "conceptTested": "Key provisions of the Charter Act of 1813 regarding the promotion of education in India.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "British Acts & Educational Reforms",
+          "conceptTested": "Key provisions of the Charter Act of 1813 regarding the promotion of education in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e0080bf521",
+        "q_num": 98,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:13",
+        "avgTime": "00:20",
+        "question": "Who wrote the novel \"The Serpent and the Rope,\" which won the Sahitya Akademi Award in 1964?",
+        "options": {
+          "a": "Raja Rao",
+          "b": "R.K. Narayan",
+          "c": "Mulk Raj Anand",
+          "d": "Amitav Ghosh"
+        },
+        "answer": "a",
+        "solution": "Raja Rao wrote \"The Serpent and the Rope\", a semi-autobiographical novel.\n\nIt won the Sahitya Akademi Award in 1964 for its deep philosophical themes.\n\nR.K. Narayan - wrote novels like Malgudi Days and The Guide.\n\nMulk Raj Anand - Known for Untouchable and Coolie.\n\nAmitav Ghosh - Wrote The Shadow Lines, Sea of Poppies, etc.\n\nFurther Insights\nRaja Rao is considered one of the founding figures of Indian English writing.\n\nThe Serpent and the Rope blends Indian philosophy with personal narrative.\n\nHe also wrote Kanthapura, a major novel on India's freedom movement.\n\nSahitya Akademi Awards are among India's highest literary honors.",
+        "topic": "Books & Authors",
+        "subtopic": "Indian English Literature & Awards",
+        "conceptTested": "Identification of award-winning authors and their notable literary works.",
+        "tags": {
+          "topic": "Books & Authors",
+          "subtopic": "Indian English Literature & Awards",
+          "conceptTested": "Identification of award-winning authors and their notable literary works.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f3c32564b2",
+        "q_num": 99,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:17",
+        "avgTime": "00:20",
+        "question": "Which state scheme provides direct financial assistance to girl students studying in Classes 9 to 12 to help them continue their education and reduce dropout rates?",
+        "options": {
+          "a": "Beti Bachao Beti Padhao",
+          "b": "Namo Lakshmi Yojana",
+          "c": "Sukanya Samriddhi Yojana",
+          "d": "PM POSHAN Scheme"
+        },
+        "answer": "b",
+        "solution": "The scheme \"Namo Laxmi Yojana\" by the Education Department, Government of Gujarat, aims to encourage girls studying in government, aided, and private schools in Gujarat to complete their education from Class 9th to 12th by providing direct financial assistance.\n\nEach eligible girl will receive a total financial support of ₹50,000/- on completion of classes 9th to 12th under this scheme.\n\nBeti Bachao Beti Padhao\n\nThis scheme focuses on:\n\nimproving the child sex ratio\n\npromoting education awareness\n\npreventing gender discrimination\n\nPM POSHAN Scheme\n\nPM POSHAN provides mid-day meals to schoolchildren.\n\nMainly targets Classes 1 - 8,",
+        "topic": "Government Schemes & Policies",
+        "subtopic": "State Educational & Social Welfare Schemes",
+        "conceptTested": "Awareness of state-level welfare initiatives aimed at reducing school dropout rates among girl students.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "State Educational & Social Welfare Schemes",
+          "conceptTested": "Awareness of state-level welfare initiatives aimed at reducing school dropout rates among girl students.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_af17330a21",
+        "q_num": 100,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:13",
+        "avgTime": "00:20",
+        "question": "Consider the following statements regarding the \"National Tansen Samman\" award:\\n\\n1) The Tansen Samman was established in the year 1980 by the Government of Maharashtra to honor musical excellence.\\n\\n2) While Tansen was a vocalist, the award is not restricted to singers; it is given for \"long-term contribution\" to Carnatic Music (vocal or instrumental).\\n\\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "d",
+        "solution": "The Tansen Samman was established by the Government of Madhya Pradesh, not Maharashtra.\n\nIt began in 1980 - 81, as part of the Tansen Sangeet Samaroh held annually in Gwalior.\n\nThe award is given for contributions in Hindustani Classical Music, not Carnatic Music.\n\nTansen was a legendary figure in the Hindustani (North Indian) tradition, not Carnatic (South Indian).\n\nThe award includes both vocal and instrumental Hindustani musicians.\n\nFurther Insights\nTansen / Tansen Samman\n\nTansen was one of Emperor Akbar's Navaratnas (Nine Gems).\n\nHis tomb in Gwalior is the venue for the annual Tansen music festival.\n\nThe award recognises lifelong excellence in Hindustani music.\n\nIt is considered among the highest music honours in India.\n\nHindustani Classical Music\n\nIt evolved from ancient traditions like Dhrupad.\n\nUses ragas (melodies) and talas (rhythmic cycles).\n\nInstruments like sitar, sarod, tabla, and shehnai are central.\n\nIt diverged from Carnatic music around the 13th century.",
+        "topic": "Awards & Honours",
+        "subtopic": "National Music Awards",
+        "conceptTested": "Factual knowledge of the National Tansen Samman: established by Madhya Pradesh, focused on Hindustani Classical Music.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "National Music Awards",
+          "conceptTested": "Factual knowledge of the National Tansen Samman: established by Madhya Pradesh, focused on Hindustani Classical Music.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_fd007b8013",
+        "q_num": 101,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:20",
+        "avgTime": "00:20",
+        "question": "Which of the following temples is primarily constructed using terracotta (fully burnt clay) and is famous for its intricate low-relief carvings?",
+        "options": {
+          "a": "Shore Temple, Mahabalipuram",
+          "b": "Shyam Rai Temple, Bishnupur",
+          "c": "Konark Sun Temple, Odisha",
+          "d": "Brihadisvara Temple, Thanjavur"
+        },
+        "answer": "b",
+        "solution": "The Shyam Rai Temple in Bishnupur (West Bengal) is a classic example of terracotta temple architecture.\n\nIt was built by the Malla kings and is known for its Pancharatna style (five towers).\n\nThe walls are covered with beautiful terracotta panels depicting scenes from epics and daily life.\n\nShore Temple, Mahabalipuram\n\nBuilt using granite stone, not terracotta.\n\nPart of Pallava rock-cut and structural temples.\n\nKonark Sun Temple, Odisha\n\nConstructed using Khondalite stone, not terracotta.\n\nFamous for its chariot-shaped stone architecture.\n\nBrihadisvara Temple, Thanjavur\n\nBuilt using granite, especially massive blocks.\n\nRepresents Dravidian stone architecture.\n\nFurther Insights\nBishnupur is famous for dozens of terracotta temples built by the Malla kings.\n\nTerracotta was used due to the scarcity of stones in Bengal.\n\nPancharatna and Navaratna styles are unique features of Bengal temple architecture.\n\nTerracotta art commonly depicts Ramayana, Mahabharata, and Krishna Leela stories.",
+        "topic": "Temples, Monuments & Heritage Sites",
+        "subtopic": "Temple Architecture and Styles",
+        "conceptTested": "Identification of temple materials and regional styles, specifically terracotta architecture of West Bengal.",
+        "tags": {
+          "topic": "Temples, Monuments & Heritage Sites",
+          "subtopic": "Temple Architecture and Styles",
+          "conceptTested": "Identification of temple materials and regional styles, specifically terracotta architecture of West Bengal.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_65fcada581",
+        "q_num": 102,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:32",
+        "avgTime": "00:20",
+        "question": "Which one of the following pairs of \"Biosphere Reserve\" and the \"State\" it is primarily located in is CORRECTLY matched?",
+        "options": {
+          "a": "Nokrek - Assam",
+          "b": "Simlipal - Odisha",
+          "c": "Cold Desert - Uttarakhand",
+          "d": "Panna - Rajasthan"
+        },
+        "answer": "b",
+        "solution": "Simlipal Biosphere Reserve is located in the state of Odisha.\n\nIt is one of India's earliest designated biosphere reserves and home to tigers, elephants, and rich biodiversity.\n\nNokrek Biosphere Reserve is in Meghalaya\n\nCold Desert Biosphere Reserve is located in Himachal Pradesh\n\nPanna Biosphere Reserve is in Madhya Pradesh\n\nFurther Insights\nIndia has 18 designated Biosphere Reserves.\n\nBiosphere Reserves include core, buffer, and transition zones.\n\nMany reserves are part of UNESCO's World Network of Biosphere Reserves (WNBR).\n\nExamples included in UNESCO WNBR: Nilgiri, Sundarbans, Gulf of Mannar, Nanda Devi, Khangchendzonga.",
+        "topic": "National Parks & Environment",
+        "subtopic": "Biosphere Reserves of India",
+        "conceptTested": "Geographical distribution of designated Biosphere Reserves in India.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Biosphere Reserves of India",
+          "conceptTested": "Geographical distribution of designated Biosphere Reserves in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_6de3af343e",
+        "q_num": 103,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:10",
+        "avgTime": "00:20",
+        "question": "Which landmark Supreme Court case ruled that the Directive Principles of State Policy cannot override Fundamental Rights and directly led to the 1st Constitutional Amendment Act?",
+        "options": {
+          "a": "Golaknath vs. State of Punjab",
+          "b": "Kesavananda Bharati vs. State of Kerala",
+          "c": "Champakam Dorairajan vs. State of Madras",
+          "d": "Minerva Mills vs. Union of India"
+        },
+        "answer": "c",
+        "solution": "In State of Madras v. Champakam Dorairajan (1951), the Supreme Court ruled that:\n\nFundamental Rights override Directive Principles, and the State cannot violate Fundamental Rights while implementing DPSPs.\n\nThis judgment led the government to pass the 1st Constitutional Amendment Act (1951) to allow reservations in education and to modify Article 15(4).\n\nGolaknath vs. State of Punjab\n\nThis case (1967) ruled that Parliament cannot amend Fundamental Rights.\n\nKesavananda Bharati vs. State of Kerala\n\nThe 1973 case established the Basic Structure Doctrine.\n\nMinerva Mills vs. Union of India\n\nThis 1980 case said Fundamental Rights and DPSPs are complementary.\n\nIt struck down parts of the 42nd Amendment for giving DPSPs supremacy.\n\nFurther Insights\nThe 1st Constitutional Amendment Act (1951) introduced Articles 15(4) and 19(6).\n\nIt strengthened affirmative action policies for backward classes.\n\nChampakam Dorairajan was one of the earliest constitutional cases tested before the SC.\n\nDPSPs are non-justiciable, while Fundamental Rights are enforceable.\n\nThis case shaped India's early reservation and social justice policies.",
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Fundamental Rights vs DPSP",
+        "conceptTested": "Landmark Supreme Court rulings on the supremacy between Fundamental Rights and Directive Principles of State Policy.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Fundamental Rights vs DPSP",
+          "conceptTested": "Landmark Supreme Court rulings on the supremacy between Fundamental Rights and Directive Principles of State Policy.",
           "difficulty": "medium"
         }
       }

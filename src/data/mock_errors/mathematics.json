@@ -1601,240 +1601,8 @@
         }
       },
       {
-        "id": "math_d1a6260792",
-        "q_num": 56,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "C",
-        "correctOption": "C",
-        "userTime": "01:13",
-        "avgTime": "00:30",
-        "question": "In a class, 60% of students pass Physics, 70% pass Chemistry, and 15% pass neither. What percentage of students pass both subjects?",
-        "options": {
-          "a": "35%",
-          "b": "40%",
-          "c": "45%",
-          "d": "50%"
-        },
-        "answer": "c",
-        "solution": "Let, the total number of students = 100\nStudents passing neither = 15%\nPercentage of students who pass at least one subject = 100 − 15 = 85%\nPercentage passing Physics or Chemistry = Percentage passing Physics + Percentage passing Chemistry − Percentage passing both\n=> 85 = 60 + 70 − Percentage passing both\n=> Percentage passing both = 45%",
-        "topic": "Percentage",
-        "subtopic": "Venn Diagram / Set Theory Applications",
-        "conceptTested": "Application of the principle of inclusion-exclusion for two sets: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$.",
-        "tags": {
-          "topic": "Percentage",
-          "subtopic": "Venn Diagram / Set Theory Applications",
-          "conceptTested": "Application of the principle of inclusion-exclusion for two sets: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_e0b6666a6a",
-        "q_num": 57,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "A",
-        "correctOption": "A",
-        "userTime": "02:10",
-        "avgTime": "00:30",
-        "question": "A 198 L vessel has milk to water ratio equal to 5 : 4. First, 36 L of the mixture is withdrawn and replaced by water. Next, 44 L of the mixture is withdrawn and replaced by water. Find the final milk to water ratio.",
-        "options": {
-          "a": "35:64",
-          "b": "5:9",
-          "c": "25:44",
-          "d": "9:16"
-        },
-        "answer": "a",
-        "solution": "Initial milk = 198 X (5/9) = 110; water = 88.\nAfter 36 L out: milk removed = 36 X (110/198) = 20; water removed = 16.\nAfter refill: milk = 110 − 20 = 90; water = 88 − 16 + 36 = 108; total = 198.\nNow withdraw 44 L: milk removed = 44 X (90/198) = 20; water removed = 24.\nAfter refill: milk = 90 − 20 = 70; water = 108 − 24 + 44 = 128.\nFinal ratio = 70:128 = 35:64.",
-        "topic": "Mixture & Alligation",
-        "subtopic": "Successive Replacement of Mixture",
-        "conceptTested": "Principle of successive withdrawal and replacement: Final quantity = Initial quantity * (1 - withdrawal/total)^n",
-        "tags": {
-          "topic": "Mixture & Alligation",
-          "subtopic": "Successive Replacement of Mixture",
-          "conceptTested": "Principle of successive withdrawal and replacement: Final quantity = Initial quantity * (1 - withdrawal/total)^n",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_55a314da27",
-        "q_num": 58,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "C",
-        "correctOption": "C",
-        "userTime": "01:09",
-        "avgTime": "00:30",
-        "question": "The average salary of 8 employees in a department is Rs. 50,000. Two employees leave, earning Rs. 45,000 and Rs. 55,000 respectively. What is the new average salary of the remaining employees?",
-        "options": {
-          "a": "Rs. 48000",
-          "b": "Rs. 49000",
-          "c": "Rs. 50000",
-          "d": "Rs. 51000"
-        },
-        "answer": "c",
-        "solution": "Total salary of 8 employees = 8 X 50000 = Rs. 400000\nNew total salary = 400000 − (45000 + 55000) = 400000 - 100000 = Rs. 300000\nRemaining number of employees = 6\nNew average salary = 300000/6 = Rs. 50000",
-        "topic": "Average",
-        "subtopic": "Effect of Removing Items on Average",
-        "conceptTested": "Average = Sum of observations / Number of observations; leaving values equal to the average does not change the average.",
-        "tags": {
-          "topic": "Average",
-          "subtopic": "Effect of Removing Items on Average",
-          "conceptTested": "Average = Sum of observations / Number of observations; leaving values equal to the average does not change the average.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_77686bb0a5",
-        "q_num": 59,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "C",
-        "correctOption": "C",
-        "userTime": "00:39",
-        "avgTime": "00:30",
-        "question": "The ratio of the number of boys to girls in school is 17: 20. If the number of boys and girls increased by 25% and 40%, respectively, then what will be the new ratio?",
-        "options": {
-          "a": "91/113",
-          "b": "88/113",
-          "c": "85/112",
-          "d": "87/112"
-        },
-        "answer": "c",
-        "solution": "The new number of boys = 17 * 125/100\nThe new number of girls = 20 * 140/100\nHence, the required ratio = (17 * 125)/(20 * 140)\n= 85/112",
-        "topic": "Ratio & Proportion",
-        "subtopic": "Percentage Increase in Ratios",
-        "conceptTested": "Proportional scaling by applying successive percentage increments to individual ratio terms.",
-        "tags": {
-          "topic": "Ratio & Proportion",
-          "subtopic": "Percentage Increase in Ratios",
-          "conceptTested": "Proportional scaling by applying successive percentage increments to individual ratio terms.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_153d568947",
-        "q_num": 60,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "A",
-        "correctOption": "A",
-        "userTime": "00:43",
-        "avgTime": "00:30",
-        "question": "20 men can build a wall in 30 days. After working for 10 days, 15 more men join them. How many more days will they take to finish the wall?",
-        "options": {
-          "a": "11(3/7) days",
-          "b": "12(4/7) days",
-          "c": "10(2/7) days",
-          "d": "13(5/7) days"
-        },
-        "answer": "a",
-        "solution": "Total work = 20 men × 30 days = 600 man-days\nWork done in first 10 days by 20 men = 20 × 10 = 200 man-days\nRemaining work = 600 - 200 = 400 man-days\nNew total men after 10 days = 20 + 15 = 35 men\nDays required to finish remaining work = Remaining work / Number of men = 400 / 35 = 11(3/7) days",
-        "topic": "Time & Work",
-        "subtopic": "Men-Days and Remaining Work",
-        "conceptTested": "Total Work = Number of Men × Number of Days; remaining work is completed by the new combined workforce.",
-        "tags": {
-          "topic": "Time & Work",
-          "subtopic": "Men-Days and Remaining Work",
-          "conceptTested": "Total Work = Number of Men × Number of Days; remaining work is completed by the new combined workforce.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_c99357859d",
-        "q_num": 61,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "00:54",
-        "avgTime": "00:30",
-        "question": "∛9 × √9 × ∛13 × √13 = ?",
-        "options": {
-          "a": "117\n1/6",
-          "b": "117\n5/6",
-          "c": "0",
-          "d": "117"
-        },
-        "answer": "b",
-        "solution": "Previous\nReview\nNext",
-        "topic": "Simplification",
-        "subtopic": "Laws of Indices and Surds",
-        "conceptTested": "Rules of exponents: a^(1/m) * a^(1/n) = a^((n+m)/(m*n)) and combining bases using index laws.",
-        "tags": {
-          "topic": "Simplification",
-          "subtopic": "Laws of Indices and Surds",
-          "conceptTested": "Rules of exponents: a^(1/m) * a^(1/n) = a^((n+m)/(m*n)) and combining bases using index laws.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_b0e3dda86c",
-        "q_num": 62,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "D",
-        "correctOption": "D",
-        "userTime": "00:57",
-        "avgTime": "00:30",
-        "question": "A square-shaped plot has a side of 130m. A path of width 5m is constructed around the outside of the plot. Find the area of the path (in m²).",
-        "options": {
-          "a": "2830",
-          "b": "2480",
-          "c": "1550",
-          "d": "2700"
-        },
-        "answer": "d",
-        "solution": "Side of plot = 130 m\nSide of plot with path = 130 + 5 + 5 = 140 m\nArea of path = Area of plot with path - Area of plot\n= 1402 - 1302 = 270*10\n= 2700 m2",
-        "topic": "Mensuration 2D",
-        "subtopic": "Squares & Paths",
-        "conceptTested": "Area of path outside a square = (Side of square + 2 × width)² - (Side of square)²",
-        "tags": {
-          "topic": "Mensuration 2D",
-          "subtopic": "Squares & Paths",
-          "conceptTested": "Area of path outside a square = (Side of square + 2 × width)² - (Side of square)²",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "math_45bf66f6ca",
-        "q_num": 63,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "00:46",
-        "avgTime": "00:30",
-        "question": "An angle is 11/4th of its supplementary angle. What is the measure of the angle?",
-        "options": {
-          "a": "72˚",
-          "b": "132˚",
-          "c": "108˚",
-          "d": "88˚"
-        },
-        "answer": "b",
-        "solution": "Let, the supplementary angles be 'a' and '11a/4'.\na + 11a/4 = 180˚\n15a = 180˚ * 4\na = 48˚\nHence, 11a/4 = 132˚",
-        "topic": "Geometry",
-        "subtopic": "Lines & Angles - Supplementary Angles",
-        "conceptTested": "Two angles are supplementary if their sum is 180°.",
-        "tags": {
-          "topic": "Geometry",
-          "subtopic": "Lines & Angles - Supplementary Angles",
-          "conceptTested": "Two angles are supplementary if their sum is 180°.",
-          "difficulty": "medium"
-        }
-      },
-      {
         "id": "math_7d22ef9f0f",
-        "q_num": 64,
+        "q_num": 56,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1863,7 +1631,7 @@
       },
       {
         "id": "math_9e33305f9e",
-        "q_num": 65,
+        "q_num": 57,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1892,7 +1660,7 @@
       },
       {
         "id": "math_c88477d540",
-        "q_num": 66,
+        "q_num": 58,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1921,7 +1689,7 @@
       },
       {
         "id": "math_357f379b94",
-        "q_num": 67,
+        "q_num": 59,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1950,7 +1718,7 @@
       },
       {
         "id": "math_b3d6130456",
-        "q_num": 68,
+        "q_num": 60,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -1979,7 +1747,7 @@
       },
       {
         "id": "math_f15527f5d3",
-        "q_num": 69,
+        "q_num": 61,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 2",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2008,7 +1776,7 @@
       },
       {
         "id": "math_f7c4deab76",
-        "q_num": 70,
+        "q_num": 62,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2037,7 +1805,7 @@
       },
       {
         "id": "math_4e04410c00",
-        "q_num": 71,
+        "q_num": 63,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2066,7 +1834,7 @@
       },
       {
         "id": "math_004c3434d4",
-        "q_num": 72,
+        "q_num": 64,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2095,7 +1863,7 @@
       },
       {
         "id": "math_bc1c1f26de",
-        "q_num": 73,
+        "q_num": 65,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2124,7 +1892,7 @@
       },
       {
         "id": "math_cad61912df",
-        "q_num": 74,
+        "q_num": 66,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2153,7 +1921,7 @@
       },
       {
         "id": "math_0a4807734e",
-        "q_num": 75,
+        "q_num": 67,
         "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 3",
         "platform": "Oliveboard",
         "status": "Correct (Slow)",
@@ -2177,6 +1945,267 @@
           "topic": "Simplification",
           "subtopic": "Algebraic Expressions & Fractions",
           "conceptTested": "Simplification of algebraic fraction identities using VBODMAS",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_41e0b8b732",
+        "q_num": 68,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:36",
+        "avgTime": "00:12",
+        "question": "Evaluate:\\n\\n√(20 + √(20 + √(20 + ...)))",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "6",
+          "d": "8"
+        },
+        "answer": "b",
+        "solution": "Let\n√(20 + √(20 + √(20 + ...))) = x\n\nThen,\n\nx = √(20 + x)\n\nSquaring both sides,\n\nx2 = 20 + x\nx2 − x − 20 = 0\n(x − 5)(x + 4) = 0\nSince x is positive,\nx = 5.\n\nExpress Method\n\nFactors of 20 = 5 and 4.\n\nSince there is a + sign in the question, the answer will be the larger factor, that is, 5.",
+        "topic": "Simplification",
+        "subtopic": "Infinite nested radicals",
+        "conceptTested": "Solving recursive radical equations by squaring both sides or factorizing consecutive integers.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Infinite nested radicals",
+          "conceptTested": "Solving recursive radical equations by squaring both sides or factorizing consecutive integers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d1a6260792",
+        "q_num": 69,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:13",
+        "avgTime": "00:30",
+        "question": "In a class, 60% of students pass Physics, 70% pass Chemistry, and 15% pass neither. What percentage of students pass both subjects?",
+        "options": {
+          "a": "35%",
+          "b": "40%",
+          "c": "45%",
+          "d": "50%"
+        },
+        "answer": "c",
+        "solution": "Let, the total number of students = 100\nStudents passing neither = 15%\nPercentage of students who pass at least one subject = 100 − 15 = 85%\nPercentage passing Physics or Chemistry = Percentage passing Physics + Percentage passing Chemistry − Percentage passing both\n=> 85 = 60 + 70 − Percentage passing both\n=> Percentage passing both = 45%",
+        "topic": "Percentage",
+        "subtopic": "Venn Diagram / Set Theory Applications",
+        "conceptTested": "Application of the principle of inclusion-exclusion for two sets: n(A \\cup B) = n(A) + n(B) - n(A \\cap B).",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Venn Diagram / Set Theory Applications",
+          "conceptTested": "Application of the principle of inclusion-exclusion for two sets: n(A \\cup B) = n(A) + n(B) - n(A \\cap B).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e0b6666a6a",
+        "q_num": 70,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "02:10",
+        "avgTime": "00:30",
+        "question": "A 198 L vessel has milk to water ratio equal to 5 : 4. First, 36 L of the mixture is withdrawn and replaced by water. Next, 44 L of the mixture is withdrawn and replaced by water. Find the final milk to water ratio.",
+        "options": {
+          "a": "35:64",
+          "b": "5:9",
+          "c": "25:44",
+          "d": "9:16"
+        },
+        "answer": "a",
+        "solution": "Initial milk = 198 X (5/9) = 110; water = 88.\nAfter 36 L out: milk removed = 36 X (110/198) = 20; water removed = 16.\nAfter refill: milk = 110 − 20 = 90; water = 88 − 16 + 36 = 108; total = 198.\nNow withdraw 44 L: milk removed = 44 X (90/198) = 20; water removed = 24.\nAfter refill: milk = 90 − 20 = 70; water = 108 − 24 + 44 = 128.\nFinal ratio = 70:128 = 35:64.",
+        "topic": "Mixture & Alligation",
+        "subtopic": "Successive Replacement",
+        "conceptTested": "When a quantity of mixture is repeatedly removed and replaced with pure water, the final concentration of milk can be found using successive ratios or initial quantities.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "subtopic": "Successive Replacement",
+          "conceptTested": "When a quantity of mixture is repeatedly removed and replaced with pure water, the final concentration of milk can be found using successive ratios or initial quantities.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_55a314da27",
+        "q_num": 71,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:09",
+        "avgTime": "00:30",
+        "question": "The average salary of 8 employees in a department is Rs. 50,000. Two employees leave, earning Rs. 45,000 and Rs. 55,000 respectively. What is the new average salary of the remaining employees?",
+        "options": {
+          "a": "Rs. 48000",
+          "b": "Rs. 49000",
+          "c": "Rs. 50000",
+          "d": "Rs. 51000"
+        },
+        "answer": "c",
+        "solution": "Total salary of 8 employees = 8 X 50000 = Rs. 400000\nNew total salary = 400000 − (45000 + 55000) = 400000 - 100000 = Rs. 300000\nRemaining number of employees = 6\nNew average salary = 300000/6 = Rs. 50000",
+        "topic": "Average",
+        "subtopic": "Group Average Modification",
+        "conceptTested": "Average equals the sum of observations divided by the total number of observations; removing specific values adjusts both total sum and total count accordingly.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Group Average Modification",
+          "conceptTested": "Average equals the sum of observations divided by the total number of observations; removing specific values adjusts both total sum and total count accordingly.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_77686bb0a5",
+        "q_num": 72,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:39",
+        "avgTime": "00:30",
+        "question": "The ratio of the number of boys to girls in school is 17: 20. If the number of boys and girls increased by 25% and 40%, respectively, then what will be the new ratio?",
+        "options": {
+          "a": "91/113",
+          "b": "88/113",
+          "c": "85/112",
+          "d": "87/112"
+        },
+        "answer": "c",
+        "solution": "The new number of boys = 17 * 125/100\nThe new number of girls = 20 * 140/100\nHence, the required ratio = (17 * 125)/(20 * 140)\n= 85/112",
+        "topic": "Ratio & Proportion",
+        "subtopic": "Percentage Increase in Ratios",
+        "conceptTested": "Applying successive percentage increments to individual components of a ratio to find the resulting modified ratio.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Percentage Increase in Ratios",
+          "conceptTested": "Applying successive percentage increments to individual components of a ratio to find the resulting modified ratio.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_153d568947",
+        "q_num": 73,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:43",
+        "avgTime": "00:30",
+        "question": "20 men can build a wall in 30 days. After working for 10 days, 15 more men join them. How many more days will they take to finish the wall?",
+        "options": {
+          "a": "11(3/7) days",
+          "b": "12(4/7) days",
+          "c": "10(2/7) days",
+          "d": "13(5/7) days"
+        },
+        "answer": "a",
+        "solution": "Total work = 20 men × 30 days = 600 man-days\nWork done in first 10 days by 20 men = 20 × 10 = 200 man-days\nRemaining work = 600 - 200 = 400 man-days\nNew total men after 10 days = 20 + 15 = 35 men\nDays required to finish remaining work = Remaining work / Number of men = 400 / 35 = 11(3/7) days",
+        "topic": "Time & Work",
+        "subtopic": "Men-Days Total Work Concept",
+        "conceptTested": "Total work measured in man-days remains constant; remaining work divided by the new total workforce yields the required completion time.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men-Days Total Work Concept",
+          "conceptTested": "Total work measured in man-days remains constant; remaining work divided by the new total workforce yields the required completion time.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bf428c196f",
+        "q_num": 74,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:54",
+        "avgTime": "00:30",
+        "question": "\\u221b9 \\times \\sqrt{9} \\times \\u221b13 \\times \\sqrt{13} = ?",
+        "options": {
+          "a": "117\n1/6",
+          "b": "117\n5/6",
+          "c": "0",
+          "d": "117"
+        },
+        "answer": "b",
+        "solution": "Previous\nReview\nNext",
+        "topic": "Simplification",
+        "subtopic": "Surds & Indices Laws",
+        "conceptTested": "Laws of exponents: \\sqrt[n]{a} = a^{1/n} and a^m \\times a^n = a^{m+n}.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Surds & Indices Laws",
+          "conceptTested": "Laws of exponents: \\sqrt[n]{a} = a^{1/n} and a^m \\times a^n = a^{m+n}.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b0e3dda86c",
+        "q_num": 75,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:57",
+        "avgTime": "00:30",
+        "question": "A square-shaped plot has a side of 130m. A path of width 5m is constructed around the outside of the plot. Find the area of the path (in m²).",
+        "options": {
+          "a": "2830",
+          "b": "2480",
+          "c": "1550",
+          "d": "2700"
+        },
+        "answer": "d",
+        "solution": "Side of plot = 130 m\nSide of plot with path = 130 + 5 + 5 = 140 m\nArea of path = Area of plot with path - Area of plot\n= 1402 - 1302 = 270*10\n= 2700 m2",
+        "topic": "Mensuration 2D",
+        "subtopic": "Area of Square and Paths",
+        "conceptTested": "Area of a path constructed around a square plot is calculated as the difference between the area of the outer square and the inner square.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Area of Square and Paths",
+          "conceptTested": "Area of a path constructed around a square plot is calculated as the difference between the area of the outer square and the inner square.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_45bf66f6ca",
+        "q_num": 76,
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:46",
+        "avgTime": "00:30",
+        "question": "An angle is 11/4th of its supplementary angle. What is the measure of the angle?",
+        "options": {
+          "a": "72˚",
+          "b": "132˚",
+          "c": "108˚",
+          "d": "88˚"
+        },
+        "answer": "b",
+        "solution": "Let, the supplementary angles be 'a' and '11a/4'.\na + 11a/4 = 180˚\n15a = 180˚ * 4\na = 48˚\nHence, 11a/4 = 132˚",
+        "topic": "Geometry",
+        "subtopic": "Lines & Angles - Supplementary Angles",
+        "conceptTested": "Two angles are supplementary if their sum is equal to 180°. Algebraic proportion equations can be set up to find the measures of the angles.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Lines & Angles - Supplementary Angles",
+          "conceptTested": "Two angles are supplementary if their sum is equal to 180°. Algebraic proportion equations can be set up to find the measures of the angles.",
           "difficulty": "medium"
         }
       }
