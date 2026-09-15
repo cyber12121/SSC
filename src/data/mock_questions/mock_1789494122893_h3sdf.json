@@ -1,0 +1,1220 @@
+[
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 7",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:15",
+    "avgTime": "00:15",
+    "questionText": "Select the option in which the words in the word-pair share the same relationship as that shares by the given word-pair.\nTiger: Felidae",
+    "options": {
+      "A": "Lion : Leporidae",
+      "B": "Rabbit : Bovidae",
+      "C": "Whale : Cetacea",
+      "D": "Elephant : Canidae"
+    },
+    "solution": "Solution\n\nThe logic is:\n\nTiger: Felidae → Tiger belongs to the family of Felidae.\n\nSimilarly,\n\n1) Lion: Leporidae → Lion belongs to the family of Felidae.\n2) Rabbit: Bovidae → Rabbit belongs to the family of Leporidae.\n3) Whale: Cetacea → Whale belongs to the family of Cetacea\n4) Elephant: Canidae → Elephant belongs to the family of Elephantidae.\nHence, ‘Whale: Cetacea’ is the correct answer.",
+    "topic": "Analogy",
+    "subtopic": "Semantic Analogy",
+    "conceptTested": "Classification of organisms into their biological families.",
+    "tags": {
+      "topic": "Analogy",
+      "subtopic": "Semantic Analogy",
+      "conceptTested": "Classification of organisms into their biological families."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 14",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "01:08",
+    "avgTime": "01:04",
+    "questionText": "Select the option that is related to the fourth term in the same way as the first term is related to the second term and the fifth term is related to the sixth term.\n16 : 96 :: ? : 161 :: 18 : 120",
+    "options": {
+      "A": "22",
+      "B": "21",
+      "C": "20",
+      "D": "24"
+    },
+    "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd number\n\nSo,\n\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
+    "topic": "Analogy",
+    "subtopic": "Number Analogy",
+    "conceptTested": "Relationship pattern involving arithmetic operations on numbers: [x * (x + 2)] / 3 = y.",
+    "tags": {
+      "topic": "Analogy",
+      "subtopic": "Number Analogy",
+      "conceptTested": "Relationship pattern involving arithmetic operations on numbers: [x * (x + 2)] / 3 = y."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 15",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:58",
+    "avgTime": "00:58",
+    "questionText": "Which of the two digit should be interchanged to correct the following equation?\n75 ÷ 18 + 51 × 8 - 82 = 87",
+    "options": {
+      "A": "7 & 8",
+      "B": "1 & 5",
+      "C": "5 & 2",
+      "D": "8 & 2"
+    },
+    "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
+    "topic": "Mathematical Operations",
+    "subtopic": "Interchange of Digits & Signs",
+    "conceptTested": "Balancing equations by interchanging specific digits and applying the BODMAS rule.",
+    "tags": {
+      "topic": "Mathematical Operations",
+      "subtopic": "Interchange of Digits & Signs",
+      "conceptTested": "Balancing equations by interchanging specific digits and applying the BODMAS rule."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 17",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:34",
+    "avgTime": "00:54",
+    "questionText": "Find the next term in the series:\n0, 6, 24, 60, 120, 210, ___",
+    "options": {
+      "A": "336",
+      "B": "240",
+      "C": "504",
+      "D": "290"
+    },
+    "solution": "Solution\n\nThe pattern followed is:\n\nHence, the correct answer is \"336\".\n\nAlternate Method\n[Logical Series MCQ] What Comes After 210? Crack This Pattern-Based Puzzle\n\nThe logic followed here is:\n\n13 - 1 = 0\n23 - 2 = 8 - 2 = 6\n33 - 3 = 27 - 3 = 24\n43 - 4 = 64 - 4 = 60\n53 - 5 = 125 - 5 = 120\n63 - 6 = 216 - 6 = 210\n73 - 7 = 343 - 7 = 336.\nHence, the correct answer is \"336\".",
+    "topic": "Number Series",
+    "subtopic": "Missing Number Series",
+    "conceptTested": "Cubic pattern series based on the formula n³ - n.",
+    "tags": {
+      "topic": "Number Series",
+      "subtopic": "Missing Number Series",
+      "conceptTested": "Cubic pattern series based on the formula n³ - n."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 21",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "B",
+    "userTime": "01:03",
+    "avgTime": "00:29",
+    "questionText": "How many pairs of letters in the word ‘NIGHTMARE’ have as many letters between them in the word as in the English alphabet?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "5"
+    },
+    "solution": "Solution\n\nHence, TWO pairs are there in the word ‘NIGHTMARE’ each of which has as many letters between them in the word as they have between them in the English Alphabet.",
+    "topic": "Alphabet Test",
+    "subtopic": "Letter Pairs Problem",
+    "conceptTested": "Counting forward and backward letter pairs in a word corresponding to their alphabetical distance.",
+    "tags": {
+      "topic": "Alphabet Test",
+      "subtopic": "Letter Pairs Problem",
+      "conceptTested": "Counting forward and backward letter pairs in a word corresponding to their alphabetical distance."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 22",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "C",
+    "userTime": "00:10",
+    "avgTime": "00:17",
+    "questionText": "In the given Venn diagram, the triangle represents urban citizens, the circle represents people with diabetes, and the rectangle represents senior citizens. Study the diagram and answer the question:\n\nWhat is the number of senior citizens who do not have diabetes?",
+    "options": {
+      "A": "7",
+      "B": "5",
+      "C": "31",
+      "D": "26"
+    },
+    "solution": "Solution\n\nThe Venn diagram given below:\n\nThe shaded part represent the number of senior citizens who do not have diabetes = 26 + 5 = 31 (Here we take the all number of rectangle except the numbers which include in circle also).\n\nHence, the correct answer is \"31\".\n\nMistake Points\nWe are not include the numbers 7 and 18 whereas they are also part of rectangle. because they are part of circle (which represent the Diabetic) and question asked about the Senior citizen who do not have Diabetes.",
+    "topic": "Venn Diagram",
+    "subtopic": "Logical Venn Diagrams",
+    "conceptTested": "Extraction of specific region counts from intersecting geometric shapes based on conditional exclusion.",
+    "tags": {
+      "topic": "Venn Diagram",
+      "subtopic": "Logical Venn Diagrams",
+      "conceptTested": "Extraction of specific region counts from intersecting geometric shapes based on conditional exclusion."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 24",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:40",
+    "avgTime": "00:19",
+    "questionText": "How many such '7's are there in the following number series which are immediately preceded by '6' but not immediately followed by 5?\n\n7 5 2 7 6 5 3 6 7 4 3 4 7 8 5 3 7 6 7 2 5 0 6 7 5 3",
+    "options": {
+      "A": "5",
+      "B": "4",
+      "C": "3",
+      "D": "2"
+    },
+    "solution": "Solution\n\nThe given series is\n\n7 5 2 7 6 5 3 6 7 4 3 4 7 8 5 3 7 6 7 2 5 0 6 7 5 3\n\nThere are 2 such 7s in the series that are immediately preceded by 6 but not immediately followed by 5.\n\nHence, the correct answer is 2.",
+    "topic": "Alphabet Test",
+    "subtopic": "Vowel-Consonant Operations",
+    "conceptTested": "Counting specific symbol or number occurrences under immediate predecessor and successor constraints within a sequence.",
+    "tags": {
+      "topic": "Alphabet Test",
+      "subtopic": "Vowel-Consonant Operations",
+      "conceptTested": "Counting specific symbol or number occurrences under immediate predecessor and successor constraints within a sequence."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 25",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:15",
+    "avgTime": "00:27",
+    "questionText": "Statement: The richer we are the more self-centered we become and neglect other's needs.\n\nConclusions:\nI. All rich are self-centered.\nII. Those who neglect other's needs are rich.\n\nDetermine which of the given conclusions logically follows from the statement.",
+    "options": {
+      "A": "Only conclusion I is true.",
+      "B": "Only conclusion II is true.",
+      "C": "Both I and II are true.",
+      "D": "Neither I nor II is true."
+    },
+    "solution": "Solution\n\nOption 4.Neither I nor II is true.\n\nThe statement shares an idea that the richer a person gets the more self-centered he becomes and ignores others.\n\nFrom what is supplied it cannot be concluded that all the rich are self-centered. This is a generic conclusion and may not hold true for all the rich. Therefore conclusion I does not follow.\n\nAlso from the supplied statement, we cannot conclude the converse that those who are selfish and neglect other's needs are necessarily rich. Therefore, conclusion II does not follow.\n\nHence, option 4 is correct.",
+    "topic": "Statement & Conclusion",
+    "subtopic": "Critical verbal reasoning deduction from statements",
+    "conceptTested": "Evaluating whether universal generalizations or converses logically follow from a given conditional premise.",
+    "tags": {
+      "topic": "Statement & Conclusion",
+      "subtopic": "Critical verbal reasoning deduction from statements",
+      "conceptTested": "Evaluating whether universal generalizations or converses logically follow from a given conditional premise."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 1",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "00:02",
+    "avgTime": "00:46",
+    "questionText": "Which of the following mineral's reserve is found in the coal fields of Jharia and Bokaro in the State?",
+    "options": {
+      "A": "Granite",
+      "B": "Coalbed Methane",
+      "C": "Feldspar",
+      "D": "Ilmenite"
+    },
+    "solution": "Solution\n\nThe correct answer is Coalbed Methane.\n\nKey Points\nJharia Coalfield is the largest coal field in India, with an estimated reserve of 19.4 billion tonnes of coking coal.\nBokaro coal field is the second-largest coal field in India, with an estimated reserve of 13.5 billion tonnes of coking coal.\nThe coalbed methane (CBM) potential of the Jharia and Bokaro coal fields is also significant, with an estimated CBM resource of 50 trillion cubic feet (TCF).\nCBM is a natural gas that is found in coal seams. It is a clean-burning fuel that can be used to generate electricity, heat homes and businesses, and power vehicles.\nThe development of the CBM industry in the Jharia and Bokaro coal fields has the potential to create significant economic benefits for the region.",
+    "topic": "Indian Drainage & Physiography",
+    "subtopic": "Minerals and Coal Fields",
+    "conceptTested": "Knowledge of major mineral reserves and coal fields in India.",
+    "tags": {
+      "topic": "Indian Drainage & Physiography",
+      "subtopic": "Minerals and Coal Fields",
+      "conceptTested": "Knowledge of major mineral reserves and coal fields in India."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 2",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "49:24",
+    "avgTime": "00:37",
+    "questionText": "Match the agricultural revolutions with their respective products for which they were implemented:\n1. Grey Revolution - A. Oilseeds\n2. Brown Revolution - B. Fertilizer\n3. Pink Revolution - C. Leather\n4. Yellow Revolution - D. Shrimp\n\nChoose the correct matching option:",
+    "options": {
+      "A": "1-C, 2-D, 3-A, 4-B",
+      "B": "1-B, 2-C, 3-D, 4-A",
+      "C": "1-D, 2-C, 3-A, 4-B",
+      "D": "1-D, 2-A, 3-B, 4-C"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 2.\n\nKey Points\nGrey Revolution refers to the increased production and usage of fertilizers to boost agricultural productivity.\nBrown Revolution focuses on the growth of industries related to leather production and cocoa.\nPink Revolution is associated with the production and processing of shrimp and meat, particularly poultry.\nYellow Revolution refers to the increased production of oilseeds in India.\nThe correct matching is:\n1. Grey Revolution - Fertilizer\n2. Brown Revolution - Leather\n3. Pink Revolution - Shrimp\n4. Yellow Revolution - Oilseeds\n\nAdditional Information\nRevolution Terminology in Agriculture:\nAgricultural revolutions in India are named after colors to signify specific sectors of growth and innovation.\nThese revolutions highlight the efforts made to achieve self-sufficiency in various agricultural products.\nGreen Revolution:\nLed by M.S. Swaminathan, it focused on increasing the production of food grains, especially wheat and rice.\nIt played a crucial role in making India self-sufficient in food production during the 1960s and 1970s.\nWhite Revolution:\nAssociated with milk production, it was spearheaded by Verghese Kurien, known as the \"Father of the White Revolution.\"\nThis revolution made India the largest producer of milk and dairy products.\nBlue Revolution:\nRefers to the growth of aquaculture and fisheries in India.\nIt aimed to increase the production of fish and marine products to meet growing demand.\nGolden Revolution:\nFocused on the production of horticultural products, such as fruits, vegetables, and flowers.\nIt played a significant role in enhancing India's agricultural export potential.",
+    "topic": "Government Schemes & Policies",
+    "subtopic": "Agricultural Revolutions",
+    "conceptTested": "Association of color-coded agricultural revolutions with their respective target products.",
+    "tags": {
+      "topic": "Government Schemes & Policies",
+      "subtopic": "Agricultural Revolutions",
+      "conceptTested": "Association of color-coded agricultural revolutions with their respective target products."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 3",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "B",
+    "userTime": "00:18",
+    "avgTime": "00:36",
+    "questionText": "With reference to depositional landforms, consider the following statements:\n1. Oxbow lakes are formed due to deposition of sediments on the concave side of meanders.\n2. Natural levees are raised embankments formed due to sediment deposition along riverbanks.\n3. Floodplains are replenished with nutrients during floods, making them highly fertile.\nHow many of the statements given above are correct?",
+    "options": {
+      "A": "Only one",
+      "B": "Only two",
+      "C": "All three",
+      "D": "None"
+    },
+    "solution": "Solution\n\nThe correct answer is Only two.\n\nKey Points\nStatement 1: Oxbow lakes are formed due to deposition of sediments on the concave side of meanders. ✘ Incorrect\nIn a meandering river, erosion occurs on the concave (outer) bank and deposition occurs on the convex (inner) bank. Oxbow lakes are formed when a meander loop gets cut off from the main river channel.\nStatement 2: Natural levees are raised embankments formed due to sediment deposition along riverbanks. ✔ Correct\nDuring floods, rivers deposit heavier sediments near their banks, gradually building up natural embankments called natural levees.\nStatement 3: Floodplains are replenished with nutrients during floods, making them highly fertile. ✔ Correct\nFloodwaters spread fine alluvial sediments rich in nutrients over adjacent lands, increasing soil fertility.\nHence, only two statements are correct.\n\nAdditional Information\nOxbow Lake:\nFormed when a meander loop is cut off from the main river channel.\nCommon in mature and old-stage rivers.\nNatural Levees:\nRaised ridges formed naturally by flood deposition along riverbanks.\nHelp confine river flow during normal conditions.\nFloodplains:\nFlat areas adjacent to rivers formed by repeated deposition of alluvium.\nAmong the most fertile agricultural regions in the world.",
+    "topic": "Indian Drainage & Physiography",
+    "subtopic": "Fluvial Depositional Landforms",
+    "conceptTested": "Erosion occurs on the concave side and deposition occurs on the convex side of river meanders, leading to features like floodplains and natural levees.",
+    "tags": {
+      "topic": "Indian Drainage & Physiography",
+      "subtopic": "Fluvial Depositional Landforms",
+      "conceptTested": "Erosion occurs on the concave side and deposition occurs on the convex side of river meanders, leading to features like floodplains and natural levees."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 4",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:05",
+    "avgTime": "00:18",
+    "questionText": "Indian classical ragas, by the number of notes, can be divided into _____ main categories or Jatis.",
+    "options": {
+      "A": "seven",
+      "B": "four",
+      "C": "three",
+      "D": "five"
+    },
+    "solution": "Solution\n\nThe Correct answer is three.\n\nKey Points\nIn Indian classical music, ragas can be classified into three main categories, also known as Jatis, based on the number of notes used.\nThese categories are Audava (pentatonic, using 5 notes), Shadava (hexatonic, using 6 notes), and Sampurna (heptatonic, using 7 notes).\nThis classification helps in identifying the basic structure of ragas and their melodic patterns.\nAudava ragas are simpler and often associated with folk music or devotional songs.\nShadava ragas offer slightly more complexity and are used in various classical compositions.\nSampurna ragas are the most complex, utilizing all seven notes, and are commonly used in more elaborate classical music.\nThe classification into Jatis is an essential aspect of Indian music theory, aiding musicians and learners in understanding and performing ragas.\nThis system showcases the richness and diversity of Indian classical music, reflecting its ability to adapt to different moods and themes.",
+    "topic": "Music & Musical Instruments",
+    "subtopic": "Indian Classical Music - Ragas & Jatis",
+    "conceptTested": "Classification of Indian classical ragas into three main categories (Audava, Shadava, and Sampurna) based on the number of notes.",
+    "tags": {
+      "topic": "Music & Musical Instruments",
+      "subtopic": "Indian Classical Music - Ragas & Jatis",
+      "conceptTested": "Classification of Indian classical ragas into three main categories (Audava, Shadava, and Sampurna) based on the number of notes."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 5",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:06",
+    "avgTime": "00:14",
+    "questionText": "Who is the author of the book titled \"75 Years of Indian Sports – Game, Guts, Glory\"?",
+    "options": {
+      "A": "Sanjay Baru",
+      "B": "Ronojoy Sen",
+      "C": "Chandresh Narayanan",
+      "D": "Dr. Jagdish Pillai"
+    },
+    "solution": "Solution\n\nThe correct answer is Chandresh Narayanan.\n\nKey Points\nChandresh Narayanan is the author of the book titled \"75 Years of Indian Sports – Game, Guts, Glory\".\nThe book provides a comprehensive overview of India’s sports history, achievements, and challenges over 75 years since independence.\nIt covers various sports disciplines, iconic moments, and contributions of Indian athletes to the global sports arena.\nThe book highlights the evolution of sports in India, including milestones in cricket, hockey, badminton, athletics, and more.\nChandresh Narayanan is a seasoned sports journalist with extensive knowledge and experience covering Indian and international sports.\n\nAdditional Information\nSanjay Baru\nSanjay Baru is an Indian political commentator, policy analyst, and writer.\nHe is known for his book \"The Accidental Prime Minister\", which was a memoir about his tenure as media adviser to former Prime Minister Dr. Manmohan Singh.\nHe has expertise in economics and public policy but is not associated with sports literature.\nRonojoy Sen\nRonojoy Sen is a historian and author specializing in Indian politics, history, and culture.\nHe authored \"Nation at Play: A History of Sport in India\", which explores the history of sports in India but is not linked to the book \"75 Years of Indian Sports – Game, Guts, Glory\".\nHis work focuses on the socio-cultural impact of sports in India rather than a celebratory account.\nDr. Jagdish Pillai\nDr. Jagdish Pillai is not a widely recognized author in the domain of sports literature.\nThere is limited information available about his contributions to the field, and he is not associated with the book \"75 Years of Indian Sports – Game, Guts, Glory\".",
+    "topic": "Books & Authors",
+    "subtopic": "Recent Sports Literature",
+    "conceptTested": "Authorship of notable contemporary non-fiction and sports books in India.",
+    "tags": {
+      "topic": "Books & Authors",
+      "subtopic": "Recent Sports Literature",
+      "conceptTested": "Authorship of notable contemporary non-fiction and sports books in India."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 6",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:09",
+    "avgTime": "00:15",
+    "questionText": "The Kali Topi dance is performed on:",
+    "options": {
+      "A": "Indian Independence day",
+      "B": "Indian Republic day",
+      "C": "Sikkimese New Year day",
+      "D": "Assamese New Year day"
+    },
+    "solution": "Solution\n\nThe correct answer is Sikkimese New Year day.\n\nKey Points\nThe Kali Topi dance is a traditional folk dance performed during the Sikkimese New Year celebrations, also known as Losoong or Namsoong.\nThis dance is a part of the Bhutia community’s cultural heritage in the Indian state of Sikkim.\nIt is performed to mark the harvest season and to welcome the new year with blessings for prosperity and well-being.\nThe dance features performers in traditional attire, including the characteristic black hats (Kali Topi), symbolizing their distinct identity.\nLosoong is celebrated in the 10th month of the Tibetan lunar calendar, corresponding to December or January in the Gregorian calendar.\n\nAdditional Information\nLosoong Festival:\nLosoong is a major festival celebrated by the Bhutia, Lepcha, and other communities of Sikkim.\nIt marks the end of the harvest season and the beginning of the Sikkimese New Year.\nTraditional rituals, prayers, and cultural performances like the Black Hat dance and Chaam dances are highlights of the celebrations.\nNamsoong Festival:\nNamsoong is the Lepcha community’s version of the New Year celebration, coinciding with Losoong.\nIt emphasizes harmony with nature and involves rituals to express gratitude for the harvest.\nChaam Dance:\nChaam dances are ritualistic masked dances performed in monasteries during Losoong.\nThey depict tales of good triumphing over evil and are a significant spiritual aspect of the festival.\nSikkim’s Cultural Diversity:\nSikkim is home to diverse ethnic groups, including Bhutias, Lepchas, and Nepalis, each contributing to the state’s vibrant cultural fabric.\nThe state celebrates a wide range of festivals reflecting its rich heritage and traditions.",
+    "topic": "Festivals & Fairs",
+    "subtopic": "Folk Dances of North-East India",
+    "conceptTested": "Traditional folk dances and cultural festivals associated with the Sikkimese New Year.",
+    "tags": {
+      "topic": "Festivals & Fairs",
+      "subtopic": "Folk Dances of North-East India",
+      "conceptTested": "Traditional folk dances and cultural festivals associated with the Sikkimese New Year."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 9",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:25",
+    "avgTime": "00:19",
+    "questionText": "Which Article, under the Constitution of India, empowers the Government of India to levy and collect Goods and Services Tax?",
+    "options": {
+      "A": "Article 266",
+      "B": "Article 268 A",
+      "C": "Article 269 A",
+      "D": "Article 271 A"
+    },
+    "solution": "Solution\n\nThe correct answer is Article 269 A.\n\nKey Points\nArticle 269A was introduced under the Constitution of India by the 101st Constitutional Amendment Act, 2016 to implement the Goods and Services Tax (GST) regime.\nThis article allows both the Central Government and the State Governments to levy and collect GST on inter-state trade or commerce.\nThe revenues collected under GST on inter-state trade are shared between the Centre and the states based on a formula prescribed by the Goods and Services Tax Council.\nIt provides the framework for Integrated GST (IGST), which is levied on inter-state transactions and imports.\n\nAdditional Information\nArticle 266\nDeals with Consolidated Fund of India and allocation of receipts and expenditures.\nForms the basis for government accounting and financial management.\nArticle 268A\nRelated to levy and collection of duties of excise on certain goods levied by the Union but collected by the states.\nArticle 271A\nDoes not exist; sometimes confused with Articles 271 and 271A, which deal with taxation of certain goods and cess but not directly GST.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Taxation and Financial Relations",
+    "conceptTested": "Provisions of the 101st Constitutional Amendment Act, 2016 and Article 269A regarding GST on inter-state trade.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Taxation and Financial Relations",
+      "conceptTested": "Provisions of the 101st Constitutional Amendment Act, 2016 and Article 269A regarding GST on inter-state trade."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 11",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:08",
+    "avgTime": "00:19",
+    "questionText": "The tribal festival of Bhagoria is traditionally celebrated a week prior to which Hindu festival?",
+    "options": {
+      "A": "Diwali",
+      "B": "Holika Dahan",
+      "C": "Navratri",
+      "D": "Makar Sankranti"
+    },
+    "solution": "Solution\n\nThe correct answer is Holika Dahan.\n\nKey Points\nThe tribal festival of Bhagoria is celebrated predominantly by the Bhil and Bhilala tribes of the Indian states of Madhya Pradesh and Maharashtra.\nIt is traditionally celebrated a week prior to the Hindu festival of Holika Dahan, which marks the beginning of the spring season.\nBhagoria Haat: The festival is celebrated in the form of a fair known as the Bhagoria Haat, which acts as a marketplace and marriage fair where eligible young individuals choose their life partners.\nThe celebration involves vibrant cultural activities, including tribal dance, music, and rituals that reflect the rich tradition and customs of these communities.\nThe name \"Bhagoria\" is derived from the word 'Bhag' (to run away), symbolizing the tradition where couples elope and later gain acceptance from their families.\nThe festival coincides with agricultural activities, marking the completion of harvesting and symbolizing prosperity and joy.\nHolika Dahan: This festival, also known as Chhoti Holi, is celebrated one day before Holi to signify the victory of good over evil, particularly the mythological story of Prahlada and Holika.\nThe association of Bhagoria with Holika Dahan highlights the tribal communities' integration of their customs with broader Hindu festivals. Hence, the correct answer is Holika Dahan.\n\nAdditional Information\nBhagoria Festival:\nThe Bhagoria festival is an integral part of the indigenous culture of the Bhil and Bhilala tribes, celebrated with enthusiasm and joy.\nLocation: It is primarily celebrated in the Jhabua and Alirajpur districts of Madhya Pradesh and in parts of Maharashtra.\nThe festival serves as an occasion for social bonding and allows tribal communities to showcase their unique traditions.\nHolika Dahan:\nDate: Holika Dahan occurs on the Purnima (full moon) night of the Hindu lunar month of Phalguna, generally in February or March.\nIt symbolises the victory of good over evil, commemorating the tale of Prahlada, a devotee of Lord Vishnu, and Holika, his evil aunt.\nThe festival is celebrated by lighting bonfires and performing rituals to cleanse negativity and bring prosperity.\nTribal Festivals:\nTribal festivals like Bhagoria reflect the distinct cultural heritage of indigenous communities in India.\nThey often coincide with agricultural cycles, emphasizing the importance of nature and community in tribal life.\nOther notable tribal festivals include Hornbill Festival in Nagaland and Baneshwar Fair in Rajasthan.\n\nImportant Points\n\nDistinctive Cultural Practices:\nBhagoria Haat is a rare festival that combines social, cultural, and economic aspects, serving as a marriage fair and a market for tribal communities.\nThe vibrant costumes, traditional music, and colorful rituals during Bhagoria showcase the rich tribal heritage of the region.\nConnection with Holika Dahan:\nThe timing of Bhagoria, a week before Holika Dahan, integrates tribal festivities with the broader Hindu tradition, reflecting cultural syncretism.\nBoth festivals signify joy, renewal, and the celebration of life, highlighting the importance of community and tradition.",
+    "topic": "Festivals & Fairs",
+    "subtopic": "Tribal Festivals of India",
+    "conceptTested": "Knowledge of regional tribal festivals like Bhagoria and their association with Hindu seasons and traditions.",
+    "tags": {
+      "topic": "Festivals & Fairs",
+      "subtopic": "Tribal Festivals of India",
+      "conceptTested": "Knowledge of regional tribal festivals like Bhagoria and their association with Hindu seasons and traditions."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 12",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "00:17",
+    "avgTime": "00:22",
+    "questionText": "What is the primary purpose of the SAMPANN system launched for DoT pensioners?",
+    "options": {
+      "A": "Online management and disbursal of pensions",
+      "B": "Providing health insurance to retired employees",
+      "C": "Tracking telecom network infrastructure",
+      "D": "Monitoring employee attendance in DoT"
+    },
+    "solution": "Solution\n\nThe correct answer is Online management and disbursal of pensions.\n\nIn News\nSAMPANN (System for Accounting and Management of Pension) is an integrated online pension management system for Department of Telecommunications (DoT) pensioners, enabling direct pension disbursal and digital grievance redressal.\n\nKey Points\nProcesses, sanctions, and disburses pensions directly to DoT pensioners’ bank accounts through a single online platform.\nProvides online grievance redressal, digital profile management, and transaction records.\nEnhances transparency and efficiency in pension management for telecom retirees.\nPension-related documents like Gratuity Payment Orders, Pension Certificates/ePPOs, Pension Commutation Orders, and Form 16 are available via DigiLocker.\n\nAdditional Information\nSAMPANN System\nLaunched to modernize pension management for Department of Telecommunications retirees.\nEnsures timely and accurate pension payments with minimal manual intervention.\nDigiLocker Integration\nFacilitates secure access to digital copies of pension-related documents.\nReduces dependency on physical documentation and paperwork.\nBenefits for Pensioners\nReal-time tracking of pension status.\nEasy lodging and resolution of grievances online.\nTransparent record-keeping and accountability.\nDoT Pensioners\nRetired employees of the Department of Telecommunications.\nPreviously relied on manual pension processing, now streamlined digitally via SAMPANN.",
+    "topic": "Government Schemes & Policies",
+    "subtopic": "Pension Schemes and Portals",
+    "conceptTested": "Objectives and features of digital governance initiatives like the SAMPANN system for telecom retirees.",
+    "tags": {
+      "topic": "Government Schemes & Policies",
+      "subtopic": "Pension Schemes and Portals",
+      "conceptTested": "Objectives and features of digital governance initiatives like the SAMPANN system for telecom retirees."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 13",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:14",
+    "avgTime": "00:27",
+    "questionText": "With reference to the International Atomic Energy Agency (IAEA), consider the following statements:\n\nAssertion (A): The International Atomic Energy Agency promotes the peaceful use of nuclear energy.\nReason (R): The Agency conducts safeguards inspections to prevent diversion of nuclear material for military purposes.",
+    "options": {
+      "A": "Both A and R are correct and R explains A",
+      "B": "Both A and R are correct but R does not explain A",
+      "C": "A is correct but R is incorrect",
+      "D": "A is incorrect but R is correct"
+    },
+    "solution": "Solution\n\nThe correct answer is Option A.\n\nKey Points\nThe IAEA was established to encourage and assist research, development, and practical application of nuclear energy for peaceful purposes.\nA core function of the IAEA is the implementation of safeguards, which involve inspections and verification measures.\nThese safeguards ensure that nuclear materials and facilities are not diverted to nuclear weapons or other military uses.\nAssertion (A): Correct — Promoting peaceful use of nuclear energy is a foundational objective of the IAEA.\nReason (R): Correct — Safeguards inspections are a principal mechanism through which the IAEA ensures peaceful use.\nThe safeguards system directly supports and explains how the IAEA promotes peaceful nuclear energy.\n\nHow Reason (R) explains Assertion (A):\n\nAssertion (A) states that the International Atomic Energy Agency (IAEA) promotes the peaceful use of nuclear energy.\nReason (R) explains the mechanism through which this objective is achieved:\nBy conducting safeguards inspections, the IAEA verifies that nuclear materials, facilities, and technologies meant for civilian purposes are not diverted for military or weapons use.\nThis assurance builds international trust and confidence, enabling countries to cooperate in nuclear energy for power generation, medicine, agriculture, and research.\nWithout such safeguards, civilian nuclear programs could mask weapons development, undermining peaceful use.\n\nTherefore, R explains A because safeguarding nuclear material against military diversion is the practical tool that ensures nuclear energy remains strictly peaceful, directly fulfilling the IAEA’s core mandate.\n\nThus, both A and R are correct, and R explains A → Option A.\n\nAdditional Information\nThe IAEA was established in 1957 as an autonomous organization under the UN system.\nIts functions rest on three pillars: Safeguards and Verification, Safety and Security, and Science and Technology.\nThe safeguards system operates primarily under the Nuclear Non-Proliferation Treaty (NPT) framework.",
+    "topic": "International Organisations",
+    "subtopic": "United Nations Agencies (IAEA)",
+    "conceptTested": "Dual mandate of the IAEA regarding the promotion of peaceful nuclear technology and nuclear safeguards implementation.",
+    "tags": {
+      "topic": "International Organisations",
+      "subtopic": "United Nations Agencies (IAEA)",
+      "conceptTested": "Dual mandate of the IAEA regarding the promotion of peaceful nuclear technology and nuclear safeguards implementation."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 15",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:08",
+    "avgTime": "00:17",
+    "questionText": "Which of the following statements are correct?\n(1) Calling Attention Motion is an Indian innovation.\n(2) Calling Attention Motion is not mentioned in the Rules of Procedure.",
+    "options": {
+      "A": "Only (2)",
+      "B": "Only (1)",
+      "C": "Both (1) and (2)",
+      "D": "None of the above"
+    },
+    "solution": "Solution\n\nThe Correct answer is Only (1).\n\nKey Points\nCalling Attention Motion is an Indian parliamentary innovation. It is not found in parliamentary systems of other countries and is unique to India.\nThis motion allows members of the Parliament to call the attention of a minister to a matter of public importance which requires immediate intervention and explanation.\nThe motion combines elements of both a question and a debate, making it an effective tool for ensuring accountability in governance.\nIt is an important parliamentary procedure for drawing attention to pressing matters such as policy issues, crises, or administrative lapses.\nCalling Attention Motion is explicitly mentioned in the Rules of Procedure and Conduct of Business in Lok Sabha, signifying its official recognition in parliamentary proceedings.\nThis procedure reflects the democratic principle of ensuring transparency and keeping the government accountable to its people.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Parliamentary Procedures & Motions",
+    "conceptTested": "Features and procedural rules of Indian parliamentary innovations like the Calling Attention Motion.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Parliamentary Procedures & Motions",
+      "conceptTested": "Features and procedural rules of Indian parliamentary innovations like the Calling Attention Motion."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 17",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:02",
+    "avgTime": "00:33",
+    "questionText": "Which statement correctly states the legal effect of Article 255 regarding assent to bills?",
+    "options": {
+      "A": "A State law becomes invalid without a written assent from the Governor.",
+      "B": "Assent must always be explicitly mentioned for the law to operate.",
+      "C": "A law remains valid even if prior recommendation was missing, provided assent is given later.",
+      "D": "Presidential assent must be obtained before the bill passes in the legislature."
+    },
+    "solution": "Solution\n\nThe correct answer is A law remains valid even if prior recommendation was missing, provided assent is given later..\n\nKey Points\nArticle 255 of the Constitution of India deals with the validity of laws even in cases where the prior recommendation or assent required was not initially obtained.\nIt states that if the required recommendation is missing, the law will not become invalid, as long as the necessary assent is given later.\nThis provision ensures that procedural lapses in obtaining prior recommendation do not affect the legality or enforceability of the law. Hence, the statement is correct.\nFor example, a bill requiring the Governor's recommendation or the President's assent can still be validated if the assent is granted subsequently, as per Article 255.\nIt ensures smooth legislative functioning and avoids unnecessary invalidation of laws due to procedural errors. Hence, the correct option explains this legal safeguard.\n\nAdditional Information\nArticle 255 of the Constitution of India:\nArticle 255 is aimed at ensuring that minor procedural lapses do not result in the invalidation of laws or legislative decisions.\nIt provides flexibility in cases where prior recommendations (Governor’s or President’s) may not have been obtained initially but are granted later.\nExample: If a state legislature passes a bill requiring the President's prior recommendation, the bill remains valid if the President grants assent afterward.\nRole of Assent in Legislative Process:\nAssent is the final approval required for a bill to become law. It can be granted by the Governor or the President, depending on the type of bill.\nBills requiring prior recommendation include money bills and bills affecting the powers or interests of the states.\nExamples of Legislative Safeguards:\nThe provision under Article 255 has been used to validate laws passed without prior recommendation, ensuring legislative efficiency.\nFor example, financial bills requiring the Governor’s recommendation can still be validated after the Governor grants assent.\n\nImportant Points\n\nLegal Validity of Laws:\nArticle 255 ensures that procedural lapses in obtaining prior recommendation do not automatically invalidate a law. It is a significant safeguard to avoid legislative disruptions.\nThis provision highlights the importance of assent in validating laws and ensures the smooth functioning of legislative processes.\nKey Characteristics of Article 255:\nIt applies to cases requiring prior recommendations such as financial bills or bills impacting federal relations.\nIt ensures flexibility in legislative procedures, allowing the assent to be granted later without affecting the law’s validity.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Parliament & State Legislature - Legislative Procedures",
+    "conceptTested": "Legal effect of Article 255 of the Constitution of India regarding requirements of prior recommendation or assent.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Parliament & State Legislature - Legislative Procedures",
+      "conceptTested": "Legal effect of Article 255 of the Constitution of India regarding requirements of prior recommendation or assent."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 20",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:15",
+    "avgTime": "00:35",
+    "questionText": "Which of the following statements is not correct with respect to the Parliament of India?",
+    "options": {
+      "A": "The President summons each house of the Parliament to meet.",
+      "B": "The President declares the House adjourned sine die.",
+      "C": "Prorogation of the house is done by President.",
+      "D": "Prorogation terminates a session of the House."
+    },
+    "solution": "Solution\n\nOption 2 is not correct.\n\nKey Points\nThe Parliament shall meet at least twice a year. The maximum gap between two sessions of the Parliament cannot be more than six months.\nThe President from time to time summons each house of the Parliament to meet.\nThere are usually three sessions in a year :\nBudget session\nMonsoon session\nWinter session\nA sitting of a parliament can be terminated by adjournment or adjournment sine die or prorogation or dissolution.\nAdjournment: It suspends the work in a sitting for a specified time, which may be hours, days, and weeks.\nAdjournment sine die: It means terminating a sitting of Parliament for an indefinite period.\nThe power of adjournment sine die lies with the presiding officer of the House and not the president. Hence, Option 2 is correct answer of this question.\n\nAdditional Information\nProrogation: After the presiding officer declares the House adjourned sine die, within the next few days, the President issues a notification for the prorogation of the session.\nHowever, the President can also prorogue the house while in session.\nDissolution: It ends the very life of the existing house and a new house is constituted after general elections are held.\nRajya Sabha being a permanent house is not subject to dissolution, while Lok Sabha is subject to dissolution.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Parliament - Sessions, Prorogation, Adjournment & Dissolution",
+    "conceptTested": "The power of adjournment sine die lies with the presiding officer of the House, whereas summoning, prorogation, and Lok Sabha dissolution powers rest with the President.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Parliament - Sessions, Prorogation, Adjournment & Dissolution",
+      "conceptTested": "The power of adjournment sine die lies with the presiding officer of the House, whereas summoning, prorogation, and Lok Sabha dissolution powers rest with the President."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 21",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:08",
+    "avgTime": "00:24",
+    "questionText": "Which of the following statements are true about the Ruhr industrial region in Germany?\n1. It is known for its coal and steel production.\n2. It is the largest industrial region in the world.\n3. It is located in the state of North Rhine-Westphalia.\n4. It faces environmental challenges due to heavy industrialization.",
+    "options": {
+      "A": "1 and 4 only",
+      "B": "1, 3, and 4 only",
+      "C": "2 and 4 only",
+      "D": "1, 2, 3, and 4"
+    },
+    "solution": "Solution\n\nThe correct answer is 2) 1, 3, and 4 only.\n\nKey Points\nUnderstanding the statements about the Ruhr industrial region in Germany\n\nCoal and Steel Production\nThe Ruhr region has historically been known for its extensive coal mines and steel production facilities.\nThis industrial base has been a cornerstone of Germany’s economy. Hence statement 1 is correct.\nLargest Industrial Region\nWhile the Ruhr region is a major industrial hub in Germany, it is not the largest industrial region in the world.\nThere are other industrial regions globally, such as in China and the United States, that are larger in terms of production and economic scale. Hence statement 2 is incorrect.\nLocation\nThe Ruhr industrial region is located in the state of North Rhine-Westphalia in western Germany.\nThis region has been central to Germany’s industrial development. Hence statement 3 is correct.\nEnvironmental Challenges\nThe heavy industrialization in the Ruhr region has led to significant environmental challenges, including air and water pollution.\nEfforts have been made to address these issues, but they remain a concern. Hence statement 4 is correct.\n\nAdditional Information\nHistorical Significance\nThe Ruhr region emerged as an industrial powerhouse during the 19th and 20th centuries, particularly driven by its abundant coal resources.\nIts development has played a crucial role in the industrialization of Germany.\nEconomic Transformation\nIn recent years, the Ruhr region has undergone significant economic transformation, shifting from traditional heavy industry to high-tech and service-oriented industries.\nThis diversification is part of broader efforts to ensure sustainable economic growth and development in the region.\nEnvironmental Remediation\nVarious initiatives have been undertaken to mitigate the environmental impact of historic industrial activities, including brownfield redevelopment and pollution control measures.\nThese efforts are aimed at improving the quality of life for residents and ensuring a cleaner environment.",
+    "topic": "World Geography",
+    "subtopic": "Industrial Regions of the World",
+    "conceptTested": "Geographical and economic characteristics of major industrial zones such as the Ruhr region in Germany.",
+    "tags": {
+      "topic": "World Geography",
+      "subtopic": "Industrial Regions of the World",
+      "conceptTested": "Geographical and economic characteristics of major industrial zones such as the Ruhr region in Germany."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 22",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:08",
+    "avgTime": "00:15",
+    "questionText": "Under the Bharatiya Nagarik Suraksha Samhita (BNSS), default bail for minor offences is limited to how many days?",
+    "options": {
+      "A": "30 days",
+      "B": "45 days",
+      "C": "60 days",
+      "D": "90 days"
+    },
+    "solution": "Solution\n\nThe correct answer is 60 days.\n\nKey Points\nUnder the Bharatiya Nagarik Suraksha Samhita (BNSS), the provision for default bail is applicable in cases where the investigation is not completed within the prescribed timeline.\nFor minor offences, the timeline for completing investigations is 60 days. If the investigation is not completed within this period, the accused becomes eligible for default bail.\nThis provision ensures that individuals accused of minor offences are not subjected to prolonged incarceration without trial. Hence, the correct timeline is 60 days.\nThe BNSS aims to streamline criminal justice and protect the rights of individuals by limiting the duration of pretrial detention for minor offences. This provision aligns with the principles of fairness and justice in the legal system.\nIt is important to note that the timeline varies for serious offences, which typically have a longer investigation period before the provision for default bail can be invoked. Hence, the correct answer is 60 days.\n\nAdditional Information\nBharatiya Nagarik Suraksha Samhita (BNSS):\nThe BNSS is proposed as a replacement for the Code of Criminal Procedure (CrPC) in India, aiming to modernize the criminal justice system and make processes more efficient.\nIt introduces several reforms, including the timeline for investigations to ensure speedy justice and reduce the burden on the judicial system.\nDefault Bail:\nDefault bail is granted when the prosecution fails to complete the investigation within the statutory period prescribed under the law. It is a safeguard against unjustified prolonged detention.\nFor minor offences, the period is 60 days, while for serious offences, it may extend to 90 days or more, depending on the nature of the crime.\nExample: If the police fail to file a charge sheet within 60 days for a minor offence, the accused can apply for default bail under the BNSS provisions.\nKey Features of BNSS:\nThe BNSS emphasizes on reducing delays in the investigation process and protecting the rights of accused individuals.\nIt promotes transparency and accountability in the criminal justice system, ensuring better compliance with legal timelines.\nThe BNSS also provides for the digitization of records and processes to expedite judicial proceedings.\n\nImportant Points\n\nKey Legal Provisions:\nThe provision for default bail under the BNSS is rooted in the principle of safeguarding individual liberty. It ensures that no one is detained indefinitely without proper legal justification.\nThe timeline for investigations under the BNSS is strictly enforced to encourage efficiency and accountability in the police force.\nComparison with Existing Laws:\nUnder the Code of Criminal Procedure (CrPC), the timeline for default bail is similar, with 60 days for minor offences and 90 days for serious offences.\nThe BNSS aims to enhance these provisions by introducing reforms like digitization and stricter enforcement mechanisms.\nThese reforms are expected to reduce case backlogs and improve the overall efficiency of the criminal justice system.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Criminal Law & Criminal Procedure Codes",
+    "conceptTested": "Statutory timelines for completing investigations and invoking default bail under criminal procedure laws like the BNSS.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Criminal Law & Criminal Procedure Codes",
+      "conceptTested": "Statutory timelines for completing investigations and invoking default bail under criminal procedure laws like the BNSS."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 24",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:05",
+    "avgTime": "00:19",
+    "questionText": "Who received the Padma Bhushan award posthumously in the field of Literature and Education in 2025?",
+    "options": {
+      "A": "Shri Bibek Debroy",
+      "B": "Shri S. L. Bhyrappa",
+      "C": "Shri Amitav Ghosh",
+      "D": "Shri Gulzar"
+    },
+    "solution": "Solution\n\nThe correct answer is Shri Bibek Debroy.\n\nKey Points\nShri Bibek Debroy received the Padma Bhushan award posthumously in the field of Literature and Education in 2025. This recognition is one of India’s highest civilian awards, acknowledging exceptional contributions to the nation.\nThe Padma Awards are categorized into three levels: Padma Vibhushan, Padma Bhushan, and Padma Shri. The Padma Bhushan is the third-highest civilian award in India.\nShri Bibek Debroy is renowned for his extensive contributions to Indian literature, particularly in ancient Sanskrit texts, and his work in the field of economic research. Hence, the correct answer is Shri Bibek Debroy.\nThe award is often given posthumously to recognize individuals who have left a lasting impact on their respective fields, even after their demise.\nShri Bibek Debroy’s scholarly contributions include translations of ancient Indian texts like the Mahabharata and Ramayana, which have been highly acclaimed for their authenticity and accessibility.\n\nAdditional Information\nAbout Padma Awards:\nPadma Bhushan is India’s third-highest civilian award. It is given for distinguished service of a high order in any field, including literature, education, arts, science, and public affairs.\nThe awards are announced annually on the eve of Republic Day and presented by the President of India at ceremonial functions held at Rashtrapati Bhavan.\nAbout Shri Bibek Debroy:\nShri Bibek Debroy was an eminent economist, translator, and author who contributed significantly to Indian literature, Sanskrit studies, and economic policy.\nHe is best known for translating the unabridged Mahabharata, a monumental work that made this ancient text accessible to a global audience.\nHe also played a vital role as the Chairman of the Economic Advisory Council to the Prime Minister (EAC-PM), where he contributed to India’s economic policymaking.\nOther Key Recipients in Literature and Education:\nShri S. L. Bhyrappa: A celebrated Kannada novelist known for his profound exploration of Indian culture, history, and philosophy in his works.\nShri Amitav Ghosh: An internationally acclaimed author, especially known for his works on climate change and historical fiction.\nShri Gulzar: A renowned poet, lyricist, and author, widely respected for his contributions to Indian cinema and literature.\n\nImportant Points\n\nSignificance of Padma Awards:\nThe Padma Awards are a recognition of exceptional contributions to various fields, including arts, education, literature, science, social work, and public affairs.\nThey aim to celebrate and honor individuals who have significantly contributed to nation-building.\nPosthumous Awards:\nThe awards can be given posthumously to acknowledge the lasting impact of a person’s contributions. This reflects the nation’s gratitude towards their service.\nShri Bibek Debroy is a notable example of a posthumous recipient in recent years.",
+    "topic": "Awards & Honours",
+    "subtopic": "Civilian Awards (Padma Awards)",
+    "conceptTested": "Recipients of prestigious civilian honours such as the Padma Bhushan in Literature and Education.",
+    "tags": {
+      "topic": "Awards & Honours",
+      "subtopic": "Civilian Awards (Padma Awards)",
+      "conceptTested": "Recipients of prestigious civilian honours such as the Padma Bhushan in Literature and Education."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 4",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:28",
+    "avgTime": "00:28",
+    "questionText": "In a circular race of 840 m, A and B start running in the same direction at the same time from the same point at the speeds of 6 m/s and 12 m/s, respectively. After how much time will they meet next?",
+    "options": {
+      "A": "140 s",
+      "B": "20 s",
+      "C": "70 s",
+      "D": "40 s"
+    },
+    "solution": "Solution\n\nShortcut Trick\nSince A and B are moving in the same direction, their relative speed is the difference between their speeds.\n\nRelative Speed = 12 − 6 = 6 m/s\nTime to meet next = Total Distance ÷ Relative Speed\nTime = 840 ÷ 6 = 140 s\n∴ The correct answer is 140 s.\n\nAlternate Method\nGiven:\n⇒ Length of circular track (D) = 840 m\n⇒ Speed of A (SA) = 6 m/s\n⇒ Speed of B (SB) = 12 m/s\n\nFormula Used:\n⇒ Relative Speed (same direction) = |SB − SA|\n⇒ Time to meet = Total Distance ÷ Relative Speed\n\nCalculations:\n⇒ Relative Speed = 12 m/s − 6 m/s = 6 m/s\n⇒ Time to meet = 840 ÷ 6\n⇒ Time to meet = 140 s\n∴ The correct answer is 140 s.\n\nAdditional Information\nFirst Meeting Anywhere on Track\n\nWhen two persons run in the same direction, they meet for the first time when the faster person covers exactly one more round than the slower person. Time = Length of Track ÷ Relative Speed.\n\nFirst Meeting at Starting Point\n\nThe time taken to meet for the first time at the starting point is the LCM of the individual times taken by each person to complete one full round. Time = LCM(T1, T2).\n\nRunning in Opposite Directions\n\nIf two runners move in opposite directions, their relative speed is the sum of their individual speeds (S1 + S2). The time for their first meeting anywhere on the track is Track Length ÷ (S1 + S2).",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Circular Races & Relative Speed",
+    "conceptTested": "Relative speed for runners moving in the same direction on a circular track: Time = Track Length / (Speed_faster - Speed_slower).",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Circular Races & Relative Speed",
+      "conceptTested": "Relative speed for runners moving in the same direction on a circular track: Time = Track Length / (Speed_faster - Speed_slower)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 12",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "01:03",
+    "avgTime": "00:44",
+    "questionText": "In a division sum, the divisor is 13 times the quotient and 6 times the remainder. If the remainder is 39, then the dividend is:",
+    "options": {
+      "A": "4,800",
+      "B": "4,576",
+      "C": "4,251",
+      "D": "4,240"
+    },
+    "solution": "Solution\n\nShortcut Trick\nGiven Remainder = 39\nDivisor = 6 × 39 = 234\nQuotient = 234 ÷ 13 = 18\nDividend = (Divisor × Quotient) + Remainder\nDividend = (234 × 18) + 39 = 4212 + 39 = 4251\n∴ The correct answer is 4251.\n\nAlternate Method\nGiven:\nRemainder (R) = 39\nDivisor (D) = 13 × Quotient (Q)\nDivisor (D) = 6 × Remainder (R)\n\nFormula Used:\nDividend = (Divisor × Quotient) + Remainder\n\nCalculations:\n⇒ Divisor (D) = 6 × 39\n⇒ D = 234\n⇒ 234 = 13 × Q\n⇒ Q = 234 ÷ 13\n⇒ Q = 18\n⇒ Dividend = (234 × 18) + 39\n⇒ Dividend = 4212 + 39\n⇒ Dividend = 4251\n∴ The correct answer is 4251.\n\nAdditional Information\nDivision Algorithm\n\nThe fundamental relation in division is: Dividend = (Divisor × Quotient) + Remainder, where the remainder is always strictly less than the divisor.\n\nDivisibility Rule for 13\n\nTo quickly check if a number is divisible by 13, multiply the last digit by 4 and add it to the remaining truncated number. If the new result is divisible by 13, the original number is also divisible.\n\nRemainder Theorem\n\nIn polynomial algebra, when a polynomial P(x) is divided by a linear polynomial (x − a), the remainder obtained is equal to the value of P(a).",
+    "topic": "Number System",
+    "subtopic": "Division Algorithm & Remainder Theorem",
+    "conceptTested": "Division algorithm relation: Dividend = (Divisor × Quotient) + Remainder.",
+    "tags": {
+      "topic": "Number System",
+      "subtopic": "Division Algorithm & Remainder Theorem",
+      "conceptTested": "Division algorithm relation: Dividend = (Divisor × Quotient) + Remainder."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 13",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "00:40",
+    "avgTime": "00:30",
+    "questionText": "Simplify the following expression:\n((32)^4 - 1) / [3^3 × 31 × (2^10 + 1)]",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "-2",
+      "D": "-1"
+    },
+    "solution": "Solution\n\nShortcut Trick\nExpress 32 as 25, making the numerator (25)4 − 1 = 220 − 1.\nRewrite the product 33 × 31 as (32 + 1)(32 − 1) = 322 − 1 = (25)2 − 1 = 210 − 1.\nThe denominator becomes (210 − 1)(210 + 1) = (210)2 − 12 = 220 − 1.\nDivide the numerator by the denominator: (220 − 1) ÷ (220 − 1) = 1.\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nExpression: (324 − 1) ÷ [33 × 31 × (210 + 1)]\n\nFormula Used:\na2 − b2 = (a − b)(a + b)\n(am)n = am × n\n\nCalculations:\n⇒ Let's expand and simplify the denominator first.\n⇒ 33 × 31 = (32 + 1) × (32 − 1)\n⇒ Applying the a2 − b2 formula, we get 322 − 12.\n⇒ Since 32 = 25, we have (25)2 − 1 = 210 − 1.\n⇒ Now substitute this back into the denominator expression: (210 − 1) × (210 + 1).\n⇒ Again applying the a2 − b2 formula, the denominator becomes (210)2 − 12 = 220 − 1.\n⇒ Next, simplify the numerator: 324 − 1 = (25)4 − 1 = 220 − 1.\n⇒ The complete expression simplifies to (220 − 1) ÷ (220 − 1).\n⇒ Since the numerator and denominator are exactly the same, they cancel out to leave 1.\n∴ The correct answer is 1.\n\nAdditional Information\nBODMAS Rule\n\nIt dictates the precise order of mathematical operations to follow: Brackets, Orders (powers and roots), Division, Multiplication, Addition, and Subtraction.\n\nLaws of Exponents\n\nKey rules to quickly handle base numbers include am × an = am+n, am ÷ an = am−n, and (am)n = am×n.\nDifference of Squares\nThe algebraic identity a2 − b2 = (a − b)(a + b) is an essential tool frequently used to simplify large mathematical products mentally.",
+    "topic": "Simplification",
+    "subtopic": "Surds, Indices & Algebraic Identities",
+    "conceptTested": "Laws of exponents and difference of squares identity: a² - b² = (a - b)(a + b).",
+    "tags": {
+      "topic": "Simplification",
+      "subtopic": "Surds, Indices & Algebraic Identities",
+      "conceptTested": "Laws of exponents and difference of squares identity: a² - b² = (a - b)(a + b)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 14",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:11",
+    "avgTime": "00:24",
+    "questionText": "The radii of the two concentric circles are 27 cm and 18 cm. The area (in cm²) of the closed figure bounded by the boundaries of the circle is:",
+    "options": {
+      "A": "505π",
+      "B": "405π",
+      "C": "288π",
+      "D": "504π"
+    },
+    "solution": "Solution\n\nShortcut Trick\nArea of a circular ring = π × (R − r) × (R + r)\nSubstitute R = 27 and r = 18 into the formula:\n⇒ Area = π × (27 − 18) × (27 + 18)\n⇒ Area = π × 9 × 45\n⇒ Area = 405π\n∴ The correct answer is 405π cm2.\n\nAlternate Method\nGiven:\n⇒ Outer radius of the circle (R) = 27 cm\n⇒ Inner radius of the circle (r) = 18 cm\n\nFormula Used:\n⇒ Area of the bounded region (Ring) = Area of outer circle − Area of inner circle\n⇒ Area = πR2 − πr2 = π(R2 − r2)\n\nCalculations:\n⇒ Area = π × (27)2 − π × (18)2\n⇒ Area = π × (729 − 324)\n⇒ Area = 405π\n∴ The correct answer is 405π cm2.\n\nAdditional Information\nConcentric Circles\n\nConcentric circles are circles that share the exact same center point but have different radii. The region enclosed between two concentric circles is often referred to as an annulus or a circular ring.\n\nWidth of the Circular Ring\n\nThe thickness or width of the ring is uniformly distributed and can be calculated by subtracting the inner radius from the outer radius: Width = R − r.\n\nAlgebraic Identities\n\nWhen solving questions involving the difference of squares, applying the algebraic identity a2 − b2 = (a − b)(a + b) will severely reduce the calculation time and prevent squaring large values.",
+    "topic": "Mensuration 2D",
+    "subtopic": "Circles & Circular Ring / Annulus",
+    "conceptTested": "Area of a circular ring (annulus) between concentric circles of radii R and r is given by π(R² - r²).",
+    "tags": {
+      "topic": "Mensuration 2D",
+      "subtopic": "Circles & Circular Ring / Annulus",
+      "conceptTested": "Area of a circular ring (annulus) between concentric circles of radii R and r is given by π(R² - r²)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 15",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:45",
+    "avgTime": "00:33",
+    "questionText": "A motorboat, whose speed is 15 km/h in still water goes 20 km downstream and comes back in a total of 4 hours. The speed of the stream (in km/h) is:",
+    "options": {
+      "A": "4√3",
+      "B": "7√3",
+      "C": "6√3",
+      "D": "5√3"
+    },
+    "solution": "Solution\n\nShortcut Trick\nTotal Time = [ 2 × Distance × Boat Speed ] ÷ [ (Boat Speed)2 − (Stream Speed)2 ]\n4 = [ 2 × 20 × 15 ] ÷ [ 152 − v2 ]\n4 × (225 − v2) = 600\n225 − v2 = 150 ⇒ v2 = 75\nv = √75 = 5√3 km/h\n∴ The correct answer is 5√3 km/h.\n\nAlternate Method\nGiven:\nSpeed of motorboat in still water (u) = 15 km/h\nDistance (d) = 20 km\nTotal time taken (T) = 4 hours\nLet the speed of the stream be v km/h.\n\nFormula Used:\nTime = Distance ÷ Speed\nDownstream Speed = u + v\nUpstream Speed = u − v\n\nCalculations:\n⇒ Downstream Speed = (15 + v) km/h\n⇒ Upstream Speed = (15 − v) km/h\n⇒ Total Time = [Distance ÷ Downstream Speed] + [Distance ÷ Upstream Speed]\n⇒ 20 ÷ (15 + v) + 20 ÷ (15 − v) = 4\n⇒ 20 × [ (15 − v + 15 + v) ÷ (152 − v2) ] = 4\n⇒ 20 × [ 30 ÷ (225 − v2) ] = 4\n⇒ 600 ÷ (225 − v2) = 4\n⇒ 225 − v2 = 150\n⇒ v2 = 75\n⇒ v = √75 = 5√3 km/h\n∴ The correct answer is 5√3 km/h.\n\nAdditional Information\nDownstream Speed\n\nWhen the boat moves in the direction of the stream, speeds are added. Downstream Speed = Speed of Boat + Speed of Stream.\n\nUpstream Speed\n\nWhen the boat moves against the direction of the stream, speeds are subtracted. Upstream Speed = Speed of Boat − Speed of Stream.\n\nSpeed in Still Water\nIf downstream and upstream speeds are given, Speed of Boat = (Downstream Speed + Upstream Speed) ÷ 2.\nSpeed of Stream\nIf downstream and upstream speeds are given, Speed of Stream = (Downstream Speed − Upstream Speed) ÷ 2.",
+    "topic": "Boats & Streams",
+    "subtopic": "Upstream & Downstream Speed Equations",
+    "conceptTested": "Total time taken for round trip in flowing water: T = [Distance / (u + v)] + [Distance / (u - v)].",
+    "tags": {
+      "topic": "Boats & Streams",
+      "subtopic": "Upstream & Downstream Speed Equations",
+      "conceptTested": "Total time taken for round trip in flowing water: T = [Distance / (u + v)] + [Distance / (u - v)]."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 16",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:08",
+    "avgTime": "00:27",
+    "questionText": "The simple interest on a sum of money is 9/45 of the sum. If the number of years is numerically 5 times of rate per cent per annum, then find the rate per cent per annum.",
+    "options": {
+      "A": "7%",
+      "B": "2%",
+      "C": "5%",
+      "D": "3%"
+    },
+    "solution": "Solution\n\nShortcut Trick\nEffective Rate % over the entire period = (SI ÷ P) × 100\nRate × Time = (9 ÷ 45) × 100\nGiven Time (T) = 5R, we substitute T directly:\nR × 5R = (1 ÷ 5) × 100\n5R2 = 20 ⇒ R2 = 4 ⇒ R = 2\n∴ The correct answer is 2%.\n\nAlternate Method\nGiven:\nSimple Interest (SI) = 9/45 of Principal (P) = P / 5\nTime (T) = 5 × Rate (R)\n\nFormula Used:\nSimple Interest (SI) = (P × R × T) ÷ 100\n\nCalculations:\n⇒ P / 5 = (P × R × 5R) ÷ 100\n\nDividing both sides by P:\n\n⇒ 1 / 5 = 5R2 / 100\n⇒ 1 / 5 = R2 / 20\n⇒ R2 = 20 / 5\n⇒ R2 = 4\n⇒ R = √4 = 2\n∴ The correct answer is 2%.\n\nAdditional Information\nSimple Interest (SI) Basics\n\nSimple interest is charged only on the initial principal for the entire duration. The formula is SI = (P × R × T) ÷ 100.\n\nImportant Variation Formulas\n\nPrincipal (P) = (SI × 100) ÷ (R × T) | Time (T) = (SI × 100) ÷ (P × R)\n\nSimple Interest vs Compound Interest\n\nSI grows linearly over time, whereas Compound Interest (CI) grows exponentially because interest is calculated on both the principal and the accumulated interest.",
+    "topic": "Simple Interest",
+    "subtopic": "Rate and Time Relations",
+    "conceptTested": "Simple Interest formula relation: SI = (P × R × T) / 100 where T is expressed in terms of R.",
+    "tags": {
+      "topic": "Simple Interest",
+      "subtopic": "Rate and Time Relations",
+      "conceptTested": "Simple Interest formula relation: SI = (P × R × T) / 100 where T is expressed in terms of R."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 18",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:53",
+    "avgTime": "00:31",
+    "questionText": "If P sin 60° = Q cosec 45°, then the value of (P^2 + Q^2) / (P^2 - Q^2) is equal to:",
+    "options": {
+      "A": "511",
+      "B": "117",
+      "C": "115",
+      "D": "711"
+    },
+    "solution": "Solution\n\nShortcut Trick\nFrom the given equation: P/Q = cosec 45° ÷ sin 60° = √2 ÷ (√3/2) = 2√2/√3\nSquaring both sides gives: P2/Q2 = 8/3\n\nApplying the Componendo and Dividendo rule directly:\n\n(P2 + Q2) / (P2 − Q2) = (8 + 3) / (8 − 3) = 11/5\n∴ The correct answer is 11/5.\n\nAlternate Method\nGiven:\nP sin 60° = Q cosec 45°\n\nConcept Used:\n\nStandard trigonometric values: sin 60° = √3/2 and cosec 45° = √2\n\nCalculations:\n⇒ P × (√3/2) = Q × √2\n⇒ P/Q = √2 ÷ (√3/2)\n⇒ P/Q = (2√2) / √3\n\nSquaring both sides of the equation:\n\n⇒ P2/Q2 = (2√2)2 / (√3)2\n⇒ P2/Q2 = 8/3\nLet P2 = 8k and Q2 = 3k. Substituting these into the required expression:\n⇒ (P2 + Q2) / (P2 − Q2)\n⇒ (8k + 3k) / (8k − 3k)\n⇒ 11k / 5k\n⇒ 11/5\n∴ The correct answer is 11/5.\n\nAdditional Information\nComponendo and Dividendo Rule\n\nIf a/b = c/d, then (a + b) / (a − b) = (c + d) / (c − d). This property is highly useful for simplifying algebraic equations and expressions involving the sum and difference of terms.\n\nStandard Trigonometric Ratios\n\nIt is essential to remember key angle values: sin 30° = 1/2, sin 45° = 1/√2, and sin 60° = √3/2. The cosecant function is the reciprocal of sine, meaning cosec θ = 1 / sin θ.\n\nBasic Pythagorean Identities\n\nsin2θ + cos2θ = 1 | 1 + tan2θ = sec2θ | 1 + cot2θ = cosec2θ",
+    "topic": "Trigonometry",
+    "subtopic": "Trigonometric Ratios & Standard Angles",
+    "conceptTested": "Standard trigonometric values and Componendo and Dividendo rule to find (P^2 + Q^2)/(P^2 - Q^2).",
+    "tags": {
+      "topic": "Trigonometry",
+      "subtopic": "Trigonometric Ratios & Standard Angles",
+      "conceptTested": "Standard trigonometric values and Componendo and Dividendo rule to find (P^2 + Q^2)/(P^2 - Q^2)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 19",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:30",
+    "avgTime": "00:22",
+    "questionText": "The ages of A and B are in the ratio 4 : 7, respectively. After 8 years, the ratio of their ages will be 2 : 3. What is the sum of the ages of A and B (in years)?",
+    "options": {
+      "A": "44",
+      "B": "36",
+      "C": "38",
+      "D": "42"
+    },
+    "solution": "Solution\n\nShortcut Trick\nPresent ratio A : B = 4 : 7 (Gap = 7 − 4 = 3)\nFuture ratio A : B = 2 : 3 (Gap = 3 − 2 = 1) → Multiply by 3 to equalize gaps ⇒ 6 : 9\nIncrease in ratio parts for both A and B = 6 − 4 = 2 parts.\n2 parts ≡ 8 years ⇒ 1 part = 4 years.\nSum of present ages = (4 + 7) = 11 parts = 11 × 4 = 44 years.\n∴ The correct answer is 44 years.\n\nAlternate Method\nGiven:\nPresent ages of A and B are in the ratio 4 : 7\nAfter 8 years, the ratio of their ages will be 2 : 3\n\nMethod Used:\n\nEquating the age ratios using algebraic variables to find the exact multiplier.\n\nCalculations:\n⇒ Let the present ages of A and B be 4x and 7x respectively.\n⇒ After 8 years, A's age = (4x + 8) and B's age = (7x + 8)\n⇒ According to the condition: (4x + 8) ÷ (7x + 8) = 2 ÷ 3\n⇒ Cross-multiplying: 3 × (4x + 8) = 2 × (7x + 8)\n⇒ 12x + 24 = 14x + 16\n⇒ 14x − 12x = 24 − 16\n⇒ 2x = 8 ⇒ x = 4\n⇒ Sum of their present ages = 4x + 7x = 11x\n⇒ Total sum = 11 × 4 = 44 years\n∴ The correct answer is 44 years.\n\nAdditional Information\nConstant Age Difference\n\nThe difference between the ages of two individuals remains constant regardless of the years passed. This property is heavily used to equalize ratio gaps in age-related problems.\n\nCross-Multiplication in Ratios\n\nWhen a constant value is added to both terms of a ratio a : b to form a new ratio c : d, the equation (a+x)÷(b+x) = c÷d is used to directly solve for the unknown variable.\n\nFinding Present Ages\n\nAlways assume the present ages as multiples of the given ratio parts (e.g., 4x and 7x). Calculate the exact value of x before deriving final quantities like sum, difference, or future ages.",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Age Problems",
+    "conceptTested": "Equating age ratios by equalizing the ratio difference and solving for the exact multiplier.",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Age Problems",
+      "conceptTested": "Equating age ratios by equalizing the ratio difference and solving for the exact multiplier."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:09",
+    "avgTime": "00:18",
+    "questionText": "P drives a car for 5 hours and after every hour he doubles the speed. In the fifth hour, his speed is 128 km/h. What is his average speed of the journey in km/h?",
+    "options": {
+      "A": "52.6",
+      "B": "55.6",
+      "C": "49.6",
+      "D": "62.6"
+    },
+    "solution": "Solution\n\nShortcut Trick\nWhen time intervals are equal, Average Speed = Arithmetic mean of all speeds.\n\nThe speeds for the 5 hours form a geometric sequence ending in 128: 8, 16, 32, 64, 128 km/h.\n\nSum of speeds = 8 + 16 + 32 + 64 + 128 = 248 km/h.\nAverage Speed = 248 ÷ 5 = 49.6 km/h.\n∴ The correct answer is 49.6 km/h.\n\nAlternate Method\nGiven:\nTotal time taken for the journey = 5 hours\nSpeed in the 5th hour = 128 km/h\n\nThe speed doubles after every hour.\n\nFormula Used:\nDistance = Speed × Time\nAverage Speed = Total Distance ÷ Total Time\n\nCalculations:\nLet the speed in the 1st hour be v km/h.\nSpeeds in consecutive hours follow the pattern: 2v, 4v, 8v, 16v.\n⇒ Speed in the 5th hour = 16v = 128\n⇒ v = 128 ÷ 16 = 8 km/h\n\nThe distance covered in each 1-hour interval is numerically equal to the speed:\n\n⇒ Distance in 1st hour = 8 × 1 = 8 km\n⇒ Distance in 2nd hour = 16 × 1 = 16 km\n⇒ Distance in 3rd hour = 32 × 1 = 32 km\n⇒ Distance in 4th hour = 64 × 1 = 64 km\n⇒ Distance in 5th hour = 128 × 1 = 128 km\n⇒ Total Distance = 8 + 16 + 32 + 64 + 128 = 248 km\n⇒ Average Speed = 248 ÷ 5 = 49.6 km/h\n∴ The correct answer is 49.6 km/h.\n\nAdditional Information\nAverage Speed\n\nAverage speed is defined as the total distance traveled divided by the total time taken. It is not the simple average of individual speeds unless the time intervals for each speed are strictly equal.\n\nEqual Time Intervals Rule\n\nIf an object travels at different speeds v1, v2, ..., vn for equal durations of time, the average speed is simply the arithmetic mean of all the speeds: (v1 + v2 + ... + vn) ÷ n.\n\nGeometric Progression (GP)\n\nA sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number (common ratio). The sum of a GP is computed as Sn = a(rn − 1) ÷ (r − 1) for r > 1.",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Average Speed",
+    "conceptTested": "Average speed for equal time intervals is the arithmetic mean of individual speeds, combined with geometric progression.",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Average Speed",
+      "conceptTested": "Average speed for equal time intervals is the arithmetic mean of individual speeds, combined with geometric progression."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 21",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:37",
+    "avgTime": "00:23",
+    "questionText": "If A : B = 8 : 13, B : C = 5 : 8 and C : D = 4 : 5, then A : B : C : D is equal to:",
+    "options": {
+      "A": "20 : 50 : 105 : 119",
+      "B": "38 : 65 : 111 : 120",
+      "C": "40 : 60 : 103 : 112",
+      "D": "40 : 65 : 104 : 130"
+    },
+    "solution": "Solution\n\nShortcut Trick\nUsing the vertical and cross multiplication shortcut for continuous ratios:\n\nA = 8 × 5 × 4 = 160, B = 13 × 5 × 4 = 260\nC = 13 × 8 × 4 = 416, D = 13 × 8 × 5 = 520\nA : B : C : D = 160 : 260 : 416 : 520 ⇒ 40 : 65 : 104 : 130\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAlternate Method\nGiven:\nA : B = 8 : 13\nB : C = 5 : 8\nC : D = 4 : 5\n\nConcept Used:\n\nWe use the adjacent block fill method. Write the given ratios in rows and fill the empty spaces with the adjacent number in that row, then multiply the columns downwards.\n\nCalculations:\n⇒ Multiply the values in each column to get the combined ratio.\n⇒ Column A = 8 × 5 × 4 = 160\n⇒ Column B = 13 × 5 × 4 = 260\n⇒ Column C = 13 × 8 × 4 = 416\n⇒ Column D = 13 × 8 × 5 = 520\n⇒ A : B : C : D = 160 : 260 : 416 : 520\n⇒ Dividing each term by 4 to simplify the ratio, we get:\n⇒ A : B : C : D = 40 : 65 : 104 : 130\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAdditional Information\nCompound Ratio\n\nWhen two or more ratios are multiplied together, it is known as a compound ratio. For ratios a : b and c : d, the compound ratio is ac : bd.\n\nDuplicate & Sub-duplicate Ratio\n\nFor a ratio a : b, its duplicate ratio is a2 : b2, and its sub-duplicate ratio is √a : √b.\n\nComponendo and Dividendo\n\nIf a : b = c : d, then by the componendo and dividendo rule, (a + b) : (a − b) = (c + d) : (c − d).",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Combined Ratio (A : B : C : D)",
+    "conceptTested": "Combining successive ratios (A:B, B:C, C:D) into a continuous ratio (A:B:C:D) using adjacent block fill or cross-multiplication.",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Combined Ratio (A : B : C : D)",
+      "conceptTested": "Combining successive ratios (A:B, B:C, C:D) into a continuous ratio (A:B:C:D) using adjacent block fill or cross-multiplication."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 23",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:23",
+    "avgTime": "00:14",
+    "questionText": "A group of 25 tourists consume 5 containers of food in 8 days in a hotel. How many containers will be required for 10 tourists to eat for 16 days?",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "6",
+      "D": "5"
+    },
+    "solution": "Solution\n\nShortcut Trick\nUsing the Chain Rule (MDH) formula: M1 × D1 / W1 = M2 × D2 / W2\nWhere M = tourists, D = days, W = containers of food.\n⇒ (25 × 8) / 5 = (10 × 16) / W2\n⇒ 40 = 160 / W2 ⇒ W2 = 4\n∴ The correct answer is 4 containers.\n\nAlternate Method\nGiven:\nGroup 1: M1 = 25 tourists, D1 = 8 days, W1 = 5 containers\nGroup 2: M2 = 10 tourists, D2 = 16 days, W2 = ?\n\nFormula Used:\nM1 × D1 / W1 = M2 × D2 / W2\n\nCalculations:\n⇒ (25 × 8) / 5 = (10 × 16) / W2\n⇒ 200 / 5 = 160 / W2\n⇒ 40 = 160 / W2\n⇒ W2 = 160 / 40\n⇒ W2 = 4\n∴ The correct answer is 4 containers.\n\nAdditional Information\nChain Rule (MDH Formula)\n\nThe foundational formula for equivalence is M1 × D1 × H1 / W1 = M2 × D2 × H2 / W2, where M is the number of people, D is the number of days, H is the number of hours, and W is the total work done or resource consumed.\n\nDirect Proportion\n\nTwo quantities are directly proportional if they increase or decrease together at the same rate. For example, keeping the days constant, more tourists will predictably consume a proportionally higher amount of food.\n\nInverse Proportion\n\nTwo quantities are inversely proportional if an increase in one factor automatically causes a decrease in the other. For instance, given a fixed amount of food, increasing the number of tourists reduces the number of days that food will last.",
+    "topic": "Time & Work",
+    "subtopic": "Chain Rule (MDH Formula)",
+    "conceptTested": "Chain Rule formula M1 × D1 / W1 = M2 × D2 / W2 for resources consumed by groups over given periods.",
+    "tags": {
+      "topic": "Time & Work",
+      "subtopic": "Chain Rule (MDH Formula)",
+      "conceptTested": "Chain Rule formula M1 × D1 / W1 = M2 × D2 / W2 for resources consumed by groups over given periods."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 24",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:29",
+    "avgTime": "00:11",
+    "questionText": "A dealer sells an article at ₹850 after offering a cash discount of 15% on its marked price. Without discount, he would have earned a profit of 25%. What is the cost price of the article (in ₹)?",
+    "options": {
+      "A": "800",
+      "B": "950",
+      "C": "900",
+      "D": "1000"
+    },
+    "solution": "Solution\n\nShortcut Trick\nSelling Price (SP) = ₹850, Discount = 15% ⇒ MP = 850 × (100 ÷ 85) = ₹1000\nWithout discount, SP = MP = ₹1000.\nProfit = 25% ⇒ CP = 1000 × (100 ÷ 125) = ₹800.\n∴ The correct answer is ₹800.\n\nAlternate Method\nGiven:\nSelling price with discount (SP) = ₹850\nDiscount percentage = 15%\nProfit percentage without discount = 25%\n\nFormula Used:\nMP = SP × [100 ÷ (100 − Discount%)]\nCP = SPnew × [100 ÷ (100 + Profit%)]\n\nCalculations:\n⇒ Let Marked Price be MP.\n⇒ SP = MP − 15% of MP = 0.85 × MP\n⇒ 850 = 0.85 × MP\n⇒ MP = 850 × (100 ÷ 85) = ₹1000\n⇒ Without any discount, the dealer sells the article at its Marked Price.\n⇒ So, New Selling Price (SPnew) = MP = ₹1000\n⇒ At this price, Profit = 25%\n⇒ CP + 25% of CP = SPnew\n⇒ 1.25 × CP = 1000\n⇒ CP = 1000 × (100 ÷ 125)\n⇒ CP = ₹800\n∴ The correct answer is ₹800.\n\nAdditional Information\nMarked Price & Discount\n\nDiscount is always calculated on the Marked Price (MP). The formula directly yields: Selling Price = MP × (1 − Discount%).\n\nProfit/Loss Without Discount\n\nWhen a shopkeeper gives no discount on an item, the Selling Price becomes equal to the Marked Price (SP = MP). Under this condition, Profit or Loss percentage is directly estimated over the Cost Price leading up to the MP.\n\nEffective Multipliers Rule\n\nFor a given profit of P%, the selling price multiplier translates to SP = CP × (1 + P/100). Similarly, for a discount of D%, SP = MP × (1 − D/100). Equating both sides helps find any missing variable quickly.",
+    "topic": "Profit, Loss & Discount",
+    "subtopic": "Profit, Loss & Discount - Marked Price & Successive Discounts",
+    "conceptTested": "Relation between Marked Price, Selling Price, Discount, and Profit: SP = MP × (1 - Discount/100) = CP × (1 + Profit/100)",
+    "tags": {
+      "topic": "Profit, Loss & Discount",
+      "subtopic": "Profit, Loss & Discount - Marked Price & Successive Discounts",
+      "conceptTested": "Relation between Marked Price, Selling Price, Discount, and Profit: SP = MP × (1 - Discount/100) = CP × (1 + Profit/100)"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 25",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:38",
+    "avgTime": "00:11",
+    "questionText": "If x + y = 12 and xy = 6, then the value of x/y + y/x is equal to:",
+    "options": {
+      "A": "22",
+      "B": "26",
+      "C": "24",
+      "D": "18"
+    },
+    "solution": "Solution\n\nShortcut Trick\nWe need to find the value of x/y + y/x, which simplifies to (x2 + y2) ÷ xy.\n\nUsing the identity: x2 + y2 = (x + y)2 − 2xy\nSubstitute the given values (x + y = 12, xy = 6) directly into the combined formula.\nRequired value = (122 − 2 × 6) ÷ 6 = (144 − 12) ÷ 6.\nRequired value = 132 ÷ 6 = 22.\n∴ The correct answer is 22.\n\nAlternate Method\nGiven:\nx + y = 12\nxy = 6\n\nFormula Used:\n(x + y)2 = x2 + y2 + 2xy\n\nCalculations:\n⇒ (12)2 = x2 + y2 + 2 × 6\n⇒ 144 = x2 + y2 + 12\n⇒ x2 + y2 = 144 − 12\n⇒ x2 + y2 = 132\nNow, we need to find the value of the given expression:\n⇒ x/y + y/x = (x2 + y2) ÷ xy\n⇒ x/y + y/x = 132 ÷ 6\n⇒ x/y + y/x = 22\n∴ The correct answer is 22.\n\nAdditional Information\nSquare of Difference\n\n(x − y)2 = x2 + y2 − 2xy. This identity helps find the difference of variables when their sum and product are given.\nDifference of Squares\nx2 − y2 = (x − y)(x + y). A fundamental algebraic identity used widely in factorisation and simplification.\n\nSum of Cubes\n\nx3 + y3 = (x + y)(x2 − xy + y2) or equivalently, x3 + y3 = (x + y)3 − 3xy(x + y).",
+    "topic": "Algebra",
+    "subtopic": "Algebra - Algebraic Identities & Expressions",
+    "conceptTested": "Algebraic identity: x² + y² = (x + y)² − 2xy applied to rational fractional expressions.",
+    "tags": {
+      "topic": "Algebra",
+      "subtopic": "Algebra - Algebraic Identities & Expressions",
+      "conceptTested": "Algebraic identity: x² + y² = (x + y)² − 2xy applied to rational fractional expressions."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 3",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:18",
+    "avgTime": "00:26",
+    "questionText": "She had a child's inchoate awareness of language.",
+    "options": {
+      "A": "mercurial",
+      "B": "decree",
+      "C": "confused",
+      "D": "deprave"
+    },
+    "solution": "Solution\n\nThe correct answer is \"confused\"\n\nKey Points\n\"Inchoate\" means just begun and not fully formed or developed. (\"अपूर्ण\" का अर्थ अभी शुरू हुआ है और पूरी तरह से गठित या विकसित नहीं हुआ है।)\nFor example, The defendant was charged with an inchoate crime of conspiracy to commit fraud.\nIn this sentence given, it is used to describe the child's awareness of language as being in the early stages of development.\n\nLet's see the meanings of the given words\nMercurial: changing rapidly and unpredictably in mood or behaviour. (मनोदशा या व्यवहार में तेजी से और अप्रत्याशित रूप से परिवर्तन। उदाहरण: उनका एक चंचल व्यक्तित्व था, जो एक पल में खुश से क्रोधित हो जाता था)\nExample: He had a mercurial personality, switching from happy to angry in an instant.\nDecree: an official order issued by a government or other authority. (सरकार या अन्य प्राधिकरण द्वारा जारी एक आधिकारिक आदेश। उदाहरण: राजा ने सभी प्रकार के विरोधों पर प्रतिबंध लगाने का आदेश जारी किया।)\nExample: The king issued a decree banning all forms of dissent.\nConfused: unable to think clearly or understand fully. (भ्रमित: स्पष्ट रूप से सोचने या पूरी तरह से समझने में असमर्थ। उदाहरण: निर्देश इतने भ्रमित करने वाले थे कि मैं समझ नहीं पाया कि खिलौने को कैसे जोड़ा जाए।)\nExample: The instructions were so confusing that I couldn't figure out how to assemble the toy.\nDeprave: to corrupt morally or by intemperance or sensuality. (भ्रष्ट करना: नैतिक रूप से या असंयम या कामुकता से भ्रष्ट करना। उदाहरण: इस फिल्म की उसके भ्रष्ट व्यवहार के चित्रण के लिए आलोचना की गई थी।)\nExample: The movie was criticized for its depiction of depraved behaviour.\n\nAccording to the meanings of the given words, the correct answer is Option 3, i.e., confused.",
+    "topic": "Synonyms & Antonyms",
+    "subtopic": "Synonyms",
+    "conceptTested": "Vocabulary comprehension and identification of synonymous contextual meaning for advanced lexical items.",
+    "tags": {
+      "topic": "Synonyms & Antonyms",
+      "subtopic": "Synonyms",
+      "conceptTested": "Vocabulary comprehension and identification of synonymous contextual meaning for advanced lexical items."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 11",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:39",
+    "avgTime": "00:22",
+    "questionText": "A set of facts or a fixed limit that establishes or limits how something can or must happen or be done.",
+    "options": {
+      "A": "Parameter",
+      "B": "Scope",
+      "C": "Minimum",
+      "D": "Policy"
+    },
+    "solution": "Solution\n\nThe correct answer is 'Parameter'.\n\nKey Points\nLet us see the meanings of the words given:\nParameter ⇒ The factors or limits which affect the way that something can be done or made.\nScope ⇒ The extent of the area or subject matter that something deals with or to which it is relevant.\nMinimum ⇒ the least or smallest amount or quantity possible, attainable, or required.\nPolicy ⇒ A course or principle of action adopted or proposed by an organization or individual.\nFrom the above reference, it can be concluded that 'Parameter' is the correct word to substitute for the given description.\n\nHence, the correct answer is Option 1.\n\nConfusion Points\n\n'Scope' is the extent/range of the possible occurrence of something whereas 'Parameter' is what decides that extent.",
+    "topic": "One Word Substitution",
+    "subtopic": "Definitions and Descriptive Substitutions",
+    "conceptTested": "Vocabulary substitution for conceptual descriptions and formal definitions.",
+    "tags": {
+      "topic": "One Word Substitution",
+      "subtopic": "Definitions and Descriptive Substitutions",
+      "conceptTested": "Vocabulary substitution for conceptual descriptions and formal definitions."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 17",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "02:06",
+    "avgTime": "01:34",
+    "questionText": "Based on the passage, what conclusion can be drawn about modelling and predicting social change?",
+    "options": {
+      "A": "It is straightforward to account for all variables, including random personal choices and weather, in historical models.",
+      "B": "Only military and political decisions matter in shaping history.",
+      "C": "The outcomes of wars are never influenced by chance.",
+      "D": "Models of social change must contend with unpredictable and unquantifiable variables that can alter outcomes dramatically."
+    },
+    "solution": "Solution\n\nThe correct answer is: Option (4) i.e. Models of social change must contend with unpredictable and unquantifiable variables that can alter outcomes dramatically.\n\nKey Points\nThe author points out that random factors such as travel itineraries and passing clouds played decisive roles in major historical outcomes, suggesting that models of social change face immense challenges due to such unpredictable variables.\nThe other options are contradicted by the passage, which emphasizes the complexity and unpredictability of historical causality rather than straightforward calculation or exclusive focus on military/political decisions.\n\nTherefore, the correct answer is- Models of social change must contend with unpredictable and unquantifiable variables that can alter outcomes dramatically.\n\nAdditional Information\nIt is straightforward to account for all variables, including random personal choices and weather, in historical models: The passage says this is extremely difficult, if not impossible.\nOnly military and political decisions matter in shaping history: The passage shows chance and personal factors also matter greatly.\nThe outcomes of wars are never influenced by chance: The passage gives examples where chance was decisive.",
+    "topic": "Reading Comprehension",
+    "subtopic": "Inference and Deductive Reasoning",
+    "conceptTested": "Drawing valid logical conclusions based on passage arguments regarding historical predictability and social change.",
+    "tags": {
+      "topic": "Reading Comprehension",
+      "subtopic": "Inference and Deductive Reasoning",
+      "conceptTested": "Drawing valid logical conclusions based on passage arguments regarding historical predictability and social change."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 24",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:33",
+    "avgTime": "00:19",
+    "questionText": "Select the incorrectly spelt word from the given sentence.\nSome people regard a fear of new things as an unmistakable sign of a provincial atitude.",
+    "options": {
+      "A": "provincial",
+      "B": "atitude",
+      "C": "Some",
+      "D": "unmistakable"
+    },
+    "solution": "Solution\n\nThe correct answer is: Option 2.\n\nKey Points\nThe word \"atitude\" is incorrectly spelt. It should be \"attitude\". The word \"attitude\" means a settled way of thinking or feeling about something. (रवैया)\nExample: She has a positive attitude towards life.\n\"Attitude\" refers to a way of thinking or feeling about someone or something, typically one that is reflected in a person's behavior. (रवैया)\nExample: His attitude towards work is very professional.\nTherefore, the correct answer is: Option 2.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nProvincial (प्रांतीय): Relating to a province or the regions outside the capital city of a country, especially when regarded as unsophisticated or narrow-minded.\nExample: His provincial manners were charmingly old-fashioned.\nSome (कुछ): A certain unspecified number or amount.\nExample: Some people prefer tea over coffee.\nUnmistakable (स्पष्ट): Not able to be mistaken for anything else; very distinctive.\nExample: The unmistakable sound of her laughter filled the room.",
+    "topic": "English Comprehension",
+    "subtopic": "Spelling Errors",
+    "conceptTested": "Identification of incorrectly spelt words (attitude vs atitude)",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Spelling Errors",
+      "conceptTested": "Identification of incorrectly spelt words (attitude vs atitude)"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 2",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 25",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "A",
+    "userTime": "00:23",
+    "avgTime": "00:21",
+    "questionText": "Choose the correct sequence of tenses.\nAfter the movie ________, we ________ to a café.",
+    "options": {
+      "A": "ended, went",
+      "B": "ends, go",
+      "C": "ended, goes",
+      "D": "end, went"
+    },
+    "solution": "Solution\n\nThe correct answer is Option (1) i.e. \"ended, went\".\n\nKey Points\nProgression of Past Events: This sentence describes actions in sequence, each completed in the past.\n\"Ended\" appropriately captures the movie's conclusion.\n\"Went\" effectively indicates the subsequent activity of moving to a café.\n\nTherefore, the correct answer is \"After the movie ended, we went to a café.\"\n\nAdditional Information\n\"Ends, go\" uses present tense forms, unsuitable for recounting past events.\n\"Ended, goes\" missynchronizes the tense, combining past and present forms.\n\"End, went\" lacks the correctly conjugated verb form for 'ended'.",
+    "topic": "English Comprehension",
+    "subtopic": "Spotting Errors",
+    "conceptTested": "Consistency of past tense in sequential past actions",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Spotting Errors",
+      "conceptTested": "Consistency of past tense in sequential past actions"
+    }
+  }
+]

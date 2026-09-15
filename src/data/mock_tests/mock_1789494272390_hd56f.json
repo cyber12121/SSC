@@ -1,0 +1,1278 @@
+[
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 2",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "01:49",
+    "avgTime": "00:55",
+    "questionText": "In the following question, select the odd number pair from the given alternatives.\nOptions:\nA: 64 – 576\nB: 17 – 343\nC: 27 – 196\nD: 32 – 36",
+    "options": {
+      "A": "64 – 576",
+      "B": "17 – 343",
+      "C": "27 – 196",
+      "D": "32 – 36"
+    },
+    "solution": "Solution\n\n1) (6 × 4) = 24, Square of 24 = 576\n2) (1 × 7) = 7, Square of 7 = 49 ≠ 343\n3) (2 × 7) = 14, Square of 14 = 196\n4) (3 × 2) = 6, Square of 6 = 36\nHence, 17 – 343 is odd number pair.",
+    "topic": "Classification / Odd One Out",
+    "subtopic": "Number Classification",
+    "conceptTested": "Product of digits squared compared to the paired number",
+    "tags": {
+      "topic": "Classification / Odd One Out",
+      "subtopic": "Number Classification",
+      "conceptTested": "Product of digits squared compared to the paired number"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 11",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:25",
+    "avgTime": "01:04",
+    "questionText": "If the letters given below are arranged from left to right in the alphabetical order, then which letter will be at 11th position from the right?\nMUBYIJRLDOPCZQNHK\nOptions:\nA: K\nB: L\nC: J\nD: M",
+    "options": {
+      "A": "K",
+      "B": "L",
+      "C": "J",
+      "D": "M"
+    },
+    "solution": "Solution\n\nAccording to the given series:\n\nMUBYIJRLDOPCZQNHK\n\nArrange the letters from left to right in the alphabetical order as per requirement;\n\nBCDHIJKLMNOPQRUYZ\n\nso, from the above arrangement, K will be the 11th from the right.\n\nHence, the correct answer is \"K\".",
+    "topic": "Alphabet Test",
+    "subtopic": "Word Rearrangement & Alphabetical Sorting",
+    "conceptTested": "Alphabetical sorting of a given set of letters and determining position from a specified end",
+    "tags": {
+      "topic": "Alphabet Test",
+      "subtopic": "Word Rearrangement & Alphabetical Sorting",
+      "conceptTested": "Alphabetical sorting of a given set of letters and determining position from a specified end"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 17",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "01:16",
+    "avgTime": "00:48",
+    "questionText": "If in the number sequence 8 3 2 1 6 2 4 3 7 1 7 2 all the odd numbers are increased by two and all the even numbers are decreased by two, then the new number sequence is arranged in ascending order, which will be the fifth number from the left?\nOptions:\nA: 3\nB: 2\nC: 4\nD: 5",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "5"
+    },
+    "solution": "Solution\n\nThe logic followed here is:\n\nGiven number sequence 8 3 2 1 6 2 4 3 7 1 7 2.\n\nNow, all the odd numbers are increased by two and all the even numbers are decreased by two\n\nThe number sequence (8 – 2) (3 + 2) (2 – 2) (1 + 2) (6 – 2) (2 – 2) (4 – 2) (3 + 2) (7 + 2) (1 + 2) (7 + 2) (2 – 2)\n\nOr, 6 5 0 3 4 0 2 5 9 3 9 0\n\nThen the new number sequence is arranged in ascending order;\n\n0 0 0 2 3 3 4 5 5 6 9 9\n\nTherefore, the fifth number from the left is '3'.\nHence, the correct answer is \" Option (3)\".",
+    "topic": "Alphabet Test",
+    "subtopic": "Vowel-Consonant / Number Operations",
+    "conceptTested": "Arithmetic operations applied to digits based on parity followed by sorting",
+    "tags": {
+      "topic": "Alphabet Test",
+      "subtopic": "Vowel-Consonant / Number Operations",
+      "conceptTested": "Arithmetic operations applied to digits based on parity followed by sorting"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 21",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:59",
+    "avgTime": "00:46",
+    "questionText": "If 'A' denotes 'addition', 'B' denotes 'multiplication', 'C' denotes 'subtraction', and 'D' denotes 'division', then what will be the value of the following expression?\n72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)\nOptions:\nA: 1\nB: 3\nC: 2\nD: 4",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "2",
+      "D": "4"
+    },
+    "solution": "Solution\n\nThe logic followed here is :-\n\nBy using BODMAS RULE :\n\nThe given information is :\n\nAlphabets\tSymbols\nA\t+\nB\t×\nC\t-\nD\t÷\n\nGiven expression is :- 72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)\n\nAfter replacing the alphabets with symbols in given expression the equation is as follows : 72 ÷ 6 × 12 + 24 - 18 - (20 × 5 + 48)\n\n= 72 ÷ 6 × 12 + 24 - 18 - (20 × 5 + 48)\n= 72 ÷ 6 × 12 + 24 - 18 - (100 + 48)\n= 72 ÷ 6 × 12 + 24 - 18 - 148\n= 12 × 12 + 24 - 18 - 148\n= 144 + 24 - 18 - 148\n= 168 - 18 - 148\n= 168 - 166\n= 2\nHence, the correct answer is \"2\".",
+    "topic": "Mathematical Operations",
+    "subtopic": "Interchange of Signs & Balancing Equations",
+    "conceptTested": "Evaluation of algebraic expressions using BODMAS after substituting operational symbols",
+    "tags": {
+      "topic": "Mathematical Operations",
+      "subtopic": "Interchange of Signs & Balancing Equations",
+      "conceptTested": "Evaluation of algebraic expressions using BODMAS after substituting operational symbols"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 23",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:51",
+    "avgTime": "00:25",
+    "questionText": "Three statements are given, followed by three conclusions numbered I, II and III. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome Bangles are Bracelets.\nAll chains are Rings.\nSome Bracelets are Chains.\nConclusions:\n(I) Some Bangles are Rings.\n(II) Some Chains are Bangles.\n(III) Some Rings are Bracelets.\nOptions:\nA: Only Conclusion III follows.\nB: Both Conclusions I and II follow.\nC: Both Conclusions I and III follow.\nD: Only Conclusion I follows.",
+    "options": {
+      "A": "Only Conclusion III follows.",
+      "B": "Both Conclusions I and II follow.",
+      "C": "Both Conclusions I and III follow.",
+      "D": "Only Conclusion I follows."
+    },
+    "solution": "Solution\n\nThe least possible Venn diagram for the given statements is as shown below :\n\nConclusions:\n\nI. Some Bangles are Rings → Does not Follow (As some bangles are bracelets, some bracelets are chains and all chains are rings. So, it is possible but not definitely true)\n\nII. Some Chains are Bangles → Does not Follow (As some bangles are bracelets, some bracelets are chains and all chains are rings. So, it is possible but not definitely true)\n\nIII. Some Rings are Bracelets → Follow (As some bracelets are chains and all chains are rings. So, as whole chains comes in rings which some part comes in bracelets therefore it is definitely true)\n\n∴ Here, Only Conclusion III follows​\nHence, the correct answer is \"Only Conclusion III follows\"",
+    "topic": "Syllogism",
+    "subtopic": "Deductive Venn Logic",
+    "conceptTested": "Deduction of categorical propositions using Venn diagram logic",
+    "tags": {
+      "topic": "Syllogism",
+      "subtopic": "Deductive Venn Logic",
+      "conceptTested": "Deduction of categorical propositions using Venn diagram logic"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 6",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:09",
+    "avgTime": "00:25",
+    "questionText": "What is the theme of AI Hackathon 2025, launched alongside India's first-ever Exploration Licence (EL) auction?",
+    "options": {
+      "A": "AI in Sustainable Resource Management",
+      "B": "Smart Mining and AI Innovations",
+      "C": "AI-Driven Geological Mapping",
+      "D": "Mineral Targeting using Artificial Intelligence"
+    },
+    "solution": "Solution\n\nThe correct answer is Mineral Targeting using Artificial Intelligence.\n\nIn News\nIndia launched its first-ever auction of Exploration Licences (ELs) on March 13, 2025, in Goa.\nAI Hackathon 2025 was organized alongside this event to enhance mineral targeting using AI.\n\nKey Points\nThe AI Hackathon 2025 was themed \"Mineral Targeting using Artificial Intelligence.\"\nIt aimed to leverage AI and advanced datasets to identify hidden mineral deposits.\nThe initiative promoted sustainable mining practices through AI-driven exploration.\nThe event was held alongside the auction of 13 mineral blocks across 10 states.\n\nAdditional Information\nAI in Sustainable Resource Management\nFocuses on AI’s role in broader resource management, not specifically mineral targeting.\nSmart Mining and AI Innovations\nWhile related to AI in mining, it is not the official theme of AI Hackathon 2025.\nAI-Driven Geological Mapping\nGeological mapping is an aspect of AI applications but not the specific focus of the hackathon.",
+    "topic": "Current Affairs",
+    "subtopic": "Government Schemes & Policies",
+    "conceptTested": "Recent national events, tech initiatives, and official themes launched in India.",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "Government Schemes & Policies",
+      "conceptTested": "Recent national events, tech initiatives, and official themes launched in India."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 7",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "A",
+    "userTime": "00:03",
+    "avgTime": "00:24",
+    "questionText": "Which of the following statements regarding AMCA (Advanced Medium Combat Aircraft) is incorrect?",
+    "options": {
+      "A": "This will be India’s indigenous sixth-generation stealth fighter jet.",
+      "B": "It is being designed by the Aeronautical Development Agency for the Indian Air Force, with manufacturing led by Hindustan Aeronautics Limited.",
+      "C": "It will be a twin-engine, single-seat, all-weather multirole combat aircraft.",
+      "D": "France will help India develop and manufacture its advanced jet engines, with 100% transfer of technology."
+    },
+    "solution": "Solution\n\nThe incorrect answer is Option 1.\n\nKey Points\nThe AMCA is not classified as a sixth-generation fighter jet; it is categorized as a fifth-generation stealth fighter jet.\nSixth-generation fighter jets are still under development globally and are expected to feature advanced technologies such as AI-assisted operations, directed energy weapons, and hypersonic capabilities, which are not integrated into AMCA.\nThe AMCA program is being developed by the Aeronautical Development Agency (ADA) under the Defence Research and Development Organisation (DRDO) with manufacturing led by Hindustan Aeronautics Limited (HAL).\nIt is designed as a twin-engine, single-seat, multirole stealth aircraft capable of advanced electronic warfare and air superiority missions.\nFrance has agreed to collaborate with India in developing advanced jet engines under the AMCA program, with significant technology transfer to enhance indigenous capabilities.\nThe collaboration involves the design, development, testing, certification, and production of a 120 kN-class jet engine to power the AMCA stealth fighter and future platforms.\nThe project includes 100% transfer of technology, enabling India to manufacture high-thrust fighter engines domestically for the first time.\nThe collaboration is valued at approximately $7 billion, with the development expected to take around a decade.\nThe AMCA project was cleared by the Cabinet Committee on Security (CCS) in 2024, with an estimated prototype cost of ₹15,000 crore.\nThe AMCA will have two variants: Mark 1, using existing engines, and Mark 2, which will use the new co-developed high-thrust engine.\n\nAdditional Information\nAMCA Program Overview: The Advanced Medium Combat Aircraft (AMCA) is India's first indigenous stealth fighter jet project aimed at enhancing the country's air combat capabilities.\nStealth Technology: AMCA will feature stealth characteristics, including low radar cross-section (RCS), internal weapons bay, and advanced composite materials for reduced visibility.\nEngine Collaboration: India and France are collaborating to co-develop jet engines for the AMCA with substantial transfer of technology to boost India's defense manufacturing sector.\nGenerational Classification: Fighter jets are classified into generations based on their technological capabilities. Fifth-generation jets, like AMCA, emphasize stealth, situational awareness, and advanced avionics.\nGlobal Context: Other nations, such as the USA and China, are pursuing sixth-generation fighter designs, which incorporate next-level technologies like AI integration, drone teaming, and directed energy weapons.",
+    "topic": "Current Affairs",
+    "subtopic": "Defence and National Security",
+    "conceptTested": "Facts regarding India's indigenous defence projects like the Advanced Medium Combat Aircraft (AMCA).",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "Defence and National Security",
+      "conceptTested": "Facts regarding India's indigenous defence projects like the Advanced Medium Combat Aircraft (AMCA)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 9",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:12",
+    "avgTime": "00:23",
+    "questionText": "An economist and a renowned literary personality with a vast reader base in India and abroad, Prof. Arunoday Saha, who was honoured with Padma Shri in 2025, belongs to which Indian state?",
+    "options": {
+      "A": "West Bengal",
+      "B": "Odisha",
+      "C": "Tripura",
+      "D": "Mizoram"
+    },
+    "solution": "Solution\n\nThe correct answer is Tripura.\n\nKey Points\nProf. Arunoday Saha is an acclaimed economist and literary figure with a vast reader base both in India and abroad.\nHe was recognized for his contributions and achievements by being honored with the prestigious Padma Shri award in 2025.\nProf. Arunoday Saha belongs to the state of Tripura, which is located in northeastern India.\nTripura is known for its rich cultural heritage and has produced many notable personalities in various fields, including literature and economics.\nThe Padma Shri award is one of the highest civilian honors in India, given for distinguished contributions in various disciplines, including arts, literature, science, and social services.\n\nAdditional Information\nTripura:\nTripura is one of the seven northeastern states of India, bordered by Bangladesh to the north, south, and west.\nIt is known for its cultural diversity, tribal communities, and historical significance.\nThe state capital is Agartala, and the official languages are Bengali and Kokborok.\nTripura has a rich literary tradition and has produced many renowned writers and scholars.\nPadma Shri Award:\nThe Padma Shri is the fourth highest civilian award in India, established in 1954.\nIt is awarded by the Government of India for contributions in various fields, such as arts, education, literature, science, sports, social work, and public affairs.\nRecipients are selected based on their exemplary achievements and contributions to society.\nThe awards are announced annually on Republic Day and presented by the President of India.\nLiterary Contributions of Tripura:\nTripura has a strong tradition of literature, poetry, and storytelling, often reflecting the state’s rich heritage and tribal culture.\nSeveral writers and poets from Tripura have gained national and international recognition for their works.\nThe state promotes literary festivals and events to celebrate its cultural richness.\nEconomists Honored with Padma Shri:\nEconomists are recognized with the Padma Shri for their contributions to policy-making, research, and education.\nMany economists who have received this honor have significantly impacted India’s development and economic strategies.\nProf. Arunoday Saha’s recognition highlights his exceptional contributions to economic studies and literature.",
+    "topic": "Current Affairs",
+    "subtopic": "Awards & Honours",
+    "conceptTested": "Eminent personalities honored with prestigious civilian awards like the Padma Shri.",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "Awards & Honours",
+      "conceptTested": "Eminent personalities honored with prestigious civilian awards like the Padma Shri."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 11",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:01",
+    "avgTime": "00:17",
+    "questionText": "Who compiled Mahatma Gandhi's core ecological ideas in the book \"Mahatma Gandhi and the Environment: Analysing Gandhian Environmental Thought\"?",
+    "options": {
+      "A": "Dr. R. K. Pachauri",
+      "B": "T.N. Khoshoo",
+      "C": "Sashi Tharoor",
+      "D": "Vandana Shiva"
+    },
+    "solution": "Solution\n\nThe correct answer is T.N. Khoshoo.\n\nIn News\nT.N. Khoshoo compiled Mahatma Gandhi's core ecological ideas in the book \"Mahatma Gandhi and the Environment: Analysing Gandhian Environmental Thought.\"\n\nKey Points\nThe book contextualizes Gandhi’s ecological ideas for modern challenges like climate change and resource depletion.\nIt includes a foreword by Dr. R. K. Pachauri, former Chairman of the Intergovernmental Panel on Climate Change.\nThe book serves as a tribute to Gandhi’s foresight and calls for a return to sustainable values.\nThe work emphasizes Gandhi’s vision of environmental responsibility and sustainability, aligning with contemporary environmental movements.\n\nAdditional Information\nGandhian Environmental Thought\nGandhi's philosophy promotes simplicity, self-sufficiency, and respect for nature as central components of a sustainable future.\nHis views on resource conservation and community-based sustainability are highly relevant to the modern environmental movement.\nT.N. Khoshoo\nT.N. Khoshoo was a renowned environmental scientist who contributed extensively to the integration of ecological principles into policy and practice.\nDr. R. K. Pachauri\nDr. R. K. Pachauri was a key figure in global climate change discussions and his foreword in the book ties Gandhian thought with current scientific concerns.\nModern Relevance\nThe book highlights the timeless relevance of Gandhian thought in addressing today’s pressing environmental crises.",
+    "topic": "Current Affairs",
+    "subtopic": "Books & Authors",
+    "conceptTested": "Authors and compilers of notable publications on environmental philosophy and Gandhian thought.",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "Books & Authors",
+      "conceptTested": "Authors and compilers of notable publications on environmental philosophy and Gandhian thought."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "C",
+    "userTime": "00:13",
+    "avgTime": "00:25",
+    "questionText": "Which of the following correctly lists the countries to which Buddhism spread from India, in chronological order from earliest to latest?",
+    "options": {
+      "A": "Korea, Japan, Cambodia",
+      "B": "Vietnam, China, Japan",
+      "C": "China, Korea, Japan",
+      "D": "China, Japan, Korea"
+    },
+    "solution": "Solution\n\nThe correct answer is China, Korea, Japan.\nKey Points\nOption 1 is incorrect as Cambodia was not one of the earliest countries to adopt Buddhism.\nOption 2 is also incorrect as Vietnam was not one of the earliest countries to adopt Buddhism.\nOption 3 is the correct answer as China was one of the earliest countries to adopt Buddhism from India, followed by Korea and then Japan.\nBuddhism first spread to China in the 1st century CE, through the Silk Road trade routes.\nFrom China, Buddhism spread to Korea in the 4th century CE.\nJapan adopted Buddhism from China in the 6th century CE. ​\nOption 4 is incorrect as Japan adopted Buddhism after China.\n\nAdditional Information\nCambodia adopted Buddhism in the 13th century CE, much later than China, Korea, and Japan.\nVietnam adopted Buddhism in the 3rd century CE, after it had already spread to China.",
+    "topic": "Ancient History",
+    "subtopic": "Buddhism & Jainism",
+    "conceptTested": "Chronology of the spread of Buddhism across Asian countries via trade routes and cultural exchanges.",
+    "tags": {
+      "topic": "Ancient History",
+      "subtopic": "Buddhism & Jainism",
+      "conceptTested": "Chronology of the spread of Buddhism across Asian countries via trade routes and cultural exchanges."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 15",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:01",
+    "avgTime": "00:15",
+    "questionText": "Who was elected President of the 80th United Nations General Assembly session in June 2025?",
+    "options": {
+      "A": "Volkan Bozkir",
+      "B": "Ban Ki-moon",
+      "C": "Annalena Baerbock",
+      "D": "Olaf Scholz"
+    },
+    "solution": "Solution\n\nThe correct answer is Annalena Baerbock.\n\nIn News\nAnnalena Baerbock of Germany was elected as President of the 80th session of the United Nations General Assembly.\n\nKey Points\nPresident-Elect: Annalena Baerbock was elected to preside over the 80th session of the UN General Assembly, nominated by Germany.\nRole: She aims to serve as a unifier and an honest broker, engaging in trust-based dialogue with all Member States.\nRegional Rotation: Baerbock was elected in accordance with the regional rotation from the Western European and Other States Group.\nElection Process: The election was held during the 72nd plenary meeting of the General Assembly.\n\nAdditional Information\nUN General Assembly: The United Nations General Assembly is one of the six principal organs of the United Nations, serving as its main deliberative, policymaking, and representative organ.\nHeadquarters: New York, United States.\nFounded: 1945, New York, United States.",
+    "topic": "Current Affairs",
+    "subtopic": "Awards, Honours & International Appointments",
+    "conceptTested": "Knowledge of high-profile international leadership positions and UN General Assembly appointments.",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "Awards, Honours & International Appointments",
+      "conceptTested": "Knowledge of high-profile international leadership positions and UN General Assembly appointments."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 19",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:19",
+    "avgTime": "00:16",
+    "questionText": "Consider the following statements regarding belt ranks and competition area in Judo:\n1) A red-and-white belt is associated with judokas from Sixth dan to Eighth dan levels.\n2) A shared safety zone of at least 3 meters must be maintained between adjoining competition areas.\nWhich of the above statements is/are correct?",
+    "options": {
+      "A": "Only 1 is Correct",
+      "B": "Only 2 is Correct",
+      "C": "1 and 2 both are correct",
+      "D": "Neither 1 nor 2 is Correct"
+    },
+    "solution": "Solution\n\nThe correct answer is Both 1 and 2.\n\nKey Points\nStatement 1 is Correct: In Judo, the red-and-white belt (Kōhaku obi) is worn by judokas holding the ranks of Sixth Dan (6th), Seventh Dan (7th), and Eighth Dan (8th).\nStatement 2 is Correct: According to the International Judo Federation (IJF) competition rules, when two competition areas are adjacent, a shared safety zone of at least 3 metres must be maintained between them to ensure the safety of the competitors.\nThe safety zone provides adequate space for athletes who may move beyond the contest area during a bout, reducing the risk of injuries.\nHence, both statements are correct.\n\nAdditional Information\nThe competition area (contest area) in Judo is generally square and is surrounded by a designated safety zone.\nJudokas holding the Ninth Dan (9th) and Tenth Dan (10th) traditionally wear a solid red belt.\nThe belt system in Judo reflects a practitioner's technical skill, experience, and contribution to the sport.\n\nImportant Points\n\nRed-and-White Belt: 6th Dan to 8th Dan.\nRed Belt: 9th Dan and 10th Dan.\nShared Safety Zone: Minimum 3 metres between adjoining competition areas.\nGoverning Body: International Judo Federation (IJF).\nExam Tip: Remember that the red-and-white belt is awarded to 6th–8th Dan judokas, while a 3-metre shared safety zone is mandatory between adjoining competition areas.\nCorrect Answer: Both 1 and 2.",
+    "topic": "Sports & Trophies",
+    "subtopic": "Sports Rules, Terminology & Equipment",
+    "conceptTested": "Knowledge of International Judo Federation (IJF) regulations, including belt rankings and competition area dimensions.",
+    "tags": {
+      "topic": "Sports & Trophies",
+      "subtopic": "Sports Rules, Terminology & Equipment",
+      "conceptTested": "Knowledge of International Judo Federation (IJF) regulations, including belt rankings and competition area dimensions."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 20",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "00:10",
+    "avgTime": "00:21",
+    "questionText": "The Bharatiya Nyaya Samhita (BNS), 2023, consolidates and amends provisions related to which branch of law?",
+    "options": {
+      "A": "Civil Procedure Law",
+      "B": "Criminal Substantive Law",
+      "C": "Evidence Law",
+      "D": "Contract Law"
+    },
+    "solution": "Solution\n\nThe correct answer is Criminal Substantive Law.\n\nKey Points\nThe Bharatiya Nyaya Samhita (BNS), 2023, is aimed at consolidating and amending laws related to Criminal Substantive Law in India.\nBNS is designed as a replacement for the Indian Penal Code (IPC), 1860, which was drafted during British colonial rule in India.\nThe primary objective of the BNS is to modernize and reform criminal laws to align with the changing socio-economic and technological landscape of the country.\nIt seeks to simplify criminal laws, ensure speedy justice, and address contemporary challenges such as cybercrime and organized crime.\nThe Bharatiya Nyaya Samhita Bill, 2023, was introduced in Parliament in August 2023 as part of a broader initiative to overhaul colonial-era legal frameworks, including the Code of Criminal Procedure (CrPC) and the Indian Evidence Act.\n\nAdditional Information\nCivil Procedure Law\nCivil Procedure Law governs the procedures and practices in civil courts, such as filing lawsuits, conducting trials, and enforcing judgments.\nThe primary legislation governing this branch in India is the Civil Procedure Code (CPC), 1908.\nCivil laws deal with private disputes between individuals or organizations, such as property disputes, contracts, or family matters.\nEvidence Law\nThe law of evidence deals with the rules and principles that determine what evidence is admissible in courts.\nThe Indian Evidence Act, 1872, is the governing framework for evidence-related matters in Indian courts.\nIt specifies the type and manner of evidence that can be presented in civil or criminal cases, including oral, documentary, and circumstantial evidence.\nContract Law\nContract law governs agreements between parties that are enforceable by law.\nThe primary legislation in India is the Indian Contract Act, 1872, which outlines the essentials of a valid contract, including offer, acceptance, consideration, and capacity to contract.\nIt also covers specific contracts such as indemnity, guarantee, bailment, agency, and partnership agreements.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Criminal Laws and Criminal Justice System",
+    "conceptTested": "Understanding of recent legislative overhauls such as the Bharatiya Nyaya Samhita (BNS), 2023 replacing the Indian Penal Code (IPC).",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Criminal Laws and Criminal Justice System",
+      "conceptTested": "Understanding of recent legislative overhauls such as the Bharatiya Nyaya Samhita (BNS), 2023 replacing the Indian Penal Code (IPC)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 21",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:03",
+    "avgTime": "00:28",
+    "questionText": "Consider the following statements:\n1. Criminal law lies in Union List.\n2. Agriculture is a State subject.\n3. Intra-state trade is in State List.\nWhich are correct?",
+    "options": {
+      "A": "1 and 2",
+      "B": "2 and 3",
+      "C": "1 and 3",
+      "D": "All three"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 2 i.e. 2 and 3\n\nKey Points\nFact: Criminal law (like offenses, punishments, procedure) is mainly a Concurrent subject under the Concurrent List (List III).\nWhy not Union List? The Union List is for subjects where only the Central Government can make laws (like defense, foreign affairs, currency).\nSo this statement is wrong.\nAgriculture is a State subject according to the State List in the Seventh Schedule of the Constitution. It covers topics like agriculture, land, irrigation, and other related matters that fall under the jurisdiction of state governments.\nIntra-state trade is listed under the State List. This means trade and commerce within a state are regulated by the respective state government, as specified in the Constitution. Note: This is distinct from Inter-state trade (trade between states), which falls under the Union List.\nThe Seventh Schedule of the Indian Constitution divides subjects into three lists: Union List, State List, and Concurrent List, which define the distribution of powers between the Union and State governments.\nStatements 2 and 3 are correct as they align with the constitutional provisions under Article 246 and the Seventh Schedule.\n\nAdditional Information\nUnion List:\nIt contains subjects of national importance such as defense, foreign affairs, banking, currency, atomic energy, and railways. It also includes Inter-state trade and commerce.\nOnly the central government can legislate on matters listed in the Union List.\nState List:\nIt includes subjects of state and local importance such as police, public health, sanitation, agriculture, irrigation, and intra-state trade.\nState governments have exclusive authority to legislate on subjects in this list.\nConcurrent List:\nThis list includes subjects on which both the Union and State governments can legislate, such as education, marriage, contracts, and bankruptcy.\nIn case of conflict between state and union laws, the Union law prevails.\nSeventh Schedule:\nEstablished by the Constitution of India, it defines the allocation of powers and responsibilities between the Union and State governments.\nIt ensures federal governance by categorizing subjects into three lists: Union, State, and Concurrent.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Federal System & Seventh Schedule",
+    "conceptTested": "Division of legislative powers between Union, State, and Concurrent lists under the Seventh Schedule of the Constitution.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Federal System & Seventh Schedule",
+      "conceptTested": "Division of legislative powers between Union, State, and Concurrent lists under the Seventh Schedule of the Constitution."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 23",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:08",
+    "avgTime": "00:18",
+    "questionText": "With reference to the paintings of Jamini Roy, consider the following statements:\n1. He made his own colours from vegetables and minerals.\n2. His signature on his paintings differentiated his art from that of village artists.\nWhich of the statement given above is/are correct?",
+    "options": {
+      "A": "1 only",
+      "B": "2 only",
+      "C": "Both 1 and 2",
+      "D": "Neither 1 nor 2"
+    },
+    "solution": "Solution\n\nThe correct answer is Both 1 and 2\nKey Points\nJamini Roy\n\nHe rejected his own training received at the Government School of Art, Calcutta.\nBeing a student of Abanindranath Tagore, he realised the futility of pursuing academic art.\nHe noticed that the rural, folk art in Bengal had much in common with how modern European masters like Picasso and Paul Klee painted.\n​After all, Picasso had arrived at Cubism by learning from the use of bold forms found in African masks.\nRoy, too, used simple and pure colours.\nLike village artists, he also made his own colours from vegetables and minerals. Hence, statement 1 is correct.\nHis art lent itself to easy reproduction by other members in his family, quite like the artisanal practice followed in villages.\nHowever, what differentiated his art from that of village artists was that Roy signed on his paintings.  Hence, statement 2 is correct.\nHis style is seen as uniquely personal, distinct from both the academic naturalism of art schools and from Raja Ravi Varma’s Indianised naturalism, as well as, from the delicate style practised by some of the Bengal School artists.",
+    "topic": "Temples, Monuments & Heritage Sites",
+    "subtopic": "Indian Art and Painters",
+    "conceptTested": "Knowledge of traditional and modern Indian artists, specifically Jamini Roy's techniques, folk art influence, and signatures.",
+    "tags": {
+      "topic": "Temples, Monuments & Heritage Sites",
+      "subtopic": "Indian Art and Painters",
+      "conceptTested": "Knowledge of traditional and modern Indian artists, specifically Jamini Roy's techniques, folk art influence, and signatures."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 25",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "02:47",
+    "avgTime": "01:02",
+    "questionText": "Reh festival is celebrated by which of the following tribe of India?",
+    "options": {
+      "A": "Hrusso",
+      "B": "Adi",
+      "C": "Tagin",
+      "D": "Idu-mismi"
+    },
+    "solution": "Solution\n\nThe correct answer is Idu-Mishmi.\n\nKey Points\nThe Reh festival is celebrated by the Idu-Mishmi tribe, which resides primarily in Arunachal Pradesh, India.\nThis festival is dedicated to the Divine Mother Nanyi-Inyit, believed to be the protector and creator of the Mishmi people.\nReh is celebrated annually during the month of February, marking the cultural richness and religious practices of the Idu-Mishmi community.\nThe festival involves rituals, dances, and feasts, symbolizing community bonding and gratitude towards nature.\nIt is a key occasion for the Idu-Mishmi tribe to preserve their traditional heritage and pass down their customs to younger generations.\n\nAdditional Information\nHrusso Tribe:\nThe Hrusso tribe, also known as the Aka tribe, primarily resides in the West Kameng and East Kameng districts of Arunachal Pradesh.\nThey celebrate the Saru festival, which signifies their agricultural practices and spiritual beliefs.\nThe Hrusso tribe follows animistic religious practices and believes in the existence of various spirits.\nAdi Tribe:\nThe Adi tribe is one of the largest tribal groups in Arunachal Pradesh, residing in the Siang region.\nThey celebrate the Solung festival, which is an agricultural festival dedicated to prosperity and the protection of crops.\nSolung involves rituals, traditional dances like the Ponung dance, and community feasting.\nTagin Tribe:\nThe Tagin tribe is located in the Upper Subansiri district of Arunachal Pradesh.\nThey celebrate the Si-Donyi festival, which is dedicated to the Sun (Si) and Earth (Donyi) deities.\nSi-Donyi reflects their animistic beliefs, emphasizing harmony with nature and spiritual worship.",
+    "topic": "Festivals & Fairs",
+    "subtopic": "Tribal Festivals of North-East India",
+    "conceptTested": "Familiarity with traditional tribal festivals, their associated communities, and geographical regions in India.",
+    "tags": {
+      "topic": "Festivals & Fairs",
+      "subtopic": "Tribal Festivals of North-East India",
+      "conceptTested": "Familiarity with traditional tribal festivals, their associated communities, and geographical regions in India."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 2",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "A",
+    "userTime": "01:36",
+    "avgTime": "00:50",
+    "questionText": "On a sum of money, the compound interest for 2 years is Rs. 832, while the simple interest for the same time period is Rs.800, then find out the difference amount for period of 3 years?",
+    "options": {
+      "A": "98.56",
+      "B": "96.43",
+      "C": "90",
+      "D": "None of these"
+    },
+    "solution": "Solution\n\nShortcut Trick\nSI for 1 year = 800 ÷ 2 = ₹400\nDifference for 2 years = CI − SI = 832 − 800 = ₹32\nRate (R) = (Interest on 1st year SI ÷ 1st year SI) × 100 = (32 ÷ 400) × 100 = 8%\nFor 3 years, Difference = 3 × (2-year Diff) + (R% of 2-year Diff)\nDifference = 3 × 32 + (8% of 32) = 96 + 2.56 = 98.56\n∴ The correct answer is ₹98.56.\n\nAlternate Method\nGiven:\nCompound Interest (CI) for 2 years = ₹832\nSimple Interest (SI) for 2 years = ₹800\n\nFormula Used:\nDifference for 2 years (D2) = P × (R ÷ 100)2\nDifference for 3 years (D3) = 3 × D2 + (R% of D2)\n\nCalculations:\n⇒ SI for 1 year = Total SI ÷ 2 = 800 ÷ 2 = ₹400\n⇒ Difference between CI and SI for 2 years (D2) = 832 − 800 = ₹32\n⇒ The difference of ₹32 is the interest earned exactly on the first year's SI (₹400).\n⇒ Rate of Interest (R) = (32 ÷ 400) × 100% = 8%\n⇒ Difference for 3 years (D3) = 3 × D2 + (R% of D2)\n⇒ D3 = 3 × 32 + (8 ÷ 100) × 32\n⇒ D3 = 96 + 2.56\n⇒ D3 = ₹98.56\n∴ The correct answer is ₹98.56.\n\nAdditional Information\nTree Method for Compound Interest\n\nIt breaks down CI into simple interest and interest-on-interest components. The 1st row is always the Simple Interest. The lower rows sum up to represent the exact difference between CI and SI over the years.\n\nCI vs SI Difference (2 Years)\n\nFormula: Diff2 = P × (R ÷ 100)2. It strictly represents the interest generated on the first year's simple interest.\n\nCI vs SI Difference (3 Years)\n\nFormula: Diff3 = P × (R ÷ 100)2 × (3 + R ÷ 100). For fast calculation, simply multiply the 2-year difference by 3 and add the rate percentage of the 2-year difference.",
+    "topic": "Compound Interest",
+    "subtopic": "Difference between CI and SI",
+    "conceptTested": "Relation between compound interest and simple interest over 2 and 3 years: Difference for 3 years = 3 × (2-year diff) + (R% of 2-year diff).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference between CI and SI",
+      "conceptTested": "Relation between compound interest and simple interest over 2 and 3 years: Difference for 3 years = 3 × (2-year diff) + (R% of 2-year diff)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 3",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:07",
+    "avgTime": "00:44",
+    "questionText": "A square pyramid with side 10 cm has a volume of 400 cm^3. Find the total surface area of the pyramid.",
+    "options": {
+      "A": "240 cm2",
+      "B": "300 cm2",
+      "C": "360 cm2",
+      "D": "420 cm2"
+    },
+    "solution": "Solution\n\nShortcut Trick\nVolume = 1/3 × a2 × h ⇒ 400 = 1/3 × 100 × h ⇒ h = 12 cm.\nSlant height l = √(h2 + (a/2)2) = √(122 + 52) = 13 cm.\nTotal Surface Area (TSA) = Base Area + Lateral Surface Area\n⇒ TSA = a2 + 2al\n⇒ TSA = 102 + 2 × 10 × 13 = 100 + 260 = 360 cm2.\n∴ The correct answer is 360 cm2.\n\nAlternate Method\nGiven:\nBase side (a) = 10 cm\nVolume (V) = 400 cm3\n\nFormula Used:\nVolume = 1/3 × a2 × h\nSlant height (l) = √(h2 + (a/2)2)\nTotal Surface Area = a2 + 2al\n\nCalculations:\n⇒ 400 = 1/3 × 102 × h\n⇒ 400 = 1/3 × 100 × h\n⇒ h = (400 × 3) ÷ 100\n⇒ h = 12 cm\nNow, finding the slant height (l):\n⇒ l = √(122 + (10/2)2)\n⇒ l = √(144 + 25)\n⇒ l = √169 = 13 cm\nNow, finding the Total Surface Area (TSA):\n⇒ TSA = (10)2 + 2 × 10 × 13\n⇒ TSA = 100 + 260\n⇒ TSA = 360 cm2\n∴ The correct answer is 360 cm2.\n\nAdditional Information\nVolume of a Pyramid\n\nThe volume of any pyramid is defined as exactly one-third of the volume of the corresponding prism: V = 1/3 × Base Area × Height.\n\nLateral Surface Area (LSA)\n\nFor a regular pyramid, the lateral surface area is formed by identical isosceles triangles: LSA = 1/2 × Perimeter of Base × Slant Height.\n\nEuler's Formula for Polyhedrons\n\nFor any solid polyhedron (like a pyramid), the number of Faces (F), Vertices (V), and Edges (E) are related by the formula: F + V = E + 2.",
+    "topic": "Mensuration 3D",
+    "subtopic": "Pyramid - Surface Area and Volume",
+    "conceptTested": "Volume of a pyramid = 1/3 × Base Area × Height, and Total Surface Area = Base Area + 2 × Base Side × Slant Height.",
+    "tags": {
+      "topic": "Mensuration 3D",
+      "subtopic": "Pyramid - Surface Area and Volume",
+      "conceptTested": "Volume of a pyramid = 1/3 × Base Area × Height, and Total Surface Area = Base Area + 2 × Base Side × Slant Height."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 6",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:55",
+    "avgTime": "00:41",
+    "questionText": "Male and female population of a city is increased by 50% and 20% respectively in 2017 from 2016 and male population in 2016 was 40% more than female population, then by what percent total population of the city is increased in 2017?",
+    "options": {
+      "A": "32.5%",
+      "B": "24.5%",
+      "C": "37.5%",
+      "D": "42.5%"
+    },
+    "solution": "Solution\n\nShortcut Trick\nRatio of Male to Female population in 2016 = 140 : 100 = 7 : 5.\n\nWe can use the weighted average method to find the net percentage change directly:\n\nOverall % increase = [(Ratio of Male × % change in Male) + (Ratio of Female × % change in Female)] ÷ Total Ratio\nOverall % increase = [(7 × 50) + (5 × 20)] ÷ (7 + 5)\nOverall % increase = (350 + 100) ÷ 12 = 450 ÷ 12 = 37.5%.\n∴ The correct answer is 37.5%.\n\nAlternate Method\nGiven:\nMale population in 2016 is 40% more than female population.\n\nMale population increased by 50% and female population increased by 20% in 2017.\n\nFormula Used:\nPercentage Increase = (Net Increase ÷ Initial Value) × 100\n\nCalculations:\n⇒ Let the female population in 2016 be 100x.\n⇒ Male population in 2016 = 100x + (40% of 100x) = 140x.\n⇒ Total population in 2016 = 100x + 140x = 240x.\n⇒ In 2017, male population = 140x + (50% of 140x) = 140x + 70x = 210x.\n⇒ In 2017, female population = 100x + (20% of 100x) = 100x + 20x = 120x.\n⇒ Total population in 2017 = 210x + 120x = 330x.\n⇒ Net increase in total population = 330x − 240x = 90x.\n⇒ Percentage increase = (90x ÷ 240x) × 100 = (9 ÷ 24) × 100\n⇒ Percentage increase = (3 ÷ 8) × 100 = 37.5%.\n∴ The correct answer is 37.5%.\n\nAdditional Information\nPercentage Change\n\nThe formula for finding the net percentage change of any value is calculated as: [(New Value − Old Value) ÷ Old Value] × 100.\n\nWeighted Average in Percentage\n\nIf a total quantity is split into multiple parts in the ratio w1 : w2, and their individual percentage changes are p1% and p2%, the net percentage change of the entire group is (w1p1 + w2p2) ÷ (w1 + w2).\n\nBase Shift Concept\n\nWhen calculating percentage increases for two different components, always remember that their percentage values act upon their respective initial base numbers, not on the combined group total.",
+    "topic": "Percentage",
+    "subtopic": "Percentage Increase and Weighted Average",
+    "conceptTested": "Net percentage change calculation using the weighted average method based on individual component ratios.",
+    "tags": {
+      "topic": "Percentage",
+      "subtopic": "Percentage Increase and Weighted Average",
+      "conceptTested": "Net percentage change calculation using the weighted average method based on individual component ratios."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 7",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:00",
+    "avgTime": "00:44",
+    "questionText": "6 persons running around a ground complete one round in 6, 10, 12, 18, 30 and 40 minutes respectively. After how much time will they meet for the first time if they started running at the same time?",
+    "options": {
+      "A": "6 hours",
+      "B": "5 hours",
+      "C": "4.5 hours",
+      "D": "4 hours"
+    },
+    "solution": "Solution\n\nShortcut Trick\nThe time taken by the runners to meet for the first time at the starting point is simply the LCM of their individual round times.\n\nRequired time = LCM(6, 10, 12, 18, 30, 40)\nRequired time = 360 minutes\nTime in hours = 360 ÷ 60 = 6 hours\n∴ The correct answer is 6 hours.\n\nAlternate Method\nGiven:\nTimes taken by 6 persons to complete one round = 6, 10, 12, 18, 30, and 40 minutes.\n\nFormula Used:\nTime to meet again at the starting point = LCM of individual times to complete one round.\n\nCalculations:\n⇒ We need to find the Least Common Multiple (LCM) of 6, 10, 12, 18, 30, and 40.\n⇒ Prime factorization of 6 = 2 × 3\n⇒ Prime factorization of 10 = 2 × 5\n⇒ Prime factorization of 12 = 22 × 3\n⇒ Prime factorization of 18 = 2 × 32\n⇒ Prime factorization of 30 = 2 × 3 × 5\n⇒ Prime factorization of 40 = 23 × 5\n⇒ LCM is the product of the highest powers of all prime factors involved.\n⇒ Highest power of 2 = 23\n⇒ Highest power of 3 = 32\n⇒ Highest power of 5 = 5\n⇒ LCM = 23 × 32 × 5 = 8 × 9 × 5 = 360 minutes.\n⇒ Converting the time into hours = 360 ÷ 60 = 6 hours.\n∴ The correct answer is 6 hours.\n\nAdditional Information\nMeeting at the Starting Point on Circular Track\n\nWhen multiple people are moving around a circular track starting at the same time and place, they meet at the starting point simultaneously after a time equal to the LCM of the times taken by each to complete one round independently.\n\nFirst Meeting Anywhere on Circular Track\n\nIf two runners move in the same direction, the time to meet for the first time anywhere on the track = Track Length ÷ (S1 − S2). If they move in opposite directions, Time to meet = Track Length ÷ (S1 + S2).\n\nLCM Formula for Fractions\n\nIf the individual completion times are given as fractions, you can find the meeting time using: LCM of fractions = (LCM of Numerators) ÷ (HCF of Denominators).",
+    "topic": "LCM & HCF",
+    "subtopic": "Applications of LCM on Circular Tracks",
+    "conceptTested": "Finding the time when multiple moving objects meet at the starting point simultaneously by calculating the LCM of their individual round times.",
+    "tags": {
+      "topic": "LCM & HCF",
+      "subtopic": "Applications of LCM on Circular Tracks",
+      "conceptTested": "Finding the time when multiple moving objects meet at the starting point simultaneously by calculating the LCM of their individual round times."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 8",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "D",
+    "userTime": "00:46",
+    "avgTime": "00:33",
+    "questionText": "Two tangents TP and TQ are drawn to circle with centre O from an external point T, where P and Q are points on circumference of the circle. If ∠PTQ = 50°, then find the value of ∠TOQ.",
+    "options": {
+      "A": "100°",
+      "B": "75°",
+      "C": "55°",
+      "D": "65°"
+    },
+    "solution": "Solution\n\nShortcut Trick\nThe line joining the external point to the centre bisects the angle between the two tangents.\n\n⇒ ∠OTQ = ∠PTQ ÷ 2 = 50° ÷ 2 = 25°\n\nIn right-angled ΔOQT, the radius OQ is perpendicular to the tangent TQ at point Q (∠OQT = 90°).\n\n⇒ ∠TOQ = 90° − ∠OTQ = 90° − 25° = 65°\n∴ The correct answer is 65°.\n\nAlternate Method\nGiven:\n⇒ Tangents TP and TQ are drawn from an external point T.\n⇒ ∠PTQ = 50°\n\nConcept Used:\n\n⇒ The radius is perpendicular to the tangent at the point of contact.\n⇒ The sum of the angles of a quadrilateral is 360°.\n\n50°\n?\nO\nT\nP\nQ\n\nCalculations:\nIn quadrilateral OPTQ:\n\n⇒ ∠OPT = 90° and ∠OQT = 90°\n⇒ ∠OPT + ∠OQT + ∠PTQ + ∠POQ = 360°\n⇒ 90° + 90° + 50° + ∠POQ = 360°\n⇒ 230° + ∠POQ = 360°\n⇒ ∠POQ = 360° − 230° = 130°\nSince the line OT joining the external point to the centre bisects ∠POQ:\n⇒ ∠TOQ = ∠POQ ÷ 2\n⇒ ∠TOQ = 130° ÷ 2 = 65°\n∴ The correct answer is 65°.\n\nAdditional Information\nProperties of Tangents from an External Point\n\nThe lengths of the two tangents drawn from an external point to a circle are exactly equal to each other (TP = TQ).\n\nAngle Subtended at the Centre\n\nThe two tangents subtend equal angles at the centre of the circle, meaning the line connecting the external point to the centre acts as an angle bisector (∠POT = ∠QOT).\n\nCyclic Quadrilateral Formation\n\nThe quadrilateral formed by the two tangents and the two radii to the points of contact has opposite angles that sum to 180°, specifically ∠PTQ + ∠POQ = 180°.",
+    "topic": "Geometry",
+    "subtopic": "Circles - Tangents & Secants",
+    "conceptTested": "The angle between two tangents drawn from an external point and the angle subtended by the line segment joining the points of contact at the centre are supplementary, and the line from the external point to the centre bisects both angles.",
+    "tags": {
+      "topic": "Geometry",
+      "subtopic": "Circles - Tangents & Secants",
+      "conceptTested": "The angle between two tangents drawn from an external point and the angle subtended by the line segment joining the points of contact at the centre are supplementary, and the line from the external point to the centre bisects both angles."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 9",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "01:06",
+    "avgTime": "00:37",
+    "questionText": "The length of a minute hand of a wall clock is 9 cm. What is the area swept (in cm^2) by the minute hand in 20 minutes ? (Take π = 3.14)",
+    "options": {
+      "A": "88.78",
+      "B": "84.78",
+      "C": "67.74",
+      "D": "57.78"
+    },
+    "solution": "Solution\n\nShortcut Trick\nThe minute hand covers a full 360° circle in 60 minutes.\n\nFraction of circle swept in 20 minutes = 20 ÷ 60 = 1/3 of the total area.\nArea swept = (1 ÷ 3) × π × r2\nArea = (1 ÷ 3) × 3.14 × (9)2\nArea = 3.14 × 27 = 84.78 cm2\n∴ The correct answer is 84.78 cm2.\n\nAlternate Method\nGiven:\nLength of minute hand (radius), r = 9 cm\nTime = 20 minutes\nValue of π = 3.14\n\nFormula Used:\nAngle swept by minute hand in 1 minute = 360° ÷ 60 = 6°\nArea of a sector = (θ ÷ 360°) × πr2\n\nCalculations:\n⇒ Angle swept in 20 minutes (θ) = 20 × 6° = 120°\n⇒ Area swept = (120° ÷ 360°) × 3.14 × (9)2\n⇒ Area swept = (1 ÷ 3) × 3.14 × 81\n⇒ Area swept = 27 × 3.14\n⇒ Area swept = 84.78 cm2\n∴ The correct answer is 84.78 cm2.\n\nAdditional Information\nClock Angles\n\nThe minute hand of a clock moves 6° per minute, while the hour hand moves 0.5° per minute. This relative speed concept is key to solving all clock-based angle problems.\n\nArea of Sector\n\nThe area of a sector of a circle with radius r and central angle θ is directly proportional to the angle and is calculated using the formula (θ ÷ 360°) × πr2.\n\nLength of an Arc\n\nThe length of an arc corresponding to a central angle θ represents the distance moved along the circumference and is given by (θ ÷ 360°) × 2πr.",
+    "topic": "Mensuration 2D",
+    "subtopic": "Sectors and Arcs of Circles",
+    "conceptTested": "Area of a sector = (θ / 360°) × πr^2, where the angle swept in 20 minutes is 120°.",
+    "tags": {
+      "topic": "Mensuration 2D",
+      "subtopic": "Sectors and Arcs of Circles",
+      "conceptTested": "Area of a sector = (θ / 360°) × πr^2, where the angle swept in 20 minutes is 120°."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 10",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:25",
+    "avgTime": "00:39",
+    "questionText": "Two trains start at the same time from Bangalore and Chennai and proceed towards each other at the speeds of 80 km/h and 95 km/h. When they meet, it is found that one train has travelled 180 km more than the other. The distance between Bangalore and Chennai is:",
+    "options": {
+      "A": "345 km",
+      "B": "400 km",
+      "C": "1200 km",
+      "D": "2100 km"
+    },
+    "solution": "Solution\n\nShortcut Trick\nWhen time is constant, Distance ∝ Speed.\n\nDifference in Speed = 95 − 80 = 15 km/h.\nTotal Speed = 95 + 80 = 175 km/h.\nTotal Distance = (Total Speed ÷ Difference in Speed) × Difference in Distance\nTotal Distance = (175 ÷ 15) × 180 = 175 × 12 = 2100 km.\n∴ The correct answer is 2100 km.\n\nAlternate Method\nGiven:\nSpeed of first train = 80 km/h\nSpeed of second train = 95 km/h\nDifference in distance travelled at meeting time = 180 km\n\nFormula Used:\nDistance = Speed × Time\n\nCalculations:\n⇒ Let the time taken for both trains to meet be t hours.\n⇒ Distance covered by first train = 80 × t\n⇒ Distance covered by second train = 95 × t\n⇒ The difference in distance covered = 95t − 80t = 15t\n⇒ 15t = 180\n⇒ t = 180 ÷ 15 = 12 hours\n⇒ Total distance between Bangalore and Chennai = 80t + 95t = 175t\n⇒ Total distance = 175 × 12\n⇒ Total distance = 2100 km\n∴ The correct answer is 2100 km.\n\nAdditional Information\nRelative Speed (Opposite Directions)\n\nWhen two bodies move towards each other, their relative speed is the sum of their individual speeds (S1 + S2).\n\nRelative Speed (Same Direction)\n\nWhen two bodies move in the same direction, their relative speed is the difference of their individual speeds (|S1 − S2|).\n\nConstant Time Property\n\nIf two objects travel for the exact same amount of time, the ratio of distances they cover is equal to the ratio of their respective speeds (D1 ÷ D2 = S1 ÷ S2).",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Relative Speed",
+    "conceptTested": "When two objects travel for the same duration, the ratio of distances covered is equal to the ratio of their speeds, and relative speed in opposite directions is the sum of their speeds.",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Relative Speed",
+      "conceptTested": "When two objects travel for the same duration, the ratio of distances covered is equal to the ratio of their speeds, and relative speed in opposite directions is the sum of their speeds."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 11",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:47",
+    "avgTime": "00:36",
+    "questionText": "Mukesh sells almonds at the cost price but uses a false weight and thus gains a 23% profit. How many grams of almonds is he giving for 3.075 kg?",
+    "options": {
+      "A": "2500",
+      "B": "2700",
+      "C": "2400",
+      "D": "2600"
+    },
+    "solution": "Solution\n\nShortcut Trick\nSince the shopkeeper sells at cost price, the profit of 23% is entirely due to false weight.\n\nRatio of Claimed Weight (SP) to Actual Weight (CP) = (100 + 23) : 100 = 123 : 100\nHere, Claimed Weight = 3.075 kg = 3075 g\n\n123 units → 3075 g\n\n1 unit → 25 g\n\nActual Weight (100 units) = 25 × 100 = 2500 g\n∴ The correct answer is 2500 g.\n\nAlternate Method\nGiven:\nClaimed Weight = 3.075 kg = 3075 g\nProfit = 23%\n\nFormula Used:\nProfit % = [(Claimed Weight − Actual Weight) ÷ Actual Weight] × 100\n\nCalculations:\nLet the actual weight given by Mukesh be x grams.\n⇒ 23 = [(3075 − x) ÷ x] × 100\n⇒ 23x = 307500 − 100x\n⇒ 123x = 307500\n⇒ x = 307500 ÷ 123\n⇒ x = 2500\n∴ The correct answer is 2500 g.\n\nAdditional Information\nDishonest Dealer Concept\n\nWhen a dealer sells goods at Cost Price (CP) but uses a false weight, his Profit % is determined directly by the error in weight. Formula: Profit % = [Error ÷ (Claimed Weight − Error)] × 100.\n\nNet Profit with Markup\n\nIf the dealer marks up his goods by a certain percentage and simultaneously cheats by using a false weight, the net profit is calculated by combining both effects using the ratio method or successive percentage formula.\n\nSelling Price and Markup\nSelling Price (SP) = Marked Price (MP) × [(100 − Discount%) ÷ 100]. This relationship helps identify the final price when a dealer offers a discount while committing weight fraud.",
+    "topic": "Profit, Loss & Discount",
+    "subtopic": "Profit, Loss & Discount - Dishonest Dealer",
+    "conceptTested": "Profit percentage due to false weight when selling at cost price is given by Profit % = [(Claimed Weight − Actual Weight) ÷ Actual Weight] × 100.",
+    "tags": {
+      "topic": "Profit, Loss & Discount",
+      "subtopic": "Profit, Loss & Discount - Dishonest Dealer",
+      "conceptTested": "Profit percentage due to false weight when selling at cost price is given by Profit % = [(Claimed Weight − Actual Weight) ÷ Actual Weight] × 100."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 12",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "00:53",
+    "avgTime": "00:30",
+    "questionText": "A closed cylindrical tank with a height of 1 m and a base diameter of 140 cm must be constructed from a metal sheet. For the same, how many m^2 of the sheet are required? [Use π = 22/7]",
+    "options": {
+      "A": "10.56 m2",
+      "B": "7.48 m2",
+      "C": "9.23 m2",
+      "D": "7 m2"
+    },
+    "solution": "Solution\n\nShortcut Trick\nFor a closed cylinder, Total Surface Area = 2πr(r + h)\nRadius (r) = 140 ÷ 2 = 70 cm = 0.7 m, Height (h) = 1 m\nArea = 2 × (22/7) × 0.7 × (0.7 + 1)\nArea = 44 × 0.1 × 1.7 = 7.48\n∴ The correct answer is 7.48 m2.\n\nAlternate Method\nGiven:\nHeight of the closed cylindrical tank (h) = 1 m\nBase diameter (d) = 140 cm = 1.4 m\n⇒ Radius (r) = 1.4 ÷ 2 = 0.7 m\n\nFormula Used:\nTotal Surface Area of a closed cylinder = 2πr(r + h)\n\nCalculations:\n⇒ Total Surface Area = 2 × (22/7) × 0.7 × (0.7 + 1)\n⇒ Total Surface Area = 44 × 0.1 × 1.7\n⇒ Total Surface Area = 4.4 × 1.7 = 7.48 m2\n∴ The correct answer is 7.48 m2.\n\nAdditional Information\nCurved Surface Area (CSA) of a Cylinder\n\nThe area of the curved sides excluding the top and bottom circular bases. Formula: CSA = 2πrh.\n\nOpen vs Closed Cylinder\n\nA closed cylinder includes both bases where TSA = 2πr(r + h), whereas an open cylinder has no top and its area is calculated as 2πrh + πr2.\n\nVolume of a Cylinder\n\nThe total space occupied by the cylinder. Formula: Volume = πr2h.",
+    "topic": "Mensuration 3D",
+    "subtopic": "Cylinder",
+    "conceptTested": "Total surface area of a closed cylinder is given by the formula TSA = 2πr(r + h).",
+    "tags": {
+      "topic": "Mensuration 3D",
+      "subtopic": "Cylinder",
+      "conceptTested": "Total surface area of a closed cylinder is given by the formula TSA = 2πr(r + h)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 13",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:36",
+    "avgTime": "00:24",
+    "questionText": "If cos θ - sin θ = 0, then (sin^8 θ + cos^8 θ) is:",
+    "options": {
+      "A": "18",
+      "B": "14",
+      "C": "16",
+      "D": "12"
+    },
+    "solution": "Solution\n\nShortcut Trick\nGiven cos θ − sin θ = 0, which implies tan θ = 1.\nThis means the angle θ = 45°.\nAt θ = 45°, sin θ = 1/√2 and cos θ = 1/√2.\nSubstitute the values: (1/√2)8 + (1/√2)8\n⇒ 1/16 + 1/16 = 2/16 = 1/8.\n∴ The correct answer is 1/8.\n\nAlternate Method\nGiven:\ncos θ − sin θ = 0\n\nCalculations:\n⇒ cos θ = sin θ\n\nSquaring both sides, we get:\n\n⇒ cos2 θ = sin2 θ\n\nUsing the standard trigonometric identity:\n\n⇒ sin2 θ + cos2 θ = 1\n\nSubstituting cos2 θ with sin2 θ:\n\n⇒ sin2 θ + sin2 θ = 1\n⇒ 2sin2 θ = 1\n⇒ sin2 θ = 1/2   and   cos2 θ = 1/2\nNow, we need to find the value of (sin8 θ + cos8 θ):\n⇒ (sin2 θ)4 + (cos2 θ)4\n⇒ (1/2)4 + (1/2)4\n⇒ 1/16 + 1/16\n⇒ 2/16 = 1/8\n∴ The correct answer is 1/8.\n\nAdditional Information\nPythagorean Identities\n\nsin2θ + cos2θ = 1 | sec2θ − tan2θ = 1 | cosec2θ − cot2θ = 1\n\nImportant Higher Power Expansions\n\nsin4θ + cos4θ = 1 − 2sin2θ cos2θ | sin6θ + cos6θ = 1 − 3sin2θ cos2θ\n\nEqualities at 45°\n\nIn the first quadrant, sin θ = cos θ only when θ = 45°. Similarly, tan θ = cot θ and sec θ = cosec θ are equal at θ = 45°.",
+    "topic": "Trigonometry",
+    "subtopic": "Trigonometric Identities & Equations",
+    "conceptTested": "Solving trigonometric equations using standard angle values and evaluating higher-power sums of sine and cosine.",
+    "tags": {
+      "topic": "Trigonometry",
+      "subtopic": "Trigonometric Identities & Equations",
+      "conceptTested": "Solving trigonometric equations using standard angle values and evaluating higher-power sums of sine and cosine."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 15",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "01:04",
+    "avgTime": "00:45",
+    "questionText": "Rs. 1092 is divided among 2 men, 6 women and 8 boys so that the share of a man, a woman and a boy are in the ratio 3 ∶ 2 ∶ 1. Then, how much does a man get? (In Rs.)",
+    "options": {
+      "A": "126",
+      "B": "120",
+      "C": "122",
+      "D": "124"
+    },
+    "solution": "Solution\n\nShortcut Trick\nTotal equivalent ratio units = (2 × 3) + (6 × 2) + (8 × 1) = 6 + 12 + 8 = 26 units.\nValue of 26 units = ₹1092.\nValue of 1 unit = 1092 ÷ 26 = ₹42.\nShare of 1 man = 3 units = 3 × 42 = ₹126.\n∴ The correct answer is ₹126.\n\nAlternate Method\nGiven:\nTotal amount to be divided = ₹1092\nNumber of people = 2 men, 6 women, and 8 boys\nRatio of individual shares (1 Man : 1 Woman : 1 Boy) = 3 : 2 : 1\n\nCalculations:\nLet the share of 1 man, 1 woman, and 1 boy be 3x, 2x, and 1x respectively.\n⇒ Total share of 2 men = 2 × 3x = 6x\n⇒ Total share of 6 women = 6 × 2x = 12x\n⇒ Total share of 8 boys = 8 × 1x = 8x\n⇒ Total amount distributed = 6x + 12x + 8x = 26x\n⇒ 26x = 1092\n⇒ x = 1092 ÷ 26 = 42\n⇒ Share of a man = 3x = 3 × 42 = 126\n∴ The correct answer is ₹126.\n\nAdditional Information\nAmount Distribution\n\nWhen dividing a total amount among different groups of people, always multiply the individual share ratio by the number of people in each group to find the overall ratio in which the total sum is split.\n\nCompound Ratio\n\nWhen two or more ratios are multiplied together, it is known as a compound ratio. For a : b and c : d, the compound ratio is (a × c) : (b × d).\n\nProportion\n\nFour numbers a, b, c, and d are in proportion if a : b = c : d, which means the product of the extremes equals the product of the means (a × d = b × c).",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Proportional Parts & Coin/Share Distribution",
+    "conceptTested": "Distributing a total amount among groups of individuals based on an individual share ratio.",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Proportional Parts & Coin/Share Distribution",
+      "conceptTested": "Distributing a total amount among groups of individuals based on an individual share ratio."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 17",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "D",
+    "userTime": "00:45",
+    "avgTime": "00:23",
+    "questionText": "A vessel can be filled by a tap A in 8 minutes, and by another tap B in 10 minutes. A third tap C can empty the vessel in 4 minutes. If all taps are opened simultaneously when the vessel is half full, then which of the following is true?",
+    "options": {
+      "A": "The vessel will be filled in 20 minutes.",
+      "B": "The vessel will be filled in 40 minutes.",
+      "C": "The vessel will be emptied in 40 minutes.",
+      "D": "The vessel will be emptied in 20 minutes."
+    },
+    "solution": "Solution\n\nShortcut Trick\nTotal Capacity = LCM(8, 10, 4) = 40 units.\nEfficiency of taps → A: +5, B: +4, C: −10.\nNet efficiency = 5 + 4 − 10 = −1 unit/min (Negative means vessel empties).\nSince the vessel is half full, volume to empty = 40 ÷ 2 = 20 units.\nTime to empty the vessel = 20 ÷ 1 = 20 minutes.\n∴ The correct answer is emptied in 20 minutes.\n\nAlternate Method\nGiven:\nTime taken by tap A to fill the vessel = 8 min\nTime taken by tap B to fill the vessel = 10 min\nTime taken by tap C to empty the vessel = 4 min\n\nThe vessel is half full initially.\n\nTap\tTime (min)\tTotal Capacity\tEfficiency\nA\t8\t40\t+5\nB\t10\t+4\nC (Empty)\t4\t−10\n\nCalculations:\n⇒ Net efficiency of all taps together = 5 + 4 − 10 = −1 unit/min.\n⇒ A negative efficiency indicates that the vessel is being emptied.\n⇒ Quantity of water in the half-full vessel = 40 × (1/2) = 20 units.\n⇒ Time required to empty the vessel = Total water ÷ Effective efficiency\n⇒ Time = 20 ÷ 1 = 20 minutes.\n∴ The correct answer is emptied in 20 minutes.\n\nAdditional Information\nPipes and Cisterns Basics\n\nIf a pipe fills a tank in x hours, its part filled in 1 hour is 1/x. If it empties a full tank in y hours, its part emptied in 1 hour is −1/y.\n\nNet Work Method\n\nNet part filled in 1 hour by both pipes = (1/x) − (1/y). If the result is positive, the tank is being filled. If negative, it is being emptied.\nTotal Capacity (LCM Method)\n\nTotal capacity is assumed to be the Least Common Multiple (LCM) of all given individual times. Efficiency = Total Capacity ÷ Time taken.",
+    "topic": "Pipes & Cisterns",
+    "subtopic": "Inlet and Outlet Pipes Efficiency",
+    "conceptTested": "Calculating net efficiency when multiple inlet and outlet pipes operate simultaneously on a partially filled tank.",
+    "tags": {
+      "topic": "Pipes & Cisterns",
+      "subtopic": "Inlet and Outlet Pipes Efficiency",
+      "conceptTested": "Calculating net efficiency when multiple inlet and outlet pipes operate simultaneously on a partially filled tank."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 18",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:03",
+    "avgTime": "00:07",
+    "questionText": "Two individuals, A and B, have rented a field. A places 12 horses for 5 months and 20 sheep for 4 months. B places 15 cows for 6 months and 30 sheep for 3 months. If 3 horses consume the same food as 5 cows and 6 cows consume the same food as 10 sheep, find what portion of the rent A should pay?",
+    "options": {
+      "A": "3773",
+      "B": "2345",
+      "C": "4356",
+      "D": "5534"
+    },
+    "solution": "Solution\n\nShortcut Trick\nConvert all animals to Cows (C) to find the total equivalent consumption ratio.\n\nGiven 3H = 5C ⇒ 1H = 5/3 C, and 10S = 6C ⇒ 1S = 3/5 C.\nA's usage = [12 × (5/3) × 5] + [20 × (3/5) × 4] = 100 + 48 = 148 cow-months.\nB's usage = (15 × 6) + [30 × (3/5) × 3] = 90 + 54 = 144 cow-months.\nRatio of rent A : B = 148 : 144 = 37 : 36.\n∴ The correct answer is 37/73.\n\nAlternate Method\nGiven:\nA places 12 horses for 5 months and 20 sheep for 4 months.\n\nB places 15 cows for 6 months and 30 sheep for 3 months.\n\n3 horses consume same as 5 cows, and 6 cows consume same as 10 sheep.\n\nFormula Used:\nRent Share Ratio = (Number of animals × Time × Consumption rate)\n\nCalculations:\n⇒ Let us convert the number of all animals into equivalent number of Cows (C) for simplicity.\n⇒ 3 Horses = 5 Cows ⇒ 1 Horse = 5/3 Cows\n⇒ 10 Sheep = 6 Cows ⇒ 1 Sheep = 3/5 Cows\n⇒ Equivalent animals placed by A in terms of cows:\n⇒ 12 Horses = 12 × (5/3) = 20 Cows\n⇒ 20 Sheep = 20 × (3/5) = 12 Cows\n⇒ Total equivalent consumption by A = (20 Cows × 5 months) + (12 Cows × 4 months)\n⇒ A's total units = 100 + 48 = 148 cow-months\n⇒ Equivalent animals placed by B in terms of cows:\n⇒ 15 Cows = 15 Cows\n⇒ 30 Sheep = 30 × (3/5) = 18 Cows\n⇒ Total equivalent consumption by B = (15 Cows × 6 months) + (18 Cows × 3 months)\n⇒ B's total units = 90 + 54 = 144 cow-months\n⇒ Ratio of rent (A : B) = 148 : 144\n⇒ Simplifying by dividing both terms by 4, Ratio = 37 : 36\n⇒ Portion of rent A should pay = A's share ÷ (A's share + B's share)\n⇒ A's portion = 37 ÷ (37 + 36) = 37/73\n∴ The correct answer is 37/73.\n\nAdditional Information\nPartnership Rent Rule\n\nWhen multiple people rent a common property (like a pasture), the rent paid by each person is directly proportional to the number of resources used multiplied by the duration of usage (Rent ≈ Animals × Time).\n\nCompound Ratio Equivalency\n\nIf distinct categories are given (like Horses, Cows, and Sheep), establish a single common base unit by utilizing equivalent ratios. Converting all distinct variables into one unified variable simplifies compound calculations.",
+    "topic": "Partnership",
+    "subtopic": "Rent Proportion with Equivalent Consumption",
+    "conceptTested": "Converting heterogeneous resource utilization into a common base unit to compute proportional rent shares.",
+    "tags": {
+      "topic": "Partnership",
+      "subtopic": "Rent Proportion with Equivalent Consumption",
+      "conceptTested": "Converting heterogeneous resource utilization into a common base unit to compute proportional rent shares."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 19",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:39",
+    "avgTime": "00:34",
+    "questionText": "Mohan can complete the work in 28 days, and Rohan can complete the work in 56 days, if Sohan is 60% more efficient than Rohan then in how many days Mohan and Sohan can complete the 90% of the work?",
+    "options": {
+      "A": "13 days",
+      "B": "14 days",
+      "C": "12 days",
+      "D": "11 days"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLet Total Work = LCM(28, 56) = 56 units.\nEfficiency of Mohan = 56 ÷ 28 = 2 units/day, and Rohan = 56 ÷ 56 = 1 unit/day.\n\nSohan is 60% more efficient than Rohan, so Sohan's efficiency = 1 × 1.6 = 1.6 units/day.\n\nCombined efficiency of Mohan and Sohan = 2 + 1.6 = 3.6 units/day.\nTime = (90% of Total Work) ÷ (Combined Efficiency) = 50.4 ÷ 3.6 = 14 days.\n∴ The correct answer is 14 days.\n\nAlternate Method\nGiven:\nTime taken by Mohan to complete the work = 28 days\nTime taken by Rohan to complete the work = 56 days\n\nSohan is 60% more efficient than Rohan.\n\nFormula Used:\nTotal Work = Efficiency × Time\n\nCalculation:\nLet Total Work be the LCM of the time taken by Mohan and Rohan.\n\nPerson\tDays\tTotal Work\tEfficiency\nMohan\t28\t56\t2\nRohan\t56\t1\n\n⇒ Efficiency of Rohan = 1 unit/day\n⇒ Sohan's efficiency = Rohan's efficiency + 60% of Rohan's efficiency\n⇒ Sohan's efficiency = 1 + 0.6 = 1.6 units/day\n⇒ Combined efficiency of Mohan and Sohan = 2 + 1.6 = 3.6 units/day\n⇒ Work to be completed = 90% of Total Work = (90 ÷ 100) × 56 = 50.4 units\n⇒ Time taken by Mohan and Sohan = Work to be completed ÷ Combined Efficiency\n⇒ Time taken = 50.4 ÷ 3.6 = 14 days\n∴ The correct answer is 14 days.\n\nAdditional Information\nWork and Efficiency Ratio\n\nEfficiency is inversely proportional to the time taken. If a person is x% more efficient, their time taken will be proportionally less. Ratio of efficiency = 100 : (100 + x).\n\nCombined Work Rule\n\nWhen multiple people work together, their one-day work (efficiency) is simply added up. The total time taken to complete a specific task is derived by Total Target Work ÷ Sum of their individual efficiencies.",
+    "topic": "Time & Work",
+    "subtopic": "Efficiency Comparison and Partial Work",
+    "conceptTested": "Relating relative worker efficiencies to calculate the time required to complete a specified percentage of total work.",
+    "tags": {
+      "topic": "Time & Work",
+      "subtopic": "Efficiency Comparison and Partial Work",
+      "conceptTested": "Relating relative worker efficiencies to calculate the time required to complete a specified percentage of total work."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "00:24",
+    "avgTime": "00:23",
+    "questionText": "What should come in place of both x in the equation x / √128 = √162 / x?",
+    "options": {
+      "A": "12",
+      "B": "14",
+      "C": "144",
+      "D": "196"
+    },
+    "solution": "Solution\n\nShortcut Trick\nCross-multiply the given values to solve for x2 directly:\n\nx2 = √128 × √162 = √(128 × 162)\nx2 = √(64 × 2 × 81 × 2) = √(64 × 81 × 4)\nx2 = 8 × 9 × 2 = 144\nx = √144 = 12\n∴ The correct answer is 12.\n\nAlternate Method\nGiven:\nx / √128 = √162 / x\n\nCalculation:\n⇒ Cross-multiplying both sides, we get:\n⇒ x × x = √128 × √162\n⇒ x2 = √(128 × 162)\n⇒ Factorizing the numbers into perfect squares:\n⇒ x2 = √(64 × 2 × 81 × 2)\n⇒ x2 = √(64 × 81 × 4)\n⇒ Taking the square root of the perfect squares:\n⇒ x2 = 8 × 9 × 2\n⇒ x2 = 144\n⇒ x = √144\n⇒ x = 12\n∴ The correct answer is 12.\n\nAdditional Information\nMultiplication of Surds\n\nWhen multiplying square roots, you can combine them under a single root: √a × √b = √(a × b). This helps in factoring out perfect squares easily.\n\nPerfect Squares Identification\n\nBreaking down large numbers into products of known perfect squares (like 64 = 82 and 81 = 92) simplifies square root calculations significantly without needing prime factorization.\n\nSolving Quadratic Variables\n\nAn equation of the form x2 = a2 generally has two roots: x = a and x = −a. In quantitative aptitude simplification questions, the positive root is usually considered unless options suggest otherwise.",
+    "topic": "Quantitative Aptitude",
+    "subtopic": "Simplification - Surds & Indices",
+    "conceptTested": "Solving fractional equations with square roots and surd multiplication rules.",
+    "tags": {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Simplification - Surds & Indices",
+      "conceptTested": "Solving fractional equations with square roots and surd multiplication rules."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 22",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:03",
+    "avgTime": "00:15",
+    "questionText": "What will be the difference between mean and median of the given data?\n21, 11, 27, 8, 5, 12, 7, 23, 3, 14, 9, 19",
+    "options": {
+      "A": "1.25",
+      "B": "1.75",
+      "C": "1.45",
+      "D": "1.5"
+    },
+    "solution": "Solution\n\nShortcut Trick\nMean of the given data = Sum of data ÷ Total numbers = 159 ÷ 12 = 13.25\nArranging data in ascending order: 3, 5, 7, 8, 9, 11, 12, 14, 19, 21, 23, 27\nMedian = Average of 6th and 7th terms = (11 + 12) ÷ 2 = 11.5\nDifference = 13.25 − 11.5 = 1.75\n∴ The correct answer is 1.75.\n\nAlternate Method\nGiven:\nData set: 21, 11, 27, 8, 5, 12, 7, 23, 3, 14, 9, 19\nTotal number of observations (n) = 12\n\nFormula Used:\nMean = Sum of observations ÷ Total number of observations\nMedian (for even n) = Average of the (n/2)th and (n/2 + 1)th observations in sorted data\n\nMean vs Median Comparison\n0\n10\n20\n30\nMedian 11.5\nMean 13.25\n1.75\nDifference\n\nCalculations:\n⇒ Sum of observations = 21 + 11 + 27 + 8 + 5 + 12 + 7 + 23 + 3 + 14 + 9 + 19 = 159\n⇒ Mean = 159 ÷ 12 = 13.25\n⇒ Arranging the given data in ascending order: 3, 5, 7, 8, 9, 11, 12, 14, 19, 21, 23, 27\n⇒ Since n = 12 (an even number), the median lies between the 6th and 7th terms.\n⇒ 6th term = 11, and 7th term = 12\n⇒ Median = (11 + 12) ÷ 2 = 23 ÷ 2 = 11.5\n⇒ Difference = Mean − Median\n⇒ Difference = 13.25 − 11.5 = 1.75\n∴ The correct answer is 1.75.\n\nAdditional Information\nMean\n\nThe arithmetic average of a set of numbers, calculated by dividing the sum of all observations by the total number of observations.\n\nMedian\n\nThe exact middle value of a sorted dataset. If the dataset has an even number of observations, the median is the average of the two middlemost values.\n\nMode\n\nThe value that appears most frequently in a dataset. A dataset can be unimodal, bimodal, multimodal, or have no mode at all.\n\nEmpirical Relationship\n\nFor a moderately skewed continuous distribution, the fundamental relationship between mean, median, and mode is given by: Mode ≈ 3 × Median − 2 × Mean.",
+    "topic": "Statistics",
+    "subtopic": "Measures of Central Tendency - Mean and Median",
+    "conceptTested": "Calculation of arithmetic mean and median for an ungrouped set of observations.",
+    "tags": {
+      "topic": "Statistics",
+      "subtopic": "Measures of Central Tendency - Mean and Median",
+      "conceptTested": "Calculation of arithmetic mean and median for an ungrouped set of observations."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 23",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:04",
+    "avgTime": "00:12",
+    "questionText": "The areas of the three adjacent faces of a closed cuboidal box are 120 cm^2, 60 cm^2 and 72 cm^2 respectively. Then, the total surface area of the box is:",
+    "options": {
+      "A": "252 cm2",
+      "B": "378 cm2",
+      "C": "504 cm2",
+      "D": "630 cm2"
+    },
+    "solution": "Solution\n\nShortcut Trick\nThe total surface area of a cuboid is exactly twice the sum of the areas of its three adjacent faces.\n\n⇒ Total Surface Area = 2 × (Sum of adjacent faces)\n⇒ Total Surface Area = 2 × (120 + 60 + 72)\n⇒ Total Surface Area = 2 × 252 = 504 cm2\n∴ The correct answer is 504 cm2.\n\nAlternate Method\nGiven:\nThe areas of three adjacent faces of the closed cuboidal box are 120 cm2, 60 cm2, and 72 cm2.\n\nFormula Used:\nTotal Surface Area of Cuboid = 2(lb + bh + hl)\nWhere l, b, and h are the length, breadth, and height of the cuboid.\n\nCalculations:\nLet the length, breadth, and height of the box be l, b, and h respectively.\n⇒ Area of the first face (lb) = 120 cm2\n⇒ Area of the second face (bh) = 60 cm2\n⇒ Area of the third face (hl) = 72 cm2\n\nSubstitute these given areas directly into the total surface area formula:\n\n⇒ Total Surface Area = 2 × (lb + bh + hl)\n⇒ Total Surface Area = 2 × (120 + 60 + 72)\n⇒ Total Surface Area = 2 × 252\n⇒ Total Surface Area = 504 cm2\n∴ The correct answer is 504 cm2.\n\nAdditional Information\nVolume of a Cuboid\n\nIf A1, A2, and A3 are the areas of the three adjacent faces, the volume V is given directly by the square root of their product: V = √(A1 × A2 × A3).\n\nLateral Surface Area\n\nThe lateral surface area (area of the four vertical walls) of a cuboid is given by 2h(l + b), which excludes the top and bottom faces.\n\nLength of Diagonal\n\nThe length of the longest diagonal possible inside a given cuboid is calculated as √(l2 + b2 + h2).",
+    "topic": "Mensuration 3D",
+    "subtopic": "Cuboid - Surface Area & Faces",
+    "conceptTested": "Total Surface Area of a cuboid given the areas of three adjacent faces: TSA = 2(A1 + A2 + A3).",
+    "tags": {
+      "topic": "Mensuration 3D",
+      "subtopic": "Cuboid - Surface Area & Faces",
+      "conceptTested": "Total Surface Area of a cuboid given the areas of three adjacent faces: TSA = 2(A1 + A2 + A3)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 24",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:03",
+    "avgTime": "00:07",
+    "questionText": "At a dinner party, every two guests used a bowl of rice between them, every three guests used a bowl of dal among them and every four guests used a bowl of curd among them. There are altogether 65 bowls. What is the number of guests present at the party?",
+    "options": {
+      "A": "90",
+      "B": "80",
+      "C": "70",
+      "D": "60"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLet the total number of guests be the LCM of 2, 3, and 4, which is 12 units.\nNumber of bowls used = (12 ÷ 2) + (12 ÷ 3) + (12 ÷ 4) = 6 + 4 + 3 = 13 units.\nGiven total bowls = 65, so we equate: 13 units = 65 ⇒ 1 unit = 5.\nTotal guests = 12 units = 12 × 5 = 60 guests.\n∴ The correct answer is 60 guests.\n\nAlternate Method\nGiven:\nOne bowl of rice is shared between 2 guests.\n\nOne bowl of dal is shared among 3 guests.\n\nOne bowl of curd is shared among 4 guests.\n\nTotal number of bowls used = 65.\n\nCalculations:\n⇒ Let the total number of guests present at the party be x.\n⇒ Number of rice bowls = x/2\n⇒ Number of dal bowls = x/3\n⇒ Number of curd bowls = x/4\n⇒ Total bowls = x/2 + x/3 + x/4 = 65\n⇒ Taking the LCM of the denominators 2, 3, and 4, which is 12:\n⇒ (6x + 4x + 3x) ÷ 12 = 65\n⇒ 13x ÷ 12 = 65\n⇒ 13x = 65 × 12\n⇒ x = (65 × 12) ÷ 13\n⇒ x = 5 × 12\n⇒ x = 60\n∴ The correct answer is 60 guests.\n\nAdditional Information\nLCM Method for Equations\n\nMultiplying fractional terms by the Least Common Multiple (LCM) of their denominators converts them into whole numbers, making linear equations easier to solve.\n\nUnitary Method\n\nA technique that involves finding the value of a single unit first, and then multiplying it by the total parts to find the desired quantity. If n units = Total, then 1 unit = Total ÷ n.\n\nFractions in Sharing Problems\n\nWhen items are shared among a group, the total items used equals the group size divided by the number of people sharing each individual item (Total Items = Total People ÷ Group Size per Item).",
+    "topic": "Quantitative Aptitude",
+    "subtopic": "Ratio & Proportion - Fractional Sharing Problems",
+    "conceptTested": "Solving linear equations involving fractional parts by finding the least common multiple (LCM).",
+    "tags": {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Ratio & Proportion - Fractional Sharing Problems",
+      "conceptTested": "Solving linear equations involving fractional parts by finding the least common multiple (LCM)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 25",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:05",
+    "avgTime": "00:24",
+    "questionText": "A, B and C can reap a field in 2 days; B, C and D in 3 days; C, D and A in 7 days; D, A and B in 10 days. In what time can A, B, C and D together reap it?",
+    "options": {
+      "A": "75/14 days",
+      "B": "66/7 days",
+      "C": "630/226 days",
+      "D": "94/3 days"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLet Total Work = LCM(2, 3, 7, 10) = 210 units.\nSum of 1-day work (efficiencies) of all 4 groups = (210 ÷ 2) + (210 ÷ 3) + (210 ÷ 7) + (210 ÷ 10) = 105 + 70 + 30 + 21 = 226.\n\nSince each person is included in exactly 3 groups, their combined actual efficiency = 226 / 3 units/day.\n\nTime required = Total Work ÷ Actual Efficiency = 210 ÷ (226 / 3) = 630 / 226 days.\n∴ The correct answer is 630/226 days.\n\nAlternate Method\nGiven:\nTime taken by (A + B + C) = 2 days\nTime taken by (B + C + D) = 3 days\nTime taken by (C + D + A) = 7 days\nTime taken by (D + A + B) = 10 days\n\nFormula Used:\nTotal Work = LCM of time taken\nEfficiency = Total Work ÷ Time\nTime Taken = Total Work ÷ Combined Efficiency\n\nPerson\tDays\tTotal Work\tEfficiency\nA + B + C\t2\t210\t105\nB + C + D\t3\t70\nC + D + A\t7\t30\nD + A + B\t10\t21\n\n⇒ Sum of the efficiencies = 105 + 70 + 30 + 21 = 226 units/day\n⇒ (A + B + C) + (B + C + D) + (C + D + A) + (D + A + B) = 226\n⇒ 3A + 3B + 3C + 3D = 226\n⇒ 3 × (A + B + C + D) = 226\n⇒ Combined efficiency of (A + B + C + D) = 226 / 3 units/day\n⇒ Time required = Total Work ÷ Combined Efficiency\n⇒ Time required = 210 ÷ (226 / 3)\n⇒ Time required = (210 × 3) / 226 = 630 / 226 days\n∴ The correct answer is 630/226 days.\n\nAdditional Information\nTime and Work LCM Method\n\nAlways assume Total Work as the Lowest Common Multiple (LCM) of the given days to make calculations fraction-free. Efficiency is calculated as Total Work ÷ Time.\n\nCombined Group Work Principle\n\nWhen individuals work in overlapping pairs or triplets, sum their combined group efficiencies and divide by the frequency of each person's appearance to find the actual joint efficiency.\n\nWork and Time Relationship\n\nTime and efficiency are inversely proportional. A higher combined efficiency directly results in proportionally less time taken to complete the assigned task.",
+    "topic": "Time & Work",
+    "subtopic": "Group Efficiency & Overlapping Work",
+    "conceptTested": "Finding combined efficiency when groups of workers are given in overlapping combinations.",
+    "tags": {
+      "topic": "Time & Work",
+      "subtopic": "Group Efficiency & Overlapping Work",
+      "conceptTested": "Finding combined efficiency when groups of workers are given in overlapping combinations."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 5",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "D",
+    "userTime": "00:30",
+    "avgTime": "00:51",
+    "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the right order to form a meaningful and coherent paragraph.\nA. By contrast, in musical theatre an actor's dramatic performance is primary, and the music plays a lesser role.\nB. Opera refers to a dramatic art form, originating in Europe, in which the emotional content is conveyed to the audience as much through music, both vocal and instrumental, as it is through the lyrics.\nC. The drama in opera is presented using the primary elements of theatre such as scenery, costumes, and acting.\nD. However, the words of the opera, or libretto, are sung rather than spoken.",
+    "options": {
+      "A": "ADCB",
+      "B": "CADB",
+      "C": "CABD",
+      "D": "BADC"
+    },
+    "solution": "Solution\n\nThe correct answer is 'BADC'.\n\nKey Points\nWhile arranging the parts of the passage, we should find some grammatical or contextual connections between them. Also, the first sentence of a passage is usually independent and introduces a topic. The second one provides more information about it.\n\nSentence B is the independent sentence and introduces the concept of opera and defines what an ‘opera’ is highlighting the fact that music is its chief prerogative.\nSo, sentence B is the first sentence after rearrangement.\nSentence A points out a contrasting picture by stating that ‘musical theatre’ is more about the actor’s performance. So, the second sentence is A to represent the contrast. Hence, A follows B.\nSentence D points out how it is different from a musical theatre performance. So, sentence D should come in at third position.\nSentence C is the concluding statement of the passage as it points out the how drama is presented in opera.\n\nThus, the correct order after rearrangement is option 4 i.e. BADC.\n\nSo, the correct paragraph is : (B) Opera refers to a dramatic art form, originating in Europe, in which the emotional content is conveyed to the audience as much through music, both vocal and instrumental, as it is through the lyrics. (A) By contrast, in musical theatre an actor's dramatic performance is primary, and the music plays a lesser role. (D) However, the words of the opera, or libretto, are sung rather than spoken. (C) The drama in opera is presented using the primary elements of theatre such as scenery, costumes, and acting.",
+    "topic": "English Comprehension",
+    "subtopic": "Para Jumbles",
+    "conceptTested": "Identification of independent introductory sentences and cohesive/contrastive transitions.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Para Jumbles",
+      "conceptTested": "Identification of independent introductory sentences and cohesive/contrastive transitions."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 7",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:06",
+    "avgTime": "00:43",
+    "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. Metal detectors are useful for finding metal hidden within objects or metal objects buried underground.\nB. Metal detector is an electronic instrument that detects the presence of metals nearby.\nC. If the sensor comes near a piece of metal, this is indicated by a changing tone in earphones or a needle moving on an indicator.\nD. They often consist of a handheld unit with a sensor probe that can be swept over the ground or other objects.",
+    "options": {
+      "A": "BADC",
+      "B": "ABCD",
+      "C": "ADBC",
+      "D": "BCDA"
+    },
+    "solution": "Solution\n\nThe correct answer is 'BADC'.\n\nKey Points\nHere is a detailed explanation of the correct order of the sentences to form a coherent paragraph:\nSentence B states that a metal detector is an electronic instrument that is used to detect the presence of metals nearby. This sentence provides an introductory statement about what a metal detector is and sets the context for the subsequent sentences.\nSentence A follows sentence B by explaining the usefulness of metal detectors. It states that metal detectors are valuable tools for locating hidden metal within objects or even metal objects buried underground. This sentence elaborates on the purpose and application of metal detectors.\nSentence D comes after sentence A. It describes the common features of metal detectors. It mentions that they often consist of a handheld unit with a sensor probe. This probe can be swept over the ground or other objects to detect the presence of metal. Sentence D provides information about the physical structure and usage of metal detectors.\nFinally, sentence C concludes the paragraph by explaining how metal detectors work. It states that when the sensor probe of the metal detector comes near a piece of metal, it is indicated by a changing tone in earphones or a needle moving on an indicator. Sentence C describes the mechanism by which metal detectors provide feedback to the user when metal is detected.\nTherefore, the correct order to form a coherent paragraph is 1) BADC:\nB. Metal detector is an electronic instrument that detects the presence of metals nearby.\nA. Metal detectors are useful for finding metal hidden within objects or metal objects buried underground.\nD. They often consist of a handheld unit with a sensor probe that can be swept over the ground or other objects.\nC. If the sensor comes near a piece of metal, this is indicated by a changing tone in earphones or a needle moving on an indicator.",
+    "topic": "English Comprehension",
+    "subtopic": "Para Jumbles",
+    "conceptTested": "Logical flow from general definition to specific features, structure, and operational mechanism.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Para Jumbles",
+      "conceptTested": "Logical flow from general definition to specific features, structure, and operational mechanism."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 12",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "00:11",
+    "avgTime": "00:12",
+    "questionText": "Choose the correct alternative to replace the underlined/bold part: 'Butter is made of milk.'",
+    "options": {
+      "A": "From",
+      "B": "With",
+      "C": "Up of",
+      "D": "No improvement"
+    },
+    "solution": "Solution\nThe correct answer is 'From'.\nKey Points\n\"Made of\" is used in the sense composed of one material or one thing, when the shape of the material is not changed.\nA notebook is made of papers.\nA house is made of bricks.\n\"Made up of\" is used in the sense composed of several things.\nThis machine is made up of several electronics components.\nThe board is made up of all the presidents of the world.\n\"Make from\" is used when the shape of the material has undergone a total change.\nButter is made from milk.\nHere, in the sentence Milk mentioned as one material that changes its shape when butter is made.\nHence, option 1 is the correct answer.\nThe correct sentence is: Butter is made from milk",
+    "topic": "English Comprehension",
+    "subtopic": "Spotting Errors",
+    "conceptTested": "Preposition usage with raw materials vs. transformed materials (Made of vs. Made from).",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Spotting Errors",
+      "conceptTested": "Preposition usage with raw materials vs. transformed materials (Made of vs. Made from)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 15",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:18",
+    "avgTime": "00:20",
+    "questionText": "Choose the correct one-word substitute for: 'The quality of having a ready insight into things; shrewdness'.",
+    "options": {
+      "A": "Mendacity",
+      "B": "Audacity",
+      "C": "Perspicacity",
+      "D": "Tenacity"
+    },
+    "solution": "Solution\n\nThe correct answer is: Perspicacity.\n\nKey Points\nThe word \"Perspicacity\" refers to the quality of having a ready insight into things; shrewdness. (तीव्र बुद्धिमत्ता)\nExample: The detective's perspicacity allowed him to solve the mystery in record time.\nMeaning in Hindi: तीव्र बुद्धिमत्ता, जिसमें किसी बात को समझने या पहचानने की विशेष क्षमता हो।\nTherefore, the correct answer is: Perspicacity.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nMendacity (झूठापन): The tendency to be untruthful or dishonest.\nExample: The politician was accused of mendacity during his campaign speeches.\nAudacity (साहस): The willingness to take bold risks; sometimes it can also mean rude or disrespectful behavior.\nExample: She had the audacity to challenge the professor's opinion in the middle of the lecture.\nTenacity (दृढ़ता): The quality of being determined or persistent.\nExample: His tenacity in pursuing his goals led him to achieve great success.",
+    "topic": "English Comprehension",
+    "subtopic": "One Word Substitution",
+    "conceptTested": "Vocabulary substitution for a specific personality trait or quality.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "One Word Substitution",
+      "conceptTested": "Vocabulary substitution for a specific personality trait or quality."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 17",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "C",
+    "userTime": "00:16",
+    "avgTime": "00:36",
+    "questionText": "What will come in blank (1) of the given passage describing a geopolitical scramble for Arctic resources?\nPassage: The precipitous melting of the polar ice caps has fundamentally transformed the Arctic from a peripheral, frozen wasteland into a central geopolitical (1) _________.",
+    "options": {
+      "A": "Sinecure",
+      "B": "Cynosure",
+      "C": "Quagmire",
+      "D": "Paradigm"
+    },
+    "solution": "Solution\nThe correct answer is 'Quagmire'.\n\nKey Points\nThe passage describes a situation involving a \"scramble to assert maritime claims\" over trade routes and mineral wealth. This suggests a complex, difficult, and potentially trapped environment.\n\"Quagmire\" (नाज़ुक स्थिति/दलदल) refers to a soft boggy area of land that yields underfoot, or metaphorically, an awkward, complex, or hazardous situation from which it is difficult to extricate oneself. This perfectly fits the \"geopolitical scramble\" mentioned.\n\"Sinecure\" (आराम की नौकरी) is a position requiring little or no work but giving the holder status or financial benefit. This is logically irrelevant to a global resource scramble.\n\"Cynosure\" (आकर्षण का केंद्र) refers to a person or thing that is the center of attention or admiration. While the Arctic is a center of attention, \"quagmire\" better captures the difficulty and conflict implied by the word \"scramble.\"\n\"Paradigm\" (प्रतिमान) is a typical example or pattern of something. While the Arctic is a new pattern of conflict, it is a neutral term that doesn't reflect the \"high-stakes scramble\" as accurately as \"quagmire.\"\nTherefore, the correct answer is 'Option 3'.\nComplete Passage: The precipitous melting of the polar ice caps has fundamentally transformed the Arctic from a peripheral, frozen wasteland into a central geopolitical (1) Quagmire. As the \"Great Thaw\" accelerates, global powers are no longer merely observers of climate change but active participants in a high-stakes scramble to assert maritime claims over newly accessible trans-continental trade routes and vast, untapped mineral wealth. This environmental metamorphosis represents a profound strategic restructuring of international relations, where the once-impenetrable ice is replaced by overlapping zones of national interest. Given the extreme sensitivity of this frontier, it is essential that the Arctic Council (2) __________ a binding framework that prioritizes ecological preservation over short-term resource extraction.\n\nHowever, the cooperative spirit of the past is under duress; not only (3) __________ the territorial disputes intensifying among the littoral states, but the increasing militarization of the Northern Sea Route also threatens the long-standing \"Arctic Exceptionalism\" that once kept the region insulated from global friction. The deployment of ice-class warships and the reopening of Cold War-era outposts signal a shift from scientific collaboration to securitized competition. Any attempt by a single nation to exploit the region’s sub-seabed resources without a robust, multilateral consensus will likely prove to be a (4) __________, leading to a cascade of irreversible environmental damage and a diplomatic fallout that would resonate far beyond the high latitudes.\n\nAdditional Information\nPrecipitous (तेजी से): Done suddenly and without careful consideration; in this context, it refers to the very fast melting of ice.\nMaritime Claims (समुद्री दावे): Assertions of sovereignty or control over specific areas of the ocean and the resources beneath them.\nMetamorphosis (कायापलट): A change of the form or nature of a thing or person into a completely different one.",
+    "topic": "English Comprehension",
+    "subtopic": "Cloze Test",
+    "conceptTested": "Contextual vocabulary selection for complex, hazardous geopolitical environments.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Cloze Test",
+      "conceptTested": "Contextual vocabulary selection for complex, hazardous geopolitical environments."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 18",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "01:08",
+    "avgTime": "00:31",
+    "questionText": "What will come in blank (2)?",
+    "options": {
+      "A": "should formulate",
+      "B": "formulate",
+      "C": "is formulating",
+      "D": "to formulate"
+    },
+    "solution": "Solution\nThe correct answer is 'formulate'.\n\nKey Points\nThe sentence contains the anticipatory structure \"It is essential that...\", which is a hallmark trigger for the mandative subjunctive mood.\nWhen adjectives of necessity or importance (e.g., essential, vital, imperative, crucial, mandatory) are followed by a \"that\" clause, the verb in that clause must be in its base form (the infinitive without 'to').\nThe base form of the verb is \"formulate\". This form remains constant regardless of whether the subject (\"the Arctic Council\") is singular or plural.\nOption 1 (\"should formulate\") is a common auxiliary usage in British English, but in competitive exams like CAT/GMAT, the pure subjunctive \"formulate\" is considered more accurate and formal.\nOption 3 (\"is formulating\") and Option 4 (\"to formulate\") are grammatically incorrect within the specific requirements of a subjunctive \"that\" clause.\nTherefore, the correct answer is 'Option 2'.\nComplete Passage: The precipitous melting of the polar ice caps has fundamentally transformed the Arctic from a peripheral, frozen wasteland into a central geopolitical (1) Quagmire. As the \"Great Thaw\" accelerates, global powers are no longer merely observers of climate change but active participants in a high-stakes scramble to assert maritime claims over newly accessible trans-continental trade routes and vast, untapped mineral wealth. This environmental metamorphosis represents a profound strategic restructuring of international relations, where the once-impenetrable ice is replaced by overlapping zones of national interest. Given the extreme sensitivity of this frontier, it is essential that the Arctic Council (2) formulate a binding framework that prioritizes ecological preservation over short-term resource extraction.\n\nHowever, the cooperative spirit of the past is under duress; not only (3) __________ the territorial disputes intensifying among the littoral states, but the increasing militarization of the Northern Sea Route also threatens the long-standing \"Arctic Exceptionalism\" that once kept the region insulated from global friction. The deployment of ice-class warships and the reopening of Cold War-era outposts signal a shift from scientific collaboration to securitized competition. Any attempt by a single nation to exploit the region’s sub-seabed resources without a robust, multilateral consensus will likely prove to be a (4) __________, leading to a cascade of irreversible environmental damage and a diplomatic fallout that would resonate far beyond the high latitudes.\n\nAdditional Information\nArctic Council: A high-level intergovernmental forum that addresses issues faced by the Arctic governments and the indigenous people of the Arctic.\nBinding Framework: A set of rules or a treaty that carries legal obligations for all participating parties.\nCircumpolar Ecosystem: The biological community of interacting organisms and their physical environment found around either of the Earth's poles.",
+    "topic": "English Comprehension",
+    "subtopic": "Cloze Test",
+    "conceptTested": "Mandative subjunctive mood following adjectives/nouns of necessity in a that-clause.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Cloze Test",
+      "conceptTested": "Mandative subjunctive mood following adjectives/nouns of necessity in a that-clause."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 19",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:20",
+    "avgTime": "00:34",
+    "questionText": "What will come in blank (3)?",
+    "options": {
+      "A": "are actually",
+      "B": "is actually",
+      "C": "being actually",
+      "D": "have been"
+    },
+    "solution": "Solution\nThe correct answer is 'are actually'.\n\nKey Points\nThe sentence begins with the negative/restrictive correlative conjunction \"not only\". In formal English, when a sentence or a clause starts with \"not only\", Grammatical Inversion must occur.\nInversion Rule: The auxiliary verb is placed before the subject. In this case, the subject is \"the territorial disputes,\" which is a plural noun.\nSince the subject is plural, the plural auxiliary verb \"are\" is required before the subject to maintain subject-verb agreement.\nOption 2 (\"is actually\") is singular and fails the agreement test with \"disputes\".\nOption 3 (\"being actually\") is a participle form and cannot function as the main auxiliary verb in an inverted clause.\nTherefore, the correct answer is 'Option 1'.\nComplete Passage: The precipitous melting of the polar ice caps has fundamentally transformed the Arctic from a peripheral, frozen wasteland into a central geopolitical (1) Quagmire. As the \"Great Thaw\" accelerates, global powers are no longer merely observers of climate change but active participants in a high-stakes scramble to assert maritime claims over newly accessible trans-continental trade routes and vast, untapped mineral wealth. This environmental metamorphosis represents a profound strategic restructuring of international relations, where the once-impenetrable ice is replaced by overlapping zones of national interest. Given the extreme sensitivity of this frontier, it is essential that the Arctic Council (2) formulate a binding framework that prioritizes ecological preservation over short-term resource extraction.\n\nHowever, the cooperative spirit of the past is under duress; not only (3) are actually the territorial disputes intensifying among the littoral states, but the increasing militarization of the Northern Sea Route also threatens the long-standing \"Arctic Exceptionalism\" that once kept the region insulated from global friction. The deployment of ice-class warships and the reopening of Cold War-era outposts signal a shift from scientific collaboration to securitized competition. Any attempt by a single nation to exploit the region’s sub-seabed resources without a robust, multilateral consensus will likely prove to be a (4) __________, leading to a cascade of irreversible environmental damage and a diplomatic fallout that would resonate far beyond the high latitudes.\n\nAdditional Information\nLittoral States (तटीय राज्य): Countries that have a coastline on a particular sea or ocean. For the Arctic, these include Russia, Canada, the US, Norway, and Denmark (via Greenland).\nArctic Exceptionalism: The geopolitical concept that the Arctic should be treated as a zone of high cooperation and low tension, separate from the conflicts occurring in the rest of the world.\nMilitarization: The process by which a society or region organizes itself for military conflict and violence, including the building of bases and deployment of troops.",
+    "topic": "English Comprehension",
+    "subtopic": "Cloze Test",
+    "conceptTested": "Grammatical inversion after negative/restrictive correlative conjunctions like 'not only'.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Cloze Test",
+      "conceptTested": "Grammatical inversion after negative/restrictive correlative conjunctions like 'not only'."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 20",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:51",
+    "avgTime": "00:23",
+    "questionText": "What will come in blank (4)?",
+    "options": {
+      "A": "Panacea",
+      "B": "Fillip",
+      "C": "Shibboleth",
+      "D": "Cataclysm"
+    },
+    "solution": "Solution\nThe correct answer is 'Cataclysm'.\n\nKey Points\nThe passage warns that exploiting sub-seabed resources without consensus would lead to \"irreversible environmental damage\" and \"diplomatic fallout.\" This suggests a disastrous outcome.\n\"Cataclysm\" (प्रलय/भीषण तबाही) refers to a large-scale and violent event in the natural world, or a sudden and violent political or social upheaval. In this context, it perfectly describes the massive negative consequences of unchecked Arctic exploitation.\n\"Panacea\" (रामबाण) is a solution or remedy for all difficulties. Exploiting resources in a disputed zone would be the opposite of a solution.\n\"Fillip\" (प्रोत्साहन) means something which acts as a stimulus or boost. While resource extraction might be a boost to an economy, the \"irreversible damage\" mentioned later makes \"cataclysm\" the more appropriate descriptor for the overall event.\n\"Shibboleth\" (पुरानी घिसी-पिटी धारणा) is a belief or custom that is no longer important or relevant. This does not fit the description of an event leading to environmental damage.\nTherefore, the correct answer is 'Option 4'.\nComplete Passage: The precipitous melting of the polar ice caps has fundamentally transformed the Arctic from a peripheral, frozen wasteland into a central geopolitical (1) Quagmire. As the \"Great Thaw\" accelerates, global powers are no longer merely observers of climate change but active participants in a high-stakes scramble to assert maritime claims over newly accessible trans-continental trade routes and vast, untapped mineral wealth. This environmental metamorphosis represents a profound strategic restructuring of international relations, where the once-impenetrable ice is replaced by overlapping zones of national interest. Given the extreme sensitivity of this frontier, it is essential that the Arctic Council (2) formulate a binding framework that prioritizes ecological preservation over short-term resource extraction.\n\nHowever, the cooperative spirit of the past is under duress; not only (3) are actually the territorial disputes intensifying among the littoral states, but the increasing militarization of the Northern Sea Route also threatens the long-standing \"Arctic Exceptionalism\" that once kept the region insulated from global friction. The deployment of ice-class warships and the reopening of Cold War-era outposts signal a shift from scientific collaboration to securitized competition. Any attempt by a single nation to exploit the region’s sub-seabed resources without a robust, multilateral consensus will likely prove to be a (4) cataclysm, leading to a cascade of irreversible environmental damage and a diplomatic fallout that would resonate far beyond the high latitudes.\n\nAdditional Information\nSub-seabed resources: Minerals, oil, and natural gas located beneath the ocean floor. The Arctic is estimated to hold about 13% of the world's undiscovered oil and 30% of its undiscovered gas.\nMultilateral Consensus: An agreement reached by three or more nations, ensuring that actions are taken collectively rather than unilaterally.\nIrreversible (अपरिवर्तनीय): Something that cannot be undone or changed back to its original state, often used to describe severe ecological damage.",
+    "topic": "English Comprehension",
+    "subtopic": "Cloze Test",
+    "conceptTested": "Vocabulary in context: selecting words appropriate for descriptive descriptive prose regarding architectural features.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Cloze Test",
+      "conceptTested": "Vocabulary in context: selecting words appropriate for descriptive descriptive prose regarding architectural features."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 3",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 24",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "00:41",
+    "avgTime": "00:45",
+    "questionText": "Select the most appropriate option to fill in the blanks.\nThere’s more than the 101 - seater dining table at the Falaknuma palace that is awe ______. The library done in rosewood and mahogany is a place that will force anyone to ______, if only to admire the fine original polish, the furniture and the walnut carved high roof. The last is supposedly an ______ of the one at Windsor Castle.",
+    "options": {
+      "A": "inspiring; pause; imitation",
+      "B": "breathtaking; stalk; admiration",
+      "C": "admiring; bustle; alliteration",
+      "D": "conveying; appreciate; abolition"
+    },
+    "solution": "Solution\n\nThe correct answer is 'inspiring; pause; imitation'.\n\nKey Points\nThe completed sentence would be:\n\nThere’s more than the 101-seater dining table at the Falaknuma palace that is awe inspiring. The library done in rosewood and mahogany is a place that will force anyone to pause, if only to admire the fine original polish, the furniture, and the walnut carved high roof. The last is supposedly an imitation of the one at Windsor Castle.\n\nOption 1) provides the most suitable words to convey the intended meaning, describing the dining table and library as inspiring and prompting a pause to admire them. Additionally, it suggests that the library is an imitation of the one at Windsor Castle.\n\ninspiring - Evoking or generating feelings of inspiration, motivation, or awe; serving as a source of inspiration. In the context of the sentence, it suggests that there are elements in the Falaknuma palace that are awe-inspiring or capable of inspiring admiration or wonder.\n\npause - A temporary break or cessation in activity; a momentary stop or hesitation. In the sentence, it suggests that the library in the palace is so impressive that it would make anyone pause or momentarily stop to appreciate its beauty.\n\nimitation - The act of replicating or mimicking something, often with the intention of resembling or copying the original. Here, it refers to the fact that the high roof in the palace is designed to resemble or imitate the one found in Windsor Castle.\n\nTherefore, the correct option 1) \"inspiring; pause; imitation\" accurately conveys the intended meaning of the sentence. It describes elements in the palace that inspire awe, invites one to pause and admire, and highlights the imitation of the high roof as a design element.",
+    "topic": "English Comprehension",
+    "subtopic": "Fill in the Blanks",
+    "conceptTested": "Contextual vocabulary usage across multiple blanks in a descriptive passage.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Fill in the Blanks",
+      "conceptTested": "Contextual vocabulary usage across multiple blanks in a descriptive passage."
+    }
+  }
+]

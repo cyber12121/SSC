@@ -518,7 +518,7 @@ export function AiMentorChat({
   // #6: Compute personalized dynamic suggestions
   const dynamicSuggestions = useDynamicSuggestions(mockReports, topWeakTopic, activeReviewResult);
 
-  const handleSendMessage = async (textToSend?: string) => {
+  const handleSendMessage = async (textToSend?: string, specificQuestion?: any) => {
     const query = (textToSend || inputText).trim();
     if (!query || isLoading) return;
 
@@ -548,6 +548,7 @@ export function AiMentorChat({
         ];
       }
 
+      // Token optimization: Send active question if available, or at most 5 wrong questions
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -557,16 +558,22 @@ export function AiMentorChat({
           activeMockContext: activeMockReport
             ? `Active Mock Title: ${activeMockReport.title}\nScore: ${activeMockReport.totalScore}/${activeMockReport.maxMarks || 200}\nCorrect: ${activeMockReport.totalCorrect}, Wrong: ${activeMockReport.totalWrong}, Skipped: ${activeMockReport.totalUnattempted}`
             : undefined,
-          activeReviewQuestions: activeReviewResult?.questionDetails?.map((qd, idx) => ({
-            qNum: idx + 1,
-            question: qd.question?.question || '',
-            options: qd.question?.options || {},
-            correctAnswer: qd.question?.answer || '',
-            userAnswer: qd.selectedAnswer || (qd as any).userAnswer || '',
-            isCorrect: qd.isCorrect,
-            solution: qd.question?.solution || '',
-            topic: qd.question?.tags?.topic || (qd.question as any)?.topic || 'General'
-          }))
+          activeQuestion: specificQuestion,
+          activeReviewQuestions: !specificQuestion && activeReviewResult?.questionDetails
+            ? activeReviewResult.questionDetails
+                .filter(qd => !qd.isCorrect)
+                .slice(0, 5)
+                .map((qd, idx) => ({
+                  qNum: idx + 1,
+                  question: qd.question?.question || '',
+                  options: qd.question?.options || {},
+                  correctAnswer: qd.question?.answer || '',
+                  userAnswer: qd.selectedAnswer || (qd as any).userAnswer || '',
+                  isCorrect: qd.isCorrect,
+                  solution: qd.question?.solution || '',
+                  topic: qd.question?.tags?.topic || (qd.question as any)?.topic || 'General'
+                }))
+            : undefined
         })
       });
 
@@ -607,7 +614,18 @@ export function AiMentorChat({
       if (!detail) return;
       setIsOpen(true);
       const prompt = `Please explain Question #${detail.questionNumber} (${detail.topic || 'General'}):\n\nQuestion:\n${detail.questionText}\n\nMy Chosen Option: ${detail.userAnswer ? detail.userAnswer.toUpperCase() : 'Unattempted / Left'}\nCorrect Answer: ${detail.correctAnswer ? detail.correctAnswer.toUpperCase() : 'Refer to solution'}\n\nPlease explain why my answer was wrong, break down the core concept/grammar rule step-by-step, and give me a fast shortcut trick to solve this in under 30 seconds.`;
-      handleSendMessageRef.current(prompt);
+      
+      const qContext = {
+        qNum: detail.questionNumber,
+        question: detail.questionText,
+        options: detail.options,
+        userAnswer: detail.userAnswer,
+        correctAnswer: detail.correctAnswer,
+        solution: detail.solution,
+        topic: detail.topic
+      };
+      
+      handleSendMessageRef.current(prompt, qContext);
     };
 
     const handleLaunchDrill = (e: Event) => {

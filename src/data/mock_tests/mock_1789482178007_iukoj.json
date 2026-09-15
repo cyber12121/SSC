@@ -1,0 +1,1655 @@
+[
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 1",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "02:22",
+    "avgTime": "00:58",
+    "questionText": "Select the combination of letters that when sequentially placed in the blanks of the given series will complete the series.\n_ msk _ prm _ kt _ r _ s _ tpr _ skt _",
+    "options": {
+      "A": "r, s, t, p, m, k, m, p",
+      "B": "r, t, s, p, m, m, m, p",
+      "C": "r, t, s, p, m, k, k, p",
+      "D": "r, t, s, p, m, k, m, p"
+    },
+    "solution": "Solution\n\nLet's check each option,\n\n1\tr\tm\ts\tk\ts\tp\tr\tm\tt\tk\tt\tp\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\n2\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\tr\tm\ts\tm\tt\tp\tr\tm\ts\tk\tt\tp\n3\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\tr\tk\ts\tk\tt\tp\n4\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\tr\tm\ts\tk\tt\tp\n\nHere, we can see that Option 4 follows a repetitive pattern of \" r m s k t p \".\n\nHence, the correct answer is \"r, t, s, p, m, k, m, p\".",
+    "topic": "Letter & Symbol Series",
+    "subtopic": "Continuous Pattern Series",
+    "conceptTested": "Identification of repeating letter cluster patterns in continuous series blanks",
+    "tags": {
+      "topic": "Letter & Symbol Series",
+      "subtopic": "Continuous Pattern Series",
+      "conceptTested": "Identification of repeating letter cluster patterns in continuous series blanks"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 2",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:25",
+    "avgTime": "00:17",
+    "questionText": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
+    "options": {
+      "A": "PRT",
+      "B": "RTU",
+      "C": "TVX",
+      "D": "UWY"
+    },
+    "solution": "Solution\n\nThe pattern followed here is:\n\nAccording to the alphabetical positions of the letters,\n\nSimilarly,\n\nHence, ‘TVX’ is the correct answer.",
+    "topic": "Analogy",
+    "subtopic": "Letter Analogy",
+    "conceptTested": "Positional alphabet shift pattern (forward/backward displacement)",
+    "tags": {
+      "topic": "Analogy",
+      "subtopic": "Letter Analogy",
+      "conceptTested": "Positional alphabet shift pattern (forward/backward displacement)"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 3",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:57",
+    "avgTime": "00:35",
+    "questionText": "Four pairs of letter-clusters have been given, out of which three are alike in some manner and one is different. Select the one that is different.",
+    "options": {
+      "A": "CAT : HXV",
+      "B": "DOG : ILI",
+      "C": "XYZ : CVB",
+      "D": "GOD : LFL"
+    },
+    "solution": "Solution\n\nThe pattern followed is,\n\nOption (1): CAT: HXV\nOption (2): DOG: ILI\nOption (3): XYZ: CVB\nOption (4): GOD: LFL\nAll follow the same pattern, except 'GOD: LFL’.\nHence, “GOD: LFL” is the odd one.",
+    "topic": "Classification / Odd One Out",
+    "subtopic": "Letter Classification",
+    "conceptTested": "Opposite letter pairs or consistent letter-coding distance mapping",
+    "tags": {
+      "topic": "Classification / Odd One Out",
+      "subtopic": "Letter Classification",
+      "conceptTested": "Opposite letter pairs or consistent letter-coding distance mapping"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 7",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:57",
+    "avgTime": "00:32",
+    "questionText": "If the mathematical operator, ‘+’ means ‘– ‘, ‘×’ means ‘+’, ‘÷’ means ‘×’, and ‘–’ means ‘÷‘, then the value of 28 + (11 × 7) – 9 ÷ 5 is",
+    "options": {
+      "A": "45",
+      "B": "12",
+      "C": "13.5",
+      "D": "18"
+    },
+    "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n–\n\nMeaning\n\n–\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) – 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 – (11 + 7) ÷ 9 × 5\n\n= 28 – 18 ÷ 9 × 5\n= 28 – 2 × 5\n= 28 – 10\n= 18\nHence, the correct answer is 18.",
+    "topic": "Mathematical Operations",
+    "subtopic": "Interchange of Signs & Numbers",
+    "conceptTested": "Evaluation of arithmetic expressions using BODMAS after symbol substitution",
+    "tags": {
+      "topic": "Mathematical Operations",
+      "subtopic": "Interchange of Signs & Numbers",
+      "conceptTested": "Evaluation of arithmetic expressions using BODMAS after symbol substitution"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 10",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "00:30",
+    "avgTime": "00:17",
+    "questionText": "Two statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome doctors are scientists.\nSome scientists are engineers.\nConclusions:\nI. All engineers are doctors.\nII. Some doctors are engineers.",
+    "options": {
+      "A": "Only conclusion I follows",
+      "B": "Neither conclusion I nor II follows",
+      "C": "Both conclusions I and II follow",
+      "D": "Only conclusion II follows"
+    },
+    "solution": "Solution\n\nStatements:\n\nSome doctors are scientists.\n\nSome scientists are engineers.\n\nThe Venn diagram as per the given statements:\n\nConclusions:\n\nI. All engineers are doctors. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nII. Some doctors are engineers. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nHence, the correct answer is \"Neither conclusion I nor II follows\".",
+    "topic": "Syllogism",
+    "subtopic": "Deductive Venn Logic: Statements with Some",
+    "conceptTested": "Deduction of intermediate relations from overlapping Some-Some syllogism premises",
+    "tags": {
+      "topic": "Syllogism",
+      "subtopic": "Deductive Venn Logic: Statements with Some",
+      "conceptTested": "Deduction of intermediate relations from overlapping Some-Some syllogism premises"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 15",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "D",
+    "userTime": "00:40",
+    "avgTime": "00:50",
+    "questionText": "Refer to the given number symbol series and answer the question given below.\\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\\nIf all the odd numbers are dropped from the given series, then which symbol/number will be at the seventh position to the left of the symbol/number that is ninth from the left end?",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "%",
+      "D": "4"
+    },
+    "solution": "Solution\n\nGiven Series:\n\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\n\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%)= 4\n\nHence, the correct answer is \"4\".",
+    "topic": "Letter & Symbol Series",
+    "subtopic": "Alphanumeric Series",
+    "conceptTested": "Positional counting after filtering out elements based on condition (odd numbers dropped).",
+    "tags": {
+      "topic": "Letter & Symbol Series",
+      "subtopic": "Alphanumeric Series",
+      "conceptTested": "Positional counting after filtering out elements based on condition (odd numbers dropped)."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 17",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:33",
+    "avgTime": "00:23",
+    "questionText": "If FLOWER is coded EMNXDS, then how is GAMBLE coded?",
+    "options": {
+      "A": "HCODNG",
+      "B": "BFCKLF",
+      "C": "DMXNES",
+      "D": "FBLCKF"
+    },
+    "solution": "Solution\n\nWe know,\n\nGiven,\n\nSimilarly,\n\nHence, the correct answer is FBLCKF.",
+    "topic": "Coding-Decoding",
+    "subtopic": "Letter Coding",
+    "conceptTested": "Backward and forward alphabetical shifting pattern (-1, +1, etc.) applied to letters of a word.",
+    "tags": {
+      "topic": "Coding-Decoding",
+      "subtopic": "Letter Coding",
+      "conceptTested": "Backward and forward alphabetical shifting pattern (-1, +1, etc.) applied to letters of a word."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 21",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:27",
+    "avgTime": "00:14",
+    "questionText": "Three different positions of the same dice are shown. Find which numbered face is opposite to the face showing 6?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)\n\n3\n\n2\n\n5\n\nDice (3)\n\n3\n\n1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
+    "topic": "Cube & Dice",
+    "subtopic": "Opposite Faces",
+    "conceptTested": "Determining opposite faces in a standard dice using common faces rotated in a clockwise/anticlockwise direction.",
+    "tags": {
+      "topic": "Cube & Dice",
+      "subtopic": "Opposite Faces",
+      "conceptTested": "Determining opposite faces in a standard dice using common faces rotated in a clockwise/anticlockwise direction."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 1",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:35",
+    "avgTime": "00:32",
+    "questionText": "Consider the following rivers:\\nI. Dhauliganga\\nII. Nandakini\\nIII. Pindar\\nIV. Yamuna\\nV. Saraswati\\nWhich of the above are major tributaries of the Alaknanda River?",
+    "options": {
+      "A": "I, II and III only",
+      "B": "I, II, III and V only",
+      "C": "II, III, IV and V only",
+      "D": "I, II, III, IV and V"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nThe Alaknanda River was recently in the news in connection with river conservation and hydrological studies in the Himalayan region.\n\nKey Points\nDhauliganga is a major tributary of the Alaknanda River. Hence, Statement I is correct.\nNandakini joins the Alaknanda at Nandprayag. Hence, Statement II is correct.\nPindar River meets the Alaknanda at Karnaprayag. Hence, Statement III is correct.\nYamuna is an independent major tributary of the Ganga and does not join the Alaknanda. Hence, Statement IV is incorrect.\nSaraswati River joins the Alaknanda near Mana, making it one of its important tributaries. Hence, Statement V is correct.\n\nAdditional Information\nSource: Satopanth and Bhagirath Kharak Glaciers, Uttarakhand.\nConfluence with Bhagirathi: Devprayag, where the Ganga is formed.\nMajor Tributaries: Dhauliganga, Nandakini, Pindar, Mandakini and Saraswati.\nThe Panch Prayag are formed by the confluences of the Alaknanda with its major tributaries.",
+    "topic": "Indian Drainage & Physiography",
+    "subtopic": "Himalayan Rivers & Tributaries",
+    "conceptTested": "Geographical identification of river systems and their major tributaries in the Himalayan region.",
+    "tags": {
+      "topic": "Indian Drainage & Physiography",
+      "subtopic": "Himalayan Rivers & Tributaries",
+      "conceptTested": "Geographical identification of river systems and their major tributaries in the Himalayan region."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 3",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:05",
+    "avgTime": "00:15",
+    "questionText": "In which of the following years did Lala Lajpat Rai co-found Punjab National Bank?",
+    "options": {
+      "A": "1899",
+      "B": "1894",
+      "C": "1904",
+      "D": "1880"
+    },
+    "solution": "Solution\nThe correct answer is 1894.\n\nKey Points\nLala Lajpat Rai, popularly known as Punjab Kesari, played a pivotal role in the establishment of the Punjab National Bank (PNB), which was registered on May 19, 1894, under the Indian Companies Act.\nThe bank was founded with the spirit of Swadeshi, aiming to create a truly Indian bank managed by Indians with Indian capital, serving as a landmark in the Indian banking history during the British Raj.\nThe first branch of Punjab National Bank opened for business on April 12, 1895, in Lahore (now in Pakistan), just a day before the Baisakhi festival.\nLala Lajpat Rai was the first person to open an account with the bank, and he was actively involved in its Board of Management during its foundational years.\nThe initiative was also supported by other prominent figures like Dyal Singh Majithia, who served as the first Chairman, and Lala Harkishen Lal.\n\nAdditional Information\nLala Lajpat Rai:\nHe was a key member of the Lal-Bal-Pal triumvirate along with Bal Gangadhar Tilak and Bipin Chandra Pal.\nHe founded the Servants of the People Society in 1921 and was elected President of the Indian National Congress in the Calcutta Special Session of 1920.\nHe famously led a protest against the Simon Commission in 1928, during which he suffered severe injuries from a lathi charge that eventually led to his death.\nPunjab National Bank (PNB):\nFollowing the Partition of India in 1947, the bank moved its headquarters from Lahore to New Delhi.\nIt was nationalized by the Government of India in July 1969 along with 13 other major commercial banks.\nAs of recent years, it remains one of the largest Public Sector Banks in India, having merged with the United Bank of India and Oriental Bank of Commerce in 2020.",
+    "topic": "Modern History",
+    "subtopic": "National Freedom Movement & Personalities",
+    "conceptTested": "Historical facts regarding the foundation of Punjab National Bank and Lala Lajpat Rai's contributions.",
+    "tags": {
+      "topic": "Modern History",
+      "subtopic": "National Freedom Movement & Personalities",
+      "conceptTested": "Historical facts regarding the foundation of Punjab National Bank and Lala Lajpat Rai's contributions."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 4",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:13",
+    "avgTime": "00:18",
+    "questionText": "Under the Pradhan Mantri Awas Yojana – Urban (PMAY-U), how many houses have been specifically allotted to women out of the total 1.25 crore sanctioned houses as of August 2026?",
+    "options": {
+      "A": "50 lakh",
+      "B": "75 lakh",
+      "C": "1 crore",
+      "D": "1.25 crore"
+    },
+    "solution": "Solution\n\nThe correct answer is 1 crore\n\nIn News\nThe Ministry of Housing & Urban Affairs (MoHUA) announced that Pradhan Mantri Awas Yojana - Urban (PMAY-U) has reached a milestone of 1.25 crore houses sanctioned, with a significant emphasis on Nari Shakti.\n\nKey Points\nAccording to the official data, out of the 1.25 crore houses sanctioned under PMAY-U and PMAY-U 2.0, exactly 1 crore houses have been allotted to women.\nThese allotments are made either in the name of the female head of the household or in joint ownership, promoting financial security and social empowerment.\nOut of the total sanctioned houses, more than 1 crore houses have already been completed and delivered to beneficiaries across the country.\nThe 8th meeting of the Central Sanctioning and Monitoring Committee (CSMC) under PMAY-U 2.0 recently sanctioned an additional 2.09 lakh houses, of which 2.03 lakh were allotted to women.\n\nAdditional Information\nPMAY-U 2.0 aims to address the housing needs of an additional 1 crore eligible urban families including EWS, LIG, and MIG categories.\nThe eligibility for PMAY-U 2.0 includes families with an annual income of up to ₹9 lakh.\nThe scheme operates through several verticals: Beneficiary Led Construction (BLC), Affordable Housing in Partnership (AHP), Interest Subsidy Scheme (ISS), and Affordable Rental Housing (ARH).\n\nImportant Points\n\nThe 8th CSMC meeting was chaired by Shri Satendra Singh, Secretary, Department of Urban Development, MoHUA.\nTotal houses sanctioned under PMAY-U 2.0 alone have now crossed 18.38 lakh.\nThe scheme provides financial assistance of up to ₹2.5 lakh under the BLC vertical for beneficiaries to construct houses on their own land.",
+    "topic": "National & International Current Affairs",
+    "subtopic": "Government Schemes & Policies",
+    "conceptTested": "Current updates and statistics regarding Pradhan Mantri Awas Yojana – Urban (PMAY-U)",
+    "tags": {
+      "topic": "National & International Current Affairs",
+      "subtopic": "Government Schemes & Policies",
+      "conceptTested": "Current updates and statistics regarding Pradhan Mantri Awas Yojana – Urban (PMAY-U)"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 5",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:10",
+    "avgTime": "00:18",
+    "questionText": "What was the official motto of the 2026 Commonwealth Games held in Glasgow?",
+    "options": {
+      "A": "Games for Everyone",
+      "B": "United by Sport",
+      "C": "A New Era for Sport",
+      "D": "Sport Is Just the Beginning"
+    },
+    "solution": "Solution\n\nThe correct answer is - Sport Is Just the Beginning\n\nKey Points\nThe official motto of the XXIII Commonwealth Games was 'Sport Is Just the Beginning'.\nThe event saw participation from 74 Commonwealth teams.\nGlasgow hosted the games from July 23 to August 2, 2026.\nThe motto reflects the broader impact of the games beyond the competition itself.\n\nAdditional Information\nThe 2026 edition was the 23rd (XXIII) edition of the Commonwealth Games.",
+    "topic": "Sports & Trophies",
+    "subtopic": "Tournaments & Games",
+    "conceptTested": "Official details and motto of the 2026 Commonwealth Games",
+    "tags": {
+      "topic": "Sports & Trophies",
+      "subtopic": "Tournaments & Games",
+      "conceptTested": "Official details and motto of the 2026 Commonwealth Games"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 6",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:05",
+    "avgTime": "00:14",
+    "questionText": "What is the total non-fossil fuel-based installed electricity generation capacity achieved by India as of July 31, 2026?",
+    "options": {
+      "A": "200.00 GW",
+      "B": "300.50 GW",
+      "C": "500.00 GW",
+      "D": "552.00 GW"
+    },
+    "solution": "Solution\n\nThe correct answer is 300.50 GW\n\nIn News\nThe Ministry of New and Renewable Energy announced that India has crossed a landmark 300 GW of non-fossil fuel-based installed electricity generation capacity as of 31st July 2026.\n\nKey Points\nIndia's total non-fossil fuel capacity reached 300.50 GW by July 31, 2026, which represents over 60% of the 500 GW target set for 2030.\nThe capacity breakdown includes Solar Power (164.59 GW), Wind Power (58.14 GW), Hydro Power (57.24 GW), Bio-power (11.75 GW), and Nuclear Power (8.78 GW).\nThe share of non-fossil fuel electricity in India's total generation capacity (approx. 552 GW) has reached over 54%.\nDuring the 2025-26 fiscal year, a record capacity of 55.29 GW of non-fossil fuel-based electricity was installed.\n\nAdditional Information\nSolar energy has seen massive growth, rising from 2.8 GW in 2014 to approximately 165 GW in 2026.\nWind energy capacity reached over 58 GW, up from 21 GW in 2014.\nRenewable energy generation in India increased from 190.96 billion units in 2014-15 to 477.79 BU in 2025-26.\nThe capacity under the Approved List of Models and Manufacturers (ALMM) for Solar PV Modules crossed the historic 200 GW milestone.\n\nImportant Points\n\nThe Production Linked Incentive (PLI) scheme has been instrumental in boosting domestic manufacturing and supply chain independence in the solar sector.\nThe National Green Hydrogen Mission is being implemented to drive industrial decarbonization and establish India as a global hub for green hydrogen derivatives.",
+    "topic": "National & International Current Affairs",
+    "subtopic": "Energy & Infrastructure",
+    "conceptTested": "India's installed non-fossil fuel electricity generation capacity targets and milestones",
+    "tags": {
+      "topic": "National & International Current Affairs",
+      "subtopic": "Energy & Infrastructure",
+      "conceptTested": "India's installed non-fossil fuel electricity generation capacity targets and milestones"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 7",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:03",
+    "avgTime": "00:20",
+    "questionText": "Consider the following statements regarding Glaw Lake:\nI. It is a high-altitude natural freshwater lake.\nII. It is located in Lohit district near Wakro in Arunachal Pradesh.\nIII. It serves as the primary source of the Kamlang River.\nWhich of the statements given above are correct?",
+    "options": {
+      "A": "I and II only",
+      "B": "II and III only",
+      "C": "I and III only",
+      "D": "I, II and III"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 4\n\nIn News\nGlaw Lake has been designated as India's 101st Ramsar Site, becoming the first Ramsar Site in Arunachal Pradesh.\n\nKey Points\nGlaw Lake is a high-altitude natural freshwater lake situated amidst the Eastern Himalayan landscape. Hence, Statement I is correct.\nIt is located in Lohit district, near Wakro, in Arunachal Pradesh. Hence, Statement II is correct.\nThe lake is fed by perennial mountain streams and serves as the primary source of the Kamlang River. Hence, Statement III is correct.\n\nAdditional Information\nState: Arunachal Pradesh.\nDistrict: Lohit.\nNearby Town: Wakro.\nProtected Area: Kamlang Tiger Reserve and Wildlife Sanctuary.",
+    "topic": "National Parks & Environment",
+    "subtopic": "Ramsar Sites",
+    "conceptTested": "Geographical and ecological features of Glaw Lake, Arunachal Pradesh",
+    "tags": {
+      "topic": "National Parks & Environment",
+      "subtopic": "Ramsar Sites",
+      "conceptTested": "Geographical and ecological features of Glaw Lake, Arunachal Pradesh"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 9",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:10",
+    "avgTime": "00:17",
+    "questionText": "The theme of Exercise ROTOR CLAP III was:",
+    "options": {
+      "A": "Mountain Warfare",
+      "B": "Counter-Unmanned Aerial Systems (Counter-UAS)",
+      "C": "Humanitarian Assistance and Disaster Relief (HADR)",
+      "D": "Air Defence Integration"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nThe Indian Air Force recently conducted Exercise ROTOR CLAP III to enhance helicopter operational capabilities under the theme of Counter-Unmanned Aerial Systems (Counter-UAS).\n\nKey Points\nThe exercise was conducted under the theme \"Counter-Unmanned Aerial Systems (Counter-UAS)\".\nIt focused on improving mission planning, coordination, interoperability and operational readiness for helicopter operations in emerging threat environments.\nThe exercise also validated tactics and procedures for responding to drone-based threats. Hence, Option B is correct.\n\nAdditional Information\nConducted by: Indian Air Force.\nEdition: Third (ROTOR CLAP III).\nTheme: Counter-Unmanned Aerial Systems (Counter-UAS).\nMajor Objectives: Mission planning, operational coordination, interoperability and helicopter force readiness.",
+    "topic": "National & International Current Affairs",
+    "subtopic": "Defence Exercises",
+    "conceptTested": "Themes and objectives of major Indian Air Force military exercises",
+    "tags": {
+      "topic": "National & International Current Affairs",
+      "subtopic": "Defence Exercises",
+      "conceptTested": "Themes and objectives of major Indian Air Force military exercises"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 11",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:15",
+    "avgTime": "00:16",
+    "questionText": "Which country has become the first Arab nation to formally abolish the death penalty and replace all existing death sentences with life imprisonment in August 2026?",
+    "options": {
+      "A": "Jordan",
+      "B": "Lebanon",
+      "C": "Egypt",
+      "D": "Saudi Arabia"
+    },
+    "solution": "Solution\n\nThe correct answer is Lebanon\n\nIn News\nLebanon has officially abolished the death penalty, making it the first country in the Arab world to formally end capital punishment.\n\nKey Points\nOn Tuesday, August 11, 2026, the Lebanese parliament passed legislation to abolish the death penalty and replace all existing death sentences with life imprisonment.\nThis move makes Lebanon the first country in the Middle East to legally end capital punishment.\nPrior to this formal abolition, the country had maintained a de facto moratorium on executions since 2004, although many individuals remained on death row.\nCrimes that were previously punishable by death in Lebanon included murder and treason. Hence, Lebanon is the correct answer.\nOptions such as Jordan, Egypt, and Saudi Arabia are incorrect as they have not formally abolished the death penalty in this context.\n\nAdditional Information\nThe European Union (EU) welcomed the decision, stating that Lebanon is setting a \"powerful example\" for other nations in the region.\nHeba Morayef, Amnesty International’s Regional Director for the Middle East and North Africa, hailed the decision as a victory for human rights and a move that brings Lebanon in line with global trends.\nThe parliament is also discussing separate legislation for a general amnesty for certain crimes to address the issue of overcrowding in prisons.\n\nImportant Points\n\nThe abolition replaces a precarious 22-year hiatus in executions with lasting legal protection of the right to life.\nLawmakers had formally submitted the law to abolish capital punishment in 2025 (last year) before it was passed in August 2026.",
+    "topic": "Current Affairs",
+    "subtopic": "National & International Current Affairs",
+    "conceptTested": "Recent legislative developments and international news regarding the abolition of capital punishment in Arab nations.",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "National & International Current Affairs",
+      "conceptTested": "Recent legislative developments and international news regarding the abolition of capital punishment in Arab nations."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 12",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "00:15",
+    "avgTime": "00:25",
+    "questionText": "Article 45 of the Constitution of India provides that ______.",
+    "options": {
+      "A": "the State shall endeavour to provide early childhood care and education for all children until they complete the age of six years",
+      "B": "no child below the age of 14 years shall be employed to work in any factory or mine or engaged in any other hazardous employment",
+      "C": "no person shall be deprived of his life or personal liberty, except according to a procedure established by law",
+      "D": "the State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India"
+    },
+    "solution": "Solution\nThe correct answer is the State shall endeavour to provide early childhood care and education for all children until they complete the age of six years.\n\nKey Points\nArticle 45 is a part of the Directive Principles of State Policy (DPSP) contained in Part IV of the Constitution of India.\nThe original text of Article 45 mandated free and compulsory education for all children up to 14 years of age, but this was significantly altered by the 86th Constitutional Amendment Act, 2002.\nPost-amendment, the scope of Article 45 was narrowed to focus specifically on early childhood care and education (ECCE) for children below the age of six years.\nThis provision serves as a non-justiciable guideline, meaning the State is expected to apply these principles in making laws, though they are not enforceable by courts.\nThe primary objective is to ensure holistic development and pre-primary education, which lays the foundation for a child's future schooling and health.\n\nAdditional Information\nRight to Education (Article 21A):\nThe 86th Amendment Act, 2002 inserted Article 21A, making free and compulsory education a Fundamental Right for children aged 6 to 14 years.\nProhibition of Child Labour (Article 24):\nThis article explicitly states that no child below the age of 14 years shall be employed in any factory, mine, or hazardous occupation to prevent exploitation.\nProtection of Life and Liberty (Article 21):\nThis fundamental right ensures that no person is deprived of life or personal liberty except according to procedure established by law.\nEquality Before Law (Article 14):\nGuarantees that the State shall not deny any person equality before the law or equal protection of the laws within India.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Directive Principles of State Policy (DPSP)",
+    "conceptTested": "Provisions of Article 45 of the Indian Constitution regarding early childhood care and education post the 86th Amendment Act, 2002.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Directive Principles of State Policy (DPSP)",
+      "conceptTested": "Provisions of Article 45 of the Indian Constitution regarding early childhood care and education post the 86th Amendment Act, 2002."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 13",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:16",
+    "avgTime": "00:19",
+    "questionText": "Which of the following animals was under category of “critically endangered species” till 2008, later upgraded to \"endangered species\"?",
+    "options": {
+      "A": "Sumatran Rhinoceros",
+      "B": "Asiatic Lion",
+      "C": "Panda",
+      "D": "Indian Tiger"
+    },
+    "solution": "Solution\n\nThe correct answer is Asiatic Lion.\n\nKey Points\nThe Asiatic lion was critically endangered till 2008 but has since been upgraded to the endangered category.\nThere are more than 142,500 species on the IUCN Red List, with more than 40,000 species threatened with extinction, including 41% of amphibians, 37% of sharks and rays, 34% of conifers, 33% of reef-building corals, 26% of mammals and 13% of birds.\nIUCN, International Union for Conservation of Nature, was established on 5 October 1948.\nThe IUCN Red List of Threatened Species was founded in 1964.\nIt is the world's most comprehensive inventory of the global conservation status of biological species.\n\nAdditional Information\nSome of the tags of IUCN are: (May 2022)\n\nCategories (IUNC Status)\tDefinition\tExamples\nExtinct (EX)\tNo known individuals remaining\n\nPink, Head Duck, Indian aurochs\n\nExtinct in the wild (EW)\tKnown only to survive in captivity\n\nAlagoas curassow, Beloribitsa\n\nCritically endangered (CR)\tExtremely high risk of extinction in the wild.\n\nCross River Gorilla, Eastern Lowland Gorilla, Hawksbill, Turtle, Gharial\n\nEndangered (EN)\tHigh risk of extinction in the wild\n\nPygmy Hog, Northern Right Whale, The Vaquita, Amur, Leopard, Lion Tailed Macaque\n\nVulnerable (VU)\tHigh risk of endangerment in the wild.\n\nNilgiri Marten, Nilgiri Langoor, Marbled cat\n\nNear Threatened (NT)\tLikely to become endangered in the near future\n\nPrzewalski's horse, the Humpback whale\n\nLeast Concern (LC)\tLowest risk\n\nHarp Seal, Giraffe",
+    "topic": "Biology",
+    "subtopic": "Diseases & Vitamins",
+    "conceptTested": "IUCN Red List status classifications and historical changes for vulnerable/endangered species such as the Asiatic Lion.",
+    "tags": {
+      "topic": "Biology",
+      "subtopic": "Diseases & Vitamins",
+      "conceptTested": "IUCN Red List status classifications and historical changes for vulnerable/endangered species such as the Asiatic Lion."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 14",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:10",
+    "avgTime": "00:23",
+    "questionText": "NDMA, frequently discussed in relation to nitrosamine contamination, stands for:",
+    "options": {
+      "A": "N-Nitrosodimethylamine",
+      "B": "Nitroso Dimethyl Acid",
+      "C": "Nitrogen Dimethyl Amine",
+      "D": "Nitrate Dimethyl Alcohol"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 1\n\nIn News\nNDMA (N-Nitrosodimethylamine) has recently been in the news following concerns over nitrosamine contamination in certain pharmaceutical products due to its carcinogenic potential.\n\nKey Points\nNDMA stands for N-Nitrosodimethylamine, a member of the nitrosamine group of compounds.\nIt is classified as a probable human carcinogen and is subject to stringent regulatory limits in medicines and food products.\nRegulatory agencies monitor NDMA contamination because prolonged exposure above permissible limits may increase cancer risk. Hence, Option A is correct.\n\nAdditional Information\nFull Form: N-Nitrosodimethylamine (NDMA).\nChemical Group: Nitrosamines.\nHealth Concern: Classified as a probable human carcinogen.\nOccurrence: May occur as an impurity in certain pharmaceuticals, processed foods and contaminated water.",
+    "topic": "Chemistry",
+    "subtopic": "Everyday chemistry",
+    "conceptTested": "Chemical nomenclature and abbreviations of environmental and pharmaceutical contaminants like NDMA.",
+    "tags": {
+      "topic": "Chemistry",
+      "subtopic": "Everyday chemistry",
+      "conceptTested": "Chemical nomenclature and abbreviations of environmental and pharmaceutical contaminants like NDMA."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 15",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:09",
+    "avgTime": "00:21",
+    "questionText": "Consider the following two statements, labeled Assertion (A) and Reason (R). Evaluate them and choose the appropriate answer from the given options.\n\nAssertion (A): The standard distance between the penalty spot and the goal line on a football field is 11 meters.\nReason (R): This distance allows the goalkeeper a fair reaction time while challenging the accuracy and confidence of the penalty taker.",
+    "options": {
+      "A": "A is false, but R is true.",
+      "B": "A is true, but R is false.",
+      "C": "Both A and R are true, and R is the correct explanation of A.",
+      "D": "Both A and R are true, but R is not the correct explanation of A"
+    },
+    "solution": "Solution\n\nThe correct answer is Both A and R are true, and R is the correct explanation of A.\n\nKey Points\nThe penalty spot in football is positioned 11 meters (12 yards) from the goal line as per the Laws of the Game set by FIFA.\nThis distance was formalized in 1891 when the penalty kick rule was introduced to ensure fairness and maintain a balance between the penalty taker and the goalkeeper.\nThe reasoning behind the distance is to provide the goalkeeper with a fair reaction time while simultaneously challenging the accuracy and confidence of the penalty taker.\nThe penalty kick is a direct free kick, and only the penalty taker and the goalkeeper are allowed to be in the penalty area during the kick.\nThe goalkeeper must remain on the goal line until the penalty is taken but may move laterally to prepare for the shot.\n\nAdditional Information\nPenalty Kick Overview:\nIntroduced in 1891 as a measure to prevent intentional fouls near the goal.\nA penalty kick is awarded when a player commits a direct free kick offense inside their own penalty area.\nThe penalty spot is a fixed point from which the penalty taker must shoot the ball.\nFIFA Laws of the Game:\nThe Laws of the Game are maintained by the International Football Association Board (IFAB), with FIFA as a key member.\nThese laws dictate the dimensions and markings on the football field, including the penalty area and spot.\nGoalkeeper Rules During a Penalty:\nThe goalkeeper must have at least part of one foot touching, or in line with, the goal line until the ball is kicked.\nMoving forward off the goal line before the penalty is taken results in a retake if a goal is not scored.\nPsychological Aspects of Penalty Kicks:\nPenalty kicks test the mental focus and composure of both the penalty taker and the goalkeeper.\nStudies show that penalty shootouts are often influenced by psychological pressure and confidence.\nHistorical Context:\nThe penalty kick was first used in a competitive match in 1891 during an Irish Cup semi-final.\nIt has since become a crucial part of football, used to resolve matches tied after extra time in knockout tournaments.",
+    "topic": "Sports & Trophies",
+    "subtopic": "Tournaments, Players, Terminology",
+    "conceptTested": "Official FIFA rules and field dimensions regarding penalty spot distance and its tactical rationale.",
+    "tags": {
+      "topic": "Sports & Trophies",
+      "subtopic": "Tournaments, Players, Terminology",
+      "conceptTested": "Official FIFA rules and field dimensions regarding penalty spot distance and its tactical rationale."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 16",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:07",
+    "avgTime": "00:15",
+    "questionText": "The first Indian Budget was presented by James Wilson, a Scottish economist. When was it presented?",
+    "options": {
+      "A": "1850",
+      "B": "1842",
+      "C": "1852",
+      "D": "1860"
+    },
+    "solution": "Solution\nThe correct answer is 1860.\n\nKey Points\nThe first Indian Budget was formally introduced to the Legislative Council on 7th April 1860.\nIt was presented by James Wilson, a Scottish economist and politician who served as the Finance Member of the Viceroy’s Council of India.\nThe presentation of this budget followed the administrative transition of India from the East India Company to the British Crown under the Government of India Act 1858.\nJames Wilson proposed this budget to address the severe financial crisis and heavy debt incurred by the British administration following the Indian Rebellion of 1857.\nOne of the most significant features of this budget was the introduction of Income Tax in India, which was met with substantial opposition from the local population and merchants.\nWilson also founded The Economist magazine and the Standard Chartered Bank, bringing significant economic expertise to the British Raj.\n\nAdditional Information\nPost-Independence Budgeting:\nThe first Budget of Independent India was presented on 26th November 1947 by the first Finance Minister, R.K. Shanmukham Chetty.\nThe first Republic Day Budget was presented by John Mathai in 1950.\nMorarji Desai holds the record for presenting the maximum number of budgets (10) in Indian history.\nThe Railway Budget, which was separated from the Union Budget in 1924 based on the Acworth Committee recommendations, was merged back into the Union Budget in 2017.\nUntil 1999, the Union Budget was presented at 5 PM on the last working day of February, but Yashwant Sinha changed the timing to 11 AM.",
+    "topic": "Modern History",
+    "subtopic": "British Administration & Economic Reforms",
+    "conceptTested": "Introduction of the first Indian Budget and Income Tax in 1860 by James Wilson.",
+    "tags": {
+      "topic": "Modern History",
+      "subtopic": "British Administration & Economic Reforms",
+      "conceptTested": "Introduction of the first Indian Budget and Income Tax in 1860 by James Wilson."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 17",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "C",
+    "userTime": "00:13",
+    "avgTime": "00:15",
+    "questionText": "Who has been appointed as the representative of the Supreme Leader to Iran's Supreme National Security Council (SNSC) as of August 2026?",
+    "options": {
+      "A": "Mohammad Baqir Zolghadr",
+      "B": "Masoud Pezeshkian",
+      "C": "Mohsen Rezaee",
+      "D": "Ali Larijani"
+    },
+    "solution": "Solution\n\nThe correct answer is Mohsen Rezaee\n\nIn News\nIn August 2026, Iran's Supreme Leader Mojtaba Khamenei issued a decree appointing a new representative to the country's Supreme National Security Council (SNSC).\n\nKey Points\nMohsen Rezaee has been appointed as the representative of the Supreme Leader to the Supreme National Security Council (SNSC).\nHe replaces Mohammad Baqir Zolghadr, who formerly held the position.\nThe appointment was announced through a decree published by Mojtaba Khamenei on August 9, 2026.\nThe SNSC is a top security body in Iran, and Mohsen Rezaee was selected for this role based on the Supreme Leader's decree.\n\nAdditional Information\nFollowing his replacement in the SNSC, Mohammad Baqir Zolghadr has been appointed as the Political Advisor to the Supreme Leader.\nMojtaba Khamenei assumed the position of Supreme Leader after Ayatollah Ali Khamenei was killed in military strikes on February 28.\nThe position of representative to the SNSC was also previously held by Ali Larijani.\nMasoud Pezeshkian is the current President of Iran, entering the third year of his presidency in August 2026.\n\nImportant Points\n\nThe appointment is part of a series of administrative shifts within the Iranian leadership security and advisory framework in 2026.\nThe Supreme National Security Council (SNSC) plays a critical role in managing the country's military and security affairs.",
+    "topic": "National & International Current Affairs",
+    "subtopic": "International Appointments & World Leaders",
+    "conceptTested": "Current high-level geopolitical appointments and national security council updates.",
+    "tags": {
+      "topic": "National & International Current Affairs",
+      "subtopic": "International Appointments & World Leaders",
+      "conceptTested": "Current high-level geopolitical appointments and national security council updates."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 18",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "C",
+    "userTime": "00:16",
+    "avgTime": "00:19",
+    "questionText": "Autism is also referred to as 'ASD'. The full form of 'ASD' is:",
+    "options": {
+      "A": "Autism Spine Disorder",
+      "B": "Autism Sense Disorder",
+      "C": "Autism Spectrum Disorder",
+      "D": "Autism Social Disorder"
+    },
+    "solution": "Solution\n\nThe correct answer is - Autism Spectrum Disorder\n\nKey Points\nAutism Spectrum Disorder (ASD)\nASD is a complex developmental condition that involves persistent challenges in social interaction, speech and nonverbal communication, and restricted/repetitive behaviors.\nThe term spectrum is used because the symptoms and their severity vary significantly from one person to another.\nIt is typically diagnosed in early childhood, often by age 2 or 3, as developmental delays become more apparent.\n\nAdditional Information\nCharacteristics of ASD\nSocial Communication: Difficulty in understanding social cues, maintaining conversations, or expressing emotions.\nRepetitive Behaviors: Engaging in repetitive body movements (e.g., hand flapping), insistence on sameness or routines, and intense interests in specific topics.\nSensory Sensitivity: Over-sensitivity or under-sensitivity to sensory stimuli like light, sound, or touch.\nGlobal Awareness\nWorld Autism Awareness Day is observed every year on April 2nd to increase understanding and acceptance of people with autism.\nEarly intervention through behavioral therapies and educational support can significantly improve the quality of life for individuals with ASD.",
+    "topic": "Biology",
+    "subtopic": "Human Health, Diseases & Disorders",
+    "conceptTested": "Full form and basic definition of Autism Spectrum Disorder (ASD).",
+    "tags": {
+      "topic": "Biology",
+      "subtopic": "Human Health, Diseases & Disorders",
+      "conceptTested": "Full form and basic definition of Autism Spectrum Disorder (ASD)."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 19",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:03",
+    "avgTime": "00:13",
+    "questionText": "Ceuta is administered as:",
+    "options": {
+      "A": "A French Overseas Territory",
+      "B": "An autonomous city of Spain",
+      "C": "A Portuguese autonomous region",
+      "D": "A self-governing territory of Morocco"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nCeuta has recently been in the news due to developments related to migration, border management and Spain–Morocco relations.\n\nKey Points\nCeuta is an autonomous city of Spain located on the north coast of Africa, bordering Morocco.\nAlong with Melilla, it constitutes one of Spain's two autonomous cities situated on the African continent.\nAlthough Morocco claims sovereignty over Ceuta, it is administered by Spain. Hence, Option B is correct.\n\nAdditional Information\nAdministered by: Spain.\nPolitical Status: Autonomous City of Spain.\nLocation: North African coast, bordering Morocco.\nAlong with Melilla, Ceuta forms Spain's two autonomous cities in Africa.",
+    "topic": "World Geography",
+    "subtopic": "Political Boundaries & Overseas Territories",
+    "conceptTested": "Geographical locations and political administrative status of Spanish enclaves in North Africa.",
+    "tags": {
+      "topic": "World Geography",
+      "subtopic": "Political Boundaries & Overseas Territories",
+      "conceptTested": "Geographical locations and political administrative status of Spanish enclaves in North Africa."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 20",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:07",
+    "avgTime": "00:16",
+    "questionText": "Which of the following fossil parks has the second-largest hatchery of dinosaur eggs in the world?",
+    "options": {
+      "A": "Mandla Plant Fossils National Park",
+      "B": "National Fossil Wood Park",
+      "C": "Siwalik Fossil Park",
+      "D": "Indroda Dinosaur and Fossil Park"
+    },
+    "solution": "Solution\nThe correct answer is Indroda Dinosaur and Fossil Park.\n\nKey Points\nIndroda Dinosaur and Fossil Park, located in Gandhinagar, Gujarat, is widely regarded as the second-largest hatchery of dinosaur eggs in the world, surpassed only by a site in Aix-en-Provence, France.\nThe park is spread over an area of about 400 hectares on the banks of the Sabarmati River and is managed by the Gujarat Ecological Education and Research (GEER) Foundation.\nIt houses a massive collection of fossilized dinosaur eggs and skeletal remains, primarily belonging to the Late Cretaceous period (approximately 66 million years ago).\nThe fossils found here, including those of the Rajasaurus narmadensis, were excavated from the Songhir Bagh Basin and the Balasinor region of Gujarat.\nThe park features life-size fiberglass models of various dinosaurs such as Tyrannosaurus rex, Megalosaurus, and Titanosaurus to educate visitors about prehistoric life.\n\nAdditional Information\nMandla Plant Fossils National Park:\nLocated in Madhya Pradesh, this park preserves fossils of plants that existed in India between 40 million and 150 million years ago.\nThe fossils are found in a petrified state across seven villages in the Mandla district.\nSiwalik Fossil Park:\nAlso known as Suketi Fossil Park, it is situated in the Sirmaur district of Himachal Pradesh.\nIt is famous for its Cenozoic mammalian fossils and contains life-size models of extinct animals like the Giant Elephant and Saber-toothed tiger.\nNational Fossil Wood Park:\nLocated in Tiruvakkarai, Tamil Nadu, it contains petrified wood fossils dating back to the Mio-Pliocene age (approximately 20 million years ago).\nThe park is maintained by the Geological Survey of India (GSI).",
+    "topic": "Temples, Monuments & Heritage Sites",
+    "subtopic": "National Parks & Fossil Reserves",
+    "conceptTested": "Important fossil parks and paleontological sites in India.",
+    "tags": {
+      "topic": "Temples, Monuments & Heritage Sites",
+      "subtopic": "National Parks & Fossil Reserves",
+      "conceptTested": "Important fossil parks and paleontological sites in India."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 21",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:04",
+    "avgTime": "00:18",
+    "questionText": "Which one of the following statements regarding the Ujh Multipurpose Project is NOT correct?",
+    "options": {
+      "A": "It is proposed on the Ujh River, a tributary of the Ravi.",
+      "B": "It is expected to generate around 186–212 MW of hydropower.",
+      "C": "It is exclusively an irrigation project without any provision for hydropower or drinking water supply.",
+      "D": "It is expected to improve agricultural productivity, water security and regional development."
+    },
+    "solution": "Solution\n\nThe correct answer is Option 3\n\nIn News\nThe Ujh Multipurpose Project has recently been in the news for its role in strengthening irrigation infrastructure, water security and optimal utilisation of India's share of the Ravi River waters.\n\nKey Points\nOption A is correct.The project is being developed on the Ujh River, a tributary of the Ravi River.\nOption B is correct. The project includes a hydropower component with an expected installed capacity of around 186–212 MW.\nOption C is incorrect. The Ujh Multipurpose Project is not exclusively an irrigation project. It is a multipurpose project providing irrigation, hydropower generation, drinking water supply, industrial water supply and flood moderation.\nOption D is correct. The project is expected to enhance agricultural productivity, water security and socio-economic development in the region.\n\nAdditional Information\nRiver: Ujh River (Tributary of the Ravi).\nLocation: Kathua District, Jammu & Kashmir.\nRiver Basin: Indus Basin.\nMajor Components: Irrigation, hydropower generation, drinking water supply, industrial water supply and flood moderation.",
+    "topic": "Government Schemes & Policies",
+    "subtopic": "Multipurpose River Valley Projects",
+    "conceptTested": "Factual knowledge regarding infrastructure and multipurpose river valley projects in India.",
+    "tags": {
+      "topic": "Government Schemes & Policies",
+      "subtopic": "Multipurpose River Valley Projects",
+      "conceptTested": "Factual knowledge regarding infrastructure and multipurpose river valley projects in India."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 23",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:05",
+    "avgTime": "00:13",
+    "questionText": "Kunal was honored with the 2025 Sangeet Natak Akademi Award for which specific category?",
+    "options": {
+      "A": "Hindustani Vocal",
+      "B": "Puppetry",
+      "C": "Kathak Dance",
+      "D": "Overall Contribution in Theatre"
+    },
+    "solution": "Solution\n\nThe correct answer is - Overall Contribution in Theatre\n\nKey Points\nIn the 2025 SNA Awards, Kunal was recognized for his Overall Contribution in Theatre.\nThe 'Overall Contribution' category is a special award intended for individuals whose impact on a field cannot be confined to a single specialization like acting or directing. It honors those who have contributed as mentors, organizers, scholars, and practitioners.\nKunal’s work in the theater world involves multi-faceted roles that have helped in the growth, management, and sustenance of theatrical institutions and practices.\nThis recognition is part of the 'Overall and Others' wing of the Akademi Puraskars, which ensures that all pillars of the performing arts ecosystem are valued.\n\nAdditional Information\nTheater in India relies heavily on individuals who can bridge the gap between traditional forms and modern management.\nAwards in this category often go to people who have dedicated their lives to building theater groups, organizing festivals, or conducting extensive workshops.\nKunal’s recognition highlights the importance of institutional building in the arts.\nThe Sangeet Natak Akademi continues to expand these 'overall' categories to reflect the evolving nature of artistic careers in the 21st century.",
+    "topic": "Awards & Honours",
+    "subtopic": "National Awards & Sangeet Natak Akademi",
+    "conceptTested": "Current affairs and recognition of personalities in performing arts and theatre.",
+    "tags": {
+      "topic": "Awards & Honours",
+      "subtopic": "National Awards & Sangeet Natak Akademi",
+      "conceptTested": "Current affairs and recognition of personalities in performing arts and theatre."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 24",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:13",
+    "avgTime": "00:33",
+    "questionText": "For an object moving with uniform speed, what does the distance–time graph for such motion look like?",
+    "options": {
+      "A": "A curved line showing changing slope",
+      "B": "A straight line inclined to the time axis",
+      "C": "A curved line concave downwards",
+      "D": "A straight line parallel to the time axis"
+    },
+    "solution": "Solution\nThe correct answer is A straight line inclined to the time axis.\n\nKey Points\nUniform speed is defined as a type of motion where an object covers equal distances in equal intervals of time.\nIn a distance–time graph, the distance is plotted on the Y-axis and the time is plotted on the X-axis.\nThe slope of a distance–time graph represents the speed of the object.\nSince the speed is constant (uniform), the slope of the graph must also be constant.\nA graph with a constant slope is represented by a straight line.\nFor uniform speed, this straight line must be inclined to the time axis, indicating that distance increases steadily as time progresses.\n\nAdditional Information\nIf the distance–time graph is a straight line parallel to the time axis, the speed is zero (the object is at rest).\nIf the graph is a curved line, it represents non-uniform motion, where the speed is changing over time.\nThe steeper the slope of the straight line, the higher the uniform speed of the object.\nMathematical relation: Speed = Distance / Time. In a linear graph, this is expressed as y = mx, where m is the constant speed.",
+    "topic": "Physics",
+    "subtopic": "Mechanics - Kinematics",
+    "conceptTested": "Graphical representation of uniform motion in a distance-time graph.",
+    "tags": {
+      "topic": "Physics",
+      "subtopic": "Mechanics - Kinematics",
+      "conceptTested": "Graphical representation of uniform motion in a distance-time graph."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 1",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:58",
+    "avgTime": "00:32",
+    "questionText": "A candidate who scores 20% of the marks falls short by 10 marks to pass the exam, while another candidate who scores 42% of the marks surpasses the passing marks by 12%. What is the maximum number of marks?",
+    "options": {
+      "A": "50",
+      "B": "80",
+      "C": "100",
+      "D": "120"
+    },
+    "solution": "Solution\nShortcut Trick\nDifference in percentage = 42% − 20% = 22%\n\nIn terms of marks, 42% is 12% of total marks above passing and 20% is 10 marks below passing.\n\nLet maximum marks be M. Passing marks = 0.20M + 10. Also, 0.42M = (Passing marks) + 0.12M.\n\n⇒ 0.42M − 0.12M = 0.20M + 10 ⇒ 0.30M = 0.20M + 10 ⇒ 0.10M = 10.\n∴ The correct answer is 100 marks.\n\nAlternate Method\nLet maximum marks be x.\nCandidate 1: Score = 20% of x = 0.20x\nPassing Marks = Score + Deficit = 0.20x + 10 --- (Equation 1)\nCandidate 2: Score = 42% of x = 0.42x\n\nThis score is 12% of maximum marks more than passing marks.\n\n⇒ Passing Marks = 0.42x − 12% of x = 0.42x − 0.12x = 0.30x --- (Equation 2)\n\nEquating Equation 1 and Equation 2:\n\n⇒ 0.20x + 10 = 0.30x\n⇒ 0.30x − 0.20x = 10\n⇒ 0.10x = 10\n⇒ x = 10 / 0.10 = 100\n∴ The correct answer is 100 marks.\n\nAdditional Information\nPassing Percentage\n\nIt is the minimum percentage required to pass. Passing % = (Passing Marks / Maximum Marks) × 100.\n\nPercentage Change\n\nWhen comparing two scores, the difference in percentage points relates directly to the difference in actual marks via the base of Maximum Marks.",
+    "topic": "Percentage",
+    "subtopic": "Passing Marks & Examination Percentage Problems",
+    "conceptTested": "Linear relationship between percentage score differences and actual marks in examinations.",
+    "tags": {
+      "topic": "Percentage",
+      "subtopic": "Passing Marks & Examination Percentage Problems",
+      "conceptTested": "Linear relationship between percentage score differences and actual marks in examinations."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 2",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "01:21",
+    "avgTime": "00:34",
+    "questionText": "What is the sum of digits of the number which when divided by 24, 40, and 48 leaves the remainder of 13, 29, and 37, respectively?",
+    "options": {
+      "A": "11",
+      "B": "12",
+      "C": "8",
+      "D": "13"
+    },
+    "solution": "Solution\nShortcut Trick\nFind the common difference (k) between divisors and remainders: 24 − 13 = 11, 40 − 29 = 11, 48 − 37 = 11.\n\nCalculate LCM of (24, 40, 48) = 240.\n\nThe required number is (LCM × n) − k. For n = 1, Number = 240 − 11 = 229.\n\nSum of digits of 229 = 2 + 2 + 9 = 13.\n∴ The correct answer is 13.\n\nAlternate Method\nGiven:\nDivisors: D1 = 24, D2 = 40, D3 = 48\nRemainders: R1 = 13, R2 = 29, R3 = 37\n\nFormula Used:\nWhen (D1 − R1) = (D2 − R2) = (D3 − R3) = k, the number is [LCM(D1, D2, D3) × n] − k.\n\nCalculations:\n⇒ Difference (k) = 24 − 13 = 11\n⇒ Difference (k) = 40 − 29 = 11\n⇒ Difference (k) = 48 − 37 = 11\n⇒ LCM of 24, 40, and 48:\n⇒ 24 = 23 × 3\n⇒ 40 = 23 × 5\n⇒ 48 = 24 × 3\n⇒ LCM = 24 × 3 × 5 = 16 × 15 = 240\n⇒ Smallest required number = 240 − 11 = 229\n⇒ Sum of digits = 2 + 2 + 9 = 13\n∴ The correct answer is 13.\n\nAdditional Information\nLCM Method with Constant Remainder\n\nIf a number leaves the same remainder 'r' when divided by x, y, and z, the number is LCM(x, y, z) × n + r.\n\nLCM Method with Constant Difference\n\nIf the difference between divisor and remainder is constant 'k', the number is LCM(divisors) × n − k.\n\nSum of Digits Property\n\nThe sum of digits of a number is often used in divisibility tests for 3 and 9, where the sum must be divisible by the divisor.",
+    "topic": "LCM & HCF",
+    "subtopic": "Remainder-based LCM Problems",
+    "conceptTested": "Finding numbers that leave varying remainders with constant difference using LCM.",
+    "tags": {
+      "topic": "LCM & HCF",
+      "subtopic": "Remainder-based LCM Problems",
+      "conceptTested": "Finding numbers that leave varying remainders with constant difference using LCM."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 3",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:35",
+    "avgTime": "00:34",
+    "questionText": "What should be the least five digit number that on dividing by 3, 7, 13 and 37 give 2 as remainder?",
+    "options": {
+      "A": "10103",
+      "B": "10099",
+      "C": "10101",
+      "D": "None of the above"
+    },
+    "solution": "Solution\nShortcut Trick\nThe numbers 3, 7, 13, and 37 are all prime numbers.\n\nTheir LCM is simply their product: 3 × 7 × 13 × 37 = 10101.\n\nThis is already the least five-digit number divisible by all four.\n\nTo get a remainder of 2, simply add 2 to this LCM: 10101 + 2 = 10103.\n∴ The correct answer is 10103.\n\nAlternate Method\nGiven:\nDivisors: 3, 7, 13, 37\nRemainder: 2\nFormula: Required Number = LCM(Divisors) × k + Remainder\n\nCalculations:\n⇒ LCM(3, 7, 13, 37) = 3 × 7 × 13 × 37\n⇒ 21 × 13 × 37\n⇒ 273 × 37\n⇒ 10101\n\nThe number must be of the form 10101k + 2.\n\nFor the least five-digit number, we take k = 1:\n⇒ Number = 10101 × 1 + 2\n⇒ Number = 10101 + 2\n⇒ Number = 10103\n∴ The correct answer is 10103.\n\nAdditional Information\nGeneral Remainder Rule\n\nIf a number gives the same remainder R when divided by a, b, and c, then the general form is LCM(a, b, c) × k + R.\n\nLCM of Prime Numbers\n\nThe Least Common Multiple of any set of prime numbers is always equal to their product.\n\nDivisibility by 10101\n\nThe number 10101 is a unique number that can be expressed as 3 × 7 × 13 × 37 or 101 × 100 + 1.",
+    "topic": "Number System",
+    "subtopic": "LCM and Remainders",
+    "conceptTested": "The least number leaving a constant remainder R when divided by numbers a, b, c is given by LCM(a, b, c) × k + R.",
+    "tags": {
+      "topic": "Number System",
+      "subtopic": "LCM and Remainders",
+      "conceptTested": "The least number leaving a constant remainder R when divided by numbers a, b, c is given by LCM(a, b, c) × k + R."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 4",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "C",
+    "userTime": "00:52",
+    "avgTime": "00:40",
+    "questionText": "If cosθ/(cosecθ + 1) + cosθ/(cosecθ - 1) = 2 where 0 < θ < 90°, then what is the value of sin^4 θ + cos^4 θ?",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "12",
+      "D": "14"
+    },
+    "solution": "Solution\n\nGiven:\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ−1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n−\n1\n=\n2\n\nFormula Used:\nCosec2θ - 1 = cot2θ\n\nCalculation:\nWe have\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ−1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n−\n1\n=\n2\n\n⇒\ncosθ (cosecθ − 1) + cosθ (cosecθ + 1)\ncose\nc\n2\nθ−1\n=2\n𝑐\n𝑜\n𝑠\nθ\n\n(\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n−\n\n1\n)\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n\n(\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n+\n\n1\n)\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\n2\nθ\n−\n1\n=\n2\n\n⇒\ncosθ cosecθ − cosθ + cosθ cosecθ + cosθ\nco\nt\n2\nθ\n=2\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n−\n\n𝑐\n𝑜\n𝑠\nθ\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n𝑐\n𝑜\n𝑡\n2\nθ\n=\n2\n\n⇒\n2cosθ cosecθ\nco\nt\n2\nθ\n=2\n2\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n𝑐\n𝑜\n𝑡\n2\nθ\n=\n2\n\n⇒ cosθ × (1/sinθ) = cot2θ\n⇒ cotθ = cot2θ\n⇒ cotθ = 1\n⇒ θ = 45°\nNow, We have to find the value of sin4 θ + cos4 θ\nPutting θ = 45°, we get\n⇒ sin4 45° + cos4 45°\n⇒ (1/4) + (1/4) = 1/2\n∴ The value of sin4 θ + cos4 θ is 1/2.",
+    "topic": "Trigonometry",
+    "subtopic": "Trigonometric Identities & Equations",
+    "conceptTested": "Simplifying algebraic fractions of trigonometric ratios using cosec²θ - 1 = cot²θ to solve for angle θ.",
+    "tags": {
+      "topic": "Trigonometry",
+      "subtopic": "Trigonometric Identities & Equations",
+      "conceptTested": "Simplifying algebraic fractions of trigonometric ratios using cosec²θ - 1 = cot²θ to solve for angle θ."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 5",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "C",
+    "userTime": "00:30",
+    "avgTime": "00:34",
+    "questionText": "The cost of plastering the four walls of a room is 25. The cost of plastering a room twice in length, breadth and height will be",
+    "options": {
+      "A": "50",
+      "B": "75",
+      "C": "100",
+      "D": "200"
+    },
+    "solution": "Solution\nShortcut Trick\nArea of four walls is proportional to (Length + Breadth) × Height.\n\nIf all dimensions (L, B, H) are doubled, the new area becomes 2 × 2 = 4 times the original area.\n\nCost is directly proportional to the area.\nNew Cost = 4 × Original Cost = 4 × 25 = 100.\n∴ The correct answer is 100.\n\nAlternate Method\nGiven:\nOriginal cost of plastering = 25\nNew dimensions = 2 × Original dimensions\n\nFormula Used:\nArea of four walls = 2 × (Length + Breadth) × Height\n\nCalculations:\n⇒ Let original dimensions be L, B, and H.\n⇒ Original Area (A1) = 2(L + B)H\n⇒ New dimensions: L' = 2L, B' = 2B, H' = 2H\n⇒ New Area (A2) = 2(2L + 2B) × 2H\n⇒ A2 = 2 × 2(L + B) × 2H = 4 × [2(L + B)H]\n⇒ A2 = 4 × A1\n⇒ Since cost is proportional to area: New Cost = 4 × 25 = 100\n∴ The correct answer is 100.\n\nAdditional Information\nLateral Surface Area\n\nThe area of the four walls of a cuboid is also known as the Lateral Surface Area (LSA), calculated as 2H(L + B).\n\nTotal Surface Area\n\nIf the floor and ceiling are included, the Total Surface Area (TSA) is 2(LB + BH + HL).\n\nScaling Effect on Volume\n\nIf all dimensions are doubled, the Volume increases by 23 = 8 times, whereas the Area increases by 22 = 4 times.",
+    "topic": "Mensuration 3D",
+    "subtopic": "Scaling & Similarity in 3D Shapes",
+    "conceptTested": "When linear dimensions of a 3D figure are scaled by a factor k, its surface area scales by k² and cost proportional to area scales by k².",
+    "tags": {
+      "topic": "Mensuration 3D",
+      "subtopic": "Scaling & Similarity in 3D Shapes",
+      "conceptTested": "When linear dimensions of a 3D figure are scaled by a factor k, its surface area scales by k² and cost proportional to area scales by k²."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 6",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "01:23",
+    "avgTime": "00:40",
+    "questionText": "Ram is 500 km ahead of Laxman. If they move in the same direction, Laxman catches Ram in 25 hours. If they move in the opposite direction toward each other, they meet in 5 hours. Find the difference between the total distance traveled by Laxman across both scenarios and the total distance traveled by Ram across both scenarios",
+    "options": {
+      "A": "600 km",
+      "B": "800 km",
+      "C": "1000 km",
+      "D": "500 km"
+    },
+    "solution": "Solution\n\nGiven:\nRam is 500 km ahead of Laxman,\n\nIf they move in the same direction Laxman catches Ram in 25 hours,\n\nIf they move in the opposite direction Laxman will catch Ram in 5 hours,\n\nConcept used:\n\nDistance = Time × Speed\nRelative speed = u + v (when two bodies with speeds u and v moving toward each other)\nRelative speed = u - v (when two bodies with speed u and v moving away from each other)\n\nCalculation:\nLet R and L be the speed of Ram and Laxman respectively.\n\nAccording to the question,\n\nFirst case:\n\nRelative speed = L - R =\n500\n25\n500\n25\n= 20 kmph\n\nSecond case:\n\nRelative speed = L + R =\n500\n5\n500\n5\n= 100 kmph\nNow, on solving the above equations, we get,\n⇒ L = 60 kmph and R = 40 kmph\n\nAgain according to the question,\n\nThe total distance covered by Ram,\n\n⇒ 40 × (25 + 5) = 1200 km\n\nThe total distance covered by Laxman,\n\n⇒ 60 × (25 + 5) = 1800 km\n\nThe required difference in the distance,\n\n⇒ 1800 - 1200 = 600 km\nTherefore, '600 km' is the required answer.",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Relative Speed",
+    "conceptTested": "Relative speed in the same direction is u - v and in opposite direction is u + v, where distance = relative speed × time.",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Relative Speed",
+      "conceptTested": "Relative speed in the same direction is u - v and in opposite direction is u + v, where distance = relative speed × time."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 7",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "01:34",
+    "avgTime": "00:54",
+    "questionText": "A sector of a circle has a radius of 18 cm and a central angle of 125°. What will be its approximate perimeter? (Use π = 22/7)",
+    "options": {
+      "A": "73.85 cm",
+      "B": "74 cm",
+      "C": "75.3 cm",
+      "D": "73 cm"
+    },
+    "solution": "Solution\n\nGiven:\nRadius = 18 cm\nCentral angle = 125°\n\nFormula used:\nPerimeter of sector of a circle = θ/360° × 2πr + 2r\n\nCalculation:\nAccording to the question:\n\nPerimeter of sector of a circle = θ/360° × 2πr + 2r\n⇒ (125/360 × 2 × 22/7 × 18 + 2 × 18)\n⇒ (25/72 × 44/7 × 18 + 36)\n⇒ (275/7 + 36)\n⇒ (275 + 252)/7\n⇒ 527/7\n⇒ 75.28 cm ~ 75.3 cm\n∴ The required perimeter is 75.3 cm.",
+    "topic": "Mensuration 2D",
+    "subtopic": "Sector of a Circle",
+    "conceptTested": "Perimeter of a sector of a circle is given by the arc length plus two radii: (θ/360°) × 2πr + 2r.",
+    "tags": {
+      "topic": "Mensuration 2D",
+      "subtopic": "Sector of a Circle",
+      "conceptTested": "Perimeter of a sector of a circle is given by the arc length plus two radii: (θ/360°) × 2πr + 2r."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 9",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:33",
+    "avgTime": "00:44",
+    "questionText": "36 workmen are employed to finish a certain work in 48 days. But it is found that in 24 days, only 2/5 work is done. How many more men must be taken to finish the work in time:",
+    "options": {
+      "A": "16",
+      "B": "20",
+      "C": "18",
+      "D": "None of these"
+    },
+    "solution": "Solution\n\nGiven:\n36 workmen can do 2/5 part of a work in 24 days.\n\nConcept:\n\nTotal work = (Number of men × Time taken)/part of work done\n\nCalculation:\nTotal work = (36 × 24)/(2/5) units = 2160 units\nTime required to complete the rest work = (48 - 24) days = 24 days\nLet extra workers required to complete the work in time be x.then,\n{(x + 36) × 24}\\(1 - 2/5) = 2160 units\n⇒ {(x + 36) × 24}\\(3/5) = 2160 units\n⇒ x + 36 = (2160/24) × (3/5)\n⇒ x + 36 = 90 × 3 /5\n⇒ x = 54 - 36 = 18 workers\n∴ 18 extra workers are required to do the same work in 48 days.\n\nShortcut Trick\nTotal days is 48 and total men is 36\nsince 2/5 work is completed in 24 days then 3/5 work is left.\n\napply MDH/W\n\nso\n36×24\n2\n36\n×\n24\n2\n=\n(36+x)∗24\n3\n(\n36\n+\n𝑥\n)\n∗\n24\n3\n, x =18",
+    "topic": "Time & Work",
+    "subtopic": "Time & Work - Men, Women & Children / Wages",
+    "conceptTested": "Work equivalence formula using Total Work = (Men × Days) / Work Done",
+    "tags": {
+      "topic": "Time & Work",
+      "subtopic": "Time & Work - Men, Women & Children / Wages",
+      "conceptTested": "Work equivalence formula using Total Work = (Men × Days) / Work Done"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 10",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:43",
+    "avgTime": "00:35",
+    "questionText": "The speed of a boat in still water is 9 km/h. If it takes the same time in going 35 km downstream as it takes in going 28 km upstream, then what is the speed (in km/h) of the stream?",
+    "options": {
+      "A": "1",
+      "B": "0.5",
+      "C": "1.5",
+      "D": "1.2"
+    },
+    "solution": "Solution\n\nGiven:\nThe speed of a boat in still water is 9 km/h.\n\nDistance covered in downstream = 35 km\nDistance covered in upstream = 28 km\n\nConcept used:\n\nSpeed = Distance/Time\nDownstream speed = (v + u)\nUpstream speed = (v - u)\nWhere, v = Speed of the boat in still water, u = Speed of the stream\n\nCalculation:\nLet the speed of the stream be 's' km/h\n\nAccording to the question,\n\n35\n(9+s)\n=\n28\n(9−s)\n35\n(\n9\n+\n𝑠\n)\n=\n28\n(\n9\n−\n𝑠\n)\n\n⇒ 35(9 - s) = 28(9 + s)\n⇒ 5(9 - s) = 4(9 + s)\n⇒ 45 - 5s = 36 + 4s\n⇒ 9 = 9s\n⇒ s = 1 km/h\n∴ The speed of the stream is 1 km/h.\nHence, the correct answer is 1 km/h.",
+    "topic": "Boats & Streams",
+    "subtopic": "Boats & Streams - Equal Time / Distance Scenarios",
+    "conceptTested": "Ratio of downstream to upstream speeds equated via equal travel times: Distance_down / (v + s) = Distance_up / (v - s)",
+    "tags": {
+      "topic": "Boats & Streams",
+      "subtopic": "Boats & Streams - Equal Time / Distance Scenarios",
+      "conceptTested": "Ratio of downstream to upstream speeds equated via equal travel times: Distance_down / (v + s) = Distance_up / (v - s)"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 11",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "01:01",
+    "avgTime": "00:31",
+    "questionText": "In a school auditorium 2/7 of the students are girls. If there are 111 more boys than girls, how many boys are there in the school auditorium?",
+    "options": {
+      "A": "400",
+      "B": "315",
+      "C": "259",
+      "D": "185"
+    },
+    "solution": "Solution\n\nShortcut Trick\nGiven Fraction = 2/7\nTotal Students = 7 units\nGirls = 2 units\nBoys = 7 - 2 = 5 units\n\nAlso Given, there are 111 more boys than girls\n\nAccording to the fraction,\n\nMore Number = 5 - 2 = 3 units\n3 units = 111\n1 unit = 37\nNumber of boys = 5 units = 5 × 37 = 185\n\nGiven:\nTotal number of girls = 2/7 of total students\n\nThe total number of boys is 111 more than girls.\n\nCalculation:\nSuppose, the total number of girls in the school auditorium = x\nThen, total number of boys in the school auditorium = (x + 111)\nTotal students in the school auditorium = x + (x + 111) = 2x + 111\nTherefore, x = 2/7 × (2x + 111)\n⇒ x = (4x + 222)/7\n⇒ 7x = 4x + 222\n⇒ 7x - 4x = 222\n⇒ 3x = 222\n⇒ x = 222/3 = 74\nTotal number of boys = 74 + 111 = 185\n∴ Total of 185 boys are there in the school auditorium.",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Ratio & Proportion - Coin / Part Problems",
+    "conceptTested": "Proportional division of quantities using fractional units",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Ratio & Proportion - Coin / Part Problems",
+      "conceptTested": "Proportional division of quantities using fractional units"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 12",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:53",
+    "avgTime": "00:22",
+    "questionText": "The compound interest accrued on an amount of Rs. 25,500 at the end of three years is Rs. 8,440.50. What would be the simple interest accrued on the same amount at the same rate in the same period?",
+    "options": {
+      "A": "Rs. 7650",
+      "B": "Rs. 4650",
+      "C": "Rs. 5650",
+      "D": "Rs. 6650"
+    },
+    "solution": "Solution\n\nShortcut Trick\nRatio of Amount to Principal for 3 years = (25500 + 8440.50) ÷ 25500 = 33940.5 ÷ 25500 = 1331 / 1000.\nEquivalent ratio for 1 year = 3√(1331 / 1000) = 11 / 10.\nInterest rate (R) = (11 − 10) ÷ 10 × 100% = 10%.\nSimple Interest for 3 years = 30% of Principal = 30% of 25500 = 7650.\n∴ The correct answer is Rs. 7650.\n\nAlternate Method\nGiven:\nPrincipal (P) = Rs. 25,500\nTime (T) = 3 years\nCompound Interest (CI) = Rs. 8,440.50\n\nFormula Used:\nAmount (A) = P(1 + R / 100)T\nSimple Interest (SI) = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Amount (A) = P + CI\n⇒ A = 25500 + 8440.50 = 33940.50\n⇒ 33940.50 = 25500 × (1 + R / 100)3\n⇒ (1 + R / 100)3 = 33940.50 ÷ 25500\n⇒ (1 + R / 100)3 = 339405 / 255000\n⇒ (1 + R / 100)3 = 1331 / 1000 (dividing by 255)\n⇒ (1 + R / 100)3 = (11 / 10)3\n⇒ 1 + R / 100 = 11 / 10\n⇒ R / 100 = 1 / 10\n⇒ R = 10%\n⇒ SI = (25500 × 10 × 3) ÷ 100\n⇒ SI = 255 × 30 = 7650\n∴ The correct answer is Rs. 7650.\n\nAdditional Information\nEffective Compound Interest Rate\n\nFor a 10% per annum rate, the effective CI for 2 years is 21%, and for 3 years, it is 33.1%.\n\nDifference Between CI and SI (2 Years)\nDifference = P × (R ÷ 100)2. It determines the extra interest earned through compounding over exactly two years.\nDifference Between CI and SI (3 Years)\nDifference = P × (R ÷ 100)2 × (3 + R ÷ 100). Essential formula for efficiently finding the three-year CI and SI differences without complete calculations.",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Rate Calculation from 3-year CI & Principal",
+    "conceptTested": "Extracting rate of interest from 3-year Amount to Principal ratio: (1 + R/100)^3 = Amount / Principal",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Rate Calculation from 3-year CI & Principal",
+      "conceptTested": "Extracting rate of interest from 3-year Amount to Principal ratio: (1 + R/100)^3 = Amount / Principal"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 13",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "01:00",
+    "avgTime": "00:29",
+    "questionText": "A leaves from a place X at 10 a.m. at 40 km/h. B leaves from the same place at 2 p.m. at 80 km/h, and chases A. When and how far from X will B meet A?",
+    "options": {
+      "A": "6 p.m.; 140 km",
+      "B": "4 p.m.; 160 km",
+      "C": "4 p.m.; 200 km",
+      "D": "6 p.m.; 320 km"
+    },
+    "solution": "Solution\n\nGiven:\nThe speed of A is 40 km/h\n\nThe speed of B is 80 km/h\n\nConcept used:\n\nSpeed = Distance/Time\n\nWhen two trains are moving in the same direction then their relative speed = Difference of their individual speeds\n\nCalculation:\nDistance travelled by A till 2 pm = 4 × 40 = 160 km\nA and B travelled in the same direction then relative speed = 80 - 40 = 40 km/h\nTime taken by B to meet A = 160/40 = 4 hours or at \"6 pm\"\nIn 4 hours travelled distance by B = 4 × 80 = 320 km\n∴ The required result will be \"320 km and at 6 pm\".",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Time, Speed & Distance - Relative Speed & Catch-up Problems",
+    "conceptTested": "Relative Speed = Difference of speeds when bodies move in the same direction; Time to catch up = Initial distance gap / Relative Speed",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Time, Speed & Distance - Relative Speed & Catch-up Problems",
+      "conceptTested": "Relative Speed = Difference of speeds when bodies move in the same direction; Time to catch up = Initial distance gap / Relative Speed"
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 14",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:31",
+    "avgTime": "00:21",
+    "questionText": "In case of a particular transaction, the profit earned is 14 2/7%. What fraction is the cost price of the selling price?",
+    "options": {
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
+    },
+    "solution": "Solution\nShortcut Trick\nConvert Profit % to fraction: 14 2/7% = 1/7.\n\nHere, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit.\n\nSelling Price (SP) = CP + Profit = 7 + 1 = 8 units.\nRequired fraction (CP/SP) = 7/8.\n∴ The correct answer is 7/8.\n\nAlternate Method\nGiven: Profit percentage = 14 2/7% = (100/7)%.\nFormula Used: Selling Price (SP) = Cost Price (CP) + Profit; Profit % = (Profit ÷ CP) × 100\n⇒ Profit fraction = (100/7) ÷ 100 = 1/7\n⇒ This implies that for every 7 units of Cost Price, the Profit earned is 1 unit.\n⇒ Let Cost Price (CP) = 7x\n⇒ Profit = 1x\n⇒ Selling Price (SP) = CP + Profit = 7x + 1x = 8x\n⇒ Fraction of CP to SP = CP ÷ SP = 7x ÷ 8x\n⇒ Fraction = 7/8\n∴ The correct answer is 7/8.\n\nAdditional Information\nPercentage to Fraction Conversion\n\nCommon percentages like 14 2/7% = 1/7, 12 1/2% = 1/8, and 11 1/9% = 1/9 are essential for solving Profit and Loss questions quickly.\n\nCP and SP Relationship\n\nIf Profit % is expressed as a fraction a/b, then the ratio of CP : SP is always b : (b + a). For a Loss % of a/b, the ratio of CP : SP is b : (b − a).\n\nMarked Price and Discount\n\nSelling Price can also be calculated using Marked Price (MP): SP = MP × (1 − Discount%/100).",
+    "topic": "Profit, Loss & Discount",
+    "subtopic": "Profit & Loss - Basic Percentage to Fraction",
+    "conceptTested": "Relation between Cost Price and Selling Price using profit percentage fraction.",
+    "tags": {
+      "topic": "Profit, Loss & Discount",
+      "subtopic": "Profit & Loss - Basic Percentage to Fraction",
+      "conceptTested": "Relation between Cost Price and Selling Price using profit percentage fraction."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 15",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:54",
+    "avgTime": "00:36",
+    "questionText": "Out of two numbers, the first number is three-fourth of the second number. If the average of the reciprocal of the two numbers is 7/48, then the first number is",
+    "options": {
+      "A": "8",
+      "B": "4",
+      "C": "10",
+      "D": "6"
+    },
+    "solution": "Solution\nShortcut Trick\nRatio of the first number to the second number is 3 : 4. Let the numbers be 3x and 4x.\nSum of reciprocals = 2 × Average = 2 × (7/48) = 7/24.\nAccording to the ratio: (1/3x) + (1/4x) = 7/24 ⇒ (4 + 3)/12x = 7/24.\n7/12x = 7/24 ⇒ 12x = 24 ⇒ x = 2.\nFirst number = 3 × 2 = 6.\n∴ The correct answer is 6.\n\nAlternate Method\nGiven:\nFirst number (n1) = 3/4 of Second number (n2)\nAverage of reciprocals = 7/48\n\nFormula:\n\nAverage of two values x and y = (x + y) ÷ 2\nLet the second number be x. Then the first number is (3/4)x.\n\nThe reciprocals are 1/x and 4/3x.\n\n⇒ [(1/x) + (4/3x)] ÷ 2 = 7/48\n⇒ (1/x) + (4/3x) = (7/48) × 2\n⇒ (3 + 4) / 3x = 7/24\n⇒ 7 / 3x = 7 / 24\n⇒ 3x = 24\n⇒ x = 8 (This is the second number)\n⇒ First number = (3/4) × 8 = 6\n\nThus, the first number is 6, which corresponds to Option (4).\n\n∴ The correct answer is 6.\n\nAdditional Information\nReciprocal Property\n\nThe product of a number and its reciprocal is always 1. If a number is x/y, its reciprocal is y/x.\n\nAverage of Fractions\n\nTo find the average of two fractions, add them using a common denominator and then divide the sum by 2.\n\nRatio and Proportion\n\nIf A is k times B, the ratio A:B is k:1. This helps in representing variables as multiples of a common factor (e.g., 3x and 4x).",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Proportional Parts & Reciprocal Relations",
+    "conceptTested": "Relationship between two numbers, their reciprocals, and the average of reciprocals.",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Proportional Parts & Reciprocal Relations",
+      "conceptTested": "Relationship between two numbers, their reciprocals, and the average of reciprocals."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 16",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:18",
+    "avgTime": "00:25",
+    "questionText": "In a ΔPQR, ∠P = 40°. If the bisectors of the remaining angles meet at A, then sum of ∠AQR and ∠ARQ equals:",
+    "options": {
+      "A": "110°",
+      "B": "100°",
+      "C": "80°",
+      "D": "70°"
+    },
+    "solution": "Solution\n\nCalculation:\nAccording to the details given-\n\nA is the incenter of the triangle since it is situated at the internal bisectors of the angle.\n\n∴ ∠QAR = 90° + \\(\\angle P\\over2\\)\n\nSubstituting the values, we get-\n\n⇒ ∠QAR = 90° + \\(40\\over2\\) = 110°\n\nIn ΔAQR,\n\n⇒ ∠ AQR + ∠ARQ + ∠QAR  = 180°\n⇒ ∠ AQR + ∠ARQ = 180° - 110° = 70°\nThe answer is 70°",
+    "topic": "Geometry",
+    "subtopic": "Triangles - Angle Bisectors & Incenter",
+    "conceptTested": "The angle formed by the internal bisectors of two angles of a triangle is equal to 90° plus half of the third angle.",
+    "tags": {
+      "topic": "Geometry",
+      "subtopic": "Triangles - Angle Bisectors & Incenter",
+      "conceptTested": "The angle formed by the internal bisectors of two angles of a triangle is equal to 90° plus half of the third angle."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 17",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:02",
+    "avgTime": "00:17",
+    "questionText": "The average of 5 results is 46 and that of the first four is 45. The fifth result is",
+    "options": {
+      "A": "10",
+      "B": "1",
+      "C": "12.5",
+      "D": "50"
+    },
+    "solution": "Solution\n\nGiven:\nAverage of 5 values = 46.\nAverage of first 4 values = 45.\n\nCalculation:\nSince the average of 5 results is 46.\n\nThen the sum of 5 values is:\n\n⇒ 5 × 46 = 230\n\nSum of first 4 values:\n\n⇒ 4 × 45 = 180\nHence the fifth number is:\n⇒ 230 - 180\n⇒ 50\nHence the correct answer is \"50\".",
+    "topic": "Average",
+    "subtopic": "Average - Basic Sum and Missing Value",
+    "conceptTested": "Sum of observations = Average × Number of observations.",
+    "tags": {
+      "topic": "Average",
+      "subtopic": "Average - Basic Sum and Missing Value",
+      "conceptTested": "Sum of observations = Average × Number of observations."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 18",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:01",
+    "avgTime": "00:31",
+    "questionText": "A dealer sells an article by allowing a 20% discount on its marked price and still gains 12%. If the cost price of the article is Rs. 750, then its marked price (in Rs.) is",
+    "options": {
+      "A": "1,050",
+      "B": "1,025",
+      "C": "1,150",
+      "D": "1,125"
+    },
+    "solution": "Solution\nShortcut Trick\nUse the direct relation: CP : MP = (100 − Discount%) : (100 + Profit%)\nCP : MP = (100 − 20) : (100 + 12) = 80 : 112 = 5 : 7\nGiven Cost Price (CP) = 5 units = ₹750\n1 unit = 750 ÷ 5 = 150\nMarked Price (MP) = 7 units = 7 × 150 = 1050\n∴ The correct answer is ₹1050.\n\nAlternate Method\nGiven:\nCost Price (CP) of the article = ₹750\nProfit percentage = 12%\nDiscount percentage allowed on Marked Price (MP) = 20%\nFormula Used: Selling Price (SP) = CP × (100 + Profit%)/100 = MP × (100 − Discount%)/100\n⇒ First, calculate the Selling Price (SP) using profit on CP:\n⇒ SP = 750 × (100 + 12) / 100 = 750 × 1.12 = ₹840\n⇒ Now, use the discount on MP to find the Marked Price:\n⇒ SP = MP × (100 − 20) / 100\n⇒ 840 = MP × 0.8\n⇒ MP = 840 ÷ 0.8 = 1050\n∴ The correct answer is ₹1050.\n\nAdditional Information\nRelationship between CP and MP\n\nThe direct ratio for questions involving both profit and discount is: CP / MP = (100 − Discount%) / (100 + Profit%).\n\nMark-up Percentage\n\nMark-up % is the percentage by which Marked Price is kept higher than the Cost Price: [(MP − CP) / CP] × 100.\n\nEffective Discount\n\nFor successive discounts of a% and b%, the single equivalent discount is (a + b − ab/100)%.",
+    "topic": "Profit, Loss & Discount",
+    "subtopic": "Profit, Loss & Discount - Marked Price and Discount",
+    "conceptTested": "Direct ratio between Cost Price and Marked Price involving discount and profit percentages: CP / MP = (100 - Discount%) / (100 + Profit%).",
+    "tags": {
+      "topic": "Profit, Loss & Discount",
+      "subtopic": "Profit, Loss & Discount - Marked Price and Discount",
+      "conceptTested": "Direct ratio between Cost Price and Marked Price involving discount and profit percentages: CP / MP = (100 - Discount%) / (100 + Profit%)."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 19",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:00",
+    "avgTime": "00:27",
+    "questionText": "The distance between two stations A and B is 700 km. A train covers the journey from A to B at a speed of 80 km/h and returns back to A with a uniform speed of 65 km/h. The average speed of train during the whole journey, is closest to:",
+    "options": {
+      "A": "74 km/h",
+      "B": "71.72 km/h",
+      "C": "72.7 km/h",
+      "D": "70.73 km/h"
+    },
+    "solution": "Solution\n\nGiven:\nDistance between A and B = 700 km\nSpeed of train from A to B = 80 km/h\nSpeed of train from B to A = 65 km/h\n\nConcept used:\n\nDistance = Speed × Time\nAverage speed = Total distance travelled/Total time taken\n\nCalculation:\nTime taken by train from A to B = Distance/Speed = 700/80\nTime taken by train from B to A = 700/65\nAverage speed during the whole journey = Total distance/Total time\n⇒ (700 + 700)/[(700/80 + 700/65)]\n⇒ (700 + 700)/[700 × (1/80 + 1/65)]\n⇒ (2 × 700)/[700 × (13 + 16)/1040]\n⇒ 2/(29/1040)\n⇒ (1040 × 2)/29 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.\n\nShortcut Trick\nIf the distance travelled in both the cases is same, then we can apply this formula,\n\nAverage speed = (2 × product of the two speeds)/(Sum of the two speeds)\n⇒ (2 × 80 × 65)/(80 + 65)\n⇒ 10400/145 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Average Speed - Equal Distance",
+    "conceptTested": "Average speed for equal distances is given by 2xy / (x + y).",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Average Speed - Equal Distance",
+      "conceptTested": "Average speed for equal distances is given by 2xy / (x + y)."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:00",
+    "avgTime": "00:20",
+    "questionText": "A person invested a total of Rs. 57,500 at 4%, 5% and 8% per annum simple interest. At the end of the year, he received equal interest in all the three cases. The amount invested at 5% was:",
+    "options": {
+      "A": "Rs. 20,000",
+      "B": "Rs. 25,000",
+      "C": "Rs. 37,500",
+      "D": "Rs. 20,750"
+    },
+    "solution": "Solution\n\nGiven:\nPrincipal = 57,500\nRate of interest = 4%, 5% and 8%\n\nFormula used:\nS.I = (P × R × T)/100\n\nCalculation:\nLet the three parts be x, y and z\n\nThen,\n\n⇒ (x × 4 × 1)/100 = (y × 5 × 1)/100 = (z × 8 × 1)/100\n⇒ 0.04x = 0.05y = 0.08z\n⇒ x : y : z = 10 : 8 : 5\nSum invested at 5% = (8/23) × 57,500 = 20,000\n∴ The answer is Rs 20,000.",
+    "topic": "Simple Interest",
+    "subtopic": "Equal Interest on Different Principal Parts",
+    "conceptTested": "Equating simple interest earned from multiple principal parts at different rates for the same time period.",
+    "tags": {
+      "topic": "Simple Interest",
+      "subtopic": "Equal Interest on Different Principal Parts",
+      "conceptTested": "Equating simple interest earned from multiple principal parts at different rates for the same time period."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 21",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:00",
+    "avgTime": "00:21",
+    "questionText": "The LCM and HCF of two positive numbers are 96 and 8, respectively. If the sum of the numbers is 56, then the difference between the numbers is:",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "12",
+      "D": "10"
+    },
+    "solution": "Solution\nShortcut Trick\nLet the numbers be 8x and 8y, where x and y are co-prime.\nProduct of ratios (x × y) = LCM ÷ HCF = 96 ÷ 8 = 12.\nSum of ratios (x + y) = Sum ÷ HCF = 56 ÷ 8 = 7.\n\nFind two numbers that multiply to 12 and add to 7 → 3 and 4.\n\nDifference between numbers = HCF × (x − y) = 8 × (4 − 3) = 8.\n∴ The correct answer is 8.\n\nAlternate Method\nGiven:\nLCM = 96, HCF = 8, Sum (a + b) = 56.\n\nFormula Used:\nProduct of two numbers (a × b) = LCM × HCF\nAlgebraic identity: (a − b)2 = (a + b)2 − 4ab\n\nCalculations:\n⇒ Product (ab) = 96 × 8 = 768\n⇒ Sum (a + b) = 56\n⇒ (a − b)2 = (56)2 − 4 × (768)\n⇒ (a − b)2 = 3136 − 3072\n⇒ (a − b)2 = 64\n⇒ (a − b) = √64 = 8\n∴ The correct answer is 8.\n\nAdditional Information\nProduct Rule of HCF and LCM\n\nFor any two positive integers a and b, HCF(a, b) × LCM(a, b) = a × b.\n\nCo-prime Factors Property\n\nIf HCF of two numbers is h, the numbers can be written as hx and hy, where LCM = h × x × y and gcd(x, y) = 1.\n\nDifference and Sum Relationship\n\nThe relationship between sum and difference is given by the identity (a + b)2 − (a − b)2 = 4ab.",
+    "topic": "LCM & HCF",
+    "subtopic": "Relation between LCM, HCF and Sum of Numbers",
+    "conceptTested": "Product of two numbers equals the product of their HCF and LCM: a × b = HCF × LCM, combined with the algebraic identity (a - b)² = (a + b)² - 4ab.",
+    "tags": {
+      "topic": "LCM & HCF",
+      "subtopic": "Relation between LCM, HCF and Sum of Numbers",
+      "conceptTested": "Product of two numbers equals the product of their HCF and LCM: a × b = HCF × LCM, combined with the algebraic identity (a - b)² = (a + b)² - 4ab."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 22",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:01",
+    "avgTime": "00:14",
+    "questionText": "The LCM of two numbers is 495 and their HCF is 5. If the sum of the numbers is 100, then their difference is",
+    "options": {
+      "A": "46",
+      "B": "70",
+      "C": "10",
+      "D": "90"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLet the two numbers be 5a and 5b, where a and b are coprime.\nGiven LCM = 495 ⇒ 5 × a × b = 495 ⇒ a × b = 99\nGiven Sum = 100 ⇒ 5a + 5b = 100 ⇒ a + b = 20\nValues satisfying both conditions are a = 11 and b = 9.\nDifference = 5a − 5b = 5 × (11 − 9) = 10.\n∴ The correct answer is 10.\n\nAlternate Method\nGiven:\nLCM of the two numbers = 495\nHCF of the two numbers = 5\nSum of the numbers (a + b) = 100\n\nFormula Used:\nProduct of two numbers = HCF × LCM\n(a − b)2 = (a + b)2 − 4ab\nLarger Number = 55\nSmaller Number = 45\n10\nDifference\nSum = 100\n\nCalculations:\n⇒ a × b = 5 × 495 = 2475\n⇒ We know that (a − b)2 = (a + b)2 − 4ab\n⇒ (a − b)2 = (100)2 − 4 × 2475\n⇒ (a − b)2 = 10000 − 9900\n⇒ (a − b)2 = 100\n⇒ a − b = √100\n⇒ a − b = 10\n∴ The correct answer is 10.\n\nAdditional Information\nProduct Rule for Two Numbers\n\nThe product of any two given numbers is always equal to the product of their HCF and LCM. Formula: a × b = HCF × LCM.\n\nCoprime Ratio Concept\n\nIf two numbers have an HCF of H, they can be expressed as Hx and Hy, where x and y are coprime. Their LCM is strictly H × x × y.\n\nHCF and LCM of Fractions\n\nHCF = (HCF of Numerators) ÷ (LCM of Denominators) | LCM = (LCM of Numerators) ÷ (HCF of Denominators).",
+    "topic": "LCM & HCF",
+    "subtopic": "Relation between LCM, HCF and Sum of Numbers",
+    "conceptTested": "Product of two numbers equals the product of their HCF and LCM: a × b = HCF × LCM, and (a - b)² = (a + b)² - 4ab.",
+    "tags": {
+      "topic": "LCM & HCF",
+      "subtopic": "Relation between LCM, HCF and Sum of Numbers",
+      "conceptTested": "Product of two numbers equals the product of their HCF and LCM: a × b = HCF × LCM, and (a - b)² = (a + b)² - 4ab."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 23",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:00",
+    "avgTime": "00:09",
+    "questionText": "For what relation between a and b is the equation sin θ = (a + b) / (2√ab) possible?",
+    "options": {
+      "A": "a = b",
+      "B": "a ≤ b",
+      "C": "a ≥ b",
+      "D": "a > b"
+    },
+    "solution": "Solution\n\nGiven:\nSinθ = (a + b)/2√ab\n\nConcept:\n\n-1 ≤ sinθ ≤ +1\n\nCalculation:\n-1 ≤ (a + b)/2√ab ≤ +1\n\nWe solve one of them\n\n(a + b)/2√ab ≤ +1\n\n⇒ a + b ≤ 2√ab\n⇒ a + b - 2√ab ≤ 0\n⇒ (√a - √b)2  ≤ 0\n⇒ √a = √b = a = b\n∴ The correct answer is a = b\n\nShortcut Trick\nWe can solve this question by option to satisfy equation\n\nput a = b\nthen Sinθ = (a + a)/ 2√(a × a)\nSinθ = 2a/2a = 1 (sinθ ≤ 1)",
+    "topic": "Trigonometry",
+    "subtopic": "Trigonometric Ratios and Range",
+    "conceptTested": "The range of sine function is -1 ≤ sin θ ≤ 1, and algebraic inequalities involving arithmetic-geometric mean or squares like (√a - √b)² ≤ 0.",
+    "tags": {
+      "topic": "Trigonometry",
+      "subtopic": "Trigonometric Ratios and Range",
+      "conceptTested": "The range of sine function is -1 ≤ sin θ ≤ 1, and algebraic inequalities involving arithmetic-geometric mean or squares like (√a - √b)² ≤ 0."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 24",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:00",
+    "avgTime": "00:16",
+    "questionText": "The income of A is 40% more than the income of B, and the income of C is 30% less than the total incomes of A and B. The income of A is what per cent less than the income of C?",
+    "options": {
+      "A": "25%",
+      "B": "16%",
+      "C": "1623%",
+      "D": "20%"
+    },
+    "solution": "Solution\nShortcut Trick\nLet Income of B = 100\nIncome of A = 140 (40% more than B)\nIncome of C = 70% of (140 + 100) = 0.7 × 240 = 168\nDifference between C and A = 168 − 140 = 28\nRequired % = (28 ÷ 168) × 100 = 1/6 × 100 = 16(2/3)%\n∴ The correct answer is 16(2/3)%.\n\nAlternate Method\nGiven:\nIncome of A = 1.4 × Income of B\nIncome of C = 0.7 × (Income of A + Income of B)\n\nCalculations:\n⇒ Let Income of B = 100 units\n⇒ Income of A = 100 + 40% of 100 = 140 units\n⇒ Total Income of A + B = 140 + 100 = 240 units\n⇒ Income of C = 240 − 30% of 240 = 240 − 72 = 168 units\n⇒ Difference between C and A = 168 − 140 = 28 units\n⇒ Percentage less = (Difference ÷ Income of C) × 100\n⇒ Percentage less = (28 ÷ 168) × 100 = (1 ÷ 6) × 100 = 16.66%\n∴ The correct answer is 16(2/3)%.\n\nAdditional Information\nPercentage Comparison\n\nTo find what percent X is less than Y, use the formula: [(Y − X) ÷ Y] × 100.\n\nFraction to Percentage Conversion\n\nCommon fractions like 1/6 are equivalent to 16.66% or 16(2/3)%, which helps in faster calculation during exams.\n\nBase Value Selection\n\nAlways assume the base value (usually 100) for the variable that other variables are compared to (in this case, B).",
+    "topic": "Percentage",
+    "subtopic": "Percentage Comparison & More/Less Problems",
+    "conceptTested": "Percentage less formula: [(Y - X) / Y] * 100 where X is compared against base Y.",
+    "tags": {
+      "topic": "Percentage",
+      "subtopic": "Percentage Comparison & More/Less Problems",
+      "conceptTested": "Percentage less formula: [(Y - X) / Y] * 100 where X is compared against base Y."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 25",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:05",
+    "avgTime": "00:15",
+    "questionText": "If the 11-digit number 79x6402087y is divisible by 72, then for smallest value of x, what is the value of (x + 2y)?",
+    "options": {
+      "A": "4",
+      "B": "9",
+      "C": "2",
+      "D": "6"
+    },
+    "solution": "Solution\n\nShortcut Trick\nFor a number to be divisible by 72, it must be perfectly divisible by both 8 and 9.\n\nRule of 8: The last three digits (87y) must be divisible by 8 ⇒ 872 is divisible by 8, so y = 2.\nRule of 9: The sum of digits (45 + x) must be divisible by 9 ⇒ The smallest possible value for x is 0.\nRequired value = (x + 2y) = 0 + 2 × 2 = 4.\n∴ The correct answer is 4.\n\nAlternate Method\nGiven:\nThe 11-digit number 79x6402087y is divisible by 72.\n\nMethod Used:\n\nIf a number is divisible by 72, it must be divisible by its co-prime factors 8 and 9.\n\nDivisibility rule of 8: The number formed by the last three digits must be divisible by 8.\nDivisibility rule of 9: The sum of all the digits must be divisible by 9.\n\nCalculations:\n⇒ Consider the last 3 digits for divisibility by 8: 87y\n⇒ 87y = 800 + 70 + y\n⇒ 800 is perfectly divisible by 8, so (70 + y) must also be divisible by 8.\n⇒ The closest multiple of 8 to 70 is 72, which gives y = 2.\n⇒ So, y = 2. The number now becomes 79x64020872.\n⇒ Now, apply the divisibility rule of 9 to the entire number.\n⇒ Sum of digits = 7 + 9 + x + 6 + 4 + 0 + 2 + 0 + 8 + 7 + 2\n⇒ Sum of digits = 45 + x\n⇒ For (45 + x) to be divisible by 9, x can either be 0 or 9 (since 45 is a multiple of 9).\n⇒ Since we need the smallest value of x, we take x = 0.\n⇒ We need to find the final value of (x + 2y).\n⇒ (x + 2y) = 0 + 2 × 2\n⇒ (x + 2y) = 4\n∴ The correct answer is 4.\n\nAdditional Information\nDivisibility Rule of 8\n\nA number is divisible by 8 if the number formed by its last three digits is perfectly divisible by 8.\n\nDivisibility Rule of 9\n\nA number is divisible by 9 if the sum of all its digits is a multiple of 9.\n\nDivisibility Rule of 11\n\nA number is divisible by 11 if the difference between the sum of digits at odd places and the sum of digits at even places is either 0 or a multiple of 11.\n\nCo-prime Divisibility Theorem\n\nIf a number is divisible by two co-prime numbers a and b, it is always divisible by their product (a × b). For example, 72 = 8 × 9.",
+    "topic": "Number System",
+    "subtopic": "Divisibility Rules",
+    "conceptTested": "Co-prime Divisibility Theorem: A number divisible by 72 must be divisible by both 8 and 9.",
+    "tags": {
+      "topic": "Number System",
+      "subtopic": "Divisibility Rules",
+      "conceptTested": "Co-prime Divisibility Theorem: A number divisible by 72 must be divisible by both 8 and 9."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 3",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "A",
+    "userTime": "00:38",
+    "avgTime": "00:28",
+    "questionText": "Identify the segment in the sentence which contains the grammatical error.\nHis strike rate in this series is 74.35, which is the higher than that of any other batsman.",
+    "options": {
+      "A": "is the higher",
+      "B": "His strike rate",
+      "C": "than that of any other",
+      "D": "in this series"
+    },
+    "solution": "Solution\n\nThe correct answer is option 1) i.e. is the higher.\n\nExplanation:\n\nIn the given sentence, ‘higher’ is a comparative degree.\nThe comparative degree is the form of an adverb or adjective modified by more or ending in -er that is used when comparing two things.\nGenerally, the definite article ‘the’ is not used with the comparative degree.\nThus, the use of the definite article 'the' is not needed and should be eliminated from the sentence.\nHence, the correct option is \"is the higher\".\n\nWe use 'the' in a comparative degree when we want to depict a parallel comparison. For example:\nThe more sugar you put in the dish, the sweeter it is.\nThe structure for using the in a comparative degree for the parallel comparison is :\nThe + comparative adjective + clause + the + comparative adjective + clause\n\nCorrect Sentence: His strike rate in this series is 74.35, which is higher than that of any other batsman.",
+    "topic": "Spotting Errors",
+    "subtopic": "Adjectives & Articles",
+    "conceptTested": "Definite article 'the' is generally not used before a comparative degree unless it is a parallel comparison structure.",
+    "tags": {
+      "topic": "Spotting Errors",
+      "subtopic": "Adjectives & Articles",
+      "conceptTested": "Definite article 'the' is generally not used before a comparative degree unless it is a parallel comparison structure."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 7",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "00:07",
+    "avgTime": "00:14",
+    "questionText": "Choose the correctly spelt word:",
+    "options": {
+      "A": "ricocheat",
+      "B": "ricochet",
+      "C": "recochet",
+      "D": "riccochet"
+    },
+    "solution": "Solution\n\nThe correct spelling is 'ricochet' and it means rebound.\n\nExample sentence: A bullet ricocheted off a nearby wall.",
+    "topic": "Spelling Errors",
+    "subtopic": "Correctly Spelt Words",
+    "conceptTested": "Standard English orthography and spelling rules for words of foreign origin.",
+    "tags": {
+      "topic": "Spelling Errors",
+      "subtopic": "Correctly Spelt Words",
+      "conceptTested": "Standard English orthography and spelling rules for words of foreign origin."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 13",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:44",
+    "avgTime": "00:31",
+    "questionText": "Select the segment of the sentence that contains grammatical error. If there is no error, mark 'No error'.\nSome people have generously contributed to the welfare fund but they wanted that there names should not be published.",
+    "options": {
+      "A": "Some people have generously contributed",
+      "B": "to the welfare fund but they wanted",
+      "C": "that there names should not be published.",
+      "D": "No error"
+    },
+    "solution": "Solution\n\nThe correct answer is option 3) i.e. that there names should not be published.\n\nIn option 3) of the given sentence 'there' has been used which is wrong.\nIn the given sentence, a pronoun is needed for people, hence, 'their' will be used here.\nSo, the correct sentence will be: Some people have generously contributed to the welfare fund but they wanted that their names should not be published.",
+    "topic": "Spotting Errors",
+    "subtopic": "Pronouns & Homophones",
+    "conceptTested": "Distinction between possessive determiner 'their' and adverb/pronoun of place 'there'.",
+    "tags": {
+      "topic": "Spotting Errors",
+      "subtopic": "Pronouns & Homophones",
+      "conceptTested": "Distinction between possessive determiner 'their' and adverb/pronoun of place 'there'."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 19",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:15",
+    "avgTime": "00:25",
+    "questionText": "Read the given passage carefully. Select the most appropriate option that can substitute the underlined segment in the sentence. Robert’s chest expands with victory. She glances at him to see how he is dealing with this act of being removed from the high position of authority. But his brother has a faraway smile on his face. Is he relieved? Or was he distracted by something he considers more important?",
+    "options": {
+      "A": "dethronement",
+      "B": "abdication",
+      "C": "revolution",
+      "D": "coronation"
+    },
+    "solution": "Solution\n\nThe correct answer is: Option 1 i.e. Dethronement.\n\nKey Points\nDethronement means the act of removing someone from their position of power, especially a monarch or ruler. (सिंहासन से हटाना)\nExample: The dethronement of the king led to a period of political instability in the country.\nThe word fits the context as Robert is described as being removed from a high position of authority.\n\nTherefore, the correct answer is: Option 1 i.e. Dethronement.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nAbdication (राज त्याग): Refers to voluntarily renouncing a throne or position of power.\nExample: The king’s abdication shocked the entire nation.\nRevolution (क्रांति): Refers to a sudden, radical, or complete change, often in politics or government.\nExample: The industrial revolution transformed the way people lived and worked.\nCoronation (राज्याभिषेक): Refers to the ceremony of crowning a monarch.\nExample: The coronation of the new king was attended by dignitaries from all over the world.",
+    "topic": "Sentence Improvement",
+    "subtopic": "Vocabulary in Context & Phrase Replacement",
+    "conceptTested": "Selection of the most precise single-word substitute for a descriptive phrase based on contextual meaning.",
+    "tags": {
+      "topic": "Sentence Improvement",
+      "subtopic": "Vocabulary in Context & Phrase Replacement",
+      "conceptTested": "Selection of the most precise single-word substitute for a descriptive phrase based on contextual meaning."
+    }
+  },
+  {
+    "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 21",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:46",
+    "avgTime": "00:37",
+    "questionText": "Select the most appropriate option to fill in blank 1.",
+    "options": {
+      "A": "complex",
+      "B": "fine",
+      "C": "systematic",
+      "D": "easy"
+    },
+    "solution": "Solution\nThe correct answer is Option 1.\n\nKey Points\nThe word \"complex\" means consisting of many different and connected parts. (जटिल)\nIn the context of describing society, \"complex\" conveys that modern society has many diverse and interconnected aspects.\nThe other options: \"fine,\" \"systematic,\" and \"easy\" do not capture the intricacy and interconnectedness described in the passage.\n\n​Therefore, the correct answer is 'Option 1'.\n\nComplete Sentence: Hierarchy is key in ensuring normal functioning of our increasingly complex society.\n\nAdditional Information\nFine (उत्तम): means very high quality or acceptable.\nSystematic (सुनियोजित): means structured or methodical.\nEasy (आसान): means not difficult or requiring little effort.",
+    "topic": "Fill in the Blanks",
+    "subtopic": "Single Filler in Context",
+    "conceptTested": "Lexical appropriateness and contextual vocabulary usage to describe the nature of modern society.",
+    "tags": {
+      "topic": "Fill in the Blanks",
+      "subtopic": "Single Filler in Context",
+      "conceptTested": "Lexical appropriateness and contextual vocabulary usage to describe the nature of modern society."
+    }
+  }
+]

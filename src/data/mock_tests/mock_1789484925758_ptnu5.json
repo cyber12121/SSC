@@ -1,0 +1,1336 @@
+[
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 9",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "01:48",
+    "avgTime": "01:16",
+    "questionText": "Select the option that is related to the third term in the same way as the second term is related to the first term:\nDART : XGLZ :: SPIN : ?",
+    "options": {
+      "A": "MVOT",
+      "B": "YVCT",
+      "C": "YJCT",
+      "D": "MVCT"
+    },
+    "solution": "Solution\n\nThe table shows the place value of the alphabet from A to Z and Z to A.\n\nThe logic followed here is:\n\nGiven letter group is DART ∶ XGLZ ∶ ∶ SPIN ∶ ?\n\nNow, DART ∶ XGLZ\n\nSimilarly,  SPIN ∶ ?\n\nTherefore, the letter group for SPIN is \"MVCT\".\nHence, the correct answer is \"Option (4)\"",
+    "topic": "Analogy",
+    "subtopic": "Letter Analogy",
+    "conceptTested": "Forward and reverse letter coding/shifting patterns",
+    "tags": {
+      "topic": "Analogy",
+      "subtopic": "Letter Analogy",
+      "conceptTested": "Forward and reverse letter coding/shifting patterns"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 17",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:43",
+    "avgTime": "00:44",
+    "questionText": "Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row facing North. B is sitting at one extreme end. E is sitting second to the left of B. C is sitting between A and E. G is NOT sitting at any extreme end. F is sitting to the immediate right of D. Who is sitting second to the left of G?",
+    "options": {
+      "A": "E",
+      "B": "C",
+      "C": "A",
+      "D": "F"
+    },
+    "solution": "Solution\n\nLet us consider that all of them are facing north.\n1) Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row.\n2) B is sitting at one extreme end.\n3) E is sitting second to the left of B.\n4) C is sitting between A and E.\n5) G is NOT sitting at any extreme end.\n6) F is sitting to the immediate right of D.\n\nThe final arrangement is shown below:\n\nHence, 'C' is sitting second to the left of G.",
+    "topic": "Seating Arrangement",
+    "subtopic": "Linear Row North Facing",
+    "conceptTested": "Deduction of positions in a single row based on directional clues",
+    "tags": {
+      "topic": "Seating Arrangement",
+      "subtopic": "Linear Row North Facing",
+      "conceptTested": "Deduction of positions in a single row based on directional clues"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 21",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "00:55",
+    "avgTime": "00:29",
+    "questionText": "How many such pairs of letters are there in the word REGULATION (in the forward direction) which have as many letters between them in the word as there are in the English alphabetical order?",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "4"
+    },
+    "solution": "Solution\n\nGiven:\nREGULATION\n\nConcept:\n\nExplanation:\n\nThere are two such pairs in alphabetical order (GN) and (RU)\n\nHence, the correct answer is '2'.\n\nConfusion Points\nIt is given in the question that we have to check only in the forward direction\n\nSo, there are two such pairs in alphabetical order (GN) and (RU)\n\nON and LI are not counted as these pairs are in reverse direction, which is prohibited in the question.",
+    "topic": "Alphabet Test",
+    "subtopic": "Letter Pairs Forward Direction",
+    "conceptTested": "Counting forward alphabetical pairs in a given word",
+    "tags": {
+      "topic": "Alphabet Test",
+      "subtopic": "Letter Pairs Forward Direction",
+      "conceptTested": "Counting forward alphabetical pairs in a given word"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Intelligence and Reasoning",
+    "section": "General Intelligence and Reasoning",
+    "questionNumber": "Question 25",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:49",
+    "avgTime": "00:30",
+    "questionText": "Six friends, G, H, I, J, K and L, are sitting around a circular table, facing towards the centre of the table. H is sitting third to the left of G. L and I are not neighbours of H. K is sitting to the immediate right of I. Who is sitting to the immediate left of L?",
+    "options": {
+      "A": "J",
+      "B": "H",
+      "C": "I",
+      "D": "G"
+    },
+    "solution": "Solution\n\nSix friends, G, H I, J, K and L, are sitting around a circular table, facing towards the centre of the table.\n\n1) H is sitting third to the left of G.\n2) L and I are not neighbours of H.\n\nCase (i) :\n\nCase (ii) :\n\n3) K is sitting to the immediate right of I.\n\nHere case (ii) gets eliminated.\n\n∴ Here, 'J' is sitting to immediate left of 'L'.\nHence, the correct answer is \"J\".",
+    "topic": "Seating Arrangement",
+    "subtopic": "Circular Table Center Facing",
+    "conceptTested": "Circular arrangement with relative left/right positioning",
+    "tags": {
+      "topic": "Seating Arrangement",
+      "subtopic": "Circular Table Center Facing",
+      "conceptTested": "Circular arrangement with relative left/right positioning"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 4",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "C",
+    "userTime": "00:11",
+    "avgTime": "00:25",
+    "questionText": "The most abundant element found in the earth's crust is:",
+    "options": {
+      "A": "Carbon",
+      "B": "Nitrogen",
+      "C": "Oxygen",
+      "D": "Silicon"
+    },
+    "solution": "Solution\n\nThe correct answer is Oxygen.\n\nKey Points\nExplanation:\n\nOxygen is the most abundant element found in the earth's crust. Oxygen accounts for 46.6% of the Earth Crust\n\nAluminum is an abundantly found metal on the Earth's crust (8.1%).\nIt is not separately found in nature. It is found with a combination of other metals (alloy form).\n\nAdditional Information\nThe Major Elements of the Earth’s Crust\n\nElements\n\nWeight (%)\n\nOxygen\n\n46.60\n\nSilicon\n\n27.72\n\nAluminium\n\n8.13\n\nIron\n\n5.00\n\nCalcium\n\n3.63\n\nSodium\n\n2.83\n\nPotassium\n\n2.59\n\nMagnesium\n\n2.09\n\nOthers\n\n1.41",
+    "topic": "Physical Geography",
+    "subtopic": "Earth Structure & Crust Composition",
+    "conceptTested": "Abundance of elements by weight percentage in the Earth's crust",
+    "tags": {
+      "topic": "Physical Geography",
+      "subtopic": "Earth Structure & Crust Composition",
+      "conceptTested": "Abundance of elements by weight percentage in the Earth's crust"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 6",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "D",
+    "userTime": "00:14",
+    "avgTime": "00:34",
+    "questionText": "Which of the following can be threats to the biodiversity of any Geographical area?\n(A) Global warming\n(B) Fragmentation of natural habitat\n(C) Invasion by alien species\n(D) Promotion of vegetarianism\nSelect the correct answer by using the codes given below.",
+    "options": {
+      "A": "Only (A) and (B)",
+      "B": "Only (B) and (C)",
+      "C": "(A), (B), (C) and (D)",
+      "D": "Only (A), (B) and (C)"
+    },
+    "solution": "Solution\n\nThe correct answer is Only (A), (B), and (C).\n\nKey Points\nBiodiversity -\nIt refers to the diversity and variability of life on Earth.\nThe year 2010 has been declared the International Year of Biodiversity.\nIt is a natural resource, from which all our needs of life are met.\"\n\nAdditional Information\n​Causes of loss of biodiversity -\nDestruction of natural habitats, hunting, rapid fishing, deforestation, increasing air pollution, water pollution, soil contamination, and global warming (or climate change).\nAll these factors are linked to overpopulation.\nApart from these man-made causes, there are also some natural causes that lead to the loss of biodiversity.\nThe National Biodiversity Authority (NBA) was constituted in 2003 by the Central Government under the \"Biodiversity Act\" of 2002.\nThe NBA is a statutory body and its headquarter is in Chennai.",
+    "topic": "National Parks & Environment",
+    "subtopic": "Biodiversity Threats & Conservation",
+    "conceptTested": "Identification of anthropogenic and natural drivers of biodiversity loss, including habitat fragmentation, invasive species, and global warming.",
+    "tags": {
+      "topic": "National Parks & Environment",
+      "subtopic": "Biodiversity Threats & Conservation",
+      "conceptTested": "Identification of anthropogenic and natural drivers of biodiversity loss, including habitat fragmentation, invasive species, and global warming."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 7",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:27",
+    "avgTime": "00:40",
+    "questionText": "Which of the following statements is not correct about the enactment of the Government of India Act 1858?",
+    "options": {
+      "A": "The Government of India was placed in the care of a new government department, the India Office in London, headed by a Secretary of State, a member of the Queen's family.",
+      "B": "Once appointed as Viceroy, he served his term even after his party in Britain resigned.",
+      "C": "The British Parliament transferred the powers of the East India Company to the British Crown in order to ensure a more responsible management of Indian affairs.",
+      "D": "The Queen's Viceroy had replaced the Company's Governor-General as the supreme authority in India."
+    },
+    "solution": "Solution\n\nThe correct answer is The Government of India was placed in the care of a new government department, the India Office in London, headed by a Secretary of State, a member of the Queen's family.\n\nKey Points\nLord Stanley President of the Board of Control introduced a bill for the 'Better Government' of India which became an Act of Parliament in August 1858.\nThe Government of India passed from the hands of the English East India Company to the crown.\nThe armed forces of the company were transferred to the crown.\nThe Board of control and the court of Directors were abolished.\nTheir place was taken by the Secretary of State of India and his India Council.\nThey were to govern India in the name of her majesty.\nThe Secretary of State was to sit in Parliament.\nAs a cabinet minister of England, he was responsible to Parliament. Hence, Statement 1 is incorrect.\nUltimate power over India remained with Parliament.\nOnce appointed as Viceroy, he served his term even after his party in Britain resigned. Hence, Statement 2 is correct.\nThe British Parliament transferred the powers of the East India Company to the British Crown in order to ensure a more responsible management of Indian affairs. Hence, Statement 3 is correct.\nThe Queen's Viceroy had replaced the Company's Governor-General as the supreme authority in India. Hence, Statement 4 is correct.\nIn matters of policy and its execution the viceroy was increasingly reduced to a subordinate position in relation to the British Government.\nThe Government of India was finally directly controlled by London.\n\nThus, option 1 is the correct answer.",
+    "topic": "Modern History",
+    "subtopic": "Revolt of 1857 & Government of India Act 1858",
+    "conceptTested": "Provisions and administrative changes introduced by the Government of India Act 1858, transferring power from the East India Company to the British Crown and establishing the Secretary of State for India in London.",
+    "tags": {
+      "topic": "Modern History",
+      "subtopic": "Revolt of 1857 & Government of India Act 1858",
+      "conceptTested": "Provisions and administrative changes introduced by the Government of India Act 1858, transferring power from the East India Company to the British Crown and establishing the Secretary of State for India in London."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 10",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:05",
+    "avgTime": "00:15",
+    "questionText": "Who was awarded the 2025 Nobel Prize in Literature for his compelling and visionary oeuvre?",
+    "options": {
+      "A": "László Krasznahorkai",
+      "B": "Kazuo Ishiguro",
+      "C": "Bob Dylan",
+      "D": "Orhan Pamuk"
+    },
+    "solution": "Solution\n\nThe correct answer is László Krasznahorkai.\n\nIn News\nThe 2025 Nobel Prize in Literature was awarded to Hungarian author László Krasznahorkai for his compelling and visionary oeuvre that reaffirms the power of art in the midst of apocalyptic terror.\n\nKey Points\nLászló Krasznahorkai is known for his dense, apocalyptic prose and philosophical depth, often referred to as the “writer of the apocalypse.”\nHis works, such as \"Satantango,\" \"The Melancholy of Resistance,\" and \"Baron Wenckheim’s Homecoming,\" are known for long, hypnotic sentences that reflect chaos and despair, yet find beauty and endurance within destruction.\nKrasznahorkai's fiction captures humanity on the brink of collapse, transcendence, and revelation, making him a unique voice in contemporary literature.\nHe becomes the latest laureate in a long tradition of writers whose works have contributed significantly to literature's power to capture the human condition in times of crisis.\n\nAdditional Information\nSully Prudhomme\nFirst laureate of the Nobel Prize in Literature in 1901.\nSelma Lagerlöf\nFirst woman to win the Nobel Prize in Literature in 1909.\nNobel Prize in Literature\nA prestigious global award given annually to authors whose work has made a significant impact in the field of literature.",
+    "topic": "Awards & Honours",
+    "subtopic": "Nobel Prize",
+    "conceptTested": "Current affairs knowledge of recipients of prestigious international awards such as the Nobel Prize in Literature.",
+    "tags": {
+      "topic": "Awards & Honours",
+      "subtopic": "Nobel Prize",
+      "conceptTested": "Current affairs knowledge of recipients of prestigious international awards such as the Nobel Prize in Literature."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 11",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:05",
+    "avgTime": "00:18",
+    "questionText": "With reference to Sahitya Akademi Yuva Puraskar announced in June 2025, which of the following statements is/are correct?\n1. Yuva Puraskar was announced in 23 Indian languages.\n2. There is no Yuva Puraskar in Dogri this year.",
+    "options": {
+      "A": "Only 1",
+      "B": "Both 1 and 2",
+      "C": "Neither 1 nor 2",
+      "D": "Only 2"
+    },
+    "solution": "Solution\n\nThe correct answer is Option 2) Both 1 and 2.\n\nKey Points\n“Yuva Puraskar was announced in 23 Indian languages.” — True.\nSahitya Akademi’s press note for June 18, 2025 lists 23 awardees for the Yuva Puraskar (i.e., awards in 23 languages).\n\n“There is no Yuva Puraskar in Dogri this year.” — True.\nBoth the official press note and the Akademi’s language-wise awards page explicitly state “No Award in Dogri language” for 2025.\n\nRecap: Since one language (Dogri) had no award, the total awards = 23, confirming both statements.",
+    "topic": "Awards & Honours",
+    "subtopic": "Literary Awards & Sahitya Akademi",
+    "conceptTested": "Current awareness regarding national literary recognitions such as the Sahitya Akademi Yuva Puraskar.",
+    "tags": {
+      "topic": "Awards & Honours",
+      "subtopic": "Literary Awards & Sahitya Akademi",
+      "conceptTested": "Current awareness regarding national literary recognitions such as the Sahitya Akademi Yuva Puraskar."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 12",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:14",
+    "avgTime": "00:31",
+    "questionText": "Which of the following statements best defines the true meaning of 'democratic government'?",
+    "options": {
+      "A": "A government formed through direct elections.",
+      "B": "A government where the head of state is elected by the people.",
+      "C": "A government that explains its actions and defends its decisions to the people.",
+      "D": "A government governing the citizens through a written constitution."
+    },
+    "solution": "Solution\n\nThe correct answer is option 3.\n\nKey Points\nElections (whether direct or indirect) alone do not guarantee democratic government. Hence option 1 is incorrect.\nSometimes autocratic leaders like Hitler also get elected through ballot voting.\nElections should be based on a universal adult franchise as it is based on equality which is a basic principle of democracy.\nElections should be free and fair which should provide equal opportunity to contest and get elected.\nA Republic is where the head of state is elected by the people. Hence option 2 is incorrect.\nIt is not necessarily to be democratic.\nFor ex-China is a republic but not democratic whereas the United Kingdom is a monarch but still democratic.\nA democratic government must be responsible and answerable to the people.\nIt should necessarily explain the policies, provide information to the public and give freedom to criticize the actions through free speech.\nThis best describes the democratic government. Hence option 3 is correct.\nA democratic government need not necessarily have a written set of rules. Hence option 4 is incorrect.\nCountries like New Zealand and Britain have an unwritten constitution, but they qualify to be democratic countries due to features like freedom of speech and expression whereas Countries like Myanmar have a written constitution but not democracy.\n\nAdditional Information\nDemocracy is a form of government in which: Rulers elected by the people take all the major decisions.\nElections offer a choice and fair opportunity to the people to change the current rulers\nThis choice and opportunity are available to all the people on an equal basis, and the exercise of this choice leads to a government limited by basic rules of the constitution and citizens’ rights.\nA democratic government rules within limits set by constitutional law and citizens’ rights.",
+    "topic": "Indian Polity & Constitution",
+    "subtopic": "Preamble & Salient Features of Constitution",
+    "conceptTested": "Conceptual clarity on the fundamental characteristics of a democratic government, such as accountability, answerability, and constitutional limits.",
+    "tags": {
+      "topic": "Indian Polity & Constitution",
+      "subtopic": "Preamble & Salient Features of Constitution",
+      "conceptTested": "Conceptual clarity on the fundamental characteristics of a democratic government, such as accountability, answerability, and constitutional limits."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 15",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "A",
+    "userTime": "00:12",
+    "avgTime": "00:22",
+    "questionText": "Trade winds that cross the equator and enter the Indian peninsula in _______ direction bring monsoons to India.",
+    "options": {
+      "A": "south-west",
+      "B": "north-east",
+      "C": "north-west",
+      "D": "south-east"
+    },
+    "solution": "Solution\n\nThe correct answer is \"south-west\".\nKey Points\nA seasonal shift in wind direction is called a monsoon.\nMonsoons are reasons for heavy rainfall.\nThe Indian monsoon is the most prominent monsoon in the world.\nThe direction in which the monsoon blows is from land towards the Sea in the winters and from Sea towards land in the summers.\nThe winds of monsoon blow from cold to warm climates.\nThe motive in the back of this phenomenon is that bloodless air fills a greater area than heated air.\nThe low-stress place draws southeast change winds.\n\nAdditional Information\nDue to the Coriolis force, these trade winds turn right towards the low-pressure regions in India after crossing the equator and begin blowing withinside the southwestern direction.\nThereafter those exchange winds input the peninsular part of India because of the southwest monsoon.\nWinters in India are dry and hot.\nThe monsoon winds carry moisture from the northeast.\nMost of India lies between the equator and the tropic of cancer, so the Indian land receives direct get right of entry to the sun’s rays.\nThe monsoon in summer enters the Indian subcontinent from the southwest direction.\nThese winds convey moisture from the Indian Ocean.\nThis brings heavy rainfall between the months of June to September.\nThe southeast exchange winds emerge as the southwest monsoon due to the fact those exchange winds go the equator and start blowing in the southwest direction under the influence of the Coriolis force.",
+    "topic": "Indian Climate & Soil",
+    "subtopic": "Indian Monsoon Mechanism",
+    "conceptTested": "Coriolis force deflection of southeast trade winds into southwest monsoons upon crossing the equator.",
+    "tags": {
+      "topic": "Indian Climate & Soil",
+      "subtopic": "Indian Monsoon Mechanism",
+      "conceptTested": "Coriolis force deflection of southeast trade winds into southwest monsoons upon crossing the equator."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 16",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:18",
+    "avgTime": "00:32",
+    "questionText": "Which of the following statements is NOT correct regarding the rabi crops?",
+    "options": {
+      "A": "Southern and southeastern states are important for the production of wheat and other rabi crops.",
+      "B": "These crops are harvested in summer from April to June.",
+      "C": "Some of the important rabi crops are wheat, barley, peas, gram and mustard.",
+      "D": "Rabi crops are sown in winter from October to December."
+    },
+    "solution": "Solution\n\nThe correct answer is Southern and southeastern states are important for the production of wheat and other rabi crops.\n\nKey Points\nPunjab, Haryana, Uttar Pradesh, and Madhya Pradesh, are major contributors to the production of wheat, barley, and other rabi crops. Hence Option 1 is incorrect.\nThese regions have favorable climatic conditions and fertile soil, making them suitable for the cultivation of rabi crops.\nWheat is one of the most important rabi crops grown in these states, and they significantly contribute to the overall wheat production in the country.\nOther rabi crops like barley, peas, gram, and mustard are also cultivated in these regions.\n\nAdditional Information\nKharif crops\nKharif Crops are planted at the onset of the South-West monsoon, primarily in India, Pakistan, and Bangladesh, during the rainy season.\nThe sowing of these crops takes place between the months of June and July.\nUpon reaching maturity, typically in October, these crops are harvested in the Autumn season.\nExamples of Kharif crops include rice, cotton, corn, sugarcane, turmeric, pigeon pea, and more.\nZaid crops\nZaid Crops are grown during the summer season in regions with a tropical climate.\nThese crops are typically cultivated between the months of March and June.\nZaid crops are known for their quick growth and shorter duration compared to Kharif and Rabi crops.\nExamples of Zaid crops include cucumber, watermelon, bitter gourd and cowpea.\nThese crops are often irrigated using modern techniques and are harvested before the onset of the monsoon season.",
+    "topic": "Indian Climate & Soil",
+    "subtopic": "Cropping Seasons - Rabi Crops",
+    "conceptTested": "Geographical distribution and production regions of Rabi crops in India.",
+    "tags": {
+      "topic": "Indian Climate & Soil",
+      "subtopic": "Cropping Seasons - Rabi Crops",
+      "conceptTested": "Geographical distribution and production regions of Rabi crops in India."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 19",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "C",
+    "userTime": "00:15",
+    "avgTime": "00:24",
+    "questionText": "Which one of the following statements is incorrect regarding the Bihu festival of Assam?",
+    "options": {
+      "A": "This festival is organized to celebrate the new year.",
+      "B": "These are Bahag Bihu, Kati Bihu and Magh Bihu.",
+      "C": "The entire Bihu festival takes place on a Sankranti day.",
+      "D": "There are three types of Bihu celebrated in Assam."
+    },
+    "solution": "Solution\n\nThe correct answer is The entire Bihu festival takes place on a Sankranti day.\n\nKey Points\nBihu is a set of three important festivals observed in the Indian state of Assam which are-\nRongali or Bohag Bihu observed in April\nKongali or Kati Bihu observed in October\nBhogali or Magh Bihu observed in January\nThe Rongali Bihu is the most important of the three, the Bhogali Bihu is a harvest festival and the Kongali Bihu is an animistic festival.\nIt is celebrated with great joy and abundance by all Assamese people regardless of caste, creed, and religion.",
+    "topic": "Festivals & Fairs",
+    "subtopic": "Regional Festivals of India",
+    "conceptTested": "Details and observances of the Bihu festival in Assam.",
+    "tags": {
+      "topic": "Festivals & Fairs",
+      "subtopic": "Regional Festivals of India",
+      "conceptTested": "Details and observances of the Bihu festival in Assam."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 20",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:17",
+    "avgTime": "00:24",
+    "questionText": "Which of the following statements NOT true regarding Firoz Tughlaq?",
+    "options": {
+      "A": "He withdrew all Taquavi (agricultural) loans granted by Mohammed-bin-Tughlaq.",
+      "B": "He imposed an irrigation tax",
+      "C": "He devastated the Jagannath Temple at Puri.",
+      "D": "None of the above"
+    },
+    "solution": "Solution\n\nThe correct answer is None of the above.\n\nKey Points\nFiroz Shah Tughlaq\n\nBorn: around 1309 CE\nFiroz Shah Tughlaq, the third ruler of the Tughlaq dynasty, ruled the Delhi Sultanate from 1351 to 1388. His reign marked a period of relative stability following years of political turmoil and administrative failures under his predecessors.\nHe withdrew all Taquavi (agricultural) loans granted by Mohammed-bin-Tughlaq.\nHence Statement 1 is correct.\nHe raised the salary of the revenue officers.\nHe constructed 150 wells, 100 bridges, and 50 dams, and also dug many irrigation canals.\nHe constructed towns like Firozabad, Hissar, Jaunpur, and Fatehabad.\nHe devastated the Jagannath Temple at Puri.\nHence Statement 3 is correct.\nFiroz Shah Tughlaq was the first Sultan to impose an irrigation tax.\nHence Statement 2 is correct.\n\nAdditional Information\nThe Tughlaq dynasty was a Muslim dynasty of Turkic origin that ruled over the Delhi sultanate in medieval India.\nIts reign started in 1320 in Delhi when Ghazi Malik assumed the throne under the title of Ghiyath al-Din Tughluq.\n​The dynasty expanded its territorial reach through a military campaign led by Muhammad bin Tughluq and reached its zenith between 1330 and 1335.",
+    "topic": "Medieval History",
+    "subtopic": "Delhi Sultanate - Tughlaq Dynasty",
+    "conceptTested": "Administrative reforms and military campaigns of Firoz Shah Tughlaq during the Delhi Sultanate.",
+    "tags": {
+      "topic": "Medieval History",
+      "subtopic": "Delhi Sultanate - Tughlaq Dynasty",
+      "conceptTested": "Administrative reforms and military campaigns of Firoz Shah Tughlaq during the Delhi Sultanate."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 21",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:16",
+    "avgTime": "00:18",
+    "questionText": "Who studied ecological succession in the Indiana Dunes of Northwest Indiana in the 1890s?",
+    "options": {
+      "A": "Frederic Clements",
+      "B": "Henry Chandler Cowles",
+      "C": "G Evelyn Hutchinson",
+      "D": "Charles Elton"
+    },
+    "solution": "Solution\n\nThe correct answer is Henry Chandler Cowles.\nKey Points\nHenry Chandler Cowles studied ecological succession in the Indiana Dunes of Northwest Indiana in the 1890s.\nHenry Chandler Cowles (1869-1939) was a University of Chicago botany professor and conservationist, his studies of plant life in the Indiana Dunes made Cowles one of America's most notable early ecologists.\nIn 1896, Cowles traveled to the southern shore of Lake Michigan to see the Indiana Dunes for the first time and studied them.\nHis study explained the development and distribution of local plant communities in terms of topography, moisture, wind, erosion, sedimentation, and other geological processes.\n\nAdditional Information\nG Evelyn Hutchinson was a British ecologist sometimes described as the \"father of modern ecology\".\nFrederic Clements was an American botanist, taxonomist, and ecologist who influenced the early study of plant communities, particularly the process of plant succession.\nCharles Sutherland Elton FRS was an English zoologist and animal ecologist associated with the development of population and community ecology, including studies of invasive organisms.",
+    "topic": "National Parks & Environment",
+    "subtopic": "Ecology Pioneers & Concepts",
+    "conceptTested": "Historical milestones in ecological succession studies.",
+    "tags": {
+      "topic": "National Parks & Environment",
+      "subtopic": "Ecology Pioneers & Concepts",
+      "conceptTested": "Historical milestones in ecological succession studies."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "General Awareness",
+    "section": "General Awareness",
+    "questionNumber": "Question 22",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:07",
+    "avgTime": "00:16",
+    "questionText": "Who among the following has been appointed as the Comptroller General of India in November 2024?",
+    "options": {
+      "A": "Tuhin Kanta Pandey",
+      "B": "Dr. V Narayanan",
+      "C": "Mahesh Kumar Aggarwal",
+      "D": "K Sanjay Murthy"
+    },
+    "solution": "Solution\n\nThe correct answer is K Sanjay Murthy.\n\nKey Points\nK Sanjay Murthy was appointed as the Comptroller General of India in November 2024.\nThe Comptroller General of India is a crucial constitutional authority responsible for auditing the revenue and expenditure of the Government of India.\nK Sanjay Murthy has previously served in key administrative roles, contributing significantly to public administration and governance.\nThis appointment was made to ensure the effective management and oversight of public funds, enhancing transparency and accountability.\nThe Comptroller General of India operates under the provisions of Article 148 of the Indian Constitution.\n\nAdditional Information\nComptroller and Auditor General of India (CAG):\nThe CAG is an independent authority established under Article 148 of the Constitution of India.\nThe primary function of the CAG is to audit all receipts and expenditures of the Government of India and the state governments, including those of autonomous bodies and corporations.\nThe CAG reports are submitted to the President or Governors, who then table them in Parliament or state legislatures.\nThe CAG plays a key role in ensuring transparency and accountability in the financial administration of the government.\nRoles and Responsibilities of the Comptroller General of India:\nOverseeing the financial administration of India at the highest level.\nEnsuring that public funds are used effectively and for the intended purposes.\nPromoting fiscal discipline within government departments and agencies.\nAuditing government expenditures to identify inefficiencies, corruption, or misuse of funds.\nAppointment of Comptroller General:\nThe Comptroller General is appointed by the President of India.\nThe term of office is six years or until the age of 65, whichever is earlier.\nThe independence of the office is ensured by providing security of tenure and prohibiting the holder from subsequent appointments under the government.\nSignificance of the Role:\nThe Comptroller General ensures the integrity and transparency of public financial management.\nIt plays a vital role in maintaining the trust of the public in the government's financial administration.\nThe audits conducted by the Comptroller General are essential for identifying policy gaps and recommending improvements.",
+    "topic": "Current Affairs",
+    "subtopic": "Appointments & Resignations",
+    "conceptTested": "Knowledge of recent high-profile constitutional and bureaucratic appointments in India.",
+    "tags": {
+      "topic": "Current Affairs",
+      "subtopic": "Appointments & Resignations",
+      "conceptTested": "Knowledge of recent high-profile constitutional and bureaucratic appointments in India."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 3",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:19",
+    "avgTime": "00:30",
+    "questionText": "If α + θ = 7π/12 and tan θ = √3, then the value of tan α is:",
+    "options": {
+      "A": "13√",
+      "B": "0",
+      "C": "-1",
+      "D": "1"
+    },
+    "solution": "Solution\n\nShortcut Trick\nGiven, tan θ = √3 ⇒ θ = π/3\nIt is given that α + θ = 7π/12\n⇒ α = 7π/12 − π/3 = 7π/12 − 4π/12 = 3π/12 = π/4\nNow, tan α = tan(π/4) = 1\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nα + θ = 7π / 12\ntan θ = √3\n\nCalculations:\n⇒ tan θ = √3\n⇒ θ = 60° (since tan 60° = √3)\nWe know that π radians = 180°\n⇒ Total Angle = 7π / 12 = (7 × 180°) ÷ 12 = 105°\n\nSubstitute the value of θ in the given equation:\n\n⇒ α + 60° = 105°\n⇒ α = 105° − 60°\n⇒ α = 45°\n\nWe need to find the value of tan α:\n\n⇒ tan α = tan 45° = 1\n∴ The correct answer is 1.\n\nAdditional Information\nRadian to Degree Conversion\n\nTo convert an angle from radians to degrees, multiply the value by 180° ÷ π. Conversely, to convert from degrees to radians, multiply by π ÷ 180°.\n\nCompound Angle Formula\n\nThe tangent of the sum of two angles is expressed as: tan(A + B) = (tan A + tan B) ÷ (1 − tan A × tan B).\n\nStandard Trigonometric Values\n\nSome frequently used tangent values are: tan(30°) = 1 ÷ √3, tan(45°) = 1, and tan(60°) = √3.",
+    "topic": "Trigonometry",
+    "subtopic": "Compound Angles & Standard Values",
+    "conceptTested": "Trigonometric values of standard angles and direct substitution.",
+    "tags": {
+      "topic": "Trigonometry",
+      "subtopic": "Compound Angles & Standard Values",
+      "conceptTested": "Trigonometric values of standard angles and direct substitution."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 8",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:07",
+    "avgTime": "00:17",
+    "questionText": "A regular hexagon is inscribed in a circle. Find the ratio of area of circle to the area of that portion which is not covered by the hexagon?",
+    "options": {
+      "A": "2π/(2π – 3√3)",
+      "B": "π/(π – 3√3)",
+      "C": "2π/√3",
+      "D": "π/√3"
+    },
+    "solution": "Solution\n\nShortcut Trick\nRadius of circumcircle = side of inscribed regular hexagon = r\nArea of circle = πr2\nArea of regular hexagon = (3√3/2)r2\nUncovered Area = πr2 − (3√3/2)r2 = r2(2π − 3√3) / 2\nRatio = Area of circle ÷ Uncovered Area = 2π / (2π − 3√3)\n∴ The correct answer is 2π/(2π − 3√3).\n\nAlternate Method\nGiven:\nA regular hexagon is inscribed in a circle.\n\nFormula Used:\nArea of a circle = πr2\nArea of a regular hexagon = 6 × (√3 / 4)a2 (where a is the side length)\n\nFor a regular hexagon inscribed in a circle, the side length (a) equals the radius (r).\n\nO\nr\nShaded blue region = Area not covered by hexagon\n\nCalculations:\n⇒ Let the radius of the circle be r.\n⇒ Side of the inscribed regular hexagon = r\n⇒ Area of the circle = πr2\n⇒ Area of the hexagon = 6 × (√3 / 4)r2 = (3√3 / 2)r2\n⇒ Area not covered by hexagon = Area of circle − Area of hexagon\n⇒ Area not covered = πr2 − (3√3 / 2)r2\n⇒ Area not covered = r2(2π − 3√3) / 2\n⇒ Required Ratio = (Area of circle) ÷ (Area not covered)\n⇒ Ratio = πr2 ÷ [r2(2π − 3√3) / 2]\n⇒ Ratio = 2π / (2π − 3√3)\n∴ The correct answer is 2π/(2π − 3√3).\n\nAdditional Information\nCircumcircle of a Regular Hexagon\n\nThe circumcenter and incenter of a regular hexagon coincide. The radius of the circumscribed circle is exactly equal to the side length of the hexagon (R = a).\n\nIncircle of a Regular Hexagon\n\nThe radius of a circle inscribed inside a regular hexagon is given by r = (a√3)/2. The ratio of the area of the circumcircle to the incircle is 4:3.\n\nArea of an Equilateral Triangle\n\nA regular hexagon is composed of exactly 6 identical equilateral triangles. The area of one such triangle with side a is (√3 / 4)a2.",
+    "topic": "Mensuration 2D",
+    "subtopic": "Circles & Regular Polygons",
+    "conceptTested": "Area of a circle and area of a regular hexagon inscribed in a circle.",
+    "tags": {
+      "topic": "Mensuration 2D",
+      "subtopic": "Circles & Regular Polygons",
+      "conceptTested": "Area of a circle and area of a regular hexagon inscribed in a circle."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 9",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:54",
+    "avgTime": "00:34",
+    "questionText": "12 men complete a work in 9 days. After they have worked for 6 days, 6 more men join them. How many days will they take to complete the remaining work?",
+    "options": {
+      "A": "2 days",
+      "B": "3 days",
+      "C": "4 days",
+      "D": "5 days"
+    },
+    "solution": "Solution\n\nShortcut Trick\nRemaining days of work for the initial 12 men = 9 − 6 = 3 days.\nRemaining work in terms of man-days = 12 men × 3 days = 36 man-days.\nNew number of men working = 12 + 6 = 18 men.\nDays required to complete the remaining work = 36 ÷ 18 = 2 days.\n∴ The correct answer is 2 days.\n\nAlternate Method\nGiven:\nInitial number of men = 12\nTotal days required = 9\nDays they worked before others joined = 6\nNew men joined = 6\n\nFormula Used:\nTotal Work = Number of Men × Days\n\nPerson\tDays\tTotal Work\tEfficiency\n12 Men\t9\t108\t12\n\nCalculations:\n⇒ Let the efficiency of 1 man be 1 unit/day.\n⇒ Total work to be done = 108 units\n⇒ Work completed by 12 men in 6 days = 12 × 6 = 72 units\n⇒ Remaining work = 108 − 72 = 36 units\n⇒ Total men present after 6 days = 12 + 6 = 18 men\n⇒ Combined efficiency of 18 men = 18 units/day\n⇒ Time taken to complete the remaining work = Remaining Work ÷ Combined Efficiency\n⇒ Time taken = 36 ÷ 18 = 2 days\n∴ The correct answer is 2 days.\n\nAdditional Information\nMDH Rule (Chain Rule)\n\nIf M1 men can do W1 work in D1 days working H1 hours/day, and M2 men can do W2 work in D2 days working H2 hours/day, then the relation is given by: (M1 × D1 × H1) ÷ W1 = (M2 × D2 × H2) ÷ W2.\n\nWork and Men Proportionality\n\nThe number of men required is inversely proportional to the number of days needed to complete the same amount of work. More men take fewer days, and fewer men take more days to complete identical work.\n\nWork & Wages\n\nWages are always distributed in the ratio of the total work done by each person. If all individuals work for the same number of days, their wages are distributed directly in the ratio of their daily efficiencies.",
+    "topic": "Time & Work",
+    "subtopic": "Efficiency & Men-Days Formula",
+    "conceptTested": "Conservation of total work measured in man-days.",
+    "tags": {
+      "topic": "Time & Work",
+      "subtopic": "Efficiency & Men-Days Formula",
+      "conceptTested": "Conservation of total work measured in man-days."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 10",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:35",
+    "avgTime": "00:11",
+    "questionText": "The whole surface area of a pyramid whose base is a regular polygon is 260 cm^2 and the area of its base is 120 cm^2. The area of each lateral face is 20 cm^2. Then the number of lateral faces is:",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "6",
+      "D": "5"
+    },
+    "solution": "Solution\n\nShortcut Trick\nTotal Lateral Surface Area = Total Surface Area − Base Area\n⇒ Total Lateral Area = 260 − 120 = 140 cm2\nNumber of Lateral Faces = Total Lateral Area ÷ Area of each lateral face\n⇒ Number of faces = 140 ÷ 20 = 7\n∴ The correct answer is 7.\n\nAlternate Method\nGiven:\nTotal surface area of the pyramid = 260 cm2\nArea of its base = 120 cm2\nArea of each lateral face = 20 cm2\n\nFormula Used:\nTotal Surface Area = Base Area + (Number of lateral faces × Area of each lateral face)\n\nCalculations:\nLet the number of lateral faces be n.\n⇒ 260 = 120 + (n × 20)\n⇒ n × 20 = 260 − 120\n⇒ 20n = 140\n⇒ n = 140 ÷ 20\n⇒ n = 7\n∴ The correct answer is 7.\n\nAdditional Information\nVolume of a Pyramid\n\nThe volume of a pyramid is one-third of the product of its base area and perpendicular height. Formula: V = (1 ÷ 3) × Base Area × Height.\n\nLateral Surface Area (Regular Pyramid)\n\nIt is the total area of all its lateral faces. For a regular pyramid: LSA = (1 ÷ 2) × Perimeter of Base × Slant Height.\n\nEuler's Formula for Polyhedra\n\nFor any convex polyhedron, the number of faces (F), vertices (V), and edges (E) are related by the formula: F + V − E = 2.",
+    "topic": "Mensuration 3D",
+    "subtopic": "Pyramids - Surface Area",
+    "conceptTested": "Total Surface Area = Base Area + Lateral Surface Area of a Pyramid.",
+    "tags": {
+      "topic": "Mensuration 3D",
+      "subtopic": "Pyramids - Surface Area",
+      "conceptTested": "Total Surface Area = Base Area + Lateral Surface Area of a Pyramid."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 11",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "01:24",
+    "avgTime": "00:49",
+    "questionText": "Ramesh purchases 75 articles for ₹ 10800 and sells them at a loss equal to the selling price of 5 articles. What will be the selling price of one article?",
+    "options": {
+      "A": "Rs. 156",
+      "B": "Rs. 135",
+      "C": "Rs. 144",
+      "D": "Rs. 132"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLoss = CP of 75 articles − SP of 75 articles = SP of 5 articles\n⇒ CP of 75 articles = SP of (75 + 5) articles = SP of 80 articles\n⇒ SP of 80 articles = Total CP = ₹10800\n⇒ SP of 1 article = 10800 ÷ 80 = 135\n∴ The correct answer is ₹135.\n\nAlternate Method\nGiven:\nTotal articles purchased = 75\nTotal Cost Price (CP) = ₹10800\nLoss incurred = Selling Price (SP) of 5 articles\n\nFormula Used:\nLoss = Total CP − Total SP\n\nCalculations:\n⇒ Total CP of 75 articles − Total SP of 75 articles = Loss\n⇒ ₹10800 − SP of 75 articles = SP of 5 articles\n⇒ ₹10800 = SP of 75 articles + SP of 5 articles\n⇒ ₹10800 = SP of 80 articles\n⇒ SP of 1 article = 10800 ÷ 80\n⇒ SP of 1 article = 135\n∴ The correct answer is ₹135.\n\nAdditional Information\nProfit and Loss Equation\nProfit occurs when SP > CP (Profit = SP − CP), and Loss occurs when CP > SP (Loss = CP − SP).\n\nSimilar Concept (Profit in terms of SP)\n\nIf there is a profit equal to the SP of y articles on selling x articles, then CP of x articles = SP of (x − y) articles.\n\nProfit and Loss Percentage\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Both are computed on the Cost Price by default.",
+    "topic": "Profit, Loss & Discount",
+    "subtopic": "Profit & Loss - Equivalent SP and CP Relations",
+    "conceptTested": "Loss incurred on selling x articles equals the selling price of y articles implies CP of x articles equals SP of (x + y) articles.",
+    "tags": {
+      "topic": "Profit, Loss & Discount",
+      "subtopic": "Profit & Loss - Equivalent SP and CP Relations",
+      "conceptTested": "Loss incurred on selling x articles equals the selling price of y articles implies CP of x articles equals SP of (x + y) articles."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 12",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "01:01",
+    "avgTime": "00:42",
+    "questionText": "What is the simple interest on Rs. 32,000 at 8.5% per annum for period from 10th Feb., 2019 to 24th April, 2019?",
+    "options": {
+      "A": "Rs. 550",
+      "B": "Rs. 555",
+      "C": "Rs. 544",
+      "D": "Rs. 540"
+    },
+    "solution": "Solution\n\nShortcut Trick\nTotal time from 10th Feb to 24th April = 18 + 31 + 24 = 73 days = 1/5 year.\nEffective interest rate for 1/5 year = 8.5% ÷ 5 = 1.7%.\nSimple Interest = 1.7% of 32000 = (1.7 × 32000) ÷ 100 = Rs. 544.\n∴ The correct answer is Rs. 544.\n\nAlternate Method\nGiven:\nPrincipal (P) = Rs. 32000\nRate (R) = 8.5% p.a.\nTime (T) = 10th Feb., 2019 to 24th April, 2019\n\nFormula Used:\nSI = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Number of days in February (2019 is a non-leap year) = 28 − 10 = 18 days\n⇒ Number of days in March = 31 days\n⇒ Number of days in April = 24 days\n⇒ Total Time (T) = 18 + 31 + 24 = 73 days\n⇒ Time in years = 73 ÷ 365 = 1/5 years\n⇒ SI = (32000 × 8.5 × 1) ÷ (100 × 5)\n⇒ SI = 320 × 1.7\n⇒ SI = Rs. 544\n∴ The correct answer is Rs. 544.\n\nAdditional Information\nCounting of Days in SI Calculation\n\nGenerally, the day the money is deposited is not counted, but the day the money is withdrawn is counted. Total days are then converted to years by dividing by 365.\n\nLeap Year Consideration\n\nIf the given period falls within a leap year and includes the month of February, 29 days are considered for February. For the year 2019, it is a non-leap year so February has 28 days.\n\nStandard Day Fractions\n\nExam questions frequently use exact multiples of 73 days for simple calculations because 73 days = 1/5 year, 146 days = 2/5 year, 219 days = 3/5 year, and 292 days = 4/5 year.",
+    "topic": "Simple Interest",
+    "subtopic": "Simple Interest - Calculation Based on Exact Days",
+    "conceptTested": "Time duration in days converted to years by dividing by 365, used in Simple Interest formula SI = (P × R × T) / 100.",
+    "tags": {
+      "topic": "Simple Interest",
+      "subtopic": "Simple Interest - Calculation Based on Exact Days",
+      "conceptTested": "Time duration in days converted to years by dividing by 365, used in Simple Interest formula SI = (P × R × T) / 100."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:51",
+    "avgTime": "00:35",
+    "questionText": "A student got 20% marks and failed by 72 marks. If he scores 40% marks then he gets 8 marks more than the passing marks. Find the passing marks.",
+    "options": {
+      "A": "150",
+      "B": "152",
+      "C": "142",
+      "D": "160"
+    },
+    "solution": "Solution\n\nShortcut Trick\nDifference in percentage = 40% − 20% = 20%\nDifference in marks = 72 (shortfall) + 8 (excess) = 80 marks\nSince 20% of maximum marks = 80 marks\nPassing marks = 20% marks + 72 marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAlternate Method\nGiven:\nMarks scored in case 1 = 20% (Failed by 72 marks)\nMarks scored in case 2 = 40% (8 marks more than passing marks)\n\nCalculation:\nLet the total maximum marks be x.\n⇒ Passing marks = 20% of x + 72\n⇒ Passing marks = 40% of x − 8\n\nEquating both the expressions:\n\n⇒ 20% of x + 72 = 40% of x − 8\n⇒ 40% of x − 20% of x = 72 + 8\n⇒ 20% of x = 80\n⇒ x = (80 × 100) ÷ 20\n⇒ x = 400\n⇒ Passing marks = 20% of 400 + 72\n⇒ Passing marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAdditional Information\nPassing Marks Concept\nWhen a student fails by a certain margin, Passing Marks = Obtained Marks + Shortfall Marks.\n\nExcess Marks Concept\n\nWhen a student scores above passing marks, Passing Marks = Obtained Marks − Excess Marks.\nDifference Rule\n\nThe percentage difference between the two scenarios will always be equal to the sum of the shortfall marks and the excess marks.",
+    "topic": "Percentage",
+    "subtopic": "Percentage - Pass/Fail Criteria and Marks Difference",
+    "conceptTested": "Equating the percentage difference to the total gap between shortfall marks and excess marks to find total maximum marks.",
+    "tags": {
+      "topic": "Percentage",
+      "subtopic": "Percentage - Pass/Fail Criteria and Marks Difference",
+      "conceptTested": "Equating the percentage difference to the total gap between shortfall marks and excess marks to find total maximum marks."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 15",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "00:43",
+    "avgTime": "00:33",
+    "questionText": "Rahul has a bag which contains Rs. 1, 50 paisa, and 25 paisa coins and the ratio of number of coins is 1 ∶ 1/2 ∶ 1/3. If Rahul has a total amount of Rs 1120, then find the total value of 25 paisa coins.",
+    "options": {
+      "A": "Rs 60",
+      "B": "Rs 84",
+      "C": "Rs 96",
+      "D": "Rs 70"
+    },
+    "solution": "Solution\n\nShortcut Trick\nRatio of number of coins (Rs 1 : 50p : 25p) = 1 : 1/2 : 1/3 = 6 : 3 : 2\nRatio of their values = (6 × 1) : (3 × 1/2) : (2 × 1/4) = 6 : 1.5 : 0.5 = 12 : 3 : 1\nTotal value = 12 + 3 + 1 = 16 units\n16 units = Rs 1120 ⇒ 1 unit = 1120 ÷ 16 = Rs 70\nValue of 25 paisa coins = 1 unit = Rs 70\n∴ The correct answer is Rs 70.\n\nAlternate Method\nGiven:\nTypes of coins: Rs 1, 50 paisa (Rs 1/2), and 25 paisa (Rs 1/4).\nRatio of the number of coins = 1 : 1/2 : 1/3\nTotal amount in the bag = Rs 1120\n\nFormula Used:\nTotal Value = Number of coins × Denomination Value\n\nCalculations:\n⇒ Multiply the given coin ratio by the LCM of denominators (6) to convert to integers.\n⇒ Number of coins ratio = (1 × 6) : (1/2 × 6) : (1/3 × 6) = 6 : 3 : 2\n⇒ Let the number of Rs 1, 50 paisa, and 25 paisa coins be 6x, 3x, and 2x respectively.\n⇒ Value of Rs 1 coins = 6x × 1 = 6x\n⇒ Value of 50 paisa coins = 3x × 0.5 = 1.5x\n⇒ Value of 25 paisa coins = 2x × 0.25 = 0.5x\n⇒ Total value = 6x + 1.5x + 0.5x = 8x\n⇒ According to the given data, total amount is Rs 1120.\n⇒ 8x = 1120\n⇒ x = 1120 ÷ 8 = 140\n⇒ Total value of 25 paisa coins = 0.5x = 0.5 × 140 = 70\n∴ The correct answer is Rs 70.\n\nAdditional Information\nRatio of Coins vs Value\n\nWhen the ratio of the number of coins is given, multiply it by the respective denomination to find the ratio of their values. Conversely, divide the value ratio by the denomination to find the number of coins ratio.\n\nCommon Denominations\n\nIt is a standard rule to convert all coins into rupees: 50 paisa = Rs 1/2, 25 paisa = Rs 1/4, 20 paisa = Rs 1/5, and 10 paisa = Rs 1/10.\n\nConsistency of Units\n\nAlways ensure that both individual denominations and the total final amount are measured in the same unit (either entirely in Rupees or entirely in paise) to avoid calculation errors.",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Ratio & Proportion - Coin Problems",
+    "conceptTested": "Total Value = Number of Coins × Denomination Value, converting coin ratio into value ratio using respective denominations.",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Ratio & Proportion - Coin Problems",
+      "conceptTested": "Total Value = Number of Coins × Denomination Value, converting coin ratio into value ratio using respective denominations."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 16",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "01:06",
+    "avgTime": "00:27",
+    "questionText": "A thief was spotted by a policeman from a distance of 225 metres. When the policeman started the chase, the thief also started running. If the speed of the thief was 11 km/h and that of the policeman was 13 km/h, how far would the thief have run, before the policeman caught up with him?",
+    "options": {
+      "A": "1237.5 metres",
+      "B": "1137.5 metres",
+      "C": "1357.5 metres",
+      "D": "1256.5 metres"
+    },
+    "solution": "Solution\n\nShortcut Trick\nWhen the time taken by both moving objects is constant, the ratio of the distance covered is equal to the ratio of their speeds.\n\nSpeed ratio (Thief : Policeman) = 11 : 13\nDistance ratio (Thief : Policeman) = 11 : 13\nDifference in distance covered = 13 parts − 11 parts = 2 parts\nGiven the initial distance difference is 225 m ⇒ 2 parts = 225 m ⇒ 1 part = 112.5 m\nDistance run by the thief = 11 parts = 11 × 112.5 = 1237.5 metres\n∴ The correct answer is 1237.5 metres.\n\nAlternate Method\nGiven:\nInitial distance between policeman and thief = 225 m\nSpeed of thief = 11 km/h\nSpeed of policeman = 13 km/h\n\nFormula Used:\nRelative speed (same direction) = Speed1 − Speed2\nTime = Distance ÷ Relative Speed\nDistance = Speed × Time\n\nCalculations:\n⇒ Relative speed = 13 − 11 = 2 km/h\n⇒ Relative speed in m/s = 2 × (5/18) = 5/9 m/s\n⇒ Time taken to catch the thief = Distance ÷ Relative speed = 225 ÷ (5/9)\n⇒ Time taken = 225 × (9/5) = 45 × 9 = 405 seconds\n⇒ Speed of thief in m/s = 11 × (5/18) = 55/18 m/s\n⇒ Distance covered by thief before getting caught = Speed of thief × Time taken\n⇒ Distance = (55/18) × 405 = 55 × 22.5\n⇒ Distance = 1237.5 m\n∴ The correct answer is 1237.5 metres.\n\nAdditional Information\nRelative Speed (Same Direction)\n\nWhen two bodies are moving in the same direction, their relative speed is the difference between their individual speeds: S = S1 − S2.\n\nRelative Speed (Opposite Direction)\n\nWhen two bodies are moving in opposite directions towards each other, their relative speed is the sum of their individual speeds: S = S1 + S2.\n\nUnit Conversion\n\nTo convert speed from km/h to m/s, multiply the value by 5/18. To convert speed from m/s to km/h, multiply the value by 18/5.",
+    "topic": "Time, Speed & Distance",
+    "subtopic": "Time, Speed & Distance - Police & Thief Problems",
+    "conceptTested": "When time is constant, the ratio of distance covered by two moving bodies is equal to the ratio of their speeds.",
+    "tags": {
+      "topic": "Time, Speed & Distance",
+      "subtopic": "Time, Speed & Distance - Police & Thief Problems",
+      "conceptTested": "When time is constant, the ratio of distance covered by two moving bodies is equal to the ratio of their speeds."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 17",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:42",
+    "avgTime": "00:31",
+    "questionText": "Two numbers are in the ratio 17 : 45. One-third of the smaller is less than one-fifth of bigger by 15. The smaller number is?",
+    "options": {
+      "A": "25.5",
+      "B": "67.5",
+      "C": "76.5",
+      "D": "86.5"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLet the two numbers be 17 units and 45 units.\n1/3 of the smaller number = 17/3 units, and 1/5 of the bigger number = 45/5 = 9 units.\nDifference = 9 − 17/3 = (27 − 17) / 3 = 10/3 units.\nGiven, 10/3 units = 15 ⇒ 1 unit = 15 × 3 ÷ 10 = 4.5\nSmaller number = 17 units = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.\n\nAlternate Method\nGiven:\nRatio of the two numbers = 17 : 45\n\nThe difference between 1/5 of the bigger number and 1/3 of the smaller number = 15\n\nCalculation:\n⇒ Let the smaller number be 17x and the bigger number be 45x.\n⇒ One-third of the smaller number = 17x / 3\n⇒ One-fifth of the bigger number = 45x / 5 = 9x\n⇒ According to the question, 9x − 17x / 3 = 15\n⇒ (27x − 17x) / 3 = 15\n⇒ 10x / 3 = 15\n⇒ 10x = 45\n⇒ x = 4.5\n⇒ Smaller number = 17x = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.\n\nAdditional Information\nCompound Ratio\n\nIf two ratios are a : b and c : d, then their compound ratio is given by ac : bd.\n\nDuplicate & Sub-duplicate Ratio\n\nThe duplicate ratio of a : b is a2 : b2, and the sub-duplicate ratio is √a : √b.\n\nComponendo and Dividendo\n\nIf a : b = c : d, then by the rule of componendo and dividendo (a + b) : (a − b) = (c + d) : (c − d).",
+    "topic": "Ratio & Proportion",
+    "subtopic": "Proportional Parts & Algebraic Comparison",
+    "conceptTested": "Expressing given conditions into linear equations using proportional multipliers.",
+    "tags": {
+      "topic": "Ratio & Proportion",
+      "subtopic": "Proportional Parts & Algebraic Comparison",
+      "conceptTested": "Expressing given conditions into linear equations using proportional multipliers."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 18",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "00:38",
+    "avgTime": "00:21",
+    "questionText": "The average age of a class of 40 students and a teacher reduces by 0.5 years, if we exclude the teacher. If the initial average age is 18 years, then what is the age of the teacher?",
+    "options": {
+      "A": "41 years",
+      "B": "38 years",
+      "C": "40 years",
+      "D": "39 years"
+    },
+    "solution": "Solution\n\nShortcut Trick\nAge of excluded person = Initial Average + (Remaining members × Drop in average)\n⇒ Age of teacher = 18 + (40 × 0.5)\n⇒ Age of teacher = 18 + 20\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.\n\nAlternate Method\nGiven:\nNumber of students = 40\nTotal persons initially (40 students + 1 teacher) = 41\nInitial average age = 18 years\nNew average age (teacher excluded) = 18 − 0.5 = 17.5 years\n\nFormula Used:\nTotal Age = Average Age × Number of Persons\nAge of Teacher = (Total age of 41 persons) − (Total age of 40 students)\n\nCalculations:\n⇒ Total age initially = 41 × 18 = 738 years\n⇒ Total age after excluding teacher = 40 × 17.5 = 700 years\n⇒ Age of teacher = 738 − 700\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.\n\nAdditional Information\nWeighted Average\n\nWhen two or more groups with different averages are combined, the combined average is calculated as (n1A1 + n2A2) ÷ (n1 + n2).\n\nConcept of Replacement\n\nWhen a person is replaced by a new person, the change in total value is: New Value − Old Value = Total Members × Change in Average.\n\nConcept of Inclusion\n\nWhen a new person joins a group, their value = Old Average + (New Total Members × Increase in Average).",
+    "topic": "Average",
+    "subtopic": "Inclusion and Exclusion of Group Members",
+    "conceptTested": "Total Age = Average Age × Number of Persons; Age of excluded member = Initial Total - New Total.",
+    "tags": {
+      "topic": "Average",
+      "subtopic": "Inclusion and Exclusion of Group Members",
+      "conceptTested": "Total Age = Average Age × Number of Persons; Age of excluded member = Initial Total - New Total."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 19",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:30",
+    "avgTime": "00:15",
+    "questionText": "The ratio of the outer and the inner circumference of a circular path is 17 ∶ 15. If path is 40 metres wide, then what is the radius of the inner circle?",
+    "options": {
+      "A": "280 metres",
+      "B": "340 metres",
+      "C": "360 metres",
+      "D": "300 metres"
+    },
+    "solution": "Solution\n\nShortcut Trick\nThe ratio of circumferences of two circles is identical to the ratio of their radii.\n\nRatio of outer radius (R) to inner radius (r) = 17 ∶ 15\nWidth of the path in ratio units = 17 − 15 = 2 units.\nGiven width = 40 metres, so 2 units = 40 metres ⇒ 1 unit = 20 metres.\nInner radius = 15 units = 15 × 20 = 300 metres.\n∴ The correct answer is 300 metres.\n\nAlternate Method\nGiven:\nRatio of outer and inner circumference = 17 ∶ 15\nWidth of the path = 40 metres\n\nFormula Used:\nCircumference of a circle = 2×π×r\nWidth of circular path = R − r\n\nCalculations:\n⇒ Let the outer radius be R and the inner radius be r.\n⇒ Ratio of circumferences = (2×π×R) ÷ (2×π×r)\n⇒ R / r = 17 / 15\n⇒ Let R = 17x and r = 15x\n⇒ Width of the circular path = Outer Radius − Inner Radius\n⇒ 17x − 15x = 40\n⇒ 2x = 40\n⇒ x = 20\n⇒ Inner radius (r) = 15x = 15 × 20 = 300 metres\n∴ The correct answer is 300 metres.\n\nAdditional Information\nArea of a Circular Path\n\nThe total area located strictly between two concentric circles is given by Area = π×(R2 − r2), where R and r are the respective outer and inner radii.\n\nLength of an Arc\n\nAn arc is a fraction of the full circumference. The length is determined by the central angle θ: (θ ÷ 360) × 2πr.\n\nArea of a Sector\n\nThe region bounded by two radii and an adjoining arc is called a sector. Its area is: (θ ÷ 360) × πr2.",
+    "topic": "Mensuration 2D",
+    "subtopic": "Circles - Concentric Circles & Path",
+    "conceptTested": "The ratio of circumferences of two concentric circles is equal to the ratio of their radii, and path width equals outer radius minus inner radius.",
+    "tags": {
+      "topic": "Mensuration 2D",
+      "subtopic": "Circles - Concentric Circles & Path",
+      "conceptTested": "The ratio of circumferences of two concentric circles is equal to the ratio of their radii, and path width equals outer radius minus inner radius."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:21",
+    "avgTime": "00:13",
+    "questionText": "In what ratio should rice costing Rs. 67.5 per kg be mixed with rice costing Rs. 60 per kg to get an average price of Rs. 64 per kg?",
+    "options": {
+      "A": "8 ∶ 7",
+      "B": "5 ∶ 6",
+      "C": "6 ∶ 5",
+      "D": "7 ∶ 8"
+    },
+    "solution": "Solution\n\nShortcut Trick\nBy using the direct alligation cross-multiplication rule:\n\nQuantity Ratio = (Mean Price − Cheaper Price) : (Dearer Price − Mean Price)\n⇒ Ratio = (64 − 60) : (67.5 − 64)\n⇒ Ratio = 4 : 3.5\n⇒ Ratio = 8 : 7\n∴ The correct answer is 8 : 7.\n\nAlternate Method\nGiven:\nPrice of first rice type = ₹67.5 per kg\nPrice of second rice type = ₹60 per kg\nAverage mean price = ₹64 per kg\n\nFormula Used:\nIf two types of items of price p1 and p2 are mixed to get an average mean price pm, the ratio of their quantities q1 : q2 is (pm − p2) : (p1 − pm).\n\nCalculations:\nLet the required ratio be x : y.\n⇒ Quantity ratio = (Mean Price − Price of Cheaper) : (Price of Dearer − Mean Price)\n⇒ x : y = (64 − 60) : (67.5 − 64)\n⇒ x : y = 4 : 3.5\n\nMultiply both sides by 2 to convert into integer ratio:\n\n⇒ x : y = 8 : 7\n∴ The correct answer is 8 : 7.\n\nAdditional Information\nAlligation Rule\n\nIt is a quick method to find the ratio in which two or more ingredients at given prices must be mixed to produce a mixture of a desired median price.\n\nWeighted Average Formula\n\nAverage Price = (q1 × p1 + q2 × p2) ÷ (q1 + q2)\n\nReplacement Method\n\nIf from a vessel containing volume V of pure liquid, volume x is removed and replaced n times, then Final Volume = V × (1 − x ÷ V)n.",
+    "topic": "Mixture & Alligation",
+    "subtopic": "Price Mixing & Alligation Rule",
+    "conceptTested": "Alligation rule: Ratio of quantities of two ingredients = (Mean Price - Cheaper Price) : (Dearer Price - Mean Price).",
+    "tags": {
+      "topic": "Mixture & Alligation",
+      "subtopic": "Price Mixing & Alligation Rule",
+      "conceptTested": "Alligation rule: Ratio of quantities of two ingredients = (Mean Price - Cheaper Price) : (Dearer Price - Mean Price)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 21",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "B",
+    "userTime": "00:39",
+    "avgTime": "00:23",
+    "questionText": "If the average of a number, 50% of that number, and 25% of the same number is 280, then find the number.",
+    "options": {
+      "A": "280",
+      "B": "480",
+      "C": "360",
+      "D": "None of the above"
+    },
+    "solution": "Solution\n\nShortcut Trick\nLet the required number be 100%.\n\nThe three parts given are 100%, 50%, and 25%.\n\nSum of these parts = 100% + 50% + 25% = 175%\nAverage = 175% ÷ 3 = 280\n⇒ 100% = (280 × 3 × 100) ÷ 175 = 480\n∴ The correct answer is 480.\n\nAlternate Method\nGiven:\nThe average of a number, 50% of that number, and 25% of the same number is 280.\n\nFormula Used:\nAverage = Sum of observations ÷ Number of observations\n\nCalculation:\n⇒ Let the required number be x.\n⇒ The other two values are 0.50x and 0.25x.\n⇒ Sum of all three values = x + 0.50x + 0.25x = 1.75x\n⇒ Average = 1.75x ÷ 3\n⇒ 1.75x ÷ 3 = 280\n⇒ 1.75x = 280 × 3\n⇒ 1.75x = 840\n⇒ x = 840 ÷ 1.75\n⇒ x = 84000 ÷ 175 = 480\n∴ The correct answer is 480.\n\nAdditional Information\nAverage of Multiple Quantities\n\nThe average (or arithmetic mean) is defined as the sum of all observations divided by the total number of observations. Average = Sum ÷ Count.\n\nPercentage to Fraction Conversion\n\nPercentages can be directly represented as fractions or decimals to simplify calculations: 50% = 1/2 = 0.5 and 25% = 1/4 = 0.25.\n\nSolving Linear Equations\n\nWhen solving an equation in the form ax = b, dividing both sides by the coefficient a gives the value of x. Using fractions like 1.75 = 7/4 can make division easier (x = 840 × 4 ÷ 7 = 480).",
+    "topic": "Average",
+    "subtopic": "Percentage-based Average Calculation",
+    "conceptTested": "Arithmetic Mean = Sum of observations divided by the total number of observations.",
+    "tags": {
+      "topic": "Average",
+      "subtopic": "Percentage-based Average Calculation",
+      "conceptTested": "Arithmetic Mean = Sum of observations divided by the total number of observations."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 22",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:48",
+    "avgTime": "00:19",
+    "questionText": "Three friends A, B, C invested in a business in the ratio of 3 : 2 : 6. After 6 months C withdraw half his capital. If the total profit earned for the year is Rs. 53010, then profit made by A is (in Rs.):",
+    "options": {
+      "A": "16740",
+      "B": "19740",
+      "C": "17740",
+      "D": "18740"
+    },
+    "solution": "Solution\n\nShortcut Trick\nProfit ratio = (Capital × Time)\nA : B : C = (3 × 12) : (2 × 12) : (6 × 6 + 3 × 6)\n⇒ A : B : C = 36 : 24 : 54 = 6 : 4 : 9\nTotal profit = 19 parts = ₹53010 ⇒ 1 part = ₹2790\nA's profit = 6 parts = 6 × 2790 = ₹16740\n∴ The correct answer is ₹16740.\n\nAlternate Method\nGiven:\nRatio of initial investments of A, B and C = 3 : 2 : 6\n\nC withdraws half of his capital after 6 months.\n\nTotal profit for the year = ₹53010\n\nFormula Used:\nProfit Ratio = Product of Capital and Time Period\n\nCalculations:\n⇒ Equivalent capital for A = 3 × 12 = 36 units\n⇒ Equivalent capital for B = 2 × 12 = 24 units\n⇒ Equivalent capital for C = (6 × 6) + (3 × 6) = 36 + 18 = 54 units\n⇒ Ratio of profits (A : B : C) = 36 : 24 : 54\n⇒ Simplified profit ratio = 6 : 4 : 9\n⇒ Total ratio parts = 6 + 4 + 9 = 19\n⇒ A's share = (6 ÷ 19) × Total Profit\n⇒ A's share = (6 ÷ 19) × 53010\n⇒ A's share = 6 × 2790 = 16740\n∴ The correct answer is ₹16740.\n\nAdditional Information\nPartnership Profit Sharing\n\nProfit is distributed directly in proportion to the product of capital invested and the time duration of the investment. Ratio = C1T1 : C2T2.\n\nActive vs Sleeping Partner\n\nAn active partner manages the business and receives a fixed salary or percentage of the total profit. The remaining profit is divided among all partners based on their capital-time ratio.\n\nCapital Adjustments Mid-Year\n\nWhen capital is added or withdrawn midway, the effective capital is found by calculating (Capital × Time) for each phase independently and summing them up.",
+    "topic": "Partnership",
+    "subtopic": "Capital Adjustments Mid-Year",
+    "conceptTested": "Profit sharing ratio is directly proportional to the product of capital invested and the respective time duration of investment (C1T1 : C2T2).",
+    "tags": {
+      "topic": "Partnership",
+      "subtopic": "Capital Adjustments Mid-Year",
+      "conceptTested": "Profit sharing ratio is directly proportional to the product of capital invested and the respective time duration of investment (C1T1 : C2T2)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 23",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:02",
+    "avgTime": "00:10",
+    "questionText": "The average salary of the entire staff in an office is Rs. 130 per month. The average salary of officers is Rs. 450 and that of non-officers is Rs. 120. If the number of officers is 15, then find the number of non-officers in the office?",
+    "options": {
+      "A": "450",
+      "B": "460",
+      "C": "470",
+      "D": "480"
+    },
+    "solution": "Solution\n\nShortcut Trick\nUsing the method of Alligation:\n\nRatio of Officers to Non-officers = (130 − 120) : (450 − 130)\nRatio = 10 : 320 = 1 : 32\nGiven 1 ratio unit = 15 officers, then 32 ratio units = 15 × 32 = 480 non-officers.\n∴ The correct answer is 480 non-officers.\n\nAlternate Method\nGiven:\nAverage salary of overall staff = Rs. 130\nAverage salary of officers = Rs. 450\nAverage salary of non-officers = Rs. 120\nNumber of officers = 15\n\nFormula Used:\nOverall Average = (Total salary of all staff) ÷ (Total number of staff)\nOfficers: 450\nNon-Off: 120\n130\n130 − 120 = 10\n450 − 130 = 320\nRatio → 10 : 320 = 1 : 32\n\nCalculations:\nLet the number of non-officers be x.\n⇒ Total salary of officers = 450 × 15 = 6750\n⇒ Total salary of non-officers = 120 × x = 120x\n⇒ Total staff members = 15 + x\n⇒ Overall Average = (6750 + 120x) ÷ (15 + x)\n⇒ 130 = (6750 + 120x) ÷ (15 + x)\n⇒ 130 × (15 + x) = 6750 + 120x\n⇒ 1950 + 130x = 6750 + 120x\n⇒ 130x − 120x = 6750 − 1950\n⇒ 10x = 4800\n⇒ x = 480\n∴ The correct answer is 480 non-officers.\n\nAdditional Information\nWeighted Average\n\nUsed when calculating the combined average of groups with different sizes. Formula: Aw = (n1A1 + n2A2) ÷ (n1 + n2).\n\nRule of Alligation\n\nA rapid visual method to find the ratio in which two groups with different averages are mixed to yield a desired overall combined average.\n\nAverage & Net Deviation\n\nThe sum of the net deviations of all individual values from their mean is always equal to zero, which is a useful property to solve unknown value problems quickly.",
+    "topic": "Average",
+    "subtopic": "Weighted Average & Mixture Alligation",
+    "conceptTested": "The rule of alligation enables finding the ratio of sizes of two component groups when individual averages and the combined overall average are known.",
+    "tags": {
+      "topic": "Average",
+      "subtopic": "Weighted Average & Mixture Alligation",
+      "conceptTested": "The rule of alligation enables finding the ratio of sizes of two component groups when individual averages and the combined overall average are known."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 25",
+    "status": "Unattempted",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:05",
+    "avgTime": "00:11",
+    "questionText": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm²) of the cube with the hole. [Use π = 22/7]",
+    "options": {
+      "A": "1484",
+      "B": "1407",
+      "C": "791",
+      "D": "945"
+    },
+    "solution": "Solution\n\nShortcut Trick\nWhen a hole is drilled completely through a solid, the net Total Surface Area (TSA) is:\n\nNet TSA = (TSA of Cube) − (2 × Base Area of Hole) + (Curved Surface Area of Hole)\nNet TSA = 6a2 − 2πr2 + 2πrh\nNet TSA = 6 × 142 − 2 × (22/7) × (3.5)2 + 2 × (22/7) × 3.5 × 14\nNet TSA = 1176 − 77 + 308 = 1407 cm2\n∴ The correct answer is 1407 cm2.\n\nAlternate Method\nGiven:\n⇒ Edge of the solid cube (a) = 14 cm\n⇒ Radius of the cylindrical hole (r) = 3.5 cm\n⇒ Height of the cylindrical hole (h) = Edge of cube = 14 cm\n\nFormula Used:\n⇒ Total Surface Area = (TSA of solid cube) − (2 × Area of circular bases of hole) + (CSA of cylindrical hole)\n⇒ TSA = 6a2 − 2πr2 + 2πrh\n\nCalculations:\n⇒ TSA of cube = 6 × 14 × 14 = 6 × 196 = 1176 cm2\n⇒ Area of 2 circular bases = 2 × (22/7) × 3.5 × 3.5 = 77 cm2\n⇒ CSA of cylindrical hole = 2 × (22/7) × 3.5 × 14 = 308 cm2\n⇒ Total Surface Area = 1176 − 77 + 308 = 1407 cm2\n∴ The correct answer is 1407 cm2.\n\nAdditional Information\nEffect of Drilling a Hole on Surface Area\n\nWhen a hole is drilled completely through a solid, the flat surface area corresponding to the base cuts is lost, but the newly created inner curved surface is exposed and must be added to the total area.\n\nImportant Formulas for a Cube\n\nVolume = a3 | Total Surface Area = 6a2 | Length of Body Diagonal = a√3.\n\nImportant Formulas for a Cylinder\n\nVolume = πr2h | Curved Surface Area = 2πrh | Total Surface Area = 2πr(r + h).",
+    "topic": "Mensuration 3D",
+    "subtopic": "Cylinder & Cube Combinations",
+    "conceptTested": "Total surface area of a solid combined shape is the sum of external faces minus overlapping flat bases plus the newly exposed curved surface area of the interior cavity.",
+    "tags": {
+      "topic": "Mensuration 3D",
+      "subtopic": "Cylinder & Cube Combinations",
+      "conceptTested": "Total surface area of a solid combined shape is the sum of external faces minus overlapping flat bases plus the newly exposed curved surface area of the interior cavity."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 1",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "B",
+    "userTime": "00:50",
+    "avgTime": "01:25",
+    "questionText": "Consider the following sentences:\n(A) India must take its laws on waste seriously to stop microplastics pollution.\n(B) India must take its laws on waste serious to stop microplastics pollution.\n(C) India must take seriously its laws on waste to stop microplastics pollution.\n(D) The laws must be took seriously to stop microplastics pollution.\nWhich of the above sentences is/are grammatically CORRECT?",
+    "options": {
+      "A": "(A) and (D)",
+      "B": "Only (A)",
+      "C": "Only (B)",
+      "D": "(C) and (D)"
+    },
+    "solution": "Solution\n\nThe correct answer is 'Only (A)'.\n\nKey Points\nSentence (A) is grammatically CORRECT.\nThe use of modal 'must' is correct. It is showing 'obligation'.\nAdverb 'seriously' is qualifying the verb 'take' and the position of the adverb is also apt.\nSentence (B) is grammatically INCORRECT.\nAdjective 'serious' should be replaced with adverb 'seriously' to qualify the verb 'take'.\n​Sentence (C) is also INCORRECT.\n'Take' is a transitive verb and it needs an object. The object here is 'its laws'.\nWe can't put an adverb between a verb and its direct object.\nThus, the position of 'seriously' is not correct.\n​Sentence (D) is INCORRECT.\n​The Sentence is in passive voice. We need V3 (taken), not V2 (took).\n'must be took' should be replaced with 'must be taken'.\n\nTherefore, the correct answer is option 2).\n\nAdditional Information\nAdjectives are the words that qualify a noun or a pronoun.\nEx: The movie was really good.\nAn adverb is a word that describes or gives more information about a verb, adjective, adverb, or phrase.\nEx: Walk carefully lest you should fall.\nEx: He is fast enough to be an athlete.",
+    "topic": "Spotting Errors",
+    "subtopic": "Adverb vs Adjective & Transitive Verbs",
+    "conceptTested": "Adverbs qualify verbs, whereas adjectives qualify nouns. Additionally, an adverb cannot be placed directly between a transitive verb and its direct object.",
+    "tags": {
+      "topic": "Spotting Errors",
+      "subtopic": "Adverb vs Adjective & Transitive Verbs",
+      "conceptTested": "Adverbs qualify verbs, whereas adjectives qualify nouns. Additionally, an adverb cannot be placed directly between a transitive verb and its direct object."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 2",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "D",
+    "userTime": "00:26",
+    "avgTime": "00:46",
+    "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).\nB) That unduly restrictive state regulation of abortion is unconstitutional.\nC) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\nD) In a majority opinion written by Justice Harry A. Blackmun.",
+    "options": {
+      "A": "CDAB",
+      "B": "ADBC",
+      "C": "ACBD",
+      "D": "ABDC"
+    },
+    "solution": "Solution\n\nThe correct answer is \"ABDC\"\n\nKey Points\nLet's look at the correct sequence of the given passage.\nStatement A is the opening sentence of the paragraph as it introduces us to the theme of the passage. The theme of the passage is the Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).\nStatement B  is the second sentence of the passage as it mentions that the legal case was about the unduly restrictive state regulation of abortion which was considered unconstitutional.\nStatement  D is the third sentence of the passage as it mentions the majority opinion of the court by Justice Harry A. Blackmun.\nStatement C is the last sentence of the passage as it states the opinion of the court on the legal matter which is that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\n\n​Hence, the correct sequence is \"ABDC\"\n\nThe complete passage is: A) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2). B) That unduly restrictive state regulation of abortion is unconstitutional. D) In a majority opinion written by Justice Harry A. Blackmun. C) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.",
+    "topic": "Para Jumbles",
+    "subtopic": "Sentence Rearrangement (PQRS)",
+    "conceptTested": "Cohesion and logical flow require identifying the introductory subject, modifying relative clauses, and concluding statements in legal or historical narratives.",
+    "tags": {
+      "topic": "Para Jumbles",
+      "subtopic": "Sentence Rearrangement (PQRS)",
+      "conceptTested": "Cohesion and logical flow require identifying the introductory subject, modifying relative clauses, and concluding statements in legal or historical narratives."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 4",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "00:26",
+    "avgTime": "00:23",
+    "questionText": "Choose the one which is closest to the opposite in meaning of the underlined word.\nThe club meets on the last Thursday of every month in a dilapidated palace.",
+    "options": {
+      "A": "Neglected",
+      "B": "Regenerated",
+      "C": "Furnished",
+      "D": "Renovated"
+    },
+    "solution": "Solution\n\nThe correct answer is 'Renovated.'\n\nKey Points\nLet us see the meaning of Dilapidated:\nDilapidated: (used about buildings, furniture, etc.) old and broken. ((भवन, फ़र्नीचर आदि) जीर्ण-शीर्ण, टूटा-फूटा)\nExample: We still use the dilapidated barn for storing tools.\nLet us see the meanings of the given options:\nNeglected: suffering a lack of proper care. (उपेक्षित)\nRegenerated: (of an organ or tissue) regrown. ((किसी अंग या ऊतक का) पुन: विकसित होना)\nFurnished: (of accommodation) available to be rented with furniture. (फ़र्नीचरयुक्त)\nRenovated: repaired and improved, especially a building. (पुरानी इमारत की मरम्‍मत कर उसे बढ़िया बना देना, नूतन करना)\nFrom the meanings of the given words, we can say that the one which is closest to the opposite in meaning of the underlined word is 'Renovated.'\nHence, the correct answer is Option 4.",
+    "topic": "English Comprehension",
+    "subtopic": "Synonyms & Antonyms",
+    "conceptTested": "Finding the antonym of an adjective describing physical state or condition.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Synonyms & Antonyms",
+      "conceptTested": "Finding the antonym of an adjective describing physical state or condition."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 5",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "C",
+    "userTime": "00:08",
+    "avgTime": "00:12",
+    "questionText": "Select the most appropriate ANTONYM of the given word.\nCynical",
+    "options": {
+      "A": "Negligent",
+      "B": "Silent",
+      "C": "Optimistic",
+      "D": "Usurper"
+    },
+    "solution": "Solution\n\nThe correct answer is \"Optimistic.\"\n\nKey Points\nLet us understand the meaning of the given and the marked words:\n\"Cynical\" means distrustful or pessimistic.(निंदक)\nExample: He gave a cynical laugh.\nOptimistic means hopeful or confident.(आशावादी)\nExample: She is an optimistic person.\nThe antonym of a word is a word that means the opposite of it.\nTherefore, the antonym of cynical is optimistic.\nHence, the correct answer is option 3.\n\nAdditional Information\nNegligent means careless or irresponsible.(लापरवाह)\nSilent means quiet or not speaking.(चुपचाप)\nUsurper means someone who takes power or authority without the right to do so.(हड़पनेवाला)",
+    "topic": "English Comprehension",
+    "subtopic": "Synonyms & Antonyms",
+    "conceptTested": "Identifying antonyms of psychological or attitudinal descriptors.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Synonyms & Antonyms",
+      "conceptTested": "Identifying antonyms of psychological or attitudinal descriptors."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 7",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "A",
+    "userTime": "00:13",
+    "avgTime": "00:27",
+    "questionText": "Change the sentence from direct speech to indirect speech.\nTarun says to the manager, \"Representatives of the member states will be meeting next week.\"",
+    "options": {
+      "A": "Tarun tells the manager that representatives of the member states will be meeting next week.",
+      "B": "Tarun tells the manager that representatives of the member states would be meeting next week.",
+      "C": "Tarun tells the manager that representatives of the member states are going to meet next week.",
+      "D": "Tarun tells the manager that representatives of the member states meet next week."
+    },
+    "solution": "Solution\n\nThe correct answer is 'Tarun tells the manager that representatives of the member states will be meeting next week.'\n\nKey Points\nWhile changing the narration of an assertive sentence, we need to follow the given steps-\n​The conjunction ‘that’ should be used in place of a comma (,) and inverted commas (“ ”).\n‘Says to’ will be changed into ‘tells'.\nWhen 'says to' is used in the reporting speech, the tense of the reported speech is not changed.\n\nCorrect Sentence: Tarun tells the manager that representatives of the member states will be meeting next week.\n\nएक assertive sentence का narration बदलते समय, हमें दिए गए steps का पालन करना होगा-\nComma (,) और inverted commas (\" \") के स्थान पर Conjunction 'that' का प्रयोग किया जाना चाहिए।\n‘Says to' को 'tells' में बदल जाएगा है।\nReporting speech में जब 'says to' का उपयोग किया जाता है, तो reported specch का tense नहीं बदला जाता है।",
+    "topic": "English Comprehension",
+    "subtopic": "Direct & Indirect Speech (Narration)",
+    "conceptTested": "Reporting speech tense retention when the reporting verb is in the present tense ('says to' becomes 'tells').",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Direct & Indirect Speech (Narration)",
+      "conceptTested": "Reporting speech tense retention when the reporting verb is in the present tense ('says to' becomes 'tells')."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 10",
+    "status": "Incorrect",
+    "chosenOption": "A",
+    "correctOption": "D",
+    "userTime": "01:02",
+    "avgTime": "00:37",
+    "questionText": "Select the sentence with no spelling errors.",
+    "options": {
+      "A": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
+      "B": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
+      "C": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
+      "D": "Police who did not understand the orthodox methods of the Black Hood suspected him of numerous crimes."
+    },
+    "solution": "Solution\n\nThe correct answer is: Option 4.\n\nKey Points\nThe word \"orthodox\" means conforming to what is generally or traditionally accepted as right or true; established and approved. (परंपरागत)\nExample: He follows an orthodox approach to the practice of medicine.\n\"numerous\" means great in number; many. (असंख्य)\nExample: There are numerous ways to solve this problem.\nHence, we can infer that the sentence with no spelling errors is Option 4.\nTherefore, the correct answer is: Option 4.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nOption 1: \"numeruos\" is incorrect. The correct spelling is \"numerous\" (असंख्य).\nExample: There are numerous opportunities available in the city.\nOption 2: \"urthodox\" is incorrect. The correct spelling is \"orthodox\" (परंपरागत).\nExample: He has very orthodox views on religion.\nOption 3: \"methuds\" is incorrect. The correct spelling is \"methods\" (तरीके).\nExample: Different methods can be used to reach the same goal.",
+    "topic": "English Comprehension",
+    "subtopic": "Spelling Errors",
+    "conceptTested": "Identification of standard English spelling patterns (orthodox, numerous).",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Spelling Errors",
+      "conceptTested": "Identification of standard English spelling patterns (orthodox, numerous)."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 12",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "02:55",
+    "avgTime": "01:03",
+    "questionText": "According to the passage, what methods did ancient civilizations, such as the Egyptians and the Inca, use to accumulate and utilize phosphorus for agriculture?",
+    "options": {
+      "A": "They exclusively mined phosphate rocks using advanced machinery.",
+      "B": "They imported large quantities of chemical fertilizers from neighbouring empires.",
+      "C": "They synthesized superphosphate using acid treatments.",
+      "D": "They relied on river flooding, seabird guano collection, and systems to trap phosphorus from natural sources."
+    },
+    "solution": "Solution\nThe correct answer is 'Option 4'.\n\nKey Points\nAncient Egyptian methods:\nDeveloped intricate systems to trap phosphorus carried by the Nile’s floodwaters, ensuring its use for agriculture.\nInca practices:\nBuilt their empire along coastlines rich in seabird guano, a natural source of phosphorus, and utilized this nutrient-dense resource for agriculture.\nOther civilizations also settled in regions where natural phosphorus sources collected, such as riverbeds, deltas, and upwelling ocean waters.\nTherefore, the correct answer is Option 4.\n\nAdditional Information\nOption 1: Incorrect, as ancient civilizations did not use advanced machinery to mine phosphate rocks.\nOption 2: Incorrect, because they did not import chemical fertilizers from neighbouring empires.\nOption 3: Incorrect, as synthesizing superphosphate using acid treatments was a modern development, not an ancient practice.",
+    "topic": "English Comprehension",
+    "subtopic": "Reading Comprehension",
+    "conceptTested": "Comprehension of passage details regarding ancient agricultural practices and natural fertilizer sources.",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Reading Comprehension",
+      "conceptTested": "Comprehension of passage details regarding ancient agricultural practices and natural fertilizer sources."
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:19",
+    "avgTime": "00:19",
+    "questionText": "How does the author’s tone shift between the description of early phosphorus use and the emergence of industrial phosphate mining, and what effect does this shift have on the reader’s perception of humanity’s relationship with the environment?",
+    "options": {
+      "A": "The tone shifts from optimistic to indifferent, making the reader see environmental impact as negligible.",
+      "B": "The tone transitions from reverential and harmonious to critical and exploitative, prompting concern over humanity’s increasing detachment from natural cycles.",
+      "C": "The tone remains consistently celebratory, emphasizing technological progress and human ingenuity.",
+      "D": "The tone changes from nostalgic to scientific, encouraging readers to appreciate the complexity of phosphorus chemistry."
+    },
+    "solution": "Solution\nThe correct answer is 'Option 2'.\n\nKey Points\nEarly phosphorus use:\nThe tone is reverential and harmonious, describing how early civilizations relied on natural phosphorus cycles and worked with the environment.\nIndustrial phosphate mining:\nThe tone becomes critical and highlights exploitative practices, such as mining, land degradation, and the detachment from natural cycles.\nThis shift prompts the reader to question and feel concern over humanity’s increasing exploitation of the environment, moving from harmony to detachment.\nTherefore, the correct answer is Option 2.\n\nAdditional Information\nOption 1: Incorrect, as the tone is not indifferent, and environmental impact is shown as significant.\nOption 3: Incorrect, because the tone is not consistently celebratory; it turns critical of exploitation.\nOption 4: Incorrect, as the passage does not focus primarily on nostalgia or scientific appreciation, but rather on the shift from harmony to exploitation.",
+    "topic": "English Comprehension",
+    "subtopic": "Reading Comprehension",
+    "conceptTested": "Ability to analyze author's tone and its psychological effect on the reader in an argumentative passage",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Reading Comprehension",
+      "conceptTested": "Ability to analyze author's tone and its psychological effect on the reader in an argumentative passage"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 15",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "00:39",
+    "avgTime": "00:21",
+    "questionText": "Based on the passage, what can be inferred about the consequences of phosphorus extraction practices on both human societies and the natural environment during the transition from traditional to industrial agriculture?",
+    "options": {
+      "A": "Phosphorus extraction practices led to immediate and universal increases in crop yields with no negative side effects.",
+      "B": "The shift to industrial extraction resulted in environmental degradation and reinforced exploitative attitudes toward land and people.",
+      "C": "Traditional societies suffered from constant phosphorus shortages, causing frequent famines.",
+      "D": "The transition to industrial methods had little impact on society or the environment, as phosphorus remained rare."
+    },
+    "solution": "Solution\nThe correct answer is 'Option 2'.\n\nKey Points\nEnvironmental degradation:\nThe passage describes how industrial phosphate mining involved razing the land, which led to soil degradation and disrupted natural cycles.\nExploitative attitudes:\nAs industrial extraction practices grew, land and people were increasingly viewed as resources to be exploited, rather than respected as part of a natural cycle.\nThis shift contributed to significant negative consequences for both societies and the environment.\nTherefore, the correct answer is Option 2.\n\nAdditional Information\nOption 1: Incorrect, as the passage mentions negative side effects, such as environmental and social consequences.\nOption 3: Incorrect, as there is no mention of constant phosphorus shortages or famines in traditional societies.\nOption 4: Incorrect, since the transition had significant impacts, and phosphorus extraction did not remain insignificant.",
+    "topic": "English Comprehension",
+    "subtopic": "Reading Comprehension",
+    "conceptTested": "Inference based on comparative historical analysis in a reading comprehension passage",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Reading Comprehension",
+      "conceptTested": "Inference based on comparative historical analysis in a reading comprehension passage"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 17",
+    "status": "Incorrect",
+    "chosenOption": "B",
+    "correctOption": "C",
+    "userTime": "00:18",
+    "avgTime": "00:14",
+    "questionText": "Choose the correct one-word substitute for:\n‘To bribe or otherwise induce someone to commit an unlawful act, such as perjury’.",
+    "options": {
+      "A": "Subpoena",
+      "B": "Subjugate",
+      "C": "Suborn",
+      "D": "Substantiate"
+    },
+    "solution": "Solution\n\nThe correct answer is: Suborn.\n\nKey Points\nThe word \"Suborn\" means to bribe or otherwise induce someone to commit an unlawful act, such as perjury. (ग़ैरक़ानूनी कार्य करने के लिए रिश्वत देना या प्रेरित करना)\nExample: The lawyer was accused of attempting to suborn a witness to give false testimony in court.\nThe correct word \"Suborn\" refers to the act of persuading someone, often through bribes or threats, to commit an illegal act, especially lying under oath. (गवाही में झूठ बोलने या ग़ैरक़ानूनी कार्य करने के लिए किसी को प्रेरित करना)\nExample: The detective uncovered a plot to suborn members of the jury in the high-profile trial.\nTherefore, the correct answer is: Suborn.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nSubpoena (समन): A legal document ordering someone to attend a court as a witness.\nExample: The court issued a subpoena requiring the journalist to testify.\nSubjugate (वश में करना): To bring under control or domination, often by force.\nExample: The emperor sought to subjugate the neighboring kingdoms to expand his empire.\nSubstantiate (साबित करना): To provide evidence to support or prove the truth of something.\nExample: The scientist was able to substantiate her claims with rigorous research and experiments.\nQuestion: To bribe or otherwise induce someone to commit an unlawful act, such as perjury.\nCorrect Answer: Suborn",
+    "topic": "English Comprehension",
+    "subtopic": "One Word Substitution",
+    "conceptTested": "Vocabulary substitution for specific unlawful actions and inducement",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "One Word Substitution",
+      "conceptTested": "Vocabulary substitution for specific unlawful actions and inducement"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 19",
+    "status": "Incorrect",
+    "chosenOption": "C",
+    "correctOption": "D",
+    "userTime": "00:08",
+    "avgTime": "00:14",
+    "questionText": "Select the most appropriate synonym of the underlined word.\nThe bawdy humour of the play wasn’t to everyone’s taste.",
+    "options": {
+      "A": "piecemeal",
+      "B": "ludicrous",
+      "C": "rowdy",
+      "D": "indecorous"
+    },
+    "solution": "Solution\n\nThe correct answer is \"indecorous\"\n\nKey Points\n'Bawdy' refers to humor that deals with sexual matters in a comical way; it can also refer to sexual indecency.\n'Piecemeal' refers to something done in stages, incrementally; it does not reflect the nature of 'bawdy'.\n'Ludicrous' refers to something that is so unreasonably absurd that it's laughable; while it captures a sense of humor, it does not encapsulate the sexually explicit nature of 'bawdy'.\n'Rowdy' refers to a person or behavior that is noisy, energetic, and rough; though it may sometimes be inappropriate, it does not specifically denote sexual content or humor.\n'Indecorous' refers to something that lacks good taste, manners, or decorum, which can include sexually explicit or unrefined humor, hence it is the closest synonym to 'bawdy'.\n\nTherefore, the correct answer is Option 4.",
+    "topic": "English Comprehension",
+    "subtopic": "Synonyms & Antonyms",
+    "conceptTested": "Identifying contextual synonyms for descriptive adjectives",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Synonyms & Antonyms",
+      "conceptTested": "Identifying contextual synonyms for descriptive adjectives"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 21",
+    "status": "Incorrect",
+    "chosenOption": "D",
+    "correctOption": "B",
+    "userTime": "00:33",
+    "avgTime": "00:52",
+    "questionText": "Select the option that expresses the given sentence in direct speech.\nElisa ordered her brother to play outside and let her work in peace.",
+    "options": {
+      "A": "Elisa said to her brother, “Play outside that let me do my work in peace.”",
+      "B": "Elisa said to her brother, “Play outside and let me work in peace.”",
+      "C": "Elisa said to her brother, “Play outside to let me do my work in peace.”",
+      "D": "Elisa said to her brother, “Play outside and let me do my work in peace.”"
+    },
+    "solution": "Solution\n\nThe correct answer is \"Elisa said to her brother, “play outside and let me work in peace.”\"\nKey Points\nLook at the basic rule for this type of conversion:\nWhen we want to report an order or request, we can use a verb like 'asked' with a to-clause:\nThe pattern is verb + indirect object + to-clause.\nordered+her+brother+to play\nHence, the correct answer is: Elisa said to her brother, “Play outside and let me work in peace.”",
+    "topic": "English Comprehension",
+    "subtopic": "Direct & Indirect Speech",
+    "conceptTested": "Conversion of imperative/command sentences from reported speech to direct speech",
+    "tags": {
+      "topic": "English Comprehension",
+      "subtopic": "Direct & Indirect Speech",
+      "conceptTested": "Conversion of imperative/command sentences from reported speech to direct speech"
+    }
+  },
+  {
+    "testName": "SSC CGL Tier I: Full Test - 1",
+    "testType": "full_mock",
+    "platform": "Testbook",
+    "subject": "English Comprehension",
+    "section": "English Comprehension",
+    "questionNumber": "Question 23",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "00:29",
+    "avgTime": "00:20",
+    "questionText": "Select the most appropriate option to substitute the bracketed segment in the given sentence. If no substitution is required, select 'No substitution required'.\nGiraffe deaths have also increased because human populations [has grow and expand into] what used to be wild lands.",
+    "options": {
+      "A": "has grown and expand into",
+      "B": "have grow and expanded",
+      "C": "have grown and expanded into",
+      "D": "No substitution required"
+    },
+    "solution": "Solution\nThe correct answer is Option 3.\nKey Points\nThe correct verb forms should be used to match the subject and tense of the sentence.\nThe subject \"human populations\" is plural, so the verb should be \"have\" instead of \"has.\"\nThe verbs \"grown\" and \"expanded\" should be in the past participle form to correctly complete the present perfect tense.\nThe phrase \"into what used to be wild lands\" should remain intact for clarity and meaning.\nTherefore, the correct answer is Option 3.\nCorrect Sentence: \"Giraffe deaths have also increased because human populations have grown and expanded into what used to be wild lands.\"\n\nAdditional Information\nOption 1: \"has grown and expand into\" – Incorrect as it uses singular \"has\" and mismatched verb forms.\nOption 2: \"have grow and expanded\" – Incorrect as it uses the base form \"grow\" instead of the past participle \"grown.\"\nOption 4: \"No substitution required\" – Incorrect as the original phrase has incorrect verb forms.",
+    "topic": "Sentence Improvement",
+    "subtopic": "Subject-Verb Agreement and Tense Consistency",
+    "conceptTested": "Plural subjects require plural auxiliary verbs (have), and compound verbs in present perfect tense must maintain consistent past participle forms (grown and expanded).",
+    "tags": {
+      "topic": "Sentence Improvement",
+      "subtopic": "Subject-Verb Agreement and Tense Consistency",
+      "conceptTested": "Plural subjects require plural auxiliary verbs (have), and compound verbs in present perfect tense must maintain consistent past participle forms (grown and expanded)."
+    }
+  }
+]
