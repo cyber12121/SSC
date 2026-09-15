@@ -62,6 +62,49 @@ export const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'Gen
   return 'Mathematics';
 };
 
+export function parseMockDetails(report: MockScoreReport) {
+  const title = report.title || 'Mock Test';
+
+  // 1. Platform Detection
+  let platform = report.platform;
+  if (!platform) {
+    if (/oliveboard/i.test(title)) platform = 'Oliveboard';
+    else if (/testbook/i.test(title)) platform = 'Testbook';
+    else platform = 'Testbook'; // Default platform
+  }
+
+  // 2. Parse clean short title & subtitle
+  let shortTitle = title;
+  let subtitle = 'SSC CGL 2026';
+
+  const fullMatch = title.match(/Full\s*Test\s*[-–]?\s*(\d+)/i) || title.match(/Full\s*Test\s*(\d+)/i);
+  const secTimingMatch = title.match(/\[Sectional\s*Timing\]\s*[-–]?\s*(?:Tier\s*I\s*[-–]?\s*)?(\d+)/i) ||
+                         title.match(/Sectional\s*Timing\s*#?(\d+)/i);
+  const sectionalSubjectMatch = title.match(/\[Sectional\s*[-–]\s*([^\]]+)\]/i);
+  const liveMatch = /Officer’s\s*Friday/i.test(title) || /Mega\s*Live/i.test(title);
+
+  if (fullMatch) {
+    shortTitle = `Full Test ${fullMatch[1]}`;
+    subtitle = 'SSC CGL Tier I';
+  } else if (secTimingMatch) {
+    shortTitle = `Sectional Timing #${secTimingMatch[1]}`;
+    subtitle = 'SSC CGL Tier I';
+  } else if (sectionalSubjectMatch) {
+    shortTitle = `${sectionalSubjectMatch[1].trim()} Sectional`;
+    subtitle = 'SSC CGL 2026';
+  } else if (liveMatch) {
+    shortTitle = 'Mega Live Test';
+    subtitle = 'Officer’s Friday';
+  } else if (report.type === 'sectional' && report.subject) {
+    shortTitle = `${report.subject} Sectional`;
+    subtitle = 'SSC CGL 2026';
+  } else {
+    shortTitle = title.replace(/^SSC\s*CGL\s*(2026|Tier\s*I)?\s*[:-]?\s*/i, '').trim() || title;
+  }
+
+  return { shortTitle, platform, subtitle };
+}
+
 export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): MockScoreReport {
   // Use module-level normalizeSubName — same logic, no duplicate needed
   const subjectGroups: Record<string, any[]> = {
@@ -1717,7 +1760,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
               {/* Clean Fixed Header Row Above Mocks */}
               <div className="hidden xl:flex items-center border-b border-slate-200/90 bg-slate-50 divide-x divide-slate-200/90 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                <div className="w-[210px] 2xl:w-[230px] shrink-0 px-3 py-1.5">
+                <div className="w-[245px] 2xl:w-[265px] shrink-0 px-3 py-1.5">
                   Mock Attempt
                 </div>
                 <div className="flex-1 grid grid-cols-4 divide-x divide-slate-200/90 text-center">
@@ -1742,6 +1785,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                     month: 'short',
                     year: 'numeric'
                   });
+                  const { shortTitle, platform, subtitle } = parseMockDetails(report);
 
                   return (
                     <div
@@ -1749,21 +1793,41 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                       className="flex flex-col xl:flex-row items-stretch divide-y xl:divide-y-0 xl:divide-x divide-slate-200/90 hover:bg-slate-50/40 transition-colors"
                     >
                       {/* 1. Left: Mock Details & Stats */}
-                      <div className="w-full xl:w-[210px] 2xl:w-[230px] shrink-0 px-3 py-1.5 bg-slate-50/20 flex flex-col justify-center">
-                        <div className="flex items-center gap-1.5 flex-wrap">
-                          <span className="text-xs font-bold text-slate-900 truncate max-w-[140px]" title={report.title}>
-                            {report.title}
-                          </span>
-                          <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-white border border-slate-200 text-slate-400">
-                            {dateClean}
-                          </span>
+                      <div className="w-full xl:w-[245px] 2xl:w-[265px] shrink-0 px-3 py-2 bg-slate-50/20 flex flex-col justify-center">
+                        {/* Line 1: Short Title + Platform Badge + Score */}
+                        <div className="flex items-center justify-between gap-1">
+                          <div className="flex items-center gap-1.5 min-w-0">
+                            <span className="text-xs font-black text-slate-900 truncate" title={report.title}>
+                              {shortTitle}
+                            </span>
+                            <span className={`text-[8.5px] font-bold px-1.5 py-0.2 rounded uppercase tracking-wider shrink-0 border ${
+                              platform.toLowerCase() === 'oliveboard'
+                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                : 'bg-blue-50 text-blue-700 border-blue-200'
+                            }`}>
+                              {platform}
+                            </span>
+                          </div>
+                          <div className="flex items-baseline shrink-0 ml-1.5">
+                            <span className="text-xs font-black text-slate-900">{report.totalScore}</span>
+                            <span className="text-[10px] font-semibold text-slate-400">/{report.maxMarks || 200}</span>
+                          </div>
                         </div>
+
+                        {/* Line 2: Subtitle • Date */}
+                        <div className="text-[10px] text-slate-400 mt-0.5 flex items-center gap-1 truncate font-medium">
+                          <span>{subtitle}</span>
+                          <span>•</span>
+                          <span>{dateClean}</span>
+                        </div>
+
+                        {/* Line 3: 70c • 16w • 14s */}
                         <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1 flex-wrap">
-                          <span className="text-emerald-600 font-semibold">{report.totalCorrect}c</span>
+                          <span className="text-emerald-600 font-bold">{report.totalCorrect}c</span>
                           <span className="text-slate-300">•</span>
-                          <span className="text-rose-500 font-semibold">{report.totalWrong}w</span>
+                          <span className="text-rose-500 font-bold">{report.totalWrong}w</span>
                           <span className="text-slate-300">•</span>
-                          <span className="text-slate-400 font-semibold">{report.totalUnattempted}s</span>
+                          <span className="text-slate-400 font-bold">{report.totalUnattempted}s</span>
                         </div>
                       </div>
 

@@ -12,6 +12,7 @@ export interface SectionScore {
 export interface MockScoreReport {
   id: string;
   title: string;
+  platform?: string;
   type: 'full' | 'sectional';
   subject?: string; // for sectional mocks
   date: string;
