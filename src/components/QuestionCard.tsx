@@ -4,22 +4,7 @@ import { Question } from '../types';
 
 import { cleanSolutionText } from '../utils/cleanSolution';
 import { parseAvgTimeToSeconds } from './Review';
-
-const formatBilingualText = (text: string) => {
-  if (!text) return '';
-  return text
-    .split(/\r?\n/)
-    .map(line => {
-      const parts = line.split(/\s+\/\s+/);
-      return parts[0].trim();
-    })
-    .join('\n')
-    .trim();
-};
-
-const formatSolution = (sol: string) => {
-  return cleanSolutionText(sol);
-};
+import { FormattedText } from './FormattedText';
 
 const fmt = (s: number) =>
   `${Math.floor(s / 60).toString().padStart(2, '0')}:${(s % 60).toString().padStart(2, '0')}`;
@@ -164,9 +149,11 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
       <div className="flex-1 overflow-y-auto px-8 py-6">
         {/* Question Text */}
         <div className="mb-6">
-          <p className="text-[15.5px] font-medium text-gray-900 leading-relaxed whitespace-pre-line select-text">
-            {formatBilingualText(question.question)}
-          </p>
+          <FormattedText
+            text={question.question}
+            as="p"
+            className="text-[15.5px] font-medium text-gray-900 leading-relaxed select-text"
+          />
         </div>
 
         {/* Options */}
@@ -189,9 +176,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   >
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 shrink-0 stroke-[3]" />
-                      <span className="text-[15px] font-medium leading-snug">
-                        {formatBilingualText(value)}
-                      </span>
+                      <FormattedText
+                        text={value}
+                        className="text-[15px] font-medium leading-snug"
+                      />
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       {isSelected ? (
@@ -216,9 +204,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                     className="flex items-center w-full px-4 py-3 rounded-md bg-[#c62828] text-white shadow-sm transition-all"
                   >
                     <RotateCcw className="w-4 h-4 mr-3 shrink-0 stroke-[2.5]" />
-                    <span className="text-[15px] font-medium leading-snug">
-                      {formatBilingualText(value)}
-                    </span>
+                    <FormattedText
+                      text={value}
+                      className="text-[15px] font-medium leading-snug"
+                    />
                   </div>
                 );
               }
@@ -230,9 +219,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   className="flex items-center w-full px-4 py-3 rounded-md border border-gray-200 bg-white text-gray-800"
                 >
                   <span className="w-5 mr-3 shrink-0" />
-                  <span className="text-[15px] font-medium leading-snug">
-                    {formatBilingualText(value)}
-                  </span>
+                  <FormattedText
+                    text={value}
+                    className="text-[15px] font-medium leading-snug"
+                  />
                 </div>
               );
             }
@@ -263,9 +253,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 >
                   {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#0097a7]" />}
                 </div>
-                <span className="text-[15px] font-medium text-gray-800 leading-snug whitespace-pre-line flex-1">
-                  {formatBilingualText(value)}
-                </span>
+                <FormattedText
+                  text={value}
+                  className="text-[15px] font-medium text-gray-800 leading-snug flex-1"
+                />
               </label>
             );
           })}
@@ -300,8 +291,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   {/shortcut trick/i.test(question.solution) ? 'Shortcut Trick & Detailed Solution' : 'Detailed Explanation'}
                 </span>
               </div>
-              <div className="text-[13.5px] text-gray-800 leading-relaxed font-mono bg-gray-50 p-4 rounded-md border border-gray-100 whitespace-pre-line">
-                {formatSolution(question.solution)}
+              <div className="text-[13.5px] text-gray-800 leading-relaxed font-sans bg-gray-50 p-4 rounded-md border border-gray-100">
+                <FormattedText text={cleanSolutionText(question.solution)} as="div" />
               </div>
             </div>
           </div>

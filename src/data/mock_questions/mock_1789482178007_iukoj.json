@@ -40,7 +40,7 @@
     "correctOption": "C",
     "userTime": "00:25",
     "avgTime": "00:17",
-    "questionText": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
+    "questionText": "Choose the correct analogy.\nACE : FHJ :: OQ\nS : ?",
     "options": {
       "A": "PRT",
       "B": "RTU",
@@ -76,7 +76,7 @@
       "C": "XYZ : CVB",
       "D": "GOD : LFL"
     },
-    "solution": "Solution\n\nThe pattern followed is,\n\nOption (1): CAT: HXV\nOption (2): DOG: ILI\nOption (3): XYZ: CVB\nOption (4): GOD: LFL\nAll follow the same pattern, except 'GOD: LFL’.\nHence, “GOD: LFL” is the odd one.",
+    "solution": "Solution\n\nThe pattern followed is,\n\nOption (1): CAT: HXV\nOption (2): DOG: ILI\nOption (3): XYZ: CVB\nOption (4): GOD: LFL\nAll follow the same pattern, except 'GOD: LFL’.\nHence, “GOD: LFL” is the odd one.",
     "topic": "Classification / Odd One Out",
     "subtopic": "Letter Classification",
     "conceptTested": "Opposite letter pairs or consistent letter-coding distance mapping",
@@ -105,7 +105,7 @@
       "C": "13.5",
       "D": "18"
     },
-    "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n–\n\nMeaning\n\n–\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) – 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 – (11 + 7) ÷ 9 × 5\n\n= 28 – 18 ÷ 9 × 5\n= 28 – 2 × 5\n= 28 – 10\n= 18\nHence, the correct answer is 18.",
+    "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n–\n\nMeaning\n\n–\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) – 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 – (11 + 7) ÷ 9 × 5\n\n= 28 – 18 ÷ 9 × 5\n= 28 – 2 × 5\n= 28 – 10\n= 18\nHence, the correct answer is 18.",
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Signs & Numbers",
     "conceptTested": "Evaluation of arithmetic expressions using BODMAS after symbol substitution",
@@ -129,12 +129,12 @@
     "avgTime": "00:17",
     "questionText": "Two statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome doctors are scientists.\nSome scientists are engineers.\nConclusions:\nI. All engineers are doctors.\nII. Some doctors are engineers.",
     "options": {
-      "A": "Only conclusion I follows",
-      "B": "Neither conclusion I nor II follows",
+      "A": "Only\nconclusion I follows",
+      "B": "Neither\nconclusion I nor II follows",
       "C": "Both conclusions I and II follow",
-      "D": "Only conclusion II follows"
+      "D": "Only\nconclusion II follows"
     },
-    "solution": "Solution\n\nStatements:\n\nSome doctors are scientists.\n\nSome scientists are engineers.\n\nThe Venn diagram as per the given statements:\n\nConclusions:\n\nI. All engineers are doctors. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nII. Some doctors are engineers. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nHence, the correct answer is \"Neither conclusion I nor II follows\".",
+    "solution": "Solution\n\nStatements:\n\nSome doctors are scientists.\n\nSome scientists are engineers.\n\nThe Venn diagram as per the given statements:\n\nConclusions:\n\nI. All engineers are doctors. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nII. Some doctors are engineers. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nHence, the correct answer is \"Neither\nconclusion I nor II follows\".",
     "topic": "Syllogism",
     "subtopic": "Deductive Venn Logic: Statements with Some",
     "conceptTested": "Deduction of intermediate relations from overlapping Some-Some syllogism premises",
@@ -156,14 +156,14 @@
     "correctOption": "D",
     "userTime": "00:40",
     "avgTime": "00:50",
-    "questionText": "Refer to the given number symbol series and answer the question given below.\\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\\nIf all the odd numbers are dropped from the given series, then which symbol/number will be at the seventh position to the left of the symbol/number that is ninth from the left end?",
+    "questionText": "Refer to the given number symbol series and answer the question given below.\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\nIf all the odd numbers are dropped from the given series, then which symbol/number will be at the seventh position to the left of the symbol/number that is ninth from the left end?",
     "options": {
       "A": "3",
       "B": "2",
       "C": "%",
       "D": "4"
     },
-    "solution": "Solution\n\nGiven Series:\n\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\n\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%)= 4\n\nHence, the correct answer is \"4\".",
+    "solution": "Solution\n\nGiven Series:\n\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\n\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%)= 4\n\nHence, the correct answer is \"4\".",
     "topic": "Letter & Symbol Series",
     "subtopic": "Alphanumeric Series",
     "conceptTested": "Positional counting after filtering out elements based on condition (odd numbers dropped).",
@@ -192,7 +192,7 @@
       "C": "DMXNES",
       "D": "FBLCKF"
     },
-    "solution": "Solution\n\nWe know,\n\nGiven,\n\nSimilarly,\n\nHence, the correct answer is FBLCKF.",
+    "solution": "Solution\n\nWe know,\n\nGiven,\n\nSimilarly,\n\nHence, the correct answer is FBLCKF.",
     "topic": "Coding-Decoding",
     "subtopic": "Letter Coding",
     "conceptTested": "Backward and forward alphabetical shifting pattern (-1, +1, etc.) applied to letters of a word.",
@@ -221,7 +221,7 @@
       "C": "3",
       "D": "4"
     },
-    "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)\n\n3\n\n2\n\n5\n\nDice (3)\n\n3\n\n1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
+    "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)\n\n3\n\n2\n\n5\n\nDice (3)\n\n3\n\n1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
     "topic": "Cube & Dice",
     "subtopic": "Opposite Faces",
     "conceptTested": "Determining opposite faces in a standard dice using common faces rotated in a clockwise/anticlockwise direction.",
@@ -243,14 +243,14 @@
     "correctOption": "B",
     "userTime": "00:35",
     "avgTime": "00:32",
-    "questionText": "Consider the following rivers:\\nI. Dhauliganga\\nII. Nandakini\\nIII. Pindar\\nIV. Yamuna\\nV. Saraswati\\nWhich of the above are major tributaries of the Alaknanda River?",
+    "questionText": "Consider the following rivers:\nI. Dhauliganga\nII. Nandakini\nIII. Pindar\nIV. Yamuna\nV. Saraswati\nWhich of the above are major tributaries of the Alaknanda River?",
     "options": {
       "A": "I, II and III only",
       "B": "I, II, III and V only",
       "C": "II, III, IV and V only",
       "D": "I, II, III, IV and V"
     },
-    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nThe Alaknanda River was recently in the news in connection with river conservation and hydrological studies in the Himalayan region.\n\nKey Points\nDhauliganga is a major tributary of the Alaknanda River. Hence, Statement I is correct.\nNandakini joins the Alaknanda at Nandprayag. Hence, Statement II is correct.\nPindar River meets the Alaknanda at Karnaprayag. Hence, Statement III is correct.\nYamuna is an independent major tributary of the Ganga and does not join the Alaknanda. Hence, Statement IV is incorrect.\nSaraswati River joins the Alaknanda near Mana, making it one of its important tributaries. Hence, Statement V is correct.\n\nAdditional Information\nSource: Satopanth and Bhagirath Kharak Glaciers, Uttarakhand.\nConfluence with Bhagirathi: Devprayag, where the Ganga is formed.\nMajor Tributaries: Dhauliganga, Nandakini, Pindar, Mandakini and Saraswati.\nThe Panch Prayag are formed by the confluences of the Alaknanda with its major tributaries.",
+    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nThe Alaknanda River was recently in the news in connection with river conservation and hydrological studies in the Himalayan region.\n\nKey Points\nDhauliganga is a major tributary of the Alaknanda River. Hence,\nStatement I is correct.\nNandakini joins the Alaknanda at Nandprayag. Hence,\nStatement II is correct.\nPindar River meets the Alaknanda at Karnaprayag. Hence,\nStatement III is correct.\nYamuna is an independent major tributary of the Ganga and does not join the Alaknanda. Hence,\nStatement IV is incorrect.\nSaraswati River joins the Alaknanda near Mana, making it one of its important tributaries. Hence,\nStatement V is correct.\n\nAdditional Information\nSource: Satopanth and Bhagirath Kharak Glaciers, Uttarakhand.\nConfluence with Bhagirathi: Devprayag, where the Ganga is formed.\nMajor Tributaries: Dhauliganga, Nandakini, Pindar, Mandakini and Saraswati.\nThe Panch Prayag are formed by the confluences of the Alaknanda with its major tributaries.",
     "topic": "Indian Drainage & Physiography",
     "subtopic": "Himalayan Rivers & Tributaries",
     "conceptTested": "Geographical identification of river systems and their major tributaries in the Himalayan region.",
@@ -395,7 +395,7 @@
       "C": "I and III only",
       "D": "I, II and III"
     },
-    "solution": "Solution\n\nThe correct answer is Option 4\n\nIn News\nGlaw Lake has been designated as India's 101st Ramsar Site, becoming the first Ramsar Site in Arunachal Pradesh.\n\nKey Points\nGlaw Lake is a high-altitude natural freshwater lake situated amidst the Eastern Himalayan landscape. Hence, Statement I is correct.\nIt is located in Lohit district, near Wakro, in Arunachal Pradesh. Hence, Statement II is correct.\nThe lake is fed by perennial mountain streams and serves as the primary source of the Kamlang River. Hence, Statement III is correct.\n\nAdditional Information\nState: Arunachal Pradesh.\nDistrict: Lohit.\nNearby Town: Wakro.\nProtected Area: Kamlang Tiger Reserve and Wildlife Sanctuary.",
+    "solution": "Solution\n\nThe correct answer is Option 4\n\nIn News\nGlaw Lake has been designated as India's 101st Ramsar Site, becoming the first Ramsar Site in Arunachal Pradesh.\n\nKey Points\nGlaw Lake is a high-altitude natural freshwater lake situated amidst the Eastern Himalayan landscape. Hence,\nStatement I is correct.\nIt is located in Lohit district, near Wakro, in Arunachal Pradesh. Hence,\nStatement II is correct.\nThe lake is fed by perennial mountain streams and serves as the primary source of the Kamlang River. Hence,\nStatement III is correct.\n\nAdditional Information\nState: Arunachal Pradesh.\nDistrict: Lohit.\nNearby Town: Wakro.\nProtected Area: Kamlang Tiger Reserve and Wildlife Sanctuary.",
     "topic": "National Parks & Environment",
     "subtopic": "Ramsar Sites",
     "conceptTested": "Geographical and ecological features of Glaw Lake, Arunachal Pradesh",
@@ -511,7 +511,7 @@
       "C": "Panda",
       "D": "Indian Tiger"
     },
-    "solution": "Solution\n\nThe correct answer is Asiatic Lion.\n\nKey Points\nThe Asiatic lion was critically endangered till 2008 but has since been upgraded to the endangered category.\nThere are more than 142,500 species on the IUCN Red List, with more than 40,000 species threatened with extinction, including 41% of amphibians, 37% of sharks and rays, 34% of conifers, 33% of reef-building corals, 26% of mammals and 13% of birds.\nIUCN, International Union for Conservation of Nature, was established on 5 October 1948.\nThe IUCN Red List of Threatened Species was founded in 1964.\nIt is the world's most comprehensive inventory of the global conservation status of biological species.\n\nAdditional Information\nSome of the tags of IUCN are: (May 2022)\n\nCategories (IUNC Status)\tDefinition\tExamples\nExtinct (EX)\tNo known individuals remaining\n\nPink, Head Duck, Indian aurochs\n\nExtinct in the wild (EW)\tKnown only to survive in captivity\n\nAlagoas curassow, Beloribitsa\n\nCritically endangered (CR)\tExtremely high risk of extinction in the wild.\n\nCross River Gorilla, Eastern Lowland Gorilla, Hawksbill, Turtle, Gharial\n\nEndangered (EN)\tHigh risk of extinction in the wild\n\nPygmy Hog, Northern Right Whale, The Vaquita, Amur, Leopard, Lion Tailed Macaque\n\nVulnerable (VU)\tHigh risk of endangerment in the wild.\n\nNilgiri Marten, Nilgiri Langoor, Marbled cat\n\nNear Threatened (NT)\tLikely to become endangered in the near future\n\nPrzewalski's horse, the Humpback whale\n\nLeast Concern (LC)\tLowest risk\n\nHarp Seal, Giraffe",
+    "solution": "Solution\n\nThe correct answer is Asiatic Lion.\n\nKey Points\nThe Asiatic lion was critically endangered till 2008 but has since been upgraded to the endangered category.\nThere are more than 142,500 species on the IUCN Red List, with more than 40,000 species threatened with extinction, including 41% of amphibians, 37% of sharks and rays, 34% of conifers, 33% of reef-building corals, 26% of mammals and 13% of birds.\nIUCN, International Union for Conservation of Nature, was established on 5 October 1948.\nThe IUCN Red List of Threatened Species was founded in 1964.\nIt is the world's most comprehensive inventory of the global conservation status of biological species.\n\nAdditional Information\nSome of the tags of IUCN are: (May 2022)\n\nCategories (IUNC Status)\tDefinition\tExamples\nExtinct (EX)\tNo known individuals remaining\n\nPink, Head Duck, Indian aurochs\n\nExtinct in the wild (EW)\tKnown only to survive in captivity\n\nAlagoas curassow, Beloribitsa\n\nCritically endangered (CR)\tExtremely high risk of extinction in the wild.\n\nCross River Gorilla, Eastern Lowland Gorilla, Hawksbill, Turtle, Gharial\n\nEndangered (EN)\tHigh risk of extinction in the wild\n\nPygmy Hog, Northern Right Whale, The Vaquita, Amur, Leopard, Lion Tailed Macaque\n\nVulnerable (VU)\tHigh risk of endangerment in the wild.\n\nNilgiri Marten, Nilgiri Langoor, Marbled cat\n\nNear Threatened (NT)\tLikely to become endangered in the near future\n\nPrzewalski's horse, the Humpback whale\n\nLeast Concern (LC)\tLowest risk\n\nHarp Seal, Giraffe",
     "topic": "Biology",
     "subtopic": "Diseases & Vitamins",
     "conceptTested": "IUCN Red List status classifications and historical changes for vulnerable/endangered species such as the Asiatic Lion.",
@@ -562,7 +562,7 @@
     "correctOption": "C",
     "userTime": "00:09",
     "avgTime": "00:21",
-    "questionText": "Consider the following two statements, labeled Assertion (A) and Reason (R). Evaluate them and choose the appropriate answer from the given options.\n\nAssertion (A): The standard distance between the penalty spot and the goal line on a football field is 11 meters.\nReason (R): This distance allows the goalkeeper a fair reaction time while challenging the accuracy and confidence of the penalty taker.",
+    "questionText": "Consider the following two statements, labeled Assertion (A) and Reason\n(R). Evaluate them and choose the appropriate answer from the given options.\n\nAssertion (A): The standard distance between the penalty spot and the goal line on a football field is 11 meters.\nReason\n(R): This distance allows the goalkeeper a fair reaction time while challenging the accuracy and confidence of the penalty taker.",
     "options": {
       "A": "A is false, but R is true.",
       "B": "A is true, but R is false.",
@@ -917,7 +917,7 @@
       "C": "12",
       "D": "14"
     },
-    "solution": "Solution\n\nGiven:\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ−1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n−\n1\n=\n2\n\nFormula Used:\nCosec2θ - 1 = cot2θ\n\nCalculation:\nWe have\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ−1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n−\n1\n=\n2\n\n⇒\ncosθ (cosecθ − 1) + cosθ (cosecθ + 1)\ncose\nc\n2\nθ−1\n=2\n𝑐\n𝑜\n𝑠\nθ\n\n(\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n−\n\n1\n)\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n\n(\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n+\n\n1\n)\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\n2\nθ\n−\n1\n=\n2\n\n⇒\ncosθ cosecθ − cosθ + cosθ cosecθ + cosθ\nco\nt\n2\nθ\n=2\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n−\n\n𝑐\n𝑜\n𝑠\nθ\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n𝑐\n𝑜\n𝑡\n2\nθ\n=\n2\n\n⇒\n2cosθ cosecθ\nco\nt\n2\nθ\n=2\n2\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n𝑐\n𝑜\n𝑡\n2\nθ\n=\n2\n\n⇒ cosθ × (1/sinθ) = cot2θ\n⇒ cotθ = cot2θ\n⇒ cotθ = 1\n⇒ θ = 45°\nNow, We have to find the value of sin4 θ + cos4 θ\nPutting θ = 45°, we get\n⇒ sin4 45° + cos4 45°\n⇒ (1/4) + (1/4) = 1/2\n∴ The value of sin4 θ + cos4 θ is 1/2.",
+    "solution": "Solution\n\nGiven:\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ−1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n−\n1\n=\n2\n\nFormula Used:\nCosec2θ - 1 = cot2θ\n\nCalculation:\nWe have\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ−1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n−\n1\n=\n2\n\n⇒\ncosθ (cosecθ − 1) + cosθ (cosecθ + 1)\ncose\nc\n2\nθ−1\n=2\n𝑐\n𝑜\n𝑠\nθ\n\n(\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n−\n\n1\n)\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n\n(\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n+\n\n1\n)\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\n2\nθ\n−\n1\n=\n2\n\n⇒\ncosθ cosecθ − cosθ + cosθ cosecθ + cosθ\nco\nt\n2\nθ\n=2\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n−\n\n𝑐\n𝑜\n𝑠\nθ\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n\n+\n\n𝑐\n𝑜\n𝑠\nθ\n𝑐\n𝑜\n𝑡\n2\nθ\n=\n2\n\n⇒\n2cosθ cosecθ\nco\nt\n2\nθ\n=2\n2\n𝑐\n𝑜\n𝑠\nθ\n\n𝑐\n𝑜\n𝑠\n𝑒\n𝑐\nθ\n𝑐\n𝑜\n𝑡\n2\nθ\n=\n2\n\n⇒ cosθ × (1/sinθ) = cot2θ\n⇒ cotθ = cot2θ\n⇒ cotθ = 1\n⇒ θ = 45°\nNow, We have to find the value of sin4 θ + cos4 θ\nPutting θ = 45°, we get\n⇒ sin4 45° + cos4 45°\n⇒ (1/4) + (1/4) = 1/2\n∴ The value of sin4 θ + cos4 θ is 1/2.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Equations",
     "conceptTested": "Simplifying algebraic fractions of trigonometric ratios using cosec²θ - 1 = cot²θ to solve for angle θ.",
@@ -975,7 +975,7 @@
       "C": "1000 km",
       "D": "500 km"
     },
-    "solution": "Solution\n\nGiven:\nRam is 500 km ahead of Laxman,\n\nIf they move in the same direction Laxman catches Ram in 25 hours,\n\nIf they move in the opposite direction Laxman will catch Ram in 5 hours,\n\nConcept used:\n\nDistance = Time × Speed\nRelative speed = u + v (when two bodies with speeds u and v moving toward each other)\nRelative speed = u - v (when two bodies with speed u and v moving away from each other)\n\nCalculation:\nLet R and L be the speed of Ram and Laxman respectively.\n\nAccording to the question,\n\nFirst case:\n\nRelative speed = L - R =\n500\n25\n500\n25\n= 20 kmph\n\nSecond case:\n\nRelative speed = L + R =\n500\n5\n500\n5\n= 100 kmph\nNow, on solving the above equations, we get,\n⇒ L = 60 kmph and R = 40 kmph\n\nAgain according to the question,\n\nThe total distance covered by Ram,\n\n⇒ 40 × (25 + 5) = 1200 km\n\nThe total distance covered by Laxman,\n\n⇒ 60 × (25 + 5) = 1800 km\n\nThe required difference in the distance,\n\n⇒ 1800 - 1200 = 600 km\nTherefore, '600 km' is the required answer.",
+    "solution": "Solution\n\nGiven:\nRam is 500 km ahead of Laxman,\n\nIf they move in the same direction Laxman catches Ram in 25 hours,\n\nIf they move in the opposite direction Laxman will catch Ram in 5 hours,\n\nConcept used:\n\nDistance = Time × Speed\nRelative speed = u + v (when two bodies with speeds u and v moving toward each other)\nRelative speed = u - v (when two bodies with speed u and v moving away from each other)\n\nCalculation:\nLet R and L be the speed of Ram and Laxman respectively.\n\nAccording to the question,\n\nFirst case:\n\nRelative speed = L - R =\n500\n25\n500\n25\n= 20 kmph\n\nSecond case:\n\nRelative speed = L + R =\n500\n5\n500\n5\n= 100 kmph\nNow, on solving the above equations, we get,\n⇒ L = 60 kmph and R = 40 kmph\n\nAgain according to the question,\n\nThe total distance covered by Ram,\n\n⇒ 40 × (25 + 5) = 1200 km\n\nThe total distance covered by Laxman,\n\n⇒ 60 × (25 + 5) = 1800 km\n\nThe required difference in the distance,\n\n⇒ 1800 - 1200 = 600 km\nTherefore, '600 km' is the required answer.",
     "topic": "Time, Speed & Distance",
     "subtopic": "Relative Speed",
     "conceptTested": "Relative speed in the same direction is u - v and in opposite direction is u + v, where distance = relative speed × time.",
@@ -1004,7 +1004,7 @@
       "C": "75.3 cm",
       "D": "73 cm"
     },
-    "solution": "Solution\n\nGiven:\nRadius = 18 cm\nCentral angle = 125°\n\nFormula used:\nPerimeter of sector of a circle = θ/360° × 2πr + 2r\n\nCalculation:\nAccording to the question:\n\nPerimeter of sector of a circle = θ/360° × 2πr + 2r\n⇒ (125/360 × 2 × 22/7 × 18 + 2 × 18)\n⇒ (25/72 × 44/7 × 18 + 36)\n⇒ (275/7 + 36)\n⇒ (275 + 252)/7\n⇒ 527/7\n⇒ 75.28 cm ~ 75.3 cm\n∴ The required perimeter is 75.3 cm.",
+    "solution": "Solution\n\nGiven:\nRadius = 18 cm\nCentral angle = 125°\n\nFormula used:\nPerimeter of sector of a circle = θ/360° × 2πr + 2r\n\nCalculation:\nAccording to the question:\n\nPerimeter of sector of a circle = θ/360° × 2πr + 2r\n⇒ (125/360 × 2 × 22/7 × 18 + 2 × 18)\n⇒ (25/72 × 44/7 × 18 + 36)\n⇒ (275/7 + 36)\n⇒ (275 + 252)/7\n⇒ 527/7\n⇒ 75.28 cm ~ 75.3 cm\n∴ The required perimeter is 75.3 cm.",
     "topic": "Mensuration 2D",
     "subtopic": "Sector of a Circle",
     "conceptTested": "Perimeter of a sector of a circle is given by the arc length plus two radii: (θ/360°) × 2πr + 2r.",
@@ -1033,7 +1033,7 @@
       "C": "18",
       "D": "None of these"
     },
-    "solution": "Solution\n\nGiven:\n36 workmen can do 2/5 part of a work in 24 days.\n\nConcept:\n\nTotal work = (Number of men × Time taken)/part of work done\n\nCalculation:\nTotal work = (36 × 24)/(2/5) units = 2160 units\nTime required to complete the rest work = (48 - 24) days = 24 days\nLet extra workers required to complete the work in time be x.then,\n{(x + 36) × 24}\\(1 - 2/5) = 2160 units\n⇒ {(x + 36) × 24}\\(3/5) = 2160 units\n⇒ x + 36 = (2160/24) × (3/5)\n⇒ x + 36 = 90 × 3 /5\n⇒ x = 54 - 36 = 18 workers\n∴ 18 extra workers are required to do the same work in 48 days.\n\nShortcut Trick\nTotal days is 48 and total men is 36\nsince 2/5 work is completed in 24 days then 3/5 work is left.\n\napply MDH/W\n\nso\n36×24\n2\n36\n×\n24\n2\n=\n(36+x)∗24\n3\n(\n36\n+\n𝑥\n)\n∗\n24\n3\n, x =18",
+    "solution": "Solution\n\nGiven:\n36 workmen can do 2/5 part of a work in 24 days.\n\nConcept:\n\nTotal work = (Number of men × Time taken)/part of work done\n\nCalculation:\nTotal work = (36 × 24)/(2/5) units = 2160 units\nTime required to complete the rest work = (48 - 24) days = 24 days\nLet extra workers required to complete the work in time be x.then,\n{(x + 36) × 24}\\(1 - 2/5) = 2160 units\n⇒ {(x + 36) × 24}\\(3/5) = 2160 units\n⇒ x + 36 = (2160/24) × (3/5)\n⇒ x + 36 = 90 × 3 /5\n⇒ x = 54 - 36 = 18 workers\n∴ 18 extra workers are required to do the same work in 48 days.\n\nShortcut Trick\nTotal days is 48 and total men is 36\nsince 2/5 work is completed in 24 days then 3/5 work is left.\n\napply MDH/W\n\nso\n36×24\n2\n36\n×\n24\n2\n=\n(36+x)∗24\n3\n(\n36\n+\n𝑥\n)\n∗\n24\n3\n, x =18",
     "topic": "Time & Work",
     "subtopic": "Time & Work - Men, Women & Children / Wages",
     "conceptTested": "Work equivalence formula using Total Work = (Men × Days) / Work Done",
@@ -1062,7 +1062,7 @@
       "C": "1.5",
       "D": "1.2"
     },
-    "solution": "Solution\n\nGiven:\nThe speed of a boat in still water is 9 km/h.\n\nDistance covered in downstream = 35 km\nDistance covered in upstream = 28 km\n\nConcept used:\n\nSpeed = Distance/Time\nDownstream speed = (v + u)\nUpstream speed = (v - u)\nWhere, v = Speed of the boat in still water, u = Speed of the stream\n\nCalculation:\nLet the speed of the stream be 's' km/h\n\nAccording to the question,\n\n35\n(9+s)\n=\n28\n(9−s)\n35\n(\n9\n+\n𝑠\n)\n=\n28\n(\n9\n−\n𝑠\n)\n\n⇒ 35(9 - s) = 28(9 + s)\n⇒ 5(9 - s) = 4(9 + s)\n⇒ 45 - 5s = 36 + 4s\n⇒ 9 = 9s\n⇒ s = 1 km/h\n∴ The speed of the stream is 1 km/h.\nHence, the correct answer is 1 km/h.",
+    "solution": "Solution\n\nGiven:\nThe speed of a boat in still water is 9 km/h.\n\nDistance covered in downstream = 35 km\nDistance covered in upstream = 28 km\n\nConcept used:\n\nSpeed = Distance/Time\nDownstream speed = (v + u)\nUpstream speed = (v - u)\nWhere, v = Speed of the boat in still water, u = Speed of the stream\n\nCalculation:\nLet the speed of the stream be 's' km/h\n\nAccording to the question,\n\n35\n(9+s)\n=\n28\n(9−s)\n35\n(\n9\n+\n𝑠\n)\n=\n28\n(\n9\n−\n𝑠\n)\n\n⇒ 35(9 - s) = 28(9 + s)\n⇒ 5(9 - s) = 4(9 + s)\n⇒ 45 - 5s = 36 + 4s\n⇒ 9 = 9s\n⇒ s = 1 km/h\n∴ The speed of the stream is 1 km/h.\nHence, the correct answer is 1 km/h.",
     "topic": "Boats & Streams",
     "subtopic": "Boats & Streams - Equal Time / Distance Scenarios",
     "conceptTested": "Ratio of downstream to upstream speeds equated via equal travel times: Distance_down / (v + s) = Distance_up / (v - s)",
@@ -1091,7 +1091,7 @@
       "C": "259",
       "D": "185"
     },
-    "solution": "Solution\n\nShortcut Trick\nGiven Fraction = 2/7\nTotal Students = 7 units\nGirls = 2 units\nBoys = 7 - 2 = 5 units\n\nAlso Given, there are 111 more boys than girls\n\nAccording to the fraction,\n\nMore Number = 5 - 2 = 3 units\n3 units = 111\n1 unit = 37\nNumber of boys = 5 units = 5 × 37 = 185\n\nGiven:\nTotal number of girls = 2/7 of total students\n\nThe total number of boys is 111 more than girls.\n\nCalculation:\nSuppose, the total number of girls in the school auditorium = x\nThen, total number of boys in the school auditorium = (x + 111)\nTotal students in the school auditorium = x + (x + 111) = 2x + 111\nTherefore, x = 2/7 × (2x + 111)\n⇒ x = (4x + 222)/7\n⇒ 7x = 4x + 222\n⇒ 7x - 4x = 222\n⇒ 3x = 222\n⇒ x = 222/3 = 74\nTotal number of boys = 74 + 111 = 185\n∴ Total of 185 boys are there in the school auditorium.",
+    "solution": "Solution\n\nShortcut Trick\nGiven Fraction = 2/7\nTotal Students = 7 units\nGirls = 2 units\nBoys = 7 - 2 = 5 units\n\nAlso Given, there are 111 more boys than girls\n\nAccording to the fraction,\n\nMore Number = 5 - 2 = 3 units\n3 units = 111\n1 unit = 37\nNumber of boys = 5 units = 5 × 37 = 185\n\nGiven:\nTotal number of girls = 2/7 of total students\n\nThe total number of boys is 111 more than girls.\n\nCalculation:\nSuppose, the total number of girls in the school auditorium = x\nThen, total number of boys in the school auditorium = (x + 111)\nTotal students in the school auditorium = x + (x + 111) = 2x + 111\nTherefore, x = 2/7 × (2x + 111)\n⇒ x = (4x + 222)/7\n⇒ 7x = 4x + 222\n⇒ 7x - 4x = 222\n⇒ 3x = 222\n⇒ x = 222/3 = 74\nTotal number of boys = 74 + 111 = 185\n∴ Total of 185 boys are there in the school auditorium.",
     "topic": "Ratio & Proportion",
     "subtopic": "Ratio & Proportion - Coin / Part Problems",
     "conceptTested": "Proportional division of quantities using fractional units",
@@ -1120,7 +1120,7 @@
       "C": "Rs. 5650",
       "D": "Rs. 6650"
     },
-    "solution": "Solution\n\nShortcut Trick\nRatio of Amount to Principal for 3 years = (25500 + 8440.50) ÷ 25500 = 33940.5 ÷ 25500 = 1331 / 1000.\nEquivalent ratio for 1 year = 3√(1331 / 1000) = 11 / 10.\nInterest rate (R) = (11 − 10) ÷ 10 × 100% = 10%.\nSimple Interest for 3 years = 30% of Principal = 30% of 25500 = 7650.\n∴ The correct answer is Rs. 7650.\n\nAlternate Method\nGiven:\nPrincipal (P) = Rs. 25,500\nTime (T) = 3 years\nCompound Interest (CI) = Rs. 8,440.50\n\nFormula Used:\nAmount (A) = P(1 + R / 100)T\nSimple Interest (SI) = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Amount (A) = P + CI\n⇒ A = 25500 + 8440.50 = 33940.50\n⇒ 33940.50 = 25500 × (1 + R / 100)3\n⇒ (1 + R / 100)3 = 33940.50 ÷ 25500\n⇒ (1 + R / 100)3 = 339405 / 255000\n⇒ (1 + R / 100)3 = 1331 / 1000 (dividing by 255)\n⇒ (1 + R / 100)3 = (11 / 10)3\n⇒ 1 + R / 100 = 11 / 10\n⇒ R / 100 = 1 / 10\n⇒ R = 10%\n⇒ SI = (25500 × 10 × 3) ÷ 100\n⇒ SI = 255 × 30 = 7650\n∴ The correct answer is Rs. 7650.\n\nAdditional Information\nEffective Compound Interest Rate\n\nFor a 10% per annum rate, the effective CI for 2 years is 21%, and for 3 years, it is 33.1%.\n\nDifference Between CI and SI (2 Years)\nDifference = P × (R ÷ 100)2. It determines the extra interest earned through compounding over exactly two years.\nDifference Between CI and SI (3 Years)\nDifference = P × (R ÷ 100)2 × (3 + R ÷ 100). Essential formula for efficiently finding the three-year CI and SI differences without complete calculations.",
+    "solution": "Solution\n\nShortcut Trick\nRatio of Amount to Principal for 3 years = (25500 + 8440.50) ÷ 25500 = 33940.5 ÷ 25500 = 1331 / 1000.\nEquivalent ratio for 1 year = 3√(1331 / 1000) = 11 / 10.\nInterest rate\n(R) = (11 − 10) ÷ 10 × 100% = 10%.\nSimple Interest for 3 years = 30% of Principal = 30% of 25500 = 7650.\n∴ The correct answer is Rs. 7650.\n\nAlternate Method\nGiven:\nPrincipal\n(P) = Rs. 25,500\nTime (T) = 3 years\nCompound Interest (CI) = Rs. 8,440.50\n\nFormula Used:\nAmount (A) = P(1 + R / 100)T\nSimple Interest (SI) = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Amount (A) = P + CI\n⇒ A = 25500 + 8440.50 = 33940.50\n⇒ 33940.50 = 25500 × (1 + R / 100)3\n⇒ (1 + R / 100)3 = 33940.50 ÷ 25500\n⇒ (1 + R / 100)3 = 339405 / 255000\n⇒ (1 + R / 100)3 = 1331 / 1000 (dividing by 255)\n⇒ (1 + R / 100)3 = (11 / 10)3\n⇒ 1 + R / 100 = 11 / 10\n⇒ R / 100 = 1 / 10\n⇒ R = 10%\n⇒ SI = (25500 × 10 × 3) ÷ 100\n⇒ SI = 255 × 30 = 7650\n∴ The correct answer is Rs. 7650.\n\nAdditional Information\nEffective Compound Interest Rate\n\nFor a 10% per annum rate, the effective CI for 2 years is 21%, and for 3 years, it is 33.1%.\n\nDifference Between CI and SI (2 Years)\nDifference = P × (R ÷ 100)2. It determines the extra interest earned through compounding over exactly two years.\nDifference Between CI and SI (3 Years)\nDifference = P × (R ÷ 100)2 × (3 + R ÷ 100). Essential formula for efficiently finding the three-year CI and SI differences without complete calculations.",
     "topic": "Compound Interest",
     "subtopic": "Compound Interest - Rate Calculation from 3-year CI & Principal",
     "conceptTested": "Extracting rate of interest from 3-year Amount to Principal ratio: (1 + R/100)^3 = Amount / Principal",
@@ -1149,7 +1149,7 @@
       "C": "4 p.m.; 200 km",
       "D": "6 p.m.; 320 km"
     },
-    "solution": "Solution\n\nGiven:\nThe speed of A is 40 km/h\n\nThe speed of B is 80 km/h\n\nConcept used:\n\nSpeed = Distance/Time\n\nWhen two trains are moving in the same direction then their relative speed = Difference of their individual speeds\n\nCalculation:\nDistance travelled by A till 2 pm = 4 × 40 = 160 km\nA and B travelled in the same direction then relative speed = 80 - 40 = 40 km/h\nTime taken by B to meet A = 160/40 = 4 hours or at \"6 pm\"\nIn 4 hours travelled distance by B = 4 × 80 = 320 km\n∴ The required result will be \"320 km and at 6 pm\".",
+    "solution": "Solution\n\nGiven:\nThe speed of A is 40 km/h\n\nThe speed of B is 80 km/h\n\nConcept used:\n\nSpeed = Distance/Time\n\nWhen two trains are moving in the same direction then their relative speed = Difference of their individual speeds\n\nCalculation:\nDistance travelled by A till 2 pm = 4 × 40 = 160 km\nA and B travelled in the same direction then relative speed = 80 - 40 = 40 km/h\nTime taken by B to meet A = 160/40 = 4 hours or at \"6 pm\"\nIn 4 hours travelled distance by B = 4 × 80 = 320 km\n∴ The required result will be \"320 km and at 6 pm\".",
     "topic": "Time, Speed & Distance",
     "subtopic": "Time, Speed & Distance - Relative Speed & Catch-up Problems",
     "conceptTested": "Relative Speed = Difference of speeds when bodies move in the same direction; Time to catch up = Initial distance gap / Relative Speed",
@@ -1178,7 +1178,7 @@
       "C": "",
       "D": ""
     },
-    "solution": "Solution\nShortcut Trick\nConvert Profit % to fraction: 14 2/7% = 1/7.\n\nHere, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit.\n\nSelling Price (SP) = CP + Profit = 7 + 1 = 8 units.\nRequired fraction (CP/SP) = 7/8.\n∴ The correct answer is 7/8.\n\nAlternate Method\nGiven: Profit percentage = 14 2/7% = (100/7)%.\nFormula Used: Selling Price (SP) = Cost Price (CP) + Profit; Profit % = (Profit ÷ CP) × 100\n⇒ Profit fraction = (100/7) ÷ 100 = 1/7\n⇒ This implies that for every 7 units of Cost Price, the Profit earned is 1 unit.\n⇒ Let Cost Price (CP) = 7x\n⇒ Profit = 1x\n⇒ Selling Price (SP) = CP + Profit = 7x + 1x = 8x\n⇒ Fraction of CP to SP = CP ÷ SP = 7x ÷ 8x\n⇒ Fraction = 7/8\n∴ The correct answer is 7/8.\n\nAdditional Information\nPercentage to Fraction Conversion\n\nCommon percentages like 14 2/7% = 1/7, 12 1/2% = 1/8, and 11 1/9% = 1/9 are essential for solving Profit and Loss questions quickly.\n\nCP and SP Relationship\n\nIf Profit % is expressed as a fraction a/b, then the ratio of CP : SP is always b : (b + a). For a Loss % of a/b, the ratio of CP : SP is b : (b − a).\n\nMarked Price and Discount\n\nSelling Price can also be calculated using Marked Price (MP): SP = MP × (1 − Discount%/100).",
+    "solution": "Solution\nShortcut Trick\nConvert Profit % to fraction: 14 2/7% = 1/7.\n\nHere, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit.\n\nSelling Price (SP) = CP + Profit = 7 + 1 = 8 units.\nRequired fraction (CP/SP) = 7/8.\n∴ The correct answer is 7/8.\n\nAlternate Method\nGiven: Profit percentage = 14 2/7% = (100/7)%.\nFormula Used: Selling Price (SP) = Cost Price (CP) + Profit; Profit % = (Profit ÷ CP) × 100\n⇒ Profit fraction = (100/7) ÷ 100 = 1/7\n⇒ This implies that for every 7 units of Cost Price, the Profit earned is 1 unit.\n⇒ Let Cost Price (CP) = 7x\n⇒ Profit = 1x\n⇒ Selling Price (SP) = CP + Profit = 7x + 1x = 8x\n⇒ Fraction of CP to SP = CP ÷ SP = 7x ÷ 8x\n⇒ Fraction = 7/8\n∴ The correct answer is 7/8.\n\nAdditional Information\nPercentage to Fraction Conversion\n\nCommon percentages like 14 2/7% = 1/7, 12 1/2% = 1/8, and 11 1/9% = 1/9 are essential for solving Profit and Loss questions quickly.\n\nCP and SP Relationship\n\nIf Profit % is expressed as a fraction a/b, then the ratio of C\nP : SP is always b : (b + a). For a Loss % of a/b, the ratio of C\nP : SP is b : (b − a).\n\nMarked Price and Discount\n\nSelling Price can also be calculated using Marked Price (MP): SP = MP × (1 − Discount%/100).",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit & Loss - Basic Percentage to Fraction",
     "conceptTested": "Relation between Cost Price and Selling Price using profit percentage fraction.",
@@ -1236,7 +1236,7 @@
       "C": "80°",
       "D": "70°"
     },
-    "solution": "Solution\n\nCalculation:\nAccording to the details given-\n\nA is the incenter of the triangle since it is situated at the internal bisectors of the angle.\n\n∴ ∠QAR = 90° + \\(\\angle P\\over2\\)\n\nSubstituting the values, we get-\n\n⇒ ∠QAR = 90° + \\(40\\over2\\) = 110°\n\nIn ΔAQR,\n\n⇒ ∠ AQR + ∠ARQ + ∠QAR  = 180°\n⇒ ∠ AQR + ∠ARQ = 180° - 110° = 70°\nThe answer is 70°",
+    "solution": "Solution\n\nCalculation:\nAccording to the details given-\n\nA is the incenter of the triangle since it is situated at the internal bisectors of the angle.\n\n∴ ∠QAR = 90° + \\(\\angle P\\over2\\)\n\nSubstituting the values, we get-\n\n⇒ ∠QAR = 90° + \\(40\\over2\\) = 110°\n\nIn ΔAQR,\n\n⇒ ∠ AQR + ∠ARQ + ∠QAR  = 180°\n⇒ ∠ AQR + ∠ARQ = 180° - 110° = 70°\nThe answer is 70°",
     "topic": "Geometry",
     "subtopic": "Triangles - Angle Bisectors & Incenter",
     "conceptTested": "The angle formed by the internal bisectors of two angles of a triangle is equal to 90° plus half of the third angle.",
@@ -1265,7 +1265,7 @@
       "C": "12.5",
       "D": "50"
     },
-    "solution": "Solution\n\nGiven:\nAverage of 5 values = 46.\nAverage of first 4 values = 45.\n\nCalculation:\nSince the average of 5 results is 46.\n\nThen the sum of 5 values is:\n\n⇒ 5 × 46 = 230\n\nSum of first 4 values:\n\n⇒ 4 × 45 = 180\nHence the fifth number is:\n⇒ 230 - 180\n⇒ 50\nHence the correct answer is \"50\".",
+    "solution": "Solution\n\nGiven:\nAverage of 5 values = 46.\nAverage of first 4 values = 45.\n\nCalculation:\nSince the average of 5 results is 46.\n\nThen the sum of 5 values is:\n\n⇒ 5 × 46 = 230\n\nSum of first 4 values:\n\n⇒ 4 × 45 = 180\nHence the fifth number is:\n⇒ 230 - 180\n⇒ 50\nHence the correct answer is \"50\".",
     "topic": "Average",
     "subtopic": "Average - Basic Sum and Missing Value",
     "conceptTested": "Sum of observations = Average × Number of observations.",
@@ -1294,7 +1294,7 @@
       "C": "1,150",
       "D": "1,125"
     },
-    "solution": "Solution\nShortcut Trick\nUse the direct relation: CP : MP = (100 − Discount%) : (100 + Profit%)\nCP : MP = (100 − 20) : (100 + 12) = 80 : 112 = 5 : 7\nGiven Cost Price (CP) = 5 units = ₹750\n1 unit = 750 ÷ 5 = 150\nMarked Price (MP) = 7 units = 7 × 150 = 1050\n∴ The correct answer is ₹1050.\n\nAlternate Method\nGiven:\nCost Price (CP) of the article = ₹750\nProfit percentage = 12%\nDiscount percentage allowed on Marked Price (MP) = 20%\nFormula Used: Selling Price (SP) = CP × (100 + Profit%)/100 = MP × (100 − Discount%)/100\n⇒ First, calculate the Selling Price (SP) using profit on CP:\n⇒ SP = 750 × (100 + 12) / 100 = 750 × 1.12 = ₹840\n⇒ Now, use the discount on MP to find the Marked Price:\n⇒ SP = MP × (100 − 20) / 100\n⇒ 840 = MP × 0.8\n⇒ MP = 840 ÷ 0.8 = 1050\n∴ The correct answer is ₹1050.\n\nAdditional Information\nRelationship between CP and MP\n\nThe direct ratio for questions involving both profit and discount is: CP / MP = (100 − Discount%) / (100 + Profit%).\n\nMark-up Percentage\n\nMark-up % is the percentage by which Marked Price is kept higher than the Cost Price: [(MP − CP) / CP] × 100.\n\nEffective Discount\n\nFor successive discounts of a% and b%, the single equivalent discount is (a + b − ab/100)%.",
+    "solution": "Solution\nShortcut Trick\nUse the direct relation: C\nP : MP = (100 − Discount%) : (100 + Profit%)\nC\nP : MP = (100 − 20) : (100 + 12) = 80 : 112 = 5 : 7\nGiven Cost Price (CP) = 5 units = ₹750\n1 unit = 750 ÷ 5 = 150\nMarked Price (MP) = 7 units = 7 × 150 = 1050\n∴ The correct answer is ₹1050.\n\nAlternate Method\nGiven:\nCost Price (CP) of the article = ₹750\nProfit percentage = 12%\nDiscount percentage allowed on Marked Price (MP) = 20%\nFormula Used: Selling Price (SP) = CP × (100 + Profit%)/100 = MP × (100 − Discount%)/100\n⇒ First, calculate the Selling Price (SP) using profit on C\nP:\n⇒ SP = 750 × (100 + 12) / 100 = 750 × 1.12 = ₹840\n⇒ Now, use the discount on MP to find the Marked Price:\n⇒ SP = MP × (100 − 20) / 100\n⇒ 840 = MP × 0.8\n⇒ MP = 840 ÷ 0.8 = 1050\n∴ The correct answer is ₹1050.\n\nAdditional Information\nRelationship between CP and MP\n\nThe direct ratio for questions involving both profit and discount is: CP / MP = (100 − Discount%) / (100 + Profit%).\n\nMark-up Percentage\n\nMark-up % is the percentage by which Marked Price is kept higher than the Cost Price: [(MP − CP) / CP] × 100.\n\nEffective Discount\n\nFor successive discounts of a% and b%, the single equivalent discount is (a + b − ab/100)%.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit, Loss & Discount - Marked Price and Discount",
     "conceptTested": "Direct ratio between Cost Price and Marked Price involving discount and profit percentages: CP / MP = (100 - Discount%) / (100 + Profit%).",
@@ -1323,7 +1323,7 @@
       "C": "72.7 km/h",
       "D": "70.73 km/h"
     },
-    "solution": "Solution\n\nGiven:\nDistance between A and B = 700 km\nSpeed of train from A to B = 80 km/h\nSpeed of train from B to A = 65 km/h\n\nConcept used:\n\nDistance = Speed × Time\nAverage speed = Total distance travelled/Total time taken\n\nCalculation:\nTime taken by train from A to B = Distance/Speed = 700/80\nTime taken by train from B to A = 700/65\nAverage speed during the whole journey = Total distance/Total time\n⇒ (700 + 700)/[(700/80 + 700/65)]\n⇒ (700 + 700)/[700 × (1/80 + 1/65)]\n⇒ (2 × 700)/[700 × (13 + 16)/1040]\n⇒ 2/(29/1040)\n⇒ (1040 × 2)/29 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.\n\nShortcut Trick\nIf the distance travelled in both the cases is same, then we can apply this formula,\n\nAverage speed = (2 × product of the two speeds)/(Sum of the two speeds)\n⇒ (2 × 80 × 65)/(80 + 65)\n⇒ 10400/145 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.",
+    "solution": "Solution\n\nGiven:\nDistance between A and B = 700 km\nSpeed of train from A to B = 80 km/h\nSpeed of train from B to A = 65 km/h\n\nConcept used:\n\nDistance = Speed × Time\nAverage speed = Total distance travelled/Total time taken\n\nCalculation:\nTime taken by train from A to B = Distance/Speed = 700/80\nTime taken by train from B to A = 700/65\nAverage speed during the whole journey = Total distance/Total time\n⇒ (700 + 700)/[(700/80 + 700/65)]\n⇒ (700 + 700)/[700 × (1/80 + 1/65)]\n⇒ (2 × 700)/[700 × (13 + 16)/1040]\n⇒ 2/(29/1040)\n⇒ (1040 × 2)/29 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.\n\nShortcut Trick\nIf the distance travelled in both the cases is same, then we can apply this formula,\n\nAverage speed = (2 × product of the two speeds)/(Sum of the two speeds)\n⇒ (2 × 80 × 65)/(80 + 65)\n⇒ 10400/145 = 71.72 km/h\n∴ The average speed of the train during the whole journey is 71.72 km/h.",
     "topic": "Time, Speed & Distance",
     "subtopic": "Average Speed - Equal Distance",
     "conceptTested": "Average speed for equal distances is given by 2xy / (x + y).",
@@ -1352,7 +1352,7 @@
       "C": "Rs. 37,500",
       "D": "Rs. 20,750"
     },
-    "solution": "Solution\n\nGiven:\nPrincipal = 57,500\nRate of interest = 4%, 5% and 8%\n\nFormula used:\nS.I = (P × R × T)/100\n\nCalculation:\nLet the three parts be x, y and z\n\nThen,\n\n⇒ (x × 4 × 1)/100 = (y × 5 × 1)/100 = (z × 8 × 1)/100\n⇒ 0.04x = 0.05y = 0.08z\n⇒ x : y : z = 10 : 8 : 5\nSum invested at 5% = (8/23) × 57,500 = 20,000\n∴ The answer is Rs 20,000.",
+    "solution": "Solution\n\nGiven:\nPrincipal = 57,500\nRate of interest = 4%, 5% and 8%\n\nFormula used:\nS.I = (P × R × T)/100\n\nCalculation:\nLet the three parts be x, y and z\n\nThen,\n\n⇒ (x × 4 × 1)/100 = (y × 5 × 1)/100 = (z × 8 × 1)/100\n⇒ 0.04x = 0.05y = 0.08z\n⇒ x : y : z = 10 : 8 : 5\nSum invested at 5% = (8/23) × 57,500 = 20,000\n∴ The answer is Rs 20,000.",
     "topic": "Simple Interest",
     "subtopic": "Equal Interest on Different Principal Parts",
     "conceptTested": "Equating simple interest earned from multiple principal parts at different rates for the same time period.",
@@ -1439,7 +1439,7 @@
       "C": "a ≥ b",
       "D": "a > b"
     },
-    "solution": "Solution\n\nGiven:\nSinθ = (a + b)/2√ab\n\nConcept:\n\n-1 ≤ sinθ ≤ +1\n\nCalculation:\n-1 ≤ (a + b)/2√ab ≤ +1\n\nWe solve one of them\n\n(a + b)/2√ab ≤ +1\n\n⇒ a + b ≤ 2√ab\n⇒ a + b - 2√ab ≤ 0\n⇒ (√a - √b)2  ≤ 0\n⇒ √a = √b = a = b\n∴ The correct answer is a = b\n\nShortcut Trick\nWe can solve this question by option to satisfy equation\n\nput a = b\nthen Sinθ = (a + a)/ 2√(a × a)\nSinθ = 2a/2a = 1 (sinθ ≤ 1)",
+    "solution": "Solution\n\nGiven:\nSinθ = (a + b)/2√ab\n\nConcept:\n\n-1 ≤ sinθ ≤ +1\n\nCalculation:\n-1 ≤ (a + b)/2√ab ≤ +1\n\nWe solve one of them\n\n(a + b)/2√ab ≤ +1\n\n⇒ a + b ≤ 2√ab\n⇒ a + b - 2√ab ≤ 0\n⇒ (√a - √b)2  ≤ 0\n⇒ √a = √b = a = b\n∴ The correct answer is a = b\n\nShortcut Trick\nWe can solve this question by option to satisfy equation\n\nput a = b\nthen Sinθ = (a + a)/ 2√(a × a)\nSinθ = 2a/2a = 1 (sinθ ≤ 1)",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Ratios and Range",
     "conceptTested": "The range of sine function is -1 ≤ sin θ ≤ 1, and algebraic inequalities involving arithmetic-geometric mean or squares like (√a - √b)² ≤ 0.",
@@ -1526,7 +1526,7 @@
       "C": "than that of any other",
       "D": "in this series"
     },
-    "solution": "Solution\n\nThe correct answer is option 1) i.e. is the higher.\n\nExplanation:\n\nIn the given sentence, ‘higher’ is a comparative degree.\nThe comparative degree is the form of an adverb or adjective modified by more or ending in -er that is used when comparing two things.\nGenerally, the definite article ‘the’ is not used with the comparative degree.\nThus, the use of the definite article 'the' is not needed and should be eliminated from the sentence.\nHence, the correct option is \"is the higher\".\n\nWe use 'the' in a comparative degree when we want to depict a parallel comparison. For example:\nThe more sugar you put in the dish, the sweeter it is.\nThe structure for using the in a comparative degree for the parallel comparison is :\nThe + comparative adjective + clause + the + comparative adjective + clause\n\nCorrect Sentence: His strike rate in this series is 74.35, which is higher than that of any other batsman.",
+    "solution": "Solution\n\nThe correct answer is option 1) i.e. is the higher.\n\nExplanation:\n\nIn the given sentence, ‘higher’ is a comparative degree.\nThe comparative degree is the form of an adverb or adjective modified by more or ending in -er that is used when comparing two things.\nGenerally, the definite article ‘the’ is not used with the comparative degree.\nThus, the use of the definite article 'the' is not needed and should be eliminated from the sentence.\nHence, the correct option is \"is the higher\".\n\nWe use 'the' in a comparative degree when we want to depict a parallel comparison. For example:\nThe more sugar you put in the dish, the sweeter it is.\nThe structure for using the in a comparative degree for the parallel comparison is :\nThe + comparative adjective + clause + the + comparative adjective + clause\n\nCorrect Sentence: His strike rate in this series is 74.35, which is higher than that of any other batsman.",
     "topic": "Spotting Errors",
     "subtopic": "Adjectives & Articles",
     "conceptTested": "Definite article 'the' is generally not used before a comparative degree unless it is a parallel comparison structure.",
@@ -1642,7 +1642,7 @@
       "C": "systematic",
       "D": "easy"
     },
-    "solution": "Solution\nThe correct answer is Option 1.\n\nKey Points\nThe word \"complex\" means consisting of many different and connected parts. (जटिल)\nIn the context of describing society, \"complex\" conveys that modern society has many diverse and interconnected aspects.\nThe other options: \"fine,\" \"systematic,\" and \"easy\" do not capture the intricacy and interconnectedness described in the passage.\n\n​Therefore, the correct answer is 'Option 1'.\n\nComplete Sentence: Hierarchy is key in ensuring normal functioning of our increasingly complex society.\n\nAdditional Information\nFine (उत्तम): means very high quality or acceptable.\nSystematic (सुनियोजित): means structured or methodical.\nEasy (आसान): means not difficult or requiring little effort.",
+    "solution": "Solution\nThe correct answer is Option 1.\n\nKey Points\nThe word \"complex\" means consisting of many different and connected parts. (जटिल)\nIn the context of describing society, \"complex\" conveys that modern society has many diverse and interconnected aspects.\nThe other options: \"fine,\" \"systematic,\" and \"easy\" do not capture the intricacy and interconnectedness described in the passage.\n\n​Therefore, the correct answer is 'Option 1'.\n\nComplete Sentence: Hierarchy is key in ensuring normal functioning of our increasingly complex society.\n\nAdditional Information\nFine (उत्तम): means very high quality or acceptable.\nSystematic (सुनियोजित): means structured or methodical.\nEasy (आसान): means not difficult or requiring little effort.",
     "topic": "Fill in the Blanks",
     "subtopic": "Single Filler in Context",
     "conceptTested": "Lexical appropriateness and contextual vocabulary usage to describe the nature of modern society.",

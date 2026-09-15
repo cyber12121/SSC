@@ -32,6 +32,8 @@ import {
 } from 'lucide-react';
 import { QuizResult, Question, RCATagType, RCAClassification } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
+import { FormattedText } from './FormattedText';
+import { cleanQuestionText, getLanguageText } from '../utils/formatQuestionText';
 
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
   if (rawTime === undefined || rawTime === null) return null;
@@ -153,9 +155,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   const rcaStats = useMemo(() => {
     const counts = { C: 0, A: 0, T: 0, G: 0, total: 0 };
-    Object.values(rcaMap).forEach(item => {
-      if (item && item.tag && counts[item.tag] !== undefined) {
-        counts[item.tag]++;
+    Object.values(rcaMap).forEach((item: any) => {
+      if (item && item.tag && counts[item.tag as RCATagType] !== undefined) {
+        counts[item.tag as RCATagType]++;
         counts.total++;
       }
     });
@@ -722,14 +724,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   // Format text based on selected language
   const renderText = (text: string = '') => {
     if (!text) return '';
-    if (language === 'Bilingual') return text;
-    const lines = text.split(/\r?\n/);
-    return lines.map(line => {
-      const parts = line.split(/\s+\/\s+/);
-      if (language === 'English') return parts[0]?.trim() || line;
-      if (language === 'Hindi') return parts[1]?.trim() || parts[0]?.trim() || line;
-      return line;
-    }).join('\n').trim();
+    return getLanguageText(text, language);
   };
 
   // Format solution text
@@ -1103,8 +1098,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             {question ? (
               <div className="max-w-4xl">
                 {/* Question Body */}
-                <div className="text-[15.5px] text-gray-900 leading-relaxed font-normal whitespace-pre-line mb-4">
-                  {renderText(question.question)}
+                <div className="text-[15.5px] text-gray-900 leading-relaxed font-normal mb-4">
+                  <FormattedText text={question.question} language={language} as="div" />
                 </div>
 
                 {/* Question Image if present */}
@@ -1142,7 +1137,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                             <div className="flex items-center space-x-3">
                               <Check className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
                               <span className="text-[15px] font-medium leading-normal">
-                                {renderText(optText)}
+                                <FormattedText text={optText} language={language} />
                               </span>
                             </div>
                             <div className="flex items-center space-x-2 shrink-0 ml-3">
@@ -1168,7 +1163,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                             <div className="flex items-center space-x-3">
                               <RotateCcw className="w-4 h-4 text-white shrink-0" />
                               <span className="text-[15px] font-medium leading-normal">
-                                {renderText(optText)}
+                                <FormattedText text={optText} language={language} />
                               </span>
                             </div>
                             <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm shrink-0 ml-3">
@@ -1184,7 +1179,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                           className="px-4 py-3.5 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
                         >
                           <span className="w-5 mr-3 shrink-0" />
-                          <span className="leading-normal">{renderText(optText)}</span>
+                          <span className="leading-normal">
+                            <FormattedText text={optText} language={language} />
+                          </span>
                         </div>
                       );
                     }
@@ -1201,7 +1198,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                           <span className="w-5 h-5 rounded-full border-2 border-gray-400 group-hover:border-[#0097a7] mr-3 flex items-center justify-center shrink-0">
                             <span className="w-2.5 h-2.5 rounded-full bg-transparent group-hover:bg-[#0097a7]/40" />
                           </span>
-                          <span className="leading-normal">{renderText(optText)}</span>
+                          <span className="leading-normal">
+                            <FormattedText text={optText} language={language} />
+                          </span>
                         </div>
                       );
                     }
@@ -1215,7 +1214,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         >
                           <div className="flex items-center space-x-3">
                             <Check className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
-                            <span className="text-[15px] font-medium">{renderText(optText)}</span>
+                            <span className="text-[15px] font-medium">
+                              <FormattedText text={optText} language={language} />
+                            </span>
                           </div>
                           <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0">
                             {accuracyPercent}% answered correctly
@@ -1232,7 +1233,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         >
                           <div className="flex items-center space-x-3">
                             <X className="w-5 h-5 text-white stroke-[2.5] shrink-0" />
-                            <span className="text-[15px] font-medium">{renderText(optText)}</span>
+                            <span className="text-[15px] font-medium">
+                              <FormattedText text={optText} language={language} />
+                            </span>
                           </div>
                           <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0">
                             Your Attempt
@@ -1247,7 +1250,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         className="px-4 py-3 text-[15px] text-gray-700 opacity-70 flex items-center"
                       >
                         <span className="w-5 mr-3 shrink-0" />
-                        <span>{renderText(optText)}</span>
+                        <span>
+                          <FormattedText text={optText} language={language} />
+                        </span>
                       </div>
                     );
                   })}
@@ -1487,10 +1492,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         <span className="text-base font-bold text-gray-900">Shortcut Trick</span>
                       </div>
 
-                      <div className="text-[14.5px] text-gray-800 leading-relaxed font-normal whitespace-pre-line bg-gray-50/70 p-4 rounded-md border border-gray-100 font-mono">
-                        {question.solution 
-                          ? formatSolutionText(question.solution)
-                          : "Solution details are available in the question paper bank."}
+                      <div className="text-[14.5px] text-gray-800 leading-relaxed font-normal bg-gray-50/70 p-4 rounded-md border border-gray-100 font-sans">
+                        {question.solution ? (
+                          <FormattedText text={formatSolutionText(question.solution)} language={language} as="div" />
+                        ) : (
+                          "Solution details are available in the question paper bank."
+                        )}
                       </div>
                     </div>
                   </div>

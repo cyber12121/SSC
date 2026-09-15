@@ -6,6 +6,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import crypto from "crypto";
 import { cleanSolutionText } from "./src/utils/cleanSolution";
+import { cleanQuestionText } from "./src/utils/formatQuestionText";
 import chatHandler from "./api/chat";
 
 dotenv.config();
@@ -899,12 +900,12 @@ async function startServer() {
               correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
               userTime: q.userTime || null,
               avgTime: q.avgTime || null,
-              question: qText,
+              question: cleanQuestionText(qText),
               options: {
-                a: (q.options?.A || q.options?.a || "").trim(),
-                b: (q.options?.B || q.options?.b || "").trim(),
-                c: (q.options?.C || q.options?.c || "").trim(),
-                d: (q.options?.D || q.options?.d || "").trim()
+                a: cleanQuestionText(q.options?.A || q.options?.a || ""),
+                b: cleanQuestionText(q.options?.B || q.options?.b || ""),
+                c: cleanQuestionText(q.options?.C || q.options?.c || ""),
+                d: cleanQuestionText(q.options?.D || q.options?.d || "")
               },
               answer: cleanAns,
               solution: cleanSolutionText(q.solution || enr.solution || ""),
@@ -978,7 +979,7 @@ async function startServer() {
               topic: enr.topic || q.topic || "General",
               subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
               conceptTested: enr.conceptTested || q.conceptTested || "",
-              questionText: enr.questionText || q.questionText || q.question,
+              questionText: cleanQuestionText(enr.questionText || q.questionText || q.question),
               solution: cleanSolutionText(q.solution || enr.solution || ""),
               correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
               tags: {

@@ -163,7 +163,7 @@
       "C": "3 and 6",
       "D": "2 and 4"
     },
-    "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMAS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMAS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMAS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMAS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
+    "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Signs & Numbers",
     "conceptTested": "Balancing mathematical equations by substituting numbers and applying BODMAS rule",
@@ -214,7 +214,7 @@
     "correctOption": "C",
     "userTime": "02:21",
     "avgTime": "01:10",
-    "questionText": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following statement is correct?",
+    "questionText": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following\nstatement is correct?",
     "options": {
       "A": "Jenny is sitting second to right of Mani",
       "B": "Simi and Sanu sit at the ends",
@@ -330,7 +330,7 @@
     "correctOption": "A",
     "userTime": "00:09",
     "avgTime": "00:36",
-    "questionText": "Consider the following statements regarding literacy as per Census 2011:\n\nStatement 1: During the last decade preceding the 2011 Census, the highest improvement in literacy rate was observed among rural females, at 24%.\n\nStatement 2: Among the gender literacy gap indicators, Kerala recorded the lowest male-female literacy gap among all States/UTs, while Rajasthan recorded the highest.\n\nWhich of the above statements is/are correct?",
+    "questionText": "Consider the following statements regarding literacy as per Census 2011:\nStatement 1: During the last decade preceding the 2011 Census, the highest improvement in literacy rate was observed among rural females, at 24%.\nStatement 2: Among the gender literacy gap indicators, Kerala recorded the lowest male-female literacy gap among all States/UTs, while Rajasthan recorded the highest.\n\nWhich of the above statements is/are correct?",
     "options": {
       "A": "Only 1",
       "B": "Only 2",
@@ -504,14 +504,14 @@
     "correctOption": "D",
     "userTime": "00:04",
     "avgTime": "00:31",
-    "questionText": "Read the Assertion (A) and Reason (R) below and choose the correct option:\n\nAssertion (A): The Pension Fund Regulatory and Development Authority (PFRDA) is the primary regulator of the Atal Pension Yojana (APY).\n\nReason (R): This is because the Central Recordkeeping Agency (CRA) for APY works independently of PFRDA and is regulated directly by the Ministry of Finance instead.",
+    "questionText": "Read the Assertion (A) and Reason\n(R) below and choose the correct option:\n\nAssertion (A): The Pension Fund Regulatory and Development Authority (PFRDA) is the primary regulator of the Atal Pension Yojana (APY).\n\nReason\n(R): This is because the Central Recordkeeping Agency (CRA) for APY works independently of PFRDA and is regulated directly by the Ministry of Finance instead.",
     "options": {
       "A": "Both A and R are true, and R is the correct explanation of A",
       "B": "Both A and R are true, but R is not the correct explanation of A",
       "C": "A is false, but R is true",
       "D": "A is true, but R is false"
     },
-    "solution": "Assertion (A) is true: PFRDA regulates and oversees APY as part of the broader National Pension System, setting rules and protecting subscribers' interests.\nReason (R) is false: The CRA (currently Protean eGov Technologies Ltd.) is registered with and regulated by PFRDA itself - it does not work independently, and it is not regulated by the Ministry of Finance. It simply handles recordkeeping and subscriber service under PFRDA's oversight.\n\nFurther Insights:\nMinistry of Finance = sponsors the scheme and funds the guaranteed pension.\nPFRDA = regulates the entire scheme, including the CRA.\n\nPOPs (banks, post offices, etc.) = handle subscriber registration and contributions.",
+    "solution": "Assertion (A) is true: PFRDA regulates and oversees APY as part of the broader National Pension System, setting rules and protecting subscribers' interests.\nReason\n(R) is false: The CRA (currently Protean eGov Technologies Ltd.) is registered with and regulated by PFRDA itself - it does not work independently, and it is not regulated by the Ministry of Finance. It simply handles recordkeeping and subscriber service under PFRDA's oversight.\n\nFurther Insights:\nMinistry of Finance = sponsors the scheme and funds the guaranteed pension.\nPFRDA = regulates the entire scheme, including the CRA.\n\nPOPs (banks, post offices, etc.) = handle subscriber registration and contributions.",
     "topic": "Government Schemes & Policies",
     "subtopic": "Atal Pension Yojana & Financial Regulators",
     "conceptTested": "Regulatory framework, institutional hierarchy, and administrative bodies responsible for government social security schemes like the Atal Pension Yojana.",
@@ -591,14 +591,14 @@
     "correctOption": "C",
     "userTime": "00:14",
     "avgTime": "00:44",
-    "questionText": "Read the Assertion (A) and Reason (R) below and choose the correct option:\n\nAssertion (A): Inward-looking trade policies protected domestic industries using tariffs and quotas, which ultimately provided high incentives for Indian producers to improve product quality.\n\nReason (R): Import substitution aimed to replace foreign imports with domestic production to promote self-reliance.",
+    "questionText": "Read the Assertion (A) and Reason\n(R) below and choose the correct option:\n\nAssertion (A): Inward-looking trade policies protected domestic industries using tariffs and quotas, which ultimately provided high incentives for Indian producers to improve product quality.\n\nReason\n(R): Import substitution aimed to replace foreign imports with domestic production to promote self-reliance.",
     "options": {
-      "A": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
-      "B": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
-      "C": "(A) is false, but (R) is true.",
-      "D": "(A) is true, but (R) is false."
+      "A": "Both (A) and\n(R) are true, and\n(R) is the correct explanation of (A).",
+      "B": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A).",
+      "C": "(A) is false, but\n(R) is true.",
+      "D": "(A) is true, but\n(R) is false."
     },
-    "solution": "Assertion (A): Protecting domestic producers from foreign competition actually deprived them of the incentive to improve quality, leading to inefficiencies rather than quality upgrades. Thus, (A) is false.\nReason (R): Import substitution specifically aimed to encourage domestic production of goods (e.g., vehicles) instead of importing them. Thus, (R) is true.",
+    "solution": "Assertion (A): Protecting domestic producers from foreign competition actually deprived them of the incentive to improve quality, leading to inefficiencies rather than quality upgrades. Thus, (A) is false.\nReason\n(R): Import substitution specifically aimed to encourage domestic production of goods (e.g., vehicles) instead of importing them. Thus,\n(R) is true.",
     "topic": "Macroeconomics & National Income",
     "subtopic": "Economic Planning & Import Substitution",
     "conceptTested": "Impact of inward-looking trade policies (import substitution) on domestic industry efficiency and product quality during early Indian planning.",

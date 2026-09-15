@@ -23,7 +23,7 @@
           "d": "EVCVGI"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe logic followed here is:\n\nFor, ‘BRIGHT’ is written as ‘JSCVJI’,\n\nFor, ‘BROKEN' is written as 'PSCPGM’,\n\nSimilarly, for 'BUDGET'\n\nSo, 'BUDGET' will  be written as 'EVCVGI'.\n\nHence, the correct answer is \"Option 4\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nFor, ‘BRIGHT’ is written as ‘JSCVJI’,\n\nFor, ‘BROKEN' is written as 'PSCPGM’,\n\nSimilarly, for 'BUDGET'\n\nSo, 'BUDGET' will  be written as 'EVCVGI'.\n\nHence, the correct answer is \"Option 4\".",
         "topic": "Coding-Decoding",
         "subtopic": "Letter Coding",
         "conceptTested": "Forward and reverse letter shifting patterns for word encryption",
@@ -73,7 +73,7 @@
         "correctOption": "C",
         "userTime": "00:37",
         "avgTime": "00:13",
-        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\nBZC, EXF, HVI, KTL, ?",
+        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\nBZC, EXF, HVI, KTL, ?",
         "options": {
           "a": "ONR",
           "b": "MOR",
@@ -81,7 +81,7 @@
           "d": "ORN"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe position of letters according to the English alphabet series:\n\nHence, the correct answer is \"NRO\"",
+        "solution": "Solution\n\nThe position of letters according to the English alphabet series:\n\nHence, the correct answer is \"NRO\"",
         "topic": "Letter & Symbol Series",
         "subtopic": "Alphabet Series",
         "conceptTested": "Positional alphabet increments and decrements across multi-letter clusters",
@@ -110,7 +110,7 @@
           "d": "5, 3, 2, 1, 4"
         },
         "answer": "d",
-        "solution": "Solution\n\nAccording to the sequence in the dictionary:\n\nThe correct order of the given words is:\n\n5. Relatable\n3. Related\n2. Relation\n1. Relatival\n4. Relative\nHence, the correct answer is \"5, 3, 2, 1, 4\".",
+        "solution": "Solution\n\nAccording to the sequence in the dictionary:\n\nThe correct order of the given words is:\n\n5. Relatable\n3. Related\n2. Relation\n1. Relatival\n4. Relative\nHence, the correct answer is \"5, 3, 2, 1, 4\".",
         "topic": "Word Formation & Dictionary Order",
         "subtopic": "Dictionary Arrangement",
         "conceptTested": "Alphabetical sorting of words letter by letter as they appear in a standard English dictionary.",
@@ -139,7 +139,7 @@
           "d": "7 and 98"
         },
         "answer": "a",
-        "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
+        "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Numbers & BODMAS",
         "conceptTested": "Balancing equations via number interchange and strict adherence to the BODMAS rule.",
@@ -160,7 +160,7 @@
         "correctOption": "B",
         "userTime": "01:05",
         "avgTime": "00:42",
-        "question": "If in a code language, 'TV' is coded as 55. How is “CLOCK” written in that code language?",
+        "question": "If in a code language, 'TV' is coded as 55. How is “CLOCK” written in that code language?",
         "options": {
           "a": "54",
           "b": "57",
@@ -247,7 +247,7 @@
         "correctOption": "C",
         "userTime": "00:25",
         "avgTime": "00:17",
-        "question": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
+        "question": "Choose the correct analogy.\nACE : FHJ :: OQ\nS : ?",
         "options": {
           "a": "PRT",
           "b": "RTU",
@@ -284,7 +284,7 @@
           "d": "GOD : LFL"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe pattern followed is,\n\nOption (1): CAT: HXV\nOption (2): DOG: ILI\nOption (3): XYZ: CVB\nOption (4): GOD: LFL\nAll follow the same pattern, except 'GOD: LFL’.\nHence, “GOD: LFL” is the odd one.",
+        "solution": "Solution\n\nThe pattern followed is,\n\nOption (1): CAT: HXV\nOption (2): DOG: ILI\nOption (3): XYZ: CVB\nOption (4): GOD: LFL\nAll follow the same pattern, except 'GOD: LFL’.\nHence, “GOD: LFL” is the odd one.",
         "topic": "Classification / Odd One Out",
         "subtopic": "Letter Classification",
         "conceptTested": "Opposite letter pairs or consistent letter-coding distance mapping",
@@ -313,7 +313,7 @@
           "d": "18"
         },
         "answer": "d",
-        "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n–\n\nMeaning\n\n–\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) – 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 – (11 + 7) ÷ 9 × 5\n\n= 28 – 18 ÷ 9 × 5\n= 28 – 2 × 5\n= 28 – 10\n= 18\nHence, the correct answer is 18.",
+        "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n–\n\nMeaning\n\n–\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) – 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 – (11 + 7) ÷ 9 × 5\n\n= 28 – 18 ÷ 9 × 5\n= 28 – 2 × 5\n= 28 – 10\n= 18\nHence, the correct answer is 18.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Evaluation of arithmetic expressions using BODMAS after symbol substitution",
@@ -336,13 +336,13 @@
         "avgTime": "00:17",
         "question": "Two statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome doctors are scientists.\nSome scientists are engineers.\nConclusions:\nI. All engineers are doctors.\nII. Some doctors are engineers.",
         "options": {
-          "a": "Only conclusion I follows",
-          "b": "Neither conclusion I nor II follows",
+          "a": "Only\nconclusion I follows",
+          "b": "Neither\nconclusion I nor II follows",
           "c": "Both conclusions I and II follow",
-          "d": "Only conclusion II follows"
+          "d": "Only\nconclusion II follows"
         },
         "answer": "b",
-        "solution": "Solution\n\nStatements:\n\nSome doctors are scientists.\n\nSome scientists are engineers.\n\nThe Venn diagram as per the given statements:\n\nConclusions:\n\nI. All engineers are doctors. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nII. Some doctors are engineers. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nHence, the correct answer is \"Neither conclusion I nor II follows\".",
+        "solution": "Solution\n\nStatements:\n\nSome doctors are scientists.\n\nSome scientists are engineers.\n\nThe Venn diagram as per the given statements:\n\nConclusions:\n\nI. All engineers are doctors. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nII. Some doctors are engineers. → Not follow (There is no direct relation between doctors and engineers so it can be possible but not definitely true)\n\nHence, the correct answer is \"Neither\nconclusion I nor II follows\".",
         "topic": "Syllogism",
         "subtopic": "Deductive Venn Logic: Statements with Some",
         "conceptTested": "Deduction of intermediate relations from overlapping Some-Some syllogism premises",
@@ -371,7 +371,7 @@
           "d": "FBLCKF"
         },
         "answer": "d",
-        "solution": "Solution\n\nWe know,\n\nGiven,\n\nSimilarly,\n\nHence, the correct answer is FBLCKF.",
+        "solution": "Solution\n\nWe know,\n\nGiven,\n\nSimilarly,\n\nHence, the correct answer is FBLCKF.",
         "topic": "Coding-Decoding",
         "subtopic": "Letter Coding",
         "conceptTested": "Backward and forward alphabetical shifting pattern (-1, +1, etc.) applied to letters of a word.",
@@ -400,7 +400,7 @@
           "d": "4"
         },
         "answer": "c",
-        "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)\n\n3\n\n2\n\n5\n\nDice (3)\n\n3\n\n1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
+        "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)\n\n3\n\n2\n\n5\n\nDice (3)\n\n3\n\n1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
         "topic": "Cube & Dice",
         "subtopic": "Opposite Faces",
         "conceptTested": "Determining opposite faces in a standard dice using common faces rotated in a clockwise/anticlockwise direction.",
@@ -429,7 +429,7 @@
           "d": "G"
         },
         "answer": "a",
-        "solution": "Solution\n\nSix friends, G, H I, J, K and L, are sitting around a circular table, facing towards the centre of the table.\n\n1) H is sitting third to the left of G.\n2) L and I are not neighbours of H.\n\nCase (i) :\n\nCase (ii) :\n\n3) K is sitting to the immediate right of I.\n\nHere case (ii) gets eliminated.\n\n∴ Here, 'J' is sitting to immediate left of 'L'.\nHence, the correct answer is \"J\".",
+        "solution": "Solution\n\nSix friends, G, H I, J, K and L, are sitting around a circular table, facing towards the centre of the table.\n\n1) H is sitting third to the left of G.\n2) L and I are not neighbours of H.\n\nCase (i) :\n\nCase (ii) :\n\n3) K is sitting to the immediate right of I.\n\nHere case (ii) gets eliminated.\n\n∴ Here, 'J' is sitting to immediate left of 'L'.\nHence, the correct answer is \"J\".",
         "topic": "Seating Arrangement",
         "subtopic": "Circular Table Center Facing",
         "conceptTested": "Circular arrangement with relative left/right positioning",
@@ -487,7 +487,7 @@
           "d": "M"
         },
         "answer": "a",
-        "solution": "Solution\n\nAccording to the given series:\n\nMUBYIJRLDOPCZQNHK\n\nArrange the letters from left to right in the alphabetical order as per requirement;\n\nBCDHIJKLMNOPQRUYZ\n\nso, from the above arrangement, K will be the 11th from the right.\n\nHence, the correct answer is \"K\".",
+        "solution": "Solution\n\nAccording to the given series:\n\nMUBYIJRLDOPCZQNHK\n\nArrange the letters from left to right in the alphabetical order as per requirement;\n\nBCDHIJKLMNOPQRUYZ\n\nso, from the above arrangement, K will be the 11th from the right.\n\nHence, the correct answer is \"K\".",
         "topic": "Alphabet Test",
         "subtopic": "Word Rearrangement & Alphabetical Sorting",
         "conceptTested": "Alphabetical sorting of a given set of letters and determining position from a specified end",
@@ -516,7 +516,7 @@
           "d": "4"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic followed here is :-\n\nBy using BODMAS RULE :\n\nThe given information is :\n\nAlphabets\tSymbols\nA\t+\nB\t×\nC\t-\nD\t÷\n\nGiven expression is :- 72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)\n\nAfter replacing the alphabets with symbols in given expression the equation is as follows : 72 ÷ 6 × 12 + 24 - 18 - (20 × 5 + 48)\n\n= 72 ÷ 6 × 12 + 24 - 18 - (20 × 5 + 48)\n= 72 ÷ 6 × 12 + 24 - 18 - (100 + 48)\n= 72 ÷ 6 × 12 + 24 - 18 - 148\n= 12 × 12 + 24 - 18 - 148\n= 144 + 24 - 18 - 148\n= 168 - 18 - 148\n= 168 - 166\n= 2\nHence, the correct answer is \"2\".",
+        "solution": "Solution\n\nThe logic followed here is :-\n\nBy using BODMAS RULE :\n\nThe given information is :\n\nAlphabets\tSymbols\nA\t+\nB\t×\nC\t-\nD\t÷\n\nGiven expression is :- 72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)\n\nAfter replacing the alphabets with symbols in given expression the equation is as follows : 72 ÷ 6 × 12 + 24 - 18 - (20 × 5 + 48)\n\n= 72 ÷ 6 × 12 + 24 - 18 - (20 × 5 + 48)\n= 72 ÷ 6 × 12 + 24 - 18 - (100 + 48)\n= 72 ÷ 6 × 12 + 24 - 18 - 148\n= 12 × 12 + 24 - 18 - 148\n= 144 + 24 - 18 - 148\n= 168 - 18 - 148\n= 168 - 166\n= 2\nHence, the correct answer is \"2\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Balancing Equations",
         "conceptTested": "Evaluation of algebraic expressions using BODMAS after substituting operational symbols",
@@ -537,15 +537,15 @@
         "correctOption": "A",
         "userTime": "00:51",
         "avgTime": "00:25",
-        "question": "Three statements are given, followed by three conclusions numbered I, II and III. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome Bangles are Bracelets.\nAll chains are Rings.\nSome Bracelets are Chains.\nConclusions:\n(I) Some Bangles are Rings.\n(II) Some Chains are Bangles.\n(III) Some Rings are Bracelets.\nOptions:\nA: Only Conclusion III follows.\nB: Both Conclusions I and II follow.\nC: Both Conclusions I and III follow.\nD: Only Conclusion I follows.",
+        "question": "Three statements are given, followed by three conclusions numbered I, II and III. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome Bangles are Bracelets.\nAll chains are Rings.\nSome Bracelets are Chains.\nConclusions:\n(I) Some Bangles are Rings.\n(II) Some Chains are Bangles.\n(III) Some Rings are Bracelets.\nOptions:\nA: Only\nConclusion III follows.\nB: Both Conclusions I and II follow.\nC: Both Conclusions I and III follow.\nD: Only\nConclusion I follows.",
         "options": {
-          "a": "Only Conclusion III follows.",
+          "a": "Only\nConclusion III follows.",
           "b": "Both Conclusions I and II follow.",
           "c": "Both Conclusions I and III follow.",
-          "d": "Only Conclusion I follows."
+          "d": "Only\nConclusion I follows."
         },
         "answer": "a",
-        "solution": "Solution\n\nThe least possible Venn diagram for the given statements is as shown below :\n\nConclusions:\n\nI. Some Bangles are Rings → Does not Follow (As some bangles are bracelets, some bracelets are chains and all chains are rings. So, it is possible but not definitely true)\n\nII. Some Chains are Bangles → Does not Follow (As some bangles are bracelets, some bracelets are chains and all chains are rings. So, it is possible but not definitely true)\n\nIII. Some Rings are Bracelets → Follow (As some bracelets are chains and all chains are rings. So, as whole chains comes in rings which some part comes in bracelets therefore it is definitely true)\n\n∴ Here, Only Conclusion III follows​\nHence, the correct answer is \"Only Conclusion III follows\"",
+        "solution": "Solution\n\nThe least possible Venn diagram for the given statements is as shown below :\n\nConclusions:\n\nI. Some Bangles are Rings → Does not Follow (As some bangles are bracelets, some bracelets are chains and all chains are rings. So, it is possible but not definitely true)\n\nII. Some Chains are Bangles → Does not Follow (As some bangles are bracelets, some bracelets are chains and all chains are rings. So, it is possible but not definitely true)\n\nIII. Some Rings are Bracelets → Follow (As some bracelets are chains and all chains are rings. So, as whole chains comes in rings which some part comes in bracelets therefore it is definitely true)\n\n∴ Here, Only\nConclusion III follows​\nHence, the correct answer is \"Only\nConclusion III follows\"",
         "topic": "Syllogism",
         "subtopic": "Deductive Venn Logic",
         "conceptTested": "Deduction of categorical propositions using Venn diagram logic",
@@ -661,7 +661,7 @@
           "d": "(4, 12, 132)"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe pattern followed here is:\n\n(3, 6, 30)\n\n32 - 3 = 6 and 62 - 6 = 30\n\nSimilarly in option 4 following same pattern,\n\n42 - 4 = 12 and 122 - 12 = 132\nHence, (4 12 132) is the correct answer.",
+        "solution": "Solution\n\nThe pattern followed here is:\n\n(3, 6, 30)\n\n32 - 3 = 6 and 62 - 6 = 30\n\nSimilarly in option 4 following same pattern,\n\n42 - 4 = 12 and 122 - 12 = 132\nHence, (4 12 132) is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Sequential mathematical operation pattern using squares and subtractions: x^2 - x = y.",
@@ -690,7 +690,7 @@
           "d": "45"
         },
         "answer": "b",
-        "solution": "Solution\nHere, A is 14th from the left end and 6th to the right of B. Hence, B is 14 - 6 = 8th from the left side.\nAgain, B is 15th to the left of C, who is 22nd from the right end.\n\nHence, B is 15 + 22 = 37th from the right side.\nTherefore, the total number of children\n= B’s position from the right end + B’s position from the left end – 1\n= 37 + 8 – 1 = 45 – 1 = 44\nHence, \"option 2\" is correct answer.",
+        "solution": "Solution\nHere, A is 14th from the left end and 6th to the right of B. Hence, B is 14 - 6 = 8th from the left side.\nAgain, B is 15th to the left of C, who is 22nd from the right end.\n\nHence, B is 15 + 22 = 37th from the right side.\nTherefore, the total number of children\n= B’s position from the right end + B’s position from the left end – 1\n= 37 + 8 – 1 = 45 – 1 = 44\nHence, \"option 2\" is correct answer.",
         "topic": "Order & Ranking",
         "subtopic": "Linear Row Ranking & Total Count",
         "conceptTested": "Total elements in a row = Position from left + Position from right - 1.",
@@ -748,7 +748,7 @@
           "d": "XPBOI"
         },
         "answer": "c",
-        "solution": "Solution\n\nLogic : ​Alternately (1) and (2) is added to the position value according to the English alphabetic series diagonally.\n\n​So,\n\n'EARLY’ is written as 'ZNSCF'\n\n​\n\n​And,\n\n'GAUGE' is written as 'FIVCH'\n\n​\n\n​Similarly,\n\n'INBOX' is written as :\n\n​\n\nHence, \"YQCPJ\" is the correct answer.",
+        "solution": "Solution\n\nLogic : ​Alternately (1) and (2) is added to the position value according to the English alphabetic series diagonally.\n\n​So,\n\n'EARLY’ is written as 'ZNSCF'\n\n​\n\n​And,\n\n'GAUGE' is written as 'FIVCH'\n\n​\n\n​Similarly,\n\n'INBOX' is written as :\n\n​\n\nHence, \"YQCPJ\" is the correct answer.",
         "topic": "Coding-Decoding",
         "subtopic": "Letter Coding",
         "conceptTested": "Cross-pattern diagonal letter shifting with alternate increment values",
@@ -777,7 +777,7 @@
           "d": "185"
         },
         "answer": "d",
-        "solution": "Solution\n\nExplanation:\n\nThe pattern followed in the given series is:\nThe difference of the difference between the terms is twice of the previous.\n\nHence the correct answer is option 4.",
+        "solution": "Solution\n\nExplanation:\n\nThe pattern followed in the given series is:\nThe difference of the difference between the terms is twice of the previous.\n\nHence the correct answer is option 4.",
         "topic": "Number Series",
         "subtopic": "Missing Number Series",
         "conceptTested": "Recursive multiplicative pattern with addition ($x_n = 2x_{n-1} + k$)",
@@ -806,7 +806,7 @@
           "d": "Only conclusions II and III follow"
         },
         "answer": "c",
-        "solution": "Solution\nFrom the given statements, the Venn diagram will be:\n\nSome plants are flowers.\nSome flowers are fruits.\nAll flowers are gardens.\n\nNow we consider the given conclusions:\nI. Some gardens are plants: We have \"all flowers are gardens\" and \"some plants are flowers\" so we can say that gardens and plants are related and some gardens are plants and thus the conclusion follows.\nII. Some fruits are gardens: We have \"all flowers are gardens\" and \"some flowers are fruits\" which clearly suggests that some fruits are gardens and therefore the conclusion follows.\nIII. Some gardens are flowers: From the given information we know that all flowers are gardens which can be also phrased as some gardens are flowers, we can see this in the diagram and thus the conclusion follows.\nSince all the conclusions follow.\nHence the correct answer is option 3)",
+        "solution": "Solution\nFrom the given statements, the Venn diagram will be:\n\nSome plants are flowers.\nSome flowers are fruits.\nAll flowers are gardens.\n\nNow we consider the given conclusions:\nI. Some gardens are plants: We have \"all flowers are gardens\" and \"some plants are flowers\" so we can say that gardens and plants are related and some gardens are plants and thus the conclusion follows.\nII. Some fruits are gardens: We have \"all flowers are gardens\" and \"some flowers are fruits\" which clearly suggests that some fruits are gardens and therefore the conclusion follows.\nIII. Some gardens are flowers: From the given information we know that all flowers are gardens which can be also phrased as some gardens are flowers, we can see this in the diagram and thus the conclusion follows.\nSince all the conclusions follow.\nHence the correct answer is option 3)",
         "topic": "Syllogism",
         "subtopic": "Deductive Venn Logic",
         "conceptTested": "Deductive reasoning using categorical statements with All and Some",
@@ -835,7 +835,7 @@
           "d": "281"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe pattern followed is:\n\n72  + 82 = 49 + 64 = 113\n112  + 122 = 121 + 144 = 265\n\nSimilarly,\n\n142  + 92 = 196 + 81 = 277\nHence, 277 is the correct answer.",
+        "solution": "Solution\n\nThe pattern followed is:\n\n72  + 82 = 49 + 64 = 113\n112  + 122 = 121 + 144 = 265\n\nSimilarly,\n\n142  + 92 = 196 + 81 = 277\nHence, 277 is the correct answer.",
         "topic": "Missing Number / Matrix",
         "subtopic": "Number Puzzles Grid Matrix",
         "conceptTested": "Sum of squares of the first two column/row numbers equals the third number in the row.",
@@ -864,7 +864,7 @@
           "d": "379"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe pattern followed here is:\n\nGiven: 46, 93, 188, 379, 764, 1529\n⇒ 46 × 2 + 1 = 92 + 1 = 93\n⇒ 93 × 2 + 2 = 186 + 2 = 188\n⇒ 188 × 2 + 3 = 376 + 3 = 379\n⇒ 379 × 2 + 4 = 758 + 4 = 762 ≠ 764\n⇒ 762 × 2 + 5 = 1524 + 5 = 1529\nHence, the correct answer is \"764\".",
+        "solution": "Solution\n\nThe pattern followed here is:\n\nGiven: 46, 93, 188, 379, 764, 1529\n⇒ 46 × 2 + 1 = 92 + 1 = 93\n⇒ 93 × 2 + 2 = 186 + 2 = 188\n⇒ 188 × 2 + 3 = 376 + 3 = 379\n⇒ 379 × 2 + 4 = 758 + 4 = 762 ≠ 764\n⇒ 762 × 2 + 5 = 1524 + 5 = 1529\nHence, the correct answer is \"764\".",
         "topic": "Number Series",
         "subtopic": "Wrong Number in Series",
         "conceptTested": "Series pattern involving successive multiplication by 2 and adding an increasing integer (n × 2 + i).",
@@ -893,7 +893,7 @@
           "d": "(52, 157, 164)"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic followed here is:\n\nLogic: 1st number × 3 - 9 = 2nd number,\n2nd number + 7 = 3rd number.\n\nHere,\n\n(36, 99, 106)\n\n⇒ 36 × 3 - 9 = 108 - 9 = 99,\n⇒ 99 + 7 = 106.\n\n(72, 207, 214)\n\n⇒ 72 × 3 - 9 = 216 - 9 = 207,\n⇒ 207 + 7 = 214.\n\nSimilarly,\n\n(24, 63, 70)\n\n⇒ 24 × 3 - 9 = 72 - 9 = 63,\n⇒ 63 + 7 = 70.\nHence, the correct answer is \"Option 3\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nLogic: 1st number × 3 - 9 = 2nd number,\n2nd number + 7 = 3rd number.\n\nHere,\n\n(36, 99, 106)\n\n⇒ 36 × 3 - 9 = 108 - 9 = 99,\n⇒ 99 + 7 = 106.\n\n(72, 207, 214)\n\n⇒ 72 × 3 - 9 = 216 - 9 = 207,\n⇒ 207 + 7 = 214.\n\nSimilarly,\n\n(24, 63, 70)\n\n⇒ 24 × 3 - 9 = 72 - 9 = 63,\n⇒ 63 + 7 = 70.\nHence, the correct answer is \"Option 3\".",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Mathematical relation involving arithmetic operations on the first number to obtain subsequent numbers in a set.",
@@ -922,7 +922,7 @@
           "d": "K S L K A L S A K A"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic followed here is:\n\nFrom Option 1) A S L K A L S A K A\n\nL A S A / L K S A / L K S A / L K A A → Does not follow pattern.\n\nFrom Option 2) K S K K A L S A K A\n\nL K S A / K K S A / L K S A / L K A A → Does not follow pattern.\n\nFrom Option 3) K S L K A L S A K S\n\nL K S A / L K S A / L K S A / L K S A → follows a pattern of LKSA.\n\nFrom option 4) K S L K A L S A K A\n\nL K S A / L K S A / L K S A / L K A A → Does not follow pattern.\n\nHence, the correct answer is 'Option 3'.",
+        "solution": "Solution\n\nThe logic followed here is:\n\nFrom Option 1) A S L K A L S A K A\n\nL A S A / L K S A / L K S A / L K A A → Does not follow pattern.\n\nFrom Option 2) K S K K A L S A K A\n\nL K S A / K K S A / L K S A / L K A A → Does not follow pattern.\n\nFrom Option 3) K S L K A L S A K S\n\nL K S A / L K S A / L K S A / L K S A → follows a pattern of LKSA.\n\nFrom option 4) K S L K A L S A K A\n\nL K S A / L K S A / L K S A / L K A A → Does not follow pattern.\n\nHence, the correct answer is 'Option 3'.",
         "topic": "Letter & Symbol Series",
         "subtopic": "Continuous Pattern Series",
         "conceptTested": "Identification and filling of repeating letter block patterns in continuous series.",
@@ -1059,7 +1059,7 @@
         "correctOption": "C",
         "userTime": "00:55",
         "avgTime": "00:39",
-        "question": "Select the option which is related to the fifth term in the same way as the second term is related to the first term and the fourth term is related to the third term.\n\nAFTER : ZJWKT : : MODEL : LSGKN : : LIGHT : ?",
+        "question": "Select the option which is related to the fifth term in the same way as the second term is related to the first term and the fourth term is related to the third term.\n\nAFTE\nR : ZJWKT : : MODEL : LSGKN : : LIGHT : ?",
         "options": {
           "a": "KNJMV",
           "b": "KMIMV",
@@ -1175,7 +1175,7 @@
         "correctOption": "C",
         "userTime": "00:41",
         "avgTime": "00:31",
-        "question": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number.\\n25 : 37 :: 64 : ?",
+        "question": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number.\n25 : 37 :: 64 : ?",
         "options": {
           "a": "92",
           "b": "102",
@@ -1183,7 +1183,7 @@
           "d": "37"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
+        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Number analogy involving square root and arithmetic scaling operations.",
@@ -1204,7 +1204,7 @@
         "correctOption": "A",
         "userTime": "00:59",
         "avgTime": "00:39",
-        "question": "Which two signs and two numbers should be interchanged to make the following equation correct?\\n784 \\u00f7 6 \\u00d7 9 - 30 + 14 = 528",
+        "question": "Which two signs and two numbers should be interchanged to make the following equation correct?\n784 ÷ 6 × 9 - 30 + 14 = 528",
         "options": {
           "a": "14 and 6, + and -",
           "b": "784 and 30, + and x",
@@ -1212,7 +1212,7 @@
           "d": "9 and 6, ÷ and +"
         },
         "answer": "a",
-        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
+        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing equations by interchanging two signs and two numbers following BODMAS.",
@@ -1241,7 +1241,7 @@
           "d": "(108, 81)"
         },
         "answer": "b",
-        "solution": "Solution\n\nChecking all the given options:\n\nLogic: The first and the second number is the multiple of 4 and 3.\n1. (64, 48) →\n⇒ 16 × 4 = 64\n⇒ 16 × 3 = 48\n2. (72, 27) →\n⇒ 18 × 4 = 72\n⇒ 18 × 3 = 54 (not 27)\n3. (96, 72) →\n⇒ 24 × 4 = 96\n⇒ 24 × 3 = 72\n4. (108, 81) →\n⇒ 27 × 4 = 108\n⇒ 27 × 3 = 81\n\nHere, (72, 27) is different from the others.\n\nHence, the correct answer is \"Option (2)\".",
+        "solution": "Solution\n\nChecking all the given options:\n\nLogic: The first and the second number is the multiple of 4 and 3.\n1. (64, 48) →\n⇒ 16 × 4 = 64\n⇒ 16 × 3 = 48\n2. (72, 27) →\n⇒ 18 × 4 = 72\n⇒ 18 × 3 = 54 (not 27)\n3. (96, 72) →\n⇒ 24 × 4 = 96\n⇒ 24 × 3 = 72\n4. (108, 81) →\n⇒ 27 × 4 = 108\n⇒ 27 × 3 = 81\n\nHere, (72, 27) is different from the others.\n\nHence, the correct answer is \"Option (2)\".",
         "topic": "Classification / Odd One Out",
         "subtopic": "Number Classification",
         "conceptTested": "Identifying number pairs sharing a common ratio or scalar multiple relationship.",
@@ -1270,7 +1270,7 @@
           "d": "Sudha"
         },
         "answer": "b",
-        "solution": "Solution\n\nFrom the given information:\nStep 1: 'Suma' is shorter than 'Uma', 'Neha' is taller than 'Suma'\nSuma < Uma       Suma < Neha\nStep 2: 'Sudha' is taller than 'Uma', but shorter than 'Hema'.\nUma < Sudha < Hema\nStep 3:  'Uma' is taller than 'Neha'.\nNeha < Uma\nFrom step 1 and step 3, we get:\nSuma < Neha < Uma\nFinally we have:\nSuma < Neha < Uma < Sudha < Hema\nFrom the arrangement, we can see that Hema is the tallest.\n\nHence the correct answer is option 2)",
+        "solution": "Solution\n\nFrom the given information:\nStep 1: 'Suma' is shorter than 'Uma', 'Neha' is taller than 'Suma'\nSuma < Uma       Suma < Neha\nStep 2: 'Sudha' is taller than 'Uma', but shorter than 'Hema'.\nUma < Sudha < Hema\nStep 3:  'Uma' is taller than 'Neha'.\nNeha < Uma\nFrom step 1 and step 3, we get:\nSuma < Neha < Uma\nFinally we have:\nSuma < Neha < Uma < Sudha < Hema\nFrom the arrangement, we can see that Hema is the tallest.\n\nHence the correct answer is option 2)",
         "topic": "Order & Ranking",
         "subtopic": "Linear Height Comparison",
         "conceptTested": "Deducing linear ordering and relative positions based on comparative statements.",
@@ -1307,7 +1307,7 @@
           "d": "115"
         },
         "answer": "b",
-        "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)2 + 1 = 61 + 2 = 63\n63 + (2)2 - 2  = 63 + 2 = 65\n65 + (3)2 + 3 = 65 + 12 = 77\n77 + (4)2 - 4 = 77 + 12 = 89\n89 + (5)2 + 5 = 89 + 30 = 119\n119 + (6)2 - 6 = 119 + 30 = 149\n149 + (7)2 + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)2 + 1 = 61 + 2 = 63\n63 + (2)2 - 2  = 63 + 2 = 65\n65 + (3)2 + 3 = 65 + 12 = 77\n77 + (4)2 - 4 = 77 + 12 = 89\n89 + (5)2 + 5 = 89 + 30 = 119\n119 + (6)2 - 6 = 119 + 30 = 149\n149 + (7)2 + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
         "topic": "Number Series",
         "subtopic": "Missing Number Series",
         "conceptTested": "Mixed arithmetic and square difference series pattern recognition",
@@ -1336,7 +1336,7 @@
           "d": "244"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)2 + (Second term + 1)2  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)2 + (7 + 1)2 = 100\n(6)2 + (8)2 = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)2 + (9 + 1)2 = 181\n(9)2 + (10)2 = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)2 + (10 + 1)2 = ?\n(12)2 + (11)2 = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
+        "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)2 + (Second term + 1)2  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)2 + (7 + 1)2 = 100\n(6)2 + (8)2 = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)2 + (9 + 1)2 = 181\n(9)2 + (10)2 = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)2 + (10 + 1)2 = ?\n(12)2 + (11)2 = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
         "topic": "Missing Number / Matrix",
         "subtopic": "Number puzzles",
         "conceptTested": "Grid matrix arithmetic involving squares of incremented row values: (a+1)^2 + (b+1)^2 = c",
@@ -1365,7 +1365,7 @@
           "d": "F"
         },
         "answer": "b",
-        "solution": "Solution\n\nLet us consider that all of them are facing north.\n1) Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row.\n2) B is sitting at one extreme end.\n3) E is sitting second to the left of B.\n4) C is sitting between A and E.\n5) G is NOT sitting at any extreme end.\n6) F is sitting to the immediate right of D.\n\nThe final arrangement is shown below:\n\nHence, 'C' is sitting second to the left of G.",
+        "solution": "Solution\n\nLet us consider that all of them are facing north.\n1) Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row.\n2) B is sitting at one extreme end.\n3) E is sitting second to the left of B.\n4) C is sitting between A and E.\n5) G is NOT sitting at any extreme end.\n6) F is sitting to the immediate right of D.\n\nThe final arrangement is shown below:\n\nHence, 'C' is sitting second to the left of G.",
         "topic": "Seating Arrangement",
         "subtopic": "Linear Row North Facing",
         "conceptTested": "Deduction of positions in a single row based on directional clues",
@@ -1394,7 +1394,7 @@
           "d": "24"
         },
         "answer": "b",
-        "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd number\n\nSo,\n\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
+        "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd number\n\nSo,\n\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Relationship pattern involving arithmetic operations on numbers: [x * (x + 2)] / 3 = y.",
@@ -1423,7 +1423,7 @@
           "d": "290"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe pattern followed is:\n\nHence, the correct answer is \"336\".\n\nAlternate Method\n[Logical Series MCQ] What Comes After 210? Crack This Pattern-Based Puzzle\n\nThe logic followed here is:\n\n13 - 1 = 0\n23 - 2 = 8 - 2 = 6\n33 - 3 = 27 - 3 = 24\n43 - 4 = 64 - 4 = 60\n53 - 5 = 125 - 5 = 120\n63 - 6 = 216 - 6 = 210\n73 - 7 = 343 - 7 = 336.\nHence, the correct answer is \"336\".",
+        "solution": "Solution\n\nThe pattern followed is:\n\nHence, the correct answer is \"336\".\n\nAlternate Method\n[Logical Series MCQ] What Comes After 210? Crack This Pattern-Based Puzzle\n\nThe logic followed here is:\n\n13 - 1 = 0\n23 - 2 = 8 - 2 = 6\n33 - 3 = 27 - 3 = 24\n43 - 4 = 64 - 4 = 60\n53 - 5 = 125 - 5 = 120\n63 - 6 = 216 - 6 = 210\n73 - 7 = 343 - 7 = 336.\nHence, the correct answer is \"336\".",
         "topic": "Number Series",
         "subtopic": "Missing Number Series",
         "conceptTested": "Cubic pattern series based on the formula n³ - n.",
@@ -1676,7 +1676,7 @@
         "correctOption": "A",
         "userTime": "00:37",
         "avgTime": "00:30",
-        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set.\\n(392, 29, 449)\\n(395, 31, 566)",
+        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set.\n(392, 29, 449)\n(395, 31, 566)",
         "options": {
           "a": "(486, 32, 538)",
           "b": "(391, 45, 834)",
@@ -1684,7 +1684,7 @@
           "d": "(562, 35, 594)"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
+        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number.",
@@ -1721,7 +1721,7 @@
           "d": "15 : 256"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe logic followed here is:\n\nThe applied logic in all pairs:  first number × 17 = second number\noption 1) 19 : 323\n19 × 17= 323\noption 2) 43 : 731\n43 × 17 = 731\noption 3) 21 : 357\n21 × 17 = 357\noption 4) 15 : 356\n15 × 17 = 255\n\nThus this is the odd pair which doesn't follow the logic as followed by other pairs.\n\nHence, the correct answer is 15 : 356.",
+        "solution": "Solution\n\nThe logic followed here is:\n\nThe applied logic in all pairs:  first number × 17 = second number\noption 1) 19 : 323\n19 × 17= 323\noption 2) 43 : 731\n43 × 17 = 731\noption 3) 21 : 357\n21 × 17 = 357\noption 4) 15 : 356\n15 × 17 = 255\n\nThus this is the odd pair which doesn't follow the logic as followed by other pairs.\n\nHence, the correct answer is 15 : 356.",
         "topic": "Classification / Odd One Out",
         "subtopic": "Number Classification",
         "conceptTested": "Identification of an anomaly in number pairs based on a constant multiplicative relationship.",
@@ -1750,7 +1750,7 @@
           "d": "15%"
         },
         "answer": "c",
-        "solution": "Solution\n\nAccording to the given information:\n\nA stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21.\n\nGiven:\nCost Price of 21 pencils = Rs. 20\nSelling Price of 20 pencils = Rs. 21\nSelling Price of 1 pencil = Rs. 21 / 20 = Rs. 1.05\nSelling Price of 21 pencils = 21 × 1.05 = 22.05\n⇒ Profit = Selling price - Cost price\n⇒ Profit = 22.05 - 20\n⇒ Profit = 2.05\n⇒ Profit% = (profit/cost price) × 100\n⇒ Profit% = (2.05 / 20) × 100\n⇒ Profit% = (0.1025) × 100\n⇒ Profit% = 10.25\n\nThus, the profit percent is 10.25 ≈ 10.\n\nHence, the correct answer is \"10\".",
+        "solution": "Solution\n\nAccording to the given information:\n\nA stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21.\n\nGiven:\nCost Price of 21 pencils = Rs. 20\nSelling Price of 20 pencils = Rs. 21\nSelling Price of 1 pencil = Rs. 21 / 20 = Rs. 1.05\nSelling Price of 21 pencils = 21 × 1.05 = 22.05\n⇒ Profit = Selling price - Cost price\n⇒ Profit = 22.05 - 20\n⇒ Profit = 2.05\n⇒ Profit% = (profit/cost price) × 100\n⇒ Profit% = (2.05 / 20) × 100\n⇒ Profit% = (0.1025) × 100\n⇒ Profit% = 10.25\n\nThus, the profit percent is 10.25 ≈ 10.\n\nHence, the correct answer is \"10\".",
         "topic": "Profit, Loss & Discount",
         "subtopic": "Profit & Loss - Quantity/Price Variation",
         "conceptTested": "Calculation of profit percentage when goods are bought and sold in differing quantities and prices.",
@@ -1829,7 +1829,7 @@
         "correctOption": "D",
         "userTime": "00:40",
         "avgTime": "00:50",
-        "question": "Refer to the given number symbol series and answer the question given below.\\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\\nIf all the odd numbers are dropped from the given series, then which symbol/number will be at the seventh position to the left of the symbol/number that is ninth from the left end?",
+        "question": "Refer to the given number symbol series and answer the question given below.\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\nIf all the odd numbers are dropped from the given series, then which symbol/number will be at the seventh position to the left of the symbol/number that is ninth from the left end?",
         "options": {
           "a": "3",
           "b": "2",
@@ -1837,7 +1837,7 @@
           "d": "4"
         },
         "answer": "d",
-        "solution": "Solution\n\nGiven Series:\n\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\n\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%)= 4\n\nHence, the correct answer is \"4\".",
+        "solution": "Solution\n\nGiven Series:\n\n(Left) @ 4 % 2 2 1 # 3 ^ 8 % 7 $ & 9 3 # 2 $ 5 # 2 $ % $ # 5 1 # 2 $ # 5 1 # 2 5 $ 7 * & * 3 % 5 & @ (Right)\n\nAll the odd numbers are dropped from the given series;\n\n(Left) @ 4 % 2 2 # ^ 8 % $ & # 2 $ # 2 $ % $ # # 2 $ # # 2 $ * & * % & @ (Right)\n\nSymbol/Number that is ninth from the left end = %\n\nSymbol/Number will be at the seventh position to the left of the Symbol/Number that is ninth from the left end (%)= 4\n\nHence, the correct answer is \"4\".",
         "topic": "Letter & Symbol Series",
         "subtopic": "Alphanumeric Series",
         "conceptTested": "Positional counting after filtering out elements based on condition (odd numbers dropped).",
@@ -1866,7 +1866,7 @@
           "d": "MVCT"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe table shows the place value of the alphabet from A to Z and Z to A.\n\nThe logic followed here is:\n\nGiven letter group is DART ∶ XGLZ ∶ ∶ SPIN ∶ ?\n\nNow, DART ∶ XGLZ\n\nSimilarly,  SPIN ∶ ?\n\nTherefore, the letter group for SPIN is \"MVCT\".\nHence, the correct answer is \"Option (4)\"",
+        "solution": "Solution\n\nThe table shows the place value of the alphabet from A to Z and Z to A.\n\nThe logic followed here is:\n\nGiven letter group is DART ∶ XGLZ ∶ ∶ SPIN ∶ ?\n\nNow, DART ∶ XGLZ\n\nSimilarly,  SPIN ∶ ?\n\nTherefore, the letter group for SPIN is \"MVCT\".\nHence, the correct answer is \"Option (4)\"",
         "topic": "Analogy",
         "subtopic": "Letter Analogy",
         "conceptTested": "Forward and reverse letter coding/shifting patterns",
@@ -1924,7 +1924,7 @@
           "d": "Elephant : Canidae"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic is:\n\nTiger: Felidae → Tiger belongs to the family of Felidae.\n\nSimilarly,\n\n1) Lion: Leporidae → Lion belongs to the family of Felidae.\n2) Rabbit: Bovidae → Rabbit belongs to the family of Leporidae.\n3) Whale: Cetacea → Whale belongs to the family of Cetacea\n4) Elephant: Canidae → Elephant belongs to the family of Elephantidae.\nHence, ‘Whale: Cetacea’ is the correct answer.",
+        "solution": "Solution\n\nThe logic is:\n\nTiger: Felidae → Tiger belongs to the family of Felidae.\n\nSimilarly,\n\n1) Lion: Leporidae → Lion belongs to the family of Felidae.\n2) Rabbit: Bovidae → Rabbit belongs to the family of Leporidae.\n3) Whale: Cetacea → Whale belongs to the family of Cetacea\n4) Elephant: Canidae → Elephant belongs to the family of Elephantidae.\nHence, ‘Whale: Cetacea’ is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Semantic Analogy",
         "conceptTested": "Classification of organisms into their biological families.",
@@ -1945,7 +1945,7 @@
         "correctOption": "C",
         "userTime": "00:58",
         "avgTime": "00:58",
-        "question": "Which of the two digit should be interchanged to correct the following equation?\n75 ÷ 18 + 51 × 8 - 82 = 87",
+        "question": "Which of the two digit should be interchanged to correct the following equation?\n75 ÷ 18 + 51 × 8 - 82 = 87",
         "options": {
           "a": "7 & 8",
           "b": "1 & 5",
@@ -1953,7 +1953,7 @@
           "d": "8 & 2"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
+        "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Digits & Signs",
         "conceptTested": "Balancing equations by interchanging specific digits and applying the BODMAS rule.",
@@ -1982,7 +1982,7 @@
           "d": "5"
         },
         "answer": "b",
-        "solution": "Solution\n\nHence, TWO pairs are there in the word ‘NIGHTMARE’ each of which has as many letters between them in the word as they have between them in the English Alphabet.",
+        "solution": "Solution\n\nHence, TWO pairs are there in the word ‘NIGHTMARE’ each of which has as many letters between them in the word as they have between them in the English Alphabet.",
         "topic": "Alphabet Test",
         "subtopic": "Letter Pairs Problem",
         "conceptTested": "Counting forward and backward letter pairs in a word corresponding to their alphabetical distance.",
@@ -2011,7 +2011,7 @@
           "d": "26"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe Venn diagram given below:\n\nThe shaded part represent the number of senior citizens who do not have diabetes = 26 + 5 = 31 (Here we take the all number of rectangle except the numbers which include in circle also).\n\nHence, the correct answer is \"31\".\n\nMistake Points\nWe are not include the numbers 7 and 18 whereas they are also part of rectangle. because they are part of circle (which represent the Diabetic) and question asked about the Senior citizen who do not have Diabetes.",
+        "solution": "Solution\n\nThe Venn diagram given below:\n\nThe shaded part represent the number of senior citizens who do not have diabetes = 26 + 5 = 31 (Here we take the all number of rectangle except the numbers which include in circle also).\n\nHence, the correct answer is \"31\".\n\nMistake Points\nWe are not include the numbers 7 and 18 whereas they are also part of rectangle. because they are part of circle (which represent the Diabetic) and question asked about the Senior citizen who do not have Diabetes.",
         "topic": "Venn Diagram",
         "subtopic": "Logical Venn Diagrams",
         "conceptTested": "Extraction of specific region counts from intersecting geometric shapes based on conditional exclusion.",
@@ -2034,13 +2034,13 @@
         "avgTime": "00:27",
         "question": "Statement: The richer we are the more self-centered we become and neglect other's needs.\n\nConclusions:\nI. All rich are self-centered.\nII. Those who neglect other's needs are rich.\n\nDetermine which of the given conclusions logically follows from the statement.",
         "options": {
-          "a": "Only conclusion I is true.",
-          "b": "Only conclusion II is true.",
+          "a": "Only\nconclusion I is true.",
+          "b": "Only\nconclusion II is true.",
           "c": "Both I and II are true.",
           "d": "Neither I nor II is true."
         },
         "answer": "d",
-        "solution": "Solution\n\nOption 4.Neither I nor II is true.\n\nThe statement shares an idea that the richer a person gets the more self-centered he becomes and ignores others.\n\nFrom what is supplied it cannot be concluded that all the rich are self-centered. This is a generic conclusion and may not hold true for all the rich. Therefore conclusion I does not follow.\n\nAlso from the supplied statement, we cannot conclude the converse that those who are selfish and neglect other's needs are necessarily rich. Therefore, conclusion II does not follow.\n\nHence, option 4 is correct.",
+        "solution": "Solution\n\nOption 4.Neither I nor II is true.\n\nThe statement shares an idea that the richer a person gets the more self-centered he becomes and ignores others.\n\nFrom what is supplied it cannot be concluded that all the rich are self-centered. This is a generic conclusion and may not hold true for all the rich. Therefore\nconclusion I does not follow.\n\nAlso from the supplied statement, we cannot conclude the converse that those who are selfish and neglect other's needs are necessarily rich. Therefore,\nconclusion II does not follow.\n\nHence, option 4 is correct.",
         "topic": "Statement & Conclusion",
         "subtopic": "Critical verbal reasoning deduction from statements",
         "conceptTested": "Evaluating whether universal generalizations or converses logically follow from a given conditional premise.",
@@ -2069,7 +2069,7 @@
           "d": "5"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe logic followed here is:\n\nGiven number sequence 8 3 2 1 6 2 4 3 7 1 7 2.\n\nNow, all the odd numbers are increased by two and all the even numbers are decreased by two\n\nThe number sequence (8 – 2) (3 + 2) (2 – 2) (1 + 2) (6 – 2) (2 – 2) (4 – 2) (3 + 2) (7 + 2) (1 + 2) (7 + 2) (2 – 2)\n\nOr, 6 5 0 3 4 0 2 5 9 3 9 0\n\nThen the new number sequence is arranged in ascending order;\n\n0 0 0 2 3 3 4 5 5 6 9 9\n\nTherefore, the fifth number from the left is '3'.\nHence, the correct answer is \" Option (3)\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nGiven number sequence 8 3 2 1 6 2 4 3 7 1 7 2.\n\nNow, all the odd numbers are increased by two and all the even numbers are decreased by two\n\nThe number sequence (8 – 2) (3 + 2) (2 – 2) (1 + 2) (6 – 2) (2 – 2) (4 – 2) (3 + 2) (7 + 2) (1 + 2) (7 + 2) (2 – 2)\n\nOr, 6 5 0 3 4 0 2 5 9 3 9 0\n\nThen the new number sequence is arranged in ascending order;\n\n0 0 0 2 3 3 4 5 5 6 9 9\n\nTherefore, the fifth number from the left is '3'.\nHence, the correct answer is \" Option (3)\".",
         "topic": "Alphabet Test",
         "subtopic": "Vowel-Consonant / Number Operations",
         "conceptTested": "Arithmetic operations applied to digits based on parity followed by sorting",
@@ -2156,7 +2156,7 @@
           "d": "2 and 4"
         },
         "answer": "c",
-        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMAS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMAS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMAS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMAS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
+        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing mathematical equations by substituting numbers and applying BODMAS rule",
@@ -2206,7 +2206,7 @@
         "correctOption": "C",
         "userTime": "02:21",
         "avgTime": "01:10",
-        "question": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following statement is correct?",
+        "question": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following\nstatement is correct?",
         "options": {
           "a": "Jenny is sitting second to right of Mani",
           "b": "Simi and Sanu sit at the ends",
@@ -2267,12 +2267,12 @@
         "question": "Two Statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nNo plate is Mug.\nSome Mugs are Tables.\nConclusions:\nI. All plates being tables is a possibility.\nII. Some tables are not mugs.",
         "options": {
           "a": "Both conclusions I and II follow",
-          "b": "Neither conclusion I nor II follow.",
-          "c": "Only conclusion I follows.",
-          "d": "Only conclusion II follows."
+          "b": "Neither\nconclusion I nor II follow.",
+          "c": "Only\nconclusion I follows.",
+          "d": "Only\nconclusion II follows."
         },
         "answer": "c",
-        "solution": "Solution\n\nGiven Statements:\n\nNo plate is Mug.\n\nSome Mugs are Tables.\n\nThe least possible Venn diagram for the given statement is:\n\nConclusions:\n\nI. All plates being tables is a possibility - True (Because, No definite relation given between plates and tables, so All plates being tables can be possible).\n\nII. Some tables are not mugs - False (Because, Some tables are mugs, but no information given to the remaining part, so only possibility can be true here).\n\nSo, Only conclusion I follows.\n\nHence, the correct answer is \"Option 3\".",
+        "solution": "Solution\n\nGiven Statements:\n\nNo plate is Mug.\n\nSome Mugs are Tables.\n\nThe least possible Venn diagram for the given\nstatement is:\n\nConclusions:\n\nI. All plates being tables is a possibility - True (Because, No definite relation given between plates and tables, so All plates being tables can be possible).\n\nII. Some tables are not mugs - False (Because, Some tables are mugs, but no information given to the remaining part, so only possibility can be true here).\n\nSo, Only\nconclusion I follows.\n\nHence, the correct answer is \"Option 3\".",
         "topic": "Syllogism",
         "subtopic": "Deductive Venn Logic with Possibilities",
         "conceptTested": "Analyzing categorical syllogisms involving negative statements and affirmative possibility inferences.",
@@ -2330,7 +2330,7 @@
           "d": "Goose : Geese"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe logic followed is →  1st word is the general category of animals and 2nd word is the specific male word of that animal.\n\nThe general animal is a bear, the male is called a boar.\n\nThus, the correct answer is → Chicken : Rooster\n\nHere, the general animal is a chicken, the male is called a rooster.\n\nMistake Point\n\nOx : Cow is not the correct answer because → ox is male and cow is female, thus it does not follow the logic of the question.",
+        "solution": "Solution\n\nThe logic followed is →  1st word is the general category of animals and 2nd word is the specific male word of that animal.\n\nThe general animal is a bear, the male is called a boar.\n\nThus, the correct answer is → Chicken : Rooster\n\nHere, the general animal is a chicken, the male is called a rooster.\n\nMistake Point\n\nOx : Cow is not the correct answer because → ox is male and cow is female, thus it does not follow the logic of the question.",
         "topic": "Analogy",
         "subtopic": "Word Analogy - Animal and Gender/Type",
         "conceptTested": "Semantic relationship based on general animal category and its specific male term.",
@@ -2351,7 +2351,7 @@
         "correctOption": "B",
         "userTime": "01:12",
         "avgTime": "00:40",
-        "question": "Refer to the following letter, number, symbol series and answer the question that follows.\\n(Left) D 2 @ 6 K 4 G & T 3 S C % 7 R Y # 5 E \\u03a9 (Right)\\nWhich element is sixth to the right of the element which is fifteenth from the right end of the series?",
+        "question": "Refer to the following letter, number, symbol series and answer the question that follows.\n(Left) D 2 @ 6 K 4 G & T 3 S C % 7 R Y # 5 E Ω (Right)\nWhich element is sixth to the right of the element which is fifteenth from the right end of the series?",
         "options": {
           "a": "%",
           "b": "C",
@@ -2359,7 +2359,7 @@
           "d": "7"
         },
         "answer": "b",
-        "solution": "Solution\n\nAccording to the given information,\n\nThe series has a total of 20 elements.\n\"4\" is the element that is 15th from the right side of the series.\n\"C' is the element that is 6th to the right of \"4\".\n\n​\n\nHence, the correct answer is \"C\".",
+        "solution": "Solution\n\nAccording to the given information,\n\nThe series has a total of 20 elements.\n\"4\" is the element that is 15th from the right side of the series.\n\"C' is the element that is 6th to the right of \"4\".\n\n​\n\nHence, the correct answer is \"C\".",
         "topic": "Letter & Symbol Series",
         "subtopic": "Alphanumeric Series",
         "conceptTested": "Positional calculation from left/right ends in a mixed alphanumeric-symbol sequence",
@@ -2388,7 +2388,7 @@
           "d": "LLRE"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe logic followed here is:\n\nSo, 'LLRE' will replace the question mark in the given series.\n\nHence, the correct answer is \"Option 4\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nSo, 'LLRE' will replace the question mark in the given series.\n\nHence, the correct answer is \"Option 4\".",
         "topic": "Letter & Symbol Series",
         "subtopic": "Continuous Pattern Series",
         "conceptTested": "Identification of repeating letter cluster patterns in blank-fill series",
@@ -2411,13 +2411,13 @@
         "avgTime": "00:20",
         "question": "In the question below, a statement followed by two conclusions numbered I and II is given. You have to assume everything in the statement to be true, then consider the two conclusions together and decide which of them logically follows beyond a reasonable doubt from the information given in the statement.\nStatement : If all players play to their full potential, we will win the match. We have won the match.\nConclusions :\nI. All players played to their full potential.\nII. Some players did not play to their full potential.",
         "options": {
-          "a": "Only conclusion I follows.",
-          "b": "Only conclusion II follows.",
+          "a": "Only\nconclusion I follows.",
+          "b": "Only\nconclusion II follows.",
           "c": "Both I and II follow.",
           "d": "Neither I nor II follows."
         },
         "answer": "d",
-        "solution": "Solution\n\nGiven:\nStatement: If all players play to their full potential, we will win the match. We have won the match.\n\nConclusions:\n\nI. All players played to their full potential - False (Because the statement is of the form If P, then Q. From the fact that Q has occurred (we won the match), it cannot be concluded that P (all players played to their full potential) must have occurred. The team could have won for other reasons.)\n\nII. Some players did not play to their full potential - False (Because there is no information to conclude that any player failed to play to their full potential. This is also not logically implied by the statement.)\n\nSo, neither Conclusion I nor Conclusion II follows.\n\nHence, the correct answer is \"Option 4\".",
+        "solution": "Solution\n\nGiven:\nStatement: If all players play to their full potential, we will win the match. We have won the match.\n\nConclusions:\n\nI. All players played to their full potential - False (Because the\nstatement is of the form If P, then Q. From the fact that Q has occurred (we won the match), it cannot be concluded that P (all players played to their full potential) must have occurred. The team could have won for other reasons.)\n\nII. Some players did not play to their full potential - False (Because there is no information to conclude that any player failed to play to their full potential. This is also not logically implied by the statement.)\n\nSo, neither\nConclusion I nor\nConclusion II follows.\n\nHence, the correct answer is \"Option 4\".",
         "topic": "Statement & Conclusion",
         "subtopic": "Conditional Deductions & Fallacies",
         "conceptTested": "Fallacy of the converse in conditional propositional logic (affirming the consequent)",
@@ -2446,7 +2446,7 @@
           "d": "leave the examination hall"
         },
         "answer": "c",
-        "solution": "Solution\nThe correct answer is Option 3: take out another pen that you carried and finish the examination.\n\nStatement\tCorrectness\tReasoning\nsit in the examination center till the exam time gets over and will not write anything. \tIncorrect\tThis shows that you needed an excuse to not give the exam as you were not prepared.\nrequested invigilator for a pen.\tIncorrect\tThis is incorrect because it is showing how serious you are about the exam.\ntake out another pen carried by him and finished the examination.\tCorrect\tThis shows how planned you are toward the exam.\n\nleft the examination hall\n\nIncorrect\tThis shows you don't care about the exam.\n\nQualities Projected in this situation:  (Effective intelligence and Organising abilities).\n\nKey Points\nChecklist for attempting SRT questions:\nRead the question and options carefully.\nLook for options that are realistic, optimistic, and reflect officer-like qualities.\nDo not skip any situation.\nRelegate the negative sentences and choose the most logical option among the remaining. As time is an important factor, hence your thinking ability should be swift.\nReact quickly and be logical.\n\nAdditional Information\nOfficer qualities:",
+        "solution": "Solution\nThe correct answer is Option 3: take out another pen that you carried and finish the examination.\n\nStatement\tCorrectness\tReasoning\nsit in the examination center till the exam time gets over and will not write anything. \tIncorrect\tThis shows that you needed an excuse to not give the exam as you were not prepared.\nrequested invigilator for a pen.\tIncorrect\tThis is incorrect because it is showing how serious you are about the exam.\ntake out another pen carried by him and finished the examination.\tCorrect\tThis shows how planned you are toward the exam.\n\nleft the examination hall\n\nIncorrect\tThis shows you don't care about the exam.\n\nQualities Projected in this situation:  (Effective intelligence and Organising abilities).\n\nKey Points\nChecklist for attempting SRT questions:\nRead the question and options carefully.\nLook for options that are realistic, optimistic, and reflect officer-like qualities.\nDo not skip any situation.\nRelegate the negative sentences and choose the most logical option among the remaining. As time is an important factor, hence your thinking ability should be swift.\nReact quickly and be logical.\n\nAdditional Information\nOfficer qualities:",
         "topic": "Statement & Conclusion",
         "subtopic": "Situation Reaction Test",
         "conceptTested": "Assessment of officer-like qualities, presence of mind, and preparedness in a practical examination constraint.",
@@ -2475,7 +2475,7 @@
           "d": "× and -"
         },
         "answer": "c",
-        "solution": "Solution\n\nBODMAS RULE:\n\nOption (1): × and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is : 72 × 36 + 12 ÷ 13 - 48 = 63\n⇒  72  × 36+ 0.92 - 48 = 63\n⇒ 2592 + 0.92 - 48 = 63\n⇒ 2592.92 - 48  = 63\n⇒ 2544.92 ≠ 63\n⇒ LHS ≠ RHS\nOption (2): + and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 - 12 × 13 + 48 = 63\n⇒ 2 - 12 × 13 + 48 = 63\n⇒ 2 - 156 + 48 = 63\n⇒ 2 + 48 - 156 = 63\n⇒ 50 - 156 = 63\n⇒ -106 ≠ 63\n⇒ LHS ≠ RHS\nOption (3): + and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 + 36 ÷ 12 × 13 - 48 = 63\n⇒ 72 + 3 × 13 - 48 = 63\n⇒ 72 + 39 - 48 = 63\n⇒ 111 - 48 = 63\n⇒ 63 = 63\n⇒ LHS = RHS\nOption (4): × and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 624 = 63\n⇒ 14 - 624 = 63\n⇒ - 610 ≠ 63\n⇒ LHS ≠ RHS\nHence, the correct answer is \"+ and ÷\".",
+        "solution": "Solution\n\nBODMAS RULE:\n\nOption (1): × and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is : 72 × 36 + 12 ÷ 13 - 48 = 63\n⇒  72  × 36+ 0.92 - 48 = 63\n⇒ 2592 + 0.92 - 48 = 63\n⇒ 2592.92 - 48  = 63\n⇒ 2544.92 ≠ 63\n⇒ LHS ≠ RHS\nOption (2): + and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 - 12 × 13 + 48 = 63\n⇒ 2 - 12 × 13 + 48 = 63\n⇒ 2 - 156 + 48 = 63\n⇒ 2 + 48 - 156 = 63\n⇒ 50 - 156 = 63\n⇒ -106 ≠ 63\n⇒ LHS ≠ RHS\nOption (3): + and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 + 36 ÷ 12 × 13 - 48 = 63\n⇒ 72 + 3 × 13 - 48 = 63\n⇒ 72 + 39 - 48 = 63\n⇒ 111 - 48 = 63\n⇒ 63 = 63\n⇒ LHS = RHS\nOption (4): × and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 624 = 63\n⇒ 14 - 624 = 63\n⇒ - 610 ≠ 63\n⇒ LHS ≠ RHS\nHence, the correct answer is \"+ and ÷\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing mathematical equations by interchanging signs according to the BODMAS rule.",
@@ -2533,7 +2533,7 @@
           "d": "Only argument II is strong."
         },
         "answer": "c",
-        "solution": "Solution\n\nThe argument I is strong.\n\nIt is true that Yoga and meditation help the students to have better concentration which eventually helps in their studies.\n\nArgument II is not strong as the argument given against not doing Yoga and meditation is vague.\n\nHence, the only argument I is strong.",
+        "solution": "Solution\n\nThe argument I is strong.\n\nIt is true that Yoga and meditation help the students to have better concentration which eventually helps in their studies.\n\nArgument II is not strong as the argument given against not doing Yoga and meditation is vague.\n\nHence, the only argument I is strong.",
         "topic": "Statement & Arguments",
         "subtopic": "Strong vs Weak Arguments",
         "conceptTested": "Evaluating the logical validity and practical impact of statements in arguments.",
@@ -2562,7 +2562,7 @@
           "d": "24"
         },
         "answer": "a",
-        "solution": "Solution\n\nAccording to the given conditions,\n\nThere are total 37 students.\n\nRamesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh.\n\nThat means Dinesh's position from the top will be (9 + 6 = 15)\n\nSo, the final arrangement will be as;\n\nSo,\n\nNumber of students below Dinesh = Total number of students - (Dinesh's position from the top)\n= 37 - 15\n= 22\nTherefore, 22 students were ranked below Dinesh.\nHence, the correct answer is \"22\".",
+        "solution": "Solution\n\nAccording to the given conditions,\n\nThere are total 37 students.\n\nRamesh got 9th position from the top, while Dinesh's rank was 6 places below Ramesh.\n\nThat means Dinesh's position from the top will be (9 + 6 = 15)\n\nSo, the final arrangement will be as;\n\nSo,\n\nNumber of students below Dinesh = Total number of students - (Dinesh's position from the top)\n= 37 - 15\n= 22\nTherefore, 22 students were ranked below Dinesh.\nHence, the correct answer is \"22\".",
         "topic": "Order & Ranking",
         "subtopic": "Positions from Top/Bottom",
         "conceptTested": "Linear ordering calculations based on relative position shifts and total count.",
@@ -2591,7 +2591,7 @@
           "d": ""
         },
         "answer": "c",
-        "solution": "Solution\n\nHere, we unfold the paper-cutting step by step:\n\n​\n\nHence, the correct answer is \"Option (3)\".",
+        "solution": "Solution\n\nHere, we unfold the paper-cutting step by step:\n\n​\n\nHence, the correct answer is \"Option (3)\".",
         "topic": "Paper Folding & Cutting",
         "subtopic": "Paper Unfolding",
         "conceptTested": "Symmetry and visualization of punched holes after unfolding a folded sheet.",
@@ -2757,7 +2757,7 @@
         "correctOption": "C",
         "userTime": "00:25",
         "avgTime": "00:38",
-        "question": "Consider the given statement and decide which of the given assumptions is/are implicit in the statement.\\nStatement: Expressing concerns over rising oil prices, the CEO of Bhoodevi Corp, the world’s largest crude oil company, has demanded that the United Nations should lift sanctions against several countries in the middle-east Asia immediately.\\nAssumption I: The CEO is pained by the humanitarian crisis in the region.\\nAssumption II: The sanction is affecting the business interests of the company negatively.",
+        "question": "Consider the given statement and decide which of the given assumptions is/are implicit in the statement.\nStatement: Expressing concerns over rising oil prices, the CEO of Bhoodevi Corp, the world’s largest crude oil company, has demanded that the United Nations should lift sanctions against several countries in the middle-east Asia immediately.\nAssumption I: The CEO is pained by the humanitarian crisis in the region.\nAssumption II: The sanction is affecting the business interests of the company negatively.",
         "options": {
           "a": "Both the assumptions are implicit",
           "b": "Neither assumption is implicit",
@@ -2794,7 +2794,7 @@
           "d": "₹529.60"
         },
         "answer": "c",
-        "solution": "Solution\n\nGiven : Piyush buys 4 blankets at the rate of ₹450 per blanket.\n\nExplanation :\n\nCost price of 4 blankets at the rate of ₹450 per blanket = (4 × 450) ⇒ ₹1800\nSo, Piyush buys 4 blankets at the cost of = ₹1800\nNow, According to the question\n\nHe sells these 4 blankets to Gopi and earns a profit of 12% on his investment.\n\n​\n\nSo, Piyush sold at the profit of:\n\n= 1800 (12/100)\n= Rs 216\nSelling price = Cost price + Profit\n= 1800 + 216\n= Rs 2016\n\nGopi further sells all 4 blankets to Pritam and earns 15% profit.\n\n​\n\nSo, Gopi sold at the profit of:\n\n= 2016 (15/100)\n= Rs 302.4\nSelling price = Cost price + Profit\n= 2016 + 302.4\n= Rs 2318.4\n\n​Thus, according to the question the price at which Pritam bought one blanket is:\n\nFor 4 blankets cost price for Pritam is = Rs 2318.4\nTherefore, for 1 blanket cost price is = 2318.4/4 ⇒ Rs 579.6\nHence, \"₹579.60\" is the correct answer.",
+        "solution": "Solution\n\nGiven : Piyush buys 4 blankets at the rate of ₹450 per blanket.\n\nExplanation :\n\nCost price of 4 blankets at the rate of ₹450 per blanket = (4 × 450) ⇒ ₹1800\nSo, Piyush buys 4 blankets at the cost of = ₹1800\nNow, According to the question\n\nHe sells these 4 blankets to Gopi and earns a profit of 12% on his investment.\n\n​\n\nSo, Piyush sold at the profit of:\n\n= 1800 (12/100)\n= Rs 216\nSelling price = Cost price + Profit\n= 1800 + 216\n= Rs 2016\n\nGopi further sells all 4 blankets to Pritam and earns 15% profit.\n\n​\n\nSo, Gopi sold at the profit of:\n\n= 2016 (15/100)\n= Rs 302.4\nSelling price = Cost price + Profit\n= 2016 + 302.4\n= Rs 2318.4\n\n​Thus, according to the question the price at which Pritam bought one blanket is:\n\nFor 4 blankets cost price for Pritam is = Rs 2318.4\nTherefore, for 1 blanket cost price is = 2318.4/4 ⇒ Rs 579.6\nHence, \"₹579.60\" is the correct answer.",
         "topic": "Profit, Loss & Discount",
         "subtopic": "Successive Transactions",
         "conceptTested": "Calculating successive profit percentages over multiple transactions to find the final selling price.",
@@ -2823,7 +2823,7 @@
           "d": "P"
         },
         "answer": "b",
-        "solution": "Solution\n\nIdentify the 21st Letter from the Last\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 21st letter from the last is ‘F’.\n\nIdentify the 22nd Letter from the Beginning\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 22nd letter from the beginning is ‘V’.\n\nNow, find the Middle Letter between ‘F’ and ‘V’\nThe position of F: 6\nThe position of V: 22\n\nThe middle position is calculated as:\n\n(6 + 22) ÷ 2\n\n= 28 ÷  2\n= 14\n\nThe 14th letter in the alphabet is N.\n\nHence, the correct answer is \"Option 2\".",
+        "solution": "Solution\n\nIdentify the 21st Letter from the Last\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 21st letter from the last is ‘F’.\n\nIdentify the 22nd Letter from the Beginning\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 22nd letter from the beginning is ‘V’.\n\nNow, find the Middle Letter between ‘F’ and ‘V’\nThe position of F: 6\nThe position of V: 22\n\nThe middle position is calculated as:\n\n(6 + 22) ÷ 2\n\n= 28 ÷  2\n= 14\n\nThe 14th letter in the alphabet is N.\n\nHence, the correct answer is \"Option 2\".",
         "topic": "Alphabet Test",
         "subtopic": "Midpoint Position",
         "conceptTested": "Finding the exact middle position between a given letter from the reverse and a letter from the beginning of the English alphabet.",
@@ -2844,7 +2844,7 @@
         "correctOption": "C",
         "userTime": "00:21",
         "avgTime": "00:33",
-        "question": "Write the following words according to the order in which they appear in the dictionary.\\n1. Tangleberries\\n2. Tangentiality\\n3. Tangibilities\\n4. Tangoreceptor\\n5. Tangentially",
+        "question": "Write the following words according to the order in which they appear in the dictionary.\n1. Tangleberries\n2. Tangentiality\n3. Tangibilities\n4. Tangoreceptor\n5. Tangentially",
         "options": {
           "a": "52314",
           "b": "25134",
@@ -2852,7 +2852,7 @@
           "d": "52134"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic follows here is,\n\nThe arrangement of all the given words in the order in which they appear in an English dictionary is as shown below:\n\nThe four letters T, A, N, and G are common in all words, so we will start arranging the word from the fourth letter as per alphabetical order.\n\n2. Tangentiality\n5. Tangentially\n3. Tangibilities\n1. Tangleberries\n4. Tangoreceptor\nHence, the correct answer is \"25314\".",
+        "solution": "Solution\n\nThe logic follows here is,\n\nThe arrangement of all the given words in the order in which they appear in an English dictionary is as shown below:\n\nThe four letters T, A, N, and G are common in all words, so we will start arranging the word from the fourth letter as per alphabetical order.\n\n2. Tangentiality\n5. Tangentially\n3. Tangibilities\n1. Tangleberries\n4. Tangoreceptor\nHence, the correct answer is \"25314\".",
         "topic": "Word Formation & Dictionary Order",
         "subtopic": "Dictionary Ordering",
         "conceptTested": "Alphabetical sorting of words based on prefix matching for dictionary sequence.",
@@ -2881,7 +2881,7 @@
           "d": "Grandmother"
         },
         "answer": "c",
-        "solution": "Solution\n\nRepresentation:\n\nEXPLANATION:\n\nAccording to given question,\n\n“Sister of my husband” → Lady’s sister in law.\n\n“Daughter of his only sister” → Is the sister in law of the lady.\n\nSo man’s sister is the mother in law of the lady.\n\ni.e., the man is the brother of the lady’s mother in law.\n\nAccording to above information the following family tree is formed.\n\nHence, brother of mother in law is the correct answer.",
+        "solution": "Solution\n\nRepresentation:\n\nEXPLANATION:\n\nAccording to given question,\n\n“Sister of my husband” → Lady’s sister in law.\n\n“Daughter of his only sister” → Is the sister in law of the lady.\n\nSo man’s sister is the mother in law of the lady.\n\ni.e., the man is the brother of the lady’s mother in law.\n\nAccording to above information the following family tree is formed.\n\nHence, brother of mother in law is the correct answer.",
         "topic": "Blood Relations",
         "subtopic": "Indicating Form / Puzzle-based Blood Relation",
         "conceptTested": "Tracing family tree relationships step-by-step through descriptive statements.",

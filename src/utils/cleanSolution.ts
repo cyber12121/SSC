@@ -8,10 +8,19 @@
 export function cleanSolutionText(sol: string = ''): string {
   if (!sol) return '';
 
-  // 1. Replace escaped literal '\n' and carriage returns
-  let s = sol.replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  // 1. Decode literal unicode escapes like \u00f7 (÷) and \u00d7 (×)
+  let s = sol.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => {
+    try {
+      return String.fromCharCode(parseInt(hex, 16));
+    } catch {
+      return _;
+    }
+  });
 
-  // 2. Remove language header tags if present
+  // 2. Replace escaped literal '\n' and carriage returns
+  s = s.replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\u00a0/g, ' ');
+
+  // 3. Remove language header tags if present
   const parts = s.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
   s = parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
 

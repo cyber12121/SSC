@@ -18,6 +18,7 @@ import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
 import { AiMentorChat } from './components/AiMentorChat';
 import { safeStorage } from './utils/safeStorage';
+import { FormattedText } from './components/FormattedText';
 
 import { getCachedData, setCachedData } from './utils/cache';
 
@@ -475,6 +476,12 @@ export default function App() {
   const [loadingResults, setLoadingResults] = useState(false);
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loadingBookmarks, setLoadingBookmarks] = useState(false);
+  const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
+
+  const toggleChapterExpand = (subject: string, chapterTitle: string) => {
+    const key = `${subject}|${chapterTitle}`;
+    setExpandedChapters(prev => ({ ...prev, [key]: !prev[key] }));
+  };
 
   // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
   const latestResultByChapter = React.useMemo(() => {
@@ -2973,9 +2980,9 @@ export default function App() {
                                                   <Trash2 className="w-3.5 h-3.5" />
                                                 </button>
                                               </div>
-                                              <h4 className="text-xs font-bold text-slate-800 mb-2.5 leading-relaxed">
-                                                {bookmark.question.question}
-                                              </h4>
+                                              <div className="text-xs font-bold text-slate-800 mb-2.5 leading-relaxed">
+                                                <FormattedText text={bookmark.question.question} as="div" />
+                                              </div>
                                               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                                 {Object.entries(bookmark.question.options).map(([key, value]) => (
                                                   <div
@@ -2991,15 +2998,16 @@ export default function App() {
                                                     }`}>
                                                       {key.toUpperCase()}
                                                     </span>
-                                                    <span className="text-slate-700 text-xs font-medium">{value}</span>
+                                                    <FormattedText text={value} className="text-slate-700 text-xs font-medium" />
                                                   </div>
                                                 ))}
                                               </div>
                                               {bookmark.question.solution && (
                                                 <div className="mt-2.5 p-2 bg-blue-50/60 rounded-lg border border-blue-100 text-xs">
-                                                  <p className="text-blue-900 leading-relaxed">
-                                                    <span className="font-bold text-blue-700">Solution:</span> {bookmark.question.solution}
-                                                  </p>
+                                                  <div className="text-blue-900 leading-relaxed">
+                                                    <span className="font-bold text-blue-700">Solution: </span>
+                                                    <FormattedText text={bookmark.question.solution} />
+                                                  </div>
                                                 </div>
                                               )}
                                             </motion.div>

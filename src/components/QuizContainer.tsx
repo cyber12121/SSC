@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
+import { FormattedText } from './FormattedText';
 
 interface QuizContainerProps {
   chapter: Chapter;
@@ -225,6 +226,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [zoomLevel, setZoomLevel] = useState<number>(0); // -1: small, 0: base, 1: large, 2: xl
   const [showInstructionsModal, setShowInstructionsModal] = useState(false);
+  const [showSymbolsModal, setShowSymbolsModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
@@ -1171,7 +1173,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               {/* Question Statement Box */}
               <div className="border border-gray-300 rounded-[2px] bg-white overflow-hidden shadow-2xs mb-4">
                 <div className={`p-4 sm:p-5 ${fontSizeClass} text-gray-900 leading-relaxed`}>
-                  <p className="whitespace-pre-wrap">{getQuestionText()}</p>
+                  <FormattedText
+                    text={currentQuestion?.question}
+                    language={language}
+                    className="whitespace-pre-wrap select-text leading-relaxed"
+                    as="div"
+                  />
                   {currentQuestion?.image?.src && (
                     <div className="mt-4">
                       <img
@@ -1190,7 +1197,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                       const rawOpt = currentQuestion.options[k];
                       if (!rawOpt) return null;
                       const isSelected = answers[currentIdx] === k;
-                      const optText = getOptionText(rawOpt);
 
                       return (
                         <div
@@ -1211,7 +1217,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
                           {/* Right column: Option text */}
                           <div className={`flex-1 px-4 py-3.5 ${fontSizeClass} text-gray-800 leading-normal flex items-center`}>
-                            {optText}
+                            <FormattedText text={rawOpt} language={language} />
                           </div>
                         </div>
                       );
@@ -1226,7 +1232,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   {currentQuestion && optionKeys.map((k) => {
                     const rawOpt = currentQuestion.options[k];
                     if (!rawOpt) return null;
-                    const optText = getOptionText(rawOpt);
                     const isSelected = answers[currentIdx] === k;
                     const isAttempted = answers[currentIdx] !== undefined;
                     const isCorrectOption = k === correctOptionKey;
@@ -1286,8 +1291,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                       >
                         <div className="flex items-center gap-3.5 flex-1 min-w-0 pr-2">
                           {badgeIcon}
-                          <span className={`${fontSizeClass} leading-normal select-text`}>
-                            {optText}
+                          <span className={`${fontSizeClass} leading-normal select-text flex-1`}>
+                            <FormattedText text={rawOpt} language={language} />
                           </span>
                         </div>
                         {statusBadge && <div className="shrink-0 ml-2">{statusBadge}</div>}
@@ -1362,8 +1367,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
                   <div className="p-4 sm:p-5 text-gray-900 bg-white">
                     {getFormattedSolution() ? (
-                      <div className={`whitespace-pre-wrap ${fontSizeClass} leading-relaxed font-sans text-gray-800`}>
-                        {getFormattedSolution()}
+                      <div className={`${fontSizeClass} leading-relaxed font-sans text-gray-800`}>
+                        <FormattedText text={getFormattedSolution()} language={language} as="div" />
                       </div>
                     ) : (
                       <div className="text-sm text-gray-600">
@@ -1876,6 +1881,49 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               >
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>{isDeleting ? 'Deleting Everywhere...' : 'Delete Everywhere'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── SYMBOLS LEGEND MODAL ── */}
+      {showSymbolsModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in duration-150">
+          <div className="bg-white rounded-lg max-w-md w-full shadow-2xl border border-gray-300 overflow-hidden">
+            <div className="bg-[#0088cc] text-white px-4 py-3 flex items-center justify-between">
+              <h3 className="font-bold text-sm sm:text-base">Question Palette Symbols Legend</h3>
+              <button
+                onClick={() => setShowSymbolsModal(false)}
+                className="text-white/80 hover:text-white cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-5 space-y-3 text-xs text-gray-700">
+              <div className="flex items-center gap-3">
+                <span className="w-7 h-7 bg-[#2e7d32] text-white font-bold rounded flex items-center justify-center shrink-0">1</span>
+                <span><b>Answered</b>: You have answered the question.</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-7 h-7 bg-[#c62828] text-white font-bold rounded flex items-center justify-center shrink-0">2</span>
+                <span><b>Not Answered</b>: You have not answered the question.</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-7 h-7 bg-[#6a1b9a] text-white font-bold rounded flex items-center justify-center shrink-0">3</span>
+                <span><b>Marked for Review</b>: You have marked the question for review without answering.</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-7 h-7 bg-[#d32f2f] text-white font-bold rounded flex items-center justify-center shrink-0">4</span>
+                <span><b>Not Visited</b>: You have not visited the question yet.</span>
+              </div>
+            </div>
+            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end">
+              <button
+                onClick={() => setShowSymbolsModal(false)}
+                className="px-4 py-1.5 bg-[#0088cc] text-white text-xs font-bold rounded hover:bg-[#0077b3] cursor-pointer"
+              >
+                Close
               </button>
             </div>
           </div>
