@@ -559,13 +559,13 @@ export function AiMentorChat({
             : undefined,
           activeReviewQuestions: activeReviewResult?.questionDetails?.map((qd, idx) => ({
             qNum: idx + 1,
-            question: qd.question.question,
-            options: qd.question.options,
-            correctAnswer: qd.question.answer,
-            userAnswer: qd.userAnswer,
+            question: qd.question?.question || '',
+            options: qd.question?.options || {},
+            correctAnswer: qd.question?.answer || '',
+            userAnswer: qd.selectedAnswer || (qd as any).userAnswer || '',
             isCorrect: qd.isCorrect,
-            solution: qd.question.solution,
-            topic: qd.question.tags?.topic || (qd.question as any).topic
+            solution: qd.question?.solution || '',
+            topic: qd.question?.tags?.topic || (qd.question as any)?.topic || 'General'
           }))
         })
       });
