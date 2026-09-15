@@ -25,6 +25,13 @@ export interface Question {
   } | null;
   subject?: string;
   section?: string;
+  // Legacy / data-layer fields present in JSON but not always typed
+  topic?: string;
+  sectionKey?: string;
+  subjectName?: string;
+  correct_answer?: string;
+  correctOption?: string;
+  correct_option?: string;
   tags?: {
     topic?: string;
     exam_years?: string[];
@@ -32,7 +39,14 @@ export interface Question {
     difficulty?: 'easy' | 'medium' | 'hard';
   };
   avgTime?: string | number;
+  avg_time?: string | number;
   avgTimeSeconds?: number;
+  userTime?: number;
+  user_time?: number;
+  // Mock error tracking fields
+  status?: string;
+  isSlow?: boolean;
+  errorType?: 'speed_issue' | 'unattempted' | 'wrong';
   rca?: RCAClassification;
 }
 

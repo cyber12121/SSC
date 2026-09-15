@@ -33,8 +33,6 @@ import {
 import { QuizResult, Question, RCATagType, RCAClassification } from '../types';
 import { cleanSolutionText } from '../utils/cleanSolution';
 
-const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
-
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
   if (rawTime === undefined || rawTime === null) return null;
   if (typeof rawTime === 'number') {
@@ -75,7 +73,7 @@ interface ReviewViewProps {
   onReattempt: () => void;
   onBack: () => void;
   userName?: string;
-  bookmarkedIds?: Set<number>;
+  bookmarkedIds?: Set<number | string>;
   onBookmarkToggle?: (question: Question) => void;
   onViewAnalytics?: () => void;
   onDeleteQuestion?: (question: Question) => Promise<void> | void;
@@ -100,7 +98,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [reattemptMode, setReattemptMode] = useState(false);
   const [reattemptAnswers, setReattemptAnswers] = useState<Record<number, string>>({});
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [rating, setRating] = useState<number>(0);
   const [selectedFilter, setSelectedFilter] = useState<FilterType>('all');
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [language, setLanguage] = useState<LanguageType>('English');
@@ -108,16 +105,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [showSummaryModal, setShowSummaryModal] = useState(false);
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportSubmitted, setReportSubmitted] = useState(false);
-  const [localBookmarks, setLocalBookmarks] = useState<Set<number>>(new Set(bookmarkedIds));
+  const [localBookmarks, setLocalBookmarks] = useState<Set<number | string>>(new Set(bookmarkedIds));
   const [deletedIndices, setDeletedIndices] = useState<Set<number>>(new Set());
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
+  const [isFinishingReview, setIsFinishingReview] = useState(false);
+  const [finishToast, setFinishToast] = useState<string | null>(null);
 
-  // ─── ROOT CAUSE ANALYSIS (RCA) CLASSIFICATION STATE ───
+  // isMockReview: only true for actual mock/error review sessions, not chapter bank quizzes
   const isMockReview = Boolean(
-    result.chapter_title?.toLowerCase().includes('mock') || 
-    (result.totalQuestions >= 20) || 
+    result.chapter_title?.toLowerCase().includes('mock') ||
     result.category === 'mockErrors'
   );
   const [classifyModeEnabled, setClassifyModeEnabled] = useState<boolean>(true);
@@ -181,14 +179,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
     const updated = { ...rcaMap, [currentIdx]: newRca };
     setRcaMap(updated);
-
-    // Update in-memory objects
-    if (items[currentIdx]) {
-      items[currentIdx].rca = newRca;
-      if (items[currentIdx].question) {
-        items[currentIdx].question!.rca = newRca;
-      }
-    }
+    // NOTE: we do NOT mutate items[] directly (it's derived from a prop).
+    // The rcaMap state is the source of truth for RCA display.
 
     // Persist to localStorage
     try {
@@ -235,13 +227,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       };
       const updated = { ...rcaMap, [currentIdx]: updatedRca };
       setRcaMap(updated);
-
-      if (items[currentIdx]) {
-        items[currentIdx].rca = updatedRca;
-        if (items[currentIdx].question) {
-          items[currentIdx].question!.rca = updatedRca;
-        }
-      }
+      // NOTE: do NOT mutate items[] directly (it's derived from a prop).
+      // rcaMap state is the single source of truth for RCA display.
 
       try {
         if (typeof window !== 'undefined') {
@@ -287,6 +274,108 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     }
   };
 
+  const handleFinishReview = async () => {
+    setIsFinishingReview(true);
+    try {
+      // 1. Flush any active silly note on the current question if tag is 'A'
+      let currentRcaMap = { ...rcaMap };
+      if (currentRcaMap[currentIdx]?.tag === 'A' && activeSillyNote) {
+        currentRcaMap[currentIdx] = {
+          ...currentRcaMap[currentIdx],
+          sillyMistakeNote: activeSillyNote,
+          classifiedAt: new Date().toISOString()
+        };
+        setRcaMap(currentRcaMap);
+      }
+
+      // 2. Persist to localStorage
+      if (typeof window !== 'undefined') {
+        if (result.id) {
+          window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(currentRcaMap));
+        }
+        if (result.chapter_title) {
+          window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(currentRcaMap));
+        }
+
+        // Update global store for Error Heatmap & Sankalp AI
+        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+        items.forEach((item, idx) => {
+          const rca = currentRcaMap[idx] || item.rca || item.question?.rca;
+          if (rca) {
+            const qId = item.question?.id || `${result.id || 'mock'}_${idx + 1}`;
+            globalStore[qId] = {
+              ...rca,
+              mockId: result.id,
+              mockTitle: result.chapter_title,
+              subject: item.question?.subject || result.subject,
+              topic: item.question?.tags?.topic || 'General',
+              questionText: item.question?.question
+            };
+          }
+        });
+        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+
+        // Update cached mock questions in localStorage
+        let questionsToSave: any[] = [];
+        if (result.id) {
+          const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+          if (cachedRaw) {
+            try {
+              questionsToSave = JSON.parse(cachedRaw);
+            } catch {}
+          }
+        }
+
+        if (!Array.isArray(questionsToSave) || questionsToSave.length === 0) {
+          questionsToSave = items.map((it, idx) => {
+            const q = it.question ? { ...it.question } : ({} as any);
+            const rca = currentRcaMap[idx] || it.rca || q.rca;
+            if (rca) q.rca = rca;
+            return q;
+          });
+        } else {
+          questionsToSave = questionsToSave.map((q, idx) => {
+            const rca = currentRcaMap[idx] || items[idx]?.rca || q.rca;
+            if (rca) q.rca = rca;
+            return q;
+          });
+        }
+
+        if (result.id) {
+          window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
+          
+          // 3. Post to backend /api/mock-questions/:id so disk storage also persists the RCA reason and tag
+          try {
+            await fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(questionsToSave)
+            });
+          } catch (postErr) {
+            console.warn('Backend sync failed, saved locally:', postErr);
+          }
+        }
+      }
+
+      const totalTagged = Object.keys(currentRcaMap).length;
+      setFinishToast(`Review Saved! ${totalTagged} questions tagged with RCA reasons.`);
+      setTimeout(() => {
+        setFinishToast(null);
+        onBack();
+      }, 1200);
+    } catch (e) {
+      console.error('Failed to finish review:', e);
+      setFinishToast('Review saved locally.');
+      setTimeout(() => {
+        setFinishToast(null);
+        onBack();
+      }, 1000);
+    } finally {
+      setIsFinishingReview(false);
+    }
+  };
+
   // Pre-index avgTime and userTime from bundled mock questions or localStorage
   const [mockAvgTimeMap, setMockAvgTimeMap] = useState<Map<string, number>>(new Map());
   const [mockUserTimeMap, setMockUserTimeMap] = useState<Map<string, number>>(new Map());
@@ -320,33 +409,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   }
                 });
               }
-            }
-          }
-        }
-      } catch {}
-
-      // 2. Load from mockQuestionModules
-      try {
-        const paths = Object.keys(mockQuestionModules);
-        for (const path of paths) {
-          const loader = mockQuestionModules[path];
-          if (typeof loader === 'function') {
-            const mod: any = await loader();
-            const list = mod.default || mod;
-            if (Array.isArray(list)) {
-              list.forEach((item: any) => {
-                const text = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
-                const parsedAvg = parseAvgTimeToSeconds(item.avgTime || item.avg_time || item.avgTimeSeconds);
-                if (parsedAvg !== null) {
-                  if (text) avgMap.set(text, parsedAvg);
-                  if (item.id) avgMap.set(String(item.id), parsedAvg);
-                }
-                const parsedUser = parseAvgTimeToSeconds(item.userTime || item.user_time || item.timeSpent || item.timeTaken);
-                if (parsedUser !== null && parsedUser > 0) {
-                  if (text) userMap.set(text, parsedUser);
-                  if (item.id) userMap.set(String(item.id), parsedUser);
-                }
-              });
             }
           }
         }
@@ -554,11 +616,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (onBookmarkToggle) {
       onBookmarkToggle(question);
     }
+    const textKey = (question.question || '').trim().toLowerCase();
     setLocalBookmarks(prev => {
       const next = new Set(prev);
-      if (next.has(question.q_num)) {
+      const isMarked = (textKey && next.has(textKey)) || next.has(question.q_num);
+      if (isMarked) {
+        if (textKey) next.delete(textKey);
         next.delete(question.q_num);
       } else {
+        if (textKey) next.add(textKey);
         next.add(question.q_num);
       }
       return next;
@@ -729,7 +795,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   };
 
   const currentStatus = current ? getQuestionStatus(currentIdx) : 'unattempted';
-  const isBookmarked = question ? localBookmarks.has(question.q_num) : false;
+  const qTextKey = (question?.question || '').trim().toLowerCase();
+  const isBookmarked = question ? (localBookmarks.has(qTextKey) || localBookmarks.has(question.q_num)) : false;
 
   // Average time for question:
   // Use exact avgTime if provided in mock data; if not given, default to 35 seconds
@@ -817,25 +884,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center space-x-4">
-          {/* Rate the Test */}
-          <div className="hidden sm:flex items-center space-x-2 text-xs">
-            <span className="text-white/90 font-medium">Rate the Test</span>
-            <div className="flex items-center space-x-1">
-              {[1, 2, 3, 4, 5].map((starVal) => (
-                <button
-                  key={starVal}
-                  onClick={() => setRating(starVal)}
-                  className={`w-5 h-5 rounded-full border border-white/80 flex items-center justify-center transition-all ${
-                    rating >= starVal ? 'bg-amber-400 border-amber-400 text-slate-900' : 'hover:bg-white/20 text-white'
-                  }`}
-                  title={`Rate ${starVal} Star`}
-                >
-                  <Star className={`w-3 h-3 ${rating >= starVal ? 'fill-current text-white' : 'text-white'}`} />
-                </button>
-              ))}
-            </div>
-          </div>
+        <div className="flex items-center space-x-3">
+          {/* FINISH REVIEW Button */}
+          <button
+            onClick={handleFinishReview}
+            disabled={isFinishingReview}
+            className="bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs font-bold px-3.5 py-1.5 rounded tracking-wider uppercase shadow transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+            title="Save all RCA reasons and finish review"
+          >
+            <CheckCircle2 className="w-4 h-4" />
+            <span>{isFinishingReview ? 'Saving...' : 'Finish Review'}</span>
+          </button>
 
           {/* ANALYTICS Button */}
           <button
@@ -1862,16 +1921,29 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             <div className="p-4 border-t border-gray-200 bg-gray-50 flex items-center justify-between">
               <button
                 onClick={onReattempt}
-                className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded hover:bg-emerald-700 flex items-center"
+                className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded hover:bg-emerald-700 flex items-center cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5 mr-1.5" /> Reattempt Test
               </button>
-              <button
-                onClick={() => setShowSummaryModal(false)}
-                className="px-5 py-2 bg-[#0097a7] text-white text-xs font-bold rounded hover:bg-[#00838f]"
-              >
-                Back to Review
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowSummaryModal(false)}
+                  className="px-4 py-2 border border-gray-300 text-gray-700 text-xs font-bold rounded hover:bg-gray-100 cursor-pointer"
+                >
+                  Back to Review
+                </button>
+                <button
+                  onClick={() => {
+                    setShowSummaryModal(false);
+                    handleFinishReview();
+                  }}
+                  disabled={isFinishingReview}
+                  className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded hover:bg-emerald-700 flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>{isFinishingReview ? 'Saving...' : 'Finish Review'}</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -2004,6 +2076,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-lg shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-slate-700 animate-in slide-in-from-bottom duration-200">
           <Trash2 className="w-4 h-4 text-rose-400" />
           <span>{deleteToast}</span>
+        </div>
+      )}
+
+      {finishToast && (
+        <div className="fixed bottom-6 right-6 z-50 bg-emerald-700 text-white px-5 py-3 rounded-lg shadow-2xl text-xs sm:text-sm font-semibold flex items-center gap-2.5 border border-emerald-500 animate-in slide-in-from-bottom duration-200">
+          <CheckCircle2 className="w-5 h-5 text-emerald-200" />
+          <span>{finishToast}</span>
         </div>
       )}
 

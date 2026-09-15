@@ -100,12 +100,15 @@ export function buildMockAiSummary(
     });
 
   // Topic-level errors across mock error questions
-  const topicErrors: Record<string, { topic: string; subject: string; count: number }> = {};
+  const topicErrors: Record<string, { topic: string; subject: string; count: number; wrong: number; slow: number; unattempted: number }> = {};
   if (mockErrorsData) {
     Object.entries(mockErrorsData).forEach(([subject, chapters]) => {
       if (Array.isArray(chapters)) {
         chapters.forEach(ch => {
-          const isWrong = (ch.chapter_title || '').toLowerCase().includes('wrong');
+          const chTitle = (ch.chapter_title || '').toLowerCase();
+          const isWrong = chTitle.includes('wrong');
+          const isSlow = chTitle.includes('speed') || chTitle.includes('slow');
+          const isUnattempted = chTitle.includes('unattempt');
           const qs = ch.questions || [];
           qs.forEach((q: any) => {
             const rawTopic = q.tags?.topic || q.topic;
@@ -113,12 +116,15 @@ export function buildMockAiSummary(
             if (topic && topic !== 'General') {
               const key = `${subject} • ${topic}`;
               if (!topicErrors[key]) {
-                topicErrors[key] = { topic, subject, count: 0 };
+                topicErrors[key] = { topic, subject, count: 0, wrong: 0, slow: 0, unattempted: 0 };
               }
+              topicErrors[key].count += 1;
               if (isWrong || (q.status && q.status.toLowerCase().includes('wrong'))) {
-                topicErrors[key].count += 1;
-              } else {
-                topicErrors[key].count += 0.5;
+                topicErrors[key].wrong += 1;
+              } else if (isSlow || (q.status && (q.status.toLowerCase().includes('slow') || q.status.toLowerCase().includes('speed')))) {
+                topicErrors[key].slow += 1;
+              } else if (isUnattempted || (q.status && q.status.toLowerCase().includes('unattempt'))) {
+                topicErrors[key].unattempted += 1;
               }
             }
           });
@@ -129,14 +135,32 @@ export function buildMockAiSummary(
 
   const topWeakTopics = Object.values(topicErrors)
     .sort((a, b) => b.count - a.count)
-    .slice(0, 8)
-    .map(t => `- ${t.subject} -> ${t.topic} (~${Math.round(t.count)} error occurrences)`);
+    .slice(0, 15)
+    .map(t => `- ${t.subject} -> ${t.topic}: ${t.count} total questions in mistake bank (${t.wrong} Wrong, ${t.slow} Slow/Speed Issue, ${t.unattempted} Unattempted)`);
 
-  // Recent 6 Mocks detailed log
-  const recentMocks = [...reports]
-    .slice(-8)
-    .reverse()
-    .map(r => `- "${r.title}": Score: ${r.totalScore}/${r.maxMarks || (r.type === 'full' ? 200 : 50)} | Acc: ${r.overallAccuracy}% | Correct: ${r.totalCorrect}, Wrong: ${r.totalWrong}`);
+  // Chronological Full Mocks Detailed Log (Newest to Oldest)
+  const sortedFullMocks = [...fullMocks].sort((a, b) => {
+    const da = a.date ? new Date(a.date).getTime() : 0;
+    const db = b.date ? new Date(b.date).getTime() : 0;
+    return db - da;
+  });
+
+  const fullMocksLog = sortedFullMocks.map((r, i) => {
+    const dateStr = r.date ? new Date(r.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'Recent';
+    return `- Full Mock #${sortedFullMocks.length - i} ("${r.title}", Date: ${dateStr}): Score: ${r.totalScore}/200 (Acc: ${r.overallAccuracy}%) | Correct: ${r.totalCorrect}, Wrong: ${r.totalWrong}, Skipped: ${r.totalUnattempted}`;
+  });
+
+  // Recent 10 Mocks (All types)
+  const sortedReports = [...reports].sort((a, b) => {
+    const da = a.date ? new Date(a.date).getTime() : 0;
+    const db = b.date ? new Date(b.date).getTime() : 0;
+    return db - da;
+  });
+
+  const recentMocksLog = sortedReports.slice(0, 12).map(r => {
+    const dateStr = r.date ? new Date(r.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) : '';
+    return `- "${r.title}" (${dateStr || r.type}): Score: ${r.totalScore}/${r.maxMarks || (r.type === 'full' ? 200 : 50)} | Acc: ${r.overallAccuracy}% | Correct: ${r.totalCorrect}, Wrong: ${r.totalWrong}`;
+  });
 
   let summary = `=== CANDIDATE MOCK TEST PERFORMANCE PROFILE ===
 • Total Tests Recorded: ${reports.length} Mocks
@@ -146,14 +170,17 @@ export function buildMockAiSummary(
   - Reasoning Sectionals: ${reasoningSectionals.length} tests
   - General Awareness Sectionals: ${gaSectionals.length} tests
 
+ALL FULL-LENGTH MOCKS RECORDED IN PORTAL (${fullMocks.length} tests):
+${fullMocksLog.length > 0 ? fullMocksLog.join('\n') : '- No full-length mocks recorded yet.'}
+
 OVERALL SECTION ACCURACY & SCORING PERFORMANCE:
 ${sectionLines.length > 0 ? sectionLines.join('\n') : '- No section breakdown recorded.'}
 
 TOP WEAKEST TOPICS IDENTIFIED (Major Error Hotspots):
 ${topWeakTopics.length > 0 ? topWeakTopics.join('\n') : '- Topic error patterns not heavily populated.'}
 
-RECENT MOCK RESULTS LOG:
-${recentMocks.join('\n')}`;
+RECENT MOCKS ACTIVITY:
+${recentMocksLog.join('\n')}`;
 
   // Ingest RCA Classification Data & Silly Mistake Logs
   try {

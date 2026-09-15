@@ -40,15 +40,30 @@ const normalizeSubName = (raw: string = '') => {
   return 'Other';
 };
 
-export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): MockScoreReport {
-  const normalizeSubject = (raw: string) => {
-    if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
-    if (/reason|intel/i.test(raw)) return 'Reasoning';
-    if (/eng/i.test(raw)) return 'English';
-    if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
-    return 'Mathematics';
-  };
+export const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' => {
+  if (report.subject) {
+    const norm = normalizeSubName(report.subject);
+    if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
+      return norm as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+    }
+  }
+  if (report.sections) {
+    if (report.sections.mathematics && (report.sections.mathematics.total > 0 || report.sections.mathematics.score > 0)) return 'Mathematics';
+    if (report.sections.english && (report.sections.english.total > 0 || report.sections.english.score > 0)) return 'English';
+    if (report.sections.reasoning && (report.sections.reasoning.total > 0 || report.sections.reasoning.score > 0)) return 'Reasoning';
+    if (report.sections.generalAwareness && (report.sections.generalAwareness.total > 0 || report.sections.generalAwareness.score > 0)) return 'General Awareness';
+  }
+  if (report.title) {
+    const norm = normalizeSubName(report.title);
+    if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
+      return norm as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+    }
+  }
+  return 'Mathematics';
+};
 
+export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): MockScoreReport {
+  // Use module-level normalizeSubName — same logic, no duplicate needed
   const subjectGroups: Record<string, any[]> = {
     Reasoning: [],
     'General Awareness': [],
@@ -58,7 +73,7 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
 
   rawList.forEach(q => {
     const rawSubject = q.subject || q.section || 'Quantitative Aptitude';
-    const name = normalizeSubject(rawSubject);
+    const name = normalizeSubName(rawSubject);
     if (subjectGroups[name]) {
       subjectGroups[name].push(q);
     }
@@ -339,6 +354,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   onReviewMock
 }) => {
   const [activeTab, setActiveTab] = useState<'full' | 'sectional'>('full');
+  const [selectedSectionalSubject, setSelectedSectionalSubject] = useState<'all' | 'Mathematics' | 'Reasoning' | 'English' | 'General Awareness'>('all');
   const [reports, setReports] = useState<MockScoreReport[]>([]);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
@@ -412,8 +428,131 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     } catch {}
   };
 
+  // Sectional attempt counts per subject
+  const sectionalSubjectCounts = useMemo(() => {
+    const counts: Record<string, number> = {
+      all: 0,
+      Mathematics: 0,
+      Reasoning: 0,
+      English: 0,
+      'General Awareness': 0
+    };
+    reports.filter(r => r.type === 'sectional').forEach(r => {
+      counts.all++;
+      const sub = getSectionalSubject(r);
+      if (counts[sub] !== undefined) {
+        counts[sub]++;
+      }
+    });
+    return counts;
+  }, [reports]);
+
+  // Filtered reports according to activeTab and selectedSectionalSubject
   const filteredReports = useMemo(() => {
-    return reports.filter(r => r.type === activeTab);
+    if (activeTab === 'full') {
+      return reports.filter(r => r.type === 'full');
+    }
+    const sectionals = reports.filter(r => r.type === 'sectional');
+    if (selectedSectionalSubject === 'all') {
+      return sectionals;
+    }
+    return sectionals.filter(r => getSectionalSubject(r) === selectedSectionalSubject);
+  }, [reports, activeTab, selectedSectionalSubject]);
+
+  // Grouped reports when viewing all sectional subjects together
+  const groupedSectionalReports = useMemo(() => {
+    if (activeTab !== 'sectional') return null;
+    const sectionals = reports.filter(r => r.type === 'sectional');
+    const subjects: Array<{
+      key: 'Mathematics' | 'English' | 'Reasoning' | 'General Awareness';
+      label: string;
+      subLabel: string;
+      icon: any;
+      textColor: string;
+      bgColor: string;
+      borderColor: string;
+      badgeColor: string;
+      reports: MockScoreReport[];
+      avgScore: number;
+      bestScore: number;
+      avgAccuracy: number;
+    }> = [
+      {
+        key: 'Mathematics',
+        label: 'Quantitative Aptitude',
+        subLabel: 'Math',
+        icon: Calculator,
+        textColor: 'text-blue-700',
+        bgColor: 'bg-blue-50/40',
+        borderColor: 'border-blue-200/90',
+        badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
+        reports: [],
+        avgScore: 0,
+        bestScore: 0,
+        avgAccuracy: 0
+      },
+      {
+        key: 'English',
+        label: 'English Comprehension',
+        subLabel: 'English',
+        icon: BookOpen,
+        textColor: 'text-emerald-700',
+        bgColor: 'bg-emerald-50/40',
+        borderColor: 'border-emerald-200/90',
+        badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+        reports: [],
+        avgScore: 0,
+        bestScore: 0,
+        avgAccuracy: 0
+      },
+      {
+        key: 'Reasoning',
+        label: 'General Intelligence & Reasoning',
+        subLabel: 'Reasoning',
+        icon: Brain,
+        textColor: 'text-indigo-700',
+        bgColor: 'bg-indigo-50/40',
+        borderColor: 'border-indigo-200/90',
+        badgeColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+        reports: [],
+        avgScore: 0,
+        bestScore: 0,
+        avgAccuracy: 0
+      },
+      {
+        key: 'General Awareness',
+        label: 'General Awareness & GK',
+        subLabel: 'GA / GK',
+        icon: Compass,
+        textColor: 'text-amber-700',
+        bgColor: 'bg-amber-50/40',
+        borderColor: 'border-amber-200/90',
+        badgeColor: 'bg-amber-100 text-amber-800 border-amber-200',
+        reports: [],
+        avgScore: 0,
+        bestScore: 0,
+        avgAccuracy: 0
+      }
+    ];
+
+    sectionals.forEach(r => {
+      const sub = getSectionalSubject(r);
+      const item = subjects.find(s => s.key === sub);
+      if (item) {
+        item.reports.push(r);
+      }
+    });
+
+    subjects.forEach(item => {
+      if (item.reports.length > 0) {
+        const scores = item.reports.map(r => r.totalScore);
+        item.bestScore = Math.max(...scores);
+        item.avgScore = Math.round((scores.reduce((a, b) => a + b, 0) / scores.length) * 10) / 10;
+        item.avgAccuracy = Math.round((item.reports.reduce((a, b) => a + b.overallAccuracy, 0) / item.reports.length) * 10) / 10;
+      }
+    });
+
+    return subjects.filter(s => s.reports.length > 0);
   }, [reports, activeTab]);
 
   const latestReport = filteredReports[0] || null;
@@ -1096,13 +1235,148 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     saveReports(updated);
   };
 
+  const renderSectionalRow = (report: MockScoreReport, showSubjectTag: boolean = true) => {
+    const sub = getSectionalSubject(report);
+    const subMeta = {
+      Mathematics: { label: 'Quantitative (Math)', icon: Calculator, color: 'text-blue-700', bg: 'bg-blue-50 border-blue-200' },
+      Reasoning: { label: 'Reasoning', icon: Brain, color: 'text-indigo-700', bg: 'bg-indigo-50 border-indigo-200' },
+      English: { label: 'English', icon: BookOpen, color: 'text-emerald-700', bg: 'bg-emerald-50 border-emerald-200' },
+      'General Awareness': { label: 'GA / GK', icon: Compass, color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200' }
+    }[sub] || { label: sub, icon: Target, color: 'text-slate-700', bg: 'bg-slate-50 border-slate-200' };
+
+    const SubIcon = subMeta.icon;
+    const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+    const mistakeCount = (report.totalWrong || 0) + (report.totalUnattempted || 0);
+
+    return (
+      <div
+        key={report.id}
+        className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between px-3 py-2 gap-2 hover:bg-slate-50/70 transition-colors"
+      >
+        {/* 1. Left: Attempt details & subject badge */}
+        <div className="flex items-center gap-2.5 min-w-[240px]">
+          <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border ${subMeta.bg}`}>
+            <SubIcon className={`w-4 h-4 ${subMeta.color}`} />
+          </div>
+          <div>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-xs font-bold text-slate-900" title={report.title}>
+                {report.title}
+              </span>
+              {showSubjectTag && (
+                <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded border ${subMeta.bg} ${subMeta.color}`}>
+                  {subMeta.label}
+                </span>
+              )}
+              <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-white border border-slate-200 text-slate-400">
+                {dateClean}
+              </span>
+            </div>
+            <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1.5 flex-wrap">
+              <span className="text-emerald-600 font-semibold">{report.totalCorrect} Correct</span>
+              <span className="text-slate-300">•</span>
+              <span className="text-rose-500 font-semibold">{report.totalWrong} Wrong</span>
+              <span className="text-slate-300">•</span>
+              <span className="text-slate-400 font-semibold">{report.totalUnattempted} Skipped</span>
+              {mistakeCount > 0 && (
+                <>
+                  <span className="text-slate-300">•</span>
+                  <span className="text-[9px] font-bold px-1 py-0.2 rounded bg-rose-50 text-rose-600 border border-rose-200">
+                    {mistakeCount} mistakes
+                  </span>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* 2. Middle: Score & Accuracy Badges */}
+        <div className="flex items-center gap-4 self-start xl:self-center">
+          <div className="text-left">
+            <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400">Score</div>
+            <div className="flex items-baseline gap-0.5">
+              <span className="text-sm font-extrabold text-slate-900 leading-none">
+                {report.totalScore}
+              </span>
+              <span className="text-[10px] font-semibold text-slate-400">/{report.maxMarks || 50}</span>
+            </div>
+          </div>
+
+          <div className="text-left">
+            <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400">Accuracy</div>
+            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full inline-block ${
+              report.overallAccuracy >= 85 ? 'bg-emerald-100 text-emerald-800' :
+              report.overallAccuracy >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
+            }`}>
+              {report.overallAccuracy}%
+            </span>
+          </div>
+        </div>
+
+        {/* 3. Right: Action Buttons */}
+        <div className="flex items-center gap-1.5 self-end xl:self-center">
+          <button
+            onClick={() => handleReviewMock(report)}
+            disabled={reviewingId === report.id}
+            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white border border-emerald-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+            title="Review all questions, solutions & root causes"
+          >
+            {reviewingId === report.id ? (
+              <Loader2 className="w-3 h-3 animate-spin" />
+            ) : (
+              <Eye className="w-3 h-3" />
+            )}
+            <span>Review</span>
+          </button>
+
+          <button
+            onClick={() => openPracticeModal(report, sub)}
+            disabled={practicingId === report.id}
+            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+            title="Practice mistakes from this sectional mock"
+          >
+            {practicingId === report.id ? (
+              <Loader2 className="w-3 h-3 animate-spin" />
+            ) : (
+              <Play className="w-2.5 h-2.5 fill-current" />
+            )}
+            <span>Practice Mock</span>
+          </button>
+
+          <button
+            onClick={() => handleDeleteMock(report.id)}
+            className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0 cursor-pointer"
+            title="Delete this record"
+          >
+            <Trash2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   const handleClearAll = async () => {
     if (filteredReports.length === 0) return;
-    if (!window.confirm(`Are you sure you want to clear all ${filteredReports.length} ${activeTab === 'full' ? 'Full' : 'Sectional'} Mock records?`)) return;
-    try {
-      await fetch('/api/mock-reports', { method: 'DELETE' });
-    } catch {}
-    const updated = reports.filter(r => r.type !== activeTab);
+    const label = activeTab === 'full'
+      ? 'Full'
+      : selectedSectionalSubject === 'all'
+      ? 'All Sectional'
+      : `${selectedSectionalSubject} Sectional`;
+    if (!window.confirm(`Are you sure you want to clear all ${filteredReports.length} ${label} Mock records?`)) return;
+    const idsToRemove = new Set(filteredReports.map(r => r.id));
+    for (const id of idsToRemove) {
+      try {
+        await fetch(`/api/mock-reports/${id}`, { method: 'DELETE' });
+      } catch {}
+      try {
+        localStorage.removeItem(`cgl_mock_questions_${id}`);
+      } catch {}
+    }
+    const updated = reports.filter(r => !idsToRemove.has(r.id));
     saveReports(updated);
   };
 
@@ -1180,6 +1454,56 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         </div>
       </div>
 
+      {/* Subject Filter Toolbar for Sectional Mocks */}
+      {activeTab === 'sectional' && (
+        <div className="bg-white rounded-xl p-2 border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-1">
+              Subject View:
+            </span>
+            {[
+              { id: 'all', label: 'All Subjects', icon: Layers, count: sectionalSubjectCounts.all, color: 'text-slate-700', activeClass: 'bg-slate-900 text-white shadow-xs' },
+              { id: 'Mathematics', label: 'Quantitative (Math)', icon: Calculator, count: sectionalSubjectCounts.Mathematics, color: 'text-blue-600', activeClass: 'bg-blue-600 text-white shadow-xs' },
+              { id: 'Reasoning', label: 'Reasoning', icon: Brain, count: sectionalSubjectCounts.Reasoning, color: 'text-indigo-600', activeClass: 'bg-indigo-600 text-white shadow-xs' },
+              { id: 'English', label: 'English', icon: BookOpen, count: sectionalSubjectCounts.English, color: 'text-emerald-600', activeClass: 'bg-emerald-600 text-white shadow-xs' },
+              { id: 'General Awareness', label: 'GA / GK', icon: Compass, count: sectionalSubjectCounts['General Awareness'], color: 'text-amber-600', activeClass: 'bg-amber-600 text-white shadow-xs' },
+            ].map((tab) => {
+              const isSelected = selectedSectionalSubject === tab.id;
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setSelectedSectionalSubject(tab.id as any)}
+                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                    isSelected
+                      ? tab.activeClass
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 bg-slate-50 border border-slate-200/60'
+                  }`}
+                >
+                  <Icon className={`w-3.5 h-3.5 ${isSelected ? 'text-white' : tab.color}`} />
+                  <span>{tab.label}</span>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                    isSelected ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-700'
+                  }`}>
+                    {tab.count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {selectedSectionalSubject !== 'all' && (
+            <button
+              onClick={() => setSelectedSectionalSubject('all')}
+              className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 transition-colors flex items-center gap-1 cursor-pointer px-1"
+            >
+              <span>View All Subjects</span>
+              <ArrowRight className="w-3 h-3" />
+            </button>
+          )}
+        </div>
+      )}
+
       {filteredReports.length === 0 ? (
         /* Empty State */
         <div className="bg-white rounded-xl p-6 text-center border border-slate-200/80 shadow-xs max-w-md mx-auto space-y-2.5">
@@ -1187,14 +1511,18 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             <Trophy className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900">No {activeTab === 'full' ? 'Full Mock' : 'Sectional'} Scores Yet</h3>
+            <h3 className="text-sm font-bold text-slate-900">
+              No {activeTab === 'full' ? 'Full Mock' : selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Sectional` : 'Sectional'} Scores Yet
+            </h3>
             <p className="text-[11px] text-slate-500 mt-0.5 max-w-sm mx-auto">
-              Upload your Oliveboard or Testbook JSON mock capture to instantly see your total marks, accuracy, and subject breakdowns.
+              {activeTab === 'sectional' && selectedSectionalSubject !== 'all'
+                ? `No ${selectedSectionalSubject} sectional mock tests found. Upload a test or switch subject tabs.`
+                : 'Upload your Oliveboard or Testbook JSON mock capture to instantly see your total marks, accuracy, and subject breakdowns.'}
             </p>
           </div>
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold transition-all shadow-xs"
+            className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold transition-all shadow-xs cursor-pointer"
           >
             <Upload className="w-3.5 h-3.5" />
             <span>Select Mock JSON File</span>
@@ -1207,7 +1535,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             {/* 1. Latest / Total Score */}
             <div className="bg-white rounded-lg px-3 py-1.5 border border-slate-200/80 shadow-xs">
               <div className="flex items-center justify-between text-slate-400 mb-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">Latest Score</span>
+                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
+                  {activeTab === 'sectional' && selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Latest Score` : 'Latest Score'}
+                </span>
                 <Trophy className="w-3 h-3 text-blue-600" />
               </div>
               <div className="flex items-baseline gap-1">
@@ -1226,7 +1556,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             {/* 2. Overall Accuracy */}
             <div className="bg-white rounded-lg px-3 py-1.5 border border-slate-200/80 shadow-xs">
               <div className="flex items-center justify-between text-slate-400 mb-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">Overall Accuracy</span>
+                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
+                  {activeTab === 'sectional' && selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Accuracy` : 'Overall Accuracy'}
+                </span>
                 <Target className="w-3 h-3 text-emerald-600" />
               </div>
               <div className="flex items-baseline gap-1">
@@ -1248,7 +1580,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             {/* 3. Best Score */}
             <div className="bg-white rounded-lg px-3 py-1.5 border border-slate-200/80 shadow-xs">
               <div className="flex items-center justify-between text-slate-400 mb-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">Best Score</span>
+                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
+                  {activeTab === 'sectional' && selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Best Score` : 'Best Score'}
+                </span>
                 <TrendingUp className="w-3 h-3 text-purple-600" />
               </div>
               <div className="flex items-baseline gap-1">
@@ -1256,195 +1590,291 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <span className="text-[10px] font-medium text-slate-400">/ {aggregateStats.maxMarks}</span>
               </div>
               <p className="text-[9px] text-slate-400 mt-0.5 font-medium truncate">
-                Across {aggregateStats.totalMocks} {activeTab === 'full' ? 'Full Mocks' : 'Sectional Mocks'} recorded
+                Across {aggregateStats.totalMocks} {activeTab === 'full' ? 'Full Mocks' : selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Sectionals` : 'Sectional Mocks'} recorded
               </p>
             </div>
           </div>
 
-          {/* ─── PAST MOCKS LIST (Clean, Proportional & Unified) ─── */}
-          <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
-            {/* Header Bar */}
-            <div className="px-3.5 py-2 border-b border-slate-100 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-slate-400" />
-                <h3 className="text-xs font-bold text-slate-800">
-                  {activeTab === 'full' ? 'Full Mock Attempts' : 'Sectional Mock Attempts'}
-                </h3>
-                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
-                  {filteredReports.length}
-                </span>
-              </div>
-
-              {filteredReports.length > 0 && (
-                <button
-                  onClick={handleClearAll}
-                  className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1"
-                >
-                  <Trash2 className="w-3 h-3" />
-                  Clear All
-                </button>
-              )}
-            </div>
-
-            {/* Clean Fixed Header Row Above Mocks */}
-            <div className="hidden xl:flex items-center border-b border-slate-200/90 bg-slate-50 divide-x divide-slate-200/90 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-              <div className="w-[210px] 2xl:w-[230px] shrink-0 px-3 py-1.5">
-                Mock Attempt
-              </div>
-              <div className="flex-1 grid grid-cols-4 divide-x divide-slate-200/90 text-center">
-                <div className="py-1.5 text-indigo-700 font-semibold">Reasoning</div>
-                <div className="py-1.5 text-amber-700 font-semibold">GA / GK</div>
-                <div className="py-1.5 text-blue-700 font-semibold">Quantitative</div>
-                <div className="py-1.5 text-emerald-700 font-semibold">English</div>
-              </div>
-              <div className="w-[95px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
-                Score
-              </div>
-              <div className="w-[165px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
-                Practice
-              </div>
-            </div>
-
-            {/* List Rows */}
-            <div className="divide-y divide-slate-200/80">
-              {filteredReports.map((report) => {
-                const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
-                  day: '2-digit',
-                  month: 'short',
-                  year: 'numeric'
-                });
-
-                return (
-                  <div
-                    key={report.id}
-                    className="flex flex-col xl:flex-row items-stretch divide-y xl:divide-y-0 xl:divide-x divide-slate-200/90 hover:bg-slate-50/40 transition-colors"
+          {/* ─── SECTIONAL MOCKS SEPARATED SUBJECT-WISE ─── */}
+          {activeTab === 'sectional' && selectedSectionalSubject === 'all' ? (
+            <div className="space-y-2.5">
+              <div className="flex items-center justify-between px-1">
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-slate-400" />
+                  <h3 className="text-xs font-bold text-slate-800">Sectional Tests (Separated by Subject)</h3>
+                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
+                    {filteredReports.length} Total
+                  </span>
+                </div>
+                {filteredReports.length > 0 && (
+                  <button
+                    onClick={handleClearAll}
+                    className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 cursor-pointer"
                   >
-                    {/* 1. Left: Mock Details & Stats */}
-                    <div className="w-full xl:w-[210px] 2xl:w-[230px] shrink-0 px-3 py-1.5 bg-slate-50/20 flex flex-col justify-center">
-                      <div className="flex items-center gap-1.5 flex-wrap">
-                        <span className="text-xs font-bold text-slate-900 truncate max-w-[140px]" title={report.title}>
-                          {report.title}
-                        </span>
-                        <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-white border border-slate-200 text-slate-400">
-                          {dateClean}
-                        </span>
-                      </div>
-                      <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1 flex-wrap">
-                        <span className="text-emerald-600 font-semibold">{report.totalCorrect}c</span>
-                        <span className="text-slate-300">•</span>
-                        <span className="text-rose-500 font-semibold">{report.totalWrong}w</span>
-                        <span className="text-slate-300">•</span>
-                        <span className="text-slate-400 font-semibold">{report.totalUnattempted}s</span>
-                      </div>
-                    </div>
+                    <Trash2 className="w-3 h-3" />
+                    Clear All Sectionals
+                  </button>
+                )}
+              </div>
 
-                    {/* 2. Middle: Four Subjects */}
-                    <div className="flex-1 grid grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/90">
-                      {[
-                        { key: 'reasoning', label: 'Reasoning', color: 'text-indigo-700', bg: 'bg-indigo-50/15 hover:bg-indigo-50/40' },
-                        { key: 'generalAwareness', label: 'GA / GK', color: 'text-amber-700', bg: 'bg-amber-50/15 hover:bg-amber-50/40' },
-                        { key: 'mathematics', label: 'Quantitative', color: 'text-blue-700', bg: 'bg-blue-50/15 hover:bg-blue-50/40' },
-                        { key: 'english', label: 'English', color: 'text-emerald-700', bg: 'bg-emerald-50/15 hover:bg-emerald-50/40' },
-                      ].map((sub) => {
-                        const sData = report.sections?.[sub.key as keyof typeof report.sections];
-                        if (!sData && report.type === 'sectional') return null;
-                        const score = sData ? sData.score : 0;
-                        const acc = sData ? sData.accuracy : 0;
-                        const mistakeCount = (sData?.wrong || 0) + (sData?.unattempted || 0);
-
-                        return (
-                          <div
-                            key={sub.key}
-                            onClick={() => openPracticeModal(report, sub.label)}
-                            className={`px-2.5 py-1.5 flex items-center justify-between gap-1.5 transition-all cursor-pointer hover:ring-1 hover:ring-indigo-400/60 group ${sub.bg}`}
-                            title={`Click to practice ${sub.label} mistakes (${mistakeCount} total: ${sData?.wrong || 0} wrong, ${sData?.unattempted || 0} skipped)`}
-                          >
-                            <div>
-                              <span className={`text-[10px] font-bold ${sub.color} block xl:hidden leading-tight`}>
-                                {sub.label}
-                              </span>
-                              <div className="flex items-baseline gap-0.5">
-                                <span className="text-xs font-bold text-slate-900 leading-none">{score}</span>
-                                <span className="text-[10px] text-slate-400">/50</span>
-                              </div>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              {mistakeCount > 0 && (
-                                <span className="text-[9px] font-semibold px-1 py-0.2 rounded bg-rose-50 text-rose-600 border border-rose-200">
-                                  {mistakeCount}
-                                </span>
-                              )}
-                              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
-                                acc >= 85 ? 'bg-emerald-100 text-emerald-800' :
-                                acc >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
-                              }`}>
-                                {acc}%
-                              </span>
-                            </div>
+              {groupedSectionalReports && groupedSectionalReports.map((group) => {
+                const Icon = group.icon;
+                return (
+                  <div key={group.key} className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+                    {/* Subject Section Header */}
+                    <div className={`px-3.5 py-2 border-b ${group.borderColor} ${group.bgColor} flex flex-wrap items-center justify-between gap-2`}>
+                      <div className="flex items-center gap-2">
+                        <div className={`w-6 h-6 rounded-md flex items-center justify-center ${group.badgeColor}`}>
+                          <Icon className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1.5">
+                            <h3 className={`text-xs font-bold ${group.textColor}`}>
+                              {group.label}
+                            </h3>
+                            <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-white border border-slate-200/80 text-slate-600">
+                              {group.reports.length} Tests
+                            </span>
                           </div>
-                        );
-                      })}
-                    </div>
-
-                    {/* 3. Total Score Column */}
-                    <div className="w-full xl:w-[95px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex xl:flex-col justify-between xl:justify-center items-center xl:items-start">
-                      <div className="flex items-baseline gap-0.5 whitespace-nowrap">
-                        <span className="text-xs font-bold text-slate-900 leading-none">
-                          {report.totalScore}
-                        </span>
-                        <span className="text-[10px] text-slate-400">/{report.maxMarks}</span>
+                        </div>
                       </div>
-                      <span className={`text-[10px] font-semibold mt-0.5 ${
-                        report.overallAccuracy >= 85 ? 'text-emerald-600' :
-                        report.overallAccuracy >= 70 ? 'text-amber-600' : 'text-rose-600'
-                      }`}>
-                        {report.overallAccuracy}% Acc
-                      </span>
+
+                      <div className="flex items-center gap-3 text-[10px] text-slate-600 font-medium">
+                        <span>Avg: <strong className="text-slate-900">{group.avgScore}/50</strong> ({group.avgAccuracy}%)</span>
+                        <span className="text-slate-300">•</span>
+                        <span>Best: <strong className="text-slate-900">{group.bestScore}/50</strong></span>
+                        <button
+                          onClick={() => setSelectedSectionalSubject(group.key)}
+                          className={`ml-1 text-[11px] font-bold px-2 py-0.5 rounded-md hover:bg-white/80 border border-transparent hover:border-slate-200 transition-all cursor-pointer ${group.textColor}`}
+                        >
+                          Focus View →
+                        </button>
+                      </div>
                     </div>
 
-                    {/* 4. Action Column */}
-                    <div className="w-full xl:w-[225px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1.5">
-                      <button
-                        onClick={() => handleReviewMock(report)}
-                        disabled={reviewingId === report.id}
-                        className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white border border-emerald-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-                        title="Review all questions, view solutions & classify root causes (RCA)"
-                      >
-                        {reviewingId === report.id ? (
-                          <Loader2 className="w-3 h-3 animate-spin" />
-                        ) : (
-                          <Eye className="w-3 h-3" />
-                        )}
-                        <span>Review</span>
-                      </button>
-
-                      <button
-                        onClick={() => openPracticeModal(report, report.type === 'sectional' && report.subject ? report.subject : 'all')}
-                        disabled={practicingId === report.id}
-                        className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-                        title="Practice mistakes section-wise (slow, incorrect, unattempted)"
-                      >
-                        {practicingId === report.id ? (
-                          <Loader2 className="w-3 h-3 animate-spin" />
-                        ) : (
-                          <Play className="w-2.5 h-2.5 fill-current" />
-                        )}
-                        <span>Practice Mock</span>
-                      </button>
-
-                      <button
-                        onClick={() => handleDeleteMock(report.id)}
-                        className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0 cursor-pointer"
-                        title="Delete this record"
-                      >
-                        <Trash2 className="w-3.5 h-3.5" />
-                      </button>
+                    {/* Sectional Attempt Rows */}
+                    <div className="divide-y divide-slate-100">
+                      {group.reports.map(r => renderSectionalRow(r, false))}
                     </div>
                   </div>
                 );
               })}
             </div>
-          </div>
+          ) : activeTab === 'sectional' ? (
+            /* ─── SINGLE SUBJECT SECTIONAL LIST ─── */
+            <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+              <div className="px-3.5 py-2 border-b border-slate-100 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-3.5 h-3.5 text-slate-400" />
+                  <h3 className="text-xs font-bold text-slate-800">
+                    {selectedSectionalSubject} Sectional Attempts
+                  </h3>
+                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
+                    {filteredReports.length}
+                  </span>
+                </div>
+
+                {filteredReports.length > 0 && (
+                  <button
+                    onClick={handleClearAll}
+                    className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    <Trash2 className="w-3 h-3" />
+                    Clear {selectedSectionalSubject} Mocks
+                  </button>
+                )}
+              </div>
+
+              <div className="divide-y divide-slate-100">
+                {filteredReports.map(r => renderSectionalRow(r, true))}
+              </div>
+            </div>
+          ) : (
+            /* ─── FULL MOCKS 4-COLUMN LIST ─── */
+            <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+              {/* Header Bar */}
+              <div className="px-3.5 py-2 border-b border-slate-100 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-3.5 h-3.5 text-slate-400" />
+                  <h3 className="text-xs font-bold text-slate-800">
+                    Full Mock Attempts
+                  </h3>
+                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
+                    {filteredReports.length}
+                  </span>
+                </div>
+
+                {filteredReports.length > 0 && (
+                  <button
+                    onClick={handleClearAll}
+                    className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    <Trash2 className="w-3 h-3" />
+                    Clear All
+                  </button>
+                )}
+              </div>
+
+              {/* Clean Fixed Header Row Above Mocks */}
+              <div className="hidden xl:flex items-center border-b border-slate-200/90 bg-slate-50 divide-x divide-slate-200/90 text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                <div className="w-[210px] 2xl:w-[230px] shrink-0 px-3 py-1.5">
+                  Mock Attempt
+                </div>
+                <div className="flex-1 grid grid-cols-4 divide-x divide-slate-200/90 text-center">
+                  <div className="py-1.5 text-indigo-700 font-semibold">Reasoning</div>
+                  <div className="py-1.5 text-amber-700 font-semibold">GA / GK</div>
+                  <div className="py-1.5 text-blue-700 font-semibold">Quantitative</div>
+                  <div className="py-1.5 text-emerald-700 font-semibold">English</div>
+                </div>
+                <div className="w-[95px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
+                  Score
+                </div>
+                <div className="w-[165px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
+                  Practice
+                </div>
+              </div>
+
+              {/* List Rows */}
+              <div className="divide-y divide-slate-200/80">
+                {filteredReports.map((report) => {
+                  const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric'
+                  });
+
+                  return (
+                    <div
+                      key={report.id}
+                      className="flex flex-col xl:flex-row items-stretch divide-y xl:divide-y-0 xl:divide-x divide-slate-200/90 hover:bg-slate-50/40 transition-colors"
+                    >
+                      {/* 1. Left: Mock Details & Stats */}
+                      <div className="w-full xl:w-[210px] 2xl:w-[230px] shrink-0 px-3 py-1.5 bg-slate-50/20 flex flex-col justify-center">
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <span className="text-xs font-bold text-slate-900 truncate max-w-[140px]" title={report.title}>
+                            {report.title}
+                          </span>
+                          <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-white border border-slate-200 text-slate-400">
+                            {dateClean}
+                          </span>
+                        </div>
+                        <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1 flex-wrap">
+                          <span className="text-emerald-600 font-semibold">{report.totalCorrect}c</span>
+                          <span className="text-slate-300">•</span>
+                          <span className="text-rose-500 font-semibold">{report.totalWrong}w</span>
+                          <span className="text-slate-300">•</span>
+                          <span className="text-slate-400 font-semibold">{report.totalUnattempted}s</span>
+                        </div>
+                      </div>
+
+                      {/* 2. Middle: Four Subjects */}
+                      <div className="flex-1 grid grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/90">
+                        {[
+                          { key: 'reasoning', label: 'Reasoning', color: 'text-indigo-700', bg: 'bg-indigo-50/15 hover:bg-indigo-50/40' },
+                          { key: 'generalAwareness', label: 'GA / GK', color: 'text-amber-700', bg: 'bg-amber-50/15 hover:bg-amber-50/40' },
+                          { key: 'mathematics', label: 'Quantitative', color: 'text-blue-700', bg: 'bg-blue-50/15 hover:bg-blue-50/40' },
+                          { key: 'english', label: 'English', color: 'text-emerald-700', bg: 'bg-emerald-50/15 hover:bg-emerald-50/40' },
+                        ].map((sub) => {
+                          const sData = report.sections?.[sub.key as keyof typeof report.sections];
+                          if (!sData) return null;
+                          const score = sData ? sData.score : 0;
+                          const acc = sData ? sData.accuracy : 0;
+                          const mistakeCount = (sData?.wrong || 0) + (sData?.unattempted || 0);
+
+                          return (
+                            <div
+                              key={sub.key}
+                              onClick={() => openPracticeModal(report, sub.label)}
+                              className={`px-2.5 py-1.5 flex items-center justify-between gap-1.5 transition-all cursor-pointer hover:ring-1 hover:ring-indigo-400/60 group ${sub.bg}`}
+                              title={`Click to practice ${sub.label} mistakes (${mistakeCount} total: ${sData?.wrong || 0} wrong, ${sData?.unattempted || 0} skipped)`}
+                            >
+                              <div>
+                                <span className={`text-[10px] font-bold ${sub.color} block xl:hidden leading-tight`}>
+                                  {sub.label}
+                                </span>
+                                <div className="flex items-baseline gap-0.5">
+                                  <span className="text-xs font-bold text-slate-900 leading-none">{score}</span>
+                                  <span className="text-[10px] text-slate-400">/50</span>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                {mistakeCount > 0 && (
+                                  <span className="text-[9px] font-semibold px-1 py-0.2 rounded bg-rose-50 text-rose-600 border border-rose-200">
+                                    {mistakeCount}
+                                  </span>
+                                )}
+                                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                                  acc >= 85 ? 'bg-emerald-100 text-emerald-800' :
+                                  acc >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
+                                }`}>
+                                  {acc}%
+                                </span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+
+                      {/* 3. Total Score Column */}
+                      <div className="w-full xl:w-[95px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex xl:flex-col justify-between xl:justify-center items-center xl:items-start">
+                        <div className="flex items-baseline gap-0.5 whitespace-nowrap">
+                          <span className="text-xs font-bold text-slate-900 leading-none">
+                            {report.totalScore}
+                          </span>
+                          <span className="text-[10px] text-slate-400">/{report.maxMarks}</span>
+                        </div>
+                        <span className={`text-[10px] font-semibold mt-0.5 ${
+                          report.overallAccuracy >= 85 ? 'text-emerald-600' :
+                          report.overallAccuracy >= 70 ? 'text-amber-600' : 'text-rose-600'
+                        }`}>
+                          {report.overallAccuracy}% Acc
+                        </span>
+                      </div>
+
+                      {/* 4. Action Column */}
+                      <div className="w-full xl:w-[225px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1.5">
+                        <button
+                          onClick={() => handleReviewMock(report)}
+                          disabled={reviewingId === report.id}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white border border-emerald-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+                          title="Review all questions, view solutions & classify root causes (RCA)"
+                        >
+                          {reviewingId === report.id ? (
+                            <Loader2 className="w-3 h-3 animate-spin" />
+                          ) : (
+                            <Eye className="w-3 h-3" />
+                          )}
+                          <span>Review</span>
+                        </button>
+
+                        <button
+                          onClick={() => openPracticeModal(report, 'all')}
+                          disabled={practicingId === report.id}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+                          title="Practice mistakes section-wise (slow, incorrect, unattempted)"
+                        >
+                          {practicingId === report.id ? (
+                            <Loader2 className="w-3 h-3 animate-spin" />
+                          ) : (
+                            <Play className="w-2.5 h-2.5 fill-current" />
+                          )}
+                          <span>Practice Mock</span>
+                        </button>
+
+                        <button
+                          onClick={() => handleDeleteMock(report.id)}
+                          className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0 cursor-pointer"
+                          title="Delete this record"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </>
       )}
 

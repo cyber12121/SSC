@@ -203,13 +203,15 @@ function getLocalTopicTag(subject: string, text: string, currentTopic?: string):
 
 interface AIEnrichmentResult {
   topic: string;
+  subtopic?: string;
+  conceptTested?: string;
   questionText?: string;
   solution?: string;
   correctOption?: string;
 }
 
 // AI Batch Classifier & Structure Refiner:
-// - Classifies SSC CGL syllabus topic
+// - Classifies SSC CGL syllabus topic, granular subtopic, and specific concept tested
 // - Cleans corrupted formatting or UI artifacts from question and solution
 // - Resolves "N/A" correct options by analyzing question, options, and solution
 // If AI classification fails or API key is missing, throws an error and stops execution.
@@ -220,6 +222,7 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
   // Identify questions that need AI classification, N/A answer resolution, or structural cleanup
   questions.forEach((q, idx) => {
     const existingTopic = q.topic;
+    const existingSubtopic = q.subtopic;
     const rawSub = (q.subject || q.section || "").toLowerCase();
     const isReasoning = rawSub.includes("reason") || rawSub.includes("intel");
     const isMismatchedReasoning = isReasoning && (
@@ -243,12 +246,15 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
     const forceAIForMatrix = sendMatrixToAI && isMatrixQuestion;
 
     const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown" && !isMismatchedReasoning;
+    const hasValidSubtopic = existingSubtopic && existingSubtopic !== "General" && existingSubtopic !== "Unknown";
     const hasValidAnswer = q.correctOption && q.correctOption !== "N/A" && /^[A-D]$/i.test(q.correctOption.trim());
     const hasCleanText = !(q.questionText || q.question || "").includes("Reattempt mode is Off");
 
-    if (hasValidTopic && hasValidAnswer && hasCleanText && !forceAIForMatrix) {
+    if (hasValidTopic && hasValidSubtopic && hasValidAnswer && hasCleanText && !forceAIForMatrix) {
       results[idx] = {
         topic: existingTopic,
+        subtopic: existingSubtopic,
+        conceptTested: q.conceptTested || "",
         questionText: (q.questionText || q.question || "").trim(),
         solution: (q.solution || "").trim(),
         correctOption: q.correctOption.trim().toUpperCase()
@@ -403,7 +409,9 @@ Tasks for each question:
      * International Organisations (UN, WHO, IMF, World Bank, WTO, BRICS)
      * National & International Current Affairs
 
-2. "question": Clean and format the question prompt:
+2. "subtopic": Classify the granular subtopic or specific problem pattern (e.g. for Geometry: "Circles - Tangents & Secants" or "Triangles - Centroid & Similarity"; for Algebra: "Symmetric Identities (a³+b³+c³-3abc)"; for English: "Subject-Verb Agreement - Inversion" or "Active/Passive - Interrogative Sentences"; for Reasoning: "Missing Number Grid Matrix" or "Blood Relations - Coded Family Tree"; for Arithmetic: "Profit & Loss - Dishonest Dealer" or "Time & Work - Alternate Days").
+3. "conceptTested": A concise 1-sentence note of the exact mathematical theorem, grammatical rule, formula, or logical deduction tested (e.g. "Tangent-Secant Theorem: PT² = PA × PB", "Inversion of auxiliary verb after negative adverbials (Hardly/Scarcely)", "Cyclic quadrilateral opposite angles sum = 180°").
+4. "question": Clean and format the question prompt:
    - Restore mathematical powers/exponents and superscripts (e.g., "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210", "x²" or "x^2").
    - Strip any leaked option choices that were pasted at the end of the question text.
    - Remove residual platform noise (like "Reattempt mode is Off", "Marks +2", "Report", "Save", language headers).
@@ -412,8 +420,8 @@ Tasks for each question:
      | 8 | 9 | 181 |
      | 11 | 10 | ? |
      Always classify the topic strictly as "Missing Number / Matrix".
-3. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable.
-4. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
+5. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable.
+6. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
 
 CRITICAL JSON FORMAT RULE:
 Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. Do not output unescaped characters.
@@ -436,7 +444,9 @@ ${q.solution || ""}
 Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
 [
   {
-    "topic": "Topic Name",
+    "topic": "Main Topic Name",
+    "subtopic": "Granular Subtopic Name",
+    "conceptTested": "Exact theorem, rule, or formula tested",
     "question": "Cleaned & correctly formatted question text",
     "solution": "Cleaned solution text",
     "correctOption": "A"
@@ -472,6 +482,8 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
         const originalQ = questions[originalIdx];
         results[originalIdx] = {
           topic: (item.topic || "").trim(),
+          subtopic: (item.subtopic || item.topic || "").trim(),
+          conceptTested: (item.conceptTested || "").trim(),
           questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
           solution: (item.solution || originalQ.solution || "").trim(),
           correctOption: (item.correctOption || originalQ.correctOption || "A").toUpperCase().trim()
@@ -754,6 +766,13 @@ async function startServer() {
             const newQ = {
               id: qId,
               q_num: targetChapter.questions.length + 1,
+              testName: q.testName || payload.title || payload.testName,
+              platform: q.platform || 'General',
+              status: q.status || (status.includes("slow") ? "Correct (Slow)" : status.includes("unattempted") ? "Unattempted" : "Incorrect"),
+              chosenOption: q.chosenOption || null,
+              correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
+              userTime: q.userTime || null,
+              avgTime: q.avgTime || null,
               question: qText,
               options: {
                 a: (q.options?.A || q.options?.a || "").trim(),
@@ -763,8 +782,13 @@ async function startServer() {
               },
               answer: cleanAns,
               solution: cleanSolutionText(enr.solution || q.solution || ""),
+              topic: enr.topic || q.topic || "General",
+              subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+              conceptTested: enr.conceptTested || q.conceptTested || "",
               tags: {
-                topic: enr.topic || "General",
+                topic: enr.topic || q.topic || "General",
+                subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+                conceptTested: enr.conceptTested || q.conceptTested || "",
                 difficulty: status.includes("Slow") ? "hard" : "medium"
               }
             };
@@ -803,11 +827,36 @@ async function startServer() {
           console.log(`[Mock Import] Skipped duplicate score report for: ${calculatedReport.title}`);
         }
 
-        // Also save mock questions for one-click practice
+        // Also save mock questions to mock_tests and mock_questions with topic, subtopic & conceptTested
         try {
+          const enrichedMasterList = rawList.map((q, idx) => {
+            const enr = enriched[idx] || {};
+            const rawAns = enr.correctOption || q.correctOption || q.answer || "a";
+            const cleanAns = rawAns.toLowerCase().trim();
+            return {
+              ...q,
+              topic: enr.topic || q.topic || "General",
+              subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+              conceptTested: enr.conceptTested || q.conceptTested || "",
+              questionText: enr.questionText || q.questionText || q.question,
+              solution: enr.solution || q.solution,
+              correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
+              tags: {
+                ...(q.tags || {}),
+                topic: enr.topic || q.topic || "General",
+                subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+                conceptTested: enr.conceptTested || q.conceptTested || ""
+              }
+            };
+          });
+
+          const tDir = path.join(process.cwd(), "src", "data", "mock_tests");
+          if (!fs.existsSync(tDir)) fs.mkdirSync(tDir, { recursive: true });
+          fs.writeFileSync(path.join(tDir, `${calculatedReport.id}.json`), JSON.stringify(enrichedMasterList, null, 2), "utf-8");
+
           const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
           if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
-          fs.writeFileSync(path.join(qDir, `${calculatedReport.id}.json`), JSON.stringify(rawList, null, 2), "utf-8");
+          fs.writeFileSync(path.join(qDir, `${calculatedReport.id}.json`), JSON.stringify(enrichedMasterList, null, 2), "utf-8");
         } catch (qSaveErr) {
           console.error("[Mock Import] Error saving mock questions file:", qSaveErr);
         }
@@ -859,6 +908,11 @@ async function startServer() {
   app.get("/api/mock-questions/:id", (req, res) => {
     try {
       const { id } = req.params;
+      const tPath = path.join(process.cwd(), "src", "data", "mock_tests", `${id}.json`);
+      if (fs.existsSync(tPath)) {
+        const questions = JSON.parse(fs.readFileSync(tPath, "utf-8"));
+        return res.json(questions);
+      }
       const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${id}.json`);
       if (fs.existsSync(qPath)) {
         const questions = JSON.parse(fs.readFileSync(qPath, "utf-8"));
@@ -874,10 +928,14 @@ async function startServer() {
     try {
       const { id } = req.params;
       const questions = req.body;
+      const tDir = path.join(process.cwd(), "src", "data", "mock_tests");
+      if (!fs.existsSync(tDir)) fs.mkdirSync(tDir, { recursive: true });
+      fs.writeFileSync(path.join(tDir, `${id}.json`), JSON.stringify(questions, null, 2), "utf-8");
+
       const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
       if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
-      const qPath = path.join(qDir, `${id}.json`);
-      fs.writeFileSync(qPath, JSON.stringify(questions, null, 2), "utf-8");
+      fs.writeFileSync(path.join(qDir, `${id}.json`), JSON.stringify(questions, null, 2), "utf-8");
+
       res.json({ success: true });
     } catch (e: any) {
       res.status(500).json({ error: e.message });
@@ -893,10 +951,14 @@ async function startServer() {
         reports = reports.filter((r: any) => r.id !== id);
         fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
       }
-      // Also delete questions file if exists
+      // Also delete from mock_tests and mock_questions
+      const tPath = path.join(process.cwd(), "src", "data", "mock_tests", `${id}.json`);
+      if (fs.existsSync(tPath)) {
+        try { fs.unlinkSync(tPath); } catch {}
+      }
       const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${id}.json`);
       if (fs.existsSync(qPath)) {
-        fs.unlinkSync(qPath);
+        try { fs.unlinkSync(qPath); } catch {}
       }
       res.json({ success: true });
     } catch (e: any) {

@@ -16,7 +16,7 @@ interface QuizContainerProps {
   onSaveResult: (results: Omit<QuizResult, 'userId' | 'completedAt'>) => Promise<QuizResult | null>;
   onExit: () => void;
   onReviewAttempt?: (result: QuizResult) => void;
-  bookmarkedIds?: Set<number>;
+  bookmarkedIds?: Set<number | string>;
   onBookmarkToggle?: (question: Question) => void;
   onDeleteQuestion?: (question: Question) => void;
   isAdmin?: boolean;
@@ -189,10 +189,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     else if (/eng/i.test(chSub)) targetKey = 'part_d';
 
     const computed: MockSection[] = [
-      { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: targetKey === 'part_a' ? total : 0, count: targetKey === 'part_a' ? total : 0 },
-      { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: targetKey === 'part_b' ? 0 : (targetKey === 'part_a' ? total : 0), endIndex: targetKey === 'part_b' ? total : (targetKey === 'part_a' ? total : 0), count: targetKey === 'part_b' ? total : 0 },
-      { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: targetKey === 'part_c' ? 0 : total, endIndex: targetKey === 'part_c' ? total : total, count: targetKey === 'part_c' ? total : 0 },
-      { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: targetKey === 'part_d' ? 0 : total, endIndex: targetKey === 'part_d' ? total : total, count: targetKey === 'part_d' ? total : 0 },
+      { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: targetKey === 'part_a' ? 0 : 0, endIndex: targetKey === 'part_a' ? total : 0, count: targetKey === 'part_a' ? total : 0 },
+      { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: targetKey === 'part_b' ? 0 : 0, endIndex: targetKey === 'part_b' ? total : 0, count: targetKey === 'part_b' ? total : 0 },
+      { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: targetKey === 'part_c' ? 0 : 0, endIndex: targetKey === 'part_c' ? total : 0, count: targetKey === 'part_c' ? total : 0 },
+      { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: targetKey === 'part_d' ? 0 : 0, endIndex: targetKey === 'part_d' ? total : 0, count: targetKey === 'part_d' ? total : 0 },
     ];
 
     return { questions: raw, sections: computed };
@@ -224,7 +224,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [submittedResult, setSubmittedResult] = useState<QuizResult | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [zoomLevel, setZoomLevel] = useState<number>(0); // -1: small, 0: base, 1: large, 2: xl
-  const [showSymbolsModal, setShowSymbolsModal] = useState(false);
   const [showInstructionsModal, setShowInstructionsModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -266,6 +265,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   isSubmittingRef.current = isSubmitting;
   const isPausedRef = useRef(isPaused);
   isPausedRef.current = isPaused;
+
+  // Always call the latest version of handleSubmitTest from the timer effect
+  const handleSubmitTestRef = useRef<() => Promise<void>>(() => Promise.resolve());
 
   // Sync activeSectionIdx when currentIdx changes
   useEffect(() => {
@@ -311,9 +313,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         if (prev == null) return null;
         if (prev <= 1) {
           clearInterval(interval);
-          setTimeout(() => {
-            handleSubmitTest();
-          }, 0);
+          // Call via ref so we always get the latest handleSubmitTest, never a stale closure
+          setTimeout(() => { handleSubmitTestRef.current(); }, 0);
           return 0;
         }
         return prev - 1;
@@ -576,6 +577,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       setShowSubmitModal(false);
     }
   };
+
+  // Keep handleSubmitTestRef pointing at the latest version on every render
+  handleSubmitTestRef.current = handleSubmitTest;
 
   /* ── SCORE SCREEN ── */
   if (isFinished) {
@@ -1082,29 +1086,34 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
                 <div className="flex items-center gap-3">
                   {/* Bookmark Button */}
-                  {onBookmarkToggle && currentQuestion && (
-                    <button
-                      onClick={() => onBookmarkToggle(currentQuestion)}
-                      className={`flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded border transition-colors cursor-pointer ${
-                        bookmarkedIds.has(currentQuestion.q_num)
-                          ? 'bg-amber-50 text-amber-700 border-amber-300'
-                          : 'bg-white text-gray-600 border-gray-300 hover:text-amber-600 hover:border-amber-200'
-                      }`}
-                      title="Bookmark this question"
-                    >
-                      {bookmarkedIds.has(currentQuestion.q_num) ? (
-                        <>
-                          <BookmarkCheck className="w-3.5 h-3.5 text-amber-600 fill-amber-600" />
-                          <span className="hidden sm:inline">Bookmarked</span>
-                        </>
-                      ) : (
-                        <>
-                          <Bookmark className="w-3.5 h-3.5" />
-                          <span className="hidden sm:inline">Bookmark</span>
-                        </>
-                      )}
-                    </button>
-                  )}
+                  {onBookmarkToggle && currentQuestion && (() => {
+                    const isBookmarked =
+                      bookmarkedIds.has(currentQuestion.question?.trim().toLowerCase()) ||
+                      bookmarkedIds.has(currentQuestion.q_num);
+                    return (
+                      <button
+                        onClick={() => onBookmarkToggle(currentQuestion)}
+                        className={`flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded border transition-colors cursor-pointer ${
+                          isBookmarked
+                            ? 'bg-amber-50 text-amber-700 border-amber-300'
+                            : 'bg-white text-gray-600 border-gray-300 hover:text-amber-600 hover:border-amber-200'
+                        }`}
+                        title="Bookmark this question"
+                      >
+                        {isBookmarked ? (
+                          <>
+                            <BookmarkCheck className="w-3.5 h-3.5 text-amber-600 fill-amber-600" />
+                            <span className="hidden sm:inline">Bookmarked</span>
+                          </>
+                        ) : (
+                          <>
+                            <Bookmark className="w-3.5 h-3.5" />
+                            <span className="hidden sm:inline">Bookmark</span>
+                          </>
+                        )}
+                      </button>
+                    );
+                  })()}
 
                   {/* Delete Button (Permanently deletes question from everywhere) */}
                   {onDeleteQuestion && currentQuestion && (
@@ -1530,102 +1539,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           )}
         </aside>
       </div>
-
-      {/* ── SYMBOLS MODAL (Exact match to official Testbook table) ── */}
-      {showSymbolsModal && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-md max-w-xl w-full shadow-2xl border border-gray-300 overflow-hidden">
-            <div className="bg-[#2460b9] text-white px-4 py-2.5 flex items-center justify-between">
-              <h3 className="font-bold text-sm">Question Palette Symbols &amp; Legends</h3>
-              <button onClick={() => setShowSymbolsModal(false)} className="text-white/80 hover:text-white cursor-pointer">
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-[#ded7c4] text-gray-900 font-bold border-b border-gray-300">
-                    <th className="p-2.5 text-center w-24 border-r border-gray-300">Symbol</th>
-                    <th className="p-2.5 text-left">Description</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr className="hover:bg-gray-50/50">
-                    <td className="p-2.5 text-center border-r border-gray-200">
-                      <div className="w-4 h-4 rounded-full border border-gray-500 mx-auto" />
-                    </td>
-                    <td className="p-2.5 text-[#0047ba] font-bold">Option Not chosen</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50/50">
-                    <td className="p-2.5 text-center border-r border-gray-200">
-                      <div className="w-4 h-4 rounded-full border border-blue-600 mx-auto flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-blue-600" />
-                      </div>
-                    </td>
-                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
-                      Option chosen as correct (By clicking on it again you can delete your option and choose another option if desired.)
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50/50">
-                    <td className="p-2.5 text-center border-r border-gray-200">
-                      <div className="w-7 h-6 bg-[#0000ff] text-white font-bold rounded-[2px] mx-auto flex items-center justify-center text-xs">
-                        12
-                      </div>
-                    </td>
-                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
-                      Question number shown in blue color indicates that you have not yet attempted the question.
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50/50">
-                    <td className="p-2.5 text-center border-r border-gray-200">
-                      <div className="w-7 h-6 bg-[#008000] text-white font-bold rounded-[2px] mx-auto flex items-center justify-center text-xs">
-                        13
-                      </div>
-                    </td>
-                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
-                      Question number shown in green color indicates that you have answered the question.
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50/50">
-                    <td className="p-2.5 text-center border-r border-gray-200">
-                      <div className="flex flex-col items-center mx-auto">
-                        <div className="w-7 h-6 bg-[#cc0000] text-white font-bold rounded-[2px] flex items-center justify-center text-xs">
-                          14
-                        </div>
-                        <span className="text-[8px] text-black font-black leading-none mt-0.5">▲</span>
-                      </div>
-                    </td>
-                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
-                      You have not yet answered the question, but marked it for coming back for review later, if time permits.
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50/50">
-                    <td className="p-2.5 text-center border-r border-gray-200">
-                      <div className="flex flex-col items-center mx-auto">
-                        <div className="w-7 h-6 bg-[#ffff00] text-black font-bold border border-yellow-400 rounded-[2px] flex items-center justify-center text-xs">
-                          15
-                        </div>
-                        <span className="text-[8px] text-black font-black leading-none mt-0.5">▲</span>
-                      </div>
-                    </td>
-                    <td className="p-2.5 text-[#0047ba] font-bold leading-normal">
-                      You have answered the question, but marked it for review later, if time permits.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end">
-              <button
-                onClick={() => setShowSymbolsModal(false)}
-                className="px-4 py-1.5 bg-[#2460b9] text-white text-xs font-bold rounded hover:bg-[#1c4d94] cursor-pointer"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* ── INSTRUCTIONS MODAL ── */}
       {showInstructionsModal && (

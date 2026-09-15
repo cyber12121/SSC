@@ -31,7 +31,8 @@ const GK_ICONS: Record<string, any> = {
 };
 
 // Dynamic import of all subject JSON files (recursive) - lazy split chunks!
-const subjectModules = import.meta.glob('./data/**/*.json');
+// Only load the two data folders we actually use — avoids registering mock_questions, drills, etc.
+const subjectModules = import.meta.glob('./data/{mock_errors,chapter_bank}/**/*.json');
 
 const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankData: SubjectData }> => {
   const rawMockData: SubjectData = {};
@@ -242,23 +243,40 @@ const formatAttemptDate = (isoStr?: string) => {
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill' | 'mockScores'>('home');
   const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
+    let list: MockScoreReport[] = [];
     try {
       const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('cgl_mock_score_reports') : null;
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
       }
     } catch (e) {}
-    return initialMockReports as MockScoreReport[];
+    if (Array.isArray(initialMockReports) && initialMockReports.length > list.length) {
+      list = initialMockReports as MockScoreReport[];
+    }
+    return list;
   });
 
   useEffect(() => {
+    // Sync backend mock reports on mount so AI immediately has latest Full Mocks (including 13 Sept)
+    fetch('/api/mock-reports')
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          setMockReportsList(data);
+          try {
+            localStorage.setItem('cgl_mock_score_reports', JSON.stringify(data));
+          } catch {}
+        }
+      })
+      .catch(() => {});
+
     const handleStorage = () => {
       try {
         const saved = localStorage.getItem('cgl_mock_score_reports');
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed)) setMockReportsList(parsed);
+          if (Array.isArray(parsed) && parsed.length > 0) setMockReportsList(parsed);
         }
       } catch (e) {}
     };
@@ -301,7 +319,6 @@ export default function App() {
     } catch {}
     return new Set();
   });
-  const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
 
   // Dashboard filter states
@@ -338,13 +355,17 @@ export default function App() {
     wrongQuestions: Question[];
   } | null>(null);
 
-  const toggleChapterExpand = (subject: string, chapter: string) => {
-    const key = `${subject}|${chapter}`;
-    setExpandedChapters(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
-  };
+  // Resets all home/chapter navigation state and returns to home view
+  const resetToHome = useCallback(() => {
+    setView('home');
+    setSelectedSubject(null);
+    setSelectedMathSection(null);
+    setSelectedEnglishSection(null);
+    setSelectedGKSubject(null);
+    setSelectedGKSubTopic('all');
+    setSelectedTopic(null);
+    setSelectedBookmarkSubject(null);
+  }, []);
 
   const processData = (data: SubjectData, deletedIds: Set<string>) => {
     const filteredData: SubjectData = {};
@@ -469,8 +490,9 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Fetch Deleted Questions
+  // Fetch Deleted Questions — only when authenticated to avoid unauthenticated Firestore reads
   useEffect(() => {
+    if (!user) return;
     const fetchDeleted = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, 'deleted_questions'));
@@ -491,7 +513,7 @@ export default function App() {
       }
     };
     fetchDeleted();
-  }, []);
+  }, [user]);
 
   // Fetch Results
   const fetchResults = useCallback(async () => {
@@ -533,12 +555,13 @@ export default function App() {
     }
   }, [user]);
 
+  // Only refetch results when the authenticated user changes — not on every view navigation
   useEffect(() => {
     fetchResults();
-  }, [user, view, fetchResults]);
+  }, [user, fetchResults]);
 
-  // Fetch Bookmarks
-  const fetchBookmarks = async () => {
+  // Fetch Bookmarks — wrapped in useCallback to prevent stale closure issues
+  const fetchBookmarks = useCallback(async () => {
     if (!user) return;
     setLoadingBookmarks(true);
     try {
@@ -558,13 +581,13 @@ export default function App() {
     } finally {
       setLoadingBookmarks(false);
     }
-  };
+  }, [user]);
 
   useEffect(() => {
     if (user && (view === 'bookmarks' || view === 'quiz')) {
       fetchBookmarks();
     }
-  }, [user, view]);
+  }, [user, view, fetchBookmarks]);
 
   const toggleBookmark = async (question: Question) => {
     if (!user) return;
@@ -856,13 +879,9 @@ export default function App() {
       const sanitizedDoc = JSON.parse(JSON.stringify(fullResult));
       const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
       const saved = { ...fullResult, id: docRef.id };
-      console.log('Progress saved successfully with ID:', docRef.id);
-      
-      // Optimistically update recent activity state immediately
-      setUserResults(prev => [saved, ...prev.filter(r => r.id !== saved.id)]);
 
-      // Background sync with Firestore
-      fetchResults().catch(err => console.warn('Background sync note:', err));
+      // Optimistically update recent activity state immediately — no extra fetchResults() to avoid race condition
+      setUserResults(prev => [saved, ...prev.filter(r => r.id !== saved.id)]);
       return saved;
     } catch (error) {
       console.error('Error saving progress to Firestore:', error);
@@ -927,7 +946,7 @@ export default function App() {
         })
       );
       await Promise.all(deletePromises);
-      console.log('All recent activity results processed');
+      // All recent activity results processed
     } catch (error) {
       console.warn('Firestore bulk delete notice (handled via local filter):', error);
     } finally {
@@ -947,8 +966,9 @@ export default function App() {
         resultToReview = {
           ...result,
           questionDetails: chapter.questions.map(q => ({
+            q_num: q.q_num,        // required by QuestionProgress
             question: q,
-            userAnswer: null,
+            selectedAnswer: '',    // required by QuestionProgress
             isCorrect: false,
             timeSpent: 0
           }))
@@ -976,9 +996,11 @@ export default function App() {
       }
     }
 
-    // 3. Sub-topic breakdown if format is "Chapter • Topic"
+    // 3. Sub-topic breakdown if format is "Chapter • Topic" (possibly multi-bullet e.g. "Ch • Sub • Sub2")
     if (!chapter && result.chapter_title.includes(' • ')) {
-      const [parentTitle, topic] = result.chapter_title.split(' • ');
+      const parts = result.chapter_title.split(' • ');
+      const parentTitle = parts[0];
+      const topic = parts.slice(1).join(' • ');  // preserve multi-segment topic names
       const parentChapter = (primaryData[result.subject] || []).find(ch => ch.chapter_title === parentTitle.trim());
       if (parentChapter) {
         setCategory(result.category);
@@ -1244,15 +1266,15 @@ export default function App() {
 
   const isAuthorized = user?.email === 'cyberdevil0101@gmail.com';
 
-  // Group bookmarks by subject and then by chapter
-  const bookmarksBySubjectAndChapter = bookmarks.reduce((acc, b) => {
+  // Group bookmarks by subject and then by chapter — memoized to avoid re-running on unrelated renders
+  const bookmarksBySubjectAndChapter = useMemo(() => bookmarks.reduce((acc, b) => {
     const subject = b.subject || 'Unknown Subject';
     const chapter = b.chapter_title || 'Unknown Chapter';
     if (!acc[subject]) acc[subject] = {};
     if (!acc[subject][chapter]) acc[subject][chapter] = [];
     acc[subject][chapter].push(b);
     return acc;
-  }, {} as Record<string, Record<string, Bookmark[]>>);
+  }, {} as Record<string, Record<string, Bookmark[]>>), [bookmarks]);
 
   if (!loading && !user) {
     return (
@@ -1302,7 +1324,7 @@ export default function App() {
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
         <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedEnglishSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}>
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={resetToHome}>
               <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
                 <GraduationCap className="text-white w-5 h-5" />
               </div>
@@ -1320,14 +1342,14 @@ export default function App() {
             
             <div className="hidden md:flex items-center space-x-6">
               <button 
-                onClick={() => { setView('home'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedEnglishSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                onClick={resetToHome}
                 className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <BookOpen className="w-4 h-4 mr-1.5" />
                 Practice
               </button>
               <button 
-                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedMathSection(null); setSelectedEnglishSection(null); setSelectedGKSubject(null); setSelectedGKSubTopic('all'); setSelectedTopic(null); setSelectedBookmarkSubject(null); }}
+                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
                 className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 <Zap className="w-4 h-4 mr-1.5" />
@@ -1443,7 +1465,15 @@ export default function App() {
                         </div>
                         <div className="inline-flex shrink-0 rounded-lg border border-white/20 bg-white/10 p-0.5 backdrop-blur">
                           <button
-                            onClick={() => setCategory('chapterBank')}
+                            onClick={() => {
+                              setCategory('chapterBank');
+                              // Reset sub-section selections so stale filters don't persist
+                              setSelectedMathSection(null);
+                              setSelectedEnglishSection(null);
+                              setSelectedGKSubject(null);
+                              setSelectedGKSubTopic('all');
+                              setSelectedTopic(null);
+                            }}
                             className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${
                               category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
                             }`}
@@ -1452,7 +1482,15 @@ export default function App() {
                             Chapter Bank
                           </button>
                           <button
-                            onClick={() => setCategory('mockErrors')}
+                            onClick={() => {
+                              setCategory('mockErrors');
+                              // Reset sub-section selections so stale filters don't persist
+                              setSelectedMathSection(null);
+                              setSelectedEnglishSection(null);
+                              setSelectedGKSubject(null);
+                              setSelectedGKSubTopic('all');
+                              setSelectedTopic(null);
+                            }}
                             className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${
                               category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
                             }`}
@@ -1560,7 +1598,7 @@ export default function App() {
                                     className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 transition-colors"
                                     title="Open SSC 2025 Vocabs by Ayush"
                                   >
-                                    Vocab 2025 (914 Qs)
+                                    Vocab 2025 ({(bankData['English'] || []).filter(ch => ch.section === 'ayush_vocab').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
                                   </button>
                                   <button
                                     onClick={(e) => {
@@ -2612,9 +2650,9 @@ export default function App() {
                             );
                           }
 
-                          return chaptersToRender.map((chapter, idx) => (
+                          return chaptersToRender.map((chapter) => (
                             <motion.div
-                              key={idx}
+                              key={`${chapter.chapter_title}|${chapter.section || ''}|${chapter.set_name || ''}`}
                               whileHover={{ y: -2 }}
                               onClick={() => startQuiz(chapter)}
                               className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${
@@ -2703,7 +2741,7 @@ export default function App() {
                   onSaveResult={handleSaveQuizResult}
                   onExit={handleQuizExit}
                   onReviewAttempt={handleReviewFromQuiz}
-                  bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === activeChapter.chapter_title).map(b => b.question.q_num))}
+                  bookmarkedIds={new Set(bookmarks.map(b => b.question.question.trim().toLowerCase()))}
                   onBookmarkToggle={toggleBookmark}
                   isAdmin={isAuthorized}
                   onDeleteQuestion={handleDeleteQuestion}
@@ -3315,7 +3353,7 @@ export default function App() {
 
                           return (
                             <div
-                              key={result.id || idx}
+                              key={result.id || `${result.completedAt}|${result.chapter_title}`}
                               className="p-3 sm:p-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-3 hover:bg-slate-50/80 transition-colors"
                             >
                               {/* Left details */}
@@ -3437,7 +3475,7 @@ export default function App() {
                 onReattempt={() => reattemptFromResult(reviewResult)}
                 onBack={() => setView(reviewBackTo)}
                 userName={user?.displayName || 'Candidate'}
-                bookmarkedIds={new Set(bookmarks.filter(b => b.chapter_title === reviewResult.chapter_title).map(b => b.question.q_num))}
+                bookmarkedIds={new Set(bookmarks.map(b => b.question.question.trim().toLowerCase()))}
                 onBookmarkToggle={toggleBookmark}
                 onViewAnalytics={() => setView('dashboard')}
                 onDeleteQuestion={handleDeleteQuestion}
