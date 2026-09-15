@@ -1166,176 +1166,118 @@
         }
       },
       {
-        "id": "reas_1dad225dab",
+        "id": "reas_3fc72af76a",
         "q_num": 41,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "00:45",
-        "avgTime": "00:30",
-        "question": "What number should be subtracted from (23/40 + 13/20 - 7/10) to get 3/8?",
-        "options": {
-          "a": "17/20",
-          "b": "3/20",
-          "c": "19/40",
-          "d": "6/20"
-        },
-        "answer": "b",
-        "solution": "According to the Question,\n\n23/40 + 13/20 - 7/10\n\n= 23/40 + 26/40 - 28/40\n= (23+26-28)/40\n= 21/40\n\nLet x be the number that should be subtracted from (23/40 + 13/20 - 7/10) or 21/40 to get 3/8\n\n∴ 21/40 - x =3/8\nx = 21/40 - 3/8\nx = 21/40 - 15/40\nx= 6/40 = 3/20 Ans.",
-        "topic": "Simplification",
-        "subtopic": "Fractions & Basic Arithmetic",
-        "conceptTested": "Basic algebraic linear equation framing and fraction subtraction with LCM.",
-        "tags": {
-          "topic": "Simplification",
-          "subtopic": "Fractions & Basic Arithmetic",
-          "conceptTested": "Basic algebraic linear equation framing and fraction subtraction with LCM.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_dc54b351e9",
-        "q_num": 42,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "A",
-        "correctOption": "A",
-        "userTime": "01:03",
-        "avgTime": "00:30",
-        "question": "Select the option which is related to the third term in the same way as the second term is related to the first term and the sixth term is related to the fifth term.\n\nKO : VZ : : QU : ? : : VZ : GK",
-        "options": {
-          "a": "BF",
-          "b": "ZD",
-          "c": "AF",
-          "d": "BE"
-        },
-        "answer": "a",
-        "solution": "K (LMN) O (PQRSTU) V (WXY) Z. V (WXY) Z (ABCDEF) G (HIJ) K\n\nSimilarly, Q (RST) U (VWXYZA) B (CDE) F",
-        "topic": "Analogy",
-        "subtopic": "Letter Analogy",
-        "conceptTested": "Positional alphabet letter shifting and coding pattern.",
-        "tags": {
-          "topic": "Analogy",
-          "subtopic": "Letter Analogy",
-          "conceptTested": "Positional alphabet letter shifting and coding pattern.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_3239c3bb54",
-        "q_num": 43,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "D",
-        "correctOption": "D",
-        "userTime": "00:38",
-        "avgTime": "00:30",
-        "question": "The sum of two numbers is 80 and their product is 1564. What will be the sum of their reciprocals?",
-        "options": {
-          "a": "25/391",
-          "b": "15/391",
-          "c": "40/391",
-          "d": "20/391"
-        },
-        "answer": "d",
-        "solution": "Let the number be x and y respectively.\n\nGiven,\n\nx + y = 80\nxy = 1564\nSum of their reciprocals = (1/x) + (1/y)\n= (x + y)/xy\n= 80/1564\n= 20/391",
-        "topic": "Arithmetical Reasoning",
-        "subtopic": "Reciprocal and Algebraic Equations",
-        "conceptTested": "Sum of reciprocals of two numbers expressed in terms of their sum and product: (1/x) + (1/y) = (x + y)/xy.",
-        "tags": {
-          "topic": "Arithmetical Reasoning",
-          "subtopic": "Reciprocal and Algebraic Equations",
-          "conceptTested": "Sum of reciprocals of two numbers expressed in terms of their sum and product: (1/x) + (1/y) = (x + y)/xy.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_b489d4fb9d",
-        "q_num": 44,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Correct (Slow)",
-        "chosenOption": "B",
-        "correctOption": "B",
-        "userTime": "01:00",
-        "avgTime": "00:30",
-        "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\n\nA G U, G U V, U V T, V T W, ?",
-        "options": {
-          "a": "T W X",
-          "b": "T W S",
-          "c": "W T X",
-          "d": "W T S"
-        },
-        "answer": "b",
-        "solution": "Here, the logic is:\n\nFor each term, the last two alphabets are carried forward in the next term.\n\nU + 1 = V; V - 2 = T; T + 3 = W; W - 4 = S",
-        "topic": "Letter & Symbol Series",
-        "subtopic": "Alphabet Series",
-        "conceptTested": "Positional alphabet advancement and cyclic rotation patterns in letter clusters.",
-        "tags": {
-          "topic": "Letter & Symbol Series",
-          "subtopic": "Alphabet Series",
-          "conceptTested": "Positional alphabet advancement and cyclic rotation patterns in letter clusters.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_c72ac87552",
-        "q_num": 45,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
         "status": "Correct (Slow)",
         "chosenOption": "C",
         "correctOption": "C",
-        "userTime": "00:45",
-        "avgTime": "00:30",
-        "question": "Here some problem or solution of the problem is given in the statement you have to choose the appropriate logical deduction for given statement.\n\nStatement:\n\nA city increased bus frequency on two overcrowded corridors and introduced a single smart pass usable on buses and metro. After these changes, average waiting time for buses on those corridors fell, and transfers to metro increased. Air-quality readings near those corridors improved, but the report states that the improvement was no more than 6% compared to the previous quarter.\n\nConclusions:\n\nI. The air-quality improvement near those corridors was less than 6%.\n\nII. Integrated passes and higher bus frequency can increase bus-to-metro transfers.\n\nIII. The smart pass is the only reason for the improvement in air quality.\n\nWhich conclusion(s) necessarily follow(s)?",
+        "userTime": "00:41",
+        "avgTime": "00:31",
+        "question": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number.\\n25 : 37 :: 64 : ?",
         "options": {
-          "a": "Only II and III follow",
-          "b": "Only I and II follow",
-          "c": "Only II follows",
-          "d": "Only III follows"
+          "a": "92",
+          "b": "102",
+          "c": "82",
+          "d": "37"
         },
         "answer": "c",
-        "solution": "Conclusion I does not follow because \"no more than 6%\" allows exactly 6%, so \"less than 6%\" is not guaranteed.\n\nConclusion II follows because the statement directly says transfers to metro increased after these changes.\n\nConclusion III does not follow because the improvement in air quality could be due to higher bus frequency (reducing car trips), the smart pass, or both. The statement does not establish the smart pass as the sole cause.",
-        "topic": "Statement & Conclusion",
-        "subtopic": "Critical Verbal Reasoning Deduction",
-        "conceptTested": "Deducing valid logical inferences from complex real-world policy and observational statements.",
+        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
+        "topic": "Analogy",
+        "subtopic": "Number Analogy",
+        "conceptTested": "Number analogy involving square root and arithmetic scaling operations.",
         "tags": {
-          "topic": "Statement & Conclusion",
-          "subtopic": "Critical Verbal Reasoning Deduction",
-          "conceptTested": "Deducing valid logical inferences from complex real-world policy and observational statements.",
+          "topic": "Analogy",
+          "subtopic": "Number Analogy",
+          "conceptTested": "Number analogy involving square root and arithmetic scaling operations.",
           "difficulty": "medium"
         }
       },
       {
-        "id": "reas_9baac4343b",
-        "q_num": 46,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
+        "id": "reas_1c1c03aaf5",
+        "q_num": 42,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
         "status": "Correct (Slow)",
         "chosenOption": "A",
         "correctOption": "A",
-        "userTime": "01:28",
-        "avgTime": "00:30",
-        "question": "Match the address below with its exact duplicate:\n\nAddress: Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
+        "userTime": "00:59",
+        "avgTime": "00:39",
+        "question": "Which two signs and two numbers should be interchanged to make the following equation correct?\\n784 \\u00f7 6 \\u00d7 9 - 30 + 14 = 528",
         "options": {
-          "a": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
-          "b": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Treat Near Federation Square, Melbourne VIC 3000, Australia",
-          "c": "Lucas Millet, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia",
-          "d": "Lucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melborne VIC 3000, Australia"
+          "a": "14 and 6, + and -",
+          "b": "784 and 30, + and x",
+          "c": "784 and 6, × and -",
+          "d": "9 and 6, ÷ and +"
         },
         "answer": "a",
-        "solution": "The information given in (a) is similar to the information given in the question while rest of (b), (c) and (d) have some errors like:\n\nOption (b):\n\nLucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Treat Near Federation Square, Melbourne VIC 3000, Australia------(Word is wrong)\n\nOption (c):\n\nLucas Millet, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melbourne VIC 3000, Australia------(Spelling mistake)\n\nOption (d):\n\nLucas Miller, Apartment 18B, Palm Court Residences, 1025 Collins Street, Near Federation Square, Melborne VIC 3000, Australia------(Spelling mistake)",
-        "topic": "Alphabet Test",
-        "subtopic": "Word Rearrangement & Invariance",
-        "conceptTested": "Exact string matching and identification of typos or spelling variations in complex text addresses.",
+        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Balancing equations by interchanging two signs and two numbers following BODMAS.",
         "tags": {
-          "topic": "Alphabet Test",
-          "subtopic": "Word Rearrangement & Invariance",
-          "conceptTested": "Exact string matching and identification of typos or spelling variations in complex text addresses.",
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Balancing equations by interchanging two signs and two numbers following BODMAS.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_ffbe700b4b",
+        "q_num": 43,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:11",
+        "avgTime": "00:45",
+        "question": "The second number in the given number pairs is obtained by performing certain mathematical operation(s) on the first number. The same operation(s) are followed in all the number pairs, EXCEPT one. Find that odd number pair.",
+        "options": {
+          "a": "(64, 48)",
+          "b": "(72, 27)",
+          "c": "(96, 72)",
+          "d": "(108, 81)"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nChecking all the given options:\n\nLogic: The first and the second number is the multiple of 4 and 3.\n1. (64, 48) →\n⇒ 16 × 4 = 64\n⇒ 16 × 3 = 48\n2. (72, 27) →\n⇒ 18 × 4 = 72\n⇒ 18 × 3 = 54 (not 27)\n3. (96, 72) →\n⇒ 24 × 4 = 96\n⇒ 24 × 3 = 72\n4. (108, 81) →\n⇒ 27 × 4 = 108\n⇒ 27 × 3 = 81\n\nHere, (72, 27) is different from the others.\n\nHence, the correct answer is \"Option (2)\".",
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Number Classification",
+        "conceptTested": "Identifying number pairs sharing a common ratio or scalar multiple relationship.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Number Classification",
+          "conceptTested": "Identifying number pairs sharing a common ratio or scalar multiple relationship.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b2f98eb350",
+        "q_num": 44,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:45",
+        "avgTime": "00:36",
+        "question": "'Suma' is shorter than 'Uma', 'Neha' is taller than 'Suma', 'Sudha' is taller than 'Uma', but shorter than 'Hema'. 'Uma' is taller than 'Neha'. Who is the tallest among them?",
+        "options": {
+          "a": "Neha",
+          "b": "Hema",
+          "c": "Uma",
+          "d": "Sudha"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nFrom the given information:\nStep 1: 'Suma' is shorter than 'Uma', 'Neha' is taller than 'Suma'\nSuma < Uma       Suma < Neha\nStep 2: 'Sudha' is taller than 'Uma', but shorter than 'Hema'.\nUma < Sudha < Hema\nStep 3:  'Uma' is taller than 'Neha'.\nNeha < Uma\nFrom step 1 and step 3, we get:\nSuma < Neha < Uma\nFinally we have:\nSuma < Neha < Uma < Sudha < Hema\nFrom the arrangement, we can see that Hema is the tallest.\n\nHence the correct answer is option 2)",
+        "topic": "Order & Ranking",
+        "subtopic": "Linear Height Comparison",
+        "conceptTested": "Deducing linear ordering and relative positions based on comparative statements.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Linear Height Comparison",
+          "conceptTested": "Deducing linear ordering and relative positions based on comparative statements.",
           "difficulty": "medium"
         }
       }
@@ -1692,6 +1634,64 @@
           "topic": "Coding-Decoding",
           "subtopic": "Reverse Place Value Coding",
           "conceptTested": "Replacing each letter of a word with the numerical value of its reverse alphabetical letter (A=26, B=25, etc.)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_84881a371a",
+        "q_num": 13,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:47",
+        "avgTime": "00:44",
+        "question": "If 23 $ 45 = 26 and 34 $ 96 = 66, then 33 $ 33 =?",
+        "options": {
+          "a": "16",
+          "b": "17",
+          "c": "18",
+          "d": "20"
+        },
+        "answer": "c",
+        "solution": "Solution\n\n→ 23 $ 45 = (2 × 3) + (4 × 5) = 6 + 20 = 26\n→ 34 $ 96 = (3 × 4) + (9 × 6) = 12 + 54 = 66\n\nLikewise,\n\n→ 33 $ 33 = (3 × 3) + (3 × 3) = 9 + 9 = 18.\nHence, “18” is correct answer",
+        "topic": "Coding-Decoding",
+        "subtopic": "Substitution Coding",
+        "conceptTested": "Decoding arbitrary mathematical symbol patterns based on digit-wise multiplication sums.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Substitution Coding",
+          "conceptTested": "Decoding arbitrary mathematical symbol patterns based on digit-wise multiplication sums.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_c5c5873339",
+        "q_num": 14,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:37",
+        "avgTime": "00:30",
+        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set.\\n(392, 29, 449)\\n(395, 31, 566)",
+        "options": {
+          "a": "(486, 32, 538)",
+          "b": "(391, 45, 834)",
+          "c": "(487, 34, 809)",
+          "d": "(562, 35, 594)"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
+        "topic": "Analogy",
+        "subtopic": "Number Analogy",
+        "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number Analogy",
+          "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number.",
           "difficulty": "medium"
         }
       }
@@ -2748,89 +2748,147 @@
         }
       },
       {
-        "id": "reas_0a7c9b25e3",
+        "id": "reas_4e53b07c12",
         "q_num": 37,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
-        "status": "Incorrect",
-        "chosenOption": "C",
-        "correctOption": "B",
-        "userTime": "00:19",
-        "avgTime": "00:30",
-        "question": "In the following question, four words have been given of which there are alike in some way and one is different. Find the odd one out.",
-        "options": {
-          "a": "Volleyball",
-          "b": "Golf",
-          "c": "Soccer",
-          "d": "Basketball"
-        },
-        "answer": "b",
-        "solution": "Volleyball, Soccer, and Basketball are team sports.\n\nGolf is primarily an individual sport, making it the odd one.",
-        "topic": "Classification / Odd One Out",
-        "subtopic": "Word Classification",
-        "conceptTested": "Categorization of sports based on team participation versus individual formats.",
-        "tags": {
-          "topic": "Classification / Odd One Out",
-          "subtopic": "Word Classification",
-          "conceptTested": "Categorization of sports based on team participation versus individual formats.",
-          "difficulty": "medium"
-        }
-      },
-      {
-        "id": "reas_7c59e533b8",
-        "q_num": 38,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
         "status": "Incorrect",
         "chosenOption": "A",
-        "correctOption": "B",
-        "userTime": "01:22",
-        "avgTime": "00:30",
-        "question": "Find the number that breaks the pattern.\n\n19, 50, 87, 128, 175",
+        "correctOption": "C",
+        "userTime": "00:25",
+        "avgTime": "00:38",
+        "question": "Consider the given statement and decide which of the given assumptions is/are implicit in the statement.\\nStatement: Expressing concerns over rising oil prices, the CEO of Bhoodevi Corp, the world’s largest crude oil company, has demanded that the United Nations should lift sanctions against several countries in the middle-east Asia immediately.\\nAssumption I: The CEO is pained by the humanitarian crisis in the region.\\nAssumption II: The sanction is affecting the business interests of the company negatively.",
         "options": {
-          "a": "128",
-          "b": "175",
-          "c": "50",
-          "d": "19"
+          "a": "Both the assumptions are implicit",
+          "b": "Neither assumption is implicit",
+          "c": "Only assumption II is implicit",
+          "d": "Only assumption I is implicit"
         },
-        "answer": "b",
-        "solution": "Logic for the given series -\n\n19 + 31 = 50\n50 + 37 = 87\n87 + 41 = 128\n128 + 43 = 171 (not 175)\nHence, wrong term = 175",
-        "topic": "Number Series",
-        "subtopic": "Wrong Number in Series",
-        "conceptTested": "Identification of arithmetic progression with varying consecutive prime or incremental differences.",
+        "answer": "c",
+        "solution": "Solution\n\nAccording to the given information,\n\nAssumption I: This is not implicit, because nothing about crisis in the region is mentioned in the statement.\nAssumption II: This is implicit, because it is mentioned that there is concern over rising oil prices, so they should lift sanction, because of which business is affected.\nHence, “only assumption II” is implicit.",
+        "topic": "Statement & Assumption",
+        "subtopic": "Business and Political Policy Assumptions",
+        "conceptTested": "Evaluating implicit assumptions behind policy demands based on stated economic concerns.",
         "tags": {
-          "topic": "Number Series",
-          "subtopic": "Wrong Number in Series",
-          "conceptTested": "Identification of arithmetic progression with varying consecutive prime or incremental differences.",
+          "topic": "Statement & Assumption",
+          "subtopic": "Business and Political Policy Assumptions",
+          "conceptTested": "Evaluating implicit assumptions behind policy demands based on stated economic concerns.",
           "difficulty": "medium"
         }
       },
       {
-        "id": "reas_50a60b15b6",
-        "q_num": 39,
-        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
-        "platform": "Oliveboard",
+        "id": "reas_a2ab0f1c0e",
+        "q_num": 38,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
         "status": "Incorrect",
         "chosenOption": "A",
         "correctOption": "C",
         "userTime": "00:37",
-        "avgTime": "00:30",
-        "question": "The position of how many letters will remain unchanged in each of the letters in the word TAMPLING is arranged in the reverse alphabetical order?",
+        "avgTime": "00:38",
+        "question": "Piyush buys 4 blankets at the rate of ₹450 per blanket. He sells these 4 blankets to Gopi and earns a profit of 12% on his investment. Gopi further sells all 4 blankets to Pritam and earns 15% profit. What is the price at which Pritam bought one blanket?",
         "options": {
-          "a": "Two",
-          "b": "Four",
-          "c": "Three",
-          "d": "One"
+          "a": "₹602.40",
+          "b": "₹622.50",
+          "c": "₹579.60",
+          "d": "₹529.60"
         },
         "answer": "c",
-        "solution": "If each of the letters in the word TAMPLING is arranged in the reverse alphabetical order, then we get:\n\nT\tA\tM\tP\tL\tI\tN\tG\nT\tP\tN\tM\tL\tI\tG\tA\n\nThus, the position of three letters remain unchanged.",
+        "solution": "Solution\n\nGiven : Piyush buys 4 blankets at the rate of ₹450 per blanket.\n\nExplanation :\n\nCost price of 4 blankets at the rate of ₹450 per blanket = (4 × 450) ⇒ ₹1800\nSo, Piyush buys 4 blankets at the cost of = ₹1800\nNow, According to the question\n\nHe sells these 4 blankets to Gopi and earns a profit of 12% on his investment.\n\n​\n\nSo, Piyush sold at the profit of:\n\n= 1800 (12/100)\n= Rs 216\nSelling price = Cost price + Profit\n= 1800 + 216\n= Rs 2016\n\nGopi further sells all 4 blankets to Pritam and earns 15% profit.\n\n​\n\nSo, Gopi sold at the profit of:\n\n= 2016 (15/100)\n= Rs 302.4\nSelling price = Cost price + Profit\n= 2016 + 302.4\n= Rs 2318.4\n\n​Thus, according to the question the price at which Pritam bought one blanket is:\n\nFor 4 blankets cost price for Pritam is = Rs 2318.4\nTherefore, for 1 blanket cost price is = 2318.4/4 ⇒ Rs 579.6\nHence, \"₹579.60\" is the correct answer.",
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Successive Transactions",
+        "conceptTested": "Calculating successive profit percentages over multiple transactions to find the final selling price.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Successive Transactions",
+          "conceptTested": "Calculating successive profit percentages over multiple transactions to find the final selling price.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_9136bc0223",
+        "q_num": 39,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "01:17",
+        "avgTime": "00:44",
+        "question": "In the alphabet which Letter will be exactly in the middle of 21st Letter from the last and 22nd Letter from the beginning?",
+        "options": {
+          "a": "M",
+          "b": "N",
+          "c": "O",
+          "d": "P"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nIdentify the 21st Letter from the Last\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 21st letter from the last is ‘F’.\n\nIdentify the 22nd Letter from the Beginning\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 22nd letter from the beginning is ‘V’.\n\nNow, find the Middle Letter between ‘F’ and ‘V’\nThe position of F: 6\nThe position of V: 22\n\nThe middle position is calculated as:\n\n(6 + 22) ÷ 2\n\n= 28 ÷  2\n= 14\n\nThe 14th letter in the alphabet is N.\n\nHence, the correct answer is \"Option 2\".",
         "topic": "Alphabet Test",
-        "subtopic": "Word Rearrangement & Invariance",
-        "conceptTested": "Counting letters whose positions remain unchanged after sorting a word in reverse alphabetical order.",
+        "subtopic": "Midpoint Position",
+        "conceptTested": "Finding the exact middle position between a given letter from the reverse and a letter from the beginning of the English alphabet.",
         "tags": {
           "topic": "Alphabet Test",
-          "subtopic": "Word Rearrangement & Invariance",
-          "conceptTested": "Counting letters whose positions remain unchanged after sorting a word in reverse alphabetical order.",
+          "subtopic": "Midpoint Position",
+          "conceptTested": "Finding the exact middle position between a given letter from the reverse and a letter from the beginning of the English alphabet.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_56b52723cb",
+        "q_num": 40,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:21",
+        "avgTime": "00:33",
+        "question": "Write the following words according to the order in which they appear in the dictionary.\\n1. Tangleberries\\n2. Tangentiality\\n3. Tangibilities\\n4. Tangoreceptor\\n5. Tangentially",
+        "options": {
+          "a": "52314",
+          "b": "25134",
+          "c": "25314",
+          "d": "52134"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe logic follows here is,\n\nThe arrangement of all the given words in the order in which they appear in an English dictionary is as shown below:\n\nThe four letters T, A, N, and G are common in all words, so we will start arranging the word from the fourth letter as per alphabetical order.\n\n2. Tangentiality\n5. Tangentially\n3. Tangibilities\n1. Tangleberries\n4. Tangoreceptor\nHence, the correct answer is \"25314\".",
+        "topic": "Word Formation & Dictionary Order",
+        "subtopic": "Dictionary Ordering",
+        "conceptTested": "Alphabetical sorting of words based on prefix matching for dictionary sequence.",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "subtopic": "Dictionary Ordering",
+          "conceptTested": "Alphabetical sorting of words based on prefix matching for dictionary sequence.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d30b44e1e3",
+        "q_num": 41,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:34",
+        "avgTime": "00:40",
+        "question": "Pointing to a man, a lady said, \"The daughter of his only sister is the sister of my husband.\" How is the man related to the lady?",
+        "options": {
+          "a": "Father in law",
+          "b": "Father’s brother",
+          "c": "Brother of mother in law",
+          "d": "Grandmother"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nRepresentation:\n\nEXPLANATION:\n\nAccording to given question,\n\n“Sister of my husband” → Lady’s sister in law.\n\n“Daughter of his only sister” → Is the sister in law of the lady.\n\nSo man’s sister is the mother in law of the lady.\n\ni.e., the man is the brother of the lady’s mother in law.\n\nAccording to above information the following family tree is formed.\n\nHence, brother of mother in law is the correct answer.",
+        "topic": "Blood Relations",
+        "subtopic": "Indicating Form / Puzzle-based Blood Relation",
+        "conceptTested": "Tracing family tree relationships step-by-step through descriptive statements.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Indicating Form / Puzzle-based Blood Relation",
+          "conceptTested": "Tracing family tree relationships step-by-step through descriptive statements.",
           "difficulty": "medium"
         }
       }

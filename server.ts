@@ -346,8 +346,9 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
     const sendMatrixToAI = process.env.SEND_MOCK_MATRIX_TO_AI !== "false";
     const forceAIForMatrix = sendMatrixToAI && isMatrixQuestion;
 
-    const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown" && !isMismatchedReasoning;
-    const hasValidSubtopic = existingSubtopic && existingSubtopic !== "General" && existingSubtopic !== "Unknown";
+    const isSubjectLevelTopic = existingTopic === "English Comprehension" || existingTopic === "English" || existingTopic === "Quantitative Aptitude" || existingTopic === "General Awareness" || existingTopic === "General Intelligence and Reasoning";
+    const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown" && !isSubjectLevelTopic && !isMismatchedReasoning;
+    const hasValidSubtopic = existingSubtopic && existingSubtopic !== "General" && existingSubtopic !== "Unknown" && existingSubtopic !== "English Comprehension" && existingSubtopic !== "English";
     const hasValidAnswer = q.correctOption && q.correctOption !== "N/A" && /^[A-D]$/i.test(q.correctOption.trim());
     const hasCleanText = !(q.questionText || q.question || "").includes("Reattempt mode is Off");
 
@@ -907,11 +908,25 @@ async function startServer() {
               },
               answer: cleanAns,
               solution: cleanSolutionText(q.solution || enr.solution || ""),
-              topic: enr.topic || q.topic || "General",
+              topic: (() => {
+                let t = (enr.topic || q.topic || "General").trim();
+                const s = (enr.subtopic || q.subtopic || "").trim();
+                if ((t === "English Comprehension" || t === "English") && s && s !== "English Comprehension" && s !== "English") {
+                  t = s;
+                }
+                return t;
+              })(),
               subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
               conceptTested: enr.conceptTested || q.conceptTested || "",
               tags: {
-                topic: enr.topic || q.topic || "General",
+                topic: (() => {
+                  let t = (enr.topic || q.topic || "General").trim();
+                  const s = (enr.subtopic || q.subtopic || "").trim();
+                  if ((t === "English Comprehension" || t === "English") && s && s !== "English Comprehension" && s !== "English") {
+                    t = s;
+                  }
+                  return t;
+                })(),
                 subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
                 conceptTested: enr.conceptTested || q.conceptTested || "",
                 difficulty: status.includes("Slow") ? "hard" : "medium"

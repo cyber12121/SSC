@@ -71,9 +71,15 @@ export const TOPIC_ALIASES: Record<string, { canonical: string; subject: string 
   'substitution': { canonical: 'One Word Substitution', subject: 'English' },
   'cloze': { canonical: 'Cloze Test', subject: 'English' },
   'cloze test': { canonical: 'Cloze Test', subject: 'English' },
-  'spelling': { canonical: 'Spelling Correction', subject: 'English' },
-  'spelling error': { canonical: 'Spelling Correction', subject: 'English' },
-  'misspelt': { canonical: 'Spelling Correction', subject: 'English' },
+  'spelling': { canonical: 'Spelling Errors', subject: 'English' },
+  'spelling error': { canonical: 'Spelling Errors', subject: 'English' },
+  'spelling errors': { canonical: 'Spelling Errors', subject: 'English' },
+  'incorrect spelling': { canonical: 'Spelling Errors', subject: 'English' },
+  'misspelt': { canonical: 'Spelling Errors', subject: 'English' },
+  'anto syno': { canonical: 'Synonyms & Antonyms', subject: 'English' },
+  'syno anto': { canonical: 'Synonyms & Antonyms', subject: 'English' },
+  'syno': { canonical: 'Synonyms & Antonyms', subject: 'English' },
+  'anto': { canonical: 'Synonyms & Antonyms', subject: 'English' },
   'spotting error': { canonical: 'Spotting Errors', subject: 'English' },
   'spotting errors': { canonical: 'Spotting Errors', subject: 'English' },
   'common error': { canonical: 'Spotting Errors', subject: 'English' },
@@ -85,6 +91,7 @@ export const TOPIC_ALIASES: Record<string, { canonical: string; subject: string 
   'reading comprehension': { canonical: 'Reading Comprehension', subject: 'English' },
   'comprehension': { canonical: 'Reading Comprehension', subject: 'English' },
   'rc': { canonical: 'Reading Comprehension', subject: 'English' },
+  'english comprehension': { canonical: 'Reading Comprehension', subject: 'English' },
 
   // Quantitative Aptitude
   'trigo': { canonical: 'Trigonometry', subject: 'Mathematics' },
@@ -219,7 +226,13 @@ class MockQuestionStore {
         this.allQuestionsCount++;
 
         const subject = q.subject || defaultSubject;
-        const rawTopic = (q.topic || q.tags?.topic || 'General').trim();
+        let rawTopic = (q.topic || q.tags?.topic || 'General').trim();
+        if (rawTopic.toLowerCase() === 'english comprehension' || rawTopic.toLowerCase() === 'english') {
+          const rawSub = (q.subtopic || q.tags?.subtopic || '').trim();
+          if (rawSub && rawSub.toLowerCase() !== 'english comprehension' && rawSub.toLowerCase() !== 'english') {
+            rawTopic = rawSub;
+          }
+        }
         const subtopic = (q.subtopic || q.tags?.subtopic || rawTopic).trim();
         const concept = (q.conceptTested || q.tags?.conceptTested || '').trim();
         const status = (q.status || '').toLowerCase();

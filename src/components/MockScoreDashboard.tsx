@@ -28,9 +28,10 @@ import { MockScoreReport, SectionScore } from '../types/mockScore';
 import { Chapter, Question, SubjectData, QuizResult, QuestionProgress } from '../types';
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
+import { safeStorage } from '../utils/safeStorage';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
-const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
+const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
 
 const normalizeSubName = (raw: string = '') => {
   if (/reason|intel/i.test(raw)) return 'Reasoning';
@@ -453,9 +454,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       try {
         const res = await fetch('/api/mock-reports');
         if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data) && data.length > 0) {
-            loaded = data;
+          const cType = res.headers.get('content-type') || '';
+          if (cType.includes('application/json')) {
+            const data = await res.json();
+            if (Array.isArray(data) && data.length > 0) {
+              loaded = data;
+            }
           }
         }
       } catch (err) {
@@ -464,13 +468,19 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
       if (loaded.length === 0) {
         try {
-          const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+          const saved = safeStorage.getItem(LOCAL_STORAGE_KEY);
           if (saved) {
-            loaded = JSON.parse(saved);
-          } else if (Array.isArray(initialMockReports) && initialMockReports.length > 0) {
-            loaded = initialMockReports as MockScoreReport[];
+            const parsed = JSON.parse(saved);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+              loaded = parsed;
+            }
           }
         } catch {}
+      }
+
+      // Guaranteed fallback to bundled mock reports (ensures Vercel and storage-restricted modes never show blank)
+      if (loaded.length === 0 && Array.isArray(initialMockReports) && initialMockReports.length > 0) {
+        loaded = initialMockReports as MockScoreReport[];
       }
 
       // Filter out duplicate reports or purged duplicate mock IDs
@@ -490,7 +500,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       });
 
       try {
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(loaded));
+        safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(loaded));
       } catch {}
 
       setReports(loaded);
@@ -503,7 +513,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const saveReports = (newReports: MockScoreReport[]) => {
     setReports(newReports);
     try {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newReports));
+      safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newReports));
       window.dispatchEvent(new Event('cgl_mock_reports_updated'));
     } catch {}
   };
@@ -703,7 +713,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
       // Save question dataset to localStorage as fallback
       try {
-        localStorage.setItem(`cgl_mock_questions_${report.id}`, JSON.stringify(rawQuestions));
+        safeStorage.setItem(`cgl_mock_questions_${report.id}`, JSON.stringify(rawQuestions));
       } catch {}
 
       // Try persisting to backend API
@@ -772,7 +782,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     // 3. LocalStorage cache
     if (list.length === 0) {
       try {
-        const saved = localStorage.getItem(`cgl_mock_questions_${report.id}`);
+        const saved = safeStorage.getItem(`cgl_mock_questions_${report.id}`);
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
@@ -1096,7 +1106,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       // Load existing RCA classifications from localStorage if any
       let rcaMap: Record<string, any> = {};
       try {
-        const savedRca = localStorage.getItem(`cgl_rca_${report.id}`) || localStorage.getItem(`cgl_rca_${report.title}`);
+        const savedRca = safeStorage.getItem(`cgl_rca_${report.id}`) || safeStorage.getItem(`cgl_rca_${report.title}`);
         if (savedRca) rcaMap = JSON.parse(savedRca);
       } catch {}
 
@@ -1309,7 +1319,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       await fetch(`/api/mock-reports/${id}`, { method: 'DELETE' });
     } catch {}
     try {
-      localStorage.removeItem(`cgl_mock_questions_${id}`);
+      safeStorage.removeItem(`cgl_mock_questions_${id}`);
     } catch {}
     const updated = reports.filter(r => r.id !== id);
     saveReports(updated);
@@ -1453,7 +1463,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         await fetch(`/api/mock-reports/${id}`, { method: 'DELETE' });
       } catch {}
       try {
-        localStorage.removeItem(`cgl_mock_questions_${id}`);
+        safeStorage.removeItem(`cgl_mock_questions_${id}`);
       } catch {}
     }
     const updated = reports.filter(r => !idsToRemove.has(r.id));

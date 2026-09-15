@@ -1,48 +1,48 @@
 [
   {
-    "id": "mock_1789502623180_eqily",
-    "title": "SSC CGL 2026 [Sectional Timing] - Tier I- 1",
+    "id": "mock_1789504230140_a8wt2",
+    "title": "SSC CGL Tier I: Full Test - 7",
     "type": "full",
-    "date": "2026-09-15T20:03:43.008Z",
+    "date": "2026-09-15T20:30:30.122Z",
     "totalQuestions": 100,
     "maxMarks": 200,
-    "totalScore": 167.5,
-    "overallAccuracy": 87,
-    "totalCorrect": 87,
-    "totalWrong": 13,
-    "totalUnattempted": 0,
+    "totalScore": 104,
+    "overallAccuracy": 70.7,
+    "totalCorrect": 58,
+    "totalWrong": 24,
+    "totalUnattempted": 18,
     "sections": {
       "reasoning": {
         "total": 25,
-        "correct": 22,
-        "wrong": 3,
-        "unattempted": 0,
-        "score": 42.5,
-        "accuracy": 88
+        "correct": 18,
+        "wrong": 5,
+        "unattempted": 2,
+        "score": 33.5,
+        "accuracy": 78.3
       },
       "generalAwareness": {
         "total": 25,
-        "correct": 16,
-        "wrong": 9,
-        "unattempted": 0,
-        "score": 27.5,
-        "accuracy": 64
+        "correct": 12,
+        "wrong": 8,
+        "unattempted": 5,
+        "score": 20,
+        "accuracy": 60
       },
       "mathematics": {
         "total": 25,
-        "correct": 25,
-        "wrong": 0,
-        "unattempted": 0,
-        "score": 50,
-        "accuracy": 100
+        "correct": 10,
+        "wrong": 4,
+        "unattempted": 11,
+        "score": 18,
+        "accuracy": 71.4
       },
       "english": {
         "total": 25,
-        "correct": 24,
-        "wrong": 1,
+        "correct": 18,
+        "wrong": 7,
         "unattempted": 0,
-        "score": 47.5,
-        "accuracy": 96
+        "score": 32.5,
+        "accuracy": 72
       }
     }
   },

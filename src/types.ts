@@ -27,6 +27,8 @@ export interface Question {
   section?: string;
   // Legacy / data-layer fields present in JSON but not always typed
   topic?: string;
+  subtopic?: string;
+  conceptTested?: string;
   sectionKey?: string;
   subjectName?: string;
   correct_answer?: string;
@@ -34,6 +36,8 @@ export interface Question {
   correct_option?: string;
   tags?: {
     topic?: string;
+    subtopic?: string;
+    conceptTested?: string;
     exam_years?: string[];
     high_yield?: boolean;
     difficulty?: 'easy' | 'medium' | 'hard';

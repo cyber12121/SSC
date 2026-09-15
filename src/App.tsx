@@ -17,6 +17,7 @@ const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashbo
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
 import { AiMentorChat } from './components/AiMentorChat';
+import { safeStorage } from './utils/safeStorage';
 
 import { getCachedData, setCachedData } from './utils/cache';
 
@@ -245,7 +246,7 @@ export default function App() {
   const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
     let list: MockScoreReport[] = [];
     try {
-      const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('cgl_mock_score_reports') : null;
+      const saved = safeStorage.getItem('cgl_mock_score_reports');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
@@ -260,12 +261,17 @@ export default function App() {
   useEffect(() => {
     // Sync backend mock reports on mount so AI immediately has latest Full Mocks (including 13 Sept)
     fetch('/api/mock-reports')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const cType = res.headers.get('content-type') || '';
+        if (!cType.includes('application/json')) throw new Error('Not JSON');
+        return res.json();
+      })
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
           setMockReportsList(data);
           try {
-            localStorage.setItem('cgl_mock_score_reports', JSON.stringify(data));
+            safeStorage.setItem('cgl_mock_score_reports', JSON.stringify(data));
           } catch {}
         }
       })
@@ -273,7 +279,7 @@ export default function App() {
 
     const handleStorage = () => {
       try {
-        const saved = localStorage.getItem('cgl_mock_score_reports');
+        const saved = safeStorage.getItem('cgl_mock_score_reports');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) setMockReportsList(parsed);

@@ -3,19 +3,20 @@ import { Question } from '../types';
 export function normalizeTopicTitle(rawTopic?: string | null): string {
   if (!rawTopic) return 'General';
   const clean = rawTopic.trim();
-  if (!clean || clean === 'General' || clean === 'Unknown') return 'General';
+  if (!clean || clean === 'General' || clean === 'Unknown' || clean === 'English Comprehension' || clean === 'English') return 'General';
   if (/^active\s*(&|and)?\s*passive(\s*voice)?$/i.test(clean)) return 'Active & Passive Voice';
-  if (/^direct\s*(&|and)?\s*indirect(\s*speech)?$/i.test(clean) || /^narration$/i.test(clean)) return 'Direct & Indirect Speech';
+  if (/^direct\s*(&|and)?\s*indirect(\s*speech)?(\s*\(narration\))?$/i.test(clean) || /^narration$/i.test(clean)) return 'Direct & Indirect Speech';
   if (/^missing\s*numbers?(\s*\/\s*matrix)?$/i.test(clean) || /^matrix$/i.test(clean)) return 'Missing Number / Matrix';
-  if (/^one\s*words?(\s*substitut\w*)?$/i.test(clean)) return 'One Word Substitution';
-  if (/^para\s*jumbles?$/i.test(clean) || /^pqrs$/i.test(clean)) return 'Para Jumbles';
-  if (/^spelling?\s*errors?$/i.test(clean) || /^misspelt$/i.test(clean)) return 'Spelling Errors';
-  if (/^synonyms?\s*(&|and)?\s*antonyms?$/i.test(clean)) return 'Synonyms & Antonyms';
+  if (/^one\s*words?(\s*substitut\w*)?$/i.test(clean) || /^ows$/i.test(clean)) return 'One Word Substitution';
+  if (/^para\s*jumbles?$/i.test(clean) || /^pqrs$/i.test(clean) || /^sentence\s*rearrangement(\s*\(pqrs\))?$/i.test(clean)) return 'Para Jumbles';
+  if (/^spelling?\s*errors?$/i.test(clean) || /^misspelt$/i.test(clean) || /^incorrect\s*spellings?$/i.test(clean) || /^correctly\s*spelt(\s*words?)?$/i.test(clean) || /^spellings?$/i.test(clean)) return 'Spelling Errors';
+  if (/^synonyms?\s*(&|and)?\s*antonyms?$/i.test(clean) || /^syno\s*(&|and)?\s*anto$/i.test(clean) || /^anto\s*(&|and)?\s*syno$/i.test(clean) || /^synonyms?$/i.test(clean) || /^antonyms?$/i.test(clean) || /^syno$/i.test(clean) || /^anto$/i.test(clean)) return 'Synonyms & Antonyms';
   if (/^idioms?\s*(&|and)?\s*phrases?$/i.test(clean)) return 'Idioms & Phrases';
-  if (/^fill\s*in\s*the\s*blanks?$/i.test(clean)) return 'Fill in the Blanks';
+  if (/^fill\s*in\s*the\s*blanks?$/i.test(clean) || /^fillers?$/i.test(clean)) return 'Fill in the Blanks';
   if (/^sentence\s*improvement$/i.test(clean)) return 'Sentence Improvement';
   if (/^spotting?\s*errors?$/i.test(clean)) return 'Spotting Errors';
-  if (/^cloze\s*test$/i.test(clean)) return 'Cloze Test';
+  if (/^cloze\s*test$/i.test(clean) || /^cloze$/i.test(clean)) return 'Cloze Test';
+  if (/^reading\s*comprehension$/i.test(clean) || /^rc$/i.test(clean) || /^comprehension$/i.test(clean)) return 'Reading Comprehension';
   return clean;
 }
 
@@ -26,7 +27,18 @@ export function detectTopic(q: Question, subject: string): string {
 
   const rawTag = q.tags?.topic || (q as any).topic;
   let currentTopic: string | undefined = rawTag ? normalizeTopicTitle(rawTag) : undefined;
-  if (currentTopic === 'General') currentTopic = undefined;
+  if (currentTopic === 'General' || currentTopic === 'English Comprehension' || currentTopic === 'English') currentTopic = undefined;
+
+  // Fallback to subtopic if topic is unassigned or generic
+  if (!currentTopic) {
+    const rawSubtopic = q.tags?.subtopic || (q as any).subtopic;
+    if (rawSubtopic) {
+      const normalizedSub = normalizeTopicTitle(rawSubtopic);
+      if (normalizedSub && normalizedSub !== 'General' && normalizedSub !== 'Unknown' && normalizedSub !== 'English Comprehension' && normalizedSub !== 'English') {
+        currentTopic = normalizedSub;
+      }
+    }
+  }
 
   // Clean obvious cross-subject or cross-topic misclassifications in Reasoning
   if (isReasoning && currentTopic) {
@@ -111,11 +123,13 @@ export function detectTopic(q: Question, subject: string): string {
     if (/\b(indirect speech|direct speech|reported speech|narration)\b/i.test(s)) return 'Direct & Indirect Speech';
     if (/\b(passive voice|active voice)\b/i.test(s)) return 'Active & Passive Voice';
     if (/\b(one word substitution|one-word substitute|one word substitute|group of words)\b/i.test(s)) return 'One Word Substitution';
-    if (/\b([P-S]{4}|jumbled|para jumbles?|arrange the sentences|order of the parts|order to form a meaningful)\b/i.test(s)) return 'Para Jumbles';
-    if (/\b(substitute|substitution|underline|improve|sentence improvement)\b/i.test(s)) return 'Sentence Improvement';
-    if (/\b(synonym|antonym|similar|opposite in meaning|homonym)\b/i.test(s)) return 'Synonyms & Antonyms';
+    if (/\b([P-S]{4}|jumbled|para jumbles?|arrange the sentences|order of the parts|order to form a meaningful|sentence rearrangement)\b/i.test(s)) return 'Para Jumbles';
+    if (/\b(substitute the underlined|substitute the bold|improve the underlined|improve the segment|sentence improvement)\b/i.test(s)) return 'Sentence Improvement';
+    if (/\b(synonym|antonym|similar in meaning|opposite in meaning|closest in meaning|homonym)\b/i.test(s)) return 'Synonyms & Antonyms';
     if (/\b(idiom|phrase)\b/i.test(s)) return 'Idioms & Phrases';
-    if (/\b(fill in the blank|blank)\b/i.test(s)) return 'Fill in the Blanks';
+    if (/\b(what will come in blank \(\d+\)|blank \(\d+\)|cloze test|cloze passage)\b/i.test(s)) return 'Cloze Test';
+    if (/\b(according to the passage|based on the passage|author's tone|author’s tone|reading comprehension)\b/i.test(s)) return 'Reading Comprehension';
+    if (/\b(fill in the blank|single filler|double filler)\b/i.test(s)) return 'Fill in the Blanks';
     if (/\b(subject-verb agreement|subject verb agreement)\b/i.test(s)) return 'Subject-Verb Agreement';
     if (/\b(preposition|prepositions)\b/i.test(s)) return 'Prepositions';
     if (/\b(article|articles)\b/i.test(s)) return 'Articles';
@@ -123,7 +137,9 @@ export function detectTopic(q: Question, subject: string): string {
     if (/\b(pronoun|pronouns)\b/i.test(s)) return 'Pronouns';
     if (/\b(tenses|sequence of tenses)\b/i.test(s)) return 'Tenses';
     if (/\b(grammatical error|spot the error|contains an error|spotting error|grammatically correct)\b/i.test(s)) return 'Spotting Errors';
-    if (/\b(cloze|passage|reading comprehension)\b/i.test(s)) return 'Cloze Test';
+    if (/\b(cloze)\b/i.test(s)) return 'Cloze Test';
+    if (/\b(passage)\b/i.test(s)) return 'Reading Comprehension';
+    if (/\b(blank)\b/i.test(s)) return 'Fill in the Blanks';
     return 'Spotting Errors';
   }
 
