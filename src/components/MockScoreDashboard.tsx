@@ -29,6 +29,7 @@ import { Chapter, Question, SubjectData, QuizResult, QuestionProgress } from '..
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
 import { safeStorage } from '../utils/safeStorage';
+import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle } from '../utils/syncMockReports';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
 const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
@@ -497,7 +498,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       } catch (err) {
         console.warn('Backend mock reports unavailable, using local store:', err);
       }
-
+ 
       if (loaded.length === 0) {
         try {
           const saved = safeStorage.getItem(LOCAL_STORAGE_KEY);
@@ -510,32 +511,14 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         } catch {}
       }
 
-      // Guaranteed fallback to bundled mock reports (ensures Vercel and storage-restricted modes never show blank)
-      if (loaded.length === 0 && Array.isArray(initialMockReports) && initialMockReports.length > 0) {
-        loaded = initialMockReports as MockScoreReport[];
-      }
-
-      // Filter out duplicate reports or purged duplicate mock IDs
-      const seenIds = new Set<string>();
-      const seenKeys = new Set<string>();
-      loaded = loaded.filter(r => {
-        if (!r || !r.id) return false;
-        if (r.id === 'mock_1789390419229_wwxcs' || r.id === 'mock_1789389316470_i3i84') return false;
-        if (seenIds.has(r.id)) return false;
-        seenIds.add(r.id);
-
-        // Deduplicate only when title + platform match (same mock re-imported)
-        const key = `${r.platform || ''}|${r.title || ''}|${r.type}`;
-        if (seenKeys.has(key)) return false;
-        seenKeys.add(key);
-        return true;
-      });
+      // Synchronize with canonical bundled reports so renames (e.g. Full Test 7) and new mocks update immediately
+      const synced = syncMockReports(loaded, initialMockReports as MockScoreReport[]);
 
       try {
-        safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(loaded));
+        safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(synced));
       } catch {}
 
-      setReports(loaded);
+      setReports(synced);
       setLoading(false);
     };
 
@@ -543,9 +526,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   }, []);
 
   const saveReports = (newReports: MockScoreReport[]) => {
-    setReports(newReports);
+    const synced = syncMockReports(newReports, initialMockReports as MockScoreReport[]);
+    setReports(synced);
     try {
-      safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newReports));
+      safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(synced));
       window.dispatchEvent(new Event('cgl_mock_reports_updated'));
     } catch {}
   };
@@ -783,60 +767,107 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
   // ─── SECTION-WISE MOCK ERROR QUESTION LOADER ───
   const loadRawMockQuestions = async (report: MockScoreReport): Promise<any[]> => {
-    if (rawQuestionsCache[report.id] && rawQuestionsCache[report.id].length > 0) {
-      return rawQuestionsCache[report.id];
+    const rawId = report.id;
+    const effectiveId = LEGACY_MOCK_ID_MAP[rawId] || rawId;
+
+    if (rawQuestionsCache[effectiveId] && rawQuestionsCache[effectiveId].length > 0) {
+      return rawQuestionsCache[effectiveId];
+    }
+    if (rawQuestionsCache[rawId] && rawQuestionsCache[rawId].length > 0) {
+      return rawQuestionsCache[rawId];
     }
 
     let list: any[] = [];
 
-    // 1. Direct Vite dynamic module (instant, client-side bundle)
-    try {
-      const targetPath = `../data/mock_questions/${report.id}.json`;
-      if (mockQuestionModules[targetPath]) {
-        const mod: any = await (mockQuestionModules[targetPath] as () => Promise<any>)();
-        const raw = mod.default || mod;
-        if (Array.isArray(raw) && raw.length > 0) list = raw;
+    const tryExtractQuestions = (mod: any): any[] | null => {
+      const raw = mod?.default || mod;
+      if (Array.isArray(raw) && raw.length > 0) return raw;
+      if (raw && typeof raw === 'object') {
+        if (Array.isArray(raw.data) && raw.data.length > 0) return raw.data;
+        if (Array.isArray(raw.questions) && raw.questions.length > 0) return raw.questions;
       }
-    } catch {}
+      return null;
+    };
 
-    // 2. Server API lookup
-    if (list.length === 0) {
-      try {
-        const res = await fetch(`/api/mock-questions/${report.id}`);
-        const cType = res.headers.get('content-type') || '';
-        if (res.ok && cType.includes('application/json')) {
-          const data = await res.json();
-          if (Array.isArray(data) && data.length > 0) list = data;
-        }
-      } catch {}
+    const tryModulePath = async (p: string): Promise<any[] | null> => {
+      if (mockQuestionModules[p]) {
+        try {
+          const mod = await (mockQuestionModules[p] as () => Promise<any>)();
+          return tryExtractQuestions(mod);
+        } catch {}
+      }
+      return null;
+    };
+
+    // Find canonical bundled report if any
+    const canonicalReport = (initialMockReports as MockScoreReport[]).find(
+      r => r.id === effectiveId || r.id === rawId ||
+           (r.title && report.title && normalizeTestTitle(r.title) === normalizeTestTitle(report.title))
+    );
+
+    const candidateIds = Array.from(new Set([
+      canonicalReport?.id,
+      effectiveId,
+      rawId
+    ].filter(Boolean) as string[]));
+
+    // 1. Direct Vite dynamic module lookup for all candidate IDs (checks mock_questions and mock_tests)
+    for (const cid of candidateIds) {
+      const qData = await tryModulePath(`../data/mock_questions/${cid}.json`);
+      if (qData) { list = qData; break; }
+
+      const tData = await tryModulePath(`../data/mock_tests/${cid}.json`);
+      if (tData) { list = tData; break; }
     }
 
-    // 3. LocalStorage cache
-    if (list.length === 0) {
-      try {
-        const saved = safeStorage.getItem(`cgl_mock_questions_${report.id}`);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
-        }
-      } catch {}
+    // 2. Search mockQuestionModules by matching test title in question data
+    if (list.length === 0 && report.title) {
+      const targetNorm = normalizeTestTitle(report.title).replace(/[^a-z0-9]/g, '');
+      for (const [, loader] of Object.entries(mockQuestionModules)) {
+        try {
+          const mod = await (loader as () => Promise<any>)();
+          const items = tryExtractQuestions(mod);
+          if (items && items.length > 0) {
+            const firstTestName = normalizeTestTitle(items[0]?.testName || '').replace(/[^a-z0-9]/g, '');
+            if (firstTestName && (firstTestName === targetNorm || firstTestName.includes(targetNorm) || targetNorm.includes(firstTestName))) {
+              list = items;
+              break;
+            }
+          }
+        } catch {}
+      }
     }
 
-    // 4. Bundled question files fallback by attempt order
+    // 3. LocalStorage cache lookup
     if (list.length === 0) {
-      try {
-        const availablePaths = Object.keys(mockQuestionModules);
-        if (availablePaths.length > 0) {
-          const repIdx = filteredReports.findIndex(r => r.id === report.id);
-          const pathKey = availablePaths[repIdx >= 0 && repIdx < availablePaths.length ? repIdx : 0];
-          const mod: any = await (mockQuestionModules[pathKey] as () => Promise<any>)();
-          const raw = mod.default || mod;
-          if (Array.isArray(raw) && raw.length > 0) list = raw;
-        }
-      } catch {}
+      for (const cid of candidateIds) {
+        try {
+          const saved = safeStorage.getItem(`cgl_mock_questions_${cid}`);
+          if (saved) {
+            const parsed = JSON.parse(saved);
+            const extracted = tryExtractQuestions(parsed);
+            if (extracted) { list = extracted; break; }
+          }
+        } catch {}
+      }
     }
 
-    // 5. Fallback: gather questions from mock_errors
+    // 4. Server API lookup
+    if (list.length === 0) {
+      for (const cid of candidateIds) {
+        try {
+          const res = await fetch(`/api/mock-questions/${cid}`);
+          const cType = res.headers.get('content-type') || '';
+          if (res.ok && cType.includes('application/json')) {
+            const data = await res.json();
+            const extracted = tryExtractQuestions(data);
+            if (extracted) { list = extracted; break; }
+          }
+        } catch {}
+      }
+    }
+
+    // 5. Fallback: gather questions from mock_errors if subject matches
     if (list.length === 0 && mockData) {
       const subjectsInOrder = ['Reasoning', 'General Awareness', 'Mathematics', 'English'];
       subjectsInOrder.forEach(sub => {
@@ -860,7 +891,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     }
 
     if (list.length > 0) {
-      setRawQuestionsCache(prev => ({ ...prev, [report.id]: list }));
+      setRawQuestionsCache(prev => ({
+        ...prev,
+        [rawId]: list,
+        [effectiveId]: list,
+        ...(canonicalReport?.id ? { [canonicalReport.id]: list } : {})
+      }));
     }
 
     return list;
@@ -1135,10 +1171,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         return;
       }
 
+      const effectiveId = LEGACY_MOCK_ID_MAP[report.id] || report.id;
       // Load existing RCA classifications from localStorage if any
       let rcaMap: Record<string, any> = {};
       try {
-        const savedRca = safeStorage.getItem(`cgl_rca_${report.id}`) || safeStorage.getItem(`cgl_rca_${report.title}`);
+        const savedRca = safeStorage.getItem(`cgl_rca_${report.id}`) || safeStorage.getItem(`cgl_rca_${effectiveId}`) || safeStorage.getItem(`cgl_rca_${report.title}`);
         if (savedRca) rcaMap = JSON.parse(savedRca);
       } catch {}
 
@@ -1382,7 +1419,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       const totalTime = questionDetails.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
 
       const reviewQuizResult: QuizResult = {
-        id: report.id,
+        id: effectiveId || report.id,
         userId: 'mock_candidate',
         chapter_title: report.title,
         subject: report.type === 'sectional' && report.subject ? report.subject : 'All 4 Sections Mock',

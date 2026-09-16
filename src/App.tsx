@@ -18,6 +18,7 @@ import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
 import { AiMentorChat } from './components/AiMentorChat';
 import { safeStorage } from './utils/safeStorage';
+import { syncMockReports } from './utils/syncMockReports';
 import { FormattedText } from './components/FormattedText';
 
 import { getCachedData, setCachedData } from './utils/cache';
@@ -253,10 +254,11 @@ export default function App() {
         if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
       }
     } catch (e) {}
-    if (Array.isArray(initialMockReports) && initialMockReports.length > list.length) {
-      list = initialMockReports as MockScoreReport[];
-    }
-    return list;
+    const synced = syncMockReports(list, initialMockReports as MockScoreReport[]);
+    try {
+      safeStorage.setItem('cgl_mock_score_reports', JSON.stringify(synced));
+    } catch {}
+    return synced;
   });
 
   useEffect(() => {
@@ -270,9 +272,10 @@ export default function App() {
       })
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
-          setMockReportsList(data);
+          const synced = syncMockReports(data, initialMockReports as MockScoreReport[]);
+          setMockReportsList(synced);
           try {
-            safeStorage.setItem('cgl_mock_score_reports', JSON.stringify(data));
+            safeStorage.setItem('cgl_mock_score_reports', JSON.stringify(synced));
           } catch {}
         }
       })
@@ -283,7 +286,10 @@ export default function App() {
         const saved = safeStorage.getItem('cgl_mock_score_reports');
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.length > 0) setMockReportsList(parsed);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            const synced = syncMockReports(parsed, initialMockReports as MockScoreReport[]);
+            setMockReportsList(synced);
+          }
         }
       } catch (e) {}
     };
