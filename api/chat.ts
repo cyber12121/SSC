@@ -70,7 +70,7 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { messages, mockSummary, activeMockContext, activeReviewQuestions, activeQuestion } = req.body || {};
+    const { messages, mockSummary, activeMockContext, activeReviewQuestions, activeQuestion, focusedScope, activeMockId, activeMockTitle } = req.body || {};
 
     if (!Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: 'Invalid request: "messages" array is required.' });
@@ -83,7 +83,46 @@ export default async function handler(req: any, res: any) {
     }));
 
     const latestUserMsg = messages[messages.length - 1]?.text || '';
-    const { intent, matchedTopic, targetQNum } = detectUserIntent(latestUserMsg);
+    const { intent, matchedTopic, targetQNum, targetMock } = detectUserIntent(
+      latestUserMsg,
+      activeMockId,
+      activeMockTitle
+    );
+
+    // ── Build Scoped Focus Context (if user opened Tommy via an AI Chip) ──
+    let scopeContext = '';
+    if (focusedScope && typeof focusedScope === 'object') {
+      const { type, title, subject, stats, questions, summaryText } = focusedScope;
+      scopeContext += `\n=========================================\n`;
+      scopeContext += `🎯 ACTIVE FOCUSED SCOPE: ${String(type || '').toUpperCase()} - "${title}"\n`;
+      if (subject) scopeContext += `Subject: ${subject}\n`;
+      if (stats) {
+        if (stats.score !== undefined) scopeContext += `Score: ${stats.score}/${stats.maxMarks || 200} | Accuracy: ${stats.accuracy}%\n`;
+        if (stats.wrong !== undefined || stats.slow !== undefined || stats.unattempted !== undefined) {
+          scopeContext += `Mistake Breakdown: ${stats.wrong ?? 0} Wrong, ${stats.slow ?? 0} Correct but Slow, ${stats.unattempted ?? 0} Unattempted\n`;
+        }
+      }
+      if (summaryText) {
+        scopeContext += `Summary:\n${summaryText}\n`;
+      }
+      if (Array.isArray(questions) && questions.length > 0) {
+        scopeContext += `\n--- MISTAKE QUESTIONS IN THIS ${String(type || '').toUpperCase()} (${questions.length} Items) ---\n`;
+        scopeContext += questions.map((q: any, i: number) => {
+          const num = q.qNum || (i + 1);
+          const optStr = q.options ? Object.entries(q.options).map(([k, v]) => `${k.toUpperCase()}) ${v}`).join(' | ') : '';
+          const userAns = q.userAnswer ? q.userAnswer.toUpperCase() : (q.status === 'unattempted' ? 'Skipped' : 'N/A');
+          const correctAns = q.answer ? q.answer.toUpperCase() : 'Refer to solution';
+          const rcaTag = q.rca ? ` [RCA: ${q.rca.tagName || q.rca.tag}]` : '';
+          const status = q.status ? ` [Status: ${q.status.toUpperCase()}]` : '';
+          return `[Question #${num}]${status}${rcaTag}\nQuestion: ${q.question}\nOptions: ${optStr}\nCandidate Choice: ${userAns} | Correct: ${correctAns}\nSolution: ${q.solution || 'See concept'}`;
+        }).join('\n-----------------------------------------\n');
+      }
+      scopeContext += `\n=========================================\n`;
+      scopeContext += `FOCUSED SCOPE RULES:
+- The candidate explicitly opened you to discuss this ${type}: "${title}".
+- If they ask about questions, errors, shortcuts, or concepts from this ${type}, refer directly to the exact questions and details provided above.
+- If they ask general questions or change the topic, answer helpfully and clearly without hallucinating or forcing the test questions into the response.\n`;
+    }
 
     // ── Selective Context Assembly (Token Optimization) ──
     let selectiveContext = '';
@@ -103,7 +142,9 @@ export default async function handler(req: any, res: any) {
       selectiveContext = buildSelectiveContext({
         userText: latestUserMsg,
         activeQuestion: targetQ,
-        activeMockContext
+        activeMockContext,
+        activeMockId,
+        activeMockTitle
       });
 
       // If user asks about the active quiz review and not a single question:
@@ -132,6 +173,7 @@ Solution: ${q.solution || 'No solution provided'}
     }
 
     const fullSystemInstruction = `${SYSTEM_INSTRUCTION}
+${scopeContext ? `\n${scopeContext}\n` : ''}
 ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 `;
 

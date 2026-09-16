@@ -20,6 +20,8 @@ import { AiMentorChat } from './components/AiMentorChat';
 import { safeStorage } from './utils/safeStorage';
 import { syncMockReports } from './utils/syncMockReports';
 import { FormattedText } from './components/FormattedText';
+import { openAiWithScope } from './utils/aiScopeHelper';
+import { AiFocusedQuestion } from './types/aiScope';
 
 import { getCachedData, setCachedData } from './utils/cache';
 
@@ -1087,6 +1089,131 @@ export default function App() {
     }
   };
 
+  const handleAskAiSubject = (subjectName: string) => {
+    const subjectChapters = currentData[subjectName] || [];
+    const weakTopics: { topic: string; mistakeCount: number }[] = [];
+    let totalQuestions = 0;
+    const allMistakeQuestions: AiFocusedQuestion[] = [];
+
+    subjectChapters.forEach(ch => {
+      const qs = ch.questions || [];
+      totalQuestions += qs.length;
+      if (qs.length > 0) {
+        weakTopics.push({ topic: ch.chapter_title, mistakeCount: qs.length });
+      }
+
+      qs.forEach((q, idx) => {
+        let optionsMap: Record<string, string> | undefined = undefined;
+        if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
+          optionsMap = {
+            A: String(q.options.a || q.options['1'] || q.options.A || '').trim(),
+            B: String(q.options.b || q.options['2'] || q.options.B || '').trim(),
+            C: String(q.options.c || q.options['3'] || q.options.C || '').trim(),
+            D: String(q.options.d || q.options['4'] || q.options.D || '').trim(),
+          };
+        } else if (Array.isArray(q.options)) {
+          optionsMap = {
+            A: String((q.options[0] as any)?.text || q.options[0] || '').trim(),
+            B: String((q.options[1] as any)?.text || q.options[1] || '').trim(),
+            C: String((q.options[2] as any)?.text || q.options[2] || '').trim(),
+            D: String((q.options[3] as any)?.text || q.options[3] || '').trim(),
+          };
+        }
+
+        allMistakeQuestions.push({
+          id: q.id,
+          qNum: idx + 1,
+          question: q.question,
+          options: optionsMap,
+          correctAnswer: q.answer,
+          userAnswer: (q as any).userAnswer || undefined,
+          solution: q.solution,
+          status: ((q as any).status || (q as any).errorType || 'wrong') as any,
+          subject: subjectName,
+          topic: ch.chapter_title
+        });
+      });
+    });
+
+    weakTopics.sort((a, b) => b.mistakeCount - a.mistakeCount);
+
+    const subjectAttempts = userResults.filter(r => r.subject === subjectName);
+    let subjectAccuracy: number | undefined = undefined;
+    if (subjectAttempts.length > 0) {
+      const totQ = subjectAttempts.reduce((acc, r) => acc + (r.total_questions || 0), 0);
+      const totC = subjectAttempts.reduce((acc, r) => acc + (r.score || 0), 0);
+      if (totQ > 0) {
+        subjectAccuracy = Math.round((totC / totQ) * 100);
+      }
+    }
+
+    openAiWithScope({
+      type: 'subject',
+      title: subjectName,
+      subject: subjectName,
+      stats: {
+        totalQuestions,
+        accuracy: subjectAccuracy,
+        chaptersCount: subjectChapters.length
+      },
+      weakTopics: weakTopics.slice(0, 6),
+      questions: allMistakeQuestions.slice(0, 30)
+    });
+  };
+
+  const handleAskAiTopic = (
+    topicName: string,
+    subject: string,
+    questions: Question[],
+    stats?: { total?: number; wrong?: number; slow?: number; unattempted?: number }
+  ) => {
+    const scopedQuestions: AiFocusedQuestion[] = (questions || []).map((q, idx) => {
+      let optionsMap: Record<string, string> | undefined = undefined;
+      if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
+        optionsMap = {
+          A: String(q.options.a || q.options['1'] || q.options.A || '').trim(),
+          B: String(q.options.b || q.options['2'] || q.options.B || '').trim(),
+          C: String(q.options.c || q.options['3'] || q.options.C || '').trim(),
+          D: String(q.options.d || q.options['4'] || q.options.D || '').trim(),
+        };
+      } else if (Array.isArray(q.options)) {
+        optionsMap = {
+          A: String((q.options[0] as any)?.text || q.options[0] || '').trim(),
+          B: String((q.options[1] as any)?.text || q.options[1] || '').trim(),
+          C: String((q.options[2] as any)?.text || q.options[2] || '').trim(),
+          D: String((q.options[3] as any)?.text || q.options[3] || '').trim(),
+        };
+      }
+
+      return {
+        id: q.id,
+        qNum: idx + 1,
+        question: q.question,
+        options: optionsMap,
+        correctAnswer: q.answer,
+        userAnswer: (q as any).userAnswer || undefined,
+        solution: q.solution,
+        status: ((q as any).status || (q as any).errorType || 'wrong') as any,
+        subject,
+        topic: topicName,
+        rcaReason: (q as any).rcaReason || (q as any).rca?.reason || undefined
+      };
+    });
+
+    openAiWithScope({
+      type: 'topic',
+      title: topicName,
+      subject,
+      stats: {
+        totalQuestions: stats?.total || questions.length,
+        wrong: stats?.wrong,
+        slow: stats?.slow,
+        unattempted: stats?.unattempted
+      },
+      questions: scopedQuestions
+    });
+  };
+
   const dashboardStats = useMemo(() => {
     if (!userResults || userResults.length === 0) {
       return {
@@ -1574,9 +1701,22 @@ export default function App() {
                                   <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
                                     <Layers className="w-4 h-4" />
                                   </div>
-                                  <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
-                                    {currentData[subject]?.length || 0} Ch
-                                  </span>
+                                  <div className="flex items-center gap-1.5">
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleAskAiSubject(subject);
+                                      }}
+                                      className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all cursor-pointer shadow-2xs"
+                                      title={`Ask Tommy AI to analyze ${subject} weaknesses and mistakes`}
+                                    >
+                                      <Sparkles className="w-2.5 h-2.5" />
+                                      <span>Ask AI</span>
+                                    </button>
+                                    <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
+                                      {currentData[subject]?.length || 0} Ch
+                                    </span>
+                                  </div>
                                 </div>
                                 <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
                                 <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
@@ -2367,11 +2507,29 @@ export default function App() {
                                       e.stopPropagation();
                                       startClubbedChapterQuiz(ch.topic, ch.questions);
                                     }}
-                                    className="w-16 sm:w-20 py-1 rounded-lg text-[11px] font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center justify-center gap-1"
+                                    className="w-16 sm:w-20 py-1 rounded-lg text-[11px] font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95"
                                     title={`Start quiz with all ${ch.total} questions for ${ch.topic}`}
                                   >
                                     <Play className="w-2.5 h-2.5 fill-current" />
                                     Practice
+                                  </button>
+
+                                  {/* Ask AI Button */}
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleAskAiTopic(ch.topic, selectedSubject || 'All Subjects', ch.questions, {
+                                        total: ch.total,
+                                        wrong: ch.wrong,
+                                        slow: ch.slow,
+                                        unattempted: ch.unattempted
+                                      });
+                                    }}
+                                    className="px-2 py-1 rounded-lg text-[11px] font-semibold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95 whitespace-nowrap"
+                                    title={`Ask Tommy AI to analyze ${ch.topic} mistakes`}
+                                  >
+                                    <Sparkles className="w-2.5 h-2.5 text-violet-500 group-hover:text-white" />
+                                    <span>AI</span>
                                   </button>
                                 </div>
                               </div>
@@ -2635,6 +2793,17 @@ export default function App() {
                                       <span className="rounded-md bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-100">
                                         {totalQuestions} Qs
                                       </span>
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          const allQs = topicChapters.flatMap(c => c.questions || []);
+                                          handleAskAiTopic(displayTitle, selectedSubject || 'All Subjects', allQs);
+                                        }}
+                                        className="p-1 rounded-md bg-violet-50 text-violet-600 hover:bg-violet-600 hover:text-white transition-colors cursor-pointer"
+                                        title={`Ask Tommy AI about ${displayTitle}`}
+                                      >
+                                        <Sparkles className="w-3 h-3" />
+                                      </button>
                                     </div>
                                   </div>
                                   <h3 className="mt-2.5 text-xs font-bold capitalize text-slate-800">{displayTitle}</h3>
@@ -2715,19 +2884,31 @@ export default function App() {
                                   Start Set
                                   <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                 </div>
-                                {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                <div className="flex items-center gap-1">
                                   <button
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
-                                      if (r) openReview(r, 'home');
+                                      handleAskAiTopic(chapter.chapter_title, chapter.subject, chapter.questions);
                                     }}
-                                    className="p-1.5 rounded-md bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
-                                    title="Review last attempt"
+                                    className="p-1.5 rounded-md bg-violet-50 text-violet-600 hover:bg-violet-600 hover:text-white transition-colors cursor-pointer"
+                                    title={`Ask Tommy AI about this chapter`}
                                   >
-                                    <History className="w-3.5 h-3.5" />
+                                    <Sparkles className="w-3.5 h-3.5" />
                                   </button>
-                                )}
+                                  {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
+                                        if (r) openReview(r, 'home');
+                                      }}
+                                      className="p-1.5 rounded-md bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
+                                      title="Review last attempt"
+                                    >
+                                      <History className="w-3.5 h-3.5" />
+                                    </button>
+                                  )}
+                                </div>
                               </div>
                             </motion.div>
                           ));
@@ -3655,6 +3836,27 @@ export default function App() {
                   >
                     <Play className="w-3.5 h-3.5 fill-current" />
                     Practice All ({activeMockChapterModal.total})
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      handleAskAiTopic(
+                        activeMockChapterModal.topic,
+                        selectedSubject || 'All Subjects',
+                        activeMockChapterModal.questions,
+                        {
+                          total: activeMockChapterModal.total,
+                          wrong: activeMockChapterModal.wrong,
+                          slow: activeMockChapterModal.slow,
+                          unattempted: activeMockChapterModal.unattempted
+                        }
+                      );
+                    }}
+                    className="px-3.5 py-2 bg-white/20 hover:bg-white/30 border border-white/30 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
+                    title={`Ask Tommy AI to analyze ${activeMockChapterModal.topic}`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                    Ask AI
                   </button>
 
                   {activeMockChapterModal.wrong > 0 && (

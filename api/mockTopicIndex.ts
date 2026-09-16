@@ -196,10 +196,22 @@ export function levenshteinDistance(s1: string, s2: string): number {
 }
 
 // ── 3. In-Memory Store (Cached Once per Server Instance) ──
+export interface TargetMockMatch {
+  mockId: string;
+  title: string;
+  platform?: string;
+  filePath: string;
+  targetSubject?: string;
+  targetStatus?: string;
+  targetQNum?: number;
+}
+
 class MockQuestionStore {
   private isInitialized = false;
   private topicMap = new Map<string, TopicIndexEntry>();
   private mockReports: MockScorecard[] = [];
+  private mockRegistry: Array<{ id: string; title: string; platform?: string; filePath: string }> = [];
+  private mockTestsCache = new Map<string, any[]>();
   private allQuestionsCount = 0;
 
   public initialize(cwd = process.cwd(), force = false): void {
@@ -207,6 +219,8 @@ class MockQuestionStore {
     if (force) {
       this.topicMap.clear();
       this.mockReports = [];
+      this.mockRegistry = [];
+      this.mockTestsCache.clear();
       this.allQuestionsCount = 0;
       this.isInitialized = false;
     }
@@ -321,11 +335,43 @@ class MockQuestionStore {
         }
       }
 
-      // 3. Ingest mock reports
+      // 3. Ingest mock reports & build mockRegistry
       if (fs.existsSync(reportsFile)) {
         try {
           this.mockReports = JSON.parse(fs.readFileSync(reportsFile, 'utf8'));
+          for (const rep of this.mockReports) {
+            const candidatePaths = [
+              path.join(testsDir, `${rep.id}.json`),
+              path.join(cwd, 'src', 'data', 'mock_questions', `${rep.id}.json`)
+            ];
+            for (const cp of candidatePaths) {
+              if (fs.existsSync(cp)) {
+                this.mockRegistry.push({
+                  id: rep.id,
+                  title: rep.title,
+                  platform: (rep as any).platform,
+                  filePath: cp
+                });
+                break;
+              }
+            }
+          }
         } catch {}
+      }
+
+      // Also ensure all test files in mock_tests are registered
+      if (fs.existsSync(testsDir)) {
+        const testFiles = fs.readdirSync(testsDir).filter(f => f.endsWith('.json'));
+        for (const file of testFiles) {
+          const id = file.replace('.json', '');
+          if (!this.mockRegistry.some(m => m.id === id)) {
+            this.mockRegistry.push({
+              id,
+              title: id,
+              filePath: path.join(testsDir, file)
+            });
+          }
+        }
       }
 
       this.isInitialized = true;
@@ -446,6 +492,133 @@ class MockQuestionStore {
   public getRecentMockScorecards(limit = 3): MockScorecard[] {
     return this.mockReports.slice(0, limit);
   }
+
+  // Get full questions list for a specific mock test
+  public getMockQuestions(mockId: string): any[] {
+    if (this.mockTestsCache.has(mockId)) {
+      return this.mockTestsCache.get(mockId)!;
+    }
+    const entry = this.mockRegistry.find(m => m.id === mockId);
+    if (!entry || !fs.existsSync(entry.filePath)) {
+      return [];
+    }
+    try {
+      const data = JSON.parse(fs.readFileSync(entry.filePath, 'utf8'));
+      const list = Array.isArray(data) ? data : [];
+      this.mockTestsCache.set(mockId, list);
+      return list;
+    } catch {
+      return [];
+    }
+  }
+
+  // Find a mock by natural user query (e.g. "test 7", "mock 3", "sectional 2")
+  public findMockByQuery(
+    userQuery: string,
+    fallbackMockId?: string,
+    fallbackMockTitle?: string
+  ): TargetMockMatch | null {
+    const qLower = (userQuery || '').toLowerCase().trim();
+    if (!qLower) return null;
+
+    // 1. Detect target subject / section
+    let targetSubject: string | undefined = undefined;
+    if (/(english|comprehension|cloze|vocab|vocabulary|grammar|para\s*jumble|synonym|antonym|spelling|idiom|reading)/i.test(qLower)) {
+      targetSubject = 'English';
+    } else if (/(math|maths|mathematics|quant|quantitative|arithmetic|advance|trigo|geometry|algebra|number system)/i.test(qLower)) {
+      targetSubject = 'Mathematics';
+    } else if (/(reasoning|gi|general intelligence|logical|logic|syllogism|analogy|coding|puzzle|dice)/i.test(qLower)) {
+      targetSubject = 'Reasoning';
+    } else if (/(gk|gs|ga|general awareness|general studies|current affairs|history|polity|science|economics|geography)/i.test(qLower)) {
+      targetSubject = 'General Awareness';
+    }
+
+    // 2. Detect target status
+    let targetStatus: string | undefined = undefined;
+    if (/(wrong|incorrect|mistake|galti|loss)/i.test(qLower)) {
+      targetStatus = 'wrong';
+    } else if (/(slow|time trap|timeout)/i.test(qLower)) {
+      targetStatus = 'slow';
+    } else if (/(unattempted|skipped|left|chhod)/i.test(qLower)) {
+      targetStatus = 'unattempted';
+    }
+
+    // 3. Question number in mock (e.g. 'question 19', 'q#19')
+    const qNumMatch = qLower.match(/\b(?:question|q)\s*#?\s*(\d+)\b/i);
+    const targetQNum = qNumMatch ? parseInt(qNumMatch[1], 10) : undefined;
+
+    // 4. Test / Mock number detection (e.g. "test 7", "mock 7", "7th mock", "full test 7")
+    const numMatch =
+      qLower.match(/(?:test|mock|full test|full mock|tier\s*i|ft|sectional)\s*[-:#]?\s*(\d+)/i) ||
+      qLower.match(/(\d+)(?:st|nd|rd|th)?\s*(?:mock|test)/i) ||
+      qLower.match(/(?:test|mock)\s*(\d+)/i);
+
+    const testNum = numMatch ? parseInt(numMatch[1], 10) : null;
+
+    if (testNum !== null) {
+      const isSectional = /sectional/i.test(qLower);
+      const candidates = this.mockRegistry.filter(r => {
+        const rLower = r.title.toLowerCase();
+        const numInTitle = rLower.match(/[-:]\s*(\d+)/) || rLower.match(/\btest\s*-\s*(\d+)/);
+        return numInTitle && parseInt(numInTitle[1], 10) === testNum;
+      });
+
+      if (candidates.length > 0) {
+        const preferred = isSectional
+          ? candidates.find(r => r.title.toLowerCase().includes('sectional'))
+          : candidates.find(r => !r.title.toLowerCase().includes('sectional'));
+        const matched = preferred || candidates[0];
+        return {
+          mockId: matched.id,
+          title: matched.title,
+          platform: matched.platform,
+          filePath: matched.filePath,
+          targetSubject,
+          targetStatus,
+          targetQNum
+        };
+      }
+    }
+
+    // 5. Check named mock phrases (e.g., 'live test', 'mega live', 'officer friday')
+    if (/live test|mega live|officer/i.test(qLower)) {
+      const matched = this.mockRegistry.find(r =>
+        r.title.toLowerCase().includes('live test') || r.title.toLowerCase().includes('mega live')
+      );
+      if (matched) {
+        return {
+          mockId: matched.id,
+          title: matched.title,
+          platform: matched.platform,
+          filePath: matched.filePath,
+          targetSubject,
+          targetStatus,
+          targetQNum
+        };
+      }
+    }
+
+    // 6. Fallback to active mock if candidate asks about the currently opened test
+    if (fallbackMockId) {
+      const isAskingForQuestions = /(question|quesito|problem|sawal|cloze|passage|review|mistake|wrong|slow)/i.test(qLower);
+      if (isAskingForQuestions || targetSubject) {
+        const matched = this.mockRegistry.find(r => r.id === fallbackMockId);
+        if (matched) {
+          return {
+            mockId: matched.id,
+            title: fallbackMockTitle || matched.title,
+            platform: matched.platform,
+            filePath: matched.filePath,
+            targetSubject,
+            targetStatus,
+            targetQNum
+          };
+        }
+      }
+    }
+
+    return null;
+  }
 }
 
 export const globalStore = new MockQuestionStore();
@@ -454,16 +627,22 @@ export const globalStore = new MockQuestionStore();
 export type UserIntent =
   | 'GREETING'
   | 'SPECIFIC_QUESTION'
+  | 'MOCK_TEST_QUESTIONS'
   | 'TOPIC_FOCUS'
   | 'FULL_MOCK'
   | 'OVERALL_WEAKNESS'
   | 'GENERAL';
 
-export function detectUserIntent(userText: string): {
+export function detectUserIntent(
+  userText: string,
+  fallbackMockId?: string,
+  fallbackMockTitle?: string
+): {
   intent: UserIntent;
   matchedTopic?: TopicIndexEntry | null;
   targetQNum?: number | null;
   mockCount?: number;
+  targetMock?: TargetMockMatch | null;
 } {
   const text = (userText || '').trim();
   const lower = text.toLowerCase();
@@ -480,13 +659,30 @@ export function detectUserIntent(userText: string): {
     return { intent: 'GREETING' };
   }
 
-  // 2. Specific question review
+  // 2. Specific Mock Test Query (e.g. "give all the quesito of the test 7 of english", "test 3 cloze", "mock 5 math wrong")
+  globalStore.initialize();
+  const targetMock = globalStore.findMockByQuery(lower, fallbackMockId, fallbackMockTitle);
+  const isAskingForMockQuestions =
+    targetMock &&
+    (/(question|quesito|problem|sawal|all|show|give|list|tell|explain|review|passage|cloze|solve|wrong|mistake|slow|unattempted|test|mock)/i.test(lower) ||
+      targetMock.targetSubject !== undefined ||
+      targetMock.targetQNum !== undefined);
+
+  if (targetMock && isAskingForMockQuestions) {
+    return {
+      intent: 'MOCK_TEST_QUESTIONS',
+      targetMock,
+      targetQNum: targetMock.targetQNum
+    };
+  }
+
+  // 3. Specific question review in general (e.g. "question 14")
   const qNumMatch = lower.match(/\b(?:question|q)\s*#?\s*(\d+)\b/i) || lower.match(/#(\d+)\b/);
   if (qNumMatch) {
     return { intent: 'SPECIFIC_QUESTION', targetQNum: parseInt(qNumMatch[1], 10) };
   }
 
-  // 3. Multi-Mock / Full Mock / Trend Analysis (e.g. "analyse last 3 mock", "compare mocks", "latest test")
+  // 4. Multi-Mock / Full Mock / Trend Analysis (e.g. "analyse last 3 mock", "compare mocks", "latest test")
   const mockCountMatch = lower.match(/\b(?:last|past|recent)\s*(\d+)\s*mocks?\b/i);
   const requestedMockCount = mockCountMatch ? parseInt(mockCountMatch[1], 10) : (
     /\b(all mocks?|mock history|compare mocks)\b/i.test(lower) ? 5 : 1
@@ -495,18 +691,17 @@ export function detectUserIntent(userText: string): {
   if (
     mockCountMatch ||
     /\b(full mock|mock test|mock report|test score|latest mock|my marks|my score|latest test|last mock|past mock|recent mock|mock history|compare mocks)\b/i.test(lower) ||
-    /\bmocks?\b/i.test(lower) && /\b(analyse|analyze|trend|score|performance|report)\b/i.test(lower)
+    (/\bmocks?\b/i.test(lower) && /\b(analyse|analyze|trend|score|performance|report)\b/i.test(lower))
   ) {
     return { intent: 'FULL_MOCK', mockCount: requestedMockCount };
   }
 
-  // 4. Overall Weakness diagnosis
+  // 5. Overall Weakness diagnosis
   if (/\b(weak|weakness|mistake|kaha galti|marks nahi|score kaise|plateau|diagnose|improve score)\b/i.test(lower)) {
     return { intent: 'OVERALL_WEAKNESS' };
   }
 
-  // 5. Topic Focus (Fuzzy / Alias search)
-  globalStore.initialize();
+  // 6. Topic Focus (Fuzzy / Alias search)
   const matchedTopic = globalStore.findTopic(lower);
   if (matchedTopic) {
     return { intent: 'TOPIC_FOCUS', matchedTopic };
@@ -515,21 +710,140 @@ export function detectUserIntent(userText: string): {
   return { intent: 'GENERAL' };
 }
 
-// ── 5. Selective Context Builder (Token Optimizer) ──
+// ── 5. Compact Question Formatter for Prompts (Token Efficient) ──
+function formatMockQuestionForPrompt(q: any, index: number): string {
+  const qNum = q.questionNumber || (q.q_num ? `Question ${q.q_num}` : `Q#${index + 1}`);
+  const topic = q.topic || q.tags?.topic || 'General';
+  const subtopic = q.subtopic || q.tags?.subtopic || '';
+  const status = (q.status || 'attempted').toUpperCase();
+  const userAns = q.chosenOption || q.userAnswer || q.selectedAnswer || 'Unattempted';
+  const correctAns = q.correctOption || q.answer || '';
+
+  let optionsStr = '';
+  if (q.options && typeof q.options === 'object') {
+    optionsStr = Object.entries(q.options)
+      .map(([k, v]) => `(${k.toUpperCase()}) ${v}`)
+      .join('  ');
+  }
+
+  // Clean solution text: remove redundant headers and shorten overly long passage repeats
+  let solText = (q.solution || '').trim();
+  solText = solText.replace(/^Solution\s*/i, '').trim();
+  if (solText.length > 450) {
+    solText = solText.slice(0, 450) + '...';
+  }
+
+  const qText = (q.questionText || q.question || '').trim();
+
+  return `[${qNum}] Topic: ${topic}${subtopic ? ` (${subtopic})` : ''} | Status: ${status} | Candidate Choice: ${userAns} | Correct Answer: ${correctAns}
+Question: ${qText}
+${optionsStr ? `Options: ${optionsStr}\n` : ''}Key Solution / Concept: ${solText || 'None provided'}`;
+}
+
+// ── 6. Selective Context Builder (Token Optimizer) ──
 export function buildSelectiveContext(params: {
   userText: string;
   activeQuestion?: any;
   activeMockContext?: string;
+  activeMockId?: string;
+  activeMockTitle?: string;
 }): string {
   globalStore.initialize();
-  const { intent, matchedTopic, targetQNum, mockCount } = detectUserIntent(params.userText);
+  const { intent, matchedTopic, targetQNum, mockCount, targetMock } = detectUserIntent(
+    params.userText,
+    params.activeMockId,
+    params.activeMockTitle
+  );
 
   // Case A: Greeting -> 0 extra context tokens!
   if (intent === 'GREETING') {
     return '';
   }
 
-  // Case B: Single Active Question (from 'Ask AI' button or user asking for Q#N)
+  // Case B: Specific Mock Test Questions (Authentic Data Retrieval)
+  if (intent === 'MOCK_TEST_QUESTIONS' && targetMock) {
+    const rawQuestions = globalStore.getMockQuestions(targetMock.mockId);
+
+    if (rawQuestions.length === 0) {
+      return `\n--- MOCK TEST CONTEXT: ${targetMock.title} ---
+No detailed question bank file found for ${targetMock.title}. Please notify the student that only the high-level scorecard is available for this test.
+`;
+    }
+
+    // Sub-case 1: Specific question requested (e.g. Q#17)
+    if (targetMock.targetQNum !== undefined) {
+      const qNum = targetMock.targetQNum;
+      const matchedQ = rawQuestions.find(q => {
+        if (q.q_num === qNum) return true;
+        const qn = String(q.questionNumber || '').toLowerCase();
+        return qn.includes(`question ${qNum}`) || qn.includes(`q ${qNum}`) || qn === String(qNum);
+      });
+
+      if (matchedQ) {
+        return `\n--- AUTHENTIC TEST QUESTION: ${targetMock.title} [Question #${qNum}] ---
+${formatMockQuestionForPrompt(matchedQ, 0)}
+
+CRITICAL SYSTEM MANDATE:
+1. The question above is the candidate's ACTUAL, REAL question #${qNum} from "${targetMock.title}".
+2. You MUST strictly base your answer on THIS authentic question. NEVER invent questions or borrow from another test.
+3. Provide a motivating, elite breakdown explaining why the correct answer is right and tactical elimination steps.
+`;
+      }
+    }
+
+    // Sub-case 2: Section or all questions requested
+    let filtered = rawQuestions;
+
+    if (targetMock.targetSubject) {
+      const subLower = targetMock.targetSubject.toLowerCase();
+      filtered = filtered.filter(q => {
+        const qSub = (q.subject || q.section || '').toLowerCase();
+        if (subLower.includes('eng')) return qSub.includes('eng');
+        if (subLower.includes('math') || subLower.includes('quant')) return qSub.includes('math') || qSub.includes('quant');
+        if (subLower.includes('reason')) return qSub.includes('reason') || qSub.includes('intelligence');
+        if (subLower.includes('aware') || subLower.includes('gk') || subLower.includes('gs')) return qSub.includes('aware') || qSub.includes('gk') || qSub.includes('general');
+        return qSub.includes(subLower);
+      });
+    }
+
+    if (targetMock.targetStatus) {
+      const stLower = targetMock.targetStatus.toLowerCase();
+      filtered = filtered.filter(q => {
+        const qSt = (q.status || '').toLowerCase();
+        if (stLower === 'wrong') return qSt.includes('wrong') || qSt.includes('incorrect');
+        if (stLower === 'slow') return qSt.includes('slow');
+        if (stLower === 'unattempted') return qSt.includes('unattempted') || qSt.includes('skipped');
+        return true;
+      });
+    }
+
+    // Token limit: Cap at 25 questions per section (standard SSC section size)
+    const questionsToInclude = filtered.slice(0, 25);
+
+    const questionsBlock = questionsToInclude
+      .map((q, idx) => formatMockQuestionForPrompt(q, idx))
+      .join('\n\n---\n\n');
+
+    const subjectLabel = targetMock.targetSubject ? `${targetMock.targetSubject.toUpperCase()} SECTION` : 'AUTHENTIC TEST QUESTIONS';
+
+    return `\n--- VERIFIED AUTHENTIC TEST DATA: ${targetMock.title} [${subjectLabel}] ---
+Total genuine questions provided: ${questionsToInclude.length} (out of ${filtered.length} matching in test)
+
+${questionsBlock}
+
+CRITICAL SYSTEM MANDATE FOR TOMMY:
+1. The questions listed above are the candidate's ACTUAL, REAL questions from "${targetMock.title}".
+2. You MUST strictly base your answer on THESE genuine questions.
+3. NEVER make up or fabricate questions. NEVER substitute questions from a different mock test.
+4. When presenting the questions:
+   - Clearly cite each Question Number and Topic.
+   - Quote the question text/sentence and correct option.
+   - Provide "Tommy's Breakdown": A concise, sharp conceptual explanation of the grammar rule, formula, or elimination trick.
+   - If there are remaining questions, let the candidate know they can ask for further questions or deep dives.
+`;
+  }
+
+  // Case C: Single Active Question (from 'Ask AI' button or user asking for Q#N)
   if (params.activeQuestion) {
     const q = params.activeQuestion;
     return `\n--- ACTIVE QUESTION REVIEW CONTEXT (Question #${q.qNum || q.questionNumber || targetQNum || '1'}) ---
@@ -543,7 +857,7 @@ ${q.solution || 'No solution provided'}
 `;
   }
 
-  // Case C: Topic Focus -> Pull ONLY that topic's candidate mistakes
+  // Case D: Topic Focus -> Pull ONLY that topic's candidate mistakes
   if (intent === 'TOPIC_FOCUS' && matchedTopic) {
     if (matchedTopic.totalErrors === 0) {
       return `\n--- TARGETED TOPIC FOCUS: [${matchedTopic.subject.toUpperCase()} → ${matchedTopic.topic}] ---
@@ -571,7 +885,7 @@ Instruction: Provide concept clarity, grammar/formula rules, shortcuts, and expl
 `;
   }
 
-  // Case D: Multi-Mock Query / Trend Analysis / Full Mock Scorecard
+  // Case E: Multi-Mock Query / Trend Analysis / Full Mock Scorecard
   if (intent === 'FULL_MOCK') {
     const count = mockCount && mockCount > 1 ? mockCount : 1;
     const recentMocks = globalStore.getRecentMockScorecards(count);
@@ -612,7 +926,7 @@ Instruction:
     }
   }
 
-  // Case E: Overall Weakness Query -> Pull top 3 weak areas
+  // Case F: Overall Weakness Query -> Pull top 3 weak areas
   if (intent === 'OVERALL_WEAKNESS') {
     const topWeak = globalStore.getTopWeakTopics(3);
     if (topWeak.length > 0) {

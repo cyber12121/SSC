@@ -27,6 +27,8 @@ import {
 import { MockScoreReport } from '../types/mockScore';
 import { QuizResult } from '../types';
 import { buildMockAiSummary } from '../utils/mockAiContext';
+import { AiFocusedScope } from '../types/aiScope';
+import { AI_SCOPE_EVENT } from '../utils/aiScopeHelper';
 
 interface ChatMessage {
   id: string;
@@ -41,15 +43,87 @@ interface AiMentorChatProps {
   activeMockReport?: MockScoreReport | null;
   activeReviewResult?: QuizResult | null;
   onStartWeakTopicDrill?: (topic: string, subject?: string) => void;
+  focusedScope?: AiFocusedScope | null;
+  onClearScope?: () => void;
 }
 
-// #6: Dynamic suggestions computed at runtime from real mock data
+// #6: Dynamic suggestions computed at runtime from real mock data or active focused scope
 function useDynamicSuggestions(
   mockReports: MockScoreReport[],
   topWeakTopic: string,
-  activeReviewResult?: QuizResult | null
+  activeReviewResult?: QuizResult | null,
+  focusedScope?: AiFocusedScope | null
 ) {
   return useMemo(() => {
+    if (focusedScope) {
+      const suggestions: { icon: any; label: string; text: string }[] = [];
+      if (focusedScope.type === 'mock') {
+        suggestions.push(
+          {
+            icon: Target,
+            label: 'Why did I get Question 1 wrong?',
+            text: `Analyze Question 1 from ${focusedScope.title}. Why is my chosen option incorrect and what is the exact conceptual shortcut?`
+          },
+          {
+            icon: Flame,
+            label: 'Diagnose all mistakes in this mock',
+            text: `Analyze all my mistakes in ${focusedScope.title}. Where did I lose the most marks and what are my avoidable errors?`
+          },
+          {
+            icon: TrendingUp,
+            label: 'Marks recovery plan for this mock',
+            text: `Based on the wrong and slow questions in ${focusedScope.title}, give me an exact marks recovery plan to score 20+ more marks.`
+          },
+          {
+            icon: Brain,
+            label: 'Shortcut tricks for time-trap questions',
+            text: `Show me fast elimination methods and 30-second shortcut tricks for the questions I spent the most time on in ${focusedScope.title}.`
+          }
+        );
+      } else if (focusedScope.type === 'topic') {
+        suggestions.push(
+          {
+            icon: Brain,
+            label: `Key formulas & shortcuts for ${focusedScope.title}`,
+            text: `Explain all key rules, formulas, and 30-second shortcut tricks for ${focusedScope.title} in SSC CGL.`
+          },
+          {
+            icon: Target,
+            label: `Walk me through my hardest mistake`,
+            text: `Take the most difficult question from my errors in ${focusedScope.title} and break it down step-by-step.`
+          },
+          {
+            icon: Flame,
+            label: `Common trap options to avoid`,
+            text: `What are the most common trap options or misinterpretations students make in ${focusedScope.title}?`
+          },
+          {
+            icon: Zap,
+            label: `Give me 3 practice questions`,
+            text: `Create 3 exam-level practice questions based on the exact concepts I got wrong in ${focusedScope.title}, with solutions.`
+          }
+        );
+      } else if (focusedScope.type === 'subject') {
+        suggestions.push(
+          {
+            icon: Target,
+            label: `Strategy to score 45+ in ${focusedScope.title}`,
+            text: `Give me an actionable, high-yield strategy to score 45+ in ${focusedScope.title} for SSC CGL Tier-1.`
+          },
+          {
+            icon: Flame,
+            label: `My top weak chapters in ${focusedScope.title}`,
+            text: `Analyze my accuracy and mistake breakdown in ${focusedScope.title}. Which chapters should I prioritize first?`
+          },
+          {
+            icon: Clock,
+            label: `Time management in ${focusedScope.title}`,
+            text: `What is the ideal time allotment per question in ${focusedScope.title} and which question types should I skip first?`
+          }
+        );
+      }
+      return suggestions;
+    }
     const suggestions: { icon: any; label: string; text: string }[] = [];
 
     if (mockReports.length === 0) {
@@ -413,10 +487,15 @@ export function AiMentorChat({
   mockErrorsData,
   activeMockReport,
   activeReviewResult,
-  onStartWeakTopicDrill
+  onStartWeakTopicDrill,
+  focusedScope: propsFocusedScope,
+  onClearScope
 }: AiMentorChatProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [internalScope, setInternalScope] = useState<AiFocusedScope | null>(null);
+  const activeScope = propsFocusedScope || internalScope;
+
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
     try {
       if (typeof window !== 'undefined') {
@@ -445,6 +524,30 @@ export function AiMentorChat({
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const isDraggingRef = useRef(false);
+
+  // Listen to AI scope events from chips across subjects, topics, and mocks
+  useEffect(() => {
+    const handleScopeEvent = (e: any) => {
+      const scope = e?.detail as AiFocusedScope;
+      if (scope) {
+        setInternalScope(scope);
+        setIsOpen(true);
+        const countText = scope.questions?.length ? ` (${scope.questions.length} mistake questions loaded)` : '';
+        const welcomeText = `🎯 **Focused Scope Active: ${scope.title}**${countText}\n\nI'm ready! Ask me anything about this ${scope.type} — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
+        setMessages(prev => [
+          ...prev,
+          {
+            id: `scope_${Date.now()}`,
+            role: 'assistant',
+            text: welcomeText,
+            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          }
+        ]);
+      }
+    };
+    window.addEventListener(AI_SCOPE_EVENT, handleScopeEvent);
+    return () => window.removeEventListener(AI_SCOPE_EVENT, handleScopeEvent);
+  }, []);
 
   // Viewport bounds for free dragging anywhere on screen
   const [dragBounds, setDragBounds] = useState({ top: -800, left: -1200, right: 10, bottom: 10 });
@@ -516,7 +619,7 @@ export function AiMentorChat({
   }, [mockReports, mockErrorsData, activeMockReport]);
 
   // #6: Compute personalized dynamic suggestions
-  const dynamicSuggestions = useDynamicSuggestions(mockReports, topWeakTopic, activeReviewResult);
+  const dynamicSuggestions = useDynamicSuggestions(mockReports, topWeakTopic, activeReviewResult, activeScope);
 
   const handleSendMessage = async (textToSend?: string, specificQuestion?: any) => {
     const query = (textToSend || inputText).trim();
@@ -555,6 +658,9 @@ export function AiMentorChat({
         body: JSON.stringify({
           messages: conversationPayload,
           mockSummary: mockContextString,
+          focusedScope: activeScope || undefined,
+          activeMockId: activeMockReport?.id,
+          activeMockTitle: activeMockReport?.title,
           activeMockContext: activeMockReport
             ? `Active Mock Title: ${activeMockReport.title}\nScore: ${activeMockReport.totalScore}/${activeMockReport.maxMarks || 200}\nCorrect: ${activeMockReport.totalCorrect}, Wrong: ${activeMockReport.totalWrong}, Skipped: ${activeMockReport.totalUnattempted}`
             : undefined,
@@ -796,6 +902,36 @@ export function AiMentorChat({
                 </button>
               </div>
             </div>
+
+            {/* Active Scope Focus Banner */}
+            {activeScope && (
+              <div className="px-3.5 py-1.5 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 border-b border-indigo-700/60 text-indigo-100 flex items-center justify-between text-xs font-semibold select-none shadow-xs">
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <span className="px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 text-[10px] font-extrabold uppercase tracking-wider shrink-0 border border-amber-400/30">
+                    {activeScope.type} Focus
+                  </span>
+                  <span className="truncate text-white font-bold" title={activeScope.title}>
+                    {activeScope.title}
+                  </span>
+                  {activeScope.questions?.length ? (
+                    <span className="text-[10px] text-indigo-300 shrink-0">
+                      ({activeScope.questions.length} Qs)
+                    </span>
+                  ) : null}
+                </div>
+                <button
+                  onClick={() => {
+                    setInternalScope(null);
+                    if (onClearScope) onClearScope();
+                  }}
+                  className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-white/10 hover:bg-rose-500 hover:text-white transition-colors cursor-pointer shrink-0 ml-2"
+                  title="Clear focus and return to general assistant"
+                >
+                  <X className="w-3 h-3" />
+                  <span>Clear</span>
+                </button>
+              </div>
+            )}
 
             {/* Context Details Drawer (Collapsible) */}
             <AnimatePresence>

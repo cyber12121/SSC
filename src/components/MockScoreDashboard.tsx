@@ -30,6 +30,8 @@ import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
 import { safeStorage } from '../utils/safeStorage';
 import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle } from '../utils/syncMockReports';
+import { openAiWithScope } from '../utils/aiScopeHelper';
+import { AiFocusedQuestion } from '../types/aiScope';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
 const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
@@ -468,6 +470,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const [uploading, setUploading] = useState(false);
   const [practicingId, setPracticingId] = useState<string | null>(null);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
+  const [askingAiId, setAskingAiId] = useState<string | null>(null);
   const [modalQuizMode, setModalQuizMode] = useState<'practice' | 'mock'>('practice');
 
   // Section-Wise Practice Modal State
@@ -1161,6 +1164,89 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     openPracticeModal(report, 'all');
   };
 
+  const handleAskAiMock = async (report: MockScoreReport, targetSection?: string) => {
+    setAskingAiId(report.id);
+    try {
+      const rawList = await loadRawMockQuestions(report);
+
+      const normalizeSub = (raw: string) => {
+        if (/reason|intel/i.test(raw)) return 'Reasoning';
+        if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
+        if (/quant|math|aptitude/i.test(raw)) return 'Quantitative Aptitude';
+        if (/eng/i.test(raw)) return 'English';
+        return raw || 'General';
+      };
+
+      const filteredRaw = targetSection && targetSection !== 'all'
+        ? rawList.filter(item => {
+            const sub = normalizeSub(item.subject || item.section || item.subjectName || '');
+            return sub.toLowerCase().includes(targetSection.toLowerCase());
+          })
+        : rawList;
+
+      // Extract mistake / relevant questions for Tommy's focus
+      const scopedQuestions: AiFocusedQuestion[] = filteredRaw.map((item, idx) => {
+        const status = getMockQuestionStatus(item);
+        let userAns = item.userAnswer || item.user_answer || item.myAnswer;
+        if (!userAns && status === 'unattempted') userAns = 'Unattempted / Skipped';
+
+        let optionsMap: Record<string, string> | undefined = undefined;
+        if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
+          optionsMap = {
+            A: String(item.options.a || item.options['1'] || item.options.A || '').trim(),
+            B: String(item.options.b || item.options['2'] || item.options.B || '').trim(),
+            C: String(item.options.c || item.options['3'] || item.options.C || '').trim(),
+            D: String(item.options.d || item.options['4'] || item.options.D || '').trim(),
+          };
+        } else if (Array.isArray(item.options)) {
+          optionsMap = {
+            A: String(item.options[0]?.text || item.options[0] || '').trim(),
+            B: String(item.options[1]?.text || item.options[1] || '').trim(),
+            C: String(item.options[2]?.text || item.options[2] || '').trim(),
+            D: String(item.options[3]?.text || item.options[3] || '').trim(),
+          };
+        }
+
+        return {
+          id: item.id || `mock_q_${idx + 1}`,
+          qNum: idx + 1,
+          question: (item.question || item.questionText || item.qText || `Question ${idx + 1}`).trim(),
+          options: optionsMap,
+          correctAnswer: item.answer || item.correctOption || item.correctAnswer || '',
+          userAnswer: userAns,
+          solution: (item.solution || item.explanation || item.sol || '').trim(),
+          status: status as any,
+          subject: normalizeSub(item.subject || item.section || item.subjectName || ''),
+          topic: item.topic || item.tags?.topic,
+          rcaReason: item.rca?.reason || item.rcaReason || undefined
+        };
+      });
+
+      const sectionTitle = targetSection && targetSection !== 'all' ? ` (${targetSection})` : '';
+
+      openAiWithScope({
+        type: 'mock',
+        title: `${report.title}${sectionTitle}`,
+        subject: report.type === 'sectional' ? getSectionalSubject(report) : undefined,
+        stats: {
+          totalScore: report.totalScore,
+          maxMarks: report.maxMarks,
+          accuracy: report.overallAccuracy,
+          totalQuestions: report.totalQuestions,
+          correct: report.totalCorrect,
+          wrong: report.totalWrong,
+          unattempted: report.unattempted,
+          slow: (report as any).totalSlow
+        },
+        questions: scopedQuestions
+      });
+    } catch (err) {
+      console.error('Failed to prepare AI scope for mock:', err);
+    } finally {
+      setAskingAiId(null);
+    }
+  };
+
   const handleReviewMock = async (report: MockScoreReport) => {
     if (!onReviewMock) return;
     setReviewingId(report.id);
@@ -1563,6 +1649,20 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               <Play className="w-2.5 h-2.5 fill-current" />
             )}
             <span>Practice Mock</span>
+          </button>
+
+          <button
+            onClick={() => handleAskAiMock(report, sub)}
+            disabled={askingAiId === report.id}
+            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-violet-700 bg-violet-50 hover:bg-violet-600 hover:text-white border border-violet-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+            title="Ask Tommy AI about this sectional mock's mistakes"
+          >
+            {askingAiId === report.id ? (
+              <Loader2 className="w-3 h-3 animate-spin" />
+            ) : (
+              <Sparkles className="w-3 h-3 text-violet-500 fill-violet-500/20" />
+            )}
+            <span>Ask AI</span>
           </button>
 
           <button
@@ -2071,7 +2171,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                       </div>
 
                       {/* 4. Action Column */}
-                      <div className="w-full xl:w-[225px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1.5">
+                      <div className="w-full xl:w-[305px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1.5">
                         <button
                           onClick={() => handleReviewMock(report)}
                           disabled={reviewingId === report.id}
@@ -2098,6 +2198,20 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                             <Play className="w-2.5 h-2.5 fill-current" />
                           )}
                           <span>Practice Mock</span>
+                        </button>
+
+                        <button
+                          onClick={() => handleAskAiMock(report)}
+                          disabled={askingAiId === report.id}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-violet-700 bg-violet-50 hover:bg-violet-600 hover:text-white border border-violet-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
+                          title="Ask Tommy AI to analyze this mock's mistakes and score"
+                        >
+                          {askingAiId === report.id ? (
+                            <Loader2 className="w-3 h-3 animate-spin" />
+                          ) : (
+                            <Sparkles className="w-3 h-3 text-violet-500 fill-violet-500/20" />
+                          )}
+                          <span>Ask AI</span>
                         </button>
 
                         <button
