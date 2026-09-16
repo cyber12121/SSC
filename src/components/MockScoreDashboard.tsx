@@ -196,10 +196,12 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     });
 
     const standardTotal = 25;
-    if (!hasExplicitCorrect || qList.length < standardTotal) {
+    // Only infer missing correct questions for a full 100-question mock attempt
+    if (isFullMock && (!hasExplicitCorrect || qList.length < standardTotal)) {
       correct = Math.max(0, standardTotal - wrong - unattempted);
     }
 
+    const sectionTotal = isFullMock ? standardTotal : qList.length;
     const sectionScore = Math.round(((correct * 2) - (wrong * 0.5)) * 10) / 10;
     const attempted = correct + wrong;
     const accuracy = attempted > 0 ? Math.round((correct / attempted) * 1000) / 10 : 0;
@@ -211,7 +213,7 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
 
     const key = sub === 'General Awareness' ? 'generalAwareness' : sub === 'Mathematics' ? 'mathematics' : (sub.toLowerCase() as 'reasoning' | 'english');
     sections[key] = {
-      total: standardTotal,
+      total: sectionTotal,
       correct,
       wrong,
       unattempted,
@@ -220,7 +222,7 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     };
   }
 
-  const totalQuestions = isFullMock ? 100 : (subjectsToProcess.length * 25);
+  const totalQuestions = isFullMock ? 100 : rawList.length;
   const maxMarks = totalQuestions * 2;
   const totalAttempted = totalCorrect + totalWrong;
   const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 1000) / 10 : 0;
@@ -375,22 +377,50 @@ export type MockQuestionErrorStatus = 'wrong' | 'unattempted' | 'slow' | 'correc
 
 export function getMockQuestionStatus(q: any): MockQuestionErrorStatus {
   const rawStatus = String(q.errorType || q.status || q.your_status || q.result || '').toLowerCase();
+  const rawUser = String(
+    q.chosenOption ??
+    q.chosen_option ??
+    q.userAnswer ??
+    q.user_answer ??
+    q.selected ??
+    q.selectedAnswer ??
+    q.yourOption ??
+    q.your_option ??
+    q.markedOption ??
+    q.marked_option ??
+    q.userAttempt ??
+    q.givenAnswer ??
+    q.given_answer ??
+    q.candidateAnswer ??
+    q.myAnswer ??
+    ''
+  ).trim().toLowerCase();
 
-  if (rawStatus.includes('slow') || rawStatus.includes('speed') || q.isSlow === true) {
-    return 'slow';
-  }
-
+  // 1. Explicit Unattempted / Skipped (MUST BE CHECKED FIRST)
   if (
     rawStatus.includes('unattempt') ||
     rawStatus.includes('skip') ||
     rawStatus.includes('left') ||
-    rawStatus === 'not attempted'
+    rawStatus === 'not attempted' ||
+    rawUser === 'unattempted' ||
+    rawUser === 'skipped' ||
+    rawUser === 'not attempted'
   ) {
     return 'unattempted';
   }
 
+  // 2. Slow / Speed Issue (Correct, but took too long)
   if (
-    (rawStatus.includes('correct') && !rawStatus.includes('incorrect')) ||
+    rawStatus.includes('slow') ||
+    rawStatus.includes('speed') ||
+    q.isSlow === true
+  ) {
+    return 'slow';
+  }
+
+  // 3. Correct (and not incorrect)
+  if (
+    ((rawStatus.includes('correct') && !rawStatus.includes('incorrect'))) ||
     rawStatus === 'right' ||
     q.isCorrect === true ||
     q.is_correct === true
@@ -398,21 +428,23 @@ export function getMockQuestionStatus(q: any): MockQuestionErrorStatus {
     return 'correct';
   }
 
+  // 4. Incorrect / Wrong
   if (
     rawStatus.includes('wrong') ||
     rawStatus.includes('incorrect') ||
-    q.isCorrect === false ||
-    q.is_correct === false
+    (q.isCorrect === false && rawUser && rawUser !== 'unattempted') ||
+    (q.is_correct === false && rawUser && rawUser !== 'unattempted')
   ) {
     return 'wrong';
   }
 
-  const userAns = q.user_answer ?? q.userSelected ?? q.selected ?? q.user_selected;
-  if (userAns === null || userAns === undefined || userAns === '' || userAns === 'unattempted') {
+  // 5. If no user answer provided or answer is blank, treat as unattempted
+  if (!rawUser || rawUser === 'unattempted' || rawUser === 'skipped') {
     return 'unattempted';
   }
 
-  return 'wrong';
+  // Final fallback: no user answer + no explicit status → treat as unattempted (not wrong)
+  return 'unattempted';
 }
 
 interface MockScoreDashboardProps {
@@ -1207,9 +1239,66 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         };
       });
 
+      // Check if dataset lost explicit status/answers (e.g. from previously stripped JSON)
+      const allUnattempted = rawList.every(item => getMockQuestionStatus(item) === 'unattempted');
+      const hasReportStats = Boolean((report.totalCorrect || 0) > 0 || (report.totalWrong || 0) > 0);
+
+      // Map of inferred statuses if dataset had lost statuses
+      const inferredStatusMap: Record<number, MockQuestionErrorStatus> = {};
+      if (allUnattempted && hasReportStats) {
+        if (report.sections && rawList.length === 100) {
+          const secList: { key: keyof typeof report.sections; start: number; end: number }[] = [
+            { key: 'reasoning', start: 0, end: 25 },
+            { key: 'generalAwareness', start: 25, end: 50 },
+            { key: 'mathematics', start: 50, end: 75 },
+            { key: 'english', start: 75, end: 100 }
+          ];
+
+          secList.forEach(({ key, start, end }) => {
+            const secData = report.sections?.[key];
+            const targetWrong = secData ? secData.wrong : 0;
+            const targetCorrect = secData ? secData.correct : 0;
+            let wrongAssigned = 0;
+            let correctAssigned = 0;
+
+            // 1. Assign wrong/slow to questions with RCA tags first
+            for (let i = start; i < end; i++) {
+              const qRca = formattedQuestions[i]?.rca;
+              if (qRca) {
+                inferredStatusMap[i] = qRca.tag === 'T' ? 'slow' : 'wrong';
+                wrongAssigned++;
+              }
+            }
+
+            // 2. Assign remaining wrong count
+            for (let i = start; i < end && wrongAssigned < targetWrong; i++) {
+              if (!inferredStatusMap[i]) {
+                inferredStatusMap[i] = 'wrong';
+                wrongAssigned++;
+              }
+            }
+
+            // 3. Assign correct count
+            for (let i = start; i < end && correctAssigned < targetCorrect; i++) {
+              if (!inferredStatusMap[i]) {
+                inferredStatusMap[i] = 'correct';
+                correctAssigned++;
+              }
+            }
+
+            // 4. Remainder are unattempted
+            for (let i = start; i < end; i++) {
+              if (!inferredStatusMap[i]) {
+                inferredStatusMap[i] = 'unattempted';
+              }
+            }
+          });
+        }
+      }
+
       const questionDetails: QuestionProgress[] = rawList.map((item, idx) => {
         const q = formattedQuestions[idx];
-        const status = getMockQuestionStatus(item);
+        const status = inferredStatusMap[idx] || getMockQuestionStatus(item);
         const isSlow = status === 'slow';
         const isCorrect = status === 'correct' || isSlow;
         const isUnattempted = status === 'unattempted';
@@ -1217,12 +1306,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
         let selected = '';
         const rawUser = String(
+          item.chosenOption ??
+          item.chosen_option ??
           item.userAnswer ??
           item.user_answer ??
           item.selected ??
           item.selectedAnswer ??
-          item.chosenOption ??
-          item.chosen_option ??
           item.yourOption ??
           item.your_option ??
           item.markedOption ??
@@ -1235,7 +1324,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           ''
         ).trim().toLowerCase();
 
-        if (rawUser === 'a' || rawUser === '1' || rawUser === 'option a' || rawUser === 'opt a') selected = 'a';
+        if (isUnattempted || rawUser === 'unattempted' || rawUser === 'skipped' || rawUser === 'not attempted') {
+          selected = '';
+        } else if (rawUser === 'a' || rawUser === '1' || rawUser === 'option a' || rawUser === 'opt a') selected = 'a';
         else if (rawUser === 'b' || rawUser === '2' || rawUser === 'option b' || rawUser === 'opt b') selected = 'b';
         else if (rawUser === 'c' || rawUser === '3' || rawUser === 'option c' || rawUser === 'opt c') selected = 'c';
         else if (rawUser === 'd' || rawUser === '4' || rawUser === 'option d' || rawUser === 'opt d') selected = 'd';
@@ -1246,7 +1337,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           else if (q.options.d && rawUser === q.options.d.trim().toLowerCase()) selected = 'd';
         }
 
-        if (!selected) {
+        if (!selected && !isUnattempted) {
           if (isCorrect) {
             selected = q.answer;
           } else if (isWrong) {

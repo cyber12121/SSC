@@ -16,13 +16,22 @@ export interface MathToken {
 }
 
 /**
- * Normalizes and cleans question/option text
+ * Normalizes and cleans question/option text while strictly preserving LaTeX math blocks.
  */
 export function cleanQuestionText(text: string = ''): string {
   if (!text) return '';
   let s = String(text);
 
-  // 1. Decode literal unicode escapes like \u00f7 (÷) and \u00d7 (×)
+  // 1. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
+  // so string replacements don't corrupt LaTeX commands (like \rm, \right, \neq, \nu, \root, etc.)
+  const mathPlaceholders: string[] = [];
+  s = s.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+    const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
+    mathPlaceholders.push(m);
+    return placeholder;
+  });
+
+  // 2. Decode literal unicode escapes like \u00f7 (÷) and \u00d7 (×) in non-math text
   s = s.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => {
     try {
       return String.fromCharCode(parseInt(hex, 16));
@@ -31,31 +40,34 @@ export function cleanQuestionText(text: string = ''): string {
     }
   });
 
-  // 2. Unescape literal newlines and carriage returns
-  s = s.replace(/\\r\\n/g, '\n').replace(/\\n/g, '\n').replace(/\\r/g, '\n');
+  // 3. Unescape literal newlines and carriage returns (only literal \r\n or standalone \n in plain text)
+  s = s.replace(/\\r\\n/g, '\n').replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
 
-  // 3. Normalize non-breaking spaces
+  // 4. Normalize non-breaking spaces
   s = s.replace(/\u00a0/g, ' ');
 
-  // 4. Format Para Jumbles & Sentence sequences
-  // Ensure S1-S6: and P-S: start on a fresh line if preceded by non-newline
+  // 5. Format Para Jumbles & Sentence sequences
   s = s.replace(/([^\n])\s*(S[1-6]\s*:)/g, '$1\n$2');
   s = s.replace(/([^\n])\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)/g, '$1\n$2');
 
   // Statements & Conclusions in Reasoning questions
   s = s.replace(/([^\n])\s*(Statement\s+[I|V|X|\d]+:?|Conclusion\s+[I|V|X|\d]+:?)/gi, '$1\n$2');
 
-  // 5. If question ends with ? followed by an equation or number without newline
-  // e.g. "make the following equation correct?\n784 ÷ 6" or "correct? 784 ÷ 6"
+  // 6. If question ends with ? followed by an equation or number without newline
   s = s.replace(/\?([ \t]*)(?=[0-9A-Za-z\+\-\*\/÷×=]+\s*[\+\-\*\/÷×=]\s*[0-9A-Za-z])/g, '?\n');
 
-  // 6. Clean up trailing spaces on lines & collapse multiple empty lines
+  // 7. Clean up trailing spaces on lines & collapse multiple empty lines
   s = s
     .split('\n')
     .map(line => line.trimEnd())
     .join('\n')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
+
+  // 8. Restore preserved math blocks
+  mathPlaceholders.forEach((math, idx) => {
+    s = s.replace(`___MATH_BLOCK_${idx}___`, math);
+  });
 
   return s;
 }
@@ -112,7 +124,7 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   // - $$ display math $$
   // - $ inline math $ (opening $ NOT followed by space, closing $ NOT preceded by space)
   // - Unwrapped LaTeX formulas starting with \command (e.g. \sin, \cos, \frac, \sqrt, \theta, \pi, etc.)
-  const combinedRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$\n]+?(?<!\s)\$|\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|delta|times|div|pm|mp|cdot|degree|circ|approx|neq|leq|geq|le|ge|infty|sum|prod|lim|log|ln|text|left|right)[a-zA-Z0-9\+\-\*\/\=\(\)\{\}\[\]\^\_\s\.,\\|<>]+?(?=\s+(?:is|are|was|were|if|then|where|find|when|and|with|for|to|of|as|by|in|such|given)\b|[\?\:\.](?:\s|$)|$))/g;
+  const combinedRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|delta|times|div|pm|mp|cdot|degree|circ|approx|neq|leq|geq|le|ge|infty|sum|prod|lim|log|ln|text|left|right|rm|mathrm)[a-zA-Z0-9\+\-\*\/\=\(\)\{\}\[\]\^\_\s\.,\\|<>]+?(?=\s+(?:is|are|was|were|if|then|where|find|when|and|with|for|to|of|as|by|in|such|given)\b|[\?\:\.](?:\s|$)|$))/g;
 
   const tokens: MathToken[] = [];
   let lastIndex = 0;

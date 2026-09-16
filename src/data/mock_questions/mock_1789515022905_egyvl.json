@@ -20,12 +20,12 @@
     },
     "solution": "Solution\n\nAccording to the given information,\n\nAssumption I: This is not implicit, because nothing about crisis in the region is mentioned in the statement.\nAssumption II: This is implicit, because it is mentioned that there is concern over rising oil prices, so they should lift sanction, because of which business is affected.\nHence, “only assumption II” is implicit.",
     "topic": "Statement & Assumption",
-    "subtopic": "Business and Political Policy Assumptions",
-    "conceptTested": "Evaluating implicit assumptions behind policy demands based on stated economic concerns.",
+    "subtopic": "Business & Policy Assumptions",
+    "conceptTested": "Evaluating implicit assumptions based on a stakeholder's stated concerns and demands.",
     "tags": {
       "topic": "Statement & Assumption",
-      "subtopic": "Business and Political Policy Assumptions",
-      "conceptTested": "Evaluating implicit assumptions behind policy demands based on stated economic concerns."
+      "subtopic": "Business & Policy Assumptions",
+      "conceptTested": "Evaluating implicit assumptions based on a stakeholder's stated concerns and demands."
     }
   },
   {
@@ -40,7 +40,7 @@
     "correctOption": "C",
     "userTime": "00:41",
     "avgTime": "00:31",
-    "questionText": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number.\n25 : 37 :: 64 : ?",
+    "questionText": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number. 25 : 37 :: 64 : ?",
     "options": {
       "A": "92",
       "B": "102",
@@ -50,11 +50,11 @@
     "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
     "topic": "Analogy",
     "subtopic": "Number Analogy",
-    "conceptTested": "Number analogy involving square root and arithmetic scaling operations.",
+    "conceptTested": "Number analogy using algebraic patterns involving square roots: x : x + (\\sqrt{x} \\times 2 + 2).",
     "tags": {
       "topic": "Analogy",
       "subtopic": "Number Analogy",
-      "conceptTested": "Number analogy involving square root and arithmetic scaling operations."
+      "conceptTested": "Number analogy using algebraic patterns involving square roots: x : x + (\\sqrt{x} \\times 2 + 2)."
     }
   },
   {
@@ -69,7 +69,7 @@
     "correctOption": "A",
     "userTime": "00:59",
     "avgTime": "00:39",
-    "questionText": "Which two signs and two numbers should be interchanged to make the following equation correct?\n784 ÷ 6 × 9 - 30 + 14 = 528",
+    "questionText": "Which two signs and two numbers should be interchanged to make the following equation correct? 784 \\div 6 \\times 9 - 30 + 14 = 528",
     "options": {
       "A": "14 and 6, + and -",
       "B": "784 and 30, + and x",
@@ -79,11 +79,11 @@
     "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Signs & Numbers",
-    "conceptTested": "Balancing equations by interchanging two signs and two numbers following BODMAS.",
+    "conceptTested": "Balancing equations via BODMAS through the simultaneous interchange of specific numbers and mathematical signs.",
     "tags": {
       "topic": "Mathematical Operations",
       "subtopic": "Interchange of Signs & Numbers",
-      "conceptTested": "Balancing equations by interchanging two signs and two numbers following BODMAS."
+      "conceptTested": "Balancing equations via BODMAS through the simultaneous interchange of specific numbers and mathematical signs."
     }
   },
   {
@@ -108,11 +108,11 @@
     "solution": "Solution\n\nChecking all the given options:\n\nLogic: The first and the second number is the multiple of 4 and 3.\n1. (64, 48) →\n⇒ 16 × 4 = 64\n⇒ 16 × 3 = 48\n2. (72, 27) →\n⇒ 18 × 4 = 72\n⇒ 18 × 3 = 54 (not 27)\n3. (96, 72) →\n⇒ 24 × 4 = 96\n⇒ 24 × 3 = 72\n4. (108, 81) →\n⇒ 27 × 4 = 108\n⇒ 27 × 3 = 81\n\nHere, (72, 27) is different from the others.\n\nHence, the correct answer is \"Option (2)\".",
     "topic": "Classification / Odd One Out",
     "subtopic": "Number Classification",
-    "conceptTested": "Identifying number pairs sharing a common ratio or scalar multiple relationship.",
+    "conceptTested": "Identifying number pairs that deviate from a consistent common ratio or proportional multiple relationship.",
     "tags": {
       "topic": "Classification / Odd One Out",
       "subtopic": "Number Classification",
-      "conceptTested": "Identifying number pairs sharing a common ratio or scalar multiple relationship."
+      "conceptTested": "Identifying number pairs that deviate from a consistent common ratio or proportional multiple relationship."
     }
   },
   {
@@ -137,11 +137,11 @@
     "solution": "Solution\n\n→ 23 $ 45 = (2 × 3) + (4 × 5) = 6 + 20 = 26\n→ 34 $ 96 = (3 × 4) + (9 × 6) = 12 + 54 = 66\n\nLikewise,\n\n→ 33 $ 33 = (3 × 3) + (3 × 3) = 9 + 9 = 18.\nHence, “18” is correct answer",
     "topic": "Coding-Decoding",
     "subtopic": "Substitution Coding",
-    "conceptTested": "Decoding arbitrary mathematical symbol patterns based on digit-wise multiplication sums.",
+    "conceptTested": "Decoding customized mathematical operators defined by digit-product summation rules.",
     "tags": {
       "topic": "Coding-Decoding",
       "subtopic": "Substitution Coding",
-      "conceptTested": "Decoding arbitrary mathematical symbol patterns based on digit-wise multiplication sums."
+      "conceptTested": "Decoding customized mathematical operators defined by digit-product summation rules."
     }
   },
   {
@@ -165,11 +165,11 @@
     },
     "solution": "Solution\n\nGiven : Piyush buys 4 blankets at the rate of ₹450 per blanket.\n\nExplanation :\n\nCost price of 4 blankets at the rate of ₹450 per blanket = (4 × 450) ⇒ ₹1800\nSo, Piyush buys 4 blankets at the cost of = ₹1800\nNow, According to the question\n\nHe sells these 4 blankets to Gopi and earns a profit of 12% on his investment.\n\n​\n\nSo, Piyush sold at the profit of:\n\n= 1800 (12/100)\n= Rs 216\nSelling price = Cost price + Profit\n= 1800 + 216\n= Rs 2016\n\nGopi further sells all 4 blankets to Pritam and earns 15% profit.\n\n​\n\nSo, Gopi sold at the profit of:\n\n= 2016 (15/100)\n= Rs 302.4\nSelling price = Cost price + Profit\n= 2016 + 302.4\n= Rs 2318.4\n\n​Thus, according to the question the price at which Pritam bought one blanket is:\n\nFor 4 blankets cost price for Pritam is = Rs 2318.4\nTherefore, for 1 blanket cost price is = 2318.4/4 ⇒ Rs 579.6\nHence, \"₹579.60\" is the correct answer.",
     "topic": "Profit, Loss & Discount",
-    "subtopic": "Successive Transactions",
+    "subtopic": "Profit & Loss - Successive Transactions",
     "conceptTested": "Calculating successive profit percentages over multiple transactions to find the final selling price.",
     "tags": {
       "topic": "Profit, Loss & Discount",
-      "subtopic": "Successive Transactions",
+      "subtopic": "Profit & Loss - Successive Transactions",
       "conceptTested": "Calculating successive profit percentages over multiple transactions to find the final selling price."
     }
   },
@@ -194,12 +194,12 @@
     },
     "solution": "Solution\n\nFrom the given information:\nStep 1: 'Suma' is shorter than 'Uma', 'Neha' is taller than 'Suma'\nSuma < Uma       Suma < Neha\nStep 2: 'Sudha' is taller than 'Uma', but shorter than 'Hema'.\nUma < Sudha < Hema\nStep 3:  'Uma' is taller than 'Neha'.\nNeha < Uma\nFrom step 1 and step 3, we get:\nSuma < Neha < Uma\nFinally we have:\nSuma < Neha < Uma < Sudha < Hema\nFrom the arrangement, we can see that Hema is the tallest.\n\nHence the correct answer is option 2)",
     "topic": "Order & Ranking",
-    "subtopic": "Linear Height Comparison",
-    "conceptTested": "Deducing linear ordering and relative positions based on comparative statements.",
+    "subtopic": "Positions from ends & Comparison",
+    "conceptTested": "Linear ordering of entities based on relative height inequalities.",
     "tags": {
       "topic": "Order & Ranking",
-      "subtopic": "Linear Height Comparison",
-      "conceptTested": "Deducing linear ordering and relative positions based on comparative statements."
+      "subtopic": "Positions from ends & Comparison",
+      "conceptTested": "Linear ordering of entities based on relative height inequalities."
     }
   },
   {
@@ -214,7 +214,7 @@
     "correctOption": "A",
     "userTime": "00:37",
     "avgTime": "00:30",
-    "questionText": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set.\n(392, 29, 449)\n(395, 31, 566)",
+    "questionText": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set. (NOTE: Operations should be performed on whole numbers, without breaking down the numbers into its constituent digits.)\n(392, 29, 449)\n(395, 31, 566)",
     "options": {
       "A": "(486, 32, 538)",
       "B": "(391, 45, 834)",
@@ -224,11 +224,11 @@
     "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
     "topic": "Analogy",
     "subtopic": "Number Analogy",
-    "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number.",
+    "conceptTested": "Identifying mathematical relationships and square properties between numbers in a set.",
     "tags": {
       "topic": "Analogy",
       "subtopic": "Number Analogy",
-      "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number."
+      "conceptTested": "Identifying mathematical relationships and square properties between numbers in a set."
     }
   },
   {
@@ -243,7 +243,7 @@
     "correctOption": "B",
     "userTime": "01:17",
     "avgTime": "00:44",
-    "questionText": "In the alphabet which Letter will be exactly in the middle of 21st Letter from the last and 22nd Letter from the beginning?",
+    "questionText": "In the alphabet, which letter will be exactly in the middle of the 21st letter from the last and the 22nd letter from the beginning?",
     "options": {
       "A": "M",
       "B": "N",
@@ -252,12 +252,12 @@
     },
     "solution": "Solution\n\nIdentify the 21st Letter from the Last\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 21st letter from the last is ‘F’.\n\nIdentify the 22nd Letter from the Beginning\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 22nd letter from the beginning is ‘V’.\n\nNow, find the Middle Letter between ‘F’ and ‘V’\nThe position of F: 6\nThe position of V: 22\n\nThe middle position is calculated as:\n\n(6 + 22) ÷ 2\n\n= 28 ÷  2\n= 14\n\nThe 14th letter in the alphabet is N.\n\nHence, the correct answer is \"Option 2\".",
     "topic": "Alphabet Test",
-    "subtopic": "Midpoint Position",
-    "conceptTested": "Finding the exact middle position between a given letter from the reverse and a letter from the beginning of the English alphabet.",
+    "subtopic": "Vowel-Consonant Operations & Letter Positions",
+    "conceptTested": "Finding the exact midpoint between two specified letter positions from opposite ends of the English alphabet.",
     "tags": {
       "topic": "Alphabet Test",
-      "subtopic": "Midpoint Position",
-      "conceptTested": "Finding the exact middle position between a given letter from the reverse and a letter from the beginning of the English alphabet."
+      "subtopic": "Vowel-Consonant Operations & Letter Positions",
+      "conceptTested": "Finding the exact midpoint between two specified letter positions from opposite ends of the English alphabet."
     }
   },
   {
@@ -281,12 +281,12 @@
     },
     "solution": "Solution\n\nThe logic follows here is,\n\nThe arrangement of all the given words in the order in which they appear in an English dictionary is as shown below:\n\nThe four letters T, A, N, and G are common in all words, so we will start arranging the word from the fourth letter as per alphabetical order.\n\n2. Tangentiality\n5. Tangentially\n3. Tangibilities\n1. Tangleberries\n4. Tangoreceptor\nHence, the correct answer is \"25314\".",
     "topic": "Word Formation & Dictionary Order",
-    "subtopic": "Dictionary Ordering",
-    "conceptTested": "Alphabetical sorting of words based on prefix matching for dictionary sequence.",
+    "subtopic": "Dictionary Arrangement",
+    "conceptTested": "Alphabetical sorting of words based on successive letter comparisons.",
     "tags": {
       "topic": "Word Formation & Dictionary Order",
-      "subtopic": "Dictionary Ordering",
-      "conceptTested": "Alphabetical sorting of words based on prefix matching for dictionary sequence."
+      "subtopic": "Dictionary Arrangement",
+      "conceptTested": "Alphabetical sorting of words based on successive letter comparisons."
     }
   },
   {
@@ -310,12 +310,12 @@
     },
     "solution": "Solution\n\nRepresentation:\n\nEXPLANATION:\n\nAccording to given question,\n\n“Sister of my husband” → Lady’s sister in law.\n\n“Daughter of his only sister” → Is the sister in law of the lady.\n\nSo man’s sister is the mother in law of the lady.\n\ni.e., the man is the brother of the lady’s mother in law.\n\nAccording to above information the following family tree is formed.\n\nHence, brother of mother in law is the correct answer.",
     "topic": "Blood Relations",
-    "subtopic": "Indicating Form / Puzzle-based Blood Relation",
-    "conceptTested": "Tracing family tree relationships step-by-step through descriptive statements.",
+    "subtopic": "Indicating Form / Puzzle Blood Relation",
+    "conceptTested": "Decoding multi-generation familial relationships through directional substitution statements.",
     "tags": {
       "topic": "Blood Relations",
-      "subtopic": "Indicating Form / Puzzle-based Blood Relation",
-      "conceptTested": "Tracing family tree relationships step-by-step through descriptive statements."
+      "subtopic": "Indicating Form / Puzzle Blood Relation",
+      "conceptTested": "Decoding multi-generation familial relationships through directional substitution statements."
     }
   },
   {
@@ -339,12 +339,12 @@
     },
     "solution": "Solution\n\nThe correct answer is To enhance the financial revenue generation of local governing bodies.\n\nKey Points\nThe Performance Grant Scheme by the central government aims to augment the financial resources of local governing bodies.\nIt seeks to incentivize Gram Panchayats and Urban Local Bodies for better performance in revenue collection.\nThe scheme promotes transparency and accountability in the functioning of local bodies.\nIt encourages local bodies to enhance their own source of revenue through improved financial management practices.\n\nAdditional Information\n14th Finance Commission Recommendations\nThe 14th Finance Commission recommended performance-based grants to incentivize local bodies.\nThe grants are aimed at encouraging local bodies to improve governance and service delivery.\nOwn Source Revenue (OSR)\nOSR refers to the revenue generated by local bodies from their own sources such as taxes, fees, and charges.\nEnhancing OSR is crucial for the financial sustainability and autonomy of local bodies.\nDevolution of Funds\nDevolution of funds refers to the transfer of financial resources from the central or state government to local governing bodies.\nThis process aims to empower local bodies to manage their own affairs more effectively.\nCapacity Building\nCapacity building involves training and developing the skills of local government officials.\nIt is essential for improving the efficiency and effectiveness of local governance.",
     "topic": "Government Schemes & Policies",
-    "subtopic": "Central Government Welfare & Development Schemes",
-    "conceptTested": "Objectives and funding structures of performance-based grants for local governing bodies under Finance Commission recommendations.",
+    "subtopic": "Local Governance & Financial Schemes",
+    "conceptTested": "Objectives of central government performance grants aimed at enhancing revenue generation of local governing bodies.",
     "tags": {
       "topic": "Government Schemes & Policies",
-      "subtopic": "Central Government Welfare & Development Schemes",
-      "conceptTested": "Objectives and funding structures of performance-based grants for local governing bodies under Finance Commission recommendations."
+      "subtopic": "Local Governance & Financial Schemes",
+      "conceptTested": "Objectives of central government performance grants aimed at enhancing revenue generation of local governing bodies."
     }
   },
   {
@@ -368,12 +368,12 @@
     },
     "solution": "Solution\n\nThe correct answer is 1, 2 and 4 only.\n\nKey Points\nWork done depends on the displacement of the object, as it represents the distance moved under the influence of force.\nThe angle between force and displacement determines the effective component of the force contributing to the work.\nThe magnitude of the force applied directly impacts the work done, as work is calculated as the product of force, displacement, and the cosine of the angle.\nInitial speed of the object does not influence work done directly; work depends on the change in kinetic energy or force-displacement dynamics.\nWork is mathematically expressed as W = F . d × cos(θ), where F is force, d is displacement, and θ is the angle between force and displacement.\n\nAdditional Information\nWork: Work is defined as the transfer of energy when a force is applied to an object causing displacement.\nForce: It refers to an interaction that changes the motion of an object, impacting the calculation of work.\nDisplacement: This is the vector quantity describing the change in position of an object, essential for evaluating work.\nCosine of the angle: The angle θ between the force and displacement affects the effective force contributing to the work, with cos(θ) ranging from -1 to +1.\nEnergy transfer: Work done on an object is directly related to the change in its energy, such as kinetic or potential energy.",
     "topic": "Physics",
-    "subtopic": "Work, Energy & Power",
-    "conceptTested": "Mathematical expression of mechanical work: W = F \\cdot d \\cos(\\theta), depending on force, displacement, and the angle between them.",
+    "subtopic": "Mechanics - Work, Energy & Power",
+    "conceptTested": "Work done formula W = F \\cdot d \\times \\cos(\\theta), depending on force, displacement, and angle, independent of initial speed.",
     "tags": {
       "topic": "Physics",
-      "subtopic": "Work, Energy & Power",
-      "conceptTested": "Mathematical expression of mechanical work: W = F \\cdot d \\cos(\\theta), depending on force, displacement, and the angle between them."
+      "subtopic": "Mechanics - Work, Energy & Power",
+      "conceptTested": "Work done formula W = F \\cdot d \\times \\cos(\\theta), depending on force, displacement, and angle, independent of initial speed."
     }
   },
   {
@@ -396,13 +396,13 @@
       "D": "Andrey Ilyich"
     },
     "solution": "Solution\n\nThe correct answer is Khaled el-Enany.\n\nIn News\nUNESCO’s executive board has appointed Khaled el-Enany, Egypt’s former antiquities and tourism minister, as the next Director-General of the organization.\n\nKey Points\nKhaled el-Enany is appointed as the Director-General following the vote by UNESCO's executive board.\nUNESCO, established in 1945, aims to promote peace and security through international cooperation in education, science, culture, and communication.\nThe U.S. announced its withdrawal from UNESCO in July 2025, with the exit planned for December 2026.\nIndia has been a founding member of UNESCO since 1948, hosting two UNESCO offices.\n\nAdditional Information\nUNESCO\nFounded in 1945, UNESCO’s mission is to promote peace through international collaboration in the fields of education, science, and culture.\nKhaled el-Enany\nFormer antiquities and tourism minister of Egypt, appointed as UNESCO’s Director-General for his extensive background in cultural heritage and tourism.\nUNESCO Key Publications\nKey reports published by UNESCO include the Global Education Monitoring Report and the UNESCO Science Report: Towards 2030.",
-    "topic": "National & International Current Affairs",
-    "subtopic": "Appointments & International Bodies",
-    "conceptTested": "Current appointments of Director-Generals in major international organizations like UNESCO.",
+    "topic": "Awards & Honours",
+    "subtopic": "International Appointments & Recognition",
+    "conceptTested": "Current affairs knowledge of high-profile international organizational leadership appointments.",
     "tags": {
-      "topic": "National & International Current Affairs",
-      "subtopic": "Appointments & International Bodies",
-      "conceptTested": "Current appointments of Director-Generals in major international organizations like UNESCO."
+      "topic": "Awards & Honours",
+      "subtopic": "International Appointments & Recognition",
+      "conceptTested": "Current affairs knowledge of high-profile international organizational leadership appointments."
     }
   },
   {
@@ -427,11 +427,11 @@
     "solution": "Solution\n\nThe correct answer is Learning from Silence by Pico Iyer.\n\nKey Points\nLearning from Silence by Pico Iyer is a nonfiction book that has been longlisted for a major Indian book award in early 2026.\nThe book delves into the theme of silence and its importance in modern life, reflecting the author's experiences and perspectives on solitude and mindfulness.\nPico Iyer, known for his deep and philosophical writing style, often explores topics like travel, spirituality, and the human condition in his works.\nThe recognition of this book for a major Indian award highlights its literary significance and the impact of its message on readers and critics alike.\nNonfiction works like this often resonate with audiences by addressing universal themes such as inner peace, mindfulness, and the challenges of contemporary life.\n\nAdditional Information\nPico Iyer:\nPico Iyer is a renowned author and essayist of Indian descent, recognized globally for his works on travel, culture, and spirituality.\nHe has authored several celebrated books, including The Art of Stillness and The Open Road, which explore themes of mindfulness and spirituality.\nHis writing often reflects a unique blend of Eastern and Western philosophies, drawing from his personal experiences and global travels.\nThe Significance of Nonfiction Writing:\nNonfiction books often aim to inform, educate, or inspire readers by presenting factual and real-life accounts.\nThey cover a wide range of genres, including memoirs, essays, biographies, self-help, and philosophical works.\nBooks like Learning from Silence resonate with readers due to their relatability and the practical wisdom they provide for navigating life.\nMajor Indian Book Awards:\nIndia hosts several prestigious literary awards, such as the JCB Prize for Literature, Sahitya Akademi Awards, and the DSC Prize for South Asian Literature.\nThese awards recognize and celebrate outstanding contributions to literature across multiple genres, including fiction, nonfiction, and poetry.\nBeing longlisted for such awards signifies a work's critical acclaim and its impact on the literary community.\nThemes in Learning from Silence:\nThe book explores the concept of silence as a transformative and healing force in a noisy and chaotic world.\nIt delves into the practice of mindfulness and the art of finding peace within oneself, offering valuable insights for readers.\nPico Iyer's reflective and poetic writing style enhances the book's appeal, making it a profound read for those seeking inner tranquility.",
     "topic": "Books & Authors",
     "subtopic": "Contemporary Literature & Literary Awards",
-    "conceptTested": "Recognition of prominent contemporary nonfiction books and authors in major literary awards.",
+    "conceptTested": "Identification of notable recent nonfiction literary works and their respective authors.",
     "tags": {
       "topic": "Books & Authors",
       "subtopic": "Contemporary Literature & Literary Awards",
-      "conceptTested": "Recognition of prominent contemporary nonfiction books and authors in major literary awards."
+      "conceptTested": "Identification of notable recent nonfiction literary works and their respective authors."
     }
   },
   {
@@ -446,7 +446,7 @@
     "correctOption": "D",
     "userTime": "00:05",
     "avgTime": "00:23",
-    "questionText": "The ‘groundnut fair’ known as Kadalekai Parishe in Bengaluru is associated historically with which temple/figure?",
+    "questionText": "The 'groundnut fair' known as Kadalekai Parishe in Bengaluru is associated historically with which temple/figure?",
     "options": {
       "A": "ISKCON Temple and offering of sugarcane",
       "B": "Vidhana Soudha and agricultural subsidies launch",
@@ -455,12 +455,12 @@
     },
     "solution": "Solution\n\nThe correct answer is Dodda Ganesha, Bull Temple or Nandi Basava.\n\nKey Points\nKadalekai Parishe is a traditional groundnut fair held annually in Bengaluru, Karnataka, with deep religious and cultural significance.\nThe fair is historically associated with the Bull Temple (Dodda Basavana Gudi), which is dedicated to Nandi Basava, the sacred bull of Lord Shiva.\nDevotees offer freshly harvested groundnuts (kadalekai) to Nandi as part of a traditional ritual seeking prosperity, good harvest, and agricultural well-being.\nThe nearby Dodda Ganesha Temple is also closely linked to the festivities, and offerings are made to Lord Ganesha before visiting the Bull Temple.\nHence, the association of Kadalekai Parishe is correctly linked with Dodda Ganesha, Bull Temple, and Nandi Basava, making option 4 the correct answer.\n\nAdditional Information\nLocation: The fair is held in the Basavanagudi area of Bengaluru, which is one of the city’s oldest residential and cultural localities.\nHistorical Origin: Kadalekai Parishe dates back over five centuries, originating during the reign of the Vijayanagara Empire, when farmers offered their produce to temples after harvest.\nReligious Significance: Nandi Basava is regarded as the guardian deity of agriculture and fertility, making the offering of groundnuts symbolically important for farming communities.\nTiming: The fair is usually conducted during the Kartika month (October–November), coinciding with the groundnut harvest season in southern India.\nIncorrect Options Explained:\nISKCON Temple is associated with Vaishnavite worship and not with Kadalekai Parishe.\nVidhana Soudha is a legislative building and has no religious or agricultural fair association.\nTipu Sultan’s memorial is unrelated to groundnut offerings or this traditional festival.",
     "topic": "Festivals & Fairs",
-    "subtopic": "Fairs and Cultural Festivals",
-    "conceptTested": "Historical association of traditional regional fairs with specific religious sites and deities.",
+    "subtopic": "Regional Fairs & Cultural Festivals",
+    "conceptTested": "Familiarity with traditional regional fairs and their associated historical or religious significance in India.",
     "tags": {
       "topic": "Festivals & Fairs",
-      "subtopic": "Fairs and Cultural Festivals",
-      "conceptTested": "Historical association of traditional regional fairs with specific religious sites and deities."
+      "subtopic": "Regional Fairs & Cultural Festivals",
+      "conceptTested": "Familiarity with traditional regional fairs and their associated historical or religious significance in India."
     }
   },
   {
@@ -479,17 +479,17 @@
     "options": {
       "A": "Both statements are correct",
       "B": "Both statements are incorrect",
-      "C": "Statement I is correct,\nStatement II is incorrect",
-      "D": "Statement I is incorrect,\nStatement II is correct."
+      "C": "Statement I is correct, Statement II is incorrect",
+      "D": "Statement I is incorrect, Statement II is correct."
     },
-    "solution": "Solution\n\nThe correct answer is Option D.\n\nKey Points\nThe statement that Directive Principles of State Policy (DPSPs) are subordinate to Fundamental Rights in all situations is not correct. While DPSPs are generally non-justiciable, the Constitution has evolved through amendments and judicial interpretation to alter this relationship. Hence,\nStatement I is incorrect.\nCertain DPSPs have been accorded primacy over Fundamental Rights through constitutional amendments, most notably Article 31C, which gives precedence to laws enacted to implement Article 39(b) and 39(c) over Articles 14 and 19. Hence,\nStatement II is correct.\nThus,\nStatement I is incorrect and\nStatement II is correct → Option D.\n\nAdditional Information\nArticle 31C was introduced by the 25th Constitutional Amendment Act, 1971 and later expanded by the 42nd Amendment, though the expansion was curtailed by the Supreme Court.\nIn Kesavananda Bharati case (1973), the Supreme Court upheld Article 31C only to the extent of Articles 39(b) and (c).\nThe Court has consistently held that Fundamental Rights and DPSPs are complementary, not antagonistic (e.g., Minerva Mills case, 1980).\nThe current constitutional position seeks a harmonious balance between individual liberties and socio-economic justice.",
+    "solution": "Solution\n\nThe correct answer is Option D.\n\nKey Points\nThe statement that Directive Principles of State Policy (DPSPs) are subordinate to Fundamental Rights in all situations is not correct. While DPSPs are generally non-justiciable, the Constitution has evolved through amendments and judicial interpretation to alter this relationship. Hence, Statement I is incorrect.\nCertain DPSPs have been accorded primacy over Fundamental Rights through constitutional amendments, most notably Article 31C, which gives precedence to laws enacted to implement Article 39(b) and 39(c) over Articles 14 and 19. Hence, Statement II is correct.\nThus, Statement I is incorrect and Statement II is correct → Option D.\n\nAdditional Information\nArticle 31C was introduced by the 25th Constitutional Amendment Act, 1971 and later expanded by the 42nd Amendment, though the expansion was curtailed by the Supreme Court.\nIn Kesavananda Bharati case (1973), the Supreme Court upheld Article 31C only to the extent of Articles 39(b) and (c).\nThe Court has consistently held that Fundamental Rights and DPSPs are complementary, not antagonistic (e.g., Minerva Mills case, 1980).\nThe current constitutional position seeks a harmonious balance between individual liberties and socio-economic justice.",
     "topic": "Indian Polity & Constitution",
-    "subtopic": "Directive Principles of State Policy (DPSP)",
-    "conceptTested": "Constitutional relationship between Fundamental Rights and Directive Principles of State Policy, specifically Article 31C precedence.",
+    "subtopic": "Fundamental Rights vs DPSP",
+    "conceptTested": "Constitutional primacy of Directive Principles of State Policy over certain Fundamental Rights (Article 31C).",
     "tags": {
       "topic": "Indian Polity & Constitution",
-      "subtopic": "Directive Principles of State Policy (DPSP)",
-      "conceptTested": "Constitutional relationship between Fundamental Rights and Directive Principles of State Policy, specifically Article 31C precedence."
+      "subtopic": "Fundamental Rights vs DPSP",
+      "conceptTested": "Constitutional primacy of Directive Principles of State Policy over certain Fundamental Rights (Article 31C)."
     }
   },
   {
@@ -513,12 +513,12 @@
     },
     "solution": "Solution\n\nThe correct answer is Fat storing adipose tissue is found above the skin.\n\nKey Points\nAdipose tissue, commonly referred to as fat tissue, is primarily located beneath the skin (subcutaneous layer), around internal organs, and in certain areas of the body like the abdomen and thighs.\nIt serves as energy storage, insulation to maintain body temperature, and cushioning to protect vital organs.\nThe statement that fat-storing adipose tissue is found above the skin is incorrect, as adipose tissue is specifically located beneath the skin (subcutaneous layer) rather than above it.\nAdipose tissue is classified into two types: white adipose tissue (WAT), which stores energy and insulates the body, and brown adipose tissue (BAT), which generates heat through thermogenesis.\nThe primary function of adipose tissue is to store triglycerides and release them when the body requires energy.\n\nAdditional Information\nLigaments connect bone to bone:\nLigaments are tough, fibrous connective tissues that connect bones to other bones, providing stability to joints.\nThey are primarily made of collagen fibers, giving them strength and flexibility.\nLigaments prevent excessive movement and dislocation of joints, ensuring proper alignment during physical activity.\nExamples include the anterior cruciate ligament (ACL) in the knee and the ulnar collateral ligament in the elbow.\nAreolar connective tissue is found between the skin and muscle:\nAreolar connective tissue is a loose connective tissue that fills the space between organs and connects the skin to underlying muscles.\nIt contains fibroblasts, collagen, and elastic fibers, allowing flexibility and support.\nAreolar tissue plays a significant role in providing a medium for nutrient and waste exchange between blood vessels and cells.\nIt also houses immune cells that help defend the body against pathogens in the surrounding tissues.\nTendons connect muscle to bone:\nTendons are strong, fibrous connective tissues that attach muscles to bones, enabling movement of the skeleton.\nThey are composed of dense regular connective tissue with parallel collagen fibers, allowing them to withstand tension during muscle contraction.\nExamples include the Achilles tendon, which connects the calf muscles to the heel bone.\nTendons work in coordination with muscles to ensure efficient movement and force transmission during physical activities.",
     "topic": "Biology",
-    "subtopic": "Human Physiology - Tissues",
-    "conceptTested": "Anatomical location and functions of connective tissues, including adipose tissue, ligaments, and tendons.",
+    "subtopic": "Animal Tissues - Connective Tissues",
+    "conceptTested": "Anatomical location and characteristics of connective tissues such as adipose, areolar, tendons, and ligaments.",
     "tags": {
       "topic": "Biology",
-      "subtopic": "Human Physiology - Tissues",
-      "conceptTested": "Anatomical location and functions of connective tissues, including adipose tissue, ligaments, and tendons."
+      "subtopic": "Animal Tissues - Connective Tissues",
+      "conceptTested": "Anatomical location and characteristics of connective tissues such as adipose, areolar, tendons, and ligaments."
     }
   },
   {
@@ -540,14 +540,14 @@
       "C": "Both (A) and (B)",
       "D": "Neither (A) nor (B)"
     },
-    "solution": "Solution\n\nThe correct answer is Option 2.\n\nKey Points\nStatement A: Black soil covers most of the Deccan Plateau, specifically in states like Maharashtra, Gujarat, Madhya Pradesh, Karnataka, and Andhra Pradesh. It is highly fertile and suitable for the cultivation of crops like cotton. This\nstatement is correct.\nStatement B: Black soil is indeed rich in lime, iron, magnesium, and alumina. However, it does not lack magnesium; rather, it lacks phosphorus, nitrogen, and organic matter. This makes the statement factually incorrect.\nSince Statement B is incorrect, the option stating that Statement A is accurate.\nBlack soil is also known as Regur soil or cotton soil, and it has a fine texture and retains moisture well, which is ideal for dry farming.\nHence, Option 2 is the correct answer, because statement (b) is incorrect.\n\nAdditional Information\nBlack Soil Characteristics:\nBlack soil is formed from lava basalt rocks, making it one of the most fertile soils in India.\nIt is highly suitable for crops like cotton, sugarcane, tobacco, oilseeds, and pulses.\nIts fine-grained structure allows it to retain moisture, but it becomes extremely hard when dry.\nIt is rich in lime, iron, magnesium, and alumina, but lacks nitrogen, phosphorus, and organic matter.\nDistribution of Black Soil in India:\nBlack soil covers around 15% of India’s total land area.\nIt is predominantly found in the Deccan Plateau regions such as Maharashtra, Madhya Pradesh, Gujarat, Karnataka, and Andhra Pradesh.\nUses of Black Soil:\nBlack soil is primarily used for cultivating cotton, which is why it is also known as cotton soil.\nDue to its moisture-retaining ability, it is ideal for crops requiring less irrigation.\nImportant Points:\nBlack soil is classified as one of the seven soil types in India, along with Alluvial, Red, Laterite, Desert, Mountain, and Peaty soils.\nThe soil is highly fertile but requires supplementation of nitrogen and phosphorus fertilizers to support crop growth efficiently.\nIt is an essential resource for agricultural productivity in India.",
+    "solution": "Solution\n\nThe correct answer is Option 2.\n\nKey Points\nStatement A: Black soil covers most of the Deccan Plateau, specifically in states like Maharashtra, Gujarat, Madhya Pradesh, Karnataka, and Andhra Pradesh. It is highly fertile and suitable for the cultivation of crops like cotton. This statement is correct.\nStatement B: Black soil is indeed rich in lime, iron, magnesium, and alumina. However, it does not lack magnesium; rather, it lacks phosphorus, nitrogen, and organic matter. This makes the statement factually incorrect.\nSince Statement B is incorrect, the option stating that Statement A is accurate.\nBlack soil is also known as Regur soil or cotton soil, and it has a fine texture and retains moisture well, which is ideal for dry farming.\nHence, Option 2 is the correct answer, because statement (b) is incorrect.\n\nAdditional Information\nBlack Soil Characteristics:\nBlack soil is formed from lava basalt rocks, making it one of the most fertile soils in India.\nIt is highly suitable for crops like cotton, sugarcane, tobacco, oilseeds, and pulses.\nIts fine-grained structure allows it to retain moisture, but it becomes extremely hard when dry.\nIt is rich in lime, iron, magnesium, and alumina, but lacks nitrogen, phosphorus, and organic matter.\nDistribution of Black Soil in India:\nBlack soil covers around 15% of India’s total land area.\nIt is predominantly found in the Deccan Plateau regions such as Maharashtra, Madhya Pradesh, Gujarat, Karnataka, and Andhra Pradesh.\nUses of Black Soil:\nBlack soil is primarily used for cultivating cotton, which is why it is also known as cotton soil.\nDue to its moisture-retaining ability, it is ideal for crops requiring less irrigation.\nImportant Points:\nBlack soil is classified as one of the seven soil types in India, along with Alluvial, Red, Laterite, Desert, Mountain, and Peaty soils.\nThe soil is highly fertile but requires supplementation of nitrogen and phosphorus fertilizers to support crop growth efficiently.\nIt is an essential resource for agricultural productivity in India.",
     "topic": "Indian Climate & Soil",
-    "subtopic": "Soil Types and Characteristics",
-    "conceptTested": "Chemical composition, mineral deficiencies, and geographical distribution of black soil in India.",
+    "subtopic": "Soil Types in India - Black Soil",
+    "conceptTested": "Chemical composition, mineral deficiency, and geographical distribution of black (regur) soils in India.",
     "tags": {
       "topic": "Indian Climate & Soil",
-      "subtopic": "Soil Types and Characteristics",
-      "conceptTested": "Chemical composition, mineral deficiencies, and geographical distribution of black soil in India."
+      "subtopic": "Soil Types in India - Black Soil",
+      "conceptTested": "Chemical composition, mineral deficiency, and geographical distribution of black (regur) soils in India."
     }
   },
   {
@@ -569,14 +569,14 @@
       "C": "Hafiz Nagma – A dance form derived from Sufiana musical notes",
       "D": "Rouf – Instrumental duet using Santoor and Sitar"
     },
-    "solution": "Solution\n\nThe correct answer is Hafiz Nagma – A dance form derived from Sufiana musical notes.\n\nKey Points\nHafiz Nagma:\nHafiz Nagma is a traditional dance form of Kashmir that is closely associated with Sufiana music.\nIt is performed by a female dancer, often referred to as the Hafiza, who interprets the Sufiana Kalam (mystical poetry) through her dance movements.\nThe music accompaniment for Hafiz Nagma consists of instruments like the Santoor, Sitar, and Tabla.\nThe dance movements are derived from the musical notes of Sufiana music, making it a unique blend of visual and auditory art. Hence, this\nstatement is correct.\nChakri:\nChakri is a traditional folk music form of Kashmir. It is not a classical genre, and its primary instruments include the Harmonium and Rabab, not the Santoor.\nChakri is used to narrate folk tales or devotional themes in a simple yet captivating manner.\nIt is often performed during weddings and social gatherings to entertain the audience. Hence, this\nstatement is incorrect.\nSufiana:\nSufiana music is a classical music tradition of Kashmir that is deeply rooted in Persian and Central Asian influences.\nIt is performed using traditional instruments like the Santoor, Kashmiri Saz, and Tabla, not Garaha and Rabab as mentioned in the question.\nSufiana music often serves as a medium for expressing mystical and spiritual themes. Hence, this\nstatement is incorrect.\nRouf:\nRouf is a traditional dance form of Kashmiri women, typically performed during festivals like Eid or during weddings.\nIt involves rhythmic clapping and synchronized foot movements, accompanied by simple songs.\nRouf is not an instrumental duet involving Santoor and Sitar, as mentioned in the question. Hence, this\nstatement is incorrect.\n\nAdditional Information\nImportance of Kashmiri Music and Dance Forms:\nKashmiri music and dance forms are a reflection of the region's rich cultural heritage and traditions.\nThey often incorporate themes of nature, spirituality, and folklore, providing insight into the lives of Kashmiri people.\nThese art forms are performed during festivals, weddings, and other social gatherings, serving as a medium of entertainment and expression.\nSpecific Characteristics of Kashmiri Musical Forms:\nChakri: Known for its simple and repetitive musical patterns, Chakri often features themes of love, devotion, and folklore.\nSufiana: This music form is influenced by Persian classical music and focuses on mystical and spiritual themes, often using Persian poetry as its base.\nHafiz Nagma: This is a rare combination of music and dance, showcasing the artistic synergy between visual and auditory expressions.\nRouf: A vibrant dance form that emphasizes community bonding and celebration through synchronized movements and clapping.\nInstruments Used in Kashmiri Music:\nSantoor: A string instrument played by striking the strings with mallets.\nRabab: A lute-like instrument often used in folk and classical music.\nTabla: A percussion instrument that provides rhythmic accompaniment.\nSitar: A plucked string instrument used in both Indian and Kashmiri classical music.\n\nImportant Points\n\nPreservation of Kashmiri Traditions:\nEfforts are being made to preserve the unique art forms of Kashmir through cultural programs and festivals.\nOrganizations and artists are working towards documenting and promoting these traditions globally.\nRole of Sufi Influence:\nThe Sufi tradition has had a profound impact on Kashmiri music, emphasizing mysticism and spirituality.\nMany Kashmiri art forms, including Hafiz Nagma and Sufiana, are rooted in the Sufi philosophy of love and devotion.",
+    "solution": "Solution\n\nThe correct answer is Hafiz Nagma – A dance form derived from Sufiana musical notes.\n\nKey Points\nHafiz Nagma:\nHafiz Nagma is a traditional dance form of Kashmir that is closely associated with Sufiana music.\nIt is performed by a female dancer, often referred to as the Hafiza, who interprets the Sufiana Kalam (mystical poetry) through her dance movements.\nThe music accompaniment for Hafiz Nagma consists of instruments like the Santoor, Sitar, and Tabla.\nThe dance movements are derived from the musical notes of Sufiana music, making it a unique blend of visual and auditory art. Hence, this statement is correct.\nChakri:\nChakri is a traditional folk music form of Kashmir. It is not a classical genre, and its primary instruments include the Harmonium and Rabab, not the Santoor.\nChakri is used to narrate folk tales or devotional themes in a simple yet captivating manner.\nIt is often performed during weddings and social gatherings to entertain the audience. Hence, this statement is incorrect.\nSufiana:\nSufiana music is a classical music tradition of Kashmir that is deeply rooted in Persian and Central Asian influences.\nIt is performed using traditional instruments like the Santoor, Kashmiri Saz, and Tabla, not Garaha and Rabab as mentioned in the question.\nSufiana music often serves as a medium for expressing mystical and spiritual themes. Hence, this statement is incorrect.\nRouf:\nRouf is a traditional dance form of Kashmiri women, typically performed during festivals like Eid or during weddings.\nIt involves rhythmic clapping and synchronized foot movements, accompanied by simple songs.\nRouf is not an instrumental duet involving Santoor and Sitar, as mentioned in the question. Hence, this statement is incorrect.\n\nAdditional Information\nImportance of Kashmiri Music and Dance Forms:\nKashmiri music and dance forms are a reflection of the region's rich cultural heritage and traditions.\nThey often incorporate themes of nature, spirituality, and folklore, providing insight into the lives of Kashmiri people.\nThese art forms are performed during festivals, weddings, and other social gatherings, serving as a medium of entertainment and expression.\nSpecific Characteristics of Kashmiri Musical Forms:\nChakri: Known for its simple and repetitive musical patterns, Chakri often features themes of love, devotion, and folklore.\nSufiana: This music form is influenced by Persian classical music and focuses on mystical and spiritual themes, often using Persian poetry as its base.\nHafiz Nagma: This is a rare combination of music and dance, showcasing the artistic synergy between visual and auditory expressions.\nRouf: A vibrant dance form that emphasizes community bonding and celebration through synchronized movements and clapping.\nInstruments Used in Kashmiri Music:\nSantoor: A string instrument played by striking the strings with mallets.\nRabab: A lute-like instrument often used in folk and classical music.\nTabla: A percussion instrument that provides rhythmic accompaniment.\nSitar: A plucked string instrument used in both Indian and Kashmiri classical music.\n\nImportant Points\n\nPreservation of Kashmiri Traditions:\nEfforts are being made to preserve the unique art forms of Kashmir through cultural programs and festivals.\nOrganizations and artists are working towards documenting and promoting these traditions globally.\nRole of Sufi Influence:\nThe Sufi tradition has had a profound impact on Kashmiri music, emphasizing mysticism and spirituality.\nMany Kashmiri art forms, including Hafiz Nagma and Sufiana, are rooted in the Sufi philosophy of love and devotion.",
     "topic": "Folk & Classical Dances",
-    "subtopic": "Regional Folk and Classical Art Forms",
-    "conceptTested": "Cultural mapping of traditional Kashmiri musical and dance forms with their correct descriptions.",
+    "subtopic": "Traditional Music and Dance Forms of Jammu & Kashmir",
+    "conceptTested": "Matching traditional musical and dance forms of Kashmir with their authentic cultural descriptions.",
     "tags": {
       "topic": "Folk & Classical Dances",
-      "subtopic": "Regional Folk and Classical Art Forms",
-      "conceptTested": "Cultural mapping of traditional Kashmiri musical and dance forms with their correct descriptions."
+      "subtopic": "Traditional Music and Dance Forms of Jammu & Kashmir",
+      "conceptTested": "Matching traditional musical and dance forms of Kashmir with their authentic cultural descriptions."
     }
   },
   {
@@ -600,12 +600,12 @@
     },
     "solution": "Solution\n\nThe Correct answer is Dr. Anil Bhardwaj.\n\nKey Points\nDr. Anil Bhardwaj is a renowned scientist in the field of space science and planetary exploration.\nHe is the Director of the Physical Research Laboratory (PRL), Ahmedabad, which is a premier research institution under the Department of Space, Government of India.\nThe Vikram Sarabhai Medal is a prestigious recognition jointly awarded by the Committee on Space Research (COSPAR) and the Indian Space Research Organisation (ISRO) for outstanding contributions to space science and technology.\nDr. Bhardwaj was honored with the award for his pioneering research in planetary science, space physics, and atmospheric studies.\nHe has significantly contributed to India's space missions, including Chandrayaan-1, Chandrayaan-2, and the Mars Orbiter Mission (Mangalyaan).\nHis work has enhanced India's global reputation in the field of planetary exploration and space science.\n\nAdditional Information\nS. Somanath\nS. Somanath is the current Chairman of ISRO (as of October 2023).\nHe has played a crucial role in the development of India's Gaganyaan mission, which aims to send humans to space.\nP. Veeramuthuvel\nP. Veeramuthuvel is the Project Director of the Chandrayaan-3 mission, which successfully landed on the Moon in 2023.\nHe is recognized for his contributions to lunar exploration.\nTessy Thomas\nTessy Thomas is a distinguished scientist and the Director General of Aeronautical Systems at DRDO.\nShe is also known as the \"Missile Woman of India\" for her work on the Agni missile program.",
     "topic": "Awards & Honours",
-    "subtopic": "Science and Technology Awards",
-    "conceptTested": "Recent national awards and honors in space science and technology",
+    "subtopic": "National & International Awards",
+    "conceptTested": "Recognition of eminent Indian scientists and their contributions to space exploration.",
     "tags": {
       "topic": "Awards & Honours",
-      "subtopic": "Science and Technology Awards",
-      "conceptTested": "Recent national awards and honors in space science and technology"
+      "subtopic": "National & International Awards",
+      "conceptTested": "Recognition of eminent Indian scientists and their contributions to space exploration."
     }
   },
   {
@@ -630,11 +630,11 @@
     "solution": "Solution\nThe correct answer is Option B.\n\nKey Points\nThe Economic Survey clarifies that fiscal consolidation is not synonymous with fiscal contraction.\nIts primary objective is to create fiscal space so that the government can respond to shocks, fund priority spending, and maintain macro-economic stability, while still supporting economic growth.\nConsolidation focuses on improving the quality of expenditure (especially higher capital expenditure), enhancing revenue efficiency, and maintaining credibility.\nIt does not imply:\nindiscriminate cuts in welfare spending,\nimmediate elimination of revenue deficit regardless of growth conditions, or\ncomplete replacement of revenue expenditure with capital expenditure.\n\nThus, fiscal consolidation aims to create fiscal space while supporting growth → Option B.\n\nAdditional Information\nThe Survey stresses growth-friendly fiscal consolidation, where public capex acts as a multiplier for private investment.\nMaintaining fiscal credibility helps reduce borrowing costs and strengthens investor confidence.\nMedium-term consolidation is preferred over abrupt fiscal tightening to avoid derailing recovery.",
     "topic": "Fiscal Policy & Budget",
     "subtopic": "Fiscal Deficit & Fiscal Consolidation",
-    "conceptTested": "Objectives of growth-friendly fiscal consolidation as outlined in economic surveys",
+    "conceptTested": "Understanding the objectives and economic role of fiscal consolidation as outlined in the Economic Survey.",
     "tags": {
       "topic": "Fiscal Policy & Budget",
       "subtopic": "Fiscal Deficit & Fiscal Consolidation",
-      "conceptTested": "Objectives of growth-friendly fiscal consolidation as outlined in economic surveys"
+      "conceptTested": "Understanding the objectives and economic role of fiscal consolidation as outlined in the Economic Survey."
     }
   },
   {
@@ -658,12 +658,12 @@
     },
     "solution": "Solution\n\nThe correct answer is New Delhi.\n\nKey Points\nNew Delhi hosted the Global Conference on Millets (Shree Anna).\nThe conference aimed to promote millets as climate-resilient crops.\nIt supported India’s initiative to mainstream nutri-cereals.\nThe event aligned with the International Year of Millets momentum.\nIndia positioned itself as a global hub for millet production and knowledge.\n\nAdditional Information\nHyderabad\nHyderabad is a major centre for agricultural research institutions.\nIt frequently hosts food and nutrition-related conferences.\nJaipur\nJaipur is known for hosting cultural and tourism events.\nIt has also hosted agriculture exhibitions.\nIndore\nIndore is recognised for urban governance and cleanliness initiatives.\nIt is not linked to the millet conference.",
     "topic": "Festivals & Fairs",
-    "subtopic": "National Conferences and Summits",
-    "conceptTested": "Important national and international agricultural summits hosted in India",
+    "subtopic": "Conferences, Summits & Cultural Events",
+    "conceptTested": "Awareness of major national conferences hosted in India promoting agricultural milestones.",
     "tags": {
       "topic": "Festivals & Fairs",
-      "subtopic": "National Conferences and Summits",
-      "conceptTested": "Important national and international agricultural summits hosted in India"
+      "subtopic": "Conferences, Summits & Cultural Events",
+      "conceptTested": "Awareness of major national conferences hosted in India promoting agricultural milestones."
     }
   },
   {
@@ -687,12 +687,12 @@
     },
     "solution": "Solution\n\nThe correct answer is - Both A and R are true, and R is the correct explanation of A.\n\nKey Points\nPolicy of Paramountcy\nThe policy of paramountcy was a doctrine introduced by the British East India Company.\nIt allowed the British to assert their authority over Indian princely states.\nUnder this policy, the British could interfere in the administration of these states.\nThis policy was a significant tool for the British to maintain control over India's fragmented political landscape.\nMilitary and Foreign Affairs\nParamountcy meant that the British had the final authority in all military and foreign affairs of the princely states.\nThis ensured that the princely states could not form alliances or engage in military actions without British approval.\nIt reinforced British dominance and prevented any potential unified resistance against British rule.\n\nAdditional Information\nDoctrine of Lapse\nA related policy was the Doctrine of Lapse, which allowed the British to annex princely states if the ruler died without a male heir.\nThis doctrine was also used to expand British territories in India.\nSubsidiary Alliance\nThe Subsidiary Alliance was another strategy used by the British to control Indian states.\nUnder this system, Indian rulers were required to keep British forces in their territory and pay for their maintenance.\nThis further solidified British control over the Indian subcontinent.\nBritish Residency System\nBritish Residents were officials appointed to Indian princely states to oversee their administration.\nThey acted as intermediaries between the British government and the princely states.\nThis system ensured that the princely states remained under close British supervision.",
     "topic": "Modern History",
-    "subtopic": "British Expansion and Paramountcy",
-    "conceptTested": "British policy of paramountcy and assertion of authority over princely states",
+    "subtopic": "British Expansion & Paramountcy",
+    "conceptTested": "The doctrine of paramountcy and its application in establishing British supremacy over princely states.",
     "tags": {
       "topic": "Modern History",
-      "subtopic": "British Expansion and Paramountcy",
-      "conceptTested": "British policy of paramountcy and assertion of authority over princely states"
+      "subtopic": "British Expansion & Paramountcy",
+      "conceptTested": "The doctrine of paramountcy and its application in establishing British supremacy over princely states."
     }
   },
   {
@@ -717,11 +717,11 @@
     "solution": "Solution\n\nShortcut Trick\nWhen tangents from an external point P intersect a circle, and the chord of contact is at a distance d from the centre:\n\nDistance of P from centre OP = (Radius)2 ÷ d\n⇒ OP = 6.52 ÷ 2.5\n⇒ OP = 42.25 ÷ 2.5 = 16.9 cm\n∴ The correct answer is 16.9 cm.\n\nAlternate Method\nGiven:\nRadius of the circle, OA = 6.5 cm\nDistance of chord from the centre, OM = 2.5 cm\n\nFormula Used:\nHypotenuse2 = Perpendicular2 + Base2\n\nCalculations:\nO\nA\nB\nP\nM\n6.5\n2.5\nOP = 16.9 cm\n⇒ In right ΔOMA, by Pythagoras theorem:\n⇒ AM = √(OA2 − OM2)\n⇒ AM = √(6.52 − 2.52) = √(42.25 − 6.25) = √36 = 6 cm\n⇒ Tangent PA is perpendicular to radius OA, so ∠OAP = 90°.\n⇒ In right ΔOAP, AM is the altitude from the right angle to hypotenuse OP.\n⇒ By the geometric mean property of right triangles: OA2 = OM × OP\n⇒ 6.52 = 2.5 × OP\n⇒ 42.25 = 2.5 × OP\n⇒ OP = 42.25 ÷ 2.5 = 16.9 cm\n∴ The correct answer is 16.9 cm.\n\nAdditional Information\nTangent to a Circle\n\nA tangent at any point of a circle is perpendicular to the radius through the point of contact.\n\nChord of Contact\n\nThe line joining the points of contact of two tangents drawn from an external point to a circle is called the chord of contact.\n\nRight-Angled Triangle Properties\n\nIn a right ΔABC right angled at A, if AD ⊥ BC, then AB2 = BD × BC and AC2 = CD × BC.",
     "topic": "Geometry",
     "subtopic": "Circles - Tangents & Secants",
-    "conceptTested": "Tangent properties of a circle and geometric mean relation in right-angled triangles",
+    "conceptTested": "Geometric mean property in right-angled triangles formed by tangents and radii of a circle: $OA^2 = OM \\times OP$.",
     "tags": {
       "topic": "Geometry",
       "subtopic": "Circles - Tangents & Secants",
-      "conceptTested": "Tangent properties of a circle and geometric mean relation in right-angled triangles"
+      "conceptTested": "Geometric mean property in right-angled triangles formed by tangents and radii of a circle: $OA^2 = OM \\times OP$."
     }
   },
   {
@@ -745,12 +745,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nWe can quickly solve this using the Net Deviation Method.\n\nTarget Average = 58\nDeviations of the last 4 innings = (42 − 58) + (56 − 58) + (72 − 58) + (40 − 58)\n⇒ Net Deviation = −16 − 2 + 14 − 18 = −22\n\nTo balance the average, the missing inning must compensate for this deviation.\n\nMissing inning = 58 − (−22) = 80\n∴ The correct answer is 80 runs.\n\nAlternate Method\nTotal Runs = 5 × 58 = 290\nx\n1st Inning\n42\n56\n72\n40\nLast 4 Innings = 210\n\nGiven:\nAverage runs of 5 innings = 58\nRuns scored in the last 4 innings = 42, 56, 72, and 40\n\nFormula Used:\nAverage = Total Sum of Observations ÷ Number of Observations\n\nCalculations:\n⇒ Total runs in 5 innings = Average × Number of innings\n⇒ Total runs in 5 innings = 58 × 5 = 290\n⇒ Sum of runs in the last 4 innings = 42 + 56 + 72 + 40 = 210\n⇒ Runs in the 1st inning = Total runs in 5 innings − Sum of runs in the last 4 innings\n⇒ Runs in the 1st inning = 290 − 210 = 80\n∴ The correct answer is 80 runs.\n\nAdditional Information\nAverage\n\nAverage represents the central value of a dataset. It is calculated by dividing the sum of all values by the total number of values.\n\nNet Deviation Method\n\nThe sum of deviations of all observations from their arithmetic mean is always zero. This property helps in finding a missing observation efficiently without calculating large sums.\n\nWeighted Average\n\nWhen combining groups of varying sizes, the combined average is calculated as: (n1x1 + n2x2) ÷ (n1 + n2).",
     "topic": "Average",
-    "subtopic": "Missing Observation in Average",
-    "conceptTested": "The sum of all observations equals the product of the average and the number of observations.",
+    "subtopic": "Missing Observation",
+    "conceptTested": "Average = Total Sum of Observations / Number of Observations",
     "tags": {
       "topic": "Average",
-      "subtopic": "Missing Observation in Average",
-      "conceptTested": "The sum of all observations equals the product of the average and the number of observations."
+      "subtopic": "Missing Observation",
+      "conceptTested": "Average = Total Sum of Observations / Number of Observations"
     }
   },
   {
@@ -765,7 +765,7 @@
     "correctOption": "A",
     "userTime": "01:16",
     "avgTime": "00:28",
-    "questionText": "The value of \\sin(\\pi+\\theta)\\cos(\\frac{\\pi}{2}+\\theta)\\sin(2\\pi-\\theta)\\cos(2\\pi+\\theta) \\times \\frac{\\tan(\\frac{3\\pi}{2}-\\theta)}{\\cot(2\\pi-\\theta)\\csc(-\\theta)\\sin(\\frac{3\\pi}{2}+\\theta)} is:",
+    "questionText": "The value of \\(\\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2%\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{\\csc (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}\\) is:",
     "options": {
       "A": "1",
       "B": "-1",
@@ -774,12 +774,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nPut θ = 45° to evaluate the expression quickly without using complex trigonometric identities.\nGiven = [sin(225°) × cos(135°)] / [sin(315°) × cos(405°)] × [tan(225°) × cot(315°)] / [cosec(−45°) × sin(315°)]\n⇒ [(−1/√2) × (−1/√2)] / [(−1/√2) × (1/√2)] × [1 × (−1)] / [(−√2) × (−1/√2)]\n⇒ [(1/2) / (−1/2)] × [(−1) / 1]\n⇒ (−1) × (−1) = 1\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\n[sin(π + θ) × cos(π/2 + θ)] / [sin(2π − θ) × cos(2π + θ)] × [tan(3π/2 − θ) × cot(2π − θ)] / [cosec(−θ) × sin(3π/2 + θ)]\n\nFormula Used:\nTrigonometric conversions for allied angles:\n\n⇒ sin(π + θ) = −sinθ | cos(π/2 + θ) = −sinθ\n⇒ sin(2π − θ) = −sinθ | cos(2π + θ) = cosθ\n⇒ tan(3π/2 − θ) = cotθ | cot(2π − θ) = −cotθ\n⇒ cosec(−θ) = −cosecθ | sin(3π/2 + θ) = −cosθ\n\nCalculation:\n⇒ Substituting the conversions into the given expression:\n⇒ [(−sinθ) × (−sinθ)] / [(−sinθ) × (cosθ)] × [(cotθ) × (−cotθ)] / [(−cosecθ) × (−cosθ)]\n⇒ [sin2θ] / [−sinθ × cosθ] × [−cot2θ] / [cosecθ × cosθ]\n⇒ [−sinθ / cosθ] × [−cot2θ] / [(1 / sinθ) × cosθ]\n⇒ [−tanθ] × [−cot2θ / cotθ]\n⇒ (−tanθ) × (−cotθ)\n⇒ tanθ × cotθ = 1\n∴ The correct answer is 1.\n\nAdditional Information\nASTC Rule (Quadrants)\n\n1st Quadrant: All positive | 2nd Quadrant: sin & cosec positive | 3rd Quadrant: tan & cot positive | 4th Quadrant: cos & sec positive.\n\nComplementary & Supplementary Angles\n\nFor angles (90° ± θ) and (270° ± θ), trigonometric ratios change (sin ↔ cos, tan ↔ cot, sec ↔ cosec). For angles (180° ± θ) and (360° ± θ), the trigonometric ratios remain unchanged.\n\nNegative Angle Identities\n\nsin(−θ) = −sinθ | cos(−θ) = cosθ | tan(−θ) = −tanθ | cosec(−θ) = −cosecθ.",
     "topic": "Trigonometry",
-    "subtopic": "Trigonometric Ratios of Allied Angles",
-    "conceptTested": "Reduction formulas for allied angles in various quadrants using the ASTC rule.",
+    "subtopic": "Trigonometric Identities & Allied Angles",
+    "conceptTested": "ASTC Quadrant Rule and Allied Angle transformations for trigonometric ratios",
     "tags": {
       "topic": "Trigonometry",
-      "subtopic": "Trigonometric Ratios of Allied Angles",
-      "conceptTested": "Reduction formulas for allied angles in various quadrants using the ASTC rule."
+      "subtopic": "Trigonometric Identities & Allied Angles",
+      "conceptTested": "ASTC Quadrant Rule and Allied Angle transformations for trigonometric ratios"
     }
   },
   {
@@ -794,7 +794,7 @@
     "correctOption": "C",
     "userTime": "01:11",
     "avgTime": "00:41",
-    "questionText": "ABCD is a rhombus in which ∠ADB = 25°. Then, the value of (2 ∠BAD - ∠ABC) is:",
+    "questionText": "ABCD is a rhombus in which ∠ADB = 25°. Then, the value of (2 ∠BAD- ∠ABC) is :",
     "options": {
       "A": "230°",
       "B": "240°",
@@ -803,12 +803,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nIn a rhombus, adjacent sides are equal (AD = AB), making ΔABD an isosceles triangle.\n⇒ ∠ABD = ∠ADB = 25°\n⇒ ∠BAD = 180° − (25° + 25°) = 130°\n⇒ ∠ABC = 2 × ∠ABD = 50° (Since the diagonal bisects the angle)\n⇒ 2 × ∠BAD − ∠ABC = 2 × 130° − 50° = 210°\n∴ The correct answer is 210°.\n\nAlternate Method\nGiven:\nABCD is a rhombus.\n\n∠ADB = 25°\n\nCalculations:\nIn a rhombus, all four sides are of equal length, so AD = AB.\n⇒ In ΔABD, sides AD and AB are equal, which means the angles opposite to them are also equal.\n⇒ ∠ABD = ∠ADB = 25°\n\nThe sum of all interior angles in a triangle is 180°.\n\n⇒ ∠BAD + ∠ABD + ∠ADB = 180°\n⇒ ∠BAD + 25° + 25° = 180°\n⇒ ∠BAD = 180° − 50° = 130°\n\nWe know that the diagonal of a rhombus acts as an angle bisector for the interior angles.\n\n⇒ ∠ABC = 2 × ∠ABD\n⇒ ∠ABC = 2 × 25° = 50°\nNow, substitute these values into the required expression (2 × ∠BAD − ∠ABC):\n⇒ 2 × 130° − 50°\n⇒ 260° − 50° = 210°\n∴ The correct answer is 210°.\n\nAdditional Information\nProperties of a Rhombus\n\nAll four sides are of equal length. Opposite angles are equal, and any two adjacent angles are supplementary (their sum is 180°).\n\nDiagonals of a Rhombus\n\nThe diagonals bisect each other at right angles (90°) and completely bisect the interior angles at the vertices they connect.\n\nArea of a Rhombus\n\nThe area can be calculated using the lengths of the diagonals: Area = (d1 × d2) ÷ 2, or by using the base and height: Area = Base × Height.",
     "topic": "Geometry",
-    "subtopic": "Quadrilaterals - Rhombus Properties",
-    "conceptTested": "Diagonals of a rhombus bisect the interior angles, and adjacent sides of a rhombus are equal forming isosceles triangles.",
+    "subtopic": "Properties of Rhombus",
+    "conceptTested": "Diagonals of a rhombus bisect the interior angles, and adjacent sides form an isosceles triangle.",
     "tags": {
       "topic": "Geometry",
-      "subtopic": "Quadrilaterals - Rhombus Properties",
-      "conceptTested": "Diagonals of a rhombus bisect the interior angles, and adjacent sides of a rhombus are equal forming isosceles triangles."
+      "subtopic": "Properties of Rhombus",
+      "conceptTested": "Diagonals of a rhombus bisect the interior angles, and adjacent sides form an isosceles triangle."
     }
   },
   {
@@ -823,7 +823,7 @@
     "correctOption": "B",
     "userTime": "00:10",
     "avgTime": "00:33",
-    "questionText": "Three solid iron cubes of edges 8 cm, 10 cm and 12 cm are melted together to make a new cube. It is observed that 496 cm^3 of the melted material is lost due to improper handling. The area (in cm^2) of the whole surface of the newly formed cube is:",
+    "questionText": "Three solid iron cubes of edges 8 cm, 10 cm and 12 cm are melted together to make a new cube. It is observed that 496 cm³ of the melted material is lost due to improper handling. The area (in cm²) of the whole surface of the newly formed cube is:",
     "options": {
       "A": "1331",
       "B": "1176",
@@ -832,12 +832,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nTotal volume of given cubes = 83 + 103 + 123 = 512 + 1000 + 1728 = 3240 cm3\nVolume of the new cube = 3240 − 496 = 2744 cm3\nSide of the new cube (a) = 3√2744 = 14 cm\nTotal Surface Area = 6a2 = 6 × 142 = 6 × 196 = 1176 cm2\n∴ The correct answer is 1176 cm2.\n\nAlternate Method\nGiven:\nEdges of the three solid iron cubes = 8 cm, 10 cm, and 12 cm\nMelted material lost due to improper handling = 496 cm3\n\nFormula Used:\nVolume of a cube = a3\nTotal surface area of a cube = 6a2\n\nCalculations:\n⇒ Total volume of the three smaller cubes = (83 + 103 + 123) cm3\n⇒ Total volume = 512 + 1000 + 1728 = 3240 cm3\n⇒ Volume of the newly formed cube = Total Initial Volume − Material Lost\n⇒ Volume of the new cube = 3240 − 496 = 2744 cm3\n⇒ Let the edge length of the new cube be 'a' cm.\n⇒ a3 = 2744\n⇒ a = 3√2744 = 14 cm\n⇒ Area of the whole surface of the new cube = 6a2\n⇒ Surface Area = 6 × (14)2\n⇒ Surface Area = 6 × 196 = 1176 cm2\n∴ The correct answer is 1176 cm2.\n\nAdditional Information\nTotal Surface Area of a Cube\n\nThe total surface area of a cube is the combined area of its 6 identical square faces. Formula: TSA = 6a2.\n\nLateral Surface Area of a Cube\n\nThe lateral surface area includes only the 4 vertical faces, excluding the top and bottom faces. Formula: LSA = 4a2.\n\nVolume of a Cube\n\nThe volume of a cube represents the 3D space occupied by it. Formula: Volume = a3.\n\nDiagonal of a Cube\n\nThe length of the longest line segment connecting two opposite interior corners of a cube. Formula: Diagonal = a√3.",
     "topic": "Mensuration 3D",
-    "subtopic": "Cube - Melting and Recasting",
-    "conceptTested": "Conservation of volume during melting and recasting of solid objects: Sum of initial volumes minus lost volume equals the final volume.",
+    "subtopic": "Cube - Melting & Recasting",
+    "conceptTested": "Conservation of volume during melting and recasting of solid shapes: Total Volume = Sum of individual volumes - Volume lost.",
     "tags": {
       "topic": "Mensuration 3D",
-      "subtopic": "Cube - Melting and Recasting",
-      "conceptTested": "Conservation of volume during melting and recasting of solid objects: Sum of initial volumes minus lost volume equals the final volume."
+      "subtopic": "Cube - Melting & Recasting",
+      "conceptTested": "Conservation of volume during melting and recasting of solid shapes: Total Volume = Sum of individual volumes - Volume lost."
     }
   },
   {
@@ -861,12 +861,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nTotal time = 2 hr 20 min = 7/3 hours\nTime spent on levelled road = 15 ÷ 10 = 3/2 hours\nRemaining time for downhill = 7/3 − 3/2 = 5/6 hours\nDownhill distance = 25 − 15 = 10 km\nDownhill speed = 10 ÷ (5/6) = 12 km/h\n∴ The correct answer is 12 km/h.\n\nAlternate Method\nGiven:\nTotal distance = 25 km\nTotal time = 2 hours 20 minutes = 2 + 20/60 = 7/3 hours\nDistance of levelled road = 15 km\nSpeed on levelled road = 10 km/h\n\nFormula Used:\nTime = Distance ÷ Speed\nSpeed = Distance ÷ Time\n\nCalculations:\n⇒ Time taken to cover the levelled road = 15 ÷ 10 = 1.5 hours = 3/2 hours\n⇒ Remaining distance (downhill) = Total distance − Distance of levelled road\n⇒ Remaining distance = 25 − 15 = 10 km\n⇒ Remaining time = Total time − Time on levelled road\n⇒ Remaining time = 7/3 − 3/2 = (14 − 9) / 6 = 5/6 hours\n⇒ Average downhill speed = Remaining distance ÷ Remaining time\n⇒ Average downhill speed = 10 ÷ (5/6) = (10 × 6) / 5 = 12 km/h\n∴ The correct answer is 12 km/h.\n\nAdditional Information\nAverage Speed\n\nAverage speed is the total distance covered divided by the total time taken. Formula: Average Speed = Total Distance ÷ Total Time.\n\nAverage Speed (Equal Distances)\n\nIf two equal distances are covered at speeds x and y, the average speed for the whole journey is given by 2xy ÷ (x + y).\n\nRelative Speed\n\nWhen two bodies move in the same direction, relative speed = |S1 − S2|. When moving in opposite directions, relative speed = S1 + S2.",
     "topic": "Time, Speed & Distance",
-    "subtopic": "Average Speed and Variable Speed Problems",
-    "conceptTested": "Basic relationship between distance, speed, and time: \\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}.",
+    "subtopic": "Average Speed & Segmented Journey",
+    "conceptTested": "Time = Distance / Speed and Total Time = Sum of time intervals for each segment.",
     "tags": {
       "topic": "Time, Speed & Distance",
-      "subtopic": "Average Speed and Variable Speed Problems",
-      "conceptTested": "Basic relationship between distance, speed, and time: \\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}."
+      "subtopic": "Average Speed & Segmented Journey",
+      "conceptTested": "Time = Distance / Speed and Total Time = Sum of time intervals for each segment."
     }
   },
   {
@@ -883,12 +883,12 @@
     "avgTime": "00:30",
     "questionText": "Amit borrowed a sum of ₹25,000 on simple interest. Bhola borrowed the same amount on compound interest (interest compounded yearly). At the end of 2 years, Bhola had to pay ₹160 more interest than Amit. The rate of interest charged per annum is:",
     "options": {
-      "A": "1625%",
-      "B": "825%",
+      "A": "1625% $\\frac{16}{25} \\%$",
+      "B": "825% $\\frac{8}{25} \\%$",
       "C": "8%",
-      "D": "318%"
+      "D": "318% $3\\frac{1}{8} \\%$"
     },
-    "solution": "Solution\n\nShortcut Trick\nDifference (2 years) = P × (R / 100)2\n⇒ 160 = 25000 × (R / 100)2\n⇒ (R / 100)2 = 160 ÷ 25000 = 16 / 2500 = (4 / 50)2\n⇒ R = (4 × 100) ÷ 50 = 8\n∴ The correct answer is 8%.\n\nAlternate Method\nGiven:\nPrincipal\n(P) = ₹25,000\nTime (T) = 2 years\nDifference between CI and SI (D) = ₹160\n\nFormula Used:\nFor 2 years, D = P × (R / 100)2\n\nCalculations:\n⇒ 160 = 25000 × (R / 100)2\n⇒ 160 = 25000 × (R2 / 10000)\n⇒ 160 = 2.5 × R2\n⇒ R2 = 160 ÷ 2.5\n⇒ R2 = 1600 ÷ 25\n⇒ R2 = 64\n⇒ R = √64 = 8%\n∴ The correct answer is 8%.\n\nAdditional Information\nDifference between CI and SI for 3 years\n\nFor 3 years, the difference between CI and SI is calculated as: D = P × (R / 100)2 × ((300 + R) / 100).\n\nEffective Compound Interest Rate\n\nThe effective compound interest rate for 2 years is calculated using the successive percentage formula: Rate = 2R + (R2 / 100)%.\n\nRule of 72\n\nTo quickly estimate the number of years required to double an investment at a given annual compound interest rate, use the formula: Time ≈ 72 ÷ R.",
+    "solution": "Solution\n\nShortcut Trick\nDifference (2 years) = P × (R / 100)2\n⇒ 160 = 25000 × (R / 100)2\n⇒ (R / 100)2 = 160 ÷ 25000 = 16 / 2500 = (4 / 50)2\n⇒ R = (4 × 100) ÷ 50 = 8\n∴ The correct answer is 8%.\n\nAlternate Method\nGiven:\nPrincipal (P) = ₹25,000\nTime (T) = 2 years\nDifference between CI and SI (D) = ₹160\n\nFormula Used:\nFor 2 years, D = P × (R / 100)2\n\nCalculations:\n⇒ 160 = 25000 × (R / 100)2\n⇒ 160 = 25000 × (R2 / 10000)\n⇒ 160 = 2.5 × R2\n⇒ R2 = 160 ÷ 2.5\n⇒ R2 = 1600 ÷ 25\n⇒ R2 = 64\n⇒ R = √64 = 8%\n∴ The correct answer is 8%.\n\nAdditional Information\nDifference between CI and SI for 3 years\n\nFor 3 years, the difference between CI and SI is calculated as: D = P × (R / 100)2 × ((300 + R) / 100).\n\nEffective Compound Interest Rate\n\nThe effective compound interest rate for 2 years is calculated using the successive percentage formula: Rate = 2R + (R2 / 100)%.\n\nRule of 72\n\nTo quickly estimate the number of years required to double an investment at a given annual compound interest rate, use the formula: Time ≈ 72 ÷ R.",
     "topic": "Compound Interest",
     "subtopic": "Difference between CI and SI for 2 Years",
     "conceptTested": "For 2 years, the difference between compound interest and simple interest is given by the formula D = P × (R / 100)^2.",
@@ -917,14 +917,14 @@
       "C": "10 cm",
       "D": "5 cm"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen an object is immersed, the volume of water displaced equals the volume of the immersed object.\n\nVolume of Cylinder part (Rise) = Volume of Sphere\nπ × R2 × h = (4 ÷ 3) × π × r3\nh = (4 ÷ 3) × (r ÷ R)2 × r\nGiven R = 30 cm and r = 15 cm. Ratio (r ÷ R) = 1/2.\nh = (4 ÷ 3) × (1/2)2 × 15 = (4 ÷ 3) × (1 ÷ 4) × 15 = 5 cm\n∴ The correct answer is 5 cm.\n\nAlternate Method\nGiven:\nDiameter of the cylindrical vessel = 60 cm\nRadius of the cylinder\n(R) = 60 ÷ 2 = 30 cm\nDiameter of the sphere = 30 cm\nRadius of the sphere (r) = 30 ÷ 2 = 15 cm\n\nFormula Used:\nVolume of Cylinder = π × R2 × h\nVolume of Sphere = (4 ÷ 3) × π × r3\n\nCalculations:\nWhen the sphere is completely immersed, the volume of water displaced is exactly equal to the volume of the sphere.\n\nLet the rise in the water level be h cm.\n⇒ Volume of water raised = Volume of sphere\n⇒ π × R2 × h = (4 ÷ 3) × π × r3\n⇒ π × (30)2 × h = (4 ÷ 3) × π × (15)3\n\nCancel π from both sides:\n\n⇒ 900 × h = (4 ÷ 3) × 3375\n⇒ 900 × h = 4 × 1125\n⇒ 900 × h = 4500\n⇒ h = 4500 ÷ 900\n⇒ h = 5 cm\n∴ The correct answer is 5 cm.\n\nAdditional Information\nArchimedes' Principle (Volume Displacement)\n\nWhen an object is completely submerged in a fluid, it displaces a volume of fluid exactly equal to its own volume regardless of its shape.\n\nSurface Area of Sphere\n\nTotal Surface Area (TSA) = 4 × π × r2\n\nCylinder Area Properties\n\nCurved Surface Area (CSA) = 2 × π × r × h | Total Surface Area (TSA) = 2 × π × r × (r + h)",
+    "solution": "Solution\n\nShortcut Trick\nWhen an object is immersed, the volume of water displaced equals the volume of the immersed object.\n\nVolume of Cylinder part (Rise) = Volume of Sphere\nπ × R2 × h = (4 ÷ 3) × π × r3\nh = (4 ÷ 3) × (r ÷ R)2 × r\nGiven R = 30 cm and r = 15 cm. Ratio (r ÷ R) = 1/2.\nh = (4 ÷ 3) × (1/2)2 × 15 = (4 ÷ 3) × (1 ÷ 4) × 15 = 5 cm\n∴ The correct answer is 5 cm.\n\nAlternate Method\nGiven:\nDiameter of the cylindrical vessel = 60 cm\nRadius of the cylinder (R) = 60 ÷ 2 = 30 cm\nDiameter of the sphere = 30 cm\nRadius of the sphere (r) = 30 ÷ 2 = 15 cm\n\nFormula Used:\nVolume of Cylinder = π × R2 × h\nVolume of Sphere = (4 ÷ 3) × π × r3\n\nCalculations:\nWhen the sphere is completely immersed, the volume of water displaced is exactly equal to the volume of the sphere.\n\nLet the rise in the water level be h cm.\n⇒ Volume of water raised = Volume of sphere\n⇒ π × R2 × h = (4 ÷ 3) × π × r3\n⇒ π × (30)2 × h = (4 ÷ 3) × π × (15)3\n\nCancel π from both sides:\n\n⇒ 900 × h = (4 ÷ 3) × 3375\n⇒ 900 × h = 4 × 1125\n⇒ 900 × h = 4500\n⇒ h = 4500 ÷ 900\n⇒ h = 5 cm\n∴ The correct answer is 5 cm.\n\nAdditional Information\nArchimedes' Principle (Volume Displacement)\n\nWhen an object is completely submerged in a fluid, it displaces a volume of fluid exactly equal to its own volume regardless of its shape.\n\nSurface Area of Sphere\n\nTotal Surface Area (TSA) = 4 × π × r2\n\nCylinder Area Properties\n\nCurved Surface Area (CSA) = 2 × π × r × h | Total Surface Area (TSA) = 2 × π × r × (r + h)",
     "topic": "Mensuration 3D",
-    "subtopic": "Sphere and Cylinder Volume Displacement",
-    "conceptTested": "When a solid object is completely immersed in a liquid-filled container, the volume of the displaced liquid equals the volume of the immersed object.",
+    "subtopic": "Sphere and Cylinder - Volume Displacement",
+    "conceptTested": "When an object is completely immersed in a liquid-filled container, the volume of the displaced liquid equals the volume of the immersed object.",
     "tags": {
       "topic": "Mensuration 3D",
-      "subtopic": "Sphere and Cylinder Volume Displacement",
-      "conceptTested": "When a solid object is completely immersed in a liquid-filled container, the volume of the displaced liquid equals the volume of the immersed object."
+      "subtopic": "Sphere and Cylinder - Volume Displacement",
+      "conceptTested": "When an object is completely immersed in a liquid-filled container, the volume of the displaced liquid equals the volume of the immersed object."
     }
   },
   {
@@ -948,12 +948,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nDirect formula for meeting distance: D = [S1 × S2 × Time Difference] ÷ (S2 − S1)\nHere, S1 = 75 km/h, S2 = 90 km/h, and Time Difference = 16:30 − 14:30 = 2 hours.\nD = [75 × 90 × 2] ÷ (90 − 75)\nD = 13500 ÷ 15\nD = 900 km\n∴ The correct answer is 900 km.\n\nAlternate Method\nGiven:\nSpeed of Sampark Kranti Express = 75 km/h\nDeparture time of Sampark Kranti = 14:30 hours\nSpeed of Rajdhani Express = 90 km/h\nDeparture time of Rajdhani = 16:30 hours\n\nFormula Used:\nDistance = Speed × Time\nRelative Speed (same direction) = S1 − S2\n\nCalculations:\n⇒ Time difference between the departures = 16:30 − 14:30 = 2 hours.\n⇒ Distance covered by Sampark Kranti Express in these 2 hours = 75 × 2 = 150 km.\n⇒ This 150 km is the head start distance between the two trains.\n⇒ Relative speed of Rajdhani Express with respect to Sampark Kranti = 90 − 75 = 15 km/h.\n⇒ Time taken by Rajdhani Express to catch up = Distance ÷ Relative speed.\n⇒ Catch up time = 150 ÷ 15 = 10 hours.\n⇒ The meeting distance from Delhi = Speed of Rajdhani × Time taken.\n⇒ Distance = 90 × 10 = 900 km.\n∴ The correct answer is 900 km.\n\nAdditional Information\nRelative Speed\n\nWhen two objects move in the same direction, their relative speed is the difference of their individual speeds (S1 − S2). When they move in opposite directions, it is the sum of their speeds (S1 + S2).\n\nCatch-up Time Formula\n\nTime to meet = Head start distance ÷ Relative speed. This determines the duration required for the faster object to overtake the slower one.\n\nAverage Speed\n\nWhen a journey covers two equal halves at different speeds S1 and S2, Average Speed = (2 × S1 × S2) ÷ (S1 + S2).",
     "topic": "Time, Speed & Distance",
-    "subtopic": "Relative Speed & Catch-up Time",
-    "conceptTested": "When two objects travel in the same direction, the meeting distance from the starting point is calculated using the relative speed and head start time difference.",
+    "subtopic": "Relative Speed - Catch-up Problems",
+    "conceptTested": "When two objects move in the same direction, the meeting distance from the starting point can be found using the direct formula D = [S1 × S2 × Time Difference] ÷ (S2 − S1).",
     "tags": {
       "topic": "Time, Speed & Distance",
-      "subtopic": "Relative Speed & Catch-up Time",
-      "conceptTested": "When two objects travel in the same direction, the meeting distance from the starting point is calculated using the relative speed and head start time difference."
+      "subtopic": "Relative Speed - Catch-up Problems",
+      "conceptTested": "When two objects move in the same direction, the meeting distance from the starting point can be found using the direct formula D = [S1 × S2 × Time Difference] ÷ (S2 − S1)."
     }
   },
   {
@@ -978,11 +978,11 @@
     "solution": "Solution\n\nShortcut Trick\nSince the overall transaction results in 0% profit/loss, the profit amount equals the loss amount.\n\n⇒ 20% of CP1 = 17.5% of CP2\n⇒ Ratio of CP1 : CP2 = 17.5 : 20 = 7 : 8\n⇒ CP1 = (7 ÷ 15) × 1500 = Rs. 700 & CP2 = (8 ÷ 15) × 1500 = Rs. 800\n∴ The correct answer is Rs. 700, Rs. 800.\n\nAlternate Method\nGiven:\nTotal Cost Price of two chairs = Rs. 1500\nProfit on first chair = 20%\nLoss on second chair = 17.5%\nNet profit or loss = 0%\n\nFormula Used:\nWhen an overall transaction yields neither profit nor loss, the absolute profit earned on one item is exactly equal to the loss incurred on the other item.\n\nCalculations:\n⇒ Let the CP of the first chair be x and the second chair be y.\n⇒ x + y = 1500\n⇒ 20% of x = 17.5% of y\n⇒ x ÷ y = 17.5 ÷ 20 = 175 ÷ 200\n⇒ x ÷ y = 7 ÷ 8\n⇒ Ratio of CP of first chair to second chair = 7 : 8\n⇒ Total ratio parts = 7 + 8 = 15\n⇒ 15 parts = 1500 ⇒ 1 part = 100\n⇒ CP of first chair = 7 × 100 = Rs. 700\n⇒ CP of second chair = 8 × 100 = Rs. 800\n∴ The correct answer is Rs. 700, Rs. 800.\n\nAdditional Information\nNo Profit No Loss Condition\n\nWhen a transaction results in no profit and no loss overall, the absolute profit earned on one item is exactly equal to the absolute loss on the other item.\n\nAlligation Cross Method\n\nUsed for finding the ratio of base values (like Cost Price) when individual percentages and overall average percentage are given. CP Ratio = (Net % − Loss %) : (Profit % − Net %).\n\nBase of Profit and Loss\n\nBoth profit percentage and loss percentage are always calculated on the Cost Price (CP) unless specifically stated otherwise. Profit = SP − CP and Loss = CP − SP.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "No Profit No Loss Transactions",
-    "conceptTested": "When an overall transaction yields neither profit nor loss, the absolute profit earned on one item is exactly equal to the absolute loss incurred on the other item.",
+    "conceptTested": "When an overall transaction results in neither profit nor loss, the absolute profit earned on one item is exactly equal to the absolute loss incurred on the other item.",
     "tags": {
       "topic": "Profit, Loss & Discount",
       "subtopic": "No Profit No Loss Transactions",
-      "conceptTested": "When an overall transaction yields neither profit nor loss, the absolute profit earned on one item is exactly equal to the absolute loss incurred on the other item."
+      "conceptTested": "When an overall transaction results in neither profit nor loss, the absolute profit earned on one item is exactly equal to the absolute loss incurred on the other item."
     }
   },
   {
@@ -1005,13 +1005,13 @@
       "D": "n + 8"
     },
     "solution": "Solution\n\nShortcut Trick\nLet the numerator of the rational number be n.\n\nThe original denominator is 10 more than the numerator, which is n + 10.\n\nWhen the denominator is decreased by 1, the new denominator becomes (n + 10) − 1.\n\nSimplifying the expression, we get n + 9.\n\n∴ The correct answer is n + 9.\n\nAlternate Method\nn\nn + 10\nOriginal Fraction\nNum + 1\nDen − 1\nn + 1\nn + 9\nNew Fraction\nNew Denominator = n + 10 − 1 = n + 9\n\nGiven:\n⇒ The denominator of a rational number is greater than the numerator by 10.\n⇒ The numerator is increased by 1.\n⇒ The denominator is decreased by 1.\n\nCalculation:\n⇒ Let the numerator of the original rational number be n.\n⇒ Original Denominator = n + 10\n⇒ Original Rational Number = n / (n + 10)\n⇒ The new denominator is formed by subtracting 1 from the original denominator.\n⇒ New Denominator = Original Denominator − 1\n⇒ New Denominator = (n + 10) − 1\n⇒ New Denominator = n + 9\n∴ The correct answer is n + 9.\n\nAdditional Information\nRational Numbers\n\nA rational number is any number that can be expressed as a fraction p/q, where p and q are integers and q is not equal to zero.\n\nFraction Modification\n\nIf a fraction is represented as x/y, increasing the numerator by 'a' and decreasing the denominator by 'b' results in a new fraction expressed as (x + a) / (y − b).\n\nSimplification of Algebraic Expressions\n\nSimplifying algebraic expressions involves grouping and combining like terms. For constant numbers, basic arithmetic operations are applied directly, e.g., (n + a) − b = n + (a − b).",
-    "topic": "Algebra",
-    "subtopic": "Linear Expressions & Fractions",
-    "conceptTested": "Simplifying algebraic expressions by applying basic arithmetic operations to constants and variables.",
+    "topic": "Simplification",
+    "subtopic": "Algebraic Fractions & Expression Modification",
+    "conceptTested": "Simplifying algebraic expressions involves basic arithmetic operations on constants while preserving variables like numerators and denominators.",
     "tags": {
-      "topic": "Algebra",
-      "subtopic": "Linear Expressions & Fractions",
-      "conceptTested": "Simplifying algebraic expressions by applying basic arithmetic operations to constants and variables."
+      "topic": "Simplification",
+      "subtopic": "Algebraic Fractions & Expression Modification",
+      "conceptTested": "Simplifying algebraic expressions involves basic arithmetic operations on constants while preserving variables like numerators and denominators."
     }
   },
   {
@@ -1035,12 +1035,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nTotal active playing time on the court = Number of active players × Game duration.\nTotal playing time = 5 × 60 = 300 minutes.\n\nSince this playing time is exactly equally distributed among all 12 players, we divide the total time by 12.\n\nTime per player = 300 ÷ 12 = 25 minutes.\n∴ The correct answer is 25 minutes.\n\nAlternate Method\nGiven:\nTotal players on the basketball team = 12\nNumber of players active on the court at any one time = 5\nDuration of the game = 1 hour = 60 minutes\n\nFormula Used:\nTotal player-minutes = Number of active players × Game duration\nTime per player = Total player-minutes ÷ Total number of players\n\nCalculations:\n⇒ Total player-minutes = 5 × 60\n⇒ Total player-minutes = 300 minutes\n⇒ As the total court time is shared equally among 12 players, we divide the total minutes by 12.\n⇒ Time per player = 300 ÷ 12\n⇒ Time per player = 25 minutes\n∴ The correct answer is 25 minutes.\n\nAdditional Information\nMan-Hours Concept\n\nWhen an activity requires a constant number of individuals active at all times, the total accumulated effort is the product of the active individuals and the duration: Total Time = Active Members × Duration.\n\nEqual Distribution (Average)\n\nIf a total continuous resource must be shared exactly equally among a group, the amount received per individual is calculated as Average = Total Quantity ÷ Total Number of Individuals.",
     "topic": "Time, Speed & Distance",
-    "subtopic": "Basic Time, Speed & Distance - Unitary & Man-Hours Concept",
-    "conceptTested": "Total effort or player-minutes is equal to the product of the number of active individuals and the duration of the activity, which is then equally distributed among all members.",
+    "subtopic": "Basic Speed, Distance and Time",
+    "conceptTested": "Total work or accumulated effort is the product of active units and duration, and equal distribution is total quantity divided by total individuals.",
     "tags": {
       "topic": "Time, Speed & Distance",
-      "subtopic": "Basic Time, Speed & Distance - Unitary & Man-Hours Concept",
-      "conceptTested": "Total effort or player-minutes is equal to the product of the number of active individuals and the duration of the activity, which is then equally distributed among all members."
+      "subtopic": "Basic Speed, Distance and Time",
+      "conceptTested": "Total work or accumulated effort is the product of active units and duration, and equal distribution is total quantity divided by total individuals."
     }
   },
   {
@@ -1064,12 +1064,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nWages are distributed in the inverse ratio of time taken when persons work together.\n\nTime ratio of A : B = 20 : 50 = 2 : 5\nEfficiency (wage) ratio of A : B = 5 : 2\nShare of B = (2 ÷ 7) × 3500 = 1000\n∴ The correct answer is Rs. 1000.\n\nAlternate Method\nGiven:\nTime taken by A = 20 days\nTime taken by B = 50 days\nTotal wages = Rs. 3500\n\nFormula Used:\nWages are distributed in the ratio of efficiencies when working together.\n\nTotal Work = LCM of days taken.\nEfficiency = Total Work ÷ Days\n\nPerson\tDays\tTotal Work\tEfficiency\nA\t20\t100\t5\nB\t50\t2\n\nCalculations:\n⇒ Efficiency ratio of A : B = 5 : 2\n⇒ Total efficiency parts = 5 + 2 = 7\n⇒ Share of B = (Efficiency of B ÷ Total efficiency) × Total wages\n⇒ Share of B = (2 ÷ 7) × 3500\n⇒ Share of B = 2 × 500 = 1000\n∴ The correct answer is Rs. 1000.\n\nAdditional Information\nWork and Wages\n\nWages are always distributed in proportion to the total work done. If multiple people work together for the exact same duration, their total wages are directly divided in the ratio of their individual efficiencies.\n\nEfficiency vs Time\n\nEfficiency is inversely proportional to time. If the ratio of time taken by A and B to complete a piece of work is a : b, then the ratio of their individual efficiencies will be b : a.\n\nPipes & Cisterns\n\nConcepts of time and work apply identically to pipes and cisterns problems. The only key difference is that an outlet or emptying pipe is assigned a negative efficiency.",
     "topic": "Time & Work",
-    "subtopic": "Work & Wages - Proportional Efficiency",
-    "conceptTested": "Wages are distributed directly in the ratio of individual efficiencies, where efficiency is inversely proportional to the time taken.",
+    "subtopic": "Wages & Efficiency",
+    "conceptTested": "Wages are distributed in proportion to individual efficiencies when working together for the same duration.",
     "tags": {
       "topic": "Time & Work",
-      "subtopic": "Work & Wages - Proportional Efficiency",
-      "conceptTested": "Wages are distributed directly in the ratio of individual efficiencies, where efficiency is inversely proportional to the time taken."
+      "subtopic": "Wages & Efficiency",
+      "conceptTested": "Wages are distributed in proportion to individual efficiencies when working together for the same duration."
     }
   },
   {
@@ -1086,19 +1086,19 @@
     "avgTime": "00:34",
     "questionText": "The average speed of a train is 180% of the average speed of a car. The car covers a distance of 990 km in 15 hours. The time taken (in hours) by the train to cover the distance of 891 km is:",
     "options": {
-      "A": "912",
-      "B": "712",
-      "C": "612",
-      "D": "512"
+      "A": "912 $\\frac{1}{2}$",
+      "B": "712 $\\frac{1}{2}$",
+      "C": "612 $\\frac{1}{2}$",
+      "D": "512 $\\frac{1}{2}$"
     },
     "solution": "Solution\n\nShortcut Trick\nSpeed of the car = 990 ÷ 15 = 66 km/h.\nSpeed of the train = 180% of 66 = 1.8 × 66 = 118.8 km/h.\nTime taken by train = Distance ÷ Speed = 891 ÷ 118.8 = 7.5 hours.\n7.5 hours is equal to 7½ hours.\n∴ The correct answer is 7½ hours.\n\nAlternate Method\nGiven:\nDistance covered by car = 990 km\nTime taken by car = 15 hours\nAverage speed of train = 180% of average speed of car\nDistance to be covered by train = 891 km\n\nFormula Used:\nSpeed = Distance ÷ Time\n\nCalculations:\n⇒ Speed of the car = 990 ÷ 15\n⇒ Speed of the car = 66 km/h\n⇒ Speed of the train = 180% of 66\n⇒ Speed of the train = (180 ÷ 100) × 66 = 1.8 × 66 = 118.8 km/h\n⇒ Time taken by the train = 891 ÷ 118.8\n⇒ Time taken by the train = 8910 ÷ 1188\n⇒ Time taken by the train = 7.5 hours\n⇒ 7.5 hours = 7½ hours\n∴ The correct answer is 7½ hours.\n\nAdditional Information\nAverage Speed\n\nAverage speed is the total distance traveled divided by the total time taken. Formula: Average Speed = Total Distance ÷ Total Time.\n\nRelative Speed\n\nWhen two objects move in the same direction, their relative speed is the difference of their individual speeds (S1 − S2). In opposite directions, it is the sum (S1 + S2).\n\nConversion of Units\n\nTo convert speed from km/h to m/s, multiply by 5 ÷ 18. To convert from m/s to km/h, multiply by 18 ÷ 5.",
     "topic": "Time, Speed & Distance",
-    "subtopic": "Speed, Time & Distance - Relative & Percentage Comparisons",
-    "conceptTested": "Speed is calculated as distance divided by time, and time taken is found by dividing total distance by the calculated speed.",
+    "subtopic": "Average Speed & Relative Speed",
+    "conceptTested": "Speed equals distance divided by time, and percentages can be applied directly to calculate comparative speeds.",
     "tags": {
       "topic": "Time, Speed & Distance",
-      "subtopic": "Speed, Time & Distance - Relative & Percentage Comparisons",
-      "conceptTested": "Speed is calculated as distance divided by time, and time taken is found by dividing total distance by the calculated speed."
+      "subtopic": "Average Speed & Relative Speed",
+      "conceptTested": "Speed equals distance divided by time, and percentages can be applied directly to calculate comparative speeds."
     }
   },
   {
@@ -1122,12 +1122,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nRatio of students in sections A and B = 48 : 60 = 4 : 5.\nLet the assumed average be 42 kg (the lower average).\nDeviation of section A from assumed average = 51 − 42 = +9 kg.\nTotal deviation distributed over total parts = (4 × +9) ÷ (4 + 5) = 36 ÷ 9 = +4 kg.\nCombined average = 42 + 4 = 46 kg.\n∴ The correct answer is 46 kg.\n\nAlternate Method\nGiven:\nNumber of students in section A (n1) = 48, Average weight (A1) = 51 kg\nNumber of students in section B (n2) = 60, Average weight (A2) = 42 kg\n\nFormula Used:\nCombined Average = (n1 × A1 + n2 × A2) ÷ (n1 + n2)\n\n51 kg\nSection A\n42 kg\nSection B\nx\nMean Avg\nx − 42\n51 − x\nStudent Ratio = 48 : 60 = 4 : 5\n\nCalculations:\n⇒ Combined Average = (48 × 51 + 60 × 42) ÷ (48 + 60)\n⇒ Combined Average = (2448 + 2520) ÷ 108\n⇒ Combined Average = 4968 ÷ 108 = 46 kg\n\nUsing Alligation (from diagram):\n\n⇒ Ratio of students = (x − 42) ÷ (51 − x) = 48 ÷ 60\n⇒ (x − 42) ÷ (51 − x) = 4 ÷ 5\n⇒ 5 × (x − 42) = 4 × (51 − x)\n⇒ 5x − 210 = 204 − 4x\n⇒ 9x = 414 ⇒ x = 46 kg\n∴ The correct answer is 46 kg.\n\nAdditional Information\nCombined Average Formula\n\nWhen two groups of sizes n1 and n2 have averages A1 and A2 respectively, their combined average is given by: A = (n1A1 + n2A2) ÷ (n1 + n2).\n\nAlligation Rule\n\nIt is a quick method used to find the ratio in which two groups are mixed. The ratio of the quantities is given by the cross-difference of their values from the mean average.\n\nNet Deviation Method\n\nA trick to minimize calculation by assuming an arbitrary average. The actual average is the assumed average plus the total net deviation divided by the total number of observations.",
     "topic": "Average",
-    "subtopic": "Combined Average & Alligation",
-    "conceptTested": "Combined Average formula: \\(A = \\frac{n_1A_1 + n_2A_2}{n_1 + n_2}\\)",
+    "subtopic": "Combined Average",
+    "conceptTested": "Combined average is calculated using the weighted mean formula: A = (n1A1 + n2A2) ÷ (n1 + n2).",
     "tags": {
       "topic": "Average",
-      "subtopic": "Combined Average & Alligation",
-      "conceptTested": "Combined Average formula: \\(A = \\frac{n_1A_1 + n_2A_2}{n_1 + n_2}\\)"
+      "subtopic": "Combined Average",
+      "conceptTested": "Combined average is calculated using the weighted mean formula: A = (n1A1 + n2A2) ÷ (n1 + n2)."
     }
   },
   {
@@ -1150,13 +1150,13 @@
       "D": "None of these"
     },
     "solution": "Solution\n\nShortcut Trick\nTotal sum of ages at present = Sum 8 years ago + (3 persons × 8 years)\n⇒ Present sum = 56 + 24 = 80 years\nTotal ratio parts = 4 + 7 + 9 = 20 parts\n1 part = 80 ÷ 20 = 4 years\nEldest person's age (9 parts) = 9 × 4 = 36 years\n∴ The correct answer is 36 years.\n\nAlternate Method\nGiven:\nPresent ages of three persons are in the ratio 4 : 7 : 9.\nSum of their ages 8 years ago = 56 years.\n\nCalculations:\nLet the present ages of the three persons be 4x, 7x, and 9x.\n⇒ Sum of their present ages = 4x + 7x + 9x = 20x\n\nWe know that 8 years ago, the sum of their ages was 56.\n\nSince 8 years have passed for all 3 persons, the sum of their ages will increase by 3 × 8 = 24 years to reach the present day.\n\n⇒ Present sum of ages = 56 + 24 = 80 years\n⇒ 20x = 80\n⇒ x = 80 ÷ 20 = 4\n\nThe present age of the eldest person corresponds to the largest ratio part, which is 9x.\n\n⇒ Eldest person's age = 9 × 4 = 36 years.\n∴ The correct answer is 36 years.\n\nAdditional Information\nSum of Ages over Time\n\nWhen moving forward or backward in time by 'n' years, the sum of ages of 'k' individuals changes exactly by 'n × k' years.\n\nConstant Age Difference\n\nThe difference between the ages of any two people remains strictly constant regardless of the time period, past or future.\n\nAge Ratios\n\nIf the present age ratio is a : b, the ratio after 't' years becomes (ax + t) : (bx + t), where x is the common multiplier representing the exact value of one ratio unit.",
-    "topic": "Ratio & Proportion",
-    "subtopic": "Age Problems & Proportional Parts",
-    "conceptTested": "When moving backward in time by 'n' years, the sum of ages of 'k' individuals decreases by 'n \\times k' years, allowing back-calculation to the present sum.",
+    "topic": "Arithmetical Reasoning",
+    "subtopic": "Age Problems",
+    "conceptTested": "When moving backward in time by 'n' years, the sum of ages of 'k' individuals decreases by 'n × k' years.",
     "tags": {
-      "topic": "Ratio & Proportion",
-      "subtopic": "Age Problems & Proportional Parts",
-      "conceptTested": "When moving backward in time by 'n' years, the sum of ages of 'k' individuals decreases by 'n \\times k' years, allowing back-calculation to the present sum."
+      "topic": "Arithmetical Reasoning",
+      "subtopic": "Age Problems",
+      "conceptTested": "When moving backward in time by 'n' years, the sum of ages of 'k' individuals decreases by 'n × k' years."
     }
   },
   {
@@ -1179,13 +1179,13 @@
       "D": "32.7"
     },
     "solution": "Solution\n\nShortcut Trick\nWe can find the average directly using fractions without calculating the total number of people.\n\nFraction of Women = 1/4, Men = 2/5 ⇒ Children = 1 − (1/4 + 2/5) = 1 − 13/20 = 7/20.\nAverage age of Men = 48 years.\nAverage age of Women = 5/6 × 48 = 40 years | Average age of Children = 1/3 × 48 = 16 years.\nGroup Average = (1/4 × 40) + (2/5 × 48) + (7/20 × 16) = 10 + 19.2 + 5.6 = 34.8.\n∴ The correct answer is 34.8 years.\n\nAlternate Method\nGiven:\nTotal people = 260\nNumber of Women = 1/4 of 260 = 65\nNumber of Men = 2/5 of 260 = 104\nNumber of Children = 260 − (65 + 104) = 91\nAverage age of Men = 48 years\nTotal Group (260 people)\nWomen (1/4)\nAvg: 40\nMen (2/5)\nAvg: 48\nChildren (7/20)\nAvg: 16\nWeighted Average Calculation\nGroup Avg = 34.8 years\n\nFormula Used:\nAverage = (Sum of all observations) ÷ (Total number of observations)\n\nCalculations:\n⇒ Average age of Women = 5/6 × 48 = 40 years\n⇒ Average age of Children = 1/3 × 48 = 16 years\n⇒ Total age of Women = 65 × 40 = 2600\n⇒ Total age of Men = 104 × 48 = 4992\n⇒ Total age of Children = 91 × 16 = 1456\n⇒ Total age of the group = 2600 + 4992 + 1456 = 9048\n⇒ Average age of the group = 9048 ÷ 260\n⇒ Average = 34.8 years\n∴ The correct answer is 34.8 years.\n\nAdditional Information\nWeighted Average Method\n\nWhen different sub-groups have unique averages, the overall combined average is calculated as (N1A1 + N2A2 + ...) ÷ (N1 + N2 + ...).\n\nIndependence from Absolute Totals\n\nIf the relative ratios or percentage fractions of multiple groups are known along with their respective averages, the overall average remains constant regardless of the actual base population size.\n\nProperties of Averages\n\nIf all individual items in a data set are multiplied or divided by a specific constant, the overall average of the data set will also be multiplied or divided by that same constant.",
-    "topic": "Percentage",
-    "subtopic": "Weighted Average & Group Averages",
-    "conceptTested": "Weighted Average formula: Average = (Sum of observations) / (Total count) or weighted sum of group averages.",
+    "topic": "Average",
+    "subtopic": "Weighted Average",
+    "conceptTested": "Weighted Average = \\frac{N_1A_1 + N_2A_2 + N_3A_3}{N_1 + N_2 + N_3}",
     "tags": {
-      "topic": "Percentage",
-      "subtopic": "Weighted Average & Group Averages",
-      "conceptTested": "Weighted Average formula: Average = (Sum of observations) / (Total count) or weighted sum of group averages."
+      "topic": "Average",
+      "subtopic": "Weighted Average",
+      "conceptTested": "Weighted Average = \\frac{N_1A_1 + N_2A_2 + N_3A_3}{N_1 + N_2 + N_3}"
     }
   },
   {
@@ -1210,11 +1210,11 @@
     "solution": "Solution\n\nShortcut Trick\nUsing the multiplying factor method for successive profits:\n\n20% profit = +1/5 ⇒ Multiplier = 6/5\n10% profit = +1/10 ⇒ Multiplier = 11/10\nInitial Price × (6/5) × (11/10) = Final Price\nCP × 66/50 = 2178 ⇒ CP = 2178 × 50/66 = 1650\n∴ The correct answer is ₹1650.\n\nAlternate Method\nGiven:\nProfit% earned by John = 20%\nProfit% earned by Sue = 10%\nAmount paid by Rima = ₹2178\n\nFormula Used:\nSelling Price (SP) = Cost Price (CP) × (100 + Profit%) ÷ 100\n\nCalculations:\n⇒ Let the cost price for John be x.\n⇒ Selling price of John = Cost price of Sue = x × (100 + 20)/100 = 1.2x\n⇒ Selling price of Sue = Cost price of Rima = 1.2x × (100 + 10)/100 = 1.32x\n⇒ As Rima paid ₹2178, we can equate the values:\n⇒ 1.32x = 2178\n⇒ x = 2178 ÷ 1.32 = 217800 ÷ 132\n⇒ x = 1650\n∴ The correct answer is ₹1650.\n\nAdditional Information\nSuccessive Profit/Loss Formula\n\nIf an article is sold successively at profits of p1% and p2%, the final price is calculated as CP × (1 + p1/100) × (1 + p2/100).\n\nNet Effective Profit%\n\nWhen two successive profits p1% and p2% are applied, the effective net profit is given by (p1 + p2 + p1p2/100)%. Here, 20 + 10 + (200/100) = 32% overall profit.\n\nMultiplier Method\n\nMultiplying factors streamline successive changes. A 20% gain gives a multiplier of 1.2, and a 10% gain gives 1.1. Combined multiplier = 1.2 × 1.1 = 1.32.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Successive Profit & Loss",
-    "conceptTested": "Successive percentage multiplier method for finding initial cost price given final selling price.",
+    "conceptTested": "Final Price = Initial Price \\times \\left(1 + \\frac{p_1}{100}\\right) \\times \\left(1 + \\frac{p_2}{100}\\right)",
     "tags": {
       "topic": "Profit, Loss & Discount",
       "subtopic": "Successive Profit & Loss",
-      "conceptTested": "Successive percentage multiplier method for finding initial cost price given final selling price."
+      "conceptTested": "Final Price = Initial Price \\times \\left(1 + \\frac{p_1}{100}\\right) \\times \\left(1 + \\frac{p_2}{100}\\right)"
     }
   },
   {
@@ -1229,7 +1229,7 @@
     "correctOption": "A",
     "userTime": "01:00",
     "avgTime": "00:22",
-    "questionText": "A completes one-third of the work in 5 days. He is then assisted by B, and they together finish the remaining work in 6 days. B alone can complete the entire piece of work in _________.",
+    "questionText": "A completes one-third of the work in 5 days. He is then assisted by B. and they together finish the remaining work in 6 days. B alone can complete the entire piece of work in _________.",
     "options": {
       "A": "22.5 days",
       "B": "18.5 days",
@@ -1238,12 +1238,12 @@
     },
     "solution": "Solution\n\nShortcut Trick\nTime to complete full work: A = 5 × 3 = 15 days, (A + B) = 6 × (3/2) = 9 days.\nTotal work = LCM(15, 9) = 45 units.\nEfficiency: A = 45 ÷ 15 = 3 units/day, (A + B) = 45 ÷ 9 = 5 units/day.\nEfficiency of B = 5 − 3 = 2 units/day.\nTime taken by B alone = 45 ÷ 2 = 22.5 days.\n∴ The correct answer is 22.5 days.\n\nAlternate Method\nGiven:\n⇒ A completes 1/3 of the work in 5 days.\n⇒ Remaining work = 1 − 1/3 = 2/3.\n⇒ A and B together complete the remaining 2/3 of the work in 6 days.\n\nCalculations:\n⇒ Time taken by A alone for the whole work = 5 × 3 = 15 days.\n⇒ Time taken by (A + B) together for the whole work = 6 × (3/2) = 9 days.\n⇒ Let the total work be the LCM of 15 and 9.\n\nPerson\tDays\tTotal Work\tEfficiency\nA\t15\t45\t45 ÷ 15 = 3\nA + B\t9\t45 ÷ 9 = 5\n⇒ Efficiency of B = Efficiency of (A + B) − Efficiency of A\n⇒ Efficiency of B = 5 − 3 = 2 units/day.\n⇒ Time taken by B alone = Total Work ÷ Efficiency of B\n⇒ Time taken by B alone = 45 ÷ 2 = 22.5 days.\n∴ The correct answer is 22.5 days.\n\nAdditional Information\nPipes and Cisterns\n\nIt operates on the same logic as Time and Work. Inlet pipes have positive efficiency (filling), and outlet pipes or leaks have negative efficiency (emptying).\n\nWork and Wages\n\nWages are always distributed in the exact ratio of the actual work completed by each person. If everyone works for the same number of days, the wages are divided in the ratio of their efficiencies.\n\nAlternate Day Work\n\nFind the total work done in a complete cycle of days (for example, 2 days if two people are alternating). Multiply the cycle to get as close to the total work as possible, and calculate the remaining work for the next turns manually.",
     "topic": "Time & Work",
-    "subtopic": "Efficiency & Combined Work",
-    "conceptTested": "Total work equals LCM of days; individual efficiency is total work divided by total time.",
+    "subtopic": "Efficiency and Combined Work",
+    "conceptTested": "Total Work = LCM of days; Efficiency = Total Work / Time",
     "tags": {
       "topic": "Time & Work",
-      "subtopic": "Efficiency & Combined Work",
-      "conceptTested": "Total work equals LCM of days; individual efficiency is total work divided by total time."
+      "subtopic": "Efficiency and Combined Work",
+      "conceptTested": "Total Work = LCM of days; Efficiency = Total Work / Time"
     }
   },
   {
@@ -1268,11 +1268,11 @@
     "solution": "Solution\n\nThe correct answer is \"QSRP\"\n\nKey Points\nS1 introduces the main topic of the passage, which is a poll conducted by Elon Musk on Twitter asking if he should step down as head of the platform.\nQ provides background information on the poll, stating that it was open for 24 hours and received a total of 17.5 million responses, with a majority of 57% voting against Musk remaining as head of Twitter.\nS describes the idea of a CEO asking their subscribers whether they should remain in their position as being intriguing.\nR adds further context to the situation by stating that nothing can be more democratic than this, although corporations are not typically democratic.\nP confirms that Musk has a reputation for being a true believer in free speech, the rule of law, and keeping his promises.\nS6 highlights the fact that Musk has previously turned to Twitter polls for other important decisions regarding his company.\n\nThus, QSRP is the correct answer.\n\nCorrect paragraph: S1 Elon Musk, the billionaire owner of Twitter, ran a poll that just concluded today. Like all musk polls, the question was very simple. “Should I step down as head of Twitter? I will abide by the results of this poll.” Q Twitter subscribers had about 24 hours to respond. Over 17.5 million responded and the vote was overwhelmingly against him running Twitter, 57 per cent to 43 per cent. S The idea that a CEO of a company would ask his subscribers whether or not he should be at the helm is in and of itself very intriguing. R Nothing can be more democratic than this, although corporations are anything but democratic. P And if we know something about him, he’s a true believer in free speech, the rule of law, and keeping the promises that he has made. S6 Musk has turned to Twitter polls for other seismic decisions about the company.",
     "topic": "Para Jumbles",
     "subtopic": "Sentence Rearrangement (PQRS)",
-    "conceptTested": "Logical flow and coherence connecting given fixed opening and closing sentences S1 and S6.",
+    "conceptTested": "Logical flow and coherence between sentence connectors and subject references",
     "tags": {
       "topic": "Para Jumbles",
       "subtopic": "Sentence Rearrangement (PQRS)",
-      "conceptTested": "Logical flow and coherence connecting given fixed opening and closing sentences S1 and S6."
+      "conceptTested": "Logical flow and coherence between sentence connectors and subject references"
     }
   },
   {
@@ -1287,7 +1287,7 @@
     "correctOption": "A",
     "userTime": "00:11",
     "avgTime": "00:14",
-    "questionText": "Direction: Choose the correct word to fill up the blanks from the alternatives.\nMohamed Ghazni ______ a lot of wealth from India.",
+    "questionText": "Direction: Choose the correct word to fill up the blanks from the alternatives. Mohamed Ghazni ______ a lot of wealth from India.",
     "options": {
       "A": "plundered",
       "B": "destroyed",
@@ -1297,11 +1297,11 @@
     "solution": "Solution\n\nHere, the correct answer is 'plundered.'\n\nKey Points\nLet us explore the meaning of the given options:\nPlundered: steal goods from (a place or person), typically using force and in a time of war or civil disorder. (लूटना, विशेषतः युद्घ या दंगों में)\nDestroyed: to damage something so badly that it can no longer be used or no longer exists. (किसी वस्‍तु को इस तरह हानि पहुँचाना कि वह इस्‍तेमाल न हो सके या समाप्‍त हो जाए, नष्‍ट करना)\nStole: to take something from a person, shop, etc. without permission and without intending to return it or pay for it. (चोरी करना (किसी व्‍यक्ति, दुकान आदि से); बिना पूछे और लौटाने या भुगतान करने के इरादे के बिना कोई वस्‍तु ले लेना)\nPilfered: to steal something in small quantity or of little value, especially from the place where you work. (कम मूल्य की कोई वस्तु चुराना, विशेषतः कार्यस्‍थल से; थोड़ा थोड़ा करके चुराना)\nThe given sentence states that Mohamed Ghazni stole a great deal of money from India using force.\nHence, the correct answer is Option 1.\nCorrect sentence is: Mohamed Ghazni plundered a lot of wealth from India.",
     "topic": "Fill in the Blanks",
     "subtopic": "Vocabulary Based Fillers",
-    "conceptTested": "Appropriate contextual word selection based on historical definitions and connotations.",
+    "conceptTested": "Appropriate contextual word usage and lexical compatibility",
     "tags": {
       "topic": "Fill in the Blanks",
       "subtopic": "Vocabulary Based Fillers",
-      "conceptTested": "Appropriate contextual word selection based on historical definitions and connotations."
+      "conceptTested": "Appropriate contextual word usage and lexical compatibility"
     }
   },
   {
@@ -1316,7 +1316,7 @@
     "correctOption": "D",
     "userTime": "00:28",
     "avgTime": "00:18",
-    "questionText": "An provision of quality education(A)/ and healthcare services(B)/ must be considered as a basic need for all individuals.(C)/ No error(D)",
+    "questionText": "Directions: Each item in this section has a sentence with three underlined parts labelled (a), (b) and (c). Read each sentence to find out whether there is any error in any underlined part. Indicate your response in the Answer Sheet against the corresponding letter, i.e., (a) or (b) or (c). If you find no error, your response should be indicated as (d). An provision of quality education(A)/ and healthcare services(B)/ must be considered as a basic need for all individuals.(C)/ No error(D)",
     "options": {
       "A": "B",
       "B": "C",
@@ -1325,12 +1325,12 @@
     },
     "solution": "Solution\n\nThe correct answer is \"A\"\n\nKey Points\n​The error lies in part 'A' of the sentence because 'An' is used which indicates that the noun that follows starts with a vowel sound but in this case \"provision\" starts with a consonant sound.\nHere, we are talking about a provision of something, thus it should be 'a' instead of 'an'.\nHence, 'a' must be used instead of 'an' to make the sentence correct.\n\nThus, option 4 is the correct answer.\n\nCorrect Sentence: A provision of quality education and healthcare services must be considered as a basic need for all individuals.",
     "topic": "Spotting Errors",
-    "subtopic": "Spotting Errors - Articles",
-    "conceptTested": "Indefinite article 'a' is used before consonant sounds, whereas 'an' is used before vowel sounds.",
+    "subtopic": "Articles - A vs An",
+    "conceptTested": "The indefinite article 'a' is used before words starting with a consonant sound, while 'an' is used before vowel sounds.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Spotting Errors - Articles",
-      "conceptTested": "Indefinite article 'a' is used before consonant sounds, whereas 'an' is used before vowel sounds."
+      "subtopic": "Articles - A vs An",
+      "conceptTested": "The indefinite article 'a' is used before words starting with a consonant sound, while 'an' is used before vowel sounds."
     }
   },
   {
@@ -1353,13 +1353,13 @@
       "D": "Your sister cooks well, does she?"
     },
     "solution": "Solution\n\nThe correct answer is '4' i.e. Your sister cooks well, does she? .\n\nKey Points\nQuestion tags are used to confirm or check information, and they follow specific rules based on the sentence's tense and subject.\nThe statement \"Your sister cooks well\" is a positive sentence in the present simple tense.\nThe correct question tag for a positive sentence should be negative. Therefore, it should be \"doesn’t she?\" instead of \"does she?\"\n\nCorrect sentence: Your sister cooks well, doesn’t she?.\n\nAdditional Information\nRules for Question Tags:\nIf the main sentence is positive, the tag should be negative.\nIf the main sentence is negative, the tag should be positive.\nThe verb in the tag should match the tense of the main sentence.\nExample: He is happy, isn’t he? / She isn’t coming, is she?\nExamples of Correct Question Tags:\nThey haven’t come, have they? (Negative sentence → Positive tag)\nSomebody has called, haven’t they? (Correct usage for indefinite pronoun “somebody” → Singular subject but neutral “they” in the tag)\nHave some more rice, will you? (Imperative sentence → “will you?” is appropriate)",
-    "topic": "Direct & Indirect Speech",
-    "subtopic": "Direct & Indirect Speech (Narration)",
-    "conceptTested": "Sequence of tenses in Indirect Speech: When the reporting verb is in the past tense, 'will' in the reported clause changes to 'would'.",
+    "topic": "Spotting Errors",
+    "subtopic": "Question Tags",
+    "conceptTested": "A positive main clause requires a negative question tag matching the tense and auxiliary verb of the sentence.",
     "tags": {
-      "topic": "Direct & Indirect Speech",
-      "subtopic": "Direct & Indirect Speech (Narration)",
-      "conceptTested": "Sequence of tenses in Indirect Speech: When the reporting verb is in the past tense, 'will' in the reported clause changes to 'would'."
+      "topic": "Spotting Errors",
+      "subtopic": "Question Tags",
+      "conceptTested": "A positive main clause requires a negative question tag matching the tense and auxiliary verb of the sentence."
     }
   },
   {
@@ -1374,7 +1374,7 @@
     "correctOption": "D",
     "userTime": "01:04",
     "avgTime": "00:33",
-    "questionText": "Select the most appropriate option that can substitute the underlined segment in the given sentence. If there is no need to substitute it, select ‘No substitution required’.\nEconomic and Political Weekly is not more popular than some other business magazines in India.",
+    "questionText": "Select the most appropriate option that can substitute the underlined segment in the given sentence. If there is no need to substitute it, select ‘No substitution required’. Economic and Political Weekly is not more popular than some other business magazines in India.",
     "options": {
       "A": "so popular than",
       "B": "the most popular than",
@@ -1383,12 +1383,12 @@
     },
     "solution": "Solution\n\nThe correct answer is 'No substitution required'.\n\nKey Points\nThe sentence compares the popularity of \"Economic and Political Weekly\" with some other business magazines in India. It uses a negative comparative structure (\"not more popular than\") to convey that Economic and Political Weekly isn't the most popular among these magazines.\nThe structure \"not more popular than\" implies that there might be other magazines that are equally or more popular than Economic and Political Weekly.\nLet's break it down:\n\"No substitution required\": This option suggests that the original sentence is correct in its comparison. It effectively communicates that Economic and Political Weekly is not the most popular among the business magazines in India.\n\"the most popular than\": This option is incorrect because it uses a superlative (\"the most popular\") in a comparative context, which doesn’t align with the sentence's intent. The sentence is comparing without stating Economic and Political Weekly as the most popular.\n\"as more popular than\": This choice doesn't provide a correct comparative structure. It combines \"as\" and \"more,\" which creates a redundant comparison. The sentence needs to convey that Economic and Political Weekly is not as popular as some other magazines, not that it is more popular.\n\"so popular than\": This option is grammatically incorrect and doesn’t convey the intended comparison properly. It uses \"so\" in a way that doesn't fit the comparative structure required in the sentence.\nTherefore, after considering the options, the original sentence (\"No substitution required\") effectively conveys the intended meaning: that Economic and Political Weekly is not the most popular among the business magazines in India.",
     "topic": "Sentence Improvement",
-    "subtopic": "Sentence Improvement",
-    "conceptTested": "Appropriate comparative and superlative structures without redundancy.",
+    "subtopic": "Comparative Degrees",
+    "conceptTested": "Comparative structures utilizing negation with 'more ... than' to express limits on comparative superiority.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Sentence Improvement",
-      "conceptTested": "Appropriate comparative and superlative structures without redundancy."
+      "subtopic": "Comparative Degrees",
+      "conceptTested": "Comparative structures utilizing negation with 'more ... than' to express limits on comparative superiority."
     }
   },
   {
@@ -1412,12 +1412,12 @@
     },
     "solution": "Solution\n\nThe correct answer is: Option (2) i.e. Governments became increasingly controlled by the interests of stockholders.\n\nKey Points\nThe passage explains that as governments became more indebted, they depended on the goodwill of stockholders, giving these financial interests the power to influence national policy and military decisions.\nHume observed that even monarchies could lose true sovereign control as public debt increased, with stockholders able to direct government action for their own benefit.\nThe other options are contradicted by Hume’s analysis in the passage.\n\nTherefore, the correct answer is- Governments became increasingly controlled by the interests of stockholders.\n\nAdditional Information\nOption 1: The passage states the opposite.\nOption 3: The monarchy’s authority was weakened, not strengthened.\nOption 4: Public debt had significant influence on military decisions.",
     "topic": "Reading Comprehension",
-    "subtopic": "Reading Comprehension",
-    "conceptTested": "Inferential comprehension from a passage regarding the socio-political impact of public debt.",
+    "subtopic": "Inference-Based Comprehension",
+    "conceptTested": "",
     "tags": {
       "topic": "Reading Comprehension",
-      "subtopic": "Reading Comprehension",
-      "conceptTested": "Inferential comprehension from a passage regarding the socio-political impact of public debt."
+      "subtopic": "Inference-Based Comprehension",
+      "conceptTested": ""
     }
   },
   {
@@ -1441,12 +1441,12 @@
     },
     "solution": "Solution\n\nThe correct answer is 'Ramesh said that he would be ready in an hour.'\n\nKey Points\nThe correct option is Indirect speech.\nTo change future continuous tense into indirect speech we have to follow these steps:\n'will be' is changed into 'would be'\nThe first person changed according to the subject.\nEx- Ayesha Said, “They will be watering plants.”\nAyesha said that they would be watering plants.\n​All the other options have grammatical errors.\n​\n\nAs per the points mentioned above the correct answer is 'Option 3'",
     "topic": "Direct & Indirect Speech",
-    "subtopic": "Direct & Indirect Speech (Narration)",
-    "conceptTested": "Backshift of tenses in indirect speech from direct speech (will \\u2192 would).",
+    "subtopic": "Sequence of Tenses in Indirect Narration",
+    "conceptTested": "When the reporting verb is in the past tense, 'will' in the direct speech changes to 'would' in the indirect speech.",
     "tags": {
       "topic": "Direct & Indirect Speech",
-      "subtopic": "Direct & Indirect Speech (Narration)",
-      "conceptTested": "Backshift of tenses in indirect speech from direct speech (will \\u2192 would)."
+      "subtopic": "Sequence of Tenses in Indirect Narration",
+      "conceptTested": "When the reporting verb is in the past tense, 'will' in the direct speech changes to 'would' in the indirect speech."
     }
   },
   {
@@ -1461,7 +1461,7 @@
     "correctOption": "C",
     "userTime": "00:08",
     "avgTime": "00:13",
-    "questionText": "Select the alternative which best expresses the meaning of the idiom/phrase.\nA man of letters",
+    "questionText": "Select the alternative which best express the meaning of the idioms/phrase. A man of letters",
     "options": {
       "A": "An educated man",
       "B": "An intelligent person",
@@ -1469,13 +1469,13 @@
       "D": "A postman"
     },
     "solution": "Solution\n\nThe correct answer is: Option 3 i.e. 'A literary person'.\n\nKey Points\nThe idiom \"A man of letters\" refers to a person who is deeply involved in literary or scholarly activities. (साहित्यिक व्यक्ति)\nExample: Rabindranath Tagore was truly a man of letters, contributing immensely to Indian literature.\n\"A literary person\" means someone who is significantly engaged with writing, studying, or appreciating literature. (साहित्यिक व्यक्ति)\nExample: Mark Twain is regarded as one of America's most important literary persons.\nHence, we can infer that 'A man of letters' is synonymous with 'A literary person'.\n\nTherefore, the correct answer is: Option 3 i.e. 'A literary person'.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nAn educated man (शिक्षित व्यक्ति): A person who has received a good education.\nExample: An educated man values knowledge and lifelong learning.\nAn intelligent person (बुद्धिमान व्यक्ति): A person with high mental capacity and problem-solving skills.\nExample: Albert Einstein is often cited as an intelligent person due to his contributions to physics.\nA postman (डाकिया): A person who delivers mail.\nExample: The postman comes to our neighborhood every morning to deliver letters.",
-    "topic": "Idioms & Phrases",
+    "topic": "English Comprehension",
     "subtopic": "Idioms & Phrases",
-    "conceptTested": "Meaning of common idiomatic expressions used in the English language.",
+    "conceptTested": "Meaning and application of common English idioms.",
     "tags": {
-      "topic": "Idioms & Phrases",
+      "topic": "English Comprehension",
       "subtopic": "Idioms & Phrases",
-      "conceptTested": "Meaning of common idiomatic expressions used in the English language."
+      "conceptTested": "Meaning and application of common English idioms."
     }
   },
   {
@@ -1498,13 +1498,13 @@
       "D": "Who won the match yesterday?"
     },
     "solution": "Solution\n\nThe correct answer is 'Who won the match yesterday?'\n\nKey Points\n'Wh questions' are the questions that start with WH words. They include:\n​What, where, why, when, who, whom, which, whose, how.\n​Structure of 'WH questions' with an/a auxiliary/modal verb: Wh word + auxiliary/modal verb + subject + main verb (V1) + ....?\n​Example: What are you doing at the shop?\n​​Structure of 'WH questions' without an/a auxiliary/modal verb: Wh word + main verb + ....?​​\n​Example: Who killed the dog?\nLet's discuss the given options:\nOption 1) 'When you went to Delhi?' is INCORRECT.\nThe sentence is in simple past tense and the structure for the same is given below:\nWh word + did + subject + V1 + object?\nCorrect sentence: When did you go to Delhi?\nOption 2) 'What did you broke in the kitchen?' is INCORRECT.\nThe sentence is in simple past tense and the structure for the same is given below:\nWh word + did + subject + V1 + object?\n'Broke (V2)' should be replaced with 'break (V1)'\nCorrect sentence: What did you break in the kitchen?\n​Option 3) 'Why does the students not obey their teachers?' is INCORRECT.​\n'Does' should be replaced with 'do' as subject 'students' is a plural noun.\nCorrect sentence: Why do the students not obey their teachers?\nOption 4) 'Who won the match yesterday?' is CORRECT.\nThe sentence is in simple present tense and is following the Structure ​​of 'WH questions' without an/a auxiliary/modal verb.\n\nTherefore, the correct answer is option 4).",
-    "topic": "Spotting Errors",
+    "topic": "English Comprehension",
     "subtopic": "Spotting Errors",
-    "conceptTested": "Grammatical rules of Wh-questions, subject-verb agreement, and tense structures.",
+    "conceptTested": "Grammatical structure of Wh-questions with and without auxiliary verbs in the simple past and present tenses.",
     "tags": {
-      "topic": "Spotting Errors",
+      "topic": "English Comprehension",
       "subtopic": "Spotting Errors",
-      "conceptTested": "Grammatical rules of Wh-questions, subject-verb agreement, and tense structures."
+      "conceptTested": "Grammatical structure of Wh-questions with and without auxiliary verbs in the simple past and present tenses."
     }
   },
   {
@@ -1527,13 +1527,13 @@
       "D": "catestrophy"
     },
     "solution": "Solution\n\nThe correct answer is \"Catastrophe\".\n\nKey Points\nThe correctly spelt word is \"Catastrophe\".\n\"Catastrophe\" means a sudden event that causes great damage, destruction, or suffering. (महाविपत्ति / विनाशकारी घटना)\nExample: The earthquake was a major catastrophe that caused widespread destruction.\nThe correct spelling is Catastrophe, not Catastrophy, Catastrophi, or Catestrophy.\n\nTherefore, the correct answer is \"Option 3\".\n\nAdditional Information\nCatastrophy: Incorrect spelling. The correct spelling is Catastrophe.\nCatastrophi: Incorrect spelling.\nCatestrophy: Incorrect spelling.",
-    "topic": "Spelling Errors",
+    "topic": "English Comprehension",
     "subtopic": "Spelling Errors",
-    "conceptTested": "Identification of standard English word spellings.",
+    "conceptTested": "Identification of correctly spelt words from commonly misspelled English vocabulary.",
     "tags": {
-      "topic": "Spelling Errors",
+      "topic": "English Comprehension",
       "subtopic": "Spelling Errors",
-      "conceptTested": "Identification of standard English word spellings."
+      "conceptTested": "Identification of correctly spelt words from commonly misspelled English vocabulary."
     }
   }
 ]

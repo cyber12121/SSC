@@ -2643,6 +2643,151 @@
           "conceptTested": "Identification of standard English word spellings.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_8e38ee79ef",
+        "q_num": 92,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "01:01",
+        "avgTime": "01:08",
+        "question": "Directions: This question consists of six sentences of a passage. The first and sixth sentences are given as S1 and S6. The middle four sentences in each have been jumbled up and labelled as P, Q, R and S. You are required to find the proper sequence of the four sentences and mark your response accordingly.\nS1: Elon Musk, the billionaire owner of Twitter, ran a poll that just concluded today. Like all musk polls, the question was very simple. “Should I step down as head of Twitter? I will abide by the results of this poll.”\nP: And if we know something about him, he’s a true believer in free speech, the rule of law, and keeping the promises that he has made.\nQ: Twitter subscribers had about 24 hours to respond. Over 17.5 million responded and the vote was overwhelmingly against him running Twitter, 57 per cent to 43 per cent.\nR: Nothing can be more democratic than this, although corporations are anything but democratic.\nS: The idea that a CEO of a company would ask his subscribers whether or not he should be at the helm is in and of itself very intriguing.\nS6: Musk has turned to Twitter polls for other seismic decisions about the company.",
+        "options": {
+          "a": "QSRP",
+          "b": "QPRS",
+          "c": "SQRP",
+          "d": "SRQP"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nThe correct answer is \"QSRP\"\n\nKey Points\nS1 introduces the main topic of the passage, which is a poll conducted by Elon Musk on Twitter asking if he should step down as head of the platform.\nQ provides background information on the poll, stating that it was open for 24 hours and received a total of 17.5 million responses, with a majority of 57% voting against Musk remaining as head of Twitter.\nS describes the idea of a CEO asking their subscribers whether they should remain in their position as being intriguing.\nR adds further context to the situation by stating that nothing can be more democratic than this, although corporations are not typically democratic.\nP confirms that Musk has a reputation for being a true believer in free speech, the rule of law, and keeping his promises.\nS6 highlights the fact that Musk has previously turned to Twitter polls for other important decisions regarding his company.\n\nThus, QSRP is the correct answer.\n\nCorrect paragraph: S1 Elon Musk, the billionaire owner of Twitter, ran a poll that just concluded today. Like all musk polls, the question was very simple. “Should I step down as head of Twitter? I will abide by the results of this poll.” Q Twitter subscribers had about 24 hours to respond. Over 17.5 million responded and the vote was overwhelmingly against him running Twitter, 57 per cent to 43 per cent. S The idea that a CEO of a company would ask his subscribers whether or not he should be at the helm is in and of itself very intriguing. R Nothing can be more democratic than this, although corporations are anything but democratic. P And if we know something about him, he’s a true believer in free speech, the rule of law, and keeping the promises that he has made. S6 Musk has turned to Twitter polls for other seismic decisions about the company.",
+        "topic": "Para Jumbles",
+        "subtopic": "Sentence Rearrangement (PQRS)",
+        "conceptTested": "Logical flow and coherence between sentence connectors and subject references",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Sentence Rearrangement (PQRS)",
+          "conceptTested": "Logical flow and coherence between sentence connectors and subject references",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_9c0a2224c4",
+        "q_num": 93,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:14",
+        "question": "Direction: Choose the correct word to fill up the blanks from the alternatives. Mohamed Ghazni ______ a lot of wealth from India.",
+        "options": {
+          "a": "plundered",
+          "b": "destroyed",
+          "c": "stole",
+          "d": "pilfered"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nHere, the correct answer is 'plundered.'\n\nKey Points\nLet us explore the meaning of the given options:\nPlundered: steal goods from (a place or person), typically using force and in a time of war or civil disorder. (लूटना, विशेषतः युद्घ या दंगों में)\nDestroyed: to damage something so badly that it can no longer be used or no longer exists. (किसी वस्‍तु को इस तरह हानि पहुँचाना कि वह इस्‍तेमाल न हो सके या समाप्‍त हो जाए, नष्‍ट करना)\nStole: to take something from a person, shop, etc. without permission and without intending to return it or pay for it. (चोरी करना (किसी व्‍यक्ति, दुकान आदि से); बिना पूछे और लौटाने या भुगतान करने के इरादे के बिना कोई वस्‍तु ले लेना)\nPilfered: to steal something in small quantity or of little value, especially from the place where you work. (कम मूल्य की कोई वस्तु चुराना, विशेषतः कार्यस्‍थल से; थोड़ा थोड़ा करके चुराना)\nThe given sentence states that Mohamed Ghazni stole a great deal of money from India using force.\nHence, the correct answer is Option 1.\nCorrect sentence is: Mohamed Ghazni plundered a lot of wealth from India.",
+        "topic": "Fill in the Blanks",
+        "subtopic": "Vocabulary Based Fillers",
+        "conceptTested": "Appropriate contextual word usage and lexical compatibility",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "subtopic": "Vocabulary Based Fillers",
+          "conceptTested": "Appropriate contextual word usage and lexical compatibility",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_91d6869e53",
+        "q_num": 94,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:28",
+        "avgTime": "00:18",
+        "question": "Directions: Each item in this section has a sentence with three underlined parts labelled (a), (b) and (c). Read each sentence to find out whether there is any error in any underlined part. Indicate your response in the Answer Sheet against the corresponding letter, i.e., (a) or (b) or (c). If you find no error, your response should be indicated as (d). An provision of quality education(A)/ and healthcare services(B)/ must be considered as a basic need for all individuals.(C)/ No error(D)",
+        "options": {
+          "a": "B",
+          "b": "C",
+          "c": "D",
+          "d": "A"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nThe correct answer is \"A\"\n\nKey Points\n​The error lies in part 'A' of the sentence because 'An' is used which indicates that the noun that follows starts with a vowel sound but in this case \"provision\" starts with a consonant sound.\nHere, we are talking about a provision of something, thus it should be 'a' instead of 'an'.\nHence, 'a' must be used instead of 'an' to make the sentence correct.\n\nThus, option 4 is the correct answer.\n\nCorrect Sentence: A provision of quality education and healthcare services must be considered as a basic need for all individuals.",
+        "topic": "Spotting Errors",
+        "subtopic": "Articles - A vs An",
+        "conceptTested": "The indefinite article 'a' is used before words starting with a consonant sound, while 'an' is used before vowel sounds.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Articles - A vs An",
+          "conceptTested": "The indefinite article 'a' is used before words starting with a consonant sound, while 'an' is used before vowel sounds.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8b319ac4b8",
+        "q_num": 95,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "01:04",
+        "avgTime": "00:33",
+        "question": "Select the most appropriate option that can substitute the underlined segment in the given sentence. If there is no need to substitute it, select ‘No substitution required’. Economic and Political Weekly is not more popular than some other business magazines in India.",
+        "options": {
+          "a": "so popular than",
+          "b": "the most popular than",
+          "c": "as more popular than",
+          "d": "No substitution required"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nThe correct answer is 'No substitution required'.\n\nKey Points\nThe sentence compares the popularity of \"Economic and Political Weekly\" with some other business magazines in India. It uses a negative comparative structure (\"not more popular than\") to convey that Economic and Political Weekly isn't the most popular among these magazines.\nThe structure \"not more popular than\" implies that there might be other magazines that are equally or more popular than Economic and Political Weekly.\nLet's break it down:\n\"No substitution required\": This option suggests that the original sentence is correct in its comparison. It effectively communicates that Economic and Political Weekly is not the most popular among the business magazines in India.\n\"the most popular than\": This option is incorrect because it uses a superlative (\"the most popular\") in a comparative context, which doesn’t align with the sentence's intent. The sentence is comparing without stating Economic and Political Weekly as the most popular.\n\"as more popular than\": This choice doesn't provide a correct comparative structure. It combines \"as\" and \"more,\" which creates a redundant comparison. The sentence needs to convey that Economic and Political Weekly is not as popular as some other magazines, not that it is more popular.\n\"so popular than\": This option is grammatically incorrect and doesn’t convey the intended comparison properly. It uses \"so\" in a way that doesn't fit the comparative structure required in the sentence.\nTherefore, after considering the options, the original sentence (\"No substitution required\") effectively conveys the intended meaning: that Economic and Political Weekly is not the most popular among the business magazines in India.",
+        "topic": "Sentence Improvement",
+        "subtopic": "Comparative Degrees",
+        "conceptTested": "Comparative structures utilizing negation with 'more ... than' to express limits on comparative superiority.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Comparative Degrees",
+          "conceptTested": "Comparative structures utilizing negation with 'more ... than' to express limits on comparative superiority.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_d0c44ef45e",
+        "q_num": 96,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:13",
+        "question": "Select the alternative which best express the meaning of the idioms/phrase. A man of letters",
+        "options": {
+          "a": "An educated man",
+          "b": "An intelligent person",
+          "c": "A literary person",
+          "d": "A postman"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe correct answer is: Option 3 i.e. 'A literary person'.\n\nKey Points\nThe idiom \"A man of letters\" refers to a person who is deeply involved in literary or scholarly activities. (साहित्यिक व्यक्ति)\nExample: Rabindranath Tagore was truly a man of letters, contributing immensely to Indian literature.\n\"A literary person\" means someone who is significantly engaged with writing, studying, or appreciating literature. (साहित्यिक व्यक्ति)\nExample: Mark Twain is regarded as one of America's most important literary persons.\nHence, we can infer that 'A man of letters' is synonymous with 'A literary person'.\n\nTherefore, the correct answer is: Option 3 i.e. 'A literary person'.\n\nAdditional Information\nHere are the other options explained along with their Hindi meanings and example sentences:\n\nAn educated man (शिक्षित व्यक्ति): A person who has received a good education.\nExample: An educated man values knowledge and lifelong learning.\nAn intelligent person (बुद्धिमान व्यक्ति): A person with high mental capacity and problem-solving skills.\nExample: Albert Einstein is often cited as an intelligent person due to his contributions to physics.\nA postman (डाकिया): A person who delivers mail.\nExample: The postman comes to our neighborhood every morning to deliver letters.",
+        "topic": "Idioms & Phrases",
+        "subtopic": "Idioms & Phrases",
+        "conceptTested": "Meaning and application of common English idioms.",
+        "tags": {
+          "topic": "Idioms & Phrases",
+          "subtopic": "Idioms & Phrases",
+          "conceptTested": "Meaning and application of common English idioms.",
+          "difficulty": "medium"
+        }
       }
     ]
   }

@@ -130,11 +130,28 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
     try {
       if (typeof window !== 'undefined') {
-        const saved = window.localStorage?.getItem(`cgl_rca_${result.id}`) || 
-                      window.localStorage?.getItem(`cgl_rca_${result.chapter_title}`);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          Object.assign(map, parsed);
+        // Only load result.id scoped storage if it matches this specific result attempt
+        if (result.id) {
+          const saved = window.localStorage?.getItem(`cgl_rca_${result.id}`);
+          if (saved) {
+            const parsed = JSON.parse(saved);
+            Object.assign(map, parsed);
+          }
+        }
+        // Match from global store BY QUESTION ID OR QUESTION TEXT, NOT by generic chapter_title numeric index!
+        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        if (globalRaw) {
+          const globalStore = JSON.parse(globalRaw);
+          (result.questionDetails || []).forEach((qd, idx) => {
+            const q = qd.question;
+            const qId = q?.id;
+            const qText = q?.question ? q.question.trim().toLowerCase() : '';
+            if (qId && globalStore[qId]) {
+              map[idx] = globalStore[qId];
+            } else if (qText && globalStore[qText]) {
+              map[idx] = globalStore[qText];
+            }
+          });
         }
       }
     } catch {}
@@ -188,7 +205,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     try {
       if (typeof window !== 'undefined') {
         if (result.id) window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updated));
-        if (result.chapter_title) window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updated));
 
         // Update global store for Error Heatmap & Sankalp AI
         const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
@@ -295,9 +311,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         if (result.id) {
           window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(currentRcaMap));
         }
-        if (result.chapter_title) {
-          window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(currentRcaMap));
-        }
 
         // Update global store for Error Heatmap & Sankalp AI
         const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
@@ -318,36 +331,53 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         });
         window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
 
-        // Update cached mock questions in localStorage
-        let questionsToSave: any[] = [];
+        // Update cached mock questions in localStorage with full attempt metadata
+        let cachedExisting: any[] = [];
         if (result.id) {
           const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
           if (cachedRaw) {
             try {
-              questionsToSave = JSON.parse(cachedRaw);
+              cachedExisting = JSON.parse(cachedRaw);
             } catch {}
           }
         }
 
-        if (!Array.isArray(questionsToSave) || questionsToSave.length === 0) {
-          questionsToSave = items.map((it, idx) => {
-            const q = it.question ? { ...it.question } : ({} as any);
-            const rca = currentRcaMap[idx] || it.rca || q.rca;
-            if (rca) q.rca = rca;
-            return q;
-          });
-        } else {
-          questionsToSave = questionsToSave.map((q, idx) => {
-            const rca = currentRcaMap[idx] || items[idx]?.rca || q.rca;
-            if (rca) q.rca = rca;
-            return q;
-          });
-        }
+        const questionsToSave = items.map((it, idx) => {
+          const existingQ = (Array.isArray(cachedExisting) && cachedExisting[idx]) || {};
+          const q = it.question ? { ...it.question } : { ...existingQ };
+          const rca = currentRcaMap[idx] || it.rca || q.rca;
+          
+          // Use ONLY the current attempt's answer — do NOT pull from existingQ.userAnswer etc.,
+          // as that is stale data from a previous session and would overwrite an unattempted
+          // question with a wrong cached answer, breaking the second-review palette.
+          const selectedAnswer = it.selectedAnswer || (it as any).userAnswer || '';
+          const derivedStatus = (it as any).status || (it.isCorrect ? 'correct' : (selectedAnswer ? 'wrong' : 'unattempted'));
+          const isSlow = (it as any).isSlow ?? (derivedStatus === 'slow');
+          const isCorrect = it.isCorrect ?? (derivedStatus === 'correct' || derivedStatus === 'slow');
+          const timeSpent = typeof it.timeSpent === 'number' ? it.timeSpent : (typeof existingQ.timeSpent === 'number' ? existingQ.timeSpent : (existingQ.userTime || 0));
+
+          return {
+            ...existingQ,
+            ...q,
+            userAnswer: selectedAnswer,
+            selectedAnswer: selectedAnswer,
+            chosenOption: selectedAnswer,
+            status: isSlow ? 'slow' : (isCorrect ? 'correct' : (selectedAnswer ? 'wrong' : 'unattempted')),
+            errorType: (it as any).errorType || (isSlow ? 'slow' : (isCorrect ? 'correct' : (selectedAnswer ? 'wrong' : 'unattempted'))),
+            isCorrect,
+            isSlow,
+            timeSpent,
+            userTime: timeSpent,
+            avgTime: q.avgTime ?? (it as any).avgTime ?? existingQ.avgTime,
+            avgTimeSeconds: q.avgTimeSeconds ?? (it as any).avgTimeSeconds ?? existingQ.avgTimeSeconds,
+            rca: rca || undefined
+          };
+        });
 
         if (result.id) {
           window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
           
-          // 3. Post to backend /api/mock-questions/:id so disk storage also persists the RCA reason and tag
+          // 3. Post to backend /api/mock-questions/:id so disk storage also persists full attempts & RCA tags
           try {
             await fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
               method: 'POST',
@@ -648,48 +678,61 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (reattemptMode && reattemptAnswers[idx]) {
       return reattemptAnswers[idx] === item.question?.answer ? 'correct' : 'wrong';
     }
+    const q = (item.question || {}) as any;
+
+    // Prioritise explicit status tags (from saved mock_questions JSON or handleFinishReview)
     const qStatus = String((item as any).status || (item as any).errorType || '').toLowerCase();
-    
-    // 1. Unattempted / Skipped
+
+    // The user's chosen answer for THIS attempt — ONLY from QuestionProgress fields.
+    // Do NOT fall back to q.userAnswer / q.chosenOption: those are stale fields from the
+    // mock question JSON of a previous session and would incorrectly mark unattempted qs.
+    const rawUser = String(
+      item.selectedAnswer ||
+      (item as any).userAnswer ||
+      ''
+    ).trim().toLowerCase();
+
+    // 1. Unattempted / Skipped (evaluated first so we never misclassify empty answers)
     if (
-      qStatus.includes('unattempt') || 
-      qStatus.includes('skip') || 
-      qStatus.includes('left') || 
-      qStatus === 'not attempted'
+      qStatus.includes('unattempt') ||
+      qStatus.includes('skip') ||
+      qStatus.includes('left') ||
+      qStatus === 'not attempted' ||
+      rawUser === 'unattempted' ||
+      rawUser === 'skipped' ||
+      rawUser === 'not attempted' ||
+      (!rawUser && !qStatus)   // no answer + no explicit status → unattempted
     ) {
+      // Edge-case: if isCorrect is explicitly true (shouldn't happen but be safe), treat as correct
+      if (item.isCorrect === true) return 'correct';
       return 'unattempted';
     }
-    
+
     // 2. Slow / Speed Issue (Correct, but took too long)
     if (
-      qStatus.includes('slow') || 
-      qStatus.includes('speed') || 
-      (item as any).isSlow === true || 
-      (item as any).status === 'slow'
+      qStatus.includes('slow') ||
+      qStatus.includes('speed') ||
+      (item as any).isSlow === true ||
+      q.isSlow === true
     ) {
       return 'slow';
     }
-    
-    // 3. Correct (and not incorrect)
-    if (
-      item.isCorrect === true || 
-      ((qStatus.includes('correct') && !qStatus.includes('incorrect'))) || 
-      qStatus === 'right'
-    ) {
-      return 'correct';
+
+    // 3. Explicit status tags for correct/wrong
+    if (qStatus.includes('correct') && !qStatus.includes('incorrect')) return 'correct';
+    if (qStatus === 'right') return 'correct';
+    if (qStatus.includes('wrong') || qStatus.includes('incorrect')) return 'wrong';
+
+    // 4. Use isCorrect field (most reliable for QuizContainer-generated QuizResult)
+    if (item.isCorrect === true) return 'correct';
+    if (item.isCorrect === false) {
+      // Only classify as wrong if a user answer was actually recorded
+      if (rawUser && rawUser !== 'unattempted' && rawUser !== 'skipped') return 'wrong';
+      return 'unattempted';
     }
-    
-    // 4. Incorrect / Wrong
-    if (
-      qStatus.includes('wrong') || 
-      qStatus.includes('incorrect') || 
-      item.isCorrect === false
-    ) {
-      return 'wrong';
-    }
-    
-    if (!item.selectedAnswer) return 'unattempted';
-    return item.isCorrect ? 'correct' : 'wrong';
+
+    // 5. Final fallback
+    return 'unattempted';
   };
 
   // Question stats calculation
@@ -1121,9 +1164,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 <div className="space-y-3.5 my-5">
                   {(Object.entries(question.options) as [('a' | 'b' | 'c' | 'd'), string][]).map(([key, optText]) => {
                     const isCorrectAnswer = question.answer === key;
-                    const userSelected = reattemptMode 
-                      ? reattemptAnswers[currentIdx] === key 
-                      : current.selectedAnswer === key;
+                    // Only use the direct QuestionProgress answer fields — do NOT use
+                    // current.question.userAnswer, which is stale mock-JSON data from a prior session.
+                    const userSelected = reattemptMode
+                      ? reattemptAnswers[currentIdx] === key
+                      : (currentStatus !== 'unattempted' && (current.selectedAnswer === key || (current as any).userAnswer === key));
                     const isReattemptSelected = reattemptMode && reattemptAnswers[currentIdx] !== undefined;
 
                     // When reattempt is OFF: normal analysis view matching the screenshot!

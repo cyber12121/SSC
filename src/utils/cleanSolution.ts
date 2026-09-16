@@ -8,8 +8,16 @@
 export function cleanSolutionText(sol: string = ''): string {
   if (!sol) return '';
 
-  // 1. Decode literal unicode escapes like \u00f7 (÷) and \u00d7 (×)
-  let s = sol.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => {
+  // 1. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
+  const mathPlaceholders: string[] = [];
+  let s = String(sol).replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+    const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
+    mathPlaceholders.push(m);
+    return placeholder;
+  });
+
+  // 2. Decode literal unicode escapes like \u00f7 (÷) and \u00d7 (×)
+  s = s.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => {
     try {
       return String.fromCharCode(parseInt(hex, 16));
     } catch {
@@ -17,10 +25,10 @@ export function cleanSolutionText(sol: string = ''): string {
     }
   });
 
-  // 2. Replace escaped literal '\n' and carriage returns
+  // 3. Replace escaped literal '\n' and carriage returns
   s = s.replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\u00a0/g, ' ');
 
-  // 3. Remove language header tags if present
+  // 4. Remove language header tags if present
   const parts = s.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
   s = parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
 
@@ -84,5 +92,10 @@ export function cleanSolutionText(sol: string = ''): string {
     resultLines.push(line);
   }
 
-  return resultLines.join('\n').trim();
+  let finalResult = resultLines.join('\n').trim();
+  mathPlaceholders.forEach((math, idx) => {
+    finalResult = finalResult.replace(`___MATH_BLOCK_${idx}___`, math);
+  });
+
+  return finalResult;
 }

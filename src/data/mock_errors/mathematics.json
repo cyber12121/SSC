@@ -4246,6 +4246,35 @@
           "conceptTested": "Weighted Average formula: Average = (Sum of observations) / (Total count) or weighted sum of group averages.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_b1990be225",
+        "q_num": 75,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:33",
+        "question": "Three solid iron cubes of edges 8 cm, 10 cm and 12 cm are melted together to make a new cube. It is observed that 496 cm³ of the melted material is lost due to improper handling. The area (in cm²) of the whole surface of the newly formed cube is:",
+        "options": {
+          "a": "1331",
+          "b": "1176",
+          "c": "2197",
+          "d": "3375"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nTotal volume of given cubes = 83 + 103 + 123 = 512 + 1000 + 1728 = 3240 cm3\nVolume of the new cube = 3240 − 496 = 2744 cm3\nSide of the new cube (a) = 3√2744 = 14 cm\nTotal Surface Area = 6a2 = 6 × 142 = 6 × 196 = 1176 cm2\n∴ The correct answer is 1176 cm2.\n\nAlternate Method\nGiven:\nEdges of the three solid iron cubes = 8 cm, 10 cm, and 12 cm\nMelted material lost due to improper handling = 496 cm3\n\nFormula Used:\nVolume of a cube = a3\nTotal surface area of a cube = 6a2\n\nCalculations:\n⇒ Total volume of the three smaller cubes = (83 + 103 + 123) cm3\n⇒ Total volume = 512 + 1000 + 1728 = 3240 cm3\n⇒ Volume of the newly formed cube = Total Initial Volume − Material Lost\n⇒ Volume of the new cube = 3240 − 496 = 2744 cm3\n⇒ Let the edge length of the new cube be 'a' cm.\n⇒ a3 = 2744\n⇒ a = 3√2744 = 14 cm\n⇒ Area of the whole surface of the new cube = 6a2\n⇒ Surface Area = 6 × (14)2\n⇒ Surface Area = 6 × 196 = 1176 cm2\n∴ The correct answer is 1176 cm2.\n\nAdditional Information\nTotal Surface Area of a Cube\n\nThe total surface area of a cube is the combined area of its 6 identical square faces. Formula: TSA = 6a2.\n\nLateral Surface Area of a Cube\n\nThe lateral surface area includes only the 4 vertical faces, excluding the top and bottom faces. Formula: LSA = 4a2.\n\nVolume of a Cube\n\nThe volume of a cube represents the 3D space occupied by it. Formula: Volume = a3.\n\nDiagonal of a Cube\n\nThe length of the longest line segment connecting two opposite interior corners of a cube. Formula: Diagonal = a√3.",
+        "topic": "Mensuration 3D",
+        "subtopic": "Cube - Melting & Recasting",
+        "conceptTested": "Conservation of volume during melting and recasting of solid shapes: Total Volume = Sum of individual volumes - Volume lost.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cube - Melting & Recasting",
+          "conceptTested": "Conservation of volume during melting and recasting of solid shapes: Total Volume = Sum of individual volumes - Volume lost.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -5222,7 +5251,7 @@
         "correctOption": "A",
         "userTime": "01:16",
         "avgTime": "00:28",
-        "question": "The value of \\sin(\\pi+\\theta)\\cos(\\frac{\\pi}{2}+\\theta)\\sin(2\\pi-\\theta)\\cos(2\\pi+\\theta) \\times \\frac{\\tan(\\frac{3\\pi}{2}-\\theta)}{\\cot(2\\pi-\\theta)\\csc(-\\theta)\\sin(\\frac{3\\pi}{2}+\\theta)} is:",
+        "question": "The value of $\\rm \\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{cosec (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}$ is:",
         "options": {
           "a": "1",
           "b": "-1",
@@ -5325,6 +5354,35 @@
           "topic": "Ratio & Proportion",
           "subtopic": "Age Problems & Proportional Parts",
           "conceptTested": "When moving backward in time by 'n' years, the sum of ages of 'k' individuals decreases by 'n \\times k' years, allowing back-calculation to the present sum.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_07ad3f5258",
+        "q_num": 38,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:16",
+        "avgTime": "00:28",
+        "question": "The value of \\(\\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2%\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{\\csc (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}\\) is:",
+        "options": {
+          "a": "1",
+          "b": "-1",
+          "c": "-2",
+          "d": "2"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nPut θ = 45° to evaluate the expression quickly without using complex trigonometric identities.\nGiven = [sin(225°) × cos(135°)] / [sin(315°) × cos(405°)] × [tan(225°) × cot(315°)] / [cosec(−45°) × sin(315°)]\n⇒ [(−1/√2) × (−1/√2)] / [(−1/√2) × (1/√2)] × [1 × (−1)] / [(−√2) × (−1/√2)]\n⇒ [(1/2) / (−1/2)] × [(−1) / 1]\n⇒ (−1) × (−1) = 1\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\n[sin(π + θ) × cos(π/2 + θ)] / [sin(2π − θ) × cos(2π + θ)] × [tan(3π/2 − θ) × cot(2π − θ)] / [cosec(−θ) × sin(3π/2 + θ)]\n\nFormula Used:\nTrigonometric conversions for allied angles:\n\n⇒ sin(π + θ) = −sinθ | cos(π/2 + θ) = −sinθ\n⇒ sin(2π − θ) = −sinθ | cos(2π + θ) = cosθ\n⇒ tan(3π/2 − θ) = cotθ | cot(2π − θ) = −cotθ\n⇒ cosec(−θ) = −cosecθ | sin(3π/2 + θ) = −cosθ\n\nCalculation:\n⇒ Substituting the conversions into the given expression:\n⇒ [(−sinθ) × (−sinθ)] / [(−sinθ) × (cosθ)] × [(cotθ) × (−cotθ)] / [(−cosecθ) × (−cosθ)]\n⇒ [sin2θ] / [−sinθ × cosθ] × [−cot2θ] / [cosecθ × cosθ]\n⇒ [−sinθ / cosθ] × [−cot2θ] / [(1 / sinθ) × cosθ]\n⇒ [−tanθ] × [−cot2θ / cotθ]\n⇒ (−tanθ) × (−cotθ)\n⇒ tanθ × cotθ = 1\n∴ The correct answer is 1.\n\nAdditional Information\nASTC Rule (Quadrants)\n\n1st Quadrant: All positive | 2nd Quadrant: sin & cosec positive | 3rd Quadrant: tan & cot positive | 4th Quadrant: cos & sec positive.\n\nComplementary & Supplementary Angles\n\nFor angles (90° ± θ) and (270° ± θ), trigonometric ratios change (sin ↔ cos, tan ↔ cot, sec ↔ cosec). For angles (180° ± θ) and (360° ± θ), the trigonometric ratios remain unchanged.\n\nNegative Angle Identities\n\nsin(−θ) = −sinθ | cos(−θ) = cosθ | tan(−θ) = −tanθ | cosec(−θ) = −cosecθ.",
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Identities & Allied Angles",
+        "conceptTested": "ASTC Quadrant Rule and Allied Angle transformations for trigonometric ratios",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Identities & Allied Angles",
+          "conceptTested": "ASTC Quadrant Rule and Allied Angle transformations for trigonometric ratios",
           "difficulty": "medium"
         }
       }

@@ -1280,6 +1280,64 @@
           "conceptTested": "Deducing linear ordering and relative positions based on comparative statements.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_016a182902",
+        "q_num": 45,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:41",
+        "avgTime": "00:31",
+        "question": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number. 25 : 37 :: 64 : ?",
+        "options": {
+          "a": "92",
+          "b": "102",
+          "c": "82",
+          "d": "37"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
+        "topic": "Analogy",
+        "subtopic": "Number Analogy",
+        "conceptTested": "Number analogy using algebraic patterns involving square roots: x : x + (\\sqrt{x} \\times 2 + 2).",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number Analogy",
+          "conceptTested": "Number analogy using algebraic patterns involving square roots: x : x + (\\sqrt{x} \\times 2 + 2).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_dc92b3cf24",
+        "q_num": 46,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:59",
+        "avgTime": "00:39",
+        "question": "Which two signs and two numbers should be interchanged to make the following equation correct? 784 \\div 6 \\times 9 - 30 + 14 = 528",
+        "options": {
+          "a": "14 and 6, + and -",
+          "b": "784 and 30, + and x",
+          "c": "784 and 6, × and -",
+          "d": "9 and 6, ÷ and +"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Balancing equations via BODMAS through the simultaneous interchange of specific numbers and mathematical signs.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Balancing equations via BODMAS through the simultaneous interchange of specific numbers and mathematical signs.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -1692,6 +1750,35 @@
           "topic": "Analogy",
           "subtopic": "Number Analogy",
           "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_80be6f07df",
+        "q_num": 15,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:37",
+        "avgTime": "00:30",
+        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set. (NOTE: Operations should be performed on whole numbers, without breaking down the numbers into its constituent digits.)\n(392, 29, 449)\n(395, 31, 566)",
+        "options": {
+          "a": "(486, 32, 538)",
+          "b": "(391, 45, 834)",
+          "c": "(487, 34, 809)",
+          "d": "(562, 35, 594)"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
+        "topic": "Analogy",
+        "subtopic": "Number Analogy",
+        "conceptTested": "Identifying mathematical relationships and square properties between numbers in a set.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number Analogy",
+          "conceptTested": "Identifying mathematical relationships and square properties between numbers in a set.",
           "difficulty": "medium"
         }
       }
@@ -2889,6 +2976,35 @@
           "topic": "Blood Relations",
           "subtopic": "Indicating Form / Puzzle-based Blood Relation",
           "conceptTested": "Tracing family tree relationships step-by-step through descriptive statements.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_46621b8785",
+        "q_num": 42,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "01:17",
+        "avgTime": "00:44",
+        "question": "In the alphabet, which letter will be exactly in the middle of the 21st letter from the last and the 22nd letter from the beginning?",
+        "options": {
+          "a": "M",
+          "b": "N",
+          "c": "O",
+          "d": "P"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nIdentify the 21st Letter from the Last\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 21st letter from the last is ‘F’.\n\nIdentify the 22nd Letter from the Beginning\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nSo, the 22nd letter from the beginning is ‘V’.\n\nNow, find the Middle Letter between ‘F’ and ‘V’\nThe position of F: 6\nThe position of V: 22\n\nThe middle position is calculated as:\n\n(6 + 22) ÷ 2\n\n= 28 ÷  2\n= 14\n\nThe 14th letter in the alphabet is N.\n\nHence, the correct answer is \"Option 2\".",
+        "topic": "Alphabet Test",
+        "subtopic": "Vowel-Consonant Operations & Letter Positions",
+        "conceptTested": "Finding the exact midpoint between two specified letter positions from opposite ends of the English alphabet.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Vowel-Consonant Operations & Letter Positions",
+          "conceptTested": "Finding the exact midpoint between two specified letter positions from opposite ends of the English alphabet.",
           "difficulty": "medium"
         }
       }

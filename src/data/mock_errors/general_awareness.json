@@ -2266,6 +2266,35 @@
           "conceptTested": "British policy of paramountcy and assertion of authority over princely states",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_92354a3dce",
+        "q_num": 79,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:05",
+        "avgTime": "00:23",
+        "question": "The 'groundnut fair' known as Kadalekai Parishe in Bengaluru is associated historically with which temple/figure?",
+        "options": {
+          "a": "ISKCON Temple and offering of sugarcane",
+          "b": "Vidhana Soudha and agricultural subsidies launch",
+          "c": "Tipu Sultan’s memorial and incense offerings",
+          "d": "Dodda Ganesha, Bull Temple or Nandi Basava"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nThe correct answer is Dodda Ganesha, Bull Temple or Nandi Basava.\n\nKey Points\nKadalekai Parishe is a traditional groundnut fair held annually in Bengaluru, Karnataka, with deep religious and cultural significance.\nThe fair is historically associated with the Bull Temple (Dodda Basavana Gudi), which is dedicated to Nandi Basava, the sacred bull of Lord Shiva.\nDevotees offer freshly harvested groundnuts (kadalekai) to Nandi as part of a traditional ritual seeking prosperity, good harvest, and agricultural well-being.\nThe nearby Dodda Ganesha Temple is also closely linked to the festivities, and offerings are made to Lord Ganesha before visiting the Bull Temple.\nHence, the association of Kadalekai Parishe is correctly linked with Dodda Ganesha, Bull Temple, and Nandi Basava, making option 4 the correct answer.\n\nAdditional Information\nLocation: The fair is held in the Basavanagudi area of Bengaluru, which is one of the city’s oldest residential and cultural localities.\nHistorical Origin: Kadalekai Parishe dates back over five centuries, originating during the reign of the Vijayanagara Empire, when farmers offered their produce to temples after harvest.\nReligious Significance: Nandi Basava is regarded as the guardian deity of agriculture and fertility, making the offering of groundnuts symbolically important for farming communities.\nTiming: The fair is usually conducted during the Kartika month (October–November), coinciding with the groundnut harvest season in southern India.\nIncorrect Options Explained:\nISKCON Temple is associated with Vaishnavite worship and not with Kadalekai Parishe.\nVidhana Soudha is a legislative building and has no religious or agricultural fair association.\nTipu Sultan’s memorial is unrelated to groundnut offerings or this traditional festival.",
+        "topic": "Festivals & Fairs",
+        "subtopic": "Regional Fairs & Cultural Festivals",
+        "conceptTested": "Familiarity with traditional regional fairs and their associated historical or religious significance in India.",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "Regional Fairs & Cultural Festivals",
+          "conceptTested": "Familiarity with traditional regional fairs and their associated historical or religious significance in India.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -5201,6 +5230,35 @@
           "topic": "Festivals & Fairs",
           "subtopic": "National Conferences and Summits",
           "conceptTested": "Important national and international agricultural summits hosted in India",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_072ee329ea",
+        "q_num": 102,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:15",
+        "avgTime": "00:33",
+        "question": "Work done on an object depends upon which of the following factors?\n1. Displacement\n2. Angle between force and displacement\n3. Initial speed of the object\n4. Force applied",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "2, 3 and 4 only",
+          "c": "1, 2 and 4 only",
+          "d": "All of the above"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nThe correct answer is 1, 2 and 4 only.\n\nKey Points\nWork done depends on the displacement of the object, as it represents the distance moved under the influence of force.\nThe angle between force and displacement determines the effective component of the force contributing to the work.\nThe magnitude of the force applied directly impacts the work done, as work is calculated as the product of force, displacement, and the cosine of the angle.\nInitial speed of the object does not influence work done directly; work depends on the change in kinetic energy or force-displacement dynamics.\nWork is mathematically expressed as W = F . d × cos(θ), where F is force, d is displacement, and θ is the angle between force and displacement.\n\nAdditional Information\nWork: Work is defined as the transfer of energy when a force is applied to an object causing displacement.\nForce: It refers to an interaction that changes the motion of an object, impacting the calculation of work.\nDisplacement: This is the vector quantity describing the change in position of an object, essential for evaluating work.\nCosine of the angle: The angle θ between the force and displacement affects the effective force contributing to the work, with cos(θ) ranging from -1 to +1.\nEnergy transfer: Work done on an object is directly related to the change in its energy, such as kinetic or potential energy.",
+        "topic": "Physics",
+        "subtopic": "Mechanics - Work, Energy & Power",
+        "conceptTested": "Work done formula W = F \\cdot d \\times \\cos(\\theta), depending on force, displacement, and angle, independent of initial speed.",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Mechanics - Work, Energy & Power",
+          "conceptTested": "Work done formula W = F \\cdot d \\times \\cos(\\theta), depending on force, displacement, and angle, independent of initial speed.",
           "difficulty": "medium"
         }
       }
