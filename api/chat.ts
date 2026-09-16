@@ -73,7 +73,8 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { messages, mockSummary, activeMockContext, activeReviewQuestions, activeQuestion, focusedScope, activeMockId, activeMockTitle } = req.body || {};
+    const body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
+    const { messages, mockSummary, activeMockContext, activeReviewQuestions, activeQuestion, focusedScope, activeMockId, activeMockTitle } = body;
 
     if (!Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: 'Invalid request: "messages" array is required.' });

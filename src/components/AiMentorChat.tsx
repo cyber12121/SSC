@@ -684,8 +684,19 @@ export function AiMentorChat({
       });
 
       if (!res.ok) {
-        const errorData = await res.json().catch(() => ({}));
-        throw new Error(errorData.error || `Server responded with status ${res.status}`);
+        let errorMsg = '';
+        try {
+          const rawText = await res.text();
+          try {
+            const parsed = JSON.parse(rawText);
+            errorMsg = parsed.error || parsed.message || parsed.details || rawText;
+          } catch {
+            errorMsg = rawText.length < 200 ? rawText : `Server responded with status ${res.status}`;
+          }
+        } catch {
+          errorMsg = `Server responded with status ${res.status}`;
+        }
+        throw new Error(errorMsg || `Server responded with status ${res.status}`);
       }
 
       const data = await res.json();
