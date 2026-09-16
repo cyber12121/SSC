@@ -1,0 +1,437 @@
+[
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 6",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:04",
+    "avgTime": "00:38",
+    "questionText": "A corporate travel fund of Rs. 12,000 was set aside by a logistics company for international staff trips. The amount was invested at compound interest. The team noticed that the fund doubled to Rs. 24,000 in 5 years. If they don't withdraw anything, how much will the fund grow to after 20 years?",
+    "options": {
+      "A": "Rs.1,73,000",
+      "B": "Rs.1,92,000",
+      "C": "Rs.1,44,000",
+      "D": "Rs.1,25,000"
+    },
+    "solution": "The fund doubles every 5 years, so in 20 years there are\n20\n5\n=\n4\ndoublings\nFinal amount\n=\n12000\n×\n2\n4\n=\n12000\n×\n16\n\nAmount after 20 years = Rs.1,92,000\nAns: (2) Rs.1,92,000",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Times of Growth",
+    "conceptTested": "If a sum becomes x times in t years at compound interest, it becomes x^(n/t) times in n years.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Times of Growth",
+      "conceptTested": "If a sum becomes x times in t years at compound interest, it becomes x^(n/t) times in n years."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 7",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "01:59",
+    "avgTime": "01:14",
+    "questionText": "The population of a town increases by 2% per year. If the present population is 49,000, find the population after 2 years.",
+    "options": {
+      "A": "50,480",
+      "B": "50,980",
+      "C": "50,800",
+      "D": "51,000"
+    },
+    "solution": "Population after n years\n=\n𝑃\n(\n1\n+\n𝑅\n100\n)\n𝑛\n=\n49000\n×\n(\n1.02\n)\n2\n\n=\n49000\n×\n1.0404\n=\n50979.6\nPopulation after 2 years ≈ 50,980\nAns: (2) 50,980",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Population Growth",
+    "conceptTested": "Population after n years with annual growth rate R is given by P(1 + R/100)^n.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Population Growth",
+      "conceptTested": "Population after n years with annual growth rate R is given by P(1 + R/100)^n."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 8",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:33",
+    "avgTime": "01:19",
+    "questionText": "Ramesh invests Rs. 68,000 at 20% p.a. compound interest for 2 years. He then adds Rs. 16,000 more and invests the total for 1 more year at same rate. Find total amount after 3 years.",
+    "options": {
+      "A": "Rs. 1,46,704",
+      "B": "Rs. 1,36,714",
+      "C": "Rs. 1,34,704",
+      "D": "Rs. 1,36,704"
+    },
+    "solution": "At 20% the multiplier is\n6\n5\n, so amount after 2 years\n=\n68000\n×\n1.44\n=\n97920\n\nAfter adding Rs. 16,000 the new sum = 97920 + 16000 = 113920\nAmount after 1 more year\n=\n113920\n×\n1.2\n=\n𝑅\n𝑠\n.\n1\n,\n36\n,\n704\n\nAns: (4) Rs. 1,36,704",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Addition of Principal Intermittently",
+    "conceptTested": "Compound amount formula applied sequentially with addition of intermediate principal amounts.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Addition of Principal Intermittently",
+      "conceptTested": "Compound amount formula applied sequentially with addition of intermediate principal amounts."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 10",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "01:08",
+    "avgTime": "00:48",
+    "questionText": "Ramesh invested Rs. 50,000 at an annual compound interest rate of 5%. What will be the compound interest after 3 years?",
+    "options": {
+      "A": "Rs. 6881.25",
+      "B": "Rs. 7581.25",
+      "C": "Rs. 8881.25",
+      "D": "Rs. 7881.25"
+    },
+    "solution": "𝐶\n𝐼\n=\n𝑃\n[\n(\n1\n+\n𝑅\n100\n)\n𝑛\n−\n1\n]\n=\n50000\n[\n(\n21\n20\n)\n3\n−\n1\n]\n\n(\n21\n20\n)\n3\n=\n9261\n8000\n, so amount\n=\n50000\n×\n9261\n8000\n=\n57881.25\nCI = 57881.25 − 50000 = Rs. 7881.25\nAns: (4) Rs. 7881.25",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Basic Calculation",
+    "conceptTested": "Compound Interest CI = P[(1 + R/100)^n - 1].",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Basic Calculation",
+      "conceptTested": "Compound Interest CI = P[(1 + R/100)^n - 1]."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 11",
+    "status": "Incorrect",
+    "chosenOption": "N/A",
+    "correctOption": "C",
+    "userTime": "01:32",
+    "avgTime": "01:15",
+    "questionText": "Find the compound interest on a principal of Rs. 85,000 for a term of 1.5 years at a nominal annual rate of 24%, compounded on a half-yearly basis.",
+    "options": {
+      "A": "Rs. 34416.88",
+      "B": "Rs. 34458.68",
+      "C": "Rs. 34418.88",
+      "D": "Rs. 35418.88"
+    },
+    "solution": "Half-yearly: rate\n=\n24\n2\n=\n12\n%\nand periods\n=\n1.5\n×\n2\n=\n3\n\nAmount\n=\n85000\n×\n(\n1.12\n)\n3\n=\n85000\n×\n1.404928\n=\n119418.88\nCI = 119418.88 − 85000 = Rs. 34418.88\nAns: (3) Rs. 34418.88",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Half-Yearly Compounding",
+    "conceptTested": "When compounded half-yearly, rate becomes R/2 and time periods become 2n.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Half-Yearly Compounding",
+      "conceptTested": "When compounded half-yearly, rate becomes R/2 and time periods become 2n."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 13",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "00:45",
+    "avgTime": "00:25",
+    "questionText": "The simple interest and compound interest that can be earned in two years at the same rate is Rs. 2400 and Rs. 2520 respectively. What is the rate of interest per annum?",
+    "options": {
+      "A": "8",
+      "B": "10",
+      "C": "12",
+      "D": "5"
+    },
+    "solution": "Difference for 2 years = 2520 − 2400 = 120, and SI of one year\n=\n2400\n2\n=\n1200\n\nThis difference is just one year's interest on the first year's interest, so\n𝑅\n=\n120\n1200\n×\n100\n\nRate = 10% per annum\nAns: (2)\n10",
+    "topic": "Compound Interest",
+    "subtopic": "Difference between CI and SI for 2 years",
+    "conceptTested": "For 2 years, the difference between CI and SI is equal to one year's interest on the first year's simple interest, where rate = (Difference / SI of 1 year) * 100.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference between CI and SI for 2 years",
+      "conceptTested": "For 2 years, the difference between CI and SI is equal to one year's interest on the first year's simple interest, where rate = (Difference / SI of 1 year) * 100."
+    }
+  },
+  {
+    "testName": "MTS 11/02/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "chosenOption": "N/A",
+    "correctOption": "D",
+    "userTime": "00:56",
+    "avgTime": "00:56",
+    "questionText": "The population increases by 13% annually. If the current population is 43,000, what will it be after 3 years? (in approx.)",
+    "options": {
+      "A": "72,047",
+      "B": "56,047",
+      "C": "52,047",
+      "D": "62,047"
+    },
+    "solution": "Compound growth: P = 43000×(1.13)³ = 43000×1.442897 ≈ 62,045 ≈ 62,047.",
+    "topic": "Compound Interest",
+    "subtopic": "Annual Growth and Population",
+    "conceptTested": "Compound growth formula: A = P(1 + r/100)^t",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Annual Growth and Population",
+      "conceptTested": "Compound growth formula: A = P(1 + r/100)^t"
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 18",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:07",
+    "avgTime": "00:46",
+    "questionText": "The compound interest on a certain principal at 12½% per annum for 2 years is Rs.265.625. What is the simple interest on the same principal for the same time and rate?",
+    "options": {
+      "A": "Rs.250",
+      "B": "Rs.200",
+      "C": "Rs.300",
+      "D": "Rs.350"
+    },
+    "solution": "Rate\n=\n12\n1\n2\n%\n=\n1\n8\n, so the multiplier is\n9\n8\n\n𝐶\n𝐼\n=\n𝑃\n[\n(\n9\n8\n)\n2\n−\n1\n]\n=\n17\n𝑃\n64\n=\n265.625\n, giving P = 1000\nSI\n=\n1000\n×\n12.5\n100\n×\n2\n=\n𝑅\n𝑠\n.250\n\nAns: (1) Rs.250",
+    "topic": "Simple Interest",
+    "subtopic": "Relationship between CI and SI",
+    "conceptTested": "Finding Principal from given Compound Interest using fraction multipliers and subsequently calculating Simple Interest.",
+    "tags": {
+      "topic": "Simple Interest",
+      "subtopic": "Relationship between CI and SI",
+      "conceptTested": "Finding Principal from given Compound Interest using fraction multipliers and subsequently calculating Simple Interest."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "02:16",
+    "avgTime": "00:51",
+    "questionText": "What is the compound interest on a sum of Rs.37,500 for 1 1/3 years at 12% p.a., compounded every 8 months?",
+    "options": {
+      "A": "Rs.6,500",
+      "B": "Rs.6,000",
+      "C": "Rs.6,240",
+      "D": "Rs.7,000"
+    },
+    "solution": "Rate for an 8-month period\n=\n12\n×\n8\n12\n=\n8\n%\n, and\n1\n1\n3\nyears = 16 months = 2 periods\nAmount\n=\n37500\n×\n(\n27\n25\n)\n2\n=\n37500\n×\n729\n625\n=\n43740\n\nCI = 43740 − 37500 = Rs.6,240\nAns: (3) Rs.6,240",
+    "topic": "Compound Interest",
+    "subtopic": "Compounding Periodically (8-monthly)",
+    "conceptTested": "When interest is compounded every 8 months, the rate per period is (Annual Rate * 8)/12 and the number of periods is (Total months / 8).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compounding Periodically (8-monthly)",
+      "conceptTested": "When interest is compounded every 8 months, the rate per period is (Annual Rate * 8)/12 and the number of periods is (Total months / 8)."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 21",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "01:01",
+    "avgTime": "00:54",
+    "questionText": "If the difference between the compound interest and simple interest on a certain amount of money for 1 1/2 years at an interest rate of 10% per annum is Rs.183, when the interest is compounded semi-annually, determine the principal amount.",
+    "options": {
+      "A": "Rs.84000",
+      "B": "Rs.70000",
+      "C": "Rs.24000",
+      "D": "Rs.94000"
+    },
+    "solution": "Semi-annually: rate = 5% per period and 1½ years = 3 periods\nFor 3 periods,\n𝐶\n𝐼\n−\n𝑆\n𝐼\n=\n𝑃\n(\n𝑟\n100\n)\n2\n(\n3\n+\n𝑟\n100\n)\n\n183\n=\n𝑃\n×\n1\n400\n×\n61\n20\n=\n61\n𝑃\n8000\n\n𝑃\n=\n183\n×\n8000\n61\n=\n𝑅\n𝑠\n.24000\n\nAns: (3) Rs.24000",
+    "topic": "Compound Interest",
+    "subtopic": "Difference between CI and SI for 3 periods (Semi-annually)",
+    "conceptTested": "For 3 conversion periods, the difference between CI and SI is given by the formula: CI - SI = P * (r/100)^2 * (3 + r/100).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference between CI and SI for 3 periods (Semi-annually)",
+      "conceptTested": "For 3 conversion periods, the difference between CI and SI is given by the formula: CI - SI = P * (r/100)^2 * (3 + r/100)."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 24",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:07",
+    "avgTime": "00:36",
+    "questionText": "Find the amount after 2 years on Rs.6,000 at 8% per annum when compounded half-yearly.",
+    "options": {
+      "A": "Rs.6,960.00",
+      "B": "Rs.7,000.75",
+      "C": "Rs.7,019.15",
+      "D": "Rs.7,100.89"
+    },
+    "solution": "Half-yearly: rate\n=\n8\n2\n=\n4\n%\nand periods\n=\n2\n×\n2\n=\n4\n\n(\n1.04\n)\n4\n=\n1.16985856\n\nAmount\n=\n6000\n×\n1.16985856\n=\n𝑅\n𝑠\n.7\n,\n019.15\nAns: (3) Rs.7,019.15",
+    "topic": "Compound Interest",
+    "subtopic": "Compounded Half-Yearly",
+    "conceptTested": "When interest is compounded half-yearly, the rate is halved and the number of compounding periods is doubled: A = P(1 + R/200)^{2n}",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compounded Half-Yearly",
+      "conceptTested": "When interest is compounded half-yearly, the rate is halved and the number of compounding periods is doubled: A = P(1 + R/200)^{2n}"
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 25",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:00",
+    "avgTime": "00:32",
+    "questionText": "A man takes a loan of Rs.15,000 from a bank at 8% compound interest per annum, compounded annually. Find the total amount he has to pay after 2 years.",
+    "options": {
+      "A": "Rs.17,480",
+      "B": "Rs.17,496",
+      "C": "Rs.16,800",
+      "D": "Rs.17,520"
+    },
+    "solution": "Amount\n=\n𝑃\n(\n1\n+\n𝑅\n100\n)\n𝑛\n=\n15000\n×\n(\n1.08\n)\n2\n\n(\n1.08\n)\n2\n=\n1.1664\n\nAmount\n=\n15000\n×\n1.1664\n=\n𝑅\n𝑠\n.17\n,\n496\n\nAns: (2) Rs.17,496",
+    "topic": "Compound Interest",
+    "subtopic": "Annual Compounding",
+    "conceptTested": "Formula for compound interest compounded annually: A = P(1 + R/100)^n",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Annual Compounding",
+      "conceptTested": "Formula for compound interest compounded annually: A = P(1 + R/100)^n"
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 26",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:00",
+    "avgTime": "00:14",
+    "questionText": "An investor deposits Rs.20,000 in a scheme offering 6% compound interest per annum. After 18 months, he adds Rs.10,000 more. Find the total amount after 3 years from the initial deposit.",
+    "options": {
+      "A": "Rs.33,920.00",
+      "B": "Rs.34,738.32",
+      "C": "Rs.35,100.00",
+      "D": "Rs.36,250.75"
+    },
+    "solution": "The two deposits are handled separately: Rs.20,000 grows for 3 years and Rs.10,000 for the last 1½ years\n\n𝐴\n1\n=\n20000\n×\n(\n1.06\n)\n3\n=\n20000\n×\n1.191016\n=\n23820.32\n\nFor 1½ years the second sum grows by a full year and then half a year:\n𝐴\n2\n=\n10000\n×\n1.06\n×\n1.03\n=\n10918\n\nTotal = 23820.32 + 10918 = Rs.34,738.32\nAns: (2) Rs.34,738.32",
+    "topic": "Compound Interest",
+    "subtopic": "Successive Deposits & Investments",
+    "conceptTested": "Calculating compound interest for multiple sums invested at different times and durations.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Successive Deposits & Investments",
+      "conceptTested": "Calculating compound interest for multiple sums invested at different times and durations."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 27",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:00",
+    "avgTime": "00:11",
+    "questionText": "The difference between the compound interest and simple interest on Rs.10,000 for 2 years at 5% per annum is:",
+    "options": {
+      "A": "Rs.20",
+      "B": "Rs.25",
+      "C": "Rs.30",
+      "D": "Rs.50"
+    },
+    "solution": "For 2 years,\n𝐶\n𝐼\n−\n𝑆\n𝐼\n=\n𝑃\n(\n𝑅\n100\n)\n2\n\n=\n10000\n×\n(\n5\n100\n)\n2\n=\n10000\n×\n25\n10000\n\nDifference = Rs.25\nAns: (2) Rs.25",
+    "topic": "Compound Interest",
+    "subtopic": "Difference between CI and SI",
+    "conceptTested": "For 2 years, the difference between compound interest and simple interest is given by CI - SI = P(R/100)^2",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference between CI and SI",
+      "conceptTested": "For 2 years, the difference between compound interest and simple interest is given by CI - SI = P(R/100)^2"
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 28",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "00:00",
+    "avgTime": "00:14",
+    "questionText": "A person invests Rs. 50,000 at 10% p.a. compounded annually for 3 years. He then reinvests the amount for 2 more years at 12% p.a. compounded annually. What is the total compound interest earned at the end of 5 years?",
+    "options": {
+      "A": "Rs.33,480.32",
+      "B": "Rs.33,498.32",
+      "C": "Rs.33,403.28",
+      "D": "Rs.35,000.00"
+    },
+    "solution": "Amount\n=\n𝑃\n(\n1\n+\n𝑅\n100\n)\n𝑛\n, applied for each rate in turn\nAfter 3 years at 10%:\n50000\n×\n1.331\n=\n66550\n\nAfter 2 more years at 12%:\n66550\n×\n1.2544\n=\n83480.32\nTotal CI = 83480.32 − 50000 = Rs.33,480.32\nAns: (1) Rs.33,480.32",
+    "topic": "Compound Interest",
+    "subtopic": "Successive Rates & Multi-phase Investments",
+    "conceptTested": "Applying successive compound interest formulas over different time periods with changing interest rates.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Successive Rates & Multi-phase Investments",
+      "conceptTested": "Applying successive compound interest formulas over different time periods with changing interest rates."
+    }
+  }
+]

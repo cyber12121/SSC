@@ -1,0 +1,379 @@
+[
+  {
+    "testName": "CGL 24/09/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 1",
+    "status": "Correct (Slow)",
+    "chosenOption": "C",
+    "correctOption": "C",
+    "userTime": "02:59",
+    "avgTime": "01:22",
+    "questionText": "Vidhya lent Rs. 6000 to Kavya for 3 years at the rate of 4% per annum compound interest. Calculate the amount that Vidhya will get after 3 years.",
+    "options": {
+      "A": "6849.18",
+      "B": "6750.18",
+      "C": "6749.18",
+      "D": "6649.18"
+    },
+    "solution": "Amount\n=\n𝑃\n(\n1\n+\n𝑅\n100\n)\n𝑛\n=\n6000\n×\n(\n1.04\n)\n3\n\n(\n1.04\n)\n3\n=\n1.124864\n\nAmount\n=\n6000\n×\n1.124864\n=\n6749.18\nAns: (3) 6749.18",
+    "topic": "Compound Interest",
+    "subtopic": "Amount Calculation",
+    "conceptTested": "Compound Amount Formula: A = P(1 + R/100)^n",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Amount Calculation",
+      "conceptTested": "Compound Amount Formula: A = P(1 + R/100)^n"
+    }
+  },
+  {
+    "testName": "CGL 25/09/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 3",
+    "status": "Correct (Slow)",
+    "chosenOption": "D",
+    "correctOption": "D",
+    "userTime": "01:31",
+    "avgTime": "00:44",
+    "questionText": "Calculate the compound interest on Rs. 5000 for 2 years at 20% per annum when compounded half yearly.",
+    "options": {
+      "A": "2120.5",
+      "B": "2520.5",
+      "C": "2322.5",
+      "D": "2320.5"
+    },
+    "solution": "For half-yearly compounding, rate is halved and periods doubled: 10% for 4 periods\nAmount\n=\n5000\n×\n(\n1.1\n)\n4\n=\n5000\n×\n1.4641\n=\n7320.50\nCI = 7320.50 − 5000 = 2320.5\nAns: (4) 2320.5",
+    "topic": "Compound Interest",
+    "subtopic": "Half-Yearly Compounding",
+    "conceptTested": "When compounded half-yearly, rate is halved (R/2) and time period is doubled (2n).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Half-Yearly Compounding",
+      "conceptTested": "When compounded half-yearly, rate is halved (R/2) and time period is doubled (2n)."
+    }
+  },
+  {
+    "testName": "N/A (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 7",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:44",
+    "avgTime": "00:44",
+    "questionText": "CGL Tier-2",
+    "options": {
+      "A": "At what rate of interest per annum will a sum of Rs.15,625 amount to Rs.19,683 in 1 year 6 months, if the interest is compounded half-yearly?",
+      "B": "20%",
+      "C": "6%",
+      "D": "8%"
+    },
+    "solution": "1 year 6 months = 3 half-years, so the half-yearly rate acts 3 times\n\n(\n1\n+\n𝑟\n100\n)\n3\n=\n19683\n15625\n=\n(\n27\n25\n)\n3\n\nSo\n1\n+\n𝑟\n100\n=\n27\n25\n, giving a half-yearly rate of 8%\nAnnual rate = 8 × 2 = 16%\nAns: (3) 16%",
+    "topic": "Compound Interest",
+    "subtopic": "Half-Yearly Rate Calculation",
+    "conceptTested": "Finding rate of interest given principal, amount, and time for half-yearly compounding.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Half-Yearly Rate Calculation",
+      "conceptTested": "Finding rate of interest given principal, amount, and time for half-yearly compounding."
+    }
+  },
+  {
+    "testName": "CHSL 12/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 8",
+    "status": "Correct (Slow)",
+    "chosenOption": "N/A",
+    "correctOption": "B",
+    "userTime": "00:49",
+    "avgTime": "00:38",
+    "questionText": "The difference between the CI and SI on a sum for 2 years at 15% p.a. is Rs. 360. What is the principal? [SSC CHSL 2025 Tier 1, 12 Nov Shift 3]",
+    "options": {
+      "A": "15,000",
+      "B": "16,000",
+      "C": "20,000",
+      "D": "18,000"
+    },
+    "solution": "Difference between CI and SI for 2 years is\n𝐷\n=\n𝑃\n×\n(\n𝑅\n100\n)\n2\n. Substituting the values:\n360\n=\n𝑃\n×\n(\n15\n100\n)\n2\n=\n𝑃\n×\n225\n10000\n.\n𝑃\n=\n360\n×\n10000\n225\n=\n16000\n. The principal is Rs. 16,000.",
+    "topic": "Compound Interest",
+    "subtopic": "Difference between CI and SI",
+    "conceptTested": "Difference between CI and SI for 2 years is given by D = P(R/100)^2.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference between CI and SI",
+      "conceptTested": "Difference between CI and SI for 2 years is given by D = P(R/100)^2."
+    }
+  },
+  {
+    "testName": "CHSL 13/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 12",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "01:28",
+    "avgTime": "00:58",
+    "questionText": "A man deposits Rs.1,50,000 at a CI rate of 10% p.a. After the first year's interest is credited, he withdraws 50% of the interest earned. What is his account balance at the end of the second year?",
+    "options": {
+      "A": "Rs.1,65,000",
+      "B": "Rs.1,72,000",
+      "C": "Rs.1,73,250",
+      "D": "Rs.1,75,000"
+    },
+    "solution": "Year 1: Interest = 10% of 1,50,000 = Rs.15,000; Amount = Rs.1,65,000 Withdrawal = 50% of 15,000 = Rs.7,500; Balance after withdrawal = 1,65,000 − 7,500 = Rs.1,57,500 Year 2: Interest = 10% of 1,57,500 = Rs.15,750; Final balance = 1,57,500 + 15,750 = Rs.1,73,250",
+    "topic": "Compound Interest",
+    "subtopic": "Withdrawal during compounding",
+    "conceptTested": "Step-by-step calculation of compound interest when interim withdrawals are made.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Withdrawal during compounding",
+      "conceptTested": "Step-by-step calculation of compound interest when interim withdrawals are made."
+    }
+  },
+  {
+    "testName": "CHSL 15/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 17",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "01:18",
+    "avgTime": "00:44",
+    "questionText": "A sum is invested at compound interest (compounded annually) at a certain rate. The interest earned in the 1st year is Rs. 2,000, and in the 2nd year it is Rs. 2,400. Find 50% of the sum invested.",
+    "options": {
+      "A": "Rs. 4,000",
+      "B": "Rs. 7,000",
+      "C": "Rs. 5,000",
+      "D": "Rs. 8,000"
+    },
+    "solution": "Rate = [(2400−2000)/2000] × 100 = 20%. Interest in 1st year = P × 20/100 = 2000. P = Rs.10,000. 50% of P = Rs.5,000.",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Successive Years Interest",
+    "conceptTested": "The interest earned in the second year on a principal at compound interest is equal to the amount of the first year multiplied by the rate of interest.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Successive Years Interest",
+      "conceptTested": "The interest earned in the second year on a principal at compound interest is equal to the amount of the first year multiplied by the rate of interest."
+    }
+  },
+  {
+    "testName": "CHSL 17/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 19",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:26",
+    "avgTime": "00:35",
+    "questionText": "A person invested Rs. 18,000 each in two different schemes for 2 years. One scheme offered 15% p.a. simple interest and the other offered 15% p.a. compound interest, compounded annually. Find the difference between the interest earned from both schemes.",
+    "options": {
+      "A": "Rs. 456",
+      "B": "Rs. 405",
+      "C": "Rs. 489",
+      "D": "Rs. 411"
+    },
+    "solution": "Simple interest for 2 years = (18000 × 15 × 2) ÷ 100 = 5400. Compound interest for 2 years = 18000[(1.15)² - 1] = 18000(1.3225 - 1) = 18000 × 0.3225 = 5805. Difference = 5805 - 5400 = 405.",
+    "topic": "Compound Interest",
+    "subtopic": "Simple Interest vs Compound Interest",
+    "conceptTested": "Comparison of simple and compound interest over a period of 2 years using direct formula CI - SI = P(R/100)².",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Simple Interest vs Compound Interest",
+      "conceptTested": "Comparison of simple and compound interest over a period of 2 years using direct formula CI - SI = P(R/100)²."
+    }
+  },
+  {
+    "testName": "CHSL 17/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:00",
+    "avgTime": "00:25",
+    "questionText": "If Rs. 60,000 is invested at a compound interest of 20% p.a. for 18 months, then find the interest earned given that the sum is compounded every 6 months.",
+    "options": {
+      "A": "Rs. 21,800",
+      "B": "Rs. 12,550",
+      "C": "Rs. 14,670",
+      "D": "Rs. 19,860"
+    },
+    "solution": "Compounded every 6 months means rate per half-year = 20% ÷ 2 = 10%. Time = 18 months = 3 half-years. Amount = 60000 × (1.10)³ = 60000 × 1.331 = 79860. Interest = 79860 - 60000 = 19860.",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Half-yearly Compounding",
+    "conceptTested": "When interest is compounded half-yearly, the rate is halved and the time period is doubled.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Half-yearly Compounding",
+      "conceptTested": "When interest is compounded half-yearly, the rate is halved and the time period is doubled."
+    }
+  },
+  {
+    "testName": "CHSL 17/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 21",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:00",
+    "avgTime": "00:58",
+    "questionText": "A savings scheme offers compound interest annually. A woman deposits Rs. 10,000. At the end of the first year, the interest rate is 10%. In the second year, due to inflation, the interest rate rises to 12.5%, and in the third year, it drops to 8%. Calculate the total interest she earned at the end of 3 years.",
+    "options": {
+      "A": "Rs.3,265",
+      "B": "Rs.3,365",
+      "C": "Rs.3,285",
+      "D": "Rs.3,460"
+    },
+    "solution": "Amount after 1st year = 10000 × 1.10 = 11000. After 2nd year = 11000 × 1.125 = 12375. After 3rd year = 12375 × 1.08 = 13365. Total interest = 13365 - 10000 = Rs.3365.",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Varying Rates",
+    "conceptTested": "Calculation of compound amount with successively changing annual interest rates: A = P(1 + R1/100)(1 + R2/100)(1 + R3/100).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Varying Rates",
+      "conceptTested": "Calculation of compound amount with successively changing annual interest rates: A = P(1 + R1/100)(1 + R2/100)(1 + R3/100)."
+    }
+  },
+  {
+    "testName": "CHSL 17/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 22",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:00",
+    "avgTime": "00:44",
+    "questionText": "An amount of Rs. 'z' is invested in two different schemes—one offers simple interest at 13% p.a. for 4 years, and the other offers compound interest at 12% p.a. compounded annually for 2 years. If the total amount from the simple interest scheme exceeds the compound interest amount by Rs. 78, then find the value of z.",
+    "options": {
+      "A": "Rs. 287",
+      "B": "Rs. 293.66",
+      "C": "Rs. 245.5",
+      "D": "Rs. 299.88"
+    },
+    "solution": "Amount under SI for 4 years at 13% = z(1 + 13×4/100) = 1.52z.\nAmount under CI for 2 years at 12% = z(1.12)² = 1.2544z.\nDifference = 1.52z - 1.2544z = 0.2656z = 78\nSo z = 78 / 0.2656 ≈ 293.67 ≈ 293.66.",
+    "topic": "Compound Interest",
+    "subtopic": "Simple Interest vs Compound Interest - Total Amount Comparison",
+    "conceptTested": "Equating total amounts accumulated under different simple and compound interest schemes to find the initial principal.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Simple Interest vs Compound Interest - Total Amount Comparison",
+      "conceptTested": "Equating total amounts accumulated under different simple and compound interest schemes to find the initial principal."
+    }
+  },
+  {
+    "testName": "CHSL 17/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 23",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "N/A",
+    "userTime": "00:00",
+    "avgTime": "00:32",
+    "questionText": "A sum of Rs. 7,500 is invested in a scheme offering r% compound interest for 2 years. Find the value of 'r' if the difference in the simple interest and compound interest for the same amount at the same rate after 2 years is Rs. 108.",
+    "options": {
+      "A": "A sum of Rs. 7,500 is invested in a scheme offering r% compound interest for 2 years. Find the value of 'r' if the difference in the simple interest and compound interest for the same amount at the same rate after 2 years is Rs. 108.",
+      "B": "10%",
+      "C": "1%",
+      "D": "8%"
+    },
+    "solution": "Difference between CI and SI for 2 years = P(r/100)²\n108 = 7500(r²/10000)\n108 = 0.75r²\nr² = 144\nr = 12%",
+    "topic": "Compound Interest",
+    "subtopic": "Difference between CI and SI for 2 years",
+    "conceptTested": "The difference between compound interest and simple interest for 2 years is given by the formula \\( \\text{Difference} = P \\left(\\frac{r}{100}\\right)^2 \\).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference between CI and SI for 2 years",
+      "conceptTested": "The difference between compound interest and simple interest for 2 years is given by the formula \\( \\text{Difference} = P \\left(\\frac{r}{100}\\right)^2 \\)."
+    }
+  },
+  {
+    "testName": "CHSL 17/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 24",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:00",
+    "avgTime": "00:41",
+    "questionText": "Gaurav invested Rs. 'x' in a scheme offering 10% compound interest for three years. Prem invested Rs. 18,000 in a scheme offering 15% simple interest for four years. If the interest earned by Gaurav is the interest earned by Prem less '2x - 1,200' rupees, then find the interest earned by Gaurav.",
+    "options": {
+      "A": "Rs. 1,215",
+      "B": "Rs. 1,779",
+      "C": "Rs. 1,560",
+      "D": "Rs. 1,986"
+    },
+    "solution": "Prem's SI = 18000 × 15 × 4 / 100 = 10800.\nGiven this equals 2x - 1200:\n2x - 1200 = 10800\n2x = 12000\nx = 6000\nGaurav's CI interest for 3 years at 10%:\nInterest = 6000[(1.1)³ - 1] = 6000(1.331 - 1) = 6000 × 0.331 = 1986.",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest vs Simple Interest Comparison",
+    "conceptTested": "Simple interest is calculated uniformly on the principal, while compound interest is calculated on the accumulated amount over successive periods using \\( A = P(1 + r/100)^n \\).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest vs Simple Interest Comparison",
+      "conceptTested": "Simple interest is calculated uniformly on the principal, while compound interest is calculated on the accumulated amount over successive periods using \\( A = P(1 + r/100)^n \\)."
+    }
+  },
+  {
+    "testName": "CHSL 18/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 25",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "N/A",
+    "userTime": "00:00",
+    "avgTime": "00:27",
+    "questionText": "A sum of money becomes 16 times in 2 years. What is the annual compound interest rate?",
+    "options": {
+      "A": "A sum of money becomes 16 times in 2 years. What is the annual compound interest rate?",
+      "B": "100%",
+      "C": "1%",
+      "D": "200%"
+    },
+    "solution": "Under compound interest:\nP(1 + r/100)² = 16P\n(1 + r/100)² = 16\n1 + r/100 = 4\nr/100 = 3\nr = 300%",
+    "topic": "Compound Interest",
+    "subtopic": "Growth Rate and Times-Based Problems",
+    "conceptTested": "Under annual compounding, if a sum becomes \\( k \\) times in \\( n \\) years, then \\( 1 + \\frac{r}{100} = (k)^{1/n} \\).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Growth Rate and Times-Based Problems",
+      "conceptTested": "Under annual compounding, if a sum becomes \\( k \\) times in \\( n \\) years, then \\( 1 + \\frac{r}{100} = (k)^{1/n} \\)."
+    }
+  }
+]

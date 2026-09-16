@@ -1128,7 +1128,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 
     let reply = '';
     let configuredModel = (process.env.GEMINI_MODEL || process.env.VITE_GEMINI_MODEL || '').trim().replace(/^["']|["']$/g, '');
-    const modelName = configuredModel || 'gemini-3.6-flash';
+    const modelName = configuredModel || 'gemini-3.5-flash-lite';
 
     // 1. First attempt: Direct Google Generative Language REST API (zero Node module dependencies)
     try {

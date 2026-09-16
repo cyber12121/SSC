@@ -1338,6 +1338,93 @@
           "conceptTested": "Balancing equations via BODMAS through the simultaneous interchange of specific numbers and mathematical signs.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_4f59331632",
+        "q_num": 47,
+        "testName": "CGL 16/09/2025 Shift-1 (Reasoning)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:10",
+        "avgTime": "00:35",
+        "question": "If 3 + 4 = 19 and 2 + 5 = 17, what is 1 + 6 = ?",
+        "options": {
+          "a": "15",
+          "b": "13",
+          "c": "12",
+          "d": "11"
+        },
+        "answer": "b",
+        "solution": "Rule: a + b = (a × b) + (a + b).\n3+4 = 12+7 = 19 ✓; 2+5 = 10+7 = 17 ✓.\n1+6 = 6 + 7 = 13.\nAns: (2) 13",
+        "topic": "Mathematical Operations",
+        "subtopic": "Coded Mathematical Operations",
+        "conceptTested": "Decoding non-standard arithmetic symbols based on given patterned equations using basic operations.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Coded Mathematical Operations",
+          "conceptTested": "Decoding non-standard arithmetic symbols based on given patterned equations using basic operations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2123f5cfd5",
+        "q_num": 48,
+        "testName": "CGL 16/09/2025 Shift-1 (Reasoning)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:46",
+        "avgTime": "00:23",
+        "question": "If 5 * 4 = 41 and 6 * 3 = 45, what is 7 * 2?",
+        "options": {
+          "a": "48",
+          "b": "51",
+          "c": "53",
+          "d": "55"
+        },
+        "answer": "c",
+        "solution": "Rule: a * b = a² + b².\n5*4 = 25+16 = 41 ✓; 6*3 = 36+9 = 45 ✓.\n7*2 = 49 + 4 = 53.\nAns: (3) 53",
+        "topic": "Mathematical Operations",
+        "subtopic": "Coded Mathematical Operations",
+        "conceptTested": "Decoding arithmetic operators using squares and additions.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Coded Mathematical Operations",
+          "conceptTested": "Decoding arithmetic operators using squares and additions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f98e5fef18",
+        "q_num": 49,
+        "testName": "CGL 17/09/2025 Shift-3 (Reasoning)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:22",
+        "avgTime": "00:12",
+        "question": "If 4 & 4 = 32 and 5 & 5 = 50, what 6 & 6 is?",
+        "options": {
+          "a": "72",
+          "b": "64",
+          "c": "84",
+          "d": "76"
+        },
+        "answer": "a",
+        "solution": "Rule: A & A = 2A².\n4&4 = 2×16 = 32 ✓; 5&5 = 2×25 = 50 ✓.\n6&6 = 2 × 36 = 72.\nAns: (1) 72",
+        "topic": "Mathematical Operations",
+        "subtopic": "Coded Mathematical Operations",
+        "conceptTested": "Decoding custom symbols based on algebraic square patterns.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Coded Mathematical Operations",
+          "conceptTested": "Decoding custom symbols based on algebraic square patterns.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -1779,6 +1866,64 @@
           "topic": "Analogy",
           "subtopic": "Number Analogy",
           "conceptTested": "Identifying mathematical relationships and square properties between numbers in a set.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2004509a95",
+        "q_num": 16,
+        "testName": "CGL 17/09/2025 Shift-1 (Reasoning)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:54",
+        "avgTime": "00:33",
+        "question": "If 6 * 3 = 54 and 8 * 2 = 48, what is 5 * 4?",
+        "options": {
+          "a": "40",
+          "b": "44",
+          "c": "45",
+          "d": "60"
+        },
+        "answer": "d",
+        "solution": "Rule: a * b = a × b × 3.\n6*3 = 54 ✓; 8*2 = 48 ✓.\n5*4 = 5 × 4 × 3 = 60.\nAns: (4) 60",
+        "topic": "Mathematical Operations",
+        "subtopic": "Coded Mathematical Operations",
+        "conceptTested": "Decoding operations involving multiplication by a constant multiplier.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Coded Mathematical Operations",
+          "conceptTested": "Decoding operations involving multiplication by a constant multiplier.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_a68868007b",
+        "q_num": 17,
+        "testName": "CGL 17/09/2025 Shift-3 (Reasoning)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:42",
+        "avgTime": "02:04",
+        "question": "If 8 # 2 = 65 and 7 # 3 = 55, then 6 # 5 = ?",
+        "options": {
+          "a": "35",
+          "b": "44",
+          "c": "58",
+          "d": "69"
+        },
+        "answer": "c",
+        "solution": "Rule: A # B = A² + B² − 3.\n8#2 = 64+4−3 = 65 ✓; 7#3 = 49+9−3 = 55 ✓.\n6#5 = 36 + 25 − 3 = 58.\nAns: (3) 58",
+        "topic": "Mathematical Operations",
+        "subtopic": "Coded Mathematical Operations",
+        "conceptTested": "Decoding operations involving sum of squares minus a constant offset.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Coded Mathematical Operations",
+          "conceptTested": "Decoding operations involving sum of squares minus a constant offset.",
           "difficulty": "medium"
         }
       }

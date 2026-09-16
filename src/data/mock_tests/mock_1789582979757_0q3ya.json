@@ -1,0 +1,437 @@
+[
+  {
+    "testName": "CHSL 19/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 1",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:02",
+    "avgTime": "01:17",
+    "questionText": "A certain sum, when invested for 2 years at 12% per annum compound interest, compounded annually, amounts to Rs. 39,200. Find the sum invested (in Rs.).",
+    "options": {
+      "A": "Rs. 32,800",
+      "B": "Rs. 31,250",
+      "C": "Rs. 38,670",
+      "D": "Rs. 36,290"
+    },
+    "solution": "Amount = P(1 + r/100)²\n39200 = P(112/100)²\n39200 = P × 1.2544\n\n𝑃\n=\n39200\n1.2544\n=\n31250\n\nSo, the sum invested was Rs. 31,250.",
+    "topic": "Compound Interest",
+    "subtopic": "Amount and Principal Calculations",
+    "conceptTested": "Compound Interest Amount Formula: A = P(1 + r/100)^n",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Amount and Principal Calculations",
+      "conceptTested": "Compound Interest Amount Formula: A = P(1 + r/100)^n"
+    }
+  },
+  {
+    "testName": "CHSL 21/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 2",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:01",
+    "avgTime": "01:13",
+    "questionText": "A sum of Rs. 6,400 amounts to Rs. 8,100 in 8 years at a certain rate of interest, compounded annually. Find the amount received after 4 years when Rs. 2,240 are invested at same rate of compound interest (compounded annually).",
+    "options": {
+      "A": "Rs. 2,600",
+      "B": "Rs. 2,330",
+      "C": "Rs. 2,880",
+      "D": "Rs. 2,520"
+    },
+    "solution": "For first case:\nA/P = 8100/6400 = 81/64 = (3/2)^4? Actually (3/2)^4 = 81/16, so not that.\nObserve:\n8100/6400 = 1.265625 = (9/8)^2 over 8 years means 4-year factor = 9/8.\nThus amount after 4 years on Rs.2240 = 2240 × 9/8 = Rs.2520.",
+    "topic": "Compound Interest",
+    "subtopic": "Growth Factor and Installments",
+    "conceptTested": "Compound interest growth factor over periodic intervals: (A_2 / A_1) or multi-year ratio analysis",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Growth Factor and Installments",
+      "conceptTested": "Compound interest growth factor over periodic intervals: (A_2 / A_1) or multi-year ratio analysis"
+    }
+  },
+  {
+    "testName": "CHSL 24/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 4",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "00:47",
+    "avgTime": "00:30",
+    "questionText": "A sum is being lent at 10 percent per annum compound interest (compounding annually). What is the ratio of amount at the end of first year to the amount at the end of second year?",
+    "options": {
+      "A": "10 : 11",
+      "B": "9 : 10",
+      "C": "4 : 5",
+      "D": "7 : 12"
+    },
+    "solution": "Let principal = P\nAmount after 1 year = 1.1P\nAmount after 2 years = 1.1 × 1.1P = 1.21P\nRatio = 1.1P : 1.21P = 110 : 121 = 10 : 11",
+    "topic": "Compound Interest",
+    "subtopic": "Ratio of Amounts",
+    "conceptTested": "Ratio of successive year amounts under compound interest: A_t / A_(t-1) = 1 + r/100",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Ratio of Amounts",
+      "conceptTested": "Ratio of successive year amounts under compound interest: A_t / A_(t-1) = 1 + r/100"
+    }
+  },
+  {
+    "testName": "CHSL 24/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 5",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:28",
+    "avgTime": "00:50",
+    "questionText": "The ratio of the interest received when Rs. (x + 500) is invested at 32% p.a. simple interest for 4 years to the interest received when Rs. (x - 500) is invested at 20% p.a. compound interest, compounded annually for 2 years, is 64:11. Find the value of 'x'.",
+    "options": {
+      "A": "Rs. 1,600",
+      "B": "Rs. 1,500",
+      "C": "Rs. 1,100",
+      "D": "Rs. 1,000"
+    },
+    "solution": "Simple interest on (x + 500) at 32% for 4 years:\nSI = (x + 500) × 32 × 4 / 100 = 1.28(x + 500)\nCompound interest on (x − 500) at 20% for 2 years:\nCI = (x − 500)[(1.2)² − 1] = (x − 500)(1.44 − 1) = 0.44(x − 500)\nGiven:\n1.28(x + 500) / 0.44(x − 500) = 64/11\nNow,\n128(x + 500) / 44(x − 500) = 64/11\nCross-multiplying:\n128 × 11(x + 500) = 64 × 44(x − 500)\n1408(x + 500) = 2816(x − 500)\nx + 500 = 2(x − 500)\nx + 500 = 2x − 1000\nx = 1500",
+    "topic": "Compound Interest",
+    "subtopic": "Comparison of SI and CI",
+    "conceptTested": "Equating Simple Interest and Compound Interest formulas given a ratio",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Comparison of SI and CI",
+      "conceptTested": "Equating Simple Interest and Compound Interest formulas given a ratio"
+    }
+  },
+  {
+    "testName": "CHSL 24/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 7",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "01:31",
+    "avgTime": "00:53",
+    "questionText": "The compound interest on a sum at 18% p.a. for 1 1/2 years, compounded yearly, is Rs. 2,862. Find the principal.",
+    "options": {
+      "A": "Rs.10,000",
+      "B": "Rs.10,500",
+      "C": "Rs.9,000",
+      "D": "Rs.9,500"
+    },
+    "solution": "For 1 1/2 years with annual compounding:\nFirst year amount = P × 1.18\nFor next half year, interest is simple on amount of first year:\nAmount = P × 1.18 × (1 + 18/2/100)\n= P × 1.18 × 1.09\n= P × 1.2862\nSo CI = P(1.2862 − 1) = 0.2862P\nGiven 0.2862P = 2862\nP = 2862 / 0.2862 = 10000",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest for Fractional Years",
+    "conceptTested": "Compound interest for t = n + a/b years: A = P(1 + r/100)^n × (1 + (a/b)r/100)",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest for Fractional Years",
+      "conceptTested": "Compound interest for t = n + a/b years: A = P(1 + r/100)^n × (1 + (a/b)r/100)"
+    }
+  },
+  {
+    "testName": "CHSL 24/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 9",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "C",
+    "userTime": "00:46",
+    "avgTime": "00:52",
+    "questionText": "The amount received on a certain sum at the same annual simple interest rate after 3 years and 5 years at compound interest (compounding annually) is Rs. 5324 and Rs. 6442.04 respectively. What is that sum?",
+    "options": {
+      "A": "Rs. 5000",
+      "B": "Rs. 4200",
+      "C": "Rs. 4000",
+      "D": "Rs. 4800"
+    },
+    "solution": "Let principal = P and rate = r\nGiven:\nP(1 + r/100)^3 = 5324\nP(1 + r/100)^5 = 6442.04\nDivide:\n(1 + r/100)^2 = 6442.04 / 5324 = 1.21\nSo 1 + r/100 = 1.1\nr = 10%\nNow,\nP(1.1)^3 = 5324\nP × 1.331 = 5324\nP = 5324 / 1.331 = 4000",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Finding Principal from Amounts in Consecutive Years",
+    "conceptTested": "The ratio of amounts after consecutive time periods can be used to determine the rate of interest and initial principal.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Finding Principal from Amounts in Consecutive Years",
+      "conceptTested": "The ratio of amounts after consecutive time periods can be used to determine the rate of interest and initial principal."
+    }
+  },
+  {
+    "testName": "CHSL 25/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 10",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "A",
+    "userTime": "01:27",
+    "avgTime": "01:17",
+    "questionText": "A father deposited Rs. 60,000 in a compound interest scheme for his son's business when his son was 20 years old. The scheme offers 15% compound interest per annum compounded annually. What will be the total amount his son will receive when he turns 24?",
+    "options": {
+      "A": "Rs.1,04,940.38",
+      "B": "Rs.1,12,450",
+      "C": "Rs.1,45,670.45",
+      "D": "Rs.1,66,987"
+    },
+    "solution": "Time = 24 − 20 = 4 years\nAmount = P(1 + r/100)^n\n\n𝐴\n=\n60000\n(\n1.15\n)\n4\n\n𝐴\n=\n60000\n×\n1.74900625\n=\n104940.375\n\n≈ Rs.1,04,940.38",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Total Amount Calculation",
+    "conceptTested": "Amount formula for compound interest compounded annually: A = P(1 + r/100)^n",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Total Amount Calculation",
+      "conceptTested": "Amount formula for compound interest compounded annually: A = P(1 + r/100)^n"
+    }
+  },
+  {
+    "testName": "CHSL 26/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 14",
+    "status": "Incorrect",
+    "chosenOption": "N/A",
+    "correctOption": "A",
+    "userTime": "00:37",
+    "avgTime": "01:03",
+    "questionText": "Ravi invested Rs. 25,000 in two schemes for 3 years. Both schemes offer 12% p.a. interest. One gives simple interest and the other gives compound interest (compounded annually). Find the difference between the two interests earned for these 3 years.",
+    "options": {
+      "A": "Rs. 1123.2",
+      "B": "Rs. 1080.25",
+      "C": "Rs. 1536",
+      "D": "Rs. 1336"
+    },
+    "solution": "Simple interest for 3 years:\nSI = 25000 × 12 × 3 / 100 = 9000\nCompound amount:\nA = 25000(1.12)³ = 25000 × 1.404928 = 35123.2\nCI = 35123.2 - 25000 = 10123.2\nDifference = 10123.2 - 9000 = 1123.2",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Difference between SI and CI",
+    "conceptTested": "Difference between Simple Interest and Compound Interest over 3 years: CI - SI = P * r^2 * (300 + r) / 100^3",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Difference between SI and CI",
+      "conceptTested": "Difference between Simple Interest and Compound Interest over 3 years: CI - SI = P * r^2 * (300 + r) / 100^3"
+    }
+  },
+  {
+    "testName": "CHSL 27/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 15",
+    "status": "Correct (Slow)",
+    "chosenOption": "B",
+    "correctOption": "B",
+    "userTime": "01:09",
+    "avgTime": "00:27",
+    "questionText": "A sum of Rs. 6250 amounts to Rs. 7290 in 2 years at compound interest. Find the rate per annum.",
+    "options": {
+      "A": "A sum of Rs. 6250 amounts to Rs. 7290 in 2 years at compound interest. Find the rate per annum.",
+      "B": "8%",
+      "C": "63%",
+      "D": "9%"
+    },
+    "solution": "in two year A1/A2 = 729/625 , ONE YEAR MULTIPLY FACTOR 27/25 means 8%",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Rate Calculation",
+    "conceptTested": "Finding the rate of interest given principal and amount for 2 years using the square root of the ratio of amounts.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Rate Calculation",
+      "conceptTested": "Finding the rate of interest given principal and amount for 2 years using the square root of the ratio of amounts."
+    }
+  },
+  {
+    "testName": "CHSL 27/11/2025 Shift-2 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 16",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "D",
+    "userTime": "00:29",
+    "avgTime": "00:34",
+    "questionText": "The amount received on a certain sum at the same annual rate of interest after 3 years and 5 years on compound interest (compounding annually) is Rs. 10648 and Rs. 12884.08 respectively. What is that sum?",
+    "options": {
+      "A": "Rs. 9200",
+      "B": "Rs. 7200",
+      "C": "Rs. 8400",
+      "D": "Rs. 8000"
+    },
+    "solution": "Let principal = P and annual multiplier = (1 + r/100) = x.\nThen:\nPx³ = 10648\nPx⁵ = 12884.08\nDividing:\nx² = 12884.08 / 10648 = 1.21\nSo x = 1.1\nNow:\nP × (1.1)³ = 10648\nP × 1.331 = 10648\nP = 10648 / 1.331 = 8000",
+    "topic": "Compound Interest",
+    "subtopic": "Compound Interest - Finding Principal from Amounts in Consecutive Years",
+    "conceptTested": "The ratio of compound amounts over an interval of 2 years yields the square of the annual growth factor.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Compound Interest - Finding Principal from Amounts in Consecutive Years",
+      "conceptTested": "The ratio of compound amounts over an interval of 2 years yields the square of the annual growth factor."
+    }
+  },
+  {
+    "testName": "CHSL 27/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 17",
+    "status": "Correct (Slow)",
+    "chosenOption": "A",
+    "correctOption": "A",
+    "userTime": "01:24",
+    "avgTime": "00:38",
+    "questionText": "What sum will amount to Rs. 23958 in 3 years at the rate of 10 percent per annum at compound interest (compounding annually)?",
+    "options": {
+      "A": "Rs. 18000",
+      "B": "Rs. 12000",
+      "C": "Rs. 16000",
+      "D": "Rs. 15000"
+    },
+    "solution": "Amount = P(1 + 10/100)³\n23958 = P(1.1)³\n23958 = P × 1.331\nP = 23958 / 1.331 = 18000",
+    "topic": "Compound Interest",
+    "subtopic": "Amount and Principal Calculations",
+    "conceptTested": "Compound interest amount formula: A = P(1 + r/100)^t",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Amount and Principal Calculations",
+      "conceptTested": "Compound interest amount formula: A = P(1 + r/100)^t"
+    }
+  },
+  {
+    "testName": "CHSL 28/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 18",
+    "status": "Incorrect",
+    "chosenOption": "N/A",
+    "correctOption": "A",
+    "userTime": "00:41",
+    "avgTime": "00:21",
+    "questionText": "A sum is being lent at 12.5 percent per annum compound interest (compounding annually). What is the ratio of amount at the end of first year to the amount at the end of second year?",
+    "options": {
+      "A": "8 : 9",
+      "B": "7 : 8",
+      "C": "9 : 11",
+      "D": "9 : 10"
+    },
+    "solution": "Rate = 12.5% = 1/8.\nAmount after first year = P × 9/8\nAmount after second year = P × 9/8 × 9/8 = P × 81/64\nRatio = 9/8 : 81/64 = 72 : 81 = 8 : 9.",
+    "topic": "Compound Interest",
+    "subtopic": "Ratio of Amounts",
+    "conceptTested": "Successive year amounts in compound interest form a geometric progression with common ratio (1 + r/100).",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Ratio of Amounts",
+      "conceptTested": "Successive year amounts in compound interest form a geometric progression with common ratio (1 + r/100)."
+    }
+  },
+  {
+    "testName": "CHSL 28/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 20",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "01:17",
+    "avgTime": "00:43",
+    "questionText": "Rs. 4000 is invested in a scheme of compound interest (compounding annually) at the annual rate of 15 percent. What will be the difference between compound interest of second year and third year?",
+    "options": {
+      "A": "Rs. 102.5",
+      "B": "Rs. 103.5",
+      "C": "Rs. 105.5",
+      "D": "Rs. 107.5"
+    },
+    "solution": "Amount after 1 year = 4000 × 1.15 = 4600\nCI of 2nd year = 15% of 4600 = 690\nAmount after 2 years = 4600 + 690 = 5290\nCI of 3rd year = 15% of 5290 = 793.5\nDifference = 793.5 - 690 = 103.5",
+    "topic": "Compound Interest",
+    "subtopic": "Difference Between Consecutive Years Interest",
+    "conceptTested": "The interest for the (n+1)th year is calculated on the amount at the end of the nth year.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference Between Consecutive Years Interest",
+      "conceptTested": "The interest for the (n+1)th year is calculated on the amount at the end of the nth year."
+    }
+  },
+  {
+    "testName": "CHSL 29/11/2025 Shift-1 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 21",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:08",
+    "avgTime": "00:37",
+    "questionText": "Rs. 6000 is invested in a scheme of compound interest (compounding annually) at the annual rate of 20 percent. What will be the difference between compound interest of second year and third year?",
+    "options": {
+      "A": "Rs. 272",
+      "B": "Rs. 288",
+      "C": "Rs. 278",
+      "D": "Rs. 298"
+    },
+    "solution": "Amount after 1 year = 6000 × 1.2 = 7200\nInterest in 2nd year = 20% of 7200 = 1440\nAmount after 2 years = 7200 × 1.2 = 8640\nInterest in 3rd year = 20% of 8640 = 1728\nDifference = 1728 - 1440 = 288",
+    "topic": "Compound Interest",
+    "subtopic": "Difference Between Consecutive Years Interest",
+    "conceptTested": "The interest for the (n+1)th year is calculated on the amount at the end of the nth year.",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Difference Between Consecutive Years Interest",
+      "conceptTested": "The interest for the (n+1)th year is calculated on the amount at the end of the nth year."
+    }
+  },
+  {
+    "testName": "CHSL 29/11/2025 Shift-3 (Quant)",
+    "testType": "sectional",
+    "platform": "MockMatrix",
+    "subject": "Quantitative Aptitude",
+    "section": "Quantitative Aptitude",
+    "questionNumber": "Question 23",
+    "status": "Skipped",
+    "chosenOption": "Unattempted",
+    "correctOption": "B",
+    "userTime": "00:06",
+    "avgTime": "00:35",
+    "questionText": "The amount received on a certain sum at the same annual rate of interest after 3 years and 5 years on compound interest (compounding annually) is Rs. 15972 and Rs. 19326.12 respectively. What is that sum?",
+    "options": {
+      "A": "Rs. 10000",
+      "B": "Rs. 12000",
+      "C": "Rs. 11400",
+      "D": "Rs. 14000"
+    },
+    "solution": "Let the rate of interest be\n𝑟\n.\n\n𝐴\n5\n𝐴\n3\n=\n(\n1\n+\n𝑟\n)\n2\n⟹\n19326.12\n15972\n=\n1.21\n⟹\n1\n+\n𝑟\n=\n1.1\n⟹\n𝑟\n=\n10\n%\n\nNow find Principal\n𝑃\nusing\n𝐴\n3\n:\n\n𝑃\n(\n1\n+\n0.1\n)\n3\n=\n15972\n⟹\n𝑃\n×\n1.331\n=\n15972\n⟹\n𝑃\n=\n15972\n1.331\n=\n12000",
+    "topic": "Compound Interest",
+    "subtopic": "Finding Principal from Amounts of Different Years",
+    "conceptTested": "Ratio of amounts over a time gap of n years: A_(t+n) = A_t × (1 + r/100)^n",
+    "tags": {
+      "topic": "Compound Interest",
+      "subtopic": "Finding Principal from Amounts of Different Years",
+      "conceptTested": "Ratio of amounts over a time gap of n years: A_(t+n) = A_t × (1 + r/100)^n"
+    }
+  }
+]
