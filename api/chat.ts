@@ -1,5 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
-import { detectUserIntent, buildSelectiveContext, globalStore } from './mockTopicIndex';
+import { detectUserIntent, buildSelectiveContext, globalStore } from './lib/mockTopicIndex';
 
 const SYSTEM_INSTRUCTION = `You are "Tommy", an elite, analytical, highly encouraging study assistant and exam coach built directly into the candidate's CGL Preparation Portal.
 
@@ -181,20 +180,57 @@ ${scopeContext ? `\n${scopeContext}\n` : ''}
 ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 `;
 
-    const ai = new GoogleGenAI({ apiKey });
+    let reply = '';
     let configuredModel = (process.env.GEMINI_MODEL || process.env.VITE_GEMINI_MODEL || '').trim().replace(/^["']|["']$/g, '');
     const modelName = configuredModel || 'gemini-3.6-flash';
 
-    const response = await ai.models.generateContent({
-      model: modelName,
-      contents,
-      config: {
-        systemInstruction: fullSystemInstruction,
-        temperature: 0.7
-      }
-    });
+    // 1. First attempt: Direct Google Generative Language REST API (zero Node module dependencies)
+    try {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelName)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+      const geminiRes = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents,
+          systemInstruction: {
+            parts: [{ text: fullSystemInstruction }]
+          },
+          generationConfig: {
+            temperature: 0.7
+          }
+        })
+      });
 
-    const reply = response.text || 'I apologize, but I could not generate a response at this moment.';
+      if (!geminiRes.ok) {
+        const errJson = await geminiRes.json().catch(() => ({}));
+        throw new Error(errJson?.error?.message || `Google API status ${geminiRes.status}`);
+      }
+
+      const geminiData = await geminiRes.json();
+      reply = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    } catch (restErr: any) {
+      // 2. Secondary fallback: Dynamic @google/genai SDK import
+      try {
+        const { GoogleGenAI } = await import('@google/genai');
+        const ai = new GoogleGenAI({ apiKey });
+        const response = await ai.models.generateContent({
+          model: modelName,
+          contents,
+          config: {
+            systemInstruction: fullSystemInstruction,
+            temperature: 0.7
+          }
+        });
+        reply = response.text || '';
+      } catch (sdkErr: any) {
+        throw new Error(restErr?.message || sdkErr?.message || 'Failed to process chat with Gemini.');
+      }
+    }
+
+    if (!reply) {
+      reply = 'I apologize, but I could not generate a response at this moment.';
+    }
+
     return res.status(200).json({ reply });
   } catch (error: any) {
     console.error('[Gemini Chat Error]:', error);
