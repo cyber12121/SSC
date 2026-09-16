@@ -1,13 +1,17 @@
 export interface AiFocusedQuestion {
+  id?: string;
   qNum?: number;
   question: string;
   options?: Record<string, string>;
-  answer: string;
+  answer?: string;
+  correctAnswer?: string;
   userAnswer?: string;
   status?: string;
   solution?: string;
+  subject?: string;
   topic?: string;
   rca?: { tag: string; tagName?: string };
+  rcaReason?: any;
   userTime?: string | number;
   avgTime?: string | number;
 }
@@ -16,7 +20,7 @@ export interface AiFocusedScope {
   type: 'subject' | 'topic' | 'mock';
   title: string;
   subject?: string;
-  weakTopics?: string[];
+  weakTopics?: any[];
   stats?: {
     score?: number;
     maxMarks?: number;

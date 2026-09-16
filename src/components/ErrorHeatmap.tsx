@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Flame, 
@@ -19,10 +19,13 @@ import {
   Target,
   AlertCircle,
   HelpCircle,
-  BrainCircuit
+  BrainCircuit,
+  Check
 } from 'lucide-react';
-import { SubjectData, Chapter, Question, RCAClassification } from '../types';
-import { detectTopic } from '../utils/topicDetector';
+import { SubjectData, Chapter, Question, RCAClassification, RCATagType } from '../types';
+import { detectTopic, normalizeTopicTitle } from '../utils/topicDetector';
+
+const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
 
 interface ErrorHeatmapProps {
   mockData: SubjectData;
@@ -102,9 +105,45 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
   const [selectedTypeFilter, setSelectedTypeFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeDrillChapter, setActiveDrillChapter] = useState<ChapterHeatmapItem | null>(null);
+  const [editingNoteForQ, setEditingNoteForQ] = useState<string | null>(null);
+  const [modalSillyNoteInput, setModalSillyNoteInput] = useState<string>('');
+  const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
+  const [rcaVersion, setRcaVersion] = useState(0);
+
+  // Dynamic async load of bundled mock tests so errors from Full Tests appear in heatmap
+  useEffect(() => {
+    let active = true;
+    const loadBundled = async () => {
+      const all: any[] = [];
+      for (const [, loader] of Object.entries(mockQuestionModules)) {
+        try {
+          const mod = await (loader as () => Promise<any>)();
+          const raw = mod?.default || mod;
+          const list = Array.isArray(raw) ? raw : (raw?.questions || raw?.data || []);
+          if (Array.isArray(list) && list.length > 0) {
+            all.push(...list);
+          }
+        } catch {}
+      }
+      if (active) setBundledMockQuestions(all);
+    };
+    loadBundled();
+    return () => { active = false; };
+  }, []);
+
+  // Listen to RCA changes for instant cross-component reactivity
+  useEffect(() => {
+    const handleRcaUpdated = () => setRcaVersion(v => v + 1);
+    window.addEventListener('cgl_rca_updated', handleRcaUpdated);
+    window.addEventListener('storage', handleRcaUpdated);
+    return () => {
+      window.removeEventListener('cgl_rca_updated', handleRcaUpdated);
+      window.removeEventListener('storage', handleRcaUpdated);
+    };
+  }, []);
 
   const { subjectGroups, allSubjects, totalOverallErrors } = useMemo(() => {
-    // Read global RCA classifications saved from Mock Reviews
+    // 1. Read global RCA store
     const globalRcaStore: Record<string, any> = (() => {
       try {
         if (typeof window !== 'undefined') {
@@ -114,7 +153,28 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       } catch {}
       return {};
     })();
+    const globalEntries = Object.values(globalRcaStore) as any[];
 
+    // 2. Read cached mock test questions from localStorage (cgl_mock_questions_*)
+    const cachedMockQuestions: any[] = [];
+    try {
+      if (typeof window !== 'undefined') {
+        for (let i = 0; i < window.localStorage.length; i++) {
+          const key = window.localStorage.key(i);
+          if (key && key.startsWith('cgl_mock_questions_')) {
+            const raw = window.localStorage.getItem(key);
+            if (raw) {
+              try {
+                const parsed = JSON.parse(raw);
+                if (Array.isArray(parsed)) cachedMockQuestions.push(...parsed);
+              } catch {}
+            }
+          }
+        }
+      }
+    } catch {}
+
+    const canonicalSubjects = ['Mathematics', 'Reasoning', 'English', 'General Awareness'];
     const groups: Record<string, {
       subject: string;
       totalErrors: number;
@@ -132,88 +192,208 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       chapters: ChapterHeatmapItem[];
     }> = {};
 
-    let totalOverallErrors = 0;
+    canonicalSubjects.forEach(sub => {
+      groups[sub] = {
+        subject: sub,
+        totalErrors: 0,
+        totalWrong: 0,
+        totalUnattempted: 0,
+        totalSpeed: 0,
+        negativeMarks: 0,
+        rcaTotals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+        chapters: []
+      };
+    });
 
-    (Object.entries(mockData) as [string, Chapter[]][]).forEach(([subject, chapterList]) => {
-      if (!groups[subject]) {
-        groups[subject] = {
+    const topicMaps: Record<string, Record<string, ChapterHeatmapItem>> = {
+      'Mathematics': {},
+      'Reasoning': {},
+      'English': {},
+      'General Awareness': {}
+    };
+
+    const normalizeSub = (sub?: string): string => {
+      const s = (sub || '').toLowerCase();
+      if (s.includes('math') || s.includes('quant')) return 'Mathematics';
+      if (s.includes('reason') || s.includes('logic') || s.includes('intel')) return 'Reasoning';
+      if (s.includes('eng')) return 'English';
+      return 'General Awareness';
+    };
+
+    const findRca = (q: any): RCAClassification | undefined => {
+      if (q.rca && q.rca.tag && ['C', 'A', 'T', 'G'].includes(q.rca.tag)) return q.rca;
+      if (q.id && globalRcaStore[q.id]?.tag) return globalRcaStore[q.id];
+      const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
+      if (textNorm && globalRcaStore[textNorm]?.tag) return globalRcaStore[textNorm];
+      if (textNorm) {
+        const found = globalEntries.find(e => e?.tag && e?.questionText && e.questionText.trim().toLowerCase() === textNorm);
+        if (found) return found;
+      }
+      return undefined;
+    };
+
+    let totalOverallErrors = 0;
+    const processedQuestionKeys = new Set<string>();
+
+    const addQuestionToHeatmap = (q: any, rawSubject: string, forceErrorType?: 'wrong' | 'unattempted' | 'speed_issue') => {
+      const subject = normalizeSub(rawSubject || q.subject);
+      const qText = (q.question || q.questionText || '').trim();
+      const dedupKey = (qText ? `${subject}|${qText.toLowerCase()}` : (q.id || '')).slice(0, 160);
+
+      const qRca = findRca(q) || q.rca;
+
+      if (processedQuestionKeys.has(dedupKey)) {
+        // If already added, update RCA tag if newly available
+        if (qRca && qRca.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag)) {
+          const rawT = q.tags?.topic || q.topic || q.detectedTopic;
+          const normT = rawT ? normalizeTopicTitle(rawT) : '';
+          const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
+          const existingItem = topicMaps[subject]?.[topic]?.questions?.find(it => {
+            const itText = (it.question || '').trim().toLowerCase();
+            return (qText && itText === qText.toLowerCase()) || (q.id && it.id === q.id);
+          });
+          if (existingItem && (!existingItem.rcaClassification || !existingItem.rcaClassification.tag)) {
+            existingItem.rcaClassification = qRca;
+            existingItem.rca = qRca;
+            const tagKey = qRca.tag as 'C' | 'A' | 'T' | 'G';
+            if (groups[subject].rcaTotals.unclassified > 0) groups[subject].rcaTotals.unclassified--;
+            groups[subject].rcaTotals[tagKey]++;
+            if (topicMaps[subject][topic].rcaCounts.unclassified > 0) topicMaps[subject][topic].rcaCounts.unclassified--;
+            topicMaps[subject][topic].rcaCounts[tagKey]++;
+          }
+        }
+        return;
+      }
+
+      // Determine error type
+      let errorType: 'wrong' | 'unattempted' | 'speed_issue' | null = forceErrorType || null;
+      if (!errorType) {
+        const status = String(q.status || q.errorType || '').toLowerCase();
+        if (status.includes('unattempt') || status.includes('skip')) errorType = 'unattempted';
+        else if (status.includes('speed') || status.includes('slow') || q.isSlow) errorType = 'speed_issue';
+        else if (status.includes('wrong') || q.isCorrect === false || (q.userAnswer && q.answer && String(q.userAnswer).toLowerCase() !== String(q.answer).toLowerCase())) errorType = 'wrong';
+        else if (qRca) errorType = 'wrong';
+      }
+
+      // Filter out clean correct questions that have no speed issues and no RCA tags
+      if (!errorType && (q.isCorrect === true || String(q.status || '').toLowerCase() === 'correct')) {
+        return;
+      }
+      if (!errorType) errorType = 'wrong';
+
+      processedQuestionKeys.add(dedupKey);
+
+      const rawT = q.tags?.topic || q.topic || q.detectedTopic;
+      const normT = rawT ? normalizeTopicTitle(rawT) : '';
+      const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
+
+      if (!topicMaps[subject][topic]) {
+        topicMaps[subject][topic] = {
+          topic,
           subject,
           totalErrors: 0,
-          totalWrong: 0,
-          totalUnattempted: 0,
-          totalSpeed: 0,
+          wrongCount: 0,
+          unattemptedCount: 0,
+          speedIssueCount: 0,
           negativeMarks: 0,
-          rcaTotals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
-          chapters: []
+          rcaCounts: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+          questions: [],
+          severity: 'low'
         };
       }
 
-      const topicMap: Record<string, ChapterHeatmapItem> = {};
+      totalOverallErrors++;
+      groups[subject].totalErrors++;
 
+      if (errorType === 'wrong') { groups[subject].totalWrong++; groups[subject].negativeMarks += 0.5; }
+      else if (errorType === 'unattempted') groups[subject].totalUnattempted++;
+      else if (errorType === 'speed_issue') groups[subject].totalSpeed++;
+
+      if (qRca?.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag)) {
+        const tagKey = qRca.tag as 'C' | 'A' | 'T' | 'G';
+        groups[subject].rcaTotals[tagKey]++;
+        topicMaps[subject][topic].rcaCounts[tagKey]++;
+      } else {
+        groups[subject].rcaTotals.unclassified++;
+        topicMaps[subject][topic].rcaCounts.unclassified++;
+      }
+
+      const qEnriched: QuestionWithError = {
+        ...q,
+        question: qText || 'Question',
+        errorType,
+        detectedTopic: topic,
+        parentSubject: subject,
+        rcaClassification: qRca,
+        rca: qRca
+      };
+
+      topicMaps[subject][topic].totalErrors++;
+      topicMaps[subject][topic].questions.push(qEnriched);
+
+      if (errorType === 'wrong') { topicMaps[subject][topic].wrongCount++; topicMaps[subject][topic].negativeMarks += 0.5; }
+      else if (errorType === 'unattempted') topicMaps[subject][topic].unattemptedCount++;
+      else if (errorType === 'speed_issue') topicMaps[subject][topic].speedIssueCount++;
+    };
+
+    // A. Ingest static mockData
+    (Object.entries(mockData) as [string, Chapter[]][]).forEach(([subject, chapterList]) => {
       chapterList.forEach(chapter => {
         const chTitle = (chapter.chapter_title || '').toLowerCase();
-        let errorType: 'wrong' | 'unattempted' | 'speed_issue' = 'wrong';
-
-        if (chTitle.includes('unattempted') || chTitle.includes('skipped')) errorType = 'unattempted';
-        else if (chTitle.includes('speed') || chTitle.includes('slow')) errorType = 'speed_issue';
+        let chErrorType: 'wrong' | 'unattempted' | 'speed_issue' | undefined = undefined;
+        if (chTitle.includes('unattempted') || chTitle.includes('skipped')) chErrorType = 'unattempted';
+        else if (chTitle.includes('speed') || chTitle.includes('slow')) chErrorType = 'speed_issue';
 
         chapter.questions.forEach(q => {
-          totalOverallErrors++;
-          groups[subject].totalErrors++;
-
-          if (errorType === 'wrong') { groups[subject].totalWrong++; groups[subject].negativeMarks += 0.5; }
-          else if (errorType === 'unattempted') groups[subject].totalUnattempted++;
-          else if (errorType === 'speed_issue') groups[subject].totalSpeed++;
-
-          const topic = detectTopic(q, subject);
-
-          if (!topicMap[topic]) {
-            topicMap[topic] = {
-              topic,
-              subject,
-              totalErrors: 0,
-              wrongCount: 0,
-              unattemptedCount: 0,
-              speedIssueCount: 0,
-              negativeMarks: 0,
-              rcaCounts: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
-              questions: [],
-              severity: 'low'
-            };
-          }
-
-          // Ingest RCA tag if present on question or in global store
-          const qRca: RCAClassification | undefined = q.rca || (q.id && globalRcaStore[q.id] ? globalRcaStore[q.id] : undefined);
-
-          if (qRca?.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag)) {
-            const tagKey = qRca.tag as 'C' | 'A' | 'T' | 'G';
-            groups[subject].rcaTotals[tagKey]++;
-            topicMap[topic].rcaCounts[tagKey]++;
-          } else {
-            groups[subject].rcaTotals.unclassified++;
-            topicMap[topic].rcaCounts.unclassified++;
-          }
-
-          const qEnriched: QuestionWithError = { ...q, errorType, detectedTopic: topic, parentSubject: subject, rcaClassification: qRca };
-          topicMap[topic].totalErrors++;
-          topicMap[topic].questions.push(qEnriched);
-
-          if (errorType === 'wrong') { topicMap[topic].wrongCount++; topicMap[topic].negativeMarks += 0.5; }
-          else if (errorType === 'unattempted') topicMap[topic].unattemptedCount++;
-          else if (errorType === 'speed_issue') topicMap[topic].speedIssueCount++;
+          addQuestionToHeatmap(q, subject, chErrorType);
         });
       });
+    });
 
-      // #8: Relative/percentage-based severity (avoids all topics being "critical")
+    // B. Ingest from cached mock tests in localStorage
+    cachedMockQuestions.forEach(q => {
+      addQuestionToHeatmap(q, q.subject);
+    });
+
+    // C. Ingest from bundled mock tests
+    bundledMockQuestions.forEach(q => {
+      addQuestionToHeatmap(q, q.subject);
+    });
+
+    // D. Ingest any remaining questions from global RCA store that were tagged
+    globalEntries.forEach(entry => {
+      if (!entry) return;
+      const qText = (entry.questionText || '').trim();
+      const dedupKey = (qText ? `${normalizeSub(entry.subject)}|${qText.toLowerCase()}` : (entry.id || '')).slice(0, 160);
+      if (!processedQuestionKeys.has(dedupKey)) {
+        addQuestionToHeatmap({
+          id: entry.id,
+          question: qText || entry.id,
+          options: entry.options,
+          answer: entry.answer,
+          solution: entry.solution,
+          image: entry.image,
+          subject: entry.subject,
+          tags: { topic: entry.topic },
+          topic: entry.topic,
+          status: entry.status || 'wrong',
+          errorType: entry.errorType || 'wrong',
+          isCorrect: false,
+          rca: entry
+        }, entry.subject || 'General Awareness', entry.errorType || 'wrong');
+      }
+    });
+
+    // Compute relative severity and mark recovery per subject
+    canonicalSubjects.forEach(subject => {
+      const topicMap = topicMaps[subject] || {};
       const subjectTotalErrors = Object.values(topicMap).reduce((s, c) => s + c.totalErrors, 0);
       const chapters = Object.values(topicMap).map(c => {
         const errorShare = subjectTotalErrors > 0 ? (c.totalErrors / subjectTotalErrors) * 100 : 0;
         let severity: 'critical' | 'high' | 'medium' | 'low' = 'low';
-        // Critical: top 15% of all subject errors OR 5+ errors, High: top 8% OR 3+ errors
         if (errorShare >= 15 || c.wrongCount >= 5) severity = 'critical';
         else if (errorShare >= 8 || c.wrongCount >= 3) severity = 'high';
         else if (errorShare >= 4 || c.totalErrors >= 2) severity = 'medium';
-        // Also attach marks recovery: converting 60% of wrong → marks gained
         const marksRecovery = Math.round((Math.ceil(c.wrongCount * 0.6) * 2 + c.wrongCount * 0.5) * 10) / 10;
         return { ...c, severity, marksRecovery };
       });
@@ -222,11 +402,11 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       groups[subject].chapters = chapters;
     });
 
-    const subjects = Object.keys(groups).filter(s => groups[s].totalErrors > 0);
-    subjects.sort((a, b) => (groups[b]?.totalErrors || 0) - (groups[a]?.totalErrors || 0));
+    const subjects = canonicalSubjects.filter(s => groups[s]?.totalErrors > 0);
+    if (subjects.length === 0) subjects.push(...canonicalSubjects);
 
     return { subjectGroups: groups, allSubjects: subjects, totalOverallErrors };
-  }, [mockData]);
+  }, [mockData, bundledMockQuestions, rcaVersion]);
 
   const [activeSubject, setActiveSubject] = useState<string>(() => allSubjects[0] || 'Mathematics');
 
@@ -259,6 +439,72 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       return true;
     });
   }, [currentSubjectData, selectedTypeFilter, searchQuery, viewMode]);
+
+  const handleClassifyQuestionInModal = (targetQ: QuestionWithError, tag: RCATagType, note?: string) => {
+    const tagNames: Record<RCATagType, RCAClassification['tagName']> = {
+      C: 'Conceptual Gap',
+      A: 'Silly Mistake',
+      T: 'Time / Ego Trap',
+      G: 'Guesswork Failed'
+    };
+
+    const newRca: RCAClassification = {
+      tag,
+      tagName: tagNames[tag],
+      sillyMistakeNote: tag === 'A' ? (note !== undefined ? note : (targetQ.rcaClassification?.sillyMistakeNote || '')) : undefined,
+      classifiedAt: new Date().toISOString()
+    };
+
+    try {
+      if (typeof window !== 'undefined') {
+        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+        const qId = targetQ.id || `${targetQ.parentSubject || 'mock'}_${targetQ.detectedTopic || 'topic'}`;
+        const textNorm = targetQ.question ? targetQ.question.trim().toLowerCase() : '';
+
+        const entry = {
+          ...newRca,
+          id: qId,
+          subject: targetQ.parentSubject || targetQ.subject || 'General Awareness',
+          topic: targetQ.detectedTopic || targetQ.tags?.topic || 'General',
+          questionText: targetQ.question,
+          options: targetQ.options,
+          answer: targetQ.answer,
+          solution: targetQ.solution,
+          image: targetQ.image,
+          status: targetQ.status || targetQ.errorType || 'wrong',
+          errorType: targetQ.errorType || 'wrong',
+          isCorrect: false
+        };
+
+        globalStore[qId] = entry;
+        if (textNorm) globalStore[textNorm] = entry;
+        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+
+        // Dispatch update event for cross-component reactivity
+        window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { qId, rca: newRca } }));
+      }
+    } catch {}
+
+    // Update active drill chapter questions state immediately
+    setActiveDrillChapter(prev => {
+      if (!prev) return null;
+      const updatedQuestions = prev.questions.map(q => {
+        const match = q === targetQ || (q.question && q.question.trim().toLowerCase() === targetQ.question.trim().toLowerCase());
+        if (match) {
+          return {
+            ...q,
+            rcaClassification: newRca,
+            rca: newRca
+          };
+        }
+        return q;
+      });
+      return { ...prev, questions: updatedQuestions };
+    });
+
+    setRcaVersion(v => v + 1);
+  };
 
   const maxErrors = filteredChapters.length > 0 ? filteredChapters[0].totalErrors : 1;
   const subjectCfg = SUBJECT_CONFIG[currentSubjectName] || SUBJECT_CONFIG['Mathematics'];
@@ -863,6 +1109,102 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                             </div>
                           </details>
                         )}
+
+                        {/* Interactive In-Modal RCA Classification Toolbar */}
+                        <div className="pt-3 border-t border-slate-200/80">
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mr-1">RCA Reason:</span>
+                              {(['C', 'A', 'T', 'G'] as const).map(tagKey => {
+                                const isSelected = q.rcaClassification?.tag === tagKey;
+                                const tagLabels = { C: 'Conceptual Gap', A: 'Silly Mistake', T: 'Time Trap', G: 'Guesswork' };
+                                const tagClasses = {
+                                  C: isSelected ? 'bg-purple-600 text-white shadow-xs border-purple-600' : 'bg-purple-50 text-purple-700 hover:bg-purple-100 border-purple-200',
+                                  A: isSelected ? 'bg-rose-600 text-white shadow-xs border-rose-600' : 'bg-rose-50 text-rose-700 hover:bg-rose-100 border-rose-200',
+                                  T: isSelected ? 'bg-amber-600 text-white shadow-xs border-amber-600' : 'bg-amber-50 text-amber-700 hover:bg-amber-100 border-amber-200',
+                                  G: isSelected ? 'bg-blue-600 text-white shadow-xs border-blue-600' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 border-blue-200'
+                                };
+                                return (
+                                  <button
+                                    key={tagKey}
+                                    type="button"
+                                    onClick={() => {
+                                      handleClassifyQuestionInModal(q, tagKey);
+                                      if (tagKey === 'A') {
+                                        setEditingNoteForQ(q.id || String(qIdx));
+                                        setModalSillyNoteInput(q.rcaClassification?.sillyMistakeNote || '');
+                                      } else {
+                                        setEditingNoteForQ(null);
+                                      }
+                                    }}
+                                    className={`px-2 py-0.5 rounded-md text-[10px] font-bold border transition-all flex items-center gap-1 cursor-pointer ${tagClasses[tagKey]}`}
+                                  >
+                                    <span className="font-mono">[{tagKey}]</span>
+                                    <span>{tagLabels[tagKey]}</span>
+                                    {isSelected && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                                  </button>
+                                );
+                              })}
+                            </div>
+
+                            {q.rcaClassification?.tag && (
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  try {
+                                    if (typeof window !== 'undefined') {
+                                      const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+                                      const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+                                      const qId = q.id || `${q.parentSubject || 'mock'}_${q.detectedTopic || 'topic'}`;
+                                      const textNorm = q.question ? q.question.trim().toLowerCase() : '';
+                                      delete globalStore[qId];
+                                      if (textNorm) delete globalStore[textNorm];
+                                      window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+                                      window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { qId, rca: null } }));
+                                    }
+                                  } catch {}
+                                  setActiveDrillChapter(prev => {
+                                    if (!prev) return null;
+                                    return {
+                                      ...prev,
+                                      questions: prev.questions.map(it => it === q ? { ...it, rcaClassification: undefined, rca: undefined } : it)
+                                    };
+                                  });
+                                  setRcaVersion(v => v + 1);
+                                }}
+                                className="text-[10px] font-semibold text-slate-400 hover:text-rose-600 transition-colors cursor-pointer underline decoration-dotted"
+                              >
+                                Clear Tag
+                              </button>
+                            )}
+                          </div>
+
+                          {/* Editable Silly Note box if tag is 'A' */}
+                          {(q.rcaClassification?.tag === 'A' || editingNoteForQ === (q.id || String(qIdx))) && (
+                            <div className="mt-2.5 p-2 rounded-lg bg-rose-50 border border-rose-200 flex items-center gap-2">
+                              <input
+                                type="text"
+                                value={editingNoteForQ === (q.id || String(qIdx)) ? modalSillyNoteInput : (q.rcaClassification?.sillyMistakeNote || '')}
+                                onChange={e => {
+                                  setEditingNoteForQ(q.id || String(qIdx));
+                                  setModalSillyNoteInput(e.target.value);
+                                }}
+                                placeholder="Add silly mistake note (e.g., calculation slip, misread question)..."
+                                className="flex-1 bg-white border border-rose-300 rounded px-2.5 py-1 text-xs text-rose-950 focus:outline-none focus:ring-1 focus:ring-rose-500"
+                              />
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  handleClassifyQuestionInModal(q, 'A', modalSillyNoteInput);
+                                  setEditingNoteForQ(null);
+                                }}
+                                className="bg-rose-600 hover:bg-rose-700 text-white text-[11px] font-bold px-2.5 py-1 rounded transition-colors cursor-pointer shrink-0"
+                              >
+                                Save Note
+                              </button>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   );

@@ -142,7 +142,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
         if (globalRaw) {
           const globalStore = JSON.parse(globalRaw);
+          const globalEntries = Object.values(globalStore) as any[];
           (result.questionDetails || []).forEach((qd, idx) => {
+            if (map[idx]) return;
             const q = qd.question;
             const qId = q?.id;
             const qText = q?.question ? q.question.trim().toLowerCase() : '';
@@ -150,6 +152,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               map[idx] = globalStore[qId];
             } else if (qText && globalStore[qText]) {
               map[idx] = globalStore[qText];
+            } else if (qText) {
+              const matched = globalEntries.find(e => e?.questionText && e.questionText.trim().toLowerCase() === qText);
+              if (matched) map[idx] = matched;
             }
           });
         }
@@ -181,6 +186,110 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     return counts;
   }, [rcaMap]);
 
+  // Robust persistence helper for RCA classifications
+  const persistRcaUpdate = (updatedMap: Record<number, RCAClassification>, targetIdx: number, newRca?: RCAClassification, isClear: boolean = false) => {
+    try {
+      if (typeof window === 'undefined') return;
+
+      if (result.id) {
+        window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updatedMap));
+      }
+      if (result.chapter_title) {
+        window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updatedMap));
+      }
+
+      // Update global store for Error Heatmap & Sankalp AI
+      const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+      const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+
+      const it = items[targetIdx];
+      const q = it?.question || ({} as Question);
+      const qId = q.id || (result.id ? `${result.id}_${targetIdx + 1}` : `mock_${targetIdx + 1}`);
+      const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
+
+      if (isClear || !newRca) {
+        delete globalStore[qId];
+        if (qTextNorm) delete globalStore[qTextNorm];
+      } else {
+        const fullEntry = {
+          ...newRca,
+          id: qId,
+          q_num: targetIdx + 1,
+          mockId: result.id,
+          mockTitle: result.chapter_title,
+          subject: q.subject || result.subject || 'General Awareness',
+          topic: q.tags?.topic || (q as any).topic || 'General',
+          questionText: q.question,
+          options: q.options,
+          answer: q.answer,
+          solution: q.solution,
+          image: q.image,
+          userAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
+          selectedAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
+          chosenOption: it?.selectedAnswer || (it as any)?.userAnswer || '',
+          isCorrect: it?.isCorrect,
+          isSlow: it?.isSlow,
+          status: (it as any)?.status || (it?.isSlow ? 'slow' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted'))),
+          errorType: it?.isSlow ? 'speed_issue' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted')),
+          timeSpent: it?.timeSpent,
+          userTime: it?.timeSpent,
+          avgTime: q.avgTime ?? (it as any)?.avgTime,
+          avgTimeSeconds: q.avgTimeSeconds ?? (it as any)?.avgTimeSeconds
+        };
+
+        globalStore[qId] = fullEntry;
+        if (qTextNorm) {
+          globalStore[qTextNorm] = fullEntry;
+        }
+      }
+
+      window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+
+      // Update mock questions array in localStorage and trigger background persistence
+      if (result.id) {
+        const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+        let cachedList: any[] = [];
+        if (cachedRaw) {
+          try { cachedList = JSON.parse(cachedRaw); } catch {}
+        }
+        if (!Array.isArray(cachedList) || cachedList.length === 0) {
+          cachedList = items.map((item, idx) => ({
+            ...(item.question || {}),
+            q_num: idx + 1,
+            userAnswer: item.selectedAnswer || (item as any).userAnswer || '',
+            selectedAnswer: item.selectedAnswer || (item as any).userAnswer || '',
+            chosenOption: item.selectedAnswer || (item as any).userAnswer || '',
+            isCorrect: item.isCorrect,
+            isSlow: item.isSlow,
+            status: (item as any).status || (item.isSlow ? 'slow' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted'))),
+            errorType: item.isSlow ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
+            timeSpent: item.timeSpent,
+            userTime: item.timeSpent,
+            rca: updatedMap[idx] || item.rca || item.question?.rca || undefined
+          }));
+        } else if (cachedList[targetIdx]) {
+          cachedList[targetIdx].rca = isClear ? undefined : newRca;
+        }
+
+        window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
+
+        // Background sync to backend disk storage
+        fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(cachedList)
+        }).catch(() => {});
+      }
+
+      // Notify other views (ErrorHeatmap, Dashboard) immediately
+      window.dispatchEvent(new CustomEvent('cgl_rca_updated', {
+        detail: { qId, qTextNorm, rca: isClear ? null : newRca }
+      }));
+    } catch (e) {
+      console.error('Error persisting RCA:', e);
+    }
+  };
+
   const handleSelectRcaTag = (tag: RCATagType) => {
     const tagNames: Record<RCATagType, RCAClassification['tagName']> = {
       C: 'Conceptual Gap',
@@ -198,41 +307,20 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
     const updated = { ...rcaMap, [currentIdx]: newRca };
     setRcaMap(updated);
-    // NOTE: we do NOT mutate items[] directly (it's derived from a prop).
-    // The rcaMap state is the source of truth for RCA display.
+    if (items[currentIdx]) items[currentIdx].rca = newRca;
+    if (items[currentIdx]?.question) items[currentIdx].question!.rca = newRca;
 
-    // Persist to localStorage
-    try {
-      if (typeof window !== 'undefined') {
-        if (result.id) window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updated));
+    persistRcaUpdate(updated, currentIdx, newRca, false);
+  };
 
-        // Update global store for Error Heatmap & Sankalp AI
-        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
-        const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
-        const qId = items[currentIdx]?.question?.id || `${result.id || 'mock'}_${currentIdx + 1}`;
-        globalStore[qId] = {
-          ...newRca,
-          mockId: result.id,
-          mockTitle: result.chapter_title,
-          subject: items[currentIdx]?.question?.subject || result.subject,
-          topic: items[currentIdx]?.question?.tags?.topic || 'General',
-          questionText: items[currentIdx]?.question?.question
-        };
-        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+  const handleClearRcaTag = () => {
+    const updated = { ...rcaMap };
+    delete updated[currentIdx];
+    setRcaMap(updated);
+    if (items[currentIdx]) items[currentIdx].rca = undefined;
+    if (items[currentIdx]?.question) items[currentIdx].question!.rca = undefined;
 
-        // Update mock questions array if in localStorage
-        if (result.id) {
-          const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
-          if (cachedRaw) {
-            const cachedList = JSON.parse(cachedRaw);
-            if (Array.isArray(cachedList) && cachedList[currentIdx]) {
-              cachedList[currentIdx].rca = newRca;
-              window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
-            }
-          }
-        }
-      }
-    } catch {}
+    persistRcaUpdate(updated, currentIdx, undefined, true);
   };
 
   const handleSaveSillyNote = (note: string) => {
@@ -245,23 +333,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       };
       const updated = { ...rcaMap, [currentIdx]: updatedRca };
       setRcaMap(updated);
-      // NOTE: do NOT mutate items[] directly (it's derived from a prop).
-      // rcaMap state is the single source of truth for RCA display.
+      if (items[currentIdx]) items[currentIdx].rca = updatedRca;
+      if (items[currentIdx]?.question) items[currentIdx].question!.rca = updatedRca;
 
-      try {
-        if (typeof window !== 'undefined') {
-          if (result.id) window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updated));
-          if (result.chapter_title) window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updated));
-
-          const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
-          const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
-          const qId = items[currentIdx]?.question?.id || `${result.id || 'mock'}_${currentIdx + 1}`;
-          if (globalStore[qId]) {
-            globalStore[qId].sillyMistakeNote = note;
-            window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
-          }
-        }
-      } catch {}
+      persistRcaUpdate(updated, currentIdx, updatedRca, false);
     }
   };
 
@@ -318,18 +393,38 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         items.forEach((item, idx) => {
           const rca = currentRcaMap[idx] || item.rca || item.question?.rca;
           if (rca) {
-            const qId = item.question?.id || `${result.id || 'mock'}_${idx + 1}`;
-            globalStore[qId] = {
+            const q = item.question || ({} as Question);
+            const qId = q.id || (result.id ? `${result.id}_${idx + 1}` : `mock_${idx + 1}`);
+            const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
+            const entry = {
               ...rca,
+              id: qId,
+              q_num: idx + 1,
               mockId: result.id,
               mockTitle: result.chapter_title,
-              subject: item.question?.subject || result.subject,
-              topic: item.question?.tags?.topic || 'General',
-              questionText: item.question?.question
+              subject: q.subject || result.subject || 'General Awareness',
+              topic: q.tags?.topic || (q as any).topic || 'General',
+              questionText: q.question,
+              options: q.options,
+              answer: q.answer,
+              solution: q.solution,
+              image: q.image,
+              userAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
+              selectedAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
+              chosenOption: item.selectedAnswer || (item as any)?.userAnswer || '',
+              isCorrect: item.isCorrect,
+              isSlow: item.isSlow,
+              status: (item as any)?.status || (item.isSlow ? 'slow' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted'))),
+              errorType: item.isSlow ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
+              timeSpent: item.timeSpent,
+              userTime: item.timeSpent
             };
+            globalStore[qId] = entry;
+            if (qTextNorm) globalStore[qTextNorm] = entry;
           }
         });
         window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { count: Object.keys(currentRcaMap).length } }));
 
         // Update cached mock questions in localStorage with full attempt metadata
         let cachedExisting: any[] = [];
@@ -898,6 +993,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   // Percentage answered correctly (simulate realistic platform percentage ~35-65%)
   const accuracyPercent = question?.tags?.difficulty === 'easy' ? 68 : (question?.tags?.difficulty === 'hard' ? 24 : 40);
 
+  const handleBack = () => {
+    if (rcaMap[currentIdx]?.tag === 'A' && activeSillyNote && activeSillyNote !== rcaMap[currentIdx]?.sillyMistakeNote) {
+      handleSaveSillyNote(activeSillyNote);
+    }
+    onBack();
+  };
+
   // Marks logic (+2 for correct/slow, -0.5 for incorrect, 0 for skipped)
   const currentMarks = (currentStatus === 'correct' || currentStatus === 'slow') ? 2 : (currentStatus === 'wrong' ? -0.5 : 0);
 
@@ -908,7 +1010,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       <header className="bg-[#0097a7] text-white h-14 px-4 flex items-center justify-between shrink-0 shadow z-30">
         <div className="flex items-center space-x-3">
           <button 
-            onClick={onBack}
+            onClick={handleBack}
             className="p-1.5 hover:bg-white/10 rounded-full transition-colors focus:outline-none"
             title="Back"
           >
@@ -1340,13 +1442,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       {currentRca?.tag && (
                         <button
                           type="button"
-                          onClick={() => {
-                            const updated = { ...rcaMap };
-                            delete updated[currentIdx];
-                            setRcaMap(updated);
-                            if (items[currentIdx]) items[currentIdx].rca = undefined;
-                            if (items[currentIdx]?.question) items[currentIdx].question!.rca = undefined;
-                          }}
+                          onClick={handleClearRcaTag}
                           className="text-[11px] text-gray-400 hover:text-rose-600 transition-colors cursor-pointer underline decoration-dotted"
                         >
                           Clear Tag
