@@ -20,8 +20,11 @@ import { AiMentorChat } from './components/AiMentorChat';
 import { safeStorage } from './utils/safeStorage';
 import { syncMockReports } from './utils/syncMockReports';
 import { FormattedText } from './components/FormattedText';
+import { cleanSolutionText } from './utils/cleanSolution';
+import { normalizeAnswerKey } from './utils/mathSanitizer';
 import { openAiWithScope } from './utils/aiScopeHelper';
 import { AiFocusedQuestion } from './types/aiScope';
+import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
 
 import { getCachedData, setCachedData } from './utils/cache';
 
@@ -355,6 +358,21 @@ export default function App() {
   const setMockViewModePersisted = (mode: 'chapters' | 'buckets') => {
     setMockViewMode(mode);
     try { localStorage.setItem('mockViewMode', mode); } catch {}
+  };
+
+  // Mock Error Test Scope Filter: 'all' (combined) | 'full' (full tests) | 'sectional' (sectional tests)
+  const [mockTestTypeFilter, setMockTestTypeFilter] = useState<'all' | 'full' | 'sectional'>(() => {
+    try {
+      const saved = localStorage.getItem('mockTestTypeFilter');
+      return (saved === 'full' || saved === 'sectional') ? saved : 'all';
+    } catch {
+      return 'all';
+    }
+  });
+
+  const setMockTestTypeFilterPersisted = (filter: 'all' | 'full' | 'sectional') => {
+    setMockTestTypeFilter(filter);
+    try { localStorage.setItem('mockTestTypeFilter', filter); } catch {}
   };
 
   const [activeMockChapterModal, setActiveMockChapterModal] = useState<{
@@ -691,10 +709,82 @@ export default function App() {
       });
     }
 
-    // 3. Also remove from bookmarks if present
+    // 3. Immediately update reviewResult if currently reviewing
+    setReviewResult(prev => {
+      if (!prev || !prev.questionDetails) return prev;
+      const updatedDetails = prev.questionDetails.filter(qd => {
+        const thisText = (qd.question?.question || '').trim().toLowerCase();
+        return thisText !== qTextClean && (!question.id || qd.question?.id !== question.id);
+      });
+      return {
+        ...prev,
+        questionDetails: updatedDetails,
+        totalQuestions: updatedDetails.length
+      };
+    });
+
+    // 4. Update userResults so previous results state don't hold the deleted question
+    setUserResults(prev => prev.map(res => {
+      if (!res.questionDetails) return res;
+      const updatedDetails = res.questionDetails.filter(qd => {
+        const thisText = (qd.question?.question || '').trim().toLowerCase();
+        return thisText !== qTextClean && (!question.id || qd.question?.id !== question.id);
+      });
+      return {
+        ...res,
+        questionDetails: updatedDetails,
+        totalQuestions: updatedDetails.length
+      };
+    }));
+
+    // 5. Also remove from bookmarks if present
     setBookmarks(prev => prev.filter(b => b.question.question.trim().toLowerCase() !== qTextClean));
 
-    // 4. Persist to Firestore deleted_questions collection
+    // 6. Purge from all cached mock questions (cgl_mock_questions_*) and sync to backend
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('cgl_mock_questions_')) {
+            try {
+              const raw = localStorage.getItem(key);
+              if (raw) {
+                const list = JSON.parse(raw);
+                if (Array.isArray(list)) {
+                  const updated = list.filter((q: any) => {
+                    const t = (q.question || q.questionText || '').trim().toLowerCase();
+                    return t !== qTextClean && (!question.id || q.id !== question.id);
+                  });
+                  if (updated.length !== list.length) {
+                    localStorage.setItem(key, JSON.stringify(updated));
+                    const mockId = key.replace('cgl_mock_questions_', '');
+                    fetch(`/api/mock-questions/${encodeURIComponent(mockId)}`, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(updated)
+                    }).catch(() => {});
+                  }
+                }
+              }
+            } catch {}
+          }
+        }
+      }
+    } catch {}
+
+    // 7. Purge from cgl_rca_global_store
+    try {
+      const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+      if (globalRaw) {
+        const globalStore = JSON.parse(globalRaw);
+        if (question.id) delete globalStore[question.id];
+        delete globalStore[qId];
+        delete globalStore[qTextClean];
+        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+      }
+    } catch {}
+
+    // 8. Persist to Firestore deleted_questions collection
     try {
       await addDoc(collection(db, 'deleted_questions'), {
         questionId: qId,
@@ -749,17 +839,24 @@ export default function App() {
   };
 
   const startAllSubjectQuiz = (subjectName: string) => {
-    const allQuestions = (currentData[subjectName] || []).flatMap(ch => ch.questions).map((q, idx) => ({
+    let sourceQuestions = (currentData[subjectName] || []).flatMap(ch => ch.questions);
+    if (category === 'mockErrors' && mockTestTypeFilter !== 'all') {
+      sourceQuestions = sourceQuestions.filter(q => classifyTestType(q) === mockTestTypeFilter);
+    }
+    const allQuestions = sourceQuestions.map((q, idx) => ({
       ...q,
       q_num: idx + 1
     }));
     if (allQuestions.length === 0) {
-      alert(`No questions available in ${subjectName} yet.`);
+      alert(`No questions available in ${subjectName} for ${mockTestTypeFilter === 'full' ? 'Full Tests' : mockTestTypeFilter === 'sectional' ? 'Sectional Tests' : 'this category'}.`);
       return;
     }
+    const filterLabel = category === 'mockErrors' && mockTestTypeFilter !== 'all'
+      ? ` (${mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional'})`
+      : '';
     const virtualChapter: Chapter = {
       chapter_num: 0,
-      chapter_title: `All ${subjectName} Questions`,
+      chapter_title: `All ${subjectName} Questions${filterLabel}`,
       subject: subjectName,
       subject_id: subjectName.toLowerCase().replace(/\s+/g, '_'),
       questions: allQuestions
@@ -770,6 +867,9 @@ export default function App() {
   const startMockTopicQuiz = (chapter: Chapter, topicName: string) => {
     const filteredQuestions = chapter.questions
       .filter(q => {
+        if (category === 'mockErrors' && mockTestTypeFilter !== 'all') {
+          if (classifyTestType(q) !== mockTestTypeFilter) return false;
+        }
         const raw = q.tags?.topic || (q as any).topic || detectTopic(q, chapter.subject || '');
         return normalizeTopicTitle(raw) === topicName;
       })
@@ -1322,6 +1422,28 @@ export default function App() {
       });
   }, [userResults, dashCategoryFilter, dashSubjectFilter, dashSearchQuery, dashSort]);
 
+  // Test scope question counts for currently selected subject in Mock Errors
+  const mockScopeCounts = useMemo(() => {
+    if (category !== 'mockErrors' || !selectedSubject) return { all: 0, full: 0, sectional: 0 };
+    const chapters = currentData[selectedSubject] || [];
+    let all = 0, full = 0, sectional = 0;
+    const seen = new Set<string>();
+    chapters.forEach(ch => {
+      ch.questions.forEach(q => {
+        const text = (q.question || q.questionText || '').trim().toLowerCase();
+        const key = text ? `${selectedSubject}|${text}` : (q.id || '');
+        if (!seen.has(key)) {
+          seen.add(key);
+          all++;
+          const type = classifyTestType(q);
+          if (type === 'full') full++;
+          else if (type === 'sectional') sectional++;
+        }
+      });
+    });
+    return { all, full, sectional };
+  }, [category, selectedSubject, currentData]);
+
   // Clubbed Mock Error Chapters: group all questions chapter-wise across Slow, Unattempted, and Wrong
   const clubbedMockChapters = useMemo(() => {
     if (category !== 'mockErrors' || !selectedSubject) return [];
@@ -1351,6 +1473,10 @@ export default function App() {
       }
 
       ch.questions.forEach(q => {
+        if (mockTestTypeFilter !== 'all') {
+          if (classifyTestType(q) !== mockTestTypeFilter) return;
+        }
+
         const topic = normalizeTopicTitle(detectTopic(q, selectedSubject));
         if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
           if (getTopicGKSubject(topic) !== mockGKFilter) return;
@@ -1388,7 +1514,7 @@ export default function App() {
     });
 
     return Object.values(map).sort((a, b) => b.total - a.total);
-  }, [category, selectedSubject, currentData, mockGKFilter]);
+  }, [category, selectedSubject, currentData, mockGKFilter, mockTestTypeFilter]);
 
   const startClubbedChapterQuiz = (
     topicName: string,
@@ -2313,15 +2439,64 @@ export default function App() {
                         <div>
                           <h3 className="text-xs font-bold text-slate-800">Practice {selectedSubject} Mock Errors</h3>
                           <p className="text-[11px] text-slate-500 font-medium">
-                            {clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)} error questions recorded across {clubbedMockChapters.length} chapters.
+                            {clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)} error questions recorded across {clubbedMockChapters.length} chapters
+                            {mockTestTypeFilter !== 'all' && (
+                              <span className="text-indigo-600 font-semibold"> ({mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional Tests'})</span>
+                            )}.
                           </p>
                         </div>
                         <div className="flex flex-wrap items-center gap-2">
+                          {/* Test Scope Filter (Combined / Full Tests / Sectional) */}
+                          <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
+                            <button
+                              onClick={() => setMockTestTypeFilterPersisted('all')}
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                                mockTestTypeFilter === 'all'
+                                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                                  : 'text-slate-500 hover:text-slate-800'
+                              }`}
+                              title="Combined view: all full and sectional test errors"
+                            >
+                              <span>Combined</span>
+                              <span className={`text-[9px] px-1 py-0.2 rounded font-bold ${mockTestTypeFilter === 'all' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600'}`}>
+                                {mockScopeCounts.all}
+                              </span>
+                            </button>
+                            <button
+                              onClick={() => setMockTestTypeFilterPersisted('full')}
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                                mockTestTypeFilter === 'full'
+                                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                                  : 'text-slate-500 hover:text-slate-800'
+                              }`}
+                              title="View errors only from Full Mock Tests"
+                            >
+                              <span>Full Tests</span>
+                              <span className={`text-[9px] px-1 py-0.2 rounded font-bold ${mockTestTypeFilter === 'full' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600'}`}>
+                                {mockScopeCounts.full}
+                              </span>
+                            </button>
+                            <button
+                              onClick={() => setMockTestTypeFilterPersisted('sectional')}
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                                mockTestTypeFilter === 'sectional'
+                                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                                  : 'text-slate-500 hover:text-slate-800'
+                              }`}
+                              title="View errors only from Sectional Mock Tests"
+                            >
+                              <span>Sectional</span>
+                              <span className={`text-[9px] px-1 py-0.2 rounded font-bold ${mockTestTypeFilter === 'sectional' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600'}`}>
+                                {mockScopeCounts.sectional}
+                              </span>
+                            </button>
+                          </div>
+
                           {/* Toggle Mode: Chapter-Wise vs By Error Bucket */}
                           <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
                             <button
                               onClick={() => setMockViewModePersisted('chapters')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 ${
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
                                 mockViewMode === 'chapters'
                                   ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-slate-500 hover:text-slate-800'
@@ -2333,7 +2508,7 @@ export default function App() {
                             </button>
                             <button
                               onClick={() => setMockViewModePersisted('buckets')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 ${
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
                                 mockViewMode === 'buckets'
                                   ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-slate-500 hover:text-slate-800'
@@ -2347,7 +2522,12 @@ export default function App() {
 
                           <button
                             onClick={() => startAllSubjectQuiz(selectedSubject)}
-                            className="inline-flex shrink-0 items-center rounded-lg bg-indigo-600 hover:bg-indigo-700 px-3.5 py-1 text-xs font-semibold text-white shadow-xs transition-all hover:shadow-sm"
+                            disabled={clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0}
+                            className={`inline-flex shrink-0 items-center rounded-lg px-3.5 py-1 text-xs font-semibold shadow-xs transition-all ${
+                              clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
+                                ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                                : 'bg-indigo-600 hover:bg-indigo-700 text-white hover:shadow-sm cursor-pointer'
+                            }`}
                           >
                             <Play className="w-3.5 h-3.5 mr-1" />
                             Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})
@@ -2398,6 +2578,24 @@ export default function App() {
                           <p className="mt-0.5 text-[11px] text-slate-500 max-w-md">
                             There are currently no mock error questions for {selectedSubject}. Errors captured from mocks will appear here.
                           </p>
+                        </div>
+                      ) : clubbedMockChapters.length === 0 ? (
+                        <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-xs">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 mb-2">
+                            <AlertCircle className="h-5 w-5" />
+                          </div>
+                          <h3 className="text-xs font-bold text-slate-800">
+                            No {mockTestTypeFilter === 'full' ? 'Full Test' : 'Sectional Test'} Errors
+                          </h3>
+                          <p className="mt-0.5 text-[11px] text-slate-500 max-w-md">
+                            There are no recorded error questions for {selectedSubject} under this test filter.
+                          </p>
+                          <button
+                            onClick={() => setMockTestTypeFilterPersisted('all')}
+                            className="mt-3 px-3 py-1 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold rounded-lg border border-indigo-200 transition-all cursor-pointer"
+                          >
+                            Show Combined Errors ({mockScopeCounts.all})
+                          </button>
                         </div>
                       ) : mockViewMode === 'chapters' ? (
                         /* Chapter-Wise Clubbed View (Compact List Format) */
@@ -2552,14 +2750,21 @@ export default function App() {
                             const isWrong = chapter.chapter_title.toLowerCase().includes('wrong');
                             const isAllErrors = chapter.chapter_title.toLowerCase().includes('mock') || chapter.chapter_title.toLowerCase().includes('all');
 
+                            // Filter questions in this bucket by active mockTestTypeFilter and GK filter
+                            const filteredBucketQuestions = chapter.questions.filter(q => {
+                              if (mockTestTypeFilter !== 'all' && classifyTestType(q) !== mockTestTypeFilter) return false;
+                              if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
+                                const rawTopic = q.tags?.topic || (q as any).topic || detectTopic(q, selectedSubject);
+                                if (getTopicGKSubject(normalizeTopicTitle(rawTopic)) !== mockGKFilter) return false;
+                              }
+                              return true;
+                            });
+
                             // Compute topic-wise breakdown
                             const topicMap: Record<string, number> = {};
-                            chapter.questions.forEach(q => {
+                            filteredBucketQuestions.forEach(q => {
                               const rawTopic = q.tags?.topic || (q as any).topic || detectTopic(q, selectedSubject);
                               const t = normalizeTopicTitle(rawTopic);
-                              if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
-                                if (getTopicGKSubject(t) !== mockGKFilter) return;
-                              }
                               topicMap[t] = (topicMap[t] || 0) + 1;
                             });
 
@@ -2631,7 +2836,7 @@ export default function App() {
                                       <IconComp className="w-4 h-4" />
                                     </div>
                                     <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${theme.badge}`}>
-                                      {chapter.questions.length} {chapter.questions.length === 1 ? 'Question' : 'Questions'}
+                                      {filteredBucketQuestions.length} {filteredBucketQuestions.length === 1 ? 'Question' : 'Questions'}
                                     </span>
                                   </div>
                                   <h3 className="mt-2 text-sm font-bold text-slate-900">{chapter.chapter_title}</h3>
@@ -2677,12 +2882,23 @@ export default function App() {
                                 {/* Bucket Practice All Action */}
                                 <div className="border-t border-slate-100 p-2.5 bg-slate-50/50 rounded-b-xl flex items-center gap-2">
                                   <button
-                                    onClick={() => startQuiz(chapter)}
-                                    disabled={chapter.questions.length === 0}
+                                    onClick={() => {
+                                      if (mockTestTypeFilter === 'all') {
+                                        startQuiz(chapter);
+                                      } else {
+                                        const virtualChapter: Chapter = {
+                                          ...chapter,
+                                          chapter_title: `${chapter.chapter_title} (${mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional'})`,
+                                          questions: filteredBucketQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
+                                        };
+                                        startQuiz(virtualChapter);
+                                      }
+                                    }}
+                                    disabled={filteredBucketQuestions.length === 0}
                                     className={`flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-xs font-semibold transition-all shadow-xs disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
                                   >
                                     <Play className="w-3 h-3 fill-current" />
-                                    Practice All ({chapter.questions.length})
+                                    Practice All ({filteredBucketQuestions.length})
                                   </button>
                                   {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
                                     <button
@@ -3172,29 +3388,32 @@ export default function App() {
                                                 <FormattedText text={bookmark.question.question} as="div" />
                                               </div>
                                               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                                {Object.entries(bookmark.question.options).map(([key, value]) => (
-                                                  <div
-                                                    key={key}
-                                                    className={`p-2 rounded-lg border flex items-center ${
-                                                      bookmark.question.answer === key
-                                                        ? 'border-emerald-500 bg-emerald-50/60'
-                                                        : 'border-slate-200 bg-slate-50/40'
-                                                    }`}
-                                                  >
-                                                    <span className={`w-5 h-5 flex items-center justify-center rounded text-xs mr-2 font-bold ${
-                                                      bookmark.question.answer === key ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-600'
-                                                    }`}>
-                                                      {key.toUpperCase()}
-                                                    </span>
-                                                    <FormattedText text={value} className="text-slate-700 text-xs font-medium" />
-                                                  </div>
-                                                ))}
+                                                {Object.entries(bookmark.question.options).map(([key, value]) => {
+                                                  const isCorrect = normalizeAnswerKey(bookmark.question.answer) === key.toLowerCase();
+                                                  return (
+                                                    <div
+                                                      key={key}
+                                                      className={`p-2 rounded-lg border flex items-center ${
+                                                        isCorrect
+                                                          ? 'border-emerald-500 bg-emerald-50/60'
+                                                          : 'border-slate-200 bg-slate-50/40'
+                                                      }`}
+                                                    >
+                                                      <span className={`w-5 h-5 flex items-center justify-center rounded text-xs mr-2 font-bold ${
+                                                        isCorrect ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-600'
+                                                      }`}>
+                                                        {key.toUpperCase()}
+                                                      </span>
+                                                      <FormattedText text={value} className="text-slate-700 text-xs font-medium" />
+                                                    </div>
+                                                  );
+                                                })}
                                               </div>
                                               {bookmark.question.solution && (
                                                 <div className="mt-2.5 p-2 bg-blue-50/60 rounded-lg border border-blue-100 text-xs">
                                                   <div className="text-blue-900 leading-relaxed">
                                                     <span className="font-bold text-blue-700">Solution: </span>
-                                                    <FormattedText text={bookmark.question.solution} />
+                                                    <FormattedText text={cleanSolutionText(bookmark.question.solution)} />
                                                   </div>
                                                 </div>
                                               )}

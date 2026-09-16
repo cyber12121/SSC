@@ -13,6 +13,10 @@
     "avgTime": "00:31",
     "questionText": "Choose the correct active voice transformation of the sentence:\n\nThe renowned author's newest novel will have been released by the end of the year.",
     "options": {
+      "a": "The renowned author will have been releasing his newest novel by the end of the year.",
+      "b": "The renowned author will release his newest novel by the end of the year.",
+      "c": "The renowned author will have released his newest novel by the end of the year.",
+      "d": "The renowned author has released his newest novel by the end of the year.",
       "A": "The renowned author will have been releasing his newest novel by the end of the year.",
       "B": "The renowned author will release his newest novel by the end of the year.",
       "C": "The renowned author will have released his newest novel by the end of the year.",
@@ -26,7 +30,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice - Future Perfect Tense",
       "conceptTested": "Future Perfect Passive ('will have been V3') converts to Future Perfect Active ('will have V3')."
-    }
+    },
+    "question": "Choose the correct active voice transformation of the sentence:\n\nThe renowned author's newest novel will have been released by the end of the year.",
+    "answer": "c"
   },
   {
     "testName": "CHSL 14/11/2025 Shift-2 (English)",
@@ -42,6 +48,10 @@
     "avgTime": "00:11",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThe chef had prepared the special dish.",
     "options": {
+      "a": "The special dish was prepared by the chef.",
+      "b": "The special dish had been prepared by the chef.",
+      "c": "The special dish has been prepared by the chef.",
+      "d": "The special dish is being prepared by the chef.",
       "A": "The special dish was prepared by the chef.",
       "B": "The special dish had been prepared by the chef.",
       "C": "The special dish has been prepared by the chef.",
@@ -55,7 +65,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice - Past Perfect Tense",
       "conceptTested": "Past Perfect Active ('had V3') converts to Past Perfect Passive ('had been V3')."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThe chef had prepared the special dish.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 15/11/2025 Shift-1 (English)",
@@ -71,6 +83,10 @@
     "avgTime": "00:27",
     "questionText": "Change the following sentence into the Active form: The report is expected to be delivered by the committee next week.",
     "options": {
+      "a": "The committee is expecting to deliver the report next week.",
+      "b": "The committee is expected to deliver the report next week.",
+      "c": "The committee expects to deliver the report next week.",
+      "d": "The committee will deliver the report next week.",
       "A": "The committee is expecting to deliver the report next week.",
       "B": "The committee is expected to deliver the report next week.",
       "C": "The committee expects to deliver the report next week.",
@@ -84,7 +100,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice - Infinitives & Impersonal Passives",
       "conceptTested": "Impersonal passive structures ('It is expected to be V3') convert to active equivalents by using the logical subject."
-    }
+    },
+    "question": "Change the following sentence into the Active form: The report is expected to be delivered by the committee next week.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 15/11/2025 Shift-2 (English)",
@@ -100,6 +118,10 @@
     "avgTime": "00:29",
     "questionText": "Change the following sentence into the Active form: It was believed that the secret formula had been stolen by a rival company.",
     "options": {
+      "a": "A rival company believed that the secret formula had been stolen.",
+      "b": "People believed that a rival company had stolen the secret formula.",
+      "c": "The secret formula was stolen by a rival company.",
+      "d": "A rival company stole the secret formula, it was believed.",
       "A": "A rival company believed that the secret formula had been stolen.",
       "B": "People believed that a rival company had stolen the secret formula.",
       "C": "The secret formula was stolen by a rival company.",
@@ -113,7 +135,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice - Complex Sentences",
       "conceptTested": "Conversion of complex passive sentences ('It was believed that... had been stolen') into active voice by introducing an appropriate subject ('People')."
-    }
+    },
+    "question": "Change the following sentence into the Active form: It was believed that the secret formula had been stolen by a rival company.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 15/11/2025 Shift-2 (English)",
@@ -129,6 +153,10 @@
     "avgTime": "00:24",
     "questionText": "Choose the correct passive voice transformation of the sentence: The government will be implementing the new environmental regulations next month.",
     "options": {
+      "a": "The new environmental regulations will be implemented by the government next month.",
+      "b": "The new environmental regulations will be being implemented by the government next month.",
+      "c": "The new environmental regulations are being implemented by the government next month.",
+      "d": "The new environmental regulations will have been implemented by the government next month.",
       "A": "The new environmental regulations will be implemented by the government next month.",
       "B": "The new environmental regulations will be being implemented by the government next month.",
       "C": "The new environmental regulations are being implemented by the government next month.",
@@ -142,7 +170,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice - Future Continuous Tense",
       "conceptTested": "Future Continuous Active ('will be V-ing') converts to Future Continuous Passive ('will be being V3')."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence: The government will be implementing the new environmental regulations next month.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 17/11/2025 Shift-1 (English)",
@@ -158,6 +188,10 @@
     "avgTime": "00:34",
     "questionText": "Change the following sentence into the Active form.\n\nThe old castle was believed to have been built by a legendary king.",
     "options": {
+      "a": "A legendary king built the old castle, it was believed.",
+      "b": "People believed that a legendary king had built the old castle.",
+      "c": "The old castle had been built by a legendary king, it was believed.",
+      "d": "A legendary king was believed to have built the old castle.",
       "A": "A legendary king built the old castle, it was believed.",
       "B": "People believed that a legendary king had built the old castle.",
       "C": "The old castle had been built by a legendary king, it was believed.",
@@ -171,7 +205,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Impersonal Passive",
       "conceptTested": "Conversion of passive sentences with introductory verbs like 'was believed' into active voice by supplying an indefinite subject like 'People'."
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nThe old castle was believed to have been built by a legendary king.",
+    "answer": "b"
   },
   {
     "testName": "GD 08/05/2026 Shift-3 (English)",
@@ -187,6 +223,10 @@
     "avgTime": "00:17",
     "questionText": "Which of the following options is the most suitable conversion of the following sentence into Passive Voice?\n\nThey were felicitating war veterans at the event.",
     "options": {
+      "a": "War veterans were felicitated at the event.",
+      "b": "War veterans are being felicitated at the event.",
+      "c": "War veterans were felicitating at the event.",
+      "d": "War veterans were being felicitated at the event.",
       "A": "War veterans were felicitated at the event.",
       "B": "War veterans are being felicitated at the event.",
       "C": "War veterans were felicitating at the event.",
@@ -200,7 +240,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Past Continuous Tense Conversion",
       "conceptTested": "Conversion of past continuous tense from active ('were/was + V-ing') to passive ('were/was + being + V3')."
-    }
+    },
+    "question": "Which of the following options is the most suitable conversion of the following sentence into Passive Voice?\n\nThey were felicitating war veterans at the event.",
+    "answer": "d"
   },
   {
     "testName": "GD 08/05/2026 Shift-3 (English)",
@@ -216,6 +258,10 @@
     "avgTime": "00:23",
     "questionText": "Which of the following options is the most suitable conversion of the following sentence into Passive Voice?\n\nWill the sponsors invite the whole team to the party?",
     "options": {
+      "a": "Will the whole team invite to the party by the sponsors?",
+      "b": "Will the whole team invite the sponsors to the party?",
+      "c": "Will the whole team been invited to the party by the sponsors?",
+      "d": "Will the whole team be invited to the party by the sponsors?",
       "A": "Will the whole team invite to the party by the sponsors?",
       "B": "Will the whole team invite the sponsors to the party?",
       "C": "Will the whole team been invited to the party by the sponsors?",
@@ -229,6 +275,8 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Interrogative Sentences - Simple Future Tense",
       "conceptTested": "Conversion of simple future interrogative sentences ('Will + subject + V1 + object') to passive voice ('Will + object + be + V3 + by + agent')."
-    }
+    },
+    "question": "Which of the following options is the most suitable conversion of the following sentence into Passive Voice?\n\nWill the sponsors invite the whole team to the party?",
+    "answer": "d"
   }
 ]

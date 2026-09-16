@@ -13,12 +13,16 @@
     "avgTime": "00:30",
     "questionText": "Find the missing term (?) in the following series:\n\n?, 60, 84, 112, 144, 180",
     "options": {
+      "a": "30",
+      "b": "40",
+      "c": "35",
+      "d": "45",
       "A": "30",
       "B": "40",
       "C": "35",
       "D": "45"
     },
-    "solution": "Given series:\n\n?, 60, 84, 112, 144, 180\n\nFind the differences between consecutive terms:\n\n60 → 84 = +24\n84 → 112 = +28\n112 → 144 = +32\n144 → 180 = +36\n\nThe differences are:\n\n24, 28, 32, 36, ...\n\nEach difference increases by 4.\n\nTherefore, the previous difference will be:\n24 − 4 = 20\n\nSo,\n\n? + 20 = 60\n\n? = 60 − 20\n\n? = 40\n\nHence, the missing term = 40",
+    "solution": "Given series:\n\n?, 60, 84, 112, 144, 180\n\nFind the differences between consecutive terms:\n\n60 → 84 = +24\n84 → 112 = +28\n112 → 144 = +32\n144 → 180 = +36\n\nThe differences are:\n\n24, 28, 32, 36, ...\n\nEach difference increases by 4.\n\nTherefore, the previous difference will be:\n24 - 4 = 20\n\nSo,\n\n? + 20 = 60\n\n? = 60 - 20\n\n? = 40\n\nHence, the missing term = 40",
     "topic": "Number Series",
     "subtopic": "Missing Number Series",
     "conceptTested": "Arithmetic progression of differences with a common difference of 4",
@@ -26,7 +30,9 @@
       "topic": "Number Series",
       "subtopic": "Missing Number Series",
       "conceptTested": "Arithmetic progression of differences with a common difference of 4"
-    }
+    },
+    "question": "Find the missing term (?) in the following series:\n\n?, 60, 84, 112, 144, 180",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -42,6 +48,10 @@
     "avgTime": "00:35",
     "questionText": "Find the missing term (?) in the following series:\n\n130, 138, 111, 175, ?",
     "options": {
+      "a": "100",
+      "b": "80",
+      "c": "75",
+      "d": "50",
       "A": "100",
       "B": "80",
       "C": "75",
@@ -55,7 +65,9 @@
       "topic": "Number Series",
       "subtopic": "Missing Number Series",
       "conceptTested": "Alternating addition and subtraction of cubes of consecutive integers"
-    }
+    },
+    "question": "Find the missing term (?) in the following series:\n\n130, 138, 111, 175, ?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -71,12 +83,16 @@
     "avgTime": "01:02",
     "questionText": "In a row of 60 employees, P is 21st from the left and Q is 24th from the right. R is exactly midway between P and Q. If P and R interchange their positions, what will be P's new position from the right?",
     "options": {
+      "a": "31st",
+      "b": "30th",
+      "c": "29th",
+      "d": "32nd",
       "A": "31st",
       "B": "30th",
       "C": "29th",
       "D": "32nd"
     },
-    "solution": "Total employees = 60\n\nP is 21st from the left.\n\nQ is 24th from the right.\n\nQ's position from the left =>\n= 60 − 24 + 1\n= 37th\n\nR is exactly midway between P and Q.\n\nPosition of R =>\n= (21 + 37) ÷ 2\n= 58 ÷ 2\n= 29th from the left\nNow P and R interchange their positions.\nTherefore, P moves to R's original position, i.e. 29th from the left.\n\nP's new position from the right\n\n= 60 − 29 + 1\n= 32nd",
+    "solution": "Total employees = 60\n\nP is 21st from the left.\n\nQ is 24th from the right.\n\nQ's position from the left =>\n= 60 - 24 + 1\n= 37th\n\nR is exactly midway between P and Q.\n\nPosition of R =>\n= (21 + 37) ÷ 2\n= 58 ÷ 2\n= 29th from the left\nNow P and R interchange their positions.\nTherefore, P moves to R's original position, i.e. 29th from the left.\n\nP's new position from the right\n\n= 60 - 29 + 1\n= 32nd",
     "topic": "Order & Ranking",
     "subtopic": "Positions from left and right with interchange",
     "conceptTested": "Converting rank from opposite end using Total = Left + Right - 1 and finding midpoint",
@@ -84,7 +100,9 @@
       "topic": "Order & Ranking",
       "subtopic": "Positions from left and right with interchange",
       "conceptTested": "Converting rank from opposite end using Total = Left + Right - 1 and finding midpoint"
-    }
+    },
+    "question": "In a row of 60 employees, P is 21st from the left and Q is 24th from the right. R is exactly midway between P and Q. If P and R interchange their positions, what will be P's new position from the right?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -100,6 +118,10 @@
     "avgTime": "00:20",
     "questionText": "Two positions of the same cubical block are shown. When one of the faces W is at the top, which face will be at the bottom?",
     "options": {
+      "a": "D",
+      "b": "S",
+      "c": "U",
+      "d": "H",
       "A": "D",
       "B": "S",
       "C": "U",
@@ -113,7 +135,9 @@
       "topic": "Cube & Dice",
       "subtopic": "Opposite Faces",
       "conceptTested": "Determining opposite faces of a cubical block from adjacent face analysis"
-    }
+    },
+    "question": "Two positions of the same cubical block are shown. When one of the faces W is at the top, which face will be at the bottom?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -129,6 +153,10 @@
     "avgTime": "00:59",
     "questionText": "How many triangles are present in the given figure?",
     "options": {
+      "a": "18",
+      "b": "17",
+      "c": "13",
+      "d": "15",
       "A": "18",
       "B": "17",
       "C": "13",
@@ -142,7 +170,9 @@
       "topic": "Figure Counting",
       "subtopic": "Counting Triangles",
       "conceptTested": "Systematic enumeration of triangles within a complex geometric figure"
-    }
+    },
+    "question": "How many triangles are present in the given figure?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -158,12 +188,16 @@
     "avgTime": "01:14",
     "questionText": "Which two numbers should be interchanged to make the given equation correct?\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50",
     "options": {
+      "a": "2 and 6",
+      "b": "3 and 4",
+      "c": "3 and 6",
+      "d": "2 and 4",
       "A": "2 and 6",
       "B": "3 and 4",
       "C": "3 and 6",
       "D": "2 and 4"
     },
-    "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
+    "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50 / 531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Signs & Numbers",
     "conceptTested": "Balancing mathematical equations by substituting numbers and applying BODMAS rule",
@@ -171,7 +205,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Interchange of Signs & Numbers",
       "conceptTested": "Balancing mathematical equations by substituting numbers and applying BODMAS rule"
-    }
+    },
+    "question": "Which two numbers should be interchanged to make the given equation correct?\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -187,6 +223,10 @@
     "avgTime": "00:19",
     "questionText": "Select the option which is related to the third term in the same way as the second term is related to the first term.\n\nCajon : Hand : : Harmonica : ?",
     "options": {
+      "a": "Mouth",
+      "b": "Feet",
+      "c": "Hand",
+      "d": "Nose",
       "A": "Mouth",
       "B": "Feet",
       "C": "Hand",
@@ -200,7 +240,9 @@
       "topic": "Analogy",
       "subtopic": "Semantic Analogy",
       "conceptTested": "Relationship between an instrument and the primary body part or method used to play it"
-    }
+    },
+    "question": "Select the option which is related to the third term in the same way as the second term is related to the first term.\n\nCajon : Hand : : Harmonica : ?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -216,6 +258,10 @@
     "avgTime": "01:10",
     "questionText": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following\nstatement is correct?",
     "options": {
+      "a": "Jenny is sitting second to right of Mani",
+      "b": "Simi and Sanu sit at the ends",
+      "c": "Only one person sits between Jenny and Mani",
+      "d": "Rani is sitting to the left of Simi",
       "A": "Jenny is sitting second to right of Mani",
       "B": "Simi and Sanu sit at the ends",
       "C": "Only one person sits between Jenny and Mani",
@@ -229,7 +275,9 @@
       "topic": "Seating Arrangement",
       "subtopic": "Linear Row North/South Facing",
       "conceptTested": "Deduction of linear seating positions based on directional and relative placement clues"
-    }
+    },
+    "question": "Five friends are sitting in a row all facing south. Rani sits immediate right of Mani. Simi sits second to left of Sanu. Jenny sits towards left of Rani. Which of the following\nstatement is correct?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -245,6 +293,10 @@
     "avgTime": "00:24",
     "questionText": "Which traditional musical instrument, associated with the Baul minstrels of Bengal, is a single-stringed instrument made from a wooden or coconut shell soundbox attached to a bamboo neck?",
     "options": {
+      "a": "Niyara Hongsing Ke",
+      "b": "Ektara",
+      "c": "Kamaicha",
+      "d": "Pung",
       "A": "Niyara Hongsing Ke",
       "B": "Ektara",
       "C": "Kamaicha",
@@ -258,7 +310,9 @@
       "topic": "Music & Musical Instruments",
       "subtopic": "Music & Musical Instruments",
       "conceptTested": "Folk musical instruments of India and their regional associations"
-    }
+    },
+    "question": "Which traditional musical instrument, associated with the Baul minstrels of Bengal, is a single-stringed instrument made from a wooden or coconut shell soundbox attached to a bamboo neck?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -274,6 +328,10 @@
     "avgTime": "00:21",
     "questionText": "As per the International Labour Organization (ILO), How did India's social protection coverage change between 2015 and 2025?",
     "options": {
+      "a": "From 25% to 54.3%",
+      "b": "From 19% to 64.3%",
+      "c": "From 25% to 64.3%",
+      "d": "From 19% to 74.3%",
       "A": "From 25% to 54.3%",
       "B": "From 19% to 64.3%",
       "C": "From 25% to 64.3%",
@@ -287,7 +345,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Government Schemes & Policies",
       "conceptTested": "Socio-economic indicators and international labor organization reports on India's social protection coverage"
-    }
+    },
+    "question": "As per the International Labour Organization (ILO), How did India's social protection coverage change between 2015 and 2025?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -303,6 +363,10 @@
     "avgTime": "00:23",
     "questionText": "Who is the author of the book Land of the Seven Rivers: A Brief History of India's Geography?",
     "options": {
+      "a": "Sanjeev Sanyal",
+      "b": "William Dalrymple",
+      "c": "Romila Thapar",
+      "d": "Ramachandra Guha",
       "A": "Sanjeev Sanyal",
       "B": "William Dalrymple",
       "C": "Romila Thapar",
@@ -316,7 +380,9 @@
       "topic": "Books & Authors",
       "subtopic": "Non-Fiction & Historical Geography",
       "conceptTested": "Identification of contemporary Indian authors and their notable works on geography and history."
-    }
+    },
+    "question": "Who is the author of the book Land of the Seven Rivers: A Brief History of India's Geography?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -332,6 +398,10 @@
     "avgTime": "00:36",
     "questionText": "Consider the following statements regarding literacy as per Census 2011:\nStatement 1: During the last decade preceding the 2011 Census, the highest improvement in literacy rate was observed among rural females, at 24%.\nStatement 2: Among the gender literacy gap indicators, Kerala recorded the lowest male-female literacy gap among all States/UTs, while Rajasthan recorded the highest.\n\nWhich of the above statements is/are correct?",
     "options": {
+      "a": "Only 1",
+      "b": "Only 2",
+      "c": "Both 1 and 2",
+      "d": "Neither 1 nor 2",
       "A": "Only 1",
       "B": "Only 2",
       "C": "Both 1 and 2",
@@ -345,7 +415,9 @@
       "topic": "Census & Demographics",
       "subtopic": "Census 2011 Literacy Indicators",
       "conceptTested": "Statistical demographic findings of Census 2011 concerning rural female literacy improvement and gender literacy gaps across Indian states."
-    }
+    },
+    "question": "Consider the following statements regarding literacy as per Census 2011:\nStatement 1: During the last decade preceding the 2011 Census, the highest improvement in literacy rate was observed among rural females, at 24%.\nStatement 2: Among the gender literacy gap indicators, Kerala recorded the lowest male-female literacy gap among all States/UTs, while Rajasthan recorded the highest.\n\nWhich of the above statements is/are correct?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -361,6 +433,10 @@
     "avgTime": "00:23",
     "questionText": "In January 2026, the National Highways Authority of India announced four Guinness World Records achieved on NH-544G. These feats were executed on which economic corridor?",
     "options": {
+      "a": "Delhi-Mumbai Expressway",
+      "b": "Bengaluru-Kadapa'Vijayawada Economic Corridor",
+      "c": "Chennai-Bengaluru Industrial Corridor",
+      "d": "Mumbai-Nagpur Samruddhi Mahamarg",
       "A": "Delhi-Mumbai Expressway",
       "B": "Bengaluru-Kadapa'Vijayawada Economic Corridor",
       "C": "Chennai-Bengaluru Industrial Corridor",
@@ -374,7 +450,9 @@
       "topic": "National & International Current Affairs",
       "subtopic": "National Infrastructure & Achievements",
       "conceptTested": "Current affairs knowledge of landmark infrastructure projects, national highway corridors, and Guinness World Records set by the NHAI."
-    }
+    },
+    "question": "In January 2026, the National Highways Authority of India announced four Guinness World Records achieved on NH-544G. These feats were executed on which economic corridor?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -390,6 +468,10 @@
     "avgTime": "00:39",
     "questionText": "Match each ruler of the Delhi Sultanate in Column A with their respective period of reign in Column B:\n\nColumn A | Column B\nA. Iltutmish | 1. 1266 - 1287\nB. Balban | 2. 1351 - 1388\nC. Firoz Shah Tughlaq | 3. 1489 - 1517\nD. Sikandar Lodi | 4. 1211 - 1236",
     "options": {
+      "a": "A→4, B→1, C→2, D→3",
+      "b": "A→1, B→4, C→3, D→2",
+      "c": "A→4, B→2, C→1, D→3",
+      "d": "A→2, B→1, C→4, D→3",
       "A": "A→4, B→1, C→2, D→3",
       "B": "A→1, B→4, C→3, D→2",
       "C": "A→4, B→2, C→1, D→3",
@@ -403,7 +485,9 @@
       "topic": "Medieval History",
       "subtopic": "Delhi Sultanate - Rulers and Reigns",
       "conceptTested": "Chronology and reign periods of prominent Delhi Sultanate rulers belonging to the Slave, Tughlaq, and Lodi dynasties."
-    }
+    },
+    "question": "Match each ruler of the Delhi Sultanate in Column A with their respective period of reign in Column B:\n\nColumn A | Column B\nA. Iltutmish | 1. 1266 - 1287\nB. Balban | 2. 1351 - 1388\nC. Firoz Shah Tughlaq | 3. 1489 - 1517\nD. Sikandar Lodi | 4. 1211 - 1236",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -419,6 +503,10 @@
     "avgTime": "00:19",
     "questionText": "Who launched the Bharatiya Bhasha Anubhag (Indian Languages Section) in June 2025?",
     "options": {
+      "a": "Narendra Modi",
+      "b": "Rajnath Singh",
+      "c": "Dharmendra Pradhan",
+      "d": "Amit Shah",
       "A": "Narendra Modi",
       "B": "Rajnath Singh",
       "C": "Dharmendra Pradhan",
@@ -432,7 +520,9 @@
       "topic": "National & International Current Affairs",
       "subtopic": "Government Initiatives & Governance",
       "conceptTested": "Current affairs knowledge regarding recent ministerial launches, government departments, and official language promotion policies in India."
-    }
+    },
+    "question": "Who launched the Bharatiya Bhasha Anubhag (Indian Languages Section) in June 2025?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -448,6 +538,10 @@
     "avgTime": "00:22",
     "questionText": "Dipa Karmakar's performance of which high-difficulty vault helped her finish 4th in the women's vault final at the Rio 2016 Olympics?",
     "options": {
+      "a": "Yurchenko vault",
+      "b": "Produnova vault",
+      "c": "Tsukahara vault",
+      "d": "Amanar vault",
       "A": "Yurchenko vault",
       "B": "Produnova vault",
       "C": "Tsukahara vault",
@@ -461,7 +555,9 @@
       "topic": "Sports & Trophies",
       "subtopic": "Gymnastics Championships & Olympics",
       "conceptTested": "Knowledge of notable Indian athletes, historic sporting achievements, and specific competition maneuvers at the Olympic Games."
-    }
+    },
+    "question": "Dipa Karmakar's performance of which high-difficulty vault helped her finish 4th in the women's vault final at the Rio 2016 Olympics?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -477,6 +573,10 @@
     "avgTime": "00:14",
     "questionText": "Article 32 is contained in which Part of the Constitution of India?",
     "options": {
+      "a": "Fundamental Duties",
+      "b": "Directive Principles of State Policy",
+      "c": "Fundamental Rights",
+      "d": "Preamble",
       "A": "Fundamental Duties",
       "B": "Directive Principles of State Policy",
       "C": "Fundamental Rights",
@@ -490,7 +590,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Fundamental Rights & Constitutional Remedies",
       "conceptTested": "Article 32 of the Constitution of India guarantees the right to constitutional remedies and empowers the Supreme Court to issue writs for the enforcement of Fundamental Rights."
-    }
+    },
+    "question": "Article 32 is contained in which Part of the Constitution of India?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -506,6 +608,10 @@
     "avgTime": "00:31",
     "questionText": "Read the Assertion (A) and Reason\n(R) below and choose the correct option:\n\nAssertion (A): The Pension Fund Regulatory and Development Authority (PFRDA) is the primary regulator of the Atal Pension Yojana (APY).\n\nReason\n(R): This is because the Central Recordkeeping Agency (CRA) for APY works independently of PFRDA and is regulated directly by the Ministry of Finance instead.",
     "options": {
+      "a": "Both A and R are true, and R is the correct explanation of A",
+      "b": "Both A and R are true, but R is not the correct explanation of A",
+      "c": "A is false, but R is true",
+      "d": "A is true, but R is false",
       "A": "Both A and R are true, and R is the correct explanation of A",
       "B": "Both A and R are true, but R is not the correct explanation of A",
       "C": "A is false, but R is true",
@@ -519,7 +625,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Atal Pension Yojana & Financial Regulators",
       "conceptTested": "Regulatory framework, institutional hierarchy, and administrative bodies responsible for government social security schemes like the Atal Pension Yojana."
-    }
+    },
+    "question": "Read the Assertion (A) and Reason\n(R) below and choose the correct option:\n\nAssertion (A): The Pension Fund Regulatory and Development Authority (PFRDA) is the primary regulator of the Atal Pension Yojana (APY).\n\nReason\n(R): This is because the Central Recordkeeping Agency (CRA) for APY works independently of PFRDA and is regulated directly by the Ministry of Finance instead.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -535,6 +643,10 @@
     "avgTime": "00:26",
     "questionText": "Which of the following pairs is correctly matched regarding the animals and their respective phylum?",
     "options": {
+      "a": "Jelly fish - Mollusca",
+      "b": "Cray fish - Insecta",
+      "c": "Whale - Chordata",
+      "d": "Devil fish - Coelenterate",
       "A": "Jelly fish - Mollusca",
       "B": "Cray fish - Insecta",
       "C": "Whale - Chordata",
@@ -548,7 +660,9 @@
       "topic": "Biology",
       "subtopic": "Animal Kingdom & Phylum Classification",
       "conceptTested": "Taxonomic classification of animals based on structural, physiological, and anatomical characteristics across various phyla."
-    }
+    },
+    "question": "Which of the following pairs is correctly matched regarding the animals and their respective phylum?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -564,6 +678,10 @@
     "avgTime": "00:27",
     "questionText": "Which of the following about the World Para Athletics Grand Prix 2026 New Delhi leg is/are correct?\n\nI. India finished on top of the medal standings.\n\nII. India secured 208 medals.\n\nIII. Bosnia and Herzegovina finished second with 35 medals.",
     "options": {
+      "a": "I and II only",
+      "b": "II and III only",
+      "c": "I and III only",
+      "d": "I, II and III",
       "A": "I and II only",
       "B": "II and III only",
       "C": "I and III only",
@@ -577,7 +695,9 @@
       "topic": "National & International Current Affairs",
       "subtopic": "Sports Tournaments & Athletic Events",
       "conceptTested": "Awareness of recent national and international sports competitions, host cities, medal tallies, and achievements of athletes."
-    }
+    },
+    "question": "Which of the following about the World Para Athletics Grand Prix 2026 New Delhi leg is/are correct?\n\nI. India finished on top of the medal standings.\n\nII. India secured 208 medals.\n\nIII. Bosnia and Herzegovina finished second with 35 medals.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -593,6 +713,10 @@
     "avgTime": "00:44",
     "questionText": "Read the Assertion (A) and Reason\n(R) below and choose the correct option:\n\nAssertion (A): Inward-looking trade policies protected domestic industries using tariffs and quotas, which ultimately provided high incentives for Indian producers to improve product quality.\n\nReason\n(R): Import substitution aimed to replace foreign imports with domestic production to promote self-reliance.",
     "options": {
+      "a": "Both (A) and\n(R) are true, and\n(R) is the correct explanation of (A).",
+      "b": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A).",
+      "c": "(A) is false, but\n(R) is true.",
+      "d": "(A) is true, but\n(R) is false.",
       "A": "Both (A) and\n(R) are true, and\n(R) is the correct explanation of (A).",
       "B": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A).",
       "C": "(A) is false, but\n(R) is true.",
@@ -606,7 +730,9 @@
       "topic": "Macroeconomics & National Income",
       "subtopic": "Economic Planning & Import Substitution",
       "conceptTested": "Impact of inward-looking trade policies (import substitution) on domestic industry efficiency and product quality during early Indian planning."
-    }
+    },
+    "question": "Read the Assertion (A) and Reason\n(R) below and choose the correct option:\n\nAssertion (A): Inward-looking trade policies protected domestic industries using tariffs and quotas, which ultimately provided high incentives for Indian producers to improve product quality.\n\nReason\n(R): Import substitution aimed to replace foreign imports with domestic production to promote self-reliance.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -622,6 +748,10 @@
     "avgTime": "01:15",
     "questionText": "A distributor purchases electric heaters at a price 60% above the factory's basic cost C. He gives a 25% trade discount to a shopkeeper. The shopkeeper then adds a 30% markup to his purchase price and offers customers a 10% discount on the marked price. If a customer pays ₹21,060 for one heater, what was its basic cost at the factory?",
     "options": {
+      "a": "₹12,000",
+      "b": "₹14,000",
+      "c": "₹15,000",
+      "d": "₹16,000",
       "A": "₹12,000",
       "B": "₹14,000",
       "C": "₹15,000",
@@ -635,7 +765,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Profit & Loss - Successive Markups and Discounts",
       "conceptTested": "Successive percentage changes applied to cost price to determine final selling price: SP = C × (1 + a%) × (1 - b%) × (1 + c%) × (1 - d%)."
-    }
+    },
+    "question": "A distributor purchases electric heaters at a price 60% above the factory's basic cost C. He gives a 25% trade discount to a shopkeeper. The shopkeeper then adds a 30% markup to his purchase price and offers customers a 10% discount on the marked price. If a customer pays ₹21,060 for one heater, what was its basic cost at the factory?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -651,6 +783,10 @@
     "avgTime": "00:31",
     "questionText": "Find the least number that should be added to 3135 to make it a perfect square.",
     "options": {
+      "a": "1",
+      "b": "4",
+      "c": "9",
+      "d": "6",
       "A": "1",
       "B": "4",
       "C": "9",
@@ -664,7 +800,9 @@
       "topic": "Number System",
       "subtopic": "Squares and Square Roots",
       "conceptTested": "Finding the least number to be added to a non-square number to obtain the next immediate perfect square."
-    }
+    },
+    "question": "Find the least number that should be added to 3135 to make it a perfect square.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -680,12 +818,16 @@
     "avgTime": "00:40",
     "questionText": "A town has a present population of 2,00,000. Its population increases by a net rate of 5% every year. Find the population of the town at the end of 3 years.",
     "options": {
+      "a": "2,31,525",
+      "b": "2,30,000",
+      "c": "2,32,000",
+      "d": "2,35,000",
       "A": "2,31,525",
       "B": "2,30,000",
       "C": "2,32,000",
       "D": "2,35,000"
     },
-    "solution": "Given:\nPresent population = 2,00,000\nAnnual net increase = 5%\n\nPopulation after 3 years:\n\n= 2,00,000 * (1 + 5/100)3\n= 2,00,000 * (1.05)3\n= 2,00,000 * 1.157625\n= 2,31,525\nTherefore, the population of the town at the end of 3 years is 2,31,525.",
+    "solution": "Given:\nPresent population = 2,00,000\nAnnual net increase = 5%\n\nPopulation after 3 years:\n\n= 2,00,000 * (1 + 5/100)³\n= 2,00,000 * (1.05)³\n= 2,00,000 * 1.157625\n= 2,31,525\nTherefore, the population of the town at the end of 3 years is 2,31,525.",
     "topic": "Compound Interest",
     "subtopic": "Population Growth Formula",
     "conceptTested": "Compound population growth formula: $A = P(1 + r/100)^n$.",
@@ -693,7 +835,9 @@
       "topic": "Compound Interest",
       "subtopic": "Population Growth Formula",
       "conceptTested": "Compound population growth formula: $A = P(1 + r/100)^n$."
-    }
+    },
+    "question": "A town has a present population of 2,00,000. Its population increases by a net rate of 5% every year. Find the population of the town at the end of 3 years.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -709,6 +853,10 @@
     "avgTime": "00:46",
     "questionText": "In a ΔPQR, side QR is extended to point 'S', such that ∠PRS = 126°. If ∠QPR = (4/3) × ∠PQR, then find the value of ∠QPR.",
     "options": {
+      "a": "68°",
+      "b": "72°",
+      "c": "76°",
+      "d": "80°",
       "A": "68°",
       "B": "72°",
       "C": "76°",
@@ -722,7 +870,9 @@
       "topic": "Geometry",
       "subtopic": "Triangles - Exterior Angle Property",
       "conceptTested": "Exterior Angle Theorem: The exterior angle of a triangle is equal to the sum of the two opposite interior angles."
-    }
+    },
+    "question": "In a ΔPQR, side QR is extended to point 'S', such that ∠PRS = 126°. If ∠QPR = (4/3) × ∠PQR, then find the value of ∠QPR.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -738,6 +888,10 @@
     "avgTime": "00:22",
     "questionText": "A chord AB of a circle is 18 cm long. The tangents at A and B are parallel. What is the diameter of the circle?",
     "options": {
+      "a": "12 cm",
+      "b": "15 cm",
+      "c": "18 cm",
+      "d": "20 cm",
       "A": "12 cm",
       "B": "15 cm",
       "C": "18 cm",
@@ -751,7 +905,9 @@
       "topic": "Geometry",
       "subtopic": "Circles - Tangents & Secants",
       "conceptTested": "Tangents drawn at the extremities of a diameter of a circle are parallel, and the line segment joining the points of contact passes through the center acting as the diameter."
-    }
+    },
+    "question": "A chord AB of a circle is 18 cm long. The tangents at A and B are parallel. What is the diameter of the circle?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -767,6 +923,10 @@
     "avgTime": "00:34",
     "questionText": "If B/A = 0.8, find (2A - B)/(2A + B) + 11/14",
     "options": {
+      "a": "1(1/14)",
+      "b": "1(3/14)",
+      "c": "2(3/14)",
+      "d": "2(1/14)",
       "A": "1(1/14)",
       "B": "1(3/14)",
       "C": "2(3/14)",
@@ -780,7 +940,9 @@
       "topic": "Ratio & Proportion",
       "subtopic": "Proportional Parts & Value Substitution",
       "conceptTested": "Substitution of given ratio values into an algebraic expression to find the numerical result."
-    }
+    },
+    "question": "If B/A = 0.8, find (2A - B)/(2A + B) + 11/14",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -796,6 +958,10 @@
     "avgTime": "01:01",
     "questionText": "A circle is inscribed in a triangle XYZ. It touches sides XY, YZ, and ZX at points A, C, and B respectively. If XB = 4.2 cm, YZ = 8 cm, and YC = 3.2 cm, then the perimeter of the triangle XYZ is:",
     "options": {
+      "a": "25.8 cm",
+      "b": "32.5 cm",
+      "c": "24.4 cm",
+      "d": "28.2 cm",
       "A": "25.8 cm",
       "B": "32.5 cm",
       "C": "24.4 cm",
@@ -809,7 +975,9 @@
       "topic": "Geometry",
       "subtopic": "Circles - Tangents & Secants",
       "conceptTested": "Tangents drawn from an external point to a circle are equal in length."
-    }
+    },
+    "question": "A circle is inscribed in a triangle XYZ. It touches sides XY, YZ, and ZX at points A, C, and B respectively. If XB = 4.2 cm, YZ = 8 cm, and YC = 3.2 cm, then the perimeter of the triangle XYZ is:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -825,12 +993,16 @@
     "avgTime": "00:27",
     "questionText": "If 3m - 3/m = 10, find the value of m^2 + 1/m^2",
     "options": {
+      "a": "109/4",
+      "b": "118/9",
+      "c": "118/4",
+      "d": "109/9",
       "A": "109/4",
       "B": "118/9",
       "C": "118/4",
       "D": "109/9"
     },
-    "solution": "3m - (3/m) = 10\nm - (1/m) = 10/3\n\nSquare both sides,\n\nm² + (1/m²) - 2 = 100/9\nm² + (1/m²) = 118/9",
+    "solution": "3m - (3/m) = 10\nm - (1/m) = 10/3\n\nSquare both sides,\n\nm2 + (1/m2) - 2 = 100/9\nm2 + (1/m2) = 118/9",
     "topic": "Algebra",
     "subtopic": "Algebraic Identities & Manipulation",
     "conceptTested": "Application of algebraic square identity (x - 1/x)^2 = x^2 + 1/x^2 - 2.",
@@ -838,7 +1010,9 @@
       "topic": "Algebra",
       "subtopic": "Algebraic Identities & Manipulation",
       "conceptTested": "Application of algebraic square identity (x - 1/x)^2 = x^2 + 1/x^2 - 2."
-    }
+    },
+    "question": "If 3m - 3/m = 10, find the value of m^2 + 1/m^2",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -854,12 +1028,16 @@
     "avgTime": "00:24",
     "questionText": "An artist forms triangle ABC. She connects the midpoints of its sides to form triangle DEF inside it. What is the area of triangle DEF in relation to triangle ABC?",
     "options": {
+      "a": "1 : 2",
+      "b": "1 : 3",
+      "c": "1 : 4",
+      "d": "1 : 6",
       "A": "1 : 2",
       "B": "1 : 3",
       "C": "1 : 4",
       "D": "1 : 6"
     },
-    "solution": "Formula:\n\nIf the ratio of corresponding sides of two similar triangles is k, then the ratio of their areas is k2.\n\nLet:\nk = side of triangle DEF / side of triangle ABC\n\nWhen the midpoints of the sides of a triangle are joined, the new triangle formed is the medial triangle.\n\nEach side of triangle DEF = 1/2 of the corresponding side of triangle ABC.\n\nSo,\n\nk = 1/2\nArea ratio = k2\nArea ratio = (1/2)2\nArea ratio = 1/4\n\nTherefore, the ratio of the area of triangle DEF to that of triangle ABC is 1 : 4.",
+    "solution": "Formula:\n\nIf the ratio of corresponding sides of two similar triangles is k, then the ratio of their areas is k2.\n\nLet:\nk = side of triangle DEF / side of triangle ABC\n\nWhen the midpoints of the sides of a triangle are joined, the new triangle formed is the medial triangle.\n\nEach side of triangle DEF = 1/2 of the corresponding side of triangle ABC.\n\nSo,\n\nk = 1/2\nArea ratio = k2\nArea ratio = (1/2)²\nArea ratio = 1/4\n\nTherefore, the ratio of the area of triangle DEF to that of triangle ABC is 1 : 4.",
     "topic": "Geometry",
     "subtopic": "Triangles - Midpoint Theorem & Similarity",
     "conceptTested": "The triangle formed by joining the midpoints of the sides of a triangle is similar to the original triangle with a side ratio of 1:2 and an area ratio of 1:4.",
@@ -867,7 +1045,9 @@
       "topic": "Geometry",
       "subtopic": "Triangles - Midpoint Theorem & Similarity",
       "conceptTested": "The triangle formed by joining the midpoints of the sides of a triangle is similar to the original triangle with a side ratio of 1:2 and an area ratio of 1:4."
-    }
+    },
+    "question": "An artist forms triangle ABC. She connects the midpoints of its sides to form triangle DEF inside it. What is the area of triangle DEF in relation to triangle ABC?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -883,6 +1063,10 @@
     "avgTime": "00:32",
     "questionText": "The average weight of 8 students is 52 kg. If two students weighing 47 kg and 61 kg leave the group, what will be the average weight of the remaining students?",
     "options": {
+      "a": "50.5 kg",
+      "b": "51.33 kg",
+      "c": "51.5 kg",
+      "d": "52 kg",
       "A": "50.5 kg",
       "B": "51.33 kg",
       "C": "51.5 kg",
@@ -896,7 +1080,9 @@
       "topic": "Average",
       "subtopic": "Group Average - Inclusion and Exclusion",
       "conceptTested": "Average = Sum of observations / Total number of observations"
-    }
+    },
+    "question": "The average weight of 8 students is 52 kg. If two students weighing 47 kg and 61 kg leave the group, what will be the average weight of the remaining students?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -912,12 +1098,16 @@
     "avgTime": "00:12",
     "questionText": "Evaluate:\n\n√(20 + √(20 + √(20 + ...)))",
     "options": {
+      "a": "4",
+      "b": "5",
+      "c": "6",
+      "d": "8",
       "A": "4",
       "B": "5",
       "C": "6",
       "D": "8"
     },
-    "solution": "Let\n√(20 + √(20 + √(20 + ...))) = x\n\nThen,\n\nx = √(20 + x)\n\nSquaring both sides,\n\nx2 = 20 + x\nx2 − x − 20 = 0\n(x − 5)(x + 4) = 0\nSince x is positive,\nx = 5.\n\nExpress Method\n\nFactors of 20 = 5 and 4.\n\nSince there is a + sign in the question, the answer will be the larger factor, that is, 5.",
+    "solution": "Let\n√(20 + √(20 + √(20 + ...))) = x\n\nThen,\n\nx = √(20 + x)\n\nSquaring both sides,\n\nx2 = 20 + x\nx2 - x - 20 = 0\n(x - 5)(x + 4) = 0\nSince x is positive,\nx = 5.\n\nExpress Method\n\nFactors of 20 = 5 and 4.\n\nSince there is a + sign in the question, the answer will be the larger factor, that is, 5.",
     "topic": "Simplification",
     "subtopic": "Surds & Indices - Infinite Nested Radicals",
     "conceptTested": "Quadratic reduction of infinite radical expressions where factors differ by 1",
@@ -925,7 +1115,9 @@
       "topic": "Simplification",
       "subtopic": "Surds & Indices - Infinite Nested Radicals",
       "conceptTested": "Quadratic reduction of infinite radical expressions where factors differ by 1"
-    }
+    },
+    "question": "Evaluate:\n\n√(20 + √(20 + √(20 + ...)))",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -941,12 +1133,16 @@
     "avgTime": "00:34",
     "questionText": "A principal earns simple interest equal to 42% of itself in 6 years. At the same annual rate, what is the difference between compound interest and simple interest on ₹40,000 for 2 years?",
     "options": {
+      "a": "₹176",
+      "b": "₹184",
+      "c": "₹196",
+      "d": "₹204",
       "A": "₹176",
       "B": "₹184",
       "C": "₹196",
       "D": "₹204"
     },
-    "solution": "In 6 years, SI = 42% of principal.\nR = 42 / 6\n= 7%\n\nFor 2 years,\n\nCI - SI = P ( R/100)2\n= 40000 ( 7 / 100) 2\n= 40000 ( 49/10000)\n= ₹196\nHence, (c) is correct.",
+    "solution": "In 6 years, SI = 42% of principal.\nR = 42 / 6\n= 7%\n\nFor 2 years,\n\nCI - SI = P ( R/100)²\n= 40000 ( 7 / 100)²\n= 40000 ( 49/10000)\n= ₹196\nHence, (c) is correct.",
     "topic": "Compound Interest",
     "subtopic": "Difference between CI and SI for 2 Years",
     "conceptTested": "For 2 years, CI - SI = P(R/100)²",
@@ -954,7 +1150,9 @@
       "topic": "Compound Interest",
       "subtopic": "Difference between CI and SI for 2 Years",
       "conceptTested": "For 2 years, CI - SI = P(R/100)²"
-    }
+    },
+    "question": "A principal earns simple interest equal to 42% of itself in 6 years. At the same annual rate, what is the difference between compound interest and simple interest on ₹40,000 for 2 years?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -970,6 +1168,10 @@
     "avgTime": "00:19",
     "questionText": "Select the most appropriate synonym of the given word.\n\nFanatical",
     "options": {
+      "a": "Jaunty",
+      "b": "Tedious",
+      "c": "Moderate",
+      "d": "Zealous",
       "A": "Jaunty",
       "B": "Tedious",
       "C": "Moderate",
@@ -983,7 +1185,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms",
       "conceptTested": ""
-    }
+    },
+    "question": "Select the most appropriate synonym of the given word.\n\nFanatical",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -999,6 +1203,10 @@
     "avgTime": "00:27",
     "questionText": "Select the appropriate idiom for the given blank.\n\nA major _________________ at the meeting will be the appointment of an auditor, after Grant Thornton's resignation.",
     "options": {
+      "a": "Bone of contention",
+      "b": "Tooth and nail",
+      "c": "Read between the lines",
+      "d": "Hard gram to crack",
       "A": "Bone of contention",
       "B": "Tooth and nail",
       "C": "Read between the lines",
@@ -1012,7 +1220,9 @@
       "topic": "Idioms & Phrases",
       "subtopic": "Idiom Meaning and Usage",
       "conceptTested": "Contextual usage of idioms in sentence blanks"
-    }
+    },
+    "question": "Select the appropriate idiom for the given blank.\n\nA major _________________ at the meeting will be the appointment of an auditor, after Grant Thornton's resignation.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -1028,6 +1238,10 @@
     "avgTime": "00:55",
     "questionText": "Given below are five jumbled sentences. Select the option that gives their correct logical sequence.\n\nA. Blockchain technology is essentially a decentralized, distributed, and immutable digital ledger of transactions.\n\nB. This immutability and transparency make it highly secure for recording various types of valuable information.\n\nC. Beyond cryptocurrencies, blockchain finds applications in supply chain management, voting systems, and digital identity.\n\nD. Each \"block\" in the chain contains a number of transactions cryptographically linked to the previous one.\n\nE. Once a block is added to the chain, the data within it cannot be altered retroactively.",
     "options": {
+      "a": "ABEDC",
+      "b": "BCEDA",
+      "c": "ADEBC",
+      "d": "EACBD",
       "A": "ABEDC",
       "B": "BCEDA",
       "C": "ADEBC",
@@ -1041,7 +1255,9 @@
       "topic": "Para Jumbles",
       "subtopic": "Para Jumbles",
       "conceptTested": "Logical sequencing of sentences based on subject introduction, elaboration, and conclusion."
-    }
+    },
+    "question": "Given below are five jumbled sentences. Select the option that gives their correct logical sequence.\n\nA. Blockchain technology is essentially a decentralized, distributed, and immutable digital ledger of transactions.\n\nB. This immutability and transparency make it highly secure for recording various types of valuable information.\n\nC. Beyond cryptocurrencies, blockchain finds applications in supply chain management, voting systems, and digital identity.\n\nD. Each \"block\" in the chain contains a number of transactions cryptographically linked to the previous one.\n\nE. Once a block is added to the chain, the data within it cannot be altered retroactively.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -1057,6 +1273,10 @@
     "avgTime": "00:39",
     "questionText": "Read the passage and answer the following question:\n\nIn the contemporary administrative framework of India, the roles of Divisional Commissioner and District Collector constitute significant pillars of regional governance, though they differ considerably in jurisdiction, authority, and functional responsibilities. While both positions are occupied by senior civil servants, their administrative scope and operational focus vary according to the level at which they function within the governmental hierarchy.\n\nThe District Collector, often referred to as the District Magistrate or Deputy Commissioner in certain states, serves as the chief executive authority at the district level. Since the district represents the fundamental unit of administration, the Collector is entrusted with responsibilities such as revenue administration, maintenance of law and order, implementation of developmental schemes, disaster management, and coordination of electoral processes. Owing to constant interaction with local institutions and the public, the office of the Collector remains closely associated with grassroots governance and immediate administrative concerns.\n\nIn contrast, the Divisional Commissioner operates at a broader regional level and supervises the administration of multiple districts grouped within a division. Rather than directly addressing routine district-level issues, the Commissioner primarily undertakes inspection, coordination, policy monitoring, and administrative review. The office ensures consistency in governance, evaluates the performance of district administrations, and facilitates communication between the state government and subordinate administrative units. This supervisory role enables the Commissioner to maintain administrative uniformity across an entire division.\n\nFurthermore, the distinction between the two offices may be understood through the nature of their decision-making responsibilities. The Collector functions as an executive authority directly involved in field administration and public service delivery, whereas the Divisional Commissioner acts as a supervisory and appellate authority overseeing the functioning of several Collectors simultaneously. Consequently, while the Collector focuses on operational administration within a single district, the Commissioner concentrates on broader regional coordination and institutional efficiency.\n\nIn essence, the relationship between the Divisional Commissioner and the District Collector reflects a structured administrative hierarchy designed to balance local governance with regional supervision. Together, these offices contribute to effective policy implementation, administrative accountability, and coordinated governance across the state system.\n\nThe word \"appellate\" in the passage most nearly means:",
     "options": {
+      "a": "Related to reviewing decisions made by lower authorities",
+      "b": "Intended to increase public participation in governance",
+      "c": "Connected with collecting administrative revenue",
+      "d": "Concerned with implementing welfare schemes directly",
       "A": "Related to reviewing decisions made by lower authorities",
       "B": "Intended to increase public participation in governance",
       "C": "Connected with collecting administrative revenue",
@@ -1070,7 +1290,9 @@
       "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Vocabulary in context: determining the meaning of a term based on surrounding descriptive text."
-    }
+    },
+    "question": "Read the passage and answer the following question:\n\nIn the contemporary administrative framework of India, the roles of Divisional Commissioner and District Collector constitute significant pillars of regional governance, though they differ considerably in jurisdiction, authority, and functional responsibilities. While both positions are occupied by senior civil servants, their administrative scope and operational focus vary according to the level at which they function within the governmental hierarchy.\n\nThe District Collector, often referred to as the District Magistrate or Deputy Commissioner in certain states, serves as the chief executive authority at the district level. Since the district represents the fundamental unit of administration, the Collector is entrusted with responsibilities such as revenue administration, maintenance of law and order, implementation of developmental schemes, disaster management, and coordination of electoral processes. Owing to constant interaction with local institutions and the public, the office of the Collector remains closely associated with grassroots governance and immediate administrative concerns.\n\nIn contrast, the Divisional Commissioner operates at a broader regional level and supervises the administration of multiple districts grouped within a division. Rather than directly addressing routine district-level issues, the Commissioner primarily undertakes inspection, coordination, policy monitoring, and administrative review. The office ensures consistency in governance, evaluates the performance of district administrations, and facilitates communication between the state government and subordinate administrative units. This supervisory role enables the Commissioner to maintain administrative uniformity across an entire division.\n\nFurthermore, the distinction between the two offices may be understood through the nature of their decision-making responsibilities. The Collector functions as an executive authority directly involved in field administration and public service delivery, whereas the Divisional Commissioner acts as a supervisory and appellate authority overseeing the functioning of several Collectors simultaneously. Consequently, while the Collector focuses on operational administration within a single district, the Commissioner concentrates on broader regional coordination and institutional efficiency.\n\nIn essence, the relationship between the Divisional Commissioner and the District Collector reflects a structured administrative hierarchy designed to balance local governance with regional supervision. Together, these offices contribute to effective policy implementation, administrative accountability, and coordinated governance across the state system.\n\nThe word \"appellate\" in the passage most nearly means:",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -1086,6 +1308,10 @@
     "avgTime": "00:52",
     "questionText": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech.\n\nDuring the inquiry, the treasurer said, \"I did not authorise the transfer, and I never instructed anyone to conceal it.\"",
     "options": {
+      "a": "The treasurer refused to authorise the transfer or instruct anyone to conceal it.",
+      "b": "The treasurer denied to have authorised the transfer or to have instructed anyone to conceal it.",
+      "c": "The treasurer denied having concealed the transfer after instructing someone to authorise it.",
+      "d": "The treasurer denied having authorised the transfer or having instructed anyone to conceal it.",
       "A": "The treasurer refused to authorise the transfer or instruct anyone to conceal it.",
       "B": "The treasurer denied to have authorised the transfer or to have instructed anyone to conceal it.",
       "C": "The treasurer denied having concealed the transfer after instructing someone to authorise it.",
@@ -1099,7 +1325,9 @@
       "topic": "Direct & Indirect Speech",
       "subtopic": "Direct & Indirect Speech (Narration)",
       "conceptTested": "Conversion of direct speech into indirect speech using appropriate reporting verbs such as 'denied' followed by a gerund."
-    }
+    },
+    "question": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech.\n\nDuring the inquiry, the treasurer said, \"I did not authorise the transfer, and I never instructed anyone to conceal it.\"",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -1115,6 +1343,10 @@
     "avgTime": "00:48",
     "questionText": "The sentence below has errors in two parts. Identify the same.\n\nThe committee recommended that every applicant (A) submits the required documents (B) before the interview (C) without failing. (D)",
     "options": {
+      "a": "AB",
+      "b": "BD",
+      "c": "CD",
+      "d": "AC",
       "A": "AB",
       "B": "BD",
       "C": "CD",
@@ -1128,7 +1360,9 @@
       "topic": "Spotting Errors",
       "subtopic": "Spotting Errors",
       "conceptTested": "Subjunctive mood after 'recommended that' requiring base form verbs, and fixed idioms ('without fail')."
-    }
+    },
+    "question": "The sentence below has errors in two parts. Identify the same.\n\nThe committee recommended that every applicant (A) submits the required documents (B) before the interview (C) without failing. (D)",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -1144,6 +1378,10 @@
     "avgTime": "00:13",
     "questionText": "The following sentence has been split into four segments. Identify the segment that contains a grammatical error.\n\nThe case has been / dismiss due / to a lack of / convincing evidence.",
     "options": {
+      "a": "dismiss due",
+      "b": "to a lack of",
+      "c": "convincing evidence",
+      "d": "the case has been",
       "A": "dismiss due",
       "B": "to a lack of",
       "C": "convincing evidence",
@@ -1157,7 +1395,9 @@
       "topic": "Sentence Improvement",
       "subtopic": "Sentence Improvement",
       "conceptTested": "Passive voice construction in the present perfect tense (has/have + been + V3)."
-    }
+    },
+    "question": "The following sentence has been split into four segments. Identify the segment that contains a grammatical error.\n\nThe case has been / dismiss due / to a lack of / convincing evidence.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
@@ -1173,6 +1413,10 @@
     "avgTime": "00:14",
     "questionText": "Choose the correct one-word substitution for the blank in the sentence below.\n\nThe professor of ________ spent years tracing the origins and historical development of English words.",
     "options": {
+      "a": "etymology",
+      "b": "ecology",
+      "c": "sociology",
+      "d": "physiology",
       "A": "etymology",
       "B": "ecology",
       "C": "sociology",
@@ -1186,6 +1430,8 @@
       "topic": "One Word Substitution",
       "subtopic": "One Word Substitution",
       "conceptTested": "Vocabulary knowledge related to the scientific study of the origin and history of words."
-    }
+    },
+    "question": "Choose the correct one-word substitution for the blank in the sentence below.\n\nThe professor of ________ spent years tracing the origins and historical development of English words.",
+    "answer": "a"
   }
 ]

@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import crypto from "crypto";
 import { cleanSolutionText } from "./src/utils/cleanSolution";
 import { cleanQuestionText } from "./src/utils/formatQuestionText";
+import { normalizeQuestionOptions, normalizeAnswerKey } from "./src/utils/mathSanitizer";
 import chatHandler from "./api/chat";
 
 dotenv.config();
@@ -17,6 +18,34 @@ function generateQuestionId(subject: string, questionText: string): string {
   const hash = crypto.createHash("md5").update(clean).digest("hex").slice(0, 10);
   const subPrefix = subject.slice(0, 4).toLowerCase();
   return `${subPrefix}_${hash}`;
+}
+
+// Clean and normalize single question data object
+export function cleanAndNormalizeQuestion(q: any): any {
+  if (!q || typeof q !== "object") return q;
+  const normOptions = normalizeQuestionOptions(q.options);
+  const qText = cleanQuestionText(q.question || q.questionText || "");
+  const solText = cleanSolutionText(q.solution || "");
+  const answer = normalizeAnswerKey(q.answer || q.correctOption || q.correct_answer || q.correct_option);
+
+  return {
+    ...q,
+    question: qText,
+    questionText: qText,
+    options: {
+      a: cleanQuestionText(normOptions.a),
+      b: cleanQuestionText(normOptions.b),
+      c: cleanQuestionText(normOptions.c),
+      d: cleanQuestionText(normOptions.d),
+      A: cleanQuestionText(normOptions.a),
+      B: cleanQuestionText(normOptions.b),
+      C: cleanQuestionText(normOptions.c),
+      D: cleanQuestionText(normOptions.d),
+    },
+    answer,
+    correctOption: answer.toUpperCase(),
+    solution: solText,
+  };
 }
 
 // Subject standardizer
@@ -1068,7 +1097,11 @@ async function startServer() {
   app.post("/api/mock-questions/:id", (req, res) => {
     try {
       const { id } = req.params;
-      const questions = req.body;
+      const rawQuestions = req.body;
+      const questions = Array.isArray(rawQuestions)
+        ? rawQuestions.map(cleanAndNormalizeQuestion)
+        : rawQuestions;
+
       const tDir = path.join(process.cwd(), "src", "data", "mock_tests");
       if (!fs.existsSync(tDir)) fs.mkdirSync(tDir, { recursive: true });
       fs.writeFileSync(path.join(tDir, `${id}.json`), JSON.stringify(questions, null, 2), "utf-8");
@@ -1078,6 +1111,41 @@ async function startServer() {
       fs.writeFileSync(path.join(qDir, `${id}.json`), JSON.stringify(questions, null, 2), "utf-8");
 
       res.json({ success: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
+  // Maintenance endpoint: Batch clean all existing mock files
+  app.post("/api/clean-existing-mocks", (req, res) => {
+    try {
+      const dirs = [
+        path.join(process.cwd(), "src", "data", "mock_questions"),
+        path.join(process.cwd(), "src", "data", "mock_tests"),
+      ];
+      let filesProcessed = 0;
+      let questionsProcessed = 0;
+
+      for (const dir of dirs) {
+        if (!fs.existsSync(dir)) continue;
+        const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+        for (const file of files) {
+          const filePath = path.join(dir, file);
+          try {
+            const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+            if (Array.isArray(data)) {
+              const cleaned = data.map(cleanAndNormalizeQuestion);
+              fs.writeFileSync(filePath, JSON.stringify(cleaned, null, 2), "utf-8");
+              questionsProcessed += cleaned.length;
+              filesProcessed++;
+            }
+          } catch (err) {
+            console.error(`Error cleaning mock file ${filePath}:`, err);
+          }
+        }
+      }
+
+      res.json({ success: true, filesProcessed, questionsProcessed });
     } catch (e: any) {
       res.status(500).json({ error: e.message });
     }

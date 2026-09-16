@@ -13,6 +13,10 @@
     "avgTime": "00:29",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: Was the conclusion reached by the jury after reviewing all the evidence?",
     "options": {
+      "a": "Did the jury reach the conclusion after reviewing all the evidence?",
+      "b": "Was all the evidence reviewed after reaching a conclusion by the jury?",
+      "c": "Had the jury reached a conclusion by the time the evidence was reviewed?",
+      "d": "Did the evidence conclude the jury's review?",
       "A": "Did the jury reach the conclusion after reviewing all the evidence?",
       "B": "Was all the evidence reviewed after reaching a conclusion by the jury?",
       "C": "Had the jury reached a conclusion by the time the evidence was reviewed?",
@@ -26,7 +30,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active - Interrogative Sentences (Simple Past)",
       "conceptTested": "Conversion of simple past passive interrogative ('Was ... reached by') to simple past active ('Did ... reach')."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: Was the conclusion reached by the jury after reviewing all the evidence?",
+    "answer": "a"
   },
   {
     "testName": "CGL 20/09/2025 Shift-3 (English)",
@@ -42,6 +48,10 @@
     "avgTime": "00:31",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The changes must have been implemented without consulting the advisory board.",
     "options": {
+      "a": "They must implement the changes without consulting anyone.",
+      "b": "The advisory board must not have been consulted during changes.",
+      "c": "Someone must have implemented the changes without consulting the advisory board.",
+      "d": "The changes must be implemented without advisory consultation.",
       "A": "They must implement the changes without consulting anyone.",
       "B": "The advisory board must not have been consulted during changes.",
       "C": "Someone must have implemented the changes without consulting the advisory board.",
@@ -55,7 +65,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active - Modals (Modal Perfect)",
       "conceptTested": "Conversion of passive modal perfect ('must have been implemented') to active modal perfect ('must have implemented') with an implied subject introduction."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The changes must have been implemented without consulting the advisory board.",
+    "answer": "c"
   },
   {
     "testName": "CGL 21/09/2025 Shift-2 (English)",
@@ -71,6 +83,10 @@
     "avgTime": "00:16",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The car had been parked in front of the gate by the visitor.",
     "options": {
+      "a": "The visitor parks the car in front of the gate.",
+      "b": "The visitor had parked the car in front of the gate.",
+      "c": "The car was being parked in front of the gate by the visitor.",
+      "d": "The visitor will park the car in front of the gate.",
       "A": "The visitor parks the car in front of the gate.",
       "B": "The visitor had parked the car in front of the gate.",
       "C": "The car was being parked in front of the gate by the visitor.",
@@ -84,7 +100,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active - Past Perfect Tense",
       "conceptTested": "Conversion of past perfect passive ('had been parked') to past perfect active ('had parked')."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The car had been parked in front of the gate by the visitor.",
+    "answer": "b"
   },
   {
     "testName": "CGL 21/09/2025 Shift-3 (English)",
@@ -100,6 +118,10 @@
     "avgTime": "00:21",
     "questionText": "Change the following from active to passive:\n\nWhere will they hold the conference?",
     "options": {
+      "a": "Where the conference will be held?",
+      "b": "Where will the conference be held?",
+      "c": "Where is the conference held?",
+      "d": "Where has the conference been held?",
       "A": "Where the conference will be held?",
       "B": "Where will the conference be held?",
       "C": "Where is the conference held?",
@@ -113,7 +135,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active to Passive - Interrogative Sentences (Simple Future)",
       "conceptTested": "Conversion of active simple future interrogative ('Where will they hold') to passive future simple interrogative ('Where will ... be held')."
-    }
+    },
+    "question": "Change the following from active to passive:\n\nWhere will they hold the conference?",
+    "answer": "b"
   },
   {
     "testName": "CGL 22/09/2025 Shift-2 (English)",
@@ -129,6 +153,10 @@
     "avgTime": "00:21",
     "questionText": "Change the following from active to passive:\n\nWe are going to start the project soon.",
     "options": {
+      "a": "The project is going to be started soon.",
+      "b": "The project was going to be started soon.",
+      "c": "The project is being going to be started soon.",
+      "d": "The project has been going to be started soon.",
       "A": "The project is going to be started soon.",
       "B": "The project was going to be started soon.",
       "C": "The project is being going to be started soon.",
@@ -142,7 +170,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active to Passive - 'Going to' Future Structure",
       "conceptTested": "Conversion of active 'going to' future ('are going to start') to passive 'is going to be + past participle'."
-    }
+    },
+    "question": "Change the following from active to passive:\n\nWe are going to start the project soon.",
+    "answer": "a"
   },
   {
     "testName": "CGL 22/09/2025 Shift-3 (English)",
@@ -158,6 +188,10 @@
     "avgTime": "00:44",
     "questionText": "Change the following from active to passive:\n\nThey should have had the matter re-examined before escalation.",
     "options": {
+      "a": "The matter should have had to be re-examined before escalation.",
+      "b": "The matter should have been re-examined before escalation.",
+      "c": "The matter should have been had re-examined.",
+      "d": "The matter should have been made to be re-examined.",
       "A": "The matter should have had to be re-examined before escalation.",
       "B": "The matter should have been re-examined before escalation.",
       "C": "The matter should have been had re-examined.",
@@ -171,7 +205,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Causative & Modal Perfect Passive",
       "conceptTested": "Active-to-passive conversion of modal perfect sentences with causative structures ('should have had + object + past participle' becomes 'should have been + past participle')."
-    }
+    },
+    "question": "Change the following from active to passive:\n\nThey should have had the matter re-examined before escalation.",
+    "answer": "b"
   },
   {
     "testName": "CGL 22/09/2025 Shift-3 (English)",
@@ -187,6 +223,10 @@
     "avgTime": "00:36",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe CEO is known to have been influenced by external advisors.",
     "options": {
+      "a": "External advisors are known to influence the CEO.",
+      "b": "Someone knew the CEO was influenced by external advisors.",
+      "c": "People know that the CEO was influenced by external advisors.",
+      "d": "External advisors are said to have influenced the CEO.",
       "A": "External advisors are known to influence the CEO.",
       "B": "Someone knew the CEO was influenced by external advisors.",
       "C": "People know that the CEO was influenced by external advisors.",
@@ -200,7 +240,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion with Implied Subject",
       "conceptTested": "Passive-to-active conversion involving infinitive complements and implied subjects by introducing an appropriate logical subject like 'People'."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe CEO is known to have been influenced by external advisors.",
+    "answer": "c"
   },
   {
     "testName": "CGL 23/09/2025 Shift-1 (English)",
@@ -216,6 +258,10 @@
     "avgTime": "00:25",
     "questionText": "Change the following from active to passive:\n\nThey should be auditing the subsidiary accounts this quarter.",
     "options": {
+      "a": "The subsidiary accounts should have been audited by them this quarter.",
+      "b": "The subsidiary accounts are being audited by them this quarter.",
+      "c": "The subsidiary accounts should be being audited by them this quarter.",
+      "d": "The subsidiary accounts should be audited by them this quarter.",
       "A": "The subsidiary accounts should have been audited by them this quarter.",
       "B": "The subsidiary accounts are being audited by them this quarter.",
       "C": "The subsidiary accounts should be being audited by them this quarter.",
@@ -229,7 +275,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Modal Continuous Passive",
       "conceptTested": "Active-to-passive conversion of modal continuous verb phrases ('should be auditing' becomes 'should be being audited')."
-    }
+    },
+    "question": "Change the following from active to passive:\n\nThey should be auditing the subsidiary accounts this quarter.",
+    "answer": "c"
   },
   {
     "testName": "CGL 23/09/2025 Shift-1 (English)",
@@ -245,6 +293,10 @@
     "avgTime": "00:48",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe agreement was found to have been violated despite multiple warnings.",
     "options": {
+      "a": "It was found that someone violated the agreement despite multiple warnings.",
+      "b": "Authorities found that the agreement was being violated despite multiple warnings.",
+      "c": "Authorities found the agreement had been violated despite multiple warnings.",
+      "d": "It had been found that the agreement was violated despite multiple warnings.",
       "A": "It was found that someone violated the agreement despite multiple warnings.",
       "B": "Authorities found that the agreement was being violated despite multiple warnings.",
       "C": "Authorities found the agreement had been violated despite multiple warnings.",
@@ -258,7 +310,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Past Perfect",
       "conceptTested": "Passive-to-active conversion of complex passive clauses involving past perfect tense and inferred agency ('Authorities')."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe agreement was found to have been violated despite multiple warnings.",
+    "answer": "c"
   },
   {
     "testName": "CGL 23/09/2025 Shift-2 (English)",
@@ -274,6 +328,10 @@
     "avgTime": "00:20",
     "questionText": "Change the following from active to passive:\n\nThey will not have finalized the merger documents by midnight.",
     "options": {
+      "a": "The merger documents will not be finalized by them by midnight.",
+      "b": "The merger documents will not have been finalized by them by midnight.",
+      "c": "The merger documents have not been finalized by them by midnight.",
+      "d": "The merger documents would not have been finalized by them by midnight.",
       "A": "The merger documents will not be finalized by them by midnight.",
       "B": "The merger documents will not have been finalized by them by midnight.",
       "C": "The merger documents have not been finalized by them by midnight.",
@@ -287,7 +345,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Future Perfect Passive",
       "conceptTested": "Active-to-passive conversion for future perfect tense negative sentences ('will not have finalized' becomes 'will not have been finalized')."
-    }
+    },
+    "question": "Change the following from active to passive:\n\nThey will not have finalized the merger documents by midnight.",
+    "answer": "b"
   },
   {
     "testName": "CGL 24/09/2025 Shift-1 (English)",
@@ -303,6 +363,10 @@
     "avgTime": "00:21",
     "questionText": "Change the following from active to passive:\n\nThey may have been undervaluing the intellectual property portfolio.",
     "options": {
+      "a": "The intellectual property portfolio may have be being undervalued.",
+      "b": "The intellectual property portfolio may have undervalued.",
+      "c": "The intellectual property portfolio may have been being undervalued.",
+      "d": "The intellectual property portfolio may have had been undervalued.",
       "A": "The intellectual property portfolio may have be being undervalued.",
       "B": "The intellectual property portfolio may have undervalued.",
       "C": "The intellectual property portfolio may have been being undervalued.",
@@ -316,6 +380,8 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive - Modal Continuous Verbs",
       "conceptTested": "Conversion of past modal continuous active voice ('may have been + verb-ing') to passive voice ('may have been being + V3')."
-    }
+    },
+    "question": "Change the following from active to passive:\n\nThey may have been undervaluing the intellectual property portfolio.",
+    "answer": "c"
   }
 ]

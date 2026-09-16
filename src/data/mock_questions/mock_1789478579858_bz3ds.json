@@ -13,6 +13,10 @@
     "avgTime": "00:50",
     "questionText": "In a certain code language, 'BRIGHT' is written as 'JSCVJI' and 'BROKEN' is written as 'PSCPGM'. How will 'BUDGET' be written as in that language?",
     "options": {
+      "a": "EVCTEG",
+      "b": "TEGDUB",
+      "c": "DUBTEG",
+      "d": "EVCVGI",
       "A": "EVCTEG",
       "B": "TEGDUB",
       "C": "DUBTEG",
@@ -26,7 +30,9 @@
       "topic": "Coding-Decoding",
       "subtopic": "Letter Coding",
       "conceptTested": "Forward and reverse letter shifting patterns for word encryption"
-    }
+    },
+    "question": "In a certain code language, 'BRIGHT' is written as 'JSCVJI' and 'BROKEN' is written as 'PSCPGM'. How will 'BUDGET' be written as in that language?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -42,12 +48,16 @@
     "avgTime": "01:08",
     "questionText": "Select the number that can replace the question mark (?) in the following series.\n61, 63, 65, 77, 89, ?, 149, 205",
     "options": {
+      "a": "132",
+      "b": "119",
+      "c": "123",
+      "d": "115",
       "A": "132",
       "B": "119",
       "C": "123",
       "D": "115"
     },
-    "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)2 + 1 = 61 + 2 = 63\n63 + (2)2 - 2  = 63 + 2 = 65\n65 + (3)2 + 3 = 65 + 12 = 77\n77 + (4)2 - 4 = 77 + 12 = 89\n89 + (5)2 + 5 = 89 + 30 = 119\n119 + (6)2 - 6 = 119 + 30 = 149\n149 + (7)2 + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
+    "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)² + 1 = 61 + 2 = 63\n63 + (2)² - 2  = 63 + 2 = 65\n65 + (3)² + 3 = 65 + 12 = 77\n77 + (4)² - 4 = 77 + 12 = 89\n89 + (5)² + 5 = 89 + 30 = 119\n119 + (6)² - 6 = 119 + 30 = 149\n149 + (7)² + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
     "topic": "Number Series",
     "subtopic": "Missing Number Series",
     "conceptTested": "Mixed arithmetic and square difference series pattern recognition",
@@ -55,7 +65,9 @@
       "topic": "Number Series",
       "subtopic": "Missing Number Series",
       "conceptTested": "Mixed arithmetic and square difference series pattern recognition"
-    }
+    },
+    "question": "Select the number that can replace the question mark (?) in the following series.\n61, 63, 65, 77, 89, ?, 149, 205",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -71,12 +83,16 @@
     "avgTime": "00:53",
     "questionText": "Study the given pattern carefully and select the number that can replace the question mark (?) in it.\n\n| 5 | 7 | 100 |\n| 8 | 9 | 181 |\n| 11 | 10 | ? |",
     "options": {
+      "a": "260",
+      "b": "255",
+      "c": "265",
+      "d": "244",
       "A": "260",
       "B": "255",
       "C": "265",
       "D": "244"
     },
-    "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)2 + (Second term + 1)2  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)2 + (7 + 1)2 = 100\n(6)2 + (8)2 = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)2 + (9 + 1)2 = 181\n(9)2 + (10)2 = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)2 + (10 + 1)2 = ?\n(12)2 + (11)2 = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
+    "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)² + (Second term + 1)²  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)² + (7 + 1)² = 100\n(6)² + (8)² = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)² + (9 + 1)² = 181\n(9)² + (10)² = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)² + (10 + 1)² = ?\n(12)² + (11)² = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
     "topic": "Missing Number / Matrix",
     "subtopic": "Number puzzles",
     "conceptTested": "Grid matrix arithmetic involving squares of incremented row values: (a+1)^2 + (b+1)^2 = c",
@@ -84,7 +100,9 @@
       "topic": "Missing Number / Matrix",
       "subtopic": "Number puzzles",
       "conceptTested": "Grid matrix arithmetic involving squares of incremented row values: (a+1)^2 + (b+1)^2 = c"
-    }
+    },
+    "question": "Study the given pattern carefully and select the number that can replace the question mark (?) in it.\n\n| 5 | 7 | 100 |\n| 8 | 9 | 181 |\n| 11 | 10 | ? |",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -100,6 +118,10 @@
     "avgTime": "00:30",
     "questionText": "In a certain code language,\n“yak lot sip kit fat” is written as “fk xv bn sq tu”,\n“fit fat raw dot lip” is written as “er dp yp hb sq”,\n“raw but sit mat yak” is written as “tu rt fl dy yp”.\nWhat is the code for “yak” in that language?",
     "options": {
+      "a": "rt",
+      "b": "yp",
+      "c": "tu",
+      "d": "dy",
       "A": "rt",
       "B": "yp",
       "C": "tu",
@@ -113,7 +135,9 @@
       "topic": "Coding-Decoding",
       "subtopic": "Substitution Coding",
       "conceptTested": "Common word elimination method in multiline coded sentences"
-    }
+    },
+    "question": "In a certain code language,\n“yak lot sip kit fat” is written as “fk xv bn sq tu”,\n“fit fat raw dot lip” is written as “er dp yp hb sq”,\n“raw but sit mat yak” is written as “tu rt fl dy yp”.\nWhat is the code for “yak” in that language?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -129,6 +153,10 @@
     "avgTime": "00:13",
     "questionText": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\nBZC, EXF, HVI, KTL, ?",
     "options": {
+      "a": "ONR",
+      "b": "MOR",
+      "c": "NRO",
+      "d": "ORN",
       "A": "ONR",
       "B": "MOR",
       "C": "NRO",
@@ -142,7 +170,9 @@
       "topic": "Letter & Symbol Series",
       "subtopic": "Alphabet Series",
       "conceptTested": "Positional alphabet increments and decrements across multi-letter clusters"
-    }
+    },
+    "question": "Select the letter-cluster from among the given options that can replace the question mark (?) in the following series.\nBZC, EXF, HVI, KTL, ?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -158,6 +188,10 @@
     "avgTime": "00:49",
     "questionText": "The second number in the given number pairs is obtained by performing certain mathematical operation(s) on the first number. The same operation(s) are followed in all the number pairs except one. Find that odd number pair.",
     "options": {
+      "a": "19 : 323",
+      "b": "43 : 731",
+      "c": "21 : 357",
+      "d": "15 : 256",
       "A": "19 : 323",
       "B": "43 : 731",
       "C": "21 : 357",
@@ -171,7 +205,9 @@
       "topic": "Classification / Odd One Out",
       "subtopic": "Number Classification",
       "conceptTested": "Identification of an anomaly in number pairs based on a constant multiplicative relationship."
-    }
+    },
+    "question": "The second number in the given number pairs is obtained by performing certain mathematical operation(s) on the first number. The same operation(s) are followed in all the number pairs except one. Find that odd number pair.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -187,6 +223,10 @@
     "avgTime": "00:28",
     "questionText": "Select the correct option that indicates the arrangement of the given words in the order in which they appear in an English dictionary.\n1. Relatival\n2. Relation\n3. Related\n4. Relative\n5. Relatable",
     "options": {
+      "a": "5, 2, 3, 1, 4",
+      "b": "5, 3, 2, 4, 1",
+      "c": "4, 5, 3, 2, 1",
+      "d": "5, 3, 2, 1, 4",
       "A": "5, 2, 3, 1, 4",
       "B": "5, 3, 2, 4, 1",
       "C": "4, 5, 3, 2, 1",
@@ -200,7 +240,9 @@
       "topic": "Word Formation & Dictionary Order",
       "subtopic": "Dictionary Arrangement",
       "conceptTested": "Alphabetical sorting of words letter by letter as they appear in a standard English dictionary."
-    }
+    },
+    "question": "Select the correct option that indicates the arrangement of the given words in the order in which they appear in an English dictionary.\n1. Relatival\n2. Relation\n3. Related\n4. Relative\n5. Relatable",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -216,6 +258,10 @@
     "avgTime": "00:42",
     "questionText": "A stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21. His profit percent is about:",
     "options": {
+      "a": "20%",
+      "b": "5%",
+      "c": "10%",
+      "d": "15%",
       "A": "20%",
       "B": "5%",
       "C": "10%",
@@ -229,7 +275,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Profit & Loss - Quantity/Price Variation",
       "conceptTested": "Calculation of profit percentage when goods are bought and sold in differing quantities and prices."
-    }
+    },
+    "question": "A stationery vendor buys pencils at the rate of 21 pencils for Rs. 20 and sells them at the rate of 20 pencils for Rs. 21. His profit percent is about:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -245,12 +293,16 @@
     "avgTime": "00:27",
     "questionText": "Which two numbers should be interchanged to make the given equation correct?\n7 × 3 - 98 ÷ 14 + 5 = 31",
     "options": {
+      "a": "5 and 3",
+      "b": "31 and 7",
+      "c": "3 and 14",
+      "d": "7 and 98",
       "A": "5 and 3",
       "B": "31 and 7",
       "C": "3 and 14",
       "D": "7 and 98"
     },
-    "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
+    "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Numbers & BODMAS",
     "conceptTested": "Balancing equations via number interchange and strict adherence to the BODMAS rule.",
@@ -258,7 +310,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Interchange of Numbers & BODMAS",
       "conceptTested": "Balancing equations via number interchange and strict adherence to the BODMAS rule."
-    }
+    },
+    "question": "Which two numbers should be interchanged to make the given equation correct?\n7 × 3 - 98 ÷ 14 + 5 = 31",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -274,12 +328,16 @@
     "avgTime": "00:42",
     "questionText": "If in a code language, 'TV' is coded as 55. How is “CLOCK” written in that code language?",
     "options": {
+      "a": "54",
+      "b": "57",
+      "c": "48",
+      "d": "52",
       "A": "54",
       "B": "57",
       "C": "48",
       "D": "52"
     },
-    "solution": "Solution\n\nThe pattern followed here is,\n\nLetter\n\nT\n\nV\n\nPlace Value\n\n20\n\n22\n\nCode\n\n(20 + 22) + 13 = 55\n\nSimilarly,\n\nLetter\n\nC\n\nL\n\nO\n\nC\n\nK\n\nPlace Value\n\n3\n\n12\n\n15\n\n3\n\n11\n\nCode\n\n(3 + 12 + 15 + 3 + 11) + 13 = 57\nHence, 57 is the correct answer.",
+    "solution": "Solution\n\nThe pattern followed here is,\n\nLetter\n\nT\n\nV\n\nPlace Value\n\n20 / 22\n\nCode\n\n(20 + 22) + 13 = 55\n\nSimilarly,\n\nLetter\n\nC\n\nL\n\nO\n\nC\n\nK\n\nPlace Value\n\n3 / 12\n\n15 / 3\n\n11\n\nCode\n\n(3 + 12 + 15 + 3 + 11) + 13 = 57\nHence, 57 is the correct answer.",
     "topic": "Coding-Decoding",
     "subtopic": "Number Coding",
     "conceptTested": "Sum of alphabetical place values combined with a constant offset value.",
@@ -287,7 +345,9 @@
       "topic": "Coding-Decoding",
       "subtopic": "Number Coding",
       "conceptTested": "Sum of alphabetical place values combined with a constant offset value."
-    }
+    },
+    "question": "If in a code language, 'TV' is coded as 55. How is “CLOCK” written in that code language?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -303,6 +363,10 @@
     "avgTime": "00:34",
     "questionText": "If 'A + B' means 'A is brother of B', 'A = B' means 'A is son of B', 'A & B' means 'A is wife of B', 'A @ B' means 'A is father of B', then how is N related to P given the expression: P = H = T & U @ N + R?",
     "options": {
+      "a": "Father in law",
+      "b": "Maternal Uncle",
+      "c": "Paternal Uncle",
+      "d": "Brother in law",
       "A": "Father in law",
       "B": "Maternal Uncle",
       "C": "Paternal Uncle",
@@ -316,7 +380,9 @@
       "topic": "Blood Relations",
       "subtopic": "Coded Blood Relations",
       "conceptTested": "Tracing generational and matrimonial linkages through symbolic operators to establish the relation between two family members."
-    }
+    },
+    "question": "If 'A + B' means 'A is brother of B', 'A = B' means 'A is son of B', 'A & B' means 'A is wife of B', 'A @ B' means 'A is father of B', then how is N related to P given the expression: P = H = T & U @ N + R?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -332,6 +398,10 @@
     "avgTime": "00:21",
     "questionText": "Parth said pointing to a photograph of a boy, 'he is the only son of my father’s brother’s son', if so how is the boy related to Parth?",
     "options": {
+      "a": "Cousin",
+      "b": "Father",
+      "c": "Nephew",
+      "d": "Son",
       "A": "Cousin",
       "B": "Father",
       "C": "Nephew",
@@ -345,7 +415,9 @@
       "topic": "Blood Relations",
       "subtopic": "Indicating Form / Pointing Form",
       "conceptTested": "Translating a descriptive family relationship into a genealogical tree to determine kinship."
-    }
+    },
+    "question": "Parth said pointing to a photograph of a boy, 'he is the only son of my father’s brother’s son', if so how is the boy related to Parth?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -361,6 +433,10 @@
     "avgTime": "00:36",
     "questionText": "Select the set in which the numbers are related in the same way as are the numbers of the given sets:\n(45, 81, 104)\n(52, 88, 111)\n\n(NOTE: Operations should be performed on whole numbers, without breaking down numbers into individual digits.)",
     "options": {
+      "a": "(49, 85, 108)",
+      "b": "(34, 60, 83)",
+      "c": "(54, 90, 110)",
+      "d": "(27, 59, 82)",
       "A": "(49, 85, 108)",
       "B": "(34, 60, 83)",
       "C": "(54, 90, 110)",
@@ -374,7 +450,9 @@
       "topic": "Analogy",
       "subtopic": "Number Analogy",
       "conceptTested": "Identifying difference patterns between consecutive elements in number tuples."
-    }
+    },
+    "question": "Select the set in which the numbers are related in the same way as are the numbers of the given sets:\n(45, 81, 104)\n(52, 88, 111)\n\n(NOTE: Operations should be performed on whole numbers, without breaking down numbers into individual digits.)",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -390,6 +468,10 @@
     "avgTime": "00:20",
     "questionText": "The 9th Schedule to the Constitution of India was added by the:",
     "options": {
+      "a": "Third Amendment Act",
+      "b": "Fourth Amendment Act",
+      "c": "First Amendment Act",
+      "d": "Sixth Amendment Act",
       "A": "Third Amendment Act",
       "B": "Fourth Amendment Act",
       "C": "First Amendment Act",
@@ -403,7 +485,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Schedules of the Constitution",
       "conceptTested": "Constitutional amendments and the inclusion of legislative protective shields under Article 31B."
-    }
+    },
+    "question": "The 9th Schedule to the Constitution of India was added by the:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -419,12 +503,16 @@
     "avgTime": "00:25",
     "questionText": "Vice President C P Radhakrishnan inaugurated the 39th Surajkund International Crafts Mela at Surajkund in Faridabad, Haryana. What is the theme of this mela?",
     "options": {
-      "A": "Local to Global – Atmanirbhar Bharat",
+      "a": "Local to Global - Atmanirbhar Bharat",
+      "b": "Artisans of India: Past and Present",
+      "c": "Global Handicrafts Expo",
+      "d": "Crafting India’s Heritage",
+      "A": "Local to Global - Atmanirbhar Bharat",
       "B": "Artisans of India: Past and Present",
       "C": "Global Handicrafts Expo",
       "D": "Crafting India’s Heritage"
     },
-    "solution": "Solution\n\nThe correct answer is Local to Global – Atmanirbhar Bharat.\n\nKey Points\nThe 39th Surajkund International Crafts Mela 2026 (from 31 January to 15 February 2026) was inaugurated by Vice President C P Radhakrishnan at Surajkund in Faridabad, Haryana. This annual event is recognized as the world's largest crafts fair, showcasing the rich diversity of traditional Indian handicrafts.\nThe theme for the 2026 mela is Local to Global – Atmanirbhar Bharat. This theme aligns with the Government of India's mission to promote indigenous products on an international stage and foster a self-reliant economy through the Make in India and Vocal for Local initiatives.\nThe mela provides a massive platform for artisans, weavers, and sculptors from across India and over 20 participating countries to demonstrate their traditional skills and sell their products directly to consumers.\nUttar Pradesh and Meghalaya were chosen as the theme states for the 2026.\nEgypt participated as the partner nation of the fair for the year 2026.\nThe event is organized by the Surajkund Mela Authority and Haryana Tourism in collaboration with the Union Ministries of Tourism, Textiles, Culture, and External Affairs. It typically takes place in the month of February every year.\nThe 39th edition emphasizes the fusion of traditional heritage with modern marketing, helping local handicraft industries reach global markets, thereby enhancing the socio-economic status of rural artisans.\n\nAdditional Information\nHistory and Significance: The Surajkund Crafts Mela was first hosted in 1987 to provide a platform for skilled artisans who were facing challenges from machine-made goods. Over the decades, it has grown from a national fair to an international cultural phenomenon.\nLocation Heritage: The mela is held near the Surajkund reservoir, an ancient 10th-century water tank built by King Suraj Pal of the Tomar dynasty. The site offers a historical backdrop that complements the traditional theme of the fair.\nTheme State and Partner Nation: Each year, the mela features a specific Theme State and a Partner Nation. The Theme State showcases its unique architecture, folk arts, and culinary traditions through a specially designed permanent gate and complex within the mela grounds.\nCultural Programs: Beyond crafts, the mela is famous for its Centrestage (Chaupal), where folk artists, dancers, and musicians from various states and countries perform throughout the day, representing the intangible cultural heritage of their regions.\nEconomic Impact: By attracting millions of domestic and international tourists, the mela generates significant revenue for the state of Haryana and provides a sustainable livelihood for thousands of families involved in the handloom and handicraft sectors.\n\nImportant Points\n\nVocal for Local: This initiative is central to the 2026 theme, encouraging citizens to support local businesses. The mela acts as a bridge between the rural artisan and the urban buyer, ensuring that traditional art forms do not go extinct.\nDigital Integration: In recent years, the mela has integrated digital payment systems and e-commerce portals to help artisans manage transactions efficiently and continue their business even after the event concludes.\nInternational Diplomacy: The participation of various foreign nations (especially from the SCO, African Union, and ASEAN regions) fosters people-to-people contact and strengthens bilateral cultural ties between India and the rest of the world.",
+    "solution": "Solution\n\nThe correct answer is Local to Global - Atmanirbhar Bharat.\n\nKey Points\nThe 39th Surajkund International Crafts Mela 2026 (from 31 January to 15 February 2026) was inaugurated by Vice President C P Radhakrishnan at Surajkund in Faridabad, Haryana. This annual event is recognized as the world's largest crafts fair, showcasing the rich diversity of traditional Indian handicrafts.\nThe theme for the 2026 mela is Local to Global - Atmanirbhar Bharat. This theme aligns with the Government of India's mission to promote indigenous products on an international stage and foster a self-reliant economy through the Make in India and Vocal for Local initiatives.\nThe mela provides a massive platform for artisans, weavers, and sculptors from across India and over 20 participating countries to demonstrate their traditional skills and sell their products directly to consumers.\nUttar Pradesh and Meghalaya were chosen as the theme states for the 2026.\nEgypt participated as the partner nation of the fair for the year 2026.\nThe event is organized by the Surajkund Mela Authority and Haryana Tourism in collaboration with the Union Ministries of Tourism, Textiles, Culture, and External Affairs. It typically takes place in the month of February every year.\nThe 39th edition emphasizes the fusion of traditional heritage with modern marketing, helping local handicraft industries reach global markets, thereby enhancing the socio-economic status of rural artisans.\n\nAdditional Information\nHistory and Significance: The Surajkund Crafts Mela was first hosted in 1987 to provide a platform for skilled artisans who were facing challenges from machine-made goods. Over the decades, it has grown from a national fair to an international cultural phenomenon.\nLocation Heritage: The mela is held near the Surajkund reservoir, an ancient 10th-century water tank built by King Suraj Pal of the Tomar dynasty. The site offers a historical backdrop that complements the traditional theme of the fair.\nTheme State and Partner Nation: Each year, the mela features a specific Theme State and a Partner Nation. The Theme State showcases its unique architecture, folk arts, and culinary traditions through a specially designed permanent gate and complex within the mela grounds.\nCultural Programs: Beyond crafts, the mela is famous for its Centrestage (Chaupal), where folk artists, dancers, and musicians from various states and countries perform throughout the day, representing the intangible cultural heritage of their regions.\nEconomic Impact: By attracting millions of domestic and international tourists, the mela generates significant revenue for the state of Haryana and provides a sustainable livelihood for thousands of families involved in the handloom and handicraft sectors.\n\nImportant Points\n\nVocal for Local: This initiative is central to the 2026 theme, encouraging citizens to support local businesses. The mela acts as a bridge between the rural artisan and the urban buyer, ensuring that traditional art forms do not go extinct.\nDigital Integration: In recent years, the mela has integrated digital payment systems and e-commerce portals to help artisans manage transactions efficiently and continue their business even after the event concludes.\nInternational Diplomacy: The participation of various foreign nations (especially from the SCO, African Union, and ASEAN regions) fosters people-to-people contact and strengthens bilateral cultural ties between India and the rest of the world.",
     "topic": "National & International Current Affairs",
     "subtopic": "Fairs, Festivals & Cultural Events",
     "conceptTested": "Awareness of major national annual cultural expositions, venues, and their designated themes.",
@@ -432,7 +520,9 @@
       "topic": "National & International Current Affairs",
       "subtopic": "Fairs, Festivals & Cultural Events",
       "conceptTested": "Awareness of major national annual cultural expositions, venues, and their designated themes."
-    }
+    },
+    "question": "Vice President C P Radhakrishnan inaugurated the 39th Surajkund International Crafts Mela at Surajkund in Faridabad, Haryana. What is the theme of this mela?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -448,6 +538,10 @@
     "avgTime": "00:15",
     "questionText": "How many Cricket Asia Cup titles has India won after their victory in the 2025 Asia Cup Final?",
     "options": {
+      "a": "6",
+      "b": "7",
+      "c": "8",
+      "d": "9",
       "A": "6",
       "B": "7",
       "C": "8",
@@ -461,7 +555,9 @@
       "topic": "Sports & Trophies",
       "subtopic": "Cricket Tournaments & Championships",
       "conceptTested": "Recent sports events and records regarding the Cricket Asia Cup."
-    }
+    },
+    "question": "How many Cricket Asia Cup titles has India won after their victory in the 2025 Asia Cup Final?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -477,12 +573,16 @@
     "avgTime": "00:22",
     "questionText": "What is the name of the new nuclear energy initiative announced by the UK and US in September 2025?",
     "options": {
+      "a": "Nuclear Renaissance Pact",
+      "b": "Atlantic Partnership",
+      "c": "Transatlantic Energy Deal",
+      "d": "Global Nuclear Accord",
       "A": "Nuclear Renaissance Pact",
       "B": "Atlantic Partnership",
       "C": "Transatlantic Energy Deal",
       "D": "Global Nuclear Accord"
     },
-    "solution": "Solution\n\nThe Correct Answer is Atlantic Partnership.\n\nIn News\nUK, US Launch Atlantic Partnership for Advanced Nuclear Energy.\n\nKey Points\nThe UK and US governments announced new nuclear power deals involving US-based companies building projects overseas.\n\nThe initiative is called the ‘Atlantic Partnership for Advanced Nuclear Energy’.\n\nAim: accelerate advanced reactor deployment and reduce reliance on Russian nuclear fuel.\n\nThe partnership ensures faster safety approvals and regulatory cooperation between both countries.\n\nBillions in private sector investment back the program.\n\nDeals will be formally signed during President Donald Trump’s state visit to London.\n\nAdditional Information\nUK: Capital – London; Currency – Pound Sterling (£); Head of State – King Charles III.\nU\nS: Capital – Washington, D.C.; Currency – US Dollar ($); President – Donald Trump (as per article context).\nNuclear Energy: Provides around 10% of global electricity; key players include US, France, Russia, China, Japan.\nRussian nuclear fuel: Russia supplies nearly 40% of global enriched uranium exports, a major reason for Western diversification.",
+    "solution": "Solution\n\nThe Correct Answer is Atlantic Partnership.\n\nIn News\nUK, US Launch Atlantic Partnership for Advanced Nuclear Energy.\n\nKey Points\nThe UK and US governments announced new nuclear power deals involving US-based companies building projects overseas.\n\nThe initiative is called the ‘Atlantic Partnership for Advanced Nuclear Energy’.\n\nAim: accelerate advanced reactor deployment and reduce reliance on Russian nuclear fuel.\n\nThe partnership ensures faster safety approvals and regulatory cooperation between both countries.\n\nBillions in private sector investment back the program.\n\nDeals will be formally signed during President Donald Trump’s state visit to London.\n\nAdditional Information\nUK: Capital - London; Currency - Pound Sterling (£); Head of State - King Charles III.\nU\nS: Capital - Washington, D.C.; Currency - US Dollar ($); President - Donald Trump (as per article context).\nNuclear Energy: Provides around 10% of global electricity; key players include US, France, Russia, China, Japan.\nRussian nuclear fuel: Russia supplies nearly 40% of global enriched uranium exports, a major reason for Western diversification.",
     "topic": "National & International Current Affairs",
     "subtopic": "International Agreements & Treaties",
     "conceptTested": "Recent bilateral nuclear energy partnerships between major global economies.",
@@ -490,7 +590,9 @@
       "topic": "National & International Current Affairs",
       "subtopic": "International Agreements & Treaties",
       "conceptTested": "Recent bilateral nuclear energy partnerships between major global economies."
-    }
+    },
+    "question": "What is the name of the new nuclear energy initiative announced by the UK and US in September 2025?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -506,6 +608,10 @@
     "avgTime": "00:14",
     "questionText": "BCCI Introduces Bronco Test to Assess Players' Fitness Alongside Yo-Yo Test. What is the goal for completing the Bronco Test?",
     "options": {
+      "a": "6 minutes",
+      "b": "7 minutes",
+      "c": "8 minutes",
+      "d": "10 minutes",
       "A": "6 minutes",
       "B": "7 minutes",
       "C": "8 minutes",
@@ -519,7 +625,9 @@
       "topic": "Sports & Trophies",
       "subtopic": "Fitness Tests & Sports Metrics",
       "conceptTested": "Specific athletic benchmarks and fitness protocols used by sports boards like the BCCI."
-    }
+    },
+    "question": "BCCI Introduces Bronco Test to Assess Players' Fitness Alongside Yo-Yo Test. What is the goal for completing the Bronco Test?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -535,6 +643,10 @@
     "avgTime": "00:14",
     "questionText": "Consider the following statements about NITI Aayog:\n(1) NITI Aayog has seven pillar objectives\n(2) It has three specialised wings\nWhich of the above statements is/are correct?",
     "options": {
+      "a": "Only (2)",
+      "b": "Only (1)",
+      "c": "Both (1) and (2)",
+      "d": "None of the above",
       "A": "Only (2)",
       "B": "Only (1)",
       "C": "Both (1) and (2)",
@@ -548,7 +660,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Constitutional & Non-Constitutional Bodies",
       "conceptTested": "Structural organization, pillars, and specialized wings of NITI Aayog."
-    }
+    },
+    "question": "Consider the following statements about NITI Aayog:\n(1) NITI Aayog has seven pillar objectives\n(2) It has three specialised wings\nWhich of the above statements is/are correct?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -564,6 +678,10 @@
     "avgTime": "00:16",
     "questionText": "The viceroy that was assassinated in India was",
     "options": {
+      "a": "Lord Hardinge",
+      "b": "Lord Northbrook",
+      "c": "Lord Mayo",
+      "d": "Lord Minto",
       "A": "Lord Hardinge",
       "B": "Lord Northbrook",
       "C": "Lord Mayo",
@@ -577,7 +695,9 @@
       "topic": "Modern History",
       "subtopic": "British Viceroys of India",
       "conceptTested": "Important historical events and incidents during the tenure of British Viceroys in India."
-    }
+    },
+    "question": "The viceroy that was assassinated in India was",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -593,6 +713,10 @@
     "avgTime": "00:16",
     "questionText": "Elavenil Valarivan wins 10m air rifle gold in 16th Asian Shooting Championships. Who trained Elavenil Valarivan at the Gun for Glory Academy?",
     "options": {
+      "a": "Abhinav Bindra",
+      "b": "Gagan Narang",
+      "c": "Vijay Kumar",
+      "d": "Jitu Rai",
       "A": "Abhinav Bindra",
       "B": "Gagan Narang",
       "C": "Vijay Kumar",
@@ -606,7 +730,9 @@
       "topic": "Awards & Honours",
       "subtopic": "Sports Awards & Achievements",
       "conceptTested": "Current affairs knowledge regarding recent sports achievements and training academies."
-    }
+    },
+    "question": "Elavenil Valarivan wins 10m air rifle gold in 16th Asian Shooting Championships. Who trained Elavenil Valarivan at the Gun for Glory Academy?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -622,6 +748,10 @@
     "avgTime": "00:19",
     "questionText": "What is the name of the gallery inaugurated by President Droupadi Murmu on Vijay Diwas 2025 at Rashtrapati Bhavan?",
     "options": {
+      "a": "Shaurya Smriti",
+      "b": "Veer Gatha Gallery",
+      "c": "Param Vir Dirgha",
+      "d": "Rashtriya Yodha Sangrahalaya",
       "A": "Shaurya Smriti",
       "B": "Veer Gatha Gallery",
       "C": "Param Vir Dirgha",
@@ -635,7 +765,9 @@
       "topic": "Current Affairs",
       "subtopic": "National Events & Inaugurations",
       "conceptTested": "Current affairs knowledge of high-profile national museum and gallery inaugurations at Rashtrapati Bhavan."
-    }
+    },
+    "question": "What is the name of the gallery inaugurated by President Droupadi Murmu on Vijay Diwas 2025 at Rashtrapati Bhavan?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -651,12 +783,16 @@
     "avgTime": "00:33",
     "questionText": "Match List - I with List - II and choose the correct answer using the code given below the lists.\n\nList - I (Schedule)\nA. 7th Schedule\nB. 8th Schedule\nC. 9th Schedule\nD. 10th Schedule\n\nList - II (Subject)\n1. Languages\n2. Disqualification on ground of defection\n3. Union, State and Concurrent lists\n4. Validation of certain Acts/Regulations",
     "options": {
+      "a": "A-4,B-2,C-1,D-3",
+      "b": "A-2,B-3,C-4,D-1",
+      "c": "A-3,B-1,C-4,D-2",
+      "d": "A-3,B-1,C-2,D-4",
       "A": "A-4,B-2,C-1,D-3",
       "B": "A-2,B-3,C-4,D-1",
       "C": "A-3,B-1,C-4,D-2",
       "D": "A-3,B-1,C-2,D-4"
     },
-    "solution": "Solution\n\nThe correct answer is option 3.\n\nKey Points\n7th Schedule → Union/State/Concurrent Lists (3)\n8th Schedule → Languages (1)\n9th Schedule → Validation of certain Acts/Regulations (4) (originally to shield land reforms, later subject to judicial review)\n10th Schedule → Anti-defection; disqualification on defection (2)\n\nAdditional Information\n1st Schedule — States & UTs; Territories\nNames, territorial extent of States/UTs; changes via Reorganisation Acts.\n2nd Schedule — Salaries, Allowances & Privileges\nOf President, Governors, Speaker/Chairman & Deputies, Judges of SC/HC, CAG etc.\nContains multiple Parts (A–I) for different offices.\n3rd Schedule — Forms of Oath or Affirmation\nOaths for Union/State ministers, MPs/MLAs, Judges, CAG, etc.\n4th Schedule — Allocation of RS Seats\nNumber of Rajya Sabha seats allotted to each State/UT.\n5th Schedule — Administration of Scheduled Areas & STs (non-NE)\nTribes Advisory Council; Governor’s special powers; President can declare/alter Scheduled Areas.\n6th Schedule — Tribal Areas in NE (Assam, Meghalaya, Tripura, Mizoram)\nAutonomous District/Regional Councils with legislative, judicial & financial powers.\n7th Schedule — Union, State & Concurrent Lists\nLegislative subjects split into List I, II, III.\nMajor reshuffles: 42nd & 44th Amendments.\n8th Schedule — Languages\n22 languages (originally 14).\nKey additions: Sindhi (21st Amd, 1967); Konkani, Manipuri, Nepali (71st, 1992); Bodo, Dogri, Maithili, Santali (92nd, 2003); ‘Oriya’ renamed ‘Odia’ (96th, 2011).\n9th Schedule — Validation of Certain Acts/Regulations\nInserted by 1st Amendment (1951) to protect primarily land reform laws from judicial review.\nI.R. Coelho (2007): Post-24 April 1973 insertions open to judicial review.\n10th Schedule — Anti-Defection\nInserted by 52nd Amendment (1985); tightened by 91st (2003).\nDisqualification of members on defection; Speaker/Chairman decides.\n11th Schedule — Panchayats (29 subjects)\nAdded by 73rd Amendment (1992); subjects for devolution to PRIs (e.g., agriculture, rural housing, roads, health, education).\n12th Schedule — Municipalities (18 functions)\nAdded by 74th Amendment (1992); urban local body functions (urban planning, water supply, sanitation, slum improvement, etc.).",
+    "solution": "Solution\n\nThe correct answer is option 3.\n\nKey Points\n7th Schedule → Union/State/Concurrent Lists (3)\n8th Schedule → Languages (1)\n9th Schedule → Validation of certain Acts/Regulations (4) (originally to shield land reforms, later subject to judicial review)\n10th Schedule → Anti-defection; disqualification on defection (2)\n\nAdditional Information\n1st Schedule - States & UTs; Territories\nNames, territorial extent of States/UTs; changes via Reorganisation Acts.\n2nd Schedule - Salaries, Allowances & Privileges\nOf President, Governors, Speaker/Chairman & Deputies, Judges of SC/HC, CAG etc.\nContains multiple Parts (A-I) for different offices.\n3rd Schedule - Forms of Oath or Affirmation\nOaths for Union/State ministers, MPs/MLAs, Judges, CAG, etc.\n4th Schedule - Allocation of RS Seats\nNumber of Rajya Sabha seats allotted to each State/UT.\n5th Schedule - Administration of Scheduled Areas & STs (non-NE)\nTribes Advisory Council; Governor’s special powers; President can declare/alter Scheduled Areas.\n6th Schedule - Tribal Areas in NE (Assam, Meghalaya, Tripura, Mizoram)\nAutonomous District/Regional Councils with legislative, judicial & financial powers. 7th Schedule - Union, State & Concurrent Lists\nLegislative subjects split into List I, II, III.\nMajor reshuffles: 42nd & 44th Amendments.\n8th Schedule - Languages\n22 languages (originally 14).\nKey additions: Sindhi (21st Amd, 1967); Konkani, Manipuri, Nepali (71st, 1992); Bodo, Dogri, Maithili, Santali (92nd, 2003); ‘Oriya’ renamed ‘Odia’ (96th, 2011).\n9th Schedule - Validation of Certain Acts/Regulations\nInserted by 1st Amendment (1951) to protect primarily land reform laws from judicial review.\nI.R. Coelho (2007): Post-24 April 1973 insertions open to judicial review.\n10th Schedule - Anti-Defection\nInserted by 52nd Amendment (1985); tightened by 91st (2003).\nDisqualification of members on defection; Speaker/Chairman decides.\n11th Schedule - Panchayats (29 subjects)\nAdded by 73rd Amendment (1992); subjects for devolution to PRIs (e.g., agriculture, rural housing, roads, health, education).\n12th Schedule - Municipalities (18 functions)\nAdded by 74th Amendment (1992); urban local body functions (urban planning, water supply, sanitation, slum improvement, etc.).",
     "topic": "Indian Polity & Constitution",
     "subtopic": "Schedules of the Constitution",
     "conceptTested": "Matching constitutional schedules with their corresponding subjects (7th, 8th, 9th, and 10th Schedules).",
@@ -664,7 +800,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Schedules of the Constitution",
       "conceptTested": "Matching constitutional schedules with their corresponding subjects (7th, 8th, 9th, and 10th Schedules)."
-    }
+    },
+    "question": "Match List - I with List - II and choose the correct answer using the code given below the lists.\n\nList - I (Schedule)\nA. 7th Schedule\nB. 8th Schedule\nC. 9th Schedule\nD. 10th Schedule\n\nList - II (Subject)\n1. Languages\n2. Disqualification on ground of defection\n3. Union, State and Concurrent lists\n4. Validation of certain Acts/Regulations",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -680,12 +818,16 @@
     "avgTime": "00:21",
     "questionText": "The recently excavated 4,000-year-old temple on Failaka Island in Kuwait is associated with which ancient civilization?",
     "options": {
+      "a": "Mesopotamian Civilization",
+      "b": "Dilmun Civilization",
+      "c": "Indus Valley Civilization",
+      "d": "Sumerian Civilization",
       "A": "Mesopotamian Civilization",
       "B": "Dilmun Civilization",
       "C": "Indus Valley Civilization",
       "D": "Sumerian Civilization"
     },
-    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nArchaeologists discovered a 4,000-year-old temple on Failaka Island, Kuwait, belonging to the Bronze Age Dilmun Civilization, marking one of the most significant archaeological finds in the Gulf region in recent decades.\n\nKey Points\nDilmun Civilization flourished in the eastern Arabian Peninsula, mainly on the islands of Bahrain and Failaka Island (Kuwait). Hence, Option B is correct.\nIt served as a major trading hub between Mesopotamia and the Indus Valley Civilization around 3200–1600 BCE.\nCopper, pearls, and luxury goods were key trade items, making Dilmun a wealthy maritime power.\nIt supplied copper—a crucial resource during the Bronze Age—to Mesopotamia.\nThe civilization declined after 1600 BCE, later absorbed into Mesopotamian and Persian empires.\n\nAdditional Information\nExcavations in Bahrain and Kuwait have revealed burial mounds, settlements, and stamp seals typical of Dilmun’s culture.\nDilmun is often referred to in Mesopotamian texts as a “land of paradise” or “pure land,” suggesting its cultural and religious significance.\nThe recent temple discovery provides new insights into Bronze Age architecture, trade, and belief systems in the Persian Gulf region.",
+    "solution": "Solution\n\nThe correct answer is Option 2\n\nIn News\nArchaeologists discovered a 4,000-year-old temple on Failaka Island, Kuwait, belonging to the Bronze Age Dilmun Civilization, marking one of the most significant archaeological finds in the Gulf region in recent decades.\n\nKey Points\nDilmun Civilization flourished in the eastern Arabian Peninsula, mainly on the islands of Bahrain and Failaka Island (Kuwait). Hence, Option B is correct.\nIt served as a major trading hub between Mesopotamia and the Indus Valley Civilization around 3200-1600 BCE.\nCopper, pearls, and luxury goods were key trade items, making Dilmun a wealthy maritime power.\nIt supplied copper-a crucial resource during the Bronze Age-to Mesopotamia.\nThe civilization declined after 1600 BCE, later absorbed into Mesopotamian and Persian empires.\n\nAdditional Information\nExcavations in Bahrain and Kuwait have revealed burial mounds, settlements, and stamp seals typical of Dilmun’s culture.\nDilmun is often referred to in Mesopotamian texts as a “land of paradise” or “pure land,” suggesting its cultural and religious significance.\nThe recent temple discovery provides new insights into Bronze Age architecture, trade, and belief systems in the Persian Gulf region.",
     "topic": "Ancient History",
     "subtopic": "Ancient Civilizations & Archaeological Discoveries",
     "conceptTested": "Knowledge of ancient civilizations like the Dilmun Civilization and archaeological findings on Failaka Island.",
@@ -693,7 +835,9 @@
       "topic": "Ancient History",
       "subtopic": "Ancient Civilizations & Archaeological Discoveries",
       "conceptTested": "Knowledge of ancient civilizations like the Dilmun Civilization and archaeological findings on Failaka Island."
-    }
+    },
+    "question": "The recently excavated 4,000-year-old temple on Failaka Island in Kuwait is associated with which ancient civilization?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -709,6 +853,10 @@
     "avgTime": "00:19",
     "questionText": "Which strategic initiative was proposed by Russia to boost agriculture trade among BRICS countries?",
     "options": {
+      "a": "BRICS Dairy Exchange",
+      "b": "BRICS Grain Exchange",
+      "c": "BRICS Rice Hub",
+      "d": "BRICS Agricultural Bank",
       "A": "BRICS Dairy Exchange",
       "B": "BRICS Grain Exchange",
       "C": "BRICS Rice Hub",
@@ -722,7 +870,9 @@
       "topic": "International Organisations",
       "subtopic": "BRICS & Economic Initiatives",
       "conceptTested": "Current affairs knowledge regarding strategic economic initiatives and trade proposals within BRICS nations."
-    }
+    },
+    "question": "Which strategic initiative was proposed by Russia to boost agriculture trade among BRICS countries?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -738,6 +888,10 @@
     "avgTime": "00:24",
     "questionText": "Excessive curvature of eye lens leads to _______",
     "options": {
+      "a": "hypermetropia",
+      "b": "colour blindness",
+      "c": "cataract",
+      "d": "myopia",
       "A": "hypermetropia",
       "B": "colour blindness",
       "C": "cataract",
@@ -751,7 +905,9 @@
       "topic": "Biology",
       "subtopic": "Human Physiology - Eye Defects & Vision",
       "conceptTested": "Myopia (nearsightedness) is caused by excessive curvature of the eye lens or an elongated eyeball, causing images to form in front of the retina."
-    }
+    },
+    "question": "Excessive curvature of eye lens leads to _______",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -767,6 +923,10 @@
     "avgTime": "00:16",
     "questionText": "According to the nebular hypothesis, what did the solar system form from?",
     "options": {
+      "a": "A giant asteroid",
+      "b": "An exploding star",
+      "c": "A rotating cloud of gas and dust",
+      "d": "Colliding comets",
       "A": "A giant asteroid",
       "B": "An exploding star",
       "C": "A rotating cloud of gas and dust",
@@ -780,7 +940,9 @@
       "topic": "Physical Geography",
       "subtopic": "Origin of the Universe and Solar System",
       "conceptTested": "The nebular hypothesis explains the formation of the solar system from a collapsing, rotating cloud of interstellar gas and dust."
-    }
+    },
+    "question": "According to the nebular hypothesis, what did the solar system form from?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -796,12 +958,16 @@
     "avgTime": "00:12",
     "questionText": "Who won the World Athlete of the Year (Men) award at the 2025 World Athletics Awards?",
     "options": {
+      "a": "Emmanuel Wanyonyi",
+      "b": "Sebastian Sawe",
+      "c": "Armand Duplantis",
+      "d": "Edmund Serem",
       "A": "Emmanuel Wanyonyi",
       "B": "Sebastian Sawe",
       "C": "Armand Duplantis",
       "D": "Edmund Serem"
     },
-    "solution": "Solution\n\nThe correct answer is Armand Duplantis.\n\nIn News\nArmand Duplantis of Sweden and Sydney McLaughlin-Levrone of the USA won the World Athlete of the Year awards at the 2025 World Athletics Awards.\n\nKey Points\nArmand Duplantis won the Men’s World Athlete of the Year award for his extraordinary 2025 season.\nHe broke the men’s pole vault world record four times and remained undefeated in all 16 events.\nDuplantis became the first male pole vaulter in modern athletics to stay unbeaten for two consecutive years.\nHe also won both indoor and outdoor world titles, earning the Men’s Field Athlete of the Year honour as well.\n\nAdditional Information\nSydney McLaughlin-Levrone\nWon Women’s World Athlete of the Year 2025.\nWon the 400m world title in Tokyo with a record 47.78 seconds.\nBecame the first athlete to win world titles in both 400m flat and 400m hurdles.\nAwarded Women’s Track Athlete of the Year.\nOther Award Winners\nMaria Perez (Spain) – Women’s Out-of-Stadium Athlete of the Year.\nSebastian Sawe (Kenya) – Men’s Out-of-Stadium Athlete of the Year.\nEmmanuel Wanyonyi (Kenya) – Men’s Track Athlete of the Year.\nNicola Olyslagers (Australia) – Women’s Field Athlete of the Year.\nRising Star Awards\nEdmund Serem (Kenya) – Male Rising Star.\nZhang Jiale (China) – Female Rising Star.\nEvent Significance\nReflects a year filled with global talent, historic achievements, and record-breaking performances.\nHighlights dominance in pole vault, sprints, hurdles, and endurance categories.",
+    "solution": "Solution\n\nThe correct answer is Armand Duplantis.\n\nIn News\nArmand Duplantis of Sweden and Sydney McLaughlin-Levrone of the USA won the World Athlete of the Year awards at the 2025 World Athletics Awards.\n\nKey Points\nArmand Duplantis won the Men’s World Athlete of the Year award for his extraordinary 2025 season.\nHe broke the men’s pole vault world record four times and remained undefeated in all 16 events.\nDuplantis became the first male pole vaulter in modern athletics to stay unbeaten for two consecutive years.\nHe also won both indoor and outdoor world titles, earning the Men’s Field Athlete of the Year honour as well.\n\nAdditional Information\nSydney McLaughlin-Levrone\nWon Women’s World Athlete of the Year 2025.\nWon the 400m world title in Tokyo with a record 47.78 seconds.\nBecame the first athlete to win world titles in both 400m flat and 400m hurdles.\nAwarded Women’s Track Athlete of the Year.\nOther Award Winners\nMaria Perez (Spain) - Women’s Out-of-Stadium Athlete of the Year.\nSebastian Sawe (Kenya) - Men’s Out-of-Stadium Athlete of the Year.\nEmmanuel Wanyonyi (Kenya) - Men’s Track Athlete of the Year.\nNicola Olyslagers (Australia) - Women’s Field Athlete of the Year.\nRising Star Awards\nEdmund Serem (Kenya) - Male Rising Star.\nZhang Jiale (China) - Female Rising Star.\nEvent Significance\nReflects a year filled with global talent, historic achievements, and record-breaking performances.\nHighlights dominance in pole vault, sprints, hurdles, and endurance categories.",
     "topic": "Awards & Honours",
     "subtopic": "Sports & Athletic Awards",
     "conceptTested": "Recognition of international athletic excellence, specifically the World Athlete of the Year awards.",
@@ -809,7 +975,9 @@
       "topic": "Awards & Honours",
       "subtopic": "Sports & Athletic Awards",
       "conceptTested": "Recognition of international athletic excellence, specifically the World Athlete of the Year awards."
-    }
+    },
+    "question": "Who won the World Athlete of the Year (Men) award at the 2025 World Athletics Awards?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -825,6 +993,10 @@
     "avgTime": "00:29",
     "questionText": "Which of the following statements are correct regarding the National Annual Report and Index on Women's Safety (NARI) 2025?\n1. Kohima ranked the highest in the NARI 2025 index.\n2. Mumbai scored 68.7% for public transport security and civic participation.\n3. Delhi ranked poorly at 56.2% due to infrastructure gaps.\n4. Patna, Jaipur, and Faridabad ranked highly for their women-friendly policies and infrastructure in the NARI 2025 report.",
     "options": {
+      "a": "1, 2 and 4 only",
+      "b": "2 and 3 only",
+      "c": "1, 2 and 3 only",
+      "d": "2 and 4 only",
       "A": "1, 2 and 4 only",
       "B": "2 and 3 only",
       "C": "1, 2 and 3 only",
@@ -838,7 +1010,9 @@
       "topic": "National & International Current Affairs",
       "subtopic": "Reports, Indices & Rankings",
       "conceptTested": "Analysis of urban safety metrics, government reports, and socio-economic index rankings in India."
-    }
+    },
+    "question": "Which of the following statements are correct regarding the National Annual Report and Index on Women's Safety (NARI) 2025?\n1. Kohima ranked the highest in the NARI 2025 index.\n2. Mumbai scored 68.7% for public transport security and civic participation.\n3. Delhi ranked poorly at 56.2% due to infrastructure gaps.\n4. Patna, Jaipur, and Faridabad ranked highly for their women-friendly policies and infrastructure in the NARI 2025 report.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -854,6 +1028,10 @@
     "avgTime": "00:37",
     "questionText": "Who is the author of \"India’s First Radicals: Young Bengal and the British Empire\"?",
     "options": {
+      "a": "Rosinka Chaudhuri",
+      "b": "Richa Sharma",
+      "c": "Shashi Tharoor",
+      "d": "Ramachandra Guha",
       "A": "Rosinka Chaudhuri",
       "B": "Richa Sharma",
       "C": "Shashi Tharoor",
@@ -867,7 +1045,9 @@
       "topic": "Books & Authors",
       "subtopic": "Recent Non-Fiction & Literary Works",
       "conceptTested": "Identification of contemporary literary publications and their authors focusing on Indian history and reform movements."
-    }
+    },
+    "question": "Who is the author of \"India’s First Radicals: Young Bengal and the British Empire\"?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -883,12 +1063,16 @@
     "avgTime": "00:28",
     "questionText": "Simplify.\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)",
     "options": {
+      "a": "cos A",
+      "b": "sin²A",
+      "c": "cos²A",
+      "d": "sin A",
       "A": "cos A",
-      "B": "sin 2A",
-      "C": "cos 2A",
+      "B": "sin²A",
+      "C": "cos²A",
       "D": "sin A"
     },
-    "solution": "Solution\n\nGiven:\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)\n\nCalculation:\n⇒ sin[90 – (36 – A)]sin[90 – (36 + A)] + cos (54° – A) cos (54° + A)\n⇒ sin(54º + A)sin(54º – A) + cos (54° – A)cos (54° + A)\n⇒ Using the identity cos(A – B),\n⇒ cos(54 + A – 54 + A) = cos(2A)\n\nTherefore, the value of cos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A) is cos(2A).",
+    "solution": "Solution\n\nGiven:\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)\n\nCalculation:\n⇒ sin[90 - (36 - A)]sin[90 - (36 + A)] + cos (54° - A) cos (54° + A)\n⇒ sin(54o + A)sin(54o - A) + cos (54° - A)cos (54° + A)\n⇒ Using the identity cos(A - B),\n⇒ cos(54 + A - 54 + A) = cos(2A)\n\nTherefore, the value of cos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A) is cos(2A).",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Transformation",
     "conceptTested": "Product-to-sum identities and complementary angle relations: cos(90°-θ) = sinθ and sin(A+B)sin(A-B) = sin²A - sin²B.",
@@ -896,7 +1080,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Transformation",
       "conceptTested": "Product-to-sum identities and complementary angle relations: cos(90°-θ) = sinθ and sin(A+B)sin(A-B) = sin²A - sin²B."
-    }
+    },
+    "question": "Simplify.\ncos (36° - A) cos (36° + A) + cos (54° - A) cos (54° + A)",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -912,6 +1098,10 @@
     "avgTime": "00:40",
     "questionText": "The selling price of x items is equal to the cost price of 32 items and profit percent is 28%. What is the value of x?",
     "options": {
+      "a": "30",
+      "b": "24",
+      "c": "21",
+      "d": "25",
       "A": "30",
       "B": "24",
       "C": "21",
@@ -925,7 +1115,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Profit & Loss - Equivalent Cost/Selling Price Relations",
       "conceptTested": "Relation between Cost Price and Selling Price: x × SP = y × CP when profit percentage is given by equating unit prices."
-    }
+    },
+    "question": "The selling price of x items is equal to the cost price of 32 items and profit percent is 28%. What is the value of x?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -941,12 +1133,16 @@
     "avgTime": "00:51",
     "questionText": "The average weight of the first thirteen persons among fourteen persons is 78 kg. The weight of the 14th person is 39 kg more than the average weight of all the fourteen persons. Find the weight of the 14th person.",
     "options": {
+      "a": "118 kg",
+      "b": "98 kg",
+      "c": "110 kg",
+      "d": "120 kg",
       "A": "118 kg",
       "B": "98 kg",
       "C": "110 kg",
       "D": "120 kg"
     },
-    "solution": "Solution\nShortcut Trick\nThe extra weight of the 14th person (39 kg) is distributed among the first 13 persons to equalize their average to the overall average.\n\nTotal Average = Average of 13 persons + (Extra weight ÷ 13)\nTotal Average = 78 + (39 ÷ 13) = 78 + 3 = 81 kg\nWeight of 14th person = Total Average + Extra = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAlternate Method\nGiven:\nAverage weight of 13 persons = 78 kg\nWeight of 14th person = Average of 14 persons + 39 kg\n\nFormula Used:\nAverage = Sum of all observations ÷ Number of observations\n\nCalculations:\nLet the average weight of all 14 persons be x kg.\n⇒ Total weight of 14 persons = 14 × x = 14x\n⇒ Weight of 14th person = x + 39\n⇒ Sum of weights of 13 persons = 13 × 78 = 1014 kg\n⇒ Total Weight = Sum of 13 persons + Weight of 14th person\n⇒ 14x = 1014 + (x + 39)\n⇒ 14x − x = 1053\n⇒ 13x = 1053\n⇒ x = 1053 ÷ 13\n⇒ x = 81 kg\n⇒ Weight of 14th person = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAdditional Information\nAverage Concept\n\nAverage is the central value of a set of data. Formula: Average = Total Sum ÷ Total Number.\n\nDeviation Method\n\nIf a new member joins and the average increases, the new member's value = Old Average + (Increase in Average × New Strength).\n\nSum of Observations\n\nSum = Average × Number of observations. Any change in sum directly impacts the average by Change ÷ n.",
+    "solution": "Solution\nShortcut Trick\nThe extra weight of the 14th person (39 kg) is distributed among the first 13 persons to equalize their average to the overall average.\n\nTotal Average = Average of 13 persons + (Extra weight ÷ 13)\nTotal Average = 78 + (39 ÷ 13) = 78 + 3 = 81 kg\nWeight of 14th person = Total Average + Extra = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAlternate Method\nGiven:\nAverage weight of 13 persons = 78 kg\nWeight of 14th person = Average of 14 persons + 39 kg\n\nFormula Used:\nAverage = Sum of all observations ÷ Number of observations\n\nCalculations:\nLet the average weight of all 14 persons be x kg.\n⇒ Total weight of 14 persons = 14 × x = 14x\n⇒ Weight of 14th person = x + 39\n⇒ Sum of weights of 13 persons = 13 × 78 = 1014 kg\n⇒ Total Weight = Sum of 13 persons + Weight of 14th person\n⇒ 14x = 1014 + (x + 39)\n⇒ 14x - x = 1053\n⇒ 13x = 1053\n⇒ x = 1053 ÷ 13\n⇒ x = 81 kg\n⇒ Weight of 14th person = 81 + 39 = 120 kg\n∴ The correct answer is 120 kg.\n\nAdditional Information\nAverage Concept\n\nAverage is the central value of a set of data. Formula: Average = Total Sum ÷ Total Number.\n\nDeviation Method\n\nIf a new member joins and the average increases, the new member's value = Old Average + (Increase in Average × New Strength).\n\nSum of Observations\n\nSum = Average × Number of observations. Any change in sum directly impacts the average by Change ÷ n.",
     "topic": "Average",
     "subtopic": "Average - Addition & Removal of Observations",
     "conceptTested": "Total Sum = Average × Number of observations, and balancing group weight deviations to find individual values.",
@@ -954,7 +1150,9 @@
       "topic": "Average",
       "subtopic": "Average - Addition & Removal of Observations",
       "conceptTested": "Total Sum = Average × Number of observations, and balancing group weight deviations to find individual values."
-    }
+    },
+    "question": "The average weight of the first thirteen persons among fourteen persons is 78 kg. The weight of the 14th person is 39 kg more than the average weight of all the fourteen persons. Find the weight of the 14th person.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -970,12 +1168,16 @@
     "avgTime": "00:56",
     "questionText": "Aarav owns a watch worth Rs. 10,000. He sells it to Bhavin at a profit of 15%. After some days, Bhavin sells it back to Aarav at 15% loss. Find the percentage profit or loss faced by Aarav.",
     "options": {
+      "a": "17.25% loss",
+      "b": "18.75% loss",
+      "c": "18.25% profit",
+      "d": "17.25% profit",
       "A": "17.25% loss",
       "B": "18.75% loss",
       "C": "18.25% profit",
       "D": "17.25% profit"
     },
-    "solution": "Solution\nShortcut Trick\nAarav sells the watch for ₹11,500 (15% profit on ₹10,000).\n\nBhavin sells it back at a 15% loss on his Cost Price (₹11,500).\n\nBhavin's Loss = 15% of 11,500 = ₹1,725.\n\nSince Aarav gets the watch back, his net cash gain is exactly Bhavin's loss amount.\n\nNet Profit % = (1,725 ÷ 10,000) × 100 = 17.25%.\n∴ The correct answer is 17.25% profit.\n\nAlternate Method\nGiven:\nInitial Cost Price (CP1) of watch = ₹10,000\nProfit percentage for Aarav = 15%\nLoss percentage for Bhavin = 15%\n\nCalculations:\n⇒ Selling Price of Aarav (SP1) = 10,000 + (15 ÷ 100) × 10,000 = ₹11,500\n⇒ Cost Price for Bhavin = ₹11,500\n⇒ Selling Price of Bhavin (SP2) = 11,500 − (15 ÷ 100) × 11,500\n⇒ SP2 = 11,500 − 1,725 = ₹9,775\n⇒ This SP2 is the price Aarav pays to get the watch back.\n⇒ Aarav's total profit = (Amount received from sale) − (Amount paid for buy-back)\n⇒ Net Profit = 11,500 − 9,775 = ₹1,725\n⇒ Profit % = (Net Profit ÷ Initial CP) × 100\n⇒ Profit % = (1,725 ÷ 10,000) × 100 = 17.25%\n∴ The correct answer is 17.25% profit.\n\nAdditional Information\nNet Profit in Buyback Transactions\n\nWhen an item is sold at a profit and bought back at a loss, the original seller's total profit is the sum of the initial profit amount and the savings made during the buy-back.\n\nEffect of Different Base Values\n\nA 15% profit and a 15% loss do not cancel each other out because the base Cost Price changes after the first transaction. The second percentage is calculated on the new Selling Price.\n\nProfit and Loss Formulas\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Always ensure the CP used is specific to the person making the transaction.",
+    "solution": "Solution\nShortcut Trick\nAarav sells the watch for ₹11,500 (15% profit on ₹10,000).\n\nBhavin sells it back at a 15% loss on his Cost Price (₹11,500).\n\nBhavin's Loss = 15% of 11,500 = ₹1,725.\n\nSince Aarav gets the watch back, his net cash gain is exactly Bhavin's loss amount.\n\nNet Profit % = (1,725 ÷ 10,000) × 100 = 17.25%.\n∴ The correct answer is 17.25% profit.\n\nAlternate Method\nGiven:\nInitial Cost Price (CP1) of watch = ₹10,000\nProfit percentage for Aarav = 15%\nLoss percentage for Bhavin = 15%\n\nCalculations:\n⇒ Selling Price of Aarav (SP1) = 10,000 + (15 ÷ 100) × 10,000 = ₹11,500\n⇒ Cost Price for Bhavin = ₹11,500\n⇒ Selling Price of Bhavin (SP2) = 11,500 - (15 ÷ 100) × 11,500\n⇒ SP2 = 11,500 - 1,725 = ₹9,775\n⇒ This SP2 is the price Aarav pays to get the watch back.\n⇒ Aarav's total profit = (Amount received from sale) - (Amount paid for buy-back)\n⇒ Net Profit = 11,500 - 9,775 = ₹1,725\n⇒ Profit % = (Net Profit ÷ Initial CP) × 100\n⇒ Profit % = (1,725 ÷ 10,000) × 100 = 17.25%\n∴ The correct answer is 17.25% profit.\n\nAdditional Information\nNet Profit in Buyback Transactions\n\nWhen an item is sold at a profit and bought back at a loss, the original seller's total profit is the sum of the initial profit amount and the savings made during the buy-back.\n\nEffect of Different Base Values\n\nA 15% profit and a 15% loss do not cancel each other out because the base Cost Price changes after the first transaction. The second percentage is calculated on the new Selling Price.\n\nProfit and Loss Formulas\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Always ensure the CP used is specific to the person making the transaction.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Successive Transactions & Buyback Profit/Loss",
     "conceptTested": "Net profit or loss calculation in sequential transactions where base cost price changes after each transfer.",
@@ -983,7 +1185,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Successive Transactions & Buyback Profit/Loss",
       "conceptTested": "Net profit or loss calculation in sequential transactions where base cost price changes after each transfer."
-    }
+    },
+    "question": "Aarav owns a watch worth Rs. 10,000. He sells it to Bhavin at a profit of 15%. After some days, Bhavin sells it back to Aarav at 15% loss. Find the percentage profit or loss faced by Aarav.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -999,6 +1203,10 @@
     "avgTime": "00:49",
     "questionText": "A, B, and C can do a piece of work in 16, 24, and 32 days respectively. They start together, but C leaves after 4 days and A leaves 6 days before the completion of the work. In how many days will the work be completed?",
     "options": {
+      "a": "12 days",
+      "b": "15 days",
+      "c": "9 days",
+      "d": "14 days",
       "A": "12 days",
       "B": "15 days",
       "C": "9 days",
@@ -1012,7 +1220,9 @@
       "topic": "Time & Work",
       "subtopic": "Time & Work - Leaving/Joining after fixed days",
       "conceptTested": "Work equivalence principle: Total Work = Sum of (Efficiency × Individual Time Worked) for all workers."
-    }
+    },
+    "question": "A, B, and C can do a piece of work in 16, 24, and 32 days respectively. They start together, but C leaves after 4 days and A leaves 6 days before the completion of the work. In how many days will the work be completed?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1028,12 +1238,16 @@
     "avgTime": "00:23",
     "questionText": "A well is dug 20 m and it has a diameter of 7 m. The earth taken out is spread as a regular plot 22 m × 14 m dimension, then height of the platform formed is?",
     "options": {
+      "a": "2.1 m",
+      "b": "2.5 m",
+      "c": "2.9 m",
+      "d": "3.5 m",
       "A": "2.1 m",
       "B": "2.5 m",
       "C": "2.9 m",
       "D": "3.5 m"
     },
-    "solution": "Solution\n\nGiven:\nHeight of well (h) = 20 m\nDiameter of the well (d) = 7 m\nLength of the rectangular plot = 22 m\nBreadth of the rectangular plot = 14 m\n\nConcept used:\n\nVolume of well = πr2h\nVolume of the rectangular slot = length × breadth × height\n\nCalculation:\nRadius of well (r) = (\n7\n2\n7\n2\n) = 3.5 m\nVolume of well = (\n22\n7\n22\n7\n× 3.5 × 3.5 × 20) = 770 m3\n\nVolume of well = Volume of the rectangular slot\nNow, according to the above concept,\nVolume of the rectangular slot = length × breadth × height\n⇒ 770 = (22 × 14 × height)\n⇒ Height = (\n770\n22×14\n770\n22\n×\n14\n) = (\n5\n2\n5\n2\n) = 2.5 m\n∴ The required height is 2.5 m",
+    "solution": "Solution\n\nGiven:\nHeight of well (h) = 20 m\nDiameter of the well (d) = 7 m\nLength of the rectangular plot = 22 m\nBreadth of the rectangular plot = 14 m\n\nConcept used:\n\nVolume of well = πr2h\nVolume of the rectangular slot = length × breadth × height\n\nCalculation:\nRadius of well (r) = (\n7\n2\n7\n2\n) = 3.5 m\nVolume of well = (\n22\n7\n22\n7\n× 3.5 × 3.5 × 20) = 770 m3\n\nVolume of well = Volume of the rectangular slot\nNow, according to the above concept,\nVolume of the rectangular slot = length × breadth × height\n⇒ 770 = (22 × 14 × height)\n⇒ Height = (\n770\n22×14\n770 / 22 × 14\n) = (\n5\n2\n5\n2\n) = 2.5 m\n∴ The required height is 2.5 m",
     "topic": "Mensuration 3D",
     "subtopic": "Cylinder - Conversion of Solid Shapes",
     "conceptTested": "Conservation of volume when converting a solid cylinder into a rectangular platform (Volume of cylinder = Volume of cuboid).",
@@ -1041,7 +1255,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Cylinder - Conversion of Solid Shapes",
       "conceptTested": "Conservation of volume when converting a solid cylinder into a rectangular platform (Volume of cylinder = Volume of cuboid)."
-    }
+    },
+    "question": "A well is dug 20 m and it has a diameter of 7 m. The earth taken out is spread as a regular plot 22 m × 14 m dimension, then height of the platform formed is?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1057,12 +1273,16 @@
     "avgTime": "00:18",
     "questionText": "A trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y. If the ratio of the cost prices of X and Y is 3 : 4, then what is the gain/loss in the entire transaction (correct to one decimal place)?",
     "options": {
+      "a": "Gain of 3.7%",
+      "b": "Gain of 4.8%",
+      "c": "Loss of 4.5%",
+      "d": "Loss of 3.9%",
       "A": "Gain of 3.7%",
       "B": "Gain of 4.8%",
       "C": "Loss of 4.5%",
       "D": "Loss of 3.9%"
     },
-    "solution": "Solution\n\nGiven:\nA trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y.\n\nThe ratio of the cost prices of X and Y is 3 ∶ 4.\n\nConcept used:\n\nProfit% =\nProfit\nCost Price\n×100%\n𝑃\n𝑟\n𝑜\n𝑓\n𝑖\n𝑡\n𝐶\n𝑜\n𝑠\n𝑡\n\n𝑃\n𝑟\n𝑖\n𝑐\n𝑒\n×\n100\n%\n\nSelling Price = Cost Price - Cost Price × Loss%\nSelling Price = Cost Price + Cost Price × Gain%\n\nCalculation:\nLet the cost price of X and Y be Rs. 300 and Rs. 400.\nTotal cost price = 300 + 400 = Rs. 700\nSelling price of X = 300 + 300 × 30% = Rs. 390\nSelling price of Y = 400 - 400 × 16% = Rs. 336\nTotal selling price = 390 + 336 = Rs. 726\nGain made = 726 - 700 = Rs. 26\nNow, gain% in the entire transaction =\n26\n700\n×100%\n26\n700\n×\n100\n%\n≈ 3.7%\n\n∴ The gain in the entire transaction is 3.7%.",
+    "solution": "Solution\n\nGiven:\nA trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y.\n\nThe ratio of the cost prices of X and Y is 3 ∶ 4.\n\nConcept used:\n\nProfit% =\nProfit\nCost Price\n×100%\nP\nr\no\nf\ni\nt\ncos t\n\nP\nr\ni\nc\ne\n×\n100\n%\n\nSelling Price = Cost Price - Cost Price × Loss%\nSelling Price = Cost Price + Cost Price × Gain%\n\nCalculation:\nLet the cost price of X and Y be Rs. 300 and Rs. 400.\nTotal cost price = 300 + 400 = Rs. 700\nSelling price of X = 300 + 300 × 30% = Rs. 390\nSelling price of Y = 400 - 400 × 16% = Rs. 336\nTotal selling price = 390 + 336 = Rs. 726\nGain made = 726 - 700 = Rs. 26\nNow, gain% in the entire transaction =\n26\n700\n×100%\n26 / 700 × 100\n%\n≈ 3.7%\n\n∴ The gain in the entire transaction is 3.7%.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit & Loss - Multiple Articles",
     "conceptTested": "Calculating overall profit/loss percentage by assuming baseline cost prices in a given ratio.",
@@ -1070,7 +1290,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Profit & Loss - Multiple Articles",
       "conceptTested": "Calculating overall profit/loss percentage by assuming baseline cost prices in a given ratio."
-    }
+    },
+    "question": "A trader earns a profit of 30% by selling an article X and loses 16% by selling another article Y. If the ratio of the cost prices of X and Y is 3 : 4, then what is the gain/loss in the entire transaction (correct to one decimal place)?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1086,12 +1308,16 @@
     "avgTime": "00:19",
     "questionText": "The floor of a room 12 m long and 8 m wide is to be decorated with square designs having the maximum possible area. Find the number of square designs required.",
     "options": {
+      "a": "4",
+      "b": "5",
+      "c": "8",
+      "d": "6",
       "A": "4",
       "B": "5",
       "C": "8",
       "D": "6"
     },
-    "solution": "Solution\nShortcut Trick\nSide of the maximum possible square = HCF of length and width.\nSide = HCF(12, 8) = 4 m.\nNumber of square designs = (Length × Width) ÷ (Side × Side).\nNumber of designs = (12 × 8) ÷ (4 × 4) = 96 ÷ 16 = 6.\n∴ The correct answer is 6.\n\nAlternate Method\nGiven: Length (L) = 12 m and Width (W) = 8 m.\n\nFormula Used:\n1. Area of rectangle = Length × Width\n2. Side of square (max area) = HCF(L, W)\n3. Number of squares = (Total Area) ÷ (Area of one square)\n\nCalculations:\n⇒ Total Area of the floor = 12 m × 8 m = 96 m2\n⇒ To find the maximum possible area of square designs, find HCF of 12 and 8.\n⇒ 12 = 2 × 2 × 3\n⇒ 8 = 2 × 2 × 2\n⇒ HCF(12, 8) = 2 × 2 = 4 m\n⇒ Area of one square design = 4 m × 4 m = 16 m2\n⇒ Number of square designs required = 96 ÷ 16\n⇒ Number of square designs required = 6\n∴ The correct answer is 6.\n\nAdditional Information\nHighest Common Factor (HCF)\n\nThe HCF of two or more numbers is the largest positive integer that divides each of the numbers without leaving a remainder.\n\nMinimum Number of Tiles\n\nTo minimize the number of tiles needed to cover a rectangular area, the side of each square tile must be the HCF of the length and breadth of the rectangle.\n\nArea and Perimeter of a Square\n\nArea = side2 and Perimeter = 4 × side. All four sides of a square are equal and each angle is 90°.",
+    "solution": "Solution\nShortcut Trick\nSide of the maximum possible square = HCF of length and width.\nSide = HCF(12, 8) = 4 m.\nNumber of square designs = (Length × Width) ÷ (Side × Side).\nNumber of designs = (12 × 8) ÷ (4 × 4) = 96 ÷ 16 = 6.\n∴ The correct answer is 6.\n\nAlternate Method\nGiven: Length (L) = 12 m and Width (W) = 8 m.\n\nFormula Used:\n1. Area of rectangle = Length × Width\n2. Side of square (max area) = HCF(L, W)³. Number of squares = (Total Area) ÷ (Area of one square)\n\nCalculations:\n⇒ Total Area of the floor = 12 m × 8 m = 96 m2\n⇒ To find the maximum possible area of square designs, find HCF of 12 and 8.\n⇒ 12 = 2 × 2 × 3\n⇒ 8 = 2 × 2 × 2\n⇒ HCF(12, 8) = 2 × 2 = 4 m\n⇒ Area of one square design = 4 m × 4 m = 16 m2\n⇒ Number of square designs required = 96 ÷ 16\n⇒ Number of square designs required = 6\n∴ The correct answer is 6.\n\nAdditional Information\nHighest Common Factor (HCF)\n\nThe HCF of two or more numbers is the largest positive integer that divides each of the numbers without leaving a remainder.\n\nMinimum Number of Tiles\n\nTo minimize the number of tiles needed to cover a rectangular area, the side of each square tile must be the HCF of the length and breadth of the rectangle.\n\nArea and Perimeter of a Square\n\nArea = side2 and Perimeter = 4 × side. All four sides of a square are equal and each angle is 90°.",
     "topic": "LCM & HCF",
     "subtopic": "HCF Applications - Tiling and Partitioning",
     "conceptTested": "Finding the side length of the largest possible square tile using the Highest Common Factor (HCF) of the room's dimensions.",
@@ -1099,7 +1325,9 @@
       "topic": "LCM & HCF",
       "subtopic": "HCF Applications - Tiling and Partitioning",
       "conceptTested": "Finding the side length of the largest possible square tile using the Highest Common Factor (HCF) of the room's dimensions."
-    }
+    },
+    "question": "The floor of a room 12 m long and 8 m wide is to be decorated with square designs having the maximum possible area. Find the number of square designs required.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1115,6 +1343,10 @@
     "avgTime": "00:29",
     "questionText": "If the volume of a hemisphere is 155232 cm^3, then half of the radius (in cm) of the hemisphere is: (Use π = 22/7)",
     "options": {
+      "a": "18",
+      "b": "42",
+      "c": "21",
+      "d": "12",
       "A": "18",
       "B": "42",
       "C": "21",
@@ -1128,7 +1360,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Hemisphere - Volume & Dimensions",
       "conceptTested": "Finding the radius of a hemisphere given its volume using the formula V = (2/3)πr^3."
-    }
+    },
+    "question": "If the volume of a hemisphere is 155232 cm^3, then half of the radius (in cm) of the hemisphere is: (Use π = 22/7)",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1144,12 +1378,16 @@
     "avgTime": "00:17",
     "questionText": "If 3^(2p+4) = 6561, then find the value of (p + 1)^4",
     "options": {
+      "a": "1",
+      "b": "81",
+      "c": "27",
+      "d": "16",
       "A": "1",
       "B": "81",
       "C": "27",
       "D": "16"
     },
-    "solution": "Solution\n\nShortcut Trick\nConvert 6561 into a power of 3: 6561 = 38.\nEquating the exponents of base 3: 2p + 4 = 8 ⇒ 2p = 4 ⇒ p = 2.\nSubstitute p = 2 to find the required expression: (p + 1)4 = (2 + 1)4 = 34 = 81.\n∴ The correct answer is 81.\n\nAlternate Method\nGiven:\n3(2p+4) = 6561\n\nFormula Used:\nIf am = an for any base a > 1, then m = n.\n\nCalculations:\n⇒ 3(2p+4) = 6561\n\nFactorizing 6561 gives:\n\n⇒ 3(2p+4) = 3 × 3 × 3 × 3 × 3 × 3 × 3 × 3\n⇒ 3(2p+4) = 38\nSince the bases are the same, we can safely equate the exponents:\n⇒ 2p + 4 = 8\n⇒ 2p = 8 − 4\n⇒ 2p = 4\n⇒ p = 2\nNow, substitute the value of p into the required expression (p + 1)4:\n⇒ (2 + 1)4\n⇒ 34\n⇒ 81\n∴ The correct answer is 81.\n\nAdditional Information\nLaw of Exponents (Multiplication & Division)\n\nWhen multiplying terms with the same base, add their exponents: am × an = am+n. When dividing, subtract them: am ÷ an = am−n.\n\nPower of a Power Rule\n\nWhen raising a power to another power, multiply the exponents: (am)n = am×n.\n\nZero and Negative Exponents\n\nAny non-zero base to the power of 0 is 1: a0 = 1. A negative exponent denotes the reciprocal of the base raised to the positive power: a−n = 1 ÷ an.",
+    "solution": "Solution\n\nShortcut Trick\nConvert 6561 into a power of 3: 6561 = 38.\nEquating the exponents of base 3: 2p + 4 = 8 ⇒ 2p = 4 ⇒ p = 2.\nSubstitute p = 2 to find the required expression: (p + 1)4 = (2 + 1)4 = 34 = 81.\n∴ The correct answer is 81.\n\nAlternate Method\nGiven:\n3(2p+4) = 6561\n\nFormula Used:\nIf am = an for any base a > 1, then m = n.\n\nCalculations:\n⇒ 3(2p+4) = 6561\n\nFactorizing 6561 gives:\n\n⇒ 3(2p+4) = 3 × 3 × 3 × 3 × 3 × 3 × 3 × 3\n⇒ 3(2p+4) = 38\nSince the bases are the same, we can safely equate the exponents:\n⇒ 2p + 4 = 8\n⇒ 2p = 8 - 4\n⇒ 2p = 4\n⇒ p = 2\nNow, substitute the value of p into the required expression (p + 1)4:\n⇒ (2 + 1)4\n⇒ 34\n⇒ 81\n∴ The correct answer is 81.\n\nAdditional Information\nLaw of Exponents (Multiplication & Division)\n\nWhen multiplying terms with the same base, add their exponents: am × an = am+n. When dividing, subtract them: am ÷ an = am-n.\n\nPower of a Power Rule\n\nWhen raising a power to another power, multiply the exponents: (am)n = am×n.\n\nZero and Negative Exponents\n\nAny non-zero base to the power of 0 is 1: a0 = 1. A negative exponent denotes the reciprocal of the base raised to the positive power: a-n = 1 ÷ an.",
     "topic": "Simplification",
     "subtopic": "Indices & Surds - Exponential Equations",
     "conceptTested": "Equating exponents when bases are equal: if a^m = a^n, then m = n.",
@@ -1157,7 +1395,9 @@
       "topic": "Simplification",
       "subtopic": "Indices & Surds - Exponential Equations",
       "conceptTested": "Equating exponents when bases are equal: if a^m = a^n, then m = n."
-    }
+    },
+    "question": "If 3^(2p+4) = 6561, then find the value of (p + 1)^4",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1173,12 +1413,16 @@
     "avgTime": "00:13",
     "questionText": "If tanθ + secθ = m, then what is secθ equal to?",
     "options": {
-      "A": "m2−12m",
+      "a": "m2-12m",
+      "b": "m2+12m",
+      "c": "m+1m",
+      "d": "m2+1m",
+      "A": "m2-12m",
       "B": "m2+12m",
       "C": "m+1m",
       "D": "m2+1m"
     },
-    "solution": "Solution\n\nGiven:\ntanθ + secθ = m\n\nFormula used:\nsec2θ – tan2θ = 1\n(a + b)(a - b) = a2 - b2\n\nCalculation:\nsecθ + tanθ = m       ----(1)\nNow, we know that\nsec2θ – tan2θ = 1\nBy using the formula (a + b)(a - b) = a2 - b2\n⇒ (secθ – tanθ) (secθ + tanθ) = 1\n⇒ secθ – tanθ = 1/(secθ + tanθ)\n⇒ secθ – tanθ = 1/m       -----(2)\n\nAdding equation (1) & (2)\n\n⇒ secθ + tanθ + secθ – tanθ = m + 1/m\n⇒ 2secθ = m + 1/m\n⇒ 2secθ = m2 + 1/m\n⇒ secθ =\nm\n2\n+1\n2m\n𝑚\n2\n+\n1\n2\n𝑚\n\n∴ The required value is\nm\n2\n+1\n2m\n𝑚\n2\n+\n1\n2\n𝑚\n.",
+    "solution": "Solution\n\nGiven:\ntanθ + secθ = m\n\nFormula used:\nsec²θ - tan²θ = 1\n(a + b)(a - b) = a2 - b2\n\nCalculation:\nsecθ + tanθ = m       ----(1)\nNow, we know that\nsec²θ - tan²θ = 1\nBy using the formula (a + b)(a - b) = a2 - b2\n⇒ (secθ - tanθ) (secθ + tanθ) = 1\n⇒ secθ - tanθ = 1/(secθ + tanθ)\n⇒ secθ - tanθ = 1/m       -----(2)\n\nAdding equation (1) & (2)\n\n⇒ secθ + tanθ + secθ - tanθ = m + 1/m\n⇒ 2secθ = m + 1/m\n⇒ 2secθ = m2 + 1/m\n⇒ secθ =\nm\n2\n+1\n2m\nm\n2\n+\n1\n2\nm\n\n∴ The required value is\nm\n2\n+1\n2m\nm\n2\n+\n1\n2\nm\n.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Equations",
     "conceptTested": "Fundamental trigonometric identity sec²θ - tan²θ = 1 and algebraic manipulation of linear combinations.",
@@ -1186,7 +1430,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Equations",
       "conceptTested": "Fundamental trigonometric identity sec²θ - tan²θ = 1 and algebraic manipulation of linear combinations."
-    }
+    },
+    "question": "If tanθ + secθ = m, then what is secθ equal to?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1202,6 +1448,10 @@
     "avgTime": "00:11",
     "questionText": "The maximum number of boxes, each of length 0.2m, breadth 0.4m and height 0.5m that can be placed in a box of length 2m, breadth 1m and height 0.5m is",
     "options": {
+      "a": "30",
+      "b": "40",
+      "c": "20",
+      "d": "25",
       "A": "30",
       "B": "40",
       "C": "20",
@@ -1215,7 +1465,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Cube & Cuboid Volume & Packing",
       "conceptTested": "Volume of cuboid = length × breadth × height and calculating maximum packing capacity using volume ratios."
-    }
+    },
+    "question": "The maximum number of boxes, each of length 0.2m, breadth 0.4m and height 0.5m that can be placed in a box of length 2m, breadth 1m and height 0.5m is",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1231,12 +1483,16 @@
     "avgTime": "00:14",
     "questionText": "Ram, Shyam and Ghanshyam have ₹30, ₹40 and ₹60, respectively, with them. Their mother asks them to give her equal amounts so that the money held by them now are in continued proportion. Find the amount taken from each of them.",
     "options": {
+      "a": "₹10",
+      "b": "₹15",
+      "c": "₹20",
+      "d": "₹25",
       "A": "₹10",
       "B": "₹15",
       "C": "₹20",
       "D": "₹25"
     },
-    "solution": "Solution\n\nGiven:\nRam has ₹30.\n\nShyam has ₹40.\n\nGhanshyam has ₹60.\n\nThey give equal amounts to their mother such that the remaining amounts are in continued proportion.\n\nFormula Used:\nFor continued proportion: a/b = b/c or b2 = a ⋅ c\n\nCalculation:\nLet the amount given by each of them to their mother be x .\n\nThen, the remaining amounts are:\n\nRam: ₹(30 - x)\nShyam: ₹(40 - x)\nGhanshyam: ₹(60 - x)\n\nFor continued proportion:\n\n(30 - x)/(40 - x) = (40 - x)/(60 - x)\n\nBy cross-multiplication:\n\n(40 - x)2 = (30 - x) ⋅ (60 - x)\n\nExpanding both sides:\n\n⇒ 1600 - 80x + x2 = 30 × 60 - 30x - 60x + x2\n⇒ 1600 - 80x + x2 = 1800 - 90x + x2\n\nCancel out x2 from both sides:\n\n⇒ 1600 - 80x = 1800 - 90x\n\nSimplify:\n\n⇒ 90x - 80x = 1800 - 1600\n⇒ 10x = 200\n⇒ x = 20\n\nThe amount taken from each of them is ₹20.",
+    "solution": "Solution\n\nGiven:\nRam has ₹30.\n\nShyam has ₹40.\n\nGhanshyam has ₹60.\n\nThey give equal amounts to their mother such that the remaining amounts are in continued proportion.\n\nFormula Used:\nFor continued proportion: a/b = b/c or b2 = a ⋅ c\n\nCalculation:\nLet the amount given by each of them to their mother be x .\n\nThen, the remaining amounts are:\n\nRam: ₹(30 - x)\nShyam: ₹(40 - x)\nGhanshyam: ₹(60 - x)\n\nFor continued proportion:\n\n(30 - x)/(40 - x) = (40 - x)/(60 - x)\n\nBy cross-multiplication:\n\n(40 - x)² = (30 - x) ⋅ (60 - x)\n\nExpanding both sides:\n\n⇒ 1600 - 80x + x2 = 30 × 60 - 30x - 60x + x2\n⇒ 1600 - 80x + x2 = 1800 - 90x + x2\n\nCancel out x2 from both sides:\n\n⇒ 1600 - 80x = 1800 - 90x\n\nSimplify:\n\n⇒ 90x - 80x = 1800 - 1600\n⇒ 10x = 200\n⇒ x = 20\n\nThe amount taken from each of them is ₹20.",
     "topic": "Ratio & Proportion",
     "subtopic": "Continued Proportion",
     "conceptTested": "Condition for continued proportion: a/b = b/c or b² = a · c.",
@@ -1244,7 +1500,9 @@
       "topic": "Ratio & Proportion",
       "subtopic": "Continued Proportion",
       "conceptTested": "Condition for continued proportion: a/b = b/c or b² = a · c."
-    }
+    },
+    "question": "Ram, Shyam and Ghanshyam have ₹30, ₹40 and ₹60, respectively, with them. Their mother asks them to give her equal amounts so that the money held by them now are in continued proportion. Find the amount taken from each of them.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1260,6 +1518,10 @@
     "avgTime": "00:17",
     "questionText": "Select the most appropriate synonym of the word \"Brontide\".",
     "options": {
+      "a": "Silence",
+      "b": "Rumbling",
+      "c": "Light",
+      "d": "Explosion",
       "A": "Silence",
       "B": "Rumbling",
       "C": "Light",
@@ -1273,7 +1535,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms",
       "conceptTested": "Vocabulary recall and identification of semantic equivalents."
-    }
+    },
+    "question": "Select the most appropriate synonym of the word \"Brontide\".",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1289,6 +1553,10 @@
     "avgTime": "00:13",
     "questionText": "Select the most appropriate antonym for the given word: Grumble",
     "options": {
+      "a": "Complain",
+      "b": "Compliment",
+      "c": "Dangle",
+      "d": "Calamity",
       "A": "Complain",
       "B": "Compliment",
       "C": "Dangle",
@@ -1302,7 +1570,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Antonyms",
       "conceptTested": "Vocabulary recall and identification of contrasting word meanings."
-    }
+    },
+    "question": "Select the most appropriate antonym for the given word: Grumble",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1318,6 +1588,10 @@
     "avgTime": "00:21",
     "questionText": "In the following question, out of the given alternatives, choose the one which best expresses the opposite meaning of the given word.\nFECUND",
     "options": {
+      "a": "Barren",
+      "b": "Solid",
+      "c": "Unploughed",
+      "d": "Hard",
       "A": "Barren",
       "B": "Solid",
       "C": "Unploughed",
@@ -1331,7 +1605,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms & Antonyms",
       "conceptTested": "Finding the antonym of an advanced vocabulary word (Fecund vs Barren)"
-    }
+    },
+    "question": "In the following question, out of the given alternatives, choose the one which best expresses the opposite meaning of the given word.\nFECUND",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1347,6 +1623,10 @@
     "avgTime": "00:28",
     "questionText": "Select the most appropriate option that can substitute the underlined segment in the given sentence.\nPersonal growth involves self-reflection and resilience, leading to a deeper understanding of oneself.",
     "options": {
+      "a": "in-depth grasp",
+      "b": "compoundable knowledge",
+      "c": "expanded aware",
+      "d": "thorough analysis",
       "A": "in-depth grasp",
       "B": "compoundable knowledge",
       "C": "expanded aware",
@@ -1360,7 +1640,9 @@
       "topic": "Sentence Improvement",
       "subtopic": "Sentence Improvement",
       "conceptTested": "Grammatical appropriateness, contextual vocabulary substitution, and article-consonant agreement"
-    }
+    },
+    "question": "Select the most appropriate option that can substitute the underlined segment in the given sentence.\nPersonal growth involves self-reflection and resilience, leading to a deeper understanding of oneself.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1376,6 +1658,10 @@
     "avgTime": "00:15",
     "questionText": "In the following question, four words have been given out of which one word is incorrectly spelt. Find the incorrectly spelt word.",
     "options": {
+      "a": "Forray",
+      "b": "Ferry",
+      "c": "Fairy",
+      "d": "Fiery",
       "A": "Forray",
       "B": "Ferry",
       "C": "Fairy",
@@ -1389,7 +1675,9 @@
       "topic": "Spelling Errors",
       "subtopic": "Spelling Errors",
       "conceptTested": "Identifying incorrectly spelt words and their correct alternative (Foray vs Forray)"
-    }
+    },
+    "question": "In the following question, four words have been given out of which one word is incorrectly spelt. Find the incorrectly spelt word.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1405,6 +1693,10 @@
     "avgTime": "00:11",
     "questionText": "Find the incorrectly spelt word.",
     "options": {
+      "a": "Smirk",
+      "b": "Tardy",
+      "c": "Tarnis",
+      "d": "Wade",
       "A": "Smirk",
       "B": "Tardy",
       "C": "Tarnis",
@@ -1418,7 +1710,9 @@
       "topic": "Spelling Errors",
       "subtopic": "Spelling Errors",
       "conceptTested": "Identifying incorrectly spelt words (Tarnish vs Tarnis)"
-    }
+    },
+    "question": "Find the incorrectly spelt word.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1434,6 +1728,10 @@
     "avgTime": "00:13",
     "questionText": "Choose the correct appropriate word to fill in the blank from the given alternatives.\nShe _______ when she heard that terrible news.",
     "options": {
+      "a": "packed",
+      "b": "frenzied",
+      "c": "panicked",
+      "d": "frantic",
       "A": "packed",
       "B": "frenzied",
       "C": "panicked",
@@ -1447,7 +1745,9 @@
       "topic": "Fill in the Blanks",
       "subtopic": "Fill in the Blanks",
       "conceptTested": "Choosing the correct grammatical part of speech (Verb vs Adjective) to fill a blank in past tense"
-    }
+    },
+    "question": "Choose the correct appropriate word to fill in the blank from the given alternatives.\nShe _______ when she heard that terrible news.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1463,6 +1763,10 @@
     "avgTime": "00:23",
     "questionText": "Select the segment of the sentence that contains a grammatical error. If there is no error, mark 'No error' as your answer.\nHe was determined to (a)/ both beat the record (b)/ with win the crowd over. (c)/ No Error (d)",
     "options": {
+      "a": "a",
+      "b": "b",
+      "c": "c",
+      "d": "d",
       "A": "a",
       "B": "b",
       "C": "c",
@@ -1476,7 +1780,9 @@
       "topic": "Spotting Errors",
       "subtopic": "Correlative Conjunctions - Both...and",
       "conceptTested": "Correlative conjunctions like both...and must be followed by parallel structures and use the correct paired conjunction rather than substituting 'with'."
-    }
+    },
+    "question": "Select the segment of the sentence that contains a grammatical error. If there is no error, mark 'No error' as your answer.\nHe was determined to (a)/ both beat the record (b)/ with win the crowd over. (c)/ No Error (d)",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1492,6 +1798,10 @@
     "avgTime": "00:16",
     "questionText": "Select the most appropriate option to complete the following sentence: I was really astonished. I didn’t know____.",
     "options": {
+      "a": "What to tell",
+      "b": "What to say",
+      "c": "Told",
+      "d": "What to said",
       "A": "What to tell",
       "B": "What to say",
       "C": "Told",
@@ -1505,7 +1815,9 @@
       "topic": "Fill in the Blanks",
       "subtopic": "Infinitive Phrases",
       "conceptTested": "Verb complementation using wh-word followed by an infinitive (what to say) versus transitive verbs requiring objects."
-    }
+    },
+    "question": "Select the most appropriate option to complete the following sentence: I was really astonished. I didn’t know____.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1521,6 +1833,10 @@
     "avgTime": "00:47",
     "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. In Earth’s orbit itself, the U.S. Space Surveillance Network is tracking more than 14,000 pieces of space junk that are larger than 10 cm (4 inches) across, such as defunct satellites and rocket stages.\nB. It’s estimated that there are millions of pieces smaller than that.\nC. Humanity hasn’t taken only memories and left only footprints in the outer space but we’ve left a lot of junk up there.\nD. Because of the high speeds at which objects move in Earth’s orbit, even little pieces of space debris can cause damage such as the windows on the space shuttle often had to be replaced because of damage from collisions with debris smaller than a millimeter.",
     "options": {
+      "a": "BCDA",
+      "b": "CABD",
+      "c": "DABC",
+      "d": "ACBD",
       "A": "BCDA",
       "B": "CABD",
       "C": "DABC",
@@ -1534,7 +1850,9 @@
       "topic": "Para Jumbles",
       "subtopic": "Sentence Rearrangement (PQRS)",
       "conceptTested": "Logical flow from a general opening statement introducing a topic to specific supporting details and consequences."
-    }
+    },
+    "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. In Earth’s orbit itself, the U.S. Space Surveillance Network is tracking more than 14,000 pieces of space junk that are larger than 10 cm (4 inches) across, such as defunct satellites and rocket stages.\nB. It’s estimated that there are millions of pieces smaller than that.\nC. Humanity hasn’t taken only memories and left only footprints in the outer space but we’ve left a lot of junk up there.\nD. Because of the high speeds at which objects move in Earth’s orbit, even little pieces of space debris can cause damage such as the windows on the space shuttle often had to be replaced because of damage from collisions with debris smaller than a millimeter.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1550,6 +1868,10 @@
     "avgTime": "00:52",
     "questionText": "Which of the following words is most nearly the SYNONYM of the word \"perennial\" as used in the first paragraph of the passage?",
     "options": {
+      "a": "Ephemeral",
+      "b": "Occasional",
+      "c": "Recurrent",
+      "d": "Subterranean",
       "A": "Ephemeral",
       "B": "Occasional",
       "C": "Recurrent",
@@ -1563,7 +1885,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Vocabulary in Context",
       "conceptTested": "Identifying precise lexical synonyms for advanced vocabulary words."
-    }
+    },
+    "question": "Which of the following words is most nearly the SYNONYM of the word \"perennial\" as used in the first paragraph of the passage?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
@@ -1579,6 +1903,10 @@
     "avgTime": "01:32",
     "questionText": "What can be reasonably inferred from the passage regarding the wetlands (beels) of Assam?",
     "options": {
+      "a": "Their conservation and restoration would reduce the velocity and volume of floodwaters reaching human settlements during extreme rainfall.",
+      "b": "Their transformation into agricultural land has successfully mitigated the hydraulic ferocity of flash floods in urban areas.",
+      "c": "They were artificially engineered by disaster management authorities to act as longitudinal barriers against sediment deposition.",
+      "d": "They are the primary source of the heavy silt that elevates the channel floor of the Brahmaputra River",
       "A": "Their conservation and restoration would reduce the velocity and volume of floodwaters reaching human settlements during extreme rainfall.",
       "B": "Their transformation into agricultural land has successfully mitigated the hydraulic ferocity of flash floods in urban areas.",
       "C": "They were artificially engineered by disaster management authorities to act as longitudinal barriers against sediment deposition.",
@@ -1592,6 +1920,8 @@
       "topic": "Reading Comprehension",
       "subtopic": "Inference and Passage Analysis",
       "conceptTested": "Logical deduction of author's arguments and environmental cause-effect relationships from descriptive passages."
-    }
+    },
+    "question": "What can be reasonably inferred from the passage regarding the wetlands (beels) of Assam?",
+    "answer": "a"
   }
 ]

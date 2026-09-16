@@ -32,6 +32,9 @@ import { safeStorage } from '../utils/safeStorage';
 import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle } from '../utils/syncMockReports';
 import { openAiWithScope } from '../utils/aiScopeHelper';
 import { AiFocusedQuestion } from '../types/aiScope';
+import { cleanQuestionText } from '../utils/formatQuestionText';
+import { cleanSolutionText } from '../utils/cleanSolution';
+import { normalizeQuestionOptions, normalizeAnswerKey } from '../utils/mathSanitizer';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
 const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
@@ -719,20 +722,44 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
 
       const fileNameClean = file.name.replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
-      const report = computeMockScoreClientSide(rawQuestions, fileNameClean);
+      const cleanedQuestions = rawQuestions.map(q => {
+        const normOptions = normalizeQuestionOptions(q.options);
+        const qText = cleanQuestionText(q.question || q.questionText || '');
+        const solText = cleanSolutionText(q.solution || '');
+        const answer = normalizeAnswerKey(q.answer || q.correctOption || q.correct_answer || q.correct_option);
+        return {
+          ...q,
+          question: qText,
+          questionText: qText,
+          options: {
+            a: cleanQuestionText(normOptions.a),
+            b: cleanQuestionText(normOptions.b),
+            c: cleanQuestionText(normOptions.c),
+            d: cleanQuestionText(normOptions.d),
+            A: cleanQuestionText(normOptions.a),
+            B: cleanQuestionText(normOptions.b),
+            C: cleanQuestionText(normOptions.c),
+            D: cleanQuestionText(normOptions.d),
+          },
+          answer,
+          correctOption: answer.toUpperCase(),
+          solution: solText,
+        };
+      });
+      const report = computeMockScoreClientSide(cleanedQuestions, fileNameClean);
 
       // Save question dataset to backend
       try {
         await fetch(`/api/mock-questions/${report.id}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rawQuestions)
+          body: JSON.stringify(cleanedQuestions)
         });
       } catch {}
 
       // Save question dataset to localStorage as fallback
       try {
-        safeStorage.setItem(`cgl_mock_questions_${report.id}`, JSON.stringify(rawQuestions));
+        safeStorage.setItem(`cgl_mock_questions_${report.id}`, JSON.stringify(cleanedQuestions));
       } catch {}
 
       // Try persisting to backend API
@@ -892,6 +919,22 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         });
       });
     }
+
+    // Filter out deleted questions
+    try {
+      const deletedRaw = safeStorage.getItem('cgl_deleted_question_ids');
+      if (deletedRaw) {
+        const deletedArr: string[] = JSON.parse(deletedRaw);
+        if (Array.isArray(deletedArr) && deletedArr.length > 0) {
+          const deletedSet = new Set(deletedArr.map(s => String(s).trim().toLowerCase()));
+          list = list.filter(item => {
+            const t = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+            const id = item.id ? String(item.id).trim().toLowerCase() : '';
+            return !deletedSet.has(t) && (!id || !deletedSet.has(id));
+          });
+        }
+      }
+    } catch {}
 
     if (list.length > 0) {
       setRawQuestionsCache(prev => ({

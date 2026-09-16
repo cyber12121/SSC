@@ -24,6 +24,10 @@ import {
 } from 'lucide-react';
 import { SubjectData, Chapter, Question, RCAClassification, RCATagType } from '../types';
 import { detectTopic, normalizeTopicTitle } from '../utils/topicDetector';
+import { FormattedText } from './FormattedText';
+import { cleanSolutionText } from '../utils/cleanSolution';
+import { normalizeAnswerKey } from '../utils/mathSanitizer';
+import { classifyTestType, TestScopeFilter } from '../utils/testClassifier';
 
 const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
 
@@ -102,6 +106,7 @@ const SEVERITY_CONFIG = {
 
 export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
   const [viewMode, setViewMode] = useState<'error_type' | 'rca'>('error_type');
+  const [testScopeFilter, setTestScopeFilter] = useState<TestScopeFilter>('all');
   const [selectedTypeFilter, setSelectedTypeFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeDrillChapter, setActiveDrillChapter] = useState<ChapterHeatmapItem | null>(null);
@@ -142,7 +147,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
     };
   }, []);
 
-  const { subjectGroups, allSubjects, totalOverallErrors } = useMemo(() => {
+  const { subjectGroups, allSubjects, totalOverallErrors, scopeCounts } = useMemo(() => {
     // 1. Read global RCA store
     const globalRcaStore: Record<string, any> = (() => {
       try {
@@ -582,7 +587,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
         })}
       </div>
 
-      {/* ─── Mode Switcher Header ─── */}
+      {/* ─── Mode Switcher & Test Scope Header ─── */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between bg-white rounded-xl border border-slate-200/80 px-3.5 py-2 shadow-xs gap-2">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-black text-xs">
@@ -600,33 +605,105 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
           </div>
         </div>
 
-        {/* Segmented Control */}
-        <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 shrink-0">
-          <button
-            type="button"
-            onClick={() => { setViewMode('error_type'); setSelectedTypeFilter('all'); }}
-            className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer ${
-              viewMode === 'error_type'
-                ? 'bg-white text-slate-900 shadow-xs'
-                : 'text-slate-500 hover:text-slate-900'
-            }`}
-          >
-            Error Type
-          </button>
-          <button
-            type="button"
-            onClick={() => { setViewMode('rca'); setSelectedTypeFilter('all'); }}
-            className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-              viewMode === 'rca'
-                ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xs'
-                : 'text-purple-700 hover:text-purple-900'
-            }`}
-          >
-            <Target className="w-3 h-3" />
-            <span>RCA Mode (4-Bucket)</span>
-          </button>
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          {/* Test Scope Filter (Combined / Full Tests / Sectional) */}
+          <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-xs font-semibold">
+            <button
+              type="button"
+              onClick={() => { setTestScopeFilter('all'); setSelectedTypeFilter('all'); }}
+              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${
+                testScopeFilter === 'all'
+                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              title="Combined view: all full and sectional test errors"
+            >
+              <span>Combined</span>
+              <span className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${testScopeFilter === 'all' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600'}`}>
+                {scopeCounts.all}
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => { setTestScopeFilter('full'); setSelectedTypeFilter('all'); }}
+              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${
+                testScopeFilter === 'full'
+                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              title="View errors only from Full Mock Tests"
+            >
+              <span>Full Tests</span>
+              <span className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${testScopeFilter === 'full' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600'}`}>
+                {scopeCounts.full}
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => { setTestScopeFilter('sectional'); setSelectedTypeFilter('all'); }}
+              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${
+                testScopeFilter === 'sectional'
+                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              title="View errors only from Sectional Mock Tests"
+            >
+              <span>Sectional</span>
+              <span className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${testScopeFilter === 'sectional' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-200 text-slate-600'}`}>
+                {scopeCounts.sectional}
+              </span>
+            </button>
+          </div>
+
+          {/* Segmented Control (Error Type vs RCA) */}
+          <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 shrink-0">
+            <button
+              type="button"
+              onClick={() => { setViewMode('error_type'); setSelectedTypeFilter('all'); }}
+              className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer ${
+                viewMode === 'error_type'
+                  ? 'bg-white text-slate-900 shadow-xs'
+                  : 'text-slate-500 hover:text-slate-900'
+              }`}
+            >
+              Error Type
+            </button>
+            <button
+              type="button"
+              onClick={() => { setViewMode('rca'); setSelectedTypeFilter('all'); }}
+              className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                viewMode === 'rca'
+                  ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xs'
+                  : 'text-purple-700 hover:text-purple-900'
+              }`}
+            >
+              <Target className="w-3 h-3" />
+              <span>RCA Mode (4-Bucket)</span>
+            </button>
+          </div>
         </div>
       </div>
+
+      {totalOverallErrors === 0 ? (
+        <div className="flex flex-col items-center justify-center py-16 text-center bg-white rounded-xl border border-slate-200/80 p-6 shadow-xs">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+            <AlertCircle className="w-6 h-6" />
+          </div>
+          <h3 className="text-sm font-bold text-slate-800">
+            No {testScopeFilter === 'full' ? 'Full Test' : 'Sectional Test'} Errors Recorded
+          </h3>
+          <p className="text-xs text-slate-500 mt-1 max-w-sm">
+            There are currently no recorded errors for this test category. Try viewing Combined errors to see all questions.
+          </p>
+          <button
+            onClick={() => { setTestScopeFilter('all'); setSelectedTypeFilter('all'); }}
+            className="mt-3.5 px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-all cursor-pointer"
+          >
+            View Combined Errors ({scopeCounts.all})
+          </button>
+        </div>
+      ) : (
+        <>
 
       {/* ─── KPI Metric Bar (Compact Single-Row Cards) ─── */}
       {viewMode === 'error_type' ? (
@@ -964,6 +1041,8 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
           </div>
         )}
       </div>
+      </>
+      )}
 
       {/* ─── Drill-down Modal ─── */}
       <AnimatePresence>
@@ -1066,15 +1145,19 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                         )}
 
                         {/* Question text */}
-                        <p className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed">{q.question}</p>
+                        <FormattedText
+                          text={q.question}
+                          as="p"
+                          className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed"
+                        />
 
                         {/* Options */}
                         {q.options && (
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {(['a', 'b', 'c', 'd'] as const).map(optKey => {
-                              const optText = q.options[optKey];
+                              const optText = q.options[optKey] || (q.options as any)[optKey.toUpperCase()];
                               if (!optText) return null;
-                              const isCorrect = q.answer === optKey;
+                              const isCorrect = normalizeAnswerKey(q.answer || (q as any).correct_answer || (q as any).correctOption) === optKey;
                               return (
                                 <div
                                   key={optKey}
@@ -1089,7 +1172,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                                   }`}>
                                     {optKey}
                                   </span>
-                                  <span className="truncate">{optText}</span>
+                                  <FormattedText text={optText} className="flex-1 min-w-0" />
                                 </div>
                               );
                             })}
@@ -1105,7 +1188,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                               <ChevronRight className="w-3 h-3 transition-transform group-open:rotate-90" />
                             </summary>
                             <div className="mt-2 text-xs font-medium text-slate-700 whitespace-pre-line leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200">
-                              {q.solution}
+                              <FormattedText text={cleanSolutionText(q.solution)} as="div" />
                             </div>
                           </details>
                         )}

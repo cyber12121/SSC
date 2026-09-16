@@ -13,6 +13,10 @@
     "avgTime": "00:57",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The fact that the rule had been amended after the voting was not communicated to the council.",
     "options": {
+      "a": "The amended rule was not communicated after voting.",
+      "b": "The rule was communicated after amendment, not before.",
+      "c": "The council wasn't informed that the rule had been amended after voting.",
+      "d": "Someone amended the rule and avoided communication.",
       "A": "The amended rule was not communicated after voting.",
       "B": "The rule was communicated after amendment, not before.",
       "C": "The council wasn't informed that the rule had been amended after voting.",
@@ -26,7 +30,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Complex Sentences",
       "conceptTested": "Conversion of passive voice to active voice while preserving the exact meaning, tense, and introducing an appropriate subject when the agent is implied."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The fact that the rule had been amended after the voting was not communicated to the council.",
+    "answer": "c"
   },
   {
     "testName": "CGL 25/09/2025 Shift-1 (English)",
@@ -42,6 +48,10 @@
     "avgTime": "00:42",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: It had been made clear by the committee that the rule would not be altered.",
     "options": {
+      "a": "The committee made it clear that the rule would not be altered.",
+      "b": "The rule was made clear not to be altered by the committee.",
+      "c": "The rule alteration was clarified by the committee.",
+      "d": "The committee had altered the rule as made clear.",
       "A": "The committee made it clear that the rule would not be altered.",
       "B": "The rule was made clear not to be altered by the committee.",
       "C": "The rule alteration was clarified by the committee.",
@@ -55,7 +65,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Basic Sentences",
       "conceptTested": "Conversion of passive voice to active voice by identifying the doer of the action and making it the subject of the sentence."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: It had been made clear by the committee that the rule would not be altered.",
+    "answer": "a"
   },
   {
     "testName": "CGL 25/09/2025 Shift-2 (English)",
@@ -71,6 +83,10 @@
     "avgTime": "00:41",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The investigation was believed to have been compromised by internal leaks.",
     "options": {
+      "a": "The investigation compromised internal leaks, as believed.",
+      "b": "It was believed that internal leaks had compromised the investigation.",
+      "c": "Someone believed the investigation was compromising leaks.",
+      "d": "Internal leaks are believed to compromise the investigation.",
       "A": "The investigation compromised internal leaks, as believed.",
       "B": "It was believed that internal leaks had compromised the investigation.",
       "C": "Someone believed the investigation was compromising leaks.",
@@ -84,7 +100,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Advanced Sentences",
       "conceptTested": "Conversion of passive voice containing a reporting verb construction to an active voice structure by introducing a logical subject like 'It'."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The investigation was believed to have been compromised by internal leaks.",
+    "answer": "b"
   },
   {
     "testName": "CGL 26/09/2025 Shift-1 (English)",
@@ -100,6 +118,10 @@
     "avgTime": "00:50",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The candidates were found to have been submitting forged documents during verification.",
     "options": {
+      "a": "The verification process found the candidates had submitted forged documents.",
+      "b": "It was found that forged documents had been submitted by candidates.",
+      "c": "The candidates were found submitting forgeries, as verified.",
+      "d": "Officials found that the candidates had been submitting forged documents.",
       "A": "The verification process found the candidates had submitted forged documents.",
       "B": "It was found that forged documents had been submitted by candidates.",
       "C": "The candidates were found submitting forgeries, as verified.",
@@ -113,7 +135,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Implied Subject",
       "conceptTested": "Conversion of passive voice to active voice where an implied or unstated agent must be substituted with a logical subject like 'Officials'."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The candidates were found to have been submitting forged documents during verification.",
+    "answer": "d"
   },
   {
     "testName": "CGL 26/09/2025 Shift-2 (English)",
@@ -129,6 +153,10 @@
     "avgTime": "00:42",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The suggestion that the vote had been manipulated was vehemently denied.",
     "options": {
+      "a": "The vote denied the manipulation of the suggestion.",
+      "b": "Someone vehemently denied the suggestion that the vote had been manipulated.",
+      "c": "It was denied that the vote had been manipulated.",
+      "d": "It was denied that someone manipulated the vote suggestion.",
       "A": "The vote denied the manipulation of the suggestion.",
       "B": "Someone vehemently denied the suggestion that the vote had been manipulated.",
       "C": "It was denied that the vote had been manipulated.",
@@ -142,7 +170,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active Conversion - Implied Agent",
       "conceptTested": "Conversion of passive voice to active voice by supplying an indefinite pronoun like 'Someone' as the subject when the original agent is missing."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The suggestion that the vote had been manipulated was vehemently denied.",
+    "answer": "b"
   },
   {
     "testName": "CGL 26/09/2025 Shift-3 (English)",
@@ -158,6 +188,10 @@
     "avgTime": "00:38",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure.\n\nThe machinery was known to have been operated manually during the testing phase.",
     "options": {
+      "a": "Manual operators were known to test the machinery.",
+      "b": "Someone was known to operate the machinery manually during testing.",
+      "c": "It was known that the machinery had been manually tested.",
+      "d": "It was known that someone had manually operated the machinery during the testing phase.",
       "A": "Manual operators were known to test the machinery.",
       "B": "Someone was known to operate the machinery manually during testing.",
       "C": "It was known that the machinery had been manually tested.",
@@ -171,7 +205,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active - Complex Sentences",
       "conceptTested": "Conversion of passive voice with an impersonal subject (It was known that...) into an active structure."
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure.\n\nThe machinery was known to have been operated manually during the testing phase.",
+    "answer": "d"
   },
   {
     "testName": "N/A (English)",
@@ -187,6 +223,10 @@
     "avgTime": "00:25",
     "questionText": "Select the correct active form of the given sentence.\n\nThe massive exterior wall of the old mansion was being painted by the skilled laborers when it suddenly started raining heavily.",
     "options": {
+      "a": "The skilled laborers had been painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
+      "b": "The skilled laborers are painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
+      "c": "The skilled laborers were painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
+      "d": "The skilled laborers painted the massive exterior wall of the old mansion when it suddenly started raining heavily.",
       "A": "The skilled laborers had been painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
       "B": "The skilled laborers are painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
       "C": "The skilled laborers were painting the massive exterior wall of the old mansion when it suddenly started raining heavily.",
@@ -200,7 +240,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive to Active - Continuous Tense",
       "conceptTested": "Conversion of past continuous passive ('was being painted') to past continuous active ('were painting')."
-    }
+    },
+    "question": "Select the correct active form of the given sentence.\n\nThe massive exterior wall of the old mansion was being painted by the skilled laborers when it suddenly started raining heavily.",
+    "answer": "c"
   },
   {
     "testName": "N/A (English)",
@@ -216,6 +258,10 @@
     "avgTime": "00:31",
     "questionText": "Select the correct passive form of the given sentence.\n\nThe burglar destroyed several items in the room. Even the carpet has been torn.",
     "options": {
+      "a": "The burglar, being destroyed several items in the room, also carpet has torn.",
+      "b": "Several items in the room were destroyed by the burglar. Even the carpet has been torn.",
+      "c": "Including the carpet, several items in the room have been torn by the burglar.",
+      "d": "Several items destroyed in the room by the burglar. Even the carpet he has torn.",
       "A": "The burglar, being destroyed several items in the room, also carpet has torn.",
       "B": "Several items in the room were destroyed by the burglar. Even the carpet has been torn.",
       "C": "Including the carpet, several items in the room have been torn by the burglar.",
@@ -229,7 +275,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active to Passive - Mixed Tenses",
       "conceptTested": "Simultaneous conversion of simple past active to passive while keeping existing passive clauses intact."
-    }
+    },
+    "question": "Select the correct passive form of the given sentence.\n\nThe burglar destroyed several items in the room. Even the carpet has been torn.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 12/11/2025 Shift-2 (English)",
@@ -245,6 +293,10 @@
     "avgTime": "00:31",
     "questionText": "Change the following sentence into the Active form.\n\nLet the documents be submitted to the head of the department by the end of the week.",
     "options": {
+      "a": "You should submit the documents to the head of the department by the end of the week.",
+      "b": "Submit the documents to the head of the department by the end of the week.",
+      "c": "The documents will be submitted to the head of the department by the end of the week.",
+      "d": "Let the head of the department submit the documents by the end of the week.",
       "A": "You should submit the documents to the head of the department by the end of the week.",
       "B": "Submit the documents to the head of the department by the end of the week.",
       "C": "The documents will be submitted to the head of the department by the end of the week.",
@@ -258,7 +310,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Imperative Sentences",
       "conceptTested": "Conversion of passive imperative sentences starting with 'Let' into active base-verb commands."
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nLet the documents be submitted to the head of the department by the end of the week.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 12/11/2025 Shift-2 (English)",
@@ -274,6 +328,10 @@
     "avgTime": "00:18",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nPeople eat rice in many countries.",
     "options": {
+      "a": "Rice was eaten by people in many countries.",
+      "b": "Rice was eaten in many countries.",
+      "c": "Rice is eaten in many countries.",
+      "d": "Rice has been eaten by people in many countries.",
       "A": "Rice was eaten by people in many countries.",
       "B": "Rice was eaten in many countries.",
       "C": "Rice is eaten in many countries.",
@@ -287,7 +345,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active to Passive - Simple Present",
       "conceptTested": "Conversion of simple present active voice to passive voice with omission of general agents."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nPeople eat rice in many countries.",
+    "answer": "c"
   },
   {
     "testName": "CHSL 13/11/2025 Shift-1 (English)",
@@ -303,6 +363,10 @@
     "avgTime": "00:17",
     "questionText": "Change the following sentence into the Active form: Let the documents be submitted to the head of the department by the end of the week.",
     "options": {
+      "a": "You should submit the documents to the head of the department by the end of the week.",
+      "b": "Submit the documents to the head of the department by the end of the week.",
+      "c": "The documents will be submitted to the head of the department by the end of the week.",
+      "d": "Let the head of the department submit the documents by the end of the week.",
       "A": "You should submit the documents to the head of the department by the end of the week.",
       "B": "Submit the documents to the head of the department by the end of the week.",
       "C": "The documents will be submitted to the head of the department by the end of the week.",
@@ -316,6 +380,8 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Imperative Sentences",
       "conceptTested": "Active to Passive conversion for imperative sentences beginning with 'Let' involves replacing 'Let' with direct imperative verbs in active form."
-    }
+    },
+    "question": "Change the following sentence into the Active form: Let the documents be submitted to the head of the department by the end of the week.",
+    "answer": "b"
   }
 ]

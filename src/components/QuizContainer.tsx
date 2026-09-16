@@ -7,7 +7,9 @@ import {
   Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb, Trash2, Sparkles
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
-import { cleanSolutionText } from '../utils/cleanSolution';
+import { cleanSolutionText, extractSolutionLanguage } from '../utils/cleanSolution';
+import { normalizeAnswerKey } from '../utils/mathSanitizer';
+import { getLanguageText } from '../utils/formatQuestionText';
 import { FormattedText } from './FormattedText';
 
 interface QuizContainerProps {
@@ -478,12 +480,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   const getCorrectAnswer = (q: Question) => {
-    const raw = (q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option || '')?.toString().toLowerCase().trim();
-    if (raw === '1' || raw === 'opt1' || raw === 'option 1' || raw === 'option a') return 'a';
-    if (raw === '2' || raw === 'opt2' || raw === 'option 2' || raw === 'option b') return 'b';
-    if (raw === '3' || raw === 'opt3' || raw === 'option 3' || raw === 'option c') return 'c';
-    if (raw === '4' || raw === 'opt4' || raw === 'option 4' || raw === 'option d') return 'd';
-    return raw;
+    return normalizeAnswerKey(q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option);
   };
 
   const isQuestionCorrect = (idx: number, answersMap: Record<number, string> = answers) => {
@@ -711,37 +708,21 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   const getFormattedSolution = () => {
     if (!currentQuestion?.solution) return '';
-    const cleaned = cleanSolutionText(currentQuestion.solution);
-    if (language === 'Hindi') {
-      const parts = cleaned.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
-      if (parts.length > 1) {
-        return parts[1].trim();
-      }
-    }
-    return cleaned;
+    return extractSolutionLanguage(currentQuestion.solution, language);
   };
 
   // Question numbering within section (e.g. Question No. 2)
   const questionNumberInSection = currentIdx - activeSection.startIndex + 1;
 
-  // Extract bilingual text if available
+  // Extract bilingual text safely without splitting math
   const getQuestionText = () => {
     if (!currentQuestion?.question) return '';
-    const text = currentQuestion.question;
-    const parts = text.split(/\s+\/\s+/);
-    if (language === 'Hindi' && parts.length > 1) {
-      return parts[1].trim();
-    }
-    return parts[0].trim();
+    return getLanguageText(currentQuestion.question, language);
   };
 
   const getOptionText = (rawOptionText: string) => {
     if (!rawOptionText) return '';
-    const parts = rawOptionText.split(/\s+\/\s+/);
-    if (language === 'Hindi' && parts.length > 1) {
-      return parts[1].trim();
-    }
-    return parts[0].trim();
+    return getLanguageText(rawOptionText, language);
   };
 
   const optionKeys: ('a' | 'b' | 'c' | 'd')[] = ['a', 'b', 'c', 'd'];
@@ -1194,7 +1175,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 {mode === 'mock' && (
                   <div className="border-t border-gray-200 divide-y divide-gray-200">
                     {currentQuestion && optionKeys.map((k) => {
-                      const rawOpt = currentQuestion.options[k];
+                      const rawOpt = currentQuestion.options?.[k] || (currentQuestion.options as any)?.[k.toUpperCase()];
                       if (!rawOpt) return null;
                       const isSelected = answers[currentIdx] === k;
 
@@ -1230,7 +1211,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               {mode === 'practice' && (
                 <div className="space-y-2.5 mb-5">
                   {currentQuestion && optionKeys.map((k) => {
-                    const rawOpt = currentQuestion.options[k];
+                    const rawOpt = currentQuestion.options?.[k] || (currentQuestion.options as any)?.[k.toUpperCase()];
                     if (!rawOpt) return null;
                     const isSelected = answers[currentIdx] === k;
                     const isAttempted = answers[currentIdx] !== undefined;

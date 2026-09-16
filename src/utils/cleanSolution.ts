@@ -1,9 +1,13 @@
+import { reconstructScrapedMath } from './mathSanitizer';
+
 /**
  * Utility to clean solutions:
  * - Replaces escaped literal '\\n' with actual newlines
  * - Removes Windows carriage returns
+ * - Reconstructs scraped vertical MathML and broken math columns
  * - Eliminates excessive and multiple blank lines
  * - Groups continuous calculation steps, given data, and equations cleanly
+ * - Preserves both English and Hindi sections dynamically
  */
 export function cleanSolutionText(sol: string = ''): string {
   if (!sol) return '';
@@ -26,13 +30,12 @@ export function cleanSolutionText(sol: string = ''): string {
   });
 
   // 3. Replace escaped literal '\n' and carriage returns
-  s = s.replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\u00a0/g, ' ');
+  s = s.replace(/\\r\\n/g, '\n').replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\u00a0/g, ' ');
 
-  // 4. Remove language header tags if present
-  const parts = s.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
-  s = parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
+  // 4. Reconstruct vertical scraped MathML before line collapsing
+  s = reconstructScrapedMath(s);
 
-  // 3. Trim whitespace on each line
+  // 5. Trim whitespace on each line
   const lines = s.split('\n').map(l => l.trim());
 
   // 4. Collapse consecutive empty lines (no more than 1 blank line anywhere)
@@ -99,3 +102,31 @@ export function cleanSolutionText(sol: string = ''): string {
 
   return finalResult;
 }
+
+/**
+ * Extracts language-specific solution from solution text.
+ * Respects '📖 हिंदी स्पष्टीकरण :' and '📖 English Explanation :' boundaries.
+ */
+export function extractSolutionLanguage(
+  sol: string = '',
+  language: 'English' | 'Hindi' | 'Bilingual' | string = 'English'
+): string {
+  if (!sol) return '';
+  const cleaned = cleanSolutionText(sol);
+  if (language === 'Bilingual') return cleaned;
+
+  const hindiSplitRegex = /📖\s*हिंदी\s*स्पष्टीकरण\s*:/i;
+  const hasHindiSplit = hindiSplitRegex.test(cleaned);
+
+  if (hasHindiSplit) {
+    const parts = cleaned.split(hindiSplitRegex);
+    if (language === 'Hindi') {
+      return (parts[1] || parts[0]).trim();
+    }
+    // English
+    return parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
+  }
+
+  return cleaned;
+}
+

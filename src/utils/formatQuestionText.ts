@@ -9,11 +9,15 @@
  * 6. Tokenizing LaTeX math for KaTeX rendering
  */
 
+import { reconstructScrapedMath } from './mathSanitizer';
+
 export interface MathToken {
   type: 'text' | 'math';
   value: string;
   display?: boolean;
 }
+
+const DEVANAGARI_REGEX = /[\u0900-\u097F]/;
 
 /**
  * Normalizes and cleans question/option text while strictly preserving LaTeX math blocks.
@@ -46,17 +50,20 @@ export function cleanQuestionText(text: string = ''): string {
   // 4. Normalize non-breaking spaces
   s = s.replace(/\u00a0/g, ' ');
 
-  // 5. Format Para Jumbles & Sentence sequences
+  // 5. Reconstruct vertical scraped MathML / Testbook equations
+  s = reconstructScrapedMath(s);
+
+  // 6. Format Para Jumbles & Sentence sequences
   s = s.replace(/([^\n])\s*(S[1-6]\s*:)/g, '$1\n$2');
   s = s.replace(/([^\n])\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)/g, '$1\n$2');
 
   // Statements & Conclusions in Reasoning questions
   s = s.replace(/([^\n])\s*(Statement\s+[I|V|X|\d]+:?|Conclusion\s+[I|V|X|\d]+:?)/gi, '$1\n$2');
 
-  // 6. If question ends with ? followed by an equation or number without newline
+  // 7. If question ends with ? followed by an equation or number without newline
   s = s.replace(/\?([ \t]*)(?=[0-9A-Za-z\+\-\*\/÷×=]+\s*[\+\-\*\/÷×=]\s*[0-9A-Za-z])/g, '?\n');
 
-  // 7. Clean up trailing spaces on lines & collapse multiple empty lines
+  // 8. Clean up trailing spaces on lines & collapse multiple empty lines
   s = s
     .split('\n')
     .map(line => line.trimEnd())
@@ -64,7 +71,7 @@ export function cleanQuestionText(text: string = ''): string {
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 
-  // 8. Restore preserved math blocks
+  // 9. Restore preserved math blocks
   mathPlaceholders.forEach((math, idx) => {
     s = s.replace(`___MATH_BLOCK_${idx}___`, math);
   });
@@ -74,6 +81,9 @@ export function cleanQuestionText(text: string = ''): string {
 
 /**
  * Extracts language-specific text from bilingual strings ("English / Hindi")
+ * STRICT RULE: A slash '/' is ONLY treated as a bilingual delimiter if at least
+ * one side contains Devanagari script characters ([\u0900-\u097F]).
+ * Mathematical fractions or divisions (e.g. 16 / 25, km / h) are never split!
  */
 export function getLanguageText(
   rawText: string = '',
@@ -83,16 +93,40 @@ export function getLanguageText(
   const cleaned = cleanQuestionText(rawText);
   if (language === 'Bilingual') return cleaned;
 
-  // Split lines to check for line-by-line or whole-text bilingual delimiter
+  // Helper to safely split on bilingual delimiter only if Devanagari is present
+  const splitBilingual = (str: string): { english: string; hindi: string } | null => {
+    if (!/\s+\/\s+/.test(str)) return null;
+    const parts = str.split(/\s+\/\s+/);
+    if (parts.length < 2) return null;
+
+    // Strict Rule: At least one part MUST contain Devanagari Hindi characters
+    const hasDevanagari = parts.some(p => DEVANAGARI_REGEX.test(p));
+    if (!hasDevanagari) {
+      return null; // Pure math division / unit / fraction, do not split!
+    }
+
+    // Determine English vs Hindi part
+    if (DEVANAGARI_REGEX.test(parts[1]) && !DEVANAGARI_REGEX.test(parts[0])) {
+      return { english: parts[0].trim(), hindi: parts[1].trim() };
+    }
+    if (DEVANAGARI_REGEX.test(parts[0]) && !DEVANAGARI_REGEX.test(parts[1])) {
+      return { english: parts[1].trim(), hindi: parts[0].trim() };
+    }
+
+    return { english: parts[0].trim(), hindi: parts[1].trim() };
+  };
+
+  // Check line-by-line bilingual delimiters
   const lines = cleaned.split('\n');
-  const hasLineDelimiters = lines.some(l => /\s+\/\s+/.test(l));
+  const hasLineDelimiters = lines.some(l => splitBilingual(l) !== null);
 
   if (hasLineDelimiters) {
     return lines
       .map(line => {
-        const parts = line.split(/\s+\/\s+/);
-        if (language === 'English') return parts[0]?.trim() || line;
-        if (language === 'Hindi') return parts[1]?.trim() || parts[0]?.trim() || line;
+        const bi = splitBilingual(line);
+        if (!bi) return line;
+        if (language === 'English') return bi.english || line;
+        if (language === 'Hindi') return bi.hindi || bi.english || line;
         return line;
       })
       .join('\n')
@@ -100,10 +134,10 @@ export function getLanguageText(
   }
 
   // Check whole-string delimiter
-  const parts = cleaned.split(/\s+\/\s+/);
-  if (parts.length > 1) {
-    if (language === 'English') return parts[0].trim();
-    if (language === 'Hindi') return parts[1].trim() || parts[0].trim();
+  const wholeBi = splitBilingual(cleaned);
+  if (wholeBi) {
+    if (language === 'English') return wholeBi.english;
+    if (language === 'Hindi') return wholeBi.hindi || wholeBi.english;
   }
 
   return cleaned;

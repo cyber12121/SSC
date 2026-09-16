@@ -13,6 +13,10 @@
     "avgTime": "00:35",
     "questionText": "If 3 + 4 = 19 and 2 + 5 = 17, what is 1 + 6 = ?",
     "options": {
+      "a": "15",
+      "b": "13",
+      "c": "12",
+      "d": "11",
       "A": "15",
       "B": "13",
       "C": "12",
@@ -26,7 +30,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Coded Mathematical Operations",
       "conceptTested": "Decoding non-standard arithmetic symbols based on given patterned equations using basic operations."
-    }
+    },
+    "question": "If 3 + 4 = 19 and 2 + 5 = 17, what is 1 + 6 = ?",
+    "answer": "b"
   },
   {
     "testName": "CGL 16/09/2025 Shift-1 (Reasoning)",
@@ -42,12 +48,16 @@
     "avgTime": "00:23",
     "questionText": "If 5 * 4 = 41 and 6 * 3 = 45, what is 7 * 2?",
     "options": {
+      "a": "48",
+      "b": "51",
+      "c": "53",
+      "d": "55",
       "A": "48",
       "B": "51",
       "C": "53",
       "D": "55"
     },
-    "solution": "Rule: a * b = a² + b².\n5*4 = 25+16 = 41 ✓; 6*3 = 36+9 = 45 ✓.\n7*2 = 49 + 4 = 53.\nAns: (3) 53",
+    "solution": "Rule: a * b = a2 + b2.\n5*4 = 25+16 = 41 ✓; 6*3 = 36+9 = 45 ✓.\n7*2 = 49 + 4 = 53.\nAns: (3) 53",
     "topic": "Mathematical Operations",
     "subtopic": "Coded Mathematical Operations",
     "conceptTested": "Decoding arithmetic operators using squares and additions.",
@@ -55,7 +65,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Coded Mathematical Operations",
       "conceptTested": "Decoding arithmetic operators using squares and additions."
-    }
+    },
+    "question": "If 5 * 4 = 41 and 6 * 3 = 45, what is 7 * 2?",
+    "answer": "c"
   },
   {
     "testName": "CGL 17/09/2025 Shift-1 (Reasoning)",
@@ -71,6 +83,10 @@
     "avgTime": "00:33",
     "questionText": "If 6 * 3 = 54 and 8 * 2 = 48, what is 5 * 4?",
     "options": {
+      "a": "40",
+      "b": "44",
+      "c": "45",
+      "d": "60",
       "A": "40",
       "B": "44",
       "C": "45",
@@ -84,7 +100,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Coded Mathematical Operations",
       "conceptTested": "Decoding operations involving multiplication by a constant multiplier."
-    }
+    },
+    "question": "If 6 * 3 = 54 and 8 * 2 = 48, what is 5 * 4?",
+    "answer": "d"
   },
   {
     "testName": "CGL 17/09/2025 Shift-3 (Reasoning)",
@@ -100,12 +118,16 @@
     "avgTime": "00:12",
     "questionText": "If 4 & 4 = 32 and 5 & 5 = 50, what 6 & 6 is?",
     "options": {
+      "a": "72",
+      "b": "64",
+      "c": "84",
+      "d": "76",
       "A": "72",
       "B": "64",
       "C": "84",
       "D": "76"
     },
-    "solution": "Rule: A & A = 2A².\n4&4 = 2×16 = 32 ✓; 5&5 = 2×25 = 50 ✓.\n6&6 = 2 × 36 = 72.\nAns: (1) 72",
+    "solution": "Rule: A & A = 2A2.\n4&4 = 2×16 = 32 ✓; 5&5 = 2×25 = 50 ✓.\n6&6 = 2 × 36 = 72.\nAns: (1) 72",
     "topic": "Mathematical Operations",
     "subtopic": "Coded Mathematical Operations",
     "conceptTested": "Decoding custom symbols based on algebraic square patterns.",
@@ -113,7 +135,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Coded Mathematical Operations",
       "conceptTested": "Decoding custom symbols based on algebraic square patterns."
-    }
+    },
+    "question": "If 4 & 4 = 32 and 5 & 5 = 50, what 6 & 6 is?",
+    "answer": "a"
   },
   {
     "testName": "CGL 17/09/2025 Shift-3 (Reasoning)",
@@ -129,12 +153,16 @@
     "avgTime": "02:04",
     "questionText": "If 8 # 2 = 65 and 7 # 3 = 55, then 6 # 5 = ?",
     "options": {
+      "a": "35",
+      "b": "44",
+      "c": "58",
+      "d": "69",
       "A": "35",
       "B": "44",
       "C": "58",
       "D": "69"
     },
-    "solution": "Rule: A # B = A² + B² − 3.\n8#2 = 64+4−3 = 65 ✓; 7#3 = 49+9−3 = 55 ✓.\n6#5 = 36 + 25 − 3 = 58.\nAns: (3) 58",
+    "solution": "Rule: A # B = A2 + B2 - 3.\n8#2 = 64+4-3 = 65 ✓; 7#3 = 49+9-3 = 55 ✓.\n6#5 = 36 + 25 - 3 = 58.\nAns: (3) 58",
     "topic": "Mathematical Operations",
     "subtopic": "Coded Mathematical Operations",
     "conceptTested": "Decoding operations involving sum of squares minus a constant offset.",
@@ -142,6 +170,8 @@
       "topic": "Mathematical Operations",
       "subtopic": "Coded Mathematical Operations",
       "conceptTested": "Decoding operations involving sum of squares minus a constant offset."
-    }
+    },
+    "question": "If 8 # 2 = 65 and 7 # 3 = 55, then 6 # 5 = ?",
+    "answer": "c"
   }
 ]

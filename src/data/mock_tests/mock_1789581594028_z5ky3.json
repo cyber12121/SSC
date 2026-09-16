@@ -13,6 +13,10 @@
     "avgTime": "00:13",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nYou must finish your homework.",
     "options": {
+      "a": "Your homework must be finished by you.",
+      "b": "Your homework must being finished by you.",
+      "c": "Your homework must have been finished by you.",
+      "d": "Your homework is must be finished by you.",
       "A": "Your homework must be finished by you.",
       "B": "Your homework must being finished by you.",
       "C": "Your homework must have been finished by you.",
@@ -26,7 +30,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Passive voice conversion of modal verbs (modal + be + past participle)"
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nYou must finish your homework.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 18/11/2025 Shift-1 (English)",
@@ -42,6 +48,10 @@
     "avgTime": "00:20",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThe new intern had forgotten to lock the laboratory door before leaving.",
     "options": {
+      "a": "The laboratory door was forgotten to be locked by the new intern before leaving.",
+      "b": "The laboratory door had been forgotten to be locked by the new intern before leaving.",
+      "c": "The laboratory door has been forgotten to be locked by the new intern before leaving.",
+      "d": "The laboratory door had forgotten to lock by the new intern before leaving.",
       "A": "The laboratory door was forgotten to be locked by the new intern before leaving.",
       "B": "The laboratory door had been forgotten to be locked by the new intern before leaving.",
       "C": "The laboratory door has been forgotten to be locked by the new intern before leaving.",
@@ -55,7 +65,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Passive voice conversion of past perfect tense (had + V3 -> had + been + V3)"
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThe new intern had forgotten to lock the laboratory door before leaving.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 18/11/2025 Shift-2 (English)",
@@ -71,6 +83,10 @@
     "avgTime": "00:12",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThey were discussing the new plan.",
     "options": {
+      "a": "The new plan has been discussed by them.",
+      "b": "The new plan was discussed by them.",
+      "c": "The new plan was being discussed by them.",
+      "d": "The new plan is being discussed by them.",
       "A": "The new plan has been discussed by them.",
       "B": "The new plan was discussed by them.",
       "C": "The new plan was being discussed by them.",
@@ -84,7 +100,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Passive voice conversion of past continuous tense (was/were + V-ing -> was/were + being + V3)"
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThey were discussing the new plan.",
+    "answer": "c"
   },
   {
     "testName": "CHSL 18/11/2025 Shift-3 (English)",
@@ -100,6 +118,10 @@
     "avgTime": "00:40",
     "questionText": "Change the following sentence into the Active form.\n\nThe renowned professor had been given a standing ovation by the students after her powerful lecture.",
     "options": {
+      "a": "The students had been giving the renowned professor a standing ovation after her powerful lecture.",
+      "b": "The students gave the renowned professor a standing ovation after her powerful lecture.",
+      "c": "After her powerful lecture, the students had given the renowned professor a standing ovation.",
+      "d": "After her powerful lecture, a standing ovation had been given to the renowned professor by the students.",
       "A": "The students had been giving the renowned professor a standing ovation after her powerful lecture.",
       "B": "The students gave the renowned professor a standing ovation after her powerful lecture.",
       "C": "After her powerful lecture, the students had given the renowned professor a standing ovation.",
@@ -113,7 +135,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Active voice conversion from past perfect passive (had been + V3 -> had + V3)"
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nThe renowned professor had been given a standing ovation by the students after her powerful lecture.",
+    "answer": "c"
   },
   {
     "testName": "CHSL 18/11/2025 Shift-3 (English)",
@@ -129,6 +153,10 @@
     "avgTime": "00:14",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThey will have built the bridge by next year.",
     "options": {
+      "a": "The bridge will have been built by them by next year.",
+      "b": "The bridge will be built by them by next year.",
+      "c": "The bridge would have been built by them by next year.",
+      "d": "The bridge has been built by them by next year.",
       "A": "The bridge will have been built by them by next year.",
       "B": "The bridge will be built by them by next year.",
       "C": "The bridge would have been built by them by next year.",
@@ -142,7 +170,9 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Passive voice conversion of future perfect tense (will have + V3 -> will have been + V3)"
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThey will have built the bridge by next year.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 18/11/2025 Shift-3 (English)",
@@ -158,6 +188,10 @@
     "avgTime": "00:16",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThe children are making colorful decorations for the upcoming school festival.",
     "options": {
+      "a": "Colorful decorations are made by the children for the upcoming school festival.",
+      "b": "Colorful decorations are being made by the children for the upcoming school festival.",
+      "c": "Colorful decorations were being made by the children for the upcoming school festival.",
+      "d": "Colorful decorations have been made by the children for the upcoming school festival.",
       "A": "Colorful decorations are made by the children for the upcoming school festival.",
       "B": "Colorful decorations are being made by the children for the upcoming school festival.",
       "C": "Colorful decorations were being made by the children for the upcoming school festival.",
@@ -171,7 +205,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active/Passive - Present Continuous Tense",
       "conceptTested": "Present continuous active (is/am/are + V1-ing) converts to present continuous passive (is/am/are + being + V3)."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThe children are making colorful decorations for the upcoming school festival.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 19/11/2025 Shift-1 (English)",
@@ -187,6 +223,10 @@
     "avgTime": "00:44",
     "questionText": "Change the following sentence into the Active form.\n\nThe painting could not be exhibited without being restored first.",
     "options": {
+      "a": "They could not exhibit the painting without restoring it first.",
+      "b": "The painting could not have been exhibited without being restored.",
+      "c": "The painting could not exhibit itself without being restored first.",
+      "d": "Without being restored first, they could not exhibit the painting.",
       "A": "They could not exhibit the painting without restoring it first.",
       "B": "The painting could not have been exhibited without being restored.",
       "C": "The painting could not exhibit itself without being restored first.",
@@ -200,7 +240,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active/Passive - Conversion from Passive to Active",
       "conceptTested": "When converting from passive to the active voice, the implied subject is introduced and the passive verb form is changed to the active form."
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nThe painting could not be exhibited without being restored first.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 19/11/2025 Shift-1 (English)",
@@ -216,6 +258,10 @@
     "avgTime": "00:32",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThe board members had to listen to the presentation with rapt attention.",
     "options": {
+      "a": "The presentation had to be listened to with rapt attention by the board members.",
+      "b": "The presentation had been listened to with rapt attention by the board members.",
+      "c": "The presentation was listened to with rapt attention by the board members.",
+      "d": "The presentation had to have been listened to with rapt attention by the board members.",
       "A": "The presentation had to be listened to with rapt attention by the board members.",
       "B": "The presentation had been listened to with rapt attention by the board members.",
       "C": "The presentation was listened to with rapt attention by the board members.",
@@ -229,7 +275,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active/Passive - Modals",
       "conceptTested": "With modal structures such as 'had to + V1', the passive voice is formed using 'had to be + past participle'."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThe board members had to listen to the presentation with rapt attention.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 19/11/2025 Shift-1 (English)",
@@ -245,6 +293,10 @@
     "avgTime": "00:26",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nPeople say that she will make a great leader someday.",
     "options": {
+      "a": "She is said to make a great leader someday.",
+      "b": "It is said that she will be made a great leader someday.",
+      "c": "It is said that she will make a great leader someday.",
+      "d": "She is said that she is a prodigy.",
       "A": "She is said to make a great leader someday.",
       "B": "It is said that she will be made a great leader someday.",
       "C": "It is said that she will make a great leader someday.",
@@ -258,7 +310,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active/Passive - Reporting Verbs",
       "conceptTested": "With a reporting verb structure such as 'People say that...', the passive voice can be formed using 'It is said that...'."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nPeople say that she will make a great leader someday.",
+    "answer": "c"
   },
   {
     "testName": "CHSL 19/11/2025 Shift-2 (English)",
@@ -274,6 +328,10 @@
     "avgTime": "00:39",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nHe claimed to have seen a rare species of bird during his expedition to the Amazon rainforest.",
     "options": {
+      "a": "It was claimed by him that he had seen a rare species of bird during his expedition to the Amazon rainforest.",
+      "b": "A rare species of bird was claimed to have been seen by him during his expedition to the Amazon rainforest.",
+      "c": "A rare species of bird was seen by him during his expedition, it was claimed.",
+      "d": "He claimed that a rare species of bird was seen by him during his expedition.",
       "A": "It was claimed by him that he had seen a rare species of bird during his expedition to the Amazon rainforest.",
       "B": "A rare species of bird was claimed to have been seen by him during his expedition to the Amazon rainforest.",
       "C": "A rare species of bird was seen by him during his expedition, it was claimed.",
@@ -287,7 +345,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active/Passive - Perfect Infinitives",
       "conceptTested": "With a reporting verb in the perfect infinitive tense ('claimed to have seen'), the passive voice uses 'was claimed to have been seen'."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nHe claimed to have seen a rare species of bird during his expedition to the Amazon rainforest.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 19/11/2025 Shift-3 (English)",
@@ -303,6 +363,10 @@
     "avgTime": "00:29",
     "questionText": "Change the following sentence into the Active form.\n\nThe decision will have been announced before the meeting concludes.",
     "options": {
+      "a": "Someone will announce the decision before the meeting concludes.",
+      "b": "They will have announced the decision before the meeting concludes.",
+      "c": "The decision will be announced before the meeting concludes.",
+      "d": "The meeting will have announced the decision.",
       "A": "Someone will announce the decision before the meeting concludes.",
       "B": "They will have announced the decision before the meeting concludes.",
       "C": "The decision will be announced before the meeting concludes.",
@@ -316,7 +380,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Future Perfect Tense",
       "conceptTested": "Conversion of future perfect passive ('will have been + V3') to active voice ('will have + V3') with an implied subject."
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nThe decision will have been announced before the meeting concludes.",
+    "answer": "b"
   },
   {
     "testName": "CHSL 19/11/2025 Shift-3 (English)",
@@ -332,6 +398,10 @@
     "avgTime": "00:41",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThe new CEO has promised to give all employees a substantial bonus at the end of the year.",
     "options": {
+      "a": "All employees have been promised a substantial bonus at the end of the year by the new CEO.",
+      "b": "A substantial bonus have been promised to all employees by the new CEO at the end of the year.",
+      "c": "All employees will be given a substantial bonus at the end of the year by the new CEO.",
+      "d": "A substantial bonus will be promised to all employees by the new CEO at the end of the year.",
       "A": "All employees have been promised a substantial bonus at the end of the year by the new CEO.",
       "B": "A substantial bonus have been promised to all employees by the new CEO at the end of the year.",
       "C": "All employees will be given a substantial bonus at the end of the year by the new CEO.",
@@ -345,7 +415,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Present Perfect Tense",
       "conceptTested": "Conversion of present perfect active ('has/have + V3') to present perfect passive ('has/have been + V3')."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThe new CEO has promised to give all employees a substantial bonus at the end of the year.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 20/11/2025 Shift-1 (English)",
@@ -361,6 +433,10 @@
     "avgTime": "00:22",
     "questionText": "Change the following sentence into the Active form.\n\nThe manuscript will have been translated by the time the expedition returns.",
     "options": {
+      "a": "They will have translated the manuscript by the time the expedition returns.",
+      "b": "The expedition will return by the time they translate the manuscript.",
+      "c": "Someone will translate the manuscript by the time the expedition returns.",
+      "d": "They have translated the manuscript by the time the expedition returns.",
       "A": "They will have translated the manuscript by the time the expedition returns.",
       "B": "The expedition will return by the time they translate the manuscript.",
       "C": "Someone will translate the manuscript by the time the expedition returns.",
@@ -374,7 +450,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Future Perfect Tense",
       "conceptTested": "Conversion of future perfect passive ('will have been + V3') to active voice ('will have + V3') with an implied subject."
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nThe manuscript will have been translated by the time the expedition returns.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 20/11/2025 Shift-1 (English)",
@@ -390,6 +468,10 @@
     "avgTime": "00:33",
     "questionText": "Change the following sentence into the Active form.\n\nThe ancient manuscript has to be handled with extreme care.",
     "options": {
+      "a": "Extreme care has to handle the ancient manuscript.",
+      "b": "The ancient manuscript is handled with extreme care.",
+      "c": "They have to handle the ancient manuscript with extreme care.",
+      "d": "They must handle the ancient manuscript with extreme care.",
       "A": "Extreme care has to handle the ancient manuscript.",
       "B": "The ancient manuscript is handled with extreme care.",
       "C": "They have to handle the ancient manuscript with extreme care.",
@@ -403,7 +485,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Modal Verbs",
       "conceptTested": "Conversion of modal phrase 'has to + V1' to its passive equivalent 'has to be + V3'."
-    }
+    },
+    "question": "Change the following sentence into the Active form.\n\nThe ancient manuscript has to be handled with extreme care.",
+    "answer": "c"
   },
   {
     "testName": "CHSL 20/11/2025 Shift-1 (English)",
@@ -419,6 +503,10 @@
     "avgTime": "00:39",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nWe are supposed to submit the final report to the department head by the end of the week.",
     "options": {
+      "a": "The final report is supposed to be submitted to the department head by the end of the week by us.",
+      "b": "The final report is to be submitted to the department head by the end of the week by us.",
+      "c": "The final report was supposed to be submitted to the department head by the end of the week.",
+      "d": "We were supposed to submit the final report to the department head by the end of the week.",
       "A": "The final report is supposed to be submitted to the department head by the end of the week by us.",
       "B": "The final report is to be submitted to the department head by the end of the week by us.",
       "C": "The final report was supposed to be submitted to the department head by the end of the week.",
@@ -432,7 +520,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Modal Verbs & Semi-Modals",
       "conceptTested": "Conversion of semi-modal phrase 'are supposed to + V1' to its passive equivalent 'is supposed to be + V3'."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nWe are supposed to submit the final report to the department head by the end of the week.",
+    "answer": "a"
   },
   {
     "testName": "CHSL 20/11/2025 Shift-2 (English)",
@@ -448,6 +538,10 @@
     "avgTime": "00:33",
     "questionText": "Choose the correct passive voice transformation of the sentence:\n\nThe CEO is expected to have brought about significant changes in the department by the end of the year.",
     "options": {
+      "a": "Significant changes are expected to have been brought about in the department by the new CEO by the end of the year.",
+      "b": "It is expected that significant changes will have been brought about by the new CEO by the end of the year.",
+      "c": "Significant changes will have been brought about in the department by the new CEO by the end of the year.",
+      "d": "The new CEO is expected that significant changes will be brought about by them.",
       "A": "Significant changes are expected to have been brought about in the department by the new CEO by the end of the year.",
       "B": "It is expected that significant changes will have been brought about by the new CEO by the end of the year.",
       "C": "Significant changes will have been brought about in the department by the new CEO by the end of the year.",
@@ -461,6 +555,8 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Passive Voice - Infinitives & Reporting Verbs",
       "conceptTested": "Conversion of sentences with reporting verbs and perfect infinitives from active to passive voice, shifting the object to the subject and changing 'to have V3' to 'to have been V3'."
-    }
+    },
+    "question": "Choose the correct passive voice transformation of the sentence:\n\nThe CEO is expected to have brought about significant changes in the department by the end of the year.",
+    "answer": "a"
   }
 ]

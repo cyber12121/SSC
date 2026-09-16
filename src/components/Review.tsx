@@ -30,8 +30,9 @@ import {
   Download,
   Edit3
 } from 'lucide-react';
-import { QuizResult, Question, RCATagType, RCAClassification } from '../types';
-import { cleanSolutionText } from '../utils/cleanSolution';
+import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
+import { cleanSolutionText, extractSolutionLanguage } from '../utils/cleanSolution';
+import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { FormattedText } from './FormattedText';
 import { cleanQuestionText, getLanguageText } from '../utils/formatQuestionText';
 
@@ -94,7 +95,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   onViewAnalytics,
   onDeleteQuestion
 }) => {
-  const items = result.questionDetails || [];
+  const [items, setItems] = useState<QuestionProgress[]>(() => result.questionDetails || []);
+
+  useEffect(() => {
+    setItems(result.questionDetails || []);
+  }, [result]);
+
   const [currentIdx, setCurrentIdx] = useState(0);
   const [activeSectionId, setActiveSectionId] = useState<string>('auto');
   const [reattemptMode, setReattemptMode] = useState(false);
@@ -559,6 +565,93 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       if (onDeleteQuestion) {
         await onDeleteQuestion(currentQ);
       }
+
+      const qTextClean = (currentQ.question || '').trim().toLowerCase();
+      const qId = currentQ.id;
+
+      // 1. Remove from local items state
+      const nextItems = items.filter((item, idx) => {
+        if (idx === currentIdx) return false;
+        const itText = (item.question?.question || '').trim().toLowerCase();
+        if (qTextClean && itText === qTextClean) return false;
+        if (qId && item.question?.id === qId) return false;
+        return true;
+      });
+
+      // 2. Also keep result.questionDetails in sync
+      if (result.questionDetails) {
+        result.questionDetails = nextItems;
+      }
+
+      setItems(nextItems);
+
+      // 3. Adjust currentIdx if it is now out of bounds
+      if (currentIdx >= nextItems.length) {
+        setCurrentIdx(Math.max(0, nextItems.length - 1));
+      }
+
+      // 4. Update rcaMap and shift higher indices down by 1
+      setRcaMap(prev => {
+        const next: Record<number, RCAClassification> = {};
+        Object.entries(prev).forEach(([kStr, val]) => {
+          const k = Number(kStr);
+          if (k < currentIdx) {
+            next[k] = val as RCAClassification;
+          } else if (k > currentIdx) {
+            next[k - 1] = val as RCAClassification;
+          }
+        });
+        return next;
+      });
+
+      // 5. Shift reattempt answers down by 1
+      setReattemptAnswers(prev => {
+        const next: Record<number, string> = {};
+        Object.entries(prev).forEach(([kStr, val]) => {
+          const k = Number(kStr);
+          if (k < currentIdx) {
+            next[k] = val as string;
+          } else if (k > currentIdx) {
+            next[k - 1] = val as string;
+          }
+        });
+        return next;
+      });
+
+      // 6. Purge from cgl_rca_global_store
+      try {
+        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        if (globalRaw) {
+          const globalStore = JSON.parse(globalRaw);
+          const questionIdentifier = qId || (result.id ? `${result.id}_${currentIdx + 1}` : `mock_${currentIdx + 1}`);
+          delete globalStore[questionIdentifier];
+          if (qTextClean) delete globalStore[qTextClean];
+          window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        }
+      } catch {}
+
+      // 7. If mock result, update cached mock questions in localStorage & server
+      if (result.id) {
+        try {
+          const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+          if (cachedRaw) {
+            const list = JSON.parse(cachedRaw);
+            if (Array.isArray(list)) {
+              const updatedList = list.filter((q: any) => {
+                const t = (q.question || q.questionText || '').trim().toLowerCase();
+                return t !== qTextClean && (!qId || q.id !== qId);
+              });
+              window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(updatedList));
+              fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(updatedList)
+              }).catch(() => {});
+            }
+          }
+        } catch {}
+      }
+
       setDeletedIndices(prev => new Set(prev).add(currentIdx));
       setShowDeleteModal(false);
       setDeleteToast('Question permanently deleted everywhere.');
@@ -771,7 +864,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     const item = items[idx];
     if (!item) return 'unattempted';
     if (reattemptMode && reattemptAnswers[idx]) {
-      return reattemptAnswers[idx] === item.question?.answer ? 'correct' : 'wrong';
+      const targetAns = normalizeAnswerKey(item.question?.answer || (item.question as any)?.correct_answer || (item.question as any)?.correctOption);
+      return normalizeAnswerKey(reattemptAnswers[idx]) === targetAns ? 'correct' : 'wrong';
     }
     const q = (item.question || {}) as any;
 
@@ -868,17 +962,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   // Format solution text
   const formatSolutionText = (sol: string = '') => {
     if (!sol) return '';
-    let text = sol;
-    if (language === 'English') {
-      return cleanSolutionText(text);
-    } else if (language === 'Hindi') {
-      const parts = text.split(/📖\s*हिंदी\s*स्पष्टीकरण\s*:/i);
-      if (parts.length > 1) {
-        text = parts[1].trim();
-      }
-      return cleanSolutionText(text);
-    }
-    return cleanSolutionText(text);
+    return extractSolutionLanguage(sol, language);
   };
 
   // Filter questions for the active section palette
@@ -1002,6 +1086,26 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   // Marks logic (+2 for correct/slow, -0.5 for incorrect, 0 for skipped)
   const currentMarks = (currentStatus === 'correct' || currentStatus === 'slow') ? 2 : (currentStatus === 'wrong' ? -0.5 : 0);
+
+  if (items.length === 0) {
+    return (
+      <div className="flex flex-col h-screen w-full bg-[#f4f7f9] items-center justify-center p-6 text-center">
+        <div className="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center mb-4 text-rose-600 shadow-sm">
+          <Trash2 className="w-8 h-8" />
+        </div>
+        <h2 className="text-xl font-bold text-slate-800 mb-2">No Questions Remaining</h2>
+        <p className="text-sm text-slate-600 max-w-md mb-6 leading-relaxed">
+          All questions in this test review have been deleted.
+        </p>
+        <button
+          onClick={onBack}
+          className="px-5 py-2.5 bg-[#0097a7] hover:bg-[#00838f] text-white text-sm font-semibold rounded-lg shadow transition cursor-pointer"
+        >
+          Go Back
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-screen w-full bg-[#f4f7f9] overflow-hidden select-none font-sans text-gray-800">
@@ -1264,13 +1368,23 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
                 {/* Options List */}
                 <div className="space-y-3.5 my-5">
-                  {(Object.entries(question.options) as [('a' | 'b' | 'c' | 'd'), string][]).map(([key, optText]) => {
-                    const isCorrectAnswer = question.answer === key;
-                    // Only use the direct QuestionProgress answer fields — do NOT use
-                    // current.question.userAnswer, which is stale mock-JSON data from a prior session.
+                  {(['a', 'b', 'c', 'd'] as const).map(normKey => {
+                    const optText = question.options?.[normKey] || (question.options as any)?.[normKey.toUpperCase()] || '';
+                    if (!optText) return null;
+
+                    const correctKey = normalizeAnswerKey(question.answer || (question as any).correct_answer || (question as any).correctOption);
+                    const isCorrectAnswer = correctKey === normKey;
+
+                    const userAnsKey = current.selectedAnswer
+                      ? normalizeAnswerKey(current.selectedAnswer)
+                      : (current as any).userAnswer
+                      ? normalizeAnswerKey((current as any).userAnswer)
+                      : null;
+                    const reattemptKey = reattemptAnswers[currentIdx] ? normalizeAnswerKey(reattemptAnswers[currentIdx]) : null;
+
                     const userSelected = reattemptMode
-                      ? reattemptAnswers[currentIdx] === key
-                      : (currentStatus !== 'unattempted' && (current.selectedAnswer === key || (current as any).userAnswer === key));
+                      ? reattemptKey === normKey
+                      : (currentStatus !== 'unattempted' && userAnsKey === normKey);
                     const isReattemptSelected = reattemptMode && reattemptAnswers[currentIdx] !== undefined;
 
                     // When reattempt is OFF: normal analysis view matching the screenshot!
@@ -1278,7 +1392,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       if (isCorrectAnswer) {
                         return (
                           <div 
-                            key={key}
+                            key={normKey}
                             className="bg-[#2e7d32] text-white rounded px-4 py-3.5 flex items-center justify-between shadow-sm transition-all"
                           >
                             <div className="flex items-center space-x-3">
@@ -1304,7 +1418,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       if (userSelected && !isCorrectAnswer) {
                         return (
                           <div 
-                            key={key}
+                            key={normKey}
                             className="bg-[#c62828] text-white rounded px-4 py-3.5 flex items-center justify-between shadow-sm transition-all"
                           >
                             <div className="flex items-center space-x-3">
@@ -1322,7 +1436,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
                       return (
                         <div 
-                          key={key}
+                          key={normKey}
                           className="px-4 py-3.5 text-[15px] text-gray-800 rounded hover:bg-gray-50 flex items-center transition-colors"
                         >
                           <span className="w-5 mr-3 shrink-0" />
@@ -1338,8 +1452,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     if (!isReattemptSelected) {
                       return (
                         <div 
-                          key={key}
-                          onClick={() => handleReattemptSelect(key)}
+                          key={normKey}
+                          onClick={() => handleReattemptSelect(normKey)}
                           className="px-4 py-3 text-[15px] text-gray-800 border border-gray-200 rounded hover:border-[#0097a7] hover:bg-cyan-50/50 cursor-pointer flex items-center transition-all group"
                         >
                           <span className="w-5 h-5 rounded-full border-2 border-gray-400 group-hover:border-[#0097a7] mr-3 flex items-center justify-center shrink-0">
@@ -1356,7 +1470,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     if (isCorrectAnswer) {
                       return (
                         <div 
-                          key={key}
+                          key={normKey}
                           className="bg-[#2e7d32] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm"
                         >
                           <div className="flex items-center space-x-3">
@@ -1375,7 +1489,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     if (userSelected) {
                       return (
                         <div 
-                          key={key}
+                          key={normKey}
                           className="bg-[#c62828] text-white rounded px-4 py-3 flex items-center justify-between shadow-sm"
                         >
                           <div className="flex items-center space-x-3">
@@ -1393,7 +1507,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
                     return (
                       <div 
-                        key={key}
+                        key={normKey}
                         className="px-4 py-3 text-[15px] text-gray-700 opacity-70 flex items-center"
                       >
                         <span className="w-5 mr-3 shrink-0" />

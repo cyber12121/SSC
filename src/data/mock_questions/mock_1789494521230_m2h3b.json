@@ -13,6 +13,10 @@
     "avgTime": "00:55",
     "questionText": "Sum of ages of father and son is 8 years more than the age of mother. Son was born when the mother was 22 years. How old is the father?",
     "options": {
+      "a": "36 years",
+      "b": "40 years",
+      "c": "38 years",
+      "d": "30 years",
       "A": "36 years",
       "B": "40 years",
       "C": "38 years",
@@ -26,7 +30,9 @@
       "topic": "Arithmetical Reasoning",
       "subtopic": "Age Problems",
       "conceptTested": "Linear algebraic translation of age-based relationships into equations."
-    }
+    },
+    "question": "Sum of ages of father and son is 8 years more than the age of mother. Son was born when the mother was 22 years. How old is the father?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -42,12 +48,16 @@
     "avgTime": "01:04",
     "questionText": "Select the option in which the numbers are related in the same way as are the numbers of the following set.\n(3, 6, 30)",
     "options": {
+      "a": "(5, 20, 420)",
+      "b": "(2, 4, 22)",
+      "c": "(-4, 24, 342)",
+      "d": "(4, 12, 132)",
       "A": "(5, 20, 420)",
       "B": "(2, 4, 22)",
       "C": "(-4, 24, 342)",
       "D": "(4, 12, 132)"
     },
-    "solution": "Solution\n\nThe pattern followed here is:\n\n(3, 6, 30)\n\n32 - 3 = 6 and 62 - 6 = 30\n\nSimilarly in option 4 following same pattern,\n\n42 - 4 = 12 and 122 - 12 = 132\nHence, (4 12 132) is the correct answer.",
+    "solution": "Solution\n\nThe pattern followed here is:\n\n(3, 6, 30)³2 - 3 = 6 and 62 - 6 = 30\n\nSimilarly in option 4 following same pattern,\n\n42 - 4 = 12 and 122 - 12 = 132\nHence, (4 12 132) is the correct answer.",
     "topic": "Analogy",
     "subtopic": "Number Analogy",
     "conceptTested": "Sequential mathematical operation pattern using squares and subtractions: x^2 - x = y.",
@@ -55,7 +65,9 @@
       "topic": "Analogy",
       "subtopic": "Number Analogy",
       "conceptTested": "Sequential mathematical operation pattern using squares and subtractions: x^2 - x = y."
-    }
+    },
+    "question": "Select the option in which the numbers are related in the same way as are the numbers of the following set.\n(3, 6, 30)",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -71,12 +83,16 @@
     "avgTime": "01:20",
     "questionText": "In a row of Children facing north, A is 14th from the left end and 6th to the right of B. If B is 15th to the left of C, who is 22nd from the right end, how many children are there in that row?",
     "options": {
+      "a": "34",
+      "b": "44",
+      "c": "43",
+      "d": "45",
       "A": "34",
       "B": "44",
       "C": "43",
       "D": "45"
     },
-    "solution": "Solution\nHere, A is 14th from the left end and 6th to the right of B. Hence, B is 14 - 6 = 8th from the left side.\nAgain, B is 15th to the left of C, who is 22nd from the right end.\n\nHence, B is 15 + 22 = 37th from the right side.\nTherefore, the total number of children\n= B’s position from the right end + B’s position from the left end – 1\n= 37 + 8 – 1 = 45 – 1 = 44\nHence, \"option 2\" is correct answer.",
+    "solution": "Solution\nHere, A is 14th from the left end and 6th to the right of B. Hence, B is 14 - 6 = 8th from the left side.\nAgain, B is 15th to the left of C, who is 22nd from the right end.\n\nHence, B is 15 + 22 = 37th from the right side.\nTherefore, the total number of children\n= B’s position from the right end + B’s position from the left end - 1\n= 37 + 8 - 1 = 45 - 1 = 44\nHence, \"option 2\" is correct answer.",
     "topic": "Order & Ranking",
     "subtopic": "Linear Row Ranking & Total Count",
     "conceptTested": "Total elements in a row = Position from left + Position from right - 1.",
@@ -84,7 +100,9 @@
       "topic": "Order & Ranking",
       "subtopic": "Linear Row Ranking & Total Count",
       "conceptTested": "Total elements in a row = Position from left + Position from right - 1."
-    }
+    },
+    "question": "In a row of Children facing north, A is 14th from the left end and 6th to the right of B. If B is 15th to the left of C, who is 22nd from the right end, how many children are there in that row?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -100,6 +118,10 @@
     "avgTime": "00:32",
     "questionText": "Two Statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nNo plate is Mug.\nSome Mugs are Tables.\nConclusions:\nI. All plates being tables is a possibility.\nII. Some tables are not mugs.",
     "options": {
+      "a": "Both conclusions I and II follow",
+      "b": "Neither\nconclusion I nor II follow.",
+      "c": "Only\nconclusion I follows.",
+      "d": "Only\nconclusion II follows.",
       "A": "Both conclusions I and II follow",
       "B": "Neither\nconclusion I nor II follow.",
       "C": "Only\nconclusion I follows.",
@@ -113,7 +135,9 @@
       "topic": "Syllogism",
       "subtopic": "Deductive Venn Logic with Possibilities",
       "conceptTested": "Analyzing categorical syllogisms involving negative statements and affirmative possibility inferences."
-    }
+    },
+    "question": "Two Statements are given followed by two conclusions numbered I and II. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nNo plate is Mug.\nSome Mugs are Tables.\nConclusions:\nI. All plates being tables is a possibility.\nII. Some tables are not mugs.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -129,6 +153,10 @@
     "avgTime": "00:41",
     "questionText": "Pointing to a girl, a man said to a boy, \"She is the daughter of sister of your paternal grandmother's only son.\" How is the girl related to the boy?",
     "options": {
+      "a": "Niece",
+      "b": "Aunt",
+      "c": "Brother",
+      "d": "Cousin",
       "A": "Niece",
       "B": "Aunt",
       "C": "Brother",
@@ -142,7 +170,9 @@
       "topic": "Blood Relations",
       "subtopic": "Indicating Form & Family Tree",
       "conceptTested": "Decoding multi-generational kinship phrases to establish direct blood or collateral relationships."
-    }
+    },
+    "question": "Pointing to a girl, a man said to a boy, \"She is the daughter of sister of your paternal grandmother's only son.\" How is the girl related to the boy?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -158,6 +188,10 @@
     "avgTime": "00:47",
     "questionText": "Select the word-pair that best represents a relationship similar to the one expressed in the word-pair given below. (The words should be considered as meaningful words, and the words should not be related to each other on the basis of number of letters/consonants/vowels in the word.)\n\nBear : Boar",
     "options": {
+      "a": "Chicken : Rooster",
+      "b": "Ox : Cow",
+      "c": "Sheep : lamb",
+      "d": "Goose : Geese",
       "A": "Chicken : Rooster",
       "B": "Ox : Cow",
       "C": "Sheep : lamb",
@@ -171,7 +205,9 @@
       "topic": "Analogy",
       "subtopic": "Word Analogy - Animal and Gender/Type",
       "conceptTested": "Semantic relationship based on general animal category and its specific male term."
-    }
+    },
+    "question": "Select the word-pair that best represents a relationship similar to the one expressed in the word-pair given below. (The words should be considered as meaningful words, and the words should not be related to each other on the basis of number of letters/consonants/vowels in the word.)\n\nBear : Boar",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -187,6 +223,10 @@
     "avgTime": "00:30",
     "questionText": "In the word OPTICAL, each vowel is changed to the letter immediately succeeding it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters is repeated twice in the new group of letters thus formed?",
     "options": {
+      "a": "B",
+      "b": "P",
+      "c": "O",
+      "d": "K",
       "A": "B",
       "B": "P",
       "C": "O",
@@ -200,7 +240,9 @@
       "topic": "Alphabet Test",
       "subtopic": "Vowel-Consonant Operations",
       "conceptTested": "Applying specific forward shifts to vowels and backward shifts to consonants in a given word."
-    }
+    },
+    "question": "In the word OPTICAL, each vowel is changed to the letter immediately succeeding it in the English alphabetical order and each consonant is changed to the letter immediately preceding it in the English alphabetical order. Which of the following letters is repeated twice in the new group of letters thus formed?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -216,12 +258,16 @@
     "avgTime": "00:40",
     "questionText": "Which of the following factor is NOT responsible for the development of a cyclone?",
     "options": {
+      "a": "Humidity",
+      "b": "Temperature",
+      "c": "Wind Speed",
+      "d": "Rainfall",
       "A": "Humidity",
       "B": "Temperature",
       "C": "Wind Speed",
       "D": "Rainfall"
     },
-    "solution": "Solution\nThe word Cyclone is derived from the Greek word Cyclos meaning the coils of a snake.\nIt was coined by Henry Paddington because the tropical storms in the Bay of Bengal and the Arabian Sea appear like coiled serpents of the sea\nCyclones are rapid inward air circulation around a low-pressure area.\nIt is usually accompanied by violent storms and bad weather.\nTropical cyclones are capable of producing highly strong winds and torrential rain, high waves and a destructive storm surge.\nA tropical cyclone is a series of storms characterized by a low-pressure core and multiple thunderstorms causing powerful winds and heavy rain.\nHowever, heavy rains can cause major inland flooding.\n\nFactors such as wind speed, wind direction, humidity and temperature contribute to the development of a cyclone. The most influential factors are:\n\nHumidity and Temperature:\n\nA source of warm, moist air derived from tropical oceans with sea surface temperatures normally in the region of, or in excess, of 27 °C.\n\nWinds:\n\nWinds near the ocean surface blow from different directions converging and causing air to rise and storm clouds to form.\nWinds that do not vary greatly with height – known as low wind shear.\nThis allows the storm clouds to rise vertically to high levels.\n\nThus, rainfall is NOT responsible for the development of a cyclone.",
+    "solution": "Solution\nThe word Cyclone is derived from the Greek word Cyclos meaning the coils of a snake.\nIt was coined by Henry Paddington because the tropical storms in the Bay of Bengal and the Arabian Sea appear like coiled serpents of the sea\nCyclones are rapid inward air circulation around a low-pressure area.\nIt is usually accompanied by violent storms and bad weather.\nTropical cyclones are capable of producing highly strong winds and torrential rain, high waves and a destructive storm surge.\nA tropical cyclone is a series of storms characterized by a low-pressure core and multiple thunderstorms causing powerful winds and heavy rain.\nHowever, heavy rains can cause major inland flooding.\n\nFactors such as wind speed, wind direction, humidity and temperature contribute to the development of a cyclone. The most influential factors are:\n\nHumidity and Temperature:\n\nA source of warm, moist air derived from tropical oceans with sea surface temperatures normally in the region of, or in excess, of 27 °C.\n\nWinds:\n\nWinds near the ocean surface blow from different directions converging and causing air to rise and storm clouds to form.\nWinds that do not vary greatly with height - known as low wind shear.\nThis allows the storm clouds to rise vertically to high levels.\n\nThus, rainfall is NOT responsible for the development of a cyclone.",
     "topic": "Physical Geography",
     "subtopic": "Climatology - Tropical Cyclones",
     "conceptTested": "Atmospheric conditions and geographical factors required for the formation and development of tropical cyclones.",
@@ -229,7 +275,9 @@
       "topic": "Physical Geography",
       "subtopic": "Climatology - Tropical Cyclones",
       "conceptTested": "Atmospheric conditions and geographical factors required for the formation and development of tropical cyclones."
-    }
+    },
+    "question": "Which of the following factor is NOT responsible for the development of a cyclone?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -245,6 +293,10 @@
     "avgTime": "00:31",
     "questionText": "Which of the following statements regarding construction of the Rohtang tunnel is NOT correct?",
     "options": {
+      "a": "It is located at an altitude of 5,000 feet",
+      "b": "It will provide all-year connectivity to Lahaul and Spiti Valley",
+      "c": "The tunnel is being built by the Border Roads Organization",
+      "d": "It will reduce the length of the LehManali highway by approximately 50 km",
       "A": "It is located at an altitude of 5,000 feet",
       "B": "It will provide all-year connectivity to Lahaul and Spiti Valley",
       "C": "The tunnel is being built by the Border Roads Organization",
@@ -258,7 +310,9 @@
       "topic": "Modern History",
       "subtopic": "Infrastructure and Transport Development",
       "conceptTested": "Factual knowledge of major national infrastructure projects such as the Atal Tunnel (Rohtang Tunnel)."
-    }
+    },
+    "question": "Which of the following statements regarding construction of the Rohtang tunnel is NOT correct?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -274,6 +328,10 @@
     "avgTime": "00:33",
     "questionText": "Sharqi ruler of Jaunpur, Sultan Hussain Sharqi, was a great musician and developed Bada Khyal, which was developed on the pattern of:",
     "options": {
+      "a": "Thumri",
+      "b": "Ghazal",
+      "c": "Quawali",
+      "d": "Dadra",
       "A": "Thumri",
       "B": "Ghazal",
       "C": "Quawali",
@@ -287,7 +345,9 @@
       "topic": "Medieval History",
       "subtopic": "Art, Culture and Music during Sultanate Period",
       "conceptTested": "Contributions of regional rulers to Hindustani classical music and musical evolution."
-    }
+    },
+    "question": "Sharqi ruler of Jaunpur, Sultan Hussain Sharqi, was a great musician and developed Bada Khyal, which was developed on the pattern of:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -303,6 +363,10 @@
     "avgTime": "00:23",
     "questionText": "The members of the Central Vigilance Commission hold office for a period of",
     "options": {
+      "a": "6 years or until they attain the age of 60 years, whichever is earlier",
+      "b": "5 years or until they attain the age of 60 years, whichever is earlier",
+      "c": "4 years or until they attain the age of 65 years, whichever is earlier",
+      "d": "3 years or until they attain the age of 62 years, whichever is earlier",
       "A": "6 years or until they attain the age of 60 years, whichever is earlier",
       "B": "5 years or until they attain the age of 60 years, whichever is earlier",
       "C": "4 years or until they attain the age of 65 years, whichever is earlier",
@@ -316,7 +380,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Constitutional Bodies - Central Vigilance Commission",
       "conceptTested": "Tenure and service conditions of the Central Vigilance Commissioner and vigilance commissioners under the CVC Act, 2003."
-    }
+    },
+    "question": "The members of the Central Vigilance Commission hold office for a period of",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -332,6 +398,10 @@
     "avgTime": "00:22",
     "questionText": "Which of the following also used for preserving food-\n(i) Sugar\n(ii) Vinegar\n(iii) Common Salt",
     "options": {
+      "a": "Only (i) & (ii)",
+      "b": "Only (ii)",
+      "c": "Only (ii) & (iii)",
+      "d": "All (i), (ii), (iii)",
       "A": "Only (i) & (ii)",
       "B": "Only (ii)",
       "C": "Only (ii) & (iii)",
@@ -345,7 +415,9 @@
       "topic": "Chemistry",
       "subtopic": "Everyday Chemistry & Food Preservation",
       "conceptTested": "Identification of chemical and natural food preservatives such as common salt, sugar, and vinegar that inhibit microbial growth."
-    }
+    },
+    "question": "Which of the following also used for preserving food-\n(i) Sugar\n(ii) Vinegar\n(iii) Common Salt",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -361,6 +433,10 @@
     "avgTime": "00:22",
     "questionText": "The unemployment arising from the mismatch between the jobs available in the market and the skills of the available workers in the market is called _________.",
     "options": {
+      "a": "Disguised",
+      "b": "Structural",
+      "c": "Cyclical",
+      "d": "Seasonal",
       "A": "Disguised",
       "B": "Structural",
       "C": "Cyclical",
@@ -374,7 +450,9 @@
       "topic": "Macroeconomics & National Income",
       "subtopic": "Unemployment Types",
       "conceptTested": "Definition of structural unemployment arising from skill mismatches and technological changes in the labor market."
-    }
+    },
+    "question": "The unemployment arising from the mismatch between the jobs available in the market and the skills of the available workers in the market is called _________.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -390,6 +468,10 @@
     "avgTime": "00:30",
     "questionText": "Which of the following schemes is notified in 2016 by the Indian Government which is applicable to every declarant under the Taxation and Investment Regime?",
     "options": {
+      "a": "Ombudsman Scheme for customers of Non-Banking Financial Companies (NBFC)",
+      "b": "National Social Assistance Scheme (NSAS)",
+      "c": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+      "d": "Pradhan Mantri Garib Kalyan Deposit Scheme (PMGKDS)",
       "A": "Ombudsman Scheme for customers of Non-Banking Financial Companies (NBFC)",
       "B": "National Social Assistance Scheme (NSAS)",
       "C": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
@@ -403,7 +485,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Taxation and Financial Inclusion Schemes",
       "conceptTested": "Features and notification year of the Pradhan Maruti Garib Kalyan Deposit Scheme (PMGKDS) under the Taxation and Investment Regime, 2016."
-    }
+    },
+    "question": "Which of the following schemes is notified in 2016 by the Indian Government which is applicable to every declarant under the Taxation and Investment Regime?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -419,6 +503,10 @@
     "avgTime": "00:20",
     "questionText": "What is the primary step that occurs during aerobic respiration in plants?",
     "options": {
+      "a": "Glycolysis",
+      "b": "Fermentation",
+      "c": "Anaerobic respiration",
+      "d": "Pyrolysis",
       "A": "Glycolysis",
       "B": "Fermentation",
       "C": "Anaerobic respiration",
@@ -432,7 +520,9 @@
       "topic": "Biology",
       "subtopic": "Plant Physiology & Cellular Respiration",
       "conceptTested": "The initial metabolic pathway of cellular respiration (glycolysis) occurring in the cytoplasm."
-    }
+    },
+    "question": "What is the primary step that occurs during aerobic respiration in plants?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -448,12 +538,16 @@
     "avgTime": "00:17",
     "questionText": "Consider the following statements regarding the recently updated UNESCO's Memory of the World Register:\nStatement 1: The Bhagavad Gita and Natyashastra have been inscribed into the UNESCO Memory of the World Register.\nStatement 2: India now has 18 entries among the 570 total collections globally.\nWhich of the above options is/are CORRECT?",
     "options": {
+      "a": "1 only",
+      "b": "2 only",
+      "c": "Both 1 and 2",
+      "d": "None of the above",
       "A": "1 only",
       "B": "2 only",
       "C": "Both 1 and 2",
       "D": "None of the above"
     },
-    "solution": "Solution\n\nThe correct answer is Option I: Only\nStatement 1 is correct.\nStatement 1 is correct as the Bhagavad Gita and Natyashastra were recently inscribed into UNESCO's Memory of the World Register.\nStatement 2 is incorrect because India has 14 entries in the Memory of the World Register, not 18.\n\nIn News\nThe Bhagavad Gita and Natyashastra were added to UNESCO’s Memory of the World Register, contributing to India’s cultural heritage.\n\nKey Points\nUNESCO Memory of the World Register: A prestigious recognition for global cultural heritage, preserving significant documentary heritage.\nIndia’s Contribution: India now has 14 entries, including the Bhagavad Gita and Natyashastra, as well as other cultural texts and manuscripts.\nPurpose: The register ensures the preservation and accessibility of key historical and cultural materials globally.\nBhagavad Gita:\nCore spiritual and philosophical text of Hinduism.\nPart of the Mahabharata.\nTranslated into nearly 80 languages.\nRevered for its teachings on duty, righteousness, and spirituality.\nNatyashastra:\nAncient treatise by Bharat Muni, foundational to Indian performing arts.\nCovers dramaturgy, acting, stage design, music, dance, and the theory of aesthetics (rasa).\nShaped classical Indian dance and drama.\nOther Notable Indian Entries on the UNESCO Memory of the World Register:\n30 Manuscripts of the Rig Veda (listed in 2007)\nSaiva Manuscripts from Pondicherry (listed in 2005)\nThe Gilgit Manuscript (listed in 2017)\nMaitreyayvarakarana (listed in 2023)\nRamcharitmanas and Panchatantra texts\nManuscripts of philosopher Abhinavagupta\nSahrdayāloka-Locana texts\n\nAdditional Information\nMemory of the World Register: Established in 1992, it aims to safeguard documentary heritage of global significance.\nUNESCO's Ongoing Efforts: Regular updates to the register help preserve evolving cultural heritage, with new inscriptions being added regularly.\nUNESCO's Inscription Criteria: Documentary heritage is inscribed based on its world significance, universal value, and cultural importance\nMemory of the World Register: Represents a critical resource for preserving humanity's shared cultural heritage, including manuscripts, oral traditions, and audio-visual materials.",
+    "solution": "Solution\n\nThe correct answer is Option I: Only\nStatement 1 is correct.\nStatement 1 is correct as the Bhagavad Gita and Natyashastra were recently inscribed into UNESCO's Memory of the World Register.\nStatement 2 is incorrect because India has 14 entries in the Memory of the World Register, not 18.\n\nIn News\nThe Bhagavad Gita and Natyashastra were added to UNESCO’s Memory of the World Register, contributing to India’s cultural heritage.\n\nKey Points\nUNESCO Memory of the World Register: A prestigious recognition for global cultural heritage, preserving significant documentary heritage.\nIndia’s Contribution: India now has 14 entries, including the Bhagavad Gita and Natyashastra, as well as other cultural texts and manuscripts.\nPurpose: The register ensures the preservation and accessibility of key historical and cultural materials globally.\nBhagavad Gita:\nCore spiritual and philosophical text of Hinduism.\nPart of the Mahabharata.\nTranslated into nearly 80 languages.\nRevered for its teachings on duty, righteousness, and spirituality.\nNatyashastra:\nAncient treatise by Bharat Muni, foundational to Indian performing arts.\nCovers dramaturgy, acting, stage design, music, dance, and the theory of aesthetics (rasa).\nShaped classical Indian dance and drama.\nOther Notable Indian Entries on the UNESCO Memory of the World Register:\n30 Manuscripts of the Rig Veda (listed in 2007)\nSaiva Manuscripts from Pondicherry (listed in 2005)\nThe Gilgit Manuscript (listed in 2017)\nMaitreyayvarakarana (listed in 2023)\nRamcharitmanas and Panchatantra texts\nManuscripts of philosopher Abhinavagupta\nSahrdayāloka-Locana texts\n\nAdditional Information\nMemory of the World Register: Established in 1992, it aims to safeguard documentary heritage of global significance.\nUNESCO's Ongoing Efforts: Regular updates to the register help preserve evolving cultural heritage, with new inscriptions being added regularly.\nUNESCO's Inscription Criteria: Documentary heritage is inscribed based on its world significance, universal value, and cultural importance\nMemory of the World Register: Represents a critical resource for preserving humanity's shared cultural heritage, including manuscripts, oral traditions, and audio-visual materials.",
     "topic": "Temples, Monuments & Heritage Sites",
     "subtopic": "UNESCO Memory of the World Register",
     "conceptTested": "Knowledge of recent Indian inscriptions in the UNESCO Memory of the World Register, such as the Bhagavad Gita and Natyashastra.",
@@ -461,7 +555,9 @@
       "topic": "Temples, Monuments & Heritage Sites",
       "subtopic": "UNESCO Memory of the World Register",
       "conceptTested": "Knowledge of recent Indian inscriptions in the UNESCO Memory of the World Register, such as the Bhagavad Gita and Natyashastra."
-    }
+    },
+    "question": "Consider the following statements regarding the recently updated UNESCO's Memory of the World Register:\nStatement 1: The Bhagavad Gita and Natyashastra have been inscribed into the UNESCO Memory of the World Register.\nStatement 2: India now has 18 entries among the 570 total collections globally.\nWhich of the above options is/are CORRECT?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -477,6 +573,10 @@
     "avgTime": "00:15",
     "questionText": "Assertion (A): Subroto Mukherjee is regarded as the Father of the Indian Air Force.\nReason\n(R): He became the first Indian Chief of Air Staff on 1 April 1954 and led the transition of the IAF into an independent, modern force.",
     "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is not the correct explanation of A",
+      "c": "A is true, R is false",
+      "d": "A is false, R is true",
       "A": "Both A and R are true and R is the correct explanation of A",
       "B": "Both A and R are true but R is not the correct explanation of A",
       "C": "A is true, R is false",
@@ -490,7 +590,9 @@
       "topic": "Modern History",
       "subtopic": "Personalities in Freedom Movement & Post-Independence India",
       "conceptTested": "Role of Air Marshal Subroto Mukherjee as the first Indian Chief of Air Staff and Father of the Indian Air Force."
-    }
+    },
+    "question": "Assertion (A): Subroto Mukherjee is regarded as the Father of the Indian Air Force.\nReason\n(R): He became the first Indian Chief of Air Staff on 1 April 1954 and led the transition of the IAF into an independent, modern force.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -506,6 +608,10 @@
     "avgTime": "00:14",
     "questionText": "'Shad Suk Mynsiem' festival is celebrated in which of the following states?",
     "options": {
+      "a": "Ladakh",
+      "b": "Meghalaya",
+      "c": "Assam",
+      "d": "Gujarat",
       "A": "Ladakh",
       "B": "Meghalaya",
       "C": "Assam",
@@ -519,7 +625,9 @@
       "topic": "Festivals & Fairs",
       "subtopic": "Tribal Festivals of North-East India",
       "conceptTested": "Identification of cultural and harvest festivals specific to the tribes of Meghalaya, such as Shad Suk Mynsiem."
-    }
+    },
+    "question": "'Shad Suk Mynsiem' festival is celebrated in which of the following states?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -535,12 +643,16 @@
     "avgTime": "00:23",
     "questionText": "Read both the statements and choose the correct answer:\nStatement I: The hymns of Rigveda were composed by the Dasas or Dasyus.\nStatement II: The rajas taught students to recite and memorise each syllable, word, and sentence, bit by bit, with great care.",
     "options": {
+      "a": "Both (I) and (II) are true",
+      "b": "(I) is false but (II) is true",
+      "c": "Both (I) and (II) are false",
+      "d": "(I) is true but (II) is false",
       "A": "Both (I) and (II) are true",
       "B": "(I) is false but (II) is true",
       "C": "Both (I) and (II) are false",
       "D": "(I) is true but (II) is false"
     },
-    "solution": "Solution\n\nBoth statements are false regarding to Vedic age.\nKey Points\nThere are four of the Vedas – the Rigveda, Samaveda, Yajurveda and Atharvaveda.\nThe Rigveda includes more than a thousand hymns, called sukta or “well-said”.\nThese hymns are in praise of various gods and goddesses.\nThese hymns were composed of sages (rishis). Thus\nstatement I is false.\nPriests taught students to recite and memorise each syllable, word, and sentence, bit by bit, with great care. Hence\nstatement II is also false.\nMost of the hymns were composed, taught and learnt by men.\nA few were composed of women.\n\nThe Rigveda is in old or Vedic Sanskrit, which is different from the Sanskrit you learn in school these days.\n\nTherefore we conclude that both statements are false regarding to Vedic age.",
+    "solution": "Solution\n\nBoth statements are false regarding to Vedic age.\nKey Points\nThere are four of the Vedas - the Rigveda, Samaveda, Yajurveda and Atharvaveda.\nThe Rigveda includes more than a thousand hymns, called sukta or “well-said”.\nThese hymns are in praise of various gods and goddesses.\nThese hymns were composed of sages (rishis). Thus\nstatement I is false.\nPriests taught students to recite and memorise each syllable, word, and sentence, bit by bit, with great care. Hence\nstatement II is also false.\nMost of the hymns were composed, taught and learnt by men.\nA few were composed of women.\n\nThe Rigveda is in old or Vedic Sanskrit, which is different from the Sanskrit you learn in school these days.\n\nTherefore we conclude that both statements are false regarding to Vedic age.",
     "topic": "Ancient History",
     "subtopic": "Vedic Age Society and Literature",
     "conceptTested": "Historical facts regarding Vedic literature composition by sages (rishis) rather than Dasas or Dasyus, and the oral tradition of learning.",
@@ -548,7 +660,9 @@
       "topic": "Ancient History",
       "subtopic": "Vedic Age Society and Literature",
       "conceptTested": "Historical facts regarding Vedic literature composition by sages (rishis) rather than Dasas or Dasyus, and the oral tradition of learning."
-    }
+    },
+    "question": "Read both the statements and choose the correct answer:\nStatement I: The hymns of Rigveda were composed by the Dasas or Dasyus.\nStatement II: The rajas taught students to recite and memorise each syllable, word, and sentence, bit by bit, with great care.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -564,6 +678,10 @@
     "avgTime": "00:15",
     "questionText": "What is the major purpose of the Salal Dam located on the Chenab River in Jammu and Kashmir?",
     "options": {
+      "a": "Hydroelectricity",
+      "b": "Drinking",
+      "c": "Irrigation",
+      "d": "Navigation",
       "A": "Hydroelectricity",
       "B": "Drinking",
       "C": "Irrigation",
@@ -577,7 +695,9 @@
       "topic": "Indian Drainage & Physiography",
       "subtopic": "Rivers, Dams & Multipurpose Projects",
       "conceptTested": "Geographical location and primary purpose of major Indian river valley and hydroelectric projects like the Salal Dam."
-    }
+    },
+    "question": "What is the major purpose of the Salal Dam located on the Chenab River in Jammu and Kashmir?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -593,12 +713,16 @@
     "avgTime": "00:15",
     "questionText": "Who has authored the book “Salman Khan: The Sultan of Bollywood,” which has been released by HarperCollins?",
     "options": {
+      "a": "Anupama Chopra",
+      "b": "Bhawana Somaaya",
+      "c": "Rajeev Masand",
+      "d": "Mohar Basu",
       "A": "Anupama Chopra",
       "B": "Bhawana Somaaya",
       "C": "Rajeev Masand",
       "D": "Mohar Basu"
     },
-    "solution": "Solution\n\nThe correct answer is Mohar Basu.\n\nIn News\nHarperCollins India announced the release of the book “Salman Khan: The Sultan of Bollywood”.\nThe book is being released to mark superstar Salman Khan’s 60th birthday.\n\nKey Points\nThe book has been authored by award-winning writer Mohar Basu.\nIt is described as a biography, fan tribute and cultural commentary.\nThe book captures Salman Khan’s stardom, iconic roles and mass appeal.\nIt will be released on 20 December 2025.\n\nAdditional Information\nMohar Basu – An award-winning Indian writer and pop-culture commentator.\nThe book includes rare photographs, industry insights and fan anecdotes.\nIt celebrates Salman Khan as one of Bollywood’s most enduring mass superstars.\nThe publication is described as a tribute to the old-school magic of big-screen cinema.",
+    "solution": "Solution\n\nThe correct answer is Mohar Basu.\n\nIn News\nHarperCollins India announced the release of the book “Salman Khan: The Sultan of Bollywood”.\nThe book is being released to mark superstar Salman Khan’s 60th birthday.\n\nKey Points\nThe book has been authored by award-winning writer Mohar Basu.\nIt is described as a biography, fan tribute and cultural commentary.\nThe book captures Salman Khan’s stardom, iconic roles and mass appeal.\nIt will be released on 20 December 2025.\n\nAdditional Information\nMohar Basu - An award-winning Indian writer and pop-culture commentator.\nThe book includes rare photographs, industry insights and fan anecdotes.\nIt celebrates Salman Khan as one of Bollywood’s most enduring mass superstars.\nThe publication is described as a tribute to the old-school magic of big-screen cinema.",
     "topic": "Books & Authors",
     "subtopic": "Recent Biographies & Literary Works",
     "conceptTested": "Knowledge of contemporary books, authors, and literary releases.",
@@ -606,7 +730,9 @@
       "topic": "Books & Authors",
       "subtopic": "Recent Biographies & Literary Works",
       "conceptTested": "Knowledge of contemporary books, authors, and literary releases."
-    }
+    },
+    "question": "Who has authored the book “Salman Khan: The Sultan of Bollywood,” which has been released by HarperCollins?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -622,6 +748,10 @@
     "avgTime": "00:16",
     "questionText": "Who became the first African artist to receive the Grammy Lifetime Achievement Award?",
     "options": {
+      "a": "Burna Boy",
+      "b": "Tyla",
+      "c": "Fela Kuti",
+      "d": "Davido",
       "A": "Burna Boy",
       "B": "Tyla",
       "C": "Fela Kuti",
@@ -635,7 +765,9 @@
       "topic": "Awards & Honours",
       "subtopic": "International Music & Arts Awards",
       "conceptTested": "Knowledge of historic international awards and notable personalities."
-    }
+    },
+    "question": "Who became the first African artist to receive the Grammy Lifetime Achievement Award?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -651,12 +783,16 @@
     "avgTime": "01:09",
     "questionText": "Which state topped the medal tally at the Khelo India Youth Games 2025, and what was Bihar’s final rank in the overall standings?",
     "options": {
-      "A": "Haryana – 1st; Bihar – 13th",
-      "B": "Maharashtra – 1st; Bihar – 15th",
-      "C": "Karnataka – 1st; Bihar – 17th",
-      "D": "Tamil Nadu – 1st; Bihar – 14th"
+      "a": "Haryana - 1st; Bihar - 13th",
+      "b": "Maharashtra - 1st; Bihar - 15th",
+      "c": "Karnataka - 1st; Bihar - 17th",
+      "d": "Tamil Nadu - 1st; Bihar - 14th",
+      "A": "Haryana - 1st; Bihar - 13th",
+      "B": "Maharashtra - 1st; Bihar - 15th",
+      "C": "Karnataka - 1st; Bihar - 17th",
+      "D": "Tamil Nadu - 1st; Bihar - 14th"
     },
-    "solution": "Solution\n\nThe correct answer is option 2.\n\nKey Points\nMedal Standings – Top 3 States\nMaharashtra finished 1st, amassing an impressive 158 medals (58 gold, 47 silver, 53 bronze).\nHaryana secured 2nd place with 117 medals, including 39 golds.\nRajasthan came in 3rd, finishing with 60 medals (24 gold, 12 silver, 24 bronze).\nBihar’s Performance:\nBihar, the host state, achieved 15th place overall with a total of 36 medals (7 gold, 11 silver, 18 bronze). Hence, option 2 is correct.",
+    "solution": "Solution\n\nThe correct answer is option 2.\n\nKey Points\nMedal Standings - Top 3 States\nMaharashtra finished 1st, amassing an impressive 158 medals (58 gold, 47 silver, 53 bronze).\nHaryana secured 2nd place with 117 medals, including 39 golds.\nRajasthan came in 3rd, finishing with 60 medals (24 gold, 12 silver, 24 bronze).\nBihar’s Performance:\nBihar, the host state, achieved 15th place overall with a total of 36 medals (7 gold, 11 silver, 18 bronze). Hence, option 2 is correct.",
     "topic": "Sports & Trophies",
     "subtopic": "National Multi-Discipline Games & Medals",
     "conceptTested": "Current updates and statistics on national sporting events and rankings.",
@@ -664,7 +800,9 @@
       "topic": "Sports & Trophies",
       "subtopic": "National Multi-Discipline Games & Medals",
       "conceptTested": "Current updates and statistics on national sporting events and rankings."
-    }
+    },
+    "question": "Which state topped the medal tally at the Khelo India Youth Games 2025, and what was Bihar’s final rank in the overall standings?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -680,6 +818,10 @@
     "avgTime": "00:49",
     "questionText": "The height of a right pyramid and the side length of its square base are equal. The perimeter of the base is 36 inches. Give its volume in cubic inches.",
     "options": {
+      "a": "734",
+      "b": "104",
+      "c": "243",
+      "d": "215",
       "A": "734",
       "B": "104",
       "C": "243",
@@ -693,7 +835,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Pyramids - Volume & Surface Area",
       "conceptTested": "Volume of a right square pyramid formula V = (1/3) × a^2 × h."
-    }
+    },
+    "question": "The height of a right pyramid and the side length of its square base are equal. The perimeter of the base is 36 inches. Give its volume in cubic inches.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -709,12 +853,16 @@
     "avgTime": "00:51",
     "questionText": "A car travels for 6 hours at different speeds. For the first two hours at 60 m/s, for the next 2 hours at 50 m/s and for the remaining time at x m/s. If the average speed for the entire journey is 52 m/s, what is the value of x?",
     "options": {
+      "a": "46",
+      "b": "4412",
+      "c": "4512",
+      "d": "48",
       "A": "46",
       "B": "4412",
       "C": "4512",
       "D": "48"
     },
-    "solution": "Solution\n\nShortcut Trick\nFor equal time intervals (2 hours each), the average speed over the entire journey is simply the arithmetic mean of the individual speeds.\n\n⇒ Average Speed = (S1 + S2 + S3) ÷ 3\n⇒ 52 = (60 + 50 + x) ÷ 3\n⇒ 156 = 110 + x ⇒ x = 46\n∴ The correct answer is 46.\n\nAlternate Method\nGiven:\nTotal Time = 6 hours\nSpeed for the first 2 hours = 60 m/s\nSpeed for the next 2 hours = 50 m/s\nSpeed for the remaining time = x m/s\nAverage speed for the entire journey = 52 m/s\n\nFormula Used:\nAverage Speed = Total Distance ÷ Total Time\nDistance = Speed × Time\n\nCalculations:\n⇒ Remaining time for the last part of the journey = 6 − 2 − 2 = 2 hours\n⇒ Since time acts directly as a weight in the average calculation, the unit conversion factor from hours to seconds cancels out in the numerator and denominator.\n⇒ Average Speed = [(S1 × T1) + (S2 × T2) + (S3 × T3)] ÷ Total Time\n⇒ 52 = [(60 × 2) + (50 × 2) + (x × 2)] ÷ 6\n⇒ 52 = (120 + 100 + 2x) ÷ 6\n⇒ 52 × 6 = 220 + 2x\n⇒ 312 = 220 + 2x\n⇒ 2x = 312 − 220\n⇒ 2x = 92\n⇒ x = 46\n∴ The correct answer is 46.\n\nAdditional Information\nAverage Speed (Equal Time Intervals)\n\nIf a journey is covered in equal time intervals at different speeds, the average speed is simply the arithmetic mean of those speeds: Savg = (S1 + S2 + ... + Sn) ÷ n.\n\nAverage Speed (Equal Distances)\n\nIf equal distances are covered at different speeds, the average speed is the harmonic mean of the speeds. For exactly two equal distances, the formula is: Savg = (2 × S1 × S2) ÷ (S1 + S2).\n\nGeneral Average Speed Formula\n\nFor any standard journey with varying times and distances, the average speed is universally calculated as the ratio of total distance to total time: Savg = Total Distance ÷ Total Time.",
+    "solution": "Solution\n\nShortcut Trick\nFor equal time intervals (2 hours each), the average speed over the entire journey is simply the arithmetic mean of the individual speeds.\n\n⇒ Average Speed = (S1 + S2 + S3) ÷ 3\n⇒ 52 = (60 + 50 + x) ÷ 3\n⇒ 156 = 110 + x ⇒ x = 46\n∴ The correct answer is 46.\n\nAlternate Method\nGiven:\nTotal Time = 6 hours\nSpeed for the first 2 hours = 60 m/s\nSpeed for the next 2 hours = 50 m/s\nSpeed for the remaining time = x m/s\nAverage speed for the entire journey = 52 m/s\n\nFormula Used:\nAverage Speed = Total Distance ÷ Total Time\nDistance = Speed × Time\n\nCalculations:\n⇒ Remaining time for the last part of the journey = 6 - 2 - 2 = 2 hours\n⇒ Since time acts directly as a weight in the average calculation, the unit conversion factor from hours to seconds cancels out in the numerator and denominator.\n⇒ Average Speed = [(S1 × T1) + (S2 × T2) + (S3 × T3)] ÷ Total Time\n⇒ 52 = [(60 × 2) + (50 × 2) + (x × 2)] ÷ 6\n⇒ 52 = (120 + 100 + 2x) ÷ 6\n⇒ 52 × 6 = 220 + 2x\n⇒ 312 = 220 + 2x\n⇒ 2x = 312 - 220\n⇒ 2x = 92\n⇒ x = 46\n∴ The correct answer is 46.\n\nAdditional Information\nAverage Speed (Equal Time Intervals)\n\nIf a journey is covered in equal time intervals at different speeds, the average speed is simply the arithmetic mean of those speeds: Savg = (S1 + S2 + ... + Sn) ÷ n.\n\nAverage Speed (Equal Distances)\n\nIf equal distances are covered at different speeds, the average speed is the harmonic mean of the speeds. For exactly two equal distances, the formula is: Savg = (2 × S1 × S2) ÷ (S1 + S2).\n\nGeneral Average Speed Formula\n\nFor any standard journey with varying times and distances, the average speed is universally calculated as the ratio of total distance to total time: Savg = Total Distance ÷ Total Time.",
     "topic": "Time, Speed & Distance",
     "subtopic": "Average Speed with Equal Time Intervals",
     "conceptTested": "Average speed calculation for equal time intervals using arithmetic mean.",
@@ -722,7 +870,9 @@
       "topic": "Time, Speed & Distance",
       "subtopic": "Average Speed with Equal Time Intervals",
       "conceptTested": "Average speed calculation for equal time intervals using arithmetic mean."
-    }
+    },
+    "question": "A car travels for 6 hours at different speeds. For the first two hours at 60 m/s, for the next 2 hours at 50 m/s and for the remaining time at x m/s. If the average speed for the entire journey is 52 m/s, what is the value of x?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -738,12 +888,16 @@
     "avgTime": "00:34",
     "questionText": "In a trapezium ABCD, AB || CD and perpendicular distance between them is 15 cm. Diagonals of trapezium cut at point O, shorter of the two parallel side is 12 cm long and if ratio of area of ∆AOB to the area of ∆COD is 1 : 4, then what will be the area of trapezium?",
     "options": {
+      "a": "270 cm2",
+      "b": "320 cm2",
+      "c": "240 cm2",
+      "d": "305 cm2",
       "A": "270 cm2",
       "B": "320 cm2",
       "C": "240 cm2",
       "D": "305 cm2"
     },
-    "solution": "Solution\n\nShortcut Trick\nThe ratio of areas of similar triangles is the square of the ratio of their corresponding sides.\n\nRatio of sides AB and CD = √(1/4) = 1 : 2\nGiven the shorter side is 12 cm, so the longer side = 12 × 2 = 24 cm.\nArea of trapezium = 1/2 × (Sum of parallel sides) × Height\nArea = 1/2 × (12 + 24) × 15 = 18 × 15 = 270 cm2.\n∴ The correct answer is 270 cm2.\n\nAlternate Method\nGiven:\nIn trapezium ABCD, AB || CD.\n\nHeight (h) = 15 cm.\nShorter side = 12 cm.\nArea(ΔAOB) : Area(ΔCOD) = 1 : 4.\n\nFormula Used:\nArea of Trapezium = 1/2 × (Sum of parallel sides) × height\nFor similar triangles, Ratio of Areas = (Ratio of corresponding sides)2\n\n15 cm\nA\nB\nC\nD\nO\n12 cm\n24 cm\nRatio: 1\nRatio: 4\n\nCalculations:\n⇒ In ΔAOB and ΔCOD, AB || CD.\n⇒ ∠OAB = ∠OCD and ∠OBA = ∠ODC (Alternate interior angles).\n⇒ ∴ ΔAOB ∼ ΔCOD (by AA similarity criterion).\n⇒ Area(ΔAOB) / Area(ΔCOD) = AB2 / CD2\n⇒ 1 / 4 = AB2 / CD2\n⇒ AB / CD = √(1 / 4) = 1 / 2\n⇒ Since the ratio of AB : CD is 1 : 2, AB is the shorter side.\n⇒ AB = 12 cm.\n⇒ CD = 2 × 12 = 24 cm.\n⇒ Area of Trapezium = 1/2 × (AB + CD) × h\n⇒ Area = 1/2 × (12 + 24) × 15\n⇒ Area = 1/2 × 36 × 15\n⇒ Area = 18 × 15 = 270 cm2.\n∴ The correct answer is 270 cm2.\n\nAdditional Information\nSimilar Triangles Area Theorem\n\nThe ratio of the areas of two similar triangles is strictly equal to the square of the ratio of their corresponding sides.\n\nProperties of a Trapezium\n\nA trapezium is a quadrilateral with exactly one pair of parallel sides. The diagonals of a trapezium intersect each other, dividing themselves proportionally.\n\nArea of a Trapezium\n\nThe area formula is 1/2 × (a + b) × h, where 'a' and 'b' represent the parallel bases, and 'h' represents the perpendicular distance between them.",
+    "solution": "Solution\n\nShortcut Trick\nThe ratio of areas of similar triangles is the square of the ratio of their corresponding sides.\n\nRatio of sides AB and CD = √(1/4) = 1 : 2\nGiven the shorter side is 12 cm, so the longer side = 12 × 2 = 24 cm.\nArea of trapezium = 1/2 × (Sum of parallel sides) × Height\nArea = 1/2 × (12 + 24) × 15 = 18 × 15 = 270 cm2.\n∴ The correct answer is 270 cm2.\n\nAlternate Method\nGiven:\nIn trapezium ABCD, AB || CD.\n\nHeight (h) = 15 cm.\nShorter side = 12 cm.\nArea(ΔAOB) : Area(ΔCOD) = 1 : 4.\n\nFormula Used:\nArea of Trapezium = 1/2 × (Sum of parallel sides) × height\nFor similar triangles, Ratio of Areas = (Ratio of corresponding sides)²\n\n15 cm\nA\nB\nC\nD\nO\n12 cm\n24 cm\nRatio: 1\nRatio: 4\n\nCalculations:\n⇒ In ΔAOB and ΔCOD, AB || CD.\n⇒ ∠OAB = ∠OCD and ∠OBA = ∠ODC (Alternate interior angles).\n⇒ ∴ ΔAOB ∼ ΔCOD (by AA similarity criterion).\n⇒ Area(ΔAOB) / Area(ΔCOD) = AB2 / CD2\n⇒ 1 / 4 = AB2 / CD2\n⇒ AB / CD = √(1 / 4) = 1 / 2\n⇒ Since the ratio of AB : CD is 1 : 2, AB is the shorter side.\n⇒ AB = 12 cm.\n⇒ CD = 2 × 12 = 24 cm.\n⇒ Area of Trapezium = 1/2 × (AB + CD) × h\n⇒ Area = 1/2 × (12 + 24) × 15\n⇒ Area = 1/2 × 36 × 15\n⇒ Area = 18 × 15 = 270 cm2.\n∴ The correct answer is 270 cm2.\n\nAdditional Information\nSimilar Triangles Area Theorem\n\nThe ratio of the areas of two similar triangles is strictly equal to the square of the ratio of their corresponding sides.\n\nProperties of a Trapezium\n\nA trapezium is a quadrilateral with exactly one pair of parallel sides. The diagonals of a trapezium intersect each other, dividing themselves proportionally.\n\nArea of a Trapezium\n\nThe area formula is 1/2 × (a + b) × h, where 'a' and 'b' represent the parallel bases, and 'h' represents the perpendicular distance between them.",
     "topic": "Geometry",
     "subtopic": "Triangles - Similarity & Area Theorem",
     "conceptTested": "The ratio of areas of two similar triangles is equal to the square of the ratio of their corresponding sides.",
@@ -751,7 +905,9 @@
       "topic": "Geometry",
       "subtopic": "Triangles - Similarity & Area Theorem",
       "conceptTested": "The ratio of areas of two similar triangles is equal to the square of the ratio of their corresponding sides."
-    }
+    },
+    "question": "In a trapezium ABCD, AB || CD and perpendicular distance between them is 15 cm. Diagonals of trapezium cut at point O, shorter of the two parallel side is 12 cm long and if ratio of area of ∆AOB to the area of ∆COD is 1 : 4, then what will be the area of trapezium?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -767,12 +923,16 @@
     "avgTime": "00:46",
     "questionText": "A solid sphere of radius 3 cm is melted to form a right circular cone such that the height of the cone is half the radius of the cone. Find the radius of the cone.",
     "options": {
+      "a": "3 cm",
+      "b": "4 cm",
+      "c": "5 cm",
+      "d": "6 cm",
       "A": "3 cm",
       "B": "4 cm",
       "C": "5 cm",
       "D": "6 cm"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen a solid object is melted to form another, the total volume remains conserved.\n\n⇒ Volume of Sphere = Volume of Cone\n⇒ (4/3) × π × (3)3 = (1/3) × π × r2 × (r / 2)\n⇒ 4 × 27 = r3 / 2\n⇒ r3 = 216 ⇒ r = 6 cm\n∴ The correct answer is 6 cm.\n\nAlternate Method\nGiven:\nRadius of the sphere\n(R) = 3 cm\nLet the radius of the cone be r cm.\nHeight of the cone (h) = r / 2\n\nFormula Used:\nVolume of Sphere = (4/3) × π × R3\nVolume of Cone = (1/3) × π × r2 × h\n\nCalculations:\n⇒ Volume of Cone = Volume of Sphere\n⇒ (1/3) × π × r2 × h = (4/3) × π × R3\n\nSubstituting the given values into the equation:\n\n⇒ (1/3) × π × r2 × (r / 2) = (4/3) × π × 33\n\nCanceling out (π / 3) from both sides of the equation:\n\n⇒ r3 / 2 = 4 × 27\n⇒ r3 / 2 = 108\n⇒ r3 = 216\n⇒ r = (216)1/3\n⇒ r = 6 cm\n∴ The correct answer is 6 cm.\n\nAdditional Information\nPrinciple of Melting and Recasting\n\nWhenever a 3D solid figure is melted and converted into another solid, the initial volume is exactly equal to the final volume regardless of the shape.\n\nTotal Surface Area of Cone\n\nThe total surface area of a cone involves the curved area plus the circular base area: TSA = π × r × l + π × r2, where l is the slant height.\n\nSurface Area of Sphere\n\nA complete sphere has a continuous curved surface with an area given by the formula: SA = 4 × π × R2.",
+    "solution": "Solution\n\nShortcut Trick\nWhen a solid object is melted to form another, the total volume remains conserved.\n\n⇒ Volume of Sphere = Volume of Cone\n⇒ (4/3) × π × (3)³ = (1/3) × π × r2 × (r / 2)\n⇒ 4 × 27 = r3 / 2\n⇒ r3 = 216 ⇒ r = 6 cm\n∴ The correct answer is 6 cm.\n\nAlternate Method\nGiven:\nRadius of the sphere\n(R) = 3 cm\nLet the radius of the cone be r cm.\nHeight of the cone (h) = r / 2\n\nFormula Used:\nVolume of Sphere = (4/3) × π × R3\nVolume of Cone = (1/3) × π × r2 × h\n\nCalculations:\n⇒ Volume of Cone = Volume of Sphere\n⇒ (1/3) × π × r2 × h = (4/3) × π × R3\n\nSubstituting the given values into the equation:\n\n⇒ (1/3) × π × r2 × (r / 2) = (4/3) × π × 33\n\nCanceling out (π / 3) from both sides of the equation:\n\n⇒ r3 / 2 = 4 × 27\n⇒ r3 / 2 = 108\n⇒ r3 = 216\n⇒ r = (216)1/3\n⇒ r = 6 cm\n∴ The correct answer is 6 cm.\n\nAdditional Information\nPrinciple of Melting and Recasting\n\nWhenever a 3D solid figure is melted and converted into another solid, the initial volume is exactly equal to the final volume regardless of the shape.\n\nTotal Surface Area of Cone\n\nThe total surface area of a cone involves the curved area plus the circular base area: TSA = π × r × l + π × r2, where l is the slant height.\n\nSurface Area of Sphere\n\nA complete sphere has a continuous curved surface with an area given by the formula: SA = 4 × π × R2.",
     "topic": "Mensuration 3D",
     "subtopic": "Sphere & Cone - Conversion and Recasting",
     "conceptTested": "When a 3D solid figure is melted and recast into another, the total volume remains conserved.",
@@ -780,7 +940,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Sphere & Cone - Conversion and Recasting",
       "conceptTested": "When a 3D solid figure is melted and recast into another, the total volume remains conserved."
-    }
+    },
+    "question": "A solid sphere of radius 3 cm is melted to form a right circular cone such that the height of the cone is half the radius of the cone. Find the radius of the cone.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -796,6 +958,10 @@
     "avgTime": "00:43",
     "questionText": "If 15 men can do a piece of work in 12 days working 7 hours a day. How many men are needed to complete another work, which is thrice the first one, in 14 days working 9 hours a day?",
     "options": {
+      "a": "30",
+      "b": "40",
+      "c": "35",
+      "d": "28",
       "A": "30",
       "B": "40",
       "C": "35",
@@ -809,7 +975,9 @@
       "topic": "Time & Work",
       "subtopic": "Compound Proportion - MDH Rule",
       "conceptTested": "Chain Rule Formula: (M1 \\u00d7 D1 \\u00d7 H1) / W1 = (M2 \\u00d7 D2 \\u00d7 H2) / W2"
-    }
+    },
+    "question": "If 15 men can do a piece of work in 12 days working 7 hours a day. How many men are needed to complete another work, which is thrice the first one, in 14 days working 9 hours a day?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -825,12 +993,16 @@
     "avgTime": "00:50",
     "questionText": "A worker covers a distance of 81 km in 11 hours. He travels partly on foot at 4.5 km/h and partly on bicycle at 15 km/h. What is the distance covered on the cycle?",
     "options": {
+      "a": "45 km",
+      "b": "37.5 km",
+      "c": "52.5 km",
+      "d": "30 km",
       "A": "45 km",
       "B": "37.5 km",
       "C": "52.5 km",
       "D": "30 km"
     },
-    "solution": "Solution\n\nShortcut Trick\nIf the worker travelled the entire 11 hours on foot, the distance covered = 11 × 4.5 = 49.5 km.\n\nExtra distance remaining to be covered = 81 − 49.5 = 31.5 km.\nDifference in speeds between the cycle and foot = 15 − 4.5 = 10.5 km/h.\nTime spent travelling on the cycle = 31.5 ÷ 10.5 = 3 hours.\nDistance covered on the cycle = 3 × 15 = 45 km.\n∴ The correct answer is 45 km.\n\nAlternate Method\nGiven:\nTotal distance = 81 km\nTotal time = 11 hours\nSpeed on foot = 4.5 km/h\nSpeed on cycle = 15 km/h\n\nFormula Used:\nDistance = Speed × Time\n\nCalculations:\n⇒ Let the time travelled on foot be t hours.\n⇒ Time travelled on the cycle = (11 − t) hours.\n⇒ Distance covered on foot + Distance covered on cycle = Total distance\n⇒ (4.5 × t) + 15 × (11 − t) = 81\n⇒ 4.5t + 165 − 15t = 81\n⇒ 10.5t = 165 − 81\n⇒ 10.5t = 84\n⇒ t = 84 ÷ 10.5 = 8 hours\n⇒ Time travelled on cycle = 11 − 8 = 3 hours.\n⇒ Distance covered on cycle = Speed × Time = 15 × 3 = 45 km.\n∴ The correct answer is 45 km.\n\nAdditional Information\nAverage Speed\n\nAverage Speed = Total Distance ÷ Total Time. It represents the constant speed required to cover the whole distance in the given timeframe without any variations.\n\nAlligation Method in Speed\n\nWhen applying the cross-alligation method directly on two different speeds to obtain an average speed, the resulting ratio strictly represents the ratio of time taken, not the distance.\n\nShift / Minimum Value Trick\n\nWhen a total value is comprised of two parts, assuming the entire operation happens at the minimum rate allows finding the specific remainder. Dividing this remainder by the unit rate difference reveals the proportion of the higher rate component.",
+    "solution": "Solution\n\nShortcut Trick\nIf the worker travelled the entire 11 hours on foot, the distance covered = 11 × 4.5 = 49.5 km.\n\nExtra distance remaining to be covered = 81 - 49.5 = 31.5 km.\nDifference in speeds between the cycle and foot = 15 - 4.5 = 10.5 km/h.\nTime spent travelling on the cycle = 31.5 ÷ 10.5 = 3 hours.\nDistance covered on the cycle = 3 × 15 = 45 km.\n∴ The correct answer is 45 km.\n\nAlternate Method\nGiven:\nTotal distance = 81 km\nTotal time = 11 hours\nSpeed on foot = 4.5 km/h\nSpeed on cycle = 15 km/h\n\nFormula Used:\nDistance = Speed × Time\n\nCalculations:\n⇒ Let the time travelled on foot be t hours.\n⇒ Time travelled on the cycle = (11 - t) hours.\n⇒ Distance covered on foot + Distance covered on cycle = Total distance\n⇒ (4.5 × t) + 15 × (11 - t) = 81\n⇒ 4.5t + 165 - 15t = 81\n⇒ 10.5t = 165 - 81\n⇒ 10.5t = 84\n⇒ t = 84 ÷ 10.5 = 8 hours\n⇒ Time travelled on cycle = 11 - 8 = 3 hours.\n⇒ Distance covered on cycle = Speed × Time = 15 × 3 = 45 km.\n∴ The correct answer is 45 km.\n\nAdditional Information\nAverage Speed\n\nAverage Speed = Total Distance ÷ Total Time. It represents the constant speed required to cover the whole distance in the given timeframe without any variations.\n\nAlligation Method in Speed\n\nWhen applying the cross-alligation method directly on two different speeds to obtain an average speed, the resulting ratio strictly represents the ratio of time taken, not the distance.\n\nShift / Minimum Value Trick\n\nWhen a total value is comprised of two parts, assuming the entire operation happens at the minimum rate allows finding the specific remainder. Dividing this remainder by the unit rate difference reveals the proportion of the higher rate component.",
     "topic": "Time, Speed & Distance",
     "subtopic": "Mixtures & Alligation in Speed",
     "conceptTested": "Distance = Speed \\u00d7 Time; applying linear equations to solve combined motion parts.",
@@ -838,7 +1010,9 @@
       "topic": "Time, Speed & Distance",
       "subtopic": "Mixtures & Alligation in Speed",
       "conceptTested": "Distance = Speed \\u00d7 Time; applying linear equations to solve combined motion parts."
-    }
+    },
+    "question": "A worker covers a distance of 81 km in 11 hours. He travels partly on foot at 4.5 km/h and partly on bicycle at 15 km/h. What is the distance covered on the cycle?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -854,12 +1028,16 @@
     "avgTime": "00:27",
     "questionText": "An equilateral triangle with side a units is cut on the vertices to make it a regular hexagon. What is the area of the hexagon?",
     "options": {
+      "a": "3a223√ square units",
+      "b": "2a233√ square units",
+      "c": "2a23√ square units",
+      "d": "a223√ square units",
       "A": "3a223√ square units",
       "B": "2a233√ square units",
       "C": "2a23√ square units",
       "D": "a223√ square units"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen the vertices of an equilateral triangle are cut to form a regular hexagon, the side length is exactly trisected.\n\nSide of the regular hexagon = Side of triangle ÷ 3 = a / 3.\nArea of a regular hexagon = 6 × Area of small equilateral triangle = 6 × (√3 ÷ 4) × (side)2.\nArea = 6 × (√3 ÷ 4) × (a / 3)2 = (3√3 ÷ 2) × (a2 ÷ 9).\nArea = √3a2 ÷ 6 = a2 / (2√3).\n∴ The correct answer is a2 / (2√3) square units.\n\nAlternate Method\nGiven:\nAn equilateral triangle with side length a.\n\nThe vertices are cut out to make a regular hexagon.\n\nFormula Used:\nArea of an equilateral triangle = (√3 ÷ 4) × a2\nArea of a regular hexagon = 6 × (√3 ÷ 4) × x2 (where x is the side length)\n\nCalculations:\n⇒ Let the side length of the regular hexagon be x.\n⇒ When cutting the vertices of an equilateral triangle to form a regular hexagon, the cut-out portions are smaller equilateral triangles of side length x.\n⇒ The original side 'a' consists of three linear segments: one side of a cut-off triangle, one side of the hexagon, and one side of another cut-off triangle.\n⇒ x + x + x = a\n⇒ 3x = a\n⇒ x = a / 3\n⇒ The area of the regular hexagon is the combined area of 6 small equilateral triangles of side x.\n⇒ Area = 6 × [(√3 ÷ 4) × (a / 3)2]\n⇒ Area = 6 × (√3 ÷ 4) × (a2 ÷ 9)\n⇒ Area = (6√3 × a2) ÷ 36\n⇒ Area = (√3 × a2) ÷ 6\n⇒ Multiplying numerator and denominator by √3 to simplify the fraction:\n⇒ Area = (√3 × √3 × a2) ÷ (6 × √3) = 3a2 ÷ 6√3\n⇒ Area = a2 / (2√3)\n∴ The correct answer is a2 / (2√3) square units.\n\nAdditional Information\nArea of an Equilateral Triangle\n\nThe area of an equilateral triangle with side 'a' is given by Area = (√3 ÷ 4) × a2, and its height is h = (√3 ÷ 2) × a.\n\nRegular Hexagon Area\n\nA regular hexagon with side 'x' is structurally made of 6 identical equilateral triangles. Its total area is 6 × (√3 ÷ 4) × x2 = (3√3 ÷ 2) × x2.\n\nInradius & Circumradius of Equilateral Triangle\n\nFor an equilateral triangle of side 'a', the inradius is r = a ÷ (2√3) and the circumradius is R = a ÷ √3. Note that the circumradius is always exactly double the inradius (R = 2r).\n\nMax Area Hexagon in a Triangle\n\nThe largest regular hexagon that can be inscribed in any equilateral triangle is formed precisely by cutting off its corners, and its side length is always strictly one-third of the parent triangle's side.",
+    "solution": "Solution\n\nShortcut Trick\nWhen the vertices of an equilateral triangle are cut to form a regular hexagon, the side length is exactly trisected.\n\nSide of the regular hexagon = Side of triangle ÷ 3 = a / 3.\nArea of a regular hexagon = 6 × Area of small equilateral triangle = 6 × (√3 ÷ 4) × (side)².\nArea = 6 × (√3 ÷ 4) × (a / 3)² = (3√3 ÷ 2) × (a2 ÷ 9).\nArea = √3a2 ÷ 6 = a2 / (2√3).\n∴ The correct answer is a2 / (2√3) square units.\n\nAlternate Method\nGiven:\nAn equilateral triangle with side length a.\n\nThe vertices are cut out to make a regular hexagon.\n\nFormula Used:\nArea of an equilateral triangle = (√3 ÷ 4) × a2\nArea of a regular hexagon = 6 × (√3 ÷ 4) × x2 (where x is the side length)\n\nCalculations:\n⇒ Let the side length of the regular hexagon be x.\n⇒ When cutting the vertices of an equilateral triangle to form a regular hexagon, the cut-out portions are smaller equilateral triangles of side length x.\n⇒ The original side 'a' consists of three linear segments: one side of a cut-off triangle, one side of the hexagon, and one side of another cut-off triangle.\n⇒ x + x + x = a\n⇒ 3x = a\n⇒ x = a / 3\n⇒ The area of the regular hexagon is the combined area of 6 small equilateral triangles of side x.\n⇒ Area = 6 × [(√3 ÷ 4) × (a / 3)²]\n⇒ Area = 6 × (√3 ÷ 4) × (a2 ÷ 9)\n⇒ Area = (6√3 × a2) ÷ 36\n⇒ Area = (√3 × a2) ÷ 6\n⇒ Multiplying numerator and denominator by √3 to simplify the fraction:\n⇒ Area = (√3 × √3 × a2) ÷ (6 × √3) = 3a2 ÷ 6√3\n⇒ Area = a2 / (2√3)\n∴ The correct answer is a2 / (2√3) square units.\n\nAdditional Information\nArea of an Equilateral Triangle\n\nThe area of an equilateral triangle with side 'a' is given by Area = (√3 ÷ 4) × a2, and its height is h = (√3 ÷ 2) × a.\n\nRegular Hexagon Area\n\nA regular hexagon with side 'x' is structurally made of 6 identical equilateral triangles. Its total area is 6 × (√3 ÷ 4) × x2 = (3√3 ÷ 2) × x2.\n\nInradius & Circumradius of Equilateral Triangle\n\nFor an equilateral triangle of side 'a', the inradius is r = a ÷ (2√3) and the circumradius is R = a ÷ √3. Note that the circumradius is always exactly double the inradius (R = 2r).\n\nMax Area Hexagon in a Triangle\n\nThe largest regular hexagon that can be inscribed in any equilateral triangle is formed precisely by cutting off its corners, and its side length is always strictly one-third of the parent triangle's side.",
     "topic": "Mensuration 2D",
     "subtopic": "Polygons & Triangles",
     "conceptTested": "Area of an equilateral triangle = (\\u221a3 / 4)a^2 and Area of a regular hexagon = 6 \\u00d7 (\\u221a3 / 4)x^2.",
@@ -867,7 +1045,9 @@
       "topic": "Mensuration 2D",
       "subtopic": "Polygons & Triangles",
       "conceptTested": "Area of an equilateral triangle = (\\u221a3 / 4)a^2 and Area of a regular hexagon = 6 \\u00d7 (\\u221a3 / 4)x^2."
-    }
+    },
+    "question": "An equilateral triangle with side a units is cut on the vertices to make it a regular hexagon. What is the area of the hexagon?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -883,12 +1063,16 @@
     "avgTime": "00:31",
     "questionText": "A can do a piece of work in 15 days and B is 25% more efficient than A. If A and B both work for 4 days and after 4 days C can complete the remaining work alone in 8 days, then find time taken by A, B and C together to complete the whole work.",
     "options": {
+      "a": "6 days",
+      "b": "5 days",
+      "c": "8 days",
+      "d": "10 days",
       "A": "6 days",
       "B": "5 days",
       "C": "8 days",
       "D": "10 days"
     },
-    "solution": "Solution\n\nShortcut Trick\nAssume A's efficiency = 4 units/day → B's efficiency = 1.25 × 4 = 5 units/day.\nTotal Work = 15 × 4 = 60 units.\nWork done by A & B in 4 days = (4 + 5) × 4 = 36 units → Remaining = 24 units.\nC's efficiency = 24 ÷ 8 = 3 units/day → Total combined efficiency = 4 + 5 + 3 = 12 units/day.\n∴ The correct answer is 5 days.\n\nAlternate Method\nGiven:\nTime taken by A = 15 days\n\nB is 25% more efficient than A.\n\nTime A and B worked together = 4 days\nTime taken by C to complete the remaining work = 8 days\n\nFormula Used:\nTotal Work = Efficiency × Time Taken\n\nCalculations:\n⇒ Efficiency ratio of A to B = 100 : 125 = 4 : 5\n⇒ Time ratio of A to B = 5 : 4\n⇒ Time taken by B = (15 ÷ 5) × 4 = 12 days\n⇒ Combined efficiency of A and B = 4 + 5 = 9 units/day\n⇒ Total Work = 15 × 4 = 60 units\n⇒ Work done by A and B in 4 days = 9 × 4 = 36 units\n⇒ Remaining work = 60 − 36 = 24 units\n⇒ Efficiency of C = Remaining work ÷ Time taken = 24 ÷ 8 = 3 units/day\n⇒ Time taken by C to complete whole work alone = 60 ÷ 3 = 20 days\n\nPerson\tDays\tTotal Work\tEfficiency\nA\t15\t60\t4\nB\t12\t5\nC\t20\t3\n\n⇒ Total combined efficiency of A, B, and C = 4 + 5 + 3 = 12 units/day\n⇒ Time taken by A, B, and C together = Total Work ÷ Total efficiency\n⇒ Time taken = 60 ÷ 12 = 5 days\n∴ The correct answer is 5 days.\n\nAdditional Information\nWork & Wages\n\nWages are distributed in proportion to the total work done by each individual. If all individuals work for the same number of days, wages are distributed directly in the ratio of their efficiencies.\n\nAlternate Day Work\n\nWhen people work on alternate days, calculate the work done in one complete cycle (e.g., 2 days for 2 people) and then multiply to reach closer to the total work, the remaining work is done by the person whose turn it is next.\n\nPipes & Cisterns\n\nSimilar to Time & Work, inlet pipes have positive efficiency while outlet or leak pipes have negative efficiency. The net efficiency determines the time taken to fill or empty the tank.",
+    "solution": "Solution\n\nShortcut Trick\nAssume A's efficiency = 4 units/day → B's efficiency = 1.25 × 4 = 5 units/day.\nTotal Work = 15 × 4 = 60 units.\nWork done by A & B in 4 days = (4 + 5) × 4 = 36 units → Remaining = 24 units.\nC's efficiency = 24 ÷ 8 = 3 units/day → Total combined efficiency = 4 + 5 + 3 = 12 units/day.\n∴ The correct answer is 5 days.\n\nAlternate Method\nGiven:\nTime taken by A = 15 days\n\nB is 25% more efficient than A.\n\nTime A and B worked together = 4 days\nTime taken by C to complete the remaining work = 8 days\n\nFormula Used:\nTotal Work = Efficiency × Time Taken\n\nCalculations:\n⇒ Efficiency ratio of A to B = 100 : 125 = 4 : 5\n⇒ Time ratio of A to B = 5 : 4\n⇒ Time taken by B = (15 ÷ 5) × 4 = 12 days\n⇒ Combined efficiency of A and B = 4 + 5 = 9 units/day\n⇒ Total Work = 15 × 4 = 60 units\n⇒ Work done by A and B in 4 days = 9 × 4 = 36 units\n⇒ Remaining work = 60 - 36 = 24 units\n⇒ Efficiency of C = Remaining work ÷ Time taken = 24 ÷ 8 = 3 units/day\n⇒ Time taken by C to complete whole work alone = 60 ÷ 3 = 20 days\n\nPerson\tDays\tTotal Work\tEfficiency\nA\t15\t60\t4\nB\t12\t5\nC\t20\t3\n\n⇒ Total combined efficiency of A, B, and C = 4 + 5 + 3 = 12 units/day\n⇒ Time taken by A, B, and C together = Total Work ÷ Total efficiency\n⇒ Time taken = 60 ÷ 12 = 5 days\n∴ The correct answer is 5 days.\n\nAdditional Information\nWork & Wages\n\nWages are distributed in proportion to the total work done by each individual. If all individuals work for the same number of days, wages are distributed directly in the ratio of their efficiencies.\n\nAlternate Day Work\n\nWhen people work on alternate days, calculate the work done in one complete cycle (e.g., 2 days for 2 people) and then multiply to reach closer to the total work, the remaining work is done by the person whose turn it is next.\n\nPipes & Cisterns\n\nSimilar to Time & Work, inlet pipes have positive efficiency while outlet or leak pipes have negative efficiency. The net efficiency determines the time taken to fill or empty the tank.",
     "topic": "Time & Work",
     "subtopic": "Efficiency and Combined Work",
     "conceptTested": "Total Work equals the product of combined efficiency and time taken.",
@@ -896,7 +1080,9 @@
       "topic": "Time & Work",
       "subtopic": "Efficiency and Combined Work",
       "conceptTested": "Total Work equals the product of combined efficiency and time taken."
-    }
+    },
+    "question": "A can do a piece of work in 15 days and B is 25% more efficient than A. If A and B both work for 4 days and after 4 days C can complete the remaining work alone in 8 days, then find time taken by A, B and C together to complete the whole work.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -912,12 +1098,16 @@
     "avgTime": "00:27",
     "questionText": "What is the value of ((1 + sec^2 A) / (1 + cos^2 A)) × ((1 + sin^2 A) / (1 + cosec^2 A))?",
     "options": {
-      "A": "cos2 A",
-      "B": "cosec2 A",
-      "C": "sec2 A",
-      "D": "tan2 A"
+      "a": "cos²A",
+      "b": "cosec²A",
+      "c": "sec²A",
+      "d": "tan²A",
+      "A": "cos²A",
+      "B": "cosec²A",
+      "C": "sec²A",
+      "D": "tan²A"
     },
-    "solution": "Solution\n\nShortcut Trick\nAssume an angle, say A = 45°, to quickly evaluate the expression.\n⇒ sec245° = 2, cos245° = 1/2, sin245° = 1/2, cosec245° = 2\n⇒ Expression = [(1 + 2) ÷ (1 + 1/2)] × [(1 + 1/2) ÷ (1 + 2)]\n⇒ Expression = (3 ÷ 3/2) × (3/2 ÷ 3) = 2 × 1/2 = 1\nFrom the given options, tan245° = (1)2 = 1.\n∴ The correct answer is tan2 A.\n\nAlternate Method\nGiven:\nExpression = [(1 + sec2A) ÷ (1 + cos2A)] × [(1 + sin2A) ÷ (1 + cosec2A)]\n\nFormula Used:\nsec A = 1 / cos A, cosec A = 1 / sin A, tan A = sin A / cos A\n\nCalculations:\n⇒ First part = (1 + 1/cos2A) ÷ (1 + cos2A)\n⇒ First part = [(cos2A + 1) / cos2A] ÷ (1 + cos2A) = 1 / cos2A\n⇒ Second part = (1 + sin2A) ÷ (1 + 1/sin2A)\n⇒ Second part = (1 + sin2A) ÷ [(sin2A + 1) / sin2A] = sin2A\n⇒ Complete Expression = (1 / cos2A) × sin2A\n⇒ Expression = sin2A / cos2A = tan2A\n∴ The correct answer is tan2 A.\n\nAdditional Information\nReciprocal Trigonometric Identities\n\nFunctions that are inverted forms of each other: sec θ = 1 ÷ cos θ and cosec θ = 1 ÷ sin θ.\n\nQuotient Identities\n\nThese identities relate tan and cot to sine and cosine: tan θ = sin θ ÷ cos θ and cot θ = cos θ ÷ sin θ.\n\nValue Putting Technique\n\nIn the simplification of trigonometric expressions, substituting an angle like θ = 45° easily converts complex variables into numerals, aiding rapid elimination of wrong options.",
+    "solution": "Solution\n\nShortcut Trick\nAssume an angle, say A = 45°, to quickly evaluate the expression.\n⇒ sec245° = 2, cos245° = 1/2, sin245° = 1/2, cosec245° = 2\n⇒ Expression = [(1 + 2) ÷ (1 + 1/2)] × [(1 + 1/2) ÷ (1 + 2)]\n⇒ Expression = (3 ÷ 3/2) × (3/2 ÷ 3) = 2 × 1/2 = 1\nFrom the given options, tan245° = (1)² = 1.\n∴ The correct answer is tan²A.\n\nAlternate Method\nGiven:\nExpression = [(1 + sec²A) ÷ (1 + cos²A)] × [(1 + sin²A) ÷ (1 + cosec²A)]\n\nFormula Used:\nsec A = 1 / cos A, cosec A = 1 / sin A, tan A = sin A / cos A\n\nCalculations:\n⇒ First part = (1 + 1/cos²A) ÷ (1 + cos²A)\n⇒ First part = [(cos²A + 1) / cos²A] ÷ (1 + cos²A) = 1 / cos²A\n⇒ Second part = (1 + sin²A) ÷ (1 + 1/sin²A)\n⇒ Second part = (1 + sin²A) ÷ [(sin²A + 1) / sin²A] = sin²A\n⇒ Complete Expression = (1 / cos²A) × sin²A\n⇒ Expression = sin²A / cos²A = tan²A\n∴ The correct answer is tan²A.\n\nAdditional Information\nReciprocal Trigonometric Identities\n\nFunctions that are inverted forms of each other: sec θ = 1 ÷ cos θ and cosec θ = 1 ÷ sin θ.\n\nQuotient Identities\n\nThese identities relate tan and cot to sine and cosine: tan θ = sin θ ÷ cos θ and cot θ = cos θ ÷ sin θ.\n\nValue Putting Technique\n\nIn the simplification of trigonometric expressions, substituting an angle like θ = 45° easily converts complex variables into numerals, aiding rapid elimination of wrong options.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Simplification",
     "conceptTested": "Reciprocal and quotient trigonometric identities to simplify algebraic expressions.",
@@ -925,7 +1115,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Simplification",
       "conceptTested": "Reciprocal and quotient trigonometric identities to simplify algebraic expressions."
-    }
+    },
+    "question": "What is the value of ((1 + sec^2 A) / (1 + cos^2 A)) × ((1 + sin^2 A) / (1 + cosec^2 A))?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -941,12 +1133,16 @@
     "avgTime": "00:44",
     "questionText": "Vinay sells an article at a profit of 20 percent. If both the cost price and selling price are reduced by Rs. 20, then the profit becomes 40 percent. What is the initial cost price?",
     "options": {
+      "a": "Rs. 80",
+      "b": "Rs. 60",
+      "c": "Rs. 50",
+      "d": "Rs. 40",
       "A": "Rs. 80",
       "B": "Rs. 60",
       "C": "Rs. 50",
       "D": "Rs. 40"
     },
-    "solution": "Solution\n\nShortcut Trick\nInitial ratio of C\nP : SP = 100 : 120 = 5 : 6\nNew ratio of C\nP : SP = 100 : 140 = 5 : 7 (since both CP and SP are reduced by ₹20)\nApplying the cross-multiplication method: Difference in ratio units = (5 × 7) − (5 × 6) = 5 units.\nAbsolute difference in value = (7 × 20) − (5 × 20) = 40.\n⇒ 5 units = ₹40 (Since initial CP is exactly 5 units, Initial CP = ₹40).\n∴ The correct answer is ₹40.\n\nAlternate Method\nGiven:\nInitial profit = 20%\n\nBoth Cost Price (CP) and Selling Price (SP) are reduced by ₹20.\n\nNew profit = 40%\n\nFormula Used:\nSP = CP × (100 + Profit%) ÷ 100\nInitial Scenario\nCP = 5x\n+20% Profit\nSP = 6x\n− ₹20\n− ₹20\nNew Scenario\nCP = 5x − 20\n+40% Profit\nSP = 6x − 20\nEquation: (6x − 20) = 1.4 × (5x − 20)\n\nCalculations:\nLet the initial Cost Price (CP) be 5x and Selling Price (SP) be 6x (from the 20% profit ratio of 100:120).\n\n⇒ New CP = 5x − 20\n⇒ New SP = 6x − 20\n\nThe new profit is 40%, so the ratio of new CP to new SP is 100 : 140 = 5 : 7.\n\n⇒ (5x − 20) ÷ (6x − 20) = 5 ÷ 7\n⇒ 7 × (5x − 20) = 5 × (6x − 20)\n⇒ 35x − 140 = 30x − 100\n⇒ 35x − 30x = 140 − 100\n⇒ 5x = 40\n⇒ Initial Cost Price = 5x = ₹40.\n∴ The correct answer is ₹40.\n\nAdditional Information\nProfit and Loss Ratios\n\nProfit or loss is always calculated on the base of Cost Price (CP) unless specifically mentioned otherwise. Profit % = (SP − CP) ÷ CP × 100.\n\nCross Multiplication Method\n\nWhen two related quantities (like CP and SP) change by equal or unequal amounts, their final ratio can be determined smoothly using cross-product differences directly equated to the absolute magnitude of change.\n\nMarked Price and Discount\n\nDiscount is exclusively given on the Marked Price (MP). The relationship connecting Cost Price, Marked Price, Profit% and Discount% is MP ÷ CP = (100 + Profit%) ÷ (100 − Discount%).",
+    "solution": "Solution\n\nShortcut Trick\nInitial ratio of C\nP : SP = 100 : 120 = 5 : 6\nNew ratio of C\nP : SP = 100 : 140 = 5 : 7 (since both CP and SP are reduced by ₹20)\nApplying the cross-multiplication method: Difference in ratio units = (5 × 7) - (5 × 6) = 5 units.\nAbsolute difference in value = (7 × 20) - (5 × 20) = 40.\n⇒ 5 units = ₹40 (Since initial CP is exactly 5 units, Initial CP = ₹40).\n∴ The correct answer is ₹40.\n\nAlternate Method\nGiven:\nInitial profit = 20%\n\nBoth Cost Price (CP) and Selling Price (SP) are reduced by ₹20.\n\nNew profit = 40%\n\nFormula Used:\nSP = CP × (100 + Profit%) ÷ 100\nInitial Scenario\nCP = 5x\n+20% Profit\nSP = 6x\n- ₹20\n- ₹20\nNew Scenario\nCP = 5x - 20\n+40% Profit\nSP = 6x - 20\nEquation: (6x - 20) = 1.4 × (5x - 20)\n\nCalculations:\nLet the initial Cost Price (CP) be 5x and Selling Price (SP) be 6x (from the 20% profit ratio of 100:120).\n\n⇒ New CP = 5x - 20\n⇒ New SP = 6x - 20\n\nThe new profit is 40%, so the ratio of new CP to new SP is 100 : 140 = 5 : 7.\n\n⇒ (5x - 20) ÷ (6x - 20) = 5 ÷ 7\n⇒ 7 × (5x - 20) = 5 × (6x - 20)\n⇒ 35x - 140 = 30x - 100\n⇒ 35x - 30x = 140 - 100\n⇒ 5x = 40\n⇒ Initial Cost Price = 5x = ₹40.\n∴ The correct answer is ₹40.\n\nAdditional Information\nProfit and Loss Ratios\n\nProfit or loss is always calculated on the base of Cost Price (CP) unless specifically mentioned otherwise. Profit % = (SP - CP) ÷ CP × 100.\n\nCross Multiplication Method\n\nWhen two related quantities (like CP and SP) change by equal or unequal amounts, their final ratio can be determined smoothly using cross-product differences directly equated to the absolute magnitude of change.\n\nMarked Price and Discount\n\nDiscount is exclusively given on the Marked Price (MP). The relationship connecting Cost Price, Marked Price, Profit% and Discount% is MP ÷ CP = (100 + Profit%) ÷ (100 - Discount%).",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Cost Price and Selling Price Variations",
     "conceptTested": "Relation between Cost Price and Selling Price under percentage profit changes.",
@@ -954,7 +1150,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Cost Price and Selling Price Variations",
       "conceptTested": "Relation between Cost Price and Selling Price under percentage profit changes."
-    }
+    },
+    "question": "Vinay sells an article at a profit of 20 percent. If both the cost price and selling price are reduced by Rs. 20, then the profit becomes 40 percent. What is the initial cost price?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -970,12 +1168,16 @@
     "avgTime": "00:25",
     "questionText": "If the radius of a sphere is increased by 3 cm, then its surface area increases by 156π cm^2. The radius of the sphere before the increase was:",
     "options": {
+      "a": "7 cm",
+      "b": "8 cm",
+      "c": "6 cm",
+      "d": "5 cm",
       "A": "7 cm",
       "B": "8 cm",
       "C": "6 cm",
       "D": "5 cm"
     },
-    "solution": "Solution\n\nShortcut Trick\nIncrease in surface area = 4π[(r + 3)2 − r2] = 156π\n⇒ (r + 3)2 − r2 = 39\n⇒ r2 + 6r + 9 − r2 = 39\n⇒ 6r = 30 ⇒ r = 5 cm\n∴ The correct answer is 5 cm.\n\nAlternate Method\nGiven:\nIncrease in radius = 3 cm\nIncrease in surface area = 156π cm2\n\nFormula Used:\nSurface area of a sphere = 4πr2\n\nCalculations:\nLet the original radius of the sphere be r cm.\n⇒ Original surface area = 4πr2\n⇒ New radius = (r + 3) cm\n⇒ New surface area = 4π(r + 3)2\n\nAccording to the given condition:\n\n⇒ 4π(r + 3)2 − 4πr2 = 156π\n\nDividing the entire equation by 4π:\n\n⇒ (r + 3)2 − r2 = 39\n⇒ (r2 + 6r + 9) − r2 = 39\n⇒ 6r + 9 = 39\n⇒ 6r = 30\n⇒ r = 5 cm\n∴ The correct answer is 5 cm.\n\nAdditional Information\nVolume of a Sphere\n\nThe volume of a sphere is given by V = (4÷3)πr3, where r is the radius.\n\nHemisphere Surface Area\n\nThe curved surface area of a solid hemisphere is 2πr2, and its total surface area is 3πr2.\n\nVolume of a Hemisphere\n\nThe volume of a hemisphere is exactly half that of a full sphere, given by V = (2÷3)πr3.",
+    "solution": "Solution\n\nShortcut Trick\nIncrease in surface area = 4π[(r + 3)² - r2] = 156π\n⇒ (r + 3)² - r2 = 39\n⇒ r2 + 6r + 9 - r2 = 39\n⇒ 6r = 30 ⇒ r = 5 cm\n∴ The correct answer is 5 cm.\n\nAlternate Method\nGiven:\nIncrease in radius = 3 cm\nIncrease in surface area = 156π cm2\n\nFormula Used:\nSurface area of a sphere = 4πr2\n\nCalculations:\nLet the original radius of the sphere be r cm.\n⇒ Original surface area = 4πr2\n⇒ New radius = (r + 3) cm\n⇒ New surface area = 4π(r + 3)²\n\nAccording to the given condition:\n\n⇒ 4π(r + 3)² - 4πr2 = 156π\n\nDividing the entire equation by 4π:\n\n⇒ (r + 3)² - r2 = 39\n⇒ (r2 + 6r + 9) - r2 = 39\n⇒ 6r + 9 = 39\n⇒ 6r = 30\n⇒ r = 5 cm\n∴ The correct answer is 5 cm.\n\nAdditional Information\nVolume of a Sphere\n\nThe volume of a sphere is given by V = (4÷3)πr3, where r is the radius.\n\nHemisphere Surface Area\n\nThe curved surface area of a solid hemisphere is 2πr2, and its total surface area is 3πr2.\n\nVolume of a Hemisphere\n\nThe volume of a hemisphere is exactly half that of a full sphere, given by V = (2÷3)πr3.",
     "topic": "Mensuration 3D",
     "subtopic": "Sphere Surface Area and Volume",
     "conceptTested": "Surface area of a sphere is given by S = 4πr^2.",
@@ -983,7 +1185,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Sphere Surface Area and Volume",
       "conceptTested": "Surface area of a sphere is given by S = 4πr^2."
-    }
+    },
+    "question": "If the radius of a sphere is increased by 3 cm, then its surface area increases by 156π cm^2. The radius of the sphere before the increase was:",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -999,12 +1203,16 @@
     "avgTime": "00:26",
     "questionText": "Find the value of: ((6.25)^(1/2) × (0.0144)^(1/2) + 1) / ((0.027)^(1/3) × (81)^(1/4))",
     "options": {
+      "a": "57",
+      "b": "911",
+      "c": "139",
+      "d": "1",
       "A": "57",
       "B": "911",
       "C": "139",
       "D": "1"
     },
-    "solution": "Solution\np>Given:\n\n(6.25\n)\n1/2\n×(0.0144\n)\n1/2\n+1\n(0.027\n)\n1/3\n×(81\n)\n1/4\n(\n6.25\n)\n1\n/\n2\n×\n(\n0.0144\n)\n1\n/\n2\n+\n1\n(\n0.027\n)\n1\n/\n3\n×\n(\n81\n)\n1\n/\n4\n= ?\n\nFormula used:\na1/n =\na\n−\n−\n√\nn\n𝑎\n𝑛\n\nCalculation:\n? =\n(6.25\n)\n1/2\n×(0.0144\n)\n1/2\n+1\n(0.027\n)\n1/3\n×(81\n)\n1/4\n(\n6.25\n)\n1\n/\n2\n×\n(\n0.0144\n)\n1\n/\n2\n+\n1\n(\n0.027\n)\n1\n/\n3\n×\n(\n81\n)\n1\n/\n4\n\n⇒ ? =\n6.25\n√\n×\n0.0144\n√\n+1\n0.027\n√\n3\n×\n81\n√\n4\n6.25\n×\n0.0144\n+\n1\n0.027\n3\n×\n81\n4\n\n⇒ ? =\n2.5×0.12+1\n0.3×3\n2.5\n×\n0.12\n+\n1\n0.3\n×\n3\n\n⇒ ? =\n0.3+1\n0.9\n0.3\n+\n1\n0.9\n⇒ ? =\n1.3\n0.9\n1.3\n0.9\n⇒ ? =\n13\n9\n13\n9\n\n∴ The correct answer is option (3).",
+    "solution": "Solution\np>Given:\n\n(6.25\n)\n1/2\n×(0.0144\n)\n1/2\n+1\n(0.027\n)\n1/3\n×(81\n)\n1/4\n(\n6.25\n)\n1\n/\n2\n×\n(\n0.0144\n)\n1\n/\n2\n+\n1\n(\n0.027\n)\n1\n/\n3\n×\n(\n81\n)\n1\n/\n4\n= ?\n\nFormula used:\na1/n =\na\n-\n-\n√\nn\na\nn\n\nCalculation:\n? =\n(6.25\n)\n1/2\n×(0.0144\n)\n1/2\n+1\n(0.027\n)\n1/3\n×(81\n)\n1/4\n(\n6.25\n)\n1\n/\n2\n×\n(\n0.0144\n)\n1\n/\n2\n+\n1\n(\n0.027\n)\n1\n/\n3\n×\n(\n81\n)\n1\n/\n4\n\n⇒ ? =\n6.25\n√\n×\n0.0144\n√\n+1 / 0.027\n√\n3\n×\n81\n√\n4 / 6.25 × 0.0144\n+\n1 / 0.027 / 3 × 81 / 4\n\n⇒ ? =\n2.5×0.12+1 / 0.3×3 / 2.5 × 0.12\n+\n1 / 0.3 × 3\n\n⇒ ? =\n0.3+1 / 0.9 / 0.3 + 1 / 0.9\n⇒ ? =\n1.3 / 0.9 / 1.3 / 0.9\n⇒ ? =\n13\n9\n13 / 9\n\n∴ The correct answer is option (3).",
     "topic": "Simplification",
     "subtopic": "Surds and Indices",
     "conceptTested": "Evaluation of fractional exponents using radical roots and algebraic simplification.",
@@ -1012,7 +1220,9 @@
       "topic": "Simplification",
       "subtopic": "Surds and Indices",
       "conceptTested": "Evaluation of fractional exponents using radical roots and algebraic simplification."
-    }
+    },
+    "question": "Find the value of: ((6.25)^(1/2) × (0.0144)^(1/2) + 1) / ((0.027)^(1/3) × (81)^(1/4))",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -1028,12 +1238,16 @@
     "avgTime": "00:20",
     "questionText": "The average age of 35 children of the class is 16 years. 15 more children joined whose average age is 14 years. What is the average age of all the 50 children together?",
     "options": {
+      "a": "13.4 years",
+      "b": "14.5 years",
+      "c": "15.4 years",
+      "d": "16.5 years",
       "A": "13.4 years",
       "B": "14.5 years",
       "C": "15.4 years",
       "D": "16.5 years"
     },
-    "solution": "Solution\n\nShortcut Trick\nRatio of number of children = 35 : 15 = 7 : 3.\nLet base average be 14 years.\nDeviation of the first group from 14 = +2 years.\nNet deviation per child = (7 × 2) ÷ (7 + 3) = 14 ÷ 10 = +1.4 years.\nCombined Average = Base average + Net deviation = 14 + 1.4 = 15.4 years.\n∴ The correct answer is 15.4 years.\n\nAlternate Method\nGiven:\nNumber of children in group 1 = 35, Average age = 16 years.\nNumber of children in group 2 = 15, Average age = 14 years.\n\nFormula Used:\nCombined Average = (Total age of all groups) ÷ (Total number of members)\n35 children, Avg = 16\n15, Avg = 14\nCombined 50 children, Avg = 15.4\nTotal Age = (35 × 16) + (15 × 14) = 770\n\nCalculations:\n⇒ Total age of 35 children = 35 × 16 = 560 years\n⇒ Total age of 15 children = 15 × 14 = 210 years\n⇒ Total age of 50 children = 560 + 210 = 770 years\n⇒ Combined Average age = 770 ÷ 50\n⇒ Combined Average age = 15.4 years\n∴ The correct answer is 15.4 years.\n\nAdditional Information\nCombined Average Formula\n\nWhen two groups of sizes n1 and n2 have averages A1 and A2 respectively, their combined average is given by: A = (n1A1 + n2A2) ÷ (n1 + n2).\n\nDeviation Method for Averages\n\nAssume a base average and calculate the net deviation. Combined Average = Base Average + (Net Deviation ÷ Total Items). This reduces calculation time significantly.\n\nWeighted Average Ratio Trick\n\nInstead of using the actual number of items, use the simplified ratio of the number of items in each group to calculate the combined average or net deviation.",
+    "solution": "Solution\n\nShortcut Trick\nRatio of number of children = 35 : 15 = 7 : 3.\nLet base average be 14 years.\nDeviation of the first group from 14 = +2 years.\nNet deviation per child = (7 × 2) ÷ (7 + 3) = 14 ÷ 10 = +1.4 years.\nCombined Average = Base average + Net deviation = 14 + 1.4 = 15.4 years.\n∴ The correct answer is 15.4 years.\n\nAlternate Method\nGiven:\nNumber of children in group 1 = 35, Average age = 16 years.\nNumber of children in group 2 = 15, Average age = 14 years.\n\nFormula Used:\nCombined Average = (Total age of all groups) ÷ (Total number of members)³5 children, Avg = 16 / 15, Avg = 14\nCombined 50 children, Avg = 15.4\nTotal Age = (35 × 16) + (15 × 14) = 770\n\nCalculations:\n⇒ Total age of 35 children = 35 × 16 = 560 years\n⇒ Total age of 15 children = 15 × 14 = 210 years\n⇒ Total age of 50 children = 560 + 210 = 770 years\n⇒ Combined Average age = 770 ÷ 50\n⇒ Combined Average age = 15.4 years\n∴ The correct answer is 15.4 years.\n\nAdditional Information\nCombined Average Formula\n\nWhen two groups of sizes n1 and n2 have averages A1 and A2 respectively, their combined average is given by: A = (n1A1 + n2A2) ÷ (n1 + n2).\n\nDeviation Method for Averages\n\nAssume a base average and calculate the net deviation. Combined Average = Base Average + (Net Deviation ÷ Total Items). This reduces calculation time significantly.\n\nWeighted Average Ratio Trick\n\nInstead of using the actual number of items, use the simplified ratio of the number of items in each group to calculate the combined average or net deviation.",
     "topic": "Average",
     "subtopic": "Combined Average",
     "conceptTested": "Combined Average = Total sum of all observations divided by the total number of observations, simplified via group ratios or deviations.",
@@ -1041,7 +1255,9 @@
       "topic": "Average",
       "subtopic": "Combined Average",
       "conceptTested": "Combined Average = Total sum of all observations divided by the total number of observations, simplified via group ratios or deviations."
-    }
+    },
+    "question": "The average age of 35 children of the class is 16 years. 15 more children joined whose average age is 14 years. What is the average age of all the 50 children together?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -1057,12 +1273,16 @@
     "avgTime": "00:14",
     "questionText": "The speed of a boat downstream is 2.5 times its speed upstream. If the total time taken by the boat for going 15 km downstream and the same distance upstream is 4 2/3 hours, then what is the speed (in km/h) of the boat downstream?",
     "options": {
+      "a": "1112",
+      "b": "1114",
+      "c": "1058",
+      "d": "10",
       "A": "1112",
       "B": "1114",
       "C": "1058",
       "D": "10"
     },
-    "solution": "Solution\n\nShortcut Trick\nRatio of downstream to upstream speed = 2.5 : 1 = 5 : 2.\n\nFor equal distance, the time ratio is inversely proportional to the speed ratio = 2 : 5.\n\nTotal time = 2 + 5 = 7 units → 14/3 hours.\nTime taken downstream (2 units) = (14/3) × (2/7) = 4/3 hours.\nDownstream speed = Distance ÷ Time = 15 ÷ (4/3) = 11.25 = 111/4 km/h.\n∴ The correct answer is 111/4 km/h.\n\nAlternate Method\nGiven:\nTotal distance downstream = 15 km\nTotal distance upstream = 15 km\nTotal time = 42/3 hours = 14/3 hours\nRatio of downstream speed to upstream speed = 2.5 : 1 = 5 : 2.\nLet downstream speed = 5x and upstream speed = 2x.\nFormula Used: Time = Distance ÷ Speed\n\nCalculations:\n⇒ (15 ÷ 5x) + (15 ÷ 2x) = 14 / 3\n⇒ (3 / x) + (7.5 / x) = 14 / 3\n⇒ 10.5 / x = 14 / 3\n⇒ x = (10.5 × 3) ÷ 14\n⇒ x = 31.5 ÷ 14 = 2.25\n⇒ Downstream speed = 5x = 5 × 2.25 = 11.25 km/h\n⇒ 11.25 km/h = 111/4 km/h\n∴ The correct answer is 111/4 km/h.\n\nAdditional Information\nSpeed of Boat and Stream\n\nIf the speed of a boat in still water is B and the speed of the stream is S, then Downstream Speed (D) = B + S and Upstream Speed (U) = B − S.\n\nCalculating Individual Speeds\n\nSpeed of boat in still water (B) = (D + U) ÷ 2 and Speed of stream\n(S) = (D − U) ÷ 2.\n\nAverage Speed for Same Distance\n\nIf a boat travels the same distance upstream and downstream, the Average Speed = (2 × D × U) ÷ (D + U).",
+    "solution": "Solution\n\nShortcut Trick\nRatio of downstream to upstream speed = 2.5 : 1 = 5 : 2.\n\nFor equal distance, the time ratio is inversely proportional to the speed ratio = 2 : 5.\n\nTotal time = 2 + 5 = 7 units → 14/3 hours.\nTime taken downstream (2 units) = (14/3) × (2/7) = 4/3 hours.\nDownstream speed = Distance ÷ Time = 15 ÷ (4/3) = 11.25 = 111/4 km/h.\n∴ The correct answer is 111/4 km/h.\n\nAlternate Method\nGiven:\nTotal distance downstream = 15 km\nTotal distance upstream = 15 km\nTotal time = 42/3 hours = 14/3 hours\nRatio of downstream speed to upstream speed = 2.5 : 1 = 5 : 2.\nLet downstream speed = 5x and upstream speed = 2x.\nFormula Used: Time = Distance ÷ Speed\n\nCalculations:\n⇒ (15 ÷ 5x) + (15 ÷ 2x) = 14 / 3\n⇒ (3 / x) + (7.5 / x) = 14 / 3\n⇒ 10.5 / x = 14 / 3\n⇒ x = (10.5 × 3) ÷ 14\n⇒ x = 31.5 ÷ 14 = 2.25\n⇒ Downstream speed = 5x = 5 × 2.25 = 11.25 km/h\n⇒ 11.25 km/h = 111/4 km/h\n∴ The correct answer is 111/4 km/h.\n\nAdditional Information\nSpeed of Boat and Stream\n\nIf the speed of a boat in still water is B and the speed of the stream is S, then Downstream Speed (D) = B + S and Upstream Speed (U) = B - S.\n\nCalculating Individual Speeds\n\nSpeed of boat in still water (B) = (D + U) ÷ 2 and Speed of stream\n(S) = (D - U) ÷ 2.\n\nAverage Speed for Same Distance\n\nIf a boat travels the same distance upstream and downstream, the Average Speed = (2 × D × U) ÷ (D + U).",
     "topic": "Boats & Streams",
     "subtopic": "Downstream and Upstream Speed & Time",
     "conceptTested": "Time taken is inversely proportional to speed for a constant distance; Downstream speed = Distance ÷ Time.",
@@ -1070,7 +1290,9 @@
       "topic": "Boats & Streams",
       "subtopic": "Downstream and Upstream Speed & Time",
       "conceptTested": "Time taken is inversely proportional to speed for a constant distance; Downstream speed = Distance ÷ Time."
-    }
+    },
+    "question": "The speed of a boat downstream is 2.5 times its speed upstream. If the total time taken by the boat for going 15 km downstream and the same distance upstream is 4 2/3 hours, then what is the speed (in km/h) of the boat downstream?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -1086,6 +1308,10 @@
     "avgTime": "00:27",
     "questionText": "Select the option that will improve the underlined part of the given sentence. In case no improvement is needed, select 'No improvement required'.\nThe books has become enormously popular with students who do not like to read.",
     "options": {
+      "a": "have become enormous",
+      "b": "No improvement required",
+      "c": "have became enormously",
+      "d": "have become enormously",
       "A": "have become enormous",
       "B": "No improvement required",
       "C": "have became enormously",
@@ -1099,7 +1325,9 @@
       "topic": "Sentence Improvement",
       "subtopic": "Subject-Verb Agreement and Adverb-Adjective Modification",
       "conceptTested": ""
-    }
+    },
+    "question": "Select the option that will improve the underlined part of the given sentence. In case no improvement is needed, select 'No improvement required'.\nThe books has become enormously popular with students who do not like to read.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -1115,6 +1343,10 @@
     "avgTime": "00:35",
     "questionText": "I remember them taking me to the Zoo.",
     "options": {
+      "a": "I remember having being taken to the Zoo.",
+      "b": "I remember to be taken to the Zoo.",
+      "c": "I remember being taken to the Zoo.",
+      "d": "I remember I was taken to the Zoo.",
       "A": "I remember having being taken to the Zoo.",
       "B": "I remember to be taken to the Zoo.",
       "C": "I remember being taken to the Zoo.",
@@ -1128,7 +1360,9 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Gerunds in Active/Passive Conversion",
       "conceptTested": "Conversion of active voice sentences containing gerund structures (verb + -ing) to passive voice by substituting with 'being + V3'."
-    }
+    },
+    "question": "I remember them taking me to the Zoo.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -1144,6 +1378,10 @@
     "avgTime": "00:20",
     "questionText": "Select the most appropriate ANTONYM of the given word.\nTerse",
     "options": {
+      "a": "Authoritative",
+      "b": "Polite",
+      "c": "Timid",
+      "d": "Excited",
       "A": "Authoritative",
       "B": "Polite",
       "C": "Timid",
@@ -1157,7 +1395,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Antonyms",
       "conceptTested": "Vocabulary recall: finding the word with opposite meaning to 'Terse' (using few words, abrupt)."
-    }
+    },
+    "question": "Select the most appropriate ANTONYM of the given word.\nTerse",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 4",
@@ -1173,6 +1413,10 @@
     "avgTime": "00:28",
     "questionText": "John ______ down on the bed for a short time after lunch.",
     "options": {
+      "a": "lied",
+      "b": "lay",
+      "c": "laid",
+      "d": "none of these",
       "A": "lied",
       "B": "lay",
       "C": "laid",
@@ -1186,6 +1430,8 @@
       "topic": "Fill in the Blanks",
       "subtopic": "Verb Tenses and Forms",
       "conceptTested": "Distinction between the past tense forms of transitive 'lay' (laid) and intransitive 'lie' (lay) meaning to recline."
-    }
+    },
+    "question": "John ______ down on the bed for a short time after lunch.",
+    "answer": "b"
   }
 ]

@@ -13,6 +13,10 @@
     "avgTime": "00:40",
     "questionText": "Refer to the following letter, number, symbol series and answer the question that follows.\n(Left) D 2 @ 6 K 4 G & T 3 S C % 7 R Y # 5 E Ω (Right)\nWhich element is sixth to the right of the element which is fifteenth from the right end of the series?",
     "options": {
+      "a": "%",
+      "b": "C",
+      "c": "S",
+      "d": "7",
       "A": "%",
       "B": "C",
       "C": "S",
@@ -26,7 +30,9 @@
       "topic": "Letter & Symbol Series",
       "subtopic": "Alphanumeric Series",
       "conceptTested": "Positional calculation from left/right ends in a mixed alphanumeric-symbol sequence"
-    }
+    },
+    "question": "Refer to the following letter, number, symbol series and answer the question that follows.\n(Left) D 2 @ 6 K 4 G & T 3 S C % 7 R Y # 5 E Ω (Right)\nWhich element is sixth to the right of the element which is fifteenth from the right end of the series?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -42,6 +48,10 @@
     "avgTime": "00:44",
     "questionText": "In a certain code language, 'EARLY’ is written as 'ZNSCF' and 'GAUGE' is written as 'FIVCH'. How will 'INBOX' be written in that language?",
     "options": {
+      "a": "YQCQJ",
+      "b": "JPCQY",
+      "c": "YQCPJ",
+      "d": "XPBOI",
       "A": "YQCQJ",
       "B": "JPCQY",
       "C": "YQCPJ",
@@ -55,7 +65,9 @@
       "topic": "Coding-Decoding",
       "subtopic": "Letter Coding",
       "conceptTested": "Cross-pattern diagonal letter shifting with alternate increment values"
-    }
+    },
+    "question": "In a certain code language, 'EARLY’ is written as 'ZNSCF' and 'GAUGE' is written as 'FIVCH'. How will 'INBOX' be written in that language?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -71,6 +83,10 @@
     "avgTime": "01:22",
     "questionText": "Select the combination of letters that when sequentially placed in the blanks of the given series will make the series logically complete.\nK_MNLO_KM_KHNUJ_",
     "options": {
+      "a": "ELRO",
+      "b": "REST",
+      "c": "LROE",
+      "d": "LLRE",
       "A": "ELRO",
       "B": "REST",
       "C": "LROE",
@@ -84,7 +100,9 @@
       "topic": "Letter & Symbol Series",
       "subtopic": "Continuous Pattern Series",
       "conceptTested": "Identification of repeating letter cluster patterns in blank-fill series"
-    }
+    },
+    "question": "Select the combination of letters that when sequentially placed in the blanks of the given series will make the series logically complete.\nK_MNLO_KM_KHNUJ_",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -100,6 +118,10 @@
     "avgTime": "00:20",
     "questionText": "In the question below, a statement followed by two conclusions numbered I and II is given. You have to assume everything in the statement to be true, then consider the two conclusions together and decide which of them logically follows beyond a reasonable doubt from the information given in the statement.\nStatement : If all players play to their full potential, we will win the match. We have won the match.\nConclusions :\nI. All players played to their full potential.\nII. Some players did not play to their full potential.",
     "options": {
+      "a": "Only\nconclusion I follows.",
+      "b": "Only\nconclusion II follows.",
+      "c": "Both I and II follow.",
+      "d": "Neither I nor II follows.",
       "A": "Only\nconclusion I follows.",
       "B": "Only\nconclusion II follows.",
       "C": "Both I and II follow.",
@@ -113,7 +135,9 @@
       "topic": "Statement & Conclusion",
       "subtopic": "Conditional Deductions & Fallacies",
       "conceptTested": "Fallacy of the converse in conditional propositional logic (affirming the consequent)"
-    }
+    },
+    "question": "In the question below, a statement followed by two conclusions numbered I and II is given. You have to assume everything in the statement to be true, then consider the two conclusions together and decide which of them logically follows beyond a reasonable doubt from the information given in the statement.\nStatement : If all players play to their full potential, we will win the match. We have won the match.\nConclusions :\nI. All players played to their full potential.\nII. Some players did not play to their full potential.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -129,6 +153,10 @@
     "avgTime": "00:27",
     "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n4, 9, 20, 43, 90, ?",
     "options": {
+      "a": "181",
+      "b": "184",
+      "c": "186",
+      "d": "185",
       "A": "181",
       "B": "184",
       "C": "186",
@@ -142,7 +170,9 @@
       "topic": "Number Series",
       "subtopic": "Missing Number Series",
       "conceptTested": "Recursive multiplicative pattern with addition ($x_n = 2x_{n-1} + k$)"
-    }
+    },
+    "question": "Which of the following numbers will replace the question mark (?) in the given series?\n4, 9, 20, 43, 90, ?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -158,6 +188,10 @@
     "avgTime": "00:35",
     "questionText": "Three statements are given, followed by three conclusions numbered I, II and III. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome plants are flowers.\nSome flowers are fruits.\nAll flowers are gardens.\nConclusions:\nI. Some gardens are plants.\nII. Some fruits are gardens.\nIII. Some gardens are flowers.",
     "options": {
+      "a": "Only conclusions I and III follow",
+      "b": "Only conclusions I and II follow",
+      "c": "All of the conclusions follow",
+      "d": "Only conclusions II and III follow",
       "A": "Only conclusions I and III follow",
       "B": "Only conclusions I and II follow",
       "C": "All of the conclusions follow",
@@ -171,7 +205,9 @@
       "topic": "Syllogism",
       "subtopic": "Deductive Venn Logic",
       "conceptTested": "Deductive reasoning using categorical statements with All and Some"
-    }
+    },
+    "question": "Three statements are given, followed by three conclusions numbered I, II and III. Assuming the statements to be true, even if they seem to be at variance with commonly known facts, decide which of the conclusions logically follow(s) from the statements.\nStatements:\nSome plants are flowers.\nSome flowers are fruits.\nAll flowers are gardens.\nConclusions:\nI. Some gardens are plants.\nII. Some fruits are gardens.\nIII. Some gardens are flowers.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -187,12 +223,16 @@
     "avgTime": "00:39",
     "questionText": "Given below are two statements labelled as Assertion (A) and the other as Reason\n(R)\nAssertion (A): The oldest paintings of Ajanta are datable to the second and first centuries B.C.\nReason\n(R): Chronologically the paintings of caves No. 1 and 2 are the last in the series and pertain to the Post-Gupta period\nIn the context of the above two statements which of the following is correct?",
     "options": {
+      "a": "Both (A) and\n(R) are true and\n(R) is the correct explanation of (A)",
+      "b": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A)",
+      "c": "(A) is true, but\n(R) is false",
+      "d": "(A) is false, but\n(R) is true",
       "A": "Both (A) and\n(R) are true and\n(R) is the correct explanation of (A)",
       "B": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A)",
       "C": "(A) is true, but\n(R) is false",
       "D": "(A) is false, but\n(R) is true"
     },
-    "solution": "Solution\n\nAssertion\n\nThe earliest Ajanta caves were carved in the 2nd Century BC out of a horse-shoe-shaped cliffs along the Waghora River.\nThey were used by Buddhist monks as prayer halls (chaitya grihas) and monasteries (viharas) for about nine centuries.\n\nREASON\n\nOut of the 30 excavated caves, five (cave no. 9, 10, 19, 26, and 29) are chaitya grihas (prayer halls) and the rest are viharas (monasteries).\nIn date and style, these caves can be divided into two broad phases.\nPhase I (2nd Century to 1st Century BCE) – The earliest excavations were done by the Satavahanas and belong to the Hinayana (Theravada) phase of Buddhism. The object of worship is a stupa here. Caves 9, 10, 12, 13 and 15A belong to this era.\nPhase II (5th Century AD to 6th Century AD) – These excavations are a major contribution of the Vakatakas and Chalukyas and belong to Mahayana phase of Buddhism which is mostly a Post Gupta age.\n\nCave 1 is a magnificently painted Vihara (monastery), filled with wall murals, sculptures, and ceiling paintings, that date back to the 5th century. Originally, Cave 1 also had a porch that led to the main hall, however, it has since collapsed.\n\nCave 2  was started in the 460s but mostly carved between 475 and 477 CE, probably sponsored and influenced by a woman closely related to emperor Harisena. It has a porch quite different from Cave 1. Even the façade carvings seem to be different. The cave is supported by robust pillars, ornamented with designs. The front porch consists of cells supported by pillared vestibules on both ends.",
+    "solution": "Solution\n\nAssertion\n\nThe earliest Ajanta caves were carved in the 2nd Century BC out of a horse-shoe-shaped cliffs along the Waghora River.\nThey were used by Buddhist monks as prayer halls (chaitya grihas) and monasteries (viharas) for about nine centuries.\n\nREASON\n\nOut of the 30 excavated caves, five (cave no. 9, 10, 19, 26, and 29) are chaitya grihas (prayer halls) and the rest are viharas (monasteries).\nIn date and style, these caves can be divided into two broad phases.\nPhase I (2nd Century to 1st Century BCE) - The earliest excavations were done by the Satavahanas and belong to the Hinayana (Theravada) phase of Buddhism. The object of worship is a stupa here. Caves 9, 10, 12, 13 and 15A belong to this era.\nPhase II (5th Century AD to 6th Century AD) - These excavations are a major contribution of the Vakatakas and Chalukyas and belong to Mahayana phase of Buddhism which is mostly a Post Gupta age.\n\nCave 1 is a magnificently painted Vihara (monastery), filled with wall murals, sculptures, and ceiling paintings, that date back to the 5th century. Originally, Cave 1 also had a porch that led to the main hall, however, it has since collapsed.\n\nCave 2  was started in the 460s but mostly carved between 475 and 477 CE, probably sponsored and influenced by a woman closely related to emperor Harisena. It has a porch quite different from Cave 1. Even the façade carvings seem to be different. The cave is supported by robust pillars, ornamented with designs. The front porch consists of cells supported by pillared vestibules on both ends.",
     "topic": "Ancient History",
     "subtopic": "Art, Architecture and Literature",
     "conceptTested": "Chronology and historical phases of Ajanta Cave paintings and excavations",
@@ -200,7 +240,9 @@
       "topic": "Ancient History",
       "subtopic": "Art, Architecture and Literature",
       "conceptTested": "Chronology and historical phases of Ajanta Cave paintings and excavations"
-    }
+    },
+    "question": "Given below are two statements labelled as Assertion (A) and the other as Reason\n(R)\nAssertion (A): The oldest paintings of Ajanta are datable to the second and first centuries B.C.\nReason\n(R): Chronologically the paintings of caves No. 1 and 2 are the last in the series and pertain to the Post-Gupta period\nIn the context of the above two statements which of the following is correct?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -216,12 +258,16 @@
     "avgTime": "00:30",
     "questionText": "Fill in the blanks by choosing the appropriate option.\nMilk ........... Ensures that Vitamins (A/D) reach consumers who buy low-fat milk.",
     "options": {
+      "a": "Pasteurization",
+      "b": "Uniformity",
+      "c": "Fortification",
+      "d": "Standardization",
       "A": "Pasteurization",
       "B": "Uniformity",
       "C": "Fortification",
       "D": "Standardization"
     },
-    "solution": "Solution\n\nThe correct answer is Fortification.\n\nKey Points\nFood Fortification:\nFortification is the addition of key vitamins and minerals such as Iron, Iodine, Zinc, Vitamins A & D to staple foods such as rice, wheat, oil, milk and salt to improve their nutritional content.\nThese nutrients may or may not have been originally present in the food before processing or may have been lost during processing.\nWhy do we Need the Fortification of Food?\nDeficiency of micronutrients or micronutrient malnutrition, also known as hidden hunger, is a serious health risk.\nAccess to safe and nutritious food is a must and sometimes due to lack of consumption of a balanced diet, lack of variety in the diet or unavailability of food one does not get adequate micronutrients. Often, there is a considerable loss of nutrients during the processing of food as well.\nOne of the strategies to address this problem is the fortification of food.\nThis method complements other ways to improve nutrition such as diversification of diet and supplementation of food.\n\nAdditional Information\nStandardization\nThe adjustment of one or more of the milk constituents to meet the legal requirement or nominated level.\nIn the market milk industry, normally involves reducing the butterfat content by the addition of skim milk or. Through the removal of the cream.\n\nPasteurization\nPasteurized milk is a raw milk that has been heated to a specified temperature and time to kill pathogens that may be found in the raw milk.\nPathogens are microorganisms such as bacteria that make humans sick. Raw milk can contain pathogens such as Campylobacter, E. coli, Salmonella, Listeria, and other bacteria.\n\nHomogenization\nHomogenization is a mechanical process used to reduce the size of the fat globules in the milk.\nReduce the milk fat globules size to less than 1.0 µm which allows them to stay evenly distributed in milk.\nHomogenization is a high-pressure process that forces milk at a high velocity through a small orifice to break up the globules.",
+    "solution": "Solution\n\nThe correct answer is Fortification.\n\nKey Points\nFood Fortification:\nFortification is the addition of key vitamins and minerals such as Iron, Iodine, Zinc, Vitamins A & D to staple foods such as rice, wheat, oil, milk and salt to improve their nutritional content.\nThese nutrients may or may not have been originally present in the food before processing or may have been lost during processing.\nWhy do we Need the Fortification of Food?\nDeficiency of micronutrients or micronutrient malnutrition, also known as hidden hunger, is a serious health risk.\nAccess to safe and nutritious food is a must and sometimes due to lack of consumption of a balanced diet, lack of variety in the diet or unavailability of food one does not get adequate micronutrients. Often, there is a considerable loss of nutrients during the processing of food as well.\nOne of the strategies to address this problem is the fortification of food.\nThis method complements other ways to improve nutrition such as diversification of diet and supplementation of food.\n\nAdditional Information\nStandardization\nThe adjustment of one or more of the milk constituents to meet the legal requirement or nominated level.\nIn the market milk industry, normally involves reducing the butterfat content by the addition of skim milk or. Through the removal of the cream.\n\nPasteurization\nPasteurized milk is a raw milk that has been heated to a specified temperature and time to kill pathogens that may be found in the raw milk.\nPathogens are microorganisms such as bacteria that make humans sick. Raw milk can contain pathogens such as Campylobacter, E. coli, Salmonella, Listeria, and other bacteria.\n\nHomogenization\nHomogenization is a mechanical process used to reduce the size of the fat globules in the milk.\nReduce the milk fat globules size to less than 1.0 μm which allows them to stay evenly distributed in milk.\nHomogenization is a high-pressure process that forces milk at a high velocity through a small orifice to break up the globules.",
     "topic": "Government Schemes & Policies",
     "subtopic": "Food Security & Nutrition",
     "conceptTested": "Definition and purpose of food fortification in staple items like milk",
@@ -229,7 +275,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Food Security & Nutrition",
       "conceptTested": "Definition and purpose of food fortification in staple items like milk"
-    }
+    },
+    "question": "Fill in the blanks by choosing the appropriate option.\nMilk ........... Ensures that Vitamins (A/D) reach consumers who buy low-fat milk.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -245,6 +293,10 @@
     "avgTime": "00:20",
     "questionText": "Direction: In the questions given below are two statements labelled as Assertion (A) and Reason\n(R). In the context of the two statements, which one of the following is correct?\nAssertion (A): The EXIM Bank (Export-Import Bank) was established on 1st January, 1982.\nReason\n(R): EXIM Bank was established for financing, facilitating and promoting foreign trade in India.",
     "options": {
+      "a": "(A) is true, but\n(R) is false",
+      "b": "Both (A) and\n(R) are true",
+      "c": "(A) is false, but\n(R) is true",
+      "d": "Both (A) and\n(R) are false",
       "A": "(A) is true, but\n(R) is false",
       "B": "Both (A) and\n(R) are true",
       "C": "(A) is false, but\n(R) is true",
@@ -258,7 +310,9 @@
       "topic": "Banking & Monetary Policy",
       "subtopic": "Financial Institutions & Development Banks",
       "conceptTested": "Establishment date and mandate of the Export-Import Bank of India (EXIM Bank)"
-    }
+    },
+    "question": "Direction: In the questions given below are two statements labelled as Assertion (A) and Reason\n(R). In the context of the two statements, which one of the following is correct?\nAssertion (A): The EXIM Bank (Export-Import Bank) was established on 1st January, 1982.\nReason\n(R): EXIM Bank was established for financing, facilitating and promoting foreign trade in India.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -274,6 +328,10 @@
     "avgTime": "00:21",
     "questionText": "Given below are two statements, one is labelled as Assertion (A) and the other as Reason\n(R).\nAssertion (A): Shivaji had to face opposition from the big Deshmukhs.\nReason\n(R): These Deshmukhs were not in favour of an independent Maratha State and wanted to remain as feudal lords of Bijapur.\nSelect the correct answer from the codes given below:",
     "options": {
+      "a": "(A) is false, but\n(R) is true.",
+      "b": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A).",
+      "c": "Both (A) and\n(R) are true and\n(R) is the correct explanation of (A).",
+      "d": "(A) is true, but\n(R) is false.",
       "A": "(A) is false, but\n(R) is true.",
       "B": "Both (A) and\n(R) are true, but\n(R) is not the correct explanation of (A).",
       "C": "Both (A) and\n(R) are true and\n(R) is the correct explanation of (A).",
@@ -287,7 +345,9 @@
       "topic": "Medieval History",
       "subtopic": "Maratha Empire",
       "conceptTested": "Political opposition faced by Shivaji from regional Deshmukhs loyal to Bijapur"
-    }
+    },
+    "question": "Given below are two statements, one is labelled as Assertion (A) and the other as Reason\n(R).\nAssertion (A): Shivaji had to face opposition from the big Deshmukhs.\nReason\n(R): These Deshmukhs were not in favour of an independent Maratha State and wanted to remain as feudal lords of Bijapur.\nSelect the correct answer from the codes given below:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -303,12 +363,16 @@
     "avgTime": "00:32",
     "questionText": "Match the following events with their respective dates:\n\nEvents\n1. National Handloom Day\n2. National Space Day\n3. National Sports Day\n4. International Youth Day\n\nDates\nA. 7 August\nB. 12 August\nC. 23 August\nD. 29 August",
     "options": {
+      "a": "A-1, B-3, C-4, D-2",
+      "b": "A-3, B-2, C-1, D-4",
+      "c": "A-2, B-4, C-3, D-1",
+      "d": "A-4, B-1, C-2, D-3",
       "A": "A-1, B-3, C-4, D-2",
       "B": "A-3, B-2, C-1, D-4",
       "C": "A-2, B-4, C-3, D-1",
       "D": "A-4, B-1, C-2, D-3"
     },
-    "solution": "Solution\n\nThe correct answer is Option 4.\n\nIn News\nA. National Handloom Day – 7 August\nStarted in 2015 by PM Modi; commemorates the Swadeshi Movement (1905). Hence, A → 4.\nB. National Space Day – 23 August\nEstablished in 2023 to celebrate India’s lunar success. Hence, B → 1.\nC. National Sports Day – 29 August\nObserved on Major Dhyan Chand’s birth anniversary. Hence, C → 2.\nD. International Youth Day – 12 August\nDeclared by the UN in 1999, first observed in 2000 to highlight youth issues. Hence, D → 3.\n\nKey Points\nSwadeshi Movement (1905): Encouraged use of indigenous goods against British policies.\nChandrayaan-3: Made India the first country to land near the lunar south pole.\nMajor Dhyan Chand: Won three Olympic golds for India in hockey.\nInternational Youth Day: Promotes youth engagement in SDGs.",
+    "solution": "Solution\n\nThe correct answer is Option 4.\n\nIn News\nA. National Handloom Day - 7 August\nStarted in 2015 by PM Modi; commemorates the Swadeshi Movement (1905). Hence, A → 4.\nB. National Space Day - 23 August\nEstablished in 2023 to celebrate India’s lunar success. Hence, B → 1.\nC. National Sports Day - 29 August\nObserved on Major Dhyan Chand’s birth anniversary. Hence, C → 2.\nD. International Youth Day - 12 August\nDeclared by the UN in 1999, first observed in 2000 to highlight youth issues. Hence, D → 3.\n\nKey Points\nSwadeshi Movement (1905): Encouraged use of indigenous goods against British policies.\nChandrayaan-3: Made India the first country to land near the lunar south pole.\nMajor Dhyan Chand: Won three Olympic golds for India in hockey.\nInternational Youth Day: Promotes youth engagement in SDGs.",
     "topic": "Important Days & Themes",
     "subtopic": "National & International Days",
     "conceptTested": "Chronology and dates of significant national and international events, festivals, and commemorative days.",
@@ -316,7 +380,9 @@
       "topic": "Important Days & Themes",
       "subtopic": "National & International Days",
       "conceptTested": "Chronology and dates of significant national and international events, festivals, and commemorative days."
-    }
+    },
+    "question": "Match the following events with their respective dates:\n\nEvents\n1. National Handloom Day\n2. National Space Day\n3. National Sports Day\n4. International Youth Day\n\nDates\nA. 7 August\nB. 12 August\nC. 23 August\nD. 29 August",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -332,6 +398,10 @@
     "avgTime": "00:17",
     "questionText": "Who is the author of the newly released book “In Praise of Coalition Politics: And Other Essays on Indian Democracy”?",
     "options": {
+      "a": "Gopal Krishna Gandhi",
+      "b": "Manoj K Jha",
+      "c": "Paash",
+      "d": "Firaq Gorakhpuri",
       "A": "Gopal Krishna Gandhi",
       "B": "Manoj K Jha",
       "C": "Paash",
@@ -345,7 +415,9 @@
       "topic": "Books & Authors",
       "subtopic": "Recent Political & Academic Books",
       "conceptTested": "Identification of contemporary literary works, authors, and political treatises."
-    }
+    },
+    "question": "Who is the author of the newly released book “In Praise of Coalition Politics: And Other Essays on Indian Democracy”?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -361,6 +433,10 @@
     "avgTime": "00:33",
     "questionText": "Which mountain range runs from northwest to southeast and forms a natural boundary between the Kashmir valley and the outer plains?",
     "options": {
+      "a": "Karakoram Range",
+      "b": "Ladakh Range",
+      "c": "Pir Panjal Range",
+      "d": "Dhauladhar Range",
       "A": "Karakoram Range",
       "B": "Ladakh Range",
       "C": "Pir Panjal Range",
@@ -374,7 +450,9 @@
       "topic": "Indian Drainage & Physiography",
       "subtopic": "Himalayan Mountain Ranges & Valleys",
       "conceptTested": "Geographical location and boundary demarcation of Himalayan mountain ranges."
-    }
+    },
+    "question": "Which mountain range runs from northwest to southeast and forms a natural boundary between the Kashmir valley and the outer plains?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -390,12 +468,16 @@
     "avgTime": "00:22",
     "questionText": "When did the British Cabinet Mission arrive in India in order to examine the Muslim League's demand, and to suggest a suitable political framework for a free India?",
     "options": {
+      "a": "March 1946",
+      "b": "January 1946",
+      "c": "May 1946",
+      "d": "August 1946",
       "A": "March 1946",
       "B": "January 1946",
       "C": "May 1946",
       "D": "August 1946"
     },
-    "solution": "Solution\n\nThe correct answer is March 1946\nKey Points\nCabinet Mission:\n\nThe Cabinet Mission came to India with the objective to discuss the transfer of powers from the British government to the Indian leadership.\nThe aim is to safeguard India's unity and grant its independence.\nCabinet Mission was a high-powered mission sent by the Atlee Government (British Prime Minister) that arrived in India in 24th March 1946.\nThe mission had three British cabinet members – Pethick Lawrence, Stafford Cripps, & and A.V. Alexander.\nClement Atlee (British Prime Minister) decided to send a mission to India for the transfer of powers from the British Indian government to Indian leaders.\n\nAdditional Information\nObjectives:\n\nTo obtain an agreement with the Indian leaders as to the framing of a constitution for India.\nTo formulate a constitution-making body (the Constituent Assembly of India).\nTo establish an Executive Council with the support of the major Indian parties.\n\nReason for failure:\n\nThe Congress Party wanted a strong centre with minimum powers for the provinces.\nThe Muslim League wanted strong political safeguards for the Muslims like parity in the legislatures.\nSince both parties had many ideological differences and could not find common ground, the mission came up with its own set of proposals in May 1946.",
+    "solution": "Solution\n\nThe correct answer is March 1946\nKey Points\nCabinet Mission:\n\nThe Cabinet Mission came to India with the objective to discuss the transfer of powers from the British government to the Indian leadership.\nThe aim is to safeguard India's unity and grant its independence.\nCabinet Mission was a high-powered mission sent by the Atlee Government (British Prime Minister) that arrived in India in 24th March 1946.\nThe mission had three British cabinet members - Pethick Lawrence, Stafford Cripps, & and A.V. Alexander.\nClement Atlee (British Prime Minister) decided to send a mission to India for the transfer of powers from the British Indian government to Indian leaders.\n\nAdditional Information\nObjectives:\n\nTo obtain an agreement with the Indian leaders as to the framing of a constitution for India.\nTo formulate a constitution-making body (the Constituent Assembly of India).\nTo establish an Executive Council with the support of the major Indian parties.\n\nReason for failure:\n\nThe Congress Party wanted a strong centre with minimum powers for the provinces.\nThe Muslim League wanted strong political safeguards for the Muslims like parity in the legislatures.\nSince both parties had many ideological differences and could not find common ground, the mission came up with its own set of proposals in May 1946.",
     "topic": "Modern History",
     "subtopic": "National Movement & Constitutional Proposals (1919-1947)",
     "conceptTested": "Arrival and objectives of the British Cabinet Mission in India in 1946.",
@@ -403,7 +485,9 @@
       "topic": "Modern History",
       "subtopic": "National Movement & Constitutional Proposals (1919-1947)",
       "conceptTested": "Arrival and objectives of the British Cabinet Mission in India in 1946."
-    }
+    },
+    "question": "When did the British Cabinet Mission arrive in India in order to examine the Muslim League's demand, and to suggest a suitable political framework for a free India?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -419,6 +503,10 @@
     "avgTime": "00:17",
     "questionText": "In which text it is mentioned that \"Ashok was appointed as ruler of Avanti by his father at the age of 18\"?",
     "options": {
+      "a": "Chullabagg",
+      "b": "Mahabagg",
+      "c": "Deepvansh",
+      "d": "Mahavansh",
       "A": "Chullabagg",
       "B": "Mahabagg",
       "C": "Deepvansh",
@@ -432,7 +520,9 @@
       "topic": "Ancient History",
       "subtopic": "Mauryan Empire & Sources",
       "conceptTested": "Historical literary sources detailing the early life and administrative postings of Mauryan rulers like Ashoka."
-    }
+    },
+    "question": "In which text it is mentioned that \"Ashok was appointed as ruler of Avanti by his father at the age of 18\"?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -446,14 +536,18 @@
     "correctOption": "B",
     "userTime": "00:06",
     "avgTime": "00:18",
-    "questionText": "Which of the following rare migratory birds of prey was recently spotted at Mudumalai Tiger Reserve during the 2025–26 winter season?",
+    "questionText": "Which of the following rare migratory birds of prey was recently spotted at Mudumalai Tiger Reserve during the 2025-26 winter season?",
     "options": {
+      "a": "Egyptian Vulture",
+      "b": "Eastern Imperial Eagle",
+      "c": "Steppe Eagle",
+      "d": "Greater Spotted Eagle",
       "A": "Egyptian Vulture",
       "B": "Eastern Imperial Eagle",
       "C": "Steppe Eagle",
       "D": "Greater Spotted Eagle"
     },
-    "solution": "Solution\n\nThe correct answer is Eastern Imperial Eagle\n\nIn News\nA rare Eastern Imperial Eagle was sighted at Mudumalai Tiger Reserve in Tamil Nadu during the 2025–26 winter season, confirming the reserve’s importance as a winter refuge for long-distance migratory raptors.\n\nKey Points\nScientific Name: Aquila heliaca; Family: Accipitridae; Subfamily: Aquilinae.\nBreeds in southeastern Europe, West and Central Asia; migrates south to northeastern Africa, Middle East, and South & East Asia during winter.\nSecond largest eagle in Europe; wingspan up to 2.14 m; shows reverse sexual dimorphism.\nDiet: Predatory bird controlling rodent and small mammal populations; presence indicates a healthy ecosystem.\nConservation Status: Vulnerable on the IUCN Red List.\n\nAdditional Information\nMudumalai Tiger Reserve is located in Nilgiris district, Tamil Nadu, covering 321 sq. km, and is part of the Nilgiris Biosphere Reserve.\nThe reserve features open grasslands, forest edges, tall nesting trees, and abundant prey, attracting migratory raptors.\nRecent sightings also included the endangered Egyptian vulture alongside the Eastern Imperial Eagle, highlighting ecological significance.\nConservationists warn that increasing tourism could disturb sensitive habitats; sustainable tourism practices are needed to protect wildlife.",
+    "solution": "Solution\n\nThe correct answer is Eastern Imperial Eagle\n\nIn News\nA rare Eastern Imperial Eagle was sighted at Mudumalai Tiger Reserve in Tamil Nadu during the 2025-26 winter season, confirming the reserve’s importance as a winter refuge for long-distance migratory raptors.\n\nKey Points\nScientific Name: Aquila heliaca; Family: Accipitridae; Subfamily: Aquilinae.\nBreeds in southeastern Europe, West and Central Asia; migrates south to northeastern Africa, Middle East, and South & East Asia during winter.\nSecond largest eagle in Europe; wingspan up to 2.14 m; shows reverse sexual dimorphism.\nDiet: Predatory bird controlling rodent and small mammal populations; presence indicates a healthy ecosystem.\nConservation Status: Vulnerable on the IUCN Red List.\n\nAdditional Information\nMudumalai Tiger Reserve is located in Nilgiris district, Tamil Nadu, covering 321 sq. km, and is part of the Nilgiris Biosphere Reserve.\nThe reserve features open grasslands, forest edges, tall nesting trees, and abundant prey, attracting migratory raptors.\nRecent sightings also included the endangered Egyptian vulture alongside the Eastern Imperial Eagle, highlighting ecological significance.\nConservationists warn that increasing tourism could disturb sensitive habitats; sustainable tourism practices are needed to protect wildlife.",
     "topic": "National Parks & Environment",
     "subtopic": "Wildlife Sanctuaries & Reserves",
     "conceptTested": "Knowledge of recent wildlife sightings and geographic reserves of ecological importance in India.",
@@ -461,7 +555,9 @@
       "topic": "National Parks & Environment",
       "subtopic": "Wildlife Sanctuaries & Reserves",
       "conceptTested": "Knowledge of recent wildlife sightings and geographic reserves of ecological importance in India."
-    }
+    },
+    "question": "Which of the following rare migratory birds of prey was recently spotted at Mudumalai Tiger Reserve during the 2025-26 winter season?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -477,12 +573,16 @@
     "avgTime": "00:32",
     "questionText": "A crop primarily associated with equatorial regions can also be cultivated in tropical and sub-tropical areas. It requires a hot and humid climate, annual rainfall exceeding 200 cm, and temperatures generally above 25°C. Which one of the following crops fits this description?",
     "options": {
+      "a": "Paddy",
+      "b": "Rubber",
+      "c": "Tea",
+      "d": "Sugarcane",
       "A": "Paddy",
       "B": "Rubber",
       "C": "Tea",
       "D": "Sugarcane"
     },
-    "solution": "Solution\nThe correct answer is Option B.\n\nKey Points\nThe crop described requires a hot and humid climate, very high rainfall (over 200 cm), and consistently high temperatures (above 25°C)—conditions typical of equatorial regions, but also found in parts of the tropics and sub-tropics.\nRubber is primarily an equatorial crop, thriving in regions with uniformly high temperatures, heavy and well-distributed rainfall, and high humidity. Hence, Option B is correct.\nPaddy requires high rainfall but can grow in a wider temperature range and is not strictly an equatorial crop. Hence, Option A is incorrect.\nTea prefers warm and humid conditions but grows best at moderate temperatures and often in highland areas with well-distributed rainfall. Hence, Option C is incorrect.\nSugarcane needs high temperatures but generally requires lower rainfall (75–150 cm) and extensive irrigation in many regions. Hence, Option D is incorrect.\nThus, the crop fitting the given climatic conditions is Rubber → Option B.\n\nAdditional Information\nRubber cultivation is sensitive to frost and prolonged dry seasons.\nIn India, rubber is mainly grown in Kerala, Tamil Nadu, Karnataka, and the Andaman & Nicobar Islands.\nLatex yield is highest where rainfall is well-distributed throughout the year.",
+    "solution": "Solution\nThe correct answer is Option B.\n\nKey Points\nThe crop described requires a hot and humid climate, very high rainfall (over 200 cm), and consistently high temperatures (above 25°C)-conditions typical of equatorial regions, but also found in parts of the tropics and sub-tropics.\nRubber is primarily an equatorial crop, thriving in regions with uniformly high temperatures, heavy and well-distributed rainfall, and high humidity. Hence, Option B is correct.\nPaddy requires high rainfall but can grow in a wider temperature range and is not strictly an equatorial crop. Hence, Option A is incorrect.\nTea prefers warm and humid conditions but grows best at moderate temperatures and often in highland areas with well-distributed rainfall. Hence, Option C is incorrect.\nSugarcane needs high temperatures but generally requires lower rainfall (75-150 cm) and extensive irrigation in many regions. Hence, Option D is incorrect.\nThus, the crop fitting the given climatic conditions is Rubber → Option B.\n\nAdditional Information\nRubber cultivation is sensitive to frost and prolonged dry seasons.\nIn India, rubber is mainly grown in Kerala, Tamil Nadu, Karnataka, and the Andaman & Nicobar Islands.\nLatex yield is highest where rainfall is well-distributed throughout the year.",
     "topic": "Indian Climate & Soil",
     "subtopic": "Agricultural Crops & Climatic Requirements",
     "conceptTested": "Climatic requirements of plantation crops like rubber requiring hot, humid conditions and high rainfall exceeding 200 cm.",
@@ -490,7 +590,9 @@
       "topic": "Indian Climate & Soil",
       "subtopic": "Agricultural Crops & Climatic Requirements",
       "conceptTested": "Climatic requirements of plantation crops like rubber requiring hot, humid conditions and high rainfall exceeding 200 cm."
-    }
+    },
+    "question": "A crop primarily associated with equatorial regions can also be cultivated in tropical and sub-tropical areas. It requires a hot and humid climate, annual rainfall exceeding 200 cm, and temperatures generally above 25°C. Which one of the following crops fits this description?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -506,12 +608,16 @@
     "avgTime": "00:17",
     "questionText": "Consider the following statements regarding Bharat Electricity Summit 2026:\n1. The theme of Bharat Electricity Summit 2026 is “Electrifying Growth. Empowering Sustainability. Connecting Globally”.\n2. The Ministry of New and Renewable Energy has conducted the summit.\nWhich of the above statements is/are correct?",
     "options": {
+      "a": "1 only",
+      "b": "2 only",
+      "c": "Both 1 and 2",
+      "d": "Neither 1 nor 2",
       "A": "1 only",
       "B": "2 only",
       "C": "Both 1 and 2",
       "D": "Neither 1 nor 2"
     },
-    "solution": "Solution\n\nThe correct answer is 1 only.\n\nIn News\nBharat Electricity Summit 2026 will be held from 19–22 March 2026 in New Delhi with a focus on sustainability, global cooperation and the future of electricity systems.\n\nKey Points\nThe theme of Bharat Electricity Summit 2026 is “Electrifying Growth. Empowering Sustainability. Connecting Globally”.\nThe Summit is a global conference-cum-exhibition for the power and electricity sector.\nIt is being organised under the leadership of the Ministry of Power, not the Ministry of New and Renewable Energy.\nThe event will bring together policymakers, industry leaders, investors and global stakeholders.\n\nAdditional Information\nMinistry of Power\nThe nodal ministry responsible for electricity generation, transmission and distribution in India.\nIt is leading the organisation of Bharat Electricity Summit 2026.\nBharat Electricity Summit\nA global platform showcasing India’s leadership in energy transition.\nIt focuses on clean energy, power infrastructure, storage, and smart electricity systems.\nMinistry of New and Renewable Energy\nResponsible for renewable energy development in India.\nIt is a stakeholder ministry but not the organising authority of the Summit.\nTheme Significance\nThe theme reflects India’s transition from energy scarcity to energy abundance.\nIt emphasises sustainability, resilience and global collaboration in electricity systems.",
+    "solution": "Solution\n\nThe correct answer is 1 only.\n\nIn News\nBharat Electricity Summit 2026 will be held from 19-22 March 2026 in New Delhi with a focus on sustainability, global cooperation and the future of electricity systems.\n\nKey Points\nThe theme of Bharat Electricity Summit 2026 is “Electrifying Growth. Empowering Sustainability. Connecting Globally”.\nThe Summit is a global conference-cum-exhibition for the power and electricity sector.\nIt is being organised under the leadership of the Ministry of Power, not the Ministry of New and Renewable Energy.\nThe event will bring together policymakers, industry leaders, investors and global stakeholders.\n\nAdditional Information\nMinistry of Power\nThe nodal ministry responsible for electricity generation, transmission and distribution in India.\nIt is leading the organisation of Bharat Electricity Summit 2026.\nBharat Electricity Summit\nA global platform showcasing India’s leadership in energy transition.\nIt focuses on clean energy, power infrastructure, storage, and smart electricity systems.\nMinistry of New and Renewable Energy\nResponsible for renewable energy development in India.\nIt is a stakeholder ministry but not the organising authority of the Summit.\nTheme Significance\nThe theme reflects India’s transition from energy scarcity to energy abundance.\nIt emphasises sustainability, resilience and global collaboration in electricity systems.",
     "topic": "Government Schemes & Policies",
     "subtopic": "Summits & Conferences",
     "conceptTested": "Factual knowledge of national summits, ministries, and their respective themes.",
@@ -519,7 +625,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Summits & Conferences",
       "conceptTested": "Factual knowledge of national summits, ministries, and their respective themes."
-    }
+    },
+    "question": "Consider the following statements regarding Bharat Electricity Summit 2026:\n1. The theme of Bharat Electricity Summit 2026 is “Electrifying Growth. Empowering Sustainability. Connecting Globally”.\n2. The Ministry of New and Renewable Energy has conducted the summit.\nWhich of the above statements is/are correct?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -535,12 +643,16 @@
     "avgTime": "00:46",
     "questionText": "From 11 to 50, how many numbers are there which are exactly divisible by 7 but not by 3?",
     "options": {
+      "a": "Two",
+      "b": "Four",
+      "c": "Five",
+      "d": "Six",
       "A": "Two",
       "B": "Four",
       "C": "Five",
       "D": "Six"
     },
-    "solution": "Solution\n\nShortcut Trick\nTotal multiples of 7 from 11 to 50 = (Largest multiple − Smallest multiple) ÷ 7 + 1 = (49 − 14) ÷ 7 + 1 = 6.\n\nTotal multiples of 21 (divisible by both 7 and 3) from 11 to 50 = (42 − 21) ÷ 21 + 1 = 2.\n\nTotal numbers divisible by 7 but not by 3 = 6 − 2 = 4.\n∴ The correct answer is 4 numbers.\n\nAlternate Method\nGiven:\nRange of numbers: From 11 to 50.\nCondition: Numbers must be divisible by 7 but not by 3.\n\nCalculations:\n⇒ First, list all the numbers between 11 and 50 that are exactly divisible by 7.\n⇒ These multiples are: 14, 21, 28, 35, 42, 49.\n⇒ Total count of these multiples = 6.\n⇒ Next, identify the numbers from this list that are also divisible by 3.\n⇒ A number divisible by both 7 and 3 must be divisible by their LCM, which is 21.\n⇒ The multiples of 21 in the given range are: 21 and 42.\n⇒ We must exclude these 2 numbers from our initial list.\n⇒ The remaining numbers are: 14, 28, 35, 49.\n⇒ Total count of the remaining numbers = 4.\n∴ The correct answer is 4 numbers.\n\nAdditional Information\nLCM of Co-prime Numbers\n\nIf two numbers are co-prime (like 3 and 7, having no common factors other than 1), their Least Common Multiple (LCM) is simply their product (3 × 7 = 21). Any number divisible by both must be a multiple of this LCM.\n\nArithmetic Progression (AP) Counting\n\nTo find the number of terms in an AP, you can use the formula: Number of terms = (Last term − First term) ÷ Common Difference + 1.\n\nDivisibility Rule of 3\n\nA number is exactly divisible by 3 if the sum of its digits is a multiple of 3.",
+    "solution": "Solution\n\nShortcut Trick\nTotal multiples of 7 from 11 to 50 = (Largest multiple - Smallest multiple) ÷ 7 + 1 = (49 - 14) ÷ 7 + 1 = 6.\n\nTotal multiples of 21 (divisible by both 7 and 3) from 11 to 50 = (42 - 21) ÷ 21 + 1 = 2.\n\nTotal numbers divisible by 7 but not by 3 = 6 - 2 = 4.\n∴ The correct answer is 4 numbers.\n\nAlternate Method\nGiven:\nRange of numbers: From 11 to 50.\nCondition: Numbers must be divisible by 7 but not by 3.\n\nCalculations:\n⇒ First, list all the numbers between 11 and 50 that are exactly divisible by 7.\n⇒ These multiples are: 14, 21, 28, 35, 42, 49.\n⇒ Total count of these multiples = 6.\n⇒ Next, identify the numbers from this list that are also divisible by 3.\n⇒ A number divisible by both 7 and 3 must be divisible by their LCM, which is 21.\n⇒ The multiples of 21 in the given range are: 21 and 42.\n⇒ We must exclude these 2 numbers from our initial list.\n⇒ The remaining numbers are: 14, 28, 35, 49.\n⇒ Total count of the remaining numbers = 4.\n∴ The correct answer is 4 numbers.\n\nAdditional Information\nLCM of Co-prime Numbers\n\nIf two numbers are co-prime (like 3 and 7, having no common factors other than 1), their Least Common Multiple (LCM) is simply their product (3 × 7 = 21). Any number divisible by both must be a multiple of this LCM.\n\nArithmetic Progression (AP) Counting\n\nTo find the number of terms in an AP, you can use the formula: Number of terms = (Last term - First term) ÷ Common Difference + 1.\n\nDivisibility Rule of 3\n\nA number is exactly divisible by 3 if the sum of its digits is a multiple of 3.",
     "topic": "Number System",
     "subtopic": "Divisibility & Multiples Counting",
     "conceptTested": "Counting numbers in a given range divisible by a specific number using Arithmetic Progression and excluding common multiples via LCM.",
@@ -548,7 +660,9 @@
       "topic": "Number System",
       "subtopic": "Divisibility & Multiples Counting",
       "conceptTested": "Counting numbers in a given range divisible by a specific number using Arithmetic Progression and excluding common multiples via LCM."
-    }
+    },
+    "question": "From 11 to 50, how many numbers are there which are exactly divisible by 7 but not by 3?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -564,6 +678,10 @@
     "avgTime": "00:47",
     "questionText": "The length of a room is 5.5 m and the width is 3.75 m. Find the cost of paving the floor with slabs at the rate of Rs. 800 per sq. meter.",
     "options": {
+      "a": "Rs. 15000",
+      "b": "Rs. 15550",
+      "c": "Rs. 15600",
+      "d": "Rs. 16500",
       "A": "Rs. 15000",
       "B": "Rs. 15550",
       "C": "Rs. 15600",
@@ -577,7 +695,9 @@
       "topic": "Mensuration 2D",
       "subtopic": "Area & Cost Calculation of Rectangles",
       "conceptTested": "Calculation of the area of a rectangle (Area = Length × Width) and finding total cost given a unit rate per square meter."
-    }
+    },
+    "question": "The length of a room is 5.5 m and the width is 3.75 m. Find the cost of paving the floor with slabs at the rate of Rs. 800 per sq. meter.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -593,12 +713,16 @@
     "avgTime": "00:57",
     "questionText": "The present population of a city is 17,500. The population decreases by 12% in the first year and increases by 8% in the second year. Find the population after 2 years.",
     "options": {
+      "a": "16,632",
+      "b": "28,500",
+      "c": "15,350",
+      "d": "21,320",
       "A": "16,632",
       "B": "28,500",
       "C": "15,350",
       "D": "21,320"
     },
-    "solution": "Solution\n\nShortcut Trick\nUse the successive multiplying factor method for consecutive percentage changes:\n\nFinal Population = Initial Population × (1 − Decrease%) × (1 + Increase%)\nFinal Population = 17500 × (88 ÷ 100) × (108 ÷ 100)\nFinal Population = 17500 × 0.88 × 1.08 = 15400 × 1.08 = 16632\n∴ The correct answer is 16,632.\n\nAlternate Method\nGiven:\n⇒ Initial population of the city = 17500\n⇒ First year percentage change = −12% (Decrease)\n⇒ Second year percentage change = +8% (Increase)\n\nFormula Used:\nFinal Value = Initial Value × (1 ± R1 ÷ 100) × (1 ± R2 ÷ 100)\n\nCalculation:\n⇒ Population after the first year = 17500 × (1 − 12 ÷ 100)\n⇒ Population after the first year = 17500 × 0.88 = 15400\n⇒ Population after the second year = 15400 × (1 + 8 ÷ 100)\n⇒ Population after the second year = 15400 × 1.08 = 16632\n∴ The correct answer is 16,632.\n\nAdditional Information\nSuccessive Percentage Change\n\nWhen a value undergoes multiple percentage changes in succession, the net percentage change can be computed as: Net Change = x + y + (x × y) ÷ 100.\n\nMultiplying Factor Method\n\nThe most efficient way to compute final base values is by applying fraction multipliers: (1 + x ÷ 100) for an increase and (1 − x ÷ 100) for a decrease.\n\nBase Change Principle\n\nIn consecutive changes, the new percentage operation always applies to the newly formed base (the result of the previous year), not the original starting base.",
+    "solution": "Solution\n\nShortcut Trick\nUse the successive multiplying factor method for consecutive percentage changes:\n\nFinal Population = Initial Population × (1 - Decrease%) × (1 + Increase%)\nFinal Population = 17500 × (88 ÷ 100) × (108 ÷ 100)\nFinal Population = 17500 × 0.88 × 1.08 = 15400 × 1.08 = 16632\n∴ The correct answer is 16,632.\n\nAlternate Method\nGiven:\n⇒ Initial population of the city = 17500\n⇒ First year percentage change = -12% (Decrease)\n⇒ Second year percentage change = +8% (Increase)\n\nFormula Used:\nFinal Value = Initial Value × (1 ± R1 ÷ 100) × (1 ± R2 ÷ 100)\n\nCalculation:\n⇒ Population after the first year = 17500 × (1 - 12 ÷ 100)\n⇒ Population after the first year = 17500 × 0.88 = 15400\n⇒ Population after the second year = 15400 × (1 + 8 ÷ 100)\n⇒ Population after the second year = 15400 × 1.08 = 16632\n∴ The correct answer is 16,632.\n\nAdditional Information\nSuccessive Percentage Change\n\nWhen a value undergoes multiple percentage changes in succession, the net percentage change can be computed as: Net Change = x + y + (x × y) ÷ 100.\n\nMultiplying Factor Method\n\nThe most efficient way to compute final base values is by applying fraction multipliers: (1 + x ÷ 100) for an increase and (1 - x ÷ 100) for a decrease.\n\nBase Change Principle\n\nIn consecutive changes, the new percentage operation always applies to the newly formed base (the result of the previous year), not the original starting base.",
     "topic": "Percentage",
     "subtopic": "Successive Percentage Change",
     "conceptTested": "Successive percentage changes applied consecutively using multiplier equivalents: Final Value = Initial × (1 ± r1/100) × (1 ± r2/100).",
@@ -606,7 +730,9 @@
       "topic": "Percentage",
       "subtopic": "Successive Percentage Change",
       "conceptTested": "Successive percentage changes applied consecutively using multiplier equivalents: Final Value = Initial × (1 ± r1/100) × (1 ± r2/100)."
-    }
+    },
+    "question": "The present population of a city is 17,500. The population decreases by 12% in the first year and increases by 8% in the second year. Find the population after 2 years.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -620,14 +746,18 @@
     "correctOption": "B",
     "userTime": "00:31",
     "avgTime": "00:27",
-    "questionText": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm³ ) (rounded off to the closest integral value)?",
+    "questionText": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm3 ) (rounded off to the closest integral value)?",
     "options": {
+      "a": "461",
+      "b": "565",
+      "c": "368",
+      "d": "197",
       "A": "461",
       "B": "565",
       "C": "368",
       "D": "197"
     },
-    "solution": "Solution\n\nShortcut Trick\nUsing the combined volume formula for a cone on a hemisphere: V = (1/3) × π × r2 × (2r + h)\nCone height h = Total height − radius = 11.6 − 5.6 = 6 cm.\nV = (1/3) × (22/7) × 5.6 × 5.6 × (2 × 5.6 + 6)\nV = (1/3) × 22 × 0.8 × 5.6 × 17.2 ≈ 565.07 cm3\n\nRounding off to the closest integer gives 565 cm3.\n\n∴ The correct answer is 565 cm3.\n\nAlternate Method\nGiven:\nTotal height of the toy = 11.6 cm\nRadius of hemisphere (r) = 5.6 cm\n\nFormula Used:\nVolume of a Cone = (1/3) × π × r2 × h\nVolume of a Hemisphere = (2/3) × π × r3\nTotal Volume = (1/3) × π × r2 × (2r + h)\n\nCalculations:\n⇒ Height of cone (h) = Total height − Radius of hemisphere\n⇒ h = 11.6 − 5.6 = 6 cm\n⇒ Total Volume = (1/3) × (22/7) × (5.6)2 × (2 × 5.6 + 6)\n⇒ Total Volume = (1/3) × (22/7) × 31.36 × (11.2 + 6)\n⇒ Total Volume = (1/3) × 22 × 4.48 × 17.2\n⇒ Total Volume = (1/3) × 98.56 × 17.2\n⇒ Total Volume = 1695.232 ÷ 3 ≈ 565.07 cm3\n⇒ Rounding to the closest integral value, the volume is 565 cm3.\n∴ The correct answer is 565 cm3.\n\nAdditional Information\nVolume of a Hemisphere\n\nV = (2/3) × π × r3, where r is the radius of the circular base.\n\nVolume of a Right Circular Cone\n\nV = (1/3) × π × r2 × h, where r is the radius of the base and h is the height.\n\nSurface Areas\n\nCurved Surface Area (CSA) of a Cone = π × r × l, where slant height l = √(r2 + h2). CSA of a Hemisphere = 2 × π × r2.",
+    "solution": "Solution\n\nShortcut Trick\nUsing the combined volume formula for a cone on a hemisphere: V = (1/3) × π × r2 × (2r + h)\nCone height h = Total height - radius = 11.6 - 5.6 = 6 cm.\nV = (1/3) × (22/7) × 5.6 × 5.6 × (2 × 5.6 + 6)\nV = (1/3) × 22 × 0.8 × 5.6 × 17.2 ≈ 565.07 cm3\n\nRounding off to the closest integer gives 565 cm3.\n\n∴ The correct answer is 565 cm3.\n\nAlternate Method\nGiven:\nTotal height of the toy = 11.6 cm\nRadius of hemisphere (r) = 5.6 cm\n\nFormula Used:\nVolume of a Cone = (1/3) × π × r2 × h\nVolume of a Hemisphere = (2/3) × π × r3\nTotal Volume = (1/3) × π × r2 × (2r + h)\n\nCalculations:\n⇒ Height of cone (h) = Total height - Radius of hemisphere\n⇒ h = 11.6 - 5.6 = 6 cm\n⇒ Total Volume = (1/3) × (22/7) × (5.6)² × (2 × 5.6 + 6)\n⇒ Total Volume = (1/3) × (22/7) × 31.36 × (11.2 + 6)\n⇒ Total Volume = (1/3) × 22 × 4.48 × 17.2\n⇒ Total Volume = (1/3) × 98.56 × 17.2\n⇒ Total Volume = 1695.232 ÷ 3 ≈ 565.07 cm3\n⇒ Rounding to the closest integral value, the volume is 565 cm3.\n∴ The correct answer is 565 cm3.\n\nAdditional Information\nVolume of a Hemisphere\n\nV = (2/3) × π × r3, where r is the radius of the circular base.\n\nVolume of a Right Circular Cone\n\nV = (1/3) × π × r2 × h, where r is the radius of the base and h is the height.\n\nSurface Areas\n\nCurved Surface Area (CSA) of a Cone = π × r × l, where slant height l = √(r2 + h2). CSA of a Hemisphere = 2 × π × r2.",
     "topic": "Mensuration 3D",
     "subtopic": "Combined Solids - Cone and Hemisphere",
     "conceptTested": "Total volume of combined 3D shapes is the sum of individual volumes: V_total = V_cone + V_hemisphere = (1/3)πr²h + (2/3)πr³.",
@@ -635,7 +765,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Combined Solids - Cone and Hemisphere",
       "conceptTested": "Total volume of combined 3D shapes is the sum of individual volumes: V_total = V_cone + V_hemisphere = (1/3)πr²h + (2/3)πr³."
-    }
+    },
+    "question": "A solid wooden toy is in the shape of a right circular cone mounted on a hemisphere. If the radius of the hemisphere is 5.6 cm and the total height of the toy is 11.6 cm, then what is the volume of the wooden toy (in cm3 ) (rounded off to the closest integral value)?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -651,12 +783,16 @@
     "avgTime": "00:42",
     "questionText": "In ∆ABC, ∠B = 90° and BD ⟂ AC. If AC = 9 cm and AD = 3 cm, then BD is equal to:",
     "options": {
+      "a": "2√3 cm",
+      "b": "3√3 cm",
+      "c": "2√2 cm",
+      "d": "3√2 cm",
       "A": "2√3 cm",
       "B": "3√3 cm",
       "C": "2√2 cm",
       "D": "3√2 cm"
     },
-    "solution": "Solution\n\nShortcut Trick\nBy the Geometric Mean Theorem for a right-angled triangle:\n\nAltitude to hypotenuse = √(Product of hypotenuse segments)\nCD = AC − AD = 9 − 3 = 6 cm\nBD = √(3 × 6) = √18 = 3√2 cm\n∴ The correct answer is 3√2 cm.\n\nAlternate Method\nGiven:\nIn right-angled ΔABC, ∠B = 90°\n\nBD ⊥ AC\n\nAC = 9 cm, AD = 3 cm\n\nFormula Used:\nIn a right triangle, when an altitude is drawn from the right angle to the hypotenuse, the square of the altitude equals the product of the lengths of the two segments on the hypotenuse: BD2 = AD × DC.\n\nCalculations:\n⇒ DC = AC − AD\n⇒ DC = 9 − 3 = 6 cm\n⇒ BD2 = AD × DC\n⇒ BD2 = 3 × 6\n⇒ BD2 = 18\n⇒ BD = √18 = 3√2 cm\n∴ The correct answer is 3√2 cm.\n\nAdditional Information\nGeometric Mean Theorem (Altitude Rule)\n\nIn a right-angled triangle, the altitude drawn to the hypotenuse divides it into two segments such that the altitude is the geometric mean of these two segments. (Altitude2 = Segment 1 × Segment 2)\n\nLeg Rule of a Right Triangle\n\nEach leg of a right-angled triangle is the geometric mean of the hypotenuse and the segment of the hypotenuse adjacent to that leg. (Leg2 = Hypotenuse × Adjacent Segment)\n\nPythagorean Theorem\n\nIn a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two legs. (H2 = P2 + B2)",
+    "solution": "Solution\n\nShortcut Trick\nBy the Geometric Mean Theorem for a right-angled triangle:\n\nAltitude to hypotenuse = √(Product of hypotenuse segments)\nCD = AC - AD = 9 - 3 = 6 cm\nBD = √(3 × 6) = √18 = 3√2 cm\n∴ The correct answer is 3√2 cm.\n\nAlternate Method\nGiven:\nIn right-angled ΔABC, ∠B = 90°\n\nBD ⊥ AC\n\nAC = 9 cm, AD = 3 cm\n\nFormula Used:\nIn a right triangle, when an altitude is drawn from the right angle to the hypotenuse, the square of the altitude equals the product of the lengths of the two segments on the hypotenuse: BD2 = AD × DC.\n\nCalculations:\n⇒ DC = AC - AD\n⇒ DC = 9 - 3 = 6 cm\n⇒ BD2 = AD × DC\n⇒ BD2 = 3 × 6\n⇒ BD2 = 18\n⇒ BD = √18 = 3√2 cm\n∴ The correct answer is 3√2 cm.\n\nAdditional Information\nGeometric Mean Theorem (Altitude Rule)\n\nIn a right-angled triangle, the altitude drawn to the hypotenuse divides it into two segments such that the altitude is the geometric mean of these two segments. (Altitude2 = Segment 1 × Segment 2)\n\nLeg Rule of a Right Triangle\n\nEach leg of a right-angled triangle is the geometric mean of the hypotenuse and the segment of the hypotenuse adjacent to that leg. (Leg2 = Hypotenuse × Adjacent Segment)\n\nPythagorean Theorem\n\nIn a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two legs. (H2 = P2 + B2)",
     "topic": "Geometry",
     "subtopic": "Right Triangle - Altitude Theorem",
     "conceptTested": "Geometric Mean Theorem: In a right-angled triangle, the altitude drawn to the hypotenuse is the geometric mean of the two segments of the hypotenuse (BD² = AD × DC).",
@@ -664,7 +800,9 @@
       "topic": "Geometry",
       "subtopic": "Right Triangle - Altitude Theorem",
       "conceptTested": "Geometric Mean Theorem: In a right-angled triangle, the altitude drawn to the hypotenuse is the geometric mean of the two segments of the hypotenuse (BD² = AD × DC)."
-    }
+    },
+    "question": "In ∆ABC, ∠B = 90° and BD ⟂ AC. If AC = 9 cm and AD = 3 cm, then BD is equal to:",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -680,12 +818,16 @@
     "avgTime": "00:16",
     "questionText": "Aman's average score in a series of tests was ‘y’. He appeared in one more test and obtained score ‘z’. If Aman appeared in total ‘n’ tests, then which one of the following expression shows his average score for all the tests?",
     "options": {
-      "A": "y(n−1)+zn",
-      "B": "y(n−1)+zn",
-      "C": "y(n−1)+1n",
-      "D": "y(n−1)n"
+      "a": "y(n-1)+zn",
+      "b": "y(n-1)+zn",
+      "c": "y(n-1)+1n",
+      "d": "y(n-1)n",
+      "A": "y(n-1)+zn",
+      "B": "y(n-1)+zn",
+      "C": "y(n-1)+1n",
+      "D": "y(n-1)n"
     },
-    "solution": "Solution\n\nShortcut Trick\nTotal number of tests taken by Aman = n.\nNumber of initial tests before the last one = n − 1.\nSum of scores in the first (n − 1) tests = Average × Count = y(n − 1).\nTotal sum of all n tests = Initial sum + Score of last test = y(n − 1) + z.\nNew Average = Total Sum ÷ Total Tests = [y(n − 1) + z] / n.\n∴ The correct answer is [y(n − 1) + z] / n.\n\nAlternate Method\nGiven:\nTotal number of tests appeared = n\nAverage score in the series before the last test = y\nScore obtained in the last test = z\n\nFormula Used:\nAverage = Sum of Observations ÷ Number of Observations\nSum of Observations = Average × Number of Observations\n\nFirst (n − 1) tests\nSum = y(n − 1)\nLast 1 test\nScore = z\nTotal n tests\nTotal Sum = y(n − 1) + z\n\nCalculations:\n⇒ Number of tests taken before the final test = Total tests − 1 = n − 1\n⇒ Sum of scores in the initial (n − 1) tests = y × (n − 1)\n⇒ Total score for all n tests = Sum of (n − 1) tests + Score in the last test\n⇒ Total score = y(n − 1) + z\n⇒ Required Average = Total score ÷ Total number of tests\n⇒ Required Average = [y(n − 1) + z] / n\n∴ The correct answer is [y(n − 1) + z] / n.\n\nAdditional Information\nAverage (Arithmetic Mean)\n\nAverage is defined as the sum of all values divided by the total number of values. Formula: Average = Sum of all terms ÷ Number of terms.\n\nCombined Average\n\nIf group 1 has n1 items with average A1 and group 2 has n2 items with average A2, then the combined average is (n1A1 + n2A2) ÷ (n1 + n2).\n\nNet Change in Average\n\nWhen a new observation is added, the new average can also be calculated as: Old Average + (Difference between new value and old average ÷ Total new number of items).",
+    "solution": "Solution\n\nShortcut Trick\nTotal number of tests taken by Aman = n.\nNumber of initial tests before the last one = n - 1.\nSum of scores in the first (n - 1) tests = Average × Count = y(n - 1).\nTotal sum of all n tests = Initial sum + Score of last test = y(n - 1) + z.\nNew Average = Total Sum ÷ Total Tests = [y(n - 1) + z] / n.\n∴ The correct answer is [y(n - 1) + z] / n.\n\nAlternate Method\nGiven:\nTotal number of tests appeared = n\nAverage score in the series before the last test = y\nScore obtained in the last test = z\n\nFormula Used:\nAverage = Sum of Observations ÷ Number of Observations\nSum of Observations = Average × Number of Observations\n\nFirst (n - 1) tests\nSum = y(n - 1)\nLast 1 test\nScore = z\nTotal n tests\nTotal Sum = y(n - 1) + z\n\nCalculations:\n⇒ Number of tests taken before the final test = Total tests - 1 = n - 1\n⇒ Sum of scores in the initial (n - 1) tests = y × (n - 1)\n⇒ Total score for all n tests = Sum of (n - 1) tests + Score in the last test\n⇒ Total score = y(n - 1) + z\n⇒ Required Average = Total score ÷ Total number of tests\n⇒ Required Average = [y(n - 1) + z] / n\n∴ The correct answer is [y(n - 1) + z] / n.\n\nAdditional Information\nAverage (Arithmetic Mean)\n\nAverage is defined as the sum of all values divided by the total number of values. Formula: Average = Sum of all terms ÷ Number of terms.\n\nCombined Average\n\nIf group 1 has n1 items with average A1 and group 2 has n2 items with average A2, then the combined average is (n1A1 + n2A2) ÷ (n1 + n2).\n\nNet Change in Average\n\nWhen a new observation is added, the new average can also be calculated as: Old Average + (Difference between new value and old average ÷ Total new number of items).",
     "topic": "Average",
     "subtopic": "Addition of New Observations",
     "conceptTested": "Basic definition of average: New Average = [Sum of initial observations + New observation] / Total number of observations.",
@@ -693,7 +835,9 @@
       "topic": "Average",
       "subtopic": "Addition of New Observations",
       "conceptTested": "Basic definition of average: New Average = [Sum of initial observations + New observation] / Total number of observations."
-    }
+    },
+    "question": "Aman's average score in a series of tests was ‘y’. He appeared in one more test and obtained score ‘z’. If Aman appeared in total ‘n’ tests, then which one of the following expression shows his average score for all the tests?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -709,12 +853,16 @@
     "avgTime": "00:32",
     "questionText": "If the denominator of a fraction is multiplied by 2 and the numerator is increased by 2, the fraction becomes 1/2. If instead, the numerator is multiplied by 2 and the denominator is increased by 2, it becomes 6/7. What is the sum of the numerator and the denominator of the original fraction (in lowest form)?",
     "options": {
+      "a": "11",
+      "b": "8",
+      "c": "7",
+      "d": "6",
       "A": "11",
       "B": "8",
       "C": "7",
       "D": "6"
     },
-    "solution": "Solution\n\nGiven:\nCondition 1: Numerator increased by 2 and denominator multiplied by 2 =\n1\n2\n1\n2\n\nCondition 2: Numerator multiplied by 2 and denominator increased by 2 =\n6\n7\n6\n7\n\nFormula used:\nOriginal Fraction =\nx\ny\n𝑥\n𝑦\n\nSum = x + y\n\nCalculation:\n⇒\nx+2\n2y\n=\n1\n2\n𝑥\n+\n2\n2\n𝑦\n=\n1\n2\n\n⇒ 2 × (x + 2) = 2y\n⇒ y = x + 2\n⇒\n2x\ny+2\n=\n6\n7\n2\n𝑥\n𝑦\n+\n2\n=\n6\n7\n\n⇒ 14x = 6 × (y + 2)\n⇒ 7x = 3y + 6\n⇒ 7x = 3 × (x + 2) + 6\n⇒ 7x = 3x + 6 + 6\n⇒ 4x = 12\n⇒ x = 3\n⇒ y = 3 + 2 = 5\n⇒ Original Fraction =\n3\n5\n3\n5\n\n⇒ Sum = 3 + 5 = 8\n∴ The correct answer is option (2).",
+    "solution": "Solution\n\nGiven:\nCondition 1: Numerator increased by 2 and denominator multiplied by 2 =\n1\n2\n1 / 2\n\nCondition 2: Numerator multiplied by 2 and denominator increased by 2 =\n6\n7\n6 / 7\n\nFormula used:\nOriginal Fraction =\nx\ny\nx\ny\n\nSum = x + y\n\nCalculation:\n⇒\nx+2\n2y = 1\n2\nx\n+\n2\n2\ny = 1 / 2\n⇒ 2 × (x + 2) = 2y\n⇒ y = x + 2\n⇒\n2x\ny+2 = 6\n7\n2\nx\ny\n+\n2 = 6 / 7\n⇒ 14x = 6 × (y + 2)\n⇒ 7x = 3y + 6\n⇒ 7x = 3 × (x + 2) + 6\n⇒ 7x = 3x + 6 + 6\n⇒ 4x = 12\n⇒ x = 3\n⇒ y = 3 + 2 = 5\n⇒ Original Fraction =\n3\n5\n3 / 5\n\n⇒ Sum = 3 + 5 = 8\n∴ The correct answer is option (2).",
     "topic": "Simplification",
     "subtopic": "Linear Equations with Fractions",
     "conceptTested": "Formulating simultaneous linear equations from word problems involving numerators and denominators.",
@@ -722,7 +870,9 @@
       "topic": "Simplification",
       "subtopic": "Linear Equations with Fractions",
       "conceptTested": "Formulating simultaneous linear equations from word problems involving numerators and denominators."
-    }
+    },
+    "question": "If the denominator of a fraction is multiplied by 2 and the numerator is increased by 2, the fraction becomes 1/2. If instead, the numerator is multiplied by 2 and the denominator is increased by 2, it becomes 6/7. What is the sum of the numerator and the denominator of the original fraction (in lowest form)?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -738,12 +888,16 @@
     "avgTime": "00:32",
     "questionText": "If twice the son's age (in years) is added to the age of his father, the sum is 91. If twice the age (in years) of father is added to the age of the son, the sum is 119. What is the difference (in years) between the ages of father and son?",
     "options": {
+      "a": "30",
+      "b": "27",
+      "c": "28",
+      "d": "29",
       "A": "30",
       "B": "27",
       "C": "28",
       "D": "29"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen coefficients of variables are swapped, subtract the smaller equation from the larger one to find the difference directly.\n\n⇒ (2F + S) − (F + 2S) = 119 − 91\n⇒ F − S = 28\n∴ The correct answer is 28 years.\n\nAlternate Method\nGiven:\n⇒ Father's age = F years\n⇒ Son's age = S years\n⇒ F + 2S = 91   --- (Equation 1)\n⇒ 2F + S = 119   --- (Equation 2)\n\nCalculations:\n⇒ Multiply Equation 1 by 2:\n⇒ 2F + 4S = 182   --- (Equation 3)\n⇒ Subtract Equation 2 from Equation 3:\n⇒ (2F + 4S) − (2F + S) = 182 − 119\n⇒ 3S = 63\n⇒ S = 21 years\n⇒ Substitute the value of S in Equation 1:\n⇒ F + 2(21) = 91\n⇒ F + 42 = 91\n⇒ F = 91 − 42 = 49 years\n⇒ Difference = F − S = 49 − 21 = 28 years\n∴ The correct answer is 28 years.\n\nAdditional Information\nSwapped Coefficients Rule\n\nFor equations like ax + by = c and bx + ay = d, directly adding them easily finds (x + y), and subtracting them directly finds (x − y). This heavily bypasses complex algebraic substitution steps.\n\nAges Problems Concept\n\nAlways assume the present age as a variable. Past ages are represented by subtraction (x − n) and future ages by addition (x + n). The difference between the ages of two people always remains constant over time.",
+    "solution": "Solution\n\nShortcut Trick\nWhen coefficients of variables are swapped, subtract the smaller equation from the larger one to find the difference directly.\n\n⇒ (2F + S) - (F + 2S) = 119 - 91\n⇒ F - S = 28\n∴ The correct answer is 28 years.\n\nAlternate Method\nGiven:\n⇒ Father's age = F years\n⇒ Son's age = S years\n⇒ F + 2S = 91   --- (Equation 1)\n⇒ 2F + S = 119   --- (Equation 2)\n\nCalculations:\n⇒ Multiply Equation 1 by 2:\n⇒ 2F + 4S = 182   --- (Equation 3)\n⇒ Subtract Equation 2 from Equation 3:\n⇒ (2F + 4S) - (2F + S) = 182 - 119\n⇒ 3S = 63\n⇒ S = 21 years\n⇒ Substitute the value of S in Equation 1:\n⇒ F + 2(21) = 91\n⇒ F + 42 = 91\n⇒ F = 91 - 42 = 49 years\n⇒ Difference = F - S = 49 - 21 = 28 years\n∴ The correct answer is 28 years.\n\nAdditional Information\nSwapped Coefficients Rule\n\nFor equations like ax + by = c and bx + ay = d, directly adding them easily finds (x + y), and subtracting them directly finds (x - y). This heavily bypasses complex algebraic substitution steps.\n\nAges Problems Concept\n\nAlways assume the present age as a variable. Past ages are represented by subtraction (x - n) and future ages by addition (x + n). The difference between the ages of two people always remains constant over time.",
     "topic": "Arithmetical Reasoning",
     "subtopic": "Age Problems",
     "conceptTested": "Solving linear simultaneous equations by coefficient swapping and elimination.",
@@ -751,7 +905,9 @@
       "topic": "Arithmetical Reasoning",
       "subtopic": "Age Problems",
       "conceptTested": "Solving linear simultaneous equations by coefficient swapping and elimination."
-    }
+    },
+    "question": "If twice the son's age (in years) is added to the age of his father, the sum is 91. If twice the age (in years) of father is added to the age of the son, the sum is 119. What is the difference (in years) between the ages of father and son?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -767,12 +923,16 @@
     "avgTime": "00:24",
     "questionText": "If cot 18° = p/q, then the value of cosec^2(378°) / (1 + tan^2(378°)) is",
     "options": {
+      "a": "1",
+      "b": "pq",
+      "c": "p3q3",
+      "d": "p2q2",
       "A": "1",
       "B": "pq",
       "C": "p3q3",
       "D": "p2q2"
     },
-    "solution": "Solution\n\nShortcut Trick\nReduce the angle to the first quadrant: 378° = 360° + 18°.\n\nThe expression becomes cosec2 18° / (1 + tan2 18°).\n\nUsing 1 + tan2 θ = sec2 θ, it simplifies to cosec2 18° / sec2 18°.\nSince cosec θ / sec θ = cot θ, the entire expression strictly reduces to cot2 18°.\nSubstitute cot 18° = p/q directly to get (p/q)2 = p2/q2.\n∴ The correct answer is p2/q2.\n\nAlternate Method\nGiven:\ncot 18° = p/q\n\nFormula Used:\ncosec(360° + θ) = cosec θ\ntan(360° + θ) = tan θ\n1 + tan2 θ = sec2 θ\ncosec θ = 1 / sin θ\nsec θ = 1 / cos θ\n\nCalculations:\n⇒ Angle reduction: 378° = 360° + 18°\n⇒ cosec 378° = cosec 18° and tan 378° = tan 18°\n⇒ Substitute into the expression: (cosec2 18°) / (1 + tan2 18°)\n⇒ Apply the trigonometric identity 1 + tan2 18° = sec2 18°:\n⇒ Expression = (cosec2 18°) / (sec2 18°)\n⇒ Convert sec and cosec functions into fundamental sine and cosine functions:\n⇒ Expression = (1 / sin2 18°) × (cos2 18° / 1)\n⇒ Expression = cos2 18° / sin2 18°\n⇒ Expression = cot2 18°\n⇒ Substitute the given value cot 18° = p/q directly:\n⇒ (p / q)2 = p2 / q2\n∴ The correct answer is p2/q2.\n\nAdditional Information\nTrigonometric Quadrant Rule (ASTC)\n\nIn the first quadrant (0° to 90°), all trigonometric ratios are positive. Angles in the form (360° × n + θ) lie in the first quadrant, retaining exactly the original ratio and identical sign configuration.\n\nPythagorean Identities\n\nThe three fundamental identities mapping trigonometric pairs are: sin2 θ + cos2 θ = 1, 1 + tan2 θ = sec2 θ, and 1 + cot2 θ = cosec2 θ.\n\nReciprocal Relations\n\nKey inverse and quotient relations include: cosec θ = 1 ÷ sin θ, sec θ = 1 ÷ cos θ, and cot θ = 1 ÷ tan θ = cos θ ÷ sin θ.",
+    "solution": "Solution\n\nShortcut Trick\nReduce the angle to the first quadrant: 378° = 360° + 18°.\n\nThe expression becomes cosec2 18° / (1 + tan2 18°).\n\nUsing 1 + tan²θ = sec²θ, it simplifies to cosec2 18° / sec2 18°.\nSince cosec θ / sec θ = cot θ, the entire expression strictly reduces to cot2 18°.\nSubstitute cot 18° = p/q directly to get (p/q)² = p2/q2.\n∴ The correct answer is p2/q2.\n\nAlternate Method\nGiven:\ncot 18° = p/q\n\nFormula Used:\ncosec(360° + θ) = cosec θ\ntan(360° + θ) = tan θ\n1 + tan²θ = sec²θ\ncosec θ = 1 / sin θ\nsec θ = 1 / cos θ\n\nCalculations:\n⇒ Angle reduction: 378° = 360° + 18°\n⇒ cosec 378° = cosec 18° and tan 378° = tan 18°\n⇒ Substitute into the expression: (cosec2 18°) / (1 + tan2 18°)\n⇒ Apply the trigonometric identity 1 + tan2 18° = sec2 18°:\n⇒ Expression = (cosec2 18°) / (sec2 18°)\n⇒ Convert sec and cosec functions into fundamental sine and cosine functions:\n⇒ Expression = (1 / sin2 18°) × (cos2 18° / 1)\n⇒ Expression = cos2 18° / sin2 18°\n⇒ Expression = cot2 18°\n⇒ Substitute the given value cot 18° = p/q directly:\n⇒ (p / q)² = p2 / q2\n∴ The correct answer is p2/q2.\n\nAdditional Information\nTrigonometric Quadrant Rule (ASTC)\n\nIn the first quadrant (0° to 90°), all trigonometric ratios are positive. Angles in the form (360° × n + θ) lie in the first quadrant, retaining exactly the original ratio and identical sign configuration.\n\nPythagorean Identities\n\nThe three fundamental identities mapping trigonometric pairs are: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, and 1 + cot²θ = cosec²θ.\n\nReciprocal Relations\n\nKey inverse and quotient relations include: cosec θ = 1 ÷ sin θ, sec θ = 1 ÷ cos θ, and cot θ = 1 ÷ tan θ = cos θ ÷ sin θ.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Transformations",
     "conceptTested": "Reduction formula for angles exceeding 360 degrees and Pythagorean trigonometric identities.",
@@ -780,7 +940,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Transformations",
       "conceptTested": "Reduction formula for angles exceeding 360 degrees and Pythagorean trigonometric identities."
-    }
+    },
+    "question": "If cot 18° = p/q, then the value of cosec^2(378°) / (1 + tan^2(378°)) is",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -796,12 +958,16 @@
     "avgTime": "00:13",
     "questionText": "What is the area (in square units) of the triangle formed by the graphs of the equations: 2x - y + 8 = 0 and 8x + 3y - 24 = 0, and y = 0?",
     "options": {
+      "a": "28",
+      "b": "24",
+      "c": "36",
+      "d": "32",
       "A": "28",
       "B": "24",
       "C": "36",
       "D": "32"
     },
-    "solution": "Solution\n\nShortcut Trick\nPut y = 0 to find the base points on the X-axis: 2x + 8 = 0 ⇒ x = −4 and 8x − 24 = 0 ⇒ x = 3.\nThe length of the base = 3 − (−4) = 7 units.\n\nTo find the height, find the y-coordinate of the intersection of 2x − y + 8 = 0 and 8x + 3y − 24 = 0.\n\nMultiply the first equation by 4 to get 8x − 4y + 32 = 0, and subtract it from the second: 7y − 56 = 0 ⇒ y = 8.\nArea = 1/2 × Base × Height = 1/2 × 7 × 8 = 28 sq units.\n∴ The correct answer is 28 sq units.\n\nAlternate Method\nGiven:\nEquation 1: 2x − y + 8 = 0\nEquation 2: 8x + 3y − 24 = 0\nEquation 3: y = 0 (This is the X-axis)\n\nA(−4, 0)\nB(3, 0)\nC(0, 8)\nHeight = 8\nBase = 7\n\nCalculations:\n⇒ To find Vertex A, substitute y = 0 into Equation 1:\n⇒ 2x − 0 + 8 = 0 ⇒ 2x = −8 ⇒ x = −4\n⇒ Vertex A = (−4, 0)\n⇒ To find Vertex B, substitute y = 0 into Equation 2:\n⇒ 8x + 3(0) − 24 = 0 ⇒ 8x = 24 ⇒ x = 3\n⇒ Vertex B = (3, 0)\n⇒ To find Vertex C, find the intersection point of Equation 1 and Equation 2:\n⇒ From Equation 1, y = 2x + 8\n⇒ Substitute y in Equation 2: 8x + 3(2x + 8) − 24 = 0\n⇒ 8x + 6x + 24 − 24 = 0 ⇒ 14x = 0 ⇒ x = 0\n⇒ Substitute x = 0 to get y: y = 2(0) + 8 = 8\n⇒ Vertex C = (0, 8)\n⇒ The distance between A(−4, 0) and B(3, 0) is the base of the triangle.\n⇒ Base = 3 − (−4) = 7 units\n⇒ The height of the triangle is the perpendicular distance from C(0, 8) to the X-axis.\n⇒ Height = 8 units\n⇒ Area of triangle = 1/2 × Base × Height\n⇒ Area = 1/2 × 7 × 8\n⇒ Area = 28 sq units\n∴ The correct answer is 28 sq units.\n\nAdditional Information\nArea of Triangle using Coordinates\n\nArea = 1/2 × |x1(y2 − y3) + x2(y3 − y1) + x3(y1 − y2)|\nDistance Formula\n\nThe distance between two points (x1, y1) and (x2, y2) is given by √((x2 − x1)2 + (y2 − y1)2).\n\nIntercepts of a Line\n\nThe x-intercept is found by setting y = 0, and the y-intercept is found by setting x = 0 in the equation of the line.",
+    "solution": "Solution\n\nShortcut Trick\nPut y = 0 to find the base points on the X-axis: 2x + 8 = 0 ⇒ x = -4 and 8x - 24 = 0 ⇒ x = 3.\nThe length of the base = 3 - (-4) = 7 units.\n\nTo find the height, find the y-coordinate of the intersection of 2x - y + 8 = 0 and 8x + 3y - 24 = 0.\n\nMultiply the first equation by 4 to get 8x - 4y + 32 = 0, and subtract it from the second: 7y - 56 = 0 ⇒ y = 8.\nArea = 1/2 × Base × Height = 1/2 × 7 × 8 = 28 sq units.\n∴ The correct answer is 28 sq units.\n\nAlternate Method\nGiven:\nEquation 1: 2x - y + 8 = 0\nEquation 2: 8x + 3y - 24 = 0\nEquation 3: y = 0 (This is the X-axis)\n\nA(-4, 0)\nB(3, 0)\nC(0, 8)\nHeight = 8\nBase = 7\n\nCalculations:\n⇒ To find Vertex A, substitute y = 0 into Equation 1:\n⇒ 2x - 0 + 8 = 0 ⇒ 2x = -8 ⇒ x = -4\n⇒ Vertex A = (-4, 0)\n⇒ To find Vertex B, substitute y = 0 into Equation 2:\n⇒ 8x + 3(0) - 24 = 0 ⇒ 8x = 24 ⇒ x = 3\n⇒ Vertex B = (3, 0)\n⇒ To find Vertex C, find the intersection point of Equation 1 and Equation 2:\n⇒ From Equation 1, y = 2x + 8\n⇒ Substitute y in Equation 2: 8x + 3(2x + 8) - 24 = 0\n⇒ 8x + 6x + 24 - 24 = 0 ⇒ 14x = 0 ⇒ x = 0\n⇒ Substitute x = 0 to get y: y = 2(0) + 8 = 8\n⇒ Vertex C = (0, 8)\n⇒ The distance between A(-4, 0) and B(3, 0) is the base of the triangle.\n⇒ Base = 3 - (-4) = 7 units\n⇒ The height of the triangle is the perpendicular distance from C(0, 8) to the X-axis.\n⇒ Height = 8 units\n⇒ Area of triangle = 1/2 × Base × Height\n⇒ Area = 1/2 × 7 × 8\n⇒ Area = 28 sq units\n∴ The correct answer is 28 sq units.\n\nAdditional Information\nArea of Triangle using Coordinates\n\nArea = 1/2 × |x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)|\nDistance Formula\n\nThe distance between two points (x1, y1) and (x2, y2) is given by √((x2 - x1)² + (y2 - y1)²).\n\nIntercepts of a Line\n\nThe x-intercept is found by setting y = 0, and the y-intercept is found by setting x = 0 in the equation of the line.",
     "topic": "Coordinate Geometry",
     "subtopic": "Area of Triangle & Intercepts",
     "conceptTested": "Calculating area of a triangle formed by intersecting straight lines and the X-axis using vertices and base-height formula.",
@@ -809,7 +975,9 @@
       "topic": "Coordinate Geometry",
       "subtopic": "Area of Triangle & Intercepts",
       "conceptTested": "Calculating area of a triangle formed by intersecting straight lines and the X-axis using vertices and base-height formula."
-    }
+    },
+    "question": "What is the area (in square units) of the triangle formed by the graphs of the equations: 2x - y + 8 = 0 and 8x + 3y - 24 = 0, and y = 0?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -825,12 +993,16 @@
     "avgTime": "00:29",
     "questionText": "An electric fan lists at Rs.265.80 and is sold at a discount of 10%. The shopkeeper gives a further discount of 8% for cash payment. The selling price of the fan, when payment is made in cash, is:",
     "options": {
+      "a": "Rs.210.07",
+      "b": "Rs.239.22",
+      "c": "Rs.220.08",
+      "d": "Rs.250.00",
       "A": "Rs.210.07",
       "B": "Rs.239.22",
       "C": "Rs.220.08",
       "D": "Rs.250.00"
     },
-    "solution": "Solution\n\nShortcut Trick\nUsing the multiplying factor method for successive discounts:\n\nSelling Price = Marked Price × (100 − D1)% × (100 − D2)%\nSP = 265.80 × 0.90 × 0.92\nSP = 265.80 × 0.828 = 220.0824 ≈ 220.08\n∴ The correct answer is Rs. 220.08.\n\nAlternate Method\nGiven:\nMarked Price (MP) = Rs. 265.80\nFirst discount (D1) = 10%\nSecond cash discount (D2) = 8%\n\nFormula Used:\nSelling Price (SP) = MP × [(100 − D1)/100] × [(100 − D2)/100]\n\nCalculations:\n⇒ Price after first discount of 10% = 265.80 × (100 − 10) ÷ 100\n⇒ Price after 10% discount = 265.80 × 90 ÷ 100 = 239.22\n⇒ Final Selling Price after further 8% discount = 239.22 × (100 − 8) ÷ 100\n⇒ Final Selling Price = 239.22 × 92 ÷ 100 = 220.0824\n⇒ Rounding to two decimal places, SP = Rs. 220.08\n∴ The correct answer is Rs. 220.08.\n\nAdditional Information\nEquivalent Single Discount\n\nFor two successive discounts of D1% and D2%, the single equivalent discount percentage is calculated using the formula: D = D1 + D2 − (D1 × D2) ÷ 100.\n\nMarked Price (MP) vs Cost Price (CP)\n\nMarked Price is the list price labeled on an item. All trade and cash discounts are exclusively calculated on the Marked Price, whereas profit or loss is calculated on the Cost Price.",
+    "solution": "Solution\n\nShortcut Trick\nUsing the multiplying factor method for successive discounts:\n\nSelling Price = Marked Price × (100 - D1)% × (100 - D2)%\nSP = 265.80 × 0.90 × 0.92\nSP = 265.80 × 0.828 = 220.0824 ≈ 220.08\n∴ The correct answer is Rs. 220.08.\n\nAlternate Method\nGiven:\nMarked Price (MP) = Rs. 265.80\nFirst discount (D1) = 10%\nSecond cash discount (D2) = 8%\n\nFormula Used:\nSelling Price (SP) = MP × [(100 - D1)/100] × [(100 - D2)/100]\n\nCalculations:\n⇒ Price after first discount of 10% = 265.80 × (100 - 10) ÷ 100\n⇒ Price after 10% discount = 265.80 × 90 ÷ 100 = 239.22\n⇒ Final Selling Price after further 8% discount = 239.22 × (100 - 8) ÷ 100\n⇒ Final Selling Price = 239.22 × 92 ÷ 100 = 220.0824\n⇒ Rounding to two decimal places, SP = Rs. 220.08\n∴ The correct answer is Rs. 220.08.\n\nAdditional Information\nEquivalent Single Discount\n\nFor two successive discounts of D1% and D2%, the single equivalent discount percentage is calculated using the formula: D = D1 + D2 - (D1 × D2) ÷ 100.\n\nMarked Price (MP) vs Cost Price (CP)\n\nMarked Price is the list price labeled on an item. All trade and cash discounts are exclusively calculated on the Marked Price, whereas profit or loss is calculated on the Cost Price.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Successive Discounts",
     "conceptTested": "Calculating final selling price using successive discount multiplying factors.",
@@ -838,7 +1010,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Successive Discounts",
       "conceptTested": "Calculating final selling price using successive discount multiplying factors."
-    }
+    },
+    "question": "An electric fan lists at Rs.265.80 and is sold at a discount of 10%. The shopkeeper gives a further discount of 8% for cash payment. The selling price of the fan, when payment is made in cash, is:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -854,6 +1028,10 @@
     "avgTime": "00:29",
     "questionText": "Pabitra takes twice as long as Kader or three times as long as Rahim to complete a task. If they work together, they can complete the task in 2 days. How long will it take Kader to complete the task on his own?",
     "options": {
+      "a": "6 days",
+      "b": "5 days",
+      "c": "12 days",
+      "d": "8 days",
       "A": "6 days",
       "B": "5 days",
       "C": "12 days",
@@ -867,7 +1045,9 @@
       "topic": "Time & Work",
       "subtopic": "Efficiency & Proportionate Time",
       "conceptTested": "Inverse proportionality between time and efficiency to compute combined work duration."
-    }
+    },
+    "question": "Pabitra takes twice as long as Kader or three times as long as Rahim to complete a task. If they work together, they can complete the task in 2 days. How long will it take Kader to complete the task on his own?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -883,12 +1063,16 @@
     "avgTime": "00:23",
     "questionText": "In a Maths quiz 10 students scored 20 marks, six students scored 19 marks, five students scored 18 marks, four students scored 17 marks, and two students scored 12 marks. The average marks scored by the class (correct to 2 decimal places) is:",
     "options": {
+      "a": "17.34",
+      "b": "18.37",
+      "c": "15.23",
+      "d": "16.25",
       "A": "17.34",
       "B": "18.37",
       "C": "15.23",
       "D": "16.25"
     },
-    "solution": "Solution\n\nShortcut Trick\nUse the Net Deviation Method by taking an Assumed Average = 18.\nNet deviation = (10 × 2) + (6 × 1) + (5 × 0) + (4 × −1) + (2 × −6)\nNet deviation = 20 + 6 + 0 − 4 − 12 = +10 marks\nAverage change per student = +10 ÷ 27 ≈ +0.37\nActual Average = 18 + 0.37 = 18.37\n∴ The correct answer is 18.37 marks.\n\nAlternate Method\nFrequency Distribution of Marks\nMarks Scored\n2\n12\n4\n17\n5\n18\n6\n19\n10\n20\n\nGiven:\nDistribution of students and their marks:\n\n10 students scored 20 marks\n\n6 students scored 19 marks\n\n5 students scored 18 marks\n\n4 students scored 17 marks\n\n2 students scored 12 marks\n\nFormula Used:\nAverage = Sum of all observations ÷ Total number of observations\n\nCalculations:\n⇒ Total students = 10 + 6 + 5 + 4 + 2 = 27\n⇒ Total marks = (10 × 20) + (6 × 19) + (5 × 18) + (4 × 17) + (2 × 12)\n⇒ Total marks = 200 + 114 + 90 + 68 + 24\n⇒ Total marks = 496\n⇒ Average marks = 496 ÷ 27\n⇒ Average marks ≈ 18.3703...\n∴ The correct answer is 18.37 marks.\n\nAdditional Information\nWeighted Average\n\nWhen data sets have different frequencies or weights, the weighted average is calculated as Sum(wi × xi) ÷ Sum(wi), where w is the respective frequency and x is the value.\n\nAssumed Mean Deviation Method\n\nA faster way to find averages involves picking an assumed mean (A), calculating total deviation (D) of all items from A, and finding True Average = A + (D ÷ N).\n\nCombined Average\n\nFor two groups with sizes n1 and n2 and averages A1 and A2, the combined average is given by the formula (n1A1 + n2A2) ÷ (n1 + n2).",
+    "solution": "Solution\n\nShortcut Trick\nUse the Net Deviation Method by taking an Assumed Average = 18.\nNet deviation = (10 × 2) + (6 × 1) + (5 × 0) + (4 × -1) + (2 × -6)\nNet deviation = 20 + 6 + 0 - 4 - 12 = +10 marks\nAverage change per student = +10 ÷ 27 ≈ +0.37\nActual Average = 18 + 0.37 = 18.37\n∴ The correct answer is 18.37 marks.\n\nAlternate Method\nFrequency Distribution of Marks\nMarks Scored\n2\n12\n4\n17\n5\n18\n6\n19\n10 / 20\n\nGiven:\nDistribution of students and their marks:\n\n10 students scored 20 marks\n\n6 students scored 19 marks\n\n5 students scored 18 marks\n\n4 students scored 17 marks\n\n2 students scored 12 marks\n\nFormula Used:\nAverage = Sum of all observations ÷ Total number of observations\n\nCalculations:\n⇒ Total students = 10 + 6 + 5 + 4 + 2 = 27\n⇒ Total marks = (10 × 20) + (6 × 19) + (5 × 18) + (4 × 17) + (2 × 12)\n⇒ Total marks = 200 + 114 + 90 + 68 + 24\n⇒ Total marks = 496\n⇒ Average marks = 496 ÷ 27\n⇒ Average marks ≈ 18.3703...\n∴ The correct answer is 18.37 marks.\n\nAdditional Information\nWeighted Average\n\nWhen data sets have different frequencies or weights, the weighted average is calculated as Sum(wi × xi) ÷ Sum(wi), where w is the respective frequency and x is the value.\n\nAssumed Mean Deviation Method\n\nA faster way to find averages involves picking an assumed mean (A), calculating total deviation (D) of all items from A, and finding True Average = A + (D ÷ N).\n\nCombined Average\n\nFor two groups with sizes n1 and n2 and averages A1 and A2, the combined average is given by the formula (n1A1 + n2A2) ÷ (n1 + n2).",
     "topic": "Average",
     "subtopic": "Weighted Average & Frequency Distribution",
     "conceptTested": "Average = Sum of all observations ÷ Total number of observations, or calculated efficiently using the Assumed Mean Deviation Method.",
@@ -896,7 +1080,9 @@
       "topic": "Average",
       "subtopic": "Weighted Average & Frequency Distribution",
       "conceptTested": "Average = Sum of all observations ÷ Total number of observations, or calculated efficiently using the Assumed Mean Deviation Method."
-    }
+    },
+    "question": "In a Maths quiz 10 students scored 20 marks, six students scored 19 marks, five students scored 18 marks, four students scored 17 marks, and two students scored 12 marks. The average marks scored by the class (correct to 2 decimal places) is:",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -910,12 +1096,16 @@
     "correctOption": "B",
     "questionText": "Comprehension:\n(Que No. 19 - 22)\nDirections: Read the following passage carefully and choose the most appropriate word/phrase from the given options to fill in the blanks.\n\nIndia’s persistent trade deficit remains a structural (1) __________ for policymakers, as the nation’s appetite for imported energy and high-tech components consistently outpaces its export growth, creating a cycle of dependency that is difficult to break. The heavy reliance on crude oil and gold imports creates a chronic imbalance that exerts downward pressure on the Rupee, complicating the Reserve Bank’s efforts to manage inflation without stifling growth. It is imperative that the government (2) __________ policies that move the economy toward high-value manufacturing and deep-tech innovation rather than relying solely on the services sector to bridge the gap. While the IT boom provided a temporary cushion, the long-term health of the economy requires a more robust base of physical exports. Failure to address this imbalance could lead to a widening current account deficit, threatening the long-term macroeconomic stability and the sovereignty of India's fiscal policy in an increasingly volatile global market.\n\nMoreover, scarcely (3) __________ the domestic industry begun to adapt to global supply chain shifts when new geopolitical tensions disrupted the flow of critical raw materials, such as rare earth elements and lithium. This susceptibility to external shocks highlights the fragility of an import-heavy economy that lacks upstream integration. Unless the \"Atmanirbhar Bharat\" initiative produces tangible results in the semiconductor and renewable energy sectors, the trade imbalance will continue to be a (4) __________ to sustained double-digit GDP growth, acting more as a drag than a stimulant in the global economic race. The path forward necessitates not just protectionist tariffs, but a genuine enhancement of domestic productivity and a significant reduction in the cost of logistics. Ultimately, India must transition from being a mere consumer in the global value chain to a pivotal node of production if it is to realize its demographic dividend.\n\nQuestion:\nWhat will come in blank (1)?",
     "options": {
+      "a": "Fillip",
+      "b": "Quagmire",
+      "c": "Cynosure",
+      "d": "Paradigm",
       "A": "Fillip",
       "B": "Quagmire",
       "C": "Cynosure",
       "D": "Paradigm"
     },
-    "solution": "Solution\nThe correct answer is 'Quagmire'.\n\nKey Points\nThe passage describes India’s persistent trade deficit as a \"cycle of dependency that is difficult to break,\" emphasizing the complexity and the struggle of policymakers to manage it.\n\"Quagmire\" (नाज़ुक स्थिति/दलदल) refers to an awkward, complex, or hazardous situation from which it is difficult to extract oneself. This perfectly fits the \"persistent\" and \"structural\" nature of the deficit described.\n\"Fillip\" (प्रोत्साहन) refers to something which acts as a stimulus or boost. A trade deficit is a drain on the economy, not a boost, making this logically incorrect.\n\"Cynosure\" (आकर्षण का केंद्र) is a person or thing that is the center of attention or admiration. While the deficit is a center of focus, it is not admired, and \"quagmire\" better captures the negative, trapped nature of the issue.\n\"Paradigm\" (प्रतिमान) is a typical example or pattern. While the deficit is a pattern, \"quagmire\" is a much stronger descriptor for a \"difficult to break\" structural problem.\nTherefore, the correct answer is 'Option 2'.\nComplete Passage: India’s persistent trade deficit remains a structural (1) Quagmire for policymakers, as the nation’s appetite for imported energy and high-tech components consistently outpaces its export growth, creating a cycle of dependency that is difficult to break. The heavy reliance on crude oil and gold imports creates a chronic imbalance that exerts downward pressure on the Rupee, complicating the Reserve Bank’s efforts to manage inflation without stifling growth. It is imperative that the government (2) __________ policies that move the economy toward high-value manufacturing and deep-tech innovation rather than relying solely on the services sector to bridge the gap. While the IT boom provided a temporary cushion, the long-term health of the economy requires a more robust base of physical exports. Failure to address this imbalance could lead to a widening current account deficit, threatening the long-term macroeconomic stability and the sovereignty of India's fiscal policy in an increasingly volatile global market.\n\nMoreover, scarcely (3) __________ the domestic industry begun to adapt to global supply chain shifts when new geopolitical tensions disrupted the flow of critical raw materials, such as rare earth elements and lithium. This susceptibility to external shocks highlights the fragility of an import-heavy economy that lacks upstream integration. Unless the \"Atmanirbhar Bharat\" initiative produces tangible results in the semiconductor and renewable energy sectors, the trade imbalance will continue to be a (4) __________ to sustained double-digit GDP growth, acting more as a drag than a stimulant in the global economic race. The path forward necessitates not just protectionist tariffs, but a genuine enhancement of domestic productivity and a significant reduction in the cost of logistics. Ultimately, India must transition from being a mere consumer in the global value chain to a pivotal node of production if it is to realize its demographic dividend.\n\nAdditional Information\nCurrent Account Deficit (CAD): A measurement of a country’s trade where the value of the goods and services it imports exceeds the value of the products it exports.\nDownward Pressure: A set of factors that causes the value of a currency (like the Rupee) to decrease in the international market.\nStifling: Restraining or stopping something from growing or developing.",
+    "solution": "Solution\nThe correct answer is 'Quagmire'.\n\nKey Points\nThe passage describes India’s persistent trade deficit as a \"cycle of dependency that is difficult to break,\" emphasizing the complexity and the struggle of policymakers to manage it.\n\"Quagmire\" (नाज़ुक स्थिति/दलदल) refers to an awkward, complex, or hazardous situation from which it is difficult to extract oneself. This perfectly fits the \"persistent\" and \"structural\" nature of the deficit described.\n\"Fillip\" (प्रोत्साहन) refers to something which acts as a stimulus or boost. A trade deficit is a drain on the economy, not a boost, making this logically incorrect.\n\"Cynosure\" (आकर्षण का केंद्र) is a person or thing that is the center of attention or admiration. While the deficit is a center of focus, it is not admired, and \"quagmire\" better captures the negative, trapped nature of the issue.\n\"Paradigm\" (प्रतिमान) is a typical example or pattern. While the deficit is a pattern, \"quagmire\" is a much stronger descriptor for a \"difficult to break\" structural problem.\nTherefore, the correct answer is 'Option 2'.\nComplete Passage: India’s persistent trade deficit remains a structural (1) Quagmire for policymakers, as the nation’s appetite for imported energy and high-tech components consistently outpaces its export growth, creating a cycle of dependency that is difficult to break. The heavy reliance on crude oil and gold imports creates a chronic imbalance that exerts downward pressure on the Rupee, complicating the Reserve Bank’s efforts to manage inflation without stifling growth. It is imperative that the government (2) __________ policies that move the economy toward high-value manufacturing and deep-tech innovation rather than relying solely on the services sector to bridge the gap. While the IT boom provided a temporary cushion, the long-term health of the economy requires a more robust base of physical exports. Failure to address this imbalance could lead to a widening current account deficit, threatening the long-term macroeconomic stability and the sovereignty of India's fiscal policy in an increasingly volatile global market.\n\nMoreover, scarcely (3) __________ the domestic industry begun to adapt to global supply chain shifts when new geopolitical tensions disrupted the flow of critical raw materials, such as rare earth elements and lithium. This susceptibility to external shocks highlights the fragility of an import-heavy economy that lacks upstream integration. Unless the \"Atmanirbhar Bharat\" initiative produces tangible results in the semiconductor and renewable energy sectors, the trade imbalance will continue to be a (4) __________ to sustained double-digit GDP growth, acting more as a drag than a stimulant in the global economic race. The path forward necessitates not just protectionist tariffs, but a genuine enhancement of domestic productivity and a significant reduction in the cost of logistics. Ultimately, India must transition from being a mere consumer in the global value chain to a pivotal node of production if it is to realize its demographic dividend.\n\nAdditional Information\nCurrent Account Deficit (CAD): A measurement of a country’s trade where the value of the goods and services it imports exceeds the value of the products it exports.\nDownward Pressure: A set of factors that causes the value of a currency (like the Rupee) to decrease in the international market.\nStifling: Restraining or stopping something from growing or developing.",
     "topic": "Fill in the Blanks",
     "subtopic": "Contextual Vocabulary Fillers",
     "conceptTested": "Selection of the most contextually appropriate and precise vocabulary word based on tone and meaning.",
@@ -923,7 +1113,9 @@
       "topic": "Fill in the Blanks",
       "subtopic": "Contextual Vocabulary Fillers",
       "conceptTested": "Selection of the most contextually appropriate and precise vocabulary word based on tone and meaning."
-    }
+    },
+    "question": "Comprehension:\n(Que No. 19 - 22)\nDirections: Read the following passage carefully and choose the most appropriate word/phrase from the given options to fill in the blanks.\n\nIndia’s persistent trade deficit remains a structural (1) __________ for policymakers, as the nation’s appetite for imported energy and high-tech components consistently outpaces its export growth, creating a cycle of dependency that is difficult to break. The heavy reliance on crude oil and gold imports creates a chronic imbalance that exerts downward pressure on the Rupee, complicating the Reserve Bank’s efforts to manage inflation without stifling growth. It is imperative that the government (2) __________ policies that move the economy toward high-value manufacturing and deep-tech innovation rather than relying solely on the services sector to bridge the gap. While the IT boom provided a temporary cushion, the long-term health of the economy requires a more robust base of physical exports. Failure to address this imbalance could lead to a widening current account deficit, threatening the long-term macroeconomic stability and the sovereignty of India's fiscal policy in an increasingly volatile global market.\n\nMoreover, scarcely (3) __________ the domestic industry begun to adapt to global supply chain shifts when new geopolitical tensions disrupted the flow of critical raw materials, such as rare earth elements and lithium. This susceptibility to external shocks highlights the fragility of an import-heavy economy that lacks upstream integration. Unless the \"Atmanirbhar Bharat\" initiative produces tangible results in the semiconductor and renewable energy sectors, the trade imbalance will continue to be a (4) __________ to sustained double-digit GDP growth, acting more as a drag than a stimulant in the global economic race. The path forward necessitates not just protectionist tariffs, but a genuine enhancement of domestic productivity and a significant reduction in the cost of logistics. Ultimately, India must transition from being a mere consumer in the global value chain to a pivotal node of production if it is to realize its demographic dividend.\n\nQuestion:\nWhat will come in blank (1)?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 5",
@@ -939,6 +1131,10 @@
     "avgTime": "00:17",
     "questionText": "Improve the underlined part of the sentence. Choose 'No improvement' as an answer if the sentence is grammatically correct.\nThey plan to marrying in the spring.",
     "options": {
+      "a": "plan to marry",
+      "b": "No improvement",
+      "c": "plans to marry",
+      "d": "plan to married",
       "A": "plan to marry",
       "B": "No improvement",
       "C": "plans to marry",
@@ -952,6 +1148,8 @@
       "topic": "Sentence Improvement",
       "subtopic": "Verb Forms & Infinitives",
       "conceptTested": "After verbs that indicate planning or intention (such as 'plan', 'intend', 'want'), use the base form of the verb (the infinitive) following 'to'."
-    }
+    },
+    "question": "Improve the underlined part of the sentence. Choose 'No improvement' as an answer if the sentence is grammatically correct.\nThey plan to marrying in the spring.",
+    "answer": "a"
   }
 ]

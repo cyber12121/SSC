@@ -13,6 +13,10 @@
     "avgTime": "00:51",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nA decision has been taken to have the proposal reviewed by an external panel.",
     "options": {
+      "a": "An external panel has reviewed the proposal.",
+      "b": "The proposal is being reviewed by an external panel.",
+      "c": "They have decided to get the proposal reviewed by an external panel.",
+      "d": "The proposal was reviewed by the panel as per the decision.",
       "A": "An external panel has reviewed the proposal.",
       "B": "The proposal is being reviewed by an external panel.",
       "C": "They have decided to get the proposal reviewed by an external panel.",
@@ -26,7 +30,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nA decision has been taken to have the proposal reviewed by an external panel.",
+    "answer": "c"
   },
   {
     "testName": "CGL 17/09/2025 Shift-2 (English)",
@@ -42,6 +48,10 @@
     "avgTime": "00:17",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe documents had been submitted by the assistant before the deadline.",
     "options": {
+      "a": "The assistant submits the documents before the deadline.",
+      "b": "The assistant had submitted the documents before the deadline.",
+      "c": "The assistant was submitting the documents before the deadline.",
+      "d": "The assistant is submitting the documents before the deadline.",
       "A": "The assistant submits the documents before the deadline.",
       "B": "The assistant had submitted the documents before the deadline.",
       "C": "The assistant was submitting the documents before the deadline.",
@@ -55,7 +65,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe documents had been submitted by the assistant before the deadline.",
+    "answer": "b"
   },
   {
     "testName": "CGL 18/09/2025 Shift-1 (English)",
@@ -71,6 +83,10 @@
     "avgTime": "00:59",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe possibility of the files being leaked before the official release was not ruled out.",
     "options": {
+      "a": "Officials ruled out the leak before the files were released.",
+      "b": "The leak of the files was ruled out before the release.",
+      "c": "Someone did not rule out the possibility that the files were leaked before release.",
+      "d": "The release happened before ruling out the leak possibility.",
       "A": "Officials ruled out the leak before the files were released.",
       "B": "The leak of the files was ruled out before the release.",
       "C": "Someone did not rule out the possibility that the files were leaked before release.",
@@ -84,7 +100,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe possibility of the files being leaked before the official release was not ruled out.",
+    "answer": "c"
   },
   {
     "testName": "CGL 18/09/2025 Shift-2 (English)",
@@ -100,6 +118,10 @@
     "avgTime": "00:51",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe findings were interpreted to have been misrepresented by the spokesperson in the official release.",
     "options": {
+      "a": "It is believed that the spokesperson misrepresented the findings.",
+      "b": "The official release was said to have misrepresented the spokesperson.",
+      "c": "The spokesperson is believed to have misrepresented the findings.",
+      "d": "It was believed that the spokesperson had misinterpreted the release.",
       "A": "It is believed that the spokesperson misrepresented the findings.",
       "B": "The official release was said to have misrepresented the spokesperson.",
       "C": "The spokesperson is believed to have misrepresented the findings.",
@@ -113,7 +135,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nThe findings were interpreted to have been misrepresented by the spokesperson in the official release.",
+    "answer": "c"
   },
   {
     "testName": "CGL 18/09/2025 Shift-3 (English)",
@@ -129,6 +153,10 @@
     "avgTime": "00:20",
     "questionText": "Change the following from active to passive:\n\nThey feed the animals twice a day.",
     "options": {
+      "a": "The animals are fed twice a day.",
+      "b": "The animals were fed twice a day.",
+      "c": "The animals are being fed twice a day.",
+      "d": "The animals have been fed twice a day.",
       "A": "The animals are fed twice a day.",
       "B": "The animals were fed twice a day.",
       "C": "The animals are being fed twice a day.",
@@ -142,7 +170,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Change the following from active to passive:\n\nThey feed the animals twice a day.",
+    "answer": "a"
   },
   {
     "testName": "CGL 19/09/2025 Shift-1 (English)",
@@ -158,6 +188,10 @@
     "avgTime": "00:46",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nNew protocols are expected to have been implemented by the end of the fiscal year.",
     "options": {
+      "a": "Authorities implemented the protocols by the fiscal year-end.",
+      "b": "The administration expects to implement protocols soon.",
+      "c": "Authorities are expected to implement new protocols by fiscal year-end.",
+      "d": "The protocols were implemented as expected.",
       "A": "Authorities implemented the protocols by the fiscal year-end.",
       "B": "The administration expects to implement protocols soon.",
       "C": "Authorities are expected to implement new protocols by fiscal year-end.",
@@ -171,7 +205,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure:\n\nNew protocols are expected to have been implemented by the end of the fiscal year.",
+    "answer": "c"
   },
   {
     "testName": "CGL 20/09/2025 Shift-1 (English)",
@@ -187,6 +223,10 @@
     "avgTime": "00:56",
     "questionText": "Change the following from active to passive: They had been making the staff report discrepancies silently.",
     "options": {
+      "a": "The staff had been made to report discrepancies silently.",
+      "b": "The staff were made to report discrepancies silently.",
+      "c": "Discrepancies had been reported silently by the staff.",
+      "d": "The staff had been made report discrepancies silently.",
       "A": "The staff had been made to report discrepancies silently.",
       "B": "The staff were made to report discrepancies silently.",
       "C": "Discrepancies had been reported silently by the staff.",
@@ -200,7 +240,9 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Change the following from active to passive: They had been making the staff report discrepancies silently.",
+    "answer": "a"
   },
   {
     "testName": "CGL 20/09/2025 Shift-1 (English)",
@@ -216,6 +258,10 @@
     "avgTime": "00:39",
     "questionText": "Convert the sentence provided below from its passive voice structure to an active voice structure: The funds were believed to have been misallocated by certain board members over several quarters.",
     "options": {
+      "a": "Certain board members believed to misallocate the funds.",
+      "b": "Certain board members are believed to have misallocated the funds.",
+      "c": "It is believed that board members misallocate the funds.",
+      "d": "People believed that certain board members had misallocated the funds over several quarters.",
       "A": "Certain board members believed to misallocate the funds.",
       "B": "Certain board members are believed to have misallocated the funds.",
       "C": "It is believed that board members misallocate the funds.",
@@ -229,6 +275,8 @@
       "topic": "English Comprehension",
       "subtopic": "English Comprehension",
       "conceptTested": ""
-    }
+    },
+    "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The funds were believed to have been misallocated by certain board members over several quarters.",
+    "answer": "d"
   }
 ]

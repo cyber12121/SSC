@@ -3,6 +3,7 @@ import { Check, RotateCcw, Bookmark, BookmarkCheck, Trash2, Flag, Clock, Zap } f
 import { Question } from '../types';
 
 import { cleanSolutionText } from '../utils/cleanSolution';
+import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { parseAvgTimeToSeconds } from './Review';
 import { FormattedText } from './FormattedText';
 
@@ -35,11 +36,23 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   avgTimeSeconds,
 }) => {
   const optionKeys: ('a' | 'b' | 'c' | 'd')[] = ['a', 'b', 'c', 'd'];
-  const correctAnswerKey = (question.answer || (question as any).correct_answer || (question as any).correctOption || '')?.toString().toLowerCase().trim();
-  const normalizedSelected = selectedAnswer?.toLowerCase().trim() || null;
+  const correctAnswerKey = normalizeAnswerKey(
+    question.answer || (question as any).correct_answer || (question as any).correctOption
+  );
+  const normalizedSelected = selectedAnswer ? normalizeAnswerKey(selectedAnswer) : null;
   const isCorrect = normalizedSelected !== null && normalizedSelected === correctAnswerKey;
   const isAttempted = !!normalizedSelected;
   const effectiveAvgSec = avgTimeSeconds ?? parseAvgTimeToSeconds(question.avgTime || (question as any)?.avg_time) ?? 35;
+
+  const getOptionValue = (key: 'a' | 'b' | 'c' | 'd') => {
+    if (!question.options) return '';
+    return (
+      question.options[key] ||
+      (question.options as any)[key.toUpperCase()] ||
+      (question.options as any)[key === 'a' ? '1' : key === 'b' ? '2' : key === 'c' ? '3' : '4'] ||
+      ''
+    );
+  };
 
   return (
     <div className="bg-white h-full flex flex-col">
@@ -159,7 +172,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         {/* Options */}
         <div className="space-y-3 mb-6">
           {optionKeys.map(key => {
-            const value = question.options[key];
+            const value = getOptionValue(key);
             if (!value) return null;
 
             const isSelected = normalizedSelected === key;

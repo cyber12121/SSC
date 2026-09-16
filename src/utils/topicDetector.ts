@@ -4,19 +4,38 @@ export function normalizeTopicTitle(rawTopic?: string | null): string {
   if (!rawTopic) return 'General';
   const clean = rawTopic.trim();
   if (!clean || clean === 'General' || clean === 'Unknown' || clean === 'English Comprehension' || clean === 'English') return 'General';
-  if (/^active\s*(&|and)?\s*passive(\s*voice)?$/i.test(clean)) return 'Active & Passive Voice';
-  if (/^direct\s*(&|and)?\s*indirect(\s*speech)?(\s*\(narration\))?$/i.test(clean) || /^narration$/i.test(clean)) return 'Direct & Indirect Speech';
-  if (/^missing\s*numbers?(\s*\/\s*matrix)?$/i.test(clean) || /^matrix$/i.test(clean)) return 'Missing Number / Matrix';
-  if (/^one\s*words?(\s*substitut\w*)?$/i.test(clean) || /^ows$/i.test(clean)) return 'One Word Substitution';
-  if (/^para\s*jumbles?$/i.test(clean) || /^pqrs$/i.test(clean) || /^sentence\s*rearrangement(\s*\(pqrs\))?$/i.test(clean)) return 'Para Jumbles';
-  if (/^spelling?\s*errors?$/i.test(clean) || /^misspelt$/i.test(clean) || /^incorrect\s*spellings?$/i.test(clean) || /^correctly\s*spelt(\s*words?)?$/i.test(clean) || /^spellings?$/i.test(clean)) return 'Spelling Errors';
-  if (/^synonyms?\s*(&|and)?\s*antonyms?$/i.test(clean) || /^syno\s*(&|and)?\s*anto$/i.test(clean) || /^anto\s*(&|and)?\s*syno$/i.test(clean) || /^synonyms?$/i.test(clean) || /^antonyms?$/i.test(clean) || /^syno$/i.test(clean) || /^anto$/i.test(clean)) return 'Synonyms & Antonyms';
-  if (/^idioms?\s*(&|and)?\s*phrases?$/i.test(clean)) return 'Idioms & Phrases';
-  if (/^fill\s*in\s*the\s*blanks?$/i.test(clean) || /^fillers?$/i.test(clean)) return 'Fill in the Blanks';
-  if (/^sentence\s*improvement$/i.test(clean)) return 'Sentence Improvement';
-  if (/^spotting?\s*errors?$/i.test(clean)) return 'Spotting Errors';
-  if (/^cloze\s*test$/i.test(clean) || /^cloze$/i.test(clean)) return 'Cloze Test';
-  if (/^reading\s*comprehension$/i.test(clean) || /^rc$/i.test(clean) || /^comprehension$/i.test(clean)) return 'Reading Comprehension';
+  
+  // Unify all Active & Passive Voice subtopics and variants into one chapter bucket
+  if (
+    /^active\s*(&|and|\/|to)?\s*passive/i.test(clean) ||
+    /^passive\s*(&|and|\/|to)?\s*active/i.test(clean) ||
+    /\b(active\s*(&|and|\/|to)\s*passive|passive\s*(&|and|\/|to)\s*active|passive\s*voice|active\s*voice|voice\s*change)\b/i.test(clean) ||
+    /^voice\b/i.test(clean)
+  ) {
+    return 'Active & Passive Voice';
+  }
+
+  // Unify Direct & Indirect Speech / Narration
+  if (
+    /^direct\s*(&|and|\/|to)?\s*indirect/i.test(clean) ||
+    /^indirect\s*(&|and|\/|to)?\s*direct/i.test(clean) ||
+    /^narration/i.test(clean) ||
+    /\b(direct\s*(&|and|\/|to)\s*indirect|reported\s*speech|speech\s*change)\b/i.test(clean)
+  ) {
+    return 'Direct & Indirect Speech';
+  }
+
+  if (/^missing\s*numbers?(\s*\/\s*matrix)?/i.test(clean) || /^matrix\b/i.test(clean)) return 'Missing Number / Matrix';
+  if (/^one\s*words?(\s*substitut\w*)?/i.test(clean) || /^ows\b/i.test(clean)) return 'One Word Substitution';
+  if (/^para\s*jumbles?/i.test(clean) || /^pqrs\b/i.test(clean) || /^sentence\s*rearrangement/i.test(clean)) return 'Para Jumbles';
+  if (/^spelling?\s*errors?/i.test(clean) || /^misspelt/i.test(clean) || /^incorrect\s*spellings?/i.test(clean) || /^correctly\s*spelt/i.test(clean) || /^spellings?/i.test(clean)) return 'Spelling Errors';
+  if (/^synonyms?\s*(&|and)?\s*antonyms?/i.test(clean) || /^syno\s*(&|and)?\s*anto/i.test(clean) || /^anto\s*(&|and)?\s*syno/i.test(clean) || /^synonyms?/i.test(clean) || /^antonyms?/i.test(clean) || /^syno$/i.test(clean) || /^anto$/i.test(clean)) return 'Synonyms & Antonyms';
+  if (/^idioms?\s*(&|and)?\s*phrases?/i.test(clean)) return 'Idioms & Phrases';
+  if (/^fill\s*in\s*the\s*blanks?/i.test(clean) || /^fillers?/i.test(clean)) return 'Fill in the Blanks';
+  if (/^sentence\s*improvement/i.test(clean)) return 'Sentence Improvement';
+  if (/^spotting?\s*errors?/i.test(clean)) return 'Spotting Errors';
+  if (/^cloze\s*test/i.test(clean) || /^cloze\b/i.test(clean)) return 'Cloze Test';
+  if (/^reading\s*comprehension/i.test(clean) || /^rc\b/i.test(clean) || /^comprehension/i.test(clean)) return 'Reading Comprehension';
   return clean;
 }
 

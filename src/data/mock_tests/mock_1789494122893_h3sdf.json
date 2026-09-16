@@ -13,6 +13,10 @@
     "avgTime": "00:15",
     "questionText": "Select the option in which the words in the word-pair share the same relationship as that shares by the given word-pair.\nTiger: Felidae",
     "options": {
+      "a": "Lion : Leporidae",
+      "b": "Rabbit : Bovidae",
+      "c": "Whale : Cetacea",
+      "d": "Elephant : Canidae",
       "A": "Lion : Leporidae",
       "B": "Rabbit : Bovidae",
       "C": "Whale : Cetacea",
@@ -26,7 +30,9 @@
       "topic": "Analogy",
       "subtopic": "Semantic Analogy",
       "conceptTested": "Classification of organisms into their biological families."
-    }
+    },
+    "question": "Select the option in which the words in the word-pair share the same relationship as that shares by the given word-pair.\nTiger: Felidae",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -42,12 +48,16 @@
     "avgTime": "01:04",
     "questionText": "Select the option that is related to the fourth term in the same way as the first term is related to the second term and the fifth term is related to the sixth term.\n16 : 96 :: ? : 161 :: 18 : 120",
     "options": {
+      "a": "22",
+      "b": "21",
+      "c": "20",
+      "d": "24",
       "A": "22",
       "B": "21",
       "C": "20",
       "D": "24"
     },
-    "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd number\n\nSo,\n\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
+    "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd numbeRs. o,\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
     "topic": "Analogy",
     "subtopic": "Number Analogy",
     "conceptTested": "Relationship pattern involving arithmetic operations on numbers: [x * (x + 2)] / 3 = y.",
@@ -55,7 +65,9 @@
       "topic": "Analogy",
       "subtopic": "Number Analogy",
       "conceptTested": "Relationship pattern involving arithmetic operations on numbers: [x * (x + 2)] / 3 = y."
-    }
+    },
+    "question": "Select the option that is related to the fourth term in the same way as the first term is related to the second term and the fifth term is related to the sixth term.\n16 : 96 :: ? : 161 :: 18 : 120",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -71,12 +83,16 @@
     "avgTime": "00:58",
     "questionText": "Which of the two digit should be interchanged to correct the following equation?\n75 ÷ 18 + 51 × 8 - 82 = 87",
     "options": {
+      "a": "7 & 8",
+      "b": "1 & 5",
+      "c": "5 & 2",
+      "d": "8 & 2",
       "A": "7 & 8",
       "B": "1 & 5",
       "C": "5 & 2",
       "D": "8 & 2"
     },
-    "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
+    "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Digits & Signs",
     "conceptTested": "Balancing equations by interchanging specific digits and applying the BODMAS rule.",
@@ -84,7 +100,9 @@
       "topic": "Mathematical Operations",
       "subtopic": "Interchange of Digits & Signs",
       "conceptTested": "Balancing equations by interchanging specific digits and applying the BODMAS rule."
-    }
+    },
+    "question": "Which of the two digit should be interchanged to correct the following equation?\n75 ÷ 18 + 51 × 8 - 82 = 87",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -100,6 +118,10 @@
     "avgTime": "00:54",
     "questionText": "Find the next term in the series:\n0, 6, 24, 60, 120, 210, ___",
     "options": {
+      "a": "336",
+      "b": "240",
+      "c": "504",
+      "d": "290",
       "A": "336",
       "B": "240",
       "C": "504",
@@ -113,7 +135,9 @@
       "topic": "Number Series",
       "subtopic": "Missing Number Series",
       "conceptTested": "Cubic pattern series based on the formula n³ - n."
-    }
+    },
+    "question": "Find the next term in the series:\n0, 6, 24, 60, 120, 210, ___",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -129,6 +153,10 @@
     "avgTime": "00:29",
     "questionText": "How many pairs of letters in the word ‘NIGHTMARE’ have as many letters between them in the word as in the English alphabet?",
     "options": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "5",
       "A": "1",
       "B": "2",
       "C": "3",
@@ -142,7 +170,9 @@
       "topic": "Alphabet Test",
       "subtopic": "Letter Pairs Problem",
       "conceptTested": "Counting forward and backward letter pairs in a word corresponding to their alphabetical distance."
-    }
+    },
+    "question": "How many pairs of letters in the word ‘NIGHTMARE’ have as many letters between them in the word as in the English alphabet?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -158,6 +188,10 @@
     "avgTime": "00:17",
     "questionText": "In the given Venn diagram, the triangle represents urban citizens, the circle represents people with diabetes, and the rectangle represents senior citizens. Study the diagram and answer the question:\n\nWhat is the number of senior citizens who do not have diabetes?",
     "options": {
+      "a": "7",
+      "b": "5",
+      "c": "31",
+      "d": "26",
       "A": "7",
       "B": "5",
       "C": "31",
@@ -171,7 +205,9 @@
       "topic": "Venn Diagram",
       "subtopic": "Logical Venn Diagrams",
       "conceptTested": "Extraction of specific region counts from intersecting geometric shapes based on conditional exclusion."
-    }
+    },
+    "question": "In the given Venn diagram, the triangle represents urban citizens, the circle represents people with diabetes, and the rectangle represents senior citizens. Study the diagram and answer the question:\n\nWhat is the number of senior citizens who do not have diabetes?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -187,6 +223,10 @@
     "avgTime": "00:19",
     "questionText": "How many such '7's are there in the following number series which are immediately preceded by '6' but not immediately followed by 5?\n\n7 5 2 7 6 5 3 6 7 4 3 4 7 8 5 3 7 6 7 2 5 0 6 7 5 3",
     "options": {
+      "a": "5",
+      "b": "4",
+      "c": "3",
+      "d": "2",
       "A": "5",
       "B": "4",
       "C": "3",
@@ -200,7 +240,9 @@
       "topic": "Alphabet Test",
       "subtopic": "Vowel-Consonant Operations",
       "conceptTested": "Counting specific symbol or number occurrences under immediate predecessor and successor constraints within a sequence."
-    }
+    },
+    "question": "How many such '7's are there in the following number series which are immediately preceded by '6' but not immediately followed by 5?\n\n7 5 2 7 6 5 3 6 7 4 3 4 7 8 5 3 7 6 7 2 5 0 6 7 5 3",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -216,6 +258,10 @@
     "avgTime": "00:27",
     "questionText": "Statement: The richer we are the more self-centered we become and neglect other's needs.\n\nConclusions:\nI. All rich are self-centered.\nII. Those who neglect other's needs are rich.\n\nDetermine which of the given conclusions logically follows from the statement.",
     "options": {
+      "a": "Only\nconclusion I is true.",
+      "b": "Only\nconclusion II is true.",
+      "c": "Both I and II are true.",
+      "d": "Neither I nor II is true.",
       "A": "Only\nconclusion I is true.",
       "B": "Only\nconclusion II is true.",
       "C": "Both I and II are true.",
@@ -229,7 +275,9 @@
       "topic": "Statement & Conclusion",
       "subtopic": "Critical verbal reasoning deduction from statements",
       "conceptTested": "Evaluating whether universal generalizations or converses logically follow from a given conditional premise."
-    }
+    },
+    "question": "Statement: The richer we are the more self-centered we become and neglect other's needs.\n\nConclusions:\nI. All rich are self-centered.\nII. Those who neglect other's needs are rich.\n\nDetermine which of the given conclusions logically follows from the statement.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -245,6 +293,10 @@
     "avgTime": "00:46",
     "questionText": "Which of the following mineral's reserve is found in the coal fields of Jharia and Bokaro in the State?",
     "options": {
+      "a": "Granite",
+      "b": "Coalbed Methane",
+      "c": "Feldspar",
+      "d": "Ilmenite",
       "A": "Granite",
       "B": "Coalbed Methane",
       "C": "Feldspar",
@@ -258,7 +310,9 @@
       "topic": "Indian Drainage & Physiography",
       "subtopic": "Minerals and Coal Fields",
       "conceptTested": "Knowledge of major mineral reserves and coal fields in India."
-    }
+    },
+    "question": "Which of the following mineral's reserve is found in the coal fields of Jharia and Bokaro in the State?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -274,6 +328,10 @@
     "avgTime": "00:37",
     "questionText": "Match the agricultural revolutions with their respective products for which they were implemented:\n1. Grey Revolution - A. Oilseeds\n2. Brown Revolution - B. Fertilizer\n3. Pink Revolution - C. Leather\n4. Yellow Revolution - D. Shrimp\n\nChoose the correct matching option:",
     "options": {
+      "a": "1-C, 2-D, 3-A, 4-B",
+      "b": "1-B, 2-C, 3-D, 4-A",
+      "c": "1-D, 2-C, 3-A, 4-B",
+      "d": "1-D, 2-A, 3-B, 4-C",
       "A": "1-C, 2-D, 3-A, 4-B",
       "B": "1-B, 2-C, 3-D, 4-A",
       "C": "1-D, 2-C, 3-A, 4-B",
@@ -287,7 +345,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Agricultural Revolutions",
       "conceptTested": "Association of color-coded agricultural revolutions with their respective target products."
-    }
+    },
+    "question": "Match the agricultural revolutions with their respective products for which they were implemented:\n1. Grey Revolution - A. Oilseeds\n2. Brown Revolution - B. Fertilizer\n3. Pink Revolution - C. Leather\n4. Yellow Revolution - D. Shrimp\n\nChoose the correct matching option:",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -301,8 +361,12 @@
     "correctOption": "B",
     "userTime": "00:18",
     "avgTime": "00:36",
-    "questionText": "With reference to depositional landforms, consider the following statements:\n1. Oxbow lakes are formed due to deposition of sediments on the concave side of meanders.\n2. Natural levees are raised embankments formed due to sediment deposition along riverbanks.\n3. Floodplains are replenished with nutrients during floods, making them highly fertile.\nHow many of the statements given above are correct?",
+    "questionText": "With reference to depositional landforms, consider the following statements:\n1. Oxbow lakes are formed due to deposition of sediments on the concave side of meanders. 2. Natural levees are raised embankments formed due to sediment deposition along riverbanks.\n3. Floodplains are replenished with nutrients during floods, making them highly fertile.\nHow many of the statements given above are correct?",
     "options": {
+      "a": "Only one",
+      "b": "Only two",
+      "c": "All three",
+      "d": "None",
       "A": "Only one",
       "B": "Only two",
       "C": "All three",
@@ -316,7 +380,9 @@
       "topic": "Indian Drainage & Physiography",
       "subtopic": "Fluvial Depositional Landforms",
       "conceptTested": "Erosion occurs on the concave side and deposition occurs on the convex side of river meanders, leading to features like floodplains and natural levees."
-    }
+    },
+    "question": "With reference to depositional landforms, consider the following statements:\n1. Oxbow lakes are formed due to deposition of sediments on the concave side of meanders. 2. Natural levees are raised embankments formed due to sediment deposition along riverbanks.\n3. Floodplains are replenished with nutrients during floods, making them highly fertile.\nHow many of the statements given above are correct?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -332,6 +398,10 @@
     "avgTime": "00:18",
     "questionText": "Indian classical ragas, by the number of notes, can be divided into _____ main categories or Jatis.",
     "options": {
+      "a": "seven",
+      "b": "four",
+      "c": "three",
+      "d": "five",
       "A": "seven",
       "B": "four",
       "C": "three",
@@ -345,7 +415,9 @@
       "topic": "Music & Musical Instruments",
       "subtopic": "Indian Classical Music - Ragas & Jatis",
       "conceptTested": "Classification of Indian classical ragas into three main categories (Audava, Shadava, and Sampurna) based on the number of notes."
-    }
+    },
+    "question": "Indian classical ragas, by the number of notes, can be divided into _____ main categories or Jatis.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -359,14 +431,18 @@
     "correctOption": "C",
     "userTime": "00:06",
     "avgTime": "00:14",
-    "questionText": "Who is the author of the book titled \"75 Years of Indian Sports – Game, Guts, Glory\"?",
+    "questionText": "Who is the author of the book titled \"75 Years of Indian Sports - Game, Guts, Glory\"?",
     "options": {
+      "a": "Sanjay Baru",
+      "b": "Ronojoy Sen",
+      "c": "Chandresh Narayanan",
+      "d": "Dr. Jagdish Pillai",
       "A": "Sanjay Baru",
       "B": "Ronojoy Sen",
       "C": "Chandresh Narayanan",
       "D": "Dr. Jagdish Pillai"
     },
-    "solution": "Solution\n\nThe correct answer is Chandresh Narayanan.\n\nKey Points\nChandresh Narayanan is the author of the book titled \"75 Years of Indian Sports – Game, Guts, Glory\".\nThe book provides a comprehensive overview of India’s sports history, achievements, and challenges over 75 years since independence.\nIt covers various sports disciplines, iconic moments, and contributions of Indian athletes to the global sports arena.\nThe book highlights the evolution of sports in India, including milestones in cricket, hockey, badminton, athletics, and more.\nChandresh Narayanan is a seasoned sports journalist with extensive knowledge and experience covering Indian and international sports.\n\nAdditional Information\nSanjay Baru\nSanjay Baru is an Indian political commentator, policy analyst, and writer.\nHe is known for his book \"The Accidental Prime Minister\", which was a memoir about his tenure as media adviser to former Prime Minister Dr. Manmohan Singh.\nHe has expertise in economics and public policy but is not associated with sports literature.\nRonojoy Sen\nRonojoy Sen is a historian and author specializing in Indian politics, history, and culture.\nHe authored \"Nation at Play: A History of Sport in India\", which explores the history of sports in India but is not linked to the book \"75 Years of Indian Sports – Game, Guts, Glory\".\nHis work focuses on the socio-cultural impact of sports in India rather than a celebratory account.\nDr. Jagdish Pillai\nDr. Jagdish Pillai is not a widely recognized author in the domain of sports literature.\nThere is limited information available about his contributions to the field, and he is not associated with the book \"75 Years of Indian Sports – Game, Guts, Glory\".",
+    "solution": "Solution\n\nThe correct answer is Chandresh Narayanan.\n\nKey Points\nChandresh Narayanan is the author of the book titled \"75 Years of Indian Sports - Game, Guts, Glory\".\nThe book provides a comprehensive overview of India’s sports history, achievements, and challenges over 75 years since independence.\nIt covers various sports disciplines, iconic moments, and contributions of Indian athletes to the global sports arena.\nThe book highlights the evolution of sports in India, including milestones in cricket, hockey, badminton, athletics, and more.\nChandresh Narayanan is a seasoned sports journalist with extensive knowledge and experience covering Indian and international sports.\n\nAdditional Information\nSanjay Baru\nSanjay Baru is an Indian political commentator, policy analyst, and writer.\nHe is known for his book \"The Accidental Prime Minister\", which was a memoir about his tenure as media adviser to former Prime Minister Dr. Manmohan Singh.\nHe has expertise in economics and public policy but is not associated with sports literature.\nRonojoy Sen\nRonojoy Sen is a historian and author specializing in Indian politics, history, and culture.\nHe authored \"Nation at Play: A History of Sport in India\", which explores the history of sports in India but is not linked to the book \"75 Years of Indian Sports - Game, Guts, Glory\".\nHis work focuses on the socio-cultural impact of sports in India rather than a celebratory account.\nDr. Jagdish Pillai\nDr. Jagdish Pillai is not a widely recognized author in the domain of sports literature.\nThere is limited information available about his contributions to the field, and he is not associated with the book \"75 Years of Indian Sports - Game, Guts, Glory\".",
     "topic": "Books & Authors",
     "subtopic": "Recent Sports Literature",
     "conceptTested": "Authorship of notable contemporary non-fiction and sports books in India.",
@@ -374,7 +450,9 @@
       "topic": "Books & Authors",
       "subtopic": "Recent Sports Literature",
       "conceptTested": "Authorship of notable contemporary non-fiction and sports books in India."
-    }
+    },
+    "question": "Who is the author of the book titled \"75 Years of Indian Sports - Game, Guts, Glory\"?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -390,6 +468,10 @@
     "avgTime": "00:15",
     "questionText": "The Kali Topi dance is performed on:",
     "options": {
+      "a": "Indian Independence day",
+      "b": "Indian Republic day",
+      "c": "Sikkimese New Year day",
+      "d": "Assamese New Year day",
       "A": "Indian Independence day",
       "B": "Indian Republic day",
       "C": "Sikkimese New Year day",
@@ -403,7 +485,9 @@
       "topic": "Festivals & Fairs",
       "subtopic": "Folk Dances of North-East India",
       "conceptTested": "Traditional folk dances and cultural festivals associated with the Sikkimese New Year."
-    }
+    },
+    "question": "The Kali Topi dance is performed on:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -419,6 +503,10 @@
     "avgTime": "00:19",
     "questionText": "Which Article, under the Constitution of India, empowers the Government of India to levy and collect Goods and Services Tax?",
     "options": {
+      "a": "Article 266",
+      "b": "Article 268 A",
+      "c": "Article 269 A",
+      "d": "Article 271 A",
       "A": "Article 266",
       "B": "Article 268 A",
       "C": "Article 269 A",
@@ -432,7 +520,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Taxation and Financial Relations",
       "conceptTested": "Provisions of the 101st Constitutional Amendment Act, 2016 and Article 269A regarding GST on inter-state trade."
-    }
+    },
+    "question": "Which Article, under the Constitution of India, empowers the Government of India to levy and collect Goods and Services Tax?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -448,6 +538,10 @@
     "avgTime": "00:19",
     "questionText": "The tribal festival of Bhagoria is traditionally celebrated a week prior to which Hindu festival?",
     "options": {
+      "a": "Diwali",
+      "b": "Holika Dahan",
+      "c": "Navratri",
+      "d": "Makar Sankranti",
       "A": "Diwali",
       "B": "Holika Dahan",
       "C": "Navratri",
@@ -461,7 +555,9 @@
       "topic": "Festivals & Fairs",
       "subtopic": "Tribal Festivals of India",
       "conceptTested": "Knowledge of regional tribal festivals like Bhagoria and their association with Hindu seasons and traditions."
-    }
+    },
+    "question": "The tribal festival of Bhagoria is traditionally celebrated a week prior to which Hindu festival?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -477,6 +573,10 @@
     "avgTime": "00:22",
     "questionText": "What is the primary purpose of the SAMPANN system launched for DoT pensioners?",
     "options": {
+      "a": "Online management and disbursal of pensions",
+      "b": "Providing health insurance to retired employees",
+      "c": "Tracking telecom network infrastructure",
+      "d": "Monitoring employee attendance in DoT",
       "A": "Online management and disbursal of pensions",
       "B": "Providing health insurance to retired employees",
       "C": "Tracking telecom network infrastructure",
@@ -490,7 +590,9 @@
       "topic": "Government Schemes & Policies",
       "subtopic": "Pension Schemes and Portals",
       "conceptTested": "Objectives and features of digital governance initiatives like the SAMPANN system for telecom retirees."
-    }
+    },
+    "question": "What is the primary purpose of the SAMPANN system launched for DoT pensioners?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -506,12 +608,16 @@
     "avgTime": "00:27",
     "questionText": "With reference to the International Atomic Energy Agency (IAEA), consider the following statements:\n\nAssertion (A): The International Atomic Energy Agency promotes the peaceful use of nuclear energy.\nReason\n(R): The Agency conducts safeguards inspections to prevent diversion of nuclear material for military purposes.",
     "options": {
+      "a": "Both A and R are correct and R explains A",
+      "b": "Both A and R are correct but R does not explain A",
+      "c": "A is correct but R is incorrect",
+      "d": "A is incorrect but R is correct",
       "A": "Both A and R are correct and R explains A",
       "B": "Both A and R are correct but R does not explain A",
       "C": "A is correct but R is incorrect",
       "D": "A is incorrect but R is correct"
     },
-    "solution": "Solution\n\nThe correct answer is Option A.\n\nKey Points\nThe IAEA was established to encourage and assist research, development, and practical application of nuclear energy for peaceful purposes.\nA core function of the IAEA is the implementation of safeguards, which involve inspections and verification measures.\nThese safeguards ensure that nuclear materials and facilities are not diverted to nuclear weapons or other military uses.\nAssertion (A): Correct — Promoting peaceful use of nuclear energy is a foundational objective of the IAEA.\nReason\n(R): Correct — Safeguards inspections are a principal mechanism through which the IAEA ensures peaceful use.\nThe safeguards system directly supports and explains how the IAEA promotes peaceful nuclear energy.\n\nHow Reason\n(R) explains Assertion (A):\n\nAssertion (A) states that the International Atomic Energy Agency (IAEA) promotes the peaceful use of nuclear energy.\nReason\n(R) explains the mechanism through which this objective is achieved:\nBy conducting safeguards inspections, the IAEA verifies that nuclear materials, facilities, and technologies meant for civilian purposes are not diverted for military or weapons use.\nThis assurance builds international trust and confidence, enabling countries to cooperate in nuclear energy for power generation, medicine, agriculture, and research.\nWithout such safeguards, civilian nuclear programs could mask weapons development, undermining peaceful use.\n\nTherefore, R explains A because safeguarding nuclear material against military diversion is the practical tool that ensures nuclear energy remains strictly peaceful, directly fulfilling the IAEA’s core mandate.\n\nThus, both A and R are correct, and R explains A → Option A.\n\nAdditional Information\nThe IAEA was established in 1957 as an autonomous organization under the UN system.\nIts functions rest on three pillars: Safeguards and Verification, Safety and Security, and Science and Technology.\nThe safeguards system operates primarily under the Nuclear Non-Proliferation Treaty (NPT) framework.",
+    "solution": "Solution\n\nThe correct answer is Option A.\n\nKey Points\nThe IAEA was established to encourage and assist research, development, and practical application of nuclear energy for peaceful purposes.\nA core function of the IAEA is the implementation of safeguards, which involve inspections and verification measures.\nThese safeguards ensure that nuclear materials and facilities are not diverted to nuclear weapons or other military uses.\nAssertion (A): Correct - Promoting peaceful use of nuclear energy is a foundational objective of the IAEA.\nReason\n(R): Correct - Safeguards inspections are a principal mechanism through which the IAEA ensures peaceful use.\nThe safeguards system directly supports and explains how the IAEA promotes peaceful nuclear energy.\n\nHow Reason\n(R) explains Assertion (A):\n\nAssertion (A) states that the International Atomic Energy Agency (IAEA) promotes the peaceful use of nuclear energy.\nReason\n(R) explains the mechanism through which this objective is achieved:\nBy conducting safeguards inspections, the IAEA verifies that nuclear materials, facilities, and technologies meant for civilian purposes are not diverted for military or weapons use.\nThis assurance builds international trust and confidence, enabling countries to cooperate in nuclear energy for power generation, medicine, agriculture, and research.\nWithout such safeguards, civilian nuclear programs could mask weapons development, undermining peaceful use.\n\nTherefore, R explains A because safeguarding nuclear material against military diversion is the practical tool that ensures nuclear energy remains strictly peaceful, directly fulfilling the IAEA’s core mandate.\n\nThus, both A and R are correct, and R explains A → Option A.\n\nAdditional Information\nThe IAEA was established in 1957 as an autonomous organization under the UN system.\nIts functions rest on three pillars: Safeguards and Verification, Safety and Security, and Science and Technology.\nThe safeguards system operates primarily under the Nuclear Non-Proliferation Treaty (NPT) framework.",
     "topic": "International Organisations",
     "subtopic": "United Nations Agencies (IAEA)",
     "conceptTested": "Dual mandate of the IAEA regarding the promotion of peaceful nuclear technology and nuclear safeguards implementation.",
@@ -519,7 +625,9 @@
       "topic": "International Organisations",
       "subtopic": "United Nations Agencies (IAEA)",
       "conceptTested": "Dual mandate of the IAEA regarding the promotion of peaceful nuclear technology and nuclear safeguards implementation."
-    }
+    },
+    "question": "With reference to the International Atomic Energy Agency (IAEA), consider the following statements:\n\nAssertion (A): The International Atomic Energy Agency promotes the peaceful use of nuclear energy.\nReason\n(R): The Agency conducts safeguards inspections to prevent diversion of nuclear material for military purposes.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -535,6 +643,10 @@
     "avgTime": "00:17",
     "questionText": "Which of the following statements are correct?\n(1) Calling Attention Motion is an Indian innovation.\n(2) Calling Attention Motion is not mentioned in the Rules of Procedure.",
     "options": {
+      "a": "Only (2)",
+      "b": "Only (1)",
+      "c": "Both (1) and (2)",
+      "d": "None of the above",
       "A": "Only (2)",
       "B": "Only (1)",
       "C": "Both (1) and (2)",
@@ -548,7 +660,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Parliamentary Procedures & Motions",
       "conceptTested": "Features and procedural rules of Indian parliamentary innovations like the Calling Attention Motion."
-    }
+    },
+    "question": "Which of the following statements are correct?\n(1) Calling Attention Motion is an Indian innovation.\n(2) Calling Attention Motion is not mentioned in the Rules of Procedure.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -564,6 +678,10 @@
     "avgTime": "00:33",
     "questionText": "Which statement correctly states the legal effect of Article 255 regarding assent to bills?",
     "options": {
+      "a": "A State law becomes invalid without a written assent from the Governor.",
+      "b": "Assent must always be explicitly mentioned for the law to operate.",
+      "c": "A law remains valid even if prior recommendation was missing, provided assent is given later.",
+      "d": "Presidential assent must be obtained before the bill passes in the legislature.",
       "A": "A State law becomes invalid without a written assent from the Governor.",
       "B": "Assent must always be explicitly mentioned for the law to operate.",
       "C": "A law remains valid even if prior recommendation was missing, provided assent is given later.",
@@ -577,7 +695,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Parliament & State Legislature - Legislative Procedures",
       "conceptTested": "Legal effect of Article 255 of the Constitution of India regarding requirements of prior recommendation or assent."
-    }
+    },
+    "question": "Which statement correctly states the legal effect of Article 255 regarding assent to bills?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -593,6 +713,10 @@
     "avgTime": "00:35",
     "questionText": "Which of the following statements is not correct with respect to the Parliament of India?",
     "options": {
+      "a": "The President summons each house of the Parliament to meet.",
+      "b": "The President declares the House adjourned sine die.",
+      "c": "Prorogation of the house is done by President.",
+      "d": "Prorogation terminates a session of the House.",
       "A": "The President summons each house of the Parliament to meet.",
       "B": "The President declares the House adjourned sine die.",
       "C": "Prorogation of the house is done by President.",
@@ -606,7 +730,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Parliament - Sessions, Prorogation, Adjournment & Dissolution",
       "conceptTested": "The power of adjournment sine die lies with the presiding officer of the House, whereas summoning, prorogation, and Lok Sabha dissolution powers rest with the President."
-    }
+    },
+    "question": "Which of the following statements is not correct with respect to the Parliament of India?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -622,6 +748,10 @@
     "avgTime": "00:24",
     "questionText": "Which of the following statements are true about the Ruhr industrial region in Germany?\n1. It is known for its coal and steel production.\n2. It is the largest industrial region in the world.\n3. It is located in the state of North Rhine-Westphalia.\n4. It faces environmental challenges due to heavy industrialization.",
     "options": {
+      "a": "1 and 4 only",
+      "b": "1, 3, and 4 only",
+      "c": "2 and 4 only",
+      "d": "1, 2, 3, and 4",
       "A": "1 and 4 only",
       "B": "1, 3, and 4 only",
       "C": "2 and 4 only",
@@ -635,7 +765,9 @@
       "topic": "World Geography",
       "subtopic": "Industrial Regions of the World",
       "conceptTested": "Geographical and economic characteristics of major industrial zones such as the Ruhr region in Germany."
-    }
+    },
+    "question": "Which of the following statements are true about the Ruhr industrial region in Germany?\n1. It is known for its coal and steel production.\n2. It is the largest industrial region in the world.\n3. It is located in the state of North Rhine-Westphalia.\n4. It faces environmental challenges due to heavy industrialization.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -651,6 +783,10 @@
     "avgTime": "00:15",
     "questionText": "Under the Bharatiya Nagarik Suraksha Samhita (BNSS), default bail for minor offences is limited to how many days?",
     "options": {
+      "a": "30 days",
+      "b": "45 days",
+      "c": "60 days",
+      "d": "90 days",
       "A": "30 days",
       "B": "45 days",
       "C": "60 days",
@@ -664,7 +800,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Criminal Law & Criminal Procedure Codes",
       "conceptTested": "Statutory timelines for completing investigations and invoking default bail under criminal procedure laws like the BNSS."
-    }
+    },
+    "question": "Under the Bharatiya Nagarik Suraksha Samhita (BNSS), default bail for minor offences is limited to how many days?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -680,6 +818,10 @@
     "avgTime": "00:19",
     "questionText": "Who received the Padma Bhushan award posthumously in the field of Literature and Education in 2025?",
     "options": {
+      "a": "Shri Bibek Debroy",
+      "b": "Shri S. L. Bhyrappa",
+      "c": "Shri Amitav Ghosh",
+      "d": "Shri Gulzar",
       "A": "Shri Bibek Debroy",
       "B": "Shri S. L. Bhyrappa",
       "C": "Shri Amitav Ghosh",
@@ -693,7 +835,9 @@
       "topic": "Awards & Honours",
       "subtopic": "Civilian Awards (Padma Awards)",
       "conceptTested": "Recipients of prestigious civilian honours such as the Padma Bhushan in Literature and Education."
-    }
+    },
+    "question": "Who received the Padma Bhushan award posthumously in the field of Literature and Education in 2025?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -709,12 +853,16 @@
     "avgTime": "00:28",
     "questionText": "In a circular race of 840 m, A and B start running in the same direction at the same time from the same point at the speeds of 6 m/s and 12 m/s, respectively. After how much time will they meet next?",
     "options": {
+      "a": "140 s",
+      "b": "20 s",
+      "c": "70 s",
+      "d": "40 s",
       "A": "140 s",
       "B": "20 s",
       "C": "70 s",
       "D": "40 s"
     },
-    "solution": "Solution\n\nShortcut Trick\nSince A and B are moving in the same direction, their relative speed is the difference between their speeds.\n\nRelative Speed = 12 − 6 = 6 m/s\nTime to meet next = Total Distance ÷ Relative Speed\nTime = 840 ÷ 6 = 140 s\n∴ The correct answer is 140 s.\n\nAlternate Method\nGiven:\n⇒ Length of circular track (D) = 840 m\n⇒ Speed of A (SA) = 6 m/s\n⇒ Speed of B (SB) = 12 m/s\n\nFormula Used:\n⇒ Relative Speed (same direction) = |SB − SA|\n⇒ Time to meet = Total Distance ÷ Relative Speed\n\nCalculations:\n⇒ Relative Speed = 12 m/s − 6 m/s = 6 m/s\n⇒ Time to meet = 840 ÷ 6\n⇒ Time to meet = 140 s\n∴ The correct answer is 140 s.\n\nAdditional Information\nFirst Meeting Anywhere on Track\n\nWhen two persons run in the same direction, they meet for the first time when the faster person covers exactly one more round than the slower person. Time = Length of Track ÷ Relative Speed.\n\nFirst Meeting at Starting Point\n\nThe time taken to meet for the first time at the starting point is the LCM of the individual times taken by each person to complete one full round. Time = LCM(T1, T2).\n\nRunning in Opposite Directions\n\nIf two runners move in opposite directions, their relative speed is the sum of their individual speeds (S1 + S2). The time for their first meeting anywhere on the track is Track Length ÷ (S1 + S2).",
+    "solution": "Solution\n\nShortcut Trick\nSince A and B are moving in the same direction, their relative speed is the difference between their speeds.\n\nRelative Speed = 12 - 6 = 6 m/s\nTime to meet next = Total Distance ÷ Relative Speed\nTime = 840 ÷ 6 = 140 s\n∴ The correct answer is 140 s.\n\nAlternate Method\nGiven:\n⇒ Length of circular track (D) = 840 m\n⇒ Speed of A (SA) = 6 m/s\n⇒ Speed of B (SB) = 12 m/s\n\nFormula Used:\n⇒ Relative Speed (same direction) = |SB - SA|\n⇒ Time to meet = Total Distance ÷ Relative Speed\n\nCalculations:\n⇒ Relative Speed = 12 m/s - 6 m/s = 6 m/s\n⇒ Time to meet = 840 ÷ 6\n⇒ Time to meet = 140 s\n∴ The correct answer is 140 s.\n\nAdditional Information\nFirst Meeting Anywhere on Track\n\nWhen two persons run in the same direction, they meet for the first time when the faster person covers exactly one more round than the slower person. Time = Length of Track ÷ Relative Speed.\n\nFirst Meeting at Starting Point\n\nThe time taken to meet for the first time at the starting point is the LCM of the individual times taken by each person to complete one full round. Time = LCM(T1, T2).\n\nRunning in Opposite Directions\n\nIf two runners move in opposite directions, their relative speed is the sum of their individual speeds (S1 + S2). The time for their first meeting anywhere on the track is Track Length ÷ (S1 + S2).",
     "topic": "Time, Speed & Distance",
     "subtopic": "Circular Races & Relative Speed",
     "conceptTested": "Relative speed for runners moving in the same direction on a circular track: Time = Track Length / (Speed_faster - Speed_slower).",
@@ -722,7 +870,9 @@
       "topic": "Time, Speed & Distance",
       "subtopic": "Circular Races & Relative Speed",
       "conceptTested": "Relative speed for runners moving in the same direction on a circular track: Time = Track Length / (Speed_faster - Speed_slower)."
-    }
+    },
+    "question": "In a circular race of 840 m, A and B start running in the same direction at the same time from the same point at the speeds of 6 m/s and 12 m/s, respectively. After how much time will they meet next?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -738,12 +888,16 @@
     "avgTime": "00:44",
     "questionText": "In a division sum, the divisor is 13 times the quotient and 6 times the remainder. If the remainder is 39, then the dividend is:",
     "options": {
+      "a": "4,800",
+      "b": "4,576",
+      "c": "4,251",
+      "d": "4,240",
       "A": "4,800",
       "B": "4,576",
       "C": "4,251",
       "D": "4,240"
     },
-    "solution": "Solution\n\nShortcut Trick\nGiven Remainder = 39\nDivisor = 6 × 39 = 234\nQuotient = 234 ÷ 13 = 18\nDividend = (Divisor × Quotient) + Remainder\nDividend = (234 × 18) + 39 = 4212 + 39 = 4251\n∴ The correct answer is 4251.\n\nAlternate Method\nGiven:\nRemainder\n(R) = 39\nDivisor (D) = 13 × Quotient\n(Q)\nDivisor (D) = 6 × Remainder\n(R)\n\nFormula Used:\nDividend = (Divisor × Quotient) + Remainder\n\nCalculations:\n⇒ Divisor (D) = 6 × 39\n⇒ D = 234\n⇒ 234 = 13 × Q\n⇒ Q = 234 ÷ 13\n⇒ Q = 18\n⇒ Dividend = (234 × 18) + 39\n⇒ Dividend = 4212 + 39\n⇒ Dividend = 4251\n∴ The correct answer is 4251.\n\nAdditional Information\nDivision Algorithm\n\nThe fundamental relation in division is: Dividend = (Divisor × Quotient) + Remainder, where the remainder is always strictly less than the divisor.\n\nDivisibility Rule for 13\n\nTo quickly check if a number is divisible by 13, multiply the last digit by 4 and add it to the remaining truncated number. If the new result is divisible by 13, the original number is also divisible.\n\nRemainder Theorem\n\nIn polynomial algebra, when a polynomial P(x) is divided by a linear polynomial (x − a), the remainder obtained is equal to the value of P(a).",
+    "solution": "Solution\n\nShortcut Trick\nGiven Remainder = 39\nDivisor = 6 × 39 = 234\nQuotient = 234 ÷ 13 = 18\nDividend = (Divisor × Quotient) + Remainder\nDividend = (234 × 18) + 39 = 4212 + 39 = 4251\n∴ The correct answer is 4251.\n\nAlternate Method\nGiven:\nRemainder\n(R) = 39\nDivisor (D) = 13 × Quotient\n(Q)\nDivisor (D) = 6 × Remainder\n(R)\n\nFormula Used:\nDividend = (Divisor × Quotient) + Remainder\n\nCalculations:\n⇒ Divisor (D) = 6 × 39\n⇒ D = 234\n⇒ 234 = 13 × Q\n⇒ Q = 234 ÷ 13\n⇒ Q = 18\n⇒ Dividend = (234 × 18) + 39\n⇒ Dividend = 4212 + 39\n⇒ Dividend = 4251\n∴ The correct answer is 4251.\n\nAdditional Information\nDivision Algorithm\n\nThe fundamental relation in division is: Dividend = (Divisor × Quotient) + Remainder, where the remainder is always strictly less than the divisor.\n\nDivisibility Rule for 13\n\nTo quickly check if a number is divisible by 13, multiply the last digit by 4 and add it to the remaining truncated number. If the new result is divisible by 13, the original number is also divisible.\n\nRemainder Theorem\n\nIn polynomial algebra, when a polynomial P(x) is divided by a linear polynomial (x - a), the remainder obtained is equal to the value of P(a).",
     "topic": "Number System",
     "subtopic": "Division Algorithm & Remainder Theorem",
     "conceptTested": "Division algorithm relation: Dividend = (Divisor × Quotient) + Remainder.",
@@ -751,7 +905,9 @@
       "topic": "Number System",
       "subtopic": "Division Algorithm & Remainder Theorem",
       "conceptTested": "Division algorithm relation: Dividend = (Divisor × Quotient) + Remainder."
-    }
+    },
+    "question": "In a division sum, the divisor is 13 times the quotient and 6 times the remainder. If the remainder is 39, then the dividend is:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -767,12 +923,16 @@
     "avgTime": "00:30",
     "questionText": "Simplify the following expression:\n((32)^4 - 1) / [3^3 × 31 × (2^10 + 1)]",
     "options": {
+      "a": "2",
+      "b": "1",
+      "c": "-2",
+      "d": "-1",
       "A": "2",
       "B": "1",
       "C": "-2",
       "D": "-1"
     },
-    "solution": "Solution\n\nShortcut Trick\nExpress 32 as 25, making the numerator (25)4 − 1 = 220 − 1.\nRewrite the product 33 × 31 as (32 + 1)(32 − 1) = 322 − 1 = (25)2 − 1 = 210 − 1.\nThe denominator becomes (210 − 1)(210 + 1) = (210)2 − 12 = 220 − 1.\nDivide the numerator by the denominator: (220 − 1) ÷ (220 − 1) = 1.\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nExpression: (324 − 1) ÷ [33 × 31 × (210 + 1)]\n\nFormula Used:\na2 − b2 = (a − b)(a + b)\n(am)n = am × n\n\nCalculations:\n⇒ Let's expand and simplify the denominator first.\n⇒ 33 × 31 = (32 + 1) × (32 − 1)\n⇒ Applying the a2 − b2 formula, we get 322 − 12.\n⇒ Since 32 = 25, we have (25)2 − 1 = 210 − 1.\n⇒ Now substitute this back into the denominator expression: (210 − 1) × (210 + 1).\n⇒ Again applying the a2 − b2 formula, the denominator becomes (210)2 − 12 = 220 − 1.\n⇒ Next, simplify the numerator: 324 − 1 = (25)4 − 1 = 220 − 1.\n⇒ The complete expression simplifies to (220 − 1) ÷ (220 − 1).\n⇒ Since the numerator and denominator are exactly the same, they cancel out to leave 1.\n∴ The correct answer is 1.\n\nAdditional Information\nBODMAS Rule\n\nIt dictates the precise order of mathematical operations to follow: Brackets, Orders (powers and roots), Division, Multiplication, Addition, and Subtraction.\n\nLaws of Exponents\n\nKey rules to quickly handle base numbers include am × an = am+n, am ÷ an = am−n, and (am)n = am×n.\nDifference of Squares\nThe algebraic identity a2 − b2 = (a − b)(a + b) is an essential tool frequently used to simplify large mathematical products mentally.",
+    "solution": "Solution\n\nShortcut Trick\nExpress 32 as 25, making the numerator (25)4 - 1 = 220 - 1.\nRewrite the product 33 × 31 as (32 + 1)(32 - 1) = 322 - 1 = (25)² - 1 = 210 - 1.\nThe denominator becomes (210 - 1)(210 + 1) = (210)² - 12 = 220 - 1.\nDivide the numerator by the denominator: (220 - 1) ÷ (220 - 1) = 1.\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nExpression: (324 - 1) ÷ [33 × 31 × (210 + 1)]\n\nFormula Used:\na2 - b2 = (a - b)(a + b)\n(am)n = am × n\n\nCalculations:\n⇒ Let's expand and simplify the denominator first.\n⇒ 33 × 31 = (32 + 1) × (32 - 1)\n⇒ Applying the a2 - b2 formula, we get 322 - 12.\n⇒ Since 32 = 25, we have (25)² - 1 = 210 - 1.\n⇒ Now substitute this back into the denominator expression: (210 - 1) × (210 + 1).\n⇒ Again applying the a2 - b2 formula, the denominator becomes (210)² - 12 = 220 - 1.\n⇒ Next, simplify the numerator: 324 - 1 = (25)4 - 1 = 220 - 1.\n⇒ The complete expression simplifies to (220 - 1) ÷ (220 - 1).\n⇒ Since the numerator and denominator are exactly the same, they cancel out to leave 1.\n∴ The correct answer is 1.\n\nAdditional Information\nBODMAS Rule\n\nIt dictates the precise order of mathematical operations to follow: Brackets, Orders (powers and roots), Division, Multiplication, Addition, and Subtraction.\n\nLaws of Exponents\n\nKey rules to quickly handle base numbers include am × an = am+n, am ÷ an = am-n, and (am)n = am×n.\nDifference of Squares\nThe algebraic identity a2 - b2 = (a - b)(a + b) is an essential tool frequently used to simplify large mathematical products mentally.",
     "topic": "Simplification",
     "subtopic": "Surds, Indices & Algebraic Identities",
     "conceptTested": "Laws of exponents and difference of squares identity: a² - b² = (a - b)(a + b).",
@@ -780,7 +940,9 @@
       "topic": "Simplification",
       "subtopic": "Surds, Indices & Algebraic Identities",
       "conceptTested": "Laws of exponents and difference of squares identity: a² - b² = (a - b)(a + b)."
-    }
+    },
+    "question": "Simplify the following expression:\n((32)^4 - 1) / [3^3 × 31 × (2^10 + 1)]",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -794,14 +956,18 @@
     "correctOption": "B",
     "userTime": "00:11",
     "avgTime": "00:24",
-    "questionText": "The radii of the two concentric circles are 27 cm and 18 cm. The area (in cm²) of the closed figure bounded by the boundaries of the circle is:",
+    "questionText": "The radii of the two concentric circles are 27 cm and 18 cm. The area (in cm2) of the closed figure bounded by the boundaries of the circle is:",
     "options": {
+      "a": "505π",
+      "b": "405π",
+      "c": "288π",
+      "d": "504π",
       "A": "505π",
       "B": "405π",
       "C": "288π",
       "D": "504π"
     },
-    "solution": "Solution\n\nShortcut Trick\nArea of a circular ring = π × (R − r) × (R + r)\nSubstitute R = 27 and r = 18 into the formula:\n⇒ Area = π × (27 − 18) × (27 + 18)\n⇒ Area = π × 9 × 45\n⇒ Area = 405π\n∴ The correct answer is 405π cm2.\n\nAlternate Method\nGiven:\n⇒ Outer radius of the circle\n(R) = 27 cm\n⇒ Inner radius of the circle (r) = 18 cm\n\nFormula Used:\n⇒ Area of the bounded region (Ring) = Area of outer circle − Area of inner circle\n⇒ Area = πR2 − πr2 = π(R2 − r2)\n\nCalculations:\n⇒ Area = π × (27)2 − π × (18)2\n⇒ Area = π × (729 − 324)\n⇒ Area = 405π\n∴ The correct answer is 405π cm2.\n\nAdditional Information\nConcentric Circles\n\nConcentric circles are circles that share the exact same center point but have different radii. The region enclosed between two concentric circles is often referred to as an annulus or a circular ring.\n\nWidth of the Circular Ring\n\nThe thickness or width of the ring is uniformly distributed and can be calculated by subtracting the inner radius from the outer radius: Width = R − r.\n\nAlgebraic Identities\n\nWhen solving questions involving the difference of squares, applying the algebraic identity a2 − b2 = (a − b)(a + b) will severely reduce the calculation time and prevent squaring large values.",
+    "solution": "Solution\n\nShortcut Trick\nArea of a circular ring = π × (R - r) × (R + r)\nSubstitute R = 27 and r = 18 into the formula:\n⇒ Area = π × (27 - 18) × (27 + 18)\n⇒ Area = π × 9 × 45\n⇒ Area = 405π\n∴ The correct answer is 405π cm2.\n\nAlternate Method\nGiven:\n⇒ Outer radius of the circle\n(R) = 27 cm\n⇒ Inner radius of the circle (r) = 18 cm\n\nFormula Used:\n⇒ Area of the bounded region (Ring) = Area of outer circle - Area of inner circle\n⇒ Area = πR2 - πr2 = π(R2 - r2)\n\nCalculations:\n⇒ Area = π × (27)² - π × (18)²\n⇒ Area = π × (729 - 324)\n⇒ Area = 405π\n∴ The correct answer is 405π cm2.\n\nAdditional Information\nConcentric Circles\n\nConcentric circles are circles that share the exact same center point but have different radii. The region enclosed between two concentric circles is often referred to as an annulus or a circular ring.\n\nWidth of the Circular Ring\n\nThe thickness or width of the ring is uniformly distributed and can be calculated by subtracting the inner radius from the outer radius: Width = R - r.\n\nAlgebraic Identities\n\nWhen solving questions involving the difference of squares, applying the algebraic identity a2 - b2 = (a - b)(a + b) will severely reduce the calculation time and prevent squaring large values.",
     "topic": "Mensuration 2D",
     "subtopic": "Circles & Circular Ring / Annulus",
     "conceptTested": "Area of a circular ring (annulus) between concentric circles of radii R and r is given by π(R² - r²).",
@@ -809,7 +975,9 @@
       "topic": "Mensuration 2D",
       "subtopic": "Circles & Circular Ring / Annulus",
       "conceptTested": "Area of a circular ring (annulus) between concentric circles of radii R and r is given by π(R² - r²)."
-    }
+    },
+    "question": "The radii of the two concentric circles are 27 cm and 18 cm. The area (in cm2) of the closed figure bounded by the boundaries of the circle is:",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -825,12 +993,16 @@
     "avgTime": "00:33",
     "questionText": "A motorboat, whose speed is 15 km/h in still water goes 20 km downstream and comes back in a total of 4 hours. The speed of the stream (in km/h) is:",
     "options": {
+      "a": "4√3",
+      "b": "7√3",
+      "c": "6√3",
+      "d": "5√3",
       "A": "4√3",
       "B": "7√3",
       "C": "6√3",
       "D": "5√3"
     },
-    "solution": "Solution\n\nShortcut Trick\nTotal Time = [ 2 × Distance × Boat Speed ] ÷ [ (Boat Speed)2 − (Stream Speed)2 ]\n4 = [ 2 × 20 × 15 ] ÷ [ 152 − v2 ]\n4 × (225 − v2) = 600\n225 − v2 = 150 ⇒ v2 = 75\nv = √75 = 5√3 km/h\n∴ The correct answer is 5√3 km/h.\n\nAlternate Method\nGiven:\nSpeed of motorboat in still water (u) = 15 km/h\nDistance (d) = 20 km\nTotal time taken (T) = 4 hours\nLet the speed of the stream be v km/h.\n\nFormula Used:\nTime = Distance ÷ Speed\nDownstream Speed = u + v\nUpstream Speed = u − v\n\nCalculations:\n⇒ Downstream Speed = (15 + v) km/h\n⇒ Upstream Speed = (15 − v) km/h\n⇒ Total Time = [Distance ÷ Downstream Speed] + [Distance ÷ Upstream Speed]\n⇒ 20 ÷ (15 + v) + 20 ÷ (15 − v) = 4\n⇒ 20 × [ (15 − v + 15 + v) ÷ (152 − v2) ] = 4\n⇒ 20 × [ 30 ÷ (225 − v2) ] = 4\n⇒ 600 ÷ (225 − v2) = 4\n⇒ 225 − v2 = 150\n⇒ v2 = 75\n⇒ v = √75 = 5√3 km/h\n∴ The correct answer is 5√3 km/h.\n\nAdditional Information\nDownstream Speed\n\nWhen the boat moves in the direction of the stream, speeds are added. Downstream Speed = Speed of Boat + Speed of Stream.\n\nUpstream Speed\n\nWhen the boat moves against the direction of the stream, speeds are subtracted. Upstream Speed = Speed of Boat − Speed of Stream.\n\nSpeed in Still Water\nIf downstream and upstream speeds are given, Speed of Boat = (Downstream Speed + Upstream Speed) ÷ 2.\nSpeed of Stream\nIf downstream and upstream speeds are given, Speed of Stream = (Downstream Speed − Upstream Speed) ÷ 2.",
+    "solution": "Solution\n\nShortcut Trick\nTotal Time = [ 2 × Distance × Boat Speed ] ÷ [ (Boat Speed)² - (Stream Speed)² ]\n4 = [ 2 × 20 × 15 ] ÷ [ 152 - v2 ]\n4 × (225 - v2) = 600\n225 - v2 = 150 ⇒ v2 = 75\nv = √75 = 5√3 km/h\n∴ The correct answer is 5√3 km/h.\n\nAlternate Method\nGiven:\nSpeed of motorboat in still water (u) = 15 km/h\nDistance (d) = 20 km\nTotal time taken (T) = 4 hours\nLet the speed of the stream be v km/h.\n\nFormula Used:\nTime = Distance ÷ Speed\nDownstream Speed = u + v\nUpstream Speed = u - v\n\nCalculations:\n⇒ Downstream Speed = (15 + v) km/h\n⇒ Upstream Speed = (15 - v) km/h\n⇒ Total Time = [Distance ÷ Downstream Speed] + [Distance ÷ Upstream Speed]\n⇒ 20 ÷ (15 + v) + 20 ÷ (15 - v) = 4\n⇒ 20 × [ (15 - v + 15 + v) ÷ (152 - v2) ] = 4\n⇒ 20 × [ 30 ÷ (225 - v2) ] = 4\n⇒ 600 ÷ (225 - v2) = 4\n⇒ 225 - v2 = 150\n⇒ v2 = 75\n⇒ v = √75 = 5√3 km/h\n∴ The correct answer is 5√3 km/h.\n\nAdditional Information\nDownstream Speed\n\nWhen the boat moves in the direction of the stream, speeds are added. Downstream Speed = Speed of Boat + Speed of Stream.\n\nUpstream Speed\n\nWhen the boat moves against the direction of the stream, speeds are subtracted. Upstream Speed = Speed of Boat - Speed of Stream.\n\nSpeed in Still Water\nIf downstream and upstream speeds are given, Speed of Boat = (Downstream Speed + Upstream Speed) ÷ 2.\nSpeed of Stream\nIf downstream and upstream speeds are given, Speed of Stream = (Downstream Speed - Upstream Speed) ÷ 2.",
     "topic": "Boats & Streams",
     "subtopic": "Upstream & Downstream Speed Equations",
     "conceptTested": "Total time taken for round trip in flowing water: T = [Distance / (u + v)] + [Distance / (u - v)].",
@@ -838,7 +1010,9 @@
       "topic": "Boats & Streams",
       "subtopic": "Upstream & Downstream Speed Equations",
       "conceptTested": "Total time taken for round trip in flowing water: T = [Distance / (u + v)] + [Distance / (u - v)]."
-    }
+    },
+    "question": "A motorboat, whose speed is 15 km/h in still water goes 20 km downstream and comes back in a total of 4 hours. The speed of the stream (in km/h) is:",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -854,6 +1028,10 @@
     "avgTime": "00:27",
     "questionText": "The simple interest on a sum of money is 9/45 of the sum. If the number of years is numerically 5 times of rate per cent per annum, then find the rate per cent per annum.",
     "options": {
+      "a": "7%",
+      "b": "2%",
+      "c": "5%",
+      "d": "3%",
       "A": "7%",
       "B": "2%",
       "C": "5%",
@@ -867,7 +1045,9 @@
       "topic": "Simple Interest",
       "subtopic": "Rate and Time Relations",
       "conceptTested": "Simple Interest formula relation: SI = (P × R × T) / 100 where T is expressed in terms of R."
-    }
+    },
+    "question": "The simple interest on a sum of money is 9/45 of the sum. If the number of years is numerically 5 times of rate per cent per annum, then find the rate per cent per annum.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -883,12 +1063,16 @@
     "avgTime": "00:31",
     "questionText": "If P sin 60° = Q cosec 45°, then the value of (P^2 + Q^2) / (P^2 - Q^2) is equal to:",
     "options": {
+      "a": "511",
+      "b": "117",
+      "c": "115",
+      "d": "711",
       "A": "511",
       "B": "117",
       "C": "115",
       "D": "711"
     },
-    "solution": "Solution\n\nShortcut Trick\nFrom the given equation: P/Q = cosec 45° ÷ sin 60° = √2 ÷ (√3/2) = 2√2/√3\nSquaring both sides gives: P2/Q2 = 8/3\n\nApplying the Componendo and Dividendo rule directly:\n\n(P2 + Q2) / (P2 − Q2) = (8 + 3) / (8 − 3) = 11/5\n∴ The correct answer is 11/5.\n\nAlternate Method\nGiven:\nP sin 60° = Q cosec 45°\n\nConcept Used:\n\nStandard trigonometric values: sin 60° = √3/2 and cosec 45° = √2\n\nCalculations:\n⇒ P × (√3/2) = Q × √2\n⇒ P/Q = √2 ÷ (√3/2)\n⇒ P/Q = (2√2) / √3\n\nSquaring both sides of the equation:\n\n⇒ P2/Q2 = (2√2)2 / (√3)2\n⇒ P2/Q2 = 8/3\nLet P2 = 8k and Q2 = 3k. Substituting these into the required expression:\n⇒ (P2 + Q2) / (P2 − Q2)\n⇒ (8k + 3k) / (8k − 3k)\n⇒ 11k / 5k\n⇒ 11/5\n∴ The correct answer is 11/5.\n\nAdditional Information\nComponendo and Dividendo Rule\n\nIf a/b = c/d, then (a + b) / (a − b) = (c + d) / (c − d). This property is highly useful for simplifying algebraic equations and expressions involving the sum and difference of terms.\n\nStandard Trigonometric Ratios\n\nIt is essential to remember key angle values: sin 30° = 1/2, sin 45° = 1/√2, and sin 60° = √3/2. The cosecant function is the reciprocal of sine, meaning cosec θ = 1 / sin θ.\n\nBasic Pythagorean Identities\n\nsin2θ + cos2θ = 1 | 1 + tan2θ = sec2θ | 1 + cot2θ = cosec2θ",
+    "solution": "Solution\n\nShortcut Trick\nFrom the given equation: P/Q = cosec 45° ÷ sin 60° = √2 ÷ (√3/2) = 2√2/√3\nSquaring both sides gives: P2/Q2 = 8/3\n\nApplying the Componendo and Dividendo rule directly:\n\n(P2 + Q2) / (P2 - Q2) = (8 + 3) / (8 - 3) = 11/5\n∴ The correct answer is 11/5.\n\nAlternate Method\nGiven:\nP sin 60° = Q cosec 45°\n\nConcept Used:\n\nStandard trigonometric values: sin 60° = √3/2 and cosec 45° = √2\n\nCalculations:\n⇒ P × (√3/2) = Q × √2\n⇒ P/Q = √2 ÷ (√3/2)\n⇒ P/Q = (2√2) / √3\n\nSquaring both sides of the equation:\n\n⇒ P2/Q2 = (2√2)2 / (√3)2\n⇒ P2/Q2 = 8/3\nLet P2 = 8k and Q2 = 3k. Substituting these into the required expression:\n⇒ (P2 + Q2) / (P2 - Q2)\n⇒ (8k + 3k) / (8k - 3k)\n⇒ 11k / 5k\n⇒ 11/5\n∴ The correct answer is 11/5.\n\nAdditional Information\nComponendo and Dividendo Rule\n\nIf a/b = c/d, then (a + b) / (a - b) = (c + d) / (c - d). This property is highly useful for simplifying algebraic equations and expressions involving the sum and difference of terms.\n\nStandard Trigonometric Ratios\n\nIt is essential to remember key angle values: sin 30° = 1/2, sin 45° = 1/√2, and sin 60° = √3/2. The cosecant function is the reciprocal of sine, meaning cosec θ = 1 / sin θ.\n\nBasic Pythagorean Identities\n\nsin²θ + cos²θ = 1 | 1 + tan²θ = sec²θ | 1 + cot²θ = cosec²θ",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Ratios & Standard Angles",
     "conceptTested": "Standard trigonometric values and Componendo and Dividendo rule to find (P^2 + Q^2)/(P^2 - Q^2).",
@@ -896,7 +1080,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Ratios & Standard Angles",
       "conceptTested": "Standard trigonometric values and Componendo and Dividendo rule to find (P^2 + Q^2)/(P^2 - Q^2)."
-    }
+    },
+    "question": "If P sin 60° = Q cosec 45°, then the value of (P^2 + Q^2) / (P^2 - Q^2) is equal to:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -912,12 +1098,16 @@
     "avgTime": "00:22",
     "questionText": "The ages of A and B are in the ratio 4 : 7, respectively. After 8 years, the ratio of their ages will be 2 : 3. What is the sum of the ages of A and B (in years)?",
     "options": {
+      "a": "44",
+      "b": "36",
+      "c": "38",
+      "d": "42",
       "A": "44",
       "B": "36",
       "C": "38",
       "D": "42"
     },
-    "solution": "Solution\n\nShortcut Trick\nPresent ratio A : B = 4 : 7 (Gap = 7 − 4 = 3)\nFuture ratio A : B = 2 : 3 (Gap = 3 − 2 = 1) → Multiply by 3 to equalize gaps ⇒ 6 : 9\nIncrease in ratio parts for both A and B = 6 − 4 = 2 parts.\n2 parts ≡ 8 years ⇒ 1 part = 4 years.\nSum of present ages = (4 + 7) = 11 parts = 11 × 4 = 44 years.\n∴ The correct answer is 44 years.\n\nAlternate Method\nGiven:\nPresent ages of A and B are in the ratio 4 : 7\nAfter 8 years, the ratio of their ages will be 2 : 3\n\nMethod Used:\n\nEquating the age ratios using algebraic variables to find the exact multiplier.\n\nCalculations:\n⇒ Let the present ages of A and B be 4x and 7x respectively.\n⇒ After 8 years, A's age = (4x + 8) and B's age = (7x + 8)\n⇒ According to the condition: (4x + 8) ÷ (7x + 8) = 2 ÷ 3\n⇒ Cross-multiplying: 3 × (4x + 8) = 2 × (7x + 8)\n⇒ 12x + 24 = 14x + 16\n⇒ 14x − 12x = 24 − 16\n⇒ 2x = 8 ⇒ x = 4\n⇒ Sum of their present ages = 4x + 7x = 11x\n⇒ Total sum = 11 × 4 = 44 years\n∴ The correct answer is 44 years.\n\nAdditional Information\nConstant Age Difference\n\nThe difference between the ages of two individuals remains constant regardless of the years passed. This property is heavily used to equalize ratio gaps in age-related problems.\n\nCross-Multiplication in Ratios\n\nWhen a constant value is added to both terms of a ratio a : b to form a new ratio c : d, the equation (a+x)÷(b+x) = c÷d is used to directly solve for the unknown variable.\n\nFinding Present Ages\n\nAlways assume the present ages as multiples of the given ratio parts (e.g., 4x and 7x). Calculate the exact value of x before deriving final quantities like sum, difference, or future ages.",
+    "solution": "Solution\n\nShortcut Trick\nPresent ratio A : B = 4 : 7 (Gap = 7 - 4 = 3)\nFuture ratio A : B = 2 : 3 (Gap = 3 - 2 = 1) → Multiply by 3 to equalize gaps ⇒ 6 : 9\nIncrease in ratio parts for both A and B = 6 - 4 = 2 parts.\n2 parts ≡ 8 years ⇒ 1 part = 4 years.\nSum of present ages = (4 + 7) = 11 parts = 11 × 4 = 44 years.\n∴ The correct answer is 44 years.\n\nAlternate Method\nGiven:\nPresent ages of A and B are in the ratio 4 : 7\nAfter 8 years, the ratio of their ages will be 2 : 3\n\nMethod Used:\n\nEquating the age ratios using algebraic variables to find the exact multiplier.\n\nCalculations:\n⇒ Let the present ages of A and B be 4x and 7x respectively.\n⇒ After 8 years, A's age = (4x + 8) and B's age = (7x + 8)\n⇒ According to the condition: (4x + 8) ÷ (7x + 8) = 2 ÷ 3\n⇒ Cross-multiplying: 3 × (4x + 8) = 2 × (7x + 8)\n⇒ 12x + 24 = 14x + 16\n⇒ 14x - 12x = 24 - 16\n⇒ 2x = 8 ⇒ x = 4\n⇒ Sum of their present ages = 4x + 7x = 11x\n⇒ Total sum = 11 × 4 = 44 years\n∴ The correct answer is 44 years.\n\nAdditional Information\nConstant Age Difference\n\nThe difference between the ages of two individuals remains constant regardless of the years passed. This property is heavily used to equalize ratio gaps in age-related problems.\n\nCross-Multiplication in Ratios\n\nWhen a constant value is added to both terms of a ratio a : b to form a new ratio c : d, the equation (a+x)÷(b+x) = c÷d is used to directly solve for the unknown variable.\n\nFinding Present Ages\n\nAlways assume the present ages as multiples of the given ratio parts (e.g., 4x and 7x). Calculate the exact value of x before deriving final quantities like sum, difference, or future ages.",
     "topic": "Ratio & Proportion",
     "subtopic": "Age Problems",
     "conceptTested": "Equating age ratios by equalizing the ratio difference and solving for the exact multiplier.",
@@ -925,7 +1115,9 @@
       "topic": "Ratio & Proportion",
       "subtopic": "Age Problems",
       "conceptTested": "Equating age ratios by equalizing the ratio difference and solving for the exact multiplier."
-    }
+    },
+    "question": "The ages of A and B are in the ratio 4 : 7, respectively. After 8 years, the ratio of their ages will be 2 : 3. What is the sum of the ages of A and B (in years)?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -941,12 +1133,16 @@
     "avgTime": "00:18",
     "questionText": "P drives a car for 5 hours and after every hour he doubles the speed. In the fifth hour, his speed is 128 km/h. What is his average speed of the journey in km/h?",
     "options": {
+      "a": "52.6",
+      "b": "55.6",
+      "c": "49.6",
+      "d": "62.6",
       "A": "52.6",
       "B": "55.6",
       "C": "49.6",
       "D": "62.6"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen time intervals are equal, Average Speed = Arithmetic mean of all speeds.\n\nThe speeds for the 5 hours form a geometric sequence ending in 128: 8, 16, 32, 64, 128 km/h.\n\nSum of speeds = 8 + 16 + 32 + 64 + 128 = 248 km/h.\nAverage Speed = 248 ÷ 5 = 49.6 km/h.\n∴ The correct answer is 49.6 km/h.\n\nAlternate Method\nGiven:\nTotal time taken for the journey = 5 hours\nSpeed in the 5th hour = 128 km/h\n\nThe speed doubles after every hour.\n\nFormula Used:\nDistance = Speed × Time\nAverage Speed = Total Distance ÷ Total Time\n\nCalculations:\nLet the speed in the 1st hour be v km/h.\nSpeeds in consecutive hours follow the pattern: 2v, 4v, 8v, 16v.\n⇒ Speed in the 5th hour = 16v = 128\n⇒ v = 128 ÷ 16 = 8 km/h\n\nThe distance covered in each 1-hour interval is numerically equal to the speed:\n\n⇒ Distance in 1st hour = 8 × 1 = 8 km\n⇒ Distance in 2nd hour = 16 × 1 = 16 km\n⇒ Distance in 3rd hour = 32 × 1 = 32 km\n⇒ Distance in 4th hour = 64 × 1 = 64 km\n⇒ Distance in 5th hour = 128 × 1 = 128 km\n⇒ Total Distance = 8 + 16 + 32 + 64 + 128 = 248 km\n⇒ Average Speed = 248 ÷ 5 = 49.6 km/h\n∴ The correct answer is 49.6 km/h.\n\nAdditional Information\nAverage Speed\n\nAverage speed is defined as the total distance traveled divided by the total time taken. It is not the simple average of individual speeds unless the time intervals for each speed are strictly equal.\n\nEqual Time Intervals Rule\n\nIf an object travels at different speeds v1, v2, ..., vn for equal durations of time, the average speed is simply the arithmetic mean of all the speeds: (v1 + v2 + ... + vn) ÷ n.\n\nGeometric Progression (GP)\n\nA sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number (common ratio). The sum of a GP is computed as Sn = a(rn − 1) ÷ (r − 1) for r > 1.",
+    "solution": "Solution\n\nShortcut Trick\nWhen time intervals are equal, Average Speed = Arithmetic mean of all speeds.\n\nThe speeds for the 5 hours form a geometric sequence ending in 128: 8, 16, 32, 64, 128 km/h.\n\nSum of speeds = 8 + 16 + 32 + 64 + 128 = 248 km/h.\nAverage Speed = 248 ÷ 5 = 49.6 km/h.\n∴ The correct answer is 49.6 km/h.\n\nAlternate Method\nGiven:\nTotal time taken for the journey = 5 hours\nSpeed in the 5th hour = 128 km/h\n\nThe speed doubles after every hour.\n\nFormula Used:\nDistance = Speed × Time\nAverage Speed = Total Distance ÷ Total Time\n\nCalculations:\nLet the speed in the 1st hour be v km/h.\nSpeeds in consecutive hours follow the pattern: 2v, 4v, 8v, 16v.\n⇒ Speed in the 5th hour = 16v = 128\n⇒ v = 128 ÷ 16 = 8 km/h\n\nThe distance covered in each 1-hour interval is numerically equal to the speed:\n\n⇒ Distance in 1st hour = 8 × 1 = 8 km\n⇒ Distance in 2nd hour = 16 × 1 = 16 km\n⇒ Distance in 3rd hour = 32 × 1 = 32 km\n⇒ Distance in 4th hour = 64 × 1 = 64 km\n⇒ Distance in 5th hour = 128 × 1 = 128 km\n⇒ Total Distance = 8 + 16 + 32 + 64 + 128 = 248 km\n⇒ Average Speed = 248 ÷ 5 = 49.6 km/h\n∴ The correct answer is 49.6 km/h.\n\nAdditional Information\nAverage Speed\n\nAverage speed is defined as the total distance traveled divided by the total time taken. It is not the simple average of individual speeds unless the time intervals for each speed are strictly equal.\n\nEqual Time Intervals Rule\n\nIf an object travels at different speeds v1, v2, ..., vn for equal durations of time, the average speed is simply the arithmetic mean of all the speeds: (v1 + v2 + ... + vn) ÷ n.\n\nGeometric Progression (GP)\n\nA sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number (common ratio). The sum of a GP is computed as Sn = a(rn - 1) ÷ (r - 1) for r > 1.",
     "topic": "Time, Speed & Distance",
     "subtopic": "Average Speed",
     "conceptTested": "Average speed for equal time intervals is the arithmetic mean of individual speeds, combined with geometric progression.",
@@ -954,7 +1150,9 @@
       "topic": "Time, Speed & Distance",
       "subtopic": "Average Speed",
       "conceptTested": "Average speed for equal time intervals is the arithmetic mean of individual speeds, combined with geometric progression."
-    }
+    },
+    "question": "P drives a car for 5 hours and after every hour he doubles the speed. In the fifth hour, his speed is 128 km/h. What is his average speed of the journey in km/h?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -970,12 +1168,16 @@
     "avgTime": "00:23",
     "questionText": "If A : B = 8 : 13, B : C = 5 : 8 and C : D = 4 : 5, then A : B : C : D is equal to:",
     "options": {
+      "a": "20 : 50 : 105 : 119",
+      "b": "38 : 65 : 111 : 120",
+      "c": "40 : 60 : 103 : 112",
+      "d": "40 : 65 : 104 : 130",
       "A": "20 : 50 : 105 : 119",
       "B": "38 : 65 : 111 : 120",
       "C": "40 : 60 : 103 : 112",
       "D": "40 : 65 : 104 : 130"
     },
-    "solution": "Solution\n\nShortcut Trick\nUsing the vertical and cross multiplication shortcut for continuous ratios:\n\nA = 8 × 5 × 4 = 160, B = 13 × 5 × 4 = 260\nC = 13 × 8 × 4 = 416, D = 13 × 8 × 5 = 520\nA : B : C : D = 160 : 260 : 416 : 520 ⇒ 40 : 65 : 104 : 130\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAlternate Method\nGiven:\nA : B = 8 : 13\nB : C = 5 : 8\nC : D = 4 : 5\n\nConcept Used:\n\nWe use the adjacent block fill method. Write the given ratios in rows and fill the empty spaces with the adjacent number in that row, then multiply the columns downwards.\n\nCalculations:\n⇒ Multiply the values in each column to get the combined ratio.\n⇒ Column A = 8 × 5 × 4 = 160\n⇒ Column B = 13 × 5 × 4 = 260\n⇒ Column C = 13 × 8 × 4 = 416\n⇒ Column D = 13 × 8 × 5 = 520\n⇒ A : B : C : D = 160 : 260 : 416 : 520\n⇒ Dividing each term by 4 to simplify the ratio, we get:\n⇒ A : B : C : D = 40 : 65 : 104 : 130\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAdditional Information\nCompound Ratio\n\nWhen two or more ratios are multiplied together, it is known as a compound ratio. For ratios a : b and c : d, the compound ratio is ac : bd.\n\nDuplicate & Sub-duplicate Ratio\n\nFor a ratio a : b, its duplicate ratio is a2 : b2, and its sub-duplicate ratio is √a : √b.\n\nComponendo and Dividendo\n\nIf a : b = c : d, then by the componendo and dividendo rule, (a + b) : (a − b) = (c + d) : (c − d).",
+    "solution": "Solution\n\nShortcut Trick\nUsing the vertical and cross multiplication shortcut for continuous ratios:\n\nA = 8 × 5 × 4 = 160, B = 13 × 5 × 4 = 260\nC = 13 × 8 × 4 = 416, D = 13 × 8 × 5 = 520\nA : B : C : D = 160 : 260 : 416 : 520 ⇒ 40 : 65 : 104 : 130\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAlternate Method\nGiven:\nA : B = 8 : 13\nB : C = 5 : 8\nC : D = 4 : 5\n\nConcept Used:\n\nWe use the adjacent block fill method. Write the given ratios in rows and fill the empty spaces with the adjacent number in that row, then multiply the columns downwards.\n\nCalculations:\n⇒ Multiply the values in each column to get the combined ratio.\n⇒ Column A = 8 × 5 × 4 = 160\n⇒ Column B = 13 × 5 × 4 = 260\n⇒ Column C = 13 × 8 × 4 = 416\n⇒ Column D = 13 × 8 × 5 = 520\n⇒ A : B : C : D = 160 : 260 : 416 : 520\n⇒ Dividing each term by 4 to simplify the ratio, we get:\n⇒ A : B : C : D = 40 : 65 : 104 : 130\n∴ The correct answer is 40 : 65 : 104 : 130.\n\nAdditional Information\nCompound Ratio\n\nWhen two or more ratios are multiplied together, it is known as a compound ratio. For ratios a : b and c : d, the compound ratio is ac : bd.\n\nDuplicate & Sub-duplicate Ratio\n\nFor a ratio a : b, its duplicate ratio is a2 : b2, and its sub-duplicate ratio is √a : √b.\n\nComponendo and Dividendo\n\nIf a : b = c : d, then by the componendo and dividendo rule, (a + b) : (a - b) = (c + d) : (c - d).",
     "topic": "Ratio & Proportion",
     "subtopic": "Combined Ratio (A : B : C : D)",
     "conceptTested": "Combining successive ratios (A:B, B:C, C:D) into a continuous ratio (A:B:C:D) using adjacent block fill or cross-multiplication.",
@@ -983,7 +1185,9 @@
       "topic": "Ratio & Proportion",
       "subtopic": "Combined Ratio (A : B : C : D)",
       "conceptTested": "Combining successive ratios (A:B, B:C, C:D) into a continuous ratio (A:B:C:D) using adjacent block fill or cross-multiplication."
-    }
+    },
+    "question": "If A : B = 8 : 13, B : C = 5 : 8 and C : D = 4 : 5, then A : B : C : D is equal to:",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -999,6 +1203,10 @@
     "avgTime": "00:14",
     "questionText": "A group of 25 tourists consume 5 containers of food in 8 days in a hotel. How many containers will be required for 10 tourists to eat for 16 days?",
     "options": {
+      "a": "4",
+      "b": "3",
+      "c": "6",
+      "d": "5",
       "A": "4",
       "B": "3",
       "C": "6",
@@ -1012,7 +1220,9 @@
       "topic": "Time & Work",
       "subtopic": "Chain Rule (MDH Formula)",
       "conceptTested": "Chain Rule formula M1 × D1 / W1 = M2 × D2 / W2 for resources consumed by groups over given periods."
-    }
+    },
+    "question": "A group of 25 tourists consume 5 containers of food in 8 days in a hotel. How many containers will be required for 10 tourists to eat for 16 days?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1028,12 +1238,16 @@
     "avgTime": "00:11",
     "questionText": "A dealer sells an article at ₹850 after offering a cash discount of 15% on its marked price. Without discount, he would have earned a profit of 25%. What is the cost price of the article (in ₹)?",
     "options": {
+      "a": "800",
+      "b": "950",
+      "c": "900",
+      "d": "1000",
       "A": "800",
       "B": "950",
       "C": "900",
       "D": "1000"
     },
-    "solution": "Solution\n\nShortcut Trick\nSelling Price (SP) = ₹850, Discount = 15% ⇒ MP = 850 × (100 ÷ 85) = ₹1000\nWithout discount, SP = MP = ₹1000.\nProfit = 25% ⇒ CP = 1000 × (100 ÷ 125) = ₹800.\n∴ The correct answer is ₹800.\n\nAlternate Method\nGiven:\nSelling price with discount (SP) = ₹850\nDiscount percentage = 15%\nProfit percentage without discount = 25%\n\nFormula Used:\nMP = SP × [100 ÷ (100 − Discount%)]\nCP = SPnew × [100 ÷ (100 + Profit%)]\n\nCalculations:\n⇒ Let Marked Price be MP.\n⇒ SP = MP − 15% of MP = 0.85 × MP\n⇒ 850 = 0.85 × MP\n⇒ MP = 850 × (100 ÷ 85) = ₹1000\n⇒ Without any discount, the dealer sells the article at its Marked Price.\n⇒ So, New Selling Price (SPnew) = MP = ₹1000\n⇒ At this price, Profit = 25%\n⇒ CP + 25% of CP = SPnew\n⇒ 1.25 × CP = 1000\n⇒ CP = 1000 × (100 ÷ 125)\n⇒ CP = ₹800\n∴ The correct answer is ₹800.\n\nAdditional Information\nMarked Price & Discount\n\nDiscount is always calculated on the Marked Price (MP). The formula directly yields: Selling Price = MP × (1 − Discount%).\n\nProfit/Loss Without Discount\n\nWhen a shopkeeper gives no discount on an item, the Selling Price becomes equal to the Marked Price (SP = MP). Under this condition, Profit or Loss percentage is directly estimated over the Cost Price leading up to the MP.\n\nEffective Multipliers Rule\n\nFor a given profit of P%, the selling price multiplier translates to SP = CP × (1 + P/100). Similarly, for a discount of D%, SP = MP × (1 − D/100). Equating both sides helps find any missing variable quickly.",
+    "solution": "Solution\n\nShortcut Trick\nSelling Price (SP) = ₹850, Discount = 15% ⇒ MP = 850 × (100 ÷ 85) = ₹1000\nWithout discount, SP = MP = ₹1000.\nProfit = 25% ⇒ CP = 1000 × (100 ÷ 125) = ₹800.\n∴ The correct answer is ₹800.\n\nAlternate Method\nGiven:\nSelling price with discount (SP) = ₹850\nDiscount percentage = 15%\nProfit percentage without discount = 25%\n\nFormula Used:\nMP = SP × [100 ÷ (100 - Discount%)]\nCP = SPnew × [100 ÷ (100 + Profit%)]\n\nCalculations:\n⇒ Let Marked Price be MP.\n⇒ SP = MP - 15% of MP = 0.85 × MP\n⇒ 850 = 0.85 × MP\n⇒ MP = 850 × (100 ÷ 85) = ₹1000\n⇒ Without any discount, the dealer sells the article at its Marked Price.\n⇒ So, New Selling Price (SPnew) = MP = ₹1000\n⇒ At this price, Profit = 25%\n⇒ CP + 25% of CP = SPnew\n⇒ 1.25 × CP = 1000\n⇒ CP = 1000 × (100 ÷ 125)\n⇒ CP = ₹800\n∴ The correct answer is ₹800.\n\nAdditional Information\nMarked Price & Discount\n\nDiscount is always calculated on the Marked Price (MP). The formula directly yields: Selling Price = MP × (1 - Discount%).\n\nProfit/Loss Without Discount\n\nWhen a shopkeeper gives no discount on an item, the Selling Price becomes equal to the Marked Price (SP = MP). Under this condition, Profit or Loss percentage is directly estimated over the Cost Price leading up to the MP.\n\nEffective Multipliers Rule\n\nFor a given profit of P%, the selling price multiplier translates to SP = CP × (1 + P/100). Similarly, for a discount of D%, SP = MP × (1 - D/100). Equating both sides helps find any missing variable quickly.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit, Loss & Discount - Marked Price & Successive Discounts",
     "conceptTested": "Relation between Marked Price, Selling Price, Discount, and Profit: SP = MP × (1 - Discount/100) = CP × (1 + Profit/100)",
@@ -1041,7 +1255,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Profit, Loss & Discount - Marked Price & Successive Discounts",
       "conceptTested": "Relation between Marked Price, Selling Price, Discount, and Profit: SP = MP × (1 - Discount/100) = CP × (1 + Profit/100)"
-    }
+    },
+    "question": "A dealer sells an article at ₹850 after offering a cash discount of 15% on its marked price. Without discount, he would have earned a profit of 25%. What is the cost price of the article (in ₹)?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1057,12 +1273,16 @@
     "avgTime": "00:11",
     "questionText": "If x + y = 12 and xy = 6, then the value of x/y + y/x is equal to:",
     "options": {
+      "a": "22",
+      "b": "26",
+      "c": "24",
+      "d": "18",
       "A": "22",
       "B": "26",
       "C": "24",
       "D": "18"
     },
-    "solution": "Solution\n\nShortcut Trick\nWe need to find the value of x/y + y/x, which simplifies to (x2 + y2) ÷ xy.\n\nUsing the identity: x2 + y2 = (x + y)2 − 2xy\nSubstitute the given values (x + y = 12, xy = 6) directly into the combined formula.\nRequired value = (122 − 2 × 6) ÷ 6 = (144 − 12) ÷ 6.\nRequired value = 132 ÷ 6 = 22.\n∴ The correct answer is 22.\n\nAlternate Method\nGiven:\nx + y = 12\nxy = 6\n\nFormula Used:\n(x + y)2 = x2 + y2 + 2xy\n\nCalculations:\n⇒ (12)2 = x2 + y2 + 2 × 6\n⇒ 144 = x2 + y2 + 12\n⇒ x2 + y2 = 144 − 12\n⇒ x2 + y2 = 132\nNow, we need to find the value of the given expression:\n⇒ x/y + y/x = (x2 + y2) ÷ xy\n⇒ x/y + y/x = 132 ÷ 6\n⇒ x/y + y/x = 22\n∴ The correct answer is 22.\n\nAdditional Information\nSquare of Difference\n\n(x − y)2 = x2 + y2 − 2xy. This identity helps find the difference of variables when their sum and product are given.\nDifference of Squares\nx2 − y2 = (x − y)(x + y). A fundamental algebraic identity used widely in factorisation and simplification.\n\nSum of Cubes\n\nx3 + y3 = (x + y)(x2 − xy + y2) or equivalently, x3 + y3 = (x + y)3 − 3xy(x + y).",
+    "solution": "Solution\n\nShortcut Trick\nWe need to find the value of x/y + y/x, which simplifies to (x2 + y2) ÷ xy.\n\nUsing the identity: x2 + y2 = (x + y)² - 2xy\nSubstitute the given values (x + y = 12, xy = 6) directly into the combined formula.\nRequired value = (122 - 2 × 6) ÷ 6 = (144 - 12) ÷ 6.\nRequired value = 132 ÷ 6 = 22.\n∴ The correct answer is 22.\n\nAlternate Method\nGiven:\nx + y = 12\nxy = 6\n\nFormula Used:\n(x + y)² = x2 + y2 + 2xy\n\nCalculations:\n⇒ (12)² = x2 + y2 + 2 × 6\n⇒ 144 = x2 + y2 + 12\n⇒ x2 + y2 = 144 - 12\n⇒ x2 + y2 = 132\nNow, we need to find the value of the given expression:\n⇒ x/y + y/x = (x2 + y2) ÷ xy\n⇒ x/y + y/x = 132 ÷ 6\n⇒ x/y + y/x = 22\n∴ The correct answer is 22.\n\nAdditional Information\nSquare of Difference\n\n(x - y)² = x2 + y2 - 2xy. This identity helps find the difference of variables when their sum and product are given.\nDifference of Squares\nx2 - y2 = (x - y)(x + y). A fundamental algebraic identity used widely in factorisation and simplification.\n\nSum of Cubes\n\nx3 + y3 = (x + y)(x2 - xy + y2) or equivalently, x3 + y3 = (x + y)³ - 3xy(x + y).",
     "topic": "Algebra",
     "subtopic": "Algebra - Algebraic Identities & Expressions",
     "conceptTested": "Algebraic identity: x² + y² = (x + y)² − 2xy applied to rational fractional expressions.",
@@ -1070,7 +1290,9 @@
       "topic": "Algebra",
       "subtopic": "Algebra - Algebraic Identities & Expressions",
       "conceptTested": "Algebraic identity: x² + y² = (x + y)² − 2xy applied to rational fractional expressions."
-    }
+    },
+    "question": "If x + y = 12 and xy = 6, then the value of x/y + y/x is equal to:",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1086,6 +1308,10 @@
     "avgTime": "00:26",
     "questionText": "She had a child's inchoate awareness of language.",
     "options": {
+      "a": "mercurial",
+      "b": "decree",
+      "c": "confused",
+      "d": "deprave",
       "A": "mercurial",
       "B": "decree",
       "C": "confused",
@@ -1099,7 +1325,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms",
       "conceptTested": "Vocabulary comprehension and identification of synonymous contextual meaning for advanced lexical items."
-    }
+    },
+    "question": "She had a child's inchoate awareness of language.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1115,6 +1343,10 @@
     "avgTime": "00:22",
     "questionText": "A set of facts or a fixed limit that establishes or limits how something can or must happen or be done.",
     "options": {
+      "a": "Parameter",
+      "b": "Scope",
+      "c": "Minimum",
+      "d": "Policy",
       "A": "Parameter",
       "B": "Scope",
       "C": "Minimum",
@@ -1128,7 +1360,9 @@
       "topic": "One Word Substitution",
       "subtopic": "Definitions and Descriptive Substitutions",
       "conceptTested": "Vocabulary substitution for conceptual descriptions and formal definitions."
-    }
+    },
+    "question": "A set of facts or a fixed limit that establishes or limits how something can or must happen or be done.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1144,6 +1378,10 @@
     "avgTime": "01:34",
     "questionText": "Based on the passage, what conclusion can be drawn about modelling and predicting social change?",
     "options": {
+      "a": "It is straightforward to account for all variables, including random personal choices and weather, in historical models.",
+      "b": "Only military and political decisions matter in shaping history.",
+      "c": "The outcomes of wars are never influenced by chance.",
+      "d": "Models of social change must contend with unpredictable and unquantifiable variables that can alter outcomes dramatically.",
       "A": "It is straightforward to account for all variables, including random personal choices and weather, in historical models.",
       "B": "Only military and political decisions matter in shaping history.",
       "C": "The outcomes of wars are never influenced by chance.",
@@ -1157,7 +1395,9 @@
       "topic": "Reading Comprehension",
       "subtopic": "Inference and Deductive Reasoning",
       "conceptTested": "Drawing valid logical conclusions based on passage arguments regarding historical predictability and social change."
-    }
+    },
+    "question": "Based on the passage, what conclusion can be drawn about modelling and predicting social change?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1173,6 +1413,10 @@
     "avgTime": "00:19",
     "questionText": "Select the incorrectly spelt word from the given sentence.\nSome people regard a fear of new things as an unmistakable sign of a provincial atitude.",
     "options": {
+      "a": "provincial",
+      "b": "atitude",
+      "c": "Some",
+      "d": "unmistakable",
       "A": "provincial",
       "B": "atitude",
       "C": "Some",
@@ -1186,7 +1430,9 @@
       "topic": "Spelling Errors",
       "subtopic": "Spelling Errors",
       "conceptTested": "Identification of incorrectly spelt words (attitude vs atitude)"
-    }
+    },
+    "question": "Select the incorrectly spelt word from the given sentence.\nSome people regard a fear of new things as an unmistakable sign of a provincial atitude.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 2",
@@ -1200,14 +1446,18 @@
     "correctOption": "A",
     "userTime": "00:23",
     "avgTime": "00:21",
-    "questionText": "Choose the correct sequence of tenses.\nAfter the movie ________, we ________ to a café.",
+    "questionText": "Choose the correct sequence of tenses.\nAfter the movie ________, we ________ to a café.",
     "options": {
+      "a": "ended, went",
+      "b": "ends, go",
+      "c": "ended, goes",
+      "d": "end, went",
       "A": "ended, went",
       "B": "ends, go",
       "C": "ended, goes",
       "D": "end, went"
     },
-    "solution": "Solution\n\nThe correct answer is Option (1) i.e. \"ended, went\".\n\nKey Points\nProgression of Past Events: This sentence describes actions in sequence, each completed in the past.\n\"Ended\" appropriately captures the movie's conclusion.\n\"Went\" effectively indicates the subsequent activity of moving to a café.\n\nTherefore, the correct answer is \"After the movie ended, we went to a café.\"\n\nAdditional Information\n\"Ends, go\" uses present tense forms, unsuitable for recounting past events.\n\"Ended, goes\" missynchronizes the tense, combining past and present forms.\n\"End, went\" lacks the correctly conjugated verb form for 'ended'.",
+    "solution": "Solution\n\nThe correct answer is Option (1) i.e. \"ended, went\".\n\nKey Points\nProgression of Past Events: This sentence describes actions in sequence, each completed in the past.\n\"Ended\" appropriately captures the movie's conclusion.\n\"Went\" effectively indicates the subsequent activity of moving to a café.\n\nTherefore, the correct answer is \"After the movie ended, we went to a café.\"\n\nAdditional Information\n\"Ends, go\" uses present tense forms, unsuitable for recounting past events.\n\"Ended, goes\" missynchronizes the tense, combining past and present forms.\n\"End, went\" lacks the correctly conjugated verb form for 'ended'.",
     "topic": "Spotting Errors",
     "subtopic": "Spotting Errors",
     "conceptTested": "Consistency of past tense in sequential past actions",
@@ -1215,6 +1465,8 @@
       "topic": "Spotting Errors",
       "subtopic": "Spotting Errors",
       "conceptTested": "Consistency of past tense in sequential past actions"
-    }
+    },
+    "question": "Choose the correct sequence of tenses.\nAfter the movie ________, we ________ to a café.",
+    "answer": "a"
   }
 ]

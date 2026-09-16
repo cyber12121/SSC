@@ -13,6 +13,10 @@
     "avgTime": "01:16",
     "questionText": "Select the option that is related to the third term in the same way as the second term is related to the first term:\nDART : XGLZ :: SPIN : ?",
     "options": {
+      "a": "MVOT",
+      "b": "YVCT",
+      "c": "YJCT",
+      "d": "MVCT",
       "A": "MVOT",
       "B": "YVCT",
       "C": "YJCT",
@@ -26,7 +30,9 @@
       "topic": "Analogy",
       "subtopic": "Letter Analogy",
       "conceptTested": "Forward and reverse letter coding/shifting patterns"
-    }
+    },
+    "question": "Select the option that is related to the third term in the same way as the second term is related to the first term:\nDART : XGLZ :: SPIN : ?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -42,6 +48,10 @@
     "avgTime": "00:44",
     "questionText": "Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row facing North. B is sitting at one extreme end. E is sitting second to the left of B. C is sitting between A and E. G is NOT sitting at any extreme end. F is sitting to the immediate right of D. Who is sitting second to the left of G?",
     "options": {
+      "a": "E",
+      "b": "C",
+      "c": "A",
+      "d": "F",
       "A": "E",
       "B": "C",
       "C": "A",
@@ -55,7 +65,9 @@
       "topic": "Seating Arrangement",
       "subtopic": "Linear Row North Facing",
       "conceptTested": "Deduction of positions in a single row based on directional clues"
-    }
+    },
+    "question": "Seven friends A, B, C, D, E, F, and G are watching a movie sitting in a row facing North. B is sitting at one extreme end. E is sitting second to the left of B. C is sitting between A and E. G is NOT sitting at any extreme end. F is sitting to the immediate right of D. Who is sitting second to the left of G?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -71,6 +83,10 @@
     "avgTime": "00:29",
     "questionText": "How many such pairs of letters are there in the word REGULATION (in the forward direction) which have as many letters between them in the word as there are in the English alphabetical order?",
     "options": {
+      "a": "3",
+      "b": "2",
+      "c": "1",
+      "d": "4",
       "A": "3",
       "B": "2",
       "C": "1",
@@ -84,7 +100,9 @@
       "topic": "Alphabet Test",
       "subtopic": "Letter Pairs Forward Direction",
       "conceptTested": "Counting forward alphabetical pairs in a given word"
-    }
+    },
+    "question": "How many such pairs of letters are there in the word REGULATION (in the forward direction) which have as many letters between them in the word as there are in the English alphabetical order?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -100,6 +118,10 @@
     "avgTime": "00:30",
     "questionText": "Six friends, G, H, I, J, K and L, are sitting around a circular table, facing towards the centre of the table. H is sitting third to the left of G. L and I are not neighbours of H. K is sitting to the immediate right of I. Who is sitting to the immediate left of L?",
     "options": {
+      "a": "J",
+      "b": "H",
+      "c": "I",
+      "d": "G",
       "A": "J",
       "B": "H",
       "C": "I",
@@ -113,7 +135,9 @@
       "topic": "Seating Arrangement",
       "subtopic": "Circular Table Center Facing",
       "conceptTested": "Circular arrangement with relative left/right positioning"
-    }
+    },
+    "question": "Six friends, G, H, I, J, K and L, are sitting around a circular table, facing towards the centre of the table. H is sitting third to the left of G. L and I are not neighbours of H. K is sitting to the immediate right of I. Who is sitting to the immediate left of L?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -129,12 +153,16 @@
     "avgTime": "00:25",
     "questionText": "The most abundant element found in the earth's crust is:",
     "options": {
+      "a": "Carbon",
+      "b": "Nitrogen",
+      "c": "Oxygen",
+      "d": "Silicon",
       "A": "Carbon",
       "B": "Nitrogen",
       "C": "Oxygen",
       "D": "Silicon"
     },
-    "solution": "Solution\n\nThe correct answer is Oxygen.\n\nKey Points\nExplanation:\n\nOxygen is the most abundant element found in the earth's crust. Oxygen accounts for 46.6% of the Earth Crust\n\nAluminum is an abundantly found metal on the Earth's crust (8.1%).\nIt is not separately found in nature. It is found with a combination of other metals (alloy form).\n\nAdditional Information\nThe Major Elements of the Earth’s Crust\n\nElements\n\nWeight (%)\n\nOxygen\n\n46.60\n\nSilicon\n\n27.72\n\nAluminium\n\n8.13\n\nIron\n\n5.00\n\nCalcium\n\n3.63\n\nSodium\n\n2.83\n\nPotassium\n\n2.59\n\nMagnesium\n\n2.09\n\nOthers\n\n1.41",
+    "solution": "Solution\n\nThe correct answer is Oxygen.\n\nKey Points\nExplanation:\n\nOxygen is the most abundant element found in the earth's crust. Oxygen accounts for 46.6% of the Earth Crust\n\nAluminum is an abundantly found metal on the Earth's crust (8.1%).\nIt is not separately found in nature. It is found with a combination of other metals (alloy form).\n\nAdditional Information\nThe Major Elements of the Earth’s Crust\n\nElements\n\nWeight (%)\n\nOxygen\n\n46.60\n\nSilicon\n\n27.72\n\nAluminium\n\n8.13\n\nIron\n\n5.00\n\nCalcium\n\n3.63\n\nSodium\n\n2.83\n\nPotassium\n\n2.59\n\nMagnesium\n\n2.09\n\nOthers 1.41",
     "topic": "Physical Geography",
     "subtopic": "Earth Structure & Crust Composition",
     "conceptTested": "Abundance of elements by weight percentage in the Earth's crust",
@@ -142,7 +170,9 @@
       "topic": "Physical Geography",
       "subtopic": "Earth Structure & Crust Composition",
       "conceptTested": "Abundance of elements by weight percentage in the Earth's crust"
-    }
+    },
+    "question": "The most abundant element found in the earth's crust is:",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -158,6 +188,10 @@
     "avgTime": "00:34",
     "questionText": "Which of the following can be threats to the biodiversity of any Geographical area?\n(A) Global warming\n(B) Fragmentation of natural habitat\n(C) Invasion by alien species\n(D) Promotion of vegetarianism\nSelect the correct answer by using the codes given below.",
     "options": {
+      "a": "Only (A) and (B)",
+      "b": "Only (B) and (C)",
+      "c": "(A), (B), (C) and (D)",
+      "d": "Only (A), (B) and (C)",
       "A": "Only (A) and (B)",
       "B": "Only (B) and (C)",
       "C": "(A), (B), (C) and (D)",
@@ -171,7 +205,9 @@
       "topic": "National Parks & Environment",
       "subtopic": "Biodiversity Threats & Conservation",
       "conceptTested": "Identification of anthropogenic and natural drivers of biodiversity loss, including habitat fragmentation, invasive species, and global warming."
-    }
+    },
+    "question": "Which of the following can be threats to the biodiversity of any Geographical area?\n(A) Global warming\n(B) Fragmentation of natural habitat\n(C) Invasion by alien species\n(D) Promotion of vegetarianism\nSelect the correct answer by using the codes given below.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -187,6 +223,10 @@
     "avgTime": "00:40",
     "questionText": "Which of the following statements is not correct about the enactment of the Government of India Act 1858?",
     "options": {
+      "a": "The Government of India was placed in the care of a new government department, the India Office in London, headed by a Secretary of State, a member of the Queen's family.",
+      "b": "Once appointed as Viceroy, he served his term even after his party in Britain resigned.",
+      "c": "The British Parliament transferred the powers of the East India Company to the British Crown in order to ensure a more responsible management of Indian affairs.",
+      "d": "The Queen's Viceroy had replaced the Company's Governor-General as the supreme authority in India.",
       "A": "The Government of India was placed in the care of a new government department, the India Office in London, headed by a Secretary of State, a member of the Queen's family.",
       "B": "Once appointed as Viceroy, he served his term even after his party in Britain resigned.",
       "C": "The British Parliament transferred the powers of the East India Company to the British Crown in order to ensure a more responsible management of Indian affairs.",
@@ -200,7 +240,9 @@
       "topic": "Modern History",
       "subtopic": "Revolt of 1857 & Government of India Act 1858",
       "conceptTested": "Provisions and administrative changes introduced by the Government of India Act 1858, transferring power from the East India Company to the British Crown and establishing the Secretary of State for India in London."
-    }
+    },
+    "question": "Which of the following statements is not correct about the enactment of the Government of India Act 1858?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -216,12 +258,16 @@
     "avgTime": "00:15",
     "questionText": "Who was awarded the 2025 Nobel Prize in Literature for his compelling and visionary oeuvre?",
     "options": {
-      "A": "László Krasznahorkai",
+      "a": "László Krasznahorkai",
+      "b": "Kazuo Ishiguro",
+      "c": "Bob Dylan",
+      "d": "Orhan Pamuk",
+      "A": "László Krasznahorkai",
       "B": "Kazuo Ishiguro",
       "C": "Bob Dylan",
       "D": "Orhan Pamuk"
     },
-    "solution": "Solution\n\nThe correct answer is László Krasznahorkai.\n\nIn News\nThe 2025 Nobel Prize in Literature was awarded to Hungarian author László Krasznahorkai for his compelling and visionary oeuvre that reaffirms the power of art in the midst of apocalyptic terror.\n\nKey Points\nLászló Krasznahorkai is known for his dense, apocalyptic prose and philosophical depth, often referred to as the “writer of the apocalypse.”\nHis works, such as \"Satantango,\" \"The Melancholy of Resistance,\" and \"Baron Wenckheim’s Homecoming,\" are known for long, hypnotic sentences that reflect chaos and despair, yet find beauty and endurance within destruction.\nKrasznahorkai's fiction captures humanity on the brink of collapse, transcendence, and revelation, making him a unique voice in contemporary literature.\nHe becomes the latest laureate in a long tradition of writers whose works have contributed significantly to literature's power to capture the human condition in times of crisis.\n\nAdditional Information\nSully Prudhomme\nFirst laureate of the Nobel Prize in Literature in 1901.\nSelma Lagerlöf\nFirst woman to win the Nobel Prize in Literature in 1909.\nNobel Prize in Literature\nA prestigious global award given annually to authors whose work has made a significant impact in the field of literature.",
+    "solution": "Solution\n\nThe correct answer is László Krasznahorkai.\n\nIn News\nThe 2025 Nobel Prize in Literature was awarded to Hungarian author László Krasznahorkai for his compelling and visionary oeuvre that reaffirms the power of art in the midst of apocalyptic terror.\n\nKey Points\nLászló Krasznahorkai is known for his dense, apocalyptic prose and philosophical depth, often referred to as the “writer of the apocalypse.”\nHis works, such as \"Satantango,\" \"The Melancholy of Resistance,\" and \"Baron Wenckheim’s Homecoming,\" are known for long, hypnotic sentences that reflect chaos and despair, yet find beauty and endurance within destruction.\nKrasznahorkai's fiction captures humanity on the brink of collapse, transcendence, and revelation, making him a unique voice in contemporary literature.\nHe becomes the latest laureate in a long tradition of writers whose works have contributed significantly to literature's power to capture the human condition in times of crisis.\n\nAdditional Information\nSully Prudhomme\nFirst laureate of the Nobel Prize in Literature in 1901.\nSelma Lagerlöf\nFirst woman to win the Nobel Prize in Literature in 1909.\nNobel Prize in Literature\nA prestigious global award given annually to authors whose work has made a significant impact in the field of literature.",
     "topic": "Awards & Honours",
     "subtopic": "Nobel Prize",
     "conceptTested": "Current affairs knowledge of recipients of prestigious international awards such as the Nobel Prize in Literature.",
@@ -229,7 +275,9 @@
       "topic": "Awards & Honours",
       "subtopic": "Nobel Prize",
       "conceptTested": "Current affairs knowledge of recipients of prestigious international awards such as the Nobel Prize in Literature."
-    }
+    },
+    "question": "Who was awarded the 2025 Nobel Prize in Literature for his compelling and visionary oeuvre?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -245,12 +293,16 @@
     "avgTime": "00:18",
     "questionText": "With reference to Sahitya Akademi Yuva Puraskar announced in June 2025, which of the following statements is/are correct?\n1. Yuva Puraskar was announced in 23 Indian languages.\n2. There is no Yuva Puraskar in Dogri this year.",
     "options": {
+      "a": "Only 1",
+      "b": "Both 1 and 2",
+      "c": "Neither 1 nor 2",
+      "d": "Only 2",
       "A": "Only 1",
       "B": "Both 1 and 2",
       "C": "Neither 1 nor 2",
       "D": "Only 2"
     },
-    "solution": "Solution\n\nThe correct answer is Option 2) Both 1 and 2.\n\nKey Points\n“Yuva Puraskar was announced in 23 Indian languages.” — True.\nSahitya Akademi’s press note for June 18, 2025 lists 23 awardees for the Yuva Puraskar (i.e., awards in 23 languages).\n\n“There is no Yuva Puraskar in Dogri this year.” — True.\nBoth the official press note and the Akademi’s language-wise awards page explicitly state “No Award in Dogri language” for 2025.\n\nRecap: Since one language (Dogri) had no award, the total awards = 23, confirming both statements.",
+    "solution": "Solution\n\nThe correct answer is Option 2) Both 1 and 2.\n\nKey Points\n“Yuva Puraskar was announced in 23 Indian languages.” - True.\nSahitya Akademi’s press note for June 18, 2025 lists 23 awardees for the Yuva Puraskar (i.e., awards in 23 languages).\n\n“There is no Yuva Puraskar in Dogri this year.” - True.\nBoth the official press note and the Akademi’s language-wise awards page explicitly state “No Award in Dogri language” for 2025.\n\nRecap: Since one language (Dogri) had no award, the total awards = 23, confirming both statements.",
     "topic": "Awards & Honours",
     "subtopic": "Literary Awards & Sahitya Akademi",
     "conceptTested": "Current awareness regarding national literary recognitions such as the Sahitya Akademi Yuva Puraskar.",
@@ -258,7 +310,9 @@
       "topic": "Awards & Honours",
       "subtopic": "Literary Awards & Sahitya Akademi",
       "conceptTested": "Current awareness regarding national literary recognitions such as the Sahitya Akademi Yuva Puraskar."
-    }
+    },
+    "question": "With reference to Sahitya Akademi Yuva Puraskar announced in June 2025, which of the following statements is/are correct?\n1. Yuva Puraskar was announced in 23 Indian languages.\n2. There is no Yuva Puraskar in Dogri this year.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -274,6 +328,10 @@
     "avgTime": "00:31",
     "questionText": "Which of the following statements best defines the true meaning of 'democratic government'?",
     "options": {
+      "a": "A government formed through direct elections.",
+      "b": "A government where the head of state is elected by the people.",
+      "c": "A government that explains its actions and defends its decisions to the people.",
+      "d": "A government governing the citizens through a written constitution.",
       "A": "A government formed through direct elections.",
       "B": "A government where the head of state is elected by the people.",
       "C": "A government that explains its actions and defends its decisions to the people.",
@@ -287,7 +345,9 @@
       "topic": "Indian Polity & Constitution",
       "subtopic": "Preamble & Salient Features of Constitution",
       "conceptTested": "Conceptual clarity on the fundamental characteristics of a democratic government, such as accountability, answerability, and constitutional limits."
-    }
+    },
+    "question": "Which of the following statements best defines the true meaning of 'democratic government'?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -303,6 +363,10 @@
     "avgTime": "00:22",
     "questionText": "Trade winds that cross the equator and enter the Indian peninsula in _______ direction bring monsoons to India.",
     "options": {
+      "a": "south-west",
+      "b": "north-east",
+      "c": "north-west",
+      "d": "south-east",
       "A": "south-west",
       "B": "north-east",
       "C": "north-west",
@@ -316,7 +380,9 @@
       "topic": "Indian Climate & Soil",
       "subtopic": "Indian Monsoon Mechanism",
       "conceptTested": "Coriolis force deflection of southeast trade winds into southwest monsoons upon crossing the equator."
-    }
+    },
+    "question": "Trade winds that cross the equator and enter the Indian peninsula in _______ direction bring monsoons to India.",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -332,6 +398,10 @@
     "avgTime": "00:32",
     "questionText": "Which of the following statements is NOT correct regarding the rabi crops?",
     "options": {
+      "a": "Southern and southeastern states are important for the production of wheat and other rabi crops.",
+      "b": "These crops are harvested in summer from April to June.",
+      "c": "Some of the important rabi crops are wheat, barley, peas, gram and mustard.",
+      "d": "Rabi crops are sown in winter from October to December.",
       "A": "Southern and southeastern states are important for the production of wheat and other rabi crops.",
       "B": "These crops are harvested in summer from April to June.",
       "C": "Some of the important rabi crops are wheat, barley, peas, gram and mustard.",
@@ -345,7 +415,9 @@
       "topic": "Indian Climate & Soil",
       "subtopic": "Cropping Seasons - Rabi Crops",
       "conceptTested": "Geographical distribution and production regions of Rabi crops in India."
-    }
+    },
+    "question": "Which of the following statements is NOT correct regarding the rabi crops?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -361,6 +433,10 @@
     "avgTime": "00:24",
     "questionText": "Which one of the following statements is incorrect regarding the Bihu festival of Assam?",
     "options": {
+      "a": "This festival is organized to celebrate the new year.",
+      "b": "These are Bahag Bihu, Kati Bihu and Magh Bihu.",
+      "c": "The entire Bihu festival takes place on a Sankranti day.",
+      "d": "There are three types of Bihu celebrated in Assam.",
       "A": "This festival is organized to celebrate the new year.",
       "B": "These are Bahag Bihu, Kati Bihu and Magh Bihu.",
       "C": "The entire Bihu festival takes place on a Sankranti day.",
@@ -374,7 +450,9 @@
       "topic": "Festivals & Fairs",
       "subtopic": "Regional Festivals of India",
       "conceptTested": "Details and observances of the Bihu festival in Assam."
-    }
+    },
+    "question": "Which one of the following statements is incorrect regarding the Bihu festival of Assam?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -390,6 +468,10 @@
     "avgTime": "00:24",
     "questionText": "Which of the following statements NOT true regarding Firoz Tughlaq?",
     "options": {
+      "a": "He withdrew all Taquavi (agricultural) loans granted by Mohammed-bin-Tughlaq.",
+      "b": "He imposed an irrigation tax",
+      "c": "He devastated the Jagannath Temple at Puri.",
+      "d": "None of the above",
       "A": "He withdrew all Taquavi (agricultural) loans granted by Mohammed-bin-Tughlaq.",
       "B": "He imposed an irrigation tax",
       "C": "He devastated the Jagannath Temple at Puri.",
@@ -403,7 +485,9 @@
       "topic": "Medieval History",
       "subtopic": "Delhi Sultanate - Tughlaq Dynasty",
       "conceptTested": "Administrative reforms and military campaigns of Firoz Shah Tughlaq during the Delhi Sultanate."
-    }
+    },
+    "question": "Which of the following statements NOT true regarding Firoz Tughlaq?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -419,6 +503,10 @@
     "avgTime": "00:18",
     "questionText": "Who studied ecological succession in the Indiana Dunes of Northwest Indiana in the 1890s?",
     "options": {
+      "a": "Frederic Clements",
+      "b": "Henry Chandler Cowles",
+      "c": "G Evelyn Hutchinson",
+      "d": "Charles Elton",
       "A": "Frederic Clements",
       "B": "Henry Chandler Cowles",
       "C": "G Evelyn Hutchinson",
@@ -432,7 +520,9 @@
       "topic": "National Parks & Environment",
       "subtopic": "Ecology Pioneers & Concepts",
       "conceptTested": "Historical milestones in ecological succession studies."
-    }
+    },
+    "question": "Who studied ecological succession in the Indiana Dunes of Northwest Indiana in the 1890s?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -448,6 +538,10 @@
     "avgTime": "00:16",
     "questionText": "Who among the following has been appointed as the Comptroller General of India in November 2024?",
     "options": {
+      "a": "Tuhin Kanta Pandey",
+      "b": "Dr. V Narayanan",
+      "c": "Mahesh Kumar Aggarwal",
+      "d": "K Sanjay Murthy",
       "A": "Tuhin Kanta Pandey",
       "B": "Dr. V Narayanan",
       "C": "Mahesh Kumar Aggarwal",
@@ -461,7 +555,9 @@
       "topic": "Current Affairs",
       "subtopic": "Appointments & Resignations",
       "conceptTested": "Knowledge of recent high-profile constitutional and bureaucratic appointments in India."
-    }
+    },
+    "question": "Who among the following has been appointed as the Comptroller General of India in November 2024?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -477,12 +573,16 @@
     "avgTime": "00:30",
     "questionText": "If α + θ = 7π/12 and tan θ = √3, then the value of tan α is:",
     "options": {
+      "a": "13√",
+      "b": "0",
+      "c": "-1",
+      "d": "1",
       "A": "13√",
       "B": "0",
       "C": "-1",
       "D": "1"
     },
-    "solution": "Solution\n\nShortcut Trick\nGiven, tan θ = √3 ⇒ θ = π/3\nIt is given that α + θ = 7π/12\n⇒ α = 7π/12 − π/3 = 7π/12 − 4π/12 = 3π/12 = π/4\nNow, tan α = tan(π/4) = 1\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nα + θ = 7π / 12\ntan θ = √3\n\nCalculations:\n⇒ tan θ = √3\n⇒ θ = 60° (since tan 60° = √3)\nWe know that π radians = 180°\n⇒ Total Angle = 7π / 12 = (7 × 180°) ÷ 12 = 105°\n\nSubstitute the value of θ in the given equation:\n\n⇒ α + 60° = 105°\n⇒ α = 105° − 60°\n⇒ α = 45°\n\nWe need to find the value of tan α:\n\n⇒ tan α = tan 45° = 1\n∴ The correct answer is 1.\n\nAdditional Information\nRadian to Degree Conversion\n\nTo convert an angle from radians to degrees, multiply the value by 180° ÷ π. Conversely, to convert from degrees to radians, multiply by π ÷ 180°.\n\nCompound Angle Formula\n\nThe tangent of the sum of two angles is expressed as: tan(A + B) = (tan A + tan B) ÷ (1 − tan A × tan B).\n\nStandard Trigonometric Values\n\nSome frequently used tangent values are: tan(30°) = 1 ÷ √3, tan(45°) = 1, and tan(60°) = √3.",
+    "solution": "Solution\n\nShortcut Trick\nGiven, tan θ = √3 ⇒ θ = π/3\nIt is given that α + θ = 7π/12\n⇒ α = 7π/12 - π/3 = 7π/12 - 4π/12 = 3π/12 = π/4\nNow, tan α = tan(π/4) = 1\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nα + θ = 7π / 12\ntan θ = √3\n\nCalculations:\n⇒ tan θ = √3\n⇒ θ = 60° (since tan 60° = √3)\nWe know that π radians = 180°\n⇒ Total Angle = 7π / 12 = (7 × 180°) ÷ 12 = 105°\n\nSubstitute the value of θ in the given equation:\n\n⇒ α + 60° = 105°\n⇒ α = 105° - 60°\n⇒ α = 45°\n\nWe need to find the value of tan α:\n\n⇒ tan α = tan 45° = 1\n∴ The correct answer is 1.\n\nAdditional Information\nRadian to Degree Conversion\n\nTo convert an angle from radians to degrees, multiply the value by 180° ÷ π. Conversely, to convert from degrees to radians, multiply by π ÷ 180°.\n\nCompound Angle Formula\n\nThe tangent of the sum of two angles is expressed as: tan(A + B) = (tan A + tan B) ÷ (1 - tan A × tan B).\n\nStandard Trigonometric Values\n\nSome frequently used tangent values are: tan(30°) = 1 ÷ √3, tan(45°) = 1, and tan(60°) = √3.",
     "topic": "Trigonometry",
     "subtopic": "Compound Angles & Standard Values",
     "conceptTested": "Trigonometric values of standard angles and direct substitution.",
@@ -490,7 +590,9 @@
       "topic": "Trigonometry",
       "subtopic": "Compound Angles & Standard Values",
       "conceptTested": "Trigonometric values of standard angles and direct substitution."
-    }
+    },
+    "question": "If α + θ = 7π/12 and tan θ = √3, then the value of tan α is:",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -506,12 +608,16 @@
     "avgTime": "00:17",
     "questionText": "A regular hexagon is inscribed in a circle. Find the ratio of area of circle to the area of that portion which is not covered by the hexagon?",
     "options": {
-      "A": "2π/(2π – 3√3)",
-      "B": "π/(π – 3√3)",
+      "a": "2π/(2π - 3√3)",
+      "b": "π/(π - 3√3)",
+      "c": "2π/√3",
+      "d": "π/√3",
+      "A": "2π/(2π - 3√3)",
+      "B": "π/(π - 3√3)",
       "C": "2π/√3",
       "D": "π/√3"
     },
-    "solution": "Solution\n\nShortcut Trick\nRadius of circumcircle = side of inscribed regular hexagon = r\nArea of circle = πr2\nArea of regular hexagon = (3√3/2)r2\nUncovered Area = πr2 − (3√3/2)r2 = r2(2π − 3√3) / 2\nRatio = Area of circle ÷ Uncovered Area = 2π / (2π − 3√3)\n∴ The correct answer is 2π/(2π − 3√3).\n\nAlternate Method\nGiven:\nA regular hexagon is inscribed in a circle.\n\nFormula Used:\nArea of a circle = πr2\nArea of a regular hexagon = 6 × (√3 / 4)a2 (where a is the side length)\n\nFor a regular hexagon inscribed in a circle, the side length (a) equals the radius (r).\n\nO\nr\nShaded blue region = Area not covered by hexagon\n\nCalculations:\n⇒ Let the radius of the circle be r.\n⇒ Side of the inscribed regular hexagon = r\n⇒ Area of the circle = πr2\n⇒ Area of the hexagon = 6 × (√3 / 4)r2 = (3√3 / 2)r2\n⇒ Area not covered by hexagon = Area of circle − Area of hexagon\n⇒ Area not covered = πr2 − (3√3 / 2)r2\n⇒ Area not covered = r2(2π − 3√3) / 2\n⇒ Required Ratio = (Area of circle) ÷ (Area not covered)\n⇒ Ratio = πr2 ÷ [r2(2π − 3√3) / 2]\n⇒ Ratio = 2π / (2π − 3√3)\n∴ The correct answer is 2π/(2π − 3√3).\n\nAdditional Information\nCircumcircle of a Regular Hexagon\n\nThe circumcenter and incenter of a regular hexagon coincide. The radius of the circumscribed circle is exactly equal to the side length of the hexagon (R = a).\n\nIncircle of a Regular Hexagon\n\nThe radius of a circle inscribed inside a regular hexagon is given by r = (a√3)/2. The ratio of the area of the circumcircle to the incircle is 4:3.\n\nArea of an Equilateral Triangle\n\nA regular hexagon is composed of exactly 6 identical equilateral triangles. The area of one such triangle with side a is (√3 / 4)a2.",
+    "solution": "Solution\n\nShortcut Trick\nRadius of circumcircle = side of inscribed regular hexagon = r\nArea of circle = πr2\nArea of regular hexagon = (3√3/2)r2\nUncovered Area = πr2 - (3√3/2)r2 = r2(2π - 3√3) / 2\nRatio = Area of circle ÷ Uncovered Area = 2π / (2π - 3√3)\n∴ The correct answer is 2π/(2π - 3√3).\n\nAlternate Method\nGiven:\nA regular hexagon is inscribed in a circle.\n\nFormula Used:\nArea of a circle = πr2\nArea of a regular hexagon = 6 × (√3 / 4)a2 (where a is the side length)\n\nFor a regular hexagon inscribed in a circle, the side length (a) equals the radius (r).\n\nO\nRs. haded blue region = Area not covered by hexagon\n\nCalculations:\n⇒ Let the radius of the circle be r.\n⇒ Side of the inscribed regular hexagon = r\n⇒ Area of the circle = πr2\n⇒ Area of the hexagon = 6 × (√3 / 4)r2 = (3√3 / 2)r2\n⇒ Area not covered by hexagon = Area of circle - Area of hexagon\n⇒ Area not covered = πr2 - (3√3 / 2)r2\n⇒ Area not covered = r2(2π - 3√3) / 2\n⇒ Required Ratio = (Area of circle) ÷ (Area not covered)\n⇒ Ratio = πr2 ÷ [r2(2π - 3√3) / 2]\n⇒ Ratio = 2π / (2π - 3√3)\n∴ The correct answer is 2π/(2π - 3√3).\n\nAdditional Information\nCircumcircle of a Regular Hexagon\n\nThe circumcenter and incenter of a regular hexagon coincide. The radius of the circumscribed circle is exactly equal to the side length of the hexagon (R = a).\n\nIncircle of a Regular Hexagon\n\nThe radius of a circle inscribed inside a regular hexagon is given by r = (a√3)/2. The ratio of the area of the circumcircle to the incircle is 4:3.\n\nArea of an Equilateral Triangle\n\nA regular hexagon is composed of exactly 6 identical equilateral triangles. The area of one such triangle with side a is (√3 / 4)a2.",
     "topic": "Mensuration 2D",
     "subtopic": "Circles & Regular Polygons",
     "conceptTested": "Area of a circle and area of a regular hexagon inscribed in a circle.",
@@ -519,7 +625,9 @@
       "topic": "Mensuration 2D",
       "subtopic": "Circles & Regular Polygons",
       "conceptTested": "Area of a circle and area of a regular hexagon inscribed in a circle."
-    }
+    },
+    "question": "A regular hexagon is inscribed in a circle. Find the ratio of area of circle to the area of that portion which is not covered by the hexagon?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -535,12 +643,16 @@
     "avgTime": "00:34",
     "questionText": "12 men complete a work in 9 days. After they have worked for 6 days, 6 more men join them. How many days will they take to complete the remaining work?",
     "options": {
+      "a": "2 days",
+      "b": "3 days",
+      "c": "4 days",
+      "d": "5 days",
       "A": "2 days",
       "B": "3 days",
       "C": "4 days",
       "D": "5 days"
     },
-    "solution": "Solution\n\nShortcut Trick\nRemaining days of work for the initial 12 men = 9 − 6 = 3 days.\nRemaining work in terms of man-days = 12 men × 3 days = 36 man-days.\nNew number of men working = 12 + 6 = 18 men.\nDays required to complete the remaining work = 36 ÷ 18 = 2 days.\n∴ The correct answer is 2 days.\n\nAlternate Method\nGiven:\nInitial number of men = 12\nTotal days required = 9\nDays they worked before others joined = 6\nNew men joined = 6\n\nFormula Used:\nTotal Work = Number of Men × Days\n\nPerson\tDays\tTotal Work\tEfficiency\n12 Men\t9\t108\t12\n\nCalculations:\n⇒ Let the efficiency of 1 man be 1 unit/day.\n⇒ Total work to be done = 108 units\n⇒ Work completed by 12 men in 6 days = 12 × 6 = 72 units\n⇒ Remaining work = 108 − 72 = 36 units\n⇒ Total men present after 6 days = 12 + 6 = 18 men\n⇒ Combined efficiency of 18 men = 18 units/day\n⇒ Time taken to complete the remaining work = Remaining Work ÷ Combined Efficiency\n⇒ Time taken = 36 ÷ 18 = 2 days\n∴ The correct answer is 2 days.\n\nAdditional Information\nMDH Rule (Chain Rule)\n\nIf M1 men can do W1 work in D1 days working H1 hours/day, and M2 men can do W2 work in D2 days working H2 hours/day, then the relation is given by: (M1 × D1 × H1) ÷ W1 = (M2 × D2 × H2) ÷ W2.\n\nWork and Men Proportionality\n\nThe number of men required is inversely proportional to the number of days needed to complete the same amount of work. More men take fewer days, and fewer men take more days to complete identical work.\n\nWork & Wages\n\nWages are always distributed in the ratio of the total work done by each person. If all individuals work for the same number of days, their wages are distributed directly in the ratio of their daily efficiencies.",
+    "solution": "Solution\n\nShortcut Trick\nRemaining days of work for the initial 12 men = 9 - 6 = 3 days.\nRemaining work in terms of man-days = 12 men × 3 days = 36 man-days.\nNew number of men working = 12 + 6 = 18 men.\nDays required to complete the remaining work = 36 ÷ 18 = 2 days.\n∴ The correct answer is 2 days.\n\nAlternate Method\nGiven:\nInitial number of men = 12\nTotal days required = 9\nDays they worked before others joined = 6\nNew men joined = 6\n\nFormula Used:\nTotal Work = Number of Men × Days\n\nPerson\tDays\tTotal Work\tEfficiency\n12 Men\t9\t108\t12\n\nCalculations:\n⇒ Let the efficiency of 1 man be 1 unit/day.\n⇒ Total work to be done = 108 units\n⇒ Work completed by 12 men in 6 days = 12 × 6 = 72 units\n⇒ Remaining work = 108 - 72 = 36 units\n⇒ Total men present after 6 days = 12 + 6 = 18 men\n⇒ Combined efficiency of 18 men = 18 units/day\n⇒ Time taken to complete the remaining work = Remaining Work ÷ Combined Efficiency\n⇒ Time taken = 36 ÷ 18 = 2 days\n∴ The correct answer is 2 days.\n\nAdditional Information\nMDH Rule (Chain Rule)\n\nIf M1 men can do W1 work in D1 days working H1 hours/day, and M2 men can do W2 work in D2 days working H2 hours/day, then the relation is given by: (M1 × D1 × H1) ÷ W1 = (M2 × D2 × H2) ÷ W2.\n\nWork and Men Proportionality\n\nThe number of men required is inversely proportional to the number of days needed to complete the same amount of work. More men take fewer days, and fewer men take more days to complete identical work.\n\nWork & Wages\n\nWages are always distributed in the ratio of the total work done by each person. If all individuals work for the same number of days, their wages are distributed directly in the ratio of their daily efficiencies.",
     "topic": "Time & Work",
     "subtopic": "Efficiency & Men-Days Formula",
     "conceptTested": "Conservation of total work measured in man-days.",
@@ -548,7 +660,9 @@
       "topic": "Time & Work",
       "subtopic": "Efficiency & Men-Days Formula",
       "conceptTested": "Conservation of total work measured in man-days."
-    }
+    },
+    "question": "12 men complete a work in 9 days. After they have worked for 6 days, 6 more men join them. How many days will they take to complete the remaining work?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -564,12 +678,16 @@
     "avgTime": "00:11",
     "questionText": "The whole surface area of a pyramid whose base is a regular polygon is 260 cm^2 and the area of its base is 120 cm^2. The area of each lateral face is 20 cm^2. Then the number of lateral faces is:",
     "options": {
+      "a": "7",
+      "b": "8",
+      "c": "6",
+      "d": "5",
       "A": "7",
       "B": "8",
       "C": "6",
       "D": "5"
     },
-    "solution": "Solution\n\nShortcut Trick\nTotal Lateral Surface Area = Total Surface Area − Base Area\n⇒ Total Lateral Area = 260 − 120 = 140 cm2\nNumber of Lateral Faces = Total Lateral Area ÷ Area of each lateral face\n⇒ Number of faces = 140 ÷ 20 = 7\n∴ The correct answer is 7.\n\nAlternate Method\nGiven:\nTotal surface area of the pyramid = 260 cm2\nArea of its base = 120 cm2\nArea of each lateral face = 20 cm2\n\nFormula Used:\nTotal Surface Area = Base Area + (Number of lateral faces × Area of each lateral face)\n\nCalculations:\nLet the number of lateral faces be n.\n⇒ 260 = 120 + (n × 20)\n⇒ n × 20 = 260 − 120\n⇒ 20n = 140\n⇒ n = 140 ÷ 20\n⇒ n = 7\n∴ The correct answer is 7.\n\nAdditional Information\nVolume of a Pyramid\n\nThe volume of a pyramid is one-third of the product of its base area and perpendicular height. Formula: V = (1 ÷ 3) × Base Area × Height.\n\nLateral Surface Area (Regular Pyramid)\n\nIt is the total area of all its lateral faces. For a regular pyramid: LSA = (1 ÷ 2) × Perimeter of Base × Slant Height.\n\nEuler's Formula for Polyhedra\n\nFor any convex polyhedron, the number of faces (F), vertices (V), and edges (E) are related by the formula: F + V − E = 2.",
+    "solution": "Solution\n\nShortcut Trick\nTotal Lateral Surface Area = Total Surface Area - Base Area\n⇒ Total Lateral Area = 260 - 120 = 140 cm2\nNumber of Lateral Faces = Total Lateral Area ÷ Area of each lateral face\n⇒ Number of faces = 140 ÷ 20 = 7\n∴ The correct answer is 7.\n\nAlternate Method\nGiven:\nTotal surface area of the pyramid = 260 cm2\nArea of its base = 120 cm2\nArea of each lateral face = 20 cm2\n\nFormula Used:\nTotal Surface Area = Base Area + (Number of lateral faces × Area of each lateral face)\n\nCalculations:\nLet the number of lateral faces be n.\n⇒ 260 = 120 + (n × 20)\n⇒ n × 20 = 260 - 120\n⇒ 20n = 140\n⇒ n = 140 ÷ 20\n⇒ n = 7\n∴ The correct answer is 7.\n\nAdditional Information\nVolume of a Pyramid\n\nThe volume of a pyramid is one-third of the product of its base area and perpendicular height. Formula: V = (1 ÷ 3) × Base Area × Height.\n\nLateral Surface Area (Regular Pyramid)\n\nIt is the total area of all its lateral faces. For a regular pyramid: LSA = (1 ÷ 2) × Perimeter of Base × Slant Height.\n\nEuler's Formula for Polyhedra\n\nFor any convex polyhedron, the number of faces (F), vertices (V), and edges (E) are related by the formula: F + V - E = 2.",
     "topic": "Mensuration 3D",
     "subtopic": "Pyramids - Surface Area",
     "conceptTested": "Total Surface Area = Base Area + Lateral Surface Area of a Pyramid.",
@@ -577,7 +695,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Pyramids - Surface Area",
       "conceptTested": "Total Surface Area = Base Area + Lateral Surface Area of a Pyramid."
-    }
+    },
+    "question": "The whole surface area of a pyramid whose base is a regular polygon is 260 cm^2 and the area of its base is 120 cm^2. The area of each lateral face is 20 cm^2. Then the number of lateral faces is:",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -593,12 +713,16 @@
     "avgTime": "00:49",
     "questionText": "Ramesh purchases 75 articles for ₹ 10800 and sells them at a loss equal to the selling price of 5 articles. What will be the selling price of one article?",
     "options": {
+      "a": "Rs. 156",
+      "b": "Rs. 135",
+      "c": "Rs. 144",
+      "d": "Rs. 132",
       "A": "Rs. 156",
       "B": "Rs. 135",
       "C": "Rs. 144",
       "D": "Rs. 132"
     },
-    "solution": "Solution\n\nShortcut Trick\nLoss = CP of 75 articles − SP of 75 articles = SP of 5 articles\n⇒ CP of 75 articles = SP of (75 + 5) articles = SP of 80 articles\n⇒ SP of 80 articles = Total CP = ₹10800\n⇒ SP of 1 article = 10800 ÷ 80 = 135\n∴ The correct answer is ₹135.\n\nAlternate Method\nGiven:\nTotal articles purchased = 75\nTotal Cost Price (CP) = ₹10800\nLoss incurred = Selling Price (SP) of 5 articles\n\nFormula Used:\nLoss = Total CP − Total SP\n\nCalculations:\n⇒ Total CP of 75 articles − Total SP of 75 articles = Loss\n⇒ ₹10800 − SP of 75 articles = SP of 5 articles\n⇒ ₹10800 = SP of 75 articles + SP of 5 articles\n⇒ ₹10800 = SP of 80 articles\n⇒ SP of 1 article = 10800 ÷ 80\n⇒ SP of 1 article = 135\n∴ The correct answer is ₹135.\n\nAdditional Information\nProfit and Loss Equation\nProfit occurs when SP > CP (Profit = SP − CP), and Loss occurs when CP > SP (Loss = CP − SP).\n\nSimilar Concept (Profit in terms of SP)\n\nIf there is a profit equal to the SP of y articles on selling x articles, then CP of x articles = SP of (x − y) articles.\n\nProfit and Loss Percentage\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Both are computed on the Cost Price by default.",
+    "solution": "Solution\n\nShortcut Trick\nLoss = CP of 75 articles - SP of 75 articles = SP of 5 articles\n⇒ CP of 75 articles = SP of (75 + 5) articles = SP of 80 articles\n⇒ SP of 80 articles = Total CP = ₹10800\n⇒ SP of 1 article = 10800 ÷ 80 = 135\n∴ The correct answer is ₹135.\n\nAlternate Method\nGiven:\nTotal articles purchased = 75\nTotal Cost Price (CP) = ₹10800\nLoss incurred = Selling Price (SP) of 5 articles\n\nFormula Used:\nLoss = Total CP - Total SP\n\nCalculations:\n⇒ Total CP of 75 articles - Total SP of 75 articles = Loss\n⇒ ₹10800 - SP of 75 articles = SP of 5 articles\n⇒ ₹10800 = SP of 75 articles + SP of 5 articles\n⇒ ₹10800 = SP of 80 articles\n⇒ SP of 1 article = 10800 ÷ 80\n⇒ SP of 1 article = 135\n∴ The correct answer is ₹135.\n\nAdditional Information\nProfit and Loss Equation\nProfit occurs when SP > CP (Profit = SP - CP), and Loss occurs when CP > SP (Loss = CP - SP).\n\nSimilar Concept (Profit in terms of SP)\n\nIf there is a profit equal to the SP of y articles on selling x articles, then CP of x articles = SP of (x - y) articles.\n\nProfit and Loss Percentage\nProfit % = (Profit ÷ CP) × 100 | Loss % = (Loss ÷ CP) × 100. Both are computed on the Cost Price by default.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit & Loss - Equivalent SP and CP Relations",
     "conceptTested": "Loss incurred on selling x articles equals the selling price of y articles implies CP of x articles equals SP of (x + y) articles.",
@@ -606,7 +730,9 @@
       "topic": "Profit, Loss & Discount",
       "subtopic": "Profit & Loss - Equivalent SP and CP Relations",
       "conceptTested": "Loss incurred on selling x articles equals the selling price of y articles implies CP of x articles equals SP of (x + y) articles."
-    }
+    },
+    "question": "Ramesh purchases 75 articles for ₹ 10800 and sells them at a loss equal to the selling price of 5 articles. What will be the selling price of one article?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -622,12 +748,16 @@
     "avgTime": "00:42",
     "questionText": "What is the simple interest on Rs. 32,000 at 8.5% per annum for period from 10th Feb., 2019 to 24th April, 2019?",
     "options": {
+      "a": "Rs. 550",
+      "b": "Rs. 555",
+      "c": "Rs. 544",
+      "d": "Rs. 540",
       "A": "Rs. 550",
       "B": "Rs. 555",
       "C": "Rs. 544",
       "D": "Rs. 540"
     },
-    "solution": "Solution\n\nShortcut Trick\nTotal time from 10th Feb to 24th April = 18 + 31 + 24 = 73 days = 1/5 year.\nEffective interest rate for 1/5 year = 8.5% ÷ 5 = 1.7%.\nSimple Interest = 1.7% of 32000 = (1.7 × 32000) ÷ 100 = Rs. 544.\n∴ The correct answer is Rs. 544.\n\nAlternate Method\nGiven:\nPrincipal\n(P) = Rs. 32000\nRate\n(R) = 8.5% p.a.\nTime (T) = 10th Feb., 2019 to 24th April, 2019\n\nFormula Used:\nSI = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Number of days in February (2019 is a non-leap year) = 28 − 10 = 18 days\n⇒ Number of days in March = 31 days\n⇒ Number of days in April = 24 days\n⇒ Total Time (T) = 18 + 31 + 24 = 73 days\n⇒ Time in years = 73 ÷ 365 = 1/5 years\n⇒ SI = (32000 × 8.5 × 1) ÷ (100 × 5)\n⇒ SI = 320 × 1.7\n⇒ SI = Rs. 544\n∴ The correct answer is Rs. 544.\n\nAdditional Information\nCounting of Days in SI Calculation\n\nGenerally, the day the money is deposited is not counted, but the day the money is withdrawn is counted. Total days are then converted to years by dividing by 365.\n\nLeap Year Consideration\n\nIf the given period falls within a leap year and includes the month of February, 29 days are considered for February. For the year 2019, it is a non-leap year so February has 28 days.\n\nStandard Day Fractions\n\nExam questions frequently use exact multiples of 73 days for simple calculations because 73 days = 1/5 year, 146 days = 2/5 year, 219 days = 3/5 year, and 292 days = 4/5 year.",
+    "solution": "Solution\n\nShortcut Trick\nTotal time from 10th Feb to 24th April = 18 + 31 + 24 = 73 days = 1/5 year.\nEffective interest rate for 1/5 year = 8.5% ÷ 5 = 1.7%.\nSimple Interest = 1.7% of 32000 = (1.7 × 32000) ÷ 100 = Rs. 544.\n∴ The correct answer is Rs. 544.\n\nAlternate Method\nGiven:\nPrincipal\n(P) = Rs. 32000\nRate\n(R) = 8.5% p.a.\nTime (T) = 10th Feb., 2019 to 24th April, 2019\n\nFormula Used:\nSI = (P × R × T) ÷ 100\n\nCalculations:\n⇒ Number of days in February (2019 is a non-leap year) = 28 - 10 = 18 days\n⇒ Number of days in March = 31 days\n⇒ Number of days in April = 24 days\n⇒ Total Time (T) = 18 + 31 + 24 = 73 days\n⇒ Time in years = 73 ÷ 365 = 1/5 years\n⇒ SI = (32000 × 8.5 × 1) ÷ (100 × 5)\n⇒ SI = 320 × 1.7\n⇒ SI = Rs. 544\n∴ The correct answer is Rs. 544.\n\nAdditional Information\nCounting of Days in SI Calculation\n\nGenerally, the day the money is deposited is not counted, but the day the money is withdrawn is counted. Total days are then converted to years by dividing by 365.\n\nLeap Year Consideration\n\nIf the given period falls within a leap year and includes the month of February, 29 days are considered for February. For the year 2019, it is a non-leap year so February has 28 days.\n\nStandard Day Fractions\n\nExam questions frequently use exact multiples of 73 days for simple calculations because 73 days = 1/5 year, 146 days = 2/5 year, 219 days = 3/5 year, and 292 days = 4/5 year.",
     "topic": "Simple Interest",
     "subtopic": "Simple Interest - Calculation Based on Exact Days",
     "conceptTested": "Time duration in days converted to years by dividing by 365, used in Simple Interest formula SI = (P × R × T) / 100.",
@@ -635,7 +765,9 @@
       "topic": "Simple Interest",
       "subtopic": "Simple Interest - Calculation Based on Exact Days",
       "conceptTested": "Time duration in days converted to years by dividing by 365, used in Simple Interest formula SI = (P × R × T) / 100."
-    }
+    },
+    "question": "What is the simple interest on Rs. 32,000 at 8.5% per annum for period from 10th Feb., 2019 to 24th April, 2019?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -651,12 +783,16 @@
     "avgTime": "00:35",
     "questionText": "A student got 20% marks and failed by 72 marks. If he scores 40% marks then he gets 8 marks more than the passing marks. Find the passing marks.",
     "options": {
+      "a": "150",
+      "b": "152",
+      "c": "142",
+      "d": "160",
       "A": "150",
       "B": "152",
       "C": "142",
       "D": "160"
     },
-    "solution": "Solution\n\nShortcut Trick\nDifference in percentage = 40% − 20% = 20%\nDifference in marks = 72 (shortfall) + 8 (excess) = 80 marks\nSince 20% of maximum marks = 80 marks\nPassing marks = 20% marks + 72 marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAlternate Method\nGiven:\nMarks scored in case 1 = 20% (Failed by 72 marks)\nMarks scored in case 2 = 40% (8 marks more than passing marks)\n\nCalculation:\nLet the total maximum marks be x.\n⇒ Passing marks = 20% of x + 72\n⇒ Passing marks = 40% of x − 8\n\nEquating both the expressions:\n\n⇒ 20% of x + 72 = 40% of x − 8\n⇒ 40% of x − 20% of x = 72 + 8\n⇒ 20% of x = 80\n⇒ x = (80 × 100) ÷ 20\n⇒ x = 400\n⇒ Passing marks = 20% of 400 + 72\n⇒ Passing marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAdditional Information\nPassing Marks Concept\nWhen a student fails by a certain margin, Passing Marks = Obtained Marks + Shortfall Marks.\n\nExcess Marks Concept\n\nWhen a student scores above passing marks, Passing Marks = Obtained Marks − Excess Marks.\nDifference Rule\n\nThe percentage difference between the two scenarios will always be equal to the sum of the shortfall marks and the excess marks.",
+    "solution": "Solution\n\nShortcut Trick\nDifference in percentage = 40% - 20% = 20%\nDifference in marks = 72 (shortfall) + 8 (excess) = 80 marks\nSince 20% of maximum marks = 80 marks\nPassing marks = 20% marks + 72 marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAlternate Method\nGiven:\nMarks scored in case 1 = 20% (Failed by 72 marks)\nMarks scored in case 2 = 40% (8 marks more than passing marks)\n\nCalculation:\nLet the total maximum marks be x.\n⇒ Passing marks = 20% of x + 72\n⇒ Passing marks = 40% of x - 8\n\nEquating both the expressions:\n\n⇒ 20% of x + 72 = 40% of x - 8\n⇒ 40% of x - 20% of x = 72 + 8\n⇒ 20% of x = 80\n⇒ x = (80 × 100) ÷ 20\n⇒ x = 400\n⇒ Passing marks = 20% of 400 + 72\n⇒ Passing marks = 80 + 72 = 152\n∴ The correct answer is 152 marks.\n\nAdditional Information\nPassing Marks Concept\nWhen a student fails by a certain margin, Passing Marks = Obtained Marks + Shortfall Marks.\n\nExcess Marks Concept\n\nWhen a student scores above passing marks, Passing Marks = Obtained Marks - Excess Marks.\nDifference Rule\n\nThe percentage difference between the two scenarios will always be equal to the sum of the shortfall marks and the excess marks.",
     "topic": "Percentage",
     "subtopic": "Percentage - Pass/Fail Criteria and Marks Difference",
     "conceptTested": "Equating the percentage difference to the total gap between shortfall marks and excess marks to find total maximum marks.",
@@ -664,7 +800,9 @@
       "topic": "Percentage",
       "subtopic": "Percentage - Pass/Fail Criteria and Marks Difference",
       "conceptTested": "Equating the percentage difference to the total gap between shortfall marks and excess marks to find total maximum marks."
-    }
+    },
+    "question": "A student got 20% marks and failed by 72 marks. If he scores 40% marks then he gets 8 marks more than the passing marks. Find the passing marks.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -680,6 +818,10 @@
     "avgTime": "00:33",
     "questionText": "Rahul has a bag which contains Rs. 1, 50 paisa, and 25 paisa coins and the ratio of number of coins is 1 ∶ 1/2 ∶ 1/3. If Rahul has a total amount of Rs 1120, then find the total value of 25 paisa coins.",
     "options": {
+      "a": "Rs 60",
+      "b": "Rs 84",
+      "c": "Rs 96",
+      "d": "Rs 70",
       "A": "Rs 60",
       "B": "Rs 84",
       "C": "Rs 96",
@@ -693,7 +835,9 @@
       "topic": "Ratio & Proportion",
       "subtopic": "Ratio & Proportion - Coin Problems",
       "conceptTested": "Total Value = Number of Coins × Denomination Value, converting coin ratio into value ratio using respective denominations."
-    }
+    },
+    "question": "Rahul has a bag which contains Rs. 1, 50 paisa, and 25 paisa coins and the ratio of number of coins is 1 ∶ 1/2 ∶ 1/3. If Rahul has a total amount of Rs 1120, then find the total value of 25 paisa coins.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -709,12 +853,16 @@
     "avgTime": "00:27",
     "questionText": "A thief was spotted by a policeman from a distance of 225 metres. When the policeman started the chase, the thief also started running. If the speed of the thief was 11 km/h and that of the policeman was 13 km/h, how far would the thief have run, before the policeman caught up with him?",
     "options": {
+      "a": "1237.5 metres",
+      "b": "1137.5 metres",
+      "c": "1357.5 metres",
+      "d": "1256.5 metres",
       "A": "1237.5 metres",
       "B": "1137.5 metres",
       "C": "1357.5 metres",
       "D": "1256.5 metres"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen the time taken by both moving objects is constant, the ratio of the distance covered is equal to the ratio of their speeds.\n\nSpeed ratio (Thief : Policeman) = 11 : 13\nDistance ratio (Thief : Policeman) = 11 : 13\nDifference in distance covered = 13 parts − 11 parts = 2 parts\nGiven the initial distance difference is 225 m ⇒ 2 parts = 225 m ⇒ 1 part = 112.5 m\nDistance run by the thief = 11 parts = 11 × 112.5 = 1237.5 metres\n∴ The correct answer is 1237.5 metres.\n\nAlternate Method\nGiven:\nInitial distance between policeman and thief = 225 m\nSpeed of thief = 11 km/h\nSpeed of policeman = 13 km/h\n\nFormula Used:\nRelative speed (same direction) = Speed1 − Speed2\nTime = Distance ÷ Relative Speed\nDistance = Speed × Time\n\nCalculations:\n⇒ Relative speed = 13 − 11 = 2 km/h\n⇒ Relative speed in m/s = 2 × (5/18) = 5/9 m/s\n⇒ Time taken to catch the thief = Distance ÷ Relative speed = 225 ÷ (5/9)\n⇒ Time taken = 225 × (9/5) = 45 × 9 = 405 seconds\n⇒ Speed of thief in m/s = 11 × (5/18) = 55/18 m/s\n⇒ Distance covered by thief before getting caught = Speed of thief × Time taken\n⇒ Distance = (55/18) × 405 = 55 × 22.5\n⇒ Distance = 1237.5 m\n∴ The correct answer is 1237.5 metres.\n\nAdditional Information\nRelative Speed (Same Direction)\n\nWhen two bodies are moving in the same direction, their relative speed is the difference between their individual speeds: S = S1 − S2.\n\nRelative Speed (Opposite Direction)\n\nWhen two bodies are moving in opposite directions towards each other, their relative speed is the sum of their individual speeds: S = S1 + S2.\n\nUnit Conversion\n\nTo convert speed from km/h to m/s, multiply the value by 5/18. To convert speed from m/s to km/h, multiply the value by 18/5.",
+    "solution": "Solution\n\nShortcut Trick\nWhen the time taken by both moving objects is constant, the ratio of the distance covered is equal to the ratio of their speeds.\n\nSpeed ratio (Thief : Policeman) = 11 : 13\nDistance ratio (Thief : Policeman) = 11 : 13\nDifference in distance covered = 13 parts - 11 parts = 2 parts\nGiven the initial distance difference is 225 m ⇒ 2 parts = 225 m ⇒ 1 part = 112.5 m\nDistance run by the thief = 11 parts = 11 × 112.5 = 1237.5 metres\n∴ The correct answer is 1237.5 metres.\n\nAlternate Method\nGiven:\nInitial distance between policeman and thief = 225 m\nSpeed of thief = 11 km/h\nSpeed of policeman = 13 km/h\n\nFormula Used:\nRelative speed (same direction) = Speed1 - Speed2\nTime = Distance ÷ Relative Speed\nDistance = Speed × Time\n\nCalculations:\n⇒ Relative speed = 13 - 11 = 2 km/h\n⇒ Relative speed in m/s = 2 × (5/18) = 5/9 m/s\n⇒ Time taken to catch the thief = Distance ÷ Relative speed = 225 ÷ (5/9)\n⇒ Time taken = 225 × (9/5) = 45 × 9 = 405 seconds\n⇒ Speed of thief in m/s = 11 × (5/18) = 55/18 m/s\n⇒ Distance covered by thief before getting caught = Speed of thief × Time taken\n⇒ Distance = (55/18) × 405 = 55 × 22.5\n⇒ Distance = 1237.5 m\n∴ The correct answer is 1237.5 metres.\n\nAdditional Information\nRelative Speed (Same Direction)\n\nWhen two bodies are moving in the same direction, their relative speed is the difference between their individual speeds: S = S1 - S2.\n\nRelative Speed (Opposite Direction)\n\nWhen two bodies are moving in opposite directions towards each other, their relative speed is the sum of their individual speeds: S = S1 + S2.\n\nUnit Conversion\n\nTo convert speed from km/h to m/s, multiply the value by 5/18. To convert speed from m/s to km/h, multiply the value by 18/5.",
     "topic": "Time, Speed & Distance",
     "subtopic": "Time, Speed & Distance - Police & Thief Problems",
     "conceptTested": "When time is constant, the ratio of distance covered by two moving bodies is equal to the ratio of their speeds.",
@@ -722,7 +870,9 @@
       "topic": "Time, Speed & Distance",
       "subtopic": "Time, Speed & Distance - Police & Thief Problems",
       "conceptTested": "When time is constant, the ratio of distance covered by two moving bodies is equal to the ratio of their speeds."
-    }
+    },
+    "question": "A thief was spotted by a policeman from a distance of 225 metres. When the policeman started the chase, the thief also started running. If the speed of the thief was 11 km/h and that of the policeman was 13 km/h, how far would the thief have run, before the policeman caught up with him?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -738,12 +888,16 @@
     "avgTime": "00:31",
     "questionText": "Two numbers are in the ratio 17 : 45. One-third of the smaller is less than one-fifth of bigger by 15. The smaller number is?",
     "options": {
+      "a": "25.5",
+      "b": "67.5",
+      "c": "76.5",
+      "d": "86.5",
       "A": "25.5",
       "B": "67.5",
       "C": "76.5",
       "D": "86.5"
     },
-    "solution": "Solution\n\nShortcut Trick\nLet the two numbers be 17 units and 45 units.\n1/3 of the smaller number = 17/3 units, and 1/5 of the bigger number = 45/5 = 9 units.\nDifference = 9 − 17/3 = (27 − 17) / 3 = 10/3 units.\nGiven, 10/3 units = 15 ⇒ 1 unit = 15 × 3 ÷ 10 = 4.5\nSmaller number = 17 units = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.\n\nAlternate Method\nGiven:\nRatio of the two numbers = 17 : 45\n\nThe difference between 1/5 of the bigger number and 1/3 of the smaller number = 15\n\nCalculation:\n⇒ Let the smaller number be 17x and the bigger number be 45x.\n⇒ One-third of the smaller number = 17x / 3\n⇒ One-fifth of the bigger number = 45x / 5 = 9x\n⇒ According to the question, 9x − 17x / 3 = 15\n⇒ (27x − 17x) / 3 = 15\n⇒ 10x / 3 = 15\n⇒ 10x = 45\n⇒ x = 4.5\n⇒ Smaller number = 17x = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.\n\nAdditional Information\nCompound Ratio\n\nIf two ratios are a : b and c : d, then their compound ratio is given by ac : bd.\n\nDuplicate & Sub-duplicate Ratio\n\nThe duplicate ratio of a : b is a2 : b2, and the sub-duplicate ratio is √a : √b.\n\nComponendo and Dividendo\n\nIf a : b = c : d, then by the rule of componendo and dividendo (a + b) : (a − b) = (c + d) : (c − d).",
+    "solution": "Solution\n\nShortcut Trick\nLet the two numbers be 17 units and 45 units.\n1/3 of the smaller number = 17/3 units, and 1/5 of the bigger number = 45/5 = 9 units.\nDifference = 9 - 17/3 = (27 - 17) / 3 = 10/3 units.\nGiven, 10/3 units = 15 ⇒ 1 unit = 15 × 3 ÷ 10 = 4.5\nSmaller number = 17 units = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.\n\nAlternate Method\nGiven:\nRatio of the two numbers = 17 : 45\n\nThe difference between 1/5 of the bigger number and 1/3 of the smaller number = 15\n\nCalculation:\n⇒ Let the smaller number be 17x and the bigger number be 45x.\n⇒ One-third of the smaller number = 17x / 3\n⇒ One-fifth of the bigger number = 45x / 5 = 9x\n⇒ According to the question, 9x - 17x / 3 = 15\n⇒ (27x - 17x) / 3 = 15\n⇒ 10x / 3 = 15\n⇒ 10x = 45\n⇒ x = 4.5\n⇒ Smaller number = 17x = 17 × 4.5 = 76.5\n∴ The correct answer is 76.5.\n\nAdditional Information\nCompound Ratio\n\nIf two ratios are a : b and c : d, then their compound ratio is given by ac : bd.\n\nDuplicate & Sub-duplicate Ratio\n\nThe duplicate ratio of a : b is a2 : b2, and the sub-duplicate ratio is √a : √b.\n\nComponendo and Dividendo\n\nIf a : b = c : d, then by the rule of componendo and dividendo (a + b) : (a - b) = (c + d) : (c - d).",
     "topic": "Ratio & Proportion",
     "subtopic": "Proportional Parts & Algebraic Comparison",
     "conceptTested": "Expressing given conditions into linear equations using proportional multipliers.",
@@ -751,7 +905,9 @@
       "topic": "Ratio & Proportion",
       "subtopic": "Proportional Parts & Algebraic Comparison",
       "conceptTested": "Expressing given conditions into linear equations using proportional multipliers."
-    }
+    },
+    "question": "Two numbers are in the ratio 17 : 45. One-third of the smaller is less than one-fifth of bigger by 15. The smaller number is?",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -767,12 +923,16 @@
     "avgTime": "00:21",
     "questionText": "The average age of a class of 40 students and a teacher reduces by 0.5 years, if we exclude the teacher. If the initial average age is 18 years, then what is the age of the teacher?",
     "options": {
+      "a": "41 years",
+      "b": "38 years",
+      "c": "40 years",
+      "d": "39 years",
       "A": "41 years",
       "B": "38 years",
       "C": "40 years",
       "D": "39 years"
     },
-    "solution": "Solution\n\nShortcut Trick\nAge of excluded person = Initial Average + (Remaining members × Drop in average)\n⇒ Age of teacher = 18 + (40 × 0.5)\n⇒ Age of teacher = 18 + 20\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.\n\nAlternate Method\nGiven:\nNumber of students = 40\nTotal persons initially (40 students + 1 teacher) = 41\nInitial average age = 18 years\nNew average age (teacher excluded) = 18 − 0.5 = 17.5 years\n\nFormula Used:\nTotal Age = Average Age × Number of Persons\nAge of Teacher = (Total age of 41 persons) − (Total age of 40 students)\n\nCalculations:\n⇒ Total age initially = 41 × 18 = 738 years\n⇒ Total age after excluding teacher = 40 × 17.5 = 700 years\n⇒ Age of teacher = 738 − 700\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.\n\nAdditional Information\nWeighted Average\n\nWhen two or more groups with different averages are combined, the combined average is calculated as (n1A1 + n2A2) ÷ (n1 + n2).\n\nConcept of Replacement\n\nWhen a person is replaced by a new person, the change in total value is: New Value − Old Value = Total Members × Change in Average.\n\nConcept of Inclusion\n\nWhen a new person joins a group, their value = Old Average + (New Total Members × Increase in Average).",
+    "solution": "Solution\n\nShortcut Trick\nAge of excluded person = Initial Average + (Remaining members × Drop in average)\n⇒ Age of teacher = 18 + (40 × 0.5)\n⇒ Age of teacher = 18 + 20\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.\n\nAlternate Method\nGiven:\nNumber of students = 40\nTotal persons initially (40 students + 1 teacher) = 41\nInitial average age = 18 years\nNew average age (teacher excluded) = 18 - 0.5 = 17.5 years\n\nFormula Used:\nTotal Age = Average Age × Number of Persons\nAge of Teacher = (Total age of 41 persons) - (Total age of 40 students)\n\nCalculations:\n⇒ Total age initially = 41 × 18 = 738 years\n⇒ Total age after excluding teacher = 40 × 17.5 = 700 years\n⇒ Age of teacher = 738 - 700\n⇒ Age of teacher = 38 years\n∴ The correct answer is 38 years.\n\nAdditional Information\nWeighted Average\n\nWhen two or more groups with different averages are combined, the combined average is calculated as (n1A1 + n2A2) ÷ (n1 + n2).\n\nConcept of Replacement\n\nWhen a person is replaced by a new person, the change in total value is: New Value - Old Value = Total Members × Change in Average.\n\nConcept of Inclusion\n\nWhen a new person joins a group, their value = Old Average + (New Total Members × Increase in Average).",
     "topic": "Average",
     "subtopic": "Inclusion and Exclusion of Group Members",
     "conceptTested": "Total Age = Average Age × Number of Persons; Age of excluded member = Initial Total - New Total.",
@@ -780,7 +940,9 @@
       "topic": "Average",
       "subtopic": "Inclusion and Exclusion of Group Members",
       "conceptTested": "Total Age = Average Age × Number of Persons; Age of excluded member = Initial Total - New Total."
-    }
+    },
+    "question": "The average age of a class of 40 students and a teacher reduces by 0.5 years, if we exclude the teacher. If the initial average age is 18 years, then what is the age of the teacher?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -796,12 +958,16 @@
     "avgTime": "00:15",
     "questionText": "The ratio of the outer and the inner circumference of a circular path is 17 ∶ 15. If path is 40 metres wide, then what is the radius of the inner circle?",
     "options": {
+      "a": "280 metres",
+      "b": "340 metres",
+      "c": "360 metres",
+      "d": "300 metres",
       "A": "280 metres",
       "B": "340 metres",
       "C": "360 metres",
       "D": "300 metres"
     },
-    "solution": "Solution\n\nShortcut Trick\nThe ratio of circumferences of two circles is identical to the ratio of their radii.\n\nRatio of outer radius\n(R) to inner radius (r) = 17 ∶ 15\nWidth of the path in ratio units = 17 − 15 = 2 units.\nGiven width = 40 metres, so 2 units = 40 metres ⇒ 1 unit = 20 metres.\nInner radius = 15 units = 15 × 20 = 300 metres.\n∴ The correct answer is 300 metres.\n\nAlternate Method\nGiven:\nRatio of outer and inner circumference = 17 ∶ 15\nWidth of the path = 40 metres\n\nFormula Used:\nCircumference of a circle = 2×π×r\nWidth of circular path = R − r\n\nCalculations:\n⇒ Let the outer radius be R and the inner radius be r.\n⇒ Ratio of circumferences = (2×π×R) ÷ (2×π×r)\n⇒ R / r = 17 / 15\n⇒ Let R = 17x and r = 15x\n⇒ Width of the circular path = Outer Radius − Inner Radius\n⇒ 17x − 15x = 40\n⇒ 2x = 40\n⇒ x = 20\n⇒ Inner radius (r) = 15x = 15 × 20 = 300 metres\n∴ The correct answer is 300 metres.\n\nAdditional Information\nArea of a Circular Path\n\nThe total area located strictly between two concentric circles is given by Area = π×(R2 − r2), where R and r are the respective outer and inner radii.\n\nLength of an Arc\n\nAn arc is a fraction of the full circumference. The length is determined by the central angle θ: (θ ÷ 360) × 2πr.\n\nArea of a Sector\n\nThe region bounded by two radii and an adjoining arc is called a sector. Its area is: (θ ÷ 360) × πr2.",
+    "solution": "Solution\n\nShortcut Trick\nThe ratio of circumferences of two circles is identical to the ratio of their radii.\n\nRatio of outer radius\n(R) to inner radius (r) = 17 ∶ 15\nWidth of the path in ratio units = 17 - 15 = 2 units.\nGiven width = 40 metres, so 2 units = 40 metres ⇒ 1 unit = 20 metres.\nInner radius = 15 units = 15 × 20 = 300 metres.\n∴ The correct answer is 300 metres.\n\nAlternate Method\nGiven:\nRatio of outer and inner circumference = 17 ∶ 15\nWidth of the path = 40 metres\n\nFormula Used:\nCircumference of a circle = 2×π×r\nWidth of circular path = R - r\n\nCalculations:\n⇒ Let the outer radius be R and the inner radius be r.\n⇒ Ratio of circumferences = (2×π×R) ÷ (2×π×r)\n⇒ R / r = 17 / 15\n⇒ Let R = 17x and r = 15x\n⇒ Width of the circular path = Outer Radius - Inner Radius\n⇒ 17x - 15x = 40\n⇒ 2x = 40\n⇒ x = 20\n⇒ Inner radius (r) = 15x = 15 × 20 = 300 metres\n∴ The correct answer is 300 metres.\n\nAdditional Information\nArea of a Circular Path\n\nThe total area located strictly between two concentric circles is given by Area = π×(R2 - r2), where R and r are the respective outer and inner radii.\n\nLength of an Arc\n\nAn arc is a fraction of the full circumference. The length is determined by the central angle θ: (θ ÷ 360) × 2πr.\n\nArea of a Sector\n\nThe region bounded by two radii and an adjoining arc is called a sector. Its area is: (θ ÷ 360) × πr2.",
     "topic": "Mensuration 2D",
     "subtopic": "Circles - Concentric Circles & Path",
     "conceptTested": "The ratio of circumferences of two concentric circles is equal to the ratio of their radii, and path width equals outer radius minus inner radius.",
@@ -809,7 +975,9 @@
       "topic": "Mensuration 2D",
       "subtopic": "Circles - Concentric Circles & Path",
       "conceptTested": "The ratio of circumferences of two concentric circles is equal to the ratio of their radii, and path width equals outer radius minus inner radius."
-    }
+    },
+    "question": "The ratio of the outer and the inner circumference of a circular path is 17 ∶ 15. If path is 40 metres wide, then what is the radius of the inner circle?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -825,12 +993,16 @@
     "avgTime": "00:13",
     "questionText": "In what ratio should rice costing Rs. 67.5 per kg be mixed with rice costing Rs. 60 per kg to get an average price of Rs. 64 per kg?",
     "options": {
+      "a": "8 ∶ 7",
+      "b": "5 ∶ 6",
+      "c": "6 ∶ 5",
+      "d": "7 ∶ 8",
       "A": "8 ∶ 7",
       "B": "5 ∶ 6",
       "C": "6 ∶ 5",
       "D": "7 ∶ 8"
     },
-    "solution": "Solution\n\nShortcut Trick\nBy using the direct alligation cross-multiplication rule:\n\nQuantity Ratio = (Mean Price − Cheaper Price) : (Dearer Price − Mean Price)\n⇒ Ratio = (64 − 60) : (67.5 − 64)\n⇒ Ratio = 4 : 3.5\n⇒ Ratio = 8 : 7\n∴ The correct answer is 8 : 7.\n\nAlternate Method\nGiven:\nPrice of first rice type = ₹67.5 per kg\nPrice of second rice type = ₹60 per kg\nAverage mean price = ₹64 per kg\n\nFormula Used:\nIf two types of items of price p1 and p2 are mixed to get an average mean price pm, the ratio of their quantities q1 : q2 is (pm − p2) : (p1 − pm).\n\nCalculations:\nLet the required ratio be x : y.\n⇒ Quantity ratio = (Mean Price − Price of Cheaper) : (Price of Dearer − Mean Price)\n⇒ x : y = (64 − 60) : (67.5 − 64)\n⇒ x : y = 4 : 3.5\n\nMultiply both sides by 2 to convert into integer ratio:\n\n⇒ x : y = 8 : 7\n∴ The correct answer is 8 : 7.\n\nAdditional Information\nAlligation Rule\n\nIt is a quick method to find the ratio in which two or more ingredients at given prices must be mixed to produce a mixture of a desired median price.\n\nWeighted Average Formula\n\nAverage Price = (q1 × p1 + q2 × p2) ÷ (q1 + q2)\n\nReplacement Method\n\nIf from a vessel containing volume V of pure liquid, volume x is removed and replaced n times, then Final Volume = V × (1 − x ÷ V)n.",
+    "solution": "Solution\n\nShortcut Trick\nBy using the direct alligation cross-multiplication rule:\n\nQuantity Ratio = (Mean Price - Cheaper Price) : (Dearer Price - Mean Price)\n⇒ Ratio = (64 - 60) : (67.5 - 64)\n⇒ Ratio = 4 : 3.5\n⇒ Ratio = 8 : 7\n∴ The correct answer is 8 : 7.\n\nAlternate Method\nGiven:\nPrice of first rice type = ₹67.5 per kg\nPrice of second rice type = ₹60 per kg\nAverage mean price = ₹64 per kg\n\nFormula Used:\nIf two types of items of price p1 and p2 are mixed to get an average mean price pm, the ratio of their quantities q1 : q2 is (pm - p2) : (p1 - pm).\n\nCalculations:\nLet the required ratio be x : y.\n⇒ Quantity ratio = (Mean Price - Price of Cheaper) : (Price of Dearer - Mean Price)\n⇒ x : y = (64 - 60) : (67.5 - 64)\n⇒ x : y = 4 : 3.5\n\nMultiply both sides by 2 to convert into integer ratio:\n\n⇒ x : y = 8 : 7\n∴ The correct answer is 8 : 7.\n\nAdditional Information\nAlligation Rule\n\nIt is a quick method to find the ratio in which two or more ingredients at given prices must be mixed to produce a mixture of a desired median price.\n\nWeighted Average Formula\n\nAverage Price = (q1 × p1 + q2 × p2) ÷ (q1 + q2)\n\nReplacement Method\n\nIf from a vessel containing volume V of pure liquid, volume x is removed and replaced n times, then Final Volume = V × (1 - x ÷ V)n.",
     "topic": "Mixture & Alligation",
     "subtopic": "Price Mixing & Alligation Rule",
     "conceptTested": "Alligation rule: Ratio of quantities of two ingredients = (Mean Price - Cheaper Price) : (Dearer Price - Mean Price).",
@@ -838,7 +1010,9 @@
       "topic": "Mixture & Alligation",
       "subtopic": "Price Mixing & Alligation Rule",
       "conceptTested": "Alligation rule: Ratio of quantities of two ingredients = (Mean Price - Cheaper Price) : (Dearer Price - Mean Price)."
-    }
+    },
+    "question": "In what ratio should rice costing Rs. 67.5 per kg be mixed with rice costing Rs. 60 per kg to get an average price of Rs. 64 per kg?",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -854,6 +1028,10 @@
     "avgTime": "00:23",
     "questionText": "If the average of a number, 50% of that number, and 25% of the same number is 280, then find the number.",
     "options": {
+      "a": "280",
+      "b": "480",
+      "c": "360",
+      "d": "None of the above",
       "A": "280",
       "B": "480",
       "C": "360",
@@ -867,7 +1045,9 @@
       "topic": "Average",
       "subtopic": "Percentage-based Average Calculation",
       "conceptTested": "Arithmetic Mean = Sum of observations divided by the total number of observations."
-    }
+    },
+    "question": "If the average of a number, 50% of that number, and 25% of the same number is 280, then find the number.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -883,6 +1063,10 @@
     "avgTime": "00:19",
     "questionText": "Three friends A, B, C invested in a business in the ratio of 3 : 2 : 6. After 6 months C withdraw half his capital. If the total profit earned for the year is Rs. 53010, then profit made by A is (in Rs.):",
     "options": {
+      "a": "16740",
+      "b": "19740",
+      "c": "17740",
+      "d": "18740",
       "A": "16740",
       "B": "19740",
       "C": "17740",
@@ -896,7 +1080,9 @@
       "topic": "Partnership",
       "subtopic": "Capital Adjustments Mid-Year",
       "conceptTested": "Profit sharing ratio is directly proportional to the product of capital invested and the respective time duration of investment (C1T1 : C2T2)."
-    }
+    },
+    "question": "Three friends A, B, C invested in a business in the ratio of 3 : 2 : 6. After 6 months C withdraw half his capital. If the total profit earned for the year is Rs. 53010, then profit made by A is (in Rs.):",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -912,12 +1098,16 @@
     "avgTime": "00:10",
     "questionText": "The average salary of the entire staff in an office is Rs. 130 per month. The average salary of officers is Rs. 450 and that of non-officers is Rs. 120. If the number of officers is 15, then find the number of non-officers in the office?",
     "options": {
+      "a": "450",
+      "b": "460",
+      "c": "470",
+      "d": "480",
       "A": "450",
       "B": "460",
       "C": "470",
       "D": "480"
     },
-    "solution": "Solution\n\nShortcut Trick\nUsing the method of Alligation:\n\nRatio of Officers to Non-officers = (130 − 120) : (450 − 130)\nRatio = 10 : 320 = 1 : 32\nGiven 1 ratio unit = 15 officers, then 32 ratio units = 15 × 32 = 480 non-officers.\n∴ The correct answer is 480 non-officers.\n\nAlternate Method\nGiven:\nAverage salary of overall staff = Rs. 130\nAverage salary of officers = Rs. 450\nAverage salary of non-officers = Rs. 120\nNumber of officers = 15\n\nFormula Used:\nOverall Average = (Total salary of all staff) ÷ (Total number of staff)\nOfficers: 450\nNon-Off: 120\n130\n130 − 120 = 10\n450 − 130 = 320\nRatio → 10 : 320 = 1 : 32\n\nCalculations:\nLet the number of non-officers be x.\n⇒ Total salary of officers = 450 × 15 = 6750\n⇒ Total salary of non-officers = 120 × x = 120x\n⇒ Total staff members = 15 + x\n⇒ Overall Average = (6750 + 120x) ÷ (15 + x)\n⇒ 130 = (6750 + 120x) ÷ (15 + x)\n⇒ 130 × (15 + x) = 6750 + 120x\n⇒ 1950 + 130x = 6750 + 120x\n⇒ 130x − 120x = 6750 − 1950\n⇒ 10x = 4800\n⇒ x = 480\n∴ The correct answer is 480 non-officers.\n\nAdditional Information\nWeighted Average\n\nUsed when calculating the combined average of groups with different sizes. Formula: Aw = (n1A1 + n2A2) ÷ (n1 + n2).\n\nRule of Alligation\n\nA rapid visual method to find the ratio in which two groups with different averages are mixed to yield a desired overall combined average.\n\nAverage & Net Deviation\n\nThe sum of the net deviations of all individual values from their mean is always equal to zero, which is a useful property to solve unknown value problems quickly.",
+    "solution": "Solution\n\nShortcut Trick\nUsing the method of Alligation:\n\nRatio of Officers to Non-officers = (130 - 120) : (450 - 130)\nRatio = 10 : 320 = 1 : 32\nGiven 1 ratio unit = 15 officers, then 32 ratio units = 15 × 32 = 480 non-officers.\n∴ The correct answer is 480 non-officers.\n\nAlternate Method\nGiven:\nAverage salary of overall staff = Rs. 130\nAverage salary of officers = Rs. 450\nAverage salary of non-officers = Rs. 120\nNumber of officers = 15\n\nFormula Used:\nOverall Average = (Total salary of all staff) ÷ (Total number of staff)\nOfficers: 450\nNon-Off: 120\n130\n130 - 120 = 10\n450 - 130 = 320\nRatio → 10 : 320 = 1 : 32\n\nCalculations:\nLet the number of non-officers be x.\n⇒ Total salary of officers = 450 × 15 = 6750\n⇒ Total salary of non-officers = 120 × x = 120x\n⇒ Total staff members = 15 + x\n⇒ Overall Average = (6750 + 120x) ÷ (15 + x)\n⇒ 130 = (6750 + 120x) ÷ (15 + x)\n⇒ 130 × (15 + x) = 6750 + 120x\n⇒ 1950 + 130x = 6750 + 120x\n⇒ 130x - 120x = 6750 - 1950\n⇒ 10x = 4800\n⇒ x = 480\n∴ The correct answer is 480 non-officers.\n\nAdditional Information\nWeighted Average\n\nUsed when calculating the combined average of groups with different sizes. Formula: Aw = (n1A1 + n2A2) ÷ (n1 + n2).\n\nRule of Alligation\n\nA rapid visual method to find the ratio in which two groups with different averages are mixed to yield a desired overall combined average.\n\nAverage & Net Deviation\n\nThe sum of the net deviations of all individual values from their mean is always equal to zero, which is a useful property to solve unknown value problems quickly.",
     "topic": "Average",
     "subtopic": "Weighted Average & Mixture Alligation",
     "conceptTested": "The rule of alligation enables finding the ratio of sizes of two component groups when individual averages and the combined overall average are known.",
@@ -925,7 +1115,9 @@
       "topic": "Average",
       "subtopic": "Weighted Average & Mixture Alligation",
       "conceptTested": "The rule of alligation enables finding the ratio of sizes of two component groups when individual averages and the combined overall average are known."
-    }
+    },
+    "question": "The average salary of the entire staff in an office is Rs. 130 per month. The average salary of officers is Rs. 450 and that of non-officers is Rs. 120. If the number of officers is 15, then find the number of non-officers in the office?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -939,14 +1131,18 @@
     "correctOption": "B",
     "userTime": "00:05",
     "avgTime": "00:11",
-    "questionText": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm²) of the cube with the hole. [Use π = 22/7]",
+    "questionText": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm2) of the cube with the hole. [Use π = 22/7]",
     "options": {
+      "a": "1484",
+      "b": "1407",
+      "c": "791",
+      "d": "945",
       "A": "1484",
       "B": "1407",
       "C": "791",
       "D": "945"
     },
-    "solution": "Solution\n\nShortcut Trick\nWhen a hole is drilled completely through a solid, the net Total Surface Area (TSA) is:\n\nNet TSA = (TSA of Cube) − (2 × Base Area of Hole) + (Curved Surface Area of Hole)\nNet TSA = 6a2 − 2πr2 + 2πrh\nNet TSA = 6 × 142 − 2 × (22/7) × (3.5)2 + 2 × (22/7) × 3.5 × 14\nNet TSA = 1176 − 77 + 308 = 1407 cm2\n∴ The correct answer is 1407 cm2.\n\nAlternate Method\nGiven:\n⇒ Edge of the solid cube (a) = 14 cm\n⇒ Radius of the cylindrical hole (r) = 3.5 cm\n⇒ Height of the cylindrical hole (h) = Edge of cube = 14 cm\n\nFormula Used:\n⇒ Total Surface Area = (TSA of solid cube) − (2 × Area of circular bases of hole) + (CSA of cylindrical hole)\n⇒ TSA = 6a2 − 2πr2 + 2πrh\n\nCalculations:\n⇒ TSA of cube = 6 × 14 × 14 = 6 × 196 = 1176 cm2\n⇒ Area of 2 circular bases = 2 × (22/7) × 3.5 × 3.5 = 77 cm2\n⇒ CSA of cylindrical hole = 2 × (22/7) × 3.5 × 14 = 308 cm2\n⇒ Total Surface Area = 1176 − 77 + 308 = 1407 cm2\n∴ The correct answer is 1407 cm2.\n\nAdditional Information\nEffect of Drilling a Hole on Surface Area\n\nWhen a hole is drilled completely through a solid, the flat surface area corresponding to the base cuts is lost, but the newly created inner curved surface is exposed and must be added to the total area.\n\nImportant Formulas for a Cube\n\nVolume = a3 | Total Surface Area = 6a2 | Length of Body Diagonal = a√3.\n\nImportant Formulas for a Cylinder\n\nVolume = πr2h | Curved Surface Area = 2πrh | Total Surface Area = 2πr(r + h).",
+    "solution": "Solution\n\nShortcut Trick\nWhen a hole is drilled completely through a solid, the net Total Surface Area (TSA) is:\n\nNet TSA = (TSA of Cube) - (2 × Base Area of Hole) + (Curved Surface Area of Hole)\nNet TSA = 6a2 - 2πr2 + 2πrh\nNet TSA = 6 × 142 - 2 × (22/7) × (3.5)² + 2 × (22/7) × 3.5 × 14\nNet TSA = 1176 - 77 + 308 = 1407 cm2\n∴ The correct answer is 1407 cm2.\n\nAlternate Method\nGiven:\n⇒ Edge of the solid cube (a) = 14 cm\n⇒ Radius of the cylindrical hole (r) = 3.5 cm\n⇒ Height of the cylindrical hole (h) = Edge of cube = 14 cm\n\nFormula Used:\n⇒ Total Surface Area = (TSA of solid cube) - (2 × Area of circular bases of hole) + (CSA of cylindrical hole)\n⇒ TSA = 6a2 - 2πr2 + 2πrh\n\nCalculations:\n⇒ TSA of cube = 6 × 14 × 14 = 6 × 196 = 1176 cm2\n⇒ Area of 2 circular bases = 2 × (22/7) × 3.5 × 3.5 = 77 cm2\n⇒ CSA of cylindrical hole = 2 × (22/7) × 3.5 × 14 = 308 cm2\n⇒ Total Surface Area = 1176 - 77 + 308 = 1407 cm2\n∴ The correct answer is 1407 cm2.\n\nAdditional Information\nEffect of Drilling a Hole on Surface Area\n\nWhen a hole is drilled completely through a solid, the flat surface area corresponding to the base cuts is lost, but the newly created inner curved surface is exposed and must be added to the total area.\n\nImportant Formulas for a Cube\n\nVolume = a3 | Total Surface Area = 6a2 | Length of Body Diagonal = a√3.\n\nImportant Formulas for a Cylinder\n\nVolume = πr2h | Curved Surface Area = 2πrh | Total Surface Area = 2πr(r + h).",
     "topic": "Mensuration 3D",
     "subtopic": "Cylinder & Cube Combinations",
     "conceptTested": "Total surface area of a solid combined shape is the sum of external faces minus overlapping flat bases plus the newly exposed curved surface area of the interior cavity.",
@@ -954,7 +1150,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Cylinder & Cube Combinations",
       "conceptTested": "Total surface area of a solid combined shape is the sum of external faces minus overlapping flat bases plus the newly exposed curved surface area of the interior cavity."
-    }
+    },
+    "question": "A cylindrical hole with the radius of its base given as 3.5 cm is made in a solid cube each of whose edge is 14 cm. Find the total surface area (in cm2) of the cube with the hole. [Use π = 22/7]",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -970,6 +1168,10 @@
     "avgTime": "01:25",
     "questionText": "Consider the following sentences:\n(A) India must take its laws on waste seriously to stop microplastics pollution.\n(B) India must take its laws on waste serious to stop microplastics pollution.\n(C) India must take seriously its laws on waste to stop microplastics pollution.\n(D) The laws must be took seriously to stop microplastics pollution.\nWhich of the above sentences is/are grammatically CORRECT?",
     "options": {
+      "a": "(A) and (D)",
+      "b": "Only (A)",
+      "c": "Only (B)",
+      "d": "(C) and (D)",
       "A": "(A) and (D)",
       "B": "Only (A)",
       "C": "Only (B)",
@@ -983,7 +1185,9 @@
       "topic": "Spotting Errors",
       "subtopic": "Adverb vs Adjective & Transitive Verbs",
       "conceptTested": "Adverbs qualify verbs, whereas adjectives qualify nouns. Additionally, an adverb cannot be placed directly between a transitive verb and its direct object."
-    }
+    },
+    "question": "Consider the following sentences:\n(A) India must take its laws on waste seriously to stop microplastics pollution.\n(B) India must take its laws on waste serious to stop microplastics pollution.\n(C) India must take seriously its laws on waste to stop microplastics pollution.\n(D) The laws must be took seriously to stop microplastics pollution.\nWhich of the above sentences is/are grammatically CORRECT?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -997,14 +1201,18 @@
     "correctOption": "D",
     "userTime": "00:26",
     "avgTime": "00:46",
-    "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).\nB) That unduly restrictive state regulation of abortion is unconstitutional.\nC) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\nD) In a majority opinion written by Justice Harry A. Blackmun.",
+    "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7-2).\nB) That unduly restrictive state regulation of abortion is unconstitutional.\nC) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\nD) In a majority opinion written by Justice Harry A. Blackmun.",
     "options": {
+      "a": "CDAB",
+      "b": "ADBC",
+      "c": "ACBD",
+      "d": "ABDC",
       "A": "CDAB",
       "B": "ADBC",
       "C": "ACBD",
       "D": "ABDC"
     },
-    "solution": "Solution\n\nThe correct answer is \"ABDC\"\n\nKey Points\nLet's look at the correct sequence of the given passage.\nStatement A is the opening sentence of the paragraph as it introduces us to the theme of the passage. The theme of the passage is the Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2).\nStatement B  is the second sentence of the passage as it mentions that the legal case was about the unduly restrictive state regulation of abortion which was considered unconstitutional.\nStatement  D is the third sentence of the passage as it mentions the majority opinion of the court by Justice Harry A. Blackmun.\nStatement C is the last sentence of the passage as it states the opinion of the court on the legal matter which is that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\n\n​Hence, the correct sequence is \"ABDC\"\n\nThe complete passage is: A) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7–2). B) That unduly restrictive state regulation of abortion is unconstitutional. D) In a majority opinion written by Justice Harry A. Blackmun. C) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.",
+    "solution": "Solution\n\nThe correct answer is \"ABDC\"\n\nKey Points\nLet's look at the correct sequence of the given passage.\nStatement A is the opening sentence of the paragraph as it introduces us to the theme of the passage. The theme of the passage is the Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7-2).\nStatement B  is the second sentence of the passage as it mentions that the legal case was about the unduly restrictive state regulation of abortion which was considered unconstitutional.\nStatement  D is the third sentence of the passage as it mentions the majority opinion of the court by Justice Harry A. Blackmun.\nStatement C is the last sentence of the passage as it states the opinion of the court on the legal matter which is that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\n\n​Hence, the correct sequence is \"ABDC\"\n\nThe complete passage is: A) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7-2). B) That unduly restrictive state regulation of abortion is unconstitutional. D) In a majority opinion written by Justice Harry A. Blackmun. C) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.",
     "topic": "Para Jumbles",
     "subtopic": "Sentence Rearrangement (PQRS)",
     "conceptTested": "Cohesion and logical flow require identifying the introductory subject, modifying relative clauses, and concluding statements in legal or historical narratives.",
@@ -1012,7 +1220,9 @@
       "topic": "Para Jumbles",
       "subtopic": "Sentence Rearrangement (PQRS)",
       "conceptTested": "Cohesion and logical flow require identifying the introductory subject, modifying relative clauses, and concluding statements in legal or historical narratives."
-    }
+    },
+    "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA) Roe v. Wade, legal case in which the U.S. Supreme Court on January 22, 1973, ruled (7-2).\nB) That unduly restrictive state regulation of abortion is unconstitutional.\nC) The Court held that a set of Texas statutes criminalizing abortion in most instances violated a woman’s constitutional right of privacy.\nD) In a majority opinion written by Justice Harry A. Blackmun.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1028,6 +1238,10 @@
     "avgTime": "00:23",
     "questionText": "Choose the one which is closest to the opposite in meaning of the underlined word.\nThe club meets on the last Thursday of every month in a dilapidated palace.",
     "options": {
+      "a": "Neglected",
+      "b": "Regenerated",
+      "c": "Furnished",
+      "d": "Renovated",
       "A": "Neglected",
       "B": "Regenerated",
       "C": "Furnished",
@@ -1041,7 +1255,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms & Antonyms",
       "conceptTested": "Finding the antonym of an adjective describing physical state or condition."
-    }
+    },
+    "question": "Choose the one which is closest to the opposite in meaning of the underlined word.\nThe club meets on the last Thursday of every month in a dilapidated palace.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1057,6 +1273,10 @@
     "avgTime": "00:12",
     "questionText": "Select the most appropriate ANTONYM of the given word.\nCynical",
     "options": {
+      "a": "Negligent",
+      "b": "Silent",
+      "c": "Optimistic",
+      "d": "Usurper",
       "A": "Negligent",
       "B": "Silent",
       "C": "Optimistic",
@@ -1070,7 +1290,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms & Antonyms",
       "conceptTested": "Identifying antonyms of psychological or attitudinal descriptors."
-    }
+    },
+    "question": "Select the most appropriate ANTONYM of the given word.\nCynical",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1086,6 +1308,10 @@
     "avgTime": "00:27",
     "questionText": "Change the sentence from direct speech to indirect speech.\nTarun says to the manager, \"Representatives of the member states will be meeting next week.\"",
     "options": {
+      "a": "Tarun tells the manager that representatives of the member states will be meeting next week.",
+      "b": "Tarun tells the manager that representatives of the member states would be meeting next week.",
+      "c": "Tarun tells the manager that representatives of the member states are going to meet next week.",
+      "d": "Tarun tells the manager that representatives of the member states meet next week.",
       "A": "Tarun tells the manager that representatives of the member states will be meeting next week.",
       "B": "Tarun tells the manager that representatives of the member states would be meeting next week.",
       "C": "Tarun tells the manager that representatives of the member states are going to meet next week.",
@@ -1099,7 +1325,9 @@
       "topic": "Direct & Indirect Speech",
       "subtopic": "Direct & Indirect Speech (Narration)",
       "conceptTested": "Reporting speech tense retention when the reporting verb is in the present tense ('says to' becomes 'tells')."
-    }
+    },
+    "question": "Change the sentence from direct speech to indirect speech.\nTarun says to the manager, \"Representatives of the member states will be meeting next week.\"",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1115,6 +1343,10 @@
     "avgTime": "00:37",
     "questionText": "Select the sentence with no spelling errors.",
     "options": {
+      "a": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
+      "b": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
+      "c": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
+      "d": "Police who did not understand the orthodox methods of the Black Hood suspected him of numerous crimes.",
       "A": "Police who did not understand the orthodox methods of the Black Hood suspected him of numeruos crimes.",
       "B": "Police who did not understand the urthodox methods of the Black Hood suspected him of numerous crimes.",
       "C": "Police who did not understand the orthodox methuds of the Black Hood suspected him of numerous crimes.",
@@ -1128,7 +1360,9 @@
       "topic": "Spelling Errors",
       "subtopic": "Spelling Errors",
       "conceptTested": "Identification of standard English spelling patterns (orthodox, numerous)."
-    }
+    },
+    "question": "Select the sentence with no spelling errors.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1144,6 +1378,10 @@
     "avgTime": "01:03",
     "questionText": "According to the passage, what methods did ancient civilizations, such as the Egyptians and the Inca, use to accumulate and utilize phosphorus for agriculture?",
     "options": {
+      "a": "They exclusively mined phosphate rocks using advanced machinery.",
+      "b": "They imported large quantities of chemical fertilizers from neighbouring empires.",
+      "c": "They synthesized superphosphate using acid treatments.",
+      "d": "They relied on river flooding, seabird guano collection, and systems to trap phosphorus from natural sources.",
       "A": "They exclusively mined phosphate rocks using advanced machinery.",
       "B": "They imported large quantities of chemical fertilizers from neighbouring empires.",
       "C": "They synthesized superphosphate using acid treatments.",
@@ -1157,7 +1395,9 @@
       "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Comprehension of passage details regarding ancient agricultural practices and natural fertilizer sources."
-    }
+    },
+    "question": "According to the passage, what methods did ancient civilizations, such as the Egyptians and the Inca, use to accumulate and utilize phosphorus for agriculture?",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1173,6 +1413,10 @@
     "avgTime": "00:19",
     "questionText": "How does the author’s tone shift between the description of early phosphorus use and the emergence of industrial phosphate mining, and what effect does this shift have on the reader’s perception of humanity’s relationship with the environment?",
     "options": {
+      "a": "The tone shifts from optimistic to indifferent, making the reader see environmental impact as negligible.",
+      "b": "The tone transitions from reverential and harmonious to critical and exploitative, prompting concern over humanity’s increasing detachment from natural cycles.",
+      "c": "The tone remains consistently celebratory, emphasizing technological progress and human ingenuity.",
+      "d": "The tone changes from nostalgic to scientific, encouraging readers to appreciate the complexity of phosphorus chemistry.",
       "A": "The tone shifts from optimistic to indifferent, making the reader see environmental impact as negligible.",
       "B": "The tone transitions from reverential and harmonious to critical and exploitative, prompting concern over humanity’s increasing detachment from natural cycles.",
       "C": "The tone remains consistently celebratory, emphasizing technological progress and human ingenuity.",
@@ -1186,7 +1430,9 @@
       "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Ability to analyze author's tone and its psychological effect on the reader in an argumentative passage"
-    }
+    },
+    "question": "How does the author’s tone shift between the description of early phosphorus use and the emergence of industrial phosphate mining, and what effect does this shift have on the reader’s perception of humanity’s relationship with the environment?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1202,6 +1448,10 @@
     "avgTime": "00:21",
     "questionText": "Based on the passage, what can be inferred about the consequences of phosphorus extraction practices on both human societies and the natural environment during the transition from traditional to industrial agriculture?",
     "options": {
+      "a": "Phosphorus extraction practices led to immediate and universal increases in crop yields with no negative side effects.",
+      "b": "The shift to industrial extraction resulted in environmental degradation and reinforced exploitative attitudes toward land and people.",
+      "c": "Traditional societies suffered from constant phosphorus shortages, causing frequent famines.",
+      "d": "The transition to industrial methods had little impact on society or the environment, as phosphorus remained rare.",
       "A": "Phosphorus extraction practices led to immediate and universal increases in crop yields with no negative side effects.",
       "B": "The shift to industrial extraction resulted in environmental degradation and reinforced exploitative attitudes toward land and people.",
       "C": "Traditional societies suffered from constant phosphorus shortages, causing frequent famines.",
@@ -1215,7 +1465,9 @@
       "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Inference based on comparative historical analysis in a reading comprehension passage"
-    }
+    },
+    "question": "Based on the passage, what can be inferred about the consequences of phosphorus extraction practices on both human societies and the natural environment during the transition from traditional to industrial agriculture?",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1231,6 +1483,10 @@
     "avgTime": "00:14",
     "questionText": "Choose the correct one-word substitute for:\n‘To bribe or otherwise induce someone to commit an unlawful act, such as perjury’.",
     "options": {
+      "a": "Subpoena",
+      "b": "Subjugate",
+      "c": "Suborn",
+      "d": "Substantiate",
       "A": "Subpoena",
       "B": "Subjugate",
       "C": "Suborn",
@@ -1244,7 +1500,9 @@
       "topic": "One Word Substitution",
       "subtopic": "One Word Substitution",
       "conceptTested": "Vocabulary substitution for specific unlawful actions and inducement"
-    }
+    },
+    "question": "Choose the correct one-word substitute for:\n‘To bribe or otherwise induce someone to commit an unlawful act, such as perjury’.",
+    "answer": "c"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1260,6 +1518,10 @@
     "avgTime": "00:14",
     "questionText": "Select the most appropriate synonym of the underlined word.\nThe bawdy humour of the play wasn’t to everyone’s taste.",
     "options": {
+      "a": "piecemeal",
+      "b": "ludicrous",
+      "c": "rowdy",
+      "d": "indecorous",
       "A": "piecemeal",
       "B": "ludicrous",
       "C": "rowdy",
@@ -1273,7 +1535,9 @@
       "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms & Antonyms",
       "conceptTested": "Identifying contextual synonyms for descriptive adjectives"
-    }
+    },
+    "question": "Select the most appropriate synonym of the underlined word.\nThe bawdy humour of the play wasn’t to everyone’s taste.",
+    "answer": "d"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1289,6 +1553,10 @@
     "avgTime": "00:52",
     "questionText": "Select the option that expresses the given sentence in direct speech.\nElisa ordered her brother to play outside and let her work in peace.",
     "options": {
+      "a": "Elisa said to her brother, “Play outside that let me do my work in peace.”",
+      "b": "Elisa said to her brother, “Play outside and let me work in peace.”",
+      "c": "Elisa said to her brother, “Play outside to let me do my work in peace.”",
+      "d": "Elisa said to her brother, “Play outside and let me do my work in peace.”",
       "A": "Elisa said to her brother, “Play outside that let me do my work in peace.”",
       "B": "Elisa said to her brother, “Play outside and let me work in peace.”",
       "C": "Elisa said to her brother, “Play outside to let me do my work in peace.”",
@@ -1302,7 +1570,9 @@
       "topic": "Direct & Indirect Speech",
       "subtopic": "Direct & Indirect Speech",
       "conceptTested": "Conversion of imperative/command sentences from reported speech to direct speech"
-    }
+    },
+    "question": "Select the option that expresses the given sentence in direct speech.\nElisa ordered her brother to play outside and let her work in peace.",
+    "answer": "b"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 1",
@@ -1318,12 +1588,16 @@
     "avgTime": "00:20",
     "questionText": "Select the most appropriate option to substitute the bracketed segment in the given sentence. If no substitution is required, select 'No substitution required'.\nGiraffe deaths have also increased because human populations [has grow and expand into] what used to be wild lands.",
     "options": {
+      "a": "has grown and expand into",
+      "b": "have grow and expanded",
+      "c": "have grown and expanded into",
+      "d": "No substitution required",
       "A": "has grown and expand into",
       "B": "have grow and expanded",
       "C": "have grown and expanded into",
       "D": "No substitution required"
     },
-    "solution": "Solution\nThe correct answer is Option 3.\nKey Points\nThe correct verb forms should be used to match the subject and tense of the sentence.\nThe subject \"human populations\" is plural, so the verb should be \"have\" instead of \"has.\"\nThe verbs \"grown\" and \"expanded\" should be in the past participle form to correctly complete the present perfect tense.\nThe phrase \"into what used to be wild lands\" should remain intact for clarity and meaning.\nTherefore, the correct answer is Option 3.\nCorrect Sentence: \"Giraffe deaths have also increased because human populations have grown and expanded into what used to be wild lands.\"\n\nAdditional Information\nOption 1: \"has grown and expand into\" – Incorrect as it uses singular \"has\" and mismatched verb forms.\nOption 2: \"have grow and expanded\" – Incorrect as it uses the base form \"grow\" instead of the past participle \"grown.\"\nOption 4: \"No substitution required\" – Incorrect as the original phrase has incorrect verb forms.",
+    "solution": "Solution\nThe correct answer is Option 3.\nKey Points\nThe correct verb forms should be used to match the subject and tense of the sentence.\nThe subject \"human populations\" is plural, so the verb should be \"have\" instead of \"has.\"\nThe verbs \"grown\" and \"expanded\" should be in the past participle form to correctly complete the present perfect tense.\nThe phrase \"into what used to be wild lands\" should remain intact for clarity and meaning.\nTherefore, the correct answer is Option 3.\nCorrect Sentence: \"Giraffe deaths have also increased because human populations have grown and expanded into what used to be wild lands.\"\n\nAdditional Information\nOption 1: \"has grown and expand into\" - Incorrect as it uses singular \"has\" and mismatched verb forms.\nOption 2: \"have grow and expanded\" - Incorrect as it uses the base form \"grow\" instead of the past participle \"grown.\"\nOption 4: \"No substitution required\" - Incorrect as the original phrase has incorrect verb forms.",
     "topic": "Sentence Improvement",
     "subtopic": "Subject-Verb Agreement and Tense Consistency",
     "conceptTested": "Plural subjects require plural auxiliary verbs (have), and compound verbs in present perfect tense must maintain consistent past participle forms (grown and expanded).",
@@ -1331,6 +1605,8 @@
       "topic": "Sentence Improvement",
       "subtopic": "Subject-Verb Agreement and Tense Consistency",
       "conceptTested": "Plural subjects require plural auxiliary verbs (have), and compound verbs in present perfect tense must maintain consistent past participle forms (grown and expanded)."
-    }
+    },
+    "question": "Select the most appropriate option to substitute the bracketed segment in the given sentence. If no substitution is required, select 'No substitution required'.\nGiraffe deaths have also increased because human populations [has grow and expand into] what used to be wild lands.",
+    "answer": "c"
   }
 ]
