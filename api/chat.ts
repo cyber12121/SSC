@@ -62,10 +62,13 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: 'Method Not Allowed. Use POST.' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  let rawApiKey = process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY || '';
+  // Strip surrounding quotes and whitespace if copied from .env file into Vercel UI
+  const apiKey = rawApiKey.replace(/^["']|["']$/g, '').trim();
+
   if (!apiKey || apiKey === 'your_gemini_api_key_here' || apiKey === 'MY_GEMINI_API_KEY') {
     return res.status(400).json({
-      error: 'GEMINI_API_KEY is not configured. Please set GEMINI_API_KEY in your .env or Vercel Environment Variables.'
+      error: 'GEMINI_API_KEY is not configured or empty. Please set GEMINI_API_KEY in your Vercel Project Settings > Environment Variables, and make sure to Redeploy.'
     });
   }
 
@@ -178,7 +181,8 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 `;
 
     const ai = new GoogleGenAI({ apiKey });
-    const modelName = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
+    let configuredModel = (process.env.GEMINI_MODEL || process.env.VITE_GEMINI_MODEL || '').trim().replace(/^["']|["']$/g, '');
+    const modelName = configuredModel || 'gemini-3.6-flash';
 
     const response = await ai.models.generateContent({
       model: modelName,

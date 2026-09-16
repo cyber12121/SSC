@@ -374,14 +374,14 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
 
   console.log(`[AI Processor] ${questions.length - toProcessIndices.length} questions already complete. Processing ${toProcessIndices.length} questions with Gemini AI for topic tagging, structure cleanup, and N/A answer resolution...`);
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = (process.env.GEMINI_API_KEY || '').replace(/^["']|["']$/g, '').trim();
   const questionsToProcess = toProcessIndices.map(i => questions[i]);
 
   if (!apiKey || apiKey === "your_gemini_api_key_here" || apiKey === "MY_GEMINI_API_KEY") {
     throw new Error("GEMINI_API_KEY is missing or unconfigured in D:\\My-Project\\CGL-APP\\.env. Please provide a valid Gemini API key.");
   }
 
-  const modelName = process.env.GEMINI_MODEL || "gemini-2.0-flash-lite";
+  const modelName = process.env.GEMINI_MODEL || "gemini-3.6-flash";
   console.log(`[AI Processor] Processing ${questionsToProcess.length} questions in mini-batches with Gemini (${modelName})...`);
 
   try {
