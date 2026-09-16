@@ -1235,7 +1235,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           totalQuestions: report.totalQuestions,
           correct: report.totalCorrect,
           wrong: report.totalWrong,
-          unattempted: report.unattempted,
+          unattempted: report.totalUnattempted ?? (report as any).unattempted ?? 0,
           slow: (report as any).totalSlow
         },
         questions: scopedQuestions
@@ -1260,9 +1260,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       const effectiveId = LEGACY_MOCK_ID_MAP[report.id] || report.id;
       // Load existing RCA classifications from localStorage if any
       let rcaMap: Record<string, any> = {};
+      let globalRcaMap: Record<string, any> = {};
       try {
         const savedRca = safeStorage.getItem(`cgl_rca_${report.id}`) || safeStorage.getItem(`cgl_rca_${effectiveId}`) || safeStorage.getItem(`cgl_rca_${report.title}`);
         if (savedRca) rcaMap = JSON.parse(savedRca);
+        const globalRaw = safeStorage.getItem('cgl_rca_global_store');
+        if (globalRaw) globalRcaMap = JSON.parse(globalRaw);
       } catch {}
 
       const formattedQuestions: Question[] = rawList.map((item, idx) => {
@@ -1325,7 +1328,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         const topicText = rawT ? normalizeTopicTitle(rawT) : 'General';
 
         const qId = item.id || `mock_q_${idx + 1}_${report.id}`;
-        const existingRca = item.rca || rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)];
+        const cleanText = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+        const existingRca = item.rca || rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)] || globalRcaMap[qId] || (cleanText ? globalRcaMap[cleanText] : undefined);
 
         const rawAvg = item.avgTime || item.avg_time || item.avgTimeSeconds;
         let parsedAvg = 45;

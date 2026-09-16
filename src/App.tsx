@@ -1170,11 +1170,12 @@ export default function App() {
     const scopedQuestions: AiFocusedQuestion[] = (questions || []).map((q, idx) => {
       let optionsMap: Record<string, string> | undefined = undefined;
       if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
+        const optAny = q.options as any;
         optionsMap = {
-          A: String(q.options.a || q.options['1'] || q.options.A || '').trim(),
-          B: String(q.options.b || q.options['2'] || q.options.B || '').trim(),
-          C: String(q.options.c || q.options['3'] || q.options.C || '').trim(),
-          D: String(q.options.d || q.options['4'] || q.options.D || '').trim(),
+          A: String(optAny.a || optAny['1'] || optAny.A || '').trim(),
+          B: String(optAny.b || optAny['2'] || optAny.B || '').trim(),
+          C: String(optAny.c || optAny['3'] || optAny.C || '').trim(),
+          D: String(optAny.d || optAny['4'] || optAny.D || '').trim(),
         };
       } else if (Array.isArray(q.options)) {
         optionsMap = {

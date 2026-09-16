@@ -82,12 +82,30 @@ export default async function handler(req: any, res: any) {
       parts: [{ text: String(m.text || m.content || '') }]
     }));
 
+    const startTime = Date.now();
     const latestUserMsg = messages[messages.length - 1]?.text || '';
     const { intent, matchedTopic, targetQNum, targetMock } = detectUserIntent(
       latestUserMsg,
       activeMockId,
       activeMockTitle
     );
+
+    console.log('\n' + '═'.repeat(65));
+    console.log('🤖 [TOMMY AI BACKEND] Received Prompt');
+    console.log(`💬 User Query      : "${latestUserMsg}"`);
+    console.log(`🎯 Detected Intent : ${intent}`);
+    if (targetMock) {
+      console.log(`📋 Matched Mock    : ${targetMock.title}`);
+      if (targetMock.targetSubject) console.log(`📚 Target Subject  : ${targetMock.targetSubject}`);
+      if (targetMock.targetStatus)  console.log(`🔍 Status Filter   : ${targetMock.targetStatus.toUpperCase()}`);
+      if (targetMock.targetQNum)    console.log(`🔢 Question Number : #${targetMock.targetQNum}`);
+    }
+    if (matchedTopic) {
+      console.log(`🏷️  Matched Topic   : [${matchedTopic.subject}] ${matchedTopic.topic} (${matchedTopic.totalErrors} errors)`);
+    }
+    if (focusedScope) {
+      console.log(`🎯 Focused Scope   : ${focusedScope.type?.toUpperCase()} - "${focusedScope.title}"`);
+    }
 
     // ── Build Scoped Focus Context (if user opened Tommy via an AI Chip) ──
     let scopeContext = '';
@@ -172,6 +190,10 @@ Solution: ${q.solution || 'No solution provided'}
       }
     }
 
+    const injectedChars = selectiveContext.length + scopeContext.length;
+    const approxTokens = Math.round(injectedChars / 4);
+    console.log(`📦 Context Injected: ${injectedChars > 0 ? `${injectedChars} chars (~${approxTokens} tokens)` : '0 extra tokens (Fast/Greeting mode)'}`);
+
     const fullSystemInstruction = `${SYSTEM_INSTRUCTION}
 ${scopeContext ? `\n${scopeContext}\n` : ''}
 ${selectiveContext ? `\n${selectiveContext}\n` : ''}
@@ -179,6 +201,9 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 
     const ai = new GoogleGenAI({ apiKey });
     const modelName = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
+
+    console.log(`⚡ Model           : ${modelName}`);
+    console.log(`⏳ Sending request to Gemini API...`);
 
     const response = await ai.models.generateContent({
       model: modelName,
@@ -189,10 +214,16 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
       }
     });
 
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
     const reply = response.text || 'I apologize, but I could not generate a response at this moment.';
+
+    console.log(`✅ Response Ready  : ${elapsed}s elapsed (${reply.length} chars)`);
+    console.log('═'.repeat(65) + '\n');
+
     return res.status(200).json({ reply });
   } catch (error: any) {
-    console.error('[Gemini Chat Error]:', error);
+    console.error('\n❌ [TOMMY BACKEND ERROR]:', error?.message || error);
+    console.log('═'.repeat(65) + '\n');
     return res.status(500).json({
       error: error.message || 'Failed to process chat with Gemini.'
     });
