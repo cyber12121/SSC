@@ -53,13 +53,17 @@ export function cleanQuestionText(text: string = ''): string {
   // 5. Reconstruct vertical scraped MathML / Testbook equations
   s = reconstructScrapedMath(s);
 
-  // 5b. Normalize plain-text unit exponents outside math blocks (e.g. cm^2 -> cm², m^3 -> m³)
+  // 5b. Normalize plain-text unit exponents outside math blocks (e.g. cm^2 -> cm², cm\n3 -> cm³, cm3 -> cm³, m^3 -> m³)
   // Only targets known measurement unit abbreviations to avoid corrupting algebraic variables
   s = s
+    .replace(/\b(cm|mm|km|sq\.?|cu\.?)\s*\n+\s*([23])\b/gi, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`)
+    .replace(/\b(m)\s*\n+\s*([23])\b/g, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`)
     .replace(/\b(cm|mm|km|sq\.?|cu\.?)\^2\b/g, '$1²')
     .replace(/\b(cm|mm|km|sq\.?|cu\.?)\^3\b/g, '$1³')
+    .replace(/\b(cm|mm|km)\s*([23])\b(?!\d)/gi, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`)
     .replace(/\b(m)\^2\b(?!\w)/g, 'm²')
-    .replace(/\b(m)\^3\b(?!\w)/g, 'm³');
+    .replace(/\b(m)\^3\b(?!\w)/g, 'm³')
+    .replace(/\b(m)\s*([23])\b(?!\d)/g, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`);
 
 
   s = s.replace(/([^\n])\s*(S[1-6]\s*:)/g, '$1\n$2');

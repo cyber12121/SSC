@@ -162,7 +162,7 @@
       "c": "5 ∶ 1",
       "d": "1 ∶ 1"
     },
-    "solution": "Solution\n\nShortcut Trick\nWe can solve this quickly by testing the given options.\n\nLet the two numbers be x and y. The given condition is (x + y)² = 4xy.\nTesting Option 4 (1 : 1) ⇒ (1 + 1)² = 22 = 4.\nAnd 4 × 1 × 1 = 4. Both sides are perfectly equal.\n\nNone of the other options will satisfy this condition.\n\n∴ The correct answer is 1 : 1.\n\nAlternate Method\nGiven:\nThe square of the sum of two numbers is equal to 4 times their product.\n\nLet the two numbers be x and y.\n\nFormula Used:\n(a + b)² = a² + b² + 2ab\n(a - b)² = a² + b² - 2ab\n\nCalculations:\n⇒ (x + y)² = 4xy\n⇒ x² + y² + 2xy = 4xy\n⇒ x² + y² + 2xy - 4xy = 0\n⇒ x² + y² - 2xy = 0\n⇒ (x - y)² = 0\n\nTaking the square root on both sides:\n\n⇒ x - y = 0\n⇒ x = y\n⇒ x / y = 1 / 1\n∴ The correct answer is 1 : 1.\n\nAdditional Information\nPerfect Square Identity\n\nThe expression (a - b)² is always greater than or equal to zero. Therefore, if (a - b)² = 0, the only possible solution in real numbers is a = b.\n\nDuplicate Ratio\n\nThe duplicate ratio of two numbers a and b is expressed as a² : b². It strictly represents the ratio of their squared values.\n\nComponendo and Dividendo Rule\n\nIf two ratios are strictly equal such that a / b = c / d, then according to the rule of componendo and dividendo, (a + b) / (a - b) = (c + d) / (c - d).",
+    "solution": "Solution\n\nShortcut Trick\nWe can solve this quickly by testing the given options.\n\nLet the two numbers be $x$ and $y$. The given condition is $(x + y)^2 = 4xy$.\nTesting Option 4 ($1 : 1$):\n$\\Rightarrow (1 + 1)^2 = 2^2 = 4$\nAnd $4 \\times 1 \\times 1 = 4$. Both sides are equal.\n\nNone of the other options satisfy this condition.\n∴ The correct answer is $1 : 1$.\n\nAlternate Method\nGiven:\nThe square of the sum of two numbers is equal to $4$ times their product.\nLet the two numbers be $x$ and $y$.\n\nFormula Used:\n$(a + b)^2 = a^2 + b^2 + 2ab$\n$(a - b)^2 = a^2 + b^2 - 2ab$\n\nCalculations:\n$\\Rightarrow (x + y)^2 = 4xy$\n$\\Rightarrow x^2 + y^2 + 2xy = 4xy$\n$\\Rightarrow x^2 + y^2 + 2xy - 4xy = 0$\n$\\Rightarrow x^2 + y^2 - 2xy = 0$\n$\\Rightarrow (x - y)^2 = 0$\n\nTaking the square root on both sides:\n$\\Rightarrow x - y = 0$\n$\\Rightarrow x = y$\n$\\Rightarrow \\frac{x}{y} = \\frac{1}{1}$\n$\\Rightarrow x : y = 1 : 1$\n\n∴ The correct answer is $1 : 1$.\n\nAdditional Information\nPerfect Square Identity:\nThe expression $(a - b)^2 \\ge 0$ for all real numbers. Thus $(a - b)^2 = 0 \\iff a = b$.\nDuplicate Ratio:\nThe duplicate ratio of two numbers $a$ and $b$ is $a^2 : b^2$.\nComponendo and Dividendo Rule:\nIf $\\frac{a}{b} = \\frac{c}{d}$, then $\\frac{a + b}{a - b} = \\frac{c + d}{c - d}$.",
     "mockId": "mock_1789628963551_9ntil",
     "testId": "mock_1789628963551_9ntil",
     "topic": "Algebra",
@@ -172,7 +172,9 @@
       "topic": "Algebra",
       "subtopic": "Algebraic Identities",
       "conceptTested": "Perfect square identity expansion and relation between sum and product of numbers ((a-b)² = 0 implies a = b)."
-    }
+    },
+    "question": "If the square of the sum of two numbers is equal to 4 times of their product, then the ratio of these numbers is:",
+    "answer": "d"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 9",
@@ -431,7 +433,7 @@
     "correctOption": "A",
     "userTime": "00:24",
     "avgTime": "00:14",
-    "questionText": "The sum of x^4 - xy + 2y^2 and -x^4 + xy + 2y^2 is",
+    "questionText": "The sum of $(x^4 - xy + 2y^2)$ and $(-x^4 + xy + 2y^2)$ is:",
     "options": {
       "A": "Monomial and polynomial in y",
       "B": "Binomial and Polynomial",
@@ -442,7 +444,7 @@
       "c": "Trinomial and polynomial",
       "d": "Monomial and polynomial in x"
     },
-    "solution": "Solution\n\nShortcut Trick\nAdding the given expressions directly:\n\n⇒ (x4 - xy + 2y²) + (-x4 + xy + 2y²) = 4y²\n\nThe result is a single term with only the variable y.\n\nThus, it is a monomial and a polynomial in y.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAlternate Method\nGiven:\nFirst expression: x4 - xy + 2y²\nSecond expression: -x4 + xy + 2y²\n\nCalculations:\nSumming both the expressions, we get:\n\n⇒ (x4 - xy + 2y²) + (-x4 + xy + 2y²)\n\nGrouping the like terms together:\n\n⇒ (x4 - x4) + (-xy + xy) + (2y² + 2y²)\n⇒ 0 + 0 + 4y²\n⇒ 4y²\n\nA monomial is an algebraic expression consisting of one term.\n\nSince 4y² contains only a single term and has only the variable y, it is a monomial and a polynomial in y.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAdditional Information\nMonomial\n\nA polynomial with exactly one non - zero term is called a monomial. Example: 3x, 5y².\n\nBinomial\n\nA polynomial with exactly two non - zero terms is called a binomial. Example: x + 2, y² - 3.\n\nTrinomial\n\nA polynomial with exactly three non - zero terms is called a trinomial. Example: x² + 2x + 1.\n\nPolynomial in one variable\n\nAn algebraic expression consisting of variables with non - negative integer exponents and involving only one variable. Example: 4y² + y - 2.",
+    "solution": "Solution\n\nShortcut Trick\nAdding the given expressions directly:\n$\\Rightarrow (x^4 - xy + 2y^2) + (-x^4 + xy + 2y^2) = 4y^2$\n\nThe result is a single term with only the variable $y$.\nThus, it is a monomial and a polynomial in $y$.\n∴ The correct answer is Monomial and polynomial in y.\n\nAlternate Method\nGiven:\nFirst expression: $x^4 - xy + 2y^2$\nSecond expression: $-x^4 + xy + 2y^2$\n\nCalculations:\nSumming both expressions:\n$\\Rightarrow (x^4 - xy + 2y^2) + (-x^4 + xy + 2y^2)$\n\nGrouping like terms together:\n$\\Rightarrow (x^4 - x^4) + (-xy + xy) + (2y^2 + 2y^2)$\n$\\Rightarrow 0 + 0 + 4y^2 = 4y^2$\n\nA monomial is an algebraic expression consisting of one term.\nSince $4y^2$ contains only a single term and has only the variable $y$, it is a monomial and a polynomial in $y$.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAdditional Information\nMonomial: A polynomial with exactly one non-zero term (e.g., $3x$, $5y^2$).\nBinomial: A polynomial with exactly two non-zero terms (e.g., $x + 2$, $y^2 - 3$).\nTrinomial: A polynomial with exactly three non-zero terms (e.g., $x^2 + 2x + 1$).\nPolynomial in one variable: An algebraic expression consisting of variables with non-negative integer exponents and involving only one variable (e.g., $4y^2 + y - 2$).",
     "mockId": "mock_1789628963551_9ntil",
     "testId": "mock_1789628963551_9ntil",
     "topic": "Algebra",
@@ -452,7 +454,9 @@
       "topic": "Algebra",
       "subtopic": "Polynomials and Degree",
       "conceptTested": "Classification of algebraic expressions into monomials, binomials, trinomials, and polynomials based on terms and variables."
-    }
+    },
+    "question": "The sum of $(x^4 - xy + 2y^2)$ and $(-x^4 + xy + 2y^2)$ is:",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 9",

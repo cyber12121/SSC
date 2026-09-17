@@ -151,7 +151,7 @@
     "correctOption": "C",
     "userTime": "00:10",
     "avgTime": "00:25",
-    "questionText": "An annular road is about to build on the circular park. The outer radius of the circular park √65 m and the inner radius of the circular park is 4 m. If the speed of the construction is 4.4 m^2 per hour. Find the time taken by the construction company to complete the task.",
+    "questionText": "An annular road is about to build on the circular park. The outer radius of the circular park is $\\sqrt{65}\\text{ m}$ and the inner radius of the circular park is $4\\text{ m}$. If the speed of the construction is $4.4\\text{ m}^2/\\text{hour}$, find the time taken by the construction company to complete the task.",
     "options": {
       "A": "45 hours",
       "B": "55 hours",
@@ -162,7 +162,7 @@
       "c": "35 hours",
       "d": "25 hours"
     },
-    "solution": "Solution\n\nShortcut Trick\nArea of the annular road = π × (R² - r²)\n⇒ Area = (22 ÷ 7) × (65 - 16) = 154 m²\nTime taken = Total Area ÷ Speed\n⇒ Time = 154 ÷ 4.4 = 35 hours\n∴ The correct answer is 35 hours.\n\nAlternate Method\nGiven:\nOuter radius of the park (R) = √65 m\nInner radius of the park (r) = 4 m\nSpeed of construction = 4.4 m²/hour\n\nFormula Used:\nArea of annular ring = π(R² - r²)\n\nCalculations:\n⇒ Area = π × (R² - r²)\n⇒ Area = (22 ÷ 7) × ((√65)2 - 42)\n⇒ Area = (22 ÷ 7) × (65 - 16)\n⇒ Area = (22 ÷ 7) × 49 = 154 m²\n⇒ Time taken = Total Area ÷ Speed\n⇒ Time taken = 154 ÷ 4.4\n⇒ Time taken = 1540 ÷ 44 = 35 hours\n∴ The correct answer is 35 hours.\n\nAdditional Information\nArea of a Circle\n\nThe total region enclosed by a circle is computed by πr², where r is the radius.\n\nArea of an Annulus (Circular Path)\n\nFor a circular track or path with an outer radius R and an inner radius r, the bounded area is calculated as π(R² - r²).\n\nCircumference of a Circle\n\nThe total boundary length of a circle is equal to 2πr or πd, where d represents the overall diameter.",
+    "solution": "Solution\n\nShortcut Trick\nArea of the annular road $= \\pi(R^2 - r^2)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times \\left((\\sqrt{65})^2 - 4^2\\right) = \\frac{22}{7} \\times (65 - 16) = \\frac{22}{7} \\times 49 = 154\\text{ m}^2$\nTime taken $= \\frac{\\text{Total Area}}{\\text{Speed}} = \\frac{154}{4.4} = 35\\text{ hours}$\n∴ The correct answer is 35 hours.\n\nAlternate Method\nGiven:\nOuter radius of the park $(R) = \\sqrt{65}\\text{ m}$\nInner radius of the park $(r) = 4\\text{ m}$\nSpeed of construction $= 4.4\\text{ m}^2/\\text{hour}$\n\nFormula Used:\nArea of annular ring $= \\pi(R^2 - r^2)$\n\nCalculations:\n$\\Rightarrow \\text{Area} = \\pi(R^2 - r^2)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times \\left((\\sqrt{65})^2 - 4^2\\right)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times (65 - 16)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times 49 = 154\\text{ m}^2$\n$\\Rightarrow \\text{Time taken} = \\frac{\\text{Total Area}}{\\text{Speed}}$\n$\\Rightarrow \\text{Time taken} = \\frac{154}{4.4} = \\frac{1540}{44} = 35\\text{ hours}$\n∴ The correct answer is 35 hours.\n\nAdditional Information\nArea of a Circle: The total region enclosed by a circle is $\\pi r^2$.\nArea of an Annulus (Circular Path): For a circular track or path with outer radius $R$ and inner radius $r$, the bounded area is $\\pi(R^2 - r^2)$.\nCircumference of a Circle: The total boundary length of a circle is equal to $2\\pi r$ or $\\pi d$.",
     "mockId": "mock_1789629094216_9b5gv",
     "testId": "mock_1789629094216_9b5gv",
     "topic": "Mensuration 2D",
@@ -172,7 +172,9 @@
       "topic": "Mensuration 2D",
       "subtopic": "Area of Annulus and Paths",
       "conceptTested": "The area of a circular ring (annulus) is given by π(R^2 - r^2), where R and r are outer and inner radii."
-    }
+    },
+    "question": "An annular road is about to build on the circular park. The outer radius of the circular park is $\\sqrt{65}\\text{ m}$ and the inner radius of the circular park is $4\\text{ m}$. If the speed of the construction is $4.4\\text{ m}^2/\\text{hour}$, find the time taken by the construction company to complete the task.",
+    "answer": "c"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 7",

@@ -991,18 +991,18 @@
     "correctOption": "B",
     "userTime": "00:37",
     "avgTime": "00:27",
-    "questionText": "If 3m - 3/m = 10, find the value of m^2 + 1/m^2",
+    "questionText": "If $3m - \\frac{3}{m} = 10$, find the value of $m^2 + \\frac{1}{m^2}$.",
     "options": {
-      "a": "109/4",
-      "b": "118/9",
-      "c": "118/4",
-      "d": "109/9",
-      "A": "109/4",
-      "B": "118/9",
-      "C": "118/4",
-      "D": "109/9"
+      "a": "$\\frac{109}{4}$",
+      "b": "$\\frac{118}{9}$",
+      "c": "$\\frac{118}{4}$",
+      "d": "$\\frac{109}{9}$",
+      "A": "$\\frac{109}{4}$",
+      "B": "$\\frac{118}{9}$",
+      "C": "$\\frac{118}{4}$",
+      "D": "$\\frac{109}{9}$"
     },
-    "solution": "3m - (3/m) = 10\nm - (1/m) = 10/3\n\nSquare both sides,\n\nm2 + (1/m2) - 2 = 100/9\nm2 + (1/m2) = 118/9",
+    "solution": "Solution\n\nGiven:\n$3m - \\frac{3}{m} = 10$\n\nFormula Used:\n$\\left(a - \\frac{1}{a}\\right)^2 = a^2 + \\frac{1}{a^2} - 2$\n\nCalculation:\nDivide the given equation by $3$:\n$\\Rightarrow m - \\frac{1}{m} = \\frac{10}{3}$\n\nSquaring both sides:\n$\\Rightarrow \\left(m - \\frac{1}{m}\\right)^2 = \\left(\\frac{10}{3}\\right)^2$\n$\\Rightarrow m^2 + \\frac{1}{m^2} - 2 = \\frac{100}{9}$\n$\\Rightarrow m^2 + \\frac{1}{m^2} = \\frac{100}{9} + 2$\n$\\Rightarrow m^2 + \\frac{1}{m^2} = \\frac{100 + 18}{9} = \\frac{118}{9}$\n\n∴ The value of $m^2 + \\frac{1}{m^2}$ is $\\frac{118}{9}$.",
     "topic": "Algebra",
     "subtopic": "Algebraic Identities & Manipulation",
     "conceptTested": "Application of algebraic square identity (x - 1/x)^2 = x^2 + 1/x^2 - 2.",
@@ -1011,7 +1011,7 @@
       "subtopic": "Algebraic Identities & Manipulation",
       "conceptTested": "Application of algebraic square identity (x - 1/x)^2 = x^2 + 1/x^2 - 2."
     },
-    "question": "If 3m - 3/m = 10, find the value of m^2 + 1/m^2",
+    "question": "If $3m - \\frac{3}{m} = 10$, find the value of $m^2 + \\frac{1}{m^2}$.",
     "answer": "b"
   },
   {

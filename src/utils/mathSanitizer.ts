@@ -256,6 +256,12 @@ export function reconstructScrapedMath(rawText: string = ''): string {
   s = s.replace(/\(\s*\n+\s*([^\n\(\)]+?)\s*\n+\s*\)\s*\n+\s*([2345nt])/g, (_, inner, p) => `(${inner})${powerMap[p] || `^${p}`}`);
   s = s.replace(/\(\s*([^\(\)]+?)\s*\)\s*\n+\s*([2345nt])/g, (_, inner, p) => `(${inner})${powerMap[p] || `^${p}`}`);
 
+  // Reassemble unit exponents split across newlines (e.g. cm\n3 -> cm³, m\n2 -> m²)
+  s = s.replace(/\b(cm|mm|km|sq\.?|cu\.?)\s*\n+\s*([23])\b/gi, (_, u, p) => `${u}${powerMap[p] || `^${p}`}`);
+  s = s.replace(/\b(m)\s*\n+\s*([23])\b/g, (_, u, p) => `${u}${powerMap[p] || `^${p}`}`);
+  s = s.replace(/\b(cm|mm|km)\s*([23])\b(?!\d)/gi, (_, u, p) => `${u}${powerMap[p] || `^${p}`}`);
+  s = s.replace(/\b(m)\s*([23])\b(?!\d)/g, (_, u, p) => `${u}${powerMap[p] || `^${p}`}`);
+
   // Reassemble compound interest vertical formula:
   // (\n1\n+\n R\n100\n)\n n -> (1 + R/100)^n
   s = s.replace(/\(\s*\n+\s*1\s*\n+\s*([+\-])\s*\n+\s*([a-zA-Z])\s*\n+\s*(\d+)\s*\n+\s*\)\s*\n+\s*([a-zA-Z0-9])/g, '(1 $1 $2 / $3)^$4');

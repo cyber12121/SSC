@@ -50,13 +50,17 @@ export function cleanSolutionText(sol: string = ''): string {
   // 4. Reconstruct vertical scraped MathML before line collapsing
   s = reconstructScrapedSolutionMath(s);
 
-  // 4b. Normalize plain-text unit exponents (e.g. cm^2 -> cm², m^3 -> m³)
+  // 4b. Normalize plain-text unit exponents (e.g. cm^2 -> cm², cm\n3 -> cm³, cm3 -> cm³, m^3 -> m³)
   // Mirrors the same fix in formatQuestionText.ts — only targets known measurement units
   s = s
+    .replace(/\b(cm|mm|km|sq\.?|cu\.?)\s*\n+\s*([23])\b/gi, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`)
+    .replace(/\b(m)\s*\n+\s*([23])\b/g, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`)
     .replace(/\b(cm|mm|km|sq\.?|cu\.?)\^2\b/g, '$1²')
     .replace(/\b(cm|mm|km|sq\.?|cu\.?)\^3\b/g, '$1³')
+    .replace(/\b(cm|mm|km)\s*([23])\b(?!\d)/gi, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`)
     .replace(/\b(m)\^2\b(?!\w)/g, 'm²')
-    .replace(/\b(m)\^3\b(?!\w)/g, 'm³');
+    .replace(/\b(m)\^3\b(?!\w)/g, 'm³')
+    .replace(/\b(m)\s*([23])\b(?!\d)/g, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`);
 
   // 5. Purge diagram artifacts scraped from visual Testbook infographics
   s = purgeScrapedDiagramArtifacts(s);

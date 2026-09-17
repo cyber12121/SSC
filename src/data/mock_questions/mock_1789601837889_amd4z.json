@@ -501,18 +501,18 @@
     "correctOption": "D",
     "userTime": "00:20",
     "avgTime": "00:09",
-    "questionText": "If \\(x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}\\), \\(x > 0, y > 0\\) and \\(z > 0\\) then value of \\((x - y - z)^3 - 27xyz\\), is :",
+    "questionText": "If $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$, where $x > 0, y > 0$ and $z > 0$, then find the value of $(x - y - z)^3 - 27xyz$ :",
     "options": {
-      "A": "\\(3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}\\)",
-      "B": "\\(27(x^2y + xy^2)\\)",
+      "A": "$3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}$",
+      "B": "$27(x^2y + xy^2)$",
       "C": "27",
       "D": "0",
-      "a": "\\(3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}\\)",
-      "b": "\\(27(x^2y + xy^2)\\)",
+      "a": "$3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}$",
+      "b": "$27(x^2y + xy^2)$",
       "c": "27",
       "d": "0"
     },
-    "solution": "Solution\nShortcut Trick\nIdentify the algebraic identity: If a + b + c = 0, then a3 + b3 + c3 = 3abc.\nRewrite the given equation: x1/3 - y1/3 - z1/3 = 0.\nLet a = x1/3, b = -y1/3, and c = -z1/3. Thus, a + b + c = 0.\nApplying the identity: x - y - z = 3 × x1/3 × (-y1/3) × (-z1/3) = 3(xyz)1/3.\nCubing both sides: (x - y - z)³ = 27xyz.\nSubtracting 27xyz: (x - y - z)³ - 27xyz = 0.\n∴ The correct answer is 0.\n\nAlternate Method\nGiven: x1/3 - y1/3 = z1/3 where x, y, z > 0.\nFormula used: (a - b)³ = a3 - b3 - 3ab(a - b)\n⇒ Cube both sides of the given equation: (x1/3 - y1/3)³ = (z1/3)³\n⇒ (x1/3)³ - (y1/3)³ - 3(x1/3)(y1/3)(x1/3 - y1/3) = z\n⇒ x - y - 3(xy)1/3(z1/3) = z (Since x1/3 - y1/3 = z1/3)\n⇒ x - y - z = 3(xyz)1/3\n⇒ Cube both sides again: (x - y - z)³ = [3(xyz)1/3]3\n⇒ (x - y - z)³ = 27xyz\n⇒ (x - y - z)³ - 27xyz = 0\n∴ The correct answer is 0.\n\nAdditional Information\nAlgebraic Identity of Three Variables\n\nThe expression a3 + b3 + c3 - 3abc is equal to (a + b + c)(a2 + b2 + c2 - ab - bc - ca). If a + b + c = 0, the entire expression becomes zero, leading to a3 + b3 + c3 = 3abc.\n\nAlternative Condition for Identity\n\nThe identity a3 + b3 + c3 = 3abc also holds true if a = b = c, as the term (a2 + b2 + c2 - ab - bc - ca) becomes zero in that case.\n\nExpansion of (a + b + c)³\n\n(a + b + c)³ = a3 + b3 + c3 + 3(a + b)(b + c)(c + a). This is useful for solving complex cyclic algebraic expressions.",
+    "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAlternate Method\nGiven:\n$x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$ where $x, y, z > 0$\n\nFormula Used:\n$(a - b)^3 = a^3 - b^3 - 3ab(a - b)$\n\nCalculations:\nCube both sides of the given equation:\n$\\Rightarrow \\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right)^3 = \\left(z^{\\frac{1}{3}}\\right)^3$\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 - \\left(y^{\\frac{1}{3}}\\right)^3 - 3\\left(x^{\\frac{1}{3}}\\right)\\left(y^{\\frac{1}{3}}\\right)\\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right) = z$\n$\\Rightarrow x - y - 3(xy)^{\\frac{1}{3}}(z^{\\frac{1}{3}}) = z$ (since $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$)\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides again:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3$\n$\\Rightarrow (x - y - z)^3 = 27xyz$\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAdditional Information\nAlgebraic Identity of Three Variables:\nThe expression $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$.\nIf $a + b + c = 0$, the expression reduces directly to $a^3 + b^3 + c^3 = 3abc$.",
     "mockId": "mock_1789601837889_amd4z",
     "testId": "mock_1789601837889_amd4z",
     "topic": "Algebra",
@@ -522,7 +522,9 @@
       "topic": "Algebra",
       "subtopic": "Conditional Algebraic Identities (a + b + c = 0)",
       "conceptTested": "If a + b + c = 0, then a^3 + b^3 + c^3 = 3abc."
-    }
+    },
+    "question": "If $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$, where $x > 0, y > 0$ and $z > 0$, then find the value of $(x - y - z)^3 - 27xyz$ :",
+    "answer": "d"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 14",

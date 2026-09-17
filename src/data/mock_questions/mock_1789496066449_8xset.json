@@ -1061,18 +1061,18 @@
     "correctOption": "A",
     "userTime": "00:50",
     "avgTime": "00:39",
-    "questionText": "The total surface area of a right circular cylinder is 54π cm2. If its height is twice its radius, what is its volume?",
+    "questionText": "The total surface area of a right circular cylinder is $54\\pi\\text{ cm}^2$. If its height is twice its radius, what is its volume?",
     "options": {
-      "a": "54π cm\n3",
-      "b": "108π cm\n3",
-      "c": "81π cm\n3",
-      "d": "72π cm\n3",
-      "A": "54π cm\n3",
-      "B": "108π cm\n3",
-      "C": "81π cm\n3",
-      "D": "72π cm\n3"
+      "a": "$54\\pi\\text{ cm}^3$",
+      "b": "$108\\pi\\text{ cm}^3$",
+      "c": "$81\\pi\\text{ cm}^3$",
+      "d": "$72\\pi\\text{ cm}^3$",
+      "A": "$54\\pi\\text{ cm}^3$",
+      "B": "$108\\pi\\text{ cm}^3$",
+      "C": "$81\\pi\\text{ cm}^3$",
+      "D": "$72\\pi\\text{ cm}^3$"
     },
-    "solution": "Let the radius of a cylinder be r cm\nheight = 2r\nTotal surface area = 54π\n2πr(h + r) = 54π\nr (2r + r) = 27\nr2 = 9\nr = 3 cm\nh = 6 cm\nHence, volume of cylinder = πr2h = π * 32 * 6 = 54π cm3\n\nExpress Method\n\nVolume = π r2 x h\n= π 2r3 [as h = 2r]\n= 2π r3\n\nThat means if we divide the options by 2π, we will get a perfect cube.\n\nAnd from the given options, only option a satisfies this condition.",
+    "solution": "Solution\n\nGiven:\nTotal surface area of cylinder $= 54\\pi\\text{ cm}^2$\nHeight $(h) = 2r$\n\nFormula Used:\nTotal Surface Area $= 2\\pi r(h + r)$\nVolume of cylinder $= \\pi r^2 h$\n\nCalculations:\n$\\Rightarrow 2\\pi r(h + r) = 54\\pi$\n$\\Rightarrow 2\\pi r(2r + r) = 54\\pi$\n$\\Rightarrow 2\\pi r(3r) = 54\\pi$\n$\\Rightarrow 6\\pi r^2 = 54\\pi$\n$\\Rightarrow r^2 = \\frac{54\\pi}{6\\pi} = 9$\n$\\Rightarrow r = \\sqrt{9} = 3\\text{ cm}$\n$\\Rightarrow h = 2r = 2 \\times 3 = 6\\text{ cm}$\n\nNow, Volume of cylinder:\n$\\Rightarrow V = \\pi r^2 h = \\pi \\times 3^2 \\times 6 = \\pi \\times 9 \\times 6 = 54\\pi\\text{ cm}^3$\n\n∴ The volume of the cylinder is $54\\pi\\text{ cm}^3$.\n\nShortcut Trick\nVolume $= \\pi r^2 h = \\pi r^2 (2r) = 2\\pi r^3$\n$\\Rightarrow \\frac{\\text{Volume}}{2\\pi} = r^3$ (must be a perfect cube)\n\nTesting the options divided by $2\\pi$:\nOption A: $\\frac{54\\pi}{2\\pi} = 27 = 3^3$ (Perfect cube!)\nOption B: $\\frac{108\\pi}{2\\pi} = 54$ (Not a cube)\nOption C: $\\frac{81\\pi}{2\\pi} = 40.5$ (Not a cube)\nOption D: $\\frac{72\\pi}{2\\pi} = 36$ (Not a cube)\n\nOnly Option A satisfies this condition.",
     "topic": "Mensuration 3D",
     "subtopic": "Cylinder - Total Surface Area and Volume",
     "conceptTested": "Total surface area of a cylinder = 2πr(h + r) and Volume = πr²h",
@@ -1081,7 +1081,7 @@
       "subtopic": "Cylinder - Total Surface Area and Volume",
       "conceptTested": "Total surface area of a cylinder = 2πr(h + r) and Volume = πr²h"
     },
-    "question": "The total surface area of a right circular cylinder is 54π cm2. If its height is twice its radius, what is its volume?",
+    "question": "The total surface area of a right circular cylinder is $54\\pi\\text{ cm}^2$. If its height is twice its radius, what is its volume?",
     "answer": "a"
   },
   {

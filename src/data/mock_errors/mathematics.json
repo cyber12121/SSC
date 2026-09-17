@@ -1100,15 +1100,19 @@
         "correctOption": "B",
         "userTime": "00:37",
         "avgTime": "00:27",
-        "question": "If 3m - 3/m = 10, find the value of m^2 + 1/m^2",
+        "question": "If $3m - \\frac{3}{m} = 10$, find the value of $m^2 + \\frac{1}{m^2}$.",
         "options": {
-          "a": "109/4",
-          "b": "118/9",
-          "c": "118/4",
-          "d": "109/9"
+          "a": "$\\frac{109}{4}$",
+          "b": "$\\frac{118}{9}$",
+          "c": "$\\frac{118}{4}$",
+          "d": "$\\frac{109}{9}$",
+          "A": "$\\frac{109}{4}$",
+          "B": "$\\frac{118}{9}$",
+          "C": "$\\frac{118}{4}$",
+          "D": "$\\frac{109}{9}$"
         },
         "answer": "b",
-        "solution": "3m - (3/m) = 10\nm - (1/m) = 10/3\n\nSquare both sides,\n\nm2 + (1/m2) - 2 = 100/9\nm2 + (1/m2) = 118/9",
+        "solution": "Solution\n\nGiven:\n$3m - \\frac{3}{m} = 10$\n\nFormula Used:\n$\\left(a - \\frac{1}{a}\\right)^2 = a^2 + \\frac{1}{a^2} - 2$\n\nCalculation:\nDivide the given equation by $3$:\n$\\Rightarrow m - \\frac{1}{m} = \\frac{10}{3}$\n\nSquaring both sides:\n$\\Rightarrow \\left(m - \\frac{1}{m}\\right)^2 = \\left(\\frac{10}{3}\\right)^2$\n$\\Rightarrow m^2 + \\frac{1}{m^2} - 2 = \\frac{100}{9}$\n$\\Rightarrow m^2 + \\frac{1}{m^2} = \\frac{100}{9} + 2$\n$\\Rightarrow m^2 + \\frac{1}{m^2} = \\frac{100 + 18}{9} = \\frac{118}{9}$\n\n∴ The value of $m^2 + \\frac{1}{m^2}$ is $\\frac{118}{9}$.",
         "topic": "Algebra",
         "subtopic": "Algebraic Identities & Manipulation",
         "conceptTested": "Application of algebraic square identity (x - 1/x)^2 = x^2 + 1/x^2 - 2.",
@@ -1119,7 +1123,8 @@
           "difficulty": "medium"
         },
         "mockId": "mock_1789494353757_wc1h3",
-        "testId": "mock_1789494353757_wc1h3"
+        "testId": "mock_1789494353757_wc1h3",
+        "questionText": "If $3m - \\frac{3}{m} = 10$, find the value of $m^2 + \\frac{1}{m^2}$."
       },
       {
         "id": "math_11a667f7ef",
@@ -1782,15 +1787,19 @@
         "correctOption": "A",
         "userTime": "00:50",
         "avgTime": "00:39",
-        "question": "The total surface area of a right circular cylinder is 54π cm2. If its height is twice its radius, what is its volume?",
+        "question": "The total surface area of a right circular cylinder is $54\\pi\\text{ cm}^2$. If its height is twice its radius, what is its volume?",
         "options": {
-          "a": "54π cm\n3",
-          "b": "108π cm\n3",
-          "c": "81π cm\n3",
-          "d": "72π cm\n3"
+          "a": "$54\\pi\\text{ cm}^3$",
+          "b": "$108\\pi\\text{ cm}^3$",
+          "c": "$81\\pi\\text{ cm}^3$",
+          "d": "$72\\pi\\text{ cm}^3$",
+          "A": "$54\\pi\\text{ cm}^3$",
+          "B": "$108\\pi\\text{ cm}^3$",
+          "C": "$81\\pi\\text{ cm}^3$",
+          "D": "$72\\pi\\text{ cm}^3$"
         },
         "answer": "a",
-        "solution": "Let the radius of a cylinder be r cm\nheight = 2r\nTotal surface area = 54π\n2πr(h + r) = 54π\nr (2r + r) = 27\nr2 = 9\nr = 3 cm\nh = 6 cm\nHence, volume of cylinder = πr2h = π * 32 * 6 = 54π cm3\n\nExpress Method\n\nVolume = π r2 x h\n= π 2r3 [as h = 2r]\n= 2π r3\n\nThat means if we divide the options by 2π, we will get a perfect cube.\n\nAnd from the given options, only option a satisfies this condition.",
+        "solution": "Solution\n\nGiven:\nTotal surface area of cylinder $= 54\\pi\\text{ cm}^2$\nHeight $(h) = 2r$\n\nFormula Used:\nTotal Surface Area $= 2\\pi r(h + r)$\nVolume of cylinder $= \\pi r^2 h$\n\nCalculations:\n$\\Rightarrow 2\\pi r(h + r) = 54\\pi$\n$\\Rightarrow 2\\pi r(2r + r) = 54\\pi$\n$\\Rightarrow 2\\pi r(3r) = 54\\pi$\n$\\Rightarrow 6\\pi r^2 = 54\\pi$\n$\\Rightarrow r^2 = \\frac{54\\pi}{6\\pi} = 9$\n$\\Rightarrow r = \\sqrt{9} = 3\\text{ cm}$\n$\\Rightarrow h = 2r = 2 \\times 3 = 6\\text{ cm}$\n\nNow, Volume of cylinder:\n$\\Rightarrow V = \\pi r^2 h = \\pi \\times 3^2 \\times 6 = \\pi \\times 9 \\times 6 = 54\\pi\\text{ cm}^3$\n\n∴ The volume of the cylinder is $54\\pi\\text{ cm}^3$.\n\nShortcut Trick\nVolume $= \\pi r^2 h = \\pi r^2 (2r) = 2\\pi r^3$\n$\\Rightarrow \\frac{\\text{Volume}}{2\\pi} = r^3$ (must be a perfect cube)\n\nTesting the options divided by $2\\pi$:\nOption A: $\\frac{54\\pi}{2\\pi} = 27 = 3^3$ (Perfect cube!)\nOption B: $\\frac{108\\pi}{2\\pi} = 54$ (Not a cube)\nOption C: $\\frac{81\\pi}{2\\pi} = 40.5$ (Not a cube)\nOption D: $\\frac{72\\pi}{2\\pi} = 36$ (Not a cube)\n\nOnly Option A satisfies this condition.",
         "topic": "Mensuration 3D",
         "subtopic": "Cylinder - Total Surface Area and Volume",
         "conceptTested": "Total surface area of a cylinder = 2πr(h + r) and Volume = πr²h",
@@ -1801,7 +1810,8 @@
           "difficulty": "medium"
         },
         "mockId": "mock_1789496066449_8xset",
-        "testId": "mock_1789496066449_8xset"
+        "testId": "mock_1789496066449_8xset",
+        "questionText": "The total surface area of a right circular cylinder is $54\\pi\\text{ cm}^2$. If its height is twice its radius, what is its volume?"
       },
       {
         "id": "math_357f379b94",
@@ -2497,15 +2507,19 @@
         "correctOption": "D",
         "userTime": "00:20",
         "avgTime": "00:09",
-        "question": "If \\(x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}\\), \\(x > 0, y > 0\\) and \\(z > 0\\) then value of \\((x - y - z)^3 - 27xyz\\), is :",
+        "question": "If $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$, where $x > 0, y > 0$ and $z > 0$, then find the value of $(x - y - z)^3 - 27xyz$ :",
         "options": {
-          "a": "\\(3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}\\)",
-          "b": "\\(27(x^2y + xy^2)\\)",
+          "A": "$3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}$",
+          "B": "$27(x^2y + xy^2)$",
+          "C": "27",
+          "D": "0",
+          "a": "$3 x^{\\frac{1}{3}} y^{\\frac{1}{3}} z^{\\frac{1}{3}}$",
+          "b": "$27(x^2y + xy^2)$",
           "c": "27",
           "d": "0"
         },
         "answer": "d",
-        "solution": "Solution\nShortcut Trick\nIdentify the algebraic identity: If a + b + c = 0, then a3 + b3 + c3 = 3abc.\nRewrite the given equation: x1/3 - y1/3 - z1/3 = 0.\nLet a = x1/3, b = -y1/3, and c = -z1/3. Thus, a + b + c = 0.\nApplying the identity: x - y - z = 3 × x1/3 × (-y1/3) × (-z1/3) = 3(xyz)1/3.\nCubing both sides: (x - y - z)³ = 27xyz.\nSubtracting 27xyz: (x - y - z)³ - 27xyz = 0.\n∴ The correct answer is 0.\n\nAlternate Method\nGiven: x1/3 - y1/3 = z1/3 where x, y, z > 0.\nFormula used: (a - b)³ = a3 - b3 - 3ab(a - b)\n⇒ Cube both sides of the given equation: (x1/3 - y1/3)³ = (z1/3)³\n⇒ (x1/3)³ - (y1/3)³ - 3(x1/3)(y1/3)(x1/3 - y1/3) = z\n⇒ x - y - 3(xy)1/3(z1/3) = z (Since x1/3 - y1/3 = z1/3)\n⇒ x - y - z = 3(xyz)1/3\n⇒ Cube both sides again: (x - y - z)³ = [3(xyz)1/3]3\n⇒ (x - y - z)³ = 27xyz\n⇒ (x - y - z)³ - 27xyz = 0\n∴ The correct answer is 0.\n\nAdditional Information\nAlgebraic Identity of Three Variables\n\nThe expression a3 + b3 + c3 - 3abc is equal to (a + b + c)(a2 + b2 + c2 - ab - bc - ca). If a + b + c = 0, the entire expression becomes zero, leading to a3 + b3 + c3 = 3abc.\n\nAlternative Condition for Identity\n\nThe identity a3 + b3 + c3 = 3abc also holds true if a = b = c, as the term (a2 + b2 + c2 - ab - bc - ca) becomes zero in that case.\n\nExpansion of (a + b + c)³\n\n(a + b + c)³ = a3 + b3 + c3 + 3(a + b)(b + c)(c + a). This is useful for solving complex cyclic algebraic expressions.",
+        "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAlternate Method\nGiven:\n$x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$ where $x, y, z > 0$\n\nFormula Used:\n$(a - b)^3 = a^3 - b^3 - 3ab(a - b)$\n\nCalculations:\nCube both sides of the given equation:\n$\\Rightarrow \\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right)^3 = \\left(z^{\\frac{1}{3}}\\right)^3$\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 - \\left(y^{\\frac{1}{3}}\\right)^3 - 3\\left(x^{\\frac{1}{3}}\\right)\\left(y^{\\frac{1}{3}}\\right)\\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right) = z$\n$\\Rightarrow x - y - 3(xy)^{\\frac{1}{3}}(z^{\\frac{1}{3}}) = z$ (since $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$)\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides again:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3$\n$\\Rightarrow (x - y - z)^3 = 27xyz$\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAdditional Information\nAlgebraic Identity of Three Variables:\nThe expression $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$.\nIf $a + b + c = 0$, the expression reduces directly to $a^3 + b^3 + c^3 = 3abc$.",
         "topic": "Algebra",
         "subtopic": "Conditional Algebraic Identities (a + b + c = 0)",
         "conceptTested": "If a + b + c = 0, then a^3 + b^3 + c^3 = 3abc.",
@@ -2514,7 +2528,8 @@
           "subtopic": "Conditional Algebraic Identities (a + b + c = 0)",
           "conceptTested": "If a + b + c = 0, then a^3 + b^3 + c^3 = 3abc.",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "If $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$, where $x > 0, y > 0$ and $z > 0$, then find the value of $(x - y - z)^3 - 27xyz$ :"
       },
       {
         "id": "math_0cb5845211",
@@ -8891,15 +8906,19 @@
         "correctOption": "C",
         "userTime": "00:10",
         "avgTime": "00:25",
-        "question": "An annular road is about to build on the circular park. The outer radius of the circular park √65 m and the inner radius of the circular park is 4 m. If the speed of the construction is 4.4 m^2 per hour. Find the time taken by the construction company to complete the task.",
+        "question": "An annular road is about to build on the circular park. The outer radius of the circular park is $\\sqrt{65}\\text{ m}$ and the inner radius of the circular park is $4\\text{ m}$. If the speed of the construction is $4.4\\text{ m}^2/\\text{hour}$, find the time taken by the construction company to complete the task.",
         "options": {
+          "A": "45 hours",
+          "B": "55 hours",
+          "C": "35 hours",
+          "D": "25 hours",
           "a": "45 hours",
           "b": "55 hours",
           "c": "35 hours",
           "d": "25 hours"
         },
         "answer": "c",
-        "solution": "Solution\n\nShortcut Trick\nArea of the annular road = π × (R² - r²)\n⇒ Area = (22 ÷ 7) × (65 - 16) = 154 m²\nTime taken = Total Area ÷ Speed\n⇒ Time = 154 ÷ 4.4 = 35 hours\n∴ The correct answer is 35 hours.\n\nAlternate Method\nGiven:\nOuter radius of the park (R) = √65 m\nInner radius of the park (r) = 4 m\nSpeed of construction = 4.4 m²/hour\n\nFormula Used:\nArea of annular ring = π(R² - r²)\n\nCalculations:\n⇒ Area = π × (R² - r²)\n⇒ Area = (22 ÷ 7) × ((√65)2 - 42)\n⇒ Area = (22 ÷ 7) × (65 - 16)\n⇒ Area = (22 ÷ 7) × 49 = 154 m²\n⇒ Time taken = Total Area ÷ Speed\n⇒ Time taken = 154 ÷ 4.4\n⇒ Time taken = 1540 ÷ 44 = 35 hours\n∴ The correct answer is 35 hours.\n\nAdditional Information\nArea of a Circle\n\nThe total region enclosed by a circle is computed by πr², where r is the radius.\n\nArea of an Annulus (Circular Path)\n\nFor a circular track or path with an outer radius R and an inner radius r, the bounded area is calculated as π(R² - r²).\n\nCircumference of a Circle\n\nThe total boundary length of a circle is equal to 2πr or πd, where d represents the overall diameter.",
+        "solution": "Solution\n\nShortcut Trick\nArea of the annular road $= \\pi(R^2 - r^2)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times \\left((\\sqrt{65})^2 - 4^2\\right) = \\frac{22}{7} \\times (65 - 16) = \\frac{22}{7} \\times 49 = 154\\text{ m}^2$\nTime taken $= \\frac{\\text{Total Area}}{\\text{Speed}} = \\frac{154}{4.4} = 35\\text{ hours}$\n∴ The correct answer is 35 hours.\n\nAlternate Method\nGiven:\nOuter radius of the park $(R) = \\sqrt{65}\\text{ m}$\nInner radius of the park $(r) = 4\\text{ m}$\nSpeed of construction $= 4.4\\text{ m}^2/\\text{hour}$\n\nFormula Used:\nArea of annular ring $= \\pi(R^2 - r^2)$\n\nCalculations:\n$\\Rightarrow \\text{Area} = \\pi(R^2 - r^2)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times \\left((\\sqrt{65})^2 - 4^2\\right)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times (65 - 16)$\n$\\Rightarrow \\text{Area} = \\frac{22}{7} \\times 49 = 154\\text{ m}^2$\n$\\Rightarrow \\text{Time taken} = \\frac{\\text{Total Area}}{\\text{Speed}}$\n$\\Rightarrow \\text{Time taken} = \\frac{154}{4.4} = \\frac{1540}{44} = 35\\text{ hours}$\n∴ The correct answer is 35 hours.\n\nAdditional Information\nArea of a Circle: The total region enclosed by a circle is $\\pi r^2$.\nArea of an Annulus (Circular Path): For a circular track or path with outer radius $R$ and inner radius $r$, the bounded area is $\\pi(R^2 - r^2)$.\nCircumference of a Circle: The total boundary length of a circle is equal to $2\\pi r$ or $\\pi d$.",
         "topic": "Mensuration 2D",
         "subtopic": "Area of Annulus and Paths",
         "conceptTested": "The area of a circular ring (annulus) is given by π(R^2 - r^2), where R and r are outer and inner radii.",
@@ -8908,7 +8927,8 @@
           "subtopic": "Area of Annulus and Paths",
           "conceptTested": "The area of a circular ring (annulus) is given by π(R^2 - r^2), where R and r are outer and inner radii.",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "An annular road is about to build on the circular park. The outer radius of the circular park is $\\sqrt{65}\\text{ m}$ and the inner radius of the circular park is $4\\text{ m}$. If the speed of the construction is $4.4\\text{ m}^2/\\text{hour}$, find the time taken by the construction company to complete the task."
       },
       {
         "id": "math_ac00831a71",
@@ -12559,13 +12579,17 @@
         "avgTime": "00:55",
         "question": "If the square of the sum of two numbers is equal to 4 times of their product, then the ratio of these numbers is:",
         "options": {
+          "A": "1 ∶ 3",
+          "B": "1 ∶ 2",
+          "C": "5 ∶ 1",
+          "D": "1 ∶ 1",
           "a": "1 ∶ 3",
           "b": "1 ∶ 2",
           "c": "5 ∶ 1",
           "d": "1 ∶ 1"
         },
         "answer": "d",
-        "solution": "Solution\n\nShortcut Trick\nWe can solve this quickly by testing the given options.\n\nLet the two numbers be x and y. The given condition is (x + y)² = 4xy.\nTesting Option 4 (1 : 1) ⇒ (1 + 1)² = 22 = 4.\nAnd 4 × 1 × 1 = 4. Both sides are perfectly equal.\n\nNone of the other options will satisfy this condition.\n\n∴ The correct answer is 1 : 1.\n\nAlternate Method\nGiven:\nThe square of the sum of two numbers is equal to 4 times their product.\n\nLet the two numbers be x and y.\n\nFormula Used:\n(a + b)² = a² + b² + 2ab\n(a - b)² = a² + b² - 2ab\n\nCalculations:\n⇒ (x + y)² = 4xy\n⇒ x² + y² + 2xy = 4xy\n⇒ x² + y² + 2xy - 4xy = 0\n⇒ x² + y² - 2xy = 0\n⇒ (x - y)² = 0\n\nTaking the square root on both sides:\n\n⇒ x - y = 0\n⇒ x = y\n⇒ x / y = 1 / 1\n∴ The correct answer is 1 : 1.\n\nAdditional Information\nPerfect Square Identity\n\nThe expression (a - b)² is always greater than or equal to zero. Therefore, if (a - b)² = 0, the only possible solution in real numbers is a = b.\n\nDuplicate Ratio\n\nThe duplicate ratio of two numbers a and b is expressed as a² : b². It strictly represents the ratio of their squared values.\n\nComponendo and Dividendo Rule\n\nIf two ratios are strictly equal such that a / b = c / d, then according to the rule of componendo and dividendo, (a + b) / (a - b) = (c + d) / (c - d).",
+        "solution": "Solution\n\nShortcut Trick\nWe can solve this quickly by testing the given options.\n\nLet the two numbers be $x$ and $y$. The given condition is $(x + y)^2 = 4xy$.\nTesting Option 4 ($1 : 1$):\n$\\Rightarrow (1 + 1)^2 = 2^2 = 4$\nAnd $4 \\times 1 \\times 1 = 4$. Both sides are equal.\n\nNone of the other options satisfy this condition.\n∴ The correct answer is $1 : 1$.\n\nAlternate Method\nGiven:\nThe square of the sum of two numbers is equal to $4$ times their product.\nLet the two numbers be $x$ and $y$.\n\nFormula Used:\n$(a + b)^2 = a^2 + b^2 + 2ab$\n$(a - b)^2 = a^2 + b^2 - 2ab$\n\nCalculations:\n$\\Rightarrow (x + y)^2 = 4xy$\n$\\Rightarrow x^2 + y^2 + 2xy = 4xy$\n$\\Rightarrow x^2 + y^2 + 2xy - 4xy = 0$\n$\\Rightarrow x^2 + y^2 - 2xy = 0$\n$\\Rightarrow (x - y)^2 = 0$\n\nTaking the square root on both sides:\n$\\Rightarrow x - y = 0$\n$\\Rightarrow x = y$\n$\\Rightarrow \\frac{x}{y} = \\frac{1}{1}$\n$\\Rightarrow x : y = 1 : 1$\n\n∴ The correct answer is $1 : 1$.\n\nAdditional Information\nPerfect Square Identity:\nThe expression $(a - b)^2 \\ge 0$ for all real numbers. Thus $(a - b)^2 = 0 \\iff a = b$.\nDuplicate Ratio:\nThe duplicate ratio of two numbers $a$ and $b$ is $a^2 : b^2$.\nComponendo and Dividendo Rule:\nIf $\\frac{a}{b} = \\frac{c}{d}$, then $\\frac{a + b}{a - b} = \\frac{c + d}{c - d}$.",
         "topic": "Algebra",
         "subtopic": "Algebraic Identities",
         "conceptTested": "Perfect square identity expansion and relation between sum and product of numbers ((a-b)² = 0 implies a = b).",
@@ -12574,7 +12598,8 @@
           "subtopic": "Algebraic Identities",
           "conceptTested": "Perfect square identity expansion and relation between sum and product of numbers ((a-b)² = 0 implies a = b).",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "If the square of the sum of two numbers is equal to 4 times of their product, then the ratio of these numbers is:"
       },
       {
         "id": "math_81f2037439",
@@ -12650,15 +12675,19 @@
         "correctOption": "A",
         "userTime": "00:24",
         "avgTime": "00:14",
-        "question": "The sum of x^4 - xy + 2y^2 and -x^4 + xy + 2y^2 is",
+        "question": "The sum of $(x^4 - xy + 2y^2)$ and $(-x^4 + xy + 2y^2)$ is:",
         "options": {
+          "A": "Monomial and polynomial in y",
+          "B": "Binomial and Polynomial",
+          "C": "Trinomial and polynomial",
+          "D": "Monomial and polynomial in x",
           "a": "Monomial and polynomial in y",
           "b": "Binomial and Polynomial",
           "c": "Trinomial and polynomial",
           "d": "Monomial and polynomial in x"
         },
         "answer": "a",
-        "solution": "Solution\n\nShortcut Trick\nAdding the given expressions directly:\n\n⇒ (x4 - xy + 2y²) + (-x4 + xy + 2y²) = 4y²\n\nThe result is a single term with only the variable y.\n\nThus, it is a monomial and a polynomial in y.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAlternate Method\nGiven:\nFirst expression: x4 - xy + 2y²\nSecond expression: -x4 + xy + 2y²\n\nCalculations:\nSumming both the expressions, we get:\n\n⇒ (x4 - xy + 2y²) + (-x4 + xy + 2y²)\n\nGrouping the like terms together:\n\n⇒ (x4 - x4) + (-xy + xy) + (2y² + 2y²)\n⇒ 0 + 0 + 4y²\n⇒ 4y²\n\nA monomial is an algebraic expression consisting of one term.\n\nSince 4y² contains only a single term and has only the variable y, it is a monomial and a polynomial in y.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAdditional Information\nMonomial\n\nA polynomial with exactly one non - zero term is called a monomial. Example: 3x, 5y².\n\nBinomial\n\nA polynomial with exactly two non - zero terms is called a binomial. Example: x + 2, y² - 3.\n\nTrinomial\n\nA polynomial with exactly three non - zero terms is called a trinomial. Example: x² + 2x + 1.\n\nPolynomial in one variable\n\nAn algebraic expression consisting of variables with non - negative integer exponents and involving only one variable. Example: 4y² + y - 2.",
+        "solution": "Solution\n\nShortcut Trick\nAdding the given expressions directly:\n$\\Rightarrow (x^4 - xy + 2y^2) + (-x^4 + xy + 2y^2) = 4y^2$\n\nThe result is a single term with only the variable $y$.\nThus, it is a monomial and a polynomial in $y$.\n∴ The correct answer is Monomial and polynomial in y.\n\nAlternate Method\nGiven:\nFirst expression: $x^4 - xy + 2y^2$\nSecond expression: $-x^4 + xy + 2y^2$\n\nCalculations:\nSumming both expressions:\n$\\Rightarrow (x^4 - xy + 2y^2) + (-x^4 + xy + 2y^2)$\n\nGrouping like terms together:\n$\\Rightarrow (x^4 - x^4) + (-xy + xy) + (2y^2 + 2y^2)$\n$\\Rightarrow 0 + 0 + 4y^2 = 4y^2$\n\nA monomial is an algebraic expression consisting of one term.\nSince $4y^2$ contains only a single term and has only the variable $y$, it is a monomial and a polynomial in $y$.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAdditional Information\nMonomial: A polynomial with exactly one non-zero term (e.g., $3x$, $5y^2$).\nBinomial: A polynomial with exactly two non-zero terms (e.g., $x + 2$, $y^2 - 3$).\nTrinomial: A polynomial with exactly three non-zero terms (e.g., $x^2 + 2x + 1$).\nPolynomial in one variable: An algebraic expression consisting of variables with non-negative integer exponents and involving only one variable (e.g., $4y^2 + y - 2$).",
         "topic": "Algebra",
         "subtopic": "Polynomials and Degree",
         "conceptTested": "Classification of algebraic expressions into monomials, binomials, trinomials, and polynomials based on terms and variables.",
@@ -12667,7 +12696,8 @@
           "subtopic": "Polynomials and Degree",
           "conceptTested": "Classification of algebraic expressions into monomials, binomials, trinomials, and polynomials based on terms and variables.",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "The sum of $(x^4 - xy + 2y^2)$ and $(-x^4 + xy + 2y^2)$ is:"
       },
       {
         "id": "math_9897814082",
