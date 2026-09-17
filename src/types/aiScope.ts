@@ -14,12 +14,18 @@ export interface AiFocusedQuestion {
   rcaReason?: any;
   userTime?: string | number;
   avgTime?: string | number;
+  sourceType?: 'full_mock' | 'sectional' | 'subject_wise';
+  sourceLabel?: string;
+  testName?: string;
 }
 
 export interface AiFocusedScope {
   type: 'subject' | 'topic' | 'mock';
   title: string;
   subject?: string;
+  sourceScope?: 'full_mock' | 'sectional' | 'subject_wise' | 'mixed';
+  sourceScopeLabel?: string;
+  testName?: string;
   weakTopics?: any[];
   stats?: {
     score?: number;

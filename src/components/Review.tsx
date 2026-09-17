@@ -28,12 +28,14 @@ import {
   Sparkles,
   Target,
   Download,
-  Edit3
+  Edit3,
+  BookOpen
 } from 'lucide-react';
 import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
 import { cleanSolutionText, extractSolutionLanguage } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { FormattedText } from './FormattedText';
+import { SolutionViewer } from './SolutionViewer';
 import { cleanQuestionText, getLanguageText } from '../utils/formatQuestionText';
 
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
@@ -1348,7 +1350,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               <div className="max-w-4xl">
                 {/* Question Body */}
                 <div className="text-[15.5px] text-gray-900 leading-relaxed font-normal mb-4">
-                  <FormattedText text={question.question} language={language} as="div" />
+                  <FormattedText
+                    text={question.question}
+                    language={language}
+                    as="div"
+                    isQuestion={true}
+                    subject={question.subject || question.section}
+                  />
                 </div>
 
                 {/* Question Image if present */}
@@ -1720,6 +1728,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       </span>
                       <button
                         onClick={() => {
+                          const isSectional = result.is_mock && (
+                            String(result.chapter_title || '').toLowerCase().includes('sectional') ||
+                            result.totalQuestions === 25
+                          );
+                          const sType: 'full_mock' | 'sectional' | 'subject_wise' = result.is_mock
+                            ? (isSectional ? 'sectional' : 'full_mock')
+                            : 'subject_wise';
+                          const sLabel = result.is_mock
+                            ? (isSectional ? `Sectional Test: ${result.chapter_title}` : `Full Mock Test: ${result.chapter_title}`)
+                            : `Subject-Wise: ${result.subject || ''} (${result.chapter_title || ''})`;
+
                           window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
                             detail: {
                               questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
@@ -1728,7 +1747,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                               userAnswer: current?.userAnswer,
                               correctAnswer: question.answer,
                               solution: question.solution,
-                              topic: question.tags?.topic || (question as any).topic || result.subject
+                              topic: question.tags?.topic || (question as any).topic || result.subject,
+                              sourceType: sType,
+                              sourceLabel: sLabel,
+                              testName: result.chapter_title
                             }
                           }));
                         }}
@@ -1740,20 +1762,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       </button>
                     </div>
 
-                    {/* Shortcut Trick / Solution Body */}
+                    {/* Solution Body */}
                     <div className="bg-white rounded-lg">
-                      <div className="flex items-center space-x-1.5 text-amber-500 mb-3">
-                        <Zap className="w-5 h-5 fill-amber-400 text-amber-500" />
-                        <span className="text-base font-bold text-gray-900">Shortcut Trick</span>
+                      <div className="flex items-center space-x-1.5 text-blue-600 mb-3">
+                        <BookOpen className="w-5 h-5 text-blue-600" />
+                        <span className="text-base font-bold text-gray-900">Detailed Solution</span>
                       </div>
 
-                      <div className="text-[14.5px] text-gray-800 leading-relaxed font-normal bg-gray-50/70 p-4 rounded-md border border-gray-100 font-sans">
-                        {question.solution ? (
-                          <FormattedText text={formatSolutionText(question.solution)} language={language} as="div" />
-                        ) : (
-                          "Solution details are available in the question paper bank."
-                        )}
-                      </div>
+                      <SolutionViewer
+                        solution={question.solution}
+                        language={language}
+                        subject={question.subject || question.section}
+                      />
                     </div>
                   </div>
                 )}
@@ -2069,19 +2089,24 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                               return <span className="text-xs px-2 py-0.5 rounded font-semibold bg-gray-100 text-gray-600">Unattempted</span>;
                             })()}
                           </div>
-                          <p className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line">
-                            {renderText(it.question?.question)}
-                          </p>
+                          <FormattedText
+                            text={it.question?.question}
+                            language={language}
+                            as="div"
+                            className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line"
+                            isQuestion={true}
+                            subject={it.question?.subject || it.question?.section}
+                          />
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                             {it.question && (Object.entries(it.question.options) as [string, string][]).map(([k, val]) => (
                               <div 
                                 key={k} 
-                                className={`p-2 rounded border ${
+                                className={`p-2 rounded border flex items-start gap-1.5 ${
                                   k === it.question?.answer ? 'border-green-500 bg-green-50 font-bold text-green-900' : 'border-gray-200 bg-gray-50 text-gray-700'
                                 }`}
                               >
-                                <span className="uppercase mr-1.5 font-bold">{k}.</span>
-                                {renderText(val)}
+                                <span className="uppercase font-bold shrink-0">{k}.</span>
+                                <FormattedText text={val} language={language} />
                               </div>
                             ))}
                           </div>

@@ -146,7 +146,7 @@ function useDynamicSuggestions(
     const latestScore = sortedFull[0]?.totalScore ?? 0;
     const earliestScore = sortedFull[sortedFull.length - 1]?.totalScore ?? 0;
     const trendDelta = sortedFull.length >= 2 ? latestScore - earliestScore : 0;
-    const isDeclinig = sortedFull.length >= 2 && trendDelta < -5;
+    const isDeclining = sortedFull.length >= 2 && trendDelta < -5;
     const isStagnant = sortedFull.length >= 3 && Math.abs(trendDelta) <= 5;
 
     // Always: explain my biggest weak area
@@ -165,7 +165,7 @@ function useDynamicSuggestions(
     }
 
     // Trend-based suggestion
-    if (isDeclinig) {
+    if (isDeclining) {
       suggestions.push({
         icon: TrendingUp,
         label: `My score dropped ${Math.abs(trendDelta)} pts — why?`,
@@ -215,7 +215,7 @@ function useDynamicSuggestions(
     });
 
     return suggestions.slice(0, 4); // Cap at 4 chips
-  }, [mockReports, topWeakTopic, activeReviewResult]);
+  }, [mockReports, topWeakTopic, activeReviewResult, focusedScope]);
 }
 
 // Clean residual or malformed LaTeX formulas into clean, readable math & unicode
@@ -263,7 +263,11 @@ function cleanLatexMath(text: string): string {
   s = s.replace(/\\pm/g, ' ± ');
   s = s.replace(/\\le(?!ft)/g, ' ≤ ');
   s = s.replace(/\\ge/g, ' ≥ ');
-  s = s.replace(/\\Delta/g, 'Δ');
+  s = s.replace(/\\Delta\s*([A-Za-z]+)?/g, (_, p) => p ? `Δ${p}` : 'Δ');
+  s = s.replace(/\\angle\s*([A-Za-z]+)?/g, (_, p) => p ? `∠${p}` : '∠');
+  s = s.replace(/\\sim\b/g, '∼');
+  s = s.replace(/\\cong\b/g, '≅');
+  s = s.replace(/\\degree\b|\\circ\b/g, '°');
   s = s.replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
   s = s.replace(/\\sqrt/g, '√');
   s = s.replace(/\\%/g, '%');
@@ -532,8 +536,15 @@ export function AiMentorChat({
       if (scope) {
         setInternalScope(scope);
         setIsOpen(true);
+        const originLabel = scope.sourceScopeLabel || (
+          scope.sourceScope === 'full_mock' ? 'Full Mock Test' :
+          scope.sourceScope === 'sectional' ? 'Sectional Test' :
+          scope.sourceScope === 'subject_wise' ? 'Subject-Wise Error Bank' :
+          scope.sourceScope === 'mixed' ? 'Full Mock & Subject Errors' :
+          `${scope.type.toUpperCase()} Focus`
+        );
         const countText = scope.questions?.length ? ` (${scope.questions.length} mistake questions loaded)` : '';
-        const welcomeText = `🎯 **Focused Scope Active: ${scope.title}**${countText}\n\nI'm ready! Ask me anything about this ${scope.type} — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
+        const welcomeText = `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**${countText}\n\nI'm ready! Ask me anything about these questions — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
         setMessages(prev => [
           ...prev,
           {
@@ -730,7 +741,12 @@ export function AiMentorChat({
       const detail = (e as CustomEvent).detail;
       if (!detail) return;
       setIsOpen(true);
-      const prompt = `Please explain Question #${detail.questionNumber} (${detail.topic || 'General'}):\n\nQuestion:\n${detail.questionText}\n\nMy Chosen Option: ${detail.userAnswer ? detail.userAnswer.toUpperCase() : 'Unattempted / Left'}\nCorrect Answer: ${detail.correctAnswer ? detail.correctAnswer.toUpperCase() : 'Refer to solution'}\n\nPlease explain why my answer was wrong, break down the core concept/grammar rule step-by-step, and give me a fast shortcut trick to solve this in under 30 seconds.`;
+      const originTag = detail.sourceLabel || (
+        detail.sourceType === 'full_mock' ? 'Full Mock Test' :
+        detail.sourceType === 'sectional' ? 'Sectional Test' :
+        detail.sourceType === 'subject_wise' ? 'Subject-Wise Error Bank' : ''
+      );
+      const prompt = `Please explain Question #${detail.questionNumber} (${originTag ? `[${originTag}] ` : ''}${detail.topic || 'General'}):\n\nQuestion:\n${detail.questionText}\n\nMy Chosen Option: ${detail.userAnswer ? detail.userAnswer.toUpperCase() : 'Unattempted / Left'}\nCorrect Answer: ${detail.correctAnswer ? detail.correctAnswer.toUpperCase() : 'Refer to solution'}\n\nPlease explain why my answer was wrong, break down the core concept/grammar rule step-by-step, and give me a fast shortcut trick to solve this in under 30 seconds.`;
       
       const qContext = {
         qNum: detail.questionNumber,
@@ -739,7 +755,10 @@ export function AiMentorChat({
         userAnswer: detail.userAnswer,
         correctAnswer: detail.correctAnswer,
         solution: detail.solution,
-        topic: detail.topic
+        topic: detail.topic,
+        sourceType: detail.sourceType,
+        sourceLabel: detail.sourceLabel,
+        testName: detail.testName
       };
       
       handleSendMessageRef.current(prompt, qContext);
@@ -919,7 +938,12 @@ export function AiMentorChat({
               <div className="px-3.5 py-1.5 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 border-b border-indigo-700/60 text-indigo-100 flex items-center justify-between text-xs font-semibold select-none shadow-xs">
                 <div className="flex items-center gap-1.5 min-w-0">
                   <span className="px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 text-[10px] font-extrabold uppercase tracking-wider shrink-0 border border-amber-400/30">
-                    {activeScope.type} Focus
+                    {activeScope.sourceScopeLabel || (
+                      activeScope.sourceScope === 'full_mock' ? 'Full Mock' :
+                      activeScope.sourceScope === 'sectional' ? 'Sectional' :
+                      activeScope.sourceScope === 'subject_wise' ? 'Subject-Wise' :
+                      `${activeScope.type} Focus`
+                    )}
                   </span>
                   <span className="truncate text-white font-bold" title={activeScope.title}>
                     {activeScope.title}

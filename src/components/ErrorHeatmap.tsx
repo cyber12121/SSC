@@ -20,7 +20,9 @@ import {
   AlertCircle,
   HelpCircle,
   BrainCircuit,
-  Check
+  Check,
+  Play,
+  Sparkles
 } from 'lucide-react';
 import { SubjectData, Chapter, Question, RCAClassification, RCATagType } from '../types';
 import { detectTopic, normalizeTopicTitle } from '../utils/topicDetector';
@@ -28,11 +30,16 @@ import { FormattedText } from './FormattedText';
 import { cleanSolutionText } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { classifyTestType, TestScopeFilter } from '../utils/testClassifier';
+import { safeStorage } from '../utils/safeStorage';
+import { getDeletedMockIds } from '../utils/syncMockReports';
 
-const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
+import { loadAllBundledMockQuestions, aggregateMockErrors } from '../utils/mockErrorAggregator';
+import { openAiWithScope } from '../utils/aiScopeHelper';
+import { AiFocusedQuestion } from '../types/aiScope';
 
 interface ErrorHeatmapProps {
   mockData: SubjectData;
+  onStartQuiz?: (chapter: Chapter) => void;
 }
 
 interface QuestionWithError extends Question {
@@ -40,6 +47,9 @@ interface QuestionWithError extends Question {
   detectedTopic: string;
   parentSubject: string;
   rcaClassification?: RCAClassification;
+  sourceType?: 'full_mock' | 'sectional' | 'subject_wise';
+  sourceLabel?: string;
+  testName?: string;
 }
 
 interface ChapterHeatmapItem {
@@ -104,12 +114,13 @@ const SEVERITY_CONFIG = {
   low:      { label: 'Low',      dot: 'bg-slate-300',  bar: 'bg-slate-300',  text: 'text-slate-500', badge: 'bg-slate-100 text-slate-600 border-slate-200' },
 };
 
-export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
+export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData, onStartQuiz }) => {
   const [viewMode, setViewMode] = useState<'error_type' | 'rca'>('error_type');
   const [testScopeFilter, setTestScopeFilter] = useState<TestScopeFilter>('all');
   const [selectedTypeFilter, setSelectedTypeFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeDrillChapter, setActiveDrillChapter] = useState<ChapterHeatmapItem | null>(null);
+  const [modalRcaFilter, setModalRcaFilter] = useState<string>('all');
   const [editingNoteForQ, setEditingNoteForQ] = useState<string | null>(null);
   const [modalSillyNoteInput, setModalSillyNoteInput] = useState<string>('');
   const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
@@ -118,300 +129,52 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
   // Dynamic async load of bundled mock tests so errors from Full Tests appear in heatmap
   useEffect(() => {
     let active = true;
-    const loadBundled = async () => {
-      const all: any[] = [];
-      for (const [, loader] of Object.entries(mockQuestionModules)) {
-        try {
-          const mod = await (loader as () => Promise<any>)();
-          const raw = mod?.default || mod;
-          const list = Array.isArray(raw) ? raw : (raw?.questions || raw?.data || []);
-          if (Array.isArray(list) && list.length > 0) {
-            all.push(...list);
-          }
-        } catch {}
-      }
+    loadAllBundledMockQuestions().then(all => {
       if (active) setBundledMockQuestions(all);
-    };
-    loadBundled();
+    });
     return () => { active = false; };
-  }, []);
+  }, [rcaVersion]);
 
-  // Listen to RCA changes for instant cross-component reactivity
+  // Listen to RCA changes and mock updates for instant cross-component reactivity
   useEffect(() => {
     const handleRcaUpdated = () => setRcaVersion(v => v + 1);
     window.addEventListener('cgl_rca_updated', handleRcaUpdated);
+    window.addEventListener('cgl_mock_reports_updated', handleRcaUpdated);
     window.addEventListener('storage', handleRcaUpdated);
     return () => {
       window.removeEventListener('cgl_rca_updated', handleRcaUpdated);
+      window.removeEventListener('cgl_mock_reports_updated', handleRcaUpdated);
       window.removeEventListener('storage', handleRcaUpdated);
     };
   }, []);
 
   const { subjectGroups, allSubjects, totalOverallErrors, scopeCounts } = useMemo(() => {
-    // 1. Read global RCA store
-    const globalRcaStore: Record<string, any> = (() => {
-      try {
-        if (typeof window !== 'undefined') {
-          const raw = window.localStorage?.getItem('cgl_rca_global_store');
-          return raw ? JSON.parse(raw) : {};
-        }
-      } catch {}
-      return {};
-    })();
-    const globalEntries = Object.values(globalRcaStore) as any[];
-
-    // 2. Read cached mock test questions from localStorage (cgl_mock_questions_*)
-    const cachedMockQuestions: any[] = [];
-    try {
-      if (typeof window !== 'undefined') {
-        for (let i = 0; i < window.localStorage.length; i++) {
-          const key = window.localStorage.key(i);
-          if (key && key.startsWith('cgl_mock_questions_')) {
-            const raw = window.localStorage.getItem(key);
-            if (raw) {
-              try {
-                const parsed = JSON.parse(raw);
-                if (Array.isArray(parsed)) cachedMockQuestions.push(...parsed);
-              } catch {}
-            }
-          }
-        }
-      }
-    } catch {}
+    const aggregated = aggregateMockErrors({
+      mockData,
+      bundledQuestions: bundledMockQuestions,
+      testScopeFilter
+    });
 
     const canonicalSubjects = ['Mathematics', 'Reasoning', 'English', 'General Awareness'];
-    const groups: Record<string, {
-      subject: string;
-      totalErrors: number;
-      totalWrong: number;
-      totalUnattempted: number;
-      totalSpeed: number;
-      negativeMarks: number;
-      rcaTotals: {
-        C: number;
-        A: number;
-        T: number;
-        G: number;
-        unclassified: number;
-      };
-      chapters: ChapterHeatmapItem[];
-    }> = {};
-
-    canonicalSubjects.forEach(sub => {
-      groups[sub] = {
-        subject: sub,
-        totalErrors: 0,
-        totalWrong: 0,
-        totalUnattempted: 0,
-        totalSpeed: 0,
-        negativeMarks: 0,
-        rcaTotals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
-        chapters: []
-      };
-    });
-
-    const topicMaps: Record<string, Record<string, ChapterHeatmapItem>> = {
-      'Mathematics': {},
-      'Reasoning': {},
-      'English': {},
-      'General Awareness': {}
-    };
-
-    const normalizeSub = (sub?: string): string => {
-      const s = (sub || '').toLowerCase();
-      if (s.includes('math') || s.includes('quant')) return 'Mathematics';
-      if (s.includes('reason') || s.includes('logic') || s.includes('intel')) return 'Reasoning';
-      if (s.includes('eng')) return 'English';
-      return 'General Awareness';
-    };
-
-    const findRca = (q: any): RCAClassification | undefined => {
-      if (q.rca && q.rca.tag && ['C', 'A', 'T', 'G'].includes(q.rca.tag)) return q.rca;
-      if (q.id && globalRcaStore[q.id]?.tag) return globalRcaStore[q.id];
-      const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
-      if (textNorm && globalRcaStore[textNorm]?.tag) return globalRcaStore[textNorm];
-      if (textNorm) {
-        const found = globalEntries.find(e => e?.tag && e?.questionText && e.questionText.trim().toLowerCase() === textNorm);
-        if (found) return found;
-      }
-      return undefined;
-    };
-
-    let totalOverallErrors = 0;
-    const processedQuestionKeys = new Set<string>();
-
-    const addQuestionToHeatmap = (q: any, rawSubject: string, forceErrorType?: 'wrong' | 'unattempted' | 'speed_issue') => {
-      const subject = normalizeSub(rawSubject || q.subject);
-      const qText = (q.question || q.questionText || '').trim();
-      const dedupKey = (qText ? `${subject}|${qText.toLowerCase()}` : (q.id || '')).slice(0, 160);
-
-      const qRca = findRca(q) || q.rca;
-
-      if (processedQuestionKeys.has(dedupKey)) {
-        // If already added, update RCA tag if newly available
-        if (qRca && qRca.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag)) {
-          const rawT = q.tags?.topic || q.topic || q.detectedTopic;
-          const normT = rawT ? normalizeTopicTitle(rawT) : '';
-          const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
-          const existingItem = topicMaps[subject]?.[topic]?.questions?.find(it => {
-            const itText = (it.question || '').trim().toLowerCase();
-            return (qText && itText === qText.toLowerCase()) || (q.id && it.id === q.id);
-          });
-          if (existingItem && (!existingItem.rcaClassification || !existingItem.rcaClassification.tag)) {
-            existingItem.rcaClassification = qRca;
-            existingItem.rca = qRca;
-            const tagKey = qRca.tag as 'C' | 'A' | 'T' | 'G';
-            if (groups[subject].rcaTotals.unclassified > 0) groups[subject].rcaTotals.unclassified--;
-            groups[subject].rcaTotals[tagKey]++;
-            if (topicMaps[subject][topic].rcaCounts.unclassified > 0) topicMaps[subject][topic].rcaCounts.unclassified--;
-            topicMaps[subject][topic].rcaCounts[tagKey]++;
-          }
-        }
-        return;
-      }
-
-      // Determine error type
-      let errorType: 'wrong' | 'unattempted' | 'speed_issue' | null = forceErrorType || null;
-      if (!errorType) {
-        const status = String(q.status || q.errorType || '').toLowerCase();
-        if (status.includes('unattempt') || status.includes('skip')) errorType = 'unattempted';
-        else if (status.includes('speed') || status.includes('slow') || q.isSlow) errorType = 'speed_issue';
-        else if (status.includes('wrong') || q.isCorrect === false || (q.userAnswer && q.answer && String(q.userAnswer).toLowerCase() !== String(q.answer).toLowerCase())) errorType = 'wrong';
-        else if (qRca) errorType = 'wrong';
-      }
-
-      // Filter out clean correct questions that have no speed issues and no RCA tags
-      if (!errorType && (q.isCorrect === true || String(q.status || '').toLowerCase() === 'correct')) {
-        return;
-      }
-      if (!errorType) errorType = 'wrong';
-
-      processedQuestionKeys.add(dedupKey);
-
-      const rawT = q.tags?.topic || q.topic || q.detectedTopic;
-      const normT = rawT ? normalizeTopicTitle(rawT) : '';
-      const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
-
-      if (!topicMaps[subject][topic]) {
-        topicMaps[subject][topic] = {
-          topic,
-          subject,
-          totalErrors: 0,
-          wrongCount: 0,
-          unattemptedCount: 0,
-          speedIssueCount: 0,
-          negativeMarks: 0,
-          rcaCounts: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
-          questions: [],
-          severity: 'low'
-        };
-      }
-
-      totalOverallErrors++;
-      groups[subject].totalErrors++;
-
-      if (errorType === 'wrong') { groups[subject].totalWrong++; groups[subject].negativeMarks += 0.5; }
-      else if (errorType === 'unattempted') groups[subject].totalUnattempted++;
-      else if (errorType === 'speed_issue') groups[subject].totalSpeed++;
-
-      if (qRca?.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag)) {
-        const tagKey = qRca.tag as 'C' | 'A' | 'T' | 'G';
-        groups[subject].rcaTotals[tagKey]++;
-        topicMaps[subject][topic].rcaCounts[tagKey]++;
-      } else {
-        groups[subject].rcaTotals.unclassified++;
-        topicMaps[subject][topic].rcaCounts.unclassified++;
-      }
-
-      const qEnriched: QuestionWithError = {
-        ...q,
-        question: qText || 'Question',
-        errorType,
-        detectedTopic: topic,
-        parentSubject: subject,
-        rcaClassification: qRca,
-        rca: qRca
-      };
-
-      topicMaps[subject][topic].totalErrors++;
-      topicMaps[subject][topic].questions.push(qEnriched);
-
-      if (errorType === 'wrong') { topicMaps[subject][topic].wrongCount++; topicMaps[subject][topic].negativeMarks += 0.5; }
-      else if (errorType === 'unattempted') topicMaps[subject][topic].unattemptedCount++;
-      else if (errorType === 'speed_issue') topicMaps[subject][topic].speedIssueCount++;
-    };
-
-    // A. Ingest static mockData
-    (Object.entries(mockData) as [string, Chapter[]][]).forEach(([subject, chapterList]) => {
-      chapterList.forEach(chapter => {
-        const chTitle = (chapter.chapter_title || '').toLowerCase();
-        let chErrorType: 'wrong' | 'unattempted' | 'speed_issue' | undefined = undefined;
-        if (chTitle.includes('unattempted') || chTitle.includes('skipped')) chErrorType = 'unattempted';
-        else if (chTitle.includes('speed') || chTitle.includes('slow')) chErrorType = 'speed_issue';
-
-        chapter.questions.forEach(q => {
-          addQuestionToHeatmap(q, subject, chErrorType);
-        });
-      });
-    });
-
-    // B. Ingest from cached mock tests in localStorage
-    cachedMockQuestions.forEach(q => {
-      addQuestionToHeatmap(q, q.subject);
-    });
-
-    // C. Ingest from bundled mock tests
-    bundledMockQuestions.forEach(q => {
-      addQuestionToHeatmap(q, q.subject);
-    });
-
-    // D. Ingest any remaining questions from global RCA store that were tagged
-    globalEntries.forEach(entry => {
-      if (!entry) return;
-      const qText = (entry.questionText || '').trim();
-      const dedupKey = (qText ? `${normalizeSub(entry.subject)}|${qText.toLowerCase()}` : (entry.id || '')).slice(0, 160);
-      if (!processedQuestionKeys.has(dedupKey)) {
-        addQuestionToHeatmap({
-          id: entry.id,
-          question: qText || entry.id,
-          options: entry.options,
-          answer: entry.answer,
-          solution: entry.solution,
-          image: entry.image,
-          subject: entry.subject,
-          tags: { topic: entry.topic },
-          topic: entry.topic,
-          status: entry.status || 'wrong',
-          errorType: entry.errorType || 'wrong',
-          isCorrect: false,
-          rca: entry
-        }, entry.subject || 'General Awareness', entry.errorType || 'wrong');
-      }
-    });
-
-    // Compute relative severity and mark recovery per subject
-    canonicalSubjects.forEach(subject => {
-      const topicMap = topicMaps[subject] || {};
-      const subjectTotalErrors = Object.values(topicMap).reduce((s, c) => s + c.totalErrors, 0);
-      const chapters = Object.values(topicMap).map(c => {
-        const errorShare = subjectTotalErrors > 0 ? (c.totalErrors / subjectTotalErrors) * 100 : 0;
-        let severity: 'critical' | 'high' | 'medium' | 'low' = 'low';
-        if (errorShare >= 15 || c.wrongCount >= 5) severity = 'critical';
-        else if (errorShare >= 8 || c.wrongCount >= 3) severity = 'high';
-        else if (errorShare >= 4 || c.totalErrors >= 2) severity = 'medium';
-        const marksRecovery = Math.round((Math.ceil(c.wrongCount * 0.6) * 2 + c.wrongCount * 0.5) * 10) / 10;
-        return { ...c, severity, marksRecovery };
-      });
-
-      chapters.sort((a, b) => (b.totalErrors - a.totalErrors) || (b.wrongCount - a.wrongCount));
-      groups[subject].chapters = chapters;
-    });
-
-    const subjects = canonicalSubjects.filter(s => groups[s]?.totalErrors > 0);
+    const subjects = canonicalSubjects.filter(s => (aggregated.heatmapSubjectGroups[s]?.totalErrors || 0) > 0);
     if (subjects.length === 0) subjects.push(...canonicalSubjects);
 
-    return { subjectGroups: groups, allSubjects: subjects, totalOverallErrors };
-  }, [mockData, bundledMockQuestions, rcaVersion]);
+    return {
+      subjectGroups: aggregated.heatmapSubjectGroups as Record<string, {
+        subject: string;
+        totalErrors: number;
+        totalWrong: number;
+        totalUnattempted: number;
+        totalSpeed: number;
+        negativeMarks: number;
+        rcaTotals: { C: number; A: number; T: number; G: number; unclassified: number };
+        chapters: ChapterHeatmapItem[];
+      }>,
+      allSubjects: subjects,
+      totalOverallErrors: aggregated.totalOverallErrors,
+      scopeCounts: aggregated.overallScopeCounts
+    };
+  }, [mockData, bundledMockQuestions, rcaVersion, testScopeFilter]);
 
   const [activeSubject, setActiveSubject] = useState<string>(() => allSubjects[0] || 'Mathematics');
 
@@ -461,32 +224,32 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
     };
 
     try {
+      const globalRaw = safeStorage.getItem('cgl_rca_global_store');
+      const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+      const qId = targetQ.id || `${targetQ.parentSubject || 'mock'}_${targetQ.detectedTopic || 'topic'}`;
+      const textNorm = targetQ.question ? targetQ.question.trim().toLowerCase() : '';
+
+      const entry = {
+        ...newRca,
+        id: qId,
+        subject: targetQ.parentSubject || targetQ.subject || 'General Awareness',
+        topic: targetQ.detectedTopic || targetQ.tags?.topic || 'General',
+        questionText: targetQ.question,
+        options: targetQ.options,
+        answer: targetQ.answer,
+        solution: targetQ.solution,
+        image: targetQ.image,
+        status: targetQ.status || targetQ.errorType || 'wrong',
+        errorType: targetQ.errorType || 'wrong',
+        isCorrect: false
+      };
+
+      globalStore[qId] = entry;
+      if (textNorm) globalStore[textNorm] = entry;
+      safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+
+      // Dispatch update event for cross-component reactivity
       if (typeof window !== 'undefined') {
-        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
-        const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
-        const qId = targetQ.id || `${targetQ.parentSubject || 'mock'}_${targetQ.detectedTopic || 'topic'}`;
-        const textNorm = targetQ.question ? targetQ.question.trim().toLowerCase() : '';
-
-        const entry = {
-          ...newRca,
-          id: qId,
-          subject: targetQ.parentSubject || targetQ.subject || 'General Awareness',
-          topic: targetQ.detectedTopic || targetQ.tags?.topic || 'General',
-          questionText: targetQ.question,
-          options: targetQ.options,
-          answer: targetQ.answer,
-          solution: targetQ.solution,
-          image: targetQ.image,
-          status: targetQ.status || targetQ.errorType || 'wrong',
-          errorType: targetQ.errorType || 'wrong',
-          isCorrect: false
-        };
-
-        globalStore[qId] = entry;
-        if (textNorm) globalStore[textNorm] = entry;
-        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
-
-        // Dispatch update event for cross-component reactivity
         window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { qId, rca: newRca } }));
       }
     } catch {}
@@ -510,6 +273,37 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
 
     setRcaVersion(v => v + 1);
   };
+
+  const handleStartDrillFromHeatmap = (
+    topicName: string,
+    questions: Question[],
+    subTypeLabel?: string
+  ) => {
+    if (!onStartQuiz) return;
+    if (!questions || questions.length === 0) {
+      alert('No questions available to practice.');
+      return;
+    }
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `${currentSubjectName} • ${topicName}${subTypeLabel ? ` (${subTypeLabel})` : ''}`,
+      subject: currentSubjectName,
+      subject_id: currentSubjectName.toLowerCase().replace(/\s+/g, '_'),
+      questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+      section: 'mockErrors',
+      is_test: true,
+    };
+    onStartQuiz(virtualChapter);
+  };
+
+  const drillFilteredQuestions = useMemo(() => {
+    if (!activeDrillChapter) return [];
+    if (modalRcaFilter === 'all') return activeDrillChapter.questions;
+    if (modalRcaFilter === 'unclassified') {
+      return activeDrillChapter.questions.filter(q => !q.rcaClassification?.tag);
+    }
+    return activeDrillChapter.questions.filter(q => q.rcaClassification?.tag === modalRcaFilter);
+  }, [activeDrillChapter, modalRcaFilter]);
 
   const maxErrors = filteredChapters.length > 0 ? filteredChapters[0].totalErrors : 1;
   const subjectCfg = SUBJECT_CONFIG[currentSubjectName] || SUBJECT_CONFIG['Mathematics'];
@@ -755,47 +549,111 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
           {/* [C] Conceptual Gap */}
-          <div className="bg-white rounded-lg border border-purple-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-purple-50 flex items-center justify-center shrink-0 border border-purple-100">
-              <span className="font-mono text-[11px] font-black text-purple-700">[C]</span>
+          <div className="bg-white rounded-lg border border-purple-200/80 px-2.5 py-1.5 shadow-xs flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-6 h-6 rounded-md bg-purple-50 flex items-center justify-center shrink-0 border border-purple-100">
+                <span className="font-mono text-[11px] font-black text-purple-700">[C]</span>
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-bold text-purple-700 leading-none">{currentSubjectData.rcaTotals.C}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5 truncate">Concept Gap</div>
+              </div>
             </div>
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-purple-700 leading-none">{currentSubjectData.rcaTotals.C}</div>
-              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Conceptual Gap</div>
-            </div>
+            {onStartQuiz && currentSubjectData.rcaTotals.C > 0 && (
+              <button
+                type="button"
+                onClick={() => {
+                  const cQs = currentSubjectData.chapters.flatMap(ch => ch.questions.filter(q => q.rcaClassification?.tag === 'C'));
+                  handleStartDrillFromHeatmap('All Conceptual Gaps', cQs, '[C] Concept');
+                }}
+                className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-purple-600 hover:bg-purple-700 text-white transition-colors cursor-pointer shadow-xs flex items-center gap-1 shrink-0"
+                title={`Practice all ${currentSubjectData.rcaTotals.C} conceptual gap questions`}
+              >
+                <Play className="w-2.5 h-2.5 fill-current" />
+                <span>Drill</span>
+              </button>
+            )}
           </div>
 
           {/* [A] Silly Mistake */}
-          <div className="bg-white rounded-lg border border-rose-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
-              <span className="font-mono text-[11px] font-black text-rose-700">[A]</span>
+          <div className="bg-white rounded-lg border border-rose-200/80 px-2.5 py-1.5 shadow-xs flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-6 h-6 rounded-md bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
+                <span className="font-mono text-[11px] font-black text-rose-700">[A]</span>
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-bold text-rose-700 leading-none">{currentSubjectData.rcaTotals.A}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5 truncate">Silly Mistake</div>
+              </div>
             </div>
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-rose-700 leading-none">{currentSubjectData.rcaTotals.A}</div>
-              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Silly Mistake</div>
-            </div>
+            {onStartQuiz && currentSubjectData.rcaTotals.A > 0 && (
+              <button
+                type="button"
+                onClick={() => {
+                  const aQs = currentSubjectData.chapters.flatMap(ch => ch.questions.filter(q => q.rcaClassification?.tag === 'A'));
+                  handleStartDrillFromHeatmap('All Silly Mistakes', aQs, '[A] Silly');
+                }}
+                className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-rose-600 hover:bg-rose-700 text-white transition-colors cursor-pointer shadow-xs flex items-center gap-1 shrink-0"
+                title={`Practice all ${currentSubjectData.rcaTotals.A} silly mistake questions`}
+              >
+                <Play className="w-2.5 h-2.5 fill-current" />
+                <span>Drill</span>
+              </button>
+            )}
           </div>
 
           {/* [T] Time Trap */}
-          <div className="bg-white rounded-lg border border-amber-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center shrink-0 border border-amber-100">
-              <span className="font-mono text-[11px] font-black text-amber-700">[T]</span>
+          <div className="bg-white rounded-lg border border-amber-200/80 px-2.5 py-1.5 shadow-xs flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center shrink-0 border border-amber-100">
+                <span className="font-mono text-[11px] font-black text-amber-700">[T]</span>
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-bold text-amber-700 leading-none">{currentSubjectData.rcaTotals.T}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5 truncate">Time Trap</div>
+              </div>
             </div>
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-amber-700 leading-none">{currentSubjectData.rcaTotals.T}</div>
-              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Time / Ego Trap</div>
-            </div>
+            {onStartQuiz && currentSubjectData.rcaTotals.T > 0 && (
+              <button
+                type="button"
+                onClick={() => {
+                  const tQs = currentSubjectData.chapters.flatMap(ch => ch.questions.filter(q => q.rcaClassification?.tag === 'T'));
+                  handleStartDrillFromHeatmap('All Time Traps', tQs, '[T] Trap');
+                }}
+                className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-amber-600 hover:bg-amber-700 text-white transition-colors cursor-pointer shadow-xs flex items-center gap-1 shrink-0"
+                title={`Practice all ${currentSubjectData.rcaTotals.T} time trap questions`}
+              >
+                <Play className="w-2.5 h-2.5 fill-current" />
+                <span>Drill</span>
+              </button>
+            )}
           </div>
 
           {/* [G] Guesswork */}
-          <div className="bg-white rounded-lg border border-blue-200/80 px-2.5 py-1.5 shadow-xs flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100">
-              <span className="font-mono text-[11px] font-black text-blue-700">[G]</span>
+          <div className="bg-white rounded-lg border border-blue-200/80 px-2.5 py-1.5 shadow-xs flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-6 h-6 rounded-md bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100">
+                <span className="font-mono text-[11px] font-black text-blue-700">[G]</span>
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-bold text-blue-700 leading-none">{currentSubjectData.rcaTotals.G}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5 truncate">Guesswork</div>
+              </div>
             </div>
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-blue-700 leading-none">{currentSubjectData.rcaTotals.G}</div>
-              <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Guesswork Failed</div>
-            </div>
+            {onStartQuiz && currentSubjectData.rcaTotals.G > 0 && (
+              <button
+                type="button"
+                onClick={() => {
+                  const gQs = currentSubjectData.chapters.flatMap(ch => ch.questions.filter(q => q.rcaClassification?.tag === 'G'));
+                  handleStartDrillFromHeatmap('All Guesswork Failures', gQs, '[G] Guess');
+                }}
+                className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-blue-600 hover:bg-blue-700 text-white transition-colors cursor-pointer shadow-xs flex items-center gap-1 shrink-0"
+                title={`Practice all ${currentSubjectData.rcaTotals.G} guesswork failure questions`}
+              >
+                <Play className="w-2.5 h-2.5 fill-current" />
+                <span>Drill</span>
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -988,34 +846,82 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                   <>
                     {/* [C] Concept */}
                     <div className="col-span-1 flex justify-center">
-                      {item.rcaCounts.C > 0
-                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">{item.rcaCounts.C}</span>
-                        : <span className="text-slate-200 text-xs">—</span>
-                      }
+                      {item.rcaCounts.C > 0 ? (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const cQs = item.questions.filter(q => q.rcaClassification?.tag === 'C');
+                            handleStartDrillFromHeatmap(item.topic, cQs, '[C] Concept');
+                          }}
+                          className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-600 hover:text-white transition-colors cursor-pointer"
+                          title={`Practice ${item.rcaCounts.C} [C] Concept questions for ${item.topic}`}
+                        >
+                          {item.rcaCounts.C}
+                        </button>
+                      ) : (
+                        <span className="text-slate-200 text-xs">—</span>
+                      )}
                     </div>
 
                     {/* [A] Silly */}
                     <div className="col-span-1 flex justify-center">
-                      {item.rcaCounts.A > 0
-                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200">{item.rcaCounts.A}</span>
-                        : <span className="text-slate-200 text-xs">—</span>
-                      }
+                      {item.rcaCounts.A > 0 ? (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const aQs = item.questions.filter(q => q.rcaClassification?.tag === 'A');
+                            handleStartDrillFromHeatmap(item.topic, aQs, '[A] Silly');
+                          }}
+                          className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-600 hover:text-white transition-colors cursor-pointer"
+                          title={`Practice ${item.rcaCounts.A} [A] Silly mistake questions for ${item.topic}`}
+                        >
+                          {item.rcaCounts.A}
+                        </button>
+                      ) : (
+                        <span className="text-slate-200 text-xs">—</span>
+                      )}
                     </div>
 
                     {/* [T] Trap */}
                     <div className="col-span-1 flex justify-center">
-                      {item.rcaCounts.T > 0
-                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">{item.rcaCounts.T}</span>
-                        : <span className="text-slate-200 text-xs">—</span>
-                      }
+                      {item.rcaCounts.T > 0 ? (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const tQs = item.questions.filter(q => q.rcaClassification?.tag === 'T');
+                            handleStartDrillFromHeatmap(item.topic, tQs, '[T] Trap');
+                          }}
+                          className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-600 hover:text-white transition-colors cursor-pointer"
+                          title={`Practice ${item.rcaCounts.T} [T] Time trap questions for ${item.topic}`}
+                        >
+                          {item.rcaCounts.T}
+                        </button>
+                      ) : (
+                        <span className="text-slate-200 text-xs">—</span>
+                      )}
                     </div>
 
                     {/* [G] Guess */}
                     <div className="col-span-1 flex justify-center">
-                      {item.rcaCounts.G > 0
-                        ? <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">{item.rcaCounts.G}</span>
-                        : <span className="text-slate-200 text-xs">—</span>
-                      }
+                      {item.rcaCounts.G > 0 ? (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const gQs = item.questions.filter(q => q.rcaClassification?.tag === 'G');
+                            handleStartDrillFromHeatmap(item.topic, gQs, '[G] Guess');
+                          }}
+                          className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer"
+                          title={`Practice ${item.rcaCounts.G} [G] Guesswork questions for ${item.topic}`}
+                        >
+                          {item.rcaCounts.G}
+                        </button>
+                      ) : (
+                        <span className="text-slate-200 text-xs">—</span>
+                      )}
                     </div>
                   </>
                 )}
@@ -1073,7 +979,7 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                       </span>
                     </div>
                     <h2 className="text-2xl font-black text-white leading-tight">{activeDrillChapter.topic}</h2>
-                    <div className="flex items-center gap-3 mt-2">
+                    <div className="flex items-center gap-3 mt-2 flex-wrap">
                       {activeDrillChapter.wrongCount > 0 && (
                         <span className="text-white/80 text-xs font-bold flex items-center gap-1">
                           <XCircle className="w-3.5 h-3.5" /> {activeDrillChapter.wrongCount} wrong
@@ -1090,6 +996,134 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                         </span>
                       )}
                     </div>
+
+                    {/* In-Modal RCA Filter Tabs and Practice Button */}
+                    <div className="flex flex-wrap items-center justify-between gap-2 mt-3 pt-3 border-t border-white/20">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        <button
+                          type="button"
+                          onClick={() => setModalRcaFilter('all')}
+                          className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+                            modalRcaFilter === 'all'
+                              ? 'bg-white text-slate-900 shadow-xs'
+                              : 'bg-white/20 hover:bg-white/30 text-white'
+                          }`}
+                        >
+                          All ({activeDrillChapter.questions.length})
+                        </button>
+                        {(['C', 'A', 'T', 'G'] as const).map(tagKey => {
+                          const count = activeDrillChapter.rcaCounts[tagKey] || 0;
+                          const isSelected = modalRcaFilter === tagKey;
+                          const tagLabels = { C: 'Concept', A: 'Silly', T: 'Trap', G: 'Guess' };
+                          return (
+                            <button
+                              key={tagKey}
+                              type="button"
+                              onClick={() => setModalRcaFilter(tagKey)}
+                              className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1 cursor-pointer ${
+                                isSelected
+                                  ? 'bg-white text-slate-900 shadow-xs ring-2 ring-white/40'
+                                  : count > 0
+                                  ? 'bg-white/20 hover:bg-white/30 text-white'
+                                  : 'bg-white/10 text-white/50'
+                              }`}
+                            >
+                              <span className="font-mono">[{tagKey}]</span>
+                              <span>{tagLabels[tagKey]}</span>
+                              <span className="px-1 rounded-full text-[9px] bg-black/20 font-black">
+                                {count}
+                              </span>
+                            </button>
+                          );
+                        })}
+                        {activeDrillChapter.rcaCounts.unclassified > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setModalRcaFilter('unclassified')}
+                            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+                              modalRcaFilter === 'unclassified'
+                                ? 'bg-white text-slate-900 shadow-xs'
+                                : 'bg-white/20 hover:bg-white/30 text-white'
+                            }`}
+                          >
+                            <span>Unclassified</span>
+                            <span className="px-1 rounded-full text-[9px] bg-black/20 font-black ml-1">
+                              {activeDrillChapter.rcaCounts.unclassified}
+                            </span>
+                          </button>
+                        )}
+                      </div>
+
+                      {/* Drill & Ask Tommy Action Buttons */}
+                      <div className="flex items-center gap-2 flex-wrap shrink-0">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const scopedQuestions: AiFocusedQuestion[] = drillFilteredQuestions.map((q, idx) => ({
+                              id: q.id,
+                              qNum: idx + 1,
+                              question: q.question,
+                              options: q.options as any,
+                              correctAnswer: q.answer,
+                              userAnswer: (q as any).userAnswer,
+                              solution: q.solution,
+                              status: (q.errorType || 'wrong') as any,
+                              subject: activeDrillChapter.subject,
+                              topic: activeDrillChapter.topic,
+                              sourceType: (q as any).sourceType,
+                              sourceLabel: (q as any).sourceLabel,
+                              testName: (q as any).testName
+                            }));
+
+                            const hasFull = drillFilteredQuestions.some(q => (q as any).sourceType === 'full_mock');
+                            const hasSec = drillFilteredQuestions.some(q => (q as any).sourceType === 'sectional');
+                            const sourceScope = hasFull && hasSec ? 'mixed' : hasFull ? 'full_mock' : hasSec ? 'sectional' : 'subject_wise';
+
+                            openAiWithScope({
+                              type: 'topic',
+                              title: activeDrillChapter.topic,
+                              subject: activeDrillChapter.subject,
+                              sourceScope,
+                              sourceScopeLabel: sourceScope === 'full_mock'
+                                ? `Full Mock Errors (${activeDrillChapter.subject} • ${activeDrillChapter.topic})`
+                                : sourceScope === 'sectional'
+                                ? `Sectional Errors (${activeDrillChapter.subject} • ${activeDrillChapter.topic})`
+                                : `Subject-Wise Errors (${activeDrillChapter.subject} • ${activeDrillChapter.topic})`,
+                              stats: {
+                                totalQuestions: activeDrillChapter.totalErrors,
+                                wrong: activeDrillChapter.wrongCount,
+                                slow: activeDrillChapter.speedIssueCount,
+                                unattempted: activeDrillChapter.unattemptedCount
+                              },
+                              questions: scopedQuestions
+                            });
+                          }}
+                          className="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-xs font-bold rounded-xl transition-colors border border-white/20 flex items-center gap-1.5 cursor-pointer shadow-sm"
+                          title="Ask Tommy AI to analyze all errors in this chapter"
+                        >
+                          <Sparkles className="w-3 h-3 text-amber-300" />
+                          <span>Ask Tommy</span>
+                        </button>
+
+                        {onStartQuiz && drillFilteredQuestions.length > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const subLabel = modalRcaFilter === 'all'
+                                ? 'All Errors'
+                                : modalRcaFilter === 'unclassified'
+                                ? 'Unclassified'
+                                : `[${modalRcaFilter}]`;
+                              handleStartDrillFromHeatmap(activeDrillChapter.topic, drillFilteredQuestions, subLabel);
+                            }}
+                            className="px-3 py-1 bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black rounded-xl transition-colors shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                          >
+                            <Play className="w-3 h-3 fill-current" />
+                            <span>Practice {modalRcaFilter !== 'all' ? `[${modalRcaFilter}]` : 'All'} ({drillFilteredQuestions.length})</span>
+                          </button>
+                        )}
+                      </div>
+                    </div>
                   </div>
                   <button
                     onClick={() => setActiveDrillChapter(null)}
@@ -1102,36 +1136,94 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
 
               {/* Questions list */}
               <div className="flex-1 overflow-y-auto p-5 space-y-4">
-                {activeDrillChapter.questions.map((q, qIdx) => {
-                  const isWrong = q.errorType === 'wrong';
-                  const isSlow  = q.errorType === 'speed_issue';
+                {drillFilteredQuestions.length === 0 ? (
+                  <div className="py-12 text-center text-xs text-slate-400 font-medium">
+                    No questions match the selected RCA filter in this chapter.
+                  </div>
+                ) : (
+                  drillFilteredQuestions.map((q, qIdx) => {
+                    const isWrong = q.errorType === 'wrong';
+                    const isSlow  = q.errorType === 'speed_issue';
 
-                  return (
-                    <div key={q.id || qIdx} className="rounded-2xl border border-slate-200 bg-slate-50/50 overflow-hidden">
-                      {/* Question header */}
-                      <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100 flex-wrap gap-2">
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
-                          {q.rcaClassification && (
-                            <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold flex items-center gap-1 ${
-                              q.rcaClassification.tag === 'C' ? 'bg-purple-100 text-purple-800' :
-                              q.rcaClassification.tag === 'A' ? 'bg-rose-100 text-rose-800' :
-                              q.rcaClassification.tag === 'T' ? 'bg-amber-100 text-amber-800' :
-                              'bg-blue-100 text-blue-800'
+                    return (
+                      <div key={q.id || qIdx} className="rounded-2xl border border-slate-200 bg-slate-50/50 overflow-hidden">
+                        {/* Question header */}
+                        <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100 flex-wrap gap-2">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
+                            {q.rcaClassification && (
+                              <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold flex items-center gap-1 ${
+                                q.rcaClassification.tag === 'C' ? 'bg-purple-100 text-purple-800' :
+                                q.rcaClassification.tag === 'A' ? 'bg-rose-100 text-rose-800' :
+                                q.rcaClassification.tag === 'T' ? 'bg-amber-100 text-amber-800' :
+                                'bg-blue-100 text-blue-800'
+                              }`}>
+                                <span className="font-mono font-black">[{q.rcaClassification.tag}]</span>
+                                <span>{q.rcaClassification.tagName}</span>
+                              </span>
+                            )}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            {/* Origin Tag */}
+                            {((q as any).sourceType || (q as any).testName) && (
+                              <span className={`px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-wider border ${
+                                (q as any).sourceType === 'full_mock'
+                                  ? 'bg-purple-50 text-purple-700 border-purple-200'
+                                  : (q as any).sourceType === 'sectional'
+                                  ? 'bg-blue-50 text-blue-700 border-blue-200'
+                                  : 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                              }`}>
+                                {(q as any).sourceType === 'full_mock' ? 'Full Mock' : (q as any).sourceType === 'sectional' ? 'Sectional' : 'Subject-Wise'}
+                                {(q as any).testName ? ` • ${(q as any).testName}` : ''}
+                              </span>
+                            )}
+
+                            {/* Ask Tommy Button */}
+                            <button
+                              type="button"
+                              onClick={() => {
+                                window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
+                                  detail: {
+                                    questionNumber: qIdx + 1,
+                                    questionText: q.question,
+                                    options: q.options,
+                                    userAnswer: (q as any).userAnswer,
+                                    correctAnswer: q.answer,
+                                    solution: q.solution,
+                                    topic: activeDrillChapter.topic,
+                                    sourceType: (q as any).sourceType || 'subject_wise',
+                                    sourceLabel: (q as any).sourceLabel || ((q as any).sourceType === 'full_mock' ? 'Full Mock Test' : (q as any).sourceType === 'sectional' ? 'Sectional Test' : `Subject-Wise (${activeDrillChapter.subject})`),
+                                    testName: (q as any).testName
+                                  }
+                                }));
+                              }}
+                              className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white transition-colors flex items-center gap-1 cursor-pointer border border-purple-200"
+                              title="Ask Tommy to analyze this question"
+                            >
+                              <Sparkles className="w-2.5 h-2.5" />
+                              <span>Ask Tommy</span>
+                            </button>
+
+                            {onStartQuiz && (
+                              <button
+                                type="button"
+                                onClick={() => handleStartDrillFromHeatmap(activeDrillChapter.topic, [q], `Q${qIdx + 1}`)}
+                                className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white transition-colors flex items-center gap-1 cursor-pointer border border-indigo-200"
+                                title="Drill just this single question"
+                              >
+                                <Play className="w-2.5 h-2.5 fill-current" />
+                                <span>Drill This Q</span>
+                              </button>
+                            )}
+                            <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
+                              isWrong ? 'bg-red-100 text-red-700' :
+                              isSlow  ? 'bg-amber-100 text-amber-700' :
+                                        'bg-orange-100 text-orange-700'
                             }`}>
-                              <span className="font-mono font-black">[{q.rcaClassification.tag}]</span>
-                              <span>{q.rcaClassification.tagName}</span>
+                              {isWrong ? '✗ Wrong −0.5' : isSlow ? '⚡ Speed Issue' : '◯ Skipped'}
                             </span>
-                          )}
+                          </div>
                         </div>
-                        <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
-                          isWrong ? 'bg-red-100 text-red-700' :
-                          isSlow  ? 'bg-amber-100 text-amber-700' :
-                                    'bg-orange-100 text-orange-700'
-                        }`}>
-                          {isWrong ? '✗ Wrong −0.5' : isSlow ? '⚡ Speed Issue' : '◯ Skipped'}
-                        </span>
-                      </div>
 
                       <div className="p-4 space-y-3">
                         {/* Silly Mistake Note if classified under A */}
@@ -1235,14 +1327,14 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                                 type="button"
                                 onClick={() => {
                                   try {
+                                    const globalRaw = safeStorage.getItem('cgl_rca_global_store');
+                                    const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+                                    const qId = q.id || `${q.parentSubject || 'mock'}_${q.detectedTopic || 'topic'}`;
+                                    const textNorm = q.question ? q.question.trim().toLowerCase() : '';
+                                    delete globalStore[qId];
+                                    if (textNorm) delete globalStore[textNorm];
+                                    safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
                                     if (typeof window !== 'undefined') {
-                                      const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
-                                      const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
-                                      const qId = q.id || `${q.parentSubject || 'mock'}_${q.detectedTopic || 'topic'}`;
-                                      const textNorm = q.question ? q.question.trim().toLowerCase() : '';
-                                      delete globalStore[qId];
-                                      if (textNorm) delete globalStore[textNorm];
-                                      window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
                                       window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { qId, rca: null } }));
                                     }
                                   } catch {}
@@ -1291,7 +1383,8 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData }) => {
                       </div>
                     </div>
                   );
-                })}
+                })
+              )}
               </div>
 
               {/* Modal footer */}

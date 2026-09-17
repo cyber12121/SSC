@@ -25,8 +25,16 @@ import { normalizeAnswerKey } from './utils/mathSanitizer';
 import { openAiWithScope } from './utils/aiScopeHelper';
 import { AiFocusedQuestion } from './types/aiScope';
 import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
+import { MockChapterErrorsModal, MockChapterModalData, ModalFilterType } from './components/modals/MockChapterErrorsModal';
+import { SetPickerModal } from './components/modals/SetPickerModal';
+import { BookmarksView } from './components/BookmarksView';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
+import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap } from './utils/rcaHelper';
+import { RCATagType, RCAClassification } from './types';
+import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
 
-import { getCachedData, setCachedData } from './utils/cache';
+import { getCachedData, setCachedData, clearCachedData } from './utils/cache';
 
 const GK_ICONS: Record<string, any> = {
   Landmark,
@@ -164,90 +172,6 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
   return { rawMockData, rawBankData };
 };
 
-const getQuestionId = (chapter: Chapter, question: Question) => {
-  if (question.id) return question.id;
-  return `${chapter.subject}|${chapter.chapter_title}|${question.question}`.replace(/\s+/g, '_');
-};
-
-const getSubjectTheme = (subject: string) => {
-  const sub = (subject || '').toLowerCase();
-  if (sub.includes('math') || sub.includes('quant') || sub.includes('aptitude')) {
-    return {
-      name: 'Mathematics',
-      icon: Calculator,
-      gradient: 'from-violet-600 to-indigo-600',
-      textCol: 'text-violet-600',
-      bgLight: 'bg-violet-50',
-      borderCol: 'border-violet-200',
-      badge: 'bg-violet-100 text-violet-800 border-violet-200',
-      bar: 'bg-violet-600',
-    };
-  }
-  if (sub.includes('reason') || sub.includes('logic')) {
-    return {
-      name: 'Reasoning',
-      icon: Compass,
-      gradient: 'from-purple-600 to-fuchsia-600',
-      textCol: 'text-purple-600',
-      bgLight: 'bg-purple-50',
-      borderCol: 'border-purple-200',
-      badge: 'bg-purple-100 text-purple-800 border-purple-200',
-      bar: 'bg-purple-600',
-    };
-  }
-  if (sub.includes('english') || sub.includes('verbal')) {
-    return {
-      name: 'English',
-      icon: Languages,
-      gradient: 'from-emerald-500 to-teal-600',
-      textCol: 'text-emerald-600',
-      bgLight: 'bg-emerald-50',
-      borderCol: 'border-emerald-200',
-      badge: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-      bar: 'bg-emerald-600',
-    };
-  }
-  if (sub.includes('aware') || sub.includes('gk') || sub.includes('gs') || sub.includes('science')) {
-    return {
-      name: 'General Awareness',
-      icon: Globe2,
-      gradient: 'from-amber-500 to-orange-500',
-      textCol: 'text-amber-600',
-      bgLight: 'bg-amber-50',
-      borderCol: 'border-amber-200',
-      badge: 'bg-amber-100 text-amber-800 border-amber-200',
-      bar: 'bg-amber-500',
-    };
-  }
-  return {
-    name: subject || 'General',
-    icon: BookOpen,
-    gradient: 'from-slate-600 to-slate-700',
-    textCol: 'text-slate-600',
-    bgLight: 'bg-slate-50',
-    borderCol: 'border-slate-200',
-    badge: 'bg-slate-100 text-slate-800 border-slate-200',
-    bar: 'bg-slate-600',
-  };
-};
-
-const formatAttemptDate = (isoStr?: string) => {
-  if (!isoStr) return 'Recently';
-  try {
-    const d = new Date(isoStr);
-    if (isNaN(d.getTime())) return 'Recently';
-    return d.toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  } catch {
-    return 'Recently';
-  }
-};
-
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill' | 'mockScores'>('home');
   const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
@@ -286,17 +210,26 @@ export default function App() {
       })
       .catch(() => {});
 
-    const handleStorage = () => {
+    const handleStorage = async () => {
       try {
         const saved = safeStorage.getItem('cgl_mock_score_reports');
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.length > 0) {
+          if (Array.isArray(parsed)) {
             const synced = syncMockReports(parsed, initialMockReports as MockScoreReport[]);
             setMockReportsList(synced);
           }
         }
       } catch (e) {}
+
+      try {
+        await clearCachedData();
+        const fresh = await loadSubjectData();
+        if (fresh && Object.keys(fresh.rawMockData || {}).length > 0) {
+          setRawData(fresh);
+          await setCachedData(fresh);
+        }
+      } catch {}
     };
     window.addEventListener('storage', handleStorage);
     window.addEventListener('cgl_mock_reports_updated', handleStorage);
@@ -339,26 +272,31 @@ export default function App() {
   });
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
 
-  // Dashboard filter states
-  const [dashCategoryFilter, setDashCategoryFilter] = useState<'all' | 'chapterBank' | 'mockErrors'>('all');
-  const [dashSubjectFilter, setDashSubjectFilter] = useState<string>('all');
-  const [dashSearchQuery, setDashSearchQuery] = useState<string>('');
-  const [dashSort, setDashSort] = useState<'newest' | 'accuracy-desc' | 'accuracy-asc'>('newest');
-
-  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type)
-  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets'>(() => {
+  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA)
+  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca'>(() => {
     try {
       const saved = localStorage.getItem('mockViewMode');
-      return saved === 'buckets' ? 'buckets' : 'chapters';
+      return (saved === 'buckets' || saved === 'rca') ? saved : 'chapters';
     } catch {
       return 'chapters';
     }
   });
 
-  const setMockViewModePersisted = (mode: 'chapters' | 'buckets') => {
+  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca') => {
     setMockViewMode(mode);
     try { localStorage.setItem('mockViewMode', mode); } catch {}
   };
+
+  const [rcaSelectedFilter, setRcaSelectedFilter] = useState<'all' | RCATagType | 'unclassified'>('all');
+  const [rcaSearchQuery, setRcaSearchQuery] = useState<string>('');
+  const [rcaVersion, setRcaVersion] = useState(0);
+
+  useEffect(() => {
+    loadBundledMockRcaMap();
+    const handleRcaUpdated = () => setRcaVersion(v => v + 1);
+    window.addEventListener('cgl_rca_updated', handleRcaUpdated);
+    return () => window.removeEventListener('cgl_rca_updated', handleRcaUpdated);
+  }, []);
 
   // Mock Error Test Scope Filter: 'all' (combined) | 'full' (full tests) | 'sectional' (sectional tests)
   const [mockTestTypeFilter, setMockTestTypeFilter] = useState<'all' | 'full' | 'sectional'>(() => {
@@ -375,18 +313,26 @@ export default function App() {
     try { localStorage.setItem('mockTestTypeFilter', filter); } catch {}
   };
 
-  const [activeMockChapterModal, setActiveMockChapterModal] = useState<{
-    topic: string;
+  const [activeMockChapterModal, setActiveMockChapterModal] = useState<MockChapterModalData | null>(null);
+  const [modalActiveSet, setModalActiveSet] = useState<number | 'all'>('all');
+  const [modalErrorFilter, setModalErrorFilter] = useState<ModalFilterType>('all');
+  const [setPickerModal, setSetPickerModal] = useState<{
+    title: string;
+    subtitle?: string;
     subject: string;
-    total: number;
-    slow: number;
-    unattempted: number;
-    wrong: number;
-    questions: (Question & { errorType: 'speed_issue' | 'unattempted' | 'wrong' })[];
-    slowQuestions: Question[];
-    unattemptedQuestions: Question[];
-    wrongQuestions: Question[];
+    questions: Question[];
   } | null>(null);
+
+  // Bundled full mock questions dynamically loaded for unified error aggregation
+  const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    loadAllBundledMockQuestions().then(all => {
+      if (active) setBundledMockQuestions(all);
+    });
+    return () => { active = false; };
+  }, [rcaVersion]);
 
   // Resets all home/chapter navigation state and returns to home view
   const resetToHome = useCallback(() => {
@@ -519,6 +465,8 @@ export default function App() {
     });
     return map;
   }, [userResults]);
+
+  const dashboardStats = useMemo(() => computeDashboardStats(userResults), [userResults]);
 
   // Auth Listener
   useEffect(() => {
@@ -854,6 +802,18 @@ export default function App() {
     const filterLabel = category === 'mockErrors' && mockTestTypeFilter !== 'all'
       ? ` (${mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional'})`
       : '';
+
+    // In Mock Errors: if questions exceed 25, open the set picker modal
+    if (category === 'mockErrors' && allQuestions.length > 25) {
+      setSetPickerModal({
+        title: `All ${subjectName} Questions${filterLabel}`,
+        subtitle: `${allQuestions.length} questions in this subject`,
+        subject: subjectName,
+        questions: allQuestions
+      });
+      return;
+    }
+
     const virtualChapter: Chapter = {
       chapter_num: 0,
       chapter_title: `All ${subjectName} Questions${filterLabel}`,
@@ -881,6 +841,18 @@ export default function App() {
       alert(`No questions available in topic "${topicName}" yet.`);
       return;
     }
+
+    // In Mock Errors: if topic questions exceed 25, open the set picker modal
+    if (category === 'mockErrors' && filteredQuestions.length > 25) {
+      setSetPickerModal({
+        title: `${chapter.chapter_title} • ${topicName}`,
+        subtitle: `${filteredQuestions.length} questions in this topic`,
+        subject: chapter.subject || selectedSubject || 'All Subjects',
+        questions: filteredQuestions
+      });
+      return;
+    }
+
     const virtualChapter: Chapter = {
       chapter_num: chapter.chapter_num,
       chapter_title: `${chapter.chapter_title} • ${topicName}`,
@@ -1240,7 +1212,7 @@ export default function App() {
     const subjectAttempts = userResults.filter(r => r.subject === subjectName);
     let subjectAccuracy: number | undefined = undefined;
     if (subjectAttempts.length > 0) {
-      const totQ = subjectAttempts.reduce((acc, r) => acc + (r.total_questions || 0), 0);
+      const totQ = subjectAttempts.reduce((acc, r) => acc + (r.totalQuestions || 0), 0);
       const totC = subjectAttempts.reduce((acc, r) => acc + (r.score || 0), 0);
       if (totQ > 0) {
         subjectAccuracy = Math.round((totC / totQ) * 100);
@@ -1267,6 +1239,25 @@ export default function App() {
     questions: Question[],
     stats?: { total?: number; wrong?: number; slow?: number; unattempted?: number }
   ) => {
+    // Determine overall source category across questions
+    const hasFull = (questions || []).some(q => (q as any).sourceType === 'full_mock' || classifyTestType(q) === 'full');
+    const hasSectional = (questions || []).some(q => (q as any).sourceType === 'sectional' || classifyTestType(q) === 'sectional');
+    const hasSubjectWise = (questions || []).some(q => (q as any).sourceType === 'subject_wise');
+
+    let sourceScope: 'full_mock' | 'sectional' | 'subject_wise' | 'mixed' = 'subject_wise';
+    let sourceScopeLabel = `Subject-Wise Mock Errors (${subject} • ${topicName})`;
+
+    if (mockTestTypeFilter === 'full' || (hasFull && !hasSectional && !hasSubjectWise)) {
+      sourceScope = 'full_mock';
+      sourceScopeLabel = `Full Mock Test Errors (${subject} • ${topicName})`;
+    } else if (mockTestTypeFilter === 'sectional' || (hasSectional && !hasFull && !hasSubjectWise)) {
+      sourceScope = 'sectional';
+      sourceScopeLabel = `Sectional Test Errors (${subject} • ${topicName})`;
+    } else if (hasFull && hasSectional) {
+      sourceScope = 'mixed';
+      sourceScopeLabel = `Full & Sectional Test Errors (${subject} • ${topicName})`;
+    }
+
     const scopedQuestions: AiFocusedQuestion[] = (questions || []).map((q, idx) => {
       let optionsMap: Record<string, string> | undefined = undefined;
       if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
@@ -1286,6 +1277,18 @@ export default function App() {
         };
       }
 
+      const qTestType = classifyTestType(q);
+      const qSourceType: 'full_mock' | 'sectional' | 'subject_wise' = (q as any).sourceType || (
+        qTestType === 'sectional' ? 'sectional' : ((q as any).mockId || (q as any).testName ? 'full_mock' : 'subject_wise')
+      );
+      const qSourceLabel = (q as any).sourceLabel || (
+        qSourceType === 'full_mock'
+          ? ((q as any).testName ? `Full Mock: ${(q as any).testName}` : 'Full Mock Test')
+          : qSourceType === 'sectional'
+          ? ((q as any).testName ? `Sectional Test: ${(q as any).testName}` : 'Sectional Test')
+          : `Subject-Wise: ${subject}`
+      );
+
       return {
         id: q.id,
         qNum: idx + 1,
@@ -1297,7 +1300,10 @@ export default function App() {
         status: ((q as any).status || (q as any).errorType || 'wrong') as any,
         subject,
         topic: topicName,
-        rcaReason: (q as any).rcaReason || (q as any).rca?.reason || undefined
+        rcaReason: (q as any).rcaReason || (q as any).rca?.reason || undefined,
+        sourceType: qSourceType,
+        sourceLabel: qSourceLabel,
+        testName: (q as any).testName
       };
     });
 
@@ -1305,6 +1311,8 @@ export default function App() {
       type: 'topic',
       title: topicName,
       subject,
+      sourceScope,
+      sourceScopeLabel,
       stats: {
         totalQuestions: stats?.total || questions.length,
         wrong: stats?.wrong,
@@ -1315,224 +1323,127 @@ export default function App() {
     });
   };
 
-  const dashboardStats = useMemo(() => {
-    if (!userResults || userResults.length === 0) {
-      return {
-        totalQuizzes: 0,
-        totalQuestions: 0,
-        totalCorrect: 0,
-        overallAccuracy: 0,
-        totalTimeSeconds: 0,
-        avgTimePerQ: 0,
-        mockCount: 0,
-        practiceCount: 0,
-        subjectStats: {
-          'Mathematics': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-          'Reasoning': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-          'English': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-          'General Awareness': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
-        } as Record<string, { totalQ: number; correct: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }>
-      };
-    }
-
-    let totalQ = 0;
-    let totalCorrect = 0;
-    let totalTime = 0;
-    let mockCount = 0;
-    let practiceCount = 0;
-
-    const subjectStats: Record<string, { totalQ: number; correct: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }> = {
-      'Mathematics': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-      'Reasoning': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-      'English': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-      'General Awareness': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
-    };
-
-    userResults.forEach(r => {
-      const qCount = Number(r.totalQuestions) || 0;
-      const score = Number(r.score) || 0;
-      const time = Number(r.totalTime) || 0;
-
-      totalQ += qCount;
-      totalCorrect += score;
-      totalTime += time;
-
-      if (r.mode === 'mock') mockCount++;
-      else practiceCount++;
-
-      const theme = getSubjectTheme(r.subject);
-      const subKey = theme.name;
-
-      if (!subjectStats[subKey]) {
-        subjectStats[subKey] = { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 };
-      }
-      subjectStats[subKey].quizzes += 1;
-      subjectStats[subKey].totalQ += qCount;
-      subjectStats[subKey].correct += score;
-      subjectStats[subKey].totalTime += time;
+  // Unified aggregated mock error data (deduplicated across mock_errors, bundled tests, cached tests)
+  const aggregatedMockErrorsData = useMemo(() => {
+    return aggregateMockErrors({
+      mockData,
+      bundledQuestions: bundledMockQuestions,
+      testScopeFilter: mockTestTypeFilter,
+      gkFilter: mockGKFilter,
+      selectedSubject
     });
-
-    Object.keys(subjectStats).forEach(sub => {
-      const s = subjectStats[sub];
-      s.accuracy = s.totalQ > 0 ? Math.round((s.correct / s.totalQ) * 100) : 0;
-      s.avgTime = s.totalQ > 0 ? Math.round(s.totalTime / s.totalQ) : 0;
-    });
-
-    const overallAccuracy = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
-    const avgTimePerQ = totalQ > 0 ? Math.round(totalTime / totalQ) : 0;
-
-    return {
-      totalQuizzes: userResults.length,
-      totalQuestions: totalQ,
-      totalCorrect,
-      overallAccuracy,
-      totalTimeSeconds: totalTime,
-      avgTimePerQ,
-      mockCount,
-      practiceCount,
-      subjectStats
-    };
-  }, [userResults]);
-
-  const filteredUserResults = useMemo(() => {
-    return userResults
-      .filter(r => {
-        if (dashCategoryFilter !== 'all' && r.category !== dashCategoryFilter) return false;
-        if (dashSubjectFilter !== 'all') {
-          const theme = getSubjectTheme(r.subject);
-          if (theme.name !== dashSubjectFilter && r.subject !== dashSubjectFilter) return false;
-        }
-        if (dashSearchQuery.trim()) {
-          const q = dashSearchQuery.toLowerCase();
-          const matchTitle = (r.chapter_title || '').toLowerCase().includes(q);
-          const matchSub = (r.subject || '').toLowerCase().includes(q);
-          if (!matchTitle && !matchSub) return false;
-        }
-        return true;
-      })
-      .sort((a, b) => {
-        if (dashSort === 'newest') {
-          return new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime();
-        }
-        const accA = a.totalQuestions > 0 ? a.score / a.totalQuestions : 0;
-        const accB = b.totalQuestions > 0 ? b.score / b.totalQuestions : 0;
-        if (dashSort === 'accuracy-desc') return accB - accA;
-        if (dashSort === 'accuracy-asc') return accA - accB;
-        return 0;
-      });
-  }, [userResults, dashCategoryFilter, dashSubjectFilter, dashSearchQuery, dashSort]);
+  }, [mockData, bundledMockQuestions, mockTestTypeFilter, mockGKFilter, selectedSubject, rcaVersion]);
 
   // Test scope question counts for currently selected subject in Mock Errors
   const mockScopeCounts = useMemo(() => {
-    if (category !== 'mockErrors' || !selectedSubject) return { all: 0, full: 0, sectional: 0 };
-    const chapters = currentData[selectedSubject] || [];
-    let all = 0, full = 0, sectional = 0;
-    const seen = new Set<string>();
-    chapters.forEach(ch => {
-      ch.questions.forEach(q => {
-        const text = (q.question || q.questionText || '').trim().toLowerCase();
-        const key = text ? `${selectedSubject}|${text}` : (q.id || '');
-        if (!seen.has(key)) {
-          seen.add(key);
-          all++;
-          const type = classifyTestType(q);
-          if (type === 'full') full++;
-          else if (type === 'sectional') sectional++;
-        }
-      });
-    });
-    return { all, full, sectional };
-  }, [category, selectedSubject, currentData]);
+    if (!selectedSubject) return { all: 0, full: 0, sectional: 0 };
+    return aggregatedMockErrorsData.mockScopeCounts[selectedSubject] || { all: 0, full: 0, sectional: 0 };
+  }, [aggregatedMockErrorsData, selectedSubject]);
 
-  // Clubbed Mock Error Chapters: group all questions chapter-wise across Slow, Unattempted, and Wrong
+  // Clubbed Mock Error Chapters: deduplicated chapter-wise errors with RCA classifications
   const clubbedMockChapters = useMemo(() => {
     if (category !== 'mockErrors' || !selectedSubject) return [];
-    const chapters = currentData[selectedSubject] || [];
-    const map: Record<string, {
-      topic: string;
-      subject: string;
-      total: number;
-      slow: number;
-      unattempted: number;
-      wrong: number;
-      questions: (Question & { errorType: 'speed_issue' | 'unattempted' | 'wrong' })[];
-      slowQuestions: Question[];
-      unattemptedQuestions: Question[];
-      wrongQuestions: Question[];
-    }> = {};
+    return aggregatedMockErrorsData.clubbedChapters[selectedSubject] || [];
+  }, [category, selectedSubject, aggregatedMockErrorsData]);
 
-    chapters.forEach(ch => {
-      const titleLower = ch.chapter_title.toLowerCase();
-      let errorType: 'speed_issue' | 'unattempted' | 'wrong' = 'wrong';
-      if (titleLower.includes('speed') || titleLower.includes('slow')) {
-        errorType = 'speed_issue';
-      } else if (titleLower.includes('unattempted') || titleLower.includes('skipped') || titleLower.includes('left')) {
-        errorType = 'unattempted';
-      } else if (titleLower.includes('wrong') || titleLower.includes('incorrect')) {
-        errorType = 'wrong';
-      }
+  // Subject-level RCA statistics across all mock chapters
+  const subjectRcaData = useMemo(() => {
+    if (!selectedSubject) {
+      return {
+        totals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+        questionsByTag: { C: [], A: [], T: [], G: [], unclassified: [] }
+      };
+    }
+    return aggregatedMockErrorsData.subjectRcaData[selectedSubject] || {
+      totals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+      questionsByTag: { C: [], A: [], T: [], G: [], unclassified: [] }
+    };
+  }, [selectedSubject, aggregatedMockErrorsData]);
 
-      ch.questions.forEach(q => {
-        if (mockTestTypeFilter !== 'all') {
-          if (classifyTestType(q) !== mockTestTypeFilter) return;
-        }
+  // Filtered chapters for RCA table view
+  const filteredRcaChapters = useMemo(() => {
+    let list = clubbedMockChapters;
+    if (rcaSelectedFilter !== 'all') {
+      list = list.filter(ch => ((ch.rcaCounts?.[rcaSelectedFilter]) || 0) > 0);
+    }
+    if (rcaSearchQuery.trim()) {
+      const q = rcaSearchQuery.toLowerCase();
+      list = list.filter(ch => ch.topic.toLowerCase().includes(q));
+    }
+    return list;
+  }, [clubbedMockChapters, rcaSelectedFilter, rcaSearchQuery]);
 
-        const topic = normalizeTopicTitle(detectTopic(q, selectedSubject));
-        if (selectedSubject === 'General Awareness' && mockGKFilter !== 'all') {
-          if (getTopicGKSubject(topic) !== mockGKFilter) return;
-        }
-
-        if (!map[topic]) {
-          map[topic] = {
-            topic,
-            subject: selectedSubject,
-            total: 0,
-            slow: 0,
-            unattempted: 0,
-            wrong: 0,
-            questions: [],
-            slowQuestions: [],
-            unattemptedQuestions: [],
-            wrongQuestions: []
-          };
-        }
-        map[topic].total += 1;
-        const qWithError = { ...q, errorType };
-        map[topic].questions.push(qWithError);
-
-        if (errorType === 'speed_issue') {
-          map[topic].slow += 1;
-          map[topic].slowQuestions.push(q);
-        } else if (errorType === 'unattempted') {
-          map[topic].unattempted += 1;
-          map[topic].unattemptedQuestions.push(q);
-        } else {
-          map[topic].wrong += 1;
-          map[topic].wrongQuestions.push(q);
-        }
+  const startSubjectRcaQuiz = (tag: RCATagType | 'unclassified') => {
+    if (!selectedSubject) return;
+    const questions = subjectRcaData.questionsByTag[tag] || [];
+    if (questions.length === 0) {
+      alert('No error questions found in this RCA category.');
+      return;
+    }
+    const cfg = RCA_TAG_CONFIG[tag];
+    const tagLabel = tag === 'unclassified' ? 'Unclassified' : `[${tag}] ${cfg.label}`;
+    if (questions.length > 25) {
+      setSetPickerModal({
+        title: `${selectedSubject} • ${tagLabel}`,
+        subtitle: `${questions.length} questions categorized under ${cfg.label}`,
+        subject: selectedSubject,
+        questions
       });
-    });
-
-    return Object.values(map).sort((a, b) => b.total - a.total);
-  }, [category, selectedSubject, currentData, mockGKFilter, mockTestTypeFilter]);
+      return;
+    }
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `${selectedSubject} • ${tagLabel}`,
+      subject: selectedSubject,
+      subject_id: selectedSubject.toLowerCase().replace(/\s+/g, '_'),
+      questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+      section: 'mockErrors',
+      is_test: true
+    };
+    startQuiz(virtualChapter);
+  };
 
   const startClubbedChapterQuiz = (
     topicName: string,
     questions: Question[],
-    subType?: 'slow' | 'unattempted' | 'wrong'
+    subType?: 'slow' | 'unattempted' | 'wrong' | 'C' | 'A' | 'T' | 'G' | 'unclassified',
+    setNumber?: number
   ) => {
     if (!selectedSubject) return;
     if (!questions || questions.length === 0) {
       alert(`No questions available for this drill.`);
       return;
     }
-    const label = subType === 'slow' ? ' • Slow' : subType === 'unattempted' ? ' • Skipped' : subType === 'wrong' ? ' • Wrong' : '';
+    const SET_SIZE = 25;
+    let targetQuestions = questions;
+    let setLabel = '';
+    if (setNumber && setNumber > 0) {
+      const startIdx = (setNumber - 1) * SET_SIZE;
+      const endIdx = Math.min(startIdx + SET_SIZE, questions.length);
+      targetQuestions = questions.slice(startIdx, endIdx);
+      setLabel = ` • Set ${setNumber} (Q${startIdx + 1}-${endIdx})`;
+    }
+    const rcaTagNames: Record<string, string> = {
+      C: 'Conceptual Gap',
+      A: 'Silly Mistake',
+      T: 'Time Trap',
+      G: 'Guesswork',
+      unclassified: 'Unclassified'
+    };
+    let label = '';
+    if (subType === 'slow') label = ' • Slow';
+    else if (subType === 'unattempted') label = ' • Skipped';
+    else if (subType === 'wrong') label = ' • Wrong';
+    else if (subType && rcaTagNames[subType]) label = ` • [${subType.toUpperCase()}] ${rcaTagNames[subType]}`;
+
     const virtualChapter: Chapter = {
-      chapter_num: 0,
-      chapter_title: `${topicName}${label}`,
+      chapter_num: setNumber || 0,
+      chapter_title: `${topicName}${label}${setLabel}`,
       subject: selectedSubject,
       subject_id: selectedSubject.toLowerCase().replace(/\s+/g, '_'),
-      questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+      questions: targetQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+      section: 'mockErrors',
+      is_test: true
     };
     startQuiz(virtualChapter);
   };
@@ -2492,7 +2403,7 @@ export default function App() {
                             </button>
                           </div>
 
-                          {/* Toggle Mode: Chapter-Wise vs By Error Bucket */}
+                          {/* Toggle Mode: Chapter-Wise vs By Error Bucket vs RCA Analysis */}
                           <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
                             <button
                               onClick={() => setMockViewModePersisted('chapters')}
@@ -2517,6 +2428,18 @@ export default function App() {
                             >
                               <Layers className="w-3.5 h-3.5" />
                               By Error Type
+                            </button>
+                            <button
+                              onClick={() => setMockViewModePersisted('rca')}
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                                mockViewMode === 'rca'
+                                  ? 'bg-white text-indigo-700 shadow-xs'
+                                  : 'text-purple-600 hover:text-purple-800'
+                              }`}
+                              title="Root Cause Analysis: [C] Concept, [A] Silly, [T] Time Trap, [G] Guesswork"
+                            >
+                              <Target className="w-3.5 h-3.5 text-purple-600" />
+                              RCA Analysis
                             </button>
                           </div>
 
@@ -2617,122 +2540,482 @@ export default function App() {
 
                           {/* Rows */}
                           <div className="divide-y divide-slate-100">
-                            {clubbedMockChapters.map((ch, idx) => (
-                              <div
-                                key={ch.topic}
-                                onClick={() => setActiveMockChapterModal(ch)}
-                                className="group px-4 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-indigo-50/30 transition-all cursor-pointer"
-                              >
-                                {/* Left details */}
-                                <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                                  <span className="w-5 h-5 rounded-md bg-slate-100 group-hover:bg-indigo-100 group-hover:text-indigo-700 text-slate-500 text-[10px] font-bold flex items-center justify-center shrink-0 transition-colors">
-                                    #{idx + 1}
-                                  </span>
-                                  <div className="min-w-0">
-                                    <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
-                                      {ch.topic}
-                                    </h4>
-                                    <span className="text-[10px] text-slate-400 font-medium sm:hidden">
-                                      Click to view {ch.total} questions
+                            {clubbedMockChapters.map((ch, idx) => {
+                              const totalSets = Math.ceil(ch.total / 25);
+                              return (
+                                <div
+                                  key={ch.topic}
+                                  onClick={() => {
+                                    setActiveMockChapterModal(ch);
+                                    setModalErrorFilter('all');
+                                    setModalActiveSet(ch.total > 25 ? 1 : 'all');
+                                  }}
+                                  className="group px-4 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-indigo-50/30 transition-all cursor-pointer"
+                                >
+                                  {/* Left details */}
+                                  <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                                    <span className="w-5 h-5 rounded-md bg-slate-100 group-hover:bg-indigo-100 group-hover:text-indigo-700 text-slate-500 text-[10px] font-bold flex items-center justify-center shrink-0 transition-colors">
+                                      #{idx + 1}
                                     </span>
-                                  </div>
-                                </div>
-
-                                {/* Right counts & practice button */}
-                                <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-4 shrink-0">
-                                  {/* Slow */}
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      if (ch.slow > 0) startClubbedChapterQuiz(ch.topic, ch.slowQuestions, 'slow');
-                                    }}
-                                    disabled={ch.slow === 0}
-                                    className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
-                                      ch.slow > 0
-                                        ? 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100'
-                                        : 'text-slate-300 bg-slate-50 cursor-default'
-                                    }`}
-                                    title={ch.slow > 0 ? `Practice ${ch.slow} slow questions` : 'No slow questions'}
-                                  >
-                                    <Zap className="w-3 h-3 shrink-0" />
-                                    <span>{ch.slow}</span>
-                                  </button>
-
-                                  {/* Wrong */}
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      if (ch.wrong > 0) startClubbedChapterQuiz(ch.topic, ch.wrongQuestions, 'wrong');
-                                    }}
-                                    disabled={ch.wrong === 0}
-                                    className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
-                                      ch.wrong > 0
-                                        ? 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100'
-                                        : 'text-slate-300 bg-slate-50 cursor-default'
-                                    }`}
-                                    title={ch.wrong > 0 ? `Practice ${ch.wrong} wrong questions` : 'No wrong questions'}
-                                  >
-                                    <XCircle className="w-3 h-3 shrink-0" />
-                                    <span>{ch.wrong}</span>
-                                  </button>
-
-                                  {/* Skipped */}
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      if (ch.unattempted > 0) startClubbedChapterQuiz(ch.topic, ch.unattemptedQuestions, 'unattempted');
-                                    }}
-                                    disabled={ch.unattempted === 0}
-                                    className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
-                                      ch.unattempted > 0
-                                        ? 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100'
-                                        : 'text-slate-300 bg-slate-50 cursor-default'
-                                    }`}
-                                    title={ch.unattempted > 0 ? `Practice ${ch.unattempted} skipped questions` : 'No skipped questions'}
-                                  >
-                                    <AlertCircle className="w-3 h-3 shrink-0" />
-                                    <span>{ch.unattempted}</span>
-                                  </button>
-
-                                  {/* Total */}
-                                  <div className="w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center gap-1">
-                                    <Flame className="w-3 h-3 text-indigo-600 shrink-0" />
-                                    <span>{ch.total}</span>
+                                    <div className="min-w-0">
+                                      <div className="flex items-center gap-1.5">
+                                        <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
+                                          {ch.topic}
+                                        </h4>
+                                        {ch.total > 25 && (
+                                          <span className="shrink-0 px-1.5 py-0.2 text-[9px] font-extrabold rounded-md bg-indigo-100 text-indigo-700 border border-indigo-200/60">
+                                            {totalSets} Sets
+                                          </span>
+                                        )}
+                                      </div>
+                                      <div className="flex items-center gap-1 mt-0.5 flex-wrap">
+                                        {ch.rcaCounts?.C > 0 && (
+                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-purple-50 text-purple-700 border border-purple-200" title={`${ch.rcaCounts.C} [C] Conceptual Gap questions`}>
+                                            C:{ch.rcaCounts.C}
+                                          </span>
+                                        )}
+                                        {ch.rcaCounts?.A > 0 && (
+                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-rose-50 text-rose-700 border border-rose-200" title={`${ch.rcaCounts.A} [A] Silly Mistake questions`}>
+                                            A:{ch.rcaCounts.A}
+                                          </span>
+                                        )}
+                                        {ch.rcaCounts?.T > 0 && (
+                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-amber-50 text-amber-700 border border-amber-200" title={`${ch.rcaCounts.T} [T] Time Trap questions`}>
+                                            T:{ch.rcaCounts.T}
+                                          </span>
+                                        )}
+                                        {ch.rcaCounts?.G > 0 && (
+                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-blue-50 text-blue-700 border border-blue-200" title={`${ch.rcaCounts.G} [G] Guesswork questions`}>
+                                            G:{ch.rcaCounts.G}
+                                          </span>
+                                        )}
+                                        <span className="text-[10px] text-slate-400 font-medium sm:hidden">
+                                          Click to view {ch.total} questions {ch.total > 25 ? `(${totalSets} sets of 25)` : ''}
+                                        </span>
+                                      </div>
+                                    </div>
                                   </div>
 
-                                  {/* Practice All Button */}
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      startClubbedChapterQuiz(ch.topic, ch.questions);
-                                    }}
-                                    className="w-16 sm:w-20 py-1 rounded-lg text-[11px] font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95"
-                                    title={`Start quiz with all ${ch.total} questions for ${ch.topic}`}
-                                  >
-                                    <Play className="w-2.5 h-2.5 fill-current" />
-                                    Practice
-                                  </button>
+                                  {/* Right counts & practice button */}
+                                  <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-4 shrink-0">
+                                    {/* Slow */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (ch.slow > 25) {
+                                          setActiveMockChapterModal(ch);
+                                          setModalErrorFilter('slow');
+                                          setModalActiveSet(1);
+                                        } else if (ch.slow > 0) {
+                                          startClubbedChapterQuiz(ch.topic, ch.slowQuestions, 'slow');
+                                        }
+                                      }}
+                                      disabled={ch.slow === 0}
+                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
+                                        ch.slow > 0
+                                          ? 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 cursor-pointer'
+                                          : 'text-slate-300 bg-slate-50 cursor-default'
+                                      }`}
+                                      title={ch.slow > 25 ? `View ${ch.slow} slow questions in sets` : ch.slow > 0 ? `Practice ${ch.slow} slow questions` : 'No slow questions'}
+                                    >
+                                      <Zap className="w-3 h-3 shrink-0" />
+                                      <span>{ch.slow}</span>
+                                    </button>
 
-                                  {/* Ask AI Button */}
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      handleAskAiTopic(ch.topic, selectedSubject || 'All Subjects', ch.questions, {
-                                        total: ch.total,
-                                        wrong: ch.wrong,
-                                        slow: ch.slow,
-                                        unattempted: ch.unattempted
-                                      });
-                                    }}
-                                    className="px-2 py-1 rounded-lg text-[11px] font-semibold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95 whitespace-nowrap"
-                                    title={`Ask Tommy AI to analyze ${ch.topic} mistakes`}
-                                  >
-                                    <Sparkles className="w-2.5 h-2.5 text-violet-500 group-hover:text-white" />
-                                    <span>AI</span>
-                                  </button>
+                                    {/* Wrong */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (ch.wrong > 25) {
+                                          setActiveMockChapterModal(ch);
+                                          setModalErrorFilter('wrong');
+                                          setModalActiveSet(1);
+                                        } else if (ch.wrong > 0) {
+                                          startClubbedChapterQuiz(ch.topic, ch.wrongQuestions, 'wrong');
+                                        }
+                                      }}
+                                      disabled={ch.wrong === 0}
+                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
+                                        ch.wrong > 0
+                                          ? 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 cursor-pointer'
+                                          : 'text-slate-300 bg-slate-50 cursor-default'
+                                      }`}
+                                      title={ch.wrong > 25 ? `View ${ch.wrong} wrong questions in sets` : ch.wrong > 0 ? `Practice ${ch.wrong} wrong questions` : 'No wrong questions'}
+                                    >
+                                      <XCircle className="w-3 h-3 shrink-0" />
+                                      <span>{ch.wrong}</span>
+                                    </button>
+
+                                    {/* Skipped */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (ch.unattempted > 25) {
+                                          setActiveMockChapterModal(ch);
+                                          setModalErrorFilter('unattempted');
+                                          setModalActiveSet(1);
+                                        } else if (ch.unattempted > 0) {
+                                          startClubbedChapterQuiz(ch.topic, ch.unattemptedQuestions, 'unattempted');
+                                        }
+                                      }}
+                                      disabled={ch.unattempted === 0}
+                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
+                                        ch.unattempted > 0
+                                          ? 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 cursor-pointer'
+                                          : 'text-slate-300 bg-slate-50 cursor-default'
+                                      }`}
+                                      title={ch.unattempted > 25 ? `View ${ch.unattempted} skipped questions in sets` : ch.unattempted > 0 ? `Practice ${ch.unattempted} skipped questions` : 'No skipped questions'}
+                                    >
+                                      <AlertCircle className="w-3 h-3 shrink-0" />
+                                      <span>{ch.unattempted}</span>
+                                    </button>
+
+                                    {/* Total */}
+                                    <div className="w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center gap-1">
+                                      <Flame className="w-3 h-3 text-indigo-600 shrink-0" />
+                                      <span>{ch.total}</span>
+                                    </div>
+
+                                    {/* Practice / Sets Button */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (ch.total > 25) {
+                                          setActiveMockChapterModal(ch);
+                                          setModalErrorFilter('all');
+                                          setModalActiveSet(1);
+                                        } else {
+                                          startClubbedChapterQuiz(ch.topic, ch.questions);
+                                        }
+                                      }}
+                                      className="w-16 sm:w-20 py-1 rounded-lg text-[11px] font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95"
+                                      title={ch.total > 25 ? `View ${totalSets} sets of 25 for ${ch.topic}` : `Start quiz with all ${ch.total} questions for ${ch.topic}`}
+                                    >
+                                      <Play className="w-2.5 h-2.5 fill-current" />
+                                      {ch.total > 25 ? 'Sets' : 'Practice'}
+                                    </button>
+
+                                    {/* Ask AI Button */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleAskAiTopic(ch.topic, selectedSubject || 'All Subjects', ch.questions, {
+                                          total: ch.total,
+                                          wrong: ch.wrong,
+                                          slow: ch.slow,
+                                          unattempted: ch.unattempted
+                                        });
+                                      }}
+                                      className="px-2 py-1 rounded-lg text-[11px] font-semibold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95 whitespace-nowrap"
+                                      title={`Ask Tommy AI to analyze ${ch.topic} mistakes`}
+                                    >
+                                      <Sparkles className="w-2.5 h-2.5 text-violet-500 group-hover:text-white" />
+                                      <span>AI</span>
+                                    </button>
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ) : mockViewMode === 'rca' ? (
+                        /* RCA Analysis 4-Bucket View with Practice */
+                        <div className="space-y-3">
+                          {/* 5 KPI Metric Cards for RCA Buckets */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2">
+                            {(['C', 'A', 'T', 'G', 'unclassified'] as const).map(tagKey => {
+                              const cfg = RCA_TAG_CONFIG[tagKey];
+                              const count = subjectRcaData.totals[tagKey] || 0;
+                              const isSelected = rcaSelectedFilter === tagKey;
+                              return (
+                                <div
+                                  key={tagKey}
+                                  onClick={() => setRcaSelectedFilter(prev => prev === tagKey ? 'all' : tagKey)}
+                                  className={`p-3 rounded-xl border transition-all cursor-pointer shadow-xs flex flex-col justify-between ${
+                                    isSelected
+                                      ? 'bg-slate-900 text-white border-slate-900 ring-2 ring-indigo-500/40'
+                                      : 'bg-white hover:border-slate-300 border-slate-200/80 text-slate-900'
+                                  }`}
+                                >
+                                  <div>
+                                    <div className="flex items-center justify-between gap-1.5 mb-1.5">
+                                      <span className={`inline-flex items-center gap-1 text-[10px] font-mono font-black px-2 py-0.5 rounded-md ${
+                                        isSelected ? 'bg-white/20 text-white' : cfg.lightClass
+                                      }`}>
+                                        {tagKey !== 'unclassified' ? `[${tagKey}]` : '•'} {cfg.shortLabel}
+                                      </span>
+                                      <span className={`text-lg font-black ${isSelected ? 'text-white' : ''}`}>
+                                        {count}
+                                      </span>
+                                    </div>
+                                    <p className={`text-[11px] leading-snug line-clamp-2 ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>
+                                      {cfg.desc}
+                                    </p>
+                                  </div>
+
+                                  <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between gap-1">
+                                    <span className={`text-[10px] font-semibold ${isSelected ? 'text-slate-400' : 'text-slate-400'}`}>
+                                      {count === 0 ? '0 questions' : `${count} Qs`}
+                                    </span>
+                                    <button
+                                      type="button"
+                                      disabled={count === 0}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        startSubjectRcaQuiz(tagKey);
+                                      }}
+                                      className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${
+                                        count === 0
+                                          ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
+                                          : isSelected
+                                          ? 'bg-white text-slate-900 hover:bg-slate-100 cursor-pointer shadow-xs'
+                                          : 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-xs'
+                                      }`}
+                                      title={count > 25 ? `Practice ${count} questions in sets` : `Practice all ${count} questions`}
+                                    >
+                                      <Play className="w-2.5 h-2.5 fill-current" />
+                                      {count > 25 ? 'Sets' : 'Practice'}
+                                    </button>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+
+                          {/* Filter Pills & Search Bar */}
+                          <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs px-3.5 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                            {/* Filter pills */}
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              <button
+                                onClick={() => setRcaSelectedFilter('all')}
+                                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                                  rcaSelectedFilter === 'all'
+                                    ? 'bg-slate-900 text-white shadow-xs'
+                                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                                }`}
+                              >
+                                All Topics ({clubbedMockChapters.length})
+                              </button>
+                              {(['C', 'A', 'T', 'G', 'unclassified'] as const).map(tagKey => {
+                                const cfg = RCA_TAG_CONFIG[tagKey];
+                                const count = subjectRcaData.totals[tagKey] || 0;
+                                const isSelected = rcaSelectedFilter === tagKey;
+                                return (
+                                  <button
+                                    key={tagKey}
+                                    onClick={() => setRcaSelectedFilter(tagKey)}
+                                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer ${
+                                      isSelected
+                                        ? 'bg-indigo-600 text-white shadow-xs'
+                                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                                    }`}
+                                  >
+                                    <span className="font-mono text-[10px]">{tagKey !== 'unclassified' ? `[${tagKey}]` : ''}</span>
+                                    <span>{cfg.shortLabel}</span>
+                                    <span className={`text-[10px] px-1 rounded-full ${isSelected ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-700'}`}>
+                                      {count}
+                                    </span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+
+                            {/* Search box */}
+                            <div className="relative w-full sm:w-56">
+                              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
+                              <input
+                                type="text"
+                                placeholder="Search chapter/topic..."
+                                value={rcaSearchQuery}
+                                onChange={e => setRcaSearchQuery(e.target.value)}
+                                className="w-full pl-8 pr-3 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                              />
+                              {rcaSearchQuery && (
+                                <button
+                                  onClick={() => setRcaSearchQuery('')}
+                                  className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                                >
+                                  <X className="w-3 h-3" />
+                                </button>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* Ranked RCA Chapter Table */}
+                          <div className="bg-white rounded-xl shadow-xs border border-slate-200/80 overflow-hidden">
+                            {/* Table Header */}
+                            <div className="grid grid-cols-12 gap-2 px-4 py-2.5 border-b border-slate-100 bg-slate-50/80 text-[10px] font-bold uppercase tracking-wider text-slate-500 items-center">
+                              <div className="col-span-1">#</div>
+                              <div className="col-span-4">Topic Name</div>
+                              <div className="col-span-2 hidden md:block">Heat Bar</div>
+                              <div className="col-span-1 text-center text-purple-700" title="[C] Conceptual Gap">[C]</div>
+                              <div className="col-span-1 text-center text-rose-700" title="[A] Silly Mistake">[A]</div>
+                              <div className="col-span-1 text-center text-amber-700" title="[T] Time Trap">[T]</div>
+                              <div className="col-span-1 text-center text-blue-700" title="[G] Guesswork">[G]</div>
+                              <div className="col-span-1 text-right text-indigo-700">Total</div>
+                            </div>
+
+                            {/* Rows */}
+                            <div className="divide-y divide-slate-100">
+                              {filteredRcaChapters.length === 0 ? (
+                                <div className="py-12 text-center text-xs text-slate-400 font-medium">
+                                  No chapters match the selected filter.
+                                </div>
+                              ) : (
+                                filteredRcaChapters.map((ch, idx) => {
+                                  const totalSets = Math.ceil(ch.total / 25);
+                                  const maxErrors = filteredRcaChapters[0]?.total || 1;
+                                  const barPct = Math.min(100, Math.round((ch.total / maxErrors) * 100));
+
+                                  return (
+                                    <div
+                                      key={ch.topic}
+                                      onClick={() => {
+                                        setActiveMockChapterModal(ch);
+                                        setModalErrorFilter(rcaSelectedFilter === 'all' ? 'all' : rcaSelectedFilter);
+                                        setModalActiveSet(ch.total > 25 ? 1 : 'all');
+                                      }}
+                                      className="grid grid-cols-12 gap-2 px-4 py-2.5 items-center hover:bg-indigo-50/30 transition-all cursor-pointer group"
+                                    >
+                                      {/* Rank */}
+                                      <div className="col-span-1">
+                                        <span className={`w-5 h-5 rounded-md inline-flex items-center justify-center text-[10px] font-bold ${
+                                          idx < 3 ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
+                                        }`}>
+                                          {idx + 1}
+                                        </span>
+                                      </div>
+
+                                      {/* Topic name + sets */}
+                                      <div className="col-span-4 min-w-0 pr-2">
+                                        <div className="flex items-center gap-1.5">
+                                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
+                                            {ch.topic}
+                                          </h4>
+                                          {ch.total > 25 && (
+                                            <span className="shrink-0 px-1.5 py-0.2 text-[9px] font-black rounded-md bg-indigo-100 text-indigo-700">
+                                              {totalSets} Sets
+                                            </span>
+                                          )}
+                                        </div>
+                                        <span className="text-[10px] text-slate-400 font-medium">
+                                          Click to view & classify Qs
+                                        </span>
+                                      </div>
+
+                                      {/* Heat Bar */}
+                                      <div className="col-span-2 hidden md:flex items-center gap-2">
+                                        <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                          <div
+                                            className="h-full rounded-full bg-gradient-to-r from-amber-500 to-rose-500"
+                                            style={{ width: `${barPct}%` }}
+                                          />
+                                        </div>
+                                        <span className="text-[10px] text-slate-400 font-semibold w-6 text-right">{barPct}%</span>
+                                      </div>
+
+                                      {/* [C] Pill */}
+                                      <div className="col-span-1 flex justify-center">
+                                        {(ch.rcaCounts?.C || 0) > 0 ? (
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              startClubbedChapterQuiz(ch.topic, ch.rcaQuestions?.C || [], 'C');
+                                            }}
+                                            className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-600 hover:text-white transition-colors cursor-pointer"
+                                            title={`Practice ${ch.rcaCounts.C} [C] Concept questions for ${ch.topic}`}
+                                          >
+                                            {ch.rcaCounts.C}
+                                          </button>
+                                        ) : (
+                                          <span className="text-slate-200 text-xs">—</span>
+                                        )}
+                                      </div>
+
+                                      {/* [A] Pill */}
+                                      <div className="col-span-1 flex justify-center">
+                                        {(ch.rcaCounts?.A || 0) > 0 ? (
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              startClubbedChapterQuiz(ch.topic, ch.rcaQuestions?.A || [], 'A');
+                                            }}
+                                            className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-600 hover:text-white transition-colors cursor-pointer"
+                                            title={`Practice ${ch.rcaCounts.A} [A] Silly mistake questions for ${ch.topic}`}
+                                          >
+                                            {ch.rcaCounts.A}
+                                          </button>
+                                        ) : (
+                                          <span className="text-slate-200 text-xs">—</span>
+                                        )}
+                                      </div>
+
+                                      {/* [T] Pill */}
+                                      <div className="col-span-1 flex justify-center">
+                                        {(ch.rcaCounts?.T || 0) > 0 ? (
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              startClubbedChapterQuiz(ch.topic, ch.rcaQuestions?.T || [], 'T');
+                                            }}
+                                            className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-600 hover:text-white transition-colors cursor-pointer"
+                                            title={`Practice ${ch.rcaCounts.T} [T] Time trap questions for ${ch.topic}`}
+                                          >
+                                            {ch.rcaCounts.T}
+                                          </button>
+                                        ) : (
+                                          <span className="text-slate-200 text-xs">—</span>
+                                        )}
+                                      </div>
+
+                                      {/* [G] Pill */}
+                                      <div className="col-span-1 flex justify-center">
+                                        {(ch.rcaCounts?.G || 0) > 0 ? (
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              startClubbedChapterQuiz(ch.topic, ch.rcaQuestions?.G || [], 'G');
+                                            }}
+                                            className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer"
+                                            title={`Practice ${ch.rcaCounts.G} [G] Guesswork questions for ${ch.topic}`}
+                                          >
+                                            {ch.rcaCounts.G}
+                                          </button>
+                                        ) : (
+                                          <span className="text-slate-200 text-xs">—</span>
+                                        )}
+                                      </div>
+
+                                      {/* Total + Practice */}
+                                      <div className="col-span-1 flex items-center justify-end gap-1.5">
+                                        <button
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (ch.total > 25) {
+                                              setActiveMockChapterModal(ch);
+                                              setModalErrorFilter('all');
+                                              setModalActiveSet(1);
+                                            } else {
+                                              startClubbedChapterQuiz(ch.topic, ch.questions);
+                                            }
+                                          }}
+                                          className="px-2 py-0.5 rounded-md text-[10px] font-black bg-indigo-600 text-white hover:bg-indigo-700 transition-colors cursor-pointer shadow-xs flex items-center gap-0.5"
+                                          title={ch.total > 25 ? `Open Sets for ${ch.topic}` : `Practice all ${ch.total} questions`}
+                                        >
+                                          <Play className="w-2.5 h-2.5 fill-current" />
+                                          <span>{ch.total}</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  );
+                                })
+                              )}
+                            </div>
                           </div>
                         </div>
                       ) : (
@@ -2883,16 +3166,29 @@ export default function App() {
                                 <div className="border-t border-slate-100 p-2.5 bg-slate-50/50 rounded-b-xl flex items-center gap-2">
                                   <button
                                     onClick={() => {
-                                      if (mockTestTypeFilter === 'all') {
-                                        startQuiz(chapter);
-                                      } else {
-                                        const virtualChapter: Chapter = {
-                                          ...chapter,
-                                          chapter_title: `${chapter.chapter_title} (${mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional'})`,
-                                          questions: filteredBucketQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
-                                        };
-                                        startQuiz(virtualChapter);
+                                      const qs = mockTestTypeFilter === 'all'
+                                        ? chapter.questions
+                                        : filteredBucketQuestions;
+                                      const title = mockTestTypeFilter === 'all'
+                                        ? chapter.chapter_title
+                                        : `${chapter.chapter_title} (${mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional'})`;
+
+                                      if (qs.length > 25) {
+                                        setSetPickerModal({
+                                          title,
+                                          subtitle: `${qs.length} questions in this bucket`,
+                                          subject: chapter.subject || selectedSubject || 'All Subjects',
+                                          questions: qs
+                                        });
+                                        return;
                                       }
+
+                                      const virtualChapter: Chapter = {
+                                        ...chapter,
+                                        chapter_title: title,
+                                        questions: qs.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
+                                      };
+                                      startQuiz(virtualChapter);
                                     }}
                                     disabled={filteredBucketQuestions.length === 0}
                                     className={`flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-xs font-semibold transition-all shadow-xs disabled:opacity-40 disabled:pointer-events-none ${theme.btn}`}
@@ -3168,720 +3464,34 @@ export default function App() {
           )}
 
           {view === 'bookmarks' && (
-            <motion.div
-              key="bookmarks"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="w-full"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white px-4 py-2.5 rounded-xl border border-slate-200/80 shadow-xs mb-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
-                    <BookmarkIcon className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <div>
-                    <h1 className="text-sm font-bold text-slate-900 tracking-tight">Bookmarked Questions</h1>
-                    <p className="text-[11px] text-slate-500 font-medium">Review your saved questions across all subjects</p>
-                  </div>
-                </div>
-                {selectedBookmarkSubject === null && (
-                  <button
-                    onClick={() => setView('home')}
-                    className="self-start sm:self-auto flex items-center text-xs font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-lg transition-colors"
-                  >
-                    <ChevronLeft className="w-3.5 h-3.5 mr-0.5" />
-                    Back to Practice
-                  </button>
-                )}
-              </div>
-
-              {!user ? (
-                <div className="text-center py-12 bg-white rounded-xl shadow-xs border border-slate-200/90 max-w-md mx-auto">
-                  <div className="w-10 h-10 bg-slate-100 text-slate-400 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <LogIn className="w-5 h-5" />
-                  </div>
-                  <h2 className="text-base font-bold text-slate-900 mb-1">Login to View Bookmarks</h2>
-                  <p className="text-slate-500 text-xs mb-3.5">Save tricky questions to cloud storage across devices</p>
-                  <button onClick={handleLogin} className="px-4 py-1.5 bg-blue-600 text-white rounded-lg text-xs font-bold hover:bg-blue-700 transition-all shadow-xs">
-                    Login with Google
-                  </button>
-                </div>
-              ) : loadingBookmarks ? (
-                <div className="flex flex-col items-center justify-center py-12">
-                  <Loader2 className="w-6 h-6 text-blue-600 animate-spin mb-2" />
-                  <p className="text-slate-500 font-semibold text-xs">Loading bookmarks...</p>
-                </div>
-              ) : bookmarks.length === 0 ? (
-                <div className="text-center py-12 bg-white rounded-xl shadow-xs border border-slate-200/90 max-w-md mx-auto">
-                  <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <BookmarkIcon className="w-5 h-5" />
-                  </div>
-                  <h2 className="text-base font-bold text-slate-900 mb-1">No Bookmarks Yet</h2>
-                  <p className="text-slate-500 text-xs mb-3.5">Bookmark questions during practice to review them later.</p>
-                  <button onClick={() => setView('home')} className="px-4 py-1.5 bg-blue-600 text-white rounded-lg text-xs font-bold hover:bg-blue-700 transition-all shadow-xs">
-                    Start Practicing
-                  </button>
-                </div>
-              ) : (
-                <div>
-                  {selectedBookmarkSubject === null ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-                      {(Object.entries(bookmarksBySubjectAndChapter) as [string, Record<string, Bookmark[]>][]).map(([subject, chaptersObj]) => {
-                        const allSubjectBookmarks = Object.values(chaptersObj).flat();
-                        const totalChapters = Object.keys(chaptersObj).length;
-                        return (
-                          <motion.div
-                            key={subject}
-                            whileHover={{ y: -2 }}
-                            className="bg-white rounded-xl p-3 shadow-xs border border-slate-200/80 group cursor-pointer flex flex-col justify-between hover:border-blue-300 transition-all"
-                            onClick={() => setSelectedBookmarkSubject(subject)}
-                          >
-                            <div>
-                              <div className="flex items-start justify-between mb-2">
-                                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                  <Layers className="w-4 h-4" />
-                                </div>
-                                <span className="px-1.5 py-0.2 bg-slate-50 text-slate-500 text-[9px] font-bold rounded border border-slate-100 uppercase tracking-wider">
-                                  {totalChapters} Ch
-                                </span>
-                              </div>
-                              
-                              <h3 className="text-xs font-bold text-slate-800 mb-0.5 group-hover:text-blue-600 transition-colors capitalize">
-                                {subject}
-                              </h3>
-                              <p className="text-[11px] text-slate-400 font-medium mb-3">
-                                {allSubjectBookmarks.length} Bookmarked {allSubjectBookmarks.length === 1 ? 'Question' : 'Questions'}
-                              </p>
-                            </div>
-
-                            <div className="flex items-center justify-between mt-auto pt-2 border-t border-slate-100 text-xs">
-                              <div className="flex items-center font-semibold text-blue-600 group-hover:translate-x-0.5 transition-transform text-[11px]">
-                                View Chapters
-                                <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
-                              </div>
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  startSubjectBookmarkQuiz(subject, allSubjectBookmarks);
-                                }}
-                                className="p-1.5 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg font-bold transition-all flex items-center justify-center"
-                                title={`Practice ${subject} Bookmarks`}
-                              >
-                                <Play className="w-3 h-3 fill-current" />
-                              </button>
-                            </div>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    (() => {
-                      const subject = selectedBookmarkSubject as string;
-                      const chaptersObj: Record<string, Bookmark[]> = bookmarksBySubjectAndChapter[subject] || {};
-                      const allSubjectBookmarks: Bookmark[] = Object.values(chaptersObj).flat() as Bookmark[];
-                      return (
-                        <div className="space-y-3">
-                          {/* Back & Subject Header */}
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white px-3.5 py-2.5 rounded-xl border border-slate-200/80 shadow-xs">
-                            <div className="flex items-center space-x-3">
-                              <button 
-                                onClick={() => setSelectedBookmarkSubject(null)}
-                                className="p-1 rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors"
-                                title="Back to Bookmarked Subjects"
-                              >
-                                <ChevronLeft className="w-4 h-4" />
-                              </button>
-                              <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
-                                <Layers className="w-4 h-4" />
-                              </div>
-                              <div>
-                                <h2 className="text-xs font-bold text-slate-800 capitalize leading-tight">{subject} Bookmarks</h2>
-                                <p className="text-[10px] text-slate-400 font-medium">{allSubjectBookmarks.length} bookmarked {allSubjectBookmarks.length === 1 ? 'question' : 'questions'}</p>
-                              </div>
-                            </div>
-                            <button
-                              onClick={() => startSubjectBookmarkQuiz(subject, allSubjectBookmarks)}
-                              className="px-3.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-all shadow-xs flex items-center justify-center self-start sm:self-auto"
-                            >
-                              <Play className="w-3 h-3 mr-1.5 fill-current" />
-                              Practice All {subject}
-                            </button>
-                          </div>
-
-                          {/* Chapters Accordion */}
-                          <div className="space-y-2.5">
-                            {Object.entries(chaptersObj).map(([chapterTitle, chapterBookmarks]) => {
-                              const key = `${subject}|${chapterTitle}`;
-                              const isExpanded = expandedChapters[key] === true;
-                              return (
-                                <div key={chapterTitle} className="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs hover:border-slate-300 transition-all">
-                                  {/* Accordion Header */}
-                                  <div 
-                                    onClick={() => toggleChapterExpand(subject, chapterTitle)}
-                                    className="px-3.5 py-2.5 flex items-center justify-between cursor-pointer hover:bg-slate-50/50 transition-colors select-none"
-                                  >
-                                    <div className="flex items-center space-x-2.5 flex-1 min-w-0">
-                                      <div className="w-7 h-7 rounded-lg bg-slate-50 text-slate-600 flex items-center justify-center shrink-0">
-                                        <BookOpen className="w-3.5 h-3.5" />
-                                      </div>
-                                      <div className="min-w-0">
-                                        <h3 className="font-bold text-slate-800 text-xs leading-tight truncate">{chapterTitle}</h3>
-                                        <span className="inline-flex items-center text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.2 rounded mt-0.5">
-                                          {chapterBookmarks.length} saved
-                                        </span>
-                                      </div>
-                                    </div>
-                                    
-                                    <div className="flex items-center space-x-1.5" onClick={(e) => e.stopPropagation()}>
-                                      {/* Practice Chapter Bookmarks Button */}
-                                      <button
-                                        onClick={() => startChapterBookmarkQuiz(subject, chapterTitle, chapterBookmarks)}
-                                        className="p-1.5 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg transition-all flex items-center justify-center"
-                                        title={`Practice ${chapterTitle} Bookmarks`}
-                                      >
-                                        <Play className="w-3 h-3 fill-current" />
-                                      </button>
-                                      
-                                      {/* Toggle Chevron */}
-                                      <button
-                                        onClick={() => toggleChapterExpand(subject, chapterTitle)}
-                                        className="p-1 text-slate-400 hover:text-slate-600 transition-colors"
-                                      >
-                                        <ChevronRight className={`w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
-                                      </button>
-                                    </div>
-                                  </div>
-
-                                  {/* Accordion Content */}
-                                  <AnimatePresence initial={false}>
-                                    {isExpanded && (
-                                      <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: 'auto', opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.15 }}
-                                        className="border-t border-slate-100 p-3 bg-slate-50/20"
-                                      >
-                                        <div className="grid grid-cols-1 gap-2.5">
-                                          {chapterBookmarks.map((bookmark) => (
-                                            <motion.div
-                                              key={bookmark.id}
-                                              className="bg-white rounded-xl p-3 shadow-xs border border-slate-200/80 relative group"
-                                            >
-                                              <div className="flex justify-between items-start mb-2">
-                                                <div className="flex items-center space-x-2">
-                                                  <span className={`px-2 py-0.5 text-[9px] font-bold uppercase rounded-md ${
-                                                    bookmark.category === 'mockErrors' ? 'bg-red-50 text-red-600 border border-red-100' : 'bg-blue-50 text-blue-600 border border-blue-100'
-                                                  }`}>
-                                                    {bookmark.category === 'mockErrors' ? 'Mock Error' : 'Chapter Bank'}
-                                                  </span>
-                                                </div>
-                                                <button
-                                                  onClick={() => bookmark.id && toggleBookmark(bookmark.question)}
-                                                  className="p-1 text-slate-300 hover:text-rose-600 transition-colors"
-                                                  title="Remove Bookmark"
-                                                >
-                                                  <Trash2 className="w-3.5 h-3.5" />
-                                                </button>
-                                              </div>
-                                              <div className="text-xs font-bold text-slate-800 mb-2.5 leading-relaxed">
-                                                <FormattedText text={bookmark.question.question} as="div" />
-                                              </div>
-                                              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                                {Object.entries(bookmark.question.options).map(([key, value]) => {
-                                                  const isCorrect = normalizeAnswerKey(bookmark.question.answer) === key.toLowerCase();
-                                                  return (
-                                                    <div
-                                                      key={key}
-                                                      className={`p-2 rounded-lg border flex items-center ${
-                                                        isCorrect
-                                                          ? 'border-emerald-500 bg-emerald-50/60'
-                                                          : 'border-slate-200 bg-slate-50/40'
-                                                      }`}
-                                                    >
-                                                      <span className={`w-5 h-5 flex items-center justify-center rounded text-xs mr-2 font-bold ${
-                                                        isCorrect ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-600'
-                                                      }`}>
-                                                        {key.toUpperCase()}
-                                                      </span>
-                                                      <FormattedText text={value} className="text-slate-700 text-xs font-medium" />
-                                                    </div>
-                                                  );
-                                                })}
-                                              </div>
-                                              {bookmark.question.solution && (
-                                                <div className="mt-2.5 p-2 bg-blue-50/60 rounded-lg border border-blue-100 text-xs">
-                                                  <div className="text-blue-900 leading-relaxed">
-                                                    <span className="font-bold text-blue-700">Solution: </span>
-                                                    <FormattedText text={cleanSolutionText(bookmark.question.solution)} />
-                                                  </div>
-                                                </div>
-                                              )}
-                                            </motion.div>
-                                          ))}
-                                        </div>
-                                      </motion.div>
-                                    )}
-                                  </AnimatePresence>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      );
-                    })()
-                  )}
-                </div>
-              )}
-            </motion.div>
+            <BookmarksView
+              user={user}
+              loadingBookmarks={loadingBookmarks}
+              bookmarks={bookmarks}
+              bookmarksBySubjectAndChapter={bookmarksBySubjectAndChapter}
+              selectedBookmarkSubject={selectedBookmarkSubject}
+              setSelectedBookmarkSubject={setSelectedBookmarkSubject}
+              toggleBookmark={toggleBookmark}
+              startSubjectBookmarkQuiz={startSubjectBookmarkQuiz}
+              startChapterBookmarkQuiz={startChapterBookmarkQuiz}
+              onLogin={handleLogin}
+              onNavigateHome={() => setView('home')}
+            />
           )}
 
           {view === 'dashboard' && (
-            <motion.div
-              key="dashboard"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="w-full space-y-4"
-            >
-              {!user ? (
-                <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100">
-                  <div className="w-20 h-20 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <LogIn className="w-10 h-10" />
-                  </div>
-                  <h2 className="text-3xl font-black text-slate-900 mb-4">Login to Track Progress</h2>
-                  <p className="text-slate-500 mb-8 max-w-md mx-auto">Sign in with Google to store your quiz attempts, view detailed performance metrics, and track your SSC CGL preparation journey.</p>
-                  <button
-                    onClick={handleLogin}
-                    className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
-                  >
-                    Login with Google
-                  </button>
-                </div>
-              ) : loadingResults ? (
-                <div className="flex flex-col items-center justify-center py-24">
-                  <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-4" />
-                  <p className="text-slate-500 font-bold text-lg">Fetching your performance analytics...</p>
-                </div>
-              ) : userResults.length === 0 ? (
-                <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100 p-8">
-                  <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
-                    <Trophy className="w-10 h-10" />
-                  </div>
-                  <h2 className="text-3xl font-black text-slate-900 mb-3">No Results Recorded Yet</h2>
-                  <p className="text-slate-500 mb-8 max-w-lg mx-auto">Complete a practice quiz or mock error drill to see your accuracy, speed breakdown, and subject-level insights here.</p>
-                  <div className="flex flex-wrap items-center justify-center gap-4">
-                    <button
-                      onClick={() => setView('home')}
-                      className="px-8 py-3.5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
-                    >
-                      Start Chapter Practice
-                    </button>
-                    <button
-                      onClick={() => setView('heatmap')}
-                      className="px-8 py-3.5 bg-rose-50 text-rose-600 border border-rose-200 rounded-2xl font-bold hover:bg-rose-100 transition-all"
-                    >
-                      View Error Heatmap
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div className="space-y-2.5">
-                  {/* Dashboard Top Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white px-3.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80">
-                    <div>
-                      <div className="flex items-center gap-1.5">
-                        <span className="px-1.5 py-0.2 rounded bg-blue-50 text-blue-700 text-[9px] font-bold uppercase tracking-wider">SSC CGL Analytics</span>
-                        <h2 className="text-xs font-bold text-slate-900 leading-none">Performance Dashboard</h2>
-                      </div>
-                      <p className="text-slate-400 text-[10px] font-medium mt-0.5">
-                        Comprehensive overview of your accuracy, pacing, and subject strengths.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <button
-                        onClick={() => setView('heatmap')}
-                        className="px-2.5 py-1 rounded-md bg-rose-50 hover:bg-rose-100 text-rose-700 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-rose-100 shadow-xs"
-                      >
-                        <Flame className="w-3 h-3 text-rose-600" />
-                        Heatmap
-                      </button>
-                      <button
-                        onClick={() => setView('home')}
-                        className="px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold text-[11px] transition-all shadow-xs flex items-center gap-1"
-                      >
-                        <BookOpen className="w-3 h-3" />
-                        Practice Hub
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Summary KPI Cards (Single-Row Compact) */}
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-1.5">
-                    {/* Total Quizzes */}
-                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                        <Trophy className="w-3 h-3" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-sm font-bold text-slate-900 leading-none">{dashboardStats.totalQuizzes}</div>
-                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Total Quizzes</div>
-                      </div>
-                    </div>
-
-                    {/* Overall Accuracy */}
-                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-                      <div className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 ${
-                        dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-600' :
-                        dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-600' :
-                        'bg-rose-50 text-rose-600'
-                      }`}>
-                        <Target className="w-3 h-3" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className={`text-sm font-bold leading-none ${
-                          dashboardStats.overallAccuracy >= 75 ? 'text-emerald-600' :
-                          dashboardStats.overallAccuracy >= 50 ? 'text-amber-600' :
-                          'text-rose-600'
-                        }`}>
-                          {dashboardStats.overallAccuracy}%
-                        </div>
-                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Accuracy</div>
-                      </div>
-                    </div>
-
-                    {/* Total Questions */}
-                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
-                        <ListChecks className="w-3 h-3" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-sm font-bold text-purple-600 leading-none">{dashboardStats.totalQuestions}</div>
-                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Questions Solved</div>
-                      </div>
-                    </div>
-
-                    {/* Avg Time per Question */}
-                    <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
-                        <Clock className="w-3 h-3" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-sm font-bold text-orange-600 leading-none">{dashboardStats.avgTimePerQ}s</div>
-                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Avg Time / Q</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Subject-Wise Performance Breakdown */}
-                  <div className="bg-white rounded-lg shadow-xs border border-slate-200/80 p-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <div>
-                        <h3 className="text-xs font-bold text-slate-900 leading-none">Subject Breakdown</h3>
-                        <p className="text-slate-400 text-[10px] font-medium mt-0.5">Click any subject to filter recent attempts</p>
-                      </div>
-                      {dashSubjectFilter !== 'all' && (
-                        <button
-                          onClick={() => setDashSubjectFilter('all')}
-                          className="text-[11px] font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2 py-0.5 rounded transition-colors"
-                        >
-                          Clear Filter
-                        </button>
-                      )}
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
-                      {['Mathematics', 'Reasoning', 'English', 'General Awareness'].map((subName) => {
-                        const theme = getSubjectTheme(subName);
-                        const Icon = theme.icon;
-                        const stat = dashboardStats.subjectStats[subName] || { totalQ: 0, correct: 0, quizzes: 0, accuracy: 0, avgTime: 0 };
-                        const isSelected = dashSubjectFilter === subName;
-
-                        return (
-                          <div
-                            key={subName}
-                            onClick={() => setDashSubjectFilter(isSelected ? 'all' : subName)}
-                            className={`cursor-pointer p-2.5 rounded-lg border transition-all duration-150 ${
-                              isSelected
-                                ? 'ring-1 ring-blue-500 shadow-xs bg-blue-50/20 border-blue-200'
-                                : 'bg-slate-50/50 hover:bg-white hover:shadow-xs border-slate-200/80'
-                            }`}
-                          >
-                            <div className="flex items-center justify-between mb-1.5">
-                              <div className={`w-6 h-6 rounded-md flex items-center justify-center bg-gradient-to-br ${theme.gradient} text-white shadow-xs`}>
-                                <Icon className="w-3 h-3" />
-                              </div>
-                              <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded ${
-                                stat.accuracy >= 75 ? 'bg-emerald-100 text-emerald-800' :
-                                stat.accuracy >= 50 ? 'bg-amber-100 text-amber-800' :
-                                stat.totalQ > 0 ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-500'
-                              }`}>
-                                {stat.totalQ > 0 ? `${stat.accuracy}% Acc` : 'No data'}
-                              </span>
-                            </div>
-
-                            <h4 className="font-bold text-slate-900 text-xs mb-1 leading-none">{subName}</h4>
-
-                            {/* Accuracy Bar */}
-                            <div className="w-full bg-slate-200 rounded-full h-1 overflow-hidden mb-1.5">
-                              <div
-                                className={`h-full rounded-full transition-all duration-500 ${theme.bar}`}
-                                style={{ width: `${stat.accuracy}%` }}
-                              />
-                            </div>
-
-                            <div className="grid grid-cols-2 gap-1 text-[10px]">
-                              <div>
-                                <span className="text-slate-400 block font-medium">Questions:</span>
-                                <span className="font-bold text-slate-700">{stat.totalQ} ({stat.correct} ✓)</span>
-                              </div>
-                              <div>
-                                <span className="text-slate-400 block font-medium">Avg Time:</span>
-                                <span className="font-bold text-slate-700">{stat.avgTime}s/Q</span>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Recent Activity Section */}
-                  <div className="bg-white rounded-xl shadow-xs border border-slate-200/80 overflow-hidden">
-                    {/* Header with Filters */}
-                    <div className="p-3 sm:p-3.5 border-b border-slate-100 space-y-2.5">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-                        <div className="flex items-center gap-2">
-                          <h3 className="text-xs font-bold text-slate-900">Recent Activity</h3>
-                          <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-bold">
-                            {filteredUserResults.length} {filteredUserResults.length === 1 ? 'Attempt' : 'Attempts'}
-                          </span>
-                          {userResults.length > 0 && (
-                            <button
-                              onClick={handleClearAllResults}
-                              disabled={loadingResults}
-                              className="flex items-center gap-1 px-2.5 py-0.5 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-md text-[10px] font-bold transition-all disabled:opacity-50"
-                              title="Clear all recent activity records"
-                            >
-                              <Trash2 className="w-3 h-3" />
-                              <span>Clear History</span>
-                            </button>
-                          )}
-                        </div>
-
-                        {/* Search Bar */}
-                        <div className="relative w-full sm:w-60">
-                          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
-                          <input
-                            type="text"
-                            value={dashSearchQuery}
-                            onChange={(e) => setDashSearchQuery(e.target.value)}
-                            placeholder="Search chapter or topic..."
-                            className="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:bg-white transition-all"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Filter Controls Row */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
-                        {/* Category Tabs */}
-                        <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200/70 text-[11px] font-semibold">
-                          <button
-                            onClick={() => setDashCategoryFilter('all')}
-                            className={`px-2.5 py-1 rounded-md transition-all ${
-                              dashCategoryFilter === 'all'
-                                ? 'bg-white text-slate-900 shadow-xs'
-                                : 'text-slate-500 hover:text-slate-800'
-                            }`}
-                          >
-                            All Modes
-                          </button>
-                          <button
-                            onClick={() => setDashCategoryFilter('chapterBank')}
-                            className={`px-2.5 py-1 rounded-md transition-all ${
-                              dashCategoryFilter === 'chapterBank'
-                                ? 'bg-white text-blue-600 shadow-xs'
-                                : 'text-slate-500 hover:text-slate-800'
-                            }`}
-                          >
-                            Chapter Bank
-                          </button>
-                          <button
-                            onClick={() => setDashCategoryFilter('mockErrors')}
-                            className={`px-2.5 py-1 rounded-md transition-all ${
-                              dashCategoryFilter === 'mockErrors'
-                                ? 'bg-white text-rose-600 shadow-xs'
-                                : 'text-slate-500 hover:text-slate-800'
-                            }`}
-                          >
-                            Mock Errors
-                          </button>
-                        </div>
-
-                        {/* Subject and Sort dropdowns */}
-                        <div className="flex items-center gap-2">
-                          <select
-                            value={dashSubjectFilter}
-                            onChange={(e) => setDashSubjectFilter(e.target.value)}
-                            className="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
-                          >
-                            <option value="all">All Subjects</option>
-                            <option value="Mathematics">Mathematics</option>
-                            <option value="Reasoning">Reasoning</option>
-                            <option value="English">English</option>
-                            <option value="General Awareness">General Awareness</option>
-                          </select>
-
-                          <select
-                            value={dashSort}
-                            onChange={(e) => setDashSort(e.target.value as any)}
-                            className="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
-                          >
-                            <option value="newest">Newest First</option>
-                            <option value="accuracy-desc">Highest Accuracy</option>
-                            <option value="accuracy-asc">Lowest Accuracy</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Results List */}
-                    {filteredUserResults.length === 0 ? (
-                      <div className="p-8 text-center">
-                        <p className="text-slate-500 font-bold text-xs mb-2">No activity matching your current filter.</p>
-                        <button
-                          onClick={() => {
-                            setDashCategoryFilter('all');
-                            setDashSubjectFilter('all');
-                            setDashSearchQuery('');
-                          }}
-                          className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg font-semibold text-xs hover:bg-blue-100 transition-colors"
-                        >
-                          Clear Filters
-                        </button>
-                      </div>
-                    ) : (
-                      <div className="divide-y divide-slate-100">
-                        {filteredUserResults.map((result, idx) => {
-                          const theme = getSubjectTheme(result.subject);
-                          const Icon = theme.icon;
-                          const accuracyRate = result.totalQuestions > 0
-                            ? Math.round((result.score / result.totalQuestions) * 100)
-                            : 0;
-                          const avgQ = result.totalQuestions > 0
-                            ? Math.round(result.totalTime / result.totalQuestions)
-                            : 0;
-                          const hasStoredQuestions = Boolean(result.questionDetails && result.questionDetails.length > 0);
-
-                          return (
-                            <div
-                              key={result.id || `${result.completedAt}|${result.chapter_title}`}
-                              className="p-3 sm:p-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-3 hover:bg-slate-50/80 transition-colors"
-                            >
-                              {/* Left details */}
-                              <div className="flex items-start gap-3 min-w-0">
-                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow-xs bg-gradient-to-br ${theme.gradient} text-white`}>
-                                  <Icon className="w-4 h-4" />
-                                </div>
-                                <div className="min-w-0 flex-1">
-                                  <div className="flex flex-wrap items-center gap-1.5 mb-1">
-                                    <span className={`px-2 py-0.2 rounded-md text-[10px] font-bold border ${theme.badge}`}>
-                                      {theme.name}
-                                    </span>
-                                    <span className={`px-1.5 py-0.2 rounded-md text-[10px] font-semibold border ${
-                                      result.category === 'mockErrors'
-                                        ? 'bg-rose-50 text-rose-700 border-rose-200'
-                                        : 'bg-blue-50 text-blue-700 border-blue-200'
-                                    }`}>
-                                      {result.category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
-                                    </span>
-                                    <span className={`px-1.5 py-0.2 rounded-md text-[10px] font-semibold border ${
-                                      result.mode === 'mock'
-                                        ? 'bg-amber-50 text-amber-700 border-amber-200'
-                                        : 'bg-slate-100 text-slate-700 border-slate-200'
-                                    }`}>
-                                      {result.mode === 'mock' ? 'Mock Test' : 'Practice Drill'}
-                                    </span>
-                                  </div>
-                                  <h4 className="text-xs font-bold text-slate-900 truncate" title={result.chapter_title}>
-                                    {result.chapter_title}
-                                  </h4>
-                                  <p className="text-[10px] text-slate-400 font-medium mt-0.5">
-                                    {formatAttemptDate(result.completedAt)}
-                                  </p>
-                                </div>
-                              </div>
-
-                              {/* Right Metrics & Actions */}
-                              <div className="flex flex-wrap items-center justify-between lg:justify-end gap-2.5 sm:gap-4 border-t lg:border-t-0 pt-2 lg:pt-0 border-slate-100">
-                                <div className="text-left sm:text-right min-w-[55px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Score</div>
-                                  <div className="text-xs font-bold text-slate-900">
-                                    {result.score}/{result.totalQuestions}
-                                  </div>
-                                </div>
-
-                                <div className="text-left sm:text-right min-w-[55px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Avg/Q</div>
-                                  <div className="text-xs font-bold text-orange-600">
-                                    {avgQ}s
-                                  </div>
-                                </div>
-
-                                <div className="text-left sm:text-right min-w-[65px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Time</div>
-                                  <div className="text-xs font-bold text-slate-700">
-                                    {Math.floor(result.totalTime / 60)}m {result.totalTime % 60}s
-                                  </div>
-                                </div>
-
-                                <div className="text-left sm:text-right min-w-[60px]">
-                                  <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Accuracy</div>
-                                  <div className={`inline-flex items-center px-1.5 py-0.2 rounded-md text-xs font-bold border ${
-                                    accuracyRate >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
-                                    accuracyRate >= 50 ? 'bg-amber-50 text-amber-700 border-amber-200' :
-                                    'bg-rose-50 text-rose-700 border-rose-200'
-                                  }`}>
-                                    {accuracyRate}%
-                                  </div>
-                                </div>
-
-                                {/* Actions */}
-                                <div className="flex items-center gap-1.5">
-                                  <button
-                                    onClick={() => openReview(result)}
-                                    className="px-2.5 py-1.5 rounded-lg font-bold text-xs bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
-                                    title="Review questions & solutions"
-                                  >
-                                    <BookOpen className="w-3.5 h-3.5" />
-                                    <span>Review</span>
-                                  </button>
-                                  <button
-                                    onClick={() => reattemptFromResult(result)}
-                                    className="p-1.5 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-xs flex items-center justify-center cursor-pointer"
-                                    title="Reattempt this quiz"
-                                  >
-                                    <RotateCcw className="w-3.5 h-3.5" />
-                                  </button>
-                                  {result.id && (
-                                    <button
-                                      onClick={() => handleDeleteResult(result.id)}
-                                      className="p-1.5 rounded-lg bg-slate-100 hover:bg-rose-600 text-slate-400 hover:text-white font-bold transition-all shadow-xs flex items-center justify-center"
-                                      title="Delete this attempt"
-                                    >
-                                      <Trash2 className="w-3.5 h-3.5" />
-                                    </button>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-            </motion.div>
+            <PerformanceDashboard
+              user={user}
+              loadingResults={loadingResults}
+              userResults={userResults}
+              onClearAllResults={handleClearAllResults}
+              onDeleteResult={handleDeleteResult}
+              onOpenReview={openReview}
+              onReattempt={reattemptFromResult}
+              onLogin={handleLogin}
+              onNavigateHome={() => setView('home')}
+              onNavigateHeatmap={() => setView('heatmap')}
+            />
           )}
 
           {view === 'review' && reviewResult && (
@@ -3953,7 +3563,7 @@ export default function App() {
                   <p className="text-slate-500 font-bold">Loading error heatmap...</p>
                 </div>
               }>
-                <ErrorHeatmap mockData={mockData} />
+                <ErrorHeatmap mockData={mockData} onStartQuiz={startQuiz} />
               </React.Suspense>
             </motion.div>
           )}
@@ -3992,228 +3602,27 @@ export default function App() {
       )}
 
       {/* Chapter Drill & Questions Preview Modal for Mock Errors */}
-      <AnimatePresence>
-        {activeMockChapterModal && (
-          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm p-0 sm:p-4">
-            <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 40, scale: 0.97 }}
-              transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-              className="bg-white w-full sm:max-w-3xl max-h-[90vh] sm:rounded-3xl rounded-t-3xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden"
-            >
-              {/* Modal Header */}
-              <div className="px-6 pt-6 pb-5 bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 text-white rounded-t-3xl">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-white/20 text-white text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider">
-                        {activeMockChapterModal.subject}
-                      </span>
-                      <span className="text-white/70 text-xs font-semibold">
-                        {activeMockChapterModal.total} total error questions
-                      </span>
-                    </div>
-                    <h2 className="text-2xl font-black text-white leading-tight">{activeMockChapterModal.topic}</h2>
+      <MockChapterErrorsModal
+        data={activeMockChapterModal}
+        modalErrorFilter={modalErrorFilter}
+        setModalErrorFilter={setModalErrorFilter}
+        modalActiveSet={modalActiveSet}
+        setModalActiveSet={setModalActiveSet}
+        onClose={() => setActiveMockChapterModal(null)}
+        onStartPractice={(topic, questions, subType, setNum) => {
+          startClubbedChapterQuiz(topic, questions, subType, setNum);
+        }}
+        onAskAi={(topic, subject, questions, counts) => {
+          handleAskAiTopic(topic, subject, questions, counts);
+        }}
+      />
 
-                    {/* Breakdown Badges */}
-                    <div className="flex flex-wrap items-center gap-2 mt-3">
-                      {activeMockChapterModal.wrong > 0 && (
-                        <span className="bg-rose-500/30 border border-rose-300/40 text-rose-100 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
-                          <XCircle className="w-3.5 h-3.5" /> {activeMockChapterModal.wrong} Wrong
-                        </span>
-                      )}
-                      {activeMockChapterModal.slow > 0 && (
-                        <span className="bg-amber-500/30 border border-amber-300/40 text-amber-100 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
-                          <Zap className="w-3.5 h-3.5" /> {activeMockChapterModal.slow} Slow
-                        </span>
-                      )}
-                      {activeMockChapterModal.unattempted > 0 && (
-                        <span className="bg-blue-500/30 border border-blue-300/40 text-blue-100 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
-                          <AlertCircle className="w-3.5 h-3.5" /> {activeMockChapterModal.unattempted} Skipped
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setActiveMockChapterModal(null)}
-                    className="w-9 h-9 rounded-2xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors shrink-0"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-
-                {/* Quick Drill Action Buttons in Header */}
-                <div className="flex flex-wrap items-center gap-2 mt-4 pt-3 border-t border-white/15">
-                  <button
-                    onClick={() => {
-                      const topic = activeMockChapterModal.topic;
-                      const qs = activeMockChapterModal.questions;
-                      setActiveMockChapterModal(null);
-                      startClubbedChapterQuiz(topic, qs);
-                    }}
-                    className="px-4 py-2 bg-white text-indigo-900 rounded-xl text-xs font-black hover:bg-indigo-50 transition-all shadow-sm flex items-center gap-1.5"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    Practice All ({activeMockChapterModal.total})
-                  </button>
-
-                  <button
-                    onClick={() => {
-                      handleAskAiTopic(
-                        activeMockChapterModal.topic,
-                        selectedSubject || 'All Subjects',
-                        activeMockChapterModal.questions,
-                        {
-                          total: activeMockChapterModal.total,
-                          wrong: activeMockChapterModal.wrong,
-                          slow: activeMockChapterModal.slow,
-                          unattempted: activeMockChapterModal.unattempted
-                        }
-                      );
-                    }}
-                    className="px-3.5 py-2 bg-white/20 hover:bg-white/30 border border-white/30 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
-                    title={`Ask Tommy AI to analyze ${activeMockChapterModal.topic}`}
-                  >
-                    <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                    Ask AI
-                  </button>
-
-                  {activeMockChapterModal.wrong > 0 && (
-                    <button
-                      onClick={() => {
-                        const topic = activeMockChapterModal.topic;
-                        const qs = activeMockChapterModal.wrongQuestions;
-                        setActiveMockChapterModal(null);
-                        startClubbedChapterQuiz(topic, qs, 'wrong');
-                      }}
-                      className="px-3.5 py-2 bg-rose-500/40 hover:bg-rose-500/60 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
-                    >
-                      <XCircle className="w-3.5 h-3.5" />
-                      Wrong Only ({activeMockChapterModal.wrong})
-                    </button>
-                  )}
-
-                  {activeMockChapterModal.slow > 0 && (
-                    <button
-                      onClick={() => {
-                        const topic = activeMockChapterModal.topic;
-                        const qs = activeMockChapterModal.slowQuestions;
-                        setActiveMockChapterModal(null);
-                        startClubbedChapterQuiz(topic, qs, 'slow');
-                      }}
-                      className="px-3.5 py-2 bg-amber-500/40 hover:bg-amber-500/60 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
-                    >
-                      <Zap className="w-3.5 h-3.5" />
-                      Slow Only ({activeMockChapterModal.slow})
-                    </button>
-                  )}
-
-                  {activeMockChapterModal.unattempted > 0 && (
-                    <button
-                      onClick={() => {
-                        const topic = activeMockChapterModal.topic;
-                        const qs = activeMockChapterModal.unattemptedQuestions;
-                        setActiveMockChapterModal(null);
-                        startClubbedChapterQuiz(topic, qs, 'unattempted');
-                      }}
-                      className="px-3.5 py-2 bg-blue-500/40 hover:bg-blue-500/60 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
-                    >
-                      <AlertCircle className="w-3.5 h-3.5" />
-                      Skipped Only ({activeMockChapterModal.unattempted})
-                    </button>
-                  )}
-                </div>
-              </div>
-
-              {/* Questions List */}
-              <div className="flex-1 overflow-y-auto p-5 space-y-4">
-                {activeMockChapterModal.questions.map((q, qIdx) => {
-                  const isWrong = q.errorType === 'wrong';
-                  const isSlow = q.errorType === 'speed_issue';
-
-                  return (
-                    <div key={q.id || qIdx} className="rounded-2xl border border-slate-200 bg-slate-50/50 overflow-hidden">
-                      {/* Question header */}
-                      <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100">
-                        <span className="text-xs font-bold text-slate-400">Q{qIdx + 1}</span>
-                        <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${
-                          isWrong ? 'bg-red-100 text-red-700' :
-                          isSlow ? 'bg-amber-100 text-amber-700' :
-                          'bg-blue-100 text-blue-700'
-                        }`}>
-                          {isWrong ? '✗ Wrong Answer' : isSlow ? '⚡ Speed Issue' : '◯ Skipped / Left'}
-                        </span>
-                      </div>
-
-                      <div className="p-4 space-y-3">
-                        <p className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed">
-                          {q.question}
-                        </p>
-
-                        {/* Options */}
-                        {q.options && (
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            {(['a', 'b', 'c', 'd'] as const).map(optKey => {
-                              const optText = q.options[optKey];
-                              if (!optText) return null;
-                              const isCorrect = q.answer === optKey;
-                              return (
-                                <div
-                                  key={optKey}
-                                  className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
-                                    isCorrect
-                                      ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
-                                      : 'bg-white border-slate-200 text-slate-600'
-                                  }`}
-                                >
-                                  <span className={`w-6 h-6 rounded-lg shrink-0 flex items-center justify-center font-black text-[11px] uppercase ${
-                                    isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500'
-                                  }`}>
-                                    {optKey}
-                                  </span>
-                                  <span className="truncate">{optText}</span>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-
-                        {/* Solution */}
-                        {q.solution && (
-                          <details className="group">
-                            <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none">
-                              <BookOpen className="w-3.5 h-3.5" />
-                              View Solution
-                              <ChevronRight className="w-3 h-3 transition-transform group-open:rotate-90" />
-                            </summary>
-                            <div className="mt-2 text-xs font-medium text-slate-700 whitespace-pre-line leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200">
-                              {q.solution}
-                            </div>
-                          </details>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Modal Footer */}
-              <div className="px-5 py-3.5 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
-                <span className="text-xs text-slate-400 font-medium">
-                  {activeMockChapterModal.questions.length} questions in this chapter
-                </span>
-                <button
-                  onClick={() => setActiveMockChapterModal(null)}
-                  className="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition-colors shadow-sm"
-                >
-                  Close
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+      {/* Set Picker Modal (For Start All or topic drills with > 25 questions) */}
+      <SetPickerModal
+        modalData={setPickerModal}
+        onClose={() => setSetPickerModal(null)}
+        onStartQuiz={startQuiz}
+      />
     </main>
 
     {/* Floating Tommy AI Assistant - enabled in practice mode solutions and across all portal views; hidden only during timed mock exam */}

@@ -236,6 +236,7 @@ interface AIEnrichmentResult {
   subtopic?: string;
   conceptTested?: string;
   questionText?: string;
+  options?: Record<string, string>;
   solution?: string;
   correctOption?: string;
 }
@@ -376,18 +377,39 @@ async function classifyAndRefineBatchWithAI(questions: any[]): Promise<AIEnrichm
     const sendMatrixToAI = process.env.SEND_MOCK_MATRIX_TO_AI !== "false";
     const forceAIForMatrix = sendMatrixToAI && isMatrixQuestion;
 
+    const rawOpts = q.options || {};
+    const optA = String(rawOpts.A || rawOpts.a || "").trim();
+    const optB = String(rawOpts.B || rawOpts.b || "").trim();
+    const optC = String(rawOpts.C || rawOpts.c || "").trim();
+    const optD = String(rawOpts.D || rawOpts.d || "").trim();
+    const hasValidOptions = 
+      optA.length > 0 && optB.length > 0 && optC.length > 0 && optD.length > 0 &&
+      optA.toLowerCase() !== "n/a" && optB.toLowerCase() !== "n/a" &&
+      optC.toLowerCase() !== "n/a" && optD.toLowerCase() !== "n/a" &&
+      !/\b(option\s*1|option\s*a)\s*:\s*(option\s*1|option\s*a)\b/i.test(optA);
+
     const isSubjectLevelTopic = existingTopic === "English Comprehension" || existingTopic === "English" || existingTopic === "Quantitative Aptitude" || existingTopic === "General Awareness" || existingTopic === "General Intelligence and Reasoning";
     const hasValidTopic = existingTopic && existingTopic !== "General" && existingTopic !== "Unknown" && !isSubjectLevelTopic && !isMismatchedReasoning;
     const hasValidSubtopic = existingSubtopic && existingSubtopic !== "General" && existingSubtopic !== "Unknown" && existingSubtopic !== "English Comprehension" && existingSubtopic !== "English";
     const hasValidAnswer = q.correctOption && q.correctOption !== "N/A" && /^[A-D]$/i.test(q.correctOption.trim());
     const hasCleanText = !(q.questionText || q.question || "").includes("Reattempt mode is Off");
 
-    if (hasValidTopic && hasValidSubtopic && hasValidAnswer && hasCleanText && !forceAIForMatrix) {
+    if (hasValidTopic && hasValidSubtopic && hasValidAnswer && hasCleanText && hasValidOptions && !forceAIForMatrix) {
       results[idx] = {
         topic: existingTopic,
         subtopic: existingSubtopic,
         conceptTested: q.conceptTested || "",
         questionText: (q.questionText || q.question || "").trim(),
+        options: {
+          A: optA,
+          B: optB,
+          C: optC,
+          D: optD,
+          a: optA,
+          b: optB,
+          c: optC,
+          d: optD
+        },
         solution: (q.solution || "").trim(),
         correctOption: q.correctOption.trim().toUpperCase()
       };
@@ -554,6 +576,11 @@ Tasks for each question:
      Always classify the topic strictly as "Missing Number / Matrix".
 5. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable.
 6. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
+7. "options": Clean and repair the 4 options (A, B, C, D):
+   - If any option is malformed, blank, 'N/A', contains repetitive labels (e.g. 'Option 1: Option 1'), has leaked question text, or has corrupted mathematical/LaTeX formatting, repair and restore the clean option text.
+   - If options are completely missing or corrupted, deduce the 4 sensible answer choices from the question, problem context, and solution (ensuring the correct option letter strictly corresponds to the solution's answer).
+   - Strip leading prefixes like "A.", "B.", "Option A:", "(a)", "(b)" from each option value.
+   - Ensure all 4 options A, B, C, and D are returned cleanly.
 
 CRITICAL JSON FORMAT RULE:
 Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. In particular, any LaTeX or mathematical backslashes (like \\underline, \\frac, \\sqrt, \\alpha) MUST be double-escaped as \\\\underline, \\\\frac, etc. Do not output raw unescaped backslashes.
@@ -580,6 +607,12 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
     "subtopic": "Granular Subtopic Name",
     "conceptTested": "Exact theorem, rule, or formula tested",
     "question": "Cleaned & correctly formatted question text",
+    "options": {
+      "A": "Cleaned option A text",
+      "B": "Cleaned option B text",
+      "C": "Cleaned option C text",
+      "D": "Cleaned option D text"
+    },
     "solution": "Cleaned solution text",
     "correctOption": "A"
   }
@@ -608,11 +641,27 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
           parsed.forEach((item, idx) => {
             const originalIdx = chunkIndices[idx];
             const originalQ = questions[originalIdx];
+            const cleanedOpts = item.options || {};
+            const optA = (cleanedOpts.A || cleanedOpts.a || originalQ.options?.A || originalQ.options?.a || "").trim();
+            const optB = (cleanedOpts.B || cleanedOpts.b || originalQ.options?.B || originalQ.options?.b || "").trim();
+            const optC = (cleanedOpts.C || cleanedOpts.c || originalQ.options?.C || originalQ.options?.c || "").trim();
+            const optD = (cleanedOpts.D || cleanedOpts.d || originalQ.options?.D || originalQ.options?.d || "").trim();
+
             results[originalIdx] = {
               topic: (item.topic || originalQ.topic || originalQ.subject || "General").trim(),
               subtopic: (item.subtopic || item.topic || originalQ.subtopic || originalQ.topic || "").trim(),
               conceptTested: (item.conceptTested || originalQ.conceptTested || "").trim(),
               questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
+              options: {
+                A: optA,
+                B: optB,
+                C: optC,
+                D: optD,
+                a: optA,
+                b: optB,
+                c: optC,
+                d: optD
+              },
               solution: (item.solution || originalQ.solution || "").trim(),
               correctOption: (item.correctOption || originalQ.correctOption || "A").toUpperCase().trim()
             };
@@ -652,8 +701,83 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
   }
 }
 
+// Universal status normalizer across platforms (Testbook, MockMatrix, Oliveboard, etc.)
+function normalizeQuestionStatus(q: any): {
+  isCorrect: boolean;
+  isIncorrect: boolean;
+  isUnattempted: boolean;
+  isSlow: boolean;
+  canonicalStatus: "Correct" | "Correct (Slow)" | "Incorrect" | "Unattempted";
+} {
+  const statusStr = String(q.status || q.userStatus || q.result || "").toLowerCase().trim();
+  const userAns = String(q.chosenOption || q.userAnswer || q.userOption || q.markedOption || "").trim().toLowerCase();
+  const correctAns = String(q.correctOption || q.answer || q.key || "").trim().toLowerCase();
+
+  const isExplicitUnattempted =
+    statusStr.includes("unattempt") ||
+    statusStr.includes("skip") ||
+    statusStr.includes("not_attempted") ||
+    statusStr.includes("left") ||
+    q.isAttempted === false ||
+    !userAns ||
+    userAns === "-" ||
+    userAns === "none" ||
+    userAns === "null";
+
+  const isExplicitSlow =
+    statusStr.includes("slow") ||
+    statusStr.includes("speed") ||
+    q.isSlow === true;
+
+  const isExplicitWrong =
+    statusStr.includes("wrong") ||
+    statusStr.includes("incorrect") ||
+    q.isCorrect === false;
+
+  const isExplicitCorrect =
+    (statusStr.includes("correct") || statusStr.includes("right") || q.isCorrect === true) &&
+    !isExplicitWrong;
+
+  let isUnattempted = false;
+  let isIncorrect = false;
+  let isCorrect = false;
+
+  if (isExplicitUnattempted) {
+    isUnattempted = true;
+  } else if (isExplicitWrong) {
+    isIncorrect = true;
+  } else if (isExplicitCorrect) {
+    isCorrect = true;
+  } else if (userAns && correctAns) {
+    if (userAns === correctAns) {
+      isCorrect = true;
+    } else {
+      isIncorrect = true;
+    }
+  } else {
+    isIncorrect = true;
+  }
+
+  const userTime = Number(q.userTime || q.timeTaken || 0);
+  const avgTime = Number(q.avgTime || 0);
+  const isSlow = isExplicitSlow || (isCorrect && avgTime > 0 && userTime > avgTime * 1.5 && userTime >= 60);
+
+  let canonicalStatus: "Correct" | "Correct (Slow)" | "Incorrect" | "Unattempted";
+  if (isUnattempted) {
+    canonicalStatus = "Unattempted";
+  } else if (isIncorrect) {
+    canonicalStatus = "Incorrect";
+  } else if (isSlow) {
+    canonicalStatus = "Correct (Slow)";
+  } else {
+    canonicalStatus = "Correct";
+  }
+
+  return { isCorrect, isIncorrect, isUnattempted, isSlow, canonicalStatus };
+}
+
 // Compute Mock Score & Accuracy Report
-function computeMockScoreReport(rawList: any[], mockTitle?: string): any {
+function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?: string, preferredPlatform?: string): any {
   const subjectGroups: Record<string, any[]> = {
     Reasoning: [],
     "General Awareness": [],
@@ -670,7 +794,23 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string): any {
   });
 
   const activeSubjects = Object.keys(subjectGroups).filter(k => subjectGroups[k].length > 0);
-  const isFullMock = activeSubjects.length >= 2 || rawList.length >= 70;
+
+  const detectedFromQuestions = rawList.find(q => q.testName || q.title || q.test_name)?.testName ||
+                                rawList.find(q => q.testName || q.title || q.test_name)?.title ||
+                                rawList.find(q => q.testName || q.title || q.test_name)?.test_name;
+  const rawTitle = ((mockTitle && mockTitle.trim()) || detectedFromQuestions || "").toLowerCase();
+
+  // Smart Detection:
+  // If title explicitly indicates a sectional/chapter/topic test, treat as sectional
+  const isExplicitSectional = /sectional|chapter|topic|subject\s*test|\b(quant|english|reasoning|gk|ga|general awareness|maths?)\s*(sectional|test|mock)?\b/i.test(rawTitle) && !/full\s*(test|mock|length)/i.test(rawTitle);
+
+  // If title has "full test", "full mock", "tier 1", "tier-1", etc., treat as full mock even if errors came from only 1 subject
+  const titleIndicatesFull = /full\s*(test|mock|length)|tier\s*[-_ ]*1|tier\s*[-_ ]*i\b|cgl\s*(prelims|tier)/i.test(rawTitle);
+
+  const isFullMock = isExplicitSectional
+    ? false
+    : (titleIndicatesFull || activeSubjects.length >= 2 || rawList.length >= 70);
+
   const mockType: "full" | "sectional" = isFullMock ? "full" : "sectional";
 
   const sections: Record<string, any> = {};
@@ -689,13 +829,13 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string): any {
     let hasExplicitCorrect = false;
 
     qList.forEach(q => {
-      const status = (q.status || "").toLowerCase();
-      if (status.includes("correct") && !status.includes("incorrect")) {
+      const { isCorrect: qCorrect, isIncorrect: qWrong, isUnattempted: qUnatt } = normalizeQuestionStatus(q);
+      if (qCorrect && !qWrong) {
         correct++;
         hasExplicitCorrect = true;
-      } else if (status.includes("wrong") || status.includes("incorrect")) {
+      } else if (qWrong) {
         wrong++;
-      } else if (status.includes("unattempted") || status.includes("skipped")) {
+      } else if (qUnatt) {
         unattempted++;
       } else {
         wrong++;
@@ -734,14 +874,20 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string): any {
 
   const now = new Date();
   const dateStr = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-  const detectedFromQuestions = rawList.find(q => q.testName || q.title || q.test_name)?.testName ||
-                                rawList.find(q => q.testName || q.title || q.test_name)?.title ||
-                                rawList.find(q => q.testName || q.title || q.test_name)?.test_name;
   const title = (mockTitle && mockTitle.trim()) || detectedFromQuestions || (isFullMock ? `Full Mock - ${dateStr}` : `${activeSubjects[0] || "Sectional"} Mock - ${dateStr}`);
 
+  const detectedPlatform = preferredPlatform ||
+                           rawList.find(q => q.platform)?.platform ||
+                           (title.toLowerCase().includes("testbook") ? "Testbook" :
+                            title.toLowerCase().includes("oliveboard") ? "Oliveboard" :
+                            title.toLowerCase().includes("mockmatrix") ? "MockMatrix" : "General");
+
+  const id = (preferredId && String(preferredId).trim()) || ("mock_" + Date.now() + "_" + Math.random().toString(36).substring(2, 7));
+
   return {
-    id: "mock_" + Date.now() + "_" + Math.random().toString(36).substring(2, 7),
+    id,
     title,
+    platform: detectedPlatform,
     type: mockType,
     subject: isFullMock ? undefined : (activeSubjects[0] || "General"),
     date: now.toISOString(),
@@ -814,6 +960,19 @@ async function startServer() {
         });
       });
 
+      // 2.5 Calculate Mock Score Report early so mockId is available for error indexing
+      let calculatedReport: any = null;
+      try {
+        calculatedReport = computeMockScoreReport(
+          rawList,
+          payload.title || payload.testName || payload.name,
+          payload.id,
+          payload.platform
+        );
+      } catch (repErr) {
+        console.error("[Mock Import] Error generating score report early:", repErr);
+      }
+
       const resultsSummary: Record<string, number> = {};
       const mockDir = path.join(process.cwd(), "src", "data", "mock_errors");
 
@@ -875,26 +1034,30 @@ async function startServer() {
 
         for (const item of items) {
           const q = item.raw;
-          const status = (q.status || "Incorrect").toLowerCase();
+          const { isCorrect, isIncorrect, isUnattempted, isSlow, canonicalStatus } = normalizeQuestionStatus(q);
+
+          // Skip clean correct questions that are not slow - mock_errors is exclusively for errors, unattempted, and slow questions
+          if (isCorrect && !isIncorrect && !isSlow && !isUnattempted) {
+            continue;
+          }
+
           let targetTitle = "Wrong";
 
           if (subjectName === "Mathematics" || subjectName === "Reasoning") {
-            if (status.includes("slow") || status.includes("speed")) {
+            if (isSlow) {
               targetTitle = "Speed Issue";
-            } else if (status.includes("unattempted") || status.includes("skipped")) {
+            } else if (isUnattempted) {
               targetTitle = "Unattempted";
             } else {
               targetTitle = "Wrong";
             }
           } else if (subjectName === "General Awareness") {
-            // GK: 2 buckets (Unattempted or Wrong)
-            if (status.includes("unattempted") || status.includes("skipped")) {
+            if (isUnattempted) {
               targetTitle = "Unattempted";
             } else {
               targetTitle = "Wrong";
             }
           } else if (subjectName === "English") {
-            // English: 1 bucket (Mock Errors)
             targetTitle = "Mock Errors";
           }
 
@@ -922,19 +1085,21 @@ async function startServer() {
             const newQ = {
               id: qId,
               q_num: targetChapter.questions.length + 1,
-              testName: q.testName || payload.title || payload.testName,
-              platform: q.platform || 'General',
-              status: q.status || (status.includes("slow") ? "Correct (Slow)" : status.includes("unattempted") ? "Unattempted" : "Incorrect"),
+              mockId: calculatedReport ? calculatedReport.id : (payload.id || null),
+              testId: calculatedReport ? calculatedReport.id : (payload.id || null),
+              testName: q.testName || payload.title || payload.testName || calculatedReport?.title,
+              platform: q.platform || payload.platform || calculatedReport?.platform || 'General',
+              status: q.status || canonicalStatus,
               chosenOption: q.chosenOption || null,
               correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
               userTime: q.userTime || null,
               avgTime: q.avgTime || null,
               question: cleanQuestionText(qText),
               options: {
-                a: cleanQuestionText(q.options?.A || q.options?.a || ""),
-                b: cleanQuestionText(q.options?.B || q.options?.b || ""),
-                c: cleanQuestionText(q.options?.C || q.options?.c || ""),
-                d: cleanQuestionText(q.options?.D || q.options?.d || "")
+                a: cleanQuestionText(enr.options?.a || enr.options?.A || q.options?.A || q.options?.a || ""),
+                b: cleanQuestionText(enr.options?.b || enr.options?.B || q.options?.B || q.options?.b || ""),
+                c: cleanQuestionText(enr.options?.c || enr.options?.C || q.options?.C || q.options?.c || ""),
+                d: cleanQuestionText(enr.options?.d || enr.options?.D || q.options?.D || q.options?.d || "")
               },
               answer: cleanAns,
               solution: cleanSolutionText(q.solution || enr.solution || ""),
@@ -959,7 +1124,7 @@ async function startServer() {
                 })(),
                 subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
                 conceptTested: enr.conceptTested || q.conceptTested || "",
-                difficulty: status.includes("Slow") ? "hard" : "medium"
+                difficulty: isSlow ? "hard" : "medium"
               }
             };
 
@@ -972,66 +1137,88 @@ async function startServer() {
         resultsSummary[subjectName] = addedCount;
       }
 
-      // 4. Calculate and save Mock Score Report
-      let calculatedReport = null;
-      try {
-        calculatedReport = computeMockScoreReport(rawList, payload.title || payload.testName || payload.name);
-        const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
-        let existingReports: any[] = [];
-        if (fs.existsSync(mockReportPath)) {
-          try {
-            existingReports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
-          } catch {
-            existingReports = [];
-          }
-        }
-        const isDuplicateReport = existingReports.some(r => 
-          (payload.id && r.id === payload.id) ||
-          (r.title === calculatedReport.title && r.type === calculatedReport.type && r.totalScore === calculatedReport.totalScore && r.totalCorrect === calculatedReport.totalCorrect && r.totalWrong === calculatedReport.totalWrong)
-        );
-        if (!isDuplicateReport) {
-          existingReports.unshift(calculatedReport);
-          fs.writeFileSync(mockReportPath, JSON.stringify(existingReports, null, 2), "utf-8");
-          console.log(`[Mock Import] Mock Score Report saved: ${calculatedReport.title} (Score: ${calculatedReport.totalScore}/${calculatedReport.maxMarks})`);
-        } else {
-          console.log(`[Mock Import] Skipped duplicate score report for: ${calculatedReport.title}`);
-        }
-
-        // Also save mock questions to mock_tests and mock_questions with topic, subtopic & conceptTested
+      // 4. Save Mock Score Report and raw questions
+      if (calculatedReport) {
         try {
-          const enrichedMasterList = rawList.map((q, idx) => {
-            const enr: any = enriched[idx] || {};
-            const rawAns = enr.correctOption || q.correctOption || q.answer || "a";
-            const cleanAns = rawAns.toLowerCase().trim();
-            return {
-              ...q,
-              topic: enr.topic || q.topic || "General",
-              subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
-              conceptTested: enr.conceptTested || q.conceptTested || "",
-              questionText: cleanQuestionText(enr.questionText || q.questionText || q.question),
-              solution: cleanSolutionText(q.solution || enr.solution || ""),
-              correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
-              tags: {
-                ...(q.tags || {}),
+          const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+          let existingReports: any[] = [];
+          if (fs.existsSync(mockReportPath)) {
+            try {
+              existingReports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+            } catch {
+              existingReports = [];
+            }
+          }
+          const isDuplicateReport = existingReports.some(r => 
+            (payload.id && r.id === payload.id) ||
+            (r.title === calculatedReport.title && r.type === calculatedReport.type && r.totalScore === calculatedReport.totalScore && r.totalCorrect === calculatedReport.totalCorrect && r.totalWrong === calculatedReport.totalWrong)
+          );
+          if (!isDuplicateReport) {
+            existingReports.unshift(calculatedReport);
+            fs.writeFileSync(mockReportPath, JSON.stringify(existingReports, null, 2), "utf-8");
+            console.log(`[Mock Import] Mock Score Report saved: ${calculatedReport.title} (Score: ${calculatedReport.totalScore}/${calculatedReport.maxMarks})`);
+          } else {
+            console.log(`[Mock Import] Skipped duplicate score report for: ${calculatedReport.title}`);
+          }
+
+          // Also save mock questions to mock_questions with topic, subtopic & conceptTested
+          try {
+            const enrichedMasterList = rawList.map((q, idx) => {
+              const enr: any = enriched[idx] || {};
+              const rawAns = enr.correctOption || q.correctOption || q.answer || "a";
+              const cleanAns = rawAns.toLowerCase().trim();
+              return {
+                ...q,
+                mockId: calculatedReport.id,
+                testId: calculatedReport.id,
+                testName: q.testName || payload.title || payload.testName,
+                platform: q.platform || payload.platform || 'General',
                 topic: enr.topic || q.topic || "General",
                 subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
-                conceptTested: enr.conceptTested || q.conceptTested || ""
-              }
-            };
-          });
+                conceptTested: enr.conceptTested || q.conceptTested || "",
+                questionText: cleanQuestionText(enr.questionText || q.questionText || q.question),
+                options: {
+                  A: cleanQuestionText(enr.options?.A || enr.options?.a || q.options?.A || q.options?.a || ""),
+                  B: cleanQuestionText(enr.options?.B || enr.options?.b || q.options?.B || q.options?.b || ""),
+                  C: cleanQuestionText(enr.options?.C || enr.options?.c || q.options?.C || q.options?.c || ""),
+                  D: cleanQuestionText(enr.options?.D || enr.options?.d || q.options?.D || q.options?.d || ""),
+                  a: cleanQuestionText(enr.options?.a || enr.options?.A || q.options?.a || q.options?.A || ""),
+                  b: cleanQuestionText(enr.options?.b || enr.options?.B || q.options?.b || q.options?.B || ""),
+                  c: cleanQuestionText(enr.options?.c || enr.options?.C || q.options?.c || q.options?.C || ""),
+                  d: cleanQuestionText(enr.options?.d || enr.options?.D || q.options?.d || q.options?.D || "")
+                },
+                solution: cleanSolutionText(q.solution || enr.solution || ""),
+                correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
+                tags: {
+                  ...(q.tags || {}),
+                  topic: enr.topic || q.topic || "General",
+                  subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+                  conceptTested: enr.conceptTested || q.conceptTested || ""
+                }
+              };
+            });
 
-          const tDir = path.join(process.cwd(), "src", "data", "mock_tests");
-          if (!fs.existsSync(tDir)) fs.mkdirSync(tDir, { recursive: true });
-          fs.writeFileSync(path.join(tDir, `${calculatedReport.id}.json`), JSON.stringify(enrichedMasterList, null, 2), "utf-8");
-
-          const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
-          if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
-          fs.writeFileSync(path.join(qDir, `${calculatedReport.id}.json`), JSON.stringify(enrichedMasterList, null, 2), "utf-8");
-        } catch (qSaveErr) {
-          console.error("[Mock Import] Error saving mock questions file:", qSaveErr);
+            const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
+            if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
+            fs.writeFileSync(path.join(qDir, `${calculatedReport.id}.json`), JSON.stringify(enrichedMasterList, null, 2), "utf-8");
+          } catch (qSaveErr) {
+            console.error("[Mock Import] Error saving mock questions file:", qSaveErr);
+          }
+        } catch (repErr) {
+          console.error("[Mock Import] Error saving score report:", repErr);
         }
-      } catch (repErr) {
-        console.error("[Mock Import] Error generating score report:", repErr);
+      }
+
+      // Reconcile and stamp mockIds across mock_errors
+      syncMockErrorsWithActiveMocks();
+
+      // Re-initialize Tommy's in-memory store so newly imported questions are immediately searchable
+      try {
+        const { globalStore } = await import('./api/chat');
+        globalStore.initialize(process.cwd(), true);
+        console.log('[Mock Import] Tommy AI store re-initialized with new questions.');
+      } catch (e: any) {
+        console.warn('[Mock Import] Could not reinitialize Tommy store:', e?.message || e);
       }
 
       console.log(`[Mock Import] Success:`, resultsSummary);
@@ -1078,11 +1265,6 @@ async function startServer() {
   app.get("/api/mock-questions/:id", (req, res) => {
     try {
       const { id } = req.params;
-      const tPath = path.join(process.cwd(), "src", "data", "mock_tests", `${id}.json`);
-      if (fs.existsSync(tPath)) {
-        const questions = JSON.parse(fs.readFileSync(tPath, "utf-8"));
-        return res.json(questions);
-      }
       const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${id}.json`);
       if (fs.existsSync(qPath)) {
         const questions = JSON.parse(fs.readFileSync(qPath, "utf-8"));
@@ -1102,10 +1284,6 @@ async function startServer() {
         ? rawQuestions.map(cleanAndNormalizeQuestion)
         : rawQuestions;
 
-      const tDir = path.join(process.cwd(), "src", "data", "mock_tests");
-      if (!fs.existsSync(tDir)) fs.mkdirSync(tDir, { recursive: true });
-      fs.writeFileSync(path.join(tDir, `${id}.json`), JSON.stringify(questions, null, 2), "utf-8");
-
       const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
       if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
       fs.writeFileSync(path.join(qDir, `${id}.json`), JSON.stringify(questions, null, 2), "utf-8");
@@ -1119,15 +1297,11 @@ async function startServer() {
   // Maintenance endpoint: Batch clean all existing mock files
   app.post("/api/clean-existing-mocks", (req, res) => {
     try {
-      const dirs = [
-        path.join(process.cwd(), "src", "data", "mock_questions"),
-        path.join(process.cwd(), "src", "data", "mock_tests"),
-      ];
+      const dir = path.join(process.cwd(), "src", "data", "mock_questions");
       let filesProcessed = 0;
       let questionsProcessed = 0;
 
-      for (const dir of dirs) {
-        if (!fs.existsSync(dir)) continue;
+      if (fs.existsSync(dir)) {
         const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
         for (const file of files) {
           const filePath = path.join(dir, file);
@@ -1151,44 +1325,256 @@ async function startServer() {
     }
   });
 
+  function normalizeMockTitle(title: string = ''): string {
+    return String(title || '')
+      .toLowerCase()
+      .replace(/[–—]/g, '-')
+      .replace(/['’`]/g, "'")
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function normalizeQText(text: string = ''): string {
+    return String(text || '')
+      .toLowerCase()
+      .replace(/\r\n/g, '\n')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  // Helper function to keep mock_errors and mock_questions 100% in sync with active mock_reports.json
+  function syncMockErrorsWithActiveMocks() {
+    const cwd = process.cwd();
+    const reportsPath = path.join(cwd, "src", "data", "mock_reports.json");
+    const qDir = path.join(cwd, "src", "data", "mock_questions");
+    const mockErrorsDir = path.join(cwd, "src", "data", "mock_errors");
+
+    if (!fs.existsSync(reportsPath)) return {};
+
+    let reports: any[] = [];
+    try {
+      reports = JSON.parse(fs.readFileSync(reportsPath, "utf-8"));
+    } catch {
+      return {};
+    }
+
+    const activeReportIds = new Set<string>(reports.map((r: any) => r.id).filter(Boolean));
+
+    // Remove any orphaned mock_questions files not present in active mock_reports.json
+    if (fs.existsSync(qDir)) {
+      fs.readdirSync(qDir).filter(f => f.endsWith(".json")).forEach(f => {
+        const id = f.replace(".json", "");
+        if (!activeReportIds.has(id)) {
+          try { fs.unlinkSync(path.join(qDir, f)); } catch {}
+        }
+      });
+    }
+
+    const activeQuestionSignatures = new Map<string, string>(); // questionText -> mockId
+    const activeTitles = new Map<string, string>(); // normalizedTitle -> mockId
+
+    reports.forEach((r: any) => {
+      if (r.title) activeTitles.set(normalizeMockTitle(r.title), r.id);
+    });
+
+    activeReportIds.forEach(id => {
+      const p = path.join(qDir, `${id}.json`);
+      if (fs.existsSync(p)) {
+        try {
+          const arr = JSON.parse(fs.readFileSync(p, "utf-8"));
+          if (Array.isArray(arr)) {
+            arr.forEach((q: any) => {
+              if (q.testName) activeTitles.set(normalizeMockTitle(q.testName), id);
+              if (q.testTitle) activeTitles.set(normalizeMockTitle(q.testTitle), id);
+              const text = normalizeQText(q.question || q.questionText || "");
+              if (text) activeQuestionSignatures.set(text, id);
+            });
+          }
+        } catch {}
+      }
+    });
+
+    const files = ["english.json", "mathematics.json", "reasoning.json", "general_awareness.json"];
+    const summary: Record<string, { before: number; after: number; removed: number }> = {};
+
+    files.forEach(file => {
+      const filePath = path.join(mockErrorsDir, file);
+      if (!fs.existsSync(filePath)) return;
+      try {
+        const chapters = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+        let before = 0;
+        let after = 0;
+
+        chapters.forEach((ch: any) => {
+          if (!Array.isArray(ch.questions)) return;
+          before += ch.questions.length;
+          ch.questions = ch.questions.filter((q: any) => {
+            const tName = normalizeMockTitle(q.testName || q.testTitle || "");
+            const qText = normalizeQText(q.question || q.questionText || "");
+            const mId = q.mockId || q.testId;
+
+            // Determine if question matches an active mock
+            let matchedMockId: string | undefined = undefined;
+            if (mId && activeReportIds.has(mId)) {
+              matchedMockId = mId;
+            } else if (tName && activeTitles.has(tName)) {
+              matchedMockId = activeTitles.get(tName);
+            } else if (qText && activeQuestionSignatures.has(qText)) {
+              matchedMockId = activeQuestionSignatures.get(qText);
+            }
+
+            if (matchedMockId) {
+              // Stamp mockId and testId so future deletions by ID are immediate and robust
+              q.mockId = matchedMockId;
+              q.testId = matchedMockId;
+              return true;
+            }
+            // Safety: preserve questions with no identifiers at all (manually added / legacy)
+            if (!mId && !tName && !qText) return true;
+            return false;
+          });
+          ch.questions.forEach((q: any, idx: number) => { q.q_num = idx + 1; });
+          after += ch.questions.length;
+        });
+
+        fs.writeFileSync(filePath, JSON.stringify(chapters, null, 2), "utf-8");
+        summary[file] = { before, after, removed: before - after };
+      } catch {}
+    });
+
+    return summary;
+  }
+
+  function deleteMockAndCleanEverything(id: string) {
+    const cwd = process.cwd();
+    const mockReportPath = path.join(cwd, "src", "data", "mock_reports.json");
+    const qDir = path.join(cwd, "src", "data", "mock_questions");
+    const mockErrorsDir = path.join(cwd, "src", "data", "mock_errors");
+
+    let reports: any[] = [];
+    if (fs.existsSync(mockReportPath)) {
+      try {
+        reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+      } catch {
+        reports = [];
+      }
+    }
+
+    const targetReport = reports.find((r: any) => r.id === id);
+    const targetTitles = new Set<string>();
+    if (targetReport && targetReport.title) {
+      targetTitles.add(normalizeMockTitle(targetReport.title));
+    }
+
+    const targetQuestionSignatures = new Set<string>();
+    const targetQuestionIds = new Set<string>();
+
+    const p = path.join(qDir, `${id}.json`);
+    if (fs.existsSync(p)) {
+      try {
+        const arr = JSON.parse(fs.readFileSync(p, "utf-8"));
+        if (Array.isArray(arr)) {
+          arr.forEach((q: any) => {
+            if (q.id) targetQuestionIds.add(String(q.id));
+            if (q.testName) targetTitles.add(normalizeMockTitle(q.testName));
+            if (q.testTitle) targetTitles.add(normalizeMockTitle(q.testTitle));
+            const text = normalizeQText(q.question || q.questionText || "");
+            if (text) targetQuestionSignatures.add(text);
+          });
+        }
+      } catch {}
+      try { fs.unlinkSync(p); } catch {}
+    }
+
+    // Remove from mock_reports.json
+    reports = reports.filter((r: any) => r.id !== id);
+    fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
+
+    // Remove from mock_errors
+    const files = ["english.json", "mathematics.json", "reasoning.json", "general_awareness.json"];
+    files.forEach(file => {
+      const filePath = path.join(mockErrorsDir, file);
+      if (!fs.existsSync(filePath)) return;
+      try {
+        const chapters = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+        chapters.forEach((ch: any) => {
+          if (!Array.isArray(ch.questions)) return;
+          ch.questions = ch.questions.filter((q: any) => {
+            if (q.mockId === id || q.testId === id) return false;
+            if (q.id && targetQuestionIds.has(String(q.id))) return false;
+            const text = normalizeQText(q.question || q.questionText || "");
+            if (text && targetQuestionSignatures.has(text)) return false;
+            const tName = normalizeMockTitle(q.testName || q.testTitle || "");
+            if (tName && targetTitles.has(tName)) return false;
+            return true;
+          });
+          ch.questions.forEach((q: any, idx: number) => { q.q_num = idx + 1; });
+        });
+        fs.writeFileSync(filePath, JSON.stringify(chapters, null, 2), "utf-8");
+      } catch {}
+    });
+
+    // Run global sync to clean any remaining orphans and stamp mockIds
+    return syncMockErrorsWithActiveMocks();
+  }
+
+  // Explicit sync endpoint for manual reconciliation
+  app.post("/api/mock-errors/sync", (req, res) => {
+    try {
+      const summary = syncMockErrorsWithActiveMocks();
+      res.json({ success: true, summary });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
+
   app.delete("/api/mock-reports/:id", (req, res) => {
     try {
       const { id } = req.params;
-      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
-      if (fs.existsSync(mockReportPath)) {
-        let reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
-        const targetReport = reports.find((r: any) => r.id === id);
-        reports = reports.filter((r: any) => r.id !== id);
-        fs.writeFileSync(mockReportPath, JSON.stringify(reports, null, 2), "utf-8");
+      const syncSummary = deleteMockAndCleanEverything(id);
+      res.json({ success: true, syncSummary });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
+  });
 
-        // If report had a title, remove any questions from mock_errors
-        if (targetReport?.title) {
-          const mockDir = path.join(process.cwd(), "src", "data", "mock_errors");
-          ["english.json", "mathematics.json", "reasoning.json", "general_awareness.json"].forEach(file => {
-            const filePath = path.join(mockDir, file);
-            if (fs.existsSync(filePath)) {
+  // Remove all sectional mocks except Testbook
+  app.delete("/api/mock-reports/sectional/non-testbook", (req, res) => {
+    try {
+      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+      if (!fs.existsSync(mockReportPath)) return res.json({ success: true, count: 0 });
+
+      let reports = JSON.parse(fs.readFileSync(mockReportPath, "utf-8"));
+      const toRemove: any[] = [];
+      const toKeep: any[] = [];
+
+      reports.forEach((r: any) => {
+        if (r.type === "sectional") {
+          let platform = r.platform;
+          if (!platform) {
+            const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${r.id}.json`);
+            if (fs.existsSync(qPath)) {
               try {
-                const chapters = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-                chapters.forEach((ch: any) => {
-                  ch.questions = (ch.questions || []).filter((q: any) => q.testName !== targetReport.title);
-                  ch.questions.forEach((q: any, idx: number) => { q.q_num = idx + 1; });
-                });
-                fs.writeFileSync(filePath, JSON.stringify(chapters, null, 2), "utf-8");
+                const qs = JSON.parse(fs.readFileSync(qPath, "utf-8"));
+                if (Array.isArray(qs) && qs[0]) platform = qs[0].platform;
               } catch {}
             }
-          });
+          }
+          if (platform && platform.toLowerCase() === "testbook") {
+            toKeep.push(r);
+          } else {
+            toRemove.push(r);
+          }
+        } else {
+          toKeep.push(r);
         }
-      }
-      // Also delete from mock_tests and mock_questions
-      const tPath = path.join(process.cwd(), "src", "data", "mock_tests", `${id}.json`);
-      if (fs.existsSync(tPath)) {
-        try { fs.unlinkSync(tPath); } catch {}
-      }
-      const qPath = path.join(process.cwd(), "src", "data", "mock_questions", `${id}.json`);
-      if (fs.existsSync(qPath)) {
-        try { fs.unlinkSync(qPath); } catch {}
-      }
-      res.json({ success: true });
+      });
+
+      toRemove.forEach(r => {
+        deleteMockAndCleanEverything(r.id);
+      });
+
+      res.json({ success: true, removedCount: toRemove.length });
     } catch (e: any) {
       res.status(500).json({ error: e.message });
     }
@@ -1196,8 +1582,30 @@ async function startServer() {
 
   app.delete("/api/mock-reports", (req, res) => {
     try {
-      const mockReportPath = path.join(process.cwd(), "src", "data", "mock_reports.json");
+      const cwd = process.cwd();
+      const mockReportPath = path.join(cwd, "src", "data", "mock_reports.json");
       fs.writeFileSync(mockReportPath, "[]", "utf-8");
+
+      const qDir = path.join(cwd, "src", "data", "mock_questions");
+      if (fs.existsSync(qDir)) {
+        fs.readdirSync(qDir).filter(f => f.endsWith(".json")).forEach(f => {
+          try { fs.unlinkSync(path.join(qDir, f)); } catch {}
+        });
+      }
+
+      const mockErrorsDir = path.join(cwd, "src", "data", "mock_errors");
+      const files = ["english.json", "mathematics.json", "reasoning.json", "general_awareness.json"];
+      files.forEach(file => {
+        const filePath = path.join(mockErrorsDir, file);
+        if (fs.existsSync(filePath)) {
+          try {
+            const chapters = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+            chapters.forEach((ch: any) => { ch.questions = []; });
+            fs.writeFileSync(filePath, JSON.stringify(chapters, null, 2), "utf-8");
+          } catch {}
+        }
+      });
+
       res.json({ success: true });
     } catch (e: any) {
       res.status(500).json({ error: e.message });

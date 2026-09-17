@@ -127,7 +127,7 @@
     "correctOption": "B",
     "userTime": "01:23",
     "avgTime": "00:51",
-    "questionText": "In a \\DeltaABC, if \\angleA = 90^\\circ, AC = 5 cm, BC = 9 cm, and in \\DeltaPQR, \\angleP = 90^\\circ, PR = 3 cm, QR = 8 cm, then:",
+    "questionText": "In a ΔABC, if ∠A = 90°, AC = 5 cm, BC = 9 cm, and in ΔPQR, ∠P = 90°, PR = 3 cm, QR = 8 cm, then:",
     "options": {
       "A": "ΔABC \\(\\cong\\) ΔPQR",
       "B": "ΔABC \\(\\ncong\\) ΔPQR",

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import katex from 'katex';
-import { getLanguageText, tokenizeTextWithMath, MathToken } from '../utils/formatQuestionText';
+import { getLanguageText, tokenizeTextWithMath, splitInstructionAndQuestion, MathToken } from '../utils/formatQuestionText';
 import { sanitizeLatexForKatex } from '../utils/mathSanitizer';
 
 interface FormattedTextProps {
@@ -8,6 +8,8 @@ interface FormattedTextProps {
   language?: 'English' | 'Hindi' | 'Bilingual' | string;
   className?: string;
   as?: 'span' | 'p' | 'div';
+  isQuestion?: boolean;
+  subject?: string;
 }
 
 function renderTableBlock(tableLines: string[], keyPrefix: string | number) {
@@ -95,71 +97,104 @@ function renderTextWithTables(text: string, tokenIdx: number) {
   return elements;
 }
 
+function renderTokenList(tokens: MathToken[]) {
+  return tokens.map((token, idx) => {
+    if (token.type === 'math') {
+      const sanitized = sanitizeLatexForKatex(token.value);
+      try {
+        const html = katex.renderToString(sanitized, {
+          throwOnError: false,
+          displayMode: Boolean(token.display),
+        });
+
+        // If KaTeX produced an error span, recover with a clean pill
+        if (html.includes('class="katex-error"')) {
+          return (
+            <span
+              key={idx}
+              className="font-mono text-xs px-1.5 py-0.5 mx-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 inline-block align-baseline"
+            >
+              {token.value}
+            </span>
+          );
+        }
+
+        return (
+          <span
+            key={idx}
+            className={token.display ? 'block my-2 overflow-x-auto text-center' : 'inline-block px-0.5 align-baseline'}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        );
+      } catch {
+        return (
+          <span
+            key={idx}
+            className="font-mono text-xs px-1.5 py-0.5 mx-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 inline-block align-baseline"
+          >
+            {token.value}
+          </span>
+        );
+      }
+    }
+
+    return (
+      <React.Fragment key={idx}>
+        {renderTextWithTables(token.value, idx)}
+      </React.Fragment>
+    );
+  });
+}
+
 export const FormattedText: React.FC<FormattedTextProps> = React.memo(({
   text = '',
   language = 'English',
   className = '',
   as: Component = 'span',
+  isQuestion = false,
+  subject,
 }) => {
-  const tokens = useMemo(() => {
-    if (!text) return [];
-    const localized = getLanguageText(text, (language as any) || 'English');
-    return tokenizeTextWithMath(localized);
+  const localized = useMemo(() => {
+    if (!text) return '';
+    return getLanguageText(text, (language as any) || 'English');
   }, [text, language]);
 
-  if (!tokens || tokens.length === 0) return null;
+  const parsedQuestion = useMemo(() => {
+    if (!isQuestion || !localized) return null;
+    return splitInstructionAndQuestion(localized, subject);
+  }, [isQuestion, localized, subject]);
+
+  const tokens = useMemo(() => {
+    if (!localized) return [];
+    return tokenizeTextWithMath(localized);
+  }, [localized]);
+
+  if (!localized) return null;
+
+  // If instruction was found in an English or Reasoning question:
+  if (parsedQuestion && parsedQuestion.instruction) {
+    const instTokens = tokenizeTextWithMath(parsedQuestion.instruction);
+    const contentTokens = tokenizeTextWithMath(parsedQuestion.content);
+
+    return (
+      <Component className={className}>
+        <div className="font-bold text-slate-900 mb-2 leading-relaxed">
+          {renderTokenList(instTokens)}
+        </div>
+        <div className="text-slate-800 leading-relaxed font-normal">
+          {renderTokenList(contentTokens)}
+        </div>
+      </Component>
+    );
+  }
 
   return (
     <Component className={className}>
-      {tokens.map((token, idx) => {
-        if (token.type === 'math') {
-          const sanitized = sanitizeLatexForKatex(token.value);
-          try {
-            const html = katex.renderToString(sanitized, {
-              throwOnError: false,
-              displayMode: Boolean(token.display),
-            });
-
-            // If KaTeX produced an error span, recover with a clean pill
-            if (html.includes('class="katex-error"')) {
-              return (
-                <span
-                  key={idx}
-                  className="font-mono text-xs px-1.5 py-0.5 mx-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 inline-block align-baseline"
-                >
-                  {token.value}
-                </span>
-              );
-            }
-
-            return (
-              <span
-                key={idx}
-                className={token.display ? 'block my-2 overflow-x-auto text-center' : 'inline-block px-0.5 align-baseline'}
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-            );
-          } catch {
-            return (
-              <span
-                key={idx}
-                className="font-mono text-xs px-1.5 py-0.5 mx-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 inline-block align-baseline"
-              >
-                {token.value}
-              </span>
-            );
-          }
-        }
-
-        return (
-          <React.Fragment key={idx}>
-            {renderTextWithTables(token.value, idx)}
-          </React.Fragment>
-        );
-      })}
+      {renderTokenList(tokens)}
     </Component>
   );
 });
 
 export default FormattedText;
+
 

@@ -1,4 +1,4 @@
-import { reconstructScrapedMath } from './mathSanitizer';
+import { reconstructScrapedMath, reconstructScrapedSolutionMath, wrapUnwrappedFractions } from './mathSanitizer';
 
 /**
  * Utility to clean solutions:
@@ -12,9 +12,12 @@ import { reconstructScrapedMath } from './mathSanitizer';
 export function cleanSolutionText(sol: string = ''): string {
   if (!sol) return '';
 
-  // 1. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
+  // 1. Wrap unwrapped \frac formulas before extracting math placeholders
+  let s = wrapUnwrappedFractions(String(sol));
+
+  // 2. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
   const mathPlaceholders: string[] = [];
-  let s = String(sol).replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+  s = s.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
     const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
     mathPlaceholders.push(m);
     return placeholder;
@@ -33,9 +36,12 @@ export function cleanSolutionText(sol: string = ''): string {
   s = s.replace(/\\r\\n/g, '\n').replace(/\\n/g, '\n').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\u00a0/g, ' ');
 
   // 4. Reconstruct vertical scraped MathML before line collapsing
-  s = reconstructScrapedMath(s);
+  s = reconstructScrapedSolutionMath(s);
 
-  // 5. Trim whitespace on each line
+  // 5. Purge diagram artifacts scraped from visual Testbook infographics
+  s = purgeScrapedDiagramArtifacts(s);
+
+  // 6. Trim whitespace on each line
   const lines = s.split('\n').map(l => l.trim());
 
   // 4. Collapse consecutive empty lines (no more than 1 blank line anywhere)
@@ -74,7 +80,7 @@ export function cleanSolutionText(sol: string = ''): string {
       };
 
       const isHeaderOrLabel = (str: string) => {
-        return /^(given|formula used|calculations?|where|let|note|method|steps?|shortcut trick|alternate method|key points?|additional information|in news|why the other options are incorrect|further insights?):?$/i.test(str);
+        return /^(given|formula used|calculations?|numerator|denominator|value|final value|where|let|note|method|steps?|shortcut trick|alternate method|key points?|additional information|in news|why the other options are incorrect|further insights?):?$/i.test(str);
       };
 
       // Don't leave an empty line immediately following a section label
@@ -97,7 +103,7 @@ export function cleanSolutionText(sol: string = ''): string {
 
   let finalResult = resultLines.join('\n').trim();
   mathPlaceholders.forEach((math, idx) => {
-    finalResult = finalResult.replace(`___MATH_BLOCK_${idx}___`, math);
+    finalResult = finalResult.replace(`___MATH_BLOCK_${idx}___`, () => math);
   });
 
   return finalResult;
@@ -129,4 +135,99 @@ export function extractSolutionLanguage(
 
   return cleaned;
 }
+
+/**
+ * Strips isolated diagram column fragments left over from scraped visual infographics
+ */
+export function purgeScrapedDiagramArtifacts(text: string = ''): string {
+  if (!text) return '';
+
+  // 1. Matches: Formula Used: ... followed by diagram fragments before Calculations / Steps
+  const pattern1 = /(Formula\s+Used:?\s*\n(?:[^\n]+\n)+?)([\s\S]*?)(\n\s*(?:Calculations?|Calculation|Step|Steps):?)/gi;
+  let res = text.replace(pattern1, (match, formulaPart, middlePart, calcPart) => {
+    const lines = middlePart.trim().split('\n').map((l: string) => l.trim()).filter(Boolean);
+    if (lines.length >= 2 && lines.every((l: string) => l.length < 40 && !l.startsWith('⇒') && !l.startsWith('Let ') && !l.startsWith('∴'))) {
+      return formulaPart.trimEnd() + '\n\n' + calcPart.trimStart();
+    }
+    return match;
+  });
+
+  // 2. Matches standalone clusters of diagram numbers or axis labels (e.g. -2, 11, Smallest, Middle)
+  const diagramLinesPattern = /(?:^|\n)(?:[-+]\d+\n)+(?:Smallest|Largest|Middle|Average|\(Middle\)|Initial|Final|\d+\s*\/\s*\d+)/gi;
+  res = res.replace(diagramLinesPattern, '');
+
+  return res;
+}
+
+export interface SolutionSection {
+  type: 'shortcut' | 'given' | 'formula' | 'calculation' | 'additional' | 'method' | 'general';
+  title?: string;
+  content: string;
+}
+
+/**
+ * Splits a solution into structured sections:
+ * - Shortcut Trick
+ * - Given Data
+ * - Formula Used
+ * - Step-by-Step Calculations
+ * - Additional Information / Key Concepts
+ */
+export function parseSolutionSections(solText: string = ''): SolutionSection[] {
+  if (!solText) return [];
+  let text = solText.replace(/^Solution\s*\n+/i, '').trim();
+
+  const headerRegex = /(?<=^|\n)\s*(Shortcut Trick|Alternate Method|Method\s+\d+|Traditional Method|Given|Formula Used|Calculations?|Steps?|Additional Information|Key Points?|Note)\s*:?(?:\s*\n+|$)/gi;
+
+  const splits: { header: string; index: number; headerLength: number }[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = headerRegex.exec(text)) !== null) {
+    splits.push({
+      header: match[1].trim().replace(/:$/, ''),
+      index: match.index,
+      headerLength: match[0].length,
+    });
+  }
+
+  if (splits.length === 0) {
+    return [{ type: 'general', content: text }];
+  }
+
+  const sections: SolutionSection[] = [];
+
+  // Content before first header
+  if (splits[0].index > 0) {
+    const preContent = text.substring(0, splits[0].index).trim();
+    if (preContent) {
+      sections.push({ type: 'general', content: preContent });
+    }
+  }
+
+  for (let i = 0; i < splits.length; i++) {
+    const s = splits[i];
+    const startIndex = s.index + s.headerLength;
+    const endIndex = i + 1 < splits.length ? splits[i + 1].index : text.length;
+    const content = text.substring(startIndex, endIndex).trim();
+
+    const hLower = s.header.toLowerCase();
+    let type: SolutionSection['type'] = 'general';
+    if (hLower.includes('shortcut')) type = 'shortcut';
+    else if (hLower.includes('formula')) type = 'formula';
+    else if (hLower.includes('given')) type = 'given';
+    else if (hLower.includes('calc') || hLower.includes('step')) type = 'calculation';
+    else if (hLower.includes('additional') || hLower.includes('key point')) type = 'additional';
+    else if (hLower.includes('alternate') || hLower.includes('method') || hLower.includes('traditional')) type = 'method';
+
+    if (content) {
+      sections.push({
+        type,
+        title: s.header,
+        content,
+      });
+    }
+  }
+
+  return sections;
+}
+
 

@@ -3,7 +3,18 @@ import { Question } from '../types';
 export function normalizeTopicTitle(rawTopic?: string | null): string {
   if (!rawTopic) return 'General';
   const clean = rawTopic.trim();
-  if (!clean || clean === 'General' || clean === 'Unknown' || clean === 'English Comprehension' || clean === 'English') return 'General';
+  if (
+    !clean ||
+    clean === 'General' ||
+    clean === 'Unknown' ||
+    clean === 'English Comprehension' ||
+    clean === 'English' ||
+    clean === 'Quantitative Aptitude' ||
+    clean === 'General Intelligence' ||
+    clean === 'General Awareness' ||
+    clean === 'General Science' ||
+    clean === 'Geography'
+  ) return 'General';
   
   // Unify all Active & Passive Voice subtopics and variants into one chapter bucket
   if (
@@ -25,6 +36,24 @@ export function normalizeTopicTitle(rawTopic?: string | null): string {
     return 'Direct & Indirect Speech';
   }
 
+  // Unify Current Affairs
+  if (/^(national\s*(&|and)?\s*international\s*)?current\s*affairs$/i.test(clean)) {
+    return 'National & International Current Affairs';
+  }
+
+  // Quant standard chapters (strips granular subtopic suffixes)
+  if (/^ratio\s*(&|and)?\s*proportion/i.test(clean)) return 'Ratio & Proportion';
+  if (/^simplification/i.test(clean)) return 'Simplification';
+  if (/^time,?\s*speed\s*(&|and)?\s*distance/i.test(clean)) return 'Time, Speed & Distance';
+  if (/^time\s*(&|and)?\s*work/i.test(clean)) return 'Time & Work';
+  if (/^profit,?\s*loss\s*(&|and)?\s*discount/i.test(clean)) return 'Profit, Loss & Discount';
+  if (/^compound\s*interest/i.test(clean)) return 'Compound Interest';
+  if (/^simple\s*interest/i.test(clean)) return 'Simple Interest';
+  if (/^mensuration\s*3d/i.test(clean)) return 'Mensuration 3D';
+  if (/^mensuration\s*2d/i.test(clean) || /^mensuration\b/i.test(clean)) return 'Mensuration 2D';
+  if (/^economic\s*geography/i.test(clean)) return 'Physical Geography';
+
+  // English & Reasoning
   if (/^missing\s*numbers?(\s*\/\s*matrix)?/i.test(clean) || /^matrix\b/i.test(clean)) return 'Missing Number / Matrix';
   if (/^one\s*words?(\s*substitut\w*)?/i.test(clean) || /^ows\b/i.test(clean)) return 'One Word Substitution';
   if (/^para\s*jumbles?/i.test(clean) || /^pqrs\b/i.test(clean) || /^sentence\s*rearrangement/i.test(clean)) return 'Para Jumbles';
@@ -46,14 +75,36 @@ export function detectTopic(q: Question, subject: string): string {
 
   const rawTag = q.tags?.topic || (q as any).topic;
   let currentTopic: string | undefined = rawTag ? normalizeTopicTitle(rawTag) : undefined;
-  if (currentTopic === 'General' || currentTopic === 'English Comprehension' || currentTopic === 'English') currentTopic = undefined;
+  if (
+    !currentTopic ||
+    currentTopic === 'General' ||
+    currentTopic === 'Unknown' ||
+    currentTopic === 'English Comprehension' ||
+    currentTopic === 'English' ||
+    currentTopic === 'Quantitative Aptitude' ||
+    currentTopic === 'General Intelligence' ||
+    currentTopic === 'General Awareness' ||
+    currentTopic === 'General Science'
+  ) {
+    currentTopic = undefined;
+  }
 
   // Fallback to subtopic if topic is unassigned or generic
   if (!currentTopic) {
     const rawSubtopic = q.tags?.subtopic || (q as any).subtopic;
     if (rawSubtopic) {
       const normalizedSub = normalizeTopicTitle(rawSubtopic);
-      if (normalizedSub && normalizedSub !== 'General' && normalizedSub !== 'Unknown' && normalizedSub !== 'English Comprehension' && normalizedSub !== 'English') {
+      if (
+        normalizedSub &&
+        normalizedSub !== 'General' &&
+        normalizedSub !== 'Unknown' &&
+        normalizedSub !== 'English Comprehension' &&
+        normalizedSub !== 'English' &&
+        normalizedSub !== 'Quantitative Aptitude' &&
+        normalizedSub !== 'General Intelligence' &&
+        normalizedSub !== 'General Awareness' &&
+        normalizedSub !== 'General Science'
+      ) {
         currentTopic = normalizedSub;
       }
     }
@@ -61,6 +112,18 @@ export function detectTopic(q: Question, subject: string): string {
 
   // Clean obvious cross-subject or cross-topic misclassifications in Reasoning
   if (isReasoning && currentTopic) {
+    // Math word problems tested under Reasoning are part of Arithmetical Reasoning in SSC
+    if (
+      currentTopic === 'Profit, Loss & Discount' ||
+      currentTopic === 'Percentage' ||
+      currentTopic === 'Average' ||
+      currentTopic === 'Ratio & Proportion' ||
+      currentTopic === 'Simple Interest' ||
+      currentTopic === 'Compound Interest'
+    ) {
+      return 'Arithmetical Reasoning';
+    }
+
     if (
       currentTopic === 'Number System' ||
       currentTopic === 'Static GK' ||

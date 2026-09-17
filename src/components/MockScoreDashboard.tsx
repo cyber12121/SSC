@@ -29,7 +29,8 @@ import { Chapter, Question, SubjectData, QuizResult, QuestionProgress } from '..
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
 import { safeStorage } from '../utils/safeStorage';
-import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle } from '../utils/syncMockReports';
+import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle, getDeletedMockIds, addDeletedMockId } from '../utils/syncMockReports';
+import { clearCachedData } from '../utils/cache';
 import { openAiWithScope } from '../utils/aiScopeHelper';
 import { AiFocusedQuestion } from '../types/aiScope';
 import { cleanQuestionText } from '../utils/formatQuestionText';
@@ -37,7 +38,7 @@ import { cleanSolutionText } from '../utils/cleanSolution';
 import { normalizeQuestionOptions, normalizeAnswerKey } from '../utils/mathSanitizer';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
-const mockQuestionModules = import.meta.glob('../data/{mock_questions,mock_tests}/*.json');
+const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
 
 const normalizeSubName = (raw: string = '') => {
   if (/reason|intel/i.test(raw)) return 'Reasoning';
@@ -532,10 +533,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   }, []);
 
   const saveReports = (newReports: MockScoreReport[]) => {
-    const synced = syncMockReports(newReports, initialMockReports as MockScoreReport[]);
-    setReports(synced);
+    const deletedIds = getDeletedMockIds();
+    const clean = newReports.filter(r => r && r.id && !deletedIds.has(r.id));
+    setReports(clean);
     try {
-      safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(synced));
+      safeStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(clean));
       window.dispatchEvent(new Event('cgl_mock_reports_updated'));
     } catch {}
   };
@@ -777,7 +779,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            id: report.id,
             title: report.title,
+            platform: report.platform,
             questions: rawQuestions
           })
         }).catch(e => console.warn('AI mock import note:', e));
@@ -841,13 +845,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       rawId
     ].filter(Boolean) as string[]));
 
-    // 1. Direct Vite dynamic module lookup for all candidate IDs (checks mock_questions and mock_tests)
+    // 1. Direct Vite dynamic module lookup for all candidate IDs in mock_questions
     for (const cid of candidateIds) {
       const qData = await tryModulePath(`../data/mock_questions/${cid}.json`);
       if (qData) { list = qData; break; }
-
-      const tData = await tryModulePath(`../data/mock_tests/${cid}.json`);
-      if (tData) { list = tData; break; }
     }
 
     // 2. Search mockQuestionModules by matching test title in question data
@@ -1261,7 +1262,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           status: status as any,
           subject: normalizeSub(item.subject || item.section || item.subjectName || ''),
           topic: item.topic || item.tags?.topic,
-          rcaReason: item.rca?.reason || item.rcaReason || undefined
+          rcaReason: item.rca?.reason || item.rcaReason || undefined,
+          sourceType: report.type === 'sectional' ? 'sectional' : 'full_mock',
+          sourceLabel: report.type === 'sectional' ? `Sectional Test: ${report.title}` : `Full Mock Test: ${report.title}`,
+          testName: report.title
         };
       });
 
@@ -1271,6 +1275,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         type: 'mock',
         title: `${report.title}${sectionTitle}`,
         subject: report.type === 'sectional' ? getSectionalSubject(report) : undefined,
+        sourceScope: report.type === 'sectional' ? 'sectional' : 'full_mock',
+        sourceScopeLabel: report.type === 'sectional' ? `Sectional Test: ${report.title}` : `Full Mock Test: ${report.title}`,
+        testName: report.title,
         stats: {
           totalScore: report.totalScore,
           maxMarks: report.maxMarks,
@@ -1576,11 +1583,15 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
   const handleDeleteMock = async (id: string) => {
     if (!window.confirm('Are you sure you want to remove this mock score record?')) return;
+    addDeletedMockId(id);
     try {
       await fetch(`/api/mock-reports/${id}`, { method: 'DELETE' });
     } catch {}
     try {
       safeStorage.removeItem(`cgl_mock_questions_${id}`);
+    } catch {}
+    try {
+      await clearCachedData();
     } catch {}
     const updated = reports.filter(r => r.id !== id);
     saveReports(updated);
@@ -1732,8 +1743,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       ? 'All Sectional'
       : `${selectedSectionalSubject} Sectional`;
     if (!window.confirm(`Are you sure you want to clear all ${filteredReports.length} ${label} Mock records?`)) return;
-    const idsToRemove = new Set(filteredReports.map(r => r.id));
+    const idsToRemove = new Set<string>(filteredReports.map(r => String(r.id)));
     for (const id of idsToRemove) {
+      addDeletedMockId(String(id));
       try {
         await fetch(`/api/mock-reports/${id}`, { method: 'DELETE' });
       } catch {}
@@ -1741,6 +1753,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         safeStorage.removeItem(`cgl_mock_questions_${id}`);
       } catch {}
     }
+    try {
+      await clearCachedData();
+    } catch {}
     const updated = reports.filter(r => !idsToRemove.has(r.id));
     saveReports(updated);
   };
@@ -2094,8 +2109,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <div className="w-[95px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
                   Score
                 </div>
-                <div className="w-[165px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
-                  Practice
+                <div className="w-[305px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
+                  Practice &amp; Review
                 </div>
               </div>
 
@@ -2116,24 +2131,18 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                     >
                       {/* 1. Left: Mock Details & Stats */}
                       <div className="w-full xl:w-[245px] 2xl:w-[265px] shrink-0 px-3 py-2 bg-slate-50/20 flex flex-col justify-center">
-                        {/* Line 1: Short Title + Platform Badge + Score */}
-                        <div className="flex items-center justify-between gap-1">
-                          <div className="flex items-center gap-1.5 min-w-0">
-                            <span className="text-xs font-black text-slate-900 truncate" title={report.title}>
-                              {shortTitle}
-                            </span>
-                            <span className={`text-[8.5px] font-bold px-1.5 py-0.2 rounded uppercase tracking-wider shrink-0 border ${
-                              platform.toLowerCase() === 'oliveboard'
-                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                                : 'bg-blue-50 text-blue-700 border-blue-200'
-                            }`}>
-                              {platform}
-                            </span>
-                          </div>
-                          <div className="flex items-baseline shrink-0 ml-1.5">
-                            <span className="text-xs font-black text-slate-900">{report.totalScore}</span>
-                            <span className="text-[10px] font-semibold text-slate-400">/{report.maxMarks || 200}</span>
-                          </div>
+                        {/* Line 1: Short Title + Platform Badge */}
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <span className="text-xs font-black text-slate-900 truncate" title={report.title}>
+                            {shortTitle}
+                          </span>
+                          <span className={`text-[8.5px] font-bold px-1.5 py-0.2 rounded uppercase tracking-wider shrink-0 border ${
+                            platform.toLowerCase() === 'oliveboard'
+                              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                              : 'bg-blue-50 text-blue-700 border-blue-200'
+                          }`}>
+                            {platform}
+                          </span>
                         </div>
 
                         {/* Line 2: Subtitle • Date */}

@@ -226,7 +226,7 @@ class MockQuestionStore {
     }
     try {
       const errorDir = path.join(cwd, 'src', 'data', 'mock_errors');
-      const testsDir = path.join(cwd, 'src', 'data', 'mock_tests');
+      const testsDir = path.join(cwd, 'src', 'data', 'mock_questions');
       const reportsFile = path.join(cwd, 'src', 'data', 'mock_reports.json');
 
       const seenFingerprints = new Set<string>();
@@ -322,7 +322,7 @@ class MockQuestionStore {
         }
       }
 
-      // 2. Ingest mock_tests
+      // 2. Ingest mock_questions
       if (fs.existsSync(testsDir)) {
         const files = fs.readdirSync(testsDir).filter(f => f.endsWith('.json'));
         for (const file of files) {
@@ -340,26 +340,20 @@ class MockQuestionStore {
         try {
           this.mockReports = JSON.parse(fs.readFileSync(reportsFile, 'utf8'));
           for (const rep of this.mockReports) {
-            const candidatePaths = [
-              path.join(testsDir, `${rep.id}.json`),
-              path.join(cwd, 'src', 'data', 'mock_questions', `${rep.id}.json`)
-            ];
-            for (const cp of candidatePaths) {
-              if (fs.existsSync(cp)) {
-                this.mockRegistry.push({
-                  id: rep.id,
-                  title: rep.title,
-                  platform: (rep as any).platform,
-                  filePath: cp
-                });
-                break;
-              }
+            const cp = path.join(testsDir, `${rep.id}.json`);
+            if (fs.existsSync(cp)) {
+              this.mockRegistry.push({
+                id: rep.id,
+                title: rep.title,
+                platform: (rep as any).platform,
+                filePath: cp
+              });
             }
           }
         } catch {}
       }
 
-      // Also ensure all test files in mock_tests are registered
+      // Also ensure all test files in mock_questions are registered
       if (fs.existsSync(testsDir)) {
         const testFiles = fs.readdirSync(testsDir).filter(f => f.endsWith('.json'));
         for (const file of testFiles) {
@@ -846,7 +840,10 @@ CRITICAL SYSTEM MANDATE FOR TOMMY:
   // Case C: Single Active Question (from 'Ask AI' button or user asking for Q#N)
   if (params.activeQuestion) {
     const q = params.activeQuestion;
-    return `\n--- ACTIVE QUESTION REVIEW CONTEXT (Question #${q.qNum || q.questionNumber || targetQNum || '1'}) ---
+    const sourceTag = q.sourceLabel
+      ? `\nQuestion Origin: ${q.sourceLabel}`
+      : (q.sourceType ? `\nQuestion Origin: ${q.sourceType === 'full_mock' ? 'Full Mock Test' : q.sourceType === 'sectional' ? 'Sectional Test' : 'Subject-Wise Error Bank'}` : '');
+    return `\n--- ACTIVE QUESTION REVIEW CONTEXT (Question #${q.qNum || q.questionNumber || targetQNum || '1'})${sourceTag} ---
 Topic: ${q.topic || 'General'}${q.subtopic ? ` → ${q.subtopic}` : ''}
 ${q.conceptTested ? `Concept Tested: ${q.conceptTested}\n` : ''}Question: ${q.question || q.questionText}
 Options: ${JSON.stringify(q.options || {})}
@@ -854,6 +851,10 @@ Candidate Choice: ${q.userAnswer || q.chosenOption || 'Unattempted'}
 Correct Answer: ${q.correctAnswer || q.correctOption || 'Refer to solution'}
 Official Solution:
 ${q.solution || 'No solution provided'}
+
+SYSTEM MANDATE FOR TOMMY:
+1. Clearly specify the origin of this question (Full Mock Test, Sectional Test, or Subject-Wise Practice) in your opening statement.
+2. Provide a motivating, elite breakdown of why the correct option is right, why the candidate's choice failed, and a 30-second elimination shortcut.
 `;
   }
 
@@ -1041,9 +1042,22 @@ export default async function handler(req: any, res: any) {
     // ── Build Scoped Focus Context (if user opened Tommy via an AI Chip) ──
     let scopeContext = '';
     if (focusedScope && typeof focusedScope === 'object') {
-      const { type, title, subject, stats, questions, summaryText } = focusedScope;
+      const { type, title, subject, stats, questions, summaryText, sourceScope, sourceScopeLabel } = focusedScope;
+      const originStr = sourceScopeLabel || (
+        sourceScope === 'full_mock'
+          ? 'Full Mock Test'
+          : sourceScope === 'sectional'
+          ? 'Sectional Test'
+          : sourceScope === 'subject_wise'
+          ? 'Subject-Wise Error Bank'
+          : sourceScope === 'mixed'
+          ? 'Full Mock & Subject-Wise Errors'
+          : ''
+      );
+
       scopeContext += `\n=========================================\n`;
-      scopeContext += `🎯 ACTIVE FOCUSED SCOPE: ${String(type || '').toUpperCase()} - "${title}"\n`;
+      scopeContext += `🎯 ACTIVE FOCUSED SCOPE: ${String(type || '').toUpperCase()} - "${title}"${originStr ? ` [Origin: ${originStr}]` : ''}\n`;
+      if (originStr) scopeContext += `Origin Category: ${originStr}\n`;
       if (subject) scopeContext += `Subject: ${subject}\n`;
       if (stats) {
         if (stats.score !== undefined) scopeContext += `Score: ${stats.score}/${stats.maxMarks || 200} | Accuracy: ${stats.accuracy}%\n`;
@@ -1060,15 +1074,17 @@ export default async function handler(req: any, res: any) {
           const num = q.qNum || (i + 1);
           const optStr = q.options ? Object.entries(q.options).map(([k, v]) => `${k.toUpperCase()}) ${v}`).join(' | ') : '';
           const userAns = q.userAnswer ? q.userAnswer.toUpperCase() : (q.status === 'unattempted' ? 'Skipped' : 'N/A');
-          const correctAns = q.answer ? q.answer.toUpperCase() : 'Refer to solution';
+          const correctAns = q.answer ? q.answer.toUpperCase() : (q.correctAnswer ? q.correctAnswer.toUpperCase() : 'Refer to solution');
           const rcaTag = q.rca ? ` [RCA: ${q.rca.tagName || q.rca.tag}]` : '';
           const status = q.status ? ` [Status: ${q.status.toUpperCase()}]` : '';
-          return `[Question #${num}]${status}${rcaTag}\nQuestion: ${q.question}\nOptions: ${optStr}\nCandidate Choice: ${userAns} | Correct: ${correctAns}\nSolution: ${q.solution || 'See concept'}`;
+          const sourceTag = q.sourceLabel ? ` [Source: ${q.sourceLabel}]` : (q.sourceType ? ` [Source: ${q.sourceType === 'full_mock' ? 'Full Mock Test' : q.sourceType === 'sectional' ? 'Sectional Test' : 'Subject-Wise Error Bank'}]` : '');
+          return `[Question #${num}]${sourceTag}${status}${rcaTag}\nQuestion: ${q.question}\nOptions: ${optStr}\nCandidate Choice: ${userAns} | Correct: ${correctAns}\nSolution: ${q.solution || 'See concept'}`;
         }).join('\n-----------------------------------------\n');
       }
       scopeContext += `\n=========================================\n`;
       scopeContext += `FOCUSED SCOPE RULES:
 - The candidate explicitly opened you to discuss this ${type}: "${title}".
+- SOURCE SPECIFICATION MANDATE: Notice whether these questions are from a Full Mock Test, a Sectional Test, or the Subject-Wise Error Bank. In your opening remark and advice, clearly mention this source context (e.g. "Looking at this Question from your Full Mock Test...", "In this Sectional Test...", or "In your Subject-Wise Error practice...").
 - If they ask about questions, errors, shortcuts, or concepts from this ${type}, refer directly to the exact questions and details provided above.
 - If they ask general questions or change the topic, answer helpfully and clearly without hallucinating or forcing the test questions into the response.\n`;
     }

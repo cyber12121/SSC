@@ -9,7 +9,7 @@
  * 6. Tokenizing LaTeX math for KaTeX rendering
  */
 
-import { reconstructScrapedMath } from './mathSanitizer';
+import { reconstructScrapedMath, wrapUnwrappedFractions } from './mathSanitizer';
 
 export interface MathToken {
   type: 'text' | 'math';
@@ -24,7 +24,7 @@ const DEVANAGARI_REGEX = /[\u0900-\u097F]/;
  */
 export function cleanQuestionText(text: string = ''): string {
   if (!text) return '';
-  let s = String(text);
+  let s = wrapUnwrappedFractions(String(text));
 
   // 1. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
   // so string replacements don't corrupt LaTeX commands (like \rm, \right, \neq, \nu, \root, etc.)
@@ -71,9 +71,9 @@ export function cleanQuestionText(text: string = ''): string {
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 
-  // 9. Restore preserved math blocks
+  // 9. Restore preserved math blocks safely
   mathPlaceholders.forEach((math, idx) => {
-    s = s.replace(`___MATH_BLOCK_${idx}___`, math);
+    s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
   });
 
   return s;
@@ -154,11 +154,14 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
     .replace(/\\\[([\s\S]*?)\\\]/g, (_, eq) => `$$${eq}$$`)
     .replace(/\\\(([\s\S]*?)\\\)/g, (_, eq) => `$${eq}$`);
 
-  // Step 2: Combined pattern for:
+  // Step 2: Wrap any remaining unwrapped fractions (\frac)
+  text = wrapUnwrappedFractions(text);
+
+  // Step 3: Combined pattern for:
   // - $$ display math $$
   // - $ inline math $ (opening $ NOT followed by space, closing $ NOT preceded by space)
-  // - Unwrapped LaTeX formulas starting with \command (e.g. \sin, \cos, \frac, \sqrt, \theta, \pi, etc.)
-  const combinedRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|delta|times|div|pm|mp|cdot|degree|circ|approx|neq|leq|geq|le|ge|infty|sum|prod|lim|log|ln|text|left|right|rm|mathrm)[a-zA-Z0-9\+\-\*\/\=\(\)\{\}\[\]\^\_\s\.,\\|<>]+?(?=\s+(?:is|are|was|were|if|then|where|find|when|and|with|for|to|of|as|by|in|such|given)\b|[\?\:\.](?:\s|$)|$))/g;
+  // - Unwrapped LaTeX formulas starting with \command (e.g. \sin, \cos, \frac, \sqrt, \theta, \pi, \Delta, \angle, \sim, \cong, etc.)
+  const combinedRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|delta|Delta|angle|sim|cong|times|div|pm|mp|cdot|approx|neq|leq|geq|le|ge|infty|sum|prod|lim|log|ln|text|left|right|rm|mathrm)[a-zA-Z0-9\+\-\*\/\=\(\)\{\}\[\]\^\_\s\.,\\|<>]+?(?=\s+(?:is|are|was|were|if|then|where|find|when|and|with|for|to|of|as|by|in|such|given)\b|[\?\:\.](?:\s|$)|$))/g;
 
   const tokens: MathToken[] = [];
   let lastIndex = 0;
@@ -198,3 +201,51 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
 
   return tokens;
 }
+
+export function isMathSubject(subject?: string): boolean {
+  if (!subject) return false;
+  return /quant|math|arithmetic|numerical|algebra|geometry/i.test(subject);
+}
+
+const DIRECTIVE_PREFIX = /^(?:Select|Identify|In\s+the|Given\s+below|Choose|Find|Four|Which|Arrange|Read|Direction|Directions|Study|Recognize|Determine|Point|Refer|Fill|Look|Complete|Replace|Spot|State|उस|निम्नलिखित|दिए|दी\s+गई)/i;
+
+/**
+ * Splits instructional directive from the main question text.
+ * Strictly ignores Quantitative Aptitude / Mathematics questions.
+ */
+export function splitInstructionAndQuestion(
+  text: string = '',
+  subject?: string
+): { instruction: string | null; content: string } {
+  if (!text) return { instruction: null, content: '' };
+  if (isMathSubject(subject)) return { instruction: null, content: text };
+
+  const trimmed = text.trim();
+
+  // Case 1: Directive ending with colon ':'
+  const colonIdx = trimmed.indexOf(':');
+  if (colonIdx > 10 && colonIdx < 300) {
+    const candidateInst = trimmed.substring(0, colonIdx + 1).trim();
+    const candidateContent = trimmed.substring(colonIdx + 1).trim();
+    const isDirective = DIRECTIVE_PREFIX.test(candidateInst);
+    const hasAnalogyOps = /::|[<>=]/.test(candidateInst.slice(0, -1));
+    const wordCount = candidateInst.split(/\s+/).length;
+
+    if (candidateContent && !hasAnalogyOps && (isDirective || (wordCount >= 4 && /[a-zA-Z\u0900-\u097F]{3,}/.test(candidateInst)))) {
+      return { instruction: candidateInst, content: candidateContent };
+    }
+  }
+
+  // Case 2: Directive ending with period or newline
+  const lines = trimmed.split('\n');
+  if (lines.length > 1 && DIRECTIVE_PREFIX.test(lines[0].trim())) {
+    const inst = lines[0].trim();
+    const content = lines.slice(1).join('\n').trim();
+    if (content) {
+      return { instruction: inst, content };
+    }
+  }
+
+  return { instruction: null, content: trimmed };
+}
+

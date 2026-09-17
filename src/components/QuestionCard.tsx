@@ -1,11 +1,12 @@
 import React from 'react';
-import { Check, RotateCcw, Bookmark, BookmarkCheck, Trash2, Flag, Clock, Zap } from 'lucide-react';
+import { Check, RotateCcw, Bookmark, BookmarkCheck, Trash2, Flag, Clock, Zap, BookOpen } from 'lucide-react';
 import { Question } from '../types';
 
 import { cleanSolutionText } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { parseAvgTimeToSeconds } from './Review';
 import { FormattedText } from './FormattedText';
+import { SolutionViewer } from './SolutionViewer';
 
 const fmt = (s: number) =>
   `${Math.floor(s / 60).toString().padStart(2, '0')}:${(s % 60).toString().padStart(2, '0')}`;
@@ -164,8 +165,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         <div className="mb-6">
           <FormattedText
             text={question.question}
-            as="p"
+            as="div"
             className="text-[15.5px] font-medium text-gray-900 leading-relaxed select-text"
+            isQuestion={true}
+            subject={question.subject || question.section}
           />
         </div>
 
@@ -298,15 +301,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               </span>
             </div>
             <div className="bg-white rounded-lg">
-              <div className="flex items-center gap-1.5 text-amber-600 mb-2">
-                <Zap className="w-4 h-4 fill-amber-500 text-amber-500" />
-                <span className="text-sm font-bold text-gray-900 underline decoration-amber-400 decoration-2 underline-offset-2">
-                  {/shortcut trick/i.test(question.solution) ? 'Shortcut Trick & Detailed Solution' : 'Detailed Explanation'}
+              <div className="flex items-center gap-1.5 text-blue-600 mb-2.5">
+                <BookOpen className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-bold text-gray-900">
+                  Detailed Solution
                 </span>
               </div>
-              <div className="text-[13.5px] text-gray-800 leading-relaxed font-sans bg-gray-50 p-4 rounded-md border border-gray-100">
-                <FormattedText text={cleanSolutionText(question.solution)} as="div" />
-              </div>
+              <SolutionViewer
+                solution={question.solution}
+                subject={question.subject || question.section}
+              />
             </div>
           </div>
         )}

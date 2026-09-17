@@ -41,6 +41,114 @@ export function normalizeUnicodeMath(text: string = ''): string {
 }
 
 /**
+ * Extracts balanced curly braces starting at a given '{' index.
+ */
+export function extractBalanced(str: string, startIndex: number): { content: string; endIndex: number } | null {
+  if (str[startIndex] !== '{') return null;
+  let depth = 0;
+  for (let i = startIndex; i < str.length; i++) {
+    if (str[i] === '{') {
+      depth++;
+    } else if (str[i] === '}') {
+      depth--;
+      if (depth === 0) {
+        return { content: str.slice(startIndex + 1, i), endIndex: i };
+      }
+    }
+  }
+  return null;
+}
+
+/**
+ * Parses \frac{num}{den} starting at startIndex using balanced brace parsing.
+ */
+export function parseFraction(str: string, startIndex: number): { fullMatch: string; num: string; den: string; endIndex: number } | null {
+  const fracPrefix = str.slice(startIndex);
+  const match = /^\\frac\s*/.exec(fracPrefix);
+  if (!match) return null;
+
+  const numStart = startIndex + match[0].length;
+  const numBalanced = extractBalanced(str, numStart);
+  if (!numBalanced) return null;
+
+  let denStart = numBalanced.endIndex + 1;
+  while (denStart < str.length && /\s/.test(str[denStart])) {
+    denStart++;
+  }
+  const denBalanced = extractBalanced(str, denStart);
+  if (!denBalanced) return null;
+
+  const fullMatch = str.slice(startIndex, denBalanced.endIndex + 1);
+  return {
+    fullMatch,
+    num: numBalanced.content,
+    den: denBalanced.content,
+    endIndex: denBalanced.endIndex,
+  };
+}
+
+/**
+ * Finds all unwrapped \frac{...}{...} outside existing LaTeX math blocks ($$, $, \[, \()
+ * and safely wraps them into $...$ (supporting mixed fractions like 9 \frac{1}{2} and percentages \frac{2}{3}%).
+ */
+export function wrapUnwrappedFractions(rawText: string = ''): string {
+  if (!rawText || !rawText.includes('\\frac')) return rawText;
+
+  // 1. Temporarily protect existing math blocks ($$...$$, $...$, \[...\], \(...\))
+  const mathPlaceholders: string[] = [];
+  let s = rawText.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+    const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
+    mathPlaceholders.push(m);
+    return placeholder;
+  });
+
+  // 2. Scan and wrap unwrapped \frac
+  let result = '';
+  let i = 0;
+  while (i < s.length) {
+    const fracIdx = s.indexOf('\\frac', i);
+    if (fracIdx === -1) {
+      result += s.slice(i);
+      break;
+    }
+
+    result += s.slice(i, fracIdx);
+
+    // Check if preceded by an integer (mixed fraction like "9 \frac{1}{2}" or "16 \frac{2}{3}%")
+    const mixedMatch = /(\b\d+)\s*$/.exec(result);
+    const parsed = parseFraction(s, fracIdx);
+
+    if (parsed) {
+      let endIndex = parsed.endIndex;
+      let suffix = '';
+      // Check if immediately followed by %
+      if (s[endIndex + 1] === '%') {
+        suffix = '\\%';
+        endIndex++;
+      }
+
+      if (mixedMatch) {
+        result = result.slice(0, result.length - mixedMatch[0].length);
+        result += `$${mixedMatch[1]} ${parsed.fullMatch}${suffix}$`;
+      } else {
+        result += `$${parsed.fullMatch}${suffix}$`;
+      }
+      i = endIndex + 1;
+    } else {
+      result += '\\frac';
+      i = fracIdx + 5;
+    }
+  }
+
+  // 3. Restore preserved math blocks safely
+  mathPlaceholders.forEach((math, idx) => {
+    result = result.replace(`___MATH_BLOCK_${idx}___`, () => math);
+  });
+
+  return result;
+}
+
+/**
  * Reconstructs vertical scraped math sequences caused by tag-by-tag MathML scrapers.
  * e.g.:
  *   "20\n5\n=\n4" -> "20 / 5 = 4"
@@ -52,6 +160,14 @@ export function normalizeUnicodeMath(text: string = ''): string {
 export function reconstructScrapedMath(rawText: string = ''): string {
   if (!rawText) return '';
   let s = normalizeUnicodeMath(rawText);
+
+  // Preserve existing math blocks so regex cleanups do not corrupt math expressions
+  const mathPlaceholders: string[] = [];
+  s = s.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+    const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
+    mathPlaceholders.push(m);
+    return placeholder;
+  });
 
   // 1. Reassemble broken vertical currency "R\ns\n.\n" or "Rs.\n" followed by numbers and commas
   s = s.replace(/R\s*\n+\s*s\s*\n+\s*\.\s*\n*/gi, 'Rs. ');
@@ -143,6 +259,198 @@ export function reconstructScrapedMath(rawText: string = ''): string {
   // e.g. "912 $\frac{1}{2}$" -> "9 $\frac{1}{2}$"
   s = s.replace(/\b(\d+)\d\d\s*(\$\s*\\frac\{1\}\{2\}\s*\$)/gi, '$1 $2');
 
+  // 10. Normalize raw LaTeX geometric & mathematical symbols outside math blocks
+  // Triangles: \DeltaABC -> ΔABC, \Delta ABC -> ΔABC, \Delta -> Δ
+  s = s.replace(/\\Delta\s*([A-Za-z]+)/g, (_, p) => `Δ${p}`);
+  s = s.replace(/\\Delta\b/g, 'Δ');
+
+  // Angles: \angleA -> ∠A, \angle ABC -> ∠ABC, \angle -> ∠
+  s = s.replace(/\\angle\s*([A-Za-z]+)/g, (_, p) => `∠${p}`);
+  s = s.replace(/\\angle\b/g, '∠');
+
+  // Angle degrees: 90^\circ, 90^ \circ, 90^{\circ}, 90\degree -> 90°
+  s = s.replace(/(\d+(?:\.\d+)?)\s*\^\s*(?:\\circ|\{\s*\\circ\s*\}|\\degree|°)/g, '$1°');
+  s = s.replace(/\^\s*(?:\\circ|\{\s*\\circ\s*\}|\\degree)/g, '°');
+  s = s.replace(/\\degree\b/g, '°');
+  s = s.replace(/\\circ\b/g, '°');
+
+  // Congruence, similarity, equality & relations
+  s = s.replace(/\\cong\b/g, '≅');
+  s = s.replace(/\\ncong\b/g, '≇');
+  s = s.replace(/\\sim\b/g, '∼');
+  s = s.replace(/\\approx\b|\\approxeq\b/g, '≈');
+  s = s.replace(/\\neq\b|\\ne\b/g, '≠');
+  s = s.replace(/\\perp\b|\\bot\b/g, '⊥');
+  s = s.replace(/\\parallel\b/g, '∥');
+  s = s.replace(/\\le\b(?!ft)/g, '≤');
+  s = s.replace(/\\ge\b/g, '≥');
+  s = s.replace(/\\pm\b/g, '±');
+  s = s.replace(/\\mp\b/g, '∓');
+  s = s.replace(/\\times\b/g, '×');
+  s = s.replace(/\\div\b/g, '÷');
+  s = s.replace(/\\cdot\b/g, '·');
+  s = s.replace(/\\theta\b/g, 'θ');
+  s = s.replace(/\\pi\b/g, 'π');
+  s = s.replace(/\\alpha\b/g, 'α');
+  s = s.replace(/\\beta\b/g, 'β');
+  s = s.replace(/\\gamma\b/g, 'γ');
+
+  // Restore preserved math blocks safely
+  mathPlaceholders.forEach((math, idx) => {
+    s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
+  });
+
+  return s;
+}
+
+/**
+ * Advanced multi-line mathematical solution cleaner:
+ * - Solves scraped Testbook MathML vertical column explosion where fractions, mixed fractions,
+ *   recurring decimals, operators, and equations are shredded into single-line fragments.
+ * - Reassembles recurring decimals (e.g. 0.\n̄\n29 -> 0.29̄)
+ * - Reassembles mixed fractions (e.g. 5 / 1\n\n4 -> 5 1/4)
+ * - Reassembles fraction-over-fraction (e.g. 8/3\n\n1/3 -> (8/3) / (1/3))
+ * - Pairs vertical numerators & denominators across newlines (e.g. 21\n\n4 -> 21 / 4)
+ * - Stitches fragmented calculation steps across operators (+, -, ×, ÷, =, of, brackets)
+ * - Respects '⇒', '=>', '∴', and section headers to keep each step clean and separate
+ */
+export function reconstructScrapedSolutionMath(rawText: string = ''): string {
+  if (!rawText) return '';
+
+  // First run the base math sanitizer
+  let s = reconstructScrapedMath(rawText);
+
+  // Preserve existing math blocks so line cleanups do not corrupt math expressions
+  const mathPlaceholders: string[] = [];
+  s = s.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+    const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
+    mathPlaceholders.push(m);
+    return placeholder;
+  });
+
+  // 1. Broken recurring decimals with combining overline (macron):
+  // e.g. "0.\n̄\n29" -> "0.29̄", "÷0.3\n̄\n2" -> "÷0.32̄", "0.\n̄\nab" -> "0.ab̄"
+  s = s.replace(/([0-9a-zA-Z]*\.[0-9a-zA-Z]*)\s*\n+\s*[\u0304\u0305\u00AF̄¯]\s*\n+\s*([a-zA-Z0-9]+)/g, (_, prefix, barPart) => `${prefix}${barPart}̄`);
+  s = s.replace(/([a-zA-Z0-9\.]+)\s*\n+\s*[\u0304\u0305\u00AF̄¯]\s*\n*/g, (_, b) => `${b}̄`);
+
+  // 2. Fraction over fraction:
+  // e.g. "8/3\n\n1/3" -> "(8/3) / (1/3)"
+  s = s.replace(/(\d+\s*\/\s*\d+)\s*\n+\s*(\d+\s*\/\s*\d+)/g, '($1) / ($2)');
+
+  // 3. Scraped mixed fractions:
+  // e.g. "5 / 1\n\n4" -> "5 1/4" (non-zero integer denominator not followed by '/' or '.')
+  s = s.replace(/(\b\d+)\s*\/\s*(\d+)\s*\n+\s*([1-9]\d*\b)(?!\s*[\/\.])/g, '$1 $2/$3');
+  s = s.replace(/(\b\d+)\s*\n+\s*(\d+)\s*\/\s*([1-9]\d*\b)(?!\s*[\/\.])/g, '$1 $2/$3');
+
+  // 4. Equations ending with numerator followed by standalone denominator:
+  // e.g. "0.ab̄ = ab\n\n99" -> "0.ab̄ = ab / 99"
+  // e.g. ", 0.ab̄ = ab-a\n\n90" -> ", 0.ab̄ = (ab - a) / 90"
+  s = s.replace(/(=|is)\s*([a-zA-Z0-9_\-]+)\s*\n+\s*([1-9]\d*\b)(?!\s*[\/\.])/g, (_, eq, num, den) => {
+    if (num.includes('-') || num.includes('+')) {
+      return `${eq} (${num}) / ${den}`;
+    }
+    return `${eq} ${num} / ${den}`;
+  });
+
+  // 5. Line-Level Structure Reconstruction
+  const rawLines = s.split('\n').map(l => l.trim()).filter(Boolean);
+
+  // Pass A: Merge pure fraction pairs on consecutive lines
+  // e.g. line A is "21", line B is "4" -> "21 / 4"
+  // e.g. line A is "29", line B is "99" -> "29 / 99"
+  const lines: string[] = [];
+  for (let i = 0; i < rawLines.length; i++) {
+    const cur = rawLines[i];
+    const next = rawLines[i + 1];
+
+    const isNum = (str: string) => /^(\d{1,4}|[a-zA-Z]{1,4}|[a-zA-Z0-9]+-[a-zA-Z0-9]+|\(\d+\s*\/\s*\d+\))$/.test(str);
+    const isDenom = (str: string) => /^([1-9]\d{0,3}|[a-zA-Z]{1,4}|\(\d+\s*\/\s*\d+\))$/.test(str);
+
+    if (next && isNum(cur) && isDenom(next)) {
+      let merged = '';
+      if (cur.includes('/') || next.includes('/')) {
+        merged = `${cur} / ${next}`;
+      } else if (cur.includes('-') || cur.includes('+')) {
+        merged = `(${cur}) / ${next}`;
+      } else {
+        merged = `${cur} / ${next}`;
+      }
+      lines.push(merged);
+      i++;
+      continue;
+    }
+    lines.push(cur);
+  }
+
+  // Pass B: Stitch broken lines connected by math operators or parentheses
+  const isSectionHeader = (str: string) => /^(solution|given|formula used|calculations?|numerator|denominator|value|final value|shortcut trick|alternate method|note|case\s*\d+|step\s*\d+):?$/i.test(str);
+  const endsWithOperator = (str: string) => /([+\-×*÷/=~:,]|\bof\b|\(|\-\(|\+\(|\÷\(|×\(|\/)$/i.test(str.trim());
+  const startsWithOperator = (str: string) => /^([+\-×*÷/=:~,]|\bof\b|\)|\)\+|\)-\(|\)-|\)×|\)÷|\)=)/i.test(str.trim());
+  const isOperatorOnly = (str: string) => /^([+\-×*÷/=:~,]|\bof\b|\(|\)|\)-\(|\)\+|\)-|\)×|\)÷|\)=|\(\-|\(\+|\(×|\(÷)$/i.test(str.trim());
+
+  const stitched: string[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    let cur = lines[i];
+
+    if (isSectionHeader(cur)) {
+      stitched.push(cur);
+      continue;
+    }
+
+    // If cur is just '⇒', join it with the expression on next line
+    if (cur === '⇒' || cur === '=>') {
+      if (i + 1 < lines.length && !isSectionHeader(lines[i + 1])) {
+        cur = '⇒ ' + lines[i + 1];
+        i++;
+      }
+    }
+
+    while (i + 1 < lines.length) {
+      const next = lines[i + 1];
+      if (isSectionHeader(next)) break;
+      // Do not merge if next starts with '⇒', '=>' or '∴'
+      if (/^(⇒|=>|∴)/.test(next)) break;
+
+      if (endsWithOperator(cur) || startsWithOperator(next) || isOperatorOnly(cur) || isOperatorOnly(next)) {
+        let sep = ' ';
+        if (cur.endsWith('(') || next.startsWith(')')) {
+          sep = '';
+        } else if (next.startsWith(',')) {
+          sep = '';
+        }
+        cur = cur + sep + next;
+        i++;
+      } else {
+        break;
+      }
+    }
+
+    // Clean spacing around operators
+    cur = cur.replace(/\s+/g, ' ')
+             .replace(/\(\s+/g, '(')
+             .replace(/\s+\)/g, ')')
+             .replace(/\)\s*-\s*\(/g, ') - (')
+             .replace(/\)\s*\+\s*\(/g, ') + (')
+             .replace(/\)\s*([+\-×*÷])\s*/g, ') $1 ')
+             .replace(/([0-9a-zA-Z])\s*-\s*([0-9a-zA-Z])/g, '$1 - $2')
+             .replace(/([0-9a-zA-Z])\s*\+\s*([0-9a-zA-Z])/g, '$1 + $2')
+             .replace(/⇒\s*/g, '⇒ ')
+             .replace(/\s*=\s*/g, ' = ')
+             .replace(/\s*÷\s*/g, ' ÷ ')
+             .replace(/\s*×\s*/g, ' × ')
+             .replace(/,\s*/g, ', ')
+             .trim();
+
+    stitched.push(cur);
+  }
+
+  s = stitched.join('\n\n');
+
+  // Restore preserved math blocks safely
+  mathPlaceholders.forEach((math, idx) => {
+    s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
+  });
+
   return s;
 }
 
@@ -151,6 +459,7 @@ export function reconstructScrapedMath(rawText: string = ''): string {
  * - Replaces unescaped `%` inside math blocks with `\%` (preventing KaTeX from treating them as comments).
  * - Fixes degree symbols `°` inside math to `^\circ`.
  * - Replaces broken `≤ft` created by erroneous `\le` replacements back to `\left`.
+ * - Translates raw Unicode geometry and mathematical symbols inside math blocks to LaTeX commands.
  * - Cleans invalid or unclosed commands.
  */
 export function sanitizeLatexForKatex(latex: string = ''): string {
@@ -164,16 +473,40 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   // 2. Degree symbol inside math mode
   s = s.replace(/°/g, '^\\circ');
 
-  // 3. KaTeX treats % as a comment delimiter that swallows everything after it.
+  // 3. Fix unseparated commands without space like \DeltaABC -> \Delta ABC, \angleA -> \angle A
+  s = s.replace(/\\Delta([A-Za-z]+)/g, '\\Delta $1');
+  s = s.replace(/\\angle([A-Za-z]+)/g, '\\angle $1');
+  s = s.replace(/\\sim([A-Za-z]+)/g, '\\sim $1');
+  s = s.replace(/\\cong([A-Za-z]+)/g, '\\cong $1');
+
+  // 4. Translate raw Unicode geometry & math operators inside LaTeX formulas to valid LaTeX commands
+  // so KaTeX does not fail or render error spans
+  s = s.replace(/Δ/g, '\\Delta ');
+  s = s.replace(/∠/g, '\\angle ');
+  s = s.replace(/∼/g, '\\sim ');
+  s = s.replace(/≅/g, '\\cong ');
+  s = s.replace(/×/g, '\\times ');
+  s = s.replace(/÷/g, '\\div ');
+  s = s.replace(/≠/g, '\\neq ');
+  s = s.replace(/≤/g, '\\le ');
+  s = s.replace(/≥/g, '\\ge ');
+  s = s.replace(/·/g, '\\cdot ');
+  s = s.replace(/±/g, '\\pm ');
+  s = s.replace(/∓/g, '\\mp ');
+  s = s.replace(/⊥/g, '\\perp ');
+  s = s.replace(/∥/g, '\\parallel ');
+  s = s.replace(/≈/g, '\\approx ');
+
+  // 5. KaTeX treats % as a comment delimiter that swallows everything after it.
   // Replace unescaped % with \%
   // Match % not preceded by \
   s = s.replace(/(?<!\\)%/g, '\\%');
 
   // If there was an accidental double escaping or spacing like 2\% \pi
   // or a swallowed command like 2\%\pi -> 2\pi (when % was an artifact)
-  s = s.replace(/(\d+)\s*\\%\s*\\(pi|theta|alpha|beta|gamma|sqrt|sin|cos)/g, '$1\\$2');
+  s = s.replace(/(\d+)\s*\\%\s*\\(pi|theta|alpha|beta|gamma|sqrt|sin|cos|Delta|angle|sim|cong)/g, '$1\\$2');
 
-  // 4. Common scraper math artifacts: \rm with nothing or empty text
+  // 6. Common scraper math artifacts: \rm with nothing or empty text
   s = s.replace(/\\rm\s*([a-zA-Z0-9]+)/g, '\\mathrm{$1}');
   s = s.replace(/\\rm\b/g, '');
 

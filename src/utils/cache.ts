@@ -75,3 +75,24 @@ export const setCachedData = async <T>(data: T): Promise<void> => {
     // Silently ignore — cache failure is non-fatal
   }
 };
+
+export const clearCachedData = async (): Promise<void> => {
+  try {
+    const db = await getDB();
+    if (!db) return;
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.delete(CACHE_KEY);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+      } catch {
+        resolve();
+      }
+    });
+  } catch {
+    // Silently ignore
+  }
+};
+

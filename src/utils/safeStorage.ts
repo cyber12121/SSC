@@ -25,5 +25,20 @@ export const safeStorage = {
       if (typeof window === 'undefined') return;
       window.localStorage.removeItem(key);
     } catch {}
+  },
+
+  getAllKeys(): string[] {
+    try {
+      if (typeof window === 'undefined') return [];
+      const keys: string[] = [];
+      const len = window.localStorage.length;
+      for (let i = 0; i < len; i++) {
+        const k = window.localStorage.key(i);
+        if (k) keys.push(k);
+      }
+      return keys;
+    } catch {
+      return [];
+    }
   }
 };

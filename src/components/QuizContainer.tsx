@@ -11,6 +11,7 @@ import { cleanSolutionText, extractSolutionLanguage } from '../utils/cleanSoluti
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { getLanguageText } from '../utils/formatQuestionText';
 import { FormattedText } from './FormattedText';
+import { SolutionViewer } from './SolutionViewer';
 
 interface QuizContainerProps {
   chapter: Chapter;
@@ -1159,6 +1160,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     language={language}
                     className="whitespace-pre-wrap select-text leading-relaxed"
                     as="div"
+                    isQuestion={true}
+                    subject={currentQuestion?.subject || currentQuestion?.section}
                   />
                   {currentQuestion?.image?.src && (
                     <div className="mt-4">
@@ -1322,6 +1325,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => {
+                          const isSectional = (chapter as any)?.is_mock && (
+                            String(chapter?.chapter_title || '').toLowerCase().includes('sectional') ||
+                            (chapter?.questions?.length || 0) === 25
+                          );
+                          const sType: 'full_mock' | 'sectional' | 'subject_wise' = (chapter as any)?.is_mock
+                            ? (isSectional ? 'sectional' : 'full_mock')
+                            : (category === 'mockErrors' ? 'subject_wise' : 'subject_wise');
+                          const sLabel = (chapter as any)?.is_mock
+                            ? (isSectional ? `Sectional Test: ${chapter?.chapter_title}` : `Full Mock Test: ${chapter?.chapter_title}`)
+                            : (category === 'mockErrors' ? `Mock Errors: ${chapter?.chapter_title}` : `Chapter Practice: ${chapter?.chapter_title}`);
+
                           window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
                             detail: {
                               questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
@@ -1330,7 +1344,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                               userAnswer: answers[currentIdx],
                               correctAnswer: correctOptionKey,
                               solution: currentQuestion?.solution,
-                              topic: (currentQuestion as any)?.tags?.topic || (currentQuestion as any)?.topic || chapter?.chapter_title || category || 'Practice'
+                              topic: (currentQuestion as any)?.tags?.topic || (currentQuestion as any)?.topic || chapter?.chapter_title || category || 'Practice',
+                              sourceType: sType,
+                              sourceLabel: sLabel,
+                              testName: chapter?.chapter_title
                             }
                           }));
                         }}
@@ -1349,11 +1366,16 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   <div className="p-4 sm:p-5 text-gray-900 bg-white">
                     {getFormattedSolution() ? (
                       <div className={`${fontSizeClass} leading-relaxed font-sans text-gray-800`}>
-                        <FormattedText text={getFormattedSolution()} language={language} as="div" />
+                        <SolutionViewer
+                          solution={getFormattedSolution()}
+                          language={language}
+                          subject={currentQuestion?.subject || currentQuestion?.section}
+                        />
                       </div>
                     ) : (
-                      <div className="text-sm text-gray-600">
-                        The correct answer is Option <b className="text-gray-900">({correctOptionKey.toUpperCase()})</b>: {currentQuestion?.options?.[correctOptionKey] || ''}
+                      <div className="text-sm text-gray-600 flex items-center gap-1 flex-wrap">
+                        <span>The correct answer is Option <b className="text-gray-900">({correctOptionKey.toUpperCase()})</b>:</span>
+                        <FormattedText text={currentQuestion?.options?.[correctOptionKey] || ''} language={language} />
                       </div>
                     )}
                   </div>
@@ -1603,11 +1625,19 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     <span className="font-bold text-sm text-[#2460b9]">Question {idx + 1}</span>
                     <span className="text-xs text-gray-500 font-medium">Marks: +2, -0.5</span>
                   </div>
-                  <p className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line">{q.question}</p>
+                  <FormattedText
+                    text={q.question}
+                    language={language}
+                    as="div"
+                    className="text-sm text-gray-900 font-medium mb-3 whitespace-pre-line"
+                    isQuestion={true}
+                    subject={q.subject || q.section}
+                  />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                     {(Object.entries(q.options) as [string, string][]).map(([k, val]) => (
-                      <div key={k} className="p-2 rounded border border-gray-200 bg-gray-50 text-gray-700">
-                        <span className="uppercase mr-1.5 font-bold">{k}.</span>{val}
+                      <div key={k} className="p-2 rounded border border-gray-200 bg-gray-50 text-gray-700 flex items-start gap-1.5">
+                        <span className="uppercase font-bold shrink-0">{k}.</span>
+                        <FormattedText text={val} language={language} />
                       </div>
                     ))}
                   </div>
