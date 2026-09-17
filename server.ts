@@ -1103,6 +1103,7 @@ async function startServer() {
               },
               answer: cleanAns,
               solution: cleanSolutionText(q.solution || enr.solution || ""),
+              image: q.image || enr.image || null,
               topic: (() => {
                 let t = (enr.topic || q.topic || "General").trim();
                 const s = (enr.subtopic || q.subtopic || "").trim();

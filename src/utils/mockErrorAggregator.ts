@@ -195,7 +195,13 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     const qText = (q.question || q.questionText || '').trim();
     if (!qText && !q.id) return;
 
-    const dedupKey = (qText ? `${subject}|${qText.toLowerCase()}` : String(q.id || '')).slice(0, 160);
+    // Use core alphanumeric signature to avoid duplicate questions caused by minor LaTeX syntax differences
+    const coreText = qText
+      ? qText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+      : '';
+    const dedupKey = (coreText.length >= 12
+      ? `${subject}|${coreText.slice(0, 100)}`
+      : (qText ? `${subject}|${qText.toLowerCase()}` : String(q.id || ''))).slice(0, 160);
 
     // Determine error type
     let errorType: 'wrong' | 'unattempted' | 'speed_issue' | null = null;
@@ -259,6 +265,19 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     // Check if duplicate in active list
     if (processedQuestions.has(dedupKey)) {
       const existing = processedQuestions.get(dedupKey);
+      // If incoming question has richer formatting or an image, upgrade existing question
+      if (q.questionText || (qText && qText.includes('$') && !existing.question?.includes('$'))) {
+        existing.question = qText;
+      }
+      if (q.solution && (q.solution.includes('$') || q.solution.length > (existing.solution || '').length)) {
+        existing.solution = q.solution;
+      }
+      if (q.image && !existing.image) {
+        existing.image = q.image;
+      }
+      if (q.options && Object.keys(q.options).length > 0) {
+        existing.options = q.options;
+      }
       // Merge RCA tag if existing didn't have one and this one does
       if (qRca && (!existing.rca || !existing.rca.tag)) {
         existing.rca = qRca;
@@ -364,7 +383,13 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     heatmapSubjectGroups[subject].rcaTotals[tagKey]++;
   };
 
-  // 1. Ingest static mock errors (mock_errors/*.json)
+  // 1. Ingest bundled mock questions (mock_questions/*.json) FIRST so authoritative formatted questions and solutions take precedence
+  bundledQuestions.forEach((q: any) => {
+    const sub = normalizeSubjectName(q.subject || q.section);
+    processQuestion(q, sub, 'full_mock');
+  });
+
+  // 2. Ingest static mock errors (mock_errors/*.json)
   canonicalSubjects.forEach(sub => {
     const chapters = mockData[sub] || [];
     chapters.forEach((ch: Chapter) => {
@@ -372,12 +397,6 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
         processQuestion(q, sub, 'subject_wise');
       });
     });
-  });
-
-  // 2. Ingest bundled mock questions (mock_questions/*.json)
-  bundledQuestions.forEach((q: any) => {
-    const sub = normalizeSubjectName(q.subject || q.section);
-    processQuestion(q, sub, 'full_mock');
   });
 
   // 3. Ingest cached mock questions from student test attempts

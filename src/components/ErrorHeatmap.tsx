@@ -27,6 +27,7 @@ import {
 import { SubjectData, Chapter, Question, RCAClassification, RCATagType } from '../types';
 import { detectTopic, normalizeTopicTitle } from '../utils/topicDetector';
 import { FormattedText } from './FormattedText';
+import { SolutionViewer } from './SolutionViewer';
 import { cleanSolutionText } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { classifyTestType, TestScopeFilter } from '../utils/testClassifier';
@@ -1239,9 +1240,26 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData, onStartQui
                         {/* Question text */}
                         <FormattedText
                           text={q.question}
-                          as="p"
+                          as="div"
                           className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed"
+                          isQuestion={true}
+                          subject={q.subject || q.parentSubject || activeDrillChapter.subject}
                         />
+
+                        {/* Question Image if present */}
+                        {(q as any).image?.src && (
+                          <div className="my-3 border border-slate-200 rounded-xl p-2 inline-block bg-white shadow-xs">
+                            <img
+                              src={(q as any).image.src}
+                              alt={(q as any).image.caption || "Question diagram"}
+                              className="max-w-full h-auto object-contain max-h-72 rounded-lg"
+                              referrerPolicy="no-referrer"
+                            />
+                            {(q as any).image.caption && (
+                              <p className="mt-1 text-xs text-slate-500 italic text-center">{(q as any).image.caption}</p>
+                            )}
+                          </div>
+                        )}
 
                         {/* Options */}
                         {q.options && (
@@ -1253,18 +1271,20 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData, onStartQui
                               return (
                                 <div
                                   key={optKey}
-                                  className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
+                                  className={`flex items-start gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
                                     isCorrect
-                                      ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
+                                      ? 'bg-emerald-50 border-emerald-300 text-emerald-900 shadow-2xs'
                                       : 'bg-white border-slate-200 text-slate-600'
                                   }`}
                                 >
                                   <span className={`w-6 h-6 rounded-lg flex-shrink-0 flex items-center justify-center font-black text-[11px] uppercase ${
-                                    isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500'
+                                    isCorrect ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 text-slate-500'
                                   }`}>
                                     {optKey}
                                   </span>
-                                  <FormattedText text={optText} className="flex-1 min-w-0" />
+                                  <span className="flex-1 min-w-0">
+                                    <FormattedText text={optText} subject={q.subject || q.parentSubject || activeDrillChapter.subject} />
+                                  </span>
                                 </div>
                               );
                             })}
@@ -1274,13 +1294,16 @@ export const ErrorHeatmap: React.FC<ErrorHeatmapProps> = ({ mockData, onStartQui
                         {/* Solution */}
                         {q.solution && (
                           <details className="group">
-                            <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none">
+                            <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none py-1">
                               <BookOpen className="w-3.5 h-3.5" />
                               View Solution
                               <ChevronRight className="w-3 h-3 transition-transform group-open:rotate-90" />
                             </summary>
-                            <div className="mt-2 text-xs font-medium text-slate-700 whitespace-pre-line leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200">
-                              <FormattedText text={cleanSolutionText(q.solution)} as="div" />
+                            <div className="mt-2 text-xs font-medium text-slate-700 leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+                              <SolutionViewer
+                                solution={q.solution}
+                                subject={q.subject || q.parentSubject || activeDrillChapter.subject}
+                              />
                             </div>
                           </details>
                         )}

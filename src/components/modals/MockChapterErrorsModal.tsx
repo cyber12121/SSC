@@ -5,6 +5,7 @@ import { Question, RCATagType, RCAClassification } from '../../types';
 import { FormattedText } from '../FormattedText';
 import { SolutionViewer } from '../SolutionViewer';
 import { cleanSolutionText } from '../../utils/cleanSolution';
+import { normalizeAnswerKey } from '../../utils/mathSanitizer';
 import { RCA_TAG_CONFIG, findQuestionRca, saveQuestionRca } from '../../utils/rcaHelper';
 
 export interface MockChapterModalData {
@@ -55,6 +56,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
   const [editingNoteQId, setEditingNoteQId] = useState<string | null>(null);
   const [sillyNoteInput, setSillyNoteInput] = useState<string>('');
   const [localRcaOverrides, setLocalRcaOverrides] = useState<Record<string, RCAClassification | null>>({});
+  const [language, setLanguage] = useState<'English' | 'Hindi' | 'Bilingual'>('English');
 
   if (!data) return null;
 
@@ -255,12 +257,30 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                 </div>
               </div>
 
-              <button
-                onClick={onClose}
-                className="w-9 h-9 rounded-2xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors shrink-0 cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2 shrink-0">
+                <div className="flex items-center gap-1 bg-white/15 p-1 rounded-xl border border-white/20">
+                  {(['English', 'Hindi', 'Bilingual'] as const).map(l => (
+                    <button
+                      key={l}
+                      onClick={() => setLanguage(l)}
+                      className={`px-2 py-0.5 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
+                        language === l
+                          ? 'bg-white text-indigo-900 shadow-xs'
+                          : 'text-white/80 hover:text-white'
+                      }`}
+                    >
+                      {l}
+                    </button>
+                  ))}
+                </div>
+
+                <button
+                  onClick={onClose}
+                  className="w-9 h-9 rounded-2xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {/* Set Selector Tabs (if > 25 questions in current filter) */}
@@ -424,35 +444,52 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                     <div className="p-4 space-y-3">
                       <FormattedText
                         text={q.question}
+                        language={language}
                         as="div"
                         className="text-sm font-semibold text-slate-900 whitespace-pre-line leading-relaxed"
                         isQuestion={true}
                         subject={q.subject || q.section || data.subject}
                       />
 
+                      {/* Question Image if present */}
+                      {q.image?.src && (
+                        <div className="my-3 border border-slate-200 rounded-xl p-2 inline-block bg-white shadow-xs">
+                          <img
+                            src={q.image.src}
+                            alt={q.image.caption || "Question diagram"}
+                            className="max-w-full h-auto object-contain max-h-72 rounded-lg"
+                            referrerPolicy="no-referrer"
+                          />
+                          {q.image.caption && (
+                            <p className="mt-1 text-xs text-slate-500 italic text-center">{q.image.caption}</p>
+                          )}
+                        </div>
+                      )}
+
                       {/* Options */}
                       {q.options && (
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {(['a', 'b', 'c', 'd'] as const).map(optKey => {
-                            const optText = q.options[optKey];
+                            const optText = q.options[optKey] || (q.options as any)[optKey.toUpperCase()] || '';
                             if (!optText) return null;
-                            const isCorrect = q.answer === optKey;
+                            const correctKey = normalizeAnswerKey(q.answer || (q as any).correct_answer || (q as any).correctOption);
+                            const isCorrect = correctKey === optKey;
                             return (
                               <div
                                 key={optKey}
                                 className={`flex items-start gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
                                   isCorrect
-                                    ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
+                                    ? 'bg-emerald-50 border-emerald-300 text-emerald-900 shadow-2xs'
                                     : 'bg-white border-slate-200 text-slate-600'
                                 }`}
                               >
                                 <span className={`w-6 h-6 rounded-lg shrink-0 flex items-center justify-center font-black text-[11px] uppercase ${
-                                  isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500'
+                                  isCorrect ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 text-slate-500'
                                 }`}>
                                   {optKey}
                                 </span>
                                 <span className="flex-1 min-w-0">
-                                  <FormattedText text={optText} />
+                                  <FormattedText text={optText} language={language} subject={q.subject || q.section || data.subject} />
                                 </span>
                               </div>
                             );
@@ -471,14 +508,15 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                       {/* Solution Dropdown */}
                       {q.solution && (
                         <details className="group">
-                          <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none">
+                          <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none py-1">
                             <BookOpen className="w-3.5 h-3.5" />
                             View Solution
                             <ChevronRight className="w-3 h-3 transition-transform group-open:rotate-90" />
                           </summary>
-                          <div className="mt-2 text-xs font-medium text-slate-700 leading-relaxed bg-white p-3 rounded-xl border border-slate-200">
+                          <div className="mt-2 text-xs font-medium text-slate-700 leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
                             <SolutionViewer
                               solution={q.solution}
+                              language={language}
                               subject={q.subject || q.section || data.subject}
                             />
                           </div>

@@ -147,7 +147,7 @@
           "d": "7 and 98"
         },
         "answer": "a",
-        "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
+        "solution": "Solution\n\nGiven equation: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nBODMAS Table:\n\nLet's check each option one by one.\n\nOption 1) 5 and 3\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 5 - 98 ÷ 14 + 3 = 31\n⇒ 7 × 5 - 7 + 3 = 31\n⇒ 35 - 7 + 3 = 31\n⇒ 38 - 7 = 31\n⇒ 31 = 31\n⇒ LHS = RHS\n\nOption 2) 31 and 7\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 31 × 3 - 98 ÷ 14 + 5 = 7\n⇒ 31 × 3 - 7 + 5 = 7\n⇒ 93 - 7 + 5 = 7\n⇒ 98 - 7 = 7\n⇒ 91 ≠ 7\n⇒ LHS ≠ RHS\n\nOption 3) 3 and 14\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 7 × 14 - 98 ÷ 3 + 5 = 31\n⇒ 7 × 14 - 32.66 + 5 = 31\n⇒ 98 - 32.66 + 5 = 31\n⇒ 103 - 32.66 = 31\n⇒ 70.34 ≠ 31\n⇒ LHS ≠ RHS\n\nOption 4) 7 and 98\n\nGiven: 7 × 3 - 98 ÷ 14 + 5 = 31\n\nAfter interchanging the numbers we get;\n\n⇒ 98 × 3 - 7 ÷ 14 + 5 = 31\n⇒ 98 × 3 - 0.5 + 5 = 31\n⇒ 294 - 0.5 + 5 = 31\n⇒ 299 - 0.5 = 31\n⇒ 298.5 ≠ 31\n⇒ LHS ≠ RHS\nHence, the correct answer is \"Option 1\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Numbers & BODMAS",
         "conceptTested": "Balancing equations via number interchange and strict adherence to the BODMAS rule.",
@@ -178,7 +178,7 @@
           "d": "52"
         },
         "answer": "b",
-        "solution": "Solution\n\nThe pattern followed here is,\n\nLetter\n\nT\n\nV\n\nPlace Value\n\n20\n\n22\n\nCode\n\n(20 + 22) + 13 = 55\n\nSimilarly,\n\nLetter\n\nC\n\nL\n\nO\n\nC\n\nK\n\nPlace Value\n\n3\n\n12\n\n15\n\n3\n\n11\n\nCode\n\n(3 + 12 + 15 + 3 + 11) + 13 = 57\nHence, 57 is the correct answer.",
+        "solution": "Solution\n\nThe pattern followed here is,\n\nLetter\n\nT\n\nV\n\nPlace Value\n\n20 / 22\n\nCode\n\n(20 + 22) + 13 = 55\n\nSimilarly,\n\nLetter\n\nC\n\nL\n\nO\n\nC\n\nK\n\nPlace Value\n\n3 / 12\n\n15 / 3\n\n11\n\nCode\n\n(3 + 12 + 15 + 3 + 11) + 13 = 57\nHence, 57 is the correct answer.",
         "topic": "Coding-Decoding",
         "subtopic": "Number Coding",
         "conceptTested": "Sum of alphabetical place values combined with a constant offset value.",
@@ -209,7 +209,7 @@
           "d": "Brother in law"
         },
         "answer": "c",
-        "solution": "As per the given data:\nP = H means P is son of H.\nH = T means H is son of T.\nT & U means T is wife of U (so U is father and T is mother).\nU @ N means U is father of N.\nN + R means N is brother of R.\n\nTracing the lineage: P, H, and N are sons/children of T and U. Thus, N is the brother of P's father (H), which makes N the paternal uncle of P.\nHence, Option (C) is the answer.",
+        "solution": "Solution\n\nAs per the given data, the table is below-\n\nSymbol\tMeans\nA + B\tA is a brother of B\nA = B\tA is a son of B\nA & B\tA is a wife of B\nA @B\tA is a father of B\n\nGiven-\n\nP = H = T & U @ N + R\n\nThe blood-relation diagram is-\n\nHere, N is the Paternal uncle of P.\n\nHence, Option (3) is the answer.",
         "topic": "Blood Relations",
         "subtopic": "Coded Blood Relations",
         "conceptTested": "Tracing generational and matrimonial linkages through symbolic operators to establish the relation between two family members.",
@@ -325,7 +325,7 @@
         "correctOption": "D",
         "userTime": "00:57",
         "avgTime": "00:32",
-        "question": "If the mathematical operator, ‘+’ means ‘– ‘, ‘×’ means ‘+’, ‘÷’ means ‘×’, and ‘–’ means ‘÷‘, then the value of 28 + (11 × 7) – 9 ÷ 5 is",
+        "question": "If the mathematical operator, ‘+’ means ‘- ‘, ‘×’ means ‘+’, ‘÷’ means ‘×’, and ‘-’ means ‘÷‘, then the value of 28 + (11 × 7) - 9 ÷ 5 is",
         "options": {
           "a": "45",
           "b": "12",
@@ -333,7 +333,7 @@
           "d": "18"
         },
         "answer": "d",
-        "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n–\n\nMeaning\n\n–\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) – 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 – (11 + 7) ÷ 9 × 5\n\n= 28 – 18 ÷ 9 × 5\n= 28 – 2 × 5\n= 28 – 10\n= 18\nHence, the correct answer is 18.",
+        "solution": "Solution\n\nOperator\n\n+\n\n×\n\n÷\n\n-\n\nMeaning\n\n-\n\n+\n\n×\n\n÷\n\nGiven expression is: 28 + (11 × 7) - 9 ÷ 5\n\nAfter replacing the operators by their meaning, we get:\n\n28 - (11 + 7) ÷ 9 × 5\n\n= 28 - 18 ÷ 9 × 5\n= 28 - 2 × 5\n= 28 - 10\n= 18\nHence, the correct answer is 18.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Evaluation of arithmetic expressions using BODMAS after symbol substitution",
@@ -426,7 +426,7 @@
           "d": "4"
         },
         "answer": "c",
-        "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)\n\n3\n\n2\n\n5\n\nDice (3)\n\n3\n\n1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
+        "solution": "Solution\n\nFor the question, the relation is given below\n\nLogic : If two dice have the same two face values in the given image then the third number is opposite to each other.\n\nIn Dice 1 and Dice 2.\n\nNumbers 2 and 5 are common.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.\n\nAdditional Information\nThe logic followed here is:\n\nConcept: If two dice are thrown in different orientations but one face is common. Then the remaining surfaces are opposite each other.\n\nTo find the opposite face use the below method.\n\nWe did not take Dice 1 and Dice 2 because there are two faces (2 and 5) both are common.\n\nTake dice 1 and dice 3, 3 is common in both dice, so putting 3 as a constant term we have rotated two dice in a clockwise direction.\n\nDice (1)³ / 2\n\n5\n\nDice (3)³ / 1\n\n4\n\nThus, 2 opposite 1, 5 opposite 4.\n\nTherefore, it is clear the opposite face of 3 is 6.\nHence, \"Option (3)\" is the correct answer.",
         "topic": "Cube & Dice",
         "subtopic": "Opposite Faces",
         "conceptTested": "Determining opposite faces in a standard dice using common faces rotated in a clockwise/anticlockwise direction.",
@@ -612,7 +612,7 @@
           "d": "45"
         },
         "answer": "b",
-        "solution": "Given series:\n\n?, 60, 84, 112, 144, 180\n\nFind the differences between consecutive terms:\n\n60 → 84 = +24\n84 → 112 = +28\n112 → 144 = +32\n144 → 180 = +36\n\nThe differences are:\n\n24, 28, 32, 36, ...\n\nEach difference increases by 4.\n\nTherefore, the previous difference will be:\n24 − 4 = 20\n\nSo,\n\n? + 20 = 60\n\n? = 60 − 20\n\n? = 40\n\nHence, the missing term = 40",
+        "solution": "Given series:\n\n?, 60, 84, 112, 144, 180\n\nFind the differences between consecutive terms:\n\n60 → 84 = +24\n84 → 112 = +28\n112 → 144 = +32\n144 → 180 = +36\n\nThe differences are:\n\n24, 28, 32, 36, ...\n\nEach difference increases by 4.\n\nTherefore, the previous difference will be:\n24 - 4 = 20\n\nSo,\n\n? + 20 = 60\n\n? = 60 - 20\n\n? = 40\n\nHence, the missing term = 40",
         "topic": "Number Series",
         "subtopic": "Missing Number Series",
         "conceptTested": "Arithmetic progression of differences with a common difference of 4",
@@ -705,7 +705,7 @@
           "d": "(4, 12, 132)"
         },
         "answer": "d",
-        "solution": "Solution\n\nThe pattern followed here is:\n\n(3, 6, 30)\n\n32 - 3 = 6 and 62 - 6 = 30\n\nSimilarly in option 4 following same pattern,\n\n42 - 4 = 12 and 122 - 12 = 132\nHence, (4 12 132) is the correct answer.",
+        "solution": "Solution\n\nThe pattern followed here is:\n\n(3, 6, 30)³2 - 3 = 6 and 62 - 6 = 30\n\nSimilarly in option 4 following same pattern,\n\n42 - 4 = 12 and 122 - 12 = 132\nHence, (4 12 132) is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Sequential mathematical operation pattern using squares and subtractions: x^2 - x = y.",
@@ -736,7 +736,7 @@
           "d": "45"
         },
         "answer": "b",
-        "solution": "Solution\nHere, A is 14th from the left end and 6th to the right of B. Hence, B is 14 - 6 = 8th from the left side.\nAgain, B is 15th to the left of C, who is 22nd from the right end.\n\nHence, B is 15 + 22 = 37th from the right side.\nTherefore, the total number of children\n= B’s position from the right end + B’s position from the left end – 1\n= 37 + 8 – 1 = 45 – 1 = 44\nHence, \"option 2\" is correct answer.",
+        "solution": "Solution\nHere, A is 14th from the left end and 6th to the right of B. Hence, B is 14 - 6 = 8th from the left side.\nAgain, B is 15th to the left of C, who is 22nd from the right end.\n\nHence, B is 15 + 22 = 37th from the right side.\nTherefore, the total number of children\n= B’s position from the right end + B’s position from the left end - 1\n= 37 + 8 - 1 = 45 - 1 = 44\nHence, \"option 2\" is correct answer.",
         "topic": "Order & Ranking",
         "subtopic": "Linear Row Ranking & Total Count",
         "conceptTested": "Total elements in a row = Position from left + Position from right - 1.",
@@ -922,7 +922,7 @@
           "d": "379"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe pattern followed here is:\n\nGiven: 46, 93, 188, 379, 764, 1529\n⇒ 46 × 2 + 1 = 92 + 1 = 93\n⇒ 93 × 2 + 2 = 186 + 2 = 188\n⇒ 188 × 2 + 3 = 376 + 3 = 379\n⇒ 379 × 2 + 4 = 758 + 4 = 762 ≠ 764\n⇒ 762 × 2 + 5 = 1524 + 5 = 1529\nHence, the correct answer is \"764\".",
+        "solution": "Solution\n\nThe pattern followed here is:\n\nGiven: 46, 93, 188, 379, 764, 1529\n⇒ 46 × 2 + 1 = 92 + 1 = 93\n⇒ 93 × 2 + 2 = 186 + 2 = 188\n⇒ 188 × 2 + 3 = 376 + 3 = 379\n⇒ 379 × 2 + 4 = 758 + 4 = 762 ≠ 764\n⇒ 762 × 2 + 5 = 1524 + 5 = 1529\nHence, the correct answer is \"764\".",
         "topic": "Number Series",
         "subtopic": "Wrong Number in Series",
         "conceptTested": "Series pattern involving successive multiplication by 2 and adding an increasing integer (n × 2 + i).",
@@ -1232,7 +1232,7 @@
           "d": "3-1-5-2-6-4"
         },
         "answer": "d",
-        "solution": "(a) 3-5-1-2-6-4: G-O-L-V-E-S (Not a meaningful word)\n(b) 3-1-2-5-6-4: G-L-V-O-E-S (Not a meaningful word)\n(c) 5-3-1-2-6-4: O-G-L-V-E-S (Not a meaningful word)\n(d) 3-1-5-2-6-4: G-L-O-V-E-S (Meaningful word)\n\nThe correct combination is 3-1-5-2-6-4, which forms the word GLOVES.",
+        "solution": "(a)³-5-1-2-6-4: G-O-L-V-E-S (Not a meaningful word)\n(b)³-1-2-5-6-4: G-L-V-O-E-S (Not a meaningful word)\n(c) 5-3-1-2-6-4: O-G-L-V-E-S (Not a meaningful word)\n(d)³-1-5-2-6-4: G-L-O-V-E-S (Meaningful word)\n\nThe correct combination is 3-1-5-2-6-4, which forms the word GLOVES.",
         "topic": "Word Formation & Dictionary Order",
         "subtopic": "Word Rearrangement from Numbered Letters",
         "conceptTested": "Rearranging jumbled letters indicated by numbers to form a meaningful word",
@@ -1255,7 +1255,7 @@
         "correctOption": "C",
         "userTime": "00:41",
         "avgTime": "00:31",
-        "question": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number.\n25 : 37 :: 64 : ?",
+        "question": "Select the option/number which is related to 3rd number in the same way as 2nd number is related to a 1st number. 25 : 37 :: 64 : ?",
         "options": {
           "a": "92",
           "b": "102",
@@ -1263,7 +1263,7 @@
           "d": "37"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
+        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd numbeRs. imilarly,\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Number analogy involving square root and arithmetic scaling operations.",
@@ -1286,7 +1286,7 @@
         "correctOption": "A",
         "userTime": "00:59",
         "avgTime": "00:39",
-        "question": "Which two signs and two numbers should be interchanged to make the following equation correct?\n784 ÷ 6 × 9 - 30 + 14 = 528",
+        "question": "Which two signs and two numbers should be interchanged to make the following equation correct? 784 \\div 6 \\times 9 - 30 + 14 = 528",
         "options": {
           "a": "14 and 6, + and -",
           "b": "784 and 30, + and x",
@@ -1294,7 +1294,7 @@
           "d": "9 and 6, ÷ and +"
         },
         "answer": "a",
-        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
+        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528 / 0.007 - 9 x 30 + 14 = 528 / 0.007 +14 - 270 = 528 / 14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528 / 835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing equations by interchanging two signs and two numbers following BODMAS.",
@@ -1325,7 +1325,7 @@
           "d": "(108, 81)"
         },
         "answer": "b",
-        "solution": "Solution\n\nChecking all the given options:\n\nLogic: The first and the second number is the multiple of 4 and 3.\n1. (64, 48) →\n⇒ 16 × 4 = 64\n⇒ 16 × 3 = 48\n2. (72, 27) →\n⇒ 18 × 4 = 72\n⇒ 18 × 3 = 54 (not 27)\n3. (96, 72) →\n⇒ 24 × 4 = 96\n⇒ 24 × 3 = 72\n4. (108, 81) →\n⇒ 27 × 4 = 108\n⇒ 27 × 3 = 81\n\nHere, (72, 27) is different from the others.\n\nHence, the correct answer is \"Option (2)\".",
+        "solution": "Solution\n\nChecking all the given options:\n\nLogic: The first and the second number is the multiple of 4 and 3.\n1. (64, 48) →\n⇒ 16 × 4 = 64\n⇒ 16 × 3 = 48\n2. (72, 27) →\n⇒ 18 × 4 = 72\n⇒ 18 × 3 = 54 (not 27)³. (96, 72) →\n⇒ 24 × 4 = 96\n⇒ 24 × 3 = 72\n4. (108, 81) →\n⇒ 27 × 4 = 108\n⇒ 27 × 3 = 81\n\nHere, (72, 27) is different from the others.\n\nHence, the correct answer is \"Option (2)\".",
         "topic": "Classification / Odd One Out",
         "subtopic": "Number Classification",
         "conceptTested": "Identifying number pairs sharing a common ratio or scalar multiple relationship.",
@@ -1387,7 +1387,7 @@
           "d": "37"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd number\n\nSimilarly,\n\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
+        "solution": "Solution\n\nThe logic follow here:\n\n1st number + (√1st number × 2 + 2) = 2nd number.\n\nGiven:\n25 : 37 → 25 + (√25 × 2 + 2)\n= 25 + (5 × 2 + 2)\n= 25 + 12 = 37 = 2nd numbeRs. imilarly,\n64 : ?\n64 : ? → 64 + (√64 × 2 + 2)\n= 64 + (8 × 2 + 2)\n= 64 + 18 = 82 = 2nd number\nHence, \"82\" is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Number analogy using algebraic patterns involving square roots: x : x + (\\sqrt{x} \\times 2 + 2).",
@@ -1418,7 +1418,7 @@
           "d": "9 and 6, ÷ and +"
         },
         "answer": "a",
-        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528\n0.007 - 9 x 30 + 14 = 528\n0.007 +14 - 270 = 528\n14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528\n\n835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
+        "solution": "Solution\n\nGiven statement : 784 ÷ 6 × 9 - 30 + 14 = 528\n\nAccording to the question, after replacing the signs and numbers :\n\nSo,\n\nOption - (1) : 14 and 6, + and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 ÷ 14 × 9 + 30 - 6 = 528\n56 × 9 + 30 - 6 = 528\n504 + 30 - 6 = 528\n534 - 6 = 528\n528 = 528 (LHS = RHS)\nOption - (2) : 784 and 30, + and x\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 30 ÷ 6 + 9 - 784 x 14 = 528\n5 + 9 - 784 x 14 = 528\n5 + 9 - 10976 = 528\n14 - 10976 = 528\n-10962 ≠ 528 (LHS ≠ RHS)\nOption - (3) : 784 and 6, × and -\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 6 ÷ 784 - 9 x 30 + 14 = 528 / 0.007 - 9 x 30 + 14 = 528 / 0.007 +14 - 270 = 528 / 14.007 - 270 = 528\n-255.993 ≠ 528 (LHS ≠ RHS)\nOption - (4) : 9 and 6, ÷ and +\n784 ÷ 6 × 9 - 30 + 14 = 528 ⇒ 784 + 9 × 6 - 30 ÷ 14 = 528\n\n784 + 9 × 6 - 2.14 = 528\n\n784 + 54 - 2.14 = 528\n\n838 - 2.14 = 528 / 835.86 ≠ 528 (LHS ≠ RHS)\nHence, \"Option - (1)\" is the correct answer.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing equations via BODMAS through the simultaneous interchange of specific numbers and mathematical signs.",
@@ -1457,7 +1457,7 @@
           "d": "115"
         },
         "answer": "b",
-        "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)2 + 1 = 61 + 2 = 63\n63 + (2)2 - 2  = 63 + 2 = 65\n65 + (3)2 + 3 = 65 + 12 = 77\n77 + (4)2 - 4 = 77 + 12 = 89\n89 + (5)2 + 5 = 89 + 30 = 119\n119 + (6)2 - 6 = 119 + 30 = 149\n149 + (7)2 + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nThe difference between two consecutive numbers is equal.\n\nHence, \"119\" is the correct answer.\n\nAlternate Method\nThe logic follows here is:\n\n61 + (1)² + 1 = 61 + 2 = 63\n63 + (2)² - 2  = 63 + 2 = 65\n65 + (3)² + 3 = 65 + 12 = 77\n77 + (4)² - 4 = 77 + 12 = 89\n89 + (5)² + 5 = 89 + 30 = 119\n119 + (6)² - 6 = 119 + 30 = 149\n149 + (7)² + 7 = 149 + 56 = 205\nHence, the correct answer is \"119\".",
         "topic": "Number Series",
         "subtopic": "Missing Number Series",
         "conceptTested": "Mixed arithmetic and square difference series pattern recognition",
@@ -1488,7 +1488,7 @@
           "d": "244"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)2 + (Second term + 1)2  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)2 + (7 + 1)2 = 100\n(6)2 + (8)2 = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)2 + (9 + 1)2 = 181\n(9)2 + (10)2 = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)2 + (10 + 1)2 = ?\n(12)2 + (11)2 = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
+        "solution": "Solution\n\nThe pattern followed in the given table is:\n(First term + 1)² + (Second term + 1)²  = Third term\nNow we apply the pattern on the given rows:\nRow 1)  (5 +1)² + (7 + 1)² = 100\n(6)² + (8)² = 100\n36 + 64 = 100\n100 = 100\nRow 2)  (8 +1)² + (9 + 1)² = 181\n(9)² + (10)² = 181\n81 + 100 = 181\n181 = 181\nRow 3)  (11 +1)² + (10 + 1)² = ?\n(12)² + (11)² = ?\n144 + 121 = ?\n265 = Answer\nHence the correct answer is option 3)",
         "topic": "Missing Number / Matrix",
         "subtopic": "Number puzzles",
         "conceptTested": "Grid matrix arithmetic involving squares of incremented row values: (a+1)^2 + (b+1)^2 = c",
@@ -1550,7 +1550,7 @@
           "d": "24"
         },
         "answer": "b",
-        "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd number\n\nSo,\n\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
+        "solution": "Solution\n\nThe logic followed here is : [1st number × (1number + 2)] ÷ 3 = 2nd numbeRs. o,\n16 : 96\n​[16 × (16 +2)] ÷ 3 = 96\n(16 × 18) ÷ 3 = 96\n96 = 96  (LHS = RHS)\n\nAnd,\n\n18 : 120​\n[​18 × (18 +2)] ÷ 3 = 120\n[​18 × (18 +2)] = 120  × 3\n18 × 20 = 360\n360 = 360 (LHS = RHS)\n\nSimilarly,\n\n? : 161​\n\n​Let '?' be 'x'\n\n​x × (x +2) = 161 × 3\nx2 + 2x = 483\nx2 + 2x - 483 = 0\nx2 + 23x - 21x - 483 = 0\n(x + 23) (x - 21) = 0\nx =  either - 23 or 21\n\nAs, the answer cannot be negative, therefore value of x will be 21.\n\nHence, \"21\" is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Relationship pattern involving arithmetic operations on numbers: [x * (x + 2)] / 3 = y.",
@@ -1604,15 +1604,15 @@
         "correctOption": "B",
         "userTime": "01:49",
         "avgTime": "00:55",
-        "question": "In the following question, select the odd number pair from the given alternatives.\nOptions:\nA: 64 – 576\nB: 17 – 343\nC: 27 – 196\nD: 32 – 36",
+        "question": "In the following question, select the odd number pair from the given alternatives.\nOptions:\nA: 64 - 576\nB: 17 - 343\nC: 27 - 196\nD: 32 - 36",
         "options": {
-          "a": "64 – 576",
-          "b": "17 – 343",
-          "c": "27 – 196",
-          "d": "32 – 36"
+          "a": "64 - 576",
+          "b": "17 - 343",
+          "c": "27 - 196",
+          "d": "32 - 36"
         },
         "answer": "b",
-        "solution": "Solution\n\n1) (6 × 4) = 24, Square of 24 = 576\n2) (1 × 7) = 7, Square of 7 = 49 ≠ 343\n3) (2 × 7) = 14, Square of 14 = 196\n4) (3 × 2) = 6, Square of 6 = 36\nHence, 17 – 343 is odd number pair.",
+        "solution": "Solution\n\n1) (6 × 4) = 24, Square of 24 = 576\n2) (1 × 7) = 7, Square of 7 = 49 ≠ 343\n3) (2 × 7) = 14, Square of 14 = 196\n4) (3 × 2) = 6, Square of 6 = 36\nHence, 17 - 343 is odd number pair.",
         "topic": "Classification / Odd One Out",
         "subtopic": "Number Classification",
         "conceptTested": "Product of digits squared compared to the paired number",
@@ -1674,7 +1674,7 @@
           "d": "33"
         },
         "answer": "b",
-        "solution": "Let N = total flagpoles\nPosition of B from the left = N − 9 + 1 = N − 8\nMidway means C's position = (position of A + position of B) ÷ 2\n20 = (16 + (N − 8)) ÷ 2\n40 = 16 + N − 8\n40 = N + 8\nN = 32",
+        "solution": "Let N = total flagpoles\nPosition of B from the left = N - 9 + 1 = N - 8\nMidway means C's position = (position of A + position of B) ÷ 2\n20 = (16 + (N - 8)) ÷ 2\n40 = 16 + N - 8\n40 = N + 8\nN = 32",
         "topic": "Order & Ranking",
         "subtopic": "Midpoint and Total Positions",
         "conceptTested": "Calculating total items in a row using left and right positions and midpoint formulas",
@@ -1798,7 +1798,7 @@
           "d": "21918725"
         },
         "answer": "a",
-        "solution": "A (1)\tB (2)\tC (3)\tD (4)\tE (5)\tF (6)\tG (7)\tH (8)\tI (9)\tJ (10)\tK (11)\tL (12)\tM (13)\nZ (26)\tY (25)\tX (24)\tW (23)\tV (22)\tU (21)\tT (20)\tS (19)\tR (18)\tQ (17)\tP (16)\tO (15)\tN (14)\n\n'BRAIN' is coded as '259261813'\n\nB (2)\tR (18)\tA (1)\tI (9)\tN (14)\tBRAIN\nOpposite\tY (25)\tI (9)\tZ (26)\tR (18)\tM (13)\n25\t9\t26\t18\t13\t259261813\n\n'LUCKY' is coded as '15624162'\n\nL (12)\tU (21)\tC (3)\tK (11)\tY (25)\tLUCKY\nOpposite\tO (15)\tF (6)\tX (24)\tP (16)\tB (2)\n15\t6\t24\t16\t2\t15624162\n\nSimilarly,\n\nW (23)\tH (8)\tI (9)\tT (20)\tE (5)\tWHITE\nOpposite\tD (4)\tS (19)\tR (18)\tG (7)\tV (22)\n4\t19\t18\t7\t22\t41918722\n\nThus, 'WHITE' will be coded as '41918722'.",
+        "solution": "A (1)\tB (2)\tC (3)\tD (4)\tE (5)\tF (6)\tG (7)\tH (8)\tI (9)\tJ (10)\tK (11)\tL (12)\tM (13)\nZ (26)\tY (25)\tX (24)\tW (23)\tV (22)\tU (21)\tT (20)\tS (19)\tR (18)\tQ (17)\tP (16)\tO (15)\tN (14)\n\n'BRAIN' is coded as '259261813'\n\nB (2)\tR (18)\tA (1)\tI (9)\tN (14)\tBRAIN\nOpposite\tY (25)\tI (9)\tZ (26)\tR (18)\tM (13)²5\t9\t26\t18\t13\t259261813\n\n'LUCKY' is coded as '15624162'\n\nL (12)\tU (21)\tC (3)\tK (11)\tY (25)\tLUCKY\nOpposite\tO (15)\tF (6)\tX (24)\tP (16)\tB (2)\n15\t6\t24\t16\t2\t15624162\n\nSimilarly,\n\nW (23)\tH (8)\tI (9)\tT (20)\tE (5)\tWHITE\nOpposite\tD (4)\tS (19)\tR (18)\tG (7)\tV (22)⁴\t19\t18\t7\t22\t41918722\n\nThus, 'WHITE' will be coded as '41918722'.",
         "topic": "Coding-Decoding",
         "subtopic": "Reverse Place Value Coding",
         "conceptTested": "Replacing each letter of a word with the numerical value of its reverse alphabetical letter (A=26, B=25, etc.)",
@@ -1852,7 +1852,7 @@
         "correctOption": "A",
         "userTime": "00:37",
         "avgTime": "00:30",
-        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set.\n(392, 29, 449)\n(395, 31, 566)",
+        "question": "Select the option in which the numbers share the same relationship in the set as that shared by the numbers in the given set. (NOTE: Operations should be performed on whole numbers, without breaking down the numbers into its constituent digits.)\n(392, 29, 449)\n(395, 31, 566)",
         "options": {
           "a": "(486, 32, 538)",
           "b": "(391, 45, 834)",
@@ -1860,7 +1860,7 @@
           "d": "(562, 35, 594)"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
+        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Identifying mathematical relationships between a triplet of numbers where the sum of the first and third numbers equals the square of the middle number.",
@@ -1891,7 +1891,7 @@
           "d": "(562, 35, 594)"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
+        "solution": "Solution\n\nThe logic followed here is :-\n(392, 29, 449) ⇒ 392 + 449 = 841 = 292\n(395, 31, 566)  ⇒  395 + 566 = 961 = 312\n1) (486, 32, 538)\n⇒ 486 + 566 = 1024 = 322\n2) (391, 45, 834)\n⇒ 391 + 834 = 1225 = 352 ≠ 452\n3) (487, 34, 809)\n⇒ 487 + 809 = 1296 = 362 ≠ 342\n4) (562, 35, 594)\n⇒  562+ 594 = 1156= 342 ≠ 352\nHence, the correct answer is \"Option 1\"",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Identifying mathematical relationships and square properties between numbers in a set.",
@@ -2023,7 +2023,7 @@
           "d": "(27, 59, 82)"
         },
         "answer": "a",
-        "solution": "Logic: Second number - First number = 36, Third number - Second number = 23, and Third number - First number = 59.\nFor (45, 81, 104) -> 81 - 45 = 36, 104 - 81 = 23, 104 - 45 = 59.\nFor (52, 88, 111) -> 88 - 52 = 36, 111 - 88 = 23, 111 - 52 = 59.\nSimilarly, for (49, 85, 108) -> 85 - 49 = 36, 108 - 85 = 23, 108 - 49 = 59.\nHence, Option A is the correct answer.",
+        "solution": "Solution\n\nLogic : Second number - First number = 36, Third number - Second number = 23, and Third number - First number = 59\n(45, 81, 104) → 81 - 45 = 36, 104 - 81 = 23, 104 - 45 =59\n\nAnd,\n\n(52, 88, 111) → 88 - 52 = 36, 111 - 88 = 23, 111 - 52 = 59\n\nSimilarly,\n\n(49, 85, 108)  → 85 - 49 = 36, 108 - 85 = 23, 108 - 49 = 59\nHence, \"Option 1\" is the correct answer.",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Identifying difference patterns between consecutive elements in number tuples.",
@@ -2178,7 +2178,7 @@
           "d": "8 & 2"
         },
         "answer": "c",
-        "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
+        "solution": "Solution\n\nThe pattern followed here is:\n\nLet's check each option one by one.\n\nOption 1) 7 & 8\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 85 ÷ 17 + 51 × 7 - 72 = 87\n⇒ 5 + 51 × 7 - 72 = 87\n⇒ 5 + 357 - 72 = 87\n⇒ 362 - 72 = 87\n⇒ 290 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 2) 1 & 5\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 71 ÷ 58 + 15 × 8 - 82 = 87\n⇒ 1.22 + 15 × 8 - 82 = 87\n⇒ 1.22 + 120 - 82 = 87\n⇒ 121.22 - 82 = 87\n⇒ 39.22 ≠ 87\n⇒ LHS ≠ RHS\n\nOption 3) 5 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 72 ÷ 18 + 21 × 8 - 85 = 87\n⇒ 4 + 21 × 8 - 85 = 87\n⇒ 4 + 168 - 85 = 87\n⇒ 172 - 85 = 87\n⇒ 87 = 87\n⇒ LHS = RHS\n\nOption 4) 8 & 2\n\nGiven: 75 ÷ 18 + 51 × 8 - 82 = 87\n\nAfter interchanging the digit we get;\n\n⇒ 75 ÷ 12 + 51 × 2 - 28 = 87\n⇒ 6.25 + 51 × 2 - 28 = 87\n⇒ 6.25 + 102 - 28 = 87\n⇒ 108.25 - 28 = 87\n⇒ 80.25 ≠ 87\n⇒ LHS ≠ RHS\nHence, the correct answer is \"5 & 2\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Digits & Signs",
         "conceptTested": "Balancing equations by interchanging specific digits and applying the BODMAS rule.",
@@ -2302,7 +2302,7 @@
           "d": "5"
         },
         "answer": "a",
-        "solution": "Solution\n\nThe logic followed here is:\n\nGiven number sequence 8 3 2 1 6 2 4 3 7 1 7 2.\n\nNow, all the odd numbers are increased by two and all the even numbers are decreased by two\n\nThe number sequence (8 – 2) (3 + 2) (2 – 2) (1 + 2) (6 – 2) (2 – 2) (4 – 2) (3 + 2) (7 + 2) (1 + 2) (7 + 2) (2 – 2)\n\nOr, 6 5 0 3 4 0 2 5 9 3 9 0\n\nThen the new number sequence is arranged in ascending order;\n\n0 0 0 2 3 3 4 5 5 6 9 9\n\nTherefore, the fifth number from the left is '3'.\nHence, the correct answer is \" Option (3)\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nGiven number sequence 8 3 2 1 6 2 4 3 7 1 7 2.\n\nNow, all the odd numbers are increased by two and all the even numbers are decreased by two\n\nThe number sequence (8 - 2) (3 + 2) (2 - 2) (1 + 2) (6 - 2) (2 - 2) (4 - 2) (3 + 2) (7 + 2) (1 + 2) (7 + 2) (2 - 2)\n\nOr, 6 5 0 3 4 0 2 5 9 3 9 0\n\nThen the new number sequence is arranged in ascending order;\n\n0 0 0 2 3 3 4 5 5 6 9 9\n\nTherefore, the fifth number from the left is '3'.\nHence, the correct answer is \" Option (3)\".",
         "topic": "Alphabet Test",
         "subtopic": "Vowel-Consonant / Number Operations",
         "conceptTested": "Arithmetic operations applied to digits based on parity followed by sorting",
@@ -2333,7 +2333,7 @@
           "d": "32nd"
         },
         "answer": "d",
-        "solution": "Total employees = 60\n\nP is 21st from the left.\n\nQ is 24th from the right.\n\nQ's position from the left =>\n= 60 − 24 + 1\n= 37th\n\nR is exactly midway between P and Q.\n\nPosition of R =>\n= (21 + 37) ÷ 2\n= 58 ÷ 2\n= 29th from the left\nNow P and R interchange their positions.\nTherefore, P moves to R's original position, i.e. 29th from the left.\n\nP's new position from the right\n\n= 60 − 29 + 1\n= 32nd",
+        "solution": "Total employees = 60\n\nP is 21st from the left.\n\nQ is 24th from the right.\n\nQ's position from the left =>\n= 60 - 24 + 1\n= 37th\n\nR is exactly midway between P and Q.\n\nPosition of R =>\n= (21 + 37) ÷ 2\n= 58 ÷ 2\n= 29th from the left\nNow P and R interchange their positions.\nTherefore, P moves to R's original position, i.e. 29th from the left.\n\nP's new position from the right\n\n= 60 - 29 + 1\n= 32nd",
         "topic": "Order & Ranking",
         "subtopic": "Positions from left and right with interchange",
         "conceptTested": "Converting rank from opposite end using Total = Left + Right - 1 and finding midpoint",
@@ -2395,7 +2395,7 @@
           "d": "2 and 4"
         },
         "answer": "c",
-        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50\n\n531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
+        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50 / 531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing mathematical equations by substituting numbers and applying BODMAS rule",
@@ -2736,7 +2736,7 @@
           "d": "× and -"
         },
         "answer": "c",
-        "solution": "Solution\n\nBODMAS RULE:\n\nOption (1): × and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is : 72 × 36 + 12 ÷ 13 - 48 = 63\n⇒  72  × 36+ 0.92 - 48 = 63\n⇒ 2592 + 0.92 - 48 = 63\n⇒ 2592.92 - 48  = 63\n⇒ 2544.92 ≠ 63\n⇒ LHS ≠ RHS\nOption (2): + and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 - 12 × 13 + 48 = 63\n⇒ 2 - 12 × 13 + 48 = 63\n⇒ 2 - 156 + 48 = 63\n⇒ 2 + 48 - 156 = 63\n⇒ 50 - 156 = 63\n⇒ -106 ≠ 63\n⇒ LHS ≠ RHS\nOption (3): + and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 + 36 ÷ 12 × 13 - 48 = 63\n⇒ 72 + 3 × 13 - 48 = 63\n⇒ 72 + 39 - 48 = 63\n⇒ 111 - 48 = 63\n⇒ 63 = 63\n⇒ LHS = RHS\nOption (4): × and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 624 = 63\n⇒ 14 - 624 = 63\n⇒ - 610 ≠ 63\n⇒ LHS ≠ RHS\nHence, the correct answer is \"+ and ÷\".",
+        "solution": "Solution\n\nBODMAS RULE:\n\nOption (1): × and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is : 72 × 36 + 12 ÷ 13 - 48 = 63\n⇒  72  × 36+ 0.92 - 48 = 63\n⇒ 2592 + 0.92 - 48 = 63\n⇒ 2592.92 - 48  = 63\n⇒ 2544.92 ≠ 63\n⇒ LHS ≠ RHS\nOption (2): + and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 - 12 × 13 + 48 = 63\n⇒ 2 - 12 × 13 + 48 = 63\n⇒ 2 - 156 + 48 = 63\n⇒ 2 + 48 - 156 = 63\n⇒ 50 - 156 = 63\n⇒ -106 ≠ 63\n⇒ LHS ≠ RHS\nOption (3): + and ÷\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 + 36 ÷ 12 × 13 - 48 = 63\n⇒ 72 + 3 × 13 - 48 = 63\n⇒ 72 + 39 - 48 = 63\n⇒ 111 - 48 = 63\n⇒ 63 = 63\n⇒ LHS = RHS\nOption (4): × and -\nGiven equation: 72 ÷ 36 + 12 × 13 - 48 = 63\nInterchanged equation is: 72 ÷ 36 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 13 × 48 = 63\n⇒ 2 + 12 - 624 = 63\n⇒ 14 - 624 = 63\n⇒ - 610 ≠ 63\n⇒ LHS ≠ RHS\nHence, the correct answer is \"+ and ÷\".",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing mathematical equations by interchanging signs according to the BODMAS rule.",
@@ -2891,7 +2891,7 @@
           "d": "Neither I nor II"
         },
         "answer": "a",
-        "solution": "If the numbers 5 and 11 (not digits) are interchanged, then the equation will be:\n\nEquation I: 147 + [(51 - 16) ÷ 5] x 11 = 224\nSo, 147 + [35 ÷ 5] x 11 = 224\nSo, 147 + 7 x 11 = 224\nSo, 147 + 77 = 224\nSo, 224 = 224\n\nSo, equation I is correct.\n\nEquation II: [(263 + 47) ÷ 11] - 15 x 5 = 27\nSo, [310 ÷ 11] - 15 x 5 = 27\n\nSo, 28.18 - 75 = 27\n\nSo, -46.82 ≠ 27\n\nSo, equation II is incorrect.",
+        "solution": "If the numbers 5 and 11 (not digits) are interchanged, then the equation will be:\n\nEquation I: 147 + [(51 - 16) ÷ 5] x 11 = 224\nSo, 147 + [35 ÷ 5] x 11 = 224\nSo, 147 + 7 x 11 = 224\nSo, 147 + 77 = 224\nSo, 224 = 224\n\nSo, equation I is correct.\n\nEquation II: [(263 + 47) ÷ 11] - 15 x 5 = 27\nSo, [310 ÷ 11] - 15 x 5 = 27\n\nSo, 28.18 - 75 = 27\n\nSo, -46.82 ≠ 27\n\nSo, equation II is incorrect.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Numbers in Equations",
         "conceptTested": "Balancing and verifying algebraic/arithmetic equations through the interchange of specific numbers using the BODMAS rule.",
@@ -2984,7 +2984,7 @@
           "d": "14"
         },
         "answer": "c",
-        "solution": "Let n be the number\nValue = (n-1)3 - 1\n\nFor 10:\n\n(10 − 1)3 − 1\n\n= 93 − 1\n= 729 − 1\n= 728\n\nSo for 1727:\n\n(n − 1)3 − 1 = 1727\n(n − 1)3 = 1727 + 1\n(n − 1)3 = 1728\nn − 1 = 12\nn = 13",
+        "solution": "Let n be the number\nValue = (n-1)³ - 1\n\nFor 10:\n\n(10 - 1)³ - 1\n\n= 93 - 1\n= 729 - 1\n= 728\n\nSo for 1727:\n\n(n - 1)³ - 1 = 1727\n(n - 1)³ = 1727 + 1\n(n - 1)³ = 1728\nn - 1 = 12\nn = 13",
         "topic": "Analogy",
         "subtopic": "Number Analogy",
         "conceptTested": "Number pattern based on cubic operations such as (n-1)^3 - 1.",
@@ -3100,7 +3100,7 @@
         "correctOption": "B",
         "userTime": "01:17",
         "avgTime": "00:44",
-        "question": "In the alphabet which Letter will be exactly in the middle of 21st Letter from the last and 22nd Letter from the beginning?",
+        "question": "In the alphabet, which letter will be exactly in the middle of the 21st letter from the last and the 22nd letter from the beginning?",
         "options": {
           "a": "M",
           "b": "N",
