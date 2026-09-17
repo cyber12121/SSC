@@ -1013,6 +1013,81 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     }
   };
 
+  // ── Global Keyboard Shortcuts for Review Mode ──
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore when user is actively typing in an input, textarea, or contentEditable
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable ||
+          target.closest('input, textarea, [contenteditable="true"]'))
+      ) {
+        return;
+      }
+
+      // Ignore modifier combinations (Ctrl, Alt, Meta)
+      if (e.ctrlKey || e.altKey || e.metaKey) return;
+
+      const key = e.key.toLowerCase();
+
+      // Navigation: ArrowRight or K -> Next
+      if (e.key === 'ArrowRight' || key === 'k') {
+        e.preventDefault();
+        handleNext();
+        return;
+      }
+
+      // Navigation: ArrowLeft or J -> Previous
+      if (e.key === 'ArrowLeft' || key === 'j') {
+        e.preventDefault();
+        handlePrevious();
+        return;
+      }
+
+      // Toggle Reattempt / Solution: S
+      if (key === 's') {
+        e.preventDefault();
+        setReattemptMode(prev => !prev);
+        return;
+      }
+
+      // RCA Hotkeys: C, A, T, G
+      if (key === 'c') {
+        e.preventDefault();
+        handleSelectRcaTag('C');
+        return;
+      }
+      if (key === 'a') {
+        e.preventDefault();
+        handleSelectRcaTag('A');
+        return;
+      }
+      if (key === 't') {
+        e.preventDefault();
+        handleSelectRcaTag('T');
+        return;
+      }
+      if (key === 'g') {
+        e.preventDefault();
+        handleSelectRcaTag('G');
+        return;
+      }
+
+      // Clear RCA: X or Delete
+      if (key === 'x' || e.key === 'Delete') {
+        e.preventDefault();
+        handleClearRcaTag();
+        return;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentIdx, items.length, activeSectionId, sections, rcaMap]);
+
   const currentStatus = current ? getQuestionStatus(currentIdx) : 'unattempted';
   const qTextKey = (question?.question || '').trim().toLowerCase();
   const isBookmarked = question ? (localBookmarks.has(qTextKey) || localBookmarks.has(question.q_num)) : false;
@@ -1565,9 +1640,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         <button
                           type="button"
                           onClick={handleClearRcaTag}
-                          className="text-[11px] text-gray-400 hover:text-rose-600 transition-colors cursor-pointer underline decoration-dotted"
+                          className="text-[11px] text-gray-400 hover:text-rose-600 transition-colors cursor-pointer underline decoration-dotted flex items-center gap-1"
                         >
-                          Clear Tag
+                          <span>Clear Tag</span>
+                          <kbd className="text-[9px] font-mono px-1 rounded bg-gray-100 border border-gray-300 text-gray-500">X</kbd>
                         </button>
                       )}
                     </div>
@@ -1585,11 +1661,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
-                            currentRca?.tag === 'C' ? 'bg-white/25 text-white' : 'bg-purple-100 text-purple-800'
-                          }`}>
-                            [C]
-                          </span>
+                          <div className="flex items-center gap-1">
+                            <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                              currentRca?.tag === 'C' ? 'bg-white/25 text-white' : 'bg-purple-100 text-purple-800'
+                            }`}>
+                              [C]
+                            </span>
+                            <kbd className={`text-[10px] font-mono px-1 py-0.2 rounded border ${
+                              currentRca?.tag === 'C' ? 'bg-white/15 border-white/30 text-white' : 'bg-purple-50 border-purple-200 text-purple-700'
+                            }`}>
+                              C
+                            </kbd>
+                          </div>
                           {currentRca?.tag === 'C' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
                         </div>
                         <span className="text-xs font-bold">Conceptual Gap</span>
@@ -1609,11 +1692,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
-                            currentRca?.tag === 'A' ? 'bg-white/25 text-white' : 'bg-rose-100 text-rose-800'
-                          }`}>
-                            [A]
-                          </span>
+                          <div className="flex items-center gap-1">
+                            <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                              currentRca?.tag === 'A' ? 'bg-white/25 text-white' : 'bg-rose-100 text-rose-800'
+                            }`}>
+                              [A]
+                            </span>
+                            <kbd className={`text-[10px] font-mono px-1 py-0.2 rounded border ${
+                              currentRca?.tag === 'A' ? 'bg-white/15 border-white/30 text-white' : 'bg-rose-50 border-rose-200 text-rose-700'
+                            }`}>
+                              A
+                            </kbd>
+                          </div>
                           {currentRca?.tag === 'A' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
                         </div>
                         <span className="text-xs font-bold">Silly Mistake</span>
@@ -1633,11 +1723,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
-                            currentRca?.tag === 'T' ? 'bg-white/25 text-white' : 'bg-amber-100 text-amber-800'
-                          }`}>
-                            [T]
-                          </span>
+                          <div className="flex items-center gap-1">
+                            <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                              currentRca?.tag === 'T' ? 'bg-white/25 text-white' : 'bg-amber-100 text-amber-800'
+                            }`}>
+                              [T]
+                            </span>
+                            <kbd className={`text-[10px] font-mono px-1 py-0.2 rounded border ${
+                              currentRca?.tag === 'T' ? 'bg-white/15 border-white/30 text-white' : 'bg-amber-50 border-amber-200 text-amber-700'
+                            }`}>
+                              T
+                            </kbd>
+                          </div>
                           {currentRca?.tag === 'T' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
                         </div>
                         <span className="text-xs font-bold">Time / Ego Trap</span>
@@ -1657,11 +1754,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
-                            currentRca?.tag === 'G' ? 'bg-white/25 text-white' : 'bg-blue-100 text-blue-800'
-                          }`}>
-                            [G]
-                          </span>
+                          <div className="flex items-center gap-1">
+                            <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
+                              currentRca?.tag === 'G' ? 'bg-white/25 text-white' : 'bg-blue-100 text-blue-800'
+                            }`}>
+                              [G]
+                            </span>
+                            <kbd className={`text-[10px] font-mono px-1 py-0.2 rounded border ${
+                              currentRca?.tag === 'G' ? 'bg-white/15 border-white/30 text-white' : 'bg-blue-50 border-blue-200 text-blue-700'
+                            }`}>
+                              G
+                            </kbd>
+                          </div>
                           {currentRca?.tag === 'G' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
                         </div>
                         <span className="text-xs font-bold">Guesswork Failed</span>
@@ -1791,14 +1895,19 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             <button
               onClick={handlePrevious}
               disabled={currentIdx === 0}
-              className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-5 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-4 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
+              title="Previous question (← or J)"
             >
-              Previous
+              <span>Previous</span>
+              <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-white/80 border border-[#81d4fa] rounded text-[#01579b] shadow-2xs">← / J</kbd>
             </button>
 
             {/* Practice Mode (Hide Solutions) Toggle Switch */}
             <div className="flex items-center space-x-3">
-              <span className="text-xs font-semibold text-gray-700">Practice Mode (Hide Solutions)</span>
+              <span className="text-xs font-semibold text-gray-700 flex items-center gap-1.5">
+                Practice Mode (Hide Solutions)
+                <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-white border border-gray-300 rounded text-gray-600 shadow-2xs">S</kbd>
+              </span>
               <button
                 role="switch"
                 aria-checked={reattemptMode}
@@ -1809,6 +1918,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 className={`w-11 h-6 rounded-full p-0.5 transition-colors duration-200 ease-in-out focus:outline-none ${
                   reattemptMode ? 'bg-[#0097a7]' : 'bg-gray-300'
                 }`}
+                title="Toggle Practice Mode (Hide Solutions) (S)"
               >
                 <div
                   className={`w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out ${
@@ -1822,9 +1932,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             <button
               onClick={handleNext}
               disabled={currentIdx === items.length - 1}
-              className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-5 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-4 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
+              title="Next question (→ or K)"
             >
-              Next
+              <span>Next</span>
+              <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-white/80 border border-[#81d4fa] rounded text-[#01579b] shadow-2xs">→ / K</kbd>
             </button>
           </div>
         </div>

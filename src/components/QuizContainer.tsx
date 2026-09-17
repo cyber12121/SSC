@@ -728,6 +728,124 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   const optionKeys: ('a' | 'b' | 'c' | 'd')[] = ['a', 'b', 'c', 'd'];
 
+  // Global Keyboard Shortcuts (Arrow keys, J/K, 1-4, A-D, S, Clear/Delete)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore when typing in input, textarea, or contentEditable
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable ||
+          target.closest('input, textarea, [contenteditable="true"]'))
+      ) {
+        return;
+      }
+
+      // Ignore modifier keys
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+      // Ignore if any modal is active or test is finished/paused
+      if (
+        isFinished ||
+        isPaused ||
+        showSubmitModal ||
+        showReportModal ||
+        showInstructionsModal ||
+        showQuestionPaper ||
+        showSymbolsModal ||
+        showDeleteModal
+      ) {
+        return;
+      }
+
+      const key = e.key;
+
+      // 1. Navigation: Left / J (Previous)
+      if (key === 'ArrowLeft' || key === 'j' || key === 'J') {
+        e.preventDefault();
+        if (currentIdx > 0) {
+          jumpToQuestion(currentIdx - 1);
+        }
+        return;
+      }
+
+      // 2. Navigation: Right / K (Next / Save & Next)
+      if (key === 'ArrowRight' || key === 'k' || key === 'K') {
+        e.preventDefault();
+        if (mode === 'practice') {
+          if (currentIdx < totalQuestions - 1) {
+            jumpToQuestion(currentIdx + 1);
+          } else {
+            setShowSubmitModal(true);
+          }
+        } else {
+          handleSaveAndNext();
+        }
+        return;
+      }
+
+      // 3. Option Selection: 1/A -> 'a', 2/B -> 'b', 3/C -> 'c', 4/D -> 'd'
+      const lowerKey = key.toLowerCase();
+      if (key === '1' || lowerKey === 'a') {
+        e.preventDefault();
+        handleAnswer('a');
+        return;
+      }
+      if (key === '2' || lowerKey === 'b') {
+        e.preventDefault();
+        handleAnswer('b');
+        return;
+      }
+      if (key === '3' || lowerKey === 'c') {
+        e.preventDefault();
+        handleAnswer('c');
+        return;
+      }
+      if (key === '4' || lowerKey === 'd') {
+        e.preventDefault();
+        handleAnswer('d');
+        return;
+      }
+
+      // 4. Toggle Solution (Practice Mode only): S
+      if (lowerKey === 's') {
+        e.preventDefault();
+        if (mode === 'practice') {
+          setShowSolutionMap(prev => ({ ...prev, [currentIdx]: !isSolutionOpen }));
+        }
+        return;
+      }
+
+      // 5. Clear Response: Delete or X
+      if (key === 'Delete' || lowerKey === 'x') {
+        if (answers[currentIdx] !== undefined) {
+          e.preventDefault();
+          handleClearResponse();
+        }
+        return;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [
+    currentIdx,
+    totalQuestions,
+    mode,
+    isFinished,
+    isPaused,
+    showSubmitModal,
+    showReportModal,
+    showInstructionsModal,
+    showQuestionPaper,
+    showSymbolsModal,
+    showDeleteModal,
+    answers,
+    isSolutionOpen
+  ]);
+
   return (
     <div className="flex flex-col h-screen w-full bg-white text-gray-900 select-none overflow-hidden font-sans">
 
@@ -961,10 +1079,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
-              className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1"
+              className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
+              title="Previous question (← or J)"
             >
               <ChevronLeft className="w-4 h-4" />
               <span>Previous</span>
+              <kbd className="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-white border border-gray-300 rounded text-gray-600 shadow-2xs">← / J</kbd>
             </button>
 
             <button
@@ -974,9 +1094,13 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   ? 'bg-amber-500 text-white hover:bg-amber-600'
                   : 'bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100'
               }`}
+              title="Toggle solution visibility (S)"
             >
               {isSolutionOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5 text-amber-600" />}
               <span>{isSolutionOpen ? 'Hide Solution' : 'Show Solution'}</span>
+              <kbd className={`hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono rounded shadow-2xs ${
+                isSolutionOpen ? 'bg-amber-600 text-white border border-amber-400' : 'bg-white text-amber-900 border border-amber-300'
+              }`}>S</kbd>
             </button>
 
             <button
@@ -987,9 +1111,11 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   setShowSubmitModal(true);
                 }
               }}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded transition-colors shadow-2xs cursor-pointer flex items-center gap-1"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded transition-colors shadow-2xs cursor-pointer flex items-center gap-1.5"
+              title="Next question (→ or K)"
             >
               <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
+              <kbd className="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-indigo-500 text-white border border-indigo-400 rounded shadow-2xs">→ / K</kbd>
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
@@ -999,21 +1125,24 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap flex items-center gap-1"
+              title="Previous question (← or J)"
             >
-              Previous
+              <span>Previous</span>
             </button>
             <button
               onClick={handleMarkAndNext}
               className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
+              title="Mark for Review and go to next"
             >
               Mark for Review
             </button>
             <button
               onClick={handleSaveAndNext}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap flex items-center gap-1"
+              title="Save response & go to next (→ or K)"
             >
-              Save &amp; Next
+              <span>Save &amp; Next</span>
             </button>
             <button
               onClick={handleSubmitSection}
@@ -1186,6 +1315,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                         <div
                           key={k}
                           onClick={() => handleAnswer(k)}
+                          title={`Option ${k.toUpperCase()} (Press ${k === 'a' ? '1 or A' : k === 'b' ? '2 or B' : k === 'c' ? '3 or C' : '4 or D'})`}
                           className={`flex items-stretch hover:bg-slate-50/80 cursor-pointer transition-colors ${
                             isSelected ? 'bg-blue-50/30' : 'bg-white'
                           }`}
@@ -1279,7 +1409,14 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                             <FormattedText text={rawOpt} language={language} />
                           </span>
                         </div>
-                        {statusBadge && <div className="shrink-0 ml-2">{statusBadge}</div>}
+                        <div className="flex items-center gap-2 shrink-0 ml-2">
+                          {!isAttempted && (
+                            <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-gray-400 border border-gray-200 rounded bg-gray-50/80 shadow-2xs">
+                              {k === 'a' ? '1 / A' : k === 'b' ? '2 / B' : k === 'c' ? '3 / C' : '4 / D'}
+                            </kbd>
+                          )}
+                          {statusBadge}
+                        </div>
                       </div>
                     );
                   })}
@@ -1292,17 +1429,21 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   {mode === 'mock' ? (
                     <button
                       onClick={handleClearResponse}
-                      className="text-xs text-gray-500 hover:text-red-600 underline font-medium cursor-pointer"
+                      className="text-xs text-gray-500 hover:text-red-600 underline font-medium cursor-pointer flex items-center gap-1.5"
+                      title="Clear selected option (Delete or X)"
                     >
-                      Clear Selected Option
+                      <span>Clear Selected Option</span>
+                      <kbd className="px-1.5 py-0.5 text-[9px] font-mono bg-gray-100 border border-gray-300 rounded text-gray-600">Del / X</kbd>
                     </button>
                   ) : (
                     <button
                       onClick={handleClearResponse}
                       className="text-xs text-gray-500 hover:text-red-600 font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+                      title="Clear selection and try again (Delete or X)"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                       <span>Clear Selection (Try Again)</span>
+                      <kbd className="px-1.5 py-0.5 text-[9px] font-mono bg-gray-100 border border-gray-300 rounded text-gray-600">Del / X</kbd>
                     </button>
                   )}
                 </div>
