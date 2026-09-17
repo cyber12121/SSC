@@ -115,11 +115,33 @@ export function parseFraction(str: string, startIndex: number): { fullMatch: str
  * and safely wraps them into $...$ (supporting mixed fractions like 9 \frac{1}{2} and percentages \frac{2}{3}%).
  */
 export function wrapUnwrappedFractions(rawText: string = ''): string {
-  if (!rawText || !rawText.includes('\\frac')) return rawText;
+  if (!rawText) return '';
+  let s = rawText;
+
+  // Normalize TeX \over into \frac or mixed fractions
+  if (/\\*over/i.test(s)) {
+    // 1. Mixed fraction with brackets: 30\(10\over13\) % or 30\\(10\\over13\\) %
+    s = s.replace(/(\b\d+)\s*\\+\(\s*(\d+)\s*\\+over(?![a-zA-Z])\s*(\d+)\s*\\+\)\s*(%?)/g, (_, w, n, d, pct) => {
+      return `$${w}\\frac{${n}}{${d}}${pct ? '\\%' : ''}$`;
+    });
+    // 2. Pure fraction with brackets: \(21\over 22\) or \\(21\\over 22\\)
+    s = s.replace(/\\+\(\s*([0-9a-zA-Z]+)\s*\\+over(?![a-zA-Z])\s*([0-9a-zA-Z]+)\s*\\+\)/g, (_, n, d) => {
+      return `$\\frac{${n}}{${d}}$`;
+    });
+    // 3. Mixed fraction with space: 30 10\over 13 %
+    s = s.replace(/(\b\d+)\s+(\d+)\s*\\+over(?![a-zA-Z])\s*(\d+)\s*(%?)/g, (_, w, n, d, pct) => {
+      return `$${w}\\frac{${n}}{${d}}${pct ? '\\%' : ''}$`;
+    });
+    // 4. Pure fraction unbracketed or braced
+    s = s.replace(/\{([^{}]+?)\s*\\+over(?![a-zA-Z])\s*([^{}]+?)\}/g, '\\frac{$1}{$2}');
+    s = s.replace(/(?<![0-9a-zA-Z])([0-9a-zA-Z]+)\s*\\+over(?![a-zA-Z])\s*([0-9a-zA-Z]+)/g, '\\frac{$1}{$2}');
+  }
+
+  if (!s.includes('\\frac')) return s;
 
   // 1. Temporarily protect existing math blocks ($$...$$, $...$, \[...\], \(...\))
   const mathPlaceholders: string[] = [];
-  let s = rawText.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
+  s = s.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g, (m) => {
     const placeholder = `___MATH_BLOCK_${mathPlaceholders.length}___`;
     mathPlaceholders.push(m);
     return placeholder;
@@ -570,6 +592,16 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   // 6. Common scraper math artifacts: \rm with nothing or empty text
   s = s.replace(/\\rm\s*([a-zA-Z0-9]+)/g, '\\mathrm{$1}');
   s = s.replace(/\\rm\b/g, '');
+
+  // 7. Fix TeX \over primitives and corrupted double-backslash \over inside math mode
+  s = s.replace(/\\+over(?![a-zA-Z])/g, '\\over ');
+  s = s.replace(/\{([^{}]+?)\s*\\over\s*([^{}]+?)\}/g, '\\frac{$1}{$2}');
+  s = s.replace(/([0-9a-zA-Z]+)\s*\\over\s*([0-9a-zA-Z]+)/g, '\\frac{$1}{$2}');
+
+  // 8. Strip trailing dangling backslashes (incomplete commands) at the end of LaTeX formulas
+  s = s.replace(/(?<!\\)\\+$/, '');
+  // Strip leading lone backslash not followed by command letter
+  s = s.replace(/^\\+(?![a-zA-Z])/, '');
 
   return s;
 }

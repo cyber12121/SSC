@@ -26,6 +26,13 @@ export function cleanQuestionText(text: string = ''): string {
   if (!text) return '';
   let s = String(text);
 
+  // Decode literal escaped quotes from scrapers (e.g. \"A\" -> "A")
+  s = s.replace(/\\"/g, '"');
+
+  // Normalize multiple backslashes on math delimiters: e.g. \\( -> \(, \\) -> \)
+  s = s.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
+  s = s.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
+
   // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
   s = s.replace(/\$\s+([^$\n]+?)\s+\$/g, '$$$1$$');
   s = s.replace(/\$\s+([^$\n]+?)\$/g, '$$$1$$');
@@ -168,18 +175,27 @@ export function getLanguageText(
 export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   if (!rawText) return [];
 
-  // Step 1: Normalize \(...\) to $...$ and \[...\] to $$...$$
-  let text = rawText
+  // Step 0: Clean escaped quotes and normalize double-escaped delimiters
+  let text = rawText.replace(/\\"/g, '"');
+  text = text.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
+  text = text.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
+
+  // Step 1: Wrap unwrapped fractions (\frac and \over) including mixed fractions
+  text = wrapUnwrappedFractions(text);
+
+  // Step 2: Normalize \(...\) to $...$ and \[...\] to $$...$$
+  text = text
     .replace(/\\\[([\s\S]*?)\\\]/g, (_, eq) => `$$${eq}$$`)
     .replace(/\\\(([\s\S]*?)\\\)/g, (_, eq) => `$${eq}$`);
+
+  // Clean trailing or leading backslashes inside math delimiters: e.g. \$...$ -> $...$, $...\$ -> $...$
+  text = text.replace(/\\+\$([^$]+?)\$/g, '$$$1$$');
+  text = text.replace(/\$([^$]+?)\\+\$/g, '$$$1$$');
 
   // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
   text = text.replace(/\$\s+([^$\n]+?)\s+\$/g, '$$$1$$');
   text = text.replace(/\$\s+([^$\n]+?)\$/g, '$$$1$$');
   text = text.replace(/\$([^$\n]+?)\s+\$/g, '$$$1$$');
-
-  // Step 2: Wrap any remaining unwrapped fractions (\frac)
-  text = wrapUnwrappedFractions(text);
 
   // Step 3: Combined pattern for:
   // - $$ display math $$
