@@ -1,5 +1,30 @@
 [
   {
+    "id": "mock_1789654448115_220yx",
+    "title": "CGL 26/09/2025 Shift-3 (Quant)",
+    "platform": "MockMatrix",
+    "type": "sectional",
+    "subject": "Mathematics",
+    "date": "2026-09-17T14:14:07.962Z",
+    "totalQuestions": 25,
+    "maxMarks": 50,
+    "totalScore": 29.5,
+    "overallAccuracy": 93.8,
+    "totalCorrect": 15,
+    "totalWrong": 1,
+    "totalUnattempted": 9,
+    "sections": {
+      "mathematics": {
+        "total": 25,
+        "correct": 15,
+        "wrong": 1,
+        "unattempted": 9,
+        "score": 29.5,
+        "accuracy": 93.8
+      }
+    }
+  },
+  {
     "id": "mock_1789652448592_r1bzp",
     "title": "CGL 14/10/2025 Shift-2 (Quant)",
     "platform": "MockMatrix",

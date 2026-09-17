@@ -4517,7 +4517,7 @@
         "correctOption": "B",
         "userTime": "01:24",
         "avgTime": "00:25",
-        "question": "Given $\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$, find$x + \\frac{1}{x}$.",
+        "question": "Given $\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$, find the value of $x + \\frac{1}{x}$.",
         "options": {
           "a": "15",
           "b": "14",
@@ -4525,7 +4525,7 @@
           "d": "17"
         },
         "answer": "b",
-        "solution": "(x + 1\n\nx)² = x + 1 / x + 2 / 4\n2 = x + 1 / x + 2 / x + 1\nx = 14\nAns: (2) 14",
+        "solution": "Solution\n\nGiven:\n$\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$\n\nCalculations:\nSquaring both sides:\n⇒ $\\left(\\sqrt{x} + \\frac{1}{\\sqrt{x}}\\right)^2 = 4^2$\n⇒ $(\\sqrt{x})^2 + \\left(\\frac{1}{\\sqrt{x}}\\right)^2 + 2\\left(\\sqrt{x}\\right)\\left(\\frac{1}{\\sqrt{x}}\\right) = 16$\n⇒ $x + \\frac{1}{x} + 2 = 16$\n⇒ $x + \\frac{1}{x} = 16 - 2 = 14$\n\n∴ The correct answer is 14.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Square & Square Root Reciprocal Identities",
@@ -4535,7 +4535,8 @@
           "subtopic": "Square & Square Root Reciprocal Identities",
           "conceptTested": "Squaring reciprocal terms: $(\\sqrt{x} + \\frac{1}{\\sqrt{x}})^2 = x + \\frac{1}{x} + 2$",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "Given $\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$, find the value of $x + \\frac{1}{x}$."
       },
       {
         "id": "math_b3f47b918a",
@@ -4549,7 +4550,7 @@
         "correctOption": "B",
         "userTime": "00:45",
         "avgTime": "00:32",
-        "question": "If $x + \\frac{2}{x} = 7$, find the value of$x^3 + \\frac{8}{x^3}$.",
+        "question": "If $x + \\frac{2}{x} = 7$, find the value of $x^3 + \\frac{8}{x^3}$.",
         "options": {
           "a": "256",
           "b": "301",
@@ -4557,7 +4558,7 @@
           "d": "298"
         },
         "answer": "b",
-        "solution": "a / 3 + b\n\n3 = (a + b)³ - 3 / a\nb (a + b), with a = x and\nb = 2\n\nx\n\nso ab = 2\n\nx / 3 + 8 / x\n\n3 = 7 / 3 - 3 (2) (7) = 343 - 42 / x\n\n3 + 8 / x\n\n3 = 301\nAns: (2) 301",
+        "solution": "Solution\n\nFormula:\n$a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\n\nGiven:\n$x + \\frac{2}{x} = 7$\n\nCalculations:\nHere, $a = x$ and $b = \\frac{2}{x}$.\nProduct of the terms: $ab = x \\times \\frac{2}{x} = 2$.\n\nApplying the identity:\n⇒ $x^3 + \\frac{8}{x^3} = \\left(x + \\frac{2}{x}\\right)^3 - 3 \\left(x \\times \\frac{2}{x}\\right)\\left(x + \\frac{2}{x}\\right)$\n⇒ $x^3 + \\frac{8}{x^3} = (7)^3 - 3(2)(7)$\n⇒ $x^3 + \\frac{8}{x^3} = 343 - 42 = 301$\n\n∴ The correct answer is 301.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Cubic Algebraic Identities with Coefficients",
@@ -4567,7 +4568,8 @@
           "subtopic": "Cubic Algebraic Identities with Coefficients",
           "conceptTested": "Cubic expansion with scaling factors: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "If $x + \\frac{2}{x} = 7$, find the value of $x^3 + \\frac{8}{x^3}$."
       },
       {
         "id": "math_c03a5a7a76",
@@ -4581,7 +4583,7 @@
         "correctOption": "B",
         "userTime": "00:38",
         "avgTime": "00:24",
-        "question": "If $\\sqrt{a} + \\sqrt{b} = 5$and$\\sqrt{a} - \\sqrt{b} = 1$, what is the value of$a$and$b$?",
+        "question": "If $\\sqrt{a} + \\sqrt{b} = 5$ and $\\sqrt{a} - \\sqrt{b} = 1$, find the values of $a$ and $b$.",
         "options": {
           "a": "$a = 4, b = 1$",
           "b": "$a = 9, b = 4$",
@@ -4589,7 +4591,7 @@
           "d": "$a = 25, b = 16$"
         },
         "answer": "b",
-        "solution": "Adding the two equations: 2\na = 6, so\na = 3\n\nSubtracting them, 2\n\nb = 4, so\nb = 2\na = 9 and b = 4\nAns: (2) a = 9, b = 4",
+        "solution": "Solution\n\nGiven equations:\n1) $\\sqrt{a} + \\sqrt{b} = 5$\n2) $\\sqrt{a} - \\sqrt{b} = 1$\n\nCalculations:\nAdding equations (1) and (2):\n⇒ $(\\sqrt{a} + \\sqrt{b}) + (\\sqrt{a} - \\sqrt{b}) = 5 + 1$\n⇒ $2\\sqrt{a} = 6$\n⇒ $\\sqrt{a} = 3 \\implies a = 3^2 = 9$\n\nSubtracting equation (2) from equation (1):\n⇒ $(\\sqrt{a} + \\sqrt{b}) - (\\sqrt{a} - \\sqrt{b}) = 5 - 1$\n⇒ $2\\sqrt{b} = 4$\n⇒ $\\sqrt{b} = 2 \\implies b = 2^2 = 4$\n\n∴ The values are $a = 9$ and $b = 4$.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Surds & Indices - Simultaneous Equations",
@@ -4599,7 +4601,8 @@
           "subtopic": "Surds & Indices - Simultaneous Equations",
           "conceptTested": "Solving simultaneous equations involving square roots by addition and subtraction.",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "If $\\sqrt{a} + \\sqrt{b} = 5$ and $\\sqrt{a} - \\sqrt{b} = 1$, find the values of $a$ and $b$."
       },
       {
         "id": "math_e3f02a2c53",
@@ -4613,15 +4616,15 @@
         "correctOption": "B",
         "userTime": "00:48",
         "avgTime": "00:27",
-        "question": "If $x = 2 + \\sqrt{3}$, find$x - \\frac{1}{x}$.",
+        "question": "If $x = 2 + \\sqrt{3}$, find the value of $x - \\frac{1}{x}$.",
         "options": {
-          "a": "\\sqrt{3}",
-          "b": "2\\sqrt{3}",
-          "c": "3\\sqrt{2}",
-          "d": "5\\sqrt{3}"
+          "a": "$\\sqrt{3}$",
+          "b": "$2\\sqrt{3}$",
+          "c": "$3\\sqrt{2}$",
+          "d": "$5\\sqrt{3}$"
         },
         "answer": "b",
-        "solution": "1\n\nx = 1 / 2 + 3 = 2 - 3\n\nafter rationalising\n\nx - 1\n\nx = (2 + 3) - (2 - 3)\n\nx - 1\n\nx = 2 / 3\nAns: (2)²√3",
+        "solution": "Solution\n\nGiven:\n$x = 2 + \\sqrt{3}$\n\nCalculations:\n1. Find $\\frac{1}{x}$ by rationalising the denominator:\n⇒ $\\frac{1}{x} = \\frac{1}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}}$\n⇒ $\\frac{1}{x} = \\frac{2 - \\sqrt{3}}{2^2 - (\\sqrt{3})^2} = \\frac{2 - \\sqrt{3}}{4 - 3} = 2 - \\sqrt{3}$\n\n2. Calculate $x - \\frac{1}{x}$:\n⇒ $x - \\frac{1}{x} = (2 + \\sqrt{3}) - (2 - \\sqrt{3})$\n⇒ $x - \\frac{1}{x} = 2 + \\sqrt{3} - 2 + \\sqrt{3} = 2\\sqrt{3}$\n\n∴ The correct answer is $2\\sqrt{3}$.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Rationalization",
@@ -4631,7 +4634,8 @@
           "subtopic": "Rationalization",
           "conceptTested": "Rationalization of denominators and simplification of algebraic expressions.",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "If $x = 2 + \\sqrt{3}$, find the value of $x - \\frac{1}{x}$."
       },
       {
         "id": "math_9d6140393f",
@@ -4645,7 +4649,7 @@
         "correctOption": "A",
         "userTime": "01:31",
         "avgTime": "00:58",
-        "question": "Find the value of $x$in the given equation:$\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$",
+        "question": "Find the value of $x$ in the given equation: $\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$",
         "options": {
           "a": "$\\frac{56}{17}$",
           "b": "$\\frac{27}{17}$",
@@ -4653,7 +4657,7 @@
           "d": "$\\frac{17}{27}$"
         },
         "answer": "a",
-        "solution": "By componendo and dividendo, 7 + x / 7 - x = 4 + 1 / 4 - 1 = 5 / 3\nSquaring, 7 + x / 7 - x = 25 / 9\n63 + 9x = 175 - 25x, so 34x = 112\nx = 56 / 17\nAns: (1)⁵6\n\n17",
+        "solution": "Solution\n\nGiven equation:\n$\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$\n\nCalculations:\nApplying Componendo and Dividendo:\n⇒ $\\frac{(\\sqrt{7 + x} + \\sqrt{7 - x}) + (\\sqrt{7 + x} - \\sqrt{7 - x})}{(\\sqrt{7 + x} + \\sqrt{7 - x}) - (\\sqrt{7 + x} - \\sqrt{7 - x})} = \\frac{4 + 1}{4 - 1}$\n⇒ $\\frac{2\\sqrt{7 + x}}{2\\sqrt{7 - x}} = \\frac{5}{3}$\n⇒ $\\frac{\\sqrt{7 + x}}{\\sqrt{7 - x}} = \\frac{5}{3}$\n\nSquaring both sides:\n⇒ $\\frac{7 + x}{7 - x} = \\frac{25}{9}$\n⇒ $9(7 + x) = 25(7 - x)$\n⇒ $63 + 9x = 175 - 25x$\n⇒ $9x + 25x = 175 - 63$\n⇒ $34x = 112$\n⇒ $x = \\frac{112}{34} = \\frac{56}{17}$\n\n∴ The value of $x$ is $\\frac{56}{17}$.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Surds & Indices - Equations",
@@ -4662,6 +4666,167 @@
           "topic": "Algebra",
           "subtopic": "Surds & Indices - Equations",
           "conceptTested": "Application of Componendo and Dividendo rule to solve equations involving radical expressions.",
+          "difficulty": "hard"
+        },
+        "questionText": "Find the value of $x$ in the given equation: $\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$"
+      },
+      {
+        "id": "math_d7b29aacef",
+        "q_num": 150,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CGL 26/09/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:43",
+        "avgTime": "00:25",
+        "question": "Given $x = \\sqrt{3}$, what is$(x + 1)^2 + (x - 1)^2$?",
+        "options": {
+          "a": "8",
+          "b": "7",
+          "c": "9",
+          "d": "6"
+        },
+        "answer": "a",
+        "solution": "We know that $(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$. Substituting $a = x$ and $b = 1$, we get $(x + 1)^2 + (x - 1)^2 = 2(x^2 + 1^2)$. Given $x = \\sqrt{3}$, $x^2 = 3$. Substituting this value: $2(3 + 1) = 2(4) = 8$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Algebraic Identities",
+        "conceptTested": "Application of algebraic identity $(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Algebraic Identities",
+          "conceptTested": "Application of algebraic identity $(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_fde1cdaf1a",
+        "q_num": 151,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 12/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "00:46",
+        "avgTime": "00:33",
+        "question": "The value of $14^2 + 87^2$ is the same as which of the following?",
+        "options": {
+          "a": "$41^2 + 78^2$",
+          "b": "$43^2 + 76^2$",
+          "c": "$45^2 + 72^2$",
+          "d": "$48^2 + 74^2$"
+        },
+        "answer": "a",
+        "solution": "Calculate $14^2 + 87^2 = 196 + 7569 = 7765$. Now check the options: $41^2 + 78^2 = 1681 + 6084 = 7765$. They are equal.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "Numerical Simplification",
+        "conceptTested": "Arithmetic calculation and equality of numerical expressions.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Numerical Simplification",
+          "conceptTested": "Arithmetic calculation and equality of numerical expressions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_4729bef72b",
+        "q_num": 152,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 14/11/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:33",
+        "avgTime": "00:19",
+        "question": "If $x + y + z = 16$and$xy + yz + zx = 75$, what is the value of$x^2 + y^2 + z^2$?",
+        "options": {
+          "a": "121",
+          "b": "108",
+          "c": "156",
+          "d": "106"
+        },
+        "answer": "d",
+        "solution": "Using the identity: $(x + y + z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx)$. Substituting the given values: $(16)^2 = x^2 + y^2 + z^2 + 2(75) \\implies 256 = x^2 + y^2 + z^2 + 150 \\implies x^2 + y^2 + z^2 = 106$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Symmetric Algebraic Identities ($x+y+z$)",
+        "conceptTested": "Expansion of trinomial square identity: $(x + y + z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx)$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Symmetric Algebraic Identities ($x+y+z$)",
+          "conceptTested": "Expansion of trinomial square identity: $(x + y + z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx)$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_9023d1cb04",
+        "q_num": 153,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 14/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "01:16",
+        "avgTime": "00:25",
+        "question": "Simplify the expression: $\\frac{(a^2 - b^2)^3 + (b^2 - c^2)^3 + (c^2 - a^2)^3}{(a - b)^3 + (b - c)^3 + (c - a)^3(a + 3b)(b + 3c)(c + 3a)}$",
+        "options": {
+          "a": "$\\frac{(a+b)(b+c)(c+a)}{(a+3b)(b+3c)(c+3a)}$",
+          "b": "$3(a+b)(b+c)(c+a)$",
+          "c": "$(a+b)(b+c)(c+a)$",
+          "d": "$1$"
+        },
+        "answer": "a",
+        "solution": "When $x + y + z = 0$, then $x^3 + y^3 + z^3 = 3xyz$. Let $x = a^2 - b^2$, $y = b^2 - c^2$, and $z = c^2 - a^2$. Then $x + y + z = 0$. So the numerator becomes $3(a^2 - b^2)(b^2 - c^2)(c^2 - a^2)$. Similarly, for the denominator terms, let $p = a-b$, $q = b-c$, $r = c-a$; since $p+q+r = 0$, the sum of cubed terms inside the denominator's first factor becomes $3(a-b)(b-c)(c-a)$. Simplifying the full fractional expression yields the required ratio.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Conditional Algebraic Identities ($x^3+y^3+z^3 = 3xyz$)",
+        "conceptTested": "If $x + y + z = 0$, then $x^3 + y^3 + z^3 = 3xyz$, and factoring difference of squares.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Conditional Algebraic Identities ($x^3+y^3+z^3 = 3xyz$)",
+          "conceptTested": "If $x + y + z = 0$, then $x^3 + y^3 + z^3 = 3xyz$, and factoring difference of squares.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_eed53dfe86",
+        "q_num": 154,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 17/11/2025 Shift-1 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:30",
+        "avgTime": "00:51",
+        "question": "If $(m - n) = 4$and$(m^3 - n^3) = 1216$, then find the value of$(m \\times n)$.",
+        "options": {
+          "a": "89",
+          "b": "96",
+          "c": "75",
+          "d": "91"
+        },
+        "answer": "b",
+        "solution": "Use the identity: $m^3 - n^3 = (m - n)(m^2 + mn + n^2)$\n\n$1216 = 4(m^2 + mn + n^2)$\n\nSo $m^2 + mn + n^2 = 304$.\n\nAlso, $(m - n)^2 = m^2 - 2mn + n^2 = 16$\n\nNow subtract: $(m^2 + mn + n^2) - (m^2 - 2mn + n^2) = 304 - 16$\n\n$3mn = 288$\n\n$mn = 96$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Cubic Identities ($a^3 - b^3$)",
+        "conceptTested": "Algebraic identity for difference of cubes: $m^3 - n^3 = (m - n)(m^2 + mn + n^2)$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Cubic Identities ($a^3 - b^3$)",
+          "conceptTested": "Algebraic identity for difference of cubes: $m^3 - n^3 = (m - n)(m^2 + mn + n^2)$",
           "difficulty": "hard"
         }
       }
@@ -11030,7 +11195,7 @@
         "correctOption": "A",
         "userTime": "00:47",
         "avgTime": "01:09",
-        "question": "If $a + b = 5$and$ab = 6$, find:$(a^3 + b^3)^2 - 9a^2b^2(a + b)^2$",
+        "question": "If $a + b = 5$ and $ab = 6$, find: $(a^3 + b^3)^2 - 9a^2b^2(a + b)^2$",
         "options": {
           "a": "-6875",
           "b": "6875",
@@ -11038,7 +11203,7 @@
           "d": "3876"
         },
         "answer": "a",
-        "solution": "(a\n\n3 + b\n\n3)² - 9 / a\n\n2 / b\n\n2\n\n(a + b)² = (a\n\n3 + b\n\n3)² - [\n\n3 / a\n\nb (a + b)\n\n]\n\n2 / p\n\n2 - q\n\n2 = (p - q) (p + q), with\np = a / 3 + b / 3\n\nand\n\nq = 3\n\na / b (a + b)\n\na / 3 + b\n\n3 = 5 / 3 - 3 (6) (5) = 125 - 90 = 35\nand 3ab(a + b) = 3(6)(5) = 90\nValue = (35 - 90)(35 + 90) = (-55)(125)\nValue = -6875\nAns: (1) - 6875",
+        "solution": "Solution\n\nGiven:\n$a + b = 5$\n$ab = 6$\n\nCalculations:\n1. Find $a^3 + b^3$:\n⇒ $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\n⇒ $a^3 + b^3 = (5)^3 - 3(6)(5) = 125 - 90 = 35$\n\n2. Find $9a^2b^2(a + b)^2$:\n⇒ $9a^2b^2(a + b)^2 = [3ab(a + b)]^2 = [3(6)(5)]^2 = (90)^2$\n\n3. Calculate the required expression:\n⇒ $(a^3 + b^3)^2 - 9a^2b^2(a + b)^2 = (35)^2 - (90)^2$\n⇒ Using identity $p^2 - q^2 = (p - q)(p + q)$:\n⇒ $(35 - 90)(35 + 90) = (-55) \\times 125 = -6875$\n\n∴ The correct answer is -6875.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Algebraic Expressions & Identities",
@@ -11048,7 +11213,8 @@
           "subtopic": "Algebraic Expressions & Identities",
           "conceptTested": "Difference of squares identity: $p^2 - q^2 = (p - q)(p + q)$ and cubic sum expansion",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "If $a + b = 5$ and $ab = 6$, find: $(a^3 + b^3)^2 - 9a^2b^2(a + b)^2$"
       },
       {
         "id": "math_82e75fa72f",
@@ -11062,7 +11228,7 @@
         "correctOption": "A",
         "userTime": "00:28",
         "avgTime": "00:34",
-        "question": "If $a^3 + b^3 = 35$and$ab = 6$, find the value of$a + b$.",
+        "question": "If $a^3 + b^3 = 35$ and $ab = 6$, find the value of $a + b$.",
         "options": {
           "a": "5",
           "b": "6",
@@ -11070,7 +11236,7 @@
           "d": "8"
         },
         "answer": "a",
-        "solution": "a / 3 + b\n\n3 = (a + b)³ - 3 / a\n\nb (a + b)\n\nLet a + b = s, then\n35 = s / 3 - 18 / s\nTrying s = 5: 125 - 90 = 35, which is correct\na + b = 5\nAns: (1) 5",
+        "solution": "Solution\n\nMethod 1 (Inspection / Value Putting):\nGiven:\n$ab = 6$ and $a^3 + b^3 = 35$\n\nFactors of 6 are 2 and 3.\nTest $a = 3, b = 2$:\n⇒ $a^3 + b^3 = 3^3 + 2^3 = 27 + 8 = 35$ (Satisfies the condition)\n⇒ $a + b = 3 + 2 = 5$\n\nMethod 2 (Algebraic Identity):\n⇒ $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\nLet $a + b = s$:\n⇒ $35 = s^3 - 3(6)s$\n⇒ $s^3 - 18s = 35$\n⇒ For $s = 5$: $5^3 - 18(5) = 125 - 90 = 35$\n\n∴ The value of $a + b$ is 5.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Symmetric Identities ($a^3 + b^3$)",
@@ -11079,6 +11245,263 @@
           "topic": "Algebra",
           "subtopic": "Symmetric Identities ($a^3 + b^3$)",
           "conceptTested": "Application of the algebraic identity $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$.",
+          "difficulty": "medium"
+        },
+        "questionText": "If $a^3 + b^3 = 35$ and $ab = 6$, find the value of $a + b$."
+      },
+      {
+        "id": "math_a3c0e55f5d",
+        "q_num": 207,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "N/A (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:53",
+        "avgTime": "00:24",
+        "question": "If $3x - ky + 8 = 0$and$9x - 18y + 20 = 0$have no solution, find$k$.",
+        "options": {
+          "a": "9",
+          "b": "10",
+          "c": "2",
+          "d": "6"
+        },
+        "answer": "d",
+        "solution": "For a pair of linear equations $a_1x + b_1y + c_1 = 0$ and $a_2x + b_2y + c_2 = 0$ to have no solution, the condition is $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$. Here, $a_1 = 3$, $b_1 = -k$, $c_1 = 8$ and $a_2 = 9$, $b_2 = -18$, $c_2 = 20$. Therefore, $\\frac{3}{9} = \\frac{-k}{-18} \\implies \\frac{1}{3} = \\frac{k}{18} \\implies 3k = 18 \\implies k = 6$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Linear Equations in Two Variables",
+        "conceptTested": "Condition for no solution of two linear equations: $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Linear Equations in Two Variables",
+          "conceptTested": "Condition for no solution of two linear equations: $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5e666c7013",
+        "q_num": 208,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 13/11/2025 Shift-1 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:29",
+        "avgTime": "01:04",
+        "question": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$when$x = 4$,$y = 3$, and$z = 2$.",
+        "options": {
+          "a": "1",
+          "b": "3",
+          "c": "9",
+          "d": "6"
+        },
+        "answer": "a",
+        "solution": "The expression can be factored using the identity $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$. Here, it fits $(2x + y - 5z)^2$. Substituting the values: $(2(4) + 3 - 5(2))^2 = (8 + 3 - 10)^2 = (1)^2 = 1$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Algebraic Identities",
+        "conceptTested": "Expansion of trinomial square identity $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Algebraic Identities",
+          "conceptTested": "Expansion of trinomial square identity $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8db0afe102",
+        "q_num": 209,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 13/11/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:25",
+        "avgTime": "01:29",
+        "question": "If $x - y = 8$and$xy = 5$, what is the value of$x^3 - y^3 + 8(x + y)^2$?",
+        "options": {
+          "a": "1304",
+          "b": "3245",
+          "c": "3456",
+          "d": "1256"
+        },
+        "answer": "a",
+        "solution": "We need to calculate two parts: $x^3 - y^3$ and $(x+y)^2$. Using the identity $x^3 - y^3 = (x-y)[(x-y)^2 + 3xy]$, we substitute the given values: $x^3 - y^3 = 8[8^2 + 3(5)] = 8[64 + 15] = 8[79] = 632$. Next, using the identity $(x+y)^2 = (x-y)^2 + 4xy$, we get $(x+y)^2 = 8^2 + 4(5) = 64 + 20 = 84$. The full expression is $x^3 - y^3 + 8(x+y)^2 = 632 + 8(84) = 632 + 672 = 1304$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Algebraic Identities ($x^3-y^3$ and $(x+y)^2$)",
+        "conceptTested": "Application of algebraic expansion identities: $x^3 - y^3 = (x-y)[(x-y)^2 + 3xy]$ and $(x+y)^2 = (x-y)^2 + 4xy$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Algebraic Identities ($x^3-y^3$ and $(x+y)^2$)",
+          "conceptTested": "Application of algebraic expansion identities: $x^3 - y^3 = (x-y)[(x-y)^2 + 3xy]$ and $(x+y)^2 = (x-y)^2 + 4xy$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc2b1cfa0e",
+        "q_num": 210,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 13/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:03",
+        "avgTime": "00:59",
+        "question": "Solve the equation $x(x + 1) + \\frac{1}{x} = 3$to find the positive root for$x$.",
+        "options": {
+          "a": "$\\frac{-1 + \\sqrt{3}}{2}$",
+          "b": "$\\frac{1 + \\sqrt{3}}{2}$",
+          "c": "$\\frac{-1 + \\sqrt{12}}{4}$",
+          "d": "$\\frac{1 + \\sqrt{12}}{2}$"
+        },
+        "answer": "a",
+        "solution": "Multiply through by $x(x+1)$: $x^2 + (x+1) = 3x(x+1) \\implies x^2 + x + 1 = 3x^2 + 3x \\implies 2x^2 + 2x - 1 = 0$. Using the quadratic formula: $x = \\frac{-2 \\pm \\sqrt{4 - 4(2)(-1)}}{2(2)} = \\frac{-2 \\pm \\sqrt{4 + 8}}{4} = \\frac{-2 \\pm \\sqrt{12}}{4} = \\frac{-1 \\pm \\sqrt{3}}{2}$. Taking the positive root: $x = \\frac{-1 + \\sqrt{3}}{2}$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Quadratic Equations",
+        "conceptTested": "Solving quadratic equations of the form $ax^2 + bx + c = 0$ using the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Quadratic Equations",
+          "conceptTested": "Solving quadratic equations of the form $ax^2 + bx + c = 0$ using the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b47a5b14d4",
+        "q_num": 211,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 17/11/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:05",
+        "avgTime": "00:42",
+        "question": "If $x + y = 6$and$x^2 + y^2 = 20$, then find the value of$(x^4 + x^2y^2 + y^4)$.",
+        "options": {
+          "a": "412",
+          "b": "336",
+          "c": "408",
+          "d": "372"
+        },
+        "answer": "b",
+        "solution": "$(x + y)^2 = x^2 + y^2 + 2xy$\n\n$36 = 20 + 2xy$\n\n$2xy = 16$\n\n$xy = 8$\n\nNow, $x^4 + x^2y^2 + y^4 = (x^2 + y^2)^2 - x^2y^2$\n\n$= 20^2 - 8^2$\n\n$= 400 - 64$\n\n$= 336$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Symmetric Identities ($x^4 + x^2y^2 + y^4$)",
+        "conceptTested": "Sum of fourth powers identity: $x^4 + x^2y^2 + y^4 = (x^2 + y^2)^2 - x^2y^2$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Symmetric Identities ($x^4 + x^2y^2 + y^4$)",
+          "conceptTested": "Sum of fourth powers identity: $x^4 + x^2y^2 + y^4 = (x^2 + y^2)^2 - x^2y^2$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8d2c361533",
+        "q_num": 212,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 17/11/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "01:07",
+        "question": "If $(6m - 5n)^2 = 7$and$30mn = 60$, then find the value of$(6m + 5n)^2 + 16mn$.",
+        "options": {
+          "a": "235",
+          "b": "207",
+          "c": "279",
+          "d": "244"
+        },
+        "answer": "c",
+        "solution": "$(6m - 5n)^2 = 36m^2 - 60mn + 25n^2 = 7$.\n\nGiven $30mn = 60$, so $60mn = 120$.\n\nThus $36m^2 + 25n^2 = 7 + 120 = 127$.\n\nNow, $(6m + 5n)^2 + 16mn = 36m^2 + 60mn + 25n^2 + 16mn$\n\n$= (36m^2 + 25n^2) + 76mn$\n\n$= 127 + 76mn$.\n\nSince $30mn = 60$, $mn = 2$.\n\nSo $127 + 76 \\times 2 = 127 + 152 = 279$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Linear and Quadratic Combinations",
+        "conceptTested": "Substitution and expansion of binomial squares like $(6m - 5n)^2$ and $(6m + 5n)^2$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Linear and Quadratic Combinations",
+          "conceptTested": "Substitution and expansion of binomial squares like $(6m - 5n)^2$ and $(6m + 5n)^2$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f22da0e18a",
+        "q_num": 213,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 17/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:46",
+        "question": "If $(125x^3 - 343y^3) \\div (5x - 7y) = Ax^2 - By^2 + Cxy$, then find the value of$(2A + B - C)$.",
+        "options": {
+          "a": "-34",
+          "b": "-67",
+          "c": "-22",
+          "d": "-98"
+        },
+        "answer": "a",
+        "solution": "Use identity: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$\n\nHere $a = 5x$, $b = 7y$.\n\nSo quotient $= 25x^2 + 35xy + 49y^2$.\n\nComparing with $Ax^2 - By^2 + Cxy$: $A = 25$, $-B = 49 \\implies B = -49$, $C = 35$\nThen: $2A + B - C = 2(25) + (-49) - 35 = 50 - 49 - 35 = -34$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Polynomial Division and Factorization",
+        "conceptTested": "Division of difference of cubes $(a^3 - b^3)$ by $(a - b)$ yielding $a^2 + ab + b^2$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Polynomial Division and Factorization",
+          "conceptTested": "Division of difference of cubes $(a^3 - b^3)$ by $(a - b)$ yielding $a^2 + ab + b^2$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_65d0365857",
+        "q_num": 214,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 17/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:23",
+        "question": "If $x^2 + y^2 + z^2 = 2(5x + 6y + 4z) - 77$, then find the value of$2(x + y) - 3z$.",
+        "options": {
+          "a": "11",
+          "b": "78",
+          "c": "10",
+          "d": "23"
+        },
+        "answer": "c",
+        "solution": "Rearrange: $x^2 - 10x + y^2 - 12y + z^2 - 8z + 77 = 0$\n\n$(x - 5)^2 - 25 + (y - 6)^2 - 36 + (z - 4)^2 - 16 + 77 = 0$\n\n$(x - 5)^2 + (y - 6)^2 + (z - 4)^2 = 0$\n\nHence $x = 5$, $y = 6$, $z = 4$.\n\nSo $2(x + y) - 3z = 2(11) - 12 = 10$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Completing the Square",
+        "conceptTested": "Sum of squares equal to zero implies each individual squared term is zero: $(x - a)^2 + (y - b)^2 + (z - c)^2 = 0 \\implies x=a, y=b, z=c$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Completing the Square",
+          "conceptTested": "Sum of squares equal to zero implies each individual squared term is zero: $(x - a)^2 + (y - b)^2 + (z - c)^2 = 0 \\implies x=a, y=b, z=c$",
           "difficulty": "medium"
         }
       }
@@ -13597,7 +14020,7 @@
         "correctOption": "C",
         "userTime": "00:41",
         "avgTime": "00:50",
-        "question": "If $a^3 + b^3 = 407$and$a + b = 11$, find$ab$.",
+        "question": "If $a^3 + b^3 = 407$ and $a + b = 11$, find the value of $ab$.",
         "options": {
           "a": "24",
           "b": "26",
@@ -13605,7 +14028,7 @@
           "d": "22"
         },
         "answer": "c",
-        "solution": "a / 3 + b\n\n3 = (a + b)³ - 3 / a\n\nb\n\n(a + b)⁴07 = 11 / 3 - 3\na / b (11) = 1331 - 33 / a\n\nb\n\n33ab = 1331 - 407 = 924\n\na\n\nb = 28\nAns: (3) 28",
+        "solution": "Solution\n\nFormula:\nWe know the algebraic identity:\n$a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\n\nGiven:\n$a^3 + b^3 = 407$\n$a + b = 11$\n\nCalculation:\n⇒ $407 = (11)^3 - 3ab(11)$\n⇒ $407 = 1331 - 33ab$\n⇒ $33ab = 1331 - 407$\n⇒ $33ab = 924$\n⇒ $ab = \\frac{924}{33} = 28$\n\n∴ The value of $ab$ is 28.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Cubic Algebraic Identities ($a^3+b^3$)",
@@ -13615,7 +14038,8 @@
           "subtopic": "Cubic Algebraic Identities ($a^3+b^3$)",
           "conceptTested": "Algebraic identity: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "If $a^3 + b^3 = 407$ and $a + b = 11$, find the value of $ab$."
       },
       {
         "id": "math_e2ace3a196",
@@ -13629,7 +14053,7 @@
         "correctOption": "A",
         "userTime": "01:27",
         "avgTime": "01:19",
-        "question": "Given $x + \\frac{1}{x} = 4$, find the value of:$x^6 + \\frac{1}{x^6} - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$",
+        "question": "Given $x + \\frac{1}{x} = 4$, find the value of: $x^6 + \\frac{1}{x^6} - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$",
         "options": {
           "a": "2176",
           "b": "2087",
@@ -13637,7 +14061,7 @@
           "d": "2476"
         },
         "answer": "a",
-        "solution": "x / 2 + 1 / x\n\n2 = 4 / 2 - 2 = 14\n\nx / 4 + 1 / x\n\n4 = 14 / 2 - 2 = 194\n\nx / 6 + 1 / x\n\n6 = (x\n\n2 + 1 / x\n\n2)³ - 3 (x / 2 + 1 / x\n2) = 2744 - 42 = 2702\nValue = 2702 - 3(194) + 4(14) = 2702 - 582 + 56\nValue = 2176\nAns: (1) 2176",
+        "solution": "Solution\n\nGiven:\n$x + \\frac{1}{x} = 4$\n\nCalculations:\n1. $x^2 + \\frac{1}{x^2} = (x + \\frac{1}{x})^2 - 2 = 4^2 - 2 = 14$\n\n2. $x^4 + \\frac{1}{x^4} = (x^2 + \\frac{1}{x^2})^2 - 2 = 14^2 - 2 = 196 - 2 = 194$\n\n3. $x^6 + \\frac{1}{x^6} = (x^2 + \\frac{1}{x^2})^3 - 3(x^2 + \\frac{1}{x^2}) = 14^3 - 3(14) = 2744 - 42 = 2702$\n\n4. Substitute all values into the given expression:\n⇒ $\\left(x^6 + \\frac{1}{x^6}\\right) - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$\n⇒ $2702 - 3(194) + 4(14)$\n⇒ $2702 - 582 + 56 = 2176$\n\n∴ The correct answer is 2176.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Higher Powers of Reciprocal Equations",
@@ -13647,7 +14071,8 @@
           "subtopic": "Higher Powers of Reciprocal Equations",
           "conceptTested": "Repeated application of $(x + \\frac{1}{x})^2$ and $(x + \\frac{1}{x})^3$ identities",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "Given $x + \\frac{1}{x} = 4$, find the value of: $x^6 + \\frac{1}{x^6} - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$"
       },
       {
         "id": "math_cf9975858e",
@@ -13661,7 +14086,7 @@
         "correctOption": "A",
         "userTime": "01:03",
         "avgTime": "00:52",
-        "question": "Given, $\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = 3$, then what is the value of$x$?",
+        "question": "Given $\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = 3$, find the value of $x$.",
         "options": {
           "a": "3",
           "b": "4",
@@ -13669,7 +14094,7 @@
           "d": "2"
         },
         "answer": "a",
-        "solution": "By componendo and dividendo, 5 + x / 5 - x = 3 + 1 / 3 - 1 = 2\nSquaring, 5 + x / 5 - x = 4\n5 + x = 20 - 4x, so 5x = 15\nx = 3\nAns: (1)³",
+        "solution": "Solution\n\nGiven:\n$\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = \\frac{3}{1}$\n\nCalculations:\nApplying Componendo and Dividendo:\n⇒ $\\frac{(\\sqrt{5 + x} + \\sqrt{5 - x}) + (\\sqrt{5 + x} - \\sqrt{5 - x})}{(\\sqrt{5 + x} + \\sqrt{5 - x}) - (\\sqrt{5 + x} - \\sqrt{5 - x})} = \\frac{3 + 1}{3 - 1}$\n⇒ $\\frac{2\\sqrt{5 + x}}{2\\sqrt{5 - x}} = \\frac{4}{2}$\n⇒ $\\frac{\\sqrt{5 + x}}{\\sqrt{5 - x}} = 2$\n\nSquaring both sides:\n⇒ $\\frac{5 + x}{5 - x} = 4$\n⇒ $5 + x = 4(5 - x)$\n⇒ $5 + x = 20 - 4x$\n⇒ $5x = 15$\n⇒ $x = 3$\n\n∴ The value of $x$ is 3.",
         "image": null,
         "topic": "Algebra",
         "subtopic": "Surds & Indices - Equations",
@@ -13678,6 +14103,39 @@
           "topic": "Algebra",
           "subtopic": "Surds & Indices - Equations",
           "conceptTested": "Application of Componendo and Dividendo rule to solve equations involving radicals.",
+          "difficulty": "medium"
+        },
+        "questionText": "Given $\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = 3$, find the value of $x$."
+      },
+      {
+        "id": "math_5c11ff7ba5",
+        "q_num": 84,
+        "mockId": "mock_1789654448115_220yx",
+        "testId": "mock_1789654448115_220yx",
+        "testName": "CHSL 12/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:14",
+        "avgTime": "00:31",
+        "question": "Simplify: $\\frac{(x + y)^3 + (y + z)^3 + (z + x)^3 - 3(x + y)(y + z)(z + x)}{x^3 + y^3 + z^3 - 3xyz}$",
+        "options": {
+          "a": "1",
+          "b": "6",
+          "c": "2",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "The numerator is of the form $A^3 + B^3 + C^3 - 3ABC$, where $A = x + y$, $B = y + z$, $C = z + x$. This simplifies to $(A + B + C)(A^2 + B^2 + C^2 - AB - BC - CA)$. Here $A + B + C = 2(x + y + z)$. The denominator expands to $(x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx)$. A full algebraic expansion of the numerator yields $2(x^3 + y^3 + z^3 - 3xyz)$. Dividing this by the denominator leaves 2.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Algebraic Identities",
+        "conceptTested": "Expansion and simplification using $A^3 + B^3 + C^3 - 3ABC$ identity.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Algebraic Identities",
+          "conceptTested": "Expansion and simplification using $A^3 + B^3 + C^3 - 3ABC$ identity.",
           "difficulty": "medium"
         }
       }

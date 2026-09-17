@@ -1074,7 +1074,7 @@ async function startServer() {
           }
 
           const enr = item.enriched || {};
-          const qText = (enr.questionText || q.questionText || q.question || "").trim();
+          const qText = (enr.question || enr.questionText || q.questionText || q.question || "").trim();
           if (!qText) continue;
 
           const qId = generateQuestionId(subjectName, qText);
@@ -1109,7 +1109,7 @@ async function startServer() {
                 d: cleanQuestionText(enr.options?.d || enr.options?.D || q.options?.D || q.options?.d || "")
               },
               answer: cleanAns,
-              solution: cleanSolutionText(q.solution || enr.solution || ""),
+              solution: cleanSolutionText(enr.solution || q.solution || ""),
               image: q.image || enr.image || null,
               topic: (() => {
                 let t = (enr.topic || q.topic || "General").trim();
@@ -1184,7 +1184,8 @@ async function startServer() {
                 topic: enr.topic || q.topic || "General",
                 subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
                 conceptTested: enr.conceptTested || q.conceptTested || "",
-                questionText: cleanQuestionText(enr.questionText || q.questionText || q.question),
+                questionText: cleanQuestionText(enr.question || enr.questionText || q.questionText || q.question),
+                question: cleanQuestionText(enr.question || enr.questionText || q.questionText || q.question),
                 options: {
                   A: cleanQuestionText(enr.options?.A || enr.options?.a || q.options?.A || q.options?.a || ""),
                   B: cleanQuestionText(enr.options?.B || enr.options?.b || q.options?.B || q.options?.b || ""),
@@ -1195,7 +1196,7 @@ async function startServer() {
                   c: cleanQuestionText(enr.options?.c || enr.options?.C || q.options?.c || q.options?.C || ""),
                   d: cleanQuestionText(enr.options?.d || enr.options?.D || q.options?.d || q.options?.D || "")
                 },
-                solution: cleanSolutionText(q.solution || enr.solution || ""),
+                solution: cleanSolutionText(enr.solution || q.solution || ""),
                 correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
                 tags: {
                   ...(q.tags || {}),
