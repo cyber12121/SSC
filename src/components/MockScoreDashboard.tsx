@@ -1536,14 +1536,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               <span className="text-rose-500 font-semibold">{report.totalWrong} Wrong</span>
               <span className="text-slate-300">•</span>
               <span className="text-slate-400 font-semibold">{report.totalUnattempted} Skipped</span>
-              {mistakeCount > 0 && (
-                <>
-                  <span className="text-slate-300">•</span>
-                  <span className="text-[9px] font-bold px-1 py-0.2 rounded bg-rose-50 text-rose-600 border border-rose-200">
-                    {mistakeCount} mistakes
-                  </span>
-                </>
-              )}
             </div>
           </div>
         </div>
@@ -1691,7 +1683,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               }`}
             >
               <Layers className="w-3 h-3" />
-              <span>Full Mock (100 Qs)</span>
+              <span>Full Mock</span>
             </button>
             <button
               onClick={() => setActiveTab('sectional')}
@@ -1702,7 +1694,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               }`}
             >
               <Target className="w-3 h-3" />
-              <span>Sectional (25 Qs)</span>
+              <span>Sectional</span>
             </button>
           </div>
         </div>
@@ -2060,11 +2052,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                                 </div>
                               </div>
                               <div className="flex items-center gap-1">
-                                {mistakeCount > 0 && (
-                                  <span className="text-[9px] font-semibold px-1 py-0.2 rounded bg-rose-50 text-rose-600 border border-rose-200">
-                                    {mistakeCount}
-                                  </span>
-                                )}
                                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
                                   acc >= 85 ? 'bg-emerald-100 text-emerald-800' :
                                   acc >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
@@ -2392,7 +2379,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   ) : (
                     <>
                       <Play className="w-3 h-3 fill-current" />
-                      <span>Start {modalQuizMode === 'mock' ? 'Mock Test' : 'Practice'} ({activeSectionCount} Qs)</span>
+                      <span>Start {modalQuizMode === 'mock' ? 'Mock Test' : 'Practice'}</span>
                     </>
                   )}
                 </button>

@@ -76,6 +76,7 @@ export const CalculationStudio: React.FC<Props> = ({
     cubes: { correct: 0, total: 0 },
     powers: { correct: 0, total: 0 },
     factorials: { correct: 0, total: 0 },
+    fractions: { correct: 0, total: 0 },
   });
   const [streak, setStreak] = useState<number>(0);
   const [bestStreak, setBestStreak] = useState<number>(0);
@@ -85,6 +86,7 @@ export const CalculationStudio: React.FC<Props> = ({
   // Question & input state
   const [currentQuestion, setCurrentQuestion] = useState<CalculationQuestion | null>(null);
   const [inputVal, setInputVal] = useState<string>('');
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [revealed, setRevealed] = useState<boolean>(false);
 
@@ -211,6 +213,7 @@ export const CalculationStudio: React.FC<Props> = ({
     prevQuestion: CalculationQuestion
   ) => {
     setInputVal('');
+    setSelectedOption(null);
     setFeedback(null);
     setRevealed(false);
 
@@ -373,6 +376,35 @@ export const CalculationStudio: React.FC<Props> = ({
     }));
   };
 
+  // Handle option selection for multiple-choice questions (e.g. fractions)
+  const handleSelectOption = (chosen: string) => {
+    if (!currentQuestion || revealed || feedback !== null) return;
+    setSelectedOption(chosen);
+    if (chosen === String(currentQuestion.answer)) {
+      handleCorrect();
+    } else {
+      handleWrong();
+    }
+  };
+
+  // Keyboard shortcut listener for option questions (1, 2, 3, 4)
+  useEffect(() => {
+    const handleGlobalKey = (e: KeyboardEvent) => {
+      if (isFinished || revealed || feedback !== null) return;
+      if (currentQuestion?.options && currentQuestion.options.length > 0) {
+        if (['1', '2', '3', '4'].includes(e.key)) {
+          e.preventDefault();
+          const idx = parseInt(e.key, 10) - 1;
+          if (currentQuestion.options[idx]) {
+            handleSelectOption(currentQuestion.options[idx]);
+          }
+        }
+      }
+    };
+    window.addEventListener('keydown', handleGlobalKey);
+    return () => window.removeEventListener('keydown', handleGlobalKey);
+  }, [currentQuestion, isFinished, revealed, feedback]);
+
   const handleAdvanceAfterReveal = () => {
     if (!currentQuestion) return;
     const activeRepeatCopy = activeRepeatItem;
@@ -447,6 +479,7 @@ export const CalculationStudio: React.FC<Props> = ({
       cubes: { correct: 0, total: 0 },
       powers: { correct: 0, total: 0 },
       factorials: { correct: 0, total: 0 },
+      fractions: { correct: 0, total: 0 },
     });
     setDrillMode('routine');
   };
@@ -709,28 +742,74 @@ export const CalculationStudio: React.FC<Props> = ({
                 </motion.div>
               </AnimatePresence>
 
-              {/* Input Area */}
-              <div className="w-full max-w-xs relative mb-4">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  inputMode="numeric"
-                  pattern="[0-9]*"
-                  value={inputVal}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Type answer..."
-                  autoFocus
-                  disabled={revealed}
-                  className={`w-full py-3.5 px-4 text-center text-2xl sm:text-3xl font-black rounded-2xl bg-slate-900 border-2 transition-all outline-none ${
-                    feedback === 'correct'
-                      ? 'border-emerald-500 text-emerald-400 bg-emerald-950/30'
-                      : feedback === 'wrong'
-                      ? 'border-rose-500 text-rose-400 bg-rose-950/30'
-                      : 'border-slate-700 focus:border-blue-500 text-white placeholder:text-slate-600'
-                  }`}
-                />
-              </div>
+              {/* Input Area or Option Selection Area */}
+              {currentQuestion?.options && currentQuestion.options.length > 0 ? (
+                <div className="w-full max-w-md grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-4">
+                  {currentQuestion.options.map((opt, idx) => {
+                    const isSelected = selectedOption === opt;
+                    const isCorrectOpt = opt === String(currentQuestion.answer);
+                    const showCorrectHighlight = revealed && isCorrectOpt;
+                    const showWrongHighlight = isSelected && feedback === 'wrong';
+                    const showSuccessHighlight = isSelected && feedback === 'correct';
+
+                    return (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => handleSelectOption(opt)}
+                        disabled={revealed || feedback !== null}
+                        className={`p-3.5 rounded-2xl border-2 text-left font-bold transition-all flex items-center justify-between cursor-pointer active:scale-98 ${
+                          showSuccessHighlight || showCorrectHighlight
+                            ? 'border-emerald-500 bg-emerald-950/40 text-emerald-300 ring-2 ring-emerald-500/30'
+                            : showWrongHighlight
+                            ? 'border-rose-500 bg-rose-950/40 text-rose-300 ring-2 ring-rose-500/30'
+                            : 'border-slate-800 bg-slate-900/80 hover:bg-slate-800/80 text-white hover:border-slate-700'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span
+                            className={`w-6 h-6 rounded-lg text-xs font-black flex items-center justify-center ${
+                              showSuccessHighlight || showCorrectHighlight
+                                ? 'bg-emerald-500 text-white'
+                                : showWrongHighlight
+                                ? 'bg-rose-500 text-white'
+                                : 'bg-slate-800 text-slate-400'
+                            }`}
+                          >
+                            {idx + 1}
+                          </span>
+                          <span className="text-base sm:text-lg">{opt}</span>
+                        </div>
+                        {showSuccessHighlight || showCorrectHighlight ? (
+                          <Check className="w-4 h-4 text-emerald-400" />
+                        ) : null}
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="w-full max-w-xs relative mb-4">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={inputVal}
+                    onChange={handleInputChange}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Type answer..."
+                    autoFocus
+                    disabled={revealed}
+                    className={`w-full py-3.5 px-4 text-center text-2xl sm:text-3xl font-black rounded-2xl bg-slate-900 border-2 transition-all outline-none ${
+                      feedback === 'correct'
+                        ? 'border-emerald-500 text-emerald-400 bg-emerald-950/30'
+                        : feedback === 'wrong'
+                        ? 'border-rose-500 text-rose-400 bg-rose-950/30'
+                        : 'border-slate-700 focus:border-blue-500 text-white placeholder:text-slate-600'
+                    }`}
+                  />
+                </div>
+              )}
 
               {/* Revealed Solution Card */}
               {revealed && currentQuestion && (
@@ -761,11 +840,19 @@ export const CalculationStudio: React.FC<Props> = ({
               {!revealed && (
                 <div className="flex items-center justify-between w-full text-xs text-slate-500 px-2 mt-2">
                   <span>
-                    Press{' '}
-                    <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">
-                      Enter
-                    </kbd>{' '}
-                    to submit
+                    {currentQuestion?.options && currentQuestion.options.length > 0 ? (
+                      <>
+                        Press <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">1</kbd>–<kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">4</kbd> or click option
+                      </>
+                    ) : (
+                      <>
+                        Press{' '}
+                        <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">
+                          Enter
+                        </kbd>{' '}
+                        to submit
+                      </>
+                    )}
                   </span>
                   <button
                     onClick={handleReveal}
@@ -777,8 +864,8 @@ export const CalculationStudio: React.FC<Props> = ({
               )}
             </div>
 
-            {/* Optional On-Screen Numeric Keypad */}
-            {showNumpad && (
+            {/* Optional On-Screen Numeric Keypad (only for text input questions) */}
+            {showNumpad && !currentQuestion?.options && (
               <div className="mt-6 w-full max-w-xs bg-slate-950 p-3 rounded-2xl border border-slate-800 shadow-xl grid grid-cols-3 gap-2">
                 {['1', '2', '3', '4', '5', '6', '7', '8', '9', 'clear', '0', 'backspace'].map((btn) => (
                   <button

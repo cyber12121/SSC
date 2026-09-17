@@ -1,3 +1,13 @@
+import fractionsData from './fractions.json';
+
+export interface FractionItem {
+  fraction: string;
+  percentage: string;
+  decimal: string;
+}
+
+export const FRACTIONS_DATA: FractionItem[] = fractionsData;
+
 export interface TripletItem {
   a: number;
   b: number;
@@ -8,11 +18,12 @@ export interface TripletItem {
 
 export interface CalculationQuestion {
   id: string;
-  section: 'triplets' | 'tables' | 'squares' | 'cubes' | 'powers' | 'factorials';
+  section: 'triplets' | 'tables' | 'squares' | 'cubes' | 'powers' | 'factorials' | 'fractions';
   sectionTitle: string;
   prompt: string;
   subPrompt?: string;
-  answer: number;
+  answer: number | string;
+  options?: string[];
   explanation?: string;
   rawKey: string; // Unique key to track individual items (e.g. 'square-19', 'triplet-5-12-13', 'table-17')
   metadata?: Record<string, any>;
@@ -199,6 +210,17 @@ export const CALC_SECTIONS = [
     lightBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
     accentColor: 'cyan',
   },
+  {
+    id: 'fractions',
+    title: 'Fractions & Percentages (1/2 to 1/25)',
+    shortTitle: 'Fractions %',
+    badge: 'Step 7',
+    description: 'Master core percentage conversions from 1/2 to 1/25 with decimal equivalents',
+    count: FRACTIONS_DATA.length,
+    color: 'from-indigo-600 to-violet-600',
+    lightBg: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+    accentColor: 'indigo',
+  },
 ] as const;
 
 export type SectionId = (typeof CALC_SECTIONS)[number]['id'];
@@ -345,6 +367,36 @@ export function createFactorialQuestion(item: { n: number; val: number; breakdow
   };
 }
 
+// Generate question for fraction
+export function createFractionQuestion(
+  item: FractionItem,
+  poolList: FractionItem[]
+): CalculationQuestion {
+  const fracToPct = Math.random() < 0.5;
+  const prompt = fracToPct ? item.fraction : item.percentage;
+  const subPrompt = fracToPct ? 'Convert Fraction to Percentage' : 'Convert Percentage to Fraction';
+  const correctAnswer = fracToPct ? item.percentage : item.fraction;
+
+  const candidatePool = poolList
+    .map((it) => (fracToPct ? it.percentage : it.fraction))
+    .filter((val) => val !== correctAnswer);
+
+  const wrongOptions = shuffleArray(candidatePool).slice(0, 3);
+  const options = shuffleArray([correctAnswer, ...wrongOptions]);
+
+  return {
+    id: `fraction-${item.fraction.replace(/[^a-zA-Z0-9]/g, '_')}-${Date.now()}-${Math.random()}`,
+    section: 'fractions',
+    sectionTitle: 'Fractions & Percentages',
+    prompt,
+    subPrompt,
+    answer: correctAnswer,
+    options,
+    rawKey: `fraction-${item.fraction}-${fracToPct ? 'f2p' : 'p2f'}`,
+    explanation: `${item.fraction} = ${item.percentage}${item.decimal ? ` (decimal: ${item.decimal})` : ''}`,
+  };
+}
+
 /**
  * Generates an EXHAUSTIVE, shuffled deck for a section guaranteeing that
  * EVERY single number in the required range appears at least once!
@@ -388,6 +440,12 @@ export function generateExhaustiveDeckForSection(section: SectionId): Calculatio
     case 'factorials': {
       // All 8 factorials (1! to 8!)
       const deck = FACTORIALS_DATA.map((item) => createFactorialQuestion(item));
+      return shuffleArray(deck);
+    }
+
+    case 'fractions': {
+      // All key fractions
+      const deck = FRACTIONS_DATA.map((item) => createFractionQuestion(item, FRACTIONS_DATA));
       return shuffleArray(deck);
     }
   }
