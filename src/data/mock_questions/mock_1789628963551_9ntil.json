@@ -293,7 +293,7 @@
     "correctOption": "B",
     "userTime": "01:27",
     "avgTime": "00:46",
-    "questionText": "If (81^x ÷ 27^3) × 3^2 = 3, then x = _____.",
+    "questionText": "If $(81^x \\div 27^3) \\times 3^2 = 3$, then $x = $ _____.",
     "options": {
       "A": "3",
       "B": "2",
@@ -304,7 +304,7 @@
       "c": "1",
       "d": "10"
     },
-    "solution": "Solution\n\nShortcut Trick\nConvert all terms to base 3: 81 = 34, 27 = 33.\nEquate the exponents of base 3 from the equation: (4 × x - 3 × 3) + 2 = 1\n4x - 9 + 2 = 1\n4x - 7 = 1 ⇒ 4x = 8 ⇒ x = 2.\n∴ The correct answer is 2.\n\nAlternate Method\nGiven equation: (81x ÷ 273) × 32 = 3\nFormula used: (am)n = am × n, am ÷ an = am - n, am × an = am + n\n⇒ ((34)x ÷ (33)³) × 32 = 31\n⇒ (34x ÷ 39) × 32 = 31\n⇒ (34x - 9) × 32 = 31\n⇒ 34x - 9 + 2 = 31\n⇒ 34x - 7 = 31\n\nComparing the powers of the same base (3):\n\n⇒ 4x - 7 = 1\n⇒ 4x = 1 + 7\n⇒ 4x = 8\n⇒ x = 8/4 = 2\n∴ The correct answer is 2.\n\nAdditional Information\nLaws of Indices\n\nFor any non - zero base 'a', the product rule is am × an = am + n and the quotient rule is am ÷ an = am - n.\n\nPower of a Power Rule\n\nWhen a power is raised to another power, multiply the exponents: (am)n = am × n.\n\nComparison of Bases\n\nIf ax = ay and a = ̸ 0, 1, or - 1, then the exponents must be equal, i.e., x = y.\n\nNegative and Zero Exponents\n\nAny non - zero base raised to power 0 is 1 (a0 = 1) and a - n = 1/an.",
+    "solution": "Solution\n\nGiven:\n$(81^x \\div 27^3) \\times 3^2 = 3$\n\nFormula Used:\n$a^m \\div a^n = a^{m - n}$\n$a^m \\times a^n = a^{m + n}$\n$(a^m)^n = a^{mn}$\n\nCalculations:\nExpress all terms in base 3:\n$\\Rightarrow 81 = 3^4 \\Rightarrow 81^x = (3^4)^x = 3^{4x}$\n$\\Rightarrow 27 = 3^3 \\Rightarrow 27^3 = (3^3)^3 = 3^9$\n\nSubstitute into the equation:\n$\\Rightarrow (3^{4x} \\div 3^9) \\times 3^2 = 3^1$\n$\\Rightarrow 3^{4x - 9} \\times 3^2 = 3^1$\n$\\Rightarrow 3^{4x - 9 + 2} = 3^1$\n$\\Rightarrow 3^{4x - 7} = 3^1$\n\nEquating exponents on both sides:\n$\\Rightarrow 4x - 7 = 1$\n$\\Rightarrow 4x = 1 + 7 = 8$\n$\\Rightarrow x = \\frac{8}{4} = 2$\n\n∴ The value of $x$ is 2.",
     "mockId": "mock_1789628963551_9ntil",
     "testId": "mock_1789628963551_9ntil",
     "topic": "Simplification",
@@ -314,7 +314,9 @@
       "topic": "Simplification",
       "subtopic": "Indices and Surds",
       "conceptTested": "Laws of indices: (a^m)^n = a^(m×n), a^m ÷ a^n = a^(m−n), and comparison of exponents with the same base."
-    }
+    },
+    "question": "If $(81^x \\div 27^3) \\times 3^2 = 3$, then $x = $ _____.",
+    "answer": "b"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 9",

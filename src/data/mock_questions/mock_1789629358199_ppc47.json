@@ -221,18 +221,18 @@
     "correctOption": "A",
     "userTime": "01:23",
     "avgTime": "00:24",
-    "questionText": "Find the value of k for which the quadratic equation (3k + 1)x^2 + 2(k + 1)x + 1 = 0 has equal roots.",
+    "questionText": "Find the value of $k$ for which the quadratic equation $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$ has equal roots.",
     "options": {
-      "A": "k = 0 and k = 1",
-      "B": "k = 0 and k = -1",
-      "C": "k = 6 and k = 1",
-      "D": "k = 10 and k = 1",
-      "a": "k = 0 and k = 1",
-      "b": "k = 0 and k = -1",
-      "c": "k = 6 and k = 1",
-      "d": "k = 10 and k = 1"
+      "A": "$k = 0$ and $k = 1$",
+      "B": "$k = 0$ and $k = -1$",
+      "C": "$k = 6$ and $k = 1$",
+      "D": "$k = 10$ and $k = 1$",
+      "a": "$k = 0$ and $k = 1$",
+      "b": "$k = 0$ and $k = -1$",
+      "c": "$k = 6$ and $k = 1$",
+      "d": "$k = 10$ and $k = 1$"
     },
-    "solution": "Solution\n\nShortcut Trick\nFor equal roots in ax² + bx + c = 0, Discriminant D = b² - 4ac = 0 ⇒ b² = 4ac.\nSubstitute the given equation values directly: [2(k + 1)]2 = 4 × (3k + 1) × 1\n4(k² + 2k + 1) = 12k + 4\n4k² - 4k = 0 ⇒ 4k(k - 1) = 0 ⇒ k = 0 or 1.\n∴ The correct answer is k = 0 and k = 1.\n\nAlternate Method\nGiven:\nQuadratic equation: (3k + 1)x² + 2(k + 1)x + 1 = 0\n\nFormula Used:\nFor a standard quadratic equation ax² + bx + c = 0, if the roots are equal, then its Discriminant (D) = b² - 4ac = 0\n\nCalculation:\n⇒ Comparing the given equation with ax² + bx + c = 0, we get:\n⇒ a = (3k + 1), b = 2(k + 1), c = 1\n⇒ b² - 4ac = 0\n⇒ [2(k + 1)]2 - 4 × (3k + 1) × 1 = 0\n⇒ 4(k + 1)² - 4(3k + 1) = 0\n⇒ 4(k² + 2k + 1) - 12k - 4 = 0\n⇒ 4k² + 8k + 4 - 12k - 4 = 0\n⇒ 4k² - 4k = 0\n⇒ 4k(k - 1) = 0\n⇒ k = 0 or k = 1\nChecking condition for quadratic equation (a = ̸ 0):\n⇒ For k = 0, a = 3(0) + 1 = 1 = ̸ 0\n⇒ For k = 1, a = 3(1) + 1 = 4 = ̸ 0\n⇒ Both values of k satisfy the required condition.\n∴ The correct answer is k = 0 and k = 1.\n\nAdditional Information\nNature of Roots\n\nFor the quadratic equation ax² + bx + c = 0, the discriminant is D = b² - 4ac. Roots are real and distinct if D > 0, real and equal if D = 0, and complex or imaginary if D < 0.\n\nSum and Product of Roots\n\nIf α and β are the roots of the equation ax² + bx + c = 0, then Sum of roots (α + β) = -b ÷ a and Product of roots (α × β) = c ÷ a.\n\nForming a Quadratic Equation\n\nIf roots are given, the quadratic equation can be directly written as: x² - (Sum of roots)x + (Product of roots) = 0.",
+    "solution": "Solution\n\nGiven:\nQuadratic equation: $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$\nThe equation has equal roots.\n\nFormula Used:\nFor a quadratic equation $Ax^2 + Bx + C = 0$ to have equal roots, its discriminant must be zero:\n$D = B^2 - 4AC = 0$\n\nCalculations:\nHere, $A = (3k + 1)$, $B = 2(k + 1)$, and $C = 1$.\n$\\Rightarrow [2(k + 1)]^2 - 4(3k + 1)(1) = 0$\n$\\Rightarrow 4(k^2 + 2k + 1) - 4(3k + 1) = 0$\n\nDivide by 4 on both sides:\n$\\Rightarrow (k^2 + 2k + 1) - (3k + 1) = 0$\n$\\Rightarrow k^2 + 2k + 1 - 3k - 1 = 0$\n$\\Rightarrow k^2 - k = 0$\n$\\Rightarrow k(k - 1) = 0$\n\n$\\Rightarrow k = 0$ or $k = 1$\n\n∴ The values of $k$ are $k = 0$ and $k = 1$.",
     "mockId": "mock_1789629358199_ppc47",
     "testId": "mock_1789629358199_ppc47",
     "topic": "Algebra",
@@ -242,7 +242,9 @@
       "topic": "Algebra",
       "subtopic": "Quadratic Equations - Discriminant & Nature of Roots",
       "conceptTested": "For a quadratic equation ax^2 + bx + c = 0 to have real and equal roots, its Discriminant (D) must be equal to zero (b^2 - 4ac = 0)."
-    }
+    },
+    "question": "Find the value of $k$ for which the quadratic equation $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$ has equal roots.",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 3",

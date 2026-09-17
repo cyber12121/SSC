@@ -396,7 +396,7 @@
     "correctOption": "D",
     "userTime": "00:45",
     "avgTime": "00:28",
-    "questionText": "The radius and height of a right circular cone are in the ratio 3 : 7. If the volume of the cone is 528 cm3, then what is the height of the cone? \\(\\left( {{\rm{Take}}\\,\\,{\rm{\\pi }}\\,{\rm{ = }}\frac{{22}}{7}} \right)\\)",
+    "questionText": "The radius and height of a right circular cone are in the ratio $3 : 7$. If the volume of the cone is $528\\text{ cm}^3$, then what is the height of the cone? $\\left(\\text{Take }\\pi = \\frac{22}{7}\\right)$",
     "options": {
       "A": "3.5 cm",
       "B": "7.0 cm",
@@ -407,7 +407,7 @@
       "c": "10.5 cm",
       "d": "14.0 cm"
     },
-    "solution": "Solution\n\nShortcut Trick\nFor a right circular cone, Volume ∝ r2h.\n\nGiven the ratio r : h = 3 : 7, let r = 3x and h = 7x.\nVolume = (1/3) × (22/7) × (3x)² × (7x) = 66x³.\nWe are given the volume as 528, so 66x³ = 528 ⇒ x³ = 8 ⇒ x = 2.\nThe height of the cone is 7x = 7 × 2 = 14 cm.\n∴ The correct answer is 14 cm.\n\nAlternate Method\nGiven:\nThe ratio of the radius to the height of the cone = 3 : 7\nVolume of the right circular cone = 528 cm³\n\nFormula Used:\nVolume of a right circular cone = (1/3) × π × r² × h\n\nCalculations:\nLet the radius (r) be 3x and the height (h) be 7x.\n⇒ Volume = (1/3) × π × (3x)² × 7x = 528\n⇒ (1/3) × (22/7) × 9x² × 7x = 528\n⇒ 22 × 3x³ = 528\n⇒ 66x³ = 528\n⇒ x³ = 528 ÷ 66\n⇒ x³ = 8\n⇒ x = 2\nNow, substitute the value of x into the expression for height.\n⇒ Height (h) = 7x = 7 × 2 = 14 cm\n∴ The correct answer is 14 cm.\n\nAdditional Information\nVolume of a Right Circular Cone\n\nV = (1/3) × π × r² × h, where r is the base radius and h is the vertical height of the cone.\n\nCurved Surface Area (CSA)\n\nCSA = π × r × l, where l = √(r² + h²) is the slant height of the cone.\nTotal Surface Area (TSA)\nTSA = π × r × (r + l), which is the total sum of the curved surface area and the circular base area.",
+    "solution": "Solution\n\nShortcut Trick\nFor a right circular cone:\n$\\text{Volume} = \\frac{1}{3}\\pi r^2 h$\n\nGiven ratio $r : h = 3 : 7$. Let $r = 3x$ and $h = 7x$:\n$\\text{Volume} = \\frac{1}{3} \\times \\frac{22}{7} \\times (3x)^2 \\times (7x)$\n$\\Rightarrow \\text{Volume} = \\frac{1}{3} \\times 22 \\times 9x^2 \\times x = 66x^3$\n\nWe are given the volume as $528\\text{ cm}^3$:\n$\\Rightarrow 66x^3 = 528$\n$\\Rightarrow x^3 = \\frac{528}{66} = 8$\n$\\Rightarrow x = \\sqrt[3]{8} = 2$\n\nHeight of the cone:\n$\\Rightarrow h = 7x = 7 \\times 2 = 14\\text{ cm}$\n\n∴ The height of the cone is $14.0\\text{ cm}$.",
     "mockId": "mock_1789629325813_j6w8n",
     "testId": "mock_1789629325813_j6w8n",
     "topic": "Mensuration 3D",
@@ -417,7 +417,9 @@
       "topic": "Mensuration 3D",
       "subtopic": "Cone - Volume & Dimensions",
       "conceptTested": "Volume of a right circular cone is given by V = (1/3) \\pi r^2 h, where r is the radius and h is the height."
-    }
+    },
+    "question": "The radius and height of a right circular cone are in the ratio $3 : 7$. If the volume of the cone is $528\\text{ cm}^3$, then what is the height of the cone? $\\left(\\text{Take }\\pi = \\frac{22}{7}\\right)$",
+    "answer": "d"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 4",

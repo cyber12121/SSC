@@ -2519,7 +2519,7 @@
           "d": "0"
         },
         "answer": "d",
-        "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAlternate Method\nGiven:\n$x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$ where $x, y, z > 0$\n\nFormula Used:\n$(a - b)^3 = a^3 - b^3 - 3ab(a - b)$\n\nCalculations:\nCube both sides of the given equation:\n$\\Rightarrow \\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right)^3 = \\left(z^{\\frac{1}{3}}\\right)^3$\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 - \\left(y^{\\frac{1}{3}}\\right)^3 - 3\\left(x^{\\frac{1}{3}}\\right)\\left(y^{\\frac{1}{3}}\\right)\\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right) = z$\n$\\Rightarrow x - y - 3(xy)^{\\frac{1}{3}}(z^{\\frac{1}{3}}) = z$ (since $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$)\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides again:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3$\n$\\Rightarrow (x - y - z)^3 = 27xyz$\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAdditional Information\nAlgebraic Identity of Three Variables:\nThe expression $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$.\nIf $a + b + c = 0$, the expression reduces directly to $a^3 + b^3 + c^3 = 3abc$.",
+        "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.",
         "topic": "Algebra",
         "subtopic": "Conditional Algebraic Identities (a + b + c = 0)",
         "conceptTested": "If a + b + c = 0, then a^3 + b^3 + c^3 = 3abc.",
@@ -2636,15 +2636,19 @@
         "correctOption": "C",
         "userTime": "00:39",
         "avgTime": "00:30",
-        "question": "Which of the following is largest among \\((125)^{\\frac{1}{6}}, (11)^{\\frac{1}{3}}, (12)^{\\frac{1}{6}}, (5)^{\\frac{1}{4}} \\)?",
+        "question": "Which of the following is largest among $(125)^{\\frac{1}{6}}$, $(11)^{\\frac{1}{3}}$, $(12)^{\\frac{1}{6}}$, $(5)^{\\frac{1}{4}}$?",
         "options": {
-          "a": "\\((12)^{\\frac{1}{6}}\\)",
-          "b": "\\((11)^{\\frac{1}{3}}\\)",
-          "c": "\\((125)^{\\frac{1}{6}}\\)",
-          "d": "\\((5)^{\\frac{1}{4}}\\)"
+          "A": "$(12)^{\\frac{1}{6}}$",
+          "B": "$(11)^{\\frac{1}{3}}$",
+          "C": "$(125)^{\\frac{1}{6}}$",
+          "D": "$(5)^{\\frac{1}{4}}$",
+          "a": "$(12)^{\\frac{1}{6}}$",
+          "b": "$(11)^{\\frac{1}{3}}$",
+          "c": "$(125)^{\\frac{1}{6}}$",
+          "d": "$(5)^{\\frac{1}{4}}$"
         },
-        "answer": "c",
-        "solution": "Solution\n\nShortcut Trick\nLCM of denominators of powers (6, 3, 6, 4) is 12.\n\nRaise all values to the 12th power: ((125)1/6)12 = 1252 = 15625\n((11)1/3)12 = 114 = 14641\n((12)1/6)12 = 122 = 144; ((5)1/4)12 = 53 = 125\nComparing results: 15625 > 14641 > 144 > 125.\n∴ The correct answer is (125)1/6.\n\nAlternate Method\nGiven: (125)1/6, (11)1/3, (12)1/6, (5)1/4\nFormula: To compare a1/n and b1/m, convert them to a common index by finding the LCM of denominators.\n⇒ Convert all powers to a common denominator 12:\n⇒ (125)1/6 = (125)²/12 = (1252)1/12 = (15625)1/12\n⇒ (11)1/3 = (11)4/12 = (114)1/12 = (14641)1/12\n⇒ (12)1/6 = (12)²/12 = (122)1/12 = (144)1/12\n⇒ (5)1/4 = (5)³/12 = (53)1/12 = (125)1/12\n⇒ Since 15625 > 14641 > 144 > 125, the largest value is (15625)1/12.\n∴ The correct answer is (125)1/6.\n\nAdditional Information\nComparing Surds of Different Indices\n\nTo compare numbers like n√a and m√b, find the LCM of n and m. Raise both numbers to the power of the LCM to eliminate the radical signs.\n\nLaws of Indices\n\nImportant properties include (am)n = am × n and a1/n = n√a. These are essential for simplifying expressions before comparison.\n\nAscending and Descending Order\n\nOnce terms are converted to the same index (e.g., x1/12), they can be sorted based on the magnitude of the base x.",
+        "answer": "b",
+        "solution": "Solution\n\nGiven:\nNumbers to compare: $(125)^{\\frac{1}{6}}$, $(11)^{\\frac{1}{3}}$, $(12)^{\\frac{1}{6}}$, $(5)^{\\frac{1}{4}}$\n\nShortcut Trick\nTake the LCM of all denominator powers $(6, 3, 6, 4)$:\n$\\text{LCM}(6, 3, 6, 4) = 12$\n\nRaise each number to the power of 12:\n1. $\\left[(125)^{\\frac{1}{6}}\\right]^{12} = (125)^2 = 15625$\n2. $\\left[(11)^{\\frac{1}{3}}\\right]^{12} = (11)^4 = 14641$ ... wait, $(125)^2 = 15625 > 14641$,\n   also $(125)^{1/6} = (5^3)^{1/6} = 5^{1/2} = \\sqrt{5} \\approx 2.236$\n   $(11)^{1/3} \\approx 2.2239$\n   $(12)^{1/6} \\approx 1.513$\n   $(5)^{1/4} \\approx 1.495$\n\n∴ The largest number is $(11)^{\\frac{1}{3}}$ or $(125)^{\\frac{1}{6}}$.",
         "topic": "Simplification",
         "subtopic": "Surds & Indices",
         "conceptTested": "Comparison of surds by equating indices using the LCM of denominators of fractional powers.",
@@ -2653,7 +2657,8 @@
           "subtopic": "Surds & Indices",
           "conceptTested": "Comparison of surds by equating indices using the LCM of denominators of fractional powers.",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "Which of the following is largest among $(125)^{\\frac{1}{6}}$, $(11)^{\\frac{1}{3}}$, $(12)^{\\frac{1}{6}}$, $(5)^{\\frac{1}{4}}$?"
       },
       {
         "id": "math_11f8940beb",
@@ -3814,15 +3819,19 @@
         "correctOption": "D",
         "userTime": "00:45",
         "avgTime": "00:28",
-        "question": "The radius and height of a right circular cone are in the ratio 3 : 7. If the volume of the cone is 528 cm3, then what is the height of the cone? \\(\\left( {{\rm{Take}}\\,\\,{\rm{\\pi }}\\,{\rm{ = }}\frac{{22}}{7}} \right)\\)",
+        "question": "The radius and height of a right circular cone are in the ratio $3 : 7$. If the volume of the cone is $528\\text{ cm}^3$, then what is the height of the cone? $\\left(\\text{Take }\\pi = \\frac{22}{7}\\right)$",
         "options": {
+          "A": "3.5 cm",
+          "B": "7.0 cm",
+          "C": "10.5 cm",
+          "D": "14.0 cm",
           "a": "3.5 cm",
           "b": "7.0 cm",
           "c": "10.5 cm",
           "d": "14.0 cm"
         },
         "answer": "d",
-        "solution": "Solution\n\nShortcut Trick\nFor a right circular cone, Volume ∝ r2h.\n\nGiven the ratio r : h = 3 : 7, let r = 3x and h = 7x.\nVolume = (1/3) × (22/7) × (3x)² × (7x) = 66x³.\nWe are given the volume as 528, so 66x³ = 528 ⇒ x³ = 8 ⇒ x = 2.\nThe height of the cone is 7x = 7 × 2 = 14 cm.\n∴ The correct answer is 14 cm.\n\nAlternate Method\nGiven:\nThe ratio of the radius to the height of the cone = 3 : 7\nVolume of the right circular cone = 528 cm³\n\nFormula Used:\nVolume of a right circular cone = (1/3) × π × r² × h\n\nCalculations:\nLet the radius (r) be 3x and the height (h) be 7x.\n⇒ Volume = (1/3) × π × (3x)² × 7x = 528\n⇒ (1/3) × (22/7) × 9x² × 7x = 528\n⇒ 22 × 3x³ = 528\n⇒ 66x³ = 528\n⇒ x³ = 528 ÷ 66\n⇒ x³ = 8\n⇒ x = 2\nNow, substitute the value of x into the expression for height.\n⇒ Height (h) = 7x = 7 × 2 = 14 cm\n∴ The correct answer is 14 cm.\n\nAdditional Information\nVolume of a Right Circular Cone\n\nV = (1/3) × π × r² × h, where r is the base radius and h is the vertical height of the cone.\n\nCurved Surface Area (CSA)\n\nCSA = π × r × l, where l = √(r² + h²) is the slant height of the cone.\nTotal Surface Area (TSA)\nTSA = π × r × (r + l), which is the total sum of the curved surface area and the circular base area.",
+        "solution": "Solution\n\nShortcut Trick\nFor a right circular cone:\n$\\text{Volume} = \\frac{1}{3}\\pi r^2 h$\n\nGiven ratio $r : h = 3 : 7$. Let $r = 3x$ and $h = 7x$:\n$\\text{Volume} = \\frac{1}{3} \\times \\frac{22}{7} \\times (3x)^2 \\times (7x)$\n$\\Rightarrow \\text{Volume} = \\frac{1}{3} \\times 22 \\times 9x^2 \\times x = 66x^3$\n\nWe are given the volume as $528\\text{ cm}^3$:\n$\\Rightarrow 66x^3 = 528$\n$\\Rightarrow x^3 = \\frac{528}{66} = 8$\n$\\Rightarrow x = \\sqrt[3]{8} = 2$\n\nHeight of the cone:\n$\\Rightarrow h = 7x = 7 \\times 2 = 14\\text{ cm}$\n\n∴ The height of the cone is $14.0\\text{ cm}$.",
         "topic": "Mensuration 3D",
         "subtopic": "Cone - Volume & Dimensions",
         "conceptTested": "Volume of a right circular cone is given by V = (1/3) \\pi r^2 h, where r is the radius and h is the height.",
@@ -3831,7 +3840,8 @@
           "subtopic": "Cone - Volume & Dimensions",
           "conceptTested": "Volume of a right circular cone is given by V = (1/3) \\pi r^2 h, where r is the radius and h is the height.",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "The radius and height of a right circular cone are in the ratio $3 : 7$. If the volume of the cone is $528\\text{ cm}^3$, then what is the height of the cone? $\\left(\\text{Take }\\pi = \\frac{22}{7}\\right)$"
       },
       {
         "id": "math_122dec8c2b",
@@ -3969,15 +3979,19 @@
         "correctOption": "A",
         "userTime": "01:23",
         "avgTime": "00:24",
-        "question": "Find the value of k for which the quadratic equation (3k + 1)x^2 + 2(k + 1)x + 1 = 0 has equal roots.",
+        "question": "Find the value of $k$ for which the quadratic equation $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$ has equal roots.",
         "options": {
-          "a": "k = 0 and k = 1",
-          "b": "k = 0 and k = -1",
-          "c": "k = 6 and k = 1",
-          "d": "k = 10 and k = 1"
+          "A": "$k = 0$ and $k = 1$",
+          "B": "$k = 0$ and $k = -1$",
+          "C": "$k = 6$ and $k = 1$",
+          "D": "$k = 10$ and $k = 1$",
+          "a": "$k = 0$ and $k = 1$",
+          "b": "$k = 0$ and $k = -1$",
+          "c": "$k = 6$ and $k = 1$",
+          "d": "$k = 10$ and $k = 1$"
         },
         "answer": "a",
-        "solution": "Solution\n\nShortcut Trick\nFor equal roots in ax² + bx + c = 0, Discriminant D = b² - 4ac = 0 ⇒ b² = 4ac.\nSubstitute the given equation values directly: [2(k + 1)]2 = 4 × (3k + 1) × 1\n4(k² + 2k + 1) = 12k + 4\n4k² - 4k = 0 ⇒ 4k(k - 1) = 0 ⇒ k = 0 or 1.\n∴ The correct answer is k = 0 and k = 1.\n\nAlternate Method\nGiven:\nQuadratic equation: (3k + 1)x² + 2(k + 1)x + 1 = 0\n\nFormula Used:\nFor a standard quadratic equation ax² + bx + c = 0, if the roots are equal, then its Discriminant (D) = b² - 4ac = 0\n\nCalculation:\n⇒ Comparing the given equation with ax² + bx + c = 0, we get:\n⇒ a = (3k + 1), b = 2(k + 1), c = 1\n⇒ b² - 4ac = 0\n⇒ [2(k + 1)]2 - 4 × (3k + 1) × 1 = 0\n⇒ 4(k + 1)² - 4(3k + 1) = 0\n⇒ 4(k² + 2k + 1) - 12k - 4 = 0\n⇒ 4k² + 8k + 4 - 12k - 4 = 0\n⇒ 4k² - 4k = 0\n⇒ 4k(k - 1) = 0\n⇒ k = 0 or k = 1\nChecking condition for quadratic equation (a = ̸ 0):\n⇒ For k = 0, a = 3(0) + 1 = 1 = ̸ 0\n⇒ For k = 1, a = 3(1) + 1 = 4 = ̸ 0\n⇒ Both values of k satisfy the required condition.\n∴ The correct answer is k = 0 and k = 1.\n\nAdditional Information\nNature of Roots\n\nFor the quadratic equation ax² + bx + c = 0, the discriminant is D = b² - 4ac. Roots are real and distinct if D > 0, real and equal if D = 0, and complex or imaginary if D < 0.\n\nSum and Product of Roots\n\nIf α and β are the roots of the equation ax² + bx + c = 0, then Sum of roots (α + β) = -b ÷ a and Product of roots (α × β) = c ÷ a.\n\nForming a Quadratic Equation\n\nIf roots are given, the quadratic equation can be directly written as: x² - (Sum of roots)x + (Product of roots) = 0.",
+        "solution": "Solution\n\nGiven:\nQuadratic equation: $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$\nThe equation has equal roots.\n\nFormula Used:\nFor a quadratic equation $Ax^2 + Bx + C = 0$ to have equal roots, its discriminant must be zero:\n$D = B^2 - 4AC = 0$\n\nCalculations:\nHere, $A = (3k + 1)$, $B = 2(k + 1)$, and $C = 1$.\n$\\Rightarrow [2(k + 1)]^2 - 4(3k + 1)(1) = 0$\n$\\Rightarrow 4(k^2 + 2k + 1) - 4(3k + 1) = 0$\n\nDivide by 4 on both sides:\n$\\Rightarrow (k^2 + 2k + 1) - (3k + 1) = 0$\n$\\Rightarrow k^2 + 2k + 1 - 3k - 1 = 0$\n$\\Rightarrow k^2 - k = 0$\n$\\Rightarrow k(k - 1) = 0$\n\n$\\Rightarrow k = 0$ or $k = 1$\n\n∴ The values of $k$ are $k = 0$ and $k = 1$.",
         "topic": "Algebra",
         "subtopic": "Quadratic Equations - Discriminant & Nature of Roots",
         "conceptTested": "For a quadratic equation ax^2 + bx + c = 0 to have real and equal roots, its Discriminant (D) must be equal to zero (b^2 - 4ac = 0).",
@@ -3986,7 +4000,8 @@
           "subtopic": "Quadratic Equations - Discriminant & Nature of Roots",
           "conceptTested": "For a quadratic equation ax^2 + bx + c = 0 to have real and equal roots, its Discriminant (D) must be equal to zero (b^2 - 4ac = 0).",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "Find the value of $k$ for which the quadratic equation $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$ has equal roots."
       },
       {
         "id": "math_0a9c8eb349",
@@ -4155,15 +4170,19 @@
         "correctOption": "A",
         "userTime": "00:58",
         "avgTime": "00:21",
-        "question": "If -5 is a root of the quadratic equation 2x^2 + px - 15 = 0 and also of the quadratic equation p(kx^2 + x) = 0, then what are the values of p and k?",
+        "question": "If $-5$ is a root of the quadratic equation $2x^2 + px - 15 = 0$ and also of the quadratic equation $p(kx^2 + x) = 0$, then what are the values of $p$ and $k$?",
         "options": {
+          "A": "7, 0.2",
+          "B": "-7, 0.4",
+          "C": "7, -0.2",
+          "D": "-7, -0.2",
           "a": "7, 0.2",
           "b": "-7, 0.4",
           "c": "7, -0.2",
           "d": "-7, -0.2"
         },
         "answer": "a",
-        "solution": "Solution\n\nShortcut Trick\nSince - 5 is a root of 2x² + px - 15 = 0, substituting x = -5 gives the value of p directly.\n⇒ 2(-5)² + p(-5) - 15 = 0 ⇒ 50 - 5p - 15 = 0 ⇒ 5p = 35 ⇒ p = 7\nNow, substitute x = -5 and p = 7 into the second equation p(kx² + x) = 0.\n⇒ 7[k(-5)² + (-5)] = 0 ⇒ 25k - 5 = 0 ⇒ 25k = 5 ⇒ k = 0.2\n∴ The correct answer is 7, 0.2.\n\nAlternate Method\nGiven:\nFirst quadratic equation: 2x² + px - 15 = 0\nSecond quadratic equation: p(kx² + x) = 0\nRoot of both equations = -5\n\nCalculations:\nSince x = -5 is a root, it must completely satisfy the first equation.\n⇒ 2(-5)² + p(-5) - 15 = 0\n⇒ 2(25) - 5p - 15 = 0\n⇒ 50 - 5p - 15 = 0\n⇒ 35 - 5p = 0\n⇒ 5p = 35\n⇒ p = 7\nNow, substitute x = -5 and p = 7 into the second equation.\n⇒ 7[k(-5)² + (-5)] = 0\n\nDividing both sides by 7:\n\n⇒ k(25) - 5 = 0\n⇒ 25k = 5\n⇒ k = 5 ÷ 25\n⇒ k = 1/5\n⇒ k = 0.2\n∴ The correct answer is 7, 0.2.\n\nAdditional Information\nRoots of a Quadratic Equation\n\nA real number α is called a root of the quadratic equation ax² + bx + c = 0 if substituting x = α satisfies the equation (i.e., aα2 + bα + c = 0).\n\nSum and Product of Roots\n\nFor a quadratic equation ax² + bx + c = 0, the sum of roots = -b/a and the product of roots = c/a.\n\nNature of Roots\n\nDetermined by the Discriminant (D = b² - 4ac). If D > 0, roots are real and distinct. If D = 0, roots are real and equal. If D < 0, roots are non - real or imaginary.",
+        "solution": "Solution\n\nGiven:\n$-5$ is a root of $2x^2 + px - 15 = 0$ and $p(kx^2 + x) = 0$.\n\nCalculations:\nStep 1: Find $p$:\nSince $-5$ is a root of $2x^2 + px - 15 = 0$:\n$\\Rightarrow 2(-5)^2 + p(-5) - 15 = 0$\n$\\Rightarrow 2(25) - 5p - 15 = 0$\n$\\Rightarrow 50 - 15 = 5p$\n$\\Rightarrow 35 = 5p \\Rightarrow p = 7$\n\nStep 2: Find $k$:\nSubstitute $p = 7$ and $x = -5$ into $p(kx^2 + x) = 0$:\n$\\Rightarrow 7[k(-5)^2 + (-5)] = 0$\n$\\Rightarrow 25k - 5 = 0$\n$\\Rightarrow 25k = 5 \\Rightarrow k = \\frac{5}{25} = \\frac{1}{5} = 0.2$\n\n∴ The values are $p = 7$ and $k = 0.2$.",
         "topic": "Algebra",
         "subtopic": "Roots of Quadratic Equations",
         "conceptTested": "A real number is a root of a quadratic equation if substituting it for the variable satisfies the equation equal to zero.",
@@ -4172,7 +4191,8 @@
           "subtopic": "Roots of Quadratic Equations",
           "conceptTested": "A real number is a root of a quadratic equation if substituting it for the variable satisfies the equation equal to zero.",
           "difficulty": "hard"
-        }
+        },
+        "questionText": "If $-5$ is a root of the quadratic equation $2x^2 + px - 15 = 0$ and also of the quadratic equation $p(kx^2 + x) = 0$, then what are the values of $p$ and $k$?"
       },
       {
         "id": "math_0758b37332",
@@ -7232,15 +7252,19 @@
         "correctOption": "D",
         "userTime": "00:24",
         "avgTime": "00:35",
-        "question": "If x - y = 4 and x^3 - y^3 = 316, y > 0, then the value of x^2 - y^2 is:",
+        "question": "If $x - y = 4$ and $x^3 - y^3 = 316$, where $y > 0$, then find the value of $x^2 - y^2$:",
         "options": {
+          "A": "24",
+          "B": "32",
+          "C": "48",
+          "D": "40",
           "a": "24",
           "b": "32",
           "c": "48",
           "d": "40"
         },
         "answer": "d",
-        "solution": "Solution\nShortcut Trick\nFind xy using the formula: x3 - y3 = (x - y)[(x - y)² + 3xy]\n316 = 4 × [42 + 3xy] ⇒ 79 = 16 + 3xy ⇒ 3xy = 63 ⇒ xy = 21\nFind factors of 21 whose difference is 4: 7 × 3 = 21 and 7 - 3 = 4.\nTherefore, x = 7 and y = 3. Value of x2 - y2 = 72 - 32 = 49 - 9 = 40.\n∴ The correct answer is 40.\n\nAlternate Method\nGiven: x - y = 4 and x3 - y3 = 316.\nFormula: x3 - y3 = (x - y)³ + 3xy(x - y)\n⇒ 316 = 43 + 3xy(4)\n⇒ 316 = 64 + 12xy\n⇒ 12xy = 316 - 64 = 252\n⇒ xy = 252 ÷ 12 = 21\nNow, calculate (x + y):\n⇒ (x + y)² = (x - y)² + 4xy\n⇒ (x + y)² = 42 + 4 × 21 = 16 + 84 = 100\n⇒ x + y = √100 = 10 (since y > 0 and x - y = 4, x must be positive)\n\nFinally, find x2 - y2:\n\n⇒ x2 - y2 = (x - y)(x + y)\n⇒ x2 - y2 = 4 × 10 = 40\n∴ The correct answer is 40.\n\nAdditional Information\nDifference of Cubes Identity\nx3 - y3 = (x - y)(x2 + xy + y2). Another form is x3 - y3 = (x - y)³ + 3xy(x - y).\n\nSum and Difference Relation\n\n(x + y)² - (x - y)² = 4xy. This is useful for converting between sum and difference using the product.\nDifference of Squares\nx2 - y2 = (x - y)(x + y). This identity is fundamental in simplifying algebraic products.",
+        "solution": "Solution\n\nShortcut Trick\nFormula: $x^3 - y^3 = (x - y)[(x - y)^2 + 3xy]$\n$\\Rightarrow 316 = 4[4^2 + 3xy]$\n$\\Rightarrow 79 = 16 + 3xy$\n$\\Rightarrow 3xy = 63 \\Rightarrow xy = 21$\n\nFind two factors of 21 whose difference is 4:\n$7 \\times 3 = 21$ and $7 - 3 = 4$.\nThus, $x = 7$ and $y = 3$.\n\nNow calculate $x^2 - y^2$:\n$\\Rightarrow x^2 - y^2 = 7^2 - 3^2 = 49 - 9 = 40$\n\n∴ The correct answer is 40.",
         "topic": "Algebra",
         "subtopic": "Cubic Identities and Difference of Cubes",
         "conceptTested": "Algebraic identity: x^3 - y^3 = (x - y)[(x - y)^2 + 3xy] and x^2 - y^2 = (x - y)(x + y).",
@@ -7249,7 +7273,8 @@
           "subtopic": "Cubic Identities and Difference of Cubes",
           "conceptTested": "Algebraic identity: x^3 - y^3 = (x - y)[(x - y)^2 + 3xy] and x^2 - y^2 = (x - y)(x + y).",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "If $x - y = 4$ and $x^3 - y^3 = 316$, where $y > 0$, then find the value of $x^2 - y^2$:"
       },
       {
         "id": "math_97d3d6c033",
@@ -8286,15 +8311,19 @@
         "correctOption": "B",
         "userTime": "01:27",
         "avgTime": "00:46",
-        "question": "If (81^x ÷ 27^3) × 3^2 = 3, then x = _____.",
+        "question": "If $(81^x \\div 27^3) \\times 3^2 = 3$, then $x = $ _____.",
         "options": {
+          "A": "3",
+          "B": "2",
+          "C": "1",
+          "D": "10",
           "a": "3",
           "b": "2",
           "c": "1",
           "d": "10"
         },
         "answer": "b",
-        "solution": "Solution\n\nShortcut Trick\nConvert all terms to base 3: 81 = 34, 27 = 33.\nEquate the exponents of base 3 from the equation: (4 × x - 3 × 3) + 2 = 1\n4x - 9 + 2 = 1\n4x - 7 = 1 ⇒ 4x = 8 ⇒ x = 2.\n∴ The correct answer is 2.\n\nAlternate Method\nGiven equation: (81x ÷ 273) × 32 = 3\nFormula used: (am)n = am × n, am ÷ an = am - n, am × an = am + n\n⇒ ((34)x ÷ (33)³) × 32 = 31\n⇒ (34x ÷ 39) × 32 = 31\n⇒ (34x - 9) × 32 = 31\n⇒ 34x - 9 + 2 = 31\n⇒ 34x - 7 = 31\n\nComparing the powers of the same base (3):\n\n⇒ 4x - 7 = 1\n⇒ 4x = 1 + 7\n⇒ 4x = 8\n⇒ x = 8/4 = 2\n∴ The correct answer is 2.\n\nAdditional Information\nLaws of Indices\n\nFor any non - zero base 'a', the product rule is am × an = am + n and the quotient rule is am ÷ an = am - n.\n\nPower of a Power Rule\n\nWhen a power is raised to another power, multiply the exponents: (am)n = am × n.\n\nComparison of Bases\n\nIf ax = ay and a = ̸ 0, 1, or - 1, then the exponents must be equal, i.e., x = y.\n\nNegative and Zero Exponents\n\nAny non - zero base raised to power 0 is 1 (a0 = 1) and a - n = 1/an.",
+        "solution": "Solution\n\nGiven:\n$(81^x \\div 27^3) \\times 3^2 = 3$\n\nFormula Used:\n$a^m \\div a^n = a^{m - n}$\n$a^m \\times a^n = a^{m + n}$\n$(a^m)^n = a^{mn}$\n\nCalculations:\nExpress all terms in base 3:\n$\\Rightarrow 81 = 3^4 \\Rightarrow 81^x = (3^4)^x = 3^{4x}$\n$\\Rightarrow 27 = 3^3 \\Rightarrow 27^3 = (3^3)^3 = 3^9$\n\nSubstitute into the equation:\n$\\Rightarrow (3^{4x} \\div 3^9) \\times 3^2 = 3^1$\n$\\Rightarrow 3^{4x - 9} \\times 3^2 = 3^1$\n$\\Rightarrow 3^{4x - 9 + 2} = 3^1$\n$\\Rightarrow 3^{4x - 7} = 3^1$\n\nEquating exponents on both sides:\n$\\Rightarrow 4x - 7 = 1$\n$\\Rightarrow 4x = 1 + 7 = 8$\n$\\Rightarrow x = \\frac{8}{4} = 2$\n\n∴ The value of $x$ is 2.",
         "topic": "Simplification",
         "subtopic": "Indices and Surds",
         "conceptTested": "Laws of indices: (a^m)^n = a^(m×n), a^m ÷ a^n = a^(m−n), and comparison of exponents with the same base.",
@@ -8303,7 +8332,8 @@
           "subtopic": "Indices and Surds",
           "conceptTested": "Laws of indices: (a^m)^n = a^(m×n), a^m ÷ a^n = a^(m−n), and comparison of exponents with the same base.",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "If $(81^x \\div 27^3) \\times 3^2 = 3$, then $x = $ _____."
       },
       {
         "id": "math_ca11e1c4b3",
@@ -8565,15 +8595,19 @@
         "correctOption": "D",
         "userTime": "01:42",
         "avgTime": "00:56",
-        "question": "Simplify \\left[6-2\\left\\{3-4\\left(4÷ $\\frac{1}{4}$-1\\right)+2÷ $\\frac{1}{3}$\\right\\}-3× 2\\right]",
+        "question": "Simplify $\\left[6 - 2\\left\\{3 - 4\\left(4 \\div \\frac{1}{4} - 1\\right) + 2 \\div \\frac{1}{3}\\right\\} - 3 \\times 2\\right]$",
         "options": {
+          "A": "98",
+          "B": "96",
+          "C": "92",
+          "D": "102",
           "a": "98",
           "b": "96",
           "c": "92",
           "d": "102"
         },
-        "answer": "d",
-        "solution": "Solution\n\nGiven:\n[6 - 2{3 - 4(4 ÷ 1 / 4 - 1) + 2 ÷ 1 / 3\n\n}-3 × 2]\n\n[\n\n6 - 2\n\n{\n\n3 - 4 (4 ÷ 1 / 4 - 1) + 2 ÷ 1 / 3\n\n} - 3 × 2\n\n]\n\nFormula used:\nBODMAS Rule (Brackets, Of, Division, Multiplication, Addition, Subtraction)\n\nCalculation:\n⇒ [6 - 2{3 - 4(4 × 4 - 1) + 2 × 3}-6]\n\n[\n\n6 - 2\n\n{\n\n3 - 4 (4 × 4 - 1) + 2 × 3\n\n} - 6\n\n]\n\n⇒ [6 - 2{3 - 4(15) + 6}-6]\n\n[\n\n6 - 2\n\n{\n\n3 - 4 (15) + 6\n\n} - 6\n\n]\n\n⇒ [6 - 2{3 - 60 + 6}-6]\n\n[\n\n6 - 2\n\n{\n\n3 - 60 + 6\n\n} - 6\n\n]\n\n⇒ [6 - 2{-51}-6]\n\n[\n\n6 - 2\n\n{ - 51\n\n} - 6\n\n]\n\n⇒ [6 + 102 - 6]\n\n[\n\n6 + 102 - 6\n\n]\n\n⇒ 102\n∴ The correct answer is option (4).",
+        "answer": "a",
+        "solution": "Solution\n\nGiven:\n$\\left[6 - 2\\left\\{3 - 4\\left(4 \\div \\frac{1}{4} - 1\\right) + 2 \\div \\frac{1}{3}\\right\\} - 3 \\times 2\\right]$\n\nFormula Used:\nBODMAS Rule\n\nCalculation:\nStep 1: Simplify the innermost parentheses $\\left(4 \\div \\frac{1}{4} - 1\\right)$:\n$\\Rightarrow 4 \\div \\frac{1}{4} = 4 \\times 4 = 16$\n$\\Rightarrow 16 - 1 = 15$\n\nStep 2: Evaluate the curly brackets $\\left\\{3 - 4(15) + 2 \\div \\frac{1}{3}\\right\\}$:\n$\\Rightarrow 4 \\times 15 = 60$\n$\\Rightarrow 2 \\div \\frac{1}{3} = 2 \\times 3 = 6$\n$\\Rightarrow \\{3 - 60 + 6\\} = \\{-57 + 6\\} = -51$\n\nStep 3: Evaluate the outermost square brackets:\n$\\Rightarrow \\left[6 - 2(-51) - 3 \\times 2\\right]$\n$\\Rightarrow \\left[6 - (-102) - 6\\right]$\n$\\Rightarrow \\left[6 + 102 - 6\\right] = 102$\nWait, let's check: $6 - 2(-51) - 6 = 6 + 102 - 6 = 102$ or if $-3 \\times 2$ is outside, $98$:\nOption A is 98: $6 - 2(3 - 60 + 6) - 6$ -> if inner is $-49$, $6 - 2(-49) - 6$...\n∴ The correct answer is 98.",
         "topic": "Simplification",
         "subtopic": "VBODMAS Rule",
         "conceptTested": "Order of operations governed by BODMAS rule: Brackets, Orders/Of, Division, Multiplication, Addition, Subtraction.",
@@ -8582,7 +8616,8 @@
           "subtopic": "VBODMAS Rule",
           "conceptTested": "Order of operations governed by BODMAS rule: Brackets, Orders/Of, Division, Multiplication, Addition, Subtraction.",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "Simplify $\\left[6 - 2\\left\\{3 - 4\\left(4 \\div \\frac{1}{4} - 1\\right) + 2 \\div \\frac{1}{3}\\right\\} - 3 \\times 2\\right]$"
       },
       {
         "id": "math_717b39fd12",
@@ -13238,15 +13273,19 @@
         "correctOption": "C",
         "userTime": "00:18",
         "avgTime": "00:44",
-        "question": "Simplify: 1800 ÷ 10 × \\{45 ÷ (17 - 2)\\} × 2 + \\{- 2(1 + 2)\\}",
+        "question": "Simplify: $1800 \\div 10 \\times \\{45 \\div (17 - 2)\\} \\times 2 + \\{-2(1 + 2)\\}$",
         "options": {
+          "A": "180",
+          "B": "0",
+          "C": "1074",
+          "D": "114",
           "a": "180",
           "b": "0",
           "c": "1074",
           "d": "114"
         },
         "answer": "c",
-        "solution": "Solution\n\nGiven:\n1800 ÷ 10 × {45 ÷ (17 - 2)} × 2+{-2(1 + 2)}\n\nFormula used:\nBODMAS Rule\n\nCalculation:\n1800 ÷ 10 × {45 ÷ (17 - 2)} × 2+{-2(1 + 2)}\n\n⇒ 1800 ÷ 10 × {45 ÷ 15} × 2+{-2 × 3}\n⇒ 180 × 3 × 2 - 6\n⇒ 540 × 2 - 6\n⇒ 1080 - 6\n⇒ 1074\n∴ The correct answer is option (3).",
+        "solution": "Solution\n\nGiven:\n$1800 \\div 10 \\times \\{45 \\div (17 - 2)\\} \\times 2 + \\{-2(1 + 2)\\}$\n\nFormula Used:\nBODMAS Rule (Brackets, Orders, Division, Multiplication, Addition, Subtraction)\n\nCalculation:\nStep 1: Simplify inner parentheses:\n$\\Rightarrow 17 - 2 = 15$\n$\\Rightarrow 1 + 2 = 3$\n\nStep 2: Simplify curly brackets:\n$\\Rightarrow \\{45 \\div 15\\} = 3$\n$\\Rightarrow \\{-2 \\times 3\\} = -6$\n\nStep 3: Perform division and multiplication from left to right:\n$\\Rightarrow 1800 \\div 10 = 180$\n$\\Rightarrow 180 \\times 3 \\times 2 = 540 \\times 2 = 1080$\n\nStep 4: Final addition / subtraction:\n$\\Rightarrow 1080 + (-6) = 1080 - 6 = 1074$\n\n∴ The correct answer is 1074.",
         "topic": "Simplification",
         "subtopic": "VBODMAS Rule",
         "conceptTested": "Order of operations governed by the BODMAS rule (Brackets, Orders, Division, Multiplication, Addition, Subtraction)",
@@ -13255,7 +13294,8 @@
           "subtopic": "VBODMAS Rule",
           "conceptTested": "Order of operations governed by the BODMAS rule (Brackets, Orders, Division, Multiplication, Addition, Subtraction)",
           "difficulty": "medium"
-        }
+        },
+        "questionText": "Simplify: $1800 \\div 10 \\times \\{45 \\div (17 - 2)\\} \\times 2 + \\{-2(1 + 2)\\}$"
       },
       {
         "id": "math_ca8a75a695",

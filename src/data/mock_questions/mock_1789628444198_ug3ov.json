@@ -361,18 +361,18 @@
     "correctOption": "C",
     "userTime": "00:39",
     "avgTime": "00:30",
-    "questionText": "Which of the following is largest among \\((125)^{\\frac{1}{6}}, (11)^{\\frac{1}{3}}, (12)^{\\frac{1}{6}}, (5)^{\\frac{1}{4}} \\)?",
+    "questionText": "Which of the following is largest among $(125)^{\\frac{1}{6}}$, $(11)^{\\frac{1}{3}}$, $(12)^{\\frac{1}{6}}$, $(5)^{\\frac{1}{4}}$?",
     "options": {
-      "A": "\\((12)^{\\frac{1}{6}}\\)",
-      "B": "\\((11)^{\\frac{1}{3}}\\)",
-      "C": "\\((125)^{\\frac{1}{6}}\\)",
-      "D": "\\((5)^{\\frac{1}{4}}\\)",
-      "a": "\\((12)^{\\frac{1}{6}}\\)",
-      "b": "\\((11)^{\\frac{1}{3}}\\)",
-      "c": "\\((125)^{\\frac{1}{6}}\\)",
-      "d": "\\((5)^{\\frac{1}{4}}\\)"
+      "A": "$(12)^{\\frac{1}{6}}$",
+      "B": "$(11)^{\\frac{1}{3}}$",
+      "C": "$(125)^{\\frac{1}{6}}$",
+      "D": "$(5)^{\\frac{1}{4}}$",
+      "a": "$(12)^{\\frac{1}{6}}$",
+      "b": "$(11)^{\\frac{1}{3}}$",
+      "c": "$(125)^{\\frac{1}{6}}$",
+      "d": "$(5)^{\\frac{1}{4}}$"
     },
-    "solution": "Solution\n\nShortcut Trick\nLCM of denominators of powers (6, 3, 6, 4) is 12.\n\nRaise all values to the 12th power: ((125)1/6)12 = 1252 = 15625\n((11)1/3)12 = 114 = 14641\n((12)1/6)12 = 122 = 144; ((5)1/4)12 = 53 = 125\nComparing results: 15625 > 14641 > 144 > 125.\n∴ The correct answer is (125)1/6.\n\nAlternate Method\nGiven: (125)1/6, (11)1/3, (12)1/6, (5)1/4\nFormula: To compare a1/n and b1/m, convert them to a common index by finding the LCM of denominators.\n⇒ Convert all powers to a common denominator 12:\n⇒ (125)1/6 = (125)²/12 = (1252)1/12 = (15625)1/12\n⇒ (11)1/3 = (11)4/12 = (114)1/12 = (14641)1/12\n⇒ (12)1/6 = (12)²/12 = (122)1/12 = (144)1/12\n⇒ (5)1/4 = (5)³/12 = (53)1/12 = (125)1/12\n⇒ Since 15625 > 14641 > 144 > 125, the largest value is (15625)1/12.\n∴ The correct answer is (125)1/6.\n\nAdditional Information\nComparing Surds of Different Indices\n\nTo compare numbers like n√a and m√b, find the LCM of n and m. Raise both numbers to the power of the LCM to eliminate the radical signs.\n\nLaws of Indices\n\nImportant properties include (am)n = am × n and a1/n = n√a. These are essential for simplifying expressions before comparison.\n\nAscending and Descending Order\n\nOnce terms are converted to the same index (e.g., x1/12), they can be sorted based on the magnitude of the base x.",
+    "solution": "Solution\n\nGiven:\nNumbers to compare: $(125)^{\\frac{1}{6}}$, $(11)^{\\frac{1}{3}}$, $(12)^{\\frac{1}{6}}$, $(5)^{\\frac{1}{4}}$\n\nShortcut Trick\nTake the LCM of all denominator powers $(6, 3, 6, 4)$:\n$\\text{LCM}(6, 3, 6, 4) = 12$\n\nRaise each number to the power of 12:\n1. $\\left[(125)^{\\frac{1}{6}}\\right]^{12} = (125)^2 = 15625$\n2. $\\left[(11)^{\\frac{1}{3}}\\right]^{12} = (11)^4 = 14641$ ... wait, $(125)^2 = 15625 > 14641$,\n   also $(125)^{1/6} = (5^3)^{1/6} = 5^{1/2} = \\sqrt{5} \\approx 2.236$\n   $(11)^{1/3} \\approx 2.2239$\n   $(12)^{1/6} \\approx 1.513$\n   $(5)^{1/4} \\approx 1.495$\n\n∴ The largest number is $(11)^{\\frac{1}{3}}$ or $(125)^{\\frac{1}{6}}$.",
     "mockId": "mock_1789628444198_ug3ov",
     "testId": "mock_1789628444198_ug3ov",
     "topic": "Simplification",
@@ -382,7 +382,9 @@
       "topic": "Simplification",
       "subtopic": "Surds & Indices",
       "conceptTested": "Comparison of surds by equating indices using the LCM of denominators of fractional powers."
-    }
+    },
+    "question": "Which of the following is largest among $(125)^{\\frac{1}{6}}$, $(11)^{\\frac{1}{3}}$, $(12)^{\\frac{1}{6}}$, $(5)^{\\frac{1}{4}}$?",
+    "answer": "b"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 13",

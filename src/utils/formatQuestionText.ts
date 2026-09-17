@@ -24,7 +24,14 @@ const DEVANAGARI_REGEX = /[\u0900-\u097F]/;
  */
 export function cleanQuestionText(text: string = ''): string {
   if (!text) return '';
-  let s = wrapUnwrappedFractions(String(text));
+  let s = String(text);
+
+  // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
+  s = s.replace(/\$\s+([^$\n]+?)\s+\$/g, '$$$1$$');
+  s = s.replace(/\$\s+([^$\n]+?)\$/g, '$$$1$$');
+  s = s.replace(/\$([^$\n]+?)\s+\$/g, '$$$1$$');
+
+  s = wrapUnwrappedFractions(s);
 
   // 1. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
   // so string replacements don't corrupt LaTeX commands (like \rm, \right, \neq, \nu, \root, etc.)
@@ -165,6 +172,11 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   let text = rawText
     .replace(/\\\[([\s\S]*?)\\\]/g, (_, eq) => `$$${eq}$$`)
     .replace(/\\\(([\s\S]*?)\\\)/g, (_, eq) => `$${eq}$`);
+
+  // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
+  text = text.replace(/\$\s+([^$\n]+?)\s+\$/g, '$$$1$$');
+  text = text.replace(/\$\s+([^$\n]+?)\$/g, '$$$1$$');
+  text = text.replace(/\$([^$\n]+?)\s+\$/g, '$$$1$$');
 
   // Step 2: Wrap any remaining unwrapped fractions (\frac)
   text = wrapUnwrappedFractions(text);

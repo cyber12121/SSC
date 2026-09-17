@@ -522,6 +522,15 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   s = s.replace(/≤ft\b/g, '\\left');
   s = s.replace(/\\le\s*ft\b/g, '\\left');
 
+  // Fix scraper stripped \r from \right and Take pi notes: e.g. \left( {{m{Take}}\,\,{m{\pi }}\,{m{ = }}... ight)
+  s = s.replace(/\\left\(\s*\{+m\{Take\}[\s\S]*?ight\)/gi, '\\left(\\text{Take }\\pi = \\frac{22}{7}\\right)');
+  s = s.replace(/(?<![a-zA-Z\\])ight\s*([\)\}\]])/g, '\\right$1');
+  s = s.replace(/\\r\s*\\right/g, '\\right');
+  s = s.replace(/\{+m\{Take\}\}+/gi, '\\text{Take }');
+  s = s.replace(/\{+m\{\\pi\s*\}\}+/gi, '\\pi ');
+  s = s.replace(/\{+m\{\s*=\s*\}\}+/gi, '= ');
+  s = s.replace(/\{+m\{([^}]+)\}\}+/g, '\\text{$1}');
+
   // 2. Degree symbol inside math mode
   s = s.replace(/°/g, '^\\circ');
 

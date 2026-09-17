@@ -466,7 +466,7 @@
     "correctOption": "D",
     "userTime": "00:24",
     "avgTime": "00:35",
-    "questionText": "If x - y = 4 and x^3 - y^3 = 316, y > 0, then the value of x^2 - y^2 is:",
+    "questionText": "If $x - y = 4$ and $x^3 - y^3 = 316$, where $y > 0$, then find the value of $x^2 - y^2$:",
     "options": {
       "A": "24",
       "B": "32",
@@ -477,7 +477,7 @@
       "c": "48",
       "d": "40"
     },
-    "solution": "Solution\nShortcut Trick\nFind xy using the formula: x3 - y3 = (x - y)[(x - y)² + 3xy]\n316 = 4 × [42 + 3xy] ⇒ 79 = 16 + 3xy ⇒ 3xy = 63 ⇒ xy = 21\nFind factors of 21 whose difference is 4: 7 × 3 = 21 and 7 - 3 = 4.\nTherefore, x = 7 and y = 3. Value of x2 - y2 = 72 - 32 = 49 - 9 = 40.\n∴ The correct answer is 40.\n\nAlternate Method\nGiven: x - y = 4 and x3 - y3 = 316.\nFormula: x3 - y3 = (x - y)³ + 3xy(x - y)\n⇒ 316 = 43 + 3xy(4)\n⇒ 316 = 64 + 12xy\n⇒ 12xy = 316 - 64 = 252\n⇒ xy = 252 ÷ 12 = 21\nNow, calculate (x + y):\n⇒ (x + y)² = (x - y)² + 4xy\n⇒ (x + y)² = 42 + 4 × 21 = 16 + 84 = 100\n⇒ x + y = √100 = 10 (since y > 0 and x - y = 4, x must be positive)\n\nFinally, find x2 - y2:\n\n⇒ x2 - y2 = (x - y)(x + y)\n⇒ x2 - y2 = 4 × 10 = 40\n∴ The correct answer is 40.\n\nAdditional Information\nDifference of Cubes Identity\nx3 - y3 = (x - y)(x2 + xy + y2). Another form is x3 - y3 = (x - y)³ + 3xy(x - y).\n\nSum and Difference Relation\n\n(x + y)² - (x - y)² = 4xy. This is useful for converting between sum and difference using the product.\nDifference of Squares\nx2 - y2 = (x - y)(x + y). This identity is fundamental in simplifying algebraic products.",
+    "solution": "Solution\n\nShortcut Trick\nFormula: $x^3 - y^3 = (x - y)[(x - y)^2 + 3xy]$\n$\\Rightarrow 316 = 4[4^2 + 3xy]$\n$\\Rightarrow 79 = 16 + 3xy$\n$\\Rightarrow 3xy = 63 \\Rightarrow xy = 21$\n\nFind two factors of 21 whose difference is 4:\n$7 \\times 3 = 21$ and $7 - 3 = 4$.\nThus, $x = 7$ and $y = 3$.\n\nNow calculate $x^2 - y^2$:\n$\\Rightarrow x^2 - y^2 = 7^2 - 3^2 = 49 - 9 = 40$\n\n∴ The correct answer is 40.",
     "mockId": "mock_1789601837889_amd4z",
     "testId": "mock_1789601837889_amd4z",
     "topic": "Algebra",
@@ -487,7 +487,9 @@
       "topic": "Algebra",
       "subtopic": "Cubic Identities and Difference of Cubes",
       "conceptTested": "Algebraic identity: x^3 - y^3 = (x - y)[(x - y)^2 + 3xy] and x^2 - y^2 = (x - y)(x + y)."
-    }
+    },
+    "question": "If $x - y = 4$ and $x^3 - y^3 = 316$, where $y > 0$, then find the value of $x^2 - y^2$:",
+    "answer": "d"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 14",
@@ -512,7 +514,7 @@
       "c": "27",
       "d": "0"
     },
-    "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAlternate Method\nGiven:\n$x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$ where $x, y, z > 0$\n\nFormula Used:\n$(a - b)^3 = a^3 - b^3 - 3ab(a - b)$\n\nCalculations:\nCube both sides of the given equation:\n$\\Rightarrow \\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right)^3 = \\left(z^{\\frac{1}{3}}\\right)^3$\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 - \\left(y^{\\frac{1}{3}}\\right)^3 - 3\\left(x^{\\frac{1}{3}}\\right)\\left(y^{\\frac{1}{3}}\\right)\\left(x^{\\frac{1}{3}} - y^{\\frac{1}{3}}\\right) = z$\n$\\Rightarrow x - y - 3(xy)^{\\frac{1}{3}}(z^{\\frac{1}{3}}) = z$ (since $x^{\\frac{1}{3}} - y^{\\frac{1}{3}} = z^{\\frac{1}{3}}$)\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides again:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3$\n$\\Rightarrow (x - y - z)^3 = 27xyz$\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.\n\nAdditional Information\nAlgebraic Identity of Three Variables:\nThe expression $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$.\nIf $a + b + c = 0$, the expression reduces directly to $a^3 + b^3 + c^3 = 3abc$.",
+    "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.",
     "mockId": "mock_1789601837889_amd4z",
     "testId": "mock_1789601837889_amd4z",
     "topic": "Algebra",
