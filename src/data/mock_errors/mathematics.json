@@ -4504,6 +4504,166 @@
           "conceptTested": "Time required to catch a moving target is the initial separation distance divided by the relative speed.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_5372a6061a",
+        "q_num": 145,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 18/09/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:24",
+        "avgTime": "00:25",
+        "question": "Given $\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$, find$x + \\frac{1}{x}$.",
+        "options": {
+          "a": "15",
+          "b": "14",
+          "c": "16",
+          "d": "17"
+        },
+        "answer": "b",
+        "solution": "(x + 1\n\nx)² = x + 1 / x + 2 / 4\n2 = x + 1 / x + 2 / x + 1\nx = 14\nAns: (2) 14",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Square & Square Root Reciprocal Identities",
+        "conceptTested": "Squaring reciprocal terms: $(\\sqrt{x} + \\frac{1}{\\sqrt{x}})^2 = x + \\frac{1}{x} + 2$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Square & Square Root Reciprocal Identities",
+          "conceptTested": "Squaring reciprocal terms: $(\\sqrt{x} + \\frac{1}{\\sqrt{x}})^2 = x + \\frac{1}{x} + 2$",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_b3f47b918a",
+        "q_num": 146,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 18/09/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:45",
+        "avgTime": "00:32",
+        "question": "If $x + \\frac{2}{x} = 7$, find the value of$x^3 + \\frac{8}{x^3}$.",
+        "options": {
+          "a": "256",
+          "b": "301",
+          "c": "352",
+          "d": "298"
+        },
+        "answer": "b",
+        "solution": "a / 3 + b\n\n3 = (a + b)³ - 3 / a\nb (a + b), with a = x and\nb = 2\n\nx\n\nso ab = 2\n\nx / 3 + 8 / x\n\n3 = 7 / 3 - 3 (2) (7) = 343 - 42 / x\n\n3 + 8 / x\n\n3 = 301\nAns: (2) 301",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Cubic Algebraic Identities with Coefficients",
+        "conceptTested": "Cubic expansion with scaling factors: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Cubic Algebraic Identities with Coefficients",
+          "conceptTested": "Cubic expansion with scaling factors: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_c03a5a7a76",
+        "q_num": 147,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 19/09/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:38",
+        "avgTime": "00:24",
+        "question": "If $\\sqrt{a} + \\sqrt{b} = 5$and$\\sqrt{a} - \\sqrt{b} = 1$, what is the value of$a$and$b$?",
+        "options": {
+          "a": "$a = 4, b = 1$",
+          "b": "$a = 9, b = 4$",
+          "c": "$a = 16, b = 9$",
+          "d": "$a = 25, b = 16$"
+        },
+        "answer": "b",
+        "solution": "Adding the two equations: 2\na = 6, so\na = 3\n\nSubtracting them, 2\n\nb = 4, so\nb = 2\na = 9 and b = 4\nAns: (2) a = 9, b = 4",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Surds & Indices - Simultaneous Equations",
+        "conceptTested": "Solving simultaneous equations involving square roots by addition and subtraction.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Surds & Indices - Simultaneous Equations",
+          "conceptTested": "Solving simultaneous equations involving square roots by addition and subtraction.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_e3f02a2c53",
+        "q_num": 148,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 20/09/2025 Shift-1 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:48",
+        "avgTime": "00:27",
+        "question": "If $x = 2 + \\sqrt{3}$, find$x - \\frac{1}{x}$.",
+        "options": {
+          "a": "\\sqrt{3}",
+          "b": "2\\sqrt{3}",
+          "c": "3\\sqrt{2}",
+          "d": "5\\sqrt{3}"
+        },
+        "answer": "b",
+        "solution": "1\n\nx = 1 / 2 + 3 = 2 - 3\n\nafter rationalising\n\nx - 1\n\nx = (2 + 3) - (2 - 3)\n\nx - 1\n\nx = 2 / 3\nAns: (2)²√3",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Rationalization",
+        "conceptTested": "Rationalization of denominators and simplification of algebraic expressions.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Rationalization",
+          "conceptTested": "Rationalization of denominators and simplification of algebraic expressions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_9d6140393f",
+        "q_num": 149,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 20/09/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:31",
+        "avgTime": "00:58",
+        "question": "Find the value of $x$in the given equation:$\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$",
+        "options": {
+          "a": "$\\frac{56}{17}$",
+          "b": "$\\frac{27}{17}$",
+          "c": "$\\frac{17}{56}$",
+          "d": "$\\frac{17}{27}$"
+        },
+        "answer": "a",
+        "solution": "By componendo and dividendo, 7 + x / 7 - x = 4 + 1 / 4 - 1 = 5 / 3\nSquaring, 7 + x / 7 - x = 25 / 9\n63 + 9x = 175 - 25x, so 34x = 112\nx = 56 / 17\nAns: (1)⁵6\n\n17",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Surds & Indices - Equations",
+        "conceptTested": "Application of Componendo and Dividendo rule to solve equations involving radical expressions.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Surds & Indices - Equations",
+          "conceptTested": "Application of Componendo and Dividendo rule to solve equations involving radical expressions.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -10857,6 +11017,70 @@
           "conceptTested": "Formulas for Curved Surface Area (2\\u03c0rh) and Volume (\\u03c0r^2h) of a right circular cylinder.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_26629b30e3",
+        "q_num": 205,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 17/09/2025 Shift-1 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:47",
+        "avgTime": "01:09",
+        "question": "If $a + b = 5$and$ab = 6$, find:$(a^3 + b^3)^2 - 9a^2b^2(a + b)^2$",
+        "options": {
+          "a": "-6875",
+          "b": "6875",
+          "c": "-3876",
+          "d": "3876"
+        },
+        "answer": "a",
+        "solution": "(a\n\n3 + b\n\n3)² - 9 / a\n\n2 / b\n\n2\n\n(a + b)² = (a\n\n3 + b\n\n3)² - [\n\n3 / a\n\nb (a + b)\n\n]\n\n2 / p\n\n2 - q\n\n2 = (p - q) (p + q), with\np = a / 3 + b / 3\n\nand\n\nq = 3\n\na / b (a + b)\n\na / 3 + b\n\n3 = 5 / 3 - 3 (6) (5) = 125 - 90 = 35\nand 3ab(a + b) = 3(6)(5) = 90\nValue = (35 - 90)(35 + 90) = (-55)(125)\nValue = -6875\nAns: (1) - 6875",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Algebraic Expressions & Identities",
+        "conceptTested": "Difference of squares identity: $p^2 - q^2 = (p - q)(p + q)$ and cubic sum expansion",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Algebraic Expressions & Identities",
+          "conceptTested": "Difference of squares identity: $p^2 - q^2 = (p - q)(p + q)$ and cubic sum expansion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_82e75fa72f",
+        "q_num": 206,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 19/09/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:28",
+        "avgTime": "00:34",
+        "question": "If $a^3 + b^3 = 35$and$ab = 6$, find the value of$a + b$.",
+        "options": {
+          "a": "5",
+          "b": "6",
+          "c": "7",
+          "d": "8"
+        },
+        "answer": "a",
+        "solution": "a / 3 + b\n\n3 = (a + b)³ - 3 / a\n\nb (a + b)\n\nLet a + b = s, then\n35 = s / 3 - 18 / s\nTrying s = 5: 125 - 90 = 35, which is correct\na + b = 5\nAns: (1) 5",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Symmetric Identities ($a^3 + b^3$)",
+        "conceptTested": "Application of the algebraic identity $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Symmetric Identities ($a^3 + b^3$)",
+          "conceptTested": "Application of the algebraic identity $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -13358,6 +13582,102 @@
           "topic": "Average",
           "subtopic": "Average of Multiples",
           "conceptTested": "The average of an arithmetic progression with an odd number of terms is the middle term.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8cc8cfdc3d",
+        "q_num": 81,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 14/10/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:41",
+        "avgTime": "00:50",
+        "question": "If $a^3 + b^3 = 407$and$a + b = 11$, find$ab$.",
+        "options": {
+          "a": "24",
+          "b": "26",
+          "c": "28",
+          "d": "22"
+        },
+        "answer": "c",
+        "solution": "a / 3 + b\n\n3 = (a + b)³ - 3 / a\n\nb\n\n(a + b)⁴07 = 11 / 3 - 3\na / b (11) = 1331 - 33 / a\n\nb\n\n33ab = 1331 - 407 = 924\n\na\n\nb = 28\nAns: (3) 28",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Cubic Algebraic Identities ($a^3+b^3$)",
+        "conceptTested": "Algebraic identity: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Cubic Algebraic Identities ($a^3+b^3$)",
+          "conceptTested": "Algebraic identity: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e2ace3a196",
+        "q_num": 82,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 18/09/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "01:27",
+        "avgTime": "01:19",
+        "question": "Given $x + \\frac{1}{x} = 4$, find the value of:$x^6 + \\frac{1}{x^6} - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$",
+        "options": {
+          "a": "2176",
+          "b": "2087",
+          "c": "2562",
+          "d": "2476"
+        },
+        "answer": "a",
+        "solution": "x / 2 + 1 / x\n\n2 = 4 / 2 - 2 = 14\n\nx / 4 + 1 / x\n\n4 = 14 / 2 - 2 = 194\n\nx / 6 + 1 / x\n\n6 = (x\n\n2 + 1 / x\n\n2)³ - 3 (x / 2 + 1 / x\n2) = 2744 - 42 = 2702\nValue = 2702 - 3(194) + 4(14) = 2702 - 582 + 56\nValue = 2176\nAns: (1) 2176",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Higher Powers of Reciprocal Equations",
+        "conceptTested": "Repeated application of $(x + \\frac{1}{x})^2$ and $(x + \\frac{1}{x})^3$ identities",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Higher Powers of Reciprocal Equations",
+          "conceptTested": "Repeated application of $(x + \\frac{1}{x})^2$ and $(x + \\frac{1}{x})^3$ identities",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cf9975858e",
+        "q_num": 83,
+        "mockId": "mock_1789652448592_r1bzp",
+        "testId": "mock_1789652448592_r1bzp",
+        "testName": "CGL 18/09/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "01:03",
+        "avgTime": "00:52",
+        "question": "Given, $\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = 3$, then what is the value of$x$?",
+        "options": {
+          "a": "3",
+          "b": "4",
+          "c": "5",
+          "d": "2"
+        },
+        "answer": "a",
+        "solution": "By componendo and dividendo, 5 + x / 5 - x = 3 + 1 / 3 - 1 = 2\nSquaring, 5 + x / 5 - x = 4\n5 + x = 20 - 4x, so 5x = 15\nx = 3\nAns: (1)³",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Surds & Indices - Equations",
+        "conceptTested": "Application of Componendo and Dividendo rule to solve equations involving radicals.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Surds & Indices - Equations",
+          "conceptTested": "Application of Componendo and Dividendo rule to solve equations involving radicals.",
           "difficulty": "medium"
         }
       }

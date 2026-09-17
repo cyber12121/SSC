@@ -566,7 +566,13 @@ Tasks for each question:
 2. "subtopic": Classify the granular subtopic or specific problem pattern (e.g. for Geometry: "Circles - Tangents & Secants" or "Triangles - Centroid & Similarity"; for Algebra: "Symmetric Identities (a³+b³+c³-3abc)"; for English: "Subject-Verb Agreement - Inversion" or "Active/Passive - Interrogative Sentences"; for Reasoning: "Missing Number Grid Matrix" or "Blood Relations - Coded Family Tree"; for Arithmetic: "Profit & Loss - Dishonest Dealer" or "Time & Work - Alternate Days").
 3. "conceptTested": A concise 1-sentence note of the exact mathematical theorem, grammatical rule, formula, or logical deduction tested (e.g. "Tangent-Secant Theorem: PT² = PA × PB", "Inversion of auxiliary verb after negative adverbials (Hardly/Scarcely)", "Cyclic quadrilateral opposite angles sum = 180°").
 4. "question": Clean and format the question prompt:
-   - Restore mathematical powers/exponents and superscripts (e.g., "31³ + 18³ - 37³ + 210" or "31^3 + 18^3 - 37^3 + 210", "x²" or "x^2").
+   - Always enclose all mathematical expressions, variables, formulas, equations, powers, and fractions in standard dollar signs ($...$ for inline math, $$...$$ for display equations). Never leave math expressions in raw unformatted text.
+   - ALGEBRA: Always format powers with carets inside math: $x^2$, $y^3$, $a^4$, $250x^3$, $270xy^2$, $(x + y)^3$. Format fractional powers and roots as $\sqrt{x}$, $\sqrt[3]{x}$, or $x^{1/3}$. Never write x2, y3, or root(x).
+   - SIMPLIFICATION & FRACTIONS (STRICT: NO TeX \\over): Always use standard LaTeX \\frac{numerator}{denominator} (e.g. $\\frac{21}{22}$, $\\frac{16}{25}$). NEVER output TeX "\\over", "\\\\over", or "\\(a\\over b\\)". Use proper math symbols: division $\\div$, multiplication $\\times$, plus/minus $\\pm$.
+   - PERCENTAGE & MIXED FRACTIONS: Combine mixed fractions and percentages into a single math token like $30\\frac{10}{13}\\%$ or $32\\frac{10}{13}\\%$. In LaTeX, "%" is a comment delimiter, so ALWAYS escape "%" inside $...$ as "\\%" (e.g. $44.44\\%$, $P\\%$, $(x + y + \\frac{xy}{100})\\%$).
+   - NO SCRAPER QUOTES: Never output literal backslash quotes like \\"A\\" or \\"word\\" in natural text. Write clean quotes: "A" or 'A'.
+   - UNITS & EXPONENTS: Format measurement units with clean Unicode superscripts: cm², cm³, m², m³, km². Never output broken text like "cm\\n3", "cm 3", or "cm^2".
+   - MULTI-LINE EQUATIONS: If tag-scraped math splits equations across vertical lines (numerator, line break, denominator), merge them back into a single clean horizontal equation before generating JSON.
    - Strip any leaked option choices that were pasted at the end of the question text.
    - Remove residual platform noise (like "Reattempt mode is Off", "Marks +2", "Report", "Save", language headers).
    - For Matrix / Number Grid / Missing Number questions: If numbers/items are listed vertically or in an unstructured plain list (e.g. 5 \n 7 \n 100 \n 8 \n 9 \n 181 \n 11 \n 10 \n ?), format them into a clean Markdown table with clear rows and columns representing the grid:
@@ -574,16 +580,17 @@ Tasks for each question:
      | 8 | 9 | 181 |
      | 11 | 10 | ? |
      Always classify the topic strictly as "Missing Number / Matrix".
-5. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable.
+5. "solution": Clean up the solution explanation (remove Hindi translation headers, footer UI buttons like "Previous/Next/Review", feedback surveys). Keep equations readable with standard LaTeX math ($...$). Ensure all fractions use \\frac and mixed percentages use $30\\frac{10}{13}\\%$.
 6. "correctOption": If the provided correctOption is "N/A", unknown, or invalid, analyze the question, options, and solution to determine the true correct option letter ("A", "B", "C", or "D"). If already a valid letter ("A", "B", "C", or "D"), confirm or correct it.
 7. "options": Clean and repair the 4 options (A, B, C, D):
+   - Apply the same LaTeX math rules to options: format fractions as $\\frac{a}{b}$ (never \\over), mixed percentages as $30\\frac{10}{13}\\%$, powers as $x^2$, $y^3$.
    - If any option is malformed, blank, 'N/A', contains repetitive labels (e.g. 'Option 1: Option 1'), has leaked question text, or has corrupted mathematical/LaTeX formatting, repair and restore the clean option text.
    - If options are completely missing or corrupted, deduce the 4 sensible answer choices from the question, problem context, and solution (ensuring the correct option letter strictly corresponds to the solution's answer).
    - Strip leading prefixes like "A.", "B.", "Option A:", "(a)", "(b)" from each option value.
    - Ensure all 4 options A, B, C, and D are returned cleanly.
 
 CRITICAL JSON FORMAT RULE:
-Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. In particular, any LaTeX or mathematical backslashes (like \\underline, \\frac, \\sqrt, \\alpha) MUST be double-escaped as \\\\underline, \\\\frac, etc. Do not output raw unescaped backslashes.
+Ensure all double-quotes (") and backslashes (\\) inside string values are properly escaped. In particular, any LaTeX or mathematical backslashes (like \\frac, \\sqrt, \\alpha, \\div, \\times) MUST be double-escaped as \\\\frac, \\\\sqrt, etc. Do not output raw unescaped backslashes.
 
 Questions to process:
 ${chunkQuestions.map((q, idx) => `[${idx}]
