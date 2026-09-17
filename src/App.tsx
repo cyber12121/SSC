@@ -960,8 +960,8 @@ export default function App() {
     if (!user) {
       const guestSaved = { ...fullResult, id: 'guest-' + Date.now() };
       try {
-        const guestHistory = JSON.parse(localStorage.getItem('guest_results') || '[]');
-        localStorage.setItem('guest_results', JSON.stringify([guestSaved, ...guestHistory].slice(0, 50)));
+        const guestHistory = JSON.parse(safeStorage.getItem('guest_results') || '[]');
+        safeStorage.setItem('guest_results', JSON.stringify([guestSaved, ...guestHistory].slice(0, 50)));
       } catch { }
       return guestSaved;
     }
@@ -976,12 +976,12 @@ export default function App() {
       setUserResults(prev => [saved, ...prev.filter(r => r.id !== saved.id)]);
       return saved;
     } catch (error) {
-      console.error('Error saving progress to Firestore:', error);
+      console.warn('Firestore offline or storage restricted, saving attempt locally:', error);
       // Fallback local storage so test attempt is never lost
       const localSaved = { ...fullResult, id: 'local-' + Date.now() };
       try {
-        const localHistory = JSON.parse(localStorage.getItem('offline_results_' + user.uid) || '[]');
-        localStorage.setItem('offline_results_' + user.uid, JSON.stringify([localSaved, ...localHistory].slice(0, 50)));
+        const localHistory = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
+        safeStorage.setItem('offline_results_' + user.uid, JSON.stringify([localSaved, ...localHistory].slice(0, 50)));
       } catch { }
       setUserResults(prev => [localSaved, ...prev.filter(r => r.id !== localSaved.id)]);
       return localSaved;
@@ -1615,6 +1615,47 @@ export default function App() {
                 </a>
               </div>
 
+              {/* Mobile Right Controls: Mode Toggle & Logout */}
+              <div className="flex items-center space-x-2 md:hidden">
+                <div className="flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-xs font-bold" title="Quiz mode">
+                  <button
+                    onClick={() => setQuizModePersisted('practice')}
+                    className={`px-2 py-1 rounded-md transition-all text-[11px] flex items-center ${quizMode === 'practice'
+                        ? 'bg-white text-emerald-600 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                      }`}
+                  >
+                    Practice
+                  </button>
+                  <button
+                    onClick={() => setQuizModePersisted('mock')}
+                    className={`px-2 py-1 rounded-md transition-all text-[11px] flex items-center ${quizMode === 'mock'
+                        ? 'bg-white text-red-600 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                      }`}
+                  >
+                    Mock
+                  </button>
+                </div>
+                {user ? (
+                  <button
+                    onClick={handleLogout}
+                    className="p-1.5 text-slate-500 hover:text-red-600 transition-colors"
+                    title="Logout"
+                  >
+                    <LogOut className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleLogin}
+                    className="p-1.5 text-blue-600 hover:text-blue-700 transition-colors"
+                    title="Login"
+                  >
+                    <LogIn className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+
               <div className="hidden md:flex items-center space-x-6">
                 <button
                   onClick={resetToHome}
@@ -1696,7 +1737,7 @@ export default function App() {
         </nav>
       )}
 
-      <main className={view === 'quiz' || view === 'review' ? 'w-full h-full overflow-hidden' : 'max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5'}>
+      <main className={view === 'quiz' || view === 'review' ? 'w-full h-full overflow-hidden' : 'max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 pb-24 md:pb-8'}>
         {loading ? (
           <div className="flex flex-col items-center justify-center py-28">
             <Loader2 className="w-10 h-10 text-blue-600 animate-spin mb-3" />
@@ -1713,64 +1754,98 @@ export default function App() {
               >
                 {!selectedSubject ? (
                   <>
-                    {/* Hero */}
-                    <section className="relative mb-3.5 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 px-4 py-3 sm:px-5 sm:py-3.5 shadow-xs">
-                      <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"></div>
-                      <div className="pointer-events-none absolute -bottom-24 left-8 h-72 w-72 rounded-full bg-fuchsia-400/20 blur-3xl"></div>
-                      <div className="relative flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                        <div className="max-w-xl">
-                          <span className="inline-flex items-center rounded-full bg-white/15 px-2 py-0.2 text-[10px] font-bold text-white ring-1 ring-white/20">
-                            SSC CGL Prep
-                          </span>
-                          <h1 className="mt-1 text-base sm:text-lg font-bold tracking-tight text-white">
-                            Practice smart. Beat the competition.
+                    {/* Calm Student Command Bar */}
+                    <section className="relative mb-4 overflow-hidden rounded-2xl bg-white border border-slate-200/90 p-4 sm:p-5 shadow-xs">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4">
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-2">
+                            <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-semibold text-indigo-700 border border-indigo-100">
+                              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></span>
+                              SSC CGL Prep Hub
+                            </span>
+                            {userResults.length > 0 && (
+                              <span className="text-xs text-slate-400 font-medium hidden sm:inline-block">
+                                • Last active: {userResults[0].subject}
+                              </span>
+                            )}
+                          </div>
+                          <h1 className="text-base sm:text-xl font-bold tracking-tight text-slate-900">
+                            What would you like to master today?
                           </h1>
-                          <p className="mt-0.5 text-xs text-indigo-100">
-                            Curated chapter banks and focused mock-error drills — pick a subject and start solving.
+                          <p className="text-xs sm:text-sm text-slate-500 font-normal">
+                            Choose between complete chapter banks or targeted error remediation drills.
                           </p>
                         </div>
-                        <div className="inline-flex shrink-0 rounded-lg border border-white/20 bg-white/10 p-0.5 backdrop-blur">
+
+                        {/* Category Mode Switcher */}
+                        <div className="inline-flex shrink-0 rounded-xl bg-slate-100 p-1 border border-slate-200">
                           <button
                             onClick={() => {
                               setCategory('chapterBank');
-                              // Reset sub-section selections so stale filters don't persist
                               setSelectedMathSection(null);
                               setSelectedEnglishSection(null);
                               setSelectedGKSubject(null);
                               setSelectedGKSubTopic('all');
                               setSelectedTopic(null);
                             }}
-                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
-                              }`}
+                            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+                              category === 'chapterBank'
+                                ? 'bg-white text-slate-900 shadow-xs font-bold'
+                                : 'text-slate-600 hover:text-slate-900'
+                            }`}
                           >
-                            <ListChecks className="w-3.5 h-3.5 mr-1" />
-                            Chapter Bank
+                            <ListChecks className="w-4 h-4 text-indigo-600" />
+                            <span>Chapter Bank</span>
                           </button>
                           <button
                             onClick={() => {
                               setCategory('mockErrors');
-                              // Reset sub-section selections so stale filters don't persist
                               setSelectedMathSection(null);
                               setSelectedEnglishSection(null);
                               setSelectedGKSubject(null);
                               setSelectedGKSubTopic('all');
                               setSelectedTopic(null);
                             }}
-                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
-                              }`}
+                            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+                              category === 'mockErrors'
+                                ? 'bg-white text-slate-900 shadow-xs font-bold'
+                                : 'text-slate-600 hover:text-slate-900'
+                            }`}
                           >
-                            <AlertCircle className="w-3.5 h-3.5 mr-1" />
-                            Mock Errors
+                            <AlertCircle className="w-4 h-4 text-rose-600" />
+                            <span>Mock Errors</span>
                           </button>
                         </div>
                       </div>
+
+                      {/* Quick Resume Strip */}
+                      {userResults.length > 0 && (
+                        <div className="mt-3.5 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs">
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className="text-slate-400 font-medium shrink-0">Recent activity:</span>
+                            <span className="font-semibold text-slate-800 truncate max-w-[200px] sm:max-w-md">
+                              {userResults[0].chapter_title}
+                            </span>
+                            <span className="text-[11px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 font-bold shrink-0">
+                              {userResults[0].score}/{userResults[0].totalQuestions} correct
+                            </span>
+                          </div>
+                          <button
+                            onClick={() => openReview(userResults[0], 'home')}
+                            className="text-xs font-semibold text-indigo-600 hover:text-indigo-700 flex items-center gap-1 transition-colors ml-auto cursor-pointer"
+                          >
+                            <span>Review Attempt</span>
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      )}
                     </section>
 
-                    {/* Subjects: 4 Columns on desktop for perfect balance */}
+                    {/* Subjects: 4 Columns on desktop with calm, clear cards */}
                     {dataLoading ? (
-                      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
                         {[1, 2, 3, 4].map((i) => (
-                          <div key={i} className="h-28 rounded-xl border border-slate-200 bg-white p-3 animate-pulse">
+                          <div key={i} className="h-32 rounded-xl border border-slate-200 bg-white p-3.5 animate-pulse">
                             <div className="flex items-center justify-between">
                               <div className="h-8 w-8 rounded-lg bg-slate-100" />
                               <div className="h-4 w-12 rounded bg-slate-100" />
@@ -1781,19 +1856,57 @@ export default function App() {
                         ))}
                       </div>
                     ) : (
-                      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
                         {Object.keys(currentData)
                           .filter(s => s !== 'GK Full Tests')
                           .map((subject) => {
-                            const chip = (
-                              {
-                                Mathematics: 'from-blue-500 to-indigo-600',
-                                Reasoning: 'from-violet-500 to-purple-600',
-                                English: 'from-emerald-500 to-teal-600',
-                                'General Awareness': 'from-amber-500 to-orange-600',
-                                'GK/GS': 'from-pink-500 to-rose-600',
-                              } as Record<string, string>
-                            )[subject] || 'from-slate-500 to-slate-600';
+                            const config = ({
+                              Mathematics: {
+                                icon: Calculator,
+                                iconBg: 'bg-blue-50 text-blue-600 border-blue-100',
+                                hoverBorder: 'hover:border-blue-300',
+                                desc: 'Arithmetic & Advanced sets',
+                                accent: 'text-blue-600',
+                              },
+                              Reasoning: {
+                                icon: Compass,
+                                iconBg: 'bg-violet-50 text-violet-600 border-violet-100',
+                                hoverBorder: 'hover:border-violet-300',
+                                desc: 'Verbal, Logic & Analogies',
+                                accent: 'text-violet-600',
+                              },
+                              English: {
+                                icon: BookOpen,
+                                iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-100',
+                                hoverBorder: 'hover:border-emerald-300',
+                                desc: 'Grammar & Ayush Vocab 2025',
+                                accent: 'text-emerald-600',
+                              },
+                              'General Awareness': {
+                                icon: Globe2,
+                                iconBg: 'bg-amber-50 text-amber-600 border-amber-100',
+                                hoverBorder: 'hover:border-amber-300',
+                                desc: 'Polity, History, Science & Tests',
+                                accent: 'text-amber-600',
+                              },
+                              'GK/GS': {
+                                icon: Globe2,
+                                iconBg: 'bg-rose-50 text-rose-600 border-rose-100',
+                                hoverBorder: 'hover:border-rose-300',
+                                desc: 'Comprehensive GS Vault',
+                                accent: 'text-rose-600',
+                              },
+                            } as Record<string, any>)[subject] || {
+                              icon: Layers,
+                              iconBg: 'bg-slate-50 text-slate-600 border-slate-100',
+                              hoverBorder: 'hover:border-slate-300',
+                              desc: 'Subject Question Bank',
+                              accent: 'text-slate-600',
+                            };
+
+                            const SubjectIcon = config.icon;
+                            const chapterCount = currentData[subject]?.length || 0;
+
                             return (
                               <motion.div
                                 key={subject}
@@ -1812,12 +1925,13 @@ export default function App() {
                                   }
                                   setSelectedTopic(null);
                                 }}
-                                className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs flex flex-col justify-between"
+                                className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/90 bg-white p-3.5 transition-all duration-200 hover:shadow-sm ${config.hoverBorder} shadow-2xs flex flex-col justify-between`}
                               >
                                 <div>
+                                  {/* Header Row: Icon + Count + AI Action */}
                                   <div className="flex items-center justify-between">
-                                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
-                                      <Layers className="w-4 h-4" />
+                                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg border ${config.iconBg} shadow-2xs`}>
+                                      <SubjectIcon className="w-4 h-4" />
                                     </div>
                                     <div className="flex items-center gap-1.5">
                                       <button
@@ -1825,72 +1939,85 @@ export default function App() {
                                           e.stopPropagation();
                                           handleAskAiSubject(subject);
                                         }}
-                                        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all cursor-pointer shadow-2xs"
-                                        title={`Ask Tommy AI to analyze ${subject} weaknesses and mistakes`}
+                                        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-50 hover:bg-violet-50 hover:text-violet-700 text-slate-600 border border-slate-200 transition-all cursor-pointer"
+                                        title={`Ask Tommy AI to analyze ${subject}`}
                                       >
-                                        <Sparkles className="w-2.5 h-2.5" />
-                                        <span>Ask AI</span>
+                                        <Sparkles className="w-2.5 h-2.5 text-violet-500" />
+                                        <span>AI Tutor</span>
                                       </button>
-                                      <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
-                                        {currentData[subject]?.length || 0} Ch
+                                      <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-bold text-slate-500 border border-slate-100">
+                                        {chapterCount} Ch
                                       </span>
                                     </div>
                                   </div>
-                                  <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
-                                  <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
-                                    View Chapters
-                                    <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+
+                                  {/* Subject Title & Subtitle */}
+                                  <div className="mt-2.5">
+                                    <h3 className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                      {subject}
+                                    </h3>
+                                    <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                                      {config.desc}
+                                    </p>
                                   </div>
                                 </div>
 
-                                {subject === 'General Awareness' && (
-                                  <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
-                                    {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').map((sub) => (
+                                {/* Contextual Shortcuts */}
+                                <div className="mt-3 pt-2.5 border-t border-slate-100">
+                                  {subject === 'General Awareness' && (
+                                    <div className="flex flex-wrap gap-1 mb-2">
+                                      {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').slice(0, 4).map((sub) => (
+                                        <button
+                                          key={sub.id}
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedSubject('General Awareness');
+                                            setSelectedGKSubject(sub.id);
+                                            setSelectedGKSubTopic('all');
+                                          }}
+                                          className="px-1.5 py-0.5 rounded text-[9px] font-medium bg-slate-50 hover:bg-amber-50 hover:text-amber-700 text-slate-600 border border-slate-100 transition-colors"
+                                          title={`Open ${sub.title}`}
+                                        >
+                                          {sub.shortTitle}
+                                        </button>
+                                      ))}
+                                    </div>
+                                  )}
+
+                                  {subject === 'English' && (
+                                    <div className="flex flex-wrap gap-1 mb-2">
                                       <button
-                                        key={sub.id}
                                         onClick={(e) => {
                                           e.stopPropagation();
-                                          setSelectedSubject('General Awareness');
-                                          setSelectedGKSubject(sub.id);
-                                          setSelectedGKSubTopic('all');
+                                          setSelectedSubject('English');
+                                          setSelectedEnglishSection('ayush_vocab');
+                                          setSelectedTopic(null);
                                         }}
-                                        className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
-                                        title={`Open ${sub.title}`}
+                                        className="px-1.5 py-0.5 rounded text-[9px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 transition-colors"
+                                        title="Open SSC 2025 Vocabs by Ayush"
                                       >
-                                        {sub.shortTitle}
+                                        Vocab 2025 ({(bankData['English'] || []).filter(ch => ch.section === 'ayush_vocab').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
                                       </button>
-                                    ))}
-                                  </div>
-                                )}
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSelectedSubject('English');
+                                          setSelectedEnglishSection('general');
+                                          setSelectedTopic(null);
+                                        }}
+                                        className="px-1.5 py-0.5 rounded text-[9px] font-medium bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-100 transition-colors"
+                                        title="Open Grammar"
+                                      >
+                                        Grammar
+                                      </button>
+                                    </div>
+                                  )}
 
-                                {subject === 'English' && (
-                                  <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setSelectedSubject('English');
-                                        setSelectedEnglishSection('ayush_vocab');
-                                        setSelectedTopic(null);
-                                      }}
-                                      className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 transition-colors"
-                                      title="Open SSC 2025 Vocabs by Ayush"
-                                    >
-                                      Vocab 2025 ({(bankData['English'] || []).filter(ch => ch.section === 'ayush_vocab').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
-                                    </button>
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setSelectedSubject('English');
-                                        setSelectedEnglishSection('general');
-                                        setSelectedTopic(null);
-                                      }}
-                                      className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
-                                      title="Open Grammar & Practice"
-                                    >
-                                      Grammar
-                                    </button>
+                                  <div className="flex items-center justify-between text-xs font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors">
+                                    <span>Explore Chapters</span>
+                                    <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                                   </div>
-                                )}
+                                </div>
                               </motion.div>
                             );
                           })}
@@ -1898,28 +2025,30 @@ export default function App() {
                     )}
 
                     {/* ─── High-Yield Practice Hub & Feature Cards ─── */}
-                    <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2.5">
+                    <div className="mt-3.5 grid grid-cols-1 md:grid-cols-2 gap-3">
                       {/* Speed Drill */}
                       <div
                         onClick={() => setView('drill')}
-                        className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-amber-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
+                        className="group bg-white rounded-xl p-3.5 border border-slate-200/90 shadow-2xs hover:border-amber-300 hover:shadow-xs transition-all cursor-pointer flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between">
-                          <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100 group-hover:scale-105 transition-transform">
-                            <Zap className="w-3.5 h-3.5 fill-amber-500/20 text-amber-600" />
+                          <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100 group-hover:scale-105 transition-transform">
+                            <Zap className="w-4 h-4 fill-amber-500/20 text-amber-600" />
                           </div>
-                          <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">
                             Speed Studio
                           </span>
                         </div>
-                        <div className="mt-2">
-                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Calculation & Speed Drill</h4>
-                          <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
-                            Powers, cubes, fraction conversions, and Pythagorean triplets calculation drill.
+                        <div className="mt-2.5">
+                          <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
+                            Calculation &amp; Speed Drill
+                          </h4>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Rapid-fire drills for squares, cubes, fractions, percentages, and Pythagorean triplets.
                           </p>
                         </div>
-                        <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-amber-600">
-                          <span>Open Studio</span>
+                        <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-600">
+                          <span>Open Speed Studio</span>
                           <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </div>
                       </div>
@@ -1927,39 +2056,41 @@ export default function App() {
                       {/* Bookmarks */}
                       <div
                         onClick={() => setView('bookmarks')}
-                        className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-blue-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
+                        className="group bg-white rounded-xl p-3.5 border border-slate-200/90 shadow-2xs hover:border-blue-300 hover:shadow-xs transition-all cursor-pointer flex flex-col justify-between"
                       >
                         <div className="flex items-start justify-between">
-                          <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100 group-hover:scale-105 transition-transform">
-                            <BookmarkIcon className="w-3.5 h-3.5 fill-blue-500/20 text-blue-600" />
+                          <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100 group-hover:scale-105 transition-transform">
+                            <BookmarkIcon className="w-4 h-4 fill-blue-500/20 text-blue-600" />
                           </div>
-                          <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
-                            Saved Vault
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
+                            {bookmarks.length} Saved
                           </span>
                         </div>
-                        <div className="mt-2">
-                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-blue-700 transition-colors">Bookmarked Questions</h4>
-                          <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
-                            Quick-revision bank of tricky questions, formula tricks, and flagged problems.
+                        <div className="mt-2.5">
+                          <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
+                            Bookmarked Question Vault
+                          </h4>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Personal collection of tricky problems, formula shortcuts, and questions flagged for quick revision.
                           </p>
                         </div>
-                        <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-blue-600">
-                          <span>Review Vault</span>
+                        <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                          <span>Review Saved Vault</span>
                           <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </div>
                       </div>
                     </div>
 
                     {/* ─── Recent Activity & Prep Readiness ─── */}
-                    <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-2.5">
+                    <div className="mt-3.5 grid grid-cols-1 lg:grid-cols-3 gap-3">
                       {/* Left: Recent Activity or Starter Chapters (2 cols) */}
-                      <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs">
-                        <div className="flex items-center justify-between mb-2.5">
+                      <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200/90 p-4 shadow-2xs">
+                        <div className="flex items-center justify-between mb-3">
                           <div className="flex items-center gap-2">
                             <div className="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
                               <History className="w-3.5 h-3.5" />
                             </div>
-                            <h4 className="text-xs font-bold text-slate-900">
+                            <h4 className="text-xs sm:text-sm font-bold text-slate-900">
                               {userResults.length > 0 ? 'Recent Practice Activity' : 'Recommended Starting Chapters'}
                             </h4>
                           </div>
@@ -1968,15 +2099,15 @@ export default function App() {
                               <button
                                 onClick={handleClearAllResults}
                                 disabled={loadingResults}
-                                className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 disabled:opacity-50"
+                                className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 disabled:opacity-50 cursor-pointer"
                                 title="Clear all recent activity"
                               >
                                 <Trash2 className="w-3 h-3" />
-                                Clear History
+                                Clear
                               </button>
                               <button
                                 onClick={() => setView('dashboard')}
-                                className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
+                                className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 transition-colors cursor-pointer"
                               >
                                 View All ({userResults.length}) →
                               </button>
@@ -1989,20 +2120,20 @@ export default function App() {
                             {userResults.slice(0, 4).map((r, idx) => {
                               const acc = r.totalQuestions > 0 ? Math.round((r.score / r.totalQuestions) * 100) : 0;
                               return (
-                                <div key={idx} className="py-2 flex items-center justify-between gap-2.5">
-                                  <div className="min-w-0 flex items-center gap-2">
-                                    <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-slate-100 text-slate-700">
+                                <div key={idx} className="py-2.5 flex items-center justify-between gap-2.5">
+                                  <div className="min-w-0 flex items-center gap-2.5">
+                                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 shrink-0">
                                       {r.subject}
                                     </span>
                                     <div className="min-w-0">
-                                      <p className="text-xs font-semibold text-slate-800 truncate">{r.chapter_title}</p>
+                                      <p className="text-xs sm:text-sm font-semibold text-slate-800 truncate">{r.chapter_title}</p>
                                       <p className="text-[10px] text-slate-400">
                                         {r.score}/{r.totalQuestions} correct • {r.mode === 'mock' ? 'Mock Mode' : 'Practice'}
                                       </p>
                                     </div>
                                   </div>
                                   <div className="flex items-center gap-2 shrink-0">
-                                    <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-md ${acc >= 75 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
+                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${acc >= 75 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
                                         acc >= 50 ? 'bg-amber-50 text-amber-700 border border-amber-200' :
                                           'bg-rose-50 text-rose-700 border border-rose-200'
                                       }`}>
@@ -2010,7 +2141,7 @@ export default function App() {
                                     </span>
                                     <button
                                       onClick={() => openReview(r, 'home')}
-                                      className="text-xs font-semibold text-slate-600 hover:text-indigo-600 px-2 py-0.5 bg-slate-50 hover:bg-indigo-50 rounded-md transition-colors"
+                                      className="text-xs font-semibold text-slate-600 hover:text-indigo-600 px-2.5 py-1 bg-slate-50 hover:bg-indigo-50 rounded-md transition-colors cursor-pointer"
                                     >
                                       Review
                                     </button>
@@ -2032,9 +2163,9 @@ export default function App() {
                                 <div
                                   key={idx}
                                   onClick={() => setSelectedSubject(s.sub)}
-                                  className="p-2 rounded-lg border border-slate-100 hover:border-slate-300 hover:bg-slate-50/70 transition-all cursor-pointer flex items-center justify-between group"
+                                  className="p-2.5 rounded-lg border border-slate-100 hover:border-slate-300 hover:bg-slate-50/70 transition-all cursor-pointer flex items-center justify-between group"
                                 >
-                                  <div className="flex items-center gap-2 min-w-0">
+                                  <div className="flex items-center gap-2.5 min-w-0">
                                     <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${s.color}`}>
                                       <SIcon className="w-3.5 h-3.5" />
                                     </div>
@@ -2052,46 +2183,46 @@ export default function App() {
                       </div>
 
                       {/* Right: Prep Readiness Summary (1 col) */}
-                      <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-xs flex flex-col justify-between">
+                      <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-2xs flex flex-col justify-between">
                         <div>
-                          <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center justify-between mb-2.5">
                             <div className="flex items-center gap-1.5">
                               <div className="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
                                 <Target className="w-3.5 h-3.5" />
                               </div>
-                              <h4 className="text-xs font-bold text-slate-900">Exam Readiness</h4>
+                              <h4 className="text-xs sm:text-sm font-bold text-slate-900">Exam Readiness</h4>
                             </div>
-                            <span className="text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded">
+                            <span className="text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
                               SSC CGL
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-2 gap-1.5 mt-1.5">
-                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                          <div className="grid grid-cols-2 gap-2 mt-2">
+                            <div className="bg-slate-50/80 px-3 py-2 rounded-lg border border-slate-100">
                               <span className="text-[9px] font-bold text-slate-400 uppercase">Solved</span>
                               <p className="text-base font-bold text-slate-900 mt-0.5">{dashboardStats.totalQuestions}</p>
                             </div>
-                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                            <div className="bg-slate-50/80 px-3 py-2 rounded-lg border border-slate-100">
                               <span className="text-[9px] font-bold text-slate-400 uppercase">Accuracy</span>
                               <p className="text-base font-bold text-emerald-600 mt-0.5">{dashboardStats.overallAccuracy}%</p>
                             </div>
-                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                            <div className="bg-slate-50/80 px-3 py-2 rounded-lg border border-slate-100">
                               <span className="text-[9px] font-bold text-slate-400 uppercase">Quizzes</span>
                               <p className="text-base font-bold text-indigo-600 mt-0.5">{dashboardStats.totalQuizzes}</p>
                             </div>
-                            <div className="bg-slate-50/80 px-2.5 py-1.5 rounded-lg border border-slate-100">
+                            <div className="bg-slate-50/80 px-3 py-2 rounded-lg border border-slate-100">
                               <span className="text-[9px] font-bold text-slate-400 uppercase">Avg Time</span>
                               <p className="text-base font-bold text-amber-600 mt-0.5">{dashboardStats.avgTimePerQ}s</p>
                             </div>
                           </div>
                         </div>
 
-                        <div className="mt-2.5 pt-2 border-t border-slate-100">
+                        <div className="mt-3 pt-2.5 border-t border-slate-100">
                           <button
                             onClick={() => setView('dashboard')}
-                            className="w-full py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
+                            className="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
                           >
-                            <LayoutDashboard className="w-3 h-3" />
+                            <LayoutDashboard className="w-3.5 h-3.5" />
                             Open Detailed Analytics
                           </button>
                         </div>
@@ -3723,6 +3854,57 @@ export default function App() {
           onStartQuiz={startQuiz}
         />
       </main>
+
+      {/* Mobile Bottom Navigation Bar */}
+      {view !== 'quiz' && view !== 'review' && (
+        <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-1.5 flex items-center justify-around shadow-lg">
+          <button
+            onClick={resetToHome}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'home' ? 'text-blue-600 bg-blue-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <BookOpen className="w-4 h-4 mb-0.5" />
+            <span>Practice</span>
+          </button>
+          <button
+            onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'drill' ? 'text-blue-600 bg-blue-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <Zap className="w-4 h-4 mb-0.5" />
+            <span>Drills</span>
+          </button>
+          <button
+            onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'bookmarks' ? 'text-blue-600 bg-blue-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <BookmarkIcon className="w-4 h-4 mb-0.5" />
+            <span>Saved ({bookmarks.length})</span>
+          </button>
+          <button
+            onClick={() => setView('dashboard')}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'dashboard' ? 'text-blue-600 bg-blue-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <LayoutDashboard className="w-4 h-4 mb-0.5" />
+            <span>Analytics</span>
+          </button>
+          <button
+            onClick={() => setView('mockScores')}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'mockScores' ? 'text-blue-600 bg-blue-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <Trophy className="w-4 h-4 mb-0.5" />
+            <span>Scores</span>
+          </button>
+        </nav>
+      )}
 
       {/* Floating Tommy AI Assistant - enabled in practice mode solutions and across all portal views; hidden only during timed mock exam */}
       {(view !== 'quiz' || quizMode === 'practice') && (

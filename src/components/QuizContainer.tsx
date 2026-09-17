@@ -581,120 +581,20 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   // Keep handleSubmitTestRef pointing at the latest version on every render
   handleSubmitTestRef.current = handleSubmitTest;
 
-  /* ── SCORE SCREEN ── */
-  if (isFinished) {
-    const score = calculateScore();
-    const totalTime = (Object.values(timeSpent) as number[]).reduce((a, t) => a + t, 0);
-    const attempted = Object.keys(answers).length;
-    const wrong = attempted - score;
-    const accuracy = attempted > 0 ? Math.round((score / attempted) * 100) : 0;
-    const results = buildResults();
-    const activeResult: QuizResult = submittedResult || {
-      ...results,
-      id: 'local-' + Date.now(),
-      userId: '',
-      completedAt: new Date().toISOString()
-    };
-
-    return (
-      <div className="flex items-center justify-center min-h-screen p-4 bg-[#f4f7f9]">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200"
-        >
-          <div className="w-16 h-16 bg-cyan-50 text-[#0097a7] rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
-            <Trophy className="w-8 h-8" />
-          </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-1">
-            {mode === 'practice' ? 'Practice Session Completed!' : 'Test Submitted!'}
-          </h2>
-          <p className="text-gray-500 text-sm mb-6">
-            {mode === 'practice' ? 'You practiced ' : 'You completed '}
-            <span className="font-semibold text-gray-700">{chapter.chapter_title}</span>
-          </p>
-
-          <div className="grid grid-cols-2 gap-3 mb-6 text-left">
-            <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
-              <span className="text-xs font-semibold text-emerald-700 uppercase">Correct</span>
-              <div className="text-2xl font-bold text-emerald-800 mt-1">{score}/{totalQuestions}</div>
-            </div>
-            <div className="bg-red-50 p-4 rounded-xl border border-red-100">
-              <span className="text-xs font-semibold text-red-700 uppercase">Wrong</span>
-              <div className="text-2xl font-bold text-red-800 mt-1">{wrong}</div>
-            </div>
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-              <span className="text-xs font-semibold text-blue-700 uppercase">Accuracy</span>
-              <div className="text-2xl font-bold text-blue-800 mt-1">{accuracy}%</div>
-            </div>
-            <div className="bg-purple-50 p-4 rounded-xl border border-purple-100">
-              <span className="text-xs font-semibold text-purple-700 uppercase">Total Time</span>
-              <div className="text-xl font-bold text-purple-800 mt-1">{Math.floor(totalTime / 60)}m {totalTime % 60}s</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {onReviewAttempt && (
-              <button
-                onClick={() => onReviewAttempt(activeResult)}
-                className="py-3 bg-[#0097a7] hover:bg-[#00838f] text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
-              >
-                <BookOpen className="w-4 h-4 mr-2" />Review Questions
-              </button>
-            )}
-            <button
-              onClick={handleReattempt}
-              className="py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
-            >
-              <RotateCcw className="w-4 h-4 mr-2" />Reattempt
-            </button>
-            <button
-              onClick={onExit}
-              className="py-3 bg-slate-800 hover:bg-black text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow"
-            >
-              <CornerDownLeft className="w-4 h-4 mr-2" />Back to Chapters
-            </button>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
-
-  if (!questions || questions.length === 0) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-slate-50 text-center">
-        <div className="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mb-4 border border-rose-200 shadow-sm">
-          <Trash2 className="w-8 h-8" />
-        </div>
-        <h3 className="text-xl font-bold text-gray-800 mb-2">No Questions Remaining</h3>
-        <p className="text-gray-500 text-sm max-w-md mb-6">
-          All questions in this chapter or test have been deleted.
-        </p>
-        <button
-          onClick={onExit}
-          className="px-6 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold text-sm rounded-lg transition-colors flex items-center gap-2 shadow-sm cursor-pointer"
-        >
-          <CornerDownLeft className="w-4 h-4" />
-          <span>Back to Chapters</span>
-        </button>
-      </div>
-    );
-  }
-
   const currentQuestion = questions[currentIdx] || questions[0];
   const activeSection = sections[activeSectionIdx] || sections[0];
-  const sectionQuestions = questions.slice(activeSection.startIndex, activeSection.endIndex);
+  const sectionQuestions = activeSection ? questions.slice(activeSection.startIndex, activeSection.endIndex) : [];
 
   // Section Analysis stats (matches the screenshot: PART-A Analysis)
-  const sectionAnswered = sectionQuestions.filter((_, i) => !!answers[activeSection.startIndex + i]).length;
-  const sectionMarked = sectionQuestions.filter((_, i) => markedForReview.has(activeSection.startIndex + i)).length;
+  const sectionAnswered = activeSection ? sectionQuestions.filter((_, i) => !!answers[activeSection.startIndex + i]).length : 0;
+  const sectionMarked = activeSection ? sectionQuestions.filter((_, i) => markedForReview.has(activeSection.startIndex + i)).length : 0;
   const sectionNotAnswered = sectionQuestions.length - sectionAnswered;
 
   // Overall stats for submission modal
   const stats = {
     answered: Object.keys(answers).length,
     marked: markedForReview.size,
-    notAttempted: totalQuestions - Object.keys(answers).length,
+    notAttempted: Math.max(0, totalQuestions - Object.keys(answers).length),
   };
 
   // Practice mode stats
@@ -702,9 +602,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const answeredPractice = Object.keys(answers).length;
   const wrongPractice = answeredPractice - scorePractice;
   const accuracyPractice = answeredPractice > 0 ? Math.round((scorePractice / answeredPractice) * 100) : 0;
-  const unattemptedPractice = totalQuestions - answeredPractice;
+  const unattemptedPractice = Math.max(0, totalQuestions - answeredPractice);
 
-  const correctOptionKey = getCorrectAnswer(currentQuestion);
+  const correctOptionKey = currentQuestion ? getCorrectAnswer(currentQuestion) : '';
   const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
 
   const getFormattedSolution = () => {
@@ -713,7 +613,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   // Question numbering within section (e.g. Question No. 2)
-  const questionNumberInSection = currentIdx - activeSection.startIndex + 1;
+  const questionNumberInSection = activeSection ? currentIdx - activeSection.startIndex + 1 : currentIdx + 1;
 
   // Extract bilingual text safely without splitting math
   const getQuestionText = () => {
@@ -845,6 +745,106 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     answers,
     isSolutionOpen
   ]);
+
+  /* ── SCORE SCREEN ── */
+  if (isFinished) {
+    const score = calculateScore();
+    const totalTime = (Object.values(timeSpent) as number[]).reduce((a, t) => a + t, 0);
+    const attempted = Object.keys(answers).length;
+    const wrong = attempted - score;
+    const accuracy = attempted > 0 ? Math.round((score / attempted) * 100) : 0;
+    const results = buildResults();
+    const activeResult: QuizResult = submittedResult || {
+      ...results,
+      id: 'local-' + Date.now(),
+      userId: '',
+      completedAt: new Date().toISOString()
+    };
+
+    return (
+      <div className="flex items-center justify-center min-h-screen p-4 bg-[#f4f7f9]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200"
+        >
+          <div className="w-16 h-16 bg-cyan-50 text-[#0097a7] rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
+            <Trophy className="w-8 h-8" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-1">
+            {mode === 'practice' ? 'Practice Session Completed!' : 'Test Submitted!'}
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            {mode === 'practice' ? 'You practiced ' : 'You completed '}
+            <span className="font-semibold text-gray-700">{chapter.chapter_title}</span>
+          </p>
+
+          <div className="grid grid-cols-2 gap-3 mb-6 text-left">
+            <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+              <span className="text-xs font-semibold text-emerald-700 uppercase">Correct</span>
+              <div className="text-2xl font-bold text-emerald-800 mt-1">{score}/{totalQuestions}</div>
+            </div>
+            <div className="bg-red-50 p-4 rounded-xl border border-red-100">
+              <span className="text-xs font-semibold text-red-700 uppercase">Wrong</span>
+              <div className="text-2xl font-bold text-red-800 mt-1">{wrong}</div>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
+              <span className="text-xs font-semibold text-blue-700 uppercase">Accuracy</span>
+              <div className="text-2xl font-bold text-blue-800 mt-1">{accuracy}%</div>
+            </div>
+            <div className="bg-purple-50 p-4 rounded-xl border border-purple-100">
+              <span className="text-xs font-semibold text-purple-700 uppercase">Total Time</span>
+              <div className="text-xl font-bold text-purple-800 mt-1">{Math.floor(totalTime / 60)}m {totalTime % 60}s</div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {onReviewAttempt && (
+              <button
+                onClick={() => onReviewAttempt(activeResult)}
+                className="py-3 bg-[#0097a7] hover:bg-[#00838f] text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
+              >
+                <BookOpen className="w-4 h-4 mr-2" />Review Questions
+              </button>
+            )}
+            <button
+              onClick={handleReattempt}
+              className="py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4 mr-2" />Reattempt
+            </button>
+            <button
+              onClick={onExit}
+              className="py-3 bg-slate-800 hover:bg-black text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
+            >
+              <CornerDownLeft className="w-4 h-4 mr-2" />Back to Chapters
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-slate-50 text-center">
+        <div className="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mb-4 border border-rose-200 shadow-sm">
+          <Trash2 className="w-8 h-8" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-800 mb-2">No Questions Remaining</h3>
+        <p className="text-gray-500 text-sm max-w-md mb-6">
+          All questions in this chapter or test have been deleted.
+        </p>
+        <button
+          onClick={onExit}
+          className="px-6 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold text-sm rounded-lg transition-colors flex items-center gap-2 shadow-sm cursor-pointer"
+        >
+          <CornerDownLeft className="w-4 h-4" />
+          <span>Back to Chapters</span>
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-screen w-full bg-white text-gray-900 select-none overflow-hidden font-sans">
@@ -1080,11 +1080,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
               className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
-              title="Previous question (← or J)"
+              title="Previous question"
             >
               <ChevronLeft className="w-4 h-4" />
               <span>Previous</span>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-white border border-gray-300 rounded text-gray-600 shadow-2xs">← / J</kbd>
             </button>
 
             <button
@@ -1094,13 +1093,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   ? 'bg-amber-500 text-white hover:bg-amber-600'
                   : 'bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100'
               }`}
-              title="Toggle solution visibility (S)"
+              title="Toggle solution visibility"
             >
               {isSolutionOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5 text-amber-600" />}
               <span>{isSolutionOpen ? 'Hide Solution' : 'Show Solution'}</span>
-              <kbd className={`hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono rounded shadow-2xs ${
-                isSolutionOpen ? 'bg-amber-600 text-white border border-amber-400' : 'bg-white text-amber-900 border border-amber-300'
-              }`}>S</kbd>
             </button>
 
             <button
@@ -1112,10 +1108,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 }
               }}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded transition-colors shadow-2xs cursor-pointer flex items-center gap-1.5"
-              title="Next question (→ or K)"
+              title="Next question"
             >
               <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-indigo-500 text-white border border-indigo-400 rounded shadow-2xs">→ / K</kbd>
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
@@ -1126,7 +1121,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
               className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap flex items-center gap-1"
-              title="Previous question (← or J)"
+              title="Previous question"
             >
               <span>Previous</span>
             </button>
@@ -1140,7 +1135,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             <button
               onClick={handleSaveAndNext}
               className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap flex items-center gap-1"
-              title="Save response & go to next (→ or K)"
+              title="Save response & go to next"
             >
               <span>Save &amp; Next</span>
             </button>

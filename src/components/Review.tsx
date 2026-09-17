@@ -1591,11 +1591,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   {currentMarks}
                 </span>
               </div>
-
-              {/* Platform % Correct Badge */}
-              <span className="bg-[#2e7d32] text-white text-xs font-medium px-2 py-0.5 rounded">
-                {accuracyPercent}% answered correctly
-              </span>
             </div>
 
             {/* Save & Report Actions */}
@@ -1702,16 +1697,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                                 <FormattedText text={optText} language={language} />
                               </span>
                             </div>
-                            <div className="flex items-center space-x-2 shrink-0 ml-3">
-                              {userSelected && (
+                            {userSelected && (
+                              <div className="flex items-center space-x-2 shrink-0 ml-3">
                                 <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm whitespace-nowrap">
                                   Your first attempt
                                 </span>
-                              )}
-                              <span className="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-sm whitespace-nowrap">
-                                {accuracyPercent}% answered correctly
-                              </span>
-                            </div>
+                              </div>
+                            )}
                           </div>
                         );
                       }
@@ -1780,9 +1772,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                               <FormattedText text={optText} language={language} />
                             </span>
                           </div>
-                          <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-0.5 rounded shrink-0">
-                            {accuracyPercent}% answered correctly
-                          </span>
                         </div>
                       );
                     }
@@ -2136,17 +2125,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               onClick={handlePrevious}
               disabled={currentIdx === 0}
               className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-4 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
-              title="Previous question (← or J)"
+              title="Previous question"
             >
               <span>Previous</span>
-              <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-white/80 border border-[#81d4fa] rounded text-[#01579b] shadow-2xs">← / J</kbd>
             </button>
 
             {/* Practice Mode (Hide Solutions) Toggle Switch */}
             <div className="flex items-center space-x-3">
               <span className="text-xs font-semibold text-gray-700 flex items-center gap-1.5">
                 Practice Mode (Hide Solutions)
-                <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-white border border-gray-300 rounded text-gray-600 shadow-2xs">S</kbd>
               </span>
               <button
                 role="switch"
@@ -2158,7 +2145,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 className={`w-11 h-6 rounded-full p-0.5 transition-colors duration-200 ease-in-out focus:outline-none ${
                   reattemptMode ? 'bg-[#0097a7]' : 'bg-gray-300'
                 }`}
-                title="Toggle Practice Mode (Hide Solutions) (S)"
+                title="Toggle Practice Mode (Hide Solutions)"
               >
                 <div
                   className={`w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out ${
@@ -2173,10 +2160,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               onClick={handleNext}
               disabled={currentIdx === items.length - 1}
               className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-4 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
-              title="Next question (→ or K)"
+              title="Next question"
             >
               <span>Next</span>
-              <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-white/80 border border-[#81d4fa] rounded text-[#01579b] shadow-2xs">→ / K</kbd>
             </button>
           </div>
         </div>
