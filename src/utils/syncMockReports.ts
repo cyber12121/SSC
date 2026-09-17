@@ -1,4 +1,5 @@
 import { MockScoreReport } from '../types/mockScore';
+import { safeStorage } from './safeStorage';
 
 export const LEGACY_MOCK_ID_MAP: Record<string, string> = {
   'mock_1789504230140_a8wt2': 'mock_1789515022905_egyvl',
@@ -8,12 +9,10 @@ const DELETED_MOCKS_STORAGE_KEY = 'cgl_deleted_mock_ids';
 
 export function getDeletedMockIds(): Set<string> {
   try {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      const raw = window.localStorage.getItem(DELETED_MOCKS_STORAGE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) return new Set(parsed);
-      }
+    const raw = safeStorage.getItem(DELETED_MOCKS_STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return new Set(parsed);
     }
   } catch {}
   return new Set();
@@ -24,9 +23,7 @@ export function addDeletedMockId(id: string): void {
   try {
     const set = getDeletedMockIds();
     set.add(id);
-    if (typeof window !== 'undefined' && window.localStorage) {
-      window.localStorage.setItem(DELETED_MOCKS_STORAGE_KEY, JSON.stringify(Array.from(set)));
-    }
+    safeStorage.setItem(DELETED_MOCKS_STORAGE_KEY, JSON.stringify(Array.from(set)));
   } catch {}
 }
 

@@ -689,32 +689,30 @@ export default function App() {
 
     // 6. Purge from all cached mock questions (cgl_mock_questions_*) and sync to backend
     try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        for (let i = 0; i < localStorage.length; i++) {
-          const key = localStorage.key(i);
-          if (key && key.startsWith('cgl_mock_questions_')) {
-            try {
-              const raw = localStorage.getItem(key);
-              if (raw) {
-                const list = JSON.parse(raw);
-                if (Array.isArray(list)) {
-                  const updated = list.filter((q: any) => {
-                    const t = (q.question || q.questionText || '').trim().toLowerCase();
-                    return t !== qTextClean && (!question.id || q.id !== question.id);
-                  });
-                  if (updated.length !== list.length) {
-                    localStorage.setItem(key, JSON.stringify(updated));
-                    const mockId = key.replace('cgl_mock_questions_', '');
-                    fetch(`/api/mock-questions/${encodeURIComponent(mockId)}`, {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify(updated)
-                    }).catch(() => { });
-                  }
+      const allKeys = safeStorage.getAllKeys();
+      for (const key of allKeys) {
+        if (key && key.startsWith('cgl_mock_questions_')) {
+          try {
+            const raw = safeStorage.getItem(key);
+            if (raw) {
+              const list = JSON.parse(raw);
+              if (Array.isArray(list)) {
+                const updated = list.filter((q: any) => {
+                  const t = (q.question || q.questionText || '').trim().toLowerCase();
+                  return t !== qTextClean && (!question.id || q.id !== question.id);
+                });
+                if (updated.length !== list.length) {
+                  safeStorage.setItem(key, JSON.stringify(updated));
+                  const mockId = key.replace('cgl_mock_questions_', '');
+                  fetch(`/api/mock-questions/${encodeURIComponent(mockId)}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(updated)
+                  }).catch(() => { });
                 }
               }
-            } catch { }
-          }
+            }
+          } catch { }
         }
       }
     } catch { }

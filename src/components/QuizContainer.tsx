@@ -1,17 +1,21 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import {
-  Trophy, Clock, CheckCircle2, CornerDownLeft, RotateCcw,
+  Trophy, CheckCircle2, CornerDownLeft, RotateCcw,
   Pause, Play, BookOpen, ChevronRight, ChevronLeft,
   X, FileText, ArrowLeft, AlertTriangle, ChevronDown,
   Maximize2, Minimize2, Check, Eye, EyeOff, Bookmark, BookmarkCheck, Lightbulb, Trash2, Sparkles
 } from 'lucide-react';
 import { Question, Chapter, QuizResult } from '../types';
-import { cleanSolutionText, extractSolutionLanguage } from '../utils/cleanSolution';
+import { extractSolutionLanguage } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { getLanguageText } from '../utils/formatQuestionText';
+import { getNormalizedOptions, getCorrectOptionKey } from '../utils/questionHelpers';
 import { FormattedText } from './FormattedText';
 import { SolutionViewer } from './SolutionViewer';
+import { QuizPaletteSidebar, MockSection } from './quiz/QuizPaletteSidebar';
+import { QuizSubmitModal } from './quiz/QuizSubmitModal';
+import { QuizTimerBadge } from './quiz/QuizTimerBadge';
 
 interface QuizContainerProps {
   chapter: Chapter;
@@ -25,18 +29,6 @@ interface QuizContainerProps {
   onDeleteQuestion?: (question: Question) => void;
   isAdmin?: boolean;
 }
-
-interface MockSection {
-  id: string;
-  label: string; // PART-A, PART-B, PART-C, PART-D
-  title: string;
-  startIndex: number;
-  endIndex: number;
-  count: number;
-}
-
-const fmtTime = (s: number) =>
-  `${Math.floor(s / 60).toString().padStart(2, '0')} : ${(s % 60).toString().padStart(2, '0')}`;
 
 const CandidateAvatar: React.FC<{ label: string }> = ({ label }) => (
   <div className="flex flex-col items-center">
@@ -215,9 +207,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [visited, setVisited] = useState<Set<number>>(new Set([0]));
   const [markedForReview, setMarkedForReview] = useState<Set<number>>(new Set());
   const [isFinished, setIsFinished] = useState(false);
-  const [currentTimer, setCurrentTimer] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [timeLeft, setTimeLeft] = useState<number | null>(totalQuizTime);
   const [language, setLanguage] = useState<'English' | 'Hindi'>('English');
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [showQuestionPaper, setShowQuestionPaper] = useState(false);
@@ -291,14 +281,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   useEffect(() => {
     if (isFinished) return;
     startTimeRef.current = Date.now();
-    const previouslySpent = timeSpentRef.current[currentIdx] || 0;
-    setCurrentTimer(previouslySpent);
     setVisited(prev => { const n = new Set(prev); n.add(currentIdx); return n; });
-    const interval = setInterval(() => {
-      if (!isPaused && !isFinished) setCurrentTimer(prev => prev + 1);
-    }, 1000);
     return () => {
-      clearInterval(interval);
       if (!isPaused && !isFinished) {
         const duration = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
         if (duration > 0) {
@@ -310,23 +294,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       }
     };
   }, [currentIdx, isPaused, isFinished]);
-
-  useEffect(() => {
-    if (totalQuizTime == null || isFinished || isPaused) return;
-    const interval = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev == null) return null;
-        if (prev <= 1) {
-          clearInterval(interval);
-          // Call via ref so we always get the latest handleSubmitTest, never a stale closure
-          setTimeout(() => { handleSubmitTestRef.current(); }, 0);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [totalQuizTime, isFinished, isPaused]);
 
   const recordTime = () => {
     if (isPaused) return;
@@ -480,13 +447,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     }
   };
 
-  const getCorrectAnswer = (q: Question) => {
-    return normalizeAnswerKey(q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option);
-  };
-
   const isQuestionCorrect = (idx: number, answersMap: Record<number, string> = answers) => {
     const userAns = answersMap[idx]?.toLowerCase().trim();
-    return !!userAns && userAns === getCorrectAnswer(questions[idx]);
+    return !!userAns && userAns === getCorrectOptionKey(questions[idx]);
   };
 
   const handleReattempt = () => {
@@ -497,9 +460,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     setIsFinished(false); isFinishedRef.current = false;
     const firstSec = sections.findIndex(s => s.count > 0);
     const startSec = firstSec !== -1 ? firstSec : 0;
-    setCurrentIdx(sections[startSec]?.startIndex || 0); setCurrentTimer(0);
+    setCurrentIdx(sections[startSec]?.startIndex || 0);
     setActiveSectionIdx(startSec);
-    setIsPaused(false); setTimeLeft(totalQuizTime); setSubmittedResult(null);
+    setIsPaused(false); setSubmittedResult(null);
   };
 
   const calculateScore = (answersMap: Record<number, string> = answers) =>
@@ -604,7 +567,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const accuracyPractice = answeredPractice > 0 ? Math.round((scorePractice / answeredPractice) * 100) : 0;
   const unattemptedPractice = Math.max(0, totalQuestions - answeredPractice);
 
-  const correctOptionKey = currentQuestion ? getCorrectAnswer(currentQuestion) : '';
+  const correctOptionKey = getCorrectOptionKey(currentQuestion);
+  const currentNormalizedOptions = useMemo(() => getNormalizedOptions(currentQuestion), [currentQuestion]);
   const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
 
   const getFormattedSolution = () => {
@@ -941,16 +905,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </button>
 
           {/* Section Time Badge */}
-          <div className="flex flex-col items-center">
-            <span className="text-[10px] text-gray-500 font-semibold leading-tight">
-              {mode === 'practice' ? 'Time Spent' : 'Section Time'}
-            </span>
-            <div className="bg-[#fff9db] border border-[#ffe066] text-[#d90429] font-mono font-bold text-sm sm:text-base px-2 py-0.5 rounded shadow-2xs leading-none">
-              {mode === 'practice'
-                ? fmtTime(currentTimer)
-                : (totalQuizTime != null && timeLeft != null ? fmtTime(timeLeft) : fmtTime(currentTimer))}
-            </div>
-          </div>
+          <QuizTimerBadge
+            mode={mode}
+            totalQuizTime={totalQuizTime}
+            isPaused={isPaused}
+            isFinished={isFinished}
+            initialQuestionTime={timeSpentRef.current[currentIdx] || 0}
+            currentIdx={currentIdx}
+            onTimeUp={() => {
+              handleSubmitTestRef.current();
+            }}
+          />
 
           {mode === 'mock' ? (
             /* Candidate Profile Photos in Mock Mode */
@@ -1301,16 +1266,14 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 {/* Mock Mode Options Table (Official Testbook Table) */}
                 {mode === 'mock' && (
                   <div className="border-t border-gray-200 divide-y divide-gray-200">
-                    {currentQuestion && optionKeys.map((k) => {
-                      const rawOpt = currentQuestion.options?.[k] || (currentQuestion.options as any)?.[k.toUpperCase()];
-                      if (!rawOpt) return null;
+                    {currentNormalizedOptions.map(({ key: k, text: rawOpt }) => {
                       const isSelected = answers[currentIdx] === k;
 
                       return (
                         <div
                           key={k}
                           onClick={() => handleAnswer(k)}
-                          title={`Option ${k.toUpperCase()} (Press ${k === 'a' ? '1 or A' : k === 'b' ? '2 or B' : k === 'c' ? '3 or C' : '4 or D'})`}
+                          title={`Option ${k.toUpperCase()}`}
                           className={`flex items-stretch hover:bg-slate-50/80 cursor-pointer transition-colors ${
                             isSelected ? 'bg-blue-50/30' : 'bg-white'
                           }`}
@@ -1338,9 +1301,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               {/* Practice Mode Options Cards (Instant Feedback) */}
               {mode === 'practice' && (
                 <div className="space-y-2.5 mb-5">
-                  {currentQuestion && optionKeys.map((k) => {
-                    const rawOpt = currentQuestion.options?.[k] || (currentQuestion.options as any)?.[k.toUpperCase()];
-                    if (!rawOpt) return null;
+                  {currentNormalizedOptions.map(({ key: k, text: rawOpt }) => {
                     const isSelected = answers[currentIdx] === k;
                     const isAttempted = answers[currentIdx] !== undefined;
                     const isCorrectOption = k === correctOptionKey;
@@ -1405,11 +1366,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                           </span>
                         </div>
                         <div className="flex items-center gap-2 shrink-0 ml-2">
-                          {!isAttempted && (
-                            <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-gray-400 border border-gray-200 rounded bg-gray-50/80 shadow-2xs">
-                              {k === 'a' ? '1 / A' : k === 'b' ? '2 / B' : k === 'c' ? '3 / C' : '4 / D'}
-                            </kbd>
-                          )}
                           {statusBadge}
                         </div>
                       </div>
@@ -1522,188 +1478,25 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         </div>
 
         {/* ── RIGHT PANE: PALETTE & SECTION ANALYSIS (Matches Testbook screenshot) ── */}
-        {/* ── RIGHT PANE: PALETTE & ANALYSIS ── */}
-        <aside className="w-[300px] sm:w-[320px] shrink-0 min-h-0 border-l border-gray-300 bg-white p-4 flex flex-col h-full overflow-y-auto pb-8 custom-scrollbar">
-
-          {/* Header */}
-          {mode === 'practice' ? (
-            <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-200">
-              <div className="flex items-center gap-1.5 text-gray-900 font-bold text-sm">
-                <BookOpen className="w-4 h-4 text-emerald-600" />
-                <span>Practice Palette</span>
-              </div>
-              <span className="text-[11px] font-semibold text-gray-500">
-                {answeredPractice}/{totalQuestions} Attempted
-              </span>
-            </div>
-          ) : (
-            <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold text-sm sm:text-base">
-              <span className="text-[#00baf2] text-base leading-none">▶</span>
-              <span className="font-bold text-gray-900 text-sm truncate">
-                {activeSection.title || 'General Intelligence'}
-              </span>
-            </div>
-          )}
-
-          {/* Question Palette Grid */}
-          <div className="grid grid-cols-6 gap-x-2 gap-y-2.5 mb-4">
-            {sectionQuestions.map((q, localIdx) => {
-              const globalIdx = activeSection.startIndex + localIdx;
-              const isAnswered = answers[globalIdx] !== undefined;
-              const isCorrect = isQuestionCorrect(globalIdx);
-              const isMarked = markedForReview.has(globalIdx);
-              const isCurrent = globalIdx === currentIdx;
-
-              if (mode === 'practice') {
-                let btnColor = 'bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200';
-                if (isAnswered) {
-                  btnColor = isCorrect
-                    ? 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs'
-                    : 'bg-rose-600 text-white hover:bg-rose-700 shadow-2xs';
-                }
-
-                return (
-                  <button
-                    key={globalIdx}
-                    onClick={() => jumpToQuestion(globalIdx)}
-                    className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[3px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-all ${btnColor} ${
-                      isCurrent ? 'ring-2 ring-indigo-600 ring-offset-1 scale-105 z-10 font-black shadow-xs' : ''
-                    }`}
-                    title={`Question ${localIdx + 1}: ${isAnswered ? (isCorrect ? 'Correct' : 'Incorrect') : 'Not Attempted'}`}
-                  >
-                    <span className="leading-none">{localIdx + 1}</span>
-                  </button>
-                );
-              }
-
-              // Official Testbook Symbol & Color Coding for Mock Mode:
-              let btnColor = 'bg-[#0000ff] text-white';
-              let showArrow = false;
-
-              if (isAnswered && isMarked) {
-                btnColor = 'bg-[#ffff00] text-black font-bold border border-yellow-400';
-                showArrow = true;
-              } else if (isMarked) {
-                btnColor = 'bg-[#cc0000] text-white';
-                showArrow = true;
-              } else if (isAnswered) {
-                btnColor = 'bg-[#008000] text-white';
-                showArrow = false;
-              } else {
-                btnColor = 'bg-[#0000ff] text-white';
-                showArrow = false;
-              }
-
-              return (
-                <div key={globalIdx} className="flex flex-col items-center justify-start relative">
-                  <button
-                    onClick={() => jumpToQuestion(globalIdx)}
-                    className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[2px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-colors shadow-2xs ${btnColor} hover:opacity-90`}
-                    title={`Question ${localIdx + 1}`}
-                  >
-                    <span className="leading-none">{localIdx + 1}</span>
-                  </button>
-                  {showArrow && (
-                    <span className="text-[8px] text-black font-black leading-none mt-0.5 select-none">
-                      ▲
-                    </span>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Practice Mode Legend */}
-          {mode === 'practice' && (
-            <div className="grid grid-cols-3 gap-1.5 p-2 bg-slate-50 border border-slate-200 rounded-md text-[10px] font-semibold text-slate-700 mb-4">
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-[2px] bg-emerald-600 shrink-0" />
-                <span>Correct</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-[2px] bg-rose-600 shrink-0" />
-                <span>Wrong</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-[2px] bg-slate-200 border border-slate-300 shrink-0" />
-                <span>Unattempted</span>
-              </div>
-            </div>
-          )}
-
-          {/* Performance / Analysis Table */}
-          {mode === 'practice' ? (
-            <div className="mt-auto border border-emerald-300 rounded-md overflow-hidden shadow-2xs">
-              <div className="bg-emerald-700 py-1.5 text-center font-bold text-xs text-white tracking-wide">
-                Practice Performance
-              </div>
-              <table className="w-full text-xs border-collapse bg-white">
-                <tbody className="divide-y divide-gray-200">
-                  <tr>
-                    <td className="p-2 font-medium text-emerald-800 bg-emerald-50/50 pl-3">Correct</td>
-                    <td className="p-2 font-bold text-emerald-700 bg-emerald-50/80 text-center w-16">
-                      {scorePractice}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 font-medium text-rose-800 bg-rose-50/50 pl-3">Incorrect</td>
-                    <td className="p-2 font-bold text-rose-700 bg-rose-50/80 text-center w-16">
-                      {wrongPractice}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 font-medium text-gray-700 pl-3">Unattempted</td>
-                    <td className="p-2 font-bold text-gray-700 text-center w-16">
-                      {unattemptedPractice}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 font-medium text-indigo-800 bg-indigo-50/50 pl-3">Accuracy</td>
-                    <td className="p-2 font-bold text-indigo-700 bg-indigo-50/80 text-center w-16">
-                      {accuracyPractice}%
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          ) : (
-            <div className="mt-auto border border-gray-400 rounded-none overflow-hidden shadow-2xs">
-              {/* Table Header: PART-A Analysis */}
-              <div className="bg-[#b8b8b8] border-b border-gray-400 py-1 text-center font-bold text-xs sm:text-sm text-gray-900 tracking-wide">
-                {activeSection.label} Analysis
-              </div>
-
-              <table className="w-full text-xs sm:text-sm border-collapse">
-                <tbody>
-                  <tr className="border-b border-gray-400">
-                    <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                      Answered
-                    </td>
-                    <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                      {sectionAnswered}
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-400">
-                    <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                      Not Answered
-                    </td>
-                    <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                      {sectionNotAnswered}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                      Mark for Review
-                    </td>
-                    <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                      {sectionMarked}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          )}
-        </aside>
+        <QuizPaletteSidebar
+          mode={mode}
+          activeSection={activeSection}
+          sectionQuestions={sectionQuestions}
+          answers={answers}
+          markedForReview={markedForReview}
+          currentIdx={currentIdx}
+          isQuestionCorrect={isQuestionCorrect}
+          jumpToQuestion={jumpToQuestion}
+          totalQuestions={totalQuestions}
+          answeredPractice={answeredPractice}
+          scorePractice={scorePractice}
+          wrongPractice={wrongPractice}
+          unattemptedPractice={unattemptedPractice}
+          accuracyPractice={accuracyPractice}
+          sectionAnswered={sectionAnswered}
+          sectionNotAnswered={sectionNotAnswered}
+          sectionMarked={sectionMarked}
+        />
       </div>
 
       {/* ── INSTRUCTIONS MODAL ── */}
@@ -1862,127 +1655,21 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       )}
 
       {/* ── SUBMIT TEST / FINISH PRACTICE MODAL ── */}
-      {showSubmitModal && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
-            <div className={`text-white px-5 py-3.5 flex items-center justify-between ${
-              mode === 'practice' ? 'bg-emerald-700' : 'bg-[#2460b9]'
-            }`}>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-white" />
-                <h3 className="font-bold text-base">
-                  {mode === 'practice' ? 'Finish Practice Session' : 'Submit Test Confirmation'}
-                </h3>
-              </div>
-              <button
-                onClick={() => setShowSubmitModal(false)}
-                disabled={isSubmitting}
-                className="hover:bg-white/20 p-1 rounded text-white cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="p-5 space-y-4">
-              <p className="text-sm text-gray-600">
-                {mode === 'practice'
-                  ? 'Ready to wrap up your practice session? Here is your performance summary:'
-                  : 'Are you sure you want to submit your test? Here is your current attempt summary:'}
-              </p>
-
-              {mode === 'practice' ? (
-                <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2 text-xs">
-                  <div className="flex justify-between font-bold border-b border-slate-200 pb-1.5 text-gray-700">
-                    <span>Chapter</span>
-                    <span className="text-gray-900 truncate max-w-[200px]">{chapter.chapter_title}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-gray-600">
-                    <span>Total Questions:</span>
-                    <span className="font-bold text-gray-900">{totalQuestions}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-emerald-700 font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
-                      Correct:
-                    </span>
-                    <span className="font-bold">{scorePractice}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-rose-700 font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-rose-600 inline-block" />
-                      Incorrect:
-                    </span>
-                    <span className="font-bold">{wrongPractice}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-gray-700 font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-gray-400 inline-block" />
-                      Unattempted:
-                    </span>
-                    <span className="font-bold">{unattemptedPractice}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-indigo-700 font-bold border-t border-slate-200 pt-1.5">
-                    <span>Accuracy:</span>
-                    <span>{accuracyPractice}%</span>
-                  </div>
-                </div>
-              ) : (
-                <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2 text-xs">
-                  <div className="flex justify-between font-bold border-b border-slate-200 pb-1.5 text-gray-700">
-                    <span>Current Section</span>
-                    <span className="text-gray-900">{activeSection.title}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-gray-600">
-                    <span>Total Questions:</span>
-                    <span className="font-bold text-gray-900">{totalQuestions}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-emerald-700 font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
-                      Answered:
-                    </span>
-                    <span className="font-bold">{stats.answered}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-amber-700 font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
-                      Not Attempted:
-                    </span>
-                    <span className="font-bold">{totalQuestions - stats.answered - stats.marked}</span>
-                  </div>
-                  <div className="flex justify-between py-0.5 text-purple-700 font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-purple-600 inline-block" />
-                      Marked for Review:
-                    </span>
-                    <span className="font-bold">{stats.marked}</span>
-                  </div>
-                </div>
-              )}
-
-              <div className="flex items-center gap-2 pt-2">
-                <button
-                  onClick={() => setShowSubmitModal(false)}
-                  disabled={isSubmitting}
-                  className="flex-1 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-lg transition-colors cursor-pointer"
-                >
-                  {mode === 'practice' ? 'Continue Practicing' : 'Return to Test'}
-                </button>
-                <button
-                  onClick={handleSubmitTest}
-                  disabled={isSubmitting}
-                  className="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm disabled:opacity-50 cursor-pointer"
-                >
-                  <CheckCircle2 className="w-4 h-4" />
-                  {isSubmitting
-                    ? 'Saving...'
-                    : (mode === 'practice' ? 'Finish & Save Summary' : 'Yes, Submit Test')}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <QuizSubmitModal
+        isOpen={showSubmitModal}
+        onClose={() => setShowSubmitModal(false)}
+        onSubmit={handleSubmitTest}
+        isSubmitting={isSubmitting}
+        mode={mode}
+        chapter={chapter}
+        totalQuestions={totalQuestions}
+        activeSection={activeSection}
+        scorePractice={scorePractice}
+        wrongPractice={wrongPractice}
+        unattemptedPractice={unattemptedPractice}
+        accuracyPractice={accuracyPractice}
+        stats={stats}
+      />
 
       {/* ── DELETE QUESTION CONFIRMATION MODAL ── */}
       {showDeleteModal && (
