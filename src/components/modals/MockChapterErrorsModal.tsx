@@ -105,7 +105,13 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
     ? modalFilteredQuestions
     : modalFilteredQuestions.slice((currentSetNum - 1) * 25, currentSetNum * 25);
 
-  const rcaCounts = data.rcaCounts || { C: 0, A: 0, T: 0, G: 0, unclassified: 0 };
+  const rcaCounts: Record<string, number> = {
+    C: (data.rcaCounts?.C || 0),
+    S: (data.rcaCounts?.S || (data.rcaCounts as any)?.A || 0),
+    T: (data.rcaCounts?.T || 0),
+    G: (data.rcaCounts?.G || 0),
+    unclassified: (data.rcaCounts?.unclassified || 0)
+  };
 
   return (
     <AnimatePresence>
@@ -205,7 +211,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                     <span className="text-[10px] font-bold text-white/70 uppercase tracking-wider mr-1 flex items-center gap-1">
                       <Target className="w-3 h-3 text-amber-300" /> RCA:
                     </span>
-                    {(['C', 'A', 'T', 'G'] as const).map(tagKey => {
+                    {(['C', 'S', 'T', 'G'] as const).map(tagKey => {
                       const cfg = RCA_TAG_CONFIG[tagKey];
                       const count = rcaCounts[tagKey] || 0;
                       const isSelected = modalErrorFilter === tagKey;
@@ -353,19 +359,22 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                 Practice All ({modalFilteredQuestions.length})
               </button>
 
-              {/* 1-Click Drill Silly Mistakes [A] */}
-              {rcaCounts.A > 0 && modalErrorFilter !== 'A' && (
+              {/* 1-Click Drill Silly Mistakes [S] */}
+              {rcaCounts.S > 0 && modalErrorFilter !== 'S' && (
                 <button
                   onClick={() => {
-                    const aQuestions = data.questions.filter(q => getQuestionEffectiveRca(q)?.tag === 'A');
+                    const sQuestions = data.questions.filter(q => {
+                      const t = getQuestionEffectiveRca(q)?.tag;
+                      return t === 'S' || (t as any) === 'A';
+                    });
                     onClose();
-                    onStartPractice(data.topic, aQuestions, 'A');
+                    onStartPractice(data.topic, sQuestions, 'S');
                   }}
                   className="px-3 py-2 bg-rose-500 hover:bg-rose-400 text-white rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
-                  title={`Drill all ${rcaCounts.A} silly mistake questions`}
+                  title={`Drill all ${rcaCounts.S} silly mistake questions`}
                 >
-                  <span className="font-mono">[A]</span>
-                  <span>Drill Silly ({rcaCounts.A})</span>
+                  <span className="font-mono">[S]</span>
+                  <span>Drill Silly ({rcaCounts.S})</span>
                 </button>
               )}
 
@@ -530,7 +539,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                       )}
 
                       {/* Silly Note if present */}
-                      {qRca?.tag === 'A' && qRca.sillyMistakeNote && (
+                      {(qRca?.tag === 'S' || (qRca?.tag as any) === 'A') && qRca.sillyMistakeNote && (
                         <div className="bg-rose-50 border border-rose-200 rounded-xl p-2.5 text-xs text-rose-800 flex items-start gap-2">
                           <span className="font-bold shrink-0">📝 Silly Note:</span>
                           <span className="italic">{qRca.sillyMistakeNote}</span>
@@ -561,21 +570,21 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                           <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1">
                             <Tag className="w-3 h-3 text-indigo-500" /> Classify RCA:
                           </span>
-                          {(['C', 'A', 'T', 'G'] as const).map(tagKey => {
+                          {(['C', 'S', 'T', 'G'] as const).map(tagKey => {
                             const cfg = RCA_TAG_CONFIG[tagKey];
-                            const isCurrent = qRca?.tag === tagKey;
+                            const isCurrent = qRca?.tag === tagKey || (tagKey === 'S' && (qRca?.tag as any) === 'A');
                             return (
                               <button
                                 key={tagKey}
                                 type="button"
                                 onClick={() => {
-                                  if (tagKey === 'A') {
+                                  if (tagKey === 'S') {
                                     setEditingNoteQId(isEditingSilly ? null : qKey);
                                     setSillyNoteInput(qRca?.sillyMistakeNote || '');
                                   } else {
                                     setEditingNoteQId(null);
                                   }
-                                  handleUpdateRca(q, tagKey, tagKey === 'A' ? (sillyNoteInput || qRca?.sillyMistakeNote) : undefined);
+                                  handleUpdateRca(q, tagKey, tagKey === 'S' ? (sillyNoteInput || qRca?.sillyMistakeNote) : undefined);
                                 }}
                                 className={`px-2 py-0.5 rounded text-[10px] font-bold transition-all cursor-pointer flex items-center gap-1 ${
                                   isCurrent
@@ -655,7 +664,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                           <button
                             type="button"
                             onClick={() => {
-                              handleUpdateRca(q, 'A', sillyNoteInput);
+                              handleUpdateRca(q, 'S', sillyNoteInput);
                               setEditingNoteQId(null);
                             }}
                             className="bg-rose-600 hover:bg-rose-700 text-white text-[11px] font-bold px-3 py-1 rounded transition-colors cursor-pointer shrink-0"

@@ -33,7 +33,7 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
                 className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
                   currentRca?.tag === 'C'
                     ? 'bg-purple-100 text-purple-800'
-                    : currentRca?.tag === 'A'
+                    : (currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A')
                     ? 'bg-rose-100 text-rose-800'
                     : currentRca?.tag === 'T'
                     ? 'bg-amber-100 text-amber-800'
@@ -96,12 +96,12 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
           </span>
         </button>
 
-        {/* [A] Silly Mistake */}
+        {/* [S] Silly Mistake */}
         <button
           type="button"
-          onClick={() => onSelectTag('A')}
+          onClick={() => onSelectTag('S')}
           className={`p-2.5 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between ${
-            currentRca?.tag === 'A'
+            (currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A')
               ? 'bg-rose-600 text-white border-rose-600 shadow-md ring-2 ring-rose-300 ring-offset-1'
               : 'bg-white hover:bg-rose-50/80 border-rose-200 text-gray-800'
           }`}
@@ -110,18 +110,18 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
             <div className="flex items-center gap-1">
               <span
                 className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded ${
-                  currentRca?.tag === 'A' ? 'bg-white/25 text-white' : 'bg-rose-100 text-rose-800'
+                  (currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') ? 'bg-white/25 text-white' : 'bg-rose-100 text-rose-800'
                 }`}
               >
-                [A]
+                [S]
               </span>
             </div>
-            {currentRca?.tag === 'A' && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+            {(currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
           </div>
           <span className="text-xs font-bold">Silly Mistake</span>
           <span
             className={`text-[10px] mt-0.5 ${
-              currentRca?.tag === 'A' ? 'text-rose-100' : 'text-gray-500'
+              (currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') ? 'text-rose-100' : 'text-gray-500'
             }`}
           >
             Calculation, misread, rushed
@@ -193,8 +193,8 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
         </button>
       </div>
 
-      {/* Silly Mistake Writing Box when [A] is selected */}
-      {currentRca?.tag === 'A' && (
+      {/* Silly Mistake Writing Box when [S] is selected */}
+      {(currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') && (
         <div className="mt-3 p-3 rounded-lg bg-rose-50/80 border border-rose-200 transition-all">
           <div className="flex items-center justify-between mb-1.5">
             <label className="text-xs font-bold text-rose-900 flex items-center gap-1.5">

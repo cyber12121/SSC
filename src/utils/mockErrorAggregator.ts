@@ -157,14 +157,14 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
 
   const overallScopeCounts = { all: 0, full: 0, sectional: 0 };
   const overallRcaTotals: Record<RCATagType | 'unclassified', number> = {
-    C: 0, A: 0, T: 0, G: 0, unclassified: 0
+    C: 0, S: 0, T: 0, G: 0, unclassified: 0
   };
 
   canonicalSubjects.forEach(sub => {
     mockScopeCounts[sub] = { all: 0, full: 0, sectional: 0 };
     subjectRcaData[sub] = {
-      totals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
-      questionsByTag: { C: [], A: [], T: [], G: [], unclassified: [] }
+      totals: { C: 0, S: 0, T: 0, G: 0, unclassified: 0 },
+      questionsByTag: { C: [], S: [], T: [], G: [], unclassified: [] }
     };
     heatmapSubjectGroups[sub] = {
       subject: sub,
@@ -173,7 +173,7 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       totalUnattempted: 0,
       totalSpeed: 0,
       negativeMarks: 0,
-      rcaTotals: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+      rcaTotals: { C: 0, S: 0, T: 0, G: 0, unclassified: 0 },
       chapters: []
     };
     clubbedChapterMaps[sub] = {};
@@ -338,8 +338,8 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
         slowQuestions: [],
         unattemptedQuestions: [],
         wrongQuestions: [],
-        rcaCounts: { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
-        rcaQuestions: { C: [], A: [], T: [], G: [], unclassified: [] }
+        rcaCounts: { C: 0, S: 0, T: 0, G: 0, unclassified: 0 },
+        rcaQuestions: { C: [], S: [], T: [], G: [], unclassified: [] }
       };
     }
 
@@ -358,8 +358,9 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       chItem.wrongQuestions.push(enrichedQuestion);
     }
 
-    const tagKey: RCATagType | 'unclassified' = (qRca && qRca.tag && ['C', 'A', 'T', 'G'].includes(qRca.tag))
-      ? (qRca.tag as RCATagType)
+    const effectiveTag = (qRca?.tag as any) === 'A' ? 'S' : qRca?.tag;
+    const tagKey: RCATagType | 'unclassified' = (effectiveTag && ['C', 'S', 'T', 'G'].includes(effectiveTag))
+      ? (effectiveTag as RCATagType)
       : 'unclassified';
 
     chItem.rcaCounts![tagKey]++;
@@ -427,7 +428,7 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
         speedIssueCount: ch.slow,
         negativeMarks: ch.wrong * 0.5,
         questions: ch.questions,
-        rcaCounts: ch.rcaCounts || { C: 0, A: 0, T: 0, G: 0, unclassified: 0 },
+        rcaCounts: ch.rcaCounts || { C: 0, S: 0, T: 0, G: 0, unclassified: 0 },
         severity,
         marksRecovery
       };

@@ -8,13 +8,9 @@ import {
   Flame,
   ArrowRight,
   Play,
-  CheckCircle2,
-  AlertCircle,
-  HelpCircle,
   Check,
-  X,
-  Target,
-  Timer
+  Timer,
+  Compass
 } from 'lucide-react';
 import {
   SUBTRACTION_LEVELS,
@@ -25,11 +21,14 @@ import {
 } from './calculationLevelConfig';
 import { ThoughtHopVisualizer } from './ThoughtHopVisualizer';
 
-export const NumberLineHopDrill: React.FC = () => {
+interface SubtractionDrillProps {
+  autoStart?: boolean;
+}
+
+export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart = false }) => {
   const [progress, setProgress] = useState<ModuleProgress>(loadSubtractionProgress);
   const [selectedLevel, setSelectedLevel] = useState<number>(1);
   
-  // Drill active state - DO NOT start automatically
   const [isStarted, setIsStarted] = useState<boolean>(false);
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState<number>(1); // 1 to 10
   const [roundScore, setRoundScore] = useState<number>(0);
@@ -53,51 +52,42 @@ export const NumberLineHopDrill: React.FC = () => {
     return SUBTRACTION_LEVELS.find(l => l.level === selectedLevel) || SUBTRACTION_LEVELS[0];
   }, [selectedLevel]);
 
-  // Robust, pedagogically sound problem generation
   const generateNewProblem = (levelConfig: SubtractionLevelConfig = activeLevelConfig) => {
     const { type, level } = levelConfig;
     let a = 0;
     let b = 0;
 
     if (type === 'same_decade') {
-      // Level 1: Friendly Decade Hop. Unit of A >= Unit of B (No unit borrowing stress)
-      const tensA = Math.floor(Math.random() * 3) + 2; // 20s, 30s, 40s
-      const tensB = Math.floor(Math.random() * tensA) + 1; // 10s .. tensA
-      const unitA = Math.floor(Math.random() * 5) + 5; // 5..9
-      const unitB = Math.floor(Math.random() * Math.max(1, unitA - 1)) + 1; // 1..unitA-1
+      const tensA = Math.floor(Math.random() * 3) + 2;
+      const tensB = Math.floor(Math.random() * tensA) + 1;
+      const unitA = Math.floor(Math.random() * 5) + 5;
+      const unitB = Math.floor(Math.random() * Math.max(1, unitA - 1)) + 1;
       a = tensA * 10 + unitA;
       b = tensB * 10 + unitB;
       if (a <= b) a = b + 15;
     } else if (type === 'unit_match') {
-      // Level 2: Unit-Match Hop. Unit of A < Unit of B (Crossing unit boundary)
-      // e.g. 72 - 38 = 34
-      const tensB = Math.floor(Math.random() * 3) + 2; // 2, 3, 4 (20..49)
-      const unitB = Math.floor(Math.random() * 5) + 5; // 5, 6, 7, 8, 9
+      const tensB = Math.floor(Math.random() * 3) + 2;
+      const unitB = Math.floor(Math.random() * 5) + 5;
       b = tensB * 10 + unitB;
-      const unitA = Math.floor(Math.random() * (unitB - 1)) + 1; // 1 .. unitB - 1
-      const tensA = tensB + Math.floor(Math.random() * 3) + 2; // tensB + 2 .. tensB + 4
+      const unitA = Math.floor(Math.random() * (unitB - 1)) + 1;
+      const tensA = tensB + Math.floor(Math.random() * 3) + 2;
       a = Math.min(79, tensA * 10 + unitA);
       if (a <= b) a = b + 24;
     } else if (level === 3) {
-      // Level 3: Decade Bridge Hop (40..100)
-      b = Math.floor(Math.random() * 25) + 30; // 30..55
-      const diff = Math.floor(Math.random() * 26) + 18; // 18..43
+      b = Math.floor(Math.random() * 25) + 30;
+      const diff = Math.floor(Math.random() * 26) + 18;
       a = b + diff;
       if (a > 99) a = 97;
     } else if (level === 4) {
-      // Level 4: Century Crossing (70..190)
-      // Subtrahend below 100, Minuend above 100 (Hop to 100 then jump to target)
-      b = Math.floor(Math.random() * 30) + 65; // 65..95
-      a = Math.floor(Math.random() * 50) + 115; // 115..165
+      b = Math.floor(Math.random() * 30) + 65;
+      a = Math.floor(Math.random() * 50) + 115;
     } else if (type === 'three_digit_match') {
-      // Level 5: 3-Digit Matching Milestone (200..999)
-      b = Math.floor(Math.random() * 280) + 160; // 160..440
-      const leapH = Math.floor(Math.random() * 4) + 2; // 200..500
+      b = Math.floor(Math.random() * 280) + 160;
+      const leapH = Math.floor(Math.random() * 4) + 2;
       const endHop = Math.floor(Math.random() * 35) + 12;
       a = Math.min(980, b + leapH * 100 + endHop);
     } else {
-      // Level 6: 3-Digit Complex Leap (300..999)
-      b = Math.floor(Math.random() * 280) + 280; // 280..560
+      b = Math.floor(Math.random() * 280) + 280;
       const diff = Math.floor(Math.random() * 240) + 140;
       a = Math.min(995, b + diff);
     }
@@ -110,7 +100,7 @@ export const NumberLineHopDrill: React.FC = () => {
 
     setTimeout(() => {
       inputRef.current?.focus();
-    }, 80);
+    }, 60);
   };
 
   const startDrill = (level: number = selectedLevel) => {
@@ -126,7 +116,12 @@ export const NumberLineHopDrill: React.FC = () => {
     generateNewProblem(cfg);
   };
 
-  // When changing levels, return to briefing screen
+  useEffect(() => {
+    if (autoStart && !isStarted && !isFinished) {
+      startDrill(selectedLevel);
+    }
+  }, [autoStart]);
+
   const handleSelectLevel = (lvl: number) => {
     if (lvl > progress.unlockedLevel) return;
     setSelectedLevel(lvl);
@@ -137,7 +132,6 @@ export const NumberLineHopDrill: React.FC = () => {
     setShowHelper(false);
   };
 
-  // Stopwatch timer
   useEffect(() => {
     if (isTimerRunning && !isFinished) {
       const startTime = Date.now() - elapsedTime * 1000;
@@ -154,7 +148,6 @@ export const NumberLineHopDrill: React.FC = () => {
     return minuend - subtrahend;
   }, [minuend, subtrahend]);
 
-  // Evaluate user submission
   const checkAnswer = () => {
     if (!userInput.trim()) return;
     const parsed = parseInt(userInput.trim(), 10);
@@ -172,7 +165,7 @@ export const NumberLineHopDrill: React.FC = () => {
 
       setTimeout(() => {
         advanceNextQuestion(newScore);
-      }, 350);
+      }, 250);
     } else {
       setFeedback('wrong');
       setShowHelper(true);
@@ -189,7 +182,6 @@ export const NumberLineHopDrill: React.FC = () => {
     if (e.key === 'Enter') {
       e.preventDefault();
       if (feedback === 'wrong') {
-        // Press enter while in breakdown to continue to next question
         advanceNextQuestion(roundScore);
       } else {
         checkAnswer();
@@ -199,7 +191,6 @@ export const NumberLineHopDrill: React.FC = () => {
 
   const advanceNextQuestion = (finalScore: number) => {
     if (currentQuestionIdx >= 10) {
-      // Completed all 10 questions
       setIsFinished(true);
       setIsTimerRunning(false);
 
@@ -230,354 +221,312 @@ export const NumberLineHopDrill: React.FC = () => {
   };
 
   const streakForActiveLevel = progress?.streakCount?.[selectedLevel] || 0;
+  const passedSet = roundScore >= activeLevelConfig.passingScore;
 
   return (
-    <div className="w-full bg-slate-50/70 rounded-2xl border border-slate-200/90 p-4 sm:p-6 shadow-xs space-y-5">
-      {/* ── Level Navigation Header ── */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between flex-wrap gap-2">
-          <div>
-            <span className="text-[10px] font-bold tracking-wider uppercase text-sky-600 bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200">
-              Quantitative Aptitude • Chapter 1: Speed Subtraction
+    <div className="w-full bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 shadow-2xs">
+      {/* Sleek Minimalist Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-slate-100 mb-4">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold text-slate-900">
+            Level {activeLevelConfig.level}: {activeLevelConfig.title.split('(')[0].trim()}
+          </span>
+          {streakForActiveLevel > 0 && (
+            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.2 rounded-full border border-amber-200/60">
+              <Flame className="w-2.5 h-2.5 fill-current" />
+              {streakForActiveLevel} streak
             </span>
-            <h2 className="text-lg font-black text-slate-900 mt-1 flex items-center gap-2">
-              Level {activeLevelConfig.level}: {activeLevelConfig.title}
-            </h2>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 bg-amber-50 text-amber-800 text-xs font-bold px-3 py-1 rounded-lg border border-amber-200 shadow-2xs">
-              <Flame className="w-4 h-4 fill-amber-500 text-amber-600" />
-              <span>Streak: {streakForActiveLevel} Sets</span>
-            </div>
-            {isStarted && !isFinished && (
-              <button
-                onClick={() => startDrill(selectedLevel)}
-                className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-2xs cursor-pointer"
-                title="Restart Set"
-              >
-                <RotateCcw className="w-4 h-4" />
-              </button>
-            )}
-          </div>
+          )}
         </div>
 
         {/* Level Selector Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar">
+        <div className="flex items-center gap-1 overflow-x-auto custom-scrollbar py-0.5">
           {SUBTRACTION_LEVELS.map(lvl => {
             const isUnlocked = lvl.level <= progress.unlockedLevel;
             const isCurrent = lvl.level === selectedLevel;
+
             return (
               <button
                 key={lvl.level}
                 onClick={() => handleSelectLevel(lvl.level)}
                 disabled={!isUnlocked}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
+                className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all shrink-0 flex items-center gap-1 cursor-pointer ${
                   isCurrent
-                    ? 'bg-sky-600 text-white shadow-xs ring-2 ring-sky-500/30'
+                    ? 'bg-slate-900 text-white shadow-xs font-bold'
                     : isUnlocked
-                    ? 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 cursor-pointer'
-                    : 'bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed opacity-50'
+                    ? 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80'
+                    : 'bg-slate-50 text-slate-300 cursor-not-allowed'
                 }`}
               >
-                {!isUnlocked ? <Lock className="w-3 h-3 text-slate-400" /> : <span>L{lvl.level}</span>}
-                <span className="text-[11px] font-medium opacity-90 truncate max-w-[140px]">
-                  {lvl.title.split('(')[0].trim()}
-                </span>
+                {!isUnlocked ? <Lock className="w-2.5 h-2.5" /> : <span>L{lvl.level}</span>}
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+      {/* Screen 1: Minimalist Briefing */}
       {!isStarted && !isFinished && (
         <motion.div
-          initial={{ opacity: 0, y: 8 }}
+          initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+          className="max-w-md mx-auto py-6 sm:py-8 text-center space-y-5"
         >
-          <div className="text-center space-y-2">
-            <div className="w-14 h-14 bg-sky-50 text-sky-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-sky-100">
-              <Target className="w-7 h-7" />
+          <div className="space-y-1.5">
+            <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center mx-auto mb-2">
+              <Compass className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-black text-slate-900">
+            <h3 className="text-base font-bold text-slate-900">
               Level {activeLevelConfig.level}: {activeLevelConfig.title}
             </h3>
-            <p className="text-sm text-slate-600 max-w-md mx-auto">
+            <p className="text-xs text-slate-500 leading-relaxed max-w-sm mx-auto">
               {activeLevelConfig.description}
             </p>
           </div>
 
-          {/* Arun Sharma Concept Card */}
-          <div className="bg-sky-50/70 border border-sky-200/80 rounded-xl p-4 space-y-2">
-            <div className="text-xs font-bold text-sky-800 flex items-center gap-1.5">
-              <HelpCircle className="w-4 h-4 text-sky-600" />
-              <span>Arun Sharma Forward Distance Technique (Page 4)</span>
-            </div>
-            <p className="text-xs text-slate-700 leading-relaxed">
-              Instead of borrowing across columns, stand at the smaller number and jump forward on the mental number line to the target. Subtraction becomes friendly forward addition!
-            </p>
-            <div className="bg-white/90 border border-sky-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-sky-900">
-              <span>e.g. 72 − 38:</span>
-              <span>38 ➔ (+4) ➔ 42 ➔ (+30) ➔ 72</span>
-              <span className="bg-sky-600 text-white px-2 py-0.5 rounded text-[11px] font-sans">Diff: 34</span>
-            </div>
+          <div className="flex items-center justify-center gap-4 text-xs font-medium text-slate-600 py-2 border-y border-slate-100">
+            <span>10 Problems</span>
+            <span className="text-slate-300">•</span>
+            <span>Pass: ≥ 8/10</span>
+            <span className="text-slate-300">•</span>
+            <span>Target: ~{activeLevelConfig.targetBenchmarkSec}s/hop</span>
           </div>
 
-          {/* Drill Targets */}
-          <div className="grid grid-cols-3 gap-3 text-center">
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Questions</span>
-              <span className="text-base font-black text-slate-800">10 Problems</span>
-            </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Unlock Target</span>
-              <span className="text-base font-black text-emerald-700">≥ 8 / 10 Correct</span>
-            </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Speed</span>
-              <span className="text-base font-black text-sky-700">~{activeLevelConfig.targetBenchmarkSec}s / hop</span>
-            </div>
-          </div>
-
-          {/* Start Drill Button */}
           <button
             onClick={() => startDrill(selectedLevel)}
-            className="w-full py-4 bg-sky-600 hover:bg-sky-700 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition-all shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer active:scale-98"
           >
-            <Play className="w-5 h-5 fill-current" />
-            <span>Start Subtraction Drill</span>
+            <Play className="w-3.5 h-3.5 fill-current" />
+            <span>Start Practice</span>
           </button>
         </motion.div>
       )}
 
-      {/* ── Screen 2: Active Drill Arena ── */}
+      {/* Screen 2: Stitch Minimalist Practice Cockpit Arena */}
       {isStarted && !isFinished && (
-        <div className="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-xs space-y-6">
-          {/* Top Drill Status Bar */}
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-black text-slate-700 uppercase tracking-wider">
-                Question {currentQuestionIdx} of 10
-              </span>
-              <div className="flex items-center gap-1 ml-2">
-                {questionHistory.map((status, idx) => (
-                  <span
-                    key={idx}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      idx === currentQuestionIdx - 1
-                        ? 'ring-2 ring-sky-500 ring-offset-1 bg-sky-400'
-                        : status === 'correct'
-                        ? 'bg-emerald-500'
-                        : status === 'wrong'
-                        ? 'bg-rose-500'
-                        : 'bg-slate-200'
-                    }`}
+        <div className="w-full max-w-2xl mx-auto py-1 space-y-4">
+          <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-xs space-y-5">
+            {/* Header: Topic, Level & Sleek Progress Indicator */}
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-blue-600 font-bold">
+                    Number Line Subtraction
+                  </span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-blue-50 text-blue-700 border border-blue-100 font-medium">
+                    Level {selectedLevel}
+                  </span>
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5 font-sans">
+                  Forward hops • {activeLevelConfig.title}
+                </div>
+              </div>
+              <div className="text-right">
+                <span className="font-mono text-xs font-semibold text-slate-800">
+                  Problem {currentQuestionIdx} <span className="text-slate-400 font-normal">of 10</span>
+                </span>
+                <div className="w-28 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1 ml-auto">
+                  <div
+                    className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
+                    style={{ width: `${(currentQuestionIdx / 10) * 100}%` }}
                   />
-                ))}
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
-                <Timer className="w-3.5 h-3.5 text-sky-600" />
-                <span className="font-mono">{elapsedTime.toFixed(1)}s</span>
-              </div>
-              <div className="text-xs font-bold text-slate-700">
-                Score: <span className="text-sky-600 font-mono font-black">{roundScore}</span>/10
-              </div>
-            </div>
-          </div>
-
-          {/* Forward Distance Model Visualizer */}
-          <div className="p-4 bg-gradient-to-r from-sky-50/50 via-slate-50 to-emerald-50/50 rounded-xl border border-slate-200/90 space-y-3">
-            <div className="text-xs font-bold text-slate-600 flex items-center justify-between">
-              <span className="flex items-center gap-1.5 text-slate-700">
-                <span className="w-2 h-2 rounded-full bg-sky-600"></span>
-                Forward Mental Hop:
-              </span>
-              <span className="text-sky-800 font-mono font-bold text-[13px]">
-                Stand at <strong className="text-blue-700">{subtrahend}</strong> ➔ Leap to <strong className="text-emerald-700">{minuend}</strong>
-              </span>
-            </div>
-
-            {/* Visual Hop Track */}
-            <div className="relative h-14 flex items-center px-8">
-              <div className="absolute inset-x-8 h-1.5 bg-gradient-to-r from-blue-400 via-sky-300 to-emerald-400 rounded-full" />
-              
-              {/* Start (Subtrahend) */}
-              <div className="absolute left-8 -translate-x-1/2 flex flex-col items-center">
-                <div className="w-5 h-5 rounded-full bg-blue-600 border-2 border-white shadow-sm flex items-center justify-center text-[9px] text-white font-bold">
-                  S
                 </div>
-                <span className="text-xs font-black font-mono text-blue-900 mt-1">{subtrahend}</span>
-                <span className="text-[9px] uppercase font-bold text-slate-400">Start</span>
+              </div>
+            </div>
+
+            {/* Arithmetic Expression Canvas with Distinct Slate Operand Tiles */}
+            <div className="py-2 sm:py-3 text-center space-y-4">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 select-none">
+                <span className="inline-flex items-center justify-center min-w-[3.5rem] sm:min-w-[4.25rem] px-3.5 py-2.5 rounded-xl border bg-blue-50/80 text-blue-700 border-blue-200 font-mono font-bold text-2xl sm:text-3xl shadow-2xs">
+                  {minuend}
+                </span>
+                <span className="text-slate-400 font-bold text-2xl px-1 font-mono">−</span>
+                <span className="inline-flex items-center justify-center min-w-[3.5rem] sm:min-w-[4.25rem] px-3.5 py-2.5 rounded-xl border bg-slate-50 text-slate-800 border-slate-200/90 font-mono font-bold text-2xl sm:text-3xl shadow-2xs">
+                  {subtrahend}
+                </span>
+                <span className="text-slate-400 font-bold text-2xl px-1 font-mono">=</span>
+                <span className="text-blue-600 font-mono font-bold text-2xl sm:text-3xl px-1">?</span>
               </div>
 
-              {/* Center directional indicator */}
-              <div className="mx-auto bg-white/90 border border-slate-200 px-3 py-0.5 rounded-full shadow-2xs text-[10px] font-bold text-slate-600 flex items-center gap-1 z-10">
-                <span>Forward Hop Direction</span>
-                <ArrowRight className="w-3 h-3 text-sky-600" />
+              {/* Mental Hint / Hop Ladder Toggle */}
+              <div className="pt-1">
+                <button
+                  type="button"
+                  onClick={() => setShowHelper((prev) => !prev)}
+                  className="inline-flex items-center space-x-1.5 text-xs text-slate-500 hover:text-blue-600 bg-slate-50 hover:bg-blue-50/60 px-3 py-1 rounded-full transition border border-slate-200/80 font-medium cursor-pointer shadow-2xs"
+                >
+                  <Compass className="w-3.5 h-3.5 text-blue-600" />
+                  <span>{showHelper ? 'Hide Thought Hops' : 'Forward Hops Guide (H)'}</span>
+                </button>
+
+                <AnimatePresence>
+                  {showHelper && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 4 }}
+                      className="mt-2.5 max-w-lg mx-auto p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2 shadow-2xs text-left"
+                    >
+                      <div className="flex items-center justify-between border-b border-slate-200/60 pb-2">
+                        <span className="font-bold text-slate-900">
+                          Hop Route: <strong className="text-emerald-700 font-mono">{expectedDiff}</strong>
+                        </span>
+                        <span className="text-[11px] font-mono text-slate-400">
+                          {subtrahend} ➔ {minuend}
+                        </span>
+                      </div>
+                      <ThoughtHopVisualizer
+                        type="subtraction"
+                        minuend={minuend}
+                        subtrahend={subtrahend}
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Input and Next/Skip Controls */}
+            <div className="max-w-sm mx-auto space-y-3">
+              <div className="relative">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  value={userInput}
+                  onChange={(e) => {
+                    setUserInput(e.target.value.replace(/[^0-9]/g, ''));
+                    if (feedback !== 'idle') setFeedback('idle');
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      checkAnswer();
+                    } else if (e.key.toLowerCase() === 'h' && !userInput) {
+                      e.preventDefault();
+                      setShowHelper((prev) => !prev);
+                    }
+                  }}
+                  placeholder="Enter difference..."
+                  autoFocus
+                  className={`w-full text-center font-mono font-bold text-xl sm:text-2xl py-2.5 px-4 rounded-xl border transition-all outline-none ${
+                    feedback === 'correct'
+                      ? 'border-emerald-500 bg-emerald-50/70 text-emerald-800 ring-4 ring-emerald-50'
+                      : feedback === 'wrong'
+                      ? 'border-rose-400 bg-rose-50/70 text-rose-800 ring-4 ring-rose-50'
+                      : 'border-slate-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-50 text-slate-900 bg-slate-50/50 hover:bg-white placeholder:text-slate-300'
+                  }`}
+                />
               </div>
 
-              {/* Target (Minuend) */}
-              <div className="absolute right-8 translate-x-1/2 flex flex-col items-center">
-                <div className="w-5 h-5 rounded-full bg-emerald-600 border-2 border-white shadow-sm flex items-center justify-center text-[9px] text-white font-bold">
-                  T
+              <div className="flex items-center space-x-2.5">
+                <button
+                  type="button"
+                  onClick={checkAnswer}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold text-xs shadow-xs transition flex items-center justify-center space-x-1.5 cursor-pointer"
+                >
+                  <span>Next</span>
+                  <span className="font-mono text-[11px] opacity-75">(Enter ↵)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => advanceNextQuestion(roundScore)}
+                  className="py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-semibold transition cursor-pointer"
+                  title="Skip problem"
+                >
+                  Skip
+                </button>
+              </div>
+            </div>
+
+            {/* 3-Column Performance Stats Footer */}
+            <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-3 text-center">
+              <div>
+                <div className="text-[10px] text-slate-400 font-medium">Avg Pace</div>
+                <div className="text-sm font-semibold font-mono text-slate-800 mt-0.5">
+                  {currentQuestionIdx > 1 ? (elapsedTime / (currentQuestionIdx - 1)).toFixed(1) : elapsedTime.toFixed(1)}s{' '}
+                  <span className="text-[11px] text-slate-400 font-normal">/ problem</span>
                 </div>
-                <span className="text-xs font-black font-mono text-emerald-900 mt-1">{minuend}</span>
-                <span className="text-[9px] uppercase font-bold text-slate-400">Target</span>
+              </div>
+              <div>
+                <div className="text-[10px] text-slate-400 font-medium">Session Accuracy</div>
+                <div className="text-sm font-semibold font-mono text-emerald-600 mt-0.5">
+                  {currentQuestionIdx > 1
+                    ? `${Math.round((roundScore / (currentQuestionIdx - 1)) * 100)}%`
+                    : '100%'}{' '}
+                  <span className="text-[11px] text-slate-400 font-normal">
+                    ({roundScore}/{Math.max(1, currentQuestionIdx - 1)})
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div className="text-[10px] text-slate-400 font-medium">Target Pace</div>
+                <div className="text-sm font-semibold font-mono text-slate-800 mt-0.5">
+                  ~{activeLevelConfig.targetBenchmarkSec}s
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Equation Display */}
-          <div className="text-center py-2">
-            <div className="inline-flex items-center gap-3 sm:gap-4 font-mono font-black text-3xl sm:text-4xl text-slate-900 bg-slate-50/80 px-6 py-3 rounded-2xl border border-slate-200 shadow-2xs">
-              <span className="text-slate-900">{minuend}</span>
-              <span className="text-slate-400">−</span>
-              <span className="text-sky-600">{subtrahend}</span>
-              <span className="text-slate-400">=</span>
-              <span className="text-sky-700">?</span>
-            </div>
-          </div>
-
-          {/* Input & Action Area (Explicit Check, No auto-eval on typing) */}
-          <div className="max-w-sm mx-auto space-y-3">
-            <div className="relative">
-              <input
-                ref={inputRef}
-                type="text"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                value={userInput}
-                onChange={e => setUserInput(e.target.value.replace(/[^0-9]/g, ''))}
-                onKeyDown={handleKeyDown}
-                placeholder="Enter difference..."
-                disabled={feedback === 'correct'}
-                className={`w-full text-center text-3xl font-black font-mono py-3.5 px-4 rounded-xl border-2 transition-all outline-none shadow-2xs ${
-                  feedback === 'correct'
-                    ? 'border-emerald-500 bg-emerald-50/60 text-emerald-900 ring-2 ring-emerald-400/30'
-                    : feedback === 'wrong'
-                    ? 'border-rose-500 bg-rose-50/60 text-rose-900 ring-2 ring-rose-400/30'
-                    : 'border-slate-300 focus:border-sky-600 text-slate-900 bg-white'
-                }`}
-                autoFocus
-              />
-            </div>
-
-            {/* Check Button */}
-            {feedback !== 'wrong' ? (
-              <button
-                onClick={checkAnswer}
-                disabled={!userInput.trim() || feedback === 'correct'}
-                className="w-full py-3 bg-sky-600 hover:bg-sky-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold text-sm rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <Check className="w-4 h-4" />
-                <span>Check Answer (or press Enter)</span>
-              </button>
-            ) : (
-              <button
-                onClick={() => advanceNextQuestion(roundScore)}
-                className="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Understand &amp; Next Question ➔</span>
-              </button>
-            )}
-          </div>
-
-          {/* Thought Process Helper Visualizer (shown on wrong answer or request) */}
-          {showHelper && (
-            <div className="pt-2">
-              <ThoughtHopVisualizer
-                type="subtraction"
-                minuend={minuend}
-                subtrahend={subtrahend}
-              />
-            </div>
-          )}
         </div>
       )}
 
-      {/* ── Screen 3: Round Finished Summary ── */}
+      {/* Screen 3: Summary Scorecard */}
       {isFinished && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-md text-center space-y-6 max-w-lg mx-auto"
+          className="max-w-sm mx-auto py-8 text-center space-y-5"
         >
-          <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto shadow-xs ${
-            roundScore >= activeLevelConfig.passingScore
-              ? 'bg-emerald-50 text-emerald-600 border border-emerald-200'
-              : 'bg-amber-50 text-amber-600 border border-amber-200'
-          }`}>
-            <Trophy className="w-8 h-8" />
+          <div className="w-12 h-12 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center mx-auto">
+            <Trophy className="w-6 h-6" />
           </div>
 
           <div>
-            <h3 className="text-2xl font-black text-slate-900">
-              {roundScore >= activeLevelConfig.passingScore
-                ? 'Level Cleared! 🎉'
-                : 'Drill Completed!'}
+            <h3 className="text-lg font-bold text-slate-900">
+              {passedSet ? 'Level Completed' : 'Session Finished'}
             </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              {roundScore >= activeLevelConfig.passingScore
-                ? `Passed with ${roundScore}/10! Next level unlocked.`
-                : `You scored ${roundScore}/10. Need ≥ 8 to unlock the next level.`}
+            <p className="text-xs text-slate-500 mt-0.5">
+              Level {activeLevelConfig.level}: {activeLevelConfig.title}
             </p>
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-3 text-left">
-            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Score</span>
-              <div className="text-2xl font-mono font-black text-slate-900 mt-0.5">
-                {roundScore} / 10
-              </div>
-              <span className="text-[11px] text-slate-500 font-medium">
-                {Math.round((roundScore / 10) * 100)}% Accuracy
-              </span>
+          <div className="grid grid-cols-2 gap-2 text-center py-1">
+            <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Score</span>
+              <span className="text-xl font-mono font-bold text-slate-900">{roundScore}/10</span>
             </div>
-
-            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Total Time</span>
-              <div className="text-2xl font-mono font-black text-slate-900 mt-0.5">
-                {elapsedTime.toFixed(1)}s
-              </div>
-              <span className="text-[11px] text-slate-500 font-medium">
-                {(elapsedTime / 10).toFixed(1)}s / hop avg
-              </span>
+            <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Time</span>
+              <span className="text-xl font-mono font-bold text-slate-900">{elapsedTime.toFixed(1)}s</span>
             </div>
           </div>
 
-          {roundScore >= activeLevelConfig.passingScore && selectedLevel < 6 && (
-            <div className="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs font-bold text-emerald-800 flex items-center justify-center gap-2">
-              <Unlock className="w-4 h-4 text-emerald-600" />
-              <span>Level {selectedLevel + 1} Unlocked! Ready for the next leap.</span>
+          {passedSet && selectedLevel < 6 && (
+            <div className="text-xs font-semibold text-emerald-700 flex items-center justify-center gap-1">
+              <Unlock className="w-3.5 h-3.5" />
+              <span>Level {selectedLevel + 1} Unlocked</span>
             </div>
           )}
 
-          {/* Actions */}
-          <div className="flex gap-2.5 pt-2">
+          <div className="flex gap-2 justify-center pt-2">
             <button
               onClick={() => startDrill(selectedLevel)}
-              className="flex-1 py-3 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
             >
-              <RotateCcw className="w-4 h-4" />
-              <span>Retry Level {selectedLevel}</span>
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Retry</span>
             </button>
 
-            {selectedLevel < progress.unlockedLevel && (
+            {passedSet && selectedLevel < 6 && (
               <button
                 onClick={() => {
                   setSelectedLevel(selectedLevel + 1);
-                  setIsStarted(false);
-                  setIsFinished(false);
+                  startDrill(selectedLevel + 1);
                 }}
-                className="py-3 px-5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition-colors cursor-pointer flex items-center gap-1.5"
+                className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
               >
-                <span>Level {selectedLevel + 1}</span>
+                <span>Next Level</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             )}

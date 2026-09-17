@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { RotateCcw, Trophy, Lightbulb, Zap, ArrowRight, CheckCircle2, Play, Target, Timer, Sparkles } from 'lucide-react';
+import { RotateCcw, Trophy, Lightbulb, ArrowRight, Play, Timer, Sparkles } from 'lucide-react';
 
 type MultTrack = 'base_100' | 'square_diff' | 'criss_cross' | 'percentage';
 
-export const MultiplicationDrill: React.FC = () => {
+interface MultDrillProps {
+  autoStart?: boolean;
+}
+
+export const MultiplicationDrill: React.FC<MultDrillProps> = ({ autoStart = false }) => {
   const [activeTrack, setActiveTrack] = useState<MultTrack>('base_100');
   const [isStarted, setIsStarted] = useState<boolean>(false);
   const [numA, setNumA] = useState<number>(94);
@@ -22,34 +26,34 @@ export const MultiplicationDrill: React.FC = () => {
 
   const trackBriefings = {
     base_100: {
-      title: 'Base 100 Deviations Sprint',
-      ruleName: 'Base 100 Deviation Rule (Ch. 2, Page 5)',
-      description: 'Multiply numbers near 100 in seconds by computing differences from 100.',
-      concept: 'For numbers near 100, calculate deviations d1 and d2. Left part = (Num1 + d2), Right part = (d1 × d2). (e.g. 94 × 96: d1 = -6, d2 = -4. Left = 94 + (-4) = 90, Right = (-6)×(-4) = 24 ➔ 9024).',
+      title: 'Base 100 Deviations',
+      ruleName: 'Deviation Rule',
+      description: 'Multiply numbers near 100 quickly by computing differences from 100.',
+      concept: 'Left part = (Num1 + d2), Right part = (d1 × d2).',
       example: '94 × 96 ➔ (94 − 4) | (−6 × −4) = 9024',
       benchmarkSec: 6,
     },
     square_diff: {
-      title: 'Difference of Squares (a² - b²)',
-      ruleName: 'Equidistant Anchor Shortcut (Ch. 2, Page 6)',
-      description: 'Multiply numbers equidistant from a round number using (anchor - d)(anchor + d) = anchor² - d².',
-      concept: 'Identify the exact midpoint anchor. Square the anchor and subtract the square of the difference. (e.g. 18 × 22: Anchor is 20, difference is 2. Result = 20² - 2² = 400 - 4 = 396).',
+      title: 'Difference of Squares (a² − b²)',
+      ruleName: 'Equidistant Anchor Shortcut',
+      description: 'Multiply numbers equidistant from a round number using anchor² − d².',
+      concept: 'Identify the exact midpoint anchor, then compute anchor² − diff².',
       example: '18 × 22 ➔ 20² − 2² = 400 − 4 = 396',
       benchmarkSec: 5,
     },
     criss_cross: {
-      title: 'Vedic Criss-Cross Multiplication',
-      ruleName: 'Single-Line 2-Digit Product (Ch. 2, Page 8)',
-      description: 'Compute any 2-digit × 2-digit product in a single line from right to left.',
-      concept: 'Step 1: Multiply units digits (write unit, carry tens). Step 2: Cross-multiply and sum with carry (write unit, carry tens). Step 3: Multiply tens digits + carry.',
-      example: '43 × 78 ➔ Units (3×8=24) | Cross (32+21+2=55) | Tens (28+5=33) ➔ 3354',
+      title: 'Vedic Criss-Cross',
+      ruleName: 'Single-Line 2-Digit Product',
+      description: 'Compute 2-digit × 2-digit products in a single line right-to-left.',
+      concept: '1. Units product. 2. Cross-multiplication sum + carry. 3. Tens product + carry.',
+      example: '43 × 78 ➔ Units (24) | Cross (55) | Tens (33) ➔ 3354',
       benchmarkSec: 8,
     },
     percentage: {
-      title: 'Percentage Decomposition Multiplication',
-      ruleName: 'Percentage Split Multiplication (Ch. 2, Page 9)',
+      title: 'Percentage Decomposition',
+      ruleName: 'Percentage Split Method',
       description: 'Convert multiplication into percentage splits of friendly round numbers.',
-      concept: 'Multiply by treating one number as a percentage: e.g. 24 × 65 is equivalent to 24% of 6500 = (20% of 6500) + (4% of 6500) = 1300 + 260 = 1560.',
+      concept: 'Multiply by treating one number as a percentage split of the other.',
       example: '24 × 65 ➔ 20% + 4% of 6500 = 1300 + 260 = 1560',
       benchmarkSec: 7,
     }
@@ -62,34 +66,27 @@ export const MultiplicationDrill: React.FC = () => {
     if (track === 'base_100') {
       const type = Math.random();
       if (type < 0.4) {
-        // Both below 100 (e.g. 91..98)
         a = 100 - (Math.floor(Math.random() * 8) + 2);
         b = 100 - (Math.floor(Math.random() * 8) + 2);
       } else if (type < 0.7) {
-        // Both above 100 (e.g. 102..108)
         a = 100 + (Math.floor(Math.random() * 8) + 2);
         b = 100 + (Math.floor(Math.random() * 8) + 2);
       } else {
-        // One above, one below (e.g. 104 * 96)
         a = 100 + (Math.floor(Math.random() * 7) + 2);
         b = 100 - (Math.floor(Math.random() * 7) + 2);
       }
     } else if (track === 'square_diff') {
-      // (a-b)(a+b) = a^2 - b^2
-      // Anchor round number e.g. 20, 30, 40, 50, 60, 25, 35, 45
       const anchors = [20, 25, 30, 35, 40, 50, 60];
       const anchor = anchors[Math.floor(Math.random() * anchors.length)];
-      const diff = Math.floor(Math.random() * 4) + 1; // 1..4
+      const diff = Math.floor(Math.random() * 4) + 1;
       a = anchor - diff;
       b = anchor + diff;
     } else if (track === 'criss_cross') {
-      // General 2-digit * 2-digit
       a = Math.floor(Math.random() * 70) + 21;
       b = Math.floor(Math.random() * 70) + 21;
     } else {
-      // Percentage multiplication (e.g. 43 * 78 or 24 * 65)
       a = Math.floor(Math.random() * 40) + 15;
-      b = (Math.floor(Math.random() * 15) + 3) * 5; // multiple of 5 makes percentage clean
+      b = (Math.floor(Math.random() * 15) + 3) * 5;
     }
 
     setNumA(a);
@@ -100,18 +97,24 @@ export const MultiplicationDrill: React.FC = () => {
 
     setTimeout(() => {
       inputRef.current?.focus();
-    }, 100);
+    }, 60);
   };
 
   const startDrill = (track: MultTrack = activeTrack) => {
     setActiveTrack(track);
     setIsStarted(true);
-    setIsFinished(false);
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
+    setIsFinished(false);
     generateProblem(track);
   };
+
+  useEffect(() => {
+    if (autoStart && !isStarted && !isFinished) {
+      startDrill(activeTrack);
+    }
+  }, [autoStart]);
 
   const handleSelectTrack = (track: MultTrack) => {
     setActiveTrack(track);
@@ -154,7 +157,7 @@ export const MultiplicationDrill: React.FC = () => {
             setRoundCount(prev => prev + 1);
             generateProblem();
           }
-        }, 200);
+        }, 220);
       } else {
         setFeedback('wrong');
         setShowHelper(true);
@@ -162,7 +165,25 @@ export const MultiplicationDrill: React.FC = () => {
     }
   };
 
-  // Helper breakdown text based on track
+  const checkAnswer = () => {
+    if (!userInput) return;
+    if (parseInt(userInput, 10) === expectedProduct) {
+      setFeedback('correct');
+      setScore(prev => prev + 1);
+      setTimeout(() => {
+        if (roundCount >= 5) {
+          setIsFinished(true);
+        } else {
+          setRoundCount(prev => prev + 1);
+          generateProblem();
+        }
+      }, 220);
+    } else {
+      setFeedback('wrong');
+      setShowHelper(true);
+    }
+  };
+
   const renderMentalThought = () => {
     if (activeTrack === 'base_100') {
       const devA = numA - 100;
@@ -170,36 +191,24 @@ export const MultiplicationDrill: React.FC = () => {
       const initialPart = numA + devB;
       const productOfDevs = devA * devB;
 
-      if (devA * devB >= 0) {
-        return (
-          <div className="space-y-1">
-            <div className="font-bold text-indigo-900">Base 100 Deviation Rule:</div>
-            <div>• Deviations: ({devA >= 0 ? `+${devA}` : devA}) and ({devB >= 0 ? `+${devB}` : devB})</div>
-            <div>• Left Digits = {numA} + ({devB >= 0 ? `+${devB}` : devB}) = <strong>{initialPart}</strong></div>
-            <div>• Right Digits = ({devA}) × ({devB}) = <strong>{productOfDevs.toString().padStart(2, '0')}</strong></div>
-            <div className="font-bold text-emerald-800">Result = {initialPart}{productOfDevs.toString().padStart(2, '0')}</div>
-          </div>
-        );
-      } else {
-        return (
-          <div className="space-y-1">
-            <div className="font-bold text-indigo-900">Base 100 Mixed Sign Rule:</div>
-            <div>• Deviations: ({devA >= 0 ? `+${devA}` : devA}) and ({devB >= 0 ? `+${devB}` : devB})</div>
-            <div>• Intermediate Base = {numA} + ({devB}) = {initialPart}00</div>
-            <div>• Subtract product = {initialPart}00 - {Math.abs(productOfDevs)} = <strong>{expectedProduct}</strong></div>
-          </div>
-        );
-      }
+      return (
+        <div className="space-y-1 font-mono text-xs">
+          <div>Deviations: ({devA >= 0 ? `+${devA}` : devA}) and ({devB >= 0 ? `+${devB}` : devB})</div>
+          <div>Left: {numA} + ({devB >= 0 ? `+${devB}` : devB}) = <strong>{initialPart}</strong></div>
+          <div>Right: ({devA}) × ({devB}) = <strong>{productOfDevs}</strong></div>
+          <div className="font-bold text-emerald-700 font-sans">Product = {expectedProduct}</div>
+        </div>
+      );
     }
 
     if (activeTrack === 'square_diff') {
       const anchor = (numA + numB) / 2;
       const diff = Math.abs(numA - anchor);
       return (
-        <div className="space-y-1">
-          <div className="font-bold text-purple-900">Difference of Squares Rule: (a - b)(a + b) = a² - b²</div>
-          <div>• Anchor center = ({numA} + {numB}) / 2 = <strong>{anchor}</strong> (Gap: ±{diff})</div>
-          <div>• Calculation: {anchor}² - {diff}² = {anchor * anchor} - {diff * diff} = <strong>{expectedProduct}</strong></div>
+        <div className="space-y-1 font-mono text-xs">
+          <div>Anchor = <strong>{anchor}</strong> (Gap: ±{diff})</div>
+          <div>Formula: {anchor}² − {diff}² = {anchor * anchor} − {diff * diff}</div>
+          <div className="font-bold text-emerald-700 font-sans">Product = {expectedProduct}</div>
         </div>
       );
     }
@@ -213,262 +222,334 @@ export const MultiplicationDrill: React.FC = () => {
       const step1 = uA * uB;
       const carry1 = Math.floor(step1 / 10);
       const unitDigit = step1 % 10;
-
       const step2 = (tA * uB) + (tB * uA) + carry1;
       const carry2 = Math.floor(step2 / 10);
       const tensDigit = step2 % 10;
-
       const step3 = (tA * tB) + carry2;
 
       return (
         <div className="space-y-1 font-mono text-xs">
-          <div className="font-bold text-slate-900 font-sans">Vedic Criss-Cross Single-Line Method:</div>
-          <div>1. Units: {uA} × {uB} = {step1} ➔ write <strong>{unitDigit}</strong>, carry {carry1}</div>
-          <div>2. Cross: ({tA}×{uB} + {tB}×{uA}) + {carry1} = {step2} ➔ write <strong>{tensDigit}</strong>, carry {carry2}</div>
-          <div>3. Tens: ({tA}×{tB}) + {carry2} = <strong>{step3}</strong></div>
-          <div className="font-bold text-emerald-800 font-sans">Final = {step3}{tensDigit}{unitDigit}</div>
+          <div>Units: {uA}×{uB} = {step1} (write {unitDigit}, carry {carry1})</div>
+          <div>Cross: ({tA}×{uB} + {tB}×{uA}) + {carry1} = {step2} (write {tensDigit}, carry {carry2})</div>
+          <div>Tens: ({tA}×{tB}) + {carry2} = {step3}</div>
+          <div className="font-bold text-emerald-700 font-sans">Product = {step3}{tensDigit}{unitDigit}</div>
         </div>
       );
     }
 
     return (
-      <div className="space-y-1">
-        <div className="font-bold text-blue-900">Percentage Decomposition Method:</div>
-        <div>• Treat {numA} × {numB} as {numA}% of {numB} × 100:</div>
-        <div>• 10% of {numB} = {(numB * 0.1).toFixed(1)} ➔ {(numB * 0.1 * Math.floor(numA / 10)).toFixed(1)}</div>
-        <div>• 1% of {numB} = {(numB * 0.01).toFixed(2)} ➔ {(numB * 0.01 * (numA % 10)).toFixed(2)}</div>
-        <div className="font-bold text-emerald-800">Total = {expectedProduct}</div>
+      <div className="space-y-1 font-mono text-xs">
+        <div>Decomposition: {numA}% of {numB * 100}</div>
+        <div>10% chunk = {(numB * 0.1 * Math.floor(numA / 10)).toFixed(1)}</div>
+        <div>1% chunk = {(numB * 0.01 * (numA % 10)).toFixed(2)}</div>
+        <div className="font-bold text-emerald-700 font-sans">Product = {expectedProduct}</div>
       </div>
     );
   };
 
+  const tracks: { id: MultTrack; label: string; short: string }[] = [
+    { id: 'base_100', label: 'Base 100 Deviations', short: 'Base 100' },
+    { id: 'square_diff', label: 'Midpoint a² − b²', short: 'a² − b²' },
+    { id: 'criss_cross', label: 'Vedic Criss-Cross', short: 'Criss-Cross' },
+    { id: 'percentage', label: 'Percentage Split', short: 'Percentage' },
+  ];
+
   return (
-    <div className="w-full bg-slate-50/60 rounded-2xl border border-slate-200/80 p-4 sm:p-6 shadow-xs">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <span className="text-[10px] font-bold tracking-wider uppercase text-purple-600 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
-            Chapter 2: Mental Multiplications
-          </span>
-          <h2 className="text-lg font-black text-slate-900 mt-1">
-            Speed Multiplication Lab
-          </h2>
-        </div>
+    <div className="w-full bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 shadow-2xs">
+      {/* Sleek Minimalist Track Selector */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-slate-100 mb-4">
+        <span className="text-xs font-bold text-slate-900">
+          {trackBriefings[activeTrack].title}
+        </span>
 
-        <div className="flex items-center gap-2">
-          {isStarted && !isFinished && (
-            <button
-              onClick={() => {
-                setIsStarted(false);
-                setElapsedTime(0);
-                setShowHelper(false);
-              }}
-              className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
-              title="Return to Briefing"
-            >
-              <RotateCcw className="w-4 h-4" />
-            </button>
-          )}
+        <div className="flex items-center gap-1 overflow-x-auto custom-scrollbar py-0.5">
+          {tracks.map(track => {
+            const isCurrent = activeTrack === track.id;
+            return (
+              <button
+                key={track.id}
+                onClick={() => handleSelectTrack(track.id)}
+                className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all shrink-0 cursor-pointer ${
+                  isCurrent
+                    ? 'bg-slate-900 text-white shadow-xs font-bold'
+                    : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80'
+                }`}
+              >
+                {track.short}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      {/* Track Selector Tabs */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-5">
-        {[
-          { id: 'base_100' as MultTrack, label: 'Base 100 Deviations', tag: '94 × 96' },
-          { id: 'square_diff' as MultTrack, label: 'Square Diff (a² - b²)', tag: '18 × 22' },
-          { id: 'criss_cross' as MultTrack, label: 'Vedic Criss-Cross', tag: '43 × 78' },
-          { id: 'percentage' as MultTrack, label: 'Percentage Multiply', tag: 'DI Shortcut' },
-        ].map(track => {
-          const isActive = activeTrack === track.id;
-          return (
-            <button
-              key={track.id}
-              onClick={() => handleSelectTrack(track.id)}
-              className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
-                isActive
-                  ? 'bg-purple-600 text-white shadow-sm ring-2 ring-purple-500/30'
-                  : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
-              }`}
-            >
-              <div className="text-xs font-bold leading-tight">{track.label}</div>
-              <div className={`text-[10px] font-mono mt-0.5 ${isActive ? 'text-purple-200' : 'text-slate-400'}`}>
-                {track.tag}
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+      {/* Screen 1: Minimalist Briefing */}
       {!isStarted && !isFinished && (
         <motion.div
-          initial={{ opacity: 0, y: 8 }}
+          initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+          className="max-w-md mx-auto py-6 sm:py-8 text-center space-y-5"
         >
-          <div className="text-center space-y-2">
-            <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-purple-100">
-              <Sparkles className="w-7 h-7" />
+          <div className="space-y-1.5">
+            <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center mx-auto mb-2">
+              <Sparkles className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-black text-slate-900">
+            <h3 className="text-base font-bold text-slate-900">
               {trackBriefings[activeTrack].title}
             </h3>
-            <p className="text-sm text-slate-600 max-w-md mx-auto">
+            <p className="text-xs text-slate-500 leading-relaxed max-w-sm mx-auto">
               {trackBriefings[activeTrack].description}
             </p>
           </div>
 
-          {/* Arun Sharma Method Tip Box */}
-          <div className="bg-purple-50/70 border border-purple-200/80 rounded-xl p-4 space-y-2">
-            <div className="text-xs font-bold text-purple-800 flex items-center gap-1.5">
-              <Lightbulb className="w-4 h-4 text-purple-600" />
-              <span>{trackBriefings[activeTrack].ruleName}</span>
+          <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 text-left text-xs space-y-1">
+            <div className="flex items-center gap-1.5 font-bold text-slate-800">
+              <Lightbulb className="w-3.5 h-3.5 text-blue-600" />
+              <span>Core Technique:</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed">
+            <p className="text-slate-600 leading-relaxed text-[11px]">
               {trackBriefings[activeTrack].concept}
             </p>
-            <div className="bg-white/90 border border-purple-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-purple-900">
-              <span>Technique Example:</span>
-              <span>{trackBriefings[activeTrack].example}</span>
-              <span className="bg-purple-600 text-white px-2 py-0.5 rounded text-[11px] font-sans font-bold">5 Problems</span>
+            <div className="font-mono text-[11px] text-slate-800 pt-1 font-semibold">
+              Example: {trackBriefings[activeTrack].example}
             </div>
           </div>
 
-          {/* Drill Targets Grid */}
-          <div className="grid grid-cols-3 gap-3 text-center">
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Questions</span>
-              <span className="text-base font-black text-slate-800">5 Problems</span>
-            </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Unlock Target</span>
-              <span className="text-base font-black text-emerald-700">≥ 4 / 5 Correct</span>
-            </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Speed</span>
-              <span className="text-base font-black text-purple-700">~{trackBriefings[activeTrack].benchmarkSec}s / problem</span>
-            </div>
+          <div className="flex items-center justify-center gap-4 text-xs font-medium text-slate-600 py-1">
+            <span>5 Problems</span>
+            <span className="text-slate-300">•</span>
+            <span>Target: ~{trackBriefings[activeTrack].benchmarkSec}s/sum</span>
           </div>
 
-          {/* Start Drill Button */}
           <button
             onClick={() => startDrill(activeTrack)}
-            className="w-full py-4 bg-purple-600 hover:bg-purple-700 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition-all shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer active:scale-98"
           >
-            <Play className="w-5 h-5 fill-current" />
-            <span>Start Multiplication Drill</span>
+            <Play className="w-3.5 h-3.5 fill-current" />
+            <span>Start Practice</span>
           </button>
         </motion.div>
       )}
 
-      {/* ── Screen 2: Active Problem Arena ── */}
+      {/* Screen 2: Stitch Minimalist Problem Arena */}
       {isStarted && !isFinished && (
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-6">
-          <div className="flex items-center justify-between text-xs text-slate-500">
-            <span className="font-bold uppercase tracking-wider">
-              Problem <strong className="text-slate-900 text-sm">{roundCount}</strong> of 5
-            </span>
-            <div className="flex items-center gap-4">
-              <span className="font-medium">
-                Score: <strong className="text-purple-700 font-bold">{score}</strong> / {roundCount - 1}
-              </span>
-              <span className="font-mono text-slate-400 flex items-center gap-1">
-                <Timer className="w-3.5 h-3.5 text-purple-600" />
-                {elapsedTime.toFixed(1)}s
-              </span>
-            </div>
-          </div>
-
-          {/* Math Expression */}
-          <div className="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 text-center">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest block mb-3">
-              Calculate Mentally using {trackBriefings[activeTrack].title}
-            </span>
-            <div className="flex items-center justify-center gap-4 font-mono font-black text-3xl sm:text-4xl text-slate-900">
-              <span className="px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-xs text-purple-800">{numA}</span>
-              <span className="text-slate-400 font-sans text-2xl">×</span>
-              <span className="px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-xs text-indigo-800">{numB}</span>
-              <span className="text-slate-400 font-sans text-2xl">=</span>
-              <span className="text-slate-400">?</span>
-            </div>
-          </div>
-
-          {/* Input Box */}
-          <div className="max-w-xs mx-auto space-y-2">
-            <input
-              ref={inputRef}
-              type="text"
-              inputMode="numeric"
-              pattern="[0-9]*"
-              value={userInput}
-              onChange={handleInputChange}
-              placeholder="Product..."
-              className={`w-full text-center text-3xl font-black font-mono py-3 rounded-xl border-2 transition-all outline-none ${
-                feedback === 'correct'
-                  ? 'border-emerald-500 bg-emerald-50 text-emerald-800'
-                  : feedback === 'wrong'
-                  ? 'border-rose-500 bg-rose-50 text-rose-800'
-                  : 'border-slate-300 focus:border-purple-600 text-slate-900'
-              }`}
-              autoFocus
-            />
-            <p className="text-center text-xs text-slate-400">Auto-checks when complete digits are entered</p>
-          </div>
-
-          {/* Show Thought Process / Helper */}
-          {showHelper && (
-            <div className="bg-purple-50/80 border border-purple-200 p-4 rounded-xl text-xs text-purple-900">
-              <div className="flex items-center gap-1.5 font-bold mb-2 text-purple-900">
-                <Lightbulb className="w-4 h-4 fill-purple-400 text-purple-600" />
-                <span>Arun Sharma Mental Thought Process:</span>
+        <div className="w-full max-w-2xl mx-auto py-1 space-y-4">
+          <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-xs space-y-5">
+            {/* Header: Track Title & Sleek Progress Indicator */}
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-blue-600 font-bold">
+                    {trackBriefings[activeTrack].title}
+                  </span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-blue-50 text-blue-700 border border-blue-100 font-medium">
+                    {trackBriefings[activeTrack].ruleName}
+                  </span>
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5 font-sans">
+                  {trackBriefings[activeTrack].description}
+                </div>
               </div>
-              {renderMentalThought()}
+              <div className="text-right">
+                <span className="font-mono text-xs font-semibold text-slate-800">
+                  Problem {roundCount} <span className="text-slate-400 font-normal">of 5</span>
+                </span>
+                <div className="w-28 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1 ml-auto">
+                  <div
+                    className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
+                    style={{ width: `${(roundCount / 5) * 100}%` }}
+                  />
+                </div>
+              </div>
             </div>
-          )}
+
+            {/* Arithmetic Expression Canvas with Distinct Slate Operand Tiles */}
+            <div className="py-2 sm:py-3 text-center space-y-4">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 select-none">
+                <span className="inline-flex items-center justify-center min-w-[3.5rem] sm:min-w-[4.25rem] px-3.5 py-2.5 rounded-xl border bg-blue-50/80 text-blue-700 border-blue-200 font-mono font-bold text-2xl sm:text-3xl shadow-2xs">
+                  {numA}
+                </span>
+                <span className="text-slate-400 font-bold text-2xl px-1 font-mono">×</span>
+                <span className="inline-flex items-center justify-center min-w-[3.5rem] sm:min-w-[4.25rem] px-3.5 py-2.5 rounded-xl border bg-slate-50 text-slate-800 border-slate-200/90 font-mono font-bold text-2xl sm:text-3xl shadow-2xs">
+                  {numB}
+                </span>
+                <span className="text-slate-400 font-bold text-2xl px-1 font-mono">=</span>
+                <span className="text-blue-600 font-mono font-bold text-2xl sm:text-3xl px-1">?</span>
+              </div>
+
+              {/* Mental Hint / Vedic Shortcut Toggle */}
+              <div className="pt-1">
+                <button
+                  type="button"
+                  onClick={() => setShowHelper((prev) => !prev)}
+                  className="inline-flex items-center space-x-1.5 text-xs text-slate-500 hover:text-blue-600 bg-slate-50 hover:bg-blue-50/60 px-3 py-1 rounded-full transition border border-slate-200/80 font-medium cursor-pointer shadow-2xs"
+                >
+                  <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
+                  <span>{showHelper ? 'Hide Mental Shortcut' : 'Technique Hint (H)'}</span>
+                </button>
+
+                <AnimatePresence>
+                  {showHelper && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 4 }}
+                      className="mt-2.5 max-w-lg mx-auto p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2 shadow-2xs text-left"
+                    >
+                      <div className="flex items-center justify-between border-b border-slate-200/60 pb-2">
+                        <span className="font-bold text-slate-900">
+                          Mental Steps: <strong className="text-emerald-700 font-mono">{expectedProduct}</strong>
+                        </span>
+                        <span className="text-[11px] font-mono text-slate-400">
+                          {trackBriefings[activeTrack].ruleName}
+                        </span>
+                      </div>
+                      {renderMentalThought()}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Input and Next/Skip Controls */}
+            <div className="max-w-sm mx-auto space-y-3">
+              <div className="relative">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  value={userInput}
+                  onChange={handleInputChange}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      checkAnswer();
+                    } else if (e.key.toLowerCase() === 'h' && !userInput) {
+                      e.preventDefault();
+                      setShowHelper((prev) => !prev);
+                    }
+                  }}
+                  placeholder="Enter product..."
+                  autoFocus
+                  className={`w-full text-center font-mono font-bold text-xl sm:text-2xl py-2.5 px-4 rounded-xl border transition-all outline-none ${
+                    feedback === 'correct'
+                      ? 'border-emerald-500 bg-emerald-50/70 text-emerald-800 ring-4 ring-emerald-50'
+                      : feedback === 'wrong'
+                      ? 'border-rose-400 bg-rose-50/70 text-rose-800 ring-4 ring-rose-50'
+                      : 'border-slate-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-50 text-slate-900 bg-slate-50/50 hover:bg-white placeholder:text-slate-300'
+                  }`}
+                />
+              </div>
+
+              <div className="flex items-center space-x-2.5">
+                <button
+                  type="button"
+                  onClick={checkAnswer}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold text-xs shadow-xs transition flex items-center justify-center space-x-1.5 cursor-pointer"
+                >
+                  <span>Next</span>
+                  <span className="font-mono text-[11px] opacity-75">(Enter ↵)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (roundCount >= 5) {
+                      setIsFinished(true);
+                    } else {
+                      setRoundCount(prev => prev + 1);
+                      generateProblem();
+                    }
+                  }}
+                  className="py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-semibold transition cursor-pointer"
+                  title="Skip problem"
+                >
+                  Skip
+                </button>
+              </div>
+            </div>
+
+            {/* 3-Column Performance Stats Footer */}
+            <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-3 text-center">
+              <div>
+                <div className="text-[10px] text-slate-400 font-medium">Avg Pace</div>
+                <div className="text-sm font-semibold font-mono text-slate-800 mt-0.5">
+                  {roundCount > 1 ? (elapsedTime / (roundCount - 1)).toFixed(1) : elapsedTime.toFixed(1)}s{' '}
+                  <span className="text-[11px] text-slate-400 font-normal">/ problem</span>
+                </div>
+              </div>
+              <div>
+                <div className="text-[10px] text-slate-400 font-medium">Session Accuracy</div>
+                <div className="text-sm font-semibold font-mono text-emerald-600 mt-0.5">
+                  {roundCount > 1
+                    ? `${Math.round((score / (roundCount - 1)) * 100)}%`
+                    : '100%'}{' '}
+                  <span className="text-[11px] text-slate-400 font-normal">
+                    ({score}/{Math.max(1, roundCount - 1)})
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div className="text-[10px] text-slate-400 font-medium">Target Pace</div>
+                <div className="text-sm font-semibold font-mono text-slate-800 mt-0.5">
+                  ~{trackBriefings[activeTrack].benchmarkSec}s
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
-      {/* ── Screen 3: Finished Scorecard ── */}
+      {/* Screen 3: Minimalist Scorecard */}
       {isFinished && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-white p-6 rounded-2xl border border-slate-200 shadow-md text-center space-y-4 max-w-md mx-auto"
+          className="max-w-sm mx-auto py-8 text-center space-y-5"
         >
-          <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mx-auto shadow-sm">
-            <Trophy className="w-7 h-7" />
+          <div className="w-12 h-12 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center mx-auto">
+            <Trophy className="w-6 h-6" />
           </div>
 
-          <h3 className="text-xl font-bold text-slate-900">
-            Set Complete! 🎉
-          </h3>
-
-          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1 text-sm font-mono text-slate-800">
-            <div>Score: <strong className="text-purple-700">{score}/5</strong> correct</div>
-            <div>Total Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
-            <div className="text-xs text-slate-500">Pace: <strong className="text-slate-800">{(elapsedTime / 5).toFixed(1)}s</strong> per problem</div>
+          <div>
+            <h3 className="text-lg font-bold text-slate-900">
+              Set Completed
+            </h3>
+            <p className="text-xs text-slate-500 mt-0.5">
+              {trackBriefings[activeTrack].title}
+            </p>
           </div>
 
-          <div className="flex gap-2">
+          <div className="grid grid-cols-2 gap-2 text-center py-1">
+            <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Score</span>
+              <span className="text-xl font-mono font-bold text-slate-900">{score}/5</span>
+            </div>
+            <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Total Time</span>
+              <span className="text-xl font-mono font-bold text-slate-900">{elapsedTime.toFixed(1)}s</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 justify-center pt-2">
             <button
               onClick={() => startDrill(activeTrack)}
-              className="flex-1 py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
             >
-              <RotateCcw className="w-4 h-4" />
-              Play Again
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Retry Track</span>
             </button>
+
             <button
               onClick={() => {
-                const tracks: MultTrack[] = ['base_100', 'square_diff', 'criss_cross', 'percentage'];
-                const currIdx = tracks.indexOf(activeTrack);
-                const nextTrack = tracks[(currIdx + 1) % tracks.length];
+                const trackList: MultTrack[] = ['base_100', 'square_diff', 'criss_cross', 'percentage'];
+                const currIdx = trackList.indexOf(activeTrack);
+                const nextTrack = trackList[(currIdx + 1) % trackList.length];
                 handleSelectTrack(nextTrack);
               }}
-              className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
             >
-              <span>Next Technique</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Next Track</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
         </motion.div>

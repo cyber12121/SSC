@@ -342,14 +342,15 @@ ${marksRecovery.join('\n')}
         const rcaStore = JSON.parse(rcaRaw);
         const entries = Object.values(rcaStore) as any[];
         if (entries.length > 0) {
-          const counts = { C: 0, A: 0, T: 0, G: 0 };
+          const counts = { C: 0, S: 0, T: 0, G: 0 };
           const sillyNotes: string[] = [];
 
           entries.forEach(item => {
-            if (item?.tag && counts[item.tag as keyof typeof counts] !== undefined) {
-              counts[item.tag as keyof typeof counts]++;
+            const effectiveTag = item?.tag === 'A' ? 'S' : item?.tag;
+            if (effectiveTag && counts[effectiveTag as keyof typeof counts] !== undefined) {
+              counts[effectiveTag as keyof typeof counts]++;
             }
-            if (item?.tag === 'A' && item?.sillyMistakeNote && typeof item.sillyMistakeNote === 'string' && item.sillyMistakeNote.trim()) {
+            if ((item?.tag === 'S' || item?.tag === 'A') && item?.sillyMistakeNote && typeof item.sillyMistakeNote === 'string' && item.sillyMistakeNote.trim()) {
               const topicStr = item.topic ? `[${item.subject || 'General'} • ${item.topic}]` : '';
               sillyNotes.push(`${topicStr} "${item.sillyMistakeNote.trim()}"`);
             }
@@ -358,7 +359,7 @@ ${marksRecovery.join('\n')}
           summary += `\n\nROOT CAUSE ANALYSIS (RCA) ERROR AUDIT:
 • Total Classified Errors: ${entries.length} questions
   - [C] Conceptual Gaps: ${counts.C} questions (formulas forgotten / concepts unclear)
-  - [A] Silly Mistakes: ${counts.A} questions (calculation slip, misread question, rushed)
+  - [S] Silly Mistakes: ${counts.S} questions (calculation slip, misread question, rushed)
   - [T] Time / Ego Traps: ${counts.T} questions (spent too much time / failed to skip early)
   - [G] Guesswork Failed: ${counts.G} questions (50-50 hunch went wrong)`;
 

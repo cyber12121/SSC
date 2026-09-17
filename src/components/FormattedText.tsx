@@ -10,6 +10,7 @@ interface FormattedTextProps {
   as?: 'span' | 'p' | 'div';
   isQuestion?: boolean;
   subject?: string;
+  breakOnSentences?: boolean;
 }
 
 function renderTableBlock(tableLines: string[], keyPrefix: string | number) {
@@ -54,8 +55,14 @@ function renderTableBlock(tableLines: string[], keyPrefix: string | number) {
   );
 }
 
-function renderTextWithTables(text: string, tokenIdx: number) {
-  const lines = text.split('\n');
+function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences = false) {
+  // When breakOnSentences is true, replace ". " with ".\n" so each sentence
+  // starts on its own line (used in solution view).
+  const processedText = breakOnSentences
+    ? text.replace(/\.\s+(?=[A-Z\u0900-\u097F"'([])/g, '.\n')
+    : text;
+
+  const lines = processedText.split('\n');
   const elements: React.ReactNode[] = [];
   let tableBuffer: string[] = [];
   let textBuffer: string[] = [];
@@ -121,7 +128,7 @@ function getCachedKatexHtml(latex: string, displayMode: boolean): string {
   }
 }
 
-function renderTokenList(tokens: MathToken[]) {
+function renderTokenList(tokens: MathToken[], breakOnSentences = false) {
   return tokens.map((token, idx) => {
     if (token.type === 'math') {
       const html = getCachedKatexHtml(token.value, Boolean(token.display));
@@ -149,7 +156,7 @@ function renderTokenList(tokens: MathToken[]) {
 
     return (
       <React.Fragment key={idx}>
-        {renderTextWithTables(token.value, idx)}
+        {renderTextWithTables(token.value, idx, breakOnSentences)}
       </React.Fragment>
     );
   });
@@ -162,6 +169,7 @@ export const FormattedText: React.FC<FormattedTextProps> = React.memo(({
   as: Component = 'span',
   isQuestion = false,
   subject,
+  breakOnSentences = false,
 }) => {
   const localized = useMemo(() => {
     if (!text) return '';
@@ -188,17 +196,17 @@ export const FormattedText: React.FC<FormattedTextProps> = React.memo(({
       return (
         <>
           <div className="font-bold text-slate-900 mb-2 leading-relaxed">
-            {renderTokenList(instTokens)}
+            {renderTokenList(instTokens, breakOnSentences)}
           </div>
           <div className="text-slate-800 leading-relaxed font-normal">
-            {renderTokenList(contentTokens)}
+            {renderTokenList(contentTokens, breakOnSentences)}
           </div>
         </>
       );
     }
 
-    return renderTokenList(tokens);
-  }, [localized, parsedQuestion, tokens]);
+    return renderTokenList(tokens, breakOnSentences);
+  }, [localized, parsedQuestion, tokens, breakOnSentences]);
 
   if (!localized) return null;
 

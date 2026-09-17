@@ -58,6 +58,25 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
     } catch {}
   }, []);
 
+  const [showShortcutsModal, setShowShortcutsModal] = useState<boolean>(false);
+
+  // Global Keyboard listener for shortcuts modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const activeTag = (document.activeElement?.tagName || '').toUpperCase();
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeTag)) return;
+
+      if (e.key === '?') {
+        e.preventDefault();
+        setShowShortcutsModal((prev) => !prev);
+      } else if (e.key === 'Escape') {
+        setShowShortcutsModal(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const openFullscreenStudio = (mode: 'routine' | 'free' = 'routine', section: SectionId = 'triplets') => {
     setStudioInitialMode(mode);
     setStudioInitialSection(section);
@@ -65,13 +84,13 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
   };
 
   const tabs: { id: DrillTab; label: string; icon: any; tag?: string }[] = [
-    { id: 'mental_speed', label: 'Mental Speed Lab', icon: Sparkles, tag: 'Arun Sharma' },
+    { id: 'mental_speed', label: 'Mental Speed Lab', icon: Sparkles, tag: '6-in-1 Matrix' },
     { id: 'calculation', label: 'Calculation Studio', icon: Calculator, tag: 'Full Screen' },
-    { id: 'math', label: 'Speed Math', icon: Zap, tag: '80% 2/3-Digit' },
+    { id: 'math', label: 'Speed Drill', icon: Zap, tag: 'Sprint' },
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full space-y-4">
       {/* Fullscreen Calculation Studio Modal */}
       {isStudioOpen && (
         <CalculationStudio
@@ -90,59 +109,189 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
         />
       )}
 
-      {/* Minimalist Top Header & Tab Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white px-4 py-2.5 rounded-xl border border-slate-200/80 shadow-xs mb-3">
-        <div className="flex items-center gap-2 flex-wrap">
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="flex items-center text-xs font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-lg transition-colors mr-1"
+      {/* Minimalist Shortcuts Modal Dialog */}
+      <AnimatePresence>
+        {showShortcutsModal && (
+          <div className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="bg-white border border-slate-200 rounded-2xl max-w-sm w-full p-5 sm:p-6 space-y-4 shadow-xl"
             >
-              <ChevronLeft className="w-3.5 h-3.5 mr-0.5" />
-              Back
-            </button>
-          )}
-          <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
-            <Zap className="w-4 h-4 text-amber-600" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h1 className="text-sm font-bold text-slate-900 tracking-tight">
-                Calculation & Speed Drills
-              </h1>
-              <div className="flex items-center text-[10px] font-bold text-amber-600 bg-amber-50 border border-amber-200/60 px-2 py-0.2 rounded-full">
-                <Flame className="w-3 h-3 mr-0.5 fill-amber-500 text-amber-500" />
-                Day {streak}
+              <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                <h3 className="text-sm font-semibold font-display text-slate-900">
+                  Keyboard Shortcuts
+                </h3>
+                <button
+                  onClick={() => setShowShortcutsModal(false)}
+                  className="text-slate-400 hover:text-slate-700 text-lg leading-none cursor-pointer p-1"
+                >
+                  ×
+                </button>
               </div>
+              <div className="space-y-2.5 text-xs">
+                <div className="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                  <span>Switch Disciplines</span>
+                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-semibold">
+                    1 – 6
+                  </span>
+                </div>
+                <div className="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                  <span>Submit Answer</span>
+                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-semibold">
+                    Enter ↵
+                  </span>
+                </div>
+                <div className="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                  <span>Toggle Mental Hint</span>
+                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-semibold">
+                    H
+                  </span>
+                </div>
+                <div className="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                  <span>Skip / Pause</span>
+                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-semibold">
+                    Space / Esc
+                  </span>
+                </div>
+                <div className="flex justify-between py-1 text-slate-600">
+                  <span>Help Dialog</span>
+                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-semibold">
+                    ?
+                  </span>
+                </div>
+              </div>
+              <div className="pt-2">
+                <button
+                  onClick={() => setShowShortcutsModal(false)}
+                  className="w-full py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Minimalist Top Navigation Header (Calculus Serenum) */}
+      <header className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs px-4 sm:px-5 py-3">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+          {/* Brand & Mode Identification */}
+          <div className="flex items-center space-x-3">
+            {onBack && (
+              <button
+                onClick={onBack}
+                type="button"
+                className="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 bg-white transition text-xs font-semibold cursor-pointer shadow-2xs"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+                <span>Back</span>
+              </button>
+            )}
+            <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
+            <div className="flex items-baseline space-x-2">
+              <span className="font-display font-bold text-sm tracking-tight text-slate-900">
+                Calculation &amp; Speed Drills
+              </span>
+              <span className="text-xs text-slate-400 font-medium hidden sm:inline">
+                • Studio
+              </span>
             </div>
-            <p className="text-[11px] text-slate-500 font-medium">
-              High-speed mental arithmetic, guided calculation routines, and targeted speed drills
-            </p>
+          </div>
+
+          {/* Center Status Indicators */}
+          <div className="flex items-center space-x-2.5 text-xs">
+            <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-slate-100/90 text-slate-600 font-mono text-[11px] font-medium border border-slate-200/60">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Session Active</span>
+            </div>
+            <div className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 font-mono text-[11px] font-semibold border border-amber-200/60">
+              <Flame className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+              <span>Day {streak}</span>
+            </div>
+          </div>
+
+          {/* Right Utilities & Tabs */}
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setShowCheatSheet(true)}
+              type="button"
+              className="inline-flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-200 bg-white transition text-xs font-medium cursor-pointer shadow-2xs"
+              title="Memory Cheat Sheet"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-blue-600" />
+              <span className="hidden sm:inline">Cheat Sheet</span>
+            </button>
+            <button
+              onClick={() => setShowShortcutsModal(true)}
+              type="button"
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 bg-white transition font-mono text-xs font-semibold cursor-pointer shadow-2xs"
+              title="Keyboard Shortcuts (?)"
+            >
+              ?
+            </button>
           </div>
         </div>
 
-        {/* Segmented Tabs */}
-        <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200/80 text-xs font-semibold self-start sm:self-auto">
-          {tabs.map((tab) => {
-            const Icon = tab.icon;
-            const isActive = activeTab === tab.id;
-            return (
+        {/* Sub-Header Tabs & Daily Routines */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-3 mt-3 border-t border-slate-100">
+          {/* Segmented Mode Selector */}
+          <div className="flex items-center space-x-1 p-1 bg-slate-100/80 rounded-xl border border-slate-200/60 text-xs font-semibold">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                    isActive
+                      ? 'bg-white text-blue-600 shadow-xs font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Daily Quick Routine Pills */}
+          <div className="flex items-center space-x-2 text-xs text-slate-500">
+            <span className="text-[11px] font-medium text-slate-400 hidden lg:inline">Routines:</span>
+            <div className="flex items-center space-x-1.5 overflow-x-auto custom-scrollbar">
               <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center whitespace-nowrap px-3 py-1 rounded-md text-xs transition-all ${
-                  isActive
-                    ? 'bg-white text-blue-600 shadow-xs font-bold'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
+                type="button"
+                onClick={() => {
+                  setActiveTab('mental_speed');
+                }}
+                className="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 font-medium text-[11px] transition cursor-pointer shrink-0"
               >
-                <Icon className={`w-3.5 h-3.5 mr-1 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-                {tab.label}
+                Mental Speed Circuit
               </button>
-            );
-          })}
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('math');
+                }}
+                className="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 font-medium text-[11px] transition cursor-pointer shrink-0"
+              >
+                Speed Drill Sprint
+              </button>
+              <button
+                type="button"
+                onClick={() => openFullscreenStudio('routine', 'triplets')}
+                className="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 font-medium text-[11px] transition cursor-pointer shrink-0"
+              >
+                7-Stage Studio
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/* Main Content Area */}
       <div>
@@ -185,73 +334,70 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
                 </button>
               </div>
 
-              {/* Hero Banner for Fullscreen Calculation Workout */}
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 p-4 sm:p-5 text-white shadow-md mb-3.5 border border-slate-800">
-                <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl"></div>
-                <div className="pointer-events-none absolute -bottom-10 left-10 h-40 w-40 rounded-full bg-indigo-500/20 blur-3xl"></div>
-
+              {/* Hero Banner for Calculation Workout */}
+              <div className="relative overflow-hidden rounded-2xl bg-white p-4 sm:p-5 text-slate-900 shadow-xs mb-3.5 border border-slate-200">
                 <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                   <div className="max-w-xl">
-                    <div className="inline-flex items-center space-x-1.5 px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-bold border border-blue-500/30 mb-2">
-                      <Zap className="w-3 h-3 text-blue-400" />
-                      <span>Full Screen Routine Workout</span>
+                    <div className="inline-flex items-center space-x-1.5 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-bold border border-blue-100 mb-2">
+                      <Zap className="w-3 h-3 text-blue-600" />
+                      <span>7-Stage Routine Workout</span>
                     </div>
-                    <h2 className="text-base sm:text-lg font-bold text-white tracking-tight mb-1">
-                      Full Screen Calculation Studio
+                    <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-1">
+                      Calculation Speed Studio
                     </h2>
-                    <p className="text-slate-300 text-xs leading-relaxed mb-2">
+                    <p className="text-slate-500 text-xs leading-relaxed mb-2">
                       Sharpen mental math through the guided 7-stage daily routine:
                     </p>
                     {/* Steps Pills */}
-                    <div className="flex flex-wrap gap-1.5 text-[10px] font-semibold text-slate-300">
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                    <div className="flex flex-wrap gap-1.5 text-[10px] font-semibold text-slate-600">
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         1. Triplets
                       </span>
-                      <span className="text-slate-500">→</span>
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                      <span className="text-slate-400">→</span>
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         2. Tables 12–24
                       </span>
-                      <span className="text-slate-500">→</span>
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                      <span className="text-slate-400">→</span>
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         3. Squares 17–39
                       </span>
-                      <span className="text-slate-500">→</span>
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                      <span className="text-slate-400">→</span>
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         4. Cubes 11–25
                       </span>
-                      <span className="text-slate-500">→</span>
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                      <span className="text-slate-400">→</span>
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         5. Powers (2–9)
                       </span>
-                      <span className="text-slate-500">→</span>
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                      <span className="text-slate-400">→</span>
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         6. Factorials 1–8
                       </span>
-                      <span className="text-slate-500">→</span>
-                      <span className="bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700/60">
+                      <span className="text-slate-400">→</span>
+                      <span className="bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/70">
                         7. Fractions %
                       </span>
                     </div>
                   </div>
 
-                      <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto shrink-0">
-                        <button
-                          onClick={() => openFullscreenStudio('routine', 'triplets')}
-                          className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-bold text-xs shadow-xs transition-all flex items-center justify-center space-x-1.5 active:scale-98"
-                        >
-                          <Play className="w-3.5 h-3.5 fill-current" />
-                          <span>Start Daily Routine</span>
-                        </button>
-                        <button
-                          onClick={() => openFullscreenStudio('free', 'triplets')}
-                          className="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg font-semibold text-xs border border-slate-700 transition-all flex items-center justify-center space-x-1.5"
-                        >
-                          <Maximize className="w-3.5 h-3.5 text-blue-400" />
-                          <span>Enter Full Screen</span>
-                        </button>
-                      </div>
-                    </div>
+                  <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto shrink-0">
+                    <button
+                      onClick={() => openFullscreenStudio('routine', 'triplets')}
+                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white rounded-xl font-bold text-xs shadow-xs transition-all flex items-center justify-center space-x-1.5 active:scale-98 cursor-pointer"
+                    >
+                      <Play className="w-3.5 h-3.5 fill-current" />
+                      <span>Start Daily Routine</span>
+                    </button>
+                    <button
+                      onClick={() => openFullscreenStudio('free', 'triplets')}
+                      className="px-3.5 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl font-semibold text-xs border border-slate-200 transition-all flex items-center justify-center space-x-1.5 shadow-2xs cursor-pointer"
+                    >
+                      <Maximize className="w-3.5 h-3.5 text-blue-600" />
+                      <span>Start in Full Screen</span>
+                    </button>
                   </div>
+                </div>
+              </div>
 
                   {/* Grid of Calculation Modules */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-4">

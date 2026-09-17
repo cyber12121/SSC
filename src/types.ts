@@ -1,4 +1,4 @@
-export type RCATagType = 'C' | 'A' | 'T' | 'G';
+export type RCATagType = 'C' | 'S' | 'T' | 'G';
 
 export interface RCAClassification {
   tag: RCATagType;

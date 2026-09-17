@@ -1,0 +1,916 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mathematics Mock Errors &amp; RCA Cockpit</title>
+<!-- Tailwind CSS CDN with forms and container plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          boxShadow: {
+            'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04)',
+            'card': '0 2px 6px -1px rgba(15, 23, 42, 0.04), 0 1px 4px -1px rgba(15, 23, 42, 0.02)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-scroll-and-heat">
+    /* Custom thin scrollbar */
+    ::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans min-h-screen antialiased flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
+<!-- BEGIN: GlobalNavigationBar -->
+<header class="bg-white border-b border-slate-200/80 sticky top-0 z-40">
+<div class="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Brand & Product Title -->
+<div class="flex items-center space-x-3">
+<a class="flex items-center gap-2 text-slate-900 font-bold text-xl tracking-tight" href="#">
+<div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-200">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 3L1 9l11 6l9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path>
+</svg>
+</div>
+<span class="">mock</span>
+<span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-0.5 rounded-md tracking-normal uppercase">CAT</span>
+</a>
+</div>
+<!-- Center Primary Navigation Links -->
+<nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium text-slate-600">
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg hover:text-slate-900 hover:bg-slate-100/80 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Practice
+        </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg hover:text-slate-900 hover:bg-slate-100/80 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Speed Drill
+        </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg hover:text-slate-900 hover:bg-slate-100/80 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Bookmarks
+        </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg hover:text-slate-900 hover:bg-slate-100/80 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Dashboard
+        </a>
+<a class="flex items-center gap-2 px-3.5 py-1.5 rounded-full text-indigo-700 bg-indigo-50 font-semibold border border-indigo-100 transition-colors" href="#">
+<svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Mock Scores
+        </a>
+</nav>
+<!-- Right Action Controls -->
+<div class="flex items-center space-x-3">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Practice
+        </button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200/80 rounded-lg hover:bg-rose-100 transition-colors shadow-xs" type="button">
+<svg class="w-3.5 h-3.5 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<polyline points="12 7 12 12 15 15"></polyline>
+</svg>
+          Mock
+        </button>
+<button aria-label="Sign out" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<!-- END: GlobalNavigationBar -->
+<!-- Main Content Wrapper -->
+<main class="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 space-y-6">
+<!-- BEGIN: HeaderAndBreadcrumb -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center space-x-4">
+<a class="inline-flex items-center gap-1 text-xs font-medium text-slate-600 bg-white border border-slate-200/90 rounded-lg px-3 py-1.5 hover:bg-slate-50 transition-colors shadow-xs" href="#">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Subjects
+        </a>
+<div>
+<h1 class="text-xl font-bold text-slate-900 tracking-tight">Mathematics</h1>
+<p class="text-xs text-slate-500 font-medium">Mock error remediation &amp; weak topic drills</p>
+</div>
+</div>
+<div>
+<span class="inline-flex items-center px-3 py-1 rounded-md text-[11px] font-bold tracking-wider uppercase bg-rose-50 text-rose-600 border border-rose-100 shadow-xs">
+          MOCK ERRORS
+        </span>
+</div>
+</div>
+<!-- END: HeaderAndBreadcrumb -->
+<!-- BEGIN: SectionSubjectTabs -->
+<div class="bg-slate-100/80 p-1.5 rounded-2xl border border-slate-200/70 flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white text-indigo-950 font-semibold text-sm shadow-sm border border-slate-200/60 transition-all" type="button">
+<svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<rect height="20" rx="2" stroke-linecap="round" width="16" x="4" y="2"></rect>
+<line x1="8" x2="16" y1="6" y2="6"></line>
+<line x1="8" x2="8.01" y1="10" y2="10"></line>
+<line x1="12" x2="12.01" y1="10" y2="10"></line>
+<line x1="16" x2="16.01" y1="10" y2="10"></line>
+<line x1="8" x2="8.01" y1="14" y2="14"></line>
+<line x1="12" x2="12.01" y1="14" y2="14"></line>
+<line x1="16" x2="16.01" y1="14" y2="14"></line>
+<line x1="8" x2="8.01" y1="18" y2="18"></line>
+<line x1="12" x2="12.01" y1="18" y2="18"></line>
+<line x1="16" x2="16.01" y1="18" y2="18"></line>
+</svg>
+<span class="">Quantitative</span>
+<span class="bg-indigo-50 text-indigo-600 text-xs px-2 py-0.5 rounded-full font-bold">199</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 text-sm font-medium transition-all" type="button">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M12 3a9 9 0 000 18v-9h9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Reasoning</span>
+<span class="text-xs text-slate-400 font-semibold">96</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 text-sm font-medium transition-all" type="button">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">English</span>
+<span class="text-xs text-slate-400 font-semibold">89</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 text-sm font-medium transition-all" type="button">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<line x1="3.6" x2="20.4" y1="9" y2="9"></line>
+<line x1="3.6" x2="20.4" y1="15" y2="15"></line>
+<path d="M11.5 3a17 17 0 000 18"></path>
+<path d="M12.5 3a17 17 0 010 18"></path>
+</svg>
+<span class="">GA / GK</span>
+<span class="text-xs text-slate-400 font-semibold">177</span>
+</button>
+</div>
+<!-- END: SectionSubjectTabs -->
+<!-- BEGIN: CockpitControlStrip -->
+<div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-subtle flex flex-col xl:flex-row items-start xl:items-center justify-between gap-4">
+<!-- Left Info -->
+<div class="flex flex-wrap items-center gap-3">
+<h2 class="text-lg font-bold text-slate-900">Mathematics Mock Errors</h2>
+<span class="bg-slate-100 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-200/60">
+          26 Topics
+        </span>
+<span class="text-xs text-slate-400 font-medium">
+          199 total mistakes recorded • <strong class="text-indigo-600 font-semibold">Full Mocks Only</strong>
+</span>
+</div>
+<!-- Right Toggle & Launch Buttons -->
+<div class="flex flex-wrap items-center gap-2.5 w-full xl:w-auto justify-start xl:justify-end">
+<!-- Filter segment -->
+<div class="bg-slate-100/90 p-1 rounded-xl flex items-center text-xs font-medium text-slate-600">
+<button class="px-3 py-1.5 rounded-lg hover:text-slate-900 transition-colors" type="button">
+            Combined <span class="ml-1 text-slate-400 font-normal">446</span>
+</button>
+<button class="px-3 py-1.5 bg-white text-slate-900 font-semibold rounded-lg shadow-xs border border-slate-200/60 transition-colors" type="button">
+            Full <span class="ml-1 text-indigo-600 font-semibold">199</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg hover:text-slate-900 transition-colors" type="button">
+            Sectional <span class="ml-1 text-slate-400 font-normal">247</span>
+</button>
+</div>
+<!-- View switches -->
+<div class="flex items-center gap-1.5">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            Chapters
+          </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            By Type
+          </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-purple-700 bg-purple-50 border border-purple-200 rounded-lg shadow-xs" type="button">
+<svg class="w-3.5 h-3.5 text-purple-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<circle cx="12" cy="12" r="4"></circle>
+<circle cx="12" cy="12" r="1"></circle>
+</svg>
+            RCA
+          </button>
+</div>
+<!-- Primary Launch Drill CTA -->
+<button class="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-sm transition-all focus:ring-2 focus:ring-indigo-400 focus:outline-none ml-auto xl:ml-0" type="button">
+<svg class="w-4 h-4 fill-white" viewBox="0 0 24 24">
+<polygon points="5 3 19 12 5 21 5 3"></polygon>
+</svg>
+<span class="">Start All (199)</span>
+</button>
+</div>
+</div>
+<!-- END: CockpitControlStrip -->
+<!-- BEGIN: CognitiveRCAActionCards -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"><!-- Card 1: [C] Concept -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-3 shadow-subtle hover:border-purple-300 transition flex flex-col justify-between" data-purpose="rca-metric-card">
+  <div>
+    <div class="flex items-center justify-between">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-purple-50 text-purple-700 border border-purple-100">
+        [C] Concept
+      </span>
+      <span class="text-xl font-bold tracking-tight text-slate-900">10</span>
+    </div>
+    <p class="mt-1.5 text-[11px] text-slate-500 leading-snug">
+      Core logic, theorem, or formula misunderstood.
+    </p>
+  </div>
+  <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-[11px] font-semibold text-slate-500">10 Qs</span>
+    <div class="flex items-center gap-1.5">
+      <button class="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2 py-0.5 rounded border border-indigo-100 transition" type="button">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        AI
+      </button>
+      <button class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-2 py-0.5 rounded transition shadow-xs" type="button">
+        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        PRACTICE
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 2: [S] Silly -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-3 shadow-subtle hover:border-rose-300 transition flex flex-col justify-between" data-purpose="rca-metric-card">
+  <div>
+    <div class="flex items-center justify-between">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 text-rose-700 border border-rose-100">
+        [S] Silly
+      </span>
+      <span class="text-xl font-bold tracking-tight text-slate-900">3</span>
+    </div>
+    <p class="mt-1.5 text-[11px] text-slate-500 leading-snug">
+      Calculation slip, misread question, or rush.
+    </p>
+  </div>
+  <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-[11px] font-semibold text-slate-500">3 Qs</span>
+    <div class="flex items-center gap-1.5">
+      <button class="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2 py-0.5 rounded border border-indigo-100 transition" type="button">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        AI
+      </button>
+      <button class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-2 py-0.5 rounded transition shadow-xs" type="button">
+        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        PRACTICE
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 3: [T] Time Trap -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-3 shadow-subtle hover:border-amber-300 transition flex flex-col justify-between" data-purpose="rca-metric-card">
+  <div>
+    <div class="flex items-center justify-between">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-100">
+        [T] Time Trap
+      </span>
+      <span class="text-xl font-bold tracking-tight text-slate-900">7</span>
+    </div>
+    <p class="mt-1.5 text-[11px] text-slate-500 leading-snug">
+      Excessive time (&gt;90s) and incorrect/skipped.
+    </p>
+  </div>
+  <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-[11px] font-semibold text-slate-500">7 Qs</span>
+    <div class="flex items-center gap-1.5">
+      <button class="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2 py-0.5 rounded border border-indigo-100 transition" type="button">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        AI
+      </button>
+      <button class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-2 py-0.5 rounded transition shadow-xs" type="button">
+        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        PRACTICE
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 4: [G] Guesswork -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-3 shadow-subtle hover:border-sky-300 transition flex flex-col justify-between" data-purpose="rca-metric-card">
+  <div>
+    <div class="flex items-center justify-between">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-sky-50 text-sky-700 border border-sky-100">
+        [G] Guesswork
+      </span>
+      <span class="text-xl font-bold tracking-tight text-slate-900">1</span>
+    </div>
+    <p class="mt-1.5 text-[11px] text-slate-500 leading-snug">
+      Gambled on 50-50 elimination and failed.
+    </p>
+  </div>
+  <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-[11px] font-semibold text-slate-500">1 Qs</span>
+    <div class="flex items-center gap-1.5">
+      <button class="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2 py-0.5 rounded border border-indigo-100 transition" type="button">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        AI
+      </button>
+      <button class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-2 py-0.5 rounded transition shadow-xs" type="button">
+        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        PRACTICE
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 5: Unclassified -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-3 shadow-subtle hover:border-indigo-300 transition flex flex-col justify-between" data-purpose="rca-metric-card">
+<div>
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">
+<span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              Unclassified
+            </span>
+<span class="text-2xl font-black tracking-tight text-slate-900">178</span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-[11px]">
+<span class="font-medium text-slate-500">11% Diagnosed</span>
+<span class="font-semibold text-indigo-600">21 / 199 Qs</span>
+</div>
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-indigo-600 h-full rounded-full w-[11%]"></div>
+</div>
+<p class="mt-2.5 text-xs text-slate-500 leading-relaxed">
+            Errors pending cognitive RCA tag. Auto-tag to uncover blindspots.
+          </p>
+</div>
+<div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between gap-2"><span class="text-[11px] font-semibold text-slate-500">178 Qs</span>
+<div class="flex items-center gap-1.5">
+  <button class="inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2 py-0.5 rounded border border-indigo-100 transition" type="button">
+    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    AI
+  </button>
+  <button class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-700 bg-white hover:bg-slate-100 px-2 py-0.5 rounded border border-slate-200 transition shadow-xs" type="button">
+    SETS
+  </button>
+</div></div>
+</article></div>
+<!-- END: CognitiveRCAActionCards -->
+<!-- BEGIN: ClassificationFilterBar -->
+<div class="bg-white rounded-2xl p-2.5 border border-slate-200/90 shadow-subtle flex flex-col md:flex-row items-center justify-between gap-3">
+<!-- Left Filter Pills -->
+<div class="flex flex-wrap items-center gap-1.5 w-full md:w-auto">
+<button class="px-3 py-1.5 text-xs font-bold bg-slate-900 text-white rounded-lg shadow-xs transition" type="button">
+          All Topics (26)
+        </button>
+<button class="px-2.5 py-1.5 text-xs font-semibold bg-purple-50/70 text-purple-800 hover:bg-purple-100 rounded-lg border border-purple-100 transition" type="button">
+          [C] Concept <span class="ml-1 opacity-80">10</span>
+</button>
+<button class="px-2.5 py-1.5 text-xs font-semibold bg-rose-50/70 text-rose-800 hover:bg-rose-100 rounded-lg border border-rose-100 transition" type="button">
+          [S] Silly <span class="ml-1 opacity-80">3</span>
+</button>
+<button class="px-2.5 py-1.5 text-xs font-semibold bg-amber-50/70 text-amber-800 hover:bg-amber-100 rounded-lg border border-amber-100 transition" type="button">
+          [T] Time Trap <span class="ml-1 opacity-80">7</span>
+</button>
+<button class="px-2.5 py-1.5 text-xs font-semibold bg-sky-50/70 text-sky-800 hover:bg-sky-100 rounded-lg border border-sky-100 transition" type="button">
+          [G] Guesswork <span class="ml-1 opacity-80">1</span>
+</button>
+<button class="px-2.5 py-1.5 text-xs font-medium bg-slate-50 text-slate-600 hover:bg-slate-100 rounded-lg border border-slate-200 transition" type="button">
+          Unclassified <span class="ml-1 font-bold text-slate-700">178</span>
+</button>
+</div>
+<!-- Right Search & Ask AI -->
+<div class="flex items-center gap-2 w-full md:w-auto justify-end">
+<div class="relative w-full md:w-64">
+<svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+<input class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 placeholder-slate-400 text-slate-700 transition" placeholder="Search chapter/topic..." type="text">
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-purple-700 bg-purple-50/80 hover:bg-purple-100 border border-purple-200 rounded-xl transition shadow-xs whitespace-nowrap" type="button">
+<svg class="w-3.5 h-3.5 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Ask AI
+        </button>
+</div>
+</div>
+<!-- END: ClassificationFilterBar -->
+<!-- BEGIN: WeakTopicsTable -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-subtle overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse text-xs">
+<thead>
+<tr class="border-b border-slate-200 bg-slate-50/70 text-slate-500 uppercase tracking-wider font-semibold">
+<th class="py-3.5 px-4 w-12 text-center">#</th>
+<th class="py-3.5 px-4 min-w-[240px]">TOPIC NAME</th>
+<th class="py-3.5 px-4 min-w-[200px]">HEAT BAR</th>
+<th class="py-3.5 px-3 w-16 text-center text-purple-600">[C]</th>
+<th class="py-3.5 px-3 w-16 text-center text-rose-600">[S]</th>
+<th class="py-3.5 px-3 w-16 text-center text-amber-600">[T]</th>
+<th class="py-3.5 px-3 w-16 text-center text-sky-600">[G]</th>
+<th class="py-3.5 px-6 w-36 text-right">ACTIONS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 font-medium"><!-- Row 1 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 font-bold text-xs">
+                  1
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Mensuration 3D</div>
+<div class="flex items-center gap-1.5 mt-1 flex-wrap">
+<span class="text-[11px] text-slate-400 font-normal">Failure breakdown:</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-purple-50 text-purple-700 px-1.5 py-0.5 rounded border border-purple-100">Cylinder &amp; Cone Vol (2)</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-purple-50 text-purple-700 px-1.5 py-0.5 rounded border border-purple-100">Frustum Formula (1)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full rounded-full w-full"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">100%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 font-bold text-[11px] border border-purple-200/60 shadow-xs">3</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    21
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 font-bold text-xs">
+                  2
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Profit, Loss &amp; Discount</div>
+<div class="flex items-center gap-1.5 mt-1 flex-wrap">
+<span class="text-[11px] text-slate-400 font-normal">Sub-skills:</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-purple-50 text-purple-700 px-1.5 py-0.5 rounded border border-purple-100">Successive Markup</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded border border-amber-100">Dishonest Dealer (&gt;90s)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full rounded-full w-[90%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">90%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 font-bold text-[11px] border border-purple-200/60 shadow-xs">1</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-[11px] border border-amber-200/60 shadow-xs">1</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    19
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 font-bold text-xs">
+                  3
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Algebra</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">Quadratic Roots • Polynomial Factorization</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[81%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">81%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    17
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  4
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Time, Speed &amp; Distance</div>
+<div class="flex items-center gap-1.5 mt-1 flex-wrap">
+<span class="text-[11px] text-slate-400 font-normal">Sub-skills:</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-purple-50 text-purple-700 px-1.5 py-0.5 rounded border border-purple-100">Relative Speed (2)</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-rose-50 text-rose-700 px-1.5 py-0.5 rounded border border-rose-100">Unit Conversion (1)</span>
+<span class="inline-flex items-center text-[10px] font-semibold bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded border border-amber-100">Circular Tracks (1)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-500 h-full rounded-full w-[67%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">67%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 font-bold text-[11px] border border-purple-200/60 shadow-xs">2</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-rose-100 text-rose-700 font-bold text-[11px] border border-rose-200/60 shadow-xs">1</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-[11px] border border-amber-200/60 shadow-xs">1</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    14
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  5
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Ratio &amp; Proportion</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">Mixtures &amp; Alligation • Cross Multiplication</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[62%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">62%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    13
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  6
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Trigonometry</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">Heights &amp; Distances • Complementary Angles</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[57%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">57%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 font-bold text-[11px] border border-purple-200/60 shadow-xs">2</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    12
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  7
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Average</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">Weighted Mean • Replacement of Members</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[57%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">57%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-[11px] border border-amber-200/60 shadow-xs">3</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    12
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  8
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Time &amp; Work</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">Efficiency Ratios • Alternate Day Shifts</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[57%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">57%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-rose-100 text-rose-700 font-bold text-[11px] border border-rose-200/60 shadow-xs">2</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    12
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 9 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  9
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Simplification</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">BODMAS • Surds &amp; Indices Approximations</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[52%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">52%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-[11px] border border-amber-200/60 shadow-xs">1</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    11
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 10 -->
+<tr class="hover:bg-slate-50/80 transition-colors group">
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-100 text-slate-600 font-bold text-xs">
+                  10
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold text-slate-900 text-[13px] group-hover:text-indigo-600 transition">Geometry</div>
+<div class="text-[11px] text-slate-400 font-normal mt-0.5">Circle Theorems • Tangent Chords Angle</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-40 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full w-[52%]"></div>
+</div>
+<span class="text-slate-500 font-medium text-[11px]">52%</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 font-bold text-[11px] border border-purple-200/60 shadow-xs">2</span>
+</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-3 text-center text-slate-300 opacity-40 font-normal">—</td>
+<td class="py-3.5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg border border-indigo-200/80 transition-colors" type="button">
+<svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    AI
+                  </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition shadow-xs" type="button">
+<svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    11
+                  </button>
+</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+<!-- Expand Remaining Topics Prompt -->
+<div class="border-t border-slate-100 p-3.5 text-center bg-slate-50/50 hover:bg-slate-50 transition cursor-pointer">
+<button class="inline-flex items-center gap-2 text-xs font-semibold text-indigo-600 hover:text-indigo-700" type="button">
+<span class="">View remaining 16 topics (Mensuration 2D, Number System, LCM &amp; HCF...)</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- END: WeakTopicsTable -->
+<!-- BEGIN: AdvisoryFooterStrip -->
+<aside class="bg-indigo-50/60 border border-indigo-100/90 rounded-xl p-3 sm:p-4 flex items-center justify-between gap-4 text-xs text-indigo-900" data-purpose="study-advisory">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-lg bg-indigo-600/10 text-indigo-700 flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<line x1="12" x2="12" y1="8" y2="12"></line>
+<line x1="12" x2="12.01" y1="16" y2="16"></line>
+</svg>
+</div>
+<p class="leading-relaxed font-medium">
+<strong class="font-semibold text-indigo-950">Remediation Tip:</strong> Untangle marked <em>Concept Gaps</em> with visual explanations before attempting speed-timed drills.
+        </p>
+</div>
+<a class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-2 shrink-0" href="#">
+        Review RCA Rules
+      </a>
+</aside>
+<!-- END: AdvisoryFooterStrip -->
+</main>
+<!-- BEGIN: FloatingAIAssistantWidget -->
+<aside class="fixed bottom-6 right-6 z-50">
+<button class="inline-flex items-center gap-2.5 px-4 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-full shadow-lg hover:shadow-indigo-500/25 transition-all duration-200 transform hover:-translate-y-0.5 focus:ring-4 focus:ring-purple-300" type="button">
+<span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="text-xs font-bold tracking-tight">Tommy <span class="font-normal opacity-90">Ask AI</span></span>
+</button>
+</aside>
+<!-- END: FloatingAIAssistantWidget -->
+
+
+
+
+</body></html>

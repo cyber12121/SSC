@@ -21,37 +21,36 @@ export const ThoughtHopVisualizer: React.FC<ThoughtHopProps> = (props) => {
     const tens = Math.floor(addend / 10) * 10;
     const units = addend % 10;
 
-    // Strategy 1: Add units first to reach friendly number, then add tens
     const step1 = base + units;
     const finalAns = step1 + tens;
 
     return (
-      <div className="bg-amber-50/90 border border-amber-200/80 rounded-xl p-3 text-xs text-amber-900 shadow-xs">
-        <div className="flex items-center gap-1.5 font-bold text-amber-800 mb-2">
-          <Lightbulb className="w-3.5 h-3.5 fill-amber-500 text-amber-600" />
-          <span>Arun Sharma Thought Process (Number Line Jump):</span>
+      <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-700">
+        <div className="flex items-center gap-1.5 font-bold text-slate-800 mb-2">
+          <Lightbulb className="w-3.5 h-3.5 text-blue-600" />
+          <span>Number Line Accumulation:</span>
         </div>
         
-        <div className="flex items-center gap-2 flex-wrap font-mono font-bold text-sm bg-white/80 p-2.5 rounded-lg border border-amber-100">
-          <span className="px-2 py-0.5 bg-slate-100 rounded text-slate-800 border border-slate-200">
+        <div className="flex items-center gap-2 flex-wrap font-mono font-semibold text-xs bg-white p-2 rounded-lg border border-slate-200">
+          <span className="px-2 py-0.5 bg-slate-100 rounded text-slate-800 border border-slate-200 font-bold">
             {base}
           </span>
-          <span className="text-emerald-600 text-xs flex items-center font-sans font-bold">
-            + {units} units <ArrowRight className="w-3 h-3 ml-0.5" />
+          <span className="text-slate-400 text-[11px] flex items-center font-sans">
+            +{units} <ArrowRight className="w-3 h-3 ml-0.5" />
           </span>
-          <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded border border-emerald-200">
+          <span className="px-2 py-0.5 bg-slate-100 text-slate-800 rounded border border-slate-200">
             {step1}
           </span>
-          <span className="text-blue-600 text-xs flex items-center font-sans font-bold">
-            + {tens} tens <ArrowRight className="w-3 h-3 ml-0.5" />
+          <span className="text-slate-400 text-[11px] flex items-center font-sans">
+            +{tens} <ArrowRight className="w-3 h-3 ml-0.5" />
           </span>
-          <span className="px-2.5 py-0.5 bg-blue-600 text-white rounded shadow-xs font-black">
+          <span className="px-2.5 py-0.5 bg-slate-900 text-white rounded font-bold">
             {finalAns}
           </span>
         </div>
 
-        <p className="text-[11px] text-amber-700/90 mt-2">
-          💡 <strong>Mental Cue:</strong> Avoid carrying paper digits. Jump directly: {base} + {units} = {step1}, then + {tens} = {finalAns}.
+        <p className="text-[11px] text-slate-500 mt-2">
+          Add units first: {base} + {units} = {step1}, then leap by tens: + {tens} = {finalAns}.
         </p>
       </div>
     );
@@ -61,13 +60,10 @@ export const ThoughtHopVisualizer: React.FC<ThoughtHopProps> = (props) => {
   const { minuend, subtrahend } = props;
   const difference = minuend - subtrahend;
 
-  // Compute hops:
-  // Step 1: Hop to match unit or nearest milestone
   let hop1 = 0;
   let midPoint1 = subtrahend;
 
   if (minuend >= 100 && subtrahend >= 100) {
-    // 3-digit milestone matching (e.g. 813 - 478 -> hop to end in 13: 478 + 35 = 513)
     const targetEnd = minuend % 100;
     const subEnd = subtrahend % 100;
     if (targetEnd >= subEnd) {
@@ -77,7 +73,6 @@ export const ThoughtHopVisualizer: React.FC<ThoughtHopProps> = (props) => {
     }
     midPoint1 = subtrahend + hop1;
   } else {
-    // 2-digit unit match (e.g. 72 - 38 -> jump +4 to 42)
     const targetUnit = minuend % 10;
     const subUnit = subtrahend % 10;
     if (targetUnit >= subUnit) {
@@ -91,35 +86,35 @@ export const ThoughtHopVisualizer: React.FC<ThoughtHopProps> = (props) => {
   const hop2 = minuend - midPoint1;
 
   return (
-    <div className="bg-sky-50/90 border border-sky-200/80 rounded-xl p-3 text-xs text-sky-900 shadow-xs">
-      <div className="flex items-center gap-1.5 font-bold text-sky-800 mb-2">
-        <Lightbulb className="w-3.5 h-3.5 fill-sky-500 text-sky-600" />
-        <span>Forward Distance Thought Process (No Borrowing):</span>
+    <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-700">
+      <div className="flex items-center gap-1.5 font-bold text-slate-800 mb-2">
+        <Lightbulb className="w-3.5 h-3.5 text-blue-600" />
+        <span>Forward Number Line Leap:</span>
       </div>
 
-      <div className="flex items-center gap-2 flex-wrap font-mono font-bold text-sm bg-white/80 p-2.5 rounded-lg border border-sky-100">
-        <span className="px-2 py-0.5 bg-slate-100 rounded text-slate-800 border border-slate-200">
+      <div className="flex items-center gap-2 flex-wrap font-mono font-semibold text-xs bg-white p-2 rounded-lg border border-slate-200">
+        <span className="px-2 py-0.5 bg-slate-100 rounded text-slate-800 border border-slate-200 font-bold">
           {subtrahend}
         </span>
-        <span className="text-emerald-600 text-xs flex items-center font-sans font-bold">
-          + {hop1} <ArrowRight className="w-3 h-3 ml-0.5" />
-        </span>
-        <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded border border-emerald-200">
-          {midPoint1}
-        </span>
-        <span className="text-blue-600 text-xs flex items-center font-sans font-bold">
-          + {hop2} <ArrowRight className="w-3 h-3 ml-0.5" />
+        <span className="text-slate-400 text-[11px] flex items-center font-sans">
+          +{hop1} <ArrowRight className="w-3 h-3 ml-0.5" />
         </span>
         <span className="px-2 py-0.5 bg-slate-100 text-slate-800 rounded border border-slate-200">
+          {midPoint1}
+        </span>
+        <span className="text-slate-400 text-[11px] flex items-center font-sans">
+          +{hop2} <ArrowRight className="w-3 h-3 ml-0.5" />
+        </span>
+        <span className="px-2 py-0.5 bg-slate-100 text-slate-800 rounded border border-slate-200 font-bold">
           {minuend}
         </span>
-        <span className="ml-auto text-xs font-sans text-sky-700 bg-sky-100 px-2 py-0.5 rounded font-bold">
-          Total Jump = {hop1} + {hop2} = <span className="text-sky-900 font-black text-sm">{difference}</span>
+        <span className="ml-auto text-[11px] font-sans text-slate-700 bg-slate-100 px-2 py-0.5 rounded font-semibold border border-slate-200">
+          Distance = <span className="text-slate-900 font-bold">{difference}</span>
         </span>
       </div>
 
-      <p className="text-[11px] text-sky-700/90 mt-2">
-        💡 <strong>Mental Cue:</strong> Subtraction is just the distance from {subtrahend} to {minuend} on a number line.
+      <p className="text-[11px] text-slate-500 mt-2">
+        Jump forward from {subtrahend} to {midPoint1} (+{hop1}), then to {minuend} (+{hop2}) = {difference}.
       </p>
     </div>
   );

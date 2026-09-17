@@ -38,7 +38,7 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
   if (sections.length <= 1 && sections[0]?.type === 'general') {
     return (
       <div className={`text-slate-800 leading-relaxed font-sans ${className}`}>
-        <FormattedText text={localizedSolution} language={language} as="div" />
+        <FormattedText text={localizedSolution} language={language} as="div" breakOnSentences />
       </div>
     );
   }
@@ -94,7 +94,7 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
                 <span>{sec.title || 'Shortcut Trick'}</span>
               </div>
               <div className="text-[14px] text-slate-800 leading-relaxed">
-                <FormattedText text={sec.content} language={language} as="div" />
+              <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
               </div>
             </div>
           );
@@ -114,7 +114,7 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
                 <span>{sec.title || 'Additional Information & Key Concepts'}</span>
               </div>
               <div className="text-[13.5px] text-slate-700 leading-relaxed">
-                <FormattedText text={sec.content} language={language} as="div" />
+              <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
               </div>
             </div>
           );
@@ -135,7 +135,7 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
               </div>
             )}
             <div className="text-[14px] text-slate-800 leading-relaxed">
-              <FormattedText text={sec.content} language={language} as="div" />
+              <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
             </div>
           </div>
         );

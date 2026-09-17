@@ -21,7 +21,13 @@ import {
   Compass,
   BookOpen,
   HelpCircle,
-  Eye
+  Eye,
+  CheckCircle2,
+  Table,
+  Activity,
+  Edit3,
+  Percent,
+  Award
 } from 'lucide-react';
 import { MockScoreReport, SectionScore } from '../types/mockScore';
 import { Chapter, Question, SubjectData, QuizResult, QuestionProgress } from '../types';
@@ -464,9 +470,47 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   onReviewMock
 }) => {
   const [activeTab, setActiveTab] = useState<'full' | 'sectional'>('full');
-  const [selectedSectionalSubject, setSelectedSectionalSubject] = useState<'all' | 'Mathematics' | 'Reasoning' | 'English' | 'General Awareness'>('all');
+  const [selectedSectionalSubject, setSelectedSectionalSubject] = useState<'Mathematics' | 'Reasoning' | 'English' | 'General Awareness'>('Mathematics');
   const [reports, setReports] = useState<MockScoreReport[]>([]);
   const [loading, setLoading] = useState(true);
+  const [viewMode, setViewMode] = useState<'table' | 'score_flow'>('table');
+  const [flowSubject, setFlowSubject] = useState<'overall' | 'reasoning' | 'mathematics' | 'english' | 'generalAwareness'>('overall');
+  const [flowMetric, setFlowMetric] = useState<'score' | 'accuracy'>('score');
+  const [activeNodeIndex, setActiveNodeIndex] = useState<number | null>(null);
+
+  // Dynamic Targets for Marks and Accuracy (persisted in safeStorage)
+  const [targetScoreFull, setTargetScoreFull] = useState<number>(() => {
+    const saved = safeStorage.getItem('cgl_target_score_full');
+    return saved ? Number(saved) || 135 : 135;
+  });
+  const [targetScoreSectionalMap, setTargetScoreSectionalMap] = useState<Record<string, number>>(() => {
+    const defaultSec = Number(safeStorage.getItem('cgl_target_score_sectional')) || 38;
+    return {
+      mathematics: Number(safeStorage.getItem('cgl_target_score_sectional_mathematics')) || defaultSec,
+      reasoning: Number(safeStorage.getItem('cgl_target_score_sectional_reasoning')) || defaultSec,
+      english: Number(safeStorage.getItem('cgl_target_score_sectional_english')) || defaultSec,
+      generalAwareness: Number(safeStorage.getItem('cgl_target_score_sectional_generalAwareness')) || defaultSec,
+      overall: defaultSec
+    };
+  });
+
+  const [targetAccuracyFull, setTargetAccuracyFull] = useState<number>(() => {
+    const saved = safeStorage.getItem('cgl_target_accuracy_full');
+    return saved ? Number(saved) || 85 : 85;
+  });
+  const [targetAccuracySectionalMap, setTargetAccuracySectionalMap] = useState<Record<string, number>>(() => {
+    const defaultAcc = Number(safeStorage.getItem('cgl_target_accuracy_sectional')) || 85;
+    return {
+      mathematics: Number(safeStorage.getItem('cgl_target_accuracy_sectional_mathematics')) || defaultAcc,
+      reasoning: Number(safeStorage.getItem('cgl_target_accuracy_sectional_reasoning')) || defaultAcc,
+      english: Number(safeStorage.getItem('cgl_target_accuracy_sectional_english')) || defaultAcc,
+      generalAwareness: Number(safeStorage.getItem('cgl_target_accuracy_sectional_generalAwareness')) || defaultAcc,
+      overall: defaultAcc
+    };
+  });
+  const [editingTargetType, setEditingTargetType] = useState<'score' | 'accuracy' | null>(null);
+  const [targetInputVal, setTargetInputVal] = useState<string>('');
+
   const [practicingId, setPracticingId] = useState<string | null>(null);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
   const [askingAiId, setAskingAiId] = useState<string | null>(null);
@@ -559,108 +603,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     if (activeTab === 'full') {
       return reports.filter(r => r.type === 'full');
     }
-    const sectionals = reports.filter(r => r.type === 'sectional');
-    if (selectedSectionalSubject === 'all') {
-      return sectionals;
-    }
-    return sectionals.filter(r => getSectionalSubject(r) === selectedSectionalSubject);
+    return reports.filter(r => r.type === 'sectional' && getSectionalSubject(r) === selectedSectionalSubject);
   }, [reports, activeTab, selectedSectionalSubject]);
 
-  // Grouped reports when viewing all sectional subjects together
-  const groupedSectionalReports = useMemo(() => {
-    if (activeTab !== 'sectional') return null;
-    const sectionals = reports.filter(r => r.type === 'sectional');
-    const subjects: Array<{
-      key: 'Mathematics' | 'English' | 'Reasoning' | 'General Awareness';
-      label: string;
-      subLabel: string;
-      icon: any;
-      textColor: string;
-      bgColor: string;
-      borderColor: string;
-      badgeColor: string;
-      reports: MockScoreReport[];
-      avgScore: number;
-      bestScore: number;
-      avgAccuracy: number;
-    }> = [
-      {
-        key: 'Mathematics',
-        label: 'Quantitative Aptitude',
-        subLabel: 'Math',
-        icon: Calculator,
-        textColor: 'text-blue-700',
-        bgColor: 'bg-blue-50/40',
-        borderColor: 'border-blue-200/90',
-        badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
-        reports: [],
-        avgScore: 0,
-        bestScore: 0,
-        avgAccuracy: 0
-      },
-      {
-        key: 'English',
-        label: 'English Comprehension',
-        subLabel: 'English',
-        icon: BookOpen,
-        textColor: 'text-emerald-700',
-        bgColor: 'bg-emerald-50/40',
-        borderColor: 'border-emerald-200/90',
-        badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-        reports: [],
-        avgScore: 0,
-        bestScore: 0,
-        avgAccuracy: 0
-      },
-      {
-        key: 'Reasoning',
-        label: 'General Intelligence & Reasoning',
-        subLabel: 'Reasoning',
-        icon: Brain,
-        textColor: 'text-indigo-700',
-        bgColor: 'bg-indigo-50/40',
-        borderColor: 'border-indigo-200/90',
-        badgeColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
-        reports: [],
-        avgScore: 0,
-        bestScore: 0,
-        avgAccuracy: 0
-      },
-      {
-        key: 'General Awareness',
-        label: 'General Awareness & GK',
-        subLabel: 'GA / GK',
-        icon: Compass,
-        textColor: 'text-amber-700',
-        bgColor: 'bg-amber-50/40',
-        borderColor: 'border-amber-200/90',
-        badgeColor: 'bg-amber-100 text-amber-800 border-amber-200',
-        reports: [],
-        avgScore: 0,
-        bestScore: 0,
-        avgAccuracy: 0
-      }
-    ];
 
-    sectionals.forEach(r => {
-      const sub = getSectionalSubject(r);
-      const item = subjects.find(s => s.key === sub);
-      if (item) {
-        item.reports.push(r);
-      }
-    });
-
-    subjects.forEach(item => {
-      if (item.reports.length > 0) {
-        const scores = item.reports.map(r => r.totalScore);
-        item.bestScore = Math.max(...scores);
-        item.avgScore = Math.round((scores.reduce((a, b) => a + b, 0) / scores.length) * 10) / 10;
-        item.avgAccuracy = Math.round((item.reports.reduce((a, b) => a + b.overallAccuracy, 0) / item.reports.length) * 10) / 10;
-      }
-    });
-
-    return subjects.filter(s => s.reports.length > 0);
-  }, [reports, activeTab]);
 
   const latestReport = filteredReports[0] || null;
 
@@ -689,6 +635,293 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       maxMarks: filteredReports[0]?.maxMarks || (activeTab === 'full' ? 200 : 50)
     };
   }, [filteredReports, activeTab]);
+
+  // ─── SCORE FLOW & ANALYTICS COMPUTATIONS ───
+  const chronologicalReports = useMemo(() => {
+    return [...filteredReports].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  }, [filteredReports]);
+
+  const flowAnalytics = useMemo(() => {
+    if (chronologicalReports.length === 0) {
+      return {
+        initialScore: 0,
+        latestScore: 0,
+        scoreDelta: 0,
+        initialAccuracy: 0,
+        projectedAccuracy: 0,
+        accuracyDelta: 0,
+        peakReport: null as MockScoreReport | null,
+        strongestSubject: 'English',
+        strongestAcc: 0,
+        volatileSubject: 'Quantitative',
+        volatileAcc: 0,
+        subjectStats: {
+          reasoning: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Strong & Consistent', sparkline: '' },
+          mathematics: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Needs Speed', sparkline: '' },
+          english: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Mastered Benchmark', sparkline: '' },
+          generalAwareness: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Revise Core', sparkline: '' }
+        }
+      };
+    }
+
+    const first = chronologicalReports[0];
+    const latest = chronologicalReports[chronologicalReports.length - 1];
+    const scoreDelta = Math.round((latest.totalScore - first.totalScore) * 10) / 10;
+    const accuracyDelta = Math.round((latest.overallAccuracy - first.overallAccuracy) * 10) / 10;
+
+    let peakReport: MockScoreReport = chronologicalReports[0];
+    chronologicalReports.forEach(r => {
+      if (r.totalScore > peakReport.totalScore) {
+        peakReport = r;
+      }
+    });
+
+    const subKeys: Array<{ key: 'reasoning' | 'mathematics' | 'english' | 'generalAwareness'; label: string; subjectName: string }> = [
+      { key: 'reasoning', label: 'Reasoning', subjectName: 'Reasoning' },
+      { key: 'mathematics', label: 'Quantitative', subjectName: 'Mathematics' },
+      { key: 'english', label: 'English', subjectName: 'English' },
+      { key: 'generalAwareness', label: 'GA / GK', subjectName: 'General Awareness' }
+    ];
+
+    const subjectStats: Record<string, { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string }> = {};
+
+    let highestAcc = -1;
+    let strongestSub = 'English';
+    let lowestAcc = 999;
+    let volatileSub = 'Quantitative';
+
+    subKeys.forEach(({ key, label, subjectName }) => {
+      const scores: number[] = [];
+      const accs: number[] = [];
+
+      chronologicalReports.forEach(r => {
+        const sec = r.sections?.[key];
+        if (sec && (sec.score !== undefined || sec.total > 0)) {
+          scores.push(sec.score);
+          accs.push(sec.accuracy ?? 0);
+        } else if (r.type === 'sectional' && getSectionalSubject(r) === subjectName) {
+          scores.push(r.totalScore);
+          accs.push(r.overallAccuracy ?? 0);
+        }
+      });
+
+      const avgScore = scores.length > 0 ? Math.round((scores.reduce((a, b) => a + b, 0) / scores.length) * 10) / 10 : 0;
+      const avgAcc = accs.length > 0 ? Math.round((accs.reduce((a, b) => a + b, 0) / accs.length) * 10) / 10 : 0;
+
+      if (avgAcc > highestAcc && scores.length > 0) {
+        highestAcc = avgAcc;
+        strongestSub = label;
+      }
+      if (avgAcc < lowestAcc && avgAcc > 0) {
+        lowestAcc = avgAcc;
+        volatileSub = label;
+      }
+
+      let delta = 0;
+      if (scores.length >= 2) {
+        const mid = Math.floor(scores.length / 2);
+        const firstHalf = scores.slice(0, mid);
+        const secondHalf = scores.slice(mid);
+        const avg1 = firstHalf.reduce((a, b) => a + b, 0) / (firstHalf.length || 1);
+        const avg2 = secondHalf.reduce((a, b) => a + b, 0) / (secondHalf.length || 1);
+        delta = Math.round((avg2 - avg1) * 10) / 10;
+      }
+
+      let status = 'Strong & Consistent';
+      if (avgScore >= 35) {
+        status = key === 'english' ? 'Mastered Benchmark (80%+)' : 'Strong & Consistent';
+      } else if (avgScore >= 25) {
+        status = 'High Potential • Needs Speed';
+      } else {
+        status = key === 'generalAwareness' ? 'Revise Current Affairs' : 'Revise Core Concepts';
+      }
+
+      // Generate 160x36 sparkline path
+      const sparklinePoints: Array<{ x: number; y: number }> = [];
+      if (scores.length > 0) {
+        const minS = 0;
+        const maxS = 50;
+        scores.forEach((s, idx) => {
+          const x = Math.round((scores.length === 1 ? 0.5 : idx / (scores.length - 1)) * 160);
+          const y = Math.round(30 - ((s - minS) / (maxS - minS || 1)) * 24);
+          sparklinePoints.push({ x, y: Math.max(4, Math.min(32, y)) });
+        });
+      }
+
+      const sparkline = sparklinePoints.reduce((accStr, p, idx) => {
+        return idx === 0 ? `M ${p.x} ${p.y}` : `${accStr} L ${p.x} ${p.y}`;
+      }, '');
+
+      subjectStats[key] = {
+        avgScore,
+        avgAcc,
+        delta,
+        status,
+        sparkline
+      };
+    });
+
+    return {
+      initialScore: first.totalScore,
+      latestScore: latest.totalScore,
+      scoreDelta,
+      initialAccuracy: first.overallAccuracy,
+      projectedAccuracy: latest.overallAccuracy,
+      accuracyDelta,
+      peakReport,
+      strongestSubject: strongestSub,
+      strongestAcc: highestAcc,
+      volatileSubject: volatileSub,
+      volatileAcc: lowestAcc,
+      subjectStats: subjectStats as {
+        reasoning: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
+        mathematics: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
+        english: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
+        generalAwareness: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
+      }
+    };
+  }, [chronologicalReports]);
+
+  // Sectional vs Full scaling helpers & Dynamic Target
+  const isSectionalScale = activeTab === 'sectional' || flowSubject !== 'overall' || aggregateStats.maxMarks <= 50;
+
+  const activeSubjectKey = useMemo(() => {
+    if (activeTab === 'sectional') {
+      const map: Record<string, string> = {
+        Mathematics: 'mathematics',
+        Reasoning: 'reasoning',
+        English: 'english',
+        'General Awareness': 'generalAwareness'
+      };
+      return map[selectedSectionalSubject] || 'mathematics';
+    }
+    return flowSubject;
+  }, [activeTab, selectedSectionalSubject, flowSubject]);
+
+  const currentScoreTarget = useMemo(() => {
+    if (!isSectionalScale && flowSubject === 'overall') {
+      return targetScoreFull;
+    }
+    return targetScoreSectionalMap[activeSubjectKey] ?? 38;
+  }, [isSectionalScale, flowSubject, targetScoreFull, targetScoreSectionalMap, activeSubjectKey]);
+
+  const currentAccTarget = useMemo(() => {
+    if (!isSectionalScale && flowSubject === 'overall') {
+      return targetAccuracyFull;
+    }
+    return targetAccuracySectionalMap[activeSubjectKey] ?? 85;
+  }, [isSectionalScale, flowSubject, targetAccuracyFull, targetAccuracySectionalMap, activeSubjectKey]);
+
+  const currentTarget = flowMetric === 'accuracy' ? currentAccTarget : currentScoreTarget;
+  const currentTargetMax = flowMetric === 'accuracy' ? 100 : (isSectionalScale ? 50 : 200);
+  const currentTargetMin = 1;
+
+  const commitTargetScore = (inputNum?: number) => {
+    const val = inputNum !== undefined ? inputNum : parseInt(targetInputVal, 10);
+    const maxScore = isSectionalScale ? 50 : 200;
+    if (!isNaN(val) && val > 0) {
+      const clamped = Math.max(1, Math.min(maxScore, val));
+      if (!isSectionalScale && flowSubject === 'overall') {
+        setTargetScoreFull(clamped);
+        safeStorage.setItem('cgl_target_score_full', String(clamped));
+      } else {
+        setTargetScoreSectionalMap(prev => ({ ...prev, [activeSubjectKey]: clamped }));
+        safeStorage.setItem(`cgl_target_score_sectional_${activeSubjectKey}`, String(clamped));
+        safeStorage.setItem('cgl_target_score_sectional', String(clamped));
+      }
+    }
+    setEditingTargetType(null);
+  };
+
+  const commitTargetAccuracy = (inputNum?: number) => {
+    const val = inputNum !== undefined ? inputNum : parseInt(targetInputVal, 10);
+    if (!isNaN(val) && val > 0) {
+      const clamped = Math.max(1, Math.min(100, val));
+      if (!isSectionalScale && flowSubject === 'overall') {
+        setTargetAccuracyFull(clamped);
+        safeStorage.setItem('cgl_target_accuracy_full', String(clamped));
+      } else {
+        setTargetAccuracySectionalMap(prev => ({ ...prev, [activeSubjectKey]: clamped }));
+        safeStorage.setItem(`cgl_target_accuracy_sectional_${activeSubjectKey}`, String(clamped));
+        safeStorage.setItem('cgl_target_accuracy_sectional', String(clamped));
+      }
+    }
+    setEditingTargetType(null);
+  };
+
+  const peakReportId = flowAnalytics.peakReport?.id;
+
+  // Dynamic coordinates for SVG Score Flow Progression Curve
+  const chartPoints = useMemo(() => {
+    if (chronologicalReports.length === 0) return [];
+
+    const minX = 100;
+    const maxX = 865;
+    const minY = 50;
+    const maxY = 250;
+
+    const subMap: Record<string, string> = {
+      reasoning: 'Reasoning',
+      mathematics: 'Mathematics',
+      english: 'English',
+      generalAwareness: 'General Awareness'
+    };
+
+    return chronologicalReports.map((r, i) => {
+      const x = Math.round(minX + (chronologicalReports.length === 1 ? 0.5 : i / (chronologicalReports.length - 1)) * (maxX - minX));
+      let val = 0;
+      if (flowSubject === 'overall') {
+        val = flowMetric === 'score' ? r.totalScore : r.overallAccuracy;
+      } else {
+        const sec = r.sections?.[flowSubject as keyof typeof r.sections];
+        if (sec && (sec.score !== undefined || sec.total > 0)) {
+          val = flowMetric === 'score' ? sec.score : sec.accuracy;
+        } else if (r.type === 'sectional') {
+          if (getSectionalSubject(r) === subMap[flowSubject]) {
+            val = flowMetric === 'score' ? r.totalScore : r.overallAccuracy;
+          } else {
+            val = 0;
+          }
+        }
+      }
+
+      const minVal = flowMetric === 'accuracy' ? 0 : (isSectionalScale ? 0 : 30);
+      const maxVal = flowMetric === 'accuracy' ? 100 : (isSectionalScale ? 50 : 200);
+      const normalized = Math.max(0, Math.min(1, (val - minVal) / (maxVal - minVal || 1)));
+      const y = Math.round(maxY - normalized * (maxY - minY));
+
+      const { shortTitle } = parseMockDetails(r);
+
+      return {
+        x,
+        y,
+        val,
+        report: r,
+        shortTitle,
+        isPeak: peakReportId === r.id
+      };
+    });
+  }, [chronologicalReports, flowSubject, flowMetric, peakReportId, isSectionalScale]);
+
+  const chartCurvePath = useMemo(() => {
+    if (chartPoints.length === 0) return '';
+    return chartPoints.reduce((acc, p, i, arr) => {
+      if (i === 0) return `M ${p.x} ${p.y}`;
+      const prev = arr[i - 1];
+      const cp1x = prev.x + (p.x - prev.x) / 2;
+      const cp1y = prev.y;
+      const cp2x = prev.x + (p.x - prev.x) / 2;
+      const cp2y = p.y;
+      return `${acc} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${p.x} ${p.y}`;
+    }, '');
+  }, [chartPoints]);
+
+  const chartAreaPath = useMemo(() => {
+    if (chartPoints.length === 0) return '';
+    const lastX = chartPoints[chartPoints.length - 1].x;
+    const firstX = chartPoints[0].x;
+    return `${chartCurvePath} L ${lastX} 260 L ${firstX} 260 Z`;
+  }, [chartPoints, chartCurvePath]);
 
 
   // ─── SECTION-WISE MOCK ERROR QUESTION LOADER ───
@@ -1489,143 +1722,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     saveReports(updated);
   };
 
-  const renderSectionalRow = (report: MockScoreReport, showSubjectTag: boolean = true) => {
-    const sub = getSectionalSubject(report);
-    const subMeta = {
-      Mathematics: { label: 'Quantitative (Math)', icon: Calculator, color: 'text-blue-700', bg: 'bg-blue-50 border-blue-200' },
-      Reasoning: { label: 'Reasoning', icon: Brain, color: 'text-indigo-700', bg: 'bg-indigo-50 border-indigo-200' },
-      English: { label: 'English', icon: BookOpen, color: 'text-emerald-700', bg: 'bg-emerald-50 border-emerald-200' },
-      'General Awareness': { label: 'GA / GK', icon: Compass, color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200' }
-    }[sub] || { label: sub, icon: Target, color: 'text-slate-700', bg: 'bg-slate-50 border-slate-200' };
-
-    const SubIcon = subMeta.icon;
-    const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric'
-    });
-    const mistakeCount = (report.totalWrong || 0) + (report.totalUnattempted || 0);
-
-    return (
-      <div
-        key={report.id}
-        className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between px-3 py-2 gap-2 hover:bg-slate-50/70 transition-colors"
-      >
-        {/* 1. Left: Attempt details & subject badge */}
-        <div className="flex items-center gap-2.5 min-w-[240px]">
-          <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border ${subMeta.bg}`}>
-            <SubIcon className={`w-4 h-4 ${subMeta.color}`} />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-xs font-bold text-slate-900" title={report.title}>
-                {report.title}
-              </span>
-              {showSubjectTag && (
-                <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded border ${subMeta.bg} ${subMeta.color}`}>
-                  {subMeta.label}
-                </span>
-              )}
-              <span className="text-[9px] font-medium px-1 py-0.2 rounded bg-white border border-slate-200 text-slate-400">
-                {dateClean}
-              </span>
-            </div>
-            <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1.5 flex-wrap">
-              <span className="text-emerald-600 font-semibold">{report.totalCorrect} Correct</span>
-              <span className="text-slate-300">•</span>
-              <span className="text-rose-500 font-semibold">{report.totalWrong} Wrong</span>
-              <span className="text-slate-300">•</span>
-              <span className="text-slate-400 font-semibold">{report.totalUnattempted} Skipped</span>
-            </div>
-          </div>
-        </div>
-
-        {/* 2. Middle: Score & Accuracy Badges */}
-        <div className="flex items-center gap-4 self-start xl:self-center">
-          <div className="text-left">
-            <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400">Score</div>
-            <div className="flex items-baseline gap-0.5">
-              <span className="text-sm font-extrabold text-slate-900 leading-none">
-                {report.totalScore}
-              </span>
-              <span className="text-[10px] font-semibold text-slate-400">/{report.maxMarks || 50}</span>
-            </div>
-          </div>
-
-          <div className="text-left">
-            <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400">Accuracy</div>
-            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full inline-block ${
-              report.overallAccuracy >= 85 ? 'bg-emerald-100 text-emerald-800' :
-              report.overallAccuracy >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
-            }`}>
-              {report.overallAccuracy}%
-            </span>
-          </div>
-        </div>
-
-        {/* 3. Right: Action Buttons */}
-        <div className="flex items-center gap-1.5 self-end xl:self-center">
-          <button
-            onClick={() => handleReviewMock(report)}
-            disabled={reviewingId === report.id}
-            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white border border-emerald-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-            title="Review all questions, solutions & root causes"
-          >
-            {reviewingId === report.id ? (
-              <Loader2 className="w-3 h-3 animate-spin" />
-            ) : (
-              <Eye className="w-3 h-3" />
-            )}
-            <span>Review</span>
-          </button>
-
-          <button
-            onClick={() => openPracticeModal(report, sub)}
-            disabled={practicingId === report.id}
-            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-            title="Practice mistakes from this sectional mock"
-          >
-            {practicingId === report.id ? (
-              <Loader2 className="w-3 h-3 animate-spin" />
-            ) : (
-              <Play className="w-2.5 h-2.5 fill-current" />
-            )}
-            <span>Practice Mock</span>
-          </button>
-
-          <button
-            onClick={() => handleAskAiMock(report, sub)}
-            disabled={askingAiId === report.id}
-            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-violet-700 bg-violet-50 hover:bg-violet-600 hover:text-white border border-violet-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-            title="Ask Tommy AI about this sectional mock's mistakes"
-          >
-            {askingAiId === report.id ? (
-              <Loader2 className="w-3 h-3 animate-spin" />
-            ) : (
-              <Sparkles className="w-3 h-3 text-violet-500 fill-violet-500/20" />
-            )}
-            <span>Ask AI</span>
-          </button>
-
-          <button
-            onClick={() => handleDeleteMock(report.id)}
-            className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0 cursor-pointer"
-            title="Delete this record"
-          >
-            <Trash2 className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      </div>
-    );
-  };
-
   const handleClearAll = async () => {
     if (filteredReports.length === 0) return;
-    const label = activeTab === 'full'
-      ? 'Full'
-      : selectedSectionalSubject === 'all'
-      ? 'All Sectional'
-      : `${selectedSectionalSubject} Sectional`;
+    const label = activeTab === 'full' ? 'Full' : `${selectedSectionalSubject} Sectional`;
     if (!window.confirm(`Are you sure you want to clear all ${filteredReports.length} ${label} Mock records?`)) return;
     const idsToRemove = new Set<string>(filteredReports.map(r => String(r.id)));
     for (const id of idsToRemove) {
@@ -1645,91 +1744,146 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   };
 
   return (
-    <div className="max-w-[1400px] mx-auto px-2 sm:px-4 py-2 space-y-2">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-5">
 
-      {/* Top Header & Tab Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white px-3.5 py-1.5 rounded-lg border border-slate-200/80 shadow-xs">
-        <div>
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-blue-50 text-blue-600 flex items-center justify-center font-bold shrink-0">
-              <Trophy className="w-3.5 h-3.5" />
-            </div>
-            <div>
-              <h1 className="text-xs font-bold text-slate-900 tracking-tight leading-none">Mock Score Dashboard</h1>
-              <p className="text-[10px] text-slate-400 font-medium leading-tight mt-0.5">Real exam score calculation, negative marking &amp; subject accuracy</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Action Controls & Tab Switcher */}
-        <div className="flex items-center gap-1.5">
+      {/* ─── Minimalist Subheader & Mode Toggle ─── */}
+      <section className="bg-white rounded-2xl border border-slate-200/90 p-3 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 shadow-xs">
+        {/* Left Title & Context */}
+        <div className="flex items-center gap-3 min-w-0 flex-1">
           {onBack && (
             <button
               onClick={onBack}
-              className="flex items-center text-[11px] font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-md transition-colors"
+              className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg border border-slate-200 transition-colors cursor-pointer shrink-0"
+              type="button"
             >
-              <ChevronLeft className="w-3 h-3 mr-0.5" />
-              Back
+              <ChevronLeft className="w-3.5 h-3.5" />
+              <span>Back</span>
             </button>
           )}
-          {/* Tabs: Full Mock vs Sectional */}
-          <div className="inline-flex bg-slate-100 p-0.5 rounded-md border border-slate-200/80 text-[11px] font-semibold">
+          <div className="h-8 w-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100 shrink-0 shadow-xs">
+            {viewMode === 'score_flow' ? (
+              <TrendingUp className="w-4 h-4" />
+            ) : (
+              <Trophy className="w-4 h-4" />
+            )}
+          </div>
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <h1 className="text-sm sm:text-base font-bold text-slate-900 tracking-tight whitespace-nowrap">
+                {viewMode === 'score_flow' ? 'Score Flow & Analytics' : 'Mock Score Dashboard'}
+              </h1>
+              <span className="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-mono uppercase tracking-wider font-semibold shrink-0">
+                CAT / SSC
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 truncate max-w-xl">
+              {viewMode === 'score_flow'
+                ? 'Historical score trajectories, progression momentum, and subject-wise accuracy distribution across mock attempts.'
+                : 'Real exam score calculation, negative marking & subject accuracy'}
+            </p>
+          </div>
+        </div>
+
+        {/* Right Toggles: Full vs Sectional AND Table View vs Score Flow (Always in one line) */}
+        <div className="flex items-center gap-2 shrink-0 flex-nowrap self-stretch sm:self-auto overflow-x-auto pb-0.5 sm:pb-0">
+          {/* Scope Toggle: Full Mock vs Sectional */}
+          <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200/80 text-xs font-medium shrink-0">
             <button
-              onClick={() => setActiveTab('full')}
-              className={`px-2.5 py-0.5 rounded transition-all flex items-center gap-1 ${
+              onClick={() => {
+                setActiveTab('full');
+                setFlowSubject('overall');
+              }}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
                 activeTab === 'full'
-                  ? 'bg-white text-blue-600 shadow-xs font-bold'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
+              type="button"
             >
-              <Layers className="w-3 h-3" />
+              <Layers className="w-3.5 h-3.5 text-blue-600 shrink-0" />
               <span>Full Mock</span>
             </button>
             <button
-              onClick={() => setActiveTab('sectional')}
-              className={`px-2.5 py-0.5 rounded transition-all flex items-center gap-1 ${
+              onClick={() => {
+                setActiveTab('sectional');
+                if (flowSubject === 'overall') {
+                  setFlowSubject('mathematics');
+                }
+              }}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
                 activeTab === 'sectional'
-                  ? 'bg-white text-blue-600 shadow-xs font-bold'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
+              type="button"
             >
-              <Target className="w-3 h-3" />
+              <Target className="w-3.5 h-3.5 text-slate-500 shrink-0" />
               <span>Sectional</span>
             </button>
           </div>
+
+          {/* View Switcher: Table View vs Score Flow */}
+          <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200/80 text-xs font-medium shrink-0">
+            <button
+              onClick={() => setViewMode('table')}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
+                viewMode === 'table'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              type="button"
+            >
+              <Table className="w-3.5 h-3.5 shrink-0" />
+              <span>Table View</span>
+            </button>
+            <button
+              onClick={() => setViewMode('score_flow')}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
+                viewMode === 'score_flow'
+                  ? 'bg-blue-600 text-white shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              type="button"
+            >
+              <TrendingUp className="w-3.5 h-3.5 shrink-0" />
+              <span>Score Flow</span>
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Subject Filter Toolbar for Sectional Mocks */}
       {activeTab === 'sectional' && (
-        <div className="bg-white rounded-xl p-2 border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-2">
+        <div className="bg-white rounded-2xl p-2.5 border border-slate-200/90 shadow-xs flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-1">
               Subject View:
             </span>
             {[
-              { id: 'all', label: 'All Subjects', icon: Layers, count: sectionalSubjectCounts.all, color: 'text-slate-700', activeClass: 'bg-slate-900 text-white shadow-xs' },
-              { id: 'Mathematics', label: 'Quantitative (Math)', icon: Calculator, count: sectionalSubjectCounts.Mathematics, color: 'text-blue-600', activeClass: 'bg-blue-600 text-white shadow-xs' },
-              { id: 'Reasoning', label: 'Reasoning', icon: Brain, count: sectionalSubjectCounts.Reasoning, color: 'text-indigo-600', activeClass: 'bg-indigo-600 text-white shadow-xs' },
-              { id: 'English', label: 'English', icon: BookOpen, count: sectionalSubjectCounts.English, color: 'text-emerald-600', activeClass: 'bg-emerald-600 text-white shadow-xs' },
-              { id: 'General Awareness', label: 'GA / GK', icon: Compass, count: sectionalSubjectCounts['General Awareness'], color: 'text-amber-600', activeClass: 'bg-amber-600 text-white shadow-xs' },
+              { id: 'Mathematics', label: 'Quantitative (Math)', icon: Calculator, flowKey: 'mathematics', count: sectionalSubjectCounts.Mathematics, color: 'text-blue-600', activeClass: 'bg-blue-600 text-white shadow-xs' },
+              { id: 'Reasoning', label: 'Reasoning', icon: Brain, flowKey: 'reasoning', count: sectionalSubjectCounts.Reasoning, color: 'text-indigo-600', activeClass: 'bg-indigo-600 text-white shadow-xs' },
+              { id: 'English', label: 'English', icon: BookOpen, flowKey: 'english', count: sectionalSubjectCounts.English, color: 'text-emerald-600', activeClass: 'bg-emerald-600 text-white shadow-xs' },
+              { id: 'General Awareness', label: 'GA / GK', icon: Compass, flowKey: 'generalAwareness', count: sectionalSubjectCounts['General Awareness'], color: 'text-amber-600', activeClass: 'bg-amber-600 text-white shadow-xs' },
             ].map((tab) => {
               const isSelected = selectedSectionalSubject === tab.id;
               const Icon = tab.icon;
               return (
                 <button
                   key={tab.id}
-                  onClick={() => setSelectedSectionalSubject(tab.id as any)}
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  onClick={() => {
+                    setSelectedSectionalSubject(tab.id as any);
+                    setFlowSubject(tab.flowKey as any);
+                  }}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                     isSelected
                       ? tab.activeClass
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 bg-slate-50 border border-slate-200/60'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 bg-slate-50 border border-slate-200/80'
                   }`}
                 >
                   <Icon className={`w-3.5 h-3.5 ${isSelected ? 'text-white' : tab.color}`} />
                   <span>{tab.label}</span>
                   <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
-                    isSelected ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-700'
+                    isSelected ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-700'
                   }`}>
                     {tab.count}
                   </span>
@@ -1737,178 +1891,891 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               );
             })}
           </div>
-
-          {selectedSectionalSubject !== 'all' && (
-            <button
-              onClick={() => setSelectedSectionalSubject('all')}
-              className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 transition-colors flex items-center gap-1 cursor-pointer px-1"
-            >
-              <span>View All Subjects</span>
-              <ArrowRight className="w-3 h-3" />
-            </button>
-          )}
         </div>
       )}
 
       {filteredReports.length === 0 ? (
         /* Empty State */
-        <div className="bg-white rounded-xl p-6 text-center border border-slate-200/80 shadow-xs max-w-md mx-auto space-y-2.5">
-          <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mx-auto shadow-inner">
-            <Trophy className="w-5 h-5" />
+        <div className="bg-white rounded-xl p-8 text-center border border-slate-200 shadow-xs max-w-md mx-auto space-y-3">
+          <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto border border-blue-100">
+            <Trophy className="w-6 h-6" />
           </div>
           <div>
             <h3 className="text-sm font-bold text-slate-900">
-              No {activeTab === 'full' ? 'Full Mock' : selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Sectional` : 'Sectional'} Scores Yet
+              No {activeTab === 'full' ? 'Full Mock' : `${selectedSectionalSubject} Sectional`} Scores Yet
             </h3>
-            <p className="text-[11px] text-slate-500 mt-0.5 max-w-sm mx-auto">
-              {activeTab === 'sectional' && selectedSectionalSubject !== 'all'
-                ? `No ${selectedSectionalSubject} sectional mock tests found.`
-                : 'No mock tests found for this filter.'}
+            <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
+              {activeTab === 'sectional'
+                ? `No ${selectedSectionalSubject} sectional mock tests recorded.`
+                : 'No mock tests found for this view.'}
             </p>
+          </div>
+        </div>
+      ) : viewMode === 'score_flow' ? (
+        <div className="space-y-5">
+          {/* ─── Top KPI / Momentum Metrics Row (Compact ~80px Standard) ─── */}
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-3" data-purpose="stat-metrics">
+            {/* Card 1: Overall Trajectory */}
+            <article className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-100">
+                    Trajectory
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 leading-none">
+                      {latestReport ? latestReport.totalScore : 0}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-400 font-mono">/ {aggregateStats.maxMarks}</span>
+                  </div>
+                </div>
+                <p className="mt-1 text-[10px] text-slate-400 truncate leading-tight">
+                  Goal: {currentTarget}{flowMetric === 'accuracy' ? '%' : ''}+ benchmark
+                </p>
+              </div>
+              <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <div className="flex items-center gap-1 text-emerald-600 font-bold font-mono">
+                  <TrendingUp className="w-3 h-3" />
+                  <span>{flowAnalytics.scoreDelta >= 0 ? `+${flowAnalytics.scoreDelta}` : flowAnalytics.scoreDelta} pts</span>
+                </div>
+                <span className="text-slate-400 font-mono">{chronologicalReports.length} verified mocks</span>
+              </div>
+            </article>
+
+            {/* Card 2: Projected Accuracy */}
+            <article className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-100">
+                    Projected Accuracy
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-base sm:text-lg font-black tracking-tight text-emerald-600 leading-none">
+                      {flowAnalytics.projectedAccuracy}%
+                    </span>
+                    <span className="text-[10px] font-bold text-emerald-700 font-mono">
+                      {flowAnalytics.accuracyDelta >= 0 ? `+${flowAnalytics.accuracyDelta}%` : `${flowAnalytics.accuracyDelta}%`}
+                    </span>
+                  </div>
+                </div>
+                <p className="mt-1 text-[10px] text-slate-400 truncate leading-tight">
+                  Strongest: <strong className="text-slate-700 font-medium">{flowAnalytics.strongestSubject} ({flowAnalytics.strongestAcc}%)</strong>
+                </p>
+              </div>
+              <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">Volatile: {flowAnalytics.volatileSubject}</span>
+                <span className="text-amber-700 font-bold font-mono">{flowAnalytics.volatileAcc}%</span>
+              </div>
+            </article>
+
+            {/* Card 3: Peak Momentum */}
+            <article className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-100">
+                    Peak Momentum
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-base sm:text-lg font-black tracking-tight text-purple-700 leading-none">
+                      {flowAnalytics.peakReport ? flowAnalytics.peakReport.totalScore : 0}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-400 font-mono">/ {aggregateStats.maxMarks}</span>
+                  </div>
+                </div>
+                <p className="mt-1 text-[10px] text-slate-400 truncate leading-tight">
+                  {flowAnalytics.peakReport ? parseMockDetails(flowAnalytics.peakReport).shortTitle : 'No peak test logged'}
+                </p>
+              </div>
+              <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">High-water mark</span>
+                <span className="text-purple-700 font-bold font-mono">TOP TIER</span>
+              </div>
+            </article>
+          </section>
+
+          {/* ─── Interactive Score Progression Curve Section ─── */}
+          <section className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-xs relative">
+            {/* Section Controls Bar */}
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-5 gap-3 border-b border-slate-100">
+              <div>
+                <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-blue-600" />
+                  Score Progression Curve
+                </h2>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Tracking aggregate score fluctuations and benchmark cutoffs across last {chronologicalReports.length} verified tests.
+                </p>
+              </div>
+
+              {/* Subject Filters, Metric Switcher & Targets Toolbar (Strictly in ONE line) */}
+              <div className="flex items-center justify-between gap-3 overflow-x-auto pb-1 max-w-full flex-nowrap">
+                <div className="flex items-center gap-2 flex-nowrap shrink-0">
+                  {/* Metric Switch Chips: Marks vs Accuracy % */}
+                  <div className="inline-flex items-center p-1 bg-slate-100 rounded-xl border border-slate-200/80 gap-1 shrink-0">
+                    <button
+                      onClick={() => setFlowMetric('score')}
+                      type="button"
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                        flowMetric === 'score'
+                          ? 'bg-white text-blue-700 shadow-xs font-bold'
+                          : 'text-slate-600 hover:text-slate-900'
+                      }`}
+                    >
+                      <Award className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                      <span>{flowSubject === 'overall' ? (activeTab === 'full' ? 'Marks /200' : 'Marks /50') : 'Marks /50'}</span>
+                    </button>
+                    <button
+                      onClick={() => setFlowMetric('accuracy')}
+                      type="button"
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                        flowMetric === 'accuracy'
+                          ? 'bg-blue-600 text-white shadow-xs font-bold'
+                          : 'text-slate-600 hover:text-slate-900'
+                      }`}
+                    >
+                      <Percent className="w-3.5 h-3.5 shrink-0" />
+                      <span>Accuracy %</span>
+                    </button>
+                  </div>
+
+                  <div className="h-5 w-px bg-slate-200 hidden sm:block mx-0.5 shrink-0"></div>
+
+                  {/* Subject Filters Chips */}
+                  <div className="flex items-center gap-1.5 flex-nowrap shrink-0">
+                    {(activeTab === 'full'
+                      ? [
+                          { id: 'overall', label: 'Overall', dot: '' },
+                          { id: 'reasoning', label: 'Reasoning', dot: 'bg-indigo-600' },
+                          { id: 'mathematics', label: 'Quantitative', dot: 'bg-blue-600' },
+                          { id: 'english', label: 'English', dot: 'bg-emerald-600' },
+                          { id: 'generalAwareness', label: 'GA / GK', dot: 'bg-amber-600' },
+                        ]
+                      : [
+                          { id: 'mathematics', label: 'Quantitative (Math)', dot: 'bg-blue-600', sub: 'Mathematics' as const },
+                          { id: 'reasoning', label: 'Reasoning', dot: 'bg-indigo-600', sub: 'Reasoning' as const },
+                          { id: 'english', label: 'English', dot: 'bg-emerald-600', sub: 'English' as const },
+                          { id: 'generalAwareness', label: 'GA / GK', dot: 'bg-amber-600', sub: 'General Awareness' as const },
+                        ]
+                    ).map((chip) => {
+                      const isSelected = activeTab === 'sectional'
+                        ? selectedSectionalSubject === (chip as any).sub
+                        : flowSubject === chip.id;
+                      return (
+                        <button
+                          key={chip.id}
+                          onClick={() => {
+                            setFlowSubject(chip.id as any);
+                            if (activeTab === 'sectional' && (chip as any).sub) {
+                              setSelectedSectionalSubject((chip as any).sub);
+                            }
+                          }}
+                          type="button"
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                            isSelected
+                              ? 'bg-blue-600 text-white shadow-xs'
+                              : 'bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 border border-slate-200'
+                          }`}
+                        >
+                          {chip.dot && <span className={`w-2 h-2 rounded-full ${chip.dot}`}></span>}
+                          <span>{chip.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Right: Dynamic Targets Widget (Both Score & Accuracy in ONE line) */}
+                <div className="flex items-center gap-1.5 shrink-0 ml-auto pl-2">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-rose-50/90 border border-rose-200 text-xs font-mono font-semibold text-rose-700 shadow-xs shrink-0 whitespace-nowrap">
+                    {/* Score Target Segment */}
+                    <div className="flex items-center gap-1">
+                      <Target className="w-3.5 h-3.5 text-rose-500 shrink-0" />
+                      <span className="text-[11px] text-slate-500 font-sans font-medium">Score:</span>
+                      {editingTargetType === 'score' ? (
+                        <form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            commitTargetScore();
+                          }}
+                          className="flex items-center gap-1"
+                        >
+                          <input
+                            type="number"
+                            min={1}
+                            max={isSectionalScale ? 50 : 200}
+                            value={targetInputVal}
+                            onChange={(e) => setTargetInputVal(e.target.value)}
+                            onBlur={() => commitTargetScore()}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Escape') setEditingTargetType(null);
+                            }}
+                            autoFocus
+                            className="w-12 px-1 py-0.5 bg-white text-rose-900 border border-rose-300 rounded text-center text-xs font-bold outline-none focus:ring-1 focus:ring-rose-500"
+                          />
+                          <span className="text-slate-400 font-bold">/{isSectionalScale ? 50 : 200}</span>
+                          <button
+                            type="submit"
+                            className="p-0.5 rounded text-rose-600 hover:text-rose-900 hover:bg-rose-100 cursor-pointer"
+                            title="Save target score"
+                          >
+                            <Check className="w-3 h-3" />
+                          </button>
+                        </form>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setEditingTargetType('score');
+                            setTargetInputVal(String(currentScoreTarget));
+                          }}
+                          className="hover:underline flex items-center gap-0.5 text-rose-700 font-bold cursor-pointer"
+                          title={`Click to edit target score (out of ${isSectionalScale ? 50 : 200})`}
+                        >
+                          <span>{currentScoreTarget}/{isSectionalScale ? 50 : 200}</span>
+                          <Edit3 className="w-2.5 h-2.5 text-rose-500 opacity-70 hover:opacity-100 ml-0.5" />
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="h-3.5 w-px bg-rose-200"></div>
+
+                    {/* Accuracy Target Segment */}
+                    <div className="flex items-center gap-1">
+                      <Percent className="w-3 h-3 text-rose-500 shrink-0" />
+                      <span className="text-[11px] text-slate-500 font-sans font-medium">Acc:</span>
+                      {editingTargetType === 'accuracy' ? (
+                        <form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            commitTargetAccuracy();
+                          }}
+                          className="flex items-center gap-1"
+                        >
+                          <input
+                            type="number"
+                            min={1}
+                            max={100}
+                            value={targetInputVal}
+                            onChange={(e) => setTargetInputVal(e.target.value)}
+                            onBlur={() => commitTargetAccuracy()}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Escape') setEditingTargetType(null);
+                            }}
+                            autoFocus
+                            className="w-12 px-1 py-0.5 bg-white text-rose-900 border border-rose-300 rounded text-center text-xs font-bold outline-none focus:ring-1 focus:ring-rose-500"
+                          />
+                          <span className="text-slate-400 font-bold">%</span>
+                          <button
+                            type="submit"
+                            className="p-0.5 rounded text-rose-600 hover:text-rose-900 hover:bg-rose-100 cursor-pointer"
+                            title="Save target accuracy %"
+                          >
+                            <Check className="w-3 h-3" />
+                          </button>
+                        </form>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setEditingTargetType('accuracy');
+                            setTargetInputVal(String(currentAccTarget));
+                          }}
+                          className="hover:underline flex items-center gap-0.5 text-rose-700 font-bold cursor-pointer"
+                          title="Click to edit target accuracy % (out of 100%)"
+                        >
+                          <span>{currentAccTarget}%</span>
+                          <Edit3 className="w-2.5 h-2.5 text-rose-500 opacity-70 hover:opacity-100 ml-0.5" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* SVG Chart Canvas */}
+            <div className="relative w-full overflow-x-auto select-none pt-4 pb-2">
+              <div className="min-w-[760px] relative">
+                {(() => {
+                  const targetScaleMin = flowMetric === 'accuracy' ? 0 : (isSectionalScale ? 0 : 30);
+                  const targetScaleMax = flowMetric === 'accuracy' ? 100 : (isSectionalScale ? 50 : 200);
+                  const targetNorm = Math.max(0, Math.min(1, (currentTarget - targetScaleMin) / (targetScaleMax - targetScaleMin || 1)));
+                  const targetY = Math.round(250 - targetNorm * (250 - 50));
+
+                  return (
+                    <svg
+                      className="w-full h-72 overflow-visible cursor-crosshair"
+                      fill="none"
+                      viewBox="0 0 920 320"
+                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={(e) => {
+                        if (chartPoints.length === 0) return;
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        const clickSvgX = ((e.clientX - rect.left) / rect.width) * 920;
+                        let closestIdx = 0;
+                        let minDiff = Infinity;
+                        chartPoints.forEach((p, idx) => {
+                          const diff = Math.abs(p.x - clickSvgX);
+                          if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIdx = idx;
+                          }
+                        });
+                        setActiveNodeIndex(closestIdx);
+                      }}
+                    >
+                      <defs>
+                        <linearGradient id="scoreAreaGradient" x1="0" x2="0" y1="0" y2="1">
+                          <stop offset="0%" stopColor="#2563eb" stopOpacity="0.18"></stop>
+                          <stop offset="100%" stopColor="#2563eb" stopOpacity="0.0"></stop>
+                        </linearGradient>
+                      </defs>
+
+                      {/* Top Benchmark Gridline */}
+                      <line stroke="#e2e8f0" strokeDasharray="4 4" strokeWidth="1" x1="60" x2="900" y1="30" y2="30"></line>
+                      <text fill="#94a3b8" fontFamily="monospace" fontSize="11" textAnchor="end" x="50" y="34">
+                        {flowMetric === 'accuracy' ? '100%' : (isSectionalScale ? '50' : '200')}
+                      </text>
+
+                      {/* Dynamic Target Cutoff Line (Marks or Accuracy) */}
+                      <g className="transition-all duration-300">
+                        <line opacity="0.75" stroke="#e11d48" strokeDasharray="6 4" strokeWidth="1.2" x1="60" x2="900" y1={targetY} y2={targetY}></line>
+                        <text fill="#e11d48" fontFamily="monospace" fontSize="11" fontWeight="600" textAnchor="end" x="50" y={targetY + 4}>
+                          {currentTarget}{flowMetric === 'accuracy' ? '%' : ''}
+                        </text>
+                        <rect fill="#ffe4e6" height="20" opacity="0.95" rx="4" width={flowMetric === 'accuracy' ? 140 : 130} x={flowMetric === 'accuracy' ? 755 : 765} y={Math.max(10, targetY - 10)}></rect>
+                        <text fill="#be123c" fontSize="11" fontWeight="600" textAnchor="middle" x={flowMetric === 'accuracy' ? 825 : 830} y={Math.max(24, targetY + 4)}>
+                          Target Cutoff ({currentTarget}{flowMetric === 'accuracy' ? '%' : ''})
+                        </text>
+                      </g>
+
+                      {/* Safe Zone: for full mock score only */}
+                      {!isSectionalScale && flowMetric === 'score' && (
+                        <>
+                          <line opacity="0.6" stroke="#059669" strokeDasharray="4 4" strokeWidth="1" x1="60" x2="900" y1="144" y2="144"></line>
+                          <text fill="#059669" fontFamily="monospace" fontSize="11" fontWeight="600" textAnchor="end" x="50" y="148">120</text>
+                          <rect fill="#ecfdf5" height="20" opacity="0.9" rx="4" width="94" x="70" y="134"></rect>
+                          <text fill="#047857" fontSize="11" fontWeight="600" textAnchor="middle" x="117" y="148">Safe Zone (120)</text>
+                        </>
+                      )}
+
+                      {/* Baseline Cutoff */}
+                      <line opacity="0.5" stroke="#94a3b8" strokeDasharray="3 3" strokeWidth="1" x1="60" x2="900" y1="185" y2="185"></line>
+                      <text fill="#94a3b8" fontFamily="monospace" fontSize="11" textAnchor="end" x="50" y="189">
+                        {flowMetric === 'accuracy' ? '60%' : (isSectionalScale ? '25' : '95')}
+                      </text>
+                      <text fill="#94a3b8" fontSize="11" textAnchor="end" x="900" y="181">
+                        {flowMetric === 'accuracy' ? 'Average Accuracy (~70%)' : (isSectionalScale ? 'Subject Benchmark (25)' : 'Category Baseline (~95)')}
+                      </text>
+
+                      {/* Bottom Scale Line */}
+                      <line stroke="#e2e8f0" strokeWidth="1" x1="60" x2="900" y1="260" y2="260"></line>
+                      <text fill="#94a3b8" fontFamily="monospace" fontSize="11" textAnchor="end" x="50" y="264">
+                        {flowMetric === 'accuracy' ? '0%' : (isSectionalScale ? '0' : '30')}
+                      </text>
+
+                      {/* Area Path Under Curve */}
+                      {chartAreaPath && (
+                        <path d={chartAreaPath} fill="url(#scoreAreaGradient)"></path>
+                      )}
+
+                      {/* Main Curve - Fast CSS drop-shadow instead of SVG filter for 0 lag */}
+                      {chartCurvePath && (
+                        <path
+                          d={chartCurvePath}
+                          stroke="#2563eb"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="3.5"
+                          style={{ filter: 'drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25))' }}
+                        ></path>
+                      )}
+
+                      {/* Vertical Guides and Node Points */}
+                      {chartPoints.map((p, idx) => {
+                        const isSelected = activeNodeIndex === idx;
+                        return (
+                          <g
+                            key={p.report.id}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setActiveNodeIndex(idx);
+                            }}
+                            className="cursor-pointer group"
+                          >
+                            {/* Guide line */}
+                            <line
+                              stroke={isSelected ? '#2563eb' : '#e2e8f0'}
+                              strokeDasharray={isSelected ? '3 3' : '2 2'}
+                              strokeWidth={isSelected ? '1.5' : '1'}
+                              x1={p.x}
+                              x2={p.x}
+                              y1={p.y}
+                              y2="260"
+                              className="pointer-events-none"
+                            ></line>
+
+                            {/* Halo ring on active selection - completely stable, no jitter */}
+                            {isSelected && (
+                              <circle
+                                cx={p.x}
+                                cy={p.y}
+                                fill="#3b82f6"
+                                fillOpacity="0.18"
+                                r="10"
+                                className="pointer-events-none"
+                              ></circle>
+                            )}
+
+                            {/* Solid Data Node Point - NO CSS transforms, no hover shake */}
+                            <circle
+                              cx={p.x}
+                              cy={p.y}
+                              fill={p.isPeak ? '#2563eb' : isSelected ? '#1d4ed8' : '#ffffff'}
+                              r={isSelected ? 6 : p.isPeak ? 5.5 : 4.5}
+                              stroke={isSelected || p.isPeak ? '#ffffff' : '#2563eb'}
+                              strokeWidth={isSelected ? 2.5 : 2}
+                              className="pointer-events-none transition-colors duration-150 group-hover:stroke-blue-600"
+                            ></circle>
+
+                            {/* X-Axis Attempt Number (Clean 1, 2, 3...) */}
+                            <text
+                              fill={isSelected ? '#1d4ed8' : '#475569'}
+                              fontSize="11"
+                              fontWeight={isSelected || p.isPeak ? '700' : '600'}
+                              textAnchor="middle"
+                              x={p.x}
+                              y="285"
+                              className="pointer-events-none font-mono select-none"
+                            >
+                              {idx + 1}{p.isPeak ? '★' : ''}
+                            </text>
+
+                            {/* X-Axis Score Value */}
+                            <text
+                              fill={p.isPeak ? '#2563eb' : isSelected ? '#1d4ed8' : '#64748b'}
+                              fontFamily="monospace"
+                              fontSize="10"
+                              fontWeight={isSelected || p.isPeak ? '700' : '500'}
+                              textAnchor="middle"
+                              x={p.x}
+                              y="302"
+                              className="pointer-events-none select-none"
+                            >
+                              {p.val}
+                            </text>
+
+                            {/* Invisible wide hit circle positioned LAST to cleanly capture pointer events without shaking */}
+                            <circle
+                              cx={p.x}
+                              cy={p.y}
+                              r="20"
+                              fill="transparent"
+                              className="cursor-pointer"
+                            />
+                          </g>
+                        );
+                      })}
+                    </svg>
+                  );
+                })()}
+
+                {/* Interactive Tooltip Card for Selected / Active Node with Dismiss Cross (X) */}
+                {activeNodeIndex !== null && chartPoints[activeNodeIndex] && (() => {
+                  const selectedPoint = chartPoints[activeNodeIndex];
+                  const dateClean = new Date(selectedPoint.report.date).toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric'
+                  });
+                  const leftPercent = Math.max(16, Math.min(84, (selectedPoint.x / 920) * 100));
+
+                  return (
+                    <div
+                      style={{ left: `${leftPercent}%` }}
+                      className="absolute -top-3 -translate-x-1/2 w-76 p-4 rounded-xl bg-white shadow-xl border border-slate-200 pointer-events-auto z-20 transition-all animate-in fade-in zoom-in-95 duration-150"
+                    >
+                      <div className="flex items-start justify-between pb-2 border-b border-slate-100 gap-2">
+                        <div>
+                          <span className="font-mono text-[11px] text-slate-400">{dateClean}</span>
+                          <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                            <span className="truncate max-w-[140px]">{selectedPoint.shortTitle}</span>
+                            {selectedPoint.isPeak && <span className="text-emerald-600 text-xs font-semibold shrink-0">● Peak</span>}
+                          </h4>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="text-right">
+                            <span className="text-base font-extrabold text-blue-600">{selectedPoint.report.totalScore}</span>
+                            <span className="font-mono text-[11px] text-slate-400">/{selectedPoint.report.maxMarks}</span>
+                            <div className="text-[10px] font-mono text-emerald-600 font-semibold">{selectedPoint.report.overallAccuracy}% Acc</div>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setActiveNodeIndex(null);
+                            }}
+                            className="p-1 rounded-md text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer ml-1"
+                            title="Close mock details"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Subject breakdown in tooltip: handles both sectional and full mock */}
+                      {selectedPoint.report.type === 'sectional' ? (
+                        <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100 space-y-1.5 font-mono text-xs my-2">
+                          <div className="flex items-center justify-between">
+                            <span className="text-slate-500 font-medium font-sans">Section:</span>
+                            <span className="font-bold text-slate-900">{getSectionalSubject(selectedPoint.report)}</span>
+                          </div>
+                          <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-slate-200/70">
+                            <span className="text-emerald-600 font-semibold">{selectedPoint.report.totalCorrect} Correct</span>
+                            <span className="text-rose-500 font-semibold">{selectedPoint.report.totalWrong} Wrong</span>
+                            <span className="text-slate-400 font-medium">{selectedPoint.report.totalUnattempted} Skipped</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-2 gap-1.5 pt-2 text-xs font-mono">
+                          <div className="flex items-center justify-between bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                            <span className="text-slate-500 text-[11px]">Reasoning</span>
+                            <span className="font-bold text-slate-900 text-[11px]">
+                              {selectedPoint.report.sections?.reasoning?.score ?? 0} <span className="text-emerald-600 text-[10px] font-semibold">{selectedPoint.report.sections?.reasoning?.accuracy ?? 0}%</span>
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                            <span className="text-slate-500 text-[11px]">Quant</span>
+                            <span className="font-bold text-slate-900 text-[11px]">
+                              {selectedPoint.report.sections?.mathematics?.score ?? 0} <span className="text-blue-600 text-[10px] font-semibold">{selectedPoint.report.sections?.mathematics?.accuracy ?? 0}%</span>
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                            <span className="text-slate-500 text-[11px]">English</span>
+                            <span className="font-bold text-slate-900 text-[11px]">
+                              {selectedPoint.report.sections?.english?.score ?? 0} <span className="text-emerald-600 text-[10px] font-semibold">{selectedPoint.report.sections?.english?.accuracy ?? 0}%</span>
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                            <span className="text-slate-500 text-[11px]">GA / GK</span>
+                            <span className="font-bold text-slate-900 text-[11px]">
+                              {selectedPoint.report.sections?.generalAwareness?.score ?? 0} <span className="text-amber-600 text-[10px] font-semibold">{selectedPoint.report.sections?.generalAwareness?.accuracy ?? 0}%</span>
+                            </span>
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between gap-1.5">
+                        <button
+                          onClick={() => handleReviewMock(selectedPoint.report)}
+                          type="button"
+                          className="flex-1 py-1 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-center transition-colors cursor-pointer"
+                        >
+                          Review Attempt
+                        </button>
+                        <button
+                          onClick={() => openPracticeModal(selectedPoint.report, selectedPoint.report.type === 'sectional' ? getSectionalSubject(selectedPoint.report) : 'all')}
+                          type="button"
+                          className="flex-1 py-1 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg text-center transition-colors cursor-pointer"
+                        >
+                          Practice Errors
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+          </section>
+
+          {/* ─── Subject-Wise Velocity & Health (4 Cards) ─── */}
+          <section className="space-y-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-base font-bold text-slate-900">Subject-Wise Velocity &amp; Health</h3>
+                <p className="text-xs text-slate-500">Granular sectional trend lines isolating growth levers from persistent drags.</p>
+              </div>
+              <span className="text-xs font-mono text-slate-500 font-medium">
+                Target Avg: ≥{targetScoreSectionalMap[activeSubjectKey] ?? targetScoreSectionalMap.overall ?? 38}.0 / 50
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
+              {/* 1. Reasoning */}
+              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-mono">Reasoning</span>
+                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold font-mono border ${
+                      flowAnalytics.subjectStats.reasoning.delta >= 0
+                        ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                        : 'bg-rose-50 text-rose-700 border-rose-200'
+                    }`}>
+                      {flowAnalytics.subjectStats.reasoning.delta >= 0 ? `+${flowAnalytics.subjectStats.reasoning.delta}%` : `${flowAnalytics.subjectStats.reasoning.delta}%`}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-xl font-extrabold text-slate-900 leading-none">
+                      {flowAnalytics.subjectStats.reasoning.avgScore}
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">/ 50</span>
+                  </div>
+                  <p className="text-[11px] text-emerald-600 font-semibold mt-0.5 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>{flowAnalytics.subjectStats.reasoning.status}</span>
+                  </p>
+                </div>
+                {/* Micro Sparkline */}
+                <div className="py-1 mt-1">
+                  <svg className="w-full h-7 overflow-visible" fill="none" viewBox="0 0 160 28">
+                    <path d={flowAnalytics.subjectStats.reasoning.sparkline} stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                  <span>Acc: {flowAnalytics.subjectStats.reasoning.avgAcc}%</span>
+                  <span>Avg: {flowAnalytics.subjectStats.reasoning.avgScore}/50</span>
+                </div>
+              </div>
+
+              {/* 2. Quantitative */}
+              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-mono">Quantitative</span>
+                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold font-mono border ${
+                      flowAnalytics.subjectStats.mathematics.delta >= 0
+                        ? 'bg-blue-50 text-blue-700 border-blue-200'
+                        : 'bg-rose-50 text-rose-700 border-rose-200'
+                    }`}>
+                      {flowAnalytics.subjectStats.mathematics.delta >= 0 ? `+${flowAnalytics.subjectStats.mathematics.delta}%` : `${flowAnalytics.subjectStats.mathematics.delta}%`}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-xl font-extrabold text-slate-900 leading-none">
+                      {flowAnalytics.subjectStats.mathematics.avgScore}
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">/ 50</span>
+                  </div>
+                  <p className="text-[11px] text-blue-600 font-semibold mt-0.5 flex items-center gap-1">
+                    <Activity className="w-3 h-3" />
+                    <span>{flowAnalytics.subjectStats.mathematics.status}</span>
+                  </p>
+                </div>
+                {/* Micro Sparkline */}
+                <div className="py-1 mt-1">
+                  <svg className="w-full h-7 overflow-visible" fill="none" viewBox="0 0 160 28">
+                    <path d={flowAnalytics.subjectStats.mathematics.sparkline} stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                  <span>Acc: {flowAnalytics.subjectStats.mathematics.avgAcc}%</span>
+                  <span>Avg: {flowAnalytics.subjectStats.mathematics.avgScore}/50</span>
+                </div>
+              </div>
+
+              {/* 3. English */}
+              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-mono">English</span>
+                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold font-mono border ${
+                      flowAnalytics.subjectStats.english.delta >= 0
+                        ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                        : 'bg-rose-50 text-rose-700 border-rose-200'
+                    }`}>
+                      {flowAnalytics.subjectStats.english.delta >= 0 ? `+${flowAnalytics.subjectStats.english.delta}%` : `${flowAnalytics.subjectStats.english.delta}%`}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-xl font-extrabold text-slate-900 leading-none">
+                      {flowAnalytics.subjectStats.english.avgScore}
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">/ 50</span>
+                  </div>
+                  <p className="text-[11px] text-emerald-600 font-semibold mt-0.5 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>{flowAnalytics.subjectStats.english.status}</span>
+                  </p>
+                </div>
+                {/* Micro Sparkline */}
+                <div className="py-1 mt-1">
+                  <svg className="w-full h-7 overflow-visible" fill="none" viewBox="0 0 160 28">
+                    <path d={flowAnalytics.subjectStats.english.sparkline} stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                  <span>Acc: {flowAnalytics.subjectStats.english.avgAcc}%</span>
+                  <span>Avg: {flowAnalytics.subjectStats.english.avgScore}/50</span>
+                </div>
+              </div>
+
+              {/* 4. GA / GK */}
+              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-mono">GA / GK</span>
+                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold font-mono border ${
+                      flowAnalytics.subjectStats.generalAwareness.delta >= 0
+                        ? 'bg-amber-50 text-amber-700 border-amber-200'
+                        : 'bg-rose-50 text-rose-700 border-rose-200'
+                    }`}>
+                      {flowAnalytics.subjectStats.generalAwareness.delta >= 0 ? `+${flowAnalytics.subjectStats.generalAwareness.delta}%` : `${flowAnalytics.subjectStats.generalAwareness.delta}%`}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-xl font-extrabold text-slate-900 leading-none">
+                      {flowAnalytics.subjectStats.generalAwareness.avgScore}
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">/ 50</span>
+                  </div>
+                  <p className="text-[11px] text-amber-600 font-semibold mt-0.5 flex items-center gap-1">
+                    <AlertCircle className="w-3 h-3" />
+                    <span>{flowAnalytics.subjectStats.generalAwareness.status}</span>
+                  </p>
+                </div>
+                {/* Micro Sparkline */}
+                <div className="py-1 mt-1">
+                  <svg className="w-full h-7 overflow-visible" fill="none" viewBox="0 0 160 28">
+                    <path d={flowAnalytics.subjectStats.generalAwareness.sparkline} stroke="#d97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                  <span>Acc: {flowAnalytics.subjectStats.generalAwareness.avgAcc}%</span>
+                  <span>Avg: {flowAnalytics.subjectStats.generalAwareness.avgScore}/50</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── Bottom Navigation Strip ─── */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200/80 text-xs text-slate-500">
+            <button
+              onClick={() => setViewMode('table')}
+              type="button"
+              className="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-800 transition-colors cursor-pointer"
+            >
+              <ChevronLeft className="w-3.5 h-3.5" />
+              <span>Switch to Raw Attempts Table ({filteredReports.length} recorded mocks)</span>
+            </button>
+            <div className="flex items-center gap-3">
+              <span>
+                Last test synced: {latestReport ? new Date(latestReport.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'None'}
+              </span>
+              <span>•</span>
+              <span className="font-semibold text-slate-700">Minimalist Analytics Engine</span>
+            </div>
           </div>
         </div>
       ) : (
         <>
-          {/* ─── 3 HERO METRICS (Refined, Crisp & Compact) ─── */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
-            {/* 1. Latest / Total Score */}
-            <div className="bg-white rounded-lg px-3 py-1.5 border border-slate-200/80 shadow-xs">
-              <div className="flex items-center justify-between text-slate-400 mb-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
-                  {activeTab === 'sectional' && selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Latest Score` : 'Latest Score'}
-                </span>
-                <Trophy className="w-3 h-3 text-blue-600" />
-              </div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-base font-bold text-slate-900 leading-none">
-                  {latestReport ? latestReport.totalScore : 0}
-                </span>
-                <span className="text-[10px] font-medium text-slate-400">/ {aggregateStats.maxMarks}</span>
-              </div>
-              <p className="text-[9px] text-slate-400 mt-0.5 font-medium truncate">
-                {latestReport
-                  ? `${latestReport.totalCorrect} Correct • ${latestReport.totalWrong} Wrong • ${latestReport.totalUnattempted} Skipped`
-                  : 'No attempts'}
-              </p>
-            </div>
-
-            {/* 2. Overall Accuracy */}
-            <div className="bg-white rounded-lg px-3 py-1.5 border border-slate-200/80 shadow-xs">
-              <div className="flex items-center justify-between text-slate-400 mb-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
-                  {activeTab === 'sectional' && selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Accuracy` : 'Overall Accuracy'}
-                </span>
-                <Target className="w-3 h-3 text-emerald-600" />
-              </div>
-              <div className="flex items-baseline gap-1">
-                <span className={`text-base font-bold leading-none ${
-                  (latestReport?.overallAccuracy || 0) >= 85 ? 'text-emerald-600' :
-                  (latestReport?.overallAccuracy || 0) >= 70 ? 'text-amber-600' : 'text-rose-600'
-                }`}>
-                  {latestReport ? latestReport.overallAccuracy : 0}%
-                </span>
-                <span className="text-[9px] font-medium text-slate-400">
-                  (Avg: {aggregateStats.avgAccuracy}%)
-                </span>
-              </div>
-              <p className="text-[9px] text-slate-400 mt-0.5 font-medium truncate">
-                {(latestReport?.overallAccuracy || 0) >= 85 ? 'Target achieved (≥85% accuracy) ✅' : 'Aim for ≥85% accuracy to maximize rank'}
-              </p>
-            </div>
-
-            {/* 3. Best Score */}
-            <div className="bg-white rounded-lg px-3 py-1.5 border border-slate-200/80 shadow-xs">
-              <div className="flex items-center justify-between text-slate-400 mb-0.5">
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
-                  {activeTab === 'sectional' && selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Best Score` : 'Best Score'}
-                </span>
-                <TrendingUp className="w-3 h-3 text-purple-600" />
-              </div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-base font-bold text-slate-900 leading-none">{aggregateStats.bestScore}</span>
-                <span className="text-[10px] font-medium text-slate-400">/ {aggregateStats.maxMarks}</span>
-              </div>
-              <p className="text-[9px] text-slate-400 mt-0.5 font-medium truncate">
-                Across {aggregateStats.totalMocks} {activeTab === 'full' ? 'Full Mocks' : selectedSectionalSubject !== 'all' ? `${selectedSectionalSubject} Sectionals` : 'Sectional Mocks'} recorded
-              </p>
-            </div>
-          </div>
-
-          {/* ─── SECTIONAL MOCKS SEPARATED SUBJECT-WISE ─── */}
-          {activeTab === 'sectional' && selectedSectionalSubject === 'all' ? (
-            <div className="space-y-2.5">
-              <div className="flex items-center justify-between px-1">
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-slate-400" />
-                  <h3 className="text-xs font-bold text-slate-800">Sectional Tests (Separated by Subject)</h3>
-                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
-                    {filteredReports.length} Total
+          {/* ─── TOP STAT CARDS (Compact ~80px Standard) ─── */}
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-3" data-purpose="stat-metrics">
+            {/* 1. Latest Score Card */}
+            <article className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-100">
+                    {activeTab === 'sectional' ? `${selectedSectionalSubject} Latest` : 'Latest Score'}
                   </span>
-                </div>
-                {filteredReports.length > 0 && (
-                  <button
-                    onClick={handleClearAll}
-                    className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 cursor-pointer"
-                  >
-                    <Trash2 className="w-3 h-3" />
-                    Clear All Sectionals
-                  </button>
-                )}
-              </div>
-
-              {groupedSectionalReports && groupedSectionalReports.map((group) => {
-                const Icon = group.icon;
-                return (
-                  <div key={group.key} className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
-                    {/* Subject Section Header */}
-                    <div className={`px-3.5 py-2 border-b ${group.borderColor} ${group.bgColor} flex flex-wrap items-center justify-between gap-2`}>
-                      <div className="flex items-center gap-2">
-                        <div className={`w-6 h-6 rounded-md flex items-center justify-center ${group.badgeColor}`}>
-                          <Icon className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-1.5">
-                            <h3 className={`text-xs font-bold ${group.textColor}`}>
-                              {group.label}
-                            </h3>
-                            <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-white border border-slate-200/80 text-slate-600">
-                              {group.reports.length} Tests
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-3 text-[10px] text-slate-600 font-medium">
-                        <span>Avg: <strong className="text-slate-900">{group.avgScore}/50</strong> ({group.avgAccuracy}%)</span>
-                        <span className="text-slate-300">•</span>
-                        <span>Best: <strong className="text-slate-900">{group.bestScore}/50</strong></span>
-                        <button
-                          onClick={() => setSelectedSectionalSubject(group.key)}
-                          className={`ml-1 text-[11px] font-bold px-2 py-0.5 rounded-md hover:bg-white/80 border border-transparent hover:border-slate-200 transition-all cursor-pointer ${group.textColor}`}
-                        >
-                          Focus View →
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Sectional Attempt Rows */}
-                    <div className="divide-y divide-slate-100">
-                      {group.reports.map(r => renderSectionalRow(r, false))}
-                    </div>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 leading-none">
+                      {latestReport ? latestReport.totalScore : 0}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-400 font-mono">/ {aggregateStats.maxMarks}</span>
                   </div>
-                );
-              })}
-            </div>
-          ) : activeTab === 'sectional' ? (
-            /* ─── SINGLE SUBJECT SECTIONAL LIST ─── */
-            <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
-              <div className="px-3.5 py-2 border-b border-slate-100 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-3.5 h-3.5 text-slate-400" />
-                  <h3 className="text-xs font-bold text-slate-800">
+                </div>
+                <p className="mt-1 text-[10px] text-slate-400 truncate leading-tight font-mono">
+                  {latestReport ? `${latestReport.totalCorrect} Correct • ${latestReport.totalWrong} Wrong • ${latestReport.totalUnattempted} Skipped` : 'No mock recorded yet'}
+                </p>
+              </div>
+              <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">Status: {latestReport ? 'Recorded' : 'Awaiting'}</span>
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700">
+                  LATEST TEST
+                </span>
+              </div>
+            </article>
+
+            {/* 2. Overall Accuracy Card */}
+            <article className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1">
+                  <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold border ${
+                    (latestReport?.overallAccuracy || 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-100' :
+                    (latestReport?.overallAccuracy || 0) >= 65 ? 'bg-amber-50 text-amber-700 border-amber-100' : 'bg-rose-50 text-rose-700 border-rose-100'
+                  }`}>
+                    {activeTab === 'sectional' ? `${selectedSectionalSubject} Accuracy` : 'Overall Accuracy'}
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span className={`text-base sm:text-lg font-black tracking-tight leading-none ${
+                      (latestReport?.overallAccuracy || 0) >= 80 ? 'text-emerald-600' :
+                      (latestReport?.overallAccuracy || 0) >= 65 ? 'text-amber-600' : 'text-rose-600'
+                    }`}>
+                      {latestReport ? latestReport.overallAccuracy : 0}%
+                    </span>
+                    <span className="text-[10px] font-semibold text-slate-400 font-mono">(Avg: {aggregateStats.avgAccuracy}%)</span>
+                  </div>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden mt-1.5">
+                  <div
+                    className={`h-full rounded-full transition-all duration-500 ${
+                      (latestReport?.overallAccuracy || 0) >= 80 ? 'bg-emerald-500' :
+                      (latestReport?.overallAccuracy || 0) >= 65 ? 'bg-amber-500' : 'bg-rose-500'
+                    }`}
+                    style={{ width: `${Math.min(100, Math.max(5, latestReport?.overallAccuracy || aggregateStats.avgAccuracy))}%` }}
+                  />
+                </div>
+              </div>
+              <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">Target: ≥85%</span>
+                <span className={`font-bold ${
+                  (latestReport?.overallAccuracy || 0) >= 80 ? 'text-emerald-600' :
+                  (latestReport?.overallAccuracy || 0) >= 65 ? 'text-amber-600' : 'text-rose-600'
+                }`}>
+                  {(latestReport?.overallAccuracy || 0) >= 80 ? 'Elite Accuracy' : (latestReport?.overallAccuracy || 0) >= 65 ? 'Good Progress' : 'Needs Review'}
+                </span>
+              </div>
+            </article>
+
+            {/* 3. Best Score Card */}
+            <article className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-100">
+                    {activeTab === 'sectional' ? `${selectedSectionalSubject} Best` : 'Best Score'}
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-base sm:text-lg font-black tracking-tight text-purple-700 leading-none">
+                      {aggregateStats.bestScore}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-400 font-mono">/ {aggregateStats.maxMarks}</span>
+                  </div>
+                </div>
+                <p className="mt-1 text-[10px] text-slate-400 truncate leading-tight">
+                  Across {aggregateStats.totalMocks} {activeTab === 'full' ? 'Full Mocks' : `${selectedSectionalSubject} Sectionals`}
+                </p>
+              </div>
+              <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">All-time record</span>
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700">
+                  RECORD
+                </span>
+              </div>
+            </article>
+          </section>
+
+          {/* ─── SECTIONAL MOCKS LIST (BY SELECTED SUBJECT) ─── */}
+          {activeTab === 'sectional' ? (
+            /* ─── SINGLE SUBJECT SECTIONAL TABLE ─── */
+            <div className="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden" data-purpose="sectional-scores-table">
+              {/* Section Header */}
+              <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <Clock className="w-4 h-4 text-slate-400" />
+                  <h2 className="text-sm font-bold text-slate-900 tracking-tight">
                     {selectedSectionalSubject} Sectional Attempts
-                  </h3>
-                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
+                  </h2>
+                  <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-slate-100 text-slate-600 border border-slate-200">
                     {filteredReports.length}
                   </span>
                 </div>
@@ -1916,227 +2783,425 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 {filteredReports.length > 0 && (
                   <button
                     onClick={handleClearAll}
-                    className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 cursor-pointer"
+                    className="text-xs font-semibold text-rose-600 hover:text-rose-700 flex items-center gap-1 transition-colors cursor-pointer"
+                    type="button"
                   >
-                    <Trash2 className="w-3 h-3" />
+                    <Trash2 className="w-3.5 h-3.5" />
                     Clear {selectedSectionalSubject} Mocks
                   </button>
                 )}
               </div>
 
-              <div className="divide-y divide-slate-100">
-                {filteredReports.map(r => renderSectionalRow(r, true))}
+              {/* Responsive Aligned Sectional Table */}
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse min-w-[880px]">
+                  <thead>
+                    <tr className="bg-slate-50/80 border-b border-slate-200 text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
+                      <th className="py-3.5 px-4 font-semibold align-middle w-[34%]" scope="col">Sectional Attempt</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[22%]" scope="col">Questions Breakdown</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[12%]" scope="col">Score</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[12%]" scope="col">Accuracy</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[20%]" scope="col">Practice &amp; Review</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-sm">
+                    {filteredReports.map((report) => {
+                      const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
+                        day: '2-digit',
+                        month: 'short',
+                        year: 'numeric'
+                      });
+                      const { shortTitle, platform, subtitle } = parseMockDetails(report);
+                      const isOlive = platform.toLowerCase() === 'oliveboard';
+                      const sub = getSectionalSubject(report);
+                      const subMeta = {
+                        Mathematics: { label: 'Quantitative (Math)', icon: Calculator, color: 'text-blue-700', bg: 'bg-blue-50 border-blue-200' },
+                        Reasoning: { label: 'Reasoning', icon: Brain, color: 'text-indigo-700', bg: 'bg-indigo-50 border-indigo-200' },
+                        English: { label: 'English', icon: BookOpen, color: 'text-emerald-700', bg: 'bg-emerald-50 border-emerald-200' },
+                        'General Awareness': { label: 'GA / GK', icon: Compass, color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200' }
+                      }[sub] || { label: sub, icon: Target, color: 'text-slate-700', bg: 'bg-slate-50 border-slate-200' };
+                      const SubIcon = subMeta.icon;
+
+                      return (
+                        <tr key={report.id} className="hover:bg-slate-50/70 transition-colors">
+                          {/* 1. Sectional Attempt details */}
+                          <td className="py-3.5 px-4 align-middle">
+                            <div className="flex items-center gap-3">
+                              <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border ${subMeta.bg}`}>
+                                <SubIcon className={`w-4 h-4 ${subMeta.color}`} />
+                              </div>
+                              <div className="min-w-0">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="font-bold text-slate-900 text-sm">{shortTitle}</span>
+                                  <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded tracking-wide uppercase border shrink-0 ${
+                                    isOlive
+                                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                      : 'bg-blue-50 text-blue-700 border-blue-200'
+                                  }`}>
+                                    {platform}
+                                  </span>
+                                  <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded border shrink-0 ${subMeta.bg} ${subMeta.color}`}>
+                                    {subMeta.label}
+                                  </span>
+                                </div>
+                                <div className="text-xs text-slate-400 mt-0.5">{subtitle} • {dateClean}</div>
+                              </div>
+                            </div>
+                          </td>
+
+                          {/* 2. Questions Breakdown */}
+                          <td className="py-3.5 px-4 text-center align-middle">
+                            <div className="inline-flex items-center gap-1.5 text-xs font-semibold">
+                              <span className="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 whitespace-nowrap">
+                                {report.totalCorrect} Correct
+                              </span>
+                              <span className="px-2 py-0.5 rounded-md bg-rose-50 text-rose-700 border border-rose-200 whitespace-nowrap">
+                                {report.totalWrong} Wrong
+                              </span>
+                              <span className="px-2 py-0.5 rounded-md bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap">
+                                {report.totalUnattempted} Skipped
+                              </span>
+                            </div>
+                          </td>
+
+                          {/* 3. Score */}
+                          <td className="py-3.5 px-4 text-center align-middle">
+                            <div className="font-extrabold text-slate-900 text-base">
+                              {report.totalScore} <span className="text-xs font-normal text-slate-400">/{report.maxMarks || 50}</span>
+                            </div>
+                          </td>
+
+                          {/* 4. Accuracy */}
+                          <td className="py-3.5 px-4 text-center align-middle">
+                            <span className={`inline-block px-2.5 py-1 text-xs font-bold rounded-full border ${
+                              report.overallAccuracy >= 80
+                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                : report.overallAccuracy >= 65
+                                ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                : 'bg-rose-50 text-rose-700 border-rose-200'
+                            }`}>
+                              {report.overallAccuracy}%
+                            </span>
+                          </td>
+
+                          {/* 5. Practice & Review Actions */}
+                          <td className="py-3.5 px-4 text-center align-middle whitespace-nowrap">
+                            <div className="inline-flex items-center gap-1.5 justify-center">
+                              <button
+                                onClick={() => handleReviewMock(report)}
+                                disabled={reviewingId === report.id}
+                                className="px-2.5 py-1 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg inline-flex items-center gap-1 transition-colors cursor-pointer disabled:opacity-50 shrink-0 whitespace-nowrap"
+                                title="Review all questions, solutions & root causes"
+                                type="button"
+                              >
+                                {reviewingId === report.id ? (
+                                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Eye className="w-3.5 h-3.5" />
+                                )}
+                                <span>Review</span>
+                              </button>
+
+                              <button
+                                onClick={() => openPracticeModal(report, sub)}
+                                disabled={practicingId === report.id}
+                                className="px-2.5 py-1 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg inline-flex items-center gap-1 transition-colors cursor-pointer disabled:opacity-50 shrink-0 whitespace-nowrap"
+                                title="Practice mistakes from this sectional mock"
+                                type="button"
+                              >
+                                {practicingId === report.id ? (
+                                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Play className="w-3 h-3 fill-current" />
+                                )}
+                                <span>Practice</span>
+                              </button>
+
+                              <button
+                                onClick={() => handleAskAiMock(report, sub)}
+                                disabled={askingAiId === report.id}
+                                className="px-2.5 py-1 text-xs font-semibold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-lg inline-flex items-center gap-1 transition-colors cursor-pointer disabled:opacity-50 shrink-0 whitespace-nowrap"
+                                title="Ask Tommy AI about this sectional mock's mistakes"
+                                type="button"
+                              >
+                                {askingAiId === report.id ? (
+                                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+                                )}
+                                <span>Ask AI</span>
+                              </button>
+
+                              <button
+                                onClick={() => handleDeleteMock(report.id)}
+                                className="p-1 text-slate-300 hover:text-rose-500 rounded transition-colors cursor-pointer shrink-0"
+                                title="Delete this record"
+                                type="button"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Table Footer */}
+              <div className="px-5 py-3 border-t border-slate-100 text-center bg-slate-50/50">
+                <span className="text-xs font-medium text-slate-500">
+                  Showing {filteredReports.length} recorded {selectedSectionalSubject} sectional {filteredReports.length === 1 ? 'attempt' : 'attempts'}
+                </span>
               </div>
             </div>
           ) : (
-            /* ─── FULL MOCKS 4-COLUMN LIST ─── */
-            <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
-              {/* Header Bar */}
-              <div className="px-3.5 py-2 border-b border-slate-100 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-3.5 h-3.5 text-slate-400" />
-                  <h3 className="text-xs font-bold text-slate-800">
-                    Full Mock Attempts
-                  </h3>
-                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600">
+            /* ─── FULL MOCK ATTEMPTS (Minimalist Mock Score Dashboard Stitch Design) ─── */
+            <section className="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden" data-purpose="mock-scores-table">
+              {/* Section Header */}
+              <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <Clock className="w-4 h-4 text-slate-400" />
+                  <h2 className="text-sm font-bold text-slate-900 tracking-tight">Full Mock Attempts</h2>
+                  <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-slate-100 text-slate-600 border border-slate-200">
                     {filteredReports.length}
                   </span>
                 </div>
-
                 {filteredReports.length > 0 && (
                   <button
                     onClick={handleClearAll}
-                    className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 cursor-pointer"
+                    className="text-xs font-semibold text-rose-600 hover:text-rose-700 flex items-center gap-1 transition-colors cursor-pointer"
+                    type="button"
                   >
-                    <Trash2 className="w-3 h-3" />
+                    <Trash2 className="w-3.5 h-3.5" />
                     Clear All
                   </button>
                 )}
               </div>
 
-              {/* Clean Fixed Header Row Above Mocks */}
-              <div className="hidden xl:flex items-center border-b border-slate-200/90 bg-slate-50 divide-x divide-slate-200/90 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                <div className="w-[245px] 2xl:w-[265px] shrink-0 px-3 py-1.5">
-                  Mock Attempt
-                </div>
-                <div className="flex-1 grid grid-cols-4 divide-x divide-slate-200/90 text-center">
-                  <div className="py-1.5 text-indigo-700 font-semibold">Reasoning</div>
-                  <div className="py-1.5 text-amber-700 font-semibold">GA / GK</div>
-                  <div className="py-1.5 text-blue-700 font-semibold">Quantitative</div>
-                  <div className="py-1.5 text-emerald-700 font-semibold">English</div>
-                </div>
-                <div className="w-[95px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
-                  Score
-                </div>
-                <div className="w-[305px] shrink-0 px-2 py-1.5 text-center text-slate-700 font-semibold">
-                  Practice &amp; Review
-                </div>
-              </div>
+              {/* Responsive Minimalist Table */}
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse min-w-[960px]">
+                  <thead>
+                    <tr className="bg-slate-50/80 border-b border-slate-200 text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
+                      <th className="py-3.5 px-4 font-semibold align-middle w-[26%]" scope="col">Mock Attempt</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-blue-700 align-middle w-[11%]" scope="col">Reasoning</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-amber-700 align-middle w-[11%]" scope="col">GA / GK</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-indigo-700 align-middle w-[11%]" scope="col">Quantitative</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-teal-700 align-middle w-[11%]" scope="col">English</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[12%]" scope="col">Score</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[18%]" scope="col">Practice &amp; Review</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-sm">
+                    {filteredReports.map((report) => {
+                      const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
+                        day: '2-digit',
+                        month: 'short',
+                        year: 'numeric'
+                      });
+                      const { shortTitle, platform, subtitle } = parseMockDetails(report);
+                      const isOlive = platform.toLowerCase() === 'oliveboard';
 
-              {/* List Rows */}
-              <div className="divide-y divide-slate-200/80">
-                {filteredReports.map((report) => {
-                  const dateClean = new Date(report.date).toLocaleDateString('en-GB', {
-                    day: '2-digit',
-                    month: 'short',
-                    year: 'numeric'
-                  });
-                  const { shortTitle, platform, subtitle } = parseMockDetails(report);
+                      const reasoningData = report.sections?.reasoning;
+                      const gaData = report.sections?.generalAwareness;
+                      const quantData = report.sections?.mathematics;
+                      const englishData = report.sections?.english;
 
-                  return (
-                    <div
-                      key={report.id}
-                      className="flex flex-col xl:flex-row items-stretch divide-y xl:divide-y-0 xl:divide-x divide-slate-200/90 hover:bg-slate-50/40 transition-colors"
-                    >
-                      {/* 1. Left: Mock Details & Stats */}
-                      <div className="w-full xl:w-[245px] 2xl:w-[265px] shrink-0 px-3 py-2 bg-slate-50/20 flex flex-col justify-center">
-                        {/* Line 1: Short Title + Platform Badge */}
-                        <div className="flex items-center gap-1.5 min-w-0">
-                          <span className="text-xs font-black text-slate-900 truncate" title={report.title}>
-                            {shortTitle}
-                          </span>
-                          <span className={`text-[8.5px] font-bold px-1.5 py-0.2 rounded uppercase tracking-wider shrink-0 border ${
-                            platform.toLowerCase() === 'oliveboard'
-                              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                              : 'bg-blue-50 text-blue-700 border-blue-200'
-                          }`}>
-                            {platform}
-                          </span>
-                        </div>
-
-                        {/* Line 2: Subtitle • Date */}
-                        <div className="text-[10px] text-slate-400 mt-0.5 flex items-center gap-1 truncate font-medium">
-                          <span>{subtitle}</span>
-                          <span>•</span>
-                          <span>{dateClean}</span>
-                        </div>
-
-                        {/* Line 3: 70c • 16w • 14s */}
-                        <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1 flex-wrap">
-                          <span className="text-emerald-600 font-bold">{report.totalCorrect}c</span>
-                          <span className="text-slate-300">•</span>
-                          <span className="text-rose-500 font-bold">{report.totalWrong}w</span>
-                          <span className="text-slate-300">•</span>
-                          <span className="text-slate-400 font-bold">{report.totalUnattempted}s</span>
-                        </div>
-                      </div>
-
-                      {/* 2. Middle: Four Subjects */}
-                      <div className="flex-1 grid grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/90">
-                        {[
-                          { key: 'reasoning', label: 'Reasoning', color: 'text-indigo-700', bg: 'bg-indigo-50/15 hover:bg-indigo-50/40' },
-                          { key: 'generalAwareness', label: 'GA / GK', color: 'text-amber-700', bg: 'bg-amber-50/15 hover:bg-amber-50/40' },
-                          { key: 'mathematics', label: 'Quantitative', color: 'text-blue-700', bg: 'bg-blue-50/15 hover:bg-blue-50/40' },
-                          { key: 'english', label: 'English', color: 'text-emerald-700', bg: 'bg-emerald-50/15 hover:bg-emerald-50/40' },
-                        ].map((sub) => {
-                          const sData = report.sections?.[sub.key as keyof typeof report.sections];
-                          if (!sData) return null;
-                          const score = sData ? sData.score : 0;
-                          const acc = sData ? sData.accuracy : 0;
-                          const mistakeCount = (sData?.wrong || 0) + (sData?.unattempted || 0);
-
-                          return (
-                            <div
-                              key={sub.key}
-                              onClick={() => openPracticeModal(report, sub.label)}
-                              className={`px-2.5 py-1.5 flex items-center justify-between gap-1.5 transition-all cursor-pointer hover:ring-1 hover:ring-indigo-400/60 group ${sub.bg}`}
-                              title={`Click to practice ${sub.label} mistakes (${mistakeCount} total: ${sData?.wrong || 0} wrong, ${sData?.unattempted || 0} skipped)`}
-                            >
-                              <div>
-                                <span className={`text-[10px] font-bold ${sub.color} block xl:hidden leading-tight`}>
-                                  {sub.label}
-                                </span>
-                                <div className="flex items-baseline gap-0.5">
-                                  <span className="text-xs font-bold text-slate-900 leading-none">{score}</span>
-                                  <span className="text-[10px] text-slate-400">/50</span>
-                                </div>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
-                                  acc >= 85 ? 'bg-emerald-100 text-emerald-800' :
-                                  acc >= 70 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
-                                }`}>
-                                  {acc}%
-                                </span>
-                              </div>
+                      return (
+                        <tr key={report.id} className="hover:bg-slate-50/70 transition-colors">
+                          {/* 1. Mock Attempt details */}
+                          <td className="py-3.5 px-4 align-middle">
+                            <div className="flex items-center gap-2">
+                              <span className="font-bold text-slate-900 text-sm">{shortTitle}</span>
+                              <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded tracking-wide uppercase border shrink-0 ${
+                                isOlive
+                                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                  : 'bg-blue-50 text-blue-700 border-blue-200'
+                              }`}>
+                                {platform}
+                              </span>
                             </div>
-                          );
-                        })}
-                      </div>
+                            <div className="text-xs text-slate-400 mt-0.5">{subtitle} • {dateClean}</div>
+                            <div className="text-[11px] font-medium text-slate-500 mt-1 flex items-center gap-1.5">
+                              <span className="text-emerald-600 font-semibold">{report.totalCorrect}c</span>
+                              <span className="text-slate-300">•</span>
+                              <span className="text-rose-500 font-semibold">{report.totalWrong}w</span>
+                              <span className="text-slate-300">•</span>
+                              <span className="text-slate-400">{report.totalUnattempted}s</span>
+                            </div>
+                          </td>
 
-                      {/* 3. Total Score Column */}
-                      <div className="w-full xl:w-[95px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex xl:flex-col justify-between xl:justify-center items-center xl:items-start">
-                        <div className="flex items-baseline gap-0.5 whitespace-nowrap">
-                          <span className="text-xs font-bold text-slate-900 leading-none">
-                            {report.totalScore}
-                          </span>
-                          <span className="text-[10px] text-slate-400">/{report.maxMarks}</span>
-                        </div>
-                        <span className={`text-[10px] font-semibold mt-0.5 ${
-                          report.overallAccuracy >= 85 ? 'text-emerald-600' :
-                          report.overallAccuracy >= 70 ? 'text-amber-600' : 'text-rose-600'
-                        }`}>
-                          {report.overallAccuracy}% Acc
-                        </span>
-                      </div>
+                          {/* 2. Reasoning */}
+                          <td className="py-3.5 px-3 text-center align-middle">
+                            <button
+                              onClick={() => openPracticeModal(report, 'Reasoning')}
+                              className="w-full text-center group cursor-pointer p-1.5 rounded-lg hover:bg-slate-100/70 transition-colors"
+                              title={`Click to practice Reasoning mistakes (${(reasoningData?.wrong || 0) + (reasoningData?.unattempted || 0)} total)`}
+                              type="button"
+                            >
+                              <div className="font-bold text-slate-900 text-sm">
+                                {reasoningData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                              </div>
+                              <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
+                                (reasoningData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                (reasoningData?.accuracy ?? 0) >= 65 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                'bg-rose-50 text-rose-700 border-rose-200'
+                              }`}>
+                                {reasoningData?.accuracy ?? 0}%
+                              </span>
+                            </button>
+                          </td>
 
-                      {/* 4. Action Column */}
-                      <div className="w-full xl:w-[305px] shrink-0 px-2.5 py-1.5 bg-slate-50/20 flex items-center justify-end gap-1.5">
-                        <button
-                          onClick={() => handleReviewMock(report)}
-                          disabled={reviewingId === report.id}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white border border-emerald-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-                          title="Review all questions, view solutions & classify root causes (RCA)"
-                        >
-                          {reviewingId === report.id ? (
-                            <Loader2 className="w-3 h-3 animate-spin" />
-                          ) : (
-                            <Eye className="w-3 h-3" />
-                          )}
-                          <span>Review</span>
-                        </button>
+                          {/* 3. GA / GK */}
+                          <td className="py-3.5 px-3 text-center align-middle">
+                            <button
+                              onClick={() => openPracticeModal(report, 'General Awareness')}
+                              className="w-full text-center group cursor-pointer p-1.5 rounded-lg hover:bg-slate-100/70 transition-colors"
+                              title={`Click to practice GA/GK mistakes (${(gaData?.wrong || 0) + (gaData?.unattempted || 0)} total)`}
+                              type="button"
+                            >
+                              <div className="font-bold text-slate-900 text-sm">
+                                {gaData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                              </div>
+                              <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
+                                (gaData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                (gaData?.accuracy ?? 0) >= 65 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                'bg-rose-50 text-rose-700 border-rose-200'
+                              }`}>
+                                {gaData?.accuracy ?? 0}%
+                              </span>
+                            </button>
+                          </td>
 
-                        <button
-                          onClick={() => openPracticeModal(report, 'all')}
-                          disabled={practicingId === report.id}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-                          title="Practice mistakes section-wise (slow, incorrect, unattempted)"
-                        >
-                          {practicingId === report.id ? (
-                            <Loader2 className="w-3 h-3 animate-spin" />
-                          ) : (
-                            <Play className="w-2.5 h-2.5 fill-current" />
-                          )}
-                          <span>Practice Mock</span>
-                        </button>
+                          {/* 4. Quantitative */}
+                          <td className="py-3.5 px-3 text-center align-middle">
+                            <button
+                              onClick={() => openPracticeModal(report, 'Mathematics')}
+                              className="w-full text-center group cursor-pointer p-1.5 rounded-lg hover:bg-slate-100/70 transition-colors"
+                              title={`Click to practice Quantitative mistakes (${(quantData?.wrong || 0) + (quantData?.unattempted || 0)} total)`}
+                              type="button"
+                            >
+                              <div className="font-bold text-slate-900 text-sm">
+                                {quantData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                              </div>
+                              <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
+                                (quantData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                (quantData?.accuracy ?? 0) >= 65 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                'bg-rose-50 text-rose-700 border-rose-200'
+                              }`}>
+                                {quantData?.accuracy ?? 0}%
+                              </span>
+                            </button>
+                          </td>
 
-                        <button
-                          onClick={() => handleAskAiMock(report)}
-                          disabled={askingAiId === report.id}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-violet-700 bg-violet-50 hover:bg-violet-600 hover:text-white border border-violet-200/90 rounded-lg shadow-2xs transition-all disabled:opacity-50 whitespace-nowrap cursor-pointer active:scale-95"
-                          title="Ask Tommy AI to analyze this mock's mistakes and score"
-                        >
-                          {askingAiId === report.id ? (
-                            <Loader2 className="w-3 h-3 animate-spin" />
-                          ) : (
-                            <Sparkles className="w-3 h-3 text-violet-500 fill-violet-500/20" />
-                          )}
-                          <span>Ask AI</span>
-                        </button>
+                          {/* 5. English */}
+                          <td className="py-3.5 px-3 text-center align-middle">
+                            <button
+                              onClick={() => openPracticeModal(report, 'English')}
+                              className="w-full text-center group cursor-pointer p-1.5 rounded-lg hover:bg-slate-100/70 transition-colors"
+                              title={`Click to practice English mistakes (${(englishData?.wrong || 0) + (englishData?.unattempted || 0)} total)`}
+                              type="button"
+                            >
+                              <div className="font-bold text-slate-900 text-sm">
+                                {englishData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                              </div>
+                              <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
+                                (englishData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                (englishData?.accuracy ?? 0) >= 65 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                'bg-rose-50 text-rose-700 border-rose-200'
+                              }`}>
+                                {englishData?.accuracy ?? 0}%
+                              </span>
+                            </button>
+                          </td>
 
-                        <button
-                          onClick={() => handleDeleteMock(report.id)}
-                          className="p-1 rounded-md text-slate-300 hover:text-rose-600 hover:bg-rose-50 transition-colors shrink-0 cursor-pointer"
-                          title="Delete this record"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
+                          {/* 6. Score */}
+                          <td className="py-3.5 px-4 text-center align-middle">
+                            <div className="font-extrabold text-slate-900 text-base">
+                              {report.totalScore} <span className="text-xs font-normal text-slate-400">/{report.maxMarks}</span>
+                            </div>
+                            <div className={`text-[11px] font-semibold mt-0.5 ${
+                              report.overallAccuracy >= 80 ? 'text-emerald-600' :
+                              report.overallAccuracy >= 65 ? 'text-amber-600' : 'text-rose-600'
+                            }`}>
+                              {report.overallAccuracy}% Acc
+                            </div>
+                          </td>
+
+                          {/* 7. Actions (Review, Practice, Ask AI, Delete) */}
+                          <td className="py-3.5 px-4 text-center align-middle whitespace-nowrap">
+                            <div className="inline-flex items-center gap-1.5 justify-center">
+                              <button
+                                onClick={() => handleReviewMock(report)}
+                                disabled={reviewingId === report.id}
+                                className="px-2.5 py-1 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg inline-flex items-center gap-1 transition-colors cursor-pointer disabled:opacity-50 shrink-0 whitespace-nowrap"
+                                title="Review all questions, view solutions & root cause analysis"
+                                type="button"
+                              >
+                                {reviewingId === report.id ? (
+                                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Eye className="w-3.5 h-3.5" />
+                                )}
+                                <span>Review</span>
+                              </button>
+
+                              <button
+                                onClick={() => openPracticeModal(report, 'all')}
+                                disabled={practicingId === report.id}
+                                className="px-2.5 py-1 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg inline-flex items-center gap-1 transition-colors cursor-pointer disabled:opacity-50 shrink-0 whitespace-nowrap"
+                                title="Practice mistakes from this mock test"
+                                type="button"
+                              >
+                                {practicingId === report.id ? (
+                                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Play className="w-3 h-3 fill-current" />
+                                )}
+                                <span>Practice</span>
+                              </button>
+
+                              <button
+                                onClick={() => handleAskAiMock(report)}
+                                disabled={askingAiId === report.id}
+                                className="px-2.5 py-1 text-xs font-semibold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-lg inline-flex items-center gap-1 transition-colors cursor-pointer disabled:opacity-50 shrink-0 whitespace-nowrap"
+                                title="Ask Tommy AI to analyze this mock's mistakes and score"
+                                type="button"
+                              >
+                                {askingAiId === report.id ? (
+                                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+                                )}
+                                <span>Ask AI</span>
+                              </button>
+
+                              <button
+                                onClick={() => handleDeleteMock(report.id)}
+                                className="p-1 text-slate-300 hover:text-rose-500 rounded transition-colors cursor-pointer shrink-0"
+                                title="Delete this record"
+                                type="button"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               </div>
-            </div>
+
+              {/* Table Footer */}
+              <div className="px-5 py-3 border-t border-slate-100 text-center bg-slate-50/50">
+                <span className="text-xs font-medium text-slate-500">
+                  Showing {filteredReports.length} recorded mock {filteredReports.length === 1 ? 'attempt' : 'attempts'}
+                </span>
+              </div>
+            </section>
           )}
         </>
       )}

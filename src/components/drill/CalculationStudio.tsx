@@ -18,6 +18,7 @@ import {
   AlertCircle,
   Repeat,
   Trophy,
+  ChevronLeft,
 } from 'lucide-react';
 import {
   CALC_SECTIONS,
@@ -498,37 +499,49 @@ export const CalculationStudio: React.FC<Props> = ({
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-40 bg-slate-900 text-slate-100 flex flex-col overflow-hidden select-none font-sans"
+      className="fixed inset-0 z-40 bg-slate-50 text-slate-900 flex flex-col overflow-hidden select-none font-sans"
     >
       {/* Header Bar */}
-      <header className="flex items-center justify-between px-4 sm:px-6 py-3 bg-slate-950/80 border-b border-slate-800/80 backdrop-blur-md">
-        {/* Left: Branding & Mode Switcher */}
+      <header className="flex items-center justify-between px-4 sm:px-6 py-3 bg-white/95 border-b border-slate-200/90 backdrop-blur-md shadow-2xs">
+        {/* Left: Back Button, Branding & Mode Switcher */}
         <div className="flex items-center space-x-3 sm:space-x-4">
+          {onClose && (
+            <button
+              onClick={onClose}
+              type="button"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-50 bg-white transition text-xs font-semibold cursor-pointer shadow-2xs"
+              title="Back to Drill Hub"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>Back</span>
+            </button>
+          )}
+
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-black text-white shadow-md shadow-blue-500/20">
+            <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white shadow-xs">
               <Zap className="w-4 h-4 fill-white" />
             </div>
             <div className="hidden sm:block">
-              <span className="font-black text-sm text-white tracking-tight">Calculation Studio</span>
-              <span className="text-[10px] text-blue-400 font-bold block uppercase tracking-wider">
+              <span className="font-bold text-sm text-slate-900 tracking-tight">Calculation Studio</span>
+              <span className="text-[10px] text-blue-600 font-semibold block uppercase tracking-wider">
                 Full Screen Drill
               </span>
             </div>
           </div>
 
-          <div className="h-5 w-px bg-slate-800" />
+          <div className="h-5 w-px bg-slate-200" />
 
           {/* Mode Pill Toggle */}
-          <div className="flex bg-slate-900 p-1 rounded-xl border border-slate-800">
+          <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200/80">
             <button
               onClick={() => {
                 setDrillMode('routine');
                 setRoutineSectionIndex(0);
               }}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 drillMode === 'routine'
-                  ? 'bg-blue-600 text-white shadow-xs'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-white text-blue-600 shadow-xs'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               Daily Routine
@@ -537,10 +550,10 @@ export const CalculationStudio: React.FC<Props> = ({
               onClick={() => {
                 setDrillMode('free');
               }}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 drillMode === 'free'
-                  ? 'bg-indigo-600 text-white shadow-xs'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-white text-blue-600 shadow-xs'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               Section Focus
@@ -550,13 +563,13 @@ export const CalculationStudio: React.FC<Props> = ({
 
         {/* Center: Live Workout Metrics */}
         <div className="hidden md:flex items-center space-x-6 text-xs font-bold">
-          <div className="flex items-center text-amber-400 bg-amber-400/10 px-3 py-1.5 rounded-xl border border-amber-400/20">
-            <Flame className="w-4 h-4 mr-1.5 fill-amber-400" />
+          <div className="flex items-center text-amber-700 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200">
+            <Flame className="w-4 h-4 mr-1.5 fill-amber-500 text-amber-500" />
             <span>{streak} Streak</span>
           </div>
 
           <div className="text-slate-400 font-mono">
-            Time: <span className="text-white font-bold">{formatTime(elapsedSeconds)}</span>
+            Time: <span className="text-slate-900 font-bold">{formatTime(elapsedSeconds)}</span>
           </div>
         </div>
 
@@ -565,20 +578,20 @@ export const CalculationStudio: React.FC<Props> = ({
           {/* Reference Cheat Sheet Button */}
           <button
             onClick={() => setShowCheatSheet(true)}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-bold transition-colors border border-slate-700/60"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-blue-600 text-xs font-bold transition-colors border border-slate-200 shadow-2xs cursor-pointer"
             title="Open Formula / Number Reference Sheet"
           >
-            <BookOpen className="w-3.5 h-3.5 text-blue-400" />
+            <BookOpen className="w-3.5 h-3.5 text-blue-600" />
             <span className="hidden sm:inline">Cheat Sheet</span>
           </button>
 
           {/* Audio toggle */}
           <button
             onClick={() => setSoundEnabled((prev) => !prev)}
-            className={`p-2 rounded-xl border transition-colors ${
+            className={`p-2 rounded-xl border transition-colors cursor-pointer ${
               soundEnabled
-                ? 'bg-slate-800 border-slate-700 text-blue-400'
-                : 'bg-slate-900 border-slate-800 text-slate-500'
+                ? 'bg-blue-50 border-blue-200 text-blue-600 shadow-2xs'
+                : 'bg-white border-slate-200 text-slate-400 hover:text-slate-700'
             }`}
             title={soundEnabled ? 'Mute Sounds' : 'Unmute Sounds'}
           >
@@ -588,10 +601,10 @@ export const CalculationStudio: React.FC<Props> = ({
           {/* Numpad toggle */}
           <button
             onClick={() => setShowNumpad((prev) => !prev)}
-            className={`p-2 rounded-xl border transition-colors ${
+            className={`p-2 rounded-xl border transition-colors cursor-pointer ${
               showNumpad
-                ? 'bg-slate-800 border-slate-700 text-blue-400'
-                : 'bg-slate-900 border-slate-800 text-slate-500'
+                ? 'bg-blue-50 border-blue-200 text-blue-600 shadow-2xs'
+                : 'bg-white border-slate-200 text-slate-500 hover:text-slate-800'
             }`}
             title="Toggle On-Screen Numeric Keypad"
           >
@@ -601,7 +614,7 @@ export const CalculationStudio: React.FC<Props> = ({
           {/* Native Fullscreen toggle */}
           <button
             onClick={toggleFullscreen}
-            className="p-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors"
+            className="p-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors shadow-2xs cursor-pointer"
             title={isFullscreen ? 'Exit Native Fullscreen' : 'Enter Native Fullscreen'}
           >
             {isFullscreen ? <Minimize className="w-4 h-4" /> : <Maximize className="w-4 h-4" />}
@@ -611,7 +624,7 @@ export const CalculationStudio: React.FC<Props> = ({
           {onClose && (
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 transition-colors"
+              className="p-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 transition-colors shadow-2xs cursor-pointer"
               title="Exit Workout Studio (Esc)"
             >
               <X className="w-4 h-4" />
@@ -621,7 +634,7 @@ export const CalculationStudio: React.FC<Props> = ({
       </header>
 
       {/* Routine Progress / Section Tabs Subheader */}
-      <div className="px-4 sm:px-6 py-2.5 bg-slate-950 border-b border-slate-800/60 flex items-center justify-between overflow-x-auto scrollbar-none gap-4">
+      <div className="px-4 sm:px-6 py-2.5 bg-white border-b border-slate-200 flex items-center justify-between overflow-x-auto scrollbar-none gap-4 shadow-2xs">
         {drillMode === 'routine' ? (
           <div className="flex items-center space-x-2 sm:space-x-3">
             {CALC_SECTIONS.map((sec, idx) => {
@@ -632,15 +645,15 @@ export const CalculationStudio: React.FC<Props> = ({
                   key={sec.id}
                   className={`flex items-center whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                     isCurrent
-                      ? 'bg-blue-600/20 text-blue-400 border border-blue-500/40'
+                      ? 'bg-blue-50 text-blue-700 border border-blue-200'
                       : isCompleted
-                      ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                      : 'text-slate-600'
+                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                      : 'text-slate-400'
                   }`}
                 >
                   <span className="mr-1.5 opacity-60">{sec.badge}</span>
                   <span>{sec.shortTitle}</span>
-                  {isCompleted && <Check className="w-3 h-3 ml-1.5 text-emerald-400" />}
+                  {isCompleted && <Check className="w-3 h-3 ml-1.5 text-emerald-600" />}
                 </div>
               );
             })}
@@ -653,10 +666,10 @@ export const CalculationStudio: React.FC<Props> = ({
                 <button
                   key={sec.id}
                   onClick={() => switchToIndividualSection(sec.id)}
-                  className={`flex items-center whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                  className={`flex items-center whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/20'
-                      : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                      ? 'bg-blue-600 text-white shadow-xs'
+                      : 'bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
                   }`}
                 >
                   <span>{sec.title}</span>
@@ -666,14 +679,14 @@ export const CalculationStudio: React.FC<Props> = ({
           </div>
         )}
 
-        {/* Section Live Counters: Exhaustive progress & mistake queue */}
+        {/* Section Live Counters */}
         <div className="flex items-center space-x-3 text-xs font-bold whitespace-nowrap">
-          <span className="text-slate-400">
-            Covered: <strong className="text-white">{answeredDeckCount}</strong>/{initialDeckSize}
+          <span className="text-slate-500">
+            Covered: <strong className="text-slate-900">{answeredDeckCount}</strong>/{initialDeckSize}
           </span>
           {pendingMistakes > 0 && (
-            <span className="flex items-center text-amber-400 bg-amber-400/15 border border-amber-400/30 px-2 py-0.5 rounded-lg">
-              <Repeat className="w-3 h-3 mr-1" />
+            <span className="flex items-center text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-lg">
+              <Repeat className="w-3 h-3 mr-1 text-amber-600" />
               {pendingMistakes} mistake{pendingMistakes > 1 ? 's' : ''} (repeating 3×)
             </span>
           )}
@@ -681,7 +694,7 @@ export const CalculationStudio: React.FC<Props> = ({
       </div>
 
       {/* Main Studio Body */}
-      <main className="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 relative overflow-y-auto">
+      <main className="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 relative overflow-y-auto bg-slate-50">
         {isFinished ? (
           <CalculationSummary
             statsBySection={statsBySection}
@@ -694,16 +707,16 @@ export const CalculationStudio: React.FC<Props> = ({
           <div className="w-full max-w-xl mx-auto flex flex-col items-center">
             {/* Header info / mistake repetition notice */}
             {activeRepeatItem ? (
-              <div className="mb-4 inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-xs font-black text-amber-300 animate-pulse">
-                <Repeat className="w-3.5 h-3.5" />
+              <div className="mb-4 inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-black text-amber-800 animate-pulse shadow-2xs">
+                <Repeat className="w-3.5 h-3.5 text-amber-600" />
                 <span>Mistake Drill: Repeat ({activeRepeatItem.remainingRepeats} of 3 remaining)</span>
               </div>
             ) : (
-              <div className="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-bold text-slate-300">
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <div className="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                 <span>{currentSection.title}</span>
-                <span className="text-slate-500">•</span>
-                <span className="text-slate-400">
+                <span className="text-slate-300">•</span>
+                <span className="text-slate-500">
                   {remainingInDeck} number{remainingInDeck !== 1 ? 's' : ''} remaining
                 </span>
               </div>
@@ -711,17 +724,17 @@ export const CalculationStudio: React.FC<Props> = ({
 
             {/* Flashcard Box */}
             <div
-              className={`w-full bg-slate-950/90 rounded-3xl p-6 sm:p-10 border transition-all duration-200 shadow-2xl relative overflow-hidden flex flex-col items-center justify-center ${
+              className={`w-full bg-white rounded-3xl p-6 sm:p-10 border transition-all duration-200 shadow-sm relative overflow-hidden flex flex-col items-center justify-center ${
                 feedback === 'correct'
-                  ? 'border-emerald-500 bg-emerald-950/20 ring-4 ring-emerald-500/20'
+                  ? 'border-emerald-500 bg-emerald-50/50 ring-4 ring-emerald-50'
                   : feedback === 'wrong'
-                  ? 'border-rose-500 bg-rose-950/20 ring-4 ring-rose-500/20 animate-shake'
+                  ? 'border-rose-400 bg-rose-50/50 ring-4 ring-rose-50 animate-shake'
                   : activeRepeatItem
-                  ? 'border-amber-500/50 bg-amber-950/10'
-                  : 'border-slate-800 hover:border-slate-700'
+                  ? 'border-amber-300 bg-amber-50/30'
+                  : 'border-slate-200 hover:border-slate-300'
               }`}
             >
-              {/* Question Subtitle / Prompt Info */}
+              {/* Question Subtitle */}
               {currentQuestion?.subPrompt && (
                 <div className="text-slate-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3">
                   {currentQuestion.subPrompt}
@@ -736,7 +749,7 @@ export const CalculationStudio: React.FC<Props> = ({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.12 }}
-                  className="text-4xl sm:text-6xl font-black text-white tracking-tight mb-8 text-center"
+                  className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight mb-8 text-center"
                 >
                   {currentQuestion?.prompt}
                 </motion.div>
@@ -760,10 +773,10 @@ export const CalculationStudio: React.FC<Props> = ({
                         disabled={revealed || feedback !== null}
                         className={`p-3.5 rounded-2xl border-2 text-left font-bold transition-all flex items-center justify-between cursor-pointer active:scale-98 ${
                           showSuccessHighlight || showCorrectHighlight
-                            ? 'border-emerald-500 bg-emerald-950/40 text-emerald-300 ring-2 ring-emerald-500/30'
+                            ? 'border-emerald-500 bg-emerald-50 text-emerald-800 ring-2 ring-emerald-100'
                             : showWrongHighlight
-                            ? 'border-rose-500 bg-rose-950/40 text-rose-300 ring-2 ring-rose-500/30'
-                            : 'border-slate-800 bg-slate-900/80 hover:bg-slate-800/80 text-white hover:border-slate-700'
+                            ? 'border-rose-400 bg-rose-50 text-rose-800 ring-2 ring-rose-100'
+                            : 'border-slate-200 bg-slate-50 hover:bg-white text-slate-800 hover:border-blue-500'
                         }`}
                       >
                         <div className="flex items-center gap-2.5">
@@ -773,7 +786,7 @@ export const CalculationStudio: React.FC<Props> = ({
                                 ? 'bg-emerald-500 text-white'
                                 : showWrongHighlight
                                 ? 'bg-rose-500 text-white'
-                                : 'bg-slate-800 text-slate-400'
+                                : 'bg-slate-200 text-slate-600'
                             }`}
                           >
                             {idx + 1}
@@ -781,7 +794,7 @@ export const CalculationStudio: React.FC<Props> = ({
                           <span className="text-base sm:text-lg">{opt}</span>
                         </div>
                         {showSuccessHighlight || showCorrectHighlight ? (
-                          <Check className="w-4 h-4 text-emerald-400" />
+                          <Check className="w-4 h-4 text-emerald-600" />
                         ) : null}
                       </button>
                     );
@@ -800,12 +813,12 @@ export const CalculationStudio: React.FC<Props> = ({
                     placeholder="Type answer..."
                     autoFocus
                     disabled={revealed}
-                    className={`w-full py-3.5 px-4 text-center text-2xl sm:text-3xl font-black rounded-2xl bg-slate-900 border-2 transition-all outline-none ${
+                    className={`w-full py-3.5 px-4 text-center text-2xl sm:text-3xl font-black rounded-2xl bg-white border-2 transition-all outline-none shadow-xs ${
                       feedback === 'correct'
-                        ? 'border-emerald-500 text-emerald-400 bg-emerald-950/30'
+                        ? 'border-emerald-500 text-emerald-700 bg-emerald-50'
                         : feedback === 'wrong'
-                        ? 'border-rose-500 text-rose-400 bg-rose-950/30'
-                        : 'border-slate-700 focus:border-blue-500 text-white placeholder:text-slate-600'
+                        ? 'border-rose-400 text-rose-700 bg-rose-50'
+                        : 'border-slate-300 focus:border-blue-600 text-slate-900 placeholder:text-slate-400'
                     }`}
                   />
                 </div>
@@ -816,19 +829,19 @@ export const CalculationStudio: React.FC<Props> = ({
                 <motion.div
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="w-full p-4 rounded-2xl bg-slate-900/90 border border-slate-800 mb-4 text-center"
+                  className="w-full p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-4 text-center shadow-xs"
                 >
-                  <div className="text-xs text-slate-400 font-bold uppercase mb-1">Correct Answer</div>
-                  <div className="text-2xl font-black text-emerald-400 mb-1">{currentQuestion.answer}</div>
+                  <div className="text-xs text-slate-500 font-bold uppercase mb-1">Correct Answer</div>
+                  <div className="text-2xl font-black text-emerald-600 mb-1">{currentQuestion.answer}</div>
                   {currentQuestion.explanation && (
-                    <div className="text-xs text-slate-300 font-medium">{currentQuestion.explanation}</div>
+                    <div className="text-xs text-slate-600 font-medium">{currentQuestion.explanation}</div>
                   )}
-                  <p className="text-[11px] text-amber-400 font-bold mt-2">
+                  <p className="text-[11px] text-amber-700 font-bold mt-2">
                     ⚠️ Marked for repetition: will be repeated 3 times until mastered.
                   </p>
                   <button
                     onClick={handleAdvanceAfterReveal}
-                    className="mt-3 inline-flex items-center space-x-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all"
+                    className="mt-3 inline-flex items-center space-x-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all cursor-pointer shadow-xs"
                   >
                     <span>Next Problem</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -842,12 +855,12 @@ export const CalculationStudio: React.FC<Props> = ({
                   <span>
                     {currentQuestion?.options && currentQuestion.options.length > 0 ? (
                       <>
-                        Press <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">1</kbd>–<kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">4</kbd> or click option
+                        Press <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px]">1</kbd>–<kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px]">4</kbd> or click option
                       </>
                     ) : (
                       <>
                         Press{' '}
-                        <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">
+                        <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px]">
                           Enter
                         </kbd>{' '}
                         to submit
@@ -856,7 +869,7 @@ export const CalculationStudio: React.FC<Props> = ({
                   </span>
                   <button
                     onClick={handleReveal}
-                    className="text-slate-400 hover:text-amber-400 font-bold underline transition-colors"
+                    className="text-slate-500 hover:text-amber-600 font-bold underline transition-colors cursor-pointer"
                   >
                     Reveal Answer (Repeat 3×)
                   </button>
@@ -864,19 +877,19 @@ export const CalculationStudio: React.FC<Props> = ({
               )}
             </div>
 
-            {/* Optional On-Screen Numeric Keypad (only for text input questions) */}
+            {/* Optional On-Screen Numeric Keypad */}
             {showNumpad && !currentQuestion?.options && (
-              <div className="mt-6 w-full max-w-xs bg-slate-950 p-3 rounded-2xl border border-slate-800 shadow-xl grid grid-cols-3 gap-2">
+              <div className="mt-6 w-full max-w-xs bg-white p-3 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-3 gap-2">
                 {['1', '2', '3', '4', '5', '6', '7', '8', '9', 'clear', '0', 'backspace'].map((btn) => (
                   <button
                     key={btn}
                     onClick={() => handleNumpadPress(btn)}
-                    className="py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold text-lg active:scale-95 transition-all border border-slate-800/80 flex items-center justify-center"
+                    className="py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold text-lg active:scale-95 transition-all border border-slate-200 flex items-center justify-center cursor-pointer"
                   >
                     {btn === 'clear' ? (
-                      <span className="text-xs text-slate-400">C</span>
+                      <span className="text-xs text-slate-500">C</span>
                     ) : btn === 'backspace' ? (
-                      <span className="text-xs text-slate-400">⌫</span>
+                      <span className="text-xs text-slate-500">⌫</span>
                     ) : (
                       btn
                     )}
@@ -894,6 +907,22 @@ export const CalculationStudio: React.FC<Props> = ({
         onClose={() => setShowCheatSheet(false)}
         initialSection={currentSection.id}
       />
+
+      {/* Bottom Shortcut Hints Bar */}
+      <footer className="px-4 sm:px-6 py-2.5 bg-white border-t border-slate-200 text-center text-xs text-slate-500 flex items-center justify-between shrink-0">
+        <div className="flex items-center space-x-3">
+          <span>
+            Press <span className="font-mono text-slate-700 font-bold">Enter ↵</span> to Submit
+          </span>
+          <span>•</span>
+          <span>
+            Press <span className="font-mono text-slate-700 font-bold">Esc</span> to Exit Studio
+          </span>
+        </div>
+        <div className="hidden sm:block text-slate-400">
+          Calculation Studio • Full Screen Training
+        </div>
+      </footer>
     </div>
   );
 };

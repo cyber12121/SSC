@@ -93,6 +93,7 @@ type FilterType =
   | 'unattempted' 
   | 'needs_rca' 
   | 'rca_c' 
+  | 'rca_s'
   | 'rca_a' 
   | 'rca_t' 
   | 'rca_g';
@@ -189,7 +190,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   // Sync active silly note when moving between questions
   useEffect(() => {
     const currentRca = rcaMap[currentIdx] || items[currentIdx]?.rca || items[currentIdx]?.question?.rca;
-    if (currentRca && currentRca.tag === 'A') {
+    if (currentRca && (currentRca.tag === 'S' || (currentRca.tag as any) === 'A')) {
       setActiveSillyNote(currentRca.sillyMistakeNote || '');
     } else {
       setActiveSillyNote('');
@@ -197,10 +198,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   }, [currentIdx, rcaMap]);
 
   const rcaStats = useMemo(() => {
-    const counts = { C: 0, A: 0, T: 0, G: 0, total: 0 };
+    const counts: Record<string, number> = { C: 0, S: 0, T: 0, G: 0, total: 0 };
     Object.values(rcaMap).forEach((item: any) => {
-      if (item && item.tag && counts[item.tag as RCATagType] !== undefined) {
-        counts[item.tag as RCATagType]++;
+      const tag = (item?.tag as any) === 'A' ? 'S' : item?.tag;
+      if (tag && counts[tag] !== undefined) {
+        counts[tag]++;
         counts.total++;
       }
     });
@@ -312,17 +314,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   };
 
   const handleSelectRcaTag = (tag: RCATagType) => {
+    const effectiveTag = (tag as any) === 'A' ? 'S' : tag;
     const tagNames: Record<RCATagType, RCAClassification['tagName']> = {
       C: 'Conceptual Gap',
-      A: 'Silly Mistake',
+      S: 'Silly Mistake',
       T: 'Time / Ego Trap',
       G: 'Guesswork Failed'
     };
 
     const newRca: RCAClassification = {
-      tag,
-      tagName: tagNames[tag],
-      sillyMistakeNote: tag === 'A' ? (activeSillyNote || rcaMap[currentIdx]?.sillyMistakeNote || '') : undefined,
+      tag: effectiveTag,
+      tagName: tagNames[effectiveTag],
+      sillyMistakeNote: effectiveTag === 'S' ? (activeSillyNote || rcaMap[currentIdx]?.sillyMistakeNote || '') : undefined,
       classifiedAt: new Date().toISOString()
     };
 
@@ -346,9 +349,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   const handleSaveSillyNote = (note: string) => {
     setActiveSillyNote(note);
-    if (rcaMap[currentIdx]?.tag === 'A') {
+    if (rcaMap[currentIdx]?.tag === 'S' || (rcaMap[currentIdx]?.tag as any) === 'A') {
       const updatedRca: RCAClassification = {
         ...rcaMap[currentIdx],
+        tag: 'S',
         sillyMistakeNote: note,
         classifiedAt: new Date().toISOString()
       };
@@ -378,11 +382,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const handleFinishReview = async () => {
     setIsFinishingReview(true);
     try {
-      // 1. Flush any active silly note on the current question if tag is 'A'
+      // 1. Flush any active silly note on the current question if tag is 'S' or 'A'
       let currentRcaMap = { ...rcaMap };
-      if (currentRcaMap[currentIdx]?.tag === 'A' && activeSillyNote) {
+      if ((currentRcaMap[currentIdx]?.tag === 'S' || (currentRcaMap[currentIdx]?.tag as any) === 'A') && activeSillyNote) {
         currentRcaMap[currentIdx] = {
           ...currentRcaMap[currentIdx],
+          tag: 'S',
           sillyMistakeNote: activeSillyNote,
           classifiedAt: new Date().toISOString()
         };
@@ -990,13 +995,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (selectedFilter === 'unattempted') return status === 'unattempted';
     if (selectedFilter === 'needs_rca') return (status === 'wrong' || status === 'slow' || status === 'unattempted') && !qRca;
     if (selectedFilter === 'rca_c') return qRca?.tag === 'C';
-    if (selectedFilter === 'rca_a') return qRca?.tag === 'A';
+    if (selectedFilter === 'rca_s' || (selectedFilter as any) === 'rca_a') return qRca?.tag === 'S' || (qRca?.tag as any) === 'A';
     if (selectedFilter === 'rca_t') return qRca?.tag === 'T';
     if (selectedFilter === 'rca_g') return qRca?.tag === 'G';
     return true;
   });
 
-  const handleDrillByRca = (tag: 'all_mistakes' | 'A' | 'C' | 'T' | 'G') => {
+  const handleDrillByRca = (tag: 'all_mistakes' | 'S' | 'A' | 'C' | 'T' | 'G') => {
     let targetQuestions: Question[] = [];
     let title = '';
 
@@ -1011,7 +1016,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       title = `${result.chapter_title} • All Mistakes (${targetQuestions.length} Qs)`;
     } else {
       const tagLabels: Record<string, string> = {
-        A: 'Silly Mistakes [A]',
+        S: 'Silly Mistakes [S]',
+        A: 'Silly Mistakes [S]',
         C: 'Conceptual Gaps [C]',
         T: 'Time Traps [T]',
         G: 'Guesswork [G]'
@@ -1019,6 +1025,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       targetQuestions = items
         .filter((_, idx) => {
           const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
+          if (tag === 'S' || tag === 'A') {
+            return qRca?.tag === 'S' || (qRca?.tag as any) === 'A';
+          }
           return qRca?.tag === tag;
         })
         .map(it => it.question)
@@ -1107,22 +1116,22 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         return;
       }
 
-      // Toggle Reattempt / Solution: S
-      if (key === 's') {
+      // Toggle Reattempt / Solution: R
+      if (key === 'r') {
         e.preventDefault();
         setReattemptMode(prev => !prev);
         return;
       }
 
-      // RCA Hotkeys: C, A, T, G
+      // RCA Hotkeys: C, S, T, G (and 'a' for legacy)
       if (key === 'c') {
         e.preventDefault();
         handleSelectRcaTag('C');
         return;
       }
-      if (key === 'a') {
+      if (key === 's' || key === 'a') {
         e.preventDefault();
-        handleSelectRcaTag('A');
+        handleSelectRcaTag('S');
         return;
       }
       if (key === 't') {
@@ -1212,7 +1221,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   }, [question, current, mockUserTimeMap]);
 
   const handleBack = () => {
-    if (rcaMap[currentIdx]?.tag === 'A' && activeSillyNote && activeSillyNote !== rcaMap[currentIdx]?.sillyMistakeNote) {
+    if ((rcaMap[currentIdx]?.tag === 'S' || (rcaMap[currentIdx]?.tag as any) === 'A') && activeSillyNote && activeSillyNote !== rcaMap[currentIdx]?.sillyMistakeNote) {
       handleSaveSillyNote(activeSillyNote);
     }
     onBack();
@@ -2150,15 +2159,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
               <button
                 type="button"
-                onClick={() => setSelectedFilter('rca_a')}
+                onClick={() => setSelectedFilter('rca_s')}
                 className={`px-1.5 py-0.5 rounded font-bold transition-all cursor-pointer ${
-                  selectedFilter === 'rca_a'
+                  selectedFilter === 'rca_s' || (selectedFilter as any) === 'rca_a'
                     ? 'bg-rose-600 text-white shadow-2xs'
                     : 'bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200'
                 }`}
-                title="Silly Mistake [A]"
+                title="Silly Mistake [S]"
               >
-                [A]
+                [S]
               </button>
 
               <button
@@ -2219,11 +2228,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       {qRca ? (
                         <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full text-[9px] font-mono font-black flex items-center justify-center shadow-xs border border-white ${
                           qRca.tag === 'C' ? 'bg-purple-600 text-white' :
-                          qRca.tag === 'A' ? 'bg-rose-600 text-white' :
+                          (qRca.tag === 'S' || (qRca.tag as any) === 'A') ? 'bg-rose-600 text-white' :
                           qRca.tag === 'T' ? 'bg-amber-500 text-white' :
                           'bg-blue-600 text-white'
                         }`}>
-                          {qRca.tag}
+                          {(qRca.tag as any) === 'A' ? 'S' : qRca.tag}
                         </span>
                       ) : (status === 'wrong' || status === 'slow') && (
                         <span
@@ -2433,14 +2442,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       type="button"
                       onClick={() => {
                         setShowSummaryModal(false);
-                        handleDrillByRca('A');
+                        handleDrillByRca('S');
                       }}
-                      disabled={rcaStats.A === 0}
+                      disabled={rcaStats.S === 0}
                       className="p-2 rounded-lg bg-white border border-rose-200 hover:border-rose-400 text-left transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
                     >
                       <div className="text-[10px] font-bold text-rose-700 flex items-center justify-between">
-                        <span>[A] Silly</span>
-                        <span className="font-black text-xs">{rcaStats.A}</span>
+                        <span>[S] Silly</span>
+                        <span className="font-black text-xs">{rcaStats.S}</span>
                       </div>
                       <span className="text-[9px] text-rose-600 block mt-0.5 font-medium">Re-attempt &rarr;</span>
                     </button>

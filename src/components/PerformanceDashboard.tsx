@@ -121,100 +121,112 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
           </div>
         </div>
       ) : (
-        <div className="space-y-2.5">
-          {/* Dashboard Top Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white px-3.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80">
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="px-1.5 py-0.2 rounded bg-blue-50 text-blue-700 text-[9px] font-bold uppercase tracking-wider">SSC CGL Analytics</span>
-                <h2 className="text-xs font-bold text-slate-900 leading-none">Performance Dashboard</h2>
-              </div>
-              <p className="text-slate-400 text-[10px] font-medium mt-0.5">
-                Comprehensive overview of your accuracy, pacing, and subject strengths.
-              </p>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <button
-                onClick={onNavigateHome}
-                className="px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold text-[11px] transition-all shadow-xs flex items-center gap-1"
-              >
-                <BookOpen className="w-3 h-3" />
-                Practice Hub
-              </button>
-            </div>
-          </div>
+        <div className="space-y-3">
 
-          {/* Summary KPI Cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-1.5">
-            <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                <Trophy className="w-3 h-3" />
+          {/* ========================================================= */}
+          {/* COMPACT TOP METRIC CARDS                                  */}
+          {/* ========================================================= */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5">
+            {/* Card 1: Total Attempts */}
+            <article className="bg-white rounded-xl border border-slate-200/90 px-3 py-2 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div className="flex items-center justify-between gap-1">
+                <span className="text-[11px] font-semibold text-slate-500">Total Attempts</span>
+                <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 leading-none">
+                  {dashboardStats.totalQuizzes}
+                </span>
               </div>
-              <div className="min-w-0">
-                <div className="text-sm font-bold text-slate-900 leading-none">{dashboardStats.totalQuizzes}</div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Total Quizzes</div>
+              <div className="mt-1 pt-1 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">{dashboardStats.totalQuizzes} completed</span>
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold bg-indigo-50 text-indigo-700">
+                  DRILL LOG
+                </span>
               </div>
-            </div>
+            </article>
 
-            <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-              <div className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 ${
-                dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-600' :
-                dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-600' :
-                'bg-rose-50 text-rose-600'
-              }`}>
-                <Target className="w-3 h-3" />
-              </div>
-              <div className="min-w-0">
-                <div className={`text-sm font-bold leading-none ${
-                  dashboardStats.overallAccuracy >= 75 ? 'text-emerald-600' :
-                  dashboardStats.overallAccuracy >= 50 ? 'text-amber-600' :
-                  'text-rose-600'
+            {/* Card 2: Overall Accuracy */}
+            <article className="bg-white rounded-xl border border-slate-200/90 px-3 py-2 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div className="flex items-center justify-between gap-1">
+                <span className="text-[11px] font-semibold text-slate-500">Overall Accuracy</span>
+                <span className={`text-base sm:text-lg font-black tracking-tight leading-none ${
+                  dashboardStats.overallAccuracy >= 75
+                    ? 'text-emerald-600'
+                    : dashboardStats.overallAccuracy >= 50
+                    ? 'text-amber-600'
+                    : 'text-rose-600'
                 }`}>
                   {dashboardStats.overallAccuracy}%
-                </div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Accuracy</div>
+                </span>
               </div>
-            </div>
+              <div className="mt-1 pt-1 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">Target: ≥85%</span>
+                <span className={`font-bold text-[9px] px-1.5 py-0.5 rounded ${
+                  dashboardStats.overallAccuracy >= 75 ? 'bg-emerald-50 text-emerald-700' :
+                  dashboardStats.overallAccuracy >= 50 ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'
+                }`}>
+                  {dashboardStats.overallAccuracy >= 75 ? 'Target Pace' : dashboardStats.overallAccuracy >= 50 ? 'Needs Polish' : 'Low Accuracy'}
+                </span>
+              </div>
+            </article>
 
-            <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
-                <ListChecks className="w-3 h-3" />
+            {/* Card 3: Questions Solved */}
+            <article className="bg-white rounded-xl border border-slate-200/90 px-3 py-2 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div className="flex items-center justify-between gap-1">
+                <span className="text-[11px] font-semibold text-slate-500">Questions Solved</span>
+                <span className="text-base sm:text-lg font-black tracking-tight text-purple-700 leading-none">
+                  {dashboardStats.totalQuestions}
+                </span>
               </div>
-              <div className="min-w-0">
-                <div className="text-sm font-bold text-purple-600 leading-none">{dashboardStats.totalQuestions}</div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Questions Solved</div>
+              <div className="mt-1 pt-1 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-500 font-mono truncate">
+                  <strong className="text-emerald-600 font-semibold">{dashboardStats.totalCorrect}</strong> Correct • {dashboardStats.totalQuestions - dashboardStats.totalCorrect} Inaccurate
+                </span>
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold bg-purple-50 text-purple-700 shrink-0 ml-1">
+                  TOTAL BANK
+                </span>
               </div>
-            </div>
+            </article>
 
-            <div className="bg-white px-2.5 py-1.5 rounded-lg shadow-xs border border-slate-200/80 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
-                <Clock className="w-3 h-3" />
+            {/* Card 4: Avg Speed */}
+            <article className="bg-white rounded-xl border border-slate-200/90 px-3 py-2 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div className="flex items-center justify-between gap-1">
+                <span className="text-[11px] font-semibold text-slate-500">Avg Speed</span>
+                <span className="text-base sm:text-lg font-black tracking-tight text-orange-600 leading-none">
+                  {dashboardStats.avgTimePerQ}s
+                </span>
               </div>
-              <div className="min-w-0">
-                <div className="text-sm font-bold text-orange-600 leading-none">{dashboardStats.avgTimePerQ}s</div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">Avg Time / Q</div>
+              <div className="mt-1 pt-1 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                <span className="text-slate-400 font-mono">Benchmark: &lt;50s</span>
+                <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold ${
+                  dashboardStats.avgTimePerQ <= 45 ? 'bg-emerald-50 text-emerald-700' :
+                  dashboardStats.avgTimePerQ <= 65 ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'
+                }`}>
+                  {dashboardStats.avgTimePerQ <= 45 ? 'FAST' : dashboardStats.avgTimePerQ <= 65 ? 'OPTIMAL' : 'SLOW'}
+                </span>
               </div>
-            </div>
+            </article>
           </div>
 
-          {/* Subject-Wise Performance Breakdown */}
-          <div className="bg-white rounded-lg shadow-xs border border-slate-200/80 p-3">
-            <div className="flex items-center justify-between mb-2">
+          {/* ========================================================= */}
+          {/* SUBJECT-WISE PERFORMANCE BREAKDOWN                        */}
+          {/* ========================================================= */}
+          <div className="bg-white rounded-2xl shadow-xs border border-slate-200/90 p-3 space-y-2.5">
+            <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xs font-bold text-slate-900 leading-none">Subject Breakdown</h3>
-                <p className="text-slate-400 text-[10px] font-medium mt-0.5">Click any subject to filter recent attempts</p>
+                <h3 className="text-xs font-bold text-slate-900 leading-none">Subject Mastery Breakdown</h3>
+                <p className="text-slate-400 text-[10px] font-medium mt-1">Select a subject card to isolate recent attempts</p>
               </div>
               {dashSubjectFilter !== 'all' && (
                 <button
+                  type="button"
                   onClick={() => setDashSubjectFilter('all')}
-                  className="text-[11px] font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2 py-0.5 rounded transition-colors"
+                  className="text-[11px] font-bold text-blue-600 hover:text-blue-700 bg-blue-50 px-2 py-0.5 rounded-lg transition-colors border border-blue-100 cursor-pointer"
                 >
-                  Clear Filter
+                  Clear Subject Filter
                 </button>
               )}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5">
               {['Mathematics', 'Reasoning', 'English', 'General Awareness'].map((subName) => {
                 const theme = getSubjectTheme(subName);
                 const Icon = theme.icon;
@@ -225,43 +237,44 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                   <div
                     key={subName}
                     onClick={() => setDashSubjectFilter(isSelected ? 'all' : subName)}
-                    className={`cursor-pointer p-2.5 rounded-lg border transition-all duration-150 ${
+                    className={`cursor-pointer p-2.5 rounded-xl border transition-all duration-150 flex flex-col justify-between ${
                       isSelected
-                        ? 'ring-1 ring-blue-500 shadow-xs bg-blue-50/20 border-blue-200'
-                        : 'bg-slate-50/50 hover:bg-white hover:shadow-xs border-slate-200/80'
+                        ? 'ring-2 ring-blue-500 shadow-xs bg-blue-50/20 border-blue-300'
+                        : 'bg-white hover:bg-slate-50/50 hover:shadow-xs border-slate-200/90'
                     }`}
                   >
-                    <div className="flex items-center justify-between mb-1.5">
-                      <div className={`w-6 h-6 rounded-md flex items-center justify-center bg-gradient-to-br ${theme.gradient} text-white shadow-xs`}>
-                        <Icon className="w-3 h-3" />
+                    <div>
+                      <div className="flex items-center justify-between gap-1.5 mb-1.5">
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <div className={`w-5 h-5 rounded-md flex items-center justify-center bg-gradient-to-br ${theme.gradient} text-white shadow-2xs shrink-0`}>
+                            <Icon className="w-3 h-3" />
+                          </div>
+                          <h4 className="font-bold text-slate-900 text-xs truncate leading-tight">{subName}</h4>
+                        </div>
+                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md border shrink-0 ${
+                          stat.accuracy >= 75 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                          stat.accuracy >= 50 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                          stat.totalQ > 0 ? 'bg-rose-50 text-rose-700 border-rose-200' : 'bg-slate-100 text-slate-500 border-slate-200'
+                        }`}>
+                          {stat.totalQ > 0 ? `${stat.accuracy}% Acc` : 'No data'}
+                        </span>
                       </div>
-                      <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded ${
-                        stat.accuracy >= 75 ? 'bg-emerald-100 text-emerald-800' :
-                        stat.accuracy >= 50 ? 'bg-amber-100 text-amber-800' :
-                        stat.totalQ > 0 ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-500'
-                      }`}>
-                        {stat.totalQ > 0 ? `${stat.accuracy}% Acc` : 'No data'}
+
+                      <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden my-1">
+                        <div
+                          className={`h-full rounded-full transition-all duration-500 ${theme.bar}`}
+                          style={{ width: `${stat.accuracy}%` }}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
+                      <span className="text-slate-500 font-mono">
+                        <strong className="text-slate-800 font-semibold">{stat.totalQ}</strong> Qs ({stat.correct} ✓)
                       </span>
-                    </div>
-
-                    <h4 className="font-bold text-slate-900 text-xs mb-1 leading-none">{subName}</h4>
-
-                    <div className="w-full bg-slate-200 rounded-full h-1 overflow-hidden mb-1.5">
-                      <div
-                        className={`h-full rounded-full transition-all duration-500 ${theme.bar}`}
-                        style={{ width: `${stat.accuracy}%` }}
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-1 text-[10px]">
-                      <div>
-                        <span className="text-slate-400 block font-medium">Questions:</span>
-                        <span className="font-bold text-slate-700">{stat.totalQ} ({stat.correct} ✓)</span>
-                      </div>
-                      <div>
-                        <span className="text-slate-400 block font-medium">Avg Time:</span>
-                        <span className="font-bold text-slate-700">{stat.avgTime}s/Q</span>
-                      </div>
+                      <span className="text-slate-500 font-mono font-medium">
+                        {stat.avgTime}s/Q
+                      </span>
                     </div>
                   </div>
                 );
@@ -269,120 +282,129 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
             </div>
           </div>
 
-          {/* Recent Activity Section */}
-          <div className="bg-white rounded-xl shadow-xs border border-slate-200/80 overflow-hidden">
-            <div className="p-3 sm:p-3.5 border-b border-slate-100 space-y-2.5">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-                <div className="flex items-center gap-2">
-                  <h3 className="text-xs font-bold text-slate-900">Recent Activity</h3>
-                  <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-bold">
-                    {filteredUserResults.length} {filteredUserResults.length === 1 ? 'Attempt' : 'Attempts'}
-                  </span>
-                  {userResults.length > 0 && (
-                    <button
-                      onClick={onClearAllResults}
-                      disabled={loadingResults}
-                      className="flex items-center gap-1 px-2.5 py-0.5 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-md text-[10px] font-bold transition-all disabled:opacity-50"
-                      title="Clear all recent activity records"
-                    >
-                      <Trash2 className="w-3 h-3" />
-                      <span>Clear History</span>
-                    </button>
-                  )}
-                </div>
-
-                {/* Search Bar */}
-                <div className="relative w-full sm:w-60">
-                  <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
-                  <input
-                    type="text"
-                    value={dashSearchQuery}
-                    onChange={(e) => setDashSearchQuery(e.target.value)}
-                    placeholder="Search chapter or topic..."
-                    className="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:bg-white transition-all"
-                  />
-                </div>
-              </div>
-
-              {/* Filter Controls Row */}
-              <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
-                <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200/70 text-[11px] font-semibold">
-                  <button
-                    onClick={() => setDashCategoryFilter('all')}
-                    className={`px-2.5 py-1 rounded-md transition-all ${
-                      dashCategoryFilter === 'all'
-                        ? 'bg-white text-slate-900 shadow-xs'
-                        : 'text-slate-500 hover:text-slate-800'
-                    }`}
-                  >
-                    All Modes
-                  </button>
-                  <button
-                    onClick={() => setDashCategoryFilter('chapterBank')}
-                    className={`px-2.5 py-1 rounded-md transition-all ${
-                      dashCategoryFilter === 'chapterBank'
-                        ? 'bg-white text-blue-600 shadow-xs'
-                        : 'text-slate-500 hover:text-slate-800'
-                    }`}
-                  >
-                    Chapter Bank
-                  </button>
-                  <button
-                    onClick={() => setDashCategoryFilter('mockErrors')}
-                    className={`px-2.5 py-1 rounded-md transition-all ${
-                      dashCategoryFilter === 'mockErrors'
-                        ? 'bg-white text-rose-600 shadow-xs'
-                        : 'text-slate-500 hover:text-slate-800'
-                    }`}
-                  >
-                    Mock Errors
-                  </button>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <select
-                    value={dashSubjectFilter}
-                    onChange={(e) => setDashSubjectFilter(e.target.value)}
-                    className="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
-                  >
-                    <option value="all">All Subjects</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Reasoning">Reasoning</option>
-                    <option value="English">English</option>
-                    <option value="General Awareness">General Awareness</option>
-                  </select>
-
-                  <select
-                    value={dashSort}
-                    onChange={(e) => setDashSort(e.target.value as any)}
-                    className="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
-                  >
-                    <option value="newest">Newest First</option>
-                    <option value="accuracy-desc">Highest Accuracy</option>
-                    <option value="accuracy-asc">Lowest Accuracy</option>
-                  </select>
-                </div>
-              </div>
+          {/* ========================================================= */}
+          {/* CLASSIFICATION FILTER BAR (ROUNDED-2XL STANDARD)          */}
+          {/* ========================================================= */}
+          <div className="bg-white rounded-2xl p-2.5 border border-slate-200/90 shadow-xs flex flex-col md:flex-row items-center justify-between gap-2.5">
+            {/* Left Filter Pills */}
+            <div className="flex flex-wrap items-center gap-1.5 w-full md:w-auto">
+              <button
+                type="button"
+                onClick={() => setDashCategoryFilter('all')}
+                className={`px-2.5 py-1 text-xs font-bold rounded-lg transition-colors cursor-pointer ${
+                  dashCategoryFilter === 'all'
+                    ? 'bg-slate-900 text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                All Modes ({userResults.length})
+              </button>
+              <button
+                type="button"
+                onClick={() => setDashCategoryFilter('chapterBank')}
+                className={`px-2.5 py-1 text-xs font-semibold rounded-lg border transition-colors cursor-pointer ${
+                  dashCategoryFilter === 'chapterBank'
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-xs font-bold'
+                    : 'bg-blue-50/70 text-blue-800 border-blue-100 hover:bg-blue-100'
+                }`}
+              >
+                Chapter Bank <span className="ml-1 opacity-85 font-mono">{userResults.filter(r => r.category === 'chapterBank').length}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setDashCategoryFilter('mockErrors')}
+                className={`px-2.5 py-1 text-xs font-semibold rounded-lg border transition-colors cursor-pointer ${
+                  dashCategoryFilter === 'mockErrors'
+                    ? 'bg-rose-600 text-white border-rose-600 shadow-xs font-bold'
+                    : 'bg-rose-50/70 text-rose-800 border-rose-100 hover:bg-rose-100'
+                }`}
+              >
+                Mock Errors <span className="ml-1 opacity-85 font-mono">{userResults.filter(r => r.category === 'mockErrors').length}</span>
+              </button>
             </div>
 
-            {/* Results List */}
-            {filteredUserResults.length === 0 ? (
-              <div className="p-8 text-center">
-                <p className="text-slate-500 font-bold text-xs mb-2">No activity matching your current filter.</p>
+            {/* Right Controls: Subject select, Sort select, Search, and Clear */}
+            <div className="flex flex-wrap items-center gap-2 w-full md:w-auto justify-between md:justify-end">
+              {/* Search Bar */}
+              <div className="relative flex-1 sm:w-56 md:w-56">
+                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <input
+                  type="text"
+                  value={dashSearchQuery}
+                  onChange={(e) => setDashSearchQuery(e.target.value)}
+                  placeholder="Filter by topic or chapter..."
+                  className="w-full pl-8 pr-7 py-1 text-xs font-medium bg-slate-50 border border-slate-200/90 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:bg-white transition-all"
+                />
+                {dashSearchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setDashSearchQuery('')}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-sm font-bold"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+
+              <select
+                value={dashSubjectFilter}
+                onChange={(e) => setDashSubjectFilter(e.target.value)}
+                className="px-2.5 py-1 bg-slate-50 border border-slate-200/90 rounded-lg text-xs font-semibold text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
+              >
+                <option value="all">All Subjects</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Reasoning">Reasoning</option>
+                <option value="English">English</option>
+                <option value="General Awareness">General Awareness</option>
+              </select>
+
+              <select
+                value={dashSort}
+                onChange={(e) => setDashSort(e.target.value as any)}
+                className="px-2.5 py-1 bg-slate-50 border border-slate-200/90 rounded-lg text-xs font-semibold text-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
+              >
+                <option value="newest">Newest First</option>
+                <option value="accuracy-desc">Highest Accuracy</option>
+                <option value="accuracy-asc">Lowest Accuracy</option>
+              </select>
+
+              {userResults.length > 0 && (
                 <button
+                  type="button"
+                  onClick={onClearAllResults}
+                  disabled={loadingResults}
+                  className="flex items-center gap-1 px-2.5 py-1 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-lg text-xs font-bold transition-all disabled:opacity-50 cursor-pointer"
+                  title="Clear all recent activity records"
+                >
+                  <Trash2 className="w-3 h-3" />
+                  <span className="hidden sm:inline">Clear</span>
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* ========================================================= */}
+          {/* ATTEMPT RESULTS LIST (CARD TABLE STANDARD)                */}
+          {/* ========================================================= */}
+          <div className="bg-white rounded-2xl shadow-xs border border-slate-200/90 overflow-hidden">
+            {filteredUserResults.length === 0 ? (
+              <div className="p-10 text-center space-y-2">
+                <p className="text-slate-500 font-bold text-xs">No attempt records matching your current filters.</p>
+                <button
+                  type="button"
                   onClick={() => {
                     setDashCategoryFilter('all');
                     setDashSubjectFilter('all');
                     setDashSearchQuery('');
                   }}
-                  className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg font-semibold text-xs hover:bg-blue-100 transition-colors"
+                  className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg font-bold text-xs hover:bg-blue-100 transition-colors border border-blue-100 cursor-pointer"
                 >
-                  Clear Filters
+                  Clear All Filters
                 </button>
               </div>
             ) : (
               <div className="divide-y divide-slate-100">
-                {filteredUserResults.map((result) => {
+                {filteredUserResults.map((result, idx) => {
                   const theme = getSubjectTheme(result.subject);
                   const Icon = theme.icon;
                   const accuracyRate = result.totalQuestions > 0
@@ -394,26 +416,28 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
 
                   return (
                     <div
-                      key={result.id || `${result.completedAt}|${result.chapter_title}`}
-                      className="p-3 sm:p-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-3 hover:bg-slate-50/80 transition-colors"
+                      key={result.id || `${result.completedAt}|${result.chapter_title}|${idx}`}
+                      className="p-3 sm:p-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-3 hover:bg-slate-50/70 transition-colors"
                     >
-                      <div className="flex items-start gap-3 min-w-0">
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow-xs bg-gradient-to-br ${theme.gradient} text-white`}>
+                      <div className="flex items-center gap-3 min-w-0">
+                        {/* Subject Icon / Badge */}
+                        <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-xs bg-gradient-to-br ${theme.gradient} text-white`}>
                           <Icon className="w-4 h-4" />
                         </div>
+
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-1.5 mb-1">
-                            <span className={`px-2 py-0.2 rounded-md text-[10px] font-bold border ${theme.badge}`}>
+                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${theme.badge}`}>
                               {theme.name}
                             </span>
-                            <span className={`px-1.5 py-0.2 rounded-md text-[10px] font-semibold border ${
+                            <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
                               result.category === 'mockErrors'
                                 ? 'bg-rose-50 text-rose-700 border-rose-200'
                                 : 'bg-blue-50 text-blue-700 border-blue-200'
                             }`}>
                               {result.category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
                             </span>
-                            <span className={`px-1.5 py-0.2 rounded-md text-[10px] font-semibold border ${
+                            <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
                               result.mode === 'mock'
                                 ? 'bg-amber-50 text-amber-700 border-amber-200'
                                 : 'bg-slate-100 text-slate-700 border-slate-200'
@@ -421,40 +445,42 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                               {result.mode === 'mock' ? 'Mock Test' : 'Practice Drill'}
                             </span>
                           </div>
+
                           <h4 className="text-xs font-bold text-slate-900 truncate" title={result.chapter_title}>
                             {result.chapter_title}
                           </h4>
-                          <p className="text-[10px] text-slate-400 font-medium mt-0.5">
+                          <p className="text-[10px] text-slate-400 font-medium mt-0.5 font-mono">
                             {formatAttemptDate(result.completedAt)}
                           </p>
                         </div>
                       </div>
 
-                      <div className="flex flex-wrap items-center justify-between lg:justify-end gap-2.5 sm:gap-4 border-t lg:border-t-0 pt-2 lg:pt-0 border-slate-100">
+                      {/* Stat Numbers & Actions */}
+                      <div className="flex flex-wrap items-center justify-between lg:justify-end gap-3 sm:gap-4 border-t lg:border-t-0 pt-2 lg:pt-0 border-slate-100">
                         <div className="text-left sm:text-right min-w-[55px]">
-                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Score</div>
-                          <div className="text-xs font-bold text-slate-900">
+                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider font-mono">Score</div>
+                          <div className="text-xs font-bold text-slate-900 font-mono">
                             {result.score}/{result.totalQuestions}
                           </div>
                         </div>
 
                         <div className="text-left sm:text-right min-w-[55px]">
-                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Avg/Q</div>
-                          <div className="text-xs font-bold text-orange-600">
-                            {avgQ}s
+                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider font-mono">Pacing</div>
+                          <div className="text-xs font-bold text-orange-600 font-mono">
+                            {avgQ}s/Q
                           </div>
                         </div>
 
                         <div className="text-left sm:text-right min-w-[65px]">
-                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Time</div>
-                          <div className="text-xs font-bold text-slate-700">
+                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider font-mono">Duration</div>
+                          <div className="text-xs font-bold text-slate-700 font-mono">
                             {Math.floor(result.totalTime / 60)}m {result.totalTime % 60}s
                           </div>
                         </div>
 
                         <div className="text-left sm:text-right min-w-[60px]">
-                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">Accuracy</div>
-                          <div className={`inline-flex items-center px-1.5 py-0.2 rounded-md text-xs font-bold border ${
+                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider font-mono">Accuracy</div>
+                          <div className={`inline-flex items-center px-1.5 py-0.5 rounded text-xs font-bold border font-mono ${
                             accuracyRate >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
                             accuracyRate >= 50 ? 'bg-amber-50 text-amber-700 border-amber-200' :
                             'bg-rose-50 text-rose-700 border-rose-200'
@@ -463,26 +489,30 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                           </div>
                         </div>
 
+                        {/* Actions */}
                         <div className="flex items-center gap-1.5">
                           <button
+                            type="button"
                             onClick={() => onOpenReview(result)}
-                            className="px-2.5 py-1.5 rounded-lg font-bold text-xs bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                            className="px-2.5 py-1 rounded-lg font-bold text-xs bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs flex items-center gap-1 cursor-pointer active:scale-95"
                             title="Review questions & solutions"
                           >
-                            <BookOpen className="w-3.5 h-3.5" />
+                            <BookOpen className="w-3 h-3" />
                             <span>Review</span>
                           </button>
                           <button
+                            type="button"
                             onClick={() => onReattempt(result)}
-                            className="p-1.5 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-xs flex items-center justify-center cursor-pointer"
+                            className="p-1.5 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-600 text-emerald-600 hover:text-white transition-all shadow-xs border border-emerald-200 flex items-center justify-center cursor-pointer"
                             title="Reattempt this quiz"
                           >
                             <RotateCcw className="w-3.5 h-3.5" />
                           </button>
                           {result.id && (
                             <button
+                              type="button"
                               onClick={() => onDeleteResult(result.id)}
-                              className="p-1.5 rounded-lg bg-slate-100 hover:bg-rose-600 text-slate-400 hover:text-white font-bold transition-all shadow-xs flex items-center justify-center"
+                              className="p-1.5 rounded-lg bg-slate-100 hover:bg-rose-600 text-slate-400 hover:text-white font-bold transition-all shadow-xs flex items-center justify-center cursor-pointer"
                               title="Delete this attempt"
                             >
                               <Trash2 className="w-3.5 h-3.5" />
@@ -495,6 +525,21 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                 })}
               </div>
             )}
+          </div>
+
+          {/* ========================================================= */}
+          {/* ADVISORY FOOTER STRIP                                     */}
+          {/* ========================================================= */}
+          <div className="bg-white rounded-xl p-3 border border-slate-200/90 shadow-xs flex items-center justify-between gap-3 text-xs text-slate-500">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span className="leading-snug">
+                <strong className="text-slate-800">SSC CGL Benchmark:</strong> Aim for ≥80% accuracy with an average pace under 50 seconds per question to maximize Tier-1 qualification rank.
+              </span>
+            </div>
+            <span className="text-[11px] font-mono text-slate-400 shrink-0 hidden sm:inline">
+              {filteredUserResults.length} records indexed
+            </span>
           </div>
         </div>
       )}

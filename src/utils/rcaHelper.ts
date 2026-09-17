@@ -27,8 +27,8 @@ export const RCA_TAG_CONFIG: Record<RCATagType | 'unclassified', RCABucketInfo> 
     lightClass: 'bg-purple-50 text-purple-700 border-purple-200',
     borderClass: 'border-purple-500/40 hover:border-purple-500'
   },
-  A: {
-    tag: 'A',
+  S: {
+    tag: 'S',
     label: 'Silly Mistake',
     shortLabel: 'Silly',
     desc: 'Calculation slip, misread question, or rushed input.',
@@ -99,10 +99,12 @@ export async function loadBundledMockRcaMap(): Promise<Record<string, RCAClassif
         const list = Array.isArray(raw) ? raw : (raw?.questions || raw?.data || []);
         if (Array.isArray(list)) {
           list.forEach((q: any) => {
-            if (q.rca && q.rca.tag && ['C', 'A', 'T', 'G'].includes(q.rca.tag)) {
-              if (q.id) map[q.id] = q.rca;
+            if (q.rca && q.rca.tag && ['C', 'A', 'S', 'T', 'G'].includes(q.rca.tag)) {
+              const tag = q.rca.tag === 'A' ? 'S' : q.rca.tag;
+              const normalized = { ...q.rca, tag };
+              if (q.id) map[q.id] = normalized;
               const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
-              if (textNorm) map[textNorm] = q.rca;
+              if (textNorm) map[textNorm] = normalized;
             }
           });
         }
@@ -119,32 +121,39 @@ export function getBundledMockRcaMapSync(): Record<string, RCAClassification> {
   return bundledRcaCache || {};
 }
 
+function normalizeClassification(rca: any): RCAClassification | undefined {
+  if (!rca || !rca.tag) return undefined;
+  const tag = rca.tag === 'A' ? 'S' : rca.tag;
+  if (!['C', 'S', 'T', 'G'].includes(tag)) return undefined;
+  return { ...rca, tag };
+}
+
 export function findQuestionRca(
   q: any,
   globalStore?: Record<string, any>,
   bundledMap?: Record<string, RCAClassification>
 ): RCAClassification | undefined {
-  if (q.rca && q.rca.tag && ['C', 'A', 'T', 'G'].includes(q.rca.tag)) {
-    return q.rca;
+  if (q.rca && q.rca.tag && ['C', 'A', 'S', 'T', 'G'].includes(q.rca.tag)) {
+    return normalizeClassification(q.rca);
   }
-  if (q.rcaClassification && q.rcaClassification.tag && ['C', 'A', 'T', 'G'].includes(q.rcaClassification.tag)) {
-    return q.rcaClassification;
+  if (q.rcaClassification && q.rcaClassification.tag && ['C', 'A', 'S', 'T', 'G'].includes(q.rcaClassification.tag)) {
+    return normalizeClassification(q.rcaClassification);
   }
 
   const store = globalStore || getGlobalRcaStore();
-  if (q.id && store[q.id]?.tag && ['C', 'A', 'T', 'G'].includes(store[q.id].tag)) {
-    return store[q.id];
+  if (q.id && store[q.id]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[q.id].tag)) {
+    return normalizeClassification(store[q.id]);
   }
 
   const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
-  if (textNorm && store[textNorm]?.tag && ['C', 'A', 'T', 'G'].includes(store[textNorm].tag)) {
-    return store[textNorm];
+  if (textNorm && store[textNorm]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[textNorm].tag)) {
+    return normalizeClassification(store[textNorm]);
   }
 
   const bMap = bundledMap || bundledRcaCache;
   if (bMap) {
-    if (q.id && bMap[q.id]) return bMap[q.id];
-    if (textNorm && bMap[textNorm]) return bMap[textNorm];
+    if (q.id && bMap[q.id]) return normalizeClassification(bMap[q.id]);
+    if (textNorm && bMap[textNorm]) return normalizeClassification(bMap[textNorm]);
   }
 
   return undefined;
@@ -171,17 +180,20 @@ export function saveQuestionRca(
       return undefined;
     }
 
+    // Map 'A' to 'S' if passed
+    const effectiveTag: RCATagType = (tag as any) === 'A' ? 'S' : tag;
+
     const tagNames: Record<RCATagType, RCAClassification['tagName']> = {
       'C': 'Conceptual Gap',
-      'A': 'Silly Mistake',
+      'S': 'Silly Mistake',
       'T': 'Time / Ego Trap',
       'G': 'Guesswork Failed'
     };
 
     const newRca: RCAClassification = {
-      tag,
-      tagName: tagNames[tag],
-      sillyMistakeNote: tag === 'A' ? (sillyMistakeNote || targetQ.sillyMistakeNote || '') : undefined,
+      tag: effectiveTag,
+      tagName: tagNames[effectiveTag],
+      sillyMistakeNote: effectiveTag === 'S' ? (sillyMistakeNote || targetQ.sillyMistakeNote || '') : undefined,
       classifiedAt: new Date().toISOString()
     };
 
