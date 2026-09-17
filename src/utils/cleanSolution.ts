@@ -12,8 +12,20 @@ import { reconstructScrapedMath, reconstructScrapedSolutionMath, wrapUnwrappedFr
 export function cleanSolutionText(sol: string = ''): string {
   if (!sol) return '';
 
-  // 1. Wrap unwrapped \frac formulas before extracting math placeholders
-  let s = wrapUnwrappedFractions(String(sol));
+  // 1. Strip residual HTML tags and partial tag artifacts from scraper output
+  // e.g. "<p>Given:" → "Given:", "p>Given:" → "Given:", "<br/>" → "\n"
+  let s = String(sol)
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[a-zA-Z][^>]*>/g, '')   // Remove opening tags like <p>, <span class="...">
+    .replace(/<\/[a-zA-Z]+>/g, '')     // Remove closing tags like </p>, </span>
+    .replace(/\bp>/gi, '')             // Remove partial "p>" artifacts (unbalanced scraper tag)
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ');
+
+  // 1b. Wrap unwrapped \frac formulas before extracting math placeholders
+  s = wrapUnwrappedFractions(s);
 
   // 2. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
   const mathPlaceholders: string[] = [];
@@ -37,6 +49,14 @@ export function cleanSolutionText(sol: string = ''): string {
 
   // 4. Reconstruct vertical scraped MathML before line collapsing
   s = reconstructScrapedSolutionMath(s);
+
+  // 4b. Normalize plain-text unit exponents (e.g. cm^2 -> cm², m^3 -> m³)
+  // Mirrors the same fix in formatQuestionText.ts — only targets known measurement units
+  s = s
+    .replace(/\b(cm|mm|km|sq\.?|cu\.?)\^2\b/g, '$1²')
+    .replace(/\b(cm|mm|km|sq\.?|cu\.?)\^3\b/g, '$1³')
+    .replace(/\b(m)\^2\b(?!\w)/g, 'm²')
+    .replace(/\b(m)\^3\b(?!\w)/g, 'm³');
 
   // 5. Purge diagram artifacts scraped from visual Testbook infographics
   s = purgeScrapedDiagramArtifacts(s);

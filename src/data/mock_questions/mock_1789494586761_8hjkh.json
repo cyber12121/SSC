@@ -862,7 +862,7 @@
       "C": "7",
       "D": "6"
     },
-    "solution": "Solution\n\nGiven:\nCondition 1: Numerator increased by 2 and denominator multiplied by 2 =\n1\n2\n1 / 2\n\nCondition 2: Numerator multiplied by 2 and denominator increased by 2 =\n6\n7\n6 / 7\n\nFormula used:\nOriginal Fraction =\nx\ny\nx\ny\n\nSum = x + y\n\nCalculation:\n⇒\nx+2\n2y = 1\n2\nx\n+\n2\n2\ny = 1 / 2\n⇒ 2 × (x + 2) = 2y\n⇒ y = x + 2\n⇒\n2x\ny+2 = 6\n7\n2\nx\ny\n+\n2 = 6 / 7\n⇒ 14x = 6 × (y + 2)\n⇒ 7x = 3y + 6\n⇒ 7x = 3 × (x + 2) + 6\n⇒ 7x = 3x + 6 + 6\n⇒ 4x = 12\n⇒ x = 3\n⇒ y = 3 + 2 = 5\n⇒ Original Fraction =\n3\n5\n3 / 5\n\n⇒ Sum = 3 + 5 = 8\n∴ The correct answer is option (2).",
+    "solution": "Solution\n\nGiven:\nCondition 1: Numerator increased by 2 and denominator multiplied by 2 = 1/2\n\nCondition 2: Numerator multiplied by 2 and denominator increased by 2 = 6/7\n\nFormula used:\nOriginal Fraction = x/y\n\nSum = x + y\n\nCalculation:\n⇒ (x + 2) / 2y = 1/2\n⇒ 2 × (x + 2) = 2y\n⇒ y = x + 2\n⇒ 2x / (y + 2) = 6/7\n⇒ 14x = 6 × (y + 2)\n⇒ 7x = 3y + 6\n⇒ 7x = 3 × (x + 2) + 6\n⇒ 7x = 3x + 6 + 6\n⇒ 4x = 12\n⇒ x = 3\n⇒ y = 3 + 2 = 5\n⇒ Original Fraction = 3/5\n\n⇒ Sum = 3 + 5 = 8\n∴ The correct answer is option (2).",
     "topic": "Simplification",
     "subtopic": "Linear Equations with Fractions",
     "conceptTested": "Formulating simultaneous linear equations from word problems involving numerators and denominators.",

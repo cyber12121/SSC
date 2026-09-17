@@ -15,9 +15,27 @@
 export function normalizeUnicodeMath(text: string = ''): string {
   if (!text) return '';
 
+  // 0. Protect Unicode superscript digits & letters from NFKD decomposition.
+  // NFKD maps ² → 2, ³ → 3, ¹ → 1, ⁶ → 6, etc. (compatibility decomposition),
+  // which would destroy already-correct superscript formatting in solution text.
+  // We swap them to private-use placeholders before NFKD and restore after.
+  const supMap: Array<[string, string]> = [
+    ['⁰', '\uE000'], ['¹', '\uE001'], ['²', '\uE002'], ['³', '\uE003'],
+    ['⁴', '\uE004'], ['⁵', '\uE005'], ['⁶', '\uE006'], ['⁷', '\uE007'],
+    ['⁸', '\uE008'], ['⁹', '\uE009'], ['ⁿ', '\uE00A'], ['ⁱ', '\uE00B'],
+    ['₀', '\uE010'], ['₁', '\uE011'], ['₂', '\uE012'], ['₃', '\uE013'],
+    ['₄', '\uE014'], ['₅', '\uE015'], ['₆', '\uE016'], ['₇', '\uE017'],
+    ['₈', '\uE018'], ['₉', '\uE019'],
+  ];
+  let s = text;
+  for (const [sup, ph] of supMap) s = s.split(sup).join(ph);
+
   // 1. NFKD normalization decomposes mathematical alphanumeric bold/italic letters
   // e.g. 𝑃 (U+1D443) -> P, 𝐴 (U+1D434) -> A, 𝑅 (U+1D445) -> R, 𝑛 (U+1D45B) -> n, etc.
-  let s = text.normalize('NFKD');
+  s = s.normalize('NFKD');
+
+  // Restore protected superscript/subscript characters
+  for (const [sup, ph] of supMap) s = s.split(ph).join(sup);
 
   // 2. Normalize Greek math italics and special symbols that may not decompose cleanly
   const specialMap: Record<string, string> = {
@@ -37,8 +55,13 @@ export function normalizeUnicodeMath(text: string = ''): string {
 
   s = s.replace(/[\u{1D400}-\u{1D7FF}−–—]/gu, (ch) => specialMap[ch] || ch);
 
+  // 3. Decode unescaped form feed \x0c (ASCII 12) from JSON \f escapes followed by 'rac' -> \frac
+  s = s.replace(/[\x0c\u000c]rac/g, '\\frac');
+  s = s.replace(/[\x0c\u000c]/g, '\\f');
+
   return s;
 }
+
 
 /**
  * Extracts balanced curly braces starting at a given '{' index.
@@ -114,8 +137,9 @@ export function wrapUnwrappedFractions(rawText: string = ''): string {
 
     result += s.slice(i, fracIdx);
 
-    // Check if preceded by an integer (mixed fraction like "9 \frac{1}{2}" or "16 \frac{2}{3}%")
-    const mixedMatch = /(\b\d+)\s*$/.exec(result);
+    // Check if preceded by a superscript caret '^' or '^{'
+    const isSuperscript = /\^\{?$/.test(result);
+    const mixedMatch = !isSuperscript ? /(\b\d+)\s*$/.exec(result) : null;
     const parsed = parseFraction(s, fracIdx);
 
     if (parsed) {
@@ -127,7 +151,9 @@ export function wrapUnwrappedFractions(rawText: string = ''): string {
         endIndex++;
       }
 
-      if (mixedMatch) {
+      if (isSuperscript) {
+        result += `${parsed.fullMatch}${suffix}`;
+      } else if (mixedMatch) {
         result = result.slice(0, result.length - mixedMatch[0].length);
         result += `$${mixedMatch[1]} ${parsed.fullMatch}${suffix}$`;
       } else {
@@ -212,12 +238,6 @@ export function reconstructScrapedMath(rawText: string = ''): string {
   // e.g. "12\n100\n×\n1\n3" -> "12 / 100 × 1 / 3"
   s = s.replace(/(\d+(?:\.\d+)?)\s*\n+\s*(\d+(?:\.\d+)?)\s*\n+\s*([×÷\+\-\*=])\s*\n+\s*(\d+(?:\.\d+)?)\s*\n+\s*(\d+(?:\.\d+)?)/g, '$1 / $2 $3 $4 / $5');
   s = s.replace(/(\d+(?:\.\d+)?)\s*\n+\s*(\d+(?:\.\d+)?)\s*\n+\s*([×÷\+\-\*=])\s*\n+\s*(\d+(?:\.\d+)?)/g, '$1 / $2 $3 $4');
-
-  // Vertical fractions before commas or text words:
-  // e.g. "6\n5\n, so" -> "6 / 5, so"
-  // e.g. "1\n6\n, so" -> "1 / 6, so"
-  // e.g. "7\n6\n\n" -> "7 / 6\n\n"
-  s = s.replace(/(\b\d+)\s*\n+\s*(\d+)\s*(?=[,\.]\s*(?:so|gives|then|where|\b)|\n\n|$)/gi, '$1 / $2');
 
   // 6. Reassemble vertical parentheses & powers:
   // e.g. "(\n1.12\n)\n2" -> "(1.12)²"
@@ -328,6 +348,26 @@ export function reconstructScrapedSolutionMath(rawText: string = ''): string {
     return placeholder;
   });
 
+  // 0. Deduplicate vertical+text fraction artifacts:
+  // Testbook scraper emits both MathML vertical form AND a text fallback for the same fraction.
+  // e.g. "1\n2\n1 / 2" → "1 / 2" (vertical 1\n2 is the MathML form, "1 / 2" is text form)
+  // e.g. "6\n7\n6 / 7" → "6 / 7"
+  // e.g. "x\ny\nx\ny" → "x / y" (algebraic fraction duplicate)
+  // Pattern: numA\ndenA\nnumA / denA → numA / denA (keep text form)
+  s = s.replace(/\b(\d+)\s*\n\s*(\d+)\s*\n\s*\1\s*\/\s*\2\b/g, '$1 / $2');
+  // Same for algebraic: e.g. "x+2\n2y\nx+2 / 2y" → "x+2 / 2y"
+  s = s.replace(/([a-zA-Z0-9+\-]+)\s*\n\s*([a-zA-Z0-9+\-]+)\s*\n\s*\1\s*\/\s*\2\b/g, '$1 / $2');
+  // Duplicate single variable pair: "x\ny\nx\ny" → "x / y"
+  s = s.replace(/\b([a-zA-Z])\s*\n\s*([a-zA-Z])\s*\n\s*\1\s*\n\s*\2\s*(?=\n|$)/g, '$1 / $2');
+
+  // Remove duplicate equation lines where the same expression appears twice back-to-back
+  // e.g. "x+2\n2y = 1\n2\nx\n+\n2\n2\ny = 1 / 2" → "x+2 / 2y = 1 / 2"
+  // These are compound lines that appear as text fragments followed by split MathML
+  // Handle vertical fraction headers followed by their repeated text split form:
+  // "(\n6.25\n)\n1\n/\n2\n×\n(\n0.0144\n)\n1\n/\n2\n+\n1" style (fully vertical MathML)
+  // We collapse: ( \n val \n ) \n num \n / \n den → (val)^(num/den)
+  s = s.replace(/\(\s*\n\s*([0-9.]+)\s*\n\s*\)\s*\n\s*(\d+)\s*\n\s*\/\s*\n\s*(\d+)/g, '($1)^($2/$3)');
+
   // 1. Broken recurring decimals with combining overline (macron):
   // e.g. "0.\n̄\n29" -> "0.29̄", "÷0.3\n̄\n2" -> "÷0.32̄", "0.\n̄\nab" -> "0.ab̄"
   s = s.replace(/([0-9a-zA-Z]*\.[0-9a-zA-Z]*)\s*\n+\s*[\u0304\u0305\u00AF̄¯]\s*\n+\s*([a-zA-Z0-9]+)/g, (_, prefix, barPart) => `${prefix}${barPart}̄`);
@@ -345,7 +385,7 @@ export function reconstructScrapedSolutionMath(rawText: string = ''): string {
   // 4. Equations ending with numerator followed by standalone denominator:
   // e.g. "0.ab̄ = ab\n\n99" -> "0.ab̄ = ab / 99"
   // e.g. ", 0.ab̄ = ab-a\n\n90" -> ", 0.ab̄ = (ab - a) / 90"
-  s = s.replace(/(=|is)\s*([a-zA-Z0-9_\-]+)\s*\n+\s*([1-9]\d*\b)(?!\s*[\/\.])/g, (_, eq, num, den) => {
+  s = s.replace(/(=|is)\s*([a-zA-Z0-9_\-]+)\s*\n+\s*([1-9]\d*)\s*(?=\n|$)/g, (_, eq, num, den) => {
     if (num.includes('-') || num.includes('+')) {
       return `${eq} (${num}) / ${den}`;
     }
@@ -446,6 +486,9 @@ export function reconstructScrapedSolutionMath(rawText: string = ''): string {
 
   s = stitched.join('\n\n');
 
+  // Clean up algebraic powers and units (e.g. x2 -> x², y2 -> y², cm3 -> cm³) in solutions
+  s = cleanAlgebraPowers(s);
+
   // Restore preserved math blocks safely
   mathPlaceholders.forEach((math, idx) => {
     s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
@@ -466,7 +509,10 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   if (!latex) return '';
   let s = latex.trim();
 
-  // 1. Fix corrupted \left / \right
+  // 1. Fix corrupted \left / \right and form-feed corrupted \frac
+  s = s.replace(/[\x0c\u000c]rac/g, '\\frac');
+  s = s.replace(/[\x0c\u000c]/g, '\\f');
+  s = s.replace(/\{?\$+([^$]+)\$+\}?/g, '$1');
   s = s.replace(/≤ft\b/g, '\\left');
   s = s.replace(/\\le\s*ft\b/g, '\\left');
 
@@ -509,6 +555,38 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   // 6. Common scraper math artifacts: \rm with nothing or empty text
   s = s.replace(/\\rm\s*([a-zA-Z0-9]+)/g, '\\mathrm{$1}');
   s = s.replace(/\\rm\b/g, '');
+
+  return s;
+}
+
+/**
+ * Normalizes algebraic exponents and scientific units in solution text:
+ * - x2 -> x², y2 -> y², x3 -> x³, y3 -> y³, a2 -> a², b2 -> b², 250x3 -> 250x³
+ * - cm3 -> cm³, cm2 -> cm², m3 -> m³, m2 -> m²
+ * - x1/3 -> x^(1/3)
+ */
+export function cleanAlgebraPowers(text: string = ''): string {
+  if (!text) return '';
+  let s = text;
+
+  // 1. Scientific and measurement units: cm3 -> cm³, cm2 -> cm², etc.
+  s = s.replace(/\b(cm|m|mm|km|ft|in)3\b/g, '$1³');
+  s = s.replace(/\b(cm|m|mm|km|ft|in)2\b/g, '$1²');
+
+  // 2. Fractional exponents: x1/3 -> x^(1/3), (xyz)1/3 -> (xyz)^(1/3)
+  s = s.replace(/([a-zA-Z]|\))\s*1\/3\b/g, '$1^(1/3)');
+
+  // 3. Variables followed by 2 or 3 in algebraic expressions:
+  // e.g. a2 -> a², 3b2 -> 3b², 25x2 -> 25x², 27y2 -> 27y², 250x3 -> 250x³, 270xy2 -> 270xy²
+  // e.g. Cx3 -> Cx³, Dxy2 -> Dxy², 2A3 -> 2A³, 6AB2 -> 6AB², 125x3 -> 125x³, 9y2 -> 9y²
+  // e.g. r3 -> r³, l2 -> l²
+  s = s.replace(/([a-zA-Z])([23])(?=[a-zA-Z+\-×*÷/=\s,)\.]|$)/g, (_, v, p) => {
+    return v + (p === '2' ? '²' : '³');
+  });
+
+  // 4. Arithmetic squares inside brackets or square root differences: e.g. 172 - 82 -> 17² - 8²
+  s = s.replace(/(\b\d{1,2})2\s*([+\-])\s*(\b\d{1,2})2/g, '$1² $2 $3²');
+  s = s.replace(/\[\s*(\d{1,2})2\s*([+\-])/g, '[$1² $2');
 
   return s;
 }
