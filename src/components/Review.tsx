@@ -25,7 +25,6 @@ import {
   Trash2,
   Sparkles,
   Target,
-  Download,
   Edit3,
   BookOpen
 } from 'lucide-react';
@@ -374,33 +373,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       nextTokens = [...rawTokens, chipText];
     }
     handleSaveSillyNote(nextTokens.join(', '));
-  };
-
-  const handleExportRcaJson = () => {
-    try {
-      const exportData = items.map((item, idx) => {
-        const q = item.question || ({} as Question);
-        const rca = rcaMap[idx] || item.rca || q.rca;
-        return {
-          ...q,
-          q_num: idx + 1,
-          userAnswer: item.selectedAnswer,
-          isCorrect: item.isCorrect,
-          timeSpent: item.timeSpent,
-          rca: rca || null
-        };
-      });
-
-      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${(result.chapter_title || 'Mock').replace(/\s+/g, '_')}_RCA_Analysis.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-    } catch (e) {
-      console.error('Export failed:', e);
-    }
   };
 
   const handleFinishReview = async () => {
@@ -1503,19 +1475,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             <span>🎯 Classify (RCA):</span>
             <span className="font-extrabold uppercase">{classifyModeEnabled ? 'ON' : 'OFF'}</span>
           </button>
-
-          {/* Export RCA Analysis JSON if classified */}
-          {rcaStats.total > 0 && (
-            <button
-              type="button"
-              onClick={handleExportRcaJson}
-              className="text-[11px] font-semibold px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 flex items-center space-x-1 transition-colors cursor-pointer"
-              title="Export full mock test data with RCA classification tags and silly mistake notes as JSON"
-            >
-              <Download className="w-3 h-3 text-slate-600" />
-              <span className="hidden md:inline">Export RCA ({rcaStats.total})</span>
-            </button>
-          )}
 
           <span className="font-medium text-gray-600 hidden sm:inline">View In</span>
           <select 

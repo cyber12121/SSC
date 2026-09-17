@@ -312,7 +312,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   const handleAnswer = (answer: 'a' | 'b' | 'c' | 'd') => {
-    recordTime();
     setAnswers(prev => {
       const updated = { ...prev };
       if (mode === 'mock' && updated[currentIdx] === answer) {
@@ -395,7 +394,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   const handleSaveAndNext = () => {
-    recordTime();
     // If current question was marked for review, save answer and remove from review
     if (markedRef.current.has(currentIdx)) {
       setMarkedForReview(prev => {
@@ -408,12 +406,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     if (currentIdx < totalQuestions - 1) {
       jumpToQuestion(currentIdx + 1);
     } else {
+      recordTime();
       setShowSubmitModal(true);
     }
   };
 
   const handleMarkAndNext = () => {
-    recordTime();
     setMarkedForReview(prev => {
       const n = new Set(prev);
       n.add(currentIdx);
@@ -423,6 +421,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     if (currentIdx < totalQuestions - 1) {
       jumpToQuestion(currentIdx + 1);
     } else {
+      recordTime();
       setShowSubmitModal(true);
     }
   };
@@ -430,9 +429,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const handleSectionClick = (idx: number) => {
     const sec = sections[idx];
     if (!sec || sec.count === 0) return;
-    recordTime();
-    setActiveSectionIdx(idx);
-    setCurrentIdx(sec.startIndex);
+    jumpToQuestion(sec.startIndex);
   };
 
   const handleSubmitSection = () => {

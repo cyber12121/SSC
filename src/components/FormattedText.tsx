@@ -97,36 +97,37 @@ function renderTextWithTables(text: string, tokenIdx: number) {
   return elements;
 }
 
+const katexHtmlCache = new Map<string, string>();
+
+function getCachedKatexHtml(latex: string, displayMode: boolean): string {
+  const cacheKey = `${displayMode ? 'D:' : 'I:'}${latex}`;
+  const cached = katexHtmlCache.get(cacheKey);
+  if (cached) return cached;
+
+  const sanitized = sanitizeLatexForKatex(latex);
+  try {
+    const html = katex.renderToString(sanitized, {
+      throwOnError: false,
+      displayMode,
+    });
+    if (katexHtmlCache.size > 2000) {
+      const firstKey = katexHtmlCache.keys().next().value;
+      if (firstKey) katexHtmlCache.delete(firstKey);
+    }
+    katexHtmlCache.set(cacheKey, html);
+    return html;
+  } catch {
+    return '';
+  }
+}
+
 function renderTokenList(tokens: MathToken[]) {
   return tokens.map((token, idx) => {
     if (token.type === 'math') {
-      const sanitized = sanitizeLatexForKatex(token.value);
-      try {
-        const html = katex.renderToString(sanitized, {
-          throwOnError: false,
-          displayMode: Boolean(token.display),
-        });
+      const html = getCachedKatexHtml(token.value, Boolean(token.display));
 
-        // If KaTeX produced an error span, recover with a clean pill
-        if (html.includes('class="katex-error"')) {
-          return (
-            <span
-              key={idx}
-              className="font-mono text-xs px-1.5 py-0.5 mx-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 inline-block align-baseline"
-            >
-              {token.value}
-            </span>
-          );
-        }
-
-        return (
-          <span
-            key={idx}
-            className={token.display ? 'block my-2 overflow-x-auto text-center' : 'inline-block px-0.5 align-baseline'}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        );
-      } catch {
+      // If KaTeX produced an error span or failed, recover with a clean pill
+      if (!html || html.includes('class="katex-error"')) {
         return (
           <span
             key={idx}
@@ -136,6 +137,14 @@ function renderTokenList(tokens: MathToken[]) {
           </span>
         );
       }
+
+      return (
+        <span
+          key={idx}
+          className={token.display ? 'block my-2 overflow-x-auto text-center' : 'inline-block px-0.5 align-baseline'}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      );
     }
 
     return (
@@ -169,28 +178,33 @@ export const FormattedText: React.FC<FormattedTextProps> = React.memo(({
     return tokenizeTextWithMath(localized);
   }, [localized]);
 
+  const renderedContent = useMemo(() => {
+    if (!localized) return null;
+
+    if (parsedQuestion && parsedQuestion.instruction) {
+      const instTokens = tokenizeTextWithMath(parsedQuestion.instruction);
+      const contentTokens = tokenizeTextWithMath(parsedQuestion.content);
+
+      return (
+        <>
+          <div className="font-bold text-slate-900 mb-2 leading-relaxed">
+            {renderTokenList(instTokens)}
+          </div>
+          <div className="text-slate-800 leading-relaxed font-normal">
+            {renderTokenList(contentTokens)}
+          </div>
+        </>
+      );
+    }
+
+    return renderTokenList(tokens);
+  }, [localized, parsedQuestion, tokens]);
+
   if (!localized) return null;
-
-  // If instruction was found in an English or Reasoning question:
-  if (parsedQuestion && parsedQuestion.instruction) {
-    const instTokens = tokenizeTextWithMath(parsedQuestion.instruction);
-    const contentTokens = tokenizeTextWithMath(parsedQuestion.content);
-
-    return (
-      <Component className={className}>
-        <div className="font-bold text-slate-900 mb-2 leading-relaxed">
-          {renderTokenList(instTokens)}
-        </div>
-        <div className="text-slate-800 leading-relaxed font-normal">
-          {renderTokenList(contentTokens)}
-        </div>
-      </Component>
-    );
-  }
 
   return (
     <Component className={className}>
-      {renderTokenList(tokens)}
+      {renderedContent}
     </Component>
   );
 });

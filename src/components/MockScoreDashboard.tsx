@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Trophy,
@@ -6,7 +6,6 @@ import {
   Clock,
   TrendingUp,
   Trash2,
-  Upload,
   ChevronLeft,
   Layers,
   ArrowRight,
@@ -33,9 +32,6 @@ import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle, getDeletedMock
 import { clearCachedData } from '../utils/cache';
 import { openAiWithScope } from '../utils/aiScopeHelper';
 import { AiFocusedQuestion } from '../types/aiScope';
-import { cleanQuestionText } from '../utils/formatQuestionText';
-import { cleanSolutionText } from '../utils/cleanSolution';
-import { normalizeQuestionOptions, normalizeAnswerKey } from '../utils/mathSanitizer';
 
 const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
 const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
@@ -471,7 +467,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const [selectedSectionalSubject, setSelectedSectionalSubject] = useState<'all' | 'Mathematics' | 'Reasoning' | 'English' | 'General Awareness'>('all');
   const [reports, setReports] = useState<MockScoreReport[]>([]);
   const [loading, setLoading] = useState(true);
-  const [uploading, setUploading] = useState(false);
   const [practicingId, setPracticingId] = useState<string | null>(null);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
   const [askingAiId, setAskingAiId] = useState<string | null>(null);
@@ -483,8 +478,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const [practiceErrorFilter, setPracticeErrorFilter] = useState<'all' | 'wrong' | 'unattempted' | 'slow'>('all');
   const [rawQuestionsCache, setRawQuestionsCache] = useState<Record<string, any[]>>({});
   const [loadingQuestions, setLoadingQuestions] = useState(false);
-
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Fetch reports on mount
   useEffect(() => {
@@ -697,107 +690,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     };
   }, [filteredReports, activeTab]);
 
-  // Handle JSON file upload
-  const handleFileUpload = async (file: File) => {
-    setUploading(true);
-    try {
-      const text = await file.text();
-      const parsed = JSON.parse(text);
-      let rawQuestions: any[] = [];
-
-      if (Array.isArray(parsed)) {
-        rawQuestions = parsed;
-      } else if (parsed && typeof parsed === 'object') {
-        if (Array.isArray(parsed.data)) rawQuestions = parsed.data;
-        else if (Array.isArray(parsed.questions)) rawQuestions = parsed.questions;
-        else {
-          const values = Object.values(parsed);
-          if (values.length > 0 && values.every(v => Array.isArray(v))) {
-            rawQuestions = values.flat();
-          }
-        }
-      }
-
-      if (rawQuestions.length === 0) {
-        alert('No valid questions found in this JSON file.');
-        return;
-      }
-
-      const fileNameClean = file.name.replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
-      const cleanedQuestions = rawQuestions.map(q => {
-        const normOptions = normalizeQuestionOptions(q.options);
-        const qText = cleanQuestionText(q.question || q.questionText || '');
-        const solText = cleanSolutionText(q.solution || '');
-        const answer = normalizeAnswerKey(q.answer || q.correctOption || q.correct_answer || q.correct_option);
-        return {
-          ...q,
-          question: qText,
-          questionText: qText,
-          options: {
-            a: cleanQuestionText(normOptions.a),
-            b: cleanQuestionText(normOptions.b),
-            c: cleanQuestionText(normOptions.c),
-            d: cleanQuestionText(normOptions.d),
-            A: cleanQuestionText(normOptions.a),
-            B: cleanQuestionText(normOptions.b),
-            C: cleanQuestionText(normOptions.c),
-            D: cleanQuestionText(normOptions.d),
-          },
-          answer,
-          correctOption: answer.toUpperCase(),
-          solution: solText,
-        };
-      });
-      const report = computeMockScoreClientSide(cleanedQuestions, fileNameClean);
-
-      // Save question dataset to backend
-      try {
-        await fetch(`/api/mock-questions/${report.id}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(cleanedQuestions)
-        });
-      } catch {}
-
-      // Save question dataset to localStorage as fallback
-      try {
-        safeStorage.setItem(`cgl_mock_questions_${report.id}`, JSON.stringify(cleanedQuestions));
-      } catch {}
-
-      // Try persisting to backend API
-      try {
-        await fetch('/api/mock-reports', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(report)
-        });
-      } catch {}
-
-      // Trigger background AI enrichment & error extraction (matrix questions sent to AI)
-      try {
-        fetch('/api/mock-import', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            id: report.id,
-            title: report.title,
-            platform: report.platform,
-            questions: rawQuestions
-          })
-        }).catch(e => console.warn('AI mock import note:', e));
-      } catch {}
-
-      const updated = [report, ...reports];
-      saveReports(updated);
-      setActiveTab(report.type);
-    } catch (err: any) {
-      console.error('Failed to parse mock JSON:', err);
-      alert('Failed to parse mock JSON file: ' + (err.message || 'Invalid format'));
-    } finally {
-      setUploading(false);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-    }
-  };
 
   // ─── SECTION-WISE MOCK ERROR QUESTION LOADER ───
   const loadRawMockQuestions = async (report: MockScoreReport): Promise<any[]> => {
@@ -1813,24 +1705,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               <span>Sectional (25 Qs)</span>
             </button>
           </div>
-
-          {/* Upload JSON Button */}
-          <input
-            type="file"
-            ref={fileInputRef}
-            onChange={(e) => e.target.files?.[0] && handleFileUpload(e.target.files[0])}
-            accept=".json"
-            className="hidden"
-          />
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            disabled={uploading}
-            className="flex items-center gap-1 px-2.5 py-0.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-[11px] font-semibold transition-all shadow-xs disabled:opacity-50"
-            title="Import Oliveboard/Testbook JSON to view scores"
-          >
-            <Upload className="w-3 h-3" />
-            <span>{uploading ? 'Processing...' : 'Upload Mock'}</span>
-          </button>
         </div>
       </div>
 
@@ -1896,17 +1770,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             </h3>
             <p className="text-[11px] text-slate-500 mt-0.5 max-w-sm mx-auto">
               {activeTab === 'sectional' && selectedSectionalSubject !== 'all'
-                ? `No ${selectedSectionalSubject} sectional mock tests found. Upload a test or switch subject tabs.`
-                : 'Upload your Oliveboard or Testbook JSON mock capture to instantly see your total marks, accuracy, and subject breakdowns.'}
+                ? `No ${selectedSectionalSubject} sectional mock tests found.`
+                : 'No mock tests found for this filter.'}
             </p>
           </div>
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold transition-all shadow-xs cursor-pointer"
-          >
-            <Upload className="w-3.5 h-3.5" />
-            <span>Select Mock JSON File</span>
-          </button>
         </div>
       ) : (
         <>
