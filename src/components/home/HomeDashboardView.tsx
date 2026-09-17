@@ -40,7 +40,7 @@ interface HomeDashboardViewProps {
   setSelectedMathSection: (sec: any) => void;
   setSelectedEnglishSection: (sec: any) => void;
   setSelectedTopic: (topic: string | null) => void;
-  setView: (view: 'home' | 'dashboard' | 'bookmarks' | 'mockScores' | 'heatmap' | 'drill') => void;
+  setView: (view: 'home' | 'dashboard' | 'bookmarks' | 'mockScores' | 'drill') => void;
   handleClearAllResults: () => void;
   openReview: (result: QuizResult, fromView: string) => void;
   handleAskAiSubject: (subject: string) => void;
@@ -275,31 +275,6 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
           </div>
           <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-amber-600">
             <span>Open Studio</span>
-            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-          </div>
-        </div>
-
-        {/* Error Heatmap */}
-        <div 
-          onClick={() => setView('heatmap')}
-          className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-red-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
-        >
-          <div className="flex items-start justify-between">
-            <div className="w-7 h-7 rounded-lg bg-red-50 text-red-600 flex items-center justify-center border border-red-100 group-hover:scale-105 transition-transform">
-              <Flame className="w-3.5 h-3.5 fill-red-500/20 text-red-600" />
-            </div>
-            <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-red-50 text-red-700 border border-red-200">
-              Weak Spot Matrix
-            </span>
-          </div>
-          <div className="mt-2">
-            <h4 className="text-xs font-bold text-slate-900 group-hover:text-red-700 transition-colors">Error Pattern Heatmap</h4>
-            <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
-              Analyze wrong answers, negative marks, and speed bottlenecks across mock tests.
-            </p>
-          </div>
-          <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-red-600">
-            <span>Analyze Errors</span>
             <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </div>
         </div>

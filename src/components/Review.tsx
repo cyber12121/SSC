@@ -11,6 +11,7 @@ import {
   Zap, 
   ChevronRight, 
   ChevronLeft, 
+  ChevronDown, 
   Filter, 
   User, 
   RotateCcw, 
@@ -82,9 +83,20 @@ interface ReviewViewProps {
   onBookmarkToggle?: (question: Question) => void;
   onViewAnalytics?: () => void;
   onDeleteQuestion?: (question: Question) => Promise<void> | void;
+  onReattemptQuestions?: (title: string, questions: Question[]) => void;
 }
 
-type FilterType = 'all' | 'correct' | 'incorrect' | 'unattempted';
+type FilterType = 
+  | 'all' 
+  | 'correct' 
+  | 'slow' 
+  | 'incorrect' 
+  | 'unattempted' 
+  | 'needs_rca' 
+  | 'rca_c' 
+  | 'rca_a' 
+  | 'rca_t' 
+  | 'rca_g';
 type LanguageType = 'English' | 'Hindi' | 'Bilingual';
 
 export const ReviewView: React.FC<ReviewViewProps> = ({ 
@@ -95,7 +107,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   bookmarkedIds = new Set(),
   onBookmarkToggle,
   onViewAnalytics,
-  onDeleteQuestion
+  onDeleteQuestion,
+  onReattemptQuestions
 }) => {
   const [items, setItems] = useState<QuestionProgress[]>(() => result.questionDetails || []);
 
@@ -110,6 +123,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedFilter, setSelectedFilter] = useState<FilterType>('all');
   const [showFilterMenu, setShowFilterMenu] = useState(false);
+  const [showReattemptMenu, setShowReattemptMenu] = useState(false);
   const [language, setLanguage] = useState<LanguageType>('English');
   const [showQuestionPaper, setShowQuestionPaper] = useState(false);
   const [showSummaryModal, setShowSummaryModal] = useState(false);
@@ -346,6 +360,20 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
       persistRcaUpdate(updated, currentIdx, updatedRca, false);
     }
+  };
+
+  const handleToggleSillyChip = (chipText: string) => {
+    const rawTokens = activeSillyNote
+      ? activeSillyNote.split(',').map(s => s.trim()).filter(Boolean)
+      : [];
+    const exists = rawTokens.some(t => t.toLowerCase() === chipText.toLowerCase());
+    let nextTokens: string[];
+    if (exists) {
+      nextTokens = rawTokens.filter(t => t.toLowerCase() !== chipText.toLowerCase());
+    } else {
+      nextTokens = [...rawTokens, chipText];
+    }
+    handleSaveSillyNote(nextTokens.join(', '));
   };
 
   const handleExportRcaJson = () => {
@@ -941,6 +969,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const sectionWrongCount = activeIndices.filter(idx => getQuestionStatus(idx) === 'wrong').length;
   const sectionUnattemptedCount = sectionQuestionsCount - sectionCorrectCount - sectionSlowCount - sectionWrongCount;
 
+  // RCA specific stats
+  const sectionNeedsRcaCount = activeIndices.filter(idx => {
+    const st = getQuestionStatus(idx);
+    const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
+    return (st === 'wrong' || st === 'slow' || st === 'unattempted') && !qRca;
+  }).length;
+  const overallNeedsRcaCount = items.filter((_, idx) => {
+    const st = getQuestionStatus(idx);
+    const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
+    return (st === 'wrong' || st === 'slow' || st === 'unattempted') && !qRca;
+  }).length;
+
   // Speed evaluation
   const getSpeedType = (timeSpent: number = 0, isCorrect: boolean) => {
     if (timeSpent <= 20 && isCorrect) return 'superfast';
@@ -971,12 +1011,60 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const filteredIndices = activeIndices.filter(idx => {
     if (selectedFilter === 'all') return true;
     const status = getQuestionStatus(idx);
+    const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
     if (selectedFilter === 'correct') return status === 'correct';
     if (selectedFilter === 'slow') return status === 'slow';
     if (selectedFilter === 'incorrect') return status === 'wrong';
     if (selectedFilter === 'unattempted') return status === 'unattempted';
+    if (selectedFilter === 'needs_rca') return (status === 'wrong' || status === 'slow' || status === 'unattempted') && !qRca;
+    if (selectedFilter === 'rca_c') return qRca?.tag === 'C';
+    if (selectedFilter === 'rca_a') return qRca?.tag === 'A';
+    if (selectedFilter === 'rca_t') return qRca?.tag === 'T';
+    if (selectedFilter === 'rca_g') return qRca?.tag === 'G';
     return true;
   });
+
+  const handleDrillByRca = (tag: 'all_mistakes' | 'A' | 'C' | 'T' | 'G') => {
+    let targetQuestions: Question[] = [];
+    let title = '';
+
+    if (tag === 'all_mistakes') {
+      targetQuestions = items
+        .filter((_, idx) => {
+          const st = getQuestionStatus(idx);
+          return st === 'wrong' || st === 'slow';
+        })
+        .map(it => it.question)
+        .filter((q): q is Question => Boolean(q && q.question));
+      title = `${result.chapter_title} • All Mistakes (${targetQuestions.length} Qs)`;
+    } else {
+      const tagLabels: Record<string, string> = {
+        A: 'Silly Mistakes [A]',
+        C: 'Conceptual Gaps [C]',
+        T: 'Time Traps [T]',
+        G: 'Guesswork [G]'
+      };
+      targetQuestions = items
+        .filter((_, idx) => {
+          const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
+          return qRca?.tag === tag;
+        })
+        .map(it => it.question)
+        .filter((q): q is Question => Boolean(q && q.question));
+      title = `${result.chapter_title} • ${tagLabels[tag]} (${targetQuestions.length} Qs)`;
+    }
+
+    if (targetQuestions.length === 0) {
+      alert(`No questions found for this selection.`);
+      return;
+    }
+
+    if (onReattemptQuestions) {
+      onReattemptQuestions(title, targetQuestions);
+    } else {
+      onReattempt();
+    }
+  };
 
   const handleSectionClick = (secId: string) => {
     setActiveSectionId(secId);
@@ -1274,6 +1362,136 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         </div>
 
         <div className="flex items-center space-x-2 text-xs shrink-0 ml-3">
+          {/* Re-attempt Mistakes Dropdown */}
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setShowReattemptMenu(!showReattemptMenu)}
+              className="text-[11px] font-bold px-2.5 py-1 rounded transition-all flex items-center gap-1.5 cursor-pointer bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white shadow-xs"
+              title="Re-attempt questions by mistake category or RCA tag"
+            >
+              <RotateCcw className="w-3 h-3" />
+              <span>Re-attempt</span>
+              <ChevronDown className="w-3 h-3" />
+            </button>
+
+            {showReattemptMenu && (
+              <div className="absolute right-0 mt-1 w-52 bg-white border border-gray-200 rounded-xl shadow-xl py-1.5 text-xs z-50">
+                <div className="px-3 py-1 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                  By Mistake
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowReattemptMenu(false);
+                    handleDrillByRca('all_mistakes');
+                  }}
+                  disabled={wrongCount + slowCount === 0}
+                  className="w-full text-left px-3 py-1.5 hover:bg-rose-50 flex items-center justify-between text-rose-700 font-bold disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <XCircle className="w-3.5 h-3.5 text-rose-600" />
+                    <span>All Mistakes</span>
+                  </span>
+                  <span className="text-[10px] bg-rose-100 px-1.5 py-0.2 rounded-full font-black">
+                    {wrongCount + slowCount}
+                  </span>
+                </button>
+
+                <div className="my-1 border-t border-gray-100" />
+                <div className="px-3 py-1 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                  By RCA Tag
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowReattemptMenu(false);
+                    handleDrillByRca('A');
+                  }}
+                  disabled={rcaStats.A === 0}
+                  className="w-full text-left px-3 py-1.5 hover:bg-rose-50 flex items-center justify-between text-gray-800 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-4 h-4 rounded-full bg-rose-600 text-white font-mono text-[9px] font-black flex items-center justify-center">A</span>
+                    <span className="font-semibold">Silly Mistakes</span>
+                  </span>
+                  <span className="text-[10px] bg-rose-50 text-rose-800 px-1.5 py-0.2 rounded-full font-bold">
+                    {rcaStats.A}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowReattemptMenu(false);
+                    handleDrillByRca('C');
+                  }}
+                  disabled={rcaStats.C === 0}
+                  className="w-full text-left px-3 py-1.5 hover:bg-purple-50 flex items-center justify-between text-gray-800 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-4 h-4 rounded-full bg-purple-600 text-white font-mono text-[9px] font-black flex items-center justify-center">C</span>
+                    <span className="font-semibold">Conceptual Gaps</span>
+                  </span>
+                  <span className="text-[10px] bg-purple-50 text-purple-800 px-1.5 py-0.2 rounded-full font-bold">
+                    {rcaStats.C}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowReattemptMenu(false);
+                    handleDrillByRca('T');
+                  }}
+                  disabled={rcaStats.T === 0}
+                  className="w-full text-left px-3 py-1.5 hover:bg-amber-50 flex items-center justify-between text-gray-800 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-4 h-4 rounded-full bg-amber-500 text-white font-mono text-[9px] font-black flex items-center justify-center">T</span>
+                    <span className="font-semibold">Time Traps</span>
+                  </span>
+                  <span className="text-[10px] bg-amber-50 text-amber-800 px-1.5 py-0.2 rounded-full font-bold">
+                    {rcaStats.T}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowReattemptMenu(false);
+                    handleDrillByRca('G');
+                  }}
+                  disabled={rcaStats.G === 0}
+                  className="w-full text-left px-3 py-1.5 hover:bg-blue-50 flex items-center justify-between text-gray-800 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-4 h-4 rounded-full bg-blue-600 text-white font-mono text-[9px] font-black flex items-center justify-center">G</span>
+                    <span className="font-semibold">Guesswork</span>
+                  </span>
+                  <span className="text-[10px] bg-blue-50 text-blue-800 px-1.5 py-0.2 rounded-full font-bold">
+                    {rcaStats.G}
+                  </span>
+                </button>
+
+                <div className="my-1 border-t border-gray-100" />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowReattemptMenu(false);
+                    onReattempt();
+                  }}
+                  className="w-full text-left px-3 py-1.5 hover:bg-gray-50 flex items-center justify-between text-gray-600 text-[11px] font-medium cursor-pointer"
+                >
+                  <span>Re-attempt Full Paper</span>
+                  <span>{totalQuestions} Qs</span>
+                </button>
+              </div>
+            )}
+          </div>
+
           {/* Classify RCA Toggle */}
           <button
             type="button"
@@ -1631,7 +1849,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                             </span>
                           </h4>
                           <p className="text-[11px] text-gray-500">
-                            Classify this mistake to reveal traps in Error Heatmap and train Tommy.
+                            Classify this mistake to reveal traps in Mock Errors and train Tommy.
                           </p>
                         </div>
                       </div>
@@ -1781,39 +1999,61 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         <div className="flex items-center justify-between mb-1.5">
                           <label className="text-xs font-bold text-rose-900 flex items-center gap-1.5">
                             <Edit3 className="w-3.5 h-3.5 text-rose-600" />
-                            <span>Describe what went wrong in your silly mistake:</span>
+                            <span>Quick Reason or Custom Note:</span>
                           </label>
-                          <span className="text-[10px] text-rose-600 font-semibold">Auto-saved to mock JSON</span>
+                          <div className="flex items-center gap-2">
+                            {activeSillyNote && (
+                              <button
+                                type="button"
+                                onClick={() => handleSaveSillyNote('')}
+                                className="text-[10px] text-rose-600 hover:text-rose-800 underline font-semibold cursor-pointer"
+                              >
+                                Clear
+                              </button>
+                            )}
+                            <span className="text-[10px] text-rose-500 font-medium">Auto-saved</span>
+                          </div>
                         </div>
                         
-                        {/* 1-click Quick Chips */}
-                        <div className="flex flex-wrap gap-1.5 mb-2">
+                        {/* 1-click Quick Toggle Chips */}
+                        <div className="flex flex-wrap gap-1.5 mb-2.5">
                           {[
-                            'Calculation error (+/-)',
-                            'Misread the question',
-                            'Marked wrong option',
-                            'Rushed under time panic',
-                            'Overlooked "NOT / INCORRECT"',
-                            'Unit conversion missed'
-                          ].map((chip) => (
-                            <button
-                              key={chip}
-                              type="button"
-                              onClick={() => {
-                                const newNote = activeSillyNote ? `${activeSillyNote}, ${chip}` : chip;
-                                handleSaveSillyNote(newNote);
-                              }}
-                              className="text-[10.5px] px-2 py-0.5 rounded-full bg-white hover:bg-rose-100 border border-rose-200 text-rose-800 transition-colors cursor-pointer shadow-2xs"
-                            >
-                              + {chip}
-                            </button>
-                          ))}
+                            { label: 'Calculation error', icon: '🧮' },
+                            { label: 'Misread question / options', icon: '👁️' },
+                            { label: 'Marked wrong option', icon: '🎯' },
+                            { label: 'Rushed under panic', icon: '⏱️' },
+                            { label: 'Overlooked NOT / INCORRECT', icon: '⚠️' },
+                            { label: 'Unit conversion missed', icon: '📐' },
+                            { label: 'Formula slip / Sign error', icon: '⚡' }
+                          ].map((chip) => {
+                            const isSelected = activeSillyNote
+                              .split(',')
+                              .map(s => s.trim().toLowerCase())
+                              .includes(chip.label.toLowerCase());
+
+                            return (
+                              <button
+                                key={chip.label}
+                                type="button"
+                                onClick={() => handleToggleSillyChip(chip.label)}
+                                className={`text-[11px] px-2.5 py-0.5 rounded-full border transition-all cursor-pointer flex items-center gap-1 shadow-2xs ${
+                                  isSelected
+                                    ? 'bg-rose-600 text-white font-bold border-rose-600 shadow-xs scale-102'
+                                    : 'bg-white hover:bg-rose-100 text-rose-800 border-rose-200'
+                                }`}
+                              >
+                                <span>{chip.icon}</span>
+                                <span>{chip.label}</span>
+                                {isSelected && <span className="text-[10px] ml-0.5">✓</span>}
+                              </button>
+                            );
+                          })}
                         </div>
 
                         <textarea
                           value={activeSillyNote}
                           onChange={(e) => handleSaveSillyNote(e.target.value)}
-                          placeholder="e.g. Added 14 instead of 24 in step 2, or read 'diameter' as 'radius'..."
+                          placeholder="Or type custom details: e.g. Added 14 instead of 24 in step 2, forgot to divide by 2..."
                           rows={2}
                           className="w-full text-xs p-2.5 rounded-md border border-rose-300 focus:border-rose-500 focus:ring-1 focus:ring-rose-400 bg-white text-gray-800 placeholder-gray-400 outline-none"
                         />
@@ -1981,7 +2221,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </button>
 
                 {showFilterMenu && (
-                  <div className="absolute right-0 mt-1 w-36 bg-white border border-gray-200 rounded-lg shadow-xl py-1 text-xs z-40">
+                  <div className="absolute right-0 mt-1 w-44 bg-white border border-gray-200 rounded-lg shadow-xl py-1 text-xs z-40">
                     <button
                       onClick={() => { setSelectedFilter('all'); setShowFilterMenu(false); }}
                       className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 ${selectedFilter === 'all' ? 'font-bold text-[#0097a7]' : 'text-gray-700'}`}
@@ -2011,6 +2251,57 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 ${selectedFilter === 'unattempted' ? 'font-bold text-gray-700' : 'text-gray-700'}`}
                     >
                       Unattempted ({unattemptedCount})
+                    </button>
+
+                    <div className="my-1 border-t border-gray-200" />
+                    <div className="px-3 py-1 text-[10px] font-bold text-gray-500 uppercase tracking-wider">
+                      RCA Classification
+                    </div>
+
+                    <button
+                      onClick={() => { setSelectedFilter('needs_rca'); setShowFilterMenu(false); }}
+                      className={`w-full text-left px-3 py-1.5 hover:bg-rose-50 flex items-center justify-between ${
+                        selectedFilter === 'needs_rca' ? 'font-bold text-rose-700 bg-rose-50/70' : 'text-rose-700'
+                      }`}
+                    >
+                      <span>⚠️ Needs RCA</span>
+                      <span className="font-bold text-[11px] bg-rose-100 px-1.5 py-0.2 rounded-full">{overallNeedsRcaCount}</span>
+                    </button>
+                    <button
+                      onClick={() => { setSelectedFilter('rca_c'); setShowFilterMenu(false); }}
+                      className={`w-full text-left px-3 py-1.5 hover:bg-purple-50 flex items-center justify-between ${
+                        selectedFilter === 'rca_c' ? 'font-bold text-purple-700 bg-purple-50/70' : 'text-gray-700'
+                      }`}
+                    >
+                      <span>🟣 [C] Conceptual Gap</span>
+                      <span className="font-bold text-[11px] bg-purple-100 text-purple-800 px-1.5 py-0.2 rounded-full">{rcaStats.C}</span>
+                    </button>
+                    <button
+                      onClick={() => { setSelectedFilter('rca_a'); setShowFilterMenu(false); }}
+                      className={`w-full text-left px-3 py-1.5 hover:bg-rose-50 flex items-center justify-between ${
+                        selectedFilter === 'rca_a' ? 'font-bold text-rose-700 bg-rose-50/70' : 'text-gray-700'
+                      }`}
+                    >
+                      <span>🔴 [A] Silly Mistake</span>
+                      <span className="font-bold text-[11px] bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded-full">{rcaStats.A}</span>
+                    </button>
+                    <button
+                      onClick={() => { setSelectedFilter('rca_t'); setShowFilterMenu(false); }}
+                      className={`w-full text-left px-3 py-1.5 hover:bg-amber-50 flex items-center justify-between ${
+                        selectedFilter === 'rca_t' ? 'font-bold text-amber-700 bg-amber-50/70' : 'text-gray-700'
+                      }`}
+                    >
+                      <span>🟡 [T] Time Trap</span>
+                      <span className="font-bold text-[11px] bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded-full">{rcaStats.T}</span>
+                    </button>
+                    <button
+                      onClick={() => { setSelectedFilter('rca_g'); setShowFilterMenu(false); }}
+                      className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 flex items-center justify-between ${
+                        selectedFilter === 'rca_g' ? 'font-bold text-blue-700 bg-blue-50/70' : 'text-gray-700'
+                      }`}
+                    >
+                      <span>🔵 [G] Guesswork</span>
+                      <span className="font-bold text-[11px] bg-blue-100 text-blue-800 px-1.5 py-0.2 rounded-full">{rcaStats.G}</span>
                     </button>
                   </div>
                 )}
@@ -2094,6 +2385,93 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </span>
             </div>
 
+            {/* RCA Quick Filter Bar */}
+            <div className="px-2.5 py-1.5 bg-white/70 border-b border-blue-200/80 flex items-center gap-1 overflow-x-auto shrink-0 custom-scrollbar text-[10px]">
+              <button
+                type="button"
+                onClick={() => setSelectedFilter('all')}
+                className={`px-2 py-0.5 rounded font-bold transition-all cursor-pointer ${
+                  selectedFilter === 'all'
+                    ? 'bg-[#0097a7] text-white shadow-2xs'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                }`}
+              >
+                All
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter('needs_rca')}
+                className={`px-2 py-0.5 rounded font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                  selectedFilter === 'needs_rca'
+                    ? 'bg-rose-600 text-white shadow-2xs ring-1 ring-rose-400'
+                    : 'bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200'
+                }`}
+                title="Questions that are wrong or slow without an RCA tag"
+              >
+                <span>Needs Tag</span>
+                {sectionNeedsRcaCount > 0 && (
+                  <span className={`px-1 py-0.2 rounded-full text-[9px] font-black ${
+                    selectedFilter === 'needs_rca' ? 'bg-white text-rose-700' : 'bg-rose-200 text-rose-900'
+                  }`}>
+                    {sectionNeedsRcaCount}
+                  </span>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter('rca_c')}
+                className={`px-1.5 py-0.5 rounded font-bold transition-all cursor-pointer ${
+                  selectedFilter === 'rca_c'
+                    ? 'bg-purple-700 text-white shadow-2xs'
+                    : 'bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-200'
+                }`}
+                title="Conceptual Gap [C]"
+              >
+                [C]
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter('rca_a')}
+                className={`px-1.5 py-0.5 rounded font-bold transition-all cursor-pointer ${
+                  selectedFilter === 'rca_a'
+                    ? 'bg-rose-600 text-white shadow-2xs'
+                    : 'bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200'
+                }`}
+                title="Silly Mistake [A]"
+              >
+                [A]
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter('rca_t')}
+                className={`px-1.5 py-0.5 rounded font-bold transition-all cursor-pointer ${
+                  selectedFilter === 'rca_t'
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200'
+                }`}
+                title="Time Trap [T]"
+              >
+                [T]
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter('rca_g')}
+                className={`px-1.5 py-0.5 rounded font-bold transition-all cursor-pointer ${
+                  selectedFilter === 'rca_g'
+                    ? 'bg-blue-600 text-white shadow-2xs'
+                    : 'bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200'
+                }`}
+                title="Guesswork [G]"
+              >
+                [G]
+              </button>
+            </div>
+
             {/* Question Palette Grid (Section-Wise) */}
             <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
               <div className="grid grid-cols-5 gap-2">
@@ -2122,7 +2500,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       }`}
                     >
                       {activeSectionId === 'all' ? idx + 1 : localNumber}
-                      {qRca && (
+                      {qRca ? (
                         <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full text-[9px] font-mono font-black flex items-center justify-center shadow-xs border border-white ${
                           qRca.tag === 'C' ? 'bg-purple-600 text-white' :
                           qRca.tag === 'A' ? 'bg-rose-600 text-white' :
@@ -2131,6 +2509,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         }`}>
                           {qRca.tag}
                         </span>
+                      ) : (status === 'wrong' || status === 'slow') && (
+                        <span
+                          className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 border border-white shadow-2xs animate-pulse"
+                          title="Needs RCA Tag"
+                        />
                       )}
                     </button>
                   );
@@ -2315,6 +2698,87 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   <span className="font-bold text-gray-700">{unattemptedCount}</span>
                 </div>
               </div>
+
+              {/* RCA Classification Breakdown with 1-Click Re-attempt */}
+              {rcaStats.total > 0 && (
+                <div className="border border-purple-200 bg-purple-50/40 rounded-xl p-3.5 space-y-2 text-xs">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-bold text-purple-900 text-xs uppercase tracking-wider flex items-center gap-1.5">
+                      <Target className="w-3.5 h-3.5 text-purple-700" />
+                      <span>RCA Error Breakdown</span>
+                    </h4>
+                    <span className="text-[10px] font-bold bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">
+                      {rcaStats.total} Classified
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-1">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowSummaryModal(false);
+                        handleDrillByRca('A');
+                      }}
+                      disabled={rcaStats.A === 0}
+                      className="p-2 rounded-lg bg-white border border-rose-200 hover:border-rose-400 text-left transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+                    >
+                      <div className="text-[10px] font-bold text-rose-700 flex items-center justify-between">
+                        <span>[A] Silly</span>
+                        <span className="font-black text-xs">{rcaStats.A}</span>
+                      </div>
+                      <span className="text-[9px] text-rose-600 block mt-0.5 font-medium">Re-attempt &rarr;</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowSummaryModal(false);
+                        handleDrillByRca('C');
+                      }}
+                      disabled={rcaStats.C === 0}
+                      className="p-2 rounded-lg bg-white border border-purple-200 hover:border-purple-400 text-left transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+                    >
+                      <div className="text-[10px] font-bold text-purple-700 flex items-center justify-between">
+                        <span>[C] Concept</span>
+                        <span className="font-black text-xs">{rcaStats.C}</span>
+                      </div>
+                      <span className="text-[9px] text-purple-600 block mt-0.5 font-medium">Re-attempt &rarr;</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowSummaryModal(false);
+                        handleDrillByRca('T');
+                      }}
+                      disabled={rcaStats.T === 0}
+                      className="p-2 rounded-lg bg-white border border-amber-200 hover:border-amber-400 text-left transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+                    >
+                      <div className="text-[10px] font-bold text-amber-700 flex items-center justify-between">
+                        <span>[T] Trap</span>
+                        <span className="font-black text-xs">{rcaStats.T}</span>
+                      </div>
+                      <span className="text-[9px] text-amber-600 block mt-0.5 font-medium">Re-attempt &rarr;</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowSummaryModal(false);
+                        handleDrillByRca('G');
+                      }}
+                      disabled={rcaStats.G === 0}
+                      className="p-2 rounded-lg bg-white border border-blue-200 hover:border-blue-400 text-left transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+                    >
+                      <div className="text-[10px] font-bold text-blue-700 flex items-center justify-between">
+                        <span>[G] Guess</span>
+                        <span className="font-black text-xs">{rcaStats.G}</span>
+                      </div>
+                      <span className="text-[9px] text-blue-600 block mt-0.5 font-medium">Re-attempt &rarr;</span>
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="p-4 border-t border-gray-200 bg-gray-50 flex items-center justify-between">

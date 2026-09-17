@@ -26,7 +26,6 @@ interface PerformanceDashboardProps {
   onReattempt: (result: QuizResult) => void;
   onLogin: () => void;
   onNavigateHome: () => void;
-  onNavigateHeatmap: () => void;
 }
 
 export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
@@ -39,7 +38,6 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   onReattempt,
   onLogin,
   onNavigateHome,
-  onNavigateHeatmap,
 }) => {
   const [dashCategoryFilter, setDashCategoryFilter] = useState<'all' | 'chapterBank' | 'mockErrors'>('all');
   const [dashSubjectFilter, setDashSubjectFilter] = useState<string>('all');
@@ -120,12 +118,6 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
             >
               Start Chapter Practice
             </button>
-            <button
-              onClick={onNavigateHeatmap}
-              className="px-8 py-3.5 bg-rose-50 text-rose-600 border border-rose-200 rounded-2xl font-bold hover:bg-rose-100 transition-all"
-            >
-              View Error Heatmap
-            </button>
           </div>
         </div>
       ) : (
@@ -142,13 +134,6 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               </p>
             </div>
             <div className="flex items-center gap-1.5">
-              <button
-                onClick={onNavigateHeatmap}
-                className="px-2.5 py-1 rounded-md bg-rose-50 hover:bg-rose-100 text-rose-700 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-rose-100 shadow-xs"
-              >
-                <Flame className="w-3 h-3 text-rose-600" />
-                Heatmap
-              </button>
               <button
                 onClick={onNavigateHome}
                 className="px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold text-[11px] transition-all shadow-xs flex items-center gap-1"

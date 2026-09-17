@@ -353,6 +353,38 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                 Practice All ({modalFilteredQuestions.length})
               </button>
 
+              {/* 1-Click Drill Silly Mistakes [A] */}
+              {rcaCounts.A > 0 && modalErrorFilter !== 'A' && (
+                <button
+                  onClick={() => {
+                    const aQuestions = data.questions.filter(q => getQuestionEffectiveRca(q)?.tag === 'A');
+                    onClose();
+                    onStartPractice(data.topic, aQuestions, 'A');
+                  }}
+                  className="px-3 py-2 bg-rose-500 hover:bg-rose-400 text-white rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  title={`Drill all ${rcaCounts.A} silly mistake questions`}
+                >
+                  <span className="font-mono">[A]</span>
+                  <span>Drill Silly ({rcaCounts.A})</span>
+                </button>
+              )}
+
+              {/* 1-Click Drill Conceptual Gaps [C] */}
+              {rcaCounts.C > 0 && modalErrorFilter !== 'C' && (
+                <button
+                  onClick={() => {
+                    const cQuestions = data.questions.filter(q => getQuestionEffectiveRca(q)?.tag === 'C');
+                    onClose();
+                    onStartPractice(data.topic, cQuestions, 'C');
+                  }}
+                  className="px-3 py-2 bg-purple-500 hover:bg-purple-400 text-white rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  title={`Drill all ${rcaCounts.C} conceptual gap questions`}
+                >
+                  <span className="font-mono">[C]</span>
+                  <span>Drill Concept ({rcaCounts.C})</span>
+                </button>
+              )}
+
               <button
                 onClick={() => {
                   onAskAi(

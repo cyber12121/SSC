@@ -12,7 +12,6 @@ import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } fr
 const QuizContainer = React.lazy(() => import('./components/QuizContainer').then(m => ({ default: m.QuizContainer })));
 const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
-const ErrorHeatmap = React.lazy(() => import('./components/ErrorHeatmap').then(m => ({ default: m.ErrorHeatmap })));
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
@@ -173,7 +172,7 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'heatmap' | 'review' | 'drill' | 'mockScores'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores'>('home');
   const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
     let list: MockScoreReport[] = [];
     try {
@@ -1136,6 +1135,26 @@ export default function App() {
     alert('Source questions for this quiz could not be reloaded.');
   };
 
+  const reattemptFilteredQuestions = (title: string, questions: Question[], subjectName?: string) => {
+    if (!questions || questions.length === 0) {
+      alert('No questions found for this re-attempt filter.');
+      return;
+    }
+    const resolvedSubject = subjectName || selectedSubject || 'Mock Practice';
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: title,
+      subject: resolvedSubject,
+      subject_id: resolvedSubject.toLowerCase().replace(/\s+/g, '_'),
+      questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+      section: 'mockErrors',
+      is_test: true
+    };
+    setCategory('mockErrors');
+    setQuizMode('practice');
+    startQuiz(virtualChapter);
+  };
+
   const handleDeleteResult = async (resultId?: string) => {
     if (!resultId) return;
     if (!window.confirm('Are you sure you want to delete this quiz attempt from your history?')) return;
@@ -1403,6 +1422,78 @@ export default function App() {
     startQuiz(virtualChapter);
   };
 
+  const handleAskAiRca = (tagKey: RCATagType | 'unclassified') => {
+    if (!selectedSubject) return;
+    const questions = subjectRcaData.questionsByTag[tagKey] || [];
+    if (questions.length === 0) {
+      alert('No questions in this RCA category to analyze.');
+      return;
+    }
+    const cfg = RCA_TAG_CONFIG[tagKey];
+    const tagLabel = tagKey === 'unclassified' ? 'Unclassified Mistakes' : `[${tagKey}] ${cfg.label}`;
+
+    const scopedQuestions: AiFocusedQuestion[] = questions.slice(0, 30).map((q, idx) => {
+      let optionsMap: Record<string, string> | undefined = undefined;
+      if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
+        const optAny = q.options as any;
+        optionsMap = {
+          A: String(optAny.a || optAny['1'] || optAny.A || '').trim(),
+          B: String(optAny.b || optAny['2'] || optAny.B || '').trim(),
+          C: String(optAny.c || optAny['3'] || optAny.C || '').trim(),
+          D: String(optAny.d || optAny['4'] || optAny.D || '').trim(),
+        };
+      } else if (Array.isArray(q.options)) {
+        optionsMap = {
+          A: String((q.options[0] as any)?.text || q.options[0] || '').trim(),
+          B: String((q.options[1] as any)?.text || q.options[1] || '').trim(),
+          C: String((q.options[2] as any)?.text || q.options[2] || '').trim(),
+          D: String((q.options[3] as any)?.text || q.options[3] || '').trim(),
+        };
+      }
+
+      const qTestType = classifyTestType(q);
+      const qSourceType: 'full_mock' | 'sectional' | 'subject_wise' = (q as any).sourceType || (
+        qTestType === 'sectional' ? 'sectional' : ((q as any).mockId || (q as any).testName ? 'full_mock' : 'subject_wise')
+      );
+      const qSourceLabel = (q as any).sourceLabel || (
+        qSourceType === 'full_mock'
+          ? ((q as any).testName ? `Full Mock: ${(q as any).testName}` : 'Full Mock Test')
+          : qSourceType === 'sectional'
+          ? ((q as any).testName ? `Sectional Test: ${(q as any).testName}` : 'Sectional Test')
+          : `Subject-Wise: ${selectedSubject}`
+      );
+
+      return {
+        id: q.id,
+        qNum: idx + 1,
+        question: q.question,
+        options: optionsMap,
+        correctAnswer: q.answer,
+        userAnswer: (q as any).userAnswer || undefined,
+        solution: q.solution,
+        status: ((q as any).status || (q as any).errorType || 'wrong') as any,
+        subject: selectedSubject,
+        topic: (q as any).chapter_title || (q as any).topic || selectedSubject,
+        rcaReason: (q as any).rcaReason || (q as any).rca?.reason || undefined,
+        sourceType: qSourceType,
+        sourceLabel: qSourceLabel,
+        testName: (q as any).testName
+      };
+    });
+
+    openAiWithScope({
+      type: 'topic',
+      title: `${selectedSubject} • ${tagLabel}`,
+      subject: selectedSubject,
+      sourceScope: 'mixed',
+      sourceScopeLabel: `RCA Analysis: ${tagLabel}`,
+      stats: {
+        totalQuestions: questions.length
+      },
+      questions: scopedQuestions
+    });
+  };
+
   const startClubbedChapterQuiz = (
     topicName: string,
     questions: Question[],
@@ -1559,13 +1650,6 @@ export default function App() {
               >
                 <Trophy className="w-4 h-4 mr-1.5" />
                 Mock Scores
-              </button>
-              <button
-                onClick={() => setView('heatmap')}
-                className={`flex items-center font-bold text-sm transition-colors ${view === 'heatmap' ? 'text-red-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <Flame className="w-4 h-4 mr-1.5" />
-                Heatmap
               </button>
               <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
                 <button
@@ -1840,31 +1924,6 @@ export default function App() {
                         </div>
                         <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-amber-600">
                           <span>Open Studio</span>
-                          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                        </div>
-                      </div>
-
-                      {/* Error Heatmap */}
-                      <div 
-                        onClick={() => setView('heatmap')}
-                        className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-red-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
-                      >
-                        <div className="flex items-start justify-between">
-                          <div className="w-7 h-7 rounded-lg bg-red-50 text-red-600 flex items-center justify-center border border-red-100 group-hover:scale-105 transition-transform">
-                            <Flame className="w-3.5 h-3.5 fill-red-500/20 text-red-600" />
-                          </div>
-                          <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-red-50 text-red-700 border border-red-200">
-                            Weak Spot Matrix
-                          </span>
-                        </div>
-                        <div className="mt-2">
-                          <h4 className="text-xs font-bold text-slate-900 group-hover:text-red-700 transition-colors">Error Pattern Heatmap</h4>
-                          <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
-                            Analyze wrong answers, negative marks, and speed bottlenecks across mock tests.
-                          </p>
-                        </div>
-                        <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-red-600">
-                          <span>Analyze Errors</span>
                           <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </div>
                       </div>
@@ -2570,24 +2629,84 @@ export default function App() {
                                       </div>
                                       <div className="flex items-center gap-1 mt-0.5 flex-wrap">
                                         {ch.rcaCounts?.C > 0 && (
-                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-purple-50 text-purple-700 border border-purple-200" title={`${ch.rcaCounts.C} [C] Conceptual Gap questions`}>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              const qs = ch.rcaQuestions?.C || [];
+                                              if (qs.length > 25) {
+                                                setActiveMockChapterModal(ch);
+                                                setModalErrorFilter('C');
+                                                setModalActiveSet(1);
+                                              } else if (qs.length > 0) {
+                                                startClubbedChapterQuiz(ch.topic, qs, 'C');
+                                              }
+                                            }}
+                                            className="text-[9px] font-mono font-black px-1.5 py-0.5 rounded bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 transition-all cursor-pointer hover:scale-105"
+                                            title={`Drill ${ch.rcaCounts.C} [C] Conceptual Gap questions in ${ch.topic}`}
+                                          >
                                             C:{ch.rcaCounts.C}
-                                          </span>
+                                          </button>
                                         )}
                                         {ch.rcaCounts?.A > 0 && (
-                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-rose-50 text-rose-700 border border-rose-200" title={`${ch.rcaCounts.A} [A] Silly Mistake questions`}>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              const qs = ch.rcaQuestions?.A || [];
+                                              if (qs.length > 25) {
+                                                setActiveMockChapterModal(ch);
+                                                setModalErrorFilter('A');
+                                                setModalActiveSet(1);
+                                              } else if (qs.length > 0) {
+                                                startClubbedChapterQuiz(ch.topic, qs, 'A');
+                                              }
+                                            }}
+                                            className="text-[9px] font-mono font-black px-1.5 py-0.5 rounded bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 transition-all cursor-pointer hover:scale-105"
+                                            title={`Drill ${ch.rcaCounts.A} [A] Silly Mistake questions in ${ch.topic}`}
+                                          >
                                             A:{ch.rcaCounts.A}
-                                          </span>
+                                          </button>
                                         )}
                                         {ch.rcaCounts?.T > 0 && (
-                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-amber-50 text-amber-700 border border-amber-200" title={`${ch.rcaCounts.T} [T] Time Trap questions`}>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              const qs = ch.rcaQuestions?.T || [];
+                                              if (qs.length > 25) {
+                                                setActiveMockChapterModal(ch);
+                                                setModalErrorFilter('T');
+                                                setModalActiveSet(1);
+                                              } else if (qs.length > 0) {
+                                                startClubbedChapterQuiz(ch.topic, qs, 'T');
+                                              }
+                                            }}
+                                            className="text-[9px] font-mono font-black px-1.5 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 transition-all cursor-pointer hover:scale-105"
+                                            title={`Drill ${ch.rcaCounts.T} [T] Time Trap questions in ${ch.topic}`}
+                                          >
                                             T:{ch.rcaCounts.T}
-                                          </span>
+                                          </button>
                                         )}
                                         {ch.rcaCounts?.G > 0 && (
-                                          <span className="text-[9px] font-mono font-black px-1 rounded bg-blue-50 text-blue-700 border border-blue-200" title={`${ch.rcaCounts.G} [G] Guesswork questions`}>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              const qs = ch.rcaQuestions?.G || [];
+                                              if (qs.length > 25) {
+                                                setActiveMockChapterModal(ch);
+                                                setModalErrorFilter('G');
+                                                setModalActiveSet(1);
+                                              } else if (qs.length > 0) {
+                                                startClubbedChapterQuiz(ch.topic, qs, 'G');
+                                              }
+                                            }}
+                                            className="text-[9px] font-mono font-black px-1.5 py-0.5 rounded bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 transition-all cursor-pointer hover:scale-105"
+                                            title={`Drill ${ch.rcaCounts.G} [G] Guesswork questions in ${ch.topic}`}
+                                          >
                                             G:{ch.rcaCounts.G}
-                                          </span>
+                                          </button>
                                         )}
                                         <span className="text-[10px] text-slate-400 font-medium sm:hidden">
                                           Click to view {ch.total} questions {ch.total > 25 ? `(${totalSets} sets of 25)` : ''}
@@ -2757,25 +2876,46 @@ export default function App() {
                                     <span className={`text-[10px] font-semibold ${isSelected ? 'text-slate-400' : 'text-slate-400'}`}>
                                       {count === 0 ? '0 questions' : `${count} Qs`}
                                     </span>
-                                    <button
-                                      type="button"
-                                      disabled={count === 0}
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        startSubjectRcaQuiz(tagKey);
-                                      }}
-                                      className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${
-                                        count === 0
-                                          ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
-                                          : isSelected
-                                          ? 'bg-white text-slate-900 hover:bg-slate-100 cursor-pointer shadow-xs'
-                                          : 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-xs'
-                                      }`}
-                                      title={count > 25 ? `Practice ${count} questions in sets` : `Practice all ${count} questions`}
-                                    >
-                                      <Play className="w-2.5 h-2.5 fill-current" />
-                                      {count > 25 ? 'Sets' : 'Practice'}
-                                    </button>
+                                    <div className="flex items-center gap-1">
+                                      <button
+                                        type="button"
+                                        disabled={count === 0}
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          handleAskAiRca(tagKey);
+                                        }}
+                                        className={`px-1.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-0.5 transition-all ${
+                                          count === 0
+                                            ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
+                                            : isSelected
+                                            ? 'bg-white/20 text-white hover:bg-white/30 cursor-pointer shadow-xs'
+                                            : 'bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 cursor-pointer shadow-xs'
+                                        }`}
+                                        title={`Ask Tommy AI to analyze ${cfg.label} errors`}
+                                      >
+                                        <Sparkles className="w-2.5 h-2.5" />
+                                        <span>AI</span>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        disabled={count === 0}
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          startSubjectRcaQuiz(tagKey);
+                                        }}
+                                        className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${
+                                          count === 0
+                                            ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
+                                            : isSelected
+                                            ? 'bg-white text-slate-900 hover:bg-slate-100 cursor-pointer shadow-xs'
+                                            : 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-xs'
+                                        }`}
+                                        title={count > 25 ? `Practice ${count} questions in sets` : `Practice all ${count} questions`}
+                                      >
+                                        <Play className="w-2.5 h-2.5 fill-current" />
+                                        {count > 25 ? 'Sets' : 'Practice'}
+                                      </button>
+                                    </div>
                                   </div>
                                 </div>
                               );
@@ -2820,24 +2960,34 @@ export default function App() {
                               })}
                             </div>
 
-                            {/* Search box */}
-                            <div className="relative w-full sm:w-56">
-                              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
-                              <input
-                                type="text"
-                                placeholder="Search chapter/topic..."
-                                value={rcaSearchQuery}
-                                onChange={e => setRcaSearchQuery(e.target.value)}
-                                className="w-full pl-8 pr-3 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
-                              />
-                              {rcaSearchQuery && (
-                                <button
-                                  onClick={() => setRcaSearchQuery('')}
-                                  className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
-                                >
-                                  <X className="w-3 h-3" />
-                                </button>
-                              )}
+                            {/* Search box & Ask AI */}
+                            <div className="flex items-center gap-2 w-full sm:w-auto">
+                              <div className="relative w-full sm:w-56">
+                                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
+                                <input
+                                  type="text"
+                                  placeholder="Search chapter/topic..."
+                                  value={rcaSearchQuery}
+                                  onChange={e => setRcaSearchQuery(e.target.value)}
+                                  className="w-full pl-8 pr-3 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                                />
+                                {rcaSearchQuery && (
+                                  <button
+                                    onClick={() => setRcaSearchQuery('')}
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 cursor-pointer"
+                                  >
+                                    <X className="w-3 h-3" />
+                                  </button>
+                                )}
+                              </div>
+                              <button
+                                onClick={() => rcaSelectedFilter === 'all' ? handleAskAiSubject(selectedSubject) : handleAskAiRca(rcaSelectedFilter)}
+                                className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all shadow-xs flex items-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
+                                title={`Ask Tommy AI to analyze ${rcaSelectedFilter === 'all' ? `${selectedSubject} mock errors` : `[${rcaSelectedFilter}] errors`}`}
+                              >
+                                <Sparkles className="w-3.5 h-3.5 text-violet-500 group-hover:text-white" />
+                                <span>Ask AI</span>
+                              </button>
                             </div>
                           </div>
 
@@ -2846,13 +2996,13 @@ export default function App() {
                             {/* Table Header */}
                             <div className="grid grid-cols-12 gap-2 px-4 py-2.5 border-b border-slate-100 bg-slate-50/80 text-[10px] font-bold uppercase tracking-wider text-slate-500 items-center">
                               <div className="col-span-1">#</div>
-                              <div className="col-span-4">Topic Name</div>
+                              <div className="col-span-3">Topic Name</div>
                               <div className="col-span-2 hidden md:block">Heat Bar</div>
                               <div className="col-span-1 text-center text-purple-700" title="[C] Conceptual Gap">[C]</div>
                               <div className="col-span-1 text-center text-rose-700" title="[A] Silly Mistake">[A]</div>
                               <div className="col-span-1 text-center text-amber-700" title="[T] Time Trap">[T]</div>
                               <div className="col-span-1 text-center text-blue-700" title="[G] Guesswork">[G]</div>
-                              <div className="col-span-1 text-right text-indigo-700">Total</div>
+                              <div className="col-span-2 text-right text-indigo-700">Actions</div>
                             </div>
 
                             {/* Rows */}
@@ -2887,7 +3037,7 @@ export default function App() {
                                       </div>
 
                                       {/* Topic name + sets */}
-                                      <div className="col-span-4 min-w-0 pr-2">
+                                      <div className="col-span-3 min-w-0 pr-2">
                                         <div className="flex items-center gap-1.5">
                                           <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
                                             {ch.topic}
@@ -2990,8 +3140,26 @@ export default function App() {
                                         )}
                                       </div>
 
-                                      {/* Total + Practice */}
-                                      <div className="col-span-1 flex items-center justify-end gap-1.5">
+                                      {/* Actions: AI + Total Practice */}
+                                      <div className="col-span-2 flex items-center justify-end gap-1.5">
+                                        <button
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleAskAiTopic(ch.topic, selectedSubject || 'All Subjects', ch.questions, {
+                                              total: ch.total,
+                                              wrong: ch.wrong,
+                                              slow: ch.slow,
+                                              unattempted: ch.unattempted
+                                            });
+                                          }}
+                                          className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer active:scale-95 whitespace-nowrap"
+                                          title={`Ask Tommy AI to analyze ${ch.topic} root causes`}
+                                        >
+                                          <Sparkles className="w-2.5 h-2.5 text-violet-500 hover:text-white" />
+                                          <span>AI</span>
+                                        </button>
+
                                         <button
                                           type="button"
                                           onClick={(e) => {
@@ -3490,7 +3658,6 @@ export default function App() {
               onReattempt={reattemptFromResult}
               onLogin={handleLogin}
               onNavigateHome={() => setView('home')}
-              onNavigateHeatmap={() => setView('heatmap')}
             />
           )}
 
@@ -3504,6 +3671,7 @@ export default function App() {
               <ReviewView
                 result={reviewResult}
                 onReattempt={() => reattemptFromResult(reviewResult)}
+                onReattemptQuestions={(title, qs) => reattemptFilteredQuestions(title, qs, reviewResult.subject)}
                 onBack={() => setView(reviewBackTo)}
                 userName={user?.displayName || 'Candidate'}
                 bookmarkedIds={new Set(bookmarks.map(b => b.question.question.trim().toLowerCase()))}
@@ -3528,42 +3696,6 @@ export default function App() {
                 </div>
               }>
                 <DrillHub onBack={() => setView('home')} />
-              </React.Suspense>
-            </motion.div>
-          )}
-
-          {view === 'heatmap' && (
-            <motion.div
-              key="heatmap"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <div className="flex items-center justify-between gap-2.5 bg-white px-3.5 py-1.5 rounded-lg border border-slate-200/80 shadow-xs mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-md bg-red-50 text-red-600 flex items-center justify-center font-bold shrink-0">
-                    <Flame className="w-3.5 h-3.5 text-red-500" />
-                  </div>
-                  <div>
-                    <h1 className="text-xs font-bold text-slate-900 tracking-tight leading-none">Error Heatmap</h1>
-                    <p className="text-[10px] text-slate-400 font-medium leading-tight mt-0.5">Visualize subject-wise error patterns across your top error-prone chapters</p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setView('home')}
-                  className="flex items-center text-[11px] font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-2 py-1 rounded-md transition-colors shrink-0"
-                >
-                  <ChevronLeft className="w-3 h-3 mr-0.5" />
-                  Back to Practice
-                </button>
-              </div>
-              <React.Suspense fallback={
-                <div className="flex flex-col items-center justify-center py-40">
-                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                  <p className="text-slate-500 font-bold">Loading error heatmap...</p>
-                </div>
-              }>
-                <ErrorHeatmap mockData={mockData} onStartQuiz={startQuiz} />
               </React.Suspense>
             </motion.div>
           )}

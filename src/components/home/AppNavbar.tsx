@@ -16,7 +16,7 @@ interface AppNavbarProps {
   quizMode: 'practice' | 'mock';
   user: any;
   resetToHome: () => void;
-  setView: (view: 'home' | 'dashboard' | 'bookmarks' | 'mockScores' | 'heatmap' | 'drill') => void;
+  setView: (view: 'home' | 'dashboard' | 'bookmarks' | 'mockScores' | 'drill') => void;
   setSelectedSubject: (subject: string | null) => void;
   setSelectedTopic: (topic: string | null) => void;
   setSelectedBookmarkSubject: (subject: string | null) => void;
@@ -110,15 +110,6 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({
             >
               <Trophy className="w-4 h-4 mr-1.5" />
               Mock Scores
-            </button>
-            <button
-              onClick={() => setView('heatmap')}
-              className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${
-                view === 'heatmap' ? 'text-red-600' : 'text-slate-500 hover:text-slate-800'
-              }`}
-            >
-              <Flame className="w-4 h-4 mr-1.5" />
-              Heatmap
             </button>
             <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
               <button
