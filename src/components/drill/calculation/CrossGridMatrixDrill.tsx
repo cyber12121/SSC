@@ -1,22 +1,24 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { motion } from 'motion/react';
-import { RotateCcw, Trophy, CheckCircle2, Zap, ArrowRight, Grid3X3, Layers } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { RotateCcw, Trophy, CheckCircle2, Zap, ArrowRight, Grid3X3, Layers, Play, Target, Lightbulb, Timer } from 'lucide-react';
 
 interface GridTier {
   size: number;
   label: string;
   range: [number, number];
+  targetSecPerCell: number;
 }
 
 const GRID_TIERS: GridTier[] = [
-  { size: 3, label: '3x3 Mini Grid', range: [11, 30] },
-  { size: 4, label: '4x4 Medium Grid', range: [20, 60] },
-  { size: 5, label: '5x5 Standard Grid', range: [30, 80] },
-  { size: 10, label: '10x10 Master Table', range: [11, 99] },
+  { size: 3, label: '3x3 Mini Grid', range: [11, 30], targetSecPerCell: 2.0 },
+  { size: 4, label: '4x4 Medium Grid', range: [20, 60], targetSecPerCell: 2.5 },
+  { size: 5, label: '5x5 Standard Grid', range: [30, 80], targetSecPerCell: 2.5 },
+  { size: 10, label: '10x10 Master Table', range: [11, 99], targetSecPerCell: 3.0 },
 ];
 
 export const CrossGridMatrixDrill: React.FC = () => {
   const [selectedTierIdx, setSelectedTierIdx] = useState<number>(0);
+  const [isStarted, setIsStarted] = useState<boolean>(false);
   const [rowHeaders, setRowHeaders] = useState<number[]>([]);
   const [colHeaders, setColHeaders] = useState<number[]>([]);
   
@@ -33,7 +35,6 @@ export const CrossGridMatrixDrill: React.FC = () => {
   const timerRef = useRef<any>(null);
 
   const currentTier = GRID_TIERS[selectedTierIdx];
-
   const targetSolveCount = currentTier.size * currentTier.size;
 
   const initGrid = () => {
@@ -63,12 +64,22 @@ export const CrossGridMatrixDrill: React.FC = () => {
     }, 100);
   };
 
-  useEffect(() => {
+  const startBlitz = (tierIdx: number = selectedTierIdx) => {
+    setSelectedTierIdx(tierIdx);
+    setIsStarted(true);
+    setIsFinished(false);
     initGrid();
-  }, [selectedTierIdx]);
+  };
+
+  const handleSelectTier = (idx: number) => {
+    setSelectedTierIdx(idx);
+    setIsStarted(false);
+    setIsFinished(false);
+    setElapsedTime(0);
+  };
 
   useEffect(() => {
-    if (!isFinished) {
+    if (isStarted && !isFinished) {
       const startTime = Date.now() - elapsedTime * 1000;
       timerRef.current = setInterval(() => {
         setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
@@ -77,7 +88,7 @@ export const CrossGridMatrixDrill: React.FC = () => {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
-  }, [isFinished]);
+  }, [isStarted, isFinished]);
 
   const activeSum = (rowHeaders[activeCell.r] || 0) + (colHeaders[activeCell.c] || 0);
 
@@ -144,13 +155,18 @@ export const CrossGridMatrixDrill: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={initGrid}
-            className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs"
-            title="Reset Grid"
-          >
-            <RotateCcw className="w-4 h-4" />
-          </button>
+          {isStarted && !isFinished && (
+            <button
+              onClick={() => {
+                setIsStarted(false);
+                setElapsedTime(0);
+              }}
+              className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
+              title="Return to Briefing"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          )}
         </div>
       </div>
 
@@ -159,8 +175,8 @@ export const CrossGridMatrixDrill: React.FC = () => {
         {GRID_TIERS.map((tier, idx) => (
           <button
             key={tier.size}
-            onClick={() => setSelectedTierIdx(idx)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0 ${
+            onClick={() => handleSelectTier(idx)}
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0 cursor-pointer ${
               selectedTierIdx === idx
                 ? 'bg-indigo-600 text-white shadow-sm ring-2 ring-indigo-500/30'
                 : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
@@ -171,7 +187,70 @@ export const CrossGridMatrixDrill: React.FC = () => {
         ))}
       </div>
 
-      {!isFinished ? (
+      {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+      {!isStarted && !isFinished && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+        >
+          <div className="text-center space-y-2">
+            <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-indigo-100">
+              <Grid3X3 className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-black text-slate-900">
+              {currentTier.label} Blitz
+            </h3>
+            <p className="text-sm text-slate-600 max-w-md mx-auto">
+              Cross-table cell addition blitz to supercharge your multi-digit row and column scanning.
+            </p>
+          </div>
+
+          {/* Arun Sharma Method Tip Box */}
+          <div className="bg-indigo-50/70 border border-indigo-200/80 rounded-xl p-4 space-y-2">
+            <div className="text-xs font-bold text-indigo-800 flex items-center gap-1.5">
+              <Lightbulb className="w-4 h-4 text-indigo-600" />
+              <span>Arun Sharma Matrix Addition Method (Ch. 1, Page 3)</span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed">
+              In Data Interpretation, scanning tables and adding row/column intersections quickly is a vital bottleneck. Cross-Grid Matrix trains you to hold one operand in working memory while rapidly jumping through coordinates.
+            </p>
+            <div className="bg-white/90 border border-indigo-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-indigo-900">
+              <span>Grid Structure:</span>
+              <span>{currentTier.size} × {currentTier.size} ({targetSolveCount} Cells) in range [{currentTier.range[0]} – {currentTier.range[1]}]</span>
+              <span className="bg-indigo-600 text-white px-2 py-0.5 rounded text-[11px] font-sans font-bold">Pace: ~{currentTier.targetSecPerCell}s / cell</span>
+            </div>
+          </div>
+
+          {/* Drill Targets Grid */}
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Total Cells</span>
+              <span className="text-base font-black text-slate-800">{targetSolveCount} Cells</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Number Range</span>
+              <span className="text-base font-black text-indigo-700">[{currentTier.range[0]} – {currentTier.range[1]}]</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Pace</span>
+              <span className="text-base font-black text-emerald-700">~{currentTier.targetSecPerCell}s / cell</span>
+            </div>
+          </div>
+
+          {/* Start Drill Button */}
+          <button
+            onClick={() => startBlitz(selectedTierIdx)}
+            className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <Play className="w-5 h-5 fill-current" />
+            <span>Start Matrix Blitz</span>
+          </button>
+        </motion.div>
+      )}
+
+      {/* ── Screen 2: Active Matrix Arena ── */}
+      {isStarted && !isFinished && (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           {/* Left: Interactive Table */}
           <div className="lg:col-span-8 overflow-x-auto bg-white p-4 rounded-xl border border-slate-200 shadow-xs custom-scrollbar">
@@ -240,7 +319,10 @@ export const CrossGridMatrixDrill: React.FC = () => {
           <div className="lg:col-span-4 bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-4">
             <div className="flex items-center justify-between text-xs text-slate-500 font-bold uppercase">
               <span>Cell Blitz Target</span>
-              <span className="font-mono text-slate-400">{elapsedTime.toFixed(1)}s</span>
+              <span className="font-mono text-slate-400 flex items-center gap-1">
+                <Timer className="w-3.5 h-3.5 text-indigo-500" />
+                {elapsedTime.toFixed(1)}s
+              </span>
             </div>
 
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center font-mono font-black text-2xl text-slate-800">
@@ -274,8 +356,10 @@ export const CrossGridMatrixDrill: React.FC = () => {
             </div>
           </div>
         </div>
-      ) : (
-        /* Round Finished */
+      )}
+
+      {/* ── Screen 3: Round Finished Scorecard ── */}
+      {isFinished && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -289,17 +373,35 @@ export const CrossGridMatrixDrill: React.FC = () => {
             Grid Completed! 🎉
           </h3>
 
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-sm font-mono text-slate-800">
-            Time: <strong className="text-indigo-600">{elapsedTime.toFixed(1)}s</strong> for {targetSolveCount} cells
+          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-sm font-mono text-slate-800 space-y-1">
+            <div>
+              Total Time: <strong className="text-indigo-600">{elapsedTime.toFixed(1)}s</strong> for {targetSolveCount} cells
+            </div>
+            <div className="text-xs text-slate-500">
+              Average Pace: <strong className="text-slate-800">{(elapsedTime / targetSolveCount).toFixed(2)}s</strong> per cell
+            </div>
           </div>
 
-          <button
-            onClick={initGrid}
-            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
-          >
-            <RotateCcw className="w-4 h-4" />
-            Play Again
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => startBlitz(selectedTierIdx)}
+              className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Play Again
+            </button>
+            {selectedTierIdx < GRID_TIERS.length - 1 && (
+              <button
+                onClick={() => {
+                  handleSelectTier(selectedTierIdx + 1);
+                }}
+                className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <span>Next Tier</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </motion.div>
       )}
     </div>

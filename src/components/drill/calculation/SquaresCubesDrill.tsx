@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { RotateCcw, Trophy, Lightbulb, Zap, ArrowRight } from 'lucide-react';
+import { RotateCcw, Trophy, Lightbulb, Zap, ArrowRight, Play, Target, Timer, Superscript } from 'lucide-react';
 
 type PowerTrack = 'base_50_upper' | 'base_50_lower' | 'base_100' | 'ending_in_5' | 'gp_cube';
 
 export const SquaresCubesDrill: React.FC = () => {
   const [activeTrack, setActiveTrack] = useState<PowerTrack>('base_50_upper');
+  const [isStarted, setIsStarted] = useState<boolean>(false);
   const [numberPrompt, setNumberPrompt] = useState<number>(67);
   const [userInput, setUserInput] = useState<string>('');
   const [feedback, setFeedback] = useState<'idle' | 'correct' | 'wrong'>('idle');
@@ -17,6 +18,49 @@ export const SquaresCubesDrill: React.FC = () => {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<any>(null);
+
+  const trackBriefings = {
+    base_50_upper: {
+      title: 'Base 50 Upper Squares (51–79)',
+      ruleName: 'Base 50 Addition Formula (Ch. 4, Page 12)',
+      description: 'Calculate squares of numbers between 51 and 79 with instant mental splitting.',
+      concept: 'Formula: (50 + x)² = (25 + x) × 100 + x². The left two digits are always (25 + difference), and right two digits are difference squared.',
+      example: '54²: x = 4 ➔ (25 + 4) | 4² = 29 | 16 = 2916',
+      benchmarkSec: 4,
+    },
+    base_50_lower: {
+      title: 'Base 50 Lower Squares (31–49)',
+      ruleName: 'Base 50 Subtraction Formula (Ch. 4, Page 12)',
+      description: 'Calculate squares of numbers between 31 and 49 using base 50 deficit.',
+      concept: 'Formula: (50 - x)² = (25 - x) × 100 + x². The left two digits are always (25 - deficit), and right two digits are deficit squared.',
+      example: '47²: x = 3 ➔ (25 − 3) | 3² = 22 | 09 = 2209',
+      benchmarkSec: 4,
+    },
+    base_100: {
+      title: 'Base 100 Squares (81–99)',
+      ruleName: 'Base 100 Deficit Formula (Ch. 4, Page 12)',
+      description: 'Square numbers between 81 and 99 using distance from 100.',
+      concept: 'Formula: (100 - x)² = (100 - 2x) × 100 + x² or (Num - x) | x². Subtract the deficit from the number itself, then append the square of the deficit.',
+      example: '96²: x = 4 ➔ (96 − 4) | 4² = 92 | 16 = 9216',
+      benchmarkSec: 5,
+    },
+    ending_in_5: {
+      title: 'Squares of Numbers Ending in 5',
+      ruleName: 'Ekadhikena Purvena Rule (Ch. 4, Page 12)',
+      description: 'Square any number ending in 5 (15 to 125) in 2 seconds.',
+      concept: 'Formula: For (N5)², multiply the tens part N by (N + 1) and append 25 to the end.',
+      example: '65² ➔ (6 × 7) | 25 = 42 | 25 = 4225',
+      benchmarkSec: 3,
+    },
+    gp_cube: {
+      title: 'GP 2-Digit Cubes (11–32)',
+      ruleName: "Arun Sharma's GP Cube Method (Ch. 4, Page 13)",
+      description: 'Compute cubes of 2-digit numbers using 4-term geometric progressions.',
+      concept: 'Write 4 terms in ratio of the digits: a³, a²b, ab², b³. Double the middle two terms, write them below, and sum with column carries from right to left.',
+      example: '12³ ➔ Row 1: (1, 2, 4, 8) + Row 2: (_, 4, 8, _) ➔ 1 | 7 | 2 | 8 = 1728',
+      benchmarkSec: 8,
+    }
+  };
 
   const generateProblem = (track: PowerTrack = activeTrack) => {
     let n = 0;
@@ -43,22 +87,34 @@ export const SquaresCubesDrill: React.FC = () => {
     setUserInput('');
     setFeedback('idle');
     setShowHelper(false);
-    setIsFinished(false);
 
     setTimeout(() => {
       inputRef.current?.focus();
     }, 100);
   };
 
-  useEffect(() => {
+  const startDrill = (track: PowerTrack = activeTrack) => {
+    setActiveTrack(track);
+    setIsStarted(true);
+    setIsFinished(false);
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
-    generateProblem(activeTrack);
-  }, [activeTrack]);
+    generateProblem(track);
+  };
+
+  const handleSelectTrack = (track: PowerTrack) => {
+    setActiveTrack(track);
+    setIsStarted(false);
+    setIsFinished(false);
+    setRoundCount(1);
+    setScore(0);
+    setElapsedTime(0);
+    setShowHelper(false);
+  };
 
   useEffect(() => {
-    if (!isFinished) {
+    if (isStarted && !isFinished) {
       const startTime = Date.now() - elapsedTime * 1000;
       timerRef.current = setInterval(() => {
         setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
@@ -67,7 +123,7 @@ export const SquaresCubesDrill: React.FC = () => {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
-  }, [isFinished]);
+  }, [isStarted, isFinished]);
 
   const isCube = activeTrack === 'gp_cube';
   const expectedAnswer = isCube ? Math.pow(numberPrompt, 3) : Math.pow(numberPrompt, 2);
@@ -198,13 +254,21 @@ export const SquaresCubesDrill: React.FC = () => {
           </h2>
         </div>
 
-        <button
-          onClick={() => { setRoundCount(1); setScore(0); generateProblem(); }}
-          className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs"
-          title="Restart Drill"
-        >
-          <RotateCcw className="w-4 h-4" />
-        </button>
+        <div className="flex items-center gap-2">
+          {isStarted && !isFinished && (
+            <button
+              onClick={() => {
+                setIsStarted(false);
+                setElapsedTime(0);
+                setShowHelper(false);
+              }}
+              className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
+              title="Return to Briefing"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Tabs */}
@@ -220,7 +284,7 @@ export const SquaresCubesDrill: React.FC = () => {
           return (
             <button
               key={track.id}
-              onClick={() => setActiveTrack(track.id)}
+              onClick={() => handleSelectTrack(track.id)}
               className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                 isActive
                   ? 'bg-rose-600 text-white shadow-sm ring-2 ring-rose-500/30'
@@ -236,23 +300,101 @@ export const SquaresCubesDrill: React.FC = () => {
         })}
       </div>
 
-      {!isFinished ? (
+      {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+      {!isStarted && !isFinished && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+        >
+          <div className="text-center space-y-2">
+            <div className="w-14 h-14 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-rose-100">
+              <Superscript className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-black text-slate-900">
+              {trackBriefings[activeTrack].title}
+            </h3>
+            <p className="text-sm text-slate-600 max-w-md mx-auto">
+              {trackBriefings[activeTrack].description}
+            </p>
+          </div>
+
+          {/* Arun Sharma Method Tip Box */}
+          <div className="bg-rose-50/70 border border-rose-200/80 rounded-xl p-4 space-y-2">
+            <div className="text-xs font-bold text-rose-800 flex items-center gap-1.5">
+              <Lightbulb className="w-4 h-4 text-rose-600" />
+              <span>{trackBriefings[activeTrack].ruleName}</span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed">
+              {trackBriefings[activeTrack].concept}
+            </p>
+            <div className="bg-white/90 border border-rose-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-rose-900">
+              <span>Technique Example:</span>
+              <span>{trackBriefings[activeTrack].example}</span>
+              <span className="bg-rose-600 text-white px-2 py-0.5 rounded text-[11px] font-sans font-bold">5 Problems</span>
+            </div>
+          </div>
+
+          {/* Drill Targets Grid */}
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Questions</span>
+              <span className="text-base font-black text-slate-800">5 Problems</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Unlock Target</span>
+              <span className="text-base font-black text-emerald-700">≥ 4 / 5 Correct</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Speed</span>
+              <span className="text-base font-black text-rose-700">~{trackBriefings[activeTrack].benchmarkSec}s / square</span>
+            </div>
+          </div>
+
+          {/* Start Drill Button */}
+          <button
+            onClick={() => startDrill(activeTrack)}
+            className="w-full py-4 bg-rose-600 hover:bg-rose-700 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <Play className="w-5 h-5 fill-current" />
+            <span>Start Squares & Cubes Drill</span>
+          </button>
+        </motion.div>
+      )}
+
+      {/* ── Screen 2: Active Problem Arena ── */}
+      {isStarted && !isFinished && (
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-6">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span>Problem {roundCount} of 5</span>
-            <span className="font-mono">Time: {elapsedTime.toFixed(1)}s</span>
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-bold uppercase tracking-wider">
+              Problem <strong className="text-slate-900 text-sm">{roundCount}</strong> of 5
+            </span>
+            <div className="flex items-center gap-4">
+              <span className="font-medium">
+                Score: <strong className="text-rose-700 font-bold">{score}</strong> / {roundCount - 1}
+              </span>
+              <span className="font-mono text-slate-400 flex items-center gap-1">
+                <Timer className="w-3.5 h-3.5 text-rose-600" />
+                {elapsedTime.toFixed(1)}s
+              </span>
+            </div>
           </div>
 
           {/* Math Prompt */}
-          <div className="flex items-center justify-center gap-3 font-mono font-black text-4xl text-slate-900">
-            <span className="text-rose-800">{numberPrompt}</span>
-            <sup className="text-2xl text-slate-400">{isCube ? '3' : '2'}</sup>
-            <span className="text-slate-400">=</span>
-            <span className="text-slate-400">?</span>
+          <div className="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 text-center">
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest block mb-3">
+              Calculate Mentally using {trackBriefings[activeTrack].title}
+            </span>
+            <div className="flex items-center justify-center gap-3 font-mono font-black text-4xl text-slate-900">
+              <span className="px-5 py-2.5 bg-white rounded-2xl border border-slate-200 shadow-xs text-rose-800">{numberPrompt}</span>
+              <sup className="text-2xl text-slate-400 font-bold">{isCube ? '3' : '2'}</sup>
+              <span className="text-slate-400 font-sans text-2xl">=</span>
+              <span className="text-slate-400">?</span>
+            </div>
           </div>
 
           {/* Input Box */}
-          <div className="max-w-xs mx-auto">
+          <div className="max-w-xs mx-auto space-y-2">
             <input
               ref={inputRef}
               type="text"
@@ -270,6 +412,7 @@ export const SquaresCubesDrill: React.FC = () => {
               }`}
               autoFocus
             />
+            <p className="text-center text-xs text-slate-400">Auto-checks when complete digits are entered</p>
           </div>
 
           {showHelper && (
@@ -282,8 +425,10 @@ export const SquaresCubesDrill: React.FC = () => {
             </div>
           )}
         </div>
-      ) : (
-        /* Finished */
+      )}
+
+      {/* ── Screen 3: Finished Scorecard ── */}
+      {isFinished && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -299,16 +444,31 @@ export const SquaresCubesDrill: React.FC = () => {
 
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1 text-sm font-mono text-slate-800">
             <div>Score: <strong className="text-rose-700">{score}/5</strong> correct</div>
-            <div>Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
+            <div>Total Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
+            <div className="text-xs text-slate-500">Pace: <strong className="text-slate-800">{(elapsedTime / 5).toFixed(1)}s</strong> per calculation</div>
           </div>
 
-          <button
-            onClick={() => { setRoundCount(1); setScore(0); generateProblem(); }}
-            className="w-full py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
-          >
-            <RotateCcw className="w-4 h-4" />
-            Next Set
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => startDrill(activeTrack)}
+              className="flex-1 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Play Again
+            </button>
+            <button
+              onClick={() => {
+                const tracks: PowerTrack[] = ['base_50_upper', 'base_50_lower', 'base_100', 'ending_in_5', 'gp_cube'];
+                const currIdx = tracks.indexOf(activeTrack);
+                const nextTrack = tracks[(currIdx + 1) % tracks.length];
+                handleSelectTrack(nextTrack);
+              }}
+              className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <span>Next Shortcut</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </motion.div>
       )}
     </div>

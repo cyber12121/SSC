@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { RotateCcw, Trophy, Lightbulb, ArrowRight, CheckCircle2, Percent, Scale } from 'lucide-react';
+import { RotateCcw, Trophy, Lightbulb, ArrowRight, CheckCircle2, Percent, Scale, Play, Target, Timer } from 'lucide-react';
 
 type DivTrack = 'decimal_percentage' | 'ratio_compare';
 
 export const DivisionRatioDrill: React.FC = () => {
   const [activeTrack, setActiveTrack] = useState<DivTrack>('decimal_percentage');
+  const [isStarted, setIsStarted] = useState<boolean>(false);
   
   // Decimal estimation state (N / D)
   const [numerator, setNumerator] = useState<number>(53);
@@ -26,6 +27,25 @@ export const DivisionRatioDrill: React.FC = () => {
   const [isFinished, setIsFinished] = useState<boolean>(false);
 
   const timerRef = useRef<any>(null);
+
+  const trackBriefings = {
+    decimal_percentage: {
+      title: 'Decimal Percentage Estimation',
+      ruleName: '10% & 1% Mental Ladder Method (Ch. 3, Page 10)',
+      description: 'Estimate fraction N / D into instant percentage brackets without long division.',
+      concept: 'Calculate 10% of the denominator. Scale up by integer multiples to bracket the numerator, then fine-tune with 1% chunks to nail the percentage range in seconds.',
+      example: '53 / 81 ➔ 10% of 81 = 8.1. (8.1 × 6 = 48.6 = 60%, 8.1 × 7 = 56.7 = 70%) ➔ Bracket: 60% – 70%',
+      benchmarkSec: 5,
+    },
+    ratio_compare: {
+      title: 'Ratio Face-Off Comparison',
+      ruleName: 'Relative % Change Comparison (Ch. 3, Page 11)',
+      description: 'Quickly determine which of two 3-digit fractions is larger (N1/D1 vs N2/D2) for DI.',
+      concept: 'Compare the approximate % change in numerator vs denominator: if Numerator grows by a higher percentage than the denominator, the second fraction is larger!',
+      example: '173/212 vs 181/241 ➔ Numerator increases ~4.6%, Denominator increases ~13.6% ➔ Ratio 1 is larger!',
+      benchmarkSec: 6,
+    }
+  };
 
   const generateProblem = (track: DivTrack = activeTrack) => {
     setShowHelper(false);
@@ -50,16 +70,27 @@ export const DivisionRatioDrill: React.FC = () => {
     }
   };
 
-  useEffect(() => {
+  const startDrill = (track: DivTrack = activeTrack) => {
+    setActiveTrack(track);
+    setIsStarted(true);
+    setIsFinished(false);
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
+    generateProblem(track);
+  };
+
+  const handleSelectTrack = (track: DivTrack) => {
+    setActiveTrack(track);
+    setIsStarted(false);
     setIsFinished(false);
-    generateProblem(activeTrack);
-  }, [activeTrack]);
+    setRoundCount(1);
+    setScore(0);
+    setElapsedTime(0);
+  };
 
   useEffect(() => {
-    if (!isFinished) {
+    if (isStarted && !isFinished) {
       const startTime = Date.now() - elapsedTime * 1000;
       timerRef.current = setInterval(() => {
         setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
@@ -68,7 +99,7 @@ export const DivisionRatioDrill: React.FC = () => {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
-  }, [isFinished]);
+  }, [isStarted, isFinished]);
 
   // Decimal percentage brackets
   const actualPercent = (numerator / denominator) * 100;
@@ -134,19 +165,27 @@ export const DivisionRatioDrill: React.FC = () => {
           </h2>
         </div>
 
-        <button
-          onClick={() => { setRoundCount(1); setScore(0); generateProblem(); }}
-          className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs"
-          title="Restart Drill"
-        >
-          <RotateCcw className="w-4 h-4" />
-        </button>
+        <div className="flex items-center gap-2">
+          {isStarted && !isFinished && (
+            <button
+              onClick={() => {
+                setIsStarted(false);
+                setElapsedTime(0);
+                setShowHelper(false);
+              }}
+              className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
+              title="Return to Briefing"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* Tabs */}
+      {/* Track Tabs */}
       <div className="flex items-center gap-2 mb-5">
         <button
-          onClick={() => setActiveTrack('decimal_percentage')}
+          onClick={() => handleSelectTrack('decimal_percentage')}
           className={`flex-1 p-3 rounded-xl border text-left transition-all cursor-pointer ${
             activeTrack === 'decimal_percentage'
               ? 'bg-amber-500 text-white shadow-sm ring-2 ring-amber-400/30'
@@ -157,11 +196,13 @@ export const DivisionRatioDrill: React.FC = () => {
             <Percent className="w-4 h-4" />
             <span>Decimal Estimation via % Additions</span>
           </div>
-          <div className="text-[10px] mt-0.5 opacity-80">Page 10: 53/81 ➔ 50% + 10% + 5% decomposition</div>
+          <div className={`text-[10px] mt-0.5 ${activeTrack === 'decimal_percentage' ? 'text-amber-100' : 'text-slate-400'}`}>
+            Page 10: 53/81 ➔ 50% + 10% bracket estimation
+          </div>
         </button>
 
         <button
-          onClick={() => setActiveTrack('ratio_compare')}
+          onClick={() => handleSelectTrack('ratio_compare')}
           className={`flex-1 p-3 rounded-xl border text-left transition-all cursor-pointer ${
             activeTrack === 'ratio_compare'
               ? 'bg-amber-500 text-white shadow-sm ring-2 ring-amber-400/30'
@@ -172,15 +213,94 @@ export const DivisionRatioDrill: React.FC = () => {
             <Scale className="w-4 h-4" />
             <span>Ratio Comparison Face-Off</span>
           </div>
-          <div className="text-[10px] mt-0.5 opacity-80">Page 11: Compare without long division</div>
+          <div className={`text-[10px] mt-0.5 ${activeTrack === 'ratio_compare' ? 'text-amber-100' : 'text-slate-400'}`}>
+            Page 11: Compare 3-digit fractions without long division
+          </div>
         </button>
       </div>
 
-      {!isFinished ? (
+      {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+      {!isStarted && !isFinished && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+        >
+          <div className="text-center space-y-2">
+            <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-amber-100">
+              {activeTrack === 'decimal_percentage' ? (
+                <Percent className="w-7 h-7" />
+              ) : (
+                <Scale className="w-7 h-7" />
+              )}
+            </div>
+            <h3 className="text-xl font-black text-slate-900">
+              {trackBriefings[activeTrack].title}
+            </h3>
+            <p className="text-sm text-slate-600 max-w-md mx-auto">
+              {trackBriefings[activeTrack].description}
+            </p>
+          </div>
+
+          {/* Arun Sharma Method Tip Box */}
+          <div className="bg-amber-50/70 border border-amber-200/80 rounded-xl p-4 space-y-2">
+            <div className="text-xs font-bold text-amber-800 flex items-center gap-1.5">
+              <Lightbulb className="w-4 h-4 text-amber-600" />
+              <span>{trackBriefings[activeTrack].ruleName}</span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed">
+              {trackBriefings[activeTrack].concept}
+            </p>
+            <div className="bg-white/90 border border-amber-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-amber-900">
+              <span>Technique Example:</span>
+              <span>{trackBriefings[activeTrack].example}</span>
+              <span className="bg-amber-600 text-white px-2 py-0.5 rounded text-[11px] font-sans font-bold">5 Problems</span>
+            </div>
+          </div>
+
+          {/* Drill Targets Grid */}
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Questions</span>
+              <span className="text-base font-black text-slate-800">5 Problems</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Unlock Target</span>
+              <span className="text-base font-black text-emerald-700">≥ 4 / 5 Correct</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Speed</span>
+              <span className="text-base font-black text-amber-700">~{trackBriefings[activeTrack].benchmarkSec}s / problem</span>
+            </div>
+          </div>
+
+          {/* Start Drill Button */}
+          <button
+            onClick={() => startDrill(activeTrack)}
+            className="w-full py-4 bg-amber-500 hover:bg-amber-600 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <Play className="w-5 h-5 fill-current" />
+            <span>Start Division Drill</span>
+          </button>
+        </motion.div>
+      )}
+
+      {/* ── Screen 2: Active Problem Arena ── */}
+      {isStarted && !isFinished && (
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-6">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span>Problem {roundCount} of 5</span>
-            <span className="font-mono">Time: {elapsedTime.toFixed(1)}s</span>
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-bold uppercase tracking-wider">
+              Problem <strong className="text-slate-900 text-sm">{roundCount}</strong> of 5
+            </span>
+            <div className="flex items-center gap-4">
+              <span className="font-medium">
+                Score: <strong className="text-amber-700 font-bold">{score}</strong> / {roundCount - 1}
+              </span>
+              <span className="font-mono text-slate-400 flex items-center gap-1">
+                <Timer className="w-3.5 h-3.5 text-amber-600" />
+                {elapsedTime.toFixed(1)}s
+              </span>
+            </div>
           </div>
 
           {activeTrack === 'decimal_percentage' ? (
@@ -302,8 +422,10 @@ export const DivisionRatioDrill: React.FC = () => {
             </div>
           )}
         </div>
-      ) : (
-        /* Finished */
+      )}
+
+      {/* ── Screen 3: Finished Scorecard ── */}
+      {isFinished && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -319,16 +441,29 @@ export const DivisionRatioDrill: React.FC = () => {
 
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1 text-sm font-mono text-slate-800">
             <div>Score: <strong className="text-amber-700">{score}/5</strong> correct</div>
-            <div>Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
+            <div>Total Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
+            <div className="text-xs text-slate-500">Pace: <strong className="text-slate-800">{(elapsedTime / 5).toFixed(1)}s</strong> per question</div>
           </div>
 
-          <button
-            onClick={() => { setRoundCount(1); setScore(0); generateProblem(); }}
-            className="w-full py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
-          >
-            <RotateCcw className="w-4 h-4" />
-            Next Set
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => startDrill(activeTrack)}
+              className="flex-1 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Play Again
+            </button>
+            <button
+              onClick={() => {
+                const nextTrack: DivTrack = activeTrack === 'decimal_percentage' ? 'ratio_compare' : 'decimal_percentage';
+                handleSelectTrack(nextTrack);
+              }}
+              className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <span>Switch Technique</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </motion.div>
       )}
     </div>

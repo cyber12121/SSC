@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { RotateCcw, Trophy, Lightbulb, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { RotateCcw, Trophy, Lightbulb, Zap, ArrowRight, CheckCircle2, Play, Target, Timer, Sparkles } from 'lucide-react';
 
 type MultTrack = 'base_100' | 'square_diff' | 'criss_cross' | 'percentage';
 
 export const MultiplicationDrill: React.FC = () => {
   const [activeTrack, setActiveTrack] = useState<MultTrack>('base_100');
+  const [isStarted, setIsStarted] = useState<boolean>(false);
   const [numA, setNumA] = useState<number>(94);
   const [numB, setNumB] = useState<number>(96);
   const [userInput, setUserInput] = useState<string>('');
@@ -18,6 +19,41 @@ export const MultiplicationDrill: React.FC = () => {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<any>(null);
+
+  const trackBriefings = {
+    base_100: {
+      title: 'Base 100 Deviations Sprint',
+      ruleName: 'Base 100 Deviation Rule (Ch. 2, Page 5)',
+      description: 'Multiply numbers near 100 in seconds by computing differences from 100.',
+      concept: 'For numbers near 100, calculate deviations d1 and d2. Left part = (Num1 + d2), Right part = (d1 × d2). (e.g. 94 × 96: d1 = -6, d2 = -4. Left = 94 + (-4) = 90, Right = (-6)×(-4) = 24 ➔ 9024).',
+      example: '94 × 96 ➔ (94 − 4) | (−6 × −4) = 9024',
+      benchmarkSec: 6,
+    },
+    square_diff: {
+      title: 'Difference of Squares (a² - b²)',
+      ruleName: 'Equidistant Anchor Shortcut (Ch. 2, Page 6)',
+      description: 'Multiply numbers equidistant from a round number using (anchor - d)(anchor + d) = anchor² - d².',
+      concept: 'Identify the exact midpoint anchor. Square the anchor and subtract the square of the difference. (e.g. 18 × 22: Anchor is 20, difference is 2. Result = 20² - 2² = 400 - 4 = 396).',
+      example: '18 × 22 ➔ 20² − 2² = 400 − 4 = 396',
+      benchmarkSec: 5,
+    },
+    criss_cross: {
+      title: 'Vedic Criss-Cross Multiplication',
+      ruleName: 'Single-Line 2-Digit Product (Ch. 2, Page 8)',
+      description: 'Compute any 2-digit × 2-digit product in a single line from right to left.',
+      concept: 'Step 1: Multiply units digits (write unit, carry tens). Step 2: Cross-multiply and sum with carry (write unit, carry tens). Step 3: Multiply tens digits + carry.',
+      example: '43 × 78 ➔ Units (3×8=24) | Cross (32+21+2=55) | Tens (28+5=33) ➔ 3354',
+      benchmarkSec: 8,
+    },
+    percentage: {
+      title: 'Percentage Decomposition Multiplication',
+      ruleName: 'Percentage Split Multiplication (Ch. 2, Page 9)',
+      description: 'Convert multiplication into percentage splits of friendly round numbers.',
+      concept: 'Multiply by treating one number as a percentage: e.g. 24 × 65 is equivalent to 24% of 6500 = (20% of 6500) + (4% of 6500) = 1300 + 260 = 1560.',
+      example: '24 × 65 ➔ 20% + 4% of 6500 = 1300 + 260 = 1560',
+      benchmarkSec: 7,
+    }
+  };
 
   const generateProblem = (track: MultTrack = activeTrack) => {
     let a = 0;
@@ -61,22 +97,34 @@ export const MultiplicationDrill: React.FC = () => {
     setUserInput('');
     setFeedback('idle');
     setShowHelper(false);
-    setIsFinished(false);
 
     setTimeout(() => {
       inputRef.current?.focus();
     }, 100);
   };
 
-  useEffect(() => {
+  const startDrill = (track: MultTrack = activeTrack) => {
+    setActiveTrack(track);
+    setIsStarted(true);
+    setIsFinished(false);
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
-    generateProblem(activeTrack);
-  }, [activeTrack]);
+    generateProblem(track);
+  };
+
+  const handleSelectTrack = (track: MultTrack) => {
+    setActiveTrack(track);
+    setIsStarted(false);
+    setIsFinished(false);
+    setRoundCount(1);
+    setScore(0);
+    setElapsedTime(0);
+    setShowHelper(false);
+  };
 
   useEffect(() => {
-    if (!isFinished) {
+    if (isStarted && !isFinished) {
       const startTime = Date.now() - elapsedTime * 1000;
       timerRef.current = setInterval(() => {
         setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
@@ -85,7 +133,7 @@ export const MultiplicationDrill: React.FC = () => {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
-  }, [isFinished]);
+  }, [isStarted, isFinished]);
 
   const expectedProduct = numA * numB;
 
@@ -207,13 +255,21 @@ export const MultiplicationDrill: React.FC = () => {
           </h2>
         </div>
 
-        <button
-          onClick={() => { setRoundCount(1); setScore(0); generateProblem(); }}
-          className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs"
-          title="Restart Drill"
-        >
-          <RotateCcw className="w-4 h-4" />
-        </button>
+        <div className="flex items-center gap-2">
+          {isStarted && !isFinished && (
+            <button
+              onClick={() => {
+                setIsStarted(false);
+                setElapsedTime(0);
+                setShowHelper(false);
+              }}
+              className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
+              title="Return to Briefing"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Track Selector Tabs */}
@@ -228,7 +284,7 @@ export const MultiplicationDrill: React.FC = () => {
           return (
             <button
               key={track.id}
-              onClick={() => setActiveTrack(track.id)}
+              onClick={() => handleSelectTrack(track.id)}
               className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                 isActive
                   ? 'bg-purple-600 text-white shadow-sm ring-2 ring-purple-500/30'
@@ -244,24 +300,102 @@ export const MultiplicationDrill: React.FC = () => {
         })}
       </div>
 
-      {!isFinished ? (
+      {/* ── Screen 1: Mission Briefing (DO NOT start automatically) ── */}
+      {!isStarted && !isFinished && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6 max-w-2xl mx-auto"
+        >
+          <div className="text-center space-y-2">
+            <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs border border-purple-100">
+              <Sparkles className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-black text-slate-900">
+              {trackBriefings[activeTrack].title}
+            </h3>
+            <p className="text-sm text-slate-600 max-w-md mx-auto">
+              {trackBriefings[activeTrack].description}
+            </p>
+          </div>
+
+          {/* Arun Sharma Method Tip Box */}
+          <div className="bg-purple-50/70 border border-purple-200/80 rounded-xl p-4 space-y-2">
+            <div className="text-xs font-bold text-purple-800 flex items-center gap-1.5">
+              <Lightbulb className="w-4 h-4 text-purple-600" />
+              <span>{trackBriefings[activeTrack].ruleName}</span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed">
+              {trackBriefings[activeTrack].concept}
+            </p>
+            <div className="bg-white/90 border border-purple-100 rounded-lg p-2.5 flex items-center justify-between text-xs font-mono font-bold text-purple-900">
+              <span>Technique Example:</span>
+              <span>{trackBriefings[activeTrack].example}</span>
+              <span className="bg-purple-600 text-white px-2 py-0.5 rounded text-[11px] font-sans font-bold">5 Problems</span>
+            </div>
+          </div>
+
+          {/* Drill Targets Grid */}
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Questions</span>
+              <span className="text-base font-black text-slate-800">5 Problems</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Unlock Target</span>
+              <span className="text-base font-black text-emerald-700">≥ 4 / 5 Correct</span>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
+              <span className="text-[10px] uppercase font-bold text-slate-400 block">Target Speed</span>
+              <span className="text-base font-black text-purple-700">~{trackBriefings[activeTrack].benchmarkSec}s / problem</span>
+            </div>
+          </div>
+
+          {/* Start Drill Button */}
+          <button
+            onClick={() => startDrill(activeTrack)}
+            className="w-full py-4 bg-purple-600 hover:bg-purple-700 active:scale-[0.99] text-white font-black text-base rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <Play className="w-5 h-5 fill-current" />
+            <span>Start Multiplication Drill</span>
+          </button>
+        </motion.div>
+      )}
+
+      {/* ── Screen 2: Active Problem Arena ── */}
+      {isStarted && !isFinished && (
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-6">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span>Problem {roundCount} of 5</span>
-            <span className="font-mono">Time: {elapsedTime.toFixed(1)}s</span>
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-bold uppercase tracking-wider">
+              Problem <strong className="text-slate-900 text-sm">{roundCount}</strong> of 5
+            </span>
+            <div className="flex items-center gap-4">
+              <span className="font-medium">
+                Score: <strong className="text-purple-700 font-bold">{score}</strong> / {roundCount - 1}
+              </span>
+              <span className="font-mono text-slate-400 flex items-center gap-1">
+                <Timer className="w-3.5 h-3.5 text-purple-600" />
+                {elapsedTime.toFixed(1)}s
+              </span>
+            </div>
           </div>
 
           {/* Math Expression */}
-          <div className="flex items-center justify-center gap-4 font-mono font-black text-3xl sm:text-4xl text-slate-900">
-            <span className="text-purple-800">{numA}</span>
-            <span className="text-slate-400">×</span>
-            <span className="text-indigo-800">{numB}</span>
-            <span className="text-slate-400">=</span>
-            <span className="text-slate-400">?</span>
+          <div className="p-6 bg-slate-50/80 rounded-2xl border border-slate-200 text-center">
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest block mb-3">
+              Calculate Mentally using {trackBriefings[activeTrack].title}
+            </span>
+            <div className="flex items-center justify-center gap-4 font-mono font-black text-3xl sm:text-4xl text-slate-900">
+              <span className="px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-xs text-purple-800">{numA}</span>
+              <span className="text-slate-400 font-sans text-2xl">×</span>
+              <span className="px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-xs text-indigo-800">{numB}</span>
+              <span className="text-slate-400 font-sans text-2xl">=</span>
+              <span className="text-slate-400">?</span>
+            </div>
           </div>
 
           {/* Input Box */}
-          <div className="max-w-xs mx-auto">
+          <div className="max-w-xs mx-auto space-y-2">
             <input
               ref={inputRef}
               type="text"
@@ -279,6 +413,7 @@ export const MultiplicationDrill: React.FC = () => {
               }`}
               autoFocus
             />
+            <p className="text-center text-xs text-slate-400">Auto-checks when complete digits are entered</p>
           </div>
 
           {/* Show Thought Process / Helper */}
@@ -292,8 +427,10 @@ export const MultiplicationDrill: React.FC = () => {
             </div>
           )}
         </div>
-      ) : (
-        /* Finished */
+      )}
+
+      {/* ── Screen 3: Finished Scorecard ── */}
+      {isFinished && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -309,16 +446,31 @@ export const MultiplicationDrill: React.FC = () => {
 
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1 text-sm font-mono text-slate-800">
             <div>Score: <strong className="text-purple-700">{score}/5</strong> correct</div>
-            <div>Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
+            <div>Total Time: <strong className="text-indigo-700">{elapsedTime.toFixed(1)}s</strong></div>
+            <div className="text-xs text-slate-500">Pace: <strong className="text-slate-800">{(elapsedTime / 5).toFixed(1)}s</strong> per problem</div>
           </div>
 
-          <button
-            onClick={() => { setRoundCount(1); setScore(0); generateProblem(); }}
-            className="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
-          >
-            <RotateCcw className="w-4 h-4" />
-            Next Set
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => startDrill(activeTrack)}
+              className="flex-1 py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Play Again
+            </button>
+            <button
+              onClick={() => {
+                const tracks: MultTrack[] = ['base_100', 'square_diff', 'criss_cross', 'percentage'];
+                const currIdx = tracks.indexOf(activeTrack);
+                const nextTrack = tracks[(currIdx + 1) % tracks.length];
+                handleSelectTrack(nextTrack);
+              }}
+              className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <span>Next Technique</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </motion.div>
       )}
     </div>

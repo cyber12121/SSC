@@ -192,13 +192,19 @@ export const ChainAdditionDrill: React.FC = () => {
             <div className="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg border border-slate-200">
               Pass Target: {activeLevelConfig.passingScore}/10
             </div>
-            <button
-              onClick={() => startNewSet(selectedLevel)}
-              className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
-              title="Restart Set"
-            >
-              <RotateCcw className="w-4 h-4" />
-            </button>
+            {isStarted && !isFinished && (
+              <button
+                onClick={() => {
+                  setIsStarted(false);
+                  setIsTimerRunning(false);
+                  setElapsedTime(0);
+                }}
+                className="p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-xs cursor-pointer"
+                title="Return to Briefing"
+              >
+                <RotateCcw className="w-4 h-4" />
+              </button>
+            )}
           </div>
         </div>
 

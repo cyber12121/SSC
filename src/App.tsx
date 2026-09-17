@@ -74,10 +74,10 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
     const isBank = path.includes('/chapter_bank/');
 
     if (!isMock && !isBank) return;
-    
+
     // The data could be a single chapter object or an array of chapters
     const chapters = Array.isArray(data) ? data : (data.questions ? [data] : []);
-    
+
     // If the data structure is the old one (with chapterBank/mockErrors keys), handle it too
     if (data.chapterBank) chapters.push(...data.chapterBank);
     if (data.mockErrors) chapters.push(...data.mockErrors);
@@ -181,11 +181,11 @@ export default function App() {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
       }
-    } catch (e) {}
+    } catch (e) { }
     const synced = syncMockReports(list, initialMockReports as MockScoreReport[]);
     try {
       safeStorage.setItem('cgl_mock_score_reports', JSON.stringify(synced));
-    } catch {}
+    } catch { }
     return synced;
   });
 
@@ -204,10 +204,10 @@ export default function App() {
           setMockReportsList(synced);
           try {
             safeStorage.setItem('cgl_mock_score_reports', JSON.stringify(synced));
-          } catch {}
+          } catch { }
         }
       })
-      .catch(() => {});
+      .catch(() => { });
 
     const handleStorage = async () => {
       try {
@@ -219,7 +219,7 @@ export default function App() {
             setMockReportsList(synced);
           }
         }
-      } catch (e) {}
+      } catch (e) { }
 
       try {
         await clearCachedData();
@@ -228,7 +228,7 @@ export default function App() {
           setRawData(fresh);
           await setCachedData(fresh);
         }
-      } catch {}
+      } catch { }
     };
     window.addEventListener('storage', handleStorage);
     window.addEventListener('cgl_mock_reports_updated', handleStorage);
@@ -250,7 +250,7 @@ export default function App() {
   });
   const setQuizModePersisted = (mode: 'practice' | 'mock') => {
     setQuizMode(mode);
-    try { localStorage.setItem('quizMode', mode); } catch {}
+    try { localStorage.setItem('quizMode', mode); } catch { }
   };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
@@ -266,7 +266,7 @@ export default function App() {
     try {
       const cached = typeof localStorage !== 'undefined' ? localStorage.getItem('cgl_deleted_question_ids') : null;
       if (cached) return new Set(JSON.parse(cached));
-    } catch {}
+    } catch { }
     return new Set();
   });
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
@@ -283,7 +283,7 @@ export default function App() {
 
   const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca') => {
     setMockViewMode(mode);
-    try { localStorage.setItem('mockViewMode', mode); } catch {}
+    try { localStorage.setItem('mockViewMode', mode); } catch { }
   };
 
   const [rcaSelectedFilter, setRcaSelectedFilter] = useState<'all' | RCATagType | 'unclassified'>('all');
@@ -309,7 +309,7 @@ export default function App() {
 
   const setMockTestTypeFilterPersisted = (filter: 'all' | 'full' | 'sectional') => {
     setMockTestTypeFilter(filter);
-    try { localStorage.setItem('mockTestTypeFilter', filter); } catch {}
+    try { localStorage.setItem('mockTestTypeFilter', filter); } catch { }
   };
 
   const [activeMockChapterModal, setActiveMockChapterModal] = useState<MockChapterModalData | null>(null);
@@ -420,14 +420,14 @@ export default function App() {
           setDataLoading(false);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
 
     loadSubjectData()
       .then(data => {
         if (isMounted) {
           setRawData(data);
           setDataLoading(false);
-          setCachedData(data).catch(() => {});
+          setCachedData(data).catch(() => { });
         }
       })
       .catch(err => {
@@ -491,7 +491,7 @@ export default function App() {
           });
           try {
             localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(merged)));
-          } catch {}
+          } catch { }
           return merged;
         });
       } catch (error) {
@@ -525,7 +525,7 @@ export default function App() {
           clearedAt = window.localStorage?.getItem('activity_cleared_at_' + user.uid) || null;
           hiddenIds = new Set(JSON.parse(window.localStorage?.getItem('hidden_result_ids_' + user.uid) || '[]'));
         }
-      } catch (e) {}
+      } catch (e) { }
 
       const filtered = results.filter(r => {
         if (hiddenIds.has(r.id)) return false;
@@ -578,8 +578,8 @@ export default function App() {
   const toggleBookmark = async (question: Question) => {
     if (!user) return;
 
-    const existing = bookmarks.find(b => 
-      b.question.question === question.question && 
+    const existing = bookmarks.find(b =>
+      b.question.question === question.question &&
       b.subject === (activeChapter?.subject || 'Unknown')
     );
 
@@ -639,7 +639,7 @@ export default function App() {
       if (question.id) next.add(question.id);
       try {
         localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(next)));
-      } catch {}
+      } catch { }
       return next;
     });
 
@@ -709,15 +709,15 @@ export default function App() {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify(updated)
-                    }).catch(() => {});
+                    }).catch(() => { });
                   }
                 }
               }
-            } catch {}
+            } catch { }
           }
         }
       }
-    } catch {}
+    } catch { }
 
     // 7. Purge from cgl_rca_global_store
     try {
@@ -729,7 +729,7 @@ export default function App() {
         delete globalStore[qTextClean];
         window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
       }
-    } catch {}
+    } catch { }
 
     // 8. Persist to Firestore deleted_questions collection
     try {
@@ -780,7 +780,7 @@ export default function App() {
     if (quizMode === 'mock') {
       const el = document.documentElement;
       if (el.requestFullscreen) {
-        el.requestFullscreen().catch(() => {});
+        el.requestFullscreen().catch(() => { });
       }
     }
   };
@@ -868,8 +868,8 @@ export default function App() {
       ['Active & Passive Voice', 'Direct & Indirect Speech', 'Para Jumbles', 'One Word Substitution', 'Spelling Errors', 'Synonyms & Antonyms', 'Spotting Errors', 'Cloze Test'].includes(normalized)
         ? 'English'
         : ['Missing Number / Matrix', 'Analogy', 'Coding-Decoding', 'Syllogism', 'Direction & Distance', 'Blood Relations', 'Venn Diagram'].includes(normalized)
-        ? 'Reasoning'
-        : 'Mathematics'
+          ? 'Reasoning'
+          : 'Mathematics'
     );
 
     // 1. Gather all questions matching this topic from mockData (mock errors)
@@ -962,7 +962,7 @@ export default function App() {
       try {
         const guestHistory = JSON.parse(localStorage.getItem('guest_results') || '[]');
         localStorage.setItem('guest_results', JSON.stringify([guestSaved, ...guestHistory].slice(0, 50)));
-      } catch {}
+      } catch { }
       return guestSaved;
     }
 
@@ -982,7 +982,7 @@ export default function App() {
       try {
         const localHistory = JSON.parse(localStorage.getItem('offline_results_' + user.uid) || '[]');
         localStorage.setItem('offline_results_' + user.uid, JSON.stringify([localSaved, ...localHistory].slice(0, 50)));
-      } catch {}
+      } catch { }
       setUserResults(prev => [localSaved, ...prev.filter(r => r.id !== localSaved.id)]);
       return localSaved;
     }
@@ -991,13 +991,13 @@ export default function App() {
   const handleQuizExit = () => {
     setView('home');
     if (document.fullscreenElement && document.exitFullscreen) {
-      document.exitFullscreen().catch(() => {});
+      document.exitFullscreen().catch(() => { });
     }
   };
 
   const handleReviewFromQuiz = (result: QuizResult) => {
     if (document.fullscreenElement && document.exitFullscreen) {
-      document.exitFullscreen().catch(() => {});
+      document.exitFullscreen().catch(() => { });
     }
     openReview(result, 'home');
   };
@@ -1020,7 +1020,7 @@ export default function App() {
     const nowIso = new Date().toISOString();
     try {
       localStorage.setItem('activity_cleared_at_' + user.uid, nowIso);
-    } catch {}
+    } catch { }
 
     // 2. Clear state immediately
     setUserResults([]);
@@ -1158,7 +1158,7 @@ export default function App() {
   const handleDeleteResult = async (resultId?: string) => {
     if (!resultId) return;
     if (!window.confirm('Are you sure you want to delete this quiz attempt from your history?')) return;
-    
+
     // Store in hidden list so it immediately and permanently disappears
     if (user) {
       try {
@@ -1168,9 +1168,9 @@ export default function App() {
           hidden.push(resultId);
           localStorage.setItem(key, JSON.stringify(hidden));
         }
-      } catch {}
+      } catch { }
     }
-    
+
     setUserResults(prev => prev.filter(r => r.id !== resultId));
 
     try {
@@ -1304,8 +1304,8 @@ export default function App() {
         qSourceType === 'full_mock'
           ? ((q as any).testName ? `Full Mock: ${(q as any).testName}` : 'Full Mock Test')
           : qSourceType === 'sectional'
-          ? ((q as any).testName ? `Sectional Test: ${(q as any).testName}` : 'Sectional Test')
-          : `Subject-Wise: ${subject}`
+            ? ((q as any).testName ? `Sectional Test: ${(q as any).testName}` : 'Sectional Test')
+            : `Subject-Wise: ${subject}`
       );
 
       return {
@@ -1459,8 +1459,8 @@ export default function App() {
         qSourceType === 'full_mock'
           ? ((q as any).testName ? `Full Mock: ${(q as any).testName}` : 'Full Mock Test')
           : qSourceType === 'sectional'
-          ? ((q as any).testName ? `Sectional Test: ${(q as any).testName}` : 'Sectional Test')
-          : `Subject-Wise: ${selectedSubject}`
+            ? ((q as any).testName ? `Sectional Test: ${(q as any).testName}` : 'Sectional Test')
+            : `Subject-Wise: ${selectedSubject}`
       );
 
       return {
@@ -1596,106 +1596,104 @@ export default function App() {
     <div className={`font-sans text-slate-900 ${view === 'quiz' || view === 'review' ? 'h-screen overflow-hidden bg-white' : 'min-h-screen bg-slate-100'}`}>
       {/* Navigation */}
       {view !== 'quiz' && view !== 'review' && (
-      <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
-        <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={resetToHome}>
-              <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
-                <GraduationCap className="text-white w-5 h-5" />
-              </div>
-              <span className="text-xl font-black tracking-tight text-slate-800">mock</span>
-              <a
-                href="https://cat-nu-ruby.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2 px-2.5 py-1 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700 transition-all shadow-md shadow-purple-200 text-xs flex items-center"
-                title="Open CAT practice"
-              >
-                CAT
-              </a>
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-6">
-              <button 
-                onClick={resetToHome}
-                className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <BookOpen className="w-4 h-4 mr-1.5" />
-                Practice
-              </button>
-              <button 
-                onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
-                className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <Zap className="w-4 h-4 mr-1.5" />
-                Speed Drill
-              </button>
-              <button 
-                onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
-                className={`flex items-center font-bold text-sm transition-colors ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <BookmarkIcon className="w-4 h-4 mr-1.5" />
-                Bookmarks
-              </button>
-              <button
-                onClick={() => setView('dashboard')}
-                className={`flex items-center font-bold text-sm transition-colors ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <LayoutDashboard className="w-4 h-4 mr-1.5" />
-                Dashboard
-              </button>
-              <button
-                onClick={() => setView('mockScores')}
-                className={`flex items-center font-bold text-sm transition-colors ${view === 'mockScores' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-              >
-                <Trophy className="w-4 h-4 mr-1.5" />
-                Mock Scores
-              </button>
-              <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
-                <button
-                  onClick={() => setQuizModePersisted('practice')}
-                  className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${
-                    quizMode === 'practice'
-                      ? 'bg-white text-emerald-600 shadow-xs'
-                      : 'text-slate-500 hover:text-slate-800'
-                  }`}
+        <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
+          <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between h-16">
+              <div className="flex items-center space-x-3 cursor-pointer" onClick={resetToHome}>
+                <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
+                  <GraduationCap className="text-white w-5 h-5" />
+                </div>
+                <span className="text-xl font-black tracking-tight text-slate-800">mock</span>
+                <a
+                  href="https://cat-nu-ruby.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 px-2.5 py-1 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700 transition-all shadow-md shadow-purple-200 text-xs flex items-center"
+                  title="Open CAT practice"
                 >
-                  <BookOpen className="w-3.5 h-3.5 mr-1" />
+                  CAT
+                </a>
+              </div>
+
+              <div className="hidden md:flex items-center space-x-6">
+                <button
+                  onClick={resetToHome}
+                  className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                >
+                  <BookOpen className="w-4 h-4 mr-1.5" />
                   Practice
                 </button>
                 <button
-                  onClick={() => setQuizModePersisted('mock')}
-                  className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${
-                    quizMode === 'mock'
-                      ? 'bg-white text-red-600 shadow-xs'
-                      : 'text-slate-500 hover:text-slate-800'
-                  }`}
+                  onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
+                  className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                 >
-                  <Trophy className="w-3.5 h-3.5 mr-1" />
-                  Mock
+                  <Zap className="w-4 h-4 mr-1.5" />
+                  Speed Drill
                 </button>
+                <button
+                  onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
+                  className={`flex items-center font-bold text-sm transition-colors ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                >
+                  <BookmarkIcon className="w-4 h-4 mr-1.5" />
+                  Bookmarks
+                </button>
+                <button
+                  onClick={() => setView('dashboard')}
+                  className={`flex items-center font-bold text-sm transition-colors ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                >
+                  <LayoutDashboard className="w-4 h-4 mr-1.5" />
+                  Dashboard
+                </button>
+                <button
+                  onClick={() => setView('mockScores')}
+                  className={`flex items-center font-bold text-sm transition-colors ${view === 'mockScores' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                >
+                  <Trophy className="w-4 h-4 mr-1.5" />
+                  Mock Scores
+                </button>
+                <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
+                  <button
+                    onClick={() => setQuizModePersisted('practice')}
+                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${quizMode === 'practice'
+                        ? 'bg-white text-emerald-600 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                      }`}
+                  >
+                    <BookOpen className="w-3.5 h-3.5 mr-1" />
+                    Practice
+                  </button>
+                  <button
+                    onClick={() => setQuizModePersisted('mock')}
+                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${quizMode === 'mock'
+                        ? 'bg-white text-red-600 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                      }`}
+                  >
+                    <Trophy className="w-3.5 h-3.5 mr-1" />
+                    Mock
+                  </button>
+                </div>
+                {user ? (
+                  <button
+                    onClick={handleLogout}
+                    className="p-2 text-slate-500 hover:text-red-600 transition-colors"
+                    title="Logout"
+                  >
+                    <LogOut className="w-5 h-5" />
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleLogin}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200 flex items-center text-xs"
+                  >
+                    <LogIn className="w-4 h-4 mr-1.5" />
+                    Login
+                  </button>
+                )}
               </div>
-              {user ? (
-                <button 
-                  onClick={handleLogout}
-                  className="p-2 text-slate-500 hover:text-red-600 transition-colors"
-                  title="Logout"
-                >
-                  <LogOut className="w-5 h-5" />
-                </button>
-              ) : (
-                <button 
-                  onClick={handleLogin}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200 flex items-center text-xs"
-                >
-                  <LogIn className="w-4 h-4 mr-1.5" />
-                  Login
-                </button>
-              )}
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
       )}
 
       <main className={view === 'quiz' || view === 'review' ? 'w-full h-full overflow-hidden' : 'max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5'}>
@@ -1742,9 +1740,8 @@ export default function App() {
                               setSelectedGKSubTopic('all');
                               setSelectedTopic(null);
                             }}
-                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${
-                              category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
-                            }`}
+                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${category === 'chapterBank' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
+                              }`}
                           >
                             <ListChecks className="w-3.5 h-3.5 mr-1" />
                             Chapter Bank
@@ -1759,9 +1756,8 @@ export default function App() {
                               setSelectedGKSubTopic('all');
                               setSelectedTopic(null);
                             }}
-                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${
-                              category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
-                            }`}
+                            className={`rounded-md px-3 py-1 text-xs font-semibold transition-colors flex items-center ${category === 'mockErrors' ? 'bg-white text-indigo-700 shadow-xs font-bold' : 'text-white hover:bg-white/10'
+                              }`}
                           >
                             <AlertCircle className="w-3.5 h-3.5 mr-1" />
                             Mock Errors
@@ -1789,122 +1785,122 @@ export default function App() {
                         {Object.keys(currentData)
                           .filter(s => s !== 'GK Full Tests')
                           .map((subject) => {
-                          const chip = (
-                            {
-                              Mathematics: 'from-blue-500 to-indigo-600',
-                              Reasoning: 'from-violet-500 to-purple-600',
-                              English: 'from-emerald-500 to-teal-600',
-                              'General Awareness': 'from-amber-500 to-orange-600',
-                              'GK/GS': 'from-pink-500 to-rose-600',
-                            } as Record<string, string>
-                          )[subject] || 'from-slate-500 to-slate-600';
-                          return (
-                            <motion.div
-                              key={subject}
-                              whileHover={{ y: -2 }}
-                              onClick={() => {
-                                setSelectedSubject(subject);
-                                if (subject === 'General Awareness') {
-                                  setSelectedGKSubject(null);
-                                  setSelectedGKSubTopic('all');
-                                }
-                                if (subject === 'Mathematics') {
-                                  setSelectedMathSection(null);
-                                }
-                                if (subject === 'English') {
-                                  setSelectedEnglishSection(null);
-                                }
-                                setSelectedTopic(null);
-                              }}
-                              className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs flex flex-col justify-between"
-                            >
-                              <div>
-                                <div className="flex items-center justify-between">
-                                  <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
-                                    <Layers className="w-4 h-4" />
+                            const chip = (
+                              {
+                                Mathematics: 'from-blue-500 to-indigo-600',
+                                Reasoning: 'from-violet-500 to-purple-600',
+                                English: 'from-emerald-500 to-teal-600',
+                                'General Awareness': 'from-amber-500 to-orange-600',
+                                'GK/GS': 'from-pink-500 to-rose-600',
+                              } as Record<string, string>
+                            )[subject] || 'from-slate-500 to-slate-600';
+                            return (
+                              <motion.div
+                                key={subject}
+                                whileHover={{ y: -2 }}
+                                onClick={() => {
+                                  setSelectedSubject(subject);
+                                  if (subject === 'General Awareness') {
+                                    setSelectedGKSubject(null);
+                                    setSelectedGKSubTopic('all');
+                                  }
+                                  if (subject === 'Mathematics') {
+                                    setSelectedMathSection(null);
+                                  }
+                                  if (subject === 'English') {
+                                    setSelectedEnglishSection(null);
+                                  }
+                                  setSelectedTopic(null);
+                                }}
+                                className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:border-indigo-300 shadow-xs flex flex-col justify-between"
+                              >
+                                <div>
+                                  <div className="flex items-center justify-between">
+                                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chip} text-white shadow-xs`}>
+                                      <Layers className="w-4 h-4" />
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          handleAskAiSubject(subject);
+                                        }}
+                                        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all cursor-pointer shadow-2xs"
+                                        title={`Ask Tommy AI to analyze ${subject} weaknesses and mistakes`}
+                                      >
+                                        <Sparkles className="w-2.5 h-2.5" />
+                                        <span>Ask AI</span>
+                                      </button>
+                                      <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
+                                        {currentData[subject]?.length || 0} Ch
+                                      </span>
+                                    </div>
                                   </div>
-                                  <div className="flex items-center gap-1.5">
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleAskAiSubject(subject);
-                                      }}
-                                      className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 transition-all cursor-pointer shadow-2xs"
-                                      title={`Ask Tommy AI to analyze ${subject} weaknesses and mistakes`}
-                                    >
-                                      <Sparkles className="w-2.5 h-2.5" />
-                                      <span>Ask AI</span>
-                                    </button>
-                                    <span className="rounded bg-slate-50 px-1.5 py-0.2 text-[10px] font-bold text-slate-500 border border-slate-100">
-                                      {currentData[subject]?.length || 0} Ch
-                                    </span>
+                                  <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
+                                  <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
+                                    View Chapters
+                                    <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                   </div>
                                 </div>
-                                <h3 className="mt-2 text-xs font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">{subject}</h3>
-                                <div className="mt-1 flex items-center text-[11px] font-semibold text-indigo-600">
-                                  View Chapters
-                                  <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
-                                </div>
-                              </div>
 
-                              {subject === 'General Awareness' && (
-                                <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
-                                  {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').map((sub) => (
+                                {subject === 'General Awareness' && (
+                                  <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
+                                    {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').map((sub) => (
+                                      <button
+                                        key={sub.id}
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSelectedSubject('General Awareness');
+                                          setSelectedGKSubject(sub.id);
+                                          setSelectedGKSubTopic('all');
+                                        }}
+                                        className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
+                                        title={`Open ${sub.title}`}
+                                      >
+                                        {sub.shortTitle}
+                                      </button>
+                                    ))}
+                                  </div>
+                                )}
+
+                                {subject === 'English' && (
+                                  <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
                                     <button
-                                      key={sub.id}
                                       onClick={(e) => {
                                         e.stopPropagation();
-                                        setSelectedSubject('General Awareness');
-                                        setSelectedGKSubject(sub.id);
-                                        setSelectedGKSubTopic('all');
+                                        setSelectedSubject('English');
+                                        setSelectedEnglishSection('ayush_vocab');
+                                        setSelectedTopic(null);
+                                      }}
+                                      className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 transition-colors"
+                                      title="Open SSC 2025 Vocabs by Ayush"
+                                    >
+                                      Vocab 2025 ({(bankData['English'] || []).filter(ch => ch.section === 'ayush_vocab').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
+                                    </button>
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSelectedSubject('English');
+                                        setSelectedEnglishSection('general');
+                                        setSelectedTopic(null);
                                       }}
                                       className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
-                                      title={`Open ${sub.title}`}
+                                      title="Open Grammar & Practice"
                                     >
-                                      {sub.shortTitle}
+                                      Grammar
                                     </button>
-                                  ))}
-                                </div>
-                              )}
-
-                              {subject === 'English' && (
-                                <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setSelectedSubject('English');
-                                      setSelectedEnglishSection('ayush_vocab');
-                                      setSelectedTopic(null);
-                                    }}
-                                    className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 transition-colors"
-                                    title="Open SSC 2025 Vocabs by Ayush"
-                                  >
-                                    Vocab 2025 ({(bankData['English'] || []).filter(ch => ch.section === 'ayush_vocab').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
-                                  </button>
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setSelectedSubject('English');
-                                      setSelectedEnglishSection('general');
-                                      setSelectedTopic(null);
-                                    }}
-                                    className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-100 transition-colors"
-                                    title="Open Grammar & Practice"
-                                  >
-                                    Grammar
-                                  </button>
-                                </div>
-                              )}
-                            </motion.div>
-                          );
-                        })}
+                                  </div>
+                                )}
+                              </motion.div>
+                            );
+                          })}
                       </div>
                     )}
 
                     {/* ─── High-Yield Practice Hub & Feature Cards ─── */}
                     <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2.5">
                       {/* Speed Drill */}
-                      <div 
+                      <div
                         onClick={() => setView('drill')}
                         className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-amber-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
                       >
@@ -1929,7 +1925,7 @@ export default function App() {
                       </div>
 
                       {/* Bookmarks */}
-                      <div 
+                      <div
                         onClick={() => setView('bookmarks')}
                         className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-blue-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
                       >
@@ -1969,7 +1965,7 @@ export default function App() {
                           </div>
                           {userResults.length > 0 && (
                             <div className="flex items-center gap-2.5">
-                              <button 
+                              <button
                                 onClick={handleClearAllResults}
                                 disabled={loadingResults}
                                 className="text-[11px] font-semibold text-rose-500 hover:text-rose-700 transition-colors flex items-center gap-1 disabled:opacity-50"
@@ -1978,7 +1974,7 @@ export default function App() {
                                 <Trash2 className="w-3 h-3" />
                                 Clear History
                               </button>
-                              <button 
+                              <button
                                 onClick={() => setView('dashboard')}
                                 className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
                               >
@@ -2006,11 +2002,10 @@ export default function App() {
                                     </div>
                                   </div>
                                   <div className="flex items-center gap-2 shrink-0">
-                                    <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-md ${
-                                      acc >= 75 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
-                                      acc >= 50 ? 'bg-amber-50 text-amber-700 border border-amber-200' :
-                                      'bg-rose-50 text-rose-700 border border-rose-200'
-                                    }`}>
+                                    <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-md ${acc >= 75 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
+                                        acc >= 50 ? 'bg-amber-50 text-amber-700 border border-amber-200' :
+                                          'bg-rose-50 text-rose-700 border border-rose-200'
+                                      }`}>
                                       {acc}%
                                     </span>
                                     <button
@@ -2034,7 +2029,7 @@ export default function App() {
                             ].map((s, idx) => {
                               const SIcon = s.icon;
                               return (
-                                <div 
+                                <div
                                   key={idx}
                                   onClick={() => setSelectedSubject(s.sub)}
                                   className="p-2 rounded-lg border border-slate-100 hover:border-slate-300 hover:bg-slate-50/70 transition-all cursor-pointer flex items-center justify-between group"
@@ -2324,23 +2319,22 @@ export default function App() {
                             {selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
                               ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.title
                               : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
-                              ? 'All Vocabs SSC 2025 - by Ayush'
-                              : selectedSubject}
+                                ? 'All Vocabs SSC 2025 - by Ayush'
+                                : selectedSubject}
                           </h2>
                           <p className="text-[11px] text-slate-500 font-medium">
                             {category === 'mockErrors'
                               ? 'Mock error remediation & weak topic drills'
                               : selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
-                              ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.desc
-                              : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
-                              ? '914 High-Yield SSC 2025 vocabulary questions in sets of 20'
-                              : 'Comprehensive chapter-wise question vault'}
+                                ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.desc
+                                : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
+                                  ? '914 High-Yield SSC 2025 vocabulary questions in sets of 20'
+                                  : 'Comprehensive chapter-wise question vault'}
                           </p>
                         </div>
                       </div>
-                      <span className={`self-start sm:self-auto rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${
-                        category === 'mockErrors' ? 'bg-rose-50 text-rose-600 border border-rose-100' : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
-                      }`}>
+                      <span className={`self-start sm:self-auto rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${category === 'mockErrors' ? 'bg-rose-50 text-rose-600 border border-rose-100' : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
+                        }`}>
                         {category === 'mockErrors' ? 'Mock Errors' : 'Chapter Bank'}
                       </span>
                     </div>
@@ -2364,17 +2358,15 @@ export default function App() {
                                   setSelectedGKSubject(sub.id);
                                   setSelectedGKSubTopic('all');
                                 }}
-                                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
-                                  isSelected
+                                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${isSelected
                                     ? 'bg-indigo-600 text-white shadow-xs'
                                     : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
-                                }`}
+                                  }`}
                               >
                                 <Icon className="w-3.5 h-3.5" />
                                 <span>{sub.shortTitle}</span>
-                                <span className={`px-1.5 py-0.2 text-[10px] rounded font-bold ${
-                                  isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
-                                }`}>
+                                <span className={`px-1.5 py-0.2 text-[10px] rounded font-bold ${isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                                  }`}>
                                   {count}
                                 </span>
                               </button>
@@ -2389,11 +2381,10 @@ export default function App() {
                               <button
                                 key={st.key}
                                 onClick={() => setSelectedGKSubTopic(st.key)}
-                                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all shrink-0 ${
-                                  selectedGKSubTopic === st.key
+                                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all shrink-0 ${selectedGKSubTopic === st.key
                                     ? 'bg-slate-900 text-white shadow-xs'
                                     : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
-                                }`}
+                                  }`}
                               >
                                 {st.label}
                               </button>
@@ -2420,11 +2411,10 @@ export default function App() {
                           <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
                             <button
                               onClick={() => setMockTestTypeFilterPersisted('all')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                                mockTestTypeFilter === 'all'
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockTestTypeFilter === 'all'
                                   ? 'bg-white text-indigo-700 shadow-xs font-bold'
                                   : 'text-slate-500 hover:text-slate-800'
-                              }`}
+                                }`}
                               title="Combined view: all full and sectional test errors"
                             >
                               <span>Combined</span>
@@ -2434,11 +2424,10 @@ export default function App() {
                             </button>
                             <button
                               onClick={() => setMockTestTypeFilterPersisted('full')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                                mockTestTypeFilter === 'full'
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockTestTypeFilter === 'full'
                                   ? 'bg-white text-indigo-700 shadow-xs font-bold'
                                   : 'text-slate-500 hover:text-slate-800'
-                              }`}
+                                }`}
                               title="View errors only from Full Mock Tests"
                             >
                               <span>Full Tests</span>
@@ -2448,11 +2437,10 @@ export default function App() {
                             </button>
                             <button
                               onClick={() => setMockTestTypeFilterPersisted('sectional')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                                mockTestTypeFilter === 'sectional'
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockTestTypeFilter === 'sectional'
                                   ? 'bg-white text-indigo-700 shadow-xs font-bold'
                                   : 'text-slate-500 hover:text-slate-800'
-                              }`}
+                                }`}
                               title="View errors only from Sectional Mock Tests"
                             >
                               <span>Sectional</span>
@@ -2466,11 +2454,10 @@ export default function App() {
                           <div className="inline-flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
                             <button
                               onClick={() => setMockViewModePersisted('chapters')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                                mockViewMode === 'chapters'
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockViewMode === 'chapters'
                                   ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-slate-500 hover:text-slate-800'
-                              }`}
+                                }`}
                               title="Club all questions chapter-wise across Slow, Unattempted, and Wrong"
                             >
                               <ListChecks className="w-3.5 h-3.5" />
@@ -2478,11 +2465,10 @@ export default function App() {
                             </button>
                             <button
                               onClick={() => setMockViewModePersisted('buckets')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                                mockViewMode === 'buckets'
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockViewMode === 'buckets'
                                   ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-slate-500 hover:text-slate-800'
-                              }`}
+                                }`}
                               title="View questions grouped into Speed Issue, Unattempted, and Wrong buckets"
                             >
                               <Layers className="w-3.5 h-3.5" />
@@ -2490,11 +2476,10 @@ export default function App() {
                             </button>
                             <button
                               onClick={() => setMockViewModePersisted('rca')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                                mockViewMode === 'rca'
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockViewMode === 'rca'
                                   ? 'bg-white text-indigo-700 shadow-xs'
                                   : 'text-purple-600 hover:text-purple-800'
-                              }`}
+                                }`}
                               title="Root Cause Analysis: [C] Concept, [A] Silly, [T] Time Trap, [G] Guesswork"
                             >
                               <Target className="w-3.5 h-3.5 text-purple-600" />
@@ -2505,11 +2490,10 @@ export default function App() {
                           <button
                             onClick={() => startAllSubjectQuiz(selectedSubject)}
                             disabled={clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0}
-                            className={`inline-flex shrink-0 items-center rounded-lg px-3.5 py-1 text-xs font-semibold shadow-xs transition-all ${
-                              clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
+                            className={`inline-flex shrink-0 items-center rounded-lg px-3.5 py-1 text-xs font-semibold shadow-xs transition-all ${clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
                                 ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
                                 : 'bg-indigo-600 hover:bg-indigo-700 text-white hover:shadow-sm cursor-pointer'
-                            }`}
+                              }`}
                           >
                             <Play className="w-3.5 h-3.5 mr-1" />
                             Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})
@@ -2522,11 +2506,10 @@ export default function App() {
                       <div className="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar">
                         <button
                           onClick={() => setMockGKFilter('all')}
-                          className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 ${
-                            mockGKFilter === 'all'
+                          className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 ${mockGKFilter === 'all'
                               ? 'bg-indigo-600 text-white shadow-xs'
                               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
-                          }`}
+                            }`}
                         >
                           All GK
                         </button>
@@ -2536,11 +2519,10 @@ export default function App() {
                             <button
                               key={sub.id}
                               onClick={() => setMockGKFilter(sub.id)}
-                              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1 ${
-                                mockGKFilter === sub.id
+                              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1 ${mockGKFilter === sub.id
                                   ? 'bg-indigo-600 text-white shadow-xs'
                                   : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
-                              }`}
+                                }`}
                             >
                               <Icon className="w-3.5 h-3.5" />
                               <span>{sub.shortTitle}</span>
@@ -2730,11 +2712,10 @@ export default function App() {
                                         }
                                       }}
                                       disabled={ch.slow === 0}
-                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
-                                        ch.slow > 0
+                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${ch.slow > 0
                                           ? 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 cursor-pointer'
                                           : 'text-slate-300 bg-slate-50 cursor-default'
-                                      }`}
+                                        }`}
                                       title={ch.slow > 25 ? `View ${ch.slow} slow questions in sets` : ch.slow > 0 ? `Practice ${ch.slow} slow questions` : 'No slow questions'}
                                     >
                                       <Zap className="w-3 h-3 shrink-0" />
@@ -2754,11 +2735,10 @@ export default function App() {
                                         }
                                       }}
                                       disabled={ch.wrong === 0}
-                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
-                                        ch.wrong > 0
+                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${ch.wrong > 0
                                           ? 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 cursor-pointer'
                                           : 'text-slate-300 bg-slate-50 cursor-default'
-                                      }`}
+                                        }`}
                                       title={ch.wrong > 25 ? `View ${ch.wrong} wrong questions in sets` : ch.wrong > 0 ? `Practice ${ch.wrong} wrong questions` : 'No wrong questions'}
                                     >
                                       <XCircle className="w-3 h-3 shrink-0" />
@@ -2778,11 +2758,10 @@ export default function App() {
                                         }
                                       }}
                                       disabled={ch.unattempted === 0}
-                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
-                                        ch.unattempted > 0
+                                      className={`w-12 sm:w-14 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${ch.unattempted > 0
                                           ? 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 cursor-pointer'
                                           : 'text-slate-300 bg-slate-50 cursor-default'
-                                      }`}
+                                        }`}
                                       title={ch.unattempted > 25 ? `View ${ch.unattempted} skipped questions in sets` : ch.unattempted > 0 ? `Practice ${ch.unattempted} skipped questions` : 'No skipped questions'}
                                     >
                                       <AlertCircle className="w-3 h-3 shrink-0" />
@@ -2850,17 +2829,15 @@ export default function App() {
                                 <div
                                   key={tagKey}
                                   onClick={() => setRcaSelectedFilter(prev => prev === tagKey ? 'all' : tagKey)}
-                                  className={`p-3 rounded-xl border transition-all cursor-pointer shadow-xs flex flex-col justify-between ${
-                                    isSelected
+                                  className={`p-3 rounded-xl border transition-all cursor-pointer shadow-xs flex flex-col justify-between ${isSelected
                                       ? 'bg-slate-900 text-white border-slate-900 ring-2 ring-indigo-500/40'
                                       : 'bg-white hover:border-slate-300 border-slate-200/80 text-slate-900'
-                                  }`}
+                                    }`}
                                 >
                                   <div>
                                     <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                                      <span className={`inline-flex items-center gap-1 text-[10px] font-mono font-black px-2 py-0.5 rounded-md ${
-                                        isSelected ? 'bg-white/20 text-white' : cfg.lightClass
-                                      }`}>
+                                      <span className={`inline-flex items-center gap-1 text-[10px] font-mono font-black px-2 py-0.5 rounded-md ${isSelected ? 'bg-white/20 text-white' : cfg.lightClass
+                                        }`}>
                                         {tagKey !== 'unclassified' ? `[${tagKey}]` : '•'} {cfg.shortLabel}
                                       </span>
                                       <span className={`text-lg font-black ${isSelected ? 'text-white' : ''}`}>
@@ -2884,13 +2861,12 @@ export default function App() {
                                           e.stopPropagation();
                                           handleAskAiRca(tagKey);
                                         }}
-                                        className={`px-1.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-0.5 transition-all ${
-                                          count === 0
+                                        className={`px-1.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-0.5 transition-all ${count === 0
                                             ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
                                             : isSelected
-                                            ? 'bg-white/20 text-white hover:bg-white/30 cursor-pointer shadow-xs'
-                                            : 'bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 cursor-pointer shadow-xs'
-                                        }`}
+                                              ? 'bg-white/20 text-white hover:bg-white/30 cursor-pointer shadow-xs'
+                                              : 'bg-violet-50 hover:bg-violet-600 hover:text-white text-violet-700 border border-violet-200 cursor-pointer shadow-xs'
+                                          }`}
                                         title={`Ask Tommy AI to analyze ${cfg.label} errors`}
                                       >
                                         <Sparkles className="w-2.5 h-2.5" />
@@ -2903,13 +2879,12 @@ export default function App() {
                                           e.stopPropagation();
                                           startSubjectRcaQuiz(tagKey);
                                         }}
-                                        className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${
-                                          count === 0
+                                        className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-all ${count === 0
                                             ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
                                             : isSelected
-                                            ? 'bg-white text-slate-900 hover:bg-slate-100 cursor-pointer shadow-xs'
-                                            : 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-xs'
-                                        }`}
+                                              ? 'bg-white text-slate-900 hover:bg-slate-100 cursor-pointer shadow-xs'
+                                              : 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-xs'
+                                          }`}
                                         title={count > 25 ? `Practice ${count} questions in sets` : `Practice all ${count} questions`}
                                       >
                                         <Play className="w-2.5 h-2.5 fill-current" />
@@ -2928,11 +2903,10 @@ export default function App() {
                             <div className="flex items-center gap-1.5 flex-wrap">
                               <button
                                 onClick={() => setRcaSelectedFilter('all')}
-                                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                                  rcaSelectedFilter === 'all'
+                                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${rcaSelectedFilter === 'all'
                                     ? 'bg-slate-900 text-white shadow-xs'
                                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                                }`}
+                                  }`}
                               >
                                 All Topics ({clubbedMockChapters.length})
                               </button>
@@ -2944,11 +2918,10 @@ export default function App() {
                                   <button
                                     key={tagKey}
                                     onClick={() => setRcaSelectedFilter(tagKey)}
-                                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer ${
-                                      isSelected
+                                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer ${isSelected
                                         ? 'bg-indigo-600 text-white shadow-xs'
                                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                                    }`}
+                                      }`}
                                   >
                                     <span className="font-mono text-[10px]">{tagKey !== 'unclassified' ? `[${tagKey}]` : ''}</span>
                                     <span>{cfg.shortLabel}</span>
@@ -3029,9 +3002,8 @@ export default function App() {
                                     >
                                       {/* Rank */}
                                       <div className="col-span-1">
-                                        <span className={`w-5 h-5 rounded-md inline-flex items-center justify-center text-[10px] font-bold ${
-                                          idx < 3 ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
-                                        }`}>
+                                        <span className={`w-5 h-5 rounded-md inline-flex items-center justify-center text-[10px] font-bold ${idx < 3 ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
+                                          }`}>
                                           {idx + 1}
                                         </span>
                                       </div>
@@ -3188,13 +3160,12 @@ export default function App() {
                         </div>
                       ) : (
                         /* Original By Error Bucket View */
-                        <div className={`grid gap-3.5 ${
-                          (currentData[selectedSubject] || []).length === 1
+                        <div className={`grid gap-3.5 ${(currentData[selectedSubject] || []).length === 1
                             ? 'grid-cols-1 max-w-xl mx-auto w-full'
                             : (currentData[selectedSubject] || []).length === 2
-                            ? 'grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto w-full'
-                            : 'grid-cols-1 lg:grid-cols-3 w-full'
-                        }`}>
+                              ? 'grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto w-full'
+                              : 'grid-cols-1 lg:grid-cols-3 w-full'
+                          }`}>
                           {(currentData[selectedSubject] || []).map((chapter, idx) => {
                             const isSpeed = chapter.chapter_title.toLowerCase().includes('speed');
                             const isUnattempted = chapter.chapter_title.toLowerCase().includes('unattempted') || chapter.chapter_title.toLowerCase().includes('skipped');
@@ -3224,18 +3195,18 @@ export default function App() {
                             // Theme config per bucket
                             const theme = isSpeed
                               ? {
-                                  border: 'border-amber-200 hover:border-amber-300',
-                                  bgHeader: 'from-amber-500/10 via-amber-50/30 to-transparent',
-                                  iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-amber-200',
-                                  badge: 'bg-amber-100 text-amber-800 border border-amber-200',
-                                  topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300',
-                                  topicCount: 'bg-amber-200/70 text-amber-900',
-                                  btn: 'bg-amber-500 hover:bg-amber-600 text-white shadow-xs',
-                                  subText: 'Overtime & Speed Lags',
-                                  icon: Zap
-                                }
+                                border: 'border-amber-200 hover:border-amber-300',
+                                bgHeader: 'from-amber-500/10 via-amber-50/30 to-transparent',
+                                iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-amber-200',
+                                badge: 'bg-amber-100 text-amber-800 border border-amber-200',
+                                topicPill: 'bg-amber-50/80 hover:bg-amber-100 text-amber-950 border-amber-200/80 hover:border-amber-300',
+                                topicCount: 'bg-amber-200/70 text-amber-900',
+                                btn: 'bg-amber-500 hover:bg-amber-600 text-white shadow-xs',
+                                subText: 'Overtime & Speed Lags',
+                                icon: Zap
+                              }
                               : isUnattempted
-                              ? {
+                                ? {
                                   border: 'border-blue-200 hover:border-blue-300',
                                   bgHeader: 'from-blue-500/10 via-blue-50/30 to-transparent',
                                   iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-blue-200',
@@ -3246,29 +3217,29 @@ export default function App() {
                                   subText: 'Skipped & Left Out',
                                   icon: AlertCircle
                                 }
-                              : isAllErrors
-                              ? {
-                                  border: 'border-indigo-200 hover:border-indigo-300',
-                                  bgHeader: 'from-indigo-500/10 via-indigo-50/30 to-transparent',
-                                  iconBg: 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-indigo-200',
-                                  badge: 'bg-indigo-100 text-indigo-800 border border-indigo-200',
-                                  topicPill: 'bg-indigo-50/80 hover:bg-indigo-100 text-indigo-950 border-indigo-200/80 hover:border-indigo-300',
-                                  topicCount: 'bg-indigo-200/70 text-indigo-900',
-                                  btn: 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs',
-                                  subText: 'All English Mock Errors',
-                                  icon: BookOpen
-                                }
-                              : {
-                                  border: 'border-rose-200 hover:border-rose-300',
-                                  bgHeader: 'from-rose-500/10 via-rose-50/30 to-transparent',
-                                  iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-rose-200',
-                                  badge: 'bg-rose-100 text-rose-800 border border-rose-200',
-                                  topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300',
-                                  topicCount: 'bg-rose-200/70 text-rose-900',
-                                  btn: 'bg-rose-600 hover:bg-rose-700 text-white shadow-xs',
-                                  subText: 'Incorrect Answers',
-                                  icon: Flame
-                                };
+                                : isAllErrors
+                                  ? {
+                                    border: 'border-indigo-200 hover:border-indigo-300',
+                                    bgHeader: 'from-indigo-500/10 via-indigo-50/30 to-transparent',
+                                    iconBg: 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-indigo-200',
+                                    badge: 'bg-indigo-100 text-indigo-800 border border-indigo-200',
+                                    topicPill: 'bg-indigo-50/80 hover:bg-indigo-100 text-indigo-950 border-indigo-200/80 hover:border-indigo-300',
+                                    topicCount: 'bg-indigo-200/70 text-indigo-900',
+                                    btn: 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs',
+                                    subText: 'All English Mock Errors',
+                                    icon: BookOpen
+                                  }
+                                  : {
+                                    border: 'border-rose-200 hover:border-rose-300',
+                                    bgHeader: 'from-rose-500/10 via-rose-50/30 to-transparent',
+                                    iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-rose-200',
+                                    badge: 'bg-rose-100 text-rose-800 border border-rose-200',
+                                    topicPill: 'bg-rose-50/80 hover:bg-rose-100 text-rose-950 border-rose-200/80 hover:border-rose-300',
+                                    topicCount: 'bg-rose-200/70 text-rose-900',
+                                    btn: 'bg-rose-600 hover:bg-rose-700 text-white shadow-xs',
+                                    subText: 'Incorrect Answers',
+                                    icon: Flame
+                                  };
 
                             const IconComp = theme.icon;
 
@@ -3440,18 +3411,18 @@ export default function App() {
                               const displayTitle = isEnglishVocabSection
                                 ? (topic === 'synonyms' ? 'Synonyms'
                                   : topic === 'antonyms' ? 'Antonyms'
-                                  : topic === 'one_word_substitution' ? 'One Word Substitution'
-                                  : topic === 'idioms_and_phrases' ? 'Idioms & Phrases'
-                                  : topic === 'spellings' ? 'Spellings'
-                                  : topic.replace(/_/g, ' '))
+                                    : topic === 'one_word_substitution' ? 'One Word Substitution'
+                                      : topic === 'idioms_and_phrases' ? 'Idioms & Phrases'
+                                        : topic === 'spellings' ? 'Spellings'
+                                          : topic.replace(/_/g, ' '))
                                 : topic.replace(/_/g, ' ');
 
                               const chipGrad = isEnglishVocabSection
                                 ? (topic === 'synonyms' ? 'from-emerald-500 to-teal-600'
                                   : topic === 'antonyms' ? 'from-cyan-500 to-blue-600'
-                                  : topic === 'one_word_substitution' ? 'from-violet-500 to-purple-600'
-                                  : topic === 'idioms_and_phrases' ? 'from-amber-500 to-orange-600'
-                                  : 'from-rose-500 to-pink-600')
+                                    : topic === 'one_word_substitution' ? 'from-violet-500 to-purple-600'
+                                      : topic === 'idioms_and_phrases' ? 'from-amber-500 to-orange-600'
+                                        : 'from-rose-500 to-pink-600')
                                 : 'from-indigo-500 to-violet-600';
 
                               return (
@@ -3459,9 +3430,8 @@ export default function App() {
                                   key={idx}
                                   whileHover={{ y: -2 }}
                                   onClick={() => setSelectedTopic(topic)}
-                                  className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${
-                                    isEnglishVocabSection ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
-                                  } hover:shadow-md shadow-xs flex flex-col justify-between`}
+                                  className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${isEnglishVocabSection ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
+                                    } hover:shadow-md shadow-xs flex flex-col justify-between`}
                                 >
                                   <div className="flex items-center justify-between">
                                     <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chipGrad} text-white shadow-xs`}>
@@ -3524,34 +3494,31 @@ export default function App() {
                               key={`${chapter.chapter_title}|${chapter.section || ''}|${chapter.set_name || ''}`}
                               whileHover={{ y: -2 }}
                               onClick={() => startQuiz(chapter)}
-                              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${
-                                chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
-                              } hover:shadow-md shadow-xs flex flex-col justify-between`}
+                              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
+                                } hover:shadow-md shadow-xs flex flex-col justify-between`}
                             >
                               <div className="flex items-center justify-between">
-                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${
-                                  chapter.section === 'ayush_vocab'
+                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'ayush_vocab'
                                     ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
                                     : chapter.is_test
-                                    ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
-                                    : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
-                                } shadow-xs`}>
+                                      ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                      : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
+                                  } shadow-xs`}>
                                   {chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
                                 </div>
-                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${
-                                  chapter.section === 'ayush_vocab'
+                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${chapter.section === 'ayush_vocab'
                                     ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                                     : chapter.is_test
-                                    ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                                    : 'bg-slate-50 text-slate-500'
-                                }`}>
+                                      ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                      : 'bg-slate-50 text-slate-500'
+                                  }`}>
                                   {chapter.section === 'ayush_vocab'
                                     ? `Set ${chapter.chapter_num}`
                                     : chapter.is_test
-                                    ? 'Full Test'
-                                    : chapter.set_name
-                                    ? `Set ${chapter.set_name.replace('set_', '')}`
-                                    : `Ch ${chapter.chapter_num}`}
+                                      ? 'Full Test'
+                                      : chapter.set_name
+                                        ? `Set ${chapter.set_name.replace('set_', '')}`
+                                        : `Ch ${chapter.chapter_num}`}
                                 </span>
                               </div>
                               <div>
@@ -3601,172 +3568,172 @@ export default function App() {
               </motion.div>
             )}
 
-          {view === 'quiz' && activeChapter && (
-            <motion.div
-              key="quiz"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="w-full h-full overflow-hidden"
-            >
+            {view === 'quiz' && activeChapter && (
+              <motion.div
+                key="quiz"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="w-full h-full overflow-hidden"
+              >
+                <React.Suspense fallback={
+                  <div className="flex flex-col items-center justify-center py-40">
+                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                    <p className="text-slate-500 font-bold">Loading quiz...</p>
+                  </div>
+                }>
+                  <QuizContainer
+                    chapter={activeChapter}
+                    category={category}
+                    mode={quizMode}
+                    onSaveResult={handleSaveQuizResult}
+                    onExit={handleQuizExit}
+                    onReviewAttempt={handleReviewFromQuiz}
+                    bookmarkedIds={new Set(bookmarks.map(b => b.question.question.trim().toLowerCase()))}
+                    onBookmarkToggle={toggleBookmark}
+                    isAdmin={isAuthorized}
+                    onDeleteQuestion={handleDeleteQuestion}
+                  />
+                </React.Suspense>
+              </motion.div>
+            )}
+
+            {view === 'bookmarks' && (
+              <BookmarksView
+                user={user}
+                loadingBookmarks={loadingBookmarks}
+                bookmarks={bookmarks}
+                bookmarksBySubjectAndChapter={bookmarksBySubjectAndChapter}
+                selectedBookmarkSubject={selectedBookmarkSubject}
+                setSelectedBookmarkSubject={setSelectedBookmarkSubject}
+                toggleBookmark={toggleBookmark}
+                startSubjectBookmarkQuiz={startSubjectBookmarkQuiz}
+                startChapterBookmarkQuiz={startChapterBookmarkQuiz}
+                onLogin={handleLogin}
+                onNavigateHome={() => setView('home')}
+              />
+            )}
+
+            {view === 'dashboard' && (
+              <PerformanceDashboard
+                user={user}
+                loadingResults={loadingResults}
+                userResults={userResults}
+                onClearAllResults={handleClearAllResults}
+                onDeleteResult={handleDeleteResult}
+                onOpenReview={openReview}
+                onReattempt={reattemptFromResult}
+                onLogin={handleLogin}
+                onNavigateHome={() => setView('home')}
+              />
+            )}
+
+            {view === 'review' && reviewResult && (
               <React.Suspense fallback={
                 <div className="flex flex-col items-center justify-center py-40">
                   <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                  <p className="text-slate-500 font-bold">Loading quiz...</p>
+                  <p className="text-slate-500 font-bold">Loading review...</p>
                 </div>
               }>
-                <QuizContainer 
-                  chapter={activeChapter} 
-                  category={category}
-                  mode={quizMode}
-                  onSaveResult={handleSaveQuizResult}
-                  onExit={handleQuizExit}
-                  onReviewAttempt={handleReviewFromQuiz}
+                <ReviewView
+                  result={reviewResult}
+                  onReattempt={() => reattemptFromResult(reviewResult)}
+                  onReattemptQuestions={(title, qs) => reattemptFilteredQuestions(title, qs, reviewResult.subject)}
+                  onBack={() => setView(reviewBackTo)}
+                  userName={user?.displayName || 'Candidate'}
                   bookmarkedIds={new Set(bookmarks.map(b => b.question.question.trim().toLowerCase()))}
                   onBookmarkToggle={toggleBookmark}
-                  isAdmin={isAuthorized}
+                  onViewAnalytics={() => setView('dashboard')}
                   onDeleteQuestion={handleDeleteQuestion}
                 />
               </React.Suspense>
-            </motion.div>
-          )}
+            )}
 
-          {view === 'bookmarks' && (
-            <BookmarksView
-              user={user}
-              loadingBookmarks={loadingBookmarks}
-              bookmarks={bookmarks}
-              bookmarksBySubjectAndChapter={bookmarksBySubjectAndChapter}
-              selectedBookmarkSubject={selectedBookmarkSubject}
-              setSelectedBookmarkSubject={setSelectedBookmarkSubject}
-              toggleBookmark={toggleBookmark}
-              startSubjectBookmarkQuiz={startSubjectBookmarkQuiz}
-              startChapterBookmarkQuiz={startChapterBookmarkQuiz}
-              onLogin={handleLogin}
-              onNavigateHome={() => setView('home')}
-            />
-          )}
+            {view === 'drill' && (
+              <motion.div
+                key="drill"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+              >
+                <React.Suspense fallback={
+                  <div className="flex flex-col items-center justify-center py-40">
+                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                    <p className="text-slate-500 font-bold">Loading speed drills...</p>
+                  </div>
+                }>
+                  <DrillHub onBack={() => setView('home')} />
+                </React.Suspense>
+              </motion.div>
+            )}
 
-          {view === 'dashboard' && (
-            <PerformanceDashboard
-              user={user}
-              loadingResults={loadingResults}
-              userResults={userResults}
-              onClearAllResults={handleClearAllResults}
-              onDeleteResult={handleDeleteResult}
-              onOpenReview={openReview}
-              onReattempt={reattemptFromResult}
-              onLogin={handleLogin}
-              onNavigateHome={() => setView('home')}
-            />
-          )}
+            {view === 'mockScores' && (
+              <motion.div
+                key="mockScores"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+              >
+                <React.Suspense fallback={
+                  <div className="flex flex-col items-center justify-center py-40">
+                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                    <p className="text-slate-500 font-bold">Loading mock score dashboard...</p>
+                  </div>
+                }>
+                  <MockScoreDashboard
+                    onBack={() => setView('home')}
+                    mockData={mockData}
+                    onStartPracticeMock={(chapter: Chapter, mode?: 'practice' | 'mock') => {
+                      setCategory('mockErrors');
+                      setQuizMode(mode || quizMode || 'practice');
+                      startQuiz(chapter);
+                    }}
+                    onReviewMock={(quizResult: QuizResult) => {
+                      setReviewResult(quizResult);
+                      setReviewBackTo('mockScores');
+                      setView('review');
+                    }}
+                  />
+                </React.Suspense>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        )}
 
-          {view === 'review' && reviewResult && (
-            <React.Suspense fallback={
-              <div className="flex flex-col items-center justify-center py-40">
-                <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                <p className="text-slate-500 font-bold">Loading review...</p>
-              </div>
-            }>
-              <ReviewView
-                result={reviewResult}
-                onReattempt={() => reattemptFromResult(reviewResult)}
-                onReattemptQuestions={(title, qs) => reattemptFilteredQuestions(title, qs, reviewResult.subject)}
-                onBack={() => setView(reviewBackTo)}
-                userName={user?.displayName || 'Candidate'}
-                bookmarkedIds={new Set(bookmarks.map(b => b.question.question.trim().toLowerCase()))}
-                onBookmarkToggle={toggleBookmark}
-                onViewAnalytics={() => setView('dashboard')}
-                onDeleteQuestion={handleDeleteQuestion}
-              />
-            </React.Suspense>
-          )}
+        {/* Chapter Drill & Questions Preview Modal for Mock Errors */}
+        <MockChapterErrorsModal
+          data={activeMockChapterModal}
+          modalErrorFilter={modalErrorFilter}
+          setModalErrorFilter={setModalErrorFilter}
+          modalActiveSet={modalActiveSet}
+          setModalActiveSet={setModalActiveSet}
+          onClose={() => setActiveMockChapterModal(null)}
+          onStartPractice={(topic, questions, subType, setNum) => {
+            startClubbedChapterQuiz(topic, questions, subType, setNum);
+          }}
+          onAskAi={(topic, subject, questions, counts) => {
+            handleAskAiTopic(topic, subject, questions, counts);
+          }}
+        />
 
-          {view === 'drill' && (
-            <motion.div
-              key="drill"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-            >
-              <React.Suspense fallback={
-                <div className="flex flex-col items-center justify-center py-40">
-                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                  <p className="text-slate-500 font-bold">Loading speed drills...</p>
-                </div>
-              }>
-                <DrillHub onBack={() => setView('home')} />
-              </React.Suspense>
-            </motion.div>
-          )}
+        {/* Set Picker Modal (For Start All or topic drills with > 25 questions) */}
+        <SetPickerModal
+          modalData={setPickerModal}
+          onClose={() => setSetPickerModal(null)}
+          onStartQuiz={startQuiz}
+        />
+      </main>
 
-          {view === 'mockScores' && (
-            <motion.div
-              key="mockScores"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <React.Suspense fallback={
-                <div className="flex flex-col items-center justify-center py-40">
-                  <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                  <p className="text-slate-500 font-bold">Loading mock score dashboard...</p>
-                </div>
-              }>
-                <MockScoreDashboard 
-                  onBack={() => setView('home')} 
-                  mockData={mockData}
-                  onStartPracticeMock={(chapter: Chapter, mode?: 'practice' | 'mock') => {
-                    setCategory('mockErrors');
-                    setQuizMode(mode || quizMode || 'practice');
-                    startQuiz(chapter);
-                  }}
-                  onReviewMock={(quizResult: QuizResult) => {
-                    setReviewResult(quizResult);
-                    setReviewBackTo('mockScores');
-                    setView('review');
-                  }}
-                />
-              </React.Suspense>
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* Floating Tommy AI Assistant - enabled in practice mode solutions and across all portal views; hidden only during timed mock exam */}
+      {(view !== 'quiz' || quizMode === 'practice') && (
+        <AiMentorChat
+          mockReports={mockReportsList}
+          mockErrorsData={mockData}
+          activeReviewResult={view === 'review' ? reviewResult : null}
+          onStartWeakTopicDrill={startWeakTopicDrill}
+        />
       )}
-
-      {/* Chapter Drill & Questions Preview Modal for Mock Errors */}
-      <MockChapterErrorsModal
-        data={activeMockChapterModal}
-        modalErrorFilter={modalErrorFilter}
-        setModalErrorFilter={setModalErrorFilter}
-        modalActiveSet={modalActiveSet}
-        setModalActiveSet={setModalActiveSet}
-        onClose={() => setActiveMockChapterModal(null)}
-        onStartPractice={(topic, questions, subType, setNum) => {
-          startClubbedChapterQuiz(topic, questions, subType, setNum);
-        }}
-        onAskAi={(topic, subject, questions, counts) => {
-          handleAskAiTopic(topic, subject, questions, counts);
-        }}
-      />
-
-      {/* Set Picker Modal (For Start All or topic drills with > 25 questions) */}
-      <SetPickerModal
-        modalData={setPickerModal}
-        onClose={() => setSetPickerModal(null)}
-        onStartQuiz={startQuiz}
-      />
-    </main>
-
-    {/* Floating Tommy AI Assistant - enabled in practice mode solutions and across all portal views; hidden only during timed mock exam */}
-    {(view !== 'quiz' || quizMode === 'practice') && (
-      <AiMentorChat 
-        mockReports={mockReportsList} 
-        mockErrorsData={mockData} 
-        activeReviewResult={view === 'review' ? reviewResult : null}
-        onStartWeakTopicDrill={startWeakTopicDrill}
-      />
-    )}
-  </div>
-);
+    </div>
+  );
 }
 

@@ -209,14 +209,21 @@ export const SpeedMathDrill: React.FC<Props> = ({ onCompleteSession }) => {
           </div>
 
           {/* Quick preview card */}
-          <div className="bg-white border border-slate-200/80 rounded-3xl p-10 shadow-sm max-w-md mx-auto mb-8">
-            <div className="text-xs font-semibold text-blue-600 bg-blue-50 py-1 px-3 rounded-full inline-block mb-4">
-              80% Multi-Digit Focus
+          <div className="bg-white border border-slate-200/80 rounded-3xl p-8 sm:p-10 shadow-sm max-w-md mx-auto mb-8">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="text-xs font-semibold text-blue-600 bg-blue-50 py-1 px-3 rounded-full border border-blue-100">
+                Sample Problem Preview
+              </span>
+              <span className="text-xs font-semibold text-slate-500 bg-slate-100 py-1 px-2.5 rounded-full">
+                80% Multi-Digit
+              </span>
             </div>
-            <div className="text-5xl font-black text-slate-900 tracking-tight mb-4">
+            <div className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-3">
               {problem.expression}
             </div>
-            <p className="text-slate-400 text-xs">Type the answer and hit Enter, or let it auto-submit on match.</p>
+            <p className="text-slate-500 text-xs leading-relaxed max-w-xs mx-auto">
+              Click <strong>"Start Speed Drill"</strong> below to begin the {selectedDuration}s countdown and type answers with instant checking.
+            </p>
           </div>
 
           <button
