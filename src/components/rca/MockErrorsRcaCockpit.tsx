@@ -9,7 +9,9 @@ import {
   Layers,
   ChevronDown,
   ChevronUp,
-  Info
+  ChevronRight,
+  Info,
+  BookOpen,
 } from 'lucide-react';
 import { Question, RCATagType } from '../../types';
 import { MockChapterModalData, ModalFilterType } from '../modals/MockChapterErrorsModal';
@@ -78,6 +80,8 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
   const [showRcaRulesModal, setShowRcaRulesModal] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [chapterFilter, setChapterFilter] = useState<'all' | 'wrong' | 'slow' | 'unattempted'>('all');
+  // Topic whose subtopic dropdown is currently open (null = none)
+  const [expandedSubtopicTopic, setExpandedSubtopicTopic] = useState<string | null>(null);
 
   const isChaptersMode = mode === 'chapters';
 
@@ -1038,19 +1042,17 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                   const gTag = ch.rcaCounts?.G || 0;
 
                   return (
+                    <React.Fragment key={ch.topic}>
                     <tr
-                      key={ch.topic}
                       onClick={() => {
-                        const defaultModalFilter = isChaptersMode
-                          ? chapterFilter === 'all'
-                            ? 'all'
-                            : chapterFilter
-                          : rcaSelectedFilter === 'all'
-                          ? 'all'
-                          : rcaSelectedFilter;
-                        onOpenChapterModal(ch, defaultModalFilter);
+                        // Toggle subtopic dropdown instead of immediately opening modal
+                        setExpandedSubtopicTopic(
+                          expandedSubtopicTopic === ch.topic ? null : ch.topic
+                        );
                       }}
-                      className="hover:bg-slate-50/80 transition-colors group cursor-pointer"
+                      className={`hover:bg-slate-50/80 transition-colors group cursor-pointer ${
+                        expandedSubtopicTopic === ch.topic ? 'bg-indigo-50/50' : ''
+                      }`}
                     >
                       {/* 1. Rank */}
                       <td className="py-2.5 px-3.5 text-center">
@@ -1076,6 +1078,12 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                               {totalSets} Sets
                             </span>
                           )}
+                          {/* Chevron to indicate expandable subtopics */}
+                          <ChevronRight
+                            className={`w-3.5 h-3.5 ml-0.5 text-indigo-400 transition-transform shrink-0 ${
+                              expandedSubtopicTopic === ch.topic ? 'rotate-90' : ''
+                            }`}
+                          />
                         </div>
                         {/* Sub-breakdown chips */}
                         <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
@@ -1298,6 +1306,136 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                         </div>
                       </td>
                     </tr>
+
+                    {/* Subtopic inline dropdown */}
+                    {expandedSubtopicTopic === ch.topic && (() => {
+                      // Normalize subtopic string for grouping key.
+                      // Collapses: "Ratio & Proportion", "ratio and proportion",
+                      // "Ratios and Proportions (Basic)" -> same bucket.
+                      const normKey = (raw: string): string =>
+                        raw
+                          .toLowerCase()
+                          .trim()
+                          .replace(/\s*\(.*?\)/g, '')
+                          .replace(/\s*&\s*/g, ' and ')
+                          .replace(/\s+/g, ' ')
+                          .replace(/[.,;:]+$/, '')
+                          .trim();
+
+                      // Group by normalized key, track original labels
+                      const buckets = new Map<string, { qs: typeof ch.questions; labels: string[] }>();
+                      ch.questions.forEach(q => {
+                        const raw =
+                          q.subtopic ||
+                          (q as any).tags?.subtopic ||
+                          q.conceptTested ||
+                          (q as any).tags?.conceptTested ||
+                          null;
+                        if (!raw) return;
+                        const key = normKey(raw);
+                        if (!buckets.has(key)) buckets.set(key, { qs: [], labels: [] });
+                        const b = buckets.get(key)!;
+                        b.qs.push(q);
+                        b.labels.push(raw);
+                      });
+
+                      // For each bucket, display the most-frequent original label, title-cased
+                      const subtopicMap = new Map<string, typeof ch.questions>();
+                      buckets.forEach(({ qs, labels }) => {
+                        const freq = new Map<string, number>();
+                        labels.forEach(l => freq.set(l, (freq.get(l) || 0) + 1));
+                        let bestLabel = labels[0];
+                        let bestCount = 0;
+                        freq.forEach((cnt, lbl) => {
+                          if (cnt > bestCount) { bestCount = cnt; bestLabel = lbl; }
+                        });
+                        const displayLabel = bestLabel
+                          .replace(/\s*\(.*?\)/g, '')
+                          .trim()
+                          .split(' ')
+                          .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                          .join(' ');
+                        subtopicMap.set(displayLabel, qs);
+                      });
+
+                      const subtopics = Array.from(subtopicMap.entries()).sort(
+                        (a, b) => b[1].length - a[1].length
+                      );
+
+                      const colSpan = isChaptersMode ? 7 : 8;
+                      const defaultFilter: ModalFilterType = isChaptersMode
+                        ? chapterFilter === 'all' ? 'all' : chapterFilter
+                        : rcaSelectedFilter === 'all' ? 'all' : rcaSelectedFilter;
+
+                      return (
+                        <tr>
+                          <td
+                            colSpan={colSpan}
+                            className="px-4 pb-3 pt-1 bg-indigo-50/40 border-b border-indigo-100"
+                          >
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-indigo-600 shrink-0">
+                                <BookOpen className="w-3 h-3" />
+                                Subtopics:
+                              </span>
+
+                              {subtopics.length === 0 ? (
+                                <span className="text-[11px] text-slate-400 italic">
+                                  No subtopic tags on these questions.
+                                </span>
+                              ) : (
+                                subtopics.map(([st, qs]) => (
+                                  <button
+                                    key={st}
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      // Build a filtered chapter data object with only this subtopic's questions
+                                      const filteredCh = {
+                                        ...ch,
+                                        topic: `${ch.topic} › ${st}`,
+                                        questions: qs,
+                                        total: qs.length,
+                                        wrong: qs.filter(q => q.errorType === 'wrong').length,
+                                        slow: qs.filter(q => q.errorType === 'speed_issue').length,
+                                        unattempted: qs.filter(q => q.errorType === 'unattempted').length,
+                                        wrongQuestions: qs.filter(q => q.errorType === 'wrong'),
+                                        slowQuestions: qs.filter(q => q.errorType === 'speed_issue'),
+                                        unattemptedQuestions: qs.filter(q => q.errorType === 'unattempted'),
+                                      };
+                                      setExpandedSubtopicTopic(null);
+                                      onOpenChapterModal(filteredCh as any, defaultFilter);
+                                    }}
+                                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-indigo-200 text-[11px] font-semibold text-indigo-800 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-colors shadow-xs cursor-pointer group/st"
+                                    title={`Open ${qs.length} questions under "${st}"`}
+                                  >
+                                    <span>{st}</span>
+                                    <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-indigo-100 text-indigo-700 group-hover/st:bg-white/30 group-hover/st:text-white">
+                                      {qs.length}
+                                    </span>
+                                  </button>
+                                ))
+                              )}
+
+                              {/* View All button → open normal full-topic modal */}
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setExpandedSubtopicTopic(null);
+                                  onOpenChapterModal(ch, defaultFilter);
+                                }}
+                                className="inline-flex items-center gap-1 ml-auto px-2.5 py-1 rounded-lg bg-indigo-600 text-white text-[11px] font-bold hover:bg-indigo-700 transition-colors shadow-xs cursor-pointer shrink-0"
+                              >
+                                <Play className="w-2.5 h-2.5 fill-current" />
+                                View All ({ch.total})
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })()}
+                    </React.Fragment>
                   );
                 })
               )}
