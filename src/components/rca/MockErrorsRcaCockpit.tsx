@@ -19,6 +19,7 @@ import { MockChapterModalData, ModalFilterType } from '../modals/MockChapterErro
 import { TestScopeFilter } from '../../utils/testClassifier';
 import { RcaRulesModal } from './RcaRulesModal';
 import { getConsolidatedSubtopicsForQuestions } from '../../utils/subtopicNormalizer';
+import { SILLY_SUB_TYPES, getQuestionSillySubTypes, matchesSillySubFilter } from '../../utils/rcaHelper';
 
 interface MockErrorsRcaCockpitProps {
   mode?: 'rca' | 'chapters';
@@ -32,26 +33,28 @@ interface MockErrorsRcaCockpitProps {
   mockTestTypeFilter: TestScopeFilter;
   setMockTestTypeFilter: (filter: TestScopeFilter) => void;
   mockScopeCounts: { all: number; full: number; sectional: number };
-  mockViewMode: 'chapters' | 'buckets' | 'rca' | 'silly';
-  setMockViewMode: (mode: 'chapters' | 'buckets' | 'rca' | 'silly') => void;
+  mockViewMode: 'chapters' | 'buckets' | 'rca';
+  setMockViewMode: (mode: 'chapters' | 'buckets' | 'rca') => void;
   rcaSelectedFilter: 'all' | RCATagType | 'unclassified';
   setRcaSelectedFilter: (filter: 'all' | RCATagType | 'unclassified') => void;
   rcaSearchQuery: string;
   setRcaSearchQuery: (query: string) => void;
   onStartClubbedChapterQuiz: (topic: string, questions: Question[], subType?: string, setNum?: number) => void;
-  onStartSubjectRcaQuiz: (tag: RCATagType | 'unclassified') => void;
+  onStartSubjectRcaQuiz: (tag: RCATagType | 'unclassified', subTag?: string) => void;
   onStartSubjectErrorTypeQuiz?: (type: 'wrong' | 'slow' | 'unattempted') => void;
   onStartAllSubjectQuiz: (subject: string) => void;
   onAskAiTopic: (
     topic: string,
     subject: string,
     questions: Question[],
-    counts: { total: number; wrong: number; slow: number; unattempted: number }
+    counts: { total: number; wrong: number; slow: number; unattempted: number },
+    mode?: 'chapters' | 'buckets' | 'rca',
+    rcaTagFilter?: string
   ) => void;
-  onAskAiRca: (tag: RCATagType | 'unclassified') => void;
+  onAskAiRca: (tag: RCATagType | 'unclassified', subTag?: string) => void;
   onAskAiErrorType?: (type: 'wrong' | 'slow' | 'unattempted') => void;
   onAskAiSubject: (subject: string) => void;
-  onOpenChapterModal: (chapter: MockChapterModalData, filter?: ModalFilterType) => void;
+  onOpenChapterModal: (chapter: MockChapterModalData, filter?: ModalFilterType, sillySubFilter?: string) => void;
 }
 
 export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
@@ -82,8 +85,16 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
   const [showRcaRulesModal, setShowRcaRulesModal] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [chapterFilter, setChapterFilter] = useState<'all' | 'wrong' | 'slow' | 'unattempted'>('all');
+  const [sillySubFilter, setSillySubFilter] = useState<string>('all');
   // Topic whose subtopic dropdown is currently open (null = none)
   const [expandedSubtopicTopic, setExpandedSubtopicTopic] = useState<string | null>(null);
+
+  // Reset silly sub-filter when switching away from silly tag or changing subject
+  useEffect(() => {
+    if (rcaSelectedFilter !== 'S') {
+      setSillySubFilter('all');
+    }
+  }, [rcaSelectedFilter, selectedSubject]);
 
   // Topic whose sets dropdown is open (anchored floating popover)
   const [openSetDropdown, setOpenSetDropdown] = useState<{
@@ -132,6 +143,33 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
   const diagnosedCount = cCount + sCount + tCount + gCount;
   const diagnosedPct = totalMistakes > 0 ? Math.round((diagnosedCount / totalMistakes) * 100) : 0;
 
+  // Dynamic Silly Mistake Sub-Type Counts across the subject
+  const sillySubTypeCounts = useMemo(() => {
+    const counts: Record<string, number> = {
+      all: sCount,
+      calculation: 0,
+      misread: 0,
+      option: 0,
+      formula: 0,
+      rushed: 0,
+      unit: 0,
+      custom: 0,
+      unspecified: 0
+    };
+
+    const sillyQs = subjectRcaData.questionsByTag?.S || (subjectRcaData.questionsByTag as any)?.A || [];
+    sillyQs.forEach((q: any) => {
+      const types = getQuestionSillySubTypes(q);
+      types.forEach(t => {
+        if (counts[t] !== undefined) {
+          counts[t]++;
+        }
+      });
+    });
+
+    return counts;
+  }, [sCount, subjectRcaData]);
+
   // Compute active filtered list depending on mode
   const activeTopicList = useMemo(() => {
     let list = clubbedChapters;
@@ -143,6 +181,13 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
     } else {
       if (rcaSelectedFilter !== 'all') {
         list = list.filter(ch => ((ch.rcaCounts?.[rcaSelectedFilter]) || 0) > 0);
+        // Secondary drill-down for Silly Mistake sub-types
+        if (rcaSelectedFilter === 'S' && sillySubFilter !== 'all') {
+          list = list.filter(ch => {
+            const sillyQs = ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || [];
+            return sillyQs.some((q: any) => matchesSillySubFilter(q, sillySubFilter));
+          });
+        }
       }
     }
 
@@ -151,7 +196,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
       list = list.filter(ch => ch.topic.toLowerCase().includes(q));
     }
     return list;
-  }, [clubbedChapters, isChaptersMode, chapterFilter, rcaSelectedFilter, rcaSearchQuery]);
+  }, [clubbedChapters, isChaptersMode, chapterFilter, rcaSelectedFilter, sillySubFilter, rcaSearchQuery]);
 
   // Max errors for heatbar normalization
   const maxErrors = useMemo(() => {
@@ -278,19 +323,6 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
             >
               <Target className="w-3.5 h-3.5 text-purple-600" />
               RCA
-            </button>
-            <button
-              type="button"
-              onClick={() => setMockViewMode('silly')}
-              className={`inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold rounded-lg shadow-xs border cursor-pointer ${
-                mockViewMode === 'silly'
-                  ? 'text-rose-700 bg-rose-50 border-rose-200 font-bold'
-                  : 'text-slate-600 bg-white border-slate-200 hover:bg-slate-50'
-              }`}
-              title="View all silly mistakes aggregated subject-wise"
-            >
-              <Flame className="w-3.5 h-3.5 text-rose-600" />
-              Silly Log
             </button>
           </div>
 
@@ -596,19 +628,8 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
               </div>
               <div className="flex items-center justify-between mt-1">
                 <p className="text-[10px] text-slate-400 truncate leading-tight">
-                  Calculation slip or misread
+                  Calculation slip, misread or rushed
                 </p>
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setMockViewMode('silly');
-                  }}
-                  className="text-[9px] font-bold text-rose-600 hover:text-rose-800 hover:underline cursor-pointer shrink-0 ml-1"
-                  title="View all silly mistakes log"
-                >
-                  Log →
-                </button>
               </div>
             </div>
             <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between">
@@ -619,7 +640,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                   disabled={sCount === 0}
                   onClick={(e) => {
                     e.stopPropagation();
-                    onAskAiRca('S');
+                    onAskAiRca('S', rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined);
                   }}
                   className="inline-flex items-center gap-1 text-[10px] font-semibold text-indigo-700 bg-indigo-50/80 hover:bg-indigo-100 px-2 py-0.5 rounded-md border border-indigo-200/70 transition shadow-2xs cursor-pointer active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
@@ -631,7 +652,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                   disabled={sCount === 0}
                   onClick={(e) => {
                     e.stopPropagation();
-                    onStartSubjectRcaQuiz('S');
+                    onStartSubjectRcaQuiz('S', rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined);
                   }}
                   className="inline-flex items-center gap-1 text-[10px] font-bold text-white bg-rose-600 hover:bg-rose-700 px-2 py-0.5 rounded-md transition shadow-2xs cursor-pointer active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
@@ -966,7 +987,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                 if (rcaSelectedFilter === 'all') {
                   onAskAiSubject(selectedSubject);
                 } else {
-                  onAskAiRca(rcaSelectedFilter);
+                  onAskAiRca(rcaSelectedFilter, rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined);
                 }
               }
             }}
@@ -978,6 +999,84 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
           </button>
         </div>
       </div>
+
+      {/* ========================================================= */}
+      {/* 3b. 2-TIER SUB-FILTER: SILLY MISTAKE SUB-TYPES            */}
+      {/* ========================================================= */}
+      {!isChaptersMode && rcaSelectedFilter === 'S' && (
+        <div className="bg-gradient-to-r from-rose-50/90 via-pink-50/70 to-amber-50/60 rounded-2xl p-2.5 sm:p-3 border border-rose-200/80 shadow-xs flex flex-wrap items-center justify-between gap-2.5 transition-all">
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="text-xs font-bold text-rose-950 flex items-center gap-1 mr-1">
+              <Flame className="w-3.5 h-3.5 text-rose-600" />
+              <span>Silly Type:</span>
+            </span>
+
+            {/* All Silly */}
+            <button
+              type="button"
+              onClick={() => setSillySubFilter('all')}
+              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                sillySubFilter === 'all'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'bg-white hover:bg-rose-100 text-rose-800 border border-rose-200/80'
+              }`}
+            >
+              <span>All Silly</span>
+              <span className="text-[10px] font-mono opacity-85 font-normal">({sCount})</span>
+            </button>
+
+            {/* Sub-type pills */}
+            {Object.values(SILLY_SUB_TYPES).map(sub => {
+              const count = sillySubTypeCounts[sub.id] || 0;
+              if (count === 0 && sub.id !== 'calculation' && sub.id !== 'misread' && sub.id !== 'option' && sub.id !== 'formula') {
+                return null;
+              }
+              const isSelected = sillySubFilter === sub.id;
+              return (
+                <button
+                  key={sub.id}
+                  type="button"
+                  onClick={() => setSillySubFilter(isSelected ? 'all' : sub.id)}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    isSelected
+                      ? `${sub.activePillClass}`
+                      : count > 0
+                      ? `${sub.inactivePillClass} border`
+                      : 'bg-white/60 text-slate-400 border border-slate-200 opacity-60'
+                  }`}
+                  title={sub.desc}
+                >
+                  <span className="text-xs">{sub.icon}</span>
+                  <span>{sub.shortLabel}</span>
+                  <span className="text-[10px] font-mono font-bold">({count})</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Quick Drill for Selected Sub-Type */}
+          {sillySubFilter !== 'all' && (sillySubTypeCounts[sillySubFilter] || 0) > 0 && (
+            <div className="flex items-center gap-1.5 ml-auto">
+              <button
+                type="button"
+                onClick={() => onAskAiRca('S', sillySubFilter)}
+                className="inline-flex items-center gap-1 text-[11px] font-semibold text-rose-700 bg-white hover:bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200 transition shadow-2xs cursor-pointer active:scale-95"
+              >
+                <Sparkles className="w-2.5 h-2.5 text-rose-600" />
+                <span>AI</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => onStartSubjectRcaQuiz('S', sillySubFilter)}
+                className="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-rose-600 hover:bg-rose-700 px-3 py-1 rounded-lg transition shadow-xs cursor-pointer active:scale-95"
+              >
+                <Play className="w-2.5 h-2.5 fill-current" />
+                <span>Drill {SILLY_SUB_TYPES[sillySubFilter]?.shortLabel || 'Selected'} ({sillySubTypeCounts[sillySubFilter]})</span>
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ========================================================= */}
       {/* 4. WEAK TOPICS TABLE (ADAPTIVE: CHAPTERS vs RCA)          */}
@@ -1211,23 +1310,38 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
 
                           {/* RCA [S] */}
                           <td className="py-2.5 px-2.5 text-center">
-                            {sTag > 0 ? (
-                              <button
-                                type="button"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  onStartClubbedChapterQuiz(
-                                    ch.topic,
-                                    ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || [],
-                                    'S'
-                                  );
-                                }}
-                                className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-md bg-rose-100 text-rose-700 font-bold text-[11px] border border-rose-200/60 shadow-xs hover:bg-rose-600 hover:text-white transition-colors cursor-pointer"
-                                title={`Practice ${sTag} [S] Silly questions for ${ch.topic}`}
-                              >
-                                {sTag}
-                              </button>
-                            ) : (
+                            {sTag > 0 ? (() => {
+                              const allSillyQs = ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || [];
+                              const isSubFiltered = rcaSelectedFilter === 'S' && sillySubFilter !== 'all';
+                              const targetSillyQs = isSubFiltered
+                                ? allSillyQs.filter(q => matchesSillySubFilter(q, sillySubFilter))
+                                : allSillyQs;
+                              const count = targetSillyQs.length;
+                              if (count === 0) {
+                                return <span className="text-slate-300 opacity-40 font-normal">—</span>;
+                              }
+                              return (
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onStartClubbedChapterQuiz(
+                                      ch.topic,
+                                      targetSillyQs,
+                                      isSubFiltered ? `S_${sillySubFilter}` : 'S'
+                                    );
+                                  }}
+                                  className={`inline-flex items-center justify-center px-1.5 py-0.5 rounded-md font-bold text-[11px] border shadow-xs transition-colors cursor-pointer ${
+                                    isSubFiltered
+                                      ? 'bg-rose-600 text-white border-rose-600 ring-2 ring-rose-300'
+                                      : 'bg-rose-100 text-rose-700 border-rose-200/60 hover:bg-rose-600 hover:text-white'
+                                  }`}
+                                  title={`Practice ${count} ${isSubFiltered ? SILLY_SUB_TYPES[sillySubFilter]?.label || 'Silly' : '[S] Silly'} questions for ${ch.topic}`}
+                                >
+                                  {count}
+                                </button>
+                              );
+                            })() : (
                               <span className="text-slate-300 opacity-40 font-normal">—</span>
                             )}
                           </td>
@@ -1279,12 +1393,24 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              onAskAiTopic(ch.topic, selectedSubject, ch.questions, {
-                                total: ch.total,
-                                wrong: ch.wrong,
-                                slow: ch.slow,
-                                unattempted: ch.unattempted
-                              });
+                              const rcaQs = mode === 'rca' && rcaSelectedFilter !== 'all'
+                                ? (rcaSelectedFilter === 'unclassified'
+                                    ? (ch.rcaQuestions?.unclassified || [])
+                                    : (ch.rcaQuestions?.[rcaSelectedFilter] || []))
+                                : ch.questions;
+                              onAskAiTopic(
+                                ch.topic,
+                                selectedSubject,
+                                rcaQs.length > 0 ? rcaQs : ch.questions,
+                                {
+                                  total: rcaQs.length || ch.total,
+                                  wrong: ch.wrong,
+                                  slow: ch.slow,
+                                  unattempted: ch.unattempted
+                                },
+                                mode,
+                                rcaSelectedFilter !== 'all' ? rcaSelectedFilter : undefined
+                              );
                             }}
                             className="inline-flex items-center gap-1 h-6 px-1.5 text-[10px] font-semibold text-indigo-700 bg-indigo-50/80 hover:bg-indigo-100 hover:text-indigo-800 rounded-md border border-indigo-200/70 transition shadow-2xs cursor-pointer active:scale-95"
                             title={`Ask Tommy AI to analyze ${ch.topic}`}
@@ -1327,13 +1453,24 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                               type="button"
                               onClick={(e) => {
                                 e.stopPropagation();
-                                onStartClubbedChapterQuiz(ch.topic, ch.questions);
+                                if (rcaSelectedFilter === 'S' && sillySubFilter !== 'all') {
+                                  const sillyQs = (ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || [])
+                                    .filter(q => matchesSillySubFilter(q, sillySubFilter));
+                                  onStartClubbedChapterQuiz(ch.topic, sillyQs, `S_${sillySubFilter}`);
+                                } else {
+                                  onStartClubbedChapterQuiz(ch.topic, ch.questions);
+                                }
                               }}
                               className="inline-flex items-center gap-1 h-6 px-2 text-[10px] font-bold text-white bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 rounded-md transition shadow-2xs cursor-pointer active:scale-95 whitespace-nowrap"
-                              title={`Practice all ${ch.total} questions`}
+                              title={`Practice questions for ${ch.topic}`}
                             >
                               <Play className="w-2 h-2 fill-current" />
-                              <span>Drill ({ch.total})</span>
+                              <span>
+                                Drill ({rcaSelectedFilter === 'S' && sillySubFilter !== 'all'
+                                  ? (ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || []).filter(q => matchesSillySubFilter(q, sillySubFilter)).length
+                                  : ch.total
+                                })
+                              </span>
                             </button>
                           )}
                         </div>
@@ -1387,7 +1524,11 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                         unattemptedQuestions: qs.filter(q => q.errorType === 'unattempted'),
                                       };
                                       setExpandedSubtopicTopic(null);
-                                      onOpenChapterModal(filteredCh as any, defaultFilter);
+                                      onOpenChapterModal(
+                                        filteredCh as any,
+                                        defaultFilter,
+                                        rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined
+                                      );
                                     }}
                                     className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-indigo-200 text-[11px] font-semibold text-indigo-800 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-colors shadow-xs cursor-pointer group/st"
                                     title={`Open ${qs.length} questions under "${label}"`}
@@ -1406,7 +1547,11 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setExpandedSubtopicTopic(null);
-                                  onOpenChapterModal(ch, defaultFilter);
+                                  onOpenChapterModal(
+                                    ch,
+                                    defaultFilter,
+                                    rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined
+                                  );
                                 }}
                                 className="inline-flex items-center gap-1 ml-auto h-6 px-2.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold transition-all shadow-2xs cursor-pointer shrink-0 active:scale-95"
                               >

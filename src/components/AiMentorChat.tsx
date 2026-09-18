@@ -103,28 +103,54 @@ function useDynamicSuggestions(
           }
         );
       } else if (focusedScope.type === 'topic') {
-        suggestions.push(
-          {
-            icon: Brain,
-            label: `Key formulas & shortcuts for ${focusedScope.title}`,
-            text: `Explain all key rules, formulas, and 30-second shortcut tricks for ${focusedScope.title} in SSC CGL.`
-          },
-          {
-            icon: Target,
-            label: `Walk me through my hardest mistake`,
-            text: `Take the most difficult question from my errors in ${focusedScope.title} and break it down step-by-step.`
-          },
-          {
-            icon: Flame,
-            label: `Common trap options to avoid`,
-            text: `What are the most common trap options or misinterpretations students make in ${focusedScope.title}?`
-          },
-          {
-            icon: Zap,
-            label: `Give me 3 practice questions`,
-            text: `Create 3 exam-level practice questions based on the exact concepts I got wrong in ${focusedScope.title}, with solutions.`
-          }
-        );
+        const isRca = (focusedScope as any).rcaMode === 'rca' || Boolean((focusedScope as any).rcaTag) || String(focusedScope.title).includes('RCA') || String(focusedScope.sourceScopeLabel).includes('RCA');
+        if (isRca) {
+          suggestions.push(
+            {
+              icon: Target,
+              label: `Root-cause analysis for ${focusedScope.title}`,
+              text: `Perform a deep Root Cause Analysis on my mistakes in ${focusedScope.title}. Break down why I'm making these specific errors and how to stop them.`
+            },
+            {
+              icon: Brain,
+              label: `Sanity check & verification protocol`,
+              text: `Give me a practical 5-second verification protocol and mental checklist to eliminate careless slips and trap choices in ${focusedScope.title}.`
+            },
+            {
+              icon: Zap,
+              label: `Topper shortcuts for these mistakes`,
+              text: `Show me fast elimination techniques and 20-30 second shortcuts for the hardest questions in ${focusedScope.title}.`
+            },
+            {
+              icon: Flame,
+              label: `Create 3 remedial drill questions`,
+              text: `Generate 3 exam-level practice questions specifically designed to test and fix the exact weakness seen in ${focusedScope.title}.`
+            }
+          );
+        } else {
+          suggestions.push(
+            {
+              icon: Brain,
+              label: `Key formulas & shortcuts for ${focusedScope.title}`,
+              text: `Explain all key rules, formulas, and 30-second shortcut tricks for ${focusedScope.title} in SSC CGL.`
+            },
+            {
+              icon: Target,
+              label: `Walk me through my hardest mistake`,
+              text: `Take the most difficult question from my errors in ${focusedScope.title} and break it down step-by-step.`
+            },
+            {
+              icon: Flame,
+              label: `Common trap options to avoid`,
+              text: `What are the most common trap options or misinterpretations students make in ${focusedScope.title}?`
+            },
+            {
+              icon: Zap,
+              label: `Give me 3 practice questions`,
+              text: `Create 3 exam-level practice questions based on the exact concepts I got wrong in ${focusedScope.title}, with solutions.`
+            }
+          );
+        }
       } else if (focusedScope.type === 'subject') {
         suggestions.push(
           {
@@ -249,12 +275,54 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
   const cached = chatKatexCache.get(cacheKey);
   if (cached) return cached;
 
-  const sanitized = sanitizeLatexForKatex(trimmed);
+  // Clean formfeed, corrupted \f, and bare frac
+  let sanitized = sanitizeLatexForKatex(trimmed);
+  sanitized = sanitized
+    .replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac')
+    .replace(/\\f\s*frac\b/g, '\\frac')
+    .replace(/\\f\s*rac\b/g, '\\frac')
+    .replace(/[\x0c\u000c]+/g, ' ')
+    .replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{');
+
   try {
     const html = katex.renderToString(sanitized, {
       throwOnError: false,
       displayMode,
     });
+
+    // If KaTeX rendered an error span (red box with .katex-error), attempt recovery or graceful text fallback
+    if (html.includes('katex-error') || html.includes('color:#cc0000')) {
+      // 1. Try stripping corrupted commands or trailing dangling operators
+      const fallbackClean = sanitized
+        .replace(/\\times\s*$/, '')
+        .replace(/[+\-*/=]\s*$/, '')
+        .replace(/\\ffrac/g, '\\frac')
+        .replace(/\\f\b/g, '')
+        .trim();
+
+      if (fallbackClean && fallbackClean !== sanitized) {
+        const retryHtml = katex.renderToString(fallbackClean, { throwOnError: false, displayMode });
+        if (!retryHtml.includes('katex-error') && !retryHtml.includes('color:#cc0000')) {
+          chatKatexCache.set(cacheKey, retryHtml);
+          return retryHtml;
+        }
+      }
+
+      // 2. If it failed due to unescaped text words inside math, wrap words in \text{}
+      try {
+        const textWrapped = sanitized.replace(/\b([a-zA-Z]{3,})\b(?![^{]*\})/g, '\\text{$1}');
+        const retryTextHtml = katex.renderToString(textWrapped, { throwOnError: false, displayMode });
+        if (!retryTextHtml.includes('katex-error') && !retryTextHtml.includes('color:#cc0000')) {
+          chatKatexCache.set(cacheKey, retryTextHtml);
+          return retryTextHtml;
+        }
+      } catch {}
+
+      // 3. Fallback to clean readable typography instead of ugly red error box
+      const cleanFallback = cleanLatexForClipboard(trimmed);
+      return `<span class="inline-block px-1 font-serif font-medium text-slate-900">${cleanFallback}</span>`;
+    }
+
     if (chatKatexCache.size > 1500) {
       const first = chatKatexCache.keys().next().value;
       if (first) chatKatexCache.delete(first);
@@ -262,14 +330,8 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
     chatKatexCache.set(cacheKey, html);
     return html;
   } catch {
-    // If sanitized failed, try cleaning trailing dangling operators (like \times, +, -, =) and re-render
-    try {
-      const fallbackClean = sanitized.replace(/\\times\s*$/, '').replace(/[+\-*/=]\s*$/, '').trim();
-      if (fallbackClean) {
-        return katex.renderToString(fallbackClean, { throwOnError: false, displayMode });
-      }
-    } catch {}
-    return '';
+    const cleanFallback = cleanLatexForClipboard(trimmed);
+    return `<span class="inline-block px-1 font-serif font-medium text-slate-900">${cleanFallback}</span>`;
   }
 }
 
@@ -286,6 +348,12 @@ export function normalizeChatLatex(text: string): string {
 
   // 0. Remove any [DRILL: ...] practice drill tags so they never clutter the chat
   s = s.replace(/\[DRILL:\s*[^\]]+\]/gi, '');
+
+  // Clean formfeed / JSON escape artifacts on \frac
+  s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
+  s = s.replace(/\\f\s*frac\b/g, '\\frac');
+  s = s.replace(/\\f\s*rac\b/g, '\\frac');
+  s = s.replace(/[\x0c\u000c]+/g, ' ');
 
   // 1. Convert LaTeX standard display math \[ ... \] to $$ ... $$ and inline \( ... \) to $ ... $
   s = s.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$');
@@ -321,15 +389,12 @@ export function normalizeChatLatex(text: string): string {
       l = l + '$';
     }
 
-    // 5. Detect lines or clauses with unwrapped LaTeX commands outside of $
-    // e.g. \pi, \times, \frac, \sqrt, \text{, \theta, \approx
-    if (/\\[a-zA-Z]+/.test(l) && !l.includes('$')) {
-      if (/[:=]/.test(l)) {
-        l = l.replace(/([:=]\s*)([^$\n]*\\[a-zA-Z]+[^$\n]*)/, (m, sep, expr) => `${sep}$${expr.trim()}$`);
-      } else {
-        l = l.replace(/^([\s•\*\-]*)(.*?\\[a-zA-Z]+.*)$/, (m, prefix, expr) => `${prefix}$${expr.trim()}$`);
-      }
-    }
+    // 5. Wrap isolated unwrapped LaTeX commands outside of $
+    // (Never wrap whole sentences in $; only wrap the math tokens!)
+    l = l.replace(/(?<!\$)\\frac\{([^{}]+)\}\{([^{}]+)\}(?!\$)/g, '$\\frac{$1}{$2}$');
+    l = l.replace(/(?<!\$)\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|Delta|angle|approx|pm|mp|times|div)(?!\$)/g, '$\\$1$');
+    l = l.replace(/(?<!\$)\\sqrt\{([^{}]+)\}(?!\$)/g, '$\\sqrt{$1}$');
+    l = l.replace(/(?<!\$)\b(\d+\^[0-9a-zA-Z]+\s*=\s*\d+)\b(?!\$)/g, '$$$1$$');
 
     return l;
   });
@@ -669,27 +734,44 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
     }
 
     // Headings
-    if (line.startsWith('### ')) {
+    if (line.trim().startsWith('##### ')) {
+      elements.push(
+        <h6 key={idx} className="text-[11px] font-bold text-indigo-800 uppercase tracking-wider mt-2.5 mb-1">
+          {formatInline(line.trim().slice(6))}
+        </h6>
+      );
+      return;
+    }
+    if (line.trim().startsWith('#### ')) {
+      elements.push(
+        <h5 key={idx} className="text-xs font-extrabold text-slate-900 mt-2.5 mb-1 flex items-center gap-1.5">
+          <span className="w-1 h-2.5 bg-violet-500 rounded-full inline-block" />
+          {formatInline(line.trim().slice(5))}
+        </h5>
+      );
+      return;
+    }
+    if (line.trim().startsWith('### ')) {
       elements.push(
         <h4 key={idx} className="text-xs font-bold text-indigo-900 uppercase tracking-wide mt-3 mb-1 flex items-center gap-1.5">
           <span className="w-1.5 h-3 bg-indigo-500 rounded-full inline-block" />
-          {formatInline(line.slice(4))}
+          {formatInline(line.trim().slice(4))}
         </h4>
       );
       return;
     }
-    if (line.startsWith('## ')) {
+    if (line.trim().startsWith('## ')) {
       elements.push(
         <h3 key={idx} className="text-sm font-extrabold text-slate-900 mt-3.5 mb-1 pb-0.5 border-b border-slate-100">
-          {formatInline(line.slice(3))}
+          {formatInline(line.trim().slice(3))}
         </h3>
       );
       return;
     }
-    if (line.startsWith('# ')) {
+    if (line.trim().startsWith('# ')) {
       elements.push(
         <h2 key={idx} className="text-base font-black text-slate-900 mt-3.5 mb-1 pb-1 border-b border-slate-200">
-          {formatInline(line.slice(2))}
+          {formatInline(line.trim().slice(2))}
         </h2>
       );
       return;
@@ -1323,7 +1405,41 @@ export function AiMentorChat({
         detail.sourceType === 'sectional' ? 'Sectional Test' :
         detail.sourceType === 'subject_wise' ? 'Subject-Wise Error Bank' : ''
       );
-      const prompt = `Please explain Question #${detail.questionNumber} (${originTag ? `[${originTag}] ` : ''}${detail.topic || 'General'}):\n\nQuestion:\n${detail.questionText}\n\nMy Chosen Option: ${detail.userAnswer ? detail.userAnswer.toUpperCase() : 'Unattempted / Left'}\nCorrect Answer: ${detail.correctAnswer ? detail.correctAnswer.toUpperCase() : 'Refer to solution'}\n\nPlease explain why my answer was wrong, break down the core concept/grammar rule step-by-step, and give me a fast shortcut trick to solve this in under 30 seconds.`;
+      const rcaTag = detail.rcaTag === 'A' ? 'S' : detail.rcaTag;
+      const rcaTagName = detail.rcaTagName || (
+        rcaTag === 'C' ? 'Concept Gap' :
+        rcaTag === 'S' ? 'Silly Mistake' :
+        rcaTag === 'T' ? 'Time / Speed Issue' :
+        rcaTag === 'G' ? 'Wild Guess' : undefined
+      );
+      const sillyNote = detail.sillyMistakeNote;
+
+      let rcaHeader = '';
+      let instructions = 'Please explain why my answer was wrong, break down the core concept/grammar rule step-by-step, and give me a fast shortcut trick to solve this in under 30 seconds.';
+
+      if (rcaTag === 'C') {
+        rcaHeader = `\nRoot Cause Analysis: [C] Conceptual Gap`;
+        instructions = `I identified that I have a conceptual gap in this topic. Please:\n1. Teach the foundational theorem/grammar rule from first principles.\n2. Clarify why my chosen answer was conceptually flawed.\n3. Give me a structured solving roadmap and a 30-second rapid shortcut to solve questions like this reliably.`;
+      } else if (rcaTag === 'S') {
+        rcaHeader = `\nRoot Cause Analysis: [S] Silly Mistake${sillyNote ? ` (Candidate Note: "${sillyNote}")` : ''}`;
+        instructions = `I understood the concept, but made a careless / execution slip${sillyNote ? ` (${sillyNote})` : ''}. Please:\n1. Dissect why the question or options were deceptively tricky.\n2. Explain what calculation, misreading, or focus pitfall I fell into.\n3. Give me an exam-ready 5-second verification protocol before marking an answer in the real test.`;
+      } else if (rcaTag === 'T') {
+        rcaHeader = `\nRoot Cause Analysis: [T] Time / Speed Issue`;
+        instructions = `I spent way too much time on this or felt rushed. Please:\n1. Show me the fastest topper trick (unit digit, digital sum, ratio, or option elimination) without lengthy manual derivations.\n2. Explain how to crack this in under 20-30 seconds flat.\n3. Advise whether to solve this on sight vs skip for the second round.`;
+      } else if (rcaTag === 'G') {
+        rcaHeader = `\nRoot Cause Analysis: [G] Wild Guess`;
+        instructions = `I made an uncalculated or semi-blind guess on this question. Please:\n1. Teach me how an SSC CGL topper eliminates 2-3 trap options using option patterns, constraints, or boundary conditions.\n2. Show me the complete step-by-step solution and memory hook.`;
+      }
+
+      const prompt = `Please explain Question #${detail.questionNumber} (${originTag ? `[${originTag}] ` : ''}${detail.topic || 'General'}):${rcaHeader ? `${rcaHeader}\n` : ''}
+
+Question:
+${detail.questionText}
+
+My Chosen Option: ${detail.userAnswer ? String(detail.userAnswer).toUpperCase() : 'Unattempted / Left'}
+Correct Answer: ${detail.correctAnswer ? String(detail.correctAnswer).toUpperCase() : 'Refer to solution'}
+
+${instructions}`;
       
       const qContext = {
         qNum: detail.questionNumber,
@@ -1335,7 +1451,11 @@ export function AiMentorChat({
         topic: detail.topic,
         sourceType: detail.sourceType,
         sourceLabel: detail.sourceLabel,
-        testName: detail.testName
+        testName: detail.testName,
+        rcaMode: detail.rcaMode,
+        rcaTag,
+        rcaTagName,
+        sillyMistakeNote: sillyNote
       };
       
       handleSendMessageRef.current(prompt, qContext);

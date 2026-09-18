@@ -55,9 +55,11 @@ export function normalizeUnicodeMath(text: string = ''): string {
 
   s = s.replace(/[\u{1D400}-\u{1D7FF}−–—]/gu, (ch) => specialMap[ch] || ch);
 
-  // 3. Decode unescaped form feed \x0c (ASCII 12) from JSON \f escapes followed by 'rac' -> \frac
-  s = s.replace(/[\x0c\u000c]rac/g, '\\frac');
-  s = s.replace(/[\x0c\u000c]/g, '\\f');
+  // 3. Decode unescaped form feed \x0c (ASCII 12) from JSON \f escapes
+  s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
+  s = s.replace(/\\f\s*frac\b/g, '\\frac');
+  s = s.replace(/\\f\s*rac\b/g, '\\frac');
+  s = s.replace(/[\x0c\u000c]+/g, ' ');
 
   return s;
 }
@@ -544,8 +546,11 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   let s = latex.trim();
 
   // 1. Fix corrupted \left / \right and form-feed corrupted \frac
-  s = s.replace(/[\x0c\u000c]rac/g, '\\frac');
-  s = s.replace(/[\x0c\u000c]/g, '\\f');
+  s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
+  s = s.replace(/\\f\s*frac\b/g, '\\frac');
+  s = s.replace(/\\f\s*rac\b/g, '\\frac');
+  s = s.replace(/[\x0c\u000c]+/g, ' ');
+  s = s.replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{');
   s = s.replace(/\{?\$+([^$]+)\$+\}?/g, '$1');
   s = s.replace(/≤ft\b/g, '\\left');
   s = s.replace(/\\le\s*ft\b/g, '\\left');

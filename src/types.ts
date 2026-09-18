@@ -4,11 +4,13 @@ export interface RCAClassification {
   tag: RCATagType;
   tagName: 'Conceptual Gap' | 'Silly Mistake' | 'Time / Ego Trap' | 'Guesswork Failed';
   sillyMistakeNote?: string;
+  subTag?: string;
   classifiedAt: string;
 }
 
 export interface Question {
   id?: string;
+  subTag?: string;
   q_num: number;
   question: string;
   options: {

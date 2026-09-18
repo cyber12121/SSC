@@ -11,6 +11,9 @@ export interface AiFocusedQuestion {
   subject?: string;
   topic?: string;
   rca?: { tag: string; tagName?: string };
+  rcaTag?: string;
+  rcaTagName?: string;
+  sillyMistakeNote?: string;
   rcaReason?: any;
   userTime?: string | number;
   avgTime?: string | number;
@@ -26,6 +29,8 @@ export interface AiFocusedScope {
   sourceScope?: 'full_mock' | 'sectional' | 'subject_wise' | 'mixed';
   sourceScopeLabel?: string;
   testName?: string;
+  rcaTag?: string;
+  rcaMode?: string;
   weakTopics?: any[];
   stats?: {
     score?: number;

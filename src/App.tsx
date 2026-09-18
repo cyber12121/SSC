@@ -41,7 +41,7 @@ import { SetPickerModal } from './components/modals/SetPickerModal';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
-import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap } from './utils/rcaHelper';
+import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap, matchesSillySubFilter, SILLY_SUB_TYPES } from './utils/rcaHelper';
 import { RCATagType, RCAClassification } from './types';
 import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
@@ -225,20 +225,22 @@ export default function App() {
   });
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
 
-  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA) vs 'silly' (Aggregate Silly Mistakes)
-  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca' | 'silly'>(() => {
+  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA)
+  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca'>(() => {
     try {
       const saved = localStorage.getItem('mockViewMode');
-      return (saved === 'buckets' || saved === 'rca' || saved === 'silly') ? saved : 'chapters';
+      return (saved === 'buckets' || saved === 'rca') ? saved : 'chapters';
     } catch {
       return 'chapters';
     }
   });
 
-  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca' | 'silly') => {
+  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca') => {
     setMockViewMode(mode);
     try { localStorage.setItem('mockViewMode', mode); } catch { }
   };
+
+  const [modalSillySubFilter, setModalSillySubFilter] = useState<string>('all');
 
   const [rcaSelectedFilter, setRcaSelectedFilter] = useState<'all' | RCATagType | 'unclassified'>('all');
   const [rcaSearchQuery, setRcaSearchQuery] = useState<string>('');
@@ -1562,25 +1564,40 @@ export default function App() {
     topicName: string,
     subject: string,
     questions: Question[],
-    stats?: { total?: number; wrong?: number; slow?: number; unattempted?: number }
+    stats?: { total?: number; wrong?: number; slow?: number; unattempted?: number },
+    mode?: 'chapters' | 'buckets' | 'rca',
+    rcaTagFilter?: string
   ) => {
     // Determine overall source category across questions
     const hasFull = (questions || []).some(q => (q as any).sourceType === 'full_mock' || classifyTestType(q) === 'full');
     const hasSectional = (questions || []).some(q => (q as any).sourceType === 'sectional' || classifyTestType(q) === 'sectional');
     const hasSubjectWise = (questions || []).some(q => (q as any).sourceType === 'subject_wise');
 
+    const isRcaMode = mode === 'rca' || mockViewMode === 'rca' || Boolean(rcaTagFilter && rcaTagFilter !== 'all');
+    const rcaTagLabel = rcaTagFilter && rcaTagFilter !== 'all'
+      ? (rcaTagFilter === 'unclassified' ? 'Unclassified' : `[${rcaTagFilter}] ${RCA_TAG_CONFIG[rcaTagFilter as RCATagType]?.label || rcaTagFilter}`)
+      : undefined;
+
     let sourceScope: 'full_mock' | 'sectional' | 'subject_wise' | 'mixed' = 'subject_wise';
-    let sourceScopeLabel = `Subject-Wise Mock Errors (${subject} • ${topicName})`;
+    let sourceScopeLabel = isRcaMode
+      ? `RCA Analysis${rcaTagLabel ? ` • ${rcaTagLabel}` : ''} (${subject} • ${topicName})`
+      : `Subject-Wise Mock Errors (${subject} • ${topicName})`;
 
     if (mockTestTypeFilter === 'full' || (hasFull && !hasSectional && !hasSubjectWise)) {
       sourceScope = 'full_mock';
-      sourceScopeLabel = `Full Mock Test Errors (${subject} • ${topicName})`;
+      sourceScopeLabel = isRcaMode
+        ? `Full Mock RCA${rcaTagLabel ? ` • ${rcaTagLabel}` : ''} (${subject} • ${topicName})`
+        : `Full Mock Test Errors (${subject} • ${topicName})`;
     } else if (mockTestTypeFilter === 'sectional' || (hasSectional && !hasFull && !hasSubjectWise)) {
       sourceScope = 'sectional';
-      sourceScopeLabel = `Sectional Test Errors (${subject} • ${topicName})`;
+      sourceScopeLabel = isRcaMode
+        ? `Sectional RCA${rcaTagLabel ? ` • ${rcaTagLabel}` : ''} (${subject} • ${topicName})`
+        : `Sectional Test Errors (${subject} • ${topicName})`;
     } else if (hasFull && hasSectional) {
       sourceScope = 'mixed';
-      sourceScopeLabel = `Full & Sectional Test Errors (${subject} • ${topicName})`;
+      sourceScopeLabel = isRcaMode
+        ? `Mock RCA${rcaTagLabel ? ` • ${rcaTagLabel}` : ''} (${subject} • ${topicName})`
+        : `Full & Sectional Test Errors (${subject} • ${topicName})`;
     }
 
     const scopedQuestions: AiFocusedQuestion[] = (questions || []).map((q, idx) => {
@@ -1614,6 +1631,11 @@ export default function App() {
             : `Subject-Wise: ${subject}`
       );
 
+      const qRca = (q as any).rca || (q as any).rcaClassification;
+      const effectiveRcaTag = (qRca?.tag as any) === 'A' ? 'S' : (qRca?.tag || (rcaTagFilter && rcaTagFilter !== 'all' && rcaTagFilter !== 'unclassified' ? rcaTagFilter : undefined));
+      const effectiveRcaName = qRca?.tagName || (effectiveRcaTag ? RCA_TAG_CONFIG[effectiveRcaTag as RCATagType]?.label : undefined);
+      const sillyNote = qRca?.sillyMistakeNote || (q as any).sillyMistakeNote;
+
       return {
         id: q.id,
         qNum: idx + 1,
@@ -1625,7 +1647,11 @@ export default function App() {
         status: ((q as any).status || (q as any).errorType || 'wrong') as any,
         subject,
         topic: topicName,
-        rcaReason: (q as any).rcaReason || (q as any).rca?.reason || undefined,
+        rcaReason: (q as any).rcaReason || qRca?.reason || undefined,
+        rca: effectiveRcaTag ? { tag: effectiveRcaTag, tagName: effectiveRcaName } : undefined,
+        rcaTag: effectiveRcaTag,
+        rcaTagName: effectiveRcaName,
+        sillyMistakeNote: sillyNote,
         sourceType: qSourceType,
         sourceLabel: qSourceLabel,
         testName: (q as any).testName
@@ -1634,10 +1660,12 @@ export default function App() {
 
     openAiWithScope({
       type: 'topic',
-      title: topicName,
+      title: isRcaMode && rcaTagLabel ? `${topicName} • ${rcaTagLabel}` : topicName,
       subject,
       sourceScope,
       sourceScopeLabel,
+      rcaTag: rcaTagFilter && rcaTagFilter !== 'all' ? rcaTagFilter : undefined,
+      rcaMode: isRcaMode ? 'rca' : undefined,
       stats: {
         totalQuestions: stats?.total || questions.length,
         wrong: stats?.wrong,
@@ -1698,19 +1726,27 @@ export default function App() {
     return list;
   }, [clubbedMockChapters, rcaSelectedFilter, rcaSearchQuery]);
 
-  const startSubjectRcaQuiz = (tag: RCATagType | 'unclassified') => {
+  const startSubjectRcaQuiz = (tag: RCATagType | 'unclassified', subTag?: string) => {
     if (!selectedSubject) return;
-    const questions = subjectRcaData.questionsByTag[tag] || [];
+    let questions = subjectRcaData.questionsByTag[tag] || [];
+    if (tag === 'S' && subTag && subTag !== 'all') {
+      questions = questions.filter(q => matchesSillySubFilter(q, subTag));
+    }
     if (questions.length === 0) {
       alert('No error questions found in this RCA category.');
       return;
     }
     const cfg = RCA_TAG_CONFIG[tag];
-    const tagLabel = tag === 'unclassified' ? 'Unclassified' : `[${tag}] ${cfg.label}`;
+    const subCfg = subTag && subTag !== 'all' ? SILLY_SUB_TYPES[subTag] : undefined;
+    const tagLabel = tag === 'unclassified'
+      ? 'Unclassified'
+      : subCfg
+      ? `[S] ${subCfg.label}`
+      : `[${tag}] ${cfg.label}`;
     if (questions.length > 25) {
       setSetPickerModal({
         title: `${selectedSubject} • ${tagLabel}`,
-        subtitle: `${questions.length} questions categorized under ${cfg.label}`,
+        subtitle: `${questions.length} questions categorized under ${subCfg ? subCfg.label : cfg.label}`,
         subject: selectedSubject,
         questions
       });
@@ -1728,15 +1764,23 @@ export default function App() {
     startQuiz(virtualChapter);
   };
 
-  const handleAskAiRca = (tagKey: RCATagType | 'unclassified') => {
+  const handleAskAiRca = (tagKey: RCATagType | 'unclassified', subTag?: string) => {
     if (!selectedSubject) return;
-    const questions = subjectRcaData.questionsByTag[tagKey] || [];
+    let questions = subjectRcaData.questionsByTag[tagKey] || [];
+    if (tagKey === 'S' && subTag && subTag !== 'all') {
+      questions = questions.filter(q => matchesSillySubFilter(q, subTag));
+    }
     if (questions.length === 0) {
       alert('No questions in this RCA category to analyze.');
       return;
     }
     const cfg = RCA_TAG_CONFIG[tagKey];
-    const tagLabel = tagKey === 'unclassified' ? 'Unclassified Mistakes' : `[${tagKey}] ${cfg.label}`;
+    const subCfg = subTag && subTag !== 'all' ? SILLY_SUB_TYPES[subTag] : undefined;
+    const tagLabel = tagKey === 'unclassified'
+      ? 'Unclassified Mistakes'
+      : subCfg
+      ? `[S] ${subCfg.label} Mistakes`
+      : `[${tagKey}] ${cfg.label}`;
 
     const scopedQuestions: AiFocusedQuestion[] = questions.slice(0, 30).map((q, idx) => {
       let optionsMap: Record<string, string> | undefined = undefined;
@@ -1769,6 +1813,9 @@ export default function App() {
             : `Subject-Wise: ${selectedSubject}`
       );
 
+      const effectiveTag = tagKey === 'unclassified' ? undefined : ((tagKey as any) === 'A' ? 'S' : tagKey);
+      const sillyNote = (q as any).sillyMistakeNote || (q as any).rca?.sillyMistakeNote;
+
       return {
         id: q.id,
         qNum: idx + 1,
@@ -1781,6 +1828,10 @@ export default function App() {
         subject: selectedSubject,
         topic: (q as any).chapter_title || (q as any).topic || selectedSubject,
         rcaReason: (q as any).rcaReason || (q as any).rca?.reason || undefined,
+        rca: effectiveTag ? { tag: effectiveTag, tagName: tagLabel } : undefined,
+        rcaTag: effectiveTag,
+        rcaTagName: tagLabel,
+        sillyMistakeNote: sillyNote,
         sourceType: qSourceType,
         sourceLabel: qSourceLabel,
         testName: (q as any).testName
@@ -1793,6 +1844,8 @@ export default function App() {
       subject: selectedSubject,
       sourceScope: 'mixed',
       sourceScopeLabel: `RCA Analysis: ${tagLabel}`,
+      rcaTag: tagKey === 'unclassified' ? undefined : tagKey,
+      rcaMode: 'rca',
       stats: {
         totalQuestions: questions.length
       },
@@ -3109,17 +3162,6 @@ export default function App() {
                               <Target className="w-3.5 h-3.5 text-purple-600" />
                               <span>RCA</span>
                             </button>
-                            <button
-                              onClick={() => setMockViewModePersisted('silly')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockViewMode === 'silly'
-                                  ? 'bg-white text-rose-700 shadow-xs font-bold'
-                                  : 'text-slate-500 hover:text-rose-700'
-                                }`}
-                              title="Aggregate Silly Mistakes Hub (subject-wise)"
-                            >
-                              <Flame className="w-3.5 h-3.5 text-rose-600" />
-                              <span>Silly Log</span>
-                            </button>
                           </div>
 
                           {/* Start All Button */}
@@ -3760,6 +3802,10 @@ export default function App() {
                   onBookmarkToggle={toggleBookmark}
                   onViewAnalytics={() => setView('dashboard')}
                   onDeleteQuestion={handleDeleteQuestion}
+                  onUpdateResult={(updated) => {
+                    setUserResults(prev => prev.map(r => r.id === updated.id ? updated : r));
+                    setReviewResult(updated);
+                  }}
                 />
               </React.Suspense>
             )}
@@ -3840,12 +3886,13 @@ export default function App() {
           setModalErrorFilter={setModalErrorFilter}
           modalActiveSet={modalActiveSet}
           setModalActiveSet={setModalActiveSet}
+          mockViewMode={mockViewMode}
           onClose={() => setActiveMockChapterModal(null)}
           onStartPractice={(topic, questions, subType, setNum) => {
             startClubbedChapterQuiz(topic, questions, subType, setNum);
           }}
-          onAskAi={(topic, subject, questions, counts) => {
-            handleAskAiTopic(topic, subject, questions, counts);
+          onAskAi={(topic, subject, questions, counts, mode, activeFilter) => {
+            handleAskAiTopic(topic, subject, questions, counts, mode || mockViewMode, activeFilter || modalErrorFilter);
           }}
         />
 

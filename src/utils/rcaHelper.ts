@@ -73,6 +73,239 @@ export const RCA_TAG_CONFIG: Record<RCATagType | 'unclassified', RCABucketInfo> 
   }
 };
 
+export interface SillySubTypeConfig {
+  id: string;
+  label: string;
+  shortLabel: string;
+  icon: string;
+  desc: string;
+  badgeClass: string;
+  activePillClass: string;
+  inactivePillClass: string;
+}
+
+export const SILLY_SUB_TYPES: Record<string, SillySubTypeConfig> = {
+  calculation: {
+    id: 'calculation',
+    label: 'Calculation Error',
+    shortLabel: 'Calculation',
+    icon: '🧮',
+    desc: 'Math slip, arithmetic, multiplication, division, BODMAS, or sign error',
+    badgeClass: 'bg-rose-100 text-rose-800 border-rose-200',
+    activePillClass: 'bg-rose-600 text-white font-bold border-rose-600 shadow-xs',
+    inactivePillClass: 'bg-rose-50/80 hover:bg-rose-100 text-rose-800 border-rose-200'
+  },
+  misread: {
+    id: 'misread',
+    label: 'Misread Question',
+    shortLabel: 'Misread',
+    icon: '👁️',
+    desc: 'Overlooked NOT / INCORRECT, misinterpreted statement, or rushed reading',
+    badgeClass: 'bg-amber-100 text-amber-800 border-amber-200',
+    activePillClass: 'bg-amber-600 text-white font-bold border-amber-600 shadow-xs',
+    inactivePillClass: 'bg-amber-50/80 hover:bg-amber-100 text-amber-800 border-amber-200'
+  },
+  option: {
+    id: 'option',
+    label: 'Marked Wrong Option',
+    shortLabel: 'Wrong Option',
+    icon: '🎯',
+    desc: 'Solved correctly but marked or clicked the wrong option',
+    badgeClass: 'bg-violet-100 text-violet-800 border-violet-200',
+    activePillClass: 'bg-violet-600 text-white font-bold border-violet-600 shadow-xs',
+    inactivePillClass: 'bg-violet-50/80 hover:bg-violet-100 text-violet-800 border-violet-200'
+  },
+  formula: {
+    id: 'formula',
+    label: 'Formula / Sign Slip',
+    shortLabel: 'Formula / Sign',
+    icon: '⚡',
+    desc: 'Sign error (+/-), formula misapplication, or inverted ratio',
+    badgeClass: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+    activePillClass: 'bg-emerald-600 text-white font-bold border-emerald-600 shadow-xs',
+    inactivePillClass: 'bg-emerald-50/80 hover:bg-emerald-100 text-emerald-800 border-emerald-200'
+  },
+  rushed: {
+    id: 'rushed',
+    label: 'Rushed / Panic',
+    shortLabel: 'Rushed',
+    icon: '⏱️',
+    desc: 'Rushed under time pressure or panicking near end of section',
+    badgeClass: 'bg-blue-100 text-blue-800 border-blue-200',
+    activePillClass: 'bg-blue-600 text-white font-bold border-blue-600 shadow-xs',
+    inactivePillClass: 'bg-blue-50/80 hover:bg-blue-100 text-blue-800 border-blue-200'
+  },
+  unit: {
+    id: 'unit',
+    label: 'Unit Missed',
+    shortLabel: 'Unit Missed',
+    icon: '📐',
+    desc: 'Missed unit conversion (km/h vs m/s, cm vs m, grams vs kg)',
+    badgeClass: 'bg-teal-100 text-teal-800 border-teal-200',
+    activePillClass: 'bg-teal-600 text-white font-bold border-teal-600 shadow-xs',
+    inactivePillClass: 'bg-teal-50/80 hover:bg-teal-100 text-teal-800 border-teal-200'
+  },
+  custom: {
+    id: 'custom',
+    label: 'Custom / Other Slip',
+    shortLabel: 'Custom Slip',
+    icon: '📝',
+    desc: 'Specific custom user note or slip',
+    badgeClass: 'bg-slate-100 text-slate-800 border-slate-200',
+    activePillClass: 'bg-slate-700 text-white font-bold border-slate-700 shadow-xs',
+    inactivePillClass: 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200'
+  },
+  unspecified: {
+    id: 'unspecified',
+    label: 'Unspecified Slip',
+    shortLabel: 'Unspecified',
+    icon: '❓',
+    desc: 'General silly mistake without specific sub-reason note',
+    badgeClass: 'bg-gray-100 text-gray-700 border-gray-200',
+    activePillClass: 'bg-gray-700 text-white font-bold border-gray-700 shadow-xs',
+    inactivePillClass: 'bg-gray-50 hover:bg-gray-100 text-gray-700 border-gray-200'
+  }
+};
+
+export function getQuestionSillySubTypes(q: any): string[] {
+  const explicitSub = (
+    q?.rca?.subTag ||
+    q?.subTag ||
+    q?.rcaClassification?.subTag ||
+    ''
+  ).trim();
+
+  const note = (
+    q?.rca?.sillyMistakeNote ||
+    q?.sillyMistakeNote ||
+    q?.rcaClassification?.sillyMistakeNote ||
+    ''
+  ).trim();
+
+  const matched: string[] = [];
+
+  if (explicitSub && explicitSub !== 'all' && SILLY_SUB_TYPES[explicitSub]) {
+    matched.push(explicitSub);
+  }
+
+  if (note && note.toLowerCase() !== 'unspecified silly mistake') {
+    const lower = note.toLowerCase();
+    if (/calculat|calc\b|arithmetic|multiplic|divid|addit|subtract|table|fraction|decimal|bodmas|\(\+\/\-\)/i.test(lower)) {
+      if (!matched.includes('calculation')) matched.push('calculation');
+    }
+    if (/misread|read|overlook|keyword|not\b|incorrect|least|except|question \/ option/i.test(lower)) {
+      if (!matched.includes('misread')) matched.push('misread');
+    }
+    if (/marked wrong|wrong option|bubbl|option swap|clicked wrong/i.test(lower)) {
+      if (!matched.includes('option')) matched.push('option');
+    }
+    if (/formula|sign error|sign slip|plus|minus|negative|positive|\+\/\-/i.test(lower)) {
+      if (!matched.includes('formula')) matched.push('formula');
+    }
+    if (/rush|panic|hurry|hasty|time pressure|last minute/i.test(lower)) {
+      if (!matched.includes('rushed')) matched.push('rushed');
+    }
+    if (/unit|conversion|cm\b|meter|km\/h|m\/s|kg\b|gram/i.test(lower)) {
+      if (!matched.includes('unit')) matched.push('unit');
+    }
+  }
+
+  if (matched.length === 0) {
+    if (note && note.toLowerCase() !== 'unspecified silly mistake') {
+      matched.push('custom');
+    } else {
+      matched.push('unspecified');
+    }
+  }
+  return matched;
+}
+
+export function matchesSillySubFilter(q: any, subFilter: string): boolean {
+  if (!subFilter || subFilter === 'all') return true;
+  const types = getQuestionSillySubTypes(q);
+  return types.includes(subFilter);
+}
+
+export function getSillyPrimaryBadge(q: any): { 
+  icon: string; 
+  label: string; 
+  shortLabel: string;
+  subId: string;
+  badgeClass: string; 
+  noteText?: string 
+} {
+  const note = (
+    q?.rca?.sillyMistakeNote ||
+    q?.sillyMistakeNote ||
+    q?.rcaClassification?.sillyMistakeNote ||
+    ''
+  ).trim();
+
+  const types = getQuestionSillySubTypes(q);
+  const primaryId = types[0] || 'unspecified';
+  const cfg = SILLY_SUB_TYPES[primaryId] || SILLY_SUB_TYPES.unspecified;
+
+  return {
+    icon: cfg.icon,
+    subId: primaryId,
+    label: `⚡ Silly Mistake • ${cfg.label}`,
+    shortLabel: cfg.label,
+    badgeClass: cfg.badgeClass,
+    noteText: note && note.toLowerCase() !== 'unspecified silly mistake' ? note : undefined
+  };
+}
+
+/**
+ * Generates an instant, dynamic Speed & Pattern Insight based on actual error questions
+ * e.g.: "Out of my 6 calculation errors, 4 happened in Mensuration & Geometry when solving under 30 seconds."
+ */
+export function generatePatternInsight(questions: any[], subFilter?: string): string | null {
+  if (!questions || questions.length === 0) return null;
+  const total = questions.length;
+  const cfg = subFilter && subFilter !== 'all' ? SILLY_SUB_TYPES[subFilter] : undefined;
+  const subLabel = cfg ? cfg.label.toLowerCase() : 'silly mistake';
+
+  const topicCounts: Record<string, number> = {};
+  let under30Count = 0;
+  let under45Count = 0;
+  let over60Count = 0;
+
+  questions.forEach(q => {
+    const rawTopic = q.tags?.topic || q.topic || q.subject || 'General';
+    const topic = String(rawTopic).trim() || 'General';
+    topicCounts[topic] = (topicCounts[topic] || 0) + 1;
+
+    const time = Number(q.timeSpent || q.userTime || q.timeTaken || 0);
+    if (time > 0 && time <= 30) under30Count++;
+    else if (time > 0 && time <= 45) under45Count++;
+    else if (time >= 60) over60Count++;
+  });
+
+  const sortedTopics = Object.entries(topicCounts).sort((a, b) => b[1] - a[1]);
+  const [topTopic, topCount] = sortedTopics[0] || ['', 0];
+
+  if (total === 1) {
+    if (under30Count === 1) {
+      return `Solved rapidly in under 30 seconds in ${topTopic} — check for hasty steps.`;
+    }
+    return `Occurred in ${topTopic}. Double-check intermediate operations before marking.`;
+  }
+
+  if (topTopic && topCount >= 2 && under30Count >= 2) {
+    return `Out of your ${total} ${subLabel}s, ${topCount} happened in ${topTopic} when solving under 30 seconds.`;
+  } else if (topTopic && topCount >= 2 && under45Count >= 2) {
+    return `Out of your ${total} ${subLabel}s, ${topCount} happened in ${topTopic} when solving under 45 seconds.`;
+  } else if (topTopic && topCount >= 2) {
+    return `Out of your ${total} ${subLabel}s, ${topCount} happened in ${topTopic}.`;
+  } else if (under30Count >= Math.ceil(total / 2)) {
+    return `${under30Count} of ${total} ${subLabel}s happened when rushing under 30 seconds. Pacing avoids sign & calculation slips.`;
+  } else if (over60Count >= 2) {
+    return `${over60Count} of ${total} ${subLabel}s occurred after spending over 60 seconds under time pressure.`;
+  }
+
+  return `Out of your ${total} ${subLabel}s, most slips occurred in ${topTopic || 'calculations'}.`;
+}
+
 export function getGlobalRcaStore(): Record<string, any> {
   try {
     const raw = safeStorage.getItem('cgl_rca_global_store');
@@ -163,7 +396,8 @@ export function saveQuestionRca(
   targetQ: any,
   tag: RCATagType | null,
   sillyMistakeNote?: string,
-  parentSubject?: string
+  parentSubject?: string,
+  subTag?: string
 ): RCAClassification | undefined {
   try {
     const globalStore = getGlobalRcaStore();
@@ -190,10 +424,18 @@ export function saveQuestionRca(
       'G': 'Guesswork Failed'
     };
 
+    const finalNote = effectiveTag === 'S' ? (sillyMistakeNote || targetQ.sillyMistakeNote || '') : undefined;
+    let resolvedSubTag = subTag || targetQ.subTag || targetQ.rca?.subTag;
+    if (effectiveTag === 'S' && !resolvedSubTag) {
+      const derived = getQuestionSillySubTypes({ ...targetQ, rca: { sillyMistakeNote: finalNote } });
+      resolvedSubTag = derived[0] || 'unspecified';
+    }
+
     const newRca: RCAClassification = {
       tag: effectiveTag,
       tagName: tagNames[effectiveTag],
-      sillyMistakeNote: effectiveTag === 'S' ? (sillyMistakeNote || targetQ.sillyMistakeNote || '') : undefined,
+      sillyMistakeNote: finalNote,
+      subTag: effectiveTag === 'S' ? resolvedSubTag : undefined,
       classifiedAt: new Date().toISOString()
     };
 

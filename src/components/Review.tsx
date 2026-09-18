@@ -27,7 +27,8 @@ import {
   Target,
   Edit3,
   BookOpen,
-  RotateCw
+  RotateCw,
+  Info
 } from 'lucide-react';
 import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
 import { extractSolutionLanguage } from '../utils/cleanSolution';
@@ -42,7 +43,15 @@ import { convertQuestionToSRSCardCandidate, addSRSCardsBatch } from '../utils/sr
 import { SrsCardConfirmModal } from './srs/SrsCardConfirmModal';
 import { SRSCard } from '../types/srs';
 import { db, auth } from '../firebase';
-import { collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, deleteDoc, doc, setDoc } from 'firebase/firestore';
+import { 
+  RCA_TAG_CONFIG, 
+  SILLY_SUB_TYPES, 
+  getQuestionSillySubTypes, 
+  matchesSillySubFilter, 
+  getSillyPrimaryBadge, 
+  generatePatternInsight 
+} from '../utils/rcaHelper';
 
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
   if (rawTime === undefined || rawTime === null) return null;
@@ -89,6 +98,7 @@ interface ReviewViewProps {
   onViewAnalytics?: () => void;
   onDeleteQuestion?: (question: Question) => Promise<void> | void;
   onReattemptQuestions?: (title: string, questions: Question[]) => void;
+  onUpdateResult?: (updatedResult: QuizResult) => void;
 }
 
 type FilterType = 
@@ -114,7 +124,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   onBookmarkToggle,
   onViewAnalytics,
   onDeleteQuestion,
-  onReattemptQuestions
+  onReattemptQuestions,
+  onUpdateResult
 }) => {
   const [items, setItems] = useState<QuestionProgress[]>(() => result.questionDetails || []);
 
@@ -128,6 +139,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [reattemptAnswers, setReattemptAnswers] = useState<Record<number, string>>({});
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedFilter, setSelectedFilter] = useState<FilterType>('all');
+  const [sillySubFilter, setSillySubFilter] = useState<string>('all');
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [showReattemptMenu, setShowReattemptMenu] = useState(false);
   const [language, setLanguage] = useState<LanguageType>('English');
@@ -145,6 +157,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [srsCandidateCards, setSrsCandidateCards] = useState<Array<Partial<SRSCard>>>([]);
   const [srsModalOpen, setSrsModalOpen] = useState(false);
   const [srsToast, setSrsToast] = useState<string | null>(null);
+  const [showSillyRevisionModal, setShowSillyRevisionModal] = useState<boolean>(false);
+  const [revisedReviewKeys, setRevisedReviewKeys] = useState<Set<number>>(new Set());
 
   // isMockReview: only true for actual mock/error review sessions, not chapter bank quizzes
   const isMockReview = Boolean(
@@ -217,6 +231,88 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     });
     return counts;
   }, [rcaMap]);
+
+  const reviewSillySubTypeCounts = useMemo(() => {
+    const counts: Record<string, number> = {
+      all: 0,
+      calculation: 0,
+      misread: 0,
+      option: 0,
+      formula: 0,
+      rushed: 0,
+      unit: 0,
+      custom: 0,
+      unspecified: 0
+    };
+    items.forEach((it, idx) => {
+      const qRca = rcaMap[idx] || it.rca || it.question?.rca;
+      if (qRca?.tag === 'S' || (qRca?.tag as any) === 'A') {
+        counts.all++;
+        const types = getQuestionSillySubTypes({ ...(it.question || it), rca: qRca });
+        types.forEach(t => {
+          if (counts[t] !== undefined) counts[t]++;
+        });
+      }
+    });
+    return counts;
+  }, [items, rcaMap]);
+
+  const sillyQuestions = useMemo(() => {
+    return items
+      .filter((it, idx) => {
+        const qRca = rcaMap[idx] || it.rca || it.question?.rca;
+        return qRca?.tag === 'S' || (qRca?.tag as any) === 'A';
+      })
+      .map(it => it.question || it);
+  }, [items, rcaMap]);
+
+  const reviewPatternInsight = useMemo(() => {
+    if (selectedFilter !== 'rca_s' && (selectedFilter as any) !== 'rca_a') return null;
+    const targetQs = sillySubFilter === 'all' 
+      ? sillyQuestions 
+      : sillyQuestions.filter(q => matchesSillySubFilter(q, sillySubFilter));
+    return generatePatternInsight(targetQs, sillySubFilter);
+  }, [selectedFilter, sillySubFilter, sillyQuestions]);
+
+  // Silly mistake items formatted for Revision Sheet (habits, slips & typed notes only, NOT questions)
+  const reviewSillyMistakesList = useMemo(() => {
+    return items
+      .map((it, idx) => {
+        const qRca = rcaMap[idx] || it.rca || it.question?.rca;
+        const tag = (qRca?.tag as any) === 'A' ? 'S' : qRca?.tag;
+        if (tag !== 'S') return null;
+        const q = it.question || it;
+        if (sillySubFilter !== 'all' && !matchesSillySubFilter({ ...q, rca: qRca }, sillySubFilter)) {
+          return null;
+        }
+        const subTypes = getQuestionSillySubTypes({ ...q, rca: qRca });
+        const primarySub = subTypes[0] || qRca?.subTag || 'unspecified';
+        const subConfig = SILLY_SUB_TYPES[primarySub] || SILLY_SUB_TYPES.unspecified;
+        const typedNote = (qRca?.note || qRca?.sillyMistakeNote || (q as any).sillyMistakeNote || (q as any).userTypedSillyNote || '').trim();
+        return {
+          questionIndex: idx,
+          displayNum: idx + 1,
+          question: q,
+          rca: qRca,
+          primarySub,
+          subConfig,
+          typedNote,
+          topic: (q as any).topic || result.chapter_title || 'Mock Test',
+          timeTaken: it.timeTaken
+        };
+      })
+      .filter(Boolean) as Array<{
+        questionIndex: number;
+        displayNum: number;
+        question: Question;
+        rca: RCAClassification;
+        primarySub: string;
+        subConfig: typeof SILLY_SUB_TYPES[string];
+        typedNote: string;
+        topic: string;
+        timeTaken?: number;
+      }>;
+  }, [items, rcaMap, sillySubFilter, result.chapter_title]);
 
   // Robust persistence helper for RCA classifications
   const persistRcaUpdate = (updatedMap: Record<number, RCAClassification>, targetIdx: number, newRca?: RCAClassification, isClear: boolean = false) => {
@@ -506,10 +602,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           }
         }
 
-        // 4. Safe Firestore Sync for Silly Mistakes & RCA (deleteDoc + addDoc replacement compliant with firestore.rules)
+        // 4. Safe Firestore Sync for Silly Mistakes & RCA (In-place update preserving exact document ID)
         if (auth.currentUser && result.id && !result.id.startsWith('guest-')) {
           try {
-            const oldId = result.id;
+            const targetDocId = result.id;
             const updatedQuestionDetails = items.map((it, idx) => {
               const rca = currentRcaMap[idx] || it.rca || it.question?.rca;
               return {
@@ -551,16 +647,22 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
             const sanitized = JSON.parse(JSON.stringify(updatedDocData));
 
-            if (!oldId.startsWith('local-')) {
+            // CRITICAL FIX: Update the EXISTING document in-place.
+            // Never call addDoc here, which creates new duplicate documents on every review!
+            if (!targetDocId.startsWith('local-')) {
               try {
-                await deleteDoc(doc(db, 'results', oldId));
-              } catch (delErr) {
-                console.warn('Could not delete older result before replacement:', delErr);
+                await setDoc(doc(db, 'results', targetDocId), sanitized, { merge: true });
+              } catch (setErr: any) {
+                console.warn('In-place setDoc failed, attempting recreate on same ID:', setErr);
+                try {
+                  await deleteDoc(doc(db, 'results', targetDocId));
+                  await setDoc(doc(db, 'results', targetDocId), sanitized);
+                } catch (fallbackErr) {
+                  console.error('Firestore cloud update failed (permission denied):', fallbackErr);
+                  throw fallbackErr;
+                }
               }
             }
-
-            const newDocRef = await addDoc(collection(db, 'results'), sanitized);
-            result.id = newDocRef.id;
 
             // Update user cache in localStorage
             try {
@@ -569,16 +671,28 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               if (cachedRaw) {
                 const cachedResults: QuizResult[] = JSON.parse(cachedRaw);
                 const updatedCache = cachedResults.map(r => {
-                  if (r.id === oldId) {
-                    return { ...r, id: newDocRef.id, questionDetails: updatedQuestionDetails, rcaMap: currentRcaMap };
+                  if (r.id === targetDocId) {
+                    return { ...r, questionDetails: updatedQuestionDetails, rcaMap: currentRcaMap };
                   }
                   return r;
                 });
                 safeStorage.setItem(cacheKey, JSON.stringify(updatedCache.slice(0, 100)));
               }
             } catch {}
-          } catch (cloudErr) {
-            console.warn('Cloud sync for RCA review failed, saved locally:', cloudErr);
+
+            // Update parent state so subsequent reviews use the updated object directly
+            if (onUpdateResult) {
+              onUpdateResult({
+                ...result,
+                questionDetails: updatedQuestionDetails,
+                rcaMap: currentRcaMap
+              });
+            }
+          } catch (cloudErr: any) {
+            console.error('Cloud sync for RCA review failed:', cloudErr);
+            if (cloudErr?.code === 'permission-denied' || String(cloudErr?.message).includes('permission')) {
+              console.warn('[Firestore] Permission denied: please ensure "allow update" is published in Firebase Console under Firestore Rules.');
+            }
           }
         }
       }
@@ -1080,7 +1194,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (selectedFilter === 'unattempted') return status === 'unattempted';
     if (selectedFilter === 'needs_rca') return (status === 'wrong' || status === 'slow' || status === 'unattempted') && !qRca;
     if (selectedFilter === 'rca_c') return qRca?.tag === 'C';
-    if (selectedFilter === 'rca_s' || (selectedFilter as any) === 'rca_a') return qRca?.tag === 'S' || (qRca?.tag as any) === 'A';
+    if (selectedFilter === 'rca_s' || (selectedFilter as any) === 'rca_a') {
+      const isSilly = qRca?.tag === 'S' || (qRca?.tag as any) === 'A';
+      if (!isSilly) return false;
+      if (sillySubFilter !== 'all') {
+        const qObj = items[idx]?.question || items[idx];
+        return matchesSillySubFilter({ ...qObj, rca: qRca }, sillySubFilter);
+      }
+      return true;
+    }
     if (selectedFilter === 'rca_t') return qRca?.tag === 'T';
     if (selectedFilter === 'rca_g') return qRca?.tag === 'G';
     return true;
@@ -1634,6 +1756,35 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   {currentMarks}
                 </span>
               </div>
+
+              {/* Exact Silly Mistake Badge on Question Card */}
+              {(currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') && (() => {
+                const badge = getSillyPrimaryBadge({ ...(question || current), rca: currentRca });
+                return (
+                  <span 
+                    className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold border shadow-2xs ${badge.badgeClass}`}
+                    title={badge.noteText ? `Silly Mistake: ${badge.noteText}` : badge.label}
+                  >
+                    <span>{badge.icon}</span>
+                    <span>{badge.label}</span>
+                    {badge.noteText && (
+                      <span className="text-[10px] opacity-75 font-normal italic">
+                        ({badge.noteText})
+                      </span>
+                    )}
+                  </span>
+                );
+              })()}
+
+              {/* RCA Tag Badge for non-silly */}
+              {currentRca?.tag && currentRca.tag !== 'S' && (currentRca.tag as any) !== 'A' && (
+                <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold border shadow-2xs ${
+                  RCA_TAG_CONFIG[currentRca.tag]?.lightClass || 'bg-purple-50 text-purple-700 border-purple-200'
+                }`}>
+                  <span className="font-mono">[{currentRca.tag}]</span>
+                  <span>{RCA_TAG_CONFIG[currentRca.tag]?.label}</span>
+                </span>
+              )}
             </div>
 
             {/* Save & Report Actions */}
@@ -1679,6 +1830,28 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           <div className="flex-1 overflow-y-auto px-6 sm:px-8 py-5 custom-scrollbar">
             {question ? (
               <div className="max-w-4xl">
+                {/* Speed & Pattern Insight Banner */}
+                {reviewPatternInsight && (
+                  <div className="mb-4 p-3.5 bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-purple-500/10 border border-amber-400/40 rounded-2xl flex items-start gap-3 shadow-xs">
+                    <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white flex items-center justify-center shrink-0 shadow-xs mt-0.5">
+                      <Sparkles className="w-4 h-4 text-amber-100" />
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-black uppercase tracking-wider text-amber-800 flex items-center gap-1.5">
+                        <span>⚡ Speed & Pattern Insight</span>
+                        {sillySubFilter !== 'all' && SILLY_SUB_TYPES[sillySubFilter] && (
+                          <span className="text-[10px] px-1.5 py-0.2 rounded bg-rose-100 text-rose-900 font-bold">
+                            {SILLY_SUB_TYPES[sillySubFilter].label}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs font-bold text-slate-800 mt-1 leading-relaxed">
+                        "{reviewPatternInsight}"
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Question Body */}
                 <div className="text-[15.5px] text-gray-900 leading-relaxed font-normal mb-4">
                   <FormattedText
@@ -1914,6 +2087,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                               ? (isSectional ? `Sectional Test: ${result.chapter_title}` : `Full Mock Test: ${result.chapter_title}`)
                               : `Subject-Wise: ${result.subject || ''} (${result.chapter_title || ''})`;
 
+                            const effTag = (currentRca?.tag as any) === 'A' ? 'S' : currentRca?.tag;
+                            const effTagName = currentRca?.tagName || (effTag ? RCA_TAG_CONFIG[effTag as RCATagType]?.label : undefined);
+
                             window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
                               detail: {
                                 questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
@@ -1925,7 +2101,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                                 topic: question.tags?.topic || (question as any).topic || result.subject,
                                 sourceType: sType,
                                 sourceLabel: sLabel,
-                                testName: result.chapter_title
+                                testName: result.chapter_title,
+                                rcaTag: effTag,
+                                rcaTagName: effTagName,
+                                sillyMistakeNote: currentRca?.sillyMistakeNote
                               }
                             }));
                           }}
@@ -2106,13 +2285,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       <span className="font-bold text-[11px] bg-purple-100 text-purple-800 px-1.5 py-0.2 rounded-full">{rcaStats.C}</span>
                     </button>
                     <button
-                      onClick={() => { setSelectedFilter('rca_a'); setShowFilterMenu(false); }}
+                      onClick={() => { setSelectedFilter('rca_s'); setShowFilterMenu(false); }}
                       className={`w-full text-left px-3 py-1.5 hover:bg-rose-50 flex items-center justify-between ${
-                        selectedFilter === 'rca_a' ? 'font-bold text-rose-700 bg-rose-50/70' : 'text-gray-700'
+                        selectedFilter === 'rca_s' || (selectedFilter as any) === 'rca_a' ? 'font-bold text-rose-700 bg-rose-50/70' : 'text-gray-700'
                       }`}
                     >
-                      <span>🔴 [A] Silly Mistake</span>
-                      <span className="font-bold text-[11px] bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded-full">{rcaStats.A}</span>
+                      <span>⚡ [S] Silly Mistake</span>
+                      <span className="font-bold text-[11px] bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded-full">{rcaStats.S}</span>
                     </button>
                     <button
                       onClick={() => { setSelectedFilter('rca_t'); setShowFilterMenu(false); }}
@@ -2300,6 +2479,63 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 [G]
               </button>
             </div>
+
+            {/* Secondary Breakdown Row for Silly Mistakes */}
+            {(selectedFilter === 'rca_s' || (selectedFilter as any) === 'rca_a') && (
+              <div className="px-2.5 py-1.5 bg-gradient-to-r from-rose-50/90 to-pink-50/80 border-b border-rose-200/80 flex items-center gap-1 overflow-x-auto shrink-0 custom-scrollbar text-[10px]">
+                {/* (i) Info icon on the left to revise typed/selected mistakes without questions */}
+                <button
+                  type="button"
+                  onClick={() => setShowSillyRevisionModal(true)}
+                  className="px-2 py-0.5 rounded font-bold transition-all cursor-pointer shrink-0 bg-amber-400 hover:bg-amber-300 text-slate-950 flex items-center gap-1 shadow-2xs"
+                  title="Revision Mode: List all silly mistakes typed or selected to revise (not questions)"
+                >
+                  <Info className="w-3.5 h-3.5" />
+                  <span>Revise</span>
+                  <span className="font-mono font-black">({reviewSillyMistakesList.length})</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setSillySubFilter('all')}
+                  className={`px-2 py-0.5 rounded font-bold transition-all cursor-pointer shrink-0 ${
+                    sillySubFilter === 'all'
+                      ? 'bg-rose-600 text-white shadow-2xs'
+                      : 'bg-white text-rose-800 hover:bg-rose-100 border border-rose-200'
+                  }`}
+                >
+                  <span>All Silly</span>
+                  <span className="ml-1 opacity-80 font-mono">({rcaStats.S})</span>
+                </button>
+
+                {Object.values(SILLY_SUB_TYPES).map(sub => {
+                  const count = reviewSillySubTypeCounts[sub.id] || 0;
+                  if (count === 0 && sub.id !== 'calculation' && sub.id !== 'misread' && sub.id !== 'option' && sub.id !== 'formula') {
+                    return null;
+                  }
+                  const isSelected = sillySubFilter === sub.id;
+                  return (
+                    <button
+                      key={sub.id}
+                      type="button"
+                      onClick={() => setSillySubFilter(isSelected ? 'all' : sub.id)}
+                      className={`px-1.5 py-0.5 rounded font-semibold transition-all cursor-pointer flex items-center gap-1 shrink-0 ${
+                        isSelected
+                          ? 'bg-rose-600 text-white font-bold shadow-2xs'
+                          : count > 0
+                          ? 'bg-white text-rose-900 hover:bg-rose-100 border border-rose-200'
+                          : 'bg-white/60 text-slate-400 border border-slate-200 opacity-60'
+                      }`}
+                      title={sub.desc}
+                    >
+                      <span>{sub.icon}</span>
+                      <span>{sub.shortLabel}</span>
+                      <span className="font-mono font-bold">({count})</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
             {/* Question Palette Grid (Section-Wise) */}
             <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
@@ -2805,6 +3041,151 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           setSrsCandidateCards([]);
         }}
       />
+
+      {/* ── SILLY MISTAKES REVISION SHEET MODAL ── */}
+      {showSillyRevisionModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-3 sm:p-6">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden border border-rose-100 animate-in fade-in zoom-in-95 duration-150">
+            {/* Modal Header */}
+            <div className="px-6 py-4 bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 text-white flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-white/20 text-white flex items-center justify-center font-bold">
+                  <Info className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-sm tracking-wide">
+                    ⚡ Silly Mistakes Revision Sheet
+                  </h3>
+                  <p className="text-[11px] text-rose-100 font-medium">
+                    {reviewSillyMistakesList.length} silly mistakes recorded • Questions hidden for rapid habit review
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowSillyRevisionModal(false)}
+                className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* List Body */}
+            <div className="flex-1 overflow-y-auto p-5 space-y-3 bg-slate-50/50">
+              {reviewSillyMistakesList.length === 0 ? (
+                <div className="py-12 text-center text-slate-400 text-xs font-semibold bg-white rounded-2xl border border-dashed border-slate-200">
+                  No silly mistakes classified in this test yet.
+                </div>
+              ) : (
+                reviewSillyMistakesList.map(item => {
+                  const isRevised = revisedReviewKeys.has(item.questionIndex);
+                  const cfg = item.subConfig;
+                  return (
+                    <div
+                      key={item.questionIndex}
+                      className={`p-4 rounded-2xl border transition-all ${
+                        isRevised
+                          ? 'bg-slate-50 border-slate-200 opacity-70'
+                          : 'bg-white border-rose-200/80 shadow-xs hover:border-rose-300'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-2 flex-wrap mb-2">
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setRevisedReviewKeys(prev => {
+                                const next = new Set(prev);
+                                if (next.has(item.questionIndex)) next.delete(item.questionIndex);
+                                else next.add(item.questionIndex);
+                                return next;
+                              });
+                            }}
+                            className={`w-5 h-5 rounded-md flex items-center justify-center border transition-all cursor-pointer ${
+                              isRevised ? 'bg-emerald-500 border-emerald-600 text-white' : 'border-slate-300 bg-white'
+                            }`}
+                            title={isRevised ? "Mark as unrevised" : "Mark as revised"}
+                          >
+                            {isRevised && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+                          </button>
+
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setCurrentIdx(item.questionIndex);
+                              setShowSillyRevisionModal(false);
+                            }}
+                            className={`text-xs font-mono font-bold hover:underline cursor-pointer ${
+                              isRevised ? 'line-through text-slate-400' : 'text-slate-800'
+                            }`}
+                            title="Jump to question in review mode"
+                          >
+                            Q{item.displayNum}
+                          </button>
+
+                          <span className={`px-2 py-0.5 rounded-lg text-[10px] font-bold border flex items-center gap-1 ${cfg.badgeClass}`}>
+                            <span>{cfg.icon}</span>
+                            <span>{cfg.label}</span>
+                          </span>
+
+                          <span className="px-2 py-0.5 rounded-lg text-[10px] font-medium bg-slate-100 text-slate-600">
+                            {item.topic}
+                          </span>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setCurrentIdx(item.questionIndex);
+                            setShowSillyRevisionModal(false);
+                          }}
+                          className="text-[10px] font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 px-2 py-0.5 rounded transition cursor-pointer"
+                        >
+                          View Question →
+                        </button>
+                      </div>
+
+                      {item.typedNote ? (
+                        <div className="p-3 bg-amber-50/90 border border-amber-200/90 rounded-xl text-xs text-amber-950">
+                          <span className="font-extrabold uppercase tracking-wider text-[10px] text-amber-800 block mb-1">
+                            ✍️ Your Typed Slip Note:
+                          </span>
+                          <p className="font-semibold text-slate-900 leading-relaxed italic">
+                            "{item.typedNote}"
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="p-3 bg-rose-50/60 border border-rose-100 rounded-xl text-xs text-rose-950">
+                          <span className="font-extrabold uppercase tracking-wider text-[10px] text-rose-800 block mb-1">
+                            📌 Selected Slip: {cfg.label}
+                          </span>
+                          <p className="text-slate-700 leading-relaxed">
+                            {cfg.desc}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })
+              )}
+            </div>
+
+            {/* Footer */}
+            <div className="px-5 py-3 bg-slate-100/80 border-t border-slate-200 flex items-center justify-between">
+              <span className="text-xs text-slate-500 font-medium">
+                {revisedReviewKeys.size} of {reviewSillyMistakesList.length} marked revised
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowSillyRevisionModal(false)}
+                className="px-4 py-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition cursor-pointer"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

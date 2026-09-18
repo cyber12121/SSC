@@ -843,7 +843,46 @@ CRITICAL SYSTEM MANDATE FOR TOMMY:
     const sourceTag = q.sourceLabel
       ? `\nQuestion Origin: ${q.sourceLabel}`
       : (q.sourceType ? `\nQuestion Origin: ${q.sourceType === 'full_mock' ? 'Full Mock Test' : q.sourceType === 'sectional' ? 'Sectional Test' : 'Subject-Wise Error Bank'}` : '');
-    return `\n--- ACTIVE QUESTION REVIEW CONTEXT (Question #${q.qNum || q.questionNumber || targetQNum || '1'})${sourceTag} ---
+
+    const rcaTag = q.rcaTag || q.rca?.tag;
+    const rcaTagName = q.rcaTagName || q.rca?.tagName;
+    const sillyNote = q.sillyMistakeNote;
+    const rcaMode = q.rcaMode;
+
+    let rcaHeader = '';
+    let rcaMandate = '2. Provide a motivating, elite breakdown of why the correct option is right, why the candidate\'s choice failed, and a 30-second elimination shortcut.';
+
+    if (rcaTag || rcaMode === 'rca') {
+      const displayTag = rcaTag === 'A' ? 'S' : rcaTag;
+      const displayTagName = rcaTagName || (displayTag === 'C' ? 'Conceptual Gap' : displayTag === 'S' ? 'Silly Mistake' : displayTag === 'T' ? 'Time / Speed Issue' : displayTag === 'G' ? 'Wild Guess' : 'Root Cause Analysis');
+      rcaHeader = `\nRCA Mode: Active\nRCA Classification: [${displayTag || 'Unclassified'}] ${displayTagName}`;
+      if (sillyNote) {
+        rcaHeader += `\nCandidate Silly Mistake Note: "${sillyNote}"`;
+      }
+
+      if (displayTag === 'C') {
+        rcaMandate = `2. RCA MANDATE [CONCEPT GAP]: The candidate identified a core conceptual gap in this topic.
+   - Teach the underlying theorem, formula, or grammar rule from first principles.
+   - Explain why candidate's choice was a conceptual misunderstanding.
+   - Provide a foolproof 3-step solving blueprint and a 30-second shortcut.`;
+      } else if (displayTag === 'S') {
+        rcaMandate = `2. RCA MANDATE [SILLY MISTAKE]: The candidate already knew the concept but made a careless slip${sillyNote ? ` (recorded note: "${sillyNote}")` : ''}.
+   - Directly analyze the cognitive trap or deceptive wording in this question.
+   - Explain why candidate's choice looked tempting and why the slip occurred.
+   - Give a strict 5-second verification protocol before marking in the exam.`;
+      } else if (displayTag === 'T') {
+        rcaMandate = `2. RCA MANDATE [TIME / SPEED ISSUE]: The candidate struggled with time or solving speed.
+   - Skip long traditional derivations.
+   - Provide rapid topper techniques: unit digit, digital sum, ratio scaling, or option elimination.
+   - Show how to solve this in under 20-30 seconds flat.`;
+      } else if (displayTag === 'G') {
+        rcaMandate = `2. RCA MANDATE [WILD GUESS]: The candidate guessed without complete certainty.
+   - Teach how an SSC CGL topper eliminates 2-3 trap options using question constraints, extreme values, or option symmetry.
+   - Provide the complete solution and memory trick.`;
+      }
+    }
+
+    return `\n--- ACTIVE QUESTION REVIEW CONTEXT (Question #${q.qNum || q.questionNumber || targetQNum || '1'})${sourceTag}${rcaHeader} ---
 Topic: ${q.topic || 'General'}${q.subtopic ? ` → ${q.subtopic}` : ''}
 ${q.conceptTested ? `Concept Tested: ${q.conceptTested}\n` : ''}Question: ${q.question || q.questionText}
 Options: ${JSON.stringify(q.options || {})}
@@ -854,7 +893,7 @@ ${q.solution || 'No solution provided'}
 
 SYSTEM MANDATE FOR TOMMY:
 1. Clearly specify the origin of this question (Full Mock Test, Sectional Test, or Subject-Wise Practice) in your opening statement.
-2. Provide a motivating, elite breakdown of why the correct option is right, why the candidate's choice failed, and a 30-second elimination shortcut.
+${rcaMandate}
 `;
   }
 
@@ -1109,16 +1148,20 @@ export default async function handler(req: any, res: any) {
           const optStr = q.options ? Object.entries(q.options).map(([k, v]) => `${k.toUpperCase()}) ${v}`).join(' | ') : '';
           const userAns = q.userAnswer ? q.userAnswer.toUpperCase() : (q.status === 'unattempted' ? 'Skipped' : 'N/A');
           const correctAns = q.answer ? q.answer.toUpperCase() : (q.correctAnswer ? q.correctAnswer.toUpperCase() : 'Refer to solution');
-          const rcaTag = q.rca ? ` [RCA: ${q.rca.tagName || q.rca.tag}]` : '';
+          const rTag = q.rcaTag || q.rca?.tag;
+          const rTagName = q.rcaTagName || q.rca?.tagName;
+          const rcaTagStr = rTag ? ` [RCA: [${rTag === 'A' ? 'S' : rTag}] ${rTagName || ''}]` : '';
+          const sillyStr = q.sillyMistakeNote ? ` [Silly Note: "${q.sillyMistakeNote}"]` : '';
           const status = q.status ? ` [Status: ${q.status.toUpperCase()}]` : '';
           const sourceTag = q.sourceLabel ? ` [Source: ${q.sourceLabel}]` : (q.sourceType ? ` [Source: ${q.sourceType === 'full_mock' ? 'Full Mock Test' : q.sourceType === 'sectional' ? 'Sectional Test' : 'Subject-Wise Error Bank'}]` : '');
-          return `[Question #${num}]${sourceTag}${status}${rcaTag}\nQuestion: ${q.question}\nOptions: ${optStr}\nCandidate Choice: ${userAns} | Correct: ${correctAns}\nSolution: ${q.solution || 'See concept'}`;
+          return `[Question #${num}]${sourceTag}${status}${rcaTagStr}${sillyStr}\nQuestion: ${q.question}\nOptions: ${optStr}\nCandidate Choice: ${userAns} | Correct: ${correctAns}\nSolution: ${q.solution || 'See concept'}`;
         }).join('\n-----------------------------------------\n');
       }
       scopeContext += `\n=========================================\n`;
       scopeContext += `FOCUSED SCOPE RULES:
 - The candidate explicitly opened you to discuss this ${type}: "${title}".
 - SOURCE SPECIFICATION MANDATE: Notice whether these questions are from a Full Mock Test, a Sectional Test, or the Subject-Wise Error Bank. In your opening remark and advice, clearly mention this source context (e.g. "Looking at this Question from your Full Mock Test...", "In this Sectional Test...", or "In your Subject-Wise Error practice...").
+- ROOT CAUSE ANALYSIS (RCA) DIRECTIVE: If the scope or questions indicate RCA Mode ([C] Concept Gap, [S] Silly Mistake, [T] Time Issue, [G] Guess), tailor your diagnostic accordingly. For Silly Mistakes, analyze candidate notes and execution traps; for Concept Gaps, teach first-principles theory; for Time Issues, supply rapid shortcuts; for Guesses, teach topper elimination heuristics.
 - If they ask about questions, errors, shortcuts, or concepts from this ${type}, refer directly to the exact questions and details provided above.
 - If they ask general questions or change the topic, answer helpfully and clearly without hallucinating or forcing the test questions into the response.\n`;
     }

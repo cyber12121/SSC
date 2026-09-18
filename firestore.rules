@@ -32,23 +32,43 @@ service cloud.firestore {
       allow update, delete: if isAuthenticated() && resource.data.createdBy == request.auth.uid;
     }
 
-    // Results Collection
+    // Results Collection (Allows in-place updates for RCA classifications & silly mistake tags)
     match /results/{resultId} {
-      allow read, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
       allow create: if isAuthenticated() && isValidResult(request.resource.data);
     }
 
     // Bookmarks Collection
     match /bookmarks/{bookmarkId} {
-      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
-      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
-      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow read, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create, update: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
     }
 
-    // Deleted Questions Collection
+    // Users & SRS (Spaced Repetition / Anki Deck) Collection
+    match /users/{userId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId;
+
+      match /srs_cards/{cardId} {
+        allow read, write: if isAuthenticated() && request.auth.uid == userId;
+      }
+    }
+
+    // Deleted Questions Collection (Admin Only)
     match /deleted_questions/{id} {
       allow read: if isAuthenticated();
       allow create, delete: if isAuthenticated() && request.auth.token.email == 'cyberdevil0101@gmail.com';
+    }
+
+    // Mocks Collection
+    match /mocks/{mockId} {
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+    }
+
+    // Mock Mistakes Collection
+    match /mockMistakes/{mistakeId} {
+      allow read, update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
     }
 
   }
