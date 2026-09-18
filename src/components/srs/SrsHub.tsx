@@ -33,6 +33,8 @@ import { SrsCardConfirmModal } from './SrsCardConfirmModal';
 import { SrsManualCardModal } from './SrsManualCardModal';
 import { SrsAiCreatorModal } from './SrsAiCreatorModal';
 import { SrsPacingSettingsModal } from './SrsPacingSettingsModal';
+import { SrsChapterDecksSection } from './SrsChapterDecksSection';
+import { SrsQuestionRevisionStudio } from './SrsQuestionRevisionStudio';
 
 interface SrsHubProps {
   onNavigateHome: () => void;
@@ -43,8 +45,11 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
   const [cards, setCards] = useState<SRSCard[]>(() => getStoredSRSCards());
   const [activeView, setActiveView] = useState<'hub' | 'review' | 'explorer'>('hub');
   const [reviewSubjectFilter, setReviewSubjectFilter] = useState<string | 'all'>('all');
+  const [reviewChapterFilter, setReviewChapterFilter] = useState<string | 'all'>('all');
   const [reviewDeckType, setReviewDeckType] = useState<'all' | 'anki' | 'test_srs'>('all');
   const [cramAllOverride, setCramAllOverride] = useState(false);
+  const [explorerSubjectFilter, setExplorerSubjectFilter] = useState<string | 'all'>('all');
+  const [explorerChapterFilter, setExplorerChapterFilter] = useState<string | 'all'>('all');
 
   // Top Deck Mode: 'anki' (Concept Flashcards) vs 'test_srs' (Mock/Quiz Question Errors)
   const [deckMode, setDeckMode] = useState<'anki' | 'test_srs'>('anki');
@@ -86,31 +91,47 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
   const isPacedSession = dailyCap > 0 && dailyCap < 9999 && activeStats.dueToday > dailyCap;
 
   // Handle Review session initiation
-  const handleStartReview = (subject: string | 'all' = 'all', mode: 'all' | 'anki' | 'test_srs' = deckMode, cramAll: boolean = false) => {
+  const handleStartReview = (
+    subject: string | 'all' = 'all',
+    mode: 'all' | 'anki' | 'test_srs' = deckMode,
+    cramAll: boolean = false,
+    chapter: string | 'all' = 'all'
+  ) => {
     setCramAllOverride(cramAll);
     let candidateCards = cards;
     if (mode === 'anki') candidateCards = ankiCards;
     else if (mode === 'test_srs') candidateCards = testCards;
 
-    const dueCards = getDueSRSCards(candidateCards, subject);
+    const dueCards = getDueSRSCards(candidateCards, subject, undefined, chapter);
     if (dueCards.length === 0) {
       // If no cards strictly due today, let user review learning or available cards
-      const availableCards = subject === 'all' 
-        ? candidateCards.filter(c => c.status !== 'suspended').slice(0, 25)
-        : candidateCards.filter(c => c.status !== 'suspended' && matchesSubject(c.subject, subject)).slice(0, 25);
+      let availableCards = candidateCards.filter(c => c.status !== 'suspended');
+      if (subject !== 'all') {
+        availableCards = availableCards.filter(c => matchesSubject(c.subject, subject));
+      }
+      if (chapter !== 'all') {
+        const norm = chapter.toLowerCase().trim();
+        availableCards = availableCards.filter(c =>
+          (c.topic || '').toLowerCase().trim() === norm ||
+          (c.subtopic || '').toLowerCase().trim() === norm
+        );
+      }
+      const finalCandidates = availableCards.slice(0, 25);
 
-      if (availableCards.length === 0) {
+      if (finalCandidates.length === 0) {
         alert(mode === 'test_srs'
-          ? 'No test mistake questions in your revision queue yet. Take a mock test or click "Import Mock Mistakes" below!'
-          : 'No Anki cards available in this deck. Add cards with AI or import Ayush Vocab sets!');
+          ? (chapter !== 'all' ? `No test mistakes found in chapter "${chapter}".` : 'No test mistake questions in your revision queue yet. Take a mock test or click "Import Mock Mistakes" below!')
+          : (chapter !== 'all' ? `No cards found in chapter "${chapter}".` : 'No Anki cards available in this deck. Add cards with AI or import Ayush Vocab sets!'));
         return;
       }
       setReviewSubjectFilter(subject);
+      setReviewChapterFilter(chapter);
       setReviewDeckType(mode);
       setActiveView('review');
       return;
     }
     setReviewSubjectFilter(subject);
+    setReviewChapterFilter(chapter);
     setReviewDeckType(mode);
     setActiveView('review');
   };
@@ -277,19 +298,50 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
       ? srsSettings.dailyReviewCap
       : undefined;
 
-    const activeDueCards = getDueSRSCards(candidateCards, reviewSubjectFilter, limit);
-    const reviewCards = activeDueCards.length > 0 
-      ? activeDueCards 
-      : (reviewSubjectFilter === 'all' 
-          ? candidateCards.slice(0, 25) 
-          : candidateCards.filter(c => matchesSubject(c.subject, reviewSubjectFilter)).slice(0, 25));
+    const activeDueCards = getDueSRSCards(candidateCards, reviewSubjectFilter, limit, reviewChapterFilter);
+    let reviewCards = activeDueCards;
+    if (reviewCards.length === 0) {
+      let filtered = candidateCards.filter(c => c.status !== 'suspended');
+      if (reviewSubjectFilter !== 'all') {
+        filtered = filtered.filter(c => matchesSubject(c.subject, reviewSubjectFilter));
+      }
+      if (reviewChapterFilter !== 'all') {
+        const norm = reviewChapterFilter.toLowerCase().trim();
+        filtered = filtered.filter(c =>
+          (c.topic || '').toLowerCase().trim() === norm ||
+          (c.subtopic || '').toLowerCase().trim() === norm
+        );
+      }
+      reviewCards = filtered.slice(0, 25);
+    }
+
+    if (reviewDeckType === 'test_srs' || (reviewCards.length > 0 && reviewCards.every(isTestQuestionCard))) {
+      return (
+        <SrsQuestionRevisionStudio
+          cards={reviewCards}
+          initialTopic={reviewChapterFilter !== 'all' ? reviewChapterFilter : undefined}
+          onFinishSession={handleFinishReviewSession}
+          onExit={() => {
+            setCramAllOverride(false);
+            setReviewChapterFilter('all');
+            setActiveView('hub');
+          }}
+          onDeleteCurrentCard={(id) => {
+            deleteSRSCard(id);
+            setCards(getStoredSRSCards());
+          }}
+        />
+      );
+    }
 
     return (
       <SrsReviewStudio
         cards={reviewCards}
+        initialTopic={reviewChapterFilter !== 'all' ? reviewChapterFilter : undefined}
         onFinishSession={handleFinishReviewSession}
         onExit={() => {
           setCramAllOverride(false);
+          setReviewChapterFilter('all');
           setActiveView('hub');
         }}
         onDeleteCurrentCard={(id) => {
@@ -305,7 +357,13 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
     return (
       <SrsCardExplorer
         cards={cards}
-        onBackToHub={() => setActiveView('hub')}
+        initialSubjectFilter={explorerSubjectFilter !== 'all' ? explorerSubjectFilter : undefined}
+        initialChapterFilter={explorerChapterFilter !== 'all' ? explorerChapterFilter : undefined}
+        onBackToHub={() => {
+          setExplorerChapterFilter('all');
+          setExplorerSubjectFilter('all');
+          setActiveView('hub');
+        }}
         onAddNewCard={() => {
           setEditingCard(null);
           setManualModalOpen(true);
@@ -686,182 +744,25 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
         </div>
       </div>
 
-      {/* ── MODE 1: ANKI FLASHCARD DECKS ── */}
+      {/* ── MODE 1: ANKI FLASHCARD DECKS (CHAPTER-WISE) ── */}
       {deckMode === 'anki' && (
-        <div className="space-y-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-black text-slate-900">Anki Conceptual Decks</h3>
-              <p className="text-xs text-slate-500">Subject-wise flashcards with mnemonics, formulas, and shortcuts</p>
-            </div>
-            <button
-              onClick={() => handleStartReview('all', 'anki')}
-              className="text-xs font-bold text-purple-600 hover:text-purple-800 hover:underline"
-            >
-              Review All Anki Decks →
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* 1. English Vocab Deck */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-emerald-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 uppercase">
-                    English
-                  </span>
-                  {ankiStats.bySubject.english.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {ankiStats.bySubject.english.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">English Vocab</h4>
-                <p className="text-xs text-slate-500 mt-1">Synonyms, Antonyms, OWS, and Idioms with mnemonic associative hooks</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{ankiStats.bySubject.english.total}</strong> Cards
-                </div>
-                <button
-                  onClick={() => handleStartReview('english', 'anki')}
-                  className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Vocab
-                </button>
-              </div>
-            </div>
-
-            {/* 2. General Knowledge Deck */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-sky-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-200 uppercase">
-                    GK & GA
-                  </span>
-                  {ankiStats.bySubject.gk.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {ankiStats.bySubject.gk.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">General Awareness</h4>
-                <p className="text-xs text-slate-500 mt-1">Static GK, Classical Dance, History, Polity, and Science facts</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{ankiStats.bySubject.gk.total}</strong> Cards
-                </div>
-                <button
-                  onClick={() => handleStartReview('gk', 'anki')}
-                  className="px-3 py-1.5 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review GK
-                </button>
-              </div>
-            </div>
-
-            {/* 3. Mathematics Deck */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200 uppercase">
-                    Quant
-                  </span>
-                  {ankiStats.bySubject.mathematics.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {ankiStats.bySubject.mathematics.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">Quant Formulas & Tricks</h4>
-                <p className="text-xs text-slate-500 mt-1">Key formulas, arithmetic shortcuts, geometry theorems, & scratchpad</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{ankiStats.bySubject.mathematics.total}</strong> Cards
-                </div>
-                <button
-                  onClick={() => handleStartReview('mathematics', 'anki')}
-                  className="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Math
-                </button>
-              </div>
-            </div>
-
-            {/* 4. Reasoning Deck */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-purple-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200 uppercase">
-                    Reasoning
-                  </span>
-                  {ankiStats.bySubject.reasoning.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {ankiStats.bySubject.reasoning.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">Reasoning Patterns</h4>
-                <p className="text-xs text-slate-500 mt-1">Series rules, coding-decoding patterns, matrices, & syllogism rules</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{ankiStats.bySubject.reasoning.total}</strong> Cards
-                </div>
-                <button
-                  onClick={() => handleStartReview('reasoning', 'anki')}
-                  className="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Reasoning
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Batch Import Quick Accelerators for Anki */}
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center space-x-2">
-                <Download className="w-4 h-4 text-slate-600" />
-                <h4 className="text-xs font-black text-slate-800 uppercase tracking-wider">Quick Anki Starters</h4>
-              </div>
-              <span className="text-[11px] text-slate-500">Preview & confirm before adding</span>
-            </div>
-
-            <div className="flex items-center space-x-3 flex-wrap gap-y-2">
-              <button
-                onClick={handleBatchImportAyushVocab}
-                className="px-3.5 py-2 bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Load Ayush Vocab (Synonyms Set 1)</span>
-              </button>
-              <button
-                onClick={handleBatchImportStaticGk}
-                className="px-3.5 py-2 bg-white hover:bg-sky-50 text-sky-800 border border-sky-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <Zap className="w-3.5 h-3.5 text-sky-600" />
-                <span>Load Static GK (Classical Dance)</span>
-              </button>
-              <button
-                onClick={() => setAiCreatorOpen(true)}
-                className="px-3.5 py-2 bg-white hover:bg-purple-50 text-purple-800 border border-purple-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-                <span>Generate Custom Deck with AI (Up to 50 Cards)</span>
-              </button>
-            </div>
-          </div>
-        </div>
+        <SrsChapterDecksSection
+          cards={ankiCards}
+          deckMode="anki"
+          onStartReviewChapter={(subject, chapter) => handleStartReview(subject, 'anki', false, chapter)}
+          onStartReviewSubject={(subject) => handleStartReview(subject, 'anki', false, 'all')}
+          onOpenExplorerChapter={(subject, chapter) => {
+            setExplorerSubjectFilter(subject);
+            setExplorerChapterFilter(chapter);
+            setActiveView('explorer');
+          }}
+          onOpenAiCreator={() => setAiCreatorOpen(true)}
+          onBatchImportAyush={handleBatchImportAyushVocab}
+          onBatchImportStaticGk={handleBatchImportStaticGk}
+        />
       )}
 
-      {/* ── MODE 2: SRS TEST QUESTION REVISION ── */}
+      {/* ── MODE 2: SRS TEST QUESTION REVISION (CHAPTER-WISE) ── */}
       {deckMode === 'test_srs' && (
         <div className="space-y-6">
           <div className="flex items-center justify-between">
@@ -923,170 +824,19 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
             </div>
           </div>
 
-          {/* 4 Subject Error Decks Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* English Mistakes */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-emerald-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 uppercase">
-                    English Errors
-                  </span>
-                  {testStats.bySubject.english.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {testStats.bySubject.english.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">English Mock Questions</h4>
-                <p className="text-xs text-slate-500 mt-1">Grammar rules, spotting errors, cloze tests, and reading questions</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{testStats.bySubject.english.total}</strong> Mistake Qs
-                </div>
-                <button
-                  onClick={() => handleStartReview('english', 'test_srs')}
-                  className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Errors
-                </button>
-              </div>
-            </div>
-
-            {/* General Awareness Mistakes */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-sky-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-200 uppercase">
-                    GA Errors
-                  </span>
-                  {testStats.bySubject.gk.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {testStats.bySubject.gk.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">General Awareness Qs</h4>
-                <p className="text-xs text-slate-500 mt-1">Facts, dates, articles, and scientific terms missed in mock tests</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{testStats.bySubject.gk.total}</strong> Mistake Qs
-                </div>
-                <button
-                  onClick={() => handleStartReview('gk', 'test_srs')}
-                  className="px-3 py-1.5 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Errors
-                </button>
-              </div>
-            </div>
-
-            {/* Quant Mistakes */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200 uppercase">
-                    Quant Errors
-                  </span>
-                  {testStats.bySubject.mathematics.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {testStats.bySubject.mathematics.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">Quant Questions</h4>
-                <p className="text-xs text-slate-500 mt-1">Calculation blunders, trap options, geometry, and arithmetic word problems</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{testStats.bySubject.mathematics.total}</strong> Mistake Qs
-                </div>
-                <button
-                  onClick={() => handleStartReview('mathematics', 'test_srs')}
-                  className="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Errors
-                </button>
-              </div>
-            </div>
-
-            {/* Reasoning Mistakes */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:border-purple-300 transition-all flex flex-col justify-between space-y-4">
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200 uppercase">
-                    Reasoning Errors
-                  </span>
-                  {testStats.bySubject.reasoning.due > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800">
-                      {testStats.bySubject.reasoning.due} Due
-                    </span>
-                  )}
-                </div>
-                <h4 className="font-black text-slate-900 text-base">Reasoning Questions</h4>
-                <p className="text-xs text-slate-500 mt-1">Number series traps, tricky analogies, statement conclusions, & seating puzzles</p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <div className="text-xs text-slate-500 font-medium">
-                  <strong>{testStats.bySubject.reasoning.total}</strong> Mistake Qs
-                </div>
-                <button
-                  onClick={() => handleStartReview('reasoning', 'test_srs')}
-                  className="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                >
-                  Review Errors
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Quick Mock Import Actions */}
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center space-x-2">
-                <Download className="w-4 h-4 text-slate-600" />
-                <h4 className="text-xs font-black text-slate-800 uppercase tracking-wider">Import Subject Mistakes into SRS</h4>
-              </div>
-              <span className="text-[11px] text-slate-500">Inspect & confirm before adding</span>
-            </div>
-
-            <div className="flex items-center space-x-3 flex-wrap gap-y-2">
-              <button
-                onClick={() => handleBatchImportMockErrors('English')}
-                className="px-3.5 py-2 bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Import English Mock Errors</span>
-              </button>
-              <button
-                onClick={() => handleBatchImportMockErrors('General Awareness')}
-                className="px-3.5 py-2 bg-white hover:bg-sky-50 text-sky-800 border border-sky-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <Zap className="w-3.5 h-3.5 text-sky-600" />
-                <span>Import GA Mock Errors</span>
-              </button>
-              <button
-                onClick={() => handleBatchImportMockErrors('Mathematics')}
-                className="px-3.5 py-2 bg-white hover:bg-amber-50 text-amber-800 border border-amber-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <Target className="w-3.5 h-3.5 text-amber-600" />
-                <span>Import Quant Mock Errors</span>
-              </button>
-              <button
-                onClick={() => handleBatchImportMockErrors('Reasoning')}
-                className="px-3.5 py-2 bg-white hover:bg-purple-50 text-purple-800 border border-purple-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
-              >
-                <Brain className="w-3.5 h-3.5 text-purple-600" />
-                <span>Import Reasoning Mock Errors</span>
-              </button>
-            </div>
-          </div>
+          {/* Chapter-wise decks section for SRS Test Revision */}
+          <SrsChapterDecksSection
+            cards={testCards}
+            deckMode="test_srs"
+            onStartReviewChapter={(subject, chapter) => handleStartReview(subject, 'test_srs', false, chapter)}
+            onStartReviewSubject={(subject) => handleStartReview(subject, 'test_srs', false, 'all')}
+            onOpenExplorerChapter={(subject, chapter) => {
+              setExplorerSubjectFilter(subject);
+              setExplorerChapterFilter(chapter);
+              setActiveView('explorer');
+            }}
+            onBatchImportMockErrors={handleBatchImportMockErrors}
+          />
         </div>
       )}
     </div>

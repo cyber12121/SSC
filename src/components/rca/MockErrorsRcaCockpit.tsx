@@ -12,6 +12,7 @@ import {
   ChevronRight,
   Info,
   BookOpen,
+  Flame
 } from 'lucide-react';
 import { Question, RCATagType } from '../../types';
 import { MockChapterModalData, ModalFilterType } from '../modals/MockChapterErrorsModal';
@@ -31,8 +32,8 @@ interface MockErrorsRcaCockpitProps {
   mockTestTypeFilter: TestScopeFilter;
   setMockTestTypeFilter: (filter: TestScopeFilter) => void;
   mockScopeCounts: { all: number; full: number; sectional: number };
-  mockViewMode: 'chapters' | 'buckets' | 'rca';
-  setMockViewMode: (mode: 'chapters' | 'buckets' | 'rca') => void;
+  mockViewMode: 'chapters' | 'buckets' | 'rca' | 'silly';
+  setMockViewMode: (mode: 'chapters' | 'buckets' | 'rca' | 'silly') => void;
   rcaSelectedFilter: 'all' | RCATagType | 'unclassified';
   setRcaSelectedFilter: (filter: 'all' | RCATagType | 'unclassified') => void;
   rcaSearchQuery: string;
@@ -277,6 +278,19 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
             >
               <Target className="w-3.5 h-3.5 text-purple-600" />
               RCA
+            </button>
+            <button
+              type="button"
+              onClick={() => setMockViewMode('silly')}
+              className={`inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold rounded-lg shadow-xs border cursor-pointer ${
+                mockViewMode === 'silly'
+                  ? 'text-rose-700 bg-rose-50 border-rose-200 font-bold'
+                  : 'text-slate-600 bg-white border-slate-200 hover:bg-slate-50'
+              }`}
+              title="View all silly mistakes aggregated subject-wise"
+            >
+              <Flame className="w-3.5 h-3.5 text-rose-600" />
+              Silly Log
             </button>
           </div>
 
@@ -580,9 +594,22 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                 </span>
                 <span className="text-base sm:text-lg font-black tracking-tight text-slate-900">{sCount}</span>
               </div>
-              <p className="mt-1 text-[10px] text-slate-400 truncate leading-tight">
-                Calculation slip or misread
-              </p>
+              <div className="flex items-center justify-between mt-1">
+                <p className="text-[10px] text-slate-400 truncate leading-tight">
+                  Calculation slip or misread
+                </p>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMockViewMode('silly');
+                  }}
+                  className="text-[9px] font-bold text-rose-600 hover:text-rose-800 hover:underline cursor-pointer shrink-0 ml-1"
+                  title="View all silly mistakes log"
+                >
+                  Log →
+                </button>
+              </div>
             </div>
             <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between">
               <span className="text-[10px] font-semibold text-slate-400">{sCount} Qs</span>

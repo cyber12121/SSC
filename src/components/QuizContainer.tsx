@@ -411,19 +411,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     }
   };
 
-  const handleMarkAndNext = () => {
+  const handleToggleMarkForReview = () => {
     setMarkedForReview(prev => {
       const n = new Set(prev);
-      n.add(currentIdx);
+      if (n.has(currentIdx)) {
+        n.delete(currentIdx);
+      } else {
+        n.add(currentIdx);
+      }
       markedRef.current = n;
       return n;
     });
-    if (currentIdx < totalQuestions - 1) {
-      jumpToQuestion(currentIdx + 1);
-    } else {
-      recordTime();
-      setShowSubmitModal(true);
-    }
   };
 
   const handleSectionClick = (idx: number) => {
@@ -1088,11 +1086,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               <span>Previous</span>
             </button>
             <button
-              onClick={handleMarkAndNext}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
-              title="Mark for Review and go to next"
+              onClick={handleToggleMarkForReview}
+              className={`${
+                markedForReview.has(currentIdx)
+                  ? 'bg-[#7e57c2] hover:bg-[#673ab7] active:bg-[#512da8]'
+                  : 'bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a]'
+              } text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap`}
+              title={markedForReview.has(currentIdx) ? "Marked for Review (Click to unmark)" : "Mark for Review (Remain on question)"}
             >
-              Mark for Review
+              {markedForReview.has(currentIdx) ? 'Marked for Review' : 'Mark for Review'}
             </button>
             <button
               onClick={handleSaveAndNext}
@@ -1488,7 +1490,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               <p className="font-bold text-gray-900 text-sm">1. Navigating to a Question:</p>
               <p>• Click on the question number in the Question Palette to go to that question directly.</p>
               <p>• Click on <b>Save &amp; Next</b> to save your answer for the current question and then go to the next question.</p>
-              <p>• Click on <b>Mark for Review</b> to save your answer, mark it for review, and go to the next question.</p>
+              <p>• Click on <b>Mark for Review</b> to mark the question for review while remaining on the question.</p>
               <p className="font-bold text-gray-900 text-sm mt-3">2. Answering a Question:</p>
               <p>• To select your answer, click on the option row or radio button.</p>
               <p>• To deselect your chosen answer, click on the <b>Clear Selected Option</b> button.</p>

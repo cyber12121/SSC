@@ -20,6 +20,8 @@ import { SrsFormatGuideModal } from './SrsFormatGuideModal';
 
 interface SrsCardExplorerProps {
   cards: SRSCard[];
+  initialSubjectFilter?: string;
+  initialChapterFilter?: string;
   onBackToHub: () => void;
   onAddNewCard: () => void;
   onOpenAiCreator: () => void;
@@ -32,6 +34,8 @@ interface SrsCardExplorerProps {
 
 export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
   cards,
+  initialSubjectFilter,
+  initialChapterFilter,
   onBackToHub,
   onAddNewCard,
   onOpenAiCreator,
@@ -43,7 +47,8 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [deckTypeFilter, setDeckTypeFilter] = useState<'all' | 'anki' | 'test_srs'>('all');
-  const [subjectFilter, setSubjectFilter] = useState<string>('all');
+  const [subjectFilter, setSubjectFilter] = useState<string>(initialSubjectFilter || 'all');
+  const [chapterFilter, setChapterFilter] = useState<string>(initialChapterFilter || 'all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
@@ -71,6 +76,16 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
 
   const todayStr = formatDayString();
 
+  const availableChapters = useMemo(() => {
+    const set = new Set<string>();
+    cards.forEach(c => {
+      if (subjectFilter !== 'all' && !matchesSubject(c.subject, subjectFilter)) return;
+      if (c.topic && c.topic !== 'General' && c.topic !== 'All Topics') set.add(c.topic.trim());
+      if (c.subtopic && c.subtopic !== 'General') set.add(c.subtopic.trim());
+    });
+    return Array.from(set).sort();
+  }, [cards, subjectFilter]);
+
   const filteredCards = useMemo(() => {
     return cards.filter(card => {
       // Deck Type Filter (Anki Flashcards vs SRS Test Revision)
@@ -92,6 +107,14 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
         return false;
       }
 
+      // Chapter / Topic Filter
+      if (chapterFilter !== 'all') {
+        const normChapter = chapterFilter.toLowerCase().trim();
+        const cardTopic = (card.topic || '').toLowerCase().trim();
+        const cardSubtopic = (card.subtopic || '').toLowerCase().trim();
+        if (cardTopic !== normChapter && cardSubtopic !== normChapter) return false;
+      }
+
       // Status Filter
       if (statusFilter !== 'all') {
         const isDue = card.dueDate <= todayStr;
@@ -104,7 +127,7 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
 
       return true;
     });
-  }, [cards, deckTypeFilter, searchQuery, subjectFilter, statusFilter, todayStr]);
+  }, [cards, deckTypeFilter, searchQuery, subjectFilter, chapterFilter, statusFilter, todayStr]);
 
   const toggleSelectAll = () => {
     if (selectedIds.size === filteredCards.length) {
@@ -334,6 +357,38 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
             ))}
           </div>
         </div>
+
+        {/* Chapter / Topic Filter Dropdown */}
+        {availableChapters.length > 0 && (
+          <div className="flex items-center gap-2 pt-2 border-t border-slate-100 text-xs">
+            <span className="font-bold text-slate-500 flex items-center gap-1.5 shrink-0">
+              <Layers className="w-3.5 h-3.5 text-indigo-500" />
+              <span>Chapter:</span>
+            </span>
+            <div className="flex items-center gap-2 flex-wrap">
+              <select
+                value={chapterFilter}
+                onChange={e => setChapterFilter(e.target.value)}
+                aria-label="Filter by Chapter"
+                className="px-2.5 py-1 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 max-w-[280px]"
+              >
+                <option value="all">All Chapters ({availableChapters.length})</option>
+                {availableChapters.map(chap => (
+                  <option key={chap} value={chap}>{chap}</option>
+                ))}
+              </select>
+              {chapterFilter !== 'all' && (
+                <button
+                  type="button"
+                  onClick={() => setChapterFilter('all')}
+                  className="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 hover:underline cursor-pointer"
+                >
+                  Clear ({chapterFilter})
+                </button>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Status filters */}
         <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs text-slate-600">

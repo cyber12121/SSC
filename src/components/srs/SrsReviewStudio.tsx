@@ -18,6 +18,7 @@ import {
 
 interface SrsReviewStudioProps {
   cards: SRSCard[];
+  initialTopic?: string;
   onFinishSession: (updatedCards: SRSCard[]) => void;
   onExit: () => void;
   onDeleteCurrentCard: (cardId: string) => void;
@@ -25,6 +26,7 @@ interface SrsReviewStudioProps {
 
 export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
   cards: initialReviewCards,
+  initialTopic = 'all',
   onFinishSession,
   onExit,
   onDeleteCurrentCard
@@ -32,7 +34,17 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
   const settings = useMemo(() => getSRSSettings(), []);
   const sprintBatchSize = Math.max(5, settings.sprintBatchSize || 10);
 
-  const [queue, setQueue] = useState<SRSCard[]>(initialReviewCards);
+  const [topicFilter, setTopicFilter] = useState<string>(initialTopic);
+  const [queue, setQueue] = useState<SRSCard[]>(() => {
+    if (initialTopic && initialTopic !== 'all') {
+      const filtered = initialReviewCards.filter(c =>
+        (c.topic && c.topic.trim().toLowerCase() === initialTopic.trim().toLowerCase()) ||
+        (c.subtopic && c.subtopic.trim().toLowerCase() === initialTopic.trim().toLowerCase())
+      );
+      return filtered.length > 0 ? filtered : initialReviewCards;
+    }
+    return initialReviewCards;
+  });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [, setSelectedQuizOption] = useState<string | null>(null);
@@ -41,7 +53,6 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
   const [scratchpadOpen, setScratchpadOpen] = useState(false);
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [topicFilter, setTopicFilter] = useState<string>('all');
 
   // Anti-Overwhelm & Cognitive Burnout Prevention States
   const [isZenMode, setIsZenMode] = useState<boolean>(settings.zenModeDefault || false);

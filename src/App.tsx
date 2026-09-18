@@ -45,6 +45,7 @@ import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap } from './utils/
 import { RCATagType, RCAClassification } from './types';
 import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
+import { SillyMistakesAggregateView } from './components/rca/SillyMistakesAggregateView';
 import { ThemeSelector } from './components/ThemeSelector';
 import { getInitialTheme, setAppliedTheme } from './utils/theme';
 import { getDailyThought } from './utils/dailyThoughts';
@@ -224,17 +225,17 @@ export default function App() {
   });
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
 
-  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA)
-  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca'>(() => {
+  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA) vs 'silly' (Aggregate Silly Mistakes)
+  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca' | 'silly'>(() => {
     try {
       const saved = localStorage.getItem('mockViewMode');
-      return (saved === 'buckets' || saved === 'rca') ? saved : 'chapters';
+      return (saved === 'buckets' || saved === 'rca' || saved === 'silly') ? saved : 'chapters';
     } catch {
       return 'chapters';
     }
   });
 
-  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca') => {
+  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca' | 'silly') => {
     setMockViewMode(mode);
     try { localStorage.setItem('mockViewMode', mode); } catch { }
   };
@@ -2985,6 +2986,17 @@ export default function App() {
                               <Target className="w-3.5 h-3.5 text-purple-600" />
                               <span>RCA</span>
                             </button>
+                            <button
+                              onClick={() => setMockViewModePersisted('silly')}
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockViewMode === 'silly'
+                                  ? 'bg-white text-rose-700 shadow-xs font-bold'
+                                  : 'text-slate-500 hover:text-rose-700'
+                                }`}
+                              title="Aggregate Silly Mistakes Hub (subject-wise)"
+                            >
+                              <Flame className="w-3.5 h-3.5 text-rose-600" />
+                              <span>Silly Log</span>
+                            </button>
                           </div>
 
                           {/* Start All Button */}
@@ -3064,6 +3076,38 @@ export default function App() {
                             Show Combined Errors ({mockScopeCounts.all})
                           </button>
                         </div>
+                      ) : mockViewMode === 'silly' ? (
+                        <SillyMistakesAggregateView
+                          subjectRcaData={aggregatedMockErrorsData.subjectRcaData}
+                          selectedSubject={selectedSubject}
+                          onSelectSubject={(sub) => {
+                            if (sub !== 'all') setSelectedSubject(sub);
+                          }}
+                          onStartPractice={(title, qs) => {
+                            if (qs.length === 0) return;
+                            if (qs.length > 25) {
+                              setSetPickerModal({
+                                title,
+                                subtitle: `${qs.length} silly mistake questions`,
+                                subject: selectedSubject || 'Mathematics',
+                                questions: qs
+                              });
+                              return;
+                            }
+                            const virtualChapter: Chapter = {
+                              chapter_num: 0,
+                              chapter_title: title,
+                              subject: selectedSubject || 'Mathematics',
+                              subject_id: (selectedSubject || 'mathematics').toLowerCase().replace(/\s+/g, '_'),
+                              questions: qs.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+                              section: 'mockErrors',
+                              is_test: true
+                            };
+                            startQuiz(virtualChapter);
+                          }}
+                          onBack={() => setMockViewModePersisted('rca')}
+                          language={language}
+                        />
                       ) : mockViewMode === 'chapters' || mockViewMode === 'rca' ? (
                         /* Minimalist Mock Errors Cockpit (Stitch Design) - Supports Chapters and RCA */
                         <MockErrorsRcaCockpit

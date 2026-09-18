@@ -467,6 +467,17 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                             Unclassified
                           </span>
                         )}
+
+                        {/* Exact Silly Mistake Recorded Tag */}
+                        {(qRca?.tag === 'S' || (qRca?.tag as any) === 'A') && (qRca?.sillyMistakeNote || (q as any).sillyMistakeNote) && (
+                          <span 
+                            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg text-[10px] font-bold bg-rose-600 text-white shadow-xs max-w-xs truncate" 
+                            title={`Silly Mistake: ${qRca?.sillyMistakeNote || (q as any).sillyMistakeNote}`}
+                          >
+                            <span>📝</span>
+                            <span className="truncate">{qRca?.sillyMistakeNote || (q as any).sillyMistakeNote}</span>
+                          </span>
+                        )}
                       </div>
                     </div>
 

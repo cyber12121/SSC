@@ -341,11 +341,13 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       tags: {
         ...(q.tags || {}),
         topic,
-        subtopic: canonicalSubtopic
+        subtopic: canonicalSubtopic,
+        ...(qRca?.sillyMistakeNote ? { sillyMistake: qRca.sillyMistakeNote } : {})
       },
       errorType,
       rca: qRca,
       rcaClassification: qRca,
+      sillyMistakeNote: qRca?.sillyMistakeNote || q.sillyMistakeNote || (q.rca as any)?.sillyMistakeNote || undefined,
       sourceType,
       sourceLabel,
       testName: rawTestName || undefined,

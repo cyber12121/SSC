@@ -500,8 +500,22 @@ export function isTestQuestionCard(card: Partial<SRSCard>): boolean {
     card.source === 'mock_error' ||
     card.source === 'speed_trap' ||
     Boolean(card.questionRef) ||
-    Boolean(card.userPreviousAnswer)
+    Boolean(card.userPreviousAnswer) ||
+    Boolean(card.options && Object.keys(card.options).length > 0)
   );
+}
+
+export function getCardCorrectAnswer(card: Partial<SRSCard>): string {
+  if (card.answer) return String(card.answer).toLowerCase().trim();
+  if (card.questionRef?.answer) return String(card.questionRef.answer).toLowerCase().trim();
+
+  // Try to parse from card.back if string
+  if (card.back) {
+    const match = card.back.match(/(?:correct\s*answer|answer)\s*:\s*(?:\(?option\s*)?\(?([a-d])\)?/i);
+    if (match) return match[1].toLowerCase();
+  }
+
+  return '';
 }
 
 export function isAnkiFlashcard(card: Partial<SRSCard>): boolean {
@@ -568,7 +582,95 @@ export function triageOverdueBacklog(cards: SRSCard[], daysToSpread = 5): SRSCar
 
 // ── Query & Statistics Helpers ──
 
-export function getDueSRSCards(cards: SRSCard[], subjectFilter: string | 'all' = 'all', limit?: number): SRSCard[] {
+export interface ChapterDeckSummary {
+  chapterName: string;
+  subject: string;
+  totalCards: number;
+  dueToday: number;
+  mastered: number;
+  learning: number;
+}
+
+export interface SubjectDeckGroup {
+  subject: 'English' | 'General Awareness' | 'Mathematics' | 'Reasoning';
+  displayName: string;
+  totalCards: number;
+  dueToday: number;
+  mastered: number;
+  chapters: ChapterDeckSummary[];
+}
+
+export function computeSubjectChapterGroups(cards: SRSCard[]): SubjectDeckGroup[] {
+  const today = formatDayString();
+  const subjects: Array<{ key: 'English' | 'General Awareness' | 'Mathematics' | 'Reasoning'; label: string }> = [
+    { key: 'English', label: 'English Vocab' },
+    { key: 'General Awareness', label: 'General Knowledge & GA' },
+    { key: 'Mathematics', label: 'Quantitative Aptitude (Math)' },
+    { key: 'Reasoning', label: 'General Intelligence & Reasoning' }
+  ];
+
+  return subjects.map(sub => {
+    const subCards = cards.filter(c => matchesSubject(c.subject, sub.key));
+    const chapterMap = new Map<string, SRSCard[]>();
+
+    subCards.forEach(c => {
+      const rawName = (c.topic || c.subtopic || 'General Topics').trim();
+      const chapterName = rawName || 'General Topics';
+      const existing = chapterMap.get(chapterName) || [];
+      existing.push(c);
+      chapterMap.set(chapterName, existing);
+    });
+
+    const chapters: ChapterDeckSummary[] = Array.from(chapterMap.entries()).map(([chapterName, chCards]) => {
+      let dueToday = 0;
+      let mastered = 0;
+      let learning = 0;
+
+      chCards.forEach(c => {
+        const isDue = c.status !== 'suspended' && (!c.coolOffUntil || c.coolOffUntil <= today) && c.dueDate <= today;
+        const isMastered = c.status === 'mastered' || c.intervalDays >= 45;
+        if (isDue) dueToday++;
+        if (isMastered) mastered++;
+        else if (c.stage <= 1) learning++;
+      });
+
+      return {
+        chapterName,
+        subject: sub.key,
+        totalCards: chCards.length,
+        dueToday,
+        mastered,
+        learning
+      };
+    }).sort((a, b) => {
+      if (b.dueToday !== a.dueToday) return b.dueToday - a.dueToday;
+      return b.totalCards - a.totalCards;
+    });
+
+    let totalDue = 0;
+    let totalMastered = 0;
+    subCards.forEach(c => {
+      if (c.status !== 'suspended' && (!c.coolOffUntil || c.coolOffUntil <= today) && c.dueDate <= today) totalDue++;
+      if (c.status === 'mastered' || c.intervalDays >= 45) totalMastered++;
+    });
+
+    return {
+      subject: sub.key,
+      displayName: sub.label,
+      totalCards: subCards.length,
+      dueToday: totalDue,
+      mastered: totalMastered,
+      chapters
+    };
+  });
+}
+
+export function getDueSRSCards(
+  cards: SRSCard[],
+  subjectFilter: string | 'all' = 'all',
+  limit?: number,
+  chapterFilter: string | 'all' = 'all'
+): SRSCard[] {
   const today = formatDayString();
   const due = cards.filter(card => {
     if (card.status === 'suspended') return false;
@@ -576,6 +678,10 @@ export function getDueSRSCards(cards: SRSCard[], subjectFilter: string | 'all' =
     if (card.coolOffUntil && card.coolOffUntil > today) return false;
     if (subjectFilter !== 'all' && !matchesSubject(card.subject, subjectFilter)) {
       return false;
+    }
+    if (chapterFilter !== 'all') {
+      const cardChap = (card.topic || card.subtopic || '').trim();
+      if (cardChap !== chapterFilter) return false;
     }
     return card.dueDate <= today;
   });
