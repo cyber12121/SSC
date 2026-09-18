@@ -144,24 +144,30 @@ export const SpeedMathDrill: React.FC<Props> = ({
     }
   }, [isDrilling, isFinished, problem, isFullscreen]);
 
+  const endTimeRef = useRef<number>(0);
+
   // Timer countdown
   useEffect(() => {
-    let timer: any;
-    if (isDrilling && timeRemaining > 0) {
-      timer = setInterval(() => {
-        setTimeRemaining((prev) => {
-          if (prev <= 1) {
-            playAudioTone('complete');
-            setIsDrilling(false);
-            setIsFinished(true);
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
+    if (!isDrilling || isFinished) return;
+
+    if (endTimeRef.current <= Date.now()) {
+      endTimeRef.current = Date.now() + timeRemaining * 1000;
     }
+
+    const timer = setInterval(() => {
+      const remaining = Math.max(0, Math.ceil((endTimeRef.current - Date.now()) / 1000));
+      setTimeRemaining(remaining);
+
+      if (remaining <= 0) {
+        clearInterval(timer);
+        playAudioTone('complete');
+        setIsDrilling(false);
+        setIsFinished(true);
+      }
+    }, 250);
+
     return () => clearInterval(timer);
-  }, [isDrilling, timeRemaining, playAudioTone]);
+  }, [isDrilling, isFinished, playAudioTone]);
 
   // Completion notification
   useEffect(() => {
@@ -179,6 +185,7 @@ export const SpeedMathDrill: React.FC<Props> = ({
   const startDrill = (duration = selectedDuration) => {
     setSelectedDuration(duration);
     setTimeRemaining(duration);
+    endTimeRef.current = Date.now() + duration * 1000;
     setSolvedCount(0);
     setWrongCount(0);
     setIsFinished(false);

@@ -48,8 +48,28 @@ export async function loadAllBundledMockQuestions(): Promise<any[]> {
   if (bundledPromise) return bundledPromise;
 
   bundledPromise = (async () => {
-    const all: any[] = [];
     const deletedIds = getDeletedMockIds();
+
+    // 1. Fast path: single network request from backend cache (~20ms)
+    try {
+      const res = await fetch('/api/bundled-mock-questions');
+      if (res.ok) {
+        const list = await res.json();
+        if (Array.isArray(list) && list.length > 0) {
+          const filtered = list.filter((q: any) => {
+            const mId = q.mockId || q.testId;
+            return !mId || !deletedIds.has(mId);
+          });
+          cachedBundledQuestions = filtered;
+          return filtered;
+        }
+      }
+    } catch (e) {
+      // Fall through to dynamic module loader
+    }
+
+    // 2. Fallback path: dynamic client-side imports
+    const all: any[] = [];
     for (const [path, loader] of Object.entries(mockQuestionModules)) {
       try {
         const mod: any = await (loader as () => Promise<any>)();

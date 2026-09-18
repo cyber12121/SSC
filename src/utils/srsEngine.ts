@@ -33,7 +33,13 @@ export const DEFAULT_SRS_SETTINGS: SRSSettings = {
   showConfirmationBeforeAutoEnroll: true,
   maxNewCardsPerDay: 30,
   maxReviewCardsPerDay: 100,
-  defaultReviewMode: 'flashcard'
+  defaultReviewMode: 'flashcard',
+  // Anti-Overwhelm & Cognitive Burnout Prevention defaults
+  dailyReviewCap: 30,
+  sprintBatchSize: 10,
+  leechThreshold: 4,
+  autoCoolOffLeeches: true,
+  zenModeDefault: false
 };
 
 // ── In-Memory & Local Storage Management ──
@@ -126,6 +132,7 @@ export function calculateNextReview(card: SRSCard, grade: SRSGrade, timeSpentSec
 
   const dueDate = addDaysToDate(today, interval);
   const status = interval >= 45 ? 'mastered' : stage >= 2 ? 'review' : 'learning';
+  const isLeech = Boolean(card.isLeech || lapses >= 4);
 
   const historyItem: ReviewHistoryItem = {
     date: new Date().toISOString(),
@@ -142,6 +149,7 @@ export function calculateNextReview(card: SRSCard, grade: SRSGrade, timeSpentSec
     easeFactor: Math.round(ease * 100) / 100,
     repetitions,
     lapses,
+    isLeech,
     dueDate,
     lastReviewedAt: new Date().toISOString(),
     status,
@@ -317,11 +325,34 @@ export function detectQuestionSubjectType(rawSubject: string, rawSection = ''): 
   return { subject: 'General Awareness', type: 'gk' };
 }
 
+export function parseTimeSeconds(raw: string | number | undefined | null): number {
+  if (typeof raw === 'number') return raw;
+  if (!raw) return 0;
+  const str = String(raw).trim();
+  if (str.includes(':')) {
+    const parts = str.split(':').map(p => parseInt(p, 10) || 0);
+    if (parts.length === 2) return parts[0] * 60 + parts[1];
+    if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+  }
+  const numeric = parseInt(str.replace(/[^0-9]/g, ''), 10);
+  return isNaN(numeric) ? 0 : numeric;
+}
+
+export function getDefaultSubjectAvgTime(subject: string = ''): number {
+  const s = subject.toLowerCase();
+  if (s.includes('eng') || s.includes('vocab')) return 25;
+  if (s.includes('gk') || s.includes('aware') || s.includes('gs')) return 20;
+  if (s.includes('math') || s.includes('quant')) return 60;
+  if (s.includes('reason')) return 45;
+  return 35;
+}
+
 export function convertQuestionToSRSCardCandidate(
   q: Question,
-  source: 'quiz_wrong' | 'quiz_unattempted' | 'mock_error' | 'bookmark',
+  source: 'quiz_wrong' | 'quiz_unattempted' | 'mock_error' | 'bookmark' | 'speed_trap',
   sourceTitle = '',
-  userChosenOption = ''
+  userChosenOption = '',
+  timeMetrics?: { userTime?: number; avgTime?: number }
 ): SRSCard {
   const { subject, type } = detectQuestionSubjectType(q.subject || '', q.section || '');
   const topic = q.topic || q.tags?.topic || (type === 'vocab' ? 'Vocabulary' : subject);
@@ -343,7 +374,13 @@ export function convertQuestionToSRSCardCandidate(
   }
 
   const conceptTested = q.conceptTested || q.tags?.conceptTested;
-  const trapAlert = userChosenOption ? `You selected option (${userChosenOption.toUpperCase()}), but correct answer is (${(q.answer || '').toUpperCase()}).` : undefined;
+  
+  let trapAlert: string | undefined;
+  if (source === 'speed_trap' && timeMetrics?.userTime && timeMetrics?.avgTime) {
+    trapAlert = `⚡ Speed Alert: You took ${timeMetrics.userTime}s (Avg: ${timeMetrics.avgTime}s). Master the shortcut trick to solve in under ${timeMetrics.avgTime}s!`;
+  } else if (userChosenOption) {
+    trapAlert = `You selected option (${userChosenOption.toUpperCase()}), but correct answer is (${(q.answer || '').toUpperCase()}).`;
+  }
 
   // For Ayush Vocab: Front is concise, highlighted word
   let front = q.question.trim();
@@ -374,6 +411,8 @@ export function convertQuestionToSRSCardCandidate(
     userPreviousAnswer: userChosenOption,
     source,
     sourceTitle,
+    userTimeSpent: timeMetrics?.userTime,
+    avgTimeSeconds: timeMetrics?.avgTime,
     addedAt: new Date().toISOString(),
     stage: 0,
     intervalDays: 1,
@@ -459,6 +498,7 @@ export function isTestQuestionCard(card: Partial<SRSCard>): boolean {
     card.source === 'quiz_wrong' ||
     card.source === 'quiz_unattempted' ||
     card.source === 'mock_error' ||
+    card.source === 'speed_trap' ||
     Boolean(card.questionRef) ||
     Boolean(card.userPreviousAnswer)
   );
@@ -470,15 +510,80 @@ export function isAnkiFlashcard(card: Partial<SRSCard>): boolean {
 
 // ── Query & Statistics Helpers ──
 
-export function getDueSRSCards(cards: SRSCard[], subjectFilter: string | 'all' = 'all'): SRSCard[] {
+// ── Anti-Overwhelm & Cognitive Burnout Prevention Helpers ──
+
+export function isLeechCard(card: Partial<SRSCard>, threshold = 4): boolean {
+  return Boolean(card.isLeech || (typeof card.lapses === 'number' && card.lapses >= threshold));
+}
+
+export function coolOffCard(cardId: string, days = 2): SRSCard | null {
+  const coolOffDate = addDaysToDate(formatDayString(), days);
+  return updateSRSCard(cardId, {
+    coolOffUntil: coolOffDate,
+    dueDate: coolOffDate
+  });
+}
+
+export function resetLeechCard(cardId: string): SRSCard | null {
+  return updateSRSCard(cardId, {
+    isLeech: false,
+    lapses: 0,
+    easeFactor: 2.5,
+    stage: 0,
+    intervalDays: 1,
+    coolOffUntil: undefined,
+    dueDate: formatDayString(),
+    status: 'learning'
+  });
+}
+
+export function getOverdueCardsCount(cards: SRSCard[]): number {
   const today = formatDayString();
-  return cards.filter(card => {
+  return cards.filter(c => c.status !== 'suspended' && c.dueDate < today).length;
+}
+
+export function triageOverdueBacklog(cards: SRSCard[], daysToSpread = 5): SRSCard[] {
+  const today = formatDayString();
+  const overdueCards = cards.filter(c => c.status !== 'suspended' && c.dueDate < today);
+  if (overdueCards.length === 0) return cards;
+
+  const overdueIdSet = new Set(overdueCards.map(c => c.id));
+  const spreadCount = Math.max(2, daysToSpread);
+
+  let counter = 0;
+  const updatedCards = cards.map(c => {
+    if (overdueIdSet.has(c.id)) {
+      // Distribute evenly across 1 to spreadCount days from today
+      const offsetDays = (counter % spreadCount) + 1;
+      counter++;
+      const newDueDate = addDaysToDate(today, offsetDays);
+      return { ...c, dueDate: newDueDate };
+    }
+    return c;
+  });
+
+  saveStoredSRSCards(updatedCards);
+  return updatedCards;
+}
+
+// ── Query & Statistics Helpers ──
+
+export function getDueSRSCards(cards: SRSCard[], subjectFilter: string | 'all' = 'all', limit?: number): SRSCard[] {
+  const today = formatDayString();
+  const due = cards.filter(card => {
     if (card.status === 'suspended') return false;
+    // Hide cards currently in a cool-off rest period
+    if (card.coolOffUntil && card.coolOffUntil > today) return false;
     if (subjectFilter !== 'all' && !matchesSubject(card.subject, subjectFilter)) {
       return false;
     }
     return card.dueDate <= today;
   });
+
+  if (typeof limit === 'number' && limit > 0) {
+    return due.slice(0, limit);
+  }
+  return due;
 }
 
 export function computeDeckStats(cards: SRSCard[]): DeckStatistics {
@@ -496,7 +601,7 @@ export function computeDeckStats(cards: SRSCard[]): DeckStatistics {
   };
 
   cards.forEach(card => {
-    const isDue = card.status !== 'suspended' && card.dueDate <= today;
+    const isDue = card.status !== 'suspended' && (!card.coolOffUntil || card.coolOffUntil <= today) && card.dueDate <= today;
     const isMastered = card.status === 'mastered' || card.intervalDays >= 45;
     const isLearning = card.stage <= 1;
 

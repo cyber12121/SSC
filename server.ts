@@ -11,6 +11,8 @@ import { normalizeQuestionOptions, normalizeAnswerKey } from "./src/utils/mathSa
 import { normalizeSubtopic } from "./src/utils/subtopicNormalizer";
 import chatHandler from "./api/chat";
 import srsGenerateHandler from "./api/srs-generate";
+import subjectDataHandler, { invalidateSubjectDataCache } from "./api/subject-data";
+import bundledMockQuestionsHandler, { invalidateBundledMockQuestionsCache } from "./api/bundled-mock-questions";
 
 dotenv.config();
 
@@ -932,6 +934,12 @@ async function startServer() {
     res.json({ status: "ok", message: "SSC CGL Backend is running" });
   });
 
+  // Fast Aggregated Subject & Question Bank Data
+  app.get("/api/subject-data", subjectDataHandler);
+
+  // Fast Aggregated Bundled Mock Questions
+  app.get("/api/bundled-mock-questions", bundledMockQuestionsHandler);
+
   // Gemini AI Chatbot Endpoint (Same handler as Vercel serverless)
   app.post("/api/chat", chatHandler);
 
@@ -1242,6 +1250,8 @@ async function startServer() {
         console.warn('[Mock Import] Could not reinitialize Tommy store:', e?.message || e);
       }
 
+      invalidateSubjectDataCache();
+      invalidateBundledMockQuestionsCache();
       console.log(`[Mock Import] Success:`, resultsSummary);
       res.json({ success: true, imported: resultsSummary, scoreReport: calculatedReport });
     } catch (err: any) {
@@ -1627,6 +1637,8 @@ async function startServer() {
         }
       });
 
+      invalidateSubjectDataCache();
+      invalidateBundledMockQuestionsCache();
       res.json({ success: true });
     } catch (e: any) {
       res.status(500).json({ error: e.message });

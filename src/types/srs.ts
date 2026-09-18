@@ -35,8 +35,10 @@ export interface SRSCard {
   userPreviousAnswer?: string;
 
   // Metadata & Ingestion origin
-  source: 'quiz_wrong' | 'quiz_unattempted' | 'mock_error' | 'bookmark' | 'vocab_bank' | 'gk_bank' | 'manual' | 'ai_generated';
+  source: 'quiz_wrong' | 'quiz_unattempted' | 'mock_error' | 'bookmark' | 'vocab_bank' | 'gk_bank' | 'manual' | 'ai_generated' | 'speed_trap';
   sourceTitle?: string; // Test or Chapter title
+  userTimeSpent?: number; // User solve duration in seconds
+  avgTimeSeconds?: number; // Benchmark average solve duration in seconds
   addedAt: string; // ISO string
 
   // SM-2 Spaced Repetition Engine metrics
@@ -51,6 +53,10 @@ export interface SRSCard {
 
   // Review history log
   history?: ReviewHistoryItem[];
+
+  // Anti-Overwhelm & Cognitive Burnout Prevention
+  isLeech?: boolean; // Lapsed 4+ times causing cognitive friction
+  coolOffUntil?: string; // 'YYYY-MM-DD' pause date for troublesome cards
 }
 
 export interface SRSSettings {
@@ -64,6 +70,13 @@ export interface SRSSettings {
   maxNewCardsPerDay: number; // Default: 30
   maxReviewCardsPerDay: number; // Default: 100
   defaultReviewMode: 'flashcard' | 'quiz'; // Default: 'flashcard'
+  
+  // Anti-Overwhelm & Burnout Prevention Settings
+  dailyReviewCap: number; // Default: 30 (0 or 9999 for unlimited)
+  sprintBatchSize: number; // Default: 10 (cards per rest checkpoint)
+  leechThreshold: number; // Default: 4 (lapses before flagged as leech)
+  autoCoolOffLeeches: boolean; // Default: true
+  zenModeDefault: boolean; // Default: false
 }
 
 export interface DeckStatistics {

@@ -2,12 +2,19 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   RotateCw, CheckCircle2, ChevronRight, PenTool,
-  Trophy, Trash2, Eye, EyeOff, X, Sparkles, BookOpen,
-  ArrowLeft, Lightbulb, Zap, AlertTriangle, Flame, Filter
+  Trophy, Trash2, Eye, X, Sparkles,
+  ArrowLeft, Zap, AlertTriangle, Filter,
+  Wind, ShieldAlert, HeartHandshake, Smile
 } from 'lucide-react';
 import { SRSCard, SRSGrade } from '../../types/srs';
 import { SrsScratchpad } from './SrsScratchpad';
-import { calculateNextReview, addDaysToDate, formatDayString, matchesSubject } from '../../utils/srsEngine';
+import {
+  calculateNextReview,
+  matchesSubject,
+  getSRSSettings,
+  coolOffCard,
+  isLeechCard
+} from '../../utils/srsEngine';
 
 interface SrsReviewStudioProps {
   cards: SRSCard[];
@@ -22,17 +29,27 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
   onExit,
   onDeleteCurrentCard
 }) => {
+  const settings = useMemo(() => getSRSSettings(), []);
+  const sprintBatchSize = Math.max(5, settings.sprintBatchSize || 10);
+
   const [queue, setQueue] = useState<SRSCard[]>(initialReviewCards);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [reviewMode, setReviewMode] = useState<'flashcard' | 'quiz'>('flashcard');
-  const [selectedQuizOption, setSelectedQuizOption] = useState<string | null>(null);
+  const [, setSelectedQuizOption] = useState<string | null>(null);
   const [cardStartTime, setCardStartTime] = useState<number>(Date.now());
   const [sessionResults, setSessionResults] = useState<SRSCard[]>([]);
   const [scratchpadOpen, setScratchpadOpen] = useState(false);
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [topicFilter, setTopicFilter] = useState<string>('all');
+
+  // Anti-Overwhelm & Cognitive Burnout Prevention States
+  const [isZenMode, setIsZenMode] = useState<boolean>(settings.zenModeDefault || false);
+  const [sprintCount, setSprintCount] = useState(0);
+  const [isRestCheckpointOpen, setIsRestCheckpointOpen] = useState(false);
+  const [breathingActive, setBreathingActive] = useState(false);
+  const [breathingPhase, setBreathingPhase] = useState<'Inhale' | 'Hold' | 'Exhale'>('Inhale');
+  const [coolingToast, setCoolingToast] = useState<string | null>(null);
 
   // Extract distinct subtopics from review cards
   const availableTopics = useMemo(() => {
@@ -55,18 +72,31 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
       setQueue(filtered.length > 0 ? filtered : initialReviewCards);
     }
     setCurrentIndex(0);
+    setSprintCount(0);
     setIsFlipped(false);
     setIsCompleted(false);
   };
 
   const currentCard = queue[currentIndex];
 
-  // Reset timer on card change
+  // Reset timer and options on card change
   useEffect(() => {
     setIsFlipped(false);
     setSelectedQuizOption(null);
     setCardStartTime(Date.now());
   }, [currentIndex, queue]);
+
+  // Guided Breathing Animation Timer
+  useEffect(() => {
+    if (!breathingActive) return;
+    const phases: Array<'Inhale' | 'Hold' | 'Exhale'> = ['Inhale', 'Hold', 'Exhale'];
+    let idx = 0;
+    const interval = setInterval(() => {
+      idx = (idx + 1) % phases.length;
+      setBreathingPhase(phases[idx]);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [breathingActive]);
 
   // Handle self-grading response
   const handleRateCard = useCallback((grade: SRSGrade) => {
@@ -82,17 +112,27 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
       setQueue(prev => [...prev, currentCard]);
     }
 
+    const nextSprintCount = sprintCount + 1;
+    setSprintCount(nextSprintCount);
+
+    // If reached sprint target, and there are more cards remaining, trigger rest checkpoint!
+    if (nextSprintCount >= sprintBatchSize && currentIndex + 1 < queue.length) {
+      setIsRestCheckpointOpen(true);
+      setCurrentIndex(prev => prev + 1);
+      return;
+    }
+
     if (currentIndex + 1 < queue.length) {
       setCurrentIndex(prev => prev + 1);
     } else {
       setIsCompleted(true);
     }
-  }, [currentCard, cardStartTime, currentIndex, queue.length]);
+  }, [currentCard, cardStartTime, currentIndex, queue.length, sprintCount, sprintBatchSize]);
 
   // Desktop Keyboard navigation shortcuts: [Space]/[Enter] to flip, [1-4] to rate
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if user is typing in an input or select
+      if (isRestCheckpointOpen || deleteConfirmOpen) return;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement).tagName)) return;
 
       if (e.code === 'Space' || e.key === 'Enter') {
@@ -117,7 +157,7 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isFlipped, handleRateCard]);
+  }, [isFlipped, handleRateCard, isRestCheckpointOpen, deleteConfirmOpen]);
 
   // Handle single card deletion
   const handleDeleteCard = () => {
@@ -136,6 +176,36 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
     }
   };
 
+  // Handle Leech cooling-off pause
+  const handleCoolOffCurrentCard = () => {
+    if (!currentCard) return;
+    coolOffCard(currentCard.id, 2);
+    setCoolingToast(`😴 Put "${currentCard.front.slice(0, 25)}..." on a 48h rest break.`);
+    setTimeout(() => setCoolingToast(null), 3500);
+
+    const remaining = queue.filter((_, idx) => idx !== currentIndex);
+    if (remaining.length === 0) {
+      setIsCompleted(true);
+    } else {
+      setQueue(remaining);
+      if (currentIndex >= remaining.length) {
+        setCurrentIndex(remaining.length - 1);
+      }
+    }
+  };
+
+  // Sprint continuation actions
+  const handleContinueNextSprint = () => {
+    setSprintCount(0);
+    setIsRestCheckpointOpen(false);
+    setBreathingActive(false);
+  };
+
+  const handleFinishEarlyFromSprint = () => {
+    setIsRestCheckpointOpen(false);
+    setIsCompleted(true);
+  };
+
   const getSubjectTheme = (subject: string = '') => {
     if (matchesSubject(subject, 'english')) return { name: 'English Vocab', color: 'emerald', border: 'border-emerald-200', bg: 'bg-emerald-50 text-emerald-800' };
     if (matchesSubject(subject, 'gk')) return { name: 'General Knowledge', color: 'sky', border: 'border-sky-200', bg: 'bg-sky-50 text-sky-800' };
@@ -143,6 +213,96 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
     if (matchesSubject(subject, 'reasoning')) return { name: 'Reasoning', color: 'purple', border: 'border-purple-200', bg: 'bg-purple-50 text-purple-800' };
     return { name: 'General', color: 'slate', border: 'border-slate-200', bg: 'bg-slate-50 text-slate-800' };
   };
+
+  // ── Sprint Rest Checkpoint View ──
+  if (isRestCheckpointOpen) {
+    const sprintReviewed = sessionResults.slice(-sprintBatchSize);
+    const sprintGoodCount = sprintReviewed.filter(c => {
+      const last = c.history?.[c.history.length - 1];
+      return last?.grade === 'good' || last?.grade === 'easy';
+    }).length;
+    const sprintScore = sprintReviewed.length > 0 ? Math.round((sprintGoodCount / sprintReviewed.length) * 100) : 100;
+    const remainingInQueue = queue.length - currentIndex;
+
+    return (
+      <div className="min-h-[85vh] flex items-center justify-center p-4 select-none">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="bg-white rounded-3xl border border-slate-200 shadow-2xl p-8 max-w-md w-full text-center space-y-6"
+        >
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-emerald-200">
+            <Wind className="w-8 h-8" />
+          </div>
+
+          <div>
+            <div className="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-[11px] font-black rounded-full mb-2 uppercase tracking-wider">
+              Sprint Checkpoint Reached
+            </div>
+            <h2 className="text-2xl font-black text-slate-900">Take a Breath 🧘</h2>
+            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+              You just crushed a sprint of <strong>{sprintReviewed.length} cards</strong> ({sprintScore}% retention score).
+              Rest your eyes for a moment to let your brain consolidate memories.
+            </p>
+          </div>
+
+          {/* Interactive Guided Breathing Circle */}
+          <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center justify-center space-y-3">
+            {breathingActive ? (
+              <div className="flex flex-col items-center space-y-3 py-2">
+                <motion.div
+                  animate={{
+                    scale: breathingPhase === 'Inhale' ? 1.3 : breathingPhase === 'Hold' ? 1.3 : 0.9,
+                    backgroundColor: breathingPhase === 'Inhale' ? '#10b981' : breathingPhase === 'Hold' ? '#6366f1' : '#0ea5e9'
+                  }}
+                  transition={{ duration: 4, ease: "easeInOut" }}
+                  className="w-20 h-20 rounded-full flex items-center justify-center text-white font-black text-xs shadow-md tracking-wider uppercase"
+                >
+                  {breathingPhase}
+                </motion.div>
+                <span className="text-xs font-bold text-slate-600">
+                  {breathingPhase === 'Inhale' ? 'Breathe in slowly through your nose...' : breathingPhase === 'Hold' ? 'Hold gently...' : 'Exhale smoothly through your mouth...'}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setBreathingActive(false)}
+                  className="text-[11px] text-slate-400 hover:text-slate-600 underline font-semibold mt-1 cursor-pointer"
+                >
+                  Stop breathing guide
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setBreathingActive(true)}
+                className="px-4 py-2.5 bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold flex items-center space-x-2 transition-all shadow-2xs cursor-pointer hover:scale-102"
+              >
+                <Wind className="w-4 h-4 text-emerald-500" />
+                <span>Try 1-Min Guided Breathing</span>
+              </button>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <button
+              onClick={handleContinueNextSprint}
+              className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs rounded-xl shadow-lg shadow-indigo-200 transition-all cursor-pointer flex items-center justify-center space-x-2"
+            >
+              <span>Continue Next Sprint ({remainingInQueue} cards left)</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            
+            <button
+              onClick={handleFinishEarlyFromSprint}
+              className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-all cursor-pointer"
+            >
+              Rest & Finish Session ({sessionResults.length} cards saved)
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   // ── Session Complete View ──
   if (isCompleted || !currentCard) {
@@ -154,7 +314,7 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
     const accuracy = totalReviewed > 0 ? Math.round((goodOrEasyCount / totalReviewed) * 100) : 100;
 
     return (
-      <div className="min-h-[80vh] flex items-center justify-center p-4">
+      <div className="min-h-[80vh] flex items-center justify-center p-4 select-none">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -182,7 +342,7 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
 
           <button
             onClick={() => onFinishSession(sessionResults)}
-            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-indigo-200 transition-all"
+            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-indigo-200 transition-all cursor-pointer"
           >
             Return to SRS Hub
           </button>
@@ -192,8 +352,9 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
   }
 
   const theme = getSubjectTheme(currentCard.subject);
+  const sprintCurrent = (currentIndex % sprintBatchSize) + 1;
+  const sprintTotal = Math.min(sprintBatchSize, queue.length - Math.floor(currentIndex / sprintBatchSize) * sprintBatchSize);
   const progressPercent = Math.round(((currentIndex) / queue.length) * 100);
-  const isMathOrReasoning = currentCard.subject === 'Mathematics' || currentCard.subject === 'Reasoning';
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col justify-between p-4 sm:p-6 select-none">
@@ -205,7 +366,7 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
         <div className="flex items-center space-x-3">
           <button
             onClick={onExit}
-            className="p-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 shadow-2xs transition-colors"
+            className="p-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 shadow-2xs transition-colors cursor-pointer"
             title="Exit Review"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -245,12 +406,26 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
           </div>
         </div>
 
-        {/* Progress & Tools */}
+        {/* Anti-Burnout Tools & Header Controls */}
         <div className="flex items-center space-x-2">
+          {/* Zen Focus Mode Toggle */}
+          <button
+            onClick={() => setIsZenMode(!isZenMode)}
+            className={`px-3 py-1.5 rounded-xl border text-xs font-bold flex items-center space-x-1.5 transition-all shadow-2xs cursor-pointer ${
+              isZenMode
+                ? 'bg-purple-600 text-white border-purple-600 shadow-purple-200'
+                : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+            }`}
+            title="Toggle Zen Mode (Hides timers & counters for zero pressure)"
+          >
+            <span>🧘</span>
+            <span className="hidden sm:inline">{isZenMode ? 'Zen On' : 'Zen Mode'}</span>
+          </button>
+
           {/* Scratchpad toggle */}
           <button
             onClick={() => setScratchpadOpen(!scratchpadOpen)}
-            className={`px-3 py-1.5 rounded-xl border text-xs font-bold flex items-center space-x-1.5 transition-all shadow-2xs ${
+            className={`px-3 py-1.5 rounded-xl border text-xs font-bold flex items-center space-x-1.5 transition-all shadow-2xs cursor-pointer ${
               scratchpadOpen
                 ? 'bg-amber-500 text-white border-amber-500 shadow-amber-200'
                 : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
@@ -264,7 +439,7 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
           {/* Delete card */}
           <button
             onClick={() => setDeleteConfirmOpen(true)}
-            className="p-2 rounded-xl bg-white border border-slate-200 hover:bg-red-50 hover:text-red-600 text-slate-400 shadow-2xs transition-colors"
+            className="p-2 rounded-xl bg-white border border-slate-200 hover:bg-red-50 hover:text-red-600 text-slate-400 shadow-2xs transition-colors cursor-pointer"
             title="Delete this card"
           >
             <Trash2 className="w-4 h-4" />
@@ -272,19 +447,37 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
         </div>
       </div>
 
-      {/* Progress Line */}
-      <div className="max-w-4xl w-full mx-auto my-3">
-        <div className="flex justify-between items-center text-[11px] font-bold text-slate-400 mb-1.5 px-1">
-          <span>Card {currentIndex + 1} of {queue.length}</span>
-          <span>{queue.length - currentIndex - 1} remaining</span>
+      {/* Progress Line / Zen Mode Minimal Indicator */}
+      {!isZenMode ? (
+        <div className="max-w-4xl w-full mx-auto my-3">
+          <div className="flex justify-between items-center text-[11px] font-bold text-slate-400 mb-1.5 px-1">
+            <span className="text-indigo-600 font-extrabold">
+              Sprint Round • Card {sprintCurrent} of {sprintTotal}
+            </span>
+            <span>Total: {currentIndex + 1} / {queue.length}</span>
+          </div>
+          <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-indigo-600 rounded-full transition-all duration-300"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
         </div>
-        <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-indigo-600 rounded-full transition-all duration-300"
-            style={{ width: `${progressPercent}%` }}
-          />
+      ) : (
+        <div className="max-w-4xl w-full mx-auto my-2 text-center">
+          <span className="text-[11px] font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full border border-purple-200 inline-flex items-center gap-1.5 shadow-2xs">
+            <span>🧘</span>
+            <span>Zen Mode Active: Focus on one card at a time</span>
+          </span>
         </div>
-      </div>
+      )}
+
+      {/* Cooling toast notification */}
+      {coolingToast && (
+        <div className="max-w-md mx-auto my-1 bg-amber-600 text-white text-xs font-bold px-4 py-2 rounded-xl shadow-md text-center">
+          {coolingToast}
+        </div>
+      )}
 
       {/* 3D Flipping Flashcard */}
       <div className="max-w-3xl w-full mx-auto my-auto py-2 [perspective:1200px]">
@@ -371,6 +564,32 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
                 </p>
               </div>
 
+              {/* Leech Cooling-Off Protection Banner */}
+              {isLeechCard(currentCard) && (
+                <div
+                  onClick={(e) => e.stopPropagation()}
+                  className="p-3.5 rounded-2xl bg-amber-50/90 border border-amber-300 text-amber-950 text-xs flex items-center justify-between gap-3 shadow-2xs"
+                >
+                  <div className="flex items-start space-x-2">
+                    <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold block">Troublesome Card (Leech Alert)</span>
+                      <span className="text-[11px] text-amber-800">You've struggled with this concept repeatedly. Would you like a break?</span>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCoolOffCurrentCard();
+                    }}
+                    className="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-bold text-xs whitespace-nowrap shadow-xs transition-colors cursor-pointer"
+                  >
+                    Cool Off 48h
+                  </button>
+                </div>
+              )}
+
               {/* Golden Mnemonic Hook or Speed Formula Callout */}
               {(currentCard.mnemonic || currentCard.shortcutFormula) && (
                 <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 text-xs font-semibold flex items-start space-x-3 shadow-2xs">
@@ -399,7 +618,7 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
 
             {/* Bottom Flip Back Callout */}
             <div className="py-3 px-6 border-t border-slate-100 text-center bg-slate-50 text-slate-400 text-xs font-medium flex items-center justify-between">
-              <span>Grade your recall below: <strong className="text-slate-700">Keys [1, 2, 3, 4]</strong></span>
+              <span>Grade recall below: <strong className="text-slate-700">Keys [1, 2, 3, 4]</strong></span>
               <span className="text-[11px] text-indigo-600 font-bold hover:underline cursor-pointer" onClick={() => setIsFlipped(false)}>
                 Click card or Space to flip back
               </span>
@@ -478,25 +697,23 @@ export const SrsReviewStudio: React.FC<SrsReviewStudioProps> = ({
       {deleteConfirmOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4">
           <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl border border-slate-200 text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto">
+            <div className="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mx-auto">
               <Trash2 className="w-6 h-6" />
             </div>
-            <div>
-              <h4 className="font-bold text-slate-900 text-base">Delete this Card?</h4>
-              <p className="text-xs text-slate-500 mt-1">This card will be removed from your active review queue.</p>
-            </div>
-            <div className="flex space-x-2 pt-2">
+            <h3 className="text-base font-black text-slate-900">Delete this card?</h3>
+            <p className="text-xs text-slate-500">This action will remove the card permanently from your spaced repetition deck.</p>
+            <div className="grid grid-cols-2 gap-2 pt-2">
               <button
                 onClick={() => setDeleteConfirmOpen(false)}
-                className="flex-1 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition-colors"
+                className="py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={handleDeleteCard}
-                className="flex-1 py-2 rounded-xl text-xs font-bold bg-red-600 hover:bg-red-700 text-white transition-colors"
+                className="py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl cursor-pointer"
               >
-                Delete
+                Delete Card
               </button>
             </div>
           </div>

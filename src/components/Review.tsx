@@ -1802,11 +1802,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         <button
                           onClick={() => {
                             if (!question) return;
+                            const uTime = Number(current?.timeSpent || 0);
+                            const aTime = parseAvgTimeToSeconds(current?.avgTimeSeconds || current?.avgTime || question.avgTime) || 45;
+                            const isSlow = uTime > (aTime + 5);
+                            const cardSource = isSlow ? 'speed_trap' : (current?.isCorrect ? 'bookmark' : (current?.userAnswer ? 'quiz_wrong' : 'quiz_unattempted'));
+
                             const candidate = convertQuestionToSRSCardCandidate(
                               question,
-                              current?.isCorrect ? 'bookmark' : (current?.userAnswer ? 'quiz_wrong' : 'quiz_unattempted'),
+                              cardSource,
                               result.chapter_title,
-                              current?.userAnswer
+                              current?.userAnswer,
+                              { userTime: uTime, avgTime: aTime }
                             );
                             setSrsCandidateCards([candidate]);
                             setSrsModalOpen(true);

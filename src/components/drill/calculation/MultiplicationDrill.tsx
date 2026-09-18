@@ -94,11 +94,14 @@ export const MultiplicationDrill: React.FC<MultDrillProps> = ({ autoStart = fals
     setUserInput('');
     setFeedback('idle');
     setShowHelper(false);
+    if (inputRef.current) inputRef.current.value = '';
 
     setTimeout(() => {
       inputRef.current?.focus();
     }, 60);
   };
+
+  const startTimeRef = useRef<number>(0);
 
   const startDrill = (track: MultTrack = activeTrack) => {
     setActiveTrack(track);
@@ -106,6 +109,7 @@ export const MultiplicationDrill: React.FC<MultDrillProps> = ({ autoStart = fals
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
+    startTimeRef.current = Date.now();
     setIsFinished(false);
     generateProblem(track);
   };
@@ -123,45 +127,49 @@ export const MultiplicationDrill: React.FC<MultDrillProps> = ({ autoStart = fals
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
+    startTimeRef.current = 0;
     setShowHelper(false);
   };
 
   useEffect(() => {
     if (isStarted && !isFinished) {
-      const startTime = Date.now() - elapsedTime * 1000;
+      if (!startTimeRef.current) {
+        startTimeRef.current = Date.now();
+      }
       timerRef.current = setInterval(() => {
-        setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
+        setElapsedTime(Math.round((Date.now() - startTimeRef.current) / 100) / 10);
       }, 100);
     } else {
-      clearInterval(timerRef.current);
+      if (timerRef.current) clearInterval(timerRef.current);
     }
-    return () => clearInterval(timerRef.current);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [isStarted, isFinished]);
 
   const expectedProduct = numA * numB;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (feedback !== 'idle') return;
     const val = e.target.value.replace(/[^0-9]/g, '');
     setUserInput(val);
 
     const expectedStr = expectedProduct.toString();
-    if (val.length === expectedStr.length) {
-      if (parseInt(val, 10) === expectedProduct) {
-        setFeedback('correct');
-        setScore(prev => prev + 1);
+    if (val && parseInt(val, 10) === expectedProduct) {
+      setFeedback('correct');
+      setScore(prev => prev + 1);
 
-        setTimeout(() => {
-          if (roundCount >= 5) {
-            setIsFinished(true);
-          } else {
-            setRoundCount(prev => prev + 1);
-            generateProblem();
-          }
-        }, 220);
-      } else {
-        setFeedback('wrong');
-        setShowHelper(true);
-      }
+      setTimeout(() => {
+        if (roundCount >= 5) {
+          setIsFinished(true);
+        } else {
+          setRoundCount(prev => prev + 1);
+          generateProblem();
+        }
+      }, 150);
+    } else if (val.length >= expectedStr.length) {
+      setFeedback('wrong');
+      setShowHelper(true);
     }
   };
 
@@ -349,10 +357,15 @@ export const MultiplicationDrill: React.FC<MultDrillProps> = ({ autoStart = fals
                   {trackBriefings[activeTrack].description}
                 </div>
               </div>
-              <div className="text-right">
-                <span className="font-mono text-xs font-semibold text-slate-800">
-                  Problem {roundCount} <span className="text-slate-400 font-normal">of 5</span>
-                </span>
+              <div className="text-right flex flex-col items-end">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-semibold text-slate-800">
+                    Problem {roundCount} <span className="text-slate-400 font-normal">of 5</span>
+                  </span>
+                  <span className="font-mono text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-bold border border-slate-200">
+                    ⏱️ {elapsedTime.toFixed(1)}s
+                  </span>
+                </div>
                 <div className="w-28 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1 ml-auto">
                   <div
                     className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
@@ -421,6 +434,7 @@ export const MultiplicationDrill: React.FC<MultDrillProps> = ({ autoStart = fals
                   value={userInput}
                   onChange={handleInputChange}
                   onKeyDown={(e) => {
+                    if (feedback !== 'idle') return;
                     if (e.key === 'Enter') {
                       e.preventDefault();
                       checkAnswer();

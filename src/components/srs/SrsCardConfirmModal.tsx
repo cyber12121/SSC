@@ -169,6 +169,22 @@ export const SrsCardConfirmModal: React.FC<SrsCardConfirmModalProps> = ({
                         • {card.topic}
                       </span>
                     )}
+                    {card.source === 'speed_trap' ? (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1">
+                        <span>⚡ Slow (+5s Avg)</span>
+                        {card.userTimeSpent && card.avgTimeSeconds && (
+                          <span className="opacity-75 font-normal">({card.userTimeSpent}s vs {card.avgTimeSeconds}s)</span>
+                        )}
+                      </span>
+                    ) : card.source === 'quiz_wrong' ? (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-100 text-rose-800 border border-rose-200">
+                        ❌ Wrong
+                      </span>
+                    ) : card.source === 'quiz_unattempted' ? (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-slate-100 text-slate-700 border border-slate-200">
+                        ⚪ Unattempted
+                      </span>
+                    ) : null}
                   </div>
                   <div className="flex items-center space-x-1">
                     <button

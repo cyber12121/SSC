@@ -37,6 +37,7 @@ export const CrossGridMatrixDrill: React.FC<MatrixDrillProps> = ({ autoStart = f
 
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<any>(null);
+  const startTimeRef = useRef<number>(0);
 
   const currentTier = GRID_TIERS[selectedTierIdx];
   const targetSolveCount = currentTier.size * currentTier.size;
@@ -70,6 +71,7 @@ export const CrossGridMatrixDrill: React.FC<MatrixDrillProps> = ({ autoStart = f
 
   const startBlitz = (tierIdx: number = selectedTierIdx) => {
     setSelectedTierIdx(tierIdx);
+    startTimeRef.current = Date.now();
     setIsStarted(true);
     setIsFinished(false);
     initGrid();
@@ -86,13 +88,16 @@ export const CrossGridMatrixDrill: React.FC<MatrixDrillProps> = ({ autoStart = f
     setIsStarted(false);
     setIsFinished(false);
     setElapsedTime(0);
+    startTimeRef.current = 0;
   };
 
   useEffect(() => {
     if (isStarted && !isFinished) {
-      const startTime = Date.now() - elapsedTime * 1000;
+      if (!startTimeRef.current) {
+        startTimeRef.current = Date.now();
+      }
       timerRef.current = setInterval(() => {
-        setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
+        setElapsedTime(Math.round((Date.now() - startTimeRef.current) / 100) / 10);
       }, 100);
     } else {
       clearInterval(timerRef.current);
@@ -103,43 +108,44 @@ export const CrossGridMatrixDrill: React.FC<MatrixDrillProps> = ({ autoStart = f
   const activeSum = (rowHeaders[activeCell.r] || 0) + (colHeaders[activeCell.c] || 0);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (feedback !== 'idle') return;
     const val = e.target.value.replace(/[^0-9]/g, '');
     setUserInput(val);
 
     const expectedStr = activeSum.toString();
-    if (val.length === expectedStr.length) {
-      if (parseInt(val, 10) === activeSum) {
-        setFeedback('correct');
-        const cellKey = `${activeCell.r}_${activeCell.c}`;
-        const newSolved = { ...solvedCells, [cellKey]: activeSum };
-        setSolvedCells(newSolved);
+    if (val === expectedStr || parseInt(val, 10) === activeSum) {
+      setFeedback('correct');
+      const cellKey = `${activeCell.r}_${activeCell.c}`;
+      const newSolved = { ...solvedCells, [cellKey]: activeSum };
+      setSolvedCells(newSolved);
 
-        const newTotal = totalSolvedInRound + 1;
-        setTotalSolvedInRound(newTotal);
+      const newTotal = totalSolvedInRound + 1;
+      setTotalSolvedInRound(newTotal);
 
-        setTimeout(() => {
-          if (newTotal >= targetSolveCount) {
-            setIsFinished(true);
-          } else {
-            let nextC = activeCell.c + 1;
-            let nextR = activeCell.r;
-            if (nextC >= currentTier.size) {
-              nextC = 0;
-              nextR = (nextR + 1) % currentTier.size;
-            }
-            setActiveCell({ r: nextR, c: nextC });
-            setUserInput('');
-            setFeedback('idle');
-            inputRef.current?.focus();
+      setTimeout(() => {
+        if (newTotal >= targetSolveCount) {
+          setIsFinished(true);
+        } else {
+          let nextC = activeCell.c + 1;
+          let nextR = activeCell.r;
+          if (nextC >= currentTier.size) {
+            nextC = 0;
+            nextR = (nextR + 1) % currentTier.size;
           }
-        }, 120);
-      } else {
-        setFeedback('wrong');
-        setTimeout(() => {
-          setFeedback('idle');
+          setActiveCell({ r: nextR, c: nextC });
           setUserInput('');
-        }, 350);
-      }
+          setFeedback('idle');
+          if (inputRef.current) inputRef.current.value = '';
+          inputRef.current?.focus();
+        }
+      }, 120);
+    } else if (val.length >= expectedStr.length) {
+      setFeedback('wrong');
+      setTimeout(() => {
+        setFeedback('idle');
+        setUserInput('');
+        if (inputRef.current) inputRef.current.value = '';
+      }, 350);
     }
   };
 
@@ -234,6 +240,7 @@ export const CrossGridMatrixDrill: React.FC<MatrixDrillProps> = ({ autoStart = f
                 onClick={() => {
                   setIsStarted(false);
                   setElapsedTime(0);
+                  startTimeRef.current = 0;
                 }}
                 className="text-[11px] text-slate-400 hover:text-slate-700 cursor-pointer"
               >

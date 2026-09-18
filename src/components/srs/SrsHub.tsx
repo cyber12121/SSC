@@ -22,13 +22,17 @@ import {
   isAnkiFlashcard,
   isTestQuestionCard,
   convertQuestionToSRSCard,
-  matchesSubject
+  matchesSubject,
+  getOverdueCardsCount,
+  triageOverdueBacklog,
+  getSRSSettings
 } from '../../utils/srsEngine';
 import { SrsReviewStudio } from './SrsReviewStudio';
 import { SrsCardExplorer } from './SrsCardExplorer';
 import { SrsCardConfirmModal } from './SrsCardConfirmModal';
 import { SrsManualCardModal } from './SrsManualCardModal';
 import { SrsAiCreatorModal } from './SrsAiCreatorModal';
+import { SrsPacingSettingsModal } from './SrsPacingSettingsModal';
 
 interface SrsHubProps {
   onNavigateHome: () => void;
@@ -40,6 +44,7 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
   const [activeView, setActiveView] = useState<'hub' | 'review' | 'explorer'>('hub');
   const [reviewSubjectFilter, setReviewSubjectFilter] = useState<string | 'all'>('all');
   const [reviewDeckType, setReviewDeckType] = useState<'all' | 'anki' | 'test_srs'>('all');
+  const [cramAllOverride, setCramAllOverride] = useState(false);
 
   // Top Deck Mode: 'anki' (Concept Flashcards) vs 'test_srs' (Mock/Quiz Question Errors)
   const [deckMode, setDeckMode] = useState<'anki' | 'test_srs'>('anki');
@@ -52,6 +57,7 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
   const [manualModalOpen, setManualModalOpen] = useState(false);
   const [editingCard, setEditingCard] = useState<SRSCard | null>(null);
   const [aiCreatorOpen, setAiCreatorOpen] = useState(false);
+  const [pacingModalOpen, setPacingModalOpen] = useState(false);
   const [feedbackToast, setFeedbackToast] = useState<string | null>(null);
 
   // Sync cards from storage and firestore
@@ -74,8 +80,14 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
   const activeStats = deckMode === 'anki' ? ankiStats : testStats;
   const activeCards = deckMode === 'anki' ? ankiCards : testCards;
 
+  const srsSettings = useMemo(() => getSRSSettings(), [cards, pacingModalOpen]);
+  const overdueCount = useMemo(() => getOverdueCardsCount(cards), [cards]);
+  const dailyCap = srsSettings.dailyReviewCap || 30;
+  const isPacedSession = dailyCap > 0 && dailyCap < 9999 && activeStats.dueToday > dailyCap;
+
   // Handle Review session initiation
-  const handleStartReview = (subject: string | 'all' = 'all', mode: 'all' | 'anki' | 'test_srs' = deckMode) => {
+  const handleStartReview = (subject: string | 'all' = 'all', mode: 'all' | 'anki' | 'test_srs' = deckMode, cramAll: boolean = false) => {
+    setCramAllOverride(cramAll);
     let candidateCards = cards;
     if (mode === 'anki') candidateCards = ankiCards;
     else if (mode === 'test_srs') candidateCards = testCards;
@@ -260,7 +272,12 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
     if (reviewDeckType === 'anki') candidateCards = ankiCards;
     else if (reviewDeckType === 'test_srs') candidateCards = testCards;
 
-    const activeDueCards = getDueSRSCards(candidateCards, reviewSubjectFilter);
+    const srsSettings = getSRSSettings();
+    const limit = (!cramAllOverride && srsSettings.dailyReviewCap > 0 && srsSettings.dailyReviewCap < 9999)
+      ? srsSettings.dailyReviewCap
+      : undefined;
+
+    const activeDueCards = getDueSRSCards(candidateCards, reviewSubjectFilter, limit);
     const reviewCards = activeDueCards.length > 0 
       ? activeDueCards 
       : (reviewSubjectFilter === 'all' 
@@ -271,7 +288,10 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
       <SrsReviewStudio
         cards={reviewCards}
         onFinishSession={handleFinishReviewSession}
-        onExit={() => setActiveView('hub')}
+        onExit={() => {
+          setCramAllOverride(false);
+          setActiveView('hub');
+        }}
         onDeleteCurrentCard={(id) => {
           deleteSRSCard(id);
           setCards(getStoredSRSCards());
@@ -369,6 +389,14 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
         }}
       />
 
+      {/* Pacing & Burnout Protection Settings Modal */}
+      <SrsPacingSettingsModal
+        isOpen={pacingModalOpen}
+        onClose={() => setPacingModalOpen(false)}
+        cards={cards}
+        onCardsUpdated={(updated) => setCards(updated)}
+      />
+
       {/* Toast Notification Banner */}
       <AnimatePresence>
         {feedbackToast && (
@@ -384,7 +412,7 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
             </div>
             <button
               onClick={() => setFeedbackToast(null)}
-              className="text-emerald-200 hover:text-white text-xs font-semibold px-2 py-1 rounded-lg hover:bg-emerald-700/50 transition-colors"
+              className="text-emerald-200 hover:text-white text-xs font-semibold px-2 py-1 rounded-lg hover:bg-emerald-700/50 transition-colors cursor-pointer"
             >
               Dismiss
             </button>
@@ -396,18 +424,28 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <h1 className="text-3xl font-black text-slate-900 tracking-tight">SRS Memory & Anki Studio</h1>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-indigo-100 text-indigo-700 border border-indigo-200">
-              SM-2 Engine
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+              <span>Memory Retention & SRS Studio</span>
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">
+                SM-2 Pro
+              </span>
+            </h1>
           </div>
-          <p className="text-xs text-slate-500 mt-1 font-medium">
+          <p className="text-xs text-slate-500 mt-1">
             Separate decks for Anki conceptual flashcards and SRS test question error revision
           </p>
         </div>
 
         {/* Global Toolbar */}
         <div className="flex items-center space-x-2.5 flex-wrap gap-y-2">
+          <button
+            onClick={() => setPacingModalOpen(true)}
+            className="px-3.5 py-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
+            title="Study Pacing & Burnout Protection Settings"
+          >
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <span>Pacing & Zen</span>
+          </button>
           <button
             onClick={() => setActiveView('explorer')}
             className="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 rounded-xl text-xs font-bold shadow-2xs transition-colors flex items-center space-x-1.5 cursor-pointer"
@@ -541,6 +579,49 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
         </div>
       </div>
 
+      {/* Overdue Backlog Relief Banner */}
+      {overdueCount > 10 && (
+        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-3xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+          <div className="flex items-start space-x-3.5">
+            <div className="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-sm shadow-amber-200">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <span className="text-[11px] font-black uppercase tracking-wider text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
+                  Anti-Overwhelm Protection
+                </span>
+                <span className="text-xs font-black text-amber-950">
+                  {overdueCount} Overdue Backlog Cards
+                </span>
+              </div>
+              <p className="text-xs text-amber-900 mt-1 leading-relaxed">
+                Missed study days? Don't let a huge card backlog cause stress. Smoothly distribute overdue cards across the next 5 days so you study calmly.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-2 shrink-0">
+            <button
+              onClick={() => {
+                const updated = triageOverdueBacklog(cards, 5);
+                setCards(updated);
+                setFeedbackToast(`🏖️ Backlog smoothly spread across 5 days! Enjoy stress-free learning.`);
+                setTimeout(() => setFeedbackToast(null), 4000);
+              }}
+              className="px-4 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-black text-xs rounded-xl shadow-md shadow-amber-200 transition-all cursor-pointer"
+            >
+              🏖️ Smooth Over 5 Days
+            </button>
+            <button
+              onClick={() => setPacingModalOpen(true)}
+              className="px-3 py-2.5 bg-white hover:bg-amber-100/60 text-amber-900 border border-amber-300 font-bold text-xs rounded-xl transition-colors cursor-pointer"
+            >
+              Pacing Options
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Primary Hero Action: Start Review */}
       <div className={`rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 ${
         deckMode === 'anki'
@@ -568,18 +649,40 @@ export const SrsHub: React.FC<SrsHubProps> = ({ onNavigateHome, rawChapterData }
           </p>
         </div>
 
-        <div className="flex items-center space-x-3 shrink-0">
-          <button
-            onClick={() => handleStartReview('all', deckMode)}
-            className={`px-6 py-3.5 font-black text-sm rounded-2xl shadow-lg hover:scale-102 transition-all flex items-center space-x-2 cursor-pointer ${
-              deckMode === 'anki'
-                ? 'bg-purple-500 hover:bg-purple-400 text-white shadow-purple-500/20'
-                : 'bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-amber-500/20'
-            }`}
-          >
-            <span>{activeStats.dueToday > 0 ? `Review Due (${activeStats.dueToday})` : (deckMode === 'anki' ? 'Practice Flashcards' : 'Practice Test Mistakes')}</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+        <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+          {isPacedSession ? (
+            <div className="flex flex-col items-center sm:items-end gap-1.5">
+              <button
+                onClick={() => handleStartReview('all', deckMode, false)}
+                className={`px-6 py-3.5 font-black text-sm rounded-2xl shadow-lg hover:scale-102 transition-all flex items-center space-x-2 cursor-pointer ${
+                  deckMode === 'anki'
+                    ? 'bg-purple-500 hover:bg-purple-400 text-white shadow-purple-500/20'
+                    : 'bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-amber-500/20'
+                }`}
+              >
+                <span>Start Daily Session ({dailyCap} Cards)</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => handleStartReview('all', deckMode, true)}
+                className="text-xs font-semibold text-slate-400 hover:text-white underline cursor-pointer"
+              >
+                Or review entire backlog ({activeStats.dueToday} cards)
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => handleStartReview('all', deckMode, false)}
+              className={`px-6 py-3.5 font-black text-sm rounded-2xl shadow-lg hover:scale-102 transition-all flex items-center space-x-2 cursor-pointer ${
+                deckMode === 'anki'
+                  ? 'bg-purple-500 hover:bg-purple-400 text-white shadow-purple-500/20'
+                  : 'bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-amber-500/20'
+              }`}
+            >
+              <span>{activeStats.dueToday > 0 ? `Review Due (${activeStats.dueToday})` : (deckMode === 'anki' ? 'Practice Flashcards' : 'Practice Test Mistakes')}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
         </div>
       </div>
 

@@ -64,7 +64,9 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
       })
       .sort((a, b) => {
         if (dashSort === 'newest') {
-          return new Date(b.completedAt || 0).getTime() - new Date(a.completedAt || 0).getTime();
+          const tA = a.completedAt ? new Date(a.completedAt).getTime() : 0;
+          const tB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
+          return (isNaN(tB) ? 0 : tB) - (isNaN(tA) ? 0 : tA);
         }
         const accA = a.totalQuestions > 0 ? a.score / a.totalQuestions : 0;
         const accB = b.totalQuestions > 0 ? b.score / b.totalQuestions : 0;
@@ -81,23 +83,7 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
       animate={{ opacity: 1, y: 0 }}
       className="w-full space-y-4"
     >
-      {!user ? (
-        <div className="text-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100">
-          <div className="w-20 h-20 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-6">
-            <LogIn className="w-10 h-10" />
-          </div>
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Login to Track Progress</h2>
-          <p className="text-slate-500 mb-8 max-w-md mx-auto">
-            Sign in with Google to store your quiz attempts, view detailed performance metrics, and track your SSC CGL preparation journey.
-          </p>
-          <button
-            onClick={onLogin}
-            className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
-          >
-            Login with Google
-          </button>
-        </div>
-      ) : loadingResults ? (
+      {loadingResults && userResults.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24">
           <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-4" />
           <p className="text-slate-500 font-bold text-lg">Fetching your performance analytics...</p>
@@ -109,19 +95,58 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
           </div>
           <h2 className="text-3xl font-black text-slate-900 mb-3">No Results Recorded Yet</h2>
           <p className="text-slate-500 mb-8 max-w-lg mx-auto">
-            Complete a practice quiz or mock error drill to see your accuracy, speed breakdown, and subject-level insights here.
+            {user
+              ? 'Complete a practice quiz or mock error drill to see your accuracy, speed breakdown, and subject-level insights here.'
+              : 'Complete a practice quiz to see your local accuracy and speed stats, or sign in to save your history permanently across devices.'}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={onNavigateHome}
-              className="px-8 py-3.5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+              className="px-8 py-3.5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 cursor-pointer"
             >
               Start Chapter Practice
             </button>
+            {!user && (
+              <button
+                onClick={onLogin}
+                className="px-8 py-3.5 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-md cursor-pointer flex items-center gap-2"
+              >
+                <LogIn className="w-4 h-4" />
+                Login with Google
+              </button>
+            )}
           </div>
         </div>
       ) : (
         <div className="space-y-3">
+          {/* Guest Sync Banner if not logged in */}
+          {!user && (
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3 sm:p-3.5 bg-gradient-to-r from-blue-50 via-indigo-50 to-amber-50 border border-blue-200/80 rounded-xl text-slate-800 shadow-2xs">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0 font-bold text-xs shadow-xs">
+                  <LogIn className="w-4 h-4" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-900">Local Device History ({userResults.length} {userResults.length === 1 ? 'attempt' : 'attempts'})</p>
+                  <p className="text-[11px] text-slate-600">
+                    You are viewing results saved on this device. Sign in with Google to sync and backup your progress across all devices.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={onLogin}
+                className="px-3.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-all shadow-xs cursor-pointer shrink-0"
+              >
+                Sign in to Sync
+              </button>
+            </div>
+          )}
+          {loadingResults && (
+            <div className="flex items-center gap-2 text-xs text-blue-600 bg-blue-50/80 px-3 py-1.5 rounded-lg border border-blue-100">
+              <Loader2 className="w-3.5 h-3.5 animate-spin" />
+              <span>Updating analytics in background...</span>
+            </div>
+          )}
 
           {/* ========================================================= */}
           {/* COMPACT TOP METRIC CARDS                                  */}

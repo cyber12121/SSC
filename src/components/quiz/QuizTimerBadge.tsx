@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface QuizTimerBadgeProps {
   mode: 'practice' | 'mock';
@@ -25,36 +25,77 @@ export const QuizTimerBadge: React.FC<QuizTimerBadgeProps> = ({
   const [questionTimer, setQuestionTimer] = useState(initialQuestionTime);
   const [mockTimeLeft, setMockTimeLeft] = useState<number | null>(totalQuizTime);
 
-  // Sync initial question timer when currentIdx changes
+  const onTimeUpRef = useRef(onTimeUp);
+  onTimeUpRef.current = onTimeUp;
+
+  // Practice mode: track elapsed question time using high-precision Date.now()
+  const practiceStartRef = useRef<number>(Date.now());
+  const practiceBaseRef = useRef<number>(initialQuestionTime);
+
   useEffect(() => {
+    practiceBaseRef.current = initialQuestionTime;
+    practiceStartRef.current = Date.now();
     setQuestionTimer(initialQuestionTime);
   }, [currentIdx, initialQuestionTime]);
 
-  // Practice mode question elapsed time
   useEffect(() => {
-    if (isFinished || isPaused) return;
-    const interval = setInterval(() => {
-      setQuestionTimer(prev => prev + 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [isFinished, isPaused, currentIdx]);
+    if (mode !== 'practice' || isFinished) return;
 
-  // Mock mode countdown timer
-  useEffect(() => {
-    if (totalQuizTime == null || isFinished || isPaused) return;
+    if (isPaused) {
+      // Accumulate elapsed time up to pause
+      practiceBaseRef.current = practiceBaseRef.current + Math.floor((Date.now() - practiceStartRef.current) / 1000);
+      return;
+    }
+
+    practiceStartRef.current = Date.now();
     const interval = setInterval(() => {
-      setMockTimeLeft(prev => {
-        if (prev == null) return null;
-        if (prev <= 1) {
-          clearInterval(interval);
-          onTimeUp();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+      const elapsed = Math.floor((Date.now() - practiceStartRef.current) / 1000);
+      setQuestionTimer(practiceBaseRef.current + elapsed);
+    }, 500);
+
     return () => clearInterval(interval);
-  }, [totalQuizTime, isFinished, isPaused, onTimeUp]);
+  }, [mode, isFinished, isPaused, currentIdx]);
+
+  // Mock mode: countdown timer with timestamp references
+  const remainingSecRef = useRef<number | null>(totalQuizTime);
+  const targetEndRef = useRef<number>(Date.now() + (totalQuizTime || 0) * 1000);
+
+  useEffect(() => {
+    if (totalQuizTime != null && remainingSecRef.current === null) {
+      remainingSecRef.current = totalQuizTime;
+      targetEndRef.current = Date.now() + totalQuizTime * 1000;
+      setMockTimeLeft(totalQuizTime);
+    }
+  }, [totalQuizTime]);
+
+  useEffect(() => {
+    if (mode !== 'mock' || totalQuizTime == null || isFinished) return;
+
+    if (isPaused) {
+      // Freeze remaining seconds
+      if (targetEndRef.current) {
+        remainingSecRef.current = Math.max(0, Math.ceil((targetEndRef.current - Date.now()) / 1000));
+      }
+      return;
+    }
+
+    // Unpaused: re-anchor targetEndRef from remaining seconds
+    const currentRemaining = remainingSecRef.current ?? totalQuizTime;
+    targetEndRef.current = Date.now() + currentRemaining * 1000;
+
+    const interval = setInterval(() => {
+      const secLeft = Math.max(0, Math.ceil((targetEndRef.current - Date.now()) / 1000));
+      remainingSecRef.current = secLeft;
+      setMockTimeLeft(secLeft);
+
+      if (secLeft <= 0) {
+        clearInterval(interval);
+        onTimeUpRef.current();
+      }
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, [mode, totalQuizTime, isFinished, isPaused]);
 
   return (
     <div className="flex flex-col items-center">

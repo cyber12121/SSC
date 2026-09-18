@@ -15,7 +15,15 @@ const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m =
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
 const SrsHub = React.lazy(() => import('./components/srs/SrsHub').then(m => ({ default: m.SrsHub })));
 import { SrsCardConfirmModal } from './components/srs/SrsCardConfirmModal';
-import { getStoredSRSCards, computeDeckStats, convertQuestionToSRSCardCandidate, addSRSCardsBatch, SRS_UPDATED_EVENT } from './utils/srsEngine';
+import {
+  getStoredSRSCards,
+  computeDeckStats,
+  convertQuestionToSRSCardCandidate,
+  addSRSCardsBatch,
+  SRS_UPDATED_EVENT,
+  parseTimeSeconds,
+  getDefaultSubjectAvgTime
+} from './utils/srsEngine';
 import { SRSCard } from './types/srs';
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
@@ -53,11 +61,26 @@ const GK_ICONS: Record<string, any> = {
   FileText,
 };
 
-// Dynamic import of all subject JSON files (recursive) - lazy split chunks!
-// Only load the two data folders we actually use — avoids registering mock_questions, drills, etc.
+import { parseSubjectChapter } from './utils/subjectDataLoader';
+
+// Dynamic import fallback of all subject JSON files (used if API is unavailable, e.g. static export)
 const subjectModules = import.meta.glob('./data/{mock_errors,chapter_bank}/**/*.json');
 
 const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankData: SubjectData }> => {
+  // 1. Fast Path: Single fetch from Express backend (~50ms)
+  try {
+    const res = await fetch('/api/subject-data');
+    if (res.ok) {
+      const data = await res.json();
+      if (data && (Object.keys(data.rawBankData || {}).length > 0 || Object.keys(data.rawMockData || {}).length > 0)) {
+        return data;
+      }
+    }
+  } catch (e) {
+    console.warn('[loadSubjectData] API fetch failed, using local module fallback:', e);
+  }
+
+  // 2. Fallback Path: Client-side dynamic import chunk loader
   const rawMockData: SubjectData = {};
   const rawBankData: SubjectData = {};
 
@@ -76,105 +99,7 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 
   loaded.forEach(item => {
     if (!item) return;
-    const { path, data } = item;
-    // Determine if it's mockErrors or chapterBank based on the file path
-    const isMock = path.includes('/mock_errors/');
-    const isBank = path.includes('/chapter_bank/');
-
-    if (!isMock && !isBank) return;
-
-    // The data could be a single chapter object or an array of chapters
-    const chapters = Array.isArray(data) ? data : (data.questions ? [data] : []);
-
-    // If the data structure is the old one (with chapterBank/mockErrors keys), handle it too
-    if (data.chapterBank) chapters.push(...data.chapterBank);
-    if (data.mockErrors) chapters.push(...data.mockErrors);
-
-    // Determine section and topic from path (applicable to Mathematics and English in chapter_bank)
-    let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'black_book' | 'general' | undefined = undefined;
-    let topic_name: string | undefined = undefined;
-    let set_name: string | undefined = undefined;
-
-    if (isBank) {
-      if (path.includes('/mathematics/spartan/')) section = 'spartan';
-      else if (path.includes('/mathematics/pinnacle/')) section = 'pinnacle';
-      else if (path.includes('/mathematics/qrb/')) section = 'qrb';
-      else if (path.includes('/mathematics/top500/')) section = 'top500';
-      else if (path.includes('/english/ayush_vocab/')) section = 'ayush_vocab';
-      else if (path.includes('/english/black_book/')) section = 'black_book';
-      else if (path.includes('/english/')) section = 'general';
-
-      if (section && section !== 'general') {
-        const marker = `/${section}/`;
-        const parts = path.split(marker);
-        if (parts.length > 1) {
-          const subPath = parts[1]; // e.g., "percentage/set_1.json" or "synonyms/set_1.json"
-          const subParts = subPath.split('/');
-          if (subParts.length >= 2) {
-            topic_name = subParts[0]; // "percentage" or "synonyms"
-            set_name = subParts[1].replace('.json', ''); // "set_1"
-          }
-        }
-      } else if (path.includes('/general_awareness/')) {
-        const parts = path.split('/general_awareness/');
-        if (parts.length > 1) {
-          const subPath = parts[1]; // e.g., "chemistry/acid_bases_and_salts_vivid.json"
-          const subParts = subPath.split('/');
-          if (subParts.length >= 2) {
-            topic_name = subParts[0]; // "chemistry"
-          }
-        }
-      } else if (path.includes('/gk_full_tests/')) {
-        const fileName = (path.split('/gk_full_tests/')[1] || '').toLowerCase();
-        if (fileName.includes('history')) topic_name = 'history';
-        else if (fileName.includes('polity')) topic_name = 'polity';
-        else if (fileName.includes('geography')) topic_name = 'geography';
-        else if (fileName.includes('economics')) topic_name = 'economics';
-        else if (fileName.includes('physics')) topic_name = 'physics';
-        else if (fileName.includes('chemistry')) topic_name = 'chemistry';
-        else if (fileName.includes('biology')) topic_name = 'biology';
-        else topic_name = 'tests';
-      }
-    }
-
-    chapters.forEach((chapter: any) => {
-      let subject = chapter.subject;
-
-      // Unify GK Full Tests under General Awareness so all GK is subject-wise
-      if (path.includes('/gk_full_tests/')) {
-        chapter.is_test = true;
-        chapter.subject = 'General Awareness';
-        subject = 'General Awareness';
-      }
-
-      if (path.includes('/english/')) {
-        chapter.subject = 'English';
-        subject = 'English';
-      }
-
-      if (section) {
-        chapter.section = section;
-      }
-      if (topic_name) {
-        chapter.topic_name = topic_name;
-      }
-      if (set_name) {
-        chapter.set_name = set_name;
-      }
-
-      // Compute GK Subject
-      if (subject === 'General Awareness' || path.includes('/general_awareness/') || path.includes('/gk_full_tests/')) {
-        chapter.gk_subject = getChapterGKSubject(chapter);
-      }
-
-      if (isMock || (path.includes('mockErrors') && !isBank)) {
-        if (!rawMockData[subject]) rawMockData[subject] = [];
-        rawMockData[subject].push(chapter);
-      } else {
-        if (!rawBankData[subject]) rawBankData[subject] = [];
-        rawBankData[subject].push(chapter);
-      }
-    });
+    parseSubjectChapter(item.path, item.data, rawMockData, rawBankData);
   });
 
   return { rawMockData, rawBankData };
@@ -377,6 +302,7 @@ export default function App() {
     const filteredData: SubjectData = {};
     Object.entries(data).forEach(([subject, chapters]) => {
       const mergedChaptersMap: Record<string, Chapter> = {};
+      const chapterQTextsMap = new Map<string, Set<string>>();
 
       chapters.forEach(chapter => {
         const titleLower = chapter.chapter_title.trim().toLowerCase();
@@ -404,10 +330,11 @@ export default function App() {
             chapter_title: canonicalTitle,
             questions: []
           };
+          chapterQTextsMap.set(key, new Set<string>());
         }
 
         const existingQs = mergedChaptersMap[key].questions;
-        const existingQTexts = new Set(existingQs.map(q => q.question.trim().toLowerCase()));
+        const existingQTexts = chapterQTextsMap.get(key)!;
 
         chapter.questions.forEach(q => {
           const qId = getQuestionId(chapter, q);
@@ -471,7 +398,16 @@ export default function App() {
 
   const currentData = category === 'mockErrors' ? mockData : bankData;
 
-  const [userResults, setUserResults] = useState<QuizResult[]>([]);
+  const [userResults, setUserResults] = useState<QuizResult[]>(() => {
+    try {
+      const guestRaw = safeStorage.getItem('guest_results') || safeStorage.getItem('cgl_user_results_cache_guest');
+      if (guestRaw) {
+        const parsed = JSON.parse(guestRaw);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch { }
+    return [];
+  });
   const [loadingResults, setLoadingResults] = useState(false);
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loadingBookmarks, setLoadingBookmarks] = useState(false);
@@ -485,8 +421,13 @@ export default function App() {
   // Latest (newest) saved result per chapter, keyed for quick lookup on Home/Dashboard.
   const latestResultByChapter = React.useMemo(() => {
     const map = new Map<string, QuizResult>();
-    // Track the newest saved attempt per chapter
-    userResults.forEach(r => {
+    // Sort descending by completedAt so newest attempt is always picked
+    const sorted = [...userResults].sort((a, b) => {
+      const timeA = a.completedAt ? new Date(a.completedAt).getTime() : 0;
+      const timeB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
+      return (isNaN(timeB) ? 0 : timeB) - (isNaN(timeA) ? 0 : timeA);
+    });
+    sorted.forEach(r => {
       const key = `${r.subject}|${r.chapter_title}`;
       if (!map.has(key)) map.set(key, r);
     });
@@ -500,6 +441,21 @@ export default function App() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
+      try {
+        const key = currentUser ? `cgl_user_results_cache_${currentUser.uid}` : 'guest_results';
+        const cached = safeStorage.getItem(key) || safeStorage.getItem('cgl_user_results_cache_guest');
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Array.isArray(parsed)) {
+            parsed.sort((a, b) => {
+              const tA = a.completedAt ? new Date(a.completedAt).getTime() : 0;
+              const tB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
+              return (isNaN(tB) ? 0 : tB) - (isNaN(tA) ? 0 : tA);
+            });
+            setUserResults(parsed);
+          }
+        }
+      } catch { }
     });
     return () => unsubscribe();
   }, []);
@@ -531,8 +487,43 @@ export default function App() {
 
   // Fetch Results
   const fetchResults = useCallback(async () => {
-    if (!user) return;
+    if (!user) {
+      try {
+        const guestHistory = JSON.parse(safeStorage.getItem('guest_results') || '[]');
+        const cachedGuest = JSON.parse(safeStorage.getItem('cgl_user_results_cache_guest') || '[]');
+        const combined = [...guestHistory, ...cachedGuest];
+        const seen = new Set<string>();
+        const unique = combined.filter((r: any) => {
+          if (!r) return false;
+          const id = r.id || `${r.subject}-${r.chapter_title}-${r.completedAt}`;
+          if (seen.has(id)) return false;
+          seen.add(id);
+          return true;
+        });
+        unique.sort((a, b) => {
+          const tA = a.completedAt ? new Date(a.completedAt).getTime() : 0;
+          const tB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
+          return (isNaN(tB) ? 0 : tB) - (isNaN(tA) ? 0 : tA);
+        });
+        setUserResults(unique);
+      } catch (e) {
+        console.warn('Error reading local guest results:', e);
+      }
+      return;
+    }
+
     setLoadingResults(true);
+    // Populate immediately from local cache if userResults is empty
+    try {
+      const cached = safeStorage.getItem(`cgl_user_results_cache_${user.uid}`);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setUserResults(parsed);
+        }
+      }
+    } catch { }
+
     try {
       const q = query(
         collection(db, 'results'),
@@ -540,10 +531,18 @@ export default function App() {
         orderBy('completedAt', 'desc')
       );
       const querySnapshot = await getDocs(q);
-      const results = querySnapshot.docs.map(doc => ({
+      const remoteResults = querySnapshot.docs.map(doc => ({
         ...doc.data(),
         id: doc.id
       })) as QuizResult[];
+
+      // Merge offline results
+      let offlineResults: QuizResult[] = [];
+      try {
+        offlineResults = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
+      } catch { }
+
+      const allMerged = [...remoteResults, ...offlineResults];
 
       // Filter out cleared history and individually deleted items
       let clearedAt: string | null = null;
@@ -555,24 +554,88 @@ export default function App() {
         }
       } catch (e) { }
 
-      const filtered = results.filter(r => {
+      const seen = new Set<string>();
+      const filtered = allMerged.filter(r => {
+        if (!r || !r.id) return false;
         if (hiddenIds.has(r.id)) return false;
         if (clearedAt && r.completedAt && r.completedAt <= clearedAt) return false;
+        if (seen.has(r.id)) return false;
+        seen.add(r.id);
         return true;
       });
 
+      filtered.sort((a, b) => {
+        const tA = a.completedAt ? new Date(a.completedAt).getTime() : 0;
+        const tB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
+        return (isNaN(tB) ? 0 : tB) - (isNaN(tA) ? 0 : tA);
+      });
+
       setUserResults(filtered);
+      safeStorage.setItem(`cgl_user_results_cache_${user.uid}`, JSON.stringify(filtered.slice(0, 100)));
     } catch (error) {
-      console.error('Error fetching results:', error);
+      console.warn('Error fetching results with orderBy, attempting fallback query:', error);
+      try {
+        const fallbackQ = query(
+          collection(db, 'results'),
+          where('userId', '==', user.uid)
+        );
+        const fallbackSnapshot = await getDocs(fallbackQ);
+        const fallbackResults = fallbackSnapshot.docs.map(doc => ({
+          ...doc.data(),
+          id: doc.id
+        })) as QuizResult[];
+
+        let offlineResults: QuizResult[] = [];
+        try {
+          offlineResults = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
+        } catch { }
+
+        const allFallback = [...fallbackResults, ...offlineResults];
+        let clearedAt: string | null = null;
+        let hiddenIds = new Set<string>();
+        try {
+          if (typeof window !== 'undefined') {
+            clearedAt = window.localStorage?.getItem('activity_cleared_at_' + user.uid) || null;
+            hiddenIds = new Set(JSON.parse(window.localStorage?.getItem('hidden_result_ids_' + user.uid) || '[]'));
+          }
+        } catch (e) { }
+
+        const seen = new Set<string>();
+        const filtered = allFallback.filter(r => {
+          if (!r || !r.id) return false;
+          if (hiddenIds.has(r.id)) return false;
+          if (clearedAt && r.completedAt && r.completedAt <= clearedAt) return false;
+          if (seen.has(r.id)) return false;
+          seen.add(r.id);
+          return true;
+        });
+
+        filtered.sort((a, b) => {
+          const tA = a.completedAt ? new Date(a.completedAt).getTime() : 0;
+          const tB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
+          return (isNaN(tB) ? 0 : tB) - (isNaN(tA) ? 0 : tA);
+        });
+        setUserResults(filtered);
+        safeStorage.setItem(`cgl_user_results_cache_${user.uid}`, JSON.stringify(filtered.slice(0, 100)));
+      } catch (fallbackErr) {
+        console.warn('Fallback result fetch failed, keeping local cache:', fallbackErr);
+      }
     } finally {
       setLoadingResults(false);
     }
   }, [user]);
 
-  // Only refetch results when the authenticated user changes — not on every view navigation
+  // Refetch results when the authenticated user changes
   useEffect(() => {
     fetchResults();
   }, [user, fetchResults]);
+
+  // Also refetch/sync results when navigating to dashboard or home
+  useEffect(() => {
+    if (view === 'dashboard' || view === 'home') {
+      fetchResults();
+    }
+  }, [view, fetchResults]);
 
   // Fetch Bookmarks — wrapped in useCallback to prevent stale closure issues
   const fetchBookmarks = useCallback(async () => {
@@ -984,11 +1047,14 @@ export default function App() {
     };
 
     if (!user) {
-      const guestSaved = { ...fullResult, id: 'guest-' + Date.now() };
+      const guestSaved: QuizResult = { ...fullResult, id: 'guest-' + Date.now() };
       try {
-        const guestHistory = JSON.parse(safeStorage.getItem('guest_results') || '[]');
-        safeStorage.setItem('guest_results', JSON.stringify([guestSaved, ...guestHistory].slice(0, 50)));
+        const guestHistory: QuizResult[] = JSON.parse(safeStorage.getItem('guest_results') || '[]');
+        const updated = [guestSaved, ...guestHistory.filter(r => r.id !== guestSaved.id)].slice(0, 100);
+        safeStorage.setItem('guest_results', JSON.stringify(updated));
+        safeStorage.setItem('cgl_user_results_cache_guest', JSON.stringify(updated));
       } catch { }
+      setUserResults(prev => [guestSaved, ...prev.filter(r => r.id !== guestSaved.id)]);
       return guestSaved;
     }
 
@@ -998,7 +1064,13 @@ export default function App() {
       const sanitizedDoc = JSON.parse(JSON.stringify(fullResult));
       const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
       savedResult = { ...fullResult, id: docRef.id };
-      setUserResults(prev => [savedResult, ...prev.filter(r => r.id !== savedResult.id)]);
+      setUserResults(prev => {
+        const updated = [savedResult, ...prev.filter(r => r.id !== savedResult.id)];
+        try {
+          safeStorage.setItem('cgl_user_results_cache_' + user.uid, JSON.stringify(updated.slice(0, 100)));
+        } catch { }
+        return updated;
+      });
     } catch (error) {
       console.warn('Firestore offline or storage restricted, saving attempt locally:', error);
       savedResult = { ...fullResult, id: 'local-' + Date.now() };
@@ -1006,24 +1078,60 @@ export default function App() {
         const localHistory = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
         safeStorage.setItem('offline_results_' + user.uid, JSON.stringify([savedResult, ...localHistory].slice(0, 50)));
       } catch { }
-      setUserResults(prev => [savedResult, ...prev.filter(r => r.id !== savedResult.id)]);
+      setUserResults(prev => {
+        const updated = [savedResult, ...prev.filter(r => r.id !== savedResult.id)];
+        try {
+          safeStorage.setItem('cgl_user_results_cache_' + user.uid, JSON.stringify(updated.slice(0, 100)));
+        } catch { }
+        return updated;
+      });
     }
 
-    // Check for missed questions to offer SRS enrollment
+    // Check for missed questions or speed traps (user time > existing avg + 5s) to offer SRS enrollment
     try {
-      const missedCandidates = (results.questionDetails || [])
-        .filter(d => (!d.isCorrect || !d.selectedAnswer) && d.question)
-        .map(d => convertQuestionToSRSCardCandidate(
-          d.question!,
-          !d.selectedAnswer ? 'quiz_unattempted' : 'quiz_wrong',
-          results.chapter_title,
-          d.selectedAnswer
-        ));
+      const candidates: SRSCard[] = [];
 
-      if (missedCandidates.length > 0) {
-        setSrsConfirmCards(missedCandidates);
-        setSrsConfirmTitle('Enroll Missed Questions to SRS');
-        setSrsConfirmSource(`${results.chapter_title} (${missedCandidates.length} Missed)`);
+      (results.questionDetails || []).forEach(d => {
+        if (!d.question) return;
+
+        const userTime = Number(d.timeSpent || 0);
+        const existingAvg = parseTimeSeconds(d.avgTimeSeconds || d.avgTime || d.question.avgTime) || getDefaultSubjectAvgTime(results.subject || d.question.subject);
+        const isSlow = userTime > (existingAvg + 5);
+
+        if (!d.selectedAnswer) {
+          // Unattempted
+          candidates.push(convertQuestionToSRSCardCandidate(
+            d.question,
+            'quiz_unattempted',
+            results.chapter_title,
+            '',
+            { userTime, avgTime: existingAvg }
+          ));
+        } else if (!d.isCorrect) {
+          // Incorrect
+          candidates.push(convertQuestionToSRSCardCandidate(
+            d.question,
+            'quiz_wrong',
+            results.chapter_title,
+            d.selectedAnswer,
+            { userTime, avgTime: existingAvg }
+          ));
+        } else if (isSlow) {
+          // Correct, but took longer than existing average + 5 seconds
+          candidates.push(convertQuestionToSRSCardCandidate(
+            d.question,
+            'speed_trap',
+            results.chapter_title,
+            d.selectedAnswer,
+            { userTime, avgTime: existingAvg }
+          ));
+        }
+      });
+
+      if (candidates.length > 0) {
+        setSrsConfirmCards(candidates);
+        setSrsConfirmTitle('Enroll Questions to SRS Revision');
+        setSrsConfirmSource(`${results.chapter_title} (${candidates.length} Questions: Missed & Slow Solves)`);
         setSrsConfirmOpen(true);
       }
     } catch (srsErr) {
@@ -1048,23 +1156,35 @@ export default function App() {
   };
 
   const handleClearAllResults = async () => {
-    if (!user) {
-      alert('Please log in to manage your activity history.');
-      return;
-    }
     if (userResults.length === 0) {
       alert('No recent activity records to clear.');
       return;
     }
+
+    if (!user) {
+      if (!window.confirm(`Are you sure you want to clear all ${userResults.length} local practice records? This action cannot be undone.`)) {
+        return;
+      }
+      try {
+        safeStorage.removeItem('guest_results');
+        safeStorage.removeItem('cgl_user_results_cache_guest');
+      } catch { }
+      setUserResults([]);
+      alert('All local practice records have been cleared.');
+      return;
+    }
+
     if (!window.confirm(`Are you sure you want to permanently delete all ${userResults.length} records from your Recent Activity history? This action cannot be undone.`)) {
       return;
     }
     setLoadingResults(true);
 
-    // 1. Immediately record cleared timestamp in localStorage so UI is instantly and permanently cleared
+    // 1. Immediately record cleared timestamp in localStorage and clear local cache
     const nowIso = new Date().toISOString();
     try {
       localStorage.setItem('activity_cleared_at_' + user.uid, nowIso);
+      safeStorage.removeItem('cgl_user_results_cache_' + user.uid);
+      safeStorage.removeItem('offline_results_' + user.uid);
     } catch { }
 
     // 2. Clear state immediately
@@ -1204,17 +1324,34 @@ export default function App() {
     if (!resultId) return;
     if (!window.confirm('Are you sure you want to delete this quiz attempt from your history?')) return;
 
-    // Store in hidden list so it immediately and permanently disappears
-    if (user) {
+    if (!user) {
       try {
-        const key = 'hidden_result_ids_' + user.uid;
-        const hidden: string[] = JSON.parse(localStorage.getItem(key) || '[]');
-        if (!hidden.includes(resultId)) {
-          hidden.push(resultId);
-          localStorage.setItem(key, JSON.stringify(hidden));
-        }
+        const guestHistory: QuizResult[] = JSON.parse(safeStorage.getItem('guest_results') || '[]');
+        const updated = guestHistory.filter(r => r.id !== resultId);
+        safeStorage.setItem('guest_results', JSON.stringify(updated));
+        safeStorage.setItem('cgl_user_results_cache_guest', JSON.stringify(updated));
       } catch { }
+      setUserResults(prev => prev.filter(r => r.id !== resultId));
+      return;
     }
+
+    // Store in hidden list so it immediately and permanently disappears
+    try {
+      const key = 'hidden_result_ids_' + user.uid;
+      const hidden: string[] = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!hidden.includes(resultId)) {
+        hidden.push(resultId);
+        localStorage.setItem(key, JSON.stringify(hidden));
+      }
+      // Update local cache
+      const cachedKey = 'cgl_user_results_cache_' + user.uid;
+      const cached: QuizResult[] = JSON.parse(safeStorage.getItem(cachedKey) || '[]');
+      safeStorage.setItem(cachedKey, JSON.stringify(cached.filter(r => r.id !== resultId)));
+      // Update offline results if any
+      const offKey = 'offline_results_' + user.uid;
+      const off: QuizResult[] = JSON.parse(safeStorage.getItem(offKey) || '[]');
+      safeStorage.setItem(offKey, JSON.stringify(off.filter(r => r.id !== resultId)));
+    } catch { }
 
     setUserResults(prev => prev.filter(r => r.id !== resultId));
 
@@ -2526,7 +2663,7 @@ export default function App() {
                           chip: 'from-amber-500 to-orange-600',
                           badge: 'Black Book Edition',
                           title: 'Black Book Vocabulary',
-                          desc: '317 One Word Substitutions organized into 12 letter-based sets. Master definitions with high-yield 4-choice questions.',
+                          desc: '790 High-Yield questions: One Word Substitution (317 Qs), Synonyms (434 Qs) & Phrasal Verbs (39 Qs) in 30 sets.',
                           count: `${(currentData['English'] || []).filter(ch => ch.section === 'black_book').reduce((acc, ch) => acc + (ch.questions?.length || 0), 0)} Questions • ${(currentData['English'] || []).filter(ch => ch.section === 'black_book').length} Sets`
                         },
                         {
@@ -2633,7 +2770,7 @@ export default function App() {
                                 : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
                                   ? '914 High-Yield SSC 2025 vocabulary questions in sets of 20'
                                   : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book'
-                                    ? '317 High-Yield One Word Substitution questions in 12 letter-based sets'
+                                    ? '790 High-Yield OWS, Synonyms & Phrasal Verbs questions in 30 sets'
                                     : 'Comprehensive chapter-wise question vault'}
                           </p>
                         </div>
@@ -3198,7 +3335,7 @@ export default function App() {
                           if (isTopicLevelSection && !selectedTopic) {
                             const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
                             if (isEnglishVocabSection) {
-                              const vocabOrder = ['one_word_substitution', 'synonyms', 'antonyms', 'idioms_and_phrases', 'spellings'];
+                              const vocabOrder = ['one_word_substitution', 'synonyms', 'phrasal_verbs', 'antonyms', 'idioms_and_phrases', 'spellings'];
                               topics.sort((a, b) => {
                                 const idxA = vocabOrder.indexOf(a);
                                 const idxB = vocabOrder.indexOf(b);
@@ -3216,9 +3353,10 @@ export default function App() {
                                 ? (topic === 'synonyms' ? 'Synonyms'
                                   : topic === 'antonyms' ? 'Antonyms'
                                     : topic === 'one_word_substitution' ? 'One Word Substitution'
-                                      : topic === 'idioms_and_phrases' ? 'Idioms & Phrases'
-                                        : topic === 'spellings' ? 'Spellings'
-                                          : topic.replace(/_/g, ' '))
+                                      : topic === 'phrasal_verbs' ? 'Phrasal Verbs'
+                                        : topic === 'idioms_and_phrases' ? 'Idioms & Phrases'
+                                          : topic === 'spellings' ? 'Spellings'
+                                            : topic.replace(/_/g, ' '))
                                 : topic.replace(/_/g, ' ');
 
                               const chipGrad = isEnglishBlackBook

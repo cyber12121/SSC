@@ -3,7 +3,7 @@ import {
   Search, Filter, Trash2, Edit3, RotateCcw, Plus,
   Sparkles, CheckSquare, Square, Download, BookOpen,
   Calendar, Layers, CheckCircle, AlertTriangle, ArrowLeft,
-  Upload, FileText, ChevronDown
+  Upload, FileText, ChevronDown, Info
 } from 'lucide-react';
 import { SRSCard, SRSCardStatus } from '../../types/srs';
 import {
@@ -13,8 +13,10 @@ import {
   matchesSubject,
   exportCardsToJson,
   exportCardsToCsv,
-  parseImportedDeckFile
+  parseImportedDeckFile,
+  isLeechCard
 } from '../../utils/srsEngine';
+import { SrsFormatGuideModal } from './SrsFormatGuideModal';
 
 interface SrsCardExplorerProps {
   cards: SRSCard[];
@@ -47,6 +49,7 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [bulkDeleteConfirmOpen, setBulkDeleteConfirmOpen] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
+  const [formatGuideOpen, setFormatGuideOpen] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -96,6 +99,7 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
         if (statusFilter === 'due' && !isDue) return false;
         if (statusFilter === 'mastered' && !isMastered) return false;
         if (statusFilter === 'learning' && card.stage > 1) return false;
+        if (statusFilter === 'leeches' && !isLeechCard(card)) return false;
       }
 
       return true;
@@ -176,6 +180,16 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
           >
             <Upload className="w-3.5 h-3.5 text-slate-500" />
             <span>Import File</span>
+          </button>
+
+          {/* Format Info Guide Button */}
+          <button
+            onClick={() => setFormatGuideOpen(true)}
+            className="px-2.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition-colors shadow-2xs cursor-pointer"
+            title="View supported deck upload formats (Text, CSV, JSON)"
+          >
+            <Info className="w-3.5 h-3.5 text-indigo-600" />
+            <span className="hidden sm:inline">Format Guide</span>
           </button>
 
           {/* Export Dropdown */}
@@ -329,7 +343,8 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
               { id: 'all', label: 'All' },
               { id: 'due', label: 'Due Today' },
               { id: 'learning', label: 'Learning' },
-              { id: 'mastered', label: 'Mastered' }
+              { id: 'mastered', label: 'Mastered' },
+              { id: 'leeches', label: '⚠️ Leeches' }
             ].map(st => (
               <button
                 key={st.id}
@@ -422,9 +437,17 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
                             🎴 Anki Flashcard
                           </span>
                         )}
+                        {card.source === 'speed_trap' && (
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1">
+                            <span>⚡ Speed Trap</span>
+                            {card.userTimeSpent && (
+                              <span className="opacity-75 font-normal">({card.userTimeSpent}s)</span>
+                            )}
+                          </span>
+                        )}
                         {card.topic && (
                           <span className="text-[11px] font-semibold text-slate-500">
-                            {card.topic}
+                            • {card.topic}
                           </span>
                         )}
                         {card.sourceTitle && (
@@ -440,6 +463,16 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
                         {isMastered && (
                           <span className="text-[10px] px-1.5 py-0.2 rounded font-black bg-emerald-100 text-emerald-800 border border-emerald-300">
                             Mastered
+                          </span>
+                        )}
+                        {isLeechCard(card) && (
+                          <span className="text-[10px] px-1.5 py-0.2 rounded font-black bg-rose-100 text-rose-800 border border-rose-300">
+                            ⚠️ Leech ({card.lapses || 4} fails)
+                          </span>
+                        )}
+                        {card.coolOffUntil && card.coolOffUntil > todayStr && (
+                          <span className="text-[10px] px-1.5 py-0.2 rounded font-black bg-sky-100 text-sky-800 border border-sky-300">
+                            😴 Cooling Off ({card.coolOffUntil})
                           </span>
                         )}
                       </div>
@@ -559,6 +592,12 @@ export const SrsCardExplorer: React.FC<SrsCardExplorerProps> = ({
           </div>
         </div>
       )}
+
+      {/* Deck Upload Format Guide Modal */}
+      <SrsFormatGuideModal
+        isOpen={formatGuideOpen}
+        onClose={() => setFormatGuideOpen(false)}
+      />
     </div>
   );
 };

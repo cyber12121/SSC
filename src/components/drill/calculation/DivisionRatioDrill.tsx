@@ -31,6 +31,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
   const [isFinished, setIsFinished] = useState<boolean>(false);
 
   const timerRef = useRef<any>(null);
+  const startTimeRef = useRef<number>(0);
 
   const trackBriefings = {
     decimal_percentage: {
@@ -76,6 +77,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
 
   const startDrill = (track: DivTrack = activeTrack) => {
     setActiveTrack(track);
+    startTimeRef.current = Date.now();
     setIsStarted(true);
     setRoundCount(1);
     setScore(0);
@@ -97,14 +99,17 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
     setRoundCount(1);
     setScore(0);
     setElapsedTime(0);
+    startTimeRef.current = 0;
     setShowHelper(false);
   };
 
   useEffect(() => {
     if (isStarted && !isFinished) {
-      const startTime = Date.now() - elapsedTime * 1000;
+      if (!startTimeRef.current) {
+        startTimeRef.current = Date.now();
+      }
       timerRef.current = setInterval(() => {
-        setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
+        setElapsedTime(Math.round((Date.now() - startTimeRef.current) / 100) / 10);
       }, 100);
     } else {
       clearInterval(timerRef.current);
@@ -273,15 +278,21 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
                   {trackBriefings[activeTrack].description}
                 </div>
               </div>
-              <div className="text-right">
-                <span className="font-mono text-xs font-semibold text-slate-800">
-                  Problem {roundCount} <span className="text-slate-400 font-normal">of 5</span>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex items-center gap-1 font-mono text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                  <Timer className="w-3.5 h-3.5 text-slate-500" />
+                  {elapsedTime.toFixed(1)}s
                 </span>
-                <div className="w-28 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1 ml-auto">
-                  <div
-                    className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
-                    style={{ width: `${(roundCount / 5) * 100}%` }}
-                  />
+                <div className="text-right">
+                  <span className="font-mono text-xs font-semibold text-slate-800">
+                    Problem {roundCount} <span className="text-slate-400 font-normal">of 5</span>
+                  </span>
+                  <div className="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1 ml-auto">
+                    <div
+                      className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
+                      style={{ width: `${(roundCount / 5) * 100}%` }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

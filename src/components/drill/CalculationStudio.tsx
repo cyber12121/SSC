@@ -142,6 +142,8 @@ export const CalculationStudio: React.FC<Props> = ({
     [soundEnabled]
   );
 
+  const startTimeRef = useRef<number>(Date.now());
+
   // Initialize or transition section
   const initSection = useCallback((secId: SectionId) => {
     const fullDeck = generateExhaustiveDeckForSection(secId);
@@ -151,6 +153,8 @@ export const CalculationStudio: React.FC<Props> = ({
     setInputVal('');
     setFeedback(null);
     setRevealed(false);
+    setElapsedSeconds(0);
+    startTimeRef.current = Date.now();
 
     // Pick first question
     const firstQ = fullDeck[0];
@@ -164,19 +168,25 @@ export const CalculationStudio: React.FC<Props> = ({
     initSection(currentSection.id);
   }, [drillMode, routineSectionIndex, activeSectionId, initSection]);
 
-  // Keep focus on input
+  // Keep focus on input and ensure clean input state on question change
   useEffect(() => {
     if (!isFinished) {
+      setInputVal('');
+      setSelectedOption(null);
+      setFeedback(null);
+      if (inputRef.current) inputRef.current.value = '';
       inputRef.current?.focus();
     }
-  }, [currentQuestion, isFinished]);
+  }, [currentQuestion?.id, isFinished]);
 
   // Timer
   useEffect(() => {
     if (isFinished) return;
+    startTimeRef.current = Date.now() - elapsedSeconds * 1000;
     const interval = setInterval(() => {
-      setElapsedSeconds((s) => s + 1);
-    }, 1000);
+      const sec = Math.floor((Date.now() - startTimeRef.current) / 1000);
+      setElapsedSeconds(sec);
+    }, 500);
     return () => clearInterval(interval);
   }, [isFinished]);
 
@@ -217,6 +227,7 @@ export const CalculationStudio: React.FC<Props> = ({
     setSelectedOption(null);
     setFeedback(null);
     setRevealed(false);
+    if (inputRef.current) inputRef.current.value = '';
 
     let updatedQueue = [...currentQueue];
 
@@ -314,7 +325,7 @@ export const CalculationStudio: React.FC<Props> = ({
 
   // Correct submission
   const handleCorrect = () => {
-    if (!currentQuestion) return;
+    if (!currentQuestion || feedback !== null) return;
     playAudioTone('correct');
     setFeedback('correct');
 
@@ -344,7 +355,7 @@ export const CalculationStudio: React.FC<Props> = ({
 
   // Wrong submission
   const handleWrong = () => {
-    if (!currentQuestion) return;
+    if (!currentQuestion || feedback !== null) return;
     playAudioTone('wrong');
     setFeedback('wrong');
     setStreak(0);
@@ -416,24 +427,33 @@ export const CalculationStudio: React.FC<Props> = ({
     nextQuestion(currentDeckCopy, currentQueueCopy, false, activeRepeatCopy, currentQCopy);
   };
 
+  const checkIsAnswerMatch = (input: string, target: number | string): boolean => {
+    const clean = input.trim();
+    if (!clean) return false;
+    const targetStr = String(target).trim();
+    if (clean.toLowerCase() === targetStr.toLowerCase()) return true;
+    const num = parseInt(clean, 10);
+    const targetNum = typeof target === 'number' ? target : Number(targetStr);
+    return !isNaN(num) && !isNaN(targetNum) && num === targetNum;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (feedback !== null || revealed) return;
     const val = e.target.value;
-    if (!/^\d*$/.test(val)) return;
     setInputVal(val);
 
-    if (!currentQuestion || val === '') return;
-    const num = parseInt(val, 10);
-    if (!isNaN(num) && num === currentQuestion.answer) {
+    if (!currentQuestion) return;
+    if (checkIsAnswerMatch(val, currentQuestion.answer)) {
       handleCorrect();
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (feedback !== null || revealed) return;
     if (e.key === 'Enter') {
       e.preventDefault();
       if (!currentQuestion || inputVal.trim() === '') return;
-      const num = parseInt(inputVal.trim(), 10);
-      if (num === currentQuestion.answer) {
+      if (checkIsAnswerMatch(inputVal, currentQuestion.answer)) {
         handleCorrect();
       } else {
         handleWrong();
@@ -448,6 +468,7 @@ export const CalculationStudio: React.FC<Props> = ({
   };
 
   const handleNumpadPress = (char: string) => {
+    if (feedback !== null || revealed) return;
     if (char === 'clear') {
       setInputVal('');
       inputRef.current?.focus();
@@ -458,11 +479,8 @@ export const CalculationStudio: React.FC<Props> = ({
     } else {
       const nextVal = inputVal + char;
       setInputVal(nextVal);
-      if (currentQuestion) {
-        const num = parseInt(nextVal, 10);
-        if (num === currentQuestion.answer) {
-          handleCorrect();
-        }
+      if (currentQuestion && checkIsAnswerMatch(nextVal, currentQuestion.answer)) {
+        handleCorrect();
       }
       inputRef.current?.focus();
     }
@@ -471,6 +489,7 @@ export const CalculationStudio: React.FC<Props> = ({
   const restartRoutine = () => {
     setRoutineSectionIndex(0);
     setElapsedSeconds(0);
+    startTimeRef.current = Date.now();
     setStreak(0);
     setIsFinished(false);
     setStatsBySection({

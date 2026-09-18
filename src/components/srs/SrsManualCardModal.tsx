@@ -2,9 +2,10 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
   PlusCircle, X, Check, BookOpen, Lightbulb, Zap, HelpCircle,
-  Layers, FileText, CheckCircle2, AlertCircle, ArrowRight, ShieldCheck
+  Layers, FileText, CheckCircle2, AlertCircle, ArrowRight, ShieldCheck, Info
 } from 'lucide-react';
 import { SRSCard, SRSContentType } from '../../types/srs';
+import { SrsFormatGuideModal } from './SrsFormatGuideModal';
 
 interface SrsManualCardModalProps {
   isOpen: boolean;
@@ -36,6 +37,7 @@ export const SrsManualCardModal: React.FC<SrsManualCardModalProps> = ({
   const [bulkTopic, setBulkTopic] = useState<string>('');
   const [bulkText, setBulkText] = useState<string>('');
   const [delimiter, setDelimiter] = useState<';' | '\t' | '|' | ',' | 'auto'>('auto');
+  const [formatGuideOpen, setFormatGuideOpen] = useState(false);
 
   useEffect(() => {
     if (initialCard) {
@@ -446,13 +448,24 @@ Mirror Image of B ; Reverses horizontally (curves face left) ; Vertical axis ref
             </div>
 
             {/* Instruction Banner & Template Loader */}
-            <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between gap-2">
-              <div className="space-y-0.5">
-                <span className="font-bold text-slate-800 block text-[11px]">
-                  Format: <code>Front (Question/Word) ; Back (Answer/Solution) ; Mnemonic Trick (Optional)</code>
-                </span>
-                <span className="text-[10px] text-slate-500">
-                  Paste one card per line. Supports standard Anki exports and TSV/CSV.
+            <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between gap-2 flex-wrap">
+              <div className="space-y-1">
+                <div className="flex items-center space-x-2">
+                  <span className="font-bold text-slate-800 text-[11px]">
+                    Format: <code>Front ; Back ; Mnemonic</code>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setFormatGuideOpen(true)}
+                    className="px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200 transition-colors flex items-center space-x-1 text-[10px] font-bold cursor-pointer"
+                    title="View format instructions (Normal, CSV, JSON)"
+                  >
+                    <Info className="w-3 h-3 text-indigo-600" />
+                    <span>Format Guide</span>
+                  </button>
+                </div>
+                <span className="text-[10px] text-slate-500 block">
+                  Paste 1 card per line. Supports standard Anki exports, TSV, and CSV.
                 </span>
               </div>
               <button
@@ -539,6 +552,12 @@ Mirror Image of B ; Reverses horizontally (curves face left) ; Vertical axis ref
           </form>
         )}
       </motion.div>
+
+      {/* Upload & Paste Format Guide Modal */}
+      <SrsFormatGuideModal
+        isOpen={formatGuideOpen}
+        onClose={() => setFormatGuideOpen(false)}
+      />
     </div>
   );
 };

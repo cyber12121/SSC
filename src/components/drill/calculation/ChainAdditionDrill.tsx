@@ -58,17 +58,21 @@ export const ChainAdditionDrill: React.FC<ChainAdditionProps> = ({ autoStart = f
     setUserInput('');
     setFeedback('idle');
     setShowBreakdown(false);
+    if (inputRef.current) inputRef.current.value = '';
 
     setTimeout(() => {
       inputRef.current?.focus();
     }, 60);
   };
 
+  const startTimeRef = useRef<number>(0);
+
   const startNewSet = (level: number = selectedLevel) => {
     setIsStarted(true);
     setCurrentQuestionIdx(1);
     setRoundScore(0);
     setElapsedTime(0);
+    startTimeRef.current = Date.now();
     setIsFinished(false);
     setIsTimerRunning(true);
 
@@ -90,19 +94,24 @@ export const ChainAdditionDrill: React.FC<ChainAdditionProps> = ({ autoStart = f
     setIsFinished(false);
     setIsTimerRunning(false);
     setElapsedTime(0);
+    startTimeRef.current = 0;
   };
 
   // Stopwatch
   useEffect(() => {
     if (isTimerRunning && !isFinished) {
-      const startTime = Date.now() - elapsedTime * 1000;
+      if (!startTimeRef.current) {
+        startTimeRef.current = Date.now();
+      }
       timerRef.current = setInterval(() => {
-        setElapsedTime(Math.round((Date.now() - startTime) / 100) / 10);
+        setElapsedTime(Math.round((Date.now() - startTimeRef.current) / 100) / 10);
       }, 100);
     } else {
-      clearInterval(timerRef.current);
+      if (timerRef.current) clearInterval(timerRef.current);
     }
-    return () => clearInterval(timerRef.current);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [isTimerRunning, isFinished]);
 
   const expectedSum = useMemo(() => {
@@ -282,10 +291,15 @@ export const ChainAdditionDrill: React.FC<ChainAdditionProps> = ({ autoStart = f
                   {activeLevelConfig.nodeCount} Consecutive Nodes • Range {activeLevelConfig.minVal}–{activeLevelConfig.maxVal}
                 </div>
               </div>
-              <div className="text-right">
-                <span className="font-mono text-xs font-semibold text-slate-800">
-                  Problem {currentQuestionIdx} <span className="text-slate-400 font-normal">of 10</span>
-                </span>
+              <div className="text-right flex flex-col items-end">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-semibold text-slate-800">
+                    Problem {currentQuestionIdx} <span className="text-slate-400 font-normal">of 10</span>
+                  </span>
+                  <span className="font-mono text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-bold border border-slate-200">
+                    ⏱️ {elapsedTime.toFixed(1)}s
+                  </span>
+                </div>
                 <div className="w-28 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1 ml-auto">
                   <div
                     className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
@@ -370,10 +384,20 @@ export const ChainAdditionDrill: React.FC<ChainAdditionProps> = ({ autoStart = f
                   pattern="[0-9]*"
                   value={userInput}
                   onChange={(e) => {
-                    setUserInput(e.target.value.replace(/[^0-9]/g, ''));
-                    if (feedback !== 'idle') setFeedback('idle');
+                    if (feedback !== 'idle') return;
+                    const val = e.target.value.replace(/[^0-9]/g, '');
+                    setUserInput(val);
+                    if (val && parseInt(val, 10) === expectedSum) {
+                      setFeedback('correct');
+                      const newScore = roundScore + 1;
+                      setRoundScore(newScore);
+                      setTimeout(() => {
+                        advanceNextQuestion(newScore);
+                      }, 150);
+                    }
                   }}
                   onKeyDown={(e) => {
+                    if (feedback !== 'idle') return;
                     if (e.key === 'Enter') {
                       e.preventDefault();
                       checkAnswer();
