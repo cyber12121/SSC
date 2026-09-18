@@ -41,6 +41,8 @@ import { getLanguageText } from '../utils/formatQuestionText';
 import { convertQuestionToSRSCardCandidate, addSRSCardsBatch } from '../utils/srsEngine';
 import { SrsCardConfirmModal } from './srs/SrsCardConfirmModal';
 import { SRSCard } from '../types/srs';
+import { db, auth } from '../firebase';
+import { collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
 
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
   if (rawTime === undefined || rawTime === null) return null;
@@ -501,6 +503,82 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             });
           } catch (postErr) {
             console.warn('Backend sync failed, saved locally:', postErr);
+          }
+        }
+
+        // 4. Safe Firestore Sync for Silly Mistakes & RCA (deleteDoc + addDoc replacement compliant with firestore.rules)
+        if (auth.currentUser && result.id && !result.id.startsWith('guest-')) {
+          try {
+            const oldId = result.id;
+            const updatedQuestionDetails = items.map((it, idx) => {
+              const rca = currentRcaMap[idx] || it.rca || it.question?.rca;
+              return {
+                q_num: it.q_num,
+                timeSpent: it.timeSpent || 0,
+                isCorrect: Boolean(it.isCorrect),
+                selectedAnswer: it.selectedAnswer || '',
+                marked: Boolean(it.marked),
+                avgTime: it.avgTime || it.question?.avgTime || null,
+                avgTimeSeconds: it.avgTimeSeconds || it.question?.avgTimeSeconds || null,
+                rca: rca || null,
+                question: it.question ? {
+                  id: it.question.id || `${result.chapter_title}_${it.q_num}`,
+                  q_num: it.question.q_num || it.q_num,
+                  question: it.question.question || '',
+                  options: it.question.options || { a: '', b: '', c: '', d: '' },
+                  answer: it.question.answer || 'a',
+                  subject: it.question.subject || result.subject || '',
+                  section: it.question.section || '',
+                  topic: it.question.topic || it.question.tags?.topic || '',
+                  rca: rca || null,
+                } : null
+              };
+            });
+
+            const updatedDocData: any = {
+              userId: auth.currentUser.uid,
+              score: typeof result.score === 'number' ? result.score : 0,
+              totalQuestions: typeof result.totalQuestions === 'number' ? result.totalQuestions : items.length,
+              totalTime: typeof result.totalTime === 'number' ? result.totalTime : 0,
+              completedAt: result.completedAt || new Date().toISOString(),
+              chapter_title: result.chapter_title || 'Mock Test',
+              subject: result.subject || 'Full Mock',
+              category: result.category || 'mockErrors',
+              questionDetails: updatedQuestionDetails,
+              rcaMap: currentRcaMap
+            };
+            if (result.mode) updatedDocData.mode = result.mode;
+
+            const sanitized = JSON.parse(JSON.stringify(updatedDocData));
+
+            if (!oldId.startsWith('local-')) {
+              try {
+                await deleteDoc(doc(db, 'results', oldId));
+              } catch (delErr) {
+                console.warn('Could not delete older result before replacement:', delErr);
+              }
+            }
+
+            const newDocRef = await addDoc(collection(db, 'results'), sanitized);
+            result.id = newDocRef.id;
+
+            // Update user cache in localStorage
+            try {
+              const cacheKey = `cgl_user_results_cache_${auth.currentUser.uid}`;
+              const cachedRaw = safeStorage.getItem(cacheKey);
+              if (cachedRaw) {
+                const cachedResults: QuizResult[] = JSON.parse(cachedRaw);
+                const updatedCache = cachedResults.map(r => {
+                  if (r.id === oldId) {
+                    return { ...r, id: newDocRef.id, questionDetails: updatedQuestionDetails, rcaMap: currentRcaMap };
+                  }
+                  return r;
+                });
+                safeStorage.setItem(cacheKey, JSON.stringify(updatedCache.slice(0, 100)));
+              }
+            } catch {}
+          } catch (cloudErr) {
+            console.warn('Cloud sync for RCA review failed, saved locally:', cloudErr);
           }
         }
       }

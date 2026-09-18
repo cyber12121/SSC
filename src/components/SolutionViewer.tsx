@@ -93,8 +93,8 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
                 </div>
                 <span>{sec.title || 'Shortcut Trick'}</span>
               </div>
-              <div className="text-[14px] text-slate-800 leading-relaxed">
-              <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
+              <div className="text-[14px] text-slate-800 leading-relaxed whitespace-pre-line">
+                <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
               </div>
             </div>
           );
@@ -113,8 +113,8 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
                 </div>
                 <span>{sec.title || 'Additional Information & Key Concepts'}</span>
               </div>
-              <div className="text-[13.5px] text-slate-700 leading-relaxed">
-              <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
+              <div className="text-[13.5px] text-slate-700 leading-relaxed whitespace-pre-line">
+                <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
               </div>
             </div>
           );
@@ -134,7 +134,7 @@ export const SolutionViewer: React.FC<SolutionViewerProps> = React.memo(({
                 </span>
               </div>
             )}
-            <div className="text-[14px] text-slate-800 leading-relaxed">
+            <div className="text-[14px] text-slate-800 leading-relaxed whitespace-pre-line">
               <FormattedText text={sec.content} language={language} as="div" breakOnSentences />
             </div>
           </div>

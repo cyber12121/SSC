@@ -59,12 +59,81 @@ export function saveSRSSettings(settings: SRSSettings): void {
   } catch {}
 }
 
+// ── In-Memory Question Hydration Cache ──
+const questionBankCache = new Map<string, Question>();
+
+export function registerQuestionsInBank(questions: Question[]): void {
+  if (!Array.isArray(questions)) return;
+  questions.forEach(q => {
+    if (!q) return;
+    if (q.id) questionBankCache.set(String(q.id), q);
+    if (q.question) {
+      const slug = `srs_q_${(q.id || q.question.slice(0, 30)).replace(/[^a-z0-9]/gi, '_')}`;
+      questionBankCache.set(slug, q);
+    }
+  });
+}
+
+export function findQuestionById(qId: string): Question | undefined {
+  if (!qId) return undefined;
+  if (questionBankCache.has(qId)) return questionBankCache.get(qId);
+
+  // Search localStorage cached results
+  try {
+    const rawKeys = Object.keys(localStorage).filter(k => k.startsWith('cgl_user_results_cache_') || k.startsWith('offline_results_'));
+    for (const k of rawKeys) {
+      const raw = localStorage.getItem(k);
+      if (raw) {
+        const results = JSON.parse(raw);
+        if (Array.isArray(results)) {
+          for (const r of results) {
+            for (const qd of (r.questionDetails || [])) {
+              if (qd?.question && (String(qd.question.id) === qId || qd.questionId === qId || qd.id === qId)) {
+                questionBankCache.set(qId, qd.question);
+                return qd.question;
+              }
+            }
+          }
+        }
+      }
+    }
+  } catch {}
+
+  return undefined;
+}
+
+export function hydrateSRSCard(card: SRSCard): SRSCard {
+  if (card.front && card.options && Object.keys(card.options).length > 0) {
+    return card;
+  }
+  const qId = card.questionId || card.id.replace(/^srs_q_/, '');
+  const q = findQuestionById(qId) || findQuestionById(card.id);
+  if (q) {
+    const cleanAns = (q.answer || '').toLowerCase();
+    const correctOptText = q.options && cleanAns in q.options ? (q.options as any)[cleanAns] : '';
+    let back = q.solution?.trim() || `Correct Answer: Option ${(q.answer || '').toUpperCase()}`;
+    if (correctOptText && !back.includes(correctOptText)) {
+      back = `**Correct Answer: (${cleanAns.toUpperCase()}) ${correctOptText}**\n\n${back}`;
+    }
+    return {
+      ...card,
+      questionId: card.questionId || (q.id ? String(q.id) : undefined),
+      front: card.front || q.question,
+      back: card.back || back,
+      options: card.options || q.options,
+      answer: card.answer || q.answer,
+      conceptTested: card.conceptTested || q.conceptTested
+    };
+  }
+  return card;
+}
+
 export function getStoredSRSCards(): SRSCard[] {
   try {
     const raw = safeStorage.getItem(STORAGE_KEY_CARDS);
     if (raw) {
       const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) return parsed;
+      if (Array.isArray(parsed)) return parsed.map(hydrateSRSCard);
     }
   } catch {}
   return [];
@@ -392,10 +461,18 @@ export function convertQuestionToSRSCardCandidate(
     back = `**Correct Answer: (${cleanAns.toUpperCase()}) ${correctOptText}**\n\n${back}`;
   }
 
-  const id = `srs_q_${(q.id || q.question.slice(0, 30)).replace(/[^a-z0-9]/gi, '_')}`;
+  const rawQId = q.id ? String(q.id) : undefined;
+  const id = `srs_q_${(rawQId || q.question.slice(0, 30)).replace(/[^a-z0-9]/gi, '_')}`;
+
+  // Cache question in memory for fast local hydration
+  if (rawQId) {
+    questionBankCache.set(rawQId, q);
+    questionBankCache.set(id, q);
+  }
 
   return {
     id,
+    questionId: rawQId,
     type,
     subject,
     topic,
@@ -798,8 +875,44 @@ export async function syncCardsToFirestore(cards: SRSCard[]): Promise<void> {
     const toSync = cards.slice(0, 250);
     toSync.forEach(card => {
       const cardRef = doc(db, 'users', uid, 'srs_cards', card.id);
-      // Clean undefined
-      const sanitized = JSON.parse(JSON.stringify(card));
+      
+      let payload: any;
+      // If card has a questionId, keep Firebase ultra-lightweight:
+      // Store only the pointer ID and SM-2 metadata, omitting heavy question text, options, and questionRef
+      if (card.questionId) {
+        payload = {
+          id: card.id,
+          questionId: card.questionId,
+          type: card.type,
+          subject: card.subject,
+          topic: card.topic || '',
+          subtopic: card.subtopic || '',
+          source: card.source,
+          sourceTitle: card.sourceTitle || '',
+          answer: card.answer || '',
+          userPreviousAnswer: card.userPreviousAnswer || '',
+          userTimeSpent: card.userTimeSpent || 0,
+          avgTimeSeconds: card.avgTimeSeconds || 0,
+          addedAt: card.addedAt,
+          stage: card.stage,
+          intervalDays: card.intervalDays,
+          easeFactor: card.easeFactor,
+          repetitions: card.repetitions,
+          lapses: card.lapses,
+          dueDate: card.dueDate,
+          lastReviewedAt: card.lastReviewedAt || null,
+          status: card.status,
+          history: card.history || [],
+          conceptTested: card.conceptTested || '',
+          trapAlert: card.trapAlert || ''
+        };
+      } else {
+        // Conceptual card (e.g. vocab flashcard, GK fact): strip questionRef if present
+        const { questionRef, ...cleanCard } = card as any;
+        payload = cleanCard;
+      }
+
+      const sanitized = JSON.parse(JSON.stringify(payload));
       batch.set(cardRef, sanitized, { merge: true });
     });
     await batch.commit();
@@ -824,8 +937,23 @@ export async function loadCardsFromFirestore(): Promise<SRSCard[]> {
 
       remoteCards.forEach(rc => {
         const local = localMap.get(rc.id);
-        if (!local || (rc.lastReviewedAt && (!local.lastReviewedAt || rc.lastReviewedAt > local.lastReviewedAt))) {
-          localMap.set(rc.id, rc);
+        if (!local) {
+          // Hydrate from question bank if stored as a lightweight pointer
+          localMap.set(rc.id, hydrateSRSCard(rc));
+        } else {
+          // Merge remote progress while preserving local rich question content
+          const shouldUpdate = !local.lastReviewedAt || (rc.lastReviewedAt && rc.lastReviewedAt > local.lastReviewedAt);
+          localMap.set(rc.id, {
+            ...local,
+            ...(shouldUpdate ? rc : {}),
+            // Always retain full question details if remote document omitted them
+            front: local.front || rc.front,
+            back: local.back || rc.back,
+            options: local.options || rc.options,
+            answer: local.answer || rc.answer,
+            questionId: local.questionId || rc.questionId,
+            questionRef: local.questionRef
+          });
         }
       });
 

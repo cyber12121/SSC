@@ -14,7 +14,8 @@ import {
   getCardCorrectAnswer,
   matchesSubject,
   coolOffCard,
-  isLeechCard
+  isLeechCard,
+  hydrateSRSCard
 } from '../../utils/srsEngine';
 
 interface SrsQuestionRevisionStudioProps {
@@ -37,14 +38,15 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
 
   const [topicFilter, setTopicFilter] = useState<string>(initialTopic);
   const [queue, setQueue] = useState<SRSCard[]>(() => {
+    const hydratedList = initialCards.map(hydrateSRSCard);
     if (initialTopic && initialTopic !== 'all') {
-      const filtered = initialCards.filter(c =>
+      const filtered = hydratedList.filter(c =>
         (c.topic && c.topic.trim().toLowerCase() === initialTopic.trim().toLowerCase()) ||
         (c.subtopic && c.subtopic.trim().toLowerCase() === initialTopic.trim().toLowerCase())
       );
-      return filtered.length > 0 ? filtered : initialCards;
+      return filtered.length > 0 ? filtered : hydratedList;
     }
-    return initialCards;
+    return hydratedList;
   });
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,13 +78,14 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
 
   const handleTopicChange = (newTopic: string) => {
     setTopicFilter(newTopic);
+    const hydratedList = initialCards.map(hydrateSRSCard);
     if (newTopic === 'all') {
-      setQueue(initialCards);
+      setQueue(hydratedList);
     } else {
-      const filtered = initialCards.filter(c =>
+      const filtered = hydratedList.filter(c =>
         (c.topic && c.topic.trim() === newTopic) || (c.subtopic && c.subtopic.trim() === newTopic)
       );
-      setQueue(filtered.length > 0 ? filtered : initialCards);
+      setQueue(filtered.length > 0 ? filtered : hydratedList);
     }
     setCurrentIndex(0);
     setSprintCount(0);
@@ -164,16 +167,29 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
 
   const [activeGrade, setActiveGrade] = useState<SRSGrade>('good');
 
-  // Handle Answer Submission
-  const handleSubmitAnswer = () => {
-    if (!selectedOption || isSubmitted) return;
+  // Immediate 1-Click Option Selection & Instant Evaluation
+  const handleSelectOption = useCallback((optionKey: string) => {
+    if (isSubmitted || !currentCard) return;
+    const cleanOpt = optionKey.toLowerCase();
+    setSelectedOption(cleanOpt);
     setIsSubmitted(true);
-    const grade = autoDeterminedGrade;
+
+    const isCorrect = Boolean(correctAnswerKey && cleanOpt === correctAnswerKey.toLowerCase());
+    const benchmark = currentCard?.avgTimeSeconds || 50;
+    let grade: SRSGrade = 'good';
+    if (!isCorrect) {
+      grade = 'again';
+    } else if (elapsedSeconds <= Math.min(25, benchmark * 0.7)) {
+      grade = 'easy';
+    } else if (elapsedSeconds > benchmark * 1.6) {
+      grade = 'hard';
+    }
+
     setActiveGrade(grade);
-    if (isUserCorrect) {
+    if (isCorrect) {
       setCorrectCount(prev => prev + 1);
     }
-  };
+  }, [isSubmitted, currentCard, correctAnswerKey, elapsedSeconds]);
 
   // Handle Skip / Reveal Solution
   const handleRevealSolution = () => {
@@ -214,19 +230,16 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
     }
   }, [currentCard, activeGrade, questionStartTime, sprintCount, sprintBatchSize, currentIndex, queue.length]);
 
-  // Keyboard shortcut navigation (1, 2, 3, 4, A, B, C, D, Space, Enter)
+  // Keyboard shortcut navigation (1, 2, 3, 4, A, B, C, D to instantly answer; Space or Enter to Advance)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (scratchpadOpen || deleteConfirmOpen || isRestCheckpointOpen || isCompleted) return;
 
       if (!isSubmitted) {
-        if (e.key === '1' || e.key.toLowerCase() === 'a') setSelectedOption('a');
-        else if (e.key === '2' || e.key.toLowerCase() === 'b') setSelectedOption('b');
-        else if (e.key === '3' || e.key.toLowerCase() === 'c') setSelectedOption('c');
-        else if (e.key === '4' || e.key.toLowerCase() === 'd') setSelectedOption('d');
-        else if (e.key === 'Enter' && selectedOption) {
-          handleSubmitAnswer();
-        }
+        if (e.key === '1' || e.key.toLowerCase() === 'a') handleSelectOption('a');
+        else if (e.key === '2' || e.key.toLowerCase() === 'b') handleSelectOption('b');
+        else if (e.key === '3' || e.key.toLowerCase() === 'c') handleSelectOption('c');
+        else if (e.key === '4' || e.key.toLowerCase() === 'd') handleSelectOption('d');
       } else {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -237,7 +250,7 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isSubmitted, selectedOption, scratchpadOpen, deleteConfirmOpen, isRestCheckpointOpen, isCompleted, handleAdvanceNext]);
+  }, [isSubmitted, handleSelectOption, scratchpadOpen, deleteConfirmOpen, isRestCheckpointOpen, isCompleted, handleAdvanceNext]);
 
   const formatTimer = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -481,7 +494,7 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
                       key={opt.key}
                       type="button"
                       disabled={isSubmitted}
-                      onClick={() => !isSubmitted && setSelectedOption(opt.key)}
+                      onClick={() => !isSubmitted && handleSelectOption(opt.key)}
                       className={`w-full text-left p-4 rounded-2xl border transition-all flex items-start justify-between gap-3 cursor-pointer ${optionCardStyle}`}
                     >
                       <div className="flex items-start space-x-3 flex-1">
@@ -525,26 +538,17 @@ export const SrsQuestionRevisionStudio: React.FC<SrsQuestionRevisionStudioProps>
           {/* Action Row Pre-Submission */}
           {!isSubmitted && (
             <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3 flex-wrap">
-              <button
-                type="button"
-                onClick={handleRevealSolution}
-                className="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-xl transition-colors cursor-pointer"
-              >
-                Reveal Solution / Skip
-              </button>
+              <span className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
+                <span>Click any option above to verify instantly</span>
+              </span>
 
               <button
                 type="button"
-                disabled={!selectedOption && currentOptions.length > 0}
-                onClick={handleSubmitAnswer}
-                className={`px-6 py-2.5 rounded-xl font-black text-xs flex items-center space-x-2 transition-all cursor-pointer ${
-                  selectedOption || currentOptions.length === 0
-                    ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-200'
-                    : 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                }`}
+                onClick={handleRevealSolution}
+                className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-xl transition-colors cursor-pointer"
               >
-                <span>Check Answer</span>
-                <ChevronRight className="w-4 h-4" />
+                Reveal Solution / Skip
               </button>
             </div>
           )}

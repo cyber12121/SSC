@@ -195,6 +195,12 @@ export function parseSolutionSections(solText: string = ''): SolutionSection[] {
   if (!solText) return [];
   let text = solText.replace(/^Solution\s*\n+/i, '').trim();
 
+  // 1. Ensure known section headers start on their own fresh lines even if concatenated without newlines
+  text = text
+    .replace(/([^\n])\s*\b(Shortcut Trick|Alternate Method|Method\s+\d+|Traditional Method|Given|Formula Used|Calculations?|Steps?|Additional Information|Key Points?|Note)\s*:/gi, '$1\n\n$2:')
+    .replace(/([^\n])\s*([⇒∴])/g, '$1\n$2')
+    .replace(/([^\n])\s*(Formula\s*:)/gi, '$1\n$2');
+
   const headerRegex = /(?<=^|\n)\s*(Shortcut Trick|Alternate Method|Method\s+\d+|Traditional Method|Given|Formula Used|Calculations?|Steps?|Additional Information|Key Points?|Note)\s*:?(?:\s*\n+|$)/gi;
 
   const splits: { header: string; index: number; headerLength: number }[] = [];
@@ -225,7 +231,7 @@ export function parseSolutionSections(solText: string = ''): SolutionSection[] {
     const s = splits[i];
     const startIndex = s.index + s.headerLength;
     const endIndex = i + 1 < splits.length ? splits[i + 1].index : text.length;
-    const content = text.substring(startIndex, endIndex).trim();
+    let content = text.substring(startIndex, endIndex).trim();
 
     const hLower = s.header.toLowerCase();
     let type: SolutionSection['type'] = 'general';
@@ -235,6 +241,24 @@ export function parseSolutionSections(solText: string = ''): SolutionSection[] {
     else if (hLower.includes('calc') || hLower.includes('step')) type = 'calculation';
     else if (hLower.includes('additional') || hLower.includes('key point')) type = 'additional';
     else if (hLower.includes('alternate') || hLower.includes('method') || hLower.includes('traditional')) type = 'method';
+
+    // Format section contents to break continuous steps into clean lines
+    if (type === 'shortcut' || type === 'calculation') {
+      content = content
+        .replace(/([^\n])\s*([⇒∴])/g, '$1\n$2')
+        .replace(/\.\s+(Ratio of areas|Let |Therefore|Hence|The correct answer|Required ratio)/gi, '.\n$1');
+    } else if (type === 'given') {
+      // Split multiple given assignments running together (e.g. "...= 15 cm Number of small cubes = 27")
+      content = content.replace(/(=\s*[^=\n]+?)(?=\s+[A-Z][a-zA-Z\s\(\)]+\s*=)/g, '$1\n');
+    } else if (type === 'formula') {
+      // Split multiple formula definitions running together
+      content = content.replace(/(=\s*[^=\n]+?)(?=\s+(?:Lateral Surface Area|Total Surface Area|Curved Surface Area|Volume|Area|Perimeter|Circumference|Surface Area|Height|Diagonal|TSA|LSA|CSA|Base Area)\s*(?:of\s+[^=]+)?\s*=)/gi, '$1\n');
+    } else if (type === 'additional') {
+      // Separate subheadings and formula lines cleanly
+      content = content
+        .replace(/(?:^|\n|\.\s+)(Total Surface Area of [^\n]+|Lateral Surface Area of [^\n]+|Volume of [^\n]+|Curved Surface Area of [^\n]+)(?=\s+[A-Z])/gi, '\n\n**$1**\n')
+        .replace(/([^\n])\s*\b(Formula\s*:)/gi, '$1\n$2');
+    }
 
     if (content) {
       sections.push({

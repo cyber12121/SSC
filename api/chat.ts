@@ -970,7 +970,6 @@ YOUR CORE EXPERTISE:
      * ❌ Tier 1 — INCORRECT (Wrong answers): missed concept/rule + 1-line fix.
      * ⏱ Tier 2 — CORRECT (Slow): shortcut/pattern trick to solve under 45s.
      * ⬜ Tier 3 — UNATTEMPTED (Skipped): smart skip vs avoidable skip.
-   - Conclude with a targeted drill recommendation using [DRILL: Topic Name] on its own line.
 
 HOW TO ANSWER:
 - Be direct, strategic, highly motivating, and analytical.
@@ -978,9 +977,12 @@ HOW TO ANSWER:
 - For English questions, explain the underlying grammatical rule or contextual vocabulary clue.
 - For casual greetings ("hi", "hello"), respond warmly, briefly, and ask what they would like to master today. Do not overwhelm them with stats unless asked!
 - STRICT ENGLISH LANGUAGE REQUIREMENT: You must communicate and answer strictly and exclusively in clear, professional, and motivating English at all times. Do NOT use Hindi words, Devanagari script, or Hinglish. Every explanation, breakdown, and greeting must be in standard English.
-- Targeted Drill Recommendation: Conclude study advice with [DRILL: Topic Name] on its own line (e.g. [DRILL: Active & Passive Voice]).
+- DO NOT append unsolicited practice drill cards, [DRILL: ...] tags, or drill recommendations. Keep answers focused strictly on clear explanation and exam mastery.
 - MATHEMATICAL & TEXT FORMATTING RULES:
-  * For mathematical formulas, equations, and algebra, use standard LaTeX enclosed in single dollar signs for inline math (e.g. $x^2 + y^2 = r^2$, $\\frac{a}{b}$, $\\sqrt{x}$, $\\sin\\theta$, $\\Delta ABC$) or double dollar signs for display equations ($$\\text{Area} = \\frac{1}{2} \\times b \\times h$$).
+  * STRICT LATEX RULE: For ALL mathematical formulas, expressions, variables, units, equations, and algebra, ALWAYS enclose them in single dollar signs for inline math (e.g. $CSA = 2\pi rh$, $h = 2r$, $r = 14\text{ m}$, $784\pi\text{ m}^2$, $x^2 + y^2 = r^2$) or double dollar signs for display equations ($$\text{Area} = \frac{1}{2} \times b \times h$$).
+  * NEVER write raw LaTeX backslash commands (such as \pi, \times, \frac, \sqrt, \text) outside of $ or $$.
+  * NEVER escape dollar signs with backslashes (write $, never \$).
+  * NEVER leave mathematical expressions unclosed; always pair every opening $ with its closing $.
   * For arithmetic expressions or plain numbers, clean unicode symbols (×, ÷, ±, →, °) are also great.
 - VISUAL CALLOUT CARDS:
   Use blockquotes with clear emojis and bold labels for high-yield exam insights:
@@ -1198,7 +1200,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
           config: {
             systemInstruction: fullSystemInstruction,
             temperature: 0.4,
-            maxOutputTokens: 950
+            maxOutputTokens: 2048
           }
         });
 
@@ -1222,7 +1224,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
               systemInstruction: { parts: [{ text: fullSystemInstruction }] },
               generationConfig: {
                 temperature: 0.4,
-                maxOutputTokens: 950
+                maxOutputTokens: 2048
               }
             })
           });
@@ -1284,7 +1286,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
           },
           generationConfig: {
             temperature: 0.4,
-            maxOutputTokens: 950
+            maxOutputTokens: 2048
           }
         })
       });
@@ -1307,7 +1309,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
           config: {
             systemInstruction: fullSystemInstruction,
             temperature: 0.4,
-            maxOutputTokens: 950
+            maxOutputTokens: 2048
           }
         });
         reply = response.text || '';

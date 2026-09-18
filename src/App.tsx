@@ -486,6 +486,96 @@ export default function App() {
     fetchDeleted();
   }, [user]);
 
+  // Helper to re-hydrate global RCA store & Silly Mistakes from cloud-stored results
+  const hydrateRcaFromResults = useCallback((resultsList: QuizResult[]) => {
+    try {
+      const globalRaw = safeStorage.getItem('cgl_rca_global_store');
+      const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
+      let rcaHydrated = false;
+
+      resultsList.forEach(r => {
+        // 1. From r.rcaMap if attached to result
+        const rMap = (r as any).rcaMap;
+        if (rMap && typeof rMap === 'object') {
+          Object.entries(rMap).forEach(([idxStr, rcaEntry]: [string, any]) => {
+            if (rcaEntry && rcaEntry.tag) {
+              const idx = parseInt(idxStr, 10);
+              const qd = r.questionDetails?.[idx];
+              const q = qd?.question;
+              const qId = q?.id || (qd as any)?.questionId || (r.id ? `${r.id}_${idx + 1}` : undefined);
+              const qText = (q?.question || (qd as any)?.questionText || '').trim().toLowerCase();
+
+              if (qId && !globalStore[qId]) {
+                globalStore[qId] = {
+                  ...rcaEntry,
+                  id: qId,
+                  mockId: r.id,
+                  mockTitle: r.chapter_title,
+                  subject: r.subject || q?.subject || 'General Awareness',
+                  topic: q?.topic || (qd as any)?.topic || 'General'
+                };
+                rcaHydrated = true;
+              }
+              if (qText && !globalStore[qText]) {
+                globalStore[qText] = {
+                  ...rcaEntry,
+                  id: qId || qText,
+                  mockId: r.id,
+                  mockTitle: r.chapter_title,
+                  subject: r.subject || q?.subject || 'General Awareness',
+                  topic: q?.topic || (qd as any)?.topic || 'General',
+                  questionText: qText
+                };
+                rcaHydrated = true;
+              }
+            }
+          });
+        }
+
+        // 2. From questionDetails directly
+        (r.questionDetails || []).forEach((qd, idx) => {
+          const rcaEntry = qd.rca || qd.question?.rca;
+          if (rcaEntry && rcaEntry.tag) {
+            const q = qd.question;
+            const qId = q?.id || (qd as any)?.questionId || (r.id ? `${r.id}_${idx + 1}` : undefined);
+            const qText = (q?.question || (qd as any)?.questionText || '').trim().toLowerCase();
+
+            if (qId && !globalStore[qId]) {
+              globalStore[qId] = {
+                ...rcaEntry,
+                id: qId,
+                mockId: r.id,
+                mockTitle: r.chapter_title,
+                subject: r.subject || q?.subject || 'General Awareness',
+                topic: q?.topic || (qd as any)?.topic || 'General'
+              };
+              rcaHydrated = true;
+            }
+            if (qText && !globalStore[qText]) {
+              globalStore[qText] = {
+                ...rcaEntry,
+                id: qId || qText,
+                mockId: r.id,
+                mockTitle: r.chapter_title,
+                subject: r.subject || q?.subject || 'General Awareness',
+                topic: q?.topic || (qd as any)?.topic || 'General',
+                questionText: qText
+              };
+              rcaHydrated = true;
+            }
+          }
+        });
+      });
+
+      if (rcaHydrated) {
+        safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        setRcaVersion(v => v + 1);
+      }
+    } catch (e) {
+      console.warn('Error hydrating global RCA store from results:', e);
+    }
+  }, []);
+
   // Fetch Results
   const fetchResults = useCallback(async () => {
     if (!user) {
@@ -573,6 +663,9 @@ export default function App() {
 
       setUserResults(filtered);
       safeStorage.setItem(`cgl_user_results_cache_${user.uid}`, JSON.stringify(filtered.slice(0, 100)));
+
+      // Re-hydrate global RCA store & Silly Mistakes from cloud-stored results
+      hydrateRcaFromResults(filtered);
     } catch (error) {
       console.warn('Error fetching results with orderBy, attempting fallback query:', error);
       try {
@@ -618,6 +711,7 @@ export default function App() {
         });
         setUserResults(filtered);
         safeStorage.setItem(`cgl_user_results_cache_${user.uid}`, JSON.stringify(filtered.slice(0, 100)));
+        hydrateRcaFromResults(filtered);
       } catch (fallbackErr) {
         console.warn('Fallback result fetch failed, keeping local cache:', fallbackErr);
       }
@@ -1061,8 +1155,37 @@ export default function App() {
 
     let savedResult: QuizResult;
     try {
+      // 98% Firestore Payload Optimization:
+      // Retain scoring, time, answer choices, and RCA tags while omitting multi-paragraph solutions and image blobs.
+      const lightweightQuestionDetails = (fullResult.questionDetails || []).map(d => ({
+        q_num: d.q_num,
+        timeSpent: d.timeSpent || 0,
+        isCorrect: Boolean(d.isCorrect),
+        selectedAnswer: d.selectedAnswer || '',
+        marked: Boolean(d.marked),
+        avgTime: d.avgTime || d.question?.avgTime || null,
+        avgTimeSeconds: d.avgTimeSeconds || d.question?.avgTimeSeconds || null,
+        rca: d.rca || d.question?.rca || null,
+        question: d.question ? {
+          id: d.question.id || `${fullResult.chapter_title}_${d.q_num}`,
+          q_num: d.question.q_num || d.q_num,
+          question: d.question.question || '',
+          options: d.question.options || { a: '', b: '', c: '', d: '' },
+          answer: d.question.answer || 'a',
+          subject: d.question.subject || fullResult.subject || '',
+          section: d.question.section || '',
+          topic: d.question.topic || d.question.tags?.topic || '',
+          rca: d.rca || d.question?.rca || null,
+        } : null
+      }));
+
+      const firestorePayload = {
+        ...fullResult,
+        questionDetails: lightweightQuestionDetails
+      };
+
       // Deep sanitize to strip any undefined properties that Firestore rejects
-      const sanitizedDoc = JSON.parse(JSON.stringify(fullResult));
+      const sanitizedDoc = JSON.parse(JSON.stringify(firestorePayload));
       const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
       savedResult = { ...fullResult, id: docRef.id };
       setUserResults(prev => {
@@ -3106,7 +3229,7 @@ export default function App() {
                             startQuiz(virtualChapter);
                           }}
                           onBack={() => setMockViewModePersisted('rca')}
-                          language={language}
+                          language="english"
                         />
                       ) : mockViewMode === 'chapters' || mockViewMode === 'rca' ? (
                         /* Minimalist Mock Errors Cockpit (Stitch Design) - Supports Chapters and RCA */

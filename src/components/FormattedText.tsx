@@ -81,9 +81,14 @@ function renderTableBlock(tableLines: string[], keyPrefix: string | number) {
 function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences = false) {
   // When breakOnSentences is true, replace ". " with ".\n" so each sentence
   // starts on its own line (used in solution view).
-  const processedText = breakOnSentences
+  let processedText = breakOnSentences
     ? text.replace(/\.\s+(?=[A-Z\u0900-\u097F"'([])/g, '.\n')
     : text;
+
+  // Split steps on ⇒ and ∴ so each mathematical step and conclusion is on its own line
+  processedText = processedText
+    .replace(/([^\n])\s*([⇒∴])/g, '$1\n$2')
+    .replace(/([^\n])\s*\b(Formula\s*:)/gi, '$1\n$2');
 
   const lines = processedText.split('\n');
   const elements: React.ReactNode[] = [];
@@ -111,7 +116,7 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
 
     // Empty line
     if (!line) {
-      elements.push(<span key={`br-${tokenIdx}-${i}`} className="block h-1.5" />);
+      elements.push(<div key={`br-${tokenIdx}-${i}`} className="h-2" />);
       return;
     }
 
@@ -123,12 +128,34 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     // Explanation / Section Headers (e.g. 📖 English Explanation:, Key Formula:)
     if (/^(?:📖|📌|💡|🔍)?\s*(?:English\s+Explanation|Key\s+Formula|Important\s+Formula|Note):/i.test(line)) {
       elements.push(
-        <span
+        <div
           key={`header-${tokenIdx}-${i}`}
           className="inline-flex items-center gap-1.5 px-2.5 py-1 my-1.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-950 font-bold text-xs shadow-2xs"
         >
           {line}
-        </span>
+        </div>
+      );
+      return;
+    }
+
+    // Mathematical derivation step (⇒ or =>)
+    if (/^[⇒=>]/.test(line)) {
+      elements.push(
+        <div key={`step-${tokenIdx}-${i}`} className="flex items-start gap-2 my-1.5 text-slate-800 leading-relaxed font-mono text-[13.5px]">
+          <span className="text-indigo-600 font-bold shrink-0 mt-0.5">⇒</span>
+          <span className="flex-1 font-sans">{formatInlineMarkdown(line.replace(/^[⇒=>]+\s*/, ''))}</span>
+        </div>
+      );
+      return;
+    }
+
+    // Mathematical conclusion (∴)
+    if (/^∴/.test(line)) {
+      elements.push(
+        <div key={`concl-${tokenIdx}-${i}`} className="flex items-start gap-2 my-2 p-2.5 rounded-lg bg-emerald-50/80 border border-emerald-200/80 text-emerald-900 font-semibold text-xs sm:text-sm">
+          <span className="text-emerald-700 font-bold shrink-0 mt-0.5">∴</span>
+          <span className="flex-1">{formatInlineMarkdown(line.replace(/^∴\s*/, ''))}</span>
+        </div>
       );
       return;
     }
@@ -168,11 +195,19 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     }
 
     // Standard sentence or paragraph
-    elements.push(
-      <span key={`text-${tokenIdx}-${i}`} className="inline text-slate-800 leading-relaxed">
-        {formatInlineMarkdown(rawLine)}{' '}
-      </span>
-    );
+    if (breakOnSentences) {
+      elements.push(
+        <div key={`text-${tokenIdx}-${i}`} className="text-slate-800 leading-relaxed my-1">
+          {formatInlineMarkdown(rawLine)}
+        </div>
+      );
+    } else {
+      elements.push(
+        <span key={`text-${tokenIdx}-${i}`} className="inline text-slate-800 leading-relaxed">
+          {formatInlineMarkdown(rawLine)}{' '}
+        </span>
+      );
+    }
   });
 
   if (tableBuffer.length > 0) {

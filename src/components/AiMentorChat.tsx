@@ -262,8 +262,79 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
     chatKatexCache.set(cacheKey, html);
     return html;
   } catch {
+    // If sanitized failed, try cleaning trailing dangling operators (like \times, +, -, =) and re-render
+    try {
+      const fallbackClean = sanitized.replace(/\\times\s*$/, '').replace(/[+\-*/=]\s*$/, '').trim();
+      if (fallbackClean) {
+        return katex.renderToString(fallbackClean, { throwOnError: false, displayMode });
+      }
+    } catch {}
     return '';
   }
+}
+
+/**
+ * Normalizes AI output text for robust KaTeX rendering:
+ * 1. Converts \( ... \) to $ ... $ and \[ ... \] to $$ ... $$
+ * 2. Unescapes \$ and stray backslashes before punctuation (\. -> .)
+ * 3. Auto-closes unclosed/truncated math delimiters ($ or $$)
+ * 4. Wraps unwrapped math lines containing LaTeX commands in $...$
+ */
+export function normalizeChatLatex(text: string): string {
+  if (!text) return '';
+  let s = text;
+
+  // 0. Remove any [DRILL: ...] practice drill tags so they never clutter the chat
+  s = s.replace(/\[DRILL:\s*[^\]]+\]/gi, '');
+
+  // 1. Convert LaTeX standard display math \[ ... \] to $$ ... $$ and inline \( ... \) to $ ... $
+  s = s.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$');
+  s = s.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
+
+  // 2. Convert escaped dollar signs \$...$ or \$...\$ or standalone \$ to standard $
+  s = s.replace(/\\\$([^\$\n]+?)\\\$/g, '$$$1$$');
+  s = s.replace(/\\\$([^\$\n]+?)\$/g, '$$$1$$');
+  s = s.replace(/\$([^\$\n]+?)\\\$/g, '$$$1$$');
+  s = s.replace(/\\\$/g, '$');
+
+  // 3. Clean stray markdown escapes on punctuation like \. or \- or \! or \) (e.g. "substitution)\." -> "substitution).")
+  s = s.replace(/\\([.!?,;:\-_~])/g, '$1');
+
+  // 4. Process lines for auto-closing dangling math and unwrapped LaTeX formulas
+  const lines = s.split('\n');
+  const processedLines = lines.map(line => {
+    let l = line;
+
+    // Remove dangling trailing backslash (from cut-off tokens like "4 \times \")
+    l = l.replace(/\\\s*$/, '');
+
+    // Auto-close dangling display math $$
+    const doubleDollarCount = (l.match(/\$\$/g) || []).length;
+    if (doubleDollarCount % 2 !== 0) {
+      l = l + '$$';
+    }
+
+    // Auto-close dangling single $
+    const tempNoDisplay = l.replace(/\$\$/g, '');
+    const singleDollarCount = (tempNoDisplay.match(/\$/g) || []).length;
+    if (singleDollarCount % 2 !== 0) {
+      l = l + '$';
+    }
+
+    // 5. Detect lines or clauses with unwrapped LaTeX commands outside of $
+    // e.g. \pi, \times, \frac, \sqrt, \text{, \theta, \approx
+    if (/\\[a-zA-Z]+/.test(l) && !l.includes('$')) {
+      if (/[:=]/.test(l)) {
+        l = l.replace(/([:=]\s*)([^$\n]*\\[a-zA-Z]+[^$\n]*)/, (m, sep, expr) => `${sep}$${expr.trim()}$`);
+      } else {
+        l = l.replace(/^([\s•\*\-]*)(.*?\\[a-zA-Z]+.*)$/, (m, prefix, expr) => `${prefix}$${expr.trim()}$`);
+      }
+    }
+
+    return l;
+  });
+
+  return processedLines.join('\n');
 }
 
 // Clean latex for plain-text clipboard copy
@@ -410,7 +481,8 @@ const CalloutCard: React.FC<CalloutProps> = ({ type, lines, formatInline }) => {
 
 // Elevated Markdown & KaTeX Renderer for beautiful AI responses
 function FormattedMessage({ content, isStreaming }: { content: string; isStreaming?: boolean }) {
-  const lines = (content || '').split('\n');
+  const normalized = normalizeChatLatex(content);
+  const lines = (normalized || '').split('\n');
   const elements: React.ReactNode[] = [];
   let inCodeBlock = false;
   let codeBuffer: string[] = [];
@@ -585,30 +657,8 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
       return;
     }
 
-    // Targeted Drill Card trigger: [DRILL: Topic Name]
-    const drillMatch = line.trim().match(/\[DRILL:\s*([^\]]+)\]/i);
-    if (drillMatch) {
-      const drillTopic = drillMatch[1].trim();
-      elements.push(
-        <div key={`drill-${idx}`} className="my-3 p-3.5 rounded-xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-amber-500/10 border border-indigo-200/90 flex items-center justify-between gap-3 shadow-xs hover:border-indigo-300 transition-all">
-          <div className="min-w-0">
-            <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 flex items-center gap-1.5 mb-0.5">
-              <Zap className="w-3 h-3 text-amber-500 fill-current animate-pulse" />
-              Targeted Rapid Drill
-            </span>
-            <h5 className="text-xs font-black text-slate-900 truncate">{drillTopic}</h5>
-          </div>
-          <button
-            onClick={() => {
-              window.dispatchEvent(new CustomEvent('cgl_launch_drill', { detail: { topic: drillTopic } }));
-            }}
-            className="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95 group"
-          >
-            <Play className="w-3 h-3 fill-current group-hover:translate-x-0.5 transition-transform" />
-            <span>Start Test</span>
-          </button>
-        </div>
-      );
+    // Ignore any [DRILL: Topic Name] tags so practice drills never appear in chat
+    if (line.trim().match(/^\[DRILL:\s*[^\]]+\]$/i)) {
       return;
     }
 
@@ -645,9 +695,9 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
       return;
     }
 
-    // Unordered list
-    if (line.trim().startsWith('* ') || line.trim().startsWith('- ')) {
-      const itemText = line.trim().replace(/^[\*\-]\s+/, '');
+    // Unordered list (*, -, or unicode bullet •)
+    if (line.trim().startsWith('* ') || line.trim().startsWith('- ') || line.trim().startsWith('• ') || line.trim().startsWith('•')) {
+      const itemText = line.trim().replace(/^[\*\-•]\s*/, '');
       elements.push(
         <div key={idx} className="flex items-start gap-2.5 my-1 text-xs text-slate-700 leading-relaxed">
           <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 shrink-0 ring-2 ring-indigo-100" />
@@ -1672,19 +1722,6 @@ export function AiMentorChat({
             {/* Quick Suggestion Chips */}
             {messages.length <= 2 && !isLoading && (
               <div className="px-3 pt-2 pb-1 bg-white border-t border-slate-100 flex flex-nowrap overflow-x-auto gap-1.5 scrollbar-none">
-                {onStartWeakTopicDrill && (
-                  <button
-                    onClick={() => {
-                      setIsOpen(false);
-                      onStartWeakTopicDrill(topWeakTopic);
-                    }}
-                    className="px-2.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-[10px] font-bold transition-all shrink-0 flex items-center gap-1.5 cursor-pointer shadow-xs active:scale-95"
-                    title={`Start a 15-question targeted drill on ${topWeakTopic}`}
-                  >
-                    <Zap className="w-3 h-3 text-amber-200 shrink-0 fill-current" />
-                    <span>⚡ Drill: {topWeakTopic} (15 Qs)</span>
-                  </button>
-                )}
 
                 {activeReviewResult && (
                   <button

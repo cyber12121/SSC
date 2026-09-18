@@ -14,6 +14,7 @@ export interface ReviewHistoryItem {
 
 export interface SRSCard {
   id: string; // Unique hash or id
+  questionId?: string; // Original Question ID (enables ultra-lightweight pointer storage)
   type: SRSContentType;
   subject: string; // 'English' | 'General Awareness' | 'Mathematics' | 'Reasoning'
   topic: string; // e.g. 'Synonyms', 'Classical Dance', 'Trigonometry', 'Coding-Decoding'
