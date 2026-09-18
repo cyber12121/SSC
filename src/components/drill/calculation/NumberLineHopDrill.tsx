@@ -32,6 +32,7 @@ export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart 
   const [isStarted, setIsStarted] = useState<boolean>(false);
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState<number>(1); // 1 to 10
   const [roundScore, setRoundScore] = useState<number>(0);
+  const [wrongAttempts, setWrongAttempts] = useState<number>(0);
   const [questionHistory, setQuestionHistory] = useState<Array<'correct' | 'wrong' | 'pending'>>(
     Array(10).fill('pending')
   );
@@ -97,6 +98,7 @@ export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart 
     setUserInput('');
     setFeedback('idle');
     setShowHelper(false);
+    setWrongAttempts(0);
     if (inputRef.current) inputRef.current.value = '';
 
     setTimeout(() => {
@@ -157,12 +159,37 @@ export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart 
     return minuend - subtrahend;
   }, [minuend, subtrahend]);
 
+  const handleWrongAttempt = () => {
+    const nextAttempts = wrongAttempts + 1;
+    setWrongAttempts(nextAttempts);
+    setFeedback('wrong');
+
+    if (nextAttempts >= 3) {
+      setShowHelper(true);
+      setQuestionHistory(prev => {
+        const copy = [...prev];
+        copy[currentQuestionIdx - 1] = 'wrong';
+        return copy;
+      });
+    } else {
+      setTimeout(() => {
+        setFeedback('idle');
+        setUserInput('');
+        if (inputRef.current) {
+          inputRef.current.value = '';
+          inputRef.current.focus();
+        }
+      }, 400);
+    }
+  };
+
   const checkAnswer = () => {
-    if (!userInput.trim()) return;
+    if (!userInput.trim() || feedback === 'correct') return;
     const parsed = parseInt(userInput.trim(), 10);
 
     if (parsed === expectedDiff) {
       setFeedback('correct');
+      setWrongAttempts(0);
       const newScore = roundScore + 1;
       setRoundScore(newScore);
 
@@ -174,23 +201,18 @@ export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart 
 
       setTimeout(() => {
         advanceNextQuestion(newScore);
-      }, 250);
+      }, 150);
     } else {
-      setFeedback('wrong');
-      setShowHelper(true);
-
-      setQuestionHistory(prev => {
-        const copy = [...prev];
-        copy[currentQuestionIdx - 1] = 'wrong';
-        return copy;
-      });
+      handleWrongAttempt();
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (feedback === 'correct') return;
+    if (feedback === 'wrong' && e.key !== 'Enter') setFeedback('idle');
     if (e.key === 'Enter') {
       e.preventDefault();
-      if (feedback === 'wrong') {
+      if (feedback === 'wrong' && wrongAttempts >= 3) {
         advanceNextQuestion(roundScore);
       } else {
         checkAnswer();
@@ -410,11 +432,13 @@ export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart 
                   pattern="[0-9]*"
                   value={userInput}
                   onChange={(e) => {
-                    if (feedback !== 'idle') return;
+                    if (feedback === 'correct') return;
+                    if (feedback === 'wrong') setFeedback('idle');
                     const val = e.target.value.replace(/[^0-9]/g, '');
                     setUserInput(val);
                     if (val && parseInt(val, 10) === expectedDiff) {
                       setFeedback('correct');
+                      setWrongAttempts(0);
                       const newScore = roundScore + 1;
                       setRoundScore(newScore);
                       setQuestionHistory(prev => {
@@ -428,7 +452,8 @@ export const NumberLineHopDrill: React.FC<SubtractionDrillProps> = ({ autoStart 
                     }
                   }}
                   onKeyDown={(e) => {
-                    if (feedback !== 'idle') return;
+                    if (feedback === 'correct') return;
+                    if (feedback === 'wrong' && e.key !== 'Enter') setFeedback('idle');
                     if (e.key === 'Enter') {
                       e.preventDefault();
                       checkAnswer();

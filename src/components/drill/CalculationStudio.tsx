@@ -90,6 +90,7 @@ export const CalculationStudio: React.FC<Props> = ({
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [revealed, setRevealed] = useState<boolean>(false);
+  const [wrongAttempts, setWrongAttempts] = useState<number>(0);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -153,6 +154,7 @@ export const CalculationStudio: React.FC<Props> = ({
     setInputVal('');
     setFeedback(null);
     setRevealed(false);
+    setWrongAttempts(0);
     setElapsedSeconds(0);
     startTimeRef.current = Date.now();
 
@@ -227,6 +229,7 @@ export const CalculationStudio: React.FC<Props> = ({
     setSelectedOption(null);
     setFeedback(null);
     setRevealed(false);
+    setWrongAttempts(0);
     if (inputRef.current) inputRef.current.value = '';
 
     let updatedQueue = [...currentQueue];
@@ -328,6 +331,7 @@ export const CalculationStudio: React.FC<Props> = ({
     if (!currentQuestion || feedback !== null) return;
     playAudioTone('correct');
     setFeedback('correct');
+    setWrongAttempts(0);
 
     setStatsBySection((prev) => ({
       ...prev,
@@ -355,7 +359,7 @@ export const CalculationStudio: React.FC<Props> = ({
 
   // Wrong submission
   const handleWrong = () => {
-    if (!currentQuestion || feedback !== null) return;
+    if (!currentQuestion || feedback === 'correct') return;
     playAudioTone('wrong');
     setFeedback('wrong');
     setStreak(0);
@@ -368,9 +372,24 @@ export const CalculationStudio: React.FC<Props> = ({
       },
     }));
 
-    setTimeout(() => {
-      setFeedback(null);
-    }, 450);
+    const nextAttempts = wrongAttempts + 1;
+    setWrongAttempts(nextAttempts);
+
+    if (nextAttempts >= 3) {
+      // Show/reveal answer on 3rd wrong attempt
+      handleReveal();
+    } else {
+      // Clear wrong input and remove wrong feedback so user can retry
+      setTimeout(() => {
+        setFeedback(null);
+        setInputVal('');
+        setSelectedOption(null);
+        if (inputRef.current) {
+          inputRef.current.value = '';
+          inputRef.current.focus();
+        }
+      }, 400);
+    }
   };
 
   // Skip or reveal answer
@@ -438,7 +457,8 @@ export const CalculationStudio: React.FC<Props> = ({
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (feedback !== null || revealed) return;
+    if (feedback === 'correct' || revealed) return;
+    if (feedback === 'wrong') setFeedback(null);
     const val = e.target.value;
     setInputVal(val);
 
@@ -449,7 +469,8 @@ export const CalculationStudio: React.FC<Props> = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (feedback !== null || revealed) return;
+    if (feedback === 'correct' || revealed) return;
+    if (feedback === 'wrong' && e.key !== 'Enter') setFeedback(null);
     if (e.key === 'Enter') {
       e.preventDefault();
       if (!currentQuestion || inputVal.trim() === '') return;
@@ -468,9 +489,11 @@ export const CalculationStudio: React.FC<Props> = ({
   };
 
   const handleNumpadPress = (char: string) => {
-    if (feedback !== null || revealed) return;
+    if (feedback === 'correct' || revealed) return;
+    if (feedback === 'wrong') setFeedback(null);
     if (char === 'clear') {
       setInputVal('');
+      if (inputRef.current) inputRef.current.value = '';
       inputRef.current?.focus();
     } else if (char === 'backspace') {
       const nextVal = inputVal.slice(0, -1);

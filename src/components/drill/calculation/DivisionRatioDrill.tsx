@@ -29,6 +29,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
   const [roundCount, setRoundCount] = useState<number>(1);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
+  const [wrongAttempts, setWrongAttempts] = useState<number>(0);
 
   const timerRef = useRef<any>(null);
   const startTimeRef = useRef<number>(0);
@@ -58,6 +59,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
     setBracketFeedback('idle');
     setSelectedRatio(null);
     setRatioFeedback('idle');
+    setWrongAttempts(0);
 
     if (track === 'decimal_percentage') {
       const d = Math.floor(Math.random() * 60) + 40;
@@ -136,6 +138,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
     if (isCorrect) {
       setBracketFeedback('correct');
       setScore(prev => prev + 1);
+      setWrongAttempts(0);
 
       setTimeout(() => {
         if (roundCount >= 5) {
@@ -146,8 +149,18 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
         }
       }, 250);
     } else {
+      const nextAttempts = wrongAttempts + 1;
+      setWrongAttempts(nextAttempts);
       setBracketFeedback('wrong');
-      setShowHelper(true);
+
+      if (nextAttempts >= 3) {
+        setShowHelper(true);
+      } else {
+        setTimeout(() => {
+          setBracketFeedback('idle');
+          setSelectedBracket(null);
+        }, 400);
+      }
     }
   };
 
@@ -163,6 +176,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
     if (isCorrect) {
       setRatioFeedback('correct');
       setScore(prev => prev + 1);
+      setWrongAttempts(0);
 
       setTimeout(() => {
         if (roundCount >= 5) {
@@ -173,8 +187,18 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
         }
       }, 250);
     } else {
+      const nextAttempts = wrongAttempts + 1;
+      setWrongAttempts(nextAttempts);
       setRatioFeedback('wrong');
-      setShowHelper(true);
+
+      if (nextAttempts >= 3) {
+        setShowHelper(true);
+      } else {
+        setTimeout(() => {
+          setRatioFeedback('idle');
+          setSelectedRatio(null);
+        }, 400);
+      }
     }
   };
 

@@ -108,7 +108,8 @@ export const CrossGridMatrixDrill: React.FC<MatrixDrillProps> = ({ autoStart = f
   const activeSum = (rowHeaders[activeCell.r] || 0) + (colHeaders[activeCell.c] || 0);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (feedback !== 'idle') return;
+    if (feedback === 'correct') return;
+    if (feedback === 'wrong') setFeedback('idle');
     const val = e.target.value.replace(/[^0-9]/g, '');
     setUserInput(val);
 

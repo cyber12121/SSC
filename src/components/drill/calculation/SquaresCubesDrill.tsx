@@ -19,6 +19,7 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
   const [roundCount, setRoundCount] = useState<number>(1);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
+  const [wrongAttempts, setWrongAttempts] = useState<number>(0);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<any>(null);
@@ -88,6 +89,7 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
     setUserInput('');
     setFeedback('idle');
     setShowHelper(false);
+    setWrongAttempts(0);
     if (inputRef.current) inputRef.current.value = '';
 
     setTimeout(() => {
@@ -143,8 +145,28 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
 
   const expectedAnswer = isCube ? Math.pow(numberPrompt, 3) : Math.pow(numberPrompt, 2);
 
+  const handleWrongAttempt = () => {
+    const nextAttempts = wrongAttempts + 1;
+    setWrongAttempts(nextAttempts);
+    setFeedback('wrong');
+
+    if (nextAttempts >= 3) {
+      setShowHelper(true);
+    } else {
+      setTimeout(() => {
+        setFeedback('idle');
+        setUserInput('');
+        if (inputRef.current) {
+          inputRef.current.value = '';
+          inputRef.current.focus();
+        }
+      }, 400);
+    }
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (feedback !== 'idle') return;
+    if (feedback === 'correct') return;
+    if (feedback === 'wrong') setFeedback('idle');
     const val = e.target.value.replace(/[^0-9]/g, '');
     setUserInput(val);
 
@@ -152,6 +174,7 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
     if (val && parseInt(val, 10) === expectedAnswer) {
       setFeedback('correct');
       setScore(prev => prev + 1);
+      setWrongAttempts(0);
 
       setTimeout(() => {
         if (roundCount >= 5) {
@@ -162,16 +185,16 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
         }
       }, 150);
     } else if (val.length >= expectedStr.length) {
-      setFeedback('wrong');
-      setShowHelper(true);
+      handleWrongAttempt();
     }
   };
 
   const checkAnswer = () => {
-    if (!userInput) return;
+    if (!userInput || feedback === 'correct') return;
     if (parseInt(userInput, 10) === expectedAnswer) {
       setFeedback('correct');
       setScore(prev => prev + 1);
+      setWrongAttempts(0);
       setTimeout(() => {
         if (roundCount >= 5) {
           setIsFinished(true);
@@ -179,10 +202,9 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
           setRoundCount(prev => prev + 1);
           generateProblem();
         }
-      }, 220);
+      }, 150);
     } else {
-      setFeedback('wrong');
-      setShowHelper(true);
+      handleWrongAttempt();
     }
   };
 
@@ -434,7 +456,8 @@ export const SquaresCubesDrill: React.FC<PowerDrillProps> = ({ autoStart = false
                   value={userInput}
                   onChange={handleInputChange}
                   onKeyDown={(e) => {
-                    if (feedback !== 'idle') return;
+                    if (feedback === 'correct') return;
+                    if (feedback === 'wrong' && e.key !== 'Enter') setFeedback('idle');
                     if (e.key === 'Enter') {
                       e.preventDefault();
                       checkAnswer();
