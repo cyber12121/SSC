@@ -400,16 +400,16 @@
     "correctOption": "B",
     "userTime": "01:09",
     "avgTime": "00:22",
-    "questionText": "A wheel makes 12 revolutions per minute. The angle in radian described by a spoke of the wheel in 1 second is:",
+    "questionText": "A wheel makes 12 revolutions per minute. The angle in radians described by a spoke of the wheel in 1 second is:",
     "options": {
-      "A": "5π/2",
-      "B": "2π/5",
-      "C": "3π/5",
-      "D": "4π/5",
-      "a": "5π/2",
-      "b": "2π/5",
-      "c": "3π/5",
-      "d": "4π/5"
+      "A": "$\\frac{5\\pi}{2}$",
+      "B": "$\\frac{2\\pi}{5}$",
+      "C": "$\\frac{3\\pi}{5}$",
+      "D": "$\\frac{4\\pi}{5}$",
+      "a": "$\\frac{5\\pi}{2}$",
+      "b": "$\\frac{2\\pi}{5}$",
+      "c": "$\\frac{3\\pi}{5}$",
+      "d": "$\\frac{4\\pi}{5}$"
     },
     "solution": "Solution\n\nShortcut Trick\nRevolutions per minute = 12\nRevolutions per second = 12 ÷ 60 = 1/5\nAngle completed in 1 revolution = 2π radians\nAngle described in 1 second = 1/5 × 2π = 2π/5 radians\n∴ The correct answer is 2π/5 radians.\n\nAlternate Method\nGiven:\nRevolutions made by the wheel in 1 minute = 12 / 1 minute = 60 seconds\n\nFormula Used:\nAngle rotated (in radians) = Number of revolutions × 2π\n\nCalculations:\n⇒ Number of revolutions in 60 seconds = 12\n⇒ Number of revolutions in 1 second = 12 ÷ 60\n⇒ Number of revolutions in 1 second = 1/5\n⇒ We know that in 1 complete revolution, the angle described at the center is 2π radians.\n⇒ Angle described in 1 second = (1/5) × 2π\n⇒ Angle described in 1 second = 2π/5 radians\n∴ The correct answer is 2π/5 radians.\n\nAdditional Information\nAngular Velocity (ω)\n\nIt is defined as the rate of change of angular displacement. It is given by ω = θ ÷ t, and is measured in radians per second.\n\nRadian to Degree Conversion\n\n1 radian = 180° ÷ π. An angle of 2π/5 radians directly corresponds to (2 × 180°) ÷ 5 = 72°.\n\nRevolutions to Radians Relation\n\n1 complete revolution around a circle subtends a full central angle of 360°, which is exactly equal to 2π radians.",
     "mockId": "mock_1789628963551_9ntil",
@@ -421,7 +421,9 @@
       "topic": "Trigonometry",
       "subtopic": "Angle Measurement and Conversion",
       "conceptTested": "Angular displacement in radians = number of revolutions \\u00d7 2\\u03c0"
-    }
+    },
+    "question": "A wheel makes 12 revolutions per minute. The angle in radians described by a spoke of the wheel in 1 second is:",
+    "answer": "b"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 9",

@@ -820,16 +820,16 @@
   {
     "id": "mock_q_24_mock_1789496162482_bu6td",
     "q_num": 24,
-    "question": "If cos φ = 15/17, then find the value of (2 cosec φ - 3 tan φ).",
+    "question": "If $\\cos \\varphi = \\frac{15}{17}$, then find the value of $(2 \\operatorname{cosec} \\varphi - 3 \\tan \\varphi)$:",
     "options": {
-      "a": "17/4",
-      "b": "49/20",
-      "c": "9/20",
-      "d": "53/20",
-      "A": "17/4",
-      "B": "49/20",
-      "C": "9/20",
-      "D": "53/20"
+      "a": "$\\frac{17}{4}$",
+      "b": "$\\frac{49}{20}$",
+      "c": "$\\frac{9}{20}$",
+      "d": "$\\frac{53}{20}$",
+      "A": "$\\frac{17}{4}$",
+      "B": "$\\frac{49}{20}$",
+      "C": "$\\frac{9}{20}$",
+      "D": "$\\frac{53}{20}$"
     },
     "answer": "d",
     "solution": "cos φ = adjacent/hypotenuse\nadjacent = 15, hypotenuse = 17\nOpposite = √(172 - 152) = √(289 - 225) = 8\nsin φ = 8/17\ncosec φ = 17/8\ntan φ = (8/17)/(15/17) = 8/15\n2 cosec φ - 3 tan φ = 2 * (17/8) - 3 * (8/15)\n=> 34/8 - 24/15\n=> 17/4 - 8/5\n(85 - 32)/20 = 53/20",
@@ -850,7 +850,7 @@
     "isSlow": true,
     "timeSpent": 53,
     "userTime": 53,
-    "questionText": "If cos φ = 15/17, then find the value of (2 cosec φ - 3 tan φ).",
+    "questionText": "If $\\cos \\varphi = \\frac{15}{17}$, then find the value of $(2 \\operatorname{cosec} \\varphi - 3 \\tan \\varphi)$:",
     "correctOption": "D"
   },
   {
@@ -1032,19 +1032,19 @@
   {
     "id": "mock_q_30_mock_1789496162482_bu6td",
     "q_num": 30,
-    "question": "If x = 3 - √2, then find the value of 3x^2 + 2x - 4",
+    "question": "If $x = 3 - \\sqrt{2}$, then find the value of $3x^2 + 2x - 4$",
     "options": {
-      "a": "20 - √2",
-      "b": "35 + √2",
-      "c": "35 - 20√2",
-      "d": "35 - 2√2",
-      "A": "20 - √2",
-      "B": "35 + √2",
-      "C": "35 - 20√2",
-      "D": "35 - 2√2"
+      "a": "$20 - \\sqrt{2}$",
+      "b": "$35 + \\sqrt{2}$",
+      "c": "$35 - 20\\sqrt{2}$",
+      "d": "$35 - 2\\sqrt{2}$",
+      "A": "$20 - \\sqrt{2}$",
+      "B": "$35 + \\sqrt{2}$",
+      "C": "$35 - 20\\sqrt{2}$",
+      "D": "$35 - 2\\sqrt{2}$"
     },
     "answer": "c",
-    "solution": "Previous\nReview\nNext",
+    "solution": "Solution\n\nShortcut Trick\nGiven: $x = 3 - \\sqrt{2}$\n⇒ $x - 3 = -\\sqrt{2}$\nSquaring both sides:\n⇒ $(x - 3)^2 = (-\\sqrt{2})^2$\n⇒ $x^2 - 6x + 9 = 2$\n⇒ $x^2 = 6x - 7$\n\nSubstitute $x^2 = 6x - 7$ in the polynomial expression:\n⇒ $3x^2 + 2x - 4 = 3(6x - 7) + 2x - 4$\n⇒ $18x - 21 + 2x - 4 = 20x - 25$\n\nSubstitute $x = 3 - \\sqrt{2}$:\n⇒ $20(3 - \\sqrt{2}) - 25 = 60 - 20\\sqrt{2} - 25 = 35 - 20\\sqrt{2}$\n∴ The correct answer is $35 - 20\\sqrt{2}$.\n\nAlternate Method\nGiven:\n$x = 3 - \\sqrt{2}$\n\nCalculations:\n⇒ $x^2 = (3 - \\sqrt{2})^2 = 9 - 6\\sqrt{2} + 2 = 11 - 6\\sqrt{2}$\n⇒ $3x^2 = 3(11 - 6\\sqrt{2}) = 33 - 18\\sqrt{2}$\n⇒ $2x = 2(3 - \\sqrt{2}) = 6 - 2\\sqrt{2}$\n\nNow calculate $3x^2 + 2x - 4$:\n⇒ $3x^2 + 2x - 4 = (33 - 18\\sqrt{2}) + (6 - 2\\sqrt{2}) - 4$\n⇒ $(33 + 6 - 4) - (18\\sqrt{2} + 2\\sqrt{2})$\n⇒ $35 - 20\\sqrt{2}$\n∴ The correct answer is $35 - 20\\sqrt{2}$.\n\nAdditional Information\nSurd Simplification\nWhen dealing with surds of the form $x = a - \\sqrt{b}$, rearranging to $(x - a)^2 = b$ gives a quadratic relation without square roots, making polynomial reduction faster.",
     "image": null,
     "subject": "Mathematics",
     "tags": {
@@ -1062,25 +1062,25 @@
     "isSlow": true,
     "timeSpent": 123,
     "userTime": 123,
-    "questionText": "If x = 3 - √2, then find the value of 3x^2 + 2x - 4",
+    "questionText": "If $x = 3 - \\sqrt{2}$, then find the value of $3x^2 + 2x - 4$",
     "correctOption": "C"
   },
   {
     "id": "mock_q_31_mock_1789496162482_bu6td",
     "q_num": 31,
-    "question": "If x + (1/x) = y + (1/y), then x = ?",
+    "question": "If $x + \\frac{1}{x} = y + \\frac{1}{y}$, then $x = ?$:",
     "options": {
-      "a": "0,1",
-      "b": "y,y2",
-      "c": "y,2y",
-      "d": "y,1/y",
-      "A": "0,1",
-      "B": "y,y2",
-      "C": "y,2y",
-      "D": "y,1/y"
+      "a": "$0, 1$",
+      "b": "$y, y^2$",
+      "c": "$y, 2y$",
+      "d": "$y, \\frac{1}{y}$",
+      "A": "$0, 1$",
+      "B": "$y, y^2$",
+      "C": "$y, 2y$",
+      "D": "$y, \\frac{1}{y}$"
     },
     "answer": "d",
-    "solution": "Previous\nReview\nNext",
+    "solution": "Solution\n\nShortcut Trick\nGiven: $x + \\frac{1}{x} = y + \\frac{1}{y}$\n⇒ $(x - y) + \\left(\\frac{1}{x} - \\frac{1}{y}\\right) = 0$\n⇒ $(x - y) + \\frac{y - x}{xy} = 0$\n⇒ $(x - y) - \\frac{x - y}{xy} = 0$\n⇒ $(x - y)\\left(1 - \\frac{1}{xy}\\right) = 0$\n\nThis gives two solutions:\nCase 1: $x - y = 0 \\implies x = y$\nCase 2: $1 - \\frac{1}{xy} = 0 \\implies xy = 1 \\implies x = \\frac{1}{y}$\n\nTherefore, $x = y$ or $x = \\frac{1}{y}$ (i.e. $y, \\frac{1}{y}$).\n∴ The correct answer is $y, \\frac{1}{y}$.\n\nAlternate Method\nRearrange as a quadratic in $x$:\n⇒ $x^2 + 1 = x\\left(y + \\frac{1}{y}\\right)$\n⇒ $x^2 - \\left(y + \\frac{1}{y}\\right)x + 1 = 0$\n\nFactoring the quadratic:\n⇒ $(x - y)\\left(x - \\frac{1}{y}\\right) = 0$\n⇒ $x = y$ or $x = \\frac{1}{y}$\n∴ The values of $x$ are $y, \\frac{1}{y}$.\n\nAdditional Information\nSymmetry in Equations\nEquations of the form $f(x) = f(y)$ where $f(t) = t + 1/t$ naturally have symmetry: $x = y$ is always a trivial root, while the reciprocal involution gives the second root $x = 1/y$.",
     "image": null,
     "subject": "Mathematics",
     "tags": {
@@ -1098,7 +1098,7 @@
     "isSlow": true,
     "timeSpent": 30,
     "userTime": 30,
-    "questionText": "If x + (1/x) = y + (1/y), then x = ?",
+    "questionText": "If $x + \\frac{1}{x} = y + \\frac{1}{y}$, then $x = ?$:",
     "correctOption": "D"
   },
   {

@@ -1016,7 +1016,7 @@
   {
     "id": "mock_q_27_mock_1789515022905_egyvl",
     "q_num": 27,
-    "question": "The value of \\(\\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2%\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{\\csc (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}\\) is:",
+    "question": "The value of $\\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{\\csc (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}$ is:",
     "options": {
       "a": "1",
       "b": "-1",
@@ -1051,7 +1051,7 @@
     "isSlow": false,
     "timeSpent": 76,
     "userTime": 76,
-    "questionText": "The value of \\(\\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2%\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{\\csc (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}\\) is:",
+    "questionText": "The value of $\\frac{\\sin (\\pi+\\theta)\\cos \\left(\\frac{\\pi}{2}+\\theta\\right)}{\\sin (2\\pi -\\theta)\\cos(2\\pi+\\theta)} \\times \\frac{\\tan \\left(\\frac{3\\pi}{2}-\\theta\\right)\\cot(2\\pi-\\theta)}{\\csc (-\\theta)\\sin\\left(\\frac{3\\pi}{2}+\\theta\\right)}$ is:",
     "correctOption": "A"
   },
   {

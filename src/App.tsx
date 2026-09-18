@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, BookMarked, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, RotateCw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { detectTopic, normalizeTopicTitle } from './utils/topicDetector';
 import { GK_SUBJECT_CONFIGS, GK_SUBJECT_LIST, GKSubjectId, getChapterGKSubject, getTopicGKSubject, formatGKSubTopicTitle } from './utils/gkSubjectHelper';
@@ -13,6 +13,10 @@ const QuizContainer = React.lazy(() => import('./components/QuizContainer').then
 const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
+const SrsHub = React.lazy(() => import('./components/srs/SrsHub').then(m => ({ default: m.SrsHub })));
+import { SrsCardConfirmModal } from './components/srs/SrsCardConfirmModal';
+import { getStoredSRSCards, computeDeckStats, convertQuestionToSRSCardCandidate, addSRSCardsBatch, SRS_UPDATED_EVENT } from './utils/srsEngine';
+import { SRSCard } from './types/srs';
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
 import { AiMentorChat } from './components/AiMentorChat';
@@ -33,6 +37,9 @@ import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap } from './utils/
 import { RCATagType, RCAClassification } from './types';
 import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
+import { ThemeSelector } from './components/ThemeSelector';
+import { getInitialTheme, setAppliedTheme } from './utils/theme';
+import { getDailyThought } from './utils/dailyThoughts';
 
 import { getCachedData, setCachedData, clearCachedData } from './utils/cache';
 
@@ -84,7 +91,7 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
     if (data.mockErrors) chapters.push(...data.mockErrors);
 
     // Determine section and topic from path (applicable to Mathematics and English in chapter_bank)
-    let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'general' | undefined = undefined;
+    let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'black_book' | 'general' | undefined = undefined;
     let topic_name: string | undefined = undefined;
     let set_name: string | undefined = undefined;
 
@@ -94,10 +101,11 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
       else if (path.includes('/mathematics/qrb/')) section = 'qrb';
       else if (path.includes('/mathematics/top500/')) section = 'top500';
       else if (path.includes('/english/ayush_vocab/')) section = 'ayush_vocab';
+      else if (path.includes('/english/black_book/')) section = 'black_book';
       else if (path.includes('/english/')) section = 'general';
 
       if (section && section !== 'general') {
-        const marker = section === 'ayush_vocab' ? '/ayush_vocab/' : `/${section}/`;
+        const marker = `/${section}/`;
         const parts = path.split(marker);
         if (parts.length > 1) {
           const subPath = parts[1]; // e.g., "percentage/set_1.json" or "synonyms/set_1.json"
@@ -173,7 +181,22 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'srs'>('home');
+  const [srsCards, setSrsCards] = useState<SRSCard[]>(() => getStoredSRSCards());
+  const [srsConfirmCards, setSrsConfirmCards] = useState<Array<Partial<SRSCard>>>([]);
+  const [srsConfirmOpen, setSrsConfirmOpen] = useState(false);
+  const [srsConfirmTitle, setSrsConfirmTitle] = useState('Enroll Missed Questions to SRS');
+  const [srsConfirmSource, setSrsConfirmSource] = useState<string | undefined>();
+
+  useEffect(() => {
+    const updateSrs = () => setSrsCards(getStoredSRSCards());
+    window.addEventListener(SRS_UPDATED_EVENT, updateSrs);
+    return () => window.removeEventListener(SRS_UPDATED_EVENT, updateSrs);
+  }, []);
+
+  const srsDueCount = useMemo(() => computeDeckStats(srsCards).dueToday, [srsCards]);
+  const [dailyThoughtSalt, setDailyThoughtSalt] = useState(0);
+  const dailyThought = useMemo(() => getDailyThought(dailyThoughtSalt), [dailyThoughtSalt]);
   const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
     let list: MockScoreReport[] = [];
     try {
@@ -189,6 +212,10 @@ export default function App() {
     } catch { }
     return synced;
   });
+
+  useEffect(() => {
+    setAppliedTheme(getInitialTheme());
+  }, []);
 
   useEffect(() => {
     // Sync backend mock reports on mount so AI immediately has latest Full Mocks (including 13 Sept)
@@ -255,7 +282,7 @@ export default function App() {
   };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
-  const [selectedEnglishSection, setSelectedEnglishSection] = useState<'ayush_vocab' | 'general' | null>(null);
+  const [selectedEnglishSection, setSelectedEnglishSection] = useState<'ayush_vocab' | 'black_book' | 'general' | null>(null);
   const [selectedGKSubject, setSelectedGKSubject] = useState<GKSubjectId | null>(null);
   const [selectedGKSubTopic, setSelectedGKSubTopic] = useState<string>('all');
   const [mockGKFilter, setMockGKFilter] = useState<string>('all');
@@ -965,26 +992,45 @@ export default function App() {
       return guestSaved;
     }
 
+    let savedResult: QuizResult;
     try {
       // Deep sanitize to strip any undefined properties that Firestore rejects
       const sanitizedDoc = JSON.parse(JSON.stringify(fullResult));
       const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
-      const saved = { ...fullResult, id: docRef.id };
-
-      // Optimistically update recent activity state immediately — no extra fetchResults() to avoid race condition
-      setUserResults(prev => [saved, ...prev.filter(r => r.id !== saved.id)]);
-      return saved;
+      savedResult = { ...fullResult, id: docRef.id };
+      setUserResults(prev => [savedResult, ...prev.filter(r => r.id !== savedResult.id)]);
     } catch (error) {
       console.warn('Firestore offline or storage restricted, saving attempt locally:', error);
-      // Fallback local storage so test attempt is never lost
-      const localSaved = { ...fullResult, id: 'local-' + Date.now() };
+      savedResult = { ...fullResult, id: 'local-' + Date.now() };
       try {
         const localHistory = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
-        safeStorage.setItem('offline_results_' + user.uid, JSON.stringify([localSaved, ...localHistory].slice(0, 50)));
+        safeStorage.setItem('offline_results_' + user.uid, JSON.stringify([savedResult, ...localHistory].slice(0, 50)));
       } catch { }
-      setUserResults(prev => [localSaved, ...prev.filter(r => r.id !== localSaved.id)]);
-      return localSaved;
+      setUserResults(prev => [savedResult, ...prev.filter(r => r.id !== savedResult.id)]);
     }
+
+    // Check for missed questions to offer SRS enrollment
+    try {
+      const missedCandidates = (results.questionDetails || [])
+        .filter(d => (!d.isCorrect || !d.selectedAnswer) && d.question)
+        .map(d => convertQuestionToSRSCardCandidate(
+          d.question!,
+          !d.selectedAnswer ? 'quiz_unattempted' : 'quiz_wrong',
+          results.chapter_title,
+          d.selectedAnswer
+        ));
+
+      if (missedCandidates.length > 0) {
+        setSrsConfirmCards(missedCandidates);
+        setSrsConfirmTitle('Enroll Missed Questions to SRS');
+        setSrsConfirmSource(`${results.chapter_title} (${missedCandidates.length} Missed)`);
+        setSrsConfirmOpen(true);
+      }
+    } catch (srsErr) {
+      console.warn('SRS auto-enroll check skipped:', srsErr);
+    }
+
+    return savedResult;
   };
 
   const handleQuizExit = () => {
@@ -1691,7 +1737,7 @@ export default function App() {
                 </a>
               </div>
 
-              {/* Mobile Right Controls: Mode Toggle & Logout */}
+              {/* Mobile Right Controls: Mode Toggle, Theme Switcher & Logout */}
               <div className="flex items-center space-x-2 md:hidden">
                 <div className="flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-xs font-bold" title="Quiz mode">
                   <button
@@ -1713,10 +1759,13 @@ export default function App() {
                     Mock
                   </button>
                 </div>
+
+                <ThemeSelector isCompact />
+
                 {user ? (
                   <button
                     onClick={handleLogout}
-                    className="p-1.5 text-slate-500 hover:text-red-600 transition-colors"
+                    className="p-1.5 text-slate-500 hover:text-red-600 transition-colors cursor-pointer"
                     title="Logout"
                   >
                     <LogOut className="w-4 h-4" />
@@ -1724,7 +1773,7 @@ export default function App() {
                 ) : (
                   <button
                     onClick={handleLogin}
-                    className="p-1.5 text-blue-600 hover:text-blue-700 transition-colors"
+                    className="p-1.5 text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
                     title="Login"
                   >
                     <LogIn className="w-4 h-4" />
@@ -1732,38 +1781,50 @@ export default function App() {
                 )}
               </div>
 
-              <div className="hidden md:flex items-center space-x-6">
+              <div className="hidden md:flex items-center space-x-4 lg:space-x-5">
                 <button
                   onClick={resetToHome}
-                  className={`flex items-center font-bold text-sm transition-colors ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                 >
                   <BookOpen className="w-4 h-4 mr-1.5" />
                   Practice
                 </button>
                 <button
                   onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
-                  className={`flex items-center font-bold text-sm transition-colors ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                 >
                   <Zap className="w-4 h-4 mr-1.5" />
                   Speed Drill
                 </button>
                 <button
                   onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
-                  className={`flex items-center font-bold text-sm transition-colors ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                 >
                   <BookmarkIcon className="w-4 h-4 mr-1.5" />
                   Bookmarks
                 </button>
                 <button
+                  onClick={() => setView('srs')}
+                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer relative ${view === 'srs' ? 'text-indigo-600' : 'text-slate-500 hover:text-slate-800'}`}
+                >
+                  <RotateCw className="w-4 h-4 mr-1.5 text-indigo-500" />
+                  <span>SRS Memory</span>
+                  {srsDueCount > 0 && (
+                    <span className="ml-1.5 px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-black shadow-xs animate-pulse">
+                      {srsDueCount}
+                    </span>
+                  )}
+                </button>
+                <button
                   onClick={() => setView('dashboard')}
-                  className={`flex items-center font-bold text-sm transition-colors ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                 >
                   <LayoutDashboard className="w-4 h-4 mr-1.5" />
                   Dashboard
                 </button>
                 <button
                   onClick={() => setView('mockScores')}
-                  className={`flex items-center font-bold text-sm transition-colors ${view === 'mockScores' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
+                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'mockScores' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
                 >
                   <Trophy className="w-4 h-4 mr-1.5" />
                   Mock Scores
@@ -1771,7 +1832,7 @@ export default function App() {
                 <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
                   <button
                     onClick={() => setQuizModePersisted('practice')}
-                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${quizMode === 'practice'
+                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center cursor-pointer ${quizMode === 'practice'
                         ? 'bg-white text-emerald-600 shadow-xs'
                         : 'text-slate-500 hover:text-slate-800'
                       }`}
@@ -1781,7 +1842,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setQuizModePersisted('mock')}
-                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center ${quizMode === 'mock'
+                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center cursor-pointer ${quizMode === 'mock'
                         ? 'bg-white text-red-600 shadow-xs'
                         : 'text-slate-500 hover:text-slate-800'
                       }`}
@@ -1790,10 +1851,14 @@ export default function App() {
                     Mock
                   </button>
                 </div>
+
+                {/* Theme Selector (Light, Sage) */}
+                <ThemeSelector />
+
                 {user ? (
                   <button
                     onClick={handleLogout}
-                    className="p-2 text-slate-500 hover:text-red-600 transition-colors"
+                    className="p-2 text-slate-500 hover:text-red-600 transition-colors cursor-pointer"
                     title="Logout"
                   >
                     <LogOut className="w-5 h-5" />
@@ -1801,7 +1866,7 @@ export default function App() {
                 ) : (
                   <button
                     onClick={handleLogin}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200 flex items-center text-xs"
+                    className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200 flex items-center text-xs cursor-pointer"
                   >
                     <LogIn className="w-4 h-4 mr-1.5" />
                     Login
@@ -1841,6 +1906,11 @@ export default function App() {
                               <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                               <span>DAILY MINDSET</span>
                             </div>
+                            {dailyThought.focusTag && (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-bold">
+                                {dailyThought.focusTag}
+                              </span>
+                            )}
                             <div className="flex items-center gap-1.5 text-xs font-medium text-slate-400 pl-1">
                               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                               <span className="text-slate-500 font-semibold">Focused Mode</span>
@@ -1850,14 +1920,23 @@ export default function App() {
                                 • Last active: {userResults[0].subject}
                               </span>
                             )}
+                            <button
+                              type="button"
+                              onClick={() => setDailyThoughtSalt(prev => prev + 1)}
+                              className="ml-auto inline-flex items-center gap-1 text-[11px] font-semibold text-slate-400 hover:text-blue-600 transition-colors cursor-pointer px-1.5 py-0.5 rounded hover:bg-slate-100"
+                              title="Shuffle daily thought"
+                            >
+                              <RotateCcw className="w-3 h-3" />
+                              <span className="hidden sm:inline">New thought</span>
+                            </button>
                           </div>
                           <div>
                             <blockquote className="text-xl sm:text-2xl lg:text-[25px] font-bold tracking-tight text-slate-900 leading-snug">
-                              <span className="text-blue-600 mr-1 font-serif">“</span>Consistency isn’t about perfection; it’s about refusing to quit on difficult days. Small daily disciplines compound into top ranks.<span className="text-blue-600 ml-1 font-serif">”</span>
+                              <span className="text-blue-600 mr-1 font-serif">“</span>{dailyThought.quote}<span className="text-blue-600 ml-1 font-serif">”</span>
                             </blockquote>
                             <p className="mt-2 text-xs sm:text-sm font-medium text-slate-500 tracking-wide flex items-center gap-2">
                               <span className="w-4 h-0.5 bg-blue-600 rounded-full inline-block"></span>
-                              Stay consistent &amp; conquer your target exam
+                              {dailyThought.author}
                             </p>
                           </div>
                         </div>
@@ -2007,6 +2086,18 @@ export default function App() {
                                 <div className="flex flex-wrap gap-1 mb-3">
                                   {subject === 'English' && (
                                     <>
+                                      <button
+                                        type="button"
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSelectedSubject('English');
+                                          setSelectedEnglishSection('black_book');
+                                          setSelectedTopic(null);
+                                        }}
+                                        className="px-1.5 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200/60 rounded text-[10px] font-bold transition-colors cursor-pointer"
+                                      >
+                                        Black Book ({(bankData['English'] || []).filter(ch => ch.section === 'black_book').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
+                                      </button>
                                       <button
                                         type="button"
                                         onClick={(e) => {
@@ -2427,8 +2518,17 @@ export default function App() {
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
                       {([
+                        {
+                          key: 'black_book',
+                          icon: BookMarked,
+                          chip: 'from-amber-500 to-orange-600',
+                          badge: 'Black Book Edition',
+                          title: 'Black Book Vocabulary',
+                          desc: '317 One Word Substitutions organized into 12 letter-based sets. Master definitions with high-yield 4-choice questions.',
+                          count: `${(currentData['English'] || []).filter(ch => ch.section === 'black_book').reduce((acc, ch) => acc + (ch.questions?.length || 0), 0)} Questions • ${(currentData['English'] || []).filter(ch => ch.section === 'black_book').length} Sets`
+                        },
                         {
                           key: 'ayush_vocab',
                           icon: Sparkles,
@@ -2445,7 +2545,7 @@ export default function App() {
                           badge: 'Grammar & Core',
                           title: 'Grammar & Chapter Practice',
                           desc: 'Topic-wise grammar fundamentals, rule revisions, and chapter-wise question bank.',
-                          count: `${(currentData['English'] || []).filter(ch => ch.section !== 'ayush_vocab').length} Chapters`
+                          count: `${(currentData['English'] || []).filter(ch => ch.section !== 'ayush_vocab' && ch.section !== 'black_book').length} Chapters`
                         }
                       ] as const).map(({ key, icon: Icon, chip, badge, title, desc, count }) => (
                         <motion.div
@@ -2521,7 +2621,9 @@ export default function App() {
                               ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.title
                               : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
                                 ? 'All Vocabs SSC 2025 - by Ayush'
-                                : selectedSubject}
+                                : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book'
+                                  ? 'Black Book Vocabulary - OWS'
+                                  : selectedSubject}
                           </h2>
                           <p className="text-[11px] text-slate-500 font-medium">
                             {category === 'mockErrors'
@@ -2530,7 +2632,9 @@ export default function App() {
                                 ? GK_SUBJECT_CONFIGS[selectedGKSubject]?.desc
                                 : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab'
                                   ? '914 High-Yield SSC 2025 vocabulary questions in sets of 20'
-                                  : 'Comprehensive chapter-wise question vault'}
+                                  : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book'
+                                    ? '317 High-Yield One Word Substitution questions in 12 letter-based sets'
+                                    : 'Comprehensive chapter-wise question vault'}
                           </p>
                         </div>
                       </div>
@@ -2750,13 +2854,13 @@ export default function App() {
                           <button
                             onClick={() => startAllSubjectQuiz(selectedSubject)}
                             disabled={clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0}
-                            className={`inline-flex shrink-0 items-center rounded-lg px-3.5 py-1.5 text-xs font-semibold shadow-xs transition-all ${clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
+                            className={`inline-flex shrink-0 items-center gap-1.5 rounded-lg h-8 px-3 text-xs font-bold shadow-xs transition-all ${clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
                                 ? 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
-                                : 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer active:scale-95'
+                                : 'bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white cursor-pointer active:scale-95'
                               }`}
                           >
-                            <Play className="w-3.5 h-3.5 mr-1 fill-current" />
-                            Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})
+                            <Play className="w-3 h-3 fill-current" />
+                            <span>Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})</span>
                           </button>
                         </div>
                       </div>
@@ -3059,8 +3163,10 @@ export default function App() {
                             if (selectedSubject === 'English' && category === 'chapterBank') {
                               if (selectedEnglishSection === 'ayush_vocab') {
                                 return chapter.section === 'ayush_vocab';
+                              } else if (selectedEnglishSection === 'black_book') {
+                                return chapter.section === 'black_book';
                               } else {
-                                return chapter.section !== 'ayush_vocab';
+                                return chapter.section !== 'ayush_vocab' && chapter.section !== 'black_book';
                               }
                             }
                             if (selectedSubject === 'General Awareness' && category === 'chapterBank') {
@@ -3084,13 +3190,15 @@ export default function App() {
                           });
 
                           const isMathSection = selectedSubject === 'Mathematics' && category === 'chapterBank';
-                          const isEnglishVocabSection = selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab';
+                          const isEnglishAyushVocab = selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'ayush_vocab';
+                          const isEnglishBlackBook = selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book';
+                          const isEnglishVocabSection = isEnglishAyushVocab || isEnglishBlackBook;
                           const isTopicLevelSection = isMathSection || isEnglishVocabSection;
 
                           if (isTopicLevelSection && !selectedTopic) {
                             const topics = Array.from(new Set(relevantChapters.map(ch => ch.topic_name).filter(Boolean))) as string[];
                             if (isEnglishVocabSection) {
-                              const vocabOrder = ['synonyms', 'antonyms', 'one_word_substitution', 'idioms_and_phrases', 'spellings'];
+                              const vocabOrder = ['one_word_substitution', 'synonyms', 'antonyms', 'idioms_and_phrases', 'spellings'];
                               topics.sort((a, b) => {
                                 const idxA = vocabOrder.indexOf(a);
                                 const idxB = vocabOrder.indexOf(b);
@@ -3113,31 +3221,33 @@ export default function App() {
                                           : topic.replace(/_/g, ' '))
                                 : topic.replace(/_/g, ' ');
 
-                              const chipGrad = isEnglishVocabSection
-                                ? (topic === 'synonyms' ? 'from-emerald-500 to-teal-600'
-                                  : topic === 'antonyms' ? 'from-cyan-500 to-blue-600'
-                                    : topic === 'one_word_substitution' ? 'from-violet-500 to-purple-600'
-                                      : topic === 'idioms_and_phrases' ? 'from-amber-500 to-orange-600'
-                                        : 'from-rose-500 to-pink-600')
-                                : 'from-indigo-500 to-violet-600';
+                              const chipGrad = isEnglishBlackBook
+                                ? 'from-amber-500 to-orange-600'
+                                : isEnglishVocabSection
+                                  ? (topic === 'synonyms' ? 'from-emerald-500 to-teal-600'
+                                    : topic === 'antonyms' ? 'from-cyan-500 to-blue-600'
+                                      : topic === 'one_word_substitution' ? 'from-violet-500 to-purple-600'
+                                        : topic === 'idioms_and_phrases' ? 'from-amber-500 to-orange-600'
+                                          : 'from-rose-500 to-pink-600')
+                                  : 'from-indigo-500 to-violet-600';
 
                               return (
                                 <motion.div
                                   key={idx}
                                   whileHover={{ y: -2 }}
                                   onClick={() => setSelectedTopic(topic)}
-                                  className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${isEnglishVocabSection ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
+                                  className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${isEnglishBlackBook ? 'hover:border-amber-300' : isEnglishVocabSection ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
                                     } hover:shadow-md shadow-xs flex flex-col justify-between`}
                                 >
                                   <div className="flex items-center justify-between">
                                     <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br ${chipGrad} text-white shadow-xs`}>
-                                      {isEnglishVocabSection ? <Sparkles className="w-4 h-4" /> : <Layers className="w-4 h-4" />}
+                                      {isEnglishBlackBook ? <BookMarked className="w-4 h-4" /> : isEnglishVocabSection ? <Sparkles className="w-4 h-4" /> : <Layers className="w-4 h-4" />}
                                     </div>
                                     <div className="flex items-center gap-1.5">
                                       <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-400">
                                         {topicChapters.length} Sets
                                       </span>
-                                      <span className="rounded-md bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-100">
+                                      <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${isEnglishBlackBook ? 'bg-amber-50 text-amber-700 border border-amber-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-100'}`}>
                                         {totalQuestions} Qs
                                       </span>
                                       <button
@@ -3154,8 +3264,8 @@ export default function App() {
                                     </div>
                                   </div>
                                   <h3 className="mt-2.5 text-xs font-bold capitalize text-slate-800">{displayTitle}</h3>
-                                  <div className={`mt-2 flex items-center text-xs font-semibold ${isEnglishVocabSection ? 'text-emerald-600' : 'text-indigo-600'}`}>
-                                    View Sets (20 Qs each)
+                                  <div className={`mt-2 flex items-center text-xs font-semibold ${isEnglishBlackBook ? 'text-amber-600' : isEnglishVocabSection ? 'text-emerald-600' : 'text-indigo-600'}`}>
+                                    {isEnglishBlackBook ? `View All ${topicChapters.length} Sets (${totalQuestions} Words)` : isEnglishAyushVocab ? 'View Sets (20 Qs each)' : 'View Sets'}
                                     <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                   </div>
                                 </motion.div>
@@ -3190,25 +3300,29 @@ export default function App() {
                               key={`${chapter.chapter_title}|${chapter.section || ''}|${chapter.set_name || ''}`}
                               whileHover={{ y: -2 }}
                               onClick={() => startQuiz(chapter)}
-                              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
+                              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${chapter.section === 'black_book' ? 'hover:border-amber-300' : chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
                                 } hover:shadow-md shadow-xs flex flex-col justify-between`}
                             >
                               <div className="flex items-center justify-between">
-                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'ayush_vocab'
-                                    ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
-                                    : chapter.is_test
-                                      ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
-                                      : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
+                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'black_book'
+                                    ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                    : chapter.section === 'ayush_vocab'
+                                      ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
+                                      : chapter.is_test
+                                        ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                        : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
                                   } shadow-xs`}>
-                                  {chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+                                  {chapter.section === 'black_book' ? <BookMarked className="w-4 h-4" /> : chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
                                 </div>
-                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${chapter.section === 'ayush_vocab'
-                                    ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                                    : chapter.is_test
-                                      ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                                      : 'bg-slate-50 text-slate-500'
+                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${chapter.section === 'black_book'
+                                    ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                    : chapter.section === 'ayush_vocab'
+                                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                                      : chapter.is_test
+                                        ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                        : 'bg-slate-50 text-slate-500'
                                   }`}>
-                                  {chapter.section === 'ayush_vocab'
+                                  {chapter.section === 'black_book' || chapter.section === 'ayush_vocab'
                                     ? `Set ${chapter.chapter_num}`
                                     : chapter.is_test
                                       ? 'Full Test'
@@ -3224,7 +3338,7 @@ export default function App() {
                                 </p>
                               </div>
                               <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
-                                <div className={`flex items-center text-xs font-semibold ${chapter.section === 'ayush_vocab' ? 'text-emerald-600' : 'text-indigo-600'}`}>
+                                <div className={`flex items-center text-xs font-semibold ${chapter.section === 'black_book' ? 'text-amber-600' : chapter.section === 'ayush_vocab' ? 'text-emerald-600' : 'text-indigo-600'}`}>
                                   Start Set
                                   <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                 </div>
@@ -3393,6 +3507,24 @@ export default function App() {
                 </React.Suspense>
               </motion.div>
             )}
+
+            {view === 'srs' && (
+              <motion.div
+                key="srs"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+              >
+                <React.Suspense fallback={
+                  <div className="flex flex-col items-center justify-center py-40">
+                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                    <p className="text-slate-500 font-bold">Loading SRS Anki studio...</p>
+                  </div>
+                }>
+                  <SrsHub onNavigateHome={resetToHome} rawChapterData={currentData} />
+                </React.Suspense>
+              </motion.div>
+            )}
           </AnimatePresence>
         )}
 
@@ -3418,6 +3550,25 @@ export default function App() {
           onClose={() => setSetPickerModal(null)}
           onStartQuiz={startQuiz}
         />
+
+        {/* SRS Missed Questions Confirmation Modal */}
+        <SrsCardConfirmModal
+          isOpen={srsConfirmOpen}
+          cards={srsConfirmCards}
+          title={srsConfirmTitle}
+          sourceLabel={srsConfirmSource}
+          onConfirm={(confirmed) => {
+            if (confirmed.length > 0) {
+              addSRSCardsBatch(confirmed);
+            }
+            setSrsConfirmOpen(false);
+            setSrsConfirmCards([]);
+          }}
+          onCancel={() => {
+            setSrsConfirmOpen(false);
+            setSrsConfirmCards([]);
+          }}
+        />
       </main>
 
       {/* Mobile Bottom Navigation Bar */}
@@ -3440,6 +3591,20 @@ export default function App() {
           >
             <Zap className="w-4 h-4 mb-0.5" />
             <span>Drills</span>
+          </button>
+          <button
+            onClick={() => setView('srs')}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer relative ${
+              view === 'srs' ? 'text-indigo-600 bg-indigo-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <RotateCw className="w-4 h-4 mb-0.5 text-indigo-500" />
+            <span>SRS</span>
+            {srsDueCount > 0 && (
+              <span className="absolute -top-1 right-1 px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[9px] font-black shadow-xs animate-pulse">
+                {srsDueCount}
+              </span>
+            )}
           </button>
           <button
             onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}

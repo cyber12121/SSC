@@ -22,19 +22,41 @@ import {
   Play,
   Zap,
   Clock,
-  GripVertical
+  GripVertical,
+  Square,
+  AlertTriangle,
+  Lightbulb,
+  Calculator,
+  BookOpen,
+  Paperclip,
+  Image as ImageIcon,
+  FileText,
+  Loader2
 } from 'lucide-react';
+import katex from 'katex';
+import { sanitizeLatexForKatex } from '../utils/mathSanitizer';
 import { MockScoreReport } from '../types/mockScore';
 import { QuizResult } from '../types';
 import { buildMockAiSummary } from '../utils/mockAiContext';
 import { AiFocusedScope } from '../types/aiScope';
 import { AI_SCOPE_EVENT } from '../utils/aiScopeHelper';
+import { SrsCardConfirmModal } from './srs/SrsCardConfirmModal';
+import { SRSCard } from '../types/srs';
+import { addSRSCardsBatch } from '../utils/srsEngine';
+
+export interface ChatAttachment {
+  name: string;
+  mimeType: string;
+  data: string; // base64
+  size?: number;
+}
 
 interface ChatMessage {
   id: string;
   role: 'user' | 'assistant';
   text: string;
   timestamp: string;
+  attachment?: ChatAttachment;
 }
 
 interface AiMentorChatProps {
@@ -218,103 +240,240 @@ function useDynamicSuggestions(
   }, [mockReports, topWeakTopic, activeReviewResult, focusedScope]);
 }
 
-// Clean residual or malformed LaTeX formulas into clean, readable math & unicode
-function cleanLatexMath(text: string): string {
-  if (!text) return '';
-  let s = text;
+// KaTeX HTML rendering cache for high performance
+const chatKatexCache = new Map<string, string>();
+function renderKatexMath(latex: string, displayMode: boolean): string {
+  const trimmed = latex.trim();
+  if (!trimmed) return '';
+  const cacheKey = `${displayMode ? 'D:' : 'I:'}${trimmed}`;
+  const cached = chatKatexCache.get(cacheKey);
+  if (cached) return cached;
 
-  // 1. Fix broken '≤ft' artifact created by bad \le replacement on \left
-  s = s.replace(/≤ft\s*\(/g, '(').replace(/≤ft\s*\[/g, '[');
-
-  // 2. Remove LaTeX delimiter wrappers \left and \right
-  s = s.replace(/\\left\s*([(\[{|])/g, '$1');
-  s = s.replace(/\\right\s*([)\]}|])/g, '$1');
-  s = s.replace(/\\left|\\right/g, '');
-
-  // 3. Convert mixed numbers: e.g. 16\frac{2}{3} -> 16 2/3
-  s = s.replace(/(\d+)\s*\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '$1 $2/$3');
-
-  // 4. Convert remaining fractions: \frac{a}{b} -> (a / b) or a/b
-  let prev = '';
-  do {
-    prev = s;
-    s = s.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '($1 / $2)');
-  } while (s !== prev);
-
-  // Clean up simple fractions like (1 / 9) to 1/9 (preserve if followed by power/exponent)
-  s = s.replace(/\((\d+)\s*\/\s*(\d+)\)(?!\^|[²³])/g, '$1/$2');
-  s = s.replace(/\(([a-zA-Z0-9]+)\s*\/\s*([a-zA-Z0-9]+)\)(?!\^|[²³])/g, '$1/$2');
-
-  // Collapse redundant double parentheses like ((x / 10)) to (x / 10)
-  s = s.replace(/\(\(([^\(\)]+)\)\)/g, '($1)');
-
-  // Common superscripts
-  s = s.replace(/\^2\b|\^\{2\}/g, '²');
-  s = s.replace(/\^3\b|\^\{3\}/g, '³');
-
-  // 5. Convert \text{...} to plain text
-  s = s.replace(/\\text\{([^{}]+)\}/g, '$1');
-
-  // 6. Clean LaTeX spacing and special symbols
-  s = s.replace(/\\(quad|qquad|;|!|,)/g, ' ');
-  s = s.replace(/\\(to|rightarrow)/g, ' → ');
-  s = s.replace(/\\times/g, ' × ');
-  s = s.replace(/\\div/g, ' ÷ ');
-  s = s.replace(/\\pm/g, ' ± ');
-  s = s.replace(/\\le(?!ft)/g, ' ≤ ');
-  s = s.replace(/\\ge/g, ' ≥ ');
-  s = s.replace(/\\Delta\s*([A-Za-z]+)?/g, (_, p) => p ? `Δ${p}` : 'Δ');
-  s = s.replace(/\\angle\s*([A-Za-z]+)?/g, (_, p) => p ? `∠${p}` : '∠');
-  s = s.replace(/\\sim\b/g, '∼');
-  s = s.replace(/\\cong\b/g, '≅');
-  s = s.replace(/\\degree\b|\\circ\b/g, '°');
-  s = s.replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
-  s = s.replace(/\\sqrt/g, '√');
-  s = s.replace(/\\%/g, '%');
-
-  // 7. Strip remaining standalone backslashes before words e.g. \approx
-  s = s.replace(/\\(approx|approxeq)/g, '≈');
-  s = s.replace(/\\(neq|ne)/g, '≠');
-  s = s.replace(/\\(infty)/g, '∞');
-
-  // 8. Strip standalone LaTeX math dollar wrappers $
-  s = s.replace(/\$/g, '');
-
-  // 9. Clean redundant multiple spaces
-  s = s.replace(/[ \t]{2,}/g, ' ');
-
-  return s;
+  const sanitized = sanitizeLatexForKatex(trimmed);
+  try {
+    const html = katex.renderToString(sanitized, {
+      throwOnError: false,
+      displayMode,
+    });
+    if (chatKatexCache.size > 1500) {
+      const first = chatKatexCache.keys().next().value;
+      if (first) chatKatexCache.delete(first);
+    }
+    chatKatexCache.set(cacheKey, html);
+    return html;
+  } catch {
+    return '';
+  }
 }
 
-// Lightweight Markdown Renderer for clean formatted responses
-function FormattedMessage({ content }: { content: string }) {
-  // Pre-clean any LaTeX formulas into clean, readable notation
-  const sanitizedContent = cleanLatexMath(content);
+// Clean latex for plain-text clipboard copy
+function cleanLatexForClipboard(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/\$\$/g, '')
+    .replace(/\$([^\$]+)\$/g, '$1')
+    .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '$1/$2')
+    .replace(/\\times/g, '×')
+    .replace(/\\div/g, '÷')
+    .replace(/\\pm/g, '±')
+    .replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
+}
 
-  // Parse lines for headers, bullet points, horizontal rules, and tables
-  const lines = sanitizedContent.split('\n');
+// Interactive Code / Solution Block with 1-click Copy
+const CodeBlock: React.FC<{ code: string }> = ({ code }) => {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="my-2.5 rounded-xl bg-slate-900 text-slate-100 overflow-hidden border border-slate-800 shadow-sm">
+      <div className="flex items-center justify-between px-3 py-1.5 bg-slate-950/90 border-b border-slate-800 text-[11px] font-mono text-slate-400">
+        <span className="flex items-center gap-1.5 font-medium text-slate-300">
+          <Brain className="w-3.5 h-3.5 text-indigo-400" /> Solution Step / Code
+        </span>
+        <button
+          onClick={handleCopy}
+          className="flex items-center gap-1 py-0.5 px-2 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition-colors cursor-pointer text-[10px]"
+        >
+          {copied ? (
+            <>
+              <Check className="w-3 h-3 text-emerald-400" />
+              <span className="text-emerald-400 font-semibold">Copied</span>
+            </>
+          ) : (
+            <>
+              <Copy className="w-3 h-3" />
+              <span>Copy</span>
+            </>
+          )}
+        </button>
+      </div>
+      <pre className="p-3 font-mono text-xs overflow-x-auto leading-relaxed text-slate-200">
+        <code>{code}</code>
+      </pre>
+    </div>
+  );
+};
+
+// Rich Visual Callout Cards
+interface CalloutProps {
+  key?: React.Key;
+  type: 'shortcut' | 'trap' | 'concept' | 'formula' | 'general';
+  lines: string[];
+  formatInline: (t: string) => React.ReactNode;
+}
+
+const CalloutCard: React.FC<CalloutProps> = ({ type, lines, formatInline }) => {
+  if (type === 'shortcut') {
+    return (
+      <div className="my-3 rounded-xl border border-amber-300/80 bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-orange-500/5 p-3.5 shadow-2xs">
+        <div className="flex items-center gap-2 mb-1.5 pb-1 border-b border-amber-200/60 font-extrabold text-amber-900 text-xs uppercase tracking-wider">
+          <div className="p-1 rounded-md bg-amber-500 text-white shadow-2xs">
+            <Zap className="w-3.5 h-3.5 fill-current" />
+          </div>
+          <span>30-Second Shortcut Trick</span>
+        </div>
+        <div className="text-xs text-amber-950 leading-relaxed font-medium">
+          {lines.map((l, i) => (
+            <p key={i} className="my-0.5">{formatInline(l.replace(/^[>⚡\s\*]*(?:30-Second\s*Shortcut(?::)?|\*\*30-Second\s*Shortcut:\*\*)/i, ''))}</p>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (type === 'trap') {
+    return (
+      <div className="my-3 rounded-xl border border-rose-300/80 bg-gradient-to-br from-rose-500/15 via-rose-500/5 to-pink-500/5 p-3.5 shadow-2xs">
+        <div className="flex items-center gap-2 mb-1.5 pb-1 border-b border-rose-200/60 font-extrabold text-rose-900 text-xs uppercase tracking-wider">
+          <div className="p-1 rounded-md bg-rose-500 text-white shadow-2xs">
+            <AlertTriangle className="w-3.5 h-3.5" />
+          </div>
+          <span>Trap Alert & Common Mistake</span>
+        </div>
+        <div className="text-xs text-rose-950 leading-relaxed font-medium">
+          {lines.map((l, i) => (
+            <p key={i} className="my-0.5">{formatInline(l.replace(/^[>⚠️\s\*]*(?:Trap\s*Alert(?::)?|\*\*Trap\s*Alert:\*\*)/i, ''))}</p>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (type === 'concept') {
+    return (
+      <div className="my-3 rounded-xl border border-indigo-300/80 bg-gradient-to-br from-indigo-500/15 via-indigo-500/5 to-blue-500/5 p-3.5 shadow-2xs">
+        <div className="flex items-center gap-2 mb-1.5 pb-1 border-b border-indigo-200/60 font-extrabold text-indigo-900 text-xs uppercase tracking-wider">
+          <div className="p-1 rounded-md bg-indigo-600 text-white shadow-2xs">
+            <Lightbulb className="w-3.5 h-3.5" />
+          </div>
+          <span>Core Concept & Rule</span>
+        </div>
+        <div className="text-xs text-indigo-950 leading-relaxed font-medium">
+          {lines.map((l, i) => (
+            <p key={i} className="my-0.5">{formatInline(l.replace(/^[>💡\s\*]*(?:Core\s*Concept(?::)?|\*\*Core\s*Concept:\*\*)/i, ''))}</p>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (type === 'formula') {
+    return (
+      <div className="my-3 rounded-xl border border-emerald-300/80 bg-gradient-to-br from-emerald-500/15 via-emerald-500/5 to-teal-500/5 p-3.5 shadow-2xs">
+        <div className="flex items-center gap-2 mb-1.5 pb-1 border-b border-emerald-200/60 font-extrabold text-emerald-900 text-xs uppercase tracking-wider">
+          <div className="p-1 rounded-md bg-emerald-600 text-white shadow-2xs">
+            <Calculator className="w-3.5 h-3.5" />
+          </div>
+          <span>Key Formula Vault</span>
+        </div>
+        <div className="text-xs text-emerald-950 leading-relaxed font-medium">
+          {lines.map((l, i) => (
+            <p key={i} className="my-0.5">{formatInline(l.replace(/^[>📐\s\*]*(?:Key\s*Formula(?::)?|\*\*Key\s*Formula:\*\*)/i, ''))}</p>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="my-2.5 pl-3.5 pr-2 py-2 rounded-r-lg border-l-4 border-indigo-400 bg-slate-50/90 text-xs text-slate-700 italic">
+      {lines.map((l, i) => (
+        <p key={i} className="my-0.5">{formatInline(l)}</p>
+      ))}
+    </div>
+  );
+}
+
+// Elevated Markdown & KaTeX Renderer for beautiful AI responses
+function FormattedMessage({ content, isStreaming }: { content: string; isStreaming?: boolean }) {
+  const lines = (content || '').split('\n');
   const elements: React.ReactNode[] = [];
   let inCodeBlock = false;
   let codeBuffer: string[] = [];
   let tableBuffer: string[] = [];
+  let quoteBuffer: string[] = [];
 
   const formatInline = (text: string) => {
-    // Bold: **...**, italic: *...*, code: `...`
-    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
+    // Regex splits for display math $$...$$, inline math $...$, bold, italic, code
+    const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+?\$|\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
     return parts.map((part, i) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i} className="font-semibold text-slate-900">{part.slice(2, -2)}</strong>;
+      if (!part) return null;
+
+      // Display math $$...$$
+      if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
+        const math = part.slice(2, -2);
+        const html = renderKatexMath(math, true);
+        if (html) {
+          return (
+            <span
+              key={i}
+              className="block my-2 overflow-x-auto text-center font-serif text-slate-900"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          );
+        }
+        return <span key={i} className="font-mono text-xs text-indigo-700 bg-indigo-50 px-1 rounded">{math}</span>;
       }
+
+      // Inline math $...$
+      if (part.startsWith('$') && part.endsWith('$') && part.length > 2) {
+        const math = part.slice(1, -1);
+        const html = renderKatexMath(math, false);
+        if (html) {
+          return (
+            <span
+              key={i}
+              className="inline-block px-0.5 align-baseline font-serif"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          );
+        }
+        return <span key={i} className="font-mono text-xs text-indigo-700 bg-indigo-50 px-1 rounded">{math}</span>;
+      }
+
+      // Bold: **...**
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i} className="font-bold text-slate-900">{part.slice(2, -2)}</strong>;
+      }
+
+      // Italic: *...*
       if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
         return <em key={i} className="text-slate-800 italic">{part.slice(1, -1)}</em>;
       }
+
+      // Code: `...`
       if (part.startsWith('`') && part.endsWith('`')) {
         return (
-          <code key={i} className="px-1.5 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-mono text-xs border border-indigo-100/60">
+          <code key={i} className="px-1.5 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-mono text-xs border border-indigo-200/60 font-medium">
             {part.slice(1, -1)}
           </code>
         );
       }
+
       return part;
     });
   };
@@ -327,22 +486,22 @@ function FormattedMessage({ content }: { content: string }) {
     const bodyRows = hasHeader ? rows.slice(2) : rows;
 
     elements.push(
-      <div key={`table-${elements.length}`} className="my-2.5 overflow-x-auto rounded-lg border border-slate-200">
+      <div key={`table-${elements.length}`} className="my-3 overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
         <table className="w-full text-left text-xs">
           {headerRow && (
-            <thead className="bg-slate-100 text-slate-700 border-b border-slate-200">
+            <thead className="bg-slate-100/90 text-slate-800 border-b border-slate-200 font-bold uppercase tracking-wider text-[11px]">
               <tr>
                 {headerRow.map((cell, idx) => (
-                  <th key={idx} className="px-3 py-1.5 font-bold">{formatInline(cell)}</th>
+                  <th key={idx} className="px-3.5 py-2 font-bold">{formatInline(cell)}</th>
                 ))}
               </tr>
             </thead>
           )}
           <tbody className="divide-y divide-slate-100 bg-white">
             {bodyRows.map((row, rIdx) => (
-              <tr key={rIdx} className="hover:bg-slate-50/60">
+              <tr key={rIdx} className="hover:bg-indigo-50/30 transition-colors">
                 {row.map((cell, cIdx) => (
-                  <td key={cIdx} className="px-3 py-1.5 text-slate-700">{formatInline(cell)}</td>
+                  <td key={cIdx} className="px-3.5 py-2 text-slate-700 leading-relaxed">{formatInline(cell)}</td>
                 ))}
               </tr>
             ))}
@@ -353,19 +512,33 @@ function FormattedMessage({ content }: { content: string }) {
     tableBuffer = [];
   };
 
+  const flushQuote = () => {
+    if (quoteBuffer.length === 0) return;
+    const rawText = quoteBuffer.join(' ');
+    let type: 'shortcut' | 'trap' | 'concept' | 'formula' | 'general' = 'general';
+    if (/⚡|shortcut|speed trick|30-second/i.test(rawText)) type = 'shortcut';
+    else if (/⚠️|trap|avoid|mistake alert|pitfall/i.test(rawText)) type = 'trap';
+    else if (/💡|concept|core rule|fundamental/i.test(rawText)) type = 'concept';
+    else if (/📐|formula|equation/i.test(rawText)) type = 'formula';
+
+    elements.push(
+      <CalloutCard key={`callout-${elements.length}`} type={type} lines={quoteBuffer} formatInline={formatInline} />
+    );
+    quoteBuffer = [];
+  };
+
   lines.forEach((line, idx) => {
     // Code block detection
     if (line.startsWith('```')) {
       if (inCodeBlock) {
         elements.push(
-          <pre key={`code-${idx}`} className="my-2 p-3 rounded-lg bg-slate-900 text-slate-100 font-mono text-xs overflow-x-auto">
-            <code>{codeBuffer.join('\n')}</code>
-          </pre>
+          <CodeBlock key={`code-${idx}`} code={codeBuffer.join('\n')} />
         );
         codeBuffer = [];
         inCodeBlock = false;
       } else {
         if (tableBuffer.length > 0) flushTable();
+        if (quoteBuffer.length > 0) flushQuote();
         inCodeBlock = true;
       }
       return;
@@ -376,6 +549,16 @@ function FormattedMessage({ content }: { content: string }) {
       return;
     }
 
+    // Blockquote line
+    if (line.trim().startsWith('>')) {
+      if (tableBuffer.length > 0) flushTable();
+      const contentLine = line.trim().replace(/^>\s*/, '');
+      quoteBuffer.push(contentLine);
+      return;
+    } else if (quoteBuffer.length > 0) {
+      flushQuote();
+    }
+
     // Table line
     if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
       tableBuffer.push(line);
@@ -384,16 +567,34 @@ function FormattedMessage({ content }: { content: string }) {
       flushTable();
     }
 
+    // Step-by-Step Badge: **Step 1:** or Step 1:
+    const stepMatch = line.trim().match(/^(?:\*\*Step\s*(\d+)(?::)?\*\*|Step\s*(\d+):)\s*(.*)/i);
+    if (stepMatch) {
+      const stepNum = stepMatch[1] || stepMatch[2];
+      const stepContent = stepMatch[3];
+      elements.push(
+        <div key={`step-${idx}`} className="flex items-start gap-2.5 my-2.5">
+          <span className="px-2 py-0.5 rounded-md bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-extrabold text-[10px] tracking-wider uppercase shrink-0 shadow-2xs mt-0.5">
+            Step {stepNum}
+          </span>
+          <div className="text-xs text-slate-800 leading-relaxed font-medium">
+            {formatInline(stepContent)}
+          </div>
+        </div>
+      );
+      return;
+    }
+
     // Targeted Drill Card trigger: [DRILL: Topic Name]
     const drillMatch = line.trim().match(/\[DRILL:\s*([^\]]+)\]/i);
     if (drillMatch) {
       const drillTopic = drillMatch[1].trim();
       elements.push(
-        <div key={`drill-${idx}`} className="my-2.5 p-3 rounded-xl bg-gradient-to-r from-indigo-50/90 via-purple-50/90 to-amber-50/90 border border-indigo-200/80 flex items-center justify-between gap-3 shadow-xs">
+        <div key={`drill-${idx}`} className="my-3 p-3.5 rounded-xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-amber-500/10 border border-indigo-200/90 flex items-center justify-between gap-3 shadow-xs hover:border-indigo-300 transition-all">
           <div className="min-w-0">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 flex items-center gap-1">
-              <Zap className="w-3 h-3 text-amber-500 fill-current" />
-              Targeted Practice Drill
+            <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 flex items-center gap-1.5 mb-0.5">
+              <Zap className="w-3 h-3 text-amber-500 fill-current animate-pulse" />
+              Targeted Rapid Drill
             </span>
             <h5 className="text-xs font-black text-slate-900 truncate">{drillTopic}</h5>
           </div>
@@ -401,9 +602,9 @@ function FormattedMessage({ content }: { content: string }) {
             onClick={() => {
               window.dispatchEvent(new CustomEvent('cgl_launch_drill', { detail: { topic: drillTopic } }));
             }}
-            className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+            className="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95 group"
           >
-            <Play className="w-3 h-3 fill-current" />
+            <Play className="w-3 h-3 fill-current group-hover:translate-x-0.5 transition-transform" />
             <span>Start Test</span>
           </button>
         </div>
@@ -420,7 +621,8 @@ function FormattedMessage({ content }: { content: string }) {
     // Headings
     if (line.startsWith('### ')) {
       elements.push(
-        <h4 key={idx} className="text-xs font-bold text-indigo-900 uppercase tracking-wide mt-3 mb-1">
+        <h4 key={idx} className="text-xs font-bold text-indigo-900 uppercase tracking-wide mt-3 mb-1 flex items-center gap-1.5">
+          <span className="w-1.5 h-3 bg-indigo-500 rounded-full inline-block" />
           {formatInline(line.slice(4))}
         </h4>
       );
@@ -428,7 +630,7 @@ function FormattedMessage({ content }: { content: string }) {
     }
     if (line.startsWith('## ')) {
       elements.push(
-        <h3 key={idx} className="text-sm font-extrabold text-slate-900 mt-3 mb-1">
+        <h3 key={idx} className="text-sm font-extrabold text-slate-900 mt-3.5 mb-1 pb-0.5 border-b border-slate-100">
           {formatInline(line.slice(3))}
         </h3>
       );
@@ -436,7 +638,7 @@ function FormattedMessage({ content }: { content: string }) {
     }
     if (line.startsWith('# ')) {
       elements.push(
-        <h2 key={idx} className="text-base font-black text-slate-900 mt-3 mb-1">
+        <h2 key={idx} className="text-base font-black text-slate-900 mt-3.5 mb-1 pb-1 border-b border-slate-200">
           {formatInline(line.slice(2))}
         </h2>
       );
@@ -447,9 +649,9 @@ function FormattedMessage({ content }: { content: string }) {
     if (line.trim().startsWith('* ') || line.trim().startsWith('- ')) {
       const itemText = line.trim().replace(/^[\*\-]\s+/, '');
       elements.push(
-        <div key={idx} className="flex items-start gap-2 my-1 text-xs text-slate-700 leading-relaxed">
-          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 shrink-0" />
-          <span>{formatInline(itemText)}</span>
+        <div key={idx} className="flex items-start gap-2.5 my-1 text-xs text-slate-700 leading-relaxed">
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 shrink-0 ring-2 ring-indigo-100" />
+          <span className="text-slate-800">{formatInline(itemText)}</span>
         </div>
       );
       return;
@@ -459,9 +661,11 @@ function FormattedMessage({ content }: { content: string }) {
     const numMatch = line.trim().match(/^(\d+)\.\s+(.*)/);
     if (numMatch) {
       elements.push(
-        <div key={idx} className="flex items-start gap-2 my-1 text-xs text-slate-700 leading-relaxed">
-          <span className="font-bold text-indigo-600 text-xs shrink-0 w-4">{numMatch[1]}.</span>
-          <span>{formatInline(numMatch[2])}</span>
+        <div key={idx} className="flex items-start gap-2.5 my-1 text-xs text-slate-700 leading-relaxed">
+          <span className="w-4 h-4 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
+            {numMatch[1]}
+          </span>
+          <span className="text-slate-800">{formatInline(numMatch[2])}</span>
         </div>
       );
       return;
@@ -475,16 +679,56 @@ function FormattedMessage({ content }: { content: string }) {
 
     // Standard paragraph
     elements.push(
-      <p key={idx} className="text-xs text-slate-700 leading-relaxed my-1">
+      <p key={idx} className="text-xs text-slate-800 leading-relaxed my-1.5 font-normal">
         {formatInline(line)}
       </p>
     );
   });
 
   if (tableBuffer.length > 0) flushTable();
+  if (quoteBuffer.length > 0) flushQuote();
+
+  if (isStreaming) {
+    const cursorElement = (
+      <span
+        key="live-typing-cursor"
+        aria-hidden="true"
+        className="inline-block w-1.5 h-3.5 ml-1 bg-indigo-600 rounded-xs align-middle animate-[pulse_0.75s_ease-in-out_infinite] shadow-[0_0_8px_rgba(79,70,229,0.5)]"
+      />
+    );
+
+    if (elements.length > 0) {
+      const lastIdx = elements.length - 1;
+      const lastEl = elements[lastIdx];
+      if (React.isValidElement(lastEl)) {
+        const elType = lastEl.type;
+        if (elType === 'p' || elType === 'h2' || elType === 'h3' || elType === 'h4') {
+          const origChildren = (lastEl.props as any).children;
+          elements[lastIdx] = React.cloneElement(lastEl as React.ReactElement<any>, {
+            children: Array.isArray(origChildren)
+              ? [...origChildren, cursorElement]
+              : [origChildren, cursorElement]
+          });
+        } else {
+          elements.push(
+            <div key="live-cursor-wrap" className="inline-flex items-center">
+              {cursorElement}
+            </div>
+          );
+        }
+      } else {
+        elements.push(cursorElement);
+      }
+    } else {
+      elements.push(cursorElement);
+    }
+  }
 
   return <div className="space-y-0.5">{elements}</div>;
 }
+
+// In-memory cache for instant 0ms responses on repeated question reviews
+const aiResponseCache = new Map<string, string>();
 
 export function AiMentorChat({
   mockReports,
@@ -499,6 +743,91 @@ export function AiMentorChat({
   const [isExpanded, setIsExpanded] = useState(false);
   const [internalScope, setInternalScope] = useState<AiFocusedScope | null>(null);
   const activeScope = propsFocusedScope || internalScope;
+
+  const abortControllerRef = useRef<AbortController | null>(null);
+  const [isStreaming, setIsStreaming] = useState(false);
+
+  // High-performance smooth typewriter queue
+  const targetTextRef = useRef<string>('');
+  const displayedTextRef = useRef<string>('');
+  const activeBotMsgIdRef = useRef<string | null>(null);
+  const typingTimerRef = useRef<any>(null);
+  const isNetworkDoneRef = useRef<boolean>(false);
+
+  const startTypewriter = (botMsgId: string) => {
+    if (typingTimerRef.current) {
+      clearInterval(typingTimerRef.current);
+      typingTimerRef.current = null;
+    }
+    activeBotMsgIdRef.current = botMsgId;
+    targetTextRef.current = '';
+    displayedTextRef.current = '';
+    isNetworkDoneRef.current = false;
+
+    typingTimerRef.current = setInterval(() => {
+      const target = targetTextRef.current;
+      const current = displayedTextRef.current;
+
+      if (current.length < target.length) {
+        const remaining = target.length - current.length;
+        // Adaptive typewriter cadence: smooth for live streaming, fast for large buffers
+        let step = 1;
+        if (remaining > 180) step = 18;
+        else if (remaining > 80) step = 10;
+        else if (remaining > 30) step = 5;
+        else if (remaining > 10) step = 3;
+        else step = 2;
+
+        const nextLen = Math.min(target.length, current.length + step);
+        const nextText = target.slice(0, nextLen);
+        displayedTextRef.current = nextText;
+
+        setMessages(prev =>
+          prev.map(m => (m.id === botMsgId ? { ...m, text: nextText } : m))
+        );
+      } else if (isNetworkDoneRef.current) {
+        if (typingTimerRef.current) {
+          clearInterval(typingTimerRef.current);
+          typingTimerRef.current = null;
+        }
+        setIsStreaming(false);
+        setIsLoading(false);
+      }
+    }, 18);
+  };
+
+  const flushTypewriter = () => {
+    if (typingTimerRef.current) {
+      clearInterval(typingTimerRef.current);
+      typingTimerRef.current = null;
+    }
+    if (activeBotMsgIdRef.current && targetTextRef.current) {
+      const finalBotId = activeBotMsgIdRef.current;
+      const finalText = targetTextRef.current;
+      displayedTextRef.current = finalText;
+      setMessages(prev =>
+        prev.map(m => (m.id === finalBotId ? { ...m, text: finalText } : m))
+      );
+    }
+    setIsStreaming(false);
+    setIsLoading(false);
+  };
+
+  const handleStopGenerating = () => {
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+    }
+    flushTypewriter();
+  };
+
+  useEffect(() => {
+    return () => {
+      if (typingTimerRef.current) {
+        clearInterval(typingTimerRef.current);
+      }
+    };
+  }, []);
 
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
     try {
@@ -515,7 +844,7 @@ export function AiMentorChat({
       {
         id: 'welcome_1',
         role: 'assistant',
-        text: `**Namaste!** 🙏 I am **Tommy**, your personal study assistant and problem solver.\n\nI have complete visibility into your **${mockReports.length} Mock Tests**, practice sessions, and error patterns. Ask me anything about:\n* Step-by-step solutions & shortcut tricks for any question\n* Your weak topics & score trends across mocks\n* Targeted strategy in Mathematics, Reasoning, English, or GK\n* Concept doubts, grammar rules, or revision plans\n\nHow can I help you today?`,
+        text: `**Hello!** 👋 I am **Tommy**, your personal study assistant and problem solver.\n\nI have complete visibility into your **${mockReports.length} Mock Tests**, practice sessions, and error patterns. Ask me anything about:\n* Step-by-step solutions & shortcut tricks for any question\n* Your weak topics & score trends across mocks\n* Targeted strategy in Quantitative Aptitude, Reasoning, English, or General Awareness\n* Concept doubts, grammar rules, or revision plans\n\nHow can I help you today?`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ];
@@ -524,6 +853,96 @@ export function AiMentorChat({
   const [isLoading, setIsLoading] = useState(false);
   const [showContextDrawer, setShowContextDrawer] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  // Attachment & Anki State
+  const [selectedAttachment, setSelectedAttachment] = useState<ChatAttachment | null>(null);
+  const [attachmentError, setAttachmentError] = useState<string | null>(null);
+  const [isConvertingToAnki, setIsConvertingToAnki] = useState(false);
+  const [ankiConfirmCards, setAnkiConfirmCards] = useState<Array<Partial<SRSCard>>>([]);
+  const [ankiConfirmOpen, setAnkiConfirmOpen] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setAttachmentError(null);
+    const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+    const isImage = file.type.startsWith('image/');
+
+    if (!isPdf && !isImage) {
+      setAttachmentError('Please upload an image (JPG, PNG, WebP) or PDF document.');
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
+    if (file.size > 8 * 1024 * 1024) {
+      setAttachmentError('File is too large. Max allowed size is 8MB.');
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64 = reader.result as string;
+      setSelectedAttachment({
+        name: file.name,
+        mimeType: file.type || (isPdf ? 'application/pdf' : 'image/jpeg'),
+        data: base64,
+        size: file.size
+      });
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    };
+    reader.onerror = () => {
+      setAttachmentError('Failed to read file.');
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleCreateAnkiFromMessage = async (assistantText: string) => {
+    setIsConvertingToAnki(true);
+    try {
+      const res = await fetch('/api/srs/generate-cards', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          textNotes: assistantText,
+          prompt: 'Extract 1 to 3 high-yield Anki flashcards with core concepts, shortcuts, and mnemonics from this explanation.',
+          count: 2
+        })
+      });
+      const data = await res.json();
+      if (data?.cards && data.cards.length > 0) {
+        setAnkiConfirmCards(data.cards);
+        setAnkiConfirmOpen(true);
+      } else {
+        const singleCard: Partial<SRSCard> = {
+          subject: activeScope?.subject || 'General',
+          type: 'general',
+          front: assistantText.slice(0, 120).split('\n')[0] || 'Key Concept',
+          back: assistantText,
+          source: 'ai_generated',
+          sourceTitle: 'Tommy AI Chat'
+        };
+        setAnkiConfirmCards([singleCard]);
+        setAnkiConfirmOpen(true);
+      }
+    } catch {
+      const singleCard: Partial<SRSCard> = {
+        subject: activeScope?.subject || 'General',
+        type: 'general',
+        front: 'Concept from Tommy Chat',
+        back: assistantText,
+        source: 'ai_generated',
+        sourceTitle: 'Tommy AI Chat'
+      };
+      setAnkiConfirmCards([singleCard]);
+      setAnkiConfirmOpen(true);
+    } finally {
+      setIsConvertingToAnki(false);
+    }
+  };
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -592,9 +1011,9 @@ export function AiMentorChat({
   // Scroll to bottom whenever new message arrives
   useEffect(() => {
     if (isOpen) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current?.scrollIntoView({ behavior: isStreaming ? 'auto' : 'smooth' });
     }
-  }, [messages, isOpen]);
+  }, [messages, isOpen, isStreaming]);
 
   // Auto-focus input when opened
   useEffect(() => {
@@ -634,40 +1053,99 @@ export function AiMentorChat({
 
   const handleSendMessage = async (textToSend?: string, specificQuestion?: any) => {
     const query = (textToSend || inputText).trim();
-    if (!query || isLoading) return;
+    const currentAttachment = selectedAttachment;
+    if ((!query && !currentAttachment) || isLoading) return;
+
+    const actualQuery = query || (currentAttachment
+      ? (currentAttachment.mimeType === 'application/pdf'
+          ? `Please inspect this PDF document: "${currentAttachment.name}". Extract and solve questions step-by-step, explaining rules, formulas, and shortcuts.`
+          : 'Please inspect this photo of the question. Extract the problem statement, provide the complete step-by-step solution, and point out shortcut tricks and option elimination.')
+      : '');
+
+    // Fast Cache Lookup for Question Explanations & Repeated Queries (only when no attachment)
+    const cacheKey = `${actualQuery.toLowerCase()}::${activeScope?.title || ''}::${activeMockReport?.id || ''}::${specificQuestion?.question ? specificQuestion.question.slice(0, 60) : ''}`;
+    if (!currentAttachment && aiResponseCache.has(cacheKey)) {
+      const cachedReply = aiResponseCache.get(cacheKey)!;
+      const userMessage: ChatMessage = {
+        id: `usr_${Date.now()}`,
+        role: 'user',
+        text: actualQuery,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+      const botMessageId = `bot_${Date.now()}`;
+      const initialBotMessage: ChatMessage = {
+        id: botMessageId,
+        role: 'assistant',
+        text: '',
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+      setMessages(prev => [...prev, userMessage, initialBotMessage]);
+      setInputText('');
+      setIsLoading(true);
+      setIsStreaming(true);
+      startTypewriter(botMessageId);
+      targetTextRef.current = cachedReply;
+      isNetworkDoneRef.current = true;
+      return;
+    }
 
     const userMessage: ChatMessage = {
       id: `usr_${Date.now()}`,
       role: 'user',
-      text: query,
+      text: actualQuery,
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      attachment: currentAttachment || undefined
+    };
+
+    const botMessageId = `bot_${Date.now()}`;
+    const initialBotMessage: ChatMessage = {
+      id: botMessageId,
+      role: 'assistant',
+      text: '',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prev, userMessage, initialBotMessage]);
     setInputText('');
+    setSelectedAttachment(null);
+    setAttachmentError(null);
     setIsLoading(true);
 
+    // Abort previous in-flight request if any
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    const abortController = new AbortController();
+    abortControllerRef.current = abortController;
+    setIsStreaming(true);
+    startTypewriter(botMessageId);
+
     try {
-      // #10: Pin first message (welcome/context) + last 9 — so session context is never lost
+      // Pin first message (welcome/context) + last 9 — so session context is never lost
       const allMsgs = [...messages, userMessage];
-      let conversationPayload: { role: string; text: string }[];
+      let conversationPayload: { role: string; text: string; attachment?: ChatAttachment }[];
       if (allMsgs.length <= 10) {
-        conversationPayload = allMsgs.map(m => ({ role: m.role, text: m.text }));
+        conversationPayload = allMsgs.map(m => ({ role: m.role, text: m.text, attachment: m.attachment }));
       } else {
-        // Always keep the first message (welcome + context) + the most recent 9
         const [first, ...rest] = allMsgs;
         conversationPayload = [
-          { role: first.role, text: first.text },
-          ...rest.slice(-9).map(m => ({ role: m.role, text: m.text }))
+          { role: first.role, text: first.text, attachment: first.attachment },
+          ...rest.slice(-9).map(m => ({ role: m.role, text: m.text, attachment: m.attachment }))
         ];
       }
 
-      // Token optimization: Send active question if available, or at most 5 wrong questions
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: abortController.signal,
         body: JSON.stringify({
+          stream: true,
           messages: conversationPayload,
+          attachment: currentAttachment ? {
+            data: currentAttachment.data,
+            mimeType: currentAttachment.mimeType,
+            name: currentAttachment.name
+          } : undefined,
           mockSummary: mockContextString,
           focusedScope: activeScope || undefined,
           activeMockId: activeMockReport?.id,
@@ -710,25 +1188,74 @@ export function AiMentorChat({
         throw new Error(errorMsg || `Server responded with status ${res.status}`);
       }
 
-      const data = await res.json();
-      const botMessage: ChatMessage = {
-        id: `bot_${Date.now()}`,
-        role: 'assistant',
-        text: data.reply || 'I could not generate a response. Please try asking again.',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      };
+      // Check if response is Server-Sent Events stream
+      const isEventStream = res.headers.get('content-type')?.includes('text/event-stream');
 
-      setMessages(prev => [...prev, botMessage]);
+      if (isEventStream && res.body) {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let fullText = '';
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const sseLines = buffer.split('\n');
+          buffer = sseLines.pop() || '';
+
+          for (const sseLine of sseLines) {
+            if (sseLine.startsWith('data: ')) {
+              const payload = sseLine.slice(6).trim();
+              if (!payload || payload === '[DONE]') continue;
+              try {
+                const parsed = JSON.parse(payload);
+                if (parsed.error) {
+                  throw new Error(parsed.error);
+                }
+                if (parsed.text) {
+                  fullText += parsed.text;
+                  targetTextRef.current = fullText;
+                }
+              } catch (parseErr: any) {
+                if (parseErr.message && !parseErr.message.includes('Unexpected end of JSON')) {
+                  throw parseErr;
+                }
+              }
+            }
+          }
+        }
+
+        if (fullText.trim()) {
+          aiResponseCache.set(cacheKey, fullText);
+          isNetworkDoneRef.current = true;
+        } else {
+          flushTypewriter();
+          setMessages(prev =>
+            prev.map(m => (m.id === botMessageId ? { ...m, text: 'I could not generate a response. Please try asking again.' } : m))
+          );
+        }
+      } else {
+        // Standard JSON fallback
+        const data = await res.json();
+        const reply = data.reply || 'I could not generate a response. Please try asking again.';
+        targetTextRef.current = reply;
+        isNetworkDoneRef.current = true;
+        aiResponseCache.set(cacheKey, reply);
+      }
     } catch (err: any) {
-      const errorMessage: ChatMessage = {
-        id: `err_${Date.now()}`,
-        role: 'assistant',
-        text: `⚠️ **Connection Notice**: ${err.message || 'Unable to connect to Gemini API'}.\n\nPlease ensure your \`GEMINI_API_KEY\` is configured in \`.env\` or Vercel Environment Variables.`,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      };
-      setMessages(prev => [...prev, errorMessage]);
+      if (err?.name === 'AbortError') {
+        // Generation was intentionally stopped by user
+        return;
+      }
+      flushTypewriter();
+      const errorMessage = `⚠️ **Connection Notice**: ${err.message || 'Unable to connect to Gemini API'}.\n\nPlease ensure your \`GEMINI_API_KEY\` is configured in \`.env\` or Vercel Environment Variables.`;
+      setMessages(prev =>
+        prev.map(m => (m.id === botMessageId ? { ...m, text: errorMessage } : m))
+      );
     } finally {
-      setIsLoading(false);
+      abortControllerRef.current = null;
     }
   };
 
@@ -807,7 +1334,7 @@ export function AiMentorChat({
   };
 
   const copyToClipboard = (text: string, id: string) => {
-    navigator.clipboard.writeText(cleanLatexMath(text));
+    navigator.clipboard.writeText(cleanLatexForClipboard(text));
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   };
@@ -1038,9 +1565,54 @@ export function AiMentorChat({
                         }`}
                       >
                         {isBot ? (
-                          <FormattedMessage content={msg.text} />
+                          !msg.text && isLoading ? (
+                            <div className="flex items-center gap-2.5 py-1 px-1">
+                              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-50/90 border border-indigo-100 shadow-2xs">
+                                <Sparkles className="w-3 h-3 text-indigo-600 animate-spin" style={{ animationDuration: '3s' }} />
+                                <span className="text-[11px] font-semibold text-indigo-900 tracking-wide">
+                                  Tommy is typing
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-1 py-1">
+                                <span className="w-2 h-2 rounded-full bg-indigo-600 animate-bounce shadow-xs" style={{ animationDelay: '0ms', animationDuration: '0.8s' }} />
+                                <span className="w-2 h-2 rounded-full bg-indigo-500 animate-bounce shadow-xs" style={{ animationDelay: '180ms', animationDuration: '0.8s' }} />
+                                <span className="w-2 h-2 rounded-full bg-violet-500 animate-bounce shadow-xs" style={{ animationDelay: '360ms', animationDuration: '0.8s' }} />
+                              </div>
+                            </div>
+                          ) : (
+                            <div>
+                              <FormattedMessage
+                                content={msg.text}
+                                isStreaming={isStreaming && msg.id === messages[messages.length - 1]?.id}
+                              />
+                            </div>
+                          )
                         ) : (
-                          <p className="whitespace-pre-wrap leading-relaxed text-xs">{msg.text}</p>
+                          <div>
+                            {msg.attachment && (
+                              <div className="mb-2">
+                                {msg.attachment.mimeType.startsWith('image/') ? (
+                                  <div className="rounded-xl overflow-hidden border border-indigo-400/40 bg-black/20 max-w-[240px] shadow-xs">
+                                    <img
+                                      src={msg.attachment.data}
+                                      alt={msg.attachment.name}
+                                      className="w-full max-h-48 object-contain bg-slate-900/40"
+                                    />
+                                    <div className="px-2 py-1 text-[10px] text-indigo-100 truncate text-left">
+                                      📷 {msg.attachment.name}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/40 border border-indigo-400/30 text-white text-xs text-left">
+                                    <FileText className="w-4 h-4 text-rose-300 shrink-0" />
+                                    <span className="truncate max-w-[180px] font-semibold text-white">{msg.attachment.name}</span>
+                                    <span className="px-1.5 py-0.5 rounded bg-rose-500/30 text-rose-200 text-[9px] font-black uppercase">PDF</span>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                            <p className="whitespace-pre-wrap leading-relaxed text-xs">{msg.text}</p>
+                          </div>
                         )}
                       </div>
                       <div
@@ -1049,24 +1621,39 @@ export function AiMentorChat({
                         }`}
                       >
                         <span>{msg.timestamp}</span>
-                        {isBot && (
-                          <button
-                            onClick={() => copyToClipboard(msg.text, msg.id)}
-                            className="opacity-0 group-hover:opacity-100 hover:text-indigo-600 transition-all flex items-center gap-0.5"
-                            title="Copy reply"
-                          >
-                            {copiedId === msg.id ? (
-                              <>
-                                <Check className="w-2.5 h-2.5 text-emerald-600" />
-                                <span className="text-emerald-600 font-semibold">Copied</span>
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="w-2.5 h-2.5" />
-                                <span>Copy</span>
-                              </>
-                            )}
-                          </button>
+                        {isBot && msg.text && (
+                          <>
+                            <button
+                              onClick={() => handleCreateAnkiFromMessage(msg.text)}
+                              disabled={isConvertingToAnki}
+                              className="opacity-0 group-hover:opacity-100 hover:text-purple-600 transition-all flex items-center gap-1 text-[9px] font-bold text-slate-500 hover:bg-purple-50 px-1.5 py-0.5 rounded cursor-pointer"
+                              title="Extract Anki flashcards from this explanation"
+                            >
+                              {isConvertingToAnki ? (
+                                <Loader2 className="w-2.5 h-2.5 text-purple-600 animate-spin" />
+                              ) : (
+                                <Sparkles className="w-2.5 h-2.5 text-purple-600" />
+                              )}
+                              <span>+ Anki Card</span>
+                            </button>
+                            <button
+                              onClick={() => copyToClipboard(msg.text, msg.id)}
+                              className="opacity-0 group-hover:opacity-100 hover:text-indigo-600 transition-all flex items-center gap-0.5"
+                              title="Copy reply"
+                            >
+                              {copiedId === msg.id ? (
+                                <>
+                                  <Check className="w-2.5 h-2.5 text-emerald-600" />
+                                  <span className="text-emerald-600 font-semibold">Copied</span>
+                                </>
+                              ) : (
+                                <>
+                                  <Copy className="w-2.5 h-2.5" />
+                                  <span>Copy</span>
+                                </>
+                              )}
+                            </button>
+                          </>
                         )}
                       </div>
                     </div>
@@ -1078,23 +1665,6 @@ export function AiMentorChat({
                   </div>
                 );
               })}
-
-              {/* Typing / Thinking Loader */}
-              {isLoading && (
-                <div className="flex items-center gap-2 text-slate-400 text-xs py-1">
-                  <div className="w-6 h-6 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-[10px] shrink-0 shadow-xs">
-                    <Bot className="w-3.5 h-3.5 text-amber-300 animate-spin" />
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-2 bg-white rounded-2xl border border-slate-200 shadow-xs">
-                    <span className="text-[11px] font-medium text-slate-600">Tommy is analyzing...</span>
-                    <span className="flex gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce" style={{ animationDelay: '0ms' }} />
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce" style={{ animationDelay: '150ms' }} />
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce" style={{ animationDelay: '300ms' }} />
-                    </span>
-                  </div>
-                </div>
-              )}
 
               <div ref={messagesEndRef} />
             </div>
@@ -1144,37 +1714,131 @@ export function AiMentorChat({
 
             {/* Input Bar */}
             <div className="p-3 bg-white border-t border-slate-200">
+              {/* Attachment Preview Chip */}
+              {selectedAttachment && (
+                <div className="mb-2 p-2 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-between gap-2 shadow-2xs">
+                  <div className="flex items-center gap-2 min-w-0">
+                    {selectedAttachment.mimeType.startsWith('image/') ? (
+                      <img
+                        src={selectedAttachment.data}
+                        alt={selectedAttachment.name}
+                        className="w-9 h-9 object-cover rounded-lg border border-indigo-200 shrink-0 bg-white"
+                      />
+                    ) : (
+                      <div className="w-9 h-9 rounded-lg bg-rose-100 text-rose-600 border border-rose-200 flex items-center justify-center shrink-0">
+                        <FileText className="w-4 h-4" />
+                      </div>
+                    )}
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold text-indigo-950 truncate max-w-[200px] sm:max-w-[280px]">
+                        {selectedAttachment.name}
+                      </p>
+                      <span className="text-[9px] text-slate-500 font-medium">
+                        {selectedAttachment.size ? `${Math.round(selectedAttachment.size / 1024)} KB` : 'Ready to analyze'} • {selectedAttachment.mimeType.startsWith('image/') ? 'Photo Attachment' : 'PDF Document'}
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setSelectedAttachment(null)}
+                    className="p-1 text-slate-400 hover:text-rose-600 rounded-md hover:bg-white transition-colors shrink-0 cursor-pointer"
+                    title="Remove attachment"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              )}
+
+              {/* Attachment Error Notice */}
+              {attachmentError && (
+                <div className="mb-2 p-2 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-[11px] flex items-center justify-between">
+                  <span>{attachmentError}</span>
+                  <button onClick={() => setAttachmentError(null)}>
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+
+              {/* Hidden File Input */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp,application/pdf"
+                onChange={handleFileSelect}
+                className="hidden"
+              />
+
               <div className="relative flex items-end gap-1.5 rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 bg-white p-1.5 transition-all shadow-xs">
+                {/* Upload Button */}
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors shrink-0 cursor-pointer"
+                  title="Upload question photo, screenshot, or PDF document"
+                >
+                  <Paperclip className="w-4 h-4" />
+                </button>
+
                 <textarea
                   ref={inputRef}
                   value={inputText}
                   onChange={e => setInputText(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask Tommy about this question, your mocks, or strategy..."
+                  placeholder={selectedAttachment ? "Add question instructions or press send to analyze..." : "Ask Tommy, or attach a question photo / PDF..."}
                   rows={1}
-                  className="w-full resize-none bg-transparent px-2 py-1 text-xs text-slate-800 placeholder-slate-400 focus:outline-hidden max-h-24 min-h-[32px] leading-relaxed"
+                  className="w-full resize-none bg-transparent px-1.5 py-1 text-xs text-slate-800 placeholder-slate-400 focus:outline-hidden max-h-24 min-h-[32px] leading-relaxed"
                 />
-                <button
-                  onClick={() => handleSendMessage()}
-                  disabled={!inputText.trim() || isLoading}
-                  className={`p-2 rounded-lg transition-all shrink-0 cursor-pointer ${
-                    inputText.trim() && !isLoading
-                      ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  }`}
-                  title="Send Message"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                </button>
+
+                {isLoading ? (
+                  <button
+                    onClick={handleStopGenerating}
+                    className="p-2 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 transition-all shrink-0 cursor-pointer shadow-xs flex items-center gap-1 text-[11px] font-semibold active:scale-95"
+                    title="Stop generating response"
+                  >
+                    <Square className="w-3.5 h-3.5 fill-current text-rose-600" />
+                    <span className="hidden sm:inline">Stop</span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => handleSendMessage()}
+                    disabled={(!inputText.trim() && !selectedAttachment) || isLoading}
+                    className={`p-2 rounded-lg transition-all shrink-0 cursor-pointer ${
+                      (inputText.trim() || selectedAttachment) && !isLoading
+                        ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs active:scale-95'
+                        : 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                    }`}
+                    title="Send Message"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                  </button>
+                )}
               </div>
               <div className="flex items-center justify-between mt-1.5 px-1 text-[9px] text-slate-400">
-                <span>Press <strong>Enter</strong> to send • <strong>Shift+Enter</strong> for newline</span>
+                <span>Press <strong>Enter</strong> to send • Attach <strong>Photos/PDFs</strong></span>
                 <span>Powered by Gemini AI</span>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Confirmation Modal for Cards Generated from Tommy Chat */}
+      <SrsCardConfirmModal
+        isOpen={ankiConfirmOpen}
+        cards={ankiConfirmCards}
+        title="Review & Confirm Anki Cards from Tommy"
+        sourceLabel="Tommy AI Conversation"
+        onConfirm={(confirmed) => {
+          if (confirmed.length > 0) {
+            addSRSCardsBatch(confirmed);
+          }
+          setAnkiConfirmOpen(false);
+          setAnkiConfirmCards([]);
+        }}
+        onCancel={() => {
+          setAnkiConfirmOpen(false);
+          setAnkiConfirmCards([]);
+        }}
+      />
     </>
   );
 }

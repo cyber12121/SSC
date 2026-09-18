@@ -26,7 +26,8 @@ import {
   Sparkles,
   Target,
   Edit3,
-  BookOpen
+  BookOpen,
+  RotateCw
 } from 'lucide-react';
 import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
 import { extractSolutionLanguage } from '../utils/cleanSolution';
@@ -37,6 +38,9 @@ import { SolutionViewer } from './SolutionViewer';
 import { RcaClassifier } from './review/RcaClassifier';
 import { safeStorage } from '../utils/safeStorage';
 import { getLanguageText } from '../utils/formatQuestionText';
+import { convertQuestionToSRSCardCandidate, addSRSCardsBatch } from '../utils/srsEngine';
+import { SrsCardConfirmModal } from './srs/SrsCardConfirmModal';
+import { SRSCard } from '../types/srs';
 
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
   if (rawTime === undefined || rawTime === null) return null;
@@ -136,6 +140,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
   const [isFinishingReview, setIsFinishingReview] = useState(false);
   const [finishToast, setFinishToast] = useState<string | null>(null);
+  const [srsCandidateCards, setSrsCandidateCards] = useState<Array<Partial<SRSCard>>>([]);
+  const [srsModalOpen, setSrsModalOpen] = useState(false);
+  const [srsToast, setSrsToast] = useState<string | null>(null);
 
   // isMockReview: only true for actual mock/error review sessions, not chapter bank quizzes
   const isMockReview = Boolean(
@@ -1485,16 +1492,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             <span className="font-extrabold uppercase">{classifyModeEnabled ? 'ON' : 'OFF'}</span>
           </button>
 
-          <span className="font-medium text-gray-600 hidden sm:inline">View In</span>
-          <select 
-            value={language}
-            onChange={(e) => setLanguage(e.target.value as LanguageType)}
-            className="bg-white border border-gray-300 text-gray-800 rounded px-2.5 py-1 font-medium focus:outline-none focus:ring-1 focus:ring-[#0097a7] cursor-pointer"
-          >
-            <option value="English">English</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Bilingual">Bilingual</option>
-          </select>
+          <span className="bg-slate-100 border border-slate-200 text-slate-700 rounded px-2.5 py-1 text-xs font-semibold">
+            English
+          </span>
         </div>
       </div>
 
@@ -1798,40 +1798,60 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       <span className="border-b-2 border-[#0097a7] text-[#0097a7] font-bold text-sm inline-block pb-1.5">
                         Solution
                       </span>
-                      <button
-                        onClick={() => {
-                          const isSectional = result.is_mock && (
-                            String(result.chapter_title || '').toLowerCase().includes('sectional') ||
-                            result.totalQuestions === 25
-                          );
-                          const sType: 'full_mock' | 'sectional' | 'subject_wise' = result.is_mock
-                            ? (isSectional ? 'sectional' : 'full_mock')
-                            : 'subject_wise';
-                          const sLabel = result.is_mock
-                            ? (isSectional ? `Sectional Test: ${result.chapter_title}` : `Full Mock Test: ${result.chapter_title}`)
-                            : `Subject-Wise: ${result.subject || ''} (${result.chapter_title || ''})`;
+                      <div className="flex items-center space-x-2">
+                        <button
+                          onClick={() => {
+                            if (!question) return;
+                            const candidate = convertQuestionToSRSCardCandidate(
+                              question,
+                              current?.isCorrect ? 'bookmark' : (current?.userAnswer ? 'quiz_wrong' : 'quiz_unattempted'),
+                              result.chapter_title,
+                              current?.userAnswer
+                            );
+                            setSrsCandidateCards([candidate]);
+                            setSrsModalOpen(true);
+                          }}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer"
+                          title="Generate an Anki flashcard for this question"
+                        >
+                          <RotateCw className="w-3.5 h-3.5 text-white" />
+                          <span>✨ AI Anki</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const isSectional = result.is_mock && (
+                              String(result.chapter_title || '').toLowerCase().includes('sectional') ||
+                              result.totalQuestions === 25
+                            );
+                            const sType: 'full_mock' | 'sectional' | 'subject_wise' = result.is_mock
+                              ? (isSectional ? 'sectional' : 'full_mock')
+                              : 'subject_wise';
+                            const sLabel = result.is_mock
+                              ? (isSectional ? `Sectional Test: ${result.chapter_title}` : `Full Mock Test: ${result.chapter_title}`)
+                              : `Subject-Wise: ${result.subject || ''} (${result.chapter_title || ''})`;
 
-                          window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
-                            detail: {
-                              questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
-                              questionText: question.question,
-                              options: question.options,
-                              userAnswer: current?.userAnswer,
-                              correctAnswer: question.answer,
-                              solution: question.solution,
-                              topic: question.tags?.topic || (question as any).topic || result.subject,
-                              sourceType: sType,
-                              sourceLabel: sLabel,
-                              testName: result.chapter_title
-                            }
-                          }));
-                        }}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer group"
-                        title="Ask Tommy to explain this question, formulas, and elimination tricks"
-                      >
-                        <Sparkles className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform" />
-                        <span>Ask Tommy</span>
-                      </button>
+                            window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
+                              detail: {
+                                questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
+                                questionText: question.question,
+                                options: question.options,
+                                userAnswer: current?.userAnswer,
+                                correctAnswer: question.answer,
+                                solution: question.solution,
+                                topic: question.tags?.topic || (question as any).topic || result.subject,
+                                sourceType: sType,
+                                sourceLabel: sLabel,
+                                testName: result.chapter_title
+                              }
+                            }));
+                          }}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer group"
+                          title="Ask Tommy to explain this question, formulas, and elimination tricks"
+                        >
+                          <Sparkles className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform" />
+                          <span>Ask Tommy</span>
+                        </button>
+                      </div>
                     </div>
 
                     {/* Solution Body */}
@@ -2673,6 +2693,34 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           <span>{finishToast}</span>
         </div>
       )}
+
+      {srsToast && (
+        <div className="fixed bottom-6 right-6 z-50 bg-indigo-900 text-white px-5 py-3 rounded-xl shadow-2xl text-xs sm:text-sm font-bold flex items-center gap-2.5 border border-indigo-500 animate-in slide-in-from-bottom duration-200">
+          <RotateCw className="w-5 h-5 text-amber-400" />
+          <span>{srsToast}</span>
+        </div>
+      )}
+
+      {/* SrsCardConfirmModal for Review Question */}
+      <SrsCardConfirmModal
+        isOpen={srsModalOpen}
+        cards={srsCandidateCards}
+        title="Add to Anki / SRS Deck"
+        sourceLabel={`Question #${questionNumberInSection || currentIdx + 1}`}
+        onConfirm={(confirmed) => {
+          if (confirmed.length > 0) {
+            addSRSCardsBatch(confirmed);
+            setSrsToast(`Successfully added ${confirmed.length} card to your SRS queue!`);
+            setTimeout(() => setSrsToast(null), 3000);
+          }
+          setSrsModalOpen(false);
+          setSrsCandidateCards([]);
+        }}
+        onCancel={() => {
+          setSrsModalOpen(false);
+          setSrsCandidateCards([]);
+        }}
+      />
 
     </div>
   );

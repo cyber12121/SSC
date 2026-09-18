@@ -363,16 +363,16 @@
     "correctOption": "A",
     "userTime": "00:02",
     "avgTime": "00:25",
-    "questionText": "As observed from the top of a lighthouse, 42 m high above sea-level, the angle of depression of a ship sailing directly towards it changes from 30° to 45°. The distance travelled by the ship during the period of observation is:",
+    "questionText": "As observed from the top of a lighthouse 42 m high above sea-level, the angle of depression of a ship sailing directly towards it changes from 30° to 45°. The distance travelled by the ship during the period of observation is:",
     "options": {
-      "A": "42(\\sqrt{3} - 1)",
-      "B": "42(\\sqrt{3} + 1)",
-      "C": "42",
-      "D": "42(1 - \\sqrt{3})",
-      "a": "42(\\sqrt{3} - 1)",
-      "b": "42(\\sqrt{3} + 1)",
-      "c": "42",
-      "d": "42(1 - \\sqrt{3})"
+      "A": "$42(\\sqrt{3} - 1)\\text{ m}$",
+      "B": "$42(\\sqrt{3} + 1)\\text{ m}$",
+      "C": "$42\\text{ m}$",
+      "D": "$42(1 - \\sqrt{3})\\text{ m}$",
+      "a": "$42(\\sqrt{3} - 1)\\text{ m}$",
+      "b": "$42(\\sqrt{3} + 1)\\text{ m}$",
+      "c": "$42\\text{ m}$",
+      "d": "$42(1 - \\sqrt{3})\\text{ m}$"
     },
     "solution": "Solution\n\nShortcut Trick\nIf the angle of elevation (or depression) of a tower of height h changes from θ1 to θ2 as an object moves directly towards it, the distance travelled is: Distance = h × (cot θ1 - cot θ2)\n\nHere, h = 42 m, θ1 = 30°, θ2 = 45°\nDistance = 42 × (cot 30° - cot 45°)\nDistance = 42 × (√3 - 1)\n∴ The correct answer is 42(√3 - 1) m.\n\nAlternate Method\nGiven:\nHeight of the lighthouse (AB) = 42 m\nAngle of depression at initial position C = 30° ⇒ Angle of elevation ∠ACB = 30°\nAngle of depression at final position D = 45° ⇒ Angle of elevation ∠ADB = 45°\n\nFormula Used:\nIn a right - angled triangle, tan θ = Perpendicular ÷ Base\n\nCalculations:\nIn right - angled triangle ΔABD,\n\n⇒ tan 45° = AB ÷ BD\n⇒ 1 = 42 ÷ BD\n⇒ BD = 42 m\n\nIn right - angled triangle ΔABC,\n\n⇒ tan 30° = AB ÷ BC\n⇒ 1 ÷ √3 = 42 ÷ BC\n⇒ BC = 42√3 m\n\nThe distance travelled by the ship is CD, which is the difference between BC and BD.\n\n⇒ Distance CD = BC - BD\n⇒ Distance CD = 42√3 - 42\n⇒ Distance CD = 42(√3 - 1) m\n∴ The correct answer is 42(√3 - 1) m.\n\nAdditional Information\nHeights and Distances (Trigonometry)\n\nThe angle of elevation is the angle formed between the horizontal reference line and the line of sight when looking up at an object. The angle of depression is the angle formed when looking down from a height.\n\nTwo Objects on the Same Side\n\nIf two objects are observed on the ground from a tower of height h at angles θ1 and θ2, the distance separating them is easily calculated as h(cot θ1 - cot θ2).\n\nTwo Objects on Opposite Sides\n\nWhen two objects are situated on opposite sides of a central tower of height h, having respective angles of elevation θ1 and θ2, the total distance between them is h(cot θ1 + cot θ2).",
     "mockId": "mock_1789629094216_9b5gv",
@@ -384,7 +384,9 @@
       "topic": "Height & Distance",
       "subtopic": "Angle of Depression & Elevation - Two Positions on Same Side",
       "conceptTested": "Trigonometric ratios in right-angled triangles to find horizontal distance between two observation points."
-    }
+    },
+    "question": "As observed from the top of a lighthouse 42 m high above sea-level, the angle of depression of a ship sailing directly towards it changes from 30° to 45°. The distance travelled by the ship during the period of observation is:",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 7",
@@ -538,7 +540,7 @@
     "correctOption": "B",
     "userTime": "00:00",
     "avgTime": "00:15",
-    "questionText": "Find the value of \\sin(50° + A) - \\cos(40° - A).",
+    "questionText": "Find the value of $\\sin(50^\\circ + A) - \\cos(40^\\circ - A)$:",
     "options": {
       "A": "2",
       "B": "0",
@@ -559,7 +561,9 @@
       "topic": "Trigonometry",
       "subtopic": "Complementary Angles Ratios",
       "conceptTested": "Complementary angle relation: \\sin(\\theta) = \\cos(90^\\circ - \\theta)"
-    }
+    },
+    "question": "Find the value of $\\sin(50^\\circ + A) - \\cos(40^\\circ - A)$:",
+    "answer": "b"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 7",

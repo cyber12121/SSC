@@ -1376,7 +1376,7 @@
     "correctOption": "B",
     "userTime": "00:36",
     "avgTime": "00:17",
-    "questionText": "If 3^(2p+4) = 6561, then find the value of (p + 1)^4",
+    "questionText": "If $3^{2p+4} = 6561$, then find the value of $(p + 1)^4$",
     "options": {
       "a": "1",
       "b": "81",
@@ -1387,7 +1387,7 @@
       "C": "27",
       "D": "16"
     },
-    "solution": "Solution\n\nShortcut Trick\nConvert 6561 into a power of 3: 6561 = 38.\nEquating the exponents of base 3: 2p + 4 = 8 ⇒ 2p = 4 ⇒ p = 2.\nSubstitute p = 2 to find the required expression: (p + 1)4 = (2 + 1)4 = 34 = 81.\n∴ The correct answer is 81.\n\nAlternate Method\nGiven:\n3(2p+4) = 6561\n\nFormula Used:\nIf am = an for any base a > 1, then m = n.\n\nCalculations:\n⇒ 3(2p+4) = 6561\n\nFactorizing 6561 gives:\n\n⇒ 3(2p+4) = 3 × 3 × 3 × 3 × 3 × 3 × 3 × 3\n⇒ 3(2p+4) = 38\nSince the bases are the same, we can safely equate the exponents:\n⇒ 2p + 4 = 8\n⇒ 2p = 8 - 4\n⇒ 2p = 4\n⇒ p = 2\nNow, substitute the value of p into the required expression (p + 1)4:\n⇒ (2 + 1)4\n⇒ 34\n⇒ 81\n∴ The correct answer is 81.\n\nAdditional Information\nLaw of Exponents (Multiplication & Division)\n\nWhen multiplying terms with the same base, add their exponents: am × an = am+n. When dividing, subtract them: am ÷ an = am-n.\n\nPower of a Power Rule\n\nWhen raising a power to another power, multiply the exponents: (am)n = am×n.\n\nZero and Negative Exponents\n\nAny non-zero base to the power of 0 is 1: a0 = 1. A negative exponent denotes the reciprocal of the base raised to the positive power: a-n = 1 ÷ an.",
+    "solution": "Solution\n\nShortcut Trick\nConvert 6561 into a power of 3: $6561 = 3^8$.\nEquating the exponents of base 3:\n$2p + 4 = 8 \\Rightarrow 2p = 4 \\Rightarrow p = 2$.\nSubstitute $p = 2$ to find the required expression:\n$(p + 1)^4 = (2 + 1)^4 = 3^4 = 81$.\n∴ The correct answer is 81.\n\nAlternate Method\nGiven:\n$3^{2p+4} = 6561$\n\nFormula Used:\nIf $a^m = a^n$, then $m = n$ (when $a > 0, a \\neq 1$).\n\nCalculation:\n$\\Rightarrow 3^{2p+4} = 3^8$\n$\\Rightarrow 2p + 4 = 8$\n$\\Rightarrow 2p = 4$\n$\\Rightarrow p = 2$\nNow, $(p + 1)^4 = (2 + 1)^4 = 3^4 = 81$.\n∴ The correct answer is 81.",
     "topic": "Simplification",
     "subtopic": "Indices & Surds - Exponential Equations",
     "conceptTested": "Equating exponents when bases are equal: if a^m = a^n, then m = n.",
@@ -1396,7 +1396,7 @@
       "subtopic": "Indices & Surds - Exponential Equations",
       "conceptTested": "Equating exponents when bases are equal: if a^m = a^n, then m = n."
     },
-    "question": "If 3^(2p+4) = 6561, then find the value of (p + 1)^4",
+    "question": "If $3^{2p+4} = 6561$, then find the value of $(p + 1)^4$",
     "answer": "b"
   },
   {
@@ -1411,18 +1411,18 @@
     "correctOption": "B",
     "userTime": "00:24",
     "avgTime": "00:13",
-    "questionText": "If tanθ + secθ = m, then what is secθ equal to?",
+    "questionText": "If $\\tan \\theta + \\sec \\theta = m$, then what is $\\sec \\theta$ equal to?",
     "options": {
-      "a": "m2-12m",
-      "b": "m2+12m",
-      "c": "m+1m",
-      "d": "m2+1m",
-      "A": "m2-12m",
-      "B": "m2+12m",
-      "C": "m+1m",
-      "D": "m2+1m"
+      "a": "$\\frac{m^2 - 1}{2m}$",
+      "b": "$\\frac{m^2 + 1}{2m}$",
+      "c": "$\\frac{m + 1}{m}$",
+      "d": "$\\frac{m^2 + 1}{m}$",
+      "A": "$\\frac{m^2 - 1}{2m}$",
+      "B": "$\\frac{m^2 + 1}{2m}$",
+      "C": "$\\frac{m + 1}{m}$",
+      "D": "$\\frac{m^2 + 1}{m}$"
     },
-    "solution": "Solution\n\nGiven:\ntanθ + secθ = m\n\nFormula used:\nsec²θ - tan²θ = 1\n(a + b)(a - b) = a2 - b2\n\nCalculation:\nsecθ + tanθ = m       ----(1)\nNow, we know that\nsec²θ - tan²θ = 1\nBy using the formula (a + b)(a - b) = a2 - b2\n⇒ (secθ - tanθ) (secθ + tanθ) = 1\n⇒ secθ - tanθ = 1/(secθ + tanθ)\n⇒ secθ - tanθ = 1/m       -----(2)\n\nAdding equation (1) & (2)\n\n⇒ secθ + tanθ + secθ - tanθ = m + 1/m\n⇒ 2secθ = m + 1/m\n⇒ 2secθ = m2 + 1/m\n⇒ secθ =\nm\n2\n+1\n2m\nm\n2\n+\n1\n2\nm\n\n∴ The required value is\nm\n2\n+1\n2m\nm\n2\n+\n1\n2\nm\n.",
+    "solution": "Solution\n\nGiven:\n$\\tan \\theta + \\sec \\theta = m$  ---(1)\n\nFormula used:\n$\\sec^2 \\theta - \\tan^2 \\theta = 1$\n$a^2 - b^2 = (a + b)(a - b)$\n\nCalculation:\nFrom $\\sec^2 \\theta - \\tan^2 \\theta = 1$:\n$\\Rightarrow (\\sec \\theta - \\tan \\theta)(\\sec \\theta + \\tan \\theta) = 1$\n$\\Rightarrow \\sec \\theta - \\tan \\theta = \\frac{1}{\\sec \\theta + \\tan \\theta} = \\frac{1}{m}$  ---(2)\n\nAdding equations (1) and (2):\n$\\Rightarrow (\\sec \\theta + \\tan \\theta) + (\\sec \\theta - \\tan \\theta) = m + \\frac{1}{m}$\n$\\Rightarrow 2\\sec \\theta = \\frac{m^2 + 1}{m}$\n$\\Rightarrow \\sec \\theta = \\frac{m^2 + 1}{2m}$\n\n∴ The required value is $\\frac{m^2 + 1}{2m}$.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Equations",
     "conceptTested": "Fundamental trigonometric identity sec²θ - tan²θ = 1 and algebraic manipulation of linear combinations.",
@@ -1431,7 +1431,7 @@
       "subtopic": "Trigonometric Identities & Equations",
       "conceptTested": "Fundamental trigonometric identity sec²θ - tan²θ = 1 and algebraic manipulation of linear combinations."
     },
-    "question": "If tanθ + secθ = m, then what is secθ equal to?",
+    "question": "If $\\tan \\theta + \\sec \\theta = m$, then what is $\\sec \\theta$ equal to?",
     "answer": "b"
   },
   {

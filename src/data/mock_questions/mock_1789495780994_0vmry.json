@@ -1241,7 +1241,7 @@
   {
     "id": "mock_q_35_mock_1789495780994_0vmry",
     "q_num": 35,
-    "question": "∛(8^4) × ∛(125^2) ÷ √ (4^3) is equal to",
+    "question": "$\\sqrt[3]{8^4} \\times \\sqrt[3]{125^2} \\div \\sqrt{4^3}$ is equal to:",
     "options": {
       "a": "50",
       "b": "40",
@@ -1253,7 +1253,7 @@
       "D": "80"
     },
     "answer": "a",
-    "solution": "Solution\n\nGiven:\n3√84 × 3√1252 ÷ √43\n\nFormula used:\nn√am = am/n\n\nCalculation:\n⇒ 84/3 × 1252/3 ÷ 43/2\n⇒ (23)4/3 × (53)²/3 ÷ (22)³/2\n⇒ 24 × 52 ÷ 23\n⇒ 16 × 25 ÷ 8\n⇒ 400 ÷ 8\n⇒ 50\n∴ The correct answer is option 1.",
+    "solution": "Solution\n\nGiven:\n$\\sqrt[3]{8^4} \\times \\sqrt[3]{125^2} \\div \\sqrt{4^3}$\n\nFormula used:\n$\\sqrt[n]{a^m} = a^{m/n}$\n\nCalculation:\n$\\Rightarrow 8^{4/3} \\times 125^{2/3} \\div 4^{3/2}$\n$\\Rightarrow (2^3)^{4/3} \\times (5^3)^{2/3} \\div (2^2)^{3/2}$\n$\\Rightarrow 2^4 \\times 5^2 \\div 2^3$\n$\\Rightarrow 16 \\times 25 \\div 8$\n$\\Rightarrow 400 \\div 8 = 50$.\n∴ The correct answer is 50.",
     "image": null,
     "subject": "Mathematics",
     "tags": {
@@ -1271,7 +1271,7 @@
     "isSlow": true,
     "timeSpent": 31,
     "userTime": 31,
-    "questionText": "∛(8^4) × ∛(125^2) ÷ √ (4^3) is equal to",
+    "questionText": "$\\sqrt[3]{8^4} \\times \\sqrt[3]{125^2} \\div \\sqrt{4^3}$ is equal to:",
     "correctOption": "A"
   },
   {

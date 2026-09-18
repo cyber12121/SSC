@@ -1,5 +1,6 @@
 import { MockScoreReport } from '../types/mockScore';
 import { normalizeTopicTitle } from './topicDetector';
+import { normalizeSubtopic } from './subtopicNormalizer';
 
 export interface MockSummaryStats {
   totalMocks: number;
@@ -133,7 +134,7 @@ export function buildMockAiSummary(
             const rawTopic = q.tags?.topic || q.topic;
             const topic = normalizeTopicTitle(rawTopic);
             const rawSubtopic = q.tags?.subtopic || q.subtopic || topic;
-            const subtopic = normalizeTopicTitle(rawSubtopic);
+            const subtopic = normalizeSubtopic(topic, rawSubtopic, q.question);
             const concept = (q.tags?.conceptTested || q.conceptTested || '').trim();
             const mockName: string = ch.chapter_title || subject;
 

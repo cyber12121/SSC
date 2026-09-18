@@ -221,16 +221,16 @@
     "correctOption": "A",
     "userTime": "01:11",
     "avgTime": "00:32",
-    "questionText": "A bird makes a depression of 30° with a person standing on the ground. After flying 60 meters, at the same height, the angle of depression becomes 60°. At what height is bird flying?",
+    "questionText": "A bird makes an angle of depression of 30° with a person standing on the ground. After flying 60 meters at the same height, the angle of depression becomes 60°. At what height is the bird flying?",
     "options": {
-      "A": "30\\sqrt{3}",
-      "B": "30",
-      "C": "60\\sqrt{3}",
-      "D": "60",
-      "a": "30\\sqrt{3}",
-      "b": "30",
-      "c": "60\\sqrt{3}",
-      "d": "60"
+      "A": "$30\\sqrt{3}\\text{ m}$",
+      "B": "$30\\text{ m}$",
+      "C": "$60\\sqrt{3}\\text{ m}$",
+      "D": "$60\\text{ m}$",
+      "a": "$30\\sqrt{3}\\text{ m}$",
+      "b": "$30\\text{ m}$",
+      "c": "$60\\sqrt{3}\\text{ m}$",
+      "d": "$60\\text{ m}$"
     },
     "solution": "Solution\n\nShortcut Trick\nWhen the angle of elevation/depression of an object at a constant height (h) changes from 30° to 60°, the relation between height (h) and horizontal distance covered (d) is: h = d × √3 ÷ 2\n\nGiven distance, d = 60 m.\nHeight, h = 60 × √3 ÷ 2 = 30√3\n∴ The correct answer is 30√3 m.\n\nAlternate Method\nGiven:\nDistance covered by the bird, AB = 60 m.\nInitial angle of depression from A = 30°.\nFinal angle of depression from B = 60°.\nLet the height of the bird be h meters and the distance OB' be x meters.\nSince the bird flies at the same height, AA' = BB' = h.\n\nFrom the alternate interior angles, the angles of elevation from O are 30° and 60° respectively.\n\nIn right - angled ΔOB'B:\n\n⇒ tan(60°) = BB' ÷ OB'\n⇒ √3 = h ÷ x\n⇒ x = h ÷ √3 ... (Equation 1)\n\nIn right - angled ΔOA'A:\n\n⇒ tan(30°) = AA' ÷ OA'\n⇒ 1 ÷ √3 = h ÷ (x + 60)\n⇒ x + 60 = h√3\n\nSubstitute the value of x from Equation 1:\n\n⇒ (h ÷ √3) + 60 = h√3\n⇒ 60 = h√3 - (h ÷ √3)\n⇒ 60 = (3h - h) ÷ √3\n⇒ 60 = 2h ÷ √3\n⇒ 60√3 = 2h\n⇒ h = 30√3\n∴ The correct answer is 30√3 m.\n\nAdditional Information\nAngle of Elevation and Depression\n\nThe angle of elevation is the angle formed by the line of sight with the horizontal when viewing an upward object. The angle of depression is the angle formed when viewing a downward object. They are alternate interior angles and are equal.\n\nDistance covered between 45° and 60°\n\nWhen the angle changes from 45° to 60° while moving towards an object of height h, the distance covered is given by d = h(1 - 1 ÷ √3).\n\nDistance covered between 30° and 45°\n\nWhen the angle changes from 30° to 45° while moving towards an object of height h, the distance covered is given by d = h(√3 - 1).",
     "mockId": "mock_1789629325813_j6w8n",
@@ -242,7 +242,9 @@
       "topic": "Height & Distance",
       "subtopic": "Angle of Depression & Horizontal Distance",
       "conceptTested": "Trigonometric ratios (tan θ) applied to right-angled triangles involving angles of elevation and depression."
-    }
+    },
+    "question": "A bird makes an angle of depression of 30° with a person standing on the ground. After flying 60 meters at the same height, the angle of depression becomes 60°. At what height is the bird flying?",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 4",

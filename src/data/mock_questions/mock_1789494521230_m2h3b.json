@@ -1096,7 +1096,7 @@
     "correctOption": "D",
     "userTime": "00:38",
     "avgTime": "00:27",
-    "questionText": "What is the value of ((1 + sec^2 A) / (1 + cos^2 A)) × ((1 + sin^2 A) / (1 + cosec^2 A))?",
+    "questionText": "What is the value of $\\left(\\frac{1 + \\sec^2 A}{1 + \\cos^2 A}\\right) \\times \\left(\\frac{1 + \\sin^2 A}{1 + \\operatorname{cosec}^2 A}\\right)$?",
     "options": {
       "a": "cos²A",
       "b": "cosec²A",
@@ -1116,7 +1116,7 @@
       "subtopic": "Trigonometric Identities & Simplification",
       "conceptTested": "Reciprocal and quotient trigonometric identities to simplify algebraic expressions."
     },
-    "question": "What is the value of ((1 + sec^2 A) / (1 + cos^2 A)) × ((1 + sin^2 A) / (1 + cosec^2 A))?",
+    "question": "What is the value of $\\left(\\frac{1 + \\sec^2 A}{1 + \\cos^2 A}\\right) \\times \\left(\\frac{1 + \\sin^2 A}{1 + \\operatorname{cosec}^2 A}\\right)$?",
     "answer": "d"
   },
   {
@@ -1201,18 +1201,18 @@
     "correctOption": "C",
     "userTime": "00:52",
     "avgTime": "00:26",
-    "questionText": "Find the value of: ((6.25)^(1/2) × (0.0144)^(1/2) + 1) / ((0.027)^(1/3) × (81)^(1/4))",
+    "questionText": "Find the value of: $\\frac{(6.25)^{1/2} \\times (0.0144)^{1/2} + 1}{(0.027)^{1/3} \\times (81)^{1/4}}$",
     "options": {
-      "a": "57",
-      "b": "911",
-      "c": "139",
+      "a": "$\\frac{5}{7}$",
+      "b": "$\\frac{9}{11}$",
+      "c": "$\\frac{13}{9}$",
       "d": "1",
-      "A": "57",
-      "B": "911",
-      "C": "139",
+      "A": "$\\frac{5}{7}$",
+      "B": "$\\frac{9}{11}$",
+      "C": "$\\frac{13}{9}$",
       "D": "1"
     },
-    "solution": "Solution\n\nGiven:\n((6.25)^(1/2) × (0.0144)^(1/2) + 1) / ((0.027)^(1/3) × (81)^(1/4)) = ?\n\nFormula used:\na^(1/n) = n√a\n\nCalculation:\n⇒ ? = ((6.25)^(1/2) × (0.0144)^(1/2) + 1) / ((0.027)^(1/3) × (81)^(1/4))\n⇒ ? = (√6.25 × √0.0144 + 1) / (∛0.027 × ∜81)\n⇒ ? = (2.5 × 0.12 + 1) / (0.3 × 3)\n⇒ ? = (0.3 + 1) / 0.9\n⇒ ? = 1.3 / 0.9\n⇒ ? = 13 / 9\n\n∴ The correct answer is option (3).",
+    "solution": "Solution\n\nGiven:\n$\\frac{(6.25)^{1/2} \\times (0.0144)^{1/2} + 1}{(0.027)^{1/3} \\times (81)^{1/4}}$\n\nFormula used:\n$a^{1/n} = \\sqrt[n]{a}$\n\nCalculation:\nNumerator:\n$\\Rightarrow (6.25)^{1/2} \\times (0.0144)^{1/2} + 1$\n$\\Rightarrow \\sqrt{6.25} \\times \\sqrt{0.0144} + 1$\n$\\Rightarrow 2.5 \\times 0.12 + 1 = 0.3 + 1 = 1.3 = \\frac{13}{10}$\n\nDenominator:\n$\\Rightarrow (0.027)^{1/3} \\times (81)^{1/4}$\n$\\Rightarrow \\sqrt[3]{0.027} \\times \\sqrt[4]{81}$\n$\\Rightarrow 0.3 \\times 3 = 0.9 = \\frac{9}{10}$\n\nNow divide Numerator by Denominator:\n$\\Rightarrow \\frac{1.3}{0.9} = \\frac{13}{9}$\n∴ The correct answer is $\\frac{13}{9}$ (Option C).",
     "topic": "Simplification",
     "subtopic": "Surds and Indices",
     "conceptTested": "Evaluation of fractional exponents using radical roots and algebraic simplification.",
@@ -1221,7 +1221,7 @@
       "subtopic": "Surds and Indices",
       "conceptTested": "Evaluation of fractional exponents using radical roots and algebraic simplification."
     },
-    "question": "Find the value of: ((6.25)^(1/2) × (0.0144)^(1/2) + 1) / ((0.027)^(1/3) × (81)^(1/4))",
+    "question": "Find the value of: $\\frac{(6.25)^{1/2} \\times (0.0144)^{1/2} + 1}{(0.027)^{1/3} \\times (81)^{1/4}}$",
     "answer": "c"
   },
   {

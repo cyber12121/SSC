@@ -571,18 +571,18 @@
     "correctOption": "D",
     "userTime": "00:19",
     "avgTime": "00:30",
-    "questionText": "If α + θ = 7π/12 and tan θ = √3, then the value of tan α is:",
+    "questionText": "If $\\alpha + \\theta = \\frac{7\\pi}{12}$ and $\\tan \\theta = \\sqrt{3}$, then the value of $\\tan \\alpha$ is:",
     "options": {
-      "a": "13√",
+      "a": "$\\frac{1}{\\sqrt{3}}$",
       "b": "0",
       "c": "-1",
       "d": "1",
-      "A": "13√",
+      "A": "$\\frac{1}{\\sqrt{3}}$",
       "B": "0",
       "C": "-1",
       "D": "1"
     },
-    "solution": "Solution\n\nShortcut Trick\nGiven, tan θ = √3 ⇒ θ = π/3\nIt is given that α + θ = 7π/12\n⇒ α = 7π/12 - π/3 = 7π/12 - 4π/12 = 3π/12 = π/4\nNow, tan α = tan(π/4) = 1\n∴ The correct answer is 1.\n\nAlternate Method\nGiven:\nα + θ = 7π / 12\ntan θ = √3\n\nCalculations:\n⇒ tan θ = √3\n⇒ θ = 60° (since tan 60° = √3)\nWe know that π radians = 180°\n⇒ Total Angle = 7π / 12 = (7 × 180°) ÷ 12 = 105°\n\nSubstitute the value of θ in the given equation:\n\n⇒ α + 60° = 105°\n⇒ α = 105° - 60°\n⇒ α = 45°\n\nWe need to find the value of tan α:\n\n⇒ tan α = tan 45° = 1\n∴ The correct answer is 1.\n\nAdditional Information\nRadian to Degree Conversion\n\nTo convert an angle from radians to degrees, multiply the value by 180° ÷ π. Conversely, to convert from degrees to radians, multiply by π ÷ 180°.\n\nCompound Angle Formula\n\nThe tangent of the sum of two angles is expressed as: tan(A + B) = (tan A + tan B) ÷ (1 - tan A × tan B).\n\nStandard Trigonometric Values\n\nSome frequently used tangent values are: tan(30°) = 1 ÷ √3, tan(45°) = 1, and tan(60°) = √3.",
+    "solution": "Solution\n\nShortcut Trick\nGiven $\\tan \\theta = \\sqrt{3} \\Rightarrow \\theta = \\frac{\\pi}{3} = 60^\\circ$.\nWe are given $\\alpha + \\theta = \\frac{7\\pi}{12} = 105^\\circ$.\n$\\Rightarrow \\alpha = \\frac{7\\pi}{12} - \\frac{\\pi}{3} = \\frac{7\\pi - 4\\pi}{12} = \\frac{3\\pi}{12} = \\frac{\\pi}{4} = 45^\\circ$.\nNow, $\\tan \\alpha = \\tan\\left(\\frac{\\pi}{4}\\right) = 1$.\n∴ The correct answer is 1.",
     "topic": "Trigonometry",
     "subtopic": "Compound Angles & Standard Values",
     "conceptTested": "Trigonometric values of standard angles and direct substitution.",
@@ -591,7 +591,7 @@
       "subtopic": "Compound Angles & Standard Values",
       "conceptTested": "Trigonometric values of standard angles and direct substitution."
     },
-    "question": "If α + θ = 7π/12 and tan θ = √3, then the value of tan α is:",
+    "question": "If $\\alpha + \\theta = \\frac{7\\pi}{12}$ and $\\tan \\theta = \\sqrt{3}$, then the value of $\\tan \\alpha$ is:",
     "answer": "d"
   },
   {

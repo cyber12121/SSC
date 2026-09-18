@@ -46,16 +46,16 @@
     "correctOption": "A",
     "userTime": "01:37",
     "avgTime": "00:52",
-    "questionText": "If \\(\\tan A = \\frac{15}{8}\\) and \\(\\tan B = \\frac{7}{24}\\), then cos(A + B) = ?",
+    "questionText": "If $\\tan A = \\frac{15}{8}$ and $\\tan B = \\frac{7}{24}$, then find $\\cos(A + B)$:",
     "options": {
-      "A": "\\(\\frac{87}{425}\\)",
-      "B": "\\(\\frac{297}{425}\\)",
-      "C": "\\(\\frac{304}{425}\\)",
-      "D": "\\(\\frac{416}{425}\\)",
-      "a": "\\(\\frac{87}{425}\\)",
-      "b": "\\(\\frac{297}{425}\\)",
-      "c": "\\(\\frac{304}{425}\\)",
-      "d": "\\(\\frac{416}{425}\\)"
+      "A": "$\\frac{87}{425}$",
+      "B": "$\\frac{297}{425}$",
+      "C": "$\\frac{304}{425}$",
+      "D": "$\\frac{416}{425}$",
+      "a": "$\\frac{87}{425}$",
+      "b": "$\\frac{297}{425}$",
+      "c": "$\\frac{304}{425}$",
+      "d": "$\\frac{416}{425}$"
     },
     "solution": "Solution\n\nShortcut Trick\nUsing standard Pythagorean triplets: (8, 15, 17) for angle A and (7, 24, 25) for angle B.\nFrom tan A = 15/8, we directly get sin A = 15/17 and cos A = 8/17.\nFrom tan B = 7/24, we directly get sin B = 7/25 and cos B = 24/25.\nApplying the identity: cos(A + B) = cos A × cos B - sin A × sin B\ncos(A + B) = (8/17 × 24/25) - (15/17 × 7/25) = 192/425 - 105/425 = 87/425.\n∴ The correct answer is 87/425.\n\nAlternate Method\nGiven:\ntan A = 15/8 (Opposite / Adjacent)^tan B = 7/24 (Opposite / Adjacent)\n\nFormula Used:\nHypotenuse² = Opposite² + Adjacent²\ncos(A + B) = cos A × cos B - sin A × sin B\n\nCalculations:\n⇒ For Triangle A: Hypotenuse = √(15² + 8²) = √(225 + 64) = √289 = 17\n⇒ sin A = Opposite / Hypotenuse = 15/17\n⇒ cos A = Adjacent / Hypotenuse = 8/17\n⇒ For Triangle B: Hypotenuse = √(7² + 24²) = √(49 + 576) = √625 = 25\n⇒ sin B = Opposite / Hypotenuse = 7/25\n⇒ cos B = Adjacent / Hypotenuse = 24/25\n⇒ cos(A + B) = (8/17 × 24/25) - (15/17 × 7/25)\n⇒ cos(A + B) = 192/425 - 105/425\n⇒ cos(A + B) = 87/425\n∴ The correct answer is 87/425.\n\nAdditional Information\nCompound Angle Formulas\n\nFormulas for the sum and difference of angles: sin(A + B) = sin A × cos B + cos A × sin B, and cos(A + B) = cos A × cos B - sin A × sin B.\n\nPythagorean Triplets\n\nSets of three positive integers a, b, and c that satisfy a² + b² = c². Common examples are (3, 4, 5), (5, 12, 13), (7, 24, 25), and (8, 15, 17).\n\nTrigonometric Ratios in a Right Triangle\n\nsin θ = Opposite ÷ Hypotenuse, cos θ = Adjacent ÷ Hypotenuse, and tan θ = Opposite ÷ Adjacent.",
     "mockId": "mock_1789629358199_ppc47",
@@ -67,7 +67,9 @@
       "topic": "Trigonometry",
       "subtopic": "Compound Angles - Cosine Addition Formula",
       "conceptTested": "cos(A + B) = cos A × cos B − sin A × sin B using right-angled triangle ratios or Pythagorean triplets."
-    }
+    },
+    "question": "If $\\tan A = \\frac{15}{8}$ and $\\tan B = \\frac{7}{24}$, then find $\\cos(A + B)$:",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 3",

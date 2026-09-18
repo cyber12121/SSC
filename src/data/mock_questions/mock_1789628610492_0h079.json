@@ -606,16 +606,16 @@
     "correctOption": "D",
     "userTime": "00:45",
     "avgTime": "00:20",
-    "questionText": "If \\tan A + \\sin A = p and \\tan A - \\sin A = q, then which of the following is true?",
+    "questionText": "If $\\tan A + \\sin A = p$ and $\\tan A - \\sin A = q$, then which of the following is true?",
     "options": {
-      "A": "p^2 + q^2 = 4\\sqrt{pq}",
-      "B": "p + q = pq",
-      "C": "p - q = pq",
-      "D": "p^2 - q^2 = 4\\sqrt{pq}",
-      "a": "p^2 + q^2 = 4\\sqrt{pq}",
-      "b": "p + q = pq",
-      "c": "p - q = pq",
-      "d": "p^2 - q^2 = 4\\sqrt{pq}"
+      "A": "$p^2 + q^2 = 4\\sqrt{pq}$",
+      "B": "$p + q = pq$",
+      "C": "$p - q = pq$",
+      "D": "$p^2 - q^2 = 4\\sqrt{pq}$",
+      "a": "$p^2 + q^2 = 4\\sqrt{pq}$",
+      "b": "$p + q = pq$",
+      "c": "$p - q = pq$",
+      "d": "$p^2 - q^2 = 4\\sqrt{pq}$"
     },
     "solution": "Solution\n\nShortcut Trick\nPut A = 45°. Then tan(45°) = 1 and sin(45°) = 1/√2.\np = 1 + 1/√2 and q = 1 - 1/√2\np² - q² = (p + q) × (p - q) = (2) × (2/√2) = 2√2\npq = (1 + 1/√2) × (1 - 1/√2) = 1 - 1/2 = 1 2/4√(pq) = 4 × √(1/2) = 4/√2 = 2√2\n∴ The correct answer is p² - q² = 4√(pq).\n\nAlternate Method\nGiven:\np = tanA + sinA\nq = tanA - sinA\n\nCalculations:\n⇒ p + q = 2tanA\n⇒ p - q = 2sinA\n⇒ p² - q² = (p + q) × (p - q) = (2tanA) × (2sinA) = 4tanA × sinA\nNow, let us calculate the product pq:\n⇒ pq = (tanA + sinA) × (tanA - sinA)\n⇒ pq = tan²A - sin²A\n⇒ pq = (sin²A ÷ cos²A) - sin²A\n⇒ pq = sin²A × (1/cos²A - 1)\n⇒ pq = sin²A × (sec²A - 1)\n⇒ pq = sin²A × tan²A\n⇒ √(pq) = sinA × tanA\n\nMultiplying by 4 on both sides:\n\n⇒ 4√(pq) = 4tanA × sinA\n\nComparing the values of (p² - q²) and 4√(pq):\n\n⇒ p² - q² = 4√(pq)\n∴ The correct answer is p² - q² = 4√(pq).\n\nAdditional Information\nTrigonometric Identities\n\nThe three fundamental identities are: sin²θ + cos²θ = 1, sec²θ - tan²θ = 1, and cosec²θ - cot²θ = 1.\nDifference of Squares\nThe algebraic identity a² - b² = (a - b) × (a + b) helps simplify quadratic differences rapidly.\n\nTangent Formula\n\nThe relationship tanθ = sinθ ÷ cosθ is useful for converting all terms into sine and cosine to simplify complex equations.",
     "mockId": "mock_1789628610492_0h079",
@@ -627,7 +627,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Transformations",
       "conceptTested": "Algebraic difference of squares: p^2 - q^2 = (p + q)(p - q) applied to trigonometric expressions."
-    }
+    },
+    "question": "If $\\tan A + \\sin A = p$ and $\\tan A - \\sin A = q$, then which of the following is true?",
+    "answer": "d"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 11",

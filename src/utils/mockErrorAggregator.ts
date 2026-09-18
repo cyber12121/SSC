@@ -1,6 +1,7 @@
 import { SubjectData, Chapter, Question, RCAClassification, RCATagType } from '../types';
 import { MockChapterModalData } from '../components/modals/MockChapterErrorsModal';
 import { detectTopic, normalizeTopicTitle } from './topicDetector';
+import { normalizeSubtopic } from './subtopicNormalizer';
 import { classifyTestType, TestScopeFilter } from './testClassifier';
 import { safeStorage } from './safeStorage';
 import { getDeletedMockIds } from './syncMockReports';
@@ -300,6 +301,8 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     const normT = rawT ? normalizeTopicTitle(rawT) : '';
     const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
 
+    const canonicalSubtopic = normalizeSubtopic(topic, q.subtopic || q.tags?.subtopic || q.conceptTested, qText);
+
     const enrichedQuestion: Question & {
       errorType: 'speed_issue' | 'unattempted' | 'wrong';
       rca?: RCAClassification;
@@ -313,6 +316,13 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       ...q,
       question: qText,
       subject,
+      topic,
+      subtopic: canonicalSubtopic,
+      tags: {
+        ...(q.tags || {}),
+        topic,
+        subtopic: canonicalSubtopic
+      },
       errorType,
       rca: qRca,
       rcaClassification: qRca,

@@ -8,15 +8,18 @@ import {
   Trophy,
   Flame,
   LogOut,
-  LogIn
+  LogIn,
+  RotateCw
 } from 'lucide-react';
+import { ThemeSelector } from '../ThemeSelector';
 
 interface AppNavbarProps {
   view: string;
   quizMode: 'practice' | 'mock';
   user: any;
+  srsDueCount?: number;
   resetToHome: () => void;
-  setView: (view: 'home' | 'dashboard' | 'bookmarks' | 'mockScores' | 'drill') => void;
+  setView: (view: 'home' | 'dashboard' | 'bookmarks' | 'mockScores' | 'drill' | 'srs') => void;
   setSelectedSubject: (subject: string | null) => void;
   setSelectedTopic: (topic: string | null) => void;
   setSelectedBookmarkSubject: (subject: string | null) => void;
@@ -29,6 +32,7 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({
   view,
   quizMode,
   user,
+  srsDueCount = 0,
   resetToHome,
   setView,
   setSelectedSubject,
@@ -94,6 +98,20 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({
               Bookmarks
             </button>
             <button
+              onClick={() => setView('srs')}
+              className={`flex items-center font-bold text-sm transition-colors cursor-pointer relative ${
+                view === 'srs' ? 'text-indigo-600' : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              <RotateCw className="w-4 h-4 mr-1.5 text-indigo-500" />
+              <span>SRS Memory</span>
+              {srsDueCount !== undefined && srsDueCount > 0 && (
+                <span className="ml-1.5 px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-black shadow-xs animate-pulse">
+                  {srsDueCount}
+                </span>
+              )}
+            </button>
+            <button
               onClick={() => setView('dashboard')}
               className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${
                 view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'
@@ -135,6 +153,8 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({
                 Mock
               </button>
             </div>
+
+            <ThemeSelector />
             {user ? (
               <button
                 onClick={handleLogout}

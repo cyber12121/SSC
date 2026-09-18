@@ -921,18 +921,18 @@
     "correctOption": "D",
     "userTime": "01:26",
     "avgTime": "00:24",
-    "questionText": "If cot 18° = p/q, then the value of cosec^2(378°) / (1 + tan^2(378°)) is",
+    "questionText": "If $\\cot 18^\\circ = \\frac{p}{q}$, then find the value of $\\frac{\\operatorname{cosec}^2 378^\\circ}{1 + \\tan^2 378^\\circ}$:",
     "options": {
       "a": "1",
-      "b": "pq",
-      "c": "p3q3",
-      "d": "p2q2",
+      "b": "$\\frac{p}{q}$",
+      "c": "$\\frac{p^3}{q^3}$",
+      "d": "$\\frac{p^2}{q^2}$",
       "A": "1",
-      "B": "pq",
-      "C": "p3q3",
-      "D": "p2q2"
+      "B": "$\\frac{p}{q}$",
+      "C": "$\\frac{p^3}{q^3}$",
+      "D": "$\\frac{p^2}{q^2}$"
     },
-    "solution": "Solution\n\nShortcut Trick\nReduce the angle to the first quadrant: 378° = 360° + 18°.\n\nThe expression becomes cosec2 18° / (1 + tan2 18°).\n\nUsing 1 + tan²θ = sec²θ, it simplifies to cosec2 18° / sec2 18°.\nSince cosec θ / sec θ = cot θ, the entire expression strictly reduces to cot2 18°.\nSubstitute cot 18° = p/q directly to get (p/q)² = p2/q2.\n∴ The correct answer is p2/q2.\n\nAlternate Method\nGiven:\ncot 18° = p/q\n\nFormula Used:\ncosec(360° + θ) = cosec θ\ntan(360° + θ) = tan θ\n1 + tan²θ = sec²θ\ncosec θ = 1 / sin θ\nsec θ = 1 / cos θ\n\nCalculations:\n⇒ Angle reduction: 378° = 360° + 18°\n⇒ cosec 378° = cosec 18° and tan 378° = tan 18°\n⇒ Substitute into the expression: (cosec2 18°) / (1 + tan2 18°)\n⇒ Apply the trigonometric identity 1 + tan2 18° = sec2 18°:\n⇒ Expression = (cosec2 18°) / (sec2 18°)\n⇒ Convert sec and cosec functions into fundamental sine and cosine functions:\n⇒ Expression = (1 / sin2 18°) × (cos2 18° / 1)\n⇒ Expression = cos2 18° / sin2 18°\n⇒ Expression = cot2 18°\n⇒ Substitute the given value cot 18° = p/q directly:\n⇒ (p / q)² = p2 / q2\n∴ The correct answer is p2/q2.\n\nAdditional Information\nTrigonometric Quadrant Rule (ASTC)\n\nIn the first quadrant (0° to 90°), all trigonometric ratios are positive. Angles in the form (360° × n + θ) lie in the first quadrant, retaining exactly the original ratio and identical sign configuration.\n\nPythagorean Identities\n\nThe three fundamental identities mapping trigonometric pairs are: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, and 1 + cot²θ = cosec²θ.\n\nReciprocal Relations\n\nKey inverse and quotient relations include: cosec θ = 1 ÷ sin θ, sec θ = 1 ÷ cos θ, and cot θ = 1 ÷ tan θ = cos θ ÷ sin θ.",
+    "solution": "Solution\n\nShortcut Trick\nReduce angle to first quadrant: $378^\\circ = 360^\\circ + 18^\\circ$.\n$\\Rightarrow \\operatorname{cosec} 378^\\circ = \\operatorname{cosec} 18^\\circ$ and $\\tan 378^\\circ = \\tan 18^\\circ$.\nUsing $1 + \\tan^2 \\theta = \\sec^2 \\theta$:\n$\\frac{\\operatorname{cosec}^2 18^\\circ}{1 + \\tan^2 18^\\circ} = \\frac{\\operatorname{cosec}^2 18^\\circ}{\\sec^2 18^\\circ} = \\frac{\\frac{1}{\\sin^2 18^\\circ}}{\\frac{1}{\\cos^2 18^\\circ}} = \\frac{\\cos^2 18^\\circ}{\\sin^2 18^\\circ} = \\cot^2 18^\\circ$.\nSince $\\cot 18^\\circ = \\frac{p}{q}$:\n$\\Rightarrow \\cot^2 18^\\circ = \\left(\\frac{p}{q}\\right)^2 = \\frac{p^2}{q^2}$.\n∴ The correct answer is $\\frac{p^2}{q^2}$.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Transformations",
     "conceptTested": "Reduction formula for angles exceeding 360 degrees and Pythagorean trigonometric identities.",
@@ -941,7 +941,7 @@
       "subtopic": "Trigonometric Identities & Transformations",
       "conceptTested": "Reduction formula for angles exceeding 360 degrees and Pythagorean trigonometric identities."
     },
-    "question": "If cot 18° = p/q, then the value of cosec^2(378°) / (1 + tan^2(378°)) is",
+    "question": "If $\\cot 18^\\circ = \\frac{p}{q}$, then find the value of $\\frac{\\operatorname{cosec}^2 378^\\circ}{1 + \\tan^2 378^\\circ}$:",
     "answer": "d"
   },
   {

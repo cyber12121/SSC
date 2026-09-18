@@ -139,25 +139,19 @@ export function cleanSolutionText(sol: string = ''): string {
  */
 export function extractSolutionLanguage(
   sol: string = '',
-  language: 'English' | 'Hindi' | 'Bilingual' | string = 'English'
+  language: 'English' | string = 'English'
 ): string {
   if (!sol) return '';
   const cleaned = cleanSolutionText(sol);
-  if (language === 'Bilingual') return cleaned;
 
-  const hindiSplitRegex = /📖\s*हिंदी\s*स्पष्टीकरण\s*:/i;
-  const hasHindiSplit = hindiSplitRegex.test(cleaned);
+  // Always remove any Hindi explanation blocks and trailing Devanagari sections
+  const hindiSplitRegex = /📖\s*हिंदी\s*स्पष्टीकरण\s*:[\s\S]*/i;
+  let englishOnly = cleaned.replace(hindiSplitRegex, '').trim();
 
-  if (hasHindiSplit) {
-    const parts = cleaned.split(hindiSplitRegex);
-    if (language === 'Hindi') {
-      return (parts[1] || parts[0]).trim();
-    }
-    // English
-    return parts[0].replace(/📖\s*English\s*Explanation\s*:/gi, '').trim();
-  }
+  // Strip standalone "📖 English Explanation:" prefix for clean presentation
+  englishOnly = englishOnly.replace(/^📖\s*English\s*Explanation\s*:\s*/i, '').trim();
 
-  return cleaned;
+  return englishOnly;
 }
 
 /**

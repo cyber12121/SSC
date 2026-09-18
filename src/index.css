@@ -6,9 +6,73 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+@custom-variant sage (&:where([data-theme="sage"], [data-theme="sage"] *, .sage, .sage *));
+
 .font-display {
   font-family: 'Space Grotesk', system-ui, sans-serif;
 }
+
+/* ==========================================================================
+   THEME VARIABLES & OVERRIDES
+   Supports Light (default) and Sage (#bfbb89, #bedab6, #e2eee4)
+   ========================================================================== */
+
+:root {
+  --theme-bg-main: #f1f5f9;
+  --theme-bg-card: #ffffff;
+  --theme-border: #e2e8f0;
+  --theme-text: #0f172a;
+  --theme-accent: #2563eb;
+  color-scheme: light;
+}
+
+/* 🌿 SAGE THEME: Custom organic palette (#bfbb89, #bedab6, #e2eee4) */
+[data-theme="sage"], .sage {
+  /* Requested colors mapped into Tailwind tokens:
+     #e2eee4 (226,238,228) -> Background canvas
+     #bedab6 (190,218,182) -> Structural borders, dividers, subtle chips
+     #bfbb89 (191,187,137) -> Warm accent / badges / highlights
+     Deep forest neutrals -> Crisp contrast typography */
+  --color-white: #f7faf7;
+  --color-slate-50: #edf4ee;
+  --color-slate-100: #e2eee4;
+  --color-slate-200: #bedab6;
+  --color-slate-300: #a7c99f;
+  --color-slate-400: #8ba983;
+  --color-slate-500: #58705f;
+  --color-slate-600: #415647;
+  --color-slate-700: #2d4133;
+  --color-slate-800: #1c2d22;
+  --color-slate-900: #0f1e14;
+  --color-slate-950: #07110a;
+
+  /* Forest CTAs and warm olive accents */
+  --color-blue-600: #336143;
+  --color-blue-700: #244931;
+  --color-blue-500: #427854;
+  --color-blue-100: #bedab6;
+  --color-blue-50: #eaf3ec;
+
+  --theme-bg-main: #e2eee4;
+  --theme-bg-card: #f7faf7;
+  --theme-border: #bedab6;
+  --theme-text: #0f1e14;
+  --theme-accent: #bfbb89;
+  color-scheme: light;
+}
+
+/* Explicit custom color helpers for the user's requested palette */
+.bg-sage-warm { background-color: #bfbb89; }
+.text-sage-warm { color: #bfbb89; }
+.border-sage-warm { border-color: #bfbb89; }
+
+.bg-sage-soft { background-color: #bedab6; }
+.text-sage-soft { color: #bedab6; }
+.border-sage-soft { border-color: #bedab6; }
+
+.bg-sage-light { background-color: #e2eee4; }
+.text-sage-light { color: #e2eee4; }
+.border-sage-light { border-color: #e2eee4; }
 
 /* Hide number spin buttons for sleek numeric inputs */
 input::-webkit-outer-spin-button,
@@ -20,24 +84,32 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-/* Visible, modern custom scrollbar */
+/* ==========================================================================
+   SMOOTH SCROLLBAR & THEME TUNING
+   ========================================================================== */
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: var(--color-slate-100);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--color-slate-300);
   border-radius: 4px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--color-slate-400);
 }
 
 /* Firefox scrollbar support */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 #f1f5f9;
+  scrollbar-color: var(--color-slate-300) var(--color-slate-100);
+}
+
+/* Theme smooth transitions on background and text */
+body, nav, main, div[data-theme-transition] {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }

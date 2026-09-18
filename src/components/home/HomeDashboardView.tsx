@@ -15,7 +15,8 @@ import {
   Compass,
   Globe2,
   Target,
-  LayoutDashboard
+  LayoutDashboard,
+  RotateCw
 } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult } from '../../types';
 import { GK_SUBJECT_LIST } from '../../utils/gkSubjectHelper';
@@ -224,6 +225,18 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
                       onClick={(e) => {
                         e.stopPropagation();
                         setSelectedSubject('English');
+                        setSelectedEnglishSection('black_book');
+                        setSelectedTopic(null);
+                      }}
+                      className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 transition-colors cursor-pointer"
+                      title="Open Black Book One Word Substitution"
+                    >
+                      Black Book ({(bankData['English'] || []).filter(ch => ch.section === 'black_book').reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedSubject('English');
                         setSelectedEnglishSection('ayush_vocab');
                         setSelectedTopic(null);
                       }}
@@ -253,7 +266,32 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
       )}
 
       {/* ─── High-Yield Practice Hub & Feature Cards ─── */}
-      <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2.5">
+      <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+        {/* SRS Spaced Repetition */}
+        <div 
+          onClick={() => setView('srs' as any)}
+          className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-indigo-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
+        >
+          <div className="flex items-start justify-between">
+            <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center border border-indigo-100 group-hover:scale-105 transition-transform">
+              <RotateCw className="w-3.5 h-3.5 text-indigo-600" />
+            </div>
+            <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 border border-indigo-200">
+              SM-2 Anki
+            </span>
+          </div>
+          <div className="mt-2">
+            <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">SRS Memory & Anki</h4>
+            <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+              Spaced repetition flashcards for Vocab, Static GK, Math formulas, and test errors.
+            </p>
+          </div>
+          <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-indigo-600">
+            <span>Daily Review</span>
+            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+          </div>
+        </div>
+
         {/* Speed Drill */}
         <div 
           onClick={() => setView('drill')}
@@ -300,6 +338,31 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
           </div>
           <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-blue-600">
             <span>Review Vault</span>
+            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+          </div>
+        </div>
+
+        {/* Analytics / Dashboard */}
+        <div 
+          onClick={() => setView('dashboard')}
+          className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-violet-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
+        >
+          <div className="flex items-start justify-between">
+            <div className="w-7 h-7 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center border border-violet-100 group-hover:scale-105 transition-transform">
+              <LayoutDashboard className="w-3.5 h-3.5 text-violet-600" />
+            </div>
+            <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-violet-50 text-violet-700 border border-violet-200">
+              Analytics
+            </span>
+          </div>
+          <div className="mt-2">
+            <h4 className="text-xs font-bold text-slate-900 group-hover:text-violet-700 transition-colors">Progress Dashboard</h4>
+            <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+              Track chapter accuracy, weak areas, and score trends across attempts.
+            </p>
+          </div>
+          <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-violet-600">
+            <span>View Stats</span>
             <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </div>
         </div>

@@ -56,7 +56,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
   const [editingNoteQId, setEditingNoteQId] = useState<string | null>(null);
   const [sillyNoteInput, setSillyNoteInput] = useState<string>('');
   const [localRcaOverrides, setLocalRcaOverrides] = useState<Record<string, RCAClassification | null>>({});
-  const [language, setLanguage] = useState<'English' | 'Hindi' | 'Bilingual'>('English');
+  const [language] = useState<'English'>('English');
 
   if (!data) return null;
 
@@ -264,21 +264,9 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
               </div>
 
               <div className="flex items-center gap-2 shrink-0">
-                <div className="flex items-center gap-1 bg-white/15 p-1 rounded-xl border border-white/20">
-                  {(['English', 'Hindi', 'Bilingual'] as const).map(l => (
-                    <button
-                      key={l}
-                      onClick={() => setLanguage(l)}
-                      className={`px-2 py-0.5 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
-                        language === l
-                          ? 'bg-white text-indigo-900 shadow-xs'
-                          : 'text-white/80 hover:text-white'
-                      }`}
-                    >
-                      {l}
-                    </button>
-                  ))}
-                </div>
+                <span className="px-2.5 py-1 rounded-xl bg-white/20 text-white font-bold text-[10px] border border-white/20 shadow-2xs">
+                  English
+                </span>
 
                 <button
                   onClick={onClose}
@@ -335,10 +323,10 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                     onClose();
                     onStartPractice(data.topic, modalFilteredQuestions, subType, currentSetNum);
                   }}
-                  className="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  className="h-8 px-3.5 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer active:scale-95"
                 >
-                  <Play className="w-3.5 h-3.5 fill-current" />
-                  Start Set {currentSetNum} ({modalDisplayedQuestions.length} Qs)
+                  <Play className="w-3 h-3 fill-current" />
+                  <span>Start Set {currentSetNum} ({modalDisplayedQuestions.length})</span>
                 </button>
               ) : null}
 
@@ -349,14 +337,14 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                   onClose();
                   onStartPractice(data.topic, modalFilteredQuestions, subType);
                 }}
-                className={`px-4 py-2 rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer ${
+                className={`h-8 px-3.5 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer active:scale-95 ${
                   totalSetsInModal > 1 && modalActiveSet !== 'all'
                     ? 'bg-white/20 hover:bg-white/30 text-white'
-                    : 'bg-white text-indigo-900 hover:bg-indigo-50'
+                    : 'bg-white text-indigo-900 hover:bg-indigo-50 shadow-sm'
                 }`}
               >
-                <Flame className="w-3.5 h-3.5" />
-                Practice All ({modalFilteredQuestions.length})
+                <Flame className="w-3 h-3" />
+                <span>Practice All ({modalFilteredQuestions.length})</span>
               </button>
 
               {/* 1-Click Drill Silly Mistakes [S] */}
@@ -370,10 +358,10 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                     onClose();
                     onStartPractice(data.topic, sQuestions, 'S');
                   }}
-                  className="px-3 py-2 bg-rose-500 hover:bg-rose-400 text-white rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  className="h-8 px-3 bg-rose-500 hover:bg-rose-400 text-white rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer active:scale-95"
                   title={`Drill all ${rcaCounts.S} silly mistake questions`}
                 >
-                  <span className="font-mono">[S]</span>
+                  <span className="font-mono text-[10px] font-bold">[S]</span>
                   <span>Drill Silly ({rcaCounts.S})</span>
                 </button>
               )}
@@ -386,10 +374,10 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                     onClose();
                     onStartPractice(data.topic, cQuestions, 'C');
                   }}
-                  className="px-3 py-2 bg-purple-500 hover:bg-purple-400 text-white rounded-xl text-xs font-black transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  className="h-8 px-3 bg-purple-500 hover:bg-purple-400 text-white rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer active:scale-95"
                   title={`Drill all ${rcaCounts.C} conceptual gap questions`}
                 >
-                  <span className="font-mono">[C]</span>
+                  <span className="font-mono text-[10px] font-bold">[C]</span>
                   <span>Drill Concept ({rcaCounts.C})</span>
                 </button>
               )}
@@ -408,11 +396,11 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                     }
                   );
                 }}
-                className="px-3.5 py-2 bg-white/20 hover:bg-white/30 border border-white/30 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm ml-auto"
+                className="h-8 px-3 bg-white/20 hover:bg-white/30 border border-white/30 text-white rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs ml-auto active:scale-95"
                 title={`Ask Tommy AI to analyze ${data.topic}`}
               >
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                Ask AI
+                <Sparkles className="w-3 h-3 text-amber-300" />
+                <span>Ask AI</span>
               </button>
             </div>
           </div>
@@ -633,10 +621,11 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                                 }
                               }));
                             }}
-                            className="text-[11px] font-bold text-purple-600 hover:text-purple-800 flex items-center gap-1 cursor-pointer bg-purple-50 hover:bg-purple-100 px-2 py-0.5 rounded-lg transition-colors border border-purple-200/60"
+                            className="h-6 px-2 text-[10px] font-semibold text-purple-700 hover:text-purple-900 bg-purple-50 hover:bg-purple-100 rounded-md border border-purple-200/70 transition shadow-2xs flex items-center gap-1 cursor-pointer active:scale-95"
                             title="Ask Tommy to explain this question and eliminate traps"
                           >
-                            <Sparkles className="w-2.5 h-2.5 text-purple-600" /> Ask Tommy
+                            <Sparkles className="w-2.5 h-2.5 text-purple-600" />
+                            <span>Ask Tommy</span>
                           </button>
                           <button
                             type="button"
@@ -644,9 +633,10 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                               onClose();
                               onStartPractice(`${data.topic} (Q${displayNum})`, [q]);
                             }}
-                            className="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 cursor-pointer bg-indigo-50 hover:bg-indigo-100 px-2 py-0.5 rounded-lg transition-colors"
+                            className="h-6 px-2 text-[10px] font-bold text-indigo-700 hover:text-indigo-900 bg-indigo-50 hover:bg-indigo-100 rounded-md border border-indigo-200/70 transition shadow-2xs flex items-center gap-1 cursor-pointer active:scale-95"
                           >
-                            <Play className="w-2.5 h-2.5 fill-current" /> Drill This Q
+                            <Play className="w-2.5 h-2.5 fill-current" />
+                            <span>Drill Q</span>
                           </button>
                         </div>
                       </div>

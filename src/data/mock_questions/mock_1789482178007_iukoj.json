@@ -1096,18 +1096,18 @@
     "correctOption": "C",
     "userTime": "00:52",
     "avgTime": "00:40",
-    "questionText": "If cosθ/(cosecθ + 1) + cosθ/(cosecθ - 1) = 2 where 0 < θ < 90°, then what is the value of sin^4 θ + cos^4 θ?",
+    "questionText": "If $\\frac{\\cos \\theta}{\\operatorname{cosec} \\theta + 1} + \\frac{\\cos \\theta}{\\operatorname{cosec} \\theta - 1} = 2$, where $0^\\circ < \\theta < 90^\\circ$, then what is the value of $\\sin^4 \\theta + \\cos^4 \\theta$?",
     "options": {
       "a": "2",
       "b": "1",
-      "c": "12",
-      "d": "14",
+      "c": "$\\frac{1}{2}$",
+      "d": "$\\frac{1}{4}$",
       "A": "2",
       "B": "1",
-      "C": "12",
-      "D": "14"
+      "C": "$\\frac{1}{2}$",
+      "D": "$\\frac{1}{4}$"
     },
-    "solution": "Solution\n\nGiven:\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ-1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n-\n1 = 2\n\nFormula Used:\nCosec²θ - 1 = cot²θ\n\nCalculation:\nWe have\ncosθ\ncosecθ+1\n+\ncosθ\ncosecθ-1\n=2\ncos\nθ\ncosec\nθ\n+\n1\n+\ncos\nθ\ncosec\nθ\n-\n1 = 2\n⇒\ncosθ (cosecθ - 1) + cosθ (cosecθ + 1)\ncose\nc\n2\nθ-1\n=2\ncos θ\n\n(\ncos e\nc\nθ\n\n-\n\n1\n)\n\n+\n\ncos θ\n\n(\ncos e\nc\nθ\n\n+\n\n1\n)\ncos e\nc\n2\nθ\n-\n1 = 2\n⇒\ncosθ cosecθ - cosθ + cosθ cosecθ + cosθ\ncot² θ\n=2\ncos θ\n\ncos e\nc\nθ\n\n-\n\ncos θ\n\n+\n\ncos θ\n\ncos e\nc\nθ\n\n+\n\ncos θ\nc\no\nt\n2\nθ = 2\n⇒\n2cosθ cosecθ\ncot² θ\n=2\n2\ncos θ\n\ncos e\nc\nθ\nc\no\nt\n2\nθ = 2\n⇒ cosθ × (1/sinθ) = cot²θ\n⇒ cotθ = cot²θ\n⇒ cotθ = 1\n⇒ θ = 45°\nNow, We have to find the value of sin4 θ + cos4 θ\nPutting θ = 45°, we get\n⇒ sin4 45° + cos4 45°\n⇒ (1/4) + (1/4) = 1/2\n∴ The value of sin4 θ + cos4 θ is 1/2.",
+    "solution": "Solution\n\nGiven:\n$\\frac{\\cos \\theta}{\\operatorname{cosec} \\theta + 1} + \\frac{\\cos \\theta}{\\operatorname{cosec} \\theta - 1} = 2$\n\nFormula Used:\n$\\operatorname{cosec}^2 \\theta - 1 = \\cot^2 \\theta$\n\nCalculation:\nTaking LCM:\n$\\Rightarrow \\frac{\\cos \\theta (\\operatorname{cosec} \\theta - 1) + \\cos \\theta (\\operatorname{cosec} \\theta + 1)}{\\operatorname{cosec}^2 \\theta - 1} = 2$\n$\\Rightarrow \\frac{2 \\cos \\theta \\operatorname{cosec} \\theta}{\\cot^2 \\theta} = 2$\n$\\Rightarrow \\cos \\theta \\cdot \\frac{1}{\\sin \\theta} = \\cot^2 \\theta$\n$\\Rightarrow \\cot \\theta = \\cot^2 \\theta$\n$\\Rightarrow \\cot \\theta = 1 \\Rightarrow \\theta = 45^\\circ$\n\nNow, find the value of $\\sin^4 \\theta + \\cos^4 \\theta$:\n$\\Rightarrow \\sin^4 45^\\circ + \\cos^4 45^\\circ = \\left(\\frac{1}{\\sqrt{2}}\\right)^4 + \\left(\\frac{1}{\\sqrt{2}}\\right)^4 = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$.\n∴ The correct answer is $\\frac{1}{2}$.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Equations",
     "conceptTested": "Simplifying algebraic fractions of trigonometric ratios using cosec²θ - 1 = cot²θ to solve for angle θ.",
@@ -1116,7 +1116,7 @@
       "subtopic": "Trigonometric Identities & Equations",
       "conceptTested": "Simplifying algebraic fractions of trigonometric ratios using cosec²θ - 1 = cot²θ to solve for angle θ."
     },
-    "question": "If cosθ/(cosecθ + 1) + cosθ/(cosecθ - 1) = 2 where 0 < θ < 90°, then what is the value of sin^4 θ + cos^4 θ?",
+    "question": "If $\\frac{\\cos \\theta}{\\operatorname{cosec} \\theta + 1} + \\frac{\\cos \\theta}{\\operatorname{cosec} \\theta - 1} = 2$, where $0^\\circ < \\theta < 90^\\circ$, then what is the value of $\\sin^4 \\theta + \\cos^4 \\theta$?",
     "answer": "c"
   },
   {
@@ -1726,16 +1726,16 @@
     "correctOption": "A",
     "userTime": "00:00",
     "avgTime": "00:09",
-    "questionText": "For what relation between a and b is the equation sin θ = (a + b) / (2√ab) possible?",
+    "questionText": "For what relation between $a$ and $b$ is the equation $\\sin \\theta = \\frac{a + b}{2\\sqrt{ab}}$ possible?",
     "options": {
-      "a": "a = b",
-      "b": "a ≤ b",
-      "c": "a ≥ b",
-      "d": "a > b",
-      "A": "a = b",
-      "B": "a ≤ b",
-      "C": "a ≥ b",
-      "D": "a > b"
+      "a": "$a = b$",
+      "b": "$a \\le b$",
+      "c": "$a \\ge b$",
+      "d": "$a > b$",
+      "A": "$a = b$",
+      "B": "$a \\le b$",
+      "C": "$a \\ge b$",
+      "D": "$a > b$"
     },
     "solution": "Solution\n\nGiven:\nSinθ = (a + b)/2√ab\n\nConcept:\n\n-1 ≤ sinθ ≤ +1\n\nCalculation:\n-1 ≤ (a + b)/2√ab ≤ +1\n\nWe solve one of them\n\n(a + b)/2√ab ≤ +1\n\n⇒ a + b ≤ 2√ab\n⇒ a + b - 2√ab ≤ 0\n⇒ (√a - √b)2  ≤ 0\n⇒ √a = √b = a = b\n∴ The correct answer is a = b\n\nShortcut Trick\nWe can solve this question by option to satisfy equation\n\nput a = b\nthen Sinθ = (a + a)/ 2√(a × a)\nSinθ = 2a/2a = 1 (sinθ ≤ 1)",
     "topic": "Trigonometry",
@@ -1746,7 +1746,7 @@
       "subtopic": "Trigonometric Ratios and Range",
       "conceptTested": "The range of sine function is -1 ≤ sin θ ≤ 1, and algebraic inequalities involving arithmetic-geometric mean or squares like (√a - √b)² ≤ 0."
     },
-    "question": "For what relation between a and b is the equation sin θ = (a + b) / (2√ab) possible?",
+    "question": "For what relation between $a$ and $b$ is the equation $\\sin \\theta = \\frac{a + b}{2\\sqrt{ab}}$ possible?",
     "answer": "a"
   },
   {

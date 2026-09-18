@@ -977,18 +977,30 @@ HOW TO ANSWER:
 - When explaining mathematical or reasoning questions, clearly demonstrate the conceptual approach followed by shortcut tricks or elimination methods.
 - For English questions, explain the underlying grammatical rule or contextual vocabulary clue.
 - For casual greetings ("hi", "hello"), respond warmly, briefly, and ask what they would like to master today. Do not overwhelm them with stats unless asked!
-- Language Flexibility: You are fluent in English, Hindi, and Hinglish. If the candidate asks in Hindi or Hinglish, respond naturally in warm, motivating Hinglish with English terminology for SSC concepts.
+- STRICT ENGLISH LANGUAGE REQUIREMENT: You must communicate and answer strictly and exclusively in clear, professional, and motivating English at all times. Do NOT use Hindi words, Devanagari script, or Hinglish. Every explanation, breakdown, and greeting must be in standard English.
 - Targeted Drill Recommendation: Conclude study advice with [DRILL: Topic Name] on its own line (e.g. [DRILL: Active & Passive Voice]).
-- CRITICAL MATHEMATICAL & TEXT FORMATTING RULES:
-  * NEVER use LaTeX code or syntax! NEVER write \\frac, \\left, \\right, \\quad, \\text{}, \\times, or $ dollar signs!
-  * Write all math, formulas, fractions, and equations in clean, readable plain unicode text:
-    - Fractions: Write as a/b or (A / B) (e.g. 1/9, or (Error / (True Value - Error)) × 100).
-    - Mixed numbers: Write as 16 2/3% or 11 1/9%.
-    - Powers: Use superscripts like x² or (x/10)².
-    - Multipliers/Arrows: Use clean symbols like ×, ÷, ±, → (e.g. CP → MP → SP).
-    - Percentages: Write as %, never \\%.
-    - Parentheses: Use standard ( ), never \\left( or \\right).
-- Format responses beautifully using Markdown: bold key terms, use bullet points, tables when presenting comparisons or schedules, and clean math notation.`;
+- MATHEMATICAL & TEXT FORMATTING RULES:
+  * For mathematical formulas, equations, and algebra, use standard LaTeX enclosed in single dollar signs for inline math (e.g. $x^2 + y^2 = r^2$, $\\frac{a}{b}$, $\\sqrt{x}$, $\\sin\\theta$, $\\Delta ABC$) or double dollar signs for display equations ($$\\text{Area} = \\frac{1}{2} \\times b \\times h$$).
+  * For arithmetic expressions or plain numbers, clean unicode symbols (×, ÷, ±, →, °) are also great.
+- VISUAL CALLOUT CARDS:
+  Use blockquotes with clear emojis and bold labels for high-yield exam insights:
+  * ⚡ **30-Second Shortcut:** > ⚡ **30-Second Shortcut:** [Fast option elimination, mental calculation, or 30s trick]
+  * ⚠️ **Trap Alert:** > ⚠️ **Trap Alert:** [The common trap option, silly mistake pattern, or common misreading]
+  * 💡 **Core Rule / Concept:** > 💡 **Core Concept:** [The fundamental grammar rule, geometry theorem, or formula]
+  * 📐 **Key Formula:** > 📐 **Key Formula:** [The exact formula or equation to memorize]
+- STEP-BY-STEP BREAKDOWN:
+  When solving or explaining, use numbered step headers:
+  **Step 1:** [Identify given values / grammatical tense]
+  **Step 2:** [Apply formula / rule]
+  **Step 3:** [Calculation or elimination]
+- HIGH-DENSITY & CONCISE:
+  Keep answers analytical, crisp, and high-yield. Do not include excessive conversational filler so the candidate gets instant clarity.
+- PHOTO & DOCUMENT ATTACHMENTS (Images & PDFs):
+  When the candidate uploads an image (photo of a question, math problem, geometry diagram, handwriting/scratchpad, or screenshot) or a PDF document:
+  * Thoroughly inspect and extract the exact question, equation, or text from the image/PDF.
+  * State the extracted question clearly if needed, and solve it step-by-step.
+  * Highlight the fastest shortcut trick, relevant formula, and options elimination technique.
+- Format responses beautifully using Markdown: bold key terms, use bullet points, and tables when presenting comparisons or schedules.`;
 
 export default async function handler(req: any, res: any) {
   // CORS headers for local and cloud access
@@ -1020,17 +1032,37 @@ export default async function handler(req: any, res: any) {
 
   try {
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
-    const { messages, mockSummary, activeMockContext, activeReviewQuestions, activeQuestion, focusedScope, activeMockId, activeMockTitle } = body;
+    const { messages, attachment, mockSummary, activeMockContext, activeReviewQuestions, activeQuestion, focusedScope, activeMockId, activeMockTitle } = body;
 
     if (!Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: 'Invalid request: "messages" array is required.' });
     }
 
-    // Format conversational contents for Gemini
-    const contents = messages.map((m: any) => ({
-      role: m.role === 'assistant' || m.role === 'model' ? 'model' : 'user',
-      parts: [{ text: String(m.text || m.content || '') }]
-    }));
+    // Format conversational contents for Gemini with multimodal attachment support
+    const contents = messages.map((m: any, idx: number) => {
+      const parts: any[] = [];
+      const isLatestUser = (idx === messages.length - 1) && (m.role === 'user' || !m.role);
+      const msgAttachment = m.attachment || (isLatestUser ? attachment : null);
+
+      if (msgAttachment && msgAttachment.data && msgAttachment.mimeType) {
+        const rawBase64 = msgAttachment.data.includes(',')
+          ? msgAttachment.data.split(',')[1]
+          : msgAttachment.data;
+        parts.push({
+          inlineData: {
+            mimeType: msgAttachment.mimeType,
+            data: rawBase64
+          }
+        });
+      }
+
+      parts.push({ text: String(m.text || m.content || '') });
+
+      return {
+        role: m.role === 'assistant' || m.role === 'model' ? 'model' : 'user',
+        parts
+      };
+    });
 
     const latestUserMsg = messages[messages.length - 1]?.text || '';
     const { intent, matchedTopic, targetQNum, targetMock } = detectUserIntent(
@@ -1142,11 +1174,104 @@ ${scopeContext ? `\n${scopeContext}\n` : ''}
 ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 `;
 
-    let reply = '';
+    const isStream = Boolean(req.body?.stream);
     let configuredModel = (process.env.GEMINI_MODEL || process.env.VITE_GEMINI_MODEL || '').trim().replace(/^["']|["']$/g, '');
     const modelName = configuredModel || 'gemini-3.5-flash-lite';
 
-    // 1. First attempt: Direct Google Generative Language REST API (zero Node module dependencies)
+    // ── 1. Streaming Mode (Server-Sent Events) ──
+    if (isStream) {
+      res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-cache, no-transform');
+      res.setHeader('Connection', 'keep-alive');
+      res.setHeader('X-Accel-Buffering', 'no');
+      if (typeof res.flushHeaders === 'function') {
+        res.flushHeaders();
+      }
+
+      // Try @google/genai SDK streaming first
+      try {
+        const { GoogleGenAI } = await import('@google/genai');
+        const ai = new GoogleGenAI({ apiKey });
+        const streamResult = await ai.models.generateContentStream({
+          model: modelName,
+          contents,
+          config: {
+            systemInstruction: fullSystemInstruction,
+            temperature: 0.4,
+            maxOutputTokens: 950
+          }
+        });
+
+        for await (const chunk of streamResult) {
+          const text = chunk.text || '';
+          if (text) {
+            res.write(`data: ${JSON.stringify({ text })}\n\n`);
+          }
+        }
+        res.write('data: [DONE]\n\n');
+        return res.end();
+      } catch (sdkStreamErr: any) {
+        // Fallback to REST API streaming
+        try {
+          const streamUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelName)}:streamGenerateContent?alt=sse&key=${encodeURIComponent(apiKey)}`;
+          const restRes = await fetch(streamUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents,
+              systemInstruction: { parts: [{ text: fullSystemInstruction }] },
+              generationConfig: {
+                temperature: 0.4,
+                maxOutputTokens: 950
+              }
+            })
+          });
+
+          if (!restRes.ok) {
+            const errJson = await restRes.json().catch(() => ({}));
+            throw new Error(errJson?.error?.message || `Google API status ${restRes.status}`);
+          }
+
+          if (restRes.body) {
+            const reader = (restRes.body as any).getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              buffer += decoder.decode(value, { stream: true });
+              const sseLines = buffer.split('\n');
+              buffer = sseLines.pop() || '';
+              for (const sseLine of sseLines) {
+                if (sseLine.startsWith('data: ')) {
+                  const dataStr = sseLine.slice(6).trim();
+                  if (!dataStr || dataStr === '[DONE]') continue;
+                  try {
+                    const parsed = JSON.parse(dataStr);
+                    const text = parsed?.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (text) {
+                      res.write(`data: ${JSON.stringify({ text })}\n\n`);
+                    }
+                  } catch {}
+                }
+              }
+            }
+          }
+          res.write('data: [DONE]\n\n');
+          return res.end();
+        } catch (restStreamErr: any) {
+          console.error('[Gemini Stream Error]:', sdkStreamErr?.message || restStreamErr?.message);
+          res.write(`data: ${JSON.stringify({ error: sdkStreamErr?.message || restStreamErr?.message || 'Failed to stream response.' })}\n\n`);
+          res.write('data: [DONE]\n\n');
+          return res.end();
+        }
+      }
+    }
+
+    // ── 2. Standard Non-Streaming Fallback ──
+    let reply = '';
+
+    // First attempt: Direct REST API
     try {
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelName)}:generateContent?key=${encodeURIComponent(apiKey)}`;
       const geminiRes = await fetch(url, {
@@ -1158,7 +1283,8 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
             parts: [{ text: fullSystemInstruction }]
           },
           generationConfig: {
-            temperature: 0.7
+            temperature: 0.4,
+            maxOutputTokens: 950
           }
         })
       });
@@ -1171,7 +1297,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
       const geminiData = await geminiRes.json();
       reply = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
     } catch (restErr: any) {
-      // 2. Secondary fallback: Dynamic @google/genai SDK import
+      // Secondary fallback: @google/genai SDK
       try {
         const { GoogleGenAI } = await import('@google/genai');
         const ai = new GoogleGenAI({ apiKey });
@@ -1180,7 +1306,8 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
           contents,
           config: {
             systemInstruction: fullSystemInstruction,
-            temperature: 0.7
+            temperature: 0.4,
+            maxOutputTokens: 950
           }
         });
         reply = response.text || '';

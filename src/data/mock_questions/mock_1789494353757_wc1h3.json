@@ -1096,7 +1096,7 @@
     "correctOption": "B",
     "userTime": "00:36",
     "avgTime": "00:12",
-    "questionText": "Evaluate:\n\n√(20 + √(20 + √(20 + ...)))",
+    "questionText": "Evaluate: $\\sqrt{20 + \\sqrt{20 + \\sqrt{20 + \\dots}}}$",
     "options": {
       "a": "4",
       "b": "5",
@@ -1107,7 +1107,7 @@
       "C": "6",
       "D": "8"
     },
-    "solution": "Let\n√(20 + √(20 + √(20 + ...))) = x\n\nThen,\n\nx = √(20 + x)\n\nSquaring both sides,\n\nx2 = 20 + x\nx2 - x - 20 = 0\n(x - 5)(x + 4) = 0\nSince x is positive,\nx = 5.\n\nExpress Method\n\nFactors of 20 = 5 and 4.\n\nSince there is a + sign in the question, the answer will be the larger factor, that is, 5.",
+    "solution": "Solution\n\nLet $x = \\sqrt{20 + \\sqrt{20 + \\sqrt{20 + \\dots}}}$\n\nThen,\n$x = \\sqrt{20 + x}$\n\nSquaring both sides:\n$x^2 = 20 + x$\n$x^2 - x - 20 = 0$\n$(x - 5)(x + 4) = 0$\n\nSince $x > 0$:\n$x = 5$.\n\nShortcut Trick:\nFactors of 20 with difference 1 are $5 \\times 4$.\nSince there is a '+' sign throughout the expression, the answer is the larger factor, which is 5.\n∴ The correct answer is 5.",
     "topic": "Simplification",
     "subtopic": "Surds & Indices - Infinite Nested Radicals",
     "conceptTested": "Quadratic reduction of infinite radical expressions where factors differ by 1",
@@ -1116,7 +1116,7 @@
       "subtopic": "Surds & Indices - Infinite Nested Radicals",
       "conceptTested": "Quadratic reduction of infinite radical expressions where factors differ by 1"
     },
-    "question": "Evaluate:\n\n√(20 + √(20 + √(20 + ...)))",
+    "question": "Evaluate: $\\sqrt{20 + \\sqrt{20 + \\sqrt{20 + \\dots}}}$",
     "answer": "b"
   },
   {

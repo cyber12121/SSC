@@ -1238,16 +1238,16 @@
     "avgTime": "00:39",
     "questionText": "A boy 2.1 m tall can just see the sun over a 42.8 m tall building, which is 40.7√3 m away from him. The angle of elevation of the sun is:",
     "options": {
-      "a": "30 ̊",
-      "b": "90 ̊",
-      "c": "45 ̊",
-      "d": "60 ̊",
-      "A": "30 ̊",
-      "B": "90 ̊",
-      "C": "45 ̊",
-      "D": "60 ̊"
+      "a": "30°",
+      "b": "90°",
+      "c": "45°",
+      "d": "60°",
+      "A": "30°",
+      "B": "90°",
+      "C": "45°",
+      "D": "60°"
     },
-    "solution": "BD = CE = Height of boy = 2.1 m\nAE = Height of building = 42.8 m\nDE = BC = Distance between boy and building = 40.7√3 m\nAC = 42.8 m - 2.1 m = 40.7 m\nTan θ = 40.7/40.7√3\nTan θ = 1/√3\nθ = 30 ̊",
+    "solution": "Solution\n\nGiven:\nHeight of boy = 2.1 m\nHeight of building = 42.8 m\nDistance between boy and building = 40.7√3 m\n\nCalculation:\nEffective height above boy's eye level = 42.8 - 2.1 = 40.7 m.\n$\\tan \\theta = \\frac{\\text{Perpendicular}}{\\text{Base}} = \\frac{40.7}{40.7\\sqrt{3}} = \\frac{1}{\\sqrt{3}}$.\n$\\Rightarrow \\theta = 30^\\circ$.\n∴ The angle of elevation of the sun is 30°.",
     "topic": "Height & Distance",
     "subtopic": "Angle of Elevation",
     "conceptTested": "Trigonometric ratios in right-angled triangles using tangent function for angle of elevation.",
@@ -1306,7 +1306,7 @@
     "correctOption": "B",
     "userTime": "00:28",
     "avgTime": "00:29",
-    "questionText": "If the value of 1⁄2(1 / 32.12) is 0.03113, then what is the value of 1 / 0.00003212?",
+    "questionText": "If the value of $\\frac{1}{32.12}$ is $0.03113$, then what is the value of $\\frac{1}{0.00003212}$?",
     "options": {
       "a": "3113",
       "b": "31130",
@@ -1317,7 +1317,7 @@
       "C": "311.3",
       "D": "31.13"
     },
-    "solution": "1/32.12 = 0.03113\n\n100/3212 = 0.03113\n\n1/0.00003212 = 100000000/3212 = 31130",
+    "solution": "Solution\n\nGiven:\n$\\frac{1}{32.12} = 0.03113$\n\nCalculation:\n$\\frac{1}{32.12} = \\frac{100}{3212} = 0.03113$\n$\\Rightarrow \\frac{1}{3212} = \\frac{0.03113}{100} = 0.0003113$\n\nNow find $\\frac{1}{0.00003212}$:\n$\\Rightarrow \\frac{1}{0.00003212} = \\frac{10^8}{3212} = 10^8 \\times \\frac{1}{3212}$\n$\\Rightarrow 10^8 \\times \\frac{0.03113}{100} = 10^6 \\times 0.03113 = 31130$.\n∴ The correct answer is 31130.",
     "topic": "Simplification",
     "subtopic": "Decimal Fractions & Powers of Ten",
     "conceptTested": "Adjustment of decimal places and powers of 10 in division.",
@@ -1326,7 +1326,7 @@
       "subtopic": "Decimal Fractions & Powers of Ten",
       "conceptTested": "Adjustment of decimal places and powers of 10 in division."
     },
-    "question": "If the value of 1⁄2(1 / 32.12) is 0.03113, then what is the value of 1 / 0.00003212?",
+    "question": "If the value of $\\frac{1}{32.12}$ is $0.03113$, then what is the value of $\\frac{1}{0.00003212}$?",
     "answer": "b"
   },
   {

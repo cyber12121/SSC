@@ -1197,34 +1197,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     </button>
                   )}
 
-                  {/* Select Language dropdown */}
-                  <div className="flex items-center gap-1 text-xs text-gray-700">
-                    <span className="font-medium">Language</span>
-                    <div className="relative">
-                      <button
-                        onClick={() => setShowLanguageMenu(!showLanguageMenu)}
-                        className="flex items-center gap-1 border border-gray-300 rounded px-2.5 py-0.5 text-xs text-gray-700 bg-white hover:bg-gray-50 font-medium cursor-pointer"
-                      >
-                        {language}
-                        <ChevronDown className="w-3 h-3 text-gray-500 ml-0.5" />
-                      </button>
-                      {showLanguageMenu && (
-                        <div className="absolute right-0 mt-1 w-24 bg-white border border-gray-200 rounded shadow-lg py-1 z-20 text-xs">
-                          <button
-                            onClick={() => { setLanguage('English'); setShowLanguageMenu(false); }}
-                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium cursor-pointer"
-                          >
-                            English
-                          </button>
-                          <button
-                            onClick={() => { setLanguage('Hindi'); setShowLanguageMenu(false); }}
-                            className="w-full text-left px-3 py-1.5 hover:bg-blue-50 hover:text-blue-700 font-medium cursor-pointer"
-                          >
-                            Hindi
-                          </button>
-                        </div>
-                      )}
-                    </div>
+                  {/* Language Indicator */}
+                  <div className="flex items-center gap-1.5 text-xs text-gray-700">
+                    <span className="font-medium text-gray-500">Language:</span>
+                    <span className="border border-gray-300 rounded px-2.5 py-0.5 text-xs text-gray-800 bg-slate-50 font-semibold">
+                      English
+                    </span>
                   </div>
 
                   {/* Report Button */}

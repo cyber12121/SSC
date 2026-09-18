@@ -326,16 +326,16 @@
     "correctOption": "A",
     "userTime": "00:45",
     "avgTime": "00:47",
-    "questionText": "If 3 tan θ = 2\\sqrt{3} sin θ, 0° < θ < 90°, then the value of \\(\\frac{3}{4}\\left( \\frac{\\text{cosec}^2\\,2\\theta\\,+\\,\\text{cot}^2 2\\theta}{\\text{sin}^2\\,\\theta\\,+\\,\\text{tan}^2 2\\theta} \\right)\\) is:",
+    "questionText": "If $3 \\tan \\theta = 2\\sqrt{3} \\sin \\theta$, where $0^\\circ < \\theta < 90^\\circ$, then find the value of $\\frac{3}{4}\\left(\\frac{\\operatorname{cosec}^2 2\\theta + \\cot^2 2\\theta}{\\sin^2 \\theta + \\tan^2 2\\theta}\\right)$:",
     "options": {
-      "A": "\\(\\frac{5}{13}\\)",
-      "B": "\\(\\frac{3}{13}\\)",
-      "C": "\\(\\frac{7}{13}\\)",
-      "D": "\\(\\frac{1}{13}\\)",
-      "a": "\\(\\frac{5}{13}\\)",
-      "b": "\\(\\frac{3}{13}\\)",
-      "c": "\\(\\frac{7}{13}\\)",
-      "d": "\\(\\frac{1}{13}\\)"
+      "A": "$\\frac{5}{13}$",
+      "B": "$\\frac{3}{13}$",
+      "C": "$\\frac{7}{13}$",
+      "D": "$\\frac{1}{13}$",
+      "a": "$\\frac{5}{13}$",
+      "b": "$\\frac{3}{13}$",
+      "c": "$\\frac{7}{13}$",
+      "d": "$\\frac{1}{13}$"
     },
     "solution": "Solution\n\nShortcut Trick\nGiven: 3 tan θ = 2√3 sin θ\n⇒ 3 × (sin θ / cos θ) = 2√3 sin θ ⇒ cos θ = 3 / 2√3 = √3 / 2 ⇒ θ = 30°\nSubstitute θ = 30° in the expression: (3/4) × [ (cosec² 60° + cot² 60°) ÷ (sin² 30° + tan² 60°) ]\n⇒ (3/4) × [ (4/3 + 1/3) ÷ (1/4 + 3) ]\n⇒ (3/4) × [ (5/3) ÷ (13/4) ] = (3/4) × (5/3) × (4/13) = 5/13\n∴ The correct answer is 5/13.\n\nAlternate Method\nGiven:\n3 tan θ = 2√3 sin θ\n\nFormula Used:\ntan θ = sin θ / cos θ\ncosec θ = 1 / sin θ , cot θ = cos θ / sin θ\n\nCalculations:\n⇒ 3 × (sin θ / cos θ) = 2√3 sin θ\nSince 0° < θ < 90°, sin θ = ̸ 0. Dividing both sides by sin θ:\n⇒ 3 / cos θ = 2√3\n⇒ cos θ = 3 / (2√3)\n⇒ cos θ = √3 / 2\n⇒ θ = 30°\n\nWe need to find the value of:\n\n⇒ (3 / 4) × [ (cosec² 2θ + cot² 2θ) / (sin²θ + tan² 2θ) ]\nSubstituting θ = 30° into the expression:\n⇒ (3 / 4) × [ (cosec² 60° + cot² 60°) / (sin² 30° + tan² 60°) ]\n\nUsing standard trigonometric values:\n\n⇒ cosec 60° = 2 / √3 ⇒ cosec² 60° = 4 / 3\n⇒ cot 60° = 1 / √3 ⇒ cot² 60° = 1 / 3\n⇒ sin 30° = 1 / 2 ⇒ sin² 30° = 1 / 4\n⇒ tan 60° = √3 ⇒ tan² 60° = 3\n\nPutting these values in the expression:\n\n⇒ (3 / 4) × [ (4/3 + 1/3) / (1/4 + 3) ]\n⇒ (3 / 4) × [ (5/3) / (13/4) ]\n⇒ (3 / 4) × (5 / 3) × (4 / 13)\n⇒ 60 / 156\n⇒ 5 / 13\n∴ The correct answer is 5/13.\n\nAdditional Information\nTrigonometric Identities\n\nThe three primary Pythagorean identities are: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, and 1 + cot²θ = cosec²θ.\n\nValues of Trigonometric Ratios\n\nKey values to remember for 30° and 60° angles: sin 30° = cos 60° = 1/2, sin 60° = cos 30° = √3/2, and tan 60° = √3.\n\nSigns of Trigonometric Functions\n\nIn the first quadrant (0° to 90°), all six basic trigonometric functions (sin, cos, tan, cosec, sec, cot) yield positive values.",
     "mockId": "mock_1789629216143_682ej",
@@ -347,7 +347,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Ratios and Standard Angle Substitution",
       "conceptTested": "Trigonometric Identity Simplification: Using angle substitution or standard ratios (like sin θ, cos θ, tan θ) to evaluate complex algebraic expressions involving trigonometric functions."
-    }
+    },
+    "question": "If $3 \\tan \\theta = 2\\sqrt{3} \\sin \\theta$, where $0^\\circ < \\theta < 90^\\circ$, then find the value of $\\frac{3}{4}\\left(\\frac{\\operatorname{cosec}^2 2\\theta + \\cot^2 2\\theta}{\\sin^2 \\theta + \\tan^2 2\\theta}\\right)$:",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 5",
@@ -536,16 +538,16 @@
     "correctOption": "B",
     "userTime": "00:36",
     "avgTime": "00:23",
-    "questionText": "The tops of two buildings, 90 m and 55 m high, are connected by a metal wire. If the metal wire makes an angle with the horizontal, and tan θ = 3/7, then what is the distance (in metres) between the two buildings?",
+    "questionText": "The tops of two buildings, 90 m and 55 m high, are connected by a metal wire. If the metal wire makes an angle $\\theta$ with the horizontal and $\\tan \\theta = \\frac{3}{7}$, what is the distance (in metres) between the two buildings?",
     "options": {
-      "A": "72 meter",
-      "B": "82 meter",
-      "C": "75 meter",
-      "D": "85 meter",
-      "a": "72 meter",
-      "b": "82 meter",
-      "c": "75 meter",
-      "d": "85 meter"
+      "A": "72 m",
+      "B": "82 m",
+      "C": "75 m",
+      "D": "85 m",
+      "a": "72 m",
+      "b": "82 m",
+      "c": "75 m",
+      "d": "85 m"
     },
     "solution": "Solution\n\nShortcut Trick\nDifference in heights of the buildings = 90 - 55 = 35 m.\nFrom the right - angled triangle formed, tan θ = Height Difference ÷ Distance.\n⇒ Distance = Height Difference ÷ tan θ\n⇒ Distance = 35 ÷ (3/7) = (35 × 7) ÷ 3 = 245 ÷ 3\n⇒ Distance ≈ 81.66 m, which is estimated to 82 meter.\n∴ The correct answer is 82 meter.\n\nAlternate Method\nGiven:\nHeight of taller building = 90 m\nHeight of shorter building = 55 m\nAngle of the metal wire with the horizontal = θ\ntan θ = 3/7\n\nFormula Used:\nIn a right - angled triangle, tan θ = Perpendicular ÷ Base\n\nCalculation:\n⇒ Difference in height (Perpendicular) = 90 - 55 = 35 m\n⇒ Let the horizontal distance between the buildings be 'd'.\n⇒ In the right - angled triangle formed, tan θ = 35 ÷ d\n⇒ 3/7 = 35 ÷ d\n⇒ 3 × d = 35 × 7\n⇒ 3d = 245\n⇒ d = 245 ÷ 3\n⇒ d ≈ 81.66 m\n⇒ The estimated distance is 82 meter.\n∴ The correct answer is 82 meter.\n\nAdditional Information\nAngle of Elevation\n\nThe angle formed by the line of sight with the horizontal when viewing an object located above the horizontal level.\n\nTrigonometric Ratios\n\nFor any right - angled triangle, tan θ = Perpendicular ÷ Base, sin θ = Perpendicular ÷ Hypotenuse, and cos θ = Base ÷ Hypotenuse.\n\nPythagoras Theorem\n\nIn a right - angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides: Hypotenuse² = Perpendicular² + Base².",
     "mockId": "mock_1789629216143_682ej",
@@ -557,7 +559,9 @@
       "topic": "Height & Distance",
       "subtopic": "Angle of Elevation & Building Heights",
       "conceptTested": "Trigonometric ratio tan θ = Perpendicular ÷ Base in right-angled triangles."
-    }
+    },
+    "question": "The tops of two buildings, 90 m and 55 m high, are connected by a metal wire. If the metal wire makes an angle $\\theta$ with the horizontal and $\\tan \\theta = \\frac{3}{7}$, what is the distance (in metres) between the two buildings?",
+    "answer": "b"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 5",

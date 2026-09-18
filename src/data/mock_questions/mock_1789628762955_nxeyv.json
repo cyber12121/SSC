@@ -46,16 +46,16 @@
     "correctOption": "C",
     "userTime": "01:17",
     "avgTime": "00:34",
-    "questionText": "If \\cot A + \\cos A = p and \\cot A - \\cos A = q, then which of the following relation is correct?",
+    "questionText": "If $\\cot A + \\cos A = p$ and $\\cot A - \\cos A = q$, then which of the following relations is correct?",
     "options": {
-      "A": "\\(\\rm\\sqrt{\\frac{1}{16pq}}=p^2+q^2\\)",
-      "B": "\\(\\rm {\\frac{1}{4pq}}=p^2+q^2\\)",
-      "C": "\\(\\rm\\sqrt{16pq}=p^2-q^2\\)",
-      "D": "4pq = p^2 + q^2",
-      "a": "\\(\\rm\\sqrt{\\frac{1}{16pq}}=p^2+q^2\\)",
-      "b": "\\(\\rm {\\frac{1}{4pq}}=p^2+q^2\\)",
-      "c": "\\(\\rm\\sqrt{16pq}=p^2-q^2\\)",
-      "d": "4pq = p^2 + q^2"
+      "A": "$\\sqrt{\\frac{1}{16pq}} = p^2 + q^2$",
+      "B": "$\\frac{1}{4pq} = p^2 + q^2$",
+      "C": "$\\sqrt{16pq} = p^2 - q^2$",
+      "D": "$4pq = p^2 + q^2$",
+      "a": "$\\sqrt{\\frac{1}{16pq}} = p^2 + q^2$",
+      "b": "$\\frac{1}{4pq} = p^2 + q^2$",
+      "c": "$\\sqrt{16pq} = p^2 - q^2$",
+      "d": "$4pq = p^2 + q^2$"
     },
     "solution": "Solution\n\nShortcut Trick\nPut A = 30°, then cot 30° = √3 and cos 30° = √3/2.\n⇒ p = √3 + √3/2 = 3√3/2 and q = √3 - √3/2 = √3/2\n⇒ p² - q² = (27/4) - (3/4) = 24/4 = 6\n⇒ 16pq = 16 × (3√3/2) × (√3/2) = 16 × 9/4 = 36\n⇒ √16pq = √36 = 6\n∴ The correct answer is √16pq = p² - q².\n\nAlternate Method\nGiven:\np = cot A + cos A\nq = cot A - cos A\n\nFormula Used:\n(a + b)² - (a - b)² = 4ab\ncot²A - cos²A = cot²A × cos²A\n\nCalculations:\n⇒ p² - q² = (cot A + cos A)² - (cot A - cos A)²\n⇒ p² - q² = 4 × cot A × cos A --- (Equation 1)\n⇒ pq = (cot A + cos A) × (cot A - cos A)\n⇒ pq = cot²A - cos²A\n⇒ pq = (cos²A / sin²A) - cos²A\n⇒ pq = cos²A × (1 / sin²A - 1)\n⇒ pq = cos²A × (cosec²A - 1)\n⇒ pq = cos²A × cot²A\n⇒ √pq = cos A × cot A\n\nMultiplying by 4 on both sides:\n\n⇒ 4√pq = 4 × cos A × cot A\n⇒ √16pq = 4 × cos A × cot A --- (Equation 2)\n\nFrom Equation 1 and Equation 2:\n\n⇒ p² - q² = √16pq\n∴ The correct answer is √16pq = p² - q².\n\nAdditional Information\nPythagorean Identities\n\nThe fundamental identities are: sin²A + cos²A = 1, sec²A - tan²A = 1, and cosec²A - cot²A = 1.\n\nAlgebraic Expansion Formulas\n\nStandard algebraic formulas used in trigonometry: (a + b)² - (a - b)² = 4ab and (a + b)(a - b) = a² - b².\n\nQuotient and Reciprocal Relations\n\nThe basic relationships include: tan A = sin A ÷ cos A, cot A = cos A ÷ sin A, and cosec A = 1 ÷ sin A.",
     "mockId": "mock_1789628762955_nxeyv",
@@ -67,7 +67,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Elimination",
       "conceptTested": "Fundamental trigonometric identities: (a + b)^2 - (a - b)^2 = 4ab and \\cosec^2 A - \\cot^2 A = 1."
-    }
+    },
+    "question": "If $\\cot A + \\cos A = p$ and $\\cot A - \\cos A = q$, then which of the following relations is correct?",
+    "answer": "c"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 10",
@@ -501,16 +503,16 @@
     "correctOption": "B",
     "userTime": "00:03",
     "avgTime": "00:06",
-    "questionText": "Evaluate the following: \\(\\frac{\\cos 2 \\theta.\\cos 3 \\theta-\\cos 2 \\theta.\\cos 7 \\theta+\\cos \\theta.\\cos 10 \\theta}{\\sin 4 \\theta.\\sin 3 \\theta-\\sin 2 \\theta.\\sin 5 \\theta+\\sin 4 \\theta.\\sin 7 \\theta}\\)",
+    "questionText": "Evaluate: $\\frac{\\cos 2\\theta \\cos 3\\theta - \\cos 2\\theta \\cos 7\\theta + \\cos \\theta \\cos 10\\theta}{\\sin 4\\theta \\sin 3\\theta - \\sin 2\\theta \\sin 5\\theta + \\sin 4\\theta \\sin 7\\theta}$",
     "options": {
-      "A": "cos 6θ⋅cot 5θ",
-      "B": "cot 6θ⋅cot 5θ",
-      "C": "cot 6θ⋅cos 5θ",
-      "D": "cos 6θ⋅cos 5θ",
-      "a": "cos 6θ⋅cot 5θ",
-      "b": "cot 6θ⋅cot 5θ",
-      "c": "cot 6θ⋅cos 5θ",
-      "d": "cos 6θ⋅cos 5θ"
+      "A": "$\\cos 6\\theta \\cot 5\\theta$",
+      "B": "$\\cot 6\\theta \\cot 5\\theta$",
+      "C": "$\\cot 6\\theta \\cos 5\\theta$",
+      "D": "$\\cos 6\\theta \\cos 5\\theta$",
+      "a": "$\\cos 6\\theta \\cot 5\\theta$",
+      "b": "$\\cot 6\\theta \\cot 5\\theta$",
+      "c": "$\\cot 6\\theta \\cos 5\\theta$",
+      "d": "$\\cos 6\\theta \\cos 5\\theta$"
     },
     "solution": "Solution\n\nShortcut Trick\nMultiply the numerator and denominator by 2 to apply transformation formulas.\n\nNum: (cos θ + cos 5θ) - (cos 5θ + cos 9θ) + (cos 9θ + cos 11θ) = cos θ + cos 11θ\nDen: (cos θ - cos 7θ) - (cos 3θ - cos 7θ) + (cos 3θ - cos 11θ) = cos θ - cos 11θ\nExpression = (cos θ + cos 11θ) ÷ (cos θ - cos 11θ)\nApply sum - to - product rules: (2 × cos 6θ × cos 5θ) ÷ (2 × sin 6θ × sin 5θ) = cot 6θ × cot 5θ\n∴ The correct answer is cot 6θ × cot 5θ.\n\nAlternate Method\nGiven:\nExpression = (cos²θ × cos 3θ - cos²θ × cos 7θ + cos θ × cos 10θ) ÷ (sin 4θ × sin 3θ - sin²θ × sin 5θ + sin 4θ × sin 7θ)\nFormulas Used: 2 × cos A × cos B = cos(A - B) + cos(A + B)² × sin A × sin B = cos(A - B) - cos(A + B)\ncos C + cos D = 2 × cos((C + D) ÷ 2) × cos((C - D) ÷ 2)\ncos C - cos D = 2 × sin((C + D) ÷ 2) × sin((D - C) ÷ 2)\n\nCalculations:\n⇒ Multiply numerator and denominator by 2.\n⇒ Numerator = (2 × cos²θ × cos 3θ) - (2 × cos²θ × cos 7θ) + (2 × cos θ × cos 10θ)\n⇒ Numerator = (cos θ + cos 5θ) - (cos 5θ + cos 9θ) + (cos 9θ + cos 11θ)\n⇒ Numerator = cos θ + cos 5θ - cos 5θ - cos 9θ + cos 9θ + cos 11θ\n⇒ Numerator = cos θ + cos 11θ\n⇒ Denominator = (2 × sin 4θ × sin 3θ) - (2 × sin²θ × sin 5θ) + (2 × sin 4θ × sin 7θ)\n⇒ Denominator = (cos θ - cos 7θ) - (cos 3θ - cos 7θ) + (cos 3θ - cos 11θ)\n⇒ Denominator = cos θ - cos 7θ - cos 3θ + cos 7θ + cos 3θ - cos 11θ\n⇒ Denominator = cos θ - cos 11θ\n⇒ Expression = (cos θ + cos 11θ) ÷ (cos θ - cos 11θ)\n⇒ Applying Sum to Product formulas on the resulting terms:\n⇒ cos θ + cos 11θ = 2 × cos 6θ × cos 5θ\n⇒ cos θ - cos 11θ = 2 × sin 6θ × sin 5θ\n⇒ Ratio = (2 × cos 6θ × cos 5θ) ÷ (2 × sin 6θ × sin 5θ)\n⇒ Ratio = cot 6θ × cot 5θ\n∴ The correct answer is cot 6θ × cot 5θ.\n\nAdditional Information\nProduct to Sum Formulas\n\nUsed to convert trigonometric products into sums or differences: 2 × sin A × sin B = cos(A - B) - cos(A + B), and 2 × cos A × cos B = cos(A - B) + cos(A + B).\n\nSum to Product Formulas\n\nUsed to convert trigonometric sums into products to simplify terms: cos C + cos D = 2 × cos((C + D) ÷ 2) × cos((C - D) ÷ 2) and cos C - cos D = 2 × sin((C + D) ÷ 2) × sin((D - C) ÷ 2).\n\nQuotient Identities\n\nBasic relationships expressing tan and cot in terms of sin and cos: tan θ = sin θ ÷ cos θ and cot θ = cos θ ÷ sin θ.",
     "mockId": "mock_1789628762955_nxeyv",
@@ -522,6 +524,8 @@
       "topic": "Trigonometry",
       "subtopic": "Transformation Formulas - Product to Sum & Sum to Product",
       "conceptTested": "Application of product-to-sum and sum-to-product trigonometric identities to simplify complex rational expressions involving sine and cosine functions."
-    }
+    },
+    "question": "Evaluate: $\\frac{\\cos 2\\theta \\cos 3\\theta - \\cos 2\\theta \\cos 7\\theta + \\cos \\theta \\cos 10\\theta}{\\sin 4\\theta \\sin 3\\theta - \\sin 2\\theta \\sin 5\\theta + \\sin 4\\theta \\sin 7\\theta}$",
+    "answer": "b"
   }
 ]

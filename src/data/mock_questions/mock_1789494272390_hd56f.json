@@ -883,21 +883,21 @@
     "questionNumber": "Question 13",
     "status": "Correct (Slow)",
     "chosenOption": "A",
-    "correctOption": "C",
+    "correctOption": "A",
     "userTime": "00:36",
     "avgTime": "00:24",
-    "questionText": "If cos θ - sin θ = 0, then (sin^8 θ + cos^8 θ) is:",
+    "questionText": "If $\\cos \\theta - \\sin \\theta = 0$, then find the value of $(\\sin^8 \\theta + \\cos^8 \\theta)$:",
     "options": {
-      "a": "18",
-      "b": "14",
-      "c": "16",
-      "d": "12",
-      "A": "18",
-      "B": "14",
-      "C": "16",
-      "D": "12"
+      "a": "$\\frac{1}{8}$",
+      "b": "$\\frac{1}{4}$",
+      "c": "$\\frac{1}{16}$",
+      "d": "$\\frac{1}{2}$",
+      "A": "$\\frac{1}{8}$",
+      "B": "$\\frac{1}{4}$",
+      "C": "$\\frac{1}{16}$",
+      "D": "$\\frac{1}{2}$"
     },
-    "solution": "Solution\n\nShortcut Trick\nGiven cos θ - sin θ = 0, which implies tan θ = 1.\nThis means the angle θ = 45°.\nAt θ = 45°, sin θ = 1/√2 and cos θ = 1/√2.\nSubstitute the values: (1/√2)8 + (1/√2)8\n⇒ 1/16 + 1/16 = 2/16 = 1/8.\n∴ The correct answer is 1/8.\n\nAlternate Method\nGiven:\ncos θ - sin θ = 0\n\nCalculations:\n⇒ cos θ = sin θ\n\nSquaring both sides, we get:\n\n⇒ cos²θ = sin²θ\n\nUsing the standard trigonometric identity:\n\n⇒ sin²θ + cos²θ = 1\n\nSubstituting cos²θ with sin²θ:\n\n⇒ sin²θ + sin²θ = 1\n⇒ 2sin2 θ = 1\n⇒ sin²θ = 1/2   and   cos²θ = 1/2\nNow, we need to find the value of (sin8 θ + cos8 θ):\n⇒ (sin²θ)4 + (cos²θ)4\n⇒ (1/2)4 + (1/2)4\n⇒ 1/16 + 1/16\n⇒ 2/16 = 1/8\n∴ The correct answer is 1/8.\n\nAdditional Information\nPythagorean Identities\n\nsin²θ + cos²θ = 1 | sec²θ - tan²θ = 1 | cosec²θ - cot²θ = 1\n\nImportant Higher Power Expansions\n\nsin4θ + cos4θ = 1 - 2sin2θ cos²θ | sin6θ + cos6θ = 1 - 3sin2θ cos²θ\n\nEqualities at 45°\n\nIn the first quadrant, sin θ = cos θ only when θ = 45°. Similarly, tan θ = cot θ and sec θ = cosec θ are equal at θ = 45°.",
+    "solution": "Solution\n\nShortcut Trick\nGiven $\\cos \\theta - \\sin \\theta = 0 \\Rightarrow \\tan \\theta = 1 \\Rightarrow \\theta = 45^\\circ$.\nAt $\\theta = 45^\\circ$: $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}}$ and $\\cos 45^\\circ = \\frac{1}{\\sqrt{2}}$.\nSubstitute into the expression:\n$(\\sin^8 \\theta + \\cos^8 \\theta) = \\left(\\frac{1}{\\sqrt{2}}\\right)^8 + \\left(\\frac{1}{\\sqrt{2}}\\right)^8$\n$\\Rightarrow \\frac{1}{16} + \\frac{1}{16} = \\frac{2}{16} = \\frac{1}{8}$.\n∴ The correct answer is $\\frac{1}{8}$.\n\nAlternate Method\nGiven: $\\cos \\theta - \\sin \\theta = 0 \\Rightarrow \\cos \\theta = \\sin \\theta$.\nSquaring both sides: $\\cos^2 \\theta = \\sin^2 \\theta$.\nUsing identity $\\sin^2 \\theta + \\cos^2 \\theta = 1$:\n$\\Rightarrow 2\\sin^2 \\theta = 1 \\Rightarrow \\sin^2 \\theta = \\frac{1}{2}$ and $\\cos^2 \\theta = \\frac{1}{2}$.\nNow:\n$\\sin^8 \\theta + \\cos^8 \\theta = (\\sin^2 \\theta)^4 + (\\cos^2 \\theta)^4$\n$\\Rightarrow \\left(\\frac{1}{2}\\right)^4 + \\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16} + \\frac{1}{16} = \\frac{1}{8}$.\n∴ The correct answer is $\\frac{1}{8}$.",
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Identities & Equations",
     "conceptTested": "Solving trigonometric equations using standard angle values and evaluating higher-power sums of sine and cosine.",
@@ -906,8 +906,8 @@
       "subtopic": "Trigonometric Identities & Equations",
       "conceptTested": "Solving trigonometric equations using standard angle values and evaluating higher-power sums of sine and cosine."
     },
-    "question": "If cos θ - sin θ = 0, then (sin^8 θ + cos^8 θ) is:",
-    "answer": "c"
+    "question": "If $\\cos \\theta - \\sin \\theta = 0$, then find the value of $(\\sin^8 \\theta + \\cos^8 \\theta)$:",
+    "answer": "a"
   },
   {
     "testName": "SSC CGL Tier I: Full Test - 3",
@@ -1061,7 +1061,7 @@
     "correctOption": "A",
     "userTime": "00:24",
     "avgTime": "00:23",
-    "questionText": "What should come in place of both x in the equation x / √128 = √162 / x?",
+    "questionText": "What should come in place of both $x$ in the equation $\\frac{x}{\\sqrt{128}} = \\frac{\\sqrt{162}}{x}$?",
     "options": {
       "a": "12",
       "b": "14",
@@ -1072,7 +1072,7 @@
       "C": "144",
       "D": "196"
     },
-    "solution": "Solution\n\nShortcut Trick\nCross-multiply the given values to solve for x2 directly:\n\nx2 = √128 × √162 = √(128 × 162)\nx2 = √(64 × 2 × 81 × 2) = √(64 × 81 × 4)\nx2 = 8 × 9 × 2 = 144\nx = √144 = 12\n∴ The correct answer is 12.\n\nAlternate Method\nGiven:\nx / √128 = √162 / x\n\nCalculation:\n⇒ Cross-multiplying both sides, we get:\n⇒ x × x = √128 × √162\n⇒ x2 = √(128 × 162)\n⇒ Factorizing the numbers into perfect squares:\n⇒ x2 = √(64 × 2 × 81 × 2)\n⇒ x2 = √(64 × 81 × 4)\n⇒ Taking the square root of the perfect squares:\n⇒ x2 = 8 × 9 × 2\n⇒ x2 = 144\n⇒ x = √144\n⇒ x = 12\n∴ The correct answer is 12.\n\nAdditional Information\nMultiplication of Surds\n\nWhen multiplying square roots, you can combine them under a single root: √a × √b = √(a × b). This helps in factoring out perfect squares easily.\n\nPerfect Squares Identification\n\nBreaking down large numbers into products of known perfect squares (like 64 = 82 and 81 = 92) simplifies square root calculations significantly without needing prime factorization.\n\nSolving Quadratic Variables\n\nAn equation of the form x2 = a2 generally has two roots: x = a and x = -a. In quantitative aptitude simplification questions, the positive root is usually considered unless options suggest otherwise.",
+    "solution": "Solution\n\nShortcut Trick\nCross-multiply the given values to solve for $x^2$ directly:\n$x^2 = \\sqrt{128} \\times \\sqrt{162} = \\sqrt{128 \\times 162}$\n$x^2 = \\sqrt{64 \\times 2 \\times 81 \\times 2} = \\sqrt{64 \\times 81 \\times 4}$\n$x^2 = 8 \\times 9 \\times 2 = 144$\n$x = \\sqrt{144} = 12$.\n∴ The correct answer is 12.\n\nAlternate Method\nGiven:\n$\\frac{x}{\\sqrt{128}} = \\frac{\\sqrt{162}}{x}$\n\nCalculation:\n$\\Rightarrow x \\times x = \\sqrt{128} \\times \\sqrt{162}$\n$\\Rightarrow x^2 = \\sqrt{128 \\times 162}$\n$\\Rightarrow x^2 = \\sqrt{64 \\times 2 \\times 81 \\times 2}$\n$\\Rightarrow x^2 = \\sqrt{64 \\times 81 \\times 4}$\n$\\Rightarrow x^2 = 8 \\times 9 \\times 2 = 144$\n$\\Rightarrow x = \\sqrt{144} = 12$.\n∴ The correct answer is 12.",
     "topic": "Quantitative Aptitude",
     "subtopic": "Simplification - Surds & Indices",
     "conceptTested": "Solving fractional equations with square roots and surd multiplication rules.",
@@ -1081,7 +1081,7 @@
       "subtopic": "Simplification - Surds & Indices",
       "conceptTested": "Solving fractional equations with square roots and surd multiplication rules."
     },
-    "question": "What should come in place of both x in the equation x / √128 = √162 / x?",
+    "question": "What should come in place of both $x$ in the equation $\\frac{x}{\\sqrt{128}} = \\frac{\\sqrt{162}}{x}$?",
     "answer": "a"
   },
   {

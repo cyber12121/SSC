@@ -8,7 +8,9 @@ import crypto from "crypto";
 import { cleanSolutionText } from "./src/utils/cleanSolution";
 import { cleanQuestionText } from "./src/utils/formatQuestionText";
 import { normalizeQuestionOptions, normalizeAnswerKey } from "./src/utils/mathSanitizer";
+import { normalizeSubtopic } from "./src/utils/subtopicNormalizer";
 import chatHandler from "./api/chat";
+import srsGenerateHandler from "./api/srs-generate";
 
 dotenv.config();
 
@@ -563,7 +565,11 @@ Tasks for each question:
      * International Organisations (UN, WHO, IMF, World Bank, WTO, BRICS)
      * National & International Current Affairs
 
-2. "subtopic": Classify the granular subtopic or specific problem pattern (e.g. for Geometry: "Circles - Tangents & Secants" or "Triangles - Centroid & Similarity"; for Algebra: "Symmetric Identities (a³+b³+c³-3abc)"; for English: "Subject-Verb Agreement - Inversion" or "Active/Passive - Interrogative Sentences"; for Reasoning: "Missing Number Grid Matrix" or "Blood Relations - Coded Family Tree"; for Arithmetic: "Profit & Loss - Dishonest Dealer" or "Time & Work - Alternate Days").
+2. "subtopic": Classify strictly into a standard, concise canonical subtopic for that chapter (max 6-7 standard categories per chapter). For example:
+   - For Profit & Loss: "Marked Price & Discounts", "Dishonest Dealer & False Weights", "Basic CP, SP & Profit/Loss%", "Equal SP & CP Relations", "Quantity & Article Variations", or "Successive Transactions".
+   - For Mensuration 3D: "Cylinder (Solid & Hollow)", "Sphere & Hemisphere", "Cone & Frustum", "Cube & Cuboid", "Prism & Pyramid", or "Melting & Conversion of Solids".
+   - For Active & Passive Voice: "Modal Auxiliaries", "Passive to Active Conversion", "Tense Conversions", "Infinitives & Gerunds", "Interrogative Sentences", or "Imperative Sentences".
+   - For other topics, pick the recognized standard category for that chapter (keep it 2 to 4 words, never write full sentences as subtopics).
 3. "conceptTested": A concise 1-sentence note of the exact mathematical theorem, grammatical rule, formula, or logical deduction tested (e.g. "Tangent-Secant Theorem: PT² = PA × PB", "Inversion of auxiliary verb after negative adverbials (Hardly/Scarcely)", "Cyclic quadrilateral opposite angles sum = 180°").
 4. "question": Clean and format the question prompt:
    - Always enclose all mathematical expressions, variables, formulas, equations, powers, and fractions in standard dollar signs ($...$ for inline math, $$...$$ for display equations). Never leave math expressions in raw unformatted text.
@@ -654,11 +660,16 @@ Return ONLY a valid JSON array of ${chunkQuestions.length} objects:
             const optC = (cleanedOpts.C || cleanedOpts.c || originalQ.options?.C || originalQ.options?.c || "").trim();
             const optD = (cleanedOpts.D || cleanedOpts.d || originalQ.options?.D || originalQ.options?.d || "").trim();
 
+            const finalTopic = (item.topic || originalQ.topic || originalQ.subject || "General").trim();
+            const rawSub = (item.subtopic || item.topic || originalQ.subtopic || originalQ.topic || "").trim();
+            const qText = (item.question || originalQ.questionText || originalQ.question || "").trim();
+            const canonicalSub = normalizeSubtopic(finalTopic, rawSub, qText);
+
             results[originalIdx] = {
-              topic: (item.topic || originalQ.topic || originalQ.subject || "General").trim(),
-              subtopic: (item.subtopic || item.topic || originalQ.subtopic || originalQ.topic || "").trim(),
+              topic: finalTopic,
+              subtopic: canonicalSub,
               conceptTested: (item.conceptTested || originalQ.conceptTested || "").trim(),
-              questionText: (item.question || originalQ.questionText || originalQ.question || "").trim(),
+              questionText: qText,
               options: {
                 A: optA,
                 B: optB,
@@ -924,6 +935,9 @@ async function startServer() {
   // Gemini AI Chatbot Endpoint (Same handler as Vercel serverless)
   app.post("/api/chat", chatHandler);
 
+  // Gemini AI SRS Anki Card Generator Endpoint
+  app.post("/api/srs/generate-cards", srsGenerateHandler);
+
   // Automated Mock Error Import Endpoint
   app.post("/api/mock-import", async (req, res) => {
     try {
@@ -1089,52 +1103,48 @@ async function startServer() {
             const rawAns = enr.correctOption || q.correctOption || q.answer || "a";
             const cleanAns = rawAns.toLowerCase().trim();
 
-            const newQ = {
-              id: qId,
-              q_num: targetChapter.questions.length + 1,
-              mockId: calculatedReport ? calculatedReport.id : (payload.id || null),
-              testId: calculatedReport ? calculatedReport.id : (payload.id || null),
-              testName: q.testName || payload.title || payload.testName || calculatedReport?.title,
-              platform: q.platform || payload.platform || calculatedReport?.platform || 'General',
-              status: q.status || canonicalStatus,
-              chosenOption: q.chosenOption || null,
-              correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
-              userTime: q.userTime || null,
-              avgTime: q.avgTime || null,
-              question: cleanQuestionText(qText),
-              options: {
-                a: cleanQuestionText(enr.options?.a || enr.options?.A || q.options?.A || q.options?.a || ""),
-                b: cleanQuestionText(enr.options?.b || enr.options?.B || q.options?.B || q.options?.b || ""),
-                c: cleanQuestionText(enr.options?.c || enr.options?.C || q.options?.C || q.options?.c || ""),
-                d: cleanQuestionText(enr.options?.d || enr.options?.D || q.options?.D || q.options?.d || "")
-              },
-              answer: cleanAns,
-              solution: cleanSolutionText(enr.solution || q.solution || ""),
-              image: q.image || enr.image || null,
-              topic: (() => {
-                let t = (enr.topic || q.topic || "General").trim();
-                const s = (enr.subtopic || q.subtopic || "").trim();
-                if ((t === "English Comprehension" || t === "English") && s && s !== "English Comprehension" && s !== "English") {
-                  t = s;
-                }
-                return t;
-              })(),
-              subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
-              conceptTested: enr.conceptTested || q.conceptTested || "",
-              tags: {
-                topic: (() => {
-                  let t = (enr.topic || q.topic || "General").trim();
-                  const s = (enr.subtopic || q.subtopic || "").trim();
-                  if ((t === "English Comprehension" || t === "English") && s && s !== "English Comprehension" && s !== "English") {
-                    t = s;
-                  }
-                  return t;
-                })(),
-                subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
-                conceptTested: enr.conceptTested || q.conceptTested || "",
-                difficulty: isSlow ? "hard" : "medium"
+            const assignedTopic = (() => {
+              let t = (enr.topic || q.topic || "General").trim();
+              const s = (enr.subtopic || q.subtopic || "").trim();
+              if ((t === "English Comprehension" || t === "English") && s && s !== "English Comprehension" && s !== "English") {
+                t = s;
               }
-            };
+              return t;
+            })();
+            const canonicalSub = normalizeSubtopic(assignedTopic, enr.subtopic || q.subtopic || enr.topic, qText);
+
+              const newQ = {
+                id: qId,
+                q_num: targetChapter.questions.length + 1,
+                mockId: calculatedReport ? calculatedReport.id : (payload.id || null),
+                testId: calculatedReport ? calculatedReport.id : (payload.id || null),
+                testName: q.testName || payload.title || payload.testName || calculatedReport?.title,
+                platform: q.platform || payload.platform || calculatedReport?.platform || 'General',
+                status: q.status || canonicalStatus,
+                chosenOption: q.chosenOption || null,
+                correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
+                userTime: q.userTime || null,
+                avgTime: q.avgTime || null,
+                question: cleanQuestionText(qText),
+                options: {
+                  a: cleanQuestionText(enr.options?.a || enr.options?.A || q.options?.A || q.options?.a || ""),
+                  b: cleanQuestionText(enr.options?.b || enr.options?.B || q.options?.B || q.options?.b || ""),
+                  c: cleanQuestionText(enr.options?.c || enr.options?.C || q.options?.C || q.options?.c || ""),
+                  d: cleanQuestionText(enr.options?.d || enr.options?.D || q.options?.D || q.options?.d || "")
+                },
+                answer: cleanAns,
+                solution: cleanSolutionText(enr.solution || q.solution || ""),
+                image: q.image || enr.image || null,
+                topic: assignedTopic,
+                subtopic: canonicalSub,
+                conceptTested: enr.conceptTested || q.conceptTested || "",
+                tags: {
+                  topic: assignedTopic,
+                  subtopic: canonicalSub,
+                  conceptTested: enr.conceptTested || q.conceptTested || "",
+                  difficulty: isSlow ? "hard" : "medium"
+                }
+              };
 
             targetChapter.questions.push(newQ);
             addedCount++;
@@ -1175,14 +1185,16 @@ async function startServer() {
               const enr: any = enriched[idx] || {};
               const rawAns = enr.correctOption || q.correctOption || q.answer || "a";
               const cleanAns = rawAns.toLowerCase().trim();
+              const masterTopic = enr.topic || q.topic || "General";
+              const masterSubtopic = normalizeSubtopic(masterTopic, enr.subtopic || q.subtopic || enr.topic, enr.question || q.questionText || q.question);
               return {
                 ...q,
                 mockId: calculatedReport.id,
                 testId: calculatedReport.id,
                 testName: q.testName || payload.title || payload.testName,
                 platform: q.platform || payload.platform || 'General',
-                topic: enr.topic || q.topic || "General",
-                subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+                topic: masterTopic,
+                subtopic: masterSubtopic,
                 conceptTested: enr.conceptTested || q.conceptTested || "",
                 questionText: cleanQuestionText(enr.question || enr.questionText || q.questionText || q.question),
                 question: cleanQuestionText(enr.question || enr.questionText || q.questionText || q.question),
@@ -1200,8 +1212,8 @@ async function startServer() {
                 correctOption: (enr.correctOption || q.correctOption || cleanAns).toUpperCase(),
                 tags: {
                   ...(q.tags || {}),
-                  topic: enr.topic || q.topic || "General",
-                  subtopic: enr.subtopic || q.subtopic || enr.topic || "General",
+                  topic: masterTopic,
+                  subtopic: masterSubtopic,
                   conceptTested: enr.conceptTested || q.conceptTested || ""
                 }
               };

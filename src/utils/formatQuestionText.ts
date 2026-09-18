@@ -9,7 +9,7 @@
  * 6. Tokenizing LaTeX math for KaTeX rendering
  */
 
-import { reconstructScrapedMath, wrapUnwrappedFractions } from './mathSanitizer';
+import { reconstructScrapedMath, wrapUnwrappedFractions, cleanAlgebraPowers, normalizeListCommas } from './mathSanitizer';
 
 export interface MathToken {
   type: 'text' | 'math';
@@ -34,9 +34,10 @@ export function cleanQuestionText(text: string = ''): string {
   s = s.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
 
   // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
-  s = s.replace(/\$\s+([^$\n]+?)\s+\$/g, '$$$1$$');
-  s = s.replace(/\$\s+([^$\n]+?)\$/g, '$$$1$$');
-  s = s.replace(/\$([^$\n]+?)\s+\$/g, '$$$1$$');
+  s = s.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
+    const trimmed = inner.trim();
+    return trimmed ? `$${trimmed}$` : '$$';
+  });
 
   s = wrapUnwrappedFractions(s);
 
@@ -97,6 +98,10 @@ export function cleanQuestionText(text: string = ''): string {
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 
+  // 8b. Normalize algebraic powers (e.g. 3x^2 -> 3x², x^3 -> x³) and list commas (e.g. 0,1 -> 0, 1)
+  s = cleanAlgebraPowers(s);
+  s = normalizeListCommas(s);
+
   // 9. Restore preserved math blocks safely
   mathPlaceholders.forEach((math, idx) => {
     s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
@@ -113,11 +118,10 @@ export function cleanQuestionText(text: string = ''): string {
  */
 export function getLanguageText(
   rawText: string = '',
-  language: 'English' | 'Hindi' | 'Bilingual' = 'English'
+  language: 'English' | string = 'English'
 ): string {
   if (!rawText) return '';
   const cleaned = cleanQuestionText(rawText);
-  if (language === 'Bilingual') return cleaned;
 
   // Helper to safely split on bilingual delimiter only if Devanagari is present
   const splitBilingual = (str: string): { english: string; hindi: string } | null => {
@@ -151,9 +155,7 @@ export function getLanguageText(
       .map(line => {
         const bi = splitBilingual(line);
         if (!bi) return line;
-        if (language === 'English') return bi.english || line;
-        if (language === 'Hindi') return bi.hindi || bi.english || line;
-        return line;
+        return bi.english || line;
       })
       .join('\n')
       .trim();
@@ -162,8 +164,7 @@ export function getLanguageText(
   // Check whole-string delimiter
   const wholeBi = splitBilingual(cleaned);
   if (wholeBi) {
-    if (language === 'English') return wholeBi.english;
-    if (language === 'Hindi') return wholeBi.hindi || wholeBi.english;
+    return wholeBi.english;
   }
 
   return cleaned;

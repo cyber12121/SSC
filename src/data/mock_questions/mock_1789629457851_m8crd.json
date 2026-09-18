@@ -116,15 +116,15 @@
     "correctOption": "A",
     "userTime": "00:46",
     "avgTime": "00:33",
-    "questionText": "Find the value of 2 cosec^2 23° cot^2 67° - sin^2 23° - sin^2 67° - cot^2 67°",
+    "questionText": "Find the value of $2 \\operatorname{cosec}^2 23^\\circ \\cot^2 67^\\circ - \\sin^2 23^\\circ - \\sin^2 67^\\circ - \\cot^2 67^\\circ$:",
     "options": {
-      "A": "sec^2 23°",
+      "A": "$\\sec^2 23^\\circ$",
       "B": "1",
-      "C": "tan^2 23°",
+      "C": "$\\tan^2 23^\\circ$",
       "D": "0",
-      "a": "sec^2 23°",
+      "a": "$\\sec^2 23^\\circ$",
       "b": "1",
-      "c": "tan^2 23°",
+      "c": "$\\tan^2 23^\\circ$",
       "d": "0"
     },
     "solution": "Solution\n\nShortcut Trick\nConvert 67° angles to 23° using cot 67° = tan 23° and sin 67° = cos 23°.\n⇒ 2 cosec² 23° tan² 23° - (sin² 23° + cos² 23°) - tan² 23°\n⇒ 2(1 / sin² 23°) × (sin² 23° / cos² 23°) - 1 - tan² 23°\n⇒ 2 sec² 23° - 1 - tan² 23° = sec² 23° + (sec² 23° - tan² 23°) - 1\n⇒ sec² 23° + 1 - 1 = sec² 23°\n∴ The correct answer is sec² 23°.\n\nAlternate Method\nGiven:\n2 cosec² 23° cot² 67° - sin² 23° - sin² 67° - cot² 67°\n\nFormulas Used: sin(90° - θ) = cos θ\ncot(90° - θ) = tan θ\nsin²θ + cos²θ = 1\nsec²θ - tan²θ = 1\n\nCalculation:\n⇒ 2 cosec² 23° cot2(90° - 23°) - sin² 23° - sin2(90° - 23°) - cot2(90° - 23°)\n⇒ 2 cosec² 23° tan² 23° - sin² 23° - cos² 23° - tan² 23°\n⇒ 2(1 / sin² 23°) × (sin² 23° / cos² 23°) - (sin² 23° + cos² 23°) - tan² 23°\n⇒ 2(1 / cos² 23°) - 1 - tan² 23°\n⇒ 2 sec² 23° - 1 - tan² 23°\n⇒ sec² 23° + (sec² 23° - tan² 23°) - 1\n⇒ sec² 23° + 1 - 1\n⇒ sec² 23°\n∴ The correct answer is sec² 23°.\n\nAdditional Information\nTrigonometric Identities\n\nThe fundamental Pythagorean identities are sin²θ + cos²θ = 1, sec²θ - tan²θ = 1, and cosec²θ - cot²θ = 1.\n\nComplementary Angles\n\nTwo angles are complementary if their sum is 90°. Key relations: sin(90° - θ) = cos θ, tan(90° - θ) = cot θ, and sec(90° - θ) = cosec θ.\n\nReciprocal Relations\n\nTrigonometric ratios are related by reciprocal identities: cosec θ = 1 / sin θ, sec θ = 1 / cos θ, and cot θ = 1 / tan θ.",
@@ -137,7 +137,9 @@
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Identities & Complementary Angles",
       "conceptTested": "Application of fundamental Pythagorean trigonometric identities and complementary angle relations such as sin(90° - \\theta) = cos \\theta and cot(90° - \\theta) = tan \\theta."
-    }
+    },
+    "question": "Find the value of $2 \\operatorname{cosec}^2 23^\\circ \\cot^2 67^\\circ - \\sin^2 23^\\circ - \\sin^2 67^\\circ - \\cot^2 67^\\circ$:",
+    "answer": "a"
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 1",

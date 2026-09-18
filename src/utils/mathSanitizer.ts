@@ -343,6 +343,12 @@ export function reconstructScrapedMath(rawText: string = ''): string {
   s = s.replace(/\\beta\b/g, 'β');
   s = s.replace(/\\gamma\b/g, 'γ');
 
+  // 11. Clean up algebraic powers, carets, and broken powers
+  s = cleanAlgebraPowers(s);
+
+  // 12. Normalize list commas (e.g. "0,1" -> "0, 1", "y,y²" -> "y, y²")
+  s = normalizeListCommas(s);
+
   // Restore preserved math blocks safely
   mathPlaceholders.forEach((math, idx) => {
     s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
@@ -607,7 +613,29 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
 }
 
 /**
- * Normalizes algebraic exponents and scientific units in solution text:
+ * Normalizes list items, options, and expressions separated by commas without spaces
+ * e.g. "0,1" -> "0, 1", "y,y²" -> "y, y²", "y,2y" -> "y, 2y", "y,1/y" -> "y, 1/y", "a,b" -> "a, b"
+ * Preserves Indian and Western currency/large numbers like "1,200", "20,000", "1,36,704".
+ */
+export function normalizeListCommas(text: string = ''): string {
+  if (!text) return '';
+  let s = text;
+  // Letter followed by comma without space: e.g. "y,y²" -> "y, y²", "y,2y" -> "y, 2y", "y,1/y" -> "y, 1/y", "a,b" -> "a, b"
+  s = s.replace(/([a-zA-Z]),(?!\s)/g, '$1, ');
+  // Comma followed by letter, symbol, or open paren/bracket: e.g. "0,x" -> "0, x", "0,√2" -> "0, √2", "0,(1/y)" -> "0, (1/y)"
+  s = s.replace(/,(?=[a-zA-Z√\(\[\$])/g, ', ');
+  // Single or double digits separated by comma (not thousands/lakhs): e.g. "0,1" -> "0, 1", "1,2" -> "1, 2", "10,20" -> "10, 20"
+  s = s.replace(/(?<!\d,)(\b\d{1,2}),(\d{1,2}\b)(?![,\d])/g, '$1, $2');
+  // Digit followed by letter without space: e.g. "0,y" -> "0, y"
+  s = s.replace(/(\d),(?=[a-zA-Z])/g, '$1, ');
+  return s;
+}
+
+/**
+ * Normalizes algebraic exponents and scientific units in text:
+ * - 3x^2 -> 3x², (x+y)^2 -> (x+y)², 14^2 -> 14², x^3 -> x³, 2^-1 -> 2⁻¹
+ * - 3^(2p+4) -> 3²ᵖ⁺⁴, (p + 1)^4 -> (p + 1)⁴, ((32)^4 - 1) -> ((32)⁴ - 1)
+ * - (6.25)^(1/2) -> (6.25)½, (0.027)^(1/3) -> (0.027)⅓, (81)^(1/4) -> (81)¼
  * - x2 -> x², y2 -> y², x3 -> x³, y3 -> y³, a2 -> a², b2 -> b², 250x3 -> 250x³
  * - cm3 -> cm³, cm2 -> cm², m3 -> m³, m2 -> m²
  * - x1/3 -> x^(1/3)
@@ -620,20 +648,101 @@ export function cleanAlgebraPowers(text: string = ''): string {
   s = s.replace(/\b(cm|m|mm|km|ft|in)3\b/g, '$1³');
   s = s.replace(/\b(cm|m|mm|km|ft|in)2\b/g, '$1²');
 
-  // 2. Fractional exponents: x1/3 -> x^(1/3), (xyz)1/3 -> (xyz)^(1/3)
+  // 2. Fractional exponents with carets or parentheses: e.g. ^(1/2) -> ½, ^(1/3) -> ⅓, ^(1/4) -> ¼, ^(2/3) -> ⅔, ^(3/4) -> ¾
+  const fractionPowerMap: Record<string, string> = {
+    '1/2': '½',
+    '1/3': '⅓',
+    '1/4': '¼',
+    '2/3': '⅔',
+    '3/4': '¾',
+    '1/5': '⅕',
+    '2/5': '⅖',
+    '3/5': '⅗',
+    '4/5': '⅘',
+    '1/6': '⅙',
+    '5/6': '⅚',
+    '1/8': '⅛',
+    '3/8': '⅜',
+    '5/8': '⅝',
+    '7/8': '⅞'
+  };
+
+  s = s.replace(/([a-zA-Z0-9\)])\s*\^\s*\(\s*(1\/[2-8]|2\/[35]|3\/[458]|4\/5|5\/[68]|7\/8)\s*\)/g, (_, base, frac) => {
+    return `${base}${fractionPowerMap[frac] || `^(${frac})`}`;
+  });
+
+  // Also standalone fractional exponents: x1/3 -> x^(1/3), (xyz)1/3 -> (xyz)^(1/3)
   s = s.replace(/([a-zA-Z]|\))\s*1\/3\b/g, '$1^(1/3)');
 
-  // 3. Variables followed by 2 or 3 in algebraic expressions:
+  // 3. Caret exponents on variables, numbers, or bracketed expressions:
+  // Comprehensive superscript character map
+  const supDigits: Record<string, string> = {
+    '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
+    '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+    '+': '⁺', '-': '⁻', '=': '⁼', '(': '⁽', ')': '⁾',
+    'a': 'ᵃ', 'b': 'ᵇ', 'c': 'ᶜ', 'd': 'ᵈ', 'e': 'ᵉ', 'f': 'ᶠ', 'g': 'ᵍ', 'h': 'ʰ',
+    'i': 'ⁱ', 'j': 'ʲ', 'k': 'ᵏ', 'l': 'ˡ', 'm': 'ᵐ', 'n': 'ⁿ', 'o': 'ᵒ', 'p': 'ᵖ',
+    'r': 'ʳ', 's': 'ˢ', 't': 'ᵗ', 'u': 'ᵘ', 'v': 'ᵛ', 'w': 'ʷ', 'x': 'ˣ', 'y': 'ʸ', 'z': 'ᶻ',
+    'A': 'ᴬ', 'B': 'ᴮ', 'D': 'ᴰ', 'E': 'ᴱ', 'G': 'ᴳ', 'H': 'ᴴ', 'I': 'ᴵ', 'J': 'ᴶ',
+    'K': 'ᴷ', 'L': 'ᴸ', 'M': 'ᴹ', 'N': 'ᴺ', 'O': 'ᴼ', 'P': 'ᴾ', 'R': 'ᴿ', 'T': 'ᵀ',
+    'U': 'ᵁ', 'V': 'ⱽ', 'W': 'ᵂ'
+  };
+
+  const toSup = (str: string) => str.split('').map((c: string) => supDigits[c] || c).join('');
+
+  // 3a. Parenthesized expression exponents: e.g. 3^(2p+4) -> 3²ᵖ⁺⁴, 2^(-1) -> 2⁻¹, (x+y)^(2n-1) -> (x+y)²ⁿ⁻¹
+  s = s.replace(/([a-zA-Z0-9\)])\s*\^\s*\(([0-9a-zA-Z\+\-\s]+)\)/g, (_, base, inner) => {
+    const chars = inner.replace(/\s+/g, '').split('');
+    const allSup = chars.every((c: string) => supDigits[c] !== undefined);
+    if (allSup) {
+      return `${base}${chars.map((c: string) => supDigits[c]).join('')}`;
+    }
+    return `${base}^(${inner})`;
+  });
+
+  // 3b. Caret exponents on digits, single/multiple variables: 3x^2 -> 3x², 2^10 -> 2¹⁰, (32)^4 -> (32)⁴, 8^4 -> 8⁴, 2^-1 -> 2⁻¹
+  s = s.replace(/([a-zA-Z0-9\)])\s*\^\s*([+\-]?[0-9a-zA-Z]+)\b/g, (_, base, p) => {
+    const chars = p.split('');
+    const allSup = chars.every((c: string) => supDigits[c] !== undefined);
+    if (allSup) {
+      return `${base}${chars.map((c: string) => supDigits[c]).join('')}`;
+    }
+    return `${base}^${p}`;
+  });
+  s = s.replace(/\^\s*([+\-]?[0-9a-zA-Z]+)\b/g, (_, p) => {
+    const chars = p.split('');
+    const allSup = chars.every((c: string) => supDigits[c] !== undefined);
+    return allSup ? chars.map((c: string) => supDigits[c]).join('') : `^${p}`;
+  });
+
+  // 4. Variables followed by 2, 3, or 4 in algebraic expressions:
   // e.g. a2 -> a², 3b2 -> 3b², 25x2 -> 25x², 27y2 -> 27y², 250x3 -> 250x³, 270xy2 -> 270xy²
   // e.g. Cx3 -> Cx³, Dxy2 -> Dxy², 2A3 -> 2A³, 6AB2 -> 6AB², 125x3 -> 125x³, 9y2 -> 9y²
   // e.g. r3 -> r³, l2 -> l²
-  s = s.replace(/([a-zA-Z])([23])(?=[a-zA-Z+\-×*÷/=\s,)\.]|$)/g, (_, v, p) => {
-    return v + (p === '2' ? '²' : '³');
+  s = s.replace(/([a-zA-Z])([234])(?=[a-zA-Z+\-×*÷/=\s,)\.]|$)/g, (_, v, p) => {
+    return v + (p === '2' ? '²' : p === '3' ? '³' : '⁴');
   });
 
-  // 4. Arithmetic squares inside brackets or square root differences: e.g. 172 - 82 -> 17² - 8²
+  // 4b. Trigonometric powers and degree symbols:
+  // Degree symbol cleanup: e.g. 30 ̊ -> 30°, 54o -> 54°
+  s = s.replace(/(\d+)\s*[\u030a\u02da]/g, '$1°');
+  s = s.replace(/\b(\d{1,3})o(?=\s*[+\-\*\/=]|\s*[A-Za-z]|\)|\]|,|$)/g, '$1°');
+
+  // Caret trig powers: e.g. cosec^2 23° -> cosec² 23°, sin^2 A -> sin² A
+  s = s.replace(/\b(sin|cos|tan|cot|sec|cosec)\s*\^\s*([0-9]+)\s*(?=[A-Za-z0-9°θφ\(])/g, (_, fn, p) => {
+    return `${fn}${toSup(p)} `;
+  });
+
+  // Plain number trig powers: e.g. cosec2 18° -> cosec² 18°, tan2 18° -> tan² 18°, sec2 18° -> sec² 18°
+  s = s.replace(/\b(sin|cos|tan|cot|sec|cosec)2(?=\s*\d+°|\s*[A-Za-zθφ\(]|\b)/g, '$1² ');
+  s = s.replace(/\b(sin|cos|tan|cot|sec|cosec)3(?=\s*\d+°|\s*[A-Za-zθφ\(]|\b)/g, '$1³ ');
+  s = s.replace(/\b(sin|cos|tan|cot|sec|cosec)4(?=\s*\d+°|\s*[A-Za-zθφ\(]|\b)/g, '$1⁴ ');
+  s = s.replace(/([²³⁴])\s+/g, '$1 ');
+
+  // 5. Arithmetic squares inside brackets or square root differences: e.g. 172 - 82 -> 17² - 8²
   s = s.replace(/(\b\d{1,2})2\s*([+\-])\s*(\b\d{1,2})2/g, '$1² $2 $3²');
   s = s.replace(/\[\s*(\d{1,2})2\s*([+\-])/g, '[$1² $2');
+  s = s.replace(/\(\s*(\d{1,2})2\s*([+\-×*÷])/g, '($1² $2');
 
   return s;
 }
@@ -663,6 +772,13 @@ export function normalizeQuestionOptions(options: any): { a: string; b: string; 
   result.b = getVal('b', 'B', '2', 'opt2', 'option2', 'optionB', 'option 2', 'option b');
   result.c = getVal('c', 'C', '3', 'opt3', 'option3', 'optionC', 'option 3', 'option c');
   result.d = getVal('d', 'D', '4', 'opt4', 'option4', 'optionD', 'option 4', 'option d');
+
+  // Automatically future-proof option text formatting (powers & comma spacing)
+  for (const k of ['a', 'b', 'c', 'd'] as const) {
+    if (result[k]) {
+      result[k] = normalizeListCommas(cleanAlgebraPowers(result[k]));
+    }
+  }
 
   return result;
 }
