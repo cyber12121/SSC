@@ -3386,7 +3386,7 @@
         "correctOption": "C",
         "userTime": "01:20",
         "avgTime": "01:25",
-        "question": "In the following question, which one set of letters when sequentially placed at the gaps in the given letter series shall complete it?\n\na \\_ b \\_ a b b \\_ a b \\_ \\_ a \\_ b c",
+        "question": "In the following question, which one set of letters when sequentially placed at the gaps in the given letter series shall complete it?\n\n a _ b _ a b b _ a b _ _ a _ b c",
         "options": {
           "a": "abccba",
           "b": "ababac",
@@ -3546,7 +3546,7 @@
         "correctOption": "A",
         "userTime": "01:06",
         "avgTime": "00:50",
-        "question": "Which of the following option will come in place of '?'",
+        "question": "Which of the following option will come in place of '?' 6, 5 : 20 :: 8, 9 : 56 :: 3, 7 : ?",
         "options": {
           "a": "12",
           "b": "13",
