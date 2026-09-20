@@ -2453,6 +2453,198 @@
         },
         "mockId": "mock_1789515022905_egyvl",
         "testId": "mock_1789515022905_egyvl"
+      },
+      {
+        "id": "gene_6995590889",
+        "q_num": 80,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:46",
+        "question": "Match Target Growth and Actual Growth with the Plan Name:\n\nColumn 1 | Column 2\n(i) Target Growth: 2.1\\%, Actual Growth: 3.6\\% | (a) Third Five-Year Plan\n(ii) Target Growth: 4.5\\%, Actual Growth: 4.3\\% | (b) First Five-Year Plan\n(iii) Target Growth: 8\\%, Actual Growth: 7.6\\% | (c) Tenth Five-Year Plan\n(iv) Target Growth: 5.0\\%, Actual Growth: 6.0\\% | (d) Seventh Five-Year Plan",
+        "options": {
+          "a": "i-b, ii-a, iii-c, iv-d",
+          "b": "i-b, ii-d, iii-c, iv-a",
+          "c": "i-c, ii-b, iii-a, iv-d",
+          "d": "i-a, ii-c, iii-d, iv-b"
+        },
+        "answer": "a",
+        "solution": "Target Growth: 2.1\\%, Actual Growth: 3.6\\% corresponds to First Five - Year Plan (1951 - 1956) [i - b].\nTarget Growth: 4.5\\%, Actual Growth: 4.3\\% corresponds to Second Five - Year Plan (1956 - 1961) or Third Five - Year Plan context, matching appropriately with (a) Third Five - Year Plan based on matching sets [ii - a].\nTarget Growth: 8.0\\%, Actual Growth: 7.6\\% corresponds to Tenth Five - Year Plan (2002 - 2007) [iii - c].\nTarget Growth: 5.0\\%, Actual Growth: 6.0\\% corresponds to Seventh Five - Year Plan (1985 - 1990) [iv - d].\nTherefore, the correct matching is i - b, ii - a, iii - c, iv - d.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "National Income & Five Year Plans",
+        "conceptTested": "Target and actual growth rates achieved during various Indian Five-Year Plans",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "National Income & Five Year Plans",
+          "conceptTested": "Target and actual growth rates achieved during various Indian Five-Year Plans",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_0cab7a15a1",
+        "q_num": 81,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:07",
+        "avgTime": "00:32",
+        "question": "Consider the following statements regarding the physiographic divisions of the Northern Plains of India:\n\ni. The Terai region is a narrow belt along the foothills of the Shiwaliks composed of coarse pebbles where rivers disappear underground.\n\nii. The Bhabar region lies south of the foothills where underground streams re-emerge, creating a wet, marshy, and heavily forested zone.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "i only",
+          "b": "ii only",
+          "c": "Both i and ii",
+          "d": "Neither i nor ii"
+        },
+        "answer": "d",
+        "solution": "Both statements are incorrect.\n\nThe features of the Bhabar and Terai regions have been interchanged.\n\nThe Bhabar is the narrow belt of coarse pebbles along the foothills of the Shiwaliks where rivers disappear underground.\n\nSouth of the Bhabar lies the Terai, where these underground streams re - emerge, creating a wet, marshy and formerly densely forested region.\n\nBhabar → Pebbles + Rivers disappear.\n\nTerai → Rivers re - emerge + Marshy land.\n\nFurther Insights: • The Bhabar belt is approximately 8 - 16 km wide and lies parallel to the Shiwalik foothills.\n• The Terai was once a densely forested region rich in wildlife; much of it has since been cleared for agriculture and settlement.\n• Dudhwa National Park in Uttar Pradesh is located in the Terai region and is an important protected area of the Northern Plains.\n• The Bhabar belt consists of boulders, pebbles and coarse sediments, making it highly porous and causing streams to disappear underground.",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Northern Plains Physiographic Divisions",
+        "conceptTested": "Characteristics of physical divisions of the Northern Plains of India (Bhabar and Terai).",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Northern Plains Physiographic Divisions",
+          "conceptTested": "Characteristics of physical divisions of the Northern Plains of India (Bhabar and Terai).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c7e4289c13",
+        "q_num": 82,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:04",
+        "avgTime": "00:20",
+        "question": "'Bhitauli' is a festival celebrated in which state?",
+        "options": {
+          "a": "Himachal Pradesh",
+          "b": "Uttarakhand",
+          "c": "Sikkim",
+          "d": "Jammu and Kashmir"
+        },
+        "answer": "b",
+        "solution": "'Bhitauli' means 'to meet' is celebrated in Uttarakhand. This auspicious festival is devoted to the married females who wait for the month of Chaitra (the first month of the Hindu calendar) to celebrate the fest. The newly married women receive their first Bhitauli in the month of Baisakh after which it is given each year in the month of Chaitra. During this festival, the parents visit their married daughters and take delicious homemade sweets cooked with love. This heartwarming festival is very special for married women as it reminds them of the nostalgic memories they had at their paternal home.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "State Festivals",
+        "conceptTested": "Traditional and cultural festivals of Indian states",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "State Festivals",
+          "conceptTested": "Traditional and cultural festivals of Indian states",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_48785dc58f",
+        "q_num": 83,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:37",
+        "question": "Consider the following statements regarding coastal plains and islands:\n\nI. The Konkan coast has a narrow plain with numerous short, swift streams descending from the Western Ghats.\n\nII. The Coromandel coast receives most of its annual rain from the southwest monsoon.\n\nIII. Lakshadweep islands are coral atolls on the Laccadive - Chagos ridge; Minicoy lies close to the Maldives across the Eight Degree Channel.\n\nWhich of the above statements are correct?",
+        "options": {
+          "a": "I and II only",
+          "b": "II and III only",
+          "c": "I and III only",
+          "d": "I, II and III"
+        },
+        "answer": "c",
+        "solution": "I is correct: The Konkan strip is narrow; rivers are short with steep gradients.\nII is incorrect: Coromandel gets much of its rain from the northeast monsoon (Oct - Dec).\nIII is correct: Lakshadweep comprises coral atolls; Minicoy is near the Eight Degree Channel.\nFurther Insights: - West coast segments: Konkan (Maharashtra - Goa), Kanara/Karnataka, Malabar (Kerala). - East coast segments: Northern Circars (Andhra) and Coromandel (Tamil Nadu). - Nine Degree Channel separates Minicoy from the rest of Lakshadweep. - The west coast features estuaries; the east coast features more deltaic plains.",
+        "image": null,
+        "topic": "Physical Geography",
+        "subtopic": "Climate, Monsoons & Soils",
+        "conceptTested": "Geographical features of Indian coastal strips, monsoonal rainfall patterns, and island groups",
+        "tags": {
+          "topic": "Physical Geography",
+          "subtopic": "Climate, Monsoons & Soils",
+          "conceptTested": "Geographical features of Indian coastal strips, monsoonal rainfall patterns, and island groups",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_9ee3a4e845",
+        "q_num": 84,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "00:10",
+        "avgTime": "00:36",
+        "question": "Which of the following weather monitoring systems was inaugurated by IITM Pune at Mahabaleshwar under Mission Mausam, aimed at improving short-term forecasting and real-time atmospheric tracking across Maharashtra regions in April 2026?",
+        "options": {
+          "a": "X-Band Doppler Weather Radar",
+          "b": "L-Band Satellite Imaging System",
+          "c": "C-Band Climate Observation Radar",
+          "d": "S-Band Storm Prediction Network"
+        },
+        "answer": "a",
+        "solution": "In Maharashtra, the Indian Institute of Tropical Meteorology (IITM) in Pune, recently commissioned a new X - band Doppler Weather Radar at Mahabaleshwar under Mission Mausam.\n\nThe radar was inaugurated by M. Ravichandran in the presence of senior scientists and officials from IITM and ISRO on 24th of this month.\n\nInstalled at an altitude of around 1, 400 metres in the Western Ghats, the radar acts as a weather eye in the sky, continuously monitoring atmospheric conditions.\n\nIt can track rainfall, clouds, storms, fog and strong winds in real time, and is expected to improve short - term weather forecasts of up to three hours for regions including Satara, Pune, Konkan and Mumbai. On the occasion, IITM also signed an MoU with ISRO\\'s Space Applications Centre (SAC) to jointly develop improved satellite - based weather products aimed at strengthening forecasts related to climate change, lightning, deep convection and air quality.\n\nThe system is expected to support flood and landslide warnings, aviation safety, agriculture advisory, disaster management and water resource planning.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Recent national technological initiatives and weather monitoring infrastructure projects in India.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Recent national technological initiatives and weather monitoring infrastructure projects in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_bfb71f4445",
+        "q_num": 85,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:10",
+        "avgTime": "00:25",
+        "question": "Which of the following international governing bodies is incorrectly matched with its headquarters?",
+        "options": {
+          "a": "World Health Organization (WHO) - Geneva, Switzerland",
+          "b": "United Nations Educational, Scientific and Cultural Organization (UNESCO) - Paris, France",
+          "c": "International Monetary Fund (IMF) - Geneva, Switzerland",
+          "d": "International Atomic Energy Agency (IAEA) - Vienna, Austria"
+        },
+        "answer": "c",
+        "solution": "The International Monetary Fund (IMF) is headquartered in Washington, D.C., United States, not Geneva, Switzerland.\n\nThe IMF was established in 1944 to promote international monetary cooperation, financial stability and sustainable economic growth.\n\nFurther Insights: • The WHO was established on 7 April 1948, a date observed annually as World Health Day.\n• UNESCO was founded in 1945 to promote international cooperation in education, science, culture and communication.\n• The IMF and the World Bank were created at the Bretton Woods Conference in 1944 and are both headquartered in Washington, D.C.\n• The IAEA was established in 1957 and functions as an autonomous international organization within the United Nations system, headquartered in Vienna.",
+        "image": null,
+        "topic": "International Organisations",
+        "subtopic": "Un Global Bodies",
+        "conceptTested": "Headquarters of major international institutions and specialized agencies.",
+        "tags": {
+          "topic": "International Organisations",
+          "subtopic": "Un Global Bodies",
+          "conceptTested": "Headquarters of major international institutions and specialized agencies.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -5623,6 +5815,358 @@
         },
         "mockId": "mock_1789515022905_egyvl",
         "testId": "mock_1789515022905_egyvl"
+      },
+      {
+        "id": "gene_3bd5f29755",
+        "q_num": 103,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:17",
+        "avgTime": "00:14",
+        "question": "Kadambari is one of the famous Sanskrit work of",
+        "options": {
+          "a": "Banabhatta",
+          "b": "Kalidasa",
+          "c": "Harsha",
+          "d": "Ashvagosha"
+        },
+        "answer": "a",
+        "solution": "Banabhatta was the Asthana Kavi in the court of King Harsha Vardhana who reigned from C. 606 - 647 CE in North India first from Sthanishvara (Thanesvar), and later Kanauj.\n\nBana's principal works include a biography of Harsha, the 'Harshacharita' (Deeds of Harsha) and one of the world's earliest novels 'Kadambari'.\n\nBana died before completing the novel and it was completed by his son Bhushanbhatta.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Literary works and court poets of Ancient Indian dynasties",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Literary works and court poets of Ancient Indian dynasties",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2f904d0f10",
+        "q_num": 104,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:24",
+        "question": "In April 2026, which official AI-powered 24 X 7 virtual assistant was launched by the Income Tax Department alongside the 'PRARAMBH' initiative to simplify tax queries and direct tax processes?",
+        "options": {
+          "a": "Kar Saathi",
+          "b": "Tax Mitra",
+          "c": "Aaykar Sathi",
+          "d": "Viksit Tax"
+        },
+        "answer": "a",
+        "solution": "The Income Tax Department launched 'Kar Saathi', an official AI - powered 24 X 7 virtual assistant, under the PRARAMBH 2026 initiative.\n\nIntegrated with the official Income Tax Department website, it provides real - time assistance on Income Tax Return (ITR) filing, tax notices, refunds, forms, and provisions of the Income - tax Act, 2025.\n\nFurther Insights: • PRARAMBH 2026 is a nationwide outreach programme launched to create awareness about the Income - tax Act, 2025 and its implementation from 1 April 2026.\n• Along with Kar Saathi, the Department introduced \"Kar Setu\", a compilation of FAQs to help taxpayers transition from the Income - tax Act, 1961 to the Income - tax Act, 2025.\n• Kar Saathi provides guidance on ITR filing, refunds, tax notices, forms, deductions and other basic direct tax queries.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Recent government technological initiatives and portals launched in current affairs.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Recent government technological initiatives and portals launched in current affairs.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c398e98cca",
+        "q_num": 105,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:12",
+        "avgTime": "00:13",
+        "question": "The 'Natya Shastra', the foundational Sanskrit treatise on dramaturgy, dance and music and the source of the classical theory of 'Rasa' is attributed to which sage?",
+        "options": {
+          "a": "Bharata Muni",
+          "b": "Panini",
+          "c": "Patanjali",
+          "d": "Valmiki"
+        },
+        "answer": "a",
+        "solution": "The Natya Shastra is an ancient Sanskrit treatise on the performing arts, traditionally attributed to the sage Bharata Muni. It systematically lays down principles of drama, dance, music, and aesthetics, most notably the theory of 'Rasa' (aesthetic emotion/flavour), which continues to underpin Indian classical performing arts.\n\nFurther Insights: The text is generally dated between 200 BCE and 200 CE and is regarded as the earliest surviving work of dramatic theory in the world, predating comparable Greek and Roman treatises on the subject.",
+        "image": null,
+        "topic": "Folk & Classical Dances",
+        "subtopic": "Classical & Folk Dances",
+        "conceptTested": "Historical dance and drama treatises and their traditional authors in Indian culture.",
+        "tags": {
+          "topic": "Folk & Classical Dances",
+          "subtopic": "Classical & Folk Dances",
+          "conceptTested": "Historical dance and drama treatises and their traditional authors in Indian culture.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_33bc28368c",
+        "q_num": 106,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:15",
+        "avgTime": "00:29",
+        "question": "Consider the following statements:\n\nI. PM Surya Ghar: Muft Bijli Yojana (PMSGMBY) aims to provide free electricity through rooftop solar systems to 1 crore residential households.\n\nII. The scheme is implemented by the Ministry of New and Renewable Energy (MNRE).\n\nIII. The scheme was launched by Prime Minister Narendra Modi on 13th February 2023.\n\nWhich of the above statements is/are correct?",
+        "options": {
+          "a": "I and II Only",
+          "b": "II and III Only",
+          "c": "I, II and III",
+          "d": "I and III Only"
+        },
+        "answer": "a",
+        "solution": "PM Surya Ghar: Muft Bijli Yojana (PMSGMBY), the world's largest domestic rooftop solar initiative, has achieved a significant milestone by completing 10.09 lakh installations across the country as of 10th March 2025.\n\nThe scheme is implemented by the Ministry of New and Renewable Energy (MNRE).\n\nThis ambitious scheme, launched by Prime Minister Shri Narendra Modi on 13th February 2024, aims to provide free electricity through rooftop solar systems to 1 crore residential households and reduce dependence on conventional power sources while enabling citizens to become energy producers.\n\nThe scheme enables every household to contribute to climate change mitigation by reducing carbon emissions equivalent to planting 100 trees.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Objectives and implementing ministries of prominent central government rooftop solar schemes.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Objectives and implementing ministries of prominent central government rooftop solar schemes.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c3260ea8b8",
+        "q_num": 107,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:16",
+        "avgTime": "00:26",
+        "question": "Which form of market structure is characterized by a small number of dominant firms, high barriers to entry, and strong mutual interdependence among competitors?",
+        "options": {
+          "a": "Perfect Competition",
+          "b": "Monopoly",
+          "c": "Oligopoly",
+          "d": "Monopolistic Competition"
+        },
+        "answer": "c",
+        "solution": "An oligopoly is a market structure in which a few large firms dominate the market.\n\nIt is characterized by high barriers to entry, mutual interdependence among firms, and significant influence of each firm's pricing and output decisions on its competitors.\n\nFirms often compete through advertising, product differentiation and other non - price strategies rather than frequent price changes.\n\nFurther Insights: • Oligopoly may involve homogeneous products (pure oligopoly) or differentiated products (differentiated oligopoly).\n• A market with exactly two firms is called a duopoly, which is a special case of oligopoly.\n• Examples of oligopolistic industries include automobiles, telecommunications, airlines and steel manufacturing.",
+        "image": null,
+        "topic": "Microeconomics & Markets",
+        "subtopic": "Microeconomics & Markets",
+        "conceptTested": "Key characteristics of an oligopoly market structure including barriers to entry and mutual interdependence.",
+        "tags": {
+          "topic": "Microeconomics & Markets",
+          "subtopic": "Microeconomics & Markets",
+          "conceptTested": "Key characteristics of an oligopoly market structure including barriers to entry and mutual interdependence.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_cab236328a",
+        "q_num": 108,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:26",
+        "question": "Consider the following statements regarding economic reforms in India:\n\ni. The economic reforms introduced in 1991 included both stabilisation measures and structural reform measures.\n\nii. Stabilisation measures were long-term policies aimed at improving efficiency and international competitiveness of the Indian economy.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "i only",
+          "b": "ii only",
+          "c": "Both i and ii",
+          "d": "Neither i nor ii"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct as the New Economic Policy (NEP) comprised stabilisation and structural reforms.\nStatement 2 is incorrect because stabilisation measures are short - term measures aimed at correcting balance of payments problems and controlling inflation, while structural reforms are long - term in nature.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "General Economics & Finance",
+        "conceptTested": "Objectives of stabilisation and structural adjustment measures in India's 1991 reforms",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "General Economics & Finance",
+          "conceptTested": "Objectives of stabilisation and structural adjustment measures in India's 1991 reforms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_347e7b93b9",
+        "q_num": 109,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:16",
+        "avgTime": "00:34",
+        "question": "Which of the following is a non-metal that exists in gaseous form at room temperature?",
+        "options": {
+          "a": "Sulfur\n(S)",
+          "b": "Bromine (Br)",
+          "c": "Fluorine (F)",
+          "d": "Nitrogen (N)"
+        },
+        "answer": "c",
+        "solution": "Sulfur (S) is a non - metal, but it exists as a solid at room temperature.\n\nBromine (Br) is a non - metal, but it exists as a liquid at room temperature. It is one of the few elements that exist in a liquid state at or near room temperature.\n\n· Fluorine (F) is a non - metal that exists as a gas at room temperature. It is a highly reactive and poisonous pale yellow gas.\n\n· Nitrogen (N) is a non - metal that also exists as a gas at room temperature. Nitrogen makes up about $78\\%$ of Earth's atmosphere and exists as diatomic molecules ($N_2$).",
+        "image": null,
+        "topic": "Chemistry",
+        "subtopic": "Acids, Bases, Metals & Periodic Table",
+        "conceptTested": "Physical states of non-metals at room temperature",
+        "tags": {
+          "topic": "Chemistry",
+          "subtopic": "Acids, Bases, Metals & Periodic Table",
+          "conceptTested": "Physical states of non-metals at room temperature",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_03d1e07ba2",
+        "q_num": 110,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:17",
+        "question": "Which of the following is the metamorphic form of Limestone?",
+        "options": {
+          "a": "Gneiss",
+          "b": "Marble",
+          "c": "Serpentine",
+          "d": "Schist"
+        },
+        "answer": "b",
+        "solution": "· Marble is the metamorphic form of Limestone.\n\n· Gneiss is the metamorphic form of Granites.\n\n· Serpentine is metamorphic form of Gabbro rocks.\n\n· Schist is the metamorphic form of Clays.",
+        "image": null,
+        "topic": "Physical Geography",
+        "subtopic": "Agriculture, Crops & Mineral Resources",
+        "conceptTested": "Metamorphic transformation of sedimentary and igneous rocks",
+        "tags": {
+          "topic": "Physical Geography",
+          "subtopic": "Agriculture, Crops & Mineral Resources",
+          "conceptTested": "Metamorphic transformation of sedimentary and igneous rocks",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_96c04d3a5c",
+        "q_num": 111,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:21",
+        "question": "Which state had the lowest fertility rate according to Census 2011?",
+        "options": {
+          "a": "Sikkim",
+          "b": "Kerala",
+          "c": "West Bengal",
+          "d": "Punjab"
+        },
+        "answer": "a",
+        "solution": "• Sikkim had the lowest fertility rate at 1.45 children per woman.\nFurther Insight: • The TFR is the number of children a woman would have if she were to live to the end of her childbearing years\n• National Fertility Rate: 2.3 children per woman\n○ Highest: Bihar (3.4), Uttar Pradesh (3.17)\n○ Lowest: Sikkim (1.45), West Bengal (1.64)",
+        "image": null,
+        "topic": "Census & Demographics",
+        "subtopic": "Demographic Indicators",
+        "conceptTested": "Census 2011 demographic data regarding fertility rates across Indian states.",
+        "tags": {
+          "topic": "Census & Demographics",
+          "subtopic": "Demographic Indicators",
+          "conceptTested": "Census 2011 demographic data regarding fertility rates across Indian states.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b72bf700f3",
+        "q_num": 112,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:15",
+        "avgTime": "00:21",
+        "question": "Which of the following statements correctly describes Newton\\'s Second Law of Motion?",
+        "options": {
+          "a": "Every object continues in its state of rest or uniform motion in a straight line unless acted upon by an external unbalanced force.",
+          "b": "The rate of change of momentum of an object is directly proportional to the applied unbalanced force and takes place in the direction of the force.",
+          "c": "To every action, there is an equal and opposite reaction that acts simultaneously on the same body to maintain equilibrium.",
+          "d": "The net electrostatic force between two point charges is inversely proportional to the product of their masses and distance squared."
+        },
+        "answer": "b",
+        "solution": "Newton\\'s Second Law of Motion states that the rate of change of momentum of an object is directly proportional to the applied unbalanced force and occurs in the direction of the force. Mathematically, for a constant mass, this gives the relation $F = ma$.\n\nOption (a): This statement describes Newton\\'s First Law of Motion, also known as the Law of Inertia.\nOption (c): This statement refers to Newton\\'s Third Law of Motion. Moreover, action and reaction act on two different bodies, not on the same body.\nOption (d): This statement is unrelated to Newton\\'s Laws of Motion. It incorrectly mixes electrostatic force with mass.\nFurther Insights: • Momentum is the product of mass and velocity: $p = mv$.\n• The SI unit of force is the newton (N), where $1\\text{ N} = 1\\text{ kg m s}^{-2}$.\n• A force of one newton produces an acceleration of $1\\text{ m/s}^2$ in a body of mass $1\\text{ kg}$.",
+        "image": null,
+        "topic": "Physics",
+        "subtopic": "Mechanics, Force & Motion",
+        "conceptTested": "Newton\\'s Laws of Motion and definition of force and momentum.",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Mechanics, Force & Motion",
+          "conceptTested": "Newton\\'s Laws of Motion and definition of force and momentum.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5d08f06d5b",
+        "q_num": 113,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:36",
+        "avgTime": "00:28",
+        "question": "Consider the following statements about 'Sahitya Akademi Award'.\n\nI. It is given annually to those who have achieved brilliance in literature.\n\nII. It is not given to the literary works in English language.\n\nWhich of the above-mentioned statements is/are INCORRECT?",
+        "options": {
+          "a": "Only I",
+          "b": "Only II",
+          "c": "Both I and II",
+          "d": "Neither I nor II"
+        },
+        "answer": "b",
+        "solution": "Sahitya Akademi Award is given to those who achieve brilliance in literature. This award was instituted in 1954 and is given by the 'Sahitya Akademi'.\n\nIt is given annually to those who have achieved literary merit and created new trends by publishing their works, prose or poetry, in any of the 24 major languages recognized by the Akademi. So, statement I is correct.\n\nBesides the 22 languages enumerated in the Constitution of India, Sahitya Akademi has recognized English and Rajasthani as languages. Hence, works in these languages are also recognized. So, statement II is incorrect.",
+        "image": null,
+        "topic": "Awards & Honours",
+        "subtopic": "National & International Awards",
+        "conceptTested": "Criteria, governing bodies, and eligible languages for the Sahitya Akademi Award.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "National & International Awards",
+          "conceptTested": "Criteria, governing bodies, and eligible languages for the Sahitya Akademi Award.",
+          "difficulty": "hard"
+        }
       }
     ]
   }

@@ -3611,6 +3611,198 @@
           "conceptTested": "Conversion of past modal continuous active voice (Subject + modal + have + been + verb-ing + object) to passive voice (Object + modal + have + been + being + V3 + by subject).",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "engl_c700d4b880",
+        "q_num": 117,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "03:44",
+        "avgTime": "01:59",
+        "question": "What is the central idea of the passage?",
+        "options": {
+          "a": "Happiness as a continuous state leads to emotional stability and long-term fulfilment",
+          "b": "Emotional contrast is essential for meaning, and quotes help interpret human experience",
+          "c": "Quotes are primarily literary expressions used to beautify language and communication",
+          "d": "Human life is best understood through the constant pursuit of uninterrupted happiness"
+        },
+        "answer": "b",
+        "solution": "The passage consistently argues that happiness derives meaning through contrast and cannot be understood in isolation. It further highlights that quotes act as emotional and intellectual anchors, helping individuals interpret such experiences. Option (A) is incorrect as the passage suggests uninterrupted happiness becomes burdensome, not stabilising. Option (C) is incorrect because quotes are described as condensed expressions of lived experience, not mere decorative tools. Option (D) is also incorrect as the passage rejects the idea of continuous happiness as the ultimate goal.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Tone, Theme & Main Idea",
+        "conceptTested": "Comprehending the central theme and author's perspective in a passage",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Tone, Theme & Main Idea",
+          "conceptTested": "Comprehending the central theme and author's perspective in a passage",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_72538b0972",
+        "q_num": 118,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:29",
+        "avgTime": "00:16",
+        "question": "Select the option that expresses the given sentence in active voice.\n\nAn intricate painting had been created by him over several weeks.",
+        "options": {
+          "a": "He created an intricate painting over several weeks.",
+          "b": "He was creating an intricate painting over several weeks.",
+          "c": "He had created an intricate painting over several weeks.",
+          "d": "He had been creating an intricate painting over several weeks."
+        },
+        "answer": "c",
+        "solution": "The passive voice sentence \"An intricate painting had been created by him over several weeks\" is in the Past Perfect Tense.\n\nTo convert it into the active voice: 1. The object of the passive sentence ('he') becomes the subject ('He').\n2. The passive verb phrase 'had been created' changes to the active past perfect form 'had created'.\n3. The subject of the passive sentence ('an intricate painting') becomes the object.\nThus, the correct active sentence is: \"He had created an intricate painting over several weeks.\"",
+        "image": null,
+        "topic": "Active & Passive Voice",
+        "subtopic": "Tense Conversions",
+        "conceptTested": "Conversion of Past Perfect Passive voice (had + been + V3) to Active voice (had + V3)",
+        "tags": {
+          "topic": "Active & Passive Voice",
+          "subtopic": "Tense Conversions",
+          "conceptTested": "Conversion of Past Perfect Passive voice (had + been + V3) to Active voice (had + V3)",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_2a8b5bdf5c",
+        "q_num": 119,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:12",
+        "avgTime": "00:16",
+        "question": "Select the most appropriate synonym of the given word.\n\nMundane",
+        "options": {
+          "a": "Maleficent",
+          "b": "Ingenious",
+          "c": "Supportive",
+          "d": "Banal"
+        },
+        "answer": "d",
+        "solution": "Mundane means common, ordinary, or unimaginative.\n\nBanal means devoid of freshness, originality, or novelty, making it the most appropriate synonym. - Maleficent: doing evil or harm. - Ingenious: cleverly inventive or resourceful.",
+        "image": null,
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Identifying words with similar meanings (vocabulary enhancement)",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Identifying words with similar meanings (vocabulary enhancement)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_6c0688d7a3",
+        "q_num": 120,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:18",
+        "avgTime": "00:58",
+        "question": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\n\nA) Several factors contribute to their occurrence, including hormonal fluctuations, genetic predispositions, certain medications, dietary choices, stress, and inadequate skincare habits.\n\nB) Hormonal shifts, particularly during puberty, menstruation, or pregnancy, often trigger increased oil production, exacerbating the likelihood of breakouts.\n\nC) Moreover, poor dietary choices high in refined sugars and dairy can influence hormone levels, potentially worsening acne.\n\nD) Breakouts manifest when hair follicles become obstructed by excess oil, dead skin cells, and bacteria.",
+        "options": {
+          "a": "BDAC",
+          "b": "DABC",
+          "c": "ACBD",
+          "d": "DCBA"
+        },
+        "answer": "b",
+        "solution": "The correct order of the sentences to form a coherent paragraph is DABC. Sentence D introduces the process of breakouts that occur due to the obstruction of hair follicles by oil, dead skin cells, and bacteria. Sentence A follows the introduction of breakouts and lists various factors that contribute to their occurrence. Continuing from the contributing factors, sentence B emphasises hormonal shifts during specific life stages and highlights their role in increasing oil production and worsening the likelihood of breakouts. Sentence C concludes the paragraph and elaborates on the impact of poor dietary choices, specifically refined sugars and dairy, on hormone levels. Hence, option (b) is the correct answer.",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical flow from introductory definition to general causes, specific triggers, and concluding details.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical flow from introductory definition to general causes, specific triggers, and concluding details.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_6ac947bc62",
+        "q_num": 121,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:11",
+        "avgTime": "00:14",
+        "question": "Select the most appropriate synonym of the given word.\n\nAbhorrent",
+        "options": {
+          "a": "Racism",
+          "b": "Inspiring",
+          "c": "Detestable",
+          "d": "Loved"
+        },
+        "answer": "c",
+        "solution": "Abhorrent means inspiring disgust and loathing; repugnant. Detestable means deserving intense dislike. Both words are similar in meaning. Hence, option (c) is the correct answer.\n\nRacism: the belief that some human groups are better than others; unfair ways of treating people of different races.\nInspiring: causing you to feel confident about yourself or eager to learn or do something.\nLoved: to like or enjoy something very much.",
+        "image": null,
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary association based on semantic similarity of adjectives denoting extreme dislike or disgust.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary association based on semantic similarity of adjectives denoting extreme dislike or disgust.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_e649191500",
+        "q_num": 122,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:12",
+        "avgTime": "00:26",
+        "question": "Complete the sentence in indirect speech.\n\n\"Shall we start the meeting now?\" she said.\n\nShe suggested ________ the meeting then.",
+        "options": {
+          "a": "to start",
+          "b": "starting",
+          "c": "start",
+          "d": "to starting"
+        },
+        "answer": "b",
+        "solution": "Among the given options, 'starting' is the best fit because suggestions in indirect speech take the gerund form after 'suggested.' Hence, (b) is the correct answer. 'To start' would require a different structure (e.g., 'suggested that we should start'), 'start' is incorrect after 'suggested, ' and 'to starting' is grammatically wrong.",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Interrogative Sentences",
+        "conceptTested": "Conversion of direct speech questions into indirect narration using appropriate reporting verbs and gerund structures.",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Interrogative Sentences",
+          "conceptTested": "Conversion of direct speech questions into indirect narration using appropriate reporting verbs and gerund structures.",
+          "difficulty": "medium"
+        }
       }
     ]
   }

@@ -458,7 +458,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                   {/* 2. Sub-Type Pills (Appears when you click "Silly Mistakes") */}
                   {(modalErrorFilter === 'S' || modalErrorFilter === 'A') && (
                     <div className="flex flex-wrap items-center gap-1.5 pt-2.5 border-t border-white/20 mt-1">
-                      {/* (i) Icon on the left for Revision Mode */}
+                      {/* Revise Mistakes Toggle Pill */}
                       <button
                         type="button"
                         onClick={() => setShowSillyRevisionList(prev => !prev)}
@@ -469,7 +469,6 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                         }`}
                         title={showSillyRevisionList ? "Switch back to Question Cards" : "Revise Silly Mistakes (typed notes & slips only, not questions)"}
                       >
-                        <Info className="w-3.5 h-3.5 text-amber-200" />
                         <span>{showSillyRevisionList ? 'Show Questions' : 'Revise Mistakes'}</span>
                         <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
                           showSillyRevisionList ? 'bg-black/20 text-slate-950 font-black' : 'bg-black/20 text-white'
@@ -982,6 +981,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                               title={badge.noteText ? `Silly Mistake: ${badge.noteText}` : badge.label}
                             >
                               <span>{badge.icon}</span>
+                              <span className="shrink-0"><Info className="w-3 h-3 text-slate-400" /></span>
                               <span className="truncate">{badge.label}</span>
                               {badge.noteText && (
                                 <span className="text-[9px] opacity-75 font-normal truncate max-w-[130px] italic">

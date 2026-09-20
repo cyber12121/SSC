@@ -1430,6 +1430,134 @@
         },
         "mockId": "mock_1789515022905_egyvl",
         "testId": "mock_1789515022905_egyvl"
+      },
+      {
+        "id": "reas_820c765699",
+        "q_num": 47,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:54",
+        "avgTime": "00:26",
+        "question": "Find the missing term of the series:\n\nR5, Q7, O10, L12, ?",
+        "options": {
+          "a": "H14",
+          "b": "I14",
+          "c": "J13",
+          "d": "H15"
+        },
+        "answer": "d",
+        "solution": "For letters: \\(R - 1 = Q\\), \\(Q - 2 = O\\), \\(O - 3 = L\\), \\(L - 4 = H\\).\nFor numbers: \\(5 + 2 = 7\\), \\(7 + 3 = 10\\), \\(10 + 2 = 12\\), \\(12 + 3 = 15\\).\n\nThus, the missing term is \\(H15\\).",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Letter & Symbol Series",
+        "conceptTested": "Simultaneous application of alphabetical shift sequences and numerical arithmetic progressions.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Letter & Symbol Series",
+          "conceptTested": "Simultaneous application of alphabetical shift sequences and numerical arithmetic progressions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_e9562b90c7",
+        "q_num": 48,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:34",
+        "avgTime": "00:26",
+        "question": "In the following question, three statements are given and two conclusions are given below these statements. Choose the option which shows the conclusions which logically follow from the given statements, disregarding commonly known facts.\n\nStatements:\nSome words are alphabets.\nAll letters are words.\nSome lines are letters.\n\nConclusions:\nI. All lines are alphabets.\nII. Some lines are words.",
+        "options": {
+          "a": "Only I follows",
+          "b": "Only II follows",
+          "c": "Both I and II follow",
+          "d": "Neither I nor II follows"
+        },
+        "answer": "b",
+        "solution": "Based on the statements, all letters are words and some lines are letters, which implies that the lines that are letters are also words. Thus, some lines are words. There is no direct relation established between lines and alphabets. Hence, only conclusion II follows.",
+        "image": null,
+        "topic": "Syllogism",
+        "subtopic": "Standard Syllogism (Venn)",
+        "conceptTested": "Venn diagram intersection analysis and immediate logical deduction from categorical premises.",
+        "tags": {
+          "topic": "Syllogism",
+          "subtopic": "Standard Syllogism (Venn)",
+          "conceptTested": "Venn diagram intersection analysis and immediate logical deduction from categorical premises.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_8694e81341",
+        "q_num": 49,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:24",
+        "avgTime": "00:14",
+        "question": "If $a \\% b = 90$, where $a \\% b = (a + b) \\times 3$, then find $(a, b)$.",
+        "options": {
+          "a": "20, 10",
+          "b": "22, 5",
+          "c": "12, 12",
+          "d": "11, 15"
+        },
+        "answer": "a",
+        "solution": "Given:\n$(a + b) \\times 3 = 90$\n\nOption (a): 20, 10 $\\rightarrow (20 + 10) \\times 3 = 30 \\times 3 = 90$ (Correct)\nOption (b): 22, 5 $\\rightarrow (22 + 5) \\times 3 = 27 \\times 3 = 81$\nOption (c): 12, 12 $\\rightarrow (12 + 12) \\times 3 = 24 \\times 3 = 72$\nOption (d): 11, 15 $\\rightarrow (11 + 15) \\times 3 = 26 \\times 3 = 78$\nHence, correct answer is option (A).",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Arithmetic equation evaluation and substitution based on BODMAS rules",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Arithmetic equation evaluation and substitution based on BODMAS rules",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_0ec6ac0128",
+        "q_num": 50,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:56",
+        "avgTime": "00:33",
+        "question": "If '+' means '×', '-' means '÷', '×' means '-' and '÷' means '+', then what will be the value of 46 ÷ 12 + 8 × 363 - 33?",
+        "options": {
+          "a": "130",
+          "b": "121",
+          "c": "131",
+          "d": "133"
+        },
+        "answer": "c",
+        "solution": "After interchanging the signs according to the given rules: The given expression becomes: 46 + 12 × 8 - 363 ÷ 33\nUsing BODMAS: = 46 + 96 - 11 = 142 - 11 = 131",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Operator substitution and BODMAS rule application",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Operator substitution and BODMAS rule application",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -1903,6 +2031,38 @@
         },
         "mockId": "mock_1789515022905_egyvl",
         "testId": "mock_1789515022905_egyvl"
+      },
+      {
+        "id": "reas_43602c8069",
+        "q_num": 16,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "01:51",
+        "avgTime": "01:05",
+        "question": "Select the number from among the given options that can replace the questions mark (?) in the following series:\n\n484, 1213, 701, 1044, ?, 953",
+        "options": {
+          "a": "919",
+          "b": "1169",
+          "c": "828",
+          "d": "576"
+        },
+        "answer": "c",
+        "solution": "484 + 9³ = 484 + 729 = 1213\n1213 - 8³ = 1213 - 512 = 701\n701 + 7³ = 701 + 343 = 1044\n1044 - 6³ = 1044 - 216 = 828\n828 + 5³ = 828 + 125 = 953",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Alternating cubic additions and subtractions: $+9^3$, $-8^3$, $+7^3$, $-6^3$, $+5^3$",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Alternating cubic additions and subtractions: $+9^3$, $-8^3$, $+7^3$, $-6^3$, $+5^3$",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -3213,6 +3373,262 @@
         },
         "mockId": "mock_1789515022905_egyvl",
         "testId": "mock_1789515022905_egyvl"
+      },
+      {
+        "id": "reas_67df12b434",
+        "q_num": 43,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "01:20",
+        "avgTime": "01:25",
+        "question": "In the following question, which one set of letters when sequentially placed at the gaps in the given letter series shall complete it?\n\na \\_ b \\_ a b b \\_ a b \\_ \\_ a \\_ b c",
+        "options": {
+          "a": "abccba",
+          "b": "ababac",
+          "c": "bacbab",
+          "d": "bacbac"
+        },
+        "answer": "c",
+        "solution": "The pattern follows repeating segments: \\(a \\, b \\, b \\, a / a \\, b \\, b \\, c / a \\, b \\, b \\, a / a \\, b \\, b \\, c\\). Filling the blanks yields \\(b \\, a \\, c \\, b \\, a \\, b\\).",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Continuous Pattern Letter Series",
+        "conceptTested": "Identification of recurring block patterns in continuous letter sequences.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Continuous Pattern Letter Series",
+          "conceptTested": "Identification of recurring block patterns in continuous letter sequences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_2b7394417f",
+        "q_num": 44,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:21",
+        "avgTime": "00:21",
+        "question": "In a coded inequality, if 'U / V' means 'U is not greater than V', which of the following is true?",
+        "options": {
+          "a": "U is greater than V",
+          "b": "U is equal to V",
+          "c": "U is smaller than V",
+          "d": "Either b or c"
+        },
+        "answer": "d",
+        "solution": "The statement 'U / V' means U can be smaller than V or equal to V. A single exact relation between 'smaller than' and 'equal to' cannot be fixed independently. Therefore, either \\(U = V\\) or \\(U < V\\) is true.",
+        "image": null,
+        "topic": "Inequalities",
+        "subtopic": "Coded Inequalities",
+        "conceptTested": "Interpretation of composite inequality symbols combining less than and equal to relations.",
+        "tags": {
+          "topic": "Inequalities",
+          "subtopic": "Coded Inequalities",
+          "conceptTested": "Interpretation of composite inequality symbols combining less than and equal to relations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d3359df025",
+        "q_num": 45,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:15",
+        "avgTime": "00:25",
+        "question": "If BIRD is coded as the sum of its letter positions multiplied by the length of the word, what will be the code?",
+        "options": {
+          "a": "124",
+          "b": "138",
+          "c": "132",
+          "d": "146"
+        },
+        "answer": "c",
+        "solution": "Alphabet positions are \\(A = 1, B = 2, \\dots, Z = 26\\).\n\nFor BIRD: \\(B = 2, I = 9, R = 18, D = 4\\)\nSum of letter positions = \\(2 + 9 + 18 + 4 = 33\\)\nLength of the word = \\(4\\)\nCode = \\(33 \\times 4 = 132\\)",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Letter Shift & Pattern Coding",
+        "conceptTested": "Positional alphabet values combined with word-length multiplier rules.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Letter Shift & Pattern Coding",
+          "conceptTested": "Positional alphabet values combined with word-length multiplier rules.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_25e70b580b",
+        "q_num": 46,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:37",
+        "avgTime": "00:25",
+        "question": "Which letter in the word \"MERCHANTS\" is immediately to the right of the letter which is equidistant from both ends?",
+        "options": {
+          "a": "A",
+          "b": "H",
+          "c": "C",
+          "d": "N"
+        },
+        "answer": "a",
+        "solution": "The word MERCHANTS has 9 letters.\n\nIn a 9 - letter word, the letter equidistant from both ends is the 5th letter.\n\nM E R C H A N T S\n\nThe 5th letter is H.\n\nThe letter immediately to the right of H is A.\n\nHence, the required letter is A.",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Word Rearrangement",
+        "conceptTested": "Finding the middle position and adjacent character in a given letter string",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Word Rearrangement",
+          "conceptTested": "Finding the middle position and adjacent character in a given letter string",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_0003cabd54",
+        "q_num": 47,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:37",
+        "avgTime": "01:04",
+        "question": "A word is represented by only one set of numbers as given in any one of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices is represented first by its row and next by its column. e.g. 'C' can be represented by 00, 13 etc. and 'K' can be represented by 57, 65 etc. Similarly, you have to identify the set for the word 'LIGHT'.\n\nMatrix I\n\n| | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| 0 | C | X | A | N | I |\n| 1 | E | M | Z | C | V |\n| 2 | U | C | I | Z | Q |\n| 3 | J | H | Q | E | A |\n| 4 | I | Z | C | E | X |\n\nMatrix II\n\n| | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|\n| 5 | T | P | K | O | D |\n| 6 | K | L | G | B | W |\n| 7 | D | G | D | S | T |\n| 8 | B | O | F | B | K |\n| 9 | F | T | Y | L | G |",
+        "options": {
+          "a": "66, 04, 99, 31, 68",
+          "b": "98, 33, 67, 43, 55",
+          "c": "66, 40, 76, 31, 96",
+          "d": "75, 22, 99, 43, 79"
+        },
+        "answer": "c",
+        "solution": "From the matrix, we have - L $\\rightarrow$ 66, 98\n\nI $\\rightarrow$ 04, 22, 40\n\nG $\\rightarrow$ 67, 76, 99\n\nH $\\rightarrow$ 31\n\nT $\\rightarrow$ 55, 79, 96\n\nOnly option C has the codes of the letters in the same sequence.",
+        "image": null,
+        "topic": "Word Formation & Dictionary Order",
+        "subtopic": "Matrix Word Formation",
+        "conceptTested": "Decoding words from numbered matrix rows and columns",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "subtopic": "Matrix Word Formation",
+          "conceptTested": "Decoding words from numbered matrix rows and columns",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7cb3785c0e",
+        "q_num": 48,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "01:06",
+        "avgTime": "00:50",
+        "question": "Which of the following option will come in place of '?'",
+        "options": {
+          "a": "12",
+          "b": "13",
+          "c": "14",
+          "d": "15"
+        },
+        "answer": "a",
+        "solution": "$(6 - 1) \\times (5 - 1) = 20$\n\n$(8 - 1) \\times (9 - 1) = 56$\n\n$(3 - 1) \\times (7 - 1) = 12$",
+        "image": null,
+        "topic": "Missing Number / Matrix",
+        "subtopic": "Number Puzzles",
+        "conceptTested": "Pattern identification in arithmetic operations involving grid numbers",
+        "tags": {
+          "topic": "Missing Number / Matrix",
+          "subtopic": "Number Puzzles",
+          "conceptTested": "Pattern identification in arithmetic operations involving grid numbers",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7a59bc8e5b",
+        "q_num": 49,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:24",
+        "avgTime": "00:56",
+        "question": "Count the number of triangles in the given figure.",
+        "options": {
+          "a": "10",
+          "b": "9",
+          "c": "11",
+          "d": "12"
+        },
+        "answer": "a",
+        "solution": "ABD, ABG, ACD, ADE, AEG, BDG, CDE, DEF, DEG, DFG = 10 triangles",
+        "image": null,
+        "topic": "Figure Counting",
+        "subtopic": "Figure Counting",
+        "conceptTested": "Geometric shape decomposition and enumeration of internal triangles",
+        "tags": {
+          "topic": "Figure Counting",
+          "subtopic": "Figure Counting",
+          "conceptTested": "Geometric shape decomposition and enumeration of internal triangles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_020adb3e58",
+        "q_num": 50,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:24",
+        "avgTime": "00:23",
+        "question": "Select the option which is related to the third letter cluster in the same way as the second cluster is related to the first cluster.\n\nFHLO : EIMN : CTDY : ?",
+        "options": {
+          "a": "DUCZ",
+          "b": "BUEX",
+          "c": "BSCX",
+          "d": "BUCX"
+        },
+        "answer": "b",
+        "solution": "F - 1 = E\nH + 1 = I\nL + 1 = M\nO - 1 = N\nApplying the same pattern to CTDY: C - 1 = B\nT + 1 = U\nD + 1 = E\nY - 1 = X\n\nThus, CTDY relates to BUEX.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Positional alphabet shifting (-1, +1, +1, -1)",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Positional alphabet shifting (-1, +1, +1, -1)",
+          "difficulty": "medium"
+        }
       }
     ]
   }

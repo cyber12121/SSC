@@ -4853,6 +4853,166 @@
           "conceptTested": "Algebraic identity for difference of cubes: $m^3 - n^3 = (m - n)(m^2 + mn + n^2)$",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_1a2025249b",
+        "q_num": 155,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:01",
+        "avgTime": "00:32",
+        "question": "If $(1 + \\cot^2 A) \\times \\sin A = \\frac{2}{\\sqrt{3}}$, then what is the value of $\\cos(\\frac{A}{2})$?",
+        "options": {
+          "a": "$\\frac{\\sqrt{3}}{2}$",
+          "b": "\\sqrt{3}",
+          "c": "1",
+          "d": "$\\frac{1}{\\sqrt{2}}$"
+        },
+        "answer": "a",
+        "solution": "As $(1 + \\cot^2 A) = \\csc^2 A$\n\n$(1 + \\cot^2 A) \\times \\sin A$\n\n$= \\csc^2 A \\times \\sin A$\n\n$= \\csc A$\n\nSo, $\\csc A = \\frac{2}{\\sqrt{3}}$\n\n$A = 60^\\circ$\n\n$\\cos (\\frac{60}{2})^\\circ = \\cos (30)^\\circ = \\frac{\\sqrt{3}}{2}$",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Pythagorean identity $1 + \\cot^2 A = \\csc^2 A$ and standard trigonometric angle values.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Pythagorean identity $1 + \\cot^2 A = \\csc^2 A$ and standard trigonometric angle values.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_cb36751d44",
+        "q_num": 156,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:50",
+        "avgTime": "00:31",
+        "question": "What is the value of $\\cos 2A$ if $\\cos A = \\frac{2}{7}$?",
+        "options": {
+          "a": "-$\\frac{41}{49}$",
+          "b": "-$\\frac{17}{49}$",
+          "c": "$\\frac{41}{49}$",
+          "d": "$\\frac{17}{49}$"
+        },
+        "answer": "a",
+        "solution": "$\\cos A = \\frac{2}{7}$\n\nWe know that $\\cos 2A = 2\\cos^2 A - 1$\n\n$= 2 \\times (\\frac{4}{49}) - 1$\n\n$= \\frac{8}{49} - 1$\n\n$= \\frac{8 - 49}{49}$\n\n$= -\\frac{41}{49}$",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Double angle formula: $\\cos 2A = 2\\cos^2 A - 1$",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Double angle formula: $\\cos 2A = 2\\cos^2 A - 1$",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_b3a0f8c95a",
+        "q_num": 157,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:08",
+        "avgTime": "00:43",
+        "question": "Two varieties of pulses costing Rs $75$/kg and Rs $63$/kg are mixed in the ratio $3:1$ respectively. At what price should the mixture be sold to gain $20\\%$?",
+        "options": {
+          "a": "Rs 79.2 per kg",
+          "b": "Rs 84 per kg",
+          "c": "Rs 86.4 per kg",
+          "d": "Rs 88.8 per kg"
+        },
+        "answer": "c",
+        "solution": "Let $n$ kg of cheaper pulse be mixed with $3n$ kg of costlier pulse.\n\nTotal mixture $= 4n$ kg\nTotal price $= 75 \\times 3n + 63n = 288n$\nHence, cost per kg $= \\frac{288n}{4n} =$ Rs $72$/kg\nSelling price $= 72 \\times 1.2 =$ Rs $86.4$ / kg",
+        "image": null,
+        "topic": "Mixture & Alligation",
+        "subtopic": "Two-Liquid Mixtures & Ratios",
+        "conceptTested": "Weighted average cost price calculation and relation between cost price, profit percentage, and selling price.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "subtopic": "Two-Liquid Mixtures & Ratios",
+          "conceptTested": "Weighted average cost price calculation and relation between cost price, profit percentage, and selling price.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_1cdf040142",
+        "q_num": 158,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:18",
+        "avgTime": "01:00",
+        "question": "Reema sold 48 articles for ₹ 2,160 and suffered a loss of $10\\%$. How many articles should she sell for ₹ 2,016 to earn a profit of $12\\%$?",
+        "options": {
+          "a": "36",
+          "b": "40",
+          "c": "28",
+          "d": "32"
+        },
+        "answer": "a",
+        "solution": "Selling price of 48 articles = ₹ 2, 160\nCost price of 48 articles = $2160 \\times \\frac{100}{90} = \\text{₹ } 2400$\nCost price of 1 article = $\\frac{2400}{48} = \\text{₹ } 50$\nNew selling price of 1 article = $50 \\times \\frac{112}{100} = \\text{₹ } 56$\nNumber of articles she can sell for ₹ 2, 016 = $\\frac{2016}{56} = 36$",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Quantity & Article Variations",
+        "conceptTested": "Relationship between cost price, selling price, quantity, and percentage profit or loss.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Quantity & Article Variations",
+          "conceptTested": "Relationship between cost price, selling price, quantity, and percentage profit or loss.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_ad73eab7a0",
+        "q_num": 159,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:46",
+        "avgTime": "00:36",
+        "question": "A $400$ m train crosses a $350$ m train in $15$ s when moving in opposite directions. If the slower train runs at $54 \\text{ km/h}$, what is the faster train's speed in km/h?",
+        "options": {
+          "a": "130",
+          "b": "166",
+          "c": "172",
+          "d": "126"
+        },
+        "answer": "d",
+        "solution": "Speed of slower train = $54 \\text{ km/h} = 54 \\times \\frac{5}{18} = 15 \\text{ m/s}$.\n\nWhen trains are moving in opposite directions, relative speed is $v + 15$.\n\nUsing $\\text{Time} = \\frac{\\text{Total Distance}}{\\text{Relative Speed}}$: $$\\frac{400 + 350}{v + 15} = 15$$\n\n$$\\frac{750}{v + 15} = 15$$\n\n$$v + 15 = 50 \\implies v = 35 \\text{ m/s}$|\n\nConverting to km/h:\n$$35 × $\\frac{18}{5}$ = 126 \\text{ km/h}$$",
+        "image": null,
+        "topic": "Trains",
+        "subtopic": "Opposite Direction",
+        "conceptTested": "Relative speed in opposite direction is the sum of individual speeds: $S_{rel} = S_1 + S_2$.",
+        "tags": {
+          "topic": "Trains",
+          "subtopic": "Opposite Direction",
+          "conceptTested": "Relative speed in opposite direction is the sum of individual speeds: $S_{rel} = S_1 + S_2$.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -11580,6 +11740,166 @@
           "conceptTested": "Sum of squares equal to zero implies each individual squared term is zero: $(x - a)^2 + (y - b)^2 + (z - c)^2 = 0 \\implies x=a, y=b, z=c$",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_112bd62e84",
+        "q_num": 215,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "01:27",
+        "avgTime": "01:03",
+        "question": "A bank offers $20\\%$ p.a. compounded quarterly. A sum becomes ₹$23,152.5$ after $9$ months. Find the principal.",
+        "options": {
+          "a": "₹20000",
+          "b": "₹18400",
+          "c": "₹21000",
+          "d": "₹19200"
+        },
+        "answer": "a",
+        "solution": "For quarterly rate - $R = \\frac{20}{4} = 5\\%$\n\n$T = 4 \\times (\\frac{9}{12}) = 3$\n\nAmount $= P (1 + \\frac{R}{100})^T$\n\n$23152.5 = P (1 + \\frac{5}{100})^3$\n\n$P (\\frac{21}{20})^3 = 23152.5$\n\n$P = 23152.5 \\times \\frac{8000}{9261}$\n\n$P = 2.5 \\times 8000$\n\nP = ₹$20000$",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+        "conceptTested": "Compound Interest formula with quarterly compounding: $A = P(1 + \\frac{R/4}{100})^{4T}$",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+          "conceptTested": "Compound Interest formula with quarterly compounding: $A = P(1 + \\frac{R/4}{100})^{4T}$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cb447d217e",
+        "q_num": 216,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "01:59",
+        "avgTime": "01:35",
+        "question": "M, N, and O invested in a business in the ratio of $9:5:6$. After $7$ months, M withdrew from the business, and $9$ months later, O left. If the total profit after $1$ year and $6$ months is ₹$1200$, how much profit did M receive to the nearest whole number?",
+        "options": {
+          "a": "Rs.365",
+          "b": "Rs.345",
+          "c": "Rs.375",
+          "d": "Rs.380"
+        },
+        "answer": "a",
+        "solution": "Profit ratio of M, N, and O respectively $= 7 \\times 9 : 5 \\times 18 : 6 \\times 9 = 63 : 90 : 54 = 21 : 30 : 18 = 7 : 10 : 6$\nTotal profit $=$ Rs. $1200$\n\n$M$'s Share $= 1200 \\times \\frac{7}{23} =$ Rs. $365$",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Capital Time Period Variations",
+        "conceptTested": "Profit sharing ratio is proportional to the product of capital invested and the time period for which it is invested.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Capital Time Period Variations",
+          "conceptTested": "Profit sharing ratio is proportional to the product of capital invested and the time period for which it is invested.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6ab13e5002",
+        "q_num": 217,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:02",
+        "avgTime": "00:32",
+        "question": "A kite is flying in the sky with its string fully extended to $318$ m, making an angle of $45^\\circ$ with the ground. Find the height (in m) at which the kite is flying.",
+        "options": {
+          "a": "$318\\sqrt{2}$",
+          "b": "$106\\sqrt{3}$",
+          "c": "$318\\sqrt{3}$",
+          "d": "$159\\sqrt{2}$"
+        },
+        "answer": "d",
+        "solution": "Let $AC$ be the length of the string and $AB$ be the height at which the kite is flying.\n\nIn right - angled $\\Delta ABC$: $$\\sin(45^\\circ) = \\frac{AB}{AC}$$\n\n$$\\frac{1}{\\sqrt{2}} = \\frac{AB}{318}$$\n\n$$AB = \\frac{318}{\\sqrt{2}} = \\frac{159 \\times 2}{\\sqrt{2}} = 159\\sqrt{2} \\text{ m}$",
+        "image": null,
+        "topic": "Height & Distance",
+        "subtopic": "Heights & Distances",
+        "conceptTested": "Trigonometric ratio $\\sin(\\theta) = \\frac{\\text{Perpendicular}}{\\text{Hypotenuse}}$ in right-angled triangles.",
+        "tags": {
+          "topic": "Height & Distance",
+          "subtopic": "Heights & Distances",
+          "conceptTested": "Trigonometric ratio $\\sin(\\theta) = \\frac{\\text{Perpendicular}}{\\text{Hypotenuse}}$ in right-angled triangles.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f85a0a1aa7",
+        "q_num": 218,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "00:10",
+        "avgTime": "00:27",
+        "question": "The average weight of $30$ boys is $55\\text{ kg}$. If $5$ boys whose average weight is $50\\text{ kg}$ leave, what is the average weight of the remaining boys?",
+        "options": {
+          "a": "$56\\text{ kg}$",
+          "b": "$57\\text{ kg}$",
+          "c": "$58\\text{ kg}$",
+          "d": "$59\\text{ kg}$"
+        },
+        "answer": "a",
+        "solution": "Total weight = $30 \\times 55 = 1650$\nWeight removed = $5 \\times 50 = 250$\nRemaining weight = $1650 - 250 = 1400$\nNumber of remaining boys = $30 - 5 = 25$\nAverage = $\\frac{1400}{25} = 56\\text{ kg}$",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Age-based Averages",
+        "conceptTested": "Average = Sum of observations / Number of observations",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Age-based Averages",
+          "conceptTested": "Average = Sum of observations / Number of observations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b0129ccf60",
+        "q_num": 219,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:26",
+        "question": "If each side of a square is increased by $24\\%$, then what is the percentage increase in its area?",
+        "options": {
+          "a": "$48.96\\%$",
+          "b": "$57.14\\%$",
+          "c": "$45.84\\%$",
+          "d": "$53.76\\%$"
+        },
+        "answer": "d",
+        "solution": "Let side of the square be '$a$'.\nInitial area = $a^2$\nNew side = $1.24a$\nNew area = $(1.24a)^2 = 1.5376a^2$\nPercentage increase in area = $\\frac{1.5376a^2 - a^2}{a^2} \\times 100 = 53.76\\%$\nAlternatively, using the net percentage change formula: $\\text{Total change} = X + X + \\frac{X^2}{100}$\n\nGiven $X = 24\\%$, $\\text{Percentage increase} = 24 + 24 + \\frac{24 \\times 24}{100} = 48 + 5.76 = 53.76\\%$",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Percentage Change & Comparison",
+        "conceptTested": "Percentage increase formula for areas: $X + X + \\frac{X^2}{100}$",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Percentage Change & Comparison",
+          "conceptTested": "Percentage increase formula for areas: $X + X + \\frac{X^2}{100}$",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -14232,6 +14552,70 @@
           "topic": "Algebra",
           "subtopic": "Algebraic Identities",
           "conceptTested": "Expansion and simplification using $A^3 + B^3 + C^3 - 3ABC$ identity.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ae6ec0cae9",
+        "q_num": 85,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:56",
+        "avgTime": "00:40",
+        "question": "In $\\Delta WXY$, the internal bisector of $\\angle X$ and external bisector of $\\angle Y$ meet at point $Z$. If $\\angle XWY = 102^\\circ$, then the measure of $\\angle XZY$ is:",
+        "options": {
+          "a": "$51^\\circ$",
+          "b": "$61^\\circ$",
+          "c": "$49^\\circ$",
+          "d": "$58^\\circ$"
+        },
+        "answer": "a",
+        "solution": "Let $\\angle WXY = A^\\circ$, so $\\angle ZXY = \\frac{A}{2}$.\n\nSo, $\\angle Y = 102^\\circ + A^\\circ$ (sum of opposite interior angles).\n\nAnd, $\\angle WYX = 180^\\circ - \\angle Y = (78 - A)^\\circ$.\n\nAlso, $\\angle WYZ = \\frac{\\angle Y}{2} = (51 + \\frac{A}{2})^\\circ$.\n\nNow, $\\angle XYZ = \\angle WYX + \\angle WYZ = (129 - \\frac{A}{2})^\\circ$.\n\nThus, $\\angle XZY = 180^\\circ - (\\angle ZXY + \\angle XYZ) = 180^\\circ - (\\frac{A}{2} + 129 - \\frac{A}{2}) = 51^\\circ$.\n\nAlternate method (Short trick): The measure of the angle formed by the interior angle bisector of one base angle and the exterior angle bisector of the other base angle is half the measure of the third angle (vertex angle).\n\nSo, $\\angle XZY = \\frac{\\angle XWY}{2} = \\frac{102^\\circ}{2} = 51^\\circ$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "The angle between the internal bisector of one base angle and the external bisector of the other base angle in a triangle is equal to half of the third angle.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "The angle between the internal bisector of one base angle and the external bisector of the other base angle in a triangle is equal to half of the third angle.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7b14e13325",
+        "q_num": 86,
+        "mockId": "mock_1789911275027_vbzcz",
+        "testId": "mock_1789911275027_vbzcz",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:49",
+        "avgTime": "00:27",
+        "question": "Two parallel chords of length $6$ cm and $8$ cm lie on the opposite side of the diameter of the circle. If the length of the diameter is $10$ cm, find the distance between them.",
+        "options": {
+          "a": "5",
+          "b": "9",
+          "c": "7",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "Radius of the circle $r = \\frac{10}{2} = 5$ cm.\n\nLet $O$ be the center. The perpendicular distance from the center to the first chord of length $6$ cm bisects it into two segments of length $3$ cm each.\n\nUsing Pythagoras theorem in the right - angled triangle formed by the radius and half - chord: $$\\text{Distance } d_1 = \\sqrt{5^2 - 3^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4 \\text{ cm}$$\n\nSimilarly, for the second chord of length $8$ cm, half - length is $4$ cm. The perpendicular distance from the center is: $$\\text{Distance } d_2 = \\sqrt{5^2 - 4^2} = \\sqrt{25 - 16} = \\sqrt{9} = 3 \\text{ cm}$$\n\nSince the chords are on opposite sides of the diameter, the total distance between them is: $$d_1 + d_2 = 4 + 3 = 7 \\text{ cm}$$",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Perpendicular from the center of a circle to a chord bisects the chord, and applying the Pythagorean theorem in right-angled triangles formed by radii and chords.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Perpendicular from the center of a circle to a chord bisects the chord, and applying the Pythagorean theorem in right-angled triangles formed by radii and chords.",
           "difficulty": "medium"
         }
       }
