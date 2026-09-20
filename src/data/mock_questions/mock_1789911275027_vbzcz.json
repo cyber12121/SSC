@@ -11,7 +11,7 @@
     "correctOption": "C",
     "userTime": "01:20",
     "avgTime": "01:25",
-    "questionText": "In the following question, which one set of letters when sequentially placed at the gaps in the given letter series shall complete it?\n\na \\_ b \\_ a b b \\_ a b \\_ \\_ a \\_ b c",
+    "questionText": "In the following question, which one set of letters when sequentially placed at the gaps in the given letter series shall complete it?\n\naa _ b _ a b b _ a b _ _ a _ b c",
     "options": {
       "A": "abccba",
       "B": "ababac",
