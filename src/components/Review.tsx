@@ -374,7 +374,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
 
       // Update mock questions array in localStorage and trigger background persistence
-      if (result.id) {
+      if (result.id && !result.id.startsWith('local-')) {
         const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
         let cachedList: any[] = [];
         if (cachedRaw) {
@@ -501,7 +501,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
       // 2. Persist to localStorage
       if (typeof window !== 'undefined') {
-        if (result.id) {
+        if (result.id && !result.id.startsWith('local-')) {
           window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(currentRcaMap));
         }
 
@@ -587,7 +587,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           };
         });
 
-        if (result.id) {
+        if (result.id && !result.id.startsWith('local-')) {
           window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
           
           // 3. Post to backend /api/mock-questions/:id so disk storage also persists full attempts & RCA tags
@@ -1493,8 +1493,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           {/* ANALYTICS Button */}
           <button
             onClick={() => {
-              if (onViewAnalytics) onViewAnalytics();
-              else setShowSummaryModal(true);
+              if (result.id?.startsWith('local-')) {
+                setShowSummaryModal(true);
+              } else if (onViewAnalytics) {
+                onViewAnalytics();
+              } else {
+                setShowSummaryModal(true);
+              }
             }}
             className="bg-[#0288d1] hover:bg-[#0277bd] text-white text-xs font-bold px-4 py-1.5 rounded tracking-wider uppercase shadow transition-all active:scale-95"
           >
@@ -2847,12 +2852,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
 
             <div className="p-4 border-t border-gray-200 bg-gray-50 flex items-center justify-between">
-              <button
-                onClick={onReattempt}
-                className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded hover:bg-emerald-700 flex items-center cursor-pointer"
-              >
-                <RotateCcw className="w-3.5 h-3.5 mr-1.5" /> Reattempt Test
-              </button>
+              {!result.id?.startsWith('local-') && (
+                <button
+                  onClick={onReattempt}
+                  className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded hover:bg-emerald-700 flex items-center cursor-pointer"
+                >
+                  <RotateCcw className="w-3.5 h-3.5 mr-1.5" /> Reattempt Test
+                </button>
+              )}
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setShowSummaryModal(false)}

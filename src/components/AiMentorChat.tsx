@@ -281,6 +281,8 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
     .replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1')
     .replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1')
     .replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2')
+    .replace(/\\?text\s*left\b/gi, '\\left')
+    .replace(/\\?text\s*right\b/gi, '\\right')
     .replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac')
     .replace(/\\f\s*frac\b/g, '\\frac')
     .replace(/\\f\s*rac\b/g, '\\frac')
@@ -362,6 +364,8 @@ export function normalizeChatLatex(text: string): string {
   s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
   s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');
   s = s.replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2');
+  s = s.replace(/\\?text\s*left\b/gi, '\\left');
+  s = s.replace(/\\?text\s*right\b/gi, '\\right');
 
   // Clean formfeed / JSON escape artifacts on \frac
   s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
@@ -379,51 +383,89 @@ export function normalizeChatLatex(text: string): string {
   s = s.replace(/\$([^\$\n]+?)\\\$/g, '$$$1$$');
   s = s.replace(/\\\$/g, '$');
 
-  // 3. Clean stray markdown escapes on punctuation like \. or \- or \! or \) (e.g. "substitution)\." -> "substitution).")
+  // 3. Clean stray markdown escapes on punctuation like \. or \- or \! or \)
   s = s.replace(/\\([.!?,;:\-_~])/g, '$1');
 
-  // 4. Process lines for auto-closing dangling math and unwrapped LaTeX formulas
+  // 4. Auto-balance unclosed single $ on individual lines (e.g. streaming cutoff or LLM unclosed dollar sign)
+  const rawLines = s.split('\n');
+  const balancedLines = rawLines.map(line => {
+    let l = line;
+    const doubleCount = (l.match(/\$\$/g) || []).length;
+    if (doubleCount % 2 === 0) {
+      const withoutDouble = l.replace(/\$\$/g, '');
+      const singleCount = (withoutDouble.match(/\$/g) || []).length;
+      if (singleCount % 2 !== 0) {
+        l = l + '$';
+      }
+    }
+    return l;
+  });
+  s = balancedLines.join('\n');
+
+  // 5. PROTECT EXISTING MATH BLOCKS ($$...$$ and $...$)
+  // We extract them with unique placeholders so subsequent unwrapped-LaTeX wrappers
+  // NEVER inject $ delimiters into the middle of already-valid math equations!
+  const mathBlocks: string[] = [];
+  const placeholderPrefix = '@@CHAT_MATH_BLOCK_';
+
+  // Extract display math $$...$$ first (including multiline)
+  s = s.replace(/\$\$([\s\S]*?)\$\$/g, (_, inner) => {
+    const idx = mathBlocks.length;
+    // Clean inner math: escape unescaped % so KaTeX doesn't comment out closing brackets
+    const cleanInner = inner.replace(/(?<!\\)%/g, '\\%');
+    mathBlocks.push(`$$${cleanInner}$$`);
+    return `${placeholderPrefix}${idx}@@`;
+  });
+
+  // Extract inline math $...$
+  s = s.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
+    const idx = mathBlocks.length;
+    const cleanInner = inner.replace(/(?<!\\)%/g, '\\%');
+    mathBlocks.push(`$${cleanInner}$`);
+    return `${placeholderPrefix}${idx}@@`;
+  });
+
+  // 6. PROCESS NON-MATH TEXT FOR UNWRAPPED LATEX
+  // Any commands found here are outside $ or $$ and need proper wrapping or clean Unicode
   const lines = s.split('\n');
   const processedLines = lines.map(line => {
     let l = line;
-
-    // Remove dangling trailing backslash (from cut-off tokens like "4 \times \")
+    // Remove dangling trailing backslash
     l = l.replace(/\\\s*$/, '');
 
-    // Auto-close dangling display math $$
-    const doubleDollarCount = (l.match(/\$\$/g) || []).length;
-    if (doubleDollarCount % 2 !== 0) {
-      l = l + '$$';
-    }
-
-    // Auto-close dangling single $
-    const tempNoDisplay = l.replace(/\$\$/g, '');
-    const singleDollarCount = (tempNoDisplay.match(/\$/g) || []).length;
-    if (singleDollarCount % 2 !== 0) {
-      l = l + '$';
-    }
-
-    // 5. Wrap isolated unwrapped LaTeX commands outside of $
     // Wrap unwrapped \left...\right expressions in $...$
-    l = l.replace(/(?<!\$)\\left([(\[{|])[\s\S]*?\\right([)\]}|])(?:\^\{?[0-9a-zA-Z]+\}?)?%?(?!\$)/g, (match) => {
+    l = l.replace(/\\left([(\[{|])[\s\S]*?\\right([)\]}|])(?:\^\{?[0-9a-zA-Z]+\}?)?%?/g, (match) => {
       const cleanMatch = match.replace(/(?<!\\)%/g, '\\%');
       return `$${cleanMatch}$`;
     });
 
-    l = l.replace(/(?<!\$)\\frac\{([^{}]+)\}\{([^{}]+)\}(?!\$)/g, '$\\frac{$1}{$2}$');
-    l = l.replace(/(?<!\$)\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|Delta|angle|approx|pm|mp|times|div)(?!\$)/g, '$\\$1$');
-    l = l.replace(/(?<!\$)\\sqrt\{([^{}]+)\}(?!\$)/g, '$\\sqrt{$1}$');
-    l = l.replace(/(?<!\$)\b(\d+\^[0-9a-zA-Z]+\s*=\s*\d+)\b(?!\$)/g, '$$$1$$');
+    // Wrap unwrapped \frac{...}{...} in $...$
+    l = l.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, (_, a, b) => `$\\frac{${a}}{${b}}$`);
+
+    // In plain text, convert standalone arithmetic operators to clean Unicode symbols
+    l = l.replace(/\\times\b/g, '×');
+    l = l.replace(/\\div\b/g, '÷');
+    l = l.replace(/\\pm\b/g, '±');
+    l = l.replace(/\\mp\b/g, '∓');
+    l = l.replace(/\\approx\b/g, '≈');
+    l = l.replace(/\\neq\b/g, '≠');
+    l = l.replace(/\\le\b/g, '≤');
+    l = l.replace(/\\ge\b/g, '≥');
+
+    // Wrap unwrapped symbols and functions like \pi, \theta, \sqrt
+    l = l.replace(/\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|Delta|angle)\b/g, (_, sym) => `$\\${sym}$`);
+    l = l.replace(/\\sqrt\{([^{}]+)\}/g, (_, inner) => `$\\sqrt{${inner}}$`);
+    l = l.replace(/\b(\d+\^[0-9a-zA-Z]+\s*=\s*\d+)\b/g, (_, eq) => `$${eq}$`);
 
     return l;
   });
 
   let joined = processedLines.join('\n');
 
-  // In inline math $...$, escape unescaped % so KaTeX doesn't treat % as a comment
-  joined = joined.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
-    const cleanInner = inner.replace(/(?<!\\)%/g, '\\%');
-    return `$${cleanInner}$`;
+  // 7. RESTORE PROTECTED MATH BLOCKS
+  joined = joined.replace(/@@CHAT_MATH_BLOCK_(\d+)@@/g, (_, idxStr) => {
+    const idx = parseInt(idxStr, 10);
+    return mathBlocks[idx] || '';
   });
 
   return joined;

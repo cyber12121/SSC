@@ -555,6 +555,8 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
   s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');
   s = s.replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2');
+  s = s.replace(/\\?text\s*left\b/gi, '\\left');
+  s = s.replace(/\\?text\s*right\b/gi, '\\right');
   s = s.replace(/≤ft\b/g, '\\left');
   s = s.replace(/\\le\s*ft\b/g, '\\left');
 
