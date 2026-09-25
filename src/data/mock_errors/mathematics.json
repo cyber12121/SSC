@@ -11900,6 +11900,99 @@
           "conceptTested": "Percentage increase formula for areas: $X + X + \\frac{X^2}{100}$",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_96c4533267",
+        "q_num": 220,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "A & B travel from point P to Q at 6 km/hr and 10 km/hr respectively. B reaches point Q first and returns in the same path to meet A on the way. If the distance from points P to Q is 48 km, find the distance travelled by A till the meeting point with B.",
+        "options": {
+          "a": "38 km",
+          "b": "34 km",
+          "c": "32 km",
+          "d": "36 km"
+        },
+        "answer": "d",
+        "solution": "Let total distance PQ = 48 km.\nWhen B reaches Q and returns to meet A, the total distance covered by A and B together equals 2 × PQ = 2 × 48 = 96 km.\nSince they travel for the same duration of time t:\nRatio of distances covered = Ratio of speeds = SA / SB = 6 / 10 = 3 / 5.\nTherefore, distance travelled by A = (3 / 8) × 96 = 36 km.",
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Meeting Point & Relative Speed",
+        "conceptTested": "Total distance covered by two moving bodies when one reaches destination and returns.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Meeting Point & Relative Speed",
+          "conceptTested": "Total distance covered by two moving bodies when one reaches destination and returns.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "math_deb7df5c11",
+        "q_num": 221,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Two pipes A and B can fill a tank in 200 minutes and 50 minutes, respectively, and a pipe C can empty the tank 15 litres per minute. All the three pipes working together can fill the tank in 100 minutes. Find the capacity of the tank.",
+        "options": {
+          "a": "800 litres",
+          "b": "900 litres",
+          "c": "1000 litres",
+          "d": "1200 litres"
+        },
+        "answer": "c",
+        "solution": "Let the capacity of the tank be V litres.\nRate of A = V / 200 litres/min\nRate of B = V / 50 litres/min\nRate of C = -15 litres/min (emptying)\nCombined rate = V / 100 litres/min\n\nV / 200 + V / 50 - 15 = V / 100\nMultiplying by 200:\nV + 4V - 3000 = 2V\n3V = 3000 => V = 1000 litres.",
+        "topic": "Pipes & Cisterns",
+        "subtopic": "Filling & Emptying Rates",
+        "conceptTested": "Net filling rate with an emptying pipe having a known volumetric discharge.",
+        "tags": {
+          "topic": "Pipes & Cisterns",
+          "subtopic": "Filling & Emptying Rates",
+          "conceptTested": "Net filling rate with an emptying pipe having a known volumetric discharge.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "math_78ed4eeb06",
+        "q_num": 222,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Pipe A can fill a tank in 20 minutes and pipe B can fill the tank in 30 minutes. Both the pipes can fill at the rate of 8 litres per second. What is the capacity of the tank in litres?",
+        "options": {
+          "a": "5670",
+          "b": "6570",
+          "c": "6750",
+          "d": "5760"
+        },
+        "answer": "d",
+        "solution": "Together, pipes A and B fill the tank in:\nT = (20 × 30) / (20 + 30) = 600 / 50 = 12 minutes.\nConverting time into seconds: 12 × 60 = 720 seconds.\nThe combined rate of flow is 8 litres/second.\nTherefore, Capacity = Rate × Time = 8 × 720 = 5760 litres.",
+        "topic": "Pipes & Cisterns",
+        "subtopic": "Combined Flow Rate & Tank Volume",
+        "conceptTested": "Converting combined flow rate from litres/second to total tank capacity.",
+        "tags": {
+          "topic": "Pipes & Cisterns",
+          "subtopic": "Combined Flow Rate & Tank Volume",
+          "conceptTested": "Converting combined flow rate from litres/second to total tank capacity.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   },
@@ -14618,6 +14711,130 @@
           "conceptTested": "Perpendicular from the center of a circle to a chord bisects the chord, and applying the Pythagorean theorem in right-angled triangles formed by radii and chords.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_497a84f121",
+        "q_num": 87,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "5% of income of A is equal to 15% of income of B and 10% of income of B is equal to 20% of income of C. If C's income is Rs.2000/- then the income of A, B and C is equal to:",
+        "options": {
+          "a": "₹ 6000",
+          "b": "₹ 18,000",
+          "c": "₹ 14,000",
+          "d": "₹ 20,000"
+        },
+        "answer": "b",
+        "solution": "Given:\n1) 10% of B = 20% of C => B = 2C.\nSince C = 2000, B = 2 × 2000 = 4000.\n2) 5% of A = 15% of B => A = 3B.\nSince B = 4000, A = 3 × 4000 = 12000.\nTotal income of A, B and C = 12000 + 4000 + 2000 = ₹ 18,000.",
+        "topic": "Percentage",
+        "subtopic": "Income Ratios",
+        "conceptTested": "Connecting percentage equivalences to find individual and total incomes.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Income Ratios",
+          "conceptTested": "Connecting percentage equivalences to find individual and total incomes.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "math_d230f86f78",
+        "q_num": 88,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "A whole-sale dealer marks his goods @ 40% above the cost price. The goods are sold through a retailer who earns a profit of 20% on his purchase price. What is the profit / loss percentage of the whole-sale dealer if the retailer gives a discount of 10% on MRP ?",
+        "options": {
+          "a": "5%",
+          "b": "10%",
+          "c": "15%",
+          "d": "25%"
+        },
+        "answer": "a",
+        "solution": "Let dealer CP = 100.\nMRP = 100 × 1.40 = 140.\nThe retailer sells to customer at a 10% discount on MRP:\nFinal selling price = 140 × (1 - 0.10) = 126.\nThe retailer earns 20% profit on his purchase price (dealer's SP):\nRetailer CP × 1.20 = 126 => Retailer CP = 126 / 1.20 = 105.\nThus, the dealer sold the goods to the retailer for 105.\nDealer's profit percentage = (105 - 100) / 100 × 100% = 5%.",
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Successive Transactions & Mark-Up",
+        "conceptTested": "Calculating dealer profit margin given retailer margin and consumer discount on marked price.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Successive Transactions & Mark-Up",
+          "conceptTested": "Calculating dealer profit margin given retailer margin and consumer discount on marked price.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "math_badafbad43",
+        "q_num": 89,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "If \\(x = \\sqrt{6} + \\sqrt{5}\\), then \\(x^2 + \\frac{1}{x^2} - 2 =\\)",
+        "options": {
+          "a": "\\(2\\sqrt{6}\\)",
+          "b": "\\(2\\sqrt{5}\\)",
+          "c": "24",
+          "d": "20"
+        },
+        "answer": "d",
+        "solution": "Given \\(x = \\sqrt{6} + \\sqrt{5}\\).\nSince \\((\\sqrt{6})^2 - (\\sqrt{5})^2 = 6 - 5 = 1\\), the reciprocal is:\n\\(\\frac{1}{x} = \\frac{1}{\\sqrt{6} + \\sqrt{5}} = \\sqrt{6} - \\sqrt{5}\\).\nNow, \\(x^2 + \\frac{1}{x^2} - 2 = \\left(x - \\frac{1}{x}\\right)^2\\).\n\\(x - \\frac{1}{x} = (\\sqrt{6} + \\sqrt{5}) - (\\sqrt{6} - \\sqrt{5}) = 2\\sqrt{5}\\).\nSquaring both sides:\n\\(\\left(2\\sqrt{5}\\right)^2 = 4 \\times 5 = 20\\).",
+        "topic": "Algebra",
+        "subtopic": "Surds & Algebraic Identities",
+        "conceptTested": "Conjugate surd evaluation and algebraic identity (x - 1/x)^2 = x^2 + 1/x^2 - 2.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Surds & Algebraic Identities",
+          "conceptTested": "Conjugate surd evaluation and algebraic identity (x - 1/x)^2 = x^2 + 1/x^2 - 2.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "math_72f120579f",
+        "q_num": 90,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Two cars A and B start from the same point and at the same time. 'A' travels at a constant speed of 12 km/h but 'B' starts with 6 km/h and every hour its speed increases by 0.25 km/h. After how many hours will B overtake A?",
+        "options": {
+          "a": "30 hours",
+          "b": "35 hours",
+          "c": "41 hours",
+          "d": "49 hours"
+        },
+        "answer": "d",
+        "solution": "Let the time taken be n hours.\nDistance covered by A in n hours = 12n km.\nSpeed of B forms an Arithmetic Progression: a = 6, d = 0.25 = 1/4.\nDistance covered by B in n hours = Sn = (n / 2) × [2(6) + (n - 1)(0.25)]\nFor B to overtake A, their distances must be equal:\n(n / 2) × [12 + 0.25(n - 1)] = 12n\nDividing both sides by n (since n > 0):\n12 + 0.25(n - 1) = 24\n0.25(n - 1) = 12 => n - 1 = 48 => n = 49 hours.",
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Arithmetic Progression in Speed",
+        "conceptTested": "Sum of an AP representing distance covered over time vs uniform speed.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Arithmetic Progression in Speed",
+          "conceptTested": "Sum of an AP representing distance covered over time vs uniform speed.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   }

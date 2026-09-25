@@ -206,7 +206,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
       const subTypes = getQuestionSillySubTypes(q);
       const primarySub = subTypes[0] || rca?.subTag || 'unspecified';
       const subConfig = SILLY_SUB_TYPES[primarySub] || SILLY_SUB_TYPES.unspecified;
-      const typedNote = (rca?.note || rca?.sillyMistakeNote || (q as any).sillyMistakeNote || (q as any).userTypedSillyNote || '').trim();
+      const typedNote = ((rca as any)?.note || rca?.sillyMistakeNote || (q as any).sillyMistakeNote || (q as any).userTypedSillyNote || '').trim();
       const qKey = q.id || q.question?.trim().toLowerCase() || String(idx);
       const originalIdx = data.questions.indexOf(q);
       const displayNum = originalIdx >= 0 ? originalIdx + 1 : idx + 1;

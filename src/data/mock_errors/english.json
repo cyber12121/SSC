@@ -3803,6 +3803,316 @@
           "conceptTested": "Conversion of direct speech questions into indirect narration using appropriate reporting verbs and gerund structures.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_cf7afe9f3c",
+        "q_num": 123,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Choose the correct Antonym of: Dribbles",
+        "options": {
+          "a": "Trickle",
+          "b": "Drop",
+          "c": "Ooze",
+          "d": "Gush"
+        },
+        "answer": "d",
+        "solution": "Dribbles means to fall or allow to fall in small drops or a thin stream (trickle, seep). Its antonym is 'Gush', which means to flow out in a rapid and plentiful stream. Trickle, drop, and ooze are synonyms of dribble.",
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Antonyms",
+        "conceptTested": "Antonyms of verbs describing liquid flow and emission.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Antonyms",
+          "conceptTested": "Antonyms of verbs describing liquid flow and emission.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_3111c3bd49",
+        "q_num": 124,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Choose the correct Ordering of Words:\nGiven: The national unity of a free people\nP: to make it impracticable\nQ: for there to be an arbitrary administration\nR: depends upon a sufficiently even balance of political power\nS: against a revolutionary opposition that is irreconcilably opposed to it",
+        "options": {
+          "a": "QRPS",
+          "b": "RSPQ",
+          "c": "RPQS",
+          "d": "QRSP"
+        },
+        "answer": "b",
+        "solution": "Starting with the given phrase: 'The national unity of a free people...', the predicate follows: R ('depends upon a sufficiently even balance of political power'), followed by S ('against a revolutionary opposition that is irreconcilably opposed to it'), then P ('to make it impracticable'), and concluding with Q ('for there to be an arbitrary administration'). Thus, the proper sequence is RSPQ.",
+        "topic": "Para Jumbles",
+        "subtopic": "Sentence Rearrangement",
+        "conceptTested": "Logical and grammatical sequencing of sentence clauses.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Sentence Rearrangement",
+          "conceptTested": "Logical and grammatical sequencing of sentence clauses.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_76da230a72",
+        "q_num": 125,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Choose the correct Ordering of Words:\nP: Yet, their ripple effects sometimes reach the everyday life of ordinary individuals in unexpected ways.\nQ: Geopolitical conflicts are usually analysed through the lens of diplomacy, security or energy markets.\nR: The ongoing tension involving the United States, Israel and Iran have periodically disrupted aviation routes across parts of West Asia.\nS: Major transit hubs such as Dubai and Abu Dhabi have experienced sudden airspace restrictions and flight cancellations, leaving many travelers stranded.",
+        "options": {
+          "a": "QRPS",
+          "b": "RPQS",
+          "c": "RQPS",
+          "d": "QPRS"
+        },
+        "answer": "d",
+        "solution": "Sentence Q introduces the broad topic (Geopolitical conflicts analysed through diplomacy/security/energy). Sentence P shifts the focus with a contrast ('Yet, their ripple effects...'). Sentence R gives the specific example ('The ongoing tension involving the US, Israel and Iran... disrupted aviation routes'). Sentence S describes the immediate outcome of that disruption ('Major transit hubs such as Dubai and Abu Dhabi... leaving travelers stranded'). Therefore, the correct order is QPRS.",
+        "topic": "Para Jumbles",
+        "subtopic": "Sentence Rearrangement",
+        "conceptTested": "Rearranging coherent paragraphs starting with general context followed by specific examples.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Sentence Rearrangement",
+          "conceptTested": "Rearranging coherent paragraphs starting with general context followed by specific examples.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_000654a3a2",
+        "q_num": 126,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Choose the correct Ordering of Words:\nP: Protecting biodiversity is essential for a sustainable future and maintaining the natural balance of our planet.\nQ: biodiversity refers to the incredible variety of life on Earth, incorporating the diversity of species, ecosystems and genetics.\nR: ranging from bacteria to plants and animals, this intricate web of life is, however, under severe threat from human activities such as habitat destruction, pollution and climate change.\nS: it is the foundation of a healthy planet providing crucial services like air purification, food security, climate control and medicines.",
+        "options": {
+          "a": "SQPR",
+          "b": "PQRS",
+          "c": "QSPR",
+          "d": "None of the above."
+        },
+        "answer": "d",
+        "solution": "Q defines biodiversity. S explains its importance as a foundation. R introduces the threats. P concludes with the need for protection (QSRP). Since QSRP is not among (a) SQPR, (b) PQRS, or (c) QSPR, the official correct choice is (d) None of the above.",
+        "topic": "Para Jumbles",
+        "subtopic": "Sentence Rearrangement",
+        "conceptTested": "Paragraph order evaluation and checking standard thematic progression.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Sentence Rearrangement",
+          "conceptTested": "Paragraph order evaluation and checking standard thematic progression.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_01c80267f8",
+        "q_num": 127,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Find out the wrongly spelt word:",
+        "options": {
+          "a": "Benevolance",
+          "b": "Disgusting",
+          "c": "Unpretentious",
+          "d": "Joviality"
+        },
+        "answer": "a",
+        "solution": "The wrongly spelt word is 'Benevolance'. The correct spelling is 'Benevolence' (ending in '-ence', from Latin benevolentia). All other options ('Disgusting', 'Unpretentious', 'Joviality') are spelt correctly.",
+        "topic": "Spelling Errors",
+        "subtopic": "Misspelt Words",
+        "conceptTested": "Suffix spelling with '-ence' vs '-ance'.",
+        "tags": {
+          "topic": "Spelling Errors",
+          "subtopic": "Misspelt Words",
+          "conceptTested": "Suffix spelling with '-ence' vs '-ance'.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_ba1fc13970",
+        "q_num": 128,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Fill in the blank (R) with a suitable preposition:\nPassage snippet: \"Cloud computing has also become indispensable in business settings... as it offers greater flexibility and scalability than traditional ........ (R) premises infrastructure.\"",
+        "options": {
+          "a": "in",
+          "b": "with",
+          "c": "on",
+          "d": "by"
+        },
+        "answer": "c",
+        "solution": "The established business and technology phrase is 'on-premises' (often shortened to on-prem), referring to software or hardware installed and run on the premises of the organization rather than remotely at a server farm or cloud facility. Thus, 'on' is the correct preposition.",
+        "topic": "Prepositions",
+        "subtopic": "Prepositional Phrases",
+        "conceptTested": "Idiomatic prepositional collocations ('on-premises').",
+        "tags": {
+          "topic": "Prepositions",
+          "subtopic": "Prepositional Phrases",
+          "conceptTested": "Idiomatic prepositional collocations ('on-premises').",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_9101464e89",
+        "q_num": 129,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Fill in the blank (Q) with a suitable preposition:\nPassage snippet: \"The cloud computing model gives you, the customer, greater flexibility and scalability compared ............(Q) traditional on-premises infrastructure.\"",
+        "options": {
+          "a": "to",
+          "b": "with",
+          "c": "by",
+          "d": "in"
+        },
+        "answer": "a",
+        "solution": "'Compared to' is used to point out similarities or contrast between different categories. Hence, 'to' is the correct preposition.",
+        "topic": "Prepositions",
+        "subtopic": "Prepositional Collocations",
+        "conceptTested": "Standard preposition usage with 'compared to'.",
+        "tags": {
+          "topic": "Prepositions",
+          "subtopic": "Prepositional Collocations",
+          "conceptTested": "Standard preposition usage with 'compared to'.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_e7320b48c6",
+        "q_num": 130,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Choose the correct sentence in the group:",
+        "options": {
+          "a": "I suggest you taking a break",
+          "b": "I suggest that you take a break",
+          "c": "I suggest you to take a break",
+          "d": "I suggest to you to take a break"
+        },
+        "answer": "b",
+        "solution": "The verb 'suggest' does not take an indirect object + infinitive structure (you cannot say 'suggest you to take'). Instead, it requires a that-clause: 'suggest that + subject + subjunctive base verb' ('I suggest that you take a break') or a gerund ('I suggest taking a break'). Therefore, option (b) is the only grammatically correct sentence.",
+        "topic": "Spotting Errors",
+        "subtopic": "Subjunctive & Verb Complementation",
+        "conceptTested": "The verb 'suggest' takes a that-clause with subjunctive verb (suggest that + subject + base verb), not 'suggest someone to do'.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Subjunctive & Verb Complementation",
+          "conceptTested": "The verb 'suggest' takes a that-clause with subjunctive verb (suggest that + subject + base verb), not 'suggest someone to do'.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_b4d0289249",
+        "q_num": 131,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Fill in the blank with the most appropriate adverb:\n\"The team is _______ working to finish the task on time\"",
+        "options": {
+          "a": "hard",
+          "b": "hardly",
+          "c": "more hard",
+          "d": "very hardly"
+        },
+        "answer": "b",
+        "solution": "Official answer designated in examination key is: (b) hardly. Note: In standard grammatical usage, 'working hard' means working diligently, whereas 'hardly' means scarcely/barely.",
+        "topic": "Fill in the Blanks",
+        "subtopic": "Adverbs",
+        "conceptTested": "Adverbs of manner: 'hard' vs 'hardly'.",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "subtopic": "Adverbs",
+          "conceptTested": "Adverbs of manner: 'hard' vs 'hardly'.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "engl_207625a26f",
+        "q_num": 132,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Read the Gaganyaan passage and answer:\n\"What protects the crew module from extreme heat during re-entry?\"",
+        "options": {
+          "a": "Parachute system",
+          "b": "Extra layers of metal in the launch vehicle",
+          "c": "Heat shield",
+          "d": "Communication antenna"
+        },
+        "answer": "c",
+        "solution": "During atmospheric re-entry, spacecraft experience intense aerodynamic heating. A specialized thermal protection system or heat shield absorbs and dissipates the extreme heat, safeguarding the crew module and its occupants.",
+        "topic": "Cloze Test",
+        "subtopic": "Reading Comprehension",
+        "conceptTested": "Direct factual retrieval from technical passage on space exploration.",
+        "tags": {
+          "topic": "Cloze Test",
+          "subtopic": "Reading Comprehension",
+          "conceptTested": "Direct factual retrieval from technical passage on space exploration.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   }

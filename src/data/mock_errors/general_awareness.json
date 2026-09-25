@@ -2645,6 +2645,130 @@
           "conceptTested": "Headquarters of major international institutions and specialized agencies.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_f15bb642a4",
+        "q_num": 86,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "The Naman awards are given for which sport?",
+        "options": {
+          "a": "Cricket",
+          "b": "Kabaddi",
+          "c": "Swimming",
+          "d": "Athletics"
+        },
+        "answer": "a",
+        "solution": "The BCCI Naman Awards are the premier annual awards ceremony organized by the Board of Control for Cricket in India (BCCI) to honor outstanding domestic and international Indian cricketers.",
+        "topic": "Sports & Trophies",
+        "subtopic": "BCCI Naman Awards",
+        "conceptTested": "Annual cricket awards presented by the Board of Control for Cricket in India (BCCI).",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "BCCI Naman Awards",
+          "conceptTested": "Annual cricket awards presented by the Board of Control for Cricket in India (BCCI).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_cbdceb5c24",
+        "q_num": 87,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Which author has been selected for the 60th Jnanpith award 2025.",
+        "options": {
+          "a": "Damodar Mauzo",
+          "b": "Vinod Kumar Shukla",
+          "c": "Gulzar",
+          "d": "R. Vairamuthu"
+        },
+        "answer": "d",
+        "solution": "Renowned Tamil poet and lyricist R. Vairamuthu was selected for the prestigious 60th Jnanpith Award.",
+        "topic": "Awards & Honours",
+        "subtopic": "Jnanpith Award",
+        "conceptTested": "Current literary awards in India.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "Jnanpith Award",
+          "conceptTested": "Current literary awards in India.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_a9cd9fccb9",
+        "q_num": 88,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "What is a Force Majeure clause?",
+        "options": {
+          "a": "A clause in which an old rule continues to apply to some existing situations while a new rule will apply to all future cases.",
+          "b": "A clause which removes liability for parties unable to fulfil contractual obligations due to unforeseeable and uncontrollable events.",
+          "c": "A clause which defines the avenues parties should take to resolve any disputes that arise during the contract's term.",
+          "d": "A clause which establishes ownership and usage rights for intellectual property."
+        },
+        "answer": "b",
+        "solution": "A 'Force Majeure' clause is a contractual provision that excuses one or both parties from performing their contractual obligations when extraordinary, unforeseen, and uncontrollable events (such as war, natural disasters, or pandemics) occur.",
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Legal Terms & Commercial Law",
+        "conceptTested": "Contract law definition of Force Majeure (Act of God / unavoidable catastrophe).",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Legal Terms & Commercial Law",
+          "conceptTested": "Contract law definition of Force Majeure (Act of God / unavoidable catastrophe).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_8360405d26",
+        "q_num": 89,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Mission _______ is a strategic initiative launched by the Ministry of Petroleum and Natural Gas for hydrocarbon discovery using seismic AI tools.",
+        "options": {
+          "a": "Gaveshna",
+          "b": "Anusandhan",
+          "c": "Sarvekshan",
+          "d": "Anveshan"
+        },
+        "answer": "d",
+        "solution": "Mission Anveshan was launched by the Ministry of Petroleum and Natural Gas to accelerate hydrocarbon discoveries in sedimentary basins across India using cutting-edge seismic artificial intelligence tools.",
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Ministry of Petroleum Initiatives",
+        "conceptTested": "National exploration initiatives utilizing AI and seismic analytics.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Ministry of Petroleum Initiatives",
+          "conceptTested": "National exploration initiatives utilizing AI and seismic analytics.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   },
@@ -6167,6 +6291,533 @@
           "conceptTested": "Criteria, governing bodies, and eligible languages for the Sahitya Akademi Award.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "gene_122ead81e1",
+        "q_num": 114,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "_______ identifies goods as originating in a specific territory, where quality or reputation is attributable to that region.",
+        "options": {
+          "a": "GI",
+          "b": "FPO",
+          "c": "BIS",
+          "d": "India Organic"
+        },
+        "answer": "a",
+        "solution": "A Geographical Indication (GI) is a sign used on products that have a specific geographical origin and possess qualities, characteristics, or a reputation that are due to that place of origin.",
+        "topic": "International Organisations",
+        "subtopic": "Intellectual Property & GI Tags",
+        "conceptTested": "Geographical Indication (GI) definition under TRIPS and Indian GI Registry.",
+        "tags": {
+          "topic": "International Organisations",
+          "subtopic": "Intellectual Property & GI Tags",
+          "conceptTested": "Geographical Indication (GI) definition under TRIPS and Indian GI Registry.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_7629ff0bd9",
+        "q_num": 115,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "How many bones are there in adult human body ?",
+        "options": {
+          "a": "144",
+          "b": "216",
+          "c": "206",
+          "d": "226"
+        },
+        "answer": "c",
+        "solution": "The human infant is born with roughly 270 bones, which fuse as the child grows. An adult human skeletal system consists of exactly 206 bones (80 axial skeleton bones and 126 appendicular skeleton bones).",
+        "topic": "Biology",
+        "subtopic": "Human Skeletal System",
+        "conceptTested": "Bone count in the human adult skeleton (206 bones).",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Human Skeletal System",
+          "conceptTested": "Bone count in the human adult skeleton (206 bones).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_b68da96248",
+        "q_num": 116,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "First Indian to win an Oscar is .....",
+        "options": {
+          "a": "Satyajit Ray",
+          "b": "A R Rahman",
+          "c": "Gulzar",
+          "d": "Bhanu Athaiya"
+        },
+        "answer": "d",
+        "solution": "Bhanu Athaiya was the first Indian to win an Academy Award (Oscar) in 1983 for Best Costume Design for the biographical film 'Gandhi' directed by Richard Attenborough.",
+        "topic": "Awards & Honours",
+        "subtopic": "Academy Awards (Oscars)",
+        "conceptTested": "First Indian Oscar winner (Costume Design for Gandhi, 1982).",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "Academy Awards (Oscars)",
+          "conceptTested": "First Indian Oscar winner (Costume Design for Gandhi, 1982).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_b2271621dd",
+        "q_num": 117,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Antonio Guterras is the Secretary General of which Organization?",
+        "options": {
+          "a": "World Health Organization",
+          "b": "World Bank",
+          "c": "UNICEF",
+          "d": "None of the above."
+        },
+        "answer": "d",
+        "solution": "António Guterres is the 9th Secretary-General of the United Nations (UN). Since UN is not listed in options (a), (b), or (c), the correct answer is (d) None of the above.",
+        "topic": "International Organisations",
+        "subtopic": "United Nations Leadership",
+        "conceptTested": "Current executive leadership of the United Nations.",
+        "tags": {
+          "topic": "International Organisations",
+          "subtopic": "United Nations Leadership",
+          "conceptTested": "Current executive leadership of the United Nations.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_2e149e6253",
+        "q_num": 118,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "First individual to receive Bharat Ratna award posthumously ....",
+        "options": {
+          "a": "Sir C V Raman",
+          "b": "Lal Bahadur Shastri",
+          "c": "Dr B R Ambedkar",
+          "d": "Sarvapalli Radhakrishnan"
+        },
+        "answer": "b",
+        "solution": "Former Prime Minister Lal Bahadur Shastri was the first person to be posthumously awarded the Bharat Ratna in 1966, following his death in Tashkent.",
+        "topic": "Awards & Honours",
+        "subtopic": "Bharat Ratna",
+        "conceptTested": "Posthumous conferment of India's highest civilian honor.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "Bharat Ratna",
+          "conceptTested": "Posthumous conferment of India's highest civilian honor.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_cd5a9179a9",
+        "q_num": 119,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Who was the first Chief Election Commissioner of India under whose leadership the Election Commission successfully administered independent India's first general election?",
+        "options": {
+          "a": "VP Menon",
+          "b": "Anna Rajam Malhotra",
+          "c": "TN Seshan",
+          "d": "Sukumar Sen"
+        },
+        "answer": "d",
+        "solution": "Sukumar Sen was the first Chief Election Commissioner of India, serving from 1950 to 1958. He oversaw independent India's landmark first general elections of 1951–52.",
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Election Commission of India",
+        "conceptTested": "First Chief Election Commissioner of independent India (1950–1958).",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Election Commission of India",
+          "conceptTested": "First Chief Election Commissioner of independent India (1950–1958).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_c1854e3c96",
+        "q_num": 120,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Which acts as fuel in the human body.",
+        "options": {
+          "a": "Protein",
+          "b": "Carbohydrate",
+          "c": "Minerals",
+          "d": "Glucose"
+        },
+        "answer": "b",
+        "solution": "Carbohydrates are the primary and preferred energy 'fuel' for the human body. They are broken down into glucose, which cells use to produce ATP through cellular respiration.",
+        "topic": "Biology",
+        "subtopic": "Nutrition & Metabolism",
+        "conceptTested": "Primary macronutrient utilized as energy fuel in human physiology.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Nutrition & Metabolism",
+          "conceptTested": "Primary macronutrient utilized as energy fuel in human physiology.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_cae7265e50",
+        "q_num": 121,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Which one of the following functions of the Reserve Bank of India is not performed by the other Banks?",
+        "options": {
+          "a": "Making advances to agriculturists",
+          "b": "Dealing in Foreign Exchange",
+          "c": "Industrial refinancing",
+          "d": "Acting as the banker to the Government"
+        },
+        "answer": "d",
+        "solution": "Acting as the banker, agent, and adviser to the Government (both Central and State governments) is an exclusive prerogative of the Reserve Bank of India, not ordinary commercial banks.",
+        "topic": "Banking & Monetary Policy",
+        "subtopic": "Functions of RBI",
+        "conceptTested": "Exclusive central banking functions: banker to central and state governments.",
+        "tags": {
+          "topic": "Banking & Monetary Policy",
+          "subtopic": "Functions of RBI",
+          "conceptTested": "Exclusive central banking functions: banker to central and state governments.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_39bcf9dccd",
+        "q_num": 122,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "The first rail in India started on _______ between Bori Bunder, Mumbai and Thane (34 Km or 21 miles)",
+        "options": {
+          "a": "May 29, 1964",
+          "b": "October 22, 1863",
+          "c": "April 4, 1854",
+          "d": "April 16, 1853"
+        },
+        "answer": "d",
+        "solution": "The first passenger train in India ran between Bori Bunder (Mumbai) and Thane on April 16, 1853, covering a distance of 34 kilometers (21 miles) with three locomotives named Sahib, Sindh, and Sultan.",
+        "topic": "Modern History",
+        "subtopic": "Development of Railways in India",
+        "conceptTested": "Date of operation of the first passenger train in India.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Development of Railways in India",
+          "conceptTested": "Date of operation of the first passenger train in India.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_53d49aa83c",
+        "q_num": 123,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "What is the full form of UNEP ?",
+        "options": {
+          "a": "United Nations Educational Program",
+          "b": "United Nations Economic Program",
+          "c": "United Nations Environment Project",
+          "d": "United Nations Environment Program"
+        },
+        "answer": "d",
+        "solution": "UNEP stands for United Nations Environment Programme (or Program). It was founded in June 1972 as a result of the Stockholm Conference on the Human Environment.",
+        "topic": "International Organisations",
+        "subtopic": "UN Agencies",
+        "conceptTested": "Full form and acronym of UNEP (Headquarters: Nairobi, Kenya).",
+        "tags": {
+          "topic": "International Organisations",
+          "subtopic": "UN Agencies",
+          "conceptTested": "Full form and acronym of UNEP (Headquarters: Nairobi, Kenya).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_77b994ae18",
+        "q_num": 124,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "A gene is a functional unit of ........",
+        "options": {
+          "a": "Chromosomes",
+          "b": "DNA",
+          "c": "Cell",
+          "d": "Life"
+        },
+        "answer": "a",
+        "solution": "A gene is a hereditary unit located on chromosomes that carries information for synthesizing proteins and determining traits. Officially marked: (a) Chromosomes.",
+        "topic": "Biology",
+        "subtopic": "Genetics & Heredity",
+        "conceptTested": "Structural and functional relationship between genes and chromosomes.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Genetics & Heredity",
+          "conceptTested": "Structural and functional relationship between genes and chromosomes.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_d4e3a22792",
+        "q_num": 125,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "A person sitting in a bus experiences a jerk, when the bus stops all of a sudden. This is due to",
+        "options": {
+          "a": "Law of inertia",
+          "b": "Newton's third law of motion",
+          "c": "Einstein's law of relativity",
+          "d": "None of these"
+        },
+        "answer": "a",
+        "solution": "When a moving bus stops suddenly, the lower part of the passenger's body in contact with the seat comes to rest, while the upper part continues in its state of motion due to inertia of motion (Newton's First Law). This causes the passenger to lurch forward.",
+        "topic": "Physics",
+        "subtopic": "Newton's Laws of Motion",
+        "conceptTested": "Inertia of motion causing the upper body to continue moving forward when vehicle stops.",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Newton's Laws of Motion",
+          "conceptTested": "Inertia of motion causing the upper body to continue moving forward when vehicle stops.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_ba251fcad9",
+        "q_num": 126,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Consider the following statements regarding Gross Domestic Product (GDP) and Gross National Income (GNI):\n(1) GDP measures the total value of goods and services produced within a country's borders in a given period.\n(2) GNI included GDP plus net income earned from abroad.\n(3) A country with high outward remittances will always have GNI lower than GDP.\nSelect the correct answer using the code given below:",
+        "options": {
+          "a": "Only 1 and 2",
+          "b": "Only 2 and 3",
+          "c": "Only 1 and 3",
+          "d": "1, 2 and 3"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct: GDP measures output produced within domestic borders. Statement 2 is correct: GNI = GDP + Net factor income from abroad. Statement 3 is incorrect because high outward remittances can still be offset by even higher inward remittances or foreign investment returns, so GNI is not 'always' lower than GDP. Therefore, only statements 1 and 2 are correct.",
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "GDP vs GNI",
+        "conceptTested": "Definitions of GDP and GNI, and the effect of net factor income from abroad (NFIA).",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "GDP vs GNI",
+          "conceptTested": "Definitions of GDP and GNI, and the effect of net factor income from abroad (NFIA).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_8ceb1fca12",
+        "q_num": 127,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Radar is used for",
+        "options": {
+          "a": "Detecting objects by using light waves",
+          "b": "Reflecting sound waves to detect objects",
+          "c": "Determining the presence and location of objects with radio waves",
+          "d": "All of the above."
+        },
+        "answer": "c",
+        "solution": "RADAR stands for RAdio Detection And Ranging. It uses radio waves to determine the distance, angle, velocity, and presence of objects like aircraft, ships, and spacecraft.",
+        "topic": "Physics",
+        "subtopic": "Electromagnetic Spectrum & Radar",
+        "conceptTested": "Radio Detection and Ranging principles.",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Electromagnetic Spectrum & Radar",
+          "conceptTested": "Radio Detection and Ranging principles.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_4f2c867650",
+        "q_num": 128,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "The first geostationary satellite launched by India is",
+        "options": {
+          "a": "Aryabhata",
+          "b": "Bhaskara",
+          "c": "APPLE",
+          "d": "INSAT 1-B"
+        },
+        "answer": "c",
+        "solution": "APPLE (Ariane Passenger PayLoad Experiment) was India's first experimental geostationary communication satellite, launched successfully on June 19, 1981 by the European Space Agency's Ariane rocket.",
+        "topic": "Physics",
+        "subtopic": "Space Technology & Satellites",
+        "conceptTested": "First Indian geostationary experimental communication satellite (APPLE - 1981).",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Space Technology & Satellites",
+          "conceptTested": "First Indian geostationary experimental communication satellite (APPLE - 1981).",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_a760352ea6",
+        "q_num": 129,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Why is February 28 celebrated as National Science Day in India?",
+        "options": {
+          "a": "To commemorate CV Raman's birthday.",
+          "b": "To commemorate CV Raman's announcement of the Raman Effect in 1928.",
+          "c": "To commemorate the birthday of Vikram Sarabhai",
+          "d": "To commemorate the discovery of the Chandrasekhar limit by Subrahmanyan Chandrasekhar."
+        },
+        "answer": "b",
+        "solution": "National Science Day is celebrated in India on February 28 each year to mark the discovery of the Raman Effect by Indian physicist Sir C.V. Raman on February 28, 1928, for which he was awarded the Nobel Prize in Physics in 1930.",
+        "topic": "Important Days & Themes",
+        "subtopic": "National Science Day",
+        "conceptTested": "Commemoration of Sir C.V. Raman's discovery of the Raman Effect on February 28, 1928.",
+        "tags": {
+          "topic": "Important Days & Themes",
+          "subtopic": "National Science Day",
+          "conceptTested": "Commemoration of Sir C.V. Raman's discovery of the Raman Effect on February 28, 1928.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "gene_9153867831",
+        "q_num": 130,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "What does PNR mean?",
+        "options": {
+          "a": "Passenger Name Record",
+          "b": "Permanent Name Record",
+          "c": "Passenger Numbering Range",
+          "d": "Passenger Number Register"
+        },
+        "answer": "a",
+        "solution": "In airline and Indian Railways reservation systems, PNR stands for 'Passenger Name Record'. It is a unique 10-digit number that stores itinerary details for a passenger or group of passengers.",
+        "topic": "Static GK",
+        "subtopic": "Common Acronyms",
+        "conceptTested": "PNR acronym in railway and airline reservations.",
+        "tags": {
+          "topic": "Static GK",
+          "subtopic": "Common Acronyms",
+          "conceptTested": "PNR acronym in railway and airline reservations.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   }

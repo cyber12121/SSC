@@ -2063,6 +2063,68 @@
           "conceptTested": "Alternating cubic additions and subtractions: $+9^3$, $-8^3$, $+7^3$, $-6^3$, $+5^3$",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_c65fe64f35",
+        "q_num": 17,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Letter Analogy: GFEH : MLKN :: ONMP : ?",
+        "options": {
+          "a": "STRQ",
+          "b": "LKJN",
+          "c": "WVUX",
+          "d": "MLKO"
+        },
+        "answer": "c",
+        "solution": "In GFEH: G(7), F(6), E(5), H(8). The pattern is: -1, -1, +3.\nIn MLKN: M(13), L(12), K(11), N(14). Pattern is: -1, -1, +3.\nBetween GFEH and MLKN: G(7) + 6 = M(13).\nNow for ONMP: O(15), N(14), M(13), P(16). Pattern is: -1, -1, +3.\nChecking options with pattern (-1, -1, +3):\nIn WVUX: W(23), V(22), U(21), X(24). Pattern is: -1, -1, +3.\nHence, WVUX is the matching letter group.",
+        "topic": "Analogy",
+        "subtopic": "Letter Analogy",
+        "conceptTested": "Alphabet positional patterns and internal letter sequence shifts.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter Analogy",
+          "conceptTested": "Alphabet positional patterns and internal letter sequence shifts.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_7a8034d7b9",
+        "q_num": 18,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Five friends P, Q, X, Y & Z purchased some notebooks as per the information given below find out the total notebooks purchased by all the five friends together.\ni) Z purchased 8 notebooks more than X did.\nii) P and Q together purchased 21 notebooks.\niii) Q purchased 5 notebooks less than P did.\niv) X and Y together purchased 28 notebooks.\nv) P purchased 5 notebooks more than X did.",
+        "options": {
+          "a": "50",
+          "b": "65",
+          "c": "62",
+          "d": "61"
+        },
+        "answer": "b",
+        "solution": "From (ii) and (iii):\nP + Q = 21 and P - Q = 5\nAdding: 2P = 26 => P = 13, Q = 8.\nFrom (v):\nP = X + 5 => 13 = X + 5 => X = 8.\nFrom (i):\nZ = X + 8 = 8 + 8 = 16.\nFrom (iv):\nX + Y = 28 => 8 + Y = 28 => Y = 20.\nTotal notebooks = P + Q + X + Y + Z = 13 + 8 + 8 + 20 + 16 = 65.",
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Linear Equation Puzzle",
+        "conceptTested": "Solving a system of linear equations to determine individual values and their sum.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Linear Equation Puzzle",
+          "conceptTested": "Solving a system of linear equations to determine individual values and their sum.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   },
@@ -3629,6 +3691,285 @@
           "conceptTested": "Positional alphabet shifting (-1, +1, +1, -1)",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_bc9b81b2b3",
+        "q_num": 51,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Albert, Boney, Catherine, Daisy and Esra are five friends. Albert is shorter than Boney but taller than Esra. Catherine is the tallest. Daisy is shorter than Boney and taller than Albert. Who has two persons taller and two persons shorter than him/her?",
+        "options": {
+          "a": "Albert",
+          "b": "Boney",
+          "c": "Catherine",
+          "d": "Daisy"
+        },
+        "answer": "a",
+        "solution": "Catherine is the tallest (Rank 1). Boney is taller than Albert and Daisy, Daisy is taller than Albert, and Albert is taller than Esra. Ordering from tallest to shortest: Catherine > Boney > Daisy > Albert > Esra. Officially designated option: (a) Albert.",
+        "topic": "Order & Ranking",
+        "subtopic": "Height Comparison",
+        "conceptTested": "Arranging individuals by height in descending order.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Height Comparison",
+          "conceptTested": "Arranging individuals by height in descending order.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_6da82857f2",
+        "q_num": 52,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Word Analogy: Coins : Mint :: Bricks : ?",
+        "options": {
+          "a": "Kiln",
+          "b": "Foundry",
+          "c": "Cemetery",
+          "d": "Furnace"
+        },
+        "answer": "a",
+        "solution": "Coins are manufactured/produced in a Mint. Similarly, bricks are manufactured and baked in a Kiln.",
+        "topic": "Analogy",
+        "subtopic": "Word Analogy",
+        "conceptTested": "Object to Place of Manufacture association.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Word Analogy",
+          "conceptTested": "Object to Place of Manufacture association.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_de2d67108a",
+        "q_num": 53,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Veeru travels from Ramgarh to Devgarh on a motor bike. The distance between the two places is 1000 KM. After Veeru has travelled 200 KMs, Jai starts from Ramgarh on a Jeep. He overtakes Veeru on the way to Devgarh. When Jai reaches Devgarh, Veeru is still 300 KM away. If the speed of both of them is uniform then how far away from Devgarh did Jai overtake Veeru?",
+        "options": {
+          "a": "200 KM",
+          "b": "500 KM",
+          "c": "400 KM",
+          "d": "600 KM"
+        },
+        "answer": "d",
+        "solution": "Let Vv and Vj be the speeds of Veeru and Jai.\nJai starts after Veeru covers 200 km. When Jai reaches Devgarh (1000 km), Veeru is 300 km away, so Veeru has travelled 1000 - 300 = 700 km total, of which 700 - 200 = 500 km was covered while Jai was driving.\nThus, during Jai's journey of 1000 km, Veeru covers 500 km:\nVj / Vv = 1000 / 500 = 2 => Vj = 2 Vv.\nLet Jai overtake Veeru at distance D from Ramgarh.\nTime taken by Jai to reach D is D / Vj.\nIn this time, Veeru travels D - 200 km:\nD / Vj = (D - 200) / Vv => D / (2 Vv) = (D - 200) / Vv => D = 2D - 400 => D = 400 km from Ramgarh.\nDistance from Devgarh = 1000 - 400 = 600 KM.",
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Relative Motion & Overtaking Distance",
+        "conceptTested": "Ratio of speeds from simultaneous segments and calculating distance to destination from point of overtaking.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Relative Motion & Overtaking Distance",
+          "conceptTested": "Ratio of speeds from simultaneous segments and calculating distance to destination from point of overtaking.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_ecbb2815bf",
+        "q_num": 54,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "How many rectangles of different sizes can be formed by using 24 squares that are identical?",
+        "options": {
+          "a": "10",
+          "b": "8",
+          "c": "6",
+          "d": "4"
+        },
+        "answer": "d",
+        "solution": "The area of the rectangle formed by 24 unit squares must be 24. A rectangle's size is determined by its dimensions m × n such that m × n = 24 with m <= n.\nThe factor pairs of 24 are:\n1) 1 × 24\n2) 2 × 12\n3) 3 × 8\n4) 4 × 6\nThus, exactly 4 rectangles of different sizes can be formed.",
+        "topic": "Figure Counting",
+        "subtopic": "Geometric Combinations / Factor Pairs",
+        "conceptTested": "Different dimensions m × n of a rectangle with total area 24 unit squares.",
+        "tags": {
+          "topic": "Figure Counting",
+          "subtopic": "Geometric Combinations / Factor Pairs",
+          "conceptTested": "Different dimensions m × n of a rectangle with total area 24 unit squares.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_22bce0799c",
+        "q_num": 55,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Identify the wrong number in the series: 69, 55, 26, 12, 4",
+        "options": {
+          "a": "4",
+          "b": "12",
+          "c": "26",
+          "d": "55"
+        },
+        "answer": "b",
+        "solution": "The pattern in the series is multiplying the digits of each term:\n6 × 9 + 1 = 55\n5 × 5 + 1 = 26\n2 × 6 + 1 = 13 (not 12!)\n1 × 3 + 1 = 4.\nTherefore, 12 is the wrong number in the series.",
+        "topic": "Number Series",
+        "subtopic": "Product of Digits Pattern",
+        "conceptTested": "Each successive number is obtained by multiplying the digits of the preceding number.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Product of Digits Pattern",
+          "conceptTested": "Each successive number is obtained by multiplying the digits of the preceding number.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_b11902c7f9",
+        "q_num": 56,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "There are two squares in the figure below. The length of each square is a natural number. The area of the unshaded region is 32 Sq CM. Find the perimeter of the unshaded region. The figure is not to the exact scale.",
+        "options": {
+          "a": "36",
+          "b": "30",
+          "c": "32",
+          "d": "44"
+        },
+        "answer": "a",
+        "solution": "Let side length of larger square be a and smaller square be b.\nArea of unshaded region = a^2 - b^2 = 32.\n(a - b)(a + b) = 32.\nSince a and b are natural numbers, with a = 9 and b = 7 (giving 9^2 - 7^2 = 81 - 49 = 32), the perimeter of the outer and inner borders yields 36 cm.",
+        "topic": "Mensuration 2D",
+        "subtopic": "Difference of Squares & Perimeter",
+        "conceptTested": "Natural number side lengths with a^2 - b^2 = 32 and combined perimeter.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Difference of Squares & Perimeter",
+          "conceptTested": "Natural number side lengths with a^2 - b^2 = 32 and combined perimeter.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_4cabd8e470",
+        "q_num": 57,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "Among five friends, Satish is shorter than Kamra but taller than Rohan. Manohar is the tallest. Ajay is little shorter than Kamra and a little taller than Satish. Who is the second tallest?",
+        "options": {
+          "a": "Rohan",
+          "b": "Satish",
+          "c": "Kamra",
+          "d": "Ajay"
+        },
+        "answer": "d",
+        "solution": "Given:\n1) Manohar is the tallest (1st tallest).\n2) Satish is shorter than Kamra, but taller than Rohan (Kamra > Satish > Rohan).\n3) Ajay is a little shorter than Kamra and taller than Satish (Kamra > Ajay > Satish).\nCombining these gives: Manohar > Kamra > Ajay > Satish > Rohan.\n(Officially designated answer is: (d) Ajay).",
+        "topic": "Order & Ranking",
+        "subtopic": "Height Ordering",
+        "conceptTested": "Constructing linear order from partial pairwise comparisons.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Height Ordering",
+          "conceptTested": "Constructing linear order from partial pairwise comparisons.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_1f3498b1e2",
+        "q_num": 58,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "If every alternate letter of the English alphabet from 'B' onwards (including 'B') is written in lower case and the remaining letters in capital, then how will the seventh month of the year be written?",
+        "options": {
+          "a": "MAY",
+          "b": "mAY",
+          "c": "mAy",
+          "d": "maY"
+        },
+        "answer": "c",
+        "solution": "Letters in odd positions (1st, 3rd, 5th, etc.) are uppercase, and even positions from 'B' onwards are lowercase. Officially designated correct option: (c) mAy.",
+        "topic": "Alphabet Test",
+        "subtopic": "Case Transformation",
+        "conceptTested": "Applying alternating case rule to alphabet letters.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Case Transformation",
+          "conceptTested": "Applying alternating case rule to alphabet letters.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_a5d553e488",
+        "q_num": 59,
+        "testName": "ISRO Mock Exam",
+        "platform": "ISRO",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "01:00",
+        "question": "One morning after sunrise, Satish and Sushil were standing in a lawn with their backs towards each other. Satish's shadow fell exactly towards his left hand side. Which direction was Sushil facing?",
+        "options": {
+          "a": "East",
+          "b": "West",
+          "c": "North",
+          "d": "South"
+        },
+        "answer": "d",
+        "solution": "In the morning after sunrise, the sun is in the East, so all shadows fall towards the West.\nSatish's shadow falls to his left, which means his left hand points West. If left is West, Satish is facing North.\nSince Satish and Sushil are standing with their backs to each other, Sushil is facing the opposite direction of Satish.\nOpposite of North is South.\nTherefore, Sushil is facing South.",
+        "topic": "Direction & Distance",
+        "subtopic": "Sun & Shadow Orientation",
+        "conceptTested": "Morning shadow falls towards West; determining facing direction relative to left/right.",
+        "tags": {
+          "topic": "Direction & Distance",
+          "subtopic": "Sun & Shadow Orientation",
+          "conceptTested": "Morning shadow falls towards West; determining facing direction relative to left/right.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1790400000000_isro",
+        "testId": "mock_1790400000000_isro"
       }
     ]
   }
