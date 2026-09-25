@@ -551,7 +551,10 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   s = s.replace(/\\f\s*rac\b/g, '\\frac');
   s = s.replace(/[\x0c\u000c]+/g, ' ');
   s = s.replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{');
-  s = s.replace(/\{?\$+([^$]+)\$+\}?/g, '$1');
+  // Fix corrupted or LLM-emitted textleft / textright / \text{left} / \text{right}
+  s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
+  s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');
+  s = s.replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2');
   s = s.replace(/≤ft\b/g, '\\left');
   s = s.replace(/\\le\s*ft\b/g, '\\left');
 

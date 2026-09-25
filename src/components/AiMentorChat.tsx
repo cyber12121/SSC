@@ -278,11 +278,15 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
   // Clean formfeed, corrupted \f, and bare frac
   let sanitized = sanitizeLatexForKatex(trimmed);
   sanitized = sanitized
+    .replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1')
+    .replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1')
+    .replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2')
     .replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac')
     .replace(/\\f\s*frac\b/g, '\\frac')
     .replace(/\\f\s*rac\b/g, '\\frac')
     .replace(/[\x0c\u000c]+/g, ' ')
-    .replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{');
+    .replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{')
+    .replace(/(?<!\\)%/g, '\\%');
 
   try {
     const html = katex.renderToString(sanitized, {
@@ -310,7 +314,12 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
 
       // 2. If it failed due to unescaped text words inside math, wrap words in \text{}
       try {
-        const textWrapped = sanitized.replace(/\b([a-zA-Z]{3,})\b(?![^{]*\})/g, '\\text{$1}');
+        const textWrapped = sanitized.replace(/(?<!\\)\b([a-zA-Z]{3,})\b(?![^{]*\})/g, (match) => {
+          if (/^(?:left|right|frac|sqrt|times|text|over|circ|cdot|quad|qquad|begin|end)$/i.test(match)) {
+            return match;
+          }
+          return `\\text{${match}}`;
+        });
         const retryTextHtml = katex.renderToString(textWrapped, { throwOnError: false, displayMode });
         if (!retryTextHtml.includes('katex-error') && !retryTextHtml.includes('color:#cc0000')) {
           chatKatexCache.set(cacheKey, retryTextHtml);
@@ -348,6 +357,11 @@ export function normalizeChatLatex(text: string): string {
 
   // 0. Remove any [DRILL: ...] practice drill tags so they never clutter the chat
   s = s.replace(/\[DRILL:\s*[^\]]+\]/gi, '');
+
+  // Fix corrupted or LLM-emitted textleft / textright / \text{left} / \text{right}
+  s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
+  s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');
+  s = s.replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2');
 
   // Clean formfeed / JSON escape artifacts on \frac
   s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
@@ -390,7 +404,12 @@ export function normalizeChatLatex(text: string): string {
     }
 
     // 5. Wrap isolated unwrapped LaTeX commands outside of $
-    // (Never wrap whole sentences in $; only wrap the math tokens!)
+    // Wrap unwrapped \left...\right expressions in $...$
+    l = l.replace(/(?<!\$)\\left([(\[{|])[\s\S]*?\\right([)\]}|])(?:\^\{?[0-9a-zA-Z]+\}?)?%?(?!\$)/g, (match) => {
+      const cleanMatch = match.replace(/(?<!\\)%/g, '\\%');
+      return `$${cleanMatch}$`;
+    });
+
     l = l.replace(/(?<!\$)\\frac\{([^{}]+)\}\{([^{}]+)\}(?!\$)/g, '$\\frac{$1}{$2}$');
     l = l.replace(/(?<!\$)\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|Delta|angle|approx|pm|mp|times|div)(?!\$)/g, '$\\$1$');
     l = l.replace(/(?<!\$)\\sqrt\{([^{}]+)\}(?!\$)/g, '$\\sqrt{$1}$');
@@ -399,7 +418,15 @@ export function normalizeChatLatex(text: string): string {
     return l;
   });
 
-  return processedLines.join('\n');
+  let joined = processedLines.join('\n');
+
+  // In inline math $...$, escape unescaped % so KaTeX doesn't treat % as a comment
+  joined = joined.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
+    const cleanInner = inner.replace(/(?<!\\)%/g, '\\%');
+    return `$${cleanInner}$`;
+  });
+
+  return joined;
 }
 
 // Clean latex for plain-text clipboard copy

@@ -90,6 +90,12 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     .replace(/([^\n])\s*([⇒∴])/g, '$1\n$2')
     .replace(/([^\n])\s*\b(Formula\s*:)/gi, '$1\n$2');
 
+  // Enforce line breaks for Para Jumble segments (P:, Q:, R:, S:, S1:, S6:, Given:)
+  processedText = processedText
+    .replace(/([^\n])\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)/g, '$1\n$2')
+    .replace(/([^\n])\s*(S[1-6]\s*:)/g, '$1\n$2')
+    .replace(/([^\n])\s*(Given\s*:)/gi, '$1\n$2');
+
   const lines = processedText.split('\n');
   const elements: React.ReactNode[] = [];
   let tableBuffer: string[] = [];
@@ -194,8 +200,40 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
       return;
     }
 
+    // Para Jumbles (Given:, P:, Q:, R:, S:, S1:, S6:, (P), [P])
+    const pjMatch = line.match(/^(?:(Given:)|([PQRS]\s*:|\([PQRS]\)|\[[PQRS]\]|S[1-6]\s*:))\s*(.*)/i);
+    if (pjMatch) {
+      const label = pjMatch[1] || pjMatch[2] || '';
+      const rest = pjMatch[3] || '';
+      elements.push(
+        <div
+          key={`pj-${tokenIdx}-${i}`}
+          className="my-1.5 pl-3 border-l-2 border-indigo-400 bg-slate-50/70 rounded-r-md py-1 text-slate-800 leading-relaxed font-normal flex items-baseline gap-2"
+        >
+          <span className="font-bold text-indigo-700 font-mono shrink-0">{label}</span>
+          <span className="flex-1">{formatInlineMarkdown(rest)}</span>
+        </div>
+      );
+      return;
+    }
+
+    // Statements and Conclusions
+    const stmtMatch = line.match(/^((?:Statement|Conclusion)\s+[I|V|X|\d]+:?)\s*(.*)/i);
+    if (stmtMatch) {
+      elements.push(
+        <div
+          key={`stmt-${tokenIdx}-${i}`}
+          className="my-1.5 pl-3 border-l-2 border-slate-300 bg-slate-50/50 rounded-r-md py-1 text-slate-800 leading-relaxed font-normal flex items-baseline gap-2"
+        >
+          <span className="font-bold text-slate-700 shrink-0">{stmtMatch[1]}</span>
+          <span className="flex-1">{formatInlineMarkdown(stmtMatch[2])}</span>
+        </div>
+      );
+      return;
+    }
+
     // Standard sentence or paragraph
-    if (breakOnSentences) {
+    if (breakOnSentences || lines.length > 1) {
       elements.push(
         <div key={`text-${tokenIdx}-${i}`} className="text-slate-800 leading-relaxed my-1">
           {formatInlineMarkdown(rawLine)}

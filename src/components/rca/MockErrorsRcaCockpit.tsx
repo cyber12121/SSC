@@ -1129,6 +1129,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                   const sTag = (ch.rcaCounts?.S || (ch.rcaCounts as any)?.A) || 0;
                   const tTag = ch.rcaCounts?.T || 0;
                   const gTag = ch.rcaCounts?.G || 0;
+                  const unclassifiedTag = ch.rcaCounts?.unclassified ?? Math.max(0, ch.total - (cTag + sTag + tTag + gTag));
 
                   return (
                     <React.Fragment key={ch.topic}>
@@ -1193,23 +1194,32 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                             }`}
                           />
                         </div>
-                        {/* Sub-breakdown chips */}
-                        <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
-                          <span className="text-[10px] text-slate-400 font-normal">Mistakes:</span>
-                          {ch.wrong > 0 && (
-                            <span className="inline-flex items-center text-[10px] font-semibold bg-rose-50 text-rose-700 px-1.5 py-0.2 rounded border border-rose-100">
-                              {ch.wrong} wrong
-                            </span>
-                          )}
-                          {ch.slow > 0 && (
-                            <span className="inline-flex items-center text-[10px] font-semibold bg-amber-50 text-amber-700 px-1.5 py-0.2 rounded border border-amber-100">
-                              {ch.slow} slow
-                            </span>
-                          )}
-                          {ch.unattempted > 0 && (
-                            <span className="inline-flex items-center text-[10px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded border border-slate-200">
-                              {ch.unattempted} skipped
-                            </span>
+                        {/* Topic metadata: Total questions & Unclassified (Option B) */}
+                        <div className="flex items-center gap-1.5 mt-0.5 text-[11px] text-slate-500 font-medium">
+                          <span>{ch.total} {ch.total === 1 ? 'question' : 'questions'}</span>
+                          {!isChaptersMode && (
+                            <>
+                              <span className="text-slate-300">•</span>
+                              {unclassifiedTag > 0 ? (
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    const unclassifiedQs = ch.rcaQuestions?.unclassified || ch.questions.filter(q => !q.rcaTag || q.rcaTag === 'unclassified');
+                                    onStartClubbedChapterQuiz(ch.topic, unclassifiedQs, 'unclassified');
+                                  }}
+                                  className="inline-flex items-center gap-1 text-[10px] font-semibold text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 px-1.5 py-0.2 rounded transition-colors cursor-pointer"
+                                  title={`Practice ${unclassifiedTag} unclassified questions for ${ch.topic}`}
+                                >
+                                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
+                                  <span>{unclassifiedTag} unclassified</span>
+                                </button>
+                              ) : (
+                                <span className="text-emerald-600 font-semibold text-[10px] inline-flex items-center gap-0.5">
+                                  ✓ All diagnosed
+                                </span>
+                              )}
+                            </>
                           )}
                         </div>
                       </td>
