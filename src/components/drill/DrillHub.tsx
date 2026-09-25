@@ -13,13 +13,13 @@ import {
   ChevronLeft,
   BookOpen,
 } from 'lucide-react';
-import { SpeedMathDrill } from './SpeedMathDrill';
 import { CalculationStudio } from './CalculationStudio';
 import { CalculationCheatSheet } from './CalculationCheatSheet';
 import { SectionId } from '../../data/drills/calculationData';
 import { ArunSharmaSpeedLab } from './calculation/ArunSharmaSpeedLab';
+import { SimplificationDrill } from './SimplificationDrill';
 
-type DrillTab = 'mental_speed' | 'calculation' | 'math';
+type DrillTab = 'mental_speed' | 'calculation' | 'simplification';
 
 interface DrillHubProps {
   onBack?: () => void;
@@ -86,7 +86,7 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
   const tabs: { id: DrillTab; label: string; icon: any; tag?: string }[] = [
     { id: 'mental_speed', label: 'Mental Speed Lab', icon: Sparkles, tag: '6-in-1 Matrix' },
     { id: 'calculation', label: 'Calculation Studio', icon: Calculator, tag: 'Full Screen' },
-    { id: 'math', label: 'Speed Drill', icon: Zap, tag: 'Sprint' },
+    { id: 'simplification', label: 'Simplification Drill', icon: Percent, tag: '10 Qs / Set' },
   ];
 
   return (
@@ -275,11 +275,12 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
               <button
                 type="button"
                 onClick={() => {
-                  setActiveTab('math');
+                  setActiveTab('simplification');
                 }}
-                className="px-2.5 py-1 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 font-medium text-[11px] transition cursor-pointer shrink-0"
+                className="px-2.5 py-1 rounded-lg bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-700 font-bold text-[11px] transition cursor-pointer shrink-0 flex items-center gap-1"
               >
-                Speed Drill Sprint
+                <Percent className="w-3 h-3 text-indigo-600" />
+                <span>Simplification (10 Qs)</span>
               </button>
               <button
                 type="button"
@@ -579,15 +580,15 @@ export const DrillHub: React.FC<DrillHubProps> = ({ onBack }) => {
             </motion.div>
           )}
 
-          {activeTab === 'math' && (
+          {activeTab === 'simplification' && (
             <motion.div
-              key="math"
+              key="simplification"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.15 }}
             >
-              <SpeedMathDrill />
+              <SimplificationDrill />
             </motion.div>
           )}
         </AnimatePresence>

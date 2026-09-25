@@ -1,0 +1,3201 @@
+[
+  {
+    "id": "set_1_easy",
+    "title": "Simplification Drill Set 1 (Easy)",
+    "setNumber": 1,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_1_easy_q1",
+        "q_num": 1,
+        "question": "15% of 4000 + 25% of 8000 =? * 13",
+        "options": {
+          "a": "100",
+          "b": "200",
+          "c": "300",
+          "d": "400",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "15% of 4000 + 25% of 8000 =? * 13\n=> 600 + 2000 =? * 13\n=> 200= ?"
+      },
+      {
+        "id": "set_1_easy_q2",
+        "q_num": 2,
+        "question": "8/3 of [17² - 3² - 6³] = 4/3 of (?)",
+        "options": {
+          "a": "128",
+          "b": "256",
+          "c": "64",
+          "d": "512",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "8/3 x (289 – 9 – 216) = 4/3 x (?)\n(?) = 8/3 x 3/4 x 64\n(?) = 128"
+      },
+      {
+        "id": "set_1_easy_q3",
+        "q_num": 3,
+        "question": "27 x (390 ÷ 13) – 40% of 760 + 4³ = (?)",
+        "options": {
+          "a": "470",
+          "b": "530",
+          "c": "570",
+          "d": "430",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "(?) = 27 x 30 – 304 + 64\n(?) = 810 – 240\n(?) = 570\n\nSimplification Questions PDF - Set 1 (Easy)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_1_easy_q4",
+        "q_num": 4,
+        "question": "20 x 16 + 46 x 43 + (3566.25 ÷ 3.75) = (?)²",
+        "options": {
+          "a": "57",
+          "b": "47",
+          "c": "53",
+          "d": "43",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "20 x 16 + 46 x 43 + (3566.25 ÷ 3.75) = (?)²\n320 + 1978 + 951 = (?)²\n(?)² = 3249\n(?) = 57"
+      },
+      {
+        "id": "set_1_easy_q5",
+        "q_num": 5,
+        "question": "4 2/3 + 8 1/3 = ? – 3 1/3",
+        "options": {
+          "a": "7/3",
+          "b": "49/3",
+          "c": "40/3",
+          "d": "32/3",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "4 2/3 + 8 1/3 = ? – 3 1/3\n=> 14/3 + 25/3 + 10/3= ?\n=> 49/3= ?"
+      },
+      {
+        "id": "set_1_easy_q6",
+        "q_num": 6,
+        "question": "18 * 23 + 12 * 41= ? + 43 * 21",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "2",
+          "d": "3",
+          "e": "0"
+        },
+        "answer": "d",
+        "solution": "18 * 23 + 12 * 41 = ? + 43 * 21\n414 + 492 = ? + 903\n? = 3"
+      },
+      {
+        "id": "set_1_easy_q7",
+        "q_num": 7,
+        "question": "40 % of 400 + 65 % of 620 – 91 * 4 = ?",
+        "options": {
+          "a": "196",
+          "b": "197",
+          "c": "198",
+          "d": "199",
+          "e": "200"
+        },
+        "answer": "d",
+        "solution": "40 % of 400 + 65 % of 620 – 91 * 4 = ?\n160 + 403 – 364 = ?\n199 = ?"
+      },
+      {
+        "id": "set_1_easy_q8",
+        "q_num": 8,
+        "question": "45 % of 180 + √144 * 8 = ? 2 + 70 % of 80",
+        "options": {
+          "a": "10",
+          "b": "11",
+          "c": "12",
+          "d": "13",
+          "e": "14"
+        },
+        "answer": "b",
+        "solution": "45 % of 180 + √144 * 8 = ?\n2\n + 70 % of 80\n81 + 96 = ?\n2\n + 56\n? = 11"
+      },
+      {
+        "id": "set_1_easy_q9",
+        "q_num": 9,
+        "question": "420 ÷ 7 + 20 % of 140 + ? * 13 = 61 * √16",
+        "options": {
+          "a": "12",
+          "b": "10",
+          "c": "13",
+          "d": "11",
+          "e": "14"
+        },
+        "answer": "a",
+        "solution": "420 ÷ 7 + 20 % of 140 + ? * 13 = 61 * √16\n60 + 28 + ? * 13 = 244\n? * 13 = 156\n\nSimplification Questions PDF - Set 1 (Easy)\n? = 12"
+      },
+      {
+        "id": "set_1_easy_q10",
+        "q_num": 10,
+        "question": "√529 * 5 – 15% of 220 + ? = 120% of 160",
+        "options": {
+          "a": "100",
+          "b": "110",
+          "c": "120",
+          "d": "140",
+          "e": "130"
+        },
+        "answer": "b",
+        "solution": "√529 * 5 – 15% of 220 + ? = 120% of 160\n23 * 5 – 33 + ? = 192\n? = 110"
+      }
+    ]
+  },
+  {
+    "id": "set_2_easy",
+    "title": "Simplification Drill Set 2 (Easy)",
+    "setNumber": 2,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_2_easy_q1",
+        "q_num": 1,
+        "question": "34% of 550 ÷ ? = 297 ÷√729",
+        "options": {
+          "a": "18",
+          "b": "12",
+          "c": "29",
+          "d": "17",
+          "e": "None of these"
+        },
+        "answer": "d",
+        "solution": "34% of 550 ÷ ? = 297 ÷√729   \n187/? = 297/27\n187/? = 11\n?= 17"
+      },
+      {
+        "id": "set_2_easy_q2",
+        "q_num": 2,
+        "question": "768 ÷ 12 * √256 – 58 = ?",
+        "options": {
+          "a": "982",
+          "b": "972",
+          "c": "966",
+          "d": "912",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "768 ÷ 12 * √256 – 58 = ?\n64 * 16 – 58 = ?\n1024 – 58 = ?\n966 = ?"
+      },
+      {
+        "id": "set_2_easy_q3",
+        "q_num": 3,
+        "question": "?% of 650 – 9 = 56",
+        "options": {
+          "a": "100",
+          "b": "10",
+          "c": "40",
+          "d": "35",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "?% of 650 – 9 = 56\n\nSimplification Questions PDF - Set 2 (Easy)\n?/100 * 650 = 56+9 = 65\n?= 65*100/650\n? = 10"
+      },
+      {
+        "id": "set_2_easy_q4",
+        "q_num": 4,
+        "question": "(?÷10) * 12 = 20% of 1320",
+        "options": {
+          "a": "270",
+          "b": "220",
+          "c": "210",
+          "d": "218",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "(?÷10) * 12 = 20% of 1320\n?/10 * 12 = 2*132\n? = (2*132*10)/12\n?= 220"
+      },
+      {
+        "id": "set_2_easy_q5",
+        "q_num": 5,
+        "question": "335 * 245 ÷ 35 + 1234 =?",
+        "options": {
+          "a": "3515",
+          "b": "3420",
+          "c": "3579",
+          "d": "3219",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "335 * 245 ÷ 35 + 1234 =?\n2345 +1234 = ?\n3579 = ?"
+      },
+      {
+        "id": "set_2_easy_q6",
+        "q_num": 6,
+        "question": "(216% of 1000 ÷9) + 42% of 600 = ?",
+        "options": {
+          "a": "410",
+          "b": "432",
+          "c": "441",
+          "d": "492",
+          "e": "None of these"
+        },
+        "answer": "d",
+        "solution": "(216% of 1000 ÷9) + 42% of 600 =?\n240 +252 = 492"
+      },
+      {
+        "id": "set_2_easy_q7",
+        "q_num": 7,
+        "question": "? +190 – 19*6 = 317*2",
+        "options": {
+          "a": "564",
+          "b": "558",
+          "c": "876",
+          "d": "543",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "? +190 – 19*6 = 317*2\n?+190 – 114 = 634\n? = 558"
+      },
+      {
+        "id": "set_2_easy_q8",
+        "q_num": 8,
+        "question": "137 * 111 – 11214 = ?",
+        "options": {
+          "a": "4210",
+          "b": "3798",
+          "c": "3993",
+          "d": "4203",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "137 * 111 – 11214 =?\n15207 – 11214 =  ?\n3993 = ?"
+      },
+      {
+        "id": "set_2_easy_q9",
+        "q_num": 9,
+        "question": "39*15 – 28*11 = 20% of ?",
+        "options": {
+          "a": "1711",
+          "b": "1385",
+          "c": "1330",
+          "d": "1320",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "39*15 – 28*11 = 20% of ?\n\nSimplification Questions PDF - Set 2 (Easy)\n585 – 308 = 20% of?\n277 = 20/100 * ?\n1385 = ?"
+      },
+      {
+        "id": "set_2_easy_q10",
+        "q_num": 10,
+        "question": "7365 + 25 +√? = 7433",
+        "options": {
+          "a": "1687",
+          "b": "1849",
+          "c": "1786",
+          "d": "1835",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "7365 + 25 +√? = 7433\n√? = 7433 – 7390\n? = 43\n2\n = 1849"
+      }
+    ]
+  },
+  {
+    "id": "set_3_easy",
+    "title": "Simplification Drill Set 3 (Easy)",
+    "setNumber": 3,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_3_easy_q1",
+        "q_num": 1,
+        "question": "4/5 of 6/7 of 8/9 of ? = 2880",
+        "options": {
+          "a": "3460",
+          "b": "4725",
+          "c": "3280",
+          "d": "3180",
+          "e": "2890"
+        },
+        "answer": "b",
+        "solution": "4/5 of 6/7 of 8/9 of ? = 2880\n? = (2880*5*7*9)/(5*6*8)\n? = 4725"
+      },
+      {
+        "id": "set_3_easy_q2",
+        "q_num": 2,
+        "question": "(1073÷29) * (1776/48) * (407/11) = (?)3",
+        "options": {
+          "a": "37",
+          "b": "39",
+          "c": "33",
+          "d": "42",
+          "e": "29"
+        },
+        "answer": "a",
+        "solution": "(1073÷29) * (1776/48) * (407/11) = (?)\n3\n37 * 37 * 37 = ?\n3\n? = 37"
+      },
+      {
+        "id": "set_3_easy_q3",
+        "q_num": 3,
+        "question": "32.56 + 45.24 + 36.89 + 52.67 = ? 2 – 1.64",
+        "options": {
+          "a": "12",
+          "b": "11",
+          "c": "15",
+          "d": "14",
+          "e": "13"
+        },
+        "answer": "e",
+        "solution": "32.56 + 45.24 + 36.89 + 52.67 = ?\n2\n – 1.64\n167.36 + 1.64 =?\n2\n\nSimplification Questions PDF - Set 3 (Easy)\n169 = ?\n2\n13 =?"
+      },
+      {
+        "id": "set_3_easy_q4",
+        "q_num": 4,
+        "question": "96 ÷ 6 – 12 * √169 = ? – 15 * 8",
+        "options": {
+          "a": "-12",
+          "b": "-18",
+          "c": "-20",
+          "d": "-24",
+          "e": "-16"
+        },
+        "answer": "c",
+        "solution": "96 ÷ 6 – 12 * √169 = ? – 15 * 8\n16 – 156 = ? – 120\n? = -20"
+      },
+      {
+        "id": "set_3_easy_q5",
+        "q_num": 5,
+        "question": "32 % of 250 + 14 * 8 –952 ÷ 17 = ?",
+        "options": {
+          "a": "128",
+          "b": "132",
+          "c": "136",
+          "d": "142",
+          "e": "146"
+        },
+        "answer": "c",
+        "solution": "32 % of 250 + 14 * 8 – 952 ÷ 17 = ?\n80 + 112 – 56 = ?\n136 = ?"
+      },
+      {
+        "id": "set_3_easy_q6",
+        "q_num": 6,
+        "question": "√13689 ÷ 13 + ? % of 320 = 131 * √9",
+        "options": {
+          "a": "120",
+          "b": "80",
+          "c": "90",
+          "d": "140",
+          "e": "100"
+        },
+        "answer": "a",
+        "solution": "√13689 ÷ 13 + ? % of 320 = 131 * √9\n9 + ? % of 320=393\n?=120"
+      },
+      {
+        "id": "set_3_easy_q7",
+        "q_num": 7,
+        "question": "1/3 * 54 + 3 * 26 + 56 * 25 ÷ 5 =?",
+        "options": {
+          "a": "348",
+          "b": "366",
+          "c": "380",
+          "d": "378",
+          "e": "376"
+        },
+        "answer": "e",
+        "solution": "1/3 * 54 + 3 * 26 + 56 * 25 ÷ 5 =?\n18 + 78 + 280 =?\n376 =?"
+      },
+      {
+        "id": "set_3_easy_q8",
+        "q_num": 8,
+        "question": "√7569 * 11 + 12 * 15 + √4489 * 5 =?",
+        "options": {
+          "a": "1427",
+          "b": "1372",
+          "c": "1472",
+          "d": "1567",
+          "e": "2175"
+        },
+        "answer": "c",
+        "solution": "√7569 * 11 + 12 * 15 + √4489 * 5 =?\n87 * 11 + 12 * 15 + 67 * 5 =?\n957 + 180 + 335 = 1472"
+      },
+      {
+        "id": "set_3_easy_q9",
+        "q_num": 9,
+        "question": "135 ÷ 5 + 15 × 18 + 12 % of 50 =? - 17",
+        "options": {
+          "a": "360",
+          "b": "280",
+          "c": "320",
+          "d": "450",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "135 ÷ 5 + 15 × 18 + 12 % of 50 = x - 17\n(135 / 5) + (15 * 18) + (12 / 100) * 50 + 17 = x\n\nSimplification Questions PDF - Set 3 (Easy)\nx = 27 + 270 + 6 + 17 = 320"
+      },
+      {
+        "id": "set_3_easy_q10",
+        "q_num": 10,
+        "question": "380+620-190%of820=?-120*√25",
+        "options": {
+          "a": "42",
+          "b": "45",
+          "c": "47",
+          "d": "48",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "380+620-190%of820=?-120*√25\n380+620-1558=?-600\n42=?"
+      }
+    ]
+  },
+  {
+    "id": "set_5_easy",
+    "title": "Simplification Drill Set 5 (Easy)",
+    "setNumber": 5,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_5_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 168 ÷ 3 ÷ √16 * ? = 1400 ÷ 4",
+        "options": {
+          "a": "42",
+          "b": "28",
+          "c": "16",
+          "d": "40",
+          "e": "25"
+        },
+        "answer": "e",
+        "solution": "168 ÷ 3 ÷ √16 * ? = 1400 ÷ 4\n56 ÷ 4 * ? = 350\n? = 350 ÷ 14\n? = 25"
+      },
+      {
+        "id": "set_5_easy_q2",
+        "q_num": 2,
+        "question": "?– 54= 24 ÷ 13 * 65 - 144",
+        "options": {
+          "a": "30",
+          "b": "72",
+          "c": "48",
+          "d": "54",
+          "e": "65"
+        },
+        "answer": "a",
+        "solution": "? – 54 = 24 ÷ 13 * 65 – 144\n? – 54 = 24 * 5 – 144\n? = 120 – 144 + 54\n? = 30"
+      },
+      {
+        "id": "set_5_easy_q3",
+        "q_num": 3,
+        "question": "35% of 400 = ? 2 – 17% of 500",
+        "options": {
+          "a": "10",
+          "b": "18",
+          "c": "17",
+          "d": "15",
+          "e": "12"
+        },
+        "answer": "d",
+        "solution": "35% of 400 = ?\n2\n – 17% of 500\n\nSimplification Questions PDF - Set 5 (Easy)\n35 * 400/100 = ?\n2\n – 17 * 500/100\n?\n2\n = 140 + 85\n? = √225\n? = 15"
+      },
+      {
+        "id": "set_5_easy_q4",
+        "q_num": 4,
+        "question": "245 + 110 - 12 2 = ? + 163",
+        "options": {
+          "a": "91",
+          "b": "48",
+          "c": "52",
+          "d": "76",
+          "e": "84"
+        },
+        "answer": "b",
+        "solution": "245 + 110 - 12\n2 \n= ? + 163\n? = 355 – 144 – 163\n? = 48"
+      },
+      {
+        "id": "set_5_easy_q5",
+        "q_num": 5,
+        "question": "165 ÷ √121 + 20 * 8 - √? = 159",
+        "options": {
+          "a": "144",
+          "b": "256",
+          "c": "100",
+          "d": "81",
+          "e": "196"
+        },
+        "answer": "b",
+        "solution": "165 ÷ √121 + 20 * 8 - √? = 159\n165 ÷ 11 + 160 - √? = 159\n√? = 15 + 160 – 159\n√? = 16\n? = 256"
+      },
+      {
+        "id": "set_5_easy_q6",
+        "q_num": 6,
+        "question": "25% of 840 =? +300 ÷ 4 +25",
+        "options": {
+          "a": "150",
+          "b": "210",
+          "c": "170",
+          "d": "110",
+          "e": "250"
+        },
+        "answer": "d",
+        "solution": "25% of 840 =? + 300 ÷ 4 + 25\n210 = ? + 75 + 25\n? = 210 – 100\n? = 110"
+      },
+      {
+        "id": "set_5_easy_q7",
+        "q_num": 7,
+        "question": "√(52 + √(16 * 9)) * ? = 512",
+        "options": {
+          "a": "64",
+          "b": "36",
+          "c": "72",
+          "d": "56",
+          "e": "44"
+        },
+        "answer": "a",
+        "solution": "√(52 + √(16 * 9)) * ? = 512\n√(52 + 4 * 3) * ? = 512\n√64 * ? = 512\n? = 512 ÷ 8\n? = 64"
+      },
+      {
+        "id": "set_5_easy_q8",
+        "q_num": 8,
+        "question": "√81 + ? - √361 = √900 + √100",
+        "options": {
+          "a": "20",
+          "b": "50",
+          "c": "10",
+          "d": "30",
+          "e": "40"
+        },
+        "answer": "b",
+        "solution": "√81 + ? - √361 = √900 + √100\n9 + ? – 19 = 30 + 10\n? = 40 + 19 – 9\n? = 50"
+      },
+      {
+        "id": "set_5_easy_q9",
+        "q_num": 9,
+        "question": "(15 * 4 + 80 + 25) ÷ 11 = ?",
+        "options": {
+          "a": "12",
+          "b": "18",
+          "c": "11",
+          "d": "15",
+          "e": "10"
+        },
+        "answer": "d",
+        "solution": "(15 * 4 + 80 + 25) ÷ 11 = ?\n(60 + 105) ÷ 11 = ?\n? = 165 ÷ 11\n? = 15"
+      },
+      {
+        "id": "set_5_easy_q10",
+        "q_num": 10,
+        "question": "37.5% of 480 + 45.5% of 400 = ?",
+        "options": {
+          "a": "174",
+          "b": "236",
+          "c": "362",
+          "d": "185",
+          "e": "208"
+        },
+        "answer": "c",
+        "solution": "37.5% of 480 + 45.5% of 400 = ?\n37.5 * 480/100 + 45.5 * 400/100 = ?\n3/8 * 480 + 45.5 * 4 = ?\n? = 180 + 182\n? = 362"
+      }
+    ]
+  },
+  {
+    "id": "set_7_easy",
+    "title": "Simplification Drill Set 7 (Easy)",
+    "setNumber": 7,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_7_easy_q1",
+        "q_num": 1,
+        "question": "24 2 – 19 2 = ? * 12 – 17 2",
+        "options": {
+          "a": "49",
+          "b": "45",
+          "c": "41",
+          "d": "42",
+          "e": "44"
+        },
+        "answer": "d",
+        "solution": "24\n2\n – 19\n2\n = ? * 12 – 17\n2\n576 – 361 = ? * 12 – 289\n? = 42"
+      },
+      {
+        "id": "set_7_easy_q2",
+        "q_num": 2,
+        "question": "78312 – 5831 + 3814 – 14321 +? = 66355",
+        "options": {
+          "a": "4831",
+          "b": "4183",
+          "c": "4138",
+          "d": "4318",
+          "e": "None of these"
+        },
+        "answer": "e",
+        "solution": "78312 – 5831 + 3814 – 14321 +? = 66355\n? = 4381"
+      },
+      {
+        "id": "set_7_easy_q3",
+        "q_num": 3,
+        "question": "45% of 360 + 120% of 90 = ?",
+        "options": {
+          "a": "240",
+          "b": "250",
+          "c": "270",
+          "d": "230",
+          "e": "210"
+        },
+        "answer": "c",
+        "solution": "45% of 360 + 120% of 90 = ?\n162 + 108 = ?\n? = 270"
+      },
+      {
+        "id": "set_7_easy_q4",
+        "q_num": 4,
+        "question": "√4489 + √169 +? = 19 * 24",
+        "options": {
+          "a": "328",
+          "b": "359",
+          "c": "364",
+          "d": "376",
+          "e": "386"
+        },
+        "answer": "d",
+        "solution": "√4489 + √169 +? = 19 * 24\n67 + 13 +? = 456\n? = 376"
+      },
+      {
+        "id": "set_7_easy_q5",
+        "q_num": 5,
+        "question": "?% of (584.2 – 244.2) = (9) 2 + 21",
+        "options": {
+          "a": "40",
+          "b": "45",
+          "c": "30",
+          "d": "60",
+          "e": "50"
+        },
+        "answer": "c",
+        "solution": "? % of (584.2 – 244.2) = 9\n2\n + 21\n(?x340)/100 =81+21=102\n? = (102×100)/340 = 30"
+      },
+      {
+        "id": "set_7_easy_q6",
+        "q_num": 6,
+        "question": "58% of 850 + ?= 1224 —603",
+        "options": {
+          "a": "128",
+          "b": "130",
+          "c": "138",
+          "d": "140",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "58% of 850 + ? = 1224 – 603\n? = 1224 – 603 – (58/100) × 850 = 621 – 493 = 128"
+      },
+      {
+        "id": "set_7_easy_q7",
+        "q_num": 7,
+        "question": "3/8 of 168 x 15 ÷ 5 + ? = 549 ÷ 9 + 235",
+        "options": {
+          "a": "189",
+          "b": "107",
+          "c": "174",
+          "d": "296",
+          "e": "326"
+        },
+        "answer": "b",
+        "solution": "3/8 of 168 x 15 ÷ 5 + ? = 549 ÷ 9 + 235\n= 3/8 x 168 x15 x 1/5 + ? = 549 x 1/9 + 235\n= 3 x 21 x 3 + ? = 61 + 235\n= 296 – 189 = 107"
+      },
+      {
+        "id": "set_7_easy_q8",
+        "q_num": 8,
+        "question": "767 ÷ 13 + 357 ÷ √289 =? * √16",
+        "options": {
+          "a": "10",
+          "b": "15",
+          "c": "20",
+          "d": "25",
+          "e": "30"
+        },
+        "answer": "c",
+        "solution": "767 ÷ 13 + 357 ÷ √289 =? * √16\n59 + 21 =? * 4\n? = 20"
+      },
+      {
+        "id": "set_7_easy_q9",
+        "q_num": 9,
+        "question": "22 * 18 – 23 * 13 = ? ÷ 4",
+        "options": {
+          "a": "388",
+          "b": "392",
+          "c": "396",
+          "d": "386",
+          "e": "384"
+        },
+        "answer": "a",
+        "solution": "22 * 18 – 23 * 13 = ? ÷ 4\n97 * 4 = ?\n? = 388"
+      },
+      {
+        "id": "set_7_easy_q10",
+        "q_num": 10,
+        "question": "12 * 21 ÷ 48 * 96 + 33 * 8 ÷ 22 =?",
+        "options": {
+          "a": "516",
+          "b": "512",
+          "c": "518",
+          "d": "561",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "Simplification Questions PDF - Set 7 (Easy)\n12 * 21 ÷ 48 * 96 + 33 * 8 ÷ 22 =?\n504 + 12 = 516"
+      }
+    ]
+  },
+  {
+    "id": "set_9_easy",
+    "title": "Simplification Drill Set 9 (Easy)",
+    "setNumber": 9,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_9_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 181 + 359 - ? 2 = 20 * 7",
+        "options": {
+          "a": "11",
+          "b": "25",
+          "c": "17",
+          "d": "20",
+          "e": "13"
+        },
+        "answer": "d",
+        "solution": "181 + 359 - ?\n2\n = 20 * 7\n181 + 359 - ?\n2\n = 140\n?\n2\n = 540 – 140\n?\n2\n = 400\n?\n2\n = 20\n2\n? = 20"
+      },
+      {
+        "id": "set_9_easy_q2",
+        "q_num": 2,
+        "question": "√1600 + √625 - 3 √? = 120 ÷ 2",
+        "options": {
+          "a": "125",
+          "b": "64",
+          "c": "216",
+          "d": "343",
+          "e": "27"
+        },
+        "answer": "a",
+        "solution": "√1600 + √625 - \n3\n√? = 120 ÷ 2\n40 + 25 - \n3\n√? = 60\n3\n√? = 65 – 60\n\nSimplification Questions PDF - Set 9 (Easy)\n3\n√? = 5\n? = 125"
+      },
+      {
+        "id": "set_9_easy_q3",
+        "q_num": 3,
+        "question": "25% of ? + 120 = 40% of 500",
+        "options": {
+          "a": "360",
+          "b": "400",
+          "c": "240",
+          "d": "140",
+          "e": "320"
+        },
+        "answer": "e",
+        "solution": "25% of ? + 120 = 40% of 500\n25 * ?/100 + 120 = 40 * 500/100\n?/4 + 120 = 200\n?/4 = 200 – 120\n? = 80 * 4\n? = 320"
+      },
+      {
+        "id": "set_9_easy_q4",
+        "q_num": 4,
+        "question": "√(109 + ? + 76)= 75 ÷ 5",
+        "options": {
+          "a": "27",
+          "b": "33",
+          "c": "48",
+          "d": "21",
+          "e": "40"
+        },
+        "answer": "e",
+        "solution": "√(109 + ? + 76) = 75 ÷ 5\n√(109 + ? + 76) = 15\n185 + ? = 225\n? = 225 – 185\n? = 40"
+      },
+      {
+        "id": "set_9_easy_q5",
+        "q_num": 5,
+        "question": "216 ÷ √36 + 94+ ? = 170",
+        "options": {
+          "a": "40",
+          "b": "25",
+          "c": "70",
+          "d": "65",
+          "e": "90"
+        },
+        "answer": "a",
+        "solution": "216 ÷ √36 + 94 + ? = 170\n216 ÷ 6 + 94 + ? = 170\n36 + 94 + ? = 170\n? = 170 – 130\n? = 40"
+      },
+      {
+        "id": "set_9_easy_q6",
+        "q_num": 6,
+        "question": "14 * 11 + 16 2 = ? 2 + 310",
+        "options": {
+          "a": "25",
+          "b": "10",
+          "c": "30",
+          "d": "15",
+          "e": "20"
+        },
+        "answer": "b",
+        "solution": "14 * 11 + 16\n2\n= ?\n2\n + 310\n154 + 256 = ?\n2\n + 310\n?\n2\n = 410 – 310\n?\n2\n = 100\n\nSimplification Questions PDF - Set 9 (Easy)\n?\n2\n = 10\n2\n? = 10"
+      },
+      {
+        "id": "set_9_easy_q7",
+        "q_num": 7,
+        "question": "1400 – 750 - ? =25 * 20",
+        "options": {
+          "a": "120",
+          "b": "170",
+          "c": "110",
+          "d": "100",
+          "e": "150"
+        },
+        "answer": "e",
+        "solution": "1400 – 750 - ? = 25 * 20\n650 - ? = 500\n? = 150"
+      },
+      {
+        "id": "set_9_easy_q8",
+        "q_num": 8,
+        "question": "220 ÷ 2 ÷ 11 * ? = 210 ÷ 7 * 5",
+        "options": {
+          "a": "11",
+          "b": "10",
+          "c": "20",
+          "d": "15",
+          "e": "11"
+        },
+        "answer": "d",
+        "solution": "220 ÷ 2 ÷ 11 * ? = 210 ÷ 7 * 5\n10 * ? = 30 * 5\n? = 150/10\n? = 15"
+      },
+      {
+        "id": "set_9_easy_q9",
+        "q_num": 9,
+        "question": "15 * 4 ÷ 8 * 120 = ? * √81",
+        "options": {
+          "a": "80",
+          "b": "90",
+          "c": "100",
+          "d": "120",
+          "e": "110"
+        },
+        "answer": "c",
+        "solution": "15 * 4 ÷ 8 * 120 = ? * √81\n60/8 * 120 = ? * 9\n? = 100"
+      },
+      {
+        "id": "set_9_easy_q10",
+        "q_num": 10,
+        "question": "(1452 ÷ 4 ÷ 3) ÷ 11 = ? ÷ 5",
+        "options": {
+          "a": "35",
+          "b": "45",
+          "c": "55",
+          "d": "60",
+          "e": "25"
+        },
+        "answer": "c",
+        "solution": "(1452 ÷ 4 ÷ 3) ÷ 11 = ? ÷ 5\n121/11 = ? /5\n? = 55"
+      }
+    ]
+  },
+  {
+    "id": "set_10_easy",
+    "title": "Simplification Drill Set 10 (Easy)",
+    "setNumber": 10,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_10_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 3(2/5) + 4(4/5) + 8(1/3) = ?",
+        "options": {
+          "a": "18(8/15)",
+          "b": "17(8/15)",
+          "c": "15(8/15)",
+          "d": "14(8/15)",
+          "e": "16(8/15)"
+        },
+        "answer": "e",
+        "solution": "3(2/5) + 4(4/5) + 8(1/3) = ?\n(3 + 4 + 8)(2/5 + 4/5 + 1/3) = ?\n15(23/15) = ?\n16(8/15) = ?"
+      },
+      {
+        "id": "set_10_easy_q2",
+        "q_num": 2,
+        "question": "178 * 12 ÷ √576 - √841 = ? * 3",
+        "options": {
+          "a": "10",
+          "b": "15",
+          "c": "20",
+          "d": "25",
+          "e": "30"
+        },
+        "answer": "c",
+        "solution": "178 * 12 ÷ √576 - √841 = ? * 3\n178 * 12/24 – 29 = ? * 3\n? = 20"
+      },
+      {
+        "id": "set_10_easy_q3",
+        "q_num": 3,
+        "question": "(1/4) * 3040 – (2/5) * ? = 140 * 4",
+        "options": {
+          "a": "450",
+          "b": "480",
+          "c": "500",
+          "d": "520",
+          "e": "540"
+        },
+        "answer": "c",
+        "solution": "(1/4) * 3040 – (2/5) * ? = 140 * 4\n760 – 560 = ? * 2/5\n\nSimplification Questions PDF - Set 10 (Easy)\n? = 500"
+      },
+      {
+        "id": "set_10_easy_q4",
+        "q_num": 4,
+        "question": "4(3/7) of 126 – 1(5/6) of 198 = ?",
+        "options": {
+          "a": "187",
+          "b": "195",
+          "c": "212",
+          "d": "178",
+          "e": "185"
+        },
+        "answer": "b",
+        "solution": "4(3/7) of 126 – 1(5/6) of 198 = ?\n31 * 18 – 11 * 33 = ?\n? = 195"
+      },
+      {
+        "id": "set_10_easy_q5",
+        "q_num": 5,
+        "question": "(294 – 55% of 180) ÷ 13 = ? - √324",
+        "options": {
+          "a": "31",
+          "b": "33",
+          "c": "35",
+          "d": "37",
+          "e": "28"
+        },
+        "answer": "b",
+        "solution": "(294 – 55% of 180) ÷ 13 = ? - √324\n294 – 99/13 = ? – 18\n? = 33"
+      },
+      {
+        "id": "set_10_easy_q6",
+        "q_num": 6,
+        "question": "74% of 250 – 145 = ? + 13 * 3",
+        "options": {
+          "a": "0",
+          "b": "4",
+          "c": "5",
+          "d": "1",
+          "e": "3"
+        },
+        "answer": "d",
+        "solution": "74% of 250 – 145 = ? + 13 * 3\n185 – 145 = ? + 39\n? = 1"
+      },
+      {
+        "id": "set_10_easy_q7",
+        "q_num": 7,
+        "question": "(28 2 – 19 * 21) ÷ 11 = ? * 7",
+        "options": {
+          "a": "4",
+          "b": "10",
+          "c": "5",
+          "d": "8",
+          "e": "7"
+        },
+        "answer": "c",
+        "solution": "(28\n2\n – 19 * 21) ÷ 11 = ? * 7\n385/11 = ? * 7\n? = 5"
+      },
+      {
+        "id": "set_10_easy_q8",
+        "q_num": 8,
+        "question": "14 2 + 37 2 - √4225 = ? * 25",
+        "options": {
+          "a": "40",
+          "b": "50",
+          "c": "80",
+          "d": "100",
+          "e": "60"
+        },
+        "answer": "e",
+        "solution": "14\n2\n + 37\n2\n - √4225 = ? * 25\n196 + 1369 – 65 = ? * 25\n? = 60"
+      },
+      {
+        "id": "set_10_easy_q9",
+        "q_num": 9,
+        "question": "(38 * 23 + 19 * 38) ÷ 12 = ?",
+        "options": {
+          "a": "133",
+          "b": "128",
+          "c": "125",
+          "d": "138",
+          "e": "141"
+        },
+        "answer": "a",
+        "solution": "(38 * 23 + 19 * 38) ÷ 12 = ?\n38 * (23 + 19)/12 = ?\n? = 133\n\nSimplification Questions PDF - Set 10 (Easy)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_10_easy_q10",
+        "q_num": 10,
+        "question": "(11 2 + (17 * 3)) * ? = 43 * 12",
+        "options": {
+          "a": "1",
+          "b": "4",
+          "c": "2",
+          "d": "3",
+          "e": "5"
+        },
+        "answer": "d",
+        "solution": "(11\n2\n + (17 * 3)) * ? = 43 * 12\n172 * ? = 43 * 12\n? = 3"
+      }
+    ]
+  },
+  {
+    "id": "set_11_easy",
+    "title": "Simplification Drill Set 11 (Easy)",
+    "setNumber": 11,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_11_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 120 * 6 √(729) + √484 * 12 = ? * 8",
+        "options": {
+          "a": "78",
+          "b": "82",
+          "c": "75",
+          "d": "88",
+          "e": "84"
+        },
+        "answer": "a",
+        "solution": "120 * \n6\n√(729) + √484 * 12 = ? * 8\n624 = ? * 8\n? = 78"
+      },
+      {
+        "id": "set_11_easy_q2",
+        "q_num": 2,
+        "question": "√1764 * √676 ÷ 13 + √2209 * 3 = ? 2",
+        "options": {
+          "a": "13",
+          "b": "15",
+          "c": "17",
+          "d": "9",
+          "e": "11"
+        },
+        "answer": "b",
+        "solution": "√1764 * √676 ÷ 13 + √2209 * 3 = ?\n2\n  \n42 * 26/13 + 141 = ?\n2\n  \n? = 15"
+      },
+      {
+        "id": "set_11_easy_q3",
+        "q_num": 3,
+        "question": "13 2 * 9 2 ÷ √1521 – 15 2 = ?",
+        "options": {
+          "a": "118",
+          "b": "124",
+          "c": "120",
+          "d": "128",
+          "e": "126"
+        },
+        "answer": "e",
+        "solution": "13\n2\n * 9\n2\n ÷ √1521 – 15\n2\n = ?\n13 * 13 * 9 * 9/39 – 225 = ?\n\nSimplification Questions PDF - Set 11 (Easy)\n? = 126"
+      },
+      {
+        "id": "set_11_easy_q4",
+        "q_num": 4,
+        "question": "12.5 * 10 + 225 * 4 – 47 * 16 = ? * 7",
+        "options": {
+          "a": "39",
+          "b": "42",
+          "c": "45",
+          "d": "48",
+          "e": "51"
+        },
+        "answer": "a",
+        "solution": "12.5 * 10 + 225 * 4 – 47 * 16 = ? * 7\n125 + 900 – 752 = ? * 7\n? = 39"
+      },
+      {
+        "id": "set_11_easy_q5",
+        "q_num": 5,
+        "question": "(93 ÷ 268) * (67 ÷ 465) * ? = √25",
+        "options": {
+          "a": "120",
+          "b": "90",
+          "c": "80",
+          "d": "100",
+          "e": "110"
+        },
+        "answer": "d",
+        "solution": "(93 ÷ 268) * (67 ÷ 465) * ? = √25\n1/4 * 1/5 * ? = 5\n? = 100"
+      },
+      {
+        "id": "set_11_easy_q6",
+        "q_num": 6,
+        "question": "15 * √676 – (√900 * 76) ÷ 19 = ?",
+        "options": {
+          "a": "270",
+          "b": "250",
+          "c": "240",
+          "d": "280",
+          "e": "220"
+        },
+        "answer": "a",
+        "solution": "15 * √676 – (√900 * 76) ÷ 19 = ?\n390 - 120 = ?\n? = 270"
+      },
+      {
+        "id": "set_11_easy_q7",
+        "q_num": 7,
+        "question": "18 * 23 + 12 * 41 = ? + 43 * 21",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "2",
+          "d": "3",
+          "e": "0"
+        },
+        "answer": "d",
+        "solution": "18 * 23 + 12 * 41 = ? + 43 * 21\n414 + 492 = ? + 903\n? = 3"
+      },
+      {
+        "id": "set_11_easy_q8",
+        "q_num": 8,
+        "question": "4500 ÷ 9 – 5837 ÷ 13 = ?",
+        "options": {
+          "a": "51",
+          "b": "59",
+          "c": "61",
+          "d": "67",
+          "e": "64"
+        },
+        "answer": "a",
+        "solution": "4500 ÷ 9 – 5837 ÷ 13 = ?\n500 – 449 = ?\n? = 51"
+      },
+      {
+        "id": "set_11_easy_q9",
+        "q_num": 9,
+        "question": "√529 + √144 + √1600 = ? * 15",
+        "options": {
+          "a": "6",
+          "b": "5",
+          "c": "4",
+          "d": "7",
+          "e": "3"
+        },
+        "answer": "b",
+        "solution": "√529 + √144 + √1600 = ? * 15\n23 + 12 + 40 = ? * 15\n? = 5\n\nSimplification Questions PDF - Set 11 (Easy)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_11_easy_q10",
+        "q_num": 10,
+        "question": "80% of 550 + 75% of 360 = ? * 5",
+        "options": {
+          "a": "156",
+          "b": "138",
+          "c": "186",
+          "d": "142",
+          "e": "172"
+        },
+        "answer": "d",
+        "solution": "80% of 550 + 75% of 360 = ?\n \n* 5\n440 + 270 = ? * 5\n? = 142"
+      }
+    ]
+  },
+  {
+    "id": "set_12_easy",
+    "title": "Simplification Drill Set 12 (Easy)",
+    "setNumber": 12,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_12_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. √289 * 15 – 3876 ÷ √361 = ? * 3",
+        "options": {
+          "a": "17",
+          "b": "19",
+          "c": "23",
+          "d": "15",
+          "e": "12"
+        },
+        "answer": "a",
+        "solution": "√289 * 15 – 3876 ÷ √361 = ? * 3\n17 * 15 – 204 = ? * 3\n? = 17"
+      },
+      {
+        "id": "set_12_easy_q2",
+        "q_num": 2,
+        "question": "43 * 18 – 21 * 23 = ? + 191",
+        "options": {
+          "a": "120",
+          "b": "100",
+          "c": "140",
+          "d": "150",
+          "e": "180"
+        },
+        "answer": "b",
+        "solution": "43 * 18 – 21 * 23 = ? + 191\n774 – 483 = ? + 191\n? = 100"
+      },
+      {
+        "id": "set_12_easy_q3",
+        "q_num": 3,
+        "question": "75% of 280 – 65% of 180 = ?",
+        "options": {
+          "a": "93",
+          "b": "96",
+          "c": "88",
+          "d": "80",
+          "e": "84"
+        },
+        "answer": "a",
+        "solution": "75% of 280 – 65% of 180 = ?\n? = 93"
+      },
+      {
+        "id": "set_12_easy_q4",
+        "q_num": 4,
+        "question": "1656 ÷ √529 – √5041 = ? - √576",
+        "options": {
+          "a": "29",
+          "b": "27",
+          "c": "26",
+          "d": "25",
+          "e": "28"
+        },
+        "answer": "d",
+        "solution": "1656 ÷ √529 – √5041 = ? - √576\n? – 24 = 72 – 71\n? = 25"
+      },
+      {
+        "id": "set_12_easy_q5",
+        "q_num": 5,
+        "question": "5481 ÷ √729 + 589 ÷ √961 = ?",
+        "options": {
+          "a": "210",
+          "b": "212",
+          "c": "234",
+          "d": "222",
+          "e": "228"
+        },
+        "answer": "d",
+        "solution": "5481 ÷ √729 + 589 ÷ √961 = ?\n203 + 19 = ?\n? = 222"
+      },
+      {
+        "id": "set_12_easy_q6",
+        "q_num": 6,
+        "question": "√(45 + 5 3 - 70) ÷ ? * 30 = 80 ÷ 4",
+        "options": {
+          "a": "20",
+          "b": "10",
+          "c": "30",
+          "d": "25",
+          "e": "15"
+        },
+        "answer": "e",
+        "solution": "√(45 + 5\n3\n - 70) ÷ ? * 30 = 80 ÷ 4\n√(45 + 125 - 70) ÷ ? * 30 = 20\n√100 * 30 ÷ 20 = ?\n? = 15"
+      },
+      {
+        "id": "set_12_easy_q7",
+        "q_num": 7,
+        "question": "3(1/4) + 1(1/8) + ? = 5(1/4) + 1(1/8)",
+        "options": {
+          "a": "5",
+          "b": "2",
+          "c": "3",
+          "d": "1",
+          "e": "4"
+        },
+        "answer": "b",
+        "solution": "3(1/4) + 1(1/8) + ? = 5(1/4) + 1(1/8)\n13/4 + 9/8 + ? = 21/4 + 9/8\n? = 42/8 + 9/8 – 26/8 – 9/8\n? = 16/8\n? = 2"
+      },
+      {
+        "id": "set_12_easy_q8",
+        "q_num": 8,
+        "question": "22 2 + 32 2 – 508 = ? * 5",
+        "options": {
+          "a": "200",
+          "b": "250",
+          "c": "220",
+          "d": "180",
+          "e": "210"
+        },
+        "answer": "a",
+        "solution": "22\n2\n + 32\n2\n – 508 = ? * 5\n484 + 1024 – 508 = ? * 5\n1000 = ? * 5\n? = 200"
+      },
+      {
+        "id": "set_12_easy_q9",
+        "q_num": 9,
+        "question": "? ÷ 7 = √(306 - √100 + 280) ÷ 2",
+        "options": {
+          "a": "64",
+          "b": "45",
+          "c": "71",
+          "d": "84",
+          "e": "52"
+        },
+        "answer": "d",
+        "solution": "? ÷ 7 = √(306 - √100 + 280) ÷ 2\n\nSimplification Questions PDF - Set 12 (Easy)\n? ÷ 7 = √(306 – 10 + 280) ÷ 2\n? ÷ 7 = √576 ÷ 2\n? = 24 ÷ 2 * 7\n? = 12 * 7\n? = 84"
+      },
+      {
+        "id": "set_12_easy_q10",
+        "q_num": 10,
+        "question": "16 * 15 ÷ 8 ÷ 3 = ? ÷ 2",
+        "options": {
+          "a": "16",
+          "b": "40",
+          "c": "30",
+          "d": "20",
+          "e": "15"
+        },
+        "answer": "d",
+        "solution": "16 * 15 ÷ 8 ÷ 3 = ? ÷ 2\n10 = ? ÷ 2\n? = 20"
+      }
+    ]
+  },
+  {
+    "id": "set_13_easy",
+    "title": "Simplification Drill Set 13 (Easy)",
+    "setNumber": 13,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_13_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 980 ÷ 4.9 + 6000 ÷ √900 = ? 2",
+        "options": {
+          "a": "20",
+          "b": "30",
+          "c": "15",
+          "d": "18",
+          "e": "12"
+        },
+        "answer": "a",
+        "solution": "980 ÷ 4.9 + 6000 ÷ √900 = ?\n2\n200 + 6000 ÷ 30 = ?\n2\n200 + 200 = ?\n2\n?\n2\n = 400\n? = 20"
+      },
+      {
+        "id": "set_13_easy_q2",
+        "q_num": 2,
+        "question": "4/9 of 198 + 5/7 of 140 = ? * 2",
+        "options": {
+          "a": "84",
+          "b": "99",
+          "c": "95",
+          "d": "90",
+          "e": "94"
+        },
+        "answer": "e",
+        "solution": "4/9 * 198 + 5/7 * 140 = ? * 2\n88 + 100 = ? * 2\n188 = ? * 2\n? = 94"
+      },
+      {
+        "id": "set_13_easy_q3",
+        "q_num": 3,
+        "question": "12.05% of 400 + 120 ÷ 4 - ? = 50",
+        "options": {
+          "a": "28.2",
+          "b": "16.2",
+          "c": "20.2",
+          "d": "32.2",
+          "e": "15.2"
+        },
+        "answer": "a",
+        "solution": "12.05% of 400 + 120 ÷ 4 - ? = 50\n12.05 * 400/100 + 30 - ? = 50\n? = 48.2 + 30 – 50\n? = 28.2"
+      },
+      {
+        "id": "set_13_easy_q4",
+        "q_num": 4,
+        "question": "2(1/5) + 1(1/10) + ? = 3(1/5) + 4(1/5)",
+        "options": {
+          "a": "4(1/5)",
+          "b": "2(1/10)",
+          "c": "3(1/10)",
+          "d": "4(1/10)",
+          "e": "2(1/5)"
+        },
+        "answer": "d",
+        "solution": "2(1/5) + 1(1/10) + ? = 3(1/5) + 4(1/5)\n2(2/10) + 1(1/10) + ? = 3(2/10) + 4(2/10)\n3(3/10) + ? = 7(4/10)\n? = 4(1/10)"
+      },
+      {
+        "id": "set_13_easy_q5",
+        "q_num": 5,
+        "question": "√(70 + 20 2 + 155) ÷ 5 ? = 5",
+        "options": {
+          "a": "5",
+          "b": "4",
+          "c": "1",
+          "d": "3",
+          "e": "2"
+        },
+        "answer": "c",
+        "solution": "√(70 + 20\n2\n + 155) ÷ 5\n?\n = 5\n√(70 + 400 + 155) ÷ 5\n?\n = 5\n√625 ÷ 5\n?\n = 5\n5\n?\n = 5\n2-1\n5\n?\n = 5\n1"
+      },
+      {
+        "id": "set_13_easy_q6",
+        "q_num": 6,
+        "question": "15 * 12 + 75 – 21 * 5 = ? - 330",
+        "options": {
+          "a": "370",
+          "b": "190",
+          "c": "480",
+          "d": "250",
+          "e": "310"
+        },
+        "answer": "c",
+        "solution": "15 * 12 + 75 – 21 * 5 = ?– 330\n? = 180 + 75 – 105 + 330\n? = 480"
+      },
+      {
+        "id": "set_13_easy_q7",
+        "q_num": 7,
+        "question": "350 ÷√49 + ? – 110 = 750 ÷ 5",
+        "options": {
+          "a": "190",
+          "b": "210",
+          "c": "170",
+          "d": "310",
+          "e": "150"
+        },
+        "answer": "b",
+        "solution": "350 ÷49 +? – 110 = 750 ÷ 5\n350 ÷ 7 +? – 110 = 150\n50 +? = 150 + 110\n? = 260 – 50\n? = 210\n\nSimplification Questions PDF - Set 13 (Easy)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_13_easy_q8",
+        "q_num": 8,
+        "question": "(125 + 15 * 12 + 300 ÷ 4)÷ 19= ?",
+        "options": {
+          "a": "60",
+          "b": "36",
+          "c": "20",
+          "d": "51",
+          "e": "42"
+        },
+        "answer": "c",
+        "solution": "(125 + 15 * 12 + 300 ÷ 4) ÷ 19= ?\n(125 + 180 + 75) ÷ 19 = ?\n? = 380 ÷ 19\n? = 20"
+      },
+      {
+        "id": "set_13_easy_q9",
+        "q_num": 9,
+        "question": "? +√(750 + 10 2 + √2500) = 45",
+        "options": {
+          "a": "18",
+          "b": "32",
+          "c": "40",
+          "d": "15",
+          "e": "21"
+        },
+        "answer": "d",
+        "solution": "? + √(750 + 100 + 2500) = 45\n? + √(850 + 50) = 45\n? + √900 = 45\n? = 45 – 30\n? = 15"
+      },
+      {
+        "id": "set_13_easy_q10",
+        "q_num": 10,
+        "question": "1/6 + 2/3 + 1/4 – 5/12 = ?",
+        "options": {
+          "a": "1/12",
+          "b": "3/12",
+          "c": "2/3",
+          "d": "1/6",
+          "e": "1/4"
+        },
+        "answer": "c",
+        "solution": "1/6 + 2/3 + 1/4 – 5/12 = ?\n2/12 + 8/12 + 3/12 – 5/12 = ?\n13/12 – 5/12 = ?\n? = 8/12\n? = 2/3"
+      }
+    ]
+  },
+  {
+    "id": "set_14_easy",
+    "title": "Simplification Drill Set 14 (Easy)",
+    "setNumber": 14,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_14_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 1300 ÷ 26 + 11 * 15 - √1089 = ?",
+        "options": {
+          "a": "127",
+          "b": "138",
+          "c": "146",
+          "d": "115",
+          "e": "182"
+        },
+        "answer": "e",
+        "solution": "1300 ÷ 26 + 11 * 15 - 1089 = ?\n50 + 165 – 33 = ?\n? = 182"
+      },
+      {
+        "id": "set_14_easy_q2",
+        "q_num": 2,
+        "question": "720 - ∛1000 = ? 3 - 209 ÷ 11",
+        "options": {
+          "a": "9",
+          "b": "7",
+          "c": "8",
+          "d": "5",
+          "e": "10"
+        },
+        "answer": "a",
+        "solution": "720 - ∛1000 = ?\n3\n - 209 ÷ 11\n720 – 10 + 19 = ?\n3\n?\n3\n = 729\n?\n3\n = 9\n3\n? = 9"
+      },
+      {
+        "id": "set_14_easy_q3",
+        "q_num": 3,
+        "question": "12.5% of 480 + √? = 630 ÷ 9",
+        "options": {
+          "a": "625",
+          "b": "100",
+          "c": "324",
+          "d": "225",
+          "e": "144"
+        },
+        "answer": "b",
+        "solution": "Simplification Questions PDF - Set 14 (Easy)\n12.5% of 480 + √? = 630 ÷ 9\n1/8 * 480 + √? = 70\n60 + √? = 70\n√? = 10\n? = 100"
+      },
+      {
+        "id": "set_14_easy_q4",
+        "q_num": 4,
+        "question": "√(180 –15 * 6 + 54) ÷ 3 = 2 ?",
+        "options": {
+          "a": "4",
+          "b": "1",
+          "c": "2",
+          "d": "3",
+          "e": "5"
+        },
+        "answer": "c",
+        "solution": "√(180 – 15 * 6 + 54) ÷ 3 = 2\n?\n2\n?\n = √(180 – 90 + 54) ÷ 3\n2\n?\n = √144 ÷ 3\n2\n?\n = 12 ÷ 3\n2\n?\n = 4\n2\n?\n = 2\n2\n? = 2"
+      },
+      {
+        "id": "set_14_easy_q5",
+        "q_num": 5,
+        "question": "1720 –32 * 25 - ? * 4 = √1600",
+        "options": {
+          "a": "170",
+          "b": "200",
+          "c": "220",
+          "d": "100",
+          "e": "140"
+        },
+        "answer": "c",
+        "solution": "1720 – 32 * 25 - ? * 4 = √1600\n1720 – 800 - ? * 4 = 40\n? * 4 = 920 – 40\n? = 880/4\n? = 220"
+      },
+      {
+        "id": "set_14_easy_q6",
+        "q_num": 6,
+        "question": "√(13 2 + 604 + ∛1331) ÷ 7 = 2 ?",
+        "options": {
+          "a": "2",
+          "b": "4",
+          "c": "1",
+          "d": "3",
+          "e": "5"
+        },
+        "answer": "a",
+        "solution": "√(13\n2\n + 604 + ∛1331) ÷ 7 = 2\n?\n√(169 + 604 + 11) ÷ 7 = 2\n?\n√784 ÷ 7 = 2\n?\n28 ÷ 7 = 2\n?\n2\n?\n = 2\n2\n\nSimplification Questions PDF - Set 14 (Easy)\n? = 2"
+      },
+      {
+        "id": "set_14_easy_q7",
+        "q_num": 7,
+        "question": "1040 ÷ 65 * 1500 ÷ 12 = ? * 50 ÷ 2",
+        "options": {
+          "a": "25",
+          "b": "90",
+          "c": "65",
+          "d": "75",
+          "e": "80"
+        },
+        "answer": "e",
+        "solution": "1040 ÷ 65 * 1500 ÷ 12 = ? * 50 ÷ 2\n16 * 500 ÷ 4 = ? * 25\n4 * 500 ÷ 25 = ?\n? = 80"
+      },
+      {
+        "id": "set_14_easy_q8",
+        "q_num": 8,
+        "question": "√961 + ? + 11 2 = 205 + √841 - 34",
+        "options": {
+          "a": "48",
+          "b": "71",
+          "c": "56",
+          "d": "92",
+          "e": "25"
+        },
+        "answer": "a",
+        "solution": "√961 + ? + 11\n2\n = 205 + √841 – 34\n31 + ? + 121 = 205 + 29 – 34\n152 + ? = 200\n? = 200 – 152\n? = 48"
+      },
+      {
+        "id": "set_14_easy_q9",
+        "q_num": 9,
+        "question": "250 ÷ 14 *28 –3600 ÷ 4 + 50 * 12 = ?",
+        "options": {
+          "a": "100",
+          "b": "200",
+          "c": "150",
+          "d": "400",
+          "e": "350"
+        },
+        "answer": "b",
+        "solution": "250 ÷ 14 * 28 – 3600 ÷ 4 + 50 * 12 = ?\n500 – 900 + 600 = ?\n? = 200"
+      },
+      {
+        "id": "set_14_easy_q10",
+        "q_num": 10,
+        "question": "5(1/2) + 1/2 + ? = 1(1/2) + 5(1/6)",
+        "options": {
+          "a": "2/3",
+          "b": "1/6",
+          "c": "3/4",
+          "d": "7/12",
+          "e": "5/6"
+        },
+        "answer": "a",
+        "solution": "5(1/2) + 1/2 + ? = 1(1/2) + 5(1/6)\n11/2 + 1/2 + ? = 3/2 + 31/6\n? = 31/6 – 9/2 = 31/6 – 27/6 = 4/6\n? = 2/3"
+      }
+    ]
+  },
+  {
+    "id": "set_15_easy",
+    "title": "Simplification Drill Set 15 (Easy)",
+    "setNumber": 15,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_15_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. ? * 25 = (7 ÷ 12 * 480) + (8 ÷ 18 * 270)",
+        "options": {
+          "a": "22",
+          "b": "34",
+          "c": "10",
+          "d": "16",
+          "e": "24"
+        },
+        "answer": "d",
+        "solution": "? * 25 = (7 ÷ 12 * 480) + (8 ÷ 18 * 270)\n? * 25 = 280 + 120\n? = 400/25 = 16"
+      },
+      {
+        "id": "set_15_easy_q2",
+        "q_num": 2,
+        "question": "32.5 % of 80 + 70 % of 310 + 127 = ?",
+        "options": {
+          "a": "340",
+          "b": "370",
+          "c": "390",
+          "d": "410",
+          "e": "430"
+        },
+        "answer": "b",
+        "solution": "32.5 % of 80 + 70 % of 310 + 127 = ?\n26 + 217 + 127 = ?\n370 = ?"
+      },
+      {
+        "id": "set_15_easy_q3",
+        "q_num": 3,
+        "question": "15 * √324= 200% of √22500 - ?",
+        "options": {
+          "a": "20",
+          "b": "30",
+          "c": "50",
+          "d": "10",
+          "e": "40"
+        },
+        "answer": "b",
+        "solution": "15 * √324= 200 * √(22500)/100 - ?\n15 * 18 = 200 * 150/100 - ?\n\nSimplification Questions PDF - Set 15 (Easy)\n? = 300 – 270 = 30"
+      },
+      {
+        "id": "set_15_easy_q4",
+        "q_num": 4,
+        "question": "√784 + √576 ÷ 3 + ∛? = √1600",
+        "options": {
+          "a": "16",
+          "b": "81",
+          "c": "25",
+          "d": "36",
+          "e": "64"
+        },
+        "answer": "e",
+        "solution": "√784 + √576 ÷ 3 +∛? = √1600\n28 + 24 ÷ 3 + ∛? = 40\n∛? = 40 – 28 – 8\n∛? = 4\n? = 64"
+      },
+      {
+        "id": "set_15_easy_q5",
+        "q_num": 5,
+        "question": "91 ÷ 7 * 10 + 1350 ÷ 15 = ? - 110",
+        "options": {
+          "a": "300",
+          "b": "410",
+          "c": "170",
+          "d": "330",
+          "e": "250"
+        },
+        "answer": "d",
+        "solution": "91 ÷ 7 * 10 + 1350 ÷ 15 = ?– 110\n? = 130 + 90 + 110\n? = 330"
+      },
+      {
+        "id": "set_15_easy_q6",
+        "q_num": 6,
+        "question": "26 + 465 ÷ √225 = 3 √? + 45",
+        "options": {
+          "a": "1728",
+          "b": "1331",
+          "c": "1000",
+          "d": "2197",
+          "e": "2744"
+        },
+        "answer": "a",
+        "solution": "26 + 465 ÷ √225 = \n3\n√? + 45\n26 + 465 ÷ 15 = \n3\n√? + 45\n57 - 45 = \n3\n√?\n12 = \n3\n√?\n1728 = ?"
+      },
+      {
+        "id": "set_15_easy_q7",
+        "q_num": 7,
+        "question": "?% of (584.2 – 244.2) = (9) 2 + 21",
+        "options": {
+          "a": "40",
+          "b": "45",
+          "c": "30",
+          "d": "60",
+          "e": "50"
+        },
+        "answer": "c",
+        "solution": "? % of (584.2 – 244.2) = 9\n2\n + 21\n(?x340)/100 =81+21=102\n? = (102×100)/340 = 30"
+      },
+      {
+        "id": "set_15_easy_q8",
+        "q_num": 8,
+        "question": "(7/12 + 5/8 + 1/6) * (192/11) +? = 30",
+        "options": {
+          "a": "11",
+          "b": "8",
+          "c": "6",
+          "d": "9",
+          "e": "12"
+        },
+        "answer": "c",
+        "solution": "(7/12 + 5/8 + 1/6) * (192/11) +? = 30\n[(14 + 15 + 4)/ 24] * (192/11) +? = 30\n(33/24) * (192/11) +? = 30\n\nSimplification Questions PDF - Set 15 (Easy)\n24 +? = 30\n? = 6"
+      },
+      {
+        "id": "set_15_easy_q9",
+        "q_num": 9,
+        "question": "√484 * ? 2 = 3(3/5) * (20 * 99)",
+        "options": {
+          "a": "16",
+          "b": "18",
+          "c": "20",
+          "d": "22",
+          "e": "15"
+        },
+        "answer": "b",
+        "solution": "√484 * ?\n2\n = 3(3/5) * (20 * 99)\n22 * ?\n2\n = 18/5 * 20 * 99\n?\n2\n = 324\n? = 18"
+      },
+      {
+        "id": "set_15_easy_q10",
+        "q_num": 10,
+        "question": "√(√961 – 15) * 350 = ? + √(√729 + 3 2 )",
+        "options": {
+          "a": "1792",
+          "b": "1282",
+          "c": "1394",
+          "d": "1572",
+          "e": "1390"
+        },
+        "answer": "c",
+        "solution": "√(√961 – 15) * 350 = ? + √(√729 + 3\n2 \n)\n√(31 – 15) * 350 = ? + √(27+9)\n1400 = x + 6\nx = 1394"
+      }
+    ]
+  },
+  {
+    "id": "set_16_easy",
+    "title": "Simplification Drill Set 16 (Easy)",
+    "setNumber": 16,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_16_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 4/11 of 121 + 3/8 of 96 + 5/6 of 54 = ? 3",
+        "options": {
+          "a": "5",
+          "b": "7",
+          "c": "3",
+          "d": "9",
+          "e": "11"
+        },
+        "answer": "a",
+        "solution": "4/11 * 121 + 3/8 * 96 + 5/6 * 54 = ?\n3\n44 + 36 + 45 = ?\n3\n?\n3\n = 125\n? = 5"
+      },
+      {
+        "id": "set_16_easy_q2",
+        "q_num": 2,
+        "question": "4 (4/9) + 5 (7/3) – 7 = ?",
+        "options": {
+          "a": "6 (1/3)",
+          "b": "5 (6/9)",
+          "c": "3 (2/3)",
+          "d": "4 (7/9)",
+          "e": "7(1/9)"
+        },
+        "answer": "d",
+        "solution": "4 (4/9) + 5 (7/3) – 7 = ?\n40/9 + 22/3 – 7 = ?\n(40 + 66 – 63)/9 = ?\n? = 43/9 = 4 (7/9)"
+      },
+      {
+        "id": "set_16_easy_q3",
+        "q_num": 3,
+        "question": "3240/18 * 1/5 of 75 – 13 3 = ?",
+        "options": {
+          "a": "510",
+          "b": "503",
+          "c": "505",
+          "d": "508",
+          "e": "507"
+        },
+        "answer": "b",
+        "solution": "Simplification Questions PDF - Set 16 (Easy)\n3240/18 * 1/5 of 75 – 13\n3\n= ?\n=> (180) * 15 – 13\n3\n=> 503"
+      },
+      {
+        "id": "set_16_easy_q4",
+        "q_num": 4,
+        "question": "√3721 - √289 - √784 = ? * 4",
+        "options": {
+          "a": "2",
+          "b": "4",
+          "c": "6",
+          "d": "8",
+          "e": "5"
+        },
+        "answer": "b",
+        "solution": "√3721 - √289 - √784 = ? * 4\n61 – 17 – 28 = ? * 4\n? = 4"
+      },
+      {
+        "id": "set_16_easy_q5",
+        "q_num": 5,
+        "question": "[(725 ÷ 25) * 35] - 14 2 = ?",
+        "options": {
+          "a": "827",
+          "b": "878",
+          "c": "819",
+          "d": "852",
+          "e": "844"
+        },
+        "answer": "c",
+        "solution": "[(725/25)*35]-14\n2\n=29*35-196=819"
+      },
+      {
+        "id": "set_16_easy_q6",
+        "q_num": 6,
+        "question": "1800 ÷ 9 * 2 + ? = (216) 1/3 * 100",
+        "options": {
+          "a": "300",
+          "b": "200",
+          "c": "250",
+          "d": "150",
+          "e": "350"
+        },
+        "answer": "b",
+        "solution": "1800 ÷ 9 * 2 + ? = (216)\n1/3\n * 100\n400 + ? = 6 * 100\n? = 200"
+      },
+      {
+        "id": "set_16_easy_q7",
+        "q_num": 7,
+        "question": "13(3/7) – 5(5/14) – 3(1/21) = ?",
+        "options": {
+          "a": "5(1/42)",
+          "b": "6(1/42)",
+          "c": "3(1/42)",
+          "d": "7(1/42)",
+          "e": "8(1/42)"
+        },
+        "answer": "a",
+        "solution": "13(3/7) – 5(5/14) – 3(1/21) = ?\n94/7 – 75/14 – 64/21 = ?\n564 – 225 – 128/42 = ?\n? = 211/42\n? = 5(1/42)"
+      },
+      {
+        "id": "set_16_easy_q8",
+        "q_num": 8,
+        "question": "(√1296 + √225) ÷ √? = 238 ÷ √196",
+        "options": {
+          "a": "7",
+          "b": "9",
+          "c": "5",
+          "d": "8",
+          "e": "6"
+        },
+        "answer": "b",
+        "solution": "(√1296 + √225) ÷ √? = 238 ÷ √196\n(36 + 15)/√? = 238/14\n√? = 51/17 = 3\n? = 9\n\nSimplification Questions PDF - Set 16 (Easy)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_16_easy_q9",
+        "q_num": 9,
+        "question": "√289 * √676 – (45 * 11) ÷ 5 = ? 3",
+        "options": {
+          "a": "7",
+          "b": "6",
+          "c": "5",
+          "d": "9",
+          "e": "8"
+        },
+        "answer": "a",
+        "solution": "√289 * √676 – (45 * 11) ÷ 5 = ?\n3\n17 * 26 – 495 ÷ 5 = ?\n3\n442 – 99 = ?\n3\n343 = ?\n3\n7 = ?"
+      },
+      {
+        "id": "set_16_easy_q10",
+        "q_num": 10,
+        "question": "(17 2 + 13 2 ) – 41 * 3 √512 = ? 2 + √81",
+        "options": {
+          "a": "15",
+          "b": "14",
+          "c": "11",
+          "d": "17",
+          "e": "18"
+        },
+        "answer": "c",
+        "solution": "(17\n2\n + 13\n2\n) – 41 * \n3\n√512 = ?\n2\n + √81\n(289 + 169) – 41 * 8 = ?\n2\n +9\n458 – 328 =  ?\n2\n + 9\n130 - 9 = ?\n2\n121 = ?\n2\n11 = ?"
+      }
+    ]
+  },
+  {
+    "id": "set_17_easy",
+    "title": "Simplification Drill Set 17 (Easy)",
+    "setNumber": 17,
+    "difficulty": "Easy",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_17_easy_q1",
+        "q_num": 1,
+        "question": "What value should come in the place of (?) in the following questions. 3(3/13) of 91 – 1(5/7) of 140 = ?",
+        "options": {
+          "a": "57",
+          "b": "65",
+          "c": "62",
+          "d": "68",
+          "e": "54"
+        },
+        "answer": "e",
+        "solution": "3(3/13) of 91 – 1(5/7) of 140 = ?\n294 – 240 = ?\n? = 54"
+      },
+      {
+        "id": "set_17_easy_q2",
+        "q_num": 2,
+        "question": "? * 29 = 117 * √169 + 51.5 * 2",
+        "options": {
+          "a": "49",
+          "b": "56",
+          "c": "47",
+          "d": "43",
+          "e": "61"
+        },
+        "answer": "b",
+        "solution": "? * 29 = 117 * √169 + 51.5 * 2\n? * 29 = 1521 + 103\n? = 56"
+      },
+      {
+        "id": "set_17_easy_q3",
+        "q_num": 3,
+        "question": "80% of 875 – 200 = ? + 25 % of 1740",
+        "options": {
+          "a": "65",
+          "b": "55",
+          "c": "45",
+          "d": "70",
+          "e": "40"
+        },
+        "answer": "a",
+        "solution": "80% of 875 – 200 = ? + 25 % of 1740\n700 – 200 = ? + 435\n? = 65\n\nSimplification Questions PDF - Set 17 (Easy)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_17_easy_q4",
+        "q_num": 4,
+        "question": "45% of 500 + 65% of 700 = ?",
+        "options": {
+          "a": "650",
+          "b": "660",
+          "c": "680",
+          "d": "720",
+          "e": "740"
+        },
+        "answer": "c",
+        "solution": "45% of 500 + 65% of 700 = ?\n225 + 455 = ?\n? = 680"
+      },
+      {
+        "id": "set_17_easy_q5",
+        "q_num": 5,
+        "question": "√(32 * 8 + 185) ÷ 3 * 49 = 7 ?",
+        "options": {
+          "a": "4",
+          "b": "2",
+          "c": "7",
+          "d": "3",
+          "e": "5"
+        },
+        "answer": "d",
+        "solution": "√(32 * 8 + 185) ÷ 3 * 49 = 7\n?\n√(256 + 185) ÷ 3 * 7\n2\n = 7\n?\n7\n?\n = √441 ÷ 3 * 7\n2\n7\n?\n = 21 ÷ 3 * 7\n2\n7\n?\n = 7\n3\n? = 3"
+      },
+      {
+        "id": "set_17_easy_q6",
+        "q_num": 6,
+        "question": "√961 + ? + 11 2 = 205 + √841 - 34",
+        "options": {
+          "a": "48",
+          "b": "71",
+          "c": "56",
+          "d": "92",
+          "e": "25"
+        },
+        "answer": "a",
+        "solution": "√961 + ? + 11\n2\n = 205 + √841 – 34\n31 + ? + 121 = 205 + 29 – 34\n152 + ? = 200\n? = 200 – 152\n? = 48"
+      },
+      {
+        "id": "set_17_easy_q7",
+        "q_num": 7,
+        "question": "5 (3/7) + 2 (5/14) – 1(11/14) = ? * 3",
+        "options": {
+          "a": "2",
+          "b": "4",
+          "c": "1",
+          "d": "8",
+          "e": "9"
+        },
+        "answer": "a",
+        "solution": "5 (3/7) + 2 (5/14) – 1(11/14) = ? * 3\n38/7 + 33/14 – 25/14 = ? * 3\n(76 + 33 – 25)/14 = ? * 3\n84/14 = ? * 3\n? = 2"
+      },
+      {
+        "id": "set_17_easy_q8",
+        "q_num": 8,
+        "question": "? 3 =(30 ÷ 3) 3 + √961+(20*15)",
+        "options": {
+          "a": "12",
+          "b": "14",
+          "c": "17",
+          "d": "11",
+          "e": "13"
+        },
+        "answer": "d",
+        "solution": "Simplification Questions PDF - Set 17 (Easy)\n?\n3\n= 10\n3\n + 31 + 300 = 1000+331\n?\n3\n=1331 = 11\n3\n?=11"
+      },
+      {
+        "id": "set_17_easy_q9",
+        "q_num": 9,
+        "question": "2 6 * 4 ÷ 10 + 10.4 - ? 2 = √121",
+        "options": {
+          "a": "6",
+          "b": "7",
+          "c": "5",
+          "d": "8",
+          "e": "9"
+        },
+        "answer": "c",
+        "solution": "2\n6\n * 4 ÷ 10 + 10.4 - ?\n2\n = √121\n64 * 4 ÷ 10 + 10.4 - ?\n2\n = 11\n25.6 + 10.4 – 11 = ?\n2\n?\n2\n = 25\n? = 5"
+      },
+      {
+        "id": "set_17_easy_q10",
+        "q_num": 10,
+        "question": "336.64 + 224.36 = ? – 80/100 * 320",
+        "options": {
+          "a": "1036",
+          "b": "1156",
+          "c": "1020",
+          "d": "1084",
+          "e": "817"
+        },
+        "answer": "e",
+        "solution": "336.64 + 224.36 = ? – 80/100 * 320\n561  = ? – 256\n? = 817"
+      }
+    ]
+  },
+  {
+    "id": "set_2_moderate",
+    "title": "Simplification Drill Set 2 (Moderate)",
+    "setNumber": 2,
+    "difficulty": "Moderate",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_2_moderate_q1",
+        "q_num": 1,
+        "question": "√729 * 4 + (39 + 166 – 57) ÷ 37 = ?",
+        "options": {
+          "a": "111",
+          "b": "110",
+          "c": "113",
+          "d": "112",
+          "e": "114"
+        },
+        "answer": "d",
+        "solution": "√729 * 4 + (39 + 166 – 57) ÷ 37 = ?\n108 + 4 = ?\n112 = ?"
+      },
+      {
+        "id": "set_2_moderate_q2",
+        "q_num": 2,
+        "question": "1280 ÷ 8 + 490 ÷ √49 + ? = 150 * 2",
+        "options": {
+          "a": "60",
+          "b": "70",
+          "c": "50",
+          "d": "80",
+          "e": "40"
+        },
+        "answer": "b",
+        "solution": "1280 ÷ 8 + 490 ÷ √49 + ? = 150 * 2\n160 + 70 + ? = 300\n? = 70"
+      },
+      {
+        "id": "set_2_moderate_q3",
+        "q_num": 3,
+        "question": "7/13 of 676/15 of 3/7 of 895/52 = ?",
+        "options": {
+          "a": "212",
+          "b": "235",
+          "c": "179",
+          "d": "312",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "7/13 of 676/15 of 3/7 of 895/52 = ?\n=> 7/13 * 676/15 * 3/7 * 895/52= ?\n=> 179= ?\n\nSimplification Questions PDF - Set 2 (Moderate)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_2_moderate_q4",
+        "q_num": 4,
+        "question": "34 – 34 2 + 34 * (34 + 34/ 0.34) = ?",
+        "options": {
+          "a": "2134",
+          "b": "2534",
+          "c": "2834",
+          "d": "3434",
+          "e": "None of these"
+        },
+        "answer": "d",
+        "solution": "34 – 34\n2\n + 34 * (34 + 34/ 0.34) =?\n=> 34 – 1156 + 34 * (34 + 100) =?\n=> 3434= ?"
+      },
+      {
+        "id": "set_2_moderate_q5",
+        "q_num": 5,
+        "question": "(0.512) (2/5) * (0.8) 3 ÷ (0.4096) = (0.8) (?/5)",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "0",
+          "e": "4"
+        },
+        "answer": "a",
+        "solution": "(0.512)\n(2/5)\n * (0.8)\n3\n ÷ (0.4096) = (0.8)\n(?/5)\n   \n (0.8)\n6/5 – 1\n = (0.8)\n(?/5)\n   \n1/5 = ?/5\n? = 1"
+      },
+      {
+        "id": "set_2_moderate_q6",
+        "q_num": 6,
+        "question": "49 * 3 + 70% of 60= ? + 10 2",
+        "options": {
+          "a": "89",
+          "b": "150",
+          "c": "172",
+          "d": "250",
+          "e": "314"
+        },
+        "answer": "a",
+        "solution": "49* 3 + 70% of 60= ? + 10\n2\n=> 49 * 3 + 70/100 * 60 = ? + 100\n=> 189 – 100= ?\n=> 89= ?"
+      },
+      {
+        "id": "set_2_moderate_q7",
+        "q_num": 7,
+        "question": "(80% of 6450) ÷ 40+ 36=?",
+        "options": {
+          "a": "90",
+          "b": "100",
+          "c": "165",
+          "d": "189",
+          "e": "210"
+        },
+        "answer": "c",
+        "solution": "=> (80% of 6450)/40 + 36 = ?\n=> 165= ?"
+      },
+      {
+        "id": "set_2_moderate_q8",
+        "q_num": 8,
+        "question": "(31 ÷ 215) * (43 ÷ 248) * ? = 3",
+        "options": {
+          "a": "120",
+          "b": "110",
+          "c": "140",
+          "d": "150",
+          "e": "180"
+        },
+        "answer": "a",
+        "solution": "(31 ÷ 215) * (43 ÷ 248) * ? = 3\n1/5 * 1/8 * ? = 3\n? = 120"
+      },
+      {
+        "id": "set_2_moderate_q9",
+        "q_num": 9,
+        "question": "240% of 5/6 of 51/17 *34 = ?",
+        "options": {
+          "a": "624",
+          "b": "852",
+          "c": "204",
+          "d": "512",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "240% of 5/6 of 51/17 *34 = ?\n2*51*2 =?\n\nSimplification Questions PDF - Set 2 (Moderate)\n? = 204"
+      },
+      {
+        "id": "set_2_moderate_q10",
+        "q_num": 10,
+        "question": "3126+ 2142 + 3241 -5224 =?",
+        "options": {
+          "a": "3685",
+          "b": "3285",
+          "c": "2585",
+          "d": "6535",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "3126+ 2142 + 3241 -5224 =?\n?=3285"
+      }
+    ]
+  },
+  {
+    "id": "set_3_moderate",
+    "title": "Simplification Drill Set 3 (Moderate)",
+    "setNumber": 3,
+    "difficulty": "Moderate",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_3_moderate_q1",
+        "q_num": 1,
+        "question": "15 * 16 + √441 * 18 – 180 % of 220 = ?",
+        "options": {
+          "a": "199",
+          "b": "210",
+          "c": "222",
+          "d": "231",
+          "e": "243"
+        },
+        "answer": "c",
+        "solution": "15 * 16 + √441 * 18 – 180 % of 220 = ?\n240 + 378 – 396 = ?\n222 = ?"
+      },
+      {
+        "id": "set_3_moderate_q2",
+        "q_num": 2,
+        "question": "2765 ÷ 79 + 5133 ÷ 87 = ? + 1209 ÷ 13",
+        "options": {
+          "a": "1",
+          "b": "0",
+          "c": "2",
+          "d": "5",
+          "e": "3"
+        },
+        "answer": "a",
+        "solution": "2765 ÷ 79 + 5133 ÷ 87 = ? + 1209 ÷ 13\n35 + 59 = ? + 93\n? = 1"
+      },
+      {
+        "id": "set_3_moderate_q3",
+        "q_num": 3,
+        "question": "42 % of 300 + 912 ÷ √144 + √225 * 25 = ?",
+        "options": {
+          "a": "548",
+          "b": "358",
+          "c": "456",
+          "d": "577",
+          "e": "650"
+        },
+        "answer": "d",
+        "solution": "42 % of 300 + 912 ÷ √144 + √225 * 25 = ?\n126 + 76 + 375 = ?\n577= ?\n\nSimplification Questions PDF - Set 3 (Moderate)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_3_moderate_q4",
+        "q_num": 4,
+        "question": "3510 ÷ √169 +1530÷17 – 50 * √9 = ?",
+        "options": {
+          "a": "300",
+          "b": "210",
+          "c": "350",
+          "d": "270",
+          "e": "320"
+        },
+        "answer": "b",
+        "solution": "3510 ÷ √169 + 1530 ÷ 17 – 50 * √9 = ?\n270 + 90 – 150 = ?\n? = 210"
+      },
+      {
+        "id": "set_3_moderate_q5",
+        "q_num": 5,
+        "question": "43 2 – 39 2 + 62 * √16 = ? 2",
+        "options": {
+          "a": "22",
+          "b": "20",
+          "c": "24",
+          "d": "27",
+          "e": "26"
+        },
+        "answer": "c",
+        "solution": "43\n2 \n– 39\n2\n + 62 * √16 = ?\n2\n \n328 + 248 = ?\n? = 24"
+      },
+      {
+        "id": "set_3_moderate_q6",
+        "q_num": 6,
+        "question": "(29 2 + 111 * 9) ÷ √529 + ? = 110 % of 210",
+        "options": {
+          "a": "151",
+          "b": "143",
+          "c": "148",
+          "d": "128",
+          "e": "138"
+        },
+        "answer": "a",
+        "solution": "(29\n2\n + 111 * 9) ÷ √529 + ? = 110 % of 210\n1840/23 + ? = 231\n? = 151"
+      },
+      {
+        "id": "set_3_moderate_q7",
+        "q_num": 7,
+        "question": "√625 = √484 + (1728) 1/3 + √729 – (3375) 1/3 - √?",
+        "options": {
+          "a": "441",
+          "b": "21",
+          "c": "364",
+          "d": "31",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "25 = 22 + 12 + 27 – 15 - √?\n√? = 46 – 25\n? = 441"
+      },
+      {
+        "id": "set_3_moderate_q8",
+        "q_num": 8,
+        "question": "25% of (?)² – 98 = 16% of 525 + 8% of 175",
+        "options": {
+          "a": "32",
+          "b": "38",
+          "c": "22",
+          "d": "18",
+          "e": "None of these"
+        },
+        "answer": "e",
+        "solution": "1/4 x (?)² = 84 + 14 + 98\n(?)² = 2 x 98 x 4\n(?)² = 16 x 49\n(?) = 28"
+      },
+      {
+        "id": "set_3_moderate_q9",
+        "q_num": 9,
+        "question": "45% of 1600 + 30% of 450 – 191 × ? = 91",
+        "options": {
+          "a": "4",
+          "b": "3",
+          "c": "2",
+          "d": "5",
+          "e": "8"
+        },
+        "answer": "a",
+        "solution": "45% of 1600 + 30% of 450 – 191 × (x) = 91\n720 + 135 – 191 × (x) = 91\nx = (855-91)/191 = 4\n\nSimplification Questions PDF - Set 3 (Moderate)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_3_moderate_q10",
+        "q_num": 10,
+        "question": "125% of 160 + √11664 = ? + 60% of 80",
+        "options": {
+          "a": "230",
+          "b": "240",
+          "c": "250",
+          "d": "260",
+          "e": "210"
+        },
+        "answer": "d",
+        "solution": "125% of 160 + √11664 = ? + 60% of 80\n200 + 108 = ? + 48\n? = 260"
+      }
+    ]
+  },
+  {
+    "id": "set_4_moderate",
+    "title": "Simplification Drill Set 4 (Moderate)",
+    "setNumber": 4,
+    "difficulty": "Moderate",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_4_moderate_q1",
+        "q_num": 1,
+        "question": "18 ÷ 72 * 288 ÷ 13 * 182 ÷ 56 * 19 =?",
+        "options": {
+          "a": "324",
+          "b": "342",
+          "c": "432",
+          "d": "434",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "18 ÷ 72 * 288 ÷ 13 * 182 ÷ 56 * 19 =?\n18/72 *288/13  *182/56 *19 =?\n18*19 = ?\n? = 342"
+      },
+      {
+        "id": "set_4_moderate_q2",
+        "q_num": 2,
+        "question": "(589 ÷ 31) * (456 ÷ 19) = ?",
+        "options": {
+          "a": "456",
+          "b": "458",
+          "c": "453",
+          "d": "450",
+          "e": "454"
+        },
+        "answer": "a",
+        "solution": "(589 ÷ 31) * (456 ÷ 19) = ?\n? = 19 * 24\n? = 456"
+      },
+      {
+        "id": "set_4_moderate_q3",
+        "q_num": 3,
+        "question": "√4489 + √1849 - √841 = ? 2",
+        "options": {
+          "a": "7",
+          "b": "5",
+          "c": "8",
+          "d": "6",
+          "e": "9"
+        },
+        "answer": "e",
+        "solution": "√4489 + √1849 - √841 = ?\n2\n \n\nSimplification Questions PDF - Set 4 (Moderate)\n67 + 43 – 29 = ?\n2\n? = 9"
+      },
+      {
+        "id": "set_4_moderate_q4",
+        "q_num": 4,
+        "question": "16 * 35 + 4.5 * 72 – 817 ÷ 19 = ? 2",
+        "options": {
+          "a": "24",
+          "b": "22",
+          "c": "26",
+          "d": "29",
+          "e": "20"
+        },
+        "answer": "d",
+        "solution": "16 * 35 + 4.5 * 72 – 817 ÷ 19 = ?\n2\n560 + 324 – 43 = ?\n2\n \n? = 29"
+      },
+      {
+        "id": "set_4_moderate_q5",
+        "q_num": 5,
+        "question": "(6160 + 12320) ÷ ? = 660",
+        "options": {
+          "a": "35",
+          "b": "22",
+          "c": "25.5",
+          "d": "32.4",
+          "e": "28"
+        },
+        "answer": "e",
+        "solution": "(6160 + 12320) ÷ ? = 660\n(6160 + 12320) / 660 = 18480/660 = 28"
+      },
+      {
+        "id": "set_4_moderate_q6",
+        "q_num": 6,
+        "question": "45% of 240 – 24% of 550 = ? - √1444",
+        "options": {
+          "a": "17",
+          "b": "14",
+          "c": "19",
+          "d": "15",
+          "e": "13"
+        },
+        "answer": "b",
+        "solution": "45% of 240 – 24% of 550 = ? - √1444\n-24 + 38 = ?\n? = 14"
+      },
+      {
+        "id": "set_4_moderate_q7",
+        "q_num": 7,
+        "question": "16 * 5 + 28 * 4 – 728 ÷ 13 =?",
+        "options": {
+          "a": "128",
+          "b": "132",
+          "c": "136",
+          "d": "142",
+          "e": "146"
+        },
+        "answer": "c",
+        "solution": "16 * 5 + 28 * 4 – 728 ÷ 13 =?\n80 + 112 – 56 =?\n136 =?"
+      },
+      {
+        "id": "set_4_moderate_q8",
+        "q_num": 8,
+        "question": "60% of 130 + 20% of 120 + 125% of 64 =?",
+        "options": {
+          "a": "190",
+          "b": "193",
+          "c": "182",
+          "d": "176",
+          "e": "196"
+        },
+        "answer": "c",
+        "solution": "60% of 130 + 20% of 120 + 125% of 64 =?\n78 + 24 + 80 =?\n182 =?"
+      },
+      {
+        "id": "set_4_moderate_q9",
+        "q_num": 9,
+        "question": "√2025 + ? 2 = 276 ÷ 23 + 7 * 46",
+        "options": {
+          "a": "15",
+          "b": "17",
+          "c": "18",
+          "d": "21",
+          "e": "23"
+        },
+        "answer": "b",
+        "solution": "√2025 + ?\n2\n = 276 ÷ 23 + 7 * 46\n45 + ?\n2\n = 12 + 322\n\nSimplification Questions PDF - Set 4 (Moderate)\n?\n2\n = 289\n? = 17"
+      },
+      {
+        "id": "set_4_moderate_q10",
+        "q_num": 10,
+        "question": "48 % of 350 +? * 19 = 151 * √9",
+        "options": {
+          "a": "12",
+          "b": "13",
+          "c": "15",
+          "d": "18",
+          "e": "17"
+        },
+        "answer": "c",
+        "solution": "48 % of 350 +? * 19 = 151 * √9\n168 +? * 19 = 453\n? * 19 = 285\n? = 15"
+      }
+    ]
+  },
+  {
+    "id": "set_5_moderate",
+    "title": "Simplification Drill Set 5 (Moderate)",
+    "setNumber": 5,
+    "difficulty": "Moderate",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_5_moderate_q1",
+        "q_num": 1,
+        "question": "(33 * 42 – 26 * 11) ÷ 11 = 5 * ? – 20 * 5",
+        "options": {
+          "a": "52",
+          "b": "20",
+          "c": "40",
+          "d": "38",
+          "e": "17"
+        },
+        "answer": "c",
+        "solution": "(33 * 42 – 26 * 11) ÷ 11 = 5 * ? – 20 * 5\n(1386 – 286)/11 = 5* ? - 100\n100 + 100 = 5 * ?\n200 = 5 * ?\n? = 40"
+      },
+      {
+        "id": "set_5_moderate_q2",
+        "q_num": 2,
+        "question": "60% of 750 + 17 * ? - 14 2 = 792 – 45",
+        "options": {
+          "a": "17",
+          "b": "19",
+          "c": "25",
+          "d": "29",
+          "e": "11"
+        },
+        "answer": "d",
+        "solution": "60% of 750 + 17 * ? - 14\n2 \n= 792 – 45\n60/100 * 750 + 17 * ? – 196 = 792 – 45\n450 + 17 * ? – 196 = 747\n17 * ? = 493\n\nSimplification Questions PDF - Set 5 (Moderate)\n? = 29"
+      },
+      {
+        "id": "set_5_moderate_q3",
+        "q_num": 3,
+        "question": "20% of (158 + 442) = 81 1/2 – 22 * 7+ ?",
+        "options": {
+          "a": "335",
+          "b": "265",
+          "c": "329",
+          "d": "125",
+          "e": "129"
+        },
+        "answer": "b",
+        "solution": "20% of (158 + 442) = 81\n1/2\n – 22 * 7 + ?\n20/100 * 600 = 9 – 154 + ?\n120 + 145 = ?\n? = 265"
+      },
+      {
+        "id": "set_5_moderate_q4",
+        "q_num": 4,
+        "question": "√1849 + 2 3 – 30% of 1450 = ? ÷ 3 + 4 2",
+        "options": {
+          "a": "-2200",
+          "b": "1340",
+          "c": "-1200",
+          "d": "-1450",
+          "e": "1270"
+        },
+        "answer": "c",
+        "solution": "√1849 + 2\n3\n – 30% of 1450 = ? ÷ 3 + 4\n2\n43 + 8 – 435 = ?/3 + 16\n-400 = ?/3\n? = -1200"
+      },
+      {
+        "id": "set_5_moderate_q5",
+        "q_num": 5,
+        "question": "25 2 - 97 + 72 + 10 * 20= ? + (5 2 ) 2",
+        "options": {
+          "a": "285",
+          "b": "175",
+          "c": "335",
+          "d": "225",
+          "e": "145"
+        },
+        "answer": "b",
+        "solution": "25\n2\n - 97 + 72 + 10 * 20 = ? + (5\n2\n)\n2\n625 – 97 + 72 + 200= ? + 625\n? = 175"
+      },
+      {
+        "id": "set_5_moderate_q6",
+        "q_num": 6,
+        "question": "20% of 1650 – 50% of 440 - √625 = ?",
+        "options": {
+          "a": "85",
+          "b": "45",
+          "c": "75",
+          "d": "65",
+          "e": "95"
+        },
+        "answer": "a",
+        "solution": "20% of 1650 – 50% of 440 - √625 = ?\n20/100 * 1650 – 50/100 * 440 – 25 = ?\n330 – 220 – 25 = ?\n? = 85"
+      },
+      {
+        "id": "set_5_moderate_q7",
+        "q_num": 7,
+        "question": "360 ÷ √576+ ? * 13 = 29 * √400 ÷ 4",
+        "options": {
+          "a": "25",
+          "b": "10",
+          "c": "30",
+          "d": "20",
+          "e": "15"
+        },
+        "answer": "b",
+        "solution": "360 ÷ √576 + ? * 13 = 29 * √400 ÷ 4\n360/24 + ? * 13 = 29 * 20/4\n15 + ? * 13 = 145\n? = 130/13 = 10\n\nSimplification Questions PDF - Set 5 (Moderate)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_5_moderate_q8",
+        "q_num": 8,
+        "question": "√(31 2 – 940 + √?) + 94 = 117 - √289",
+        "options": {
+          "a": "484",
+          "b": "625",
+          "c": "361",
+          "d": "225",
+          "e": "400"
+        },
+        "answer": "d",
+        "solution": "√(31\n2\n – 940 + √?) + 94 = 117 - √289\n√(961 – 940 + √?) + 94 = 117 – 17\n√(21 + √?) = 100 – 94\n21 + √? = 6\n2\n√? = 36 – 21 = 15\n? = 225"
+      },
+      {
+        "id": "set_5_moderate_q9",
+        "q_num": 9,
+        "question": "(84 ÷ √225) * 75 - ? = 143 * 20 ÷ 11",
+        "options": {
+          "a": "160",
+          "b": "100",
+          "c": "120",
+          "d": "140",
+          "e": "180"
+        },
+        "answer": "a",
+        "solution": "(84 ÷ √225) * 75 - ? = 143 * 20 ÷ 11\n(84 ÷ 15) * 75 - ? = 13 * 20\n84 * 5 - ? = 260\n? = 420 - 260 = 160"
+      },
+      {
+        "id": "set_5_moderate_q10",
+        "q_num": 10,
+        "question": "(5 * √2500 – 5 3 + 11 * 5) ÷ 9 = ? ÷ √121",
+        "options": {
+          "a": "132",
+          "b": "275",
+          "c": "400",
+          "d": "220",
+          "e": "110"
+        },
+        "answer": "d",
+        "solution": "(5 * √2500 – 5\n3\n + 11 * 5) ÷ 9 = ? ÷ √121\n(5 * 50 – 125 + 55)/9 = ?/11\n(250 – 70) / 9 = ?/11\n180/9 = ?/11\n? = 20 * 11\n? = 220"
+      }
+    ]
+  },
+  {
+    "id": "set_6_moderate",
+    "title": "Simplification Drill Set 6 (Moderate)",
+    "setNumber": 6,
+    "difficulty": "Moderate",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_6_moderate_q1",
+        "q_num": 1,
+        "question": "12 * 6 +18 - 5 2 = ? - 10 2",
+        "options": {
+          "a": "100",
+          "b": "120",
+          "c": "165",
+          "d": "140",
+          "e": "90"
+        },
+        "answer": "c",
+        "solution": "12 * 6 +18 - 5\n2\n =? - 10\n2\n72 + 18 – 25=? -100\n90 – 25 =? -100\n? =65 + 100\n? =165"
+      },
+      {
+        "id": "set_6_moderate_q2",
+        "q_num": 2,
+        "question": "34% of 500 + (690 ÷ 3) = ? + 150",
+        "options": {
+          "a": "280",
+          "b": "180",
+          "c": "200",
+          "d": "250",
+          "e": "160"
+        },
+        "answer": "d",
+        "solution": "34% of 500 + (690 ÷ 3) =? + 150\n0.34 * 500 + 230 =? + 150\n170 + 230 =? + 150\n? = 400 – 150\n\nSimplification Questions PDF - Set 6 (Moderate)\n? = 250"
+      },
+      {
+        "id": "set_6_moderate_q3",
+        "q_num": 3,
+        "question": "(3 2/5 + 2 7/15) * 30/4 = ?*4",
+        "options": {
+          "a": "11",
+          "b": "23",
+          "c": "18",
+          "d": "15",
+          "e": "21"
+        },
+        "answer": "a",
+        "solution": "(3 2/5 + 2 7/15) * 30/4 =?*4\n(17/5 + 37/15) *30/4 =? * 4\n88/15 * 30/4 =? *4\n? =44/4\n? =11"
+      },
+      {
+        "id": "set_6_moderate_q4",
+        "q_num": 4,
+        "question": "256 (1/8) * 64 2 = 16 a",
+        "options": {
+          "a": "a = 13/4",
+          "b": "a = 12/5",
+          "c": "a = 11/3",
+          "d": "a = 13/3",
+          "e": "a = 11/4"
+        },
+        "answer": "a",
+        "solution": "256\n(1/8)\n * 64\n2\n = 16\na\n4\n4/8\n * 4\n3 * 2 \n = 4\n2a\n1/2 + 6 = 2a\n13/4 = a"
+      },
+      {
+        "id": "set_6_moderate_q5",
+        "q_num": 5,
+        "question": "767 ÷ 13 + 357 ÷ √289 = ? * √16",
+        "options": {
+          "a": "10",
+          "b": "15",
+          "c": "20",
+          "d": "25",
+          "e": "30"
+        },
+        "answer": "c",
+        "solution": "767 ÷ 13 + 357 ÷ √289 = ? * √16\n59 + 21 = ? * 4\n? = 20"
+      },
+      {
+        "id": "set_6_moderate_q6",
+        "q_num": 6,
+        "question": "(23 + 45)*18 = (6 3 – 12 2 ) * ?",
+        "options": {
+          "a": "17",
+          "b": "20",
+          "c": "13",
+          "d": "21",
+          "e": "None of these"
+        },
+        "answer": "a",
+        "solution": "(23 + 45)*18 = (6\n3\n – 12\n2\n) * x\n68 * 18 = (216 – 144) x\n1224 = 72 * x\nx = 17"
+      },
+      {
+        "id": "set_6_moderate_q7",
+        "q_num": 7,
+        "question": "√6561 * 106 = ? * 3 3 * 2",
+        "options": {
+          "a": "149",
+          "b": "189",
+          "c": "159",
+          "d": "139",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "√6561 * 106 = x * 3\n3\n * 2\n81 * 106 = x * 27 * 2\n3 * 53 = x\n\nSimplification Questions PDF - Set 6 (Moderate)\nx = 159"
+      },
+      {
+        "id": "set_6_moderate_q8",
+        "q_num": 8,
+        "question": "(204 * ?) ÷ 17 = (29 ÷ 49) * 588",
+        "options": {
+          "a": "55",
+          "b": "79",
+          "c": "29",
+          "d": "48",
+          "e": "None of these"
+        },
+        "answer": "c",
+        "solution": "(204 * x) ÷ 17 = (29 ÷ 49) * 588\n(204 * x)/17 = 29/49 * 588\n12* x = 29 * 12\nx = 29"
+      },
+      {
+        "id": "set_6_moderate_q9",
+        "q_num": 9,
+        "question": "",
+        "options": {
+          "a": "312",
+          "b": "280",
+          "c": "250",
+          "d": "324",
+          "e": "296"
+        },
+        "answer": "c",
+        "solution": "17 * 14 + 400 = 888 - ?\n? = 250"
+      },
+      {
+        "id": "set_6_moderate_q10",
+        "q_num": 10,
+        "question": "(21) 2 + (9) 3 + (35) 2 = (53) 2 - ?",
+        "options": {
+          "a": "374",
+          "b": "414",
+          "c": "384",
+          "d": "464",
+          "e": "484"
+        },
+        "answer": "b",
+        "solution": "(21)\n2\n + (9)\n3\n + (35)\n2\n = (53)\n2\n - ?\n441 + 729 + 1225 = 2809 - ?\n? = 414"
+      }
+    ]
+  },
+  {
+    "id": "set_7_moderate",
+    "title": "Simplification Drill Set 7 (Moderate)",
+    "setNumber": 7,
+    "difficulty": "Moderate",
+    "totalQuestions": 15,
+    "questions": [
+      {
+        "id": "set_7_moderate_q1",
+        "q_num": 1,
+        "question": "230 ÷ 20 + 108.5 - ? = 225 ÷ 9 + √169 * 5",
+        "options": {
+          "a": "70",
+          "b": "30",
+          "c": "60",
+          "d": "45",
+          "e": "85"
+        },
+        "answer": "b",
+        "solution": "230 ÷ 20 + 108.5 - ? = 225 ÷ 9 + √169 * 5\n11.5 + 108.5 - ? = 25 + 13 * 5\n120 - ? = 25 + 65\n? = 120 – 90\n? = 30"
+      },
+      {
+        "id": "set_7_moderate_q2",
+        "q_num": 2,
+        "question": "√16 * 400 – 360 + ? = 2600 – 38 * √625",
+        "options": {
+          "a": "370",
+          "b": "290",
+          "c": "410",
+          "d": "580",
+          "e": "350"
+        },
+        "answer": "c",
+        "solution": "√16 * 400 – 360 + ? += 2600 – 38 * √625\n4 * 400 – 360 + ? = 2600 – 38 * 25\n1600 – 360 + ? = 2600 – 950\n1240 + ? = 1650\n? = 1650 – 1240\n? = 410"
+      },
+      {
+        "id": "set_7_moderate_q3",
+        "q_num": 3,
+        "question": "15 ÷ ? * 104 + 30 * 3 √1331 = 20 2 + 50",
+        "options": {
+          "a": "11",
+          "b": "12",
+          "c": "15",
+          "d": "18",
+          "e": "13"
+        },
+        "answer": "e",
+        "solution": "15 ÷ ? * 104 + 30 * \n3\n√1331 = 20\n2\n + 50\n15/? * 104 + 30 * 11 = 400 + 50\n15/? * 104 = 450 – 330\n? = 15 * 104/120\n? = 13"
+      },
+      {
+        "id": "set_7_moderate_q4",
+        "q_num": 4,
+        "question": "62.5% of 240 – ? + 16 2 = 80 * 68 ÷ 17",
+        "options": {
+          "a": "86",
+          "b": "60",
+          "c": "55",
+          "d": "92",
+          "e": "74"
+        },
+        "answer": "a",
+        "solution": "62.5% of 240 – ? + 16\n2\n = 80 * 68 ÷ 17\n5/8 * 240 - ? + 256 = 80 * 4\n150 - ? + 256 = 320\n406 - ? = 320\n? = 86"
+      },
+      {
+        "id": "set_7_moderate_q5",
+        "q_num": 5,
+        "question": "? + 1/12 = 5/18 + 11/36 – 3/9",
+        "options": {
+          "a": "1/6",
+          "b": "5/36",
+          "c": "3/4",
+          "d": "1/12",
+          "e": "7/18"
+        },
+        "answer": "a",
+        "solution": "? + 1/12 = 5/18 + 11/36 – 3/9 \n? + 3/36 = 10/36 + 11/36 – 12/36\n? + 3/36 = 9/36\n? = 9/36 – 3/36 = 6/36\n? = 1/6"
+      },
+      {
+        "id": "set_7_moderate_q6",
+        "q_num": 6,
+        "question": "? 2 = (√1296 + √324)% of 1800 – (2 3 * 3 2 )",
+        "options": {
+          "a": "27",
+          "b": "25",
+          "c": "29",
+          "d": "30",
+          "e": "31"
+        },
+        "answer": "d",
+        "solution": "Simplification Questions PDF - Set 7 (Moderate)\n?\n2\n = (√1296 + √324)% of 1800 – (2\n3\n * 3\n2\n)\n?\n2\n = (36 + 18)% of 1800 – (8 * 9)\n?\n2\n = 54 * 18 – 72\n?\n2\n = 972 – 72\n?\n2\n = 900\n? = 30\nHence, option D"
+      },
+      {
+        "id": "set_7_moderate_q7",
+        "q_num": 7,
+        "question": "(23 – 9)*? – 150 ÷ 6 + 48 = 8 * 18 + 19",
+        "options": {
+          "a": "5",
+          "b": "10",
+          "c": "30",
+          "d": "15",
+          "e": "8"
+        },
+        "answer": "b",
+        "solution": "(23 – 9)*? – 150 ÷ 6 + 48 = 8 * 18 + 19\n14 *? – 25 + 48 = 144 + 19\n14 *? + 23 = 163\n14 *? = 163 – 23\n? = (140 ÷ 14)\n? = 10\nHence, option B"
+      },
+      {
+        "id": "set_7_moderate_q8",
+        "q_num": 8,
+        "question": "3(3/2) + 2(7/5) + 5(4/2) + 1(6/5) – 3(7/2) = ? ÷ 5",
+        "options": {
+          "a": "53",
+          "b": "28",
+          "c": "50",
+          "d": "59",
+          "e": "43"
+        },
+        "answer": "a",
+        "solution": "3(3/2) + 2(7/5) + 5(4/2) + 1(6/5) – 3(7/2) = ? ÷ 5\n(9/2) + (17/5) + (14/2) + (11/5) – (13/2) = ?/5\n(9+ 14 – 13)/2 + (17 + 11)/5 = ?/5\n(10/2) + (28/5) = ?/5\n53/5 = ?/5\n? = 53\nHence, option A"
+      },
+      {
+        "id": "set_7_moderate_q9",
+        "q_num": 9,
+        "question": "(7/12 + 5/8 + 1/6) * 192 ÷ 11+? = 30",
+        "options": {
+          "a": "11",
+          "b": "8",
+          "c": "6",
+          "d": "9",
+          "e": "12"
+        },
+        "answer": "c",
+        "solution": "(7/12 + 5/8 + 1/6) * 192 ÷ 11 + ? = 30\n[(14 + 15 + 4)/24] * (192/11) +? = 30\n(33/24) * (192/11) +? = 30\n\nSimplification Questions PDF - Set 7 (Moderate)\n24 + ? = 30\n? = 6\nHence, option C"
+      },
+      {
+        "id": "set_7_moderate_q10",
+        "q_num": 10,
+        "question": "24 ÷ √64 + 30 * √9 + 3 √? = √196 * 7",
+        "options": {
+          "a": "216",
+          "b": "36",
+          "c": "512",
+          "d": "64",
+          "e": "125"
+        },
+        "answer": "e",
+        "solution": "24 ÷ √64 + 30 * √9 + \n3\n√? = √196 * 7\n24/8 + 30 * 3 + \n3\n√? = 14 * 7\n3 + 90 + \n3\n√? = 98\n98 – 93 = \n3\n√?\n5 = \n3\n√?\n? = 125\nHence, option E"
+      },
+      {
+        "id": "set_7_moderate_q11",
+        "q_num": 11,
+        "question": "1(9/16)% of 2560 + 50 of 4 = ? ÷ 3 √27",
+        "options": {
+          "a": "360",
+          "b": "720",
+          "c": "480",
+          "d": "540",
+          "e": "624"
+        },
+        "answer": "b",
+        "solution": "1(9/16)% of 2560 + 50 of 4 = ? ÷ \n3\n√27\n(25/16) * (1/100) * 2560 + (50 * 4) = ? ÷ 3\n(5/2) * 16 + 200 = ?/3\n40 + 200 = ?/3\n? = 240 * 3\n? = 720\nHence, option B"
+      },
+      {
+        "id": "set_7_moderate_q12",
+        "q_num": 12,
+        "question": "{√[(167 + 157) ÷ ?] * √49} ÷ 6 = 3",
+        "options": {
+          "a": "49",
+          "b": "64",
+          "c": "36",
+          "d": "100",
+          "e": "25"
+        },
+        "answer": "a",
+        "solution": "{√[(167 + 157) ÷ ?] * √49} ÷ 6 = 3\n√(324 ÷ ?) * 7 = 18\n(18/√?) * 7 = 18\n7 = √?\n? = 49\nHence, option A"
+      },
+      {
+        "id": "set_7_moderate_q13",
+        "q_num": 13,
+        "question": "17(2/3) ÷ (1/12) + √2025 – 1 = ? 4",
+        "options": {
+          "a": "5",
+          "b": "8",
+          "c": "4",
+          "d": "16",
+          "e": "6"
+        },
+        "answer": "c",
+        "solution": "17(2/3) ÷ (1/12) + √2025 – 1 = ?\n4\n(53/3) * 12 + 45 – 1 = ?\n4\n?\n4\n = (53 * 4) + 44\n?\n4\n = 212 + 44\n?\n4\n = 256 = 4\n4\n? = 4\nHence, option C"
+      },
+      {
+        "id": "set_7_moderate_q14",
+        "q_num": 14,
+        "question": "52% of 36% of 810 = 72% of 18% of ?",
+        "options": {
+          "a": "960",
+          "b": "1520",
+          "c": "1870",
+          "d": "1170",
+          "e": "1360"
+        },
+        "answer": "d",
+        "solution": "52% of 36% of 810 = 72% of 18% of ?\n52/100 * 36/100 * 810 = 72/100 * 18/100* ?\n52 * 90 = 2 * 2 * ?\n13 * 90 = ?\n? = 1170\nHence, option D"
+      },
+      {
+        "id": "set_7_moderate_q15",
+        "q_num": 15,
+        "question": "√1568 * √1728 ÷ √6 + 2197 2/3 = ? 2",
+        "options": {
+          "a": "31",
+          "b": "39",
+          "c": "41",
+          "d": "21",
+          "e": "29"
+        },
+        "answer": "e",
+        "solution": "√1568 * √1728 ÷ √6 + 2197\n2/3\n= ?\n2\n√784 * √2 * √576 * √3 ÷ (√2 * √3) + (13\n3\n)\n2/3\n= ?\n2\n28 * 24 + 169 = ?\n2\n672 + 169 = ?\n2\n?\n2\n = 841 = 29\n2\n? = 29\nHence, option E"
+      }
+    ]
+  },
+  {
+    "id": "set_2_hard",
+    "title": "Simplification Drill Set 2 (Hard)",
+    "setNumber": 2,
+    "difficulty": "Hard",
+    "totalQuestions": 10,
+    "questions": [
+      {
+        "id": "set_2_hard_q1",
+        "q_num": 1,
+        "question": "What value should come at the place of question mark in the following questions? 4 8 ÷ 256 x 64 ÷ 4 3 x 4 = 16 x 4 ?",
+        "options": {
+          "a": "7",
+          "b": "3",
+          "c": "2",
+          "d": "5",
+          "e": "None of these"
+        },
+        "answer": "b",
+        "solution": "4\n8\n÷ 4\n4\n x 4\n3\n÷ 4\n3\n x 4 = 4\n2\n x 4\n?\n=> 4\n(8 – 4 + 3 – 3 + 1)\n = 4\n(2 + ?)\n=> 4\n5\n = 4\n(2 + ?)\n=> 5 = 2 + ?\n=> ? = 5 – 2\n=> ? = 3"
+      },
+      {
+        "id": "set_2_hard_q2",
+        "q_num": 2,
+        "question": "65% of 80 + √3969 * √144 + ? = 45 * √324",
+        "options": {
+          "a": "3",
+          "b": "1",
+          "c": "2",
+          "d": "4",
+          "e": "5"
+        },
+        "answer": "c",
+        "solution": "65% of 80 + √3969 * √144 + ? = 45 * √324\n52 + 63 * 12 + ? =45 * 18\n808 + ?=810\n\nSimplification Questions PDF - Set 2 (Hard)\n?=2"
+      },
+      {
+        "id": "set_2_hard_q3",
+        "q_num": 3,
+        "question": "15% of 480 + √7056 ÷ 21 + ? * 17=892",
+        "options": {
+          "a": "42",
+          "b": "44",
+          "c": "46",
+          "d": "48",
+          "e": "45"
+        },
+        "answer": "d",
+        "solution": "15% of 480 + √7056 ÷ 21 + ? * 17=892\n72 + 4 + ? * 17=892\n?=48"
+      },
+      {
+        "id": "set_2_hard_q4",
+        "q_num": 4,
+        "question": "? 2 - 405 = (√1089 * 5)% of 2000 – 1205",
+        "options": {
+          "a": "60",
+          "b": "55",
+          "c": "50",
+          "d": "65",
+          "e": "70"
+        },
+        "answer": "c",
+        "solution": "X\n2\n = (√1089 * 5)% of 2000 – 1205 + 405\nX\n2\n = [(33 * 5)/100] * 2000 – 1205 + 405\nX\n2\n = 3300 - 1205 + 405\nX\n2\n = 2500\nX = 50"
+      },
+      {
+        "id": "set_2_hard_q5",
+        "q_num": 5,
+        "question": "(6 (1/4) + 3 (5/8) + 4 (2/16)) × 3 – 20 ÷ (4 × 3) = ? 2 /3",
+        "options": {
+          "a": "11",
+          "b": "12",
+          "c": "11/3",
+          "d": "121/3",
+          "e": "4"
+        },
+        "answer": "a",
+        "solution": "[(25/4) + (29/8) + (33/8)] * 3 – (20/12) = x\n2\n/3\n[(50 + 29 + 33)/8] * 3 – (5/3) = x\n2\n/3\n(112/8) * 3 – (5/3) = x\n2\n/3\n42 – 5/3 = x\n2\n/3\n121/3 = x\n2\n/3\nx = 11"
+      },
+      {
+        "id": "set_2_hard_q6",
+        "q_num": 6,
+        "question": "√(6+6*√(22+√(4+√25))) = 432/?",
+        "options": {
+          "a": "108",
+          "b": "72",
+          "c": "86.4",
+          "d": "54",
+          "e": "80"
+        },
+        "answer": "b",
+        "solution": "√(6+6*√(22+√(4+√25))) = 432/?\n√(6+6*√(22+√(4+5))) = 432/?\n√(6+6*√(22+3)) = 432/?\n√(6+6*5) = 432/?\n6 = 432/?\n? = 72\n\nSimplification Questions PDF - Set 2 (Hard)\nPDF Course Subscription | Mock Tests Subscription | All in One Subscription"
+      },
+      {
+        "id": "set_2_hard_q7",
+        "q_num": 7,
+        "question": "5.5 × 4 + 1.25 × 6 + 20(9÷3×4 + 1.25 + 3.325) =? 2",
+        "options": {
+          "a": "17",
+          "b": "18",
+          "c": "20",
+          "d": "19",
+          "e": "15"
+        },
+        "answer": "d",
+        "solution": "5.5 × 4 + 1.25 × 6 + 20(9÷3×4 + 1.25 + 3.325) =?\n2\n22 + 7.5 + + 20(12 + 1.25 + 3.325) =?\n2\n22 + 7.5 + 331.5 =?\n2\n361 =?\n2\n19 =?"
+      },
+      {
+        "id": "set_2_hard_q8",
+        "q_num": 8,
+        "question": "What value should come in place of (?) in the following questions? (2 1/2% of 160) × (21/4% of 110) × 9 = 16 × 15 – 1/10 - (2) ?",
+        "options": {
+          "a": "4",
+          "b": "3",
+          "c": "5",
+          "d": "6",
+          "e": "8"
+        },
+        "answer": "c",
+        "solution": "(2 1/2% of 160) × (21/4% of 110) × 9 = 16 × 15 – 1/10 - (2)\n?\n5/200 * 160 * 21/400 * 110 * 9 = 240 – 1/10 – (2)\n?\n207.9 = 240 – 0.1 - (2)\n?\n(2)\n?\n = 240 – 0.1 – 207.9\n(2)\n?\n = 32\n(2)\n?\n = 2\n5\nx = 5"
+      },
+      {
+        "id": "set_2_hard_q9",
+        "q_num": 9,
+        "question": "3 √(32751+ 2 √(223+ √4356))= ? * 3 √(512)",
+        "options": {
+          "a": "17",
+          "b": "1",
+          "c": "4",
+          "d": "13",
+          "e": "7"
+        },
+        "answer": "c",
+        "solution": ""
+      },
+      {
+        "id": "set_2_hard_q10",
+        "q_num": 10,
+        "question": "56% of 1200 – (4 3 * 6)/√144 – 125% of (720/5) = ?",
+        "options": {
+          "a": "440",
+          "b": "460",
+          "c": "480",
+          "d": "490",
+          "e": "510"
+        },
+        "answer": "b",
+        "solution": "56% of 1200 – (4\n3\n * 6)/√144 – 125% of (720/5) = ?\n\nSimplification Questions PDF - Set 2 (Hard)\n672 – 32 – 180 = ?\n? = 460"
+      }
+    ]
+  }
+]
