@@ -1363,6 +1363,40 @@ export default function App() {
     setView('review');
   };
 
+  const openUnclassifiedReview = (title: string, questions: Question[], subject: string) => {
+    if (!questions || questions.length === 0) {
+      alert('No unclassified questions to review.');
+      return;
+    }
+    const syntheticResult: QuizResult = {
+      id: `local-unclassified-${Date.now()}`,
+      userId: user?.uid || 'guest',
+      chapter_title: title,
+      subject: subject,
+      category: 'mockErrors',
+      mode: 'practice',
+      score: 0,
+      totalQuestions: questions.length,
+      totalTime: 0,
+      completedAt: new Date().toISOString(),
+      questionDetails: questions.map((q, idx) => {
+        const isCorrect = q.status === 'correct' || (q.userAnswer && q.userAnswer.toLowerCase() === q.answer?.toLowerCase());
+        const isWrong = q.status === 'wrong' || q.errorType === 'wrong' || (q.userAnswer && !isCorrect);
+        const isSlow = q.status === 'slow' || q.isSlow || q.errorType === 'speed_issue';
+        return {
+          q_num: idx + 1,
+          timeSpent: typeof q.userTime === 'number' ? q.userTime : 0,
+          isCorrect: Boolean(isCorrect && !isSlow),
+          selectedAnswer: q.userAnswer || (isWrong ? 'wrong' : ''),
+          question: q,
+          marked: false,
+          rca: q.rca
+        };
+      })
+    };
+    openReview(syntheticResult, 'home');
+  };
+
   const reattemptFromResult = (result: QuizResult) => {
     // 1. Check primary category
     const primaryData = result.category === 'mockErrors' ? mockData : bankData;
@@ -1729,6 +1763,10 @@ export default function App() {
   const startSubjectRcaQuiz = (tag: RCATagType | 'unclassified', subTag?: string) => {
     if (!selectedSubject) return;
     let questions = subjectRcaData.questionsByTag[tag] || [];
+    if (tag === 'unclassified') {
+      openUnclassifiedReview(`${selectedSubject} • All Unclassified Mistakes`, questions, selectedSubject);
+      return;
+    }
     if (tag === 'S' && subTag && subTag !== 'all') {
       questions = questions.filter(q => matchesSillySubFilter(q, subTag));
     }
@@ -1939,6 +1977,10 @@ export default function App() {
     if (!selectedSubject) return;
     if (!questions || questions.length === 0) {
       alert(`No questions available for this drill.`);
+      return;
+    }
+    if (subType === 'unclassified') {
+      openUnclassifiedReview(`${topicName} • Unclassified Review`, questions, selectedSubject);
       return;
     }
     const SET_SIZE = 25;
@@ -3298,6 +3340,7 @@ export default function App() {
                           onAskAiRca={handleAskAiRca}
                           onAskAiErrorType={handleAskAiErrorType}
                           onAskAiSubject={handleAskAiSubject}
+                          onOpenQuestionsReview={openUnclassifiedReview}
                           onOpenChapterModal={(ch, filter) => {
                             setActiveMockChapterModal(ch);
                             setModalErrorFilter(filter || 'all');

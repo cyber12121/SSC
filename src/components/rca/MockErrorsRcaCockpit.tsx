@@ -12,7 +12,8 @@ import {
   ChevronRight,
   Info,
   BookOpen,
-  Flame
+  Flame,
+  Eye
 } from 'lucide-react';
 import { Question, RCATagType } from '../../types';
 import { MockChapterModalData, ModalFilterType } from '../modals/MockChapterErrorsModal';
@@ -54,6 +55,7 @@ interface MockErrorsRcaCockpitProps {
   onAskAiRca: (tag: RCATagType | 'unclassified', subTag?: string) => void;
   onAskAiErrorType?: (type: 'wrong' | 'slow' | 'unattempted') => void;
   onAskAiSubject: (subject: string) => void;
+  onOpenQuestionsReview?: (title: string, questions: Question[], subject: string) => void;
   onOpenChapterModal: (chapter: MockChapterModalData, filter?: ModalFilterType, sillySubFilter?: string) => void;
 }
 
@@ -80,6 +82,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
   onAskAiRca,
   onAskAiErrorType,
   onAskAiSubject,
+  onOpenQuestionsReview,
   onOpenChapterModal
 }) => {
   const [showRcaRulesModal, setShowRcaRulesModal] = useState(false);
@@ -815,12 +818,18 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                   disabled={unclassifiedCount === 0}
                   onClick={(e) => {
                     e.stopPropagation();
-                    onStartSubjectRcaQuiz('unclassified');
+                    const unclassifiedQs = subjectRcaData.questionsByTag?.unclassified || [];
+                    if (onOpenQuestionsReview) {
+                      onOpenQuestionsReview(`${selectedSubject} • All Unclassified Mistakes`, unclassifiedQs, selectedSubject);
+                    } else {
+                      onStartSubjectRcaQuiz('unclassified');
+                    }
                   }}
                   className="inline-flex items-center gap-1 text-[10px] font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-2 py-0.5 rounded-md border border-indigo-200/70 transition shadow-2xs cursor-pointer active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
+                  title={`Review ${unclassifiedCount} unclassified questions`}
                 >
-                  <Play className="w-2 h-2 fill-current" />
-                  Drill
+                  <Eye className="w-2.5 h-2.5" />
+                  Review
                 </button>
               </div>
             </div>
@@ -1206,10 +1215,14 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     const unclassifiedQs = ch.rcaQuestions?.unclassified || ch.questions.filter(q => !q.rcaTag || q.rcaTag === 'unclassified');
-                                    onStartClubbedChapterQuiz(ch.topic, unclassifiedQs, 'unclassified');
+                                    if (onOpenQuestionsReview) {
+                                      onOpenQuestionsReview(`${ch.topic} • Unclassified Review`, unclassifiedQs, selectedSubject);
+                                    } else {
+                                      onStartClubbedChapterQuiz(ch.topic, unclassifiedQs, 'unclassified');
+                                    }
                                   }}
                                   className="inline-flex items-center gap-1 text-[10px] font-semibold text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 px-1.5 py-0.2 rounded transition-colors cursor-pointer"
-                                  title={`Practice ${unclassifiedTag} unclassified questions for ${ch.topic}`}
+                                  title={`Review ${unclassifiedTag} unclassified questions for ${ch.topic}`}
                                 >
                                   <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
                                   <span>{unclassifiedTag} unclassified</span>
