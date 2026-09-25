@@ -132,10 +132,13 @@ export const SimplificationDrill: React.FC = () => {
   // Calculations for score & stats
   const answeredCount = Object.keys(userAnswers).length;
   const correctCount = useMemo(() => {
-    return Object.entries(userAnswers).filter(([idx, ans]) => {
-      const q = currentSet?.questions[Number(idx)];
-      return q && q.answer.toLowerCase() === ans.toLowerCase();
-    }).length;
+    if (!currentSet?.questions) return 0;
+    return currentSet.questions.reduce((count, q, idx) => {
+      const userAns = userAnswers[idx];
+      return Boolean(userAns && q.answer && userAns.toLowerCase() === q.answer.toLowerCase())
+        ? count + 1
+        : count;
+    }, 0);
   }, [userAnswers, currentSet]);
 
   const scorePercentage = Math.round((correctCount / totalQuestions) * 100);
