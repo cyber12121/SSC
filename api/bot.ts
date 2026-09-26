@@ -5267,6 +5267,7 @@ function clearSession(userId) {
 import fs4 from "fs";
 import path4 from "path";
 import os2 from "os";
+import { fileURLToPath as fileURLToPath3 } from "url";
 var TMP_FILE2 = path4.join(os2.tmpdir(), "cgl_user_mistakes.json");
 var userMistakesMap = /* @__PURE__ */ new Map();
 function saveToDisk2() {
@@ -5303,12 +5304,18 @@ function loadFromDisk2() {
 }
 loadFromDisk2();
 var mockErrorsCache = /* @__PURE__ */ new Map();
+var moduleDir3 = process.cwd();
+try {
+  moduleDir3 = path4.dirname(fileURLToPath3(import.meta.url));
+} catch {
+}
 function getMockErrorsDir() {
   const candidates = [
     path4.join(process.cwd(), "src", "data", "mock_errors"),
     path4.join(process.cwd(), "data", "mock_errors"),
-    path4.join(path4.dirname(__dirname), "data", "mock_errors"),
-    path4.join(path4.dirname(__dirname), "src", "data", "mock_errors")
+    path4.join(moduleDir3, "data", "mock_errors"),
+    path4.join(moduleDir3, "src", "data", "mock_errors"),
+    path4.join(moduleDir3, "..", "src", "data", "mock_errors")
   ];
   for (const c of candidates) {
     if (fs4.existsSync(c)) return c;

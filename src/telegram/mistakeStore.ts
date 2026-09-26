@@ -74,12 +74,20 @@ loadFromDisk();
 
 const mockErrorsCache = new Map<'english' | 'mathematics' | 'reasoning' | 'general_awareness', TelegramQuizQuestion[]>();
 
+import { fileURLToPath } from 'url';
+
+let moduleDir = process.cwd();
+try {
+  moduleDir = path.dirname(fileURLToPath(import.meta.url));
+} catch {}
+
 function getMockErrorsDir(): string {
   const candidates = [
     path.join(process.cwd(), 'src', 'data', 'mock_errors'),
     path.join(process.cwd(), 'data', 'mock_errors'),
-    path.join(path.dirname(__dirname), 'data', 'mock_errors'),
-    path.join(path.dirname(__dirname), 'src', 'data', 'mock_errors'),
+    path.join(moduleDir, 'data', 'mock_errors'),
+    path.join(moduleDir, 'src', 'data', 'mock_errors'),
+    path.join(moduleDir, '..', 'src', 'data', 'mock_errors'),
   ];
   for (const c of candidates) {
     if (fs.existsSync(c)) return c;

@@ -1,13 +1,10 @@
-// src/telegram/mistakeStore.ts
+// api/mistakes.ts
 import fs2 from "fs";
 import path2 from "path";
 import os from "os";
-
-// src/telegram/quizData.ts
 import fs from "fs";
 import path from "path";
-
-// src/utils/mathSanitizer.ts
+import { fileURLToPath } from "url";
 function normalizeUnicodeMath(text = "") {
   if (!text) return "";
   const supMap = [
@@ -471,8 +468,6 @@ function cleanAlgebraPowers(text = "") {
   s = s.replace(/\(\s*(\d{1,2})2\s*([+\-×*÷])/g, "($1\xB2 $2");
   return s;
 }
-
-// src/utils/cleanSolution.ts
 function cleanSolutionText(sol = "") {
   if (!sol) return "";
   let s = String(sol).replace(/<br\s*\/?>/gi, "\n").replace(/<[a-zA-Z][^>]*>/g, "").replace(/<\/[a-zA-Z]+>/g, "").replace(/\bp>/gi, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ");
@@ -562,9 +557,6 @@ function purgeScrapedWatermarks(text = "") {
   if (!text) return "";
   return text.replace(/(?:^|\n)\s*simplicrack(?:\s+(?:Math|Maths))*\s*(?:\n\s*MRQ\s*SERIES\s*)?(?:\n\s*SSC\s*CGL\s*2026\s*)?/gi, "\n").replace(/(?:^|\n)\s*MRQ\s*SERIES\s*(?:\n\s*SSC\s*CGL\s*2026\s*)?/gi, "\n").replace(/\b(?:simplicrack(?:\s+(?:Math|Maths))*|MRQ\s*SERIES)\b/gi, "").replace(/\n{3,}/g, "\n\n").trim();
 }
-
-// src/telegram/quizData.ts
-import { fileURLToPath } from "url";
 var moduleDir = process.cwd();
 try {
   moduleDir = path.dirname(fileURLToPath(import.meta.url));
@@ -669,8 +661,6 @@ function sanitizeTelegramQuiz(raw) {
     source: raw.source
   };
 }
-
-// src/telegram/mistakeStore.ts
 var TMP_FILE = path2.join(os.tmpdir(), "cgl_user_mistakes.json");
 var userMistakesMap = /* @__PURE__ */ new Map();
 function saveToDisk() {
@@ -1092,8 +1082,6 @@ function getTotalMistakesSummary(userId) {
     website_mock: webStats.reduce((acc, s) => acc + s.total, 0)
   };
 }
-
-// api/mistakes.ts
 async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
