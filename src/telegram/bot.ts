@@ -928,3 +928,38 @@ const isDirectRun = Boolean(process.argv[1]?.replace(/\\/g, '/').endsWith('src/t
 if (isDirectRun && !process.env.VERCEL) {
   launchBot();
 }
+
+// Vercel Serverless Function Handler
+export default async function handler(req: any, res: any) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  if (req.method === 'GET') {
+    return res.status(200).json({
+      status: 'online',
+      message: 'Telegram Webhook is live 24/7 on Vercel!',
+      bot: '@my_cgl_bot',
+      timestamp: new Date().toISOString(),
+    });
+  }
+
+  if (req.method === 'POST') {
+    try {
+      if (req.body) {
+        await bot.handleUpdate(req.body);
+      }
+      return res.status(200).json({ ok: true });
+    } catch (err: any) {
+      console.error('[VercelWebhook Error]', err);
+      return res.status(200).json({ ok: true });
+    }
+  }
+
+  return res.status(405).json({ error: 'Method Not Allowed' });
+}
+
