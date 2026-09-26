@@ -224,6 +224,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -836,8 +837,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </span>
           </div>
 
-          {/* Zoom Buttons */}
-          <div className="flex items-center gap-1 ml-2">
+          {/* Zoom Buttons (Desktop only to conserve mobile space) */}
+          <div className="hidden sm:flex items-center gap-1 ml-2">
             <button
               onClick={() => setZoomLevel(prev => Math.min(prev + 1, 2))}
               className="px-2.5 py-0.5 bg-[#1e60aa] hover:bg-[#164d8a] text-white text-[11px] font-bold rounded-full transition-all shadow-2xs cursor-pointer"
@@ -946,37 +947,37 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       </header>
 
       {/* ── SECOND SUB-HEADER ROW 1 (Links on Left, Status Counter on Right) ── */}
-      <div className="bg-white border-b border-gray-200 px-4 py-1.5 flex items-center justify-between shrink-0 z-20">
+      <div className="bg-white border-b border-gray-200 px-3 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2">
         {mode === 'mock' ? (
           /* Quick Links: SYMBOLS | INSTRUCTIONS | OVERALL TEST SUMMARY in Mock */
-          <div className="flex items-center gap-4 text-[11px] font-bold tracking-wide uppercase">
+          <div className="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] font-bold tracking-wide uppercase shrink-0">
             <button
               onClick={() => setShowSymbolsModal(true)}
-              className="text-[#0088cc] hover:underline cursor-pointer"
+              className="text-[#0088cc] hover:underline cursor-pointer whitespace-nowrap"
             >
               SYMBOLS
             </button>
             <button
               onClick={() => setShowInstructionsModal(true)}
-              className="text-[#d9534f] hover:underline cursor-pointer"
+              className="text-[#d9534f] hover:underline cursor-pointer whitespace-nowrap"
             >
               INSTRUCTIONS
             </button>
             <button
               onClick={() => setShowQuestionPaper(true)}
-              className="text-[#a94442] hover:underline cursor-pointer"
+              className="text-[#a94442] hover:underline cursor-pointer whitespace-nowrap"
             >
               OVERALL TEST SUMMARY
             </button>
           </div>
         ) : (
           /* Practice Mode Sub-header Left: Breadcrumb / Topic Info */
-          <div className="flex items-center gap-2 text-xs text-gray-700">
-            <span className="font-bold text-gray-900">
+          <div className="flex items-center gap-2 text-xs text-gray-700 shrink-0">
+            <span className="font-bold text-gray-900 whitespace-nowrap">
               Question {currentIdx + 1} of {totalQuestions}
             </span>
             {currentQuestion?.tags?.topic && (
-              <span className="bg-indigo-50 text-indigo-700 font-semibold px-2 py-0.5 rounded text-[11px] border border-indigo-100">
+              <span className="bg-indigo-50 text-indigo-700 font-semibold px-2 py-0.5 rounded text-[11px] border border-indigo-100 truncate max-w-[130px] sm:max-w-xs">
                 {currentQuestion.tags.topic}
               </span>
             )}
@@ -985,29 +986,30 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
         {/* Right: Answered / Practice status counter */}
         {mode === 'mock' ? (
-          <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 font-bold ml-auto">
-            <span>Total Questions Answered:</span>
+          <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-800 font-bold ml-auto shrink-0">
+            <span className="hidden sm:inline">Total Questions Answered:</span>
+            <span className="sm:hidden text-gray-600 font-medium text-xs">Answered:</span>
             <span className="bg-[#ffff00] border border-gray-400 text-black px-1.5 py-0.5 font-bold text-xs">
               {stats.answered}
             </span>
           </div>
         ) : (
-          <div className="flex items-center gap-2.5 text-xs font-semibold ml-auto">
-            <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 flex items-center gap-1">
-              <Check className="w-3 h-3 stroke-[3]" /> {scorePractice} Correct
+          <div className="flex items-center gap-1.5 sm:gap-2.5 text-xs font-semibold ml-auto shrink-0">
+            <span className="text-emerald-700 bg-emerald-50 px-1.5 sm:px-2 py-0.5 rounded border border-emerald-200 flex items-center gap-1">
+              <Check className="w-3 h-3 stroke-[3]" /> <span className="font-bold">{scorePractice}</span><span className="hidden sm:inline"> Correct</span>
             </span>
-            <span className="text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 flex items-center gap-1">
-              <X className="w-3 h-3 stroke-[3]" /> {wrongPractice} Wrong
+            <span className="text-rose-700 bg-rose-50 px-1.5 sm:px-2 py-0.5 rounded border border-rose-200 flex items-center gap-1">
+              <X className="w-3 h-3 stroke-[3]" /> <span className="font-bold">{wrongPractice}</span><span className="hidden sm:inline"> Wrong</span>
             </span>
-            <span className="text-gray-600 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
-              {unattemptedPractice} Left
+            <span className="text-gray-600 bg-gray-50 px-1.5 sm:px-2 py-0.5 rounded border border-gray-200">
+              <span className="font-bold">{unattemptedPractice}</span><span className="hidden sm:inline"> Left</span>
             </span>
           </div>
         )}
       </div>
 
       {/* ── SECOND SUB-HEADER ROW 2 (Section Pills and Action Buttons aligned to the left - Testbook Exact) ── */}
-      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-start gap-2 sm:gap-3 shrink-0 z-20 overflow-x-auto">
+      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2">
         {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
         <div className="flex items-center gap-1.5 shrink-0">
           {sections.map((sec, idx) => {
@@ -1019,7 +1021,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 onClick={() => handleSectionClick(idx)}
                 disabled={!hasQuestions}
                 title={`${sec.label}: ${sec.title} (${sec.count} Questions)`}
-                className={`px-3 py-1 text-xs sm:text-sm font-bold rounded-[2px] transition-all shrink-0 select-none ${
+                className={`px-2.5 sm:px-3 py-1 text-xs sm:text-sm font-bold rounded-[2px] transition-all shrink-0 select-none ${
                   isActive
                     ? 'bg-[#008000] text-white border border-[#006600] shadow-xs'
                     : hasQuestions
@@ -1033,9 +1035,30 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           })}
         </div>
 
-        {/* Action Buttons: Practice vs Mock Mode */}
+        {/* Mobile Header Controls: Palette Button + Submit Test */}
+        <div className="lg:hidden flex items-center gap-2 shrink-0 ml-auto">
+          <button
+            onClick={() => setIsMobilePaletteOpen(true)}
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-700 font-bold text-xs transition-colors cursor-pointer shadow-2xs whitespace-nowrap"
+            title="Open Question Palette"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Palette ({questionNumberInSection}/{activeSection.count || totalQuestions})</span>
+          </button>
+          {mode === 'mock' && (
+            <button
+              onClick={() => setShowSubmitModal(true)}
+              disabled={isSubmitting}
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-bold text-xs px-2.5 py-1 rounded-[2px] shadow-2xs disabled:opacity-50 cursor-pointer whitespace-nowrap"
+            >
+              Submit
+            </button>
+          )}
+        </div>
+
+        {/* Action Buttons: Practice vs Mock Mode (Desktop Only) */}
         {mode === 'practice' ? (
-          <div className="flex items-center gap-2 shrink-0 ml-3 sm:ml-6">
+          <div className="hidden lg:flex items-center gap-2 shrink-0 ml-3 sm:ml-6">
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
@@ -1076,7 +1099,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
         ) : (
           /* Mock Mode Buttons (Exact match to official Testbook interface - Left aligned after PART pills) */
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-3 sm:ml-7">
+          <div className="hidden lg:flex items-center gap-1.5 sm:gap-2 shrink-0 ml-3 sm:ml-7">
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
@@ -1121,10 +1144,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       </div>
 
       {/* ── MAIN LAYOUT (QUESTION ON LEFT, PALETTE ON RIGHT) ── */}
-      <div className="flex-1 min-h-0 flex overflow-hidden">
+      <div className="flex-1 min-h-0 flex overflow-hidden relative">
 
         {/* ── LEFT PANE: QUESTION & OPTIONS TABLE (Exact match to Testbook) ── */}
-        <div className="flex-1 min-h-0 overflow-y-auto p-4 sm:p-6 pb-32 bg-white border-r border-gray-200 custom-scrollbar">
+        <div className="flex-1 min-w-0 min-h-0 overflow-y-auto p-3.5 sm:p-6 pb-28 sm:pb-32 bg-white lg:border-r border-gray-200 custom-scrollbar">
 
           {isPaused ? (
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
@@ -1454,26 +1477,163 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           )}
         </div>
 
-        {/* ── RIGHT PANE: PALETTE & SECTION ANALYSIS (Matches Testbook screenshot) ── */}
-        <QuizPaletteSidebar
-          mode={mode}
-          activeSection={activeSection}
-          sectionQuestions={sectionQuestions}
-          answers={answers}
-          markedForReview={markedForReview}
-          currentIdx={currentIdx}
-          isQuestionCorrect={isQuestionCorrect}
-          jumpToQuestion={jumpToQuestion}
-          totalQuestions={totalQuestions}
-          answeredPractice={answeredPractice}
-          scorePractice={scorePractice}
-          wrongPractice={wrongPractice}
-          unattemptedPractice={unattemptedPractice}
-          accuracyPractice={accuracyPractice}
-          sectionAnswered={sectionAnswered}
-          sectionNotAnswered={sectionNotAnswered}
-          sectionMarked={sectionMarked}
-        />
+        {/* ── RIGHT PANE: PALETTE & SECTION ANALYSIS (Desktop only) ── */}
+        <div className="hidden lg:flex shrink-0 h-full">
+          <QuizPaletteSidebar
+            mode={mode}
+            activeSection={activeSection}
+            sectionQuestions={sectionQuestions}
+            answers={answers}
+            markedForReview={markedForReview}
+            currentIdx={currentIdx}
+            isQuestionCorrect={isQuestionCorrect}
+            jumpToQuestion={jumpToQuestion}
+            totalQuestions={totalQuestions}
+            answeredPractice={answeredPractice}
+            scorePractice={scorePractice}
+            wrongPractice={wrongPractice}
+            unattemptedPractice={unattemptedPractice}
+            accuracyPractice={accuracyPractice}
+            sectionAnswered={sectionAnswered}
+            sectionNotAnswered={sectionNotAnswered}
+            sectionMarked={sectionMarked}
+          />
+        </div>
+      </div>
+
+      {/* ── MOBILE PALETTE SLIDE-OVER DRAWER ── */}
+      {isMobilePaletteOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden flex justify-end">
+          <div
+            className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity animate-in fade-in duration-200"
+            onClick={() => setIsMobilePaletteOpen(false)}
+          />
+          <div className="relative ml-auto w-[85vw] max-w-[340px] h-full bg-white shadow-2xl z-10 flex flex-col overflow-hidden animate-in slide-in-from-right duration-200">
+            <QuizPaletteSidebar
+              mode={mode}
+              activeSection={activeSection}
+              sectionQuestions={sectionQuestions}
+              answers={answers}
+              markedForReview={markedForReview}
+              currentIdx={currentIdx}
+              isQuestionCorrect={isQuestionCorrect}
+              jumpToQuestion={(idx) => {
+                jumpToQuestion(idx);
+                setIsMobilePaletteOpen(false);
+              }}
+              totalQuestions={totalQuestions}
+              answeredPractice={answeredPractice}
+              scorePractice={scorePractice}
+              wrongPractice={wrongPractice}
+              unattemptedPractice={unattemptedPractice}
+              accuracyPractice={accuracyPractice}
+              sectionAnswered={sectionAnswered}
+              sectionNotAnswered={sectionNotAnswered}
+              sectionMarked={sectionMarked}
+              onClose={() => setIsMobilePaletteOpen(false)}
+              sections={sections}
+              activeSectionIdx={activeSectionIdx}
+              onSelectSection={(idx) => handleSectionClick(idx)}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* ── MOBILE FIXED BOTTOM NAVIGATION BAR ── */}
+      <div className="lg:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-gray-300 px-3 py-2 z-30 shadow-lg flex items-center justify-between gap-1.5 safe-bottom">
+        {mode === 'mock' ? (
+          <>
+            <button
+              onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+              disabled={currentIdx === 0}
+              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-800 rounded font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1 shrink-0"
+              title="Previous question"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>Prev</span>
+            </button>
+
+            <button
+              onClick={handleToggleMarkForReview}
+              className={`px-2.5 py-2 rounded font-bold text-xs transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0 ${
+                markedForReview.has(currentIdx)
+                  ? 'bg-[#7e57c2] text-white'
+                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+              }`}
+              title={markedForReview.has(currentIdx) ? "Marked for Review" : "Mark for Review"}
+            >
+              <Bookmark className="w-3.5 h-3.5" />
+              <span>{markedForReview.has(currentIdx) ? 'Marked' : 'Mark'}</span>
+            </button>
+
+            <button
+              onClick={() => setIsMobilePaletteOpen(true)}
+              className="px-2.5 py-2 bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 text-indigo-700 border border-indigo-200 rounded font-bold text-xs flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer"
+              title="Open Question Palette"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Q.{questionNumberInSection}/{activeSection.count || totalQuestions}</span>
+            </button>
+
+            <button
+              onClick={handleSaveAndNext}
+              className="px-3.5 py-2 bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white rounded font-bold text-xs flex items-center gap-1 shadow-xs cursor-pointer shrink-0 ml-auto"
+              title="Save response & go to next"
+            >
+              <span>Save &amp; Next</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+              disabled={currentIdx === 0}
+              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1 shrink-0"
+              title="Previous question"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>Prev</span>
+            </button>
+
+            <button
+              onClick={() => setShowSolutionMap(prev => ({ ...prev, [currentIdx]: !isSolutionOpen }))}
+              className={`px-2.5 py-2 rounded font-bold text-xs flex items-center gap-1 shrink-0 cursor-pointer ${
+                isSolutionOpen
+                  ? 'bg-amber-500 text-white'
+                  : 'bg-amber-50 text-amber-900 border border-amber-300'
+              }`}
+              title="Toggle solution visibility"
+            >
+              {isSolutionOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5 text-amber-600" />}
+              <span>{isSolutionOpen ? 'Hide' : 'Solution'}</span>
+            </button>
+
+            <button
+              onClick={() => setIsMobilePaletteOpen(true)}
+              className="px-2.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded font-bold text-xs flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer"
+              title="Open Question Palette"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Q.{currentIdx + 1}/{totalQuestions}</span>
+            </button>
+
+            <button
+              onClick={() => {
+                if (currentIdx < totalQuestions - 1) {
+                  jumpToQuestion(currentIdx + 1);
+                } else {
+                  setShowSubmitModal(true);
+                }
+              }}
+              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded font-bold text-xs flex items-center gap-1 shadow-xs cursor-pointer shrink-0 ml-auto"
+              title="Next question"
+            >
+              <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </>
+        )}
       </div>
 
       {/* ── INSTRUCTIONS MODAL ── */}

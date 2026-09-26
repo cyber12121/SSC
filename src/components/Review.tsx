@@ -137,7 +137,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [activeSectionId, setActiveSectionId] = useState<string>('auto');
   const [reattemptMode, setReattemptMode] = useState(false);
   const [reattemptAnswers, setReattemptAnswers] = useState<Record<number, string>>({});
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
   const [selectedFilter, setSelectedFilter] = useState<FilterType>('all');
   const [sillySubFilter, setSillySubFilter] = useState<string>('all');
   const [showFilterMenu, setShowFilterMenu] = useState(false);
@@ -2182,6 +2182,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </button>
             </div>
 
+            {/* Mobile Palette Button */}
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="lg:hidden bg-blue-50 hover:bg-blue-100 text-[#01579b] border border-blue-200 font-bold text-xs px-3 py-2 rounded shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer"
+              title="Open Question Palette"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-[#0288d1]" />
+              <span>Palette</span>
+            </button>
+
             {/* Next Button */}
             <button
               onClick={handleNext}
@@ -2194,10 +2204,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           </div>
         </div>
 
-        {/* Vertical Sidebar Collapse/Expand Tab */}
+        {/* Vertical Sidebar Collapse/Expand Tab (Desktop Only) */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-[#37474f] hover:bg-black text-white py-3 px-1 rounded-l-md shadow-md cursor-pointer transition-all flex items-center justify-center"
+          className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-[#37474f] hover:bg-black text-white py-3 px-1 rounded-l-md shadow-md cursor-pointer transition-all items-center justify-center"
           style={{ right: sidebarOpen ? '320px' : '0px' }}
           title={sidebarOpen ? "Hide Palette" : "Show Palette"}
         >
@@ -2208,36 +2218,45 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           )}
         </button>
 
+        {/* Mobile Backdrop Overlay */}
+        {sidebarOpen && (
+          <div
+            className="lg:hidden fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-xs transition-opacity animate-in fade-in duration-200"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
         {/* RIGHT COLUMN: Sidebar (Candidate Info, Legend, Speed Indicators, Question Palette) */}
         {sidebarOpen && (
-          <aside className="w-80 bg-[#e1f5fe] border-l border-blue-200 flex flex-col shrink-0 h-full overflow-hidden transition-all select-none">
+          <aside className="fixed inset-y-0 right-0 z-50 w-[85vw] max-w-[340px] shadow-2xl lg:shadow-none lg:static lg:z-auto lg:w-80 bg-[#e1f5fe] border-l border-blue-200 flex flex-col shrink-0 h-full overflow-hidden transition-all select-none animate-in slide-in-from-right lg:animate-none duration-200">
             
             {/* User Profile & Filter Header */}
             <div className="p-3.5 border-b border-blue-200/80 bg-white/70 flex items-center justify-between shrink-0">
-              <div className="flex items-center space-x-2.5">
-                <div className="w-8 h-8 rounded-full bg-[#00bcd4] text-white flex items-center justify-center font-bold text-xs shadow-sm">
+              <div className="flex items-center space-x-2.5 min-w-0 pr-2">
+                <div className="w-8 h-8 rounded-full bg-[#00bcd4] text-white flex items-center justify-center font-bold text-xs shadow-sm shrink-0">
                   <User className="w-4 h-4" />
                 </div>
-                <span className="text-xs font-bold text-gray-800 truncate max-w-[150px]">
+                <span className="text-xs font-bold text-gray-800 truncate max-w-[120px] sm:max-w-[150px]">
                   {userName}
                 </span>
               </div>
 
-              {/* Filter Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setShowFilterMenu(!showFilterMenu)}
-                  className="flex items-center space-x-1 text-xs font-semibold text-gray-700 hover:text-[#0097a7] transition-colors p-1 rounded hover:bg-blue-100/50"
-                >
-                  <Filter className="w-3.5 h-3.5" />
-                  <span>Filter</span>
-                </button>
+              <div className="flex items-center gap-1.5 shrink-0">
+                {/* Filter Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() => setShowFilterMenu(!showFilterMenu)}
+                    className="flex items-center space-x-1 text-xs font-semibold text-gray-700 hover:text-[#0097a7] transition-colors p-1 rounded hover:bg-blue-100/50"
+                  >
+                    <Filter className="w-3.5 h-3.5" />
+                    <span>Filter</span>
+                  </button>
 
-                {showFilterMenu && (
-                  <div className="absolute right-0 mt-1 w-44 bg-white border border-gray-200 rounded-lg shadow-xl py-1 text-xs z-40">
-                    <button
-                      onClick={() => { setSelectedFilter('all'); setShowFilterMenu(false); }}
-                      className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 ${selectedFilter === 'all' ? 'font-bold text-[#0097a7]' : 'text-gray-700'}`}
+                  {showFilterMenu && (
+                    <div className="absolute right-0 mt-1 w-44 bg-white border border-gray-200 rounded-lg shadow-xl py-1 text-xs z-40">
+                      <button
+                        onClick={() => { setSelectedFilter('all'); setShowFilterMenu(false); }}
+                        className={`w-full text-left px-3 py-1.5 hover:bg-blue-50 ${selectedFilter === 'all' ? 'font-bold text-[#0097a7]' : 'text-gray-700'}`}
                     >
                       All ({totalQuestions})
                     </button>
@@ -2319,7 +2338,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   </div>
                 )}
               </div>
+
+              {/* Mobile Close Button */}
+              <button
+                onClick={() => setSidebarOpen(false)}
+                className="lg:hidden p-1 rounded text-gray-500 hover:text-gray-800 hover:bg-blue-100 transition-colors cursor-pointer"
+                title="Close Palette"
+              >
+                <X className="w-4 h-4" />
+              </button>
             </div>
+          </div>
 
             {/* Legend / Status Row (Section & Overall) */}
             <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-2.5 text-xs shrink-0 flex-wrap gap-y-1.5">
@@ -2563,7 +2592,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   return (
                     <button
                       key={idx}
-                      onClick={() => setCurrentIdx(idx)}
+                      onClick={() => {
+                        setCurrentIdx(idx);
+                        if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+                          setSidebarOpen(false);
+                        }
+                      }}
                       title={`Question ${localNumber} of ${activeSection.label} (Overall #${idx + 1}) - ${status}${qRca ? ` [RCA: ${qRca.tag} - ${qRca.tagName}]` : ''}`}
                       className={`relative w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm ${badgeStyle} ${
                         isCurrent ? 'ring-2 ring-[#0097a7] ring-offset-1 scale-110 z-10 shadow-md' : 'hover:opacity-80 hover:scale-105'

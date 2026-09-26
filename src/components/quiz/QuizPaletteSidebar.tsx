@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, X } from 'lucide-react';
 import { Question } from '../../types';
 
 export interface MockSection {
@@ -29,6 +29,11 @@ interface QuizPaletteSidebarProps {
   sectionAnswered: number;
   sectionNotAnswered: number;
   sectionMarked: number;
+  onClose?: () => void;
+  className?: string;
+  sections?: MockSection[];
+  activeSectionIdx?: number;
+  onSelectSection?: (idx: number) => void;
 }
 
 export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(({
@@ -48,10 +53,22 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
   accuracyPractice,
   sectionAnswered,
   sectionNotAnswered,
-  sectionMarked
+  sectionMarked,
+  onClose,
+  className = '',
+  sections,
+  activeSectionIdx,
+  onSelectSection
 }) => {
+  const handleQuestionClick = (idx: number) => {
+    jumpToQuestion(idx);
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
-    <aside className="w-[300px] sm:w-[320px] shrink-0 min-h-0 border-l border-gray-300 bg-white p-4 flex flex-col h-full overflow-y-auto pb-8 custom-scrollbar">
+    <aside className={`w-full lg:w-[320px] shrink-0 min-h-0 border-l border-gray-300 bg-white p-4 flex flex-col h-full overflow-y-auto pb-8 custom-scrollbar ${className}`}>
       {/* Header */}
       {mode === 'practice' ? (
         <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-200">
@@ -59,16 +76,64 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             <BookOpen className="w-4 h-4 text-emerald-600" />
             <span>Practice Palette</span>
           </div>
-          <span className="text-[11px] font-semibold text-gray-500">
-            {answeredPractice}/{totalQuestions} Attempted
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-semibold text-gray-500">
+              {answeredPractice}/{totalQuestions} Attempted
+            </span>
+            {onClose && (
+              <button
+                onClick={onClose}
+                className="p-1 rounded text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
+                title="Close Palette"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
       ) : (
-        <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold text-sm sm:text-base">
-          <span className="text-[#00baf2] text-base leading-none">▶</span>
-          <span className="font-bold text-gray-900 text-sm truncate">
-            {activeSection.title || 'General Intelligence'}
-          </span>
+        <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-200">
+          <div className="flex items-center gap-2 text-gray-800 font-bold text-sm sm:text-base min-w-0 pr-2">
+            <span className="text-[#00baf2] text-base leading-none shrink-0">▶</span>
+            <span className="font-bold text-gray-900 text-sm truncate">
+              {activeSection.title || 'General Intelligence'}
+            </span>
+          </div>
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="p-1 rounded text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer shrink-0"
+              title="Close Palette"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Section Switcher in Drawer mode if sections provided */}
+      {sections && sections.length > 1 && onSelectSection && (
+        <div className="flex items-center gap-1.5 mb-3 pb-2 overflow-x-auto no-scrollbar shrink-0">
+          {sections.map((sec, idx) => {
+            const isActive = idx === activeSectionIdx;
+            const hasQuestions = sec.count > 0;
+            return (
+              <button
+                key={sec.id}
+                onClick={() => onSelectSection(idx)}
+                disabled={!hasQuestions}
+                className={`px-2.5 py-1 text-xs font-bold rounded transition-all shrink-0 ${
+                  isActive
+                    ? 'bg-[#008000] text-white shadow-2xs'
+                    : hasQuestions
+                    ? 'bg-gray-100 text-gray-700 hover:bg-gray-200 cursor-pointer'
+                    : 'bg-gray-50 text-gray-400 opacity-50 cursor-not-allowed'
+                }`}
+              >
+                {sec.label}
+              </button>
+            );
+          })}
         </div>
       )}
 
@@ -92,7 +157,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             return (
               <button
                 key={globalIdx}
-                onClick={() => jumpToQuestion(globalIdx)}
+                onClick={() => handleQuestionClick(globalIdx)}
                 className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[3px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-all ${btnColor} ${
                   isCurrent ? 'ring-2 ring-indigo-600 ring-offset-1 scale-105 z-10 font-black shadow-xs' : ''
                 }`}
@@ -124,7 +189,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
           return (
             <div key={globalIdx} className="flex flex-col items-center justify-start relative">
               <button
-                onClick={() => jumpToQuestion(globalIdx)}
+                onClick={() => handleQuestionClick(globalIdx)}
                 className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[2px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-colors shadow-2xs ${btnColor} hover:opacity-90`}
                 title={`Question ${localIdx + 1}`}
               >
