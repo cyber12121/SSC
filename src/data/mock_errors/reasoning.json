@@ -1558,6 +1558,70 @@
           "conceptTested": "Operator substitution and BODMAS rule application",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_5f278eb4d6",
+        "q_num": 51,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:41",
+        "avgTime": "00:31",
+        "question": "A word is represented by only one set of numbers as given in any one of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as shown in the given matrices. The column and rows of Matrix-I are numbered from 0 to 4 and that of Matrix-II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, for example \\text{‘L’} can be represented by 21, 33 etc and \\text{‘Z’} can be represented by 56, 98 etc. Similarly, you have to identify the set for the word \\text{‘TOMB’}.\n\nMatrix I\n| | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| 0 | I | K | L | L | K |\n| 1 | G | F | E | F | F |\n| 2 | H | L | B | A | F |\n| 3 | I | A | I | L | I |\n| 4 | E | D | F | M | A |\n\nMatrix II\n| | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|\n| 5 | V | Z | U | R | O |\n| 6 | R | W | N | S | O |\n| 7 | Q | U | T | U | V |\n| 8 | Q | T | N | P | X |\n| 9 | Q | Y | V | Z | R |",
+        "options": {
+          "a": "77, 69, 43, 22",
+          "b": "11, 88, 34, 55",
+          "c": "42, 66, 12, 58",
+          "d": "30, 65, 24, 65"
+        },
+        "answer": "a",
+        "solution": "Given that a letter is represented first by its row number and then by its column number.\n\nLet's check each option for the word TOMB: 1) 77, 69, 43, 22 \\rightarrow T, O, M, B\nHence, the correct answer is \\text{77, 69, 43, 22}.",
+        "image": null,
+        "topic": "Missing Number / Matrix",
+        "subtopic": "Matrix Word Coding",
+        "conceptTested": "Decoding letter positions from given row and column index matrices.",
+        "tags": {
+          "topic": "Missing Number / Matrix",
+          "subtopic": "Matrix Word Coding",
+          "conceptTested": "Decoding letter positions from given row and column index matrices.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_499173a30d",
+        "q_num": 52,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:49",
+        "avgTime": "00:31",
+        "question": "Which of the following numbers will replace the question mark (?) in the given series?\n 14, 14, 17, 85, 92, ?",
+        "options": {
+          "a": "828",
+          "b": "628",
+          "c": "418",
+          "d": "924"
+        },
+        "answer": "a",
+        "solution": "The logic followed in the series is: $14 \\times 1 = 14$\n\n$14 + 3 = 17$\n\n$17 \\times 5 = 85$\n\n$85 + 7 = 92$\n\n$92 \\times 9 = 828$\n\nSo, \\text{'828'} will replace the question mark in the given series.\n\nHence, the correct answer is \\text{Option A}.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Identifying complex arithmetic operations involving alternating multiplication and addition.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Identifying complex arithmetic operations involving alternating multiplication and addition.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -2125,6 +2189,134 @@
         },
         "mockId": "mock_1790400000000_isro",
         "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_ab8dfb598e",
+        "q_num": 19,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:54",
+        "question": "A, B, C, D, E, F, and G are seven members of a family of 3 generations. G has two sons, both of whom are married and have one child each. B is the cousin brother of A, who is the daughter of F. C is the sister-in-law of E, who is the brother of D. G is the father of D. How is F related to B?",
+        "options": {
+          "a": "Mother",
+          "b": "Father",
+          "c": "Aunt",
+          "d": "Uncle"
+        },
+        "answer": "c",
+        "solution": "From the given conditions: 1. G has two sons, both married with one child each.\n2. B is the cousin brother of A, who is the daughter of F.\n3. C is the sister - in - law of E, who is the brother of D, and G is the father of D.\n\nCombining these relations, F is the mother/aunt of B. Specifically, F is the aunt of B.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Coded Blood Relations",
+        "conceptTested": "Deducing multi-generational family linkages and collateral relationships.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Coded Blood Relations",
+          "conceptTested": "Deducing multi-generational family linkages and collateral relationships.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d3e6d33627",
+        "q_num": 20,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:25",
+        "avgTime": "01:06",
+        "question": "Select the set in which the numbers are related in the same way as are the numbers of the following set. (NOTE: Operations should be performed on the whole numbers, without breaking down the numbers into its constituent digits.)\n(16, 22, 356)\n(15, 19, 289)",
+        "options": {
+          "a": "(17, 21, 360)",
+          "b": "(14, 18, 248)",
+          "c": "(18, 23, 418)",
+          "d": "(23, 25, 581)"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is: Third number = (First number $\\times$ Second number) + 4\n\n(16, 22, 356) $\\rightarrow$ (16 $\\times$ 22) + 4 = 352 + 4 = 356\n\nAnd\n\n(15, 19, 289) $\\rightarrow$ (15 $\\times$ 19) + 4 = 285 + 4 = 289\n\nSimilarly, (18, 23, 418) $\\rightarrow$ (18 $\\times$ 23) + 4 = 414 + 4 = 418\n\nHence, the correct answer is \"(18, 23, 418)\".",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Number & Set Analogy",
+        "conceptTested": "Arithmetic relationship between numbers in a set based on multiplication and constant addition.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number & Set Analogy",
+          "conceptTested": "Arithmetic relationship between numbers in a set based on multiplication and constant addition.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_8d78097bd7",
+        "q_num": 21,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "00:36",
+        "question": "If $92 \\times 32 = 10$, $73 \\times 41 = 7$ and $26 \\times 78 = 9$, then what will be the value of $33 \\times 28$?",
+        "options": {
+          "a": "30",
+          "b": "4",
+          "c": "12",
+          "d": "60"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is: Logic: (Digital sum of 1st number) - (Digital difference of 2nd number) = 3rd number\nFor $92 \\times 32 = 10$: $\\Rightarrow (9 + 2) - (3 - 2) = 11 - 1 = 10$\nFor $73 \\times 41 = 7$: $\\Rightarrow (7 + 3) - (4 - 1) = 10 - 3 = 7$\nFor $26 \\times 78 = 9$: $\\Rightarrow (2 + 6) - (7 - 8) = 8 - (-1) = 8 + 1 = 9$\nSimilarly, for $33 \\times 28$: $\\Rightarrow (3 + 3) - (2 - 8) = 6 - (-6) = 6 + 6 = 12$\nHence, the correct answer is \"12\".",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Number & Value Coding",
+        "conceptTested": "Mathematical operations involving digital sums and digital differences of numbers to yield a code.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Number & Value Coding",
+          "conceptTested": "Mathematical operations involving digital sums and digital differences of numbers to yield a code.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7482698944",
+        "q_num": 22,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:21",
+        "avgTime": "00:28",
+        "question": "Which two signs should be interchanged to make the given equation correct?\n$45 \\times 10 - 125 \\div 25 + 5 = 30$",
+        "options": {
+          "a": "$\\div$ and -",
+          "b": "$\\times$ and -",
+          "c": "- and +",
+          "d": "$\\times$ and +"
+        },
+        "answer": "d",
+        "solution": "BODMAS RULE: We check the options one by one.\nOption (D): $\\times$ and + Given equation: $45 \\times 10 - 125 \\div 25 + 5 = 30$\nAfter interchange: $45 + 10 - 125 \\div 25 \\times 5 = 30$\n\n$\\Rightarrow 45 + 10 - 5 \\times 5 = 30$\n\n$\\Rightarrow 45 + 10 - 25 = 30$\n\n$\\Rightarrow 55 - 25 = 30$\n\n$\\Rightarrow 30 = 30$ (LHS = RHS)\nHence, the correct answer is \"$\\times$ and +\".",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Balancing equations via BODMAS rule by interchanging mathematical operators.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Balancing equations via BODMAS rule by interchanging mathematical operators.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -3970,6 +4162,102 @@
         },
         "mockId": "mock_1790400000000_isro",
         "testId": "mock_1790400000000_isro"
+      },
+      {
+        "id": "reas_cf616c7e4e",
+        "q_num": 60,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:37",
+        "avgTime": "00:43",
+        "question": "How many triangles are there in the given figure?",
+        "options": {
+          "a": "26",
+          "b": "24",
+          "c": "22",
+          "d": "20"
+        },
+        "answer": "c",
+        "solution": "By systematically counting the individual triangles and combined larger triangles in the given figure, we get a total of 22 triangles.\n\nHence, \\text{‘22’} is the correct answer.",
+        "image": null,
+        "topic": "Figure Counting",
+        "subtopic": "Figure Counting",
+        "conceptTested": "Visual spatial reasoning and systematic counting of geometric shapes.",
+        "tags": {
+          "topic": "Figure Counting",
+          "subtopic": "Figure Counting",
+          "conceptTested": "Visual spatial reasoning and systematic counting of geometric shapes.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b2b07a9bb5",
+        "q_num": 61,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:12",
+        "avgTime": "00:35",
+        "question": "Your female colleague informs you that her boss is deliberately making her stay late at night and making inappropriate moves towards her. What will you do first?",
+        "options": {
+          "a": "Make her come forward and inform the senior authority so that they will take action against him.",
+          "b": "Ask her to ignore the man, he has a bad reputation.",
+          "c": "Make her file a complaint against the man.",
+          "d": "Let her take her own decision on the action she wants to take but help her if she needs it."
+        },
+        "answer": "d",
+        "solution": "In case of sensitive issues such as sexual harassment, whether the woman wants to escalate the issue or wants to get it solved is up to her. You should let her decide the course of action and offer to support or help her accordingly.",
+        "image": null,
+        "topic": "Course of Action",
+        "subtopic": "Workplace Harassment",
+        "conceptTested": "Decision-making and handling sensitive workplace grievances.",
+        "tags": {
+          "topic": "Course of Action",
+          "subtopic": "Workplace Harassment",
+          "conceptTested": "Decision-making and handling sensitive workplace grievances.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_4444efe587",
+        "q_num": 62,
+        "mockId": "mock_1790432780403_6kmm6",
+        "testId": "mock_1790432780403_6kmm6",
+        "testName": "SSC CGL Tier I: Full Test - 8",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:47",
+        "avgTime": "00:37",
+        "question": "Refer to the given series and answer the question that follows (all numbers are single-digit numbers only, and all counting is to be done from left to right).\n\n(Left) 4 0 8 3 5 6 2 1 6 4 1 4 3 8 7 9 0 6 9 3 4 1 3 0 2 7 1 8 8 9 (Right)\n\nHow many such odd digits are there, each of which is immediately preceded by an even digit and also immediately followed by an odd digit?",
+        "options": {
+          "a": "3",
+          "b": "6",
+          "c": "5",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "Given:\n(Left) 4 0 8 3 5 6 2 1 6 4 1 4 3 8 7 9 0 6 9 3 4 1 3 0 2 7 1 8 8 9 (Right)\n\nCondition: Even number - Odd number - Odd number\nChecking the series: 8 3 5\n\n8 7 9\n\n6 9 3\n\n2 7 1\n\n4 1 3\n\nThus, there are 5 such sets which follow the condition.\n\nHence, the correct answer is \"5\".",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Vowel Consonant Operations",
+        "conceptTested": "Counting specific patterns of digits based on preceding and following elements in a given sequence.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Vowel Consonant Operations",
+          "conceptTested": "Counting specific patterns of digits based on preceding and following elements in a given sequence.",
+          "difficulty": "medium"
+        }
       }
     ]
   }
