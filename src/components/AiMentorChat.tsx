@@ -402,6 +402,9 @@ export function normalizeChatLatex(text: string): string {
   });
   s = balancedLines.join('\n');
 
+  // 4b. Strip single dollar signs around plain scalar numbers (e.g. $4$ -> 4, $9$ -> 9, $72$ -> 72, $6$ -> 6)
+  s = s.replace(/(?<=[^\$]|^)\$(-?\d{1,3}(?:,\d{3})*(?:\.\d+)?)\$(?=[^\$]|$)/g, '$1');
+
   // 5. PROTECT EXISTING MATH BLOCKS ($$...$$ and $...$)
   // We extract them with unique placeholders so subsequent unwrapped-LaTeX wrappers
   // NEVER inject $ delimiters into the middle of already-valid math equations!
@@ -623,9 +626,10 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
   let tableBuffer: string[] = [];
   let quoteBuffer: string[] = [];
 
-  const formatInline = (text: string) => {
+  const formatInline = (text: string): React.ReactNode => {
+    if (!text) return null;
     // Regex splits for display math $$...$$, inline math $...$, bold, italic, code
-    const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+?\$|\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
+    const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+?\$|\*\*[^*]+?\*\*|\*[^*]+?\*|`[^`]+?`)/g);
     return parts.map((part, i) => {
       if (!part) return null;
 
@@ -648,7 +652,12 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
       // Inline math $...$
       if (part.startsWith('$') && part.endsWith('$') && part.length > 2) {
         const math = part.slice(1, -1);
-        const html = renderKatexMath(math, false);
+        const trimmedMath = math.trim();
+        // If it's a plain scalar number, render cleanly without KaTeX overhead or dollar noise
+        if (/^-?\d{1,3}(?:,\d{3})*(?:\.\d+)?$/.test(trimmedMath)) {
+          return <span key={i}>{trimmedMath}</span>;
+        }
+        const html = renderKatexMath(trimmedMath, false);
         if (html) {
           return (
             <span
@@ -658,26 +667,39 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
             />
           );
         }
-        return <span key={i} className="font-mono text-xs text-indigo-700 bg-indigo-50 px-1 rounded">{math}</span>;
+        return <span key={i} className="font-mono text-xs text-indigo-700 bg-indigo-50 px-1 rounded">{trimmedMath}</span>;
       }
 
-      // Bold: **...**
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i} className="font-bold text-slate-900">{part.slice(2, -2)}</strong>;
+      // Bold: **...** (recursively formats inner content so math inside bold is rendered)
+      if (part.startsWith('**') && part.endsWith('**') && part.length >= 4) {
+        return <strong key={i} className="font-bold text-slate-900">{formatInline(part.slice(2, -2))}</strong>;
       }
 
-      // Italic: *...*
-      if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
-        return <em key={i} className="text-slate-800 italic">{part.slice(1, -1)}</em>;
+      // Italic: *...* (recursively formats inner content so math inside italic is rendered)
+      if (part.startsWith('*') && part.endsWith('*') && part.length >= 2 && !part.startsWith('**')) {
+        return <em key={i} className="text-slate-800 italic">{formatInline(part.slice(1, -1))}</em>;
       }
 
       // Code: `...`
-      if (part.startsWith('`') && part.endsWith('`')) {
+      if (part.startsWith('`') && part.endsWith('`') && part.length >= 2) {
         return (
           <code key={i} className="px-1.5 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-mono text-xs border border-indigo-200/60 font-medium">
             {part.slice(1, -1)}
           </code>
         );
+      }
+
+      // Fallback: If any dollar signs remain in plain text chunks, render or strip them so raw '$' never leaks
+      if (part.includes('$')) {
+        const cleaned = part.replace(/\$([^\$\n]+?)\$/g, (_, innerMath) => {
+          const trimmedMath = innerMath.trim();
+          if (/^-?\d{1,3}(?:,\d{3})*(?:\.\d+)?$/.test(trimmedMath)) return trimmedMath;
+          const html = renderKatexMath(trimmedMath, false);
+          return html || trimmedMath;
+        });
+        if (cleaned !== part) {
+          return <span key={i} dangerouslySetInnerHTML={{ __html: cleaned }} />;
+        }
       }
 
       return part;
@@ -773,17 +795,17 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
       flushTable();
     }
 
-    // Step-by-Step Badge: **Step 1:** or Step 1:
-    const stepMatch = line.trim().match(/^(?:\*\*Step\s*(\d+)(?::)?\*\*|Step\s*(\d+):)\s*(.*)/i);
+    // Step-by-Step Badge: **Step 1:** or Step 1: or **Step 1: Title**
+    const stepMatch = line.trim().match(/^(?:\*\*\s*Step\s*(\d+)\s*(?::)?\s*\*\*\s*(.*)|Step\s*(\d+)\s*:\s*(.*)|\*\*\s*Step\s*(\d+)\s*:\s*(.*?)\*\*)$/i);
     if (stepMatch) {
-      const stepNum = stepMatch[1] || stepMatch[2];
-      const stepContent = stepMatch[3];
+      const stepNum = stepMatch[1] || stepMatch[3] || stepMatch[5];
+      const stepContent = stepMatch[2] || stepMatch[4] || stepMatch[6];
       elements.push(
         <div key={`step-${idx}`} className="flex items-start gap-2.5 my-2.5">
           <span className="px-2 py-0.5 rounded-md bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-extrabold text-[10px] tracking-wider uppercase shrink-0 shadow-2xs mt-0.5">
             Step {stepNum}
           </span>
-          <div className="text-xs text-slate-800 leading-relaxed font-medium">
+          <div className="text-xs text-slate-800 leading-relaxed font-semibold">
             {formatInline(stepContent)}
           </div>
         </div>
@@ -944,9 +966,9 @@ export function AiMentorChat({
   const [isExpanded, setIsExpanded] = useState(() => {
     try {
       const saved = localStorage.getItem('cgl_ai_chat_expanded');
-      return saved !== null ? saved === 'true' : true;
+      return saved !== null ? saved === 'true' : false;
     } catch {
-      return true;
+      return false;
     }
   });
 
@@ -956,10 +978,20 @@ export function AiMentorChat({
     } catch {}
   }, [isExpanded]);
 
+  // Lock background page scroll in full screen so only Tommy's scrollbar is visible
+  useEffect(() => {
+    if (isOpen && isExpanded) {
+      const prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = prevOverflow;
+      };
+    }
+  }, [isOpen, isExpanded]);
+
   useEffect(() => {
     if (propsFocusedScope) {
       setIsOpen(true);
-      setIsExpanded(true);
     }
   }, [propsFocusedScope]);
 
@@ -1177,7 +1209,6 @@ export function AiMentorChat({
       if (scope) {
         setInternalScope(scope);
         setIsOpen(true);
-        setIsExpanded(true);
         const originLabel = scope.sourceScopeLabel || (
           scope.sourceScope === 'full_mock' ? 'Full Mock Test' :
           scope.sourceScope === 'sectional' ? 'Sectional Test' :
@@ -1631,7 +1662,6 @@ ${instructions}`;
               return;
             }
             setIsOpen(true);
-            setIsExpanded(true);
           }}
           className="group relative flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 text-white shadow-xl hover:shadow-2xl hover:shadow-indigo-500/30 transition-shadow duration-300 cursor-grab active:cursor-grabbing border border-white/20"
           title="Ask Tommy (Drag anywhere on screen to reposition)"
@@ -1810,26 +1840,36 @@ ${instructions}`;
             </AnimatePresence>
 
             {/* Messages Scroll Container */}
-            <div className="flex-1 overflow-y-auto p-3.5 sm:p-6 bg-slate-50/50">
-              <div className={isExpanded ? 'max-w-4xl mx-auto w-full space-y-4' : 'space-y-3.5'}>
+            <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-slate-50/50 custom-scrollbar">
+              <div className={isExpanded ? 'max-w-5xl xl:max-w-6xl mx-auto w-full space-y-6' : 'space-y-3.5'}>
                 {messages.map(msg => {
                 const isBot = msg.role === 'assistant';
                 return (
                   <div
                     key={msg.id}
-                    className={`flex items-start gap-2.5 ${isBot ? 'justify-start' : 'justify-end'}`}
+                    className={`flex items-start gap-3 ${isBot ? 'justify-start w-full' : 'justify-end'}`}
                   >
                     {isBot && (
-                      <div className="w-6 h-6 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-[10px] shrink-0 mt-0.5 shadow-xs">
-                        <Bot className="w-3.5 h-3.5 text-amber-300" />
+                      <div className={`rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs ${
+                        isExpanded ? 'w-8 h-8' : 'w-6 h-6 text-[10px]'
+                      }`}>
+                        <Bot className={isExpanded ? 'w-4 h-4 text-amber-300' : 'w-3.5 h-3.5 text-amber-300'} />
                       </div>
                     )}
-                    <div className={`relative group max-w-[85%] ${isBot ? 'text-left' : 'text-right'}`}>
+                    <div className={`relative group ${
+                      isBot 
+                        ? (isExpanded ? 'flex-1 w-full min-w-0 text-left' : 'max-w-[90%] text-left')
+                        : (isExpanded ? 'max-w-2xl sm:max-w-3xl ml-auto text-right' : 'max-w-[85%] text-right')
+                    }`}>
                       <div
-                        className={`rounded-2xl px-3.5 py-2.5 text-xs shadow-xs ${
+                        className={`shadow-xs ${
                           isBot
-                            ? 'bg-white border border-slate-200 text-slate-800 rounded-tl-sm'
-                            : 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-tr-sm'
+                            ? (isExpanded
+                                ? 'bg-white border border-slate-200/90 text-slate-800 rounded-2xl p-5 sm:p-7 shadow-xs w-full text-sm sm:text-[15px] leading-relaxed'
+                                : 'bg-white border border-slate-200 text-slate-800 rounded-2xl rounded-tl-sm px-3.5 py-2.5 text-xs')
+                            : (isExpanded
+                                ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-2xl rounded-tr-sm px-5 py-3 text-sm leading-relaxed inline-block text-left shadow-xs'
+                                : 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-2xl rounded-tr-sm px-3.5 py-2.5 text-xs inline-block text-left')
                         }`}
                       >
                         {isBot ? (
@@ -1941,7 +1981,7 @@ ${instructions}`;
             {/* Quick Suggestion Chips */}
             {messages.length <= 2 && !isLoading && (
               <div className="px-3 sm:px-6 pt-2 pb-1 bg-white border-t border-slate-100 shrink-0">
-                <div className={isExpanded ? 'max-w-4xl mx-auto flex flex-nowrap overflow-x-auto gap-1.5 scrollbar-none' : 'flex flex-nowrap overflow-x-auto gap-1.5 scrollbar-none'}>
+                <div className={isExpanded ? 'max-w-5xl xl:max-w-6xl mx-auto flex flex-nowrap overflow-x-auto gap-1.5 scrollbar-none' : 'flex flex-nowrap overflow-x-auto gap-1.5 scrollbar-none'}>
                   {activeReviewResult && (
                     <button
                       onClick={() => handleSendMessage('Review all my wrong questions in this test and explain the solutions step-by-step.')}
@@ -1971,7 +2011,7 @@ ${instructions}`;
 
             {/* Input Bar */}
             <div className="p-3 sm:p-4 bg-white border-t border-slate-200 shrink-0">
-              <div className={isExpanded ? 'max-w-4xl mx-auto' : ''}>
+              <div className={isExpanded ? 'max-w-5xl xl:max-w-6xl mx-auto' : ''}>
                 {/* Attachment Preview Chip */}
                 {selectedAttachment && (
                   <div className="mb-2 p-2 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-between gap-2 shadow-2xs">
